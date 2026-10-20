@@ -524,23 +524,61 @@ function diagram(t){
 function renderLevel(){const li=levelInfo(profile.lifetimeXp);document.getElementById('levelNum').textContent=li.level;document.getElementById('xpTotal').textContent=profile.lifetimeXp+' XP';document.getElementById('pointBalance').textContent=profile.points;document.getElementById('xpNext').textContent=li.level>=500?'Maximum level reached':(li.req-li.into)+' XP to level '+(li.level+1);document.getElementById('xpBar').style.width=(li.level>=500?100:clamp(li.into/li.req*100,0,100))+'%'}
 function renderStats(){document.getElementById('dueCount').textContent=cards.filter(c=>c.active!==false&&isDue(c)).length;document.getElementById('newCount').textContent=daily().newCards;document.getElementById('reviewedCount').textContent=daily().reviews;document.getElementById('masteredCount').textContent=cards.filter(c=>state(c.id).mastered).length}
 function avatarSVG(character,outfit,small=false){
- const c=character||CHARACTERS[0],o=outfit||OUTFITS.find(x=>x.id===c.id+'-default')||OUTFITS[0],eye=c.eye||'#111827';
- const hairBack=c.style==='long'?'<path d="M34 62 Q37 23 80 22 Q123 24 126 64 L120 138 Q103 153 80 154 Q55 153 39 137Z" fill="'+c.hair2+'"/>':'';
- let hair='';
- if(c.style==='spiky')hair='<path d="M38 63 L46 27 L56 41 L67 18 L78 38 L92 16 L103 41 L118 27 L123 66 Q82 47 38 63Z" fill="'+c.hair+'"/>';
- else if(c.style==='bob')hair='<path d="M39 61 Q42 24 80 23 Q119 25 122 63 L117 100 Q104 79 101 48 Q72 62 40 55 L45 101 Q34 83 39 61Z" fill="'+c.hair+'"/>';
- else if(c.style==='messy')hair='<path d="M39 63 Q41 31 61 25 L66 13 L75 26 L88 13 L95 27 L113 20 L109 37 Q124 45 121 68 Q83 47 39 63Z" fill="'+c.hair+'"/>';
- else if(c.style==='long')hair='<path d="M40 61 Q42 24 80 23 Q119 25 122 65 Q101 50 82 45 Q63 59 40 60Z" fill="'+c.hair+'"/>';
- else hair='<path d="M40 61 Q44 25 80 23 Q114 25 121 60 Q97 46 78 44 Q61 55 40 61Z" fill="'+c.hair+'"/>';
+ const c=character||CHARACTERS[0],o=outfit||OUTFITS.find(x=>x.id===c.id+'-default')||OUTFITS[0];
+ const id=('art-'+c.id+'-'+o.id).replace(/[^a-zA-Z0-9-]/g,''),eye=c.eye||'#1e293b';
+ const backHair=c.style==='long'||c.style==='bob'?'<path d="M34 64 Q35 19 80 19 Q124 21 128 72 L124 161 Q104 182 85 163 Q54 178 36 154Z" fill="url(#'+id+'-hair)"/>':'';
+ const hairShapes={
+ spiky:'M34 66 L38 33 L48 41 L53 15 L65 28 L77 7 L88 26 L103 12 L108 30 L125 23 L121 54 L129 68 Q85 47 34 66Z',
+ messy:'M34 70 Q33 41 49 29 L53 13 L67 23 L77 11 L90 23 L105 12 L108 28 L121 26 L116 45 L126 65 Q93 49 75 53 L62 45 Q52 67 34 70Z',
+ swept:'M37 69 Q30 41 45 25 Q68 11 95 20 Q121 26 124 56 L119 68 Q101 55 76 49 Q57 65 37 69Z',
+ long:'M36 68 Q39 27 78 20 Q117 20 125 66 L115 66 Q95 46 78 45 Q60 64 36 68Z',
+ bob:'M37 69 Q36 25 78 22 Q117 22 125 69 L112 93 L108 54 Q78 59 58 53 L48 94 Q34 82 37 69Z',
+ short:'M40 66 Q37 30 65 22 Q96 10 116 37 L121 59 L111 67 Q94 50 78 48 Q57 65 40 66Z'
+ };
+ const hair=hairShapes[c.style]||hairShapes.short;
  let accessory='';
- if(c.accessory==='blindfold')accessory='<rect x="54" y="69" width="52" height="16" rx="7" fill="#111827"/>';
- else if(c.accessory==='glasses')accessory='<circle cx="66" cy="77" r="10" fill="none" stroke="#334155" stroke-width="2"/><circle cx="94" cy="77" r="10" fill="none" stroke="#334155" stroke-width="2"/><line x1="76" y1="77" x2="84" y2="77" stroke="#334155" stroke-width="2"/>';
- else if(c.accessory==='eyepatch')accessory='<path d="M52 69 Q66 63 79 72 L77 87 Q63 92 52 82Z" fill="#111827"/><line x1="48" y1="64" x2="87" y2="83" stroke="#111827" stroke-width="2"/>';
- else if(c.accessory==='scar')accessory='<path d="M96 83 l8 8 M99 81 l7 7" stroke="#7f1d1d" stroke-width="1.8"/>';
- else if(c.accessory==='stitches')accessory='<path d="M49 92 L62 98 M52 88 L57 101 M58 92 L63 102" stroke="#7f1d1d" stroke-width="1.4"/>';
- else if(c.accessory==='scarf')accessory='<path d="M48 122 Q80 143 112 122 L109 143 Q80 158 51 143Z" fill="#991b1b"/>';
- else if(c.accessory==='darkeyes')accessory='<ellipse cx="66" cy="82" rx="10" ry="7" fill="rgba(15,23,42,.18)"/><ellipse cx="94" cy="82" rx="10" ry="7" fill="rgba(15,23,42,.18)"/>';
- return '<svg viewBox="0 0 160 190" role="img" aria-label="'+esc(c.name)+'"><defs><linearGradient id="bg-'+c.id+'" x1="0" y1="0" x2="1" y2="1"><stop stop-color="'+o.accent+'"/><stop offset="1" stop-color="#f8fafc"/></linearGradient></defs><rect width="160" height="190" rx="18" fill="url(#bg-'+c.id+')"/>'+hairBack+'<circle cx="80" cy="77" r="38" fill="'+c.skin+'"/>'+hair+'<circle cx="66" cy="77" r="3.6" fill="'+eye+'"/><circle cx="94" cy="77" r="3.6" fill="'+eye+'"/>'+accessory+'<path d="M72 95 Q80 101 88 95" fill="none" stroke="#7c2d12" stroke-width="2.3" stroke-linecap="round"/><path d="M43 190 L47 132 Q80 113 113 132 L117 190Z" fill="'+o.top+'"/><path d="M62 128 Q80 143 98 128 L102 144 Q80 159 58 144Z" fill="'+o.accent+'"/><circle cx="80" cy="125" r="6" fill="'+c.skin+'"/></svg>';
+ if(c.accessory==='blindfold')accessory='<path d="M51 69 Q79 62 110 68 L107 86 Q79 90 52 84Z" fill="#111827" stroke="#334155" stroke-width="1.5"/><path d="M56 72 Q79 65 105 72" stroke="#475569" opacity=".65" fill="none"/>';
+ else if(c.accessory==='glasses')accessory='<circle cx="67" cy="81" r="12" fill="rgba(219,234,254,.16)" stroke="#334155" stroke-width="2"/><circle cx="94" cy="81" r="12" fill="rgba(219,234,254,.16)" stroke="#334155" stroke-width="2"/><path d="M79 79 H82" stroke="#334155" stroke-width="2"/>';
+ else if(c.accessory==='eyepatch')accessory='<path d="M52 73 Q64 67 79 74 L77 91 Q63 93 52 85Z" fill="#111827" stroke="#334155"/><path d="M42 62 L93 83" stroke="#111827" stroke-width="3"/>';
+ else if(c.accessory==='scar')accessory='<path d="M98 88 l8 10 M101 85 l9 12" stroke="#7f1d1d" stroke-width="1.4"/>';
+ else if(c.accessory==='stitches')accessory='<path d="M51 99 L65 104 M53 96 L58 110 M61 99 L65 108" stroke="#7f1d1d" stroke-width="1.2"/>';
+ else if(c.accessory==='darkeyes')accessory='<ellipse cx="67" cy="86" rx="12" ry="6" fill="#0f172a" opacity=".22"/><ellipse cx="94" cy="86" rx="12" ry="6" fill="#0f172a" opacity=".22"/>';
+ const style=o.styleId||'default';
+ const hoodie=style==='hoodie'||style==='winter'?'<path d="M42 131 Q56 113 80 119 Q104 113 118 131 L114 148 Q101 130 80 137 Q59 130 46 148Z" fill="'+o.accent+'" stroke="rgba(15,23,42,.2)" stroke-width="1.5"/>':'';
+ const lapels=style==='smart'||style==='traveller'?'<path d="M56 127 L78 149 L68 167 L51 137 Z M104 127 L82 149 L92 167 L109 137 Z" fill="'+o.accent+'" opacity=".96"/>':'';
+ const gym=style==='sport'?'<path d="M52 138 L64 140 M96 140 L108 138" stroke="#f8fafc" stroke-width="5"/><path d="M80 150 V190" stroke="#f8fafc" stroke-width="3" opacity=".7"/>':'';
+ const emblem=style==='festival'?'<path d="M80 157 L85 167 L98 169 L88 177 L91 190 L80 183 L69 190 L72 177 L62 169 L75 167Z" fill="'+o.accent+'"/>':'';
+ const scarf=c.accessory==='scarf'?'<path d="M46 124 Q80 147 114 123 L114 145 Q81 161 47 144 L48 173 L34 180Z" fill="#991b1b" stroke="#7f1d1d"/>':'';
+ return '<svg viewBox="0 0 160 190" role="img" aria-label="'+esc(c.name)+' in '+esc(o.name)+'">'+
+ '<defs>'+
+ '<linearGradient id="'+id+'-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="'+o.accent+'"/><stop offset=".55" stop-color="#dbeafe"/><stop offset="1" stop-color="#64748b"/></linearGradient>'+
+ '<radialGradient id="'+id+'-skin" cx="34%" cy="26%" r="80%"><stop stop-color="#fff2de"/><stop offset=".35" stop-color="'+c.skin+'"/><stop offset="1" stop-color="#a16246"/></radialGradient>'+
+ '<linearGradient id="'+id+'-hair" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="'+c.hair2+'"/><stop offset=".55" stop-color="'+c.hair+'"/><stop offset="1" stop-color="'+c.hair2+'"/></linearGradient>'+
+ '<linearGradient id="'+id+'-cloth" x1="0" y1="0" x2="1" y2=".85"><stop stop-color="'+o.accent+'"/><stop offset=".38" stop-color="'+o.top+'"/><stop offset="1" stop-color="#101827"/></linearGradient>'+
+ '<filter id="'+id+'-glow"><feGaussianBlur stdDeviation="11"/></filter>'+
+ '</defs>'+
+ '<rect width="160" height="190" rx="18" fill="url(#'+id+'-bg)"/>'+
+ '<circle cx="126" cy="40" r="48" fill="#fff" opacity=".25" filter="url(#'+id+'-glow)"/>'+
+ '<path d="M0 152 Q80 100 160 145 L160 190 H0Z" fill="#0f172a" opacity=".12"/>'+
+ backHair+
+ '<ellipse cx="79" cy="80" rx="40" ry="47" fill="url(#'+id+'-skin)" stroke="rgba(94,50,38,.25)" stroke-width=".7"/>'+
+ '<ellipse cx="42" cy="88" rx="6" ry="12" fill="'+c.skin+'"/><ellipse cx="118" cy="88" rx="6" ry="12" fill="'+c.skin+'"/>'+
+ '<path d="'+hair+'" fill="url(#'+id+'-hair)" stroke="'+c.hair2+'" stroke-width="1.4"/>'+
+ '<path d="M44 51 Q76 21 108 43" stroke="#fff" opacity=".15" stroke-width="5" fill="none"/>'+
+ '<path d="M54 72 Q65 66 74 71 M86 71 Q95 66 107 71" fill="none" stroke="'+c.hair2+'" stroke-width="2.6" stroke-linecap="round"/>'+
+ '<path d="M53 80 Q67 72 77 80 Q67 88 53 80 M83 80 Q95 72 108 80 Q95 88 83 80" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>'+
+ '<ellipse cx="66" cy="80" rx="5.2" ry="6.2" fill="'+eye+'"/><ellipse cx="95" cy="80" rx="5.2" ry="6.2" fill="'+eye+'"/>'+
+ '<circle cx="64" cy="78" r="2" fill="#fff" opacity=".92"/><circle cx="93" cy="78" r="2" fill="#fff" opacity=".92"/>'+
+ '<path d="M80 86 L76 101 L82 102" stroke="#965943" stroke-width="1.3" fill="none" opacity=".6"/>'+
+ '<path d="M71 109 Q80 113 89 109" stroke="#884c43" stroke-width="1.8" fill="none" stroke-linecap="round"/>'+
+ '<path d="M59 113 Q80 132 102 113" fill="none" stroke="#8b5545" opacity=".15"/>'+
+ accessory+
+ '<path d="M71 116 L71 134 Q79 144 90 134 L89 116" fill="url(#'+id+'-skin)"/>'+
+ '<path d="M30 190 Q35 139 49 133 L65 126 Q80 147 96 126 L112 133 Q126 142 130 190Z" fill="url(#'+id+'-cloth)" stroke="#1e293b" stroke-width="1.4"/>'+
+ '<path d="M63 128 Q80 145 97 128 L98 143 L80 159 L62 143Z" fill="'+o.accent+'" opacity=".82"/>'+
+ hoodie+lapels+gym+emblem+scarf+
+ '<path d="M52 154 L45 190 M108 154 L117 190" stroke="#fff" stroke-width="2" opacity=".17"/>'+
+ '</svg>';
 }
 function renderAvatar(){
  const c=CHARACTERS.find(x=>x.id===profile.equippedCharacter)||CHARACTERS[0];
