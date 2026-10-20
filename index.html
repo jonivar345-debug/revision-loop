@@ -7,19 +7,41 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
-<div class="app-shell">
+<div id="authGate" class="auth-gate">
+  <form id="pinForm" class="pin-card">
+    <div class="pin-logo">RL</div>
+    <h1>Revision Loop</h1>
+    <p>Enter your 4-digit access code.</p>
+    <input id="pinInput" inputmode="numeric" autocomplete="one-time-code" maxlength="4" pattern="[0-9]{4}" type="password" placeholder="••••" aria-label="4 digit access code">
+    <label class="remember-row"><input id="rememberPin" type="checkbox" checked> Remember this device</label>
+    <button class="primary-btn" type="submit">Unlock</button>
+    <div id="pinError" class="pin-error"></div>
+  </form>
+</div>
+
+<div id="app" class="app-shell app-locked">
   <header class="topbar">
-    <div class="brand"><h1>Revision Loop</h1><p>AQA revision that remembers what you forget.</p></div>
-    <button id="syncBtn" class="icon-btn" aria-label="Sync revision content" title="Sync">↻</button>
+    <div class="brand">
+      <h1>Revision Loop</h1>
+      <p>AQA revision that remembers what you forget.</p>
+    </div>
+    <div class="top-actions">
+      <div id="miniAvatar" class="mini-avatar" title="Equipped character"></div>
+      <button id="syncBtn" class="icon-btn" aria-label="Sync revision content" title="Sync">↻</button>
+      <button id="lockBtn" class="icon-btn" aria-label="Lock app" title="Lock">⌁</button>
+    </div>
   </header>
 
-  <section class="level-card" aria-label="Level and experience">
+  <section class="level-card">
     <div class="level-main">
-      <div class="level-number"><span>LEVEL</span><strong id="levelNum">1</strong></div>
-      <div class="xp-copy"><strong id="xpTotal">0 XP</strong><span id="xpNext">75 XP to level 2</span></div>
+      <div class="level-number"><span>LEVEL</span><strong id="levelNum">1</strong><small>/ 500</small></div>
+      <div class="wallet">
+        <div><strong id="xpTotal">0 XP</strong><span id="xpNext">10 XP to level 2</span></div>
+        <div><strong id="pointBalance">0</strong><span>spendable points</span></div>
+      </div>
     </div>
     <div class="xp-track"><div id="xpBar" class="xp-bar"></div></div>
   </section>
@@ -29,7 +51,7 @@
 
   <section class="stats-grid">
     <div class="stat"><strong id="dueCount">0</strong><span>Due</span></div>
-    <div class="stat"><strong id="newCount">0 / 18</strong><span>New today</span></div>
+    <div class="stat"><strong id="newCount">0</strong><span>New today</span></div>
     <div class="stat"><strong id="reviewedCount">0</strong><span>Reviewed</span></div>
     <div class="stat"><strong id="masteredCount">0</strong><span>Mature</span></div>
   </section>
@@ -39,72 +61,69 @@
       <div><span class="eyebrow">DAILY STARTER</span><h2>7-item retrieval challenge</h2></div>
       <span id="challengeStreak" class="streak-pill">0 day streak</span>
     </div>
-    <p>Weak spots + older knowledge + real AQA questions. It changes with what you forget.</p>
+    <p>Weak spots, older knowledge and real AQA questions are mixed together.</p>
     <div class="starter-controls">
-      <select id="challengeSubject" aria-label="Daily challenge subject">
-        <option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option>
-      </select>
-      <select id="challengeScope" aria-label="Daily challenge scope">
-        <option value="mock">Mock scope</option><option value="taught">Everything taught so far</option>
-      </select>
+      <select id="challengeSubject"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
+      <select id="challengeScope"><option value="mock">Mock scope</option><option value="taught">Everything taught so far</option></select>
       <button id="startChallenge" class="primary-btn">Start today's challenge</button>
     </div>
     <div id="challengeStatus" class="starter-status"></div>
-  </section>
-
-  <section class="mode-wrap">
-    <div class="section-label">Revision mode</div>
-    <div class="mode-grid">
-      <button class="mode-btn active" data-mode="mock"><b>Mock</b><span>Your current mock scope</span></button>
-      <button class="mode-btn" data-mode="full"><b>Full A-level</b><span>Only unlocked content</span></button>
-      <button class="mode-btn" data-mode="topic"><b>Topic</b><span>Pick one topic</span></button>
-      <button class="mode-btn" data-mode="exam"><b>Exam questions</b><span>Real AQA sources</span></button>
-    </div>
-    <div id="modeNote" class="mode-note"></div>
   </section>
 
   <nav class="tabs">
     <button class="tab active" data-panel="study">Study</button>
     <button class="tab" data-panel="weaknesses">Weaknesses</button>
     <button class="tab" data-panel="progress">Progress</button>
-    <button class="tab" data-panel="browse">Browse</button>
+    <button class="tab" data-panel="shop">Shop</button>
   </nav>
 
   <main>
     <section id="study" class="panel active">
-      <div class="study-controls">
-        <div class="subject-chips">
-          <button class="chip active" data-subject="">All</button>
-          <button class="chip" data-subject="Physics">Physics</button>
-          <button class="chip" data-subject="Chemistry">Chemistry</button>
-          <button class="chip" data-subject="Maths">Maths</button>
-        </div>
+      <div class="study-type">
+        <button class="study-type-btn active" data-study="flashcards">Flashcards</button>
+        <button class="study-type-btn" data-study="exam">Exam questions</button>
+      </div>
 
-        <div id="topicControls" class="topic-controls hidden">
-          <select id="topicSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
-          <select id="topicSelect"></select>
+      <div id="flashControls" class="control-card">
+        <div class="control-row two">
+          <label><span>Subject</span><select id="flashSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
+          <label><span>Session size</span><select id="flashCount"><option value="10">10 cards</option><option value="20" selected>20 cards</option><option value="30">30 cards</option><option value="50">50 cards</option></select></label>
         </div>
-
-        <div id="examControls" class="exam-controls hidden">
-          <select id="examSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
-          <select id="examLevel"><option value="">AS + A-level</option><option value="AS">AS</option><option value="A-level">A-level</option></select>
-          <select id="examType"><option value="">All question types</option></select>
-          <select id="examTopic"><option value="">All topics</option></select>
+        <div class="picker-head"><b>Topics to include</b><span id="flashTopicCount"></span></div>
+        <div class="preset-row">
+          <button class="mini-btn" data-flash-preset="mock">Mock topics</button>
+          <button class="mini-btn" data-flash-preset="taught">Taught so far</button>
+          <button class="mini-btn" data-flash-preset="all">All available</button>
+          <button class="mini-btn" data-flash-preset="clear">Clear</button>
         </div>
-
-        <div id="queueTools" class="queue-tools">
-          <button id="weakQuick" class="mini-btn">Weakest first</button>
-          <button id="practicalQuick" class="mini-btn">Practicals</button>
-          <button id="normalQueue" class="mini-btn hidden">Back to normal</button>
-        </div>
-
+        <div id="flashTopics" class="check-grid"></div>
         <div id="physicsUnitManager" class="physics-unit-manager hidden">
-          <div class="unit-manager-head">
-            <div><b>Physics sections included</b><span>Untick anything you have not covered yet. Medical Physics is your option.</span></div>
-            <button id="resetPhysicsUnits" class="mini-btn">Reset to taught so far</button>
-          </div>
+          <div class="unit-manager-head"><div><b>Physics sections unlocked</b><span>Untick content you have not learned yet. Medical Physics is your option.</span></div><button id="resetPhysicsUnits" class="mini-btn">Reset</button></div>
           <div id="physicsUnitList" class="unit-grid"></div>
         </div>
+        <button id="startFlashcards" class="primary-btn full-btn">Start random flashcards</button>
+      </div>
+
+      <div id="examControls" class="control-card hidden">
+        <div class="control-row three">
+          <label><span>Subject</span><select id="examSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
+          <label><span>Question groups</span><select id="examCount"><option value="5">5 groups</option><option value="10" selected>10 groups</option><option value="15">15 groups</option><option value="20">20 groups</option></select></label>
+          <label><span>Ordering</span><select id="examOrder"><option value="adaptive">Random + weak-topic boost</option><option value="random">Fully random</option></select></label>
+        </div>
+
+        <div class="picker-head"><b>Years</b><span id="examYearCount"></span></div>
+        <div class="preset-row"><button id="yearsAll" class="mini-btn">All available</button><button id="yearsRecent" class="mini-btn">Most recent</button><button id="yearsClear" class="mini-btn">Clear</button></div>
+        <div id="examYears" class="check-grid compact"></div>
+
+        <div class="picker-head"><b>Topics</b><span id="examTopicCount"></span></div>
+        <div class="preset-row"><button id="examTopicsAll" class="mini-btn">All topics</button><button id="examTopicsWeak" class="mini-btn">My weaker topics</button><button id="examTopicsClear" class="mini-btn">Clear</button></div>
+        <div id="examTopics" class="check-grid"></div>
+
+        <div class="picker-head"><b>Question types</b><span></span></div>
+        <div id="examTypes" class="check-grid compact"></div>
+
+        <div id="examCoverage" class="coverage-note"></div>
+        <button id="startExam" class="primary-btn full-btn">Start random AQA questions</button>
       </div>
 
       <div id="sessionBanner" class="session-banner hidden"></div>
@@ -113,41 +132,49 @@
 
     <section id="weaknesses" class="panel">
       <div class="section-head">
-        <div><h2>Weakness map</h2><p>It combines recall history, exam scores and how long it has been since you last proved you knew it.</p></div>
-        <button id="reviewWeakBtn" class="primary-small">Review weakest</button>
+        <div><h2>Weakness map</h2><p>Based on memory decay, misses, previous exam marks and long-gap lapses.</p></div>
+        <button id="reviewWeakBtn" class="primary-small">Build weak-topic session</button>
       </div>
       <div id="weakList" class="list"></div>
 
       <div class="section-head mistakes-head">
-        <div><h2>Mistake bank</h2><p>Anything you get wrong is kept here, including questions you later fix.</p></div>
-        <button id="redoMistakesBtn" class="primary-small">Redo recent mistakes</button>
+        <div><h2>Mistake bank</h2><p>Wrong flashcards, missed mark-scheme points and old lapses stay recorded even after you fix them.</p></div>
+        <button id="redoMistakesBtn" class="primary-small">Redo mistakes</button>
       </div>
       <div id="mistakeList" class="list"></div>
     </section>
 
     <section id="progress" class="panel">
-      <div class="section-head"><div><h2>Long-term memory</h2><p>“Mature” cards still return months later. They never permanently disappear.</p></div></div>
+      <div class="section-head"><div><h2>Long-term memory</h2><p>A card can be secure today and still come back months later. Mature knowledge is not permanently removed.</p></div></div>
       <div id="subjectProgress" class="progress-list"></div>
       <div id="retentionCard" class="progress-card"></div>
       <div class="progress-card">
-        <h3>Adaptive intervals</h3>
-        <div class="schedule-row"><span>Again</span><b>about 10 min, stability drops</b></div>
-        <div class="schedule-row"><span>Hard</span><b>about 1 day</b></div>
-        <div class="schedule-row"><span>Good / Easy</span><b>interval grows with proven memory</b></div>
-        <div class="schedule-row"><span>Mature</span><b>still re-tested at long intervals up to 1 year</b></div>
+        <h3>Scoring</h3>
+        <div class="schedule-row"><span>Correct flashcard</span><b>+1 point · +1 XP</b></div>
+        <div class="schedule-row"><span>Exam question</span><b>+1 point · +1 XP per mark</b></div>
+        <div class="schedule-row"><span>Level requirement</span><b>10 XP, then +5 XP each level</b></div>
+        <div class="schedule-row"><span>Maximum level</span><b>500</b></div>
       </div>
     </section>
 
-    <section id="browse" class="panel">
-      <div class="browse-tools">
-        <input id="search" type="search" placeholder="Search definitions, topics or questions">
-        <select id="subjectFilter"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
-        <select id="kindFilter"><option value="">All types</option><option value="weak">Known weak spots</option><option value="content">Knowledge</option><option value="practical">Practicals</option><option value="insurance">Insurance</option></select>
+    <section id="shop" class="panel">
+      <div class="shop-hero">
+        <div id="characterPreview" class="character-preview"></div>
+        <div><span class="eyebrow">YOUR COLLECTION</span><h2 id="equippedName">Starter Scholar</h2><p id="equippedLocation">Home Desk</p><strong><span id="shopPoints">0</span> points available</strong></div>
       </div>
-      <div id="deckList" class="list"></div>
+
+      <div class="section-head"><div><h2>Wardrobe</h2><p>Fixed-price collectible original outfits. No random loot boxes.</p></div></div>
+      <div id="outfitShop" class="shop-grid"></div>
+
+      <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock locations, then rotate the globe to see your collection.</p></div></div>
+      <div class="globe-card">
+        <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing unlockable locations"></canvas>
+        <div id="globeLabel" class="globe-label">Drag to rotate · tap a pin to inspect it</div>
+      </div>
+      <div id="locationShop" class="shop-grid"></div>
     </section>
   </main>
 </div>
-<script src="app.js?v=10" defer></script>
+<script src="app.js?v=11" defer></script>
 </body>
 </html>
