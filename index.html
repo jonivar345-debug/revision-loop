@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
 <div id="authGate" class="auth-gate">
@@ -190,13 +190,24 @@
 
       <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock real places, rotate the Earth and use actual location photos.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="globe-card">
-        <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing unlockable locations"></canvas>
+        <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing collectable world locations"></canvas>
         <div id="globeLabel" class="globe-label">Drag to rotate · tap a pin to inspect it</div>
       </div>
+      <div id="globeLocationInfo" class="globe-location-info hidden" aria-live="polite"></div>
+      <div class="world-gallery-controls">
+        <label for="locationRegion">Explore a region</label>
+        <select id="locationRegion" aria-label="Filter collectable locations by continent">
+          <option value="">Around the world</option>
+          <option>Asia</option><option>Europe</option><option>Africa</option>
+          <option>North America</option><option>South America</option><option>Oceania</option>
+        </select>
+        <span id="regionCount"></span>
+      </div>
       <div id="locationShop" class="shop-grid"></div>
+      <button id="moreLocations" class="mini-btn world-more hidden">Show more locations</button>
     </section>
   </main>
 </div>
-<script src="app.js?v=17" defer></script>
+<script src="app.js?v=18" defer></script>
 </body>
 </html>
