@@ -49,7 +49,7 @@ function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));loca
 function ensureProfile(){
  profile.daily=profile.daily||{};profile.examResults=profile.examResults||{};profile.topicWeakness=profile.topicWeakness||{};profile.topicStats=profile.topicStats||{};
  profile.errorLog=profile.errorLog||[];profile.dailyChallenges=profile.dailyChallenges||{};profile.challengeStreak=profile.challengeStreak||0;profile.lastChallengeDate=profile.lastChallengeDate||'';
- profile.shopOwned=profile.shopOwned||{outfits:['starter'],locations:['home']};profile.equippedOutfit=profile.equippedOutfit||'starter';profile.equippedLocation=profile.equippedLocation||'home';
+ profile.shopOwned=profile.shopOwned||{};profile.shopOwned.outfits=profile.shopOwned.outfits||['starter'];profile.shopOwned.locations=profile.shopOwned.locations||['home'];if(!profile.shopOwned.outfits.includes('starter'))profile.shopOwned.outfits.unshift('starter');if(!profile.shopOwned.locations.includes('home'))profile.shopOwned.locations.unshift('home');profile.equippedOutfit=profile.equippedOutfit||'starter';profile.equippedLocation=profile.equippedLocation||'home';
  if(profile.economyVersion!==2){profile.lifetimeXp=0;profile.points=0;profile.economyVersion=2}
  profile.lifetimeXp=profile.lifetimeXp||0;profile.points=profile.points||0;profile.reviews=profile.reviews||0;
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
@@ -141,8 +141,21 @@ function startFlashSession(){
  activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:'Random flashcards'};currentCardId=null;renderAll();
 }
 function examGroups(){
- const sub=document.getElementById('examSubject').value,base=subjectExam(sub).filter(q=>(!examYears.size||examYears.has(q.year))&&(!examTopics.size||examTopics.has(q.topic))&&(!examTypes.size||examTypes.has(q.questionType)));
- const map=new Map();for(const q of base){if(!map.has(q.groupId))map.set(q.groupId,[]);map.get(q.groupId).push(q)}for(const arr of map.values())arr.sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));return [...map.values()];
+ const sub=document.getElementById('examSubject').value,all=subjectExam(sub);
+ if(!examYears.size||!examTopics.size||!examTypes.size)return [];
+ const eligibleGroupIds=new Set();
+ for(const q of all){
+   if(!examYears.has(q.year))continue;
+   if(examTopics.has(q.topic)&&examTypes.has(q.questionType))eligibleGroupIds.add(q.groupId);
+ }
+ const map=new Map();
+ for(const q of all){
+   if(!eligibleGroupIds.has(q.groupId)||!examYears.has(q.year))continue;
+   if(!map.has(q.groupId))map.set(q.groupId,[]);
+   map.get(q.groupId).push(q);
+ }
+ for(const arr of map.values())arr.sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
+ return [...map.values()];
 }
 function groupWeakness(group){let s=0;for(const q of group){const t=profile.topicWeakness[topicKey(q.subject,q.topic)]||0,last=profile.examResults[q.id]?.last,acc=last?last.marks/last.max:0;s+=1+t*2+(1-acc)*4+(profile.errorLog.some(e=>e.type==='exam'&&e.id===q.id)?4:0)}return s/group.length}
 function startExamSession(){
@@ -206,16 +219,16 @@ function renderLevel(){const li=levelInfo(profile.lifetimeXp);document.getElemen
 function renderStats(){document.getElementById('dueCount').textContent=cards.filter(c=>c.active!==false&&isDue(c)).length;document.getElementById('newCount').textContent=daily().newCards;document.getElementById('reviewedCount').textContent=daily().reviews;document.getElementById('masteredCount').textContent=cards.filter(c=>state(c.id).mastered).length}
 function renderAvatar(){const o=OUTFITS.find(x=>x.id===profile.equippedOutfit)||OUTFITS[0],l=LOCATIONS.find(x=>x.id===profile.equippedLocation)||LOCATIONS[0];document.getElementById('miniAvatar').textContent=o.icon;document.getElementById('characterPreview').textContent=o.icon;document.getElementById('equippedName').textContent=o.name;document.getElementById('equippedLocation').textContent=l.name;document.getElementById('shopPoints').textContent=profile.points;selectedLocation=l.id}
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
-function renderPhysicsManager(){const sub=document.getElementById('flashSubject').value,box=document.getElementById('physicsUnitManager');box.classList.toggle('hidden',sub!=='Physics');if(sub!=='Physics')return;document.getElementById('physicsUnitList').innerHTML=(deckMeta.physicsUnits||[]).map(u=>{const checked=settings.physicsUnits[u.id]!==false,count=cards.filter(c=>c.active!==false&&c.subject==='Physics'&&c.unit===u.id).length;return '<label class="unit-toggle '+(checked?'':'locked')+'"><input type="checkbox" data-unit="'+esc(u.id)+'" '+(checked?'checked':'')+'><span><strong>'+(checked?'🔓 ':'🔒 ')+esc(u.label)+'</strong><small>'+count+' flashcards</small></span></label>'}).join('');document.querySelectorAll('[data-unit]').forEach(el=>el.onchange=()=>{settings.physicsUnits[el.dataset.unit]=el.checked;save();refreshFlashTopics();refreshExamFilters();renderPhysicsManager()})}
-function refreshFlashTopics(){
- const sub=document.getElementById('flashSubject').value,topics=[...new Set(subjectCards(sub).map(c=>c.topic))].sort();flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));if(!flashTopics.size)topics.filter(t=>subjectCards(sub).some(c=>c.topic===t&&c.taught)).forEach(t=>flashTopics.add(t));
+function renderPhysicsManager(){const sub=document.getElementById('flashSubject').value,box=document.getElementById('physicsUnitManager');box.classList.toggle('hidden',sub!=='Physics');if(sub!=='Physics')return;document.getElementById('physicsUnitList').innerHTML=(deckMeta.physicsUnits||[]).map(u=>{const checked=settings.physicsUnits[u.id]!==false,count=cards.filter(c=>c.active!==false&&c.subject==='Physics'&&c.unit===u.id).length;return '<label class="unit-toggle '+(checked?'':'locked')+'"><input type="checkbox" data-unit="'+esc(u.id)+'" '+(checked?'checked':'')+'><span><strong>'+(checked?'🔓 ':'🔒 ')+esc(u.label)+'</strong><small>'+count+' flashcards</small></span></label>'}).join('');document.querySelectorAll('[data-unit]').forEach(el=>el.onchange=()=>{settings.physicsUnits[el.dataset.unit]=el.checked;save();refreshFlashTopics(false);refreshExamFilters(false);renderPhysicsManager()})}
+function refreshFlashTopics(defaultIfEmpty=false){
+ const sub=document.getElementById('flashSubject').value,topics=[...new Set(subjectCards(sub).map(c=>c.topic))].sort();flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));if(defaultIfEmpty&&!flashTopics.size)topics.filter(t=>subjectCards(sub).some(c=>c.topic===t&&c.taught)).forEach(t=>flashTopics.add(t));
  document.getElementById('flashTopics').innerHTML=topics.map(t=>'<label class="check-item"><input type="checkbox" data-flash-topic="'+esc(t)+'" '+(flashTopics.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});renderTopicCounts();renderPhysicsManager()
 }
-function applyFlashPreset(p){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);flashTopics.clear();if(p!=='clear'){let pick=base;if(p==='mock')pick=base.filter(c=>c.mock===true);if(p==='taught')pick=base.filter(taughtCard);for(const c of pick)flashTopics.add(c.topic)}refreshFlashTopics()}
-function refreshExamFilters(){
+function applyFlashPreset(p){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);flashTopics.clear();if(p!=='clear'){let pick=base;if(p==='mock')pick=base.filter(c=>c.mock===true);if(p==='taught')pick=base.filter(taughtCard);for(const c of pick)flashTopics.add(c.topic)}refreshFlashTopics(false)}
+function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,base=subjectExam(sub),years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(base.map(q=>q.topic))].sort(),types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
- if(!examYears.size)years.forEach(y=>examYears.add(y));if(!examTopics.size)topics.forEach(t=>examTopics.add(t));if(!examTypes.size)types.forEach(t=>examTypes.add(t));
+ if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));if(defaultIfEmpty&&!examTopics.size)topics.forEach(t=>examTopics.add(t));if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
  document.getElementById('examYears').innerHTML=years.map(y=>'<label class="check-item"><input type="checkbox" data-exam-year="'+y+'" '+(examYears.has(y)?'checked':'')+'><span>'+y+'</span></label>').join('');
  document.getElementById('examTopics').innerHTML=topics.map(t=>'<label class="check-item"><input type="checkbox" data-exam-topic="'+esc(t)+'" '+(examTopics.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
@@ -287,7 +300,7 @@ function nearestPin(x,y){let best=null,dist=18;for(const l of LOCATIONS){const p
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();renderShop()}
 async function sync(manual=false){
- try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics();refreshExamFilters();document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.length+' verified AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
+ try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(true);refreshExamFilters(true);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.length+' verified AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(drawGlobe,0)}
 function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
@@ -299,19 +312,19 @@ if(localStorage.getItem('rl_auth')==='1'||sessionStorage.getItem('rl_auth')==='1
 
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchPanel(b.dataset.panel));
 document.querySelectorAll('.study-type-btn').forEach(b=>b.onclick=()=>{studyType=b.dataset.study;activeSession=null;renderAll()});
-document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refreshFlashTopics();renderAll()};
+document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refreshFlashTopics(true);renderAll()};
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
 document.getElementById('startFlashcards').onclick=startFlashSession;
-document.getElementById('examSubject').onchange=()=>{examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters();renderAll()};
-document.getElementById('yearsAll').onclick=()=>{examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters()};
-document.getElementById('yearsRecent').onclick=()=>{const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters()};
-document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExamFilters()};
-document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.topic));refreshExamFilters()};
-document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,ts=[...new Set(subjectExam(sub).map(q=>q.topic))].sort((a,b)=>(profile.topicWeakness[topicKey(sub,b)]||0)-(profile.topicWeakness[topicKey(sub,a)]||0));examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters()};
-document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters()};
+document.getElementById('examSubject').onchange=()=>{examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters(true);renderAll()};
+document.getElementById('yearsAll').onclick=()=>{examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters(false)};
+document.getElementById('yearsRecent').onclick=()=>{const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters(false)};
+document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExamFilters(false)};
+document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.topic));refreshExamFilters(false)};
+document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,ts=[...new Set(subjectExam(sub).map(q=>q.topic))].sort((a,b)=>(profile.topicWeakness[topicKey(sub,b)]||0)-(profile.topicWeakness[topicKey(sub,a)]||0));examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
+document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters(false)};
 document.getElementById('startExam').onclick=startExamSession;
 document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
-document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;document.getElementById('resetPhysicsUnits').onclick=()=>{settings.physicsUnits={};initPhysicsUnits();save();refreshFlashTopics();refreshExamFilters();renderAll()};
+document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;document.getElementById('resetPhysicsUnits').onclick=()=>{settings.physicsUnits={};initPhysicsUnits();save();refreshFlashTopics(true);refreshExamFilters(true);renderAll()};
 document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
 const globe=document.getElementById('globe');
