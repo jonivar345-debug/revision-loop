@@ -66,3 +66,24 @@
 .syllabus-row small{color:var(--muted);font-size:.64rem;line-height:1.25;white-space:nowrap}
 .syllabus-row.missing{background:#f8fafc}
 .syllabus-row.missing small{color:#b45309}
+
+/* More even world collection and accessible globe details */
+.world-gallery-controls{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);padding:10px;border-radius:12px;margin:10px 0}
+.world-gallery-controls label{font-size:.75rem;font-weight:800;white-space:nowrap}
+.world-gallery-controls select{flex:1;min-width:0;padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.world-gallery-controls span{font-size:.67rem;color:var(--muted);white-space:nowrap}
+.world-more{display:block;width:100%;margin:11px 0 20px;padding:12px}
+.location-card .location-photo{overflow:hidden}
+.location-card .location-body .region-tag{font-size:.66rem;color:var(--muted)}
+.location-photo .photo-credit{display:none}
+.globe-location-info{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;margin:10px 0;box-shadow:var(--shadow)}
+.globe-location-info h3{font-size:1.04rem;margin:0 0 5px}
+.globe-location-info p{font-size:.77rem;color:#475569;margin:7px 0;line-height:1.5}
+.globe-location-info .detail-media{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:11px}
+.globe-location-info .detail-media img{width:100%;height:150px;object-fit:cover;border-radius:9px;background:#e2e8f0}
+.globe-location-info .detail-media .image-fallback{height:150px;background:#f8fafc;border:1px solid var(--line);border-radius:9px;display:grid;place-items:center;font-size:.72rem;color:#64748b}
+.globe-location-info .detail-links{font-size:.68rem;color:#64748b}
+.globe-location-info .detail-links a{color:var(--blue)}
+.globe-info-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.globe-info-top button{border:1px solid var(--line);background:#fff;border-radius:8px;font-size:.72rem;padding:6px}
+@media(max-width:520px){.world-gallery-controls{flex-wrap:wrap}.world-gallery-controls select{flex-basis:100%}.globe-location-info .detail-media img,.globe-location-info .detail-media .image-fallback{height:105px}}
