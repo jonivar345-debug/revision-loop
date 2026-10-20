@@ -1023,7 +1023,7 @@ function examSuggested(q,answer){
 }
 
 function renderExam(q){
- const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'',secondary=q.verificationLevel==='secondary-indexed',original=q.sourceVerified===false;
+ const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'',secondary=q.verificationLevel==='secondary-indexed',original=q.verificationLevel==='original-exam-style'||q.year==='Practice';
  const linked=examQuestions.filter(x=>x.groupId===q.groupId).sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
  const linkedIndex=linked.findIndex(x=>x.id===q.id);
  const linkedNote=linked.length>1?'<div class="copyright-note">Linked original question · part '+(linkedIndex+1)+' of '+linked.length+'. Related parts are kept together in sessions.</div>':'';
