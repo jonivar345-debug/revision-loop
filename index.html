@@ -4,93 +4,111 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0f172a">
-  <meta name="description" content="Adaptive spaced-repetition revision for AQA mocks">
+  <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
-  <div id="app" class="app-shell">
-    <header class="topbar">
-      <div>
-        <h1>Revision Loop</h1>
-        <p class="subtitle">Your weak spots, at the right time.</p>
-      </div>
-      <button id="syncBtn" class="icon-btn" aria-label="Sync deck">↻</button>
-    </header>
+<div id="app" class="app-shell">
+  <header class="topbar">
+    <div><h1>Revision Loop</h1><p class="subtitle">AQA revision that adapts to what you miss.</p></div>
+    <button id="syncBtn" class="icon-btn" aria-label="Sync">↻</button>
+  </header>
 
-    <section class="level-card">
-      <div class="level-row">
-        <div><span class="level-label">LEVEL</span><strong id="levelNum">1</strong></div>
-        <div class="xp-copy"><strong id="xpTotal">0 XP</strong><span id="xpNext">75 XP to level 2</span></div>
-      </div>
-      <div class="xp-track"><div id="xpBar" class="xp-bar"></div></div>
-    </section>
+  <section class="level-card">
+    <div class="level-row">
+      <div><span class="level-label">LEVEL</span><strong id="levelNum">1</strong></div>
+      <div class="xp-copy"><strong id="xpTotal">0 XP</strong><span id="xpNext">75 XP to level 2</span></div>
+    </div>
+    <div class="xp-track"><div id="xpBar" class="xp-bar"></div></div>
+  </section>
 
-    <div id="toast" class="toast" aria-live="polite"></div>
-    <div id="syncState" class="sync-state">Loading latest deck…</div>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <div id="syncState" class="sync-state">Loading latest deck…</div>
 
-    <section class="stats-grid">
-      <div class="stat"><strong id="dueCount">0</strong><span>Due</span></div>
-      <div class="stat"><strong id="newCount">0</strong><span>New today</span></div>
-      <div class="stat"><strong id="reviewedCount">0</strong><span>Reviewed</span></div>
-      <div class="stat"><strong id="masteredCount">0</strong><span>Mastered</span></div>
-    </section>
+  <section class="stats-grid">
+    <div class="stat"><strong id="dueCount">0</strong><span>Due</span></div>
+    <div class="stat"><strong id="newCount">0</strong><span>New today</span></div>
+    <div class="stat"><strong id="reviewedCount">0</strong><span>Reviewed</span></div>
+    <div class="stat"><strong id="masteredCount">0</strong><span>Mastered</span></div>
+  </section>
 
-    <nav class="tabs" aria-label="Main navigation">
-      <button class="tab active" data-panel="review">Review</button>
-      <button class="tab" data-panel="weaknesses">Weaknesses</button>
-      <button class="tab" data-panel="progress">Progress</button>
-      <button class="tab" data-panel="browse">Browse</button>
-    </nav>
+  <section class="mode-wrap">
+    <div class="mode-label">Revision mode</div>
+    <div class="mode-grid">
+      <button class="mode-btn active" data-mode="mock"><b>Mock</b><span>Current mock scope</span></button>
+      <button class="mode-btn" data-mode="full"><b>Full A-level</b><span>Whole core course</span></button>
+      <button class="mode-btn" data-mode="topic"><b>Topic</b><span>Choose exactly what to revise</span></button>
+      <button class="mode-btn" data-mode="exam"><b>Exam questions</b><span>Real AQA sources</span></button>
+    </div>
+    <div id="modeNote" class="mode-note"></div>
+  </section>
 
-    <main>
-      <section id="review" class="panel active">
+  <nav class="tabs" aria-label="Main navigation">
+    <button class="tab active" data-panel="study">Study</button>
+    <button class="tab" data-panel="weaknesses">Weaknesses</button>
+    <button class="tab" data-panel="progress">Progress</button>
+    <button class="tab" data-panel="browse">Browse</button>
+  </nav>
+
+  <main>
+    <section id="study" class="panel active">
+      <div class="study-controls">
         <div class="subject-chips">
           <button class="chip active" data-subject="">All</button>
           <button class="chip" data-subject="Physics">Physics</button>
           <button class="chip" data-subject="Chemistry">Chemistry</button>
           <button class="chip" data-subject="Maths">Maths</button>
         </div>
-        <div class="queue-tools">
+        <div id="topicControls" class="topic-controls hidden">
+          <select id="topicSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
+          <select id="topicSelect"></select>
+        </div>
+        <div id="examControls" class="exam-controls hidden">
+          <select id="examSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
+          <select id="examLevel"><option value="">AS + A-level</option><option value="AS">AS</option><option value="A-level">A-level</option></select>
+          <select id="examTopic"><option value="">All topics</option></select>
+        </div>
+        <div id="queueTools" class="queue-tools">
           <button id="weakQuick" class="mini-btn">Weakest first</button>
           <button id="practicalQuick" class="mini-btn">Practicals</button>
-          <button id="insuranceQuick" class="mini-btn">Physics insurance</button>
           <button id="normalQueue" class="mini-btn hidden">Back to normal</button>
         </div>
-        <div id="reviewHost"></div>
-      </section>
+      </div>
+      <div id="studyHost"></div>
+    </section>
 
-      <section id="weaknesses" class="panel">
-        <div class="section-head">
-          <div><h2>Weaknesses</h2><p>Repeated misses rise automatically. Four misses flags a topic for reteaching.</p></div>
-          <button id="reviewWeakBtn" class="primary-small">Review weakest</button>
-        </div>
-        <div id="weakList" class="list"></div>
-      </section>
+    <section id="weaknesses" class="panel">
+      <div class="section-head">
+        <div><h2>Weaknesses</h2><p>Missed cards and low exam-question scores raise a topic automatically.</p></div>
+        <button id="reviewWeakBtn" class="primary-small">Review weakest</button>
+      </div>
+      <div id="weakList" class="list"></div>
+    </section>
 
-      <section id="progress" class="panel">
-        <div class="section-head"><div><h2>Progress</h2><p>Mastery is based on spaced reviews, not one lucky answer.</p></div></div>
-        <div id="subjectProgress" class="progress-list"></div>
-        <div class="progress-card">
-          <h3>How scheduling works</h3>
-          <div class="schedule-row"><span>Again</span><b>10 min</b></div>
-          <div class="schedule-row"><span>Hard</span><b>1 day</b></div>
-          <div class="schedule-row"><span>Good</span><b>7 → 14 → 30 → 60 → 120 → 240 days</b></div>
-          <div class="schedule-row"><span>Easy</span><b>skips one interval</b></div>
-        </div>
-      </section>
+    <section id="progress" class="panel">
+      <div class="section-head"><div><h2>Progress</h2><p>Mastery requires spaced reviews. Exam-question scores are tracked separately.</p></div></div>
+      <div id="subjectProgress" class="progress-list"></div>
+      <div class="progress-card">
+        <h3>Spaced repetition</h3>
+        <div class="schedule-row"><span>Again</span><b>10 min</b></div>
+        <div class="schedule-row"><span>Hard</span><b>1 day</b></div>
+        <div class="schedule-row"><span>Good</span><b>7 → 14 → 30 → 60 → 120 → 240 days</b></div>
+        <div class="schedule-row"><span>Easy</span><b>skips one interval</b></div>
+      </div>
+    </section>
 
-      <section id="browse" class="panel">
-        <div class="browse-tools">
-          <input id="search" type="search" placeholder="Search topics or questions">
-          <select id="subjectFilter"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
-          <select id="kindFilter"><option value="">All types</option><option value="weak">Weak spots</option><option value="content">Mock content</option><option value="practical">Practicals</option><option value="insurance">Insurance</option></select>
-        </div>
-        <div id="deckList" class="list"></div>
-      </section>
-    </main>
-  </div>
-  <script src="app.js?v=7" defer></script>
+    <section id="browse" class="panel">
+      <div class="browse-tools">
+        <input id="search" type="search" placeholder="Search topics, definitions or questions">
+        <select id="subjectFilter"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
+        <select id="kindFilter"><option value="">All types</option><option value="weak">Weak spots</option><option value="content">Knowledge</option><option value="practical">Practicals</option><option value="insurance">Insurance</option></select>
+      </div>
+      <div id="deckList" class="list"></div>
+    </section>
+  </main>
+</div>
+<script src="app.js?v=8" defer></script>
 </body>
 </html>
