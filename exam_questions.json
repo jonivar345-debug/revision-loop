@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 30,
-  "updatedAt": "2026-10-20T20:11:03.574Z",
+  "bankVersion": 31,
+  "updatedAt": "2026-10-20T20:12:13.118Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -7022,7 +7022,7 @@
         1
       ],
       "modelAnswer": "120 cm³",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A trapped gas at 300 K occupies 120 cm³ at 100 kPa. The gas changes to 330 K and 110 kPa without loss. Calculate new volume.",
       "groupId": "Original|Physics|Gas laws|1",
@@ -7031,7 +7031,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 120,
+      "tolerance": 1.44
     },
     {
       "id": "orig_v25_physics_gas_laws_2",
@@ -7057,7 +7059,7 @@
         1
       ],
       "modelAnswer": "152 kPa",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A fixed amount of ideal gas is compressed isothermally from 4.0 L at 95 kPa to 2.5 L. Calculate final pressure and give the physical condition for Boyle's law.",
       "groupId": "Original|Physics|Gas laws|2",
@@ -7066,7 +7068,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 152,
+      "tolerance": 1.824
     },
     {
       "id": "orig_v25_physics_gas_laws_3",
@@ -7092,7 +7096,7 @@
         1
       ],
       "modelAnswer": "2.41 L",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A gas is heated at constant pressure from 20 °C to 80 °C. Initial volume is 2.00 L. Estimate the new volume.",
       "groupId": "Original|Physics|Gas laws|3",
@@ -7101,7 +7105,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 2.41,
+      "tolerance": 0.02892
     },
     {
       "id": "orig_v25_physics_gas_laws_4",
@@ -7162,7 +7168,7 @@
         1
       ],
       "modelAnswer": "3.0×10³ N C⁻¹",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A particle carrying charge 2.0 nC experiences a force of 6.0 µN in a uniform electric field. Determine the field strength.",
       "groupId": "Original|Physics|Electric fields|1",
@@ -7171,7 +7177,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 3000,
+      "tolerance": 36
     },
     {
       "id": "orig_v25_physics_electric_fields_2",
@@ -7197,7 +7205,7 @@
         1
       ],
       "modelAnswer": "5.0×10⁴ V m⁻¹, positive to negative",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 600 V supply is connected across parallel plates 12 mm apart. Neglecting edge effects, find the field strength and give its direction.",
       "groupId": "Original|Physics|Electric fields|2",
@@ -7206,7 +7214,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 50000,
+      "tolerance": 600
     },
     {
       "id": "orig_v25_physics_electric_fields_3",
@@ -7302,7 +7312,7 @@
         1
       ],
       "modelAnswer": "0.00564 C",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 470 µF capacitor is charged to 12 V. Calculate charge stored in coulombs.",
       "groupId": "Original|Physics|Capacitance|1",
@@ -7311,7 +7321,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.00564,
+      "tolerance": 0.00006768
     },
     {
       "id": "orig_v25_physics_capacitance_2",
@@ -7337,7 +7349,7 @@
         1
       ],
       "modelAnswer": "0.110 J",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Calculate the energy stored in a 2200 µF capacitor connected to a 10 V supply.",
       "groupId": "Original|Physics|Capacitance|2",
@@ -7346,7 +7358,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.11,
+      "tolerance": 0.00132
     },
     {
       "id": "orig_v25_physics_capacitance_3",
@@ -7372,7 +7386,7 @@
         1
       ],
       "modelAnswer": "0.135",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A charged capacitor discharges exponentially through a resistor with time constant 8.0 s. Find the fraction of initial charge after 16 s.",
       "groupId": "Original|Physics|Capacitance|3",
@@ -7381,7 +7395,9 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.135,
+      "tolerance": 0.0016200000000000001
     },
     {
       "id": "orig_v25_physics_capacitance_4",
@@ -7442,7 +7458,7 @@
         1
       ],
       "modelAnswer": "8.0 V",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 12.0 V supply is connected across two series resistors 2.0 kΩ and 4.0 kΩ. Find the voltage across the 4.0 kΩ resistor, assuming no load.",
       "groupId": "Original|Physics|Potential dividers|1",
@@ -7451,7 +7467,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 8,
+      "tolerance": 0.096
     },
     {
       "id": "orig_v25_physics_potential_dividers_2",
@@ -7547,7 +7565,7 @@
         1
       ],
       "modelAnswer": "3.0 V",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 9 V potential divider uses upper resistor 6 kΩ and lower resistor 3 kΩ. A voltmeter of very high resistance measures across lower resistor. Determine its reading.",
       "groupId": "Original|Physics|Potential dividers|4",
@@ -7556,7 +7574,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 3,
+      "tolerance": 0.036000000000000004
     },
     {
       "id": "orig_v25_chemistry_kp_1",
@@ -7613,7 +7633,7 @@
         1
       ],
       "modelAnswer": "0.32 atm⁻²",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A gas mixture at equilibrium contains N₂, H₂ and NH₃ with partial pressures 0.50 atm, 1.00 atm and 0.40 atm respectively. Calculate Kp for N₂+3H₂⇌2NH₃, with units.",
       "groupId": "Original|Chemistry|Kp|2",
@@ -7622,7 +7642,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.32,
+      "tolerance": 0.00384
     },
     {
       "id": "orig_v25_chemistry_kp_3",
@@ -7718,7 +7740,7 @@
         1
       ],
       "modelAnswer": "pH 2.00",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Calculate the pH of 0.0100 mol dm⁻³ hydrochloric acid, assuming complete dissociation.",
       "groupId": "Original|Chemistry|Acids and bases|1",
@@ -7727,7 +7749,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 2,
+      "tolerance": 0.024
     },
     {
       "id": "orig_v25_chemistry_acids_and_bases_2",
@@ -7753,7 +7777,7 @@
         1
       ],
       "modelAnswer": "pH 2.72",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A weak monoprotic acid HA has initial concentration 0.200 mol dm⁻³ and Ka=1.80×10⁻⁵ mol dm⁻³. Estimate pH using the weak-acid approximation.",
       "groupId": "Original|Chemistry|Acids and bases|2",
@@ -7762,7 +7786,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 2.72,
+      "tolerance": 0.03264
     },
     {
       "id": "orig_v25_chemistry_acids_and_bases_3",
@@ -7788,7 +7814,7 @@
         1
       ],
       "modelAnswer": "3.16×10⁻³ mol dm⁻³",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "At 25 °C, Kw=1.00×10⁻¹⁴ mol² dm⁻⁶. A solution has pH 11.50. Find the hydroxide-ion concentration.",
       "groupId": "Original|Chemistry|Acids and bases|3",
@@ -7797,7 +7823,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.00316,
+      "tolerance": 0.00003792
     },
     {
       "id": "orig_v25_chemistry_acids_and_bases_4",
@@ -7928,7 +7956,7 @@
         1
       ],
       "modelAnswer": "rate increases by factor 4.5",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "For rate=k[A]²[B], state the factor by which rate changes if [A] is tripled while [B] is halved at constant temperature.",
       "groupId": "Original|Chemistry|Rate equations|3",
@@ -7937,7 +7965,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": true,
+      "numericAnswer": 4.5,
+      "tolerance": 0.054
     },
     {
       "id": "orig_v25_chemistry_rate_equations_4",
@@ -8033,7 +8063,7 @@
         1
       ],
       "modelAnswer": "59.8 kJ mol⁻¹",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "An Arrhenius plot of ln k against 1/T has gradient −7200 K. Calculate activation energy using R=8.31 J K⁻¹ mol⁻¹.",
       "groupId": "Original|Chemistry|Arrhenius|2",
@@ -8042,7 +8072,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 59.8,
+      "tolerance": 0.7176
     },
     {
       "id": "orig_v25_chemistry_arrhenius_3",
@@ -8060,15 +8092,15 @@
       "markPoints": [
         "Convert Ea to 50000 J mol⁻¹.",
         "Exponent =−50000/(8.31×300)≈−20.06.",
-        "k≈3.94 s⁻¹."
+        "k≈3.90 s⁻¹ (using the stated constants)."
       ],
       "markPointMarks": [
         1,
         1,
         1
       ],
-      "modelAnswer": "3.94 s⁻¹",
-      "answerType": "points",
+      "modelAnswer": "3.90 s⁻¹",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A reaction has A=2.0×10⁹ s⁻¹, Ea=50.0 kJ mol⁻¹ and T=300 K. Estimate k using k=Ae^(−Ea/RT) with R=8.31.",
       "groupId": "Original|Chemistry|Arrhenius|3",
@@ -8077,7 +8109,14 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "answerVariants": [
+        "3.90",
+        "3.9 s^-1",
+        "3.897 s^-1"
+      ],
+      "numericAnswer": 3.9,
+      "tolerance": 0.0468
     },
     {
       "id": "orig_v25_chemistry_arrhenius_4",
@@ -8694,7 +8733,7 @@
         1
       ],
       "modelAnswer": "(x−3)^2−4; minimum −4",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Write x²−6x+5 in completed-square form and hence find its minimum value.",
       "groupId": "Original|Maths|Quadratics|1",
@@ -8703,7 +8742,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": -4,
+      "tolerance": 0.048
     },
     {
       "id": "orig_v25_maths_quadratics_2",
@@ -8867,7 +8908,7 @@
         1
       ],
       "modelAnswer": "10",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Evaluate ∫₁³ (2x+1) dx. Show substitution of the limits.",
       "groupId": "Original|Maths|Integration|2",
@@ -8876,7 +8917,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": true
+      "requiresWorking": true,
+      "numericAnswer": 10,
+      "tolerance": 0.12
     },
     {
       "id": "orig_v25_maths_integration_3",
@@ -8937,7 +8980,7 @@
         1
       ],
       "modelAnswer": "3 square units",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Find the area enclosed between y=x² and the x-axis for x from −2 to 1.",
       "groupId": "Original|Maths|Integration|4",
@@ -8946,7 +8989,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 3,
+      "tolerance": 0.036000000000000004
     },
     {
       "id": "orig_v25_maths_sequences_1",
@@ -8972,7 +9017,7 @@
         1
       ],
       "modelAnswer": "83",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "An arithmetic sequence begins 7, 11, 15, ... Find its 20th term.",
       "groupId": "Original|Maths|Sequences|1",
@@ -8981,7 +9026,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 83,
+      "tolerance": 0.996
     },
     {
       "id": "orig_v25_maths_sequences_2",
@@ -9007,7 +9054,7 @@
         1
       ],
       "modelAnswer": "24",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A geometric series has first term 12 and ratio ½. Find the sum to infinity and state why it exists.",
       "groupId": "Original|Maths|Sequences|2",
@@ -9016,7 +9063,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": true,
+      "numericAnswer": 24,
+      "tolerance": 0.28800000000000003
     },
     {
       "id": "orig_v25_maths_sequences_3",
@@ -9042,7 +9091,7 @@
         1
       ],
       "modelAnswer": "570",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Find the sum of the first 15 terms of the arithmetic sequence 3, 8, 13, ... .",
       "groupId": "Original|Maths|Sequences|3",
@@ -9051,7 +9100,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 570,
+      "tolerance": 6.84
     },
     {
       "id": "orig_v25_maths_sequences_4",
@@ -9218,7 +9269,7 @@
       "groupOrder": "2.3",
       "answerType": "numeric",
       "questionType": "calculation",
-      "requiresWorking": false,
+      "requiresWorking": true,
       "standalone": true,
       "mock": true,
       "sourceVerified": true,
