@@ -798,9 +798,10 @@ function startExamSession(){
 }
 function awardExam(q,marks,answer,missedPoints){
  const ts=topicStat(q.subject,q.revisionTopic||q.topic);ts.examMarks+=marks;ts.examMax+=q.marks;ts.attempts++;ts.last=now();if(marks<q.marks)ts.lastMiss=now();
- if(!profile.examResults[q.id])profile.examResults[q.id]={attempts:[]};const rec={marks,max:q.marks,date:now(),answer:String(answer||'').slice(0,1000),missedPoints};profile.examResults[q.id].attempts.push(rec);profile.examResults[q.id].last=rec;
+ if(!profile.examResults[q.id])profile.examResults[q.id]={attempts:[]};const rec={marks,max:q.marks,date:now(),answer:String(answer||'').slice(0,1000),missedPoints,scannedPages:window.RevisionScan?.countFor(q.id)||0};profile.examResults[q.id].attempts.push(rec);profile.examResults[q.id].last=rec;
  let w=profile.topicWeakness[topicKey(q.subject,q.revisionTopic||q.topic)]||0;if(marks/q.marks<.5)w=Math.min(10,w+2);else if(marks<q.marks)w=Math.min(10,w+1);else w=Math.max(0,w-1);profile.topicWeakness[topicKey(q.subject,q.revisionTopic||q.topic)]=w;
  if(marks<q.marks)addError({type:'exam',id:q.id,subject:q.subject,topic:q.revisionTopic||q.topic,result:marks+'/'+q.marks,answer:String(answer||'').slice(0,1000),missedPoints});
+ window.RevisionScan?.commit(q.id);
  award(marks,'exam');save();advanceSession();
 }
 
@@ -1163,6 +1164,7 @@ function renderExam(q){
  const linkedNote=linked.length>1?'<div class="copyright-note">Linked original question · part '+(linkedIndex+1)+' of '+linked.length+'. Related parts are kept together in sessions.</div>':'';
  const sourceNote=original?'<div class="copyright-note">Original exam-style practice question, not an AQA past-paper question or official mark scheme.</div>':q.sourceFirst?'<div class="copyright-note">This bank entry is source-linked: open the source first because its original figure/table/context is needed.</div>':secondary?'<div class="copyright-note">2025 AQA paper entry cross-checked against independent paper/mark-scheme indexes. The direct public AQA PDF was not available through the current web index, so provenance is shown explicitly.</div>':'<div class="copyright-note">In-app wording is a faithful self-contained paraphrase of the verified AQA task.</div>';
  document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(original?'Original practice':secondary?'AQA 2025 · cross-checked':'AQA source-linked')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(original?'Practice Q'+q.question:q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div>'+(original?'':'<div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(secondary?'Question source/index':'Open official AQA question')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(secondary?'Marking source/index':'Official mark scheme')+'</a></div>')+'<textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
+ window.RevisionScan?.mount(q.id);
  document.getElementById('markExam').onclick=()=>{
    const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');
    marking.classList.add('show');
@@ -1172,8 +1174,8 @@ function renderExam(q){
    ef.textContent=res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
    renderScoreEditor(q,answer);
    document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{
-     const checked=[...document.querySelectorAll('[data-mp]')].filter(x=>x.checked).length;
-     currentExamScore=clamp(Math.round(checked/Math.max(1,q.markPoints.length)*q.marks),0,q.marks);
+     currentExamScore=[...document.querySelectorAll('[data-mp]')].reduce((total,el)=>total+(el.checked?(q.markPointMarks?.[Number(el.dataset.mp)]??1):0),0);
+     currentExamScore=clamp(currentExamScore,0,q.marks);
      renderScoreEditor(q,answer);
    });
  };
