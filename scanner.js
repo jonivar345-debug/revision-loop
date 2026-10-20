@@ -95,10 +95,12 @@
   try{saved=await read(id)}catch(e){if(currentId===id)status('Browser storage unavailable; photos can still be used until you leave this question.',true);return}
   if(currentId!==id||sequence!==version||!saved?.images?.length)return;
   if(saved.status==='draft'){
+   if(pages.length)return; // Never replace a newly scanned page with an older asynchronous draft.
    pages=saved.images.slice(0,MAX);render();status('Recovered '+pages.length+' unfinished page(s) from this browser.');
   }else{
    const prior=byId('scanPrevious');if(!prior)return;
-   prior.hidden=false;prior.innerHTML='<summary>View last saved answer photos ('+saved.images.length+')</summary><div class="scan-history">'+saved.images.map((img,i)=>'<img alt="Previous attempt page '+(i+1)+'" src="'+img+'">').join('')+'</div><small>Older working is for reference only, not a new submission.</small>';
+   prior.hidden=false;prior.innerHTML='<summary>View last saved answer photos ('+saved.images.length+')</summary><div class="scan-history">'+saved.images.map((img,i)=>'<img alt="Previous attempt page '+(i+1)+'" src="'+img+'">').join('')+'</div><small>Older working is for reference only, not a new submission.</small><button type="button" id="scanDeleteHistory">Delete saved photos</button>';
+   document.getElementById('scanDeleteHistory').onclick=async()=>{try{await write(id,[],'marked');prior.hidden=true;prior.innerHTML='';status('Saved answer photographs deleted from this browser.')}catch(e){status('Could not delete saved photos: '+e.message,true)}};
   }
  }
  function mount(id){
