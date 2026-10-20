@@ -136,3 +136,8 @@
 .archive-years span{font-size:.69rem;padding:6px 11px;border-radius:8px;border:1px solid var(--line);background:#f8fafc}
 .archive-links a{font-size:.72rem;display:block;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:9px;padding:10px 12px;text-decoration:none;font-weight:750}
 .topic-outside-resources a,.archive-label a{color:#1d4ed8;text-decoration:underline}
+
+#examControls .control-row.three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#examControls .control-row.three label{min-width:0}
+#examLevel{font:inherit;max-width:100%}
+@media(min-width:900px){#examControls .control-row.three{grid-template-columns:repeat(4,minmax(0,1fr))}}
