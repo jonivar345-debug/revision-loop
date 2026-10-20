@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 10,
+  "bankVersion": 11,
   "updatedAt": "2026-10-20T16:57:21.173Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
@@ -1646,6 +1646,41 @@
       "markPointMarks": [
         3
       ]
+    },
+    {
+      "id": "aqa_math_as20_p1_q5_link",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Differentiation",
+      "subtopic": "First principles",
+      "year": 2020,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "5",
+      "marks": 4,
+      "questionType": "official-source calculus",
+      "prompt": "Open official AQA Paper 1 Question 5 and complete the first-principles differentiation.",
+      "answerType": "text",
+      "modelAnswer": "8x+1",
+      "markPoints": [
+        "Set up the difference quotient.",
+        "Expand the expression in x+h correctly.",
+        "Simplify and divide by h.",
+        "Take the limit to obtain 8x+1."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-QP-NOV20.PDF#page=5",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF#page=7",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2020|7356/1|5",
+      "groupOrder": "5"
     }
   ],
   "coverage": {
