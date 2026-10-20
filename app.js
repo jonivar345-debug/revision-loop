@@ -621,7 +621,7 @@ function formulaScore(input,expected){
  return phraseScore(input,expected);
 }
 function evaluateCard(c,input){
- if(String(input||'').trim()&&Array.isArray(c.accept)&&c.accept.some(a=>normalise(a)===normalise(input)))return {status:'correct',score:1,text:'Correct accepted wording.',missing:[]};
+ if(String(input||'').trim()&&(normalise(c.back)===normalise(input)||(Array.isArray(c.accept)&&c.accept.some(a=>normalise(a)===normalise(input)))))return {status:'correct',score:1,text:'Correct answer or accepted equivalent wording.',missing:[]};
  if(!String(input||'').trim())return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
  let best=0,missing=[];
  for(const alt of (c.accept||[]))best=Math.max(best,formulaScore(input,alt),phraseScore(input,alt));
@@ -1129,7 +1129,10 @@ function examSuggested(q,answer){
    // A merely similar answer must be reviewed marking point by marking point.
    if(modelMatch>=.97&&q.marks<=2&&!contradicts(answer,q.modelAnswer)){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
  }
- if(q.answerType==='levels'&&q.marks>=4)suggested=Math.min(suggested,Math.max(1,Math.ceil(q.marks*.66)));
+ if(q.answerType==='levels'&&q.marks>=4){
+  const complete=preds.every(Boolean)&&String(answer).trim().split(/\s+/).length>=Math.max(20,q.markPoints.length*5);
+  if(!complete)suggested=Math.min(suggested,Math.max(1,Math.ceil(q.marks*.66)));
+}
  const matched=preds.filter(Boolean).length,confidence=finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
