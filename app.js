@@ -446,7 +446,24 @@ const LOCATIONS=[
  {id:'salzburg',name:'Salzburg',wiki:'Salzburg',lat:47.8095,lon:13.055,cost:725,region:'Europe'},
  {id:'sarajevo',name:'Sarajevo',wiki:'Sarajevo',lat:43.8563,lon:18.4131,cost:730,region:'Europe'},
  {id:'mostar',name:'Mostar',wiki:'Mostar',lat:43.3438,lon:17.8078,cost:735,region:'Europe'},
- {id:'kotor',name:'Kotor',wiki:'Kotor',lat:42.4247,lon:18.7712,cost:740,region:'Europe'}
+ {id:'kotor',name:'Kotor',wiki:'Kotor',lat:42.4247,lon:18.7712,cost:740,region:'Europe'},
+ {id:'casablanca',name:'Casablanca',wiki:'Casablanca',lat:33.5731,lon:-7.5898,cost:745,region:'Africa'},
+ {id:'essaouira',name:'Essaouira',wiki:'Essaouira',lat:31.5085,lon:-9.7595,cost:750,region:'Africa'},
+ {id:'aswan',name:'Aswan',wiki:'Aswan',lat:24.0889,lon:32.8998,cost:755,region:'Africa'},
+ {id:'sidi_bou_said',name:'Sidi Bou Said',wiki:'Sidi_Bou_Said',lat:36.8702,lon:10.3411,cost:760,region:'Africa'},
+ {id:'cape_coast',name:'Cape Coast',wiki:'Cape_Coast',lat:5.1053,lon:-1.2466,cost:765,region:'Africa'},
+ {id:'cape_town',name:'Cape Town',wiki:'Cape_Town',lat:-33.9249,lon:18.4241,cost:770,region:'Africa'},
+ {id:'stellenbosch',name:'Stellenbosch',wiki:'Stellenbosch',lat:-33.9321,lon:18.8602,cost:775,region:'Africa'},
+ {id:'windhoek',name:'Windhoek',wiki:'Windhoek',lat:-22.5609,lon:17.0658,cost:780,region:'Africa'},
+ {id:'swakopmund',name:'Swakopmund',wiki:'Swakopmund',lat:-22.6784,lon:14.5258,cost:785,region:'Africa'},
+ {id:'stone_town',name:'Stone Town',wiki:'Stone_Town',lat:-6.1622,lon:39.1921,cost:790,region:'Africa'},
+ {id:'arusha',name:'Arusha',wiki:'Arusha',lat:-3.3869,lon:36.683,cost:795,region:'Africa'},
+ {id:'kampala',name:'Kampala',wiki:'Kampala',lat:0.3476,lon:32.5825,cost:800,region:'Africa'},
+ {id:'mombasa',name:'Mombasa',wiki:'Mombasa',lat:-4.0435,lon:39.6682,cost:805,region:'Africa'},
+ {id:'victoria_falls',name:'Victoria Falls',wiki:'Victoria_Falls',lat:-17.9243,lon:25.856,cost:810,region:'Africa'},
+ {id:'nosy_be',name:'Nosy Be',wiki:'Nosy_Be',lat:-13.3126,lon:48.2584,cost:815,region:'Africa'},
+ {id:'addis_ababa',name:'Addis Ababa',wiki:'Addis_Ababa',lat:9.03,lon:38.74,cost:820,region:'Africa'},
+ {id:'mount_cook',name:'Aoraki / Mount Cook',wiki:'Aoraki_/_Mount_Cook',lat:-43.595,lon:170.141,cost:825,region:'Oceania'}
 ];
 
 const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
