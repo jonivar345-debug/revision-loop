@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 6,
-  "deckVersion": 3,
-  "updatedAt": "2026-10-20T16:48:00+01:00",
+  "schemaVersion": 7,
+  "deckVersion": 4,
+  "updatedAt": "2026-10-20T17:05:00+01:00",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -40,7 +40,9 @@
           "sine"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_slope_001",
@@ -70,7 +72,9 @@
           "mgcos"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_couple_001",
@@ -99,7 +103,9 @@
           "force times distance"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_motion_d",
@@ -121,7 +127,9 @@
           "v"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_motion_v",
@@ -149,7 +157,9 @@
           "displacement"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_motion_a",
@@ -171,7 +181,9 @@
           "dv"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_moments_001",
@@ -195,7 +207,9 @@
           "line action"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_equilibrium_001",
@@ -220,7 +234,9 @@
           "constant velocity",
           "stationary"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_internal_001",
@@ -250,7 +266,9 @@
           "lost volts"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_photoelectric_001",
@@ -280,7 +298,9 @@
           "φ"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_photoelectric_002",
@@ -308,7 +328,9 @@
           "intensity",
           "more photons"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_energy_levels_001",
@@ -336,7 +358,9 @@
           "remove",
           "escape"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_quarks_001",
@@ -362,7 +386,9 @@
         [
           "strangeness"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_pressure_001",
@@ -388,7 +414,9 @@
           "area",
           "force per unit area"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": false
     },
     {
       "id": "phy_combined_gas_001",
@@ -418,7 +446,9 @@
           "kelvin",
           "k"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": false
     },
     {
       "id": "chem_back_001",
@@ -448,7 +478,9 @@
           "ratio"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_gas_001",
@@ -475,7 +507,9 @@
         [
           "mol"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_titration_001",
@@ -491,7 +525,9 @@
         "divide by 1000",
         "/1000",
         "cm3 to dm3 divide by 1000"
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_empirical_001",
@@ -518,7 +554,9 @@
           "whole number",
           "ratio"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_arrhenius_001",
@@ -546,7 +584,9 @@
           "ln a"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_arrhenius_002",
@@ -571,7 +611,9 @@
         [
           "ea"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_kp_001",
@@ -595,7 +637,9 @@
           "coefficient",
           "power"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_kp_002",
@@ -619,7 +663,9 @@
         [
           "total pressure"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_weak_acid_001",
@@ -650,7 +696,9 @@
           "h+ squared",
           "[h+]2"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_kw_001",
@@ -678,7 +726,9 @@
           "10^-14",
           "1e-14"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_gibbs_001",
@@ -711,7 +761,9 @@
           "same units",
           "matching units"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_rates_001",
@@ -734,7 +786,9 @@
         [
           "concentration"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "maths_trig_001",
@@ -750,7 +804,9 @@
         "sin^2x+cos^2x=1",
         "sin2x+cos2x=1",
         "sin squared x plus cos squared x equals 1"
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "maths_transform_001",
@@ -768,7 +824,9 @@
         "translate right by a",
         "right"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "maths_transform_002",
@@ -786,7 +844,9 @@
         "translate up by a",
         "up"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "maths_transform_003",
@@ -809,7 +869,9 @@
           "x"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_rp1",
@@ -840,7 +902,9 @@
           "mass per unit length"
         ]
       ],
-      "visual": "stationary"
+      "visual": "stationary",
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_rp2",
@@ -875,7 +939,9 @@
         [
           "n"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_rp3",
@@ -904,7 +970,9 @@
           "g",
           "2 gradient"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_rp4",
@@ -937,7 +1005,9 @@
           "delta l"
         ]
       ],
-      "visual": "young"
+      "visual": "young",
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_rp5",
@@ -968,7 +1038,9 @@
         [
           "l"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_rp6",
@@ -996,7 +1068,9 @@
           "negative r"
         ]
       ],
-      "visual": "internal-resistance"
+      "visual": "internal-resistance",
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_rp1",
@@ -1028,7 +1102,9 @@
           "invert",
           "mix"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_rp2",
@@ -1053,7 +1129,9 @@
           "delta h",
           "-q/n"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_rp3",
@@ -1081,7 +1159,9 @@
           "faster",
           "rate"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_rp4",
@@ -1109,7 +1189,9 @@
           "agi",
           "yellow"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_rp5",
@@ -1135,7 +1217,9 @@
         [
           "vapour"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_rp6",
@@ -1160,7 +1244,9 @@
           "orange",
           "brown"
         ]
-      ]
+      ],
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_ins_circular_001",
@@ -1187,7 +1273,9 @@
           "centre",
           "center"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": false
     },
     {
       "id": "phy_ins_circular_002",
@@ -1212,7 +1300,9 @@
           "mv2/r",
           "mv^2/r"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": false
     },
     {
       "id": "phy_ins_shm_001",
@@ -1243,7 +1333,9 @@
           "a=-",
           "omega"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": false
     },
     {
       "id": "phy_ins_shm_002",
@@ -1269,7 +1361,9 @@
           "maximum displacement",
           "extreme"
         ]
-      ]
+      ],
+      "stage": "A2",
+      "mock": false
     },
     {
       "id": "phy_uncert_random",
@@ -1295,7 +1389,9 @@
           "average"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_uncert_systematic",
@@ -1322,7 +1418,9 @@
           "won't remove"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_uncert_percent",
@@ -1338,7 +1436,9 @@
         "absolute uncertainty divided by measured value times 100",
         "uncertainty/value x100"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_uncert_products",
@@ -1354,7 +1454,9 @@
         "add percentage uncertainties",
         "sum the percentage uncertainties"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_uncert_power",
@@ -1375,7 +1477,9 @@
           "exponent"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_accuracy_precision",
@@ -1405,7 +1509,9 @@
           "agree"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_specific_charge",
@@ -1421,7 +1527,9 @@
         "charge/mass",
         "charge divided by mass"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_nuclide",
@@ -1448,7 +1556,9 @@
           "atomic number"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_antiparticle",
@@ -1467,7 +1577,9 @@
           "opposite charge"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_annihilation",
@@ -1493,7 +1605,9 @@
           "conserved"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_pair_production",
@@ -1518,7 +1632,9 @@
           "energy"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_hadrons",
@@ -1537,7 +1653,9 @@
           "strong"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_baryon_meson",
@@ -1558,7 +1676,9 @@
           "quark and antiquark"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_proton_quarks",
@@ -1573,7 +1693,9 @@
         "uud",
         "u u d"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_neutron_quarks",
@@ -1588,7 +1710,9 @@
         "udd",
         "u d d"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_pion_plus",
@@ -1605,7 +1729,9 @@
         "u dbar",
         "u d bar"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_conservation_particle",
@@ -1627,7 +1753,9 @@
           "lepton"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_photon_energy",
@@ -1644,7 +1772,9 @@
         "e=hc/lambda",
         "hc/lambda"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_debroglie",
@@ -1660,7 +1790,9 @@
         "h/p",
         "λ=h/p"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_wave_speed",
@@ -1676,7 +1808,9 @@
         "v=flambda",
         "v=fλ"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_period_frequency",
@@ -1691,7 +1825,9 @@
         "t=1/f",
         "1/f"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_phase_cycle",
@@ -1709,7 +1845,9 @@
         "2 pi",
         "2π"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_stationary_nodes",
@@ -1737,7 +1875,9 @@
           "max amplitude"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_stationary_spacing",
@@ -1753,7 +1893,9 @@
         "λ/2",
         "half a wavelength"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_superposition",
@@ -1776,7 +1918,9 @@
           "displacement"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_double_slit",
@@ -1792,7 +1936,9 @@
         "w=λd/s",
         "lambda d/s"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_grating",
@@ -1808,7 +1954,9 @@
         "d sintheta=nlambda",
         "d sin θ = nλ"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_refractive_index",
@@ -1823,7 +1971,9 @@
         "n=c/v",
         "c/v"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_snell",
@@ -1838,7 +1988,9 @@
         "n1 sin theta1=n2 sin theta2",
         "n1sintheta1=n2sintheta2"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_tir_conditions",
@@ -1869,7 +2021,9 @@
           "above"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_diffraction",
@@ -1894,7 +2048,9 @@
           "same order"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_resultant_perp",
@@ -1910,7 +2066,9 @@
         "square root x squared plus y squared",
         "pythagoras"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_moment_eq",
@@ -1934,7 +2092,9 @@
           "same"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_suvat_condition",
@@ -1949,7 +2109,9 @@
         "constant acceleration",
         "acceleration constant"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_projectile_independent",
@@ -1976,7 +2138,9 @@
           "time"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_projectile_horizontal",
@@ -1992,7 +2156,9 @@
         "zero",
         "0 m/s2"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_top_projectile",
@@ -2021,7 +2187,9 @@
           "downward"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_newton3",
@@ -2046,7 +2214,9 @@
           "same type"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_momentum",
@@ -2061,7 +2231,9 @@
         "p=mv",
         "mv"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_impulse",
@@ -2077,7 +2249,9 @@
         "fdt=dp",
         "impulse=change in momentum"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_force_time_area",
@@ -2097,7 +2271,9 @@
           "change in momentum"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_work_angle",
@@ -2112,7 +2288,9 @@
         "w=fs cos theta",
         "fs cos theta"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_power_fv",
@@ -2127,7 +2305,9 @@
         "p=fv",
         "fv"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_hooke",
@@ -2143,7 +2323,9 @@
         "f=kx",
         "f=k extension"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_stress",
@@ -2159,7 +2341,9 @@
         "force/area",
         "force divided by area"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_strain",
@@ -2175,7 +2359,9 @@
         "extension/original length",
         "extension divided by original length"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_young",
@@ -2192,7 +2378,9 @@
         "stress divided by strain",
         "e=stress/strain"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_current",
@@ -2209,7 +2397,9 @@
         "charge/time",
         "rate of flow of charge"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_pd",
@@ -2233,7 +2423,9 @@
           "w/q"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_emf",
@@ -2257,7 +2449,9 @@
           "per charge"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_resistance",
@@ -2272,7 +2466,9 @@
         "r=v/i",
         "v/i"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_resistivity",
@@ -2288,7 +2484,9 @@
         "rho l/a",
         "r=ρl/a"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_series_current",
@@ -2308,7 +2506,9 @@
           "current"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_series_pd",
@@ -2330,7 +2530,9 @@
           "voltage"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_parallel_pd",
@@ -2350,7 +2552,9 @@
           "branch"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_parallel_current",
@@ -2377,7 +2581,9 @@
           "equal"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_power_elec",
@@ -2401,7 +2607,9 @@
           "v squared over r"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_potential_divider",
@@ -2417,7 +2625,9 @@
         "vout=vin r2/(r1+r2)",
         "vin*r2/(r1+r2)"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_thermistor",
@@ -2433,7 +2643,9 @@
         "falls",
         "goes down"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_ldr",
@@ -2449,7 +2661,9 @@
         "falls",
         "goes down"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_filament_iv",
@@ -2472,7 +2686,9 @@
           "collision"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_diode",
@@ -2495,7 +2711,9 @@
           "no current"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_ar_def",
@@ -2520,7 +2738,9 @@
           "c12"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_isotope",
@@ -2540,7 +2760,9 @@
           "different neutron"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_ionisation_def",
@@ -2567,7 +2789,9 @@
           "positive ion"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_ie_trend",
@@ -2594,7 +2818,9 @@
           "distance"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_avogadro",
@@ -2610,7 +2836,9 @@
         "6.02e23",
         "6.022e23"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_moles_mass",
@@ -2625,7 +2853,9 @@
         "n=m/mr",
         "m/mr"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_concentration",
@@ -2640,7 +2870,9 @@
         "c=n/v",
         "n/v"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_yield",
@@ -2655,7 +2887,9 @@
         "actual/theoretical x100",
         "actual yield/theoretical yield*100"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_atom_economy",
@@ -2681,7 +2915,9 @@
           "stoichiometric"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_purity",
@@ -2696,7 +2932,9 @@
         "pure mass/total mass x100",
         "mass pure/sample mass*100"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_hydrate",
@@ -2721,7 +2959,9 @@
           "ratio"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_ionic_bond",
@@ -2744,7 +2984,9 @@
           "ion"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_covalent_bond",
@@ -2765,7 +3007,9 @@
           "nucleus"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_metallic_bond",
@@ -2788,7 +3032,9 @@
           "electrostatic"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_shape_linear",
@@ -2803,7 +3049,9 @@
         "180",
         "180 degrees"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_shape_trig",
@@ -2818,7 +3066,9 @@
         "120",
         "120 degrees"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_shape_tetra",
@@ -2833,7 +3083,9 @@
         "109.5",
         "109.5 degrees"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_lone_pair",
@@ -2860,7 +3112,9 @@
           "bonding pair"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_hbond",
@@ -2884,7 +3138,9 @@
           "lone pair"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_enthalpy_def",
@@ -2907,7 +3163,9 @@
           "equation"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_hess",
@@ -2928,7 +3186,9 @@
           "path"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_bondenthalpy",
@@ -2944,7 +3204,9 @@
         "broken minus formed",
         "sum broken minus sum formed"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_collision",
@@ -2965,7 +3227,9 @@
           "orientation"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_catalyst",
@@ -2986,7 +3250,9 @@
           "lower ea"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_lechatelier",
@@ -3009,7 +3275,9 @@
           "change"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_kc",
@@ -3033,7 +3301,9 @@
           "omit"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_redox_oxid",
@@ -3057,7 +3327,9 @@
           "higher oxidation"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_redox_reduc",
@@ -3080,7 +3352,9 @@
           "lower oxidation"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_period_atomic",
@@ -3103,7 +3377,9 @@
           "radius decreases"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_group2_reactivity",
@@ -3130,7 +3406,9 @@
           "falls"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_group2_hydroxide",
@@ -3145,7 +3423,9 @@
         "increases",
         "more soluble"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_group2_sulfate",
@@ -3160,7 +3440,9 @@
         "decreases",
         "less soluble"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_halogen_oxidising",
@@ -3175,7 +3457,9 @@
         "decreases",
         "falls"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_halide_reducing",
@@ -3190,7 +3474,9 @@
         "increases",
         "rises"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_displacement_halogen",
@@ -3211,7 +3497,9 @@
           "weaker"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_homolytic",
@@ -3231,7 +3519,9 @@
           "radical"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_heterolytic",
@@ -3254,7 +3544,9 @@
           "ion"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_electrophile",
@@ -3269,7 +3561,9 @@
         "electron pair acceptor",
         "accepts electron pair"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_nucleophile",
@@ -3284,7 +3578,9 @@
         "electron pair donor",
         "donates electron pair"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_radical_sub",
@@ -3299,7 +3595,9 @@
         "initiation propagation termination",
         "initiation, propagation, termination"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_halogen_uv",
@@ -3315,7 +3613,9 @@
         "ultraviolet",
         "uv light"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_alkene_bromine",
@@ -3329,7 +3629,9 @@
       "accept": [
         "electrophilic addition"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_markovnikov",
@@ -3349,7 +3651,9 @@
           "carbocation"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_halogeno_sub",
@@ -3363,7 +3667,9 @@
       "accept": [
         "nucleophilic substitution"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_elimination",
@@ -3388,7 +3694,9 @@
           "oh"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_alcohol_primary",
@@ -3402,7 +3710,9 @@
       "accept": [
         "aldehyde"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_alcohol_primary_reflux",
@@ -3416,7 +3726,9 @@
       "accept": [
         "carboxylic acid"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_alcohol_secondary",
@@ -3430,7 +3742,9 @@
       "accept": [
         "ketone"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_ir_oh",
@@ -3446,7 +3760,9 @@
         "3230 to 3550",
         "around 3300"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_ir_carbonyl",
@@ -3462,7 +3778,9 @@
         "1680 to 1750",
         "around 1700"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_optical",
@@ -3489,7 +3807,9 @@
           "not superimposable"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_cip",
@@ -3511,7 +3831,9 @@
           "first difference"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_aldehyde_tollens",
@@ -3535,7 +3857,9 @@
           "no reaction"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_carbonyl_reduction",
@@ -3551,7 +3875,9 @@
         "sodium borohydride",
         "sodium tetrahydridoborate"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_carbonyl_hcn",
@@ -3565,7 +3891,9 @@
       "accept": [
         "nucleophilic addition"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_carboxy_acid",
@@ -3586,7 +3914,9 @@
           "ionise"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_esterification",
@@ -3613,7 +3943,9 @@
           "reflux"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_acyl_chloride_water",
@@ -3633,7 +3965,9 @@
           "hydrogen chloride"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_acyl_chloride_alcohol",
@@ -3653,7 +3987,9 @@
           "hydrogen chloride"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_acyl_chloride_ammonia",
@@ -3672,7 +4008,9 @@
           "ammonia"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_lattice_diss",
@@ -3698,7 +4036,9 @@
           "dissociation"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_lattice_form",
@@ -3718,7 +4058,9 @@
           "opposite sign"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_ea1",
@@ -3745,7 +4087,9 @@
           "negative ion"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_entropy",
@@ -3766,7 +4110,9 @@
           "more gas"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_gibbs_feasible",
@@ -3783,7 +4129,9 @@
         "<=0",
         "≤0"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_rate_order0",
@@ -3803,7 +4151,9 @@
           "rate"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_rate_order1",
@@ -3819,7 +4169,9 @@
         "1",
         "first order"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_rate_order2",
@@ -3835,7 +4187,9 @@
         "2",
         "second order"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_k_units",
@@ -3857,7 +4211,9 @@
           "units"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_arr_eq",
@@ -3872,7 +4228,9 @@
         "lnk=lna-ea/rt",
         "ln k = ln a - ea/rt"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_strong_acid",
@@ -3896,7 +4254,9 @@
           "dissociate"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_ph",
@@ -3912,7 +4272,9 @@
         "negative log h+",
         "pH=-log10[h+]"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_ka",
@@ -3927,7 +4289,9 @@
         "[h+][a-]/[ha]",
         "ka=[h+][a-]/[ha]"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_kw_relation",
@@ -3942,7 +4306,9 @@
         "kw/[oh-]",
         "[h+]=kw/[oh-]"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_kp_temp",
@@ -3957,7 +4323,9 @@
         "temperature",
         "temp"
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "chem_kp_pressure",
@@ -3978,7 +4346,9 @@
           "temperature"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "A2",
+      "mock": true
     },
     {
       "id": "math_proof_counter",
@@ -3993,7 +4363,10 @@
         "counterexample",
         "one counterexample"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_proof_exhaust",
@@ -4016,7 +4389,10 @@
           "finite"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_indices_neg",
@@ -4031,7 +4407,10 @@
         "1/x^n",
         "one over x^n"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_indices_frac",
@@ -4046,7 +4425,10 @@
         "nth root of x",
         "root n of x"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_surds_rationalise",
@@ -4066,7 +4448,10 @@
           "a - sqrt b"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_quad_discriminant",
@@ -4093,7 +4478,10 @@
           "no real"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_complete_square",
@@ -4114,7 +4502,10 @@
           "sketch"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_function_composite",
@@ -4134,7 +4525,10 @@
           "g first"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_inverse",
@@ -4158,7 +4552,10 @@
           "f-1"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_inverse_condition",
@@ -4174,7 +4571,10 @@
         "one-to-one",
         "1 to 1"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_modulus",
@@ -4201,7 +4601,10 @@
           "unchanged"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_line_gradient",
@@ -4216,7 +4619,10 @@
         "(y2-y1)/(x2-x1)",
         "change y/change x"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_perp_grad",
@@ -4232,7 +4638,10 @@
         "product=-1",
         "negative reciprocal"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_circle",
@@ -4246,7 +4655,10 @@
       "accept": [
         "(x-a)^2+(y-b)^2=r^2"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_circle_tangent",
@@ -4261,7 +4673,10 @@
         "perpendicular",
         "90 degrees"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_arith_nth",
@@ -4276,7 +4691,10 @@
         "a+(n-1)d",
         "un=a+(n-1)d"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_arith_sum",
@@ -4291,7 +4709,10 @@
         "n/2(2a+(n-1)d)",
         "n/2[2a+(n-1)d]"
       ],
-      "active": true
+      "active": false,
+      "stage": "AS",
+      "mock": true,
+      "formulaBooklet": true
     },
     {
       "id": "math_geom_nth",
@@ -4306,7 +4727,10 @@
         "ar^(n-1)",
         "a r^(n-1)"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_geom_sum",
@@ -4320,7 +4744,10 @@
       "accept": [
         "a(1-r^n)/(1-r)"
       ],
-      "active": true
+      "active": false,
+      "stage": "AS",
+      "mock": true,
+      "formulaBooklet": true
     },
     {
       "id": "math_geom_infinite",
@@ -4340,7 +4767,10 @@
           "a/(1-r)"
         ]
       ],
-      "active": true
+      "active": false,
+      "stage": "AS",
+      "mock": true,
+      "formulaBooklet": true
     },
     {
       "id": "math_binomial",
@@ -4355,7 +4785,10 @@
         "ncr a^(n-r)b^r",
         "C(n,r)a^(n-r)b^r"
       ],
-      "active": true
+      "active": false,
+      "stage": "AS",
+      "mock": true,
+      "formulaBooklet": true
     },
     {
       "id": "math_sine_rule",
@@ -4369,7 +4802,10 @@
       "accept": [
         "a/sina=b/sinb=c/sinc"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_cosine_rule",
@@ -4383,7 +4819,10 @@
       "accept": [
         "a^2=b^2+c^2-2bc cos a"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_triangle_area",
@@ -4398,7 +4837,10 @@
         "1/2 ab sin c",
         "0.5ab sin c"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_tan_identity",
@@ -4413,7 +4855,10 @@
         "tanx=sinx/cosx",
         "tan=sin/cos"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_trig_period",
@@ -4439,7 +4884,10 @@
           "cos"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_logs_product",
@@ -4454,7 +4902,10 @@
         "loga x + loga y",
         "log x + log y"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_logs_power",
@@ -4469,7 +4920,10 @@
         "k loga x",
         "k log x"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_logs_change",
@@ -4484,7 +4938,10 @@
         "x=loga b",
         "log base a of b"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_exp_inverse",
@@ -4505,7 +4962,10 @@
           "natural log"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_diff_power",
@@ -4520,7 +4980,10 @@
         "n x^(n-1)",
         "nx^(n-1)"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_diff_gradient",
@@ -4541,7 +5004,10 @@
           "curve"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_stationary",
@@ -4557,7 +5023,10 @@
         "derivative=0",
         "gradient=0"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_second_deriv",
@@ -4580,7 +5049,10 @@
           "max"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_integrate_power",
@@ -4594,7 +5066,10 @@
       "accept": [
         "x^(n+1)/(n+1)+c"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_area_curve",
@@ -4609,7 +5084,10 @@
         "integral a to b f(x) dx",
         "∫a^b f(x)dx"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_vector_mag",
@@ -4624,7 +5102,10 @@
         "sqrt(a^2+b^2)",
         "square root a squared plus b squared"
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "math_vector_line",
@@ -4647,7 +5128,10 @@
           "direction"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "flashcardPurpose": "concept-or-method"
     },
     {
       "id": "phy_prac_uncert",
@@ -4670,7 +5154,9 @@
           "percentage"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "phy_prac_graph",
@@ -4691,7 +5177,9 @@
           "scatter"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_prac_meniscus",
@@ -4714,7 +5202,9 @@
           "meniscus"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
     },
     {
       "id": "chem_prac_burette",
@@ -4737,13 +5227,1933 @@
           "difference"
         ]
       ],
-      "active": true
+      "active": true,
+      "stage": "AS",
+      "mock": true
+    },
+    {
+      "id": "phy_a2_circular_acc",
+      "subject": "Physics",
+      "topic": "Circular motion",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is centripetal acceleration?",
+      "back": "Acceleration directed towards the centre of the circular path.",
+      "active": true,
+      "accept": [
+        "towards the centre",
+        "toward centre",
+        "centripetal acceleration is towards centre"
+      ],
+      "concepts": [
+        [
+          "towards",
+          "toward"
+        ],
+        [
+          "centre",
+          "center"
+        ]
+      ],
+      "visual": "circular"
+    },
+    {
+      "id": "phy_a2_circular_force",
+      "subject": "Physics",
+      "topic": "Circular motion",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What provides the centripetal force?",
+      "back": "It is the resultant inward force; it is not a new type of force.",
+      "active": true,
+      "concepts": [
+        [
+          "resultant"
+        ],
+        [
+          "inward",
+          "centre",
+          "center"
+        ],
+        [
+          "not new",
+          "not a separate force"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_shm_def",
+      "subject": "Physics",
+      "topic": "Simple harmonic motion",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define simple harmonic motion.",
+      "back": "Acceleration is proportional to displacement from equilibrium and opposite in direction: a = −ω²x.",
+      "active": true,
+      "concepts": [
+        [
+          "acceleration"
+        ],
+        [
+          "proportional"
+        ],
+        [
+          "displacement"
+        ],
+        [
+          "opposite"
+        ],
+        [
+          "equilibrium"
+        ]
+      ],
+      "visual": "shm"
+    },
+    {
+      "id": "phy_a2_shm_period",
+      "subject": "Physics",
+      "topic": "Simple harmonic motion",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How are angular frequency and period related?",
+      "back": "ω = 2πf = 2π/T.",
+      "active": true,
+      "accept": [
+        "omega=2pi f=2pi/t",
+        "ω=2πf=2π/t"
+      ]
+    },
+    {
+      "id": "phy_a2_shm_energy",
+      "subject": "Physics",
+      "topic": "Simple harmonic motion",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How do kinetic and potential energy vary in SHM?",
+      "back": "KE is maximum at equilibrium; potential energy is maximum at the extremes; total energy is constant if undamped.",
+      "active": true,
+      "concepts": [
+        [
+          "kinetic",
+          "ke"
+        ],
+        [
+          "equilibrium"
+        ],
+        [
+          "potential",
+          "pe"
+        ],
+        [
+          "extreme",
+          "maximum displacement"
+        ],
+        [
+          "total",
+          "constant"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_resonance",
+      "subject": "Physics",
+      "topic": "Resonance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is resonance?",
+      "back": "A large-amplitude response when the driving frequency is close to the system's natural frequency.",
+      "active": true,
+      "concepts": [
+        [
+          "driving frequency"
+        ],
+        [
+          "natural frequency"
+        ],
+        [
+          "large amplitude",
+          "maximum amplitude"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_damping",
+      "subject": "Physics",
+      "topic": "Resonance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What does damping do to oscillations and resonance?",
+      "back": "It dissipates energy, reducing amplitude and making the resonance peak lower and broader.",
+      "active": true,
+      "concepts": [
+        [
+          "dissipate",
+          "energy loss"
+        ],
+        [
+          "amplitude",
+          "reduces"
+        ],
+        [
+          "resonance",
+          "peak"
+        ],
+        [
+          "broader",
+          "lower"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_heat_capacity",
+      "subject": "Physics",
+      "topic": "Thermal physics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define specific heat capacity.",
+      "back": "Energy required to raise the temperature of 1 kg of a substance by 1 K.",
+      "active": true,
+      "concepts": [
+        [
+          "energy"
+        ],
+        [
+          "1 kg",
+          "one kilogram"
+        ],
+        [
+          "1 k",
+          "one kelvin"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_latent",
+      "subject": "Physics",
+      "topic": "Thermal physics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define specific latent heat.",
+      "back": "Energy required to change the state of 1 kg of a substance without changing its temperature.",
+      "active": true,
+      "concepts": [
+        [
+          "energy"
+        ],
+        [
+          "1 kg",
+          "one kilogram"
+        ],
+        [
+          "change state",
+          "state change"
+        ],
+        [
+          "no temperature change",
+          "constant temperature"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_ideal_gas",
+      "subject": "Physics",
+      "topic": "Ideal gases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "State the ideal-gas equation.",
+      "back": "pV = nRT.",
+      "active": true,
+      "accept": [
+        "pv=nrt",
+        "p v = n r t"
+      ]
+    },
+    {
+      "id": "phy_a2_molar_gas",
+      "subject": "Physics",
+      "topic": "Ideal gases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What does absolute temperature measure in the kinetic model?",
+      "back": "It is proportional to the mean translational kinetic energy of molecules.",
+      "active": true,
+      "concepts": [
+        [
+          "proportional"
+        ],
+        [
+          "mean",
+          "average"
+        ],
+        [
+          "kinetic energy"
+        ],
+        [
+          "molecule",
+          "particle"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_kinetic_eq",
+      "subject": "Physics",
+      "topic": "Kinetic theory",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "State the molecular kinetic-theory relation linking pressure and molecular motion.",
+      "back": "pV = (1/3)Nm⟨c²⟩.",
+      "active": true,
+      "accept": [
+        "pv=1/3 n m c^2",
+        "pv=nm<c2>/3",
+        "pV=(1/3)Nm<c^2>"
+      ]
+    },
+    {
+      "id": "phy_a2_field_strength",
+      "subject": "Physics",
+      "topic": "Gravitational fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define gravitational field strength.",
+      "back": "Force per unit mass on a small test mass: g = F/m.",
+      "active": true,
+      "concepts": [
+        [
+          "force"
+        ],
+        [
+          "per unit mass",
+          "/m"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_grav_potential",
+      "subject": "Physics",
+      "topic": "Gravitational fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define gravitational potential.",
+      "back": "Work done per unit mass in bringing a small test mass from infinity to the point.",
+      "active": true,
+      "concepts": [
+        [
+          "work",
+          "energy"
+        ],
+        [
+          "per unit mass"
+        ],
+        [
+          "infinity"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_grav_potential_eq",
+      "subject": "Physics",
+      "topic": "Gravitational fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is gravitational potential outside a spherical mass?",
+      "back": "V = −GM/r.",
+      "active": true,
+      "accept": [
+        "v=-gm/r",
+        "-gm/r"
+      ]
+    },
+    {
+      "id": "phy_a2_grav_field_eq",
+      "subject": "Physics",
+      "topic": "Gravitational fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is gravitational field strength outside a spherical mass?",
+      "back": "g = GM/r².",
+      "active": true,
+      "accept": [
+        "g=gm/r^2",
+        "gm/r2"
+      ]
+    },
+    {
+      "id": "phy_a2_orbit",
+      "subject": "Physics",
+      "topic": "Gravitational fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "For a circular orbit, what provides the centripetal force?",
+      "back": "Gravity: GMm/r² = mv²/r.",
+      "active": true,
+      "concepts": [
+        [
+          "gravity",
+          "gravitational"
+        ],
+        [
+          "centripetal"
+        ],
+        [
+          "gm m/r2",
+          "mv2/r"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_electric_field",
+      "subject": "Physics",
+      "topic": "Electric fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define electric field strength.",
+      "back": "Force per unit positive charge: E = F/Q.",
+      "active": true,
+      "concepts": [
+        [
+          "force"
+        ],
+        [
+          "per unit charge",
+          "/q"
+        ],
+        [
+          "positive test charge",
+          "positive charge"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_coulomb",
+      "subject": "Physics",
+      "topic": "Electric fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "State Coulomb's law for two point charges.",
+      "back": "F = (1/4πε₀) Qq/r².",
+      "active": true,
+      "concepts": [
+        [
+          "q"
+        ],
+        [
+          "r2",
+          "r squared"
+        ],
+        [
+          "epsilon",
+          "ε0"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_electric_potential",
+      "subject": "Physics",
+      "topic": "Electric fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define electric potential.",
+      "back": "Work done per unit positive charge in bringing it from infinity to the point.",
+      "active": true,
+      "concepts": [
+        [
+          "work",
+          "energy"
+        ],
+        [
+          "per unit charge"
+        ],
+        [
+          "infinity"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_electric_potential_eq",
+      "subject": "Physics",
+      "topic": "Electric fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is electric potential due to a point charge?",
+      "back": "V = (1/4πε₀)Q/r.",
+      "active": true,
+      "concepts": [
+        [
+          "q"
+        ],
+        [
+          "r"
+        ],
+        [
+          "epsilon",
+          "ε0"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_capacitance_def",
+      "subject": "Physics",
+      "topic": "Capacitance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define capacitance.",
+      "back": "Charge stored per unit potential difference: C = Q/V.",
+      "active": true,
+      "accept": [
+        "c=q/v",
+        "q/v",
+        "charge per volt"
+      ]
+    },
+    {
+      "id": "phy_a2_cap_energy",
+      "subject": "Physics",
+      "topic": "Capacitance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Give an expression for energy stored by a capacitor.",
+      "back": "E = ½QV = ½CV² = Q²/(2C).",
+      "active": true,
+      "concepts": [
+        [
+          "1/2",
+          "half"
+        ],
+        [
+          "q",
+          "v"
+        ],
+        [
+          "c"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_cap_discharge",
+      "subject": "Physics",
+      "topic": "Capacitance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What form does capacitor discharge follow?",
+      "back": "Exponential decay, e.g. Q = Q₀e^(−t/RC).",
+      "active": true,
+      "concepts": [
+        [
+          "exponential"
+        ],
+        [
+          "rc"
+        ],
+        [
+          "decay"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_time_constant",
+      "subject": "Physics",
+      "topic": "Capacitance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is the time constant of an RC circuit?",
+      "back": "τ = RC; after one time constant the remaining charge/voltage is about 37% of its initial value.",
+      "active": true,
+      "concepts": [
+        [
+          "rc"
+        ],
+        [
+          "37",
+          "0.37"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_magnetic_force_wire",
+      "subject": "Physics",
+      "topic": "Magnetic fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is the force on a current-carrying wire perpendicular to a magnetic field?",
+      "back": "F = BIL.",
+      "active": true,
+      "accept": [
+        "f=bil",
+        "bil"
+      ]
+    },
+    {
+      "id": "phy_a2_flux_density_def",
+      "subject": "Physics",
+      "topic": "Magnetic fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define magnetic flux density B using a wire.",
+      "back": "B = F/(IL) when the wire is perpendicular to the field.",
+      "active": true,
+      "concepts": [
+        [
+          "force"
+        ],
+        [
+          "current",
+          "i"
+        ],
+        [
+          "length",
+          "l"
+        ],
+        [
+          "perpendicular"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_force_charge",
+      "subject": "Physics",
+      "topic": "Magnetic fields",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is the force on a charge moving perpendicular to a magnetic field?",
+      "back": "F = BQv.",
+      "active": true,
+      "accept": [
+        "f=bqv",
+        "bqv"
+      ]
+    },
+    {
+      "id": "phy_a2_flux",
+      "subject": "Physics",
+      "topic": "Electromagnetic induction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define magnetic flux.",
+      "back": "Φ = BA cos θ, where θ is the angle between B and the area normal.",
+      "active": true,
+      "concepts": [
+        [
+          "ba"
+        ],
+        [
+          "cos"
+        ],
+        [
+          "normal"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_flux_linkage",
+      "subject": "Physics",
+      "topic": "Electromagnetic induction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is flux linkage?",
+      "back": "NΦ, the number of turns multiplied by magnetic flux through each turn.",
+      "active": true,
+      "concepts": [
+        [
+          "n",
+          "turns"
+        ],
+        [
+          "flux",
+          "phi"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_faraday",
+      "subject": "Physics",
+      "topic": "Electromagnetic induction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "State Faraday's law.",
+      "back": "Induced emf equals the rate of change of magnetic flux linkage: ε = −d(NΦ)/dt.",
+      "active": true,
+      "concepts": [
+        [
+          "rate of change"
+        ],
+        [
+          "flux linkage"
+        ],
+        [
+          "emf"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_lenz",
+      "subject": "Physics",
+      "topic": "Electromagnetic induction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "State Lenz's law.",
+      "back": "The induced current/emf acts in a direction that opposes the change producing it.",
+      "active": true,
+      "concepts": [
+        [
+          "opposes"
+        ],
+        [
+          "change"
+        ],
+        [
+          "induced"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_decay_constant",
+      "subject": "Physics",
+      "topic": "Radioactivity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define decay constant.",
+      "back": "Probability per unit time that a nucleus will decay.",
+      "active": true,
+      "concepts": [
+        [
+          "probability"
+        ],
+        [
+          "per unit time"
+        ],
+        [
+          "nucleus",
+          "nuclei"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_decay_law",
+      "subject": "Physics",
+      "topic": "Radioactivity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "State the radioactive decay law.",
+      "back": "N = N₀e^(−λt), and activity A = λN.",
+      "active": true,
+      "concepts": [
+        [
+          "exponential",
+          "e"
+        ],
+        [
+          "lambda",
+          "λ"
+        ],
+        [
+          "activity",
+          "a"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_half_life",
+      "subject": "Physics",
+      "topic": "Radioactivity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How are half-life and decay constant related?",
+      "back": "T½ = ln2/λ.",
+      "active": true,
+      "accept": [
+        "t1/2=ln2/lambda",
+        "0.693/lambda"
+      ]
+    },
+    {
+      "id": "phy_a2_binding",
+      "subject": "Physics",
+      "topic": "Nuclear physics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is binding energy?",
+      "back": "Energy required to separate a nucleus completely into its individual nucleons.",
+      "active": true,
+      "concepts": [
+        [
+          "energy"
+        ],
+        [
+          "separate",
+          "break apart"
+        ],
+        [
+          "nucleons"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_mass_energy",
+      "subject": "Physics",
+      "topic": "Nuclear physics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How is mass defect related to binding energy?",
+      "back": "E = Δmc².",
+      "active": true,
+      "accept": [
+        "e=delta m c^2",
+        "e=mc2"
+      ]
+    },
+    {
+      "id": "phy_a2_fission",
+      "subject": "Physics",
+      "topic": "Nuclear physics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is nuclear fission?",
+      "back": "A heavy nucleus splits into smaller nuclei, usually releasing neutrons and energy.",
+      "active": true,
+      "concepts": [
+        [
+          "heavy nucleus"
+        ],
+        [
+          "splits"
+        ],
+        [
+          "neutron"
+        ],
+        [
+          "energy"
+        ]
+      ]
+    },
+    {
+      "id": "phy_a2_chain",
+      "subject": "Physics",
+      "topic": "Nuclear physics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a nuclear chain reaction?",
+      "back": "Neutrons from one fission event cause further fissions.",
+      "active": true,
+      "concepts": [
+        [
+          "neutron"
+        ],
+        [
+          "fission"
+        ],
+        [
+          "further",
+          "more"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_entropy_def",
+      "subject": "Chemistry",
+      "topic": "Entropy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is entropy, qualitatively?",
+      "back": "A measure of the dispersal of energy / disorder of a system.",
+      "active": true,
+      "concepts": [
+        [
+          "dispersal",
+          "spread"
+        ],
+        [
+          "energy",
+          "disorder"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_gibbs_feasible",
+      "subject": "Chemistry",
+      "topic": "Gibbs free energy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What sign of ΔG indicates thermodynamic feasibility?",
+      "back": "ΔG ≤ 0 under the stated conditions.",
+      "active": true,
+      "accept": [
+        "negative",
+        "<=0",
+        "less than or equal to zero"
+      ]
+    },
+    {
+      "id": "chem_a2_rate_constant_temp",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What happens to k when temperature increases?",
+      "back": "k increases because a larger fraction of molecules have energy at least Ea.",
+      "active": true,
+      "concepts": [
+        [
+          "k",
+          "rate constant"
+        ],
+        [
+          "increases"
+        ],
+        [
+          "fraction"
+        ],
+        [
+          "ea",
+          "activation energy"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_half_life_first",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is special about half-life for a first-order reaction?",
+      "back": "It is constant and independent of the initial concentration.",
+      "active": true,
+      "concepts": [
+        [
+          "constant"
+        ],
+        [
+          "independent"
+        ],
+        [
+          "initial concentration"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_kp_only_temp",
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What changes the numerical value of Kp?",
+      "back": "Temperature only.",
+      "active": true,
+      "accept": [
+        "temperature",
+        "temp only"
+      ]
+    },
+    {
+      "id": "chem_a2_electrode_potential",
+      "subject": "Chemistry",
+      "topic": "Electrode potentials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a standard electrode potential?",
+      "back": "The emf of a half-cell measured relative to the standard hydrogen electrode under standard conditions.",
+      "active": true,
+      "concepts": [
+        [
+          "half cell"
+        ],
+        [
+          "standard hydrogen electrode",
+          "she"
+        ],
+        [
+          "standard conditions"
+        ],
+        [
+          "emf",
+          "potential"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_cell_emf",
+      "subject": "Chemistry",
+      "topic": "Electrode potentials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How is standard cell emf calculated?",
+      "back": "E°cell = E°(reduction at positive electrode) − E°(reduction at negative electrode).",
+      "active": true,
+      "concepts": [
+        [
+          "positive",
+          "cathode"
+        ],
+        [
+          "negative",
+          "anode"
+        ],
+        [
+          "subtract",
+          "minus"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_feasibility_cell",
+      "subject": "Chemistry",
+      "topic": "Electrode potentials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What does a positive E°cell suggest?",
+      "back": "The reaction is thermodynamically feasible under standard conditions, though kinetics may prevent it being fast.",
+      "active": true,
+      "concepts": [
+        [
+          "positive"
+        ],
+        [
+          "feasible"
+        ],
+        [
+          "standard conditions"
+        ],
+        [
+          "kinetics",
+          "rate"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_ph_def",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Define pH.",
+      "back": "pH = −log₁₀[H⁺].",
+      "active": true,
+      "accept": [
+        "-log10[h+]",
+        "negative log h+"
+      ]
+    },
+    {
+      "id": "chem_a2_pka",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How is pKa related to Ka?",
+      "back": "pKa = −log₁₀Ka.",
+      "active": true,
+      "accept": [
+        "pka=-log ka",
+        "negative log ka"
+      ]
+    },
+    {
+      "id": "chem_a2_buffer",
+      "subject": "Chemistry",
+      "topic": "Buffers",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a buffer solution?",
+      "back": "A solution that resists changes in pH when small amounts of acid or alkali are added.",
+      "active": true,
+      "concepts": [
+        [
+          "resists"
+        ],
+        [
+          "ph"
+        ],
+        [
+          "small amount"
+        ],
+        [
+          "acid",
+          "alkali",
+          "base"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_buffer_acid",
+      "subject": "Chemistry",
+      "topic": "Buffers",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How does an acidic buffer remove added H⁺?",
+      "back": "The conjugate base reacts with added H⁺ to form the weak acid.",
+      "active": true,
+      "concepts": [
+        [
+          "conjugate base",
+          "a-"
+        ],
+        [
+          "h+"
+        ],
+        [
+          "weak acid",
+          "ha"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_buffer_alkali",
+      "subject": "Chemistry",
+      "topic": "Buffers",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How does an acidic buffer remove added OH⁻?",
+      "back": "The weak acid reacts with OH⁻, forming water and its conjugate base.",
+      "active": true,
+      "concepts": [
+        [
+          "weak acid",
+          "ha"
+        ],
+        [
+          "oh-",
+          "hydroxide"
+        ],
+        [
+          "water"
+        ],
+        [
+          "conjugate base",
+          "a-"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_period3_oxides",
+      "subject": "Chemistry",
+      "topic": "Period 3",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "How does the acid-base character of Period 3 oxides change across the period?",
+      "back": "It changes from basic, through amphoteric, to acidic.",
+      "active": true,
+      "concepts": [
+        [
+          "basic"
+        ],
+        [
+          "amphoteric"
+        ],
+        [
+          "acidic"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_transition_def",
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a transition metal?",
+      "back": "A d-block element that forms at least one ion with a partially filled d subshell.",
+      "active": true,
+      "concepts": [
+        [
+          "d block"
+        ],
+        [
+          "ion"
+        ],
+        [
+          "partially filled",
+          "incomplete"
+        ],
+        [
+          "d subshell"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_complex",
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a complex ion?",
+      "back": "A central metal ion bonded to ligands by coordinate bonds.",
+      "active": true,
+      "concepts": [
+        [
+          "central metal",
+          "metal ion"
+        ],
+        [
+          "ligand"
+        ],
+        [
+          "coordinate",
+          "dative"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_ligand",
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a ligand?",
+      "back": "A species that donates a lone pair of electrons to a metal ion to form a coordinate bond.",
+      "active": true,
+      "concepts": [
+        [
+          "lone pair"
+        ],
+        [
+          "donate"
+        ],
+        [
+          "metal ion"
+        ],
+        [
+          "coordinate"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_coordination",
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is coordination number?",
+      "back": "The number of coordinate bonds from ligands to the central metal ion.",
+      "active": true,
+      "concepts": [
+        [
+          "number"
+        ],
+        [
+          "coordinate bonds"
+        ],
+        [
+          "central metal"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_tm_colours",
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why are many transition-metal complexes coloured?",
+      "back": "Visible light can promote electrons between split d orbitals; selected wavelengths are absorbed.",
+      "active": true,
+      "concepts": [
+        [
+          "visible light"
+        ],
+        [
+          "d orbital"
+        ],
+        [
+          "split"
+        ],
+        [
+          "absorbed",
+          "wavelength"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_tm_catalyst",
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why are transition metals often good catalysts?",
+      "back": "They can change oxidation state and/or provide a surface for adsorption, enabling alternative lower-Ea pathways.",
+      "active": true,
+      "concepts": [
+        [
+          "oxidation state"
+        ],
+        [
+          "alternative",
+          "pathway"
+        ],
+        [
+          "activation energy",
+          "ea"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_aqueous_precip",
+      "subject": "Chemistry",
+      "topic": "Aqueous ions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why do some metal aqua ions form hydroxide precipitates with OH⁻?",
+      "back": "OH⁻ deprotonates coordinated water, producing an insoluble metal hydroxide.",
+      "active": true,
+      "concepts": [
+        [
+          "oh-",
+          "hydroxide"
+        ],
+        [
+          "deprotonate"
+        ],
+        [
+          "metal hydroxide"
+        ],
+        [
+          "precipitate",
+          "insoluble"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_benzene",
+      "subject": "Chemistry",
+      "topic": "Aromatic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+      "back": "Its π electrons are delocalised around the ring, lowering the energy.",
+      "active": true,
+      "concepts": [
+        [
+          "delocalised",
+          "delocalized"
+        ],
+        [
+          "pi",
+          "π"
+        ],
+        [
+          "ring"
+        ],
+        [
+          "lower energy",
+          "stability"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_benzene_sub",
+      "subject": "Chemistry",
+      "topic": "Aromatic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What mechanism does benzene usually undergo?",
+      "back": "Electrophilic substitution.",
+      "active": true,
+      "accept": [
+        "electrophilic substitution"
+      ]
+    },
+    {
+      "id": "chem_a2_nitration",
+      "subject": "Chemistry",
+      "topic": "Aromatic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What reagents generate the nitronium ion for benzene nitration?",
+      "back": "Concentrated HNO₃ and concentrated H₂SO₄.",
+      "active": true,
+      "concepts": [
+        [
+          "hno3",
+          "nitric acid"
+        ],
+        [
+          "h2so4",
+          "sulfuric acid"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_friedel",
+      "subject": "Chemistry",
+      "topic": "Aromatic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What catalyst is commonly used for Friedel–Crafts acylation?",
+      "back": "AlCl₃.",
+      "active": true,
+      "accept": [
+        "alcl3",
+        "aluminium chloride"
+      ]
+    },
+    {
+      "id": "chem_a2_amine_base",
+      "subject": "Chemistry",
+      "topic": "Amines",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why are amines bases?",
+      "back": "The nitrogen lone pair can accept H⁺.",
+      "active": true,
+      "concepts": [
+        [
+          "lone pair"
+        ],
+        [
+          "accept"
+        ],
+        [
+          "h+",
+          "proton"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_amine_nucleophile",
+      "subject": "Chemistry",
+      "topic": "Amines",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why are amines nucleophiles?",
+      "back": "The nitrogen lone pair can be donated to an electron-deficient species.",
+      "active": true,
+      "concepts": [
+        [
+          "lone pair"
+        ],
+        [
+          "donate"
+        ],
+        [
+          "electron deficient",
+          "positive"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_poly_add",
+      "subject": "Chemistry",
+      "topic": "Polymers",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What happens in addition polymerisation?",
+      "back": "C=C double bonds open and monomers join with no small molecule eliminated.",
+      "active": true,
+      "concepts": [
+        [
+          "c=c",
+          "double bond"
+        ],
+        [
+          "monomer"
+        ],
+        [
+          "no small molecule",
+          "no elimination"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_poly_cond",
+      "subject": "Chemistry",
+      "topic": "Polymers",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What happens in condensation polymerisation?",
+      "back": "Bifunctional monomers join and a small molecule such as H₂O or HCl is eliminated.",
+      "active": true,
+      "concepts": [
+        [
+          "bifunctional",
+          "two functional"
+        ],
+        [
+          "small molecule"
+        ],
+        [
+          "water",
+          "hcl"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_amino_zwitterion",
+      "subject": "Chemistry",
+      "topic": "Amino acids",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a zwitterion?",
+      "back": "A molecule containing both positive and negative charges but with no overall charge.",
+      "active": true,
+      "concepts": [
+        [
+          "positive"
+        ],
+        [
+          "negative"
+        ],
+        [
+          "no overall charge",
+          "neutral overall"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_peptide",
+      "subject": "Chemistry",
+      "topic": "Amino acids",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is a peptide bond?",
+      "back": "The amide link, −CONH−, formed between amino acids by condensation.",
+      "active": true,
+      "concepts": [
+        [
+          "conh",
+          "amide"
+        ],
+        [
+          "amino acid"
+        ],
+        [
+          "condensation"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_dna_hbond",
+      "subject": "Chemistry",
+      "topic": "DNA",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What holds complementary DNA bases together?",
+      "back": "Hydrogen bonds.",
+      "active": true,
+      "accept": [
+        "hydrogen bonds",
+        "h bonds"
+      ]
+    },
+    {
+      "id": "chem_a2_dna_pair",
+      "subject": "Chemistry",
+      "topic": "DNA",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Which bases pair in DNA?",
+      "back": "A with T; C with G.",
+      "active": true,
+      "accept": [
+        "a-t c-g",
+        "a with t c with g",
+        "adenine thymine cytosine guanine"
+      ]
+    },
+    {
+      "id": "chem_a2_synthesis",
+      "subject": "Chemistry",
+      "topic": "Organic synthesis",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is meant by a multi-step organic synthesis?",
+      "back": "A sequence of reactions converting a starting material to a target molecule, choosing reagents and conditions for each step.",
+      "active": true,
+      "concepts": [
+        [
+          "sequence",
+          "steps"
+        ],
+        [
+          "starting material"
+        ],
+        [
+          "target"
+        ],
+        [
+          "reagents",
+          "conditions"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_nmr_tms",
+      "subject": "Chemistry",
+      "topic": "NMR",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "Why is TMS used as an NMR reference?",
+      "back": "It gives one sharp signal at δ = 0 and is chemically inert/volatile.",
+      "active": true,
+      "concepts": [
+        [
+          "zero",
+          "δ=0"
+        ],
+        [
+          "sharp",
+          "single signal"
+        ],
+        [
+          "inert",
+          "volatile"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_nmr_shift",
+      "subject": "Chemistry",
+      "topic": "NMR",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What does chemical shift tell you?",
+      "back": "It indicates the electronic environment around a nucleus relative to TMS.",
+      "active": true,
+      "concepts": [
+        [
+          "environment"
+        ],
+        [
+          "nucleus",
+          "proton",
+          "carbon"
+        ],
+        [
+          "tms",
+          "reference"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_nmr_integration",
+      "subject": "Chemistry",
+      "topic": "NMR",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What does integration in a ¹H NMR spectrum show?",
+      "back": "The relative number of protons in each environment.",
+      "active": true,
+      "concepts": [
+        [
+          "relative number"
+        ],
+        [
+          "protons",
+          "hydrogens"
+        ],
+        [
+          "environment"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_nmr_split",
+      "subject": "Chemistry",
+      "topic": "NMR",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What does the n+1 rule describe in simple ¹H NMR spectra?",
+      "back": "A proton environment with n equivalent neighbouring protons is split into n+1 peaks.",
+      "active": true,
+      "concepts": [
+        [
+          "neighbour",
+          "neighbor"
+        ],
+        [
+          "n"
+        ],
+        [
+          "n+1"
+        ],
+        [
+          "split"
+        ]
+      ]
+    },
+    {
+      "id": "chem_a2_chrom_r_f",
+      "subject": "Chemistry",
+      "topic": "Chromatography",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What is Rf in thin-layer chromatography?",
+      "back": "distance moved by solute ÷ distance moved by solvent front.",
+      "active": true,
+      "accept": [
+        "distance solute/distance solvent front",
+        "solute distance / solvent distance"
+      ]
+    },
+    {
+      "id": "chem_a2_chrom_stationary",
+      "subject": "Chemistry",
+      "topic": "Chromatography",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "front": "What determines how far a component travels in chromatography?",
+      "back": "Its relative attraction/affinity for the stationary phase versus the mobile phase.",
+      "active": true,
+      "concepts": [
+        [
+          "stationary phase"
+        ],
+        [
+          "mobile phase"
+        ],
+        [
+          "affinity",
+          "attraction"
+        ]
+      ]
     }
   ],
   "meta": {
     "dailyNewDefault": 18,
     "weakFirst": true,
     "practicalMix": "1 practical per 5 content cards",
-    "note": "Known weaknesses are priority 3; general mock content is lower priority."
+    "note": "Known weaknesses are priority 3; general mock content is lower priority.",
+    "modeSupport": [
+      "mock",
+      "full-a-level",
+      "topic",
+      "exam-practice"
+    ],
+    "mathsPolicy": "Use fewer flashcards; avoid testing formulae printed in AQA MFB8."
   }
 }
