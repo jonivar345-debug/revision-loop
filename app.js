@@ -771,7 +771,7 @@ function startFlashSession(){
  activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:'Random flashcards'};currentCardId=null;renderAll();
 }
 function examGroups(){
- const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,all=subjectExam(sub).filter(q=>level==='both'||q.level===level);
+ const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,difficulty=document.getElementById('examDifficulty')?.value||'all',all=subjectExam(sub).filter(q=>(level==='both'||q.level===level)&&(difficulty==='all'||(difficulty==='stretch'&&q.marks>=5)||(difficulty==='quick'&&q.marks<=3)));
  if(!examYears.size||!examTopics.size||!examTypes.size)return [];
  const eligibleGroupIds=new Set();
  for(const q of all){
@@ -1087,7 +1087,14 @@ function refreshExamFilters(defaultIfEmpty=false){
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Official past-paper coverage remains incomplete.';
 }
-function renderTopicCounts(){document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';document.getElementById('examTopicCount').textContent=examTopics.size+' selected';document.getElementById('examYearCount').textContent=examYears.size+' selected'}
+function renderTopicCounts(){
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';
+ document.getElementById('examTopicCount').textContent=examTopics.size+' selected';
+ document.getElementById('examYearCount').textContent=examYears.size+' selected';
+ const count=examGroups().reduce((n,g)=>n+g.length,0);
+ const label=document.getElementById('examDifficultyCount');
+ if(label)label.textContent=count+' question parts match these filters; related original-paper parts stay together.';
+}
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
 function renderCard(c){
@@ -1534,6 +1541,7 @@ document.querySelectorAll('.study-type-btn').forEach(b=>b.onclick=()=>{studyType
 document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refreshFlashTopics(true);renderAll()};
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
 document.getElementById('startMock').onclick=startMockSession;document.getElementById('startFlashcards').onclick=startFlashSession;
+document.getElementById('examDifficulty').onchange=renderTopicCounts;
 document.getElementById('examLevel').onchange=()=>{examTopics.clear();examYears.clear();examTypes.clear();refreshExamFilters(true);renderTopicCounts()};
 document.getElementById('examSubject').onchange=()=>{examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters(true);renderAll()};
 document.getElementById('yearsAll').onclick=()=>{examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters(false)};
