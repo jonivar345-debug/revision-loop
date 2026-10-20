@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 5,
-  "updatedAt": "2026-10-20T19:05:00+01:00",
+  "bankVersion": 6,
+  "updatedAt": "2026-10-20T16:25:44.953Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -29,7 +29,9 @@
       "series": "June",
       "groupId": "Physics|2023|7407/1|4",
       "groupOrder": "4.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Mechanics & materials",
+      "visual": "resolve"
     },
     {
       "id": "aqa_phy_as23_p1_q1_5",
@@ -56,7 +58,8 @@
       "series": "June",
       "groupId": "Physics|2023|7407/1|1",
       "groupOrder": "1.5",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Particles & radiation"
     },
     {
       "id": "aqa_phy_as23_p1_q2_1",
@@ -81,7 +84,9 @@
       "series": "June",
       "groupId": "Physics|2023|7407/1|2",
       "groupOrder": "2.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Waves",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as23_p1_q3",
@@ -107,7 +112,9 @@
       "series": "June",
       "groupId": "Physics|2023|7407/1|3",
       "groupOrder": "3",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Waves",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_a24_p1_q1_3",
@@ -131,7 +138,9 @@
       "series": "June",
       "groupId": "Physics|2024|7408/1|1",
       "groupOrder": "1.3",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Particles & radiation",
+      "visual": "medical"
     },
     {
       "id": "aqa_chem_as23_p1_q2_6",
@@ -162,7 +171,9 @@
       "series": "June",
       "groupId": "Chemistry|2023|7404/1|2",
       "groupOrder": "2.6",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Amount of substance",
+      "visual": "titration"
     },
     {
       "id": "aqa_chem_as23_p1_q3_1",
@@ -188,7 +199,9 @@
       "series": "June",
       "groupId": "Chemistry|2023|7404/1|3",
       "groupOrder": "3.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Practical skills",
+      "visual": "titration"
     },
     {
       "id": "aqa_chem_as23_p1_q4",
@@ -216,7 +229,8 @@
       "series": "June",
       "groupId": "Chemistry|2023|7404/1|4",
       "groupOrder": "4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Amount of substance"
     },
     {
       "id": "aqa_chem_as23_p1_q8_3",
@@ -241,7 +255,9 @@
       "series": "June",
       "groupId": "Chemistry|2023|7404/1|8",
       "groupOrder": "8.3",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Equilibria",
+      "visual": "medical"
     },
     {
       "id": "aqa_math_as23_p1_q4",
@@ -269,7 +285,9 @@
       "series": "June",
       "groupId": "Maths|2023|7356/1|4",
       "groupOrder": "4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Trigonometry",
+      "visual": "medical"
     },
     {
       "id": "aqa_math_as23_p1_q5b",
@@ -299,7 +317,8 @@
       "series": "June",
       "groupId": "Maths|2023|7356/1|5",
       "groupOrder": "5(b)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Differentiation"
     },
     {
       "id": "aqa_math_as23_p1_q6",
@@ -326,7 +345,8 @@
       "series": "June",
       "groupId": "Maths|2023|7356/1|6",
       "groupOrder": "6",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Algebra & functions"
     },
     {
       "id": "aqa_math_as23_p1_q8b",
@@ -355,7 +375,8 @@
       "series": "June",
       "groupId": "Maths|2023|7356/1|8",
       "groupOrder": "8(b)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Integration"
     },
     {
       "id": "aqa_math_as23_p1_q10b",
@@ -385,7 +406,8 @@
       "series": "June",
       "groupId": "Maths|2023|7356/1|10",
       "groupOrder": "10(b)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Exponentials & logarithms"
     },
     {
       "id": "aqa_phy_med23_q01",
@@ -410,7 +432,8 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|1",
       "groupOrder": "1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics"
     },
     {
       "id": "aqa_phy_med23_q02_1",
@@ -438,7 +461,8 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|2",
       "groupOrder": "2.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics"
     },
     {
       "id": "aqa_phy_med23_q03_1",
@@ -462,7 +486,8 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|3",
       "groupOrder": "3.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics"
     },
     {
       "id": "aqa_phy_med23_q03_2",
@@ -488,7 +513,8 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|3",
       "groupOrder": "3.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics"
     },
     {
       "id": "aqa_phy_med23_q04_1",
@@ -512,7 +538,9 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|4",
       "groupOrder": "4.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_med23_q04_4",
@@ -538,7 +566,9 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|4",
       "groupOrder": "4.4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_med23_q05_2",
@@ -563,7 +593,9 @@
       "series": "June",
       "groupId": "Physics|2023|7408/3BB|5",
       "groupOrder": "5.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Medical physics",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as22_p1_q4_1",
@@ -590,7 +622,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|4",
       "groupOrder": "4.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Particles & radiation",
+      "visual": "photoelectric"
     },
     {
       "id": "aqa_phy_as22_p1_q4_2",
@@ -618,7 +652,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|4",
       "groupOrder": "4.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Particles & radiation",
+      "visual": "photoelectric"
     },
     {
       "id": "aqa_phy_as22_p1_q5_2",
@@ -643,7 +679,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|5",
       "groupOrder": "5.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Particles & radiation",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as22_p1_q6_1",
@@ -671,7 +709,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|6",
       "groupOrder": "6.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Mechanics & materials",
+      "visual": "resolve"
     },
     {
       "id": "aqa_phy_as22_p1_q7_1",
@@ -695,7 +735,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|7",
       "groupOrder": "7.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Mechanics & materials",
+      "visual": "slope"
     },
     {
       "id": "aqa_phy_as22_p1_q7_2",
@@ -722,7 +764,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|7",
       "groupOrder": "7.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Mechanics & materials",
+      "visual": "slope"
     },
     {
       "id": "aqa_phy_as22_p1_q8_3",
@@ -747,7 +791,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|8",
       "groupOrder": "8.3",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Electricity",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as22_p1_q8_4",
@@ -774,7 +820,9 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|8",
       "groupOrder": "8.4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Electricity",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as22_p1_q8_5",
@@ -801,7 +849,8 @@
       "series": "June",
       "groupId": "Physics|2022|7407/1|8",
       "groupOrder": "8.5",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Electricity"
     },
     {
       "id": "aqa_chem_as22_p1_q1_1",
@@ -825,7 +874,8 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|1",
       "groupOrder": "1.1",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Atomic structure"
     },
     {
       "id": "aqa_chem_as22_p1_q2_2",
@@ -853,7 +903,8 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|2",
       "groupOrder": "2.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Amount of substance"
     },
     {
       "id": "aqa_chem_as22_p1_q2_3",
@@ -879,7 +930,9 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|2",
       "groupOrder": "2.3",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Practical skills",
+      "visual": "titration"
     },
     {
       "id": "aqa_chem_as22_p1_q4_4",
@@ -903,7 +956,8 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|4",
       "groupOrder": "4.4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Bonding"
     },
     {
       "id": "aqa_chem_as22_p1_q5",
@@ -931,7 +985,9 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|5",
       "groupOrder": "5",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Atomic structure",
+      "visual": "medical"
     },
     {
       "id": "aqa_chem_as22_p1_q6_2",
@@ -956,7 +1012,9 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|6",
       "groupOrder": "6.2",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Redox",
+      "visual": "medical"
     },
     {
       "id": "aqa_chem_as22_p1_q7_4",
@@ -986,7 +1044,8 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|7",
       "groupOrder": "7.4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Equilibria"
     },
     {
       "id": "aqa_chem_as22_p1_q8_3",
@@ -1012,7 +1071,8 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|8",
       "groupOrder": "8.3",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Practical skills"
     },
     {
       "id": "aqa_chem_as22_p1_q14",
@@ -1036,7 +1096,8 @@
       "series": "June",
       "groupId": "Chemistry|2022|7404/1|14",
       "groupOrder": "14",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Amount of substance"
     },
     {
       "id": "aqa_math_as22_p1_q4",
@@ -1064,7 +1125,8 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|4",
       "groupOrder": "4",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as22_p1_q5",
@@ -1090,7 +1152,9 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|5",
       "groupOrder": "5",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Algebra & functions",
+      "visual": "medical"
     },
     {
       "id": "aqa_math_as22_p1_q6b",
@@ -1116,7 +1180,9 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|6",
       "groupOrder": "6(b)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Coordinate geometry",
+      "visual": "circle"
     },
     {
       "id": "aqa_math_as22_p1_q6c",
@@ -1143,7 +1209,9 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|6",
       "groupOrder": "6(c)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Coordinate geometry",
+      "visual": "circle"
     },
     {
       "id": "aqa_math_as22_p1_q7",
@@ -1174,7 +1242,8 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|7",
       "groupOrder": "7",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Integration"
     },
     {
       "id": "aqa_math_as22_p1_q8c",
@@ -1200,7 +1269,8 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|8",
       "groupOrder": "8(c)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Differentiation"
     },
     {
       "id": "aqa_math_as22_p1_q9",
@@ -1227,7 +1297,9 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|9",
       "groupOrder": "9",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Proof",
+      "visual": "medical"
     },
     {
       "id": "aqa_math_as22_p1_q10a",
@@ -1254,7 +1326,8 @@
       "series": "June",
       "groupId": "Maths|2022|7356/1|10",
       "groupOrder": "10(a)",
-      "sourceVerified": true
+      "sourceVerified": true,
+      "courseTopic": "Differentiation"
     },
     {
       "id": "aqa_phy_as24_p1_q1_1",
@@ -1278,7 +1351,9 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=6",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|1",
-      "groupOrder": "1.1"
+      "groupOrder": "1.1",
+      "courseTopic": "Particles & radiation",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as24_p1_q1_2",
@@ -1305,7 +1380,8 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=7",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|1",
-      "groupOrder": "1.2"
+      "groupOrder": "1.2",
+      "courseTopic": "Particles & radiation"
     },
     {
       "id": "aqa_phy_as24_p1_q1_3",
@@ -1331,7 +1407,9 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=8",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|1",
-      "groupOrder": "1.3"
+      "groupOrder": "1.3",
+      "courseTopic": "Particles & radiation",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as24_p1_q1_4",
@@ -1359,7 +1437,9 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=9",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|1",
-      "groupOrder": "1.4"
+      "groupOrder": "1.4",
+      "courseTopic": "Particles & radiation",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as24_p1_q2_1",
@@ -1385,7 +1465,9 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=10",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|2",
-      "groupOrder": "2.1"
+      "groupOrder": "2.1",
+      "courseTopic": "Particles & radiation",
+      "visual": "medical"
     },
     {
       "id": "aqa_phy_as24_p1_q2_2",
@@ -1413,7 +1495,8 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=10",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|2",
-      "groupOrder": "2.2"
+      "groupOrder": "2.2",
+      "courseTopic": "Particles & radiation"
     },
     {
       "id": "aqa_phy_as24_p1_q3_1",
@@ -1440,7 +1523,9 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=12",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|3",
-      "groupOrder": "3.1"
+      "groupOrder": "3.1",
+      "courseTopic": "Waves",
+      "visual": "stationary"
     },
     {
       "id": "aqa_phy_as24_p1_q3_2",
@@ -1468,7 +1553,9 @@
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74071-MS-JUN24_PDF#page=13",
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|3",
-      "groupOrder": "3.2"
+      "groupOrder": "3.2",
+      "courseTopic": "Waves",
+      "visual": "resolve"
     }
   ],
   "coverage": {
