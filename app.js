@@ -92,8 +92,20 @@ const CHARACTER_OUTFIT_NAMES={
  thorfinn:['Traveller Tunic','Explorer Cloak','Casual Linen','Cold-Weather Cloak','Workwear','Warrior Garb','Farm Outfit','Long Voyage'],
  kaneki:['Casual Shirt','Black Coat','White-Hair Outfit','Student Look','Winter Jacket','Long Overcoat','Battle Gear','Midnight Mask']
 };
+const SERIES_OUTFIT_NAMES={
+ 'Code Geass':['Academy Look','Black Knights Outfit','Casual Jacket','Military Uniform','Royal Attire','Winter Coat','Formal Uniform','Ceremonial Style'],
+ 'Death Note':['School Clothes','Investigation Outfit','Casual Jacket','Smart Suit','Dark Overcoat','Winter Wear','Formal Shirt','Late-Night Outfit'],
+ 'Attack on Titan':['Cadet Clothes','Scout Cloak','Everyday Clothes','Training Uniform','Cold-Weather Cloak','Survey Jacket','Formal Clothes','Expedition Gear'],
+ 'Blue Lock':['Training Kit','Match Kit','Tracksuit','Casual Clothes','Winter Training','Streetwear','Away Kit','Tournament Kit'],
+ 'Jujutsu Kaisen':['Sorcerer Uniform','Mission Attire','Casual Clothes','Dark Overcoat','Cold-Weather Outfit','Ceremonial Jacket','City Clothes','Battle Gear'],
+ 'Re:Zero':['Everyday Outfit','Traveller Clothing','Casual Jacket','Winter Cloak','Court Clothes','Adventurer Outfit','Summer Clothes','Knight-Inspired Gear'],
+ 'Lord of the Mysteries':['Formal Clothes','Mystic Outfit','Long Trench Coat','Gentleman Outfit','Black Overcoat','Traveller Suit','Ritual Robes','Ceremonial Dress'],
+ 'Omniscient Reader':['Everyday Outfit','Scenario Outfit','Office Attire','Dark Overcoat','Winter Jacket','Formal Wear','Traveller Gear','Starlit Cloak'],
+ 'Vinland Saga':['Traveller Tunic','Seafarer Outfit','Casual Linen','Cold-Weather Cloak','Workwear','Warrior Garb','Farm Clothes','Long-Voyage Cloak'],
+ 'Tokyo Ghoul':['Everyday Clothes','Investigator-Inspired Look','Dark Coat','Student Clothes','Winter Jacket','Long Overcoat','Night Gear','Midnight Disguise']
+};
 const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
- id:ch.id+'-'+o.id,character:ch.id,name:(CHARACTER_OUTFIT_NAMES[ch.id]||[])[i]||o.name,
+ id:ch.id+'-'+o.id,character:ch.id,name:(CHARACTER_OUTFIT_NAMES[ch.id]||SERIES_OUTFIT_NAMES[ch.series]||[])[i]||o.name,
  cost:i===0?0:o.cost+Math.max(0,CHARACTERS.findIndex(x=>x.id===ch.id))*2,
  top:o.top,accent:o.accent,styleId:o.id
 })));
@@ -933,7 +945,7 @@ document.getElementById('yearsAll').onclick=()=>{examYears=new Set(subjectExam(d
 document.getElementById('yearsRecent').onclick=()=>{const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters(false)};
 document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExamFilters(false)};
 document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
-document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,ts=[...new Set(subjectExam(sub).map(examTopicLabel))].sort((a,b)=>(profile.topicWeakness[topicKey(sub,b)]||0)-(profile.topicWeakness[topicKey(sub,a)]||0));examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
+document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,exam=subjectExam(sub),ts=[...new Set(exam.map(examTopicLabel))].sort((a,b)=>{const strength=t=>exam.filter(q=>examTopicLabel(q)===t).reduce((n,q)=>n+(profile.topicWeakness[topicKey(sub,q.courseTopic||q.topic)]||0)+(profile.errorLog.some(z=>z.id===q.id)?2:0),0);return strength(b)-strength(a)});examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
 document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters(false)};
 document.getElementById('startExam').onclick=startExamSession;
 document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
