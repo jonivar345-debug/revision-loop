@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 18,
-  "updatedAt": "2026-10-20T17:35:51.584Z",
+  "bankVersion": 19,
+  "updatedAt": "2026-10-20T17:39:40.612Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -2118,14 +2118,16 @@
       "topic": "Trigonometry",
       "courseTopic": "Trigonometry",
       "subtopic": "Trig proof",
-      "questionType": "official-source proof",
-      "prompt": "Open official AQA Question 4(a)(i), then give the required trig result and reasoning.",
+      "questionType": "proof",
+      "prompt": "Given sin θ · tan θ = 4 cos θ, show that tan²θ = 4.",
       "answerType": "points",
       "markPoints": [
-        "Use the stated trigonometric relationship to derive tan²θ = 4."
+        "Use tan θ = sin θ / cos θ, or an equivalent identity.",
+        "Rearrange correctly to obtain tan²θ = 4."
       ],
       "markPointMarks": [
-        1
+        1,
+        0
       ],
       "visual": "unit-circle",
       "subject": "Maths",
@@ -2136,10 +2138,10 @@
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(a)(i)",
-      "standalone": false
+      "standalone": true
     },
     {
       "id": "aqa_math_as24_p1_q4aii_src",
@@ -2148,14 +2150,14 @@
       "topic": "Trigonometry",
       "courseTopic": "Trigonometry",
       "subtopic": "Trig equations",
-      "questionType": "official-source equations",
-      "prompt": "Open official AQA Question 4(a)(ii), then give all solutions in the stated interval.",
+      "questionType": "equations",
+      "prompt": "Hence solve tan²θ = 4 for 0° < θ < 360°.",
       "answerType": "text",
       "modelAnswer": "63°, 117°, 243°, 297°",
       "markPoints": [
         "Obtain tan θ = ±2.",
         "Find valid solutions from both tangent branches.",
-        "Give all four solutions with no extras in the interval."
+        "Give all four solutions: 63°, 117°, 243°, 297°, with no extras."
       ],
       "markPointMarks": [
         1,
@@ -2171,10 +2173,10 @@
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(a)(ii)",
-      "standalone": false
+      "standalone": true
     },
     {
       "id": "aqa_math_as24_p1_q4b_src",
@@ -2183,14 +2185,14 @@
       "topic": "Trigonometry",
       "courseTopic": "Trigonometry",
       "subtopic": "Trig equations",
-      "questionType": "official-source equations",
-      "prompt": "Open official AQA Question 4(b), then give every value of α in the stated interval.",
+      "questionType": "equations",
+      "prompt": "Given that tan²(3α) = 4 and 0° < α < 180°, find all possible values of α.",
       "answerType": "text",
       "modelAnswer": "21°, 39°, 81°, 99°, 141°, 159°",
       "markPoints": [
-        "Relate the solutions from part (a) to 3α.",
+        "Use the corresponding solutions for 3α and divide by 3.",
         "Obtain at least three correct values.",
-        "Give all six values with no extras."
+        "Give all six values: 21°, 39°, 81°, 99°, 141°, 159°, with no extras."
       ],
       "markPointMarks": [
         1,
@@ -2206,10 +2208,10 @@
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(b)",
-      "standalone": false
+      "standalone": true
     },
     {
       "id": "aqa_math_as24_p1_q5a_src",
@@ -2733,6 +2735,139 @@
       "groupOrder": "7.3",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=15",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+    },
+    {
+      "id": "aqa_math_as24_p1_q7a",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Cosine rule",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "7(a)",
+      "marks": 2,
+      "questionType": "calculation",
+      "prompt": "A triangular field has side lengths 225 m, 234 m and 310 m. Calculate the angle opposite the 225 m side.",
+      "answerType": "numeric",
+      "numericAnswer": 46.3,
+      "tolerance": 0.15,
+      "unit": "°",
+      "markPoints": [
+        "Use the cosine rule correctly with the three side lengths.",
+        "Obtain an angle of about 46.3°."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Maths|2024|7356/1|7",
+      "groupOrder": "7(a)",
+      "visual": "unit-circle"
+    },
+    {
+      "id": "aqa_math_as24_p1_q7b",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Area modelling",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "7(b)",
+      "marks": 3,
+      "questionType": "problem solving",
+      "prompt": "Using the same triangular field with sides 225 m, 234 m and 310 m, suppose each sheep needs 1200 m². Find the maximum whole number of sheep that can be kept in the field.",
+      "answerType": "numeric",
+      "numericAnswer": 21,
+      "tolerance": 0,
+      "markPoints": [
+        "Use 1/2 ab sin C, with a suitable included angle, to find the field area (about 26223 m²).",
+        "Divide the area by 1200.",
+        "Round down to a maximum of 21 sheep."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Maths|2024|7356/1|7",
+      "groupOrder": "7(b)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q8a",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Exponentials & logarithms",
+      "subtopic": "Log laws",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "8(a)",
+      "marks": 3,
+      "questionType": "algebra",
+      "prompt": "Given ln x − ln y = 3, show that x = e³y.",
+      "answerType": "points",
+      "markPoints": [
+        "Use ln x − ln y = ln(x/y), or an equivalent logarithm law.",
+        "Exponentiate to obtain x/y = e³.",
+        "Rearrange to x = e³y."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Maths|2024|7356/1|8",
+      "groupOrder": "8(a)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q8b",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Exponentials & logarithms",
+      "subtopic": "Simultaneous equations",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "8(b)",
+      "marks": 3,
+      "questionType": "problem solving",
+      "prompt": "Given x = e³y and x + y = 10, find exact expressions for x and y.",
+      "answerType": "points",
+      "modelAnswer": "x = 10e³/(1+e³), y = 10/(1+e³)",
+      "markPoints": [
+        "Substitute x=e³y into x+y=10.",
+        "Obtain y = 10/(1+e³), or an equivalent exact expression.",
+        "Obtain x = 10e³/(1+e³), together with the correct y."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Maths|2024|7356/1|8",
+      "groupOrder": "8(b)"
     }
   ],
   "coverage": {
