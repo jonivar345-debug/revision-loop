@@ -646,6 +646,7 @@ function importantTokens(s){
 function markPointPrediction(answer,point){
  if(!String(answer||'').trim())return 0;
  if(contradicts(answer,point))return 0;
+ if(normalise(answer).includes(normalise(point))&&normalise(point).length>6)return 1;
  const p=importantTokens(point),a=tokens(answer);if(!p.length)return 0;
  let hits=0;for(const target of p)if(a.some(x=>close(x,target)))hits++;
  let score=hits/p.length;
@@ -1135,6 +1136,16 @@ function examSuggested(q,answer){
    // Only give shortcut full credit when the model response is effectively complete.
    // A merely similar answer must be reviewed marking point by marking point.
    if(modelMatch>=.97&&q.marks<=2&&!contradicts(answer,q.modelAnswer)){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
+ }
+ if(q.difficulty==='stretch'&&q.requiresWorking===true&&q.marks>=5){
+  // Conservative marking: one correct intermediate line must not earn every
+  // mark merely because it shares algebraic symbols with later marking points.
+  // Deliberately favour manual confirmation over inflated automated scores.
+  const clauses=String(answer||'').split(/(?:;|\n|⇒|→|=>|(?<=[.!?])\s+(?=\S))/)
+    .map(x=>x.trim()).filter(x=>x.length>=3).length;
+  const meaningfulWords=tokens(answer).filter(x=>x.length>=4).length;
+  const evidenceCap=Math.min(q.marks,Math.max(1,clauses,Math.floor(meaningfulWords/12)));
+  suggested=Math.min(suggested,evidenceCap);
  }
  if(q.answerType==='levels'&&q.marks>=4){
   const complete=preds.every(Boolean)&&String(answer).trim().split(/\s+/).length>=Math.max(20,q.markPoints.length*5);
