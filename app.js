@@ -390,7 +390,22 @@ function makeChallenge(sub,scope){
  const s={items,index:0,done:false,subject:sub||'',scope};profile.dailyChallenges[key]=s;save();return {key,...s};
 }
 function startChallenge(){const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,s=makeChallenge(sub,scope);const stored=profile.dailyChallenges[s.key];if(stored.done)stored.index=0;activeSession={kind:'daily',key:s.key,...stored,title:'Daily starter'};switchPanel('study');renderAll()}
-function startMistakes(){const items=[],seen=new Set();for(const e of profile.errorLog){const k=e.type+'|'+e.id;if(seen.has(k))continue;seen.add(k);items.push({type:e.type==='exam'?'exam':'card',id:e.id});if(items.length>=15)break}if(!items.length){showToast('No mistakes recorded yet');return}activeSession={kind:'mistakes',items,index:0,title:'Mistake bank'};switchPanel('study');renderAll()}
+function startMistakes(){
+ const items=[],seen=new Set();
+ for(const e of profile.errorLog){
+   if(items.length>=15)break;
+   if(e.type==='exam'){
+     const q=examQuestions.find(x=>x.id===e.id);if(!q)continue;
+     const k='examgroup|'+q.groupId;if(seen.has(k))continue;seen.add(k);
+     const group=examQuestions.filter(x=>x.groupId===q.groupId).sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
+     for(const part of group){if(items.length>=15)break;items.push({type:'exam',id:part.id,groupId:part.groupId})}
+   }else{
+     const k='card|'+e.id;if(seen.has(k))continue;seen.add(k);items.push({type:'card',id:e.id});
+   }
+ }
+ if(!items.length){showToast('No mistakes recorded yet');return}
+ activeSession={kind:'mistakes',items,index:0,title:'Mistake bank'};switchPanel('study');renderAll();
+}
 function advanceSession(){
  currentCardId=null;currentEvaluation=null;currentFlashAwarded=false;currentExamScore=0;
  if(!activeSession){renderAll();return}activeSession.index++;
