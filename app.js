@@ -235,8 +235,8 @@ async function findJikanArt(query){
  const match=(data.data||[]).find(p=>matchName(p.name,query)||matchName((p.name_kanji||'')+' '+(p.nicknames||[]).join(' '),query));
  return match?.images?.webp?.image_url||match?.images?.jpg?.image_url||null;
 }
-async function getCharacterArt(c){
- if(VERIFIED_CHARACTER_IMAGE_URLS[c.id])return VERIFIED_CHARACTER_IMAGE_URLS[c.id];
+async function getCharacterArt(c,skipVerified=false){
+ if(!skipVerified&&VERIFIED_CHARACTER_IMAGE_URLS[c.id])return VERIFIED_CHARACTER_IMAGE_URLS[c.id];
  const old=characterArtCache.get(c.id);
  if(old&&old.exp>Date.now())return old.url;
  if(characterArtJobs.has(c.id))return characterArtJobs.get(c.id);
@@ -256,24 +256,50 @@ function loadCharacterArt(root=document){
  const nodes=[...root.querySelectorAll('[data-character-art]')];
  const load=async el=>{
   const id=el.dataset.characterArt,c=CHARACTERS.find(x=>x.id===id);
-  if(!c||el.dataset.loading==='1'||el.querySelector('img'))return;
+  if(!c||el.dataset.loading==='1'||el.classList.contains('has-portrait'))return;
   el.dataset.loading='1';
-  const source=await getCharacterArt(c);
-  if(!el.isConnected)return;
-  if(!source){el.dataset.loading='';el.classList.add('art-unavailable');return}
-  const img=document.createElement('img');img.loading='lazy';img.alt=c.name+' anime portrait';img.referrerPolicy='no-referrer';
-  img.onload=()=>{if(!el.isConnected)return;el.appendChild(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable')};
-  img.onerror=()=>{el.dataset.loading='';el.classList.add('art-unavailable')};
-  img.src=source;
+  const display=(url,tryBackup)=>{
+   if(!url||!el.isConnected)return false;
+   const img=new Image();img.loading='lazy';img.decoding='async';
+   img.alt=c.name+' character portrait';img.referrerPolicy='no-referrer';
+   img.onload=()=>{
+    if(!el.isConnected)return;
+    el.querySelectorAll('img').forEach(node=>node.remove());
+    el.prepend(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable');
+    el.dataset.loading='0';
+   };
+   img.onerror=async()=>{
+    if(!el.isConnected)return;
+    if(tryBackup){
+     const fallback=await getCharacterArt(c,true);
+     if(fallback&&fallback!==url){display(fallback,false);return}
+    }
+    el.dataset.loading='0';el.classList.add('art-unavailable');
+    const note=el.querySelector('.character-loading small');
+    if(note)note.textContent='Portrait unavailable';
+   };
+   img.src=url;return true;
+  };
+  const first=await getCharacterArt(c);
+  if(!display(first,true)){
+   el.dataset.loading='0';el.classList.add('art-unavailable');
+   const note=el.querySelector('.character-loading small');
+   if(note)note.textContent='Portrait unavailable';
+  }
  };
  if('IntersectionObserver' in window){
-  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);load(entry.target)}},{rootMargin:'250px'});
+  const observer=new IntersectionObserver(entries=>{
+   for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);load(entry.target)}
+  },{rootMargin:'280px'});
   nodes.forEach(el=>observer.observe(el));
  }else nodes.forEach(load);
 }
 function characterArtwork(c,o){
- return '<div class="character-art" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+'">'+
- '<div class="character-loading"><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div></div>';
+ const outfit=o?.name||'';
+ return '<div class="character-art" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
+  '<div class="character-loading"><span>'+esc(c.name)+'</span><small>Loading anime portrait…</small></div>'+
+  (o&&o.id!==c.id+'-default'?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
+  '</div>';
 }
 
 const LOCATIONS=[
@@ -1002,8 +1028,12 @@ function renderPaperArchive(){
  (subject==='Maths'?'https://www.physicsandmathstutor.com/a-level-maths-papers/':PMT_BY_TOPIC[subject])+'">old-specification topic and paper resources ↗</a>.</p>';
  const all=revisionTopicIndex(subject),gaps=[];
  for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&n.questions===0)gaps.push(topic);
- document.getElementById('topicOutsideResources').innerHTML='<p class="archive-label">In-app topics still missing checked past-paper questions: '+
- gaps.length+'. <a href="'+PMT_BY_TOPIC[subject]+'" target="_blank" rel="noopener noreferrer">Find AQA questions by topic on PMT ↗</a></p>';
+ const sourced=new Map();
+ for(const q of examQuestions.filter(x=>x.subject===subject&&x.standalone!==false&&x.year!=='Practice'))sourced.set(q.revisionTopic,true);
+ const notSourced=[];
+ for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&!sourced.get(topic))notSourced.push(topic);
+ document.getElementById('topicOutsideResources').innerHTML='<p class="archive-label">Question minimum: '+(gaps.length?'some gaps remain':'4+ per topic across both levels')+
+ '. Topics without a source-linked past-paper item: '+notSourced.length+'. These currently use independent AQA-style practice instead. <a href="'+PMT_BY_TOPIC[subject]+'" target="_blank" rel="noopener noreferrer">Explore original AQA questions on PMT ↗</a></p>';
 }
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,base=subjectExam(sub).filter(q=>level==='both'||q.level===level),
@@ -1022,7 +1052,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  renderTopicCounts();
  renderPaperArchive();
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
- document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Unlisted specification topics still need exam questions.';
+ document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Official past-paper coverage remains incomplete.';
 }
 function renderTopicCounts(){document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';document.getElementById('examTopicCount').textContent=examTopics.size+' selected';document.getElementById('examYearCount').textContent=examYears.size+' selected'}
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
