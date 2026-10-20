@@ -126,7 +126,7 @@
 .character-art>img{z-index:3;position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:center 20%;border-radius:10px}
 .character-art.has-portrait .character-loading{display:none}
 .character-art.art-unavailable .character-loading{background:linear-gradient(145deg,#172554,#4338ca,#1e293b)}
-.character-art.art-unavailable .character-loading small::after{content:' unavailable';font-size:.59rem}
+
 
 .paper-library{margin:15px 0;border:1px solid var(--line);background:#fff;border-radius:13px;padding:12px}
 .paper-library>summary{cursor:pointer;font-weight:800;font-size:.78rem;line-height:1.4}
@@ -141,3 +141,15 @@
 #examControls .control-row.three label{min-width:0}
 #examLevel{font:inherit;max-width:100%}
 @media(min-width:900px){#examControls .control-row.three{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Character portraits: the source character photo is kept separate from outfit ownership */
+.character-art{isolation:isolate}
+.character-art>img{z-index:2}
+.character-art .outfit-overlay{position:absolute;z-index:4;bottom:0;left:0;right:0;
+ padding:7px 5px;font-size:.66rem;font-weight:750;text-align:center;color:#fff;
+ text-shadow:0 1px 2px #000;background:linear-gradient(transparent,rgba(4,12,30,.92))}
+.character-art .character-loading small{white-space:normal}
+.character-card .shop-icon,.outfit-card .shop-icon{overflow:hidden}
+.outfit-card .character-art>img{object-fit:cover;object-position:50% 18%}
+.character-art.art-unavailable{background:linear-gradient(135deg,#1e3a8a,#172554,#0f172a)}
+.character-art.art-unavailable .character-loading{background:transparent}
