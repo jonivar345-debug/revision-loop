@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 8,
-  "updatedAt": "2026-10-20T16:25:44.951Z",
+  "deckVersion": 9,
+  "updatedAt": "2026-10-20T16:57:21.172Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -260,7 +260,7 @@
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "courseTopic": "Waves"
+      "courseTopic": "Mechanics & materials"
     },
     {
       "id": "phy_internal_001",
@@ -578,7 +578,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Organic chemistry"
+      "courseTopic": "Amount of substance"
     },
     {
       "id": "chem_empirical_001",
@@ -726,7 +726,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Kp"
     },
     {
       "id": "chem_weak_acid_001",
@@ -761,7 +761,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Acids & bases"
     },
     {
       "id": "chem_kw_001",
@@ -948,7 +948,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Coordinate geometry"
+      "courseTopic": "Algebra & functions"
     },
     {
       "id": "phy_rp1",
@@ -1201,7 +1201,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Organic chemistry"
+      "courseTopic": "Practical skills"
     },
     {
       "id": "chem_rp2",
@@ -1230,7 +1230,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Energetics"
+      "courseTopic": "Practical skills"
     },
     {
       "id": "chem_rp3",
@@ -1262,7 +1262,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Organic chemistry"
+      "courseTopic": "Practical skills"
     },
     {
       "id": "chem_rp4",
@@ -1294,7 +1294,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Practical skills"
     },
     {
       "id": "chem_rp5",
@@ -1324,7 +1324,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Organic chemistry"
+      "courseTopic": "Practical skills"
     },
     {
       "id": "chem_rp6",
@@ -1353,7 +1353,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Organic chemistry"
+      "courseTopic": "Practical skills"
     },
     {
       "id": "phy_ins_circular_001",
@@ -2232,7 +2232,7 @@
       "mock": true,
       "unit": "as-waves",
       "taught": true,
-      "courseTopic": "Mechanics & materials"
+      "courseTopic": "Waves"
     },
     {
       "id": "phy_diffraction",
@@ -2385,7 +2385,7 @@
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "courseTopic": "Electricity"
+      "courseTopic": "Mechanics & materials"
     },
     {
       "id": "phy_top_projectile",
@@ -3483,7 +3483,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Bonding"
     },
     {
       "id": "chem_enthalpy_def",
@@ -3555,7 +3555,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Bonding"
+      "courseTopic": "Energetics"
     },
     {
       "id": "chem_collision",
@@ -3742,7 +3742,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Atomic structure"
+      "courseTopic": "Periodicity"
     },
     {
       "id": "chem_group2_reactivity",
@@ -3944,7 +3944,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_nucleophile",
@@ -3963,7 +3963,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_radical_sub",
@@ -3982,7 +3982,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_halogen_uv",
@@ -4002,7 +4002,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Group 7"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_alkene_bromine",
@@ -4044,7 +4044,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_halogeno_sub",
@@ -4062,7 +4062,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Group 7"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_elimination",
@@ -4091,7 +4091,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "courseTopic": "Group 7"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_alcohol_primary",
@@ -4333,7 +4333,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_esterification",
@@ -4364,7 +4364,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Kinetics"
+      "courseTopic": "Organic chemistry"
     },
     {
       "id": "chem_acyl_chloride_water",
@@ -4465,7 +4465,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Energetics"
+      "courseTopic": "Thermodynamics"
     },
     {
       "id": "chem_lattice_form",
@@ -4489,7 +4489,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Energetics"
+      "courseTopic": "Thermodynamics"
     },
     {
       "id": "chem_ea1",
@@ -4703,7 +4703,7 @@
       "stage": "A2",
       "mock": true,
       "taught": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Acids & bases"
     },
     {
       "id": "chem_ph",
@@ -5287,7 +5287,7 @@
       "mock": true,
       "formulaBooklet": true,
       "taught": true,
-      "courseTopic": "Statistics"
+      "courseTopic": "Algebra & functions"
     },
     {
       "id": "math_sine_rule",
@@ -6016,7 +6016,7 @@
       ],
       "unit": "a2-thermal",
       "taught": true,
-      "courseTopic": "Capacitance"
+      "courseTopic": "Thermal physics"
     },
     {
       "id": "phy_a2_latent",
@@ -7189,7 +7189,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Periodicity"
+      "courseTopic": "Period 3"
     },
     {
       "id": "chem_a2_transition_def",
@@ -7360,7 +7360,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Kinetics"
+      "courseTopic": "Transition metals"
     },
     {
       "id": "chem_a2_aqueous_precip",
@@ -7485,7 +7485,7 @@
         "aluminium chloride"
       ],
       "taught": false,
-      "courseTopic": "Kinetics"
+      "courseTopic": "Aromatic chemistry"
     },
     {
       "id": "chem_a2_amine_base",
@@ -7512,7 +7512,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Amines, amino acids & polymers"
     },
     {
       "id": "chem_a2_amine_nucleophile",
@@ -7539,7 +7539,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Amines, amino acids & polymers"
     },
     {
       "id": "chem_a2_poly_add",
@@ -7622,7 +7622,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Amines, amino acids & polymers"
     },
     {
       "id": "chem_a2_peptide",
@@ -7649,7 +7649,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Bonding"
+      "courseTopic": "Amines, amino acids & polymers"
     },
     {
       "id": "chem_a2_dna_hbond",
@@ -7668,7 +7668,7 @@
         "h bonds"
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Amines, amino acids & polymers"
     },
     {
       "id": "chem_a2_dna_pair",
@@ -7688,7 +7688,7 @@
         "adenine thymine cytosine guanine"
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Amines, amino acids & polymers"
     },
     {
       "id": "chem_a2_synthesis",
@@ -7853,7 +7853,7 @@
         "solute distance / solvent distance"
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic analysis & synthesis"
     },
     {
       "id": "chem_a2_chrom_stationary",
@@ -7880,7 +7880,7 @@
         ]
       ],
       "taught": false,
-      "courseTopic": "Acids & bases"
+      "courseTopic": "Organic analysis & synthesis"
     },
     {
       "id": "math_a2_partial_fraction",
