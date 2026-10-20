@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 13,
-  "updatedAt": "2026-10-20T16:58:37.925Z",
+  "deckVersion": 14,
+  "updatedAt": "2026-10-20T17:32:32.033Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -2448,7 +2448,7 @@
       "subject": "Physics",
       "topic": "Newton's laws",
       "kind": "content",
-      "priority": 5,
+      "priority": 7,
       "scope": "mock",
       "front": "What makes a Newton's third-law pair?",
       "back": "Equal and opposite forces of the same type acting on different objects.",
@@ -2548,7 +2548,7 @@
       "subject": "Physics",
       "topic": "Energy",
       "kind": "content",
-      "priority": 7,
+      "priority": 9,
       "scope": "mock",
       "front": "How do you calculate work done when a constant force is at angle theta to the displacement?",
       "back": "W = F s cos(theta). Theta is the angle between the force and displacement. If they point in the same direction, W = F s.",
@@ -9996,7 +9996,7 @@
       "topic": "Newton's laws",
       "courseTopic": "Mechanics & materials",
       "kind": "content",
-      "priority": 5,
+      "priority": 7,
       "userWeakness": true,
       "scope": "mock",
       "stage": "AS",
@@ -10027,7 +10027,7 @@
       "topic": "Newton's laws",
       "courseTopic": "Mechanics & materials",
       "kind": "content",
-      "priority": 5,
+      "priority": 7,
       "userWeakness": true,
       "scope": "mock",
       "stage": "AS",
@@ -10057,10 +10057,10 @@
     {
       "id": "phy_force_diagram_001",
       "subject": "Physics",
-      "topic": "Force diagrams",
+      "topic": "Free-body diagrams",
       "courseTopic": "Mechanics & materials",
       "kind": "method",
-      "priority": 6,
+      "priority": 8,
       "userWeakness": true,
       "scope": "mock",
       "stage": "AS",
@@ -10068,28 +10068,42 @@
       "active": true,
       "taught": true,
       "unit": "as-mechanics",
-      "front": "What should a force diagram include?",
-      "back": "Only forces acting on the chosen object, shown as labelled arrows in the correct directions.",
+      "front": "What should a free-body diagram show?",
+      "back": "Only the forces acting on the chosen object. Draw labelled arrows in the correct directions. Do not include velocity or acceleration arrows as forces.",
       "concepts": [
         [
-          "forces acting on the object"
+          "forces acting on the object",
+          "forces on the chosen object"
         ],
         [
-          "labelled arrows"
+          "labelled arrows",
+          "label forces"
         ],
         [
           "correct directions"
+        ],
+        [
+          "do not include velocity",
+          "not velocity"
+        ],
+        [
+          "do not include acceleration",
+          "not acceleration"
         ]
       ],
-      "visual": "newton"
+      "visual": "newton",
+      "accept": [
+        "only forces acting on the object with labelled arrows",
+        "forces on the chosen object in the correct directions"
+      ]
     },
     {
       "id": "phy_force_diagram_002",
       "subject": "Physics",
-      "topic": "Force diagrams",
+      "topic": "Free-body diagrams",
       "courseTopic": "Mechanics & materials",
       "kind": "method",
-      "priority": 6,
+      "priority": 8,
       "userWeakness": true,
       "scope": "mock",
       "stage": "AS",
@@ -10097,25 +10111,113 @@
       "active": true,
       "taught": true,
       "unit": "as-mechanics",
-      "front": "How do you use a force diagram to find acceleration?",
-      "back": "Choose axes, resolve angled forces, add components to find the resultant, then use F = ma.",
+      "front": "How do you use a free-body diagram to find acceleration?",
+      "back": "Choose axes, resolve angled forces if needed, add the force components to find the resultant force, then use ΣF = ma.",
       "concepts": [
         [
           "choose axes"
         ],
         [
+          "resolve angled forces",
           "resolve forces",
           "components"
         ],
         [
           "resultant force",
-          "net force"
+          "net force",
+          "sum of forces"
         ],
         [
-          "f=ma"
+          "f=ma",
+          "sigma f = ma"
+        ]
+      ],
+      "visual": "newton",
+      "accept": [
+        "resolve the forces find the resultant then use f=ma",
+        "sum the forces along the axes and use f=ma"
+      ]
+    },
+    {
+      "id": "phy_fbd_common_forces",
+      "subject": "Physics",
+      "topic": "Free-body diagrams",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "priority": 8,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "What common forces might appear on a free-body diagram?",
+      "back": "Weight acts vertically down; normal contact force acts perpendicular to a surface; tension acts along a string; drag/friction acts opposite relative motion or its tendency.",
+      "concepts": [
+        [
+          "weight",
+          "gravity"
+        ],
+        [
+          "normal",
+          "contact force",
+          "reaction"
+        ],
+        [
+          "tension"
+        ],
+        [
+          "drag",
+          "friction",
+          "resistive force"
+        ],
+        [
+          "opposite motion",
+          "opposes motion"
         ]
       ],
       "visual": "newton"
+    },
+    {
+      "id": "phy_work_angle_signs",
+      "subject": "Physics",
+      "topic": "Energy",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "priority": 8,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "How does the angle between force and displacement affect the sign of work done?",
+      "back": "W = Fs cos θ. Same direction: positive work. Opposite directions: negative work. Perpendicular force: zero work.",
+      "concepts": [
+        [
+          "w=fs cos theta",
+          "work equals f s cos theta"
+        ],
+        [
+          "same direction",
+          "positive work"
+        ],
+        [
+          "opposite",
+          "negative work"
+        ],
+        [
+          "perpendicular",
+          "zero work"
+        ]
+      ],
+      "accept": [
+        "same direction positive opposite negative perpendicular zero",
+        "w=fs cos theta"
+      ],
+      "visual": "work-angle"
     }
   ],
   "meta": {
