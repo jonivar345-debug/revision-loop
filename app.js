@@ -577,6 +577,11 @@ function markPointPrediction(answer,point){
 }
 function parseNumber(s){
  let x=String(s||'').replace(/[−–—]/g,'-').replace(/×|·/g,'x').replace(/,/g,'');
+ const supmap={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
+ // Typed scientific notation also arrives with true superscript exponents.
+ x=x.replace(/10([⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)/g,(_,sup)=>'10^'+[...sup].map(ch=>supmap[ch]).join(''));
+ x=x.replace(/10\s*\^\s*\(\s*([-+]?\d+)\s*\)/g,'10^$1');
+
  // Remove trailing dimensional indices: mol-1, cm3, kg m-2 and s^-1 are units, not final answers.
  x=x.replace(/\b(?:mol|kg|cm|mm|dm|km|ms|hz|m|s)\s*(?:\^\s*)?[-+]?\d+\b/gi,' ');
  // Also recognise standalone fractions such as 2/3, without misreading the denominator as the final answer.
