@@ -853,7 +853,7 @@ function renderAvatar(){
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
-function revisionTopicIndex(subject){
+function revisionTopicIndex(subject,qualification='both'){
  const groups=new Map();
  for(const c of subjectCards(subject)){
   const group=c.courseTopic||'Other',topic=flashTopicLabel(c);
@@ -861,7 +861,7 @@ function revisionTopicIndex(subject){
   if(!groups.get(group).has(topic))groups.get(group).set(topic,{cards:0,questions:0});
   groups.get(group).get(topic).cards++;
  }
- for(const q of subjectExam(subject)){
+ for(const q of subjectExam(subject).filter(q=>qualification==='both'||q.level===qualification)){
   const group=q.courseTopic||'Other',topic=examTopicLabel(q);
   if(!groups.has(group))groups.set(group,new Map());
   if(!groups.get(group).has(topic))groups.get(group).set(topic,{cards:0,questions:0});
@@ -870,7 +870,7 @@ function revisionTopicIndex(subject){
  return groups;
 }
 function groupedTopicPicker(subject,kind,selected){
- const groups=revisionTopicIndex(subject);
+ const groups=revisionTopicIndex(subject,kind==='exam'?(document.getElementById('examLevel')?.value||'both'):'both');
  return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
   const count=[...topics.values()].reduce((n,c)=>n+(kind==='flash'?c.cards:c.questions),0);
   const groupId=group.replace(/[^a-zA-Z0-9]/g,'-').toLowerCase();
@@ -880,13 +880,13 @@ function groupedTopicPicker(subject,kind,selected){
   '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,c])=>{
     const available=kind==='flash'?c.cards:c.questions;
     return '<label class="check-item '+(available?'':'empty-topic')+'"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+
-      (selected.has(topic)?'checked ':'')+'><span>'+esc(topic)+'</span><small>'+available+'</small></label>';
+      (selected.has(topic)?'checked ':'')+'><span>'+esc(topic)+'</span><small>'+(kind==='exam'?available+' / 4':available)+'</small></label>';
   }).join('')+'</div></details>';
  }).join('');
 }
 function bindTopicGroupControls(kind){
  const container=document.getElementById(kind==='flash'?'flashTopics':'examTopics');
- const groupMap=revisionTopicIndex(document.getElementById(kind==='flash'?'flashSubject':'examSubject').value);
+ const groupMap=revisionTopicIndex(document.getElementById(kind==='flash'?'flashSubject':'examSubject').value,kind==='exam'?document.getElementById('examLevel').value:'both');
  container.querySelectorAll('[data-topic-group-action]').forEach(btn=>btn.onclick=()=>{
   const group=btn.dataset.topicGroup,choices=groupMap.get(group),selected=kind==='flash'?flashTopics:examTopics;
   if(!choices)return;
