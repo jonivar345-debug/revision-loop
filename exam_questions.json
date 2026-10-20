@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 38,
-  "updatedAt": "2026-10-20T20:45:30.601Z",
+  "bankVersion": 39,
+  "updatedAt": "2026-10-20T20:46:34.240Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -12801,7 +12801,13 @@
       "verificationLevel": "original-exam-style",
       "groupId": "Original|original_v29_003",
       "groupOrder": 1,
-      "requiresWorking": false
+      "requiresWorking": false,
+      "answerVariants": [
+        "Partial pressures stay the same so Qp does not change",
+        "All reacting gas partial pressures remain constant so the equilibrium remains unchanged",
+        "No shift because partial pressures do not change at fixed volume",
+        "The partial pressures are unchanged and therefore Kp equilibrium position stays the same"
+      ]
     },
     {
       "id": "original_v29_004",
