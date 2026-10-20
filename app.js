@@ -590,15 +590,23 @@ function markPointPrediction(answer,point){
  const p=importantTokens(point),a=tokens(answer);if(!p.length)return 0;
  let hits=0;for(const target of p)if(a.some(x=>close(x,target)))hits++;
  let score=hits/p.length;
- const nums=(normalise(point).match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/g)||[]);
- if(nums.length){
-   const ans=normalise(answer);const nHits=nums.filter(n=>ans.includes(n)).length;
-   score=Math.max(score,nHits/nums.length);
+ // Compare complete numerical tokens, never substring digits: "12345" cannot
+ // match "2", "3" and "4" or win multiple marks on its own.
+ const pnums=(normalise(point).match(/(?<![\w.])[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?(?![\w.])/g)||[]);
+ const anums=(normalise(answer).match(/(?<![\w.])[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?(?![\w.])/g)||[]);
+ if(pnums.length&&anums.length){
+  const nHits=pnums.filter(v=>anums.some(w=>{
+    if(v===w)return true;
+    const x=Number(v),y=Number(w);
+    return Number.isFinite(x)&&Number.isFinite(y)&&Math.abs(x-y)<=Math.max(Math.abs(x)*.002,1e-12);
+  })).length;
+  if(nHits>0)score=Math.max(score,nHits/pnums.length);
  }
  const phrases=String(point).split(/\/|;|\bor\b/i).map(x=>x.trim()).filter(x=>x.length>4);
  for(const ph of phrases)score=Math.max(score,phraseScore(answer,ph));
  return clamp(score,0,1);
 }
+
 function parseNumber(s){
  let x=String(s||'').replace(/[−–—]/g,'-').replace(/×|·/g,'x').replace(/,/g,'');
  const supmap={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
@@ -1023,15 +1031,9 @@ function examSuggested(q,answer){
  }
  if(finalCorrect&&ordinaryCalculation)suggested=q.marks;
  else if(finalCorrect){
-  // An exact final result plus recognisable calculation steps can imply otherwise
-  // missed method marks (e.g. rearranged gas laws, converted units or total volume).
-  const answerText=String(answer||'');
-  const workingEvidence=(answerText.match(/(?:=|→|≈|\u00d7|\*|\/|sqrt|gradient|substitut|rearrang|n\s*=|v\s*=)/gi)||[]).length;
-  const explicitEquations=workingEvidence>=1&&/(?:\d+(?:\.\d+)?(?:e[-+]?\d+|\s*[*x×]\s*10\s*\^\s*[-+]?\d+)?)/i.test(answerText);
-  if(q.answerType==='numeric'&&explicitEquations){
-   suggested=q.marks;
-   preds=preds.map(()=>true);
-  }else suggested=Math.max(suggested,1);
+  // When working is essential, numerical correctness gives final-answer credit,
+  // but calculation-method points still need to be demonstrated.
+  suggested=Math.max(suggested,Math.min(q.marks,1));
  }
  if(exactVerbal&&q.requiresWorking!==true){suggested=q.marks;preds=preds.map(()=>true);}
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
