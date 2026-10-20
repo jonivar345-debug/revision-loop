@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 12,
-  "updatedAt": "2026-10-20T16:57:21.173Z",
+  "bankVersion": 13,
+  "updatedAt": "2026-10-20T17:19:10.767Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -1803,6 +1803,164 @@
       "sourceFirst": true,
       "groupId": "Maths|2021|7356/1|3",
       "groupOrder": "3(b)"
+    },
+    {
+      "id": "aqa_chem_as20_p1_q2_2_link",
+      "year": 2020,
+      "question": "2.2",
+      "marks": 1,
+      "topic": "Practical skills",
+      "courseTopic": "Practical skills",
+      "subtopic": "Titration technique",
+      "questionType": "official-source practical",
+      "prompt": "Open official AQA Paper 1 Question 2.2 and explain why the funnel is removed from the burette.",
+      "answerType": "points",
+      "markPoints": [
+        "Extra solution could drip from the funnel into the burette after the initial reading and alter the measured titre."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-QP-NOV20.PDF#page=5",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-W-MS-NOV20.PDF#page=12",
+      "visual": "titration",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2020|7404/1|2",
+      "groupOrder": "2.2"
+    },
+    {
+      "id": "aqa_chem_as20_p1_q2_3_link",
+      "year": 2020,
+      "question": "2.3",
+      "marks": 1,
+      "topic": "Practical skills",
+      "courseTopic": "Practical skills",
+      "subtopic": "Titration technique",
+      "questionType": "official-source practical",
+      "prompt": "Open official AQA Paper 1 Question 2.3 and give an advantage of using a conical flask.",
+      "answerType": "points",
+      "markPoints": [
+        "It can be swirled with less chance of splashing or losing solution."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-QP-NOV20.PDF#page=5",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-W-MS-NOV20.PDF#page=12",
+      "visual": "titration",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2020|7404/1|2",
+      "groupOrder": "2.3"
+    },
+    {
+      "id": "aqa_chem_as21_p1_q7_1_link",
+      "year": 2021,
+      "question": "7.1",
+      "marks": 2,
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "subtopic": "Enthalpy definitions",
+      "questionType": "official-source definition",
+      "prompt": "Open official AQA Paper 1 Question 7.1 and state the definition requested.",
+      "answerType": "points",
+      "markPoints": [
+        "One mole burns completely in oxygen.",
+        "All substances are in standard states under standard conditions."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-QP-NOV21.PDF#page=10",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-MS-NOV21.PDF#page=17",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2021|7404/1|7",
+      "groupOrder": "7.1"
+    },
+    {
+      "id": "aqa_chem_as21_p1_q7_3_link",
+      "year": 2021,
+      "question": "7.3",
+      "marks": 1,
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "subtopic": "Calorimetry evaluation",
+      "questionType": "official-source evaluation",
+      "prompt": "Open official AQA Paper 1 Question 7.3 and give one valid reason for the experimental discrepancy.",
+      "answerType": "points",
+      "markPoints": [
+        "Accept incomplete combustion, fuel evaporation, or non-standard conditions."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-QP-NOV21.PDF#page=11",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-MS-NOV21.PDF#page=17",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2021|7404/1|7",
+      "groupOrder": "7.3"
+    },
+    {
+      "id": "aqa_chem_as21_p1_q8_1_link",
+      "year": 2021,
+      "question": "8.1",
+      "marks": 6,
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "subtopic": "Titration calculation",
+      "questionType": "official-source multi-step calculation",
+      "prompt": "Open official AQA Paper 1 Question 8.1 and complete the full titration and percentage-by-mass calculation.",
+      "answerType": "numeric",
+      "numericAnswer": 39.1,
+      "tolerance": 0.25,
+      "unit": "%",
+      "markPoints": [
+        "Use the two concordant titres to obtain the mean.",
+        "Find moles of sodium hydroxide used.",
+        "Use the reaction stoichiometry and scale to the full solution volume.",
+        "Convert ethanoic acid moles to mass.",
+        "Find sodium ethanoate mass by difference.",
+        "Calculate a final percentage of about 39.1%."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-QP-NOV21.PDF#page=12",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-MS-NOV21.PDF#page=18",
+      "visual": "titration",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2021|7404/1|8",
+      "groupOrder": "8.1"
     }
   ],
   "coverage": {
