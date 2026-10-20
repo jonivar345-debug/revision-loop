@@ -571,6 +571,8 @@ function hasMeaning(text,word){
 function contradicts(answer,point){
  for(const [a,b] of OPPOSITES){
    const pa=hasMeaning(point,a),pb=hasMeaning(point,b),aa=hasMeaning(answer,a),ab=hasMeaning(answer,b);
+   if(pa&&pb)continue; // A model response contrasting two opposites is not contradicted by naming either one alone.
+   if(aa&&ab)continue;
    if((pa&&ab&&!aa)||(pb&&aa&&!ab))return true;
  }
  return false;
@@ -619,6 +621,7 @@ function formulaScore(input,expected){
  return phraseScore(input,expected);
 }
 function evaluateCard(c,input){
+ if(String(input||'').trim()&&Array.isArray(c.accept)&&c.accept.some(a=>normalise(a)===normalise(input)))return {status:'correct',score:1,text:'Correct accepted wording.',missing:[]};
  if(!String(input||'').trim())return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
  let best=0,missing=[];
  for(const alt of (c.accept||[]))best=Math.max(best,formulaScore(input,alt),phraseScore(input,alt));
