@@ -111,8 +111,7 @@ const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
 })));
 
 const LOCATIONS=[
- {id:'home',name:'Home Desk',wiki:'Desk',lat:52.5,lon:1.0,cost:0,region:'Home'},
- {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:20,region:'Europe'},
+ {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:0,region:'Europe'},
  {id:'tbilisi',name:'Tbilisi',wiki:'Tbilisi',lat:41.7151,lon:44.8271,cost:25,region:'Asia'},
  {id:'tokyo',name:'Tokyo',wiki:'Tokyo',lat:35.6762,lon:139.6503,cost:30,region:'Asia'},
  {id:'seoul',name:'Seoul',wiki:'Seoul',lat:37.5665,lon:126.9780,cost:35,region:'Asia'},
@@ -239,7 +238,7 @@ function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));loca
 function ensureProfile(){
  profile.daily=profile.daily||{};profile.examResults=profile.examResults||{};profile.topicWeakness=profile.topicWeakness||{};profile.topicStats=profile.topicStats||{};
  profile.errorLog=profile.errorLog||[];profile.dailyChallenges=profile.dailyChallenges||{};profile.challengeStreak=profile.challengeStreak||0;profile.lastChallengeDate=profile.lastChallengeDate||'';
- profile.shopOwned=profile.shopOwned||{};profile.shopOwned.characters=(profile.shopOwned.characters||[]).filter(id=>CHARACTERS.some(c=>c.id===id));profile.shopOwned.outfits=(profile.shopOwned.outfits||[]).filter(id=>OUTFITS.some(o=>o.id===id));profile.shopOwned.locations=(profile.shopOwned.locations||[]).filter(id=>LOCATIONS.some(l=>l.id===id));if(!profile.shopOwned.characters.length)profile.shopOwned.characters=['lelouch'];if(!profile.shopOwned.outfits.length)profile.shopOwned.outfits=['lelouch-default'];if(!profile.shopOwned.locations.includes('home'))profile.shopOwned.locations.unshift('home');if(!CHARACTERS.some(c=>c.id===profile.equippedCharacter))profile.equippedCharacter=profile.shopOwned.characters[0]||'lelouch';if(!OUTFITS.some(o=>o.id===profile.equippedOutfit&&o.character===profile.equippedCharacter))profile.equippedOutfit=profile.equippedCharacter+'-default';profile.equippedLocation=LOCATIONS.some(l=>l.id===profile.equippedLocation)?profile.equippedLocation:'home';
+ profile.shopOwned=profile.shopOwned||{};profile.shopOwned.characters=(profile.shopOwned.characters||[]).filter(id=>CHARACTERS.some(c=>c.id===id));profile.shopOwned.outfits=(profile.shopOwned.outfits||[]).filter(id=>OUTFITS.some(o=>o.id===id));profile.shopOwned.locations=(profile.shopOwned.locations||[]).filter(id=>LOCATIONS.some(l=>l.id===id));if(!profile.shopOwned.characters.length)profile.shopOwned.characters=['lelouch'];if(!profile.shopOwned.outfits.length)profile.shopOwned.outfits=['lelouch-default'];if(!profile.shopOwned.locations.includes('london'))profile.shopOwned.locations.unshift('london');if(!CHARACTERS.some(c=>c.id===profile.equippedCharacter))profile.equippedCharacter=profile.shopOwned.characters[0]||'lelouch';if(!OUTFITS.some(o=>o.id===profile.equippedOutfit&&o.character===profile.equippedCharacter))profile.equippedOutfit=profile.equippedCharacter+'-default';profile.equippedLocation=LOCATIONS.some(l=>l.id===profile.equippedLocation)?profile.equippedLocation:'london';
  if(profile.economyVersion!==2){profile.lifetimeXp=0;profile.points=0;profile.economyVersion=2}
  profile.lifetimeXp=profile.lifetimeXp||0;profile.points=profile.points||0;profile.reviews=profile.reviews||0;
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
@@ -740,7 +739,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examTopics').innerHTML=groupedTopicPicker(sub,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(Number(el.dataset.examYear)):examYears.delete(Number(el.dataset.examYear));renderTopicCounts()});
- document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{el.checked?examTopics.add(el.dataset.examTopic):examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
+ document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{if(el.checked)examTopics.add(el.dataset.examTopic);else examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
  document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
@@ -817,8 +816,22 @@ function renderStudy(){
  const item=activeSession.items[activeSession.index];if(!item){activeSession.done=true;renderStudy();return}const obj=item.type==='card'?cards.find(c=>c.id===item.id):examQuestions.find(q=>q.id===item.id);if(!obj){activeSession.index++;renderStudy();return}item.type==='card'?renderCard(obj):renderExam(obj)
 }
 function renderWeak(){
- const a=cards.filter(c=>c.active!==false).sort((x,y)=>weakness(y)-weakness(x)).slice(0,50);document.getElementById('weakList').innerHTML=a.map(c=>{const ct=c.revisionTopic||c.topic,h=Math.round(memoryHealth(c)*100),ts=topicStat(c.subject,ct),acc=ts.examMax?Math.round(ts.examMarks/ts.examMax*100):null,cls=h>=85?'memory-good':h>=60?'memory-mid':'memory-low';return '<div class="list-row"><div><strong>'+esc(ct)+'</strong><small>'+esc(c.subject)+' · memory '+h+'%'+(acc!==null?' · exam '+acc+'%':'')+'</small></div><span class="memory-pill '+cls+'">'+Math.round(weakness(c))+'</span></div>'}).join('');
- const r=profile.errorLog.slice(0,30);document.getElementById('mistakeList').innerHTML=r.length?r.map(e=>'<div class="list-row"><div><strong>'+esc(e.topic)+'</strong><small>'+esc(e.subject)+' · '+esc(e.type==='exam'?'exam '+e.result:e.result)+(e.missedPoints?.length?' · missed: '+esc(e.missedPoints.slice(0,2).join(' / ')):'')+'</small></div><span class="score-pill">'+new Date(e.date).toLocaleDateString(undefined,{day:'numeric',month:'short'})+'</span></div>').join(''):'<div class="empty-card">No recorded mistakes yet.</div>'
+ const byTopic=new Map();
+ for(const c of cards.filter(x=>x.active!==false)){
+  const topic=c.revisionTopic||c.topic,key=c.subject+'|'+topic;
+  let row=byTopic.get(key);if(!row){row={subject:c.subject,topic,cardCount:0,worstMemory:100,totalMemory:0,maxWeakness:0};byTopic.set(key,row)}
+  const memory=Math.round(memoryHealth(c)*100);
+  row.cardCount++;row.totalMemory+=memory;row.worstMemory=Math.min(row.worstMemory,memory);row.maxWeakness=Math.max(row.maxWeakness,weakness(c));
+ }
+ const entries=[...byTopic.values()].map(x=>({...x,memory:Math.round(x.totalMemory/x.cardCount)})).sort((a,b)=>b.maxWeakness-a.maxWeakness).slice(0,45);
+ document.getElementById('weakList').innerHTML=entries.map(x=>{
+  const ts=topicStat(x.subject,x.topic),acc=ts.examMax?Math.round(ts.examMarks/ts.examMax*100):null;
+  const cls=x.memory>=85?'memory-good':x.memory>=60?'memory-mid':'memory-low';
+  return '<div class="list-row"><div><strong>'+esc(x.topic)+'</strong><small>'+
+    esc(x.subject)+' · '+x.cardCount+' cards · average memory '+x.memory+'% · lowest '+x.worstMemory+'%'+
+    (acc!==null?' · exam '+acc+'%':'')+'</small></div><span class="memory-pill '+cls+'">'+Math.round(x.maxWeakness)+'</span></div>';
+ }).join('')||'<div class="empty-card">No weaknesses recorded yet.</div>';
+ const r=profile.errorLog.slice(0,30);document.getElementById('mistakeList').innerHTML=r.length?r.map(e=>'<div class="list-row"><div><strong>'+esc(e.topic)+'</strong><small>'+esc(e.subject)+' · '+esc(e.type==='exam'?'exam '+e.result:e.result)+(e.missedPoints?.length?' · missed: '+esc(e.missedPoints.slice(0,2).join(' / ')):'')+'</small></div><span class="score-pill">'+new Date(e.date).toLocaleDateString(undefined,{day:'numeric',month:'short'})+'</span></div>').join(''):'<div class="empty-card">No recorded mistakes yet.</div>';
 }
 
 const AQA_SYLLABUS={
@@ -957,7 +970,7 @@ function renderLocationGallery(){
  const selected=document.getElementById('locationRegion').value;
  const pool=selected?LOCATIONS.filter(l=>l.region===selected):evenlySpacedLocations(LOCATIONS);
  const visible=pool.slice(0,locationVisibleLimit);
- document.getElementById('regionCount').textContent=selected?pool.length+' places':(LOCATIONS.length-1)+' worldwide';
+ document.getElementById('regionCount').textContent=selected?pool.length+' places':LOCATIONS.length+' worldwide';
  document.getElementById('locationShop').innerHTML=visible.map(l=>{
   const owned=profile.shopOwned.locations.includes(l.id);
   return '<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'">Loading photograph…</div>'+
@@ -1002,7 +1015,7 @@ const LOCATION_FACTS={
 async function setLocationInfo(id){
  if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
  const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
- if(!l||l.id==='home')return;
+ if(!l)return;
  if(!profile.shopOwned.locations.includes(id)){showToast('Unlock '+l.name+' to explore its details');return}
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
@@ -1077,7 +1090,7 @@ function drawGlobe(){
  }
  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
  const regionFilter=document.getElementById('locationRegion')?.value||'';
- for(const l of LOCATIONS){if(l.id==='home'||(regionFilter&&l.region!==regionFilter))continue;const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;
+ for(const l of LOCATIONS){if((regionFilter&&l.region!==regionFilter))continue;const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;
  const owned=profile.shopOwned.locations.includes(l.id);
  ctx.beginPath();ctx.arc(p.x,p.y,owned?6:5,0,Math.PI*2);
  ctx.fillStyle=owned?'#111827':'#ffffff';ctx.fill();ctx.strokeStyle=owned?'#f8fafc':'#334155';ctx.lineWidth=1.7;ctx.stroke();
@@ -1090,7 +1103,7 @@ function nearestPin(x,y){let best=null,dist=14;const region=document.getElementB
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();if(document.getElementById('shop').classList.contains('active'))renderShop()}
 async function sync(manual=false){
- try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(true);refreshExamFilters(true);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
+ try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
 function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
