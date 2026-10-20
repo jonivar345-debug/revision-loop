@@ -705,13 +705,30 @@ function groupedTopicPicker(subject,kind,selected){
  const groups=revisionTopicIndex(subject);
  return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
   const count=[...topics.values()].reduce((n,c)=>n+(kind==='flash'?c.cards:c.questions),0);
+  const groupId=group.replace(/[^a-zA-Z0-9]/g,'-').toLowerCase();
   return '<details class="topic-family" open><summary><b>'+esc(group)+'</b><span>'+count+' '+(kind==='flash'?'cards':'questions')+'</span></summary>'+
-   '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,c])=>{
-     const available=kind==='flash'?c.cards:c.questions;
-     return '<label class="check-item '+(available?'':'disabled')+'"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+
-       (selected.has(topic)?'checked ':'')+(!available?'disabled ':'')+'><span>'+esc(topic)+'</span><small>'+available+'</small></label>';
-   }).join('')+'</div></details>';
+  '<div class="topic-family-actions"><button type="button" data-topic-group-action="select" data-topic-group="'+esc(group)+'" data-topic-kind="'+kind+'">Select section</button>'+
+  '<button type="button" data-topic-group-action="clear" data-topic-group="'+esc(group)+'" data-topic-kind="'+kind+'">Clear section</button></div>'+
+  '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,c])=>{
+    const available=kind==='flash'?c.cards:c.questions;
+    return '<label class="check-item '+(available?'':'empty-topic')+'"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+
+      (selected.has(topic)?'checked ':'')+'><span>'+esc(topic)+'</span><small>'+available+'</small></label>';
+  }).join('')+'</div></details>';
  }).join('');
+}
+function bindTopicGroupControls(kind){
+ const container=document.getElementById(kind==='flash'?'flashTopics':'examTopics');
+ const groupMap=revisionTopicIndex(document.getElementById(kind==='flash'?'flashSubject':'examSubject').value);
+ container.querySelectorAll('[data-topic-group-action]').forEach(btn=>btn.onclick=()=>{
+  const group=btn.dataset.topicGroup,choices=groupMap.get(group),selected=kind==='flash'?flashTopics:examTopics;
+  if(!choices)return;
+  for(const [topic,count] of choices){
+    if(btn.dataset.topicGroupAction==='clear')selected.delete(topic);
+    else if((kind==='flash'?count.cards:count.questions)>0)selected.add(topic);
+  }
+  for(const input of container.querySelectorAll('[data-'+kind+'-topic]'))input.checked=selected.has(input.dataset[kind+'Topic']);
+  renderTopicCounts();
+ });
 }
 function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
@@ -719,7 +736,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
  if(defaultIfEmpty&&!flashTopics.size)base.filter(c=>c.taught).forEach(c=>flashTopics.add(flashTopicLabel(c)));
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
- document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});
+ document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
 }
 function applyFlashPreset(p){
@@ -740,7 +757,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(Number(el.dataset.examYear)):examYears.delete(Number(el.dataset.examYear));renderTopicCounts()});
  document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{if(el.checked)examTopics.add(el.dataset.examTopic);else examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
- document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
+ bindTopicGroupControls('exam');document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Unlisted specification topics still need exam questions.';
