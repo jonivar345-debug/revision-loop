@@ -352,7 +352,22 @@ const LOCATIONS=[
  {id:'rotorua',name:'Rotorua',wiki:'Rotorua',lat:-38.1368,lon:176.2497,cost:585,region:'Oceania'},
  {id:'milfordsound',name:'Milford Sound',wiki:'Milford_Sound',lat:-44.6414,lon:167.8973,cost:590,region:'Oceania'},
  {id:'nadi',name:'Nadi',wiki:'Nadi',lat:-17.7765,lon:177.4356,cost:595,region:'Oceania'},
- {id:'borabora',name:'Bora Bora',wiki:'Bora_Bora',lat:-16.5004,lon:-151.7415,cost:600,region:'Oceania'}
+ {id:'borabora',name:'Bora Bora',wiki:'Bora_Bora',lat:-16.5004,lon:-151.7415,cost:600,region:'Oceania'},
+ {id:'copenhagen',name:'Copenhagen',wiki:'Copenhagen',lat:55.6761,lon:12.5683,cost:605,region:'Europe'},
+ {id:'bergen',name:'Bergen',wiki:'Bergen',lat:60.3913,lon:5.3221,cost:610,region:'Europe'},
+ {id:'ljubljana',name:'Ljubljana',wiki:'Ljubljana',lat:46.0569,lon:14.5058,cost:615,region:'Europe'},
+ {id:'chefchaouen',name:'Chefchaouen',wiki:'Chefchaouen',lat:35.1688,lon:-5.2697,cost:620,region:'Africa'},
+ {id:'okavango',name:'Okavango Delta',wiki:'Okavango_Delta',lat:-19.3,lon:22.9,cost:625,region:'Africa'},
+ {id:'kigali',name:'Kigali',wiki:'Kigali',lat:-1.9441,lon:30.0619,cost:630,region:'Africa'},
+ {id:'grandcanyon',name:'Grand Canyon',wiki:'Grand_Canyon',lat:36.0566,lon:-112.1251,cost:635,region:'North America'},
+ {id:'montegobay',name:'Montego Bay',wiki:'Montego_Bay',lat:18.4762,lon:-77.8939,cost:640,region:'North America'},
+ {id:'anchorage',name:'Anchorage',wiki:'Anchorage,_Alaska',lat:61.2181,lon:-149.9003,cost:645,region:'North America'},
+ {id:'peritomoreno',name:'Perito Moreno Glacier',wiki:'Perito_Moreno_Glacier',lat:-50.4967,lon:-73.1379,cost:650,region:'South America'},
+ {id:'easterisland',name:'Rapa Nui',wiki:'Easter_Island',lat:-27.1479,lon:-109.427,cost:655,region:'South America'},
+ {id:'valparaiso',name:'Valparaíso',wiki:'Valparaíso',lat:-33.0472,lon:-71.6127,cost:660,region:'South America'},
+ {id:'apia',name:'Apia',wiki:'Apia',lat:-13.8333,lon:-171.7667,cost:665,region:'Oceania'},
+ {id:'portvila',name:'Port Vila',wiki:'Port_Vila',lat:-17.7333,lon:168.3273,cost:670,region:'Oceania'},
+ {id:'papeete',name:'Papeete',wiki:'Papeete',lat:-17.5516,lon:-149.5585,cost:675,region:'Oceania'}
 ];
 
 const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
