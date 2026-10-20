@@ -249,7 +249,7 @@ function loadCharacterArt(root=document){
 }
 function characterArtwork(c,o){
  return '<div class="character-art" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+'">'+
- '<div class="character-loading"><span>'+esc(c.name)+'</span><small>Anime portrait</small></div></div>';
+ '<div class="character-loading"><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div></div>';
 }
 
 const LOCATIONS=[
