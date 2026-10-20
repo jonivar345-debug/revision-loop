@@ -108,7 +108,7 @@ function rateCard(c,rating,typed=''){
  if(rating==='again')s.again++;else if(rating==='hard')s.hard++;else s.good++;
  s.history=s.history||[];s.history.push({t:now(),rating,stability:s.stability,answer:String(typed||'').slice(0,250)});if(s.history.length>30)s.history=s.history.slice(-30);
  setState(c.id,s);updateTopicFromCard(c,rating);
- if(rating==='again'||rating==='hard')addError({type:'card',id:c.id,subject:c.subject,topic:c.topic,result:rating,answer:String(typed||'').slice(0,250),longGap:s.last&&((now()-s.last)/DAY>30)});
+ if(rating==='again'||rating==='hard')addError({type:'card',id:c.id,subject:c.subject,topic:c.topic,result:rating,answer:String(typed||'').slice(0,250),longGap:previousLast&&((now()-previousLast)/DAY>30)});
  let xp={again:2,hard:5,good:10,easy:12}[rating]||0;if(lastEvaluation?.status==='correct')xp+=3;if(s.mastered&&s.stability>=60)xp+=3;profile.xp+=xp;profile.reviews++;daily().reviews++;daily().xp+=xp;save();showToast('+'+xp+' XP');
  if(activeSession)completeSessionItem();else{currentId=null;lastEvaluation=null;renderAll()}
 }
@@ -145,12 +145,20 @@ function challengeExamPool(scope,sub){
 function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 function makeDailyChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
- const pool=challengePool(scope,sub),errors=new Set(profile.errorLog.slice(0,80).map(e=>e.id));
- const ranked=[...pool].sort((a,b)=>(weakness(b)+(errors.has(b.id)?5:0)+(1-memoryHealth(b))*5)-(weakness(a)+(errors.has(a.id)?5:0)+(1-memoryHealth(a))*5));
- const picked=[],topics=new Set();
- for(const c of ranked){if(picked.length>=5)break;if(!topics.has(c.topic)||picked.length>=3){picked.push({type:'card',id:c.id});topics.add(c.topic)}}
+ const pool=challengePool(scope,sub),errors=new Set(profile.errorLog.slice(0,100).map(e=>e.id)),picked=[],pickedIds=new Set(),topics=new Set();
+ const scoreCard=c=>weakness(c)+(errors.has(c.id)?6:0)+(1-memoryHealth(c))*6;
+ const weak=[...pool].sort((a,b)=>scoreCard(b)-scoreCard(a));
+ for(const c of weak){if(picked.length>=3)break;if(!pickedIds.has(c.id)&&(!topics.has(c.topic)||picked.length>=2)){picked.push({type:'card',id:c.id});pickedIds.add(c.id);topics.add(c.topic)}}
+ const old=[...pool].filter(c=>state(c.id).stage>=0&&!pickedIds.has(c.id)).sort((a,b)=>{
+   const sa=state(a.id),sb=state(b.id),ageA=sa.last?(now()-sa.last)/DAY:999,ageB=sb.last?(now()-sb.last)/DAY:999;
+   return (ageB+(1-memoryHealth(b))*60)-(ageA+(1-memoryHealth(a))*60);
+ });
+ if(old[0]){picked.push({type:'card',id:old[0].id});pickedIds.add(old[0].id)}
+ const interleaved=[...pool].filter(c=>!pickedIds.has(c.id)).sort((a,b)=>(hash(dateKey()+b.id)%10000)-(hash(dateKey()+a.id)%10000));
+ if(interleaved[0]){picked.push({type:'card',id:interleaved[0].id});pickedIds.add(interleaved[0].id)}
  const qpool=challengeExamPool(scope,sub).sort((a,b)=>{
-   const ea=errors.has(a.id)?8:0,eb=errors.has(b.id)?8:0,sa=profile.examResults[a.id]?.last?.marks/profile.examResults[a.id]?.last?.max||0,sb=profile.examResults[b.id]?.last?.marks/profile.examResults[b.id]?.last?.max||0;
+   const ea=errors.has(a.id)?8:0,eb=errors.has(b.id)?8:0,la=profile.examResults[a.id]?.last,lb=profile.examResults[b.id]?.last;
+   const sa=la?la.marks/la.max:0,sb=lb?lb.marks/lb.max:0;
    return (eb+(1-sb)*4+(hash(dateKey()+b.id)%100)/100)-(ea+(1-sa)*4+(hash(dateKey()+a.id)%100)/100);
  });
  const usedTypes=new Set();for(const q of qpool){if(picked.filter(x=>x.type==='exam').length>=2)break;if(!usedTypes.has(q.questionType)||usedTypes.size===0){picked.push({type:'exam',id:q.id});usedTypes.add(q.questionType)}}
@@ -165,7 +173,7 @@ function startMistakeSession(){
 }
 function completeSessionItem(){
  if(!activeSession)return;activeSession.index++;
- if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(s.index>=s.items.length){s.done=true;if(!s.bonus){s.bonus=true;profile.xp+=40;const today=dateKey(),y=new Date(Date.now()-DAY).toISOString().slice(0,10);profile.challengeStreak=profile.lastChallengeDate===y?profile.challengeStreak+1:(profile.lastChallengeDate===today?profile.challengeStreak:1);profile.lastChallengeDate=today;showToast('Daily challenge complete · +40 XP')}save();activeSession=null}else{save();activeSession={kind:'daily',key:activeSession.key,...s}}}
+ if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];const wasDone=!!s.done;s.index=activeSession.index;if(s.index>=s.items.length){s.done=true;if(!s.bonus){s.bonus=true;profile.xp+=40;const today=dateKey(),y=new Date(Date.now()-DAY).toISOString().slice(0,10);profile.challengeStreak=profile.lastChallengeDate===y?profile.challengeStreak+1:(profile.lastChallengeDate===today?profile.challengeStreak:1);profile.lastChallengeDate=today;showToast('Daily challenge complete · +40 XP')}save();activeSession=null}else{if(wasDone)s.done=true;save();activeSession={kind:'daily',key:activeSession.key,...s}}}
  else if(activeSession.index>=activeSession.items.length)activeSession=null;
  currentId=null;lastEvaluation=null;renderAll();
 }
