@@ -1,38 +1,96 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0f172a"><title>Revision Loop</title><link rel="manifest" href="manifest.webmanifest">
-<style>
-:root{--bg:#f6f8fb;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--green:#15803d;--amber:#b45309;--red:#b91c1c}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}
-.wrap{max-width:780px;margin:auto;padding:14px 12px 90px}.top{display:flex;justify-content:space-between;gap:10px;align-items:center}h1{margin:0;font-size:1.45rem}.sub{margin:3px 0;color:var(--muted);font-size:.82rem}
-.scope,.box,.card,.stat{background:#fff;border:1px solid var(--line);border-radius:14px}.scope{padding:10px;margin:12px 0;background:#eef2ff}.scope p{font-size:.78rem;margin:4px 0;color:#475569}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.stat{padding:9px}.stat b{display:block;font-size:1.25rem}.stat span{font-size:.7rem;color:var(--muted)}
-.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:11px 0}.tab{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 3px;font-weight:800}.tab.on{background:var(--ink);color:#fff}.panel{display:none}.panel.on{display:block}
-.card{overflow:hidden}.meta{padding:10px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;font-size:.71rem;color:#475569}.face{padding:18px;min-height:310px;display:flex;flex-direction:column;justify-content:center;gap:12px}
-.q{text-align:center;font-size:1.14rem;font-weight:850;line-height:1.35}textarea{width:100%;min-height:74px;border:1px solid #cbd5e1;border-radius:10px;padding:9px}.hint{font-size:.7rem;color:var(--muted)}.ans{display:none;background:#f8fafc;border:1px solid var(--line);border-radius:11px;padding:12px;line-height:1.45}.ans.show{display:block}
-.reveal{border:0;background:var(--blue);color:#fff;border-radius:11px;padding:12px;font-weight:850}.ratings{display:none;grid-template-columns:repeat(4,1fr);gap:6px}.ratings.show{display:grid}.r{border:0;color:white;border-radius:10px;padding:10px 4px;font-weight:800}.again{background:var(--red)}.hard{background:var(--amber)}.good{background:var(--green)}.easy{background:#0369a1}.r small{display:block}
-.box{padding:12px;margin-bottom:8px}.quick{display:flex;gap:6px;flex-wrap:wrap}.btn{border:1px solid #cbd5e1;background:#fff;border-radius:9px;padding:8px 9px;font-weight:750}.list{display:grid;gap:7px}.row{background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px;display:flex;justify-content:space-between;gap:8px}.row b{font-size:.82rem}.row small{display:block;color:var(--muted)}.pill{font-size:.69rem;background:#ffedd5;color:#9a3412;border-radius:999px;padding:4px 7px;height:max-content}.empty{text-align:center;color:var(--muted);padding:28px;background:white;border:1px solid var(--line);border-radius:13px}.filter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}select{border:1px solid #cbd5e1;border-radius:9px;padding:8px;background:#fff}
-.sync{font-size:.72rem;color:#0e7490;margin:8px 0}@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}.ratings{grid-template-columns:repeat(2,1fr)}.tab{font-size:.76rem}}
-</style></head><body><div class="wrap">
-<div class="top"><div><h1>Revision Loop</h1><p class="sub">Active recall that adapts to your weak spots.</p></div><button class="btn" id="syncBtn">Sync</button></div>
-<div class="sync" id="syncState">Loading live deck…</div><div class="scope" id="scope"></div>
-<div class="stats"><div class="stat"><b id="due">0</b><span>Due now</span></div><div class="stat"><b id="today">0</b><span>Reviewed today</span></div><div class="stat"><b id="weak">0</b><span>Weak spots</span></div><div class="stat"><b id="mastered">0</b><span>Mastered</span></div></div>
-<div class="tabs"><button class="tab on" data-p="review">Review</button><button class="tab" data-p="weakness">Weaknesses</button><button class="tab" data-p="practicals">Practicals</button><button class="tab" data-p="deck">Deck</button></div>
-<section id="review" class="panel on"><div id="host"></div></section>
-<section id="weakness" class="panel"><div class="box"><div class="quick"><button class="btn" data-mode="weak" data-sub="">Weakest all</button><button class="btn" data-mode="weak" data-sub="Physics">Physics</button><button class="btn" data-mode="weak" data-sub="Chemistry">Chemistry</button><button class="btn" data-mode="weak" data-sub="Maths">Maths</button><button class="btn" data-mode="insurance" data-sub="Physics">Physics insurance</button></div></div><div id="weakList" class="list"></div></section>
-<section id="practicals" class="panel"><div class="box"><div class="quick"><button class="btn" data-mode="practical" data-sub="Physics">Physics practicals</button><button class="btn" data-mode="practical" data-sub="Chemistry">Chemistry practicals</button></div></div><div id="pracList" class="list"></div></section>
-<section id="deck" class="panel"><div class="filter"><select id="sub"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select><select id="kind"><option value="">All types</option><option value="weak">Weak</option><option value="content">Mock content</option><option value="practical">Practical</option><option value="insurance">Insurance</option></select></div><div id="deckList" class="list"></div></section>
-</div>
-<script>
-const KEY='revisionLoopProgress5',GOOD=[7,14,30,60,120,240];let CARDS=[],SCOPE={},P=JSON.parse(localStorage.getItem(KEY)||'{}'),mode='mock',subject='',current=null,revealed=false;
-const now=()=>Date.now(),st=id=>P[id]||{stage:-1,due:0,mastered:false,again:0,hard:0,good:0,last:0},save=()=>localStorage.setItem(KEY,JSON.stringify(P));
-const isDue=c=>!st(c.id).mastered&&(st(c.id).due||0)<=now();const score=c=>(c.priority||1)*2+st(c.id).again*3+st(c.id).hard*2-st(c.id).good*.4;
-function mockQ(){let d=CARDS.filter(c=>c.scope!=='insurance'&&isDue(c)),cont=d.filter(c=>c.scope==='mock').sort((a,b)=>score(b)-score(a)),pr=d.filter(c=>c.scope==='secondary').sort((a,b)=>score(b)-score(a)),o=[];while(cont.length||pr.length){o.push(...cont.splice(0,4));if(pr.length)o.push(pr.shift())}return o}
-function queue(){if(mode==='mock')return mockQ();let a=CARDS.filter(c=>!st(c.id).mastered&&(subject?c.subject===subject:true));if(mode==='weak'){a=a.filter(c=>c.kind==='weak').sort((a,b)=>score(b)-score(a)).slice(0,12);let d=a.filter(isDue);return d.length?d:a}if(mode==='practical')return a.filter(c=>c.kind==='practical'&&isDue(c)).sort((a,b)=>score(b)-score(a));if(mode==='insurance')return a.filter(c=>c.kind==='insurance'&&isDue(c));return []}
-function setMode(m,s){mode=m;subject=s;current=null;revealed=false;document.querySelector('[data-p=review]').click();render()}
-function rate(c,r){let x=st(c.id);x.last=now();if(r==='again'){x.stage=Math.max(-1,x.stage-1);x.due=now()+600000;x.again++;x.mastered=false}else if(r==='hard'){x.stage=Math.max(0,x.stage);x.due=now()+86400000;x.hard++;x.mastered=false}else{let jump=r==='easy'?2:1;x.stage=x.stage<0?jump-1:x.stage+jump;x.good++;if(x.stage>=GOOD.length){x.mastered=true;x.due=0}else{x.due=now()+GOOD[x.stage]*86400000}}P[c.id]=x;save();current=null;revealed=false;render()}
-function renderReview(){let q=queue(),h=document.getElementById('host');if(!q.length){h.innerHTML='<div class="empty">Nothing due in this queue.</div>';return}let c=q.find(x=>x.id===current)||q[0];current=c.id;let misses=st(c.id).again+st(c.id).hard;h.innerHTML='<div class="card"><div class="meta"><span>'+c.subject+' · '+c.topic+(misses>=4?' · NEEDS RETEACH':'')+'</span><span>'+c.kind+'</span></div><div class="face"><div class="q">'+c.front+'</div><textarea id="typed" placeholder="Type or say your answer before revealing…"></textarea><div class="hint">Try to answer from memory first.</div><div class="ans '+(revealed?'show':'')+'">'+c.back+'</div><button class="reveal" id="reveal">'+(revealed?'Answer shown':'Reveal answer')+'</button><div class="ratings '+(revealed?'show':'')+'"><button class="r again" data-r="again">Again<small>10 min</small></button><button class="r hard" data-r="hard">Hard<small>1 day</small></button><button class="r good" data-r="good">Good</button><button class="r easy" data-r="easy">Easy</button></div></div></div>';document.getElementById('reveal').onclick=()=>{revealed=true;renderReview()};document.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>rate(c,b.dataset.r))}
-function render(){document.getElementById('due').textContent=mockQ().length;document.getElementById('today').textContent=CARDS.filter(c=>st(c.id).last&&new Date(st(c.id).last).toDateString()===new Date().toDateString()).length;document.getElementById('weak').textContent=CARDS.filter(c=>c.kind==='weak'&&!st(c.id).mastered&&score(c)>=7).length;document.getElementById('mastered').textContent=CARDS.filter(c=>st(c.id).mastered).length;renderReview();let w=CARDS.filter(c=>c.kind==='weak'&&!st(c.id).mastered).sort((a,b)=>score(b)-score(a));document.getElementById('weakList').innerHTML=w.map(c=>'<div class="row"><div><b>'+c.topic+'</b><small>'+c.subject+' · '+c.front+'</small></div><span class="pill">'+Math.round(score(c))+'</span></div>').join('');let pr=CARDS.filter(c=>c.kind==='practical');document.getElementById('pracList').innerHTML=pr.map(c=>'<div class="row"><div><b>'+c.subject+' · '+c.topic+'</b><small>'+c.front+'</small></div><span class="pill">'+(isDue(c)?'due':'later')+'</span></div>').join('');renderDeck();document.getElementById('scope').innerHTML='<b>Mock Mode</b><p>Physics: '+(SCOPE.Physics||'')+'</p><p>Chemistry: '+(SCOPE.Chemistry||'')+'</p><p>Maths: '+(SCOPE.Maths||'')+'</p><p>Practicals: '+(SCOPE.Practicals||'')+'</p>'}
-function renderDeck(){let s=document.getElementById('sub').value,k=document.getElementById('kind').value,a=CARDS.filter(c=>(!s||c.subject===s)&&(!k||c.kind===k));document.getElementById('deckList').innerHTML=a.map(c=>'<div class="row"><div><b>'+c.topic+'</b><small>'+c.subject+' · '+c.front+'</small></div><span class="pill">'+(st(c.id).mastered?'mastered':isDue(c)?'due':'later')+'</span></div>').join('')}
-async function sync(manual=false){try{let r=await fetch('./deck.json?v='+Date.now(),{cache:'no-store'}),d=await r.json();CARDS=d.cards||[];SCOPE=d.scope||{};document.getElementById('syncState').textContent='Live deck v'+d.deckVersion+' · updated '+d.updatedAt;render()}catch(e){document.getElementById('syncState').textContent='Could not sync live deck.'}}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('on',x.id===b.dataset.p))});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.mode,b.dataset.sub));document.getElementById('sub').onchange=renderDeck;document.getElementById('kind').onchange=renderDeck;document.getElementById('syncBtn').onclick=()=>sync(true);sync();setInterval(sync,600000);if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js');
-</script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Adaptive spaced-repetition revision for AQA mocks">
+  <title>Revision Loop</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Revision Loop</h1>
+        <p class="subtitle">Your weak spots, at the right time.</p>
+      </div>
+      <button id="syncBtn" class="icon-btn" aria-label="Sync deck">↻</button>
+    </header>
+
+    <section class="level-card">
+      <div class="level-row">
+        <div><span class="level-label">LEVEL</span><strong id="levelNum">1</strong></div>
+        <div class="xp-copy"><strong id="xpTotal">0 XP</strong><span id="xpNext">75 XP to level 2</span></div>
+      </div>
+      <div class="xp-track"><div id="xpBar" class="xp-bar"></div></div>
+    </section>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <div id="syncState" class="sync-state">Loading latest deck…</div>
+
+    <section class="stats-grid">
+      <div class="stat"><strong id="dueCount">0</strong><span>Due</span></div>
+      <div class="stat"><strong id="newCount">0</strong><span>New today</span></div>
+      <div class="stat"><strong id="reviewedCount">0</strong><span>Reviewed</span></div>
+      <div class="stat"><strong id="masteredCount">0</strong><span>Mastered</span></div>
+    </section>
+
+    <nav class="tabs" aria-label="Main navigation">
+      <button class="tab active" data-panel="review">Review</button>
+      <button class="tab" data-panel="weaknesses">Weaknesses</button>
+      <button class="tab" data-panel="progress">Progress</button>
+      <button class="tab" data-panel="browse">Browse</button>
+    </nav>
+
+    <main>
+      <section id="review" class="panel active">
+        <div class="subject-chips">
+          <button class="chip active" data-subject="">All</button>
+          <button class="chip" data-subject="Physics">Physics</button>
+          <button class="chip" data-subject="Chemistry">Chemistry</button>
+          <button class="chip" data-subject="Maths">Maths</button>
+        </div>
+        <div class="queue-tools">
+          <button id="weakQuick" class="mini-btn">Weakest first</button>
+          <button id="practicalQuick" class="mini-btn">Practicals</button>
+          <button id="insuranceQuick" class="mini-btn">Physics insurance</button>
+          <button id="normalQueue" class="mini-btn hidden">Back to normal</button>
+        </div>
+        <div id="reviewHost"></div>
+      </section>
+
+      <section id="weaknesses" class="panel">
+        <div class="section-head">
+          <div><h2>Weaknesses</h2><p>Repeated misses rise automatically. Four misses flags a topic for reteaching.</p></div>
+          <button id="reviewWeakBtn" class="primary-small">Review weakest</button>
+        </div>
+        <div id="weakList" class="list"></div>
+      </section>
+
+      <section id="progress" class="panel">
+        <div class="section-head"><div><h2>Progress</h2><p>Mastery is based on spaced reviews, not one lucky answer.</p></div></div>
+        <div id="subjectProgress" class="progress-list"></div>
+        <div class="progress-card">
+          <h3>How scheduling works</h3>
+          <div class="schedule-row"><span>Again</span><b>10 min</b></div>
+          <div class="schedule-row"><span>Hard</span><b>1 day</b></div>
+          <div class="schedule-row"><span>Good</span><b>7 → 14 → 30 → 60 → 120 → 240 days</b></div>
+          <div class="schedule-row"><span>Easy</span><b>skips one interval</b></div>
+        </div>
+      </section>
+
+      <section id="browse" class="panel">
+        <div class="browse-tools">
+          <input id="search" type="search" placeholder="Search topics or questions">
+          <select id="subjectFilter"><option value="">All subjects</option><option>Physics</option><option>Chemistry</option><option>Maths</option></select>
+          <select id="kindFilter"><option value="">All types</option><option value="weak">Weak spots</option><option value="content">Mock content</option><option value="practical">Practicals</option><option value="insurance">Insurance</option></select>
+        </div>
+        <div id="deckList" class="list"></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js?v=7" defer></script>
+</body>
+</html>
