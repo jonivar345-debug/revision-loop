@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 10,
+  "deckVersion": 11,
   "updatedAt": "2026-10-20T16:58:37.925Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -2546,20 +2546,39 @@
       "subject": "Physics",
       "topic": "Energy",
       "kind": "content",
-      "priority": 1,
+      "priority": 7,
       "scope": "mock",
-      "front": "What is work done by a force at angle θ to displacement?",
-      "back": "W = Fs cos θ.",
+      "front": "How do you calculate work done when a constant force is at angle theta to the displacement?",
+      "back": "W = F s cos(theta). Theta is the angle between the force and displacement. If they point in the same direction, W = F s.",
       "accept": [
         "w=fs cos theta",
-        "fs cos theta"
+        "w=fscostheta",
+        "work equals force times displacement times cos theta",
+        "w=fs"
       ],
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "courseTopic": "Mechanics & materials"
+      "courseTopic": "Mechanics & materials",
+      "userWeakness": true,
+      "visual": "work-angle",
+      "concepts": [
+        [
+          "w=fs cos theta",
+          "w=fscostheta"
+        ],
+        [
+          "angle between force and displacement"
+        ],
+        [
+          "same direction"
+        ],
+        [
+          "w=fs"
+        ]
+      ]
     },
     {
       "id": "phy_power_fv",
