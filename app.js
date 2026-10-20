@@ -532,3 +532,5 @@ const globe=document.getElementById('globe');
 globe.addEventListener('pointerdown',e=>{dragging=true;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
 globe.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
 globe.addEventListener('pointerup',e=>{if(dragging){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l){selectedLocation=l.id;if(profile.shopOwned.locations.includes(l.id)){profile.equippedLocation=l.id;save();renderAvatar()}drawGlobe()}}dragging=false});
+
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
