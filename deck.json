@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 11,
+  "deckVersion": 12,
   "updatedAt": "2026-10-20T16:58:37.925Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -2448,7 +2448,7 @@
       "subject": "Physics",
       "topic": "Newton's laws",
       "kind": "content",
-      "priority": 1,
+      "priority": 5,
       "scope": "mock",
       "front": "What makes a Newton's third-law pair?",
       "back": "Equal and opposite forces of the same type acting on different objects.",
@@ -2471,7 +2471,9 @@
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "courseTopic": "Mechanics & materials"
+      "courseTopic": "Mechanics & materials",
+      "userWeakness": true,
+      "visual": "newton"
     },
     {
       "id": "phy_momentum",
@@ -9987,6 +9989,70 @@
       ],
       "taught": false,
       "courseTopic": "Medical physics"
+    },
+    {
+      "id": "phy_newton1",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "State Newton's first law.",
+      "back": "An object remains at rest or continues at constant velocity unless there is a resultant external force.",
+      "concepts": [
+        [
+          "remains at rest",
+          "stays at rest"
+        ],
+        [
+          "constant velocity"
+        ],
+        [
+          "resultant external force",
+          "net force"
+        ]
+      ],
+      "visual": "newton"
+    },
+    {
+      "id": "phy_newton2",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "State Newton's second law for constant mass.",
+      "back": "Resultant force equals mass multiplied by acceleration: F = ma. Acceleration is in the direction of the resultant force.",
+      "concepts": [
+        [
+          "resultant force",
+          "net force"
+        ],
+        [
+          "mass"
+        ],
+        [
+          "acceleration"
+        ],
+        [
+          "f=ma"
+        ]
+      ],
+      "visual": "newton"
     }
   ],
   "meta": {
