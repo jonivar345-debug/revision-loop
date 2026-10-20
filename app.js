@@ -560,34 +560,37 @@ function renderCard(c){
 }
 function examSuggested(q,answer){
  const scores=q.markPoints.map(p=>markPointPrediction(answer,p));
- const preds=scores.map(v=>v>=.5);
+ let preds=scores.map(v=>v>=.5);
+ const finalCorrect=numericMatch(q,answer);
+ const qt=String(q.questionType||'').toLowerCase();
+ const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&q.requiresWorking!==true;
+ if(finalCorrect&&ordinaryCalculation){
+   // For a correct numerical result in an ordinary calculation, method is normally implied unless the item explicitly requires working.
+   preds=preds.map(()=>true);
+ }
  let suggested;
  if(Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.markPoints.length){
    suggested=preds.reduce((sum,on,i)=>sum+(on?(Number(q.markPointMarks[i])||0):0),0);
  }else{
    suggested=Math.round(preds.filter(Boolean).length/Math.max(1,q.markPoints.length)*q.marks);
  }
- const finalCorrect=numericMatch(q,answer);
- if(finalCorrect)suggested=Math.max(suggested,1);
- if(finalCorrect&&q.marks===1)suggested=1;
+ if(finalCorrect&&ordinaryCalculation)suggested=q.marks;
+ else if(finalCorrect)suggested=Math.max(suggested,1);
+ // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
+ if(q.modelAnswer&&String(answer||'').trim()){
+   const modelMatch=Math.max(formulaScore(answer,q.modelAnswer),phraseScore(answer,q.modelAnswer));
+   if(modelMatch>=.82&&q.marks<=2){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
+ }
  return {preds,scores,finalCorrect,suggested:clamp(suggested,0,q.marks)};
 }
 
-function checkedMarkScore(q){
- const boxes=[...document.querySelectorAll('[data-mp]')];
- if(Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.markPoints.length){
-   return clamp(boxes.reduce((sum,b)=>sum+(b.checked?(Number(q.markPointMarks[Number(b.dataset.mp)])||0):0),0),0,q.marks);
- }
- const checked=boxes.filter(x=>x.checked).length;
- return clamp(Math.round(checked/Math.max(1,q.markPoints.length)*q.marks),0,q.marks);
-}
 function renderExam(q){
- const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'';
+ const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'',secondary=q.verificationLevel==='secondary-indexed';
  const linked=examQuestions.filter(x=>x.groupId===q.groupId).sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
  const linkedIndex=linked.findIndex(x=>x.id===q.id);
  const linkedNote=linked.length>1?'<div class="copyright-note">Linked original question · part '+(linkedIndex+1)+' of '+linked.length+'. Related parts are kept together in sessions.</div>':'';
- const sourceNote=q.sourceFirst?'<div class="copyright-note">This bank entry is source-linked: open the official AQA question first because its original figure/table/context is needed.</div>':'<div class="copyright-note">In-app wording is a faithful self-contained paraphrase of the AQA task.</div>';
- document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">AQA source</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div><div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Open official AQA question</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">Official mark scheme</a></div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
+ const sourceNote=q.sourceFirst?'<div class="copyright-note">This bank entry is source-linked: open the source first because its original figure/table/context is needed.</div>':secondary?'<div class="copyright-note">2025 AQA paper entry cross-checked against independent paper/mark-scheme indexes. The direct public AQA PDF was not available through the current web index, so provenance is shown explicitly.</div>':'<div class="copyright-note">In-app wording is a faithful self-contained paraphrase of the verified AQA task.</div>';
+ document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(secondary?'AQA 2025 · cross-checked':'Verified AQA source')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div><div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(secondary?'Question source/index':'Open official AQA question')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(secondary?'Marking source/index':'Official mark scheme')+'</a></div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
  document.getElementById('markExam').onclick=()=>{
    const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');
    marking.classList.add('show');
