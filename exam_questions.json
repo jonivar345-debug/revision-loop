@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 20,
-  "updatedAt": "2026-10-20T17:41:13.767Z",
+  "bankVersion": 21,
+  "updatedAt": "2026-10-20T17:42:30.500Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -864,7 +864,7 @@
       "question": "8.5",
       "marks": 2,
       "questionType": "calculation",
-      "prompt": "Using the circuit in the previous part with a 12 V battery and total resistance about 4.84 Ω, calculate the power transferred by the battery.",
+      "prompt": "A 12 V battery supplies a circuit whose total resistance is approximately 4.84 Ω. Calculate the power transferred by the battery.",
       "answerType": "numeric",
       "numericAnswer": 30,
       "tolerance": 0.5,
@@ -1623,13 +1623,13 @@
       "paper": "7356/1",
       "question": "1",
       "marks": 1,
-      "questionType": "official-source question",
-      "prompt": "Open the official AQA question below and answer Question 1 here.",
+      "questionType": "short calculation",
+      "prompt": "In the expansion of (3+x)^4, find the coefficient of x.",
       "answerType": "numeric",
       "numericAnswer": 108,
       "tolerance": 0,
       "markPoints": [
-        "Correct final value: 108."
+        "The coefficient of x is 108."
       ],
       "markPointMarks": [
         1
@@ -1639,7 +1639,9 @@
       "sourceVerified": true,
       "groupId": "Maths|2021|7356/1|1",
       "groupOrder": "1",
-      "standalone": true
+      "standalone": true,
+      "sourceFirst": false,
+      "verificationLevel": "official-linked"
     },
     {
       "id": "aqa_chem_as20_p1_q2_1_link",
