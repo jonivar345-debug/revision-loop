@@ -1,7 +1,7 @@
 {
   "schemaVersion": 7,
-  "deckVersion": 5,
-  "updatedAt": "2026-10-20T17:24:00+01:00",
+  "deckVersion": 6,
+  "updatedAt": "2026-10-20T17:42:00+01:00",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -42,7 +42,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_slope_001",
@@ -74,7 +75,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_couple_001",
@@ -105,7 +107,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_motion_d",
@@ -129,7 +132,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_motion_v",
@@ -159,7 +163,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_motion_a",
@@ -183,7 +188,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_moments_001",
@@ -209,7 +215,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_equilibrium_001",
@@ -236,7 +243,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_internal_001",
@@ -268,7 +276,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_photoelectric_001",
@@ -300,7 +309,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_photoelectric_002",
@@ -330,7 +340,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_energy_levels_001",
@@ -360,7 +371,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_quarks_001",
@@ -388,7 +400,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_pressure_001",
@@ -416,7 +429,8 @@
         ]
       ],
       "stage": "A2",
-      "mock": false
+      "mock": false,
+      "unit": "a2-thermal"
     },
     {
       "id": "phy_combined_gas_001",
@@ -448,7 +462,8 @@
         ]
       ],
       "stage": "A2",
-      "mock": false
+      "mock": false,
+      "unit": "a2-thermal"
     },
     {
       "id": "chem_back_001",
@@ -904,7 +919,8 @@
       ],
       "visual": "stationary",
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_rp2",
@@ -941,7 +957,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_rp3",
@@ -972,7 +989,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_rp4",
@@ -1007,7 +1025,8 @@
       ],
       "visual": "young",
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_rp5",
@@ -1040,7 +1059,8 @@
         ]
       ],
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_rp6",
@@ -1070,7 +1090,8 @@
       ],
       "visual": "internal-resistance",
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "chem_rp1",
@@ -1275,7 +1296,8 @@
         ]
       ],
       "stage": "A2",
-      "mock": false
+      "mock": false,
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_ins_circular_002",
@@ -1302,7 +1324,8 @@
         ]
       ],
       "stage": "A2",
-      "mock": false
+      "mock": false,
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_ins_shm_001",
@@ -1335,7 +1358,8 @@
         ]
       ],
       "stage": "A2",
-      "mock": false
+      "mock": false,
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_ins_shm_002",
@@ -1363,7 +1387,8 @@
         ]
       ],
       "stage": "A2",
-      "mock": false
+      "mock": false,
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_uncert_random",
@@ -1391,7 +1416,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_uncert_systematic",
@@ -1420,7 +1446,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_uncert_percent",
@@ -1438,7 +1465,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_uncert_products",
@@ -1456,7 +1484,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_uncert_power",
@@ -1479,7 +1508,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_accuracy_precision",
@@ -1511,7 +1541,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_specific_charge",
@@ -1529,7 +1560,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_nuclide",
@@ -1558,7 +1590,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_antiparticle",
@@ -1579,7 +1612,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_annihilation",
@@ -1607,7 +1641,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_pair_production",
@@ -1634,7 +1669,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_hadrons",
@@ -1655,7 +1691,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_baryon_meson",
@@ -1678,7 +1715,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_proton_quarks",
@@ -1695,7 +1733,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_neutron_quarks",
@@ -1712,7 +1751,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_pion_plus",
@@ -1731,7 +1771,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_conservation_particle",
@@ -1755,7 +1796,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_photon_energy",
@@ -1774,7 +1816,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_debroglie",
@@ -1792,7 +1835,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-particles"
     },
     {
       "id": "phy_wave_speed",
@@ -1810,7 +1854,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_period_frequency",
@@ -1827,7 +1872,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_phase_cycle",
@@ -1847,7 +1893,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_stationary_nodes",
@@ -1877,7 +1924,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_stationary_spacing",
@@ -1895,7 +1943,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_superposition",
@@ -1920,7 +1969,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_double_slit",
@@ -1938,7 +1988,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_grating",
@@ -1956,7 +2007,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_refractive_index",
@@ -1973,7 +2025,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_snell",
@@ -1990,7 +2043,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_tir_conditions",
@@ -2023,7 +2077,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_diffraction",
@@ -2050,7 +2105,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-waves"
     },
     {
       "id": "phy_resultant_perp",
@@ -2068,7 +2124,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_moment_eq",
@@ -2094,7 +2151,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_suvat_condition",
@@ -2111,7 +2169,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_projectile_independent",
@@ -2140,7 +2199,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_projectile_horizontal",
@@ -2158,7 +2218,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_top_projectile",
@@ -2189,7 +2250,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_newton3",
@@ -2216,7 +2278,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_momentum",
@@ -2233,7 +2296,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_impulse",
@@ -2251,7 +2315,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_force_time_area",
@@ -2273,7 +2338,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_work_angle",
@@ -2290,7 +2356,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_power_fv",
@@ -2307,7 +2374,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_hooke",
@@ -2325,7 +2393,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_stress",
@@ -2343,7 +2412,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_strain",
@@ -2361,7 +2431,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_young",
@@ -2380,7 +2451,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-mechanics"
     },
     {
       "id": "phy_current",
@@ -2399,7 +2471,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_pd",
@@ -2425,7 +2498,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_emf",
@@ -2451,7 +2525,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_resistance",
@@ -2468,7 +2543,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_resistivity",
@@ -2486,7 +2562,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_series_current",
@@ -2508,7 +2585,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_series_pd",
@@ -2532,7 +2610,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_parallel_pd",
@@ -2554,7 +2633,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_parallel_current",
@@ -2583,7 +2663,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_power_elec",
@@ -2609,7 +2690,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_potential_divider",
@@ -2627,7 +2709,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_thermistor",
@@ -2645,7 +2728,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_ldr",
@@ -2663,7 +2747,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_filament_iv",
@@ -2688,7 +2773,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "phy_diode",
@@ -2713,7 +2799,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-electricity"
     },
     {
       "id": "chem_ar_def",
@@ -5156,7 +5243,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "phy_prac_graph",
@@ -5179,7 +5267,8 @@
       ],
       "active": true,
       "stage": "AS",
-      "mock": true
+      "mock": true,
+      "unit": "as-measurements"
     },
     {
       "id": "chem_prac_meniscus",
@@ -5258,7 +5347,8 @@
           "center"
         ]
       ],
-      "visual": "circular"
+      "visual": "circular",
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_circular_force",
@@ -5285,7 +5375,8 @@
           "not new",
           "not a separate force"
         ]
-      ]
+      ],
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_shm_def",
@@ -5316,7 +5407,8 @@
           "equilibrium"
         ]
       ],
-      "visual": "shm"
+      "visual": "shm",
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_shm_period",
@@ -5333,7 +5425,8 @@
       "accept": [
         "omega=2pi f=2pi/t",
         "ω=2πf=2π/t"
-      ]
+      ],
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_shm_energy",
@@ -5367,7 +5460,8 @@
           "total",
           "constant"
         ]
-      ]
+      ],
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_resonance",
@@ -5392,7 +5486,8 @@
           "large amplitude",
           "maximum amplitude"
         ]
-      ]
+      ],
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_damping",
@@ -5423,7 +5518,8 @@
           "broader",
           "lower"
         ]
-      ]
+      ],
+      "unit": "a2-periodic"
     },
     {
       "id": "phy_a2_heat_capacity",
@@ -5449,7 +5545,8 @@
           "1 k",
           "one kelvin"
         ]
-      ]
+      ],
+      "unit": "a2-thermal"
     },
     {
       "id": "phy_a2_latent",
@@ -5479,7 +5576,8 @@
           "no temperature change",
           "constant temperature"
         ]
-      ]
+      ],
+      "unit": "a2-thermal"
     },
     {
       "id": "phy_a2_ideal_gas",
@@ -5496,7 +5594,8 @@
       "accept": [
         "pv=nrt",
         "p v = n r t"
-      ]
+      ],
+      "unit": "a2-thermal"
     },
     {
       "id": "phy_a2_molar_gas",
@@ -5525,7 +5624,8 @@
           "molecule",
           "particle"
         ]
-      ]
+      ],
+      "unit": "a2-thermal"
     },
     {
       "id": "phy_a2_kinetic_eq",
@@ -5543,7 +5643,8 @@
         "pv=1/3 n m c^2",
         "pv=nm<c2>/3",
         "pV=(1/3)Nm<c^2>"
-      ]
+      ],
+      "unit": "a2-thermal"
     },
     {
       "id": "phy_a2_field_strength",
@@ -5565,7 +5666,8 @@
           "per unit mass",
           "/m"
         ]
-      ]
+      ],
+      "unit": "a2-gravity"
     },
     {
       "id": "phy_a2_grav_potential",
@@ -5590,7 +5692,8 @@
         [
           "infinity"
         ]
-      ]
+      ],
+      "unit": "a2-gravity"
     },
     {
       "id": "phy_a2_grav_potential_eq",
@@ -5607,7 +5710,8 @@
       "accept": [
         "v=-gm/r",
         "-gm/r"
-      ]
+      ],
+      "unit": "a2-gravity"
     },
     {
       "id": "phy_a2_grav_field_eq",
@@ -5624,7 +5728,8 @@
       "accept": [
         "g=gm/r^2",
         "gm/r2"
-      ]
+      ],
+      "unit": "a2-gravity"
     },
     {
       "id": "phy_a2_orbit",
@@ -5650,7 +5755,8 @@
           "gm m/r2",
           "mv2/r"
         ]
-      ]
+      ],
+      "unit": "a2-gravity"
     },
     {
       "id": "phy_a2_electric_field",
@@ -5676,7 +5782,8 @@
           "positive test charge",
           "positive charge"
         ]
-      ]
+      ],
+      "unit": "a2-electric-fields"
     },
     {
       "id": "phy_a2_coulomb",
@@ -5702,7 +5809,8 @@
           "epsilon",
           "ε0"
         ]
-      ]
+      ],
+      "unit": "a2-electric-fields"
     },
     {
       "id": "phy_a2_electric_potential",
@@ -5727,7 +5835,8 @@
         [
           "infinity"
         ]
-      ]
+      ],
+      "unit": "a2-electric-fields"
     },
     {
       "id": "phy_a2_electric_potential_eq",
@@ -5752,7 +5861,8 @@
           "epsilon",
           "ε0"
         ]
-      ]
+      ],
+      "unit": "a2-electric-fields"
     },
     {
       "id": "phy_a2_capacitance_def",
@@ -5770,7 +5880,8 @@
         "c=q/v",
         "q/v",
         "charge per volt"
-      ]
+      ],
+      "unit": "a2-capacitance"
     },
     {
       "id": "phy_a2_cap_energy",
@@ -5796,7 +5907,8 @@
         [
           "c"
         ]
-      ]
+      ],
+      "unit": "a2-capacitance"
     },
     {
       "id": "phy_a2_cap_discharge",
@@ -5820,7 +5932,8 @@
         [
           "decay"
         ]
-      ]
+      ],
+      "unit": "a2-capacitance"
     },
     {
       "id": "phy_a2_time_constant",
@@ -5842,7 +5955,8 @@
           "37",
           "0.37"
         ]
-      ]
+      ],
+      "unit": "a2-capacitance"
     },
     {
       "id": "phy_a2_magnetic_force_wire",
@@ -5859,7 +5973,8 @@
       "accept": [
         "f=bil",
         "bil"
-      ]
+      ],
+      "unit": "a2-magnetic"
     },
     {
       "id": "phy_a2_flux_density_def",
@@ -5888,7 +6003,8 @@
         [
           "perpendicular"
         ]
-      ]
+      ],
+      "unit": "a2-magnetic"
     },
     {
       "id": "phy_a2_force_charge",
@@ -5905,7 +6021,8 @@
       "accept": [
         "f=bqv",
         "bqv"
-      ]
+      ],
+      "unit": "a2-magnetic"
     },
     {
       "id": "phy_a2_flux",
@@ -5929,7 +6046,8 @@
         [
           "normal"
         ]
-      ]
+      ],
+      "unit": "a2-induction"
     },
     {
       "id": "phy_a2_flux_linkage",
@@ -5952,7 +6070,8 @@
           "flux",
           "phi"
         ]
-      ]
+      ],
+      "unit": "a2-induction"
     },
     {
       "id": "phy_a2_faraday",
@@ -5976,7 +6095,8 @@
         [
           "emf"
         ]
-      ]
+      ],
+      "unit": "a2-induction"
     },
     {
       "id": "phy_a2_lenz",
@@ -6000,7 +6120,8 @@
         [
           "induced"
         ]
-      ]
+      ],
+      "unit": "a2-induction"
     },
     {
       "id": "phy_a2_decay_constant",
@@ -6025,7 +6146,8 @@
           "nucleus",
           "nuclei"
         ]
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "phy_a2_decay_law",
@@ -6052,7 +6174,8 @@
           "activity",
           "a"
         ]
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "phy_a2_half_life",
@@ -6069,7 +6192,8 @@
       "accept": [
         "t1/2=ln2/lambda",
         "0.693/lambda"
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "phy_a2_binding",
@@ -6094,7 +6218,8 @@
         [
           "nucleons"
         ]
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "phy_a2_mass_energy",
@@ -6111,7 +6236,8 @@
       "accept": [
         "e=delta m c^2",
         "e=mc2"
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "phy_a2_fission",
@@ -6138,7 +6264,8 @@
         [
           "energy"
         ]
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "phy_a2_chain",
@@ -6163,7 +6290,8 @@
           "further",
           "more"
         ]
-      ]
+      ],
+      "unit": "a2-nuclear"
     },
     {
       "id": "chem_a2_entropy_def",
@@ -7881,6 +8009,1092 @@
           "conditions"
         ]
       ]
+    },
+    {
+      "id": "phy_med_eye_image",
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What type of image is formed on the retina by a normal eye?",
+      "back": "A real, inverted image.",
+      "concepts": [
+        [
+          "real"
+        ],
+        [
+          "inverted"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_rods_cones",
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How do rods and cones differ in their role in vision?",
+      "back": "Cones give colour vision and high spatial resolution in bright light; rods are more sensitive in low light but give poorer spatial resolution.",
+      "concepts": [
+        [
+          "cones"
+        ],
+        [
+          "colour",
+          "color"
+        ],
+        [
+          "high resolution"
+        ],
+        [
+          "rods"
+        ],
+        [
+          "low light",
+          "sensitive"
+        ],
+        [
+          "lower resolution"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_myopia",
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is myopia and how is it corrected?",
+      "back": "Distant objects focus in front of the retina; a diverging lens is used to move the focus onto the retina.",
+      "concepts": [
+        [
+          "front of retina"
+        ],
+        [
+          "diverging",
+          "concave"
+        ],
+        [
+          "retina"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_hypermetropia",
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is hypermetropia and how is it corrected?",
+      "back": "Near objects would focus behind the retina; a converging lens is used to move the focus onto the retina.",
+      "concepts": [
+        [
+          "behind retina"
+        ],
+        [
+          "converging",
+          "convex"
+        ],
+        [
+          "retina"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_lens_power",
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How is lens power related to focal length?",
+      "back": "P = 1/f, with f in metres and P in dioptres.",
+      "accept": [
+        "p=1/f",
+        "1/f"
+      ],
+      "concepts": [
+        [
+          "metre",
+          "m"
+        ],
+        [
+          "dioptre",
+          "d"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_astigmatism",
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is astigmatism?",
+      "back": "A defect caused by different curvatures in different planes of the eye, so light in different planes focuses differently.",
+      "concepts": [
+        [
+          "different curvature",
+          "unequal curvature"
+        ],
+        [
+          "different planes"
+        ],
+        [
+          "focus"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ear_transmission",
+      "subject": "Physics",
+      "topic": "Medical physics: ear",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Outline how sound is transmitted through the ear.",
+      "back": "Sound vibrates the tympanic membrane; ossicles transmit/amplify the vibration to the oval window; pressure waves in cochlear fluid stimulate receptors.",
+      "concepts": [
+        [
+          "tympanic",
+          "eardrum"
+        ],
+        [
+          "ossicles"
+        ],
+        [
+          "oval window"
+        ],
+        [
+          "cochlea",
+          "fluid"
+        ],
+        [
+          "receptor",
+          "hair cell"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_intensity",
+      "subject": "Physics",
+      "topic": "Medical physics: ear",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Define sound intensity.",
+      "back": "Sound power per unit area, I = P/A.",
+      "accept": [
+        "power per unit area",
+        "p/a",
+        "energy per unit area per second"
+      ]
+    },
+    {
+      "id": "phy_med_db",
+      "subject": "Physics",
+      "topic": "Medical physics: ear",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why is a logarithmic decibel scale used for hearing?",
+      "back": "The ear responds over a very large range of intensities and perceived loudness is approximately logarithmic rather than proportional to intensity.",
+      "concepts": [
+        [
+          "large range"
+        ],
+        [
+          "logarithmic"
+        ],
+        [
+          "perceived",
+          "hearing"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_equal_loudness",
+      "subject": "Physics",
+      "topic": "Medical physics: ear",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What does an equal-loudness curve show?",
+      "back": "The sound intensity level required at each frequency for sounds to be perceived as equally loud.",
+      "concepts": [
+        [
+          "frequency"
+        ],
+        [
+          "intensity level",
+          "db"
+        ],
+        [
+          "equally loud"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_hearing_loss",
+      "subject": "Physics",
+      "topic": "Medical physics: ear",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How can hearing loss appear on an equal-loudness graph?",
+      "back": "A higher sound intensity level is needed at affected frequencies to achieve the same perceived loudness.",
+      "concepts": [
+        [
+          "higher intensity",
+          "higher db"
+        ],
+        [
+          "frequency"
+        ],
+        [
+          "same loudness"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ecg",
+      "subject": "Physics",
+      "topic": "Medical physics: ECG",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What does an ECG measure?",
+      "back": "Potential differences at the body surface produced by electrical activity of the heart.",
+      "concepts": [
+        [
+          "potential difference",
+          "voltage"
+        ],
+        [
+          "electrical activity"
+        ],
+        [
+          "heart"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ecg_contact",
+      "subject": "Physics",
+      "topic": "Medical physics: ECG",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why are conductive gel and prepared skin used with ECG electrodes?",
+      "back": "To reduce contact resistance and improve electrical contact, giving a clearer signal.",
+      "concepts": [
+        [
+          "reduce resistance",
+          "low resistance"
+        ],
+        [
+          "electrical contact"
+        ],
+        [
+          "clearer signal"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_acoustic_impedance",
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is acoustic impedance?",
+      "back": "Z = ρc, density multiplied by sound speed in the medium.",
+      "accept": [
+        "z=rho c",
+        "ρc",
+        "density x speed"
+      ]
+    },
+    {
+      "id": "phy_med_ultrasound_reflection",
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why is ultrasound reflected at a tissue boundary?",
+      "back": "The acoustic impedances of the two tissues differ; a larger mismatch gives a larger reflected fraction.",
+      "concepts": [
+        [
+          "acoustic impedance"
+        ],
+        [
+          "different",
+          "mismatch"
+        ],
+        [
+          "reflection"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ultrasound_gel",
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why is coupling gel used in ultrasound imaging?",
+      "back": "It removes the air gap between probe and skin, reducing the very large impedance mismatch and therefore reducing unwanted reflection.",
+      "concepts": [
+        [
+          "air gap"
+        ],
+        [
+          "impedance"
+        ],
+        [
+          "reflection"
+        ],
+        [
+          "reduce"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_piezo",
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is the role of a piezoelectric crystal in an ultrasound probe?",
+      "back": "An alternating voltage makes it vibrate and emit ultrasound; returning ultrasound deforms it and produces a voltage.",
+      "concepts": [
+        [
+          "voltage"
+        ],
+        [
+          "vibrate",
+          "ultrasound"
+        ],
+        [
+          "return",
+          "echo"
+        ],
+        [
+          "produces voltage"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ascan_bscan",
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How do A-scans and B-scans differ?",
+      "back": "An A-scan shows echo amplitude against time/depth; a B-scan builds a two-dimensional brightness image.",
+      "concepts": [
+        [
+          "a scan"
+        ],
+        [
+          "amplitude"
+        ],
+        [
+          "time",
+          "depth"
+        ],
+        [
+          "b scan"
+        ],
+        [
+          "image",
+          "brightness"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ultrasound_resolution",
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What trade-off affects ultrasound resolution and penetration?",
+      "back": "Higher frequency gives shorter wavelength and better resolution, but greater attenuation and therefore less penetration.",
+      "concepts": [
+        [
+          "higher frequency"
+        ],
+        [
+          "better resolution",
+          "shorter wavelength"
+        ],
+        [
+          "attenuation"
+        ],
+        [
+          "less penetration"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_endoscope",
+      "subject": "Physics",
+      "topic": "Medical physics: endoscopy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What physical principle keeps light inside an optical fibre?",
+      "back": "Total internal reflection at the core–cladding boundary.",
+      "accept": [
+        "total internal reflection",
+        "tir"
+      ],
+      "concepts": [
+        [
+          "core"
+        ],
+        [
+          "cladding"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_coherent_bundle",
+      "subject": "Physics",
+      "topic": "Medical physics: endoscopy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why must an imaging fibre bundle be coherent?",
+      "back": "The relative position of each fibre is preserved from one end to the other, so the image is not scrambled.",
+      "concepts": [
+        [
+          "position"
+        ],
+        [
+          "preserved",
+          "same"
+        ],
+        [
+          "image"
+        ],
+        [
+          "not scrambled"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_mri_align",
+      "subject": "Physics",
+      "topic": "Medical physics: MRI",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What happens to hydrogen protons in the main magnetic field of an MRI scanner?",
+      "back": "Their spins tend to align parallel or antiparallel with the field and they precess about the field direction.",
+      "concepts": [
+        [
+          "proton",
+          "hydrogen"
+        ],
+        [
+          "align"
+        ],
+        [
+          "precess"
+        ],
+        [
+          "magnetic field"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_mri_rf",
+      "subject": "Physics",
+      "topic": "Medical physics: MRI",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is the role of the radio-frequency pulse in MRI?",
+      "back": "It excites protons, changing their spin state; as they de-excite they emit RF signals that are detected.",
+      "concepts": [
+        [
+          "rf",
+          "radio frequency"
+        ],
+        [
+          "excite"
+        ],
+        [
+          "de-excite",
+          "relax"
+        ],
+        [
+          "signal"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_mri_gradient",
+      "subject": "Physics",
+      "topic": "Medical physics: MRI",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What do gradient coils do in MRI?",
+      "back": "They vary the magnetic field with position so signals can be localised to different regions of a cross-section.",
+      "concepts": [
+        [
+          "vary field"
+        ],
+        [
+          "position"
+        ],
+        [
+          "localise",
+          "region"
+        ],
+        [
+          "cross section"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_xray_tube",
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How are X-rays produced in an X-ray tube?",
+      "back": "Electrons accelerated through a high p.d. strike a metal target and decelerate rapidly, producing X-rays; inner-shell transitions also produce characteristic X-rays.",
+      "concepts": [
+        [
+          "electron"
+        ],
+        [
+          "accelerated",
+          "high pd"
+        ],
+        [
+          "target"
+        ],
+        [
+          "decelerate"
+        ],
+        [
+          "characteristic",
+          "inner shell"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_xray_max",
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How is maximum X-ray photon energy related to accelerating voltage?",
+      "back": "Emax = eV.",
+      "accept": [
+        "emax=ev",
+        "e v"
+      ]
+    },
+    {
+      "id": "phy_med_xray_intensity",
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How can X-ray beam intensity be increased without changing maximum photon energy?",
+      "back": "Increase the tube current so more electrons hit the target each second.",
+      "concepts": [
+        [
+          "tube current",
+          "current"
+        ],
+        [
+          "more electrons"
+        ],
+        [
+          "per second"
+        ],
+        [
+          "maximum energy unchanged"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_xray_atten",
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What equation describes X-ray attenuation in tissue?",
+      "back": "I = I0 e^(−μx).",
+      "accept": [
+        "i=i0e^-mux",
+        "i=i0 exp(-mu x)",
+        "i=i0e^(-μx)"
+      ]
+    },
+    {
+      "id": "phy_med_half_value",
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Define half-value thickness.",
+      "back": "The thickness of material that reduces X-ray intensity to half its incident value.",
+      "concepts": [
+        [
+          "thickness"
+        ],
+        [
+          "half",
+          "50%"
+        ],
+        [
+          "intensity"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_ct",
+      "subject": "Physics",
+      "topic": "Medical physics: CT",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How does a CT scanner form a cross-sectional image?",
+      "back": "A narrow X-ray beam passes through the patient from many directions; detectors measure transmitted intensity and a computer reconstructs the cross-section.",
+      "concepts": [
+        [
+          "x ray"
+        ],
+        [
+          "many directions",
+          "rotate"
+        ],
+        [
+          "detector"
+        ],
+        [
+          "computer"
+        ],
+        [
+          "cross section"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_contrast",
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why can a barium meal improve an X-ray image of the digestive system?",
+      "back": "Barium strongly absorbs/attenuates X-rays, increasing contrast between the organ contents and surrounding tissues.",
+      "concepts": [
+        [
+          "barium"
+        ],
+        [
+          "absorb",
+          "attenuate"
+        ],
+        [
+          "x ray"
+        ],
+        [
+          "contrast"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_tracer",
+      "subject": "Physics",
+      "topic": "Medical physics: radionuclide imaging",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What properties make a radioisotope suitable as a medical tracer?",
+      "back": "It should emit detectable gamma radiation, have a suitable short half-life, and be able to be attached to a compound targeted to the required organ.",
+      "concepts": [
+        [
+          "gamma"
+        ],
+        [
+          "half life"
+        ],
+        [
+          "compound",
+          "label"
+        ],
+        [
+          "organ",
+          "target"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_tc99m",
+      "subject": "Physics",
+      "topic": "Medical physics: radionuclide imaging",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why is technetium-99m widely useful for imaging?",
+      "back": "It emits gamma radiation suitable for detection and has a short half-life, limiting patient dose while allowing an examination.",
+      "concepts": [
+        [
+          "gamma"
+        ],
+        [
+          "short half life"
+        ],
+        [
+          "dose"
+        ],
+        [
+          "imaging"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_pet",
+      "subject": "Physics",
+      "topic": "Medical physics: radionuclide imaging",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What is detected in PET imaging?",
+      "back": "A positron annihilates with an electron, producing two gamma photons emitted in approximately opposite directions; coincident detection locates the event.",
+      "concepts": [
+        [
+          "positron"
+        ],
+        [
+          "annihilation"
+        ],
+        [
+          "two gamma"
+        ],
+        [
+          "opposite"
+        ],
+        [
+          "coincident"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_half_lives",
+      "subject": "Physics",
+      "topic": "Medical physics: radionuclide imaging",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Distinguish physical, biological and effective half-life.",
+      "back": "Physical: radioactive decay of nuclei. Biological: removal of the substance from the body. Effective: combined effect of both processes.",
+      "concepts": [
+        [
+          "physical"
+        ],
+        [
+          "radioactive decay"
+        ],
+        [
+          "biological"
+        ],
+        [
+          "removed",
+          "body"
+        ],
+        [
+          "effective"
+        ],
+        [
+          "combined"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_gamma_camera",
+      "subject": "Physics",
+      "topic": "Medical physics: radionuclide imaging",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What are the main stages in a gamma camera?",
+      "back": "A collimator selects gamma directions, a scintillator converts gamma energy to light, photomultipliers amplify/detect the light, and electronics locate the event.",
+      "concepts": [
+        [
+          "collimator"
+        ],
+        [
+          "scintillator"
+        ],
+        [
+          "photomultiplier"
+        ],
+        [
+          "locate",
+          "position"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_radiotherapy_xray",
+      "subject": "Physics",
+      "topic": "Medical physics: therapy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "How can external high-energy X-ray treatment limit damage to healthy tissue?",
+      "back": "Use beams from several directions focused on the tumour, so the tumour receives a high combined dose while each healthy region receives less.",
+      "concepts": [
+        [
+          "several directions",
+          "multiple beams"
+        ],
+        [
+          "tumour",
+          "tumor"
+        ],
+        [
+          "healthy tissue"
+        ],
+        [
+          "dose"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_brachy",
+      "subject": "Physics",
+      "topic": "Medical physics: therapy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "Why can a beta-emitting implant be useful in brachytherapy?",
+      "back": "Beta is strongly ionising but has limited penetration, so it can deliver a localised dose to nearby tumour tissue while reducing dose beyond it.",
+      "concepts": [
+        [
+          "beta"
+        ],
+        [
+          "ionising",
+          "damage"
+        ],
+        [
+          "limited penetration",
+          "short range"
+        ],
+        [
+          "localised",
+          "tumour"
+        ],
+        [
+          "healthy"
+        ]
+      ]
+    },
+    {
+      "id": "phy_med_imaging_compare",
+      "subject": "Physics",
+      "topic": "Medical physics: imaging",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "unit": "medical",
+      "front": "What three broad factors should be compared when choosing a medical imaging technique?",
+      "back": "Image resolution/quality, convenience or practicality, and safety/dose.",
+      "concepts": [
+        [
+          "resolution",
+          "image quality"
+        ],
+        [
+          "convenience",
+          "practical"
+        ],
+        [
+          "safety",
+          "dose"
+        ]
+      ]
     }
   ],
   "meta": {
@@ -7894,6 +9108,93 @@
       "topic",
       "exam-practice"
     ],
-    "mathsPolicy": "Use fewer flashcards; avoid testing formulae printed in AQA MFB8."
+    "mathsPolicy": "Use fewer flashcards; avoid testing formulae printed in AQA MFB8.",
+    "physicsOption": "Medical physics",
+    "physicsUnits": [
+      {
+        "id": "as-measurements",
+        "label": "3.1 Measurements & errors",
+        "stage": "AS",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "as-particles",
+        "label": "3.2 Particles & radiation",
+        "stage": "AS",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "as-waves",
+        "label": "3.3 Waves",
+        "stage": "AS",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "as-mechanics",
+        "label": "3.4 Mechanics & materials",
+        "stage": "AS",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "as-electricity",
+        "label": "3.5 Electricity",
+        "stage": "AS",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "a2-periodic",
+        "label": "3.6.1 Circular motion, SHM & resonance",
+        "stage": "A2",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "a2-thermal",
+        "label": "3.6.2 Thermal physics & gases",
+        "stage": "A2",
+        "defaultUnlocked": true
+      },
+      {
+        "id": "a2-gravity",
+        "label": "3.7.1 Gravitational fields",
+        "stage": "A2",
+        "defaultUnlocked": false
+      },
+      {
+        "id": "a2-electric-fields",
+        "label": "3.7.2 Electric fields",
+        "stage": "A2",
+        "defaultUnlocked": false
+      },
+      {
+        "id": "a2-capacitance",
+        "label": "3.7.3 Capacitance",
+        "stage": "A2",
+        "defaultUnlocked": false
+      },
+      {
+        "id": "a2-magnetic",
+        "label": "3.7.4 Magnetic fields",
+        "stage": "A2",
+        "defaultUnlocked": false
+      },
+      {
+        "id": "a2-induction",
+        "label": "3.7.5 Electromagnetic induction",
+        "stage": "A2",
+        "defaultUnlocked": false
+      },
+      {
+        "id": "a2-nuclear",
+        "label": "3.8 Nuclear physics",
+        "stage": "A2",
+        "defaultUnlocked": false
+      },
+      {
+        "id": "medical",
+        "label": "3.10 Medical physics",
+        "stage": "Option",
+        "defaultUnlocked": false
+      }
+    ]
   }
 }
