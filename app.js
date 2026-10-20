@@ -7,7 +7,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,toastTimer=null;
-let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,selectedLocation='home',openLocationId=null,locationVisibleLimit=24;
+let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -1257,6 +1257,14 @@ function renderShop(){
  drawGlobe();
 }
 function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI/180,cl=globeLat*Math.PI/180,x=Math.cos(la)*Math.sin(lo),y=Math.sin(la)*Math.cos(cl)-Math.cos(la)*Math.cos(lo)*Math.sin(cl),z=Math.sin(la)*Math.sin(cl)+Math.cos(la)*Math.cos(lo)*Math.cos(cl);const R=Math.min(w,h)*.4;return {x:w/2+x*R,y:h/2-y*R,z}}
+function visibleGlobePins(w,h,region=''){
+ const projected=LOCATIONS.filter(l=>!region||l.region===region)
+  .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:profile.shopOwned.locations.includes(l.id)}))
+  .filter(x=>x.p.z>0).sort((a,b)=>Number(b.owned)-Number(a.owned));
+ const shown=[];
+ for(const item of projected){if(shown.some(x=>Math.hypot(x.p.x-item.p.x,x.p.y-item.p.y)<10))continue;shown.push(item)}
+ return shown;
+}
 function drawGlobe(){
  const c=document.getElementById('globe');if(!c)return;
  const ctx=c.getContext('2d'),w=c.width,h=c.height,R=Math.min(w,h)*.4,cx=w/2,cy=h/2;
@@ -1284,16 +1292,15 @@ function drawGlobe(){
  }
  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
  const regionFilter=document.getElementById('locationRegion')?.value||'';
- for(const l of LOCATIONS){if((regionFilter&&l.region!==regionFilter))continue;const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;
- const owned=profile.shopOwned.locations.includes(l.id);
- ctx.beginPath();ctx.arc(p.x,p.y,owned?6:5,0,Math.PI*2);
- ctx.fillStyle=owned?'#111827':'#ffffff';ctx.fill();ctx.strokeStyle=owned?'#f8fafc':'#334155';ctx.lineWidth=1.7;ctx.stroke();
+ for(const {location:l,p,owned} of visibleGlobePins(w,h,regionFilter)){
+ ctx.beginPath();ctx.arc(p.x,p.y,owned?6:4.5,0,Math.PI*2);
+ ctx.fillStyle=owned?'#111827':'#ffffff';ctx.fill();ctx.lineWidth=owned?2:1.2;ctx.strokeStyle=owned?'#f8fafc':'#334155';ctx.stroke();
  if(l.id===openLocationId){ctx.beginPath();ctx.arc(p.x,p.y,9,0,Math.PI*2);ctx.strokeStyle='#fbbf24';ctx.lineWidth=2.2;ctx.stroke()}
  }
  document.getElementById('globeLabel').textContent='Drag to rotate · white = locked · black = unlocked · tap an unlocked pin for details';
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
-function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const l of LOCATIONS){if(l.id==='home'||(region&&l.region!==region))continue;const p=project(l.lat,l.lon,700,360);if(p.z<=0)continue;const d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=l}}return best}
+function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(700,360,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();if(document.getElementById('shop').classList.contains('active'))renderShop()}
 async function sync(manual=false){
@@ -1325,8 +1332,8 @@ document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getEl
 document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
 const globe=document.getElementById('globe');
-globe.addEventListener('pointerdown',e=>{dragging=true;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
-globe.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
-globe.addEventListener('pointerup',e=>{if(dragging){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
+globe.addEventListener('pointerdown',e=>{dragging=true;dragDistance=0;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
+globe.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;dragDistance+=Math.hypot(dx,dy);globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
+globe.addEventListener('pointerup',e=>{if(dragging&&dragDistance<10){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
