@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 <div id="authGate" class="auth-gate">
@@ -37,7 +37,7 @@
 
   <section class="level-card">
     <div class="level-main">
-      <div class="level-number"><span>LEVEL</span><strong id="levelNum">1</strong><small>/ 500</small></div>
+      <div class="level-number"><span>LEVEL</span><strong id="levelNum">1</strong></div>
       <div class="wallet">
         <div><strong id="xpTotal">0 XP</strong><span id="xpNext">10 XP to level 2</span></div>
         <div><strong id="pointBalance">0</strong><span>spendable points</span></div>
@@ -80,11 +80,22 @@
   <main>
     <section id="study" class="panel active">
       <div class="study-type">
-        <button class="study-type-btn active" data-study="flashcards">Flashcards</button>
+        <button class="study-type-btn active" data-study="mock">Mock</button>
+        <button class="study-type-btn" data-study="flashcards">Flashcards</button>
         <button class="study-type-btn" data-study="exam">Exam questions</button>
       </div>
 
-      <div id="flashControls" class="control-card">
+      <div id="mockControls" class="control-card">
+        <div class="control-row three">
+          <label><span>Subject</span><select id="mockSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
+          <label><span>Session</span><select id="mockMode"><option value="mixed">Mixed flashcards + exam questions</option><option value="flash">Flashcards only</option><option value="exam">Exam questions only</option></select></label>
+          <label><span>Length</span><select id="mockCount"><option value="10">10 items</option><option value="15" selected>15 items</option><option value="20">20 items</option><option value="30">30 items</option></select></label>
+        </div>
+        <div class="coverage-note">Uses only the topics currently tagged for your mock. Weak areas and older knowledge are more likely to appear, but the order is random.</div>
+        <button id="startMock" class="primary-btn full-btn">Start mock revision</button>
+      </div>
+
+      <div id="flashControls" class="control-card hidden">
         <div class="control-row two">
           <label><span>Subject</span><select id="flashSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
           <label><span>Session size</span><select id="flashCount"><option value="10">10 cards</option><option value="20" selected>20 cards</option><option value="30">30 cards</option><option value="50">50 cards</option></select></label>
@@ -97,10 +108,6 @@
           <button class="mini-btn" data-flash-preset="clear">Clear</button>
         </div>
         <div id="flashTopics" class="check-grid"></div>
-        <div id="physicsUnitManager" class="physics-unit-manager hidden">
-          <div class="unit-manager-head"><div><b>Physics sections unlocked</b><span>Untick content you have not learned yet. Medical Physics is your option.</span></div><button id="resetPhysicsUnits" class="mini-btn">Reset</button></div>
-          <div id="physicsUnitList" class="unit-grid"></div>
-        </div>
         <button id="startFlashcards" class="primary-btn full-btn">Start random flashcards</button>
       </div>
 
@@ -160,13 +167,16 @@
     <section id="shop" class="panel">
       <div class="shop-hero">
         <div id="characterPreview" class="character-preview"></div>
-        <div><span class="eyebrow">YOUR COLLECTION</span><h2 id="equippedName">Starter Scholar</h2><p id="equippedLocation">Home Desk</p><strong><span id="shopPoints">0</span> points available</strong></div>
+        <div><span class="eyebrow">YOUR COLLECTION</span><h2 id="equippedName">Nova</h2><p><span id="equippedOutfitName">Default outfit</span> · <span id="equippedLocation">Home Desk</span></p><strong><span id="shopPoints">0</span> points available</strong></div>
       </div>
 
-      <div class="section-head"><div><h2>Wardrobe</h2><p>Fixed-price collectible original outfits. No random loot boxes.</p></div></div>
+      <div class="section-head"><div><h2>Characters</h2><p>Choose who your little revision character looks like. Specific anime/movie/show character packs will only be added after you approve the characters.</p></div><strong id="characterCount">0 / 0</strong></div>
+      <div id="characterShop" class="shop-grid"></div>
+
+      <div class="section-head globe-head"><div><h2>Outfits</h2><p>Each character has their own unlockable outfits.</p></div><strong id="outfitCount">0 / 0</strong></div>
       <div id="outfitShop" class="shop-grid"></div>
 
-      <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock locations, then rotate the globe to see your collection.</p></div></div>
+      <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock real places, rotate the Earth and use actual location photos.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="globe-card">
         <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing unlockable locations"></canvas>
         <div id="globeLabel" class="globe-label">Drag to rotate · tap a pin to inspect it</div>
@@ -175,6 +185,6 @@
     </section>
   </main>
 </div>
-<script src="app.js?v=11" defer></script>
+<script src="app.js?v=12" defer></script>
 </body>
 </html>
