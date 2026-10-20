@@ -824,14 +824,15 @@ function buy(kind,id){
 }
 
 const LOCATION_PHOTO_OVERRIDES={
- hongkong:{file:'Hong Kong Night Skyline.jpg',credit:'Photo: Wikimedia Commons',page:'https://commons.wikimedia.org/wiki/File:Hong_Kong_Night_Skyline.jpg'},
+ hongkong:{file:'Hong Kong Night Skyline.jpg',credit:'Base64 / CarolSpears · CC BY-SA 3.0',page:'https://commons.wikimedia.org/wiki/File:Hong_Kong_Night_Skyline.jpg'},
  singapore:{file:'Gardens by the Bay Singapore (aerial view).jpg',credit:'Photo: ProjectManhattan / CC0',page:'https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_Singapore_(aerial_view).jpg'},
- bali:{file:'Tanah Lot Temple, Bali, Indonesia.jpg',credit:'Photo: Wikimedia Commons',page:'https://commons.wikimedia.org/wiki/File:Tanah_Lot_Temple,_Bali,_Indonesia.jpg'}
+ bali:{file:'Tanah Lot Temple, Bali, Indonesia.jpg',credit:'Varenniabhargah · CC BY-SA 4.0',page:'https://commons.wikimedia.org/wiki/File:Tanah_Lot_Temple,_Bali,_Indonesia.jpg'}
 };
 function placeImage(el,url,location,source,credit){
  if(!url||!el?.isConnected)return;
  const img=document.createElement('img');img.loading='lazy';img.alt='View of '+location.name;img.referrerPolicy='no-referrer';
- img.onload=()=>{if(!el.isConnected)return;el.replaceChildren(img);if(source){const a=document.createElement('a');a.className='photo-credit';a.href=source;a.target='_blank';a.rel='noopener noreferrer';a.textContent=credit||'Photo source';el.appendChild(a)}};
+ el.replaceChildren(img);
+ img.onload=()=>{if(!el.isConnected)return;if(source){const a=document.createElement('a');a.className='photo-credit';a.href=source;a.target='_blank';a.rel='noopener noreferrer';a.textContent=credit||'Photo source';el.appendChild(a)}};
  img.onerror=()=>{if(!el.isConnected)return;el.textContent='Photo currently unavailable';};
  img.src=url;
 }
