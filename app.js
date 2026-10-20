@@ -560,6 +560,7 @@ function parseNumber(s){
  let x=String(s||'').replace(/\u2212|\u2013|\u2014/g,'-').replace(/×|·/g,'x').replace(/,/g,'');
  // Drop SI unit exponents: for instance "9.81 m s^-2" must be interpreted as 9.81.
  x=x.replace(/([a-zA-ZµμΩ]+)\s*\^\s*[-+]?\d+/g,'$1');
+ x=x.replace(/\b(cm|mm|dm|km|m|s|kg|mol|ms)\s*[²³23](?=\b|\s|$)/gi,'$1');
  x=x.replace(/\b(?:kg|cm|mm|dm|mol|m|s|ms|hz|n|j|w|v|c)\s*\/\s*(?:[a-zA-ZµμΩ]+)?\s*\d+/gi,' ');
  const pat=/[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:x|\*)\s*10\s*\^\s*[-+]?\d+|e[-+]?\d+)?/gi;
  const values=[...x.matchAll(pat)].map(m=>{
