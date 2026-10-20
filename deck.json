@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 18,
-  "updatedAt": "2026-10-20T21:54:16.499Z",
+  "deckVersion": 19,
+  "updatedAt": "2026-10-20T22:21:15.829Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -12738,6 +12738,342 @@
         "Perpendicular distance from pivot to force's line of action.",
         "Shortest perpendicular distance",
         "Pivot to line of action perpendicular"
+      ]
+    },
+    {
+      "id": "v34_spec_maths_statistical_sampling_1",
+      "subject": "Maths",
+      "topic": "Statistical sampling",
+      "revisionTopic": "Statistical sampling",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "Distinguish a population from a sample.",
+      "back": "The population is the entire group of interest; the sample is the subset observed.",
+      "accept": [
+        "The population is the entire group of interest; the sample is the subset observed."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_statistical_sampling_2",
+      "subject": "Maths",
+      "topic": "Statistical sampling",
+      "revisionTopic": "Statistical sampling",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What makes simple random sampling different from convenience sampling?",
+      "back": "Every individual has an equal chance of selection in simple random sampling; convenience sampling chooses easily accessible people.",
+      "accept": [
+        "Every individual has an equal chance of selection in simple random sampling; convenience sampling chooses easily accessible people."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_statistical_sampling_3",
+      "subject": "Maths",
+      "topic": "Statistical sampling",
+      "revisionTopic": "Statistical sampling",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "Why might stratified sampling be preferred when a population has distinct subgroups?",
+      "back": "It ensures each subgroup is represented, commonly in proportion to its size in the population.",
+      "accept": [
+        "It ensures each subgroup is represented, commonly in proportion to its size in the population."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_statistical_sampling_4",
+      "subject": "Maths",
+      "topic": "Statistical sampling",
+      "revisionTopic": "Statistical sampling",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What is sampling bias?",
+      "back": "A systematic distortion when the selection procedure overrepresents or underrepresents some members of the target population.",
+      "accept": [
+        "A systematic distortion when the selection procedure overrepresents or underrepresents some members of the target population."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_data_presentation_and_interpretation_1",
+      "subject": "Maths",
+      "topic": "Data presentation and interpretation",
+      "revisionTopic": "Data presentation and interpretation",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What does frequency density represent on a histogram?",
+      "back": "Frequency density is frequency divided by class width, so bar area represents frequency.",
+      "accept": [
+        "Frequency density is frequency divided by class width, so bar area represents frequency."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_data_presentation_and_interpretation_2",
+      "subject": "Maths",
+      "topic": "Data presentation and interpretation",
+      "revisionTopic": "Data presentation and interpretation",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "How is the interquartile range calculated?",
+      "back": "Interquartile range is Q3 minus Q1, measuring spread of the middle 50% of data.",
+      "accept": [
+        "Interquartile range is Q3 minus Q1, measuring spread of the middle 50% of data."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_data_presentation_and_interpretation_3",
+      "subject": "Maths",
+      "topic": "Data presentation and interpretation",
+      "revisionTopic": "Data presentation and interpretation",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What does an outlier beyond 1.5 times the interquartile range mean?",
+      "back": "A value below Q1−1.5×IQR or above Q3+1.5×IQR is classified as an outlier by that convention.",
+      "accept": [
+        "A value below Q1−1.5×IQR or above Q3+1.5×IQR is classified as an outlier by that convention."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_data_presentation_and_interpretation_4",
+      "subject": "Maths",
+      "topic": "Data presentation and interpretation",
+      "revisionTopic": "Data presentation and interpretation",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "Why does correlation alone not establish causation?",
+      "back": "An association can arise from confounding variables, coincidence or another process without one variable causing the other.",
+      "accept": [
+        "An association can arise from confounding variables, coincidence or another process without one variable causing the other."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_probability_1",
+      "subject": "Maths",
+      "topic": "Probability",
+      "revisionTopic": "Probability",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "When are two events mutually exclusive?",
+      "back": "They cannot occur together, so their intersection has probability zero.",
+      "accept": [
+        "They cannot occur together, so their intersection has probability zero."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_probability_2",
+      "subject": "Maths",
+      "topic": "Probability",
+      "revisionTopic": "Probability",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What condition defines independent events?",
+      "back": "Knowing whether one event occurred does not change the probability of the other; P(A∩B)=P(A)P(B).",
+      "accept": [
+        "Knowing whether one event occurred does not change the probability of the other; P(A∩B)=P(A)P(B)."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_probability_3",
+      "subject": "Maths",
+      "topic": "Probability",
+      "revisionTopic": "Probability",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What is conditional probability P(A|B)?",
+      "back": "The probability of event A occurring given that B has occurred.",
+      "accept": [
+        "The probability of event A occurring given that B has occurred."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_probability_4",
+      "subject": "Maths",
+      "topic": "Probability",
+      "revisionTopic": "Probability",
+      "courseTopic": "Statistics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "How is total probability one used with complementary events?",
+      "back": "P(not A)=1−P(A).",
+      "accept": [
+        "P(not A)=1−P(A)."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_quantities_and_units_in_mechanics_1",
+      "subject": "Maths",
+      "topic": "Quantities and units in mechanics",
+      "revisionTopic": "Quantities and units in mechanics",
+      "courseTopic": "Mechanics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "Give the SI base units of a newton.",
+      "back": "A newton is one kilogram metre per second squared: kg m s⁻².",
+      "accept": [
+        "A newton is one kilogram metre per second squared: kg m s⁻²."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_quantities_and_units_in_mechanics_2",
+      "subject": "Maths",
+      "topic": "Quantities and units in mechanics",
+      "revisionTopic": "Quantities and units in mechanics",
+      "courseTopic": "Mechanics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "Distinguish scalar speed from vector velocity.",
+      "back": "Speed has magnitude only; velocity has both magnitude and direction.",
+      "accept": [
+        "Speed has magnitude only; velocity has both magnitude and direction."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_quantities_and_units_in_mechanics_3",
+      "subject": "Maths",
+      "topic": "Quantities and units in mechanics",
+      "revisionTopic": "Quantities and units in mechanics",
+      "courseTopic": "Mechanics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "What are the SI units of acceleration?",
+      "back": "Metres per second squared, m s⁻².",
+      "accept": [
+        "Metres per second squared, m s⁻²."
+      ]
+    },
+    {
+      "id": "v34_spec_maths_quantities_and_units_in_mechanics_4",
+      "subject": "Maths",
+      "topic": "Quantities and units in mechanics",
+      "revisionTopic": "Quantities and units in mechanics",
+      "courseTopic": "Mechanics",
+      "kind": "content",
+      "priority": 5,
+      "userWeakness": false,
+      "scope": "full",
+      "stage": "AS",
+      "mock": false,
+      "active": true,
+      "taught": true,
+      "unit": "statistics-mechanics",
+      "front": "Why must masses be converted from grams to kilograms in F=ma when force is in newtons?",
+      "back": "The newton uses SI base units kg m s⁻²; using grams without conversion makes the numerical force incorrect.",
+      "accept": [
+        "The newton uses SI base units kg m s⁻²; using grams without conversion makes the numerical force incorrect."
       ]
     }
   ],
