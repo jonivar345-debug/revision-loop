@@ -433,7 +433,20 @@ const LOCATIONS=[
  {id:'valparaiso',name:'Valparaíso',wiki:'Valparaíso',lat:-33.0472,lon:-71.6127,cost:660,region:'South America'},
  {id:'apia',name:'Apia',wiki:'Apia',lat:-13.8333,lon:-171.7667,cost:665,region:'Oceania'},
  {id:'portvila',name:'Port Vila',wiki:'Port_Vila',lat:-17.7333,lon:168.3273,cost:670,region:'Oceania'},
- {id:'papeete',name:'Papeete',wiki:'Papeete',lat:-17.5516,lon:-149.5585,cost:675,region:'Oceania'}
+ {id:'papeete',name:'Papeete',wiki:'Papeete',lat:-17.5516,lon:-149.5585,cost:675,region:'Oceania'},
+ {id:'porto',name:'Porto',wiki:'Porto',lat:41.1579,lon:-8.6291,cost:680,region:'Europe'},
+ {id:'granada',name:'Granada',wiki:'Granada',lat:37.1773,lon:-3.5986,cost:685,region:'Europe'},
+ {id:'seville',name:'Seville',wiki:'Seville',lat:37.3891,lon:-5.9845,cost:690,region:'Europe'},
+ {id:'valencia',name:'Valencia',wiki:'Valencia',lat:39.4699,lon:-0.3763,cost:695,region:'Europe'},
+ {id:'florence',name:'Florence',wiki:'Florence',lat:43.7696,lon:11.2558,cost:700,region:'Europe'},
+ {id:'krakow',name:'Kraków',wiki:'Kraków',lat:50.0647,lon:19.945,cost:705,region:'Europe'},
+ {id:'tallinn',name:'Tallinn',wiki:'Tallinn',lat:59.437,lon:24.7536,cost:710,region:'Europe'},
+ {id:'riga',name:'Riga',wiki:'Riga',lat:56.9496,lon:24.1052,cost:715,region:'Europe'},
+ {id:'vilnius',name:'Vilnius',wiki:'Vilnius',lat:54.6872,lon:25.2797,cost:720,region:'Europe'},
+ {id:'salzburg',name:'Salzburg',wiki:'Salzburg',lat:47.8095,lon:13.055,cost:725,region:'Europe'},
+ {id:'sarajevo',name:'Sarajevo',wiki:'Sarajevo',lat:43.8563,lon:18.4131,cost:730,region:'Europe'},
+ {id:'mostar',name:'Mostar',wiki:'Mostar',lat:43.3438,lon:17.8078,cost:735,region:'Europe'},
+ {id:'kotor',name:'Kotor',wiki:'Kotor',lat:42.4247,lon:18.7712,cost:740,region:'Europe'}
 ];
 
 const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
