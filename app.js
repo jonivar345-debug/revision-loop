@@ -1,7 +1,7 @@
 const DECK_URL='./deck.json', EXAM_URL='./exam_questions.json';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile8',SETTINGS_KEY='revisionLoopSettings8';
 const GOOD=[7,14,30,60,120,240];
-let cards=[],examQuestions=[],deckVersion=0,bankVersion=0;
+let cards=[],examQuestions=[],deckVersion=0,bankVersion=0,deckMeta={};
 let progress=load(PROGRESS_KEY,{}),profile=load(PROFILE_KEY,{xp:0,reviews:0,daily:{},examResults:{},topicWeakness:{}}),settings=load(SETTINGS_KEY,{dailyNew:18});
 let studyMode='mock',subject='',queueMode='normal',currentId=null,lastEvaluation=null;
 let examIndex=0,examRevealed=false,currentExamId=null,toastTimer=null;
@@ -18,13 +18,44 @@ function topicKey(s,t){return s+'|'+t}
 function weakness(c){const s=state(c.id),topicBonus=profile.topicWeakness?.[topicKey(c.subject,c.topic)]||0;return (c.priority||1)*3+(s.again||0)*3+(s.hard||0)*2+topicBonus*2-(s.good||0)*.35-(s.mastered?8:0)}
 function showToast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),1800)}
 
+function initPhysicsUnits(){
+ const units=deckMeta.physicsUnits||[];
+ if(!settings.physicsUnits)settings.physicsUnits={};
+ let changed=false;
+ units.forEach(u=>{if(settings.physicsUnits[u.id]===undefined){settings.physicsUnits[u.id]=!!u.defaultUnlocked;changed=true}});
+ if(changed)save();
+}
+function physicsUnitUnlocked(c){
+ if(c.subject!=='Physics'||!c.unit)return true;
+ const units=deckMeta.physicsUnits||[],u=units.find(x=>x.id===c.unit);
+ if(settings.physicsUnits?.[c.unit]!==undefined)return settings.physicsUnits[c.unit]!==false;
+ return u?!!u.defaultUnlocked:true;
+}
+function resetPhysicsUnits(){
+ settings.physicsUnits={};(deckMeta.physicsUnits||[]).forEach(u=>settings.physicsUnits[u.id]=!!u.defaultUnlocked);save();currentId=null;updateTopicOptions();renderAll();showToast('Physics topics reset');
+}
+function renderPhysicsUnitManager(){
+ const box=document.getElementById('physicsUnitManager'),list=document.getElementById('physicsUnitList');
+ const topicPhysics=studyMode==='topic'&&document.getElementById('topicSubject').value==='Physics';
+ const show=studyMode==='full'||topicPhysics;
+ box.classList.toggle('hidden',!show);
+ if(!show)return;
+ const units=deckMeta.physicsUnits||[];
+ list.innerHTML=units.map(u=>{
+   const checked=settings.physicsUnits?.[u.id]!==false;
+   const count=cards.filter(c=>c.active!==false&&c.subject==='Physics'&&c.unit===u.id).length;
+   return '<label class="unit-toggle '+(checked?'':'locked')+'"><input type="checkbox" data-unit="'+esc(u.id)+'" '+(checked?'checked':'')+'><span><strong>'+(checked?'🔓 ':'🔒 ')+esc(u.label)+'</strong><small>'+esc(u.stage)+' · '+count+' cards</small></span></label>';
+ }).join('');
+ list.querySelectorAll('[data-unit]').forEach(el=>el.onchange=()=>{settings.physicsUnits[el.dataset.unit]=el.checked;save();currentId=null;updateTopicOptions();renderAll()});
+}
+
 function eligibleCards(){
  let a=cards.filter(c=>c.active!==false);
  if(studyMode==='mock')a=a.filter(c=>c.mock===true);
- else if(studyMode==='full')a=a.filter(c=>c.kind!=='insurance');
+ else if(studyMode==='full')a=a.filter(c=>c.kind!=='insurance'&&(c.subject!=='Physics'||physicsUnitUnlocked(c)));
  else if(studyMode==='topic'){
    const s=document.getElementById('topicSubject').value,t=document.getElementById('topicSelect').value;
-   a=a.filter(c=>c.subject===s&&c.topic===t);
+   a=a.filter(c=>c.subject===s&&c.topic===t&&(c.subject!=='Physics'||physicsUnitUnlocked(c)));
  }
  if(subject&&studyMode!=='topic')a=a.filter(c=>c.subject===subject);
  return a;
@@ -98,14 +129,15 @@ function renderModeControls(){
  document.getElementById('queueTools').classList.toggle('hidden',exam);
  let note='';
  if(studyMode==='mock')note='Uses your current mock scope: Physics AS/Year 1, Chemistry Year 1 + taught Year 2, Maths Year 1 Pure.';
- if(studyMode==='full')note='Full A-level core revision. Physics covers mandatory Sections 3.1–3.8; your optional Physics topic is not included until you tell me which option your class takes.';
- if(studyMode==='topic')note='Choose a subject and one topic; only that topic enters the queue.';
+ if(studyMode==='full')note='Full A-level revision. Physics only includes sections you have unlocked below; your option is Medical Physics. Untick anything you have not covered yet.';
+ if(studyMode==='topic')note='Choose a subject and one topic. For Physics, locked course sections stay hidden until you unlock them below.';
  if(studyMode==='exam')note='Real AQA past-paper sources. In-app wording is paraphrased; the original paper and official mark scheme are linked on every question.';
  document.getElementById('modeNote').textContent=note;
+ renderPhysicsUnitManager();
 }
 function updateTopicOptions(){
  const s=document.getElementById('topicSubject').value,sel=document.getElementById('topicSelect'),old=sel.value;
- const ts=[...new Set(cards.filter(c=>c.active!==false&&c.subject===s&&c.kind!=='insurance').map(c=>c.topic))].sort();
+ const ts=[...new Set(cards.filter(c=>c.active!==false&&c.subject===s&&c.kind!=='insurance'&&(s!=='Physics'||physicsUnitUnlocked(c))).map(c=>c.topic))].sort();
  sel.innerHTML=ts.map(t=>'<option>'+esc(t)+'</option>').join('');if(ts.includes(old))sel.value=old;
 }
 function filteredExamQuestions(){
@@ -151,12 +183,12 @@ function renderWeak(){const a=cards.filter(c=>c.active!==false&&!state(c.id).mas
 function renderProgress(){document.getElementById('subjectProgress').innerHTML=['Physics','Chemistry','Maths'].map(sub=>{const a=cards.filter(c=>c.active!==false&&c.subject===sub&&c.kind!=='insurance'),started=a.filter(c=>state(c.id).stage>=0||state(c.id).mastered).length,mastered=a.filter(c=>state(c.id).mastered).length,pct=a.length?100*mastered/a.length:0;const eq=Object.entries(profile.examResults||{}).filter(([id])=>examQuestions.find(q=>q.id===id)?.subject===sub);let got=0,max=0;eq.forEach(([,r])=>{got+=r.marks;max+=r.max});return '<div class="progress-card"><div class="subject-progress-head"><span>'+sub+'</span><span>'+mastered+' mastered / '+a.length+'</span></div><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%"></div></div><div class="progress-note">'+started+' flashcards started'+(max?' · Exam practice '+got+'/'+max:'')+'</div></div>'}).join('')}
 function renderBrowse(){const term=document.getElementById('search').value.toLowerCase().trim(),sub=document.getElementById('subjectFilter').value,k=document.getElementById('kindFilter').value;const a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub)&&(!k||c.kind===k)&&(!term||(c.topic+' '+c.front+' '+c.back).toLowerCase().includes(term)));document.getElementById('deckList').innerHTML=a.map(c=>'<div class="list-row"><div><strong>'+esc(c.topic)+'</strong><small>'+esc(c.subject)+' · '+esc(c.stage||'')+' · '+esc(c.front)+'</small></div><span class="score-pill">'+(state(c.id).mastered?'mastered':isNew(c)?'new':isDue(c)?'due':'later')+'</span></div>').join('')}
 function renderAll(){renderLevel();renderStats();renderStudy();renderWeak();renderProgress();renderBrowse()}
-async function sync(manual=false){try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;updateTopicOptions();updateExamTopics();document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' cards · '+examQuestions.length+' real AQA questions';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}}
+async function sync(manual=false){try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();updateTopicOptions();updateExamTopics();document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' cards · '+examQuestions.length+' real AQA questions';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}}
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id))}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchPanel(b.dataset.panel));
 document.querySelectorAll('.mode-btn').forEach(b=>b.onclick=()=>{studyMode=b.dataset.mode;queueMode='normal';currentId=null;examIndex=0;subject='';document.querySelectorAll('[data-subject]').forEach(x=>x.classList.toggle('active',x.dataset.subject===''));renderAll()});
 document.querySelectorAll('[data-subject]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-subject]').forEach(x=>x.classList.toggle('active',x===b));subject=b.dataset.subject;queueMode='normal';currentId=null;renderAll()});
-document.getElementById('topicSubject').onchange=()=>{updateTopicOptions();currentId=null;renderAll()};document.getElementById('topicSelect').onchange=()=>{currentId=null;renderAll()};
+document.getElementById('topicSubject').onchange=()=>{updateTopicOptions();currentId=null;renderAll()};document.getElementById('resetPhysicsUnits').onclick=resetPhysicsUnits;document.getElementById('topicSelect').onchange=()=>{currentId=null;renderAll()};
 document.getElementById('examSubject').onchange=()=>{updateExamTopics();renderAll()};document.getElementById('examLevel').onchange=()=>{updateExamTopics();renderAll()};document.getElementById('examTopic').onchange=()=>{examIndex=0;renderAll()};
 document.getElementById('weakQuick').onclick=()=>{queueMode='weak';currentId=null;renderAll()};document.getElementById('practicalQuick').onclick=()=>{queueMode='practical';currentId=null;renderAll()};document.getElementById('normalQueue').onclick=()=>{queueMode='normal';currentId=null;renderAll()};document.getElementById('reviewWeakBtn').onclick=()=>{studyMode='full';queueMode='weak';subject='';switchPanel('study');currentId=null;renderAll()};
 document.getElementById('search').oninput=renderBrowse;document.getElementById('subjectFilter').onchange=renderBrowse;document.getElementById('kindFilter').onchange=renderBrowse;document.getElementById('syncBtn').onclick=()=>sync(true);
