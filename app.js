@@ -179,6 +179,7 @@ function normalise(x){
   [/\bdegrees?\b/g,' degree '],[/\bnewtons?\b/g,' n '],[/\bjoules?\b/g,' j '],[/\bvolts?\b/g,' v ']
  ];
  r.forEach(a=>s=s.replace(a[0],a[1]));
+ s=s.replace(/([a-z0-9])(cos|sin|tan)(?=\s*theta\b)/g,'$1 $2');
  return s.replace(/[^a-z0-9+\-*/=<>^.[\] ]+/g,' ').replace(/\s+/g,' ').trim();
 }
 const STOP=new Set(['the','a','an','of','to','and','in','is','are','with','at','on','for','from','by','it','be','as','or','that','this','using','use','one','each','then','so','a','an']);
@@ -309,9 +310,16 @@ function markPointPrediction(answer,point){
  return clamp(score,0,1);
 }
 function parseNumber(s){
- let x=String(s||'').toLowerCase().replace(/,/g,'').replace(/×|·/g,'x').replace(/\s+/g,'');
- const sci=x.match(/([-+]?\d*\.?\d+)x10\^?([-+]?\d+)/);if(sci)return Number(sci[1])*Math.pow(10,Number(sci[2]));
- const m=x.match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/g);return m?.length?Number(m[m.length-1]):NaN;
+ let x=String(s||'').replace(/\u2212|\u2013|\u2014/g,'-').replace(/×|·/g,'x').replace(/,/g,'');
+ // Drop SI unit exponents: for instance "9.81 m s^-2" must be interpreted as 9.81.
+ x=x.replace(/([a-zA-ZµμΩ]+)\s*\^\s*[-+]?\d+/g,'$1');
+ x=x.replace(/\b(?:kg|cm|mm|dm|mol|m|s|ms|hz|n|j|w|v|c)\s*\/\s*(?:[a-zA-ZµμΩ]+)?\s*\d+/gi,' ');
+ const pat=/[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:x|\*)\s*10\s*\^\s*[-+]?\d+|e[-+]?\d+)?/gi;
+ const values=[...x.matchAll(pat)].map(m=>{
+   const z=m[0].replace(/\s/g,'');const sci=z.match(/^([-+]?(?:\d+(?:\.\d*)?|\.\d+))(?:x|\*)10\^([-+]?\d+)$/i);
+   return sci?Number(sci[1])*Math.pow(10,Number(sci[2])):Number(z);
+ }).filter(Number.isFinite);
+ return values.length?values[values.length-1]:NaN;
 }
 function numericMatch(q,answer){
  if(q.answerType!=='numeric'||!Number.isFinite(q.numericAnswer))return false;
@@ -341,7 +349,7 @@ function weightedPick(items,n,weightFn){
 function startMockSession(){
  const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value,count=Number(document.getElementById('mockCount').value);
  const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&c.mock===true);
- const qAll=examQuestions.filter(q=>q.subject===sub&&(q.mock===true||q.level==='AS'));
+ const qAll=subjectExam(sub).filter(q=>q.mock===true||q.level==='AS');
  const groups=new Map();for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
  const items=[];
@@ -369,7 +377,7 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return flashTopics.size?base.filter(c=>flashTopics.has(c.courseTopic||c.topic)):base}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(c.courseTopic||c.topic))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
  const picked=weightedPick(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
@@ -408,7 +416,7 @@ function awardExam(q,marks,answer,missedPoints){
 }
 
 function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(c=>c.mock===true):a.filter(taughtCard)}
-function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>(!sub||x.subject===sub));if(scope==='mock')q=q.filter(x=>x.mock===true||x.level==='AS');return q}
+function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(x=>x.mock===true||x.level==='AS');return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
  const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>weakness(b)-weakness(a)),items=[],used=new Set();
@@ -710,7 +718,7 @@ function nearestPin(x,y){let best=null,dist=18;for(const l of LOCATIONS){const p
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();renderShop()}
 async function sync(manual=false){
- try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(true);refreshExamFilters(true);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.length+' verified AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
+ try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(true);refreshExamFilters(true);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(drawGlobe,0)}
 function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
