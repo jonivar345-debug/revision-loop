@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 15,
-  "updatedAt": "2026-10-20T17:42:41.770Z",
+  "deckVersion": 16,
+  "updatedAt": "2026-10-20T17:59:14.625Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -2473,7 +2473,13 @@
       "taught": true,
       "courseTopic": "Mechanics & materials",
       "userWeakness": true,
-      "visual": "newton"
+      "visual": "newton",
+      "accept": [
+        "Forces are equal and opposite and act on different objects",
+        "Equal and opposite forces of the same type act on different bodies",
+        "Every action has an equal and opposite reaction on another object",
+        "When one body exerts a force on another the second exerts an equal and opposite force on the first"
+      ]
     },
     {
       "id": "phy_momentum",
@@ -2550,13 +2556,15 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "How do you calculate work done when a constant force is at angle theta to the displacement?",
-      "back": "W = F s cos(theta). Theta is the angle between the force and displacement. If they point in the same direction, W = F s.",
+      "front": "For a constant force at angle θ to the displacement, state the general work-done formula.",
+      "back": "W = Fs cos θ, where θ is the angle between the force and displacement. Only use W = Fs when they are in the same direction.",
       "accept": [
-        "w=fs cos theta",
-        "w=fscostheta",
-        "work equals force times displacement times cos theta",
-        "w=fs"
+        "W=Fs cos theta",
+        "W=F*s*cos theta",
+        "Fs cos theta",
+        "W=Fscos theta",
+        "W=F s cos(θ)",
+        "work done = force x displacement x cosine of angle"
       ],
       "active": true,
       "stage": "AS",
@@ -2568,17 +2576,9 @@
       "visual": "work-angle",
       "concepts": [
         [
-          "w=fs cos theta",
-          "w=fscostheta"
-        ],
-        [
-          "angle between force and displacement"
-        ],
-        [
-          "same direction"
-        ],
-        [
-          "w=fs"
+          "W=Fs cos theta",
+          "Fs cos theta",
+          "work done force displacement cosine angle"
         ]
       ]
     },
@@ -10019,7 +10019,13 @@
           "net force"
         ]
       ],
-      "visual": "newton"
+      "visual": "newton",
+      "accept": [
+        "An object remains at rest or moves with constant velocity unless a resultant external force acts",
+        "An object stays stationary or moves at constant velocity unless there is a net external force",
+        "An object remains stationary or travels in a straight line at constant speed unless acted on by a resultant external force",
+        "Unless acted upon by an unbalanced external force an object remains at rest or moves with uniform straight line motion"
+      ]
     },
     {
       "id": "phy_newton2",
@@ -10052,7 +10058,14 @@
           "f=ma"
         ]
       ],
-      "visual": "newton"
+      "visual": "newton",
+      "accept": [
+        "F=ma",
+        "resultant force = mass x acceleration",
+        "net force equals mass times acceleration",
+        "the acceleration is proportional to net force and inversely proportional to mass",
+        "sum of forces equals mass multiplied by acceleration"
+      ]
     },
     {
       "id": "phy_force_diagram_001",
@@ -10093,8 +10106,10 @@
       ],
       "visual": "newton",
       "accept": [
-        "only forces acting on the object with labelled arrows",
-        "forces on the chosen object in the correct directions"
+        "Labelled arrows showing all external forces on the object",
+        "All forces acting on the object shown as labelled arrows in the correct directions",
+        "Only forces on the chosen body labelled with magnitude and direction",
+        "Show force arrows acting on the body not motion arrows"
       ]
     },
     {
@@ -10193,29 +10208,28 @@
       "active": true,
       "taught": true,
       "unit": "as-mechanics",
-      "front": "How does the angle between force and displacement affect the sign of work done?",
+      "front": "For work done by a force, state whether the work is positive, negative or zero when force and displacement are respectively (i) in the same direction, (ii) opposite and (iii) perpendicular.",
       "back": "W = Fs cos θ. Same direction: positive work. Opposite directions: negative work. Perpendicular force: zero work.",
       "concepts": [
         [
-          "w=fs cos theta",
-          "work equals f s cos theta"
+          "positive same direction",
+          "same direction positive"
         ],
         [
-          "same direction",
-          "positive work"
+          "negative opposite",
+          "opposite negative"
         ],
         [
-          "opposite",
-          "negative work"
-        ],
-        [
-          "perpendicular",
-          "zero work"
+          "perpendicular zero",
+          "zero when perpendicular",
+          "90 degrees zero"
         ]
       ],
       "accept": [
-        "same direction positive opposite negative perpendicular zero",
-        "w=fs cos theta"
+        "positive same direction negative opposite zero perpendicular",
+        "same direction positive opposite direction negative right angle zero",
+        "positive if same direction negative if opposite zero if 90 degrees",
+        "same positive opposite negative perpendicular zero"
       ],
       "visual": "work-angle"
     },
@@ -10245,8 +10259,10 @@
         ]
       ],
       "accept": [
-        "the angle between force and displacement",
-        "angle between the force vector and displacement vector"
+        "angle between force and displacement",
+        "the angle between force and movement",
+        "angle between the applied force and the direction of travel",
+        "the angle between the force vector and the displacement vector"
       ],
       "visual": "work-angle"
     }
