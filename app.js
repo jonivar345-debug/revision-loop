@@ -168,7 +168,7 @@ function initPhysicsUnits(){(deckMeta.physicsUnits||[]).forEach(u=>{if(settings.
 function physicsUnlocked(c){if(c.subject!=='Physics'||!c.unit)return true;const u=(deckMeta.physicsUnits||[]).find(x=>x.id===c.unit);return settings.physicsUnits[c.unit]!==undefined?settings.physicsUnits[c.unit]!==false:(u?!!u.defaultUnlocked:true)}
 function taughtCard(c){return c.taught===true}
 function subjectCards(sub){return cards.filter(c=>c.active!==false&&c.subject===sub)}
-function subjectExam(sub){return examQuestions.filter(q=>q.subject===sub)}
+function subjectExam(sub){return examQuestions.filter(q=>q.subject===sub&&q.standalone!==false)}
 
 function normalise(x){
  let s=String(x||'').normalize('NFKD').toLowerCase();
