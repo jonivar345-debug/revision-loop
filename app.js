@@ -606,28 +606,42 @@ function renderAvatar(){
  selectedLocation=l.id;
 }
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
-function flashTopicLabel(c){return c.topic||c.courseTopic||'Unclassified'}
-function examTopicLabel(q){return q.subtopic||q.topic||q.courseTopic||'Unclassified'}
-function groupedTopicPicker(rows,kind,selected){
+function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
+function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
+function revisionTopicIndex(subject){
  const groups=new Map();
- for(const item of rows){
-  const group=item.courseTopic||item.topic||'Other',topic=kind==='flash'?flashTopicLabel(item):examTopicLabel(item);
+ for(const c of subjectCards(subject)){
+  const group=c.courseTopic||'Other',topic=flashTopicLabel(c);
   if(!groups.has(group))groups.set(group,new Map());
-  const members=groups.get(group);members.set(topic,(members.get(topic)||0)+1);
+  if(!groups.get(group).has(topic))groups.get(group).set(topic,{cards:0,questions:0});
+  groups.get(group).get(topic).cards++;
  }
- return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>
-  '<details class="topic-family" open><summary><b>'+esc(group)+'</b><span>'+[...topics.values()].reduce((a,b)=>a+b,0)+' available</span></summary>'+
-  '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,count])=>
-   '<label class="check-item"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+(selected.has(topic)?'checked':'')+
-   '><span>'+esc(topic)+'</span><small>'+count+'</small></label>'
-  ).join('')+'</div></details>').join('');
+ for(const q of subjectExam(subject)){
+  const group=q.courseTopic||'Other',topic=examTopicLabel(q);
+  if(!groups.has(group))groups.set(group,new Map());
+  if(!groups.get(group).has(topic))groups.get(group).set(topic,{cards:0,questions:0});
+  groups.get(group).get(topic).questions++;
+ }
+ return groups;
+}
+function groupedTopicPicker(subject,kind,selected){
+ const groups=revisionTopicIndex(subject);
+ return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
+  const count=[...topics.values()].reduce((n,c)=>n+(kind==='flash'?c.cards:c.questions),0);
+  return '<details class="topic-family" open><summary><b>'+esc(group)+'</b><span>'+count+' '+(kind==='flash'?'cards':'questions')+'</span></summary>'+
+   '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,c])=>{
+     const available=kind==='flash'?c.cards:c.questions;
+     return '<label class="check-item '+(available?'':'disabled')+'"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+
+       (selected.has(topic)?'checked ':'')+(!available?'disabled ':'')+'><span>'+esc(topic)+'</span><small>'+available+'</small></label>';
+   }).join('')+'</div></details>';
+ }).join('');
 }
 function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
  if(defaultIfEmpty&&!flashTopics.size)base.filter(c=>c.taught).forEach(c=>flashTopics.add(flashTopicLabel(c)));
- document.getElementById('flashTopics').innerHTML=groupedTopicPicker(base,'flash',flashTopics);
+ document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});
  renderTopicCounts();
 }
@@ -638,14 +652,14 @@ function applyFlashPreset(p){
 }
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,base=subjectExam(sub),
- years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(base.map(examTopicLabel))],
+ years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
  types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
  if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));
- if(defaultIfEmpty&&!examTopics.size)topics.forEach(t=>examTopics.add(t));
+ if(defaultIfEmpty&&!examTopics.size)base.forEach(q=>examTopics.add(examTopicLabel(q)));
  if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
  document.getElementById('examYears').innerHTML=years.map(y=>'<label class="check-item"><input type="checkbox" data-exam-year="'+y+'" '+(examYears.has(y)?'checked':'')+'><span>'+y+'</span></label>').join('');
- document.getElementById('examTopics').innerHTML=groupedTopicPicker(base,'exam',examTopics);
+ document.getElementById('examTopics').innerHTML=groupedTopicPicker(sub,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(Number(el.dataset.examYear)):examYears.delete(Number(el.dataset.examYear));renderTopicCounts()});
  document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{el.checked?examTopics.add(el.dataset.examTopic):examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
