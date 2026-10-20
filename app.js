@@ -576,15 +576,17 @@ function markPointPrediction(answer,point){
  return clamp(score,0,1);
 }
 function parseNumber(s){
- let x=String(s||'').replace(/\u2212|\u2013|\u2014/g,'-').replace(/×|·/g,'x').replace(/,/g,'');
- // Drop SI unit exponents: for instance "9.81 m s^-2" must be interpreted as 9.81.
- x=x.replace(/([a-zA-ZµμΩ]+)\s*\^\s*[-+]?\d+/g,'$1');
- x=x.replace(/\b(cm|mm|dm|km|m|s|kg|mol|ms)\s*[²³23](?=\b|\s|$)/gi,'$1');
- x=x.replace(/\b(?:kg|cm|mm|dm|mol|m|s|ms|hz|n|j|w|v|c)\s*\/\s*(?:[a-zA-ZµμΩ]+)?\s*\d+/gi,' ');
+ let x=String(s||'').replace(/[−–—]/g,'-').replace(/×|·/g,'x').replace(/,/g,'');
+ // Remove trailing dimensional indices: mol-1, cm3, kg m-2 and s^-1 are units, not final answers.
+ x=x.replace(/\b(?:mol|kg|cm|mm|dm|km|ms|hz|m|s)\s*(?:\^\s*)?[-+]?\d+\b/gi,' ');
+ // Also recognise standalone fractions such as 2/3, without misreading the denominator as the final answer.
+ const fraction=x.trim().match(/^(?:(?:[a-zA-Z]\w*|[a-zA-Z]\([^)]*\))\s*=\s*)?([-+]?\d+(?:\.\d+)?)\s*\/\s*([-+]?\d+(?:\.\d+)?)\s*(?:[a-zA-ZµμΩ%°\s]+)?$/);
+ if(fraction&&Number(fraction[2])!==0)return Number(fraction[1])/Number(fraction[2]);
  const pat=/[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:x|\*)\s*10\s*\^\s*[-+]?\d+|e[-+]?\d+)?/gi;
  const values=[...x.matchAll(pat)].map(m=>{
-   const z=m[0].replace(/\s/g,'');const sci=z.match(/^([-+]?(?:\d+(?:\.\d*)?|\.\d+))(?:x|\*)10\^([-+]?\d+)$/i);
-   return sci?Number(sci[1])*Math.pow(10,Number(sci[2])):Number(z);
+  const z=m[0].replace(/\s/g,'');
+  const sci=z.match(/^([-+]?(?:\d+(?:\.\d*)?|\.\d+))(?:x|\*)10\^([-+]?\d+)$/i);
+  return sci?Number(sci[1])*10**Number(sci[2]):Number(z);
  }).filter(Number.isFinite);
  return values.length?values[values.length-1]:NaN;
 }
