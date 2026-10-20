@@ -772,18 +772,19 @@ function startFlashSession(){
  activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:'Random flashcards'};currentCardId=null;renderAll();
 }
 function examGroups(){
- const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,difficulty=document.getElementById('examDifficulty')?.value||'all',all=subjectExam(sub).filter(q=>(level==='both'||q.level===level)&&(difficulty==='all'||(difficulty==='stretch'&&q.marks>=5)||(difficulty==='quick'&&q.marks<=3)));
+ const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value;
+ const difficulty=document.getElementById('examDifficulty')?.value||'all';
+ const all=subjectExam(sub).filter(q=>level==='both'||q.level===level);
  if(!examYears.size||!examTopics.size||!examTypes.size)return [];
- const eligibleGroupIds=new Set();
+ // Select a group by eligible member, then retain every linked part.
+ // Parts dependent on an earlier part are never silently separated.
+ const matched=all.filter(q=>examYears.has(q.year)&&examTopics.has(examTopicLabel(q))&&examTypes.has(q.questionType)&&
+  (difficulty==='all'||(difficulty==='stretch'&&q.marks>=5)||(difficulty==='quick'&&q.marks<=3)));
+ const eligible=new Set(matched.map(q=>q.groupId)),map=new Map();
  for(const q of all){
-   if(!examYears.has(q.year))continue;
-   if(examTopics.has(examTopicLabel(q))&&examTypes.has(q.questionType))eligibleGroupIds.add(q.groupId);
- }
- const map=new Map();
- for(const q of all){
-   if(!eligibleGroupIds.has(q.groupId)||!examYears.has(q.year))continue;
-   if(!map.has(q.groupId))map.set(q.groupId,[]);
-   map.get(q.groupId).push(q);
+  if(!eligible.has(q.groupId)||!examYears.has(q.year))continue;
+  if(!map.has(q.groupId))map.set(q.groupId,[]);
+  map.get(q.groupId).push(q);
  }
  for(const arr of map.values())arr.sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
  return [...map.values()];
@@ -793,7 +794,7 @@ function startExamSession(){
  const groups=examGroups(),count=Number(document.getElementById('examCount').value);if(!groups.length){showToast('No questions match those filters');return}
  let chosen;if(document.getElementById('examOrder').value==='random')chosen=[...groups].sort(()=>Math.random()-.5).slice(0,count);else chosen=weightedPick(groups,Math.min(count,groups.length),g=>1+groupWeakness(g));
  const items=[];for(const g of chosen)for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId});
- activeSession={kind:'exam',items,index:0,title:'Random AQA exam questions'};renderAll();
+ activeSession={kind:'exam',items,index:0,title:(document.getElementById('examDifficulty')?.value==='stretch'?'Extended exam-style problems':document.getElementById('examDifficulty')?.value==='quick'?'Quick exam practice':'Mixed exam practice')};renderAll();
 }
 function awardExam(q,marks,answer,missedPoints){
  const ts=topicStat(q.subject,q.revisionTopic||q.topic);ts.examMarks+=marks;ts.examMax+=q.marks;ts.attempts++;ts.last=now();if(marks<q.marks)ts.lastMiss=now();
@@ -1094,7 +1095,7 @@ function renderTopicCounts(){
  document.getElementById('examYearCount').textContent=examYears.size+' selected';
  const count=examGroups().reduce((n,g)=>n+g.length,0);
  const label=document.getElementById('examDifficultyCount');
- if(label)label.textContent=count+' question parts match these filters; related original-paper parts stay together.';
+ if(label)label.textContent=count+' question parts across selected groups. Linked parts stay together, even when some are shorter.';
 }
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
