@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 49,
-  "updatedAt": "2026-10-20T21:49:42.306Z",
+  "bankVersion": 50,
+  "updatedAt": "2026-10-20T22:11:49.585Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -37,7 +37,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Resolve the two tension forces in the horizontal direction and equate their resultant to 160 N. Obtain T ≈ 310 N."
     },
     {
       "id": "aqa_phy_as23_p1_q1_5",
@@ -71,7 +72,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use E = hc/λ (or an equivalent two-step route using f). Obtain 1.59 × 10⁻¹¹ J."
     },
     {
       "id": "aqa_phy_as23_p1_q2_1",
@@ -104,7 +106,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "The two reflected waves are in antiphase (180° or π rad apart). The lower reflection travels an extra 2 × 89 nm = 178 nm. 178 nm is half of 356 nm, so the path difference is λ/2."
     },
     {
       "id": "aqa_phy_as23_p1_q3",
@@ -139,7 +142,8 @@
         2,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Unpolarised transverse light has oscillations in more than one plane perpendicular to energy transfer. Polarisation restricts transverse oscillations to one plane. With the transmission axis chosen appropriately, the horizontally polarised glare is greatly reduced. The unpolarised light from submerged objects is only partly reduced, so contrast improves."
     },
     {
       "id": "aqa_phy_a24_p1_q1_3",
@@ -170,7 +174,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Weak nuclear interaction. The decay involves leptons and/or a change of quark flavour (for example d → u)."
     },
     {
       "id": "aqa_chem_as23_p1_q2_6",
@@ -213,7 +218,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Initial HCl = 0.00800 mol. NaOH, hence leftover HCl, = 0.002925 mol. HCl reacting with Mg(OH)₂ = 0.005075 mol. Mg(OH)₂ = 0.0025375 mol. Mass Mg(OH)₂ ≈ 0.148 g. Percentage ≈ 74.0%."
     },
     {
       "id": "aqa_chem_as23_p1_q3_1",
@@ -249,7 +255,8 @@
         1,
         1,
         0
-      ]
+      ],
+      "modelAnswer": "Record masses accurately / use weighing by difference or quantitative transfer. Transfer all washings from beaker/stirring rod/container to the volumetric flask. Use a dropper near the mark and set the bottom of the meniscus on the line. Stopper and invert several times to mix thoroughly. Any three valid points score."
     },
     {
       "id": "aqa_chem_as23_p1_q4",
@@ -263,7 +270,7 @@
       "marks": 5,
       "prompt": "A Group 2 nitrate M(NO₃)₂ decomposes: 2M(NO₃)₂ → 2MO + 4NO₂ + O₂. A 0.320 g sample gives 225 cm³ of gas at 450 °C and 101000 Pa. Using R = 8.31 J K⁻¹ mol⁻¹, determine Mr of M(NO₃)₂ and identify M.",
       "answerType": "text",
-      "modelAnswer": "Convert V = 225 × 10⁻⁶ m³ and T = 723 K. pV = nRT gives 3.78 × 10⁻³ mol gas. 2 mol nitrate give 5 mol gas, so nitrate = 1.51 × 10⁻³ mol. Mr ≈ 211.9. Ar(M) ≈ 87.9, so M is Sr.",
+      "modelAnswer": "Correct SI unit conversions. Find total gas moles using pV=nRT. Use 2:5 nitrate:gas ratio. Find Mr ≈ 211.5–212. Identify strontium. Final answer: Convert V = 225 × 10⁻⁶ m³ and T = 723 K. pV = nRT gives 3.78 × 10⁻³ mol gas. 2 mol nitrate give 5 mol gas, so nitrate = 1.51 × 10⁻³ mol. Mr ≈ 211.9. Ar(M) ≈ 87.9, so M is Sr.",
       "markPoints": [
         "Correct SI unit conversions.",
         "Find total gas moles using pV=nRT.",
@@ -320,7 +327,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Kc increases. Lower temperature favours the exothermic direction. The equilibrium shifts to release heat / oppose the temperature decrease."
     },
     {
       "id": "aqa_math_as23_p1_q4",
@@ -334,7 +342,7 @@
       "marks": 5,
       "prompt": "Given 5cos²y − 4sin²y = 0: (a) find the exact possible values of tan y; (b) solve for all y in 0° ≤ y ≤ 360°, to the nearest 0.1°.",
       "answerType": "text",
-      "modelAnswer": "tan y = ±√5/2. Solutions: 48.2°, 131.8°, 228.2°, 311.8°.",
+      "modelAnswer": "Use an identity to reduce to one trig function. Obtain tan²y = 5/4. Obtain tan y = ±√5/2 exactly. Find at least two correct angles from the tangent values. Give all four correct solutions and no extras. Final answer: tan y = ±√5/2. Solutions: 48.2°, 131.8°, 228.2°, 311.8°.",
       "markPoints": [
         "Use an identity to reduce to one trig function.",
         "Obtain tan²y = 5/4.",
@@ -399,7 +407,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Rearrange the line to obtain gradient 3. Differentiate x√x = x^(3/2). Set derivative equal to 3 to find the contact x-value. Use the contact point on the tangent. Obtain k = 6.5."
     },
     {
       "id": "aqa_math_as23_p1_q6",
@@ -473,7 +482,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Recognise equal positive/negative areas imply the signed integral from 1 to a is zero. Use the integral result 6a − 24√a + 18 = 0. Solve the resulting equation. Conclude a = 9 with a valid justification."
     },
     {
       "id": "aqa_math_as23_p1_q10b",
@@ -513,7 +523,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use A=18000. Use 12000=18000e^(−2k). Find k≈0.203. Set 10000=18000e^(−kt). Obtain t≈2.9 years."
     },
     {
       "id": "aqa_phy_med23_q01",
@@ -545,7 +556,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Beta is more ionising and/or less penetrating than gamma. Link the lower penetration or greater ionisation to a more localised tumour dose / less damage to neighbouring healthy tissue."
     },
     {
       "id": "aqa_phy_med23_q02_1",
@@ -581,7 +593,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use similar triangles / a consistent angular-resolution ratio. Relate retinal separation to about two cone diameters. Obtain about 140 pixels per cm."
     },
     {
       "id": "aqa_phy_med23_q03_1",
@@ -611,7 +624,8 @@
       "revisionTopic": "Medical physics: ear",
       "markPointMarks": [
         1
-      ]
+      ],
+      "modelAnswer": "Sound power per unit area, or equivalently energy transferred per unit area per second."
     },
     {
       "id": "aqa_phy_med23_q03_2",
@@ -643,7 +657,8 @@
       "revisionTopic": "Medical physics: ear",
       "markPointMarks": [
         1
-      ]
+      ],
+      "modelAnswer": "Doubling intensity raises sound intensity level by approximately 3 dB."
     },
     {
       "id": "aqa_phy_med23_q04_1",
@@ -674,7 +689,8 @@
       "revisionTopic": "Medical physics: ultrasound",
       "markPointMarks": [
         1
-      ]
+      ],
+      "modelAnswer": "B-scan / brightness scan, because it forms an image."
     },
     {
       "id": "aqa_phy_med23_q04_4",
@@ -709,7 +725,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "The gel improves electrical contact. A suitable property is low electrical resistance, non-irritating, or chemically unreactive with skin products. Prepare the skin by removing hair / shaving, gently abrading, cleaning or drying it."
     },
     {
       "id": "aqa_phy_med23_q05_2",
@@ -742,7 +759,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "The patient ingests a barium meal / suitable X-ray contrast medium. Barium strongly absorbs/attenuates X-rays, increasing image contrast in the stomach."
     },
     {
       "id": "aqa_phy_as22_p1_q4_1",
@@ -780,7 +798,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Photoelectrons leave the surface and carry away negative charge. A single photon must provide at least the work function. Photon energy is hf, so a minimum energy gives a threshold frequency. At fixed frequency above threshold, greater intensity means more photons per second. More photons per second can release more electrons per second, so discharge is faster."
     },
     {
       "id": "aqa_phy_as22_p1_q4_2",
@@ -817,7 +836,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use photon energy E=hf. Use hf = work function + maximum kinetic energy. Obtain about 3.9 eV."
     },
     {
       "id": "aqa_phy_as22_p1_q5_2",
@@ -850,7 +870,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Greater electron speed gives greater momentum. de Broglie wavelength decreases because λ=h/p. A shorter wavelength relative to the graphite spacing produces less diffraction, so the ring diameter decreases."
     },
     {
       "id": "aqa_phy_as22_p1_q6_1",
@@ -887,7 +908,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Apply the principle of moments about a suitable point. Include the platform weight at its centre and the worker weight at distance d. Obtain d=2.4 m."
     },
     {
       "id": "aqa_phy_as22_p1_q7_1",
@@ -953,7 +975,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use P=Fv to find the force parallel to the slope. Set this equal to mg sin θ and obtain θ≈17.4°."
     },
     {
       "id": "aqa_phy_as22_p1_q8_3",
@@ -986,7 +1009,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Increasing voltage increases current / electron flow rate. The filament becomes hotter and lattice-ion vibrations increase. More electron-lattice collisions occur, increasing resistance."
     },
     {
       "id": "aqa_phy_as22_p1_q8_4",
@@ -1020,7 +1044,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use the parallel-resistance relation. Obtain about 4.84 Ω."
     },
     {
       "id": "aqa_phy_as22_p1_q8_5",
@@ -1054,7 +1079,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use P=V²/R or an equivalent power relation. Obtain about 30 W."
     },
     {
       "id": "aqa_chem_as22_p1_q1_1",
@@ -1085,7 +1111,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "The outer electron is in a higher shell / atoms are larger / shielding increases. Attraction between the nucleus and the outer electron is weaker."
     },
     {
       "id": "aqa_chem_as22_p1_q2_2",
@@ -1121,7 +1148,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Find moles using mass/Mr. Convert 500 cm³ to 0.500 dm³. Calculate c=n/V to obtain 0.00869 mol dm^-3."
     },
     {
       "id": "aqa_chem_as22_p1_q2_3",
@@ -1157,7 +1185,8 @@
         2,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Rinse the burette with the titrant after distilled water so the titrant is not diluted. Use a volumetric pipette, not a measuring cylinder, for the 25.0 cm³ aliquot. Use only a few drops of indicator because a large volume changes the reacting mixture. A strong answer links each error to why it affects the result and gives the correction."
     },
     {
       "id": "aqa_chem_as22_p1_q4_4",
@@ -1188,7 +1217,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "CBr4 is tetrahedral / symmetrical. The bond dipoles cancel, so there is no overall permanent dipole."
     },
     {
       "id": "aqa_chem_as22_p1_q5",
@@ -1203,7 +1233,7 @@
       "questionType": "multi-step calculation",
       "prompt": "A 121Sb+ ion crosses a 1.05 m flight tube in 5.93×10^-4 s. All ions have the same kinetic energy. Calculate the mass of one 121Sb+ ion, then the flight time for 123Sb+.",
       "answerType": "text",
-      "modelAnswer": "Mass ≈2.009×10^-25 kg; time for 123Sb+ ≈5.98×10^-4 s.",
+      "modelAnswer": "Use 121/(1000×NA) for the mass of one 121Sb+ ion. Find speed from distance/time. Use KE=1/2 mv². Use equal kinetic energy or t² proportional to mass. Obtain about 5.98×10^-4 s for 123Sb+. Final answer: Mass ≈2.009×10^-25 kg; time for 123Sb+ ≈5.98×10^-4 s.",
       "markPoints": [
         "Use 121/(1000×NA) for the mass of one 121Sb+ ion.",
         "Find speed from distance/time.",
@@ -1298,7 +1328,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Write the correct Kc expression. Convert H2 and N2 moles to concentrations. Rearrange to obtain [NH3]². Take the positive square root. Multiply [NH3] by 0.150 dm³ to obtain about 3.25×10^-3 mol."
     },
     {
       "id": "aqa_chem_as22_p1_q8_3",
@@ -1333,7 +1364,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Warm with aqueous NaOH. Ammonia turns damp red litmus blue. Add acidified barium chloride or barium nitrate to a fresh sample. A white barium sulfate precipitate forms."
     },
     {
       "id": "aqa_chem_as22_p1_q14",
@@ -1378,7 +1410,7 @@
       "questionType": "problem solving",
       "prompt": "Solve cos²y = 10 sin y + 4 for 0°<y<360°, giving answers to the nearest degree and justifying all solutions.",
       "answerType": "text",
-      "modelAnswer": "198° and 342°.",
+      "modelAnswer": "Use cos²y=1−sin²y. Form and solve a quadratic in sin y. Reject the inadmissible sine value. Find one correct angle for the valid sine value. Give both 198° and 342°. Final answer: 198° and 342°.",
       "markPoints": [
         "Use cos²y=1−sin²y.",
         "Form and solve a quadratic in sin y.",
@@ -1416,7 +1448,7 @@
       "questionType": "algebra",
       "prompt": "Express 3x³+5x²−27x+10 in the form (x−2)(ax²+bx+c), with integers a,b,c.",
       "answerType": "text",
-      "modelAnswer": "(x−2)(3x²+11x−5).",
+      "modelAnswer": "a=3. b=11. c=−5. Final answer: (x−2)(3x²+11x−5).",
       "markPoints": [
         "a=3.",
         "b=11.",
@@ -1471,7 +1503,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Find centre (4,1). Find radius²=18. Form (x−4)²+(y−1)²=18. Expand/rearrange to the required equation."
     },
     {
       "id": "aqa_math_as22_p1_q6c",
@@ -1486,7 +1519,7 @@
       "questionType": "problem solving",
       "prompt": "A circle has centre C(4,1) and equation x²+y²−8x−2y=1. It crosses the x-axis at D and E. Find the exact area of triangle DEC.",
       "answerType": "text",
-      "modelAnswer": "√17 square units.",
+      "modelAnswer": "Set y=0 and solve for the x-intercepts, or use Pythagoras from the centre. Obtain half-base distance √17 or base 2√17. Use the perpendicular height from C to the x-axis. Obtain area √17. Final answer: √17 square units.",
       "markPoints": [
         "Set y=0 and solve for the x-intercepts, or use Pythagoras from the centre.",
         "Obtain half-base distance √17 or base 2√17.",
@@ -1550,7 +1583,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Find x-intercepts at ±a. Integrate a²−x². Use the limits −a to a (or symmetry). Set the area expression equal to 36. Solve 4a³/3=36. Obtain a=3 with justification."
     },
     {
       "id": "aqa_math_as22_p1_q8c",
@@ -1585,7 +1619,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use the second derivative or derivative sign changes. At x=√3 the second derivative is positive, giving a minimum. At x=−√3 it is negative, giving a maximum. Give both exact coordinates with correct classifications."
     },
     {
       "id": "aqa_math_as22_p1_q9",
@@ -1622,7 +1657,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Represent the two odd integers correctly, e.g. 2p+1 and 2q+1. Expand m²+n². Factor out 2 to prove divisibility by 2. Show the remaining factor is odd. Conclude the expression is not divisible by 4."
     },
     {
       "id": "aqa_math_as22_p1_q10a",
@@ -1637,7 +1673,7 @@
       "questionType": "calculation",
       "prompt": "For the curve y=√2/x² at the point with x=2, find the equation of the tangent.",
       "answerType": "text",
-      "modelAnswer": "y = 3√2/4 − x√2/4.",
+      "modelAnswer": "Rewrite using a negative power if useful. Differentiate correctly. Evaluate the gradient at x=2. Use point-gradient form to obtain the tangent equation. Final answer: y = 3√2/4 − x√2/4.",
       "markPoints": [
         "Rewrite using a negative power if useful.",
         "Differentiate correctly.",
@@ -1689,7 +1725,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Identify charge conservation or lepton-number conservation as relevant. Show how the emitted electron allows both charge and lepton number to be conserved across the interaction."
     },
     {
       "id": "aqa_phy_as24_p1_q1_2",
@@ -1723,7 +1760,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use specific charge = charge / mass with charge 18e and mass approximately 37u. Obtain about 4.6–4.7 × 10^7 C kg^-1."
     },
     {
       "id": "aqa_phy_as24_p1_q1_3",
@@ -1758,7 +1796,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Identify W+ as the exchange particle. State that a proton changes to a neutron / the baryon's charge decreases by one elementary charge. Recognise this as a weak interaction / electron capture. Support with a correct quark-flavour change such as u to d, or another valid conservation argument."
     },
     {
       "id": "aqa_phy_as24_p1_q1_4",
@@ -1798,7 +1837,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Electromagnetic repulsion acts between protons; gravitational attraction is negligible at nuclear scale. The strong interaction can be attractive and very-short-range repulsive and acts between nucleons. Pions are exchange particles associated with the strong interaction; virtual photons are associated with electromagnetic interaction. The strong interaction dominates at normal nucleon separations and has only a short range. Very-short-range strong repulsion helps stop nucleons collapsing into each other. A high-quality answer links the ranges and relative strengths of the interactions to nuclear stability."
     },
     {
       "id": "aqa_phy_as24_p1_q2_1",
@@ -1831,7 +1871,8 @@
       "revisionTopic": "Energy levels",
       "markPointMarks": [
         1
-      ]
+      ],
+      "modelAnswer": "For one electron, an energy gain of 6.7 eV corresponds to a potential difference of 6.7 V."
     },
     {
       "id": "aqa_phy_as24_p1_q2_2",
@@ -1867,7 +1908,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Convert 6.7 eV to joules. Use E = hc/λ, or E=hf together with c=fλ. Obtain approximately 1.9 × 10^-7 m."
     },
     {
       "id": "aqa_phy_as24_p1_q3_1",
@@ -1902,7 +1944,8 @@
       "markPointMarks": [
         1,
         1
-      ]
+      ],
+      "modelAnswer": "For the first harmonic use λ = 2L = 1.296 m. Use v=fλ to obtain about 191 m s^-1."
     },
     {
       "id": "aqa_phy_as24_p1_q3_2",
@@ -1939,7 +1982,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "modelAnswer": "Use the stationary-wave/string relation to find mass per unit length, or use v=sqrt(T/μ). Use mass = μL. Obtain approximately 1.3 × 10^-3 kg."
     },
     {
       "id": "aqa_math_as21_p1_q1_link",
@@ -1972,7 +2016,8 @@
       "standalone": true,
       "sourceFirst": false,
       "verificationLevel": "official-linked",
-      "revisionTopic": "Algebra and functions"
+      "revisionTopic": "Algebra and functions",
+      "modelAnswer": "The coefficient of x is 108."
     },
     {
       "id": "aqa_chem_as20_p1_q2_1_link",
@@ -2014,7 +2059,8 @@
       ],
       "standalone": true,
       "visual": "titration",
-      "revisionTopic": "Titration calculations"
+      "revisionTopic": "Titration calculations",
+      "modelAnswer": "Mean concordant titre ≈19.58 cm³. Moles H₂SO₄ ≈2.94×10⁻3 mol. Use the 2:1 ratio to obtain ≈5.87×10⁻3 mol NaOH in 25.0 cm³. Scale to the full 200 cm³ volume. Use Mr(NaOH)=40.0 to obtain ≈1.88 g."
     },
     {
       "id": "aqa_chem_as21_p1_q7_2_link",
@@ -2051,7 +2097,8 @@
         1
       ],
       "standalone": true,
-      "revisionTopic": "RP2 Enthalpy"
+      "revisionTopic": "RP2 Enthalpy",
+      "modelAnswer": "Use q=mcΔT to obtain about 8.72 kJ. Find the amount of propan-1-ol, about 0.00828 mol. Divide energy by amount and include the negative sign to obtain about −1050 kJ mol⁻¹."
     },
     {
       "id": "aqa_math_as20_p1_q5_link",
@@ -2386,7 +2433,8 @@
       "groupId": "Chemistry|2021|7404/1|8",
       "groupOrder": "8.1",
       "standalone": true,
-      "revisionTopic": "Titration calculations"
+      "revisionTopic": "Titration calculations",
+      "modelAnswer": "Mean titre ≈20.28 cm³. Find moles of NaOH and hence ethanoic acid in 25.0 cm³. Scale to 200 cm³. Convert ethanoic acid moles to mass using Mr=60.0. Subtract from 5.60 g to find sodium ethanoate mass. Calculate percentage by mass ≈39.1%."
     },
     {
       "id": "aqa_phy_as20_p1_q5_1_link",
@@ -2419,7 +2467,8 @@
       "groupOrder": "5.1",
       "standalone": true,
       "visual": "internal-resistance",
-      "revisionTopic": "Electricity"
+      "revisionTopic": "Electricity",
+      "modelAnswer": "EMF is energy transferred from other forms to electrical energy per unit charge, or work done per unit charge around the circuit. For 1.5 V, 1.5 J is transferred per coulomb."
     },
     {
       "id": "aqa_math_as24_p1_q3_src",
@@ -2489,7 +2538,8 @@
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(a)(i)",
       "standalone": true,
-      "revisionTopic": "Trigonometry"
+      "revisionTopic": "Trigonometry",
+      "modelAnswer": "Use tan θ = sin θ / cos θ, or an equivalent identity. Rearrange correctly to obtain tan²θ = 4."
     },
     {
       "id": "aqa_math_as24_p1_q4aii_src",
@@ -2501,7 +2551,7 @@
       "questionType": "equations",
       "prompt": "Hence solve tan²θ = 4 for 0° < θ < 360°.",
       "answerType": "text",
-      "modelAnswer": "63°, 117°, 243°, 297°",
+      "modelAnswer": "Obtain tan θ = ±2. Find valid solutions from both tangent branches. Give all four solutions: 63°, 117°, 243°, 297°, with no extras. Final answer: 63°, 117°, 243°, 297°",
       "markPoints": [
         "Obtain tan θ = ±2.",
         "Find valid solutions from both tangent branches.",
@@ -2537,7 +2587,7 @@
       "questionType": "equations",
       "prompt": "Given that tan²(3α) = 4 and 0° < α < 180°, find all possible values of α.",
       "answerType": "text",
-      "modelAnswer": "21°, 39°, 81°, 99°, 141°, 159°",
+      "modelAnswer": "Use the corresponding solutions for 3α and divide by 3. Obtain at least three correct values. Give all six values: 21°, 39°, 81°, 99°, 141°, 159°, with no extras. Final answer: 21°, 39°, 81°, 99°, 141°, 159°",
       "markPoints": [
         "Use the corresponding solutions for 3α and divide by 3.",
         "Obtain at least three correct values.",
@@ -2692,7 +2742,8 @@
       "groupId": "Physics|2020|7407/1|5",
       "groupOrder": "5.2",
       "visual": "internal-resistance",
-      "revisionTopic": "Electricity"
+      "revisionTopic": "Electricity",
+      "modelAnswer": "Use P=VI to obtain about 0.465 W."
     },
     {
       "id": "aqa_phy_as20_p1_q5_3",
@@ -2727,7 +2778,8 @@
       "groupId": "Physics|2020|7407/1|5",
       "groupOrder": "5.3",
       "visual": "internal-resistance",
-      "revisionTopic": "Internal resistance"
+      "revisionTopic": "Internal resistance",
+      "modelAnswer": "Find the terminal pd, external resistance, or subtract the internal power loss from total power. Obtain about 0.40 W."
     },
     {
       "id": "aqa_phy_as21_p1_q2_1",
@@ -2792,7 +2844,8 @@
       "groupId": "Physics|2021|7407/1|2",
       "groupOrder": "2.2",
       "visual": "grating",
-      "revisionTopic": "Interference"
+      "revisionTopic": "Interference",
+      "modelAnswer": "Light from different slits diffracts/overlaps. The waves arrive in phase, or with a path difference equal to a whole number of wavelengths. The waves superpose constructively to form a maximum."
     },
     {
       "id": "aqa_phy_as21_p1_q5_2",
@@ -2828,7 +2881,8 @@
       "groupId": "Physics|2021|7407/1|5",
       "groupOrder": "5.2",
       "visual": "newton",
-      "revisionTopic": "Newton's laws"
+      "revisionTopic": "Newton's laws",
+      "modelAnswer": "The propeller exerts a force on the water and the water exerts an equal and opposite force on the propeller. Link this interaction to Newton's third law. At constant velocity, thrust balances drag, so the resultant force on the ship is zero; link to Newton's first law. Changing the water's momentum requires a force; link to Newton's second law."
     },
     {
       "id": "aqa_chem_as24_p1_q1_1",
@@ -2859,7 +2913,8 @@
       "groupOrder": "1.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=2",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Group 7"
+      "revisionTopic": "Group 7",
+      "modelAnswer": "Identify iodide, I⁻. Give Br₂ + 2I⁻ → I₂ + 2Br⁻, or an equivalent equation involving I₃⁻."
     },
     {
       "id": "aqa_chem_as24_p1_q2_1",
@@ -2892,7 +2947,8 @@
       "groupOrder": "2.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=4",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Ionisation energy"
+      "revisionTopic": "Ionisation energy",
+      "modelAnswer": "The third electron is removed from the 1s shell rather than the 2s shell. The 1s electron is closer to the nucleus and/or experiences less shielding. There is a stronger attraction between the nucleus and the electron being removed."
     },
     {
       "id": "aqa_chem_as24_p1_q3_1",
@@ -2921,7 +2977,8 @@
       "groupOrder": "3.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=6",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Bonding"
+      "revisionTopic": "Bonding",
+      "modelAnswer": "The ability of an atom to attract the bonding pair of electrons in a covalent bond."
     },
     {
       "id": "aqa_chem_as24_p1_q3_3",
@@ -2953,7 +3010,8 @@
       "groupOrder": "3.3",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=6",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Bonding"
+      "revisionTopic": "Bonding",
+      "modelAnswer": "CCl₄ is tetrahedral/symmetrical. The bond dipoles cancel, so there is no overall dipole."
     },
     {
       "id": "aqa_chem_as24_p1_q5",
@@ -2993,7 +3051,8 @@
       "groupOrder": "5",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=10",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Shapes"
+      "revisionTopic": "Shapes",
+      "modelAnswer": "SF₆ is octahedral. The bond angle in SF₆ is 90°. All six bonding pairs in SF₆ repel equally. SF₃⁺ is trigonal pyramidal. Its bond angle is about 103–107°. Lone-pair–bond-pair repulsion is stronger than bond-pair–bond-pair repulsion, reducing the angle."
     },
     {
       "id": "aqa_chem_as24_p1_q7_1",
@@ -3025,7 +3084,8 @@
       "groupOrder": "7.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=14",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Practical skills"
+      "revisionTopic": "Practical skills",
+      "modelAnswer": "Use total absolute uncertainty 0.010 g and divide by 2.14 g, then ×100 to obtain about 0.47%."
     },
     {
       "id": "aqa_chem_as24_p1_q7_2",
@@ -3057,7 +3117,8 @@
       "groupOrder": "7.2",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=15",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Amount of substance"
+      "revisionTopic": "Amount of substance",
+      "modelAnswer": "Use n=cV with V=0.0250 dm³ to obtain 0.0500 mol."
     },
     {
       "id": "aqa_chem_as24_p1_q7_3",
@@ -3100,7 +3161,8 @@
       "groupOrder": "7.3",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=15",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
-      "revisionTopic": "Back titrations"
+      "revisionTopic": "Back titrations",
+      "modelAnswer": "Initial HCl amount is 0.0500 mol. Find HCl remaining in the 25.0 cm³ aliquot from the NaOH titre. Scale the remaining HCl to the full 250 cm³ mixture. Subtract remaining HCl from initial HCl to find HCl that reacted with MgO. Use the 2:1 HCl:MgO ratio and Mr(MgO)≈40.3 to find the MgO mass. Divide MgO mass by 2.14 g and ×100 to obtain about 29.8%."
     },
     {
       "id": "aqa_math_as24_p1_q7a",
@@ -3134,7 +3196,8 @@
       "standalone": true,
       "groupId": "Maths|2024|7356/1|7",
       "groupOrder": "7(a)",
-      "revisionTopic": "Trigonometry"
+      "revisionTopic": "Trigonometry",
+      "modelAnswer": "Use the cosine rule correctly with the three side lengths. Obtain an angle of about 46.3°."
     },
     {
       "id": "aqa_math_as24_p1_q7b",
@@ -3169,7 +3232,8 @@
       "standalone": true,
       "groupId": "Maths|2024|7356/1|7",
       "groupOrder": "7(b)",
-      "revisionTopic": "Trigonometry"
+      "revisionTopic": "Trigonometry",
+      "modelAnswer": "Use 1/2 ab sin C, with a suitable included angle, to find the field area (about 26223 m²). Divide the area by 1200. Round down to a maximum of 21 sheep."
     },
     {
       "id": "aqa_math_as24_p1_q8a",
@@ -3202,7 +3266,8 @@
       "standalone": true,
       "groupId": "Maths|2024|7356/1|8",
       "groupOrder": "8(a)",
-      "revisionTopic": "Logs"
+      "revisionTopic": "Logs",
+      "modelAnswer": "Use ln x − ln y = ln(x/y), or an equivalent logarithm law. Exponentiate to obtain x/y = e³. Rearrange to x = e³y."
     },
     {
       "id": "aqa_math_as24_p1_q8b",
@@ -3271,7 +3336,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "1.1",
-      "revisionTopic": "Particles"
+      "revisionTopic": "Particles",
+      "modelAnswer": "Use specific charge = charge / mass with nuclear charge +e and mass approximately 3u. Obtain approximately 3.2×10^7 C kg^-1."
     },
     {
       "id": "aqa_phy_as25_p1_q1_2",
@@ -3303,7 +3369,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "1.2",
-      "revisionTopic": "Particles"
+      "revisionTopic": "Particles",
+      "modelAnswer": "The hydrogen isotope nuclei have the same positive nuclear charge / same number of protons. Hydrogen-3 has the greater nuclear mass, so charge divided by mass is smaller."
     },
     {
       "id": "aqa_phy_as25_p1_q4_1",
@@ -3336,7 +3403,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "4.1",
-      "revisionTopic": "Moments"
+      "revisionTopic": "Moments",
+      "modelAnswer": "For an object in equilibrium, the sum of clockwise moments about a point equals the sum of anticlockwise moments about that point. Equivalently, the resultant moment about any point is zero."
     },
     {
       "id": "aqa_chem_as25_p1_q1_1",
@@ -3371,7 +3439,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "1.1",
-      "revisionTopic": "Amount of substance"
+      "revisionTopic": "Amount of substance",
+      "modelAnswer": "Use atom economy = Mr desired product / total Mr of reactants ×100. Obtain approximately 77.2%."
     },
     {
       "id": "aqa_chem_as25_p1_q1_2",
@@ -3401,7 +3470,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "1.2",
-      "revisionTopic": "Amount of substance"
+      "revisionTopic": "Amount of substance",
+      "modelAnswer": "Less waste is produced, so less money is lost in unwanted products and/or waste disposal costs are lower."
     },
     {
       "id": "aqa_chem_as25_p1_q1_3",
@@ -3464,7 +3534,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "1.4",
-      "revisionTopic": "Redox"
+      "revisionTopic": "Redox",
+      "modelAnswer": "Magnesium loses electrons / is oxidised. Those electrons reduce titanium ions; magnesium changes from oxidation state 0 to +2."
     },
     {
       "id": "aqa_math_as25_p1_q3",
@@ -3500,7 +3571,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "3",
-      "revisionTopic": "Algebra and functions"
+      "revisionTopic": "Algebra and functions",
+      "modelAnswer": "Use the factor theorem: p(2)=0. Substitute x=2 to form 28−2a=0. Obtain a=14."
     },
     {
       "id": "aqa_math_as25_p1_q4",
@@ -3516,7 +3588,7 @@
       "questionType": "equations",
       "prompt": "Solve 2tan(3θ)−3=0 for 0°≤θ≤180°, giving your solutions to the nearest degree.",
       "answerType": "text",
-      "modelAnswer": "θ = 19°, 79°, 139°",
+      "modelAnswer": "Obtain tan(3θ)=1.5. Generate the valid solutions for 3θ across 0° to 540°. Divide by 3 and give θ≈19°, 79°, 139°. Final answer: θ = 19°, 79°, 139°",
       "markPoints": [
         "Obtain tan(3θ)=1.5.",
         "Generate the valid solutions for 3θ across 0° to 540°.",
@@ -3570,7 +3642,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "14",
-      "revisionTopic": "Forces"
+      "revisionTopic": "Forces",
+      "modelAnswer": "Use F=ma to obtain 2.5 m s^-2."
     },
     {
       "id": "aqa_math_as25_p1_q17",
@@ -3606,7 +3679,8 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "17",
-      "revisionTopic": "Forces"
+      "revisionTopic": "Forces",
+      "modelAnswer": "Use R−mg=ma for upward acceleration. Obtain R=60(9.8+1.2)=660 N."
     },
     {
       "id": "aqa_chem_as16_p1_q1_1",
@@ -3881,7 +3955,7 @@
       "courseTopic": "Electricity",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "Greater current heats the filament, causing stronger lattice-ion vibrations and more electron collisions. This raises resistance and causes the nonlinear I–V characteristic.",
+      "modelAnswer": "As the current/potential difference increases, the filament becomes hotter. The metal lattice ions vibrate more strongly. Conduction electrons undergo more frequent collisions with the ions. The lamp's resistance increases, so current is no longer directly proportional to potential difference. Final answer: Greater current heats the filament, causing stronger lattice-ion vibrations and more electron collisions. This raises resistance and causes the nonlinear I–V characteristic.",
       "revisionTopic": "I–V characteristics"
     },
     {
@@ -3952,7 +4026,7 @@
       "courseTopic": "Algebra & functions",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "1 − 12x + 54x²",
+      "modelAnswer": "Use the binomial structure 1 + 4(−3x) + 6(−3x)^2. Use binomial coefficients 4 and 6 correctly. Obtain 1 − 12x + 54x². Final answer: 1 − 12x + 54x²",
       "revisionTopic": "Algebra and functions"
     },
     {
@@ -4099,7 +4173,7 @@
       "courseTopic": "Particles & radiation",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "At typical nuclear separation the strong force is attractive, but it becomes repulsive at very small separations, establishing a stable separation.",
+      "modelAnswer": "The strong nuclear force is attractive at separations of roughly 1–3 fm. At very short separations (below about 0.5 fm) the force is repulsive. This balance prevents the proton and neutron separating or collapsing together. Final answer: At typical nuclear separation the strong force is attractive, but it becomes repulsive at very small separations, establishing a stable separation.",
       "revisionTopic": "Particle physics"
     },
     {
@@ -4168,7 +4242,7 @@
         1,
         1
       ],
-      "modelAnswer": "9.70 cm³; 9.89 × 10⁻⁴ mol",
+      "modelAnswer": "Select 9.75 and 9.65 cm³ as the two concordant titres. Mean titre = 9.70 cm³. n(HCl)=0.102 × (9.70/1000)=9.89 × 10⁻⁴ mol. Final answer: 9.70 cm³; 9.89 × 10⁻⁴ mol",
       "answerType": "points",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4205,7 +4279,7 @@
         1,
         1
       ],
-      "modelAnswer": "n=9.89 × 10⁻³ mol; Mᵣ≈148",
+      "modelAnswer": "Scale the 25.0 cm³ sample by a factor of ten: n(MHCO₃)=9.89 × 10⁻³ mol. Convert 1464 mg into 1.464 g (mass already supplied in g here). Mᵣ=1.464/(9.89 × 10⁻³)=148 (3 s.f.). Final answer: n=9.89 × 10⁻³ mol; Mᵣ≈148",
       "answerType": "points",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4283,7 +4357,7 @@
         1,
         1
       ],
-      "modelAnswer": "Weigh by difference; dissolve; quantitatively transfer with washings into 250 cm³ volumetric flask; make up to mark and invert.",
+      "modelAnswer": "Accurately weigh the solid, for example by difference. Transfer it quantitatively into a beaker and use distilled/deionised water to dissolve it. Stir or swirl until the entire sample dissolves. Transfer through a funnel to a 250 cm³ volumetric flask, washing all residues into it. Add distilled water until the bottom of the meniscus reaches the calibration mark at eye level. Stopper and invert repeatedly to mix evenly. Final answer: Weigh by difference; dissolve; quantitatively transfer with washings into 250 cm³ volumetric flask; make up to mark and invert.",
       "answerType": "levels",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4324,7 +4398,7 @@
         1,
         1
       ],
-      "modelAnswer": "Br₂ is simple molecular with weak forces between molecules; Mg has strong metallic bonding and strong attractions persist in its liquid.",
+      "modelAnswer": "Bromine is a simple molecular substance. Magnesium has positive metal ions surrounded by delocalised electrons. Only weak intermolecular forces need overcoming for bromine to boil. Stronger metallic bonding must be disrupted to boil magnesium, so much more energy is needed. In the molten metal, attractions remain stronger than the attractions between liquid bromine molecules, helping explain the wider liquid temperature interval. Final answer: Br₂ is simple molecular with weak forces between molecules; Mg has strong metallic bonding and strong attractions persist in its liquid.",
       "answerType": "points",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4361,7 +4435,7 @@
         1,
         1
       ],
-      "modelAnswer": "0.696 g",
+      "modelAnswer": "Convert pressure to 102000 Pa and volume to 1.00 × 10⁻³ m³. Use n=pV/(RT)=0.0409 mol. Multiply by 17.0 g mol⁻¹ to obtain 0.696 g. Final answer: 0.696 g",
       "answerType": "numeric",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4400,7 +4474,7 @@
         1,
         1
       ],
-      "modelAnswer": "342 cm³",
+      "modelAnswer": "Calculate the initial moles: n=102000×0.001/(8.31×300). Use V_total=n×8.31×295/75000 ≈ 0.00134 m³. Subtract 0.00100 m³ and convert: volume of flask P ≈342 cm³. Final answer: 342 cm³",
       "answerType": "numeric",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4439,7 +4513,7 @@
         1,
         1
       ],
-      "modelAnswer": "Positive ions accelerate through an electric field, gain electrons on detection, and resulting current indicates abundance.",
+      "modelAnswer": "Ions are accelerated by an electric field/towards a negatively charged plate. An ion gains electrons on reaching the detector. The current or amount of transferred charge is proportional to the number of ions and hence abundance. Final answer: Positive ions accelerate through an electric field, gain electrons on detection, and resulting current indicates abundance.",
       "answerType": "points",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4585,7 +4659,7 @@
         1,
         1
       ],
-      "modelAnswer": "20% and ¹³⁴Xe",
+      "modelAnswer": "Remaining isotopic percentage is 20%. Write a weighted-mean equation using Aᵣ=131.31 and the four abundances. Calculate the unknown contribution to the average correctly. Obtain an unknown isotope with mass number 134. Final answer: 20% and ¹³⁴Xe",
       "answerType": "points",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4699,7 +4773,7 @@
         1,
         1
       ],
-      "modelAnswer": "c=−2, d=4",
+      "modelAnswer": "Gradient of CD is 1/4 because the perpendicular bisector has gradient −4. Apply the gradient equation (d−2)/(6−c)=1/4. The midpoint of CD lies on y+4x=11. Form the equations c+4d=14 and 4c+d=−4. Solve to get c=−2, d=4. Final answer: c=−2, d=4",
       "answerType": "points",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
@@ -4842,7 +4916,7 @@
         1,
         1
       ],
-      "modelAnswer": "SbF₆⁻ octahedral; H₂F⁺ bent with two bonds and two lone pairs.",
+      "modelAnswer": "SbF₆⁻ is octahedral. Six bonding pairs around Sb. H₂F⁺ is bent/V-shaped. Two bonding pairs and two lone pairs are present around fluorine. Final answer: SbF₆⁻ octahedral; H₂F⁺ bent with two bonds and two lone pairs.",
       "answerType": "points",
       "questionType": "extended response",
       "requiresWorking": false,
@@ -4879,7 +4953,7 @@
         1,
         1
       ],
-      "modelAnswer": "Dissolve in volatile solvent; spray from positively charged nozzle; protonate molecules.",
+      "modelAnswer": "Dissolve sample in a volatile solvent. Pass the sample through a high-voltage nozzle or fine capillary. Molecules acquire a proton to become positive ions. Final answer: Dissolve in volatile solvent; spray from positively charged nozzle; protonate molecules.",
       "answerType": "points",
       "questionType": "short response",
       "requiresWorking": false,
@@ -4920,7 +4994,7 @@
         1,
         1
       ],
-      "modelAnswer": "69.0 g mol⁻¹ and mass number 69.",
+      "modelAnswer": "Speed = 0.960/(4.654 × 10⁻⁶) ≈ 2.06 × 10⁵ m s⁻¹. Ion mass = 2Eₖ/v² ≈ 1.146 × 10⁻²⁵ kg. Multiply by Avogadro constant. Convert to around 69.0 g mol⁻¹. Mass number = 69. Final answer: 69.0 g mol⁻¹ and mass number 69.",
       "answerType": "levels",
       "questionType": "extended response",
       "requiresWorking": false,
@@ -5348,7 +5422,7 @@
         1,
         1
       ],
-      "modelAnswer": "Add sulfate: no change NaCl; white BaSO₄ precipitate with BaCl₂.",
+      "modelAnswer": "A soluble sulfate such as dilute H₂SO₄ or Na₂SO₄. No visible change with NaCl. A white precipitate with BaCl₂. Final answer: Add sulfate: no change NaCl; white BaSO₄ precipitate with BaCl₂.",
       "answerType": "points",
       "questionType": "short response",
       "requiresWorking": false,
@@ -5720,7 +5794,7 @@
         1,
         1
       ],
-      "modelAnswer": "Discrete energy gaps produce photons with specific frequencies and wavelengths.",
+      "modelAnswer": "Electron energy states are discrete. Photons are emitted as electrons move to lower states. Photon energy equals the energy difference and sets frequency/wavelength. Final answer: Discrete energy gaps produce photons with specific frequencies and wavelengths.",
       "answerType": "points",
       "questionType": "short response",
       "requiresWorking": false,
@@ -5934,7 +6008,7 @@
         1,
         1
       ],
-      "modelAnswer": "f⁻¹(x)=√(2x−1), x≥1/2.",
+      "modelAnswer": "Rearrange y=(x²+1)/2 to x²=2y−1. Choose positive root for x≥0. f⁻¹(x)=√(2x−1) with domain x≥1/2. Final answer: f⁻¹(x)=√(2x−1), x≥1/2.",
       "answerType": "points",
       "questionType": "short response",
       "requiresWorking": false,
@@ -6113,7 +6187,7 @@
         1,
         1
       ],
-      "modelAnswer": "Assume rational result s, subtract rational r to force i rational; contradiction.",
+      "modelAnswer": "Assume rational r plus irrational i gives rational s. Then i=s−r. The difference of two rational numbers must be rational. This contradicts i being irrational. Conclude r+i is irrational. Final answer: Assume rational result s, subtract rational r to force i rational; contradiction.",
       "answerType": "levels",
       "questionType": "extended response",
       "requiresWorking": false,
@@ -6152,7 +6226,7 @@
         1,
         1
       ],
-      "modelAnswer": "dr/dt=k/(4πr²).",
+      "modelAnswer": "Use dV/dr=4πr². Apply chain rule dV/dt=(dV/dr)(dr/dt). Set dV/dt=k. Hence dr/dt=k/(4πr²), inversely proportional to r². Final answer: dr/dt=k/(4πr²).",
       "answerType": "points",
       "questionType": "extended response",
       "requiresWorking": false,
@@ -6518,7 +6592,7 @@
         1,
         1
       ],
-      "modelAnswer": "Catalyst increases rate without shifting equilibrium; higher pressure improves yield/rate but costs more; lower temperature improves yield but slows rate.",
+      "modelAnswer": "A catalyst does not change the equilibrium yield, but speeds reaction and can lower operating costs. Increasing pressure favours methanol because fewer gas moles are on the product side. Greater pressure increases collision frequency and rate, but needs expensive equipment/energy. Higher temperature increases reaction rate. Because the forward reaction is exothermic, higher temperature reduces equilibrium methanol yield. High temperature typically raises operating costs; industrial conditions compromise between rate, yield and cost. Final answer: Catalyst increases rate without shifting equilibrium; higher pressure improves yield/rate but costs more; lower temperature improves yield but slows rate.",
       "answerType": "levels",
       "questionType": "extended response",
       "requiresWorking": false,
@@ -6707,7 +6781,7 @@
         1,
         1
       ],
-      "modelAnswer": "Gas 1.50×10⁴ cm³; liquid 64.7 cm³; expansion factor ≈232.",
+      "modelAnswer": "n = 38.8/58.0 = 0.669 mol. Use pV=nRT with p=101000 Pa and T=272 K. V(gas) ≈ 0.01499 m³ = 1.50×10⁴ cm³. V(liquid) = 38.8/0.60 = 64.7 cm³. Divide gas by liquid volume. Expansion factor ≈ 232. Final answer: Gas 1.50×10⁴ cm³; liquid 64.7 cm³; expansion factor ≈232.",
       "answerType": "levels",
       "questionType": "extended response",
       "requiresWorking": false,
@@ -6741,7 +6815,7 @@
         1,
         1
       ],
-      "modelAnswer": "3.0 m s⁻¹",
+      "modelAnswer": "Gradient = Δs/Δt = (19−4)/(6−1). Velocity = 3.0 m s⁻¹. A straight-line gradient indicates constant velocity. Final answer: 3.0 m s⁻¹",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A displacement–time graph goes from 4 m at t=1 s to 19 m at t=6 s along a straight line. Calculate the velocity and explain why it is constant.",
@@ -6778,7 +6852,7 @@
         1,
         1
       ],
-      "modelAnswer": "a=2.0 m s⁻²; distance=36 m",
+      "modelAnswer": "Acceleration = (12−0)/6 = 2.0 m s⁻². Displacement equals triangular area below velocity–time graph. Distance = ½ × 6 × 12 = 36 m. Final answer: a=2.0 m s⁻²; distance=36 m",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "A velocity–time graph rises uniformly from 0 to 12 m s⁻¹ in 6 s. Find acceleration and distance travelled in that period.",
@@ -6922,7 +6996,7 @@
         1,
         1
       ],
-      "modelAnswer": "parallel 24.5 N; perpendicular 42.5 N",
+      "modelAnswer": "Weight 49.05 N vertically down. Component parallel downhill 49.05 sin30° = 24.5 N. Perpendicular component and reaction 49.05 cos30° = 42.5 N. Final answer: parallel 24.5 N; perpendicular 42.5 N",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "A 5.0 kg crate rests motionless on a 30° frictionless slope. State directions of weight and normal reaction and determine the two weight components (g=9.81).",
@@ -6957,7 +7031,7 @@
         1,
         1
       ],
-      "modelAnswer": "Weight down and drag up, equal magnitudes",
+      "modelAnswer": "Weight acts vertically downward. Air resistance/drag acts upward. For constant velocity the upward and downward forces balance, resultant force zero. Final answer: Weight down and drag up, equal magnitudes",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "A person is descending at terminal speed with a parachute. What forces belong on a free-body diagram of the person and what relationship must hold at terminal speed?",
@@ -7140,7 +7214,7 @@
         1,
         1
       ],
-      "modelAnswer": "Higher kinetic energy causes faster, harder collisions; greater force per unit area increases pressure",
+      "modelAnswer": "Mean molecular kinetic energy and speed increase. Molecules collide with container walls more frequently and with greater momentum changes. Force per unit area on the walls rises, so pressure increases. Final answer: Higher kinetic energy causes faster, harder collisions; greater force per unit area increases pressure",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "Explain, using molecular motion and collision forces, why raising the temperature at constant volume increases an ideal gas's pressure.",
@@ -7249,7 +7323,7 @@
         1,
         1
       ],
-      "modelAnswer": "2.40×10⁻¹⁷ J or 150 eV",
+      "modelAnswer": "Energy gained = |Q|ΔV. Energy gained = 1.60×10⁻¹⁹×150 = 2.40×10⁻¹⁷ J. Energy = 150 eV. Final answer: 2.40×10⁻¹⁷ J or 150 eV",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "An electron crosses a potential difference of 150 V and gains kinetic energy. Determine the energy gain in joules and electronvolts (e=1.60×10⁻¹⁹ C).",
@@ -7284,7 +7358,7 @@
         1,
         1
       ],
-      "modelAnswer": "radially inward; one-quarter at double distance",
+      "modelAnswer": "Field lines point radially inward towards the negative charge. Field line density becomes lower further from the source. E∝1/r², so doubling distance reduces strength to one quarter. Final answer: radially inward; one-quarter at double distance",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "For a negative point charge, describe the electric field pattern and explain what happens to field strength as distance is doubled.",
@@ -7430,7 +7504,7 @@
         1,
         1
       ],
-      "modelAnswer": "increase area and decrease separation (or use higher-permittivity dielectric)",
+      "modelAnswer": "Increasing the plate overlap area A increases C. Reducing separation d increases C. Alternatively inserting a dielectric with higher permittivity increases C. Final answer: increase area and decrease separation (or use higher-permittivity dielectric)",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Describe two changes that increase the capacitance of a parallel-plate capacitor and explain their influence using C=εA/d.",
@@ -7502,7 +7576,7 @@
         1,
         1
       ],
-      "modelAnswer": "slider changes resistance ratio, hence fraction of supply voltage",
+      "modelAnswer": "The slider alters the ratio of resistances either side. The same series current produces different voltage drops. The output fraction of supply voltage therefore changes. Final answer: slider changes resistance ratio, hence fraction of supply voltage",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "A potentiometer acts as a potential divider. Explain why moving the sliding contact changes the output p.d. even though the supply is constant.",
@@ -7537,7 +7611,7 @@
         1,
         1
       ],
-      "modelAnswer": "Output voltage across LDR falls",
+      "modelAnswer": "LDR resistance decreases with greater light intensity. Vout=Vin R_LDR/(R_fixed+R_LDR). Thus the LDR output p.d. decreases. Final answer: Output voltage across LDR falls",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "An LDR is the lower resistor in a potential divider with fixed upper resistor. Explain what happens to output voltage across the LDR when light intensity increases.",
@@ -7677,7 +7751,7 @@
         1,
         1
       ],
-      "modelAnswer": "More SO3 at equilibrium; Kp unchanged",
+      "modelAnswer": "The products contain fewer gas molecules, so higher pressure favours SO₃. Kp is a function of temperature only. Therefore equilibrium yield increases but Kp stays unchanged. Final answer: More SO3 at equilibrium; Kp unchanged",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "For 2SO₂(g)+O₂(g)⇌2SO₃(g), explain how increasing total pressure at fixed temperature affects the equilibrium yield and Kp.",
@@ -7712,7 +7786,7 @@
         1,
         1
       ],
-      "modelAnswer": "Kp dimensionless because Δn=0; compression causes no equilibrium shift",
+      "modelAnswer": "There are two gaseous reactant molecules and two gaseous product molecules. The pressure powers cancel in the equilibrium expression. Δn_gas=0 so total pressure changes do not shift equilibrium. Final answer: Kp dimensionless because Δn=0; compression causes no equilibrium shift",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "For H₂(g)+I₂(g)⇌2HI(g), explain why Kp has no pressure units and why compressing the system at constant temperature does not favour either side.",
@@ -7858,7 +7932,7 @@
         1,
         1
       ],
-      "modelAnswer": "weak acid partially dissociates, giving lower hydrogen-ion concentration",
+      "modelAnswer": "HCl is a strong acid and dissociates essentially completely. Ethanoic acid is weak and dissociates only partially. Therefore [H⁺] is lower in the weak acid and pH higher. Final answer: weak acid partially dissociates, giving lower hydrogen-ion concentration",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Explain why a 0.10 mol dm⁻³ ethanoic acid solution has a higher pH than 0.10 mol dm⁻³ hydrochloric acid.",
@@ -7928,7 +8002,7 @@
         1,
         1
       ],
-      "modelAnswer": "dm^6 mol^-2 s^-1",
+      "modelAnswer": "Total order is 3. Rearrange k=rate/([A][B]²). Units dm⁶ mol⁻² s⁻¹. Final answer: dm^6 mol^-2 s^-1",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "For rate=k[A][B]² where concentrations are measured in mol dm⁻³ and rate in mol dm⁻³ s⁻¹, derive units of k.",
@@ -7963,7 +8037,7 @@
         1,
         1
       ],
-      "modelAnswer": "rate increases by factor 4.5",
+      "modelAnswer": "Tripling A multiplies rate by 3²=9. Halving B multiplies rate by ½. Overall factor 9/2=4.5. Final answer: rate increases by factor 4.5",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "For rate=k[A]²[B], state the factor by which rate changes if [A] is tripled while [B] is halved at constant temperature.",
@@ -8000,7 +8074,7 @@
         1,
         1
       ],
-      "modelAnswer": "Rate order is experimental and controlled by the slow step, not the overall balanced equation",
+      "modelAnswer": "Orders are determined by the mechanism/experiments, not balanced stoichiometric coefficients. The slow step controls the overall rate. Only reactants participating in relevant slow-step or pre-equilibrium relationships appear in the rate expression. Final answer: Rate order is experimental and controlled by the slow step, not the overall balanced equation",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "Explain how the slow rate-determining step can be consistent with an experimentally observed first-order rate law even if the overall balanced equation contains several reactant molecules.",
@@ -8035,7 +8109,7 @@
         1,
         1
       ],
-      "modelAnswer": "more molecules exceed activation energy, so k increases",
+      "modelAnswer": "A larger fraction of molecules has energy at least Ea. A greater proportion of collisions can overcome activation energy. Hence more effective collisions per unit time increase the rate constant. Final answer: more molecules exceed activation energy, so k increases",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "The rate constant increases when temperature rises. Explain this trend using activation energy and the Maxwell–Boltzmann distribution.",
@@ -8149,7 +8223,7 @@
         1,
         1
       ],
-      "modelAnswer": "shallower negative gradient and higher ln k",
+      "modelAnswer": "A catalyst lowers Ea. Gradient −Ea/R becomes less negative. At any given 1/T the catalysed reaction has a higher ln k. Final answer: shallower negative gradient and higher ln k",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Describe how a catalyst changes a reaction's Arrhenius graph if ln k is plotted against 1/T, assuming the pre-exponential factor stays constant.",
@@ -8217,7 +8291,7 @@
         1,
         1
       ],
-      "modelAnswer": "butan-2-ol is chiral at carbon 2; H, OH, methyl, ethyl",
+      "modelAnswer": "Carbon 2 is chiral. Groups: H, OH, CH₃ and CH₂CH₃. Two enantiomers are possible. Final answer: butan-2-ol is chiral at carbon 2; H, OH, methyl, ethyl",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Determine whether CH₃CH(OH)CH₂CH₃ can exhibit optical isomerism. Identify the chiral carbon and name the four different groups attached.",
@@ -8252,7 +8326,7 @@
         1,
         1
       ],
-      "modelAnswer": "opposite optical rotations cancel in racemic mixture",
+      "modelAnswer": "Each enantiomer rotates the plane by equal magnitude. The rotations are in opposite directions. In a 50:50 racemate they cancel. Final answer: opposite optical rotations cancel in racemic mixture",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "A mixture contains equal amounts of two enantiomers. Explain why its overall rotation of plane-polarised light is zero.",
@@ -8287,7 +8361,7 @@
         1,
         1
       ],
-      "modelAnswer": "Chiral receptors distinguish mirror-image spatial arrangements",
+      "modelAnswer": "They are mirror-image stereoisomers. Ordinary achiral properties are alike. Many receptors are chiral and have stereospecific binding sites. Final answer: Chiral receptors distinguish mirror-image spatial arrangements",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "Why can two enantiomers have almost identical bulk physical properties yet interact differently with biological receptors?",
@@ -8322,7 +8396,7 @@
         1,
         1
       ],
-      "modelAnswer": "aldehyde; oxidised, reduces Ag+ to silver",
+      "modelAnswer": "Tollens' reagent gives a silver mirror with an aldehyde. The aldehyde is oxidised to a carboxylate/carboxylic acid derivative. Ordinary ketones are not readily oxidised in this test. Final answer: aldehyde; oxidised, reduces Ag+ to silver",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "An unknown carbonyl compound gives a silver mirror with Tollens' reagent. State what functional group is indicated and why a ketone does not usually give this observation.",
@@ -8357,7 +8431,7 @@
         1,
         1
       ],
-      "modelAnswer": "propan-1-ol; hydride addition followed by protonation",
+      "modelAnswer": "Product is propan-1-ol. Hydride H⁻ is a nucleophile that attacks the carbonyl carbon. The alkoxide is protonated to form alcohol. Final answer: propan-1-ol; hydride addition followed by protonation",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "Propanal reacts with NaBH₄ followed by acidic work-up. Name the product and explain the role of the hydride ion.",
@@ -8392,7 +8466,7 @@
         1,
         1
       ],
-      "modelAnswer": "carbonyl present; identify derivative by melting point",
+      "modelAnswer": "Positive result indicates an aldehyde or ketone carbonyl. The solid is the 2,4-DNP hydrazone derivative. Measure its melting temperature and compare with reference data. Final answer: carbonyl present; identify derivative by melting point",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "A carbonyl compound reacts with 2,4-dinitrophenylhydrazine, giving a yellow/orange solid. What does this test establish, and what extra step can help identify the compound?",
@@ -8427,7 +8501,7 @@
         1,
         1
       ],
-      "modelAnswer": "propan-2-ol from hydride addition at carbon 2",
+      "modelAnswer": "The carbonyl carbon in propanone is carbon 2. Nucleophilic hydride addition changes C=O into C–OH at carbon 2. The carbon skeleton stays unchanged. Final answer: propan-2-ol from hydride addition at carbon 2",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Propanone is reduced by NaBH₄. Explain why propan-2-ol is formed rather than propan-1-ol.",
@@ -8495,7 +8569,7 @@
         1,
         1
       ],
-      "modelAnswer": "N-methylethanamide; excess amine neutralises HCl",
+      "modelAnswer": "N-methylethanamide is formed. One equivalent attacks the acyl chloride. Excess amine neutralises HCl produced. Final answer: N-methylethanamide; excess amine neutralises HCl",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "Ethanoyl chloride reacts with excess methylamine. Give the name of the organic product and explain the purpose of using excess amine.",
@@ -8530,7 +8604,7 @@
         1,
         1
       ],
-      "modelAnswer": "ethyl ethanoate and HCl; acid chloride more reactive",
+      "modelAnswer": "Ethyl ethanoate and HCl are formed. Acyl carbon in acid chloride is very electrophilic. Chloride is a good leaving group and the reaction is readily driven forwards. Final answer: ethyl ethanoate and HCl; acid chloride more reactive",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "State the products of ethanoyl chloride reacting with ethanol and explain why the reaction is faster than a similar reaction using ethanoic acid.",
@@ -8565,7 +8639,7 @@
         1,
         1
       ],
-      "modelAnswer": "avoid hydrolysis; NH3 forms amide, water forms carboxylic acid",
+      "modelAnswer": "Acyl chlorides are rapidly hydrolysed by water. Moisture reduces the amount available for the intended reaction. Ammonia gives a primary amide, whereas water gives a carboxylic acid. Final answer: avoid hydrolysis; NH3 forms amide, water forms carboxylic acid",
       "answerType": "points",
       "questionType": "explanation",
       "prompt": "Explain why acyl chlorides are normally handled in a dry apparatus and how their reaction with ammonia differs from their reaction with water.",
@@ -8600,7 +8674,7 @@
         1,
         1
       ],
-      "modelAnswer": "AB=(6,8), |AB|=10",
+      "modelAnswer": "AB=B−A=(6,8). Magnitude=√(6²+8²). Magnitude=10. Final answer: AB=(6,8), |AB|=10",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Point A has position vector (2,−3) and B is (8,5). Find vector AB and its magnitude.",
@@ -8635,7 +8709,7 @@
         1,
         1
       ],
-      "modelAnswer": "v=-2u, parallel but opposite direction",
+      "modelAnswer": "v=−2u. One vector is a scalar multiple of the other. The negative multiplier shows opposite directions. Final answer: v=-2u, parallel but opposite direction",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Vector u=(3,−2) and v=(−6,4). Explain why they are parallel and state the relationship between directions.",
@@ -8670,7 +8744,7 @@
         1,
         1
       ],
-      "modelAnswer": "13 m at 67.4 degrees north of east",
+      "modelAnswer": "Resultant components (5,12). Magnitude √(5²+12²)=13 m. Angle =tan⁻¹(12/5)≈67.4° north of east. Final answer: 13 m at 67.4 degrees north of east",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "A particle moves 5 m east then 12 m north. Find its resultant displacement magnitude and direction north of east.",
@@ -8945,7 +9019,7 @@
         1,
         1
       ],
-      "modelAnswer": "10",
+      "modelAnswer": "Antiderivative x²+x. At x=3 value 12; at x=1 value 2. Integral is 10. Final answer: 10",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "Evaluate ∫₁³ (2x+1) dx. Show substitution of the limits.",
@@ -8982,7 +9056,7 @@
         1,
         1
       ],
-      "modelAnswer": "y=3x²−4x+3",
+      "modelAnswer": "Integrate: y=3x²−4x+C. Substitute (2,7): 7=12−8+C. C=3, so y=3x²−4x+3. Final answer: y=3x²−4x+3",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "Given dy/dx=6x−4 and y(2)=7, determine y(x).",
@@ -9091,7 +9165,7 @@
         1,
         1
       ],
-      "modelAnswer": "24",
+      "modelAnswer": "|r|=½<1 so sum converges. Use S∞=a/(1−r). S∞=12/(1−½)=24. Final answer: 24",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A geometric series has first term 12 and ratio ½. Find the sum to infinity and state why it exists.",
@@ -9165,7 +9239,7 @@
         1,
         1
       ],
-      "modelAnswer": "486; diverges",
+      "modelAnswer": "a=2, ratio r=3. Sixth term 2×3⁵=486. Since |r|=3>1, the infinite sum diverges. Final answer: 486; diverges",
       "answerType": "points",
       "questionType": "calculation and reasoning",
       "prompt": "A geometric progression has terms 2, 6, 18, ... Find its sixth term and explain why its infinite series has no finite sum.",
@@ -9740,7 +9814,7 @@
         1,
         1
       ],
-      "modelAnswer": "gradients −1 and +1, product −1",
+      "modelAnswer": "Gradient AB=(10−17)/(15−8)=−1. Gradient BC=(−7−10)/(−2−15)=+1. The gradients multiply to −1, so AB and BC are perpendicular. Final answer: gradients −1 and +1, product −1",
       "groupId": "Maths|2018|7357/1|7",
       "groupOrder": "7a",
       "answerType": "points",
@@ -11973,7 +12047,7 @@
         1,
         1
       ],
-      "modelAnswer": "p(N₂)=7.5 kPa, p(H₂)=22.5 kPa, p(NH₃)=120 kPa",
+      "modelAnswer": "NH₃ p=0.80×150=120 kPa. Remaining pressure=30 kPa. Unreacted N₂ and H₂ remain in 1:3 ratio so 7.5 and 22.5 kPa. Final answer: p(N₂)=7.5 kPa, p(H₂)=22.5 kPa, p(NH₃)=120 kPa",
       "questionType": "explanation",
       "answerType": "points",
       "requiresWorking": false,
@@ -12080,7 +12154,7 @@
         1,
         1
       ],
-      "modelAnswer": "Kp decreases when T increases for this exothermic forward reaction",
+      "modelAnswer": "Raising temperature favours the endothermic reverse reaction. Equilibrium ammonia yield decreases. The value of Kp decreases because equilibrium compositions change with T. Final answer: Kp decreases when T increases for this exothermic forward reaction",
       "questionType": "explanation",
       "answerType": "points",
       "requiresWorking": false,
@@ -12226,7 +12300,7 @@
         1,
         1
       ],
-      "modelAnswer": "adsorption, surface reaction, desorption",
+      "modelAnswer": "Reactant molecules adsorb onto the catalyst surface. Adsorbed molecules react via a lower-activation-energy pathway. Product molecules desorb, leaving catalyst surface sites available. Final answer: adsorption, surface reaction, desorption",
       "questionType": "explanation",
       "answerType": "points",
       "requiresWorking": false,
@@ -12366,7 +12440,7 @@
         1,
         1
       ],
-      "modelAnswer": "Yes, stopping distance about 37 m along the 85 m ramp.",
+      "modelAnswer": "Initial kinetic energy = ½mv² ≈ 2.76 × 10⁶ J. Equivalent height gained = E/(mg) ≈ 15.6 m or stopping distance ≈ 36.9 m along ramp. 36.9 m is less than 85 m, so the ramp is sufficient. Final answer: Yes, stopping distance about 37 m along the 85 m ramp.",
       "questionType": "calculation and explanation",
       "answerType": "points",
       "requiresWorking": true,
@@ -12475,7 +12549,7 @@
         1,
         1
       ],
-      "modelAnswer": "Electron collisions excite atoms, which emit photons during de-excitation.",
+      "modelAnswer": "An electron transfers a discrete amount of energy in an individual collision with an atom. The atom is excited when one of its electrons rises to a higher energy level. The atom de-excites, emitting a photon as an electron drops to lower energy level. Final answer: Electron collisions excite atoms, which emit photons during de-excitation.",
       "questionType": "explanation",
       "answerType": "points",
       "requiresWorking": false,
@@ -12512,7 +12586,7 @@
         1,
         1
       ],
-      "modelAnswer": "Incident and reflected waves superpose, forming fixed nodes and antinodes.",
+      "modelAnswer": "Disturbances travel along the string and are reflected from its fixed ends. Two waves travelling in opposite directions superpose/interfere. Destructive interference yields nodes (fixed ends), constructive interference yields antinodes. Final answer: Incident and reflected waves superpose, forming fixed nodes and antinodes.",
       "questionType": "explanation",
       "answerType": "points",
       "requiresWorking": false,
