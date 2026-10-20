@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 5,
-  "deckVersion": 1,
-  "updatedAt": "2026-10-20",
+  "schemaVersion": 6,
+  "deckVersion": 2,
+  "updatedAt": "2026-10-20T16:30:00+01:00",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -17,7 +17,30 @@
       "priority": 3,
       "scope": "mock",
       "front": "How do you decide whether to use sin or cos when resolving a force?",
-      "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'."
+      "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'.",
+      "visual": "resolve",
+      "accept": [
+        "adjacent cos opposite sin",
+        "adjacent cosine opposite sine"
+      ],
+      "concepts": [
+        [
+          "adjacent",
+          "next to"
+        ],
+        [
+          "cos",
+          "cosine"
+        ],
+        [
+          "opposite"
+        ],
+        [
+          "sin",
+          "sine"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_slope_001",
@@ -27,7 +50,27 @@
       "priority": 3,
       "scope": "mock",
       "front": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
-      "back": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ."
+      "back": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ.",
+      "visual": "slope",
+      "concepts": [
+        [
+          "parallel",
+          "down slope"
+        ],
+        [
+          "mg sin",
+          "mgsin"
+        ],
+        [
+          "perpendicular",
+          "normal"
+        ],
+        [
+          "mg cos",
+          "mgcos"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_couple_001",
@@ -37,7 +80,26 @@
       "priority": 3,
       "scope": "mock",
       "front": "What is a couple, and what is the moment of a couple?",
-      "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation."
+      "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation.",
+      "visual": "couple",
+      "concepts": [
+        [
+          "equal"
+        ],
+        [
+          "opposite"
+        ],
+        [
+          "parallel"
+        ],
+        [
+          "fd",
+          "f d",
+          "force distance",
+          "force times distance"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_motion_d",
@@ -47,7 +109,19 @@
       "priority": 3,
       "scope": "mock",
       "front": "What does the gradient of a displacement–time graph represent?",
-      "back": "Velocity. A steeper gradient means greater speed; a horizontal line means v = 0. On a curve, use a tangent for instantaneous velocity."
+      "back": "Velocity. A steeper gradient means greater speed; a horizontal line means v = 0. On a curve, use a tangent for instantaneous velocity.",
+      "visual": "displacement-time",
+      "accept": [
+        "velocity",
+        "v"
+      ],
+      "concepts": [
+        [
+          "velocity",
+          "v"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_motion_v",
@@ -57,7 +131,25 @@
       "priority": 3,
       "scope": "mock",
       "front": "What do the gradient and signed area of a velocity–time graph represent?",
-      "back": "Gradient = acceleration. Signed area under the graph = displacement."
+      "back": "Gradient = acceleration. Signed area under the graph = displacement.",
+      "visual": "velocity-time",
+      "concepts": [
+        [
+          "gradient",
+          "slope"
+        ],
+        [
+          "acceleration",
+          "a"
+        ],
+        [
+          "area"
+        ],
+        [
+          "displacement"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_motion_a",
@@ -67,7 +159,19 @@
       "priority": 3,
       "scope": "mock",
       "front": "What does the signed area under an acceleration–time graph represent?",
-      "back": "Change in velocity, Δv."
+      "back": "Change in velocity, Δv.",
+      "visual": "acceleration-time",
+      "concepts": [
+        [
+          "area"
+        ],
+        [
+          "change in velocity",
+          "delta v",
+          "dv"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_moments_001",
@@ -77,7 +181,21 @@
       "priority": 3,
       "scope": "mock",
       "front": "What distance must be used in moment = force × distance?",
-      "back": "The perpendicular distance from the pivot to the force's line of action."
+      "back": "The perpendicular distance from the pivot to the force's line of action.",
+      "visual": "moment",
+      "concepts": [
+        [
+          "perpendicular"
+        ],
+        [
+          "pivot"
+        ],
+        [
+          "line of action",
+          "line action"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_equilibrium_001",
@@ -87,7 +205,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "If the resultant force is zero, must the object be stationary?",
-      "back": "No. It may be stationary or moving at constant velocity because acceleration is zero."
+      "back": "No. It may be stationary or moving at constant velocity because acceleration is zero.",
+      "active": true
     },
     {
       "id": "phy_internal_001",
@@ -97,7 +216,27 @@
       "priority": 3,
       "scope": "mock",
       "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
-      "back": "V = ε − Ir. The term Ir is the lost volts inside the cell."
+      "back": "V = ε − Ir. The term Ir is the lost volts inside the cell.",
+      "visual": "internal-resistance",
+      "accept": [
+        "v=emf-ir",
+        "v=e-ir",
+        "v=ε-ir",
+        "terminal pd equals emf minus ir",
+        "emf minus lost volts"
+      ],
+      "concepts": [
+        [
+          "emf",
+          "epsilon",
+          "ε"
+        ],
+        [
+          "ir",
+          "lost volts"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_photoelectric_001",
@@ -107,7 +246,27 @@
       "priority": 3,
       "scope": "mock",
       "front": "What must happen for a photoelectron to be emitted?",
-      "back": "One photon transfers energy hf to one electron. Emission occurs if hf ≥ the work function φ."
+      "back": "One photon transfers energy hf to one electron. Emission occurs if hf ≥ the work function φ.",
+      "visual": "photoelectric",
+      "concepts": [
+        [
+          "one photon",
+          "photon"
+        ],
+        [
+          "one electron",
+          "electron"
+        ],
+        [
+          "hf"
+        ],
+        [
+          "work function",
+          "phi",
+          "φ"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_photoelectric_002",
@@ -117,7 +276,8 @@
       "priority": 3,
       "scope": "mock",
       "front": "Why can intense light below the threshold frequency still emit no photoelectrons?",
-      "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons."
+      "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons.",
+      "active": true
     },
     {
       "id": "phy_energy_levels_001",
@@ -127,7 +287,8 @@
       "priority": 3,
       "scope": "mock",
       "front": "How is atomic excitation different from the photoelectric effect?",
-      "back": "Excitation moves an electron to a higher bound energy level. The photoelectric effect removes an electron from the metal."
+      "back": "Excitation moves an electron to a higher bound energy level. The photoelectric effect removes an electron from the metal.",
+      "active": true
     },
     {
       "id": "phy_quarks_001",
@@ -137,7 +298,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "Can strangeness change in a weak interaction?",
-      "back": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions."
+      "back": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions.",
+      "active": true
     },
     {
       "id": "phy_pressure_001",
@@ -147,7 +309,8 @@
       "priority": 3,
       "scope": "mock",
       "front": "How do molecular collisions with a container create pressure?",
-      "back": "Collisions change molecular momentum, so the walls experience a force. Pressure is force per unit area."
+      "back": "Collisions change molecular momentum, so the walls experience a force. Pressure is force per unit area.",
+      "active": true
     },
     {
       "id": "phy_combined_gas_001",
@@ -157,7 +320,8 @@
       "priority": 3,
       "scope": "mock",
       "front": "What equation links two ideal-gas states for a fixed amount of gas?",
-      "back": "p₁V₁/T₁ = p₂V₂/T₂, with temperature in kelvin."
+      "back": "p₁V₁/T₁ = p₂V₂/T₂, with temperature in kelvin.",
+      "active": true
     },
     {
       "id": "chem_back_001",
@@ -167,7 +331,27 @@
       "priority": 3,
       "scope": "mock",
       "front": "What is the core calculation route in a back titration?",
-      "back": "Initial amount added − amount left over = amount that reacted. Then use the balanced-equation mole ratio."
+      "back": "Initial amount added − amount left over = amount that reacted. Then use the balanced-equation mole ratio.",
+      "visual": "back-titration",
+      "concepts": [
+        [
+          "initial"
+        ],
+        [
+          "left over",
+          "remaining",
+          "excess"
+        ],
+        [
+          "subtract",
+          "minus"
+        ],
+        [
+          "mole ratio",
+          "ratio"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "chem_gas_001",
@@ -177,7 +361,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "Which units must be used in pV = nRT?",
-      "back": "p in Pa, V in m³, T in K and n in mol."
+      "back": "p in Pa, V in m³, T in K and n in mol.",
+      "active": true
     },
     {
       "id": "chem_titration_001",
@@ -187,7 +372,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What conversion is needed before using n = cV when volume is given in cm³?",
-      "back": "Convert cm³ to dm³ by dividing by 1000."
+      "back": "Convert cm³ to dm³ by dividing by 1000.",
+      "active": true
     },
     {
       "id": "chem_empirical_001",
@@ -197,7 +383,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What is the route from masses to an empirical formula?",
-      "back": "Mass → moles → divide all by the smallest → multiply to obtain a whole-number ratio."
+      "back": "Mass → moles → divide all by the smallest → multiply to obtain a whole-number ratio.",
+      "active": true
     },
     {
       "id": "chem_arrhenius_001",
@@ -207,7 +394,25 @@
       "priority": 3,
       "scope": "mock",
       "front": "For a graph of ln k against 1/T, what are the gradient and y-intercept?",
-      "back": "Gradient = −Ea/R. y-intercept = ln A. Temperature must be in kelvin."
+      "back": "Gradient = −Ea/R. y-intercept = ln A. Temperature must be in kelvin.",
+      "visual": "arrhenius",
+      "concepts": [
+        [
+          "gradient"
+        ],
+        [
+          "-ea/r",
+          "ea/r"
+        ],
+        [
+          "intercept",
+          "y intercept"
+        ],
+        [
+          "ln a"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "chem_arrhenius_002",
@@ -217,7 +422,8 @@
       "priority": 3,
       "scope": "mock",
       "front": "How do you calculate Ea from the gradient of ln k against 1/T?",
-      "back": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required."
+      "back": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required.",
+      "active": true
     },
     {
       "id": "chem_kp_001",
@@ -227,7 +433,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What goes into a Kp expression?",
-      "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient."
+      "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient.",
+      "active": true
     },
     {
       "id": "chem_kp_002",
@@ -237,7 +444,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "How do you find a gas's partial pressure from its mole fraction?",
-      "back": "partial pressure = mole fraction × total pressure."
+      "back": "partial pressure = mole fraction × total pressure.",
+      "active": true
     },
     {
       "id": "chem_weak_acid_001",
@@ -247,7 +455,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What approximation is often used for a weak monoprotic acid HA of concentration c?",
-      "back": "If dissociation is small: [HA] ≈ c and [H⁺] = [A⁻], so Ka ≈ [H⁺]²/c."
+      "back": "If dissociation is small: [HA] ≈ c and [H⁺] = [A⁻], so Ka ≈ [H⁺]²/c.",
+      "active": true
     },
     {
       "id": "chem_kw_001",
@@ -257,7 +466,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What is Kw at 298 K?",
-      "back": "Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴ mol² dm⁻⁶."
+      "back": "Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴ mol² dm⁻⁶.",
+      "active": true
     },
     {
       "id": "chem_gibbs_001",
@@ -267,7 +477,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What equation links ΔG, ΔH, T and ΔS, and what unit trap matters?",
-      "back": "ΔG = ΔH − TΔS. ΔH and TΔS must use matching units."
+      "back": "ΔG = ΔH − TΔS. ΔH and TΔS must use matching units.",
+      "active": true
     },
     {
       "id": "chem_rates_001",
@@ -277,7 +488,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What does the overall order of a rate equation mean?",
-      "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation."
+      "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation.",
+      "active": true
     },
     {
       "id": "maths_trig_001",
@@ -287,7 +499,8 @@
       "priority": 2,
       "scope": "mock",
       "front": "What is the Pythagorean trigonometric identity?",
-      "back": "sin²x + cos²x = 1."
+      "back": "sin²x + cos²x = 1.",
+      "active": true
     },
     {
       "id": "maths_transform_001",
@@ -297,7 +510,15 @@
       "priority": 2,
       "scope": "mock",
       "front": "For y = f(x − a), how does the graph move?",
-      "back": "Translate a units to the right."
+      "back": "Translate a units to the right.",
+      "visual": "transform-right",
+      "accept": [
+        "right a",
+        "a units right",
+        "translate right by a",
+        "right"
+      ],
+      "active": true
     },
     {
       "id": "maths_transform_002",
@@ -307,7 +528,15 @@
       "priority": 2,
       "scope": "mock",
       "front": "For y = f(x) + a, how does the graph move?",
-      "back": "Translate a units upwards."
+      "back": "Translate a units upwards.",
+      "visual": "transform-up",
+      "accept": [
+        "up a",
+        "a units up",
+        "translate up by a",
+        "up"
+      ],
+      "active": true
     },
     {
       "id": "maths_transform_003",
@@ -317,7 +546,20 @@
       "priority": 2,
       "scope": "mock",
       "front": "For y = f(ax), what happens to x-coordinates?",
-      "back": "They are divided by a, so the horizontal scale factor is 1/a."
+      "back": "They are divided by a, so the horizontal scale factor is 1/a.",
+      "visual": "transform-compress",
+      "concepts": [
+        [
+          "divide by a",
+          "1/a",
+          "one over a"
+        ],
+        [
+          "horizontal",
+          "x"
+        ]
+      ],
+      "active": true
     },
     {
       "id": "phy_rp1",
@@ -327,7 +569,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What relationship is central to the stretched-string stationary-wave practical?",
-      "back": "f = (1/2L)√(T/μ)."
+      "back": "f = (1/2L)√(T/μ).",
+      "active": true
     },
     {
       "id": "phy_rp2",
@@ -337,7 +580,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What are the key equations for double-slit and diffraction-grating work?",
-      "back": "w = λD/s and d sin θ = nλ."
+      "back": "w = λD/s and d sin θ = nλ.",
+      "active": true
     },
     {
       "id": "phy_rp3",
@@ -347,7 +591,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "If you plot s against t² for free fall from rest, how do you obtain g?",
-      "back": "Gradient = g/2, so g = 2 × gradient."
+      "back": "Gradient = g/2, so g = 2 × gradient.",
+      "active": true
     },
     {
       "id": "phy_rp4",
@@ -357,7 +602,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What equation is used to determine Young modulus from a wire?",
-      "back": "E = FL/(AΔL), with A = πd²/4."
+      "back": "E = FL/(AΔL), with A = πd²/4.",
+      "active": true
     },
     {
       "id": "phy_rp5",
@@ -367,7 +613,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "How is the resistivity of a wire found?",
-      "back": "ρ = RA/L, with R = V/I and A = πd²/4."
+      "back": "ρ = RA/L, with R = V/I and A = πd²/4.",
+      "active": true
     },
     {
       "id": "phy_rp6",
@@ -377,7 +624,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
-      "back": "y-intercept = emf ε and gradient = −r."
+      "back": "y-intercept = emf ε and gradient = −r.",
+      "active": true
     },
     {
       "id": "chem_rp1",
@@ -387,7 +635,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What are the essential steps for making an accurate standard solution?",
-      "back": "Accurately weigh, dissolve, quantitatively transfer with washings, make to the mark, stopper and invert."
+      "back": "Accurately weigh, dissolve, quantitatively transfer with washings, make to the mark, stopper and invert.",
+      "active": true
     },
     {
       "id": "chem_rp2",
@@ -397,7 +646,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What is the core calorimetry calculation?",
-      "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount."
+      "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount.",
+      "active": true
     },
     {
       "id": "chem_rp3",
@@ -407,7 +657,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "Why can 1/t be used as a measure of rate in a clock reaction?",
-      "back": "The same fixed amount of change defines the end point each time, so shorter time means faster rate."
+      "back": "The same fixed amount of change defines the end point each time, so shorter time means faster rate.",
+      "active": true
     },
     {
       "id": "chem_rp4",
@@ -417,7 +668,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What precipitate colours identify chloride, bromide and iodide after acidifying and adding AgNO₃?",
-      "back": "AgCl white, AgBr cream, AgI yellow."
+      "back": "AgCl white, AgBr cream, AgI yellow.",
+      "active": true
     },
     {
       "id": "chem_rp5",
@@ -427,7 +679,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "Where should the thermometer bulb be positioned during distillation?",
-      "back": "At the entrance to the condenser/still head, so it measures vapour entering the condenser."
+      "back": "At the entrance to the condenser/still head, so it measures vapour entering the condenser.",
+      "active": true
     },
     {
       "id": "chem_rp6",
@@ -437,7 +690,8 @@
       "priority": 1,
       "scope": "secondary",
       "front": "What is the test for an alkene?",
-      "back": "Bromine water is decolourised from orange/brown."
+      "back": "Bromine water is decolourised from orange/brown.",
+      "active": true
     },
     {
       "id": "phy_ins_circular_001",
@@ -447,7 +701,8 @@
       "priority": 1,
       "scope": "insurance",
       "front": "For uniform circular motion, what directions are velocity and acceleration?",
-      "back": "Velocity is tangential. Acceleration and resultant force are towards the centre."
+      "back": "Velocity is tangential. Acceleration and resultant force are towards the centre.",
+      "active": true
     },
     {
       "id": "phy_ins_circular_002",
@@ -457,7 +712,8 @@
       "priority": 1,
       "scope": "insurance",
       "front": "What are the centripetal acceleration and force equations?",
-      "back": "a = v²/r and F = mv²/r."
+      "back": "a = v²/r and F = mv²/r.",
+      "active": true
     },
     {
       "id": "phy_ins_shm_001",
@@ -467,7 +723,8 @@
       "priority": 1,
       "scope": "insurance",
       "front": "What condition defines simple harmonic motion?",
-      "back": "a = −ω²x: acceleration is proportional to displacement and opposite in direction."
+      "back": "a = −ω²x: acceleration is proportional to displacement and opposite in direction.",
+      "active": true
     },
     {
       "id": "phy_ins_shm_002",
@@ -477,7 +734,3482 @@
       "priority": 1,
       "scope": "insurance",
       "front": "Where are speed and acceleration greatest in SHM?",
-      "back": "Speed is greatest at equilibrium. Acceleration magnitude is greatest at maximum displacement."
+      "back": "Speed is greatest at equilibrium. Acceleration magnitude is greatest at maximum displacement.",
+      "active": true
+    },
+    {
+      "id": "phy_uncert_random",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is a random error?",
+      "back": "An unpredictable variation that causes scatter in repeated readings; repeats and a mean can reduce its effect.",
+      "concepts": [
+        [
+          "unpredictable",
+          "random"
+        ],
+        [
+          "scatter",
+          "vary"
+        ],
+        [
+          "repeat",
+          "mean",
+          "average"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_uncert_systematic",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is a systematic error?",
+      "back": "A consistent shift in readings caused by the method or instrument; repeats do not remove it.",
+      "concepts": [
+        [
+          "consistent",
+          "same direction",
+          "shift"
+        ],
+        [
+          "repeat",
+          "repeating"
+        ],
+        [
+          "not remove",
+          "does not remove",
+          "won't remove"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_uncert_percent",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you calculate percentage uncertainty?",
+      "back": "percentage uncertainty = absolute uncertainty ÷ measured value × 100%",
+      "accept": [
+        "absolute uncertainty/measured value x100",
+        "absolute uncertainty divided by measured value times 100",
+        "uncertainty/value x100"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_uncert_products",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "For multiplication or division, how are percentage uncertainties combined?",
+      "back": "Add the percentage uncertainties.",
+      "accept": [
+        "add them",
+        "add percentage uncertainties",
+        "sum the percentage uncertainties"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_uncert_power",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "If y = xⁿ, what happens to percentage uncertainty?",
+      "back": "Multiply the percentage uncertainty in x by |n|.",
+      "concepts": [
+        [
+          "multiply"
+        ],
+        [
+          "n",
+          "power",
+          "exponent"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_accuracy_precision",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Accuracy vs precision?",
+      "back": "Accuracy is closeness to the true value; precision is closeness of repeated readings to each other.",
+      "concepts": [
+        [
+          "accuracy"
+        ],
+        [
+          "true value"
+        ],
+        [
+          "precision"
+        ],
+        [
+          "repeated",
+          "repeat"
+        ],
+        [
+          "close",
+          "agree"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_specific_charge",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is specific charge?",
+      "back": "charge ÷ mass, Q/m, with unit C kg⁻¹.",
+      "accept": [
+        "q/m",
+        "charge/mass",
+        "charge divided by mass"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_nuclide",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "In nuclide notation, what do A and Z mean?",
+      "back": "A = nucleon number; Z = proton number.",
+      "concepts": [
+        [
+          "a"
+        ],
+        [
+          "nucleon",
+          "mass number"
+        ],
+        [
+          "z"
+        ],
+        [
+          "proton",
+          "atomic number"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_antiparticle",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does an antiparticle compare with its particle?",
+      "back": "Same mass and rest energy, but opposite charge and other additive quantum numbers.",
+      "concepts": [
+        [
+          "same mass"
+        ],
+        [
+          "opposite charge"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_annihilation",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What happens in particle–antiparticle annihilation?",
+      "back": "Their rest mass/energy is converted to photons while energy and momentum are conserved.",
+      "concepts": [
+        [
+          "photon",
+          "gamma"
+        ],
+        [
+          "energy"
+        ],
+        [
+          "momentum"
+        ],
+        [
+          "conserved"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_pair_production",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is needed for pair production?",
+      "back": "A photon with enough energy creates a particle–antiparticle pair, usually near a nucleus to conserve momentum.",
+      "concepts": [
+        [
+          "photon"
+        ],
+        [
+          "particle"
+        ],
+        [
+          "antiparticle"
+        ],
+        [
+          "energy"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_hadrons",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are hadrons?",
+      "back": "Particles made of quarks that experience the strong interaction.",
+      "concepts": [
+        [
+          "quark"
+        ],
+        [
+          "strong"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_baryon_meson",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do baryons and mesons differ?",
+      "back": "Baryons contain three quarks; mesons contain a quark and an antiquark.",
+      "concepts": [
+        [
+          "three quarks",
+          "3 quarks"
+        ],
+        [
+          "quark antiquark",
+          "quark and antiquark"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_proton_quarks",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the quark composition of a proton?",
+      "back": "uud.",
+      "accept": [
+        "uud",
+        "u u d"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_neutron_quarks",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the quark composition of a neutron?",
+      "back": "udd.",
+      "accept": [
+        "udd",
+        "u d d"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_pion_plus",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the quark composition of π⁺?",
+      "back": "u anti-d.",
+      "accept": [
+        "u anti d",
+        "u antid",
+        "u dbar",
+        "u d bar"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_conservation_particle",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Which quantities must be conserved in particle interactions?",
+      "back": "Charge, baryon number and lepton number are conserved; strangeness is conserved in strong interactions but can change weakly.",
+      "concepts": [
+        [
+          "charge"
+        ],
+        [
+          "baryon"
+        ],
+        [
+          "lepton"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_photon_energy",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the energy of a photon?",
+      "back": "E = hf = hc/λ.",
+      "accept": [
+        "e=hf",
+        "hf",
+        "e=hc/lambda",
+        "hc/lambda"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_debroglie",
+      "subject": "Physics",
+      "topic": "Particles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the de Broglie wavelength equation?",
+      "back": "λ = h/p.",
+      "accept": [
+        "lambda=h/p",
+        "h/p",
+        "λ=h/p"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_wave_speed",
+      "subject": "Physics",
+      "topic": "Waves",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What equation links wave speed, frequency and wavelength?",
+      "back": "v = fλ.",
+      "accept": [
+        "v=f lambda",
+        "v=flambda",
+        "v=fλ"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_period_frequency",
+      "subject": "Physics",
+      "topic": "Waves",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How are period and frequency related?",
+      "back": "T = 1/f.",
+      "accept": [
+        "t=1/f",
+        "1/f"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_phase_cycle",
+      "subject": "Physics",
+      "topic": "Waves",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What phase difference is one complete cycle?",
+      "back": "360° or 2π radians.",
+      "accept": [
+        "360",
+        "360 degrees",
+        "2pi",
+        "2 pi",
+        "2π"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_stationary_nodes",
+      "subject": "Physics",
+      "topic": "Stationary waves",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are nodes and antinodes?",
+      "back": "Nodes have zero amplitude; antinodes have maximum amplitude.",
+      "visual": "stationary",
+      "concepts": [
+        [
+          "node"
+        ],
+        [
+          "zero",
+          "no amplitude"
+        ],
+        [
+          "antinode"
+        ],
+        [
+          "maximum",
+          "max amplitude"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_stationary_spacing",
+      "subject": "Physics",
+      "topic": "Stationary waves",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the separation of adjacent nodes in a stationary wave?",
+      "back": "λ/2.",
+      "accept": [
+        "lambda/2",
+        "λ/2",
+        "half a wavelength"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_superposition",
+      "subject": "Physics",
+      "topic": "Waves",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the principle of superposition?",
+      "back": "When waves overlap, resultant displacement is the vector/algebraic sum of the individual displacements.",
+      "concepts": [
+        [
+          "overlap"
+        ],
+        [
+          "sum",
+          "add"
+        ],
+        [
+          "displacement"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_double_slit",
+      "subject": "Physics",
+      "topic": "Interference",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the Young double-slit fringe-spacing equation?",
+      "back": "w = λD/s.",
+      "accept": [
+        "w=lambda d/s",
+        "w=λd/s",
+        "lambda d/s"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_grating",
+      "subject": "Physics",
+      "topic": "Diffraction grating",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the diffraction-grating equation?",
+      "back": "d sin θ = nλ.",
+      "accept": [
+        "d sin theta=n lambda",
+        "d sintheta=nlambda",
+        "d sin θ = nλ"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_refractive_index",
+      "subject": "Physics",
+      "topic": "Refraction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How is refractive index related to wave speed?",
+      "back": "n = c/v.",
+      "accept": [
+        "n=c/v",
+        "c/v"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_snell",
+      "subject": "Physics",
+      "topic": "Refraction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State Snell's law for two media.",
+      "back": "n₁ sin θ₁ = n₂ sin θ₂.",
+      "accept": [
+        "n1 sin theta1=n2 sin theta2",
+        "n1sintheta1=n2sintheta2"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_tir_conditions",
+      "subject": "Physics",
+      "topic": "Total internal reflection",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are the two conditions for total internal reflection?",
+      "back": "Light travels from higher to lower refractive index and the incidence angle exceeds the critical angle.",
+      "concepts": [
+        [
+          "higher",
+          "dense",
+          "larger refractive"
+        ],
+        [
+          "lower",
+          "less dense",
+          "smaller refractive"
+        ],
+        [
+          "critical angle"
+        ],
+        [
+          "greater",
+          "exceeds",
+          "above"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_diffraction",
+      "subject": "Physics",
+      "topic": "Diffraction",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When is diffraction most noticeable?",
+      "back": "When the gap size is comparable with the wavelength.",
+      "concepts": [
+        [
+          "gap",
+          "aperture"
+        ],
+        [
+          "wavelength"
+        ],
+        [
+          "similar",
+          "comparable",
+          "same order"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_resultant_perp",
+      "subject": "Physics",
+      "topic": "Vectors",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you find the magnitude of two perpendicular vector components x and y?",
+      "back": "R = √(x² + y²).",
+      "accept": [
+        "sqrt(x^2+y^2)",
+        "square root x squared plus y squared",
+        "pythagoras"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_moment_eq",
+      "subject": "Physics",
+      "topic": "Moments",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the principle of moments in equilibrium?",
+      "back": "Total clockwise moment = total anticlockwise moment about the same point.",
+      "visual": "moment",
+      "concepts": [
+        [
+          "clockwise"
+        ],
+        [
+          "anticlockwise"
+        ],
+        [
+          "equal",
+          "same"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_suvat_condition",
+      "subject": "Physics",
+      "topic": "Kinematics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When can SUVAT equations be used?",
+      "back": "Only when acceleration is constant.",
+      "accept": [
+        "constant acceleration",
+        "acceleration constant"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_projectile_independent",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What key idea lets you solve projectile motion?",
+      "back": "Horizontal and vertical motion are independent and share the same time.",
+      "visual": "projectile",
+      "concepts": [
+        [
+          "horizontal"
+        ],
+        [
+          "vertical"
+        ],
+        [
+          "independent"
+        ],
+        [
+          "same time",
+          "time"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_projectile_horizontal",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Ignoring air resistance, what is horizontal acceleration of a projectile?",
+      "back": "0 m s⁻².",
+      "accept": [
+        "0",
+        "zero",
+        "0 m/s2"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_top_projectile",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "At maximum height, what are vertical velocity and acceleration?",
+      "back": "Vertical velocity = 0; acceleration is still g downward.",
+      "concepts": [
+        [
+          "velocity",
+          "vy"
+        ],
+        [
+          "zero",
+          "0"
+        ],
+        [
+          "acceleration",
+          "g"
+        ],
+        [
+          "down",
+          "downward"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_newton3",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What makes a Newton's third-law pair?",
+      "back": "Equal and opposite forces of the same type acting on different objects.",
+      "concepts": [
+        [
+          "equal"
+        ],
+        [
+          "opposite"
+        ],
+        [
+          "different objects"
+        ],
+        [
+          "same type"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_momentum",
+      "subject": "Physics",
+      "topic": "Momentum",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is momentum?",
+      "back": "p = mv.",
+      "accept": [
+        "p=mv",
+        "mv"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_impulse",
+      "subject": "Physics",
+      "topic": "Momentum",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How are impulse and momentum change related?",
+      "back": "Impulse = FΔt = Δp.",
+      "accept": [
+        "f delta t=delta p",
+        "fdt=dp",
+        "impulse=change in momentum"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_force_time_area",
+      "subject": "Physics",
+      "topic": "Momentum",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does area under a force–time graph represent?",
+      "back": "Impulse, equal to change in momentum.",
+      "concepts": [
+        [
+          "impulse"
+        ],
+        [
+          "momentum",
+          "change in momentum"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_work_angle",
+      "subject": "Physics",
+      "topic": "Energy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is work done by a force at angle θ to displacement?",
+      "back": "W = Fs cos θ.",
+      "accept": [
+        "w=fs cos theta",
+        "fs cos theta"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_power_fv",
+      "subject": "Physics",
+      "topic": "Power",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When force and velocity are parallel, what power equation can be used?",
+      "back": "P = Fv.",
+      "accept": [
+        "p=fv",
+        "fv"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_hooke",
+      "subject": "Physics",
+      "topic": "Materials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State Hooke's law equation.",
+      "back": "F = kΔL, while force is proportional to extension.",
+      "accept": [
+        "f=k delta l",
+        "f=kx",
+        "f=k extension"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_stress",
+      "subject": "Physics",
+      "topic": "Materials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is tensile stress?",
+      "back": "stress = F/A, in Pa.",
+      "accept": [
+        "f/a",
+        "force/area",
+        "force divided by area"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_strain",
+      "subject": "Physics",
+      "topic": "Materials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is tensile strain?",
+      "back": "strain = ΔL/L; it has no unit.",
+      "accept": [
+        "delta l/l",
+        "extension/original length",
+        "extension divided by original length"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_young",
+      "subject": "Physics",
+      "topic": "Materials",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is Young modulus?",
+      "back": "E = stress/strain.",
+      "visual": "young",
+      "accept": [
+        "stress/strain",
+        "stress divided by strain",
+        "e=stress/strain"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_current",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is electric current?",
+      "back": "I = ΔQ/Δt, rate of flow of charge.",
+      "accept": [
+        "i=q/t",
+        "q/t",
+        "charge/time",
+        "rate of flow of charge"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_pd",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Define potential difference.",
+      "back": "Energy transferred per unit charge: V = W/Q.",
+      "concepts": [
+        [
+          "energy",
+          "work"
+        ],
+        [
+          "per charge",
+          "unit charge"
+        ],
+        [
+          "w/q"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_emf",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Define emf.",
+      "back": "Energy supplied by the source per unit charge.",
+      "concepts": [
+        [
+          "energy"
+        ],
+        [
+          "source",
+          "cell"
+        ],
+        [
+          "unit charge",
+          "per charge"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_resistance",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is resistance?",
+      "back": "R = V/I.",
+      "accept": [
+        "r=v/i",
+        "v/i"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_resistivity",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What equation links resistance and resistivity?",
+      "back": "R = ρL/A.",
+      "accept": [
+        "r=rho l/a",
+        "rho l/a",
+        "r=ρl/a"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_series_current",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is true of current in a series circuit?",
+      "back": "The current is the same at every point.",
+      "concepts": [
+        [
+          "same",
+          "equal"
+        ],
+        [
+          "current"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_series_pd",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What happens to p.d. in a series circuit?",
+      "back": "The supply p.d. equals the sum of component p.d.s.",
+      "concepts": [
+        [
+          "sum",
+          "add"
+        ],
+        [
+          "potential difference",
+          "pd",
+          "voltage"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_parallel_pd",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is true of p.d. across parallel branches?",
+      "back": "It is the same across each branch.",
+      "concepts": [
+        [
+          "same",
+          "equal"
+        ],
+        [
+          "branch"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_parallel_current",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does current behave at a junction?",
+      "back": "Total current into a junction equals total current out.",
+      "concepts": [
+        [
+          "current"
+        ],
+        [
+          "in",
+          "enter"
+        ],
+        [
+          "out",
+          "leave"
+        ],
+        [
+          "equal"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_power_elec",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Give three electrical power equations.",
+      "back": "P = VI = I²R = V²/R.",
+      "concepts": [
+        [
+          "vi"
+        ],
+        [
+          "i2r",
+          "i squared r"
+        ],
+        [
+          "v2/r",
+          "v squared over r"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_potential_divider",
+      "subject": "Physics",
+      "topic": "Potential dividers",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "For two series resistors, how is output p.d. found?",
+      "back": "Vout = Vin × R₂/(R₁ + R₂), taking R₂ across the output.",
+      "visual": "divider",
+      "accept": [
+        "vout=vin r2/(r1+r2)",
+        "vin*r2/(r1+r2)"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_thermistor",
+      "subject": "Physics",
+      "topic": "Sensors",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "For an NTC thermistor, what happens to resistance as temperature rises?",
+      "back": "Resistance decreases.",
+      "accept": [
+        "decreases",
+        "falls",
+        "goes down"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_ldr",
+      "subject": "Physics",
+      "topic": "Sensors",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What happens to an LDR's resistance as light intensity increases?",
+      "back": "Resistance decreases.",
+      "accept": [
+        "decreases",
+        "falls",
+        "goes down"
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_filament_iv",
+      "subject": "Physics",
+      "topic": "I–V characteristics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why does a filament lamp's resistance rise at high current?",
+      "back": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+      "concepts": [
+        [
+          "hotter",
+          "temperature"
+        ],
+        [
+          "vibration"
+        ],
+        [
+          "collision"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_diode",
+      "subject": "Physics",
+      "topic": "I–V characteristics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does an idealised diode conduct?",
+      "back": "It conducts strongly in the forward direction after its threshold and very little in reverse.",
+      "concepts": [
+        [
+          "forward"
+        ],
+        [
+          "reverse"
+        ],
+        [
+          "little",
+          "no current"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ar_def",
+      "subject": "Chemistry",
+      "topic": "Atomic structure",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Define relative atomic mass, Ar.",
+      "back": "Weighted mean mass of an atom relative to 1/12 of the mass of a carbon-12 atom.",
+      "concepts": [
+        [
+          "weighted mean",
+          "weighted average"
+        ],
+        [
+          "1/12",
+          "one twelfth"
+        ],
+        [
+          "carbon 12",
+          "c12"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_isotope",
+      "subject": "Chemistry",
+      "topic": "Atomic structure",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are isotopes?",
+      "back": "Atoms of the same element with the same proton number but different neutron numbers.",
+      "concepts": [
+        [
+          "same proton",
+          "same atomic"
+        ],
+        [
+          "different neutron"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ionisation_def",
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Define first ionisation energy.",
+      "back": "Energy required to remove one electron from each atom in one mole of gaseous atoms to form gaseous 1+ ions.",
+      "concepts": [
+        [
+          "one electron"
+        ],
+        [
+          "one mole"
+        ],
+        [
+          "gaseous atom"
+        ],
+        [
+          "gaseous",
+          "1+",
+          "positive ion"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ie_trend",
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why generally does first ionisation energy increase across a period?",
+      "back": "Nuclear charge increases while shielding is similar, so attraction to the outer electron increases and atomic radius falls.",
+      "concepts": [
+        [
+          "nuclear charge"
+        ],
+        [
+          "shielding",
+          "similar shielding"
+        ],
+        [
+          "attraction"
+        ],
+        [
+          "radius",
+          "distance"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_avogadro",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the Avogadro constant?",
+      "back": "6.02 × 10²³ mol⁻¹ particles per mole.",
+      "accept": [
+        "6.02x10^23",
+        "6.02e23",
+        "6.022e23"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_moles_mass",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you calculate moles from mass?",
+      "back": "n = m/Mr.",
+      "accept": [
+        "n=m/mr",
+        "m/mr"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_concentration",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you calculate concentration in mol dm⁻³?",
+      "back": "c = n/V, with V in dm³.",
+      "accept": [
+        "c=n/v",
+        "n/v"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_yield",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is percentage yield?",
+      "back": "actual yield ÷ theoretical yield × 100.",
+      "accept": [
+        "actual/theoretical x100",
+        "actual yield/theoretical yield*100"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_atom_economy",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is atom economy?",
+      "back": "Mr of desired product ÷ total Mr of reactants, accounting for coefficients, × 100.",
+      "concepts": [
+        [
+          "desired product"
+        ],
+        [
+          "reactant"
+        ],
+        [
+          "100"
+        ],
+        [
+          "coefficient",
+          "stoichiometric"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_purity",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How is percentage purity calculated?",
+      "back": "mass of pure substance ÷ total sample mass × 100.",
+      "accept": [
+        "pure mass/total mass x100",
+        "mass pure/sample mass*100"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_hydrate",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you find x in a hydrated salt, salt·xH₂O?",
+      "back": "Find moles of anhydrous salt and water, then divide by the smaller amount to get the ratio.",
+      "concepts": [
+        [
+          "moles"
+        ],
+        [
+          "salt"
+        ],
+        [
+          "water"
+        ],
+        [
+          "ratio"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ionic_bond",
+      "subject": "Chemistry",
+      "topic": "Bonding",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is ionic bonding?",
+      "back": "Electrostatic attraction between oppositely charged ions.",
+      "concepts": [
+        [
+          "electrostatic"
+        ],
+        [
+          "opposite",
+          "oppositely"
+        ],
+        [
+          "ion"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_covalent_bond",
+      "subject": "Chemistry",
+      "topic": "Bonding",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is a covalent bond?",
+      "back": "A shared pair of electrons attracted to the nuclei of the bonded atoms.",
+      "concepts": [
+        [
+          "shared pair",
+          "pair of electrons"
+        ],
+        [
+          "nuclei",
+          "nucleus"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_metallic_bond",
+      "subject": "Chemistry",
+      "topic": "Bonding",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is metallic bonding?",
+      "back": "Electrostatic attraction between positive metal ions and delocalised electrons.",
+      "concepts": [
+        [
+          "positive",
+          "metal ions"
+        ],
+        [
+          "delocalised electron"
+        ],
+        [
+          "electrostatic"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_shape_linear",
+      "subject": "Chemistry",
+      "topic": "Shapes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What bond angle is expected for two electron pairs around a central atom?",
+      "back": "180°.",
+      "accept": [
+        "180",
+        "180 degrees"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_shape_trig",
+      "subject": "Chemistry",
+      "topic": "Shapes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What bond angle is expected for three bonding pairs around a central atom?",
+      "back": "120°.",
+      "accept": [
+        "120",
+        "120 degrees"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_shape_tetra",
+      "subject": "Chemistry",
+      "topic": "Shapes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What bond angle is expected for four bonding pairs?",
+      "back": "109.5°.",
+      "accept": [
+        "109.5",
+        "109.5 degrees"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_lone_pair",
+      "subject": "Chemistry",
+      "topic": "Shapes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why do lone pairs reduce bond angles?",
+      "back": "Lone-pair electron density repels more strongly than bonding-pair electron density.",
+      "concepts": [
+        [
+          "lone pair"
+        ],
+        [
+          "repel",
+          "repulsion"
+        ],
+        [
+          "more",
+          "stronger"
+        ],
+        [
+          "bonding pair"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_hbond",
+      "subject": "Chemistry",
+      "topic": "Intermolecular forces",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When can hydrogen bonding occur?",
+      "back": "When H is bonded to N, O or F and interacts with a lone pair on N, O or F of another molecule.",
+      "concepts": [
+        [
+          "h"
+        ],
+        [
+          "n",
+          "o",
+          "f"
+        ],
+        [
+          "lone pair"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_enthalpy_def",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Define standard enthalpy change of reaction.",
+      "back": "Enthalpy change when reactants in their standard states react in the stoichiometric equation under standard conditions.",
+      "concepts": [
+        [
+          "standard state"
+        ],
+        [
+          "standard conditions"
+        ],
+        [
+          "stoichiometric",
+          "equation"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_hess",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What principle is used in Hess cycles?",
+      "back": "Enthalpy change is independent of route because enthalpy is a state function.",
+      "concepts": [
+        [
+          "independent",
+          "same"
+        ],
+        [
+          "route",
+          "path"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_bondenthalpy",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Using mean bond enthalpies, how is ΔH estimated?",
+      "back": "Σ bonds broken − Σ bonds formed.",
+      "accept": [
+        "bonds broken - bonds formed",
+        "broken minus formed",
+        "sum broken minus sum formed"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_collision",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What two conditions make a collision successful?",
+      "back": "Particles collide with energy at least equal to Ea and with a suitable orientation.",
+      "concepts": [
+        [
+          "activation energy",
+          "ea",
+          "enough energy"
+        ],
+        [
+          "orientation"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_catalyst",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does a catalyst increase reaction rate?",
+      "back": "It provides an alternative route with lower activation energy.",
+      "concepts": [
+        [
+          "alternative route",
+          "alternative pathway"
+        ],
+        [
+          "lower activation energy",
+          "lower ea"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_lechatelier",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State Le Chatelier's principle.",
+      "back": "A system at equilibrium opposes a change in conditions by shifting to reduce that change.",
+      "concepts": [
+        [
+          "equilibrium"
+        ],
+        [
+          "oppose",
+          "counteract"
+        ],
+        [
+          "change"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_kc",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What goes into a Kc expression?",
+      "back": "Equilibrium concentrations raised to stoichiometric coefficients; pure solids are omitted.",
+      "concepts": [
+        [
+          "equilibrium concentration"
+        ],
+        [
+          "coefficient",
+          "power"
+        ],
+        [
+          "solid",
+          "omit"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_redox_oxid",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is oxidation in terms of electrons and oxidation state?",
+      "back": "Loss of electrons; oxidation state increases.",
+      "concepts": [
+        [
+          "loss",
+          "lose"
+        ],
+        [
+          "electron"
+        ],
+        [
+          "increases",
+          "higher oxidation"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_redox_reduc",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is reduction in terms of electrons and oxidation state?",
+      "back": "Gain of electrons; oxidation state decreases.",
+      "concepts": [
+        [
+          "gain"
+        ],
+        [
+          "electron"
+        ],
+        [
+          "decreases",
+          "lower oxidation"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_period_atomic",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why does atomic radius generally decrease across Period 3?",
+      "back": "Nuclear charge increases while shielding is similar, so outer electrons are pulled closer.",
+      "concepts": [
+        [
+          "nuclear charge"
+        ],
+        [
+          "shielding"
+        ],
+        [
+          "closer",
+          "radius decreases"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_group2_reactivity",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does Group 2 reactivity change down the group?",
+      "back": "It increases because outer electrons are further from the nucleus and more shielded, so ionisation energies fall.",
+      "concepts": [
+        [
+          "increases"
+        ],
+        [
+          "shielding"
+        ],
+        [
+          "distance",
+          "further"
+        ],
+        [
+          "ionisation energy",
+          "falls"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_group2_hydroxide",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does Group 2 hydroxide solubility change down the group?",
+      "back": "It increases.",
+      "accept": [
+        "increases",
+        "more soluble"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_group2_sulfate",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does Group 2 sulfate solubility change down the group?",
+      "back": "It decreases.",
+      "accept": [
+        "decreases",
+        "less soluble"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_halogen_oxidising",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does halogen oxidising power change down Group 7?",
+      "back": "It decreases.",
+      "accept": [
+        "decreases",
+        "falls"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_halide_reducing",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How does halide-ion reducing power change down Group 7?",
+      "back": "It increases.",
+      "accept": [
+        "increases",
+        "rises"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_displacement_halogen",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When will one halogen displace another halide?",
+      "back": "A more reactive/stronger oxidising halogen displaces the halide of a less reactive halogen.",
+      "concepts": [
+        [
+          "more reactive",
+          "stronger oxidising"
+        ],
+        [
+          "less reactive",
+          "weaker"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_homolytic",
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is homolytic fission?",
+      "back": "Each atom takes one electron from the covalent bond, forming radicals.",
+      "concepts": [
+        [
+          "one electron",
+          "each"
+        ],
+        [
+          "radical"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_heterolytic",
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is heterolytic fission?",
+      "back": "Both bonding electrons go to one atom, forming ions.",
+      "concepts": [
+        [
+          "both",
+          "pair"
+        ],
+        [
+          "one atom"
+        ],
+        [
+          "ion"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_electrophile",
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is an electrophile?",
+      "back": "An electron-pair acceptor.",
+      "accept": [
+        "electron pair acceptor",
+        "accepts electron pair"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_nucleophile",
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is a nucleophile?",
+      "back": "An electron-pair donor.",
+      "accept": [
+        "electron pair donor",
+        "donates electron pair"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_radical_sub",
+      "subject": "Chemistry",
+      "topic": "Alkanes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are the three stages of free-radical substitution?",
+      "back": "Initiation, propagation and termination.",
+      "accept": [
+        "initiation propagation termination",
+        "initiation, propagation, termination"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_halogen_uv",
+      "subject": "Chemistry",
+      "topic": "Alkanes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What condition starts free-radical substitution of an alkane with a halogen?",
+      "back": "UV light.",
+      "accept": [
+        "uv",
+        "ultraviolet",
+        "uv light"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_alkene_bromine",
+      "subject": "Chemistry",
+      "topic": "Alkenes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What mechanism does bromine undergo with an alkene?",
+      "back": "Electrophilic addition.",
+      "accept": [
+        "electrophilic addition"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_markovnikov",
+      "subject": "Chemistry",
+      "topic": "Alkenes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why is one electrophilic-addition product often major?",
+      "back": "It forms via the more stable carbocation intermediate.",
+      "concepts": [
+        [
+          "stable",
+          "stability"
+        ],
+        [
+          "carbocation"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_halogeno_sub",
+      "subject": "Chemistry",
+      "topic": "Halogenoalkanes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What mechanism occurs when OH⁻ reacts with a halogenoalkane to form an alcohol?",
+      "back": "Nucleophilic substitution.",
+      "accept": [
+        "nucleophilic substitution"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_elimination",
+      "subject": "Chemistry",
+      "topic": "Halogenoalkanes",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What conditions favour elimination of a halogenoalkane with OH⁻?",
+      "back": "Hot ethanolic hydroxide.",
+      "concepts": [
+        [
+          "hot",
+          "heat"
+        ],
+        [
+          "ethanol",
+          "ethanolic"
+        ],
+        [
+          "hydroxide",
+          "oh"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_alcohol_primary",
+      "subject": "Chemistry",
+      "topic": "Alcohols",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+      "back": "An aldehyde.",
+      "accept": [
+        "aldehyde"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_alcohol_primary_reflux",
+      "subject": "Chemistry",
+      "topic": "Alcohols",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What forms when a primary alcohol is oxidised under reflux with excess oxidant?",
+      "back": "A carboxylic acid.",
+      "accept": [
+        "carboxylic acid"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_alcohol_secondary",
+      "subject": "Chemistry",
+      "topic": "Alcohols",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What forms when a secondary alcohol is oxidised?",
+      "back": "A ketone.",
+      "accept": [
+        "ketone"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ir_oh",
+      "subject": "Chemistry",
+      "topic": "Organic analysis",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Where is the broad O–H absorption of an alcohol in an IR spectrum?",
+      "back": "About 3230–3550 cm⁻¹.",
+      "accept": [
+        "3230-3550",
+        "3230 to 3550",
+        "around 3300"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ir_carbonyl",
+      "subject": "Chemistry",
+      "topic": "Organic analysis",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Where is the strong C=O absorption approximately?",
+      "back": "Around 1680–1750 cm⁻¹.",
+      "accept": [
+        "1680-1750",
+        "1680 to 1750",
+        "around 1700"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_optical",
+      "subject": "Chemistry",
+      "topic": "Optical isomerism",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What causes optical isomerism?",
+      "back": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers.",
+      "concepts": [
+        [
+          "four different",
+          "4 different"
+        ],
+        [
+          "chiral"
+        ],
+        [
+          "mirror"
+        ],
+        [
+          "non superimposable",
+          "not superimposable"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_cip",
+      "subject": "Chemistry",
+      "topic": "Optical isomerism",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How are priorities assigned using CIP rules?",
+      "back": "Higher atomic number of the directly attached atom gets higher priority; move outward at the first difference.",
+      "concepts": [
+        [
+          "atomic number"
+        ],
+        [
+          "higher priority"
+        ],
+        [
+          "first difference"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_aldehyde_tollens",
+      "subject": "Chemistry",
+      "topic": "Aldehydes and ketones",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does Tollens' reagent do with an aldehyde?",
+      "back": "It is reduced to silver, producing a silver mirror; ketones give no reaction.",
+      "concepts": [
+        [
+          "silver mirror",
+          "silver"
+        ],
+        [
+          "aldehyde"
+        ],
+        [
+          "ketone",
+          "no reaction"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_carbonyl_reduction",
+      "subject": "Chemistry",
+      "topic": "Aldehydes and ketones",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What reagent reduces aldehydes and ketones?",
+      "back": "NaBH₄, sodium tetrahydridoborate.",
+      "accept": [
+        "nabh4",
+        "sodium borohydride",
+        "sodium tetrahydridoborate"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_carbonyl_hcn",
+      "subject": "Chemistry",
+      "topic": "Aldehydes and ketones",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What mechanism occurs when HCN adds to a carbonyl compound?",
+      "back": "Nucleophilic addition.",
+      "accept": [
+        "nucleophilic addition"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_carboxy_acid",
+      "subject": "Chemistry",
+      "topic": "Carboxylic acids",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why are carboxylic acids weak acids?",
+      "back": "They only partially dissociate in water.",
+      "concepts": [
+        [
+          "partial",
+          "partially"
+        ],
+        [
+          "dissociate",
+          "ionise"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_esterification",
+      "subject": "Chemistry",
+      "topic": "Esters",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are the reagents and catalyst for esterification?",
+      "back": "A carboxylic acid + alcohol, with concentrated H₂SO₄ catalyst and heat/reflux.",
+      "concepts": [
+        [
+          "carboxylic acid"
+        ],
+        [
+          "alcohol"
+        ],
+        [
+          "sulfuric",
+          "h2so4"
+        ],
+        [
+          "heat",
+          "reflux"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_acyl_chloride_water",
+      "subject": "Chemistry",
+      "topic": "Acyl chlorides",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What happens when an acyl chloride reacts with water?",
+      "back": "A carboxylic acid and HCl are formed.",
+      "concepts": [
+        [
+          "carboxylic acid"
+        ],
+        [
+          "hcl",
+          "hydrogen chloride"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_acyl_chloride_alcohol",
+      "subject": "Chemistry",
+      "topic": "Acyl chlorides",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does an acyl chloride form with an alcohol?",
+      "back": "An ester and HCl.",
+      "concepts": [
+        [
+          "ester"
+        ],
+        [
+          "hcl",
+          "hydrogen chloride"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_acyl_chloride_ammonia",
+      "subject": "Chemistry",
+      "topic": "Acyl chlorides",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does an acyl chloride form with ammonia?",
+      "back": "A primary amide; HCl is neutralised by excess ammonia.",
+      "concepts": [
+        [
+          "amide"
+        ],
+        [
+          "ammonia"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_lattice_diss",
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Define lattice dissociation enthalpy.",
+      "back": "Enthalpy change when one mole of an ionic solid is separated into gaseous ions.",
+      "concepts": [
+        [
+          "one mole"
+        ],
+        [
+          "ionic solid"
+        ],
+        [
+          "gaseous ions"
+        ],
+        [
+          "separated",
+          "dissociation"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_lattice_form",
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How is lattice formation enthalpy related to lattice dissociation enthalpy?",
+      "back": "Same magnitude, opposite sign.",
+      "concepts": [
+        [
+          "same magnitude",
+          "equal"
+        ],
+        [
+          "opposite sign"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ea1",
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is first electron affinity?",
+      "back": "Enthalpy change when one mole of gaseous atoms each gains one electron to form gaseous 1− ions.",
+      "concepts": [
+        [
+          "one mole"
+        ],
+        [
+          "gaseous atom"
+        ],
+        [
+          "one electron"
+        ],
+        [
+          "gaseous",
+          "1-",
+          "negative ion"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_entropy",
+      "subject": "Chemistry",
+      "topic": "Entropy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When does entropy usually increase?",
+      "back": "When particles become more dispersed/disordered, especially when more gas particles are formed.",
+      "concepts": [
+        [
+          "more dispersed",
+          "disorder"
+        ],
+        [
+          "gas",
+          "more gas"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_gibbs_feasible",
+      "subject": "Chemistry",
+      "topic": "Gibbs free energy",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What sign of ΔG indicates thermodynamic feasibility under the stated conditions?",
+      "back": "ΔG ≤ 0; negative ΔG is feasible.",
+      "accept": [
+        "negative",
+        "less than zero",
+        "<=0",
+        "≤0"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_rate_order0",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does zero order in A mean?",
+      "back": "Changing [A] does not change the rate; [A]⁰ = 1.",
+      "concepts": [
+        [
+          "no change",
+          "does not change"
+        ],
+        [
+          "rate"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_rate_order1",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "If [A] doubles and rate doubles, what is the order in A?",
+      "back": "First order.",
+      "accept": [
+        "first",
+        "1",
+        "first order"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_rate_order2",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "If [A] doubles and rate quadruples, what is the order in A?",
+      "back": "Second order.",
+      "accept": [
+        "second",
+        "2",
+        "second order"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_k_units",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you determine units of the rate constant k?",
+      "back": "Rearrange the rate equation and substitute the units of rate and concentration.",
+      "concepts": [
+        [
+          "rearrange"
+        ],
+        [
+          "rate equation"
+        ],
+        [
+          "units"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_arr_eq",
+      "subject": "Chemistry",
+      "topic": "Arrhenius",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State the logarithmic Arrhenius equation.",
+      "back": "ln k = ln A − Ea/(RT).",
+      "accept": [
+        "lnk=lna-ea/rt",
+        "ln k = ln a - ea/rt"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_strong_acid",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "For a strong monoprotic acid of concentration c, what is [H⁺]?",
+      "back": "Approximately c because it fully dissociates.",
+      "concepts": [
+        [
+          "c",
+          "concentration"
+        ],
+        [
+          "fully",
+          "complete"
+        ],
+        [
+          "dissociate"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ph",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How is pH calculated from [H⁺]?",
+      "back": "pH = −log₁₀[H⁺].",
+      "accept": [
+        "-log[h+]",
+        "negative log h+",
+        "pH=-log10[h+]"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_ka",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Write the Ka expression for HA ⇌ H⁺ + A⁻.",
+      "back": "Ka = [H⁺][A⁻]/[HA].",
+      "accept": [
+        "[h+][a-]/[ha]",
+        "ka=[h+][a-]/[ha]"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_kw_relation",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you find [H⁺] from [OH⁻] using Kw?",
+      "back": "[H⁺] = Kw/[OH⁻].",
+      "accept": [
+        "kw/[oh-]",
+        "[h+]=kw/[oh-]"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_kp_temp",
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What factor changes the value of Kp for a given reaction?",
+      "back": "Temperature.",
+      "accept": [
+        "temperature",
+        "temp"
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_kp_pressure",
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Does changing total pressure at constant temperature change Kp?",
+      "back": "No. It may change equilibrium position, but Kp itself is unchanged at fixed temperature.",
+      "concepts": [
+        [
+          "no",
+          "unchanged",
+          "same"
+        ],
+        [
+          "temperature"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_proof_counter",
+      "subject": "Maths",
+      "topic": "Proof",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How can a universal statement be disproved?",
+      "back": "Give one valid counterexample.",
+      "accept": [
+        "counterexample",
+        "one counterexample"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_proof_exhaust",
+      "subject": "Maths",
+      "topic": "Proof",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is proof by exhaustion?",
+      "back": "Check every possible case in a finite set of possibilities.",
+      "concepts": [
+        [
+          "every",
+          "all"
+        ],
+        [
+          "case"
+        ],
+        [
+          "finite"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_indices_neg",
+      "subject": "Maths",
+      "topic": "Algebra",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is x⁻ⁿ?",
+      "back": "1/xⁿ.",
+      "accept": [
+        "1/x^n",
+        "one over x^n"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_indices_frac",
+      "subject": "Maths",
+      "topic": "Algebra",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is x^(1/n)?",
+      "back": "The nth root of x.",
+      "accept": [
+        "nth root of x",
+        "root n of x"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_surds_rationalise",
+      "subject": "Maths",
+      "topic": "Algebra",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you rationalise 1/(a+√b)?",
+      "back": "Multiply numerator and denominator by the conjugate a−√b.",
+      "concepts": [
+        [
+          "conjugate"
+        ],
+        [
+          "a-root b",
+          "a - sqrt b"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_quad_discriminant",
+      "subject": "Maths",
+      "topic": "Quadratics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does the discriminant tell you?",
+      "back": "For ax²+bx+c, Δ=b²−4ac: >0 two real roots, =0 repeated root, <0 no real roots.",
+      "concepts": [
+        [
+          "b2-4ac",
+          "b squared minus 4ac"
+        ],
+        [
+          "two real"
+        ],
+        [
+          "repeated",
+          "one real"
+        ],
+        [
+          "no real"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_complete_square",
+      "subject": "Maths",
+      "topic": "Quadratics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Why is completing the square useful for a quadratic?",
+      "back": "It reveals the turning point and helps solve or sketch the quadratic.",
+      "concepts": [
+        [
+          "turning point",
+          "vertex"
+        ],
+        [
+          "solve",
+          "sketch"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_function_composite",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does fg(x) mean?",
+      "back": "f(g(x)): apply g first, then f.",
+      "concepts": [
+        [
+          "f(g(x))",
+          "f of g"
+        ],
+        [
+          "g first"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_inverse",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How do you find an inverse function?",
+      "back": "Write y=f(x), rearrange for x, then swap x and y / write f⁻¹(x).",
+      "concepts": [
+        [
+          "rearrange"
+        ],
+        [
+          "swap",
+          "interchange"
+        ],
+        [
+          "inverse",
+          "f-1"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_inverse_condition",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When does a function have an inverse over its domain?",
+      "back": "When it is one-to-one.",
+      "accept": [
+        "one to one",
+        "one-to-one",
+        "1 to 1"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_modulus",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does y=|f(x)| do to a graph?",
+      "back": "Reflects any part below the x-axis in the x-axis; parts above stay unchanged.",
+      "concepts": [
+        [
+          "below",
+          "negative"
+        ],
+        [
+          "reflect"
+        ],
+        [
+          "x axis"
+        ],
+        [
+          "above",
+          "unchanged"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_line_gradient",
+      "subject": "Maths",
+      "topic": "Coordinate geometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the gradient between (x₁,y₁) and (x₂,y₂)?",
+      "back": "m=(y₂−y₁)/(x₂−x₁).",
+      "accept": [
+        "(y2-y1)/(x2-x1)",
+        "change y/change x"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_perp_grad",
+      "subject": "Maths",
+      "topic": "Coordinate geometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How are gradients of perpendicular non-vertical lines related?",
+      "back": "m₁m₂ = −1.",
+      "accept": [
+        "m1m2=-1",
+        "product=-1",
+        "negative reciprocal"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_circle",
+      "subject": "Maths",
+      "topic": "Coordinate geometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the equation of a circle centre (a,b), radius r?",
+      "back": "(x−a)²+(y−b)²=r².",
+      "accept": [
+        "(x-a)^2+(y-b)^2=r^2"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_circle_tangent",
+      "subject": "Maths",
+      "topic": "Coordinate geometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How is a tangent to a circle related to the radius at the contact point?",
+      "back": "They are perpendicular.",
+      "accept": [
+        "perpendicular",
+        "90 degrees"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_arith_nth",
+      "subject": "Maths",
+      "topic": "Sequences",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the nth term of an arithmetic sequence?",
+      "back": "uₙ = a + (n−1)d.",
+      "accept": [
+        "a+(n-1)d",
+        "un=a+(n-1)d"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_arith_sum",
+      "subject": "Maths",
+      "topic": "Sequences",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the sum of the first n terms of an arithmetic sequence?",
+      "back": "Sₙ = n/2[2a+(n−1)d].",
+      "accept": [
+        "n/2(2a+(n-1)d)",
+        "n/2[2a+(n-1)d]"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_geom_nth",
+      "subject": "Maths",
+      "topic": "Sequences",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the nth term of a geometric sequence?",
+      "back": "uₙ = ar^(n−1).",
+      "accept": [
+        "ar^(n-1)",
+        "a r^(n-1)"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_geom_sum",
+      "subject": "Maths",
+      "topic": "Sequences",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the finite geometric sum?",
+      "back": "Sₙ = a(1−rⁿ)/(1−r), for r≠1.",
+      "accept": [
+        "a(1-r^n)/(1-r)"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_geom_infinite",
+      "subject": "Maths",
+      "topic": "Sequences",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "When does a geometric series have a sum to infinity, and what is it?",
+      "back": "If |r|<1, S∞ = a/(1−r).",
+      "concepts": [
+        [
+          "|r|<1",
+          "r between -1 and 1"
+        ],
+        [
+          "a/(1-r)"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_binomial",
+      "subject": "Maths",
+      "topic": "Binomial expansion",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the general term in (a+b)ⁿ?",
+      "back": "C(n,r) a^(n−r) b^r.",
+      "accept": [
+        "ncr a^(n-r)b^r",
+        "C(n,r)a^(n-r)b^r"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_sine_rule",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State the sine rule.",
+      "back": "a/sin A = b/sin B = c/sin C.",
+      "accept": [
+        "a/sina=b/sinb=c/sinc"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_cosine_rule",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State the cosine rule for side a.",
+      "back": "a²=b²+c²−2bc cos A.",
+      "accept": [
+        "a^2=b^2+c^2-2bc cos a"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_triangle_area",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is the area formula using two sides a,b and included angle C?",
+      "back": "Area = ½ab sin C.",
+      "accept": [
+        "1/2 ab sin c",
+        "0.5ab sin c"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_tan_identity",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "State the tan identity.",
+      "back": "tan x = sin x / cos x.",
+      "accept": [
+        "tanx=sinx/cosx",
+        "tan=sin/cos"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_trig_period",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What are the periods of sin x, cos x and tan x in degrees?",
+      "back": "sin and cos: 360°; tan: 180°.",
+      "concepts": [
+        [
+          "360"
+        ],
+        [
+          "180"
+        ],
+        [
+          "tan"
+        ],
+        [
+          "sin",
+          "cos"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_logs_product",
+      "subject": "Maths",
+      "topic": "Logs",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is logₐ(xy)?",
+      "back": "logₐx + logₐy.",
+      "accept": [
+        "loga x + loga y",
+        "log x + log y"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_logs_power",
+      "subject": "Maths",
+      "topic": "Logs",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What is logₐ(xᵏ)?",
+      "back": "k logₐx.",
+      "accept": [
+        "k loga x",
+        "k log x"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_logs_change",
+      "subject": "Maths",
+      "topic": "Logs",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How can a^x=b be rewritten using logs?",
+      "back": "x = logₐb.",
+      "accept": [
+        "x=loga b",
+        "log base a of b"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_exp_inverse",
+      "subject": "Maths",
+      "topic": "Exponentials and logs",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What functions are inverses of each other?",
+      "back": "y=eˣ and y=ln x.",
+      "concepts": [
+        [
+          "e^x",
+          "exponential"
+        ],
+        [
+          "ln x",
+          "natural log"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_diff_power",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Differentiate xⁿ.",
+      "back": "nx^(n−1).",
+      "accept": [
+        "n x^(n-1)",
+        "nx^(n-1)"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_diff_gradient",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What does dy/dx represent geometrically?",
+      "back": "The gradient of the curve/tangent at that point.",
+      "concepts": [
+        [
+          "gradient",
+          "slope"
+        ],
+        [
+          "tangent",
+          "curve"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_stationary",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What condition identifies a stationary point?",
+      "back": "dy/dx = 0.",
+      "accept": [
+        "dy/dx=0",
+        "derivative=0",
+        "gradient=0"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_second_deriv",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How can d²y/dx² classify a stationary point?",
+      "back": "Positive: local minimum; negative: local maximum.",
+      "concepts": [
+        [
+          "positive",
+          "minimum",
+          "min"
+        ],
+        [
+          "negative",
+          "maximum",
+          "max"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "math_integrate_power",
+      "subject": "Maths",
+      "topic": "Integration",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Integrate xⁿ for n≠−1.",
+      "back": "x^(n+1)/(n+1) + C.",
+      "accept": [
+        "x^(n+1)/(n+1)+c"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_area_curve",
+      "subject": "Maths",
+      "topic": "Integration",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "How is signed area under y=f(x) from a to b found?",
+      "back": "∫ₐᵇ f(x) dx.",
+      "accept": [
+        "integral a to b f(x) dx",
+        "∫a^b f(x)dx"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_vector_mag",
+      "subject": "Maths",
+      "topic": "Vectors",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "Magnitude of vector (a,b)?",
+      "back": "√(a²+b²).",
+      "accept": [
+        "sqrt(a^2+b^2)",
+        "square root a squared plus b squared"
+      ],
+      "active": true
+    },
+    {
+      "id": "math_vector_line",
+      "subject": "Maths",
+      "topic": "Vectors",
+      "kind": "content",
+      "priority": 1,
+      "scope": "mock",
+      "front": "What form can a vector equation of a line take?",
+      "back": "r = a + λb, where a is a position vector and b a direction vector.",
+      "concepts": [
+        [
+          "r=a+lambda b",
+          "r=a+λb"
+        ],
+        [
+          "position"
+        ],
+        [
+          "direction"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_prac_uncert",
+      "subject": "Physics",
+      "topic": "Practical skills",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "Why does increasing the measured interval often reduce percentage uncertainty?",
+      "back": "The absolute uncertainty is similar but becomes a smaller fraction of a larger measured value.",
+      "concepts": [
+        [
+          "absolute uncertainty"
+        ],
+        [
+          "larger"
+        ],
+        [
+          "smaller fraction",
+          "percentage"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "phy_prac_graph",
+      "subject": "Physics",
+      "topic": "Practical skills",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "Why use a best-fit line rather than joining points dot-to-dot?",
+      "back": "A best-fit line reveals the overall relationship and reduces the influence of random scatter.",
+      "concepts": [
+        [
+          "overall",
+          "trend"
+        ],
+        [
+          "random",
+          "scatter"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_prac_meniscus",
+      "subject": "Chemistry",
+      "topic": "Practical skills",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "How should a colourless liquid meniscus be read?",
+      "back": "At eye level, using the bottom of the meniscus.",
+      "concepts": [
+        [
+          "eye level"
+        ],
+        [
+          "bottom",
+          "lower"
+        ],
+        [
+          "meniscus"
+        ]
+      ],
+      "active": true
+    },
+    {
+      "id": "chem_prac_burette",
+      "subject": "Chemistry",
+      "topic": "Practical skills",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "Why are two burette readings involved in one titre?",
+      "back": "The titre is final reading − initial reading, so uncertainty comes from both readings.",
+      "concepts": [
+        [
+          "final"
+        ],
+        [
+          "initial"
+        ],
+        [
+          "subtract",
+          "difference"
+        ]
+      ],
+      "active": true
     }
-  ]
+  ],
+  "meta": {
+    "dailyNewDefault": 18,
+    "weakFirst": true,
+    "practicalMix": "1 practical per 5 content cards",
+    "note": "Known weaknesses are priority 3; general mock content is lower priority."
+  }
 }
