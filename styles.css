@@ -100,3 +100,20 @@
 .character-card .shop-icon img,.outfit-card .shop-icon img{object-position:center 17%}
 .character-card.active-character{border:2px solid var(--blue)}
 @media(max-width:650px){.character-card .shop-icon,.outfit-card .shop-icon{height:178px}}
+
+/* Version 20: topic multi-selection and compact collection controls */
+.topic-family-actions{display:flex;flex-wrap:wrap;gap:6px;padding:8px 9px 2px}
+.topic-family-actions button{font:inherit;font-size:.69rem;font-weight:700;border:1px solid var(--line);border-radius:8px;background:#f1f5f9;color:#1e40af;padding:6px 9px;cursor:pointer}
+.topic-family-actions button:hover,.topic-family-actions button:focus-visible{background:#dbeafe;border-color:#93c5fd}
+.topic-family-choices .check-item.empty-topic{background:#f8fafc}
+.topic-family-choices .check-item.empty-topic small{color:#94a3b8}
+.check-item{cursor:pointer}
+.check-item input[type="checkbox"]{width:16px;height:16px;cursor:pointer;accent-color:var(--blue)}
+#examTopics,#flashTopics{scrollbar-gutter:stable;max-height:min(52vh,490px)}
+#weakList .list-row{min-height:60px}
+#weakList .list-row strong{font-size:.77rem}
+#weakList .list-row small{line-height:1.4}
+#moreCharacters{margin:8px 0 17px}
+.character-card,.outfit-card{min-width:0;overflow:hidden}
+.location-card .location-photo .photo-credit,.photo-credit{display:none!important}
+@media(max-width:620px){.topic-family-actions{padding:7px}.topic-family-choices{grid-template-columns:1fr}.character-filter{grid-template-columns:1fr}}
