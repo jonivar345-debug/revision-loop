@@ -180,7 +180,7 @@ const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
 // nothing is downloaded or redistributed into this public repository.
 const ANIME_ART_QUERY={
  lelouch:'Lelouch Lamperouge',cc:'C.C.',light:'Light Yagami',l:'L Lawliet',eren:'Eren Yeager',
- rin_bl:'Rin Itoshi',isagi:'Yoichi Isagi',yuji:'Yuji Itadori',gojo:'Satoru Gojo',
+ rin_bl:'Rin Itoshi',isagi:'Yoichi Isagi',yuji:'Yuji Itadori',gojo:'Satoru Gojou',
  megumi:'Megumi Fushiguro',nobara:'Nobara Kugisaki',subaru:'Subaru Natsuki',
  klein:'Klein Moretti',dokja:'Kim Dokja',joonghyuk:'Yoo Joonghyuk',thorfinn:'Thorfinn',
  kaneki:'Ken Kaneki',touka:'Touka Kirishima',juuzou:'Juuzou Suzuya',
@@ -206,7 +206,7 @@ async function getCharacterArt(c){
    const target=cleaned(query),words=target.split(' ').filter(Boolean);
    const best=(data.data||[]).map(x=>({record:x,name:cleaned(x.name)}))
      .sort((a,b)=>(b.name===target?100:words.filter(w=>b.name.includes(w)).length*12)-(a.name===target?100:words.filter(w=>a.name.includes(w)).length*12))[0];
-   if(!best||words.filter(w=>best.name.includes(w)).length<Math.min(1,words.length))throw Error('Artwork match missing');
+   if(!best||words.filter(w=>best.name.includes(w)).length<Math.max(1,Math.ceil(words.length*.75)))throw Error('Artwork match missing');
    const src=best.record.images?.webp?.image_url||best.record.images?.jpg?.image_url;
    if(!src)throw Error('No picture');
    const result={src,source:best.record.url||'https://myanimelist.net/character'};
