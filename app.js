@@ -931,7 +931,17 @@ function examSuggested(q,answer){
    suggested=Math.round(preds.filter(Boolean).length/Math.max(1,q.markPoints.length)*q.marks);
  }
  if(finalCorrect&&ordinaryCalculation)suggested=q.marks;
- else if(finalCorrect)suggested=Math.max(suggested,1);
+ else if(finalCorrect){
+  // An exact final result plus recognisable calculation steps can imply otherwise
+  // missed method marks (e.g. rearranged gas laws, converted units or total volume).
+  const answerText=String(answer||'');
+  const workingEvidence=(answerText.match(/(?:=|→|≈|\u00d7|\*|\/|sqrt|gradient|substitut|rearrang|n\s*=|v\s*=)/gi)||[]).length;
+  const explicitEquations=workingEvidence>=1&&/(?:\d+(?:\.\d+)?(?:e[-+]?\d+|\s*[*x×]\s*10\s*\^\s*[-+]?\d+)?)/i.test(answerText);
+  if(q.answerType==='numeric'&&explicitEquations){
+   suggested=q.marks;
+   preds=preds.map(()=>true);
+  }else suggested=Math.max(suggested,1);
+ }
  if(exactVerbal&&q.marks===1){suggested=1;preds=preds.map(()=>true);}
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
  if(q.modelAnswer&&String(answer||'').trim()){
