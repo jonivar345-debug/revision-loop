@@ -960,7 +960,7 @@ function groupedTopicPicker(subject,kind,selected){
   '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,c])=>{
     const available=kind==='flash'?c.cards:c.questions;
     return '<label class="check-item '+(available?'':'empty-topic')+'"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+
-      (selected.has(topic)?'checked ':'')+'><span>'+esc(topic)+'</span><small>'+(kind==='exam'?available+' / 4':available)+'</small></label>';
+      (selected.has(topic)?'checked ':'')+'><span>'+esc(topic)+'</span><small>'+available+'</small></label>';
   }).join('')+'</div></details>';
  }).join('');
 }
