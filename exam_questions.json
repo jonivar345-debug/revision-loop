@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 22,
-  "updatedAt": "2026-10-20T18:11:09.310Z",
+  "bankVersion": 23,
+  "updatedAt": "2026-10-20T18:48:49.934Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -32,7 +32,8 @@
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
       "visual": "resolve",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Resolving vectors"
     },
     {
       "id": "aqa_phy_as23_p1_q1_5",
@@ -61,7 +62,8 @@
       "groupOrder": "1.5",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Energy levels"
     },
     {
       "id": "aqa_phy_as23_p1_q2_1",
@@ -88,7 +90,8 @@
       "groupOrder": "2.1",
       "sourceVerified": true,
       "courseTopic": "Waves",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Interference"
     },
     {
       "id": "aqa_phy_as23_p1_q3",
@@ -116,7 +119,8 @@
       "groupOrder": "3",
       "sourceVerified": true,
       "courseTopic": "Waves",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Waves"
     },
     {
       "id": "aqa_phy_a24_p1_q1_3",
@@ -142,7 +146,8 @@
       "groupOrder": "1.3",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_chem_as23_p1_q2_6",
@@ -176,7 +181,8 @@
       "sourceVerified": true,
       "courseTopic": "Amount of substance",
       "visual": "titration",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Back titrations"
     },
     {
       "id": "aqa_chem_as23_p1_q3_1",
@@ -205,7 +211,8 @@
       "sourceVerified": true,
       "courseTopic": "Practical skills",
       "visual": "titration",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "RP1 Titration"
     },
     {
       "id": "aqa_chem_as23_p1_q4",
@@ -235,7 +242,8 @@
       "groupOrder": "4",
       "sourceVerified": true,
       "courseTopic": "Amount of substance",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Ideal gas equation"
     },
     {
       "id": "aqa_chem_as23_p1_q8_3",
@@ -262,7 +270,8 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Equilibria",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Equilibria"
     },
     {
       "id": "aqa_math_as23_p1_q4",
@@ -293,7 +302,8 @@
       "sourceVerified": true,
       "courseTopic": "Trigonometry",
       "visual": "unit-circle",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as23_p1_q5b",
@@ -325,7 +335,8 @@
       "groupOrder": "5(b)",
       "sourceVerified": true,
       "courseTopic": "Differentiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Differentiation"
     },
     {
       "id": "aqa_math_as23_p1_q6",
@@ -354,7 +365,8 @@
       "groupOrder": "6",
       "sourceVerified": true,
       "courseTopic": "Algebra & functions",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Transformations"
     },
     {
       "id": "aqa_math_as23_p1_q8b",
@@ -385,7 +397,8 @@
       "groupOrder": "8(b)",
       "sourceVerified": true,
       "courseTopic": "Integration",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Integration"
     },
     {
       "id": "aqa_math_as23_p1_q10b",
@@ -417,7 +430,8 @@
       "groupOrder": "10(b)",
       "sourceVerified": true,
       "courseTopic": "Exponentials & logarithms",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Exponentials and logs"
     },
     {
       "id": "aqa_phy_med23_q01",
@@ -444,7 +458,8 @@
       "groupOrder": "1",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: therapy"
     },
     {
       "id": "aqa_phy_med23_q02_1",
@@ -474,7 +489,8 @@
       "groupOrder": "2.1",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: eye"
     },
     {
       "id": "aqa_phy_med23_q03_1",
@@ -500,7 +516,8 @@
       "groupOrder": "3.1",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: ear"
     },
     {
       "id": "aqa_phy_med23_q03_2",
@@ -528,7 +545,8 @@
       "groupOrder": "3.2",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: ear"
     },
     {
       "id": "aqa_phy_med23_q04_1",
@@ -555,7 +573,8 @@
       "sourceVerified": true,
       "courseTopic": "Medical physics",
       "visual": "medical",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: ultrasound"
     },
     {
       "id": "aqa_phy_med23_q04_4",
@@ -584,7 +603,8 @@
       "sourceVerified": true,
       "courseTopic": "Medical physics",
       "visual": "medical",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: ECG"
     },
     {
       "id": "aqa_phy_med23_q05_2",
@@ -612,7 +632,8 @@
       "sourceVerified": true,
       "courseTopic": "Medical physics",
       "visual": "medical",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Medical physics: X-rays"
     },
     {
       "id": "aqa_phy_as22_p1_q4_1",
@@ -642,7 +663,8 @@
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
       "visual": "photoelectric",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Photoelectric effect"
     },
     {
       "id": "aqa_phy_as22_p1_q4_2",
@@ -673,7 +695,8 @@
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
       "visual": "photoelectric",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Photoelectric effect"
     },
     {
       "id": "aqa_phy_as22_p1_q5_2",
@@ -700,7 +723,8 @@
       "groupOrder": "5.2",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Particles"
     },
     {
       "id": "aqa_phy_as22_p1_q6_1",
@@ -731,7 +755,8 @@
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
       "visual": "moment",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Moments"
     },
     {
       "id": "aqa_phy_as22_p1_q7_1",
@@ -758,7 +783,8 @@
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
       "visual": "slope",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Forces on a slope"
     },
     {
       "id": "aqa_phy_as22_p1_q7_2",
@@ -788,7 +814,8 @@
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
       "visual": "slope",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Power"
     },
     {
       "id": "aqa_phy_as22_p1_q8_3",
@@ -815,7 +842,8 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "I–V characteristics"
     },
     {
       "id": "aqa_phy_as22_p1_q8_4",
@@ -844,7 +872,8 @@
       "groupOrder": "8.4",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Electricity"
     },
     {
       "id": "aqa_phy_as22_p1_q8_5",
@@ -873,7 +902,8 @@
       "groupOrder": "8.5",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Electricity"
     },
     {
       "id": "aqa_chem_as22_p1_q1_1",
@@ -899,7 +929,8 @@
       "groupOrder": "1.1",
       "sourceVerified": true,
       "courseTopic": "Atomic structure",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Ionisation energy"
     },
     {
       "id": "aqa_chem_as22_p1_q2_2",
@@ -929,7 +960,8 @@
       "groupOrder": "2.2",
       "sourceVerified": true,
       "courseTopic": "Amount of substance",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Amount of substance"
     },
     {
       "id": "aqa_chem_as22_p1_q2_3",
@@ -958,7 +990,8 @@
       "sourceVerified": true,
       "courseTopic": "Practical skills",
       "visual": "titration",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "RP1 Titration"
     },
     {
       "id": "aqa_chem_as22_p1_q4_4",
@@ -984,7 +1017,8 @@
       "groupOrder": "4.4",
       "sourceVerified": true,
       "courseTopic": "Bonding",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Bonding"
     },
     {
       "id": "aqa_chem_as22_p1_q5",
@@ -1014,7 +1048,8 @@
       "groupOrder": "5",
       "sourceVerified": true,
       "courseTopic": "Atomic structure",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Atomic structure"
     },
     {
       "id": "aqa_chem_as22_p1_q6_2",
@@ -1041,7 +1076,8 @@
       "groupOrder": "6.2",
       "sourceVerified": true,
       "courseTopic": "Redox",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Redox"
     },
     {
       "id": "aqa_chem_as22_p1_q7_4",
@@ -1073,7 +1109,8 @@
       "groupOrder": "7.4",
       "sourceVerified": true,
       "courseTopic": "Equilibria",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Equilibria"
     },
     {
       "id": "aqa_chem_as22_p1_q8_3",
@@ -1101,7 +1138,8 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Practical skills",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "RP4 Ion tests"
     },
     {
       "id": "aqa_chem_as22_p1_q14",
@@ -1127,7 +1165,8 @@
       "groupOrder": "14",
       "sourceVerified": true,
       "courseTopic": "Amount of substance",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Empirical formula"
     },
     {
       "id": "aqa_math_as22_p1_q4",
@@ -1157,7 +1196,8 @@
       "groupOrder": "4",
       "sourceVerified": true,
       "courseTopic": "Trigonometry",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as22_p1_q5",
@@ -1185,7 +1225,8 @@
       "groupOrder": "5",
       "sourceVerified": true,
       "courseTopic": "Algebra & functions",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_math_as22_p1_q6b",
@@ -1214,7 +1255,8 @@
       "sourceVerified": true,
       "courseTopic": "Coordinate geometry",
       "visual": "circle",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Coordinate geometry"
     },
     {
       "id": "aqa_math_as22_p1_q6c",
@@ -1244,7 +1286,8 @@
       "sourceVerified": true,
       "courseTopic": "Coordinate geometry",
       "visual": "circle",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Coordinate geometry"
     },
     {
       "id": "aqa_math_as22_p1_q7",
@@ -1277,7 +1320,8 @@
       "groupOrder": "7",
       "sourceVerified": true,
       "courseTopic": "Integration",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Integration"
     },
     {
       "id": "aqa_math_as22_p1_q8c",
@@ -1305,7 +1349,8 @@
       "groupOrder": "8(c)",
       "sourceVerified": true,
       "courseTopic": "Differentiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Differentiation"
     },
     {
       "id": "aqa_math_as22_p1_q9",
@@ -1334,7 +1379,8 @@
       "groupOrder": "9",
       "sourceVerified": true,
       "courseTopic": "Proof",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Proof"
     },
     {
       "id": "aqa_math_as22_p1_q10a",
@@ -1363,7 +1409,8 @@
       "groupOrder": "10(a)",
       "sourceVerified": true,
       "courseTopic": "Differentiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Differentiation"
     },
     {
       "id": "aqa_phy_as24_p1_q1_1",
@@ -1389,7 +1436,8 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.1",
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Particles"
     },
     {
       "id": "aqa_phy_as24_p1_q1_2",
@@ -1418,7 +1466,8 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.2",
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Particles"
     },
     {
       "id": "aqa_phy_as24_p1_q1_3",
@@ -1446,7 +1495,8 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.3",
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_phy_as24_p1_q1_4",
@@ -1477,7 +1527,8 @@
       "groupOrder": "1.4",
       "courseTopic": "Particles & radiation",
       "visual": "quark",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_phy_as24_p1_q2_1",
@@ -1506,7 +1557,8 @@
       "groupOrder": "2.1",
       "courseTopic": "Particles & radiation",
       "visual": "energy-levels",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Energy levels"
     },
     {
       "id": "aqa_phy_as24_p1_q2_2",
@@ -1536,7 +1588,8 @@
       "groupId": "Physics|2024|7407/1|2",
       "groupOrder": "2.2",
       "courseTopic": "Particles & radiation",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Energy levels"
     },
     {
       "id": "aqa_phy_as24_p1_q3_1",
@@ -1566,7 +1619,8 @@
       "groupOrder": "3.1",
       "courseTopic": "Waves",
       "visual": "stationary",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Stationary waves"
     },
     {
       "id": "aqa_phy_as24_p1_q3_2",
@@ -1597,7 +1651,8 @@
       "groupOrder": "3.2",
       "courseTopic": "Waves",
       "visual": "stationary",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Stationary waves"
     },
     {
       "id": "aqa_math_as21_p1_q1_link",
@@ -1629,7 +1684,8 @@
       "groupOrder": "1",
       "standalone": true,
       "sourceFirst": false,
-      "verificationLevel": "official-linked"
+      "verificationLevel": "official-linked",
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_chem_as20_p1_q2_1_link",
@@ -1670,7 +1726,8 @@
         1
       ],
       "standalone": true,
-      "visual": "titration"
+      "visual": "titration",
+      "revisionTopic": "Titration calculations"
     },
     {
       "id": "aqa_chem_as21_p1_q7_2_link",
@@ -1678,7 +1735,7 @@
       "question": "7.2",
       "marks": 3,
       "topic": "Energetics",
-      "courseTopic": "Energetics",
+      "courseTopic": "Practical skills",
       "subtopic": "Calorimetry",
       "questionType": "multi-step calculation",
       "prompt": "Burning 0.497 g of propan-1-ol (Mr=60.0) raises 150 g of water from 21.2 °C to 35.1 °C. The specific heat capacity of water is 4.18 J K⁻¹ g⁻¹. Calculate the experimental enthalpy of combustion in kJ mol⁻¹.",
@@ -1706,7 +1763,8 @@
         1,
         1
       ],
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "RP2 Enthalpy"
     },
     {
       "id": "aqa_math_as20_p1_q5_link",
@@ -1742,7 +1800,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|5",
       "groupOrder": "5",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Differentiation"
     },
     {
       "id": "aqa_math_as20_p1_q3a_link",
@@ -1774,7 +1833,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|3",
       "groupOrder": "3(a)",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as20_p1_q3b_link",
@@ -1807,7 +1867,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|3",
       "groupOrder": "3(b)",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as21_p1_q3a_link",
@@ -1837,7 +1898,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2021|7356/1|3",
       "groupOrder": "3(a)",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Transformations"
     },
     {
       "id": "aqa_math_as21_p1_q3b_link",
@@ -1868,7 +1930,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2021|7356/1|3",
       "groupOrder": "3(b)",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Transformations"
     },
     {
       "id": "aqa_chem_as20_p1_q2_2_link",
@@ -1898,7 +1961,8 @@
       "sourceFirst": true,
       "groupId": "Chemistry|2020|7404/1|2",
       "groupOrder": "2.2",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "RP1 Titration"
     },
     {
       "id": "aqa_chem_as20_p1_q2_3_link",
@@ -1928,7 +1992,8 @@
       "sourceFirst": true,
       "groupId": "Chemistry|2020|7404/1|2",
       "groupOrder": "2.3",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "RP1 Titration"
     },
     {
       "id": "aqa_chem_as21_p1_q7_1_link",
@@ -1959,7 +2024,8 @@
       "sourceFirst": true,
       "groupId": "Chemistry|2021|7404/1|7",
       "groupOrder": "7.1",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Energetics"
     },
     {
       "id": "aqa_chem_as21_p1_q7_3_link",
@@ -1967,7 +2033,7 @@
       "question": "7.3",
       "marks": 1,
       "topic": "Energetics",
-      "courseTopic": "Energetics",
+      "courseTopic": "Practical skills",
       "subtopic": "Calorimetry evaluation",
       "questionType": "official-source evaluation",
       "prompt": "Open official AQA Paper 1 Question 7.3 and give one valid reason for the experimental discrepancy.",
@@ -1988,7 +2054,8 @@
       "sourceFirst": true,
       "groupId": "Chemistry|2021|7404/1|7",
       "groupOrder": "7.3",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "RP2 Enthalpy"
     },
     {
       "id": "aqa_chem_as21_p1_q8_1_link",
@@ -2031,7 +2098,8 @@
       "sourceFirst": false,
       "groupId": "Chemistry|2021|7404/1|8",
       "groupOrder": "8.1",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Titration calculations"
     },
     {
       "id": "aqa_phy_as20_p1_q5_1_link",
@@ -2063,7 +2131,8 @@
       "groupId": "Physics|2020|7407/1|5",
       "groupOrder": "5.1",
       "standalone": true,
-      "visual": "internal-resistance"
+      "visual": "internal-resistance",
+      "revisionTopic": "Electricity"
     },
     {
       "id": "aqa_math_as24_p1_q3_src",
@@ -2099,7 +2168,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|3",
       "groupOrder": "3",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Algebra"
     },
     {
       "id": "aqa_math_as24_p1_q4ai_src",
@@ -2131,7 +2201,8 @@
       "sourceFirst": false,
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(a)(i)",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as24_p1_q4aii_src",
@@ -2166,7 +2237,8 @@
       "sourceFirst": false,
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(a)(ii)",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as24_p1_q4b_src",
@@ -2201,7 +2273,8 @@
       "sourceFirst": false,
       "groupId": "Maths|2024|7356/1|4",
       "groupOrder": "4(b)",
-      "standalone": true
+      "standalone": true,
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as24_p1_q5a_src",
@@ -2230,7 +2303,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|5",
       "groupOrder": "5(a)",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_math_as24_p1_q5b_src",
@@ -2261,7 +2335,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|5",
       "groupOrder": "5(b)",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_math_as24_p1_q6_src",
@@ -2296,7 +2371,8 @@
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|6",
       "groupOrder": "6",
-      "standalone": false
+      "standalone": false,
+      "revisionTopic": "Algebra"
     },
     {
       "id": "aqa_phy_as20_p1_q5_2",
@@ -2328,7 +2404,8 @@
       "standalone": true,
       "groupId": "Physics|2020|7407/1|5",
       "groupOrder": "5.2",
-      "visual": "internal-resistance"
+      "visual": "internal-resistance",
+      "revisionTopic": "Electricity"
     },
     {
       "id": "aqa_phy_as20_p1_q5_3",
@@ -2362,7 +2439,8 @@
       "standalone": true,
       "groupId": "Physics|2020|7407/1|5",
       "groupOrder": "5.3",
-      "visual": "internal-resistance"
+      "visual": "internal-resistance",
+      "revisionTopic": "Internal resistance"
     },
     {
       "id": "aqa_phy_as21_p1_q2_1",
@@ -2392,7 +2470,8 @@
       "standalone": true,
       "groupId": "Physics|2021|7407/1|2",
       "groupOrder": "2.1",
-      "visual": "grating"
+      "visual": "grating",
+      "revisionTopic": "Diffraction grating"
     },
     {
       "id": "aqa_phy_as21_p1_q2_2",
@@ -2425,7 +2504,8 @@
       "standalone": true,
       "groupId": "Physics|2021|7407/1|2",
       "groupOrder": "2.2",
-      "visual": "grating"
+      "visual": "grating",
+      "revisionTopic": "Interference"
     },
     {
       "id": "aqa_phy_as21_p1_q5_2",
@@ -2460,7 +2540,8 @@
       "standalone": true,
       "groupId": "Physics|2021|7407/1|5",
       "groupOrder": "5.2",
-      "visual": "newton"
+      "visual": "newton",
+      "revisionTopic": "Newton's laws"
     },
     {
       "id": "aqa_chem_as24_p1_q1_1",
@@ -2490,7 +2571,8 @@
       "groupId": "Chemistry|2024|7404/1|1",
       "groupOrder": "1.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=2",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Group 7"
     },
     {
       "id": "aqa_chem_as24_p1_q2_1",
@@ -2522,7 +2604,8 @@
       "groupId": "Chemistry|2024|7404/1|2",
       "groupOrder": "2.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=4",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Ionisation energy"
     },
     {
       "id": "aqa_chem_as24_p1_q3_1",
@@ -2550,7 +2633,8 @@
       "groupId": "Chemistry|2024|7404/1|3",
       "groupOrder": "3.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=6",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Bonding"
     },
     {
       "id": "aqa_chem_as24_p1_q3_3",
@@ -2581,7 +2665,8 @@
       "groupId": "Chemistry|2024|7404/1|3",
       "groupOrder": "3.3",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=6",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Bonding"
     },
     {
       "id": "aqa_chem_as24_p1_q5",
@@ -2620,7 +2705,8 @@
       "groupId": "Chemistry|2024|7404/1|5",
       "groupOrder": "5",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=10",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Shapes"
     },
     {
       "id": "aqa_chem_as24_p1_q7_1",
@@ -2651,7 +2737,8 @@
       "groupId": "Chemistry|2024|7404/1|7",
       "groupOrder": "7.1",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=14",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Practical skills"
     },
     {
       "id": "aqa_chem_as24_p1_q7_2",
@@ -2682,7 +2769,8 @@
       "groupId": "Chemistry|2024|7404/1|7",
       "groupOrder": "7.2",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=15",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Amount of substance"
     },
     {
       "id": "aqa_chem_as24_p1_q7_3",
@@ -2724,7 +2812,8 @@
       "groupId": "Chemistry|2024|7404/1|7",
       "groupOrder": "7.3",
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-QP-JUN24_PDF#page=15",
-      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF"
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-74041-MS-JUN24_PDF",
+      "revisionTopic": "Back titrations"
     },
     {
       "id": "aqa_math_as24_p1_q7a",
@@ -2757,7 +2846,8 @@
       "sourceVerified": true,
       "standalone": true,
       "groupId": "Maths|2024|7356/1|7",
-      "groupOrder": "7(a)"
+      "groupOrder": "7(a)",
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as24_p1_q7b",
@@ -2791,7 +2881,8 @@
       "sourceVerified": true,
       "standalone": true,
       "groupId": "Maths|2024|7356/1|7",
-      "groupOrder": "7(b)"
+      "groupOrder": "7(b)",
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as24_p1_q8a",
@@ -2823,7 +2914,8 @@
       "sourceVerified": true,
       "standalone": true,
       "groupId": "Maths|2024|7356/1|8",
-      "groupOrder": "8(a)"
+      "groupOrder": "8(a)",
+      "revisionTopic": "Logs"
     },
     {
       "id": "aqa_math_as24_p1_q8b",
@@ -2856,7 +2948,8 @@
       "sourceVerified": true,
       "standalone": true,
       "groupId": "Maths|2024|7356/1|8",
-      "groupOrder": "8(b)"
+      "groupOrder": "8(b)",
+      "revisionTopic": "Exponentials and logs"
     },
     {
       "id": "aqa_phy_as25_p1_q1_1",
@@ -2890,7 +2983,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "1.1"
+      "groupOrder": "1.1",
+      "revisionTopic": "Particles"
     },
     {
       "id": "aqa_phy_as25_p1_q1_2",
@@ -2921,7 +3015,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "1.2"
+      "groupOrder": "1.2",
+      "revisionTopic": "Particles"
     },
     {
       "id": "aqa_phy_as25_p1_q4_1",
@@ -2953,7 +3048,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "4.1"
+      "groupOrder": "4.1",
+      "revisionTopic": "Moments"
     },
     {
       "id": "aqa_chem_as25_p1_q1_1",
@@ -2987,7 +3083,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "1.1"
+      "groupOrder": "1.1",
+      "revisionTopic": "Amount of substance"
     },
     {
       "id": "aqa_chem_as25_p1_q1_2",
@@ -3016,7 +3113,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "1.2"
+      "groupOrder": "1.2",
+      "revisionTopic": "Amount of substance"
     },
     {
       "id": "aqa_chem_as25_p1_q1_3",
@@ -3046,7 +3144,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "1.3"
+      "groupOrder": "1.3",
+      "revisionTopic": "Redox"
     },
     {
       "id": "aqa_chem_as25_p1_q1_4",
@@ -3077,7 +3176,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "1.4"
+      "groupOrder": "1.4",
+      "revisionTopic": "Redox"
     },
     {
       "id": "aqa_math_as25_p1_q3",
@@ -3112,7 +3212,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "3"
+      "groupOrder": "3",
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_math_as25_p1_q4",
@@ -3147,7 +3248,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "4"
+      "groupOrder": "4",
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as25_p1_q14",
@@ -3180,7 +3282,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "14"
+      "groupOrder": "14",
+      "revisionTopic": "Forces"
     },
     {
       "id": "aqa_math_as25_p1_q17",
@@ -3215,7 +3318,8 @@
       "verificationLevel": "secondary-indexed",
       "standalone": true,
       "series": "June",
-      "groupOrder": "17"
+      "groupOrder": "17",
+      "revisionTopic": "Forces"
     },
     {
       "id": "aqa_chem_as16_p1_q1_1",
@@ -3248,7 +3352,8 @@
       "courseTopic": "Atomic structure",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "Al 1s²2s²2p⁶3s²3p¹; Cr³⁺ 1s²2s²2p⁶3s²3p⁶3d³"
+      "modelAnswer": "Al 1s²2s²2p⁶3s²3p¹; Cr³⁺ 1s²2s²2p⁶3s²3p⁶3d³",
+      "revisionTopic": "Atomic structure"
     },
     {
       "id": "aqa_chem_as16_p1_q1_2",
@@ -3283,7 +3388,8 @@
       "answerVariants": [
         "Sr2+",
         "Sr+2"
-      ]
+      ],
+      "revisionTopic": "Atomic structure"
     },
     {
       "id": "aqa_chem_as16_p1_q1_3",
@@ -3311,13 +3417,14 @@
       "groupOrder": "1.3",
       "sourceVerified": true,
       "verificationLevel": "official-linked",
-      "courseTopic": "Atomic structure",
+      "courseTopic": "Bonding",
       "standalone": true,
       "mock": true,
       "modelAnswer": "Ca₃P₂",
       "answerVariants": [
         "Ca3P2"
-      ]
+      ],
+      "revisionTopic": "Bonding"
     },
     {
       "id": "aqa_chem_as16_p1_q2_1",
@@ -3350,7 +3457,8 @@
       "courseTopic": "Atomic structure",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "Mg²⁺ is smaller because the two ions are isoelectronic but Mg²⁺ has a higher nuclear charge."
+      "modelAnswer": "Mg²⁺ is smaller because the two ions are isoelectronic but Mg²⁺ has a higher nuclear charge.",
+      "revisionTopic": "Atomic structure"
     },
     {
       "id": "aqa_chem_as16_p1_q2_2",
@@ -3381,7 +3489,8 @@
       "courseTopic": "Atomic structure",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "Na(g) → Na⁺(g) + e⁻"
+      "modelAnswer": "Na(g) → Na⁺(g) + e⁻",
+      "revisionTopic": "Ionisation energy"
     },
     {
       "id": "aqa_phy_as17_p1_q1_5",
@@ -3415,7 +3524,8 @@
       "modelAnswer": "Proton",
       "answerVariants": [
         "proton"
-      ]
+      ],
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_phy_as17_p1_q1_6",
@@ -3446,7 +3556,8 @@
       "courseTopic": "Particles & radiation",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "electron, electron antineutrino and muon neutrino"
+      "modelAnswer": "electron, electron antineutrino and muon neutrino",
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_phy_as17_p1_q2_1",
@@ -3483,7 +3594,8 @@
       "courseTopic": "Electricity",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "Greater current heats the filament, causing stronger lattice-ion vibrations and more electron collisions. This raises resistance and causes the nonlinear I–V characteristic."
+      "modelAnswer": "Greater current heats the filament, causing stronger lattice-ion vibrations and more electron collisions. This raises resistance and causes the nonlinear I–V characteristic.",
+      "revisionTopic": "I–V characteristics"
     },
     {
       "id": "aqa_math_as18_p1_q3",
@@ -3517,7 +3629,8 @@
       "standalone": true,
       "mock": true,
       "modelAnswer": "90° < x < 270°",
-      "visual": "unit-circle"
+      "visual": "unit-circle",
+      "revisionTopic": "Trigonometry"
     },
     {
       "id": "aqa_math_as18_p1_q4a",
@@ -3552,7 +3665,8 @@
       "courseTopic": "Algebra & functions",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "1 − 12x + 54x²"
+      "modelAnswer": "1 − 12x + 54x²",
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_math_as18_p1_q4b",
@@ -3589,7 +3703,8 @@
       "tolerance": 6e-7,
       "unit": "",
       "modelAnswer": "1 − 12(0.002) + 54(0.002)² = 0.976216",
-      "requiresWorking": true
+      "requiresWorking": true,
+      "revisionTopic": "Algebra and functions"
     },
     {
       "id": "aqa_phy_as19_p1_q1_1",
@@ -3625,7 +3740,8 @@
       "numericAnswer": 48000000,
       "tolerance": 1500000,
       "unit": "C kg^-1",
-      "modelAnswer": "(1.60 × 10^-19) / (3.35 × 10^-27) ≈ 4.8 × 10^7 C kg^-1"
+      "modelAnswer": "(1.60 × 10^-19) / (3.35 × 10^-27) ≈ 4.8 × 10^7 C kg^-1",
+      "revisionTopic": "Particles"
     },
     {
       "id": "aqa_phy_as19_p1_q1_2",
@@ -3660,7 +3776,8 @@
       "answerVariants": [
         "pion",
         "pi meson"
-      ]
+      ],
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_phy_as19_p1_q1_3",
@@ -3695,7 +3812,8 @@
       "courseTopic": "Particles & radiation",
       "standalone": true,
       "mock": true,
-      "modelAnswer": "At typical nuclear separation the strong force is attractive, but it becomes repulsive at very small separations, establishing a stable separation."
+      "modelAnswer": "At typical nuclear separation the strong force is attractive, but it becomes repulsive at very small separations, establishing a stable separation.",
+      "revisionTopic": "Particle physics"
     },
     {
       "id": "aqa_phy_as19_p1_q2_1",
@@ -3733,7 +3851,8 @@
       "numericAnswer": 213120,
       "tolerance": 6500,
       "unit": "J",
-      "modelAnswer": "E = 7.4 × 2.0 × (240 × 60) ≈ 2.13 × 10^5 J"
+      "modelAnswer": "E = 7.4 × 2.0 × (240 × 60) ≈ 2.13 × 10^5 J",
+      "revisionTopic": "Electricity"
     }
   ],
   "coverage": {
