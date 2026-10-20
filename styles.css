@@ -26,3 +26,11 @@
 .globe-card{background:#020617}.globe-card canvas{background:#020617}
 .exam-visual,.flash-visual{display:flex;justify-content:center;overflow:hidden}.exam-visual svg,.flash-visual svg{width:min(100%,420px);height:auto}
 .mock-badge{background:#fef3c7;color:#92400e}
+
+.character-filter{display:grid;grid-template-columns:1.4fr 1fr;gap:7px;margin:0 0 9px}
+.character-filter select{min-width:0;border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px}
+.character-card small{min-height:2.3em}
+.shop-grid{align-items:stretch}
+.shop-item{min-width:0}
+.shop-item b,.shop-item small{overflow-wrap:anywhere}
+@media(max-width:520px){.character-filter{grid-template-columns:1fr}.character-card .shop-icon,.outfit-card .shop-icon{height:122px}}
