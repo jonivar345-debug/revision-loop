@@ -360,7 +360,7 @@ function startMockSession(){
  }
  if(mode!=='flash'){
    const target=Math.max(1,count-items.length),pickedGroups=weightedPick([...groups.values()],Math.min(target,groups.size),g=>1+groupWeakness(g));
-   for(const g of pickedGroups){for(const q of g){if(items.length>=count&&mode==='mixed')break;items.push({type:'exam',id:q.id,groupId:q.groupId})}}
+   for(const g of pickedGroups){for(const q of g){items.push({type:'exam',id:q.id,groupId:q.groupId})}}
  }
  if(!items.length){showToast('No mock material is available for that selection yet');return}
  if(mode==='mixed'){
@@ -377,7 +377,7 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(c.courseTopic||c.topic))}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c)))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
  const picked=weightedPick(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
@@ -389,7 +389,7 @@ function examGroups(){
  const eligibleGroupIds=new Set();
  for(const q of all){
    if(!examYears.has(q.year))continue;
-   if(examTopics.has(q.courseTopic||q.topic)&&examTypes.has(q.questionType))eligibleGroupIds.add(q.groupId);
+   if(examTopics.has(examTopicLabel(q))&&examTypes.has(q.questionType))eligibleGroupIds.add(q.groupId);
  }
  const map=new Map();
  for(const q of all){
@@ -539,24 +539,53 @@ function renderAvatar(){
  selectedLocation=l.id;
 }
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
-function refreshFlashTopics(defaultIfEmpty=false){
- const sub=document.getElementById('flashSubject').value,topics=[...new Set(subjectCards(sub).map(c=>c.courseTopic||c.topic))].sort();flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));if(defaultIfEmpty&&!flashTopics.size)topics.filter(t=>subjectCards(sub).some(c=>(c.courseTopic||c.topic)===t&&c.taught)).forEach(t=>flashTopics.add(t));
- document.getElementById('flashTopics').innerHTML=topics.map(t=>'<label class="check-item"><input type="checkbox" data-flash-topic="'+esc(t)+'" '+(flashTopics.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});renderTopicCounts()
+function flashTopicLabel(c){return c.topic||c.courseTopic||'Unclassified'}
+function examTopicLabel(q){return q.subtopic||q.topic||q.courseTopic||'Unclassified'}
+function groupedTopicPicker(rows,kind,selected){
+ const groups=new Map();
+ for(const item of rows){
+  const group=item.courseTopic||item.topic||'Other',topic=kind==='flash'?flashTopicLabel(item):examTopicLabel(item);
+  if(!groups.has(group))groups.set(group,new Map());
+  const members=groups.get(group);members.set(topic,(members.get(topic)||0)+1);
+ }
+ return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>
+  '<details class="topic-family" open><summary><b>'+esc(group)+'</b><span>'+[...topics.values()].reduce((a,b)=>a+b,0)+' available</span></summary>'+
+  '<div class="topic-family-choices">'+[...topics].sort((a,b)=>a[0].localeCompare(b[0])).map(([topic,count])=>
+   '<label class="check-item"><input type="checkbox" data-'+kind+'-topic="'+esc(topic)+'" '+(selected.has(topic)?'checked':'')+
+   '><span>'+esc(topic)+'</span><small>'+count+'</small></label>'
+  ).join('')+'</div></details>').join('');
 }
-function applyFlashPreset(p){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);flashTopics.clear();if(p!=='clear'){let pick=base;if(p==='mock')pick=base.filter(c=>c.mock===true);if(p==='taught')pick=base.filter(taughtCard);for(const c of pick)flashTopics.add(c.courseTopic||c.topic)}refreshFlashTopics(false)}
+function refreshFlashTopics(defaultIfEmpty=false){
+ const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
+ const topics=[...new Set(base.map(flashTopicLabel))];
+ flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
+ if(defaultIfEmpty&&!flashTopics.size)base.filter(c=>c.taught).forEach(c=>flashTopics.add(flashTopicLabel(c)));
+ document.getElementById('flashTopics').innerHTML=groupedTopicPicker(base,'flash',flashTopics);
+ document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});
+ renderTopicCounts();
+}
+function applyFlashPreset(p){
+ const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
+ if(p!=='clear'){const filtered=p==='mock'?base.filter(c=>c.mock===true):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
+ refreshFlashTopics(false);
+}
 function refreshExamFilters(defaultIfEmpty=false){
- const sub=document.getElementById('examSubject').value,base=subjectExam(sub),years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(base.map(q=>q.courseTopic||q.topic))].sort(),types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
+ const sub=document.getElementById('examSubject').value,base=subjectExam(sub),
+ years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(base.map(examTopicLabel))],
+ types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
- if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));if(defaultIfEmpty&&!examTopics.size)topics.forEach(t=>examTopics.add(t));if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
+ if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));
+ if(defaultIfEmpty&&!examTopics.size)topics.forEach(t=>examTopics.add(t));
+ if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
  document.getElementById('examYears').innerHTML=years.map(y=>'<label class="check-item"><input type="checkbox" data-exam-year="'+y+'" '+(examYears.has(y)?'checked':'')+'><span>'+y+'</span></label>').join('');
- document.getElementById('examTopics').innerHTML=topics.map(t=>'<label class="check-item"><input type="checkbox" data-exam-topic="'+esc(t)+'" '+(examTopics.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
+ document.getElementById('examTopics').innerHTML=groupedTopicPicker(base,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(Number(el.dataset.examYear)):examYears.delete(Number(el.dataset.examYear));renderTopicCounts()});
  document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{el.checked?examTopics.add(el.dataset.examTopic):examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
  document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
- const yearCounts=years.slice().sort((a,b)=>b-a).map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
- document.getElementById('examCoverage').textContent='Verified bank: '+base.length+' question parts'+(yearCounts?' · '+yearCounts:'')+'. Linked parts stay together and question context is preserved.';
+ const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
+ document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Unlisted specification topics still need exam questions.';
 }
 function renderTopicCounts(){document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';document.getElementById('examTopicCount').textContent=examTopics.size+' selected';document.getElementById('examYearCount').textContent=examYears.size+' selected'}
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
@@ -570,11 +599,13 @@ function renderCard(c){
 function examSuggested(q,answer){
  const scores=q.markPoints.map(p=>markPointPrediction(answer,p));
  let preds=scores.map(v=>v>=.5);
+ const variants=(q.answerVariants||[]).map(x=>compact(x)).filter(Boolean);
+ const exactVerbal=variants.length>0&&variants.includes(compact(answer));
  const finalCorrect=numericMatch(q,answer);
  const qt=String(q.questionType||'').toLowerCase();
  const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&q.requiresWorking!==true;
  if(finalCorrect&&ordinaryCalculation){
-   // For a correct numerical result in an ordinary calculation, method is normally implied unless the item explicitly requires working.
+   // For an ordinary calculation where working is not compulsory, the correct result may imply method marks. The user reviews the suggestion.
    preds=preds.map(()=>true);
  }
  let suggested;
@@ -585,12 +616,14 @@ function examSuggested(q,answer){
  }
  if(finalCorrect&&ordinaryCalculation)suggested=q.marks;
  else if(finalCorrect)suggested=Math.max(suggested,1);
+ if(exactVerbal&&q.marks===1){suggested=1;preds=preds.map(()=>true);}
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
  if(q.modelAnswer&&String(answer||'').trim()){
    const modelMatch=Math.max(formulaScore(answer,q.modelAnswer),phraseScore(answer,q.modelAnswer));
    if(modelMatch>=.82&&q.marks<=2){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
  }
- const matched=preds.filter(Boolean).length,confidence=finalCorrect?'high':matched===q.markPoints.length?'high':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
+ if(q.answerType==='levels'&&q.marks>=4)suggested=Math.min(suggested,Math.max(1,Math.ceil(q.marks*.66)));
+ const matched=preds.filter(Boolean).length,confidence=finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
 
@@ -716,11 +749,11 @@ function drawGlobe(){
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
 function nearestPin(x,y){let best=null,dist=18;for(const l of LOCATIONS){const p=project(l.lat,l.lon,700,360);if(p.z<=0)continue;const d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=l}}return best}
 
-function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();renderShop()}
+function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();if(document.getElementById('shop').classList.contains('active'))renderShop()}
 async function sync(manual=false){
  try{const [dr,er]=await Promise.all([fetch(DECK_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(EXAM_URL+'?v='+Date.now(),{cache:'no-store'})]);if(!dr.ok||!er.ok)throw new Error();const d=await dr.json(),e=await er.json(),old=deckVersion;cards=(d.cards||[]).filter(c=>c.active!==false);examQuestions=e.questions||[];deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(true);refreshExamFilters(true);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
-function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(drawGlobe,0)}
+function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
 function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
 
 ensureProfile();
@@ -737,8 +770,8 @@ document.getElementById('examSubject').onchange=()=>{examYears.clear();examTopic
 document.getElementById('yearsAll').onclick=()=>{examYears=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year));refreshExamFilters(false)};
 document.getElementById('yearsRecent').onclick=()=>{const ys=[...new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.year))].sort((a,b)=>b-a);examYears=new Set(ys.slice(0,2));refreshExamFilters(false)};
 document.getElementById('yearsClear').onclick=()=>{examYears.clear();refreshExamFilters(false)};
-document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(q=>q.courseTopic||q.topic));refreshExamFilters(false)};
-document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,ts=[...new Set(subjectExam(sub).map(q=>q.courseTopic||q.topic))].sort((a,b)=>(profile.topicWeakness[topicKey(sub,b)]||0)-(profile.topicWeakness[topicKey(sub,a)]||0));examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
+document.getElementById('examTopicsAll').onclick=()=>{examTopics=new Set(subjectExam(document.getElementById('examSubject').value).map(examTopicLabel));refreshExamFilters(false)};
+document.getElementById('examTopicsWeak').onclick=()=>{const sub=document.getElementById('examSubject').value,ts=[...new Set(subjectExam(sub).map(examTopicLabel))].sort((a,b)=>(profile.topicWeakness[topicKey(sub,b)]||0)-(profile.topicWeakness[topicKey(sub,a)]||0));examTopics=new Set(ts.slice(0,Math.max(1,Math.ceil(ts.length/3))));refreshExamFilters(false)};
 document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refreshExamFilters(false)};
 document.getElementById('startExam').onclick=startExamSession;
 document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
