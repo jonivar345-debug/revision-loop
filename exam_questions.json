@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 34,
-  "updatedAt": "2026-10-20T20:21:29.916Z",
+  "bankVersion": 35,
+  "updatedAt": "2026-10-20T20:24:10.155Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -6742,7 +6742,7 @@
         1
       ],
       "modelAnswer": "3.0 m s⁻¹",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A displacement–time graph goes from 4 m at t=1 s to 19 m at t=6 s along a straight line. Calculate the velocity and explain why it is constant.",
       "groupId": "Original|Physics|Motion graphs|1",
@@ -6751,7 +6751,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": true
+      "requiresWorking": true,
+      "numericAnswer": 3,
+      "tolerance": 0.05399999999999999
     },
     {
       "id": "orig_v25_physics_motion_graphs_2",
@@ -6847,7 +6849,7 @@
         1
       ],
       "modelAnswer": "0 m s⁻¹",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "An object accelerates at +1.5 m s⁻² for 4.0 s then at −2.0 m s⁻² for the next 3.0 s. Find the overall change in velocity from the acceleration–time graph.",
       "groupId": "Original|Physics|Motion graphs|4",
@@ -6856,7 +6858,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0,
+      "tolerance": 1e-8
     },
     {
       "id": "orig_v25_physics_free_body_diagrams_1",
@@ -6882,7 +6886,7 @@
         1
       ],
       "modelAnswer": "3.5 m s⁻² to right",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 12 kg trolley is pulled right by 60 N and experiences 18 N friction left on a horizontal floor. Describe the free-body diagram and calculate its acceleration, g=9.81 m s⁻².",
       "groupId": "Original|Physics|Free-body diagrams|1",
@@ -6891,7 +6895,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 3.5,
+      "tolerance": 0.063
     },
     {
       "id": "orig_v25_physics_free_body_diagrams_2",
@@ -6987,7 +6993,7 @@
         1
       ],
       "modelAnswer": "27.5 N",
-      "answerType": "points",
+      "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 2.5 kg mass hangs from a vertical light string and accelerates upwards at 1.2 m s⁻². Draw or describe the two force arrows and find tension (g=9.81).",
       "groupId": "Original|Physics|Free-body diagrams|4",
@@ -6996,7 +7002,9 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 27.5,
+      "tolerance": 0.49499999999999994
     },
     {
       "id": "orig_v25_physics_gas_laws_1",
@@ -8707,7 +8715,13 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "answerVariants": [
+        "(5,4)",
+        "P=(5,4)",
+        "x=5,y=4",
+        "(5, 4)"
+      ]
     },
     {
       "id": "orig_v25_maths_quadratics_1",
@@ -8779,7 +8793,17 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "answerVariants": [
+        "x=3 and x=-0.5",
+        "x=-0.5 and x=3",
+        "3,-0.5",
+        "-0.5,3",
+        "3 and -1/2",
+        "-1/2 and 3",
+        "x=3,x=-1/2",
+        "x=-1/2,x=3"
+      ]
     },
     {
       "id": "orig_v25_maths_quadratics_3",
@@ -8814,7 +8838,12 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "answerVariants": [
+        "p<-6 or p>6",
+        "p>6 or p<-6",
+        "p∈(-∞,-6)∪(6,∞)"
+      ]
     },
     {
       "id": "orig_v25_maths_quadratics_4",
@@ -8849,7 +8878,12 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "answerVariants": [
+        "2<=x<=3",
+        "2≤x≤3",
+        "x≥2 and x≤3"
+      ]
     },
     {
       "id": "orig_v25_maths_integration_1",
@@ -9137,7 +9171,11 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": true
+      "requiresWorking": true,
+      "answerVariants": [
+        "486 and diverges",
+        "486; diverges"
+      ]
     },
     {
       "id": "aqa_2018_C_1_1",
@@ -9906,14 +9944,16 @@
       ],
       "modelAnswer": "Use pV=nRT. p=0.250×8.31×300/0.00600. p≈1.04×10⁵ Pa.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Ideal gases|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 103875,
+      "tolerance": 1869.7499999999998
     },
     {
       "id": "orig_v26_physics_ideal_gases_2",
@@ -9941,14 +9981,16 @@
       ],
       "modelAnswer": "Use p₁V₁/T₁=p₂V₂/T₂. V₂=(120×8.0×350)/(150×300). V₂≈7.47 L.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Ideal gases|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 7.466666667,
+      "tolerance": 0.134400000006
     },
     {
       "id": "orig_v26_physics_ideal_gases_3",
@@ -10046,14 +10088,16 @@
       ],
       "modelAnswer": "p_before=0.15×12=1.8 kg m s⁻¹. p_after=0.15×(−8)=−1.2 kg m s⁻¹. Δp=−3.0 kg m s⁻¹.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Momentum|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": -3,
+      "tolerance": 0.05399999999999999
     },
     {
       "id": "orig_v26_physics_momentum_2",
@@ -10081,14 +10125,16 @@
       ],
       "modelAnswer": "Δp=m(v−u)=1200(0−20). F=Δp/Δt. F=−4800 N, opposite to original motion.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Momentum|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": -4800,
+      "tolerance": 86.39999999999999
     },
     {
       "id": "orig_v26_physics_momentum_3",
@@ -10221,14 +10267,16 @@
       ],
       "modelAnswer": "For SHM v_max=ωA. Substitute 4.0×0.060. v_max=0.24 m s⁻¹.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Simple harmonic motion|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.24,
+      "tolerance": 0.004319999999999999
     },
     {
       "id": "orig_v26_physics_simple_harmonic_motion_3",
@@ -10326,14 +10374,16 @@
       ],
       "modelAnswer": "Use Q=mcΔT. c=2400/(0.20×2.9). c≈4140 J kg⁻¹ K⁻¹.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Thermal physics|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 4140,
+      "tolerance": 74.52
     },
     {
       "id": "orig_v26_physics_thermal_physics_2",
@@ -10396,14 +10446,16 @@
       ],
       "modelAnswer": "Use E=mL. E=0.050×2.26×10⁶. E=1.13×10⁵ J.",
       "questionType": "explanation",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Thermal physics|v26_3",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 113000,
+      "tolerance": 2033.9999999999998
     },
     {
       "id": "orig_v26_physics_thermal_physics_4",
@@ -10464,14 +10516,16 @@
       ],
       "modelAnswer": "Use g=F/m. g=19.6/2.0=9.8 N kg⁻¹.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Physics|Gravitational fields|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 9.8,
+      "tolerance": 0.1764
     },
     {
       "id": "orig_v26_physics_gravitational_fields_2",
@@ -10705,14 +10759,16 @@
       ],
       "modelAnswer": "Cycle: ΔH_f =108+121+496−349+ΔH_latt. Sum known terms =+376 kJ mol⁻¹. ΔH_latt=−411−376=−787 kJ mol⁻¹.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Chemistry|Born–Haber cycles|v26_4",
       "groupOrder": 1,
       "standalone": true,
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": -787,
+      "tolerance": 14.165999999999999
     },
     {
       "id": "orig_v26_chemistry_gibbs_free_energy_1",
@@ -10775,14 +10831,16 @@
       ],
       "modelAnswer": "Convert entropy to +0.150 kJ K⁻¹ mol⁻¹. At boundary ΔG=0, so T=40/0.150. T≈267 K and feasibility above this value.",
       "questionType": "explanation",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Chemistry|Gibbs free energy|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 266.6666667,
+      "tolerance": 4.8000000006
     },
     {
       "id": "orig_v26_chemistry_gibbs_free_energy_3",
@@ -10950,14 +11008,16 @@
       ],
       "modelAnswer": "Apply Henderson–Hasselbalch relationship. log₁₀(10)=1. pH=5.76.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Chemistry|Buffers|v26_3",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 5.76,
+      "tolerance": 0.10368
     },
     {
       "id": "orig_v26_chemistry_buffers_4",
@@ -11055,14 +11115,16 @@
       ],
       "modelAnswer": "Cu²⁺/Cu is the more positive reduction potential. E°cell=E°cathode−E°anode. E°cell=0.34−(−0.76)=+1.10 V.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Chemistry|Electrode potentials|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 1.1,
+      "tolerance": 0.0198
     },
     {
       "id": "orig_v26_chemistry_electrode_potentials_3",
@@ -11296,14 +11358,16 @@
       ],
       "modelAnswer": "Use nCr p^r (1−p)^(n−r). P(X=2)=C(10,2)(0.3)²(0.7)⁸. Probability≈0.2335.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Statistical distributions|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.2335,
+      "tolerance": 0.004203
     },
     {
       "id": "orig_v26_maths_statistical_distributions_2",
@@ -11366,14 +11430,16 @@
       ],
       "modelAnswer": "Use z=(x−μ)/σ. z=(130−100)/15. z=2.00.",
       "questionType": "explanation",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Statistical distributions|v26_3",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 2,
+      "tolerance": 0.036
     },
     {
       "id": "orig_v26_maths_statistical_distributions_4",
@@ -11401,14 +11467,16 @@
       ],
       "modelAnswer": "Use complement P(X≥1)=1−P(X=0). P(X=0)=(0.8)^5. P(X≥1)=1−0.32768=0.67232.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Statistical distributions|v26_4",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.67232,
+      "tolerance": 0.01210176
     },
     {
       "id": "orig_v26_maths_hypothesis_testing_1",
@@ -11471,14 +11539,16 @@
       ],
       "modelAnswer": "Under H₀, X~Bin(10,0.5). P(X≥9)=[C(10,9)+C(10,10)](0.5)¹⁰. p-value=11/1024≈0.0107.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Hypothesis testing|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.0107421875,
+      "tolerance": 0.00019335937499999998
     },
     {
       "id": "orig_v26_maths_hypothesis_testing_3",
@@ -11576,14 +11646,16 @@
       ],
       "modelAnswer": "Use s=ut+½at². Initial speed u=0. s=½×3×16=24 m.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Kinematics|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 24,
+      "tolerance": 0.43199999999999994
     },
     {
       "id": "orig_v26_maths_kinematics_2",
@@ -11714,14 +11786,16 @@
       ],
       "modelAnswer": "Moment = force×perpendicular distance. 20×0.30=6.0 N m.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Moments|v26_1",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 6,
+      "tolerance": 0.10799999999999998
     },
     {
       "id": "orig_v26_maths_moments_2",
@@ -11749,14 +11823,16 @@
       ],
       "modelAnswer": "Balance clockwise and anticlockwise moments. 3.0×0.20=2.0×d. d=0.30 m to right of pivot.",
       "questionType": "explanation",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Moments|v26_2",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 0.3,
+      "tolerance": 0.005399999999999999
     },
     {
       "id": "orig_v26_maths_moments_3",
@@ -11819,14 +11895,16 @@
       ],
       "modelAnswer": "Use component perpendicular to beam Fsin30°=25 N. Moment =F d sinθ. Moment=50×0.40×0.5=10 N m.",
       "questionType": "calculation and reasoning",
-      "answerType": "points",
+      "answerType": "numeric",
       "groupId": "Original|Maths|Moments|v26_4",
       "groupOrder": 1,
       "standalone": true,
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false
+      "requiresWorking": false,
+      "numericAnswer": 10,
+      "tolerance": 0.18
     },
     {
       "id": "aqa_2018_chemA_1_2",
