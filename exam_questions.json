@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 15,
-  "updatedAt": "2026-10-20T17:25:32.287Z",
+  "bankVersion": 16,
+  "updatedAt": "2026-10-20T17:25:58.557Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -750,7 +750,7 @@
       "question": "7.2",
       "marks": 2,
       "questionType": "calculation",
-      "prompt": "The same cyclist produces 310 W while moving steadily at 1.63 m s^-1 up the slope. Neglect air resistance. Calculate θ.",
+      "prompt": "A cyclist and bicycle of total mass 65 kg move steadily at 1.63 m s^-1 up a slope while the cyclist produces 310 W. Neglect air resistance. Calculate the slope angle θ.",
       "answerType": "numeric",
       "numericAnswer": 17.4,
       "tolerance": 0.2,
@@ -1194,7 +1194,7 @@
       "question": "6(c)",
       "marks": 4,
       "questionType": "problem solving",
-      "prompt": "The same circle crosses the x-axis at D and E and has centre C. Find the exact area of triangle DEC.",
+      "prompt": "A circle has centre C(4,1) and equation x²+y²−8x−2y=1. It crosses the x-axis at D and E. Find the exact area of triangle DEC.",
       "answerType": "text",
       "modelAnswer": "√17 square units.",
       "markPoints": [
@@ -1480,7 +1480,7 @@
       "question": "2.2",
       "marks": 3,
       "questionType": "calculation",
-      "prompt": "A mercury atom emits an ultraviolet photon of energy 6.7 eV. Calculate the wavelength of the photon.",
+      "prompt": "A mercury atom emits an ultraviolet photon with energy 6.7 eV. Calculate its wavelength.",
       "answerType": "numeric",
       "numericAnswer": 1.86e-7,
       "tolerance": 8e-9,
@@ -1538,7 +1538,7 @@
       "question": "3.2",
       "marks": 3,
       "questionType": "multi-step calculation",
-      "prompt": "The same 0.648 m guitar string has tension 71 N and first-harmonic frequency 147 Hz. Calculate the mass of the vibrating length of string.",
+      "prompt": "A guitar string 0.648 m long is fixed at both ends. Its tension is 71 N and its first-harmonic frequency is 147 Hz. Calculate the mass of the vibrating string.",
       "answerType": "numeric",
       "numericAnswer": 0.00127,
       "tolerance": 0.00008,
