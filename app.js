@@ -629,9 +629,31 @@ function parseNumber(s){
 }
 function numericMatch(q,answer){
  if(q.answerType!=='numeric'||!Number.isFinite(q.numericAnswer))return false;
- const n=parseNumber(answer);if(!Number.isFinite(n))return false;
- const tol=Number.isFinite(q.tolerance)?q.tolerance:Math.max(Math.abs(q.numericAnswer)*.01,1e-9);
- return Math.abs(n-q.numericAnswer)<=tol;
+ let text=String(answer||'').trim();
+ if(!text)return false;
+ // Remove final presentation notes which are not numerical answers.
+ text=text.replace(/\(\s*\d+\s*(?:s\.?f\.?|significant\s+figures?)\s*\)\s*$/i,'').trim();
+ text=text.replace(/(?:\s*,?\s*valid\s+(?:since|because)\s+[a-z]+\s*[><]\s*\d+(?:\.\d+)?)\s*$/i,'').trim();
+ let n=parseNumber(text);
+ const expected=q.numericAnswer,tol=Number.isFinite(q.tolerance)?q.tolerance:Math.max(Math.abs(expected)*.01,1e-9);
+ if(Number.isFinite(n)&&Math.abs(n-expected)<=tol)return true;
+ // SI-unit equivalence: 2.94 kW and 2940 W may represent the same power.
+ const unit=text.match(/([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*(kW|kJ|km|cm|mm|mW|mJ|mA|ms|µs|μs|nm|kPa|MPa)\s*$/i);
+ if(unit){
+  const scale={kw:1e3,kj:1e3,km:1e3,cm:1e-2,mm:1e-3,mw:1e-3,mj:1e-3,ma:1e-3,ms:1e-3,'µs':1e-6,'μs':1e-6,nm:1e-9,kpa:1e3,mpa:1e6}[unit[2].toLowerCase()];
+  if(scale&&Math.abs(Number(unit[1])*scale-expected)<=tol)return true;
+ }
+ // A ratio and its percentage increase can both be correct: 1.6 times = 60% greater.
+ const ratio=text.match(/([-+]?(?:\d+(?:\.\d*)?|\.\d+)).*?\(\s*([-+]?\d+(?:\.\d+)?)\s*%\s*(?:increase|greater|more)?\s*\)\s*$/i);
+ if(ratio&&Math.abs(Number(ratio[1])-expected)<=tol&&Math.abs(Number(ratio[2])-(expected-1)*100)<.3)return true;
+ // Accept simple exact mathematical forms such as 4π or π/2.
+ const exact=text.replace(/\s/g,'').match(/(?:^|=)([-+]?(?:\d+(?:\.\d*)?)?)\*?(?:π|pi)(?:\/(\d+(?:\.\d+)?))?(?:[a-zA-Z]*)$/i);
+ if(exact){
+  const m=(exact[1]===''||exact[1]==='+')?1:exact[1]==='-'?-1:Number(exact[1]);
+  const value=m*Math.PI/(exact[2]?Number(exact[2]):1);
+  if(Number.isFinite(value)&&Math.abs(value-expected)<=tol)return true;
+ }
+ return false;
 }
 
 function nextSchedule(s,rating){const old=Math.max(.25,s.stability||0),elapsed=s.last?Math.max(0,(now()-s.last)/DAY):0,over=old?clamp(elapsed/old,0,2):0;let stability=old,difficulty=clamp(s.difficulty||5,1,10),days;if(rating==='again'){difficulty=clamp(difficulty+.7,1,10);stability=Math.max(.25,old*.35);days=10/1440}else if(rating==='hard'){difficulty=clamp(difficulty+.2,1,10);stability=Math.max(1,old?old*1.12:1);days=Math.min(stability,1)}else if(rating==='good'){difficulty=clamp(difficulty-.08,1,10);stability=s.stage<0?3:clamp(old*(1.72+.12*over-.035*(difficulty-5)),2,365);days=stability}else{difficulty=clamp(difficulty-.3,1,10);stability=s.stage<0?7:clamp(old*(2.3+.12*over-.025*(difficulty-5)),4,365);days=stability}return {stability,difficulty,days}}
@@ -1012,6 +1034,7 @@ function renderCard(c){
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
 function examSuggested(q,answer){
+ if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  const scores=q.markPoints.map(p=>markPointPrediction(answer,p));
  let preds=scores.map(v=>v>=.5);
  const variants=(q.answerVariants||[]).map(x=>compact(x)).filter(Boolean);
