@@ -80,7 +80,24 @@ const OUTFIT_STYLES=[
  {id:'sport',name:'Sport',cost:32,top:'#dc2626',accent:'#fee2e2'},
  {id:'festival',name:'Festival',cost:38,top:'#db2777',accent:'#fce7f3'}
 ];
-const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({id:ch.id+'-'+o.id,character:ch.id,name:o.name,cost:i===0?0:o.cost+Math.max(0,CHARACTERS.findIndex(x=>x.id===ch.id))*2,top:o.top,accent:o.accent})));
+const CHARACTER_OUTFIT_NAMES={
+ lelouch:['Academy Uniform','Black Knight Cloak','Ashford Casual','Royal Uniform','Zero-Inspired Costume','Winter Coat','Ceremonial Jacket','Midnight Regalia'],
+ light:['School Uniform','Smart Suit','Casual Jacket','Dark Overcoat','Formal Shirt','Winter Coat','Student Casual','Detective Look'],
+ eren:['Cadet Uniform','Scout Cloak','Casual Shirt','Long Coat','Field Jacket','Winter Cloak','Formal Jacket','Survey Expedition'],
+ isagi:['Training Kit','Blue Match Kit','Tracksuit','Casual Jacket','Winter Training','Streetwear','Away Kit','Final-Match Kit'],
+ gojo:['High-Collar Uniform','Travel Coat','Casual T-shirt','Dark Overcoat','Winter Coat','Ceremonial Jacket','City Clothes','Battle Outfit'],
+ subaru:['Tracksuit','Traveller Coat','Casual Jacket','Winter Cloak','Smart Look','Training Clothes','Summer Outfit','Knight-Inspired Attire'],
+ klein:['Formal Suit','Seer Attire','Long Trench Coat','Gentleman Outfit','Black Overcoat','Traveller Clothes','Mystic Robes','Ceremonial Dress'],
+ dokja:['Office Attire','Dark Coat','Casual Jumper','Scenario Outfit','Winter Jacket','Formal Outfit','Traveller Gear','Starlit Cloak'],
+ thorfinn:['Traveller Tunic','Explorer Cloak','Casual Linen','Cold-Weather Cloak','Workwear','Warrior Garb','Farm Outfit','Long Voyage'],
+ kaneki:['Casual Shirt','Black Coat','White-Hair Outfit','Student Look','Winter Jacket','Long Overcoat','Battle Gear','Midnight Mask']
+};
+const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
+ id:ch.id+'-'+o.id,character:ch.id,name:(CHARACTER_OUTFIT_NAMES[ch.id]||[])[i]||o.name,
+ cost:i===0?0:o.cost+Math.max(0,CHARACTERS.findIndex(x=>x.id===ch.id))*2,
+ top:o.top,accent:o.accent,styleId:o.id
+})));
+
 const LOCATIONS=[
  {id:'home',name:'Home Desk',wiki:'Desk',lat:52.5,lon:1.0,cost:0},
  {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:20},
@@ -685,14 +702,36 @@ function buy(kind,id){
  else profile.equippedLocation=id;
  save();showToast('Unlocked '+item.name);renderAll();
 }
+
+const LOCATION_PHOTO_OVERRIDES={
+ hongkong:{file:'Hong Kong Night Skyline.jpg',credit:'Photo: Wikimedia Commons',page:'https://commons.wikimedia.org/wiki/File:Hong_Kong_Night_Skyline.jpg'},
+ singapore:{file:'Gardens by the Bay Singapore (aerial view).jpg',credit:'Photo: ProjectManhattan / CC0',page:'https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_Singapore_(aerial_view).jpg'},
+ bali:{file:'Tanah Lot Temple, Bali, Indonesia.jpg',credit:'Photo: Wikimedia Commons',page:'https://commons.wikimedia.org/wiki/File:Tanah_Lot_Temple,_Bali,_Indonesia.jpg'}
+};
+function placeImage(el,url,location,source,credit){
+ if(!url||!el?.isConnected)return;
+ const img=document.createElement('img');img.loading='lazy';img.alt='View of '+location.name;img.referrerPolicy='no-referrer';
+ img.onload=()=>{if(!el.isConnected)return;el.replaceChildren(img);if(source){const a=document.createElement('a');a.className='photo-credit';a.href=source;a.target='_blank';a.rel='noopener noreferrer';a.textContent=credit||'Photo source';el.appendChild(a)}};
+ img.onerror=()=>{if(!el.isConnected)return;el.textContent='Photo currently unavailable';};
+ img.src=url;
+}
 async function locationPhoto(location,el){
  if(!location||!el)return;
- if(wikiPhotoCache[location.wiki]){el.innerHTML='<img src="'+esc(wikiPhotoCache[location.wiki])+'" alt="'+esc(location.name)+'">';return}
+ const special=LOCATION_PHOTO_OVERRIDES[location.id];
+ if(special){
+   const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(special.file);
+   placeImage(el,url,location,special.page,special.credit);
+   return;
+ }
+ const cached=wikiPhotoCache[location.wiki];
+ if(cached){placeImage(el,cached,location,'https://en.wikipedia.org/wiki/'+encodeURIComponent(location.wiki),'Wikipedia image');return}
  try{
-   const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(location.wiki),{cache:'force-cache'});
-   const j=await r.json(),url=j.thumbnail?.source||j.originalimage?.source;
-   if(url){wikiPhotoCache[location.wiki]=url;el.innerHTML='<img src="'+esc(url)+'" alt="'+esc(location.name)+'">'}
- }catch{}
+  const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&formatversion=2&pithumbsize=640&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
+  const res=await fetch(endpoint,{cache:'force-cache'});if(!res.ok)throw Error('No image response');
+  const d=await res.json(),p=d.query?.pages?.[0],url=p?.thumbnail?.source;
+  if(url){wikiPhotoCache[location.wiki]=url;placeImage(el,url,location,'https://en.wikipedia.org/wiki/'+encodeURIComponent(location.wiki),'Wikipedia image')}
+  else el.textContent='Photo unavailable';
+ }catch{el.textContent='Photo not available'}
 }
 function renderShop(){
  const oc=profile.shopOwned.characters,oo=profile.shopOwned.outfits,ol=profile.shopOwned.locations,curr=profile.equippedCharacter;
@@ -706,8 +745,10 @@ function renderShop(){
  document.getElementById('characterCount').textContent=oc.length+' / '+CHARACTERS.length+' unlocked';
  document.getElementById('outfitCount').textContent=oo.length+' / '+OUTFITS.length+' unlocked';
  document.getElementById('locationCount').textContent=ol.length+' / '+LOCATIONS.length+' unlocked';
- document.getElementById('characterShop').innerHTML=visibleChars.map(c=>{const def=OUTFITS.find(o=>o.id===c.id+'-default');return '<div class="shop-item character-card"><div class="shop-icon">'+avatarSVG(c,def)+'</div><b>'+esc(c.name)+'</b><small>'+esc(c.series)+'</small><button class="'+(!oc.includes(c.id)?'buy':'')+'" data-character="'+c.id+'" '+(!oc.includes(c.id)&&profile.points<c.cost?'disabled':'')+'>'+(oc.includes(c.id)?(curr===c.id?'Selected':'Select'):c.cost+' points')+'</button></div>'}).join('');
+ document.getElementById('characterShop').innerHTML=visibleChars.map(c=>{const def=OUTFITS.find(o=>o.id===c.id+'-default');return '<div class="shop-item character-card '+(curr===c.id?'active-character':'')+'"><div class="shop-icon">'+avatarSVG(c,def)+'</div><b>'+esc(c.name)+'</b><small>'+esc(c.series)+'</small><button class="'+(!oc.includes(c.id)?'buy':'')+'" data-character="'+c.id+'" '+(!oc.includes(c.id)&&profile.points<c.cost?'disabled':'')+'>'+(oc.includes(c.id)?(curr===c.id?'Selected':'Select'):c.cost+' points')+'</button></div>'}).join('');
  const outfits=OUTFITS.filter(o=>o.character===curr),ch=CHARACTERS.find(c=>c.id===curr)||CHARACTERS[0];
+ document.getElementById('outfitHeading').textContent='Outfits for '+ch.name;
+ document.getElementById('outfitCount').textContent=outfits.filter(o=>oo.includes(o.id)).length+' / '+outfits.length+' for '+ch.name;
  document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+avatarSVG(ch,o)+'</div><b>'+esc(o.name)+'</b><small>'+esc(ch.name)+' · '+esc(ch.series)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button></div>').join('');
  document.getElementById('locationShop').innerHTML=LOCATIONS.map(l=>'<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'"></div><div class="location-body"><b>'+esc(l.name)+'</b><small>'+l.lat.toFixed(1)+'°, '+l.lon.toFixed(1)+'°</small><button class="'+(!ol.includes(l.id)?'buy':'')+'" data-location="'+l.id+'" '+(!ol.includes(l.id)&&profile.points<l.cost?'disabled':'')+'>'+(ol.includes(l.id)?(profile.equippedLocation===l.id?'Active location':'Use location'):l.cost+' points')+'</button></div></div>').join('');
  document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>buy('character',b.dataset.character));
