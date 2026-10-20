@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 9,
+  "bankVersion": 10,
   "updatedAt": "2026-10-20T16:57:21.173Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
@@ -1584,6 +1584,68 @@
       "sourceVerified": true,
       "groupId": "Maths|2021|7356/1|1",
       "groupOrder": "1"
+    },
+    {
+      "id": "aqa_chem_as20_p1_q2_1_link",
+      "year": 2020,
+      "question": "2.1",
+      "marks": 5,
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "subtopic": "Titration calculation",
+      "questionType": "official-source calculation",
+      "prompt": "Open official AQA Paper 1 Question 2.1 and complete the titration calculation.",
+      "answerType": "numeric",
+      "numericAnswer": 1.88,
+      "tolerance": 0.03,
+      "unit": "g",
+      "markPoints": [
+        "Correct final mass is approximately 1.88 g."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-QP-NOV20.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-W-MS-NOV20.PDF#page=12",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2020|7404/1|2",
+      "groupOrder": "2.1",
+      "markPointMarks": [
+        5
+      ]
+    },
+    {
+      "id": "aqa_chem_as21_p1_q7_2_link",
+      "year": 2021,
+      "question": "7.2",
+      "marks": 3,
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "subtopic": "Calorimetry",
+      "questionType": "official-source calculation",
+      "prompt": "Open official AQA Paper 1 Question 7.2 and calculate the experimental enthalpy value.",
+      "answerType": "numeric",
+      "numericAnswer": -1050,
+      "tolerance": 25,
+      "unit": "kJ mol^-1",
+      "markPoints": [
+        "Correct final value is approximately −1050 kJ mol^-1."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-QP-NOV21.PDF#page=10",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-MS-NOV21.PDF#page=17",
+      "subject": "Chemistry",
+      "level": "AS",
+      "series": "June",
+      "paper": "7404/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Chemistry|2021|7404/1|7",
+      "groupOrder": "7.2",
+      "markPointMarks": [
+        3
+      ]
     }
   ],
   "coverage": {
