@@ -678,7 +678,89 @@ function renderWeak(){
  const a=cards.filter(c=>c.active!==false).sort((x,y)=>weakness(y)-weakness(x)).slice(0,50);document.getElementById('weakList').innerHTML=a.map(c=>{const ct=c.courseTopic||c.topic,h=Math.round(memoryHealth(c)*100),ts=topicStat(c.subject,ct),acc=ts.examMax?Math.round(ts.examMarks/ts.examMax*100):null,cls=h>=85?'memory-good':h>=60?'memory-mid':'memory-low';return '<div class="list-row"><div><strong>'+esc(ct)+'</strong><small>'+esc(c.subject)+' · memory '+h+'%'+(acc!==null?' · exam '+acc+'%':'')+'</small></div><span class="memory-pill '+cls+'">'+Math.round(weakness(c))+'</span></div>'}).join('');
  const r=profile.errorLog.slice(0,30);document.getElementById('mistakeList').innerHTML=r.length?r.map(e=>'<div class="list-row"><div><strong>'+esc(e.topic)+'</strong><small>'+esc(e.subject)+' · '+esc(e.type==='exam'?'exam '+e.result:e.result)+(e.missedPoints?.length?' · missed: '+esc(e.missedPoints.slice(0,2).join(' / ')):'')+'</small></div><span class="score-pill">'+new Date(e.date).toLocaleDateString(undefined,{day:'numeric',month:'short'})+'</span></div>').join(''):'<div class="empty-card">No recorded mistakes yet.</div>'
 }
+
+const AQA_SYLLABUS={
+ Physics:[
+  ['Measurements and their errors',/Measurements & practical skills|Measurements|Practical skills/i],
+  ['Particles and radiation',/Particles & radiation|Particle physics|Photon|Photoelectric|Energy levels/i],
+  ['Waves',/^Waves$|Interference|Diffraction|Polarisation|Refraction|Stationary waves/i],
+  ['Mechanics and materials',/Mechanics & materials|Newton|Couples|Free-body|Energy|Materials|Vectors|Forces on a slope/i],
+  ['Electricity',/^Electricity$|EMF|Resistivity|Potential dividers/i],
+  ['Further mechanics',/Circular motion|SHM|Resonance/i],
+  ['Thermal physics',/Thermal physics|Kinetic theory|Gas laws/i],
+  ['Fields and their consequences',/Gravitational fields|Electric fields|Magnetic fields|Capacitance|Electromagnetic induction/i],
+  ['Nuclear physics',/Nuclear physics|Radioactivity/i],
+  ['Medical physics (chosen option)',/Medical physics/i]
+ ],
+ Chemistry:[
+  ['Atomic structure',/Atomic structure|Ionisation energy/i],
+  ['Amount of substance',/Amount of substance|Titration calculations|Back titrations|Empirical formula/i],
+  ['Bonding',/Bonding|Shapes|Intermolecular forces/i],
+  ['Energetics',/^Energetics$/i],
+  ['Kinetics',/^Kinetics$/i],
+  ['Equilibria and Kc',/Equilibria|Kc/i],
+  ['Redox',/^Redox$/i],
+  ['Thermodynamics',/Thermodynamics|Born.Haber|Entropy|Gibbs/i],
+  ['Rate equations',/Rate equations|Arrhenius/i],
+  ['Kp',/^Kp$/i],
+  ['Electrode potentials',/Electrode potentials/i],
+  ['Acids and bases',/Acids & bases|Weak acids|Buffers|Kw/i],
+  ['Periodicity',/^Periodicity$/i],
+  ['Group 2',/^Group 2$/i],
+  ['Group 7',/^Group 7$/i],
+  ['Period 3 elements and oxides',/Period 3/i],
+  ['Transition metals',/Transition metals/i],
+  ['Aqueous ions',/Aqueous ions/i],
+  ['Introduction to organic chemistry',/^Organic chemistry$/i],
+  ['Alkanes',/^Alkanes$/i],
+  ['Halogenoalkanes',/^Halogenoalkanes$/i],
+  ['Alkenes',/^Alkenes$/i],
+  ['Alcohols',/^Alcohols$/i],
+  ['Organic analysis',/^Organic analysis$|Organic analysis & synthesis/i],
+  ['Optical isomerism',/Optical isomerism/i],
+  ['Aldehydes and ketones',/Aldehydes and ketones/i],
+  ['Carboxylic acids and derivatives',/Carboxylic acids|Esters|Acyl chlorides/i],
+  ['Aromatic chemistry',/Aromatic chemistry/i],
+  ['Amines',/^Amines$/i],
+  ['Polymers',/Polymers/i],
+  ['Amino acids, proteins and DNA',/Amino acids|DNA/i],
+  ['Organic synthesis',/Organic synthesis/i],
+  ['NMR',/^NMR$/i],
+  ['Chromatography',/Chromatography/i]
+ ],
+ Maths:[
+  ['Proof',/^Proof$/i],
+  ['Algebra and functions',/Algebra|Functions|Quadratics|Binomial|Transformations/i],
+  ['Coordinate geometry',/Coordinate geometry/i],
+  ['Sequences and series',/Sequences/i],
+  ['Trigonometry',/Trigonometry/i],
+  ['Exponentials and logarithms',/Logarithms|Logs|Exponentials/i],
+  ['Differentiation',/Differentiation/i],
+  ['Integration',/Integration/i],
+  ['Numerical methods',/Numerical methods/i],
+  ['Vectors',/Vectors/i],
+  ['Statistical sampling',/Sampling/i],
+  ['Data presentation and interpretation',/Data presentation|Data interpretation/i],
+  ['Probability',/Probability/i],
+  ['Statistical distributions',/Statistical distributions|Binomial distribution|Normal distribution/i],
+  ['Statistical hypothesis testing',/Hypothesis testing/i],
+  ['Quantities and units in mechanics',/Quantities and units/i],
+  ['Kinematics',/Kinematics/i],
+  ["Forces and Newton's laws",/Forces|Newton/i],
+  ['Moments',/Moments/i]
+ ]
+};
+function renderSyllabusCoverage(){
+ const el=document.getElementById('syllabusCoverage'),select=document.getElementById('specSubject');
+ if(!el||!select)return;const sub=select.value;
+ el.innerHTML=(AQA_SYLLABUS[sub]||[]).map(([name,re])=>{
+  const nc=cards.filter(c=>c.subject===sub&&re.test(c.topic+' | '+(c.courseTopic||''))).length;
+  const nq=examQuestions.filter(q=>q.subject===sub&&q.standalone!==false&&re.test(q.topic+' | '+(q.courseTopic||'')+' | '+(q.subtopic||''))).length;
+  return '<div class="syllabus-row '+(!nc&&!nq?'missing':'')+'"><strong>'+esc(name)+'</strong><small>'+(nc||nq?nc+' cards · '+nq+' questions':'Not yet indexed')+'</small></div>';
+ }).join('');
+}
 function renderProgress(){
+ renderSyllabusCoverage();
  document.getElementById('subjectProgress').innerHTML=['Physics','Chemistry','Maths'].map(sub=>{const a=cards.filter(c=>c.active!==false&&c.subject===sub),started=a.filter(c=>state(c.id).stage>=0),mature=a.filter(c=>state(c.id).mastered).length,avg=started.length?Math.round(started.map(memoryHealth).reduce((x,y)=>x+y,0)/started.length*100):0,ts=Object.entries(profile.topicStats).filter(([k])=>k.startsWith(sub+'|')).map(([,v])=>v),em=ts.reduce((x,v)=>x+(v.examMarks||0),0),ex=ts.reduce((x,v)=>x+(v.examMax||0),0);return '<div class="progress-card"><div class="subject-progress-head"><span>'+sub+'</span><span>'+mature+' mature / '+a.length+'</span></div><div class="bar-track"><div class="bar-fill" style="width:'+(a.length?mature/a.length*100:0)+'%"></div></div><div class="progress-note">'+started.length+' started · predicted recall '+avg+'%'+(ex?' · exam '+em+'/'+ex:'')+'</div></div>'}).join('');
  const started=cards.filter(c=>state(c.id).stage>=0),avg=started.length?Math.round(started.map(memoryHealth).reduce((a,b)=>a+b,0)/started.length*100):0,long=started.filter(c=>state(c.id).stability>=90).length;document.getElementById('retentionCard').innerHTML='<h3>Retention model</h3><div class="schedule-row"><span>Average predicted recall</span><b>'+avg+'%</b></div><div class="schedule-row"><span>Cards stable for 3+ months</span><b>'+long+'</b></div><div class="schedule-row"><span>Recorded mistakes</span><b>'+profile.errorLog.length+'</b></div>'
 }
@@ -817,7 +899,7 @@ document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refre
 document.getElementById('startExam').onclick=startExamSession;
 document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
 document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
-document.getElementById('characterSeries').onchange=renderShop;document.getElementById('characterOwnedFilter').onchange=renderShop;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
+document.getElementById('characterSeries').onchange=renderShop;document.getElementById('characterOwnedFilter').onchange=renderShop;document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
 const globe=document.getElementById('globe');
 globe.addEventListener('pointerdown',e=>{dragging=true;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
