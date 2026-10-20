@@ -903,6 +903,45 @@ function applyFlashPreset(p){
  if(p!=='clear'){const filtered=p==='mock'?base.filter(c=>c.mock===true):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
 }
+const PMT_PAPER_INDEX={
+ Physics:{
+ 'AS Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-1-as/',
+ 'AS Paper 2':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-2-as/',
+ 'A-level Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-1/',
+ 'A-level Paper 2':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-2/',
+ 'A-level Paper 3':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-3/'
+ },
+ Chemistry:{
+ 'AS Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/aqa-paper-1-as/',
+ 'AS Paper 2':'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/aqa-paper-2-as/',
+ 'A-level Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/aqa-paper-1/',
+ 'A-level Paper 2':'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/aqa-paper-2/',
+ 'A-level Paper 3':'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/aqa-paper-3/'
+ },
+ Maths:{
+ 'AS Papers 1 & 2':'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/papers-as/',
+ 'A-level Papers 1, 2 & 3':'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/papers/'
+ }
+};
+const PMT_BY_TOPIC={
+ Physics:'https://www.physicsandmathstutor.com/physics-revision/a-level-aqa/',
+ Chemistry:'https://www.physicsandmathstutor.com/chemistry-revision/a-level-aqa/',
+ Maths:'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/'
+};
+function renderPaperArchive(){
+ const target=document.getElementById('paperArchiveLinks'),subject=document.getElementById('examSubject').value,years=subject==='Maths'?[2018,2019,2020]:[2016,2017,2018,2019,2020];
+ if(!target)return;
+ const items=Object.entries(PMT_PAPER_INDEX[subject]||{});
+ target.innerHTML='<p class="archive-label">'+esc(subject)+' · all papers and mark schemes by year</p>'+
+ '<div class="archive-years">'+years.map(y=>'<span>'+y+(y===2020?' *':'')+'</span>').join('')+'</div>'+
+ '<div class="archive-links">'+items.map(([title,url])=>'<a href="'+url+'" rel="noopener noreferrer" target="_blank">'+esc(title)+' ↗</a>').join('')+'</div>'+
+ '<p class="archive-label">For 2015 papers use the older specification: <a target="_blank" rel="noopener noreferrer" href="'+
+ (subject==='Maths'?'https://www.physicsandmathstutor.com/a-level-maths-papers/':PMT_BY_TOPIC[subject])+'">old-specification topic and paper resources ↗</a>.</p>';
+ const all=revisionTopicIndex(subject),gaps=[];
+ for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&n.questions===0)gaps.push(topic);
+ document.getElementById('topicOutsideResources').innerHTML='<p class="archive-label">In-app topics still missing checked past-paper questions: '+
+ gaps.length+'. <a href="'+PMT_BY_TOPIC[subject]+'" target="_blank" rel="noopener noreferrer">Find AQA questions by topic on PMT ↗</a></p>';
+}
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,base=subjectExam(sub),
  years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
@@ -918,6 +957,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{if(el.checked)examTopics.add(el.dataset.examTopic);else examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
  bindTopicGroupControls('exam');document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
+ renderPaperArchive();
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Unlisted specification topics still need exam questions.';
 }
