@@ -176,6 +176,66 @@ const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
  top:o.top,accent:o.accent,styleId:o.id
 })));
 
+// Read-only official character-profile previews. The artwork is linked from MyAnimeList via Jikan;
+// nothing is downloaded or redistributed into this public repository.
+const ANIME_ART_QUERY={
+ lelouch:'Lelouch Lamperouge',cc:'C.C.',light:'Light Yagami',l:'L Lawliet',eren:'Eren Yeager',
+ rin_bl:'Rin Itoshi',isagi:'Yoichi Isagi',yuji:'Yuji Itadori',gojo:'Satoru Gojo',
+ megumi:'Megumi Fushiguro',nobara:'Nobara Kugisaki',subaru:'Subaru Natsuki',
+ klein:'Klein Moretti',dokja:'Kim Dokja',joonghyuk:'Yoo Joonghyuk',thorfinn:'Thorfinn',
+ kaneki:'Ken Kaneki',touka:'Touka Kirishima',juuzou:'Juuzou Suzuya',
+ phase2_sung_jinwoo:'Sung Jinwoo',phase2_kafka_hibino:'Kafka Hibino',phase2_shinichi_izumi:'Shinichi Izumi',
+ phase2_kenzo_tenma:'Kenzo Tenma',phase2_johan_liebert:'Johan Liebert',
+ phase2_kiyotaka_ayanokoji:'Kiyotaka Ayanokouji',phase2_manjiro_sano:'Manjiro Sano',
+ phase2_aqua_hoshino:'Aqua Hoshino'
+};
+const characterArtCache=new Map(),characterArtJobs=new Map();let characterArtQueue=Promise.resolve(),characterVisibleLimit=16;
+function characterArtQuery(c){return ANIME_ART_QUERY[c.id]||c.lookup||c.name}
+async function getCharacterArt(c){
+ if(characterArtCache.has(c.id))return characterArtCache.get(c.id);
+ if(characterArtJobs.has(c.id))return characterArtJobs.get(c.id);
+ const job=characterArtQueue=characterArtQueue.catch(()=>{}).then(async()=>{
+  await new Promise(r=>setTimeout(r,440));
+  try{
+   const query=characterArtQuery(c);
+   const url='https://api.jikan.moe/v4/characters?q='+encodeURIComponent(query)+'&limit=8';
+   const response=await fetch(url);
+   if(!response.ok)throw Error('Artwork lookup unavailable');
+   const data=await response.json();
+   const cleaned=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+   const target=cleaned(query),words=target.split(' ').filter(Boolean);
+   const best=(data.data||[]).map(x=>({record:x,name:cleaned(x.name)}))
+     .sort((a,b)=>(b.name===target?100:words.filter(w=>b.name.includes(w)).length*12)-(a.name===target?100:words.filter(w=>a.name.includes(w)).length*12))[0];
+   if(!best||words.filter(w=>best.name.includes(w)).length<Math.min(1,words.length))throw Error('Artwork match missing');
+   const src=best.record.images?.webp?.image_url||best.record.images?.jpg?.image_url;
+   if(!src)throw Error('No picture');
+   const result={src,source:best.record.url||'https://myanimelist.net/character'};
+   characterArtCache.set(c.id,result);return result;
+  }catch{characterArtCache.set(c.id,null);return null}
+ }).finally(()=>characterArtJobs.delete(c.id));
+ characterArtJobs.set(c.id,job);return job;
+}
+function loadCharacterArt(root=document){
+ const nodes=[...root.querySelectorAll('[data-character-art]')];
+ const load=async el=>{
+  const id=el.dataset.characterArt,c=CHARACTERS.find(x=>x.id===id);
+  if(!c||el.dataset.loading==='1'||el.querySelector('img'))return;
+  el.dataset.loading='1';const result=await getCharacterArt(c);
+  if(!result||!el.isConnected)return;
+  const img=document.createElement('img');img.loading='lazy';img.alt=c.name+' anime character portrait';img.referrerPolicy='no-referrer';
+  img.onload=()=>{if(el.isConnected){el.appendChild(img);el.classList.add('has-portrait')}};
+  img.onerror=()=>{el.dataset.loading='';};
+  img.src=result.src;
+ };
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);load(entry.target)}},{rootMargin:'150px'});
+  nodes.forEach(el=>observer.observe(el));
+ }else nodes.slice(0,16).forEach(load);
+}
+function characterArtwork(c,o){
+ return '<div class="character-art" data-character-art="'+esc(c.id)+'">'+avatarSVG(c,o)+'</div>';
+}
+
 const LOCATIONS=[
  {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:0,region:'Europe'},
  {id:'tbilisi',name:'Tbilisi',wiki:'Tbilisi',lat:41.7151,lon:44.8271,cost:25,region:'Asia'},
@@ -740,13 +800,13 @@ function renderAvatar(){
  let o=OUTFITS.find(x=>x.id===profile.equippedOutfit&&x.character===c.id);
  if(!o){o=OUTFITS.find(x=>x.id===c.id+'-default');profile.equippedOutfit=o.id}
  const l=LOCATIONS.find(x=>x.id===profile.equippedLocation)||LOCATIONS[0];
- document.getElementById('miniAvatar').innerHTML=avatarSVG(c,o,true);
- document.getElementById('characterPreview').innerHTML=avatarSVG(c,o);
+ document.getElementById('miniAvatar').innerHTML=characterArtwork(c,o);
+ document.getElementById('characterPreview').innerHTML=characterArtwork(c,o);
  document.getElementById('equippedName').textContent=c.name;
  document.getElementById('equippedOutfitName').textContent=o.name+' outfit';
  document.getElementById('equippedLocation').textContent=l.name;
  document.getElementById('shopPoints').textContent=profile.points;
- selectedLocation=l.id;
+ selectedLocation=l.id;loadCharacterArt(document.getElementById('miniAvatar'));loadCharacterArt(document.getElementById('characterPreview'));
 }
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
@@ -1131,7 +1191,7 @@ function renderShop(){
  seriesSel.innerHTML='<option value="">All series</option>'+series.map(x=>'<option>'+esc(x)+'</option>').join('');
  if(series.includes(oldSeries))seriesSel.value=oldSeries;
  const seriesFilter=seriesSel.value,ownedFilter=ownedSel.value;
- const visibleChars=CHARACTERS.filter(c=>(!seriesFilter||c.series===seriesFilter)&&(ownedFilter==='all'||(ownedFilter==='owned'&&oc.includes(c.id))||(ownedFilter==='locked'&&!oc.includes(c.id))));
+ const allVisibleChars=CHARACTERS.filter(c=>(!seriesFilter||c.series===seriesFilter)&&(ownedFilter==='all'||(ownedFilter==='owned'&&oc.includes(c.id))||(ownedFilter==='locked'&&!oc.includes(c.id))));const visibleChars=allVisibleChars.slice(0,characterVisibleLimit);
  document.getElementById('characterCount').textContent=oc.length+' / '+CHARACTERS.length+' unlocked';
  document.getElementById('outfitCount').textContent=oo.length+' / '+OUTFITS.length+' unlocked';
  document.getElementById('locationCount').textContent=ol.length+' / '+LOCATIONS.length+' unlocked';
@@ -1142,6 +1202,8 @@ function renderShop(){
  document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+avatarSVG(ch,o)+'</div><b>'+esc(o.name)+'</b><small>'+esc(ch.name)+' · '+esc(ch.series)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button></div>').join('');
  document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>buy('character',b.dataset.character));
  document.querySelectorAll('[data-outfit]').forEach(b=>b.onclick=()=>buy('outfit',b.dataset.outfit));
+ const more=document.getElementById('moreCharacters');more.classList.toggle('hidden',visibleChars.length>=allVisibleChars.length);
+ more.textContent='Show more characters ('+visibleChars.length+' of '+allVisibleChars.length+')';loadCharacterArt(document.getElementById('characterShop'));loadCharacterArt(document.getElementById('outfitShop'));
  renderLocationGallery();
  drawGlobe();
 }
@@ -1211,7 +1273,7 @@ document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refre
 document.getElementById('startExam').onclick=startExamSession;
 document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
 document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
-document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('characterSeries').onchange=renderShop;document.getElementById('characterOwnedFilter').onchange=renderShop;document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
+document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('moreCharacters').onclick=()=>{characterVisibleLimit+=16;renderShop()};document.getElementById('characterSeries').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('characterOwnedFilter').onchange=()=>{characterVisibleLimit=16;renderShop()};document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
 const globe=document.getElementById('globe');
 globe.addEventListener('pointerdown',e=>{dragging=true;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
