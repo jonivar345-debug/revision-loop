@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 14,
-  "updatedAt": "2026-10-20T17:32:32.033Z",
+  "deckVersion": 15,
+  "updatedAt": "2026-10-20T17:42:41.770Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -10216,6 +10216,37 @@
       "accept": [
         "same direction positive opposite negative perpendicular zero",
         "w=fs cos theta"
+      ],
+      "visual": "work-angle"
+    },
+    {
+      "id": "phy_work_angle_theta",
+      "subject": "Physics",
+      "topic": "Energy",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "priority": 9,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "In W = Fs cos θ, what exactly is θ?",
+      "back": "θ is the angle between the force vector and the displacement vector.",
+      "concepts": [
+        [
+          "angle"
+        ],
+        [
+          "between force and displacement",
+          "force and displacement"
+        ]
+      ],
+      "accept": [
+        "the angle between force and displacement",
+        "angle between the force vector and displacement vector"
       ],
       "visual": "work-angle"
     }
