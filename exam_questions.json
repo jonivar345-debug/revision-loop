@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 21,
-  "updatedAt": "2026-10-20T17:42:30.500Z",
+  "bankVersion": 22,
+  "updatedAt": "2026-10-20T18:11:09.310Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -88,7 +88,6 @@
       "groupOrder": "2.1",
       "sourceVerified": true,
       "courseTopic": "Waves",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -117,7 +116,6 @@
       "groupOrder": "3",
       "sourceVerified": true,
       "courseTopic": "Waves",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -144,7 +142,6 @@
       "groupOrder": "1.3",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -265,7 +262,6 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Equilibria",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -296,7 +292,7 @@
       "groupOrder": "4",
       "sourceVerified": true,
       "courseTopic": "Trigonometry",
-      "visual": "medical",
+      "visual": "unit-circle",
       "standalone": true
     },
     {
@@ -704,7 +700,6 @@
       "groupOrder": "5.2",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -735,7 +730,7 @@
       "groupOrder": "6.1",
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
-      "visual": "resolve",
+      "visual": "moment",
       "standalone": true
     },
     {
@@ -820,7 +815,6 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -850,7 +844,6 @@
       "groupOrder": "8.4",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -1048,7 +1041,6 @@
       "groupOrder": "6.2",
       "sourceVerified": true,
       "courseTopic": "Redox",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -1193,7 +1185,6 @@
       "groupOrder": "5",
       "sourceVerified": true,
       "courseTopic": "Algebra & functions",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -1343,7 +1334,6 @@
       "groupOrder": "9",
       "sourceVerified": true,
       "courseTopic": "Proof",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -1399,7 +1389,6 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.1",
       "courseTopic": "Particles & radiation",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -1457,7 +1446,6 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.3",
       "courseTopic": "Particles & radiation",
-      "visual": "medical",
       "standalone": true
     },
     {
@@ -2769,8 +2757,7 @@
       "sourceVerified": true,
       "standalone": true,
       "groupId": "Maths|2024|7356/1|7",
-      "groupOrder": "7(a)",
-      "visual": "unit-circle"
+      "groupOrder": "7(a)"
     },
     {
       "id": "aqa_math_as24_p1_q7b",
@@ -3229,6 +3216,524 @@
       "standalone": true,
       "series": "June",
       "groupOrder": "17"
+    },
+    {
+      "id": "aqa_chem_as16_p1_q1_1",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "subtopic": "Electron configurations",
+      "year": 2016,
+      "series": "June",
+      "paper": "7404/1",
+      "question": "1.1",
+      "marks": 2,
+      "prompt": "Write the full electron configurations (not noble-gas abbreviations) of (a) an aluminium atom and (b) a Cr3+ ion. Give both in your answer.",
+      "answerType": "points",
+      "markPoints": [
+        "Al: 1s2 2s2 2p6 3s2 3p1.",
+        "Cr3+: 1s2 2s2 2p6 3s2 3p6 3d3."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-QP-JUN16.PDF#page=2",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-W-MS-JUN16.PDF#page=6",
+      "questionType": "configuration",
+      "groupId": "Chemistry|2016|7404/1|1",
+      "groupOrder": "1.1",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Atomic structure",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Al 1s²2s²2p⁶3s²3p¹; Cr³⁺ 1s²2s²2p⁶3s²3p⁶3d³"
+    },
+    {
+      "id": "aqa_chem_as16_p1_q1_2",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "subtopic": "Isoelectronic ions",
+      "year": 2016,
+      "series": "June",
+      "paper": "7404/1",
+      "question": "1.2",
+      "marks": 1,
+      "prompt": "Which 2+ ion contains exactly the same number and arrangement of electrons as krypton? Write its formula.",
+      "answerType": "points",
+      "markPoints": [
+        "Sr2+ (strontium ion)."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-QP-JUN16.PDF#page=2",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-W-MS-JUN16.PDF#page=6",
+      "questionType": "formula",
+      "groupId": "Chemistry|2016|7404/1|1",
+      "groupOrder": "1.2",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Atomic structure",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Sr²⁺",
+      "answerVariants": [
+        "Sr2+",
+        "Sr+2"
+      ]
+    },
+    {
+      "id": "aqa_chem_as16_p1_q1_3",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "subtopic": "Ionic compounds",
+      "year": 2016,
+      "series": "June",
+      "paper": "7404/1",
+      "question": "1.3",
+      "marks": 1,
+      "prompt": "A compound consists of 2+ cations and 3− anions. Each ion has the same electron configuration as argon. Determine the empirical formula of the compound.",
+      "answerType": "points",
+      "markPoints": [
+        "Ca3P2: calcium forms Ca2+ and phosphorus forms P3−."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-QP-JUN16.PDF#page=2",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-W-MS-JUN16.PDF#page=6",
+      "questionType": "formula",
+      "groupId": "Chemistry|2016|7404/1|1",
+      "groupOrder": "1.3",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Atomic structure",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Ca₃P₂",
+      "answerVariants": [
+        "Ca3P2"
+      ]
+    },
+    {
+      "id": "aqa_chem_as16_p1_q2_1",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "subtopic": "Ionic radii",
+      "year": 2016,
+      "series": "June",
+      "paper": "7404/1",
+      "question": "2.1",
+      "marks": 2,
+      "prompt": "Sodium ions Na+ and magnesium ions Mg2+ both have ten electrons. Which ion is smaller? Explain using nuclear charge and electron shielding.",
+      "answerType": "points",
+      "markPoints": [
+        "The smaller ion is Mg2+.",
+        "Both have the same electron arrangement/shielding, but Mg2+ has more protons, so its electrons are attracted more strongly."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-QP-JUN16.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-W-MS-JUN16.PDF#page=7",
+      "questionType": "explanation",
+      "groupId": "Chemistry|2016|7404/1|2",
+      "groupOrder": "2.1",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Atomic structure",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Mg²⁺ is smaller because the two ions are isoelectronic but Mg²⁺ has a higher nuclear charge."
+    },
+    {
+      "id": "aqa_chem_as16_p1_q2_2",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "subtopic": "First ionisation energy",
+      "year": 2016,
+      "series": "June",
+      "paper": "7404/1",
+      "question": "2.2",
+      "marks": 1,
+      "prompt": "Write the ionic equation, including state symbols, for the first ionisation of gaseous sodium atoms.",
+      "answerType": "points",
+      "markPoints": [
+        "Na(g) → Na+(g) + e−, with gaseous species."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-QP-JUN16.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74041-W-MS-JUN16.PDF#page=7",
+      "questionType": "equation",
+      "groupId": "Chemistry|2016|7404/1|2",
+      "groupOrder": "2.2",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Atomic structure",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Na(g) → Na⁺(g) + e⁻"
+    },
+    {
+      "id": "aqa_phy_as17_p1_q1_5",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Particles & radiation",
+      "subtopic": "Stable baryons",
+      "year": 2017,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "1.5",
+      "marks": 1,
+      "prompt": "Name the only stable baryon when it is isolated (not bound inside a nucleus).",
+      "answerType": "points",
+      "markPoints": [
+        "Proton."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74071-QP-JUN17.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74071-W-MS-JUN17.PDF#page=6",
+      "questionType": "definition",
+      "groupId": "Physics|2017|7407/1|1",
+      "groupOrder": "1.5",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Particles & radiation",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Proton",
+      "answerVariants": [
+        "proton"
+      ]
+    },
+    {
+      "id": "aqa_phy_as17_p1_q1_6",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Particles & radiation",
+      "subtopic": "Muon decay",
+      "year": 2017,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "1.6",
+      "marks": 1,
+      "prompt": "A negative muon decays by the weak interaction. Name all three particles produced in its ordinary decay.",
+      "answerType": "points",
+      "markPoints": [
+        "Electron + electron antineutrino + muon neutrino (all three required)."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74071-QP-JUN17.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74071-W-MS-JUN17.PDF#page=6",
+      "questionType": "particles",
+      "groupId": "Physics|2017|7407/1|1",
+      "groupOrder": "1.6",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Particles & radiation",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "electron, electron antineutrino and muon neutrino"
+    },
+    {
+      "id": "aqa_phy_as17_p1_q2_1",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "subtopic": "Filament lamp I–V",
+      "year": 2017,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "2.1",
+      "marks": 4,
+      "prompt": "A filament lamp gives a curved current–potential-difference characteristic rather than a straight line. Explain this behaviour using the movement of electrons and the structure and temperature of the metal filament.",
+      "answerType": "points",
+      "markPoints": [
+        "As the current/potential difference increases, the filament becomes hotter.",
+        "The metal lattice ions vibrate more strongly.",
+        "Conduction electrons undergo more frequent collisions with the ions.",
+        "The lamp's resistance increases, so current is no longer directly proportional to potential difference."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74071-QP-JUN17.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74071-W-MS-JUN17.PDF#page=7",
+      "questionType": "explanation",
+      "groupId": "Physics|2017|7407/1|2",
+      "groupOrder": "2.1",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Electricity",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "Greater current heats the filament, causing stronger lattice-ion vibrations and more electron collisions. This raises resistance and causes the nonlinear I–V characteristic."
+    },
+    {
+      "id": "aqa_math_as18_p1_q3",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Trigonometry",
+      "subtopic": "Sine graph",
+      "year": 2018,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "3",
+      "marks": 2,
+      "prompt": "For 0° ≤ x ≤ 360°, give the complete open interval over which the function y = sin x is decreasing. Use inequality signs or interval notation.",
+      "answerType": "points",
+      "markPoints": [
+        "Identify 90° and 270° as the endpoints.",
+        "State 90° < x < 270° (excluding endpoints)."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-QP-JUN18.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-W-MS-JUN18.PDF#page=5",
+      "questionType": "graph interpretation",
+      "groupId": "Maths|2018|7356/1|3",
+      "groupOrder": "3",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Trigonometry",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "90° < x < 270°",
+      "visual": "unit-circle"
+    },
+    {
+      "id": "aqa_math_as18_p1_q4a",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "subtopic": "Binomial expansion",
+      "year": 2018,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "4(a)",
+      "marks": 3,
+      "prompt": "Expand (1 − 3x)^4 and give only its first three terms, in ascending powers of x.",
+      "answerType": "points",
+      "markPoints": [
+        "Use the binomial structure 1 + 4(−3x) + 6(−3x)^2.",
+        "Use binomial coefficients 4 and 6 correctly.",
+        "Obtain 1 − 12x + 54x²."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-QP-JUN18.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-W-MS-JUN18.PDF#page=5",
+      "questionType": "algebra",
+      "groupId": "Maths|2018|7356/1|4",
+      "groupOrder": "4(a)",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Algebra & functions",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "1 − 12x + 54x²"
+    },
+    {
+      "id": "aqa_math_as18_p1_q4b",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "subtopic": "Binomial approximation",
+      "year": 2018,
+      "series": "June",
+      "paper": "7356/1",
+      "question": "4(b)",
+      "marks": 2,
+      "prompt": "Use the three-term approximation to (1 − 3x)^4 from part (a), with x = 0.002, to estimate (0.994)^4 to six decimal places. Show the substitution into the expansion.",
+      "answerType": "numeric",
+      "markPoints": [
+        "Substitute x = 0.002 into 1 − 12x + 54x².",
+        "Obtain approximately 0.976216 to 6 decimal places."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-QP-JUN18.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-W-MS-JUN18.PDF#page=5",
+      "questionType": "multi-step calculation",
+      "groupId": "Maths|2018|7356/1|4",
+      "groupOrder": "4(b)",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Algebra & functions",
+      "standalone": true,
+      "mock": true,
+      "numericAnswer": 0.976216,
+      "tolerance": 6e-7,
+      "unit": "",
+      "modelAnswer": "1 − 12(0.002) + 54(0.002)² = 0.976216",
+      "requiresWorking": true
+    },
+    {
+      "id": "aqa_phy_as19_p1_q1_1",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Particles & radiation",
+      "subtopic": "Specific charge",
+      "year": 2019,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "1.1",
+      "marks": 2,
+      "prompt": "A deuterium nucleus contains one proton and one neutron. Using their approximate nucleon masses and the charge on a proton, calculate the specific charge of the deuterium nucleus.",
+      "answerType": "numeric",
+      "markPoints": [
+        "Use the charge divided by the combined proton-and-neutron mass.",
+        "Calculate approximately 4.8 × 10^7 C kg−1."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-QP-JUN19.PDF#page=2",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-W-MS-JUN19.PDF#page=4",
+      "questionType": "calculation",
+      "groupId": "Physics|2019|7407/1|1",
+      "groupOrder": "1.1",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Particles & radiation",
+      "standalone": true,
+      "mock": true,
+      "numericAnswer": 48000000,
+      "tolerance": 1500000,
+      "unit": "C kg^-1",
+      "modelAnswer": "(1.60 × 10^-19) / (3.35 × 10^-27) ≈ 4.8 × 10^7 C kg^-1"
+    },
+    {
+      "id": "aqa_phy_as19_p1_q1_2",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Particles & radiation",
+      "subtopic": "Exchange particles",
+      "year": 2019,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "1.2",
+      "marks": 1,
+      "prompt": "Name the exchange particle for the strong nuclear force in a deuterium nucleus (from the choices muon, photon, pion or W+ boson).",
+      "answerType": "points",
+      "markPoints": [
+        "Pion."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-QP-JUN19.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-W-MS-JUN19.PDF#page=4",
+      "questionType": "multiple choice",
+      "groupId": "Physics|2019|7407/1|1",
+      "groupOrder": "1.2",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Particles & radiation",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "pion",
+      "answerVariants": [
+        "pion",
+        "pi meson"
+      ]
+    },
+    {
+      "id": "aqa_phy_as19_p1_q1_3",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Particles & radiation",
+      "subtopic": "Nuclear force",
+      "year": 2019,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "1.3",
+      "marks": 3,
+      "prompt": "A deuterium nucleus remains stable because the strong nuclear force changes with nucleon separation. Explain the force's behaviour at distances of roughly a few femtometres and below about 0.5 fm, and how this contributes to stability.",
+      "answerType": "points",
+      "markPoints": [
+        "The strong nuclear force is attractive at separations of roughly 1–3 fm.",
+        "At very short separations (below about 0.5 fm) the force is repulsive.",
+        "This balance prevents the proton and neutron separating or collapsing together."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-QP-JUN19.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-W-MS-JUN19.PDF#page=4",
+      "questionType": "explanation",
+      "groupId": "Physics|2019|7407/1|1",
+      "groupOrder": "1.3",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Particles & radiation",
+      "standalone": true,
+      "mock": true,
+      "modelAnswer": "At typical nuclear separation the strong force is attractive, but it becomes repulsive at very small separations, establishing a stable separation."
+    },
+    {
+      "id": "aqa_phy_as19_p1_q2_1",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "subtopic": "Electrical energy",
+      "year": 2019,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "2.1",
+      "marks": 3,
+      "prompt": "A battery of emf 7.4 V, with negligible internal resistance, supplies a 3.7 Ω heater for 240 minutes. The current is 2.0 A throughout. Calculate the electrical energy dissipated.",
+      "answerType": "numeric",
+      "markPoints": [
+        "Find electrical power with P = VI, I²R or V²/R.",
+        "Convert 240 minutes into 14,400 s and use E = Pt.",
+        "Obtain approximately 2.1 × 10^5 J."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-QP-JUN19.PDF#page=5",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74071-W-MS-JUN19.PDF#page=5",
+      "questionType": "calculation",
+      "groupId": "Physics|2019|7407/1|2",
+      "groupOrder": "2.1",
+      "sourceVerified": true,
+      "verificationLevel": "official-linked",
+      "courseTopic": "Electricity",
+      "standalone": true,
+      "mock": true,
+      "numericAnswer": 213120,
+      "tolerance": 6500,
+      "unit": "J",
+      "modelAnswer": "E = 7.4 × 2.0 × (240 × 60) ≈ 2.13 × 10^5 J"
     }
   ],
   "coverage": {
@@ -3265,7 +3770,8 @@
           "firstAssessment": 2018
         }
       }
-    }
+    },
+    "recentAddition": "June 2016 Chemistry AS, June 2017 Physics AS, June 2018 Mathematics AS, June 2019 Physics AS; independently checked against official AQA papers and mark schemes."
   },
   "lastAudit": "2026-10-20"
 }
