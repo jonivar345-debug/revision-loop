@@ -7,7 +7,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,toastTimer=null;
-let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,selectedLocation='home';
+let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,selectedLocation='home',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -927,36 +927,105 @@ function buy(kind,id){
  save();showToast('Unlocked '+item.name);renderAll();
 }
 
-const LOCATION_PHOTO_OVERRIDES={
- hongkong:{file:'Hong Kong Night Skyline.jpg',credit:'Base64 / CarolSpears · CC BY-SA 3.0',page:'https://commons.wikimedia.org/wiki/File:Hong_Kong_Night_Skyline.jpg'},
- singapore:{file:'Gardens by the Bay Singapore (aerial view).jpg',credit:'Photo: ProjectManhattan / CC0',page:'https://commons.wikimedia.org/wiki/File:Gardens_by_the_Bay_Singapore_(aerial_view).jpg'},
- bali:{file:'Tanah Lot Temple, Bali, Indonesia.jpg',credit:'Varenniabhargah · CC BY-SA 4.0',page:'https://commons.wikimedia.org/wiki/File:Tanah_Lot_Temple,_Bali,_Indonesia.jpg'}
-};
-function placeImage(el,url,location,source,credit){
+function placeImage(el,url,location){
  if(!url||!el?.isConnected)return;
- const img=document.createElement('img');img.loading='lazy';img.alt='View of '+location.name;img.referrerPolicy='no-referrer';
+ const img=document.createElement('img');img.loading='lazy';img.alt='Photograph of '+location.name;img.referrerPolicy='no-referrer';
  el.replaceChildren(img);
- img.onload=()=>{if(!el.isConnected)return;if(source){const a=document.createElement('a');a.className='photo-credit';a.href=source;a.target='_blank';a.rel='noopener noreferrer';a.textContent=credit||'Photo source';el.appendChild(a)}};
- img.onerror=()=>{if(!el.isConnected)return;el.textContent='Photo currently unavailable';};
+ img.onerror=()=>{if(el.isConnected)el.textContent='Photo unavailable'};
  img.src=url;
 }
 async function locationPhoto(location,el){
- if(!location||!el)return;
- const special=LOCATION_PHOTO_OVERRIDES[location.id];
- if(special){
-   const url='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(special.file);
-   placeImage(el,url,location,special.page,special.credit);
-   return;
- }
- const cached=wikiPhotoCache[location.wiki];
- if(cached){placeImage(el,cached,location,'https://en.wikipedia.org/wiki/'+encodeURIComponent(location.wiki),'Wikipedia image');return}
+ if(!location||!el?.isConnected)return;
+ if(wikiPhotoCache[location.wiki]){placeImage(el,wikiPhotoCache[location.wiki],location);return}
  try{
   const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&formatversion=2&pithumbsize=640&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
-  const res=await fetch(endpoint,{cache:'force-cache'});if(!res.ok)throw Error('No image response');
-  const d=await res.json(),p=d.query?.pages?.[0],url=p?.thumbnail?.source;
-  if(url){wikiPhotoCache[location.wiki]=url;placeImage(el,url,location,'https://en.wikipedia.org/wiki/'+encodeURIComponent(location.wiki),'Wikipedia image')}
+  const res=await fetch(endpoint,{cache:'force-cache'});if(!res.ok)throw Error('No image');
+  const data=await res.json(),url=data.query?.pages?.[0]?.thumbnail?.source;
+  if(url){wikiPhotoCache[location.wiki]=url;placeImage(el,url,location)}
   else el.textContent='Photo unavailable';
- }catch{el.textContent='Photo not available'}
+ }catch{if(el.isConnected)el.textContent='Photo unavailable'}
+}
+function evenlySpacedLocations(locations){
+ const regions=['Africa','Asia','Europe','North America','South America','Oceania'];
+ const buckets=Object.fromEntries(regions.map(r=>[r,locations.filter(x=>x.region===r)]));
+ const arr=[];
+ let changed=true;
+ while(changed){changed=false;for(const region of regions){if(buckets[region].length){arr.push(buckets[region].shift());changed=true}}}
+ return arr.concat(locations.filter(x=>!regions.includes(x.region)));
+}
+function renderLocationGallery(){
+ const selected=document.getElementById('locationRegion').value;
+ const pool=selected?LOCATIONS.filter(l=>l.region===selected):evenlySpacedLocations(LOCATIONS);
+ const visible=pool.slice(0,locationVisibleLimit);
+ document.getElementById('regionCount').textContent=selected?pool.length+' places':(LOCATIONS.length-1)+' worldwide';
+ document.getElementById('locationShop').innerHTML=visible.map(l=>{
+  const owned=profile.shopOwned.locations.includes(l.id);
+  return '<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'">Loading photograph…</div>'+
+   '<div class="location-body"><b>'+esc(l.name)+'</b><small class="region-tag">'+esc(l.region||'Global')+'</small>'+
+   '<button class="'+(!owned?'buy':'')+'" data-location="'+esc(l.id)+'" '+(!owned&&profile.points<l.cost?'disabled':'')+'>'+
+   (owned?(profile.equippedLocation===l.id?'Active location':'Use location'):l.cost+' points')+'</button></div></div>';
+ }).join('');
+ document.querySelectorAll('[data-location]').forEach(b=>b.onclick=()=>buy('location',b.dataset.location));
+ document.querySelectorAll('[data-location-photo]').forEach(el=>locationPhoto(LOCATIONS.find(l=>l.id===el.dataset.locationPhoto),el));
+ const more=document.getElementById('moreLocations');
+ more.classList.toggle('hidden',visible.length>=pool.length);
+ more.textContent='Show more places ('+visible.length+' / '+pool.length+')';
+}
+const REGION_CULTURE={
+ 'Asia':'Local traditions, food and languages vary greatly across this region, from ancient cities to modern centres.',
+ 'Europe':'The cityscape, cuisine and festivals reflect different European languages and regional histories.',
+ 'Africa':'Regional languages, cuisines, arts and traditions differ greatly between communities and countries.',
+ 'North America':'Explore the local mix of histories, food, music and cultural traditions in the surrounding area.',
+ 'South America':'Local food, music and architecture reflect varied Indigenous and other historical influences.',
+ 'Oceania':'Explore the distinctive Indigenous, Pacific Island and contemporary cultures of the region.'
+};
+const LOCATION_FACTS={
+ london:'The River Thames passes through the centre of London.',
+ singapore:'Singapore is both a city and an independent country.',
+ hongkong:'Victoria Harbour separates Hong Kong Island from the Kowloon Peninsula.',
+ bali:'Bali is an Indonesian island with a distinctive Hindu cultural heritage.',
+ tokyo:'Tokyo is the capital of Japan.',
+ sydney:'Sydney Harbour contains the Sydney Opera House and the Harbour Bridge.',
+ capetown:'Table Mountain overlooks Cape Town.',
+ rio:'Rio de Janeiro is famous for its Carnival celebrations.',
+ nairobi:'Nairobi is the capital of Kenya.',
+ cusco:'Cusco was an important capital of the Inca Empire.',
+ machupicchu:'Machu Picchu is an Inca archaeological site high in the Andes.',
+ paris:'The Eiffel Tower was constructed for the 1889 Exposition Universelle.',
+ rome:'The Colosseum dates from the Roman Empire.',
+ edinburgh:'Edinburgh hosts an internationally known annual arts festival.',
+ newyork:'New York City contains five boroughs.',
+ queenstown:'Queenstown sits beside Lake Wakatipu on New Zealand’s South Island.',
+ petra:'Petra is known for architecture carved into sandstone cliffs.',
+ reykjavik:'Reykjavík is the capital of Iceland.'
+};
+async function setLocationInfo(id){
+ if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
+ const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
+ if(!l||l.id==='home')return;
+ if(!profile.shopOwned.locations.includes(id)){showToast('Unlock '+l.name+' to explore its details');return}
+ openLocationId=id;selectedLocation=id;
+ host.classList.remove('hidden');
+ host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
+ '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Loading location photo…</div><div id="detailPhotoTwo" class="image-fallback">Finding another view…</div></div>'+
+ '<p id="locationOverview">Loading a short introduction…</p><p><b>Culture:</b> '+esc(REGION_CULTURE[l.region]||'Explore local traditions and heritage.')+'</p>'+
+ '<p><b>Quick fact:</b> '+esc(LOCATION_FACTS[id]||'See the destination overview for a distinctive feature of this place.')+'</p>'+
+ '<div class="detail-links">Photographs and introductory text: <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(l.wiki)+'" target="_blank" rel="noopener noreferrer">Wikipedia</a> / <a href="https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search='+encodeURIComponent(l.name)+'" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></div>';
+ document.getElementById('closeLocationInfo').onclick=()=>setLocationInfo(id);
+ locationPhoto(l,document.getElementById('detailPhotoOne'));
+ try{
+  const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exsentences=2&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(l.wiki.replace(/_/g,' '));
+  const response=await fetch(endpoint);const data=await response.json();
+  if(openLocationId===id&&host.isConnected)document.getElementById('locationOverview').textContent=(data.query?.pages?.[0]?.extract||l.name+' is a destination in '+l.region+'.').slice(0,380);
+ }catch{if(openLocationId===id&&host.isConnected)document.getElementById('locationOverview').textContent='Explore '+l.name+' in '+l.region+'.'}
+ try{
+  const endpoint='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(l.name+' panorama photograph')+'&gsrlimit=5&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
+  const response=await fetch(endpoint);const data=await response.json();
+  const imgs=(data.query?.pages||[]).flatMap(p=>p.imageinfo||[]).map(i=>i.thumburl||i.url).filter(x=>/\.(jpg|jpeg|png|webp)(?:\?|$)/i.test(x));
+  if(openLocationId===id&&host.isConnected&&imgs.length)placeImage(document.getElementById('detailPhotoTwo'),imgs[0],l);
+  else if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable';
+ }catch{if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable'}
+ drawGlobe();
 }
 function renderShop(){
  const oc=profile.shopOwned.characters,oo=profile.shopOwned.outfits,ol=profile.shopOwned.locations,curr=profile.equippedCharacter;
@@ -975,11 +1044,9 @@ function renderShop(){
  document.getElementById('outfitHeading').textContent='Outfits for '+ch.name;
  document.getElementById('outfitCount').textContent=outfits.filter(o=>oo.includes(o.id)).length+' / '+outfits.length+' for '+ch.name;
  document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+avatarSVG(ch,o)+'</div><b>'+esc(o.name)+'</b><small>'+esc(ch.name)+' · '+esc(ch.series)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button></div>').join('');
- document.getElementById('locationShop').innerHTML=LOCATIONS.map(l=>'<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'"></div><div class="location-body"><b>'+esc(l.name)+'</b><small>'+l.lat.toFixed(1)+'°, '+l.lon.toFixed(1)+'°</small><button class="'+(!ol.includes(l.id)?'buy':'')+'" data-location="'+l.id+'" '+(!ol.includes(l.id)&&profile.points<l.cost?'disabled':'')+'>'+(ol.includes(l.id)?(profile.equippedLocation===l.id?'Active location':'Use location'):l.cost+' points')+'</button></div></div>').join('');
  document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>buy('character',b.dataset.character));
  document.querySelectorAll('[data-outfit]').forEach(b=>b.onclick=()=>buy('outfit',b.dataset.outfit));
- document.querySelectorAll('[data-location]').forEach(b=>b.onclick=()=>buy('location',b.dataset.location));
- document.querySelectorAll('[data-location-photo]').forEach(el=>locationPhoto(LOCATIONS.find(l=>l.id===el.dataset.locationPhoto),el));
+ renderLocationGallery();
  drawGlobe();
 }
 function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI/180,cl=globeLat*Math.PI/180,x=Math.cos(la)*Math.sin(lo),y=Math.sin(la)*Math.cos(cl)-Math.cos(la)*Math.cos(lo)*Math.sin(cl),z=Math.sin(la)*Math.sin(cl)+Math.cos(la)*Math.cos(lo)*Math.cos(cl);const R=Math.min(w,h)*.4;return {x:w/2+x*R,y:h/2-y*R,z}}
@@ -1009,11 +1076,17 @@ function drawGlobe(){
    const g=ctx.createRadialGradient(cx-R*.3,cy-R*.3,R*.08,cx,cy,R);g.addColorStop(0,'#60a5fa');g.addColorStop(.55,'#2563eb');g.addColorStop(1,'#0f172a');ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fill();
  }
  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
- for(const l of LOCATIONS){const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;const owned=profile.shopOwned.locations.includes(l.id);ctx.beginPath();ctx.arc(p.x,p.y,l.id===profile.equippedLocation?7:5,0,Math.PI*2);ctx.fillStyle=l.id===profile.equippedLocation?'#fbbf24':owned?'#ffffff':'rgba(255,255,255,.5)';ctx.fill();if(l.id===selectedLocation){ctx.strokeStyle='#fbbf24';ctx.lineWidth=2;ctx.stroke()}}
- const sel=LOCATIONS.find(x=>x.id===selectedLocation);if(sel)document.getElementById('globeLabel').textContent=sel.name+' · '+(profile.shopOwned.locations.includes(sel.id)?'unlocked':sel.cost+' points')+' · drag to rotate';
+ const regionFilter=document.getElementById('locationRegion')?.value||'';
+ for(const l of LOCATIONS){if(l.id==='home'||(regionFilter&&l.region!==regionFilter))continue;const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;
+ const owned=profile.shopOwned.locations.includes(l.id);
+ ctx.beginPath();ctx.arc(p.x,p.y,owned?6:5,0,Math.PI*2);
+ ctx.fillStyle=owned?'#111827':'#ffffff';ctx.fill();ctx.strokeStyle=owned?'#f8fafc':'#334155';ctx.lineWidth=1.7;ctx.stroke();
+ if(l.id===openLocationId){ctx.beginPath();ctx.arc(p.x,p.y,9,0,Math.PI*2);ctx.strokeStyle='#fbbf24';ctx.lineWidth=2.2;ctx.stroke()}
+ }
+ document.getElementById('globeLabel').textContent='Drag to rotate · white = locked · black = unlocked · tap an unlocked pin for details';
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
-function nearestPin(x,y){let best=null,dist=18;for(const l of LOCATIONS){const p=project(l.lat,l.lon,700,360);if(p.z<=0)continue;const d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=l}}return best}
+function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const l of LOCATIONS){if(l.id==='home'||(region&&l.region!==region))continue;const p=project(l.lat,l.lon,700,360);if(p.z<=0)continue;const d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=l}}return best}
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();if(document.getElementById('shop').classList.contains('active'))renderShop()}
 async function sync(manual=false){
@@ -1042,11 +1115,11 @@ document.getElementById('examTopicsClear').onclick=()=>{examTopics.clear();refre
 document.getElementById('startExam').onclick=startExamSession;
 document.getElementById('startChallenge').onclick=startChallenge;document.getElementById('challengeSubject').onchange=renderChallenge;document.getElementById('challengeScope').onchange=renderChallenge;
 document.getElementById('reviewWeakBtn').onclick=buildWeakSession;document.getElementById('redoMistakesBtn').onclick=startMistakes;
-document.getElementById('characterSeries').onchange=renderShop;document.getElementById('characterOwnedFilter').onchange=renderShop;document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
+document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;renderLocationGallery();drawGlobe()};document.getElementById('moreLocations').onclick=()=>{locationVisibleLimit+=24;renderLocationGallery()};document.getElementById('characterSeries').onchange=renderShop;document.getElementById('characterOwnedFilter').onchange=renderShop;document.getElementById('specSubject').onchange=renderSyllabusCoverage;document.getElementById('syncBtn').onclick=()=>sync(true);document.getElementById('lockBtn').onclick=lockApp;
 
 const globe=document.getElementById('globe');
 globe.addEventListener('pointerdown',e=>{dragging=true;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
 globe.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
-globe.addEventListener('pointerup',e=>{if(dragging){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l){selectedLocation=l.id;if(profile.shopOwned.locations.includes(l.id)){profile.equippedLocation=l.id;save();renderAvatar()}drawGlobe()}}dragging=false});
+globe.addEventListener('pointerup',e=>{if(dragging){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
