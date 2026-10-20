@@ -97,7 +97,7 @@ function levelInfo(xp){
 function memoryHealth(c){const s=state(c.id);if(s.stage<0)return 0;if(!s.last)return .5;const stability=Math.max(.25,s.stability||3),elapsed=Math.max(0,(now()-s.last)/DAY);return clamp(Math.exp(-0.1053605*elapsed/stability),0,1)}
 function topicKey(s,t){return s+'|'+t}
 function topicStat(s,t){const k=topicKey(s,t);if(!profile.topicStats[k])profile.topicStats[k]={attempts:0,success:0,examMarks:0,examMax:0,last:0,lastMiss:0};return profile.topicStats[k]}
-function weakness(c){const s=state(c.id),tw=profile.topicWeakness[topicKey(c.subject,c.topic)]||0;return (c.priority||1)*3+(s.again||0)*2.6+(s.hard||0)*1.6+tw*2+(1-memoryHealth(c))*8-(s.good||0)*.2}
+function weakness(c){const s=state(c.id),tw=profile.topicWeakness[topicKey(c.subject,c.courseTopic||c.topic)]||0;return (c.priority||1)*3+(s.again||0)*2.6+(s.hard||0)*1.6+tw*2+(1-memoryHealth(c))*8-(s.good||0)*.2}
 function isDue(c){const s=state(c.id);return s.stage>=0&&(s.due||0)<=now()} function isNew(c){return state(c.id).stage<0}
 function addError(e){profile.errorLog.unshift({...e,date:now()});if(profile.errorLog.length>400)profile.errorLog.length=400}
 
@@ -148,8 +148,8 @@ function parseNumber(s){let x=String(s||'').toLowerCase().replace(/,/g,'').repla
 function nextSchedule(s,rating){const old=Math.max(.25,s.stability||0),elapsed=s.last?Math.max(0,(now()-s.last)/DAY):0,over=old?clamp(elapsed/old,0,2):0;let stability=old,difficulty=clamp(s.difficulty||5,1,10),days;if(rating==='again'){difficulty=clamp(difficulty+.7,1,10);stability=Math.max(.25,old*.35);days=10/1440}else if(rating==='hard'){difficulty=clamp(difficulty+.2,1,10);stability=Math.max(1,old?old*1.12:1);days=Math.min(stability,1)}else if(rating==='good'){difficulty=clamp(difficulty-.08,1,10);stability=s.stage<0?3:clamp(old*(1.72+.12*over-.035*(difficulty-5)),2,365);days=stability}else{difficulty=clamp(difficulty-.3,1,10);stability=s.stage<0?7:clamp(old*(2.3+.12*over-.025*(difficulty-5)),4,365);days=stability}return {stability,difficulty,days}}
 function rateCard(c,rating,answer){
  const s=state(c.id),prev=s.last||0,wasNew=s.stage<0,sch=nextSchedule(s,rating);s.last=now();s.stability=sch.stability;s.difficulty=sch.difficulty;s.due=now()+sch.days*DAY;s.stage=Math.max(0,s.stage)+(rating==='good'?1:rating==='easy'?2:0);s.mastered=s.stability>=60&&(s.good||0)>=2;if(wasNew&&!s.firstSeen){s.firstSeen=dateKey();daily().newCards++}if(rating==='again')s.again++;else if(rating==='hard')s.hard++;else s.good++;s.history=s.history||[];s.history.push({t:now(),rating,answer:String(answer||'').slice(0,250),stability:s.stability});if(s.history.length>40)s.history=s.history.slice(-40);setState(c.id,s);
- const ts=topicStat(c.subject,c.topic);ts.attempts++;ts.last=now();if(currentEvaluation?.status==='correct')ts.success++;else if(rating==='again'||rating==='hard')ts.lastMiss=now();
- if((rating==='again'||rating==='hard')&&currentEvaluation?.status!=='correct')addError({type:'card',id:c.id,subject:c.subject,topic:c.topic,result:rating,answer:String(answer||'').slice(0,300),missing:currentEvaluation?.missing||[],longGap:prev&&((now()-prev)/DAY>30)});
+ const ts=topicStat(c.subject,c.courseTopic||c.topic);ts.attempts++;ts.last=now();if(currentEvaluation?.status==='correct')ts.success++;else if(rating==='again'||rating==='hard')ts.lastMiss=now();
+ if((rating==='again'||rating==='hard')&&currentEvaluation?.status!=='correct')addError({type:'card',id:c.id,subject:c.subject,topic:c.courseTopic||c.topic,result:rating,answer:String(answer||'').slice(0,300),missing:currentEvaluation?.missing||[],longGap:prev&&((now()-prev)/DAY>30)});
  profile.reviews++;daily().reviews++;save();advanceSession();
 }
 function awardFlashIfCorrect(){
@@ -162,7 +162,28 @@ function overrideFlashCorrect(){
 function weightedPick(items,n,weightFn){
  const pool=[...items],out=[];while(pool.length&&out.length<n){let total=0,ws=pool.map(x=>{const w=Math.max(.05,weightFn(x));total+=w;return w});let r=Math.random()*total,idx=0;for(;idx<ws.length;idx++){r-=ws[idx];if(r<=0)break}out.push(pool.splice(Math.min(idx,pool.length-1),1)[0])}return out;
 }
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return flashTopics.size?base.filter(c=>flashTopics.has(c.topic)):base}
+
+function startMockSession(){
+ const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value,count=Number(document.getElementById('mockCount').value);
+ const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&c.mock===true);
+ const qAll=examQuestions.filter(q=>q.subject===sub&&(q.mock===true||q.level==='AS'));
+ const groups=new Map();for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
+ for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
+ const items=[];
+ if(mode!=='exam'){
+   const want=mode==='flash'?count:Math.max(1,Math.ceil(count*.6));
+   const picked=weightedPick(cardPool,Math.min(want,cardPool.length),c=>1+weakness(c)/5+(isDue(c)?4:0)+(1-memoryHealth(c))*3);
+   picked.forEach(c=>items.push({type:'card',id:c.id}));
+ }
+ if(mode!=='flash'){
+   const target=Math.max(1,count-items.length),pickedGroups=weightedPick([...groups.values()],Math.min(target,groups.size),g=>1+groupWeakness(g));
+   for(const g of pickedGroups){for(const q of g){if(items.length>=count&&mode==='mixed')break;items.push({type:'exam',id:q.id,groupId:q.groupId})}}
+ }
+ if(!items.length){showToast('No mock material is available for that selection yet');return}
+ if(mode==='mixed')items.sort(()=>Math.random()-.5);
+ activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
+}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return flashTopics.size?base.filter(c=>flashTopics.has(c.courseTopic||c.topic)):base}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
  const picked=weightedPick(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
@@ -174,7 +195,7 @@ function examGroups(){
  const eligibleGroupIds=new Set();
  for(const q of all){
    if(!examYears.has(q.year))continue;
-   if(examTopics.has(q.topic)&&examTypes.has(q.questionType))eligibleGroupIds.add(q.groupId);
+   if(examTopics.has(q.courseTopic||q.topic)&&examTypes.has(q.questionType))eligibleGroupIds.add(q.groupId);
  }
  const map=new Map();
  for(const q of all){
@@ -185,7 +206,7 @@ function examGroups(){
  for(const arr of map.values())arr.sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
  return [...map.values()];
 }
-function groupWeakness(group){let s=0;for(const q of group){const t=profile.topicWeakness[topicKey(q.subject,q.topic)]||0,last=profile.examResults[q.id]?.last,acc=last?last.marks/last.max:0;s+=1+t*2+(1-acc)*4+(profile.errorLog.some(e=>e.type==='exam'&&e.id===q.id)?4:0)}return s/group.length}
+function groupWeakness(group){let s=0;for(const q of group){const t=profile.topicWeakness[topicKey(q.subject,q.courseTopic||q.topic)]||0,last=profile.examResults[q.id]?.last,acc=last?last.marks/last.max:0;s+=1+t*2+(1-acc)*4+(profile.errorLog.some(e=>e.type==='exam'&&e.id===q.id)?4:0)}return s/group.length}
 function startExamSession(){
  const groups=examGroups(),count=Number(document.getElementById('examCount').value);if(!groups.length){showToast('No questions match those filters');return}
  let chosen;if(document.getElementById('examOrder').value==='random')chosen=[...groups].sort(()=>Math.random()-.5).slice(0,count);else chosen=weightedPick(groups,Math.min(count,groups.length),g=>1+groupWeakness(g));
@@ -193,15 +214,15 @@ function startExamSession(){
  activeSession={kind:'exam',items,index:0,title:'Random AQA exam questions'};renderAll();
 }
 function awardExam(q,marks,answer,missedPoints){
- const ts=topicStat(q.subject,q.topic);ts.examMarks+=marks;ts.examMax+=q.marks;ts.attempts++;ts.last=now();if(marks<q.marks)ts.lastMiss=now();
+ const ts=topicStat(q.subject,q.courseTopic||q.topic);ts.examMarks+=marks;ts.examMax+=q.marks;ts.attempts++;ts.last=now();if(marks<q.marks)ts.lastMiss=now();
  if(!profile.examResults[q.id])profile.examResults[q.id]={attempts:[]};const rec={marks,max:q.marks,date:now(),answer:String(answer||'').slice(0,1000),missedPoints};profile.examResults[q.id].attempts.push(rec);profile.examResults[q.id].last=rec;
- let w=profile.topicWeakness[topicKey(q.subject,q.topic)]||0;if(marks/q.marks<.5)w=Math.min(10,w+2);else if(marks<q.marks)w=Math.min(10,w+1);else w=Math.max(0,w-1);profile.topicWeakness[topicKey(q.subject,q.topic)]=w;
- if(marks<q.marks)addError({type:'exam',id:q.id,subject:q.subject,topic:q.topic,result:marks+'/'+q.marks,answer:String(answer||'').slice(0,1000),missedPoints});
+ let w=profile.topicWeakness[topicKey(q.subject,q.courseTopic||q.topic)]||0;if(marks/q.marks<.5)w=Math.min(10,w+2);else if(marks<q.marks)w=Math.min(10,w+1);else w=Math.max(0,w-1);profile.topicWeakness[topicKey(q.subject,q.courseTopic||q.topic)]=w;
+ if(marks<q.marks)addError({type:'exam',id:q.id,subject:q.subject,topic:q.courseTopic||q.topic,result:marks+'/'+q.marks,answer:String(answer||'').slice(0,1000),missedPoints});
  award(marks,'exam');save();advanceSession();
 }
 
 function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(c=>c.mock===true):a.filter(taughtCard)}
-function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>(!sub||x.subject===sub));if(scope==='mock')q=q.filter(x=>x.level==='AS');return q.filter(x=>x.subject!=='Physics'||!x.unit||physicsUnlocked({subject:'Physics',unit:x.unit}))}
+function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>(!sub||x.subject===sub));if(scope==='mock')q=q.filter(x=>x.mock===true||x.level==='AS');return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
  const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>weakness(b)-weakness(a)),items=[],used=new Set();
@@ -247,14 +268,13 @@ function renderLevel(){const li=levelInfo(profile.lifetimeXp);document.getElemen
 function renderStats(){document.getElementById('dueCount').textContent=cards.filter(c=>c.active!==false&&isDue(c)).length;document.getElementById('newCount').textContent=daily().newCards;document.getElementById('reviewedCount').textContent=daily().reviews;document.getElementById('masteredCount').textContent=cards.filter(c=>state(c.id).mastered).length}
 function renderAvatar(){const o=OUTFITS.find(x=>x.id===profile.equippedOutfit)||OUTFITS[0],l=LOCATIONS.find(x=>x.id===profile.equippedLocation)||LOCATIONS[0];document.getElementById('miniAvatar').textContent=o.icon;document.getElementById('characterPreview').textContent=o.icon;document.getElementById('equippedName').textContent=o.name;document.getElementById('equippedLocation').textContent=l.name;document.getElementById('shopPoints').textContent=profile.points;selectedLocation=l.id}
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
-function renderPhysicsManager(){const sub=document.getElementById('flashSubject').value,box=document.getElementById('physicsUnitManager');box.classList.toggle('hidden',sub!=='Physics');if(sub!=='Physics')return;document.getElementById('physicsUnitList').innerHTML=(deckMeta.physicsUnits||[]).map(u=>{const checked=settings.physicsUnits[u.id]!==false,count=cards.filter(c=>c.active!==false&&c.subject==='Physics'&&c.unit===u.id).length;return '<label class="unit-toggle '+(checked?'':'locked')+'"><input type="checkbox" data-unit="'+esc(u.id)+'" '+(checked?'checked':'')+'><span><strong>'+(checked?'🔓 ':'🔒 ')+esc(u.label)+'</strong><small>'+count+' flashcards</small></span></label>'}).join('');document.querySelectorAll('[data-unit]').forEach(el=>el.onchange=()=>{settings.physicsUnits[el.dataset.unit]=el.checked;save();refreshFlashTopics(false);refreshExamFilters(false);renderPhysicsManager()})}
 function refreshFlashTopics(defaultIfEmpty=false){
- const sub=document.getElementById('flashSubject').value,topics=[...new Set(subjectCards(sub).map(c=>c.topic))].sort();flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));if(defaultIfEmpty&&!flashTopics.size)topics.filter(t=>subjectCards(sub).some(c=>c.topic===t&&c.taught)).forEach(t=>flashTopics.add(t));
- document.getElementById('flashTopics').innerHTML=topics.map(t=>'<label class="check-item"><input type="checkbox" data-flash-topic="'+esc(t)+'" '+(flashTopics.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});renderTopicCounts();renderPhysicsManager()
+ const sub=document.getElementById('flashSubject').value,topics=[...new Set(subjectCards(sub).map(c=>c.courseTopic||c.topic))].sort();flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));if(defaultIfEmpty&&!flashTopics.size)topics.filter(t=>subjectCards(sub).some(c=>(c.courseTopic||c.topic)===t&&c.taught)).forEach(t=>flashTopics.add(t));
+ document.getElementById('flashTopics').innerHTML=topics.map(t=>'<label class="check-item"><input type="checkbox" data-flash-topic="'+esc(t)+'" '+(flashTopics.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});renderTopicCounts()
 }
-function applyFlashPreset(p){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);flashTopics.clear();if(p!=='clear'){let pick=base;if(p==='mock')pick=base.filter(c=>c.mock===true);if(p==='taught')pick=base.filter(taughtCard);for(const c of pick)flashTopics.add(c.topic)}refreshFlashTopics(false)}
+function applyFlashPreset(p){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);flashTopics.clear();if(p!=='clear'){let pick=base;if(p==='mock')pick=base.filter(c=>c.mock===true);if(p==='taught')pick=base.filter(taughtCard);for(const c of pick)flashTopics.add(c.courseTopic||c.topic)}refreshFlashTopics(false)}
 function refreshExamFilters(defaultIfEmpty=false){
- const sub=document.getElementById('examSubject').value,base=subjectExam(sub),years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(base.map(q=>q.topic))].sort(),types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
+ const sub=document.getElementById('examSubject').value,base=subjectExam(sub),years=[...new Set(base.map(q=>q.year))].sort((a,b)=>b-a),topics=[...new Set(base.map(q=>q.courseTopic||q.topic))].sort(),types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
  if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));if(defaultIfEmpty&&!examTopics.size)topics.forEach(t=>examTopics.add(t));if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
  document.getElementById('examYears').innerHTML=years.map(y=>'<label class="check-item"><input type="checkbox" data-exam-year="'+y+'" '+(examYears.has(y)?'checked':'')+'><span>'+y+'</span></label>').join('');
@@ -268,11 +288,11 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examCoverage').textContent='Verified bank: '+base.length+' question parts from '+yearsText+'. Linked parts from the same original question stay together. Older papers are added only when an official AQA source can be verified.';
 }
 function renderTopicCounts(){document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';document.getElementById('examTopicCount').textContent=examTopics.size+' selected';document.getElementById('examYearCount').textContent=examYears.size+' selected'}
-function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
+function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
 function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.topic)+'</span><span class="badge">'+esc(c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text;document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
@@ -283,7 +303,7 @@ function examSuggested(q,answer){
 }
 function renderExam(q){
  const prev=profile.examResults[q.id]?.last;
- document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">Real AQA source</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body"><div class="copyright-note">The in-app wording is a faithful paraphrase. Use the official AQA PDF for the exact copyrighted wording.</div><div class="question-type">'+esc(q.questionType||'exam question')+'</div><div class="question">'+esc(q.prompt)+'</div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea><div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Original AQA question</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">Official mark scheme</a></div>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">Real AQA source</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body"><div class="copyright-note">The in-app wording is a faithful paraphrase. Use the official AQA PDF for the exact copyrighted wording.</div><div class="question-type">'+esc(q.questionType||'exam question')+'</div><div class="question">'+esc(q.prompt)+'</div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea><div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Original AQA question</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">Official mark scheme</a></div>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
  document.getElementById('markExam').onclick=()=>{const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');marking.classList.add('show');marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
    currentExamScore=res.suggested;renderScoreEditor(q,answer);
    document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{const checked=[...document.querySelectorAll('[data-mp]')].filter(x=>x.checked).length;currentExamScore=clamp(Math.round(checked/Math.max(1,q.markPoints.length)*q.marks),0,q.marks);renderScoreEditor(q,answer)});
