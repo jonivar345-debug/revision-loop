@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 <div id="authGate" class="auth-gate">
@@ -170,7 +170,11 @@
         <div><span class="eyebrow">YOUR COLLECTION</span><h2 id="equippedName">Nova</h2><p><span id="equippedOutfitName">Default outfit</span> · <span id="equippedLocation">Home Desk</span></p><strong><span id="shopPoints">0</span> points available</strong></div>
       </div>
 
-      <div class="section-head"><div><h2>Characters</h2><p>Choose who your little revision character looks like. Specific anime/movie/show character packs will only be added after you approve the characters.</p></div><strong id="characterCount">0 / 0</strong></div>
+      <div class="section-head"><div><h2>Characters</h2><p>Your first approved packs are live. Choose a series, unlock a character, then collect outfits for them.</p></div><strong id="characterCount">0 / 0</strong></div>
+      <div class="character-filter">
+        <select id="characterSeries"><option value="">All series</option></select>
+        <select id="characterOwnedFilter"><option value="all">All characters</option><option value="owned">Unlocked only</option><option value="locked">Locked only</option></select>
+      </div>
       <div id="characterShop" class="shop-grid"></div>
 
       <div class="section-head globe-head"><div><h2>Outfits</h2><p>Each character has their own unlockable outfits.</p></div><strong id="outfitCount">0 / 0</strong></div>
@@ -185,6 +189,6 @@
     </section>
   </main>
 </div>
-<script src="app.js?v=12" defer></script>
+<script src="app.js?v=13" defer></script>
 </body>
 </html>
