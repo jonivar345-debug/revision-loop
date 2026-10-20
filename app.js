@@ -517,8 +517,8 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.querySelectorAll('[data-exam-topic]').forEach(el=>el.onchange=()=>{el.checked?examTopics.add(el.dataset.examTopic):examTopics.delete(el.dataset.examTopic);renderTopicCounts()});
  document.querySelectorAll('[data-exam-type]').forEach(el=>el.onchange=()=>{el.checked?examTypes.add(el.dataset.examType):examTypes.delete(el.dataset.examType)});
  renderTopicCounts();
- const yearsText=years.length?years.slice().sort((a,b)=>a-b).join(', '):'none';
- document.getElementById('examCoverage').textContent='Verified bank: '+base.length+' question parts from '+yearsText+'. Linked parts from the same original question stay together. Older papers are added only when an official AQA source can be verified.';
+ const yearCounts=years.slice().sort((a,b)=>b-a).map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
+ document.getElementById('examCoverage').textContent='Verified bank: '+base.length+' question parts'+(yearCounts?' · '+yearCounts:'')+'. Linked parts stay together and question context is preserved.';
 }
 function renderTopicCounts(){document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';document.getElementById('examTopicCount').textContent=examTopics.size+' selected';document.getElementById('examYearCount').textContent=examYears.size+' selected'}
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
