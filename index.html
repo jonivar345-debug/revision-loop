@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=33">
+  <link rel="stylesheet" href="styles.css?v=34">
 </head>
 <body>
 <div id="authGate" class="auth-gate">
@@ -119,6 +119,14 @@
           <label><span>Ordering</span><select id="examOrder"><option value="adaptive">Random + weak-topic boost</option><option value="random">Fully random</option></select></label>
         </div>
 
+        <div class="control-row two stretch-controls">
+          <label><span>Question difficulty</span><select id="examDifficulty">
+            <option value="all">All marks and difficulty levels</option>
+            <option value="stretch">Extended problems (5+ marks)</option>
+            <option value="quick">Short questions (1–3 marks)</option>
+          </select></label>
+          <p class="stretch-help" id="examDifficultyCount" aria-live="polite">Choose mixed practice or focus on longer questions that require several steps.</p>
+        </div>
         <div class="picker-head"><b>Years</b><span id="examYearCount"></span></div>
         <div class="preset-row"><button id="yearsAll" class="mini-btn">All available</button><button id="yearsRecent" class="mini-btn">Most recent</button><button id="yearsClear" class="mini-btn">Clear</button></div>
         <div id="examYears" class="check-grid compact"></div>
@@ -215,6 +223,6 @@
     </section>
   </main>
 </div>
-<script src="app.js?v=33" defer></script>
+<script src="app.js?v=34" defer></script>
 </body>
 </html>
