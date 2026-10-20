@@ -6,50 +6,78 @@ let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=
 let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
-let studyType='flashcards',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,toastTimer=null;
+let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,toastTimer=null;
 let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,selectedLocation='home';
 
-const OUTFITS=[
- {id:'starter',name:'Starter Scholar',icon:'🧑‍🎓',cost:0,desc:'The original revision outfit.'},
- {id:'seer',name:'Arcane Seer',icon:'🔮',cost:20,desc:'Mystic coat, cards and constellations.'},
- {id:'strategist',name:'Silent Strategist',icon:'♟️',cost:30,desc:'Calm, analytical and impossible to rush.'},
- {id:'striker',name:'Goal Hunter',icon:'⚽',cost:35,desc:'Fast decisions and competitive focus.'},
- {id:'detective',name:'Night Detective',icon:'🕵️',cost:45,desc:'Dark coat and clue-board energy.'},
- {id:'voyager',name:'Northern Voyager',icon:'🛡️',cost:55,desc:'A travelling scholar from colder seas.'},
- {id:'idol',name:'Stage Star',icon:'🎤',cost:60,desc:'Bright lights and confident recall.'},
- {id:'wanderer',name:'Tower Wanderer',icon:'🗝️',cost:70,desc:'Explorer of strange libraries and towers.'},
- {id:'sorcerer',name:'Cursed Scholar',icon:'🌀',cost:80,desc:'High-risk exam technique, zero panic.'},
- {id:'captain',name:'Street Captain',icon:'🏍️',cost:90,desc:'Bold jacket and relentless momentum.'},
- {id:'architect',name:'City Architect',icon:'🏙️',cost:110,desc:'Plans systems, cities and revision routes.'},
- {id:'monarch',name:'Midnight Monarch',icon:'👑',cost:140,desc:'A late-game prestige outfit.'},
- {id:'chemist',name:'Glasswork Alchemist',icon:'⚗️',cost:150,desc:'Built for mechanisms and calculations.'},
- {id:'physicist',name:'Field Researcher',icon:'🧲',cost:160,desc:'Experiments, fields and graphs.'},
- {id:'mathematician',name:'Proof Master',icon:'∑',cost:170,desc:'Minimal style, maximum method.'},
- {id:'traveller',name:'World Traveller',icon:'🎒',cost:200,desc:'Unlocked after a lot of revision miles.'}
+const CHARACTERS=[
+ {id:'nova',name:'Nova',cost:0,skin:'#f1c7a5',hair:'#1f2937',hair2:'#111827',style:'swept'},
+ {id:'ren',name:'Ren',cost:20,skin:'#e7b894',hair:'#111827',hair2:'#374151',style:'messy'},
+ {id:'mira',name:'Mira',cost:25,skin:'#d7a078',hair:'#5b3a29',hair2:'#3f2a20',style:'long'},
+ {id:'kai',name:'Kai',cost:30,skin:'#c98f68',hair:'#0f172a',hair2:'#1e293b',style:'short'},
+ {id:'emi',name:'Emi',cost:35,skin:'#f3c9aa',hair:'#7c2d12',hair2:'#451a03',style:'bob'},
+ {id:'sora',name:'Sora',cost:40,skin:'#e9b98f',hair:'#334155',hair2:'#0f172a',style:'spiky'},
+ {id:'aya',name:'Aya',cost:45,skin:'#b97852',hair:'#2f1b12',hair2:'#111827',style:'long'},
+ {id:'leon',name:'Leon',cost:50,skin:'#e8b991',hair:'#d4a017',hair2:'#7c5a09',style:'swept'},
+ {id:'rin',name:'Rin',cost:55,skin:'#f0c3a0',hair:'#0f172a',hair2:'#312e81',style:'bob'},
+ {id:'jin',name:'Jin',cost:60,skin:'#c58b63',hair:'#111827',hair2:'#1f2937',style:'messy'},
+ {id:'yuna',name:'Yuna',cost:65,skin:'#efc3a1',hair:'#422006',hair2:'#713f12',style:'long'},
+ {id:'noah',name:'Noah',cost:70,skin:'#d59a73',hair:'#3f3f46',hair2:'#18181b',style:'short'}
 ];
+const OUTFIT_STYLES=[
+ {id:'default',name:'Default',cost:0,top:'#2563eb',accent:'#dbeafe'},
+ {id:'hoodie',name:'Hoodie',cost:12,top:'#0f172a',accent:'#64748b'},
+ {id:'casual',name:'Casual',cost:16,top:'#16a34a',accent:'#dcfce7'},
+ {id:'winter',name:'Winter',cost:20,top:'#7c3aed',accent:'#ede9fe'},
+ {id:'smart',name:'Smart',cost:24,top:'#334155',accent:'#e2e8f0'},
+ {id:'traveller',name:'Traveller',cost:28,top:'#b45309',accent:'#fef3c7'},
+ {id:'sport',name:'Sport',cost:32,top:'#dc2626',accent:'#fee2e2'},
+ {id:'festival',name:'Festival',cost:38,top:'#db2777',accent:'#fce7f3'}
+];
+const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({id:ch.id+'-'+o.id,character:ch.id,name:o.name,cost:i===0?0:o.cost+Math.max(0,CHARACTERS.findIndex(x=>x.id===ch.id))*2,top:o.top,accent:o.accent})));
 const LOCATIONS=[
- {id:'home',name:'Home Desk',lat:52.5,lon:1.0,cost:0,icon:'🏠'},
- {id:'london',name:'London Library',lat:51.5,lon:-0.12,cost:25,icon:'📚'},
- {id:'tbilisi',name:'Tbilisi Old Town',lat:41.72,lon:44.79,cost:40,icon:'🏔️'},
- {id:'tokyo',name:'Tokyo Rooftop',lat:35.68,lon:139.65,cost:55,icon:'🗼'},
- {id:'seoul',name:'Seoul Night Study',lat:37.57,lon:126.98,cost:60,icon:'🌃'},
- {id:'hongkong',name:'Hong Kong Harbour',lat:22.32,lon:114.17,cost:65,icon:'🌉'},
- {id:'singapore',name:'Singapore Skyline',lat:1.35,lon:103.82,cost:70,icon:'🌆'},
- {id:'manila',name:'Manila Bay',lat:14.6,lon:120.98,cost:75,icon:'🌅'},
- {id:'busan',name:'Busan Coast',lat:35.18,lon:129.08,cost:80,icon:'🌊'},
- {id:'almaty',name:'Almaty Mountains',lat:43.24,lon:76.89,cost:90,icon:'⛰️'},
- {id:'reykjavik',name:'Arctic Observatory',lat:64.15,lon:-21.94,cost:110,icon:'🔭'},
- {id:'santiago',name:'Andes Base',lat:-33.45,lon:-70.67,cost:120,icon:'🏔️'},
- {id:'sydney',name:'Sydney Harbour',lat:-33.87,lon:151.21,cost:130,icon:'🌏'},
- {id:'cape',name:'Cape Town Lookout',lat:-33.92,lon:18.42,cost:140,icon:'🌍'}
+ {id:'home',name:'Home Desk',wiki:'Desk',lat:52.5,lon:1.0,cost:0},
+ {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:20},
+ {id:'tbilisi',name:'Tbilisi',wiki:'Tbilisi',lat:41.7151,lon:44.8271,cost:25},
+ {id:'tokyo',name:'Tokyo',wiki:'Tokyo',lat:35.6762,lon:139.6503,cost:30},
+ {id:'seoul',name:'Seoul',wiki:'Seoul',lat:37.5665,lon:126.9780,cost:35},
+ {id:'busan',name:'Busan',wiki:'Busan',lat:35.1796,lon:129.0756,cost:40},
+ {id:'hongkong',name:'Hong Kong',wiki:'Hong_Kong',lat:22.3193,lon:114.1694,cost:45},
+ {id:'singapore',name:'Singapore',wiki:'Singapore',lat:1.3521,lon:103.8198,cost:50},
+ {id:'shanghai',name:'Shanghai',wiki:'Shanghai',lat:31.2304,lon:121.4737,cost:55},
+ {id:'shenzhen',name:'Shenzhen',wiki:'Shenzhen',lat:22.5431,lon:114.0579,cost:60},
+ {id:'beijing',name:'Beijing',wiki:'Beijing',lat:39.9042,lon:116.4074,cost:65},
+ {id:'manila',name:'Manila',wiki:'Manila',lat:14.5995,lon:120.9842,cost:70},
+ {id:'bohol',name:'Bohol',wiki:'Bohol',lat:9.8500,lon:124.1435,cost:75},
+ {id:'coron',name:'Coron',wiki:'Coron,_Palawan',lat:12.0,lon:120.2,cost:80},
+ {id:'bali',name:'Bali',wiki:'Bali',lat:-8.3405,lon:115.0920,cost:85},
+ {id:'hanoi',name:'Hanoi',wiki:'Hanoi',lat:21.0278,lon:105.8342,cost:90},
+ {id:'hochiminh',name:'Ho Chi Minh City',wiki:'Ho_Chi_Minh_City',lat:10.8231,lon:106.6297,cost:95},
+ {id:'bangkok',name:'Bangkok',wiki:'Bangkok',lat:13.7563,lon:100.5018,cost:100},
+ {id:'kualalumpur',name:'Kuala Lumpur',wiki:'Kuala_Lumpur',lat:3.1390,lon:101.6869,cost:105},
+ {id:'almaty',name:'Almaty',wiki:'Almaty',lat:43.2389,lon:76.8897,cost:110},
+ {id:'bishkek',name:'Bishkek',wiki:'Bishkek',lat:42.8746,lon:74.5698,cost:115},
+ {id:'samarkand',name:'Samarkand',wiki:'Samarkand',lat:39.6542,lon:66.9597,cost:120},
+ {id:'petra',name:'Petra',wiki:'Petra',lat:30.3285,lon:35.4444,cost:125},
+ {id:'nairobi',name:'Nairobi',wiki:'Nairobi',lat:-1.2921,lon:36.8219,cost:130},
+ {id:'capetown',name:'Cape Town',wiki:'Cape_Town',lat:-33.9249,lon:18.4241,cost:135},
+ {id:'cusco',name:'Cusco',wiki:'Cusco',lat:-13.5319,lon:-71.9675,cost:140},
+ {id:'machupicchu',name:'Machu Picchu',wiki:'Machu_Picchu',lat:-13.1631,lon:-72.5450,cost:150},
+ {id:'rio',name:'Rio de Janeiro',wiki:'Rio_de_Janeiro',lat:-22.9068,lon:-43.1729,cost:155},
+ {id:'newyork',name:'New York City',wiki:'New_York_City',lat:40.7128,lon:-74.0060,cost:160},
+ {id:'vancouver',name:'Vancouver',wiki:'Vancouver',lat:49.2827,lon:-123.1207,cost:165},
+ {id:'reykjavik',name:'Reykjavík',wiki:'Reykjavík',lat:64.1466,lon:-21.9426,cost:170},
+ {id:'sydney',name:'Sydney',wiki:'Sydney',lat:-33.8688,lon:151.2093,cost:175}
 ];
+const EARTH_TEXTURE_URL='https://svs.gsfc.nasa.gov/vis/a000000/a002900/a002915/bluemarble-2048.png';
+const earthTexture=new Image();let earthTextureReady=false;earthTexture.onload=()=>{earthTextureReady=true;drawGlobe()};earthTexture.src=EARTH_TEXTURE_URL;
+const wikiPhotoCache={};
 
 function load(k,f){try{const x=JSON.parse(localStorage.getItem(k));return x??f}catch{return f}}
 function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));localStorage.setItem(PROFILE_KEY,JSON.stringify(profile));localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings))}
 function ensureProfile(){
  profile.daily=profile.daily||{};profile.examResults=profile.examResults||{};profile.topicWeakness=profile.topicWeakness||{};profile.topicStats=profile.topicStats||{};
  profile.errorLog=profile.errorLog||[];profile.dailyChallenges=profile.dailyChallenges||{};profile.challengeStreak=profile.challengeStreak||0;profile.lastChallengeDate=profile.lastChallengeDate||'';
- profile.shopOwned=profile.shopOwned||{};profile.shopOwned.outfits=profile.shopOwned.outfits||['starter'];profile.shopOwned.locations=profile.shopOwned.locations||['home'];if(!profile.shopOwned.outfits.includes('starter'))profile.shopOwned.outfits.unshift('starter');if(!profile.shopOwned.locations.includes('home'))profile.shopOwned.locations.unshift('home');profile.equippedOutfit=profile.equippedOutfit||'starter';profile.equippedLocation=profile.equippedLocation||'home';
+ profile.shopOwned=profile.shopOwned||{};profile.shopOwned.characters=profile.shopOwned.characters||['nova'];profile.shopOwned.outfits=profile.shopOwned.outfits||['nova-default'];profile.shopOwned.locations=profile.shopOwned.locations||['home'];if(!profile.shopOwned.characters.includes('nova'))profile.shopOwned.characters.unshift('nova');if(!profile.shopOwned.outfits.includes('nova-default'))profile.shopOwned.outfits.unshift('nova-default');if(!profile.shopOwned.locations.includes('home'))profile.shopOwned.locations.unshift('home');profile.equippedCharacter=profile.equippedCharacter||'nova';profile.equippedOutfit=(profile.equippedOutfit&&profile.equippedOutfit.includes('-'))?profile.equippedOutfit:'nova-default';profile.equippedLocation=profile.equippedLocation||'home';
  if(profile.economyVersion!==2){profile.lifetimeXp=0;profile.points=0;profile.economyVersion=2}
  profile.lifetimeXp=profile.lifetimeXp||0;profile.points=profile.points||0;profile.reviews=profile.reviews||0;
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
@@ -83,9 +111,9 @@ function lockApp(){localStorage.removeItem('rl_auth');sessionStorage.removeItem(
 
 function initPhysicsUnits(){(deckMeta.physicsUnits||[]).forEach(u=>{if(settings.physicsUnits[u.id]===undefined)settings.physicsUnits[u.id]=!!u.defaultUnlocked})}
 function physicsUnlocked(c){if(c.subject!=='Physics'||!c.unit)return true;const u=(deckMeta.physicsUnits||[]).find(x=>x.id===c.unit);return settings.physicsUnits[c.unit]!==undefined?settings.physicsUnits[c.unit]!==false:(u?!!u.defaultUnlocked:true)}
-function taughtCard(c){if(c.subject==='Physics')return physicsUnlocked(c)&&c.taught!==false;return c.taught===true}
-function subjectCards(sub){return cards.filter(c=>c.active!==false&&c.subject===sub&&(sub!=='Physics'||physicsUnlocked(c)))}
-function subjectExam(sub){return examQuestions.filter(q=>q.subject===sub&&(!(q.unit&&sub==='Physics')||physicsUnlocked({subject:'Physics',unit:q.unit})))}
+function taughtCard(c){return c.taught===true}
+function subjectCards(sub){return cards.filter(c=>c.active!==false&&c.subject===sub)}
+function subjectExam(sub){return examQuestions.filter(q=>q.subject===sub)}
 
 function normalise(x){let s=String(x||'').normalize('NFKD').toLowerCase();const r=[[/θ/g,' theta '],[/λ/g,' lambda '],[/ρ/g,' rho '],[/δ|Δ/g,' delta '],[/φ/g,' phi '],[/ε/g,' epsilon '],[/²/g,'^2'],[/³/g,'^3'],[/−/g,'-'],[/×/g,' x '],[/÷/g,' / '],[/\bcosine\b/g,'cos'],[/\bsine\b/g,'sin'],[/\bperp\b/g,'perpendicular'],[/\bdegrees?\b/g,'']];r.forEach(a=>s=s.replace(a[0],a[1]));return s.replace(/[^a-z0-9+\-*/=<>^.[\] ]+/g,' ').replace(/\s+/g,' ').trim()}
 const STOP=new Set(['the','a','an','of','to','and','in','is','are','with','at','on','for','from','by','it','be','as','or','that','this','using','use','one','each','then','so']);
