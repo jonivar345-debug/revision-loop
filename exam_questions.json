@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 11,
+  "bankVersion": 12,
   "updatedAt": "2026-10-20T16:57:21.173Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
@@ -1681,6 +1681,128 @@
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|5",
       "groupOrder": "5"
+    },
+    {
+      "id": "aqa_math_as20_p1_q3a_link",
+      "year": 2020,
+      "question": "3(a)",
+      "marks": 2,
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Trig equations",
+      "questionType": "official-source explanation",
+      "prompt": "Open official AQA Paper 1 Question 3(a) and explain the two errors in the student's trig solution.",
+      "answerType": "points",
+      "markPoints": [
+        "Cancelling/dividing by cos y removes a valid case where cos y=0.",
+        "The remaining cosine equation has another solution in the stated interval."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-QP-NOV20.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF#page=6",
+      "visual": "unit-circle",
+      "subject": "Maths",
+      "level": "AS",
+      "series": "June",
+      "paper": "7356/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2020|7356/1|3",
+      "groupOrder": "3(a)"
+    },
+    {
+      "id": "aqa_math_as20_p1_q3b_link",
+      "year": 2020,
+      "question": "3(b)",
+      "marks": 2,
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Trig equations",
+      "questionType": "official-source equations",
+      "prompt": "Open official AQA Paper 1 Question 3(b) and give every solution in the stated interval.",
+      "answerType": "text",
+      "modelAnswer": "−90°, −60°, 60°, 90°",
+      "markPoints": [
+        "Obtain both cosine cases.",
+        "Give all four required angles."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-QP-NOV20.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF#page=6",
+      "visual": "unit-circle",
+      "subject": "Maths",
+      "level": "AS",
+      "series": "June",
+      "paper": "7356/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2020|7356/1|3",
+      "groupOrder": "3(b)"
+    },
+    {
+      "id": "aqa_math_as21_p1_q3a_link",
+      "year": 2021,
+      "question": "3(a)",
+      "marks": 1,
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra & functions",
+      "subtopic": "Graph transformations",
+      "questionType": "official-source short response",
+      "prompt": "Open official AQA Paper 1 Question 3(a) and write the equation after the stated translation.",
+      "answerType": "text",
+      "modelAnswer": "y = 1/(x−3)",
+      "markPoints": [
+        "Correct transformed equation."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73561-QP-NOV21.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73561-MS-NOV21.PDF#page=6",
+      "subject": "Maths",
+      "level": "AS",
+      "series": "June",
+      "paper": "7356/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2021|7356/1|3",
+      "groupOrder": "3(a)"
+    },
+    {
+      "id": "aqa_math_as21_p1_q3b_link",
+      "year": 2021,
+      "question": "3(b)",
+      "marks": 2,
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra & functions",
+      "subtopic": "Graph transformations",
+      "questionType": "official-source short response",
+      "prompt": "Open official AQA Paper 1 Question 3(b) and state both asymptotes of the transformed graph.",
+      "answerType": "points",
+      "markPoints": [
+        "Vertical asymptote x=3.",
+        "Horizontal asymptote y=0."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73561-QP-NOV21.PDF#page=3",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73561-MS-NOV21.PDF#page=6",
+      "subject": "Maths",
+      "level": "AS",
+      "series": "June",
+      "paper": "7356/1",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2021|7356/1|3",
+      "groupOrder": "3(b)"
     }
   ],
   "coverage": {
