@@ -1013,7 +1013,9 @@ function examSuggested(q,answer){
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
  if(q.modelAnswer&&String(answer||'').trim()){
    const modelMatch=Math.max(formulaScore(answer,q.modelAnswer),phraseScore(answer,q.modelAnswer));
-   if(modelMatch>=.82&&q.marks<=2){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
+   // Only give shortcut full credit when the model response is effectively complete.
+   // A merely similar answer must be reviewed marking point by marking point.
+   if(modelMatch>=.97&&q.marks<=2&&!contradicts(answer,q.modelAnswer)){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
  }
  if(q.answerType==='levels'&&q.marks>=4)suggested=Math.min(suggested,Math.max(1,Math.ceil(q.marks*.66)));
  const matched=preds.filter(Boolean).length,confidence=finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
