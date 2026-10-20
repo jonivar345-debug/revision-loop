@@ -1,7 +1,7 @@
 {
   "schemaVersion": 6,
-  "deckVersion": 2,
-  "updatedAt": "2026-10-20T16:30:00+01:00",
+  "deckVersion": 3,
+  "updatedAt": "2026-10-20T16:48:00+01:00",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -206,7 +206,21 @@
       "scope": "mock",
       "front": "If the resultant force is zero, must the object be stationary?",
       "back": "No. It may be stationary or moving at constant velocity because acceleration is zero.",
-      "active": true
+      "active": true,
+      "accept": [
+        "no",
+        "no constant velocity",
+        "no it can move at constant velocity"
+      ],
+      "concepts": [
+        [
+          "no"
+        ],
+        [
+          "constant velocity",
+          "stationary"
+        ]
+      ]
     },
     {
       "id": "phy_internal_001",
@@ -277,7 +291,24 @@
       "scope": "mock",
       "front": "Why can intense light below the threshold frequency still emit no photoelectrons?",
       "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "photon"
+        ],
+        [
+          "too little energy",
+          "not enough energy"
+        ],
+        [
+          "work function",
+          "threshold"
+        ],
+        [
+          "intensity",
+          "more photons"
+        ]
+      ]
     },
     {
       "id": "phy_energy_levels_001",
@@ -288,7 +319,24 @@
       "scope": "mock",
       "front": "How is atomic excitation different from the photoelectric effect?",
       "back": "Excitation moves an electron to a higher bound energy level. The photoelectric effect removes an electron from the metal.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "excitation"
+        ],
+        [
+          "higher energy level",
+          "bound level"
+        ],
+        [
+          "photoelectric"
+        ],
+        [
+          "eject",
+          "remove",
+          "escape"
+        ]
+      ]
     },
     {
       "id": "phy_quarks_001",
@@ -299,7 +347,22 @@
       "scope": "mock",
       "front": "Can strangeness change in a weak interaction?",
       "back": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions.",
-      "active": true
+      "active": true,
+      "accept": [
+        "yes",
+        "yes weak interaction can change strangeness"
+      ],
+      "concepts": [
+        [
+          "yes"
+        ],
+        [
+          "weak"
+        ],
+        [
+          "strangeness"
+        ]
+      ]
     },
     {
       "id": "phy_pressure_001",
@@ -310,7 +373,22 @@
       "scope": "mock",
       "front": "How do molecular collisions with a container create pressure?",
       "back": "Collisions change molecular momentum, so the walls experience a force. Pressure is force per unit area.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "collision"
+        ],
+        [
+          "momentum"
+        ],
+        [
+          "force"
+        ],
+        [
+          "area",
+          "force per unit area"
+        ]
+      ]
     },
     {
       "id": "phy_combined_gas_001",
@@ -321,7 +399,26 @@
       "scope": "mock",
       "front": "What equation links two ideal-gas states for a fixed amount of gas?",
       "back": "p₁V₁/T₁ = p₂V₂/T₂, with temperature in kelvin.",
-      "active": true
+      "active": true,
+      "accept": [
+        "p1v1/t1=p2v2/t2",
+        "p1 v1 / t1 = p2 v2 / t2",
+        "combined gas law"
+      ],
+      "concepts": [
+        [
+          "p1v1/t1",
+          "p1 v1 t1"
+        ],
+        [
+          "p2v2/t2",
+          "p2 v2 t2"
+        ],
+        [
+          "kelvin",
+          "k"
+        ]
+      ]
     },
     {
       "id": "chem_back_001",
@@ -362,7 +459,23 @@
       "scope": "mock",
       "front": "Which units must be used in pV = nRT?",
       "back": "p in Pa, V in m³, T in K and n in mol.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "pa"
+        ],
+        [
+          "m3",
+          "m^3"
+        ],
+        [
+          "kelvin",
+          "k"
+        ],
+        [
+          "mol"
+        ]
+      ]
     },
     {
       "id": "chem_titration_001",
@@ -373,7 +486,12 @@
       "scope": "mock",
       "front": "What conversion is needed before using n = cV when volume is given in cm³?",
       "back": "Convert cm³ to dm³ by dividing by 1000.",
-      "active": true
+      "active": true,
+      "accept": [
+        "divide by 1000",
+        "/1000",
+        "cm3 to dm3 divide by 1000"
+      ]
     },
     {
       "id": "chem_empirical_001",
@@ -384,7 +502,23 @@
       "scope": "mock",
       "front": "What is the route from masses to an empirical formula?",
       "back": "Mass → moles → divide all by the smallest → multiply to obtain a whole-number ratio.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "mass"
+        ],
+        [
+          "moles"
+        ],
+        [
+          "divide",
+          "smallest"
+        ],
+        [
+          "whole number",
+          "ratio"
+        ]
+      ]
     },
     {
       "id": "chem_arrhenius_001",
@@ -423,7 +557,21 @@
       "scope": "mock",
       "front": "How do you calculate Ea from the gradient of ln k against 1/T?",
       "back": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "gradient"
+        ],
+        [
+          "r"
+        ],
+        [
+          "multiply"
+        ],
+        [
+          "ea"
+        ]
+      ]
     },
     {
       "id": "chem_kp_001",
@@ -434,7 +582,20 @@
       "scope": "mock",
       "front": "What goes into a Kp expression?",
       "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "partial pressure"
+        ],
+        [
+          "gas",
+          "gaseous"
+        ],
+        [
+          "coefficient",
+          "power"
+        ]
+      ]
     },
     {
       "id": "chem_kp_002",
@@ -445,7 +606,20 @@
       "scope": "mock",
       "front": "How do you find a gas's partial pressure from its mole fraction?",
       "back": "partial pressure = mole fraction × total pressure.",
-      "active": true
+      "active": true,
+      "accept": [
+        "partial pressure=mole fraction x total pressure",
+        "mole fraction times total pressure",
+        "x times total pressure"
+      ],
+      "concepts": [
+        [
+          "mole fraction"
+        ],
+        [
+          "total pressure"
+        ]
+      ]
     },
     {
       "id": "chem_weak_acid_001",
@@ -456,7 +630,27 @@
       "scope": "mock",
       "front": "What approximation is often used for a weak monoprotic acid HA of concentration c?",
       "back": "If dissociation is small: [HA] ≈ c and [H⁺] = [A⁻], so Ka ≈ [H⁺]²/c.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "ha",
+          "acid"
+        ],
+        [
+          "approximately c",
+          "≈ c",
+          "about c"
+        ],
+        [
+          "h+",
+          "a-"
+        ],
+        [
+          "ka",
+          "h+ squared",
+          "[h+]2"
+        ]
+      ]
     },
     {
       "id": "chem_kw_001",
@@ -467,7 +661,24 @@
       "scope": "mock",
       "front": "What is Kw at 298 K?",
       "back": "Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴ mol² dm⁻⁶.",
-      "active": true
+      "active": true,
+      "accept": [
+        "kw=[h+][oh-]=1e-14",
+        "1e-14",
+        "1.00x10^-14"
+      ],
+      "concepts": [
+        [
+          "h+"
+        ],
+        [
+          "oh-"
+        ],
+        [
+          "10^-14",
+          "1e-14"
+        ]
+      ]
     },
     {
       "id": "chem_gibbs_001",
@@ -478,7 +689,29 @@
       "scope": "mock",
       "front": "What equation links ΔG, ΔH, T and ΔS, and what unit trap matters?",
       "back": "ΔG = ΔH − TΔS. ΔH and TΔS must use matching units.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "delta g",
+          "dg"
+        ],
+        [
+          "delta h",
+          "dh"
+        ],
+        [
+          "t"
+        ],
+        [
+          "delta s",
+          "ds"
+        ],
+        [
+          "units",
+          "same units",
+          "matching units"
+        ]
+      ]
     },
     {
       "id": "chem_rates_001",
@@ -489,7 +722,19 @@
       "scope": "mock",
       "front": "What does the overall order of a rate equation mean?",
       "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "sum"
+        ],
+        [
+          "powers",
+          "orders"
+        ],
+        [
+          "concentration"
+        ]
+      ]
     },
     {
       "id": "maths_trig_001",
@@ -500,7 +745,12 @@
       "scope": "mock",
       "front": "What is the Pythagorean trigonometric identity?",
       "back": "sin²x + cos²x = 1.",
-      "active": true
+      "active": true,
+      "accept": [
+        "sin^2x+cos^2x=1",
+        "sin2x+cos2x=1",
+        "sin squared x plus cos squared x equals 1"
+      ]
     },
     {
       "id": "maths_transform_001",
@@ -570,7 +820,27 @@
       "scope": "secondary",
       "front": "What relationship is central to the stretched-string stationary-wave practical?",
       "back": "f = (1/2L)√(T/μ).",
-      "active": true
+      "active": true,
+      "accept": [
+        "f=(1/2l)sqrt(t/mu)",
+        "f=1/(2l)sqrt(t/mu)"
+      ],
+      "concepts": [
+        [
+          "f"
+        ],
+        [
+          "l"
+        ],
+        [
+          "t"
+        ],
+        [
+          "mu",
+          "mass per unit length"
+        ]
+      ],
+      "visual": "stationary"
     },
     {
       "id": "phy_rp2",
@@ -581,7 +851,31 @@
       "scope": "secondary",
       "front": "What are the key equations for double-slit and diffraction-grating work?",
       "back": "w = λD/s and d sin θ = nλ.",
-      "active": true
+      "active": true,
+      "accept": [
+        "w=lambda d/s and d sin theta=n lambda",
+        "w=λd/s and d sin θ=nλ"
+      ],
+      "concepts": [
+        [
+          "w"
+        ],
+        [
+          "lambda"
+        ],
+        [
+          "d"
+        ],
+        [
+          "s"
+        ],
+        [
+          "sin"
+        ],
+        [
+          "n"
+        ]
+      ]
     },
     {
       "id": "phy_rp3",
@@ -592,7 +886,25 @@
       "scope": "secondary",
       "front": "If you plot s against t² for free fall from rest, how do you obtain g?",
       "back": "Gradient = g/2, so g = 2 × gradient.",
-      "active": true
+      "active": true,
+      "accept": [
+        "g=2 gradient",
+        "g=2xgradient",
+        "gradient=g/2"
+      ],
+      "concepts": [
+        [
+          "gradient"
+        ],
+        [
+          "g/2",
+          "half g"
+        ],
+        [
+          "g",
+          "2 gradient"
+        ]
+      ]
     },
     {
       "id": "phy_rp4",
@@ -603,7 +915,29 @@
       "scope": "secondary",
       "front": "What equation is used to determine Young modulus from a wire?",
       "back": "E = FL/(AΔL), with A = πd²/4.",
-      "active": true
+      "active": true,
+      "accept": [
+        "e=fl/(a delta l)",
+        "e=fl/a dl",
+        "fl/(a extension)"
+      ],
+      "concepts": [
+        [
+          "f"
+        ],
+        [
+          "l"
+        ],
+        [
+          "area",
+          "a"
+        ],
+        [
+          "extension",
+          "delta l"
+        ]
+      ],
+      "visual": "young"
     },
     {
       "id": "phy_rp5",
@@ -614,7 +948,27 @@
       "scope": "secondary",
       "front": "How is the resistivity of a wire found?",
       "back": "ρ = RA/L, with R = V/I and A = πd²/4.",
-      "active": true
+      "active": true,
+      "accept": [
+        "rho=ra/l",
+        "ρ=ra/l",
+        "r=rho l/a"
+      ],
+      "concepts": [
+        [
+          "rho",
+          "resistivity"
+        ],
+        [
+          "r"
+        ],
+        [
+          "a"
+        ],
+        [
+          "l"
+        ]
+      ]
     },
     {
       "id": "phy_rp6",
@@ -625,7 +979,24 @@
       "scope": "secondary",
       "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
       "back": "y-intercept = emf ε and gradient = −r.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "intercept"
+        ],
+        [
+          "emf",
+          "epsilon"
+        ],
+        [
+          "gradient"
+        ],
+        [
+          "-r",
+          "negative r"
+        ]
+      ],
+      "visual": "internal-resistance"
     },
     {
       "id": "chem_rp1",
@@ -636,7 +1007,28 @@
       "scope": "secondary",
       "front": "What are the essential steps for making an accurate standard solution?",
       "back": "Accurately weigh, dissolve, quantitatively transfer with washings, make to the mark, stopper and invert.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "weigh",
+          "mass"
+        ],
+        [
+          "dissolve"
+        ],
+        [
+          "washings",
+          "quantitative transfer"
+        ],
+        [
+          "mark",
+          "volumetric"
+        ],
+        [
+          "invert",
+          "mix"
+        ]
+      ]
     },
     {
       "id": "chem_rp2",
@@ -647,7 +1039,21 @@
       "scope": "secondary",
       "front": "What is the core calorimetry calculation?",
       "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "q=mc",
+          "mc delta t"
+        ],
+        [
+          "delta t",
+          "temperature"
+        ],
+        [
+          "delta h",
+          "-q/n"
+        ]
+      ]
     },
     {
       "id": "chem_rp3",
@@ -658,7 +1064,24 @@
       "scope": "secondary",
       "front": "Why can 1/t be used as a measure of rate in a clock reaction?",
       "back": "The same fixed amount of change defines the end point each time, so shorter time means faster rate.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "same",
+          "fixed"
+        ],
+        [
+          "endpoint",
+          "end point"
+        ],
+        [
+          "shorter time"
+        ],
+        [
+          "faster",
+          "rate"
+        ]
+      ]
     },
     {
       "id": "chem_rp4",
@@ -669,7 +1092,24 @@
       "scope": "secondary",
       "front": "What precipitate colours identify chloride, bromide and iodide after acidifying and adding AgNO₃?",
       "back": "AgCl white, AgBr cream, AgI yellow.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "chloride",
+          "agcl",
+          "white"
+        ],
+        [
+          "bromide",
+          "agbr",
+          "cream"
+        ],
+        [
+          "iodide",
+          "agi",
+          "yellow"
+        ]
+      ]
     },
     {
       "id": "chem_rp5",
@@ -680,7 +1120,22 @@
       "scope": "secondary",
       "front": "Where should the thermometer bulb be positioned during distillation?",
       "back": "At the entrance to the condenser/still head, so it measures vapour entering the condenser.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "thermometer"
+        ],
+        [
+          "condenser"
+        ],
+        [
+          "entrance",
+          "still head"
+        ],
+        [
+          "vapour"
+        ]
+      ]
     },
     {
       "id": "chem_rp6",
@@ -691,7 +1146,21 @@
       "scope": "secondary",
       "front": "What is the test for an alkene?",
       "back": "Bromine water is decolourised from orange/brown.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "bromine water"
+        ],
+        [
+          "decolourised",
+          "colorless",
+          "colourless"
+        ],
+        [
+          "orange",
+          "brown"
+        ]
+      ]
     },
     {
       "id": "phy_ins_circular_001",
@@ -702,7 +1171,23 @@
       "scope": "insurance",
       "front": "For uniform circular motion, what directions are velocity and acceleration?",
       "back": "Velocity is tangential. Acceleration and resultant force are towards the centre.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "velocity"
+        ],
+        [
+          "tangential"
+        ],
+        [
+          "acceleration",
+          "force"
+        ],
+        [
+          "centre",
+          "center"
+        ]
+      ]
     },
     {
       "id": "phy_ins_circular_002",
@@ -713,7 +1198,21 @@
       "scope": "insurance",
       "front": "What are the centripetal acceleration and force equations?",
       "back": "a = v²/r and F = mv²/r.",
-      "active": true
+      "active": true,
+      "accept": [
+        "a=v^2/r and f=mv^2/r",
+        "v^2/r mv^2/r"
+      ],
+      "concepts": [
+        [
+          "v2/r",
+          "v^2/r"
+        ],
+        [
+          "mv2/r",
+          "mv^2/r"
+        ]
+      ]
     },
     {
       "id": "phy_ins_shm_001",
@@ -724,7 +1223,27 @@
       "scope": "insurance",
       "front": "What condition defines simple harmonic motion?",
       "back": "a = −ω²x: acceleration is proportional to displacement and opposite in direction.",
-      "active": true
+      "active": true,
+      "accept": [
+        "a=-omega^2x",
+        "a=-w^2x",
+        "acceleration proportional to displacement opposite direction"
+      ],
+      "concepts": [
+        [
+          "proportional"
+        ],
+        [
+          "displacement"
+        ],
+        [
+          "opposite"
+        ],
+        [
+          "a=-",
+          "omega"
+        ]
+      ]
     },
     {
       "id": "phy_ins_shm_002",
@@ -735,7 +1254,22 @@
       "scope": "insurance",
       "front": "Where are speed and acceleration greatest in SHM?",
       "back": "Speed is greatest at equilibrium. Acceleration magnitude is greatest at maximum displacement.",
-      "active": true
+      "active": true,
+      "concepts": [
+        [
+          "speed"
+        ],
+        [
+          "equilibrium"
+        ],
+        [
+          "acceleration"
+        ],
+        [
+          "maximum displacement",
+          "extreme"
+        ]
+      ]
     },
     {
       "id": "phy_uncert_random",
