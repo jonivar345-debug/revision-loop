@@ -34,3 +34,25 @@
 .shop-item{min-width:0}
 .shop-item b,.shop-item small{overflow-wrap:anywhere}
 @media(max-width:520px){.character-filter{grid-template-columns:1fr}.character-card .shop-icon,.outfit-card .shop-icon{height:122px}}
+
+/* Revision Loop v17: topic hierarchy and character-specific outfits */
+.topic-family{border:1px solid var(--line);border-radius:10px;background:#fff;margin-bottom:7px;overflow:hidden}
+.topic-family summary{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 11px;cursor:pointer;font-size:.75rem;background:#f8fafc;list-style:none}
+.topic-family summary::-webkit-details-marker{display:none}
+.topic-family summary b{font-weight:800}
+.topic-family summary span{color:var(--muted);font-size:.65rem;white-space:nowrap}
+.topic-family-choices{padding:8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.topic-family-choices .check-item{align-items:center}
+.topic-family-choices small{color:var(--muted);font-size:.61rem;margin-left:auto;white-space:nowrap}
+#flashTopics,#examTopics{display:block;max-height:365px;overflow-y:auto}
+.character-outfits-panel{margin:10px 0 17px;padding:1px 0 0;border-top:1px solid var(--line)}
+.character-card.active-character{border-color:#2563eb;box-shadow:0 0 0 2px #dbeafe}
+.character-card .shop-icon{height:155px}
+.outfit-card .shop-icon{height:155px}
+.location-photo{display:grid;place-items:center;min-height:110px;color:#f8fafc;font-size:.7rem;text-align:center;padding:0}
+.location-photo img{max-width:100%;object-fit:cover}
+.location-photo .photo-credit{position:absolute;bottom:5px;right:7px;font-size:.55rem;color:#fff;z-index:3;text-decoration:none;background:rgba(0,0,0,.6);padding:2px 5px;border-radius:5px}
+.study-type-btn{white-space:normal}
+.question{white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;line-height:1.55}
+.markpoint span{white-space:pre-wrap}
+@media(max-width:700px){.topic-family-choices{grid-template-columns:1fr}.character-card .shop-icon,.outfit-card .shop-icon{height:145px}}
