@@ -189,51 +189,68 @@ const ANIME_ART_QUERY={
  phase2_kiyotaka_ayanokoji:'Kiyotaka Ayanokouji',phase2_manjiro_sano:'Manjiro Sano',
  phase2_aqua_hoshino:'Aqua Hoshino'
 };
-const characterArtCache=new Map(),characterArtJobs=new Map();let characterArtQueue=Promise.resolve(),characterVisibleLimit=16;
+const characterArtCache=new Map(),characterArtJobs=new Map();
+let characterVisibleLimit=16;
 function characterArtQuery(c){return ANIME_ART_QUERY[c.id]||c.lookup||c.name}
+function matchName(name,target){
+ const clean=x=>String(x||'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
+ const a=clean(name),b=clean(target),words=b.split(' ').filter(x=>x.length>1);
+ return a===b||words.filter(w=>a.includes(w)).length>=Math.max(1,Math.ceil(words.length*.66));
+}
+async function findAniListArt(query){
+ const payload={query:'query ($search:String){Character(search:$search){name{full native alternative}image{large medium}}}',variables:{search:query}};
+ const response=await fetch('https://graphql.anilist.co',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+ if(!response.ok)throw Error('AniList response '+response.status);
+ const data=await response.json(),character=data.data?.Character;
+ if(!character||!matchName([character.name.full,...(character.name.alternative||[])].join(' '),query))throw Error('AniList name mismatch');
+ return character.image?.large||character.image?.medium||null;
+}
+async function findJikanArt(query){
+ const response=await fetch('https://api.jikan.moe/v4/characters?q='+encodeURIComponent(query)+'&limit=8');
+ if(!response.ok)throw Error('Jikan response '+response.status);
+ const data=await response.json();
+ const match=(data.data||[]).find(p=>matchName(p.name,query)||matchName((p.name_kanji||'')+' '+(p.nicknames||[]).join(' '),query));
+ return match?.images?.webp?.image_url||match?.images?.jpg?.image_url||null;
+}
 async function getCharacterArt(c){
- if(characterArtCache.has(c.id))return characterArtCache.get(c.id);
+ const old=characterArtCache.get(c.id);
+ if(old&&old.exp>Date.now())return old.url;
  if(characterArtJobs.has(c.id))return characterArtJobs.get(c.id);
- const job=characterArtQueue=characterArtQueue.catch(()=>{}).then(async()=>{
-  await new Promise(r=>setTimeout(r,440));
-  try{
-   const query=characterArtQuery(c);
-   const url='https://api.jikan.moe/v4/characters?q='+encodeURIComponent(query)+'&limit=8';
-   const response=await fetch(url);
-   if(!response.ok)throw Error('Artwork lookup unavailable');
-   const data=await response.json();
-   const cleaned=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-   const target=cleaned(query),words=target.split(' ').filter(Boolean);
-   const best=(data.data||[]).map(x=>({record:x,name:cleaned(x.name)}))
-     .sort((a,b)=>(b.name===target?100:words.filter(w=>b.name.includes(w)).length*12)-(a.name===target?100:words.filter(w=>a.name.includes(w)).length*12))[0];
-   if(!best||words.filter(w=>best.name.includes(w)).length<Math.max(1,Math.ceil(words.length*.75)))throw Error('Artwork match missing');
-   const src=best.record.images?.webp?.image_url||best.record.images?.jpg?.image_url;
-   if(!src)throw Error('No picture');
-   const result={src,source:best.record.url||'https://myanimelist.net/character'};
-   characterArtCache.set(c.id,result);return result;
-  }catch{characterArtCache.set(c.id,null);return null}
- }).finally(()=>characterArtJobs.delete(c.id));
- characterArtJobs.set(c.id,job);return job;
+ const job=(async()=>{
+  const query=characterArtQuery(c);
+  let url=null;
+  try{url=await findAniListArt(query)}catch{}
+  if(!url)try{url=await findJikanArt(query)}catch{}
+  if(url){characterArtCache.set(c.id,{url,exp:Date.now()+86400000*7});return url}
+  characterArtCache.set(c.id,{url:null,exp:Date.now()+120000});
+  return null;
+ })().finally(()=>characterArtJobs.delete(c.id));
+ characterArtJobs.set(c.id,job);
+ return job;
 }
 function loadCharacterArt(root=document){
  const nodes=[...root.querySelectorAll('[data-character-art]')];
  const load=async el=>{
   const id=el.dataset.characterArt,c=CHARACTERS.find(x=>x.id===id);
   if(!c||el.dataset.loading==='1'||el.querySelector('img'))return;
-  el.dataset.loading='1';const result=await getCharacterArt(c);
-  if(!result||!el.isConnected)return;
-  const img=document.createElement('img');img.loading='lazy';img.alt=c.name+' anime character portrait';img.referrerPolicy='no-referrer';
-  img.onload=()=>{if(el.isConnected){el.appendChild(img);el.classList.add('has-portrait')}};
-  img.onerror=()=>{el.dataset.loading='';};
-  img.src=result.src;
+  el.dataset.loading='1';
+  const source=await getCharacterArt(c);
+  if(!el.isConnected)return;
+  if(!source){el.dataset.loading='';el.classList.add('art-unavailable');return}
+  const img=document.createElement('img');img.loading='lazy';img.alt=c.name+' anime portrait';img.referrerPolicy='no-referrer';
+  img.onload=()=>{if(!el.isConnected)return;el.appendChild(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable')};
+  img.onerror=()=>{el.dataset.loading='';el.classList.add('art-unavailable')};
+  img.src=source;
  };
  if('IntersectionObserver' in window){
-  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);load(entry.target)}},{rootMargin:'150px'});
+  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);load(entry.target)}},{rootMargin:'250px'});
   nodes.forEach(el=>observer.observe(el));
- }else nodes.slice(0,16).forEach(load);
+ }else nodes.forEach(load);
 }
 function characterArtwork(c,o){
- return '<div class="character-art" data-character-art="'+esc(c.id)+'">'+avatarSVG(c,o)+'</div>';
+ return '<div class="character-art" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+'">'+
+ '<div class="character-loading"><span>'+esc(c.name)+'</span><small>Anime portrait</small></div>'+
+ avatarSVG(c,o)+'</div>';
 }
 
 const LOCATIONS=[
