@@ -211,6 +211,23 @@ const SYN=[
  ['gradient','slope'],
  ['intercept','axis intercept']
 ];
+const OPPOSITES=[
+ ['increase','decrease'],['higher','lower'],['greater','smaller'],['positive','negative'],
+ ['attract','repel'],['attractive','repulsive'],['parallel','perpendicular'],
+ ['clockwise','anticlockwise'],['gain','lose'],['gains','loses'],['absorbed','emitted'],
+ ['constructive','destructive'],['maximum','minimum']
+];
+function hasMeaning(text,word){
+ const nt=' '+normalise(text)+' ',nw=' '+normalise(word)+' ';
+ return nt.includes(nw)||normalise(text).split(' ').includes(normalise(word));
+}
+function contradicts(answer,point){
+ for(const [a,b] of OPPOSITES){
+   const pa=hasMeaning(point,a),pb=hasMeaning(point,b),aa=hasMeaning(answer,a),ab=hasMeaning(answer,b);
+   if((pa&&ab&&!aa)||(pb&&aa&&!ab))return true;
+ }
+ return false;
+}
 function stemToken(t){
  if(t.length>6&&t.endsWith('ing'))return t.slice(0,-3);
  if(t.length>5&&t.endsWith('ied'))return t.slice(0,-3)+'y';
@@ -277,6 +294,7 @@ function importantTokens(s){
 }
 function markPointPrediction(answer,point){
  if(!String(answer||'').trim())return 0;
+ if(contradicts(answer,point))return 0;
  const p=importantTokens(point),a=tokens(answer);if(!p.length)return 0;
  let hits=0;for(const target of p)if(a.some(x=>close(x,target)))hits++;
  let score=hits/p.length;
@@ -336,7 +354,18 @@ function startMockSession(){
    for(const g of pickedGroups){for(const q of g){if(items.length>=count&&mode==='mixed')break;items.push({type:'exam',id:q.id,groupId:q.groupId})}}
  }
  if(!items.length){showToast('No mock material is available for that selection yet');return}
- if(mode==='mixed')items.sort(()=>Math.random()-.5);
+ if(mode==='mixed'){
+   const blocks=[],seenGroups=new Set();
+   for(const item of items){
+     if(item.type==='exam'&&item.groupId){
+       if(seenGroups.has(item.groupId))continue;
+       seenGroups.add(item.groupId);
+       blocks.push(items.filter(x=>x.type==='exam'&&x.groupId===item.groupId));
+     }else blocks.push([item]);
+   }
+   blocks.sort(()=>Math.random()-.5);
+   items.splice(0,items.length,...blocks.flat());
+ }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
 function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return flashTopics.size?base.filter(c=>flashTopics.has(c.courseTopic||c.topic)):base}
@@ -382,7 +411,7 @@ function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>(!sub||x.su
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
  const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>weakness(b)-weakness(a)),items=[],used=new Set();
- for(const c of weak){if(items.length>=3)break;if(!used.has(c.topic)){items.push({type:'card',id:c.id});used.add(c.topic)}}
+ for(const c of weak){if(items.length>=3)break;const ct=c.courseTopic||c.topic;if(!used.has(ct)){items.push({type:'card',id:c.id});used.add(ct)}}
  const old=[...cpool].filter(c=>state(c.id).stage>=0&&!items.some(i=>i.id===c.id)).sort((a,b)=>(state(a.id).last||0)-(state(b.id).last||0));if(old[0])items.push({type:'card',id:old[0].id});
  const random=[...cpool].filter(c=>!items.some(i=>i.id===c.id)).sort(()=>Math.random()-.5);if(random[0])items.push({type:'card',id:random[0].id});
  const qgroups=new Map();for(const q of challengeQuestions(sub,scope)){if(!qgroups.has(q.groupId))qgroups.set(q.groupId,[]);qgroups.get(q.groupId).push(q)}
@@ -554,14 +583,27 @@ function checkedMarkScore(q){
 }
 function renderExam(q){
  const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'';
- const sourceFirst=q.sourceFirst===true;
- const sourceIntro=sourceFirst?'<div class="copyright-note"><b>Exact-source mode:</b> open the AQA question first, then answer and mark it here.</div><div class="exam-source source-first"><a class="source-link primary-source" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Open exact AQA question</a></div>':'<div class="copyright-note">The in-app wording is a faithful standalone paraphrase. The official AQA source is linked below.</div>';
- document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">Real AQA source</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceIntro+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea><div class="exam-source">'+(!sourceFirst?'<a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Original AQA question</a>':'')+'<a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">Official mark scheme</a></div>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
- document.getElementById('markExam').onclick=()=>{const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');marking.classList.add('show');marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
-   currentExamScore=res.suggested;const ef=document.getElementById('examFeedback');ef.className='feedback show '+(res.finalCorrect?'correct':'neutral');ef.textContent=res.finalCorrect?'Final numerical answer matches. Method marks are still checked separately below.':'Suggested marking is based on AQA marking points; review the highlighted points and correct the mark if needed.';renderScoreEditor(q,answer);
-   document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{currentExamScore=checkedMarkScore(q);renderScoreEditor(q,answer)});
+ const linked=examQuestions.filter(x=>x.groupId===q.groupId).sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
+ const linkedIndex=linked.findIndex(x=>x.id===q.id);
+ const linkedNote=linked.length>1?'<div class="copyright-note">Linked original question · part '+(linkedIndex+1)+' of '+linked.length+'. Related parts are kept together in sessions.</div>':'';
+ const sourceNote=q.sourceFirst?'<div class="copyright-note">This bank entry is source-linked: open the official AQA question first because its original figure/table/context is needed.</div>':'<div class="copyright-note">In-app wording is a faithful self-contained paraphrase of the AQA task.</div>';
+ document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">AQA source</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div><div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Open official AQA question</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">Official mark scheme</a></div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
+ document.getElementById('markExam').onclick=()=>{
+   const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');
+   marking.classList.add('show');
+   marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
+   currentExamScore=res.suggested;
+   const ef=document.getElementById('examFeedback');ef.className='feedback show '+(res.finalCorrect?'correct':'neutral');
+   ef.textContent=res.finalCorrect?'Final numerical answer matches. Method marks are checked separately below.':'Suggested marking checks ideas, synonyms, common spelling errors and contradictions. Review the highlighted marking points before saving.';
+   renderScoreEditor(q,answer);
+   document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{
+     const checked=[...document.querySelectorAll('[data-mp]')].filter(x=>x.checked).length;
+     currentExamScore=clamp(Math.round(checked/Math.max(1,q.markPoints.length)*q.marks),0,q.marks);
+     renderScoreEditor(q,answer);
+   });
  };
 }
+
 function renderScoreEditor(q,answer){const ed=document.getElementById('scoreEditor');ed.classList.add('show');const missed=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);ed.innerHTML='<div class="score-line"><strong>Suggested mark: '+currentExamScore+'/'+q.marks+'</strong><span>Tap a mark to correct it</span></div><div class="mark-buttons">'+Array.from({length:q.marks+1},(_,i)=>'<button class="mark-btn '+(i===currentExamScore?'selected':'')+'" data-score="'+i+'">'+i+'</button>').join('')+'</div>'+(missed.length?'<div class="missed-summary"><b>Likely missing:</b> '+missed.map(esc).join(' • ')+'</div>':'<div class="feedback show correct">No mark-scheme point is currently flagged as missing.</div>')+'<button id="saveExamScore" class="primary-btn save-score">Save '+currentExamScore+'/'+q.marks+'</button>';document.querySelectorAll('[data-score]').forEach(b=>b.onclick=()=>{currentExamScore=Number(b.dataset.score);renderScoreEditor(q,answer)});document.getElementById('saveExamScore').onclick=()=>{const mp=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);awardExam(q,currentExamScore,answer,mp)}}
 function renderStudy(){
  renderStudyType();renderSessionBanner();
