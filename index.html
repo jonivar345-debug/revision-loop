@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24">
 </head>
 <body>
 <div id="authGate" class="auth-gate">
@@ -114,6 +114,7 @@
       <div id="examControls" class="control-card hidden">
         <div class="control-row three">
           <label><span>Subject</span><select id="examSubject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select></label>
+          <label><span>Qualification</span><select id="examLevel"><option value="both">AS and A-level</option><option value="AS">AS only</option><option value="A-level">A-level only</option></select></label>
           <label><span>Question groups</span><select id="examCount"><option value="5">5 groups</option><option value="10" selected>10 groups</option><option value="15">15 groups</option><option value="20">20 groups</option></select></label>
           <label><span>Ordering</span><select id="examOrder"><option value="adaptive">Random + weak-topic boost</option><option value="random">Fully random</option></select></label>
         </div>
@@ -214,6 +215,6 @@
     </section>
   </main>
 </div>
-<script src="app.js?v=23" defer></script>
+<script src="app.js?v=24" defer></script>
 </body>
 </html>
