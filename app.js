@@ -266,7 +266,30 @@ function diagram(t){
 
 function renderLevel(){const li=levelInfo(profile.lifetimeXp);document.getElementById('levelNum').textContent=li.level;document.getElementById('xpTotal').textContent=profile.lifetimeXp+' XP';document.getElementById('pointBalance').textContent=profile.points;document.getElementById('xpNext').textContent=li.level>=500?'Maximum level reached':(li.req-li.into)+' XP to level '+(li.level+1);document.getElementById('xpBar').style.width=(li.level>=500?100:clamp(li.into/li.req*100,0,100))+'%'}
 function renderStats(){document.getElementById('dueCount').textContent=cards.filter(c=>c.active!==false&&isDue(c)).length;document.getElementById('newCount').textContent=daily().newCards;document.getElementById('reviewedCount').textContent=daily().reviews;document.getElementById('masteredCount').textContent=cards.filter(c=>state(c.id).mastered).length}
-function renderAvatar(){const o=OUTFITS.find(x=>x.id===profile.equippedOutfit)||OUTFITS[0],l=LOCATIONS.find(x=>x.id===profile.equippedLocation)||LOCATIONS[0];document.getElementById('miniAvatar').textContent=o.icon;document.getElementById('characterPreview').textContent=o.icon;document.getElementById('equippedName').textContent=o.name;document.getElementById('equippedLocation').textContent=l.name;document.getElementById('shopPoints').textContent=profile.points;selectedLocation=l.id}
+function avatarSVG(character,outfit,small=false){
+ const c=character||CHARACTERS[0],o=outfit||OUTFITS.find(x=>x.id===c.id+'-default')||OUTFITS[0];
+ const hairBack=c.style==='long'?'<path d="M35 64 Q38 25 80 24 Q122 25 125 64 L119 132 Q104 149 80 150 Q56 149 41 132Z" fill="'+c.hair2+'"/>':'';
+ let hair='';
+ if(c.style==='spiky')hair='<path d="M40 62 L48 29 L58 42 L69 21 L79 39 L94 20 L103 42 L117 31 L121 65 Q80 49 40 62Z" fill="'+c.hair+'"/>';
+ else if(c.style==='bob')hair='<path d="M40 62 Q43 26 80 25 Q118 27 121 63 L115 94 Q102 77 101 49 Q72 63 42 56 L45 98 Q35 83 40 62Z" fill="'+c.hair+'"/>';
+ else if(c.style==='messy')hair='<path d="M41 63 Q43 34 62 27 L67 16 L76 27 L88 15 L94 29 L111 23 L108 38 Q122 47 119 67 Q83 48 41 63Z" fill="'+c.hair+'"/>';
+ else if(c.style==='long')hair='<path d="M41 62 Q43 27 80 25 Q117 27 120 64 Q100 51 83 46 Q65 60 41 61Z" fill="'+c.hair+'"/>';
+ else hair='<path d="M41 62 Q45 27 80 25 Q113 26 120 60 Q96 47 78 45 Q61 56 41 62Z" fill="'+c.hair+'"/>';
+ return '<svg viewBox="0 0 160 190" role="img" aria-label="'+esc(c.name)+'"><rect width="160" height="190" rx="18" fill="#eef2ff"/>'+hairBack+'<circle cx="80" cy="77" r="38" fill="'+c.skin+'"/>'+hair+'<circle cx="66" cy="77" r="3.5" fill="#111827"/><circle cx="94" cy="77" r="3.5" fill="#111827"/><path d="M72 94 Q80 100 88 94" fill="none" stroke="#7c2d12" stroke-width="2.5" stroke-linecap="round"/><path d="M43 190 L47 132 Q80 113 113 132 L117 190Z" fill="'+o.top+'"/><path d="M62 128 Q80 143 98 128 L102 144 Q80 159 58 144Z" fill="'+o.accent+'"/><circle cx="80" cy="125" r="6" fill="'+c.skin+'"/></svg>';
+}
+function renderAvatar(){
+ const c=CHARACTERS.find(x=>x.id===profile.equippedCharacter)||CHARACTERS[0];
+ let o=OUTFITS.find(x=>x.id===profile.equippedOutfit&&x.character===c.id);
+ if(!o){o=OUTFITS.find(x=>x.id===c.id+'-default');profile.equippedOutfit=o.id}
+ const l=LOCATIONS.find(x=>x.id===profile.equippedLocation)||LOCATIONS[0];
+ document.getElementById('miniAvatar').innerHTML=avatarSVG(c,o,true);
+ document.getElementById('characterPreview').innerHTML=avatarSVG(c,o);
+ document.getElementById('equippedName').textContent=c.name;
+ document.getElementById('equippedOutfitName').textContent=o.name+' outfit';
+ document.getElementById('equippedLocation').textContent=l.name;
+ document.getElementById('shopPoints').textContent=profile.points;
+ selectedLocation=l.id;
+}
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
 function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,topics=[...new Set(subjectCards(sub).map(c=>c.courseTopic||c.topic))].sort();flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));if(defaultIfEmpty&&!flashTopics.size)topics.filter(t=>subjectCards(sub).some(c=>(c.courseTopic||c.topic)===t&&c.taught)).forEach(t=>flashTopics.add(t));
@@ -326,22 +349,61 @@ function renderProgress(){
 }
 
 function buy(kind,id){
- const arr=kind==='outfit'?OUTFITS:LOCATIONS,item=arr.find(x=>x.id===id),owned=kind==='outfit'?profile.shopOwned.outfits:profile.shopOwned.locations;if(!item)return;
- if(owned.includes(id)){if(kind==='outfit')profile.equippedOutfit=id;else profile.equippedLocation=id;save();renderAll();return}
- if(profile.points<item.cost){showToast('Not enough points yet');return}profile.points-=item.cost;owned.push(id);if(kind==='outfit')profile.equippedOutfit=id;else profile.equippedLocation=id;save();showToast('Unlocked '+item.name);renderAll()
+ let item,owned;
+ if(kind==='character'){item=CHARACTERS.find(x=>x.id===id);owned=profile.shopOwned.characters}
+ else if(kind==='outfit'){item=OUTFITS.find(x=>x.id===id);owned=profile.shopOwned.outfits}
+ else {item=LOCATIONS.find(x=>x.id===id);owned=profile.shopOwned.locations}
+ if(!item)return;
+ if(owned.includes(id)){
+   if(kind==='character'){profile.equippedCharacter=id;const ownFor=profile.shopOwned.outfits.find(x=>x.startsWith(id+'-'));profile.equippedOutfit=ownFor||id+'-default'}
+   else if(kind==='outfit'){profile.equippedOutfit=id;profile.equippedCharacter=item.character}
+   else profile.equippedLocation=id;
+   save();renderAll();return;
+ }
+ if(profile.points<item.cost){showToast('Not enough points yet');return}
+ profile.points-=item.cost;owned.push(id);
+ if(kind==='character'){profile.equippedCharacter=id;const def=id+'-default';if(!profile.shopOwned.outfits.includes(def))profile.shopOwned.outfits.push(def);profile.equippedOutfit=def}
+ else if(kind==='outfit'){profile.equippedOutfit=id;profile.equippedCharacter=item.character}
+ else profile.equippedLocation=id;
+ save();showToast('Unlocked '+item.name);renderAll();
+}
+async function locationPhoto(location,el){
+ if(!location||!el)return;
+ if(wikiPhotoCache[location.wiki]){el.innerHTML='<img src="'+esc(wikiPhotoCache[location.wiki])+'" alt="'+esc(location.name)+'">';return}
+ try{
+   const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(location.wiki),{cache:'force-cache'});
+   const j=await r.json(),url=j.thumbnail?.source||j.originalimage?.source;
+   if(url){wikiPhotoCache[location.wiki]=url;el.innerHTML='<img src="'+esc(url)+'" alt="'+esc(location.name)+'">'}
+ }catch{}
 }
 function renderShop(){
- const oo=profile.shopOwned.outfits,ol=profile.shopOwned.locations;document.getElementById('outfitShop').innerHTML=OUTFITS.map(x=>'<div class="shop-item"><div class="shop-icon">'+x.icon+'</div><b>'+esc(x.name)+'</b><small>'+esc(x.desc)+'</small><button class="'+(!oo.includes(x.id)?'buy':'')+'" data-outfit="'+x.id+'" '+(!oo.includes(x.id)&&profile.points<x.cost?'disabled':'')+'>'+(oo.includes(x.id)?(profile.equippedOutfit===x.id?'Equipped':'Equip'):x.cost+' points')+'</button></div>').join('');
- document.getElementById('locationShop').innerHTML=LOCATIONS.map(x=>'<div class="shop-item"><div class="shop-icon">'+x.icon+'</div><b>'+esc(x.name)+'</b><small>'+x.lat.toFixed(1)+'°, '+x.lon.toFixed(1)+'°</small><button class="'+(!ol.includes(x.id)?'buy':'')+'" data-location="'+x.id+'" '+(!ol.includes(x.id)&&profile.points<x.cost?'disabled':'')+'>'+(ol.includes(x.id)?(profile.equippedLocation===x.id?'Equipped':'Use location'):x.cost+' points')+'</button></div>').join('');
- document.querySelectorAll('[data-outfit]').forEach(b=>b.onclick=()=>buy('outfit',b.dataset.outfit));document.querySelectorAll('[data-location]').forEach(b=>b.onclick=()=>buy('location',b.dataset.location));drawGlobe()
+ const oc=profile.shopOwned.characters,oo=profile.shopOwned.outfits,ol=profile.shopOwned.locations,curr=profile.equippedCharacter;
+ document.getElementById('characterCount').textContent=oc.length+' / '+CHARACTERS.length+' unlocked';
+ document.getElementById('outfitCount').textContent=oo.length+' / '+OUTFITS.length+' unlocked';
+ document.getElementById('locationCount').textContent=ol.length+' / '+LOCATIONS.length+' unlocked';
+ document.getElementById('characterShop').innerHTML=CHARACTERS.map(c=>{const def=OUTFITS.find(o=>o.id===c.id+'-default');return '<div class="shop-item character-card"><div class="shop-icon">'+avatarSVG(c,def)+'</div><b>'+esc(c.name)+'</b><small>Character appearance</small><button class="'+(!oc.includes(c.id)?'buy':'')+'" data-character="'+c.id+'" '+(!oc.includes(c.id)&&profile.points<c.cost?'disabled':'')+'>'+(oc.includes(c.id)?(curr===c.id?'Selected':'Select'):c.cost+' points')+'</button></div>'}).join('');
+ const outfits=OUTFITS.filter(o=>o.character===curr),ch=CHARACTERS.find(c=>c.id===curr)||CHARACTERS[0];
+ document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+avatarSVG(ch,o)+'</div><b>'+esc(o.name)+'</b><small>Outfit for '+esc(ch.name)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button></div>').join('');
+ document.getElementById('locationShop').innerHTML=LOCATIONS.map(l=>'<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'"></div><div class="location-body"><b>'+esc(l.name)+'</b><small>'+l.lat.toFixed(1)+'°, '+l.lon.toFixed(1)+'°</small><button class="'+(!ol.includes(l.id)?'buy':'')+'" data-location="'+l.id+'" '+(!ol.includes(l.id)&&profile.points<l.cost?'disabled':'')+'>'+(ol.includes(l.id)?(profile.equippedLocation===l.id?'Active location':'Use location'):l.cost+' points')+'</button></div></div>').join('');
+ document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>buy('character',b.dataset.character));
+ document.querySelectorAll('[data-outfit]').forEach(b=>b.onclick=()=>buy('outfit',b.dataset.outfit));
+ document.querySelectorAll('[data-location]').forEach(b=>b.onclick=()=>buy('location',b.dataset.location));
+ document.querySelectorAll('[data-location-photo]').forEach(el=>locationPhoto(LOCATIONS.find(l=>l.id===el.dataset.locationPhoto),el));
+ drawGlobe();
 }
 function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI/180,cl=globeLat*Math.PI/180,x=Math.cos(la)*Math.sin(lo),y=Math.sin(la)*Math.cos(cl)-Math.cos(la)*Math.cos(lo)*Math.sin(cl),z=Math.sin(la)*Math.sin(cl)+Math.cos(la)*Math.cos(lo)*Math.cos(cl);const R=Math.min(w,h)*.4;return {x:w/2+x*R,y:h/2-y*R,z}}
 function drawGlobe(){
- const c=document.getElementById('globe');if(!c)return;const ctx=c.getContext('2d'),w=c.width,h=c.height,R=Math.min(w,h)*.4;ctx.clearRect(0,0,w,h);const g=ctx.createRadialGradient(w*.42,h*.35,R*.05,w/2,h/2,R);g.addColorStop(0,'#bfdbfe');g.addColorStop(.55,'#2563eb');g.addColorStop(1,'#0f172a');ctx.fillStyle=g;ctx.beginPath();ctx.arc(w/2,h/2,R,0,Math.PI*2);ctx.fill();ctx.save();ctx.beginPath();ctx.arc(w/2,h/2,R,0,Math.PI*2);ctx.clip();ctx.strokeStyle='rgba(255,255,255,.18)';ctx.lineWidth=1;
- for(let lat=-60;lat<=60;lat+=30){ctx.beginPath();let first=true;for(let lon=-180;lon<=180;lon+=4){const p=project(lat,lon,w,h);if(p.z<0)continue;if(first){ctx.moveTo(p.x,p.y);first=false}else ctx.lineTo(p.x,p.y)}ctx.stroke()}
- for(let lon=-150;lon<=180;lon+=30){ctx.beginPath();let first=true;for(let lat=-85;lat<=85;lat+=3){const p=project(lat,lon,w,h);if(p.z<0)continue;if(first){ctx.moveTo(p.x,p.y);first=false}else ctx.lineTo(p.x,p.y)}ctx.stroke()}ctx.restore();
- for(const l of LOCATIONS){const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;const owned=profile.shopOwned.locations.includes(l.id);ctx.beginPath();ctx.arc(p.x,p.y,l.id===profile.equippedLocation?7:5,0,Math.PI*2);ctx.fillStyle=l.id===profile.equippedLocation?'#fbbf24':owned?'#ffffff':'rgba(255,255,255,.28)';ctx.fill();if(l.id===selectedLocation){ctx.strokeStyle='#fbbf24';ctx.lineWidth=2;ctx.stroke()}}
- const sel=LOCATIONS.find(x=>x.id===selectedLocation);if(sel)document.getElementById('globeLabel').textContent=sel.name+' · '+(profile.shopOwned.locations.includes(sel.id)?'unlocked':sel.cost+' points')+' · drag to rotate'
+ const c=document.getElementById('globe');if(!c)return;const ctx=c.getContext('2d'),w=c.width,h=c.height,R=Math.min(w,h)*.4,cx=w/2,cy=h/2;ctx.clearRect(0,0,w,h);
+ ctx.fillStyle='#020617';ctx.fillRect(0,0,w,h);
+ ctx.save();ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.clip();
+ if(earthTextureReady){
+   const texW=w*1.9,texH=R*2,offset=((globeLon+180)/360*texW)%texW;
+   for(let k=-2;k<=2;k++)ctx.drawImage(earthTexture,cx-R-offset+k*texW,cy-R,texW,texH);
+ }else{ctx.fillStyle='#1d4ed8';ctx.fillRect(cx-R,cy-R,R*2,R*2)}
+ const shade=ctx.createRadialGradient(cx-R*.35,cy-R*.35,R*.1,cx,cy,R);shade.addColorStop(0,'rgba(255,255,255,.16)');shade.addColorStop(.72,'rgba(0,0,0,.05)');shade.addColorStop(1,'rgba(0,0,0,.48)');ctx.fillStyle=shade;ctx.fillRect(cx-R,cy-R,R*2,R*2);ctx.restore();
+ ctx.strokeStyle='rgba(255,255,255,.23)';ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
+ for(const l of LOCATIONS){const p=project(l.lat,l.lon,w,h);if(p.z<=0)continue;const owned=profile.shopOwned.locations.includes(l.id);ctx.beginPath();ctx.arc(p.x,p.y,l.id===profile.equippedLocation?7:5,0,Math.PI*2);ctx.fillStyle=l.id===profile.equippedLocation?'#fbbf24':owned?'#ffffff':'rgba(255,255,255,.38)';ctx.fill();if(l.id===selectedLocation){ctx.strokeStyle='#fbbf24';ctx.lineWidth=2;ctx.stroke()}}
+ const sel=LOCATIONS.find(x=>x.id===selectedLocation);if(sel)document.getElementById('globeLabel').textContent=sel.name+' · '+(profile.shopOwned.locations.includes(sel.id)?'unlocked':sel.cost+' points')+' · drag to rotate';
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
 function nearestPin(x,y){let best=null,dist=18;for(const l of LOCATIONS){const p=project(l.lat,l.lon,700,360);if(p.z<=0)continue;const d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=l}}return best}
