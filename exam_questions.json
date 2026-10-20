@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 14,
-  "updatedAt": "2026-10-20T17:19:10.767Z",
+  "bankVersion": 15,
+  "updatedAt": "2026-10-20T17:25:32.287Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -1991,6 +1991,230 @@
       "sourceFirst": true,
       "groupId": "Physics|2020|7407/1|5",
       "groupOrder": "5.1"
+    },
+    {
+      "id": "aqa_math_as24_p1_q3_src",
+      "question": "3",
+      "marks": 4,
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra & functions",
+      "subtopic": "Surds",
+      "questionType": "official-source algebra",
+      "prompt": "Open the official AQA Question 3, then enter your simplified surd result here.",
+      "answerType": "text",
+      "modelAnswer": "9 + √60",
+      "markPoints": [
+        "Use the conjugate to rationalise the denominator.",
+        "Simplify the numerator correctly.",
+        "Simplify the denominator correctly.",
+        "Reach the required simplified form."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|3",
+      "groupOrder": "3"
+    },
+    {
+      "id": "aqa_math_as24_p1_q4ai_src",
+      "question": "4(a)(i)",
+      "marks": 1,
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Trig proof",
+      "questionType": "official-source proof",
+      "prompt": "Open official AQA Question 4(a)(i), then give the required trig result and reasoning.",
+      "answerType": "points",
+      "markPoints": [
+        "Use the stated trigonometric relationship to derive tan²θ = 4."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "visual": "unit-circle",
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|4",
+      "groupOrder": "4(a)(i)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q4aii_src",
+      "question": "4(a)(ii)",
+      "marks": 3,
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Trig equations",
+      "questionType": "official-source equations",
+      "prompt": "Open official AQA Question 4(a)(ii), then give all solutions in the stated interval.",
+      "answerType": "text",
+      "modelAnswer": "63°, 117°, 243°, 297°",
+      "markPoints": [
+        "Obtain tan θ = ±2.",
+        "Find valid solutions from both tangent branches.",
+        "Give all four solutions with no extras in the interval."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "visual": "unit-circle",
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|4",
+      "groupOrder": "4(a)(ii)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q4b_src",
+      "question": "4(b)",
+      "marks": 3,
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "subtopic": "Trig equations",
+      "questionType": "official-source equations",
+      "prompt": "Open official AQA Question 4(b), then give every value of α in the stated interval.",
+      "answerType": "text",
+      "modelAnswer": "21°, 39°, 81°, 99°, 141°, 159°",
+      "markPoints": [
+        "Relate the solutions from part (a) to 3α.",
+        "Obtain at least three correct values.",
+        "Give all six values with no extras."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "visual": "unit-circle",
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|4",
+      "groupOrder": "4(b)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q5a_src",
+      "question": "5(a)",
+      "marks": 1,
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra & functions",
+      "subtopic": "Factor theorem",
+      "questionType": "official-source explanation",
+      "prompt": "Open official AQA Question 5(a), then identify the student's error.",
+      "answerType": "points",
+      "markPoints": [
+        "Recognise that the student should evaluate the function at +2 rather than −2 for the stated factor test."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|5",
+      "groupOrder": "5(a)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q5b_src",
+      "question": "5(b)",
+      "marks": 2,
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra & functions",
+      "subtopic": "Factor theorem",
+      "questionType": "official-source reasoning",
+      "prompt": "Open official AQA Question 5(b), then state what can and cannot be concluded from the student's working.",
+      "answerType": "points",
+      "markPoints": [
+        "Do not conclude definitively that (x−2) is not a factor from the incorrect test.",
+        "Correctly infer the factor that is supported by the student's evaluated value."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|5",
+      "groupOrder": "5(b)"
+    },
+    {
+      "id": "aqa_math_as24_p1_q6_src",
+      "question": "6",
+      "marks": 4,
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra & functions",
+      "subtopic": "Inequalities",
+      "questionType": "official-source problem solving",
+      "prompt": "Open official AQA Question 6, solve the inequality and give the answer in the requested set form.",
+      "answerType": "points",
+      "markPoints": [
+        "Reduce the inequality to the correct quadratic form.",
+        "Find the two exact critical values.",
+        "Choose the correct outer intervals.",
+        "Express the final solution set correctly."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "series": "June",
+      "paper": "7356/1",
+      "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "sourceVerified": true,
+      "sourceFirst": true,
+      "groupId": "Maths|2024|7356/1|6",
+      "groupOrder": "6"
     }
   ],
   "coverage": {
