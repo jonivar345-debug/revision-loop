@@ -170,35 +170,139 @@ function taughtCard(c){return c.taught===true}
 function subjectCards(sub){return cards.filter(c=>c.active!==false&&c.subject===sub)}
 function subjectExam(sub){return examQuestions.filter(q=>q.subject===sub)}
 
-function normalise(x){let s=String(x||'').normalize('NFKD').toLowerCase();const r=[[/θ/g,' theta '],[/λ/g,' lambda '],[/ρ/g,' rho '],[/δ|Δ/g,' delta '],[/φ/g,' phi '],[/ε/g,' epsilon '],[/²/g,'^2'],[/³/g,'^3'],[/−/g,'-'],[/×/g,' x '],[/÷/g,' / '],[/\bcosine\b/g,'cos'],[/\bsine\b/g,'sin'],[/\bperp\b/g,'perpendicular'],[/\bdegrees?\b/g,'']];r.forEach(a=>s=s.replace(a[0],a[1]));return s.replace(/[^a-z0-9+\-*/=<>^.[\] ]+/g,' ').replace(/\s+/g,' ').trim()}
-const STOP=new Set(['the','a','an','of','to','and','in','is','are','with','at','on','for','from','by','it','be','as','or','that','this','using','use','one','each','then','so']);
-function tokens(s){return normalise(s).split(' ').filter(x=>x&&!STOP.has(x))}
+function normalise(x){
+ let s=String(x||'').normalize('NFKD').toLowerCase();
+ const r=[
+  [/θ/g,' theta '],[/λ/g,' lambda '],[/ρ/g,' rho '],[/δ|Δ/g,' delta '],[/φ/g,' phi '],[/ε/g,' epsilon '],
+  [/²/g,'^2'],[/³/g,'^3'],[/−|–|—/g,'-'],[/×|·/g,' * '],[/÷/g,' / '],
+  [/\bcosine\b/g,'cos'],[/\bsine\b/g,'sin'],[/\btangent\b/g,'tan'],[/\bperp\b/g,'perpendicular'],
+  [/\bdegrees?\b/g,' degree '],[/\bnewtons?\b/g,' n '],[/\bjoules?\b/g,' j '],[/\bvolts?\b/g,' v ']
+ ];
+ r.forEach(a=>s=s.replace(a[0],a[1]));
+ return s.replace(/[^a-z0-9+\-*/=<>^.[\] ]+/g,' ').replace(/\s+/g,' ').trim();
+}
+const STOP=new Set(['the','a','an','of','to','and','in','is','are','with','at','on','for','from','by','it','be','as','or','that','this','using','use','one','each','then','so','a','an']);
+const SYN=[
+ ['resultant','net'],
+ ['equal','same','identical'],
+ ['opposite','reverse'],
+ ['increase','increases','greater','larger','higher','rise','rises'],
+ ['decrease','decreases','smaller','lower','fall','falls','reduce','reduced'],
+ ['velocity','velocities'],
+ ['acceleration','accelerate','accelerates','accelerating'],
+ ['force','forces'],
+ ['displacement','distance'],
+ ['molecule','molecules','particle','particles'],
+ ['collision','collisions','collide','collides'],
+ ['momentum','momenta'],
+ ['energy','work'],
+ ['resistance','resistor'],
+ ['current','charge flow'],
+ ['potential difference','pd','voltage'],
+ ['electromotive force','emf'],
+ ['amount','moles','mole'],
+ ['concentration','molarity'],
+ ['perpendicular','normal'],
+ ['parallel','same direction'],
+ ['different objects','different bodies','separate objects'],
+ ['same type','same interaction'],
+ ['mass times acceleration','ma','m*a'],
+ ['rate of change','change per second'],
+ ['random','unpredictable'],
+ ['systematic','consistent'],
+ ['uncertainty','error range'],
+ ['gradient','slope'],
+ ['intercept','axis intercept']
+];
+function stemToken(t){
+ if(t.length>6&&t.endsWith('ing'))return t.slice(0,-3);
+ if(t.length>5&&t.endsWith('ied'))return t.slice(0,-3)+'y';
+ if(t.length>5&&t.endsWith('ed'))return t.slice(0,-2);
+ if(t.length>5&&t.endsWith('es'))return t.slice(0,-2);
+ if(t.length>4&&t.endsWith('s'))return t.slice(0,-1);
+ return t;
+}
+function synonymSet(t){
+ const n=normalise(t);
+ for(const g of SYN) if(g.some(x=>normalise(x)===n)) return g.map(normalise);
+ return [n];
+}
+function tokens(x){return normalise(x).split(' ').filter(t=>t&&!STOP.has(t)).map(stemToken)}
 function lev(a,b){const n=b.length;let p=Array.from({length:n+1},(_,i)=>i),c=new Array(n+1);for(let i=1;i<=a.length;i++){c[0]=i;for(let j=1;j<=n;j++)c[j]=Math.min(c[j-1]+1,p[j]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));[p,c]=[c,p]}return p[n]}
-function close(a,b){if(a===b)return true;const m=Math.max(a.length,b.length),d=lev(a,b);return (m>=8&&d<=2)||(m>=4&&d<=1)}
-function phraseScore(input,p){const a=tokens(input),b=tokens(p);if(!b.length)return 0;let h=0;b.forEach(t=>{if(a.some(x=>close(x,t)))h++});return h/b.length}
-function compact(s){return normalise(s).replace(/\s+/g,'').replace(/epsilon/g,'e').replace(/lambda/g,'l').replace(/theta/g,'t').replace(/delta/g,'d')}
+function close(a,b){
+ a=stemToken(a);b=stemToken(b);
+ if(a===b)return true;
+ for(const x of synonymSet(a))for(const y of synonymSet(b))if(stemToken(x)===stemToken(y))return true;
+ const m=Math.max(a.length,b.length),d=lev(a,b);
+ return (m>=9&&d<=2)||(m>=5&&d<=1);
+}
+function phraseScore(input,p){
+ const a=tokens(input),b=tokens(p);if(!b.length)return 0;
+ let hits=0;for(const t of b)if(a.some(x=>close(x,t)))hits++;
+ let score=hits/b.length;
+ const ni=normalise(input),np=normalise(p);
+ if(np.length>=5&&ni.includes(np))score=1;
+ return score;
+}
+function compact(x){
+ return normalise(x).replace(/\bwork\b/g,'w').replace(/\bforce\b/g,'f').replace(/\bdisplacement\b|\bdistance\b/g,'s')
+ .replace(/\btheta\b/g,'t').replace(/\bepsilon\b/g,'e').replace(/\blambda\b/g,'l').replace(/\bdelta\b/g,'d')
+ .replace(/\bcos\b/g,'c').replace(/\bsin\b/g,'s').replace(/\btan\b/g,'t')
+ .replace(/\*/g,'').replace(/\s+/g,'');
+}
+function formulaScore(input,expected){
+ const a=compact(input),b=compact(expected);
+ if(!a||!b)return 0;
+ if(a===b)return 1;
+ if(a.replace(/=/g,'')===b.replace(/=/g,''))return .95;
+ return phraseScore(input,expected);
+}
 function evaluateCard(c,input){
  if(!String(input||'').trim())return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
  let best=0,missing=[];
- for(const alt of (c.accept||[])){const x=compact(input),y=compact(alt);best=Math.max(best,x===y?1:phraseScore(input,alt))}
+ for(const alt of (c.accept||[]))best=Math.max(best,formulaScore(input,alt),phraseScore(input,alt));
  if(c.concepts?.length){
-   let hit=0;missing=[];for(const g of c.concepts){const opts=Array.isArray(g)?g:[g];let gb=0;for(const o of opts)gb=Math.max(gb,phraseScore(input,o));if(gb>=.7)hit++;else missing.push(opts[0])}
+   let hit=0;missing=[];
+   for(const g of c.concepts){
+     const opts=Array.isArray(g)?g:[g];let gb=0;
+     for(const o of opts)gb=Math.max(gb,formulaScore(input,o),phraseScore(input,o));
+     if(gb>=.6)hit++;else missing.push(opts[0]);
+   }
    best=Math.max(best,hit/c.concepts.length);
  }
- if(!c.accept&&!c.concepts){best=phraseScore(input,c.back)}
- if(best>=.8)return {status:'correct',score:best,text:'Correct. Equivalent wording and ordinary spelling mistakes are accepted.',missing:[]};
- if(best>=.48)return {status:'partial',score:best,text:'Nearly there. You missed at least one key idea.',missing};
- return {status:'wrong',score:best,text:'Not enough of the required answer matched yet.',missing};
+ if(!c.accept&&!c.concepts)best=Math.max(phraseScore(input,c.back),formulaScore(input,c.back));
+ if(best>=.78)return {status:'correct',score:best,text:'Correct. Equivalent wording, common notation and ordinary spelling mistakes are accepted.',missing:[]};
+ if(best>=.45)return {status:'partial',score:best,text:'Partly correct. Check the missing key idea(s) below.',missing};
+ return {status:'wrong',score:best,text:'Not enough of the required physics/chemistry/maths content matched yet.',missing};
+}
+function importantTokens(s){
+ return tokens(s).filter(x=>x.length>=3&&!['mark','obtain','calculate','state','give','identify','use','correct','answer','approximately','about'].includes(x));
 }
 function markPointPrediction(answer,point){
  if(!String(answer||'').trim())return 0;
- const p=tokens(point).filter(x=>x.length>=3),a=tokens(answer);if(!p.length)return 0;
- let hits=0;for(const target of p){if(a.some(x=>close(x,target)))hits++}
+ const p=importantTokens(point),a=tokens(answer);if(!p.length)return 0;
+ let hits=0;for(const target of p)if(a.some(x=>close(x,target)))hits++;
  let score=hits/p.length;
- const nums=(normalise(point).match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/g)||[]);if(nums.length){const ans=normalise(answer);const nHits=nums.filter(n=>ans.includes(n)).length;score=Math.max(score,nHits/nums.length)}
- return score;
+ const nums=(normalise(point).match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/g)||[]);
+ if(nums.length){
+   const ans=normalise(answer);const nHits=nums.filter(n=>ans.includes(n)).length;
+   score=Math.max(score,nHits/nums.length);
+ }
+ const phrases=String(point).split(/\/|;|\bor\b/i).map(x=>x.trim()).filter(x=>x.length>4);
+ for(const ph of phrases)score=Math.max(score,phraseScore(answer,ph));
+ return clamp(score,0,1);
 }
-function parseNumber(s){let x=String(s||'').toLowerCase().replace(/,/g,'').replace(/×/g,'x').replace(/\s+/g,'');const sci=x.match(/([-+]?\d*\.?\d+)x10\^?([-+]?\d+)/);if(sci)return Number(sci[1])*Math.pow(10,Number(sci[2]));const m=x.match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/);return m?Number(m[0]):NaN}
+function parseNumber(s){
+ let x=String(s||'').toLowerCase().replace(/,/g,'').replace(/×|·/g,'x').replace(/\s+/g,'');
+ const sci=x.match(/([-+]?\d*\.?\d+)x10\^?([-+]?\d+)/);if(sci)return Number(sci[1])*Math.pow(10,Number(sci[2]));
+ const m=x.match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/g);return m?.length?Number(m[m.length-1]):NaN;
+}
+function numericMatch(q,answer){
+ if(q.answerType!=='numeric'||!Number.isFinite(q.numericAnswer))return false;
+ const n=parseNumber(answer);if(!Number.isFinite(n))return false;
+ const tol=Number.isFinite(q.tolerance)?q.tolerance:Math.max(Math.abs(q.numericAnswer)*.01,1e-9);
+ return Math.abs(n-q.numericAnswer)<=tol;
+}
 
 function nextSchedule(s,rating){const old=Math.max(.25,s.stability||0),elapsed=s.last?Math.max(0,(now()-s.last)/DAY):0,over=old?clamp(elapsed/old,0,2):0;let stability=old,difficulty=clamp(s.difficulty||5,1,10),days;if(rating==='again'){difficulty=clamp(difficulty+.7,1,10);stability=Math.max(.25,old*.35);days=10/1440}else if(rating==='hard'){difficulty=clamp(difficulty+.2,1,10);stability=Math.max(1,old?old*1.12:1);days=Math.min(stability,1)}else if(rating==='good'){difficulty=clamp(difficulty-.08,1,10);stability=s.stage<0?3:clamp(old*(1.72+.12*over-.035*(difficulty-5)),2,365);days=stability}else{difficulty=clamp(difficulty-.3,1,10);stability=s.stage<0?7:clamp(old*(2.3+.12*over-.025*(difficulty-5)),4,365);days=stability}return {stability,difficulty,days}}
 function rateCard(c,rating,answer){
@@ -345,6 +449,8 @@ function diagram(t){
  if(t==='tangent')return S+'<line x1="45" y1="138" x2="315" y2="138" stroke="#0f172a"/><line x1="75" y1="150" x2="75" y2="25" stroke="#0f172a"/><path d="M82 125 Q165 20 295 112" fill="none" stroke="#2563eb" stroke-width="4"/><line x1="115" y1="100" x2="255" y2="46" stroke="#b45309" stroke-width="3"/><text x="187" y="40" font-size="12">gradient = dy/dx</text></svg>';
  if(t==='area-curve')return S+'<line x1="45" y1="135" x2="315" y2="135" stroke="#0f172a"/><line x1="70" y1="150" x2="70" y2="30" stroke="#0f172a"/><path d="M75 125 Q145 35 250 70 Q285 83 305 110" fill="none" stroke="#2563eb" stroke-width="4"/><path d="M105 117 Q155 48 225 65 L225 135 L105 135 Z" fill="#dbeafe" opacity=".8"/><text x="137" y="158" font-size="12">∫ f(x) dx</text></svg>';
  if(t==='vector')return S+'<line x1="70" y1="130" x2="265" y2="55" stroke="#2563eb" stroke-width="4"/><polygon points="265,55 249,54 256,67" fill="#2563eb"/><line x1="70" y1="130" x2="265" y2="130" stroke="#94a3b8" stroke-width="2"/><line x1="265" y1="130" x2="265" y2="55" stroke="#94a3b8" stroke-width="2"/><text x="148" y="151" font-size="12">components</text></svg>';
+ if(t==='newton')return S+'<rect x="142" y="62" width="76" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><line x1="142" y1="86" x2="72" y2="86" stroke="#b45309" stroke-width="4"/><polygon points="72,86 86,79 86,93" fill="#b45309"/><line x1="218" y1="86" x2="292" y2="86" stroke="#16a34a" stroke-width="4"/><polygon points="292,86 278,79 278,93" fill="#16a34a"/><line x1="180" y1="62" x2="180" y2="28" stroke="#64748b" stroke-width="4"/><polygon points="180,28 173,42 187,42" fill="#64748b"/><line x1="180" y1="110" x2="180" y2="148" stroke="#dc2626" stroke-width="4"/><polygon points="180,148 173,134 187,134" fill="#dc2626"/><text x="122" y="165" font-size="13">label forces on the object</text></svg>';
+ if(t==='work-angle')return S+'<line x1="64" y1="132" x2="310" y2="132" stroke="#64748b" stroke-width="3"/><line x1="92" y1="122" x2="250" y2="50" stroke="#2563eb" stroke-width="5"/><polygon points="250,50 234,51 241,64" fill="#2563eb"/><path d="M125 132 A48 48 0 0 1 164 103" fill="none" stroke="#b45309" stroke-width="2"/><text x="142" y="122" font-size="16">θ</text><text x="111" y="160" font-size="13">W = Fs cos θ</text></svg>';
  return '';
 }
 
@@ -412,15 +518,25 @@ function renderCard(c){
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
 function examSuggested(q,answer){
- const preds=q.markPoints.map(p=>markPointPrediction(answer,p)>=.42);let suggested=Math.round(preds.filter(Boolean).length/Math.max(1,q.markPoints.length)*q.marks);
- if(q.answerType==='numeric'&&Number.isFinite(q.numericAnswer)){const n=parseNumber(answer);if(Number.isFinite(n)&&Math.abs(n-q.numericAnswer)<=q.tolerance)suggested=Math.max(suggested,Math.min(q.marks,1+(q.marks>1?Math.floor(q.marks/2):0)))}
- return {preds,suggested:clamp(suggested,0,q.marks)};
+ const scores=q.markPoints.map(p=>markPointPrediction(answer,p));
+ const preds=scores.map(v=>v>=.5);
+ let suggested;
+ if(Array.isArray(q.markPointMarks)&&q.markPointMarks.length===q.markPoints.length){
+   suggested=preds.reduce((sum,on,i)=>sum+(on?(Number(q.markPointMarks[i])||0):0),0);
+ }else{
+   suggested=Math.round(preds.filter(Boolean).length/Math.max(1,q.markPoints.length)*q.marks);
+ }
+ const finalCorrect=numericMatch(q,answer);
+ if(finalCorrect)suggested=Math.max(suggested,1);
+ if(finalCorrect&&q.marks===1)suggested=1;
+ return {preds,scores,finalCorrect,suggested:clamp(suggested,0,q.marks)};
 }
+
 function renderExam(q){
  const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'';
  document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">Real AQA source</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body"><div class="copyright-note">The in-app wording is a faithful paraphrase. Use the official AQA PDF for the exact copyrighted wording.</div><div class="question-type">'+esc(q.questionType||'exam question')+'</div><div class="question">'+esc(q.prompt)+'</div><textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea><div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">Original AQA question</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">Official mark scheme</a></div>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
  document.getElementById('markExam').onclick=()=>{const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');marking.classList.add('show');marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
-   currentExamScore=res.suggested;renderScoreEditor(q,answer);
+   currentExamScore=res.suggested;const ef=document.getElementById('examFeedback');ef.className='feedback show '+(res.finalCorrect?'correct':'neutral');ef.textContent=res.finalCorrect?'Final numerical answer matches. Method marks are still checked separately below.':'Suggested marking is based on AQA marking points; review the highlighted points and correct the mark if needed.';renderScoreEditor(q,answer);
    document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{const checked=[...document.querySelectorAll('[data-mp]')].filter(x=>x.checked).length;currentExamScore=clamp(Math.round(checked/Math.max(1,q.markPoints.length)*q.marks),0,q.marks);renderScoreEditor(q,answer)});
  };
 }
