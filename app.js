@@ -189,6 +189,29 @@ const ANIME_ART_QUERY={
  phase2_kiyotaka_ayanokoji:'Kiyotaka Ayanokouji',phase2_manjiro_sano:'Manjiro Sano',
  phase2_aqua_hoshino:'Aqua Hoshino'
 };
+const VERIFIED_CHARACTER_IMAGE_URLS={
+  "lelouch": "https://cdn.myanimelist.net/images/characters/8/406163.jpg",
+  "light": "https://cdn.myanimelist.net/images/characters/6/63870.jpg",
+  "l": "https://cdn.myanimelist.net/images/characters/10/249647.jpg",
+  "eren": "https://cdn.myanimelist.net/images/characters/10/216895.jpg",
+  "mikasa": "https://cdn.myanimelist.net/images/characters/9/215563.jpg",
+  "levi": "https://cdn.myanimelist.net/images/characters/2/241413.jpg",
+  "erwin": "https://cdn.myanimelist.net/images/characters/14/559023.jpg",
+  "gojo": "https://cdn.myanimelist.net/images/characters/15/422168.jpg",
+  "subaru": "https://cdn.myanimelist.net/images/characters/15/315153.jpg",
+  "emilia": "https://cdn.myanimelist.net/images/characters/16/551926.jpg",
+  "rem": "https://cdn.myanimelist.net/images/characters/9/311327.jpg",
+  "thorfinn": "https://cdn.myanimelist.net/images/characters/9/309871.jpg",
+  "askeladd": "https://cdn.myanimelist.net/images/characters/14/401940.jpg",
+  "kaneki": "https://cdn.myanimelist.net/images/characters/15/307255.jpg",
+  "phase2_johan_liebert": "https://cdn.myanimelist.net/images/characters/4/316522.jpg",
+  "phase2_spike_spiegel": "https://cdn.myanimelist.net/images/characters/11/516853.jpg",
+  "phase2_edward_elric": "https://cdn.myanimelist.net/images/characters/9/72533.jpg",
+  "phase2_roy_mustang": "https://cdn.myanimelist.net/images/characters/11/510227.jpg",
+  "phase2_killua_zoldyck": "https://cdn.myanimelist.net/images/characters/2/327920.jpg",
+  "phase2_kurapika": "https://cdn.myanimelist.net/images/characters/3/549312.jpg",
+  "phase2_hisoka_morow": "https://cdn.myanimelist.net/images/characters/3/174561.jpg"
+};
 const characterArtCache=new Map(),characterArtJobs=new Map();
 let characterVisibleLimit=16;
 function characterArtQuery(c){return ANIME_ART_QUERY[c.id]||c.lookup||c.name}
@@ -213,6 +236,7 @@ async function findJikanArt(query){
  return match?.images?.webp?.image_url||match?.images?.jpg?.image_url||null;
 }
 async function getCharacterArt(c){
+ if(VERIFIED_CHARACTER_IMAGE_URLS[c.id])return VERIFIED_CHARACTER_IMAGE_URLS[c.id];
  const old=characterArtCache.get(c.id);
  if(old&&old.exp>Date.now())return old.url;
  if(characterArtJobs.has(c.id))return characterArtJobs.get(c.id);
