@@ -1009,7 +1009,7 @@ function examSuggested(q,answer){
    preds=preds.map(()=>true);
   }else suggested=Math.max(suggested,1);
  }
- if(exactVerbal&&q.marks===1){suggested=1;preds=preds.map(()=>true);}
+ if(exactVerbal&&q.requiresWorking!==true){suggested=q.marks;preds=preds.map(()=>true);}
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
  if(q.modelAnswer&&String(answer||'').trim()){
    const modelMatch=Math.max(formulaScore(answer,q.modelAnswer),phraseScore(answer,q.modelAnswer));
