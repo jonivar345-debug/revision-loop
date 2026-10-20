@@ -285,6 +285,7 @@ function evaluateCard(c,input){
    best=Math.max(best,hit/c.concepts.length);
  }
  if(!c.accept&&!c.concepts)best=Math.max(phraseScore(input,c.back),formulaScore(input,c.back));
+ if(contradicts(input,c.back))best=Math.min(best,.25);
  if(best>=.78)return {status:'correct',score:best,text:'Correct. Equivalent wording, common notation and ordinary spelling mistakes are accepted.',missing:[]};
  if(best>=.45)return {status:'partial',score:best,text:'Partly correct. Check the missing key idea(s) below.',missing};
  return {status:'wrong',score:best,text:'Not enough of the required physics/chemistry/maths content matched yet.',missing};
@@ -581,7 +582,8 @@ function examSuggested(q,answer){
    const modelMatch=Math.max(formulaScore(answer,q.modelAnswer),phraseScore(answer,q.modelAnswer));
    if(modelMatch>=.82&&q.marks<=2){suggested=Math.max(suggested,q.marks);preds=preds.map(()=>true)}
  }
- return {preds,scores,finalCorrect,suggested:clamp(suggested,0,q.marks)};
+ const matched=preds.filter(Boolean).length,confidence=finalCorrect?'high':matched===q.markPoints.length?'high':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
+ return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
 
 function renderExam(q){
@@ -597,7 +599,7 @@ function renderExam(q){
    marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
    currentExamScore=res.suggested;
    const ef=document.getElementById('examFeedback');ef.className='feedback show '+(res.finalCorrect?'correct':'neutral');
-   ef.textContent=res.finalCorrect?'Final numerical answer matches. Method marks are checked separately below.':'Suggested marking checks ideas, synonyms, common spelling errors and contradictions. Review the highlighted marking points before saving.';
+   ef.textContent=res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
    renderScoreEditor(q,answer);
    document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{
      const checked=[...document.querySelectorAll('[data-mp]')].filter(x=>x.checked).length;
