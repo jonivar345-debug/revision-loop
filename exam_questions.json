@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 1,
-  "updatedAt": "2026-10-20T17:18:00+01:00",
+  "bankVersion": 2,
+  "updatedAt": "2026-10-20T17:50:00+01:00",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -316,6 +316,149 @@
       ],
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-73561-QP-JUN23.PDF#page=13",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-73561-MS-JUN23.PDF#page=12"
+    },
+    {
+      "id": "aqa_phy_med23_q01",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "Radiotherapy",
+      "unit": "medical",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "1",
+      "marks": 2,
+      "prompt": "In brachytherapy a sealed source is placed beside a small tumour. Explain one advantage of using beta radiation rather than gamma radiation.",
+      "answerType": "points",
+      "markPoints": [
+        "Beta is more ionising and/or less penetrating than gamma.",
+        "Link the lower penetration or greater ionisation to a more localised tumour dose / less damage to neighbouring healthy tissue."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=4",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=6"
+    },
+    {
+      "id": "aqa_phy_med23_q02_1",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "Eye resolution",
+      "unit": "pixels per cm",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "2.1",
+      "marks": 3,
+      "prompt": "A screen is viewed from 0.50 m. Two dark pixels separated by one light pixel should just fail to be resolved. Take cone diameter at the fovea as 1.5 μm and eye length as 21 mm. Determine the minimum pixel line density in pixels per cm.",
+      "answerType": "numeric",
+      "numericAnswer": 140,
+      "tolerance": 2,
+      "markPoints": [
+        "Use similar triangles / a consistent angular-resolution ratio.",
+        "Relate retinal separation to about two cone diameters.",
+        "Obtain about 140 pixels per cm."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=7",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=7"
+    },
+    {
+      "id": "aqa_phy_med23_q03_1",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "Hearing",
+      "unit": "medical",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "3.1",
+      "marks": 1,
+      "prompt": "Define sound intensity.",
+      "answerType": "points",
+      "markPoints": [
+        "Sound power per unit area, or equivalently energy transferred per unit area per second."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=15",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=10"
+    },
+    {
+      "id": "aqa_phy_med23_q03_2",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "Hearing",
+      "unit": "dB",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "3.2",
+      "marks": 1,
+      "prompt": "A sound has intensity level L dB. By how many decibels does the level increase if the sound intensity doubles?",
+      "answerType": "numeric",
+      "numericAnswer": 3,
+      "tolerance": 0.1,
+      "markPoints": [
+        "Doubling intensity raises sound intensity level by approximately 3 dB."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=15",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=10"
+    },
+    {
+      "id": "aqa_phy_med23_q04_1",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "Ultrasound",
+      "unit": "medical",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "4.1",
+      "marks": 1,
+      "prompt": "An ultrasound scan produces a two-dimensional image of a kidney rather than a single amplitude-versus-time trace. Identify the scan type.",
+      "answerType": "points",
+      "markPoints": [
+        "B-scan / brightness scan, because it forms an image."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=19",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=11"
+    },
+    {
+      "id": "aqa_phy_med23_q04_4",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "ECG",
+      "unit": "medical",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "4.4",
+      "marks": 3,
+      "prompt": "An ECG pad uses a sticky backing gel. Explain one additional reason the gel is needed, give one suitable extra property of the gel, and state one way the skin should be prepared before applying the pad.",
+      "answerType": "points",
+      "markPoints": [
+        "The gel improves electrical contact.",
+        "A suitable property is low electrical resistance, non-irritating, or chemically unreactive with skin products.",
+        "Prepare the skin by removing hair / shaving, gently abrading, cleaning or drying it."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=25",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=13"
+    },
+    {
+      "id": "aqa_phy_med23_q05_2",
+      "subject": "Physics",
+      "level": "A-level",
+      "topic": "Medical physics",
+      "subtopic": "X-ray imaging",
+      "unit": "medical",
+      "year": 2023,
+      "paper": "7408/3BB",
+      "question": "5.2",
+      "marks": 2,
+      "prompt": "The stomach is poorly visible on an ordinary X-ray image. Explain a method used to improve its visibility.",
+      "answerType": "points",
+      "markPoints": [
+        "The patient ingests a barium meal / suitable X-ray contrast medium.",
+        "Barium strongly absorbs/attenuates X-rays, increasing image contrast in the stomach."
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-QP-JUN23.PDF#page=31",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-74083BB-MS-JUN23.PDF#page=16"
     }
   ]
 }
