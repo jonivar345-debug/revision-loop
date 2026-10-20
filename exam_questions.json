@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 16,
-  "updatedAt": "2026-10-20T17:25:58.557Z",
+  "bankVersion": 17,
+  "updatedAt": "2026-10-20T17:34:29.806Z",
   "copyrightNote": "These are real AQA past-paper questions identified by exact paper/question reference. The in-app prompt is paraphrased; use the official AQA PDF link for the original wording. Marking guidance is summarised from the official AQA mark scheme.",
   "questions": [
     {
@@ -31,7 +31,8 @@
       "groupOrder": "4.1",
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
-      "visual": "resolve"
+      "visual": "resolve",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as23_p1_q1_5",
@@ -59,7 +60,8 @@
       "groupId": "Physics|2023|7407/1|1",
       "groupOrder": "1.5",
       "sourceVerified": true,
-      "courseTopic": "Particles & radiation"
+      "courseTopic": "Particles & radiation",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as23_p1_q2_1",
@@ -86,7 +88,8 @@
       "groupOrder": "2.1",
       "sourceVerified": true,
       "courseTopic": "Waves",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as23_p1_q3",
@@ -114,7 +117,8 @@
       "groupOrder": "3",
       "sourceVerified": true,
       "courseTopic": "Waves",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_a24_p1_q1_3",
@@ -140,7 +144,8 @@
       "groupOrder": "1.3",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as23_p1_q2_6",
@@ -173,7 +178,8 @@
       "groupOrder": "2.6",
       "sourceVerified": true,
       "courseTopic": "Amount of substance",
-      "visual": "titration"
+      "visual": "titration",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as23_p1_q3_1",
@@ -201,7 +207,8 @@
       "groupOrder": "3.1",
       "sourceVerified": true,
       "courseTopic": "Practical skills",
-      "visual": "titration"
+      "visual": "titration",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as23_p1_q4",
@@ -230,7 +237,8 @@
       "groupId": "Chemistry|2023|7404/1|4",
       "groupOrder": "4",
       "sourceVerified": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Amount of substance",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as23_p1_q8_3",
@@ -257,7 +265,8 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Equilibria",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_math_as23_p1_q4",
@@ -287,7 +296,8 @@
       "groupOrder": "4",
       "sourceVerified": true,
       "courseTopic": "Trigonometry",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_math_as23_p1_q5b",
@@ -318,7 +328,8 @@
       "groupId": "Maths|2023|7356/1|5",
       "groupOrder": "5(b)",
       "sourceVerified": true,
-      "courseTopic": "Differentiation"
+      "courseTopic": "Differentiation",
+      "standalone": true
     },
     {
       "id": "aqa_math_as23_p1_q6",
@@ -346,7 +357,8 @@
       "groupId": "Maths|2023|7356/1|6",
       "groupOrder": "6",
       "sourceVerified": true,
-      "courseTopic": "Algebra & functions"
+      "courseTopic": "Algebra & functions",
+      "standalone": true
     },
     {
       "id": "aqa_math_as23_p1_q8b",
@@ -376,7 +388,8 @@
       "groupId": "Maths|2023|7356/1|8",
       "groupOrder": "8(b)",
       "sourceVerified": true,
-      "courseTopic": "Integration"
+      "courseTopic": "Integration",
+      "standalone": true
     },
     {
       "id": "aqa_math_as23_p1_q10b",
@@ -407,7 +420,8 @@
       "groupId": "Maths|2023|7356/1|10",
       "groupOrder": "10(b)",
       "sourceVerified": true,
-      "courseTopic": "Exponentials & logarithms"
+      "courseTopic": "Exponentials & logarithms",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q01",
@@ -433,7 +447,8 @@
       "groupId": "Physics|2023|7408/3BB|1",
       "groupOrder": "1",
       "sourceVerified": true,
-      "courseTopic": "Medical physics"
+      "courseTopic": "Medical physics",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q02_1",
@@ -462,7 +477,8 @@
       "groupId": "Physics|2023|7408/3BB|2",
       "groupOrder": "2.1",
       "sourceVerified": true,
-      "courseTopic": "Medical physics"
+      "courseTopic": "Medical physics",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q03_1",
@@ -487,7 +503,8 @@
       "groupId": "Physics|2023|7408/3BB|3",
       "groupOrder": "3.1",
       "sourceVerified": true,
-      "courseTopic": "Medical physics"
+      "courseTopic": "Medical physics",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q03_2",
@@ -514,7 +531,8 @@
       "groupId": "Physics|2023|7408/3BB|3",
       "groupOrder": "3.2",
       "sourceVerified": true,
-      "courseTopic": "Medical physics"
+      "courseTopic": "Medical physics",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q04_1",
@@ -540,7 +558,8 @@
       "groupOrder": "4.1",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q04_4",
@@ -568,7 +587,8 @@
       "groupOrder": "4.4",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_med23_q05_2",
@@ -595,7 +615,8 @@
       "groupOrder": "5.2",
       "sourceVerified": true,
       "courseTopic": "Medical physics",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q4_1",
@@ -624,7 +645,8 @@
       "groupOrder": "4.1",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "visual": "photoelectric"
+      "visual": "photoelectric",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q4_2",
@@ -654,7 +676,8 @@
       "groupOrder": "4.2",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "visual": "photoelectric"
+      "visual": "photoelectric",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q5_2",
@@ -681,7 +704,8 @@
       "groupOrder": "5.2",
       "sourceVerified": true,
       "courseTopic": "Particles & radiation",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q6_1",
@@ -711,7 +735,8 @@
       "groupOrder": "6.1",
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
-      "visual": "resolve"
+      "visual": "resolve",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q7_1",
@@ -737,7 +762,8 @@
       "groupOrder": "7.1",
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
-      "visual": "slope"
+      "visual": "slope",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q7_2",
@@ -766,7 +792,8 @@
       "groupOrder": "7.2",
       "sourceVerified": true,
       "courseTopic": "Mechanics & materials",
-      "visual": "slope"
+      "visual": "slope",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q8_3",
@@ -793,7 +820,8 @@
       "groupOrder": "8.3",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q8_4",
@@ -822,7 +850,8 @@
       "groupOrder": "8.4",
       "sourceVerified": true,
       "courseTopic": "Electricity",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as22_p1_q8_5",
@@ -850,7 +879,8 @@
       "groupId": "Physics|2022|7407/1|8",
       "groupOrder": "8.5",
       "sourceVerified": true,
-      "courseTopic": "Electricity"
+      "courseTopic": "Electricity",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q1_1",
@@ -875,7 +905,8 @@
       "groupId": "Chemistry|2022|7404/1|1",
       "groupOrder": "1.1",
       "sourceVerified": true,
-      "courseTopic": "Atomic structure"
+      "courseTopic": "Atomic structure",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q2_2",
@@ -904,7 +935,8 @@
       "groupId": "Chemistry|2022|7404/1|2",
       "groupOrder": "2.2",
       "sourceVerified": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Amount of substance",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q2_3",
@@ -932,7 +964,8 @@
       "groupOrder": "2.3",
       "sourceVerified": true,
       "courseTopic": "Practical skills",
-      "visual": "titration"
+      "visual": "titration",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q4_4",
@@ -957,7 +990,8 @@
       "groupId": "Chemistry|2022|7404/1|4",
       "groupOrder": "4.4",
       "sourceVerified": true,
-      "courseTopic": "Bonding"
+      "courseTopic": "Bonding",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q5",
@@ -986,7 +1020,8 @@
       "groupId": "Chemistry|2022|7404/1|5",
       "groupOrder": "5",
       "sourceVerified": true,
-      "courseTopic": "Atomic structure"
+      "courseTopic": "Atomic structure",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q6_2",
@@ -1013,7 +1048,8 @@
       "groupOrder": "6.2",
       "sourceVerified": true,
       "courseTopic": "Redox",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q7_4",
@@ -1044,7 +1080,8 @@
       "groupId": "Chemistry|2022|7404/1|7",
       "groupOrder": "7.4",
       "sourceVerified": true,
-      "courseTopic": "Equilibria"
+      "courseTopic": "Equilibria",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q8_3",
@@ -1071,7 +1108,8 @@
       "groupId": "Chemistry|2022|7404/1|8",
       "groupOrder": "8.3",
       "sourceVerified": true,
-      "courseTopic": "Practical skills"
+      "courseTopic": "Practical skills",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as22_p1_q14",
@@ -1096,7 +1134,8 @@
       "groupId": "Chemistry|2022|7404/1|14",
       "groupOrder": "14",
       "sourceVerified": true,
-      "courseTopic": "Amount of substance"
+      "courseTopic": "Amount of substance",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q4",
@@ -1125,7 +1164,8 @@
       "groupId": "Maths|2022|7356/1|4",
       "groupOrder": "4",
       "sourceVerified": true,
-      "courseTopic": "Trigonometry"
+      "courseTopic": "Trigonometry",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q5",
@@ -1153,7 +1193,8 @@
       "groupOrder": "5",
       "sourceVerified": true,
       "courseTopic": "Algebra & functions",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q6b",
@@ -1181,7 +1222,8 @@
       "groupOrder": "6(b)",
       "sourceVerified": true,
       "courseTopic": "Coordinate geometry",
-      "visual": "circle"
+      "visual": "circle",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q6c",
@@ -1210,7 +1252,8 @@
       "groupOrder": "6(c)",
       "sourceVerified": true,
       "courseTopic": "Coordinate geometry",
-      "visual": "circle"
+      "visual": "circle",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q7",
@@ -1242,7 +1285,8 @@
       "groupId": "Maths|2022|7356/1|7",
       "groupOrder": "7",
       "sourceVerified": true,
-      "courseTopic": "Integration"
+      "courseTopic": "Integration",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q8c",
@@ -1269,7 +1313,8 @@
       "groupId": "Maths|2022|7356/1|8",
       "groupOrder": "8(c)",
       "sourceVerified": true,
-      "courseTopic": "Differentiation"
+      "courseTopic": "Differentiation",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q9",
@@ -1298,7 +1343,8 @@
       "groupOrder": "9",
       "sourceVerified": true,
       "courseTopic": "Proof",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_math_as22_p1_q10a",
@@ -1326,7 +1372,8 @@
       "groupId": "Maths|2022|7356/1|10",
       "groupOrder": "10(a)",
       "sourceVerified": true,
-      "courseTopic": "Differentiation"
+      "courseTopic": "Differentiation",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q1_1",
@@ -1352,7 +1399,8 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.1",
       "courseTopic": "Particles & radiation",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q1_2",
@@ -1380,7 +1428,8 @@
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.2",
-      "courseTopic": "Particles & radiation"
+      "courseTopic": "Particles & radiation",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q1_3",
@@ -1408,7 +1457,8 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.3",
       "courseTopic": "Particles & radiation",
-      "visual": "medical"
+      "visual": "medical",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q1_4",
@@ -1438,7 +1488,8 @@
       "groupId": "Physics|2024|7407/1|1",
       "groupOrder": "1.4",
       "courseTopic": "Particles & radiation",
-      "visual": "quark"
+      "visual": "quark",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q2_1",
@@ -1466,7 +1517,8 @@
       "groupId": "Physics|2024|7407/1|2",
       "groupOrder": "2.1",
       "courseTopic": "Particles & radiation",
-      "visual": "energy-levels"
+      "visual": "energy-levels",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q2_2",
@@ -1495,7 +1547,8 @@
       "sourceVerified": true,
       "groupId": "Physics|2024|7407/1|2",
       "groupOrder": "2.2",
-      "courseTopic": "Particles & radiation"
+      "courseTopic": "Particles & radiation",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q3_1",
@@ -1524,7 +1577,8 @@
       "groupId": "Physics|2024|7407/1|3",
       "groupOrder": "3.1",
       "courseTopic": "Waves",
-      "visual": "stationary"
+      "visual": "stationary",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as24_p1_q3_2",
@@ -1554,7 +1608,8 @@
       "groupId": "Physics|2024|7407/1|3",
       "groupOrder": "3.2",
       "courseTopic": "Waves",
-      "visual": "stationary"
+      "visual": "stationary",
+      "standalone": true
     },
     {
       "id": "aqa_math_as21_p1_q1_link",
@@ -1583,7 +1638,8 @@
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73561-MS-NOV21.PDF#page=6",
       "sourceVerified": true,
       "groupId": "Maths|2021|7356/1|1",
-      "groupOrder": "1"
+      "groupOrder": "1",
+      "standalone": true
     },
     {
       "id": "aqa_chem_as20_p1_q2_1_link",
@@ -1593,14 +1649,18 @@
       "topic": "Amount of substance",
       "courseTopic": "Amount of substance",
       "subtopic": "Titration calculation",
-      "questionType": "official-source calculation",
-      "prompt": "Open official AQA Paper 1 Question 2.1 and complete the titration calculation.",
+      "questionType": "multi-step calculation",
+      "prompt": "An unknown mass of NaOH is dissolved to make 200 cm³ of solution. A 25.0 cm³ sample is titrated with 0.150 mol dm⁻³ H₂SO₄. The concordant titres are 19.60 cm³ and 19.55 cm³. Using 2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O, calculate the original mass of NaOH.",
       "answerType": "numeric",
       "numericAnswer": 1.88,
       "tolerance": 0.03,
       "unit": "g",
       "markPoints": [
-        "Correct final mass is approximately 1.88 g."
+        "Mean concordant titre ≈19.58 cm³.",
+        "Moles H₂SO₄ ≈2.94×10⁻3 mol.",
+        "Use the 2:1 ratio to obtain ≈5.87×10⁻3 mol NaOH in 25.0 cm³.",
+        "Scale to the full 200 cm³ volume.",
+        "Use Mr(NaOH)=40.0 to obtain ≈1.88 g."
       ],
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-QP-NOV20.PDF#page=4",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-W-MS-NOV20.PDF#page=12",
@@ -1609,12 +1669,18 @@
       "series": "June",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2020|7404/1|2",
       "groupOrder": "2.1",
       "markPointMarks": [
-        5
-      ]
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "standalone": true,
+      "visual": "titration"
     },
     {
       "id": "aqa_chem_as21_p1_q7_2_link",
@@ -1624,14 +1690,16 @@
       "topic": "Energetics",
       "courseTopic": "Energetics",
       "subtopic": "Calorimetry",
-      "questionType": "official-source calculation",
-      "prompt": "Open official AQA Paper 1 Question 7.2 and calculate the experimental enthalpy value.",
+      "questionType": "multi-step calculation",
+      "prompt": "Burning 0.497 g of propan-1-ol (Mr=60.0) raises 150 g of water from 21.2 °C to 35.1 °C. The specific heat capacity of water is 4.18 J K⁻¹ g⁻¹. Calculate the experimental enthalpy of combustion in kJ mol⁻¹.",
       "answerType": "numeric",
       "numericAnswer": -1050,
       "tolerance": 25,
       "unit": "kJ mol^-1",
       "markPoints": [
-        "Correct final value is approximately −1050 kJ mol^-1."
+        "Use q=mcΔT to obtain about 8.72 kJ.",
+        "Find the amount of propan-1-ol, about 0.00828 mol.",
+        "Divide energy by amount and include the negative sign to obtain about −1050 kJ mol⁻¹."
       ],
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-QP-NOV21.PDF#page=10",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-MS-NOV21.PDF#page=17",
@@ -1640,12 +1708,15 @@
       "series": "June",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2021|7404/1|7",
       "groupOrder": "7.2",
       "markPointMarks": [
-        3
-      ]
+        1,
+        1,
+        1
+      ],
+      "standalone": true
     },
     {
       "id": "aqa_math_as20_p1_q5_link",
@@ -1680,7 +1751,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|5",
-      "groupOrder": "5"
+      "groupOrder": "5",
+      "standalone": false
     },
     {
       "id": "aqa_math_as20_p1_q3a_link",
@@ -1711,7 +1783,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|3",
-      "groupOrder": "3(a)"
+      "groupOrder": "3(a)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as20_p1_q3b_link",
@@ -1743,7 +1816,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2020|7356/1|3",
-      "groupOrder": "3(b)"
+      "groupOrder": "3(b)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as21_p1_q3a_link",
@@ -1772,7 +1846,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2021|7356/1|3",
-      "groupOrder": "3(a)"
+      "groupOrder": "3(a)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as21_p1_q3b_link",
@@ -1802,7 +1877,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2021|7356/1|3",
-      "groupOrder": "3(b)"
+      "groupOrder": "3(b)",
+      "standalone": false
     },
     {
       "id": "aqa_chem_as20_p1_q2_2_link",
@@ -1831,7 +1907,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Chemistry|2020|7404/1|2",
-      "groupOrder": "2.2"
+      "groupOrder": "2.2",
+      "standalone": false
     },
     {
       "id": "aqa_chem_as20_p1_q2_3_link",
@@ -1860,7 +1937,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Chemistry|2020|7404/1|2",
-      "groupOrder": "2.3"
+      "groupOrder": "2.3",
+      "standalone": false
     },
     {
       "id": "aqa_chem_as21_p1_q7_1_link",
@@ -1890,7 +1968,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Chemistry|2021|7404/1|7",
-      "groupOrder": "7.1"
+      "groupOrder": "7.1",
+      "standalone": false
     },
     {
       "id": "aqa_chem_as21_p1_q7_3_link",
@@ -1918,7 +1997,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Chemistry|2021|7404/1|7",
-      "groupOrder": "7.3"
+      "groupOrder": "7.3",
+      "standalone": false
     },
     {
       "id": "aqa_chem_as21_p1_q8_1_link",
@@ -1928,19 +2008,19 @@
       "topic": "Amount of substance",
       "courseTopic": "Amount of substance",
       "subtopic": "Titration calculation",
-      "questionType": "official-source multi-step calculation",
-      "prompt": "Open official AQA Paper 1 Question 8.1 and complete the full titration and percentage-by-mass calculation.",
+      "questionType": "multi-step calculation",
+      "prompt": "A 5.60 g sample containing ethanoic acid and sodium ethanoate is dissolved to 200 cm³. A 25.0 cm³ sample is titrated with 0.350 mol dm⁻³ NaOH. Concordant titres are 20.25 cm³ and 20.30 cm³. Calculate the percentage by mass of sodium ethanoate in the original sample.",
       "answerType": "numeric",
       "numericAnswer": 39.1,
       "tolerance": 0.25,
       "unit": "%",
       "markPoints": [
-        "Use the two concordant titres to obtain the mean.",
-        "Find moles of sodium hydroxide used.",
-        "Use the reaction stoichiometry and scale to the full solution volume.",
-        "Convert ethanoic acid moles to mass.",
-        "Find sodium ethanoate mass by difference.",
-        "Calculate a final percentage of about 39.1%."
+        "Mean titre ≈20.28 cm³.",
+        "Find moles of NaOH and hence ethanoic acid in 25.0 cm³.",
+        "Scale to 200 cm³.",
+        "Convert ethanoic acid moles to mass using Mr=60.0.",
+        "Subtract from 5.60 g to find sodium ethanoate mass.",
+        "Calculate percentage by mass ≈39.1%."
       ],
       "markPointMarks": [
         1,
@@ -1958,9 +2038,10 @@
       "series": "June",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2021|7404/1|8",
-      "groupOrder": "8.1"
+      "groupOrder": "8.1",
+      "standalone": true
     },
     {
       "id": "aqa_phy_as20_p1_q5_1_link",
@@ -1974,12 +2055,12 @@
       "paper": "7407/1",
       "question": "5.1",
       "marks": 2,
-      "questionType": "official-source question",
-      "prompt": "Open the official AQA paper at Question 5.1, then type your answer here.",
+      "questionType": "definition",
+      "prompt": "A cell has an emf of 1.5 V. State what an emf of 1.5 V means.",
       "answerType": "points",
       "markPoints": [
-        "State the required energy-per-charge idea.",
-        "Apply it correctly to the value stated in the question."
+        "EMF is energy transferred from other forms to electrical energy per unit charge, or work done per unit charge around the circuit.",
+        "For 1.5 V, 1.5 J is transferred per coulomb."
       ],
       "markPointMarks": [
         1,
@@ -1988,9 +2069,11 @@
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74071-QP-NOV20.PDF#page=15",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74071-W-MS-NOV20.PDF#page=19",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Physics|2020|7407/1|5",
-      "groupOrder": "5.1"
+      "groupOrder": "5.1",
+      "standalone": true,
+      "visual": "internal-resistance"
     },
     {
       "id": "aqa_math_as24_p1_q3_src",
@@ -2025,7 +2108,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|3",
-      "groupOrder": "3"
+      "groupOrder": "3",
+      "standalone": false
     },
     {
       "id": "aqa_math_as24_p1_q4ai_src",
@@ -2054,7 +2138,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|4",
-      "groupOrder": "4(a)(i)"
+      "groupOrder": "4(a)(i)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as24_p1_q4aii_src",
@@ -2088,7 +2173,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|4",
-      "groupOrder": "4(a)(ii)"
+      "groupOrder": "4(a)(ii)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as24_p1_q4b_src",
@@ -2122,7 +2208,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|4",
-      "groupOrder": "4(b)"
+      "groupOrder": "4(b)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as24_p1_q5a_src",
@@ -2150,7 +2237,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|5",
-      "groupOrder": "5(a)"
+      "groupOrder": "5(a)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as24_p1_q5b_src",
@@ -2180,7 +2268,8 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|5",
-      "groupOrder": "5(b)"
+      "groupOrder": "5(b)",
+      "standalone": false
     },
     {
       "id": "aqa_math_as24_p1_q6_src",
@@ -2214,7 +2303,172 @@
       "sourceVerified": true,
       "sourceFirst": true,
       "groupId": "Maths|2024|7356/1|6",
-      "groupOrder": "6"
+      "groupOrder": "6",
+      "standalone": false
+    },
+    {
+      "id": "aqa_phy_as20_p1_q5_2",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "subtopic": "EMF and power",
+      "year": 2020,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "5.2",
+      "marks": 1,
+      "questionType": "short calculation",
+      "prompt": "A cell has emf 1.5 V and the circuit current is 0.31 A. Calculate the total power output of the cell.",
+      "answerType": "numeric",
+      "numericAnswer": 0.465,
+      "tolerance": 0.01,
+      "unit": "W",
+      "markPoints": [
+        "Use P=VI to obtain about 0.465 W."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74071-QP-NOV20.PDF#page=15",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74071-W-MS-NOV20.PDF#page=19",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Physics|2020|7407/1|5",
+      "groupOrder": "5.2",
+      "visual": "internal-resistance"
+    },
+    {
+      "id": "aqa_phy_as20_p1_q5_3",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "subtopic": "Internal resistance",
+      "year": 2020,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "5.3",
+      "marks": 2,
+      "questionType": "calculation",
+      "prompt": "A cell has emf 1.5 V and internal resistance 0.65 Ω. The circuit current is 0.31 A. Calculate the power transferred each second in the external resistor.",
+      "answerType": "numeric",
+      "numericAnswer": 0.4,
+      "tolerance": 0.02,
+      "unit": "W",
+      "markPoints": [
+        "Find the terminal pd, external resistance, or subtract the internal power loss from total power.",
+        "Obtain about 0.40 W."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74071-QP-NOV20.PDF#page=15",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74071-W-MS-NOV20.PDF#page=20",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Physics|2020|7407/1|5",
+      "groupOrder": "5.3",
+      "visual": "internal-resistance"
+    },
+    {
+      "id": "aqa_phy_as21_p1_q2_1",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "subtopic": "Diffraction grating",
+      "year": 2021,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "2.1",
+      "marks": 1,
+      "questionType": "short response",
+      "prompt": "Light of wavelength λ passes through a transmission diffraction grating. State the path difference between rays from adjacent slits at a first-order maximum.",
+      "answerType": "text",
+      "modelAnswer": "One wavelength, λ.",
+      "markPoints": [
+        "Path difference is one wavelength, λ."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74071-QP-NOV21.PDF#page=6",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74071-MS-NOV21.PDF#page=11",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Physics|2021|7407/1|2",
+      "groupOrder": "2.1",
+      "visual": "grating"
+    },
+    {
+      "id": "aqa_phy_as21_p1_q2_2",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "subtopic": "Interference",
+      "year": 2021,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "2.2",
+      "marks": 3,
+      "questionType": "explanation",
+      "prompt": "Explain how light passing through a diffraction grating produces a bright maximum on a screen.",
+      "answerType": "points",
+      "markPoints": [
+        "Light from different slits diffracts/overlaps.",
+        "The waves arrive in phase, or with a path difference equal to a whole number of wavelengths.",
+        "The waves superpose constructively to form a maximum."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74071-QP-NOV21.PDF#page=7",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74071-MS-NOV21.PDF#page=11",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Physics|2021|7407/1|2",
+      "groupOrder": "2.2",
+      "visual": "grating"
+    },
+    {
+      "id": "aqa_phy_as21_p1_q5_2",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics & materials",
+      "subtopic": "Newton's laws",
+      "year": 2021,
+      "series": "June",
+      "paper": "7407/1",
+      "question": "5.2",
+      "marks": 4,
+      "questionType": "explanation",
+      "prompt": "A ship moves at constant velocity. Its propeller accelerates water backwards and produces thrust. Explain, using Newton's laws, how this allows the ship to maintain constant momentum.",
+      "answerType": "points",
+      "markPoints": [
+        "The propeller exerts a force on the water and the water exerts an equal and opposite force on the propeller.",
+        "Link this interaction to Newton's third law.",
+        "At constant velocity, thrust balances drag, so the resultant force on the ship is zero; link to Newton's first law.",
+        "Changing the water's momentum requires a force; link to Newton's second law."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74071-QP-NOV21.PDF#page=18",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74071-MS-NOV21.PDF#page=19",
+      "sourceVerified": true,
+      "standalone": true,
+      "groupId": "Physics|2021|7407/1|5",
+      "groupOrder": "5.2",
+      "visual": "newton"
     }
   ],
   "coverage": {
