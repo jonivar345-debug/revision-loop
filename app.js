@@ -1105,16 +1105,39 @@ function placeImage(el,url,location){
  img.onerror=()=>{if(el.isConnected)el.textContent='Photo unavailable'};
  img.src=url;
 }
+const LOCATION_PHOTO_SEARCH={
+ hongkong:'Hong Kong Victoria Harbour skyline panorama',
+ singapore:'Singapore Marina Bay skyline photograph',
+ bali:'Bali Indonesia rice terrace landscape',
+ bohol:'Bohol Chocolate Hills landscape',coron:'Coron Palawan lagoon Philippines',
+ peritomoreno:'Perito Moreno Glacier panorama',chefchaouen:'Chefchaouen Morocco blue city',
+ papeete:'Papeete Tahiti harbour',apia:'Apia Samoa town',grandcanyon:'Grand Canyon South Rim panorama'
+};
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
- if(wikiPhotoCache[location.wiki]){placeImage(el,wikiPhotoCache[location.wiki],location);return}
- try{
-  const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&formatversion=2&pithumbsize=640&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
-  const res=await fetch(endpoint,{cache:'force-cache'});if(!res.ok)throw Error('No image');
-  const data=await res.json(),url=data.query?.pages?.[0]?.thumbnail?.source;
-  if(url){wikiPhotoCache[location.wiki]=url;placeImage(el,url,location)}
-  else el.textContent='Photo unavailable';
- }catch{if(el.isConnected)el.textContent='Photo unavailable'}
+ if(wikiPhotoCache[location.id]){placeImage(el,wikiPhotoCache[location.id],location);return}
+ let url=null;
+ if(LOCATION_PHOTO_SEARCH[location.id]){
+  try{
+   const q=LOCATION_PHOTO_SEARCH[location.id];
+   const api='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
+   const res=await fetch(api,{cache:'force-cache'});if(res.ok){
+    const data=await res.json();
+    const pages=(data.query?.pages||[]).filter(p=>/\.(?:jpg|jpeg|png|webp)$/i.test(p.title||'')&&!/logo|map|flag|coat of arms|diagram/i.test(p.title||''));
+    const found=pages.find(p=>p.imageinfo?.[0]?.thumburl);
+    if(found)url=found.imageinfo[0].thumburl;
+   }
+  }catch{}
+ }
+ if(!url){
+  try{
+   const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&formatversion=2&pithumbsize=640&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
+   const res=await fetch(endpoint,{cache:'force-cache'});
+   if(res.ok){const d=await res.json();url=d.query?.pages?.[0]?.thumbnail?.source||null}
+  }catch{}
+ }
+ if(url){wikiPhotoCache[location.id]=url;placeImage(el,url,location)}
+ else el.textContent='Photograph unavailable';
 }
 function evenlySpacedLocations(locations){
  const regions=['Africa','Asia','Europe','North America','South America','Oceania'];
