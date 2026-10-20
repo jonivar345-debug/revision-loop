@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 5,
+  "deckVersion": 1,
+  "updatedAt": "2026-10-20",
+  "scope": {
+    "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
+    "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
+    "Maths": "Year 1 Pure only.",
+    "Practicals": "Secondary because the mock is not Paper 3."
+  },
+  "cards": [
+    {
+      "id": "phy_vectors_001",
+      "subject": "Physics",
+      "topic": "Resolving vectors",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "How do you decide whether to use sin or cos when resolving a force?",
+      "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'."
+    },
+    {
+      "id": "phy_slope_001",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+      "back": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ."
+    },
+    {
+      "id": "phy_couple_001",
+      "subject": "Physics",
+      "topic": "Couples",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What is a couple, and what is the moment of a couple?",
+      "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation."
+    },
+    {
+      "id": "phy_motion_d",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What does the gradient of a displacement–time graph represent?",
+      "back": "Velocity. A steeper gradient means greater speed; a horizontal line means v = 0. On a curve, use a tangent for instantaneous velocity."
+    },
+    {
+      "id": "phy_motion_v",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What do the gradient and signed area of a velocity–time graph represent?",
+      "back": "Gradient = acceleration. Signed area under the graph = displacement."
+    },
+    {
+      "id": "phy_motion_a",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What does the signed area under an acceleration–time graph represent?",
+      "back": "Change in velocity, Δv."
+    },
+    {
+      "id": "phy_moments_001",
+      "subject": "Physics",
+      "topic": "Moments",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What distance must be used in moment = force × distance?",
+      "back": "The perpendicular distance from the pivot to the force's line of action."
+    },
+    {
+      "id": "phy_equilibrium_001",
+      "subject": "Physics",
+      "topic": "Equilibrium",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "If the resultant force is zero, must the object be stationary?",
+      "back": "No. It may be stationary or moving at constant velocity because acceleration is zero."
+    },
+    {
+      "id": "phy_internal_001",
+      "subject": "Physics",
+      "topic": "Internal resistance",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+      "back": "V = ε − Ir. The term Ir is the lost volts inside the cell."
+    },
+    {
+      "id": "phy_photoelectric_001",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What must happen for a photoelectron to be emitted?",
+      "back": "One photon transfers energy hf to one electron. Emission occurs if hf ≥ the work function φ."
+    },
+    {
+      "id": "phy_photoelectric_002",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "Why can intense light below the threshold frequency still emit no photoelectrons?",
+      "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons."
+    },
+    {
+      "id": "phy_energy_levels_001",
+      "subject": "Physics",
+      "topic": "Energy levels",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "How is atomic excitation different from the photoelectric effect?",
+      "back": "Excitation moves an electron to a higher bound energy level. The photoelectric effect removes an electron from the metal."
+    },
+    {
+      "id": "phy_quarks_001",
+      "subject": "Physics",
+      "topic": "Particle physics",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "Can strangeness change in a weak interaction?",
+      "back": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions."
+    },
+    {
+      "id": "phy_pressure_001",
+      "subject": "Physics",
+      "topic": "Kinetic theory",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "How do molecular collisions with a container create pressure?",
+      "back": "Collisions change molecular momentum, so the walls experience a force. Pressure is force per unit area."
+    },
+    {
+      "id": "phy_combined_gas_001",
+      "subject": "Physics",
+      "topic": "Gas laws",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What equation links two ideal-gas states for a fixed amount of gas?",
+      "back": "p₁V₁/T₁ = p₂V₂/T₂, with temperature in kelvin."
+    },
+    {
+      "id": "chem_back_001",
+      "subject": "Chemistry",
+      "topic": "Back titrations",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What is the core calculation route in a back titration?",
+      "back": "Initial amount added − amount left over = amount that reacted. Then use the balanced-equation mole ratio."
+    },
+    {
+      "id": "chem_gas_001",
+      "subject": "Chemistry",
+      "topic": "Ideal gas equation",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "Which units must be used in pV = nRT?",
+      "back": "p in Pa, V in m³, T in K and n in mol."
+    },
+    {
+      "id": "chem_titration_001",
+      "subject": "Chemistry",
+      "topic": "Titration calculations",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What conversion is needed before using n = cV when volume is given in cm³?",
+      "back": "Convert cm³ to dm³ by dividing by 1000."
+    },
+    {
+      "id": "chem_empirical_001",
+      "subject": "Chemistry",
+      "topic": "Empirical formula",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What is the route from masses to an empirical formula?",
+      "back": "Mass → moles → divide all by the smallest → multiply to obtain a whole-number ratio."
+    },
+    {
+      "id": "chem_arrhenius_001",
+      "subject": "Chemistry",
+      "topic": "Arrhenius",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "For a graph of ln k against 1/T, what are the gradient and y-intercept?",
+      "back": "Gradient = −Ea/R. y-intercept = ln A. Temperature must be in kelvin."
+    },
+    {
+      "id": "chem_arrhenius_002",
+      "subject": "Chemistry",
+      "topic": "Arrhenius",
+      "kind": "weak",
+      "priority": 3,
+      "scope": "mock",
+      "front": "How do you calculate Ea from the gradient of ln k against 1/T?",
+      "back": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required."
+    },
+    {
+      "id": "chem_kp_001",
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What goes into a Kp expression?",
+      "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient."
+    },
+    {
+      "id": "chem_kp_002",
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "How do you find a gas's partial pressure from its mole fraction?",
+      "back": "partial pressure = mole fraction × total pressure."
+    },
+    {
+      "id": "chem_weak_acid_001",
+      "subject": "Chemistry",
+      "topic": "Weak acids",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What approximation is often used for a weak monoprotic acid HA of concentration c?",
+      "back": "If dissociation is small: [HA] ≈ c and [H⁺] = [A⁻], so Ka ≈ [H⁺]²/c."
+    },
+    {
+      "id": "chem_kw_001",
+      "subject": "Chemistry",
+      "topic": "Kw",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What is Kw at 298 K?",
+      "back": "Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴ mol² dm⁻⁶."
+    },
+    {
+      "id": "chem_gibbs_001",
+      "subject": "Chemistry",
+      "topic": "Gibbs free energy",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What equation links ΔG, ΔH, T and ΔS, and what unit trap matters?",
+      "back": "ΔG = ΔH − TΔS. ΔH and TΔS must use matching units."
+    },
+    {
+      "id": "chem_rates_001",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What does the overall order of a rate equation mean?",
+      "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation."
+    },
+    {
+      "id": "maths_trig_001",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What is the Pythagorean trigonometric identity?",
+      "back": "sin²x + cos²x = 1."
+    },
+    {
+      "id": "maths_transform_001",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "For y = f(x − a), how does the graph move?",
+      "back": "Translate a units to the right."
+    },
+    {
+      "id": "maths_transform_002",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "For y = f(x) + a, how does the graph move?",
+      "back": "Translate a units upwards."
+    },
+    {
+      "id": "maths_transform_003",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "kind": "weak",
+      "priority": 2,
+      "scope": "mock",
+      "front": "For y = f(ax), what happens to x-coordinates?",
+      "back": "They are divided by a, so the horizontal scale factor is 1/a."
+    },
+    {
+      "id": "phy_rp1",
+      "subject": "Physics",
+      "topic": "RP1 Stationary waves",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What relationship is central to the stretched-string stationary-wave practical?",
+      "back": "f = (1/2L)√(T/μ)."
+    },
+    {
+      "id": "phy_rp2",
+      "subject": "Physics",
+      "topic": "RP2 Interference",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What are the key equations for double-slit and diffraction-grating work?",
+      "back": "w = λD/s and d sin θ = nλ."
+    },
+    {
+      "id": "phy_rp3",
+      "subject": "Physics",
+      "topic": "RP3 Free fall",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "If you plot s against t² for free fall from rest, how do you obtain g?",
+      "back": "Gradient = g/2, so g = 2 × gradient."
+    },
+    {
+      "id": "phy_rp4",
+      "subject": "Physics",
+      "topic": "RP4 Young modulus",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What equation is used to determine Young modulus from a wire?",
+      "back": "E = FL/(AΔL), with A = πd²/4."
+    },
+    {
+      "id": "phy_rp5",
+      "subject": "Physics",
+      "topic": "RP5 Resistivity",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "How is the resistivity of a wire found?",
+      "back": "ρ = RA/L, with R = V/I and A = πd²/4."
+    },
+    {
+      "id": "phy_rp6",
+      "subject": "Physics",
+      "topic": "RP6 EMF/internal resistance",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+      "back": "y-intercept = emf ε and gradient = −r."
+    },
+    {
+      "id": "chem_rp1",
+      "subject": "Chemistry",
+      "topic": "RP1 Titration",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What are the essential steps for making an accurate standard solution?",
+      "back": "Accurately weigh, dissolve, quantitatively transfer with washings, make to the mark, stopper and invert."
+    },
+    {
+      "id": "chem_rp2",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What is the core calorimetry calculation?",
+      "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount."
+    },
+    {
+      "id": "chem_rp3",
+      "subject": "Chemistry",
+      "topic": "RP3 Rates",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "Why can 1/t be used as a measure of rate in a clock reaction?",
+      "back": "The same fixed amount of change defines the end point each time, so shorter time means faster rate."
+    },
+    {
+      "id": "chem_rp4",
+      "subject": "Chemistry",
+      "topic": "RP4 Ion tests",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What precipitate colours identify chloride, bromide and iodide after acidifying and adding AgNO₃?",
+      "back": "AgCl white, AgBr cream, AgI yellow."
+    },
+    {
+      "id": "chem_rp5",
+      "subject": "Chemistry",
+      "topic": "RP5 Distillation",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "Where should the thermometer bulb be positioned during distillation?",
+      "back": "At the entrance to the condenser/still head, so it measures vapour entering the condenser."
+    },
+    {
+      "id": "chem_rp6",
+      "subject": "Chemistry",
+      "topic": "RP6 Organic tests",
+      "kind": "practical",
+      "priority": 1,
+      "scope": "secondary",
+      "front": "What is the test for an alkene?",
+      "back": "Bromine water is decolourised from orange/brown."
+    },
+    {
+      "id": "phy_ins_circular_001",
+      "subject": "Physics",
+      "topic": "Circular motion insurance",
+      "kind": "insurance",
+      "priority": 1,
+      "scope": "insurance",
+      "front": "For uniform circular motion, what directions are velocity and acceleration?",
+      "back": "Velocity is tangential. Acceleration and resultant force are towards the centre."
+    },
+    {
+      "id": "phy_ins_circular_002",
+      "subject": "Physics",
+      "topic": "Circular motion insurance",
+      "kind": "insurance",
+      "priority": 1,
+      "scope": "insurance",
+      "front": "What are the centripetal acceleration and force equations?",
+      "back": "a = v²/r and F = mv²/r."
+    },
+    {
+      "id": "phy_ins_shm_001",
+      "subject": "Physics",
+      "topic": "SHM insurance",
+      "kind": "insurance",
+      "priority": 1,
+      "scope": "insurance",
+      "front": "What condition defines simple harmonic motion?",
+      "back": "a = −ω²x: acceleration is proportional to displacement and opposite in direction."
+    },
+    {
+      "id": "phy_ins_shm_002",
+      "subject": "Physics",
+      "topic": "SHM insurance",
+      "kind": "insurance",
+      "priority": 1,
+      "scope": "insurance",
+      "front": "Where are speed and acceleration greatest in SHM?",
+      "back": "Speed is greatest at equilibrium. Acceleration magnitude is greatest at maximum displacement."
+    }
+  ]
+}
