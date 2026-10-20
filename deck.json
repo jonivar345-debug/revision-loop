@@ -1,7 +1,7 @@
 {
   "schemaVersion": 7,
-  "deckVersion": 4,
-  "updatedAt": "2026-10-20T17:05:00+01:00",
+  "deckVersion": 5,
+  "updatedAt": "2026-10-20T17:24:00+01:00",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -7139,6 +7139,746 @@
         [
           "affinity",
           "attraction"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_partial_fraction",
+      "subject": "Maths",
+      "topic": "Algebra and functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "When are partial fractions useful in A-level Maths?",
+      "back": "To rewrite a rational function into simpler fractions, especially before integration or simplifying algebra.",
+      "concepts": [
+        [
+          "rational",
+          "fraction"
+        ],
+        [
+          "simpler"
+        ],
+        [
+          "integration",
+          "integrate"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_modulus_equation",
+      "subject": "Maths",
+      "topic": "Algebra and functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What is a reliable way to solve an equation containing |f(x)|?",
+      "back": "Split into cases f(x) ≥ 0 and f(x) < 0, or use the graph and check solutions against the cases.",
+      "concepts": [
+        [
+          "cases",
+          "case"
+        ],
+        [
+          "positive",
+          "negative"
+        ],
+        [
+          "check",
+          "solution"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_composite_domain",
+      "subject": "Maths",
+      "topic": "Algebra and functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What must you check when forming a composite function fg(x)?",
+      "back": "Values from g(x) must lie in the domain of f.",
+      "concepts": [
+        [
+          "g"
+        ],
+        [
+          "domain"
+        ],
+        [
+          "f"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_inverse_graph",
+      "subject": "Maths",
+      "topic": "Algebra and functions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "How are the graphs of y=f(x) and y=f⁻¹(x) related?",
+      "back": "They are reflections in the line y=x.",
+      "accept": [
+        "reflection in y=x",
+        "reflect in y=x",
+        "mirror in y=x"
+      ]
+    },
+    {
+      "id": "math_a2_radians",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "Why are radians important in calculus?",
+      "back": "Standard differentiation and integration results for sin x, cos x and related functions assume x is in radians.",
+      "concepts": [
+        [
+          "differentiate",
+          "differentiation",
+          "integration"
+        ],
+        [
+          "sin",
+          "cos"
+        ],
+        [
+          "radian"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_trig_strategy",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "When a trig equation contains different trig functions, what should you try first?",
+      "back": "Use identities to rewrite it in one trig function, then solve and check the required interval.",
+      "concepts": [
+        [
+          "identity",
+          "identities"
+        ],
+        [
+          "one trig function",
+          "single"
+        ],
+        [
+          "interval",
+          "range"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_sec_cosec_cot",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What is the safest way to work with sec, cosec and cot if stuck?",
+      "back": "Rewrite them using sin and cos: sec=1/cos, cosec=1/sin, cot=cos/sin.",
+      "concepts": [
+        [
+          "sec"
+        ],
+        [
+          "1/cos"
+        ],
+        [
+          "cosec",
+          "1/sin"
+        ],
+        [
+          "cot",
+          "cos/sin"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_product_rule_use",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "When should you use the product rule?",
+      "back": "When the expression is a product of two functions of x and expanding is not simpler.",
+      "concepts": [
+        [
+          "product",
+          "multiply"
+        ],
+        [
+          "two functions"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_quotient_rule_use",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "When should you use the quotient rule?",
+      "back": "When one function of x is divided by another and rewriting as a product is not simpler.",
+      "concepts": [
+        [
+          "divide",
+          "quotient"
+        ],
+        [
+          "functions"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_chain_rule_use",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What tells you the chain rule is needed?",
+      "back": "A composite function: one function is inside another.",
+      "concepts": [
+        [
+          "composite"
+        ],
+        [
+          "inside",
+          "function within"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_implicit",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What is the key idea in implicit differentiation?",
+      "back": "Differentiate both sides with respect to x and include dy/dx when differentiating terms involving y.",
+      "concepts": [
+        [
+          "both sides"
+        ],
+        [
+          "with respect to x"
+        ],
+        [
+          "dy/dx"
+        ],
+        [
+          "y"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_parametric_diff",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "For parametric equations x(t), y(t), how is dy/dx found conceptually?",
+      "back": "Differentiate y and x with respect to the parameter, then divide dy/dt by dx/dt.",
+      "concepts": [
+        [
+          "dy/dt"
+        ],
+        [
+          "dx/dt"
+        ],
+        [
+          "divide"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_stationary_class",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "If d²y/dx²=0 at a stationary point, what should you do?",
+      "back": "Do not classify it automatically; inspect derivative sign changes or use another valid argument.",
+      "concepts": [
+        [
+          "not",
+          "do not"
+        ],
+        [
+          "sign",
+          "derivative"
+        ],
+        [
+          "classify"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_substitution",
+      "subject": "Maths",
+      "topic": "Integration",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What is the aim of integration by substitution?",
+      "back": "Choose a substitution that turns a complicated integrand into a simpler function in one new variable.",
+      "concepts": [
+        [
+          "substitution"
+        ],
+        [
+          "simpler"
+        ],
+        [
+          "new variable"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_parts_use",
+      "subject": "Maths",
+      "topic": "Integration",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "When is integration by parts often useful?",
+      "back": "For a product where differentiating one factor simplifies it, such as x e^x or x sin x.",
+      "concepts": [
+        [
+          "product"
+        ],
+        [
+          "differentiate",
+          "simplifies"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_partial_integral",
+      "subject": "Maths",
+      "topic": "Integration",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "Why decompose a rational function into partial fractions before integrating?",
+      "back": "The simpler fractions can be integrated using standard logarithmic or power forms.",
+      "concepts": [
+        [
+          "partial fractions"
+        ],
+        [
+          "simpler"
+        ],
+        [
+          "integrate"
+        ],
+        [
+          "log",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_diff_eq",
+      "subject": "Maths",
+      "topic": "Differential equations",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What is meant by solving a first-order separable differential equation?",
+      "back": "Rearrange to put y terms with dy and x terms with dx, integrate both sides, then use any condition to find the constant.",
+      "concepts": [
+        [
+          "separate",
+          "rearrange"
+        ],
+        [
+          "integrate"
+        ],
+        [
+          "constant",
+          "condition"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_iteration_fail",
+      "subject": "Maths",
+      "topic": "Numerical methods",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "Why can a fixed-point iteration xₙ₊₁=g(xₙ) fail?",
+      "back": "It can diverge or cycle instead of converging to the required root.",
+      "concepts": [
+        [
+          "diverge"
+        ],
+        [
+          "cycle",
+          "oscillate"
+        ],
+        [
+          "converge",
+          "root"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_sign_change",
+      "subject": "Maths",
+      "topic": "Numerical methods",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What does a sign change of f(x) across an interval normally indicate?",
+      "back": "For a continuous function, it indicates at least one root in the interval.",
+      "concepts": [
+        [
+          "continuous"
+        ],
+        [
+          "root"
+        ],
+        [
+          "interval"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_vector3d",
+      "subject": "Maths",
+      "topic": "Vectors",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What changes when moving from 2D to 3D vectors?",
+      "back": "Use three components instead of two; the same vector operations and geometric reasoning still apply.",
+      "concepts": [
+        [
+          "three",
+          "3"
+        ],
+        [
+          "components"
+        ],
+        [
+          "same operations"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_sampling_bias",
+      "subject": "Maths",
+      "topic": "Statistics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "Why can an opportunity sample be biased?",
+      "back": "People easiest to access may not be representative of the target population.",
+      "concepts": [
+        [
+          "easy",
+          "available"
+        ],
+        [
+          "not representative",
+          "bias"
+        ],
+        [
+          "population"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_binomial_conditions",
+      "subject": "Maths",
+      "topic": "Statistical distributions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What conditions make a binomial model appropriate?",
+      "back": "Fixed number of trials, two outcomes per trial, constant success probability and independent trials.",
+      "concepts": [
+        [
+          "fixed number",
+          "n trials"
+        ],
+        [
+          "two outcomes"
+        ],
+        [
+          "constant probability"
+        ],
+        [
+          "independent"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_normal_model",
+      "subject": "Maths",
+      "topic": "Statistical distributions",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "When is a Normal model plausible?",
+      "back": "For continuous data that are approximately symmetric and bell-shaped around a mean.",
+      "concepts": [
+        [
+          "continuous"
+        ],
+        [
+          "symmetric"
+        ],
+        [
+          "bell"
+        ],
+        [
+          "mean"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_hypothesis_p",
+      "subject": "Maths",
+      "topic": "Hypothesis testing",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What does a p-value mean?",
+      "back": "Assuming H₀ is true, it is the probability of a result at least as extreme as the observed one.",
+      "concepts": [
+        [
+          "h0",
+          "null"
+        ],
+        [
+          "probability"
+        ],
+        [
+          "as extreme",
+          "more extreme"
+        ],
+        [
+          "observed"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_significance",
+      "subject": "Maths",
+      "topic": "Hypothesis testing",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What does a 5% significance level mean?",
+      "back": "If H₀ is true, the test accepts a 5% risk of incorrectly rejecting it.",
+      "concepts": [
+        [
+          "5%",
+          "0.05"
+        ],
+        [
+          "h0",
+          "null"
+        ],
+        [
+          "incorrectly reject",
+          "type i"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_mech_model",
+      "subject": "Maths",
+      "topic": "Mechanics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What modelling assumption is usually meant by treating a particle as a particle?",
+      "back": "Its size and shape are ignored; its mass is treated as concentrated at a point.",
+      "concepts": [
+        [
+          "size",
+          "shape"
+        ],
+        [
+          "ignored"
+        ],
+        [
+          "mass"
+        ],
+        [
+          "point"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_friction_limit",
+      "subject": "Maths",
+      "topic": "Forces",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "What does limiting friction mean?",
+      "back": "The friction has reached its maximum value and the object is on the point of sliding.",
+      "concepts": [
+        [
+          "maximum"
+        ],
+        [
+          "friction"
+        ],
+        [
+          "about to slide",
+          "point of sliding"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_moments_method",
+      "subject": "Maths",
+      "topic": "Moments",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "For a rigid body in equilibrium, what two conditions must hold?",
+      "back": "Resultant force is zero and resultant moment about any point is zero.",
+      "concepts": [
+        [
+          "resultant force",
+          "forces"
+        ],
+        [
+          "zero"
+        ],
+        [
+          "moment",
+          "moments"
+        ]
+      ]
+    },
+    {
+      "id": "math_a2_variable_acc",
+      "subject": "Maths",
+      "topic": "Kinematics",
+      "kind": "content",
+      "priority": 1,
+      "scope": "full",
+      "stage": "A2",
+      "mock": false,
+      "active": true,
+      "front": "How are displacement, velocity and acceleration linked when acceleration varies?",
+      "back": "v=ds/dt and a=dv/dt; integrate in the reverse direction using conditions to find constants.",
+      "concepts": [
+        [
+          "ds/dt"
+        ],
+        [
+          "dv/dt"
+        ],
+        [
+          "integrate"
+        ],
+        [
+          "constant",
+          "conditions"
         ]
       ]
     }
