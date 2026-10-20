@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 12,
+  "deckVersion": 13,
   "updatedAt": "2026-10-20T16:58:37.925Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -10047,6 +10047,69 @@
         ],
         [
           "acceleration"
+        ],
+        [
+          "f=ma"
+        ]
+      ],
+      "visual": "newton"
+    },
+    {
+      "id": "phy_force_diagram_001",
+      "subject": "Physics",
+      "topic": "Force diagrams",
+      "courseTopic": "Mechanics & materials",
+      "kind": "method",
+      "priority": 6,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "What should a force diagram include?",
+      "back": "Only forces acting on the chosen object, shown as labelled arrows in the correct directions.",
+      "concepts": [
+        [
+          "forces acting on the object"
+        ],
+        [
+          "labelled arrows"
+        ],
+        [
+          "correct directions"
+        ]
+      ],
+      "visual": "newton"
+    },
+    {
+      "id": "phy_force_diagram_002",
+      "subject": "Physics",
+      "topic": "Force diagrams",
+      "courseTopic": "Mechanics & materials",
+      "kind": "method",
+      "priority": 6,
+      "userWeakness": true,
+      "scope": "mock",
+      "stage": "AS",
+      "mock": true,
+      "active": true,
+      "taught": true,
+      "unit": "as-mechanics",
+      "front": "How do you use a force diagram to find acceleration?",
+      "back": "Choose axes, resolve angled forces, add components to find the resultant, then use F = ma.",
+      "concepts": [
+        [
+          "choose axes"
+        ],
+        [
+          "resolve forces",
+          "components"
+        ],
+        [
+          "resultant force",
+          "net force"
         ],
         [
           "f=ma"
