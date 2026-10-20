@@ -153,3 +153,7 @@
 .outfit-card .character-art>img{object-fit:cover;object-position:50% 18%}
 .character-art.art-unavailable{background:linear-gradient(135deg,#1e3a8a,#172554,#0f172a)}
 .character-art.art-unavailable .character-loading{background:transparent}
+
+.stretch-controls{margin:12px 0 4px;align-items:end}
+.stretch-help{color:var(--muted);font-size:.72rem;line-height:1.45;padding:0 4px}
+@media(max-width:570px){.stretch-controls{grid-template-columns:1fr}.stretch-help{margin:0}}
