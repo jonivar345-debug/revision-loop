@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
 <div id="authGate" class="auth-gate">
@@ -176,9 +176,10 @@
         <select id="characterOwnedFilter"><option value="all">All characters</option><option value="owned">Unlocked only</option><option value="locked">Locked only</option></select>
       </div>
       <div id="characterShop" class="shop-grid"></div>
-
-      <div class="section-head globe-head"><div><h2>Outfits</h2><p>Each character has their own unlockable outfits.</p></div><strong id="outfitCount">0 / 0</strong></div>
-      <div id="outfitShop" class="shop-grid"></div>
+      <section id="characterOutfitsPanel" class="character-outfits-panel">
+        <div class="section-head"><div><h2 id="outfitHeading">Selected character's outfits</h2><p>Pick your character above, then select their outfit here.</p></div><strong id="outfitCount">0 / 0</strong></div>
+        <div id="outfitShop" class="shop-grid"></div>
+      </section>
 
       <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock real places, rotate the Earth and use actual location photos.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="globe-card">
@@ -189,6 +190,6 @@
     </section>
   </main>
 </div>
-<script src="app.js?v=14" defer></script>
+<script src="app.js?v=17" defer></script>
 </body>
 </html>
