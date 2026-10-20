@@ -182,3 +182,16 @@
 .scan-zoom img{max-width:100%;max-height:calc(100vh - 80px);object-fit:contain}
 .scan-zoom button{align-self:flex-end;border:1px solid #fff7;background:#1e293b;color:#fff;border-radius:8px;padding:10px 15px;margin-bottom:9px;font:inherit}
 @media(max-width:600px){.scan-control{padding:11px}.scan-page img{height:260px}.scan-buttons button{flex:1}.scan-pages{grid-template-columns:minmax(0,1fr)}}
+
+/* On-device experimental handwriting-to-method-mark workflow */
+.scan-ocr{display:flex;flex-direction:column;gap:7px;padding:12px;margin-top:10px;background:#ffffff;border:1px solid #93c5fd;border-radius:11px}
+.scan-ocr[hidden],.scan-zoom[hidden],#scanPrevious[hidden]{display:none!important}
+.scan-ocr label{font-size:.81rem;color:#0f172a}
+.scan-ocr p{margin:0;font-size:.72rem;color:#475569}
+.scan-ocr textarea{display:block;width:100%;box-sizing:border-box;border:1px solid #94a3b8;border-radius:9px;padding:10px;min-height:160px;font:inherit;font-size:.81rem;line-height:1.55;resize:vertical;background:#fff;color:#0f172a}
+.scan-ocr textarea:focus-visible{outline:2px solid #2563eb;outline-offset:1px}
+.scan-ocr small{font-size:.69rem;color:#64748b}
+#scanRecognize{color:#1d4ed8;background:#eff6ff;border-color:#93c5fd}
+#scanRecognize:disabled{opacity:.45;cursor:not-allowed}
+#scanApply{align-self:flex-start;border:0;border-radius:9px;background:#166534;color:white;padding:10px 14px;font:inherit;font-size:.77rem;font-weight:750;cursor:pointer}
+@media(max-width:600px){#scanApply{width:100%}.scan-ocr{padding:10px}.scan-ocr textarea{min-height:190px}}
