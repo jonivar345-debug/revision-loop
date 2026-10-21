@@ -242,6 +242,19 @@
   if(!explicit&&!stacked)return null;
   return (expr+' '+(stacked?lines[at+1]:'')).trim().slice(0,220);
  }
+ function scanFormulaEvidence(point,answer){
+  const normal=x=>String(x||'').toLowerCase().replace(/λ/g,'lambda').replace(/θ/g,'theta').replace(/Δ/g,'delta')
+   .replace(/²/g,'^2').replace(/³/g,'^3').replace(/[×·]/g,'*').replace(/÷/g,'/').replace(/\s+/g,'');
+  const ref=String(point||'');
+  const re=/\b([a-zA-Z][a-zA-Z0-9]*)\s*=\s*([a-zA-Z0-9πλθΔρµ²³^()*/×·÷+\-]{2,})/g;
+  let m;
+  const a=normal(answer);
+  while((m=re.exec(ref))){
+   const formula=normal(m[1]+'='+m[2]);
+   if(formula.length>=4&&a.includes(formula))return m[0];
+  }
+  return null;
+ }
  function reviewEvidence(q,answer,res){
   if(!hasRecognizedMarking(q.id))return null;
   const lines=String(answer||'').split(/\r?\n|;\s*/).map(x=>x.trim()).filter(x=>x.length>2);
@@ -256,6 +269,21 @@
    if(Number.isFinite(expected)&&/mean\s*[=:]|answer\s*[=:]|result\s*[=:]/i.test(point)){
     const outcome=scanMathConclusion(answer,expected);
     return {line:outcome||'',similarity:outcome?1:0,strong:Boolean(outcome)};
+   }
+   const formula=scanFormulaEvidence(point,answer);
+   if(formula)return {line:formula,similarity:1,strong:true};
+   const expectedFinal=q.answerType==='numeric'&&Number.isFinite(q.numericAnswer)?q.numericAnswer:NaN;
+   if(Number.isFinite(expectedFinal)&&/(?:obtain|calculate|find|result|answer|therefore|hence|equals|approximately|≈)/i.test(point)){
+    const explicit=scanMathConclusion(answer,expectedFinal);
+    // Only the marking point containing the correct result can receive this credit.
+    const nums=(String(point).match(/[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:×|x|\*)\s*10\s*\^\s*[-+]?\d+)?/g)||[]);
+    const finalVisible=nums.some(x=>{
+     const z=x.replace(/\s/g,'').replace(/[×x]/g,'*');
+     const scientific=z.match(/^([-+]?\d+(?:\.\d+)?)[*]10\^([-+]?\d+)$/);
+     const val=scientific?Number(scientific[1])*Math.pow(10,Number(scientific[2])):Number(z);
+     return Number.isFinite(val)&&Math.abs(val-expectedFinal)<=Math.max(.02,Math.abs(expectedFinal)*.03);
+    });
+    if(explicit&&finalVisible)return {line:explicit,similarity:1,strong:true};
    }
    let bestScore=0,best='',bestOverlap=0,bestSameNumber=false,bestRank=-1;
    const pt=terms(point),pn=numericTokens(point);
