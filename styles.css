@@ -296,3 +296,6 @@
 /* Optional short-lived remembered-device access (no persistent master key). */
 .scan-vision-remember{display:flex!important;align-items:center;gap:9px;padding:11px 10px;margin:10px 0 4px!important;border:1px solid #c7d2fe;border-radius:9px;background:#fff;color:#1e293b;font-size:.76rem!important;cursor:pointer}
 .scan-vision-remember input[type=checkbox]{width:19px!important;height:19px!important;margin:0;flex:none;accent-color:#4338ca;cursor:pointer}
+
+.scan-vision-remember{display:flex!important;align-items:center;gap:9px;padding:10px;border:1px solid #c7d2fe;border-radius:9px;background:#fff;cursor:pointer}
+.scan-vision-remember input[type=checkbox]{width:19px!important;height:19px!important;margin:0;flex:none;accent-color:#4338ca}
