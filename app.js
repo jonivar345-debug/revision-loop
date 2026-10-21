@@ -1568,7 +1568,7 @@ function examSuggested(q,answer){
     .replace(/\\int/g,'∫').replace(/\s+/g,'');
   const roots=/x=±a|x=-a(?:,|;|and|or|&).*x=a|x=a(?:,|;|and|or|&).*x=-a|x=\\pm a|x=plusorminusa/.test(raw);
   const integral=/∫|integral|integrat|a\^2x-x\^3\/3|a\^2\*x-x\^3\/3/.test(raw);
-  const primitive=/(?:a\^2\*?x-x\^3\/3|a\^2\*?x-\(?x\^3\)?\/3|a\^2\*?x-\(?1\/3\)?\*?x\^3)/.test(raw);
+  const primitive=/(?:a\^2\*?x-x\^3\/3|a\^2\*?x-\(?x\^3\)?\/3|a\^2\*?x-\(?1\/3\)?\*?x\^3|2a\^2\*?x-2\*?x\^3\/3)/.test(raw);
   const symmetric=/(?:∫|integral)[^=]{0,65}-a[^=]{0,35}a/.test(raw)&&
    !/∫[^=]{0,45}x=-a/.test(raw);
   const half=/(?:2\*?∫|2\*?integral|twicetheintegral)[^=]{0,35}(?:0[^=]{0,20}a|a[^=]{0,20}0)/.test(raw);
@@ -1576,7 +1576,7 @@ function examSuggested(q,answer){
   const limits=(symmetric||half||(/\[\s*-a\s*,\s*a\s*\]/.test(raw)&&primitive))&&integral;
   const areaEquation=/(?:4\*?a\^3\/3=36|36=4\*?a\^3\/3|a\^3=27|27=a\^3)/.test(raw)||
    (limits&&/(?:=36|36=|=18|18=)/.test(raw));
-  const conclusion=/(?:a=3(?:\.0+)?(?:[^\d.]|$)|3=a(?:[^\d.]|$))/.test(raw)&&evaluated;
+  const conclusion=/(?:a=3(?:\.0+)?(?:[^\d.]|\.(?!\d)|$)|3=a(?:[^\d.]|\.(?!\d)|$))/.test(raw)&&evaluated;
   const flags=[roots,integral,integral&&primitive,limits,integral&&areaEquation,
    conclusion&&integral&&primitive&&areaEquation];
   return {preds:flags,scores:flags.map(on=>on?1:0),finalCorrect:flags[5],
