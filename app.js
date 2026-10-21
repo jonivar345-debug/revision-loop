@@ -1184,7 +1184,11 @@ function examSuggested(q,answer){
  const finalCorrect=numericMatch(q,answer);
  const qt=String(q.questionType||'').toLowerCase();
  const requiresMethodInPrompt=/\b(?:show(?:\s+all)?\s+(?:your\s+)?working|justify\s+(?:your\s+)?answer|explain\s+(?:your\s+)?method|explain\s+why|show\s+that|prove\s+that)\b/i.test(q.prompt||'');
- const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&q.requiresWorking!==true&&!requiresMethodInPrompt;
+ // A correct final value can imply routine calculation-method marks, but not
+ // extra explanations, diagrams or a separate requested quantity.
+ const needsOtherWork=/\b(?:draw|sketch|explain|describe|justify|prove|derive|discuss|compare|state why|give a reason|show that|show your working)\b|\band\s+(?:state|give|explain|describe|justify|draw|sketch|identify|determine|calculate|find)\b/i.test(q.prompt||'');
+ const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&
+   q.requiresWorking!==true&&!requiresMethodInPrompt&&!needsOtherWork;
  const inconsistentWorking=typeof window!=='undefined'&&window.RevisionScan?.hasArithmeticMistakes?.(answer)===true;
  const trustedFinal=finalCorrect&&!inconsistentWorking;
  if(trustedFinal&&ordinaryCalculation){
