@@ -55,10 +55,10 @@
    im.onerror=()=>reject(new Error('Image rotation failed'));im.src=data;
   });
  }
- async function persist(state='draft'){
+ async function persist(state='draft',silent=false){
   if(!currentId)return;
   const id=currentId,snapshot=[...pages],recognized=ocrText;
-  try{await write(id,snapshot,state,recognized);if(id===currentId)status(snapshot.length+' page(s) stored privately in this browser.')}
+  try{await write(id,snapshot,state,recognized);if(id===currentId&&!silent)status(snapshot.length+' page(s) stored privately in this browser.')}
   catch(e){if(id===currentId)status('Photos remain available this session but cannot be stored: '+(e.message||'Storage is full.'),true)}
  }
  function hideZoom(){
@@ -397,7 +397,7 @@
    ocrConfidence=confidences.length?confidences.reduce((a,b)=>a+b,0)/confidences.length:null;
    showOCR(content,ocrConfidence);
    status((ocrConfidence!==null&&ocrConfidence<60?'Recognition is uncertain. Check every calculation and sign. ':'Writing extracted. Check the equations before accepting a mark. ')+modesUsed.map((m,i)=>'Page '+(i+1)+': '+m).join('; '));
-   await persist();
+   await persist('draft',true);
    return {ok:true,text:content,confidence:ocrConfidence,modes:modesUsed};
   }catch(err){
    lastOCRStatus='failed';
@@ -423,7 +423,7 @@
   answer.value=prior?(prior.includes(cleanOCR)?prior:prior+'\n\n'+cleanOCR):cleanOCR;
   appliedText=cleanOCR;
   answer.dispatchEvent(new Event('input',{bubbles:true}));
-  persist();
+  persist('draft',true);
   if(triggerMark)byId('markExam')?.click();
   status('Suggested marks use this transcription. Review every method mark before saving.');
   return true;
