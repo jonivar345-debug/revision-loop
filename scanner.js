@@ -181,12 +181,60 @@
   }
   return false;
  }
+
+ function scanMathConclusion(text,target){
+  if(!Number.isFinite(target))return null;
+  const cleaned=String(text||'').replace(/^Page\s+\d+.*$/gm,'').replace(/[−–]/g,'-').replace(/×/g,'*').replace(/÷/g,'/');
+  const expectedMatches=v=>Number.isFinite(v)&&Math.abs(v-target)<=Math.max(.012,Math.abs(target)*.008);
+  const re=/(?:=|≈|:)\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))(?:\s*(?:[a-z%°]|$|\n))/gi;
+  let found;
+  for(const m of cleaned.matchAll(re))if(expectedMatches(Number(m[1])))found=m[0].trim();
+  if(found)return found;
+  const labels=/(?:mean|average|answer|result|total\s*time)\s*(?:is|=|:)?\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))|([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*(?:=|is)?\s*(?:mean|average|answer)/gi;
+  for(const m of cleaned.matchAll(labels)){
+   const v=Number(m[1]??m[2]);if(expectedMatches(v))return m[0].trim();
+  }
+  // A standalone final line is a legitimate final answer, unlike a number
+  // embedded among the original input measurements.
+  const lines=cleaned.split(/\n/).map(v=>v.trim()).filter(Boolean);
+  const last=lines[lines.length-1];
+  if(last&&/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)\s*(?:[a-zA-Z%°]+)?$/.test(last)&&expectedMatches(parseFloat(last)))return last;
+  return null;
+ }
+ function scanMeanMethod(q,answer){
+  if(!/\bmean\b|\baverage\b/i.test(String(q.prompt||'')+' '+q.markPoints.join(' ')))return null;
+  // Derive the observations from the question, not from the model answer.
+  const match=String(q.prompt||'').match(/(?:data|values|observations)\s*[:]?\s*((?:\d+(?:\.\d+)?\s*[,;]\s*){2,}\d+(?:\.\d+)?)/i);
+  if(!match)return null;
+  const vals=(match[1].match(/\d+(?:\.\d+)?/g)||[]).map(Number);
+  if(vals.length<3||vals.length>15)return null;
+  const text=String(answer||'').replace(/^Page\s+\d+.*$/gm,'').replace(/[−–]/g,'-').replace(/×/g,'*').replace(/÷/g,'/');
+  const lines=text.split(/\n/).map(v=>v.trim()).filter(Boolean);
+  const expr=lines.find(l=>vals.every((v,i)=>new RegExp('(?:^|[^0-9.])'+v.toString().replace('.','\\.')+'(?=$|[^0-9.])').test(l))&&(l.match(/\+/g)||[]).length>=vals.length-2);
+  if(!expr)return null;
+  // Require visible evidence of division by the number of observations.
+  const at=lines.indexOf(expr),near=lines.slice(at,at+3).join(' ');
+  const divisor=vals.length;
+  const explicit=new RegExp('(?:\\/|over|divided\\s+by)\\s*'+divisor+'(?:\\b|$)','i').test(near);
+  const stacked=lines[at+1]&&new RegExp('^'+divisor+'(?:\\s*[=≈]|\\s*$)').test(lines[at+1]);
+  if(!explicit&&!stacked)return null;
+  return (expr+' '+(stacked?lines[at+1]:'')).trim().slice(0,220);
+ }
  function reviewEvidence(q,answer,res){
   if(!hasRecognizedMarking(q.id))return null;
   const lines=String(answer||'').split(/\r?\n|;\s*/).map(x=>x.trim()).filter(x=>x.length>2);
   const terms=x=>[...new Set((String(x).toLowerCase().match(/[a-z]{3,}/g)||[]).filter(w=>!['the','and','are','for','with','from','that','this','into','when'].includes(w)))];
   const numericTokens=x=>(String(x).match(/[-+]?(?:\d+(?:\.\d*)?|\.\d+)/g)||[]).map(Number);
   return q.markPoints.map(point=>{
+   if(/mean\s+is\s+total\s+divided|mean\s*=\s*total|mean\s*=\s*sum/i.test(point)){
+    const method=scanMeanMethod(q,answer);
+    return {line:method||'',similarity:method?1:0,strong:Boolean(method)};
+   }
+   const expected=q.answerType==='numeric'&&Number.isFinite(q.numericAnswer)?q.numericAnswer:NaN;
+   if(Number.isFinite(expected)&&/mean\s*[=:]|answer\s*[=:]|result\s*[=:]/i.test(point)){
+    const outcome=scanMathConclusion(answer,expected);
+    return {line:outcome||'',similarity:outcome?1:0,strong:Boolean(outcome)};
+   }
    let bestScore=0,best='',bestOverlap=0,bestSameNumber=false,bestRank=-1;
    const pt=terms(point),pn=numericTokens(point);
    for(const line of lines){
