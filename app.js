@@ -1170,7 +1170,8 @@ function examSuggested(q,answer){
  const exactVerbal=variants.length>0&&variants.includes(compact(answer));
  const finalCorrect=numericMatch(q,answer);
  const qt=String(q.questionType||'').toLowerCase();
- const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&q.requiresWorking!==true;
+ const requiresMethodInPrompt=/\b(?:show(?:\s+all)?\s+(?:your\s+)?working|justify\s+(?:your\s+)?answer|explain\s+(?:your\s+)?method|explain\s+why|show\s+that|prove\s+that)\b/i.test(q.prompt||'');
+ const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&q.requiresWorking!==true&&!requiresMethodInPrompt;
  const inconsistentWorking=typeof window!=='undefined'&&window.RevisionScan?.hasArithmeticMistakes?.(answer)===true;
  const trustedFinal=finalCorrect&&!inconsistentWorking;
  if(trustedFinal&&ordinaryCalculation){
