@@ -24,6 +24,8 @@ const sessionStorage={getItem:key=>store.get(key)||null,setItem:(key,v)=>store.s
 const localStore=new Map();
 const localStorage={getItem:k=>localStore.get(k)||null,setItem:(k,v)=>localStore.set(k,v),removeItem:k=>localStore.delete(k)};
 const shortToken='rl1.'+'A'.repeat(45)+'.'+'b'.repeat(43);
+const renewedToken='rl1.'+'C'.repeat(45)+'.'+'d'.repeat(43);
+const YEAR=365*24*60*60*1000;
 const mockSource='data:image/jpeg;base64,'+Buffer.alloc(170,123).toString('base64');
 let photoSent=null,called=0,usedVision='';
 const visionMark={
@@ -43,8 +45,9 @@ const window={RevisionScan:{
 const fetch=async(url,options)=>{
  called++;photoSent=JSON.parse(options.body);
  assert.equal(url,'https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark');
- assert(['Bearer a-strong-private-test-passphrase-1234','Bearer '+shortToken].includes(options.headers.Authorization));
- if(photoSent.action==='remember-device')return {ok:true,status:200,json:async()=>({token:shortToken,expiresAt:Date.now()+30*24*3600*1000})};
+ assert(['Bearer a-strong-private-test-passphrase-1234','Bearer '+shortToken,'Bearer '+renewedToken].includes(options.headers.Authorization));
+ if(photoSent.action==='remember-device')return {ok:true,status:200,json:async()=>({token:shortToken,expiresAt:Date.now()+YEAR})};
+ if(photoSent.action==='renew-device')return {ok:true,status:200,json:async()=>({token:renewedToken,expiresAt:Date.now()+YEAR})};
  if(options.body==='{}')return {ok:false,status:400,json:async()=>({error:'Question information is required.'})};
  assert.equal(photoSent.images.length,1);
  return {ok:true,status:200,json:async()=>visionMark};
@@ -109,6 +112,21 @@ async function run(){
  assert.equal(called,5);checks++;
  localStore.set('revisionloop-vision-device-v1',JSON.stringify({token:shortToken,expiresAt:Date.now()-1000}));
  vision.mount(q);
+ assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
+ // A previously issued 30-day session is silently upgraded to one year.
+ localStore.set('revisionloop-vision-device-v1',JSON.stringify({token:shortToken,expiresAt:Date.now()+15*24*60*60*1000}));
+ vision.mount(q);
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(called,6,'Legacy 30-day session renews without another passphrase');checks++;
+ const updated=JSON.parse(localStorage.getItem('revisionloop-vision-device-v1'));
+ assert.equal(updated.token,renewedToken);checks++;
+ assert(updated.expiresAt>Date.now()+300*24*60*60*1000,'Device stays signed in for another year');checks++;
+ vision.mount(q);
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(called,6,'Fresh annual session is not renewed excessively');checks++;
+ await vision.markFromPhotos();
+ assert.equal(called,7,'Renewed session still permits AI marking');checks++;
+ components.get('scanVisionForget').click();
  assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
 
  console.log('PASS '+checks+' optional vision browser and privacy checks');
