@@ -26,6 +26,23 @@ A live public smoke test passed:
 photo.** A successfully saved API key does not establish that billing, model
 access or every handwritten marking request works.
 
+### Remember access on your own device
+
+Revision Loop v45 offers **Remember on this device for 30 days**. Tick it
+when saving your private access passphrase once on your own phone or laptop.
+
+The site exchanges the original passphrase for a separate 30-day signed
+device session. Only the scoped session is kept in browser local storage;
+the original passphrase is cleared from tab storage. The session expires
+automatically after 30 days, and changing `VISION_ACCESS_TOKEN` in Vercel
+invalidates all issued sessions immediately.
+
+Use **Forget this device** to clear both temporary and remembered access.
+Do not use Remember on public, shared or school computers. Browser scripts
+on the same website may access the stored device session, so treat your
+personal device and browser as trusted. The AI key is never kept in browser
+storage.
+
 ### Finish the connection on your phone
 
 1. Open [Revision Loop](https://jonivar345-debug.github.io/revision-loop/) and
@@ -35,7 +52,8 @@ access or every handwritten marking request works.
    filled in and cannot be redirected to an unknown host.
 4. Enter the **original passphrase** saved privately as
    `VISION_ACCESS_TOKEN` (never enter `OPENAI_API_KEY` or the four-digit
-   Revision Loop entrance PIN).
+   Revision Loop entrance PIN). Tick **Remember on this device for 30 days**
+   if this is your own phone or computer.
 5. Press **Use these settings in this tab**, then **Test connection (no AI
    charge)**. This sends deliberately invalid question data to verify the
    private passphrase and does **not** send a photo or invoke the model.
