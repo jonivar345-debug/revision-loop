@@ -6,5 +6,19 @@
     "orig_v25_physics_free_body_diagrams_4": "Draw two arrows: tension upwards and weight mg = 24.5 N downwards. Apply Newton's second law: T − mg = ma. Therefore T = 2.5(9.81 + 1.2) = 27.5 N.",
     "orig_v25_physics_gas_laws_2": "Boyle's law applies to a fixed amount of gas at constant temperature. p₁V₁=p₂V₂, so p₂=(95×4.0)/2.5=152 kPa.",
     "orig_v25_physics_electric_fields_2": "E=V/d. Convert 12 mm to 0.012 m. E=600/0.012=5.0×10⁴ V m⁻¹, directed from the positive plate towards the negative plate."
+  },
+  "questionCorrections": {
+    "aqa_chem_as23_p1_q3_1": {
+      "markingMode": "anyN"
+    },
+    "aqa_math_as24_p1_q4ai_src": {
+      "markPoints": [
+        "Show the identity-based rearrangement from sin θ · tan θ = 4 cos θ to tan²θ = 4."
+      ],
+      "markPointMarks": [
+        1
+      ],
+      "modelAnswer": "Using sin θ = tan θ cos θ, the left-hand side becomes tan²θ cos θ. For cos θ ≠ 0, divide by cos θ to obtain tan²θ = 4."
+    }
   }
 }
