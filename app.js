@@ -1205,6 +1205,13 @@ function renderCard(c){
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text;document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
+function evidenceRuleScore(answer,alternatives){
+ if(!String(answer||'').trim())return 0;
+ const present=tokens(answer);
+ // A rule is satisfied by one complete group of matching concepts,
+ // allowing spelling variation but not unrelated single keywords.
+ return alternatives.some(group=>Array.isArray(group)&&group.length>=2&&group.every(term=>present.some(t=>close(t,term))))?1:0;
+}
 function totalMarkingPoints(q,flags){
  // Some AQA questions say 'any three' out of a wider list of accepted
  // answers. Every distinct credited alternative must count equally.
@@ -1213,7 +1220,8 @@ function totalMarkingPoints(q,flags){
 }
 function examSuggested(q,answer){
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
- const scores=q.markPoints.map(p=>markPointPrediction(answer,p));
+ const scores=q.markPoints.map((p,i)=>Array.isArray(q.markEvidenceRules?.[i])?
+   evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p));
  let preds=scores.map(v=>v>=.5);
  const variants=(q.answerVariants||[]).map(x=>compact(x)).filter(Boolean);
  const exactVerbal=variants.length>0&&variants.includes(compact(answer));
@@ -1302,6 +1310,14 @@ function renderExam(q){
    const evidence=vision?vision.marking.map(p=>({
      strong:p.earned===true,line:p.evidence||'',reason:p.reason||'',confidence:p.confidence||'low'
    })):(scannedText?window.RevisionScan?.reviewEvidence(q,answer,res):null);
+   if(scannedText&&!vision&&Array.isArray(q.markEvidenceRules)&&Array.isArray(evidence)){
+    const matched=res.preds;
+    for(let i=0;i<evidence.length;i++)if(Array.isArray(q.markEvidenceRules[i])){
+      evidence[i].strong=Boolean(matched[i]);
+      evidence[i].line=matched[i]?'Concept matched in reviewed transcription':'';
+      evidence[i].reason=matched[i]?'Accepted alternative wording':'No complete criterion found';
+    }
+   }
    if(scannedText&&Array.isArray(evidence)){
     res.preds=res.preds.map((_,i)=>Boolean(evidence[i]?.strong));
     res.suggested=totalMarkingPoints(q,res.preds);
@@ -1706,7 +1722,7 @@ async function sync(manual=false){
   if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id))q.modelAnswer=corrections.modelAnswers[q.id];
   const changes=corrections.questionCorrections?.[q.id];
   if(changes&&typeof changes==='object'){
-   for(const key of ['prompt','modelAnswer','markPoints','markPointMarks','markingMode']){
+   for(const key of ['prompt','modelAnswer','markPoints','markPointMarks','markingMode','markEvidenceRules']){
     if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
    }
   }
