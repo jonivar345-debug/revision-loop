@@ -1196,7 +1196,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  let audit=document.getElementById('examArchiveAudit');
  if(!audit){audit=document.createElement('p');audit.id='examArchiveAudit';audit.className='archive-label';
   document.getElementById('examYears').insertAdjacentElement('afterend',audit)}
- audit.textContent=indexedFromPapers+' source-linked parts, '+practiceOnly+' original practice parts; '+gap+' current-specification year(s) without an indexed question for this selection. This is not a complete archive of every AQA question. Missing years cannot be selected until properly sourced.';
+ audit.innerHTML=indexedFromPapers+' source-linked parts, '+practiceOnly+' original practice parts; '+gap+' current-specification year(s) without an indexed question for this selection. This is not a complete archive of every AQA question. Missing years cannot be selected until properly sourced. <a href="https://www.aqa.org.uk/past-papers-and-mark-schemes-finder" target="_blank" rel="noopener noreferrer">Find official AQA papers and mark schemes ↗</a>';
  document.getElementById('examTopics').innerHTML=groupedTopicPicker(sub,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear)):examYears.delete(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear));renderTopicCounts()});
