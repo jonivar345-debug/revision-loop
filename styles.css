@@ -343,3 +343,54 @@
 .globe-location-info .location-background h4{font-size:.78rem;margin:0 0 5px;color:#0f172a}
 .globe-location-info .location-background p{font-size:.76rem;line-height:1.65;margin:0;white-space:normal;overflow-wrap:break-word}
 .globe-location-info .location-coordinate{font-size:.69rem;color:#64748b;font-variant-numeric:tabular-nums}
+
+
+/* Outfit wardrobe: distinct illustrated costume cuts over the actual character
+   portrait. These are concept thumbnails, not official episode stills.
+   User-selected art overrides the sketch, and stays private in IndexedDB. */
+.character-art>img{z-index:2}
+.character-art>svg.costume-silhouette{
+ position:absolute;left:0;right:0;bottom:0;top:auto;
+ width:100%;height:47%;z-index:3;
+ visibility:visible;pointer-events:none;filter:drop-shadow(0 -2px 4px rgba(4,8,20,.2));
+}
+.character-art.has-portrait>svg.costume-silhouette{visibility:visible}
+.character-art.has-custom-outfit>svg.costume-silhouette{display:none}
+.character-card .costume-silhouette{display:none}
+.character-art .costume-shoulders{fill:var(--coat,#172554);stroke:rgba(255,255,255,.18);stroke-width:1.6}
+.character-art .costume-inner{fill:var(--trim,#bfdbfe);opacity:.82}
+.character-art .costume-lapel{fill:var(--coat,#172554);stroke:var(--trim,#bfdbfe);stroke-width:2}
+.character-art .costume-centre{fill:none;stroke:var(--trim,#bfdbfe);stroke-width:1.7}
+.character-art .costume-detail{fill:none;stroke:var(--trim,#bfdbfe);stroke-width:3;opacity:.7}
+.character-art .costume-scarf{display:none;fill:var(--trim,#bfdbfe)}
+.costume-default .costume-lapel{fill:var(--trim)}
+.costume-hoodie .costume-lapel{fill:var(--coat);stroke-width:5}
+.costume-hoodie .costume-inner{fill:var(--coat)}
+.costume-hoodie .costume-centre{stroke-dasharray:4 6;stroke-width:3}
+.costume-casual .costume-lapel{stroke-width:4}
+.costume-winter .costume-scarf{display:block}
+.costume-winter .costume-lapel{opacity:.3}
+.costume-smart .costume-lapel{fill:var(--trim)}
+.costume-smart .costume-inner{fill:#f8fafc}
+.costume-traveller .costume-shoulders{stroke:var(--trim);stroke-width:5}
+.costume-traveller .costume-detail{stroke-width:6}
+.costume-sport .costume-inner{fill:var(--coat)}
+.costume-sport .costume-lapel{fill:var(--trim);opacity:.9}
+.costume-festival .costume-centre{stroke-width:5;stroke-dasharray:2 7}
+.outfit-image-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;justify-content:space-between}
+.outfit-image-tools .outfit-upload,.outfit-image-tools .outfit-clear{
+ flex:1;min-width:95px;display:flex;justify-content:center;align-items:center;
+ padding:8px 7px;border:1px solid #94a3b8;border-radius:8px;
+ color:#334155;background:#f8fafc;cursor:pointer;font-size:.7rem;font-weight:700;
+ min-height:34px;line-height:1.2;
+}
+.outfit-image-tools .outfit-upload:focus-within{outline:2px solid #2563eb;outline-offset:2px}
+.outfit-image-tools .outfit-clear:hover{background:#e2e8f0}
+.outfit-image-tools .outfit-upload input[type=file]{
+ position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;
+}
+.outfit-media-note{font-size:.74rem;line-height:1.5;color:#52617a;max-width:760px;margin:0 0 9px}
+@media(max-width:500px){
+ .outfit-image-tools{flex-direction:column}
+ .outfit-image-tools .outfit-upload,.outfit-image-tools .outfit-clear{width:100%}
+}
