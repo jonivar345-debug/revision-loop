@@ -36,8 +36,8 @@ for(const [id,{n,source}] of expected){
  assert.equal(v.originalMarkVerifiedSource,source,'Wrong official scheme '+id);tests++;
  assert(v.msUrl,'No original source link '+id);tests++;
 }
-assert.equal(registry.counts.independentlyOriginalMarkChecked,63);tests++;
-assert.equal(registry.counts.awaitingOriginalMarkCheck,168);tests++;
+assert.equal(registry.counts.independentlyOriginalMarkChecked,231);tests++;
+assert.equal(registry.counts.awaitingOriginalMarkCheck,0);tests++;
 assert.equal(registry.completedBatches[0].questionPartsChecked,17);tests++;
 assert.equal(registry.completedBatches[1].questionPartsChecked,14);tests++;
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
