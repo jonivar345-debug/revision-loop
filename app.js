@@ -1186,7 +1186,6 @@ function refreshExamFilters(defaultIfEmpty=false){
    legacy=y!=='Practice'&&((level==='both'&&y<firstYear.AS)||(level!=='both'&&y<firstYear[level]));
   const desc=available?(count+' in app'):(legacy?'older specification · not indexed':'no questions indexed');
   const oldSpecNote=legacy?'title="The current AQA specification did not yet have this paper series. Use the older-specification archive separately."':'';
-  const archiveLink='<a href="https://www.aqa.org.uk/past-papers-and-mark-schemes-finder" target="_blank" rel="noopener noreferrer" class="archive-paper-link">AQA papers ↗</a>';
   return '<label class="check-item '+(available?'':'empty-topic')+'" '+oldSpecNote+'><input type="checkbox" data-exam-year="'+y+'" '+(available?'':'disabled ')+(examYears.has(y)?'checked':'')+'><span>'+y+'</span><small>'+desc+'</small></label>';
  }).join('');
  const indexedFromPapers=base.filter(q=>q.year!=='Practice').length;
@@ -1194,7 +1193,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  let gap=0;
  const currentStart=sub==='Maths'?2018:(level==='AS'?2016:level==='A-level'?2017:2016);
  for(let yr=currentStart;yr<=2025;yr++)if(!base.some(q=>q.year===yr))gap++;
- let audit=$('examArchiveAudit');
+ let audit=document.getElementById('examArchiveAudit');
  if(!audit){audit=document.createElement('p');audit.id='examArchiveAudit';audit.className='archive-label';
   document.getElementById('examYears').insertAdjacentElement('afterend',audit)}
  audit.textContent=indexedFromPapers+' source-linked parts, '+practiceOnly+' original practice parts; '+gap+' current-specification year(s) without an indexed question for this selection. This is not a complete archive of every AQA question. Missing years cannot be selected until properly sourced.';
