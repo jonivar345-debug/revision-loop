@@ -32,6 +32,21 @@ marked=checkedMarking({...ai,marking:[{...ai.marking[0],evidence:''},ai.marking[
 assert.equal(marked.score,1,'No evidence means no automatic method mark');checks++;
 assert.equal(buildModelRequest(input).store,false);checks++;
 assert.equal(buildModelRequest(input).input[0].content[1].type,'input_image');checks++;
+const anyInput=normaliseInput({
+ question:{...question,id:'any_three_practical',
+  markPoints:['Wash apparatus','Set the meniscus correctly','Record mass accurately','Invert to mix'],
+  markPointMarks:[1,1,1,0],marks:3,markingMode:'anyN'},
+ images:[image]});
+assert.equal(anyInput.markingMode,'anyN');checks++;
+const anyResponse={
+ transcription:'Washed, adjusted bottom meniscus and inverted flask',
+ uncertain:false,reviewNotes:'',
+ marking:[0,1,2,3].map(i=>({index:i,earned:i!==2,evidence:i===2?'':'Step '+i,reason:'Valid improvement',confidence:'high'}))
+};
+const anyMarks=checkedMarking(anyResponse,anyInput);
+assert.equal(anyMarks.score,3,'Any three recognised improvements score full marks');checks++;
+assert.equal(anyMarks.marking[3].weight,1,'Fourth recognised point is not unfairly zero-weighted');checks++;
+assert.equal(buildModelRequest(anyInput).input[0].content[0].text.includes('"weight":1'),true);checks++;
 
 const savedEnv={...process.env};
 const priorFetch=globalThis.fetch;
