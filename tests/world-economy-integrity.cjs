@@ -43,7 +43,7 @@ const allFiles=['exam_questions.json','paper_supplement_2016_2017.json','gap_que
 const q=allFiles.flatMap(f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')).questions);
 const deck=JSON.parse(fs.readFileSync(path.join(root,'deck.json'),'utf8')).cards;
 const available=Object.fromEntries(['Maths','Physics','Chemistry'].map(s=>[s,new Set(deck.filter(x=>x.subject===s).map(x=>x.revisionTopic||x.topic))]));
-assert.equal(q.filter(x=>x.standalone!==false).length,1262);checks++;
+assert.equal(q.filter(x=>x.standalone!==false).length,1271);checks++;
 const seen=new Set(),prompts=new Set();
 for(const question of q){
  assert(!seen.has(question.id),'Duplicate question '+question.id);seen.add(question.id);checks++;
