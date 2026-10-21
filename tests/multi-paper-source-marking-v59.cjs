@@ -25,6 +25,7 @@ const cases=[
  // and the six M/A/B/R marks need real derivation.
  ['aqa_math_as22_p1_q7','3',0],
  ['aqa_math_as22_p1_q7','a=3',0],
+ ['aqa_math_as22_p1_q7','a=3.2',0],
  ['aqa_math_as22_p1_q7','a³=27, so a=3',0],
  ['aqa_math_as22_p1_q7','x=-a and x=a',1],
  ['aqa_math_as22_p1_q7','∫_-a^a (a²−x²) dx',2],
