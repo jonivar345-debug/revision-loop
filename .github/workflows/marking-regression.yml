@@ -19,3 +19,4 @@ jobs:
           node tests/photo-review-regression.cjs
           node tests/vision-backend-regression.mjs
           node tests/vision-client-regression.cjs
+          node tests/historical-supplement-regression.cjs
