@@ -4023,7 +4023,17 @@
       "mock": true,
       "modelAnswer": "90° < x < 270°",
       "visual": "unit-circle",
-      "revisionTopic": "Trigonometry"
+      "revisionTopic": "Trigonometry",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "AQA-73561-W-MS-JUN18.PDF",
+      "originalMarkVerifiedDate": "2026-10-21",
+      "markingMode": "strictOpenInterval",
+      "markPointDependencies": {
+        "1": [
+          0
+        ]
+      },
+      "markSchemeType": "M1 A1"
     },
     {
       "id": "aqa_math_as18_p1_q4a",
@@ -4059,7 +4069,18 @@
       "standalone": true,
       "mock": true,
       "modelAnswer": "Use the binomial structure 1 + 4(−3x) + 6(−3x)^2. Use binomial coefficients 4 and 6 correctly. Obtain 1 − 12x + 54x². Final answer: 1 − 12x + 54x²",
-      "revisionTopic": "Algebra and functions"
+      "revisionTopic": "Algebra and functions",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "AQA-73561-W-MS-JUN18.PDF",
+      "originalMarkVerifiedDate": "2026-10-21",
+      "answerVariants": [
+        "1−12x+54x²",
+        "1-12x+54x²",
+        "1-12x+54x^2",
+        "1 - 12x + 54x²",
+        "1 - 12x + 54x^2"
+      ],
+      "markSchemeType": "M1 A1 A1; complete correct expansion implies method"
     },
     {
       "id": "aqa_math_as18_p1_q4b",
@@ -4072,7 +4093,7 @@
       "paper": "7356/1",
       "question": "4(b)",
       "marks": 2,
-      "prompt": "Use the three-term approximation to (1 − 3x)^4 from part (a), with x = 0.002, to estimate (0.994)^4 to six decimal places. Show the substitution into the expansion.",
+      "prompt": "Using the first three terms of the binomial expansion (1−3x)^4, namely 1−12x+54x², approximate (0.994)^4 to six decimal places. Show how you choose x and substitute it into the expression.",
       "answerType": "numeric",
       "markPoints": [
         "Substitute x = 0.002 into 1 − 12x + 54x².",
@@ -4097,7 +4118,11 @@
       "unit": "",
       "modelAnswer": "1 − 12(0.002) + 54(0.002)² = 0.976216",
       "requiresWorking": true,
-      "revisionTopic": "Algebra and functions"
+      "revisionTopic": "Algebra and functions",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "AQA-73561-W-MS-JUN18.PDF",
+      "originalMarkVerifiedDate": "2026-10-21",
+      "markSchemeType": "M1 A1; correct x/substitution and evaluated approximation"
     },
     {
       "id": "aqa_phy_as19_p1_q1_1",
@@ -4902,7 +4927,10 @@
         "B",
         "(-1,8)",
         "B(-1,8)"
-      ]
+      ],
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "AQA-73561-W-MS-JUN18.PDF",
+      "originalMarkVerifiedDate": "2026-10-21"
     },
     {
       "id": "aqa_math_as18_p1_q2",
@@ -4937,7 +4965,11 @@
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-QP-JUN18.PDF#page=2",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-W-MS-JUN18.PDF#page=5",
       "numericAnswer": 0.6666666666666666,
-      "tolerance": 1e-7
+      "tolerance": 1e-7,
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "AQA-73561-W-MS-JUN18.PDF",
+      "originalMarkVerifiedDate": "2026-10-21",
+      "markSchemeType": "B1; one correct tangent gradient only"
     },
     {
       "id": "aqa_math_as18_p1_q5",
@@ -4978,7 +5010,11 @@
       "mock": true,
       "requiresWorking": true,
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-QP-JUN18.PDF#page=5",
-      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-W-MS-JUN18.PDF#page=6"
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73561-W-MS-JUN18.PDF#page=6",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "AQA-73561-W-MS-JUN18.PDF",
+      "originalMarkVerifiedDate": "2026-10-21",
+      "markSchemeType": "M1 A1 M1 A1 A1"
     },
     {
       "id": "verified2019_C_1_1",
