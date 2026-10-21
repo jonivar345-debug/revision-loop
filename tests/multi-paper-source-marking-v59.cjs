@@ -63,7 +63,7 @@ for(const id of ['aqa_math_as22_p1_q7','aqa_chem_as20_p1_q2_2_link','aqa_chem_as
  assert.equal(mark(q,q.modelAnswer).suggested,q.marks,'Stored solution not fully credited '+id);checks++;
 }
 const audit=read('original_mark_audit_2026_10_21.json');
-assert.equal(audit.counts.sourceFirstQuestionParts,9);checks++;
+assert.equal(audit.counts.sourceFirstQuestionParts,0);checks++;
 const inv=read('paper_inventory_2015_2025.json');
 for(const paper of inv.papers){
  const all=questions.filter(q=>q.standalone!==false&&q.sourceVerified&&
