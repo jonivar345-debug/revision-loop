@@ -48,6 +48,7 @@ const fetch=async(url,options)=>{
  assert(['Bearer a-strong-private-test-passphrase-1234','Bearer '+shortToken,'Bearer '+renewedToken].includes(options.headers.Authorization));
  if(photoSent.action==='remember-device')return {ok:true,status:200,json:async()=>({token:shortToken,expiresAt:Date.now()+YEAR})};
  if(photoSent.action==='renew-device')return {ok:true,status:200,json:async()=>({token:renewedToken,expiresAt:Date.now()+YEAR})};
+ if(photoSent.action==='check-provider')return {ok:true,status:200,json:async()=>({providerReady:true,model:'gpt-4.1-mini'})};
  if(options.body==='{}')return {ok:false,status:400,json:async()=>({error:'Question information is required.'})};
  assert.equal(photoSent.images.length,1);
  return {ok:true,status:200,json:async()=>visionMark};
@@ -80,10 +81,10 @@ async function run(){
  await components.get('scanVisionSave').click();
  assert(sessionStorage.getItem('revisionloop-vision-session'));checks++;
  await vision.testPrivateConnection();
- assert.equal(called,1,'One free authentication check performed');checks++;
- assert.match(components.get('scanVisionStatus').textContent,/Connection verified/);checks++;
+ assert.equal(called,2,'Authentication and provider access checks do not invoke AI');checks++;
+ assert.match(components.get('scanVisionStatus').textContent,/AI account and model access verified/);checks++;
  await vision.markFromPhotos();
- assert.equal(called,2);checks++;
+ assert.equal(called,3);checks++;
  assert.equal(photoSent.question.id,'mean-test');checks++;
  assert.equal(vision.resultFor('mean-test').score,2);checks++;
  assert.equal(usedVision,'(5+7+8+12)/4=8');checks++;
@@ -93,7 +94,7 @@ async function run(){
  components.get('scanVisionRemember').checked=true;
  components.get('scanVisionPass').value='a-strong-private-test-passphrase-1234';
  await components.get('scanVisionSave').click();
- assert.equal(called,3,'Remembering uses one free backend request');checks++;
+ assert.equal(called,4,'Remembering uses one free backend request');checks++;
  const remembered=JSON.parse(localStorage.getItem('revisionloop-vision-device-v1'));
  assert.equal(remembered.token,shortToken);checks++;
  assert(!JSON.stringify(remembered).includes('a-strong-private-test-passphrase-1234'));checks++;
@@ -103,13 +104,13 @@ async function run(){
  assert.equal(components.get('scanVisionRemember').checked,true);checks++;
  assert.equal(components.get('scanVisionPass').value,'');checks++;
  await vision.testPrivateConnection();
- assert.equal(called,4);checks++;
+ assert.equal(called,6);checks++;
  await vision.markFromPhotos();
- assert.equal(called,5);checks++;
+ assert.equal(called,7);checks++;
  components.get('scanVisionForget').click();
  assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
  await vision.markFromPhotos();
- assert.equal(called,5);checks++;
+ assert.equal(called,7);checks++;
  localStore.set('revisionloop-vision-device-v1',JSON.stringify({token:shortToken,expiresAt:Date.now()-1000}));
  vision.mount(q);
  assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
@@ -117,15 +118,15 @@ async function run(){
  localStore.set('revisionloop-vision-device-v1',JSON.stringify({token:shortToken,expiresAt:Date.now()+15*24*60*60*1000}));
  vision.mount(q);
  await new Promise(resolve=>setImmediate(resolve));
- assert.equal(called,6,'Legacy 30-day session renews without another passphrase');checks++;
+ assert.equal(called,8,'Legacy 30-day session renews without another passphrase');checks++;
  const updated=JSON.parse(localStorage.getItem('revisionloop-vision-device-v1'));
  assert.equal(updated.token,renewedToken);checks++;
  assert(updated.expiresAt>Date.now()+300*24*60*60*1000,'Device stays signed in for another year');checks++;
  vision.mount(q);
  await new Promise(resolve=>setImmediate(resolve));
- assert.equal(called,6,'Fresh annual session is not renewed excessively');checks++;
+ assert.equal(called,8,'Fresh annual session is not renewed excessively');checks++;
  await vision.markFromPhotos();
- assert.equal(called,7,'Renewed session still permits AI marking');checks++;
+ assert.equal(called,9,'Renewed session still permits AI marking');checks++;
  components.get('scanVisionForget').click();
  assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
 
