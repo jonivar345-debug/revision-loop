@@ -1185,7 +1185,7 @@ function renderExam(q){
    const scannedText=window.RevisionScan?.usedOCR(q.id)===true;
    const evidence=scannedText?window.RevisionScan?.reviewEvidence(q,answer,res):null;
    if(scannedText&&Array.isArray(evidence)){
-    res.preds=res.preds.map((pred,i)=>Boolean(pred&&evidence[i]?.strong));
+    res.preds=res.preds.map((_,i)=>Boolean(evidence[i]?.strong));
     res.suggested=clamp(res.preds.reduce((v,on,i)=>v+(on?(q.markPointMarks?.[i]??1):0),0),0,q.marks);
     res.confidence='low';
    }
