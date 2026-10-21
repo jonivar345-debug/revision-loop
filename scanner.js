@@ -199,7 +199,7 @@
     const rank=score+.07*Math.min(3,overlap)+(sameNumber?.35:0);
     if(rank>bestRank){bestRank=rank;bestScore=score;bestOverlap=overlap;bestSameNumber=sameNumber;best=line}
    }
-   const strong=bestScore>=.74||(bestOverlap>=1&&bestSameNumber&&bestScore>=.28)||(bestOverlap>=2&&bestScore>=.55);
+   const strong=bestScore>=.74||(bestOverlap>=1&&bestSameNumber&&bestScore>=.20)||(bestOverlap>=2&&bestScore>=.55);
    return {line:strong?best:'',similarity:bestScore,strong};
   });
  } async function readWriting(id){
