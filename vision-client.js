@@ -5,8 +5,12 @@
  let question=null,visionResult=null,inFlight=false;
  const $=id=>document.getElementById(id);
  const STORAGE='revisionloop-vision-session';
+ const DEFAULT_API='https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark';
  function readConfig(){
-  try{return JSON.parse(sessionStorage.getItem(STORAGE)||'null')||{}}catch{return {}}
+  // The trusted service address is pinned, so a typo or a malicious
+  // alternative URL cannot receive the student's private passphrase.
+  try{return {...(JSON.parse(sessionStorage.getItem(STORAGE)||'null')||{}),url:DEFAULT_API}}
+  catch{return {url:DEFAULT_API}}
  }
  function saveConfig(data){
   try{sessionStorage.setItem(STORAGE,JSON.stringify(data));return true}catch{return false}
@@ -14,8 +18,7 @@
  function allowedEndpoint(text){
   try{
    const u=new URL(String(text||'').trim());
-   return u.protocol==='https:'&&u.hostname.endsWith('.vercel.app')&&
-    u.pathname==='/api/vision-mark'&&!u.username&&!u.password&&!u.search&&!u.hash&&!u.port;
+   return u.href===DEFAULT_API;
   }catch{return false}
  }
  function invalidate(){visionResult=null}
@@ -47,6 +50,34 @@
    img.onerror=()=>reject(new Error('Could not read the photograph.'));
    img.src=src;
   });
+ }
+ async function testPrivateConnection(){
+  const config=readConfig();
+  if(!config.passphrase||config.passphrase.length<24){
+   const details=$('scanVisionConfig');if(details)details.open=true;
+   status('Save your private access passphrase first, then test the connection.',true);
+   return;
+  }
+  const button=$('scanVisionTest');if(button){button.disabled=true;button.textContent='Checking connection…'}
+  try{
+   status('Checking your private backend credentials. No photograph is sent and no AI call is made.');
+   const response=await fetch(DEFAULT_API,{
+    method:'POST',mode:'cors',cache:'no-store',credentials:'omit',
+    headers:{'Content-Type':'application/json','Authorization':'Bearer '+config.passphrase},
+    // Valid authentication, deliberately invalid question: fails before any billed AI request.
+    body:'{}'
+   });
+   const data=await response.json().catch(()=>({}));
+   if(response.status===400&&data.error==='Question information is required.'){
+    status('Connection verified: the private access token works. No AI request or photograph was sent.');
+   } else if(response.status===401)status('The access passphrase does not match Vercel. Check the original saved passphrase, or rotate it in Vercel.',true);
+   else if(response.status===503)status('The backend is missing API credentials; check Vercel Production environment variables and redeploy.',true);
+   else status('Connection check did not finish: HTTP '+response.status+'. '+String(data.error||'Try again later.').slice(0,120),true);
+  }catch(e){
+   status('Could not contact the private service: '+(e.message||'Network error'),true);
+  }finally{
+   if(button){button.disabled=false;button.textContent='Test connection (no AI charge)'}
+  }
  }
  async function markFromPhotos(){
   if(inFlight||!question)return;
@@ -107,11 +138,11 @@
    '<div id="scanVisionStatus" role="status" aria-live="polite">Not connected yet. Local photo marking still works.</div>'+
    '<details id="scanVisionConfig"><summary>Connect private AI marking service</summary>'+
    '<p>Keep your AI provider key on the server. Enter only your private Vercel function address and separate access passphrase here. Do not use the public four-digit website PIN.</p>'+
-   '<label for="scanVisionUrl">Vercel API URL</label>'+
-   '<input id="scanVisionUrl" type="url" autocomplete="url" spellcheck="false" placeholder="https://your-project.vercel.app/api/vision-mark">'+
+   '<label for="scanVisionUrl">Private backend (connected automatically)</label>'+
+   '<input id="scanVisionUrl" type="url" autocomplete="off" readonly spellcheck="false">'+
    '<label for="scanVisionPass">Private access passphrase (24+ characters)</label>'+
    '<input id="scanVisionPass" type="password" autocomplete="off" minlength="24" placeholder="Separate private passphrase">'+
-   '<div class="scan-vision-actions"><button type="button" id="scanVisionSave">Use these settings in this tab</button>'+
+   '<div class="scan-vision-actions"><button type="button" id="scanVisionSave">Use these settings in this tab</button><button type="button" id="scanVisionTest">Test connection (no AI charge)</button>'+
    '<button type="button" id="scanVisionForget">Forget saved settings</button></div>'+
    '<small>Stored only for this browser tab. The AI provider may charge per image request. No request is made until you press Mark photographed working with AI.</small>'+
    '</details>';
@@ -120,21 +151,22 @@
   $('scanVisionUrl').value=saved.url||'';
   $('scanVisionPass').value=saved.passphrase||'';
   $('scanVisionSave').onclick=()=>{
-   const url=$('scanVisionUrl').value.trim(),passphrase=$('scanVisionPass').value;
-   if(!allowedEndpoint(url)){status('Use a full HTTPS *.vercel.app/api/vision-mark address.',true);return}
+   const url=DEFAULT_API,passphrase=$('scanVisionPass').value;
+   if(!allowedEndpoint(url)){status('Use the automatic Revision Loop backend address.',true);return}
    if(passphrase.length<24){status('Use a separate strong passphrase of at least 24 characters.',true);return}
    if(!saveConfig({url,passphrase})){status('This browser does not allow session storage. AI connection will not persist.',true);return}
    $('scanVisionConfig').open=false;
-   status('Private connection details saved for this tab. Photos have not been sent.');
+   status('Private access saved for this tab. Press Test connection to verify it for free. Photos have not been sent.');
   };
   $('scanVisionForget').onclick=()=>{
    try{sessionStorage.removeItem(STORAGE)}catch{}
    $('scanVisionUrl').value='';$('scanVisionPass').value='';invalidate();
    status('Private AI connection details cleared.');
   };
+  $('scanVisionTest').onclick=testPrivateConnection;
   $('scanVisionMark').onclick=markFromPhotos;
   if(allowedEndpoint(saved.url)&&saved.passphrase?.length>=24)
    status('Private AI settings available. Nothing is transmitted until you request AI marking.');
  }
- window.RevisionVision={mount,resultFor,invalidate,markFromPhotos,allowedEndpoint};
+ window.RevisionVision={mount,resultFor,invalidate,markFromPhotos,allowedEndpoint,testPrivateConnection};
 })();
