@@ -263,7 +263,7 @@ function possiblyIncorrectArithmetic(line){
     const i=remaining.findIndex(x=>Math.abs(x-v)<1e-8);
     if(i<0)return false;remaining.splice(i,1);
    }
-   return (before.match(/\+/g)||[]).length>=values.length-2;
+   return (before.match(/\+/g)||[]).length>=values.length-1;
   };
   const hasCount=(text)=>new RegExp('(?:/|over|divided\\s+by)\\s*'+count+'(?:\\b|$)','i').test(text);
   for(let i=0;i<lines.length;i++){
@@ -641,7 +641,7 @@ function reviewEvidence(q,answer,res){
  }
  function mount(id){
   const area=byId('examAnswer');if(!area)return;
-  currentId=id;pages=[];ocrText='';ocrApplied=false;ocrConfidence=null;ocrNeedsReview=false;ocrReviewReason='';const version=++sequence;++ocrRunNumber;
+  currentId=id;pages=[];ocrText='';ocrApplied=false;appliedText='';ocrConfidence=null;ocrNeedsReview=false;ocrReviewReason='';const version=++sequence;++ocrRunNumber;
   area.insertAdjacentHTML('afterend',`<section class="scan-control"><div class="scan-heading"><strong>Photograph your working</strong><span id="scanCount">0 / 5 pages</span></div><p>Write on paper, then take a photo or upload pages. Available on every exam question, including Mock.</p><div class="scan-buttons"><button type="button" id="scanTake">Take photo</button><button type="button" id="scanChoose">Upload image(s)</button><button type="button" id="scanRecognize" disabled>Read photo again</button></div><div class="scan-ocr-options"><label for="scanOCRMode">Image reading mode</label><select id="scanOCRMode"><option value="auto">Automatic (recommended)</option><option value="contrast">Enhanced contrast</option><option value="binary">Black and white</option><option value="adaptive">Remove shadows (local contrast)</option><option value="normal">Original photograph</option></select><button type="button" id="scanManual">Enter working manually</button></div><input id="scanCameraInput" type="file" accept="image/*" capture="environment" hidden><input id="scanChooseInput" type="file" accept="image/*" multiple hidden><div id="scanStatus" role="status" aria-live="polite">Images stay on this browser, not on a server.</div><div id="scanPages" class="scan-pages"></div><section id="scanOCR" class="scan-ocr" hidden><label for="scanTranscript"><strong>Recognised writing — check and correct</strong></label><p>Recognition can misread handwriting, algebra, fractions or signs. Correct the text below before marking, including every method step.</p><textarea id="scanTranscript" rows="8" spellcheck="false" placeholder="Your recognised working will appear here."></textarea><small id="scanOCRHint"></small><button type="button" id="scanApply">Mark transcribed working</button></section><details id="scanPrevious" hidden></details><p class="scan-explainer">Tap <b>Mark my answer</b>. If you have attached a photograph, it will be read automatically before suggesting a mark. You can correct the recognised working and recalculate your marks. Photos that cannot be read are not automatically given zero.</p></section><div id="scanZoom" class="scan-zoom" role="dialog" aria-label="Enlarged answer photo" hidden></div>`);
   byId('scanTake').onclick=()=>byId('scanCameraInput').click();
   byId('scanChoose').onclick=()=>byId('scanChooseInput').click();
