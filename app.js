@@ -1527,6 +1527,31 @@ function examSuggested(q,answer){
  // A standalone incorrect number (including a signed fraction) is not
  // evidence of any method. Earlier the opposite gradient -3/2 scored the
  // mark for the correct perpendicular tangent gradient +2/3.
+ const rawNumeric=String(answer||'').trim();
+ // AQA sometimes explicitly awards M marks to particular incorrect final
+ // values. Only question-specific, source-verified examples are eligible.
+ // Prevent arbitrary wrong numbers from earning any speculative credit.
+ if(q.answerType==='numeric'&&Array.isArray(q.partialNumericMarkVariants)&&
+   /^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?\s*(?:%|[a-zA-Z°Ω]+)?$/i.test(rawNumeric)){
+  const received=parseNumber(rawNumeric);
+  const variant=q.partialNumericMarkVariants.find(item=>Number.isFinite(item.value)&&
+    Math.abs(received-item.value)<=Math.max(1e-10,Math.abs(item.value)*.002));
+  if(variant){
+   const allowed=clamp(Math.trunc(variant.marks),0,q.marks-1);
+   const flags=q.markPoints.map((_,i)=>i<allowed);
+   return {preds:flags,scores:flags.map(on=>on?1:0),
+     finalCorrect:false,confidence:'high',suggested:allowed};
+  }
+ }
+ // Where the original mark scheme reserves a mark for standard form,
+ // 5680000000 is not a full-mark replacement for 5.68×10^9.
+ if(q.markingMode==='standardFormStrict'&&q.answerType==='numeric'&&
+    numericMatch(q,rawNumeric)&&
+    !/(?:e[+-]?\d+|(?:×|x|\*)\s*10\s*(?:\^|\*\*)\s*[-+]?\d+)/i.test(rawNumeric)){
+  const partial=Math.max(0,q.marks-1);
+  const flags=q.markPoints.map((_,i)=>i<partial);
+  return {preds:flags,scores:flags.map(on=>on?1:0),finalCorrect:false,confidence:'high',suggested:partial};
+ }
  const scalar=String(answer||'').trim();
  if(q.answerType==='numeric'&&
     /^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?(?:\s*\/\s*[-+]?(?:\d+(?:\.\d*)?|\.\d+))?(?:\s*(?:%|[a-zA-ZΩ°]+))?$/i.test(scalar)&&
