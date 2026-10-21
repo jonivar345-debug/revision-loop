@@ -1825,17 +1825,19 @@ async function setLocationInfo(id){
   if(!extract)throw Error('No location summary');
   if(openLocationId===id&&host.isConnected){
    const sentences=extract.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s=>s.trim()).filter(Boolean)||[extract];
-   document.getElementById('locationOverview').textContent=sentences.slice(0,3).join(' ').slice(0,750);
+   const first=!LOCATION_FACTS[id]?1:0;
+   document.getElementById('locationOverview').textContent=
+     (sentences.slice(first,first+5).join(' ')||extract).slice(0,900);
    if(!LOCATION_CULTURE_DETAILS[id]){
-    const extra=sentences.slice(3,7).join(' ').slice(0,650);
+    const extra=sentences.slice(first+5,first+10).join(' ').slice(0,650);
     document.getElementById('locationCulture').textContent=extra||
-      'See the linked local history and culture article for further details about '+l.name+'.';
+      'Explore the history and local traditions of '+l.name+' through its linked encyclopaedia article.';
    }
    if(!LOCATION_FACTS[id]){
-    const extra=sentences[7]||sentences[6]||sentences[5]||sentences[4]||'';
-    document.getElementById('locationQuickFact').textContent=extra?
-      extra.slice(0,300):
-      'See the source article for a further researched fact about '+l.name+'.';
+    const firstFact=sentences[0]||'';
+    document.getElementById('locationQuickFact').textContent=firstFact?
+      firstFact.slice(0,300):
+      'Approximate coordinates: '+Math.abs(l.lat).toFixed(3)+'° '+(l.lat>=0?'N':'S')+', '+Math.abs(l.lon).toFixed(3)+'° '+(l.lon>=0?'E':'W')+'.';
    }
   }
  }catch{
