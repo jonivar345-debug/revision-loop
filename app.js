@@ -1488,6 +1488,56 @@ function totalMarkingPoints(q,flags){
 }
 function examSuggested(q,answer){
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
+ // AQA source-first repairs (2020–21): award only the distinct
+ // reasoning/results actually demonstrated, not keyword overlap.
+ if(/^aqa(?:TrigErrors2020|TrigSolutions2020|ReciprocalShift2021|ReciprocalAsymptotes2021|CombustionDefinition2021|CombustionDiscrepancy2021)$/.test(String(q.markingMode||''))){
+  const input=String(answer||'').toLowerCase().replace(/[−–—]/g,'-');
+  let flags=[];
+  switch(q.markingMode){
+   case 'aqaTrigErrors2020':{
+    const cancellation=/(?:cancel|divid|lost|excluded|forgot|ignor)[^.!?\n]{0,75}cos|cos\s*\(?y\)?\s*=\s*0\b|zero\s+cos/.test(input);
+    const otherAngle=/(?:-60\b|±\s*60\b|negative\s+60\b)|(?:cos\s*\(?y\)?\s*=\s*0[.]5[^.!?\n]{0,65}(?:both|two|other|second|another))/i.test(input);
+    flags=[cancellation,otherAngle];
+    break;
+   }
+   case 'aqaTrigSolutions2020':{
+    const expanded=input.replace(/±\s*(60|90)\b/g,' -$1 +$1 ');
+    const rawAngles=[...expanded.matchAll(/(?<![\w.])[-+]?\d+(?:\.\d+)?(?=(?:\s*(?:°|º|degrees?\b|[,;\/\s\]\}]))|$)/g)].map(x=>Number(x[0]));
+    const correct=new Set([-90,-60,60,90]);
+    const distinct=new Set(rawAngles.filter(x=>correct.has(x)));
+    const extras=rawAngles.some(x=>!correct.has(x));
+    flags=[distinct.size>=2,distinct.size===4&&!extras];
+    break;
+   }
+   case 'aqaReciprocalShift2021':{
+    const expr=input.replace(/\s+/g,'').replace(/\u2212/g,'-');
+    const good=/1\/\(x-3\)|(?:x-3)\^-1|\\frac\{1\}\{x-3\}/.test(expr);
+    flags=[good];
+    break;
+   }
+   case 'aqaReciprocalAsymptotes2021':{
+    flags=[/\bx\s*=\s*3\b/.test(input),/\by\s*=\s*0\b/.test(input)];
+    break;
+   }
+   case 'aqaCombustionDefinition2021':{
+    const mole=/(?:\bone\s+mole\b|\b1\s*(?:mol|mole)\b)/.test(input);
+    const oxygen=/(?:\boxygen\b|\bo2\b)/.test(input);
+    const full=/(?:complet\w*[^.!?\n]{0,25}(?:burn|combust)|(?:burn|combust)\w*[^.!?\n]{0,25}complet\w*|fully\s+oxidis|fully\s+oxidiz)/.test(input);
+    const states=/standard\s+states?/.test(input);
+    const conditions=/(?:100\s*kpa|standard\s+conditions?)/.test(input);
+    flags=[mole&&oxygen&&full,states&&conditions];
+    break;
+   }
+   case 'aqaCombustionDiscrepancy2021':{
+    const acceptable=/(?:incomplete\s+(?:combustion|burning)|(?:fuel|sample|liquid|alcohol)[^.!?\n]{0,45}(?:evaporat|vaporis|vaporiz)|(?:evaporat|vaporis|vaporiz)[^.!?\n]{0,45}(?:fuel|sample|liquid|alcohol)|(?:non[-\s]?standard|not\s+(?:at|under)\s+standard)\s+(?:experiment\w*\s+)?(?:conditions?|temperatures?|pressures?))/i.test(input);
+    flags=[acceptable];
+    break;
+   }
+  }
+  const score=flags.filter(Boolean).length;
+  return {preds:flags,scores:flags.map(ok=>ok?1:0),suggested:score,
+   finalCorrect:score===q.marks,confidence:score===q.marks?'high':'medium'};
+ }
  // Source-verified 2018 AQA AS Maths interval question: correct end-points
  // alone earn a method mark; the second mark needs an OPEN interval.
  // A wrong end-point must never be mistaken for the correct interval because
