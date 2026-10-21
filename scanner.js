@@ -251,7 +251,7 @@
   const a=normal(answer);
   while((m=re.exec(ref))){
    const formula=normal(m[1]+'='+m[2]);
-   if(formula.length>=4&&a.includes(formula))return m[0];
+   if(formula.length>=4&&a.includes(formula))return String(answer).split(/\r?\n|;/).find(line=>normal(line).includes(formula))?.trim().slice(0,200)||null;
   }
   return null;
  }
