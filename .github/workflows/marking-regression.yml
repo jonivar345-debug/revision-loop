@@ -22,3 +22,5 @@ jobs:
           node tests/historical-supplement-regression.cjs
           node tests/archive-regression.cjs
           node tests/question-alignment-regression.cjs
+          node tests/paper-inventory-regression.cjs
+          node tests/final-answer-policy.cjs
