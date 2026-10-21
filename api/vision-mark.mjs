@@ -265,6 +265,11 @@ async function handle(request) {
         return json({providerReady:false,error:'The API account check could not reach the AI provider. Try later.'},502,allowed);
       }
     }
+    // Free-first by default: never call a billable model unless the
+    // eligible API account owner deliberately opts in on Vercel.
+    if(process.env.ENABLE_PAID_VISION_MARKING!=='true'){
+      return json({error:'Paid AI photograph marking is disabled. Use the free local checker or the manual ChatGPT hand-off.'},403,allowed);
+    }
     question=normaliseInput(parsed);
   } catch(err) {
     return json({error:err instanceof SyntaxError?'Invalid JSON.':String(err.message||'Invalid request.').slice(0,130)},400,allowed);
