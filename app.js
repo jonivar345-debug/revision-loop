@@ -1876,10 +1876,12 @@ function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI
 function visibleGlobePins(w,h,region=''){
  const projected=LOCATIONS.filter(l=>!region||l.region===region)
   .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:profile.shopOwned.locations.includes(l.id)}))
-  .filter(x=>x.p.z>0).sort((a,b)=>Number(b.owned)-Number(a.owned));
- const shown=[];
- for(const item of projected){if(shown.some(x=>Math.hypot(x.p.x-item.p.x,x.p.y-item.p.y)<10))continue;shown.push(item)}
- return shown;
+  .filter(x=>x.p.z>0)
+  .sort((a,b)=>Number(a.owned)-Number(b.owned));
+ // Use the geographical projection for EVERY eligible destination.
+ // The old 10-pixel de-duplication hid valid nearby cities without telling
+ // students and could make markers appear to be at the wrong destination.
+ return projected;
 }
 function drawGlobe(){
  const c=document.getElementById('globe');if(!c)return;
@@ -1897,9 +1899,17 @@ function drawGlobe(){
        const lat=Math.asin(yy*cosLat0+z*sinLat0);
        const lon=lon0+Math.atan2(xx,z*cosLat0-yy*sinLat0);
        let u=((lon/(2*Math.PI)+.5)%1+1)%1,v=.5-lat/Math.PI;
-       const tx=Math.min(earthW-1,Math.max(0,Math.floor(u*earthW))),ty=Math.min(earthH-1,Math.max(0,Math.floor(v*earthH))),si=(ty*earthW+tx)*4,di=(py*w+px)*4;
+       // Bilinear sample rather than nearest-neighbour: eliminates isolated
+       // saturated green pixels and jagged seams when the Earth rotates.
+       const tx=u*(earthW-1),ty=Math.min(earthH-1,Math.max(0,v*(earthH-1)));
+       const x0=Math.floor(tx),y0=Math.floor(ty),x1=Math.min(earthW-1,x0+1),y1=Math.min(earthH-1,y0+1);
+       const fx=tx-x0,fy=ty-y0,di=(py*w+px)*4;
+       const a00=(y0*earthW+x0)*4,a10=(y0*earthW+x1)*4,a01=(y1*earthW+x0)*4,a11=(y1*earthW+x1)*4;
        const light=.58+.42*Math.max(0,z+.15*xx-.15*yy);
-       out[di]=earthPixels[si]*light;out[di+1]=earthPixels[si+1]*light;out[di+2]=earthPixels[si+2]*light;out[di+3]=255;
+       const r=(earthPixels[a00]*(1-fx)+earthPixels[a10]*fx)*(1-fy)+(earthPixels[a01]*(1-fx)+earthPixels[a11]*fx)*fy;
+       const g=(earthPixels[a00+1]*(1-fx)+earthPixels[a10+1]*fx)*(1-fy)+(earthPixels[a01+1]*(1-fx)+earthPixels[a11+1]*fx)*fy;
+       const b=(earthPixels[a00+2]*(1-fx)+earthPixels[a10+2]*fx)*(1-fy)+(earthPixels[a01+2]*(1-fx)+earthPixels[a11+2]*fx)*fy;
+       out[di]=r*light;out[di+1]=Math.min(g,(r+b)/2+78)*light;out[di+2]=b*light;out[di+3]=255;
      }
    }
    ctx.putImageData(img,0,0);
