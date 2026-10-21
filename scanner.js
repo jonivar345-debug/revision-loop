@@ -320,6 +320,11 @@
    const pt=terms(point),pn=numericTokens(point);
    for(const line of lines){
     if(possiblyIncorrectArithmetic(line))continue;
+    const figures=(line.match(/[-+]?(?:\d+(?:\.\d*)?|\.\d+)/g)||[]);
+    // Raw copied data or OCR garbage must not get a method mark just
+    // because some individual numbers happen to match a mark scheme.
+    if(figures.length>=3&&!/[=+*/×÷^<>]|\b(?:mean|total|sum|area|mass|gradient|pressure|current|force|energy|power|result|answer|therefore|hence|mol|voltage|rate|velocity)\b/i.test(line))continue;
+    if(figures.length>=2&&/^\s*[-+]?\d[\d.\s,;\-]+$/.test(line))continue;
     const score=typeof markPointPrediction==='function'?markPointPrediction(line,point):0;
     const lt=terms(line),ln=numericTokens(line);
     const overlap=pt.filter(w=>lt.includes(w)).length;
