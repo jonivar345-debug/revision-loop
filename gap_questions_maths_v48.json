@@ -274,7 +274,7 @@
       "subtopic": "Algebra",
       "courseTopic": "Algebra & functions",
       "marks": 4,
-      "prompt": "Solve |2x−3|=x+1 using two cases and show why no extraneous root is present.",
+      "prompt": "Solve |2x−3|=x+1 for real x by considering both signs of the modulus expression. State the condition for each case and show that every proposed solution satisfies the original equation.",
       "markPoints": [
         "First note right side x+1 must be non-negative.",
         "If 2x−3≥0 then 2x−3=x+1, giving x=4.",
@@ -829,7 +829,7 @@
       "subtopic": "Trigonometry",
       "courseTopic": "Trigonometry",
       "marks": 4,
-      "prompt": "Solve 2cos²x−3cosx+1=0 exactly for 0≤x<2π, giving all solutions.",
+      "prompt": "Find every solution to the trigonometric equation 2cos²x−3cosx+1=0 in the interval 0≤x<2π. Give the answers exactly in radians, explaining how you obtain all possible angles.",
       "markPoints": [
         "Set u=cosx and factor (2u−1)(u−1)=0.",
         "So cosx=1/2 or cosx=1.",
