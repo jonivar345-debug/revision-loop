@@ -1310,6 +1310,16 @@ function examSuggested(q,answer){
   const complete=preds.every(Boolean)&&String(answer).trim().split(/\s+/).length>=Math.max(20,q.markPoints.length*5);
   if(!complete)suggested=Math.min(suggested,Math.max(1,Math.ceil(q.marks*.66)));
 }
+ // A response consisting of exactly ONE listed marking-point statement
+ // is evidence for that distinct point, not for the entire question.
+ // Shared constants/formula symbols can otherwise trigger unrelated points.
+ if(q.requiresWorking===true && q.markPoints.length>1 && String(answer||'').trim()){
+  const singleIndex=q.markPoints.findIndex(point=>compact(point)===compact(answer));
+  if(singleIndex>=0){
+   preds=preds.map((_,i)=>i===singleIndex);
+   suggested=Number(q.markPointMarks?.[singleIndex])||1;
+  }
+ }
  // A bare number or isolated keyword in a multi-part question cannot be
  // used as evidence for several separate methods/explanations. Older scorers
  // could award a full four-mark proof for "1" due to matching numerals.
