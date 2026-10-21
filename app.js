@@ -1436,6 +1436,16 @@ function examSuggested(q,answer){
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  const scores=q.markPoints.map((p,i)=>Array.isArray(q.markEvidenceRules?.[i])?
    evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p));
+ // Preserve equivalent formula notation without requiring the student's
+ // algebra to reproduce the exact English marking-point sentence.
+ // Only explicitly curated expressions are eligible for this shortcut.
+ if(Array.isArray(q.markPointExpressionAlternatives)){
+  const answerCompact=compact(answer);
+  q.markPointExpressionAlternatives.forEach((expressions,i)=>{
+   if(i>=scores.length||!Array.isArray(expressions))return;
+   if(expressions.some(expr=>String(expr).length>=5&&answerCompact.includes(compact(expr))))scores[i]=1;
+  });
+ }
  let preds=scores.map(v=>v>=.5);
  const variants=(q.answerVariants||[]).map(x=>compact(x)).filter(Boolean);
  const exactVerbal=variants.length>0&&variants.includes(compact(answer));
@@ -1527,6 +1537,17 @@ function examSuggested(q,answer){
   preds=preds.map((_,i)=>i===chosen);
   suggested=chosen>=0?Math.min(1,Number(q.markPointMarks?.[chosen])||1):0;
  }
+ // Conditional marks in genuine AQA schemes: a justification cannot
+ // score where the prerequisite experimental change was not justified.
+ if(q.markPointDependencies&&typeof q.markPointDependencies==='object'){
+  let changed=false;
+  Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
+   const i=Number(index);
+   if(!Number.isInteger(i)||!preds[i]||!Array.isArray(prerequisites))return;
+   if(prerequisites.some(p=>!preds[p])){preds[i]=false;changed=true}
+  });
+  if(changed)suggested=totalMarkingPoints(q,preds);
+ }
  const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
@@ -1597,7 +1618,8 @@ function renderExam(q){
     res.confidence=vision?(vision.uncertain?'low':'medium'):'low';
    }
    marking.classList.add('show');
-   marking.innerHTML='<b>'+(q.year==='Practice'?'Practice marking criteria:':'Question marking criteria:')+'</b>'+(q.markingMode==='anyN'?'<p class="copyright-note">Any '+q.marks+' distinct valid points can earn '+q.marks+' marks, even if more alternatives are shown.</p>':'')+'<div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+(scannedText?'<small class="scan-evidence '+(evidence?.[i]?.strong?'scan-evidence-found':'')+'">'+(evidence?.[i]?.strong?'Likely evidence: “'+esc((evidence[i].line||'').slice(0,175))+'”'+(vision&&evidence[i].reason?' — '+esc(evidence[i].reason):''):(vision?'Not awarded: '+esc((evidence?.[i]?.reason||'No clear evidence detected.').slice(0,210)):'No matching step identified; check the photograph and decide manually.'))+'</small>':'')+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Checked numerical answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
+   marking.innerHTML='<b>'+(q.year==='Practice'?'Practice marking criteria:':'Question marking criteria:')+'</b>'+(q.markingMode==='anyN'?'<p class="copyright-note">Any '+q.marks+' distinct valid points can earn '+q.marks+' marks, even if more alternatives are shown.</p>':'')+'<div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+(scannedText?'<small class="scan-evidence '+(evidence?.[i]?.strong?'scan-evidence-found':'')+'">'+(evidence?.[i]?.strong?'Likely evidence: “'+esc((evidence[i].line||'').slice(0,175))+'”'+(vision&&evidence[i].reason?' — '+esc(evidence[i].reason):''):(vision?'Not awarded: '+esc((evidence?.[i]?.reason||'No clear evidence detected.').slice(0,210)):'No matching step identified; check the photograph and decide manually.'))+'</small>':'')+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Checked numerical answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'')+
+    (q.officialMarkingNotes?'<p class="official-marking-note"><b>AQA marking detail:</b> '+esc(q.officialMarkingNotes)+'</p>':'');
    currentExamScore=res.suggested;
    const ef=document.getElementById('examFeedback');ef.className='feedback show '+(scannedText?'neutral':res.finalCorrect?'correct':'neutral');
    ef.textContent=vision?(vision.source==='chatgpt-manual-import'?'ChatGPT suggestions imported: '+res.suggested+'/'+q.marks+' provisional marks. This was not checked directly by Revision Loop; compare every tick with your answer before saving. '+(vision.reviewNotes||''):'AI vision suggested '+res.suggested+'/'+q.marks+' provisional marks by inspecting the photograph directly. Check every credited method step and adjust marks before saving. '+(vision.uncertain?'Some handwriting was uncertain. ':'')+(vision.reviewNotes||'')):scannedText?'Suggested '+res.suggested+'/'+q.marks+' marks from your corrected transcription. Evidence is shown beside each proposed mark. Handwritten symbols and method steps can be misread, so adjust every check before saving.':res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
