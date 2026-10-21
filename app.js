@@ -1165,7 +1165,22 @@ function renderExam(q){
  const sourceNote=original?'<div class="copyright-note">Original exam-style practice question, not an AQA past-paper question or official mark scheme.</div>':q.sourceFirst?'<div class="copyright-note">This bank entry is source-linked: open the source first because its original figure/table/context is needed.</div>':secondary?'<div class="copyright-note">2025 AQA paper entry cross-checked against independent paper/mark-scheme indexes. The direct public AQA PDF was not available through the current web index, so provenance is shown explicitly.</div>':'<div class="copyright-note">In-app wording is a faithful self-contained paraphrase of the verified AQA task.</div>';
  document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(original?'Original practice':secondary?'AQA 2025 · cross-checked':'AQA source-linked')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(original?'Practice Q'+q.question:q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div>'+(original?'':'<div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(secondary?'Question source/index':'Open official AQA question')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(secondary?'Marking source/index':'Official mark scheme')+'</a></div>')+'<textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<button id="markExam" class="check-btn">Mark my answer</button><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
  window.RevisionScan?.mount(q.id);
- document.getElementById('markExam').onclick=()=>{
+ document.getElementById('markExam').onclick=async()=>{
+   const submit=document.getElementById('markExam');
+   if(submit?.disabled)return;
+   if(submit){submit.disabled=true;submit.textContent='Reading and marking…'}
+   try{
+    const scan=window.RevisionScan;
+    const photoCount=scan?.countFor(q.id)||0;
+    const outcome=photoCount?await scan.prepareForMark(q.id):{ready:true,source:'typed'};
+    if(!outcome?.ready){
+      const ef=document.getElementById('examFeedback');
+      if(ef){ef.className='feedback show neutral';ef.textContent=outcome?.message||'Please check your scanned working and try again.'}
+      document.getElementById('examMarking')?.classList.remove('show');
+      document.getElementById('scoreEditor')?.classList.remove('show');
+      return;
+    }
+    if(!document.getElementById('examAnswer'))return;
    const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');
    const scannedText=window.RevisionScan?.usedOCR(q.id)===true;
    const evidence=scannedText?window.RevisionScan?.reviewEvidence(q,answer,res):null;
@@ -1185,6 +1200,15 @@ function renderExam(q){
      currentExamScore=clamp(currentExamScore,0,q.marks);
      renderScoreEditor(q,answer);
    });
+   }catch(error){
+     const ef=document.getElementById('examFeedback');
+     if(ef){ef.className='feedback show neutral';ef.textContent='Could not mark this photograph. It is still attached. You can retry or correct the recognised transcription. No marks have been saved.'}
+     document.getElementById('scoreEditor')?.classList.remove('show');
+     console.warn('Revision Loop marking error',error);
+   }finally{
+     const button=document.getElementById('markExam');
+     if(button){button.disabled=false;button.textContent='Mark my answer'}
+   }
  };
 }
 
