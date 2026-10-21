@@ -1497,7 +1497,7 @@ function examSuggested(q,answer){
   // M1: correct use of the first three binomial terms; A1: 4,6
   // coefficients; final A1: actual simplified polynomial, not just
   // an unevaluated expression with the correct coefficients.
-  const correct=/^1-12\*?x\+54\*?x\^?2$/.test(raw);
+  const correct=raw.includes('1-12x+54x^2')||raw.includes('1-12*x+54*x^2');
   const binomial=/1\+4\*?\(-?3x\)\+6\*?\(-?3x\)\^?2/.test(raw);
   const partial=/^54x\^?2$/.test(raw);
   const score=correct?3:binomial?2:partial?1:0;
