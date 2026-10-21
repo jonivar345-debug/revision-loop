@@ -194,8 +194,9 @@
     const score=typeof markPointPrediction==='function'?markPointPrediction(line,point):0;
     const lt=terms(line),ln=numericTokens(line);
     const overlap=pt.filter(w=>lt.includes(w)).length;
-    const sameNumber=pn.some(a=>ln.some(b=>Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=Math.max(Math.abs(a)*.008,.005)));
-    const rank=score+.07*Math.min(3,overlap)+(sameNumber?.08:0);
+    const finalExpected=pn.length?pn[pn.length-1]:NaN;
+    const sameNumber=Number.isFinite(finalExpected)&&ln.some(b=>Number.isFinite(b)&&Math.abs(finalExpected-b)<=Math.max(Math.abs(finalExpected)*.008,.005));
+    const rank=score+.07*Math.min(3,overlap)+(sameNumber?.35:0);
     if(rank>bestRank){bestRank=rank;bestScore=score;bestOverlap=overlap;bestSameNumber=sameNumber;best=line}
    }
    const strong=bestScore>=.74||(bestOverlap>=1&&bestSameNumber&&bestScore>=.28)||(bestOverlap>=2&&bestScore>=.55);
