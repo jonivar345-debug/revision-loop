@@ -1539,6 +1539,35 @@ function examSuggested(q,answer){
   const score=endpoints?(open&&!closed?2:1):0;
   return {preds:[score>=1,score===2],scores:[score>=1?1:0,score===2?1:0],finalCorrect:score===2,confidence:'high',suggested:score};
  }
+ // Two independently checked source questions require a particular *method*.
+ // Do not infer proof/rationalisation marks from a bare correct result.
+ if(q.markingMode==='firstPrinciplesQuadratic2020'){
+  const raw=String(answer||'').toLowerCase().replace(/[−–]/g,'-')
+   .replace(/²/g,'^2').replace(/→|⇒|->/g,'to').replace(/\s+/g,'')
+   .replace(/(?:\*\*)/g,'^');
+  const setup=(/f\(x\+h\)|4\(x\+h\)\^2/.test(raw))&&
+   (/f\(x\)|4x\^2\+x/.test(raw))&&(/\/h|overh|dividebyh/.test(raw));
+  const expand=/8x\*?h/.test(raw)&&/4h\^2/.test(raw);
+  const cancel=/8xh\+4h\^2\+h/.test(raw)||/8x\+4h\+1/.test(raw);
+  const limit=(/lim|h(?:to|=)0|limitash/.test(raw))&&/8x\+1/.test(raw)&&cancel;
+  const preds=[setup,expand,cancel,limit];
+  return {preds,scores:preds.map(v=>v?1:0),suggested:preds.filter(Boolean).length,
+   finalCorrect:limit,confidence:preds.every(Boolean)?'high':'medium'};
+ }
+ if(q.markingMode==='rationaliseSurd2024'){
+  const raw=String(answer||'').toLowerCase().replace(/\s+/g,'').replace(/[−–]/g,'-')
+   .replace(/\\sqrt\{?(\d+)\}?/g,'√$1').replace(/sqrt\(?(\d+)\)?/g,'√$1')
+   .replace(/×|·/g,'*').replace(/\*/g,'*');
+  const conjugate=/(?:√5\+√3|√3\+√5)/.test(raw)&&
+    (/(?:√5-√3|√3-√5)/.test(raw)||/conjugate/.test(raw))&&
+    (/\//.test(raw)||/numerator|denominator/.test(raw));
+  const numerator=/(?:18\+4\*?√15|4\*?√15\+18|18\+2\*?√60)/.test(raw);
+  const denominator=/(?:denominator(?:=|is)2|5-3=2|5-3\)?=2|\/2|over2)/.test(raw);
+  const final=/(?:9\+2\*?√15|9\+√60|2\*?√15\+9|√60\+9)/.test(raw);
+  const preds=[conjugate,numerator,denominator,final];
+  return {preds,scores:preds.map(v=>v?1:0),suggested:preds.filter(Boolean).length,
+   finalCorrect:final,confidence:preds.every(Boolean)?'high':'medium'};
+ }
  // A standalone incorrect number (including a signed fraction) is not
  // evidence of any method. Earlier the opposite gradient -3/2 scored the
  // mark for the correct perpendicular tangent gradient +2/3.
