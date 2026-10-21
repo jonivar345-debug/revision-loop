@@ -1205,6 +1205,12 @@ function renderCard(c){
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text;document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
+function totalMarkingPoints(q,flags){
+ // Some AQA questions say 'any three' out of a wider list of accepted
+ // answers. Every distinct credited alternative must count equally.
+ if(q.markingMode==='anyN')return Math.min(q.marks,flags.filter(Boolean).length);
+ return clamp(flags.reduce((sum,on,i)=>sum+(on?(q.markPointMarks?.[i]??1):0),0),0,q.marks);
+}
 function examSuggested(q,answer){
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  const scores=q.markPoints.map(p=>markPointPrediction(answer,p));
@@ -1238,6 +1244,7 @@ function examSuggested(q,answer){
   suggested=Math.max(suggested,Math.min(q.marks,1));
   if(inconsistentWorking)suggested=Math.min(suggested,Math.max(0,q.marks-1));
  }
+ if(q.markingMode==='anyN')suggested=totalMarkingPoints(q,preds);
  if(exactVerbal&&q.requiresWorking!==true){suggested=q.marks;preds=preds.map(()=>true);}
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
  if(q.modelAnswer&&String(answer||'').trim()){
@@ -1297,7 +1304,7 @@ function renderExam(q){
    })):(scannedText?window.RevisionScan?.reviewEvidence(q,answer,res):null);
    if(scannedText&&Array.isArray(evidence)){
     res.preds=res.preds.map((_,i)=>Boolean(evidence[i]?.strong));
-    res.suggested=clamp(res.preds.reduce((v,on,i)=>v+(on?(q.markPointMarks?.[i]??1):0),0),0,q.marks);
+    res.suggested=totalMarkingPoints(q,res.preds);
     res.confidence=vision?(vision.uncertain?'low':'medium'):'low';
    }
    marking.classList.add('show');
@@ -1307,8 +1314,7 @@ function renderExam(q){
    ef.textContent=vision?'AI vision suggested '+res.suggested+'/'+q.marks+' provisional marks by inspecting the photograph directly. Check every credited method step and adjust marks before saving. '+(vision.uncertain?'Some handwriting was uncertain. ':'')+(vision.reviewNotes||''):scannedText?'Suggested '+res.suggested+'/'+q.marks+' marks from your corrected transcription. Evidence is shown beside each proposed mark. Handwritten symbols and method steps can be misread, so adjust every check before saving.':res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
    renderScoreEditor(q,answer);
    document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{
-     currentExamScore=[...document.querySelectorAll('[data-mp]')].reduce((total,el)=>total+(el.checked?(q.markPointMarks?.[Number(el.dataset.mp)]??1):0),0);
-     currentExamScore=clamp(currentExamScore,0,q.marks);
+     currentExamScore=totalMarkingPoints(q,[...document.querySelectorAll('[data-mp]')].map(el=>el.checked));
      renderScoreEditor(q,answer);
    });
    }catch(error){
@@ -1696,8 +1702,14 @@ async function sync(manual=false){
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
  });
- for(const q of examQuestions)if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id)){
-  q.modelAnswer=corrections.modelAnswers[q.id];
+ for(const q of examQuestions){
+  if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id))q.modelAnswer=corrections.modelAnswers[q.id];
+  const changes=corrections.questionCorrections?.[q.id];
+  if(changes&&typeof changes==='object'){
+   for(const key of ['modelAnswer','markPoints','markPointMarks','markingMode']){
+    if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
+   }
+  }
  }
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
