@@ -394,3 +394,8 @@
  .outfit-image-tools{flex-direction:column}
  .outfit-image-tools .outfit-upload,.outfit-image-tools .outfit-clear{width:100%}
 }
+
+.exam-report-link{display:block;width:100%;border:1px solid #94a3b8;border-radius:9px;background:#f8fafc;color:#334155;font:inherit;font-size:.72rem;font-weight:750;margin:9px 0 5px;padding:10px;cursor:pointer}
+.exam-report-link:hover,.exam-report-link:focus-visible{border-color:#2563eb;background:#eff6ff}
+.exam-report-status{display:block;color:#475569;font-size:.72rem;min-height:14px;line-height:1.4;margin-bottom:4px}
+.character-art .outfit-overlay{z-index:5}
