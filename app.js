@@ -698,8 +698,12 @@ function numericMatch(q,answer){
  // Scale tolerance to the actual answer, including very small scientific-notation
  // quantities. A fixed 1e-9 floor wrongly treats zero as a valid 1e-11 result.
  const expected=q.numericAnswer;
- const tol=Number.isFinite(q.tolerance)&&q.tolerance>=0?q.tolerance:
+ const requestedTol=Number.isFinite(q.tolerance)&&q.tolerance>=0?q.tolerance:
    (expected===0?1e-9:Math.abs(expected)*.01);
+ // Imported practice problems can contain absurd absolute tolerances, e.g.
+ // 1e-13 for an answer near 1e-21. Do not accept zero, an incorrect exponent
+ // or an unrelated magnitude as an equivalent numerical answer.
+ const tol=expected===0?requestedTol:Math.min(requestedTol,Math.abs(expected)*.05);
  // Where an answer explicitly gives a recognisable unit, reject or
  // correctly convert a unit that conflicts with the requested quantity.
  // AQA frequently awards full marks for the right final result on ordinary
@@ -1726,7 +1730,7 @@ async function sync(manual=false){
   if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id))q.modelAnswer=corrections.modelAnswers[q.id];
   const changes=corrections.questionCorrections?.[q.id];
   if(changes&&typeof changes==='object'){
-   for(const key of ['prompt','modelAnswer','markPoints','markPointMarks','markingMode','markEvidenceRules']){
+   for(const key of ['prompt','modelAnswer','markPoints','markPointMarks','markingMode','markEvidenceRules','numericAnswer','tolerance']){
     if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
    }
   }
