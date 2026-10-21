@@ -12,7 +12,7 @@ const all=[...main,...older,...additions];
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const score=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
  app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('))+
- app.slice(app.indexOf('function examSuggested('),app.indexOf('function renderExam(',app.indexOf('function examSuggested(')))+
+ app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')))+
  'return examSuggested')();
 const normalized=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const topics=Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,new Set(main.filter(q=>q.subject===s).map(q=>q.revisionTopic))]));
