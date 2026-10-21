@@ -259,3 +259,20 @@
 .scan-vision-actions button{flex:1;min-width:160px;border:1px solid #c7d2fe;background:#fff;border-radius:8px;padding:9px;font-size:.72rem;color:#3730a3;font-weight:700;cursor:pointer}
 .scan-vision small{display:block;color:#64748b;line-height:1.5;font-size:.67rem}
 @media(max-width:600px){.scan-vision{padding:11px}.scan-vision-actions button{min-width:100%}}
+
+/* Full current-spec AQA paper audit: counted items are the indexed excerpts only. */
+.archive-scroll{overflow-x:auto;border:1px solid #dbe4ef;border-radius:12px;background:#fff;margin:12px 0}
+.archive-matrix{width:100%;min-width:590px;border-collapse:collapse;font-size:.75rem;line-height:1.4;color:#26344b}
+.archive-matrix th,.archive-matrix td{vertical-align:top;padding:11px 9px;border-bottom:1px solid #e5eaf3;text-align:left}
+.archive-matrix thead th{background:#f2f6fc;color:#0f172a;font-size:.76rem}
+.archive-matrix tbody th{width:84px;font-weight:800;white-space:nowrap}
+.archive-matrix tbody tr:last-child>*{border-bottom:0}
+.archive-paper-code{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;padding:2px 0;margin-bottom:3px}
+.archive-paper-code>span:first-child{font-weight:700;min-width:55px}
+.archive-part-count{font-size:.69rem;border-radius:8px;background:#e0f2fe;color:#075985;padding:3px 6px}
+.archive-part-count.archive-empty{color:#9f1239;background:#fff1f2}
+.archive-paper-code a{color:#1d4ed8;font-size:.7rem;text-decoration:underline}
+.archive-nonexistent{color:#64748b;font-style:italic;font-size:.71rem}
+.archive-context{display:block;font-size:.63rem;line-height:1.35;color:#66758e;max-width:125px;font-weight:400;white-space:normal;margin-top:3px}
+.archive-help{font-size:.74rem;line-height:1.55;color:#475569;margin:10px 0}
+@media(max-width:600px){.archive-matrix{min-width:540px}.archive-matrix th,.archive-matrix td{padding:9px 7px}}
