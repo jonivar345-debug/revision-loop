@@ -190,7 +190,12 @@
     const sc=possiblyIncorrectArithmetic(line)?0:(typeof markPointPrediction==='function'?markPointPrediction(line,point):0);
     if(sc>bestScore){bestScore=sc;best=line}
    }
-   const strong=bestScore>=.74;
+   const terms=x=>[...new Set((String(x).toLowerCase().match(/[a-z]{3,}/g)||[]))];
+   const overlaps=terms(point).filter(w=>terms(best).includes(w)).length;
+   // A succinct correct result such as "Terminal voltage 8 V" still counts
+   // as identifiable evidence even if the model mark point is much longer.
+   const strong=bestScore>=.74||(bestScore>=.42&&overlaps>=1&&
+     (bestScore>=.60||/[=+*/×÷]|\\d/.test(best)));
    return {line:strong?best:'',similarity:bestScore,strong};
   });
  }
