@@ -9,7 +9,7 @@ const start=script.indexOf('function renderPaperArchive(){');
 const end=script.indexOf('\nfunction refreshExamFilters(',start);
 assert(start>=0&&end>start,'Archive render function is available');
 let subject='Physics';
-const out={paperArchiveLinks:{innerHTML:''},topicOutsideResources:{innerHTML:''}};
+const out={paperArchiveLinks:{innerHTML:'',insertAdjacentHTML(where,html){this.innerHTML+=html},querySelectorAll(){return[]}},topicOutsideResources:{innerHTML:''}};
 const document={getElementById(id){return id==='examSubject'?{value:subject}:out[id]||null}};
 const papers={
  Physics:{'AS Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-1-as/'},
@@ -31,6 +31,7 @@ for(subject of ['Physics','Chemistry','Maths']){
  assert.match(html,/Official AQA paper and mark-scheme finder/);checks++;
  assert.equal((html.match(/<tr><th scope="row">/g)||[]).length,11,'All 11 years shown '+subject);checks++;
  assert.match(html,/0 indexed parts/,'Never imply all paper parts have been indexed');checks++;
+ if(subject==='Maths'){assert.match(html,/source-first/,'Source-dependent Maths questions are accessible separately');checks++;}
  if(subject==='Maths'){
   assert.match(html,/7356\/1/);checks++;
   assert.match(html,/7357\/3/);checks++;
