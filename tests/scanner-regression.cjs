@@ -18,7 +18,7 @@ for(const q of bank)if(extra[q.id])Object.assign(q,extra[q.id]);
 const usable=bank.filter(q=>q.standalone!==false);
 const begin=app.indexOf('function normalise(');
 const middle=app.indexOf('function nextSchedule(',begin);
-const scoreStart=app.indexOf('function totalMarkingPoints(',middle);
+const scoreStart=app.indexOf('function evidenceRuleScore(',middle);
 const scoreEnd=app.indexOf('function renderExam(',scoreStart);
 assert(begin>=0&&middle>begin&&scoreStart>middle&&scoreEnd>scoreStart,'Scorer anchors exist');
 const scorer=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'
@@ -104,6 +104,11 @@ assert.equal(scorer.totalMarkingPoints(anyThree,[false,false,true,true]),2,'Two 
 assert.equal(scorer.totalMarkingPoints(anyThree,[true,true,true,true]),3,'Additional valid ideas cannot exceed max marks');checks++;
 assert.equal(oneMarkProof.markPoints.length,1,'Single mark proof has one complete criterion');checks++;
 assert.equal(oneMarkProof.markPointMarks.reduce((a,b)=>a+b,0),1);checks++;
+const correctPractical='Rinse all the beaker and stirring rod into the volumetric flask, use a dropper to put the bottom of the meniscus on the line, then stopper the flask and invert it to mix.';
+assert.equal(scorer.examSuggested(anyThree,correctPractical).suggested,3,'Paraphrased three practical improvements earn full credit');checks++;
+assert.equal(scorer.examSuggested(anyThree,'Wash beaker into flask, set bottom of meniscus at the mark and invert the flask').suggested,3);checks++;
+assert.equal(scorer.examSuggested(anyThree,'Use a dropper near the mark, then invert the flask').suggested,2,'Only two independently correct improvements');checks++;
+assert.equal(scorer.examSuggested(anyThree,'Use a bigger beaker, a wider flask and a longer stirring rod').suggested,0,'Unrelated apparatus changes do not count');checks++;
 const previousWindow=global.window;
 try{
  global.window=browser;
