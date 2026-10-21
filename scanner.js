@@ -284,6 +284,8 @@
   const re=/\b([a-zA-Z][a-zA-Z0-9]*)\s*=\s*([a-zA-Z0-9πλθΔρµ²³^()*/×·÷+\-]{2,})/g;
   let m;
   const a=normal(answer);
+  // Do not award credit when the student expressly labels the formula wrong.
+  if(/\b(?:wrong|incorrect|invalid|false|not\s+correct)\b/i.test(String(answer||'')))return null;
   while((m=re.exec(ref))){
    const formula=normal(m[1]+'='+m[2]);
    if(formula.length>=4&&a.includes(formula))return String(answer).split(/\r?\n|;/).find(line=>normal(line).includes(formula))?.trim().slice(0,200)||null;
@@ -319,6 +321,7 @@
    let bestScore=0,best='',bestOverlap=0,bestSameNumber=false,bestRank=-1;
    const pt=terms(point),pn=numericTokens(point);
    for(const line of lines){
+    if(/\b(?:wrong|incorrect|invalid|false|not\s+correct)\b/i.test(line))continue;
     if(possiblyIncorrectArithmetic(line))continue;
     const figures=(line.match(/[-+]?(?:\d+(?:\.\d*)?|\.\d+)/g)||[]);
     // Raw copied data or OCR garbage must not get a method mark just
