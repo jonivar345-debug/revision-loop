@@ -13,15 +13,17 @@ const supplement=JSON.parse(fs.readFileSync(path.join(root,'paper_supplement_201
 const fixes=JSON.parse(fs.readFileSync(path.join(root,'exam_answer_corrections.json'),'utf8')).modelAnswers;
 bank.push(...supplement);
 for(const q of bank)if(Object.prototype.hasOwnProperty.call(fixes,q.id))q.modelAnswer=fixes[q.id];
+const extra=JSON.parse(fs.readFileSync(path.join(root,'exam_answer_corrections.json'),'utf8')).questionCorrections||{};
+for(const q of bank)if(extra[q.id])Object.assign(q,extra[q.id]);
 const usable=bank.filter(q=>q.standalone!==false);
 const begin=app.indexOf('function normalise(');
 const middle=app.indexOf('function nextSchedule(',begin);
-const scoreStart=app.indexOf('function examSuggested(',middle);
+const scoreStart=app.indexOf('function totalMarkingPoints(',middle);
 const scoreEnd=app.indexOf('function renderExam(',scoreStart);
 assert(begin>=0&&middle>begin&&scoreStart>middle&&scoreEnd>scoreStart,'Scorer anchors exist');
 const scorer=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'
   +app.slice(begin,middle)+app.slice(scoreStart,scoreEnd)
-  +'return {examSuggested,markPointPrediction}')();
+  +'return {examSuggested,markPointPrediction,totalMarkingPoints}')();
 const binding='window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};';
 assert(scanner.includes(binding),'Scanner export anchor exists');
 const injected=scanner.replace(binding,
@@ -93,6 +95,15 @@ const idealGas=bank.find(q=>q.id==='orig_v25_physics_gas_laws_1');
 assert(forceDiagram&&idealGas,'Combined instruction and routine questions exist');
 assert(scorer.examSuggested(forceDiagram,'3.5').suggested<forceDiagram.marks,'A diagram plus calculation needs both parts');checks++;
 assert.equal(scorer.examSuggested(idealGas,'120').suggested,idealGas.marks,'Ordinary numerical answer earns all available marks');checks++;
+const anyThree=bank.find(q=>q.id==='aqa_chem_as23_p1_q3_1');
+const oneMarkProof=bank.find(q=>q.id==='aqa_math_as24_p1_q4ai_src');
+assert(anyThree&&oneMarkProof,'2023 Chemistry and 2024 Maths linked questions included');
+assert.equal(anyThree.markingMode,'anyN');
+assert.equal(scorer.totalMarkingPoints(anyThree,[false,true,true,true]),3,'Any three valid practical improvements earn full marks');checks++;
+assert.equal(scorer.totalMarkingPoints(anyThree,[false,false,true,true]),2,'Two valid improvements earn two marks');checks++;
+assert.equal(scorer.totalMarkingPoints(anyThree,[true,true,true,true]),3,'Additional valid ideas cannot exceed max marks');checks++;
+assert.equal(oneMarkProof.markPoints.length,1,'Single mark proof has one complete criterion');checks++;
+assert.equal(oneMarkProof.markPointMarks.reduce((a,b)=>a+b,0),1);checks++;
 const previousWindow=global.window;
 try{
  global.window=browser;
