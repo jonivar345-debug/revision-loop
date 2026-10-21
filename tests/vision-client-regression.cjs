@@ -21,6 +21,9 @@ const document={getElementById:id=>components.get(id)||null,
 let store=new Map();
 const sessionStorage={getItem:key=>store.get(key)||null,setItem:(key,v)=>store.set(key,v),
   removeItem:key=>store.delete(key)};
+const localStore=new Map();
+const localStorage={getItem:k=>localStore.get(k)||null,setItem:(k,v)=>localStore.set(k,v),removeItem:k=>localStore.delete(k)};
+const shortToken='rl1.'+'A'.repeat(45)+'.'+'b'.repeat(43);
 const mockSource='data:image/jpeg;base64,'+Buffer.alloc(170,123).toString('base64');
 let photoSent=null,called=0,usedVision='';
 const visionMark={
@@ -40,7 +43,8 @@ const window={RevisionScan:{
 const fetch=async(url,options)=>{
  called++;photoSent=JSON.parse(options.body);
  assert.equal(url,'https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark');
- assert.equal(options.headers.Authorization,'Bearer a-strong-private-test-passphrase-1234');
+ assert(['Bearer a-strong-private-test-passphrase-1234','Bearer '+shortToken].includes(options.headers.Authorization));
+ if(photoSent.action==='remember-device')return {ok:true,status:200,json:async()=>({token:shortToken,expiresAt:Date.now()+30*24*3600*1000})};
  if(options.body==='{}')return {ok:false,status:400,json:async()=>({error:'Question information is required.'})};
  assert.equal(photoSent.images.length,1);
  return {ok:true,status:200,json:async()=>visionMark};
@@ -52,8 +56,8 @@ const canvas=()=>({width:0,height:0,getContext:()=>({fillRect(){},drawImage(){}}
 document.createElement=(tag)=>tag==='canvas'?canvas():createNode(tag+'-'+(++next));
 const mockURL=URL;
 const AbortCtrl=AbortController;
-new Function('window','document','sessionStorage','Image','fetch','URL','AbortController','setTimeout','clearTimeout',
- source)(window,document,sessionStorage,Image,fetch,mockURL,AbortCtrl,setTimeout,clearTimeout);
+new Function('window','document','sessionStorage','localStorage','Image','fetch','URL','AbortController','setTimeout','clearTimeout',
+ source)(window,document,sessionStorage,localStorage,Image,fetch,mockURL,AbortCtrl,setTimeout,clearTimeout);
 let checks=0;const vision=window.RevisionVision;
 assert(vision);checks++;
 assert(vision.allowedEndpoint('https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark'));checks++;
@@ -70,7 +74,7 @@ async function run(){
  assert.equal(components.get('scanVisionConfig').open,true);checks++;
  components.get('scanVisionUrl').value='https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark';
  components.get('scanVisionPass').value='a-strong-private-test-passphrase-1234';
- components.get('scanVisionSave').click();
+ await components.get('scanVisionSave').click();
  assert(sessionStorage.getItem('revisionloop-vision-session'));checks++;
  await vision.testPrivateConnection();
  assert.equal(called,1,'One free authentication check performed');checks++;
