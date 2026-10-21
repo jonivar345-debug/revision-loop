@@ -200,7 +200,25 @@
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74071-W-MS-JUN16.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "partialNumericMarkVariants": [
+        {
+          "value": 92,
+          "marks": 2,
+          "reason": "Using the full diameter as the radius in the circular area"
+        },
+        {
+          "value": 7.3,
+          "marks": 1,
+          "reason": "Using diameter squared rather than πd²/4 for area"
+        },
+        {
+          "value": 610000,
+          "marks": 1,
+          "reason": "Using the wire circumference for the area"
+        }
+      ],
+      "conditionalCreditNotes": "AQA June 2016 AS Physics Q03.3 expressly allows full marks for calculated force from 22.5 to 24 N and partial credit for recognised incorrect area methods."
     },
     {
       "id": "aqa_chem_2017_74041_1_1_v45",
