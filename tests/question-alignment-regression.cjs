@@ -31,6 +31,8 @@ near(Math.atan(Math.sqrt(5)/2)*180/Math.PI,48.2,.05,'2023 trig root');
 near(1100**2/(120*150**3),get('aqa_2018_chemA_2_3').numericAnswer,1e-6,'2018 Kp');
 near(4*211+6*189-4*193-5*205,get('aqa_2018_chemA_3_1').numericAnswer,1e-8,'2018 entropy');
 near(-905-873*.181,get('aqa_2018_chemA_3_2').numericAnswer,.1,'2018 Gibbs');
+near((102/75)*(295/300)*1000-1000,get('aqa_chem_as16_p1_q5_2').numericAnswer,.1,'2016 connected gas flasks');
+assert.match(get('aqa_chem_as16_p1_q5_2').modelAnswer,/337/, 'Gas solution displays consistent final volume');checks++;
 near(210*570,get('aqa_phys_2016_74071_1_3_v45').numericAnswer,1,'2016 aircraft thrust');
 near(190000/70000,get('aqa_phys_2016_74071_1_5_v45').numericAnswer,.02,'2016 aircraft deceleration');
 near(68**2/(2*190000/70000),get('aqa_phys_2016_74071_1_6_v45').numericAnswer,5,'2016 aircraft stopping');
