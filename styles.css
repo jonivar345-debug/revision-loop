@@ -226,3 +226,18 @@
 .scan-ocr-alternatives summary{cursor:pointer;font-weight:750;font-size:.76rem;line-height:1.4}
 .scan-ocr-alternatives pre{max-height:270px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:500 .76rem/1.5 ui-monospace,Consolas,monospace;color:#334155;background:white;border:1px solid #fcd34d;padding:10px;border-radius:7px;margin:8px 0 0}
 @media(max-width:580px){.scan-ocr-alternatives{padding:8px}.scan-ocr-alternatives pre{font-size:.73rem}}
+
+/* v42: mobile-first handwriting verification, photo alongside editable maths */
+.scan-review-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px;align-items:start}
+.scan-source-col,.scan-text-col{min-width:0;display:flex;flex-direction:column;gap:8px}
+.scan-source-col>strong,.scan-text-col strong{font-size:.76rem}
+.scan-source-photos{display:flex;flex-direction:column;gap:8px;max-height:440px;overflow:auto}
+.scan-reference-button{border:1px solid #cbd5e1;background:#f8fafc;padding:6px;border-radius:10px;cursor:pointer;text-align:center;color:#334155}
+.scan-reference-button img{width:100%;height:auto;max-height:310px;object-fit:contain;display:block;background:#fff;border-radius:6px}
+.scan-reference-button span{display:block;padding:5px 0 0;font-size:.66rem}
+.scan-math-keyboard{display:flex;flex-wrap:wrap;gap:5px;padding:5px 0}
+.scan-math-keyboard button{min-width:38px;min-height:37px;border:1px solid #93c5fd;border-radius:8px;background:#eff6ff;color:#1d4ed8;font-size:1rem;font-weight:700;cursor:pointer;touch-action:manipulation}
+.scan-math-keyboard button:active{background:#bfdbfe}
+.scan-math-keyboard button:focus-visible,.scan-reference-button:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
+.scan-ocr[hidden]{display:none!important}
+@media(max-width:680px){.scan-review-layout{grid-template-columns:minmax(0,1fr)}.scan-source-photos{max-height:300px}.scan-reference-button img{max-height:245px}.scan-ocr textarea{min-height:145px}.scan-math-keyboard button{flex:1 0 12%;min-width:35px}}
