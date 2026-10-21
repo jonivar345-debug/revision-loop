@@ -265,53 +265,77 @@ async function getCharacterArt(c,skipVerified=false){
  characterArtJobs.set(c.id,job);
  return job;
 }
+// Portraits may be blocked by third-party image hosts. Never leave a visible
+// character on an endless loading message. Preload, try another source,
+// then show a distinctive styled fallback with a link to the profile.
 function loadCharacterArt(root=document){
  const nodes=[...root.querySelectorAll('[data-character-art]')];
  const load=async el=>{
   const id=el.dataset.characterArt,c=CHARACTERS.find(x=>x.id===id);
   if(!c||el.dataset.loading==='1'||el.classList.contains('has-portrait'))return;
   el.dataset.loading='1';
-  const display=(url,tryBackup)=>{
-   if(!url||!el.isConnected)return false;
-   const img=new Image();img.loading='lazy';img.decoding='async';
-   img.alt=c.name+' character portrait';img.referrerPolicy='no-referrer';
-   img.onload=()=>{
-    if(!el.isConnected)return;
-    el.querySelectorAll('img').forEach(node=>node.remove());
-    el.prepend(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable');
-    el.dataset.loading='0';
-   };
-   img.onerror=async()=>{
-    if(!el.isConnected)return;
-    if(tryBackup){
-     const fallback=await getCharacterArt(c,true);
-     if(fallback&&fallback!==url){display(fallback,false);return}
-    }
-    el.dataset.loading='0';el.classList.add('art-unavailable');
-    const note=el.querySelector('.character-loading small');
-    if(note)note.textContent='Portrait unavailable';
-   };
-   img.src=url;return true;
+  const note=el.querySelector('.character-loading small');
+  const finish=()=>{
+   if(!el.isConnected)return;
+   el.dataset.loading='0';
+   el.classList.add('art-unavailable');
+   if(note)note.textContent='Portrait currently unavailable';
   };
-  const first=await getCharacterArt(c);
-  if(!display(first,true)){
-   el.dataset.loading='0';el.classList.add('art-unavailable');
-   const note=el.querySelector('.character-loading small');
-   if(note)note.textContent='Portrait unavailable';
-  }
+  const tryImage=url=>new Promise(resolve=>{
+   if(!url||!el.isConnected){resolve(false);return}
+   const img=new Image();
+   let done=false;
+   const timer=setTimeout(()=>complete(false),6500);
+   function complete(success){
+    if(done)return;
+    done=true;clearTimeout(timer);
+    img.onload=null;img.onerror=null;
+    if(success&&el.isConnected){
+     img.alt=c.name+' anime character portrait';img.loading='eager';img.decoding='async';img.referrerPolicy='no-referrer';
+     el.querySelectorAll('img').forEach(old=>old.remove());
+     el.prepend(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable');
+     el.dataset.loading='0';
+    }
+    resolve(success);
+   }
+   img.onload=()=>complete(true);
+   img.onerror=()=>complete(false);
+   img.src=url;
+  });
+  const limit=(promise,ms)=>Promise.race([
+   promise,new Promise(resolve=>setTimeout(()=>resolve(null),ms))
+  ]);
+  try{
+   const verified=VERIFIED_CHARACTER_IMAGE_URLS[c.id];
+   if(verified&&await tryImage(verified))return;
+   const backup=await limit(getCharacterArt(c,true),8500);
+   if(backup&&backup!==verified&&await tryImage(backup))return;
+  }catch{}
+  finish();
  };
+ // The first visible portraits start immediately, even where IntersectionObserver
+ // fails or a mobile webview never fires its initial intersection callback.
+ let observer=null;
  if('IntersectionObserver' in window){
-  const observer=new IntersectionObserver(entries=>{
-   for(const entry of entries)if(entry.isIntersecting){observer.unobserve(entry.target);load(entry.target)}
-  },{rootMargin:'280px'});
-  nodes.forEach(el=>observer.observe(el));
- }else nodes.forEach(load);
+  observer=new IntersectionObserver(entries=>{
+   for(const entry of entries)if(entry.isIntersecting){
+    observer.unobserve(entry.target);void load(entry.target);
+   }
+  },{rootMargin:'400px'});
+ }
+ nodes.forEach((el,i)=>{
+  if(observer)observer.observe(el);
+  if(i<8)void load(el);
+ });
 }
 function characterArtwork(c,o){
  const outfit=o?.name||'';
+ const initials=c.name.split(/[\s.-]+/).filter(Boolean).slice(0,2).map(p=>p[0]).join('').toUpperCase();
+ const gradient='linear-gradient(140deg,'+(c.hair||'#172554')+','+(c.hair2||'#334155')+',#0b142c)';
+ const preview=o&&o.id!==c.id+'-default';
  return '<div class="character-art" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
-  '<div class="character-loading"><span>'+esc(c.name)+'</span><small>Loading anime portrait…</small></div>'+
-  (o&&o.id!==c.id+'-default'?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
+  '<div class="character-loading" style="background:'+gradient+'"><span class="portrait-monogram">'+esc(initials)+'</span><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div>'+
+  (preview?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
   '</div>';
 }
 
