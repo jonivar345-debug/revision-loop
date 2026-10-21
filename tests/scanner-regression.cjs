@@ -18,7 +18,7 @@ assert(begin>=0&&middle>begin&&scoreStart>middle&&scoreEnd>scoreStart,'Scorer an
 const scorer=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'
   +app.slice(begin,middle)+app.slice(scoreStart,scoreEnd)
   +'return {examSuggested,markPointPrediction}')();
-const binding='window.RevisionScan={mount,commit,countFor,usedOCR,reviewEvidence,prepareForMark};';
+const binding='window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark};';
 assert(scanner.includes(binding),'Scanner export anchor exists');
 const injected=scanner.replace(binding,
  'window.__regression={set:(id,text)=>{currentId=id;ocrText=text;ocrApplied=true},reviewEvidence,possiblyIncorrectArithmetic,ocrMathSignature};'+binding);
