@@ -276,3 +276,19 @@
 .archive-context{display:block;font-size:.63rem;line-height:1.35;color:#66758e;max-width:125px;font-weight:400;white-space:normal;margin-top:3px}
 .archive-help{font-size:.74rem;line-height:1.55;color:#475569;margin:10px 0}
 @media(max-width:600px){.archive-matrix{min-width:540px}.archive-matrix th,.archive-matrix td{padding:9px 7px}}
+
+/* Year/archive improvements: visible missing years, safe original-paper sessions */
+.archive-source-first{margin:14px 0;border:1px solid var(--border,#dbe3ee);border-radius:12px;padding:12px;background:var(--surface,#fff)}
+.archive-source-first>summary{cursor:pointer;font-weight:800}
+.archive-source-first>p{font-size:.78rem;line-height:1.5;color:var(--muted,#64748b)}
+.archive-source-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid #e2e8f0}
+.archive-source-row:last-child{border-bottom:0}
+.archive-source-row>div{flex:1 1 190px;min-width:0}
+.archive-source-row strong,.archive-source-row small{display:block}
+.archive-source-row small{font-size:.7rem;color:var(--muted,#64748b);margin-top:4px}
+.archive-source-row>a,.archive-source-row>button{font:inherit;font-size:.75rem;font-weight:700;border:1px solid #93c5fd;border-radius:8px;background:#eff6ff;color:#1d4ed8;padding:9px;text-decoration:none;cursor:pointer}
+.archive-source-row>button{background:#1d4ed8;color:white}
+.archive-source-row>button:focus-visible,.archive-source-row>a:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
+.check-item.empty-topic small{font-size:.63rem;opacity:.75}
+.check-item.empty-topic input:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:580px){.archive-source-row>a,.archive-source-row>button{flex:1 1 130px;text-align:center}}
