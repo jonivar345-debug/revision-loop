@@ -135,9 +135,9 @@
    '<div class="scan-vision-title"><strong>AI handwriting & method marking</strong><span>Optional</span></div>'+
    '<p>AI can interpret your photograph directly, including calculations and diagrams. You must check the suggested marks. Photos go to your configured private service and its AI provider only when you press the AI button.</p>'+
    '<button type="button" id="scanVisionMark" class="scan-vision-action">Mark photographed working with AI</button>'+
-   '<div id="scanVisionStatus" role="status" aria-live="polite">Not connected yet. Local photo marking still works.</div>'+
+   '<div id="scanVisionStatus" role="status" aria-live="polite">The private AI backend is deployed. Save your separate access passphrase and test the connection before marking. Local photo marking still works.</div>'+
    '<details id="scanVisionConfig"><summary>Connect private AI marking service</summary>'+
-   '<p>Keep your AI provider key on the server. Enter only your private Vercel function address and separate access passphrase here. Do not use the public four-digit website PIN.</p>'+
+   '<p>Your backend address is filled in automatically. Enter only the separate private passphrase you saved as VISION_ACCESS_TOKEN in Vercel. Never enter or share your OpenAI API key here, and do not use the four-digit website PIN.</p>'+
    '<label for="scanVisionUrl">Private backend (connected automatically)</label>'+
    '<input id="scanVisionUrl" type="url" autocomplete="off" readonly spellcheck="false">'+
    '<label for="scanVisionPass">Private access passphrase (24+ characters)</label>'+
