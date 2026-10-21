@@ -62,6 +62,13 @@ for(const [reply,expectedMarks] of [
  assert.equal(scorer(chemistry2018Titre,reply).suggested,expectedMarks,
   'AS 2018 Chemistry Q2.3 invalid concordance/mean credit: '+reply);tests++;
 }
+
+const physicsRamp=map.get('aqa_2018_phyA_01_4');
+assert(physicsRamp,'AQA 2018 Physics stopping ramp question absent');tests++;
+assert.equal(physicsRamp.marks,3);tests++;
+assert.equal(scorer(physicsRamp,physicsRamp.modelAnswer).suggested,3,'Complete ramp answer should earn 3/3');tests++;
+assert(scorer(physicsRamp,'37 m').suggested<3,'Bare stopping distance does not justify sufficiency');tests++;
+assert.equal(scorer(physicsRamp,'Initial kinetic energy 2.76 x 10^6 J; height 15.6 m; stopping distance 37 m is less than 85 m so the ramp is sufficient.').suggested,3,'Alternative valid ramp workings');tests++;
 for(const [id] of expected){
  const v=map.get(id),result=scorer(v,v.modelAnswer);
  assert.equal(result.suggested,v.marks,'Stored model answer under-credited '+id);tests++;
