@@ -1730,12 +1730,12 @@
       "tolerance": 0.001,
       "unit": "",
       "markPoints": [
-        "Find x-intercepts at ±a.",
-        "Integrate a²−x².",
-        "Use the limits −a to a (or symmetry).",
-        "Set the area expression equal to 36.",
-        "Solve 4a³/3=36.",
-        "Obtain a=3 with justification."
+        "Find the two real x-intercepts at x=−a and x=a.",
+        "Use integration to express the enclosed area.",
+        "Integrate a²−x² correctly to obtain a²x−x³/3.",
+        "Use limits −a to a, or twice the integral from 0 to a.",
+        "Equate the evaluated area to 36.",
+        "Show that 4a³/3=36 and hence conclude a=3 with reasoning."
       ],
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-73561-QP-JUN22.PDF#page=10",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-73561-MS-JUN22.PDF#page=10",
@@ -1754,11 +1754,13 @@
         1,
         1
       ],
-      "modelAnswer": "Find x-intercepts at ±a. Integrate a²−x². Use the limits −a to a (or symmetry). Set the area expression equal to 36. Solve 4a³/3=36. Obtain a=3 with justification.",
+      "modelAnswer": "The roots of a²−x²=0 are x=−a and x=a. Integrate ∫_-a^a (a²−x²) dx. The antiderivative is a²x−x³/3. Evaluate it between the limits −a and a to get 4a³/3. Set 4a³/3=36, so a³=27 and a=3 (taking the positive root because a>0).",
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-73561-MS-JUN22.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "method-accuracy-reasoning",
+      "markingMode": "reasonedIntegralArea2022",
+      "requiresWorking": true
     },
     {
       "id": "aqa_math_as22_p1_q8c",
