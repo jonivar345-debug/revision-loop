@@ -285,7 +285,7 @@ function loadCharacterArt(root=document){
    if(!url||!el.isConnected){resolve(false);return}
    const img=new Image();
    let done=false;
-   const timer=setTimeout(()=>complete(false),6500);
+   const timer=setTimeout(()=>complete(false),3800);
    function complete(success){
     if(done)return;
     done=true;clearTimeout(timer);
@@ -308,7 +308,7 @@ function loadCharacterArt(root=document){
   try{
    const verified=VERIFIED_CHARACTER_IMAGE_URLS[c.id];
    if(verified&&await tryImage(verified))return;
-   const backup=await limit(getCharacterArt(c,true),8500);
+   const backup=await limit(getCharacterArt(c,true),4800);
    if(backup&&backup!==verified&&await tryImage(backup))return;
   }catch{}
   finish();
@@ -333,7 +333,7 @@ function characterArtwork(c,o){
  const initials=c.name.split(/[\s.-]+/).filter(Boolean).slice(0,2).map(p=>p[0]).join('').toUpperCase();
  const gradient='linear-gradient(140deg,'+(c.hair||'#172554')+','+(c.hair2||'#334155')+',#0b142c)';
  const preview=o&&o.id!==c.id+'-default';
- return '<div class="character-art" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
+ return '<div class="character-art outfit-style-'+esc(o?.styleId||'default')+'" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
   '<div class="character-loading" style="background:'+gradient+'"><span class="portrait-monogram">'+esc(initials)+'</span><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div>'+
   (preview?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
   '</div>';
