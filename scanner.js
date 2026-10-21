@@ -621,13 +621,11 @@ function scanCalculusStage(q,point,lines){
   if(ocrBusy)return {ready:false,message:'The photo is still being read. Wait for it to finish.'};
   const transcript=byId('scanTranscript');
   // If the student has edited a transcription, use that version, not the stale OCR.
-  if(transcript&&!byId('scanOCR')?.hidden&&transcript.value.trim().length>1&&!ocrApplied){
-   applyRecognized(id,false);
-   return {ready:true,source:'photograph',confidence:ocrConfidence};
-  }
   if(hasRecognizedMarking(id))return {ready:true,source:'photograph',confidence:ocrConfidence};
-  if(ocrText.length>1&&transcript?.value.trim().length>1){
-   applyRecognized(id,false);return {ready:true,source:'photograph',confidence:ocrConfidence};
+  // OCR output merely appearing in the editor is NOT confirmation. On
+  // subsequent Mark clicks, require the explicit confirmation button.
+  if(transcript&&!byId('scanOCR')?.hidden&&transcript.value.trim().length>1&&!ocrApplied){
+   return {ready:false,message:'The recognised text has not been confirmed. Compare it with your photograph, correct it, then tap Confirm transcription and suggest marks.'};
   }
   const result=await readWriting(id);
   if(id!==currentId)return {ready:false,message:'The question changed before recognition finished.'};
