@@ -1426,6 +1426,16 @@ function evidenceRuleScore(answer,alternatives){
  // allowing spelling variation but not unrelated single keywords.
  return alternatives.some(group=>Array.isArray(group)&&group.length>=2&&group.every(term=>present.some(t=>close(t,term))))?1:0;
 }
+function enforceMarkDependencies(q,flags){
+ if(!q.markPointDependencies||typeof q.markPointDependencies!=='object')return flags;
+ const checked=[...flags];
+ Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
+  const i=Number(index);
+  if(!Number.isInteger(i)||!checked[i]||!Array.isArray(prerequisites))return;
+  if(prerequisites.some(p=>!checked[p]))checked[i]=false;
+ });
+ return checked;
+}
 function totalMarkingPoints(q,flags){
  // Some AQA questions say 'any three' out of a wider list of accepted
  // answers. Every distinct credited alternative must count equally.
@@ -1539,14 +1549,10 @@ function examSuggested(q,answer){
  }
  // Conditional marks in genuine AQA schemes: a justification cannot
  // score where the prerequisite experimental change was not justified.
- if(q.markPointDependencies&&typeof q.markPointDependencies==='object'){
-  let changed=false;
-  Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
-   const i=Number(index);
-   if(!Number.isInteger(i)||!preds[i]||!Array.isArray(prerequisites))return;
-   if(prerequisites.some(p=>!preds[p])){preds[i]=false;changed=true}
-  });
-  if(changed)suggested=totalMarkingPoints(q,preds);
+ const permitted=enforceMarkDependencies(q,preds);
+ if(permitted.some((ok,i)=>ok!==preds[i])){
+  preds=permitted;
+  suggested=totalMarkingPoints(q,preds);
  }
  const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
@@ -1613,7 +1619,7 @@ function renderExam(q){
     }
    }
    if(scannedText&&Array.isArray(evidence)){
-    res.preds=res.preds.map((_,i)=>Boolean(evidence[i]?.strong));
+    res.preds=enforceMarkDependencies(q,res.preds.map((_,i)=>Boolean(evidence[i]?.strong)));
     res.suggested=totalMarkingPoints(q,res.preds);
     res.confidence=vision?(vision.uncertain?'low':'medium'):'low';
    }
