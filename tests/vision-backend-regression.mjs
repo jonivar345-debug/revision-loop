@@ -122,6 +122,8 @@ try{
 // provider messages (which can contain prompts or secrets).
 assert.match(providerFailure(401,{error:{code:'invalid_api_key'}}).error,/API_KEY/);checks++;
 assert.match(providerFailure(429,{error:{code:'insufficient_quota'}}).error,/quota/i);checks++;
+assert.match(providerFailure(429,{error:{code:'credit_balance_exhausted'}}).error,/no available credit/i);checks++;
+assert.doesNotMatch(providerFailure(429,{error:{code:'credit_balance_exhausted'}}).error,/temporary rate limit/i);checks++;
 assert.match(providerFailure(400,{error:{code:'invalid_request_error',param:'text.format'}}).error,/request/i);checks++;
 assert.equal(providerFailure(400,{error:{code:'x',param:'unsafe secret content!'}}).providerParam,undefined);checks++;
 {
