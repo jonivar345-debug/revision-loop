@@ -314,7 +314,7 @@ function scanLabelledStep(q,point,lines){
  const rules=[
  [/parallel.*resistance|external.*resistance/i,/(?:parallel|r_?parallel|r_?ext)/i],
  [/total.*resistance|circuit resistance/i,/(?:total.*resistan|r_?total|rtotal)/i],
- [/branch.*current|currents?.*\b6|currents?.*\b3/i,/(?:branch|\bi[36]\s*=|\bi_[36]\b)/i],
+ [/\bbranch\s+currents?\b/i,/(?:branch|\bi[36]\s*=|\bi_[36]\b)/i],
  [/terminal.*(?:p\.?d\.?|potential|voltage)/i,/(?:terminal|voltage|\bV\s*=)/i],
  [/\b(?:total|electric|initial)\s+current\b|\bcurrent\s*=/i,/(?:current|\bI\s*=)/i],
  [/\bpower\b/i,/(?:power|\bP\s*=|i(?:\^2|²)r)/i],
