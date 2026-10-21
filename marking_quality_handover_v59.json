@@ -1,0 +1,71 @@
+{
+  "version": "v59",
+  "date": "2026-10-21",
+  "basis": "Continuation from v58, prioritising fairness of source-linked answers and recovery of self-contained paper questions",
+  "changes": [
+    {
+      "subject": "Maths",
+      "source": "AQA AS Maths June 2022 7356/1 Q7",
+      "issue": "Correct a=3 without method was overcredited",
+      "resolution": "Six-stage source-guided scoring requires integration, antiderivative, endpoints/limits, area condition and reasoned conclusion. Equivalent full interval and doubled-half-interval methods accepted.",
+      "paperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-73561-MS-JUN22.PDF"
+    },
+    {
+      "subject": "Physics",
+      "source": "AQA AS Physics June 2016 7407/1 Q03.3",
+      "issue": "23.8 N appeared suspicious but is expressly in the accepted 22.5–24 N range",
+      "resolution": "Keep full credit for 23.8 N. Add precise partial credit for specific diameter/radius/area mistakes: 92 N earns 2, 7.3 N and 610000 N earn 1.",
+      "paperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2016/june/AQA-74071-W-MS-JUN16.PDF"
+    },
+    {
+      "subject": "Chemistry",
+      "source": "AQA AS Chemistry 2020 7404/1 Q02.2 and Q02.3",
+      "issue": "Two questions were hidden pending original-paper context",
+      "resolution": "Restored each as a self-contained adaptation with appropriate equipment context; tested valid alternative explanations and rejected irrelevant answers.",
+      "paperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-74041-W-MS-NOV20.PDF",
+      "caveat": "The source PDFs in the November directory retain their original June 2020 printed headings, because the normal summer series was cancelled."
+    }
+  ],
+  "testing": {
+    "newTest": "tests/multi-paper-source-marking-v59.cjs",
+    "testCases": 27,
+    "paperGroups": 6,
+    "subjects": 3,
+    "includes": [
+      "answer-only proof",
+      "whole-interval integration",
+      "doubled half-integral",
+      "official accepted rounding range",
+      "source-specified partial methods",
+      "valid alternative titration equipment explanations",
+      "incorrect distractor statements",
+      "existing 2018 and 2024 source cases"
+    ]
+  },
+  "inventory": {
+    "usableParts": 1262,
+    "sourceLinkedParts": 231,
+    "sourceFirstUnusable": 9,
+    "sourceMarkTotalVerified": 231,
+    "completeOriginalPaperImportsVerified": 0
+  },
+  "preserved": [
+    "all existing question IDs",
+    "revision record keys",
+    "flashcards",
+    "locations",
+    "outfits",
+    "XP and point awards"
+  ],
+  "limitations": [
+    "Verification of original AQA mark total is not a guarantee of exact examiner-equivalent judgement for free-text answers.",
+    "The scanner and OCR may still misread written algebra and chemical notation.",
+    "Nine source-first entries still need original diagrams, prior part context or reworked self-contained prompts.",
+    "The 2015–2025 paper archive is not complete."
+  ],
+  "next": [
+    "Audit remaining source-first context dependencies and convert only items that can genuinely stand alone.",
+    "Review alternate correct methods and contradiction handling on level-of-response questions.",
+    "Verify historical paper source years/series and original mark scheme examples before revising stored answers."
+  ]
+}
