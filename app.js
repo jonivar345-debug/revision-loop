@@ -1172,7 +1172,7 @@ function renderExam(q){
    try{
     const scan=window.RevisionScan;
     const photoCount=scan?.countFor(q.id)||0;
-    const outcome=photoCount?await scan.prepareForMark(q.id):{ready:true,source:'typed'};
+    const outcome=photoCount?await scan.prepareForMark(q.id,q):{ready:true,source:'typed'};
     if(!outcome?.ready){
       const ef=document.getElementById('examFeedback');
       if(ef){ef.className='feedback show neutral';ef.textContent=outcome?.message||'Please check your scanned working and try again.'}
