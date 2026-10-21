@@ -53,7 +53,7 @@ assert.match(issued.token,/^rl1\./);checks++;
 assert(validDeviceSession(passphrase,issued.token));checks++;
 assert(!validDeviceSession(passphrase,issued.token,issued.expiresAt+1));checks++;
 assert(!validDeviceSession(passphrase+'changed',issued.token));checks++;
-assert(!validDeviceSession(passphrase,issued.token.slice(0,-1)+'x'));checks++;
+assert(!validDeviceSession(passphrase,issued.token.slice(0,-1)+(issued.token.endsWith('x')?'y':'x')));checks++;
 const savedEnv={...process.env};
 const priorFetch=globalThis.fetch;
 process.env.FRONTEND_ORIGIN=origin;
