@@ -1492,11 +1492,25 @@ function examSuggested(q,answer){
  // alone earn a method mark; the second mark needs an OPEN interval.
  // A wrong end-point must never be mistaken for the correct interval because
  // the answer shares one number with the scheme.
+ if(q.markingMode==='binomial3Terms'){
+  const raw=String(answer||'').toLowerCase().replace(/\s+/g,'').replace(/[−–]/g,'-').replace(/²/g,'^2').replace(/×/g,'*');
+  // M1: correct use of the first three binomial terms; A1: 4,6
+  // coefficients; final A1: actual simplified polynomial, not just
+  // an unevaluated expression with the correct coefficients.
+  const correct=/^1-12\*?x\+54\*?x\^?2$/.test(raw);
+  const binomial=/1\+4\*?\(-?3x\)\+6\*?\(-?3x\)\^?2/.test(raw);
+  const partial=/^54x\^?2$/.test(raw);
+  const score=correct?3:binomial?2:partial?1:0;
+  return {preds:[score>=1,score>=2,score===3],
+    scores:[score>=1?1:0,score>=2?1:0,score===3?1:0],
+    finalCorrect:score===3,confidence:'high',suggested:score};
+ }
  if(q.markingMode==='strictOpenInterval'){
   const raw=String(answer||'').trim().toLowerCase().replace(/−/g,'-').replace(/π/g,'pi')
      .replace(/\bdegrees?\b/g,'').replace(/°/g,'').replace(/\s+/g,'');
   const radians=/(?:pi\/2).*?(?:3pi\/2)/.test(raw);
-  const nums=[...raw.matchAll(/(?<![\w.])(?:\d+(?:\.\d*)?|\.\d+)(?![\w.])/g)].map(x=>Number(x[0]));
+  const scan=String(answer||'').toLowerCase().replace(/−/g,'-').replace(/°/g,'').replace(/\bdegrees?\b/g,'');
+  const nums=[...scan.matchAll(/(?<![\w.])(?:\d+(?:\.\d*)?|\.\d+)(?![\w.])/g)].map(x=>Number(x[0]));
   const endpoints=radians || (nums.length===2&&nums.includes(90)&&nums.includes(270));
   const closed=/(?:<=|>=|≤|≥)/.test(raw);
   const open=radians?(
