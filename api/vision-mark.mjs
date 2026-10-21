@@ -192,7 +192,8 @@ export function providerFailure(status,details={}) {
   const rawParam=String(details?.error?.param||'');
   const code=/^[a-z][a-z0-9_:-]{0,63}$/i.test(rawCode)?rawCode:'';
   const param=/^[a-z0-9_.\[\]-]{1,90}$/i.test(rawParam)?rawParam:'';
-  const quota=code==='insufficient_quota'||code==='billing_hard_limit_reached'||code==='billing_not_active';
+  const balanceExhausted=code==='credit_balance_exhausted';
+  const quota=balanceExhausted||code==='insufficient_quota'||code==='billing_hard_limit_reached'||code==='billing_not_active';
   const errors={
     400:'The AI provider rejected this request. Its format or model settings need correcting.',
     401:'The AI provider rejected OPENAI_API_KEY. Check the private API key in Vercel and redeploy.',
@@ -201,7 +202,7 @@ export function providerFailure(status,details={}) {
     404:'The selected AI model is unavailable to this API account.',
     408:'The AI provider timed out. Try again later.',
     413:'The provider rejected the image size. Crop or reduce the photograph.',
-    429:quota?'The API account has insufficient quota or has reached a spending limit.':'The AI provider has reached a temporary rate limit.',
+    429:balanceExhausted?'The OpenAI API account has no available credit. An eligible account holder needs to check API billing; retrying will not help until credit is available.':quota?'The API account has insufficient quota or has reached a spending limit. An eligible account holder needs to review billing and usage limits.':'The AI provider has reached a temporary rate limit.',
     500:'The AI provider reported an internal server error.',
     502:'The AI provider reported a gateway error.',
     503:'The AI provider is temporarily unavailable.',
