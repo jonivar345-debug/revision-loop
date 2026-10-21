@@ -12,7 +12,7 @@ function element(id){
 }
 ['scanOCR','scanTranscript','scanOCRHint','scanOCRAlternatives','scanAlternativesList','scanOCRSourcePhotos','scanMathKeyboard','examAnswer','scanStatus','markExam'].forEach(element);
 const document={getElementById:id=>dom.get(id)||null,createElement:tag=>element(tag+'-'+(++seq))},window={};
-const exportLine='window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};';
+const exportLine='window.RevisionScan={mount,commit,countFor,getPages,useVisionText,proposeLocalText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};';
 assert(scanner.includes(exportLine));
 const injected=scanner.replace(exportLine,
  "window.__photoTest={set:(id,photos,recognized)=>{currentId=id;pages=photos;ocrText=recognized;ocrApplied=false;},scanLooksLikeCalculating,prepareForMark,applyRecognized,showOCR,attachMathKeyboard,ocrMathSignature,usedOCR};"+exportLine);
