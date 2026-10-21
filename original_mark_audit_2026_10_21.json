@@ -5,9 +5,9 @@
     "sourceLinked": 231,
     "independentlyOriginalMarkChecked": 231,
     "awaitingOriginalMarkCheck": 0,
-    "sourceFirstQuestionParts": 13
+    "sourceFirstQuestionParts": 11
   },
-  "caveat": "Linked paper is not proof that the in-app paraphrase, diagrams, marking points or numerical answer have been independently checked. originalMarkVerified covers only the displayed total marks, not every acceptable answer.",
+  "caveat": "A mark-total verification flag does not establish fully tested marking behaviour, numerical answers or successful interpretation of handwritten work. Method verification and source context are recorded separately.",
   "entries": [
     {
       "id": "aqa_phy_as23_p1_q4_1",
@@ -948,10 +948,13 @@
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-73561-W-MS-NOV20.PDF",
       "markSchemeType": "point-based",
-      "sourceFirst": true,
+      "sourceFirst": false,
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-QP-NOV20.PDF#page=5",
       "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF#page=7",
-      "conditionalCreditNotes": null
+      "conditionalCreditNotes": null,
+      "newlySelfContainedAt": "2026-10-21",
+      "markingInterpretationVerified": true,
+      "markingInterpretationNotes": "Marks require mathematical reasoning or rationalisation steps; a final result alone is insufficient."
     },
     {
       "id": "aqa_math_as20_p1_q3a_link",
@@ -1124,10 +1127,13 @@
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-73561-MS-JUN24.PDF",
       "markSchemeType": "point-based",
-      "sourceFirst": true,
+      "sourceFirst": false,
       "qpUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-QP-JUN24_PDF",
       "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
-      "conditionalCreditNotes": null
+      "conditionalCreditNotes": null,
+      "newlySelfContainedAt": "2026-10-21",
+      "markingInterpretationVerified": true,
+      "markingInterpretationNotes": "Marks require mathematical reasoning or rationalisation steps; a final result alone is insufficient."
     },
     {
       "id": "aqa_math_as24_p1_q4ai_src",
@@ -3931,5 +3937,9 @@
       "officialMarkScheme": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2017/june/AQA-74051-W-MS-JUN17.PDF",
       "scope": "Source mark allocations checked, including alternative/conditional rules where relevant; not a guarantee of automatic examiner-level marking."
     }
+  ],
+  "reviewedMethodQuestions": [
+    "aqa_math_as20_p1_q5_link",
+    "aqa_math_as24_p1_q3_src"
   ]
 }
