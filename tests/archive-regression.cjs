@@ -31,7 +31,7 @@ for(subject of ['Physics','Chemistry','Maths']){
  assert.match(html,/Official AQA paper and mark-scheme finder/);checks++;
  assert.equal((html.match(/<tr><th scope="row">/g)||[]).length,11,'All 11 years shown '+subject);checks++;
  assert.match(html,/0 indexed parts/,'Never imply all paper parts have been indexed');checks++;
- if(subject==='Maths'){assert.match(html,/source-first/,'Source-dependent Maths questions are accessible separately');checks++;}
+ if(subject==='Maths'){assert.doesNotMatch(html,/source-first/,'All previously dependent Maths parts now have full context');checks++;}
  if(subject==='Maths'){
   assert.match(html,/7356\/1/);checks++;
   assert.match(html,/7357\/3/);checks++;
