@@ -14,7 +14,7 @@ const document={getElementById(id){return id==='examSubject'?{value:subject}:out
 const papers={
  Physics:{'AS Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-physics/aqa-paper-1-as/'},
  Chemistry:{'AS Paper 1':'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/aqa-paper-1-as/'},
- Maths:{'AS Papers 1 & 2':'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/papers-as/'}
+ Maths:{'AS Papers 1 & 2':'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/papers-as/','A-level Papers 1, 2 & 3':'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/papers/'}
 };
 const app=new Function('examQuestions','document','PMT_PAPER_INDEX','PMT_BY_TOPIC','revisionTopicIndex','esc',
  script.slice(start,end)+'\nreturn renderPaperArchive;')(
@@ -34,7 +34,9 @@ for(subject of ['Physics','Chemistry','Maths']){
  if(subject==='Maths'){
   assert.match(html,/7356\/1/);checks++;
   assert.match(html,/7357\/3/);checks++;
-  assert.match(html,/Not examined under this specification/);checks++;
+  assert.match(html,/maths-revision\/a-level-aqa\/papers\//);checks++;
+  assert.match(html,/Current syllabus not examined/);checks++;
+  assert.match(html,/Older AQA specification papers/);checks++;
  }
  if(subject==='Chemistry'){
   assert.match(html,/7404\/1/);checks++;
