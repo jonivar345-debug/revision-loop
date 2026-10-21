@@ -1094,7 +1094,14 @@ function renderPaperArchive(){
   Chemistry:{AS:['7404/1','7404/2'],'A-level':['7405/1','7405/2','7405/3']},
   Maths:{AS:['7356/1','7356/2'],'A-level':['7357/1','7357/2','7357/3']}
  };
- const first=subject==='Maths'?{AS:2018,'A-level':2018}:{AS:2016,'A-level':2017};
+ // Independently verified public indexes that link on to the original AQA
+ // PDFs. They are catalogues, not copies of those copyrighted papers.
+ const SOURCE_CATALOGUES={
+  Physics:{AS:'https://www.revisionlibrary.co.uk/past-papers/aqa/as-level/physics','A-level':'https://oscarsongtutoring.co.uk/physics/past-papers/7408'},
+  Chemistry:{AS:'https://aqachemistry.co.uk/past-papers/as','A-level':'https://oscarsongtutoring.co.uk/chemistry/past-papers/7405'},
+  Maths:{AS:'https://www.mymathscloud.com/modules/a-level/past-papers/aqa/as-year-1/','A-level':'https://freepastpapers.com/aqa/a-level/maths-7357'}
+ };
+  const first=subject==='Maths'?{AS:2018,'A-level':2018}:{AS:2016,'A-level':2017};
  const legacyLinks={
   Physics:'https://www.physicsandmathstutor.com/past-papers/a-level-physics/',
   Chemistry:'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/',
@@ -1110,7 +1117,7 @@ function renderPaperArchive(){
    const found=qp.filter(x=>x.year===year&&x.level===level&&
     (x.paper===paper||x.paper.startsWith(paper+'A')||x.paper.startsWith(paper+'B')));
    const sourceOnly=sourceFirst.filter(x=>x.year===year&&x.level===level&&x.paper===paper).length;
-   const number=found.length,link=PMT_PAPER_INDEX[subject][
+   const number=found.length,link=SOURCE_CATALOGUES[subject][level]||PMT_PAPER_INDEX[subject][
     subject==='Maths'?(level==='AS'?'AS Papers 1 & 2':'A-level Papers 1, 2 & 3'):
     (level==='AS'?'AS Paper '+paper.split('/')[1]:'A-level Paper '+paper.split('/')[1])
    ];
@@ -1132,13 +1139,13 @@ function renderPaperArchive(){
  }
  const archiveRows=years.map(year=>{
   const special=year===2020?'Autumn examination series; no normal summer exams':
-   year===2021?'November exam series; no normal summer exams':
+   year===2021?'Autumn exam series; no normal summer exams':
    year===2015?'Older, different specification':'';
   return '<tr><th scope="row">'+year+(special?'<span class="archive-context">'+esc(special)+'</span>':'')+
    '</th><td>'+archiveLevel(year,'AS')+'</td><td>'+archiveLevel(year,'A-level')+'</td></tr>';
  }).join('');
  target.innerHTML='<p class="archive-label">AQA '+esc(subject)+' · current-specification paper checklist, 2025–2015</p>'+
- '<p class="archive-help">The figure beside a paper is the number of question parts indexed <b>inside Revision Loop</b>, not the number of questions on the original paper. <b>0 means no indexed parts.</b> The complete papers and mark schemes are available through external resources; the site does not reproduce full papers. The 2020 and 2021 examination papers were sat in the autumn (November), not June. Links marked "Question paper" are existing source-verified AQA PDFs; "Browse papers" links may lead to a subject index rather than a particular year.</p>'+
+ '<p class="archive-help">The figure beside a paper is the number of question parts indexed <b>inside Revision Loop</b>, not the number of questions on the original paper. <b>0 means no indexed parts.</b> The complete papers and mark schemes are available through external resources; the site does not reproduce full papers. The normal 2020 and 2021 summer examinations were cancelled; alternative autumn series were used. AQA files may use November session labels. Links marked "Question paper" are existing source-verified AQA PDFs; "Browse papers" links may lead to a subject index rather than a particular year.</p>'+
  '<div class="archive-scroll"><table class="archive-matrix"><thead><tr><th>Year</th><th>AS ('+esc(codes[subject].AS[0].split('/')[0])+')</th><th>A-level ('+esc(codes[subject]['A-level'][0].split('/')[0])+')</th></tr></thead><tbody>'+
  archiveRows+'</tbody></table></div>'+
  '<p class="archive-help"><a href="'+indexUrl+'" target="_blank" rel="noopener noreferrer">Official AQA paper and mark-scheme finder ↗</a> · '+
