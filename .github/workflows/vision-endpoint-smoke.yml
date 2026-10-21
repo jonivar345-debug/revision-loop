@@ -1,0 +1,40 @@
+name: Live vision endpoint smoke test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vision-endpoint-smoke.yml'
+      - 'api/vision-mark.mjs'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify deployed endpoint without secrets or billed requests
+        env:
+          API_URL: https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark
+          FRONTEND_ORIGIN: https://jonivar345-debug.github.io
+        run: |
+          python - <<'PY'
+          import os, urllib.request, urllib.error
+          url=os.environ['API_URL']
+          origin=os.environ['FRONTEND_ORIGIN']
+          def req(method,headers=None,body=None):
+              request=urllib.request.Request(url,method=method,data=body,headers={'Origin':origin,**(headers or {})})
+              try:
+                  response=urllib.request.urlopen(request,timeout=25)
+                  return response.status,dict(response.headers),response.read(500).decode('utf-8','replace')
+              except urllib.error.HTTPError as ex:
+                  return ex.code,dict(ex.headers),ex.read(500).decode('utf-8','replace')
+          status,headers,body=req('OPTIONS',headers={'Access-Control-Request-Method':'POST','Access-Control-Request-Headers':'authorization, content-type'})
+          print('Preflight status:',status)
+          if status!=204: raise SystemExit('OPTIONS preflight did not return 204: '+body[:180])
+          if headers.get('Access-Control-Allow-Origin')!=origin:raise SystemExit('CORS origin is incorrect')
+          status,headers,body=req('POST',headers={'Content-Type':'application/json'},body=b'{}')
+          print('Unauthenticated POST status:',status)
+          if status!=401:raise SystemExit('Expected 401 for unauthorised POST; saw '+str(status)+' '+body[:180])
+          print('PASS. The protected backend responds to CORS and authentication tests.')
+          PY
