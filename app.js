@@ -761,7 +761,7 @@ function synonymSet(t){
  for(const g of SYN) if(g.some(x=>normalise(x)===n)) return g.map(normalise);
  return [n];
 }
-function tokens(x){return normalise(x).split(' ').filter(t=>t&&!STOP.has(t)).map(stemToken)}
+function tokens(x){return normalise(x).split(' ').map(t=>t.replace(/^[.,;:!?]+|[.,;:!?]+$/g,'')).filter(t=>t&&!STOP.has(t)).map(stemToken)}
 function lev(a,b){const n=b.length;let p=Array.from({length:n+1},(_,i)=>i),c=new Array(n+1);for(let i=1;i<=a.length;i++){c[0]=i;for(let j=1;j<=n;j++)c[j]=Math.min(c[j-1]+1,p[j]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));[p,c]=[c,p]}return p[n]}
 function close(a,b){
  a=stemToken(a);b=stemToken(b);
