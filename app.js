@@ -1310,7 +1310,35 @@ function examSuggested(q,answer){
   const complete=preds.every(Boolean)&&String(answer).trim().split(/\s+/).length>=Math.max(20,q.markPoints.length*5);
   if(!complete)suggested=Math.min(suggested,Math.max(1,Math.ceil(q.marks*.66)));
 }
- const matched=preds.filter(Boolean).length,confidence=finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
+ // A bare number or isolated keyword in a multi-part question cannot be
+ // used as evidence for several separate methods/explanations. Older scorers
+ // could award a full four-mark proof for "1" due to matching numerals.
+ // This applies to multi-point rubrics only: ordinary numeric calculations
+ // retain their full-credit final-answer policy.
+ const rawAnswer=String(answer||'').trim();
+ const isolatedNumber=/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?(?:\s*(?:%|[a-zA-ZΩ°]+))?$/i.test(rawAnswer);
+ const isolatedWord=/^[a-zA-Z]{2,25}$/i.test(rawAnswer);
+ if(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord)){
+  let allowable=preds.map((v,i)=>v?i:-1).filter(i=>i>=0);
+  if(isolatedNumber){
+   const num=parseNumber(rawAnswer);
+   // Find a value explicitly stated as a result in the mark point.
+   // Never confuse a quantity in the question with a demonstrated answer.
+   allowable=allowable.filter(i=>{
+    const p=String(q.markPoints[i]||'');
+    const results=[...p.matchAll(/(?:=|≈|\b(?:is|gives?|equals?|approximately|about)\b)\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)(?![\w.])/gi)];
+    return results.some(match=>{
+     const expected=Number(match[1]);
+     return Number.isFinite(num)&&Number.isFinite(expected)&&
+       Math.abs(num-expected)<=Math.max(1e-9,Math.abs(expected)*.005);
+    });
+   });
+  }
+  const chosen=allowable.length?allowable[allowable.length-1]:-1;
+  preds=preds.map((_,i)=>i===chosen);
+  suggested=chosen>=0?Math.min(1,Number(q.markPointMarks?.[chosen])||1):0;
+ }
+ const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
 
