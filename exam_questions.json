@@ -2700,7 +2700,7 @@
       "courseTopic": "Energetics",
       "subtopic": "Enthalpy definitions",
       "questionType": "official-source definition",
-      "prompt": "Open official AQA Paper 1 Question 7.1 and state the definition requested.",
+      "prompt": "Define standard enthalpy of combustion, specifying the quantity involved and the standard-state conditions.",
       "answerType": "points",
       "markPoints": [
         "One mole burns completely in oxygen.",
@@ -2717,15 +2717,18 @@
       "series": "November",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2021|7404/1|7",
       "groupOrder": "7.1",
-      "standalone": false,
+      "standalone": true,
       "revisionTopic": "Energetics",
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74041-MS-NOV21.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "modelAnswer": "An enthalpy change for complete combustion of one mole of a substance in oxygen with reactants and products in standard states at a stated temperature and 100 kPa.",
+      "markingMode": "aqaCombustionDefinition2021",
+      "contextRebuiltFrom": "AQA source question and mark scheme, reviewed 2026-10-21"
     },
     {
       "id": "aqa_chem_as21_p1_q7_3_link",
@@ -2736,7 +2739,7 @@
       "courseTopic": "Practical skills",
       "subtopic": "Calorimetry evaluation",
       "questionType": "official-source evaluation",
-      "prompt": "Open official AQA Paper 1 Question 7.3 and give one valid reason for the experimental discrepancy.",
+      "prompt": "In a calorimetry experiment, a measured enthalpy change is less exothermic than the value calculated from standard formation data. State one possible explanation OTHER THAN heat transfer to the surroundings.",
       "answerType": "points",
       "markPoints": [
         "Accept incomplete combustion, fuel evaporation, or non-standard conditions."
@@ -2751,15 +2754,18 @@
       "series": "November",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2021|7404/1|7",
       "groupOrder": "7.3",
-      "standalone": false,
+      "standalone": true,
       "revisionTopic": "RP2 Enthalpy",
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74041-MS-NOV21.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "modelAnswer": "Accept incomplete combustion, evaporation of the sample, or experimental conditions that are not standard.",
+      "markingMode": "aqaCombustionDiscrepancy2021",
+      "contextRebuiltFrom": "AQA source question and mark scheme, reviewed 2026-10-21"
     },
     {
       "id": "aqa_chem_as21_p1_q8_1_link",
