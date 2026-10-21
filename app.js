@@ -1495,7 +1495,7 @@ function examSuggested(q,answer){
   let flags=[];
   switch(q.markingMode){
    case 'aqaTrigErrors2020':{
-    const cancellation=/(?:cancel|divid|lost|excluded|forgot|ignor)[^.!?\n]{0,75}cos|cos\s*\(?y\)?\s*=\s*0\b|zero\s+cos/.test(input);
+    const cancellation=/(?:cancel|divid|division|lost|excluded|forgot|ignor)[^.!?\n]{0,75}cos|cos\s*\(?y\)?\s*=\s*0\b|zero\s+cos/.test(input);
     const otherAngle=/(?:-60\b|±\s*60\b|negative\s+60\b)|(?:cos\s*\(?y\)?\s*=\s*0[.]5[^.!?\n]{0,65}(?:both|two|other|second|another))/i.test(input);
     flags=[cancellation,otherAngle];
     break;
