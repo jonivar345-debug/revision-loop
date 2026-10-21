@@ -225,6 +225,107 @@ const VERIFIED_CHARACTER_IMAGE_URLS={
   "phase2_kurapika": "https://cdn.myanimelist.net/images/characters/3/549312.jpg",
   "phase2_hisoka_morow": "https://cdn.myanimelist.net/images/characters/3/174561.jpg"
 };
+
+/* Optional personal outfit images. These are saved in IndexedDB on this device,
+   never uploaded to GitHub, Vercel, Jikan or an image host. Existing unlock
+   identifiers are unchanged, so the shop's purchase history is preserved. */
+const outfitImageCache=new Map();
+let outfitDbPromise=null;
+function getOutfitImageDb(){
+ if(outfitDbPromise)return outfitDbPromise;
+ if(typeof indexedDB==='undefined')return Promise.resolve(null);
+ outfitDbPromise=new Promise(resolve=>{
+  try{
+   const req=indexedDB.open('revision-loop-personal-outfit-art',1);
+   req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('art'))req.result.createObjectStore('art')};
+   req.onsuccess=()=>resolve(req.result);
+   req.onerror=()=>resolve(null);
+   req.onblocked=()=>resolve(null);
+  }catch{resolve(null)}
+ });
+ return outfitDbPromise;
+}
+async function savedOutfitImage(id){
+ if(outfitImageCache.has(id))return outfitImageCache.get(id);
+ const db=await getOutfitImageDb();
+ if(!db)return null;
+ const data=await new Promise(resolve=>{
+  try{
+   const tx=db.transaction('art','readonly'),rq=tx.objectStore('art').get(id);
+   rq.onsuccess=()=>resolve(rq.result||null);
+   rq.onerror=()=>resolve(null);
+  }catch{resolve(null)}
+ });
+ outfitImageCache.set(id,data);
+ return data;
+}
+async function setSavedOutfitImage(id,data){
+ const db=await getOutfitImageDb();
+ if(!db)throw Error('Your browser does not support local outfit-picture storage.');
+ await new Promise((resolve,reject)=>{
+  try{
+   const tx=db.transaction('art','readwrite');
+   tx.oncomplete=resolve;
+   tx.onerror=()=>reject(Error('Cannot save the image in this browser.'));
+   if(data)tx.objectStore('art').put(data,id);else tx.objectStore('art').delete(id);
+  }catch(error){reject(error)}
+ });
+ outfitImageCache.set(id,data||null);
+}
+function outfitPalette(c,o){
+ const base={coat:o?.top||'#243858',trim:o?.accent||'#dce9fc'};
+ const special={
+  lelouch:[['#153269','#efcf83'],['#181421','#bb1f32'],['#243a67','#f2f2ed'],['#f6f4e9','#c6a34c'],['#11121b','#cf172d'],['#222d4b','#d0d8ef'],['#f0ede6','#be9a4a'],['#201625','#b90c2d']],
+  light:[['#455f88','#e8e7e2'],['#333c4c','#ced0d4'],['#6b4b3e','#d5b198'],['#191f2c','#8d94a8'],['#f9f9f6','#4b596e'],['#34465f','#a0b8d5'],['#8a7270','#f2f0ec'],['#252d35','#a1a1aa']],
+  eren:[['#8c6f52','#d0b69a'],['#47715b','#d9d5bd'],['#dad3c2','#837261'],['#222b35','#8a7766'],['#405c4c','#d4a779'],['#5b5544','#d1b996'],['#595f67','#d9d6ce'],['#38644f','#d7d6cd']],
+  gojo:[['#151d35','#a8c2ff'],['#242944','#cacad5'],['#eceae7','#324059'],['#19141e','#8f7ac1'],['#474f65','#d3d7e4'],['#f5f3f0','#8a95af'],['#202e4c','#b0c7e7'],['#1b1835','#b4aaff']],
+  kaneki:[['#202632','#e8e8eb'],['#161520','#c82e3f'],['#20232a','#d0d1d4'],['#767d87','#d1d1d4'],['#262638','#b83d54'],['#14141e','#f4f2f2'],['#14171c','#ac242d'],['#211b25','#f5e5ee']]
+ };
+ const choices=special[c.id];
+ if(!choices)return base;
+ const index=Math.max(0,OUTFIT_STYLES.findIndex(x=>x.id===o?.styleId));
+ return {coat:choices[index]?.[0]||base.coat,trim:choices[index]?.[1]||base.trim};
+}
+function illustratedCostume(c,o){
+ if(!o)return '';
+ const p=outfitPalette(c,o),style=String(o.styleId||'default');
+ // A simple colour-and-cut concept, not a falsely labelled official costume.
+ return '<svg class="costume-silhouette costume-'+esc(style)+'" viewBox="0 0 240 116" preserveAspectRatio="none" aria-hidden="true" style="--coat:'+esc(p.coat)+';--trim:'+esc(p.trim)+'">'+
+  '<path class="costume-shoulders" d="M-7 116V74Q13 54 69 39L95 32 120 59 145 32 171 39Q227 54 247 74V116Z"/>'+
+  '<path class="costume-inner" d="M95 32L120 59 145 32 136 116H104Z"/>'+
+  '<path class="costume-lapel left" d="M69 39L95 32 120 59 98 78 81 65Z"/>'+
+  '<path class="costume-lapel right" d="M171 39L145 32 120 59 142 78 159 65Z"/>'+
+  '<path class="costume-centre" d="M119 58V116"/>'+
+  '<path class="costume-detail" d="M31 85L69 64 M209 85L171 64"/>'+
+  '<path class="costume-scarf" d="M86 39Q120 72 154 39L141 64 126 73 136 116 111 116 112 73Z"/>'+
+  '</svg>';
+}
+function compressOutfitPhoto(file){
+ return new Promise((resolve,reject)=>{
+  if(!/^image\/(png|jpeg|webp)$/i.test(file?.type||'')){reject(Error('Choose a JPG, PNG or WebP picture.'));return}
+  if(file.size>7_000_000){reject(Error('Choose an image smaller than 7 MB.'));return}
+  const url=URL.createObjectURL(file),img=new Image();
+  img.onload=()=>{
+   try{
+    const canvas=document.createElement('canvas'),long=Math.max(img.naturalWidth,img.naturalHeight);
+    const ratio=Math.min(1,460/long);
+    canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));
+    canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));
+    const ctx=canvas.getContext('2d');
+    if(!ctx)throw Error('Photo editing is unavailable.');
+    ctx.fillStyle='#0f172a';ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    const data=canvas.toDataURL('image/jpeg',0.80);
+    if(data.length>550_000)throw Error('This picture is too large after compression.');
+    resolve(data);
+   }catch(error){reject(error)}
+   finally{URL.revokeObjectURL(url)}
+  };
+  img.onerror=()=>{URL.revokeObjectURL(url);reject(Error('That picture cannot be opened.'))};
+  img.src=url;
+ });
+}
+
 const characterArtCache=new Map(),characterArtJobs=new Map();
 let characterVisibleLimit=16;
 function characterArtQuery(c){return ANIME_ART_QUERY[c.id]||c.lookup||c.name}
@@ -294,6 +395,7 @@ function loadCharacterArt(root=document){
      img.alt=c.name+' anime character portrait';img.loading='eager';img.decoding='async';img.referrerPolicy='no-referrer';
      el.querySelectorAll('img').forEach(old=>old.remove());
      el.prepend(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable');
+     if(url.startsWith('data:image/'))el.classList.add('has-custom-outfit');else el.classList.remove('has-custom-outfit');
      el.dataset.loading='0';
     }
     resolve(success);
@@ -306,6 +408,8 @@ function loadCharacterArt(root=document){
    promise,new Promise(resolve=>setTimeout(()=>resolve(null),ms))
   ]);
   try{
+   const outfitId=el.dataset.outfitArt;
+   if(outfitId){const custom=await savedOutfitImage(outfitId);if(custom&&await tryImage(custom))return}
    const verified=VERIFIED_CHARACTER_IMAGE_URLS[c.id];
    if(verified&&await tryImage(verified))return;
    const backup=await limit(getCharacterArt(c,true),4800);
@@ -333,8 +437,9 @@ function characterArtwork(c,o){
  const initials=c.name.split(/[\s.-]+/).filter(Boolean).slice(0,2).map(p=>p[0]).join('').toUpperCase();
  const gradient='linear-gradient(140deg,'+(c.hair||'#172554')+','+(c.hair2||'#334155')+',#0b142c)';
  const preview=o&&o.id!==c.id+'-default';
- return '<div class="character-art outfit-style-'+esc(o?.styleId||'default')+'" data-character-art="'+esc(c.id)+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
+ return '<div class="character-art outfit-style-'+esc(o?.styleId||'default')+'" data-character-art="'+esc(c.id)+'" data-outfit-art="'+esc(o?.id||'')+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
   '<div class="character-loading" style="background:'+gradient+'"><span class="portrait-monogram">'+esc(initials)+'</span><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div>'+
+  (o?illustratedCostume(c,o):'')+
   (preview?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
   '</div>';
 }
