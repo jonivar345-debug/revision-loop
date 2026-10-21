@@ -1496,7 +1496,7 @@ function examSuggested(q,answer){
  // selection followed by the mean. A generic numerical tolerance could
  // otherwise credit a mean calculated from the wrong set of titres.
  if(q.markingMode==='concordantTitres2018'){
-  const raw=String(answer||'').replace(/,/g,'').toLowerCase();
+  const raw=String(answer||'').replace(/,/g,' ').toLowerCase();
   const found=[...raw.matchAll(/(?<![\d.])(\d{2}\.\d+)(?![\d.])/g)].map(x=>Number(x[1]));
   const near=(x,y)=>Math.abs(x-y)<0.006;
   const hasPair=found.some(x=>near(x,23.90))&&found.some(x=>near(x,24.00));
