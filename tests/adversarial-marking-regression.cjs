@@ -3,10 +3,11 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+const begin=app.indexOf('function normalise('),middle=app.indexOf('function nextSchedule(',begin);
+const start=app.indexOf('function evidenceRuleScore(',middle),end=app.indexOf('function renderExam(',start);
+assert(begin>=0&&middle>begin&&start>middle&&end>start,'Source marking functions exist');
 const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
-  app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule(')))+
-  app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')))+
-  'return examSuggested')();
+  app.slice(begin,middle)+app.slice(start,end)+'return examSuggested')();
 const qs=['gap_questions_physics_v48.json','gap_questions_chemistry_v48.json',
   'gap_questions_maths_v48.json','gap_questions_extended_v49.json'].flatMap(f=>read(f).questions);
 const byId=new Map(qs.map(q=>[q.id,q]));let checks=0;
