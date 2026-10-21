@@ -1,0 +1,40 @@
+{
+  "workstream": "world",
+  "baseMainCommit": "74c1e1144e11020de274ec0f2a400c67011028d7",
+  "lastChecked": "2026-10-22T00:00:00+01:00",
+  "status": "audit_in_progress",
+  "owned": [
+    "globe controls and rendering",
+    "characters and outfits",
+    "location text and pricing",
+    "daily challenge bonus"
+  ],
+  "reservedSharedFiles": [
+    "app.js",
+    "index.html",
+    "styles.css",
+    "sw.js"
+  ],
+  "otherTaskOwned": [
+    "exam_questions.json",
+    "exam marking engine",
+    "AQA question and spec audits"
+  ],
+  "confirmedExisting": [
+    "116 character records",
+    "8 outfits per character",
+    "outfit price 15 points",
+    "location price maximum 250 points"
+  ],
+  "openIssues": [
+    "globe lacks zoom",
+    "portrait loading depends on external providers",
+    "streak bonus incorrectly increases XP"
+  ],
+  "nextActions": [
+    "implement and test globe zoom with controls",
+    "make daily streak bonus points-only",
+    "improve portrait fallback and asset strategy"
+  ],
+  "completedCommits": []
+}
