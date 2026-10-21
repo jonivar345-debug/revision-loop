@@ -292,3 +292,7 @@
 .check-item.empty-topic small{font-size:.63rem;opacity:.75}
 .check-item.empty-topic input:disabled{opacity:.45;cursor:not-allowed}
 @media(max-width:580px){.archive-source-row>a,.archive-source-row>button{flex:1 1 130px;text-align:center}}
+
+/* Optional short-lived remembered-device access (no persistent master key). */
+.scan-vision-remember{display:flex!important;align-items:center;gap:9px;padding:11px 10px;margin:10px 0 4px!important;border:1px solid #c7d2fe;border-radius:9px;background:#fff;color:#1e293b;font-size:.76rem!important;cursor:pointer}
+.scan-vision-remember input[type=checkbox]{width:19px!important;height:19px!important;margin:0;flex:none;accent-color:#4338ca;cursor:pointer}
