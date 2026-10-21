@@ -9718,7 +9718,9 @@
       "sourceVerified": true,
       "verificationLevel": "official-linked",
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-QP-JUN18.PDF#page=2",
-      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=6"
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=6",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF"
     },
     {
       "id": "aqa_2018_M_2",
@@ -9751,7 +9753,9 @@
       "sourceVerified": true,
       "verificationLevel": "official-linked",
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-QP-JUN18.PDF#page=2",
-      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=6"
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=6",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF"
     },
     {
       "id": "aqa_2018_M_4",
@@ -9788,7 +9792,9 @@
       "sourceVerified": true,
       "verificationLevel": "official-linked",
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-QP-JUN18.PDF#page=3",
-      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=6"
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=6",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF"
     },
     {
       "id": "aqa_2018_M_7a",
@@ -9802,7 +9808,7 @@
       "courseTopic": "Coordinate geometry",
       "revisionTopic": "Coordinate geometry",
       "subtopic": "Coordinate geometry",
-      "prompt": "A(8,17), B(15,10) and C(−2,−7) are three points. Prove ∠ABC is a right angle using gradients.",
+      "prompt": "The points A(8,17), B(15,10) and C(−2,−7) are given. Show that angle ABC is a right angle by a valid method, such as gradients or the converse of Pythagoras’ theorem.",
       "marks": 3,
       "markPoints": [
         "Gradient AB=(10−17)/(15−8)=−1.",
@@ -9814,7 +9820,7 @@
         1,
         1
       ],
-      "modelAnswer": "Gradient AB=(10−17)/(15−8)=−1. Gradient BC=(−7−10)/(−2−15)=+1. The gradients multiply to −1, so AB and BC are perpendicular. Final answer: gradients −1 and +1, product −1",
+      "modelAnswer": "Gradients AB = −1 and BC = +1, so their product is −1: AB is perpendicular to BC and angle ABC is 90°. Alternatively, AB²=98, BC²=578 and AC²=676; since 98+578=676, angle ABC is right by the converse of Pythagoras’ theorem.",
       "groupId": "Maths|2018|7357/1|7",
       "groupOrder": "7a",
       "answerType": "points",
@@ -9825,7 +9831,61 @@
       "sourceVerified": true,
       "verificationLevel": "official-linked",
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-QP-JUN18.PDF#page=8",
-      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=11"
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=11",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF",
+      "markEvidenceRules": [
+        [
+          [
+            "gradient",
+            "ab"
+          ],
+          [
+            "squared",
+            "distance"
+          ],
+          [
+            "pythagoras",
+            "lengths"
+          ],
+          [
+            "ab",
+            "98"
+          ]
+        ],
+        [
+          [
+            "gradient",
+            "bc"
+          ],
+          [
+            "ab",
+            "98",
+            "bc",
+            "578"
+          ],
+          [
+            "ac",
+            "676"
+          ]
+        ],
+        [
+          [
+            "perpendicular",
+            "gradients"
+          ],
+          [
+            "right",
+            "angle",
+            "pythagoras"
+          ],
+          [
+            "98",
+            "578",
+            "676"
+          ]
+        ]
+      ]
     },
     {
       "id": "aqa_2018_M_7bi",
@@ -9858,7 +9918,9 @@
       "sourceVerified": true,
       "verificationLevel": "official-linked",
       "qpUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-QP-JUN18.PDF#page=8",
-      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=11"
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF#page=11",
+      "originalMarkVerified": true,
+      "originalMarkVerifiedSource": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-73571-W-MS-JUN18.PDF"
     },
     {
       "id": "orig_v26_physics_kinetic_theory_1",
