@@ -409,7 +409,7 @@ function loadCharacterArt(root=document){
   ]);
   try{
    const outfitId=el.dataset.outfitArt;
-   if(outfitId){const custom=await savedOutfitImage(outfitId);if(custom&&await tryImage(custom))return}
+   if(outfitId){const custom=await limit(savedOutfitImage(outfitId),1500);if(custom&&await tryImage(custom))return}
    const verified=VERIFIED_CHARACTER_IMAGE_URLS[c.id];
    if(verified&&await tryImage(verified))return;
    const backup=await limit(getCharacterArt(c,true),4800);
@@ -1534,7 +1534,7 @@ function examSuggested(q,answer){
 function renderExam(q){
  const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'',secondary=q.verificationLevel==='secondary-indexed',original=q.verificationLevel==='original-exam-style'||q.year==='Practice';
  const markStatusNote=original?'':q.originalMarkVerified?
-  '<div class="copyright-note">Original mark total checked against the published AQA mark scheme.</div>':
+  '<div class="copyright-note">Original mark total checked against the published AQA mark scheme.'+(q.answerType==='levels'?' This is a level-of-response question: the suggested checklist breakdown is not AQA\'s official point-by-point allocation. Review the overall explanation and level before accepting marks.':'')+'</div>':
   '<div class="copyright-note">The stated mark total is held in the question bank; its exact allocation has not yet been independently checked against the original AQA mark scheme. Use the linked scheme to verify it.</div>';
  const linked=examQuestions.filter(x=>x.groupId===q.groupId).sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
  const linkedIndex=linked.findIndex(x=>x.id===q.id);
