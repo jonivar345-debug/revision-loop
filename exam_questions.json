@@ -2532,10 +2532,10 @@
       "courseTopic": "Practical skills",
       "subtopic": "Titration technique",
       "questionType": "official-source practical",
-      "prompt": "Open official AQA Paper 1 Question 2.2 and explain why the funnel is removed from the burette.",
+      "prompt": "A student fills a burette with acid through a funnel but leaves the funnel in place while taking titration readings. Explain how this can affect the recorded titre.",
       "answerType": "points",
       "markPoints": [
-        "Extra solution could drip from the funnel into the burette after the initial reading and alter the measured titre."
+        "Drops of titrant remaining in the funnel could enter the burette after a reading and affect the volume recorded."
       ],
       "markPointMarks": [
         1
@@ -2548,15 +2548,50 @@
       "series": "November",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2020|7404/1|2",
       "groupOrder": "2.2",
-      "standalone": false,
+      "standalone": true,
       "revisionTopic": "RP1 Titration",
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74041-W-MS-NOV20.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "modelAnswer": "After the initial reading, extra acid can drip from the funnel into the burette. Its liquid level changes without that acid being measured as delivered.",
+      "markEvidenceRules": [
+        [
+          [
+            "funnel",
+            "drip",
+            "burette"
+          ],
+          [
+            "funnel",
+            "drops",
+            "burette"
+          ],
+          [
+            "drops",
+            "enter",
+            "burette"
+          ],
+          [
+            "extra",
+            "acid",
+            "burette"
+          ],
+          [
+            "additional",
+            "solution",
+            "burette"
+          ],
+          [
+            "solution",
+            "funnel",
+            "level"
+          ]
+        ]
+      ]
     },
     {
       "id": "aqa_chem_as20_p1_q2_3_link",
@@ -2567,10 +2602,10 @@
       "courseTopic": "Practical skills",
       "subtopic": "Titration technique",
       "questionType": "official-source practical",
-      "prompt": "Open official AQA Paper 1 Question 2.3 and give an advantage of using a conical flask.",
+      "prompt": "During a titration, the receiving solution is held in a conical flask rather than an open beaker. State one practical advantage of using the conical flask.",
       "answerType": "points",
       "markPoints": [
-        "It can be swirled with less chance of splashing or losing solution."
+        "It is easier to swirl or mix the solutions while reducing the risk of splashing or losing liquid."
       ],
       "markPointMarks": [
         1
@@ -2583,15 +2618,53 @@
       "series": "November",
       "paper": "7404/1",
       "sourceVerified": true,
-      "sourceFirst": true,
+      "sourceFirst": false,
       "groupId": "Chemistry|2020|7404/1|2",
       "groupOrder": "2.3",
-      "standalone": false,
+      "standalone": true,
       "revisionTopic": "RP1 Titration",
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74041-W-MS-NOV20.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "modelAnswer": "A conical flask can be swirled easily to mix the solutions while reducing the chance of splashing or spilling solution.",
+      "markEvidenceRules": [
+        [
+          [
+            "easy",
+            "swirl"
+          ],
+          [
+            "easier",
+            "swirl"
+          ],
+          [
+            "swirl",
+            "splash"
+          ],
+          [
+            "swirl",
+            "spill"
+          ],
+          [
+            "mix",
+            "without",
+            "spilling"
+          ],
+          [
+            "reduce",
+            "splash"
+          ],
+          [
+            "less",
+            "splash"
+          ],
+          [
+            "less",
+            "spill"
+          ]
+        ]
+      ]
     },
     {
       "id": "aqa_chem_as21_p1_q7_1_link",
