@@ -1092,6 +1092,7 @@ function renderPaperArchive(){
   Maths:'https://www.physicsandmathstutor.com/a-level-maths-papers/c1-aqa/'
  };
  const qp=examQuestions.filter(q=>q.subject===subject&&q.standalone!==false&&q.year!=='Practice');
+ const sourceFirst=examQuestions.filter(q=>q.subject===subject&&q.standalone===false&&q.sourceFirst===true&&q.qpUrl&&q.msUrl);
  const indexUrl='https://www.aqa.org.uk/past-papers-and-mark-schemes-finder';
  const years=Array.from({length:11},(_,i)=>2025-i);
  function archiveLevel(year,level){
@@ -1099,6 +1100,7 @@ function renderPaperArchive(){
   const papers=codes[subject][level].map(paper=>{
    const found=qp.filter(x=>x.year===year&&x.level===level&&
     (x.paper===paper||x.paper.startsWith(paper+'A')||x.paper.startsWith(paper+'B')));
+   const sourceOnly=sourceFirst.filter(x=>x.year===year&&x.level===level&&x.paper===paper).length;
    const number=found.length,link=PMT_PAPER_INDEX[subject][
     subject==='Maths'?(level==='AS'?'AS Papers 1 & 2':'A-level Papers 1, 2 & 3'):
     (level==='AS'?'AS Paper '+paper.split('/')[1]:'A-level Paper '+paper.split('/')[1])
@@ -1106,7 +1108,7 @@ function renderPaperArchive(){
    // Archive links open original papers externally; they are not included
    // or redistributed by this application.
    return '<div class="archive-paper-code"><span>'+esc(paper)+'</span><span class="archive-part-count '+(number?'':'archive-empty')+'">'+
-    number+' indexed '+(number===1?'part':'parts')+'</span>'+(link?'<a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer" aria-label="Find '+esc(subject+' '+level+' '+year+' '+paper)+' paper">Find paper ↗</a>':'')+'</div>';
+    number+' indexed '+(number===1?'part':'parts')+(sourceOnly?' · '+sourceOnly+' source-first':'')+'</span>'+(link?'<a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer" aria-label="Find '+esc(subject+' '+level+' '+year+' '+paper)+' paper">Find paper ↗</a>':'')+'</div>';
   });
   return papers.join('');
  }
@@ -1124,6 +1126,34 @@ function renderPaperArchive(){
  '<p class="archive-help"><a href="'+indexUrl+'" target="_blank" rel="noopener noreferrer">Official AQA paper and mark-scheme finder ↗</a> · '+
  '<a href="'+(subject==='Maths'?'https://www.aqa.org.uk/all-about-maths/a-level-maths':PMT_BY_TOPIC[subject])+'" target="_blank" rel="noopener noreferrer">Additional subject resources ↗</a>.'+
  ' AQA only provides most public past papers for a limited time. Some historical collections require school or teacher access. Older 2015 papers must be checked separately for syllabus differences.</p>';
+ // Paper-dependent questions are useful only when the original source is open.
+ // Keep them OUT of random sessions; expose an explicit paper-first workflow.
+ const groupedSource=new Map();
+ for(const q of sourceFirst){
+  if(!groupedSource.has(q.groupId))groupedSource.set(q.groupId,[]);
+  groupedSource.get(q.groupId).push(q);
+ }
+ const paperFirst=[...groupedSource.values()].sort((a,b)=>b[0].year-a[0].year||a[0].paper.localeCompare(b[0].paper));
+ const sourceBlock=paperFirst.length?
+  '<details class="archive-source-first"><summary>Open-source-paper questions · '+sourceFirst.length+' parts in '+paperFirst.length+' groups</summary>'+
+  '<p>These question parts need the original AQA page, table or diagram. They are excluded from random revision until the source is opened. Click the paper and keep it visible while answering; marks remain reviewable.</p>'+
+  paperFirst.map(group=>{
+   const q=group[0];
+   return '<div class="archive-source-row"><div><strong>'+esc(q.year+' · '+q.level+' · '+q.paper+' · Q'+q.question)+'</strong><small>'+group.length+' linked '+(group.length===1?'part':'parts')+' · original question paper needed</small></div>'+
+    '<a href="'+esc(q.qpUrl)+'" target="_blank" rel="noopener noreferrer">Open original ↗</a>'+
+    '<button type="button" data-source-first="'+esc(q.id)+'">Answer and mark</button></div>';
+  }).join('')+'</details>':'';
+ target.insertAdjacentHTML('beforeend',sourceBlock);
+ target.querySelectorAll('[data-source-first]').forEach(button=>button.onclick=()=>{
+  const chosen=sourceFirst.find(q=>q.id===button.dataset.sourceFirst);
+  if(!chosen)return;
+  const related=sourceFirst.filter(q=>q.groupId===chosen.groupId).sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));
+  activeSession={kind:'exam',items:related.map(q=>({type:'exam',id:q.id,groupId:q.groupId})),index:0,title:'Original-paper assisted question'};
+  studyType='exam';
+  renderAll();
+  document.getElementById('studyHost')?.scrollIntoView?.({block:'start',behavior:'smooth'});
+ });
+ 
  const all=revisionTopicIndex(subject),gaps=[];
  for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&n.questions===0)gaps.push(topic);
  const sourced=new Map();
