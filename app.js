@@ -1086,11 +1086,16 @@ function renderPaperArchive(){
   Maths:{AS:['7356/1','7356/2'],'A-level':['7357/1','7357/2','7357/3']}
  };
  const first=subject==='Maths'?{AS:2018,'A-level':2018}:{AS:2016,'A-level':2017};
+ const legacyLinks={
+  Physics:'https://www.physicsandmathstutor.com/past-papers/a-level-physics/',
+  Chemistry:'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/',
+  Maths:'https://www.physicsandmathstutor.com/a-level-maths-papers/c1-aqa/'
+ };
  const qp=examQuestions.filter(q=>q.subject===subject&&q.standalone!==false&&q.year!=='Practice');
  const indexUrl='https://www.aqa.org.uk/past-papers-and-mark-schemes-finder';
  const years=Array.from({length:11},(_,i)=>2025-i);
  function archiveLevel(year,level){
-  if(year<first[level])return '<span class="archive-nonexistent">Not examined under this specification</span>';
+  if(year<first[level])return '<span class="archive-nonexistent">Current syllabus not examined · <a href="'+legacyLinks[subject]+'" target="_blank" rel="noopener noreferrer">Older AQA specification papers ↗</a></span>';
   const papers=codes[subject][level].map(paper=>{
    const found=qp.filter(x=>x.year===year&&x.level===level&&
     (x.paper===paper||x.paper.startsWith(paper+'A')||x.paper.startsWith(paper+'B')));
@@ -1113,7 +1118,7 @@ function renderPaperArchive(){
    '</th><td>'+archiveLevel(year,'AS')+'</td><td>'+archiveLevel(year,'A-level')+'</td></tr>';
  }).join('');
  target.innerHTML='<p class="archive-label">AQA '+esc(subject)+' · current-specification paper checklist, 2025–2015</p>'+
- '<p class="archive-help">The figure beside a paper is the number of source-linked question parts <b>inside Revision Loop</b>, not the number of questions on that paper. <b>0 means no questions from that paper have yet been indexed here.</b> Links open external full-paper collections; these are not copies hosted in Revision Loop.</p>'+
+ '<p class="archive-help">The figure beside a paper is the number of question parts indexed <b>inside Revision Loop</b>, not the number of questions on the original paper. <b>0 means no indexed parts.</b> The complete papers and mark schemes are available through external resources; the site does not reproduce full papers. 2020/2021 collections may include papers issued for practice or unusual assessment series rather than normal June exams.</p>'+
  '<div class="archive-scroll"><table class="archive-matrix"><thead><tr><th>Year</th><th>AS ('+esc(codes[subject].AS[0].split('/')[0])+')</th><th>A-level ('+esc(codes[subject]['A-level'][0].split('/')[0])+')</th></tr></thead><tbody>'+
  archiveRows+'</tbody></table></div>'+
  '<p class="archive-help"><a href="'+indexUrl+'" target="_blank" rel="noopener noreferrer">Official AQA paper and mark-scheme finder ↗</a> · '+
@@ -1129,13 +1134,21 @@ function renderPaperArchive(){
 }
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,base=subjectExam(sub).filter(q=>level==='both'||q.level===level),
- years=[...new Set(base.map(q=>q.year))].sort((a,b)=>a==='Practice'?1:b==='Practice'?-1:b-a),topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
+ years=[...new Set(base.map(q=>q.year))].sort((a,b)=>a==='Practice'?1:b==='Practice'?-1:b-a),
+ yearOptions=[...Array.from({length:11},(_,i)=>2025-i),'Practice'],
+ topics=[...new Set(subjectCards(sub).map(flashTopicLabel))],
  types=[...new Set(base.map(q=>q.questionType).filter(Boolean))].sort();
  examYears=new Set([...examYears].filter(y=>years.includes(y)));examTopics=new Set([...examTopics].filter(t=>topics.includes(t)));examTypes=new Set([...examTypes].filter(t=>types.includes(t)));
  if(defaultIfEmpty&&!examYears.size)years.forEach(y=>examYears.add(y));
  if(defaultIfEmpty&&!examTopics.size)base.forEach(q=>examTopics.add(examTopicLabel(q)));
  if(defaultIfEmpty&&!examTypes.size)types.forEach(t=>examTypes.add(t));
- document.getElementById('examYears').innerHTML=years.map(y=>'<label class="check-item"><input type="checkbox" data-exam-year="'+y+'" '+(examYears.has(y)?'checked':'')+'><span>'+y+'</span></label>').join('');
+ const firstYear=sub==='Maths'?{AS:2018,'A-level':2018}:{AS:2016,'A-level':2017};
+ document.getElementById('examYears').innerHTML=yearOptions.map(y=>{
+  const available=years.includes(y),count=base.filter(q=>q.year===y).length,
+   legacy=y!=='Practice'&&((level==='both'&&y<firstYear.AS)||(level!=='both'&&y<firstYear[level]));
+  const desc=available?count+' indexed':legacy?'legacy specification':'0 indexed';
+  return '<label class="check-item '+(available?'':'empty-topic')+'"><input type="checkbox" data-exam-year="'+y+'" '+(available?'':'disabled ')+(examYears.has(y)?'checked':'')+'><span>'+y+'</span><small>'+desc+'</small></label>';
+ }).join('');
  document.getElementById('examTopics').innerHTML=groupedTopicPicker(sub,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear)):examYears.delete(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear));renderTopicCounts()});
@@ -1144,7 +1157,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  renderTopicCounts();
  renderPaperArchive();
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
- document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Official past-paper coverage remains incomplete.';
+ document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
 function renderTopicCounts(){
  document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';
@@ -1207,7 +1220,7 @@ function examSuggested(q,answer){
     .map(x=>x.trim()).filter(x=>x.length>=3).length;
   const meaningfulWords=tokens(answer).filter(x=>x.length>=4).length;
   const evidenceCap=Math.min(q.marks,Math.max(1,clauses,Math.floor(meaningfulWords/12)));
-  suggested=Math.min(suggested,evidenceCap);
+  if(!(trustedFinal&&ordinaryCalculation))suggested=Math.min(suggested,evidenceCap);
  }
  if(q.answerType==='levels'&&q.marks>=4){
   const complete=preds.every(Boolean)&&String(answer).trim().split(/\s+/).length>=Math.max(20,q.markPoints.length*5);
