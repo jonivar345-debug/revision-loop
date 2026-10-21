@@ -137,6 +137,18 @@ const CHARACTERS=[
  {id:'phase2_beru',name:'Beru',series:'Solo Leveling',cost:155,skin:'#bb815d',hair:'#111827',hair2:'#e2e8f0',style:'bob',eye:'#ca8a04',lookup:'Beru'},
  {id:'phase2_yoo_jinho',name:'Yoo Jinho',series:'Solo Leveling',cost:155,skin:'#efd0b5',hair:'#7c3aed',hair2:'#b91c1c',style:'spiky',eye:'#e2e8f0',lookup:'Yoo Jinho'}
 ];
+
+// Transparent character tiers: protagonists/recognisable leads cost 40–50,
+// supporting characters 30–40. The starter character stays free.
+const MAIN_CHARACTER_IDS=new Set(["light","eren","isagi","yuji","gojo","subaru","klein","dokja","joonghyuk","thorfinn","kaneki","phase2_kenzo_tenma","phase2_johan_liebert","phase2_shinichi_izumi","phase2_spike_spiegel","phase2_shinji_ikari","phase2_edward_elric","phase2_gon_freecss","phase2_denji","phase2_kafka_hibino","phase2_loid_forger","phase2_anya_forger","phase2_kiyotaka_ayanokoji","phase2_aqua_hoshino","phase2_takemichi_hanagaki","phase2_manjiro_sano","phase2_haruka_sakura","phase2_sung_jinwoo","lelouch"]);
+const POPULAR_LEAD_IDS=new Set(["light","eren","gojo","isagi","yuji","kaneki","phase2_sung_jinwoo","phase2_denji","phase2_anya_forger","phase2_edward_elric","phase2_gon_freecss"]);
+CHARACTERS.forEach((c,i)=>{
+ if(c.id==='lelouch'){c.cost=0;return}
+ c.cost=MAIN_CHARACTER_IDS.has(c.id)?
+   (POPULAR_LEAD_IDS.has(c.id)?50:(i%2?45:40)):
+   (30+((i%3)*5));
+});
+
 const OUTFIT_STYLES=[
  {id:'default',name:'Default',cost:0,top:'#2563eb',accent:'#dbeafe'},
  {id:'hoodie',name:'Hoodie',cost:12,top:'#0f172a',accent:'#64748b'},
@@ -173,7 +185,7 @@ const SERIES_OUTFIT_NAMES={
 };
 const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
  id:ch.id+'-'+o.id,character:ch.id,name:(CHARACTER_OUTFIT_NAMES[ch.id]||SERIES_OUTFIT_NAMES[ch.series]||[])[i]||o.name,
- cost:i===0?0:o.cost+Math.max(0,CHARACTERS.findIndex(x=>x.id===ch.id))*2,
+ cost:i===0?0:15,
  top:o.top,accent:o.accent,styleId:o.id
 })));
 
@@ -466,6 +478,26 @@ const LOCATIONS=[
  {id:'addis_ababa',name:'Addis Ababa',wiki:'Addis_Ababa',lat:9.03,lon:38.74,cost:820,region:'Africa'},
  {id:'mount_cook',name:'Aoraki / Mount Cook',wiki:'Aoraki_/_Mount_Cook',lat:-43.595,lon:170.141,cost:825,region:'Oceania'}
 ];
+
+
+// Location costs reflect broad destination prominence rather than insertion order.
+// London remains the free starting location; the full paid range is 100–250.
+const ICONIC_LOCATION_IDS=new Set([
+ 'tokyo','london','paris','newyork','rome','sydney','singapore','hongkong','bali',
+ 'kyoto','machupicchu','petra','venice','cairo','rio','capetown','grandcanyon',
+ 'pyramids','angkor','istanbul','dubai','beijing','reykjavik','santorini'
+]);
+const MAJOR_LOCATION_IDS=new Set([
+ 'seoul','shanghai','bangkok','barcelona','amsterdam','lisbon','vienna','athens',
+ 'edinburgh','marrakesh','sanfrancisco','losangeles','vancouver','hanoi',
+ 'berlin','prague','florence','almaty','nairobi','cusco','buenosaires','seville'
+]);
+LOCATIONS.forEach((l,i)=>{
+ if(l.id==='london'){l.cost=0;return}
+ l.cost=ICONIC_LOCATION_IDS.has(l.id)?(230+(i%3)*10):
+  MAJOR_LOCATION_IDS.has(l.id)?(175+(i%5)*10):
+  (100+(i%8)*10);
+});
 
 const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
 const earthTexture=new Image();earthTexture.crossOrigin='anonymous';let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;earthTexture.onload=()=>{try{const t=document.createElement('canvas');t.width=720;t.height=360;const x=t.getContext('2d',{willReadFrequently:true});x.drawImage(earthTexture,0,0,t.width,t.height);earthPixels=x.getImageData(0,0,t.width,t.height).data;earthW=t.width;earthH=t.height;earthTextureReady=true}catch{earthTextureReady=false}drawGlobe()};earthTexture.src=EARTH_TEXTURE_URL;
@@ -869,7 +901,16 @@ function startMistakes(){
 function advanceSession(){
  currentCardId=null;currentEvaluation=null;currentFlashAwarded=false;currentExamScore=0;
  if(!activeSession){renderAll();return}activeSession.index++;
- if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(activeSession.index>=activeSession.items.length){s.done=true;const today=dateKey(),y=new Date(Date.now()-DAY).toISOString().slice(0,10);if(profile.lastChallengeDate!==today){profile.challengeStreak=profile.lastChallengeDate===y?profile.challengeStreak+1:1;profile.lastChallengeDate=today}activeSession=null}else activeSession={...activeSession,index:s.index};save()}
+ if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(activeSession.index>=activeSession.items.length){s.done=true;const today=dateKey(),y=new Date(Date.now()-DAY).toISOString().slice(0,10);if(profile.lastChallengeDate!==today){
+  profile.challengeStreak=profile.lastChallengeDate===y?profile.challengeStreak+1:1;
+  profile.lastChallengeDate=today;
+  if(profile.challengeBonusDate!==today){
+    const bonus=Math.max(0,profile.challengeStreak-1);
+    profile.challengeBonusDate=today;
+    if(bonus)award(bonus,'challenge-streak');
+    showToast('Daily challenge complete · '+profile.challengeStreak+'-day streak'+(bonus?' · +'+bonus+' bonus points / XP':''));
+  }
+ }activeSession=null}else activeSession={...activeSession,index:s.index};save()}
  else if(activeSession.index>=activeSession.items.length)activeSession={...activeSession,done:true};
  renderAll();
 }
@@ -998,7 +1039,7 @@ function renderAvatar(){
  document.getElementById('shopPoints').textContent=profile.points;
  selectedLocation=l.id;loadCharacterArt(document.getElementById('miniAvatar'));loadCharacterArt(document.getElementById('characterPreview'));
 }
-function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today':(s.index||0)+' / '+s.items.length+' completed'):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
+function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today · next streak bonus '+profile.challengeStreak+' point'+(profile.challengeStreak===1?'':'s'):( (s.index||0)+' / '+s.items.length+' completed')):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
 function revisionTopicIndex(subject,qualification='both'){
