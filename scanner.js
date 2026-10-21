@@ -298,7 +298,49 @@ function possiblyIncorrectArithmetic(line){
   }
   return null;
  }
- function reviewEvidence(q,answer,res){
+ function scanEquationResults(text){
+ const t=String(text||'').replace(/[−–—]/g,'-').replace(/×/g,'*');
+ const out=[];
+ for(const match of t.matchAll(/=\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)/gi)){
+  if(/^\s*[/+*^]/.test(t.slice(match.index+match[0].length)))continue;
+  const v=Number(match[1]);if(Number.isFinite(v))out.push(v);
+ }
+ return out;
+}
+function scanLabelledStep(q,point,lines){
+ if(!['Physics','Chemistry'].includes(q.subject))return null;
+ const expected=scanEquationResults(point);
+ if(!expected.length)return null;
+ const rules=[
+ [/parallel.*resistance|external.*resistance/i,/(?:parallel|r_?parallel|r_?ext)/i],
+ [/total.*resistance|circuit resistance/i,/(?:total.*resistan|r_?total|rtotal)/i],
+ [/branch.*current|currents?.*\b6|currents?.*\b3/i,/(?:branch|\bi[36]\s*=|\bi_[36]\b)/i],
+ [/terminal.*(?:p\.?d\.?|potential|voltage)/i,/(?:terminal|voltage|\bV\s*=)/i],
+ [/\b(?:total|electric|initial)\s+current\b|\bcurrent\s*=/i,/(?:current|\bI\s*=)/i],
+ [/\bpower\b/i,/(?:power|\bP\s*=|i(?:\^2|²)r)/i],
+ [/\benergy\b|\bwork\b/i,/(?:energy|work|\bE\s*=|\bW\s*=)/i],
+ [/\bmass\b/i,/(?:mass|\bm\s*=)/i],
+ [/\bpurity\b|\bpercentage\b|\bpercent\b/i,/(?:purity|percentage|percent|%)/i],
+ [/\bmol(?:es)?\b|\bn\([^)]+\)/i,/(?:mol|\bn(?:\([^)]*\)|[_a-z0-9]*)\s*=)/i],
+ [/\bpressure\b/i,/(?:pressure|\bp\s*=)/i],
+ [/\bforce\b/i,/(?:force|\bF\s*=)/i]
+ ];
+ const context=rules.find(([match])=>match.test(point));
+ if(!context)return null;
+ const found=[];
+ for(const line of lines){
+  if(possiblyIncorrectArithmetic(line)||!context[1].test(line))continue;
+  const actual=scanEquationResults(line);
+  if(actual.some(v=>expected.some(t=>Math.abs(v-t)<=Math.max(1e-11,Math.abs(t)*.015))))found.push({line,actual});
+ }
+ if(!found.length)return null;
+ // A single branch current is not evidence for both branches when the
+ // question requires two independent currents.
+ const required=expected.filter(v=>v!==0);
+ if(required.length>1&&!required.every(t=>found.some(o=>o.actual.some(v=>Math.abs(t-v)<=Math.max(1e-11,Math.abs(t)*.015)))))return null;
+ return found.map(x=>x.line).join(' ; ').slice(0,220);
+}
+function reviewEvidence(q,answer,res){
   if(!hasRecognizedMarking(q.id))return null;
   const lines=String(answer||'').split(/\r?\n|;\s*/).map(x=>x.trim()).filter(x=>x.length>2);
   const terms=x=>[...new Set((String(x).toLowerCase().match(/[a-z]{3,}/g)||[]).filter(w=>!['the','and','are','for','with','from','that','this','into','when'].includes(w)))];
@@ -313,6 +355,8 @@ function possiblyIncorrectArithmetic(line){
     const outcome=scanMathConclusion(answer,expected);
     return {line:outcome||'',similarity:outcome?1:0,strong:Boolean(outcome)};
    }
+   const labelled=scanLabelledStep(q,point,lines);
+   if(labelled)return {line:labelled,similarity:1,strong:true};
    const formula=scanFormulaEvidence(point,answer);
    if(formula)return {line:formula,similarity:1,strong:true};
    const expectedFinal=q.answerType==='numeric'&&Number.isFinite(q.numericAnswer)?q.numericAnswer:NaN;
