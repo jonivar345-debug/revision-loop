@@ -17,3 +17,4 @@ jobs:
         run: |
           node tests/scanner-regression.cjs
           node tests/photo-review-regression.cjs
+          node tests/vision-backend-regression.mjs
