@@ -146,7 +146,19 @@
    });
    const data=await response.json().catch(()=>({}));
    if(response.status===400&&data.error==='Question information is required.'){
-    status('Connection verified: the private access token works. No AI request or photograph was sent.');
+    status('Private passphrase accepted. Checking the AI account and model without submitting a photograph…');
+    const provider=await fetch(DEFAULT_API,{
+     method:'POST',mode:'cors',cache:'no-store',credentials:'omit',
+     headers:{'Content-Type':'application/json','Authorization':'Bearer '+config.passphrase},
+     body:JSON.stringify({action:'check-provider'})
+    });
+    const checked=await provider.json().catch(()=>({}));
+    if(provider.ok&&checked.providerReady){
+     status('AI account and model access verified. This test is free. You can now try marking a photograph (which may incur an API charge).');
+    }else{
+     status('Private passphrase works, but the AI account check failed: '+String(checked.error||'Please review the server API configuration.').slice(0,240)+
+      (checked.providerCode?' (Code: '+checked.providerCode+')':''),true);
+    }
    } else if(response.status===401){
     if(config.remembered){forgetDevice();clearTab()}
     status('The private access has expired or was changed. Enter your original passphrase once to reconnect this device.',true);
@@ -156,7 +168,7 @@
   }catch(e){
    status('Could not contact the private service: '+(e.message||'Network error'),true);
   }finally{
-   if(button){button.disabled=false;button.textContent='Test connection (no AI charge)'}
+   if(button){button.disabled=false;button.textContent='Check AI account (no charge)'}
   }
  }
  async function markFromPhotos(){
@@ -262,7 +274,7 @@
       throw Error('This browser cannot store the tab-only access.');
      $('scanVisionPass').value='';
      $('scanVisionConfig').open=false;
-     status('Private access saved for this tab. Press Test connection to verify it without an AI charge.');
+     status('Private access saved for this tab. Press Check AI account to verify access without an AI charge.');
     }
    }catch(err){status(err.message||'Could not save private access.',true)}
    finally{button.disabled=false;button.textContent='Save private connection'}
