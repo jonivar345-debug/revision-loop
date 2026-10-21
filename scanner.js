@@ -204,23 +204,36 @@
   return false;
  }
 
+ function scanNumbers(text){
+  let x=String(text||'').replace(/[−–—]/g,'-').replace(/[×·]/g,'*');
+  const supers={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
+  x=x.replace(/10([⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)/g,(_,v)=>'10^'+[...v].map(c=>supers[c]).join(''));
+  const token=/[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:\*|x)\s*10\s*\^\s*[-+]?\d+|[eE][-+]?\d+)?/g;
+  const results=[];
+  for(const match of x.matchAll(token)){
+   const raw=match[0].replace(/\s+/g,'');
+   const sci=raw.match(/^([-+]?(?:\d+(?:\.\d*)?|\.\d+))[*x]10\^([-+]?\d+)$/i);
+   const value=sci?Number(sci[1])*10**Number(sci[2]):Number(raw);
+   if(Number.isFinite(value))results.push({value,start:match.index,end:match.index+match[0].length,raw:match[0]});
+  }
+  return {text:x,results};
+ }
  function scanMathConclusion(text,target){
   if(!Number.isFinite(target))return null;
-  const cleaned=String(text||'').replace(/^Page\s+\d+.*$/gm,'').replace(/[−–]/g,'-').replace(/×/g,'*').replace(/÷/g,'/');
-  const expectedMatches=v=>Number.isFinite(v)&&Math.abs(v-target)<=Math.max(.012,Math.abs(target)*.008);
-  const re=/(?:=|≈|:)\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))(?:\s*(?:[a-z%°]|$|\n))/gi;
-  let found;
-  for(const m of cleaned.matchAll(re))if(expectedMatches(Number(m[1])))found=m[0].trim();
-  if(found)return found;
-  const labels=/(?:mean|average|answer|result|total\s*time)\s*(?:is|=|:)?\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))|([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*(?:=|is)?\s*(?:mean|average|answer)/gi;
-  for(const m of cleaned.matchAll(labels)){
-   const v=Number(m[1]??m[2]);if(expectedMatches(v))return m[0].trim();
+  const source=String(text||'').replace(/^Page\s+\d+.*$/gm,'');
+  const info=scanNumbers(source),cleaned=info.text;
+  const near=v=>Number.isFinite(v)&&Math.abs(v-target)<=Math.max(1e-14,Math.abs(target)*.009);
+  for(const token of info.results){
+   if(!near(token.value))continue;
+   const before=cleaned.slice(Math.max(0,token.start-24),token.start);
+   const after=cleaned.slice(token.end,Math.min(cleaned.length,token.end+24));
+   // Require an explicit final-answer cue, never a raw intermediate or input number.
+   const prefix=/(?:=|≈|:)\s*$|(?:answer|result|mean|average|therefore|hence|so)\s*(?:is|=|:)?\s*$/i.test(before);
+   const suffix=/^\s*(?:=|is)?\s*(?:mean|average|answer|result)\b/i.test(after);
+   const line=cleaned.slice(cleaned.lastIndexOf('\n',token.start-1)+1,cleaned.indexOf('\n',token.end)>-1?cleaned.indexOf('\n',token.end):cleaned.length).trim();
+   const standalone=line===token.raw.trim()||line===token.raw.trim()+' J'||line===token.raw.trim()+' W'||line===token.raw.trim()+' mol';
+   if(prefix||suffix||standalone)return line.slice(0,200);
   }
-  // A standalone final line is a legitimate final answer, unlike a number
-  // embedded among the original input measurements.
-  const lines=cleaned.split(/\n/).map(v=>v.trim()).filter(Boolean);
-  const last=lines[lines.length-1];
-  if(last&&/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)\s*(?:[a-zA-Z%°]+)?$/.test(last)&&expectedMatches(parseFloat(last)))return last;
   return null;
  }
  function scanMeanMethod(q,answer){
@@ -276,13 +289,9 @@
    if(Number.isFinite(expectedFinal)&&/(?:obtain|calculate|find|result|answer|therefore|hence|equals|approximately|≈)/i.test(point)){
     const explicit=scanMathConclusion(answer,expectedFinal);
     // Only the marking point containing the correct result can receive this credit.
-    const nums=(String(point).match(/[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:×|x|\*)\s*10\s*\^\s*[-+]?\d+)?/g)||[]);
-    const finalVisible=nums.some(x=>{
-     const z=x.replace(/\s/g,'').replace(/[×x]/g,'*');
-     const scientific=z.match(/^([-+]?\d+(?:\.\d+)?)[*]10\^([-+]?\d+)$/);
-     const val=scientific?Number(scientific[1])*Math.pow(10,Number(scientific[2])):Number(z);
-     return Number.isFinite(val)&&Math.abs(val-expectedFinal)<=Math.max(.02,Math.abs(expectedFinal)*.03);
-    });
+    const finalVisible=scanNumbers(point).results.some(({value})=>
+     Number.isFinite(value)&&Math.abs(value-expectedFinal)<=Math.max(1e-14,Math.abs(expectedFinal)*.025)
+    );
     if(explicit&&finalVisible)return {line:explicit,similarity:1,strong:true};
    }
    let bestScore=0,best='',bestOverlap=0,bestSameNumber=false,bestRank=-1;
