@@ -299,3 +299,28 @@
 
 .scan-vision-remember{display:flex!important;align-items:center;gap:9px;padding:10px;border:1px solid #c7d2fe;border-radius:9px;background:#fff;cursor:pointer}
 .scan-vision-remember input[type=checkbox]{width:19px!important;height:19px!important;margin:0;flex:none;accent-color:#4338ca}
+
+
+/* Revision Loop free-first marking; paid backend remains an optional advanced path. */
+.free-marking-panel{border:1px solid #a7d4be;background:#f5fcf8;border-radius:13px;padding:14px;margin:12px 0;font-size:.83rem;line-height:1.5;color:#14532d}
+.free-marking-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.free-marking-head strong{font-size:.9rem}
+.free-marking-head span{background:#dcfce7;color:#166534;padding:4px 9px;border-radius:99px;font-size:.7rem;font-weight:700;white-space:nowrap}
+.free-marking-panel p{margin:8px 0 10px}
+.free-marking-panel details{background:#fff;border:1px solid #b7dbc5;border-radius:9px;padding:10px 12px;margin:9px 0;color:#1f2937}
+.free-marking-panel summary{cursor:pointer;font-weight:700;color:#166534}
+.free-marking-panel .free-mark-actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.free-marking-panel button,.free-marking-panel .free-mark-actions a{display:inline-block;padding:9px 11px;border-radius:8px;border:1px solid #0f766e;background:#fff;color:#115e59;font-size:.78rem;font-weight:650;text-decoration:none;cursor:pointer}
+.free-marking-panel button:hover,.free-marking-panel .free-mark-actions a:hover{background:#ecfdf5}
+.free-marking-panel button:disabled{opacity:.6;cursor:wait}
+.free-marking-panel textarea{box-sizing:border-box;display:block;width:100%;resize:vertical;min-height:76px;border:1px solid #a7c4b7;border-radius:8px;background:white;color:#111827;padding:10px;margin:9px 0;font:inherit}
+.free-marking-panel textarea[hidden]{display:none}
+.free-marking-panel label:not(.free-local-consent){display:block;font-size:.77rem;font-weight:700;margin-top:10px}
+.free-marking-panel small{display:block;color:#475569;font-size:.72rem;margin-top:8px}
+.free-marking-panel #freeMarkStatus,.free-marking-panel #freeHandwritingStatus{font-size:.75rem;color:#166534;margin:9px 0}
+.free-marking-panel .scan-error{color:#b91c1c!important}
+.free-local-consent{display:flex;align-items:flex-start;gap:8px;font-size:.78rem;margin:12px 0;cursor:pointer}
+.free-local-consent input{width:18px;height:18px;flex:none;accent-color:#0f766e}
+.scan-vision>details>summary{cursor:pointer;font-weight:650}
+.scan-vision>details{border:1px solid #c7d2fe;border-radius:9px;padding:12px}
+@media(max-width:580px){.free-marking-panel{padding:11px}.free-marking-panel .free-mark-actions>*{flex:1 1 135px;text-align:center}}
