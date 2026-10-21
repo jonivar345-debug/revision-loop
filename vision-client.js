@@ -173,6 +173,10 @@
  }
  async function markFromPhotos(){
   if(inFlight||!question)return;
+  if(!$('scanVisionPaidOptIn')?.checked){
+   status('Paid AI marking is off by default. Use free local marking or the ChatGPT Plus hand-off above.',true);
+   return;
+  }
   await renewRememberedDevice();
   const q=question,config=readConfig();
   if(!allowedEndpoint(config.url)||!config.passphrase||config.passphrase.length<24){
@@ -233,9 +237,10 @@
   const outer=document.createElement('section');
   outer.className='scan-vision';
   outer.innerHTML=
-   '<div class="scan-vision-title"><strong>AI handwriting & method marking</strong><span>Optional</span></div>'+
-   '<p>AI can interpret your photograph directly, including calculations and diagrams. You must check the suggested marks. Photos go to your configured private service and its AI provider only when you press the AI button.</p>'+
-   '<button type="button" id="scanVisionMark" class="scan-vision-action">Mark photographed working with AI</button>'+
+   '<details id="scanVisionPaidPanel"><summary>Paid API photo marking — off by default</summary>'+
+   '<p>The local checker and ChatGPT hand-off above are free. This paid API option requires an eligible adult to enable ENABLE_PAID_VISION_MARKING=true in Vercel, configure billing and set usage limits. The website cannot enable it alone.</p>'+
+   '<label class="scan-vision-remember"><input type="checkbox" id="scanVisionPaidOptIn"> I understand paid API calls may incur charges</label>'+
+   '<button type="button" id="scanVisionMark" class="scan-vision-action" disabled>Use paid AI photo marking</button>'+
    '<div id="scanVisionStatus" role="status" aria-live="polite">The private AI backend is deployed. Save your separate access passphrase and test the connection before marking. Local photo marking still works.</div>'+
    '<details id="scanVisionConfig"><summary>Connect private AI marking service</summary>'+
    '<p>Your backend address is filled in automatically. Enter only the separate private passphrase you saved as VISION_ACCESS_TOKEN in Vercel. Never enter or share your OpenAI API key here, and do not use the four-digit website PIN.</p>'+
@@ -248,7 +253,7 @@
    '<div class="scan-vision-actions"><button type="button" id="scanVisionSave">Save private connection</button><button type="button" id="scanVisionTest">Test connection (no AI charge)</button>'+
    '<button type="button" id="scanVisionForget">Forget this device</button></div>'+
    '<small>Without Remember, access lasts for this tab only. AI requests may incur charges; photos are sent only when you press Mark photographed working with AI.</small>'+
-   '</details>';
+   '</details></details>';
   host.insertAdjacentElement('beforebegin',outer);
   const saved=readConfig();
   $('scanVisionUrl').value=saved.url||'';
@@ -290,6 +295,7 @@
    status('This device has been forgotten. Your passphrase will be needed to reconnect.');
   };
   $('scanVisionTest').onclick=testPrivateConnection;
+  $('scanVisionPaidOptIn').onchange=()=>{$('scanVisionMark').disabled=!$('scanVisionPaidOptIn').checked};
   $('scanVisionMark').onclick=markFromPhotos;
   if(saved.remembered)
    status('Device remembered. Access renews automatically while you use Revision Loop. No password needed for AI marking.');
@@ -303,5 +309,22 @@
    });
   }
  }
- window.RevisionVision={mount,resultFor,invalidate,markFromPhotos,allowedEndpoint,testPrivateConnection};
+ function importReviewedPoints(q,awarded){
+  if(!q||!question||q.id!==question.id||!Array.isArray(awarded)||
+     awarded.length!==q.markPoints.length||awarded.some(x=>typeof x!=='boolean'))return false;
+  const marking=awarded.map((earned,index)=>({
+   index,earned,evidence:earned?'Imported suggestion from ChatGPT (verify against photo)':'',
+   reason:earned?'Reported as met in ChatGPT; review before saving.':'Not reported as met; review before saving.',
+   confidence:'low'
+  }));
+  const score=Math.min(q.marks,marking.reduce((n,point)=>{
+   const weight=q.markingMode==='anyN'?1:(q.markPointMarks?.[point.index]??1);
+   return n+(point.earned?weight:0);
+  },0));
+  visionResult={questionId:q.id,transcription:'',marking,score,maxMarks:q.marks,
+    uncertain:true,reviewNotes:'These suggestions were copied manually from ChatGPT. Check each mark before saving.',
+    source:'chatgpt-manual-import'};
+  return true;
+ }
+ window.RevisionVision={mount,resultFor,invalidate,markFromPhotos,allowedEndpoint,testPrivateConnection,importReviewedPoints};
 })();
