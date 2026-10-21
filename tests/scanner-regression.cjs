@@ -79,6 +79,7 @@ const physicsVector=bank.find(q=>q.id==='aqa_phy_as23_p1_q4_1');
 assert(chemBack&&physicsVector,'Reference tests exist');
 assert.equal(scorer.examSuggested(chemBack,'74%').suggested,chemBack.marks,'Correct complete calculation result can earn full marks');checks++;
 assert.equal(scorer.examSuggested(chemBack,'74').suggested,chemBack.marks,'Correct unlabelled result can earn full marks');checks++;
+assert.equal(scorer.examSuggested({...chemBack,prompt:chemBack.prompt+' Show your working.'},'74%').suggested<chemBack.marks,true,'Explicit show-working instruction requires demonstrated working');checks++;
 assert.equal(scorer.examSuggested(chemBack,'74 g').suggested<chemBack.marks,true,'Incorrect explicit units cannot earn full marks');checks++;
 assert.equal(scorer.examSuggested(physicsVector,'310 V').suggested<physicsVector.marks,true,'Wrong physical dimensions cannot earn full marks');checks++;
 assert.equal(scorer.examSuggested(physicsVector,'310 N').suggested,physicsVector.marks,'Correct physical units earn full credit');checks++;
