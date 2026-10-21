@@ -73,6 +73,24 @@ const arithmetic=[
 for(const [line,expected] of arithmetic){
  assert.equal(browser.__regression.possiblyIncorrectArithmetic(line),expected,line);checks++;
 }
+// Ordinary numerical calculation: AQA-style correct-answer shortcut.
+const chemBack=bank.find(q=>q.id==='aqa_chem_as23_p1_q2_6');
+const physicsVector=bank.find(q=>q.id==='aqa_phy_as23_p1_q4_1');
+assert(chemBack&&physicsVector,'Reference tests exist');
+assert.equal(scorer.examSuggested(chemBack,'74%').suggested,chemBack.marks,'Correct complete calculation result can earn full marks');checks++;
+assert.equal(scorer.examSuggested(chemBack,'74').suggested,chemBack.marks,'Correct unlabelled result can earn full marks');checks++;
+assert.equal(scorer.examSuggested(chemBack,'74 g').suggested<chemBack.marks,true,'Incorrect explicit units cannot earn full marks');checks++;
+assert.equal(scorer.examSuggested(physicsVector,'310 V').suggested<physicsVector.marks,true,'Wrong physical dimensions cannot earn full marks');checks++;
+assert.equal(scorer.examSuggested(physicsVector,'310 N').suggested,physicsVector.marks,'Correct physical units earn full credit');checks++;
+const previousWindow=global.window;
+try{
+ global.window=browser;
+ const contradictory='initial acid = 1+1=3\nfinal = 74%';
+ assert(browser.RevisionScan.hasArithmeticMistakes(contradictory),'Contradictory numerical step recognised');checks++;
+ assert(scorer.examSuggested(chemBack,contradictory).suggested<chemBack.marks,'Right final number after demonstrably invalid calculation requires review');checks++;
+}finally{
+ if(previousWindow===undefined)delete global.window;else global.window=previousWindow;
+}
 for(const q of usable){
  const model=q.modelAnswer||q.markPoints.join('. ');
  const score=scorer.examSuggested(q,model).suggested;
