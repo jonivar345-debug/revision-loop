@@ -562,7 +562,17 @@ function scanCalculusStage(q,point,lines){
   status('Suggested marks use this transcription. Review every method mark before saving.');
   return true;
  }
- async function prepareForMark(id){
+ function scanLooksLikeCalculating(question,text){
+  if(!question)return true;
+  const mathematical=question.subject==='Maths'||(
+   ['Physics','Chemistry'].includes(question.subject)&&
+   (question.answerType==='numeric'||question.requiresWorking===true));
+  if(!mathematical)return true;
+  const clean=String(text||'').replace(/^Page\s+\d+\s*$/gmi,'').trim();
+  if(!/\d/.test(clean))return false;
+  return /[=+*/÷×^∫]|\b(?:mean|average|sum|answer|result|gradient|velocity|current|mass|pH|volume|force|pressure)\s*(?:is|=|:)\s*[-+]?\d/i.test(clean);
+ }
+ async function prepareForMark(id,question){
   if(id!==currentId)return {ready:false,message:'The question changed. Please try again.'};
   if(!pages.length)return {ready:true,source:'typed'};
   if(ocrBusy)return {ready:false,message:'The photo is still being read. Wait for it to finish.'};
@@ -583,6 +593,10 @@ function scanCalculusStage(q,point,lines){
   }
   if(!transcript?.value.trim()){
    return {ready:false,message:'The reader did not extract a usable answer. Enter or correct the working before marking.'};
+  }
+  if(!scanLooksLikeCalculating(question,result.text)){
+   status('No clear mathematical working was recognised. Check or correct the transcription before marking.',true);
+   return {ready:false,message:'The reader did not identify a trustworthy calculation. Check the transcription, then tap Mark transcribed working. No mark has been recorded.'};
   }
   if(ocrNeedsReview||result.confidence!==null&&result.confidence<70){
    status('Please verify the recognised working. '+(ocrReviewReason||'Recognition confidence is low.')+' Edit any symbols, then press Mark transcribed working.',true);
