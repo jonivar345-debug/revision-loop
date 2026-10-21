@@ -792,12 +792,12 @@
       "subtopic": "Numerical methods",
       "courseTopic": "Numerical methods",
       "marks": 4,
-      "prompt": "Use one Newton–Raphson iteration starting at x₀=1.5 for f(x)=x³−x−1. Show substitution and give x₁ to four decimal places.",
+      "prompt": "Use the trapezium rule with step size 0.5 to estimate the integral of y=x³+1 from x=0 to x=2. Find the exact integral using algebraic integration and state whether the trapezium-rule estimate is an overestimate or underestimate, explaining the shape of the curve.",
       "markPoints": [
-        "Derivative f'(x)=3x²−1.",
-        "f(1.5)=0.875 and f'(1.5)=5.75.",
-        "x₁=1.5−0.875/5.75.",
-        "x₁≈1.3478."
+        "The ordinates at x=0,0.5,1,1.5,2 are 1,1.125,2,4.375,9.",
+        "Trapezium rule: T=(0.5/2)[1+2(1.125+2+4.375)+9].",
+        "Trapezium estimate T=6.25 square units.",
+        "Exact integral [x⁴/4+x] from 0 to 2 equals 6; the estimate is too large because the curve is convex for x>0."
       ],
       "markPointMarks": [
         1,
@@ -805,7 +805,7 @@
         1,
         1
       ],
-      "modelAnswer": "Derivative f'(x)=3x²−1. f(1.5)=0.875 and f'(1.5)=5.75. x₁=1.5−0.875/5.75. x₁≈1.3478.",
+      "modelAnswer": "The ordinates at x=0,0.5,1,1.5,2 are 1,1.125,2,4.375,9. Trapezium rule: T=(0.5/2)[1+2(1.125+2+4.375)+9]. Trapezium estimate T=6.25 square units. Exact integral [x⁴/4+x] from 0 to 2 equals 6; the estimate is too large because the curve is convex for x>0.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
