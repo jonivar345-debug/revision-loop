@@ -9,6 +9,10 @@ const root=path.join(__dirname,'..');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const scanner=fs.readFileSync(path.join(root,'scanner.js'),'utf8');
 const bank=JSON.parse(fs.readFileSync(path.join(root,'exam_questions.json'),'utf8')).questions;
+const supplement=JSON.parse(fs.readFileSync(path.join(root,'paper_supplement_2016_2017.json'),'utf8')).questions;
+const fixes=JSON.parse(fs.readFileSync(path.join(root,'exam_answer_corrections.json'),'utf8')).modelAnswers;
+bank.push(...supplement);
+for(const q of bank)if(Object.prototype.hasOwnProperty.call(fixes,q.id))q.modelAnswer=fixes[q.id];
 const usable=bank.filter(q=>q.standalone!==false);
 const begin=app.indexOf('function normalise(');
 const middle=app.indexOf('function nextSchedule(',begin);
@@ -83,6 +87,12 @@ assert.equal(scorer.examSuggested({...chemBack,prompt:chemBack.prompt+' Show you
 assert.equal(scorer.examSuggested(chemBack,'74 g').suggested<chemBack.marks,true,'Incorrect explicit units cannot earn full marks');checks++;
 assert.equal(scorer.examSuggested(physicsVector,'310 V').suggested<physicsVector.marks,true,'Wrong physical dimensions cannot earn full marks');checks++;
 assert.equal(scorer.examSuggested(physicsVector,'310 N').suggested,physicsVector.marks,'Correct physical units earn full credit');checks++;
+// Correct result can imply routine method, but not an additionally required diagram.
+const forceDiagram=bank.find(q=>q.id==='orig_v25_physics_free_body_diagrams_1');
+const idealGas=bank.find(q=>q.id==='orig_v25_physics_gas_laws_1');
+assert(forceDiagram&&idealGas,'Combined instruction and routine questions exist');
+assert(scorer.examSuggested(forceDiagram,'3.5').suggested<forceDiagram.marks,'A diagram plus calculation needs both parts');checks++;
+assert.equal(scorer.examSuggested(idealGas,'120').suggested,idealGas.marks,'Ordinary numerical answer earns all available marks');checks++;
 const previousWindow=global.window;
 try{
  global.window=browser;
