@@ -1288,7 +1288,9 @@ function renderPaperArchive(){
  };
  const qp=examQuestions.filter(q=>q.subject===subject&&q.standalone!==false&&q.year!=='Practice');
  const sourceFirst=examQuestions.filter(q=>q.subject===subject&&q.standalone===false&&q.sourceFirst===true&&q.qpUrl&&q.msUrl);
- const indexUrl='https://www.aqa.org.uk/past-papers-and-mark-schemes-finder';
+ const sourceParts=examQuestions.filter(q=>q.subject===subject&&q.sourceVerified===true);
+ const verifiedMarkTotals=sourceParts.filter(q=>q.originalMarkVerified===true).length;
+  const indexUrl='https://www.aqa.org.uk/past-papers-and-mark-schemes-finder';
  const years=Array.from({length:11},(_,i)=>2025-i);
  function archiveLevel(year,level){
   if(year<first[level])return '<span class="archive-nonexistent">Current syllabus not examined · <a href="'+legacyLinks[subject]+'" target="_blank" rel="noopener noreferrer">Older AQA specification papers ↗</a></span>';
@@ -1324,6 +1326,7 @@ function renderPaperArchive(){
    '</th><td>'+archiveLevel(year,'AS')+'</td><td>'+archiveLevel(year,'A-level')+'</td></tr>';
  }).join('');
  target.innerHTML='<p class="archive-label">AQA '+esc(subject)+' · current-specification paper checklist, 2025–2015</p>'+
+ '<p class="archive-verified-status"><b>'+verifiedMarkTotals+' of '+sourceParts.length+'</b> source-linked question parts in this subject have their <b>original mark totals</b> independently checked. This does not verify every answer, diagram or mark-scheme alternative.</p>'+
  '<p class="archive-help">The figure beside a paper is the number of question parts indexed <b>inside Revision Loop</b>, not the number of questions on the original paper. <b>0 means no indexed parts.</b> The complete papers and mark schemes are available through external resources; the site does not reproduce full papers. The normal 2020 and 2021 summer examinations were cancelled; alternative autumn series were used. AQA files may use November session labels. Links marked "Question paper" are existing source-verified AQA PDFs; "Browse papers" links may lead to a subject index rather than a particular year.</p>'+
  '<div class="archive-scroll"><table class="archive-matrix"><thead><tr><th>Year</th><th>AS ('+esc(codes[subject].AS[0].split('/')[0])+')</th><th>A-level ('+esc(codes[subject]['A-level'][0].split('/')[0])+')</th></tr></thead><tbody>'+
  archiveRows+'</tbody></table></div>'+
