@@ -1511,7 +1511,7 @@ function examSuggested(q,answer){
    }
    case 'aqaReciprocalShift2021':{
     const expr=input.replace(/\s+/g,'').replace(/\u2212/g,'-');
-    const good=/1\/\(x-3\)|(?:x-3)\^-1|\\frac\{1\}\{x-3\}/.test(expr);
+    const good=/1\/\(x-3\)|\(x-3\)\^-1|\\frac\{1\}\{x-3\}/.test(expr);
     flags=[good];
     break;
    }
@@ -1529,7 +1529,7 @@ function examSuggested(q,answer){
     break;
    }
    case 'aqaCombustionDiscrepancy2021':{
-    const acceptable=/(?:incomplete\s+(?:combustion|burning)|(?:fuel|sample|liquid|alcohol)[^.!?\n]{0,45}(?:evaporat|vaporis|vaporiz)|(?:evaporat|vaporis|vaporiz)[^.!?\n]{0,45}(?:fuel|sample|liquid|alcohol)|(?:non[-\s]?standard|not\s+(?:at|under)\s+standard)\s+(?:experiment\w*\s+)?(?:conditions?|temperatures?|pressures?))/i.test(input);
+    const acceptable=/(?:(?:incomplete\s+(?:combustion|burning)|(?:fuel|sample)\s+(?:does\s+not|did\s+not)\s+burn\s+completely)|(?:fuel|sample|liquid|alcohol)[^.!?\n]{0,45}(?:evaporat|vaporis|vaporiz)|(?:evaporat|vaporis|vaporiz)[^.!?\n]{0,45}(?:fuel|sample|liquid|alcohol)|(?:non[-\s]?standard|not\s+(?:at|under)\s+standard)\s+(?:experiment\w*\s+)?(?:conditions?|temperatures?|pressures?))/i.test(input);
     flags=[acceptable];
     break;
    }
