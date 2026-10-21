@@ -1547,7 +1547,7 @@ function examSuggested(q,answer){
  // 5680000000 is not a full-mark replacement for 5.68×10^9.
  if(q.markingMode==='standardFormStrict'&&q.answerType==='numeric'&&
     numericMatch(q,rawNumeric)&&
-    !/(?:e[+-]?\d+|(?:×|x|\*)\s*10\s*(?:\^|\*\*)\s*[-+]?\d+)/i.test(rawNumeric)){
+    !/(?:e[+-]?\d+|(?:×|x|\*)\s*10\s*(?:(?:\^|\*\*)\s*[-+]?\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+))/i.test(rawNumeric)){
   const partial=Math.max(0,q.marks-1);
   const flags=q.markPoints.map((_,i)=>i<partial);
   return {preds:flags,scores:flags.map(on=>on?1:0),finalCorrect:false,confidence:'high',suggested:partial};
