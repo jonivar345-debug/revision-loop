@@ -74,7 +74,14 @@ vision.mount(q);
 assert.equal(called,0);checks++;
 async function run(){
  await vision.markFromPhotos();
- assert.equal(called,0,'No network access before service configuration');checks++;
+ assert.equal(called,0,'Paid marking makes no requests by default');checks++;
+ assert.match(components.get('scanVisionStatus').textContent,/off by default/);checks++;
+ assert.equal(components.get('scanVisionMark').disabled,true);checks++;
+ components.get('scanVisionPaidOptIn').checked=true;
+ components.get('scanVisionPaidOptIn').onchange();
+ assert.equal(components.get('scanVisionMark').disabled,false);checks++;
+ await vision.markFromPhotos();
+ assert.equal(called,0,'Paid opt-in alone must never start a request');checks++;
  assert.equal(components.get('scanVisionConfig').open,true);checks++;
  components.get('scanVisionUrl').value='https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark';
  components.get('scanVisionPass').value='a-strong-private-test-passphrase-1234';
@@ -101,6 +108,7 @@ async function run(){
  assert.equal(sessionStorage.getItem('revisionloop-vision-session'),null);checks++;
  store.clear();
  vision.mount(q);
+ components.get('scanVisionPaidOptIn').checked=true;
  assert.equal(components.get('scanVisionRemember').checked,true);checks++;
  assert.equal(components.get('scanVisionPass').value,'');checks++;
  await vision.testPrivateConnection();
@@ -125,11 +133,18 @@ async function run(){
  vision.mount(q);
  await new Promise(resolve=>setImmediate(resolve));
  assert.equal(called,8,'Fresh annual session is not renewed excessively');checks++;
+ components.get('scanVisionPaidOptIn').checked=true;
  await vision.markFromPhotos();
  assert.equal(called,9,'Renewed session still permits AI marking');checks++;
  components.get('scanVisionForget').click();
  assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
 
+ // Manual import can propose mark points without uploading the photo or calling the API.
+ const beforeImport=called;
+ assert.equal(vision.importReviewedPoints(q,[true,false]),true);checks++;
+ assert.equal(vision.resultFor('mean-test').source,'chatgpt-manual-import');checks++;
+ assert.equal(vision.resultFor('mean-test').score,1);checks++;
+ assert.equal(called,beforeImport,'Imported marking cannot make paid requests');checks++;
  console.log('PASS '+checks+' optional vision browser and privacy checks');
 }
 run().catch(e=>{console.error(e);process.exitCode=1});
