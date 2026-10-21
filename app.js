@@ -1492,6 +1492,21 @@ function examSuggested(q,answer){
  // alone earn a method mark; the second mark needs an OPEN interval.
  // A wrong end-point must never be mistaken for the correct interval because
  // the answer shares one number with the scheme.
+ // AQA 2018 AS Chemistry 7404/2 Q2.3 has a strict concordant-pair
+ // selection followed by the mean. A generic numerical tolerance could
+ // otherwise credit a mean calculated from the wrong set of titres.
+ if(q.markingMode==='concordantTitres2018'){
+  const raw=String(answer||'').replace(/,/g,'').toLowerCase();
+  const found=[...raw.matchAll(/(?<![\d.])(\d{2}\.\d+)(?![\d.])/g)].map(x=>Number(x[1]));
+  const near=(x,y)=>Math.abs(x-y)<0.006;
+  const hasPair=found.some(x=>near(x,23.90))&&found.some(x=>near(x,24.00));
+  const mean=found.some(x=>near(x,23.95));
+  // A correct exact mean can only come from the concordant pair,
+  // but giving just the result does not demonstrate the requested choice.
+  const score=(hasPair?1:0)+(mean?1:0);
+  return {preds:[hasPair,mean],scores:[hasPair?1:0,mean?1:0],
+    finalCorrect:mean,confidence:'high',suggested:score};
+ }
  if(q.markingMode==='binomial3Terms'){
   const raw=String(answer||'').toLowerCase().replace(/\s+/g,'').replace(/[−–]/g,'-').replace(/²/g,'^2').replace(/×/g,'*');
   // M1: correct use of the first three binomial terms; A1: 4,6
