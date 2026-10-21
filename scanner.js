@@ -165,16 +165,32 @@
    img.src=src;
   });
  }
+ function possiblyIncorrectArithmetic(line){
+  // Deliberately narrow parser: it only checks one straightforward numeric
+  // binary operation, without guessing at symbolic manipulations or units.
+  const text=String(line||'').replace(/[−–—]/g,'-').replace(/×/g,'*').replace(/÷/g,'/');
+  const re=/([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*([+*/-])\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*=\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))/g;
+  let match;
+  while((match=re.exec(text))){
+   const left=Number(match[1]),right=Number(match[3]),given=Number(match[4]);
+   if(!Number.isFinite(left)||!Number.isFinite(right)||!Number.isFinite(given))continue;
+   const expected=match[2]==='+'?left+right:match[2]==='-'?left-right:
+     match[2]==='*'?left*right:right===0?NaN:left/right;
+   if(!Number.isFinite(expected))continue;
+   if(Math.abs(given-expected)>Math.max(.025*Math.abs(expected),.03))return true;
+  }
+  return false;
+ }
  function reviewEvidence(q,answer,res){
   if(!hasRecognizedMarking(q.id))return null;
   const lines=String(answer||'').split(/\r?\n|;\s*/).map(x=>x.trim()).filter(x=>x.length>2);
   return q.markPoints.map((point,i)=>{
    let bestScore=0,best='';
    for(const line of lines){
-    const sc=typeof markPointPrediction==='function'?markPointPrediction(line,point):0;
+    const sc=possiblyIncorrectArithmetic(line)?0:(typeof markPointPrediction==='function'?markPointPrediction(line,point):0);
     if(sc>bestScore){bestScore=sc;best=line}
    }
-   const strong=bestScore>=.7;
+   const strong=bestScore>=.74;
    return {line:strong?best:'',similarity:bestScore,strong};
   });
  }
@@ -255,15 +271,16 @@
   });
  }
  async function add(files,id){
-  if(id!==currentId||busy)return;busy=true;let errors=[];
+  if(id!==currentId||busy)return;busy=true;let errors=[],warnings=[];
   try{
    for(const f of Array.from(files).slice(0,Math.max(0,MAX-pages.length))){
     try{const src=await decode(f);if(id!==currentId)return;pages.push(src);
-     const warning=await imageQuality(src);if(warning&&id===currentId)status(warning,true)}catch(e){errors.push(e.message)}
+     const warning=await imageQuality(src);if(warning&&id===currentId)warnings.push(warning)}catch(e){errors.push(e.message)}
    }
    if(id!==currentId)return;
    resetOCR();render();await persist();
    if(errors.length)status(errors.join(' '),true);
+   else if(warnings.length)status(warnings.join(' '),true);
    else if(pages.length===MAX)status('Five pages attached. Remove one to add another.');
   }finally{busy=false}
  }
