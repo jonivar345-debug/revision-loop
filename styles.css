@@ -195,3 +195,13 @@
 #scanRecognize:disabled{opacity:.45;cursor:not-allowed}
 #scanApply{align-self:flex-start;border:0;border-radius:9px;background:#166534;color:white;padding:10px 14px;font:inherit;font-size:.77rem;font-weight:750;cursor:pointer}
 @media(max-width:600px){#scanApply{width:100%}.scan-ocr{padding:10px}.scan-ocr textarea{min-height:190px}}
+
+/* v37: clearer photograph-to-working review */
+.scan-ocr-options{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.scan-ocr-options label{font-size:.73rem;font-weight:700;color:#334155}
+.scan-ocr-options select{min-width:170px;max-width:100%;flex:1;padding:9px;border:1px solid #94a3b8;border-radius:8px;font:inherit;font-size:.75rem;background:#fff;color:#0f172a}
+.scan-ocr-options button{border:1px solid #94a3b8;background:#fff;border-radius:8px;padding:9px 11px;font:inherit;font-size:.72rem;color:#334155;cursor:pointer}
+.scan-evidence{display:block;font-size:.68rem;line-height:1.45;margin:6px 0 2px;color:#9a3412;font-weight:500}
+.scan-evidence-found{color:#166534}
+.scan-control #scanOCRHint{line-height:1.45}
+@media(max-width:580px){.scan-ocr-options{flex-direction:column;align-items:stretch}.scan-ocr-options select{width:100%}}
