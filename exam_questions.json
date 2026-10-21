@@ -4387,7 +4387,69 @@
       "originalMarkVerifiedSource": "AQA-74041-W-MS-JUN16.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
       "originalMarkVerificationScope": "total only; not independent verification of all rubrics or question wording",
-      "officialMarkingNotes": "A valid change to the procedure must earn the first mark before the explanation about a larger titre can earn the second."
+      "officialMarkingNotes": "A valid change to the procedure must earn the first mark before the explanation about a larger titre can earn the second.",
+      "markEvidenceRules": [
+        [
+          [
+            "dilute",
+            "acid"
+          ],
+          [
+            "less",
+            "concentrated",
+            "acid"
+          ],
+          [
+            "more",
+            "concentrated",
+            "hydrogencarbonate"
+          ],
+          [
+            "higher",
+            "concentration",
+            "hydrogencarbonate"
+          ],
+          [
+            "larger",
+            "mass",
+            "solid"
+          ],
+          [
+            "more",
+            "solid"
+          ]
+        ],
+        [
+          [
+            "larger",
+            "titre"
+          ],
+          [
+            "larger",
+            "volume"
+          ],
+          [
+            "smaller",
+            "percentage",
+            "uncertainty"
+          ],
+          [
+            "percentage",
+            "uncertainty",
+            "falls"
+          ],
+          [
+            "percentage",
+            "uncertainty",
+            "decreases"
+          ]
+        ]
+      ],
+      "markPointDependencies": {
+        "1": [
+          0
+        ]
+      }
     },
     {
       "id": "aqa_chem_as16_p1_q3_4",
@@ -5581,7 +5643,15 @@
       "originalMarkVerifiedSource": "AQA-74071-W-MS-JUN19.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
       "originalMarkVerificationScope": "total only; not independent verification of all rubrics or question wording",
-      "officialMarkingNotes": "The original second mark requires a calculated length and an appropriate conclusion about 0.85 m. The final length alone is not sufficient."
+      "officialMarkingNotes": "The original second mark requires a calculated length and an appropriate conclusion about 0.85 m. The final length alone is not sufficient.",
+      "markPointExpressionAlternatives": [
+        [
+          "L=RA/rho",
+          "L=R*A/rho",
+          "3.7*4.9*10^-6/(2.0*10^-5)"
+        ],
+        []
+      ]
     },
     {
       "id": "verified2019_P_3_1",
@@ -5780,7 +5850,7 @@
         1,
         1
       ],
-      "modelAnswer": "2.26 × 10⁸ m s⁻¹.",
+      "modelAnswer": "Use n=c/v. Rearrange to v=c/n, then substitute v=(3.00 × 10⁸)/1.33=2.26 × 10⁸ m s⁻¹ (3 significant figures).",
       "answerType": "numeric",
       "questionType": "multi-step calculation",
       "requiresWorking": true,
@@ -5796,7 +5866,22 @@
       "originalMarkVerifiedSource": "AQA-74071-W-MS-JUN19.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
       "originalMarkVerificationScope": "total only; not independent verification of all rubrics or question wording",
-      "officialMarkingNotes": "The original scheme awards a third mark for the final answer given to three significant figures from relevant working."
+      "officialMarkingNotes": "The original scheme awards a third mark for the final answer given to three significant figures from relevant working.",
+      "markPointExpressionAlternatives": [
+        [
+          "n=c/v",
+          "1.33=3.00*10^8/v"
+        ],
+        [
+          "v=c/n",
+          "3.00*10^8/1.33"
+        ],
+        [
+          "2.26*10^8",
+          "2.26e8",
+          "2.26 x 10^8"
+        ]
+      ]
     },
     {
       "id": "verified2019_P_4_3",
