@@ -1980,9 +1980,28 @@ function renderShop(){
  const outfits=OUTFITS.filter(o=>o.character===curr),ch=CHARACTERS.find(c=>c.id===curr)||CHARACTERS[0];
  document.getElementById('outfitHeading').textContent='Outfits for '+ch.name;
  document.getElementById('outfitCount').textContent=outfits.filter(o=>oo.includes(o.id)).length+' / '+outfits.length+' for '+ch.name;
- document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+characterArtwork(ch,o)+'</div><b>'+esc(o.name)+'</b><small>'+esc(ch.name)+' · '+esc(ch.series)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button></div>').join('');
+ document.getElementById('outfitShop').innerHTML=outfits.map(o=>'<div class="shop-item outfit-card"><div class="shop-icon">'+characterArtwork(ch,o)+'</div><b>'+esc(o.name)+'</b><small>'+esc(ch.name)+' · '+esc(ch.series)+'</small><button class="'+(!oo.includes(o.id)?'buy':'')+'" data-outfit="'+o.id+'" '+(!oo.includes(o.id)&&profile.points<o.cost?'disabled':'')+'>'+(oo.includes(o.id)?(profile.equippedOutfit===o.id?'Equipped':'Equip'):o.cost+' points')+'</button>'+'<div class="outfit-image-tools"><label class="outfit-upload">Choose image<input type="file" data-outfit-upload="'+esc(o.id)+'" accept="image/jpeg,image/png,image/webp" aria-label="Choose personal image for '+esc(o.name)+'"></label><button type="button" data-outfit-clear="'+esc(o.id)+'" class="outfit-clear">Reset image</button></div></div>').join('');
  document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>buy('character',b.dataset.character));
  document.querySelectorAll('[data-outfit]').forEach(b=>b.onclick=()=>buy('outfit',b.dataset.outfit));
+ document.querySelectorAll('[data-outfit-upload]').forEach(input=>input.onchange=async()=>{
+  const file=input.files?.[0],id=input.dataset.outfitUpload;if(!file||!OUTFITS.some(x=>x.id===id))return;
+  input.disabled=true;
+  try{
+   const data=await compressOutfitPhoto(file);
+   await setSavedOutfitImage(id,data);
+   renderShop();
+  }catch(error){
+   window.alert(error.message||'Could not store the outfit image.');
+   input.disabled=false;
+  }
+ });
+ document.querySelectorAll('[data-outfit-clear]').forEach(button=>button.onclick=async()=>{
+  const id=button.dataset.outfitClear;if(!OUTFITS.some(x=>x.id===id))return;
+  button.disabled=true;
+  try{await setSavedOutfitImage(id,null);renderShop()}
+  catch(error){window.alert(error.message||'Could not clear this outfit image.');button.disabled=false}
+ });
+
  loadCharacterArt(document.getElementById('characterShop'));
  loadCharacterArt(document.getElementById('outfitShop'));
  const more=document.getElementById('moreCharacters');more.classList.toggle('hidden',visibleChars.length>=allVisibleChars.length);
