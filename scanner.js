@@ -84,10 +84,53 @@
   }).catch(e=>{ocrLoadPromise=null;throw e});
   return ocrLoadPromise;
  }
- function showOCR(text,confidence){
+ function refreshOCRPhotoReference(){
+  const host=byId('scanOCRSourcePhotos');
+  if(!host)return;
+  host.innerHTML='';
+  pages.forEach((data,i)=>{
+   const control=document.createElement('button');
+   control.type='button';control.className='scan-reference-button';
+   control.setAttribute('aria-label','Enlarge original handwritten answer page '+(i+1));
+   const im=document.createElement('img');
+   im.src=data;im.alt='Your handwriting, page '+(i+1);im.loading='lazy';
+   control.appendChild(im);
+   const title=document.createElement('span');title.textContent='Page '+(i+1)+' · tap to enlarge';
+   control.appendChild(title);
+   control.onclick=()=>{
+    const zoom=byId('scanZoom');
+    if(!zoom)return;
+    zoom.innerHTML='';
+    const close=document.createElement('button');close.type='button';close.textContent='Close image ✕';
+    close.onclick=hideZoom;
+    const picture=document.createElement('img');picture.src=data;picture.alt='Enlarged original handwriting, page '+(i+1);
+    zoom.appendChild(close);zoom.appendChild(picture);zoom.hidden=false;
+   };
+   host.appendChild(control);
+  });
+}
+function attachMathKeyboard(){
+ const host=byId('scanMathKeyboard'),field=byId('scanTranscript');
+ if(!host||!field)return;
+ host.innerHTML='';
+ const keys=[['+','+'],['−','-'],['×','×'],['÷','/'],['=','='],['(','('],[')',')'],['²','²'],['^','^'],['√','√'],['π','π'],['∫','∫'],['θ','θ'],['Δ','Δ'],['→','→'],['/','/']];
+ for(const [label,value] of keys){
+  const button=document.createElement('button');
+  button.type='button';button.textContent=label;
+  button.setAttribute('aria-label','Insert '+label+' into recognised answer');
+  button.onclick=()=>{
+   const pos=field.selectionStart??field.value.length,end=field.selectionEnd??pos;
+   field.setRangeText(value,pos,end,'end');
+   field.dispatchEvent(new Event('input',{bubbles:true}));
+   field.focus();
+  };
+  host.appendChild(button);
+ }
+}
+function showOCR(text,confidence){
   const panel=byId('scanOCR'),field=byId('scanTranscript'),hint=byId('scanOCRHint');
   if(!panel||!field)return;
-  panel.hidden=false;field.value=text;
+  panel.hidden=false;field.value=text;refreshOCRPhotoReference();
   if(hint)hint.textContent=confidence===null?'Review and correct the recognised writing before marking.':
    'Estimated recognition confidence: '+Math.round(confidence)+'%. This measures character recognition, not whether your mathematics is correct. Check every equation.';
   const alt=byId('scanOCRAlternatives'),alts=byId('scanAlternativesList');
@@ -598,6 +641,16 @@ function scanCalculusStage(q,point,lines){
    status('No clear mathematical working was recognised. Check or correct the transcription before marking.',true);
    return {ready:false,message:'The reader did not identify a trustworthy calculation. Check the transcription, then tap Mark transcribed working. No mark has been recorded.'};
   }
+  // Tesseract's confidence is about character shapes, not mathematical
+  // correctness. Require explicit transcription review for scanned Maths
+  // and calculation-heavy Physics/Chemistry unless recognition is unusually
+  // clear and all image treatments agree.
+  if(question&&(question.subject==='Maths'||question.requiresWorking===true)&&
+    (result.confidence===null||result.confidence<90)){
+   ocrNeedsReview=true;
+   ocrReviewReason=(ocrReviewReason?ocrReviewReason+' ':'')+
+    'Handwritten calculations need a visual check even when OCR reports confidence.';
+  }
   if(ocrNeedsReview||result.confidence!==null&&result.confidence<70){
    status('Please verify the recognised working. '+(ocrReviewReason||'Recognition confidence is low.')+' Edit any symbols, then press Mark transcribed working.',true);
    return {ready:false,message:'The image readings disagree or have uncertain characters. Check the transcription, then press Mark transcribed working. No mark has been recorded.'};
@@ -698,7 +751,7 @@ function scanCalculusStage(q,point,lines){
  function mount(id){
   const area=byId('examAnswer');if(!area)return;
   currentId=id;pages=[];ocrText='';ocrApplied=false;appliedText='';ocrConfidence=null;ocrNeedsReview=false;ocrReviewReason='';ocrAlternatives=[];const version=++sequence;++ocrRunNumber;
-  area.insertAdjacentHTML('afterend',`<section class="scan-control"><div class="scan-heading"><strong>Photograph your working</strong><span id="scanCount">0 / 5 pages</span></div><p>Write on paper, then take a photo or upload pages. Available on every exam question, including Mock.</p><div class="scan-buttons"><button type="button" id="scanTake">Take photo</button><button type="button" id="scanChoose">Upload image(s)</button><button type="button" id="scanRecognize" disabled>Read photo again</button></div><div class="scan-ocr-options"><label for="scanOCRMode">Image reading mode</label><select id="scanOCRMode"><option value="auto">Automatic (recommended)</option><option value="contrast">Enhanced contrast</option><option value="binary">Black and white</option><option value="adaptive">Remove shadows (local contrast)</option><option value="normal">Original photograph</option></select><button type="button" id="scanManual">Enter working manually</button></div><input id="scanCameraInput" type="file" accept="image/*" capture="environment" hidden><input id="scanChooseInput" type="file" accept="image/*" multiple hidden><div id="scanStatus" role="status" aria-live="polite">Images stay on this browser, not on a server.</div><div id="scanPages" class="scan-pages"></div><section id="scanOCR" class="scan-ocr" hidden><label for="scanTranscript"><strong>Recognised writing — check and correct</strong></label><p>Recognition can misread handwriting, algebra, fractions or signs. Correct the text below before marking, including every method step.</p><textarea id="scanTranscript" rows="8" spellcheck="false" placeholder="Your recognised working will appear here."></textarea><small id="scanOCRHint"></small><details id="scanOCRAlternatives" class="scan-ocr-alternatives" hidden><summary>Compare alternative readings of the handwriting</summary><pre id="scanAlternativesList"></pre></details><button type="button" id="scanApply">Mark transcribed working</button></section><details id="scanPrevious" hidden></details><p class="scan-explainer">Tap <b>Mark my answer</b>. If you have attached a photograph, it will be read automatically before suggesting a mark. You can correct the recognised working and recalculate your marks. Photos that cannot be read are not automatically given zero.</p></section><div id="scanZoom" class="scan-zoom" role="dialog" aria-label="Enlarged answer photo" hidden></div>`);
+  area.insertAdjacentHTML('afterend',`<section class="scan-control"><div class="scan-heading"><strong>Photograph your working</strong><span id="scanCount">0 / 5 pages</span></div><p>Write on paper, photograph only your working, and crop out blank space. Use bright, even light. Available in Exam Questions, Mock and Daily Starter.</p><div class="scan-buttons"><button type="button" id="scanTake">Take photo</button><button type="button" id="scanChoose">Upload image(s)</button><button type="button" id="scanRecognize" disabled>Read photo again</button></div><div class="scan-ocr-options"><label for="scanOCRMode">Image reading mode</label><select id="scanOCRMode"><option value="auto">Automatic (recommended)</option><option value="contrast">Enhanced contrast</option><option value="binary">Black and white</option><option value="adaptive">Remove shadows (local contrast)</option><option value="normal">Original photograph</option></select><button type="button" id="scanManual">Enter working manually</button></div><input id="scanCameraInput" type="file" accept="image/*" capture="environment" hidden><input id="scanChooseInput" type="file" accept="image/*" multiple hidden><div id="scanStatus" role="status" aria-live="polite">Images stay on this browser, not on a server.</div><div id="scanPages" class="scan-pages"></div><section id="scanOCR" class="scan-ocr" hidden><strong>Compare your photograph with the recognised working</strong><p>Check every digit, operator, fraction and intermediate step against your photograph. Standard OCR is unreliable with handwritten algebra.</p><div class="scan-review-layout"><div class="scan-source-col"><strong>Your original writing</strong><div id="scanOCRSourcePhotos" class="scan-source-photos"></div></div><div class="scan-text-col"><label for="scanTranscript"><strong>Recognised text (editable)</strong></label><textarea id="scanTranscript" rows="8" spellcheck="false" placeholder="Correct each line of your working here."></textarea><div id="scanMathKeyboard" class="scan-math-keyboard" aria-label="Insert mathematical symbols"></div><small id="scanOCRHint"></small></div></div><details id="scanOCRAlternatives" class="scan-ocr-alternatives" hidden><summary>Compare alternative readings of the handwriting</summary><pre id="scanAlternativesList"></pre></details><button type="button" id="scanApply">Mark transcribed working</button></section><details id="scanPrevious" hidden></details><p class="scan-explainer">Tap <b>Mark my answer</b> to read a photo. If recognition is uncertain, compare the photo with the editable text and tap <b>Mark transcribed working</b>. The checker awards only suggested marks for steps it can identify; unreadable photographs are never automatically given zero.</p></section><div id="scanZoom" class="scan-zoom" role="dialog" aria-label="Enlarged answer photo" hidden></div>`);
   byId('scanTake').onclick=()=>byId('scanCameraInput').click();
   byId('scanChoose').onclick=()=>byId('scanChooseInput').click();
   byId('scanRecognize').onclick=()=>readWriting(id);
@@ -708,6 +761,7 @@ function scanCalculusStage(q,point,lines){
    status('Type your steps into the transcription box, then tap Mark transcribed working.');
   };
   byId('scanTranscript').oninput=()=>{ocrApplied=false;lastOCRStatus='edited'};
+  attachMathKeyboard();
   const take=byId('scanCameraInput'),choose=byId('scanChooseInput');
   take.onchange=()=>{add(take.files,id);take.value=''};
   choose.onchange=()=>{add(choose.files,id);choose.value=''};
