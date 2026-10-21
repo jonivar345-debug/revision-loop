@@ -19,10 +19,15 @@ const physics={
  verified2019_P_4_2:3,verified2019_P_4_3:1,verified2019_P_4_6:2,
  verified2019_P_5_2:2,verified2019_P_6_4:3
 };
+const chem2019={
+ '1_1':2,'1_2':2,'1_3':2,'1_4':4,'2_1':3,'2_4':5,'3_4':1,'3_5':1,'3_6':1,
+ '5_1':2,'5_2':1,'5_3':4,'6_2':1,'6_3':1,'6_4':1,'7_1':2,'7_2':4,'8_1':3
+};
 const expected=new Map([...Object.entries(chemistry).map(([suffix,n])=>['aqa_chem_as16_p1_q'+suffix,{n,source:'AQA-74041-W-MS-JUN16.PDF'}]),
+ ...Object.entries(chem2019).map(([suffix,n])=>['verified2019_C_'+suffix,{n,source:'AQA-74041-W-MS-JUN19.PDF'}]),
  ...Object.entries(physics).map(([id,n])=>[id,{n,source:'AQA-74071-W-MS-JUN19.PDF'}])]);
 let tests=0;
-assert.equal(expected.size,31);tests++;
+assert.equal(expected.size,49);tests++;
 for(const [id,{n,source}] of expected){
  const v=map.get(id);
  assert(v,'Missing original paper question '+id);tests++;
@@ -31,13 +36,13 @@ for(const [id,{n,source}] of expected){
  assert.equal(v.originalMarkVerifiedSource,source,'Wrong official scheme '+id);tests++;
  assert(v.msUrl,'No original source link '+id);tests++;
 }
-assert.equal(registry.counts.independentlyOriginalMarkChecked,39);tests++;
-assert.equal(registry.counts.awaitingOriginalMarkCheck,192);tests++;
+assert.equal(registry.counts.independentlyOriginalMarkChecked,57);tests++;
+assert.equal(registry.counts.awaitingOriginalMarkCheck,174);tests++;
 assert.equal(registry.completedBatches[0].questionPartsChecked,17);tests++;
 assert.equal(registry.completedBatches[1].questionPartsChecked,14);tests++;
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const scorer=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
- app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule(')))+
+ app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('))+
  app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')))+
  'return examSuggested')();
 for(const [id] of expected){
@@ -56,6 +61,11 @@ mark('verified2019_P_2_2','L=RA/rho; L=0.91 m and 0.85 m is too short to provide
 mark('verified2019_P_4_2','2.26e8',1);
 mark('verified2019_P_4_2','n=c/v, so v=c/n=(3.00 × 10⁸)/1.33=2.26 × 10⁸ m/s',3);
 mark('verified2019_P_4_2','n=c/v',1);
+mark('verified2019_C_2_4','69',1);
+mark('verified2019_C_8_1','No visible change with NaCl and a white precipitate with BaCl2.',0);
+mark('verified2019_C_8_1','Aqueous sodium sulfate gives no visible change with NaCl but forms a white precipitate with BaCl2.',3);
+assert.equal(map.get('verified2019_C_2_4').answerType,'points');tests++;
+assert.equal(map.get('verified2019_C_2_4').requiresWorking,true);tests++;
 assert.equal(map.get('aqa_chem_as16_p1_q3_4').markSchemeType,'level-of-response');tests++;
 assert.equal(map.get('aqa_chem_as16_p1_q6_5').requiresWorking,true);tests++;
 assert.equal(map.get('verified2019_P_2_2').requiresWorking,true);tests++;
