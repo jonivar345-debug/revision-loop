@@ -696,6 +696,29 @@ function numericMatch(q,answer){
  text=text.replace(/(?:\s*,?\s*valid\s+(?:since|because)\s+[a-z]+\s*[><]\s*\d+(?:\.\d+)?)\s*$/i,'').trim();
  let n=parseNumber(text);
  const expected=q.numericAnswer,tol=Number.isFinite(q.tolerance)?q.tolerance:Math.max(Math.abs(expected)*.01,1e-9);
+ // Where an answer explicitly gives a recognisable unit, reject or
+ // correctly convert a unit that conflicts with the requested quantity.
+ // AQA frequently awards full marks for the right final result on ordinary
+ // calculation questions; that does not make "8 cm" equivalent to "8 m".
+ const units={mm:['length',.001],cm:['length',.01],m:['length',1],km:['length',1000],
+  mg:['mass',.001],g:['mass',1],kg:['mass',1000],
+  mj:['energy',.001],j:['energy',1],kj:['energy',1000],
+  mw:['power',.001],w:['power',1],kw:['power',1000],
+  mv:['voltage',.001],v:['voltage',1],kv:['voltage',1000],
+  ma:['current',.001],a:['current',1],
+  pa:['pressure',1],kpa:['pressure',1000],mpa:['pressure',1e6],
+  ohm:['resistance',1],'%':['percent',1],n:['force',1],
+  mol:['amount',1],hz:['frequency',1],ev:['energy-electronvolts',1],
+  s:['time',1],seconds:['time',1],year:['years',1],years:['years',1]};
+ const expectedUnit=String(q.unit||'').trim().replace(/Ω/g,'ohm').toLowerCase();
+ const statedUnit=text.match(/(?:^|[=\s])([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*(mm|cm|km|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds|years?|s)\s*$/i);
+ if(units[expectedUnit]&&statedUnit){
+  const givenUnit=statedUnit[2].replace(/Ω/g,'ohm').toLowerCase();
+  const left=units[givenUnit],right=units[expectedUnit];
+  if(!left||left[0]!==right[0])return false;
+  const converted=Number(statedUnit[1])*left[1]/right[1];
+  return Number.isFinite(converted)&&Math.abs(converted-expected)<=tol;
+ }
  if(Number.isFinite(n)&&Math.abs(n-expected)<=tol)return true;
  // SI-unit equivalence: 2.94 kW and 2940 W may represent the same power.
  const unit=text.match(/([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*(kW|kJ|km|cm|mm|mW|mJ|mA|ms|µs|μs|nm|kPa|MPa)\s*$/i);
@@ -1148,7 +1171,9 @@ function examSuggested(q,answer){
  const finalCorrect=numericMatch(q,answer);
  const qt=String(q.questionType||'').toLowerCase();
  const ordinaryCalculation=q.answerType==='numeric'&&!/proof|show|explain|justify|derive|practical|evaluation/.test(qt)&&q.requiresWorking!==true;
- if(finalCorrect&&ordinaryCalculation){
+ const inconsistentWorking=typeof window!=='undefined'&&window.RevisionScan?.hasArithmeticMistakes?.(answer)===true;
+ const trustedFinal=finalCorrect&&!inconsistentWorking;
+ if(trustedFinal&&ordinaryCalculation){
    // For an ordinary calculation where working is not compulsory, the correct result may imply method marks. The user reviews the suggestion.
    preds=preds.map(()=>true);
  }
@@ -1158,11 +1183,12 @@ function examSuggested(q,answer){
  }else{
    suggested=Math.round(preds.filter(Boolean).length/Math.max(1,q.markPoints.length)*q.marks);
  }
- if(finalCorrect&&ordinaryCalculation)suggested=q.marks;
+ if(trustedFinal&&ordinaryCalculation)suggested=q.marks;
  else if(finalCorrect){
   // When working is essential, numerical correctness gives final-answer credit,
   // but calculation-method points still need to be demonstrated.
   suggested=Math.max(suggested,Math.min(q.marks,1));
+  if(inconsistentWorking)suggested=Math.min(suggested,Math.max(0,q.marks-1));
  }
  if(exactVerbal&&q.requiresWorking!==true){suggested=q.marks;preds=preds.map(()=>true);}
  // Text/model answers get an extra equivalence check so algebraically or verbally equivalent forms are not rejected just for wording.
