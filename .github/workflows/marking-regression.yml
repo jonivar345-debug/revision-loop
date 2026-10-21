@@ -30,3 +30,4 @@ jobs:
           node tests/world-economy-integrity.cjs
           node tests/outfit-and-source-regression.cjs
           node tests/official-mark-sample.cjs
+          node tests/aqa-mark-audit-regression.cjs
