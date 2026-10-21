@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { normaliseInput, checkedMarking, buildModelRequest, createDeviceSession, validDeviceSession, default as server } from '../api/vision-mark.mjs';
+import { normaliseInput, checkedMarking, buildModelRequest, createDeviceSession, validDeviceSession, providerFailure, default as server } from '../api/vision-mark.mjs';
 
 // Synthetic 120-byte image fixture: no personal photographs stored in GitHub.
 const image='data:image/jpeg;base64,'+Buffer.alloc(120,125).toString('base64');
@@ -117,5 +117,38 @@ try{
  if(!savedEnv.FRONTEND_ORIGIN)delete process.env.FRONTEND_ORIGIN;
  if(!savedEnv.VISION_ACCESS_TOKEN)delete process.env.VISION_ACCESS_TOKEN;
  if(!savedEnv.OPENAI_API_KEY)delete process.env.OPENAI_API_KEY;
+}
+// Provider diagnostics must be specific without forwarding arbitrary
+// provider messages (which can contain prompts or secrets).
+assert.match(providerFailure(401,{error:{code:'invalid_api_key'}}).error,/API_KEY/);checks++;
+assert.match(providerFailure(429,{error:{code:'insufficient_quota'}}).error,/quota/i);checks++;
+assert.match(providerFailure(400,{error:{code:'invalid_request_error',param:'text.format'}}).error,/request/i);checks++;
+assert.equal(providerFailure(400,{error:{code:'x',param:'unsafe secret content!'}}).providerParam,undefined);checks++;
+{
+ const prior=globalThis.fetch;
+ const before={OPENAI_API_KEY:process.env.OPENAI_API_KEY,VISION_ACCESS_TOKEN:process.env.VISION_ACCESS_TOKEN,FRONTEND_ORIGIN:process.env.FRONTEND_ORIGIN};
+ try{
+  process.env.OPENAI_API_KEY='provider-check-test-key';process.env.VISION_ACCESS_TOKEN=passphrase;process.env.FRONTEND_ORIGIN=origin;
+  let modelsCalled=0,modelsPostCalled=0;
+  globalThis.fetch=async(url,options)=>{
+   if(options.method!=='GET')modelsPostCalled++;
+   assert.equal(url,'https://api.openai.com/v1/models/gpt-4.1-mini');checks++;
+   modelsCalled++;return Response.json({id:'gpt-4.1-mini'});
+  };
+  const health=await server.fetch(req({body:{action:'check-provider'}}));
+  assert.equal(health.status,200);checks++;
+  assert.equal((await health.json()).providerReady,true);checks++;
+  assert.equal(modelsCalled,1);checks++;
+  assert.equal(modelsPostCalled,0,'Account check never starts a billed model response');checks++;
+  globalThis.fetch=async()=>Response.json({error:{code:'invalid_api_key',message:'MUST NOT FORWARD SECRET STRING'}},{status:401});
+  const invalid=await server.fetch(req({body:{action:'check-provider'}}));
+  assert.equal(invalid.status,502);checks++;
+  const diagnostic=await invalid.json();
+  assert.equal(diagnostic.providerCode,'invalid_api_key');checks++;
+  assert(!JSON.stringify(diagnostic).includes('MUST NOT FORWARD'));checks++;
+ }finally{
+  globalThis.fetch=prior;
+  for(const [key,value] of Object.entries(before)){if(value===undefined)delete process.env[key];else process.env[key]=value}
+ }
 }
 console.log('PASS '+checks+' secure vision API validation, authorisation and method-mark checks');
