@@ -695,7 +695,11 @@ function numericMatch(q,answer){
  text=text.replace(/\(\s*\d+\s*(?:s\.?f\.?|significant\s+figures?)\s*\)\s*$/i,'').trim();
  text=text.replace(/(?:\s*,?\s*valid\s+(?:since|because)\s+[a-z]+\s*[><]\s*\d+(?:\.\d+)?)\s*$/i,'').trim();
  let n=parseNumber(text);
- const expected=q.numericAnswer,tol=Number.isFinite(q.tolerance)?q.tolerance:Math.max(Math.abs(expected)*.01,1e-9);
+ // Scale tolerance to the actual answer, including very small scientific-notation
+ // quantities. A fixed 1e-9 floor wrongly treats zero as a valid 1e-11 result.
+ const expected=q.numericAnswer;
+ const tol=Number.isFinite(q.tolerance)&&q.tolerance>=0?q.tolerance:
+   (expected===0?1e-9:Math.abs(expected)*.01);
  // Where an answer explicitly gives a recognisable unit, reject or
  // correctly convert a unit that conflicts with the requested quantity.
  // AQA frequently awards full marks for the right final result on ordinary
