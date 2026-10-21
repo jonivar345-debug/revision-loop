@@ -87,6 +87,30 @@ async function run(){
  assert.equal(clickCount,1);checks++;
  vision.invalidate();
  assert.equal(vision.resultFor('mean-test'),null);checks++;
+ components.get('scanVisionRemember').checked=true;
+ components.get('scanVisionPass').value='a-strong-private-test-passphrase-1234';
+ await components.get('scanVisionSave').click();
+ assert.equal(called,3,'Remembering uses one free backend request');checks++;
+ const remembered=JSON.parse(localStorage.getItem('revisionloop-vision-device-v1'));
+ assert.equal(remembered.token,shortToken);checks++;
+ assert(!JSON.stringify(remembered).includes('a-strong-private-test-passphrase-1234'));checks++;
+ assert.equal(sessionStorage.getItem('revisionloop-vision-session'),null);checks++;
+ store.clear();
+ vision.mount(q);
+ assert.equal(components.get('scanVisionRemember').checked,true);checks++;
+ assert.equal(components.get('scanVisionPass').value,'');checks++;
+ await vision.testPrivateConnection();
+ assert.equal(called,4);checks++;
+ await vision.markFromPhotos();
+ assert.equal(called,5);checks++;
+ components.get('scanVisionForget').click();
+ assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
+ await vision.markFromPhotos();
+ assert.equal(called,5);checks++;
+ localStore.set('revisionloop-vision-device-v1',JSON.stringify({token:shortToken,expiresAt:Date.now()-1000}));
+ vision.mount(q);
+ assert.equal(localStorage.getItem('revisionloop-vision-device-v1'),null);checks++;
+
  console.log('PASS '+checks+' optional vision browser and privacy checks');
 }
 run().catch(e=>{console.error(e);process.exitCode=1});
