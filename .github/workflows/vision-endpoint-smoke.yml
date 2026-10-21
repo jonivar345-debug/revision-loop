@@ -1,4 +1,4 @@
-# Production authentication switched to preview-only; API still requires bearer token.
+# Confirm latest production redeploy: CORS preflight and no-token rejection. No billed AI request.
 name: Live vision endpoint smoke test
 
 on:
