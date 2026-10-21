@@ -1706,7 +1706,7 @@ async function sync(manual=false){
   if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id))q.modelAnswer=corrections.modelAnswers[q.id];
   const changes=corrections.questionCorrections?.[q.id];
   if(changes&&typeof changes==='object'){
-   for(const key of ['modelAnswer','markPoints','markPointMarks','markingMode']){
+   for(const key of ['prompt','modelAnswer','markPoints','markPointMarks','markingMode']){
     if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
    }
   }
