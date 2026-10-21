@@ -206,7 +206,11 @@
     forgetDevice();clearTab();
     throw Error('Remembered access expired or was revoked. Enter your original passphrase again to reconnect.');
    }
-   if(!response.ok)throw Error(reply.error||'The vision service could not mark this answer.');
+   if(!response.ok){
+    const details=(reply.providerCode?' [Provider code: '+reply.providerCode+']':'')+
+       (reply.providerParam?' [Field: '+reply.providerParam+']':'');
+    throw Error(String(reply.error||'The vision service could not mark this answer.').slice(0,300)+details);
+   }
    if(!Array.isArray(reply.marking)||reply.marking.length!==q.markPoints.length ||
       reply.questionId!==q.id)throw Error('Incomplete marking response. Nothing has been saved.');
    if(question?.id!==q.id)return;
