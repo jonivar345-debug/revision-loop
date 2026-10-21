@@ -3,7 +3,7 @@
  'use strict';
  const DB_NAME='revision-loop-local-answer-photos',STORE='answers',MAX=5;
  let dbPromise=null,currentId='',pages=[],busy=false,sequence=0;
- let ocrText='',ocrApplied=false,ocrBusy=false,ocrConfidence=null,ocrLoadPromise=null,ocrRunNumber=0,appliedText='',lastOCRStatus='none',ocrNeedsReview=false,ocrReviewReason='';
+ let ocrText='',ocrApplied=false,ocrBusy=false,ocrConfidence=null,ocrLoadPromise=null,ocrRunNumber=0,appliedText='',lastOCRStatus='none',ocrNeedsReview=false,ocrReviewReason='',ocrAlternatives=[];
  const byId=(id)=>document.getElementById(id);
  function status(msg,error=false){const e=byId('scanStatus');if(e){e.textContent=msg;e.classList.toggle('scan-error',error)}}
  function db(){
@@ -65,7 +65,7 @@
   const view=byId('scanZoom');if(!view)return;view.hidden=true;view.innerHTML='';
  }
  function resetOCR(){
-  ocrText='';ocrConfidence=null;ocrApplied=false;ocrRunNumber++;appliedText='';lastOCRStatus='none';ocrNeedsReview=false;ocrReviewReason='';
+  ocrText='';ocrConfidence=null;ocrApplied=false;ocrRunNumber++;appliedText='';lastOCRStatus='none';ocrNeedsReview=false;ocrReviewReason='';ocrAlternatives=[];
   const ocr=byId('scanOCR');if(ocr)ocr.hidden=true;
   const transcript=byId('scanTranscript');if(transcript)transcript.value='';
   const hint=byId('scanOCRHint');if(hint)hint.textContent='';
@@ -90,6 +90,11 @@
   panel.hidden=false;field.value=text;
   if(hint)hint.textContent=confidence===null?'Review and correct the recognised writing before marking.':
    'Estimated recognition confidence: '+Math.round(confidence)+'%. This measures character recognition, not whether your mathematics is correct. Check every equation.';
+  const alt=byId('scanOCRAlternatives'),alts=byId('scanAlternativesList');
+  if(alt&&alts){
+   alt.hidden=!ocrAlternatives.length;
+   alts.textContent=ocrAlternatives.map(item=>'Page '+item.page+'\n'+item.variants.map(v=>v.mode+':\n'+v.text).join('\n\n')).join('\n\n---\n\n');
+  }
  }
 
  function textImageForOCR(src,mode){
@@ -430,7 +435,7 @@ function reviewEvidence(q,answer,res){
  async function readWriting(id){
   if(id!==currentId||!pages.length||ocrBusy)return {ok:false,error:'Already reading a photograph'};
   const version=++ocrRunNumber,snapshot=[...pages];
-  ocrNeedsReview=false;ocrReviewReason='';
+  ocrNeedsReview=false;ocrReviewReason='';ocrAlternatives=[];
   const selected=byId('scanOCRMode')?.value||'auto';
   ocrBusy=true;const button=byId('scanRecognize');if(button)button.disabled=true;
   let worker=null;
@@ -474,6 +479,8 @@ function reviewEvidence(q,answer,res){
     const differentMath=new Set(attempts.map(a=>ocrMathSignature(a.result.data?.text)).filter(Boolean)).size>1;
     if(differentMath){
      ocrNeedsReview=true;ocrReviewReason='Different image treatments read different numbers or mathematical operators.';
+     ocrAlternatives.push({page:i+1,variants:attempts.map(a=>({mode:a.mode,text:String(a.result.data?.text||'').trim()}))
+      .filter(x=>x.text)});
     }
     chunks.push(String(best.result.data.text||'').trim());
     if(Number.isFinite(best.result.data.confidence))confidences.push(best.result.data.confidence);
@@ -641,8 +648,8 @@ function reviewEvidence(q,answer,res){
  }
  function mount(id){
   const area=byId('examAnswer');if(!area)return;
-  currentId=id;pages=[];ocrText='';ocrApplied=false;appliedText='';ocrConfidence=null;ocrNeedsReview=false;ocrReviewReason='';const version=++sequence;++ocrRunNumber;
-  area.insertAdjacentHTML('afterend',`<section class="scan-control"><div class="scan-heading"><strong>Photograph your working</strong><span id="scanCount">0 / 5 pages</span></div><p>Write on paper, then take a photo or upload pages. Available on every exam question, including Mock.</p><div class="scan-buttons"><button type="button" id="scanTake">Take photo</button><button type="button" id="scanChoose">Upload image(s)</button><button type="button" id="scanRecognize" disabled>Read photo again</button></div><div class="scan-ocr-options"><label for="scanOCRMode">Image reading mode</label><select id="scanOCRMode"><option value="auto">Automatic (recommended)</option><option value="contrast">Enhanced contrast</option><option value="binary">Black and white</option><option value="adaptive">Remove shadows (local contrast)</option><option value="normal">Original photograph</option></select><button type="button" id="scanManual">Enter working manually</button></div><input id="scanCameraInput" type="file" accept="image/*" capture="environment" hidden><input id="scanChooseInput" type="file" accept="image/*" multiple hidden><div id="scanStatus" role="status" aria-live="polite">Images stay on this browser, not on a server.</div><div id="scanPages" class="scan-pages"></div><section id="scanOCR" class="scan-ocr" hidden><label for="scanTranscript"><strong>Recognised writing — check and correct</strong></label><p>Recognition can misread handwriting, algebra, fractions or signs. Correct the text below before marking, including every method step.</p><textarea id="scanTranscript" rows="8" spellcheck="false" placeholder="Your recognised working will appear here."></textarea><small id="scanOCRHint"></small><button type="button" id="scanApply">Mark transcribed working</button></section><details id="scanPrevious" hidden></details><p class="scan-explainer">Tap <b>Mark my answer</b>. If you have attached a photograph, it will be read automatically before suggesting a mark. You can correct the recognised working and recalculate your marks. Photos that cannot be read are not automatically given zero.</p></section><div id="scanZoom" class="scan-zoom" role="dialog" aria-label="Enlarged answer photo" hidden></div>`);
+  currentId=id;pages=[];ocrText='';ocrApplied=false;appliedText='';ocrConfidence=null;ocrNeedsReview=false;ocrReviewReason='';ocrAlternatives=[];const version=++sequence;++ocrRunNumber;
+  area.insertAdjacentHTML('afterend',`<section class="scan-control"><div class="scan-heading"><strong>Photograph your working</strong><span id="scanCount">0 / 5 pages</span></div><p>Write on paper, then take a photo or upload pages. Available on every exam question, including Mock.</p><div class="scan-buttons"><button type="button" id="scanTake">Take photo</button><button type="button" id="scanChoose">Upload image(s)</button><button type="button" id="scanRecognize" disabled>Read photo again</button></div><div class="scan-ocr-options"><label for="scanOCRMode">Image reading mode</label><select id="scanOCRMode"><option value="auto">Automatic (recommended)</option><option value="contrast">Enhanced contrast</option><option value="binary">Black and white</option><option value="adaptive">Remove shadows (local contrast)</option><option value="normal">Original photograph</option></select><button type="button" id="scanManual">Enter working manually</button></div><input id="scanCameraInput" type="file" accept="image/*" capture="environment" hidden><input id="scanChooseInput" type="file" accept="image/*" multiple hidden><div id="scanStatus" role="status" aria-live="polite">Images stay on this browser, not on a server.</div><div id="scanPages" class="scan-pages"></div><section id="scanOCR" class="scan-ocr" hidden><label for="scanTranscript"><strong>Recognised writing — check and correct</strong></label><p>Recognition can misread handwriting, algebra, fractions or signs. Correct the text below before marking, including every method step.</p><textarea id="scanTranscript" rows="8" spellcheck="false" placeholder="Your recognised working will appear here."></textarea><small id="scanOCRHint"></small><details id="scanOCRAlternatives" class="scan-ocr-alternatives" hidden><summary>Compare alternative readings of the handwriting</summary><pre id="scanAlternativesList"></pre></details><button type="button" id="scanApply">Mark transcribed working</button></section><details id="scanPrevious" hidden></details><p class="scan-explainer">Tap <b>Mark my answer</b>. If you have attached a photograph, it will be read automatically before suggesting a mark. You can correct the recognised working and recalculate your marks. Photos that cannot be read are not automatically given zero.</p></section><div id="scanZoom" class="scan-zoom" role="dialog" aria-label="Enlarged answer photo" hidden></div>`);
   byId('scanTake').onclick=()=>byId('scanCameraInput').click();
   byId('scanChoose').onclick=()=>byId('scanChooseInput').click();
   byId('scanRecognize').onclick=()=>readWriting(id);
