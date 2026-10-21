@@ -1741,6 +1741,55 @@ const LOCATION_FACTS={
  addis_ababa:'Addis Ababa hosts the headquarters of the African Union.',
  mount_cook:'Aoraki / Mount Cook is the highest mountain in New Zealand.'
 };
+const LOCATION_CULTURE_DETAILS={
+ "tbilisi": "Sulphur-bath houses and carved wooden balconies are distinctive features of old Tbilisi; Georgian food includes khinkali dumplings and khachapuri.",
+ "seoul": "Explore traditional hanok houses, royal palaces and markets; Korean food culture includes kimchi, barbecue and communal side dishes.",
+ "busan": "Busan's fishing traditions can be seen at Jagalchi Market, while its coast has beaches and hillside neighbourhoods.",
+ "shanghai": "The Bund preserves grand riverside buildings, while the former French Concession has tree-lined streets and shikumen-style lanes.",
+ "beijing": "Beijing's hutong alleyways, courtyards and imperial sites give the city a distinct historical character.",
+ "manila": "Intramuros preserves part of Manila's Spanish-colonial history, alongside a lively contemporary Filipino food and arts scene.",
+ "bohol": "Bohol is known for the Chocolate Hills and villages around the Loboc River; local traditions are connected to island life.",
+ "coron": "Coron is associated with the Calamian Islands' limestone cliffs, clear-water lagoons and local Tagbanwa heritage.",
+ "hanoi": "Hanoi's Old Quarter has long been organised around crafts and trades; its street-food culture includes phở and bún chả.",
+ "hochiminh": "Ho Chi Minh City's streets combine historic markets, cafés and architecture reflecting several periods of Vietnamese history.",
+ "bangkok": "Bangkok's temples, canal history and lively street-food areas sit alongside the Chao Phraya River.",
+ "kualalumpur": "Kuala Lumpur blends Malay, Chinese and Indian influences in its markets, food and religious buildings.",
+ "almaty": "The city lies below the Trans-Ili Alatau mountains, and Kazakh cultural life includes music, bazaars and hospitality traditions.",
+ "bishkek": "Bishkek's parks and tree-lined boulevards contrast with the nearby Tian Shan mountains and Kyrgyz nomadic traditions.",
+ "samarkand": "Timurid-era tiled monuments surround Registan Square, reflecting Samarkand's long importance on Silk Road trade routes.",
+ "kyoto": "Kyoto is closely associated with Buddhist temples, traditional gardens, seasonal festivals and crafts such as textile-making.",
+ "gyeongju": "Gyeongju was the capital of the Silla kingdom and has royal tombs, Buddhist sites and major archaeological remains.",
+ "taipei": "Taipei's night markets, tea culture and temples are prominent parts of everyday life.",
+ "dubai": "Traditional trading neighbourhoods around Dubai Creek contrast with newer developments; the city has strong maritime trading roots.",
+ "istanbul": "Istanbul's bazaars, mosques and Byzantine heritage reflect its history as a major city between Europe and Asia.",
+ "venice": "Venice is built around canals and islands; its glassmaking traditions are associated with nearby Murano.",
+ "dublin": "Dublin has a strong literary and music culture, with historic Georgian streets and a long history of theatre.",
+ "barcelona": "Modernisme architecture, including work by Antoni Gaudí, is part of Barcelona's distinctive urban identity.",
+ "lisbon": "Lisbon is associated with azulejo tiles, traditional trams, fado music and neighbourhoods on steep hillsides.",
+ "amsterdam": "Amsterdam's canal-ring architecture and narrow houses reflect its seventeenth-century mercantile history.",
+ "prague": "Prague's Old Town, bridges and castle preserve architecture from several European historical periods.",
+ "vienna": "Vienna is known for concert music, coffeehouse traditions and buildings connected to the Habsburg era.",
+ "athens": "Athens has archaeological sites linked to classical Greece, alongside modern neighbourhood markets and cafés.",
+ "marrakesh": "Marrakesh's medina contains souks and riads, while Jemaa el-Fnaa is well known for its busy public square.",
+ "fez": "Fes el Bali retains historic lanes, craft workshops and madrasas associated with traditional Moroccan urban life.",
+ "cairo": "Cairo combines historic Islamic architecture, bustling markets and the Nile; nearby Giza is associated with the ancient pyramids.",
+ "luxor": "Luxor lies by the Nile amid ancient temples and royal tombs connected with Thebes.",
+ "alexandria": "Alexandria has a Mediterranean maritime identity and a history linked to Hellenistic and later Egyptian cultures.",
+ "budapest": "Thermal baths, Danube riverfront architecture and historic cafés help characterise Budapest.",
+ "florence": "Florence's Renaissance-era art and buildings are closely linked to historical craft, painting and architecture.",
+ "berlin": "Berlin's museums, public art and memorials reflect a complex twentieth-century history.",
+ "stockholm": "Stockholm is built across islands; Gamla stan preserves a historic core and Nordic design is prominent.",
+ "vancouver": "Vancouver is framed by coastal mountains and the Pacific; the region has rich Coast Salish Indigenous cultural heritage.",
+ "queenstown": "Queenstown sits on Lake Wakatipu and is closely associated with nearby alpine scenery and outdoor recreation.",
+ "rio": "Rio's samba and Carnival traditions are closely tied to local neighbourhoods and music communities.",
+ "nairobi": "Nairobi is a major centre for Kenyan arts, literature and commerce, near a national park.",
+ "singapore": "Singapore's hawker centres bring together dishes influenced by Chinese, Malay, Indian and other culinary traditions.",
+ "hongkong": "Hong Kong's Cantonese food, maritime history and densely built neighbourhoods are part of its urban character.",
+ "bali": "Balinese Hindu temples, dance and traditional arts are strongly associated with the island's community life.",
+ "paris": "Paris has longstanding associations with galleries, literature, cafés and architecture along the Seine.",
+ "london": "London's museums, theatres and diverse neighbourhoods reflect the city's layered history and communities.",
+ "tokyo": "Tokyo ranges from older districts such as Asakusa to modern districts; festivals, food and design traditions vary by neighbourhood."
+};
 async function setLocationInfo(id){
  if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
  const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
@@ -1750,16 +1799,44 @@ async function setLocationInfo(id){
  host.classList.remove('hidden');
  host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
  '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Loading location photo…</div><div id="detailPhotoTwo" class="image-fallback">Finding another view…</div></div>'+
- '<p id="locationOverview">Loading a short introduction…</p><p><b>Culture:</b> '+esc(REGION_CULTURE[l.region]||'Explore local traditions and heritage.')+'</p>'+
- '<p><b>Quick fact:</b> '+esc(LOCATION_FACTS[id]||'See the destination overview for a distinctive feature of this place.')+'</p>'+
+ '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">Loading a local introduction…</p></div>'+
+ '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
+ '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>'+
+ '<p class="location-coordinate">Approximate map position: '+Math.abs(l.lat).toFixed(3)+'° '+(l.lat>=0?'N':'S')+', '+Math.abs(l.lon).toFixed(3)+'° '+(l.lon>=0?'E':'W')+'</p>'+
  '<div class="detail-links">Photographs and introductory text: <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(l.wiki)+'" target="_blank" rel="noopener noreferrer">Wikipedia</a> / <a href="https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search='+encodeURIComponent(l.name)+'" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></div>';
  document.getElementById('closeLocationInfo').onclick=()=>setLocationInfo(id);
  locationPhoto(l,document.getElementById('detailPhotoOne'));
  try{
-  const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exsentences=2&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(l.wiki.replace(/_/g,' '));
-  const response=await fetch(endpoint);const data=await response.json();
-  if(openLocationId===id&&host.isConnected)document.getElementById('locationOverview').textContent=(data.query?.pages?.[0]?.extract||l.name+' is a destination in '+l.region+'.').slice(0,380);
- }catch{if(openLocationId===id&&host.isConnected)document.getElementById('locationOverview').textContent='Explore '+l.name+' in '+l.region+'.'}
+  // Each destination pulls its own encyclopedia introduction; factual
+  // paragraphs are not assembled from a repeated region-wide template.
+  const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exchars=1700&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(l.wiki.replace(/_/g,' '));
+  const response=await fetch(endpoint,{cache:'force-cache'});
+  if(!response.ok)throw Error('Summary unavailable');
+  const data=await response.json(),extract=String(data.query?.pages?.[0]?.extract||'').replace(/\s+/g,' ').trim();
+  if(!extract)throw Error('No location summary');
+  if(openLocationId===id&&host.isConnected){
+   const sentences=extract.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s=>s.trim()).filter(Boolean)||[extract];
+   document.getElementById('locationOverview').textContent=sentences.slice(0,3).join(' ').slice(0,750);
+   if(!LOCATION_CULTURE_DETAILS[id]){
+    const extra=sentences.slice(3,7).join(' ').slice(0,650);
+    document.getElementById('locationCulture').textContent=extra||
+      'See the linked local history and culture article for further details about '+l.name+'.';
+   }
+   if(!LOCATION_FACTS[id]){
+    const extra=sentences[7]||sentences[6]||sentences[5]||sentences[4]||'';
+    document.getElementById('locationQuickFact').textContent=extra?
+      extra.slice(0,300):
+      'See the source article for a further researched fact about '+l.name+'.';
+   }
+  }
+ }catch{
+  if(openLocationId===id&&host.isConnected){
+   document.getElementById('locationOverview').textContent=
+    LOCATION_FACTS[id]||('The background for '+l.name+' could not be loaded. Open the source article below.');
+   if(!LOCATION_CULTURE_DETAILS[id])document.getElementById('locationCulture').textContent='Local history unavailable offline. Open the source article below.';
+   if(!LOCATION_FACTS[id])document.getElementById('locationQuickFact').textContent='Verified local fact unavailable offline.';
+  }
+ }
  try{
   const endpoint='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(l.name+' panorama photograph')+'&gsrlimit=5&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
   const response=await fetch(endpoint);const data=await response.json();
