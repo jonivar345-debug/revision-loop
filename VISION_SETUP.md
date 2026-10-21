@@ -26,22 +26,27 @@ A live public smoke test passed:
 photo.** A successfully saved API key does not establish that billing, model
 access or every handwritten marking request works.
 
-### Remember access on your own device
+### Remain signed in on your own device
 
-Revision Loop v45 offers **Remember on this device for 30 days**. Tick it
-when saving your private access passphrase once on your own phone or laptop.
+Revision Loop v46 offers **Remember until I sign out**. Tick this when
+authorising your own phone or laptop.
 
-The site exchanges the original passphrase for a separate 30-day signed
-device session. Only the scoped session is kept in browser local storage;
-the original passphrase is cleared from tab storage. The session expires
-automatically after 30 days, and changing `VISION_ACCESS_TOKEN` in Vercel
-invalidates all issued sessions immediately.
+The browser stores a scoped, signed device session, **never the original
+private passphrase**. Sessions are valid for one year, and the site silently
+renews a valid session before it expires when you return. You therefore
+stay signed in without periodic re-entry while using the website.
 
-Use **Forget this device** to clear both temporary and remembered access.
-Do not use Remember on public, shared or school computers. Browser scripts
-on the same website may access the stored device session, so treat your
-personal device and browser as trusted. The AI key is never kept in browser
-storage.
+This is not an irrevocable or literally never-expiring credential. You
+must sign in again after a year without using the site, after clearing
+site data, if the browser blocks storage, or after the Vercel passphrase
+has been changed. Sessions created under the previous 30-day system can
+upgrade automatically while still valid.
+
+Use **Forget this device** to clear stored access. Do not enable
+Remember on shared computers. Changing `VISION_ACCESS_TOKEN` in Vercel
+revokes **all** remembered devices. A local sign-out removes credentials
+from that browser; it does not remotely revoke copies held elsewhere.
+The API key stays server-side throughout.
 
 ### Finish the connection on your phone
 
@@ -52,7 +57,7 @@ storage.
    filled in and cannot be redirected to an unknown host.
 4. Enter the **original passphrase** saved privately as
    `VISION_ACCESS_TOKEN` (never enter `OPENAI_API_KEY` or the four-digit
-   Revision Loop entrance PIN). Tick **Remember on this device for 30 days**
+   Revision Loop entrance PIN). Tick **Remember until I sign out**
    if this is your own phone or computer.
 5. Press **Use these settings in this tab**, then **Test connection (no AI
    charge)**. This sends deliberately invalid question data to verify the
