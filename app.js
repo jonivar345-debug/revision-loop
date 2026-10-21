@@ -1548,12 +1548,12 @@ function examSuggested(q,answer){
     .replace(/\\cup/g,'∪');
   let preds=[];
   if(q.markingMode==='aqaFactorTestError2024'){
-   const needed=/(?:f\s*\(\s*\+?2\s*\)|positive\s+2|evaluate\s+at\s+\+?2|substitut\w*\s+\+?2|not\s+(?:at|use)\s+-2)/i.test(source);
+   const needed=/(?:f\s*\(\s*\+?2\s*\)|positive\s+2|evaluate\s+at\s+(?:x\s*=\s*)?\+?2|substitut\w*\s+\+?2|not\s+(?:at|use)\s+-2)/i.test(source);
    preds=[needed];
   }else if(q.markingMode==='aqaFactorTestConclusion2024'){
-   const known=/(?:x\s*\+\s*2)/.test(source)&&/(?:is\s+(?:a\s+)?factor|must\s+be\s+(?:a\s+)?factor|factor\s+(?:of|because|as|since))/.test(source);
+   const known=/(?:x\s*\+\s*2)/.test(source)&&/(?:is\s+(?:definitely\s+|certainly\s+|a\s+)?factor|must\s+be\s+(?:a\s+)?factor|factor\s+(?:of|because|as|since))/.test(source);
    const uncertain=/(?:x\s*-\s*2)/.test(source)&&
-    /(may\s+or\s+may\s+not|cannot\s+(?:know|tell|conclude|decide)|can't\s+(?:know|tell|conclude)|not\s+enough|unknown|uncertain|not\s+proven|not\s+necessarily|no\s+conclusion|does\s+not\s+(?:decide|establish))/i.test(source);
+    /(may\s+or\s+may\s+not|cannot\s+(?:know|tell|conclude|decide|establish|prove|determine)|can't\s+(?:know|tell|conclude|establish|prove)|not\s+enough|unknown|uncertain|not\s+proven|not\s+necessarily|no\s+conclusion|does\s+not\s+(?:decide|establish))/i.test(source);
    preds=[uncertain,known];
   }else{
    const quadratic=/(?:3x\^2\+2x-6(?:>|<|=)0)/.test(flat);
