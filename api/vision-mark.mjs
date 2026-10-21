@@ -1,7 +1,7 @@
 // Vercel Node.js function for private, image-based marking.
 // Requires OPENAI_API_KEY and VISION_ACCESS_TOKEN in Vercel environment
 // variables. No credentials are embedded in GitHub Pages.
-import { timingSafeEqual } from 'node:crypto';
+import { timingSafeEqual, createHmac, randomBytes } from 'node:crypto';
 
 export const config = { maxDuration: 45 };
 const BASE_ORIGIN = 'https://jonivar345-debug.github.io';
@@ -28,6 +28,33 @@ function safeTokenMatch(actual, supplied) {
   const expectedBytes = Buffer.from(actual);
   const suppliedBytes = Buffer.from(supplied);
   return expectedBytes.length === suppliedBytes.length && timingSafeEqual(expectedBytes, suppliedBytes);
+}
+
+// Only a scoped 30-day device session is kept in local browser storage.
+// Rotating VISION_ACCESS_TOKEN revokes previously issued device sessions.
+const DEVICE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+function sessionSignature(secret,payload){
+ return createHmac('sha256',secret).update('revision-loop-vision-device-session:v1:').update(payload).digest('base64url');
+}
+export function createDeviceSession(secret,now=Date.now()){
+ if(typeof secret!=='string'||secret.length<24)throw Error('Missing session signing key.');
+ const expiresAt=now+DEVICE_TTL_MS;
+ const payload=Buffer.from(JSON.stringify({v:1,scope:'vision-mark',iat:now,exp:expiresAt,nonce:randomBytes(18).toString('base64url')})).toString('base64url');
+ return {token:'rl1.'+payload+'.'+sessionSignature(secret,payload),expiresAt};
+}
+export function validDeviceSession(secret,token,now=Date.now()){
+ if(typeof secret!=='string'||secret.length<24||typeof token!=='string'||token.length>700)return false;
+ const match=/^rl1\.([A-Za-z0-9_-]{20,400})\.([A-Za-z0-9_-]{43})$/.exec(token);
+ if(!match)return false;
+ const expected=Buffer.from(sessionSignature(secret,match[1]));
+ const supplied=Buffer.from(match[2]);
+ if(expected.length!==supplied.length||!timingSafeEqual(expected,supplied))return false;
+ try{
+  const p=JSON.parse(Buffer.from(match[1],'base64url').toString('utf8'));
+  return p.v===1&&p.scope==='vision-mark'&&typeof p.nonce==='string'&&p.nonce.length>=18&&
+   Number.isSafeInteger(p.iat)&&Number.isSafeInteger(p.exp)&&p.iat<=now+60_000&&
+   p.iat>now-DEVICE_TTL_MS-60_000&&p.exp>now&&p.exp>p.iat&&p.exp-p.iat===DEVICE_TTL_MS;
+ }catch{return false}
 }
 
 export function normaliseInput(input) {
@@ -169,16 +196,22 @@ async function handle(request) {
     return json({error:'Vision marking is not configured on the server.'},503,allowed);
   }
   const bearer = request.headers.get('authorization') || '';
-  if (!bearer.startsWith('Bearer ') || !safeTokenMatch(secret,bearer.slice(7))) {
-    return json({error:'Invalid private access passphrase.'},401,allowed);
-  }
+  const supplied=bearer.startsWith('Bearer ')?bearer.slice(7):'';
+  const isMaster=safeTokenMatch(secret,supplied);
+  const isRemembered=!isMaster&&validDeviceSession(secret,supplied);
+  if(!isMaster&&!isRemembered)return json({error:'Invalid or expired private access. Reconnect this device.'},401,allowed);
   const contentLength=Number(request.headers.get('content-length')||0);
   if (contentLength>MAX_BODY_BYTES) return json({error:'Image request exceeds size limit.'},413,allowed);
   let question;
   try {
     const body=await request.text();
     if (Buffer.byteLength(body,'utf8')>MAX_BODY_BYTES) return json({error:'Image request exceeds size limit.'},413,allowed);
-    question=normaliseInput(JSON.parse(body));
+    const parsed=JSON.parse(body);
+    if(parsed?.action==='remember-device'){
+      if(!isMaster)return json({error:'Only the original passphrase can authorise a new device.'},403,allowed);
+      return json(createDeviceSession(secret),200,allowed);
+    }
+    question=normaliseInput(parsed);
   } catch(err) {
     return json({error:err instanceof SyntaxError?'Invalid JSON.':String(err.message||'Invalid request.').slice(0,130)},400,allowed);
   }
