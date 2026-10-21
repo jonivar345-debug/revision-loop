@@ -104,7 +104,7 @@
      headers:{'Content-Type':'application/json','Authorization':'Bearer '+config.passphrase},
      body:JSON.stringify({question:{
       id:q.id,subject:q.subject,prompt:q.prompt,marks:q.marks,
-      markPoints:q.markPoints,markPointMarks:q.markPointMarks||q.markPoints.map(()=>1)
+      markPoints:q.markPoints,markPointMarks:q.markPointMarks||q.markPoints.map(()=>1),markingMode:q.markingMode||null
      },images}),signal:abort.signal
     });
    }finally{clearTimeout(timeout)}
