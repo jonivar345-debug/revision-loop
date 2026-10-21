@@ -787,10 +787,20 @@ function scanCalculusStage(q,point,lines){
   persist('draft',true);
   return true;
  }
+ // Experimental on-device handwriting output is just a draft: never
+ // mark it or copy into the submitted answer until the user confirms it.
+ function proposeLocalText(id,text){
+  if(id!==currentId||typeof text!=='string'||!text.trim())return false;
+  ocrText=text.trim();ocrApplied=false;ocrConfidence=null;
+  ocrNeedsReview=true;ocrReviewReason='This was produced by an experimental local model. Check every symbol against your photograph.';
+  showOCR(ocrText,null);
+  status('Experimental reading is a draft. Correct it and tap Confirm transcription and suggest marks.');
+  return true;
+ }
  function countFor(id){return currentId===id?pages.length:0}
  function usedOCR(id){return hasRecognizedMarking(id)}
  function hasArithmeticMistakes(answer){
   return String(answer||'').split(/\r?\n|;/).some(line=>possiblyIncorrectArithmetic(line));
  }
- window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};
+ window.RevisionScan={mount,commit,countFor,getPages,useVisionText,proposeLocalText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};
 })();
