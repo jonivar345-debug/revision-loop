@@ -2007,6 +2007,7 @@ function renderShop(){
    const data=await compressOutfitPhoto(file);
    await setSavedOutfitImage(id,data);
    renderShop();
+   renderAvatar();
   }catch(error){
    window.alert(error.message||'Could not store the outfit image.');
    input.disabled=false;
@@ -2015,7 +2016,7 @@ function renderShop(){
  document.querySelectorAll('[data-outfit-clear]').forEach(button=>button.onclick=async()=>{
   const id=button.dataset.outfitClear;if(!OUTFITS.some(x=>x.id===id))return;
   button.disabled=true;
-  try{await setSavedOutfitImage(id,null);renderShop()}
+  try{await setSavedOutfitImage(id,null);renderShop();renderAvatar()}
   catch(error){window.alert(error.message||'Could not clear this outfit image.');button.disabled=false}
  });
 
