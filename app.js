@@ -1503,8 +1503,10 @@ function examSuggested(q,answer){
   const mean=found.some(x=>near(x,23.95));
   // A correct exact mean can only come from the concordant pair,
   // but giving just the result does not demonstrate the requested choice.
-  const score=(hasPair?1:0)+(mean?1:0);
-  return {preds:[hasPair,mean],scores:[hasPair?1:0,mean?1:0],
+  const allThreeMean=found.some(x=>near(x,23.86))&&!mean&&!hasPair;
+  const validMean=mean||allThreeMean;
+  const score=(hasPair?1:0)+(validMean?1:0);
+  return {preds:[hasPair,validMean],scores:[hasPair?1:0,validMean?1:0],
     finalCorrect:mean,confidence:'high',suggested:score};
  }
  if(q.markingMode==='binomial3Terms'){
@@ -1541,6 +1543,22 @@ function examSuggested(q,answer){
  }
  // Two independently checked source questions require a particular *method*.
  // Do not infer proof/rationalisation marks from a bare correct result.
+ if(q.markingMode==='stoppingRamp2018'){
+  const raw=String(answer||'').toLowerCase().replace(/[−–]/g,'-').replace(/\s+/g,'');
+  const distance=/(?:^|[^\d.])(?:36\.9|37(?:\.0+)?)(?=$|[^\d.])/.test(raw);
+  const kinetic=/(?:2\.76(?:e6|×10\^?6|x10\^?6)|2760000|1\/2\*?m\*?v(?:\^2|²)|0\.5\*?18000\*?17\.5)/.test(raw);
+  const height=/(?:^|[^\d.])15\.6(?=$|[^\d.])/.test(raw);
+  const decel=/(?:4\.15|9\.81\*?sin\(?25|g\*?sin\(?25)/.test(raw);
+  const first=distance||kinetic||decel;
+  const second=distance||(kinetic&&height);
+  const contradict=/(?:not\s*(?:long|enough|sufficient)|insufficient|too\s*short|will\s*not\s*stop)/i.test(String(answer||''));
+  const conclusion=/(?:willstop|longenough|isenough|sufficient|safe|stopsbefore|yes)/.test(raw)&&
+    /(?:85|ramp|lane)/.test(raw)&&!contradict;
+  const preds=[first,first&&second,first&&second&&conclusion];
+  return {preds,scores:preds.map(v=>v?1:0),
+   suggested:preds.filter(Boolean).length,finalCorrect:preds[2],
+   confidence:preds.every(Boolean)?'high':'medium'};
+ }
  if(q.markingMode==='firstPrinciplesQuadratic2020'){
   const raw=String(answer||'').toLowerCase().replace(/[−–]/g,'-')
    .replace(/²/g,'^2').replace(/→|⇒|->/g,'to').replace(/\s+/g,'')
@@ -1559,7 +1577,7 @@ function examSuggested(q,answer){
    .replace(/\\sqrt\{?(\d+)\}?/g,'√$1').replace(/sqrt\(?(\d+)\)?/g,'√$1')
    .replace(/×|·/g,'*').replace(/\*/g,'*');
   const conjugate=/(?:√5\+√3|√3\+√5)/.test(raw)&&
-    (/(?:√5-√3|√3-√5)/.test(raw)||/conjugate/.test(raw))&&
+    (/(?:√5-√3|√3-√5)/.test(raw)||/conjugate/.test(raw)||raw.includes('5-3'))&&
     (/\//.test(raw)||/numerator|denominator/.test(raw));
   const numerator=/(?:18\+4\*?√15|4\*?√15\+18|18\+2\*?√60)/.test(raw);
   const denominator=/(?:denominator(?:=|is)2|5-3=2|5-3\)?=2|\/2|over2)/.test(raw);
