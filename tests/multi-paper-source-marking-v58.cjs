@@ -6,7 +6,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.join(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const a=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
- a.slice(a.indexOf('function normalise('),a.indexOf('function nextSchedule(')))+
+ a.slice(a.indexOf('function normalise('),a.indexOf('function nextSchedule('))+
  a.slice(a.indexOf('function evidenceRuleScore('),a.indexOf('function renderExam(',a.indexOf('function evidenceRuleScore(')))+
  'return examSuggested')();
 const questions=[...read('exam_questions.json').questions,...read('paper_supplement_2016_2017.json').questions];
