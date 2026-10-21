@@ -243,7 +243,7 @@ function possiblyIncorrectArithmetic(line){
    const suffix=/^\s*(?:=|is)?\s*(?:mean|average|answer|result)\b/i.test(after);
    const line=cleaned.slice(cleaned.lastIndexOf('\n',token.start-1)+1,cleaned.indexOf('\n',token.end)>-1?cleaned.indexOf('\n',token.end):cleaned.length).trim();
    const standalone=line===token.raw.trim()||line===token.raw.trim()+' J'||line===token.raw.trim()+' W'||line===token.raw.trim()+' mol';
-   if(prefix||suffix||standalone)return line.slice(0,200);
+   if((prefix||suffix||standalone)&&!possiblyIncorrectArithmetic(line))return line.slice(0,200);
   }
   return null;
  }
@@ -345,7 +345,40 @@ function scanLabelledStep(q,point,lines){
  if(required.length>1&&!required.every(t=>found.some(o=>o.actual.some(v=>Math.abs(t-v)<=Math.max(1e-11,Math.abs(t)*.015)))))return null;
  return found.map(x=>x.line).join(' ; ').slice(0,220);
 }
-function reviewEvidence(q,answer,res){
+function scanCalculusStage(q,point,lines){
+  if(q.subject!=='Maths'||q.marks<4)return null;
+  const p=String(point||'');
+  const norm=x=>String(x||'').toLowerCase().replace(/[−–—]/g,'-').replace(/²/g,'^2')
+   .replace(/³/g,'^3').replace(/×/g,'*').replace(/÷/g,'/').replace(/\s+/g,'');
+  const seen=(test)=>lines.find(l=>!possiblyIncorrectArithmetic(l)&&test(l,norm(l)));
+  // Integral setup is not the same as the final numerical answer.
+  if(/\bSet area\b|^Area\s*=\s*∫/i.test(p)){
+   const line=seen((l,v)=>(/∫|integral/i.test(l))&&(/x/i.test(l))&&
+      (/\d/.test(l)||/\bintegral\b/i.test(l)));
+   return {line:line||'',strong:Boolean(line)};
+  }
+  if(/^Integrate to\b/i.test(p)){
+   const target=norm(p);
+   const algebra=target.match(/(?:x\^3|x\^2|ln\|?y|y\^2)/gi)||[];
+   const line=seen((l,v)=>algebra.length?algebra.every(t=>v.includes(t)):/(?:∫|integrat|dy\/dx)/i.test(l));
+   return {line:line||'',strong:Boolean(line)};
+  }
+  if(/^Evaluate bounds\b/i.test(p)){
+   const target=p.match(/[-+]?\d+\s*\/\s*\d+/);
+   if(!target)return null;
+   const wanted=norm(target[0]);
+   const line=seen((l,v)=>v.includes(wanted)&&
+    (/(?:\barea\b|\ba\s*=|\bresult\b|=\s*[-+]?\d)/i.test(l)||v===wanted));
+   return {line:line||'',strong:Boolean(line)};
+  }
+  if(/^At x\s*=\s*0\b.*\babove\b/i.test(p)){
+   const line=seen((l)=>/\bline\b.*\babove\b.*\bparabola\b/i.test(l)||
+    /\by\s*=\s*3\b.*\by\s*=\s*0\b/i.test(l));
+   return {line:line||'',strong:Boolean(line)};
+  }
+  return null;
+ }
+ function reviewEvidence(q,answer,res){
   if(!hasRecognizedMarking(q.id))return null;
   const lines=String(answer||'').split(/\r?\n|;\s*/).map(x=>x.trim()).filter(x=>x.length>2);
   const terms=x=>[...new Set((String(x).toLowerCase().match(/[a-z]{3,}/g)||[]).filter(w=>!['the','and','are','for','with','from','that','this','into','when'].includes(w)))];
@@ -360,6 +393,8 @@ function reviewEvidence(q,answer,res){
     const outcome=scanMathConclusion(answer,expected);
     return {line:outcome||'',similarity:outcome?1:0,strong:Boolean(outcome)};
    }
+   const calculus=scanCalculusStage(q,point,lines);
+   if(calculus)return {line:calculus.line||'',similarity:calculus.strong?1:0,strong:calculus.strong};
    const labelled=scanLabelledStep(q,point,lines);
    if(labelled)return {line:labelled,similarity:1,strong:true};
    const formula=scanFormulaEvidence(point,answer);
