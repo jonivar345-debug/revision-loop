@@ -27,3 +27,4 @@ jobs:
           node tests/final-answer-policy.cjs
           node tests/gap-practice-regression.cjs
           node tests/adversarial-marking-regression.cjs
+          node tests/world-economy-integrity.cjs
