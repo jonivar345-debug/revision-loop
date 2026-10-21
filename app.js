@@ -1538,6 +1538,36 @@ function examSuggested(q,answer){
   return {preds:flags,scores:flags.map(ok=>ok?1:0),suggested:score,
    finalCorrect:score===q.marks,confidence:score===q.marks?'high':'medium'};
  }
+ // Three further 2024 source-first repairs. Keep each mark tied to
+ // the student's actual reasoning rather than a coincidentally matching symbol.
+ if(/^aqa(?:FactorTestError2024|FactorTestConclusion2024|QuadraticSet2024)$/.test(String(q.markingMode||''))){
+  const source=String(answer||'').toLowerCase().replace(/[−–—]/g,'-');
+  const flat=source.replace(/\s+/g,'').replace(/²/g,'^2')
+    .replace(/\\sqrt\s*\{?\s*19\s*\}?/g,'√19')
+    .replace(/sqrt\s*\(?\s*19\s*\)?/g,'√19')
+    .replace(/\\cup/g,'∪');
+  let preds=[];
+  if(q.markingMode==='aqaFactorTestError2024'){
+   const needed=/(?:f\s*\(\s*\+?2\s*\)|positive\s+2|evaluate\s+at\s+\+?2|substitut\w*\s+\+?2|not\s+(?:at|use)\s+-2)/i.test(source);
+   preds=[needed];
+  }else if(q.markingMode==='aqaFactorTestConclusion2024'){
+   const known=/(?:x\s*\+\s*2)/.test(source)&&/(?:is\s+(?:a\s+)?factor|must\s+be\s+(?:a\s+)?factor|factor\s+(?:of|because|as|since))/.test(source);
+   const uncertain=/(?:x\s*-\s*2)/.test(source)&&
+    /(may\s+or\s+may\s+not|cannot\s+(?:know|tell|conclude|decide)|can't\s+(?:know|tell|conclude)|not\s+enough|unknown|uncertain|not\s+proven|not\s+necessarily|no\s+conclusion|does\s+not\s+(?:decide|establish))/i.test(source);
+   preds=[uncertain,known];
+  }else{
+   const quadratic=/(?:3x\^2\+2x-6(?:>|<|=)0)/.test(flat);
+   const critical=/(?:\(-1±√19\)\/3|\(-1\+-?√19\)\/3)/.test(flat)||
+     (flat.includes('(-1-√19)/3')&&flat.includes('(-1+√19)/3'));
+   const outer=(flat.includes('x<')&&flat.includes('x>'))||
+     /\boutside\s+(?:the\s+)?(?:two\s+)?roots?\b/.test(source);
+   const setNotation=/(?:\{x[:|]|\u222a|\\cup|\(-∞)/.test(flat);
+   preds=[quadratic,critical,outer,critical&&outer&&setNotation];
+  }
+  const awarded=preds.filter(Boolean).length;
+  return {preds,scores:preds.map(x=>x?1:0),suggested:awarded,
+    finalCorrect:awarded===q.marks,confidence:awarded===q.marks?'medium':'low'};
+ }
  // Source-verified 2018 AQA AS Maths interval question: correct end-points
  // alone earn a method mark; the second mark needs an OPEN interval.
  // A wrong end-point must never be mistaken for the correct interval because
