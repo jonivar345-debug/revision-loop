@@ -326,6 +326,32 @@ function compressOutfitPhoto(file){
  });
 }
 
+// Cache only public portrait URLs on this device (never the image files).
+// URLs can expire, so failing links are discarded and resolved again.
+const PORTRAIT_URL_KEY='revision-loop-portrait-url-v1:';
+function validPortraitUrl(url){
+ try{
+  const u=new URL(url);
+  return u.protocol==='https:'&&/^(?:s[34]\.anilist\.co|cdn\.myanimelist\.net)$/i.test(u.hostname);
+ }catch{return false}
+}
+function cachedPortraitUrl(id){
+ try{
+  const saved=JSON.parse(localStorage.getItem(PORTRAIT_URL_KEY+id)||'null');
+  return saved&&saved.exp>Date.now()&&validPortraitUrl(saved.url)?saved.url:null;
+ }catch{return null}
+}
+function rememberPortraitUrl(id,url){
+ if(!validPortraitUrl(url))return false;
+ try{
+  localStorage.setItem(PORTRAIT_URL_KEY+id,JSON.stringify({url,exp:Date.now()+7*86400000}));
+  return true;
+ }catch{return false}
+}
+function forgetPortraitUrl(id){
+ try{localStorage.removeItem(PORTRAIT_URL_KEY+id)}catch{}
+}
+
 const characterArtCache=new Map(),characterArtJobs=new Map();
 let characterVisibleLimit=16;
 function characterArtQuery(c){return ANIME_ART_QUERY[c.id]||c.lookup||c.name}
@@ -349,17 +375,26 @@ async function findJikanArt(query){
  const match=(data.data||[]).find(p=>matchName(p.name,query)||matchName((p.name_kanji||'')+' '+(p.nicknames||[]).join(' '),query));
  return match?.images?.webp?.image_url||match?.images?.jpg?.image_url||null;
 }
-async function getCharacterArt(c,skipVerified=false){
+async function getCharacterArt(c,skipVerified=false,forceRefresh=false){
  if(!skipVerified&&VERIFIED_CHARACTER_IMAGE_URLS[c.id])return VERIFIED_CHARACTER_IMAGE_URLS[c.id];
- const old=characterArtCache.get(c.id);
- if(old&&old.exp>Date.now())return old.url;
+ if(!forceRefresh){
+  const old=characterArtCache.get(c.id);
+  if(old&&old.exp>Date.now())return old.url;
+  const saved=cachedPortraitUrl(c.id);
+  if(saved){characterArtCache.set(c.id,{url:saved,exp:Date.now()+86400000});return saved}
+ }
  if(characterArtJobs.has(c.id))return characterArtJobs.get(c.id);
  const job=(async()=>{
   const query=characterArtQuery(c);
   let url=null;
   try{url=await findAniListArt(query)}catch{}
   if(!url)try{url=await findJikanArt(query)}catch{}
-  if(url){characterArtCache.set(c.id,{url,exp:Date.now()+86400000*7});return url}
+  if(url&&validPortraitUrl(url)){
+   characterArtCache.set(c.id,{url,exp:Date.now()+86400000*7});
+   rememberPortraitUrl(c.id,url);
+   return url;
+  }
+  if(forceRefresh)forgetPortraitUrl(c.id);
   characterArtCache.set(c.id,{url:null,exp:Date.now()+120000});
   return null;
  })().finally(()=>characterArtJobs.delete(c.id));
@@ -395,6 +430,7 @@ function loadCharacterArt(root=document){
      img.alt=c.name+' anime character portrait';img.loading='eager';img.decoding='async';img.referrerPolicy='no-referrer';
      el.querySelectorAll('img').forEach(old=>old.remove());
      el.prepend(img);el.classList.add('has-portrait');el.classList.remove('art-unavailable');
+     if(validPortraitUrl(url))rememberPortraitUrl(c.id,url);
      if(url.startsWith('data:image/'))el.classList.add('has-custom-outfit');else el.classList.remove('has-custom-outfit');
      el.dataset.loading='0';
     }
@@ -412,8 +448,13 @@ function loadCharacterArt(root=document){
    if(outfitId){const custom=await limit(savedOutfitImage(outfitId),1500);if(custom&&await tryImage(custom))return}
    const verified=VERIFIED_CHARACTER_IMAGE_URLS[c.id];
    if(verified&&await tryImage(verified))return;
-   const backup=await limit(getCharacterArt(c,true),4800);
-   if(backup&&backup!==verified&&await tryImage(backup))return;
+   const saved=cachedPortraitUrl(c.id);
+   if(saved&&saved!==verified){
+    if(await tryImage(saved))return;
+    forgetPortraitUrl(c.id);
+   }
+   const backup=await limit(getCharacterArt(c,true,true),4800);
+   if(backup&&backup!==verified&&backup!==saved&&await tryImage(backup))return;
   }catch{}
   finish();
  };
