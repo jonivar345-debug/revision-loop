@@ -38,6 +38,11 @@ for(const [id,{n,source}] of expected){
 }
 assert.equal(registry.counts.independentlyOriginalMarkChecked,231);tests++;
 assert.equal(registry.counts.awaitingOriginalMarkCheck,0);tests++;
+const chemistry2018Titre=map.get('aqa_2018_C_2_3');
+assert(chemistry2018Titre,'2018 AQA AS Chemistry titration missing');tests++;
+assert.equal(chemistry2018Titre.markingMode,'concordantTitres2018');tests++;
+assert(chemistry2018Titre.tolerance<=0.01,'Concordance tolerance is excessively broad');tests++;
+
 assert.equal(registry.completedBatches[0].questionPartsChecked,17);tests++;
 assert.equal(registry.completedBatches[1].questionPartsChecked,14);tests++;
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
@@ -45,6 +50,18 @@ const scorer=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x)
  app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('))+
  app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')))+
  'return examSuggested')();
+for(const [reply,expectedMarks] of [
+ ['23.90 and 24.00; mean 23.95 cm3',2],
+ ['23.90, 24.00',1],
+ ['23.95',1],
+ ['23.90, 23.70, 24.00; mean 23.86',1],
+ ['23.86',0],
+ ['23.80',0],
+ ['23.70 and 24.00; mean 23.85',0]
+]){
+ assert.equal(scorer(chemistry2018Titre,reply).suggested,expectedMarks,
+  'AS 2018 Chemistry Q2.3 invalid concordance/mean credit: '+reply);tests++;
+}
 for(const [id] of expected){
  const v=map.get(id),result=scorer(v,v.modelAnswer);
  assert.equal(result.suggested,v.marks,'Stored model answer under-credited '+id);tests++;
