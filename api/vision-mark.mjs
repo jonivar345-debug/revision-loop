@@ -32,7 +32,8 @@ function safeTokenMatch(actual, supplied) {
 
 // Only a scoped 30-day device session is kept in local browser storage.
 // Rotating VISION_ACCESS_TOKEN revokes previously issued device sessions.
-const DEVICE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+const DEVICE_TTL_MS = 365 * 24 * 60 * 60 * 1000;
+const PREVIOUS_DEVICE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 function sessionSignature(secret,payload){
  return createHmac('sha256',secret).update('revision-loop-vision-device-session:v1:').update(payload).digest('base64url');
 }
@@ -53,7 +54,8 @@ export function validDeviceSession(secret,token,now=Date.now()){
   const p=JSON.parse(Buffer.from(match[1],'base64url').toString('utf8'));
   return p.v===1&&p.scope==='vision-mark'&&typeof p.nonce==='string'&&p.nonce.length>=18&&
    Number.isSafeInteger(p.iat)&&Number.isSafeInteger(p.exp)&&p.iat<=now+60_000&&
-   p.iat>now-DEVICE_TTL_MS-60_000&&p.exp>now&&p.exp>p.iat&&p.exp-p.iat===DEVICE_TTL_MS;
+   p.iat>now-DEVICE_TTL_MS-60_000&&p.exp>now&&p.exp>p.iat&&
+   [DEVICE_TTL_MS,PREVIOUS_DEVICE_TTL_MS].includes(p.exp-p.iat);
  }catch{return false}
 }
 
@@ -209,6 +211,12 @@ async function handle(request) {
     const parsed=JSON.parse(body);
     if(parsed?.action==='remember-device'){
       if(!isMaster)return json({error:'Only the original passphrase can authorise a new device.'},403,allowed);
+      return json(createDeviceSession(secret),200,allowed);
+    }
+    if(parsed?.action==='renew-device'){
+      if(!isRemembered&&!isMaster)return json({error:'Device session invalid or expired.'},401,allowed);
+      // Renewal is possible only with a still-valid signed device session.
+      // No photo is sent and no AI-model or API charge is incurred.
       return json(createDeviceSession(secret),200,allowed);
     }
     question=normaliseInput(parsed);
