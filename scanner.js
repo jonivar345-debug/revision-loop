@@ -237,23 +237,45 @@
   return null;
  }
  function scanMeanMethod(q,answer){
-  if(!/\bmean\b|\baverage\b/i.test(String(q.prompt||'')+' '+q.markPoints.join(' ')))return null;
-  // Derive the observations from the question, not from the model answer.
-  const match=String(q.prompt||'').match(/(?:data|values|observations)\s*[:]?\s*((?:\d+(?:\.\d+)?\s*[,;]\s*){2,}\d+(?:\.\d+)?)/i);
-  if(!match)return null;
-  const vals=(match[1].match(/\d+(?:\.\d+)?/g)||[]).map(Number);
-  if(vals.length<3||vals.length>15)return null;
-  const text=String(answer||'').replace(/^Page\s+\d+.*$/gm,'').replace(/[−–]/g,'-').replace(/×/g,'*').replace(/÷/g,'/');
-  const lines=text.split(/\n/).map(v=>v.trim()).filter(Boolean);
-  const expr=lines.find(l=>vals.every((v,i)=>new RegExp('(?:^|[^0-9.])'+v.toString().replace('.','\\.')+'(?=$|[^0-9.])').test(l))&&(l.match(/\+/g)||[]).length>=vals.length-2);
-  if(!expr)return null;
-  // Require visible evidence of division by the number of observations.
-  const at=lines.indexOf(expr),near=lines.slice(at,at+3).join(' ');
-  const divisor=vals.length;
-  const explicit=new RegExp('(?:\\/|over|divided\\s+by)\\s*'+divisor+'(?:\\b|$)','i').test(near);
-  const stacked=lines[at+1]&&new RegExp('^'+divisor+'(?:\\s*[=≈]|\\s*$)').test(lines[at+1]);
-  if(!explicit&&!stacked)return null;
-  return (expr+' '+(stacked?lines[at+1]:'')).trim().slice(0,220);
+  if(!/\bmean\b|\baverage\b/i.test(String(q.prompt||'')+' '+(q.markPoints||[]).join(' ')))return null;
+  const input=String(q.prompt||'').match(/(?:data|values|observations)\s*:?\s*((?:\d+(?:\.\d+)?\s*[,;]\s*){2,}\d+(?:\.\d+)?)/i);
+  if(!input)return null;
+  const values=(input[1].match(/\d+(?:\.\d+)?/g)||[]).map(Number);
+  if(values.length<3||values.length>15)return null;
+  const count=values.length,sum=values.reduce((a,b)=>a+b,0);
+  const normalized=String(answer||'').replace(/^Page\s+\d+.*$/gm,'')
+   .replace(/[−–]/g,'-').replace(/[×]/g,'*').replace(/[÷]/g,'/')
+   .replace(/(\d)\s*:\s*(\d)/g,'$1/$2');
+  const lines=normalized.split('\n').map(x=>x.trim()).filter(Boolean);
+  const tolerance=Math.max(.001,Math.abs(sum)*.0001);
+  const includesAllValues=(line)=>{
+   // Compare the multiset of numbers, including repeated observations.
+   const before=line.split(/(?:\/|over|divided\s+by|=)/i)[0];
+   const nums=(before.match(/\d+(?:\.\d+)?/g)||[]).map(Number);
+   const remaining=[...nums];
+   for(const v of values){
+    const i=remaining.findIndex(x=>Math.abs(x-v)<1e-8);
+    if(i<0)return false;remaining.splice(i,1);
+   }
+   return (before.match(/\+/g)||[]).length>=values.length-2;
+  };
+  const hasCount=(text)=>new RegExp('(?:/|over|divided\\s+by)\\s*'+count+'(?:\\b|$)','i').test(text);
+  for(let i=0;i<lines.length;i++){
+   const line=lines[i],next=lines[i+1]||'',near=line+' '+next;
+   const hasDenominator=hasCount(near)||new RegExp('^'+count+'(?:\\s*[=≈]|\\s*$)').test(next);
+   if(!hasDenominator)continue;
+   if(includesAllValues(line))return near.trim().slice(0,220);
+   // Summing the observations first is a valid two-stage method:
+   // 5+7+8+12=32; then 32/4 = 8.
+   if(new RegExp('(?:^|[^0-9.])'+sum+'(?:\\s*(?:/|over|divided\\s+by)\\s*'+count+')','i').test(line))
+     return line.slice(0,220);
+   if(i>0&&includesAllValues(lines[i-1])&&new RegExp('(?:^|[^0-9.])'+sum+'(?:\\b|[^0-9.])').test(line))
+     return (lines[i-1]+' '+line).slice(0,220);
+  }
+  // An explicitly correct general mean method also earns a method mark.
+  const verbal=normalized.match(/(?:mean|average)\s*(?:=|is|:)\s*(?:sum|total)\s*(?:of\s+(?:all\s+)?(?:the\s+)?(?:values|observations))?\s*(?:\/|over|divided\s+by)\s*(?:number\s+of\s+(?:values|observations)|\d+)/i);
+  if(verbal&&(!/\d+\s*$/.test(verbal[0])||hasCount(verbal[0])))return verbal[0].slice(0,220);
+  return null;
  }
  function scanFormulaEvidence(point,answer){
   const normal=x=>String(x||'').toLowerCase().replace(/λ/g,'lambda').replace(/θ/g,'theta').replace(/Δ/g,'delta')
