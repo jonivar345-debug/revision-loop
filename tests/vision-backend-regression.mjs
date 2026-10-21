@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { normaliseInput, checkedMarking, buildModelRequest, default as server } from '../api/vision-mark.mjs';
+import { normaliseInput, checkedMarking, buildModelRequest, createDeviceSession, validDeviceSession, default as server } from '../api/vision-mark.mjs';
 
 // Synthetic 120-byte image fixture: no personal photographs stored in GitHub.
 const image='data:image/jpeg;base64,'+Buffer.alloc(120,125).toString('base64');
@@ -48,6 +48,12 @@ assert.equal(anyMarks.score,3,'Any three recognised improvements score full mark
 assert.equal(anyMarks.marking[3].weight,1,'Fourth recognised point is not unfairly zero-weighted');checks++;
 assert.equal(buildModelRequest(anyInput).input[0].content[0].text.includes('"weight":1'),true);checks++;
 
+const issued=createDeviceSession(passphrase,Date.now());
+assert.match(issued.token,/^rl1\./);checks++;
+assert(validDeviceSession(passphrase,issued.token));checks++;
+assert(!validDeviceSession(passphrase,issued.token,issued.expiresAt+1));checks++;
+assert(!validDeviceSession(passphrase+'changed',issued.token));checks++;
+assert(!validDeviceSession(passphrase,issued.token.slice(0,-1)+'x'));checks++;
 const savedEnv={...process.env};
 const priorFetch=globalThis.fetch;
 process.env.FRONTEND_ORIGIN=origin;
@@ -67,17 +73,27 @@ function req(extra={}){
   method:'POST',headers:{
    'Origin':extra.origin||origin,'Content-Type':'application/json',
    'Authorization':'Bearer '+(extra.pass||passphrase)},
-  body:JSON.stringify({question,images:[image]})
+  body:JSON.stringify(extra.body||{question,images:[image]})
  });
 }
 try{
  let res=await server.fetch(req());assert.equal(res.status,200);checks++;
  let body=await res.json();assert.equal(body.score,2);checks++;
  assert.equal(upstreamRequests,1);checks++;
+ res=await server.fetch(req({body:{action:'remember-device'}}));
+ assert.equal(res.status,200,'Master secret authorises remembered device');checks++;
+ const remembered=await res.json();
+ assert(validDeviceSession(passphrase,remembered.token));checks++;
+ assert.equal(upstreamRequests,1,'Session issuance never calls the AI');checks++;
+ res=await server.fetch(req({pass:remembered.token}));
+ assert.equal(res.status,200,'A remembered device can mark questions');checks++;
+ assert.equal(upstreamRequests,2);checks++;
+ res=await server.fetch(req({pass:remembered.token,body:{action:'remember-device'}}));
+ assert.equal(res.status,403,'A device session cannot mint further sessions');checks++;
  res=await server.fetch(req({pass:'invalid'}));assert.equal(res.status,401);checks++;
- assert.equal(upstreamRequests,1);checks++;
+ assert.equal(upstreamRequests,2);checks++;
  res=await server.fetch(req({origin:'https://evil.example.com'}));assert.equal(res.status,403);checks++;
- assert.equal(upstreamRequests,1);checks++;
+ assert.equal(upstreamRequests,2);checks++;
  delete process.env.OPENAI_API_KEY;
  res=await server.fetch(req());assert.equal(res.status,503);checks++;
 }finally{
