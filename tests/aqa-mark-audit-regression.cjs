@@ -1,0 +1,64 @@
+/* AQA published mark-total audits, October 2026:
+   2016 AS Chemistry paper 7404/1, 2019 AS Physics paper 7407/1.
+   This verifies original mark totals, not automatic equality of the whole
+   in-app adaptation with the AQA paper or examiner standards. */
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
+const q=read('exam_questions.json').questions,registry=read('original_mark_audit_2026_10_21.json');
+const map=new Map(q.map(x=>[x.id,x]));
+const chemistry={
+ '1_1':2,'1_2':1,'1_3':1,'2_1':2,'2_2':1,'3_1':3,'3_2':3,'3_3':2,
+ '3_4':6,'4_1':5,'5_1':3,'5_2':3,'6_1':3,'6_2':1,'6_3':2,'6_4':2,'6_5':4
+};
+const physics={
+ aqa_phy_as19_p1_q1_1:2,aqa_phy_as19_p1_q1_2:1,aqa_phy_as19_p1_q1_3:3,
+ aqa_phy_as19_p1_q2_1:3,verified2019_P_2_2:2,verified2019_P_3_1:4,
+ verified2019_P_3_2:2,verified2019_P_3_3:4,verified2019_P_4_1:2,
+ verified2019_P_4_2:3,verified2019_P_4_3:1,verified2019_P_4_6:2,
+ verified2019_P_5_2:2,verified2019_P_6_4:3
+};
+const expected=new Map([...Object.entries(chemistry).map(([suffix,n])=>['aqa_chem_as16_p1_q'+suffix,{n,source:'AQA-74041-W-MS-JUN16.PDF'}]),
+ ...Object.entries(physics).map(([id,n])=>[id,{n,source:'AQA-74071-W-MS-JUN19.PDF'}])]);
+let tests=0;
+assert.equal(expected.size,31);tests++;
+for(const [id,{n,source}] of expected){
+ const v=map.get(id);
+ assert(v,'Missing original paper question '+id);tests++;
+ assert.equal(v.marks,n,'AQA original mark mismatch '+id);tests++;
+ assert.equal(v.originalMarkVerified,true,'Unverified source '+id);tests++;
+ assert.equal(v.originalMarkVerifiedSource,source,'Wrong official scheme '+id);tests++;
+ assert(v.msUrl,'No original source link '+id);tests++;
+}
+assert.equal(registry.counts.independentlyOriginalMarkChecked,39);tests++;
+assert.equal(registry.counts.awaitingOriginalMarkCheck,192);tests++;
+assert.equal(registry.completedBatches[0].questionPartsChecked,17);tests++;
+assert.equal(registry.completedBatches[1].questionPartsChecked,14);tests++;
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+const scorer=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
+ app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule(')))+
+ app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')))+
+ 'return examSuggested')();
+for(const [id] of expected){
+ const v=map.get(id),result=scorer(v,v.modelAnswer);
+ assert.equal(result.suggested,v.marks,'Stored model answer under-credited '+id);tests++;
+}
+const mark=(id,response,expectedMark)=>{
+ const v=map.get(id),result=scorer(v,response);
+ assert.equal(result.suggested,expectedMark,id+' score '+result.suggested+' for '+response);tests++;
+};
+mark('aqa_chem_as16_p1_q3_3','Use more dilute HCl.',1);
+mark('aqa_chem_as16_p1_q3_3','A bigger titre reduces percentage uncertainty.',0);
+mark('aqa_chem_as16_p1_q3_3','Use more dilute HCl so the titre increases and uncertainty becomes a smaller percentage.',2);
+mark('verified2019_P_2_2','0.91',1);
+mark('verified2019_P_2_2','L=RA/rho; L=0.91 m and 0.85 m is too short to provide the required 3.7 ohm resistance.',2);
+mark('verified2019_P_4_2','2.26e8',1);
+mark('verified2019_P_4_2','n=c/v, so v=c/n=(3.00 × 10⁸)/1.33=2.26 × 10⁸ m/s',3);
+mark('verified2019_P_4_2','n=c/v',1);
+assert.equal(map.get('aqa_chem_as16_p1_q3_4').markSchemeType,'level-of-response');tests++;
+assert.equal(map.get('aqa_chem_as16_p1_q6_5').requiresWorking,true);tests++;
+assert.equal(map.get('verified2019_P_2_2').requiresWorking,true);tests++;
+assert.equal(map.get('verified2019_P_4_2').requiresWorking,true);tests++;
+assert(app.includes("enforceMarkDependencies(q,res.preds.map"),'Photo markings bypass conditional credit');tests++;
+console.log('PASS '+tests+' source-verified AQA marks, calculation methods, dependencies and alternate phrasings');
