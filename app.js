@@ -1113,22 +1113,31 @@ function renderPaperArchive(){
     subject==='Maths'?(level==='AS'?'AS Papers 1 & 2':'A-level Papers 1, 2 & 3'):
     (level==='AS'?'AS Paper '+paper.split('/')[1]:'A-level Paper '+paper.split('/')[1])
    ];
+   // An official PDF link is provided only when one is already stored in
+   // a source-verified bank entry; otherwise send students to a catalogue.
+   const official=found.find(x=>x.sourceVerified===true&&
+     /^https:\/\/filestore\.aqa\.org\.uk\//i.test(x.qpUrl||'')&&
+     /^https:\/\/filestore\.aqa\.org\.uk\//i.test(x.msUrl||''));
+   const originalQP=official?.qpUrl?.split('#')[0];
+   const originalMS=official?.msUrl?.split('#')[0];
    // Archive links open original papers externally; they are not included
    // or redistributed by this application.
    return '<div class="archive-paper-code"><span>'+esc(paper)+'</span><span class="archive-part-count '+(number?'':'archive-empty')+'">'+
-    number+' indexed '+(number===1?'part':'parts')+(sourceOnly?' · '+sourceOnly+' source-first':'')+'</span>'+(link?'<a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer" aria-label="Find '+esc(subject+' '+level+' '+year+' '+paper)+' paper">Find paper ↗</a>':'')+'</div>';
+    number+' indexed '+(number===1?'part':'parts')+(sourceOnly?' · '+sourceOnly+' source-first':'')+'</span>'+
+    (originalQP?'<a href="'+esc(originalQP)+'" target="_blank" rel="noopener noreferrer">Question paper ↗</a><a href="'+esc(originalMS)+'" target="_blank" rel="noopener noreferrer">Mark scheme ↗</a>':
+     (link?'<a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer" aria-label="Browse '+esc(subject+' '+level+' '+year+' '+paper)+' papers">Browse papers ↗</a>':'<a href="'+indexUrl+'" target="_blank" rel="noopener noreferrer">AQA catalogue ↗</a>'))+'</div>';
   });
   return papers.join('');
  }
  const archiveRows=years.map(year=>{
   const special=year===2020?'Autumn examination series; no normal summer exams':
-   year===2021?'Normal summer exams cancelled; archive material may be assessment or practice material':
+   year===2021?'November exam series; no normal summer exams':
    year===2015?'Older, different specification':'';
   return '<tr><th scope="row">'+year+(special?'<span class="archive-context">'+esc(special)+'</span>':'')+
    '</th><td>'+archiveLevel(year,'AS')+'</td><td>'+archiveLevel(year,'A-level')+'</td></tr>';
  }).join('');
  target.innerHTML='<p class="archive-label">AQA '+esc(subject)+' · current-specification paper checklist, 2025–2015</p>'+
- '<p class="archive-help">The figure beside a paper is the number of question parts indexed <b>inside Revision Loop</b>, not the number of questions on the original paper. <b>0 means no indexed parts.</b> The complete papers and mark schemes are available through external resources; the site does not reproduce full papers. 2020/2021 collections may include papers issued for practice or unusual assessment series rather than normal June exams.</p>'+
+ '<p class="archive-help">The figure beside a paper is the number of question parts indexed <b>inside Revision Loop</b>, not the number of questions on the original paper. <b>0 means no indexed parts.</b> The complete papers and mark schemes are available through external resources; the site does not reproduce full papers. The 2020 and 2021 examination papers were sat in the autumn (November), not June. Links marked "Question paper" are existing source-verified AQA PDFs; "Browse papers" links may lead to a subject index rather than a particular year.</p>'+
  '<div class="archive-scroll"><table class="archive-matrix"><thead><tr><th>Year</th><th>AS ('+esc(codes[subject].AS[0].split('/')[0])+')</th><th>A-level ('+esc(codes[subject]['A-level'][0].split('/')[0])+')</th></tr></thead><tbody>'+
  archiveRows+'</tbody></table></div>'+
  '<p class="archive-help"><a href="'+indexUrl+'" target="_blank" rel="noopener noreferrer">Official AQA paper and mark-scheme finder ↗</a> · '+
@@ -1196,7 +1205,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  let audit=document.getElementById('examArchiveAudit');
  if(!audit){audit=document.createElement('p');audit.id='examArchiveAudit';audit.className='archive-label';
   document.getElementById('examYears').insertAdjacentElement('afterend',audit)}
- audit.innerHTML=indexedFromPapers+' source-linked parts, '+practiceOnly+' original practice parts; '+gap+' current-specification year(s) without an indexed question for this selection. This is not a complete archive of every AQA question. Missing years cannot be selected until properly sourced. <a href="https://www.aqa.org.uk/past-papers-and-mark-schemes-finder" target="_blank" rel="noopener noreferrer">Find official AQA papers and mark schemes ↗</a>';
+ audit.innerHTML=indexedFromPapers+' source-linked parts, '+practiceOnly+' original practice parts; '+gap+' current-specification year(s) without an indexed question for this selection. This is not a complete archive of every AQA question. Missing years stay disabled for random questions, but their full original papers can be found through the paper archive below. <a href="https://www.aqa.org.uk/past-papers-and-mark-schemes-finder" target="_blank" rel="noopener noreferrer">Find official AQA papers and mark schemes ↗</a>';
  document.getElementById('examTopics').innerHTML=groupedTopicPicker(sub,'exam',examTopics);
  document.getElementById('examTypes').innerHTML=types.map(t=>'<label class="check-item"><input type="checkbox" data-exam-type="'+esc(t)+'" '+(examTypes.has(t)?'checked':'')+'><span>'+esc(t)+'</span></label>').join('');
  document.querySelectorAll('[data-exam-year]').forEach(el=>el.onchange=()=>{el.checked?examYears.add(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear)):examYears.delete(el.dataset.examYear==='Practice'?'Practice':Number(el.dataset.examYear));renderTopicCounts()});
