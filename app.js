@@ -537,7 +537,16 @@ function ensureProfile(){
  profile.lifetimeXp=profile.lifetimeXp||0;profile.points=profile.points||0;profile.reviews=profile.reviews||0;
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
 }
-function now(){return Date.now()} function dateKey(t=Date.now()){return new Date(t).toISOString().slice(0,10)}
+function now(){return Date.now()}
+function dateKey(t=Date.now()){
+ const d=new Date(t);
+ return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
+}
+// Bonus is one point for each consecutive previous day: day 1 = 0, day 5 = 4.
+function challengeBonusForStreak(streak){return Math.max(0,Math.floor(streak)-1)}
+function previousCalendarDate(){
+ const d=new Date();d.setDate(d.getDate()-1);return dateKey(d);
+}
 function clamp(x,a,b){return Math.max(a,Math.min(b,x))} function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 function daily(){const k=dateKey();if(!profile.daily[k])profile.daily[k]={reviews:0,newCards:0,flashCorrect:0,examMarks:0};return profile.daily[k]}
 function state(id){const x=progress[id]||{};return {stage:-1,due:0,mastered:false,again:0,hard:0,good:0,last:0,firstSeen:'',stability:0,difficulty:5,history:[],...x}}
@@ -925,11 +934,11 @@ function startMistakes(){
 function advanceSession(){
  currentCardId=null;currentEvaluation=null;currentFlashAwarded=false;currentExamScore=0;
  if(!activeSession){renderAll();return}activeSession.index++;
- if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(activeSession.index>=activeSession.items.length){s.done=true;const today=dateKey(),y=new Date(Date.now()-DAY).toISOString().slice(0,10);if(profile.lastChallengeDate!==today){
+ if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(activeSession.index>=activeSession.items.length){s.done=true;const today=dateKey(),y=previousCalendarDate();if(profile.lastChallengeDate!==today){
   profile.challengeStreak=profile.lastChallengeDate===y?profile.challengeStreak+1:1;
   profile.lastChallengeDate=today;
   if(profile.challengeBonusDate!==today){
-    const bonus=Math.max(0,profile.challengeStreak-1);
+    const bonus=challengeBonusForStreak(profile.challengeStreak);
     profile.challengeBonusDate=today;
     if(bonus)award(bonus,'challenge-streak');
     showToast('Daily challenge complete · '+profile.challengeStreak+'-day streak'+(bonus?' · +'+bonus+' bonus points / XP':''));
