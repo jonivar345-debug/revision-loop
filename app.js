@@ -1097,7 +1097,7 @@ function renderPaperArchive(){
  const legacyLinks={
   Physics:'https://www.physicsandmathstutor.com/past-papers/a-level-physics/',
   Chemistry:'https://www.physicsandmathstutor.com/past-papers/a-level-chemistry/',
-  Maths:'https://www.physicsandmathstutor.com/a-level-maths-papers/c1-aqa/'
+  Maths:'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/papers/'
  };
  const qp=examQuestions.filter(q=>q.subject===subject&&q.standalone!==false&&q.year!=='Practice');
  const sourceFirst=examQuestions.filter(q=>q.subject===subject&&q.standalone===false&&q.sourceFirst===true&&q.qpUrl&&q.msUrl);
