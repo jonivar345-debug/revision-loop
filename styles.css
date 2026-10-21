@@ -205,3 +205,17 @@
 .scan-evidence-found{color:#166534}
 .scan-control #scanOCRHint{line-height:1.45}
 @media(max-width:580px){.scan-ocr-options{flex-direction:column;align-items:stretch}.scan-ocr-options select{width:100%}}
+
+/* v39: crop the handwritten part of a photograph on touchscreens */
+.scan-crop-bar{width:min(90vw,560px);color:#fff;font-size:.8rem;text-align:left;margin:0 auto 8px}
+.scan-crop-bar strong{display:block;font-size:.96rem;margin-bottom:4px}
+.scan-crop-bar p{font-size:.73rem;color:#cbd5e1;margin:3px 0 9px}
+.scan-crop-bar div{display:flex;gap:8px;flex-wrap:wrap}
+.scan-crop-bar button{padding:9px 13px;border-radius:8px;background:#e2e8f0;color:#0f172a;border:0;font:inherit;cursor:pointer;font-weight:650}
+.scan-crop-bar #cropUse{background:#2563eb;color:white}
+.scan-crop-bar button:disabled{opacity:.4;cursor:not-allowed}
+.scan-crop-canvas{display:block;margin:auto;max-width:90vw;max-height:70vh;width:auto;height:auto;touch-action:none;cursor:crosshair;border-radius:5px;box-shadow:0 0 0 1px #fff5}
+.scan-page figcaption{row-gap:6px}
+.scan-page figcaption button{touch-action:manipulation}
+#markExam:disabled{opacity:.7;cursor:wait}
+@media(max-width:580px){.scan-crop-canvas{max-width:94vw;max-height:62vh}.scan-crop-bar{width:94vw}}
