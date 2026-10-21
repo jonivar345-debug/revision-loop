@@ -39,10 +39,11 @@ const window={RevisionScan:{
 }};
 const fetch=async(url,options)=>{
  called++;photoSent=JSON.parse(options.body);
- assert.equal(url,'https://student-vision.vercel.app/api/vision-mark');
+ assert.equal(url,'https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark');
  assert.equal(options.headers.Authorization,'Bearer a-strong-private-test-passphrase-1234');
+ if(options.body==='{}')return {ok:false,status:400,json:async()=>({error:'Question information is required.'})};
  assert.equal(photoSent.images.length,1);
- return {ok:true,json:async()=>visionMark};
+ return {ok:true,status:200,json:async()=>visionMark};
 };
 let clickCount=0;
 components.get('markExam').click=()=>{clickCount++};
@@ -55,7 +56,8 @@ new Function('window','document','sessionStorage','Image','fetch','URL','AbortCo
  source)(window,document,sessionStorage,Image,fetch,mockURL,AbortCtrl,setTimeout,clearTimeout);
 let checks=0;const vision=window.RevisionVision;
 assert(vision);checks++;
-assert(vision.allowedEndpoint('https://student-vision.vercel.app/api/vision-mark'));checks++;
+assert(vision.allowedEndpoint('https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark'));checks++;
+assert(!vision.allowedEndpoint('https://attacker.vercel.app/api/vision-mark'));checks++;
 assert(!vision.allowedEndpoint('http://student-vision.vercel.app/api/vision-mark'));checks++;
 assert(!vision.allowedEndpoint('https://evil.example/api/vision-mark'));checks++;
 const q={id:'mean-test',subject:'Maths',prompt:'Find the mean of 5,7,8,12',marks:2,
@@ -66,12 +68,15 @@ async function run(){
  await vision.markFromPhotos();
  assert.equal(called,0,'No network access before service configuration');checks++;
  assert.equal(components.get('scanVisionConfig').open,true);checks++;
- components.get('scanVisionUrl').value='https://student-vision.vercel.app/api/vision-mark';
+ components.get('scanVisionUrl').value='https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark';
  components.get('scanVisionPass').value='a-strong-private-test-passphrase-1234';
  components.get('scanVisionSave').click();
  assert(sessionStorage.getItem('revisionloop-vision-session'));checks++;
+ await vision.testPrivateConnection();
+ assert.equal(called,1,'One free authentication check performed');checks++;
+ assert.match(components.get('scanVisionStatus').textContent,/Connection verified/);checks++;
  await vision.markFromPhotos();
- assert.equal(called,1);checks++;
+ assert.equal(called,2);checks++;
  assert.equal(photoSent.question.id,'mean-test');checks++;
  assert.equal(vision.resultFor('mean-test').score,2);checks++;
  assert.equal(usedVision,'(5+7+8+12)/4=8');checks++;
