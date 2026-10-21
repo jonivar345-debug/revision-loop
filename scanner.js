@@ -65,6 +65,7 @@
   const view=byId('scanZoom');if(!view)return;view.hidden=true;view.innerHTML='';
  }
  function resetOCR(){
+  window.RevisionVision?.invalidate();
   ocrText='';ocrConfidence=null;ocrApplied=false;ocrRunNumber++;appliedText='';lastOCRStatus='none';ocrNeedsReview=false;ocrReviewReason='';ocrAlternatives=[];
   const ocr=byId('scanOCR');if(ocr)ocr.hidden=true;
   const transcript=byId('scanTranscript');if(transcript)transcript.value='';
@@ -616,6 +617,7 @@ function scanCalculusStage(q,point,lines){
   return /[=+*/÷×^∫]|\b(?:mean|average|sum|answer|result|gradient|velocity|current|mass|pH|volume|force|pressure)\s*(?:is|=|:)\s*[-+]?\d/i.test(clean);
  }
  async function prepareForMark(id,question){
+  if(window.RevisionVision?.resultFor(id))return {ready:true,source:'ai-vision'};
   if(id!==currentId)return {ready:false,message:'The question changed. Please try again.'};
   if(!pages.length)return {ready:true,source:'typed'};
   if(ocrBusy)return {ready:false,message:'The photo is still being read. Wait for it to finish.'};
@@ -757,7 +759,7 @@ function scanCalculusStage(q,point,lines){
    showOCR(byId('scanTranscript')?.value||'',null);
    status('Type your steps into the transcription box, then tap Mark transcribed working.');
   };
-  byId('scanTranscript').oninput=()=>{ocrApplied=false;lastOCRStatus='edited'};
+  byId('scanTranscript').oninput=()=>{ocrApplied=false;lastOCRStatus='edited';window.RevisionVision?.invalidate()};
   attachMathKeyboard();
   const take=byId('scanCameraInput'),choose=byId('scanChooseInput');
   take.onchange=()=>{add(take.files,id);take.value=''};
@@ -766,7 +768,26 @@ function scanCalculusStage(q,point,lines){
   render();restore(id,version);
  }
  function commit(id){if(currentId===id&&pages.length)persist('marked')}
+ function getPages(id){return currentId===id?[...pages]:[]}
+ function useVisionText(id,text){
+  if(currentId!==id)return false;
+  const raw=String(text||'').trim();
+  if(!raw)return false;
+  ocrText=raw;ocrApplied=true;ocrConfidence=null;ocrNeedsReview=false;ocrReviewReason='';
+  const transcript=byId('scanTranscript');showOCR(raw,null);
+  if(transcript)transcript.value=raw;
+  const answer=byId('examAnswer');
+  if(answer){
+   let previous=answer.value;
+   if(appliedText&&previous.includes(appliedText))previous=previous.replace(appliedText,'').trim();
+   answer.value=previous?(previous.includes(raw)?previous:previous+'\n\n'+raw):raw;
+   appliedText=raw;
+   answer.dispatchEvent(new Event('input',{bubbles:true}));
+  }
+  persist('draft',true);
+  return true;
+ }
  function countFor(id){return currentId===id?pages.length:0}
  function usedOCR(id){return hasRecognizedMarking(id)}
- window.RevisionScan={mount,commit,countFor,usedOCR,reviewEvidence,prepareForMark};
+ window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark};
 })();
