@@ -51,6 +51,9 @@ assert.equal(buildModelRequest(anyInput).input[0].content[0].text.includes('"wei
 const issued=createDeviceSession(passphrase,Date.now());
 assert.match(issued.token,/^rl1\./);checks++;
 assert(validDeviceSession(passphrase,issued.token));checks++;
+const idleWindow=365*24*60*60*1000;
+assert.equal(issued.expiresAt-Date.now()>=idleWindow-10_000,true,'One-year device session');checks++;
+assert(validDeviceSession(passphrase,issued.token,issued.expiresAt-1),'Session remains valid up to one year');checks++;
 assert(!validDeviceSession(passphrase,issued.token,issued.expiresAt+1));checks++;
 assert(!validDeviceSession(passphrase+'changed',issued.token));checks++;
 assert(!validDeviceSession(passphrase,issued.token.slice(0,-1)+(issued.token.endsWith('x')?'y':'x')));checks++;
@@ -88,12 +91,22 @@ try{
  res=await server.fetch(req({pass:remembered.token}));
  assert.equal(res.status,200,'A remembered device can mark questions');checks++;
  assert.equal(upstreamRequests,2);checks++;
+ res=await server.fetch(req({pass:remembered.token,body:{action:'renew-device'}}));
+ assert.equal(res.status,200,'Remembered device can renew while valid');checks++;
+ const renewed=await res.json();
+ assert(validDeviceSession(passphrase,renewed.token));checks++;
+ assert.equal(upstreamRequests,2,'No paid AI call for session renewal');checks++;
+ res=await server.fetch(req({pass:renewed.token}));
+ assert.equal(res.status,200,'Renewed device can continue marking');checks++;
+ assert.equal(upstreamRequests,3);checks++;
+ res=await server.fetch(req({pass:renewed.token,body:{action:'remember-device'}}));
+ assert.equal(res.status,403,'Device session cannot mint from master-only endpoint');checks++;
  res=await server.fetch(req({pass:remembered.token,body:{action:'remember-device'}}));
  assert.equal(res.status,403,'A device session cannot mint further sessions');checks++;
  res=await server.fetch(req({pass:'invalid'}));assert.equal(res.status,401);checks++;
- assert.equal(upstreamRequests,2);checks++;
+ assert.equal(upstreamRequests,3);checks++;
  res=await server.fetch(req({origin:'https://evil.example.com'}));assert.equal(res.status,403);checks++;
- assert.equal(upstreamRequests,2);checks++;
+ assert.equal(upstreamRequests,3);checks++;
  delete process.env.OPENAI_API_KEY;
  res=await server.fetch(req());assert.equal(res.status,503);checks++;
 }finally{
