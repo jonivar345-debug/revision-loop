@@ -201,7 +201,66 @@
    const strong=bestScore>=.74||(bestOverlap>=1&&bestSameNumber&&bestScore>=.28)||(bestOverlap>=2&&bestScore>=.55);
    return {line:strong?best:'',similarity:bestScore,strong};
   });
+ } async function readWriting(id){
+  if(id!==currentId||!pages.length||ocrBusy)return;
+  const version=++ocrRunNumber,snapshot=[...pages];
+  const mode=byId('scanOCRMode')?.value||'contrast';
+  ocrBusy=true;const button=byId('scanRecognize');if(button)button.disabled=true;
+  let worker=null;
+  try{
+   status('Loading the on-device text reader. This can take a while on a phone…');
+   const tesseract=await loadOCR();
+   if(currentId!==id||version!==ocrRunNumber)return;
+   worker=await tesseract.createWorker('eng',1,{logger:m=>{
+    if(currentId===id&&m?.status==='recognizing text')status('Reading handwriting locally… '+Math.round((m.progress||0)*100)+'%');
+   }});
+   if(currentId!==id||version!==ocrRunNumber)return;
+   try{await worker.setParameters({tessedit_pageseg_mode:'6',preserve_interword_spaces:'1'})}catch{}
+   const chunks=[],confidences=[];
+   for(let i=0;i<snapshot.length;i++){
+    status('Reading page '+(i+1)+' of '+snapshot.length+' on this device…');
+    const input=await textImageForOCR(snapshot[i],mode);
+    if(currentId!==id||version!==ocrRunNumber)return;
+    const result=await worker.recognize(input);
+    if(currentId!==id||version!==ocrRunNumber)return;
+    chunks.push((result.data?.text||'').trim());
+    if(Number.isFinite(result.data?.confidence))confidences.push(result.data.confidence);
+   }
+   const content=chunks.map((x,i)=>'Page '+(i+1)+'\n'+x).join('\n\n').trim();
+   if(!chunks.some(x=>x.length>=2))throw new Error('No readable text found. Try brighter lighting, darker writing or type the missing steps.');
+   ocrText=content;ocrApplied=false;
+   ocrConfidence=confidences.length?confidences.reduce((a,b)=>a+b,0)/confidences.length:null;
+   showOCR(ocrText,ocrConfidence);
+   status(ocrConfidence!==null&&ocrConfidence<55?'Low-confidence recognition: carefully recheck all signs, numbers and equations before marking.':'Text extracted on your device. Check the transcription before marking.');
+   await persist();
+  }catch(err){
+   if(id===currentId)status(err.message||'Could not read this photograph. You can still mark against the points manually.',true);
+  }finally{
+   try{await worker?.terminate()}catch{}
+   ocrBusy=false;if(button&&id===currentId)button.disabled=pages.length===0;
+  }
  }
+ function applyRecognized(id){
+  if(id!==currentId)return;
+  const field=byId('scanTranscript'),answer=byId('examAnswer');
+  if(!field||!answer)return;
+  const text=field.value.trim();
+  if(text.length<2){status('No recognised working to mark. Type or correct the text first.',true);return}
+  ocrText=text;ocrApplied=true;
+  // Do not overwrite the user's existing typed answer.
+  const cleanOCR=text.replace(/^Page\s+\d+\s*$/gm,'').trim();
+  // Replace earlier OCR content rather than append stale or duplicated text.
+  let prior=answer.value;
+  if(appliedText&&prior.includes(appliedText))prior=prior.replace(appliedText,'').trim();
+  answer.value=prior?(prior.includes(cleanOCR)?prior:prior+'\n\n'+cleanOCR):cleanOCR;
+  appliedText=cleanOCR;
+  answer.dispatchEvent(new Event('input',{bubbles:true}));
+  persist();
+  byId('markExam')?.click();
+  status('Marking suggestions are based on the corrected recognised text. Check every method mark before saving.');
+ }
+ function hasRecognizedMarking(id){return currentId===id&&ocrApplied&&Boolean(ocrText.trim())}
+
  function render(){
   const holder=byId('scanPages');if(!holder)return;
   const count=byId('scanCount');if(count)count.textContent=pages.length+' / '+MAX+' pages';
