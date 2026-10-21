@@ -1488,6 +1488,38 @@ function totalMarkingPoints(q,flags){
 }
 function examSuggested(q,answer){
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
+ // Source-verified 2018 AQA AS Maths interval question: correct end-points
+ // alone earn a method mark; the second mark needs an OPEN interval.
+ // A wrong end-point must never be mistaken for the correct interval because
+ // the answer shares one number with the scheme.
+ if(q.markingMode==='strictOpenInterval'){
+  const raw=String(answer||'').trim().toLowerCase().replace(/−/g,'-').replace(/π/g,'pi')
+     .replace(/\bdegrees?\b/g,'').replace(/°/g,'').replace(/\s+/g,'');
+  const radians=/(?:pi\/2).*?(?:3pi\/2)/.test(raw);
+  const nums=[...raw.matchAll(/(?<![\w.])(?:\d+(?:\.\d*)?|\.\d+)(?![\w.])/g)].map(x=>Number(x[0]));
+  const endpoints=radians || (nums.length===2&&nums.includes(90)&&nums.includes(270));
+  const closed=/(?:<=|>=|≤|≥)/.test(raw);
+  const open=radians?(
+    /pi\/2<x<3pi\/2/.test(raw)||/x>pi\/2(?:and|&&|,)?x<3pi\/2/.test(raw)
+  ):(
+    /90<x<270/.test(raw)||/270>x>90/.test(raw)||
+    /x>90(?:and|&&|,)?x<270/.test(raw)||
+    /^\(?90,270\)?$/.test(raw)||
+    /between90and270/.test(raw)&&!closed
+  );
+  const score=endpoints?(open&&!closed?2:1):0;
+  return {preds:[score>=1,score===2],scores:[score>=1?1:0,score===2?1:0],finalCorrect:score===2,confidence:'high',suggested:score};
+ }
+ // A standalone incorrect number (including a signed fraction) is not
+ // evidence of any method. Earlier the opposite gradient -3/2 scored the
+ // mark for the correct perpendicular tangent gradient +2/3.
+ const scalar=String(answer||'').trim();
+ if(q.answerType==='numeric'&&
+    /^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?(?:\s*\/\s*[-+]?(?:\d+(?:\.\d*)?|\.\d+))?(?:\s*(?:%|[a-zA-ZΩ°]+))?$/i.test(scalar)&&
+    !numericMatch(q,scalar)){
+  return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
+ }
+
  const scores=q.markPoints.map((p,i)=>Array.isArray(q.markEvidenceRules?.[i])?
    evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p));
  // Preserve equivalent formula notation without requiring the student's
