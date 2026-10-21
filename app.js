@@ -1473,11 +1473,16 @@ function evidenceRuleScore(answer,alternatives){
 function enforceMarkDependencies(q,flags){
  if(!q.markPointDependencies||typeof q.markPointDependencies!=='object')return flags;
  const checked=[...flags];
- Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
-  const i=Number(index);
-  if(!Number.isInteger(i)||!checked[i]||!Array.isArray(prerequisites))return;
-  if(prerequisites.some(p=>!checked[p]))checked[i]=false;
- });
+ // Propagate missing prerequisite marks through nested dependencies.
+ let changed=true;
+ while(changed){
+  changed=false;
+  Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
+   const i=Number(index);
+   if(!Number.isInteger(i)||!checked[i]||!Array.isArray(prerequisites))return;
+   if(prerequisites.some(p=>!checked[p])){checked[i]=false;changed=true;}
+  });
+ }
  return checked;
 }
 function totalMarkingPoints(q,flags){
