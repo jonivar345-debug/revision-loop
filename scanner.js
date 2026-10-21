@@ -392,13 +392,58 @@
  }
  function hasRecognizedMarking(id){return currentId===id&&ocrApplied&&Boolean(ocrText.trim())}
 
+
+ function cropScan(index,id){
+  if(currentId!==id||!pages[index])return;
+  const photo=new Image(),overlay=byId('scanZoom');
+  if(!overlay)return;
+  photo.onload=()=>{
+   if(id!==currentId)return;
+   overlay.hidden=false;
+   overlay.innerHTML='<div class="scan-crop-bar"><strong>Crop to your written working</strong><p>Drag around the handwriting to remove blank areas.</p><div><button type="button" id="cropCancel">Cancel</button><button type="button" id="cropUse" disabled>Use selected area</button></div></div><canvas id="scanCropCanvas" class="scan-crop-canvas" aria-label="Drag to select handwriting"></canvas>';
+   const canvas=byId('scanCropCanvas'),save=byId('cropUse'),ctx=canvas.getContext('2d');
+   canvas.width=photo.naturalWidth;canvas.height=photo.naturalHeight;
+   const bound=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
+   let first=null,last=null,selection=null;
+   const redraw=()=>{
+    ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(photo,0,0);
+    if(!first||!last)return;
+    const x=Math.min(first.x,last.x),y=Math.min(first.y,last.y),w=Math.abs(first.x-last.x),h=Math.abs(first.y-last.y);
+    ctx.fillStyle='rgba(37,99,235,.13)';ctx.fillRect(x,y,w,h);
+    ctx.strokeStyle='#2563eb';ctx.lineWidth=Math.max(3,canvas.width/250);ctx.strokeRect(x,y,w,h);
+   };
+   redraw();
+   const where=ev=>{const r=canvas.getBoundingClientRect();return {x:bound((ev.clientX-r.left)*canvas.width/r.width,0,canvas.width),y:bound((ev.clientY-r.top)*canvas.height/r.height,0,canvas.height)}};
+   canvas.onpointerdown=ev=>{ev.preventDefault();first=last=where(ev);selection=null;save.disabled=true;canvas.setPointerCapture?.(ev.pointerId);redraw()};
+   canvas.onpointermove=ev=>{if(!first)return;ev.preventDefault();last=where(ev);redraw()};
+   canvas.onpointerup=ev=>{
+    if(!first)return;last=where(ev);redraw();
+    selection={x:Math.floor(Math.min(first.x,last.x)),y:Math.floor(Math.min(first.y,last.y)),w:Math.floor(Math.abs(first.x-last.x)),h:Math.floor(Math.abs(first.y-last.y))};
+    save.disabled=selection.w<40||selection.h<25;first=null;last=null;
+   };
+   const close=()=>{overlay.hidden=true;overlay.innerHTML=''};
+   byId('cropCancel').onclick=close;
+   save.onclick=async()=>{
+    if(!selection||id!==currentId)return;
+    const out=document.createElement('canvas');out.width=selection.w;out.height=selection.h;
+    const dest=out.getContext('2d');dest.fillStyle='#fff';dest.fillRect(0,0,out.width,out.height);
+    dest.drawImage(photo,selection.x,selection.y,selection.w,selection.h,0,0,out.width,out.height);
+    pages[index]=out.toDataURL('image/jpeg',.87);
+    close();resetOCR();render();await persist();
+    status('Cropped to the working. Press Mark my answer to read and assess it.');
+   };
+  };
+  photo.onerror=()=>status('Could not open photograph for cropping.',true);
+  photo.src=pages[index];
+ }
  function render(){
   const holder=byId('scanPages');if(!holder)return;
   const count=byId('scanCount');if(count)count.textContent=pages.length+' / '+MAX+' pages';
   const reader=byId('scanRecognize');if(reader&&!ocrBusy)reader.disabled=pages.length===0;
-  holder.innerHTML=pages.map((src,i)=>'<figure class="scan-page"><img src="'+src+'" alt="Your written answer, page '+(i+1)+'"><figcaption><span>Page '+(i+1)+'</span><button type="button" data-turn="'+i+'">Rotate</button><button type="button" data-zoom="'+i+'">Enlarge</button><button type="button" data-remove="'+i+'">Remove</button></figcaption></figure>').join('');
+  holder.innerHTML=pages.map((src,i)=>'<figure class="scan-page"><img src="'+src+'" alt="Your written answer, page '+(i+1)+'"><figcaption><span>Page '+(i+1)+'</span><button type="button" data-crop="'+i+'">Crop writing</button><button type="button" data-turn="'+i+'">Rotate</button><button type="button" data-zoom="'+i+'">Enlarge</button><button type="button" data-remove="'+i+'">Remove</button></figcaption></figure>').join('');
   const id=currentId;
   holder.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{if(id!==currentId)return;pages.splice(+b.dataset.remove,1);resetOCR();render();persist()});
+  holder.querySelectorAll('[data-crop]').forEach(b=>b.onclick=()=>cropScan(Number(b.dataset.crop),id));
   holder.querySelectorAll('[data-turn]').forEach(b=>b.onclick=async()=>{if(id!==currentId||busy)return;busy=true;
    try{const at=+b.dataset.turn,value=await rotate(pages[at]);if(id!==currentId)return;pages[at]=value;resetOCR();render();await persist()}
    catch(e){status(e.message,true)}finally{busy=false}});
