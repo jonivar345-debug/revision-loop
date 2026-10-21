@@ -789,5 +789,8 @@ function scanCalculusStage(q,point,lines){
  }
  function countFor(id){return currentId===id?pages.length:0}
  function usedOCR(id){return hasRecognizedMarking(id)}
- window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark};
+ function hasArithmeticMistakes(answer){
+  return String(answer||'').split(/\r?\n|;/).some(line=>possiblyIncorrectArithmetic(line));
+ }
+ window.RevisionScan={mount,commit,countFor,getPages,useVisionText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};
 })();
