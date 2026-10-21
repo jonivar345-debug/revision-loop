@@ -53,7 +53,7 @@ for(const q of linked){
  assert.equal(v.originalMarkVerified,!!q.originalMarkVerified);checks++;
  if(q.originalMarkVerified){assert(q.originalMarkVerifiedSource);checks++}
 }
-assert.equal(inventory.counts.independentlyOriginalMarkChecked,8);checks++;
+assert.equal(inventory.counts.independentlyOriginalMarkChecked,39);checks++;
 for(const id of ['aqa_phy_as23_p1_q1_5','aqa_phy_as23_p1_q2_1','aqa_phy_as23_p1_q3']){
  const q=bank.find(x=>x.id===id);
  assert(q?.originalMarkVerified);checks++;
