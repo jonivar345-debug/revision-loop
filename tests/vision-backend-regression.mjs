@@ -62,6 +62,7 @@ const priorFetch=globalThis.fetch;
 process.env.FRONTEND_ORIGIN=origin;
 process.env.VISION_ACCESS_TOKEN=passphrase;
 process.env.OPENAI_API_KEY='fake-server-test-only';
+process.env.ENABLE_PAID_VISION_MARKING='true';
 let upstreamRequests=0;
 globalThis.fetch=async (url,options)=>{
  upstreamRequests++;
@@ -117,6 +118,8 @@ try{
  if(!savedEnv.FRONTEND_ORIGIN)delete process.env.FRONTEND_ORIGIN;
  if(!savedEnv.VISION_ACCESS_TOKEN)delete process.env.VISION_ACCESS_TOKEN;
  if(!savedEnv.OPENAI_API_KEY)delete process.env.OPENAI_API_KEY;
+ if(savedEnv.ENABLE_PAID_VISION_MARKING===undefined)delete process.env.ENABLE_PAID_VISION_MARKING;
+ else process.env.ENABLE_PAID_VISION_MARKING=savedEnv.ENABLE_PAID_VISION_MARKING;
 }
 // Provider diagnostics must be specific without forwarding arbitrary
 // provider messages (which can contain prompts or secrets).
@@ -151,6 +154,25 @@ assert.equal(providerFailure(400,{error:{code:'x',param:'unsafe secret content!'
  }finally{
   globalThis.fetch=prior;
   for(const [key,value] of Object.entries(before)){if(value===undefined)delete process.env[key];else process.env[key]=value}
+ }
+}
+// Even a valid saved token must not cause a paid model request unless
+// the account owner explicitly activates it in Vercel.
+{
+ const lastKey=process.env.OPENAI_API_KEY,lastSecret=process.env.VISION_ACCESS_TOKEN,lastOrigin=process.env.FRONTEND_ORIGIN,lastSwitch=process.env.ENABLE_PAID_VISION_MARKING;
+ const originalFetch=globalThis.fetch;
+ try{
+  process.env.OPENAI_API_KEY='test-only';process.env.VISION_ACCESS_TOKEN=passphrase;
+  process.env.FRONTEND_ORIGIN=origin;delete process.env.ENABLE_PAID_VISION_MARKING;
+  globalThis.fetch=async()=>{throw Error('Paid API must not be called')};
+  const result=await server.fetch(req());
+  assert.equal(result.status,403,'Paid marking is blocked by default');checks++;
+  assert.match((await result.json()).error,/disabled/i);checks++;
+ }finally{
+  globalThis.fetch=originalFetch;
+  for(const [key,value] of Object.entries({OPENAI_API_KEY:lastKey,VISION_ACCESS_TOKEN:lastSecret,FRONTEND_ORIGIN:lastOrigin,ENABLE_PAID_VISION_MARKING:lastSwitch})){
+   if(value===undefined)delete process.env[key];else process.env[key]=value;
+  }
  }
 }
 console.log('PASS '+checks+' secure vision API validation, authorisation and method-mark checks');
