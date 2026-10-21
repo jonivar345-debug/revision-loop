@@ -241,3 +241,21 @@
 .scan-math-keyboard button:focus-visible,.scan-reference-button:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
 .scan-ocr[hidden]{display:none!important}
 @media(max-width:680px){.scan-review-layout{grid-template-columns:minmax(0,1fr)}.scan-source-photos{max-height:300px}.scan-reference-button img{max-height:245px}.scan-ocr textarea{min-height:145px}.scan-math-keyboard button{flex:1 0 12%;min-width:35px}}
+
+/* v43: optional private vision marking, separate from local OCR. */
+.scan-vision{padding:13px;margin:12px 0;border:1px solid #a5b4fc;border-radius:12px;background:linear-gradient(130deg,#eef2ff,#f8fbff)}
+.scan-vision-title{display:flex;gap:10px;align-items:center;justify-content:space-between;color:#1e293b;font-size:.87rem}
+.scan-vision-title span{font-size:.69rem;color:#4338ca;border:1px solid #c7d2fe;border-radius:999px;padding:4px 9px;background:#fff}
+.scan-vision p{color:#475569;font-size:.74rem;line-height:1.55;margin:7px 0}
+.scan-vision-action{display:block;width:100%;min-height:42px;border:0;border-radius:9px;background:#4338ca;color:#fff;font:inherit;font-size:.8rem;font-weight:750;cursor:pointer;margin:9px 0}
+.scan-vision-action:disabled{cursor:wait;opacity:.65}
+#scanVisionStatus{font-size:.71rem;color:#475569;line-height:1.45;margin:7px 0}
+#scanVisionStatus.scan-error{color:#b91c1c}
+#scanVisionConfig{border-top:1px solid #c7d2fe;margin-top:9px;padding-top:10px}
+#scanVisionConfig summary{cursor:pointer;color:#3730a3;font-size:.76rem;font-weight:750}
+#scanVisionConfig label{display:block;font-size:.73rem;font-weight:750;color:#334155;margin:9px 0 3px}
+#scanVisionConfig input{box-sizing:border-box;display:block;width:100%;padding:10px;border:1px solid #94a3b8;border-radius:8px;background:#fff;color:#0f172a;font-size:.75rem}
+.scan-vision-actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.scan-vision-actions button{flex:1;min-width:160px;border:1px solid #c7d2fe;background:#fff;border-radius:8px;padding:9px;font-size:.72rem;color:#3730a3;font-weight:700;cursor:pointer}
+.scan-vision small{display:block;color:#64748b;line-height:1.5;font-size:.67rem}
+@media(max-width:600px){.scan-vision{padding:11px}.scan-vision-actions button{min-width:100%}}
