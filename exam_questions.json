@@ -5714,7 +5714,80 @@
           0
         ]
       },
-      "officialMarkingNotes": "The observation marks depend on identifying a suitable soluble sulfate reagent; an incorrect reagent prevents observation marks."
+      "officialMarkingNotes": "The observation marks depend on identifying a suitable soluble sulfate reagent; an incorrect reagent prevents observation marks.",
+      "markEvidenceRules": [
+        [
+          [
+            "soluble",
+            "sulfate"
+          ],
+          [
+            "sodium",
+            "sulfate"
+          ],
+          [
+            "sulfuric",
+            "acid"
+          ],
+          [
+            "sulphuric",
+            "acid"
+          ],
+          [
+            "na2so4",
+            "aqueous"
+          ],
+          [
+            "h2so4",
+            "dilute"
+          ]
+        ],
+        [
+          [
+            "no",
+            "visible",
+            "change"
+          ],
+          [
+            "no",
+            "reaction",
+            "nacl"
+          ],
+          [
+            "no",
+            "change",
+            "nacl"
+          ],
+          [
+            "no",
+            "reaction",
+            "sodium",
+            "chloride"
+          ]
+        ],
+        [
+          [
+            "white",
+            "precipitate",
+            "bacl2"
+          ],
+          [
+            "white",
+            "solid",
+            "bacl2"
+          ],
+          [
+            "white",
+            "precipitate",
+            "barium"
+          ],
+          [
+            "white",
+            "solid",
+            "barium"
+          ]
+        ]
+      ]
     },
     {
       "id": "verified2019_P_2_2",
