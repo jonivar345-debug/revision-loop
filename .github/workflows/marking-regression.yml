@@ -14,4 +14,4 @@ jobs:
         with:
           node-version: '22'
       - name: Test photographed-working and model-answer marking
-        run: node tests/scanner-regression.cjs
+        run: |\n          node tests/scanner-regression.cjs\n          node tests/photo-review-regression.cjs
