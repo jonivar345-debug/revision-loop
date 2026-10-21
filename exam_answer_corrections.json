@@ -5,7 +5,21 @@
     "orig_v25_physics_free_body_diagrams_1": "Horizontal forces: pull 60 N right and friction 18 N left. Vertical forces: weight 12×9.81 = 117.7 N down and normal reaction 117.7 N up. Net horizontal force = 42 N, so acceleration = 42/12 = 3.5 m s⁻² to the right.",
     "orig_v25_physics_free_body_diagrams_4": "Draw two arrows: tension upwards and weight mg = 24.5 N downwards. Apply Newton's second law: T − mg = ma. Therefore T = 2.5(9.81 + 1.2) = 27.5 N.",
     "orig_v25_physics_gas_laws_2": "Boyle's law applies to a fixed amount of gas at constant temperature. p₁V₁=p₂V₂, so p₂=(95×4.0)/2.5=152 kPa.",
-    "orig_v25_physics_electric_fields_2": "E=V/d. Convert 12 mm to 0.012 m. E=600/0.012=5.0×10⁴ V m⁻¹, directed from the positive plate towards the negative plate."
+    "orig_v25_physics_electric_fields_2": "E=V/d. Convert 12 mm to 0.012 m. E=600/0.012=5.0×10⁴ V m⁻¹, directed from the positive plate towards the negative plate.",
+    "aqa_phy_as22_p1_q8_4": "For two parallel resistances, 1/R = 1/6.0 + 1/25 = 31/150, giving R = 150/31 = 4.84 Ω.",
+    "aqa_phy_as22_p1_q8_5": "The power supplied by the 12 V battery is P = V²/R = 12²/4.84 = 29.8 W, approximately 30 W.",
+    "aqa_chem_as16_p1_q6_3": "Use Eₖ=½mv², so v=√(2Eₖ/m)=√(2×1.269×10⁻¹³/8.64×10⁻²⁶)=1.71×10⁶ m s⁻¹.",
+    "verified2019_C_5_3": "Convert 800 cm³ to 0.800 dm³. [NO] = 0.850/0.800 = 1.0625 mol dm⁻³ and [Cl₂] = 0.458/0.800 = 0.5725 mol dm⁻³. Kc = [NOCl]²/([NO]²[Cl₂]), so [NOCl] = √(0.0132×1.0625²×0.5725) = 0.0924 mol dm⁻³. Amount of NOCl = 0.0924×0.800 = 0.0739 mol.",
+    "verified2019_C_7_2": "Each mole of Mg(OH)₂ produces one mole of water. n(H₂O)=0.210/18.0=0.0117 mol. Mg(OH)₂ mass = 0.0117×58.3 ≈ 0.680 g. MgO mass = 3.200−0.680=2.520 g, so percentage MgO = 2.520/3.200×100=78.7%.",
+    "verified2019_P_3_1": "The upward components of the two rope tensions are 2×(3.7×10⁴)×cos20° ≈ 6.95×10⁴ N. The cage weighs 1.2×10³×9.81 ≈ 1.18×10⁴ N. For equilibrium the clamp acts downwards with force ≈ 6.95×10⁴−1.18×10⁴ = 5.8×10⁴ N.",
+    "verified2019_P_3_3": "Each rope's stretched length is 35/cos20° ≈ 37.25 m. Extension is approximately 37.25−24=13.25 m. Elastic energy in one rope is ½×(3.7×10⁴)×13.25 J; two ropes store approximately 4.9×10⁵ J.",
+    "aqa_2018_C_2_5": "n(NaOH) = 0.0500×(23.95/1000) = 0.0011975 mol. Since three moles of NaOH react with one mole of citric acid, the amount of acid in 25.0 cm³ is 0.0011975/3 mol. Multiply by 10 for 250 cm³, then multiply by Mᵣ 192.0: mass = 0.7664 g ≈ 766 mg.",
+    "aqa_2018_C_3_1": "n reacted = 0.0250×2.00 = 0.0500 mol. Heat released = 0.0500×56.1×1000 = 2805 J. Total solution mass is 50.0 g. Using q=mcΔT, the temperature rise is 2805/(50.0×4.18)=13.4 °C.",
+    "aqa_2018_chemA_1_2": "For the Born–Haber cycle use half the O₂ bond dissociation enthalpy: 496/2=248 kJ mol⁻¹. The other steps sum to +3286 kJ mol⁻¹. Hence −602 = 3286 + ΔH_lattice, giving ΔH_lattice = −3888 kJ mol⁻¹.",
+    "aqa_2018_chemA_3_1": "Products: 4×211 + 6×189 = 1978 J K⁻¹ mol⁻¹. Reactants: 4×193 + 5×205 = 1797 J K⁻¹ mol⁻¹. Therefore ΔS°=1978−1797=+181 J K⁻¹ mol⁻¹.",
+    "aqa_2018_chemA_3_2": "Convert 600 °C to 873 K and 181 J K⁻¹ mol⁻¹ to 0.181 kJ K⁻¹ mol⁻¹. Using ΔG°=ΔH°−TΔS° gives −905−873×0.181 = −1063 kJ mol⁻¹.",
+    "verified2019_M_5_b_": "S₁₆=8(2a+15d)=260 and S₆₀=30(2a+59d)=315. Solving these simultaneous equations gives a=20 and d=−0.5. Therefore S₄₁=41/2[2(20)+40(−0.5)]=410.",
+    "aqa_math_as24_p1_q8b": "The equation x=(e³)y means x is e cubed multiplied by y. Substitute into x+y=10: (e³+1)y=10, so y=10/(1+e³) and x=10e³/(1+e³)."
   },
   "questionCorrections": {
     "aqa_chem_as23_p1_q3_1": {
@@ -19,6 +33,10 @@
         1
       ],
       "modelAnswer": "Using sin θ = tan θ cos θ, the left-hand side becomes tan²θ cos θ. For cos θ ≠ 0, divide by cos θ to obtain tan²θ = 4."
+    },
+    "aqa_math_as24_p1_q8b": {
+      "prompt": "Given x = (e³)y and x + y = 10, find exact expressions for x and y.",
+      "modelAnswer": "The equation x=(e³)y means x is e cubed multiplied by y. Substitute into x+y=10: (e³+1)y=10, so y=10/(1+e³) and x=10e³/(1+e³)."
     }
   }
 }
