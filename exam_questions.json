@@ -7199,7 +7199,14 @@
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74042-W-MS-JUN19.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "partialNumericMarkVariants": [
+        {
+          "value": 32,
+          "marks": 1,
+          "note": "AQA credits correct atom-economy method but penalises rounding to two significant figures."
+        }
+      ]
     },
     {
       "id": "aschem19p2_03_1",
@@ -7324,7 +7331,29 @@
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74042-W-MS-JUN19.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "partialNumericMarkVariants": [
+        {
+          "value": 160,
+          "marks": 2
+        },
+        {
+          "value": -8000,
+          "marks": 2
+        },
+        {
+          "value": 8000,
+          "marks": 1
+        },
+        {
+          "value": -1876,
+          "marks": 2
+        },
+        {
+          "value": 1876,
+          "marks": 1
+        }
+      ]
     },
     {
       "id": "aschem19p2_04_1",
@@ -7439,7 +7468,8 @@
       "originalMarkVerified": true,
       "originalMarkVerifiedSource": "AQA-74042-W-MS-JUN19.PDF",
       "originalMarkVerifiedDate": "2026-10-21",
-      "markSchemeType": "point-based"
+      "markSchemeType": "point-based",
+      "markingMode": "standardFormStrict"
     },
     {
       "id": "aschem19p2_05_2",
