@@ -187,23 +187,29 @@
    img.src=src;
   });
  }
- function possiblyIncorrectArithmetic(line){
-  // Deliberately narrow parser: it only checks one straightforward numeric
-  // binary operation, without guessing at symbolic manipulations or units.
-  const text=String(line||'').replace(/[−–—]/g,'-').replace(/×/g,'*').replace(/÷/g,'/');
-  const re=/([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*([+*/-])\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*=\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+))/g;
-  let match;
-  while((match=re.exec(text))){
-   const left=Number(match[1]),right=Number(match[3]),given=Number(match[4]);
-   if(!Number.isFinite(left)||!Number.isFinite(right)||!Number.isFinite(given))continue;
-   const expected=match[2]==='+'?left+right:match[2]==='-'?left-right:
-     match[2]==='*'?left*right:right===0?NaN:left/right;
-   if(!Number.isFinite(expected))continue;
-   if(Math.abs(given-expected)>Math.max(.025*Math.abs(expected),.03))return true;
-  }
-  return false;
+ function calculateSimpleExpression(raw){
+ const source=String(raw||'').replace(/[−–—]/g,'-').replace(/[×·]/g,'*').replace(/÷/g,'/')
+ .replace(/(\d)\s*[xX]\s*(?=\d)/g,'$1*').replace(/\s+/g,'');
+ if(!source||!/^[0-9eE.+*/()^\-]+$/.test(source))return NaN;
+ const parts=source.match(/(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?|[()+*/^\-]/gi)||[];
+ if(parts.join('')!==source)return NaN;
+ let p=0;const peek=()=>parts[p],next=()=>parts[p++];
+ function atom(){const x=peek();if(x==='+'||x==='-'){next();const y=atom();return x==='-'?-y:y}
+  if(x==='('){next();const v=sum();if(next()!==')')throw Error('brackets');return v}
+  if(!x||!/^(?:\d|\.)/.test(x))throw Error('number');next();return Number(x)}
+ function power(){let v=atom();if(peek()==='^'){next();v=v**power()}return v}
+ function prod(){let v=power();while(peek()==='*'||peek()==='/'){const op=next(),y=power();v=op==='*'?v*y:v/y}return v}
+ function sum(){let v=prod();while(peek()==='+'||peek()==='-'){const op=next(),y=prod();v=op==='+'?v+y:v-y}return v}
+ try{const val=sum();return p===parts.length&&Number.isFinite(val)?val:NaN}catch{return NaN}
+}
+function possiblyIncorrectArithmetic(line){
+ const parts=String(line||'').replace(/[−–—]/g,'-').replace(/[≈≃]/g,'=').split('=').map(x=>x.trim());
+ for(let i=0;i<parts.length-1;i++){
+  const left=calculateSimpleExpression(parts[i]),right=calculateSimpleExpression(parts[i+1]);
+  if(Number.isFinite(left)&&Number.isFinite(right)&&Math.abs(left-right)>Math.max(1e-10,Math.max(Math.abs(left),Math.abs(right))*.025))return true;
  }
-
+ return false;
+}
  function scanNumbers(text){
   let x=String(text||'').replace(/[−–—]/g,'-').replace(/[×·]/g,'*');
   const supers={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
@@ -329,6 +335,30 @@
     if(figures.length>=3&&!/[=+*/×÷^<>]|\b(?:mean|total|sum|area|mass|gradient|pressure|current|force|energy|power|result|answer|therefore|hence|mol|voltage|rate|velocity)\b/i.test(line))continue;
     if(figures.length>=2&&/^\s*[-+]?\d[\d.\s,;\-]+$/.test(line))continue;
     const score=typeof markPointPrediction==='function'?markPointPrediction(line,point):0;
+    if(q.subject==='Maths'&&q.marks>=4){
+     const norm=x=>String(x).toLowerCase().replace(/[−–—]/g,'-').replace(/²/g,'^2').replace(/³/g,'^3')
+      .replace(/×/g,'*').replace(/÷/g,'/').replace(/\s+/g,'');
+     const ln=norm(line);
+     const equations=[...String(point).matchAll(/([a-zA-Z\d()^²³+\-−*/]+)\s*=\s*([a-zA-Z\d()^²³+\-−*/∫[\]₋₁³]+)/g)]
+      .map(m=>norm(m[1]+'='+m[2])).filter(k=>k.length>=4);
+     const exact=equations.some(k=>ln.includes(k));
+     const words=terms(point),given=terms(line);
+     const structural={
+      factor:/\([^)]{1,30}\)\s*\([^)]{1,30}\)|factor/i.test(line),
+      integrat:/∫|integrat/i.test(line),
+      differentiat:/d\/dx|dy\/dx|f'|derivat|differentiat/i.test(line),
+      area:/\barea\b|\bA\s*=/i.test(line),
+      tangent:/tangent|gradient|dy\/dx|f'/i.test(line)
+     };
+     const needs=Object.keys(structural).filter(k=>new RegExp(k,'i').test(point));
+     const matchingStep=needs.some(k=>structural[k]);
+     const explanatory=words.filter(t=>given.includes(t)).length>=2;
+     // Correct factorisation must not also earn marks for an unrelated
+     // equation rearrangement, differentiation or integration step.
+     if(equations.length&&!exact&&!matchingStep)continue;
+     if(needs.length&&!matchingStep&&!exact&&!explanatory)continue;
+     if(!exact&&!matchingStep&&!explanatory&&!/(?:^|[\s])(?:x|y|a|p)\s*=/i.test(line))continue;
+    }
     const lt=terms(line),ln=numericTokens(line);
     const overlap=pt.filter(w=>lt.includes(w)).length;
     const finalExpected=pn.length?pn[pn.length-1]:NaN;
