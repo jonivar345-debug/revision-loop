@@ -1549,7 +1549,14 @@ function examSuggested(q,answer){
  }
  // Conditional marks in genuine AQA schemes: a justification cannot
  // score where the prerequisite experimental change was not justified.
- const permitted=enforceMarkDependencies(q,preds);
+ const permitted=[...preds];
+ if(q.markPointDependencies&&typeof q.markPointDependencies==='object'){
+  Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
+   const i=Number(index);
+   if(!Number.isInteger(i)||!permitted[i]||!Array.isArray(prerequisites))return;
+   if(prerequisites.some(p=>!permitted[p]))permitted[i]=false;
+  });
+ }
  if(permitted.some((ok,i)=>ok!==preds[i])){
   preds=permitted;
   suggested=totalMarkingPoints(q,preds);
