@@ -1,666 +1,989 @@
 {
   "created": "2026-10-21",
-  "method": "Counts source-linked standalone parts already stored in Revision Loop. Paper completeness NOT verified; original practice does not count as past-paper imports.",
-  "note": "The 2015 science papers and pre-2018 Maths exams are from different AQA specifications. The current AQA AS science exam begins in 2016; current A-level science begins in 2017; current Maths AS/A-level begins in 2018.",
+  "method": "Counts source-verified standalone questions in both the main bank and historical supplement; original practice is excluded. Every paper is explicitly incomplete until independently verified.",
+  "note": "Includes 66 subject/qualification/year groups and separate per-paper inventory. 2020 and 2021 refer to November rather than cancelled summer series. Legacy years must not be mixed with current specifications.",
   "rows": [
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2015,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2016,
+      "series": "June",
       "parts": 5,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2017,
+      "series": "June",
       "parts": 3,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2018,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2019,
+      "series": "June",
       "parts": 14,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2020,
+      "series": "November",
       "parts": 3,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2021,
+      "series": "November",
       "parts": 3,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2022,
+      "series": "June",
       "parts": 9,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2023,
+      "series": "June",
       "parts": 4,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2024,
+      "series": "June",
       "parts": 8,
       "papersWithIndexedParts": [
         "7407/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "AS",
       "year": 2025,
-      "parts": 3,
-      "papersWithIndexedParts": [
-        "7407/1"
-      ],
-      "classification": "partial question index",
-      "completePaperVerified": false
+      "series": "June",
+      "parts": 0,
+      "papersWithIndexedParts": [],
+      "classification": "missing from in-app index",
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7407/1",
+        "7407/2"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2015,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2016,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2017,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2018,
+      "series": "June",
       "parts": 11,
       "papersWithIndexedParts": [
         "7408/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2019,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2020,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2021,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2022,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2023,
+      "series": "June",
       "parts": 7,
       "papersWithIndexedParts": [
         "7408/3BB"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2024,
+      "series": "June",
       "parts": 1,
       "papersWithIndexedParts": [
         "7408/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Physics",
       "level": "A-level",
       "year": 2025,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7408/1",
+        "7408/2",
+        "7408/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2015,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2016,
+      "series": "June",
       "parts": 17,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2017,
+      "series": "June",
       "parts": 5,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2018,
+      "series": "June",
       "parts": 12,
       "papersWithIndexedParts": [
         "7404/2"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2019,
+      "series": "June",
       "parts": 33,
       "papersWithIndexedParts": [
         "7404/1",
         "7404/2"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2020,
+      "series": "November",
       "parts": 1,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2021,
+      "series": "November",
       "parts": 2,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2022,
+      "series": "June",
       "parts": 9,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2023,
+      "series": "June",
       "parts": 4,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2024,
+      "series": "June",
       "parts": 8,
       "papersWithIndexedParts": [
         "7404/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "AS",
       "year": 2025,
-      "parts": 4,
-      "papersWithIndexedParts": [
-        "7404/1"
-      ],
-      "classification": "partial question index",
-      "completePaperVerified": false
+      "series": "June",
+      "parts": 0,
+      "papersWithIndexedParts": [],
+      "classification": "missing from in-app index",
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7404/1",
+        "7404/2"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2015,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2016,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2017,
+      "series": "June",
       "parts": 4,
       "papersWithIndexedParts": [
         "7405/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2018,
+      "series": "June",
       "parts": 11,
       "papersWithIndexedParts": [
         "7405/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2019,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2020,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2021,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2022,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2023,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2024,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Chemistry",
       "level": "A-level",
       "year": 2025,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7405/1",
+        "7405/2",
+        "7405/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2015,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2016,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2017,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2018,
+      "series": "June",
       "parts": 6,
       "papersWithIndexedParts": [
         "7356/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2019,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2020,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2021,
+      "series": "November",
       "parts": 1,
       "papersWithIndexedParts": [
         "7356/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2022,
+      "series": "June",
       "parts": 8,
       "papersWithIndexedParts": [
         "7356/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2023,
+      "series": "June",
       "parts": 5,
       "papersWithIndexedParts": [
         "7356/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2024,
+      "series": "June",
       "parts": 7,
       "papersWithIndexedParts": [
         "7356/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "AS",
       "year": 2025,
-      "parts": 4,
-      "papersWithIndexedParts": [
-        "7356/1"
-      ],
-      "classification": "partial question index",
-      "completePaperVerified": false
+      "series": "June",
+      "parts": 0,
+      "papersWithIndexedParts": [],
+      "classification": "missing from in-app index",
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7356/1",
+        "7356/2"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2015,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2016,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2017,
+      "series": "legacy",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "older specification",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": []
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2018,
+      "series": "June",
       "parts": 5,
       "papersWithIndexedParts": [
         "7357/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2019,
+      "series": "June",
       "parts": 12,
       "papersWithIndexedParts": [
         "7357/1"
       ],
       "classification": "partial question index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2020,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2021,
+      "series": "November",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2022,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2023,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2024,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     },
     {
       "subject": "Maths",
       "level": "A-level",
       "year": 2025,
+      "series": "June",
       "parts": 0,
       "papersWithIndexedParts": [],
       "classification": "missing from in-app index",
-      "completePaperVerified": false
+      "completePaperVerified": false,
+      "papersExpected": [
+        "7357/1",
+        "7357/2",
+        "7357/3"
+      ]
     }
-  ]
+  ],
+  "updated": "2026-10-21",
+  "paperInventory": "paper_inventory_2015_2025.json",
+  "summary": {
+    "groups": 66,
+    "papers": 134,
+    "withSomeIndexed": 30,
+    "withoutIndexed": 104,
+    "completePapers": 0
+  }
 }
