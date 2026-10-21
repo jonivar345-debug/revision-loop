@@ -1054,22 +1054,55 @@ const PMT_BY_TOPIC={
  Maths:'https://www.physicsandmathstutor.com/maths-revision/a-level-aqa/'
 };
 function renderPaperArchive(){
- const target=document.getElementById('paperArchiveLinks'),subject=document.getElementById('examSubject').value,years=subject==='Maths'?[2018,2019,2020]:[2016,2017,2018,2019,2020];
+ const target=document.getElementById('paperArchiveLinks');
  if(!target)return;
- const items=Object.entries(PMT_PAPER_INDEX[subject]||{});
- target.innerHTML='<p class="archive-label">'+esc(subject)+' · all papers and mark schemes by year</p>'+
- '<div class="archive-years">'+years.map(y=>'<span>'+y+(y===2020?' *':'')+'</span>').join('')+'</div>'+
- '<div class="archive-links">'+items.map(([title,url])=>'<a href="'+url+'" rel="noopener noreferrer" target="_blank">'+esc(title)+' ↗</a>').join('')+'</div>'+
- '<p class="archive-label">For 2015 papers use the older specification: <a target="_blank" rel="noopener noreferrer" href="'+
- (subject==='Maths'?'https://www.physicsandmathstutor.com/a-level-maths-papers/':PMT_BY_TOPIC[subject])+'">old-specification topic and paper resources ↗</a>.</p>';
+ const subject=document.getElementById('examSubject').value;
+ const codes={
+  Physics:{AS:['7407/1','7407/2'],'A-level':['7408/1','7408/2','7408/3']},
+  Chemistry:{AS:['7404/1','7404/2'],'A-level':['7405/1','7405/2','7405/3']},
+  Maths:{AS:['7356/1','7356/2'],'A-level':['7357/1','7357/2','7357/3']}
+ };
+ const first=subject==='Maths'?{AS:2018,'A-level':2018}:{AS:2016,'A-level':2017};
+ const qp=examQuestions.filter(q=>q.subject===subject&&q.standalone!==false&&q.year!=='Practice');
+ const indexUrl='https://www.aqa.org.uk/past-papers-and-mark-schemes-finder';
+ const years=Array.from({length:11},(_,i)=>2025-i);
+ function archiveLevel(year,level){
+  if(year<first[level])return '<span class="archive-nonexistent">Not examined under this specification</span>';
+  const papers=codes[subject][level].map(paper=>{
+   const found=qp.filter(x=>x.year===year&&x.level===level&&
+    (x.paper===paper||x.paper.startsWith(paper+'A')||x.paper.startsWith(paper+'B')));
+   const number=found.length,link=PMT_PAPER_INDEX[subject][
+    subject==='Maths'?(level==='AS'?'AS Papers 1 & 2':'A-level Papers 1, 2 & 3'):
+    (level==='AS'?'AS Paper '+paper.split('/')[1]:'A-level Paper '+paper.split('/')[1])
+   ];
+   // Archive links open original papers externally; they are not included
+   // or redistributed by this application.
+   return '<div class="archive-paper-code"><span>'+esc(paper)+'</span><span class="archive-part-count '+(number?'':'archive-empty')+'">'+
+    number+' indexed '+(number===1?'part':'parts')+'</span>'+(link?'<a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer" aria-label="Find '+esc(subject+' '+level+' '+year+' '+paper)+' paper">Find paper ↗</a>':'')+'</div>';
+  });
+  return papers.join('');
+ }
+ const archiveRows=years.map(year=>{
+  const special=year===2020?'Autumn examination series; no normal summer exams':
+   year===2021?'Normal summer exams cancelled; archive material may be assessment or practice material':
+   year===2015?'Older, different specification':'';
+  return '<tr><th scope="row">'+year+(special?'<span class="archive-context">'+esc(special)+'</span>':'')+
+   '</th><td>'+archiveLevel(year,'AS')+'</td><td>'+archiveLevel(year,'A-level')+'</td></tr>';
+ }).join('');
+ target.innerHTML='<p class="archive-label">AQA '+esc(subject)+' · current-specification paper checklist, 2025–2015</p>'+
+ '<p class="archive-help">The figure beside a paper is the number of source-linked question parts <b>inside Revision Loop</b>, not the number of questions on that paper. <b>0 means no questions from that paper have yet been indexed here.</b> Links open external full-paper collections; these are not copies hosted in Revision Loop.</p>'+
+ '<div class="archive-scroll"><table class="archive-matrix"><thead><tr><th>Year</th><th>AS ('+esc(codes[subject].AS[0].split('/')[0])+')</th><th>A-level ('+esc(codes[subject]['A-level'][0].split('/')[0])+')</th></tr></thead><tbody>'+
+ archiveRows+'</tbody></table></div>'+
+ '<p class="archive-help"><a href="'+indexUrl+'" target="_blank" rel="noopener noreferrer">Official AQA paper and mark-scheme finder ↗</a> · '+
+ '<a href="'+(subject==='Maths'?'https://www.aqa.org.uk/all-about-maths/a-level-maths':PMT_BY_TOPIC[subject])+'" target="_blank" rel="noopener noreferrer">Additional subject resources ↗</a>.'+
+ ' AQA only provides most public past papers for a limited time. Some historical collections require school or teacher access. Older 2015 papers must be checked separately for syllabus differences.</p>';
  const all=revisionTopicIndex(subject),gaps=[];
  for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&n.questions===0)gaps.push(topic);
  const sourced=new Map();
- for(const q of examQuestions.filter(x=>x.subject===subject&&x.standalone!==false&&x.year!=='Practice'))sourced.set(q.revisionTopic,true);
+ for(const q of qp)sourced.set(q.revisionTopic,true);
  const notSourced=[];
  for(const [group,topics] of all)for(const [topic,n] of topics)if(n.cards>0&&!sourced.get(topic))notSourced.push(topic);
- document.getElementById('topicOutsideResources').innerHTML='<p class="archive-label">Question minimum: '+(gaps.length?'some gaps remain':'4+ per topic across both levels')+
- '. Topics without a source-linked past-paper item: '+notSourced.length+'. These currently use independent AQA-style practice instead. <a href="'+PMT_BY_TOPIC[subject]+'" target="_blank" rel="noopener noreferrer">Explore original AQA questions on PMT ↗</a></p>';
+ document.getElementById('topicOutsideResources').innerHTML='<p class="archive-label">Topics without an indexed past-paper part: '+notSourced.length+'. These use independently written practice in the app, which should not be mistaken for original AQA questions. <a href="'+PMT_BY_TOPIC[subject]+'" target="_blank" rel="noopener noreferrer">Explore original AQA questions on PMT ↗</a></p>';
 }
 function refreshExamFilters(defaultIfEmpty=false){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value,base=subjectExam(sub).filter(q=>level==='both'||q.level===level),
