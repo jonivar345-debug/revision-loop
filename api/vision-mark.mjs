@@ -186,6 +186,42 @@ export function buildModelRequest(question){
   };
 }
 
+
+export function providerFailure(status,details={}) {
+  const rawCode=String(details?.error?.code||details?.error?.type||'');
+  const rawParam=String(details?.error?.param||'');
+  const code=/^[a-z][a-z0-9_:-]{0,63}$/i.test(rawCode)?rawCode:'';
+  const param=/^[a-z0-9_.\[\]-]{1,90}$/i.test(rawParam)?rawParam:'';
+  const quota=code==='insufficient_quota'||code==='billing_hard_limit_reached'||code==='billing_not_active';
+  const errors={
+    400:'The AI provider rejected this request. Its format or model settings need correcting.',
+    401:'The AI provider rejected OPENAI_API_KEY. Check the private API key in Vercel and redeploy.',
+    402:'The API account may need billing or available credits. Ask the account holder to check it.',
+    403:'This API account does not have permission to use the selected model.',
+    404:'The selected AI model is unavailable to this API account.',
+    408:'The AI provider timed out. Try again later.',
+    413:'The provider rejected the image size. Crop or reduce the photograph.',
+    429:quota?'The API account has insufficient quota or has reached a spending limit.':'The AI provider has reached a temporary rate limit.',
+    500:'The AI provider reported an internal server error.',
+    502:'The AI provider reported a gateway error.',
+    503:'The AI provider is temporarily unavailable.',
+    504:'The AI provider timed out.'
+  };
+  const error=errors[status]||'The AI provider could not complete this request.';
+  return {error,providerStatus:status,providerCode:code||undefined,providerParam:param||undefined};
+}
+async function checkProviderKey(key,model) {
+  const response=await fetch('https://api.openai.com/v1/models/'+encodeURIComponent(model),{
+    method:'GET',headers:{Authorization:'Bearer '+key},
+    signal:AbortSignal.timeout(12000)
+  });
+  if(response.ok)return {providerReady:true,model,providerStatus:response.status,
+    note:'API key and model access verified without sending a photo or starting a billed model response. Billing and actual marking are not verified.'};
+  let details={};
+  try{details=await response.json()}catch{}
+  return {providerReady:false,...providerFailure(response.status,details)};
+}
+
 async function handle(request) {
   const origin = request.headers.get('origin');
   const allowed = configOrigin();
@@ -219,6 +255,15 @@ async function handle(request) {
       // No photo is sent and no AI-model or API charge is incurred.
       return json(createDeviceSession(secret),200,allowed);
     }
+    if(parsed?.action==='check-provider'){
+      // No photographs, no generated responses, no AI usage charge.
+      try{
+        const checked=await checkProviderKey(openaiKey,process.env.VISION_MODEL||'gpt-4.1-mini');
+        return json(checked,checked.providerReady?200:502,allowed);
+      }catch{
+        return json({providerReady:false,error:'The API account check could not reach the AI provider. Try later.'},502,allowed);
+      }
+    }
     question=normaliseInput(parsed);
   } catch(err) {
     return json({error:err instanceof SyntaxError?'Invalid JSON.':String(err.message||'Invalid request.').slice(0,130)},400,allowed);
@@ -230,7 +275,16 @@ async function handle(request) {
       body:JSON.stringify(buildModelRequest(question)),
       signal:AbortSignal.timeout(36000)
     });
-    if(!upstream.ok) return json({error:upstream.status===429?'AI service is temporarily busy or rate-limited.':'AI marking is temporarily unavailable.'},502,allowed);
+    if(!upstream.ok){
+      let details={};
+      try{details=await upstream.json()}catch{}
+      const failure=providerFailure(upstream.status,details);
+      // Deliberately log ONLY the category/status/parameter, never secret,
+      // handwriting, provider message, image, prompt, or user response.
+      console.warn('vision-provider-response',failure.providerStatus,
+        failure.providerCode||'unspecified',failure.providerParam||'');
+      return json(failure,502,allowed);
+    }
     const output=await upstream.json();
     const text=(output.output||[]).flatMap(item=>item.content||[])
       .filter(part=>part.type==='output_text').map(part=>part.text||'').join('\n');
@@ -238,8 +292,11 @@ async function handle(request) {
     const parsed=JSON.parse(text);
     return json(checkedMarking(parsed,question),200,allowed);
   } catch(err) {
-    // Do not log user handwriting, images, secret, prompt or provider output.
-    return json({error:'AI could not analyse the photograph. Try another image or the local scanner.'},502,allowed);
+    const cause=err?.name==='TimeoutError'?'upstream-timeout':err instanceof SyntaxError?'provider-json-invalid':'validation-or-network';
+    console.warn('vision-provider-processing',cause);
+    return json({error:cause==='upstream-timeout'?'The AI request timed out. Try a cropped photograph.':
+      cause==='provider-json-invalid'?'The AI provider returned an invalid response. Please try again.':
+      'The AI response could not be processed. The photo was not marked.',diagnostic:cause},502,allowed);
   }
 }
 
