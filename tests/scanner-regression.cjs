@@ -89,6 +89,17 @@ assert.equal(scorer.examSuggested({...chemBack,prompt:chemBack.prompt+' Show you
 assert.equal(scorer.examSuggested(chemBack,'74 g').suggested<chemBack.marks,true,'Incorrect explicit units cannot earn full marks');checks++;
 assert.equal(scorer.examSuggested(physicsVector,'310 V').suggested<physicsVector.marks,true,'Wrong physical dimensions cannot earn full marks');checks++;
 assert.equal(scorer.examSuggested(physicsVector,'310 N').suggested,physicsVector.marks,'Correct physical units earn full credit');checks++;
+const tinyPhoton=bank.find(q=>q.id==='aqa_phy_as23_p1_q1_5');
+const tinyGenerated=bank.find(q=>q.id==='original_v33_ph_33_0');
+assert(tinyPhoton&&tinyGenerated,'Scientific-notation regression fixtures exist');
+assert.equal(scorer.examSuggested(tinyPhoton,'1.59×10^-11').finalCorrect,true,'Correct photon energy accepted');checks++;
+assert.equal(scorer.examSuggested(tinyPhoton,'0').finalCorrect,false,'Zero must not equal a small nonzero energy');checks++;
+assert.equal(scorer.examSuggested(tinyPhoton,'1.59×10^-10').finalCorrect,false,'Wrong exponent rejected');checks++;
+assert.equal(scorer.examSuggested(tinyGenerated,'0').finalCorrect,false,'Absurd legacy absolute tolerances cannot accept zero');checks++;
+const gas=bank.find(q=>q.id==='aqa_chem_as16_p1_q5_2');
+assert(gas,'2016 AQA-linked gas question present');
+assert.equal(scorer.examSuggested(gas,'337 cm³').finalCorrect,true,'Recalculated gas volume accepted');checks++;
+assert.equal(scorer.examSuggested(gas,'342 cm³').finalCorrect,false,'Old incorrect gas volume no longer accepted');checks++;
 // Correct result can imply routine method, but not an additionally required diagram.
 const forceDiagram=bank.find(q=>q.id==='orig_v25_physics_free_body_diagrams_1');
 const idealGas=bank.find(q=>q.id==='orig_v25_physics_gas_laws_1');
