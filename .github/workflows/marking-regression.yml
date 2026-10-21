@@ -19,6 +19,7 @@ jobs:
           node tests/photo-review-regression.cjs
           node tests/vision-backend-regression.mjs
           node tests/vision-client-regression.cjs
+          node tests/free-marking-regression.cjs
           node tests/historical-supplement-regression.cjs
           node tests/archive-regression.cjs
           node tests/question-alignment-regression.cjs
