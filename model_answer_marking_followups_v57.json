@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-21",
+  "scope": "231 source-linked exam question parts, tested against their stored model-answer text. A low score is not proof the stored original mark total is wrong; it can indicate model answer is partial or rule-based false negative.",
+  "checked": 231,
+  "issues": 2,
+  "remaining": [
+    {
+      "id": "aqa_math_as20_p1_q5_link",
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2020,
+      "paper": "7356/1",
+      "question": "5",
+      "marks": 4,
+      "modelSuggested": 1,
+      "sourceFirst": true,
+      "reason": "Stored model answer insufficient for complete rubric, or rule-based scorer fails to recognise correct expression; requires paper-specific manual review.",
+      "msUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF#page=7"
+    },
+    {
+      "id": "aqa_math_as24_p1_q3_src",
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "paper": "7356/1",
+      "question": "3",
+      "marks": 4,
+      "modelSuggested": 0,
+      "sourceFirst": true,
+      "reason": "Stored model answer insufficient for complete rubric, or rule-based scorer fails to recognise correct expression; requires paper-specific manual review.",
+      "msUrl": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF"
+    }
+  ]
+}
