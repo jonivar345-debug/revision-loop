@@ -39,3 +39,5 @@ jobs:
           if status!=401:raise SystemExit('Expected 401 for unauthorised POST; saw '+str(status)+' '+body[:180])
           print('PASS. The protected backend responds to CORS and authentication tests.')
           PY
+
+# Verify updated remembered-device deployment
