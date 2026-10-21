@@ -5,16 +5,55 @@
  let question=null,visionResult=null,inFlight=false;
  const $=id=>document.getElementById(id);
  const STORAGE='revisionloop-vision-session';
+ const DEVICE_STORAGE='revisionloop-vision-device-v1';
  const DEFAULT_API='https://revision-loop-jonivar345-5189.vercel.app/api/vision-mark';
- function readConfig(){
-  // The trusted service address is pinned, so a typo or a malicious
-  // alternative URL cannot receive the student's private passphrase.
-  try{return {...(JSON.parse(sessionStorage.getItem(STORAGE)||'null')||{}),url:DEFAULT_API}}
-  catch{return {url:DEFAULT_API}}
+ function forgetDevice(){
+  try{localStorage.removeItem(DEVICE_STORAGE)}catch{}
  }
- function saveConfig(data){
+ function readDevice(){
+  try{
+   const data=JSON.parse(localStorage.getItem(DEVICE_STORAGE)||'null');
+   const now=Date.now(),maxExpiry=now+30*24*3600*1000+60_000;
+   if(data&&typeof data.token==='string'&&/^rl1\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/.test(data.token)&&
+      Number.isSafeInteger(data.expiresAt)&&data.expiresAt>now&&data.expiresAt<=maxExpiry)return data;
+   if(data)forgetDevice();
+  }catch{}
+  return null;
+ }
+ function readConfig(){
+  // Only an expiring, scoped session is saved between browser restarts.
+  // The long-lived master passphrase stays in tab-specific storage.
+  let session={};
+  try{session=JSON.parse(sessionStorage.getItem(STORAGE)||'null')||{}}catch{}
+  const device=readDevice();
+  return {url:DEFAULT_API,passphrase:session.passphrase||device?.token||'',
+   remembered:!!device,expiresAt:device?.expiresAt||null};
+ }
+ function saveTab(data){
   try{sessionStorage.setItem(STORAGE,JSON.stringify(data));return true}catch{return false}
  }
+ function clearTab(){
+  try{sessionStorage.removeItem(STORAGE)}catch{}
+ }
+ async function rememberDevice(master){
+  const reply=await fetch(DEFAULT_API,{
+   method:'POST',mode:'cors',cache:'no-store',credentials:'omit',
+   headers:{'Content-Type':'application/json','Authorization':'Bearer '+master},
+   body:JSON.stringify({action:'remember-device'})
+  });
+  const data=await reply.json().catch(()=>({}));
+  if(!reply.ok)throw Error(data.error||'Could not remember this device.');
+  if(typeof data.token!=='string'||!/^rl1\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/.test(data.token)||
+     !Number.isSafeInteger(data.expiresAt)||data.expiresAt<=Date.now())
+    throw Error('The server did not return a valid device session.');
+  try{
+   localStorage.setItem(DEVICE_STORAGE,JSON.stringify({token:data.token,expiresAt:data.expiresAt}));
+   if(!readDevice())throw Error('Saved device session could not be read.');
+  }catch{forgetDevice();throw Error('This browser cannot remember the device. Try ordinary tab-only access.')}
+  clearTab();
+  return data.expiresAt;
+ }
+
  function allowedEndpoint(text){
   try{
    const u=new URL(String(text||'').trim());
@@ -70,7 +109,10 @@
    const data=await response.json().catch(()=>({}));
    if(response.status===400&&data.error==='Question information is required.'){
     status('Connection verified: the private access token works. No AI request or photograph was sent.');
-   } else if(response.status===401)status('The access passphrase does not match Vercel. Check the original saved passphrase, or rotate it in Vercel.',true);
+   } else if(response.status===401){
+    if(config.remembered){forgetDevice();clearTab()}
+    status('The private access has expired or was changed. Enter your original passphrase once to reconnect this device.',true);
+   }
    else if(response.status===503)status('The backend is missing API credentials; check Vercel Production environment variables and redeploy.',true);
    else status('Connection check did not finish: HTTP '+response.status+'. '+String(data.error||'Try again later.').slice(0,120),true);
   }catch(e){
@@ -109,6 +151,10 @@
     });
    }finally{clearTimeout(timeout)}
    const reply=await response.json().catch(()=>({error:'The service did not return valid JSON.'}));
+   if(response.status===401&&config.remembered){
+    forgetDevice();clearTab();
+    throw Error('Remembered access expired or was revoked. Enter your original passphrase again to reconnect.');
+   }
    if(!response.ok)throw Error(reply.error||'The vision service could not mark this answer.');
    if(!Array.isArray(reply.marking)||reply.marking.length!==q.markPoints.length ||
       reply.questionId!==q.id)throw Error('Incomplete marking response. Nothing has been saved.');
@@ -142,31 +188,60 @@
    '<input id="scanVisionUrl" type="url" autocomplete="off" readonly spellcheck="false">'+
    '<label for="scanVisionPass">Private access passphrase (24+ characters)</label>'+
    '<input id="scanVisionPass" type="password" autocomplete="off" minlength="24" placeholder="Separate private passphrase">'+
-   '<div class="scan-vision-actions"><button type="button" id="scanVisionSave">Use these settings in this tab</button><button type="button" id="scanVisionTest">Test connection (no AI charge)</button>'+
-   '<button type="button" id="scanVisionForget">Forget saved settings</button></div>'+
-   '<small>Stored only for this browser tab. The AI provider may charge per image request. No request is made until you press Mark photographed working with AI.</small>'+
+   '<label class="scan-vision-remember"><input type="checkbox" id="scanVisionRemember"> Remember on this device for 30 days</label>'+
+   '<small>Only enable this on your own phone or computer. It stores a revocable 30-day access session in this browser, not your original passphrase. You can forget this device at any time.</small>'+
+   '<div class="scan-vision-actions"><button type="button" id="scanVisionSave">Save private connection</button><button type="button" id="scanVisionTest">Test connection (no AI charge)</button>'+
+   '<button type="button" id="scanVisionForget">Forget this device</button></div>'+
+   '<small>Without Remember, access lasts for this tab only. AI requests may incur charges; photos are sent only when you press Mark photographed working with AI.</small>'+
    '</details>';
   host.insertAdjacentElement('beforebegin',outer);
   const saved=readConfig();
   $('scanVisionUrl').value=saved.url||'';
-  $('scanVisionPass').value=saved.passphrase||'';
-  $('scanVisionSave').onclick=()=>{
-   const url=DEFAULT_API,passphrase=$('scanVisionPass').value;
-   if(!allowedEndpoint(url)){status('Use the automatic Revision Loop backend address.',true);return}
-   if(passphrase.length<24){status('Use a separate strong passphrase of at least 24 characters.',true);return}
-   if(!saveConfig({url,passphrase})){status('This browser does not allow session storage. AI connection will not persist.',true);return}
-   $('scanVisionConfig').open=false;
-   status('Private access saved for this tab. Press Test connection to verify it for free. Photos have not been sent.');
+  $('scanVisionPass').value=saved.remembered?'':(saved.passphrase||'');
+  $('scanVisionRemember').checked=saved.remembered;
+  $('scanVisionSave').onclick=async()=>{
+   const passphrase=$('scanVisionPass').value.trim(),remember=$('scanVisionRemember').checked;
+   const button=$('scanVisionSave');
+   if(remember&&!passphrase&&readDevice()){
+    $('scanVisionConfig').open=false;
+    status('This device is already remembered. No password needed until its 30-day session expires.');
+    return;
+   }
+   if(passphrase.length<24){
+    status('Enter your separate private passphrase (at least 24 characters).',true);return
+   }
+   button.disabled=true;button.textContent='Saving private access…';
+   try{
+    if(remember){
+     const expires=await rememberDevice(passphrase);
+     $('scanVisionPass').value='';
+     $('scanVisionConfig').open=false;
+     status('Device remembered until '+new Date(expires).toLocaleDateString('en-GB')+
+      '. You will not need to enter the passphrase again in this browser until then.');
+    }else{
+     forgetDevice();
+     if(!saveTab({url:DEFAULT_API,passphrase}))
+      throw Error('This browser cannot store the tab-only access.');
+     $('scanVisionPass').value='';
+     $('scanVisionConfig').open=false;
+     status('Private access saved for this tab. Press Test connection to verify it without an AI charge.');
+    }
+   }catch(err){status(err.message||'Could not save private access.',true)}
+   finally{button.disabled=false;button.textContent='Save private connection'}
   };
   $('scanVisionForget').onclick=()=>{
-   try{sessionStorage.removeItem(STORAGE)}catch{}
-   $('scanVisionUrl').value='';$('scanVisionPass').value='';invalidate();
-   status('Private AI connection details cleared.');
+   forgetDevice();clearTab();
+   $('scanVisionRemember').checked=false;
+   $('scanVisionUrl').value=DEFAULT_API;$('scanVisionPass').value='';invalidate();
+   status('This device has been forgotten. Your passphrase will be needed to reconnect.');
   };
   $('scanVisionTest').onclick=testPrivateConnection;
   $('scanVisionMark').onclick=markFromPhotos;
-  if(allowedEndpoint(saved.url)&&saved.passphrase?.length>=24)
-   status('Private AI settings available. Nothing is transmitted until you request AI marking.');
+  if(saved.remembered)
+   status('Device remembered until '+new Date(saved.expiresAt).toLocaleDateString('en-GB')+
+    '. No password needed to use AI marking on this device.');
+  else if(allowedEndpoint(saved.url)&&saved.passphrase?.length>=24)
+   status('Private AI access is saved for this tab. Tick Remember on this device if you want to stay connected.');
  }
  window.RevisionVision={mount,resultFor,invalidate,markFromPhotos,allowedEndpoint,testPrivateConnection};
 })();
