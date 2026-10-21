@@ -18,6 +18,14 @@ for(const q of qs){
   assert.equal(calc(q,Number(q.numericAnswer).toExponential(2)).suggested,q.marks,'Valid standard form should get full marks '+q.id);checks++;
   continue;
  }
+ if(q.markingMode==='reasonedIntegralArea2022'){
+  // Correct result alone cannot satisfy a six-stage argument. This is
+  // a given-answer proof, where AQA requires an actual reasoned derivation.
+  assert.equal(result.finalCorrect,false,'Bare result falsely treated as proof '+q.id);checks++;
+  assert.equal(result.suggested,0,'Bare a=3 must not earn reasoning or method marks '+q.id);checks++;
+  assert.equal(calc(q,q.modelAnswer).suggested,q.marks,'A complete proof should earn six marks '+q.id);checks++;
+  continue;
+ }
  assert.equal(result.finalCorrect,true,'Stored final value not accepted '+q.id);checks++;
  assert(result.suggested>=0&&result.suggested<=q.marks);checks++;
  const prompt=q.prompt||'',type=String(q.questionType||'').toLowerCase();
