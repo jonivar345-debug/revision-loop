@@ -13,6 +13,11 @@ let checks=0,ordinary=0;
 for(const q of qs){
  if(q.standalone===false||q.answerType!=='numeric'||!Number.isFinite(q.numericAnswer))continue;
  const answer=String(q.numericAnswer),result=calc(q,answer);
+ if(q.markingMode==='standardFormStrict'){
+  assert.equal(result.suggested,q.marks-1,'Unformatted final result should lose only the standard-form accuracy mark '+q.id);checks++;
+  assert.equal(calc(q,Number(q.numericAnswer).toExponential(2)).suggested,q.marks,'Valid standard form should get full marks '+q.id);checks++;
+  continue;
+ }
  assert.equal(result.finalCorrect,true,'Stored final value not accepted '+q.id);checks++;
  assert(result.suggested>=0&&result.suggested<=q.marks);checks++;
  const prompt=q.prompt||'',type=String(q.questionType||'').toLowerCase();
