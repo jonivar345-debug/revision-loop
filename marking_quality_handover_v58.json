@@ -1,0 +1,89 @@
+{
+  "version": "v58",
+  "date": "2026-10-21",
+  "scope": "Source-guided correction and regression tests for AQA-linked adapted questions across five paper groups; this is not a complete original-paper import.",
+  "paperGroups": [
+    {
+      "subject": "Chemistry",
+      "level": "AS",
+      "year": 2018,
+      "paper": "7404/2",
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-74042-W-MS-JUN18.PDF",
+      "checked": [
+        "02.3 concordant titres; 23.86 cm3 yields one arithmetic mark",
+        "02.5 citric mass; correct grams lose unit mark",
+        "03.1 heat calculation; source-specified partial mark variants"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "level": "A-level",
+      "year": 2018,
+      "paper": "7408/1",
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-74081-W-MS-JUN18.PDF",
+      "checked": [
+        "01.4 correct stopping distance earns 2/3; justified conclusion earns third; alternative energy/kinematics routes accepted"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "level": "AS",
+      "year": 2019,
+      "paper": "7404/2",
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-74042-W-MS-JUN19.PDF",
+      "checked": [
+        "02.3 atom economy 31.6 earns 2, 32 earns 1",
+        "03.1 final-temperature calculation 62.7 earns 4"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2020,
+      "paper": "7356/1",
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF",
+      "checked": [
+        "Question 5 first-principles derivation 4 marks; correct derivative alone cannot demonstrate requested proof"
+      ],
+      "caveat": "The publicly hosted PDF is under November but its printed header identifies the June 2020 paper originally prepared before cancelled national summer exams; treat this provenance carefully."
+    },
+    {
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2024,
+      "paper": "7356/1",
+      "source": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF",
+      "checked": [
+        "Question 3 rationalisation has four separately credited steps; accepts alternative notation"
+      ]
+    }
+  ],
+  "regressionFile": "tests/multi-paper-source-marking-v58.cjs",
+  "cases": 27,
+  "repairs": [
+    "2020/2024 self-contained Maths questions now counted in paper inventory and revision",
+    "2018 Chemistry AQA-specific numeric partial credit",
+    "2018 Chemistry concordant titration comma-separated inputs",
+    "2018 Physics stopping ramp alternative reasoning",
+    "2024 Maths surd alternative worked expression"
+  ],
+  "retained": {
+    "sourceLinkedPartsInExistingAudit": 231,
+    "originalPaperAuditBatchesRecorded": 32,
+    "usableQuestionParts": 1260,
+    "expectedCurrentSpecPaperSlots": 134,
+    "slotsWithSourceLinkedParts": 30
+  },
+  "caveats": [
+    "No claim that all questions from each paper have been imported",
+    "Original mark-total verification is distinct from independent answer-key verification and full examiner-equivalent marking",
+    "Partial-method and handwritten-answer scoring still require real-response review",
+    "Previously stored question IDs, XP and unlocks retained"
+  ],
+  "next": [
+    "Continue answer-key versus original mark scheme checks across the remaining source-linked parts",
+    "Spot-check paper header/date/series inconsistencies before labelling official source years",
+    "Improve acceptance of mathematically equivalent method evidence while rejecting fabricated steps",
+    "Complete context and diagrams for the remaining eleven source-first entries"
+  ]
+}
