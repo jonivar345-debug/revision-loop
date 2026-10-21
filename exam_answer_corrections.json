@@ -158,6 +158,16 @@
     "aqa_math_as24_p1_q8b": {
       "prompt": "Given x = (e³)y and x + y = 10, find exact expressions for x and y.",
       "modelAnswer": "The equation x=(e³)y means x is e cubed multiplied by y. Substitute into x+y=10: (e³+1)y=10, so y=10/(1+e³) and x=10e³/(1+e³)."
+    },
+    "aqa_chem_as16_p1_q5_2": {
+      "markPoints": [
+        "Find the initial ammonia amount using n=pV/(RT), with V=1.00×10⁻³ m³.",
+        "Use the final temperature 295 K and pressure 75.0 kPa to calculate the combined volume V_total≈1.337×10⁻³ m³.",
+        "Subtract Q's 1000 cm³: the additional flask volume is approximately 337 cm³."
+      ],
+      "modelAnswer": "The initial gas volume is 1.00×10⁻³ m³. With moles unchanged, use p₁V₁/T₁=p₂(V_P+V_Q)/T₂. Total final volume = (102/75.0)×(295/300)×1000 = 1337.3 cm³. Subtract the original flask Q volume of 1000 cm³ to obtain V_P=337.3 cm³, or 337 cm³ to 3 significant figures.",
+      "numericAnswer": 337.3333333333,
+      "tolerance": 3
     }
   }
 }
