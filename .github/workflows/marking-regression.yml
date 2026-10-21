@@ -34,4 +34,5 @@ jobs:
           node tests/all-aqa-marks-regression.cjs
           node tests/multi-paper-source-marking-v58.cjs
           node tests/multi-paper-source-marking-v59.cjs
+          node tests/rebuilt-source-context-v60.cjs
           node tests/aqa-as-maths2018-regression.cjs
