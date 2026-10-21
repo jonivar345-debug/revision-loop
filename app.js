@@ -1167,11 +1167,18 @@ function renderExam(q){
  window.RevisionScan?.mount(q.id);
  document.getElementById('markExam').onclick=()=>{
    const answer=document.getElementById('examAnswer').value,res=examSuggested(q,answer),marking=document.getElementById('examMarking');
+   const scannedText=window.RevisionScan?.usedOCR(q.id)===true;
+   const evidence=scannedText?window.RevisionScan?.reviewEvidence(q,answer,res):null;
+   if(scannedText&&Array.isArray(evidence)){
+    res.preds=res.preds.map((pred,i)=>Boolean(pred&&evidence[i]?.strong));
+    res.suggested=clamp(res.preds.reduce((v,on,i)=>v+(on?(q.markPointMarks?.[i]??1):0),0),0,q.marks);
+    res.confidence='low';
+   }
    marking.classList.add('show');
-   marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
+   marking.innerHTML='<b>Mark-scheme points:</b><div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+(scannedText?'<small class="scan-evidence '+(evidence?.[i]?.strong?'scan-evidence-found':'')+'">'+(evidence?.[i]?.strong?'Likely evidence: “'+esc(evidence[i].line.slice(0,175))+'”':'No matching step identified; check the photograph and decide manually.')+'</small>':'')+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Official final answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'');
    currentExamScore=res.suggested;
    const ef=document.getElementById('examFeedback');ef.className='feedback show '+(res.finalCorrect?'correct':'neutral');
-   ef.textContent=res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
+   ef.textContent=scannedText?'Suggested '+res.suggested+'/'+q.marks+' marks from your corrected transcription. Evidence is shown beside each proposed mark. Handwritten symbols and method steps can be misread, so adjust every check before saving.':res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
    renderScoreEditor(q,answer);
    document.querySelectorAll('[data-mp]').forEach(el=>el.onchange=()=>{
      currentExamScore=[...document.querySelectorAll('[data-mp]')].reduce((total,el)=>total+(el.checked?(q.markPointMarks?.[Number(el.dataset.mp)]??1):0),0);
