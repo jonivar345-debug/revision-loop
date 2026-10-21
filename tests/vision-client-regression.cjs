@@ -76,7 +76,8 @@ async function run(){
  await vision.markFromPhotos();
  assert.equal(called,0,'Paid marking makes no requests by default');checks++;
  assert.match(components.get('scanVisionStatus').textContent,/off by default/);checks++;
- assert.equal(components.get('scanVisionMark').disabled,true);checks++;
+ assert.match(components.get('scanOCR').inserted.innerHTML,/id="scanVisionMark"[^>]*disabled/);checks++;
+ components.get('scanVisionMark').disabled=true;
  components.get('scanVisionPaidOptIn').checked=true;
  components.get('scanVisionPaidOptIn').onchange();
  assert.equal(components.get('scanVisionMark').disabled,false);checks++;
