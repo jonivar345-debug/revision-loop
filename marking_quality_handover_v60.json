@@ -1,0 +1,94 @@
+{
+  "version": "v60",
+  "date": "2026-10-21",
+  "focus": "Make nine previously hidden AQA source-linked question parts independently answerable; repair partial marking and records",
+  "repaired": [
+    {
+      "subject": "Maths",
+      "year": 2020,
+      "paper": "7356/1",
+      "questionParts": [
+        "3(a)",
+        "3(b)"
+      ],
+      "ids": [
+        "aqa_math_as20_p1_q3a_link",
+        "aqa_math_as20_p1_q3b_link"
+      ],
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-73561-W-MS-NOV20.PDF"
+    },
+    {
+      "subject": "Maths",
+      "year": 2021,
+      "paper": "7356/1",
+      "questionParts": [
+        "3(a)",
+        "3(b)"
+      ],
+      "ids": [
+        "aqa_math_as21_p1_q3a_link",
+        "aqa_math_as21_p1_q3b_link"
+      ],
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73561-MS-NOV21.PDF"
+    },
+    {
+      "subject": "Chemistry",
+      "year": 2021,
+      "paper": "7404/1",
+      "questionParts": [
+        "7.1",
+        "7.3"
+      ],
+      "ids": [
+        "aqa_chem_as21_p1_q7_1_link",
+        "aqa_chem_as21_p1_q7_3_link"
+      ],
+      "source": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74041-MS-NOV21.PDF"
+    },
+    {
+      "subject": "Maths",
+      "year": 2024,
+      "paper": "7356/1",
+      "questionParts": [
+        "5(a)",
+        "5(b)",
+        "6"
+      ],
+      "ids": [
+        "aqa_math_as24_p1_q5a_src",
+        "aqa_math_as24_p1_q5b_src",
+        "aqa_math_as24_p1_q6_src"
+      ],
+      "source": "https://www.aqa.org.uk/files/sample-papers-and-mark-schemes.2024.June.AQA-73561-MS-JUN24_PDF"
+    }
+  ],
+  "result": {
+    "totalUsableQuestions": 1271,
+    "previouslySourceFirst": 9,
+    "sourceFirstRemaining": 0,
+    "historicalQuestionIDsPreserved": true,
+    "sourceLinkedParts": 231,
+    "paperSlotsInInventory": 134,
+    "slotsWithSourceLinkedParts": 31,
+    "emptySourceLinkedPaperSlots": 103,
+    "completeOriginalPapersIndependentlyVerified": 0,
+    "originalMarkVerificationCountNotIncreased": true
+  },
+  "regressions": {
+    "newSuite": "tests/rebuilt-source-context-v60.cjs",
+    "testedStudentResponses": 32,
+    "buildStatus": "passing at pre-release commit 68097eca"
+  },
+  "limitations": [
+    "Source-linked practice questions are adapted paraphrases, not verbatim copies of full AQA papers.",
+    "All 231 source-linked parts require continued review for wording, answer alternatives and real examiner-equivalent method marking.",
+    "103 current-specification paper slots still lack source-linked questions in the app.",
+    "Photo OCR and AI-marking acceptance has not been revalidated using fresh handwritten samples in this batch."
+  ],
+  "next": [
+    "Spot-check tricky non-standard solutions from real student workings across Physics, Chemistry and Maths.",
+    "Expand verified source-linked bank paper by paper rather than inventing historical provenance.",
+    "Audit marking of 2024 inequality solutions in equivalent radical/set notation and 2020 trigonometric mixed working.",
+    "Preserve IDs, existing revision history, points and unlocks."
+  ]
+}
