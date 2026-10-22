@@ -1,8 +1,8 @@
 {
   "workstream": "world",
   "baseMainCommit": "74c1e1144e11020de274ec0f2a400c67011028d7",
-  "lastChecked": "2026-10-22T00:00:00+01:00",
-  "status": "audit_in_progress",
+  "lastChecked": "2026-10-22T01:53:00+01:00",
+  "status": "zoom_controller_tested_not_integrated",
   "owned": [
     "globe controls and rendering",
     "characters and outfits",
@@ -27,14 +27,24 @@
     "location price maximum 250 points"
   ],
   "openIssues": [
-    "globe lacks zoom",
-    "portrait loading depends on external providers",
-    "streak bonus incorrectly increases XP"
+    "index.html edit blocked by GitHub connector safety checks; helper not loaded",
+    "portrait loading still relies on third-party providers",
+    "daily streak bonus still incorrectly increases XP",
+    "globe marker coordinates and texture require visual checks",
+    "3 duplicate destination IDs require preservation-aware consolidation"
   ],
   "nextActions": [
-    "implement and test globe zoom with controls",
-    "make daily streak bonus points-only",
-    "improve portrait fallback and asset strategy"
+    "Integrate world-zoom-helpers.js into index.html after app.js and add accessible zoom control markup (connector currently blocks index.html update)",
+    "When safe, correct points-only daily challenge bonus in app.js after coordinating with exam task; do not overwrite its marking changes",
+    "Fix character image timeout/fallback and expand unique location facts",
+    "Test integrated globe in browser and CI, then merge/deploy"
   ],
-  "completedCommits": []
+  "completedCommits": [
+    "3c0c925821ee2453f3f8563fa6d12ad575ab0d95"
+  ],
+  "verified": {
+    "globeController": "Buttons, wheel, 100%-220% clamp, touch pinch tested with mocked DOM; not browser-tested or loaded by index.html",
+    "testsRun": "10 manual mock interactions/assertions via JS runtime; no CI integration",
+    "deployment": "none"
+  }
 }
