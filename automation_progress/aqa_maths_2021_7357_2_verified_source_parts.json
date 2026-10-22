@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "scope": "AQA official source-part mark and skill metadata only; NOT reproduced copyrighted question text and NOT deployed playable paper",
+  "subject": "Maths",
+  "qualification": "A-level",
+  "specification": "7357",
+  "paper": "7357/2",
+  "year": 2021,
+  "series": "November 2021 (internally June 2021)",
+  "title": "Pure Mathematics and Mechanics",
+  "expectedPaperMarks": 100,
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73572-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73572-MS-NOV21.PDF",
+  "questionPaperPdfPages": 36,
+  "markSchemePdfPages": 21,
+  "markSchemeVersion": "1.1 Final",
+  "numberedQuestions": 19,
+  "partCount": 37,
+  "totalMarks": 100,
+  "questionTotals": [
+    {
+      "number": 1,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 2,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 3,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 4,
+      "parts": 2,
+      "marks": 6
+    },
+    {
+      "number": 5,
+      "parts": 1,
+      "marks": 3
+    },
+    {
+      "number": 6,
+      "parts": 1,
+      "marks": 4
+    },
+    {
+      "number": 7,
+      "parts": 3,
+      "marks": 8
+    },
+    {
+      "number": 8,
+      "parts": 2,
+      "marks": 6
+    },
+    {
+      "number": 9,
+      "parts": 4,
+      "marks": 9
+    },
+    {
+      "number": 10,
+      "parts": 3,
+      "marks": 11
+    },
+    {
+      "number": 11,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 12,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 13,
+      "parts": 1,
+      "marks": 3
+    },
+    {
+      "number": 14,
+      "parts": 1,
+      "marks": 4
+    },
+    {
+      "number": 15,
+      "parts": 3,
+      "marks": 5
+    },
+    {
+      "number": 16,
+      "parts": 1,
+      "marks": 4
+    },
+    {
+      "number": 17,
+      "parts": 3,
+      "marks": 11
+    },
+    {
+      "number": 18,
+      "parts": 3,
+      "marks": 11
+    },
+    {
+      "number": 19,
+      "parts": 4,
+      "marks": 10
+    }
+  ],
+  "assessmentRisks": [
+    "Q04(a) is a graph-sketch assessment, not machine-verifiable from plain text.",
+    "Q06 rewards correct logarithmic rule application and a reasoned argument; numerical final answer alone does not necessarily suffice.",
+    "Q07(b) requires both allowable parameter cases and method reasoning.",
+    "Q08 requires identifying two distinct errors and completing a rigorous proof, not keyword counting.",
+    "Q09 exact trigonometry parts accept equivalent formulations and require diagram interpretation where applicable.",
+    "Q10(a) distinguishes domain restriction, correct set, and proper notation; Q10(c) dependent derivative and logical proof marks.",
+    "Q14 derives distance from a graphical estimate and judges a model claim.",
+    "Q16 and Q18 award linked method, accuracy and proof marks; Q17 differential equation has 7 ordered method/result marks.",
+    "Q19 uses exact vector operations and contextual distance units, with distinct follow-through criteria.",
+    "Official AQA instructions allow full marks for an accurate final answer in some calculator-appropriate tasks; not all reasoning/proof tasks qualify."
+  ],
+  "originality": "Short high-level descriptions independently written. Do not copy or present copyrighted stems, diagrams or mark-scheme passages. This source mapping by itself does not create user-visible questions.",
+  "verification": "Per-part marks reconciled with AQA official question paper bracketed marks and final mark scheme, including 19 numbered question totals. Review source images for graph/diagram evidence before marking student work.",
+  "parts": [
+    {
+      "id": "01",
+      "marks": 1,
+      "skill": "Discriminant and shape of a quadratic graph",
+      "assessmentType": "single-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "02",
+      "marks": 1,
+      "skill": "Point of inflection and second derivative",
+      "assessmentType": "single-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "03",
+      "marks": 1,
+      "skill": "Algebraic identification from a diagram",
+      "assessmentType": "single-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "04(a)",
+      "marks": 2,
+      "skill": "Sketch of absolute-value function relative to another curve",
+      "assessmentType": "graph-sketch",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": true
+    },
+    {
+      "id": "04(b)",
+      "marks": 4,
+      "skill": "Intersections of absolute-value functions",
+      "assessmentType": "equation-solving",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "05",
+      "marks": 3,
+      "skill": "Partial-fraction decomposition",
+      "assessmentType": "algebraic-method",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "06",
+      "marks": 4,
+      "skill": "Exponential equation and logarithmic proof",
+      "assessmentType": "mathematical-reasoning",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "07(a)(i)",
+      "marks": 1,
+      "skill": "Identify circle centre",
+      "assessmentType": "short-answer",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "07(a)(ii)",
+      "marks": 3,
+      "skill": "Complete square and radius parameter",
+      "assessmentType": "algebraic-method",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "07(b)",
+      "marks": 4,
+      "skill": "Circle geometry and valid parameter values",
+      "assessmentType": "algebraic-reasoning",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "08(a)",
+      "marks": 2,
+      "skill": "Find faults in integer proof",
+      "assessmentType": "proof-evaluation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "08(b)",
+      "marks": 4,
+      "skill": "Complete proof by cases",
+      "assessmentType": "proof-completion",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "09(a)",
+      "marks": 2,
+      "skill": "Geometric distance decomposition",
+      "assessmentType": "trigonometric-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "09(b)",
+      "marks": 2,
+      "skill": "Compound-angle identity simplification",
+      "assessmentType": "trigonometric-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "09(c)",
+      "marks": 2,
+      "skill": "Identify trigonometric maximum",
+      "assessmentType": "short-answer",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "09(d)",
+      "marks": 3,
+      "skill": "Exact triangle length using cosine or sine rule",
+      "assessmentType": "exact-geometry",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": true
+    },
+    {
+      "id": "10(a)",
+      "marks": 3,
+      "skill": "Domain restrictions in a radical rational function",
+      "assessmentType": "domain",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "10(b)",
+      "marks": 2,
+      "skill": "Explain failure of continuity-based root inference",
+      "assessmentType": "reasoned-explanation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "10(c)",
+      "marks": 6,
+      "skill": "Prove existence of inverse via derivative and domain",
+      "assessmentType": "differentiation-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "11",
+      "marks": 1,
+      "skill": "Recognise exponentially varying speed",
+      "assessmentType": "single-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "12",
+      "marks": 1,
+      "skill": "Resolve acceleration or speed on a slope",
+      "assessmentType": "single-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "13",
+      "marks": 3,
+      "skill": "Constant-acceleration kinematics and resultant force",
+      "assessmentType": "method-and-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "14",
+      "marks": 4,
+      "skill": "Estimate distance under a speed-time graph and evaluate claim",
+      "assessmentType": "graph-based-integration",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": true
+    },
+    {
+      "id": "15(a)",
+      "marks": 2,
+      "skill": "Force equilibrium at constant speed",
+      "assessmentType": "explanation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "15(b)",
+      "marks": 1,
+      "skill": "Model assumption for connecting rod",
+      "assessmentType": "modelling",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "15(c)",
+      "marks": 2,
+      "skill": "Use force balance to calculate resistance",
+      "assessmentType": "calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "16",
+      "marks": 4,
+      "skill": "Take moments about support and derive an expression",
+      "assessmentType": "mechanics-derivation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "17(a)",
+      "marks": 2,
+      "skill": "Derive free-fall velocity from constant acceleration",
+      "assessmentType": "kinematics-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "17(b)",
+      "marks": 7,
+      "skill": "Solve first-order differential equation for resistive motion",
+      "assessmentType": "differential-equation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "17(c)",
+      "marks": 2,
+      "skill": "Compare long-term predictions of two motion models",
+      "assessmentType": "model-evaluation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "18(a)",
+      "marks": 6,
+      "skill": "Reason through two projectiles reaching same location",
+      "assessmentType": "projectile-derivation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": true
+    },
+    {
+      "id": "18(b)",
+      "marks": 4,
+      "skill": "Calculate a flight time from velocity components",
+      "assessmentType": "projectile-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": true
+    },
+    {
+      "id": "18(c)",
+      "marks": 1,
+      "skill": "State model assumption for projectile motion",
+      "assessmentType": "modelling",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "19(a)(i)",
+      "marks": 1,
+      "skill": "Characterise parallel vectors",
+      "assessmentType": "reasoning",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "19(a)(ii)",
+      "marks": 1,
+      "skill": "Use scalar multiple to deduce speed",
+      "assessmentType": "short-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "19(b)",
+      "marks": 3,
+      "skill": "Position vector from initial position and constant velocity",
+      "assessmentType": "vector-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    },
+    {
+      "id": "19(c)",
+      "marks": 5,
+      "skill": "Compare vector distances and determine separation",
+      "assessmentType": "vector-distance",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "needsFigure": false
+    }
+  ]
+}
