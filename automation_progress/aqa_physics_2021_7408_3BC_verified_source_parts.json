@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "subject": "Physics",
+  "qualification": "A-level",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "paper": "7408/3BC",
+  "section": "B",
+  "option": "Engineering physics",
+  "totalMarks": 35,
+  "numberedQuestions": 5,
+  "partCount": 12,
+  "note": "Medical/engineering/other specialisms are SEPARATE optional alternatives. 2021 Paper 3 student takes compulsory 7408/3A (45 marks) plus only ONE 35-mark Section B option. This file is source metadata only, not a complete student-visible question paper.",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BC-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BC-MS-NOV21.PDF",
+  "questionPaperPdfPages": 20,
+  "markSchemePdfPages": 12,
+  "questionTotals": [
+    {
+      "question": "01",
+      "parts": 4,
+      "marks": 10
+    },
+    {
+      "question": "02",
+      "parts": 2,
+      "marks": 6
+    },
+    {
+      "question": "03",
+      "parts": 2,
+      "marks": 8
+    },
+    {
+      "question": "04",
+      "parts": 2,
+      "marks": 8
+    },
+    {
+      "question": "05",
+      "parts": 2,
+      "marks": 3
+    }
+  ],
+  "markingWarnings": [
+    "01.1 uses distinct linked explanations about moment of inertia and angular momentum; do not award conservation of rotational KE as an alternative.",
+    "01.2 is a single numerical mark that the official scheme explicitly allows without written working.",
+    "01.3 permits either angle-over-2π or time-per-rotation, with consequential credit; response must count completed rotations correctly.",
+    "01.4 comprises two distinct paired action-and-justification routes; a checklist of four disconnected keywords is unsafe.",
+    "02.1 separately assesses total energy balance, numerical substitution and answer; neglecting translational kinetic energy affects accuracy credit.",
+    "02.2 requires demonstrated substitution in a valid equation of rotational motion, not a bare formula.",
+    "03.1 is a six-mark LEVELS-OF-RESPONSE question combining a graph-derived multi-efficiency calculation and qualitative evaluation; cannot safely assign marks as six flat independent tick points.",
+    "03.2 needs a grounded comparison of plotted trends, not only a generic claim of lower power.",
+    "04.1 requires a sourced graph area, correct scaling, work comparison and conclusion; ECF may apply.",
+    "04.2 requires timescale and energy-transfer justification; generic 'process too fast' alone does not give all marks.",
+    "05.1 is a single option-selection mark.",
+    "05.2 supports alternative valid energy ratios and thermal temperatures; method mark cannot be awarded for quoting a formula without a valid substitution."
+  ],
+  "verification": "Checked all 12 parts and mark allocations against AQA November 2021 published question paper and final mark scheme using PDF screenshots; per-question marks 10+6+8+8+3=35. Skill labels are independent short paraphrases.",
+  "copyrightNote": "Source IDs, marks, skill labels, page references and classification only; no copied original question wording, diagrams, answers or instructions to operate machinery.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 3,
+      "topic": "Moment of inertia and conservation of rotational momentum",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "dependent-physical-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.2",
+      "marks": 1,
+      "topic": "Angular speed after redistribution of mass",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "numerical",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.3",
+      "marks": 2,
+      "topic": "Calculate complete rotations from angular speed and time",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 6,
+      "assessmentType": "multi-step-numerical",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.4",
+      "marks": 4,
+      "topic": "Compare rotation changes and justify independent strategies",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 7,
+      "assessmentType": "paired-reasoning",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 3,
+      "topic": "Combine translational and rotational energy conservation",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 8,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.2",
+      "marks": 3,
+      "topic": "Determine angular displacement under constant frictional torque",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 8,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.1",
+      "marks": 6,
+      "topic": "Evaluate engine efficiencies from experimental curves and justify meaning",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 9,
+      "assessmentType": "levels-of-response-graph-and-evaluation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "topic": "Compare engine performance trends using plotted curves",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 10,
+      "assessmentType": "graph-reasoning",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.1",
+      "marks": 5,
+      "topic": "Determine energy transfer from a pressure-volume graph and compare requirements",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 11,
+      "assessmentType": "graph-area-dependent-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.2",
+      "marks": 3,
+      "topic": "Distinguish near-isothermal and rapid thermodynamic processes",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 11,
+      "assessmentType": "physical-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.1",
+      "marks": 1,
+      "topic": "Identify a thermodynamic heat-engine efficiency statement",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 12,
+      "assessmentType": "single-choice",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.2",
+      "marks": 2,
+      "topic": "Derive reversed-cycle coefficient of performance",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 12,
+      "assessmentType": "multi-step-thermodynamic-calculation",
+      "requiresFigure": false
+    }
+  ]
+}
