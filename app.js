@@ -906,6 +906,48 @@ function numericMatch(q,answer){
  // Remove final presentation notes which are not numerical answers.
  text=text.replace(/\(\s*\d+\s*(?:s\.?f\.?|significant\s+figures?)\s*\)\s*$/i,'').trim();
  text=text.replace(/(?:\s*,?\s*valid\s+(?:since|because)\s+[a-z]+\s*[><]\s*\d+(?:\.\d+)?)\s*$/i,'').trim();
+
+ // A bare numerical expression cannot earn marks from its final operand alone.
+ // Leave worded/algebraic workings with the existing partial-credit scorer.
+ const literal=String(text).trim().replace(/[−–—]/g,'-').replace(/[×·]/g,'*').replace(/÷/g,'/');
+ const matchedUnit=literal.match(/^(.*?)(\s+(?:mm|cm|km|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds?|years?|s))$/i);
+ const unitPart=matchedUnit?matchedUnit[2]:'';
+ let expr=(matchedUnit?matchedUnit[1]:literal).trim().replace(/^[a-zA-Z]\w*\s*=\s*(?=[\d.+-])/,'');
+ if(/^[\deE.+\-*/^=\s]+$/.test(expr)){
+  const single=/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?$/i;
+  const two=/^([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*([+\-*/^])\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)$/i;
+  const sci=/^([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*\*\s*10\s*\^\s*([-+]?\d+)$/i;
+  const evaluate=piece=>{
+   if(single.test(piece))return Number(piece);
+   const scientific=piece.match(sci);
+   if(scientific)return Number(scientific[1])*10**Number(scientific[2]);
+   const m=piece.match(two);
+   if(!m)return NaN;
+   const a=Number(m[1]),b=Number(m[3]);
+   switch(m[2]){
+    case '+':return a+b;case '-':return a-b;
+    case '*':return a*b;case '/':return b===0?NaN:a/b;
+    case '^':return a**b;
+   }
+   return NaN;
+  };
+  const parts=expr.split('=').map(p=>p.trim()),values=parts.map(evaluate);
+  if(values.some(value=>!Number.isFinite(value)))return false;
+  if(values.length>1){
+   const decimals=piece=>{
+    const m=piece.match(/^[-+]?(?:\d+\.(\d+)|\.(\d+))$/);
+    return m?(m[1]||m[2]).length:-1;
+   };
+   const initial=values[0];
+   if(values.some((v,i)=>{
+    const a=decimals(parts[0]),b=decimals(parts[i]);
+    const places=a>=0&&b>=0?Math.min(a,b):Math.max(a,b);
+    const rounding=places>=0?0.5*10**(-places):0;
+    return Math.abs(v-initial)>Math.max(1e-10,Math.abs(initial)*1e-10,rounding+1e-12);
+   }))return false;
+  }
+  text=String(values[values.length-1])+unitPart;
+ }
  let n=parseNumber(text);
  // Scale tolerance to the actual answer, including very small scientific-notation
  // quantities. A fixed 1e-9 floor wrongly treats zero as a valid 1e-11 result.
