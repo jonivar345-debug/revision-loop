@@ -918,6 +918,15 @@ function numericMatch(q,answer){
  // from '1=2; answer 3' or '1/0=3, approximately'.
  const annotatedEquality=expr.match(/^([+\-\d.eE*/^\s]+(?:\s*=\s*[+\-\d.eE*/^\s]+)+)(?:(?:[,;]\s*.*)|(?:\s+(?:approximately|approx(?:imately)?|answer|therefore|so|because)\b.*))$/i);
  if(annotatedEquality)expr=annotatedEquality[1].trim();
+ // Check annotated calculations rather than extracting an incidental last
+ // number. '7/0, answer 3' is invalid; '1+2, answer 4' is contradictory.
+ const annotatedArithmetic=expr.match(/^([+\-\d.eE*/^\s]+)(?:(?:[,;]\s*(.*))|(?:\s+(approximately|approx|answer|therefore|so|because)\b(.*)))$/i);
+ if(annotatedArithmetic){
+  const note=(annotatedArithmetic[2]??((annotatedArithmetic[3]||'')+' '+(annotatedArithmetic[4]||''))).trim();
+  const conclusion=note.match(/^(?:(?:the\s+)?answer\s*(?:is|=|:)?\s*|(?:approximately|approx(?:imately)?|therefore|so)\s*(?:answer\s*(?:is|=|:)?\s*)?|=\s*)?([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)(?=\b|$)/i);
+  expr=annotatedArithmetic[1].trim()+(!unitPart&&conclusion?'='+conclusion[1]:'');
+ }
+ let annotatedUnitWorking=null;
  if(/^[\deE.+\-*/^=\s]+$/.test(expr)){
   const single=/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?$/i;
   const two=/^([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*([+\-*/^])\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)$/i;
@@ -951,7 +960,10 @@ function numericMatch(q,answer){
     return Math.abs(v-initial)>Math.max(1e-10,Math.abs(initial)*1e-10,rounding+1e-12);
    }))return false;
   }
-  text=String(values[values.length-1])+unitPart;
+  if(annotatedArithmetic&&unitPart){
+   annotatedUnitWorking=values[values.length-1];
+   text=literal; // Keep the stated number and unit for conversion below.
+  }else text=String(values[values.length-1])+unitPart;
  }
  let n=parseNumber(text);
  // Scale tolerance to the actual answer, including very small scientific-notation
@@ -979,6 +991,13 @@ function numericMatch(q,answer){
   s:['time',1],seconds:['time',1],year:['years',1],years:['years',1]};
  const expectedUnit=String(q.unit||'').trim().replace(/Ω/g,'ohm').toLowerCase();
  const statedUnit=text.match(/(?:^|[=\s])([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*(mm|cm|km|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds|years?|s)\s*$/i);
+ // The working must agree with either the requested-unit value or the
+ // stated-unit value; the ordinary unit conversion still checks the result.
+ if(annotatedUnitWorking!==null){
+  const stated=statedUnit?Number(statedUnit[1]):NaN;
+  if(!Number.isFinite(stated)||!(Math.abs(annotatedUnitWorking-expected)<=tol||
+   Math.abs(annotatedUnitWorking-stated)<=Math.max(tol,Math.abs(stated)*.01)))return false;
+ }
  if(units[expectedUnit]&&statedUnit){
   const givenUnit=statedUnit[2].replace(/Ω/g,'ohm').toLowerCase();
   const left=units[givenUnit],right=units[expectedUnit];
