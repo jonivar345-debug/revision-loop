@@ -399,3 +399,11 @@
 .exam-report-link:hover,.exam-report-link:focus-visible{border-color:#2563eb;background:#eff6ff}
 .exam-report-status{display:block;color:#475569;font-size:.72rem;min-height:14px;line-height:1.4;margin-bottom:4px}
 .character-art .outfit-overlay{z-index:5}
+
+
+/* World collection zoom controls. Keep controls outside the transformed canvas. */
+.globe-zoom-controls{display:flex;justify-content:center;align-items:center;gap:9px;padding:10px 4px 3px;color:#f8fafc}
+.globe-zoom-controls .mini-btn{min-width:42px;min-height:40px;background:#1e293b;color:#f8fafc;border:1px solid #64748b;border-radius:9px;font-size:1rem}
+.globe-zoom-controls .mini-btn:disabled{opacity:.45;cursor:not-allowed}
+.globe-zoom-controls .mini-btn:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
+.globe-zoom-controls output{min-width:48px;text-align:center;font-size:.78rem;font-weight:800;font-variant-numeric:tabular-nums}
