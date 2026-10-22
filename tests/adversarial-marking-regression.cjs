@@ -57,4 +57,10 @@ for(const [expectedNumber,answer,accepted] of [
  assert.equal(numberMark(q,answer),accepted,'Numeric expression check: '+answer+' vs '+expectedNumber);
  checks++;
 }
+// An explanatory suffix must not hide inconsistent numerical equalities.
+for(const [expectedNumber,answer,accepted] of [[3,"1+2=4 approximately 3",false],[3,"1/0=3, approximately",false],[3,"1=2; 3",false],[3,"1=2, answer 3",false],[3,"2*2=3 answer",false],[3,"3.2=3.0 approx",false],[3,"1+2=3, approximately 3",true],[4,"2*2=4 answer 4",true]]){
+ const q={answerType:'numeric',numericAnswer:expectedNumber,tolerance:Math.abs(expectedNumber)*.01};
+ assert.equal(numberMark(q,answer),accepted,'Annotated equality: '+answer);
+ checks++;
+}
 console.log('PASS '+checks+' adversarial and alternative-wording marking checks across '+qs.length+' questions');
