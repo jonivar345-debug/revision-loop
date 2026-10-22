@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "subject": "Physics",
+  "qualification": "A-level",
+  "paper": "7408/3BD",
+  "section": "B",
+  "option": "Turning points in physics",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "partCount": 11,
+  "numberedQuestions": 4,
+  "totalMarks": 35,
+  "note": "Standalone 35-mark optional Section B (Turning points in physics) for AQA 2021 Paper 3. Any one candidate's Paper 3 is compulsory Section A 45 + precisely ONE selected Section B option 35 = 80. Never add all optional sections. This is copyright-safe SOURCE METADATA, not a playable original paper.",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BD-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BD-MS-NOV21.PDF",
+  "questionPaperPdfPages": 16,
+  "markSchemePdfPages": 11,
+  "questionTotals": [
+    {
+      "question": "01",
+      "partCount": 4,
+      "marks": 13
+    },
+    {
+      "question": "02",
+      "partCount": 3,
+      "marks": 10
+    },
+    {
+      "question": "03",
+      "partCount": 1,
+      "marks": 6
+    },
+    {
+      "question": "04",
+      "partCount": 3,
+      "marks": 6
+    }
+  ],
+  "markingWarnings": [
+    "01.1 requires distinct apparatus-function statements; incorrect apparatus terminology cannot be rescued by generic quantum keywords.",
+    "01.2 permits consequential calculation marks from an earlier wavelength; note independent method and accuracy stages.",
+    "01.3 requires observed-pattern reasoning tied to de Broglie relation and an apparatus figure.",
+    "01.4 is one discrete selected option, not a description needing multiple rubric points.",
+    "02.1 requires a calculated comparison to a high-enough precision, not a memorised speed alone.",
+    "02.2 assesses four linked field-change and detection mechanisms, not a bag of keywords.",
+    "02.3 accepts mathematically valid stationary-wave path with ECF for wavelength; must relate result to available geometry.",
+    "03 is a SIX-MARK LEVELS-OF-RESPONSE item assessed holistically across method, prediction, evidence and significance, not six independent ticks.",
+    "04.2 contains four calculation stages—frame-adjusted distance, time, decay fraction and final half-life—so a correct value/alternative method must be considered.",
+    "04.3 is an independent proper-time interpretation mark."
+  ],
+  "verification": "Manual audit from official AQA 2021 November 7408/3BD PDF QP and final MS incl page screenshots. Q01=13, Q02=10, Q03=6, Q04=6 =35 marks. Short independent editorial skill labels only.",
+  "copyrightNote": "IDs, official part mark totals, sources/page refs, editorial topic labels and rubric classifications only; no copyrighted question text, markscheme prose, answer keys or diagram images copied.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 4,
+      "topic": "Identify electron diffraction apparatus components and their conceptual functions",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "figure-based-explanation",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.2",
+      "marks": 4,
+      "topic": "Use de Broglie wavelength to estimate accelerating potential",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.3",
+      "marks": 4,
+      "topic": "Analyse wavelength-dependent electron diffraction observations",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 7,
+      "assessmentType": "figure-and-physical-reasoning",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.4",
+      "marks": 1,
+      "topic": "Identify the relevant quantum or magnetic behaviour in electron microscopes",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 7,
+      "assessmentType": "single-choice",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 2,
+      "topic": "Compare Maxwell electromagnetic wave-speed prediction with reference",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 8,
+      "assessmentType": "calculation-and-comparison",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.2",
+      "marks": 4,
+      "topic": "Explain changing electric and magnetic fields in wave detection",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 8,
+      "assessmentType": "linked-field-explanation",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.3",
+      "marks": 4,
+      "topic": "Reason from frequency and standing-wave geometry to measurement feasibility",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 9,
+      "assessmentType": "wave-calculation-and-evaluation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03",
+      "marks": 6,
+      "topic": "Evaluate historical interferometry observations and implications for absolute motion",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 10,
+      "assessmentType": "levels-of-response-with-figure",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.1",
+      "marks": 1,
+      "topic": "Identify the defining property of an inertial frame",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 11,
+      "assessmentType": "definition",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.2",
+      "marks": 4,
+      "topic": "Apply relativistic frame changes to particle-decay half-life measurements",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 11,
+      "assessmentType": "multi-step-relativistic-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.3",
+      "marks": 1,
+      "topic": "Identify proper time in the relativistic decay analysis",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 11,
+      "assessmentType": "short-response",
+      "requiresFigure": false
+    }
+  ]
+}
