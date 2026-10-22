@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original AQA source-part metadata only (no copyrighted stems, mark-scheme text/images, or newly playable questions)",
+  "subject": "Maths",
+  "qualification": "A-level",
+  "specification": "7357",
+  "paper": "7357/3",
+  "year": 2021,
+  "series": "November 2021 (internally June 2021)",
+  "title": "Pure Mathematics and Statistics",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73573-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73573-MS-NOV21.PDF",
+  "questionPaperPdfPages": 32,
+  "markSchemePdfPages": 23,
+  "markSchemeVersion": "1.0 Final",
+  "numberedQuestions": 18,
+  "partCount": 41,
+  "totalMarks": 100,
+  "questionTotals": [
+    {
+      "number": 1,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 2,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 3,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 4,
+      "parts": 2,
+      "marks": 5
+    },
+    {
+      "number": 5,
+      "parts": 4,
+      "marks": 13
+    },
+    {
+      "number": 6,
+      "parts": 1,
+      "marks": 4
+    },
+    {
+      "number": 7,
+      "parts": 5,
+      "marks": 10
+    },
+    {
+      "number": 8,
+      "parts": 1,
+      "marks": 6
+    },
+    {
+      "number": 9,
+      "parts": 5,
+      "marks": 9
+    },
+    {
+      "number": 10,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 11,
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "number": 12,
+      "parts": 1,
+      "marks": 3
+    },
+    {
+      "number": 13,
+      "parts": 3,
+      "marks": 6
+    },
+    {
+      "number": 14,
+      "parts": 3,
+      "marks": 7
+    },
+    {
+      "number": 15,
+      "parts": 1,
+      "marks": 7
+    },
+    {
+      "number": 16,
+      "parts": 2,
+      "marks": 4
+    },
+    {
+      "number": 17,
+      "parts": 4,
+      "marks": 11
+    },
+    {
+      "number": 18,
+      "parts": 4,
+      "marks": 10
+    }
+  ],
+  "markingRisks": [
+    "Q04 has separate method, correct coefficient and proof marks; a correct numerical coefficient alone may be insufficient for an explicit proof.",
+    "Q05(b)(ii) requires a rigorous minimum justification beyond differentiation.",
+    "Q07 requires valid geometric model and distinct evaluation of unrealistic indefinite extrapolation, with follow-through for earlier values.",
+    "Q08 rewards exact integration by parts and correct exact boundary expressions.",
+    "Q09 requires derivative test or argument to justify turning point versus stationary inflection.",
+    "Q12 has three genuinely distinct sampling-method conditions.",
+    "Q13 large data set responses require contextual discrimination between a genuine impossible entry and merely absent observations.",
+    "Q14 conditional probability has dependent follow-through and separate independence explanation.",
+    "Q15 and Q17(d) are hypothesis tests: hypotheses, test statistic/probability, rejection judgement and contextual conclusion must be differentiated.",
+    "Q18(b) standardisation is method-critical, with accepted approximate z values and correct units/precision."
+  ],
+  "originality": "Independent short editorial topic descriptions only. Never present as official QP wording, copied mark-scheme explanations, answer key, or complete student-visible paper.",
+  "verification": "Reconciled per-part marks with official 32-page question paper and version 1.0 23-page final mark scheme. Page images visually checked. References may require original graphs/large data set. Not yet mapped to a 2017–25 student-visible bank.",
+  "parts": [
+    {
+      "id": "01",
+      "marks": 1,
+      "skill": "Read inverse-trigonometric graph endpoint",
+      "assessmentType": "multiple-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": true
+    },
+    {
+      "id": "02",
+      "marks": 1,
+      "skill": "Simplify algebraic rational expression",
+      "assessmentType": "multiple-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "03",
+      "marks": 1,
+      "skill": "Differentiate via first principles",
+      "assessmentType": "multiple-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "04(a)",
+      "marks": 3,
+      "skill": "Binomial coefficient relationships and expansion",
+      "assessmentType": "method-and-reasoned-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "04(b)",
+      "marks": 2,
+      "skill": "Constant term in a binomial product",
+      "assessmentType": "algebraic-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "05(a)(i)",
+      "marks": 2,
+      "skill": "Calculate area of circular sector",
+      "assessmentType": "calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": true
+    },
+    {
+      "id": "05(a)(ii)",
+      "marks": 3,
+      "skill": "Use sector perimeter and cost model",
+      "assessmentType": "multi-step-modelling",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": true
+    },
+    {
+      "id": "05(b)(i)",
+      "marks": 3,
+      "skill": "Construct perimeter function with fixed sector area",
+      "assessmentType": "model-derivation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": true
+    },
+    {
+      "id": "05(b)(ii)",
+      "marks": 5,
+      "skill": "Differentiate model and justify a minimum",
+      "assessmentType": "optimisation-and-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": true
+    },
+    {
+      "id": "06",
+      "marks": 4,
+      "skill": "Algebraic rational simplification",
+      "assessmentType": "algebraic-method",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "07(a)",
+      "marks": 1,
+      "skill": "Evaluate one geometric-model term",
+      "assessmentType": "calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "07(b)",
+      "marks": 2,
+      "skill": "Identify geometric sequence model",
+      "assessmentType": "model-explanation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "07(c)",
+      "marks": 2,
+      "skill": "Geometric sum with carry-forward",
+      "assessmentType": "series-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "07(d)",
+      "marks": 3,
+      "skill": "Sum to infinity and contextual units",
+      "assessmentType": "series-and-units",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "07(e)",
+      "marks": 2,
+      "skill": "Evaluate a long-term model assumption",
+      "assessmentType": "model-criticism",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "08",
+      "marks": 6,
+      "skill": "Integration by parts with exact trig endpoints",
+      "assessmentType": "exact-integration",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "09(a)(i)",
+      "marks": 2,
+      "skill": "Second derivative of a polynomial",
+      "assessmentType": "differentiation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "09(a)(ii)",
+      "marks": 4,
+      "skill": "Justify stationary and inflection classifications",
+      "assessmentType": "reasoned-derivative-tests",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "09(b)",
+      "marks": 1,
+      "skill": "Inequality from behaviour of a function",
+      "assessmentType": "inequality",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "09(c)(i)",
+      "marks": 1,
+      "skill": "Transformation by reflection",
+      "assessmentType": "transformation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "09(c)(ii)",
+      "marks": 1,
+      "skill": "Transform inequality with follow-through",
+      "assessmentType": "inequality-follow-through",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "10",
+      "marks": 1,
+      "skill": "Interpret an invalid correlation coefficient",
+      "assessmentType": "multiple-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "11",
+      "marks": 1,
+      "skill": "Identify binomial parameter from mean and variance",
+      "assessmentType": "multiple-choice",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "12",
+      "marks": 3,
+      "skill": "Describe systematic sample selection",
+      "assessmentType": "statistics-explanation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "13(a)(i)",
+      "marks": 2,
+      "skill": "Compute mean and standard deviation from tabulated data",
+      "assessmentType": "statistics-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": true
+    },
+    {
+      "id": "13(a)(ii)",
+      "marks": 2,
+      "skill": "Evaluate two-standard-deviation outlier rule",
+      "assessmentType": "statistics-reasoned-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "13(b)",
+      "marks": 2,
+      "skill": "Use large data set context to assess apparent errors",
+      "assessmentType": "data-quality-explanation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "14(a)",
+      "marks": 4,
+      "skill": "Recover marginal probability from event intersection and complements",
+      "assessmentType": "probability-derivation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "14(b)",
+      "marks": 2,
+      "skill": "Calculate conditional probability with follow-through",
+      "assessmentType": "conditional-probability",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "14(c)",
+      "marks": 1,
+      "skill": "Explain whether events are independent",
+      "assessmentType": "probability-reasoning",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "15",
+      "marks": 7,
+      "skill": "Two-sided significance test for a normal-mean hypothesis",
+      "assessmentType": "hypothesis-test",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "16(a)",
+      "marks": 2,
+      "skill": "Apply probability normalization to a discrete distribution",
+      "assessmentType": "discrete-probability-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "16(b)",
+      "marks": 2,
+      "skill": "Solve for probabilities from a piecewise distribution",
+      "assessmentType": "discrete-probability",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "17(a)",
+      "marks": 2,
+      "skill": "State binomial distribution assumptions",
+      "assessmentType": "modelling-explanation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "17(b)",
+      "marks": 1,
+      "skill": "Find a single binomial probability",
+      "assessmentType": "calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "17(c)",
+      "marks": 2,
+      "skill": "Find a cumulative binomial probability",
+      "assessmentType": "calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "17(d)",
+      "marks": 6,
+      "skill": "One-sided binomial significance test and conclusion",
+      "assessmentType": "hypothesis-test",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "18(a)(i)",
+      "marks": 1,
+      "skill": "State limiting probability for normal distribution",
+      "assessmentType": "short-answer",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "18(a)(ii)",
+      "marks": 2,
+      "skill": "Normal probability using a specified threshold",
+      "assessmentType": "normal-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "18(b)(i)",
+      "marks": 3,
+      "skill": "Derive normal-quantile relation with inverse-normal value",
+      "assessmentType": "normal-standardisation-proof",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    },
+    {
+      "id": "18(b)(ii)",
+      "marks": 4,
+      "skill": "Simultaneous normal-quantile equations for mean and deviation",
+      "assessmentType": "multi-step-normal-calculation",
+      "sourcePartVerified": true,
+      "originalStemIncluded": false,
+      "requiresFigure": false
+    }
+  ]
+}
