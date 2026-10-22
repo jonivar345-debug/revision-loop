@@ -40,4 +40,21 @@ test(distillation,'propanoic acid',0,'Isolated chemical noun is insufficient');
 const ordinary=read('exam_questions.json').questions.find(q=>q.id==='aqa_phy_as23_p1_q1_5');
 assert(ordinary,'Existing normal calculation retained');
 test(ordinary,String(ordinary.numericAnswer),ordinary.marks,'Full credit for correct ordinary numerical answer');
+// Plain arithmetic must be evaluated; incidental operands and contradictory
+// equality chains must not receive final-answer marks.
+const numberMark=new Function(app.slice(begin,middle)+'return numericMatch')();
+for(const [expectedNumber,answer,accepted] of [
+ [2,'1+2',false],[3,'1+2',true],[6,'2*3',true],[3,'2*3',false],
+ [3,'2*3=3',false],[3,'1+2=3',true],[3,'1+2=3=4',false],
+ [0,'1/0',false],[.5,'1/2',true],[2/3,'2/3',true],
+ [100,'100=101',false],[99,'100=99',false],
+ [2000,'2×10^3',true],[2000,'2*10^3=2000',true],
+ [1.23,'1.234=1.23',true],[0.001,'1e-3',true],
+ [6,'2*3=6',true],[4,'1+2+3',false]
+]){
+ const q={answerType:'numeric',numericAnswer:expectedNumber,
+  tolerance:expectedNumber===0?1e-9:Math.max(Math.abs(expectedNumber)*0.01,1e-10)};
+ assert.equal(numberMark(q,answer),accepted,'Numeric expression check: '+answer+' vs '+expectedNumber);
+ checks++;
+}
 console.log('PASS '+checks+' adversarial and alternative-wording marking checks across '+qs.length+' questions');
