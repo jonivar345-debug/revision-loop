@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "20 independently written AQA-style Chemistry questions, not past-paper reproductions.",
+  "notes": "23 independently written AQA-style Chemistry questions plus seven original multipart subparts; not past-paper reproductions.",
   "questions": [
     {
       "id": "gap_v48_chem_01",
@@ -1048,6 +1048,117 @@
         1
       ],
       "modelAnswer": "Set −75.0+0.150T=0, giving T=500 K. ΔG is negative for T<500 K (positive above 500 K)."
+    },
+    {
+      "id": "gap_v48_chem_24",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "revisionTopic": "Kp",
+      "topic": "Kp",
+      "subtopic": "Kp",
+      "courseTopic": "Physical chemistry",
+      "marks": 4,
+      "prompt": "At a fixed temperature, the gas equilibrium 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) has equilibrium partial pressures of 30.0 kPa for SO₂, 20.0 kPa for O₂ and 40.0 kPa for SO₃. Calculate Kp with its units, then predict and explain the equilibrium shift when the container volume is reduced at constant temperature.",
+      "markPoints": [
+        "Kp = (pSO₃)² / ((pSO₂)² × pO₂).",
+        "Substitution gives Kp = 40.0² / (30.0² × 20.0) = 0.0889.",
+        "The units are kPa⁻¹ because the overall pressure exponent is −1.",
+        "Reducing volume raises pressure and favours SO₃ on the right, which has two gas molecules rather than three."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Kp = (pSO₃)² / ((pSO₂)² × pO₂). Substitution gives Kp = 40.0² / (30.0² × 20.0) = 0.0889. The units are kPa⁻¹ because the overall pressure exponent is −1. Reducing volume raises pressure and favours SO₃ on the right, which has two gas molecules rather than three.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_24",
+      "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_25",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "revisionTopic": "Kw",
+      "topic": "Kw",
+      "subtopic": "Kw",
+      "courseTopic": "Physical chemistry",
+      "marks": 4,
+      "prompt": "The ionic product of water at 40 °C is Kw = 2.92 × 10⁻¹⁴ mol² dm⁻⁶. Calculate the pH of pure water at this temperature and explain why the water is still neutral even though its pH is not 7. Show how you obtain the hydrogen ion concentration.",
+      "markPoints": [
+        "For pure water, [H⁺] = [OH⁻] and Kw = [H⁺][OH⁻].",
+        "Therefore [H⁺] = √Kw = √(2.92 × 10⁻¹⁴) = 1.71 × 10⁻⁷ mol dm⁻³.",
+        "pH = −log₁₀(1.71 × 10⁻⁷) = 6.77.",
+        "The water remains neutral because [H⁺] equals [OH⁻]; neutrality does not require pH 7 at every temperature."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "For pure water, [H⁺] = [OH⁻] and Kw = [H⁺][OH⁻]. Therefore [H⁺] = √Kw = √(2.92 × 10⁻¹⁴) = 1.71 × 10⁻⁷ mol dm⁻³. pH = −log₁₀(1.71 × 10⁻⁷) = 6.77. The water remains neutral because [H⁺] equals [OH⁻]; neutrality does not require pH 7 at every temperature.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_25",
+      "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_26",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "revisionTopic": "Rate equations",
+      "topic": "Rate equations",
+      "subtopic": "Rate equations",
+      "courseTopic": "Physical chemistry",
+      "marks": 4,
+      "prompt": "For a reaction at constant temperature, the rate equation is rate = k[A][B]², where k = 0.040 dm⁶ mol⁻² s⁻¹. Calculate the initial rate when [A] = 0.30 mol dm⁻³ and [B] = 0.20 mol dm⁻³. Predict the effect on the rate if [B] is halved while [A] and temperature remain constant, and state what happens to k.",
+      "markPoints": [
+        "Substitute rate = 0.040 × 0.30 × (0.20)².",
+        "The initial rate is 4.80 × 10⁻⁴ mol dm⁻³ s⁻¹.",
+        "Halving [B] reduces the rate to one quarter because the reaction is second order in B.",
+        "The rate constant k remains unchanged because temperature is constant."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Substitute rate = 0.040 × 0.30 × (0.20)². The initial rate is 4.80 × 10⁻⁴ mol dm⁻³ s⁻¹. Halving [B] reduces the rate to one quarter because the reaction is second order in B. The rate constant k remains unchanged because temperature is constant.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_26",
+      "groupOrder": 1
     }
   ]
 }
