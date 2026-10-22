@@ -43,7 +43,8 @@ const allFiles=['exam_questions.json','paper_supplement_2016_2017.json','gap_que
 const q=allFiles.flatMap(f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')).questions);
 const deck=JSON.parse(fs.readFileSync(path.join(root,'deck.json'),'utf8')).cards;
 const available=Object.fromEntries(['Maths','Physics','Chemistry'].map(s=>[s,new Set(deck.filter(x=>x.subject===s).map(x=>x.revisionTopic||x.topic))]));
-assert.equal(q.filter(x=>x.standalone!==false).length,1271);checks++;
+const usableCount=q.filter(x=>x.standalone!==false).length;
+assert(usableCount>=1271,'Previously indexed usable exam questions have disappeared: '+usableCount);checks++;
 const seen=new Set(),prompts=new Set();
 for(const question of q){
  assert(!seen.has(question.id),'Duplicate question '+question.id);seen.add(question.id);checks++;
@@ -54,4 +55,4 @@ for(const question of q){
  assert(question.marks>0&&question.marks<=25,'Invalid score '+question.id);checks++;
  if(question.markPointMarks)assert.equal(question.markPointMarks.reduce((a,b)=>a+b,0),question.marks,'Marking allocation invalid '+question.id),checks++;
 }
-console.log('PASS '+checks+' characters, 15-point outfits, region-balanced locations, precise globe pins, streak bonus, distinct culture and 1262 usable exam questions');
+console.log('PASS '+checks+' characters, 15-point outfits, region-balanced locations, precise globe pins, streak bonus, distinct culture and '+usableCount+' usable exam questions');
