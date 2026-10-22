@@ -913,6 +913,11 @@ function numericMatch(q,answer){
  const matchedUnit=literal.match(/^(.*?)(\s+(?:mm|cm|km|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds?|years?|s))$/i);
  const unitPart=matchedUnit?matchedUnit[2]:'';
  let expr=(matchedUnit?matchedUnit[1]:literal).trim().replace(/^[a-zA-Z]\w*\s*=\s*(?=[\d.+-])/,'');
+ // Even if a numerical equality is followed by a written note, the equality
+ // must remain valid. Otherwise parseNumber could extract a later operand
+ // from '1=2; answer 3' or '1/0=3, approximately'.
+ const annotatedEquality=expr.match(/^([+\-\d.eE*/^\s]+(?:\s*=\s*[+\-\d.eE*/^\s]+)+)(?:(?:[,;]\s*.*)|(?:\s+(?:approximately|approx(?:imately)?|answer|therefore|so|because)\b.*))$/i);
+ if(annotatedEquality)expr=annotatedEquality[1].trim();
  if(/^[\deE.+\-*/^=\s]+$/.test(expr)){
   const single=/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?$/i;
   const two=/^([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*([+\-*/^])\s*([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)$/i;
