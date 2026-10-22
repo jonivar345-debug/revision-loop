@@ -1,8 +1,8 @@
 {
   "workstream": "world",
   "baseMainCommit": "74c1e1144e11020de274ec0f2a400c67011028d7",
-  "lastChecked": "2026-10-22T01:53:00+01:00",
-  "status": "zoom_controller_tested_not_integrated",
+  "lastChecked": "2026-10-22T10:55:00+01:00",
+  "status": "world_pr_ci_green_unmerged_browser_offline_unverified",
   "owned": [
     "globe controls and rendering",
     "characters and outfits",
@@ -27,24 +27,37 @@
     "location price maximum 250 points"
   ],
   "openIssues": [
-    "index.html edit blocked by GitHub connector safety checks; helper not loaded",
-    "portrait loading still relies on third-party providers",
-    "daily streak bonus still incorrectly increases XP",
-    "globe marker coordinates and texture require visual checks",
-    "3 duplicate destination IDs require preservation-aware consolidation"
+    "116 characters still depend on external portrait providers; 9-second watchdog gives an honest fallback but does not supply accurate full-body/outfit art",
+    "Daily streak bonus still incorrectly increases XP; requires coordinated app.js change without overwriting exam work",
+    "161 locations: 77 initially lack both dedicated fact and culture; 3 duplicate destination IDs need preservation-aware migration",
+    "World zoom is wired on PR #2, but mobile pinch drag-state interaction with app.js is unresolved; no full integrated browser/mobile/offline verification",
+    "sw.js v60 does not precache world-zoom-helpers.js; offline new installation may lose zoom controller",
+    "GitHub writes to world-zoom-helpers.js, sw.js and new location module previously safety-blocked; do not retry or circumvent",
+    "2026-10-22: adding dynamic portrait fallback tests to tests/outfit-and-source-regression.cjs safety-blocked; do not retry that operation"
   ],
   "nextActions": [
-    "Integrate world-zoom-helpers.js into index.html after app.js and add accessible zoom control markup (connector currently blocks index.html update)",
-    "When safe, correct points-only daily challenge bonus in app.js after coordinating with exam task; do not overwrite its marking changes",
-    "Fix character image timeout/fallback and expand unique location facts",
-    "Test integrated globe in browser and CI, then merge/deploy"
+    "Independently validate integrated UI in real browser/mobile, including portrait fallback, zoom and pinch pointer capture; preserve user storage",
+    "Prepare safe offline-world cache fix locally; do not retry blocked sw.js write",
+    "Continue sourced location descriptions in independent local batches while location module write is blocked",
+    "Coordinate app.js streak-only points correction with exam branch; avoid shared-file conflict",
+    "Only consider merge/deployment after full CI, browser, mobile and offline tests"
   ],
   "completedCommits": [
-    "3c0c925821ee2453f3f8563fa6d12ad575ab0d95"
+    "3c0c925821ee2453f3f8563fa6d12ad575ab0d95",
+    "853329e078b2d0234207329dbad49594facfcbbd",
+    "a41695e14aa9e9c98ef48d89a4e31e0888dee856"
   ],
   "verified": {
-    "globeController": "Buttons, wheel, 100%-220% clamp, touch pinch tested with mocked DOM; not browser-tested or loaded by index.html",
+    "globeController": "Integrated on world PR #2 via index.html and styles.css; 100%-220% buttons, wheel and touch handler present. Full integrated browser/mobile verification pending; pinch rotation state has known issue.",
     "testsRun": "10 manual mock interactions/assertions via JS runtime; no CI integration",
-    "deployment": "none"
+    "deployment": "none; draft PR #2 unmerged",
+    "portraitWatchdog": "Actual index.html guard uses 9-second timeout and honest fallback; 4 mocked DOM scenarios committed, plus 6 independent dynamic-card checks passed in V8 locally. Extension of GitHub regression tests blocked.",
+    "ci": "GitHub Actions run 39758511694 for a41695e14aa9e9c98ef48d89a4e31e0888dee856 completed SUCCESS 2026-10-22; this is not full live browser/mobile/offline verification."
+  },
+  "coordination": {
+    "examPr": "#1 (separate, CI success at 133de6103f9d6948a4543e852f65fede1ca75352)",
+    "worldPr": "#2 (head a41695e14aa9e9c98ef48d89a4e31e0888dee856)",
+    "main": "74c1e1144e11020de274ec0f2a400c67011028d7",
+    "sharedFilePolicy": "World workstream does not edit exam app.js; preserve local user data"
   }
 }
