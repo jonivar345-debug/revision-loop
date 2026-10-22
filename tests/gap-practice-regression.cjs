@@ -54,8 +54,8 @@ checks++;
  const swapped={...q,markPoints:[...q.markPoints].reverse()};assert.equal(swapped.markPoints.length,q.marks);checks++;
  tallies[q.subject]++;
 }
-assert.deepEqual(tallies,{Physics:24,Chemistry:34,Maths:33},'Question batch size');
-assert.equal(additions.length,91);
+assert.deepEqual(tallies,{Physics:24,Chemistry:36,Maths:33},'Question batch size');
+assert.equal(additions.length,93);
 assert.equal(additions.filter(q=>multipartIds.has(q.id)).length,13,'All multipart subparts present');
 for(const id of multipartIds)assert(ids.has(id),'Missing multipart part '+id);
 const numeric=[
