@@ -243,6 +243,13 @@
     document.querySelectorAll('[data-character-art]').forEach(el => {
       if (watched.has(el)) return;
       watched.add(el);
+      // Announce portrait-load errors to assistive technology without
+      // changing the artwork or interrupting normal keyboard navigation.
+      const announcement = el.querySelector('.character-loading small');
+      if (announcement) {
+        announcement.setAttribute('role', 'status');
+        announcement.setAttribute('aria-live', 'polite');
+      }
       setTimeout(() => {
         if (!el.isConnected || el.classList.contains('has-portrait')) return;
         const status = el.querySelector('.character-loading small');
