@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "23 independently written AQA-style Chemistry questions plus seven original multipart subparts; not past-paper reproductions.",
+  "notes": "25 independently written AQA-style Chemistry standalone questions plus seven original multipart subparts; not past-paper reproductions.",
   "questions": [
     {
       "id": "gap_v48_chem_01",
@@ -1159,6 +1159,112 @@
       "difficulty": "hard",
       "groupId": "gap_v48_chem_26",
       "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_27",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "marks": 4,
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupOrder": 1,
+      "revisionTopic": "Aromatic chemistry",
+      "topic": "Aromatic chemistry",
+      "subtopic": "Aromatic chemistry",
+      "courseTopic": "Organic chemistry",
+      "prompt": "In a theoretical Friedel–Crafts acylation, benzene reacts with ethanoyl chloride and AlCl₃ acts as a catalyst. Outline the electrophilic substitution mechanism, identifying the electrophile, the role of benzene electrons, how aromaticity is restored and the organic product.",
+      "markPoints": [
+        "AlCl₃ accepts chloride from CH₃COCl, generating the CH₃CO⁺ acylium electrophile and AlCl₄⁻.",
+        "Benzene's delocalised π electrons attack CH₃CO⁺, forming a positively charged intermediate.",
+        "AlCl₄⁻ removes a proton from the intermediate, restoring aromaticity and regenerating AlCl₃.",
+        "The organic product is phenylethanone, C₆H₅COCH₃, and HCl is also formed."
+      ],
+      "markPointExpressionAlternatives": [
+        [
+          "CH3CO+"
+        ],
+        [],
+        [],
+        [
+          "phenylethanone"
+        ]
+      ],
+      "groupId": "gap_v48_chem_27",
+      "modelAnswer": "AlCl₃ accepts chloride from CH₃COCl, generating the CH₃CO⁺ acylium electrophile and AlCl₄⁻. Benzene's delocalised π electrons attack CH₃CO⁺, forming a positively charged intermediate. AlCl₄⁻ removes a proton from the intermediate, restoring aromaticity and regenerating AlCl₃. The organic product is phenylethanone, C₆H₅COCH₃, and HCl is also formed."
+    },
+    {
+      "id": "gap_v48_chem_28",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "marks": 4,
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupOrder": 1,
+      "revisionTopic": "Transition metals",
+      "topic": "Transition metals",
+      "subtopic": "Transition metals",
+      "courseTopic": "Transition metals",
+      "prompt": "Consider the equilibrium [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O. Describe the colour, shape and coordination number of the copper complexes, explain why replacing water with chloride changes the coordination number, and predict the effect of increasing chloride concentration.",
+      "markPoints": [
+        "The hexaaquacopper(II) complex is blue, octahedral and has coordination number six.",
+        "The tetrachlorocuprate(II) complex is yellow-green, tetrahedral and has coordination number four.",
+        "Chloride ions are larger ligands than water molecules, so fewer fit around Cu²⁺.",
+        "Adding chloride shifts the equilibrium towards [CuCl₄]²⁻, making the yellow-green complex more abundant."
+      ],
+      "markEvidenceRules": [
+        null,
+        null,
+        null,
+        [
+          [
+            "adding",
+            "chloride",
+            "[cucl4]2-"
+          ],
+          [
+            "more",
+            "chloride",
+            "right"
+          ],
+          [
+            "increasing",
+            "chloride",
+            "right"
+          ]
+        ]
+      ],
+      "groupId": "gap_v48_chem_28",
+      "modelAnswer": "The hexaaquacopper(II) complex is blue, octahedral and has coordination number six. The tetrachlorocuprate(II) complex is yellow-green, tetrahedral and has coordination number four. Chloride ions are larger ligands than water molecules, so fewer fit around Cu²⁺. Adding chloride shifts the equilibrium towards [CuCl₄]²⁻, making the yellow-green complex more abundant."
     }
   ]
 }
