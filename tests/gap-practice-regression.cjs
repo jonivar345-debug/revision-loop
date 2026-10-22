@@ -1,4 +1,4 @@
-/* 75 original AQA-style exam question extensions: ensure complete and coherent
+/* 78 original AQA-style exam question extensions: ensure complete and coherent
    answers, correct topic mapping, no duplicate prompts and no false paper claims. */
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
@@ -54,11 +54,14 @@ checks++;
  const swapped={...q,markPoints:[...q.markPoints].reverse()};assert.equal(swapped.markPoints.length,q.marks);checks++;
  tallies[q.subject]++;
 }
-assert.deepEqual(tallies,{Physics:24,Chemistry:31,Maths:33},'Question batch size');
-assert.equal(additions.length,88);
+assert.deepEqual(tallies,{Physics:24,Chemistry:34,Maths:33},'Question batch size');
+assert.equal(additions.length,91);
 assert.equal(additions.filter(q=>multipartIds.has(q.id)).length,13,'All multipart subparts present');
 for(const id of multipartIds)assert(ids.has(id),'Missing multipart part '+id);
 const numeric=[
+ ['Kp equilibrium',40**2/(30**2*20),.0889,.001],
+ ['Neutral water pH at 40 C',-Math.log10(Math.sqrt(2.92e-14)),6.77,.001],
+ ['Second-order kinetics rate',.04*.3*.2**2,4.80e-4,.001],
  ['Young modulus',32*1.5/(Math.PI*(0.0002**2)*0.0019),2.01e11,0.02],
  ['Energy efficiency',(360*9.81*7.5/45)/950,0.620,0.01],
  ['Thermistor divider',12*4/(8+4),4,0.001],
