@@ -246,7 +246,7 @@
       // Announce portrait-load errors to assistive technology without
       // changing the artwork or interrupting normal keyboard navigation.
       const announcement = el.querySelector('.character-loading small');
-      if (announcement) {
+      if (announcement && typeof announcement.setAttribute === 'function') {
         announcement.setAttribute('role', 'status');
         announcement.setAttribute('aria-live', 'polite');
       }
