@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 1,
+  "scope": "Official question-part and mark-allocation inventory only; not question text or student-facing website equivalents",
+  "subject": "Chemistry",
+  "qualification": "A-level",
+  "paper": "7405/2",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "paperTitle": "Organic and Physical Chemistry",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74052-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74052-MS-NOV21.PDF",
+  "questionPaperPdfPages": 32,
+  "markSchemePdfPages": 29,
+  "numberedQuestions": 10,
+  "partCount": 40,
+  "totalMarks": 105,
+  "questionTotals": [
+    {
+      "question": "10",
+      "parts": 5,
+      "marks": 12
+    },
+    {
+      "question": "01",
+      "parts": 4,
+      "marks": 15
+    },
+    {
+      "question": "02",
+      "parts": 6,
+      "marks": 19
+    },
+    {
+      "question": "03",
+      "parts": 4,
+      "marks": 7
+    },
+    {
+      "question": "04",
+      "parts": 3,
+      "marks": 9
+    },
+    {
+      "question": "05",
+      "parts": 3,
+      "marks": 7
+    },
+    {
+      "question": "06",
+      "parts": 4,
+      "marks": 7
+    },
+    {
+      "question": "07",
+      "parts": 3,
+      "marks": 9
+    },
+    {
+      "question": "08",
+      "parts": 4,
+      "marks": 13
+    },
+    {
+      "question": "09",
+      "parts": 4,
+      "marks": 7
+    }
+  ],
+  "markingWarnings": [
+    "Question 02.6 is six-mark levels-of-response; not six independent keyword ticks.",
+    "Question 01.3 is a dependent six-step back-titration calculation with mark-scheme constraints.",
+    "Question 07.3 permits alternative spectroscopic reasoning and separates deduction from evidence.",
+    "Question 10.3 is graphical and requires a plotted graph, not a typed numerical result.",
+    "Question 10.5 uses a gradient read from a graph, so measured-method and accuracy marks must be separated.",
+    "Mechanisms/structures and drawings require source images; never auto-grade as if plain text contained the full answer."
+  ],
+  "copyrightNote": "Original skill summaries, source page references and assessment types only; no reproduced official AQA wording, images, structures or answers.",
+  "sourceValidation": "Cross-checked individual question references and bracketed mark totals with official AQA question paper and final mark scheme.",
+  "parts": [
+    {
+      "id": "10.1",
+      "marks": 2,
+      "skill": "Stopping acid-catalysed reaction samples",
+      "questionPaperPage": 25,
+      "markSchemePage": 27,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "10.2",
+      "marks": 2,
+      "skill": "Excess reactant and pseudo-order reasoning",
+      "questionPaperPage": 25,
+      "markSchemePage": 27,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "10.3",
+      "marks": 3,
+      "skill": "Reaction graph plotting and best fit",
+      "questionPaperPage": 26,
+      "markSchemePage": 28,
+      "assessmentType": "graph",
+      "requiresFigure": true
+    },
+    {
+      "id": "10.4",
+      "marks": 2,
+      "skill": "Zero-order kinetics graphical reasoning",
+      "questionPaperPage": 27,
+      "markSchemePage": 29,
+      "assessmentType": "graph-and-explanation",
+      "requiresFigure": true
+    },
+    {
+      "id": "10.5",
+      "marks": 3,
+      "skill": "Activation energy from Arrhenius gradient",
+      "questionPaperPage": 29,
+      "markSchemePage": 29,
+      "assessmentType": "graph-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.1",
+      "marks": 3,
+      "skill": "Triester products and soap classification",
+      "questionPaperPage": 2,
+      "markSchemePage": 11,
+      "assessmentType": "diagram",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.2",
+      "marks": 3,
+      "skill": "Alkyl-chain length from molar mass",
+      "questionPaperPage": 2,
+      "markSchemePage": 11,
+      "assessmentType": "calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.3",
+      "marks": 6,
+      "skill": "Back-titration of triester percentage",
+      "questionPaperPage": 3,
+      "markSchemePage": 12,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.4",
+      "marks": 3,
+      "skill": "Solvent selection and safety reasoning",
+      "questionPaperPage": 4,
+      "markSchemePage": 12,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 1,
+      "skill": "Petroleum fraction definition",
+      "questionPaperPage": 5,
+      "markSchemePage": 13,
+      "assessmentType": "definition",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.2",
+      "marks": 3,
+      "skill": "Cracking formula balance and catalyst",
+      "questionPaperPage": 5,
+      "markSchemePage": 13,
+      "assessmentType": "equation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.3",
+      "marks": 1,
+      "skill": "Infrared absorption by carbon dioxide",
+      "questionPaperPage": 5,
+      "markSchemePage": 13,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.4",
+      "marks": 4,
+      "skill": "Amine acid-base mechanism diagram",
+      "questionPaperPage": 6,
+      "markSchemePage": 14,
+      "assessmentType": "mechanism-diagram",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.5",
+      "marks": 4,
+      "skill": "Nitrogen-based molecular shape and bond angles",
+      "questionPaperPage": 7,
+      "markSchemePage": 14,
+      "assessmentType": "diagram-and-reasoning",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.6",
+      "marks": 6,
+      "skill": "Evaluation of bioethanol environmental trade-offs",
+      "questionPaperPage": 8,
+      "markSchemePage": 15,
+      "assessmentType": "levels-of-response",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.1",
+      "marks": 2,
+      "skill": "Calorimetry measurements table",
+      "questionPaperPage": 10,
+      "markSchemePage": 16,
+      "assessmentType": "table",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "skill": "Calorimeter apparatus comparison",
+      "questionPaperPage": 10,
+      "markSchemePage": 16,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.3",
+      "marks": 2,
+      "skill": "Sources of calorimetry error",
+      "questionPaperPage": 11,
+      "markSchemePage": 16,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.4",
+      "marks": 1,
+      "skill": "Calorimetry apparatus improvement",
+      "questionPaperPage": 11,
+      "markSchemePage": 16,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.1",
+      "marks": 3,
+      "skill": "Bond-energy and benzene enthalpy comparison",
+      "questionPaperPage": 13,
+      "markSchemePage": 17,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.2",
+      "marks": 1,
+      "skill": "Delocalisation and benzene stability",
+      "questionPaperPage": 13,
+      "markSchemePage": 17,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.3",
+      "marks": 5,
+      "skill": "Benzene electrophilic substitution mechanism",
+      "questionPaperPage": 14,
+      "markSchemePage": 18,
+      "assessmentType": "mechanism-diagram",
+      "requiresFigure": true
+    },
+    {
+      "id": "05.1",
+      "marks": 3,
+      "skill": "Equilibrium amount expressions",
+      "questionPaperPage": 15,
+      "markSchemePage": 19,
+      "assessmentType": "algebra",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.2",
+      "marks": 1,
+      "skill": "Diester structural formula",
+      "questionPaperPage": 15,
+      "markSchemePage": 19,
+      "assessmentType": "structure-drawing",
+      "requiresFigure": true
+    },
+    {
+      "id": "05.3",
+      "marks": 3,
+      "skill": "Equilibrium constant calculation",
+      "questionPaperPage": 16,
+      "markSchemePage": 19,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "06.1",
+      "marks": 1,
+      "skill": "Optically active aldehyde structure",
+      "questionPaperPage": 17,
+      "markSchemePage": 20,
+      "assessmentType": "structure-drawing",
+      "requiresFigure": true
+    },
+    {
+      "id": "06.2",
+      "marks": 2,
+      "skill": "Enantiomer optical behaviour",
+      "questionPaperPage": 17,
+      "markSchemePage": 20,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "06.3",
+      "marks": 2,
+      "skill": "E/Z structural isomers",
+      "questionPaperPage": 17,
+      "markSchemePage": 20,
+      "assessmentType": "structure-drawing",
+      "requiresFigure": true
+    },
+    {
+      "id": "06.4",
+      "marks": 2,
+      "skill": "Cyclic ether carbon NMR equivalence",
+      "questionPaperPage": 18,
+      "markSchemePage": 21,
+      "assessmentType": "structure-drawing",
+      "requiresFigure": true
+    },
+    {
+      "id": "07.1",
+      "marks": 1,
+      "skill": "Infrared functional-group identification",
+      "questionPaperPage": 19,
+      "markSchemePage": 22,
+      "assessmentType": "spectrum",
+      "requiresFigure": true
+    },
+    {
+      "id": "07.2",
+      "marks": 3,
+      "skill": "Infrared spectroscopy changes after hydrogenation",
+      "questionPaperPage": 20,
+      "markSchemePage": 22,
+      "assessmentType": "spectrum",
+      "requiresFigure": true
+    },
+    {
+      "id": "07.3",
+      "marks": 5,
+      "skill": "Proton NMR deduction and splitting",
+      "questionPaperPage": 21,
+      "markSchemePage": 22,
+      "assessmentType": "spectrum-and-explanation",
+      "requiresFigure": true
+    },
+    {
+      "id": "08.1",
+      "marks": 2,
+      "skill": "Organic reaction type and reagent naming",
+      "questionPaperPage": 22,
+      "markSchemePage": 23,
+      "assessmentType": "short-response",
+      "requiresFigure": false
+    },
+    {
+      "id": "08.2",
+      "marks": 4,
+      "skill": "Multistep organic conversion scheme",
+      "questionPaperPage": 22,
+      "markSchemePage": 23,
+      "assessmentType": "equation-and-structure",
+      "requiresFigure": true
+    },
+    {
+      "id": "08.3",
+      "marks": 5,
+      "skill": "Ester-forming reaction mechanism",
+      "questionPaperPage": 23,
+      "markSchemePage": 24,
+      "assessmentType": "mechanism-diagram",
+      "requiresFigure": true
+    },
+    {
+      "id": "08.4",
+      "marks": 2,
+      "skill": "Green-chemistry process design arguments",
+      "questionPaperPage": 23,
+      "markSchemePage": 25,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "09.1",
+      "marks": 1,
+      "skill": "Biological benefit of stratospheric ozone",
+      "questionPaperPage": 24,
+      "markSchemePage": 26,
+      "assessmentType": "short-response",
+      "requiresFigure": false
+    },
+    {
+      "id": "09.2",
+      "marks": 1,
+      "skill": "Initiation by photochemical bond cleavage",
+      "questionPaperPage": 24,
+      "markSchemePage": 26,
+      "assessmentType": "short-response",
+      "requiresFigure": false
+    },
+    {
+      "id": "09.3",
+      "marks": 2,
+      "skill": "Chlorine radical catalytic ozone cycle",
+      "questionPaperPage": 24,
+      "markSchemePage": 26,
+      "assessmentType": "equation",
+      "requiresFigure": false
+    },
+    {
+      "id": "09.4",
+      "marks": 3,
+      "skill": "Propagation reaction steps",
+      "questionPaperPage": 24,
+      "markSchemePage": 26,
+      "assessmentType": "equation",
+      "requiresFigure": false
+    }
+  ]
+}
