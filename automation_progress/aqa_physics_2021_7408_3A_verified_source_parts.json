@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "subject": "Physics",
+  "qualification": "A-level",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "paper": "7408/3A",
+  "section": "A",
+  "totalMarks": 45,
+  "numberedQuestions": 3,
+  "partCount": 21,
+  "note": "This is the 45-mark COMPULSORY Paper 3 Section A only. A-level Physics Paper 3 total is 80 marks after adding ONE chosen 35-mark Section B option (3BA/3BB/3BC/3BD/3BE); options must be separately indexed and NOT added together as if one candidate takes all five. Original copyrighted question wording/diagrams not reproduced.",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083A-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083A-MS-NOV21.PDF",
+  "questionPaperPdfPages": 28,
+  "markSchemePdfPages": 22,
+  "questionTotals": [
+    {
+      "question": "01",
+      "partCount": 8,
+      "marks": 16
+    },
+    {
+      "question": "02",
+      "partCount": 5,
+      "marks": 10
+    },
+    {
+      "question": "03",
+      "partCount": 8,
+      "marks": 19
+    }
+  ],
+  "markingWarnings": [
+    "01.1 requires figure annotation as well as a textual measurement description; typing alone cannot certify diagram credit.",
+    "01.3 and 01.6 require prediction-test reasoning, not mere mention of an inverse-square relationship.",
+    "01.7 is one mark for a numerical result; measurement precision matters.",
+    "01.8 includes a dependent reasoning step based on stochastic arrivals; a keyword checker would over-award.",
+    "02.1 requires a wavelength read from a graph, substitution, and accurate derived value; accept appropriate carry-forward according to the mark scheme.",
+    "02.3 requires graph extrapolation; one copied number may omit visual evidence.",
+    "02.4 allows alternative valid optical data paths, with mark criteria and rounding rules.",
+    "03.3 partial uncertainty marks depend on sound method, not just final percent.",
+    "03.5 and 03.6 are evaluation/explanation marks and should not be reduced to independent keywords.",
+    "03.7 and 03.8 use graph readings and consequential numeric steps, subject to official marking instructions.",
+    "Paper Section B option differs by the student's AQA entry code; never claim Section A alone is the full Paper 3."
+  ],
+  "verification": "Question/mark brackets independently checked from the official 28-page AQA 7408/3A question paper and 22-page final mark scheme; the mark scheme numbers pages internally June 2021 although the official release is November 2021. Editorial topic labels are original paraphrases.",
+  "copyrightNote": "No original AQA text, image, complete answer key or operational laboratory instructions reproduced. Audit is METADATA ONLY and does not add student-visible question parts.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 2,
+      "topic": "Diagram-supported measurement description",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 5,
+      "assessmentType": "annotation-and-short-response",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.2",
+      "marks": 2,
+      "topic": "Background-corrected counting statistics",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.3",
+      "marks": 2,
+      "topic": "Compare observed values with a mathematical prediction",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 7,
+      "assessmentType": "reasoned-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.4",
+      "marks": 2,
+      "topic": "Radiation-safety risk awareness and qualitative reasoning",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 7,
+      "assessmentType": "safety-evaluation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.5",
+      "marks": 2,
+      "topic": "Read regular step size from a data figure",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 8,
+      "assessmentType": "figure-reading",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.6",
+      "marks": 3,
+      "topic": "Test a proposed inverse-square relationship with graph transformation",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 9,
+      "assessmentType": "graph-and-reasoning",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.7",
+      "marks": 1,
+      "topic": "Detector dead-time correction",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 10,
+      "assessmentType": "calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.8",
+      "marks": 2,
+      "topic": "Explain random measurement arrivals and dead time",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 10,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 3,
+      "topic": "Use diffraction grating relation with graph-measured wavelength",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 11,
+      "assessmentType": "diagram-and-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.2",
+      "marks": 1,
+      "topic": "Identify uncertainty in a high diffraction order",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 12,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.3",
+      "marks": 2,
+      "topic": "Extrapolate an LED characteristic graph",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 13,
+      "assessmentType": "graph-extrapolation",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.4",
+      "marks": 2,
+      "topic": "Evaluate Planck constant from optical measurements",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 13,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.5",
+      "marks": 2,
+      "topic": "Determine a limiting resistor from current-voltage data",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 14,
+      "assessmentType": "graph-and-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.1",
+      "marks": 1,
+      "topic": "Interpret an analogue meter reading",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 15,
+      "assessmentType": "multiple-choice-with-diagram",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "topic": "Parallax and the mirror scale on a meter",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 15,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.3",
+      "marks": 2,
+      "topic": "Estimate percentage uncertainty from repeat measurements",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 16,
+      "assessmentType": "uncertainty-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.4",
+      "marks": 1,
+      "topic": "Obtain discharge time constant from half-time",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 17,
+      "assessmentType": "calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.5",
+      "marks": 4,
+      "topic": "Evaluate a proposed proportionality using comparative measurements",
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 17,
+      "assessmentType": "evaluation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.6",
+      "marks": 4,
+      "topic": "Reason about a sequence of experimental measurements",
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 18,
+      "assessmentType": "reasoned-data-selection",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.7",
+      "marks": 3,
+      "topic": "Determine resistance using a plotted exponential-decay graph",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 19,
+      "assessmentType": "graph-and-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.8",
+      "marks": 2,
+      "topic": "Derive instantaneous current from a graphical voltage reading",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 20,
+      "assessmentType": "graph-dependent-calculation",
+      "requiresFigure": true
+    }
+  ]
+}
