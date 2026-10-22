@@ -62,4 +62,36 @@ for(const id of ['aqa_phy_as23_p1_q1_5','aqa_phy_as23_p1_q2_1','aqa_phy_as23_p1_
 const polar=bank.find(x=>x.id==='aqa_phy_as23_p1_q3');
 assert.equal(polar.answerType,'levels');checks++;
 assert.equal(polar.markSchemeType,'level-of-response');checks++;
+// Run the inline watchdog itself in a simulated DOM, not a reimplementation.
+{
+ const vm=require('node:vm');
+ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+ const begin=html.indexOf('/* Portrait loading guard.');
+ const open=html.lastIndexOf('<script>',begin),close=html.indexOf('</script>',begin);
+ assert(begin>=0&&open>=0&&close>open,'Portrait watchdog embedded after app script');checks++;
+ const watchdog=html.slice(open+'<script>'.length,close);
+ new Function(watchdog);checks++;
+ const scenarios=[
+  {loading:'1',portrait:false,connected:true,expected:true},
+  {loading:'1',portrait:true,connected:true,expected:false},
+  {loading:'0',portrait:false,connected:true,expected:false},
+  {loading:'1',portrait:false,connected:false,expected:false}
+ ];
+ for(const scenario of scenarios){
+  const classes=new Set(scenario.portrait?['has-portrait']:[]);
+  const note={textContent:'Loading anime portrait'};
+  const el={isConnected:scenario.connected,dataset:{loading:scenario.loading},
+    classList:{contains:k=>classes.has(k),add:k=>classes.add(k)},
+    querySelector:()=>note,setAttribute:()=>{}};
+  const tasks=[];
+  const document={body:{},querySelectorAll:()=>[el]};
+  const MutationObserver=class{constructor(callback){this.callback=callback}observe(){}};
+  vm.runInNewContext(watchdog,{document,MutationObserver,WeakSet,
+    setTimeout:(cb,ms)=>{assert.equal(ms,9000);tasks.push(cb)}});
+  assert.equal(tasks.length,1,'One deadline per portrait card');checks++;
+  tasks[0]();
+  assert.equal(classes.has('art-unavailable'),scenario.expected,'Fallback state');checks++;
+  if(scenario.expected){assert.match(note.textContent,/unavailable/i);checks++}
+ }
+}
 console.log('PASS '+checks+' outfit, local art and AQA verification checks');
