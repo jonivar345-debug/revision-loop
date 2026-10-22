@@ -17,13 +17,28 @@ const score=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))
 const normalized=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const topics=Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,new Set(main.filter(q=>q.subject===s).map(q=>q.revisionTopic))]));
 const ids=new Set(),prompts=new Set(),tallies={Physics:0,Chemistry:0,Maths:0};
+// These 13 additions are original, self-contained practice subparts with
+// variable 2–3 mark allocations. The original 75 single-part questions still
+// retain their previously audited fixed allocations.
+const multipartIds=new Set([
+ 'gap_v48_chem_21a','gap_v48_chem_21b','gap_v48_chem_21c',
+ 'gap_v48_chem_22a','gap_v48_chem_22b','gap_v48_chem_23a','gap_v48_chem_23b',
+ 'gap_v48_math_24a','gap_v48_math_24b','gap_v48_math_25a','gap_v48_math_25b',
+ 'gap_v48_math_26a','gap_v48_math_26b'
+]);
 for(const q of all){
  assert(!ids.has(q.id),'Duplicate ID '+q.id);ids.add(q.id);
 }
 let checks=0;
 for(const q of additions){
  assert(topics[q.subject].has(q.revisionTopic),'Invalid topic '+q.id);checks++;
- assert.equal(q.marks,q.id.startsWith('gap_v49_extended_')?6:4,'Correct independent marking-point count '+q.id);checks++;
+ if(multipartIds.has(q.id)) {
+  assert(q.marks>=2&&q.marks<=3,'Valid adapted multipart allocation '+q.id);
+  assert.equal(q.markPoints.length,q.marks,'Each new part has distinct marking criteria '+q.id);
+} else {
+  assert.equal(q.marks,q.id.startsWith('gap_v49_extended_')?6:4,'Original extension allocation '+q.id);
+}
+checks++;
  assert.equal(q.markPoints.length,q.markPointMarks.length,'Mark-point alignment '+q.id);checks++;
  assert.equal(q.markPointMarks.reduce((a,b)=>a+b,0),q.marks,'Mark totals '+q.id);checks++;
  assert.equal(q.year,'Practice','Original practice cannot be falsely labelled a past paper '+q.id);checks++;
@@ -39,8 +54,10 @@ for(const q of additions){
  const swapped={...q,markPoints:[...q.markPoints].reverse()};assert.equal(swapped.markPoints.length,q.marks);checks++;
  tallies[q.subject]++;
 }
-assert.deepEqual(tallies,{Physics:24,Chemistry:24,Maths:27},'Question batch size');
-assert.equal(additions.length,75);
+assert.deepEqual(tallies,{Physics:24,Chemistry:31,Maths:33},'Question batch size');
+assert.equal(additions.length,88);
+assert.equal(additions.filter(q=>multipartIds.has(q.id)).length,13,'All multipart subparts present');
+for(const id of multipartIds)assert(ids.has(id),'Missing multipart part '+id);
 const numeric=[
  ['Young modulus',32*1.5/(Math.PI*(0.0002**2)*0.0019),2.01e11,0.02],
  ['Energy efficiency',(360*9.81*7.5/45)/950,0.620,0.01],
@@ -59,4 +76,4 @@ const numeric=[
 for(const [name,got,want,relative] of numeric){
  assert(Math.abs(got-want)<=Math.max(Math.abs(want)*relative,.0001),name+' incorrect model value '+got);checks++;
 }
-console.log('PASS '+checks+' original question structure, teacher-style marking, topic mapping and independent calculations');
+console.log('PASS '+checks+' original question structure, variable multipart marks, teacher-style marking, topic mapping and independent calculations');
