@@ -52,4 +52,17 @@ for(const r of additions){
   assert.equal(r.imageRights,'No image asset cleared; text only','Do not imply photo rights: '+r.iso2);checks++;
   assert(r.sources.every(x=>x.startsWith('https://whc.unesco.org/en/list/')),'Use official source: '+r.iso2);checks++;
 }
+// Photo rights metadata is editorial, never an instruction to hotlink or deploy.
+const photoFiles=['commons_verified_photos_batch3_20261023.json','commons_verified_photos_batch4_20261023.json'];
+const photoIds=new Set();
+for(const f of photoFiles){
+  const batch=JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
+  for(const item of batch.files){
+    assert(item.countryCode&&item.file&&item.caption&&item.author,'Unattributed photo: '+f);checks++;
+    assert(item.filePage.startsWith('https://commons.wikimedia.org/wiki/File:'),'Missing Commons page: '+item.file);checks++;
+    assert(item.license.startsWith('CC ')&&item.licenseUrl.startsWith('https://creativecommons.org/licenses/'),'Missing license: '+item.file);checks++;
+    assert(!photoIds.has(item.filePage),'Duplicate photo record: '+item.filePage);photoIds.add(item.filePage);checks++;
+  }
+}
+assert.equal(photoIds.size,13,'Unexpected Commons audit count');checks++;
 console.log('PASS '+checks+' editorial QA assertions; 72 primary + 10 Africa versions = 77 distinct countries, 82 source-backed articles, all 200+ words; no runtime mutations');
