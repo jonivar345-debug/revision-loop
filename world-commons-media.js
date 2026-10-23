@@ -43,7 +43,7 @@
   const trimmed=String(query||'').trim().slice(0,150);
   if(!fetchFn||trimmed.length<3)return [];
   const u=new URL('https://commons.wikimedia.org/w/api.php');
-  const params={action:'query',generator:'search',gsrnamespace:'6',gsrsearch:trimmed+' filetype:bitmap',gsrlimit:'12',prop:'imageinfo',
+  const params={action:'query',generator:'search',gsrnamespace:'6',gsrsearch:trimmed,gsrlimit:'12',prop:'imageinfo',
    iiprop:'url|extmetadata',iiurlwidth:'780',format:'json',formatversion:'2',origin:'*'};
   Object.entries(params).forEach(([key,value])=>u.searchParams.set(key,value));
   try {
@@ -62,6 +62,45 @@
   }catch{return []}
  }
  const jobs=new Map();
+ // Prefer the lead photograph of the EXACT encyclopedia article to random
+ // search results. The Commons file itself must still pass our rights checks.
+ async function searchPageUncached(wiki,{fetcher,doc}={}){
+   const get=fetcher||(typeof fetch==='function'?fetch:null);
+   const title=String(wiki||'').replace(/_/g,' ').trim().slice(0,120);
+   if(!get||!title)return [];
+   try{
+     const pageUrl=new URL('https://en.wikipedia.org/w/api.php');
+     for(const [k,v] of Object.entries({action:'query',prop:'pageimages',piprop:'name',
+       titles:title,format:'json',formatversion:'2',origin:'*'}))pageUrl.searchParams.set(k,v);
+     const pageResponse=await get(pageUrl.href,{cache:'force-cache',credentials:'omit'});
+     if(!pageResponse.ok)return [];
+     const pages=(await pageResponse.json()).query?.pages||[];
+     const name=pages.find(p=>p.pageimage)?.pageimage;
+     if(!name)return [];
+     const commonsUrl=new URL('https://commons.wikimedia.org/w/api.php');
+     for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',titles:'File:'+name.replace(/^File:/,''),
+       iiprop:'url|extmetadata',iiurlwidth:'780',format:'json',formatversion:'2',origin:'*'}))commonsUrl.searchParams.set(k,v);
+     const rightsResponse=await get(commonsUrl.href,{cache:'force-cache',credentials:'omit'});
+     if(!rightsResponse.ok)return [];
+     const rights=(await rightsResponse.json()).query?.pages||[];
+     const verified=rights.map(page=>inspect(page,doc||(typeof document!=='undefined'?document:null))).find(Boolean);
+     return verified?[verified]:[];
+   }catch{return []}
+ }
+ const pageJobs=new Map();
+ function searchPage(wiki,options={}){
+   if(options.fetcher)return searchPageUncached(wiki,options);
+   const key=String(wiki||'').trim().toLowerCase();
+   if(!pageJobs.has(key)){
+     const promise=new Promise(resolve=>{
+       queue.push({work:()=>searchPageUncached(wiki,options),resolve});
+       drain();
+     });
+     pageJobs.set(key,promise);
+   }
+   return pageJobs.get(key);
+ }
+
  const queue=[];
  let active=0;
  function drain(){
@@ -100,5 +139,5 @@
    figure.append(img,caption);el.append(figure);
   }
  }
- return Object.freeze({inspect,search,append});
+ return Object.freeze({inspect,search,searchPage,append});
 });
