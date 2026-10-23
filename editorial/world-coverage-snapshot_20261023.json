@@ -1,0 +1,73 @@
+{
+  "snapshotDate": "2026-10-23",
+  "workstream": "world-and-locations PR #2",
+  "branch": "automation/world-zoom-controls-20261021",
+  "deployment": "NOT MERGED; main site remains v60",
+  "liveAppAudit": {
+    "locationRecords": 161,
+    "uniqueLocationIds": 161,
+    "duplicateVisibleNames": [
+      {
+        "name": "Cape Town",
+        "ids": [
+          "capetown",
+          "cape_town"
+        ]
+      },
+      {
+        "name": "Addis Ababa",
+        "ids": [
+          "addis",
+          "addis_ababa"
+        ]
+      },
+      {
+        "name": "Victoria Falls",
+        "ids": [
+          "victoriafalls",
+          "victoria_falls"
+        ]
+      }
+    ],
+    "actualMaximumLocationCost": 250,
+    "locationsAbove250": 0,
+    "locationsAbove100": 142,
+    "locationFactEntries": 48,
+    "cultureDetailEntries": 46,
+    "pricingCaution": "These numbers were calculated directly from PR#2 app.js on 2026-10-23; older project ledger claiming 825 max is stale for this branch. Desired 50-100 point general location pricing is NOT deployed."
+  },
+  "editorialArchive": {
+    "primaryCountryFeatures": 72,
+    "additionalAfricanVersions": 10,
+    "duplicateAfricanAlternatives": 5,
+    "uniqueCountryCodes": 77,
+    "totalArticleVersions": 82,
+    "wordRequirement": "All checked >=200 words per article body",
+    "newCountryFeaturesThisSession": 24,
+    "targetCountryGateways": 196,
+    "remainingWithoutSourceBacked200WordDraft": 119,
+    "countryCoveragePercent": 39.3,
+    "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
+    "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
+    "photosInstalledInWorldUI": 0,
+    "photosStatus": "Metadata vetted on Commons file pages; binaries and live image rendering not tested"
+  },
+  "integrity": {
+    "test": "tests/world-editorial-integrity.cjs",
+    "ci": "Scanner marking regression workflow now invokes editorial test on PRs; newest run result must be checked before release",
+    "productionStateChanged": false,
+    "purchasesMigrated": false,
+    "storeCostsChanged": false,
+    "historicalPurchaseIdsRemoved": false
+  },
+  "releaseGates": [
+    "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
+    "Resolve three duplicate-place names without deleting bought item IDs or double-charging",
+    "Merge source-backed articles into world interface with tested mappings and native attribution",
+    "Integrate vetted photos with clear credits, licences and edit notifications",
+    "Adjust shop prices only after purchase migration and test correct point deduction",
+    "Verify globe rotation/pinch together and service-worker offline loads on mobile and desktop",
+    "Regression CI, browser tests and recovery/export strategy before merging PR #2",
+    "Keep PR #1 exam and marking changes isolated until integration testing"
+  ]
+}
