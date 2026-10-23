@@ -33,6 +33,7 @@ jobs:
           node tests/world-shop-id-preservation.cjs
           node tests/world-profile-preservation.cjs
           node tests/world-globe-article-bridge.cjs
+          node tests/world-photo-licence-audit.cjs
           node tests/world-library-preview.cjs
           node tests/outfit-and-source-regression.cjs
           node tests/official-mark-sample.cjs
