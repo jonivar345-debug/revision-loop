@@ -488,3 +488,10 @@
  .world-guide-panel{padding:14px}
  .globe-card canvas{max-width:100%}
 }
+
+
+/* Keep the entire author/licence visible below gallery thumbnails instead of
+   covering the photograph with a clipped credit strip. */
+.location-card .location-photo:has(.commons-credited-photo){height:auto!important;min-height:170px;padding:0!important;overflow:visible}
+.location-card .location-photo .commons-credited-photo img{height:122px!important;max-height:122px!important}
+.location-card .location-photo .commons-credited-photo figcaption{height:auto!important;min-height:46px!important;max-height:none!important;overflow:visible!important;padding:7px 8px!important;font-size:.64rem!important;line-height:1.35!important;word-break:break-word}
