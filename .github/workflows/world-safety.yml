@@ -16,6 +16,7 @@ jobs:
       - name: Verify complete world research and index
         run: |
           node tests/world-editorial-integrity.cjs
+          node tests/world-destination-geography.cjs
           node scripts/rebuild-world-index.cjs --check
       - name: Verify historical purchase preservation and actual app migration
         run: |
