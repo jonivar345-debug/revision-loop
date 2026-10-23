@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "type": "original-official-source-only-audit",
+  "qualification": "A-level",
+  "subject": "Physics",
+  "specification": "7408",
+  "year": 2022,
+  "series": "June",
+  "paper": "7408/3BA",
+  "paperTitle": "Paper 3 Section B Option A — Astrophysics",
+  "optionalSection": "B",
+  "oneOptionOnly": true,
+  "pairedCompulsorySection": "7408/3A",
+  "pairedCompulsoryMarks": 45,
+  "sectionMarks": 35,
+  "combinedPaperMarksForCandidate": 80,
+  "numberedQuestions": 4,
+  "partCount": 15,
+  "questionTotals": [
+    9,
+    11,
+    9,
+    6
+  ],
+  "officialQuestionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BA-QP-JUN22.PDF",
+  "officialMarkSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BA-MS-JUN22.PDF",
+  "officialSpecificationUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/astrophysics-a-level-only",
+  "questionPaperPages": 16,
+  "markSchemePages": 15,
+  "markSchemeVersion": "1.0 Final",
+  "sourceVerification": "All 15 part marks and PDF page positions inspected against official AQA June 2022 QP and final mark scheme. Topic codes checked against AQA's current official 3.9 specification; 02.1 is a nearest-section cross-topic mapping, not an exact examiner-issued code.",
+  "exactExaminerAwardRulesCopied": false,
+  "sourceOnly": true,
+  "playableQuestionCount": 0,
+  "markingGuidanceOriginalSummary": [
+    "AQA distinguishes acceptable alternatives from mandatory combined statements, and contradiction can negate an otherwise correct list point.",
+    "Calculation credit can include equivalent working and specified follow-through; do not award method marks to a numerical coincidence derived from invalid physics.",
+    "Diagram-based and graph-based marks require visible evidence, not just recognised topic words.",
+    "Six-mark cosmology response uses overall level descriptors and a calculation condition for top marks.",
+    "An answer-only result may be fully credited when allowed by the official scheme, but show-that tasks need the required supporting method."
+  ],
+  "copyrightNotice": "This JSON is an original editorial map of official source parts and does not reproduce AQA question stems, diagrams, answer keys, or marking text. It is not a playable paper.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 1,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Spherical aberration ray paths",
+      "aqaSpecificationReference": "3.9.1.2",
+      "assessmentFormat": "diagram",
+      "requiresOriginalGraphOrDrawing": true,
+      "markingRisk": "Diagram must distinguish central and edge-ray focal points; text-only answers cannot establish the geometry.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.2",
+      "marks": 3,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Refracting telescope in normal adjustment",
+      "aqaSpecificationReference": "3.9.1.1",
+      "assessmentFormat": "diagram",
+      "requiresOriginalGraphOrDrawing": true,
+      "markingRisk": "Three off-axis rays and correctly located shared focal plane are required; do not award all drawing marks from a prose description.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.3",
+      "marks": 2,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        7
+      ],
+      "editorialSkillLabel": "Eyepiece focal length from telescope magnification",
+      "aqaSpecificationReference": "3.9.1.1",
+      "assessmentFormat": "calculation",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Evaluate the coupled magnification and lens-separation equations; a shortcut denominator with no justification is not equivalent.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.4",
+      "marks": 3,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        8
+      ],
+      "editorialSkillLabel": "CCD and human-eye observations of close binaries",
+      "aqaSpecificationReference": "3.9.1.4",
+      "assessmentFormat": "comparison",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Credit different valid detector trade-offs and their observational consequences; cap answers without a specific consequence.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.1",
+      "marks": 2,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Eclipsing binary light-curve interpretation",
+      "aqaSpecificationReference": "3.9.3.1",
+      "assessmentFormat": "graph-explanation",
+      "requiresOriginalGraphOrDrawing": true,
+      "markingRisk": "The relative depth of dips needs an explanation grounded in stellar temperatures, not simply their sizes.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.2",
+      "marks": 1,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Systematic wavelength shift of an orbiting binary",
+      "aqaSpecificationReference": "3.9.3.1",
+      "assessmentFormat": "explanation",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Direction of the system's overall radial motion matters; a generic Doppler mention alone is not enough.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.3",
+      "marks": 3,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Radial velocity from a varying spectral line",
+      "aqaSpecificationReference": "3.9.3.1",
+      "assessmentFormat": "show-that",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Use the half-range shift and suitable mean wavelength; accept equivalent valid routes and supported follow-through.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.4",
+      "marks": 2,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Orbital radius from a periodic light curve",
+      "aqaSpecificationReference": "3.9.3.1",
+      "assessmentFormat": "calculation-from-graph",
+      "requiresOriginalGraphOrDrawing": true,
+      "markingRisk": "Read the orbital period correctly; accept follow-through from a prior speed and use consistent time units.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.5",
+      "marks": 1,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "Prominent absorption lines in a B-class spectrum",
+      "aqaSpecificationReference": "3.9.2.4",
+      "assessmentFormat": "multiple-choice",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Single-option selection must match stellar spectral classification.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.6",
+      "marks": 2,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "Observational tests for two compact stellar remnants",
+      "aqaSpecificationReference": "3.9.2.6",
+      "assessmentFormat": "discussion",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Require independently relevant properties and a way to link them to the same system.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.1",
+      "marks": 1,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Radio observation of an early quasar",
+      "aqaSpecificationReference": "3.9.3.3",
+      "assessmentFormat": "short-answer",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Specific radio emission property, not generic brightness.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Absolute magnitude from apparent magnitude and distance",
+      "aqaSpecificationReference": "3.9.2.2",
+      "assessmentFormat": "show-that",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Distance units and logarithm argument must be correct; preserve valid algebraic rearrangements.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.3",
+      "marks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Brightness ratio from absolute magnitudes",
+      "aqaSpecificationReference": "3.9.2.1",
+      "assessmentFormat": "calculation",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Use absolute, not apparent, magnitude when comparing equal distances; accept correctly followed rounded values.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.4",
+      "marks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPages": [
+        13
+      ],
+      "editorialSkillLabel": "Mean density inside a black-hole event horizon",
+      "aqaSpecificationReference": "3.9.2.6",
+      "assessmentFormat": "multistep-calculation",
+      "requiresOriginalGraphOrDrawing": false,
+      "markingRisk": "Track conversion from solar masses to SI mass, event-horizon radius and volume; award appropriate error carried forward.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04",
+      "marks": 6,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        14,
+        15
+      ],
+      "editorialSkillLabel": "Evidence for the expanding-universe model",
+      "aqaSpecificationReference": "3.9.3.2",
+      "assessmentFormat": "level-of-response",
+      "requiresOriginalGraphOrDrawing": true,
+      "markingRisk": "Six-mark response is level-based and requires coverage of distinct evidence plus a relevant calculation for top bands; do not mark as six independent keywords.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    }
+  ]
+}
