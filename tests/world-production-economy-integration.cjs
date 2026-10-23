@@ -24,7 +24,7 @@ const context={
  profile:JSON.parse(JSON.stringify(old)),settings:{},progress:{physics:{due:65}},PROGRESS_KEY:'progress',SETTINGS_KEY:'settings',
  LOCATIONS:inventory,
  CHARACTERS:[{id:'lelouch'},{id:'future_character'}],OUTFITS:[{id:'lelouch-default',character:'lelouch'},{id:'future_character-holiday',character:'future_character'}],
- showToast:x=>notifications.push(x),renderAll:()=>{appRender++}
+ showToast:x=>notifications.push(x),renderAll:()=>{appRender++},drawGlobe:()=>{}
 };
 vm.createContext(context);
 const migration=cut('function ensureProfile(){','function now(){');
