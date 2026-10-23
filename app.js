@@ -668,6 +668,14 @@ LOCATIONS.forEach((l,i)=>{
   MAJOR_LOCATION_IDS.has(l.id)?(175+(i%5)*10):
   (100+(i%8)*10);
 });
+// Additional country/ocean/sea pins have NEW IDs. Do not change the old
+// locations, historical cost tiers, or any saved purchase identifier.
+if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations)){
+ const existing=new Set(LOCATIONS.map(x=>x.id));
+ for(const destination of window.RevisionWorldDestinations){
+  if(!existing.has(destination.id)){LOCATIONS.push({...destination});existing.add(destination.id)}
+ }
+}
 
 const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
 const earthTexture=new Image();earthTexture.crossOrigin='anonymous';let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;earthTexture.onload=()=>{try{const t=document.createElement('canvas');t.width=720;t.height=360;const x=t.getContext('2d',{willReadFrequently:true});x.drawImage(earthTexture,0,0,t.width,t.height);earthPixels=x.getImageData(0,0,t.width,t.height).data;earthW=t.width;earthH=t.height;earthTextureReady=true}catch{earthTextureReady=false}drawGlobe()};earthTexture.src=EARTH_TEXTURE_URL;
