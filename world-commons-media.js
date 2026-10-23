@@ -38,7 +38,7 @@
   return {file,author,license:licence,licenseUrl:licenseURL.href,filePage:sourceURL.href,url:photoURL.href,
     description:cleanHTML(value('ImageDescription'),doc)||file.replace(/^File:/,'')};
  }
- async function search(query,{fetcher,doc,limit=2}={}){
+ async function searchUncached(query,{fetcher,doc,limit=2}={}){
   const fetchFn=fetcher||(typeof fetch==='function'?fetch:null);
   const trimmed=String(query||'').trim().slice(0,150);
   if(!fetchFn||trimmed.length<3)return [];
@@ -60,6 +60,25 @@
    }
    return output;
   }catch{return []}
+ }
+ const jobs=new Map();
+ const queue=[];
+ let active=0;
+ function drain(){
+  while(active<4&&queue.length){
+   const job=queue.shift();active++;
+   Promise.resolve().then(job.work).then(job.resolve,()=>job.resolve([])).finally(()=>{active--;drain()});
+  }
+ }
+ function search(query,options={}){
+  // Real browser searches share results across card rerenders; tests with
+  // injected fetcher are deliberately uncached and deterministic.
+  if(options.fetcher)return searchUncached(query,options);
+  const key=String(query||'').trim().toLowerCase()+'|'+String(options.limit||2);
+  if(jobs.has(key))return jobs.get(key);
+  const task=new Promise(resolve=>{queue.push({work:()=>searchUncached(query,options),resolve});drain()});
+  jobs.set(key,task);
+  return task;
  }
  function append(el,images,{doc,emptyText='No openly licensed photograph could be confirmed.'}={}){
   const dom=doc||(typeof document!=='undefined'?document:null);
