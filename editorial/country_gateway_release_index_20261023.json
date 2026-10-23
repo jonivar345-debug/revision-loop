@@ -1,14 +1,14 @@
 {
-  "schema": "country-gateway-editorial-index-v2",
+  "schema": "country-gateway-editorial-index-v3",
   "generated": "2026-10-23",
   "publicationStatus": "NON-RUNTIME PREVIEW ONLY: no shop unlocks, no profile writes or migration",
-  "description": "One primary country article per code; alternative Africa articles are maintained separately, and historical shop location IDs remain untouched.",
+  "description": "One source-backed country story per country code, with Africa alternatives retained and historic shop IDs unchanged.",
   "totals": {
-    "distinctCountries": 157,
-    "totalVersionCount": 166,
+    "distinctCountries": 169,
+    "totalVersionCount": 178,
     "alternates": 9,
     "countryGoal": 196,
-    "missingCountryDrafts": 39
+    "missingCountryDrafts": 27
   },
   "preservation": {
     "oldLocationIdsRemain": 161,
@@ -289,6 +289,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "BN",
+      "country": "Brunei",
+      "gatewayId": "country-bn",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Ulu Temburong National Park",
+      "wordCount": 225,
+      "sourceLinks": [
+        "https://www.bruneitourism.com/places/ulu-temburong-national-park/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "BO",
       "country": "Bolivia",
       "gatewayId": "country-bo",
@@ -312,6 +327,21 @@
       "wordCount": 275,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/606"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BT",
+      "country": "Bhutan",
+      "gatewayId": "country-bt",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Dzongs: religious and civic fortresses",
+      "wordCount": 228,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5695/"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -621,6 +651,21 @@
       "wordCount": 238,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/975"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DJ",
+      "country": "Djibouti",
+      "gatewayId": "country-dj",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Lake Assal",
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5959"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -1234,6 +1279,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "KM",
+      "country": "Comoros",
+      "gatewayId": "country-km",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Mwali Biosphere Reserve",
+      "wordCount": 219,
+      "sourceLinks": [
+        "https://www.unesco.org/en/mab/mwali"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "KN",
       "country": "Saint Kitts and Nevis",
       "gatewayId": "country-kn",
@@ -1332,6 +1392,21 @@
       "wordCount": 248,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/202"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LR",
+      "country": "Liberia",
+      "gatewayId": "country-lr",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Gola Rainforest National Park",
+      "wordCount": 221,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/6650/"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -1572,6 +1647,21 @@
       "wordCount": 234,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/1259"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MV",
+      "country": "Maldives",
+      "gatewayId": "country-mv",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Baa Atoll Biosphere Reserve",
+      "wordCount": 216,
+      "sourceLinks": [
+        "https://www.unesco.org/en/mab/baa-atoll"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -2101,6 +2191,36 @@
       "alternateSources": []
     },
     {
+      "iso2": "SL",
+      "country": "Sierra Leone",
+      "gatewayId": "country-sl",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Gola-Tiwai Complex",
+      "wordCount": 217,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1746/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SM",
+      "country": "San Marino",
+      "gatewayId": "country-sm",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Historic Centre and Mount Titano",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1245/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "SN",
       "country": "Senegal",
       "gatewayId": "country-sn",
@@ -2124,6 +2244,36 @@
       "wordCount": 212,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/1017"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ST",
+      "country": "São Tomé and Príncipe",
+      "gatewayId": "country-st",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Príncipe Island Biosphere Reserve",
+      "wordCount": 219,
+      "sourceLinks": [
+        "https://www.unesco.org/en/mab/island-principe"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SZ",
+      "country": "Eswatini",
+      "gatewayId": "country-sz",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Ngwenya Mines",
+      "wordCount": 224,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5421/"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -2184,6 +2334,21 @@
       "wordCount": 204,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/1252"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TL",
+      "country": "Timor-Leste",
+      "gatewayId": "country-tl",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Nino Konis Santana Biosphere Reserve",
+      "wordCount": 214,
+      "sourceLinks": [
+        "https://www.unesco.org/en/articles/nino-konis-santana-designated-timor-lestes-first-unesco-biosphere-reserve"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -2315,6 +2480,21 @@
       "wordCount": 241,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/603"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "VA",
+      "country": "Vatican City",
+      "gatewayId": "country-va",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Vatican City",
+      "wordCount": 234,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/286/"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
