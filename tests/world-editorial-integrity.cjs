@@ -8,6 +8,13 @@ const mainFiles=[...fs.readdirSync(root).filter(f=>
     const num=f=>Number(f.match(/batch(\d+)_/)[1]);return num(a)-num(b);
   }), 'full_country_stories_existing7_enriched_20261023.json'];
 assert(mainFiles.length>=6,'Expected original country archive batches');
+for(const filename of mainFiles){
+  const match=filename.match(/^full_country_stories_batch\d+_(\d+)_\d{8}\.json$/);
+  if(!match)continue;
+  const count=JSON.parse(fs.readFileSync(path.join(root,filename),'utf8')).records.length;
+  assert.equal(count,Number(match[1]),'Country batch file count mismatch: '+filename);
+}
+
 const extra='country_stories_africa_10_source_only_20261023.json';
 const load=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')).records;
 const main=mainFiles.flatMap(f=>load(f).map(record=>({file:f,record})));
@@ -64,4 +71,19 @@ for(const f of photoFiles){
   }
 }
 assert.equal(photoIds.size,13,'Unexpected Commons audit count');checks++;
+// Selection index must account for every distinct ISO code and every source alternative.
+const release=JSON.parse(fs.readFileSync(path.join(root,'country_gateway_release_index_20261023.json'),'utf8'));
+const iso=release.entries.map(x=>x.iso2);
+assert.equal(release.totals.distinctCountries,allCodes.size,'Index total differs from articles');checks++;
+assert.equal(release.entries.length,allCodes.size,'Index omits countries');checks++;
+assert.equal(new Set(iso).size,allCodes.size,'Duplicate selected gateway IDs');checks++;
+for(const selected of release.entries){
+  assert(allCodes.has(selected.iso2),'Unknown index code '+selected.iso2);checks++;
+  assert.equal(selected.gatewayId,'country-'+selected.iso2.toLowerCase());checks++;
+  assert(selected.wordCount>=200,'Short indexed article '+selected.iso2);checks++;
+  assert(selected.sourceFile.startsWith('editorial/'),'Invalid source path');checks++;
+  assert(selected.live===false&&selected.mediaStatus==='photos-not-attached','Unsafe publishing assertion '+selected.iso2);checks++;
+}
+assert.equal(release.totals.totalVersionCount,main.length+africa.length);checks++;
+assert.equal(release.totals.alternates,main.length+africa.length-allCodes.size);checks++;
 console.log('PASS '+checks+' editorial QA assertions; '+main.length+' primary + '+africa.length+' Africa versions = '+allCodes.size+' distinct countries, '+(main.length+africa.length)+' source-backed articles, all 200+ words; no runtime mutations');
