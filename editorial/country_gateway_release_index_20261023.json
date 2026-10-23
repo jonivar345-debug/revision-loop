@@ -4,11 +4,11 @@
   "publicationStatus": "NON-RUNTIME PREVIEW ONLY: no shop unlocks, no profile writes or migration",
   "description": "One primary country article per code; alternative Africa articles are maintained separately, and historical shop location IDs remain untouched.",
   "totals": {
-    "distinctCountries": 153,
-    "totalVersionCount": 162,
+    "distinctCountries": 157,
+    "totalVersionCount": 166,
     "alternates": 9,
     "countryGoal": 196,
-    "missingCountryDrafts": 43
+    "missingCountryDrafts": 39
   },
   "preservation": {
     "oldLocationIdsRemain": 161,
@@ -1069,6 +1069,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "IQ",
+      "country": "Iraq",
+      "gatewayId": "country-iq",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Erbil Citadel",
+      "wordCount": 243,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1437"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "IR",
       "country": "Iran",
       "gatewayId": "country-ir",
@@ -1219,6 +1234,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "KN",
+      "country": "Saint Kitts and Nevis",
+      "gatewayId": "country-kn",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Brimstone Hill Fortress National Park",
+      "wordCount": 240,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/910"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "KR",
       "country": "South Korea",
       "gatewayId": "country-kr",
@@ -1272,6 +1302,21 @@
       "wordCount": 240,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/295"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LC",
+      "country": "Saint Lucia",
+      "gatewayId": "country-lc",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Pitons Management Area",
+      "wordCount": 243,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1161"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -2315,6 +2360,21 @@
       "wordCount": 221,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/1280"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "YE",
+      "country": "Yemen",
+      "gatewayId": "country-ye",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Socotra Archipelago",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1263"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
