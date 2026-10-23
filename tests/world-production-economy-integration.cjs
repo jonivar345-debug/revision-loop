@@ -24,7 +24,7 @@ const context={
  profile:JSON.parse(JSON.stringify(old)),settings:{},progress:{physics:{due:65}},PROGRESS_KEY:'progress',SETTINGS_KEY:'settings',
  LOCATIONS:inventory,
  CHARACTERS:[{id:'lelouch'},{id:'future_character'}],OUTFITS:[{id:'lelouch-default',character:'lelouch'},{id:'future_character-holiday',character:'future_character'}],
- showToast:x=>notifications.push(x),renderAll:()=>{appRender++}
+ showToast:x=>notifications.push(x),renderAll:()=>{appRender++},drawGlobe:()=>{}
 };
 vm.createContext(context);
 const migration=cut('function ensureProfile(){','function now(){');
@@ -77,7 +77,7 @@ assert.equal((shop.innerHTML.match(/class="shop-item location-card"/g)||[]).leng
 assert(shop.innerHTML.includes('data-location="capetown"')&&!shop.innerHTML.includes('data-location="cape_town"'));
 assert(shop.innerHTML.includes('data-location="addis"')&&!shop.innerHTML.includes('data-location="addis_ababa"'));
 assert(shop.innerHTML.includes('data-location="victoriafalls"')&&!shop.innerHTML.includes('data-location="victoria_falls"'));
-const globe={profile:context.profile,window:context.window,LOCATIONS:inventory,project:()=>({x:0,y:0,z:1})};
+const globe={profile:context.profile,window:context.window,LOCATIONS:inventory,project:()=>({x:0,y:0,z:1}),document:{getElementById:()=>({checked:true})}};
 vm.createContext(globe);
 vm.runInContext(cut('function visibleGlobePins(','function drawGlobe()')+'\nthis.pins=visibleGlobePins(700,360);',globe);
 assert.equal(globe.pins.length,158,'Globe has duplicate pin');

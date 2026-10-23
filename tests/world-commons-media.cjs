@@ -24,6 +24,18 @@ assert.equal(checked.author,'A. Photographer');
 assert.equal(checked.license,'CC BY-SA 4.0');
 assert(checked.filePage.startsWith('https://commons.wikimedia.org/wiki/File:'));
 assert.equal(checked.licenseUrl,'https://creativecommons.org/licenses/by-sa/4.0/');
+
+for(const [city,landmark] of [['london','Tower Bridge'],['busan','Seomyeon'],['tbilisi','Tbilisi'],['capetown','Table Mountain'],['nairobi','Nairobi'],['newyork','New York'],['cusco','Cusco'],['sydney','Sydney'],['tokyo','Tokyo'],['reykjavik','Reykjavik']]){
+ const photo=media.approvedFor(city);
+ assert(photo?.checked===true,'Missing manually reviewed city photograph '+city);
+ assert(photo.description.includes(landmark),'Incorrect reviewed landmark '+city);
+ assert(photo.url.startsWith('https://commons.wikimedia.org/wiki/Special:FilePath/'));
+ assert(photo.filePage.startsWith('https://commons.wikimedia.org/wiki/File:'));
+ assert(photo.licenseUrl.startsWith('https://creativecommons.org/licenses/by-sa/'));
+ assert(photo.author.length>3,'Missing artist for reviewed photo '+city);
+}
+assert.equal(media.approvedFor('not_an_actual_city'),null);
+
 let requests=0,asked='';
 const fetcher=async url=>{requests++;asked=url;return {ok:true,json:async()=>({query:{pages:[good,unknown,noArtist]}})}};
 class E {
@@ -45,12 +57,26 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert(caption.children.some(x=>x.tagName==='a'&&x.textContent==='Original file'));
  assert(caption.children.some(x=>x.tagName==='a'&&x.textContent==='CC BY-SA 4.0'));
  assert(caption.children.some(x=>x.tagName==='text'&&x.textContent.includes('A. Photographer')));
- const empty=new E('div');media.append(empty,[],{doc:dom});
+ const pageRequests=[];
+ const exactFetcher=async url=>{
+  pageRequests.push(String(url));
+  const host=new URL(url).hostname;
+  if(host==='en.wikipedia.org')return {ok:true,json:async()=>({query:{pages:[{title:'Busan',pageimage:'Example landscape.jpg'}]}})};
+  if(host==='commons.wikimedia.org')return {ok:true,json:async()=>({query:{pages:[good]}})};
+  throw Error('Unexpected image host');
+ };
+ const exact=await media.searchPage('Busan',{fetcher:exactFetcher,doc:dom});
+ assert.equal(exact.length,1,'Busan page image was not verified');
+ assert.equal(pageRequests.length,2,'Wikipedia page and Commons rights must both be queried');
+ assert(pageRequests[0].includes('titles=Busan'));
+ assert(pageRequests[1].includes('File%3AExample'));
+ assert(!app.includes("images.search(l.name+' landscape'"),'Incorrect loosely matched second image still queried');
+  const empty=new E('div');media.append(empty,[],{doc:dom});
  assert(empty.textContent.includes('No openly licensed photograph'));
  assert(!app.includes("gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15"),'Old uncredited gallery search still present');
  assert(!app.includes("if(url){wikiPhotoCache[location.id]=url;placeImage"),'Old uncredited image path still active');
- assert(html.indexOf('world-commons-media.js?v=64')>=0&&html.indexOf('world-commons-media.js?v=64')<html.indexOf('app.js?v=65'),'Media validation must load before app');
+ assert(html.indexOf('world-commons-media.js?v=68')>=0&&html.indexOf('world-commons-media.js?v=68')<html.indexOf('app.js?v=68'),'Media validator must load before the app');
  assert(sw.includes("'./world-commons-media.js'"),'Photo validator not cached offline');
- for(const marker of ['locationPhoto(location,el)','images.search(query,{limit:1})','images.append(el,results)','images.search(l.name+\' landscape\',{limit:2})'])assert(app.includes(marker),'Actual app lacks Commons attribution use: '+marker);
+ for(const marker of ['locationPhoto(location,el)','images.searchPage(location.wiki)','images.append(el,matches)','locationImageFallback(el,location)'])assert(app.includes(marker),'Actual app lacks Commons attribution use: '+marker);
  console.log('PASS world gallery CC validation: no unlicensed/unknown-author/third-party image; photographer, licence and source rendered; real app and offline shell wired.');
 })().catch(e=>{console.error(e);process.exitCode=1});

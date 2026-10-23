@@ -81,6 +81,37 @@ try{
  assert(state.locationCount.includes('/ 376'),'Duplicate destinations still count separately');
  assert.equal(state.gesture,'object');
  assert.equal(state.media,'object');
+ await page.waitForFunction(()=>earthTextureReady===true&&earthW>=700,null,{timeout:25000});
+ const globeState=await page.evaluate(()=>{
+  const color=(lat,lon)=>{
+   const u=(lon+180)/360,v=(90-lat)/180;
+   const x=Math.max(0,Math.min(earthW-1,Math.round(u*(earthW-1))));
+   const y=Math.max(0,Math.min(earthH-1,Math.round(v*(earthH-1))));
+   return Array.from(earthPixels.slice((y*earthW+x)*4,(y*earthW+x)*4+3));
+  };
+  return {
+   texture:[earthW,earthH],
+   africanLand:color(0,20),
+   atlanticWater:color(0,-30),
+   london:LOCATIONS.find(l=>l.id==='london'),
+   pinCount:visibleGlobePins(700,360).length,
+   londonPin:visibleGlobePins(700,360).find(item=>item.location.id==='london')?.owned,
+   togglePresent:!!document.getElementById('showAllGlobePins')
+  };
+ });
+ assert.deepEqual(globeState.texture,[1024,512]);
+ assert(globeState.africanLand.some((n,i)=>Math.abs(n-globeState.atlanticWater[i])>25),
+   'Africa and the Atlantic still look like the same blue globe');
+ assert(Math.abs(globeState.london.lat-51.507)<.05&&Math.abs(globeState.london.lon+0.128)<.05);
+ assert(globeState.londonPin,'Owned London pin should remain visible on the real Earth');
+ assert(globeState.pinCount<190,'Default map still has too many overlapping pins');
+ assert(globeState.togglePresent,'Pin density toggle missing');
+ const allPinState=await page.evaluate(()=>{
+   document.getElementById('showAllGlobePins').checked=true;
+   drawGlobe();
+   return visibleGlobePins(700,360).length;
+ });
+ assert(allPinState>globeState.pinCount,'Show-all toggle should reveal accurate hidden markers');
  await page.evaluate(()=>buy('location','capetown'));
  await page.evaluate(()=>buy('location','addis'));
  await page.evaluate(()=>buy('location','victoriafalls'));

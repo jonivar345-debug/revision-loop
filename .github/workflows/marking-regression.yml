@@ -30,6 +30,7 @@ jobs:
           node tests/world-economy-integrity.cjs
           node tests/world-editorial-integrity.cjs
           node tests/world-destination-geography.cjs
+          node tests/world-earth-geography.cjs
           node tests/world-offline-archive.cjs
           node scripts/rebuild-world-index.cjs --check
           node tests/world-shop-id-preservation.cjs
