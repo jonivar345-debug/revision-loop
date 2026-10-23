@@ -1,4 +1,4 @@
-/* Non-runtime editorial preview. No cookies, localStorage, IndexedDB, payment or profile access. */
+/* Standalone public editorial preview. No application profile access or mutations. */
 (() => {
 'use strict';
 const list = document.getElementById('entryList');
