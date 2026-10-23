@@ -154,10 +154,17 @@ const showArticle = async item => {
       }
       frag.append(gallery);
     }
+    let automatedMediaHost=null;
+    if(item.kind==='country'&&!pictures.length&&typeof window!=='undefined'&&window.RevisionWorldCommonsMedia){
+      automatedMediaHost=document.createElement('div');
+      automatedMediaHost.className='world-auto-photo-results';
+      automatedMediaHost.append(text('p','Checking Wikimedia Commons image licences and photographer credits…','subtle'));
+      frag.append(automatedMediaHost);
+    }
     if(vetted.length){
       const photoDetails=document.createElement('details');
       photoDetails.append(text('summary','Checked image references ('+vetted.length+')'));
-      photoDetails.append(text('p','These links lead to original Wikimedia Commons file pages. Pictures are not embedded in this draft.','subtle'));
+      photoDetails.append(text('p','These links lead to original Wikimedia Commons file pages. Image file pages and credits are linked here; reviewed photographs appear above.','subtle'));
       const photoList=document.createElement('ul');
       for(const photo of vetted){
         const li=document.createElement('li');
@@ -181,10 +188,18 @@ const showArticle = async item => {
       const li=document.createElement('li');li.append(a);ul.append(li);
     }
     details.append(ul);
-    details.append(text('small','Photographs are not yet cleared for inclusion. This page does not award or deduct points.'));
+    details.append(text('small','Manually reviewed images are preferred. Automated Commons images appear only when a CC licence and photographer are supplied; depiction has not been human-verified. This page does not award or deduct points.'));
     frag.append(details);
     panel.replaceChildren(frag);
     panel.focus({preventScroll:true});
+    if(automatedMediaHost){
+      // On-demand only. Never show an unlicensed image or assume Commons search proves the location.
+      window.RevisionWorldCommonsMedia.search((article.focus||article.country)+' '+article.country,{limit:2})
+        .then(images=>{
+          if(version!==renderVersion||!automatedMediaHost.isConnected)return;
+          window.RevisionWorldCommonsMedia.append(automatedMediaHost,images,{emptyText:'No automatically licensed images found for this feature. Check the source links.'});
+        }).catch(()=>{if(version===renderVersion&&automatedMediaHost.isConnected)automatedMediaHost.textContent='Automatic image lookup unavailable'});
+    }
   } catch(error) {
     if (version!==renderVersion) return;
     panel.replaceChildren(text('p','Unable to load this draft: '+error.message,'empty'));
