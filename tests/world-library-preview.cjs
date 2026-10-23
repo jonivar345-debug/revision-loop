@@ -44,6 +44,7 @@ const poll=async (fn)=>{
   assert.equal(el.entryList.children.length,167);
   const all=el.entryList.children.map(li=>li.children[0]);
   assert(all.every(x=>x.attrs['aria-current']==='true'||x.attrs['aria-current']==='false'));
+  await poll(()=>el.articlePanel.children.map(x=>x.textContent).join(' ').length>350);
   const firstArticle=el.articlePanel.children.map(x=>x.textContent).join(' ');
   assert(firstArticle.length>350,'First article was not rendered');
   el.worldSearch.value='Georgia';el.worldSearch.listeners.input();
