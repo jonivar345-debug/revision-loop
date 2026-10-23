@@ -104,7 +104,18 @@ try{
  assert(await page.locator('[data-location="ocean-pacific"]').count(),'Pacific pin not in shop');
  assert(await page.locator('[data-location="capetown"]').count());
  assert(!errors.some(e=>/ReferenceError|SyntaxError|TypeError/.test(e)),'Client runtime error(s): '+errors.join(' | '));
- console.log('PASS browser: old XP/points and unknown owned IDs preserved, original profile backed up, aliases free, repeat purchase safe, 158 location cards.');
+ console.log('PASS browser: historical XP, points and purchases preserved; 376 unique country, marine and historic destination cards.');
+ // The pre-cached library must be navigable and display the already-downloaded
+ // country research after disconnecting. Photos may need network access.
+ await page.evaluate(()=>navigator.serviceWorker.ready);
+ await page.waitForFunction(()=>!!navigator.serviceWorker.controller,null,{timeout:30000});
+ await page.context().setOffline(true);
+ await page.goto(origin+'/world-library-preview.html?country=GE',{waitUntil:'domcontentloaded',timeout:30000});
+ await page.waitForFunction(()=>document.getElementById('worldCount')?.textContent==='218 of 218 articles',null,{timeout:30000});
+ await page.waitForFunction(()=>document.getElementById('articlePanel')?.textContent?.includes('Upper Svaneti'),null,{timeout:30000});
+ assert((await page.locator('#articlePanel h2').textContent())?.includes('Georgia'));
+ await page.context().setOffline(false);
+ console.log('PASS browser offline: complete 218-feature World Library and Georgia country article accessible after service worker installation.');
  const mobile=await browser.newPage({viewport:{width:390,height:780},isMobile:true,hasTouch:true});
  await mobile.route('**/*',route=>route.request().url().startsWith(origin+'/')?route.continue():route.abort());
  await mobile.addInitScript(()=>localStorage.setItem('rl_auth','1'));
