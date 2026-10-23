@@ -95,7 +95,7 @@ try{
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('revisionLoopProfile11')));
  assert.equal(result.points,700-actualCost,'Repeated purchase deducted twice');
  assert.equal(result.lifetimeXp,9412);
- await page.evaluate(()=>{locationVisibleLimit=200;renderLocationGallery()});
+ await page.evaluate(()=>{locationVisibleLimit=500;renderLocationGallery()});
  const cards=await page.locator('#locationShop .location-card').count();
  assert.equal(cards,376,'Shop has duplicate destination cards');
  assert(!(await page.locator('[data-location="cape_town"]').count()));
