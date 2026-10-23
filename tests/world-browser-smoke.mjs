@@ -50,7 +50,7 @@ try{
  },fixture);
  await page.goto(origin+'/',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>!!localStorage.getItem('revisionLoopProfile-pre-world-v62'),{timeout:20000});
- await page.waitForFunction(()=>document.getElementById('locationCount')?.textContent?.includes('158'),{timeout:30000});
+ await page.waitForFunction(()=>document.getElementById('locationCount')?.textContent?.includes('376'),{timeout:30000});
  const state=await page.evaluate(()=>({
   profile:profile,
   backup:JSON.parse(localStorage.getItem('revisionLoopProfile-pre-world-v62')),
@@ -65,7 +65,7 @@ try{
  assert(state.profile.shopOwned.locations.includes('archived_city'),'Unknown owned location removed');
  assert(state.profile.shopOwned.characters.includes('older_character'),'Unknown bought character removed');
  assert(state.profile.shopOwned.outfits.includes('older_character-special'),'Unknown outfit removed');
- assert(state.locationCount.includes('/ 158'),'Duplicate destinations still count separately');
+ assert(state.locationCount.includes('/ 376'),'Duplicate destinations still count separately');
  assert.equal(state.gesture,'object');
  assert.equal(state.media,'object');
  await page.evaluate(()=>buy('location','capetown'));
@@ -84,8 +84,11 @@ try{
  assert.equal(result.lifetimeXp,9412);
  await page.evaluate(()=>{locationVisibleLimit=200;renderLocationGallery()});
  const cards=await page.locator('#locationShop .location-card').count();
- assert.equal(cards,158,'Shop has duplicate destination cards');
+ assert.equal(cards,376,'Shop has duplicate destination cards');
  assert(!(await page.locator('[data-location="cape_town"]').count()));
+ assert(await page.locator('[data-location="country-fr"]').count(),'France gateway pin not in shop');
+ assert(await page.locator('[data-location="sea-mediterranean"]').count(),'Mediterranean pin not in shop');
+ assert(await page.locator('[data-location="ocean-pacific"]').count(),'Pacific pin not in shop');
  assert(await page.locator('[data-location="capetown"]').count());
  assert(!errors.some(e=>/ReferenceError|SyntaxError|TypeError/.test(e)),'Client runtime error(s): '+errors.join(' | '));
  console.log('PASS browser: old XP/points and unknown owned IDs preserved, original profile backed up, aliases free, repeat purchase safe, 158 location cards.');
