@@ -7,6 +7,23 @@
  if(root)root.RevisionWorldCommonsMedia=Object.freeze(api);
 })(typeof window==='object'?window:null,function(){
  'use strict';
+ const CHECKED_LOCATION_PHOTOS=Object.freeze({
+  london:{file:'The Tower Bridge, London, UK.jpg',description:'Tower Bridge over the Thames in London',author:'Maksim Sokolov (maxergon.com)',license:'CC BY-SA 4.0'},
+  busan:{file:'Seomyeon Skyline.jpg',description:'Skyline of Seomyeon district, Busan',author:'Minseong Kim',license:'CC BY-SA 4.0'},
+  tbilisi:{file:'Old Tbilisi skyline.jpg',description:'Old Tbilisi skyline and Holy Trinity Cathedral',author:'Ishai Parasol',license:'CC BY-SA 2.0'},
+  capetown:{file:'Cape Town Table Mountain.jpg',description:'Cape Town Table Mountain from the V&A Waterfront',author:'Matthiasmullie',license:'CC BY-SA 4.0'},
+  cape_town:{file:'Cape Town Table Mountain.jpg',description:'Cape Town Table Mountain from the V&A Waterfront',author:'Matthiasmullie',license:'CC BY-SA 4.0'}
+ });
+ function approvedFor(locationId){
+  const entry=CHECKED_LOCATION_PHOTOS[locationId];
+  if(!entry)return null;
+  const file=entry.file.replaceAll(' ','_');
+  const licenseVersion=entry.license.match(/([0-9]\.[0-9])$/)?.[1]||'4.0';
+  return {...entry,checked:true,filePage:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file),
+   licenseUrl:'https://creativecommons.org/licenses/by-sa/'+licenseVersion+'/',
+   url:'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=780'};
+ }
+
  const ALLOWED=/^CC (?:BY(?:-SA)? (?:2\.0|3\.0|4\.0)|0 (?:1\.0))$/i;
  function cleanHTML(html,doc){
   if(typeof html!=='string')return '';
@@ -130,7 +147,7 @@
    img.referrerPolicy='no-referrer';img.src=data.url;
    img.onerror=()=>{img.remove();figure.prepend(dom.createTextNode('Image could not load. '))};
    const caption=dom.createElement('figcaption');
-   caption.append(dom.createTextNode('Automatically selected Commons image — check depiction. '+data.author+' · '));
+   caption.append(dom.createTextNode((data.checked?'Location photograph — ':'Automatically selected Commons image — check depiction. ')+data.author+' · '));
    for(const [href,title] of [[data.filePage,'Original file'],[data.licenseUrl,data.license]]){
     const a=dom.createElement('a');a.href=href;a.textContent=title;a.target='_blank';a.rel='noopener noreferrer';
     caption.append(a,dom.createTextNode(' · '));
@@ -139,5 +156,5 @@
    figure.append(img,caption);el.append(figure);
   }
  }
- return Object.freeze({inspect,search,searchPage,append});
+ return Object.freeze({inspect,search,searchPage,approvedFor,append});
 });
