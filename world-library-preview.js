@@ -116,29 +116,43 @@ const showArticle = async item => {
       frag.append(text('p',article.quickFact));
     }
     const vetted=item.kind==='country' ? (photoMetadata.get(item.iso2)||[]) : [];
-    // Only explicitly reviewed file pages are shown as images, with adjacent author/licence credit.
-    const approvedImages=new Set(['Butrint. theatre.jpg','Singapore Botanic Gardens.jpg','Gobekli Tepe 4.jpg']);
-    const image=vetted.find(p=>approvedImages.has(p.file)&&p.countryCode===item.iso2);
-    if(image){
-      const figure=document.createElement('figure');
-      figure.className='licensed-world-photo';
-      const img=document.createElement('img');
-      img.loading='lazy';
-      img.decoding='async';
-      img.alt=image.caption;
-      img.referrerPolicy='no-referrer';
-      img.src='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(image.file)+'?width=800';
-      img.onerror=()=>{img.remove();figure.prepend(text('p','Photograph unavailable — see the original Wikimedia Commons file page.','subtle'))};
-      figure.append(img);
-      const caption=document.createElement('figcaption');
-      caption.append(text('span',image.caption+' — photo by '+image.author+'. '));
-      const fileLink=openExternal(image.filePage);
-      if(fileLink){fileLink.textContent='Original photograph';caption.append(fileLink)}
-      const licenseLink=openExternal(image.licenseUrl);
-      if(licenseLink){caption.append(text('span',' · '));licenseLink.textContent=image.license;caption.append(licenseLink)}
-      caption.append(text('span',' · Display-size reduction only; no other edits.'));
-      figure.append(caption);
-      frag.append(figure);
+    // Render reviewed files only, with immediate visible attribution and original Commons links.
+    const approvedImages=new Set([
+      'Butrint. theatre.jpg','Butrint theatre.jpg',
+      'Geghard Monastery, Armenia.jpg','Geghard Monastery, Church, Armenia.jpg','Geghard Monastery, Entrance, Armenia.jpg',
+      'Stupa in Borobudur Temple, Indonesia.jpg','Borobudur temple.jpg','Stupa Candi Borobudur.jpg',
+      'Banff National Park landscape.jpg','Gobekli Tepe 4.jpg','Göbeklitepe.jpg',
+      'Singapore Botanic Gardens.jpg','Singapore Botanic Gardens (1).jpg'
+    ]);
+    const pictures=vetted.filter(p=>approvedImages.has(p.file)&&p.countryCode===item.iso2);
+    if(pictures.length){
+      const gallery=document.createElement('div');
+      gallery.className='licensed-world-photo-gallery';
+      for(const image of pictures){
+        const figure=document.createElement('figure');
+        figure.className='licensed-world-photo';
+        const img=document.createElement('img');
+        img.loading='lazy';
+        img.decoding='async';
+        img.alt=image.caption;
+        img.referrerPolicy='no-referrer';
+        img.src='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(image.file)+'?width=800';
+        img.onerror=()=>{
+          img.remove();
+          figure.prepend(text('p','Photograph unavailable — see its original Commons file page.','subtle'));
+        };
+        figure.append(img);
+        const caption=document.createElement('figcaption');
+        caption.append(text('span',image.caption+' — photo by '+image.author+'. '));
+        const fileLink=openExternal(image.filePage);
+        if(fileLink){fileLink.textContent='Original photograph';caption.append(fileLink)}
+        const licenseLink=openExternal(image.licenseUrl);
+        if(licenseLink){caption.append(text('span',' · '));licenseLink.textContent=image.license;caption.append(licenseLink)}
+        caption.append(text('span',' · Display-size reduction only; no other edits.'));
+        figure.append(caption);
+        gallery.append(figure);
+      }
+      frag.append(gallery);
     }
     if(vetted.length){
       const photoDetails=document.createElement('details');
