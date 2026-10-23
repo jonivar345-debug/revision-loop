@@ -29,6 +29,7 @@ jobs:
           node tests/adversarial-marking-regression.cjs
           node tests/world-economy-integrity.cjs
           node tests/world-editorial-integrity.cjs
+          node tests/world-shop-id-preservation.cjs
           node tests/outfit-and-source-regression.cjs
           node tests/official-mark-sample.cjs
           node tests/aqa-mark-audit-regression.cjs
