@@ -32,6 +32,7 @@ jobs:
           node scripts/rebuild-world-index.cjs --check
           node tests/world-shop-id-preservation.cjs
           node tests/world-profile-preservation.cjs
+          node tests/world-production-economy-integration.cjs
           node tests/world-globe-article-bridge.cjs
           node tests/world-photo-licence-audit.cjs
           node tests/world-library-preview.cjs
