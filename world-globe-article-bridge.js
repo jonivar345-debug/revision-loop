@@ -201,6 +201,43 @@
       const section=document.createDocumentFragment();
       section.append(text('h4',story.country||label));
       section.append(text('p','Country feature: '+(story.focus||'geography and cultural heritage')+'. This is background about the country, not necessarily about the selected city.'));
+      // Only the 13 manually checked CC files are eligible; other external location photos are untouched.
+      try{
+        const vettedFiles=await Promise.all([
+          fetch('./editorial/commons_verified_photos_batch3_20261023.json',{cache:'force-cache'}),
+          fetch('./editorial/commons_verified_photos_batch4_20261023.json',{cache:'force-cache'})
+        ]);
+        if(vettedFiles.every(r=>r.ok)){
+          const packages=await Promise.all(vettedFiles.map(r=>r.json()));
+          const allowed=new Set([
+            'Butrint. theatre.jpg','Butrint theatre.jpg',
+            'Geghard Monastery, Armenia.jpg','Geghard Monastery, Church, Armenia.jpg','Geghard Monastery, Entrance, Armenia.jpg',
+            'Stupa in Borobudur Temple, Indonesia.jpg','Borobudur temple.jpg','Stupa Candi Borobudur.jpg',
+            'Banff National Park landscape.jpg','Gobekli Tepe 4.jpg','Göbeklitepe.jpg',
+            'Singapore Botanic Gardens.jpg','Singapore Botanic Gardens (1).jpg'
+          ]);
+          const images=packages.flatMap(p=>p.files||[]).filter(p=>p.countryCode===iso&&allowed.has(p.file)).slice(0,2);
+          for(const photo of images){
+            const figure=document.createElement('figure');figure.className='world-guide-photo';
+            const img=document.createElement('img');
+            img.loading='lazy';img.decoding='async';img.alt=photo.caption;img.referrerPolicy='no-referrer';
+            img.src='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(photo.file)+'?width=640';
+            img.onerror=()=>{img.remove();figure.prepend(text('p','Image unavailable; source link remains below.'))};
+            figure.append(img);
+            const caption=document.createElement('figcaption');
+            caption.append(text('span',photo.caption+' — '+photo.author+' · '));
+            for(const [link,label] of [[photo.filePage,'Original photograph'],[photo.licenseUrl,photo.license]]){
+              try{const url=new URL(link);if(url.protocol!=='https:')continue;
+                const a=text('a',label);a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';caption.append(a);
+                caption.append(text('span',' · '));
+              }catch{}
+            }
+            caption.append(text('span','Resized only; no other modifications.'));
+            figure.append(caption);section.append(figure);
+          }
+        }
+      }catch{ /* Photo metadata unavailable: keep the researched text accessible. */ }
+      if(current!==token||!container.isConnected)return;
       for(const part of story.sections||[]){
         section.append(text('h5',part.title));
         section.append(text('p',part.body));
