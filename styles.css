@@ -438,3 +438,53 @@
 .location-photo .commons-credited-photo img{max-height:135px;object-fit:cover}
 .location-photo .commons-credited-photo figcaption{font-size:.65rem}
 .detail-media .commons-credited-photo img{max-height:350px}
+
+
+/* World release v68: readable Earth geography, fewer pin collisions and clean photos. */
+.globe-card{background:#071528;border:1px solid #183856;border-radius:18px;overflow:hidden}
+.globe-card canvas{background:#071528;width:100%;max-width:700px;height:auto;display:block;margin:0 auto;touch-action:none;cursor:grab}
+.globe-card canvas:active{cursor:grabbing}
+.globe-pin-density{display:flex;justify-content:center;align-items:center;gap:7px;color:#e2e8f0;font-size:.78rem;margin:5px auto 0;cursor:pointer;min-height:30px}
+.globe-pin-density input{accent-color:#22c55e;width:15px;height:15px}
+.globe-pin-density span{color:#94a3b8}
+.globe-source-note{margin:5px 14px 0;text-align:center;color:#94a3b8;font-size:.67rem;line-height:1.45}
+.globe-label{color:#d2e4f6!important;line-height:1.5;padding:4px 10px 12px;text-align:center}
+.location-card .location-photo{background:linear-gradient(145deg,#d7e9f1,#a6c6d2);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px}
+.location-image-map-fallback{background:linear-gradient(120deg,#1a4771 0%,#297c8b 52%,#74a48d 100%)!important;color:#fff}
+.location-image-earth{font-size:2.3rem;line-height:1;filter:drop-shadow(0 2px 8px rgba(4,27,55,.3))}
+.location-image-fallback-label{font-size:.73rem;letter-spacing:.03em;font-weight:700;color:#f0f9ff}
+.location-card .location-photo:has(.commons-credited-photo){background:#f1f5f9;display:block!important;padding:0!important;height:150px}
+.location-card .location-photo .commons-credited-photo{height:100%;position:relative}
+.location-card .location-photo .commons-credited-photo img{height:120px!important;max-height:120px!important;object-fit:cover;width:100%}
+.location-card .location-photo .commons-credited-photo figcaption{height:30px;padding:4px 7px;font-size:.55rem;line-height:1.25;background:#edf3f7;color:#334155;opacity:1;overflow:hidden}
+.location-card .location-photo .commons-credited-photo figcaption a{color:#155e8a}
+.location-card .location-photo::after{display:none}
+.globe-location-info{background:#fff;padding:clamp(14px,2vw,23px);border:1px solid #dce5ed;box-shadow:0 12px 35px rgba(15,44,67,.06)}
+.globe-location-info h3{font-size:1.35rem;letter-spacing:-.018em;margin:0}
+.globe-info-top{padding-bottom:14px;border-bottom:1px solid #e1e8ef;margin-bottom:16px}
+.globe-info-top button{min-width:62px;padding:8px 12px;border-radius:8px}
+.globe-location-info .detail-media{display:block;margin-bottom:19px}
+.globe-location-info .detail-media .image-fallback{height:auto;min-height:230px;padding:0;background:#edf4f8;border:1px solid #d9e6ee;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
+.globe-location-info .detail-media img{height:min(330px,38vw)!important;min-height:180px;width:100%;object-fit:cover}
+.globe-location-info .detail-media .commons-credited-photo{width:100%}
+.globe-location-info .detail-media .commons-credited-photo figcaption{padding:8px 11px;background:#f1f6f9;color:#334155;font-size:.72rem}
+.globe-location-info .detail-media .location-image-map-fallback{min-height:190px}
+.globe-location-info .location-background{margin:15px 0;padding-bottom:12px;border-bottom:1px solid #e4eaf0}
+.globe-location-info .location-background h4{margin:0 0 6px;color:#152a45;font-size:.93rem}
+.globe-location-info p{font-size:.83rem;line-height:1.67;color:#334155}
+.world-guide-panel{background:#f2f8fb;border:1px solid #d2e6f0;padding:19px;border-radius:13px;color:#1f3547}
+.world-guide-panel h4{color:#0d4058;font-size:1.08rem}
+.world-guide-panel p{color:#334f60;line-height:1.7}
+.world-guide-panel > a{color:#075985;font-weight:650}
+.world-guide-panel > button.mini-btn{background:#155e75;color:#fff;border:1px solid #155e75;border-radius:9px;padding:11px 14px;font-weight:750}
+.world-guide-panel > button.mini-btn:disabled{opacity:.7;cursor:default}
+.world-guide-article{margin-top:15px;padding-top:6px}
+.world-guide-article h5{color:#13405b}
+.world-encyclopedia-access{background:#f0f7fb;border:1px solid #c9ddea;color:#164e63}
+.world-encyclopedia-access a{color:#075985;font-weight:750}
+@media(max-width:520px){
+ .globe-location-info .detail-media img{min-height:185px;height:205px!important}
+ .globe-location-info .detail-media .image-fallback{min-height:190px;height:auto}
+ .world-guide-panel{padding:14px}
+ .globe-card canvas{max-width:100%}
+}
