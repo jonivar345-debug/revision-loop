@@ -13,6 +13,6 @@ for(const required of ['world-geographic-destinations.js','world-globe-article-b
  assert(sw.includes("'./"+required+"'"),'World app shell missing '+required);
 }
 assert(sw.includes("c.addAll(SHELL)"),'Offline install does not precache the editorial library');
-assert(sw.includes("caches.match(e.request)"),'Missing cache read on network loss');
-assert(sw.includes("revision-loop-v66-offline-world-library"),'Cache version not advanced');
+assert(sw.includes('caches.match(e.request,{ignoreSearch:true})'),'Offline navigation must match precached pages even when ?country= or ?feature= is present');
+assert(sw.includes("revision-loop-v67-offline-query-safe"),'Cache version not advanced');
 console.log('PASS offline world assets: 27 editorial source files and seven world runtime files precached on service worker install.');
