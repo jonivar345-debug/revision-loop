@@ -39,18 +39,18 @@
   "editorialArchive": {
     "primaryCountryFeatures": 72,
     "additionalAfricanVersions": 10,
-    "duplicateAfricanAlternatives": 5,
-    "uniqueCountryCodes": 77,
+    "duplicateAfricanAlternatives": 6,
+    "uniqueCountryCodes": 76,
     "totalArticleVersions": 82,
     "wordRequirement": "All checked >=200 words per article body",
     "newCountryFeaturesThisSession": 24,
     "targetCountryGateways": 196,
-    "remainingWithoutSourceBacked200WordDraft": 119,
-    "countryCoveragePercent": 39.3,
+    "remainingWithoutSourceBacked200WordDraft": 120,
+    "countryCoveragePercent": 38.8,
     "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
     "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
     "photosInstalledInWorldUI": 0,
-    "photosStatus": "Metadata vetted on Commons file pages; binaries and live image rendering not tested"
+    "photosStatus": "13 file records in batches 3+4 have named authors and licence metadata; this is not a total of all earlier prototype photos, and image binaries or live rendering were not tested"
   },
   "integrity": {
     "test": "tests/world-editorial-integrity.cjs",
@@ -58,7 +58,8 @@
     "productionStateChanged": false,
     "purchasesMigrated": false,
     "storeCostsChanged": false,
-    "historicalPurchaseIdsRemoved": false
+    "historicalPurchaseIdsRemoved": false,
+    "auditCorrection": "Africa alternative batch also includes Tanzania (TZ), duplicated by batch 5. Six alternative entries, 76 distinct codes, not five / 77."
   },
   "releaseGates": [
     "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
