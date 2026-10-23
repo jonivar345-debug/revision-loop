@@ -7,6 +7,7 @@ const count = document.getElementById('worldCount');
 const search = document.getElementById('worldSearch');
 const type = document.getElementById('worldType');
 const cache = new Map();
+const photoMetadata = new Map();
 const entries = [];
 let activeId = null;
 let renderVersion = 0;
@@ -102,6 +103,24 @@ const showArticle = async item => {
       frag.append(text('h3','One thing to remember'));
       frag.append(text('p',article.quickFact));
     }
+    const vetted=item.kind==='country' ? (photoMetadata.get(item.iso2)||[]) : [];
+    if(vetted.length){
+      const photoDetails=document.createElement('details');
+      photoDetails.append(text('summary','Checked image references ('+vetted.length+')'));
+      photoDetails.append(text('p','These links lead to original Wikimedia Commons file pages. Pictures are not embedded in this draft.','subtle'));
+      const photoList=document.createElement('ul');
+      for(const photo of vetted){
+        const li=document.createElement('li');
+        li.append(text('span',photo.caption+' — '+photo.author+' ('+photo.license+'). '));
+        const fileLink=openExternal(photo.filePage);
+        if(fileLink){fileLink.textContent='Original photo and attribution';li.append(fileLink)}
+        const licenceLink=openExternal(photo.licenseUrl);
+        if(licenceLink){li.append(text('span',' · '));licenceLink.textContent='Licence';li.append(licenceLink)}
+        photoList.append(li);
+      }
+      photoDetails.append(photoList);
+      frag.append(photoDetails);
+    }
     const details=document.createElement('details');
     const summary=text('summary','Sources and editorial notes');
     details.append(summary);
@@ -123,14 +142,20 @@ const showArticle = async item => {
 };
 const initialise = async () => {
   try {
-    const [country,oceans,seas1,seas2]=await Promise.all([
+    const [country,oceans,seas1,seas2,photos3,photos4]=await Promise.all([
       loadJson('editorial/country_gateway_release_index_20261023.json'),
       loadJson('editorial/ocean_stories_5_20261023.json'),
       loadJson('editorial/sea_stories_batch1_9_20261023.json'),
-      loadJson('editorial/sea_stories_batch2_8_20261023.json')
+      loadJson('editorial/sea_stories_batch2_8_20261023.json'),
+      loadJson('editorial/commons_verified_photos_batch3_20261023.json'),
+      loadJson('editorial/commons_verified_photos_batch4_20261023.json')
     ]);
+    for(const photo of [...photos3.files,...photos4.files]){
+      if(!photoMetadata.has(photo.countryCode))photoMetadata.set(photo.countryCode,[]);
+      photoMetadata.get(photo.countryCode).push(photo);
+    }
     for(const e of country.entries){
-      entries.push({id:e.gatewayId,kind:'country',country:e.country,focus:e.focus,sourceFile:e.sourceFile});
+      entries.push({id:e.gatewayId,kind:'country',iso2:e.iso2,country:e.country,focus:e.focus,sourceFile:e.sourceFile});
     }
     for(const [dataset,kind,path] of [
       [oceans,'ocean','editorial/ocean_stories_5_20261023.json'],
