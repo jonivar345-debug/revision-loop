@@ -107,4 +107,20 @@ for(const entry of ocean.records){
   assert(entry.editorialStatus.includes('draft')&&entry.imageRights.includes('No photo asset'),'Uncleared ocean publication: '+entry.id);checks++;
 }
 assert.equal(expectedOceanIds.size,0,'Missing ocean identifiers');checks++;
+
+// These articles cover separately named seas, not additional purchasable locations.
+const seaFiles=['sea_stories_batch1_9_20261023.json','sea_stories_batch2_8_20261023.json'];
+const seaEntries=seaFiles.flatMap(load);
+const seaIDs=new Set();
+assert.equal(seaEntries.length,17,'Expected all 17 named-sea drafts');checks++;
+for(const sea of seaEntries){
+  assert(/^sea-[a-z-]+$/.test(sea.id),'Unexpected sea ID: '+sea.id);checks++;
+  assert(!seaIDs.has(sea.id),'Duplicate sea article: '+sea.id);seaIDs.add(sea.id);checks++;
+  assert.equal(sea.sections.length,4,'Incomplete sea sections: '+sea.id);checks++;
+  assert(wordCount(sea.sections.map(s=>s.body).join(' '))>=200,'Short sea article: '+sea.id);checks++;
+  assert(sea.sources.length>=1&&sea.sources.every(x=>x.startsWith('https://')),'Missing sea source: '+sea.id);checks++;
+  assert(sea.editorialStatus.includes('draft')&&sea.imageRights.includes('No image asset'),'Publication rights not cleared: '+sea.id);checks++;
+}
+assert.equal(seaIDs.size,17);checks++;
+
 console.log('PASS '+checks+' editorial QA assertions; '+main.length+' primary + '+africa.length+' Africa versions = '+allCodes.size+' distinct countries, '+(main.length+africa.length)+' source-backed articles, all 200+ words; no runtime mutations');
