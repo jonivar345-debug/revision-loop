@@ -59,6 +59,12 @@ const poll=async (fn)=>{
   await poll(()=>el.articlePanel.children.some(x=>x.tagName==='details'&&x.children[0]?.textContent?.includes('Checked image references')));
   const photoDetails=el.articlePanel.children.find(x=>x.tagName==='details'&&x.children[0]?.textContent?.includes('Checked image references'));
   assert.equal(photoDetails.children.find(x=>x.tagName==='ul').children.length,2,'Albania verified source-photo count');
+  el.worldSearch.value='Bhutan';el.worldSearch.listeners.input();
+  assert.equal(el.entryList.children.length,1);
+  el.entryList.children[0].children[0].listeners.click();
+  await poll(()=>el.articlePanel.children.some(x=>x.textContent==='Dzongs: religious and civic fortresses'));
+  const rendered=el.articlePanel.children.flatMap(x=>[x.textContent,...x.children.map(y=>y.textContent)]).join(' ');
+  assert(rendered.includes('UNESCO Tentative List (not inscribed)'),'Tentative status not labelled in article');
   el.worldSearch.value='';
   el.worldType.value='sea';el.worldType.listeners.change();
   assert.equal(el.entryList.children.length,17);
