@@ -45,7 +45,10 @@ const window={};
 const context={document,window,MutationObserver,fetch,openLocationId:'tbilisi',URL};
 vm.runInNewContext(script,context,{timeout:2500});
 assert(intro?.children?.[0].href.endsWith('world-library-preview.html'),'All-article navigation missing');
-assert.equal(window.RevisionWorldArticleBridge.locationCount,161);
+assert.equal(window.RevisionWorldArticleBridge.historicalLocationCount,161);
+assert.equal(window.RevisionWorldArticleBridge.locationCount,379);
+assert.equal(window.RevisionWorldArticleBridge.countryForLocation('country-fr'),'FR');
+assert.equal(window.RevisionWorldArticleBridge.countryForLocation('country-xk'),'XK');
 for(const id of baseline.locations){assert(window.RevisionWorldArticleBridge.countryForLocation(id),'Missing geographic mapping '+id)}
 assert.equal(window.RevisionWorldArticleBridge.countryForLocation('capetown'),'ZA');
 assert.equal(window.RevisionWorldArticleBridge.countryForLocation('cape_town'),'ZA');
