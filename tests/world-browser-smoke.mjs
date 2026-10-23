@@ -50,7 +50,20 @@ try{
  },fixture);
  await page.goto(origin+'/',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>!!localStorage.getItem('revisionLoopProfile-pre-world-v62'),{timeout:20000});
- await page.waitForFunction(()=>document.getElementById('locationCount')?.textContent?.includes('376'),{timeout:30000});
+ try{
+  await page.waitForFunction(()=>document.getElementById('locationCount')?.textContent?.includes('376'),null,{timeout:30000});
+ }catch(error){
+  const diag=await page.evaluate(()=>({
+    shown:document.getElementById('locationCount')?.textContent,
+    sync:document.getElementById('syncState')?.textContent,
+    countryScript:!!window.RevisionWorldDestinations,
+    countryCount:window.RevisionWorldDestinations?.length,
+    oldProfile:typeof profile==='object'?{points:profile.points,locations:profile.shopOwned?.locations?.length}:null,
+    appLoaded:typeof renderShop==='function'
+  }));
+  console.error('World browser startup diagnostics',diag,'Page errors:',errors);
+  throw error;
+ }
  const state=await page.evaluate(()=>({
   profile:profile,
   backup:JSON.parse(localStorage.getItem('revisionLoopProfile-pre-world-v62')),
