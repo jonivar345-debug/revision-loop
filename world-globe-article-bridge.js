@@ -201,7 +201,8 @@
       const section=document.createDocumentFragment();
       section.append(text('h4',story.country||label));
       section.append(text('p','Country feature: '+(story.focus||'geography and cultural heritage')+'. This is background about the country, not necessarily about the selected city.'));
-      // Only the 13 manually checked CC files are eligible; other external location photos are untouched.
+      let reviewedCountryPhotos=false;
+      // Prefer manually checked files where available; otherwise fetch Commons metadata on demand.
       try{
         const vettedFiles=await Promise.all([
           fetch('./editorial/commons_verified_photos_batch3_20261023.json',{cache:'force-cache'}),
@@ -217,6 +218,7 @@
             'Singapore Botanic Gardens.jpg','Singapore Botanic Gardens (1).jpg'
           ]);
           const images=packages.flatMap(p=>p.files||[]).filter(p=>p.countryCode===iso&&allowed.has(p.file)).slice(0,2);
+          reviewedCountryPhotos=images.length>0;
           for(const photo of images){
             const figure=document.createElement('figure');figure.className='world-guide-photo';
             const img=document.createElement('img');
@@ -237,6 +239,16 @@
           }
         }
       }catch{ /* Photo metadata unavailable: keep the researched text accessible. */ }
+      if(!reviewedCountryPhotos&&window.RevisionWorldCommonsMedia){
+        // Strictly check returned file-level CC licence and artist.
+        // Automated search cannot establish exact site depiction, so label that clearly.
+        const media=window.RevisionWorldCommonsMedia;
+        const photos=await media.search((story.focus||story.country)+' '+story.country,{limit:2});
+        if(current!==token||!container.isConnected)return;
+        const host=document.createElement('div');host.className='world-auto-photo-results';
+        media.append(host,photos,{emptyText:'No CC-licensed image with a named photographer was found.'});
+        section.append(host);
+      }
       if(current!==token||!container.isConnected)return;
       for(const part of story.sections||[]){
         section.append(text('h5',part.title));
