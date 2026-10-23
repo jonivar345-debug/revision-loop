@@ -25,7 +25,7 @@ assert.equal(checked.license,'CC BY-SA 4.0');
 assert(checked.filePage.startsWith('https://commons.wikimedia.org/wiki/File:'));
 assert.equal(checked.licenseUrl,'https://creativecommons.org/licenses/by-sa/4.0/');
 
-for(const [city,landmark] of [['london','Tower Bridge'],['busan','Seomyeon'],['tbilisi','Tbilisi'],['capetown','Table Mountain']]){
+for(const [city,landmark] of [['london','Tower Bridge'],['busan','Seomyeon'],['tbilisi','Tbilisi'],['capetown','Table Mountain'],['nairobi','Nairobi'],['newyork','New York'],['cusco','Cusco'],['sydney','Sydney'],['tokyo','Tokyo'],['reykjavik','Reykjavik']]){
  const photo=media.approvedFor(city);
  assert(photo?.checked===true,'Missing manually reviewed city photograph '+city);
  assert(photo.description.includes(landmark),'Incorrect reviewed landmark '+city);
