@@ -37,31 +37,40 @@
     "pricingCaution": "These numbers were calculated directly from PR#2 app.js on 2026-10-23; older project ledger claiming 825 max is stale for this branch. Desired 50-100 point general location pricing is NOT deployed."
   },
   "editorialArchive": {
-    "primaryCountryFeatures": 84,
+    "primaryCountryFeatures": 120,
     "additionalAfricanVersions": 10,
-    "duplicateAfricanAlternatives": 6,
-    "uniqueCountryCodes": 88,
-    "totalArticleVersions": 94,
+    "duplicateAfricanAlternatives": 9,
+    "uniqueCountryCodes": 121,
+    "totalArticleVersions": 130,
     "wordRequirement": "All checked >=200 words per article body",
-    "newCountryFeaturesThisSession": 24,
+    "newCountryFeaturesThisSession": 36,
     "targetCountryGateways": 196,
-    "remainingWithoutSourceBacked200WordDraft": 108,
-    "countryCoveragePercent": 44.9,
+    "remainingWithoutSourceBacked200WordDraft": 75,
+    "countryCoveragePercent": 61.7,
     "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
     "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
     "photosInstalledInWorldUI": 0,
     "photosStatus": "13 file records in batches 3+4 have named authors and licence metadata; this is not a total of all earlier prototype photos, and image binaries or live rendering were not tested",
     "separateWorldTaskAdditions": 12,
-    "separateWorldTaskBatch": "editorial/full_country_stories_batch6_12_20261023.json"
+    "separateWorldTaskBatch": "editorial/full_country_stories_batch6_12_20261023.json",
+    "latestBatches": [
+      "editorial/full_country_stories_batch7_12_20261023.json",
+      "editorial/full_country_stories_batch8_12_20261023.json",
+      "editorial/full_country_stories_batch9_12_20261023.json"
+    ],
+    "index": "editorial/country_gateway_release_index_20261023.json"
   },
   "integrity": {
-    "test": "tests/world-editorial-integrity.cjs (auto-discovers subsequent full_country_stories_batch files)",
-    "ci": "Scanner marking regression workflow now invokes editorial test on PRs; newest run result must be checked before release",
+    "test": "tests/world-editorial-integrity.cjs: auto-discovers batch files, validates per-file advertised counts and release index",
+    "ci": "PR regression workflow includes world-editorial-integrity and world-shop-id-preservation; check latest workflow conclusion before publishing",
     "productionStateChanged": false,
     "purchasesMigrated": false,
     "storeCostsChanged": false,
     "historicalPurchaseIdsRemoved": false,
-    "auditCorrection": "Six overlapping African alternatives including TZ; concurrent country batch 6 added 12 previously unrepresented countries, raising total to 88 distinct codes."
+    "auditCorrection": "Six overlapping African alternatives including TZ; concurrent country batch 6 added 12 previously unrepresented countries, raising total to 88 distinct codes.",
+    "shopIdBaseline": "editorial/shop_historical_identity_baseline_20261023.json",
+    "shopIdTest": "tests/world-shop-id-preservation.cjs",
+    "snapshotNote": "121 verified distinct country codes in 130 200+ word drafts. 9 overlapping African alternatives, including newly added Uganda, Malawi and Mozambique. 116 legacy character and 161 location IDs inventoried and guarded in CI. The world UI remains unintegrated."
   },
   "releaseGates": [
     "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
