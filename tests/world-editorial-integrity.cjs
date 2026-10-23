@@ -86,4 +86,16 @@ for(const selected of release.entries){
 }
 assert.equal(release.totals.totalVersionCount,main.length+africa.length);checks++;
 assert.equal(release.totals.alternates,main.length+africa.length-allCodes.size);checks++;
+// The five ocean articles must be distinct, source-backed and remain non-runtime.
+const ocean=JSON.parse(fs.readFileSync(path.join(root,'ocean_stories_5_20261023.json'),'utf8'));
+const expectedOceanIds=new Set(['ocean-pacific','ocean-atlantic','ocean-indian','ocean-arctic','ocean-southern']);
+assert.equal(ocean.records.length,5,'Missing ocean article');checks++;
+for(const entry of ocean.records){
+  assert(expectedOceanIds.delete(entry.id),'Duplicate or unknown named ocean: '+entry.id);checks++;
+  assert.equal(entry.sections.length,4,'Incomplete ocean sections: '+entry.id);checks++;
+  assert(wordCount(entry.sections.map(s=>s.body).join(' '))>=200,'Ocean article too short: '+entry.id);checks++;
+  assert(entry.sources.length>=1&&entry.sources.every(s=>s.startsWith('https://')),'Missing ocean references: '+entry.id);checks++;
+  assert(entry.editorialStatus.includes('draft')&&entry.imageRights.includes('No photo asset'),'Uncleared ocean publication: '+entry.id);checks++;
+}
+assert.equal(expectedOceanIds.size,0,'Missing ocean identifiers');checks++;
 console.log('PASS '+checks+' editorial QA assertions; '+main.length+' primary + '+africa.length+' Africa versions = '+allCodes.size+' distinct countries, '+(main.length+africa.length)+' source-backed articles, all 200+ words; no runtime mutations');
