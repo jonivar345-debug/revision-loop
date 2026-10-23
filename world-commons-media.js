@@ -8,6 +8,12 @@
 })(typeof window==='object'?window:null,function(){
  'use strict';
  const CHECKED_LOCATION_PHOTOS=Object.freeze({
+  nairobi:{file:'Nairobi skyline P1000021.jpg',description:'Nairobi skyline from Upper Hill',author:'Lmwangi',license:'CC BY-SA 3.0'},
+  newyork:{file:'New York City, Skyline.jpg',description:'Skyline of Lower Manhattan, New York City',author:'Davidswiki',license:'CC BY-SA 4.0'},
+  cusco:{file:'Plaza de Armas Cusco.jpg',description:'Historic Plaza de Armas in Cusco, Peru',author:'Yanela Sharumi Ccalluco Vargas',license:'CC BY-SA 4.0'},
+  sydney:{file:'Sydney Opera House.jpg',description:'Sydney Opera House beside the harbour',author:'Michael elwazer',license:'CC BY-SA 4.0'},
+  tokyo:{file:'Tokyo skyline seen from Tokyo Skytree.jpg',description:'Tokyo skyline seen from the Tokyo Skytree',author:'Ruthsic',license:'CC BY-SA 4.0'},
+  reykjavik:{file:'Reykjavik from Hallgrimskikrja.jpg',description:'Reykjavik cityscape seen from Hallgrímskirkja',author:'Wa17gs',license:'CC BY-SA 4.0'},
   london:{file:'The Tower Bridge, London, UK.jpg',description:'Tower Bridge over the Thames in London',author:'Maksim Sokolov (maxergon.com)',license:'CC BY-SA 4.0'},
   busan:{file:'Seomyeon Skyline.jpg',description:'Skyline of Seomyeon district, Busan',author:'Minseong Kim',license:'CC BY-SA 4.0'},
   tbilisi:{file:'Old Tbilisi skyline.jpg',description:'Old Tbilisi skyline and Holy Trinity Cathedral',author:'Ishai Parasol',license:'CC BY-SA 2.0'},
