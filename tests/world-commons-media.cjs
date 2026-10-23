@@ -24,6 +24,18 @@ assert.equal(checked.author,'A. Photographer');
 assert.equal(checked.license,'CC BY-SA 4.0');
 assert(checked.filePage.startsWith('https://commons.wikimedia.org/wiki/File:'));
 assert.equal(checked.licenseUrl,'https://creativecommons.org/licenses/by-sa/4.0/');
+
+for(const [city,landmark] of [['london','Tower Bridge'],['busan','Seomyeon'],['tbilisi','Tbilisi'],['capetown','Table Mountain']]){
+ const photo=media.approvedFor(city);
+ assert(photo?.checked===true,'Missing manually reviewed city photograph '+city);
+ assert(photo.description.includes(landmark),'Incorrect reviewed landmark '+city);
+ assert(photo.url.startsWith('https://commons.wikimedia.org/wiki/Special:FilePath/'));
+ assert(photo.filePage.startsWith('https://commons.wikimedia.org/wiki/File:'));
+ assert(photo.licenseUrl.startsWith('https://creativecommons.org/licenses/by-sa/'));
+ assert(photo.author.length>3,'Missing artist for reviewed photo '+city);
+}
+assert.equal(media.approvedFor('not_an_actual_city'),null);
+
 let requests=0,asked='';
 const fetcher=async url=>{requests++;asked=url;return {ok:true,json:async()=>({query:{pages:[good,unknown,noArtist]}})}};
 class E {
