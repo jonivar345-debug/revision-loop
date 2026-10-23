@@ -33,7 +33,7 @@ const fakeFetch=async(input)=>{
   fetched.push(input);
   return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,input),'utf8'))};
 };
-const context={document,URL,fetch:fakeFetch,console};
+const context={document,URL,URLSearchParams,fetch:fakeFetch,console,window:{location:{search:'?country=GE'}}};
 vm.runInNewContext(script,context,{timeout:2000});
 const poll=async (fn)=>{
   for(let i=0;i<100;i++){if(fn())return;await new Promise(resolve=>setTimeout(resolve,10));}
@@ -45,6 +45,7 @@ const poll=async (fn)=>{
   const all=el.entryList.children.map(li=>li.children[0]);
   assert(all.every(x=>x.attrs['aria-current']==='true'||x.attrs['aria-current']==='false'));
   await poll(()=>el.articlePanel.children.map(x=>x.textContent).join(' ').length>350);
+  assert(el.articlePanel.children.some(x=>x.textContent==='Georgia'),'Country deep-link did not open Georgia');
   const firstArticle=el.articlePanel.children.map(x=>x.textContent).join(' ');
   assert(firstArticle.length>350,'First article was not rendered');
   el.worldSearch.value='Georgia';el.worldSearch.listeners.input();
