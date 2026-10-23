@@ -204,7 +204,7 @@
         <div id="outfitShop" class="shop-grid"></div>
       </section>
 
-      <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock real places, rotate the Earth and use actual location photos.</p></div><strong id="locationCount">0 / 0</strong></div>
+      <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock destinations, rotate a geographically accurate Earth, and open researched information by selecting an owned pin.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="globe-card">
         <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing collectable world locations"></canvas>
         <div class="globe-zoom-controls" role="group" aria-label="Globe zoom controls">
@@ -213,6 +213,8 @@
           <button id="globeZoomIn" type="button" class="mini-btn" aria-label="Zoom globe in">+</button>
           <button id="globeZoomReset" type="button" class="mini-btn" aria-label="Reset globe zoom">Reset</button>
         </div>
+        <label class="globe-pin-density"><input type="checkbox" id="showAllGlobePins"> Show every pin <span>(can overlap)</span></label>
+        <p class="globe-source-note">Geography: Natural Earth · NASA Blue Marble when available. Country and marine pins are representative locations, not borders.</p>
         <div id="globeLabel" class="globe-label">Drag to rotate · tap a pin to inspect it</div>
       </div>
       <div id="globeLocationInfo" class="globe-location-info hidden" aria-live="polite"></div>
@@ -230,10 +232,11 @@
     </section>
   </main>
 </div>
+<script src="world-earth-renderer.js?v=68" defer></script>
 <script src="world-geographic-destinations.js?v=65" defer></script>
 <script src="world-profile-preservation.js?v=63" defer></script>
-<script src="world-commons-media.js?v=64" defer></script>
-<script src="app.js?v=65" defer></script>
+<script src="world-commons-media.js?v=68" defer></script>
+<script src="app.js?v=68" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=62" defer></script>
 <script>
