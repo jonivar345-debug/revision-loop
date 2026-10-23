@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "type": "original-official-source-only-audit",
+  "qualification": "A-level",
+  "subject": "Physics",
+  "specification": "7408",
+  "year": 2022,
+  "series": "June",
+  "paper": "7408/3BE",
+  "paperTitle": "Paper 3 Section B Option E — Electronics",
+  "optionalSection": "B",
+  "oneOptionOnly": true,
+  "pairedCompulsorySection": "7408/3A",
+  "pairedCompulsoryMarks": 45,
+  "sectionMarks": 35,
+  "combinedPaperMarksForCandidate": 80,
+  "numberedQuestions": 5,
+  "partCount": 17,
+  "questionTotals": [
+    8,
+    7,
+    7,
+    7,
+    6
+  ],
+  "officialQuestionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BE-QP-JUN22.PDF",
+  "officialMarkSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BE-MS-JUN22.PDF",
+  "officialSpecificationUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electronics-a-level-only",
+  "questionPaperPages": 20,
+  "markSchemePages": 15,
+  "markSchemeVersion": "1.0 Final",
+  "sourceVerification": "All 17 question parts, mark values, mark-scheme page references and AQA 3.13 subtopic codes cross-checked against official June 2022 PDFs and official AQA specification. Source contains circuit diagrams, truth tables, waveforms and communication map not reproduced here.",
+  "sourceOnly": true,
+  "playableQuestionCount": 0,
+  "workedSolutionCount": 0,
+  "markingGuidanceOriginalSummary": [
+    "Q01.1, Q01.3 and Q01.4 require actual diagram or waveform evidence. A text-only checker must not automatically award full drawing marks.",
+    "Q01.2 second mark is for supporting ideal-amplifier reasoning, not merely restating gain.",
+    "Q02.1 Boolean negation scope must be parsed symbolically, rather than matching variable tokens.",
+    "Q03.2 reading tolerance and calculation follow-through apply only to a period obtained from the original graph.",
+    "Q03.5 allows arithmetic follow-through when the conclusion is consistent with the student's bandwidth.",
+    "Q04.2 has separate two-mark method/conclusion chains for ratio and frequency.",
+    "Q05 is a six-mark level-of-response assessing both media and both client situations, not an additive keyword checklist."
+  ],
+  "copyrightNotice": "Editorial source mapping and mark totals only. No AQA original question stems, figures, official model answers or mark-scheme text reproduced.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        3
+      ],
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Locate virtual earth on inverting amplifier",
+      "aqaSpecificationReference": "3.13.4.1",
+      "assessmentFormat": "diagram-mark",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Physical mark placement on the source circuit required; an unlocated text label cannot establish credit.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.2",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        3
+      ],
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Derive closed-loop gain using ideal amplifier assumptions",
+      "aqaSpecificationReference": "3.13.4.1",
+      "assessmentFormat": "show-that",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Second mark requires reason for input-current equivalence or virtual-earth polarity; not simply quoting final gain.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.3",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        4
+      ],
+      "markSchemePdfPages": [
+        7
+      ],
+      "editorialSkillLabel": "Inverting amplifier output waveform with supply clipping",
+      "aqaSpecificationReference": "3.13.4.1",
+      "assessmentFormat": "waveform-drawing",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Inversion, period, gain and supply-rail saturation assessed on graph; text-only answer cannot replace plotted waveform.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.4",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        5
+      ],
+      "markSchemePdfPages": [
+        8
+      ],
+      "editorialSkillLabel": "Summing amplifier circuit and resistor selection",
+      "aqaSpecificationReference": "3.13.4.3",
+      "assessmentFormat": "circuit-drawing",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Connection, resistor magnitudes and correct input associations are separately assessed on circuit.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.1",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        6
+      ],
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Simplify Boolean expression from logic circuit",
+      "aqaSpecificationReference": "3.13.5.1",
+      "assessmentFormat": "symbolic-logic",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Boolean negation placement and AND relationship must be correct, not merely shared A/B tokens.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.2",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        6
+      ],
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Recognise exclusive-OR logic gate",
+      "aqaSpecificationReference": "3.13.5.1",
+      "assessmentFormat": "short-answer",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Equivalent accepted gate names; ensure identification of the specific gate.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.3",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        6
+      ],
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Complete multi-output truth table",
+      "aqaSpecificationReference": "3.13.5.1",
+      "assessmentFormat": "table-completion",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Two independent output groups; assess complete table values rather than keywords.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.4",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        7
+      ],
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Replace compound gates with equivalent logic gate",
+      "aqaSpecificationReference": "3.13.5.1",
+      "assessmentFormat": "short-answer",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Official mark scheme permits more than one equivalent gate name.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.5",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        7
+      ],
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Interpret binary comparison outputs",
+      "aqaSpecificationReference": "3.13.5.1",
+      "assessmentFormat": "multiple-choice",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Must evaluate source row selection with X/Y/Z meaning; no partial marks.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.1",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        8
+      ],
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "Carrier frequency from modulated waveform",
+      "aqaSpecificationReference": "3.13.6.4",
+      "assessmentFormat": "graph-calculation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Graph period and correct kHz unit; distinguish carrier from modulation envelope.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        8
+      ],
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "Audio frequency from modulation envelope",
+      "aqaSpecificationReference": "3.13.6.4",
+      "assessmentFormat": "graph-calculation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Correct full period from envelope, allowed reading tolerance, and restricted follow-through.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.3",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        9
+      ],
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "FM benefit relative to AM",
+      "aqaSpecificationReference": "3.13.6.4",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": false,
+      "sourceFirstMarkingRisk": "Accept any one technically valid distinct advantage; irrelevant or contradictory claims not credited.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.4",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        9
+      ],
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "FM channel count from allocated spectrum",
+      "aqaSpecificationReference": "3.13.6.4",
+      "assessmentFormat": "calculation",
+      "requiresOriginalFigureOrPriorData": false,
+      "sourceFirstMarkingRisk": "Count channels using the specified allocation interval; check endpoints rather than rounding without context.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.5",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        9
+      ],
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Carson-style FM bandwidth and channel compatibility",
+      "aqaSpecificationReference": "3.13.6.4",
+      "assessmentFormat": "calculation-and-conclusion",
+      "requiresOriginalFigureOrPriorData": false,
+      "sourceFirstMarkingRisk": "Bandwidth calculation and compatible conclusion separate; arithmetic follow-through if consistent.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04.1",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        11
+      ],
+      "markSchemePdfPages": [
+        13
+      ],
+      "editorialSkillLabel": "Schmitt-trigger RC oscillator switching cycle",
+      "aqaSpecificationReference": "3.13.5.3",
+      "assessmentFormat": "sequence-explanation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Three separate switching/charging/discharging stages in correct temporal order.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04.2",
+      "marks": 4,
+      "questionPaperPdfPages": [
+        12,
+        13
+      ],
+      "markSchemePdfPages": [
+        13
+      ],
+      "editorialSkillLabel": "Astable duty ratio and frequency under resistance adjustment",
+      "aqaSpecificationReference": "3.13.5.3",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Two independent paired method/conclusion chains: mark-space ratio and constant PRF; direction matters.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "05",
+      "marks": 6,
+      "questionPaperPdfPages": [
+        14,
+        15
+      ],
+      "markSchemePdfPages": [
+        14,
+        15
+      ],
+      "editorialSkillLabel": "Select fibre and satellite communication links for changing needs",
+      "aqaSpecificationReference": "3.13.6.2",
+      "assessmentFormat": "level-of-response",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Holistic six-mark levels: how both media operate and justified solutions for both clients; do not treat as six keywords.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    }
+  ]
+}
