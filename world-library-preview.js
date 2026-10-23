@@ -234,15 +234,19 @@ const initialise = async () => {
     if(new Set(entries.map(e=>e.id)).size!==entries.length) throw Error('Duplicate article identifier');
     entries.sort((a,b)=>displayName(a).localeCompare(displayName(b),'en-GB'));
     renderList();
-    let requested=null;
+    let requestedCountry=null,requestedFeature=null;
     try {
-      if(typeof window!=='undefined' && window.location?.search){
-        requested=new URLSearchParams(window.location.search).get('country')?.trim().toUpperCase()||null;
+      if(typeof window!=='undefined'&&window.location?.search){
+        const params=new URLSearchParams(window.location.search);
+        requestedCountry=params.get('country')?.trim().toUpperCase()||null;
+        requestedFeature=params.get('feature')?.trim().toLowerCase()||null;
       }
     }catch{}
-    const requestedArticle=requested?entries.find(x=>x.kind==='country'&&x.iso2===requested):null;
-    if(requested&&!requestedArticle){
-      panel.replaceChildren(text('p','This geographic area is not one of the 196 country gateways in this edition. Its existing Revision Loop location remains available, and the full library can be browsed on the left.','empty'));
+    const requestedArticle=requestedFeature
+      ?entries.find(x=>x.id===requestedFeature)
+      :requestedCountry?entries.find(x=>x.kind==='country'&&x.iso2===requestedCountry):null;
+    if((requestedCountry||requestedFeature)&&!requestedArticle){
+      panel.replaceChildren(text('p','This requested geographic feature is not in the library. Its existing Revision Loop destination remains intact. Browse the available stories on the left.','empty'));
     }else if(entries.length){
       await showArticle(requestedArticle||entries[0]);
     }
