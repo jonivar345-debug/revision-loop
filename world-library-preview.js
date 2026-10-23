@@ -219,7 +219,13 @@ const initialise = async () => {
     if(new Set(entries.map(e=>e.id)).size!==entries.length) throw Error('Duplicate article identifier');
     entries.sort((a,b)=>displayName(a).localeCompare(displayName(b),'en-GB'));
     renderList();
-    if (entries.length) await showArticle(entries[0]);
+    let requested=null;
+    try {
+      if(typeof window!=='undefined' && window.location?.search){
+        requested=new URLSearchParams(window.location.search).get('country')?.trim().toUpperCase()||null;
+      }
+    }catch{}
+    if(entries.length) await showArticle(entries.find(x=>x.kind==='country'&&x.iso2===requested)||entries[0]);
   } catch(error) {
     count.textContent='Preview unavailable';
     list.replaceChildren(text('li','The editorial files could not be loaded. Open this page through a web server, not directly as a file.','empty'));
