@@ -53,6 +53,12 @@ const poll=async (fn)=>{
   button.listeners.click();
   await poll(()=>el.articlePanel.children.some(x=>x.textContent==='Upper Svaneti'));
   assert(el.articlePanel.children.some(x=>x.tagName==='details'),'Source details not rendered');
+  el.worldSearch.value='Albania';el.worldSearch.listeners.input();
+  assert.equal(el.entryList.children.length,1);
+  el.entryList.children[0].children[0].listeners.click();
+  await poll(()=>el.articlePanel.children.some(x=>x.tagName==='details'&&x.children[0]?.textContent?.includes('Checked image references')));
+  const photoDetails=el.articlePanel.children.find(x=>x.tagName==='details'&&x.children[0]?.textContent?.includes('Checked image references'));
+  assert.equal(photoDetails.children.find(x=>x.tagName==='ul').children.length,2,'Albania verified source-photo count');
   el.worldSearch.value='';
   el.worldType.value='sea';el.worldType.listeners.change();
   assert.equal(el.entryList.children.length,17);
