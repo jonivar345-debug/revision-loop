@@ -35,4 +35,20 @@ assert(app.includes('drawGlobe();')&&app.includes('renderAll();drawGlobe();'),'B
 assert(html.includes('id="showAllGlobePins"'),'Pin density toggle not accessible');
 assert(style.includes('.location-image-map-fallback'),'Photo fallbacks should use descriptive map art');
 assert(!app.includes("images.search(l.name+' landscape'"),'Unrelated second photo API still in location details');
+// Guard the coordinates of the locations visible in the reported screenshots
+// and major cities on nearby parts of the globe. Coordinates are WGS84 degrees.
+const referenceCities=[
+ ['nairobi',-1.2921,36.8219],['tbilisi',41.7151,44.8271],['london',51.5072,-.1276],
+ ['newyork',40.7128,-74.006],['cusco',-13.5319,-71.9675],['sydney',-33.8688,151.2093],
+ ['capetown',-33.9249,18.4241],['tokyo',35.6762,139.6503],['reykjavik',64.1466,-21.9426],
+ ['busan',35.1796,129.0756],['hongkong',22.3193,114.1694],['seoul',37.5665,126.978],
+ ['shanghai',31.2304,121.4737],['istanbul',41.0082,28.9784],['paris',48.8566,2.3522],
+ ['beijing',39.9042,116.4074]
+];
+for(const [id,latitude,longitude] of referenceCities){
+ const match=app.match(new RegExp("\\{id:'"+id+"'[^}]*lat:([\\d.-]+),lon:([\\d.-]+)"));
+ assert(match,'City lost historical position '+id);
+ assert(Math.abs(Number(match[1])-latitude)<.06,'Incorrect north/south position '+id);
+ assert(Math.abs(Number(match[2])-longitude)<.06,'Incorrect east/west position '+id);
+}
 console.log('PASS geographic Earth: '+geo.rings.length+' public-domain WGS84 rings; clean dateline, new country/marine pins, ownership colours and uncluttered click targets.');
