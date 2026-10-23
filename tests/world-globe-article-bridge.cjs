@@ -73,5 +73,25 @@ const content=guide.children[guide.children.length-1];
  assert(fetches.includes('editorial/country_gateway_release_index_20261023.json'));
  assert(fetches.includes('editorial/full_country_stories_batch10_12_20261023.json'));
  assert.equal(button.disabled,true,'Button must not double-load');
- console.log('PASS world globe integration: 161 existing IDs map to country guides, selected pin opens source-linked text, no storage reads/writes.');
+ // A newly purchasable sea pin must expose its actual research article.
+ const marineInfo=new E('section'),marineShop=new E('div');
+ marineShop.parentNode={insertBefore:()=>{}};
+ const marineDoc={
+   getElementById:id=>id==='globeLocationInfo'?marineInfo:id==='locationShop'?marineShop:null,
+   createElement:tag=>new E(tag),
+   createDocumentFragment:()=>new E('fragment')
+ };
+ const marineWindow={};
+ vm.runInNewContext(script,{document:marineDoc,window:marineWindow,MutationObserver,fetch,openLocationId:'sea-mediterranean',URL},{timeout:2500});
+ assert.equal(marineInfo.children.length,1,'Marine globe pin did not receive a story panel');
+ const marineButton=marineInfo.children[0].children.find(x=>x.tagName==='button');
+ assert(marineButton&&marineButton.textContent.includes('sea or ocean'),'Wrong marine reader label');
+ marineButton.listeners.click();
+ const marineArticle=marineInfo.children[0].children.at(-1);
+ for(let i=0;i<100&&!marineArticle.children.some(x=>x.tagName==='h4'&&x.textContent==='Mediterranean Sea');i++)
+   await new Promise(ok=>setTimeout(ok,10));
+ assert(marineArticle.children.some(x=>x.tagName==='h4'&&x.textContent==='Mediterranean Sea'),'Mediterranean article missing from new pin');
+ assert(fetches.includes('editorial/sea_stories_batch1_9_20261023.json'));
+ console.log('PASS world globe: 161 historical locations plus 218 new map features; country and marine pin research open correctly.');
+
 })().catch(e=>{console.error(e);process.exitCode=1});
