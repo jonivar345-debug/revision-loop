@@ -34,6 +34,17 @@ const loadJson = async path => {
 };
 const normal = value => String(value ?? '').toLocaleLowerCase('en-GB');
 const displayName = item => item.country || item.name;
+const designationLabels={
+  inscribed:'UNESCO World Heritage',
+  tentative:'UNESCO Tentative List (not inscribed)',
+  biosphere:'UNESCO Biosphere Reserve',
+  ramsar:'Ramsar Wetland',
+  national:'National protected area',
+  museum:'Museum and marine science',
+  environmental:'Environmental case study',
+  'geographic-special':'Geographic entry: disputed status'
+};
+
 const filtered = () => entries.filter(x =>
   (type.value === 'all' || x.kind === type.value) &&
   normal(displayName(x)+' '+(x.focus||x.subtitle||'')).includes(normal(search.value.trim()))
@@ -88,6 +99,7 @@ const showArticle = async item => {
     tags.append(text('span',item.kind,'tag'));
     tags.append(text('span','200+ word draft','tag'));
     tags.append(text('span','No unlocked items changed','tag'));
+    if(article.designation && designationLabels[article.designation]) tags.append(text('span',designationLabels[article.designation],'tag'));
     frag.append(tags);
     if (Array.isArray(article.sections)) {
       article.sections.forEach(section=>{
