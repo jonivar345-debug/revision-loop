@@ -40,8 +40,8 @@ const poll=async (fn)=>{
   throw Error('Preview did not reach expected state');
 };
 (async()=>{
-  await poll(()=>el.worldCount.textContent==='167 of 167 articles');
-  assert.equal(el.entryList.children.length,167);
+  await poll(()=>el.worldCount.textContent==='218 of 218 articles');
+  assert.equal(el.entryList.children.length,218);
   const all=el.entryList.children.map(li=>li.children[0]);
   assert(all.every(x=>x.attrs['aria-current']==='true'||x.attrs['aria-current']==='false'));
   await poll(()=>el.articlePanel.children.map(x=>x.textContent).join(' ').length>350);
@@ -65,8 +65,8 @@ const poll=async (fn)=>{
   el.worldType.value='ocean';el.worldType.listeners.change();
   assert.equal(el.entryList.children.length,5);
   el.worldType.value='country';el.worldType.listeners.change();
-  assert.equal(el.entryList.children.length,145);
+  assert.equal(el.entryList.children.length,196);
   assert(fetched.includes('editorial/country_gateway_release_index_20261023.json'));
   assert(fetched.includes('editorial/full_country_stories_batch10_12_20261023.json'));
-  console.log('PASS read-only explorer: 145 countries, 17 seas, 5 oceans, search, article opening, HTTPS source links and no profile access');
+  console.log('PASS read-only explorer: 196 countries, 17 seas, 5 oceans, search, article opening, HTTPS source links and no profile access');
 })().catch(error=>{console.error(error);process.exitCode=1});
