@@ -7,7 +7,8 @@ const mainFiles=[
   'full_country_stories_batch2_10_20261023.json',
   'full_country_stories_batch3_12_20261023.json',
   'full_country_stories_existing7_enriched_20261023.json',
-  'full_country_stories_batch4_12_20261023.json'
+  'full_country_stories_batch4_12_20261023.json',
+  'full_country_stories_batch5_12_20261023.json'
 ];
 const extra='country_stories_africa_10_source_only_20261023.json';
 const load=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')).records;
@@ -34,7 +35,7 @@ for(const {file,record:r} of main){
   assert(r.editorialStatus&&r.editorialStatus.includes('draft'),'Must remain review draft: '+r.iso2);checks++;
   assert(Array.isArray(r.photoQueries)&&r.photoQueries.length>=2,'Photo search ideas missing: '+r.iso2);checks++;
 }
-assert.equal(main.length,60,'Unexpected primary article count');checks++;
+assert.equal(main.length,72,'Unexpected primary article count');checks++;
 for(const {record:r} of africa){
   assert.match(r.iso2,/^[A-Z]{2}$/);checks++;
   assert(r.source?.startsWith('https://whc.unesco.org/en/list/'),'Missing UNESCO source: '+r.iso2);checks++;
@@ -43,12 +44,12 @@ for(const {record:r} of africa){
   allCodes.add(r.iso2);
 }
 assert.equal(africa.length,10);checks++;
-assert.equal(allCodes.size,65,'Country coverage needs reconciliation');checks++;
-assert.equal(main.length+africa.length,70,'Unexpected total article variants');checks++;
-const additions=load(mainFiles[4]);
-assert.equal(additions.length,12,'New country batch truncated');checks++;
+assert.equal(allCodes.size,77,'Country coverage needs reconciliation');checks++;
+assert.equal(main.length+africa.length,82,'Unexpected total article variants');checks++;
+const additions=[...load(mainFiles[4]),...load(mainFiles[5])];
+assert.equal(additions.length,24,'New country batches truncated');checks++;
 for(const r of additions){
   assert.equal(r.imageRights,'No image asset cleared; text only','Do not imply photo rights: '+r.iso2);checks++;
   assert(r.sources.every(x=>x.startsWith('https://whc.unesco.org/en/list/')),'Use official source: '+r.iso2);checks++;
 }
-console.log('PASS '+checks+' editorial QA assertions; 60 primary + 10 Africa versions = 65 distinct countries, 70 source-backed articles, all 200+ words; no runtime mutations');
+console.log('PASS '+checks+' editorial QA assertions; 72 primary + 10 Africa versions = 77 distinct countries, 82 source-backed articles, all 200+ words; no runtime mutations');
