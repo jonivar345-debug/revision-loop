@@ -93,6 +93,14 @@ for(const selected of release.entries){
 
   assert(selected.live===false&&selected.mediaStatus==='photos-not-attached','Unsafe publishing assertion '+selected.iso2);checks++;
 }
+// Editorial inclusion policy is explicit and exhaustive: 193 UN members, 2 observers, 1 Kosovo geographic entry.
+const policy=JSON.parse(fs.readFileSync(path.join(root,'country_gateway_inclusion_policy_196_20261023.json'),'utf8'));
+assert.equal(policy.iso2Codes.length,196,'Gateway policy code count changed');checks++;
+assert.equal(new Set(policy.iso2Codes).size,196,'Gateway policy contains duplicates');checks++;
+assert.deepEqual([...policy.iso2Codes].sort(),[...iso].sort(),'Draft countries diverge from declared 196-place scope');checks++;
+assert.equal(release.totals.distinctCountries,196,'Incomplete country draft archive');checks++;
+assert.equal(release.totals.missingCountryDrafts,0,'Country drafts still missing');checks++;
+assert.equal(policy.geopoliticalCaveats.XK.includes('disputed'),true,'Missing neutral Kosovo status context');checks++;
 assert.equal(release.totals.totalVersionCount,main.length+africa.length);checks++;
 assert.equal(release.totals.alternates,main.length+africa.length-allCodes.size);checks++;
 // The five ocean articles must be distinct, source-backed and remain non-runtime.
