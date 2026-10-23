@@ -1,0 +1,42 @@
+/* Pin-data integrity: preserve all old IDs, add precisely 218 country/marine entries. */
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const root=path.join(__dirname,'..');
+const geo=JSON.parse(fs.readFileSync(path.join(root,'editorial/world_destination_coordinates_218_20261023.json'),'utf8'));
+const script=fs.readFileSync(path.join(root,'world-geographic-destinations.js'),'utf8');
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+const index=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
+const baseline=JSON.parse(fs.readFileSync(path.join(root,'editorial/shop_historical_identity_baseline_20261023.json'),'utf8'));
+const countries=JSON.parse(fs.readFileSync(path.join(root,'editorial/country_gateway_release_index_20261023.json'),'utf8'));
+const oceans=JSON.parse(fs.readFileSync(path.join(root,'editorial/ocean_stories_5_20261023.json'),'utf8'));
+const seas=[...JSON.parse(fs.readFileSync(path.join(root,'editorial/sea_stories_batch1_9_20261023.json'),'utf8')).records,...JSON.parse(fs.readFileSync(path.join(root,'editorial/sea_stories_batch2_8_20261023.json'),'utf8')).records];
+const window={};
+vm.runInNewContext(script,{window});
+const newPins=window.RevisionWorldDestinations;
+assert(Object.isFrozen(newPins));
+assert.equal(newPins.length,218);
+assert.equal(geo.records.length,218);
+assert.deepEqual(JSON.parse(JSON.stringify(newPins)),geo.records);
+const ids=new Set(),types={country:0,ocean:0,sea:0};
+for(const entry of newPins){
+ assert(!ids.has(entry.id),'Duplicate pin '+entry.id);ids.add(entry.id);
+ assert(Number.isFinite(entry.lat)&&Math.abs(entry.lat)<=90,'Invalid latitude '+entry.id);
+ assert(Number.isFinite(entry.lon)&&Math.abs(entry.lon)<=180,'Invalid longitude '+entry.id);
+ assert(['Africa','Europe','Asia','Oceania','North America','South America','Oceans & Seas'].includes(entry.region),'Unknown region '+entry.id);
+ assert.equal(entry.cost,entry.worldKind==='country'?75:entry.worldKind==='sea'?60:70,'Incorrect new location price '+entry.id);
+ types[entry.worldKind]++;
+ assert(!baseline.locations.includes(entry.id),'New pin overwrote an old purchased ID '+entry.id);
+}
+assert.deepEqual(types,{country:196,ocean:5,sea:17});
+for(const country of countries.entries)assert(ids.has(country.gatewayId),'Country missing globe pin '+country.gatewayId);
+for(const ocean of oceans.records)assert(ids.has(ocean.id),'Ocean missing globe pin '+ocean.id);
+for(const sea of seas)assert(ids.has(sea.id),'Sea missing globe pin '+sea.id);
+assert.equal(new Set([...baseline.locations,...ids]).size,379);
+const legacyPricing=app.indexOf("LOCATIONS.forEach((l,i)=>{");
+const appended=app.indexOf("LOCATIONS.push({...destination})");
+assert(legacyPricing>=0&&appended>legacyPricing,'New entries must be appended after all historical price assignments');
+assert(index.indexOf('world-geographic-destinations.js')<index.indexOf('app.js?v=65'),'Pin data must load before app.js');
+assert(index.includes('<option>Oceans &amp; Seas</option>'),'Marine location filter missing');
+assert(sw.includes("'./world-geographic-destinations.js'"),'New map data unavailable in offline shell');
+console.log('PASS 196 country, five ocean, 17 sea positions and costs; 379 underlying IDs, three historic duplicate aliases kept; 376 distinct displayed destinations.');
