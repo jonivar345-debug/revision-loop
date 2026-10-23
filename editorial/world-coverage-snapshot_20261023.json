@@ -37,29 +37,31 @@
     "pricingCaution": "These numbers were calculated directly from PR#2 app.js on 2026-10-23; older project ledger claiming 825 max is stale for this branch. Desired 50-100 point general location pricing is NOT deployed."
   },
   "editorialArchive": {
-    "primaryCountryFeatures": 72,
+    "primaryCountryFeatures": 84,
     "additionalAfricanVersions": 10,
     "duplicateAfricanAlternatives": 6,
-    "uniqueCountryCodes": 76,
-    "totalArticleVersions": 82,
+    "uniqueCountryCodes": 88,
+    "totalArticleVersions": 94,
     "wordRequirement": "All checked >=200 words per article body",
     "newCountryFeaturesThisSession": 24,
     "targetCountryGateways": 196,
-    "remainingWithoutSourceBacked200WordDraft": 120,
-    "countryCoveragePercent": 38.8,
+    "remainingWithoutSourceBacked200WordDraft": 108,
+    "countryCoveragePercent": 44.9,
     "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
     "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
     "photosInstalledInWorldUI": 0,
-    "photosStatus": "13 file records in batches 3+4 have named authors and licence metadata; this is not a total of all earlier prototype photos, and image binaries or live rendering were not tested"
+    "photosStatus": "13 file records in batches 3+4 have named authors and licence metadata; this is not a total of all earlier prototype photos, and image binaries or live rendering were not tested",
+    "separateWorldTaskAdditions": 12,
+    "separateWorldTaskBatch": "editorial/full_country_stories_batch6_12_20261023.json"
   },
   "integrity": {
-    "test": "tests/world-editorial-integrity.cjs",
+    "test": "tests/world-editorial-integrity.cjs (auto-discovers subsequent full_country_stories_batch files)",
     "ci": "Scanner marking regression workflow now invokes editorial test on PRs; newest run result must be checked before release",
     "productionStateChanged": false,
     "purchasesMigrated": false,
     "storeCostsChanged": false,
     "historicalPurchaseIdsRemoved": false,
-    "auditCorrection": "Africa alternative batch also includes Tanzania (TZ), duplicated by batch 5. Six alternative entries, 76 distinct codes, not five / 77."
+    "auditCorrection": "Six overlapping African alternatives including TZ; concurrent country batch 6 added 12 previously unrepresented countries, raising total to 88 distinct codes."
   },
   "releaseGates": [
     "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
