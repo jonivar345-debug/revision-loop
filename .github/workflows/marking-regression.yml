@@ -29,6 +29,7 @@ jobs:
           node tests/adversarial-marking-regression.cjs
           node tests/world-economy-integrity.cjs
           node tests/world-editorial-integrity.cjs
+          node tests/world-destination-geography.cjs
           node scripts/rebuild-world-index.cjs --check
           node tests/world-shop-id-preservation.cjs
           node tests/world-profile-preservation.cjs
