@@ -4,8 +4,8 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const root=path.join(__dirname,'..','editorial');
 // Discover future country batches automatically rather than assuming a fixed number.
 const mainFiles=[...fs.readdirSync(root).filter(f=>
-  /^full_country_stories_batch\\d+_\\d+_\\d{8}\\.json$/.test(f)).sort((a,b)=>{
-    const num=f=>Number(f.match(/batch(\\d+)_/)[1]);return num(a)-num(b);
+  /^full_country_stories_batch\d+_\d+_\d{8}\.json$/.test(f)).sort((a,b)=>{
+    const num=f=>Number(f.match(/batch(\d+)_/)[1]);return num(a)-num(b);
   }), 'full_country_stories_existing7_enriched_20261023.json'];
 assert(mainFiles.length>=6,'Expected original country archive batches');
 const extra='country_stories_africa_10_source_only_20261023.json';
