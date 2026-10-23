@@ -4,11 +4,11 @@
   "publicationStatus": "NON-RUNTIME PREVIEW ONLY: no shop unlocks, no profile writes or migration",
   "description": "One primary country article per code; alternative Africa articles are maintained separately, and historical shop location IDs remain untouched.",
   "totals": {
-    "distinctCountries": 145,
-    "totalVersionCount": 154,
+    "distinctCountries": 153,
+    "totalVersionCount": 162,
     "alternates": 9,
     "countryGoal": 196,
-    "missingCountryDrafts": 51
+    "missingCountryDrafts": 43
   },
   "preservation": {
     "oldLocationIdsRemain": 161,
@@ -568,6 +568,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "CV",
+      "country": "Cabo Verde",
+      "gatewayId": "country-cv",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Cidade Velha, Historic Centre of Ribeira Grande",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1310"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "CY",
       "country": "Cyprus",
       "gatewayId": "country-cy",
@@ -711,6 +726,21 @@
       "wordCount": 243,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/87"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ER",
+      "country": "Eritrea",
+      "gatewayId": "country-er",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Asmara: A Modernist African City",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1550"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -957,6 +987,21 @@
       "wordCount": 252,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/95"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "HT",
+      "country": "Haiti",
+      "gatewayId": "country-ht",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "National History Park – Citadel, Sans Souci, Ramiers",
+      "wordCount": 232,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/180"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -1249,6 +1294,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "LS",
+      "country": "Lesotho",
+      "gatewayId": "country-ls",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Maloti-Drakensberg Park",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/985"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "LT",
       "country": "Lithuania",
       "gatewayId": "country-lt",
@@ -1324,6 +1384,21 @@
       "alternateSources": []
     },
     {
+      "iso2": "MD",
+      "country": "Moldova",
+      "gatewayId": "country-md",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Struve Geodetic Arc",
+      "wordCount": 245,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1187"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
       "iso2": "ME",
       "country": "Montenegro",
       "gatewayId": "country-me",
@@ -1347,6 +1422,21 @@
       "wordCount": 236,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/494"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MK",
+      "country": "North Macedonia",
+      "gatewayId": "country-mk",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Natural and Cultural Heritage of the Ohrid region",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/99"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -1552,6 +1642,21 @@
       "wordCount": 236,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/938"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NI",
+      "country": "Nicaragua",
+      "gatewayId": "country-ni",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "León Cathedral",
+      "wordCount": 242,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1236"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
@@ -1869,6 +1974,21 @@
       "wordCount": 226,
       "sourceLinks": [
         "https://whc.unesco.org/en/list/854"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SC",
+      "country": "Seychelles",
+      "gatewayId": "country-sc",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Aldabra Atoll",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/185"
       ],
       "editorialStatus": "needs-human-review",
       "mediaStatus": "photos-not-attached",
