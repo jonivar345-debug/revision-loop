@@ -1,0 +1,873 @@
+{
+  "schemaVersion": 1,
+  "recordType": "source-only official question-part audit",
+  "status": "source-metadata-only-not-student-visible",
+  "subject": "Chemistry",
+  "qualification": "A-level",
+  "specification": "7405",
+  "series": "June",
+  "year": 2022,
+  "paper": "7405/2",
+  "paperTitle": "Organic and Physical Chemistry",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74052-QP-JUN22.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74052-MS-JUN22.PDF",
+  "questionPaperPdfPages": 32,
+  "markSchemePdfPages": 33,
+  "markSchemeVersion": "1.0 Final",
+  "numberedQuestions": 10,
+  "questionParts": 46,
+  "totalMarks": 105,
+  "questionTotals": [
+    21,
+    11,
+    11,
+    9,
+    12,
+    6,
+    6,
+    7,
+    12,
+    10
+  ],
+  "officialQuestionPaperAndMarkSchemeChecked": true,
+  "questionPartMarksCrossChecked": true,
+  "questionPartMarkSchemePageReferencesChecked": true,
+  "exactSpecificationSubtopicCodesCrossChecked": false,
+  "originalPracticeQuestionsAdded": 0,
+  "websiteSourceLinkedPaperCoverageUpdated": false,
+  "copyright": "Editorial topic summaries and original source metadata only; no official question wording, diagrams or answer keys copied.",
+  "generalMarkingNotes": [
+    "Numerically correct answers normally receive full calculation marks without workings unless the question specifically requires a demonstration or justification.",
+    "Correct methods may earn process marks when the final calculation is wrong; apply explicit error-carried-forward allowances.",
+    "Chemistry list marking may cancel credit for extra contradictory answers, while neutral information is ignored.",
+    "Drawn structures and mechanisms require inspection of actual diagrams, not keyword-only marking.",
+    "Levels-of-response parts require a holistic judgement of scientific reasoning and communication.",
+    "Valid chemical nomenclature and equivalent structural representations can be accepted where the specific mark scheme permits."
+  ],
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 2,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 11,
+      "originalTopicSummary": "Displayed formula and systematic naming",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "structure",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.2",
+      "marks": 3,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 11,
+      "originalTopicSummary": "Rate constant and units from rate law",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.3",
+      "marks": 1,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 11,
+      "originalTopicSummary": "Rate changes with concentration",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.4",
+      "marks": 1,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 12,
+      "originalTopicSummary": "Colour-change endpoint observation",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "observation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.5",
+      "marks": 3,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 12,
+      "originalTopicSummary": "Temperature and reaction rate graph interpretation",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "graph explanation",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.6",
+      "marks": 1,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 12,
+      "originalTopicSummary": "Read time from reciprocal-time graph",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "graph calculation",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.7",
+      "marks": 5,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 13,
+      "originalTopicSummary": "Activation energy from rate constants",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "multi-stage method/accuracy",
+        "error carried forward",
+        "units"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "01.8",
+      "marks": 5,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 14,
+      "originalTopicSummary": "Carbonyl nucleophilic addition mechanism",
+      "topicTags": [
+        "reaction kinetics",
+        "carbonyl mechanisms"
+      ],
+      "assessmentFormat": "drawn mechanism",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "mechanism drawing",
+        "dependent marking points"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "02.1",
+      "marks": 2,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 15,
+      "originalTopicSummary": "Equilibrium stoichiometry",
+      "topicTags": [
+        "chemical equilibria",
+        "environmental chemistry"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "02.2",
+      "marks": 1,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 15,
+      "originalTopicSummary": "Equilibrium constant expression",
+      "topicTags": [
+        "chemical equilibria",
+        "environmental chemistry"
+      ],
+      "assessmentFormat": "equation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "02.3",
+      "marks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 15,
+      "originalTopicSummary": "Equilibrium constant value and units",
+      "topicTags": [
+        "chemical equilibria",
+        "environmental chemistry"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "error carried forward from 02.1/02.2",
+        "units",
+        "valid inverse expression follow-through"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "02.4",
+      "marks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 16,
+      "originalTopicSummary": "Temperature effect on equilibrium yield",
+      "topicTags": [
+        "chemical equilibria",
+        "environmental chemistry"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "02.5",
+      "marks": 2,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 16,
+      "originalTopicSummary": "Refrigerant environmental effects",
+      "topicTags": [
+        "chemical equilibria",
+        "environmental chemistry"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "03.1",
+      "marks": 5,
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 17,
+      "originalTopicSummary": "Electrophilic addition mechanism",
+      "topicTags": [
+        "alkene reactions",
+        "polymerisation"
+      ],
+      "assessmentFormat": "drawn mechanism",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "curly-arrow geometry",
+        "conditional method credit"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "03.2",
+      "marks": 3,
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 18,
+      "originalTopicSummary": "Major and minor products of addition",
+      "topicTags": [
+        "alkene reactions",
+        "polymerisation"
+      ],
+      "assessmentFormat": "structure explanation",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "error carried forward from 03.1"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "03.3",
+      "marks": 1,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 19,
+      "originalTopicSummary": "Functional group isomer structure",
+      "topicTags": [
+        "alkene reactions",
+        "polymerisation"
+      ],
+      "assessmentFormat": "drawn structure",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "03.4",
+      "marks": 2,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 19,
+      "originalTopicSummary": "Addition polymer repeating unit",
+      "topicTags": [
+        "alkene reactions",
+        "polymerisation"
+      ],
+      "assessmentFormat": "drawn structure",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "04.1",
+      "marks": 1,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 20,
+      "originalTopicSummary": "Protein structural level",
+      "topicTags": [
+        "amino acids",
+        "proteins"
+      ],
+      "assessmentFormat": "single choice",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "04.2",
+      "marks": 2,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 20,
+      "originalTopicSummary": "Peptide linkage and side chains",
+      "topicTags": [
+        "amino acids",
+        "proteins"
+      ],
+      "assessmentFormat": "drawn structure",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "04.3",
+      "marks": 1,
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 20,
+      "originalTopicSummary": "Condensation by-product",
+      "topicTags": [
+        "amino acids",
+        "proteins"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "04.4",
+      "marks": 4,
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 21,
+      "originalTopicSummary": "Protein side-chain interaction strengths",
+      "topicTags": [
+        "amino acids",
+        "proteins"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "multiple independent explanatory chains"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "04.5",
+      "marks": 1,
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 21,
+      "originalTopicSummary": "Ionic interaction between side chains",
+      "topicTags": [
+        "amino acids",
+        "proteins"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "05.1",
+      "marks": 2,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 22,
+      "originalTopicSummary": "Laboratory risk and control",
+      "topicTags": [
+        "organic preparation",
+        "practical methods"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "05.2",
+      "marks": 1,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 22,
+      "originalTopicSummary": "Washing during separation",
+      "topicTags": [
+        "organic preparation",
+        "practical methods"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "05.3",
+      "marks": 1,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 22,
+      "originalTopicSummary": "Drying organic liquid",
+      "topicTags": [
+        "organic preparation",
+        "practical methods"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "05.4",
+      "marks": 2,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 23,
+      "originalTopicSummary": "Vacuum filtration apparatus",
+      "topicTags": [
+        "organic preparation",
+        "practical methods"
+      ],
+      "assessmentFormat": "diagram",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "apparatus diagram cannot be marked from keywords alone"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "05.5",
+      "marks": 2,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 23,
+      "originalTopicSummary": "Distillation impurity and separation",
+      "topicTags": [
+        "organic preparation",
+        "practical methods"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "allow justified alternative with consequential mark"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "05.6",
+      "marks": 4,
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 24,
+      "originalTopicSummary": "Product mass and percentage yield",
+      "topicTags": [
+        "organic preparation",
+        "practical methods"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "consequential calculation",
+        "rounded numeric answer"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "06.1",
+      "marks": 6,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 25,
+      "originalTopicSummary": "Structure deduction from combined spectra",
+      "topicTags": [
+        "infrared spectroscopy",
+        "proton NMR",
+        "carbon-13 NMR"
+      ],
+      "assessmentFormat": "levels of response",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "levels of response 0-6",
+        "all three spectra needed",
+        "holistic reasoning"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "07.1",
+      "marks": 3,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 26,
+      "originalTopicSummary": "Curly-arrow ester hydrolysis",
+      "topicTags": [
+        "esters",
+        "organic mechanisms"
+      ],
+      "assessmentFormat": "drawn mechanism",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "curly-arrow geometry"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "07.2",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 27,
+      "originalTopicSummary": "Reaction classification",
+      "topicTags": [
+        "esters",
+        "organic mechanisms"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "07.3",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 27,
+      "originalTopicSummary": "Role of ion in mechanism",
+      "topicTags": [
+        "esters",
+        "organic mechanisms"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "07.4",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 27,
+      "originalTopicSummary": "Uses of triester hydrolysis products",
+      "topicTags": [
+        "esters",
+        "organic mechanisms"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "08.1",
+      "marks": 2,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 28,
+      "originalTopicSummary": "Overall aromatic substitution equation and name",
+      "topicTags": [
+        "aromatic chemistry",
+        "electrophilic substitution"
+      ],
+      "assessmentFormat": "equation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "08.2",
+      "marks": 2,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 28,
+      "originalTopicSummary": "Catalyst and electrophile formation",
+      "topicTags": [
+        "aromatic chemistry",
+        "electrophilic substitution"
+      ],
+      "assessmentFormat": "equation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "08.3",
+      "marks": 3,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 29,
+      "originalTopicSummary": "Electrophilic aromatic substitution mechanism",
+      "topicTags": [
+        "aromatic chemistry",
+        "electrophilic substitution"
+      ],
+      "assessmentFormat": "drawn mechanism",
+      "requiresVisualEvidence": true,
+      "markingReviewFlags": [
+        "mechanism drawing and intermediates"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "09.1",
+      "marks": 2,
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 30,
+      "originalTopicSummary": "Titration uncertainty and amount",
+      "topicTags": [
+        "quantitative analysis",
+        "mass spectrometry"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "09.2",
+      "marks": 5,
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPage": 30,
+      "originalTopicSummary": "Titration stoichiometry and sample mass",
+      "topicTags": [
+        "quantitative analysis",
+        "mass spectrometry"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "5 dependent calculation stages",
+        "allow consequential values from 09.1"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "09.3",
+      "marks": 2,
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 31,
+      "originalTopicSummary": "Accurate mass by difference in solution preparation",
+      "topicTags": [
+        "quantitative analysis",
+        "mass spectrometry"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "justification dependent on proposed step"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "09.4",
+      "marks": 1,
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 31,
+      "originalTopicSummary": "Volumetric flask mixing purpose",
+      "topicTags": [
+        "quantitative analysis",
+        "mass spectrometry"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "09.5",
+      "marks": 2,
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 31,
+      "originalTopicSummary": "Molecular formula from electrospray ion",
+      "topicTags": [
+        "quantitative analysis",
+        "mass spectrometry"
+      ],
+      "assessmentFormat": "calculation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [
+        "explicit working mandatory"
+      ],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "10.1",
+      "marks": 3,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 32,
+      "originalTopicSummary": "Reaction pathway reagents",
+      "topicTags": [
+        "aromatic amines",
+        "reaction pathways"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "10.2",
+      "marks": 1,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 32,
+      "originalTopicSummary": "Reaction mechanism classification",
+      "topicTags": [
+        "aromatic amines",
+        "reaction pathways"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "10.3",
+      "marks": 2,
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 32,
+      "originalTopicSummary": "Reaction pathway condition and reagent",
+      "topicTags": [
+        "aromatic amines",
+        "reaction pathways"
+      ],
+      "assessmentFormat": "short answer",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "10.4",
+      "marks": 2,
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 32,
+      "originalTopicSummary": "Competing products and yield",
+      "topicTags": [
+        "aromatic amines",
+        "reaction pathways"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    },
+    {
+      "id": "10.5",
+      "marks": 2,
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 33,
+      "originalTopicSummary": "Basicity comparison of amines",
+      "topicTags": [
+        "aromatic amines",
+        "reaction pathways"
+      ],
+      "assessmentFormat": "explanation",
+      "requiresVisualEvidence": false,
+      "markingReviewFlags": [],
+      "partSpecificRubricVerified": true,
+      "exactSpecificationSubtopicCodeVerified": false,
+      "studentFacingPracticeCreated": false
+    }
+  ],
+  "verificationNotes": "Part IDs, marks and PDF page numbers checked against the official June 2022 AQA 7405/2 question paper and final mark scheme. Broad topic tags are editorial and exact specification subtopic codes are not yet independently verified. The original copyrighted AQA paper remains at the official links; this file is not an exam question bank."
+}
