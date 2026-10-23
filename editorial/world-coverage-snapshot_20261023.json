@@ -58,7 +58,11 @@
       "editorial/full_country_stories_batch8_12_20261023.json",
       "editorial/full_country_stories_batch9_12_20261023.json"
     ],
-    "index": "editorial/country_gateway_release_index_20261023.json"
+    "index": "editorial/country_gateway_release_index_20261023.json",
+    "oceanFeatures": 5,
+    "oceanArticleWordsMin": 200,
+    "oceanSourceFile": "editorial/ocean_stories_5_20261023.json",
+    "oceanReleaseState": "Non-runtime draft; no new purchasable shop items or old IDs changed"
   },
   "integrity": {
     "test": "tests/world-editorial-integrity.cjs: auto-discovers batch files, validates per-file advertised counts and release index",
@@ -70,7 +74,8 @@
     "auditCorrection": "Six overlapping African alternatives including TZ; concurrent country batch 6 added 12 previously unrepresented countries, raising total to 88 distinct codes.",
     "shopIdBaseline": "editorial/shop_historical_identity_baseline_20261023.json",
     "shopIdTest": "tests/world-shop-id-preservation.cjs",
-    "snapshotNote": "121 verified distinct country codes in 130 200+ word drafts. 9 overlapping African alternatives, including newly added Uganda, Malawi and Mozambique. 116 legacy character and 161 location IDs inventoried and guarded in CI. The world UI remains unintegrated."
+    "snapshotNote": "121 verified distinct country codes in 130 200+ word drafts. 9 overlapping African alternatives, including newly added Uganda, Malawi and Mozambique. 116 legacy character and 161 location IDs inventoried and guarded in CI. The world UI remains unintegrated.",
+    "oceanQA": "tests/world-editorial-integrity.cjs verifies the five named oceans, minimum lengths and source references"
   },
   "releaseGates": [
     "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
