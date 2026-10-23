@@ -679,6 +679,7 @@ if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations))
 
 // Use actual WGS84 Natural Earth geography, pre-cached with the app.
  // Blue Marble remote-image failures previously left a blue circle with no continents.
+const EARTH_TEXTURE_URL='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=1280';
 let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;
 let satelliteReady=false;
 if(window.RevisionWorldEarth){
@@ -707,7 +708,7 @@ nasaEarth.onload=()=>{
  }catch(error){console.warn('Using offline Natural Earth globe instead of remote satellite imagery',error)}
 };
 nasaEarth.onerror=()=>{};
-nasaEarth.src='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=1280';
+nasaEarth.src=EARTH_TEXTURE_URL;
 // Wikipedia lead photos are resolved with verified Commons rights metadata.
 
 function load(k,f){try{const x=JSON.parse(localStorage.getItem(k));return x??f}catch{return f}}
