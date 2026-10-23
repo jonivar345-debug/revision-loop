@@ -686,7 +686,7 @@ if(window.RevisionWorldEarth){
   earthTextureReady=true;drawGlobe();
  }).catch(error=>{console.warn('Natural Earth data unavailable',error);drawGlobe()});
 }
-const wikiPhotoCache={};
+// Wikipedia lead photos are resolved with verified Commons rights metadata.
 
 function load(k,f){try{const x=JSON.parse(localStorage.getItem(k));return x??f}catch{return f}}
 function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));localStorage.setItem(PROFILE_KEY,JSON.stringify(profile));localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings))}
@@ -2139,21 +2139,32 @@ const LOCATION_PHOTO_SEARCH={
  peritomoreno:'Perito Moreno Glacier panorama',chefchaouen:'Chefchaouen Morocco blue city',
  papeete:'Papeete Tahiti harbour',apia:'Apia Samoa town',grandcanyon:'Grand Canyon South Rim panorama'
 };
+function locationImageFallback(el,location){
+ if(!el?.isConnected)return;
+ el.classList.add('location-image-map-fallback');
+ el.replaceChildren();
+ const globe=document.createElement('span');globe.className='location-image-earth';globe.setAttribute('aria-hidden','true');globe.textContent='🌐';
+ const label=document.createElement('span');label.className='location-image-fallback-label';
+ label.textContent=location.worldKind==='sea'||location.worldKind==='ocean'?'Marine location':location.worldKind==='country'?'Country on Earth':'Find on the globe';
+ el.append(globe,label);
+}
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
  const images=window.RevisionWorldCommonsMedia;
- if(!images){el.textContent='Licensed images unavailable offline';return}
+ if(!images){locationImageFallback(el,location);return}
  const loadPhotos=async()=>{
-  const query=LOCATION_PHOTO_SEARCH[location.id]||location.name+' '+location.wiki.replace(/_/g,' ');
-  const results=await images.search(query,{limit:1});
-  if(el.isConnected)images.append(el,results);
+  // Wikipedia's actual place article chooses the photograph: never search
+  // for a vaguely related market, river or skyline by keywords.
+  const matches=await images.searchPage(location.wiki);
+  if(!el.isConnected||el.dataset.locationPhoto&&el.dataset.locationPhoto!==location.id)return;
+  if(matches.length){el.classList.remove('location-image-map-fallback');images.append(el,matches)}
+  else locationImageFallback(el,location);
  };
- // Avoid dozens of off-screen external image searches on every shop rerender.
  if(typeof IntersectionObserver==='function'&&el.closest('#locationShop')){
   const observer=new IntersectionObserver(entries=>{
    if(!entries.some(entry=>entry.isIntersecting))return;
    observer.disconnect();loadPhotos();
-  },{rootMargin:'260px'});
+  },{rootMargin:'180px'});
   observer.observe(el);
  }else await loadPhotos();
 }
@@ -2298,7 +2309,7 @@ async function setLocationInfo(id){
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
  host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
- '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Loading location photo…</div><div id="detailPhotoTwo" class="image-fallback">Finding another view…</div></div>'+
+ '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Checking this place’s lead photograph and image licence…</div></div>'+
  '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">Loading a local introduction…</p></div>'+
  '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
  '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>'+
@@ -2339,15 +2350,6 @@ async function setLocationInfo(id){
    if(!LOCATION_FACTS[id])document.getElementById('locationQuickFact').textContent='Verified local fact unavailable offline.';
   }
  }
- try{
-  const images=window.RevisionWorldCommonsMedia;
-  const photos=images?await images.search(l.name+' landscape',{limit:2}):[];
-  if(openLocationId===id&&host.isConnected){
-   const second=document.getElementById('detailPhotoTwo');
-   if(images)images.append(second,photos.slice(photos.length>1?1:0,photos.length>1?2:1));
-   else second.textContent='Licensed image information unavailable';
-  }
- }catch{if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable'}
  drawGlobe();
 }
 function renderShop(){
