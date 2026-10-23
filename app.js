@@ -2178,9 +2178,14 @@ async function locationPhoto(location,el){
  const loadPhotos=async()=>{
   // Wikipedia's actual place article chooses the photograph: never search
   // for a vaguely related market, river or skyline by keywords.
-  const matches=await images.searchPage(location.wiki);
+  const approved=images.approvedFor?.(location.id);
+  const matches=approved?[approved]:await images.searchPage(location.wiki);
   if(!el.isConnected||el.dataset.locationPhoto&&el.dataset.locationPhoto!==location.id)return;
-  if(matches.length){el.classList.remove('location-image-map-fallback');images.append(el,matches)}
+  if(matches.length){
+   el.classList.remove('location-image-map-fallback');images.append(el,matches);
+   // A blocked external thumbnail must not leave an empty image or a broken icon.
+   el.querySelector('img')?.addEventListener('error',()=>locationImageFallback(el,location),{once:true});
+  }
   else locationImageFallback(el,location);
  };
  if(typeof IntersectionObserver==='function'&&el.closest('#locationShop')){
