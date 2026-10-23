@@ -37,16 +37,16 @@
     "pricingCaution": "These numbers were calculated directly from PR#2 app.js on 2026-10-23; older project ledger claiming 825 max is stale for this branch. Desired 50-100 point general location pricing is NOT deployed."
   },
   "editorialArchive": {
-    "primaryCountryFeatures": 120,
+    "primaryCountryFeatures": 144,
     "additionalAfricanVersions": 10,
     "duplicateAfricanAlternatives": 9,
-    "uniqueCountryCodes": 121,
-    "totalArticleVersions": 130,
+    "uniqueCountryCodes": 145,
+    "totalArticleVersions": 154,
     "wordRequirement": "All checked >=200 words per article body",
-    "newCountryFeaturesThisSession": 36,
+    "newCountryFeaturesThisSession": 24,
     "targetCountryGateways": 196,
-    "remainingWithoutSourceBacked200WordDraft": 75,
-    "countryCoveragePercent": 61.7,
+    "remainingWithoutSourceBacked200WordDraft": 51,
+    "countryCoveragePercent": 74,
     "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
     "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
     "photosInstalledInWorldUI": 0,
@@ -54,19 +54,27 @@
     "separateWorldTaskAdditions": 12,
     "separateWorldTaskBatch": "editorial/full_country_stories_batch6_12_20261023.json",
     "latestBatches": [
-      "editorial/full_country_stories_batch7_12_20261023.json",
-      "editorial/full_country_stories_batch8_12_20261023.json",
-      "editorial/full_country_stories_batch9_12_20261023.json"
+      "editorial/full_country_stories_batch10_12_20261023.json",
+      "editorial/full_country_stories_batch11_12_20261023.json"
     ],
     "index": "editorial/country_gateway_release_index_20261023.json",
     "oceanFeatures": 5,
     "oceanArticleWordsMin": 200,
     "oceanSourceFile": "editorial/ocean_stories_5_20261023.json",
-    "oceanReleaseState": "Non-runtime draft; no new purchasable shop items or old IDs changed"
+    "oceanReleaseState": "Non-runtime draft; no new purchasable shop items or old IDs changed",
+    "seaFeatures": 17,
+    "seaArticleFiles": [
+      "editorial/sea_stories_batch1_9_20261023.json",
+      "editorial/sea_stories_batch2_8_20261023.json"
+    ],
+    "previewHtml": "world-library-preview.html",
+    "previewJavaScript": "world-library-preview.js",
+    "previewStatus": "Separate, read-only, fetch-on-demand HTML/JS library; no live app integration or profile storage access. CI smoke test required.",
+    "remainingGoalNote": "Target 196-country denominator is inherited from prior project brief. A final canonical inclusion policy for disputed states and territories has not been documented."
   },
   "integrity": {
-    "test": "tests/world-editorial-integrity.cjs: auto-discovers batch files, validates per-file advertised counts and release index",
-    "ci": "PR regression workflow includes world-editorial-integrity and world-shop-id-preservation; check latest workflow conclusion before publishing",
+    "test": "tests/world-editorial-integrity.cjs scans all country batches, verifies 145-country selection index, 5 oceans and 17 seas.",
+    "ci": "GitHub PR workflow now runs historical-ID protection, editorial archive tests and preview smoke; latest conclusion still to verify.",
     "productionStateChanged": false,
     "purchasesMigrated": false,
     "storeCostsChanged": false,
@@ -75,7 +83,8 @@
     "shopIdBaseline": "editorial/shop_historical_identity_baseline_20261023.json",
     "shopIdTest": "tests/world-shop-id-preservation.cjs",
     "snapshotNote": "121 verified distinct country codes in 130 200+ word drafts. 9 overlapping African alternatives, including newly added Uganda, Malawi and Mozambique. 116 legacy character and 161 location IDs inventoried and guarded in CI. The world UI remains unintegrated.",
-    "oceanQA": "tests/world-editorial-integrity.cjs verifies the five named oceans, minimum lengths and source references"
+    "oceanQA": "tests/world-editorial-integrity.cjs verifies the five named oceans, minimum lengths and source references",
+    "previewSmoke": "tests/world-library-preview.cjs loads documents in simulated DOM and filters by kind and search."
   },
   "releaseGates": [
     "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
