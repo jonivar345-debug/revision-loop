@@ -183,7 +183,7 @@
     .then(r=>{if(!r.ok)throw Error('Country index unavailable');return r.json()})
     .catch(e=>{indexJob=null;throw e}));
   const text=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'');return el};
-  const verifiedFile=path=>/^editorial\\/full_country_stories_(?:batch\\d+_\\d+_\\d{8}|existing7_enriched_\\d{8})\\.json$/.test(path);
+  const verifiedFile=path=>typeof path==='string' && path.startsWith('editorial/full_country_stories_') && path.endsWith('.json') && !path.includes('..');
   let lastLocationId='',token=0;
   async function addArticle(container,iso,label){
     const current=++token;
