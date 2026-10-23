@@ -109,6 +109,7 @@ try{
  // country research after disconnecting. Photos may need network access.
  await page.evaluate(()=>navigator.serviceWorker.ready);
  await page.waitForFunction(()=>!!navigator.serviceWorker.controller,null,{timeout:30000});
+ await page.unroute('**/*'); // Allow service worker to respond to offline navigation.
  await page.context().setOffline(true);
  await page.goto(origin+'/world-library-preview.html?country=GE',{waitUntil:'domcontentloaded',timeout:30000});
  await page.waitForFunction(()=>document.getElementById('worldCount')?.textContent==='218 of 218 articles',null,{timeout:30000});
