@@ -185,25 +185,41 @@
   const text=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'');return el};
   const verifiedFile=path=>typeof path==='string' && path.startsWith('editorial/full_country_stories_') && path.endsWith('.json') && !path.includes('..');
   let lastLocationId='',token=0;
-  async function addArticle(container,iso,label){
+  async function addArticle(container,iso,label,featureId=''){
     const current=++token;
     container.replaceChildren(text('p','Loading the researched country guide…'));
     try {
-      const data=await loadIndex();
-      const chosen=(data.entries||[]).find(e=>e.iso2===iso);
-      if(!chosen||!verifiedFile(chosen.sourceFile))throw Error('No article for this geographic region');
-      const res=await fetch('./'+chosen.sourceFile,{cache:'force-cache'});
-      if(!res.ok)throw Error('Country story is not available offline');
-      const pack=await res.json();
-      const story=(pack.records||[]).find(e=>e.iso2===iso);
-      if(!story)throw Error('Selected country story not found');
+      const isMarine=/^(?:ocean|sea)-[a-z-]+$/.test(featureId);
+      let story=null;
+      if(isMarine){
+        const files=featureId.startsWith('ocean-')
+          ?['editorial/ocean_stories_5_20261023.json']
+          :['editorial/sea_stories_batch1_9_20261023.json','editorial/sea_stories_batch2_8_20261023.json'];
+        for(const file of files){
+          const result=await fetch('./'+file,{cache:'force-cache'});
+          if(!result.ok)continue;
+          const data=await result.json();
+          story=(data.records||[]).find(x=>x.id===featureId);
+          if(story)break;
+        }
+        if(!story)throw Error('This sea or ocean guide is unavailable');
+      }else{
+        const data=await loadIndex();
+        const chosen=(data.entries||[]).find(e=>e.iso2===iso);
+        if(!chosen||!verifiedFile(chosen.sourceFile))throw Error('No article for this geographic region');
+        const result=await fetch('./'+chosen.sourceFile,{cache:'force-cache'});
+        if(!result.ok)throw Error('Country story is not available offline');
+        const dataPack=await result.json();
+        story=(dataPack.records||[]).find(e=>e.iso2===iso);
+        if(!story)throw Error('Selected country story not found');
+      }
       if(current!==token||!container.isConnected)return;
       const section=document.createDocumentFragment();
-      section.append(text('h4',story.country||label));
-      section.append(text('p','Country feature: '+(story.focus||'geography and cultural heritage')+'. This is background about the country, not necessarily about the selected city.'));
+      section.append(text('h4',story.country||story.name||label));
+      section.append(text('p',isMarine?'Marine geography feature: '+(story.subtitle||story.name)+'. Approximate map pin, not a legal maritime boundary.':'Country feature: '+(story.focus||'geography and cultural heritage')+'. This is background about the country, not necessarily about the selected city.'));
       let reviewedCountryPhotos=false;
       // Prefer manually checked files where available; otherwise fetch Commons metadata on demand.
-      try{
+      if(!isMarine)try{
         const vettedFiles=await Promise.all([
           fetch('./editorial/commons_verified_photos_batch3_20261023.json',{cache:'force-cache'}),
           fetch('./editorial/commons_verified_photos_batch4_20261023.json',{cache:'force-cache'})
@@ -243,7 +259,7 @@
         // Strictly check returned file-level CC licence and artist.
         // Automated search cannot establish exact site depiction, so label that clearly.
         const media=window.RevisionWorldCommonsMedia;
-        const photos=await media.search((story.focus||story.country)+' '+story.country,{limit:2});
+        const photos=await media.search((story.focus||story.name||story.country)+' '+(story.country||'sea ocean'),{limit:2});
         if(current!==token||!container.isConnected)return;
         const host=document.createElement('div');host.className='world-auto-photo-results';
         media.append(host,photos,{emptyText:'No CC-licensed image with a named photographer was found.'});
@@ -284,7 +300,7 @@
   function detectLocationId(){
     try {
       // app.js uses a classic script; its top-level lexical binding is shared.
-      if(typeof openLocationId==='string'&&LOCATION_COUNTRIES[openLocationId])return openLocationId;
+      if(typeof openLocationId==='string'&&(LOCATION_COUNTRIES[openLocationId]||/^(?:country|ocean|sea)-[a-z-]+$/.test(openLocationId)))return openLocationId;
     }catch{}
     const title=target.querySelector('.globe-info-top h3')?.textContent?.trim();
     try{
@@ -295,28 +311,30 @@
   function attach(){
     if(target.classList.contains('hidden')||!target.querySelector('.globe-info-top'))return;
     const id=detectLocationId(),existing=target.querySelector('[data-world-article-bridge]');
-    if(!id||!LOCATION_COUNTRIES[id])return;
+    if(!id||!(LOCATION_COUNTRIES[id]||/^(?:country|ocean|sea)-[a-z-]+$/.test(id)))return;
     if(existing?.dataset.locationId===id)return;
     if(existing)existing.remove();
     lastLocationId=id;
     ++token;
-    const iso=LOCATION_COUNTRIES[id],host=document.createElement('section');
+    const isMarine=/^(?:ocean|sea)-/.test(id);
+    const iso=id.startsWith('country-')?id.slice(8).toUpperCase():LOCATION_COUNTRIES[id];
+    const host=document.createElement('section');
     host.className='world-guide-panel';
     host.dataset.worldArticleBridge='1';
     host.dataset.locationId=id;
-    const heading=text('h4','Go deeper: country story');
-    const intro=text('p','Read one researched country feature connected with this unlocked globe location. Your existing purchase and points are unchanged.');
+    const heading=text('h4',isMarine?'Go deeper: sea or ocean story':'Go deeper: country story');
+    const intro=text('p',isMarine?'Read the source-backed marine feature for this unlocked globe pin. Your points and purchases are unchanged.':'Read one researched country feature connected with this unlocked globe location. Your existing purchase and points are unchanged.');
     const link=text('a','Open the World Library');
-    link.href='./world-library-preview.html?country='+encodeURIComponent(iso);
+    link.href=isMarine?'./world-library-preview.html?feature='+encodeURIComponent(id):'./world-library-preview.html?country='+encodeURIComponent(iso);
     link.target='_blank';link.rel='noopener noreferrer';
-    const button=text('button','Read country story here');
+    const button=text('button',isMarine?'Read sea or ocean story here':'Read country story here');
     button.type='button';button.className='mini-btn';
     const content=document.createElement('div');content.className='world-guide-article';
-    if(iso==='TW'||iso==='PF'){
+    if(!isMarine&&(iso==='TW'||iso==='PF')){
       button.disabled=true;
       intro.textContent='This geographical area is not in the defined 196-country archive. The existing location still works normally; additional regional stories may be added later.';
     } else {
-      button.addEventListener('click',()=>{button.disabled=true;button.textContent='Country story opened';addArticle(content,iso,id)});
+      button.addEventListener('click',()=>{button.disabled=true;button.textContent='Country story opened';addArticle(content,iso,id,isMarine?id:'')});
     }
     host.append(heading,intro,button,link,content);
     target.append(host);
@@ -327,5 +345,5 @@
   });
   observer.observe(target,{childList:true,subtree:false,attributes:true,attributeFilter:['class']});
   attach();
-  window.RevisionWorldArticleBridge=Object.freeze({countryForLocation:id=>LOCATION_COUNTRIES[id]||null,locationCount:Object.keys(LOCATION_COUNTRIES).length});
+  window.RevisionWorldArticleBridge=Object.freeze({countryForLocation:id=>id?.startsWith('country-')?id.slice(8).toUpperCase():LOCATION_COUNTRIES[id]||null,historicalLocationCount:Object.keys(LOCATION_COUNTRIES).length,locationCount:Object.keys(LOCATION_COUNTRIES).length+218});
 })();
