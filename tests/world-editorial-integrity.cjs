@@ -82,6 +82,15 @@ for(const selected of release.entries){
   assert.equal(selected.gatewayId,'country-'+selected.iso2.toLowerCase());checks++;
   assert(selected.wordCount>=200,'Short indexed article '+selected.iso2);checks++;
   assert(selected.sourceFile.startsWith('editorial/'),'Invalid source path');checks++;
+  const indexFile=selected.sourceFile.replace(/^editorial\//,'');
+  const referenced=load(indexFile).find(record=>record.iso2===selected.iso2);
+  assert(referenced,'Selected source file missing article '+selected.iso2);checks++;
+  const referencedSources=referenced.sources||[referenced.source];
+  assert.deepEqual(selected.sourceLinks,referencedSources,'Incorrect official citations in index '+selected.iso2);checks++;
+  const alternativeCount=africa.filter(x=>x.record.iso2===selected.iso2).length-
+    (indexFile===extra?1:0);
+  assert.equal(selected.alternateSources.length,alternativeCount,'Incorrect alternative count '+selected.iso2);checks++;
+
   assert(selected.live===false&&selected.mediaStatus==='photos-not-attached','Unsafe publishing assertion '+selected.iso2);checks++;
 }
 assert.equal(release.totals.totalVersionCount,main.length+africa.length);checks++;
