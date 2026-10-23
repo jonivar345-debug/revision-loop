@@ -37,16 +37,16 @@
     "pricingCaution": "These numbers were calculated directly from PR#2 app.js on 2026-10-23; older project ledger claiming 825 max is stale for this branch. Desired 50-100 point general location pricing is NOT deployed."
   },
   "editorialArchive": {
-    "primaryCountryFeatures": 144,
+    "primaryCountryFeatures": 195,
     "additionalAfricanVersions": 10,
     "duplicateAfricanAlternatives": 9,
-    "uniqueCountryCodes": 145,
-    "totalArticleVersions": 154,
+    "uniqueCountryCodes": 196,
+    "totalArticleVersions": 205,
     "wordRequirement": "All checked >=200 words per article body",
-    "newCountryFeaturesThisSession": 24,
+    "newCountryFeaturesThisSession": 39,
     "targetCountryGateways": 196,
-    "remainingWithoutSourceBacked200WordDraft": 51,
-    "countryCoveragePercent": 74,
+    "remainingWithoutSourceBacked200WordDraft": 0,
+    "countryCoveragePercent": 100,
     "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
     "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
     "photosInstalledInWorldUI": 0,
@@ -54,8 +54,11 @@
     "separateWorldTaskAdditions": 12,
     "separateWorldTaskBatch": "editorial/full_country_stories_batch6_12_20261023.json",
     "latestBatches": [
-      "editorial/full_country_stories_batch10_12_20261023.json",
-      "editorial/full_country_stories_batch11_12_20261023.json"
+      "editorial/full_country_stories_batch14_12_20261023.json",
+      "editorial/full_country_stories_batch15_12_20261023.json",
+      "editorial/full_country_stories_batch16_5_20261023.json",
+      "editorial/full_country_stories_batch17_5_20261023.json",
+      "editorial/full_country_stories_batch18_5_20261023.json"
     ],
     "index": "editorial/country_gateway_release_index_20261023.json",
     "oceanFeatures": 5,
@@ -69,12 +72,14 @@
     ],
     "previewHtml": "world-library-preview.html",
     "previewJavaScript": "world-library-preview.js",
-    "previewStatus": "Separate, read-only, fetch-on-demand HTML/JS library; no live app integration or profile storage access. CI smoke test required.",
-    "remainingGoalNote": "Target 196-country denominator is inherited from prior project brief. A final canonical inclusion policy for disputed states and territories has not been documented."
+    "previewStatus": "Standalone read-only development-branch explorer. Still needs browser/mobile acceptance, image verification, integrated globe linking and local saved-progress migration.",
+    "remainingGoalNote": "The 196 gateway taxonomy is explicitly 193 UN members, two observers and Kosovo as a geographic entry with disputed status. A future Taiwan/territory feature could be added outside the canonical 196 without claiming an uncontested political status.",
+    "inclusionPolicy": "editorial/country_gateway_inclusion_policy_196_20261023.json",
+    "releaseNote": "196 distinct draft gateways / 205 article versions (including nine independently written Africa alternatives); all remain editorial drafts and have not been integrated into app.js."
   },
   "integrity": {
-    "test": "tests/world-editorial-integrity.cjs scans all country batches, verifies 145-country selection index, 5 oceans and 17 seas.",
-    "ci": "GitHub PR workflow now runs historical-ID protection, editorial archive tests and preview smoke; latest conclusion still to verify.",
+    "test": "tests/world-editorial-integrity.cjs verifies all 196 scope codes, articles, 17 seas, five oceans and UNESCO source references.",
+    "ci": "CI runs archive 196 country scope, historical ID preservation, preview smoke, index check and existing AQA marking regressions.",
     "productionStateChanged": false,
     "purchasesMigrated": false,
     "storeCostsChanged": false,
@@ -84,7 +89,8 @@
     "shopIdTest": "tests/world-shop-id-preservation.cjs",
     "snapshotNote": "121 verified distinct country codes in 130 200+ word drafts. 9 overlapping African alternatives, including newly added Uganda, Malawi and Mozambique. 116 legacy character and 161 location IDs inventoried and guarded in CI. The world UI remains unintegrated.",
     "oceanQA": "tests/world-editorial-integrity.cjs verifies the five named oceans, minimum lengths and source references",
-    "previewSmoke": "tests/world-library-preview.cjs loads documents in simulated DOM and filters by kind and search."
+    "previewSmoke": "tests/world-library-preview.cjs loads documents in simulated DOM and filters by kind and search.",
+    "indexBuilder": "scripts/rebuild-world-index.cjs --check ensures generated release index stays in sync with country sources."
   },
   "releaseGates": [
     "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
