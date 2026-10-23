@@ -407,3 +407,18 @@
 .globe-zoom-controls .mini-btn:disabled{opacity:.45;cursor:not-allowed}
 .globe-zoom-controls .mini-btn:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
 .globe-zoom-controls output{min-width:48px;text-align:center;font-size:.78rem;font-weight:800;font-variant-numeric:tabular-nums}
+
+
+/* World country research attached to the existing unlocked globe details. */
+.world-encyclopedia-access{margin:16px 0 8px;padding:12px 16px;border:1px solid rgba(89,166,213,.32);border-radius:12px;background:rgba(18,50,75,.28);font-size:.9rem}
+.world-encyclopedia-access a{color:inherit;text-underline-offset:3px}
+.world-guide-panel{margin-top:20px;padding:16px 18px;border:1px solid rgba(100,163,207,.35);border-radius:14px;background:rgba(8,32,56,.34);min-width:0}
+.world-guide-panel h4{font-size:1.14rem;margin:0 0 8px}
+.world-guide-panel h5{font-size:1rem;margin:22px 0 8px}
+.world-guide-panel p{line-height:1.66;margin:8px 0 13px}
+.world-guide-panel>.mini-btn{margin:8px 16px 8px 0;min-height:39px}
+.world-guide-panel>a{display:inline-block;margin:8px 0;color:inherit;text-underline-offset:3px}
+.world-guide-article{margin-top:14px}
+.world-guide-article p{max-width:76ch}
+.world-guide-article ul{margin:8px 0 0;padding-left:20px;overflow-wrap:anywhere}
+.world-guide-panel :focus-visible{outline:3px solid #74baff;outline-offset:3px}
