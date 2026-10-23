@@ -1,0 +1,22 @@
+name: World browser acceptance
+
+on:
+  push:
+    branches: [automation/world-zoom-controls-20261021]
+  pull_request:
+
+jobs:
+  world-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install temporary Chromium test runner
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Browser smoke test of old profile, location buying and mobile zoom
+        run: node tests/world-browser-smoke.mjs
