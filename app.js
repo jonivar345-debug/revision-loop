@@ -680,12 +680,34 @@ if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations))
 // Use actual WGS84 Natural Earth geography, pre-cached with the app.
  // Blue Marble remote-image failures previously left a blue circle with no continents.
 let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;
+let satelliteReady=false;
 if(window.RevisionWorldEarth){
  window.RevisionWorldEarth.load().then(texture=>{
-  earthPixels=texture.pixels;earthW=texture.width;earthH=texture.height;
-  earthTextureReady=true;drawGlobe();
- }).catch(error=>{console.warn('Natural Earth data unavailable',error);drawGlobe()});
+  if(!satelliteReady){
+   earthPixels=texture.pixels;earthW=texture.width;earthH=texture.height;
+   earthTextureReady=true;drawGlobe();
+  }
+ }).catch(error=>{console.warn('Local Natural Earth map unavailable',error);drawGlobe()});
 }
+// NASA's public-domain 2002 Blue Marble is a true-colour Earth mosaic.
+// Use its modest-size equirectangular preview when the browser accepts CORS;
+// Natural Earth geography remains a fully offline, geometrically correct fallback.
+const nasaEarth=new Image();
+nasaEarth.crossOrigin='anonymous';
+nasaEarth.onload=()=>{
+ try{
+  const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=512;
+  const c=canvas.getContext('2d',{willReadFrequently:true});
+  c.drawImage(nasaEarth,0,0,1024,512);
+  const pixels=c.getImageData(0,0,1024,512);
+  if(pixels?.data?.length===1024*512*4){
+   earthPixels=pixels.data;earthW=1024;earthH=512;earthTextureReady=true;
+   satelliteReady=true;drawGlobe();
+  }
+ }catch(error){console.warn('Using offline Natural Earth globe instead of remote satellite imagery',error)}
+};
+nasaEarth.onerror=()=>{};
+nasaEarth.src='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=1280';
 // Wikipedia lead photos are resolved with verified Commons rights metadata.
 
 function load(k,f){try{const x=JSON.parse(localStorage.getItem(k));return x??f}catch{return f}}
@@ -2448,7 +2470,7 @@ function drawGlobe(){
        const r=(earthPixels[a00]*(1-fx)+earthPixels[a10]*fx)*(1-fy)+(earthPixels[a01]*(1-fx)+earthPixels[a11]*fx)*fy;
        const g=(earthPixels[a00+1]*(1-fx)+earthPixels[a10+1]*fx)*(1-fy)+(earthPixels[a01+1]*(1-fx)+earthPixels[a11+1]*fx)*fy;
        const b=(earthPixels[a00+2]*(1-fx)+earthPixels[a10+2]*fx)*(1-fy)+(earthPixels[a01+2]*(1-fx)+earthPixels[a11+2]*fx)*fy;
-       out[di]=r*light;out[di+1]=Math.min(g,(r+b)/2+78)*light;out[di+2]=b*light;out[di+3]=255;
+       out[di]=r*light;out[di+1]=g*light;out[di+2]=b*light;out[di+3]=255;
      }
    }
    ctx.putImageData(img,0,0);
