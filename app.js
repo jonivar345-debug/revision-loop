@@ -677,8 +677,15 @@ if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations))
  }
 }
 
-const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
-const earthTexture=new Image();earthTexture.crossOrigin='anonymous';let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;earthTexture.onload=()=>{try{const t=document.createElement('canvas');t.width=720;t.height=360;const x=t.getContext('2d',{willReadFrequently:true});x.drawImage(earthTexture,0,0,t.width,t.height);earthPixels=x.getImageData(0,0,t.width,t.height).data;earthW=t.width;earthH=t.height;earthTextureReady=true}catch{earthTextureReady=false}drawGlobe()};earthTexture.src=EARTH_TEXTURE_URL;
+// Use actual WGS84 Natural Earth geography, pre-cached with the app.
+ // Blue Marble remote-image failures previously left a blue circle with no continents.
+let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;
+if(window.RevisionWorldEarth){
+ window.RevisionWorldEarth.load().then(texture=>{
+  earthPixels=texture.pixels;earthW=texture.width;earthH=texture.height;
+  earthTextureReady=true;drawGlobe();
+ }).catch(error=>{console.warn('Natural Earth data unavailable',error);drawGlobe()});
+}
 const wikiPhotoCache={};
 
 function load(k,f){try{const x=JSON.parse(localStorage.getItem(k));return x??f}catch{return f}}
@@ -2095,7 +2102,7 @@ function buy(kind,id){
   profile=outcome.profile;
   save();
   if(!outcome.alreadyOwned)showToast('Unlocked '+destination.name);
-  renderAll();
+  renderAll();drawGlobe();
   return;
  }
  let item,owned;
@@ -2393,14 +2400,25 @@ function renderShop(){
 function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI/180,cl=globeLat*Math.PI/180,x=Math.cos(la)*Math.sin(lo),y=Math.sin(la)*Math.cos(cl)-Math.cos(la)*Math.cos(lo)*Math.sin(cl),z=Math.sin(la)*Math.sin(cl)+Math.cos(la)*Math.cos(lo)*Math.cos(cl);const R=Math.min(w,h)*.4;return {x:w/2+x*R,y:h/2-y*R,z}}
 function visibleGlobePins(w,h,region=''){
  const distinct=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
- const projected=distinct.filter(l=>!region||l.region===region)
-  .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??profile.shopOwned.locations.includes(l.id)}))
-  .filter(x=>x.p.z>0)
-  .sort((a,b)=>Number(a.owned)-Number(b.owned));
- // Use the geographical projection for EVERY eligible destination.
- // The old 10-pixel de-duplication hid valid nearby cities without telling
- // students and could make markers appear to be at the wrong destination.
- return projected;
+ const all=distinct.filter(l=>!region||l.region===region)
+   .map(l=>({location:l,p:project(l.lat,l.lon,w,h),
+      owned:window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??profile.shopOwned.locations.includes(l.id)}))
+   .filter(item=>item.p.z>0.001);
+ // True coordinates never move: decluttering only affects which exact pins render.
+ const expanded=document.getElementById('showAllGlobePins')?.checked===true;
+ if(expanded)return all.sort((a,b)=>Number(a.owned)-Number(b.owned));
+ const score=item=>(item.location.id===openLocationId?1000:0)
+   +(item.owned?600:0)
+   +(item.location.worldKind==='country'?90:item.location.worldKind==='sea'||item.location.worldKind==='ocean'?8:200)
+   +item.p.z*40;
+ const queue=all.sort((a,b)=>score(b)-score(a));
+ const shown=[],distance=11;
+ for(const item of queue){
+  if(shown.every(other=>Math.hypot(item.p.x-other.p.x,item.p.y-other.p.y)>distance)){
+    shown.push(item);
+  }
+ }
+ return shown.sort((a,b)=>Number(a.owned)-Number(b.owned));
 }
 function drawGlobe(){
  const c=document.getElementById('globe');if(!c)return;
@@ -2438,11 +2456,14 @@ function drawGlobe(){
  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
  const regionFilter=document.getElementById('locationRegion')?.value||'';
  for(const {location:l,p,owned} of visibleGlobePins(w,h,regionFilter)){
- ctx.beginPath();ctx.arc(p.x,p.y,owned?6:4.5,0,Math.PI*2);
- ctx.fillStyle=owned?'#111827':'#ffffff';ctx.fill();ctx.lineWidth=owned?2:1.2;ctx.strokeStyle=owned?'#f8fafc':'#334155';ctx.stroke();
- if(l.id===openLocationId){ctx.beginPath();ctx.arc(p.x,p.y,9,0,Math.PI*2);ctx.strokeStyle='#fbbf24';ctx.lineWidth=2.2;ctx.stroke()}
+ const active=l.id===openLocationId;
+ const radius=active?6.2:owned?5.4:3.2;
+ ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);
+ ctx.fillStyle=active?'#fbbf24':owned?'#22c55e':'rgba(219,239,255,.7)';ctx.fill();
+ ctx.lineWidth=owned?1.9:0.8;ctx.strokeStyle=owned?'#eaffea':'rgba(20,51,74,.6)';ctx.stroke();
+ if(active){ctx.beginPath();ctx.arc(p.x,p.y,10,0,Math.PI*2);ctx.strokeStyle='#fde68a';ctx.lineWidth=2.1;ctx.stroke()}
  }
- document.getElementById('globeLabel').textContent='Drag to rotate · white = locked · black = unlocked · tap an unlocked pin for details';
+ document.getElementById('globeLabel').textContent='Drag to rotate · green = unlocked · pale = locked · gold = selected · tap a green pin for details';
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
 function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(700,360,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
