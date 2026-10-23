@@ -52,7 +52,7 @@ try{
  await page.waitForFunction(()=>!!localStorage.getItem('revisionLoopProfile-pre-world-v62'),{timeout:20000});
  await page.waitForFunction(()=>document.getElementById('locationCount')?.textContent?.includes('158'),{timeout:30000});
  const state=await page.evaluate(()=>({
-  profile:JSON.parse(localStorage.getItem('revisionLoopProfile11')),
+  profile:profile,
   backup:JSON.parse(localStorage.getItem('revisionLoopProfile-pre-world-v62')),
   locationCount:document.getElementById('locationCount').textContent,
   gesture:typeof window.RevisionWorldGlobeGesture,
@@ -94,6 +94,7 @@ try{
  await mobile.addInitScript(()=>localStorage.setItem('rl_auth','1'));
  await mobile.goto(origin+'/',{waitUntil:'domcontentloaded'});
  await mobile.waitForFunction(()=>document.getElementById('globeZoomValue')?.textContent==='100%',{timeout:30000});
+ await mobile.locator('.tab[data-panel="shop"]').click();
  await mobile.locator('#globeZoomIn').click();
  await mobile.waitForFunction(()=>document.getElementById('globeZoomValue').textContent!=='100%',{timeout:10000});
  const zoom=await mobile.locator('#globeZoomValue').textContent();
