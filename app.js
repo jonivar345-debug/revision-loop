@@ -678,9 +678,38 @@ function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));loca
 function ensureProfile(){
  profile.daily=profile.daily||{};profile.examResults=profile.examResults||{};profile.topicWeakness=profile.topicWeakness||{};profile.topicStats=profile.topicStats||{};
  profile.errorLog=profile.errorLog||[];profile.dailyChallenges=profile.dailyChallenges||{};profile.challengeStreak=profile.challengeStreak||0;profile.lastChallengeDate=profile.lastChallengeDate||'';
- profile.shopOwned=profile.shopOwned||{};profile.shopOwned.characters=(profile.shopOwned.characters||[]).filter(id=>CHARACTERS.some(c=>c.id===id));profile.shopOwned.outfits=(profile.shopOwned.outfits||[]).filter(id=>OUTFITS.some(o=>o.id===id));profile.shopOwned.locations=(profile.shopOwned.locations||[]).filter(id=>LOCATIONS.some(l=>l.id===id));if(!profile.shopOwned.characters.length)profile.shopOwned.characters=['lelouch'];if(!profile.shopOwned.outfits.length)profile.shopOwned.outfits=['lelouch-default'];if(!profile.shopOwned.locations.includes('london'))profile.shopOwned.locations.unshift('london');if(!CHARACTERS.some(c=>c.id===profile.equippedCharacter))profile.equippedCharacter=profile.shopOwned.characters[0]||'lelouch';if(!OUTFITS.some(o=>o.id===profile.equippedOutfit&&o.character===profile.equippedCharacter))profile.equippedOutfit=profile.equippedCharacter+'-default';profile.equippedLocation=LOCATIONS.some(l=>l.id===profile.equippedLocation)?profile.equippedLocation:'london';
- if(profile.economyVersion!==2){profile.lifetimeXp=0;profile.points=0;profile.economyVersion=2}
- profile.lifetimeXp=profile.lifetimeXp||0;profile.points=profile.points||0;profile.reviews=profile.reviews||0;
+ // Back up the exact last saved profile before the first economy migration.
+ // Never reset previously earned XP/points or discard unfamiliar historical purchases.
+ if(profile.economyVersion!==2){
+  try{
+   const backupKey='revisionLoopProfile-pre-world-v62';
+   if(!localStorage.getItem(backupKey)){
+    const original=localStorage.getItem(PROFILE_KEY);
+    if(original)localStorage.setItem(backupKey,original);
+   }
+  }catch{}
+ }
+ const safety=window.RevisionWorldProfileSafety;
+ if(safety){
+  profile=safety.migrateProfile(profile);
+ }else{
+  // Safe offline fallback if the additional script is not cached yet:
+  // preserve the whole object, all historic IDs, and earned balances.
+  profile.shopOwned=profile.shopOwned||{};
+  for(const kind of ['characters','outfits','locations']){
+   profile.shopOwned[kind]=Array.isArray(profile.shopOwned[kind])?profile.shopOwned[kind]:[];
+  }
+  if(!profile.shopOwned.characters.includes('lelouch'))profile.shopOwned.characters.unshift('lelouch');
+  if(!profile.shopOwned.outfits.includes('lelouch-default'))profile.shopOwned.outfits.unshift('lelouch-default');
+  if(!profile.shopOwned.locations.includes('london'))profile.shopOwned.locations.unshift('london');
+  profile.points=Number.isFinite(profile.points)?Math.max(0,profile.points):0;
+  profile.lifetimeXp=Number.isFinite(profile.lifetimeXp)?Math.max(0,profile.lifetimeXp):0;
+  profile.reviews=Number.isFinite(profile.reviews)?Math.max(0,profile.reviews):0;
+  profile.equippedCharacter=profile.equippedCharacter||'lelouch';
+  profile.equippedOutfit=profile.equippedOutfit||'lelouch-default';
+  profile.equippedLocation=profile.equippedLocation||'london';
+  profile.economyVersion=2;
+ }
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
 }
 function now(){return Date.now()}
@@ -2046,6 +2075,21 @@ function renderProgress(){
 }
 
 function buy(kind,id){
+ // Route destination purchases through a non-destructive, alias-aware operation.
+ // A historical purchase of cape_town/addis_ababa/victoria_falls is already owned.
+ if(kind==='location'){
+  const destination=LOCATIONS.find(x=>x.id===id);
+  if(!destination)return;
+  const safety=window.RevisionWorldProfileSafety;
+  if(!safety){showToast('Location purchases unavailable until the safety module loads');return}
+  const outcome=safety.purchaseLocation(profile,destination);
+  if(outcome.insufficientPoints){showToast('Not enough points yet');return}
+  profile=outcome.profile;
+  save();
+  if(!outcome.alreadyOwned)showToast('Unlocked '+destination.name);
+  renderAll();
+  return;
+ }
  let item,owned;
  if(kind==='character'){item=CHARACTERS.find(x=>x.id===id);owned=profile.shopOwned.characters}
  else if(kind==='outfit'){item=OUTFITS.find(x=>x.id===id);owned=profile.shopOwned.outfits}
@@ -2116,15 +2160,16 @@ function evenlySpacedLocations(locations){
 }
 function renderLocationGallery(){
  const selected=document.getElementById('locationRegion').value;
- const pool=selected?LOCATIONS.filter(l=>l.region===selected):evenlySpacedLocations(LOCATIONS);
+ const distinct=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const pool=selected?distinct.filter(l=>l.region===selected):evenlySpacedLocations(distinct);
  const visible=pool.slice(0,locationVisibleLimit);
- document.getElementById('regionCount').textContent=selected?pool.length+' places':LOCATIONS.length+' worldwide';
+ document.getElementById('regionCount').textContent=selected?pool.length+' places':distinct.length+' worldwide';
  document.getElementById('locationShop').innerHTML=visible.map(l=>{
-  const owned=profile.shopOwned.locations.includes(l.id);
+  const owned=window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??profile.shopOwned.locations.includes(l.id);
   return '<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'">Loading photograph…</div>'+
    '<div class="location-body"><b>'+esc(l.name)+'</b><small class="region-tag">'+esc(l.region||'Global')+'</small>'+
    '<button class="'+(!owned?'buy':'')+'" data-location="'+esc(l.id)+'" '+(!owned&&profile.points<l.cost?'disabled':'')+'>'+
-   (owned?(profile.equippedLocation===l.id?'Active location':'Use location'):l.cost+' points')+'</button></div></div>';
+   (owned?((window.RevisionWorldProfileSafety?.family(l.id)||[l.id]).includes(profile.equippedLocation)?'Active location':'Use location'):l.cost+' points')+'</button></div></div>';
  }).join('');
  document.querySelectorAll('[data-location]').forEach(b=>b.onclick=()=>buy('location',b.dataset.location));
  document.querySelectorAll('[data-location-photo]').forEach(el=>locationPhoto(LOCATIONS.find(l=>l.id===el.dataset.locationPhoto),el));
@@ -2242,7 +2287,7 @@ async function setLocationInfo(id){
  if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
  const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
  if(!l)return;
- if(!profile.shopOwned.locations.includes(id)){showToast('Unlock '+l.name+' to explore its details');return}
+ if(!(window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id))){showToast('Unlock '+l.name+' to explore its details');return}
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
  host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
@@ -2307,7 +2352,8 @@ function renderShop(){
  const allVisibleChars=CHARACTERS.filter(c=>(!seriesFilter||c.series===seriesFilter)&&(ownedFilter==='all'||(ownedFilter==='owned'&&oc.includes(c.id))||(ownedFilter==='locked'&&!oc.includes(c.id))));const visibleChars=allVisibleChars.slice(0,characterVisibleLimit);
  document.getElementById('characterCount').textContent=oc.length+' / '+CHARACTERS.length+' unlocked';
  document.getElementById('outfitCount').textContent=oo.length+' / '+OUTFITS.length+' unlocked';
- document.getElementById('locationCount').textContent=ol.length+' / '+LOCATIONS.length+' unlocked';
+ const uniqueLocations=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ document.getElementById('locationCount').textContent=uniqueLocations.filter(l=>window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??ol.includes(l.id)).length+' / '+uniqueLocations.length+' unlocked';
  document.getElementById('characterShop').innerHTML=visibleChars.map(c=>{const def=OUTFITS.find(o=>o.id===c.id+'-default');return '<div class="shop-item character-card '+(curr===c.id?'active-character':'')+'"><div class="shop-icon">'+characterArtwork(c,def)+'</div><b>'+esc(c.name)+'</b><small>'+esc(c.series)+'</small><button class="'+(!oc.includes(c.id)?'buy':'')+'" data-character="'+c.id+'" '+(!oc.includes(c.id)&&profile.points<c.cost?'disabled':'')+'>'+(oc.includes(c.id)?(curr===c.id?'Selected':'Select'):c.cost+' points')+'</button></div>'}).join('');
  const outfits=OUTFITS.filter(o=>o.character===curr),ch=CHARACTERS.find(c=>c.id===curr)||CHARACTERS[0];
  document.getElementById('outfitHeading').textContent='Outfits for '+ch.name;
@@ -2344,8 +2390,9 @@ function renderShop(){
 }
 function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI/180,cl=globeLat*Math.PI/180,x=Math.cos(la)*Math.sin(lo),y=Math.sin(la)*Math.cos(cl)-Math.cos(la)*Math.cos(lo)*Math.sin(cl),z=Math.sin(la)*Math.sin(cl)+Math.cos(la)*Math.cos(lo)*Math.cos(cl);const R=Math.min(w,h)*.4;return {x:w/2+x*R,y:h/2-y*R,z}}
 function visibleGlobePins(w,h,region=''){
- const projected=LOCATIONS.filter(l=>!region||l.region===region)
-  .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:profile.shopOwned.locations.includes(l.id)}))
+ const distinct=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const projected=distinct.filter(l=>!region||l.region===region)
+  .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??profile.shopOwned.locations.includes(l.id)}))
   .filter(x=>x.p.z>0)
   .sort((a,b)=>Number(a.owned)-Number(b.owned));
  // Use the geographical projection for EVERY eligible destination.
