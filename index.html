@@ -207,6 +207,12 @@
       <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock real places, rotate the Earth and use actual location photos.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="globe-card">
         <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing collectable world locations"></canvas>
+        <div class="globe-zoom-controls" role="group" aria-label="Globe zoom controls">
+          <button id="globeZoomOut" type="button" class="mini-btn" aria-label="Zoom globe out">−</button>
+          <output id="globeZoomValue" aria-live="polite">100%</output>
+          <button id="globeZoomIn" type="button" class="mini-btn" aria-label="Zoom globe in">+</button>
+          <button id="globeZoomReset" type="button" class="mini-btn" aria-label="Reset globe zoom">Reset</button>
+        </div>
         <div id="globeLabel" class="globe-label">Drag to rotate · tap a pin to inspect it</div>
       </div>
       <div id="globeLocationInfo" class="globe-location-info hidden" aria-live="polite"></div>
@@ -215,7 +221,7 @@
         <select id="locationRegion" aria-label="Filter collectable locations by continent">
           <option value="">Around the world</option>
           <option>Asia</option><option>Europe</option><option>Africa</option>
-          <option>North America</option><option>South America</option><option>Oceania</option>
+          <option>North America</option><option>South America</option><option>Oceania</option><option>Oceans &amp; Seas</option>
         </select>
         <span id="regionCount"></span>
       </div>
@@ -224,7 +230,45 @@
     </section>
   </main>
 </div>
-<script src="app.js?v=60" defer></script>
+<script src="world-geographic-destinations.js?v=65" defer></script>
+<script src="world-profile-preservation.js?v=63" defer></script>
+<script src="world-commons-media.js?v=64" defer></script>
+<script src="app.js?v=65" defer></script>
+<script src="world-zoom-helpers.js?v=61" defer></script>
+<script src="world-globe-article-bridge.js?v=62" defer></script>
+<script>
+/* Portrait loading guard. Existing anime fetches can stall; don't leave a permanent spinner.
+   This changes only the fallback display, not images, purchased items or saved progress. */
+(() => {
+  'use strict';
+  const MAX_WAIT_MS = 9000;
+  const watched = new WeakSet();
+  const scan = () => {
+    document.querySelectorAll('[data-character-art]').forEach(el => {
+      if (watched.has(el)) return;
+      watched.add(el);
+      // Announce portrait-load errors to assistive technology without
+      // changing the artwork or interrupting normal keyboard navigation.
+      const announcement = el.querySelector('.character-loading small');
+      if (announcement && typeof announcement.setAttribute === 'function') {
+        announcement.setAttribute('role', 'status');
+        announcement.setAttribute('aria-live', 'polite');
+      }
+      setTimeout(() => {
+        if (!el.isConnected || el.classList.contains('has-portrait')) return;
+        const status = el.querySelector('.character-loading small');
+        if (!status || el.dataset.loading === '0') return;
+        el.classList.add('art-unavailable');
+        status.textContent = 'Portrait unavailable — character preview only';
+        el.setAttribute('aria-busy', 'false');
+      }, MAX_WAIT_MS);
+    });
+  };
+  const observer = new MutationObserver(scan);
+  observer.observe(document.body, {childList:true,subtree:true});
+  scan();
+})();
+</script>
 <script src="scanner.js?v=60" defer></script>
 <script src="free-marking.js?v=60" defer></script>
 <script src="vision-client.js?v=60" defer></script>

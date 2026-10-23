@@ -1,0 +1,87 @@
+{
+  "schema": "location-duplicate-preservation-plan-v1",
+  "status": "research-and-qa-only-not-implemented",
+  "created": "2026-10-23",
+  "branch": "automation/world-zoom-controls-20261021",
+  "scope": "Three visible duplicate destinations already present in the 161-location app.js roster; do not delete or rename any historical purchase identifiers.",
+  "pairs": [
+    {
+      "name": "Cape Town",
+      "canonicalId": "capetown",
+      "legacyAliasIds": [
+        "cape_town"
+      ],
+      "originalPrices": {
+        "capetown": 250,
+        "cape_town": 150
+      },
+      "coords": [
+        [
+          -33.9249,
+          18.4241
+        ],
+        [
+          -33.9249,
+          18.4241
+        ]
+      ],
+      "wiki": "Cape_Town"
+    },
+    {
+      "name": "Addis Ababa",
+      "canonicalId": "addis",
+      "legacyAliasIds": [
+        "addis_ababa"
+      ],
+      "originalPrices": {
+        "addis": 150,
+        "addis_ababa": 170
+      },
+      "coords": [
+        [
+          9.03,
+          38.74
+        ],
+        [
+          9.03,
+          38.74
+        ]
+      ],
+      "wiki": "Addis_Ababa"
+    },
+    {
+      "name": "Victoria Falls",
+      "canonicalId": "victoriafalls",
+      "legacyAliasIds": [
+        "victoria_falls"
+      ],
+      "originalPrices": {
+        "victoriafalls": 170,
+        "victoria_falls": 150
+      },
+      "coords": [
+        [
+          -17.9243,
+          25.8572
+        ],
+        [
+          -17.9243,
+          25.856
+        ]
+      ],
+      "wiki": "Victoria_Falls"
+    }
+  ],
+  "acceptanceRules": [
+    "Existing purchased IDs must remain in the underlying saved profile, even after display deduplication.",
+    "The single displayed destination must count as owned if any alias or canonical ID is purchased.",
+    "Equipped destinations using any historical ID must remain resolvable.",
+    "Buying a display destination must not deduct points if any member of its alias family is already owned.",
+    "Historical purchases of both IDs must remain readable; do not silently remove, refund or overwrite purchase history.",
+    "Never make new prices retroactively subtract earned points or XP.",
+    "Do not call migration complete until actual old-profile fixtures pass in an integrated browser test.",
+    "Do not merge or deploy until PR #1 shared app.js modifications have been reconciled and old user data backed up."
+  ],
+  "verification": "The source location IDs and prices were read from world PR #2 app.js; alias policy has not been wired into app.js or localStorage.",
+  "liveImpact": "none"
+}

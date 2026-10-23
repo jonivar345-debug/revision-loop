@@ -1,0 +1,85 @@
+{
+  "schema": "world-real-interface-acceptance-v1",
+  "created": "2026-10-23",
+  "version": "world-pr2-v65-country-marine-globe-integrated",
+  "sourceOfTruth": "The PR head code and GitHub Actions run reports, not this file alone.",
+  "archive": {
+    "countries": 196,
+    "alternateCountryArticles": 9,
+    "namedOceans": 5,
+    "namedSeas": 17,
+    "totalSelectableFeatures": 218,
+    "allCountryArticles200PlusWords": true
+  },
+  "globeIntegration": {
+    "present": true,
+    "existingLocationIdsMapped": 161,
+    "approach": "New source-checked geographic reference pins for 196 countries, five oceans and 17 seas. Existing 161 city/place ID records and prices preserved. All 218 feature pins link to source-backed text.",
+    "code": [
+      "world-globe-article-bridge.js",
+      "world-library-preview.js",
+      "index.html",
+      "styles.css"
+    ],
+    "safeLimitations": "Countries use approximate reference centre positions; oceans/seas manually selected reference points, not sovereignty boundaries. The app has not been tested on the user's actual browser or existing account.",
+    "unusualGeographies": [
+      "TW and PF are explicitly outside the 196 country gateway archive, although their existing location pins remain supported."
+    ],
+    "duplicatesStillInOldCore": [
+      "capetown/cape_town",
+      "addis/addis_ababa",
+      "victoriafalls/victoria_falls"
+    ],
+    "additionalCountryPins": 196,
+    "additionalOceanPins": 5,
+    "additionalSeaPins": 17,
+    "originalUnderlyingEntries": 161,
+    "newUnderlyingEntries": 218,
+    "totalUnderlyingEntries": 379,
+    "duplicateLegacyDisplayPairs": 3,
+    "uniqueRenderedDestinations": 376
+  },
+  "photoIntegration": {
+    "photosWithAuthorAndCCMetadata": 13,
+    "countriesWithPhotos": 6,
+    "countriesWithoutNewVerifiedPhotos": 190,
+    "reader": "Up to three verified CC images for an article, with visible named author, original Wikimedia file link and licence link.",
+    "unlockedGlobe": "Up to two verified CC images when the article country has a reviewed photo record.",
+    "noPhotoCopyrightAssertionForExistingCode": "Original app.js auto-searches Wikimedia photos without the same visible per-image attribution. That code is not modified and must be audited before release.",
+    "limitations": "Thirteen individually reviewed photo metadata records plus on-demand CC-checked Commons results. Automatic depiction accuracy and online image availability across every feature remain unverified. This does NOT mean 196 individually reviewed photographs.",
+    "dynamicCommonsPhotoChecker": "world-commons-media.js checks current Creative Commons file licence, author and trusted Wikimedia upload host before display; automatically found images include depiction warning and source/CC hyperlinks."
+  },
+  "profileAndEconomy": {
+    "safeRulesModule": "world-profile-preservation.js",
+    "newTest": "tests/world-profile-preservation.cjs",
+    "currentStatus": "Real production app.js now runs world-profile-preservation.js before startup; ensureProfile preserves historical XP/points, unknown purchased IDs and original profile backup; location buying detects alias families; shop and globe show three pairs once.",
+    "criticalRisk": "No known destructive migration reset remains in world PR2 app.js, but browser test against an actual user's account is not possible; realistic synthetic old profile migration regression and Chromium acceptance are used.",
+    "liveProfileMigrationProven": false,
+    "safeMergeAllowed": false,
+    "requiredBeforeMerge": "Reconcile PR #1 app.js changes, wire safeRulesModule into actual profile migration and buy/gallery/globe paths, back up user data, and run real old-profile tests and device tests.",
+    "productionScriptNowUsesSafeModule": true
+  },
+  "offline": {
+    "serviceWorkerUpdated": true,
+    "coreReaderFilesPrecached": true,
+    "individualArticlesCacheAfterFirstOnlineVisit": true,
+    "fullyOfflineUnvisitedArticles": false,
+    "oldDataMigrationChanged": false,
+    "additionalPinLayerCached": true
+  },
+  "tests": [
+    "tests/world-editorial-integrity.cjs",
+    "tests/world-library-preview.cjs",
+    "tests/world-globe-article-bridge.cjs",
+    "tests/world-profile-preservation.cjs",
+    "tests/world-photo-licence-audit.cjs",
+    "tests/world-shop-id-preservation.cjs",
+    "tests/world-production-economy-integration.cjs",
+    "tests/world-commons-media.cjs",
+    "tests/world-destination-geography.cjs",
+    "tests/world-browser-smoke.mjs",
+    ".github/workflows/world-safety.yml",
+    ".github/workflows/world-browser.yml"
+  ],
+  "publish": "Draft branch. Require all relevant world safety, full marking and browser-acceptance tests green before release, then assess integration with unmerged exam PR #1. No end-user data modified by branch edits."
+}

@@ -1,0 +1,33 @@
+name: World safety and media integration
+
+on:
+  push:
+    branches: [automation/world-zoom-controls-20261021]
+  pull_request:
+
+jobs:
+  world-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify complete world research and index
+        run: |
+          node tests/world-editorial-integrity.cjs
+          node tests/world-destination-geography.cjs
+          node tests/world-offline-archive.cjs
+          node scripts/rebuild-world-index.cjs --check
+      - name: Verify historical purchase preservation and actual app migration
+        run: |
+          node tests/world-shop-id-preservation.cjs
+          node tests/world-profile-preservation.cjs
+          node tests/world-production-economy-integration.cjs
+      - name: Verify country explorer, globe bridge and photo licensing
+        run: |
+          node tests/world-globe-article-bridge.cjs
+          node tests/world-photo-licence-audit.cjs
+          node tests/world-commons-media.cjs
+          node tests/world-library-preview.cjs
+          node tests/outfit-and-source-regression.cjs

@@ -1,0 +1,3015 @@
+{
+  "schema": "country-gateway-editorial-index-v3",
+  "generated": "2026-10-23",
+  "publicationStatus": "NON-RUNTIME PREVIEW ONLY: no shop unlocks, no profile writes or migration",
+  "description": "One source-backed country story per country code, with Africa alternatives retained and historic shop IDs unchanged.",
+  "totals": {
+    "distinctCountries": 196,
+    "totalVersionCount": 205,
+    "alternates": 9,
+    "countryGoal": 196,
+    "missingCountryDrafts": 0
+  },
+  "preservation": {
+    "oldLocationIdsRemain": 161,
+    "oldCharactersRemain": 116,
+    "oldOutfitStyleCount": 8,
+    "legacyPurchaseIdRemovalAllowed": false
+  },
+  "entries": [
+    {
+      "iso2": "AD",
+      "country": "Andorra",
+      "gatewayId": "country-ad",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Madriu-Perafita-Claror Valley",
+      "wordCount": 245,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1160"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AE",
+      "country": "United Arab Emirates",
+      "gatewayId": "country-ae",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Cultural Sites of Al Ain",
+      "wordCount": 232,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1343"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AF",
+      "country": "Afghanistan",
+      "gatewayId": "country-af",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 217,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/208"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AG",
+      "country": "Antigua and Barbuda",
+      "gatewayId": "country-ag",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 215,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1499"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AL",
+      "country": "Albania",
+      "gatewayId": "country-al",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 282,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/570"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AM",
+      "country": "Armenia",
+      "gatewayId": "country-am",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 270,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/960"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AO",
+      "country": "Angola",
+      "gatewayId": "country-ao",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 251,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1511"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AR",
+      "country": "Argentina",
+      "gatewayId": "country-ar",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Los Glaciares National Park",
+      "wordCount": 242,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/145"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AT",
+      "country": "Austria",
+      "gatewayId": "country-at",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Historic Centre of Vienna",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1033"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AU",
+      "country": "Australia",
+      "gatewayId": "country-au",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 213,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/154",
+        "https://www.gbrmpa.gov.au/learn/traditional-owners/great-barrier-reef-traditional-owners"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "AZ",
+      "country": "Azerbaijan",
+      "gatewayId": "country-az",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 268,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1076"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BA",
+      "country": "Bosnia and Herzegovina",
+      "gatewayId": "country-ba",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Old Bridge Area of Mostar",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/946"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BB",
+      "country": "Barbados",
+      "gatewayId": "country-bb",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 272,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1376"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BD",
+      "country": "Bangladesh",
+      "gatewayId": "country-bd",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 261,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/798"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BE",
+      "country": "Belgium",
+      "gatewayId": "country-be",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "La Grand-Place, Brussels",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/857"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BF",
+      "country": "Burkina Faso",
+      "gatewayId": "country-bf",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 263,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1225"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BG",
+      "country": "Bulgaria",
+      "gatewayId": "country-bg",
+      "sourceFile": "editorial/full_country_stories_batch16_5_20261023.json",
+      "focus": "Rila Monastery",
+      "wordCount": 232,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/216/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BH",
+      "country": "Bahrain",
+      "gatewayId": "country-bh",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 270,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1192"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BI",
+      "country": "Burundi",
+      "gatewayId": "country-bi",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Kibira National Park",
+      "wordCount": 218,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/6933/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BJ",
+      "country": "Benin",
+      "gatewayId": "country-bj",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 245,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/323"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BN",
+      "country": "Brunei",
+      "gatewayId": "country-bn",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Ulu Temburong National Park",
+      "wordCount": 225,
+      "sourceLinks": [
+        "https://www.bruneitourism.com/places/ulu-temburong-national-park/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BO",
+      "country": "Bolivia",
+      "gatewayId": "country-bo",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 205,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/567"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BR",
+      "country": "Brazil",
+      "gatewayId": "country-br",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 275,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/606"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BS",
+      "country": "Bahamas",
+      "gatewayId": "country-bs",
+      "sourceFile": "editorial/full_country_stories_batch17_5_20261023.json",
+      "focus": "Exuma Cays Land and Sea Park",
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://bnt.bs/explore/exuma/exuma-cays-land-sea-park/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BT",
+      "country": "Bhutan",
+      "gatewayId": "country-bt",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Dzongs: religious and civic fortresses",
+      "wordCount": 228,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5695/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BW",
+      "country": "Botswana",
+      "gatewayId": "country-bw",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 244,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1432"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BY",
+      "country": "Belarus",
+      "gatewayId": "country-by",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Mir Castle Complex",
+      "wordCount": 242,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/625"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "BZ",
+      "country": "Belize",
+      "gatewayId": "country-bz",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 255,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/764"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CA",
+      "country": "Canada",
+      "gatewayId": "country-ca",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Canadian Rocky Mountain Parks",
+      "wordCount": 257,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/304/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CD",
+      "country": "Democratic Republic of the Congo",
+      "gatewayId": "country-cd",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 213,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/cd",
+        "https://whc.unesco.org/en/list/63"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 263
+        }
+      ]
+    },
+    {
+      "iso2": "CF",
+      "country": "Central African Republic",
+      "gatewayId": "country-cf",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 207,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1380",
+        "https://whc.unesco.org/en/conservation-congo-basin"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 229
+        }
+      ]
+    },
+    {
+      "iso2": "CG",
+      "country": "Republic of the Congo",
+      "gatewayId": "country-cg",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 213,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/cg",
+        "https://whc.unesco.org/en/list/692/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 233
+        }
+      ]
+    },
+    {
+      "iso2": "CH",
+      "country": "Switzerland",
+      "gatewayId": "country-ch",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Swiss Alps Jungfrau-Aletsch",
+      "wordCount": 243,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1037"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CI",
+      "country": "Côte d'Ivoire",
+      "gatewayId": "country-ci",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/227"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CL",
+      "country": "Chile",
+      "gatewayId": "country-cl",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Humberstone and Santa Laura Saltpeter Works",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1178/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CM",
+      "country": "Cameroon",
+      "gatewayId": "country-cm",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 214,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/cm",
+        "https://whc.unesco.org/en/list/407"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 240
+        }
+      ]
+    },
+    {
+      "iso2": "CN",
+      "country": "China",
+      "gatewayId": "country-cn",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Jiuzhaigou Valley Scenic and Historic Interest Area",
+      "wordCount": 250,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/637"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CO",
+      "country": "Colombia",
+      "gatewayId": "country-co",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Coffee Cultural Landscape",
+      "wordCount": 245,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1121"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CR",
+      "country": "Costa Rica",
+      "gatewayId": "country-cr",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Área de Conservación Guanacaste",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/928/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CU",
+      "country": "Cuba",
+      "gatewayId": "country-cu",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Old Havana and its Fortification System",
+      "wordCount": 251,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/204"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CV",
+      "country": "Cabo Verde",
+      "gatewayId": "country-cv",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Cidade Velha, Historic Centre of Ribeira Grande",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1310"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CY",
+      "country": "Cyprus",
+      "gatewayId": "country-cy",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Paphos Archaeological Sites",
+      "wordCount": 231,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/79"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "CZ",
+      "country": "Czechia",
+      "gatewayId": "country-cz",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Historic Centre of Prague",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/616"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DE",
+      "country": "Germany",
+      "gatewayId": "country-de",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Zollverein Coal Mine Industrial Complex",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/975"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DJ",
+      "country": "Djibouti",
+      "gatewayId": "country-dj",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Lake Assal",
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5959"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DK",
+      "country": "Denmark",
+      "gatewayId": "country-dk",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Jelling Mounds, Runic Stones and Church",
+      "wordCount": 240,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/697"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DM",
+      "country": "Dominica",
+      "gatewayId": "country-dm",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Morne Trois Pitons National Park",
+      "wordCount": 242,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/814"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DO",
+      "country": "Dominican Republic",
+      "gatewayId": "country-do",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Colonial City of Santo Domingo",
+      "wordCount": 255,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/526"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "DZ",
+      "country": "Algeria",
+      "gatewayId": "country-dz",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 265,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/179"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "EC",
+      "country": "Ecuador",
+      "gatewayId": "country-ec",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Galápagos Islands",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "EE",
+      "country": "Estonia",
+      "gatewayId": "country-ee",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Historic Centre of Tallinn",
+      "wordCount": 245,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/822"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "EG",
+      "country": "Egypt",
+      "gatewayId": "country-eg",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Ancient Thebes with its Necropolis",
+      "wordCount": 243,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/87"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ER",
+      "country": "Eritrea",
+      "gatewayId": "country-er",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Asmara: A Modernist African City",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1550"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ES",
+      "country": "Spain",
+      "gatewayId": "country-es",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Alhambra, Generalife and Albayzín",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/314"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ET",
+      "country": "Ethiopia",
+      "gatewayId": "country-et",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 227,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/9",
+        "https://whc.unesco.org/en/statesparties/et"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "FI",
+      "country": "Finland",
+      "gatewayId": "country-fi",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Fortress of Suomenlinna",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/583"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "FJ",
+      "country": "Fiji",
+      "gatewayId": "country-fj",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Levuka Historical Port Town",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1399"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "FM",
+      "country": "Micronesia",
+      "gatewayId": "country-fm",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 221,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1503"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "FR",
+      "country": "France",
+      "gatewayId": "country-fr",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Mont-Saint-Michel and its Bay",
+      "wordCount": 249,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/80"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GA",
+      "country": "Gabon",
+      "gatewayId": "country-ga",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 264,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1147"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 221
+        }
+      ]
+    },
+    {
+      "iso2": "GB",
+      "country": "United Kingdom",
+      "gatewayId": "country-gb",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Jodrell Bank Observatory",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1594"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GD",
+      "country": "Grenada",
+      "gatewayId": "country-gd",
+      "sourceFile": "editorial/full_country_stories_batch17_5_20261023.json",
+      "focus": "St George Historic District",
+      "wordCount": 231,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/gd/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GE",
+      "country": "Georgia",
+      "gatewayId": "country-ge",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Upper Svaneti",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/709"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GH",
+      "country": "Ghana",
+      "gatewayId": "country-gh",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Forts and Castles of the Ghanaian coast",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/34"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GM",
+      "country": "Gambia",
+      "gatewayId": "country-gm",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/761"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GN",
+      "country": "Guinea",
+      "gatewayId": "country-gn",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 228,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/155"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GQ",
+      "country": "Equatorial Guinea",
+      "gatewayId": "country-gq",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Monte Alén National Park",
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/7004/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GR",
+      "country": "Greece",
+      "gatewayId": "country-gr",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Meteora",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/455"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GT",
+      "country": "Guatemala",
+      "gatewayId": "country-gt",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Tikal National Park",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/64"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GW",
+      "country": "Guinea-Bissau",
+      "gatewayId": "country-gw",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Bijagós Archipelago – Omatí Minhô",
+      "wordCount": 214,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1431/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "GY",
+      "country": "Guyana",
+      "gatewayId": "country-gy",
+      "sourceFile": "editorial/full_country_stories_batch17_5_20261023.json",
+      "focus": "Historic Georgetown's plantation structure",
+      "wordCount": 223,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/2008/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "HN",
+      "country": "Honduras",
+      "gatewayId": "country-hn",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Maya Site of Copán",
+      "wordCount": 234,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/129"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "HR",
+      "country": "Croatia",
+      "gatewayId": "country-hr",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Old City of Dubrovnik",
+      "wordCount": 252,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/95"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "HT",
+      "country": "Haiti",
+      "gatewayId": "country-ht",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "National History Park – Citadel, Sans Souci, Ramiers",
+      "wordCount": 232,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/180"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "HU",
+      "country": "Hungary",
+      "gatewayId": "country-hu",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Budapest and the Danube Banks",
+      "wordCount": 242,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/400"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ID",
+      "country": "Indonesia",
+      "gatewayId": "country-id",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 261,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/592"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IE",
+      "country": "Ireland",
+      "gatewayId": "country-ie",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Brú na Bóinne – Bend of the Boyne",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/659"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IL",
+      "country": "Israel",
+      "gatewayId": "country-il",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Masada",
+      "wordCount": 219,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1040/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IN",
+      "country": "India",
+      "gatewayId": "country-in",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Western Ghats",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1342"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IQ",
+      "country": "Iraq",
+      "gatewayId": "country-iq",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Erbil Citadel",
+      "wordCount": 243,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1437"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IR",
+      "country": "Iran",
+      "gatewayId": "country-ir",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Persepolis",
+      "wordCount": 226,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/114"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IS",
+      "country": "Iceland",
+      "gatewayId": "country-is",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Þingvellir National Park",
+      "wordCount": 255,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1152"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "IT",
+      "country": "Italy",
+      "gatewayId": "country-it",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Venice and its Lagoon",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/394"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "JM",
+      "country": "Jamaica",
+      "gatewayId": "country-jm",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Blue and John Crow Mountains",
+      "wordCount": 247,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1356"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "JO",
+      "country": "Jordan",
+      "gatewayId": "country-jo",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Petra",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/326"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "JP",
+      "country": "Japan",
+      "gatewayId": "country-jp",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Shirakami-Sanchi",
+      "wordCount": 253,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/663"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KE",
+      "country": "Kenya",
+      "gatewayId": "country-ke",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Lake Turkana National Parks",
+      "wordCount": 260,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/801"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KG",
+      "country": "Kyrgyzstan",
+      "gatewayId": "country-kg",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 204,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1230"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KH",
+      "country": "Cambodia",
+      "gatewayId": "country-kh",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Angkor",
+      "wordCount": 247,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/668"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KI",
+      "country": "Kiribati",
+      "gatewayId": "country-ki",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1325"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KM",
+      "country": "Comoros",
+      "gatewayId": "country-km",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Mwali Biosphere Reserve",
+      "wordCount": 219,
+      "sourceLinks": [
+        "https://www.unesco.org/en/mab/mwali"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KN",
+      "country": "Saint Kitts and Nevis",
+      "gatewayId": "country-kn",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Brimstone Hill Fortress National Park",
+      "wordCount": 240,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/910"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KP",
+      "country": "North Korea",
+      "gatewayId": "country-kp",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Complex of Koguryo Tombs",
+      "wordCount": 224,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1091/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KR",
+      "country": "South Korea",
+      "gatewayId": "country-kr",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Getbol, Korean Tidal Flats",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1591"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KW",
+      "country": "Kuwait",
+      "gatewayId": "country-kw",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Failaka Island",
+      "wordCount": 229,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/6800/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "KZ",
+      "country": "Kazakhstan",
+      "gatewayId": "country-kz",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Saryarka Steppe and Lakes",
+      "wordCount": 222,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1102"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LA",
+      "country": "Laos",
+      "gatewayId": "country-la",
+      "sourceFile": "editorial/full_country_stories_batch3_12_20261023.json",
+      "focus": null,
+      "wordCount": 266,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1587"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LB",
+      "country": "Lebanon",
+      "gatewayId": "country-lb",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Byblos",
+      "wordCount": 240,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/295"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LC",
+      "country": "Saint Lucia",
+      "gatewayId": "country-lc",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Pitons Management Area",
+      "wordCount": 243,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1161"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LI",
+      "country": "Liechtenstein",
+      "gatewayId": "country-li",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Ruggeller Riet wetland",
+      "wordCount": 222,
+      "sourceLinks": [
+        "https://www.ramsar.org/country-profile/liechtenstein"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LK",
+      "country": "Sri Lanka",
+      "gatewayId": "country-lk",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Ancient City of Sigiriya",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/202"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LR",
+      "country": "Liberia",
+      "gatewayId": "country-lr",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Gola Rainforest National Park",
+      "wordCount": 221,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/6650/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LS",
+      "country": "Lesotho",
+      "gatewayId": "country-ls",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Maloti-Drakensberg Park",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/985"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LT",
+      "country": "Lithuania",
+      "gatewayId": "country-lt",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Vilnius Historic Centre",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/541"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LU",
+      "country": "Luxembourg",
+      "gatewayId": "country-lu",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Old Quarters and Fortifications",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/699"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LV",
+      "country": "Latvia",
+      "gatewayId": "country-lv",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Historic Centre of Riga",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/852"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "LY",
+      "country": "Libya",
+      "gatewayId": "country-ly",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Archaeological Site of Leptis Magna",
+      "wordCount": 234,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/183"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MA",
+      "country": "Morocco",
+      "gatewayId": "country-ma",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Ksar of Aït-Ben-Haddou",
+      "wordCount": 231,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/444"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MC",
+      "country": "Monaco",
+      "gatewayId": "country-mc",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Oceanographic Museum and marine science",
+      "wordCount": 226,
+      "sourceLinks": [
+        "https://musee.oceano.org/en/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MD",
+      "country": "Moldova",
+      "gatewayId": "country-md",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Struve Geodetic Arc",
+      "wordCount": 245,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1187"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ME",
+      "country": "Montenegro",
+      "gatewayId": "country-me",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Natural and Culturo-Historical Region of Kotor",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/125"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MG",
+      "country": "Madagascar",
+      "gatewayId": "country-mg",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Andrefana Dry Forests and tsingy",
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/494"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MH",
+      "country": "Marshall Islands",
+      "gatewayId": "country-mh",
+      "sourceFile": "editorial/full_country_stories_batch16_5_20261023.json",
+      "focus": "Bikini Atoll Nuclear Test Site",
+      "wordCount": 232,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1339/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MK",
+      "country": "North Macedonia",
+      "gatewayId": "country-mk",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Natural and Cultural Heritage of the Ohrid region",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/99"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ML",
+      "country": "Mali",
+      "gatewayId": "country-ml",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Timbuktu",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/119"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MM",
+      "country": "Myanmar",
+      "gatewayId": "country-mm",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Bagan",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1588"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MN",
+      "country": "Mongolia",
+      "gatewayId": "country-mn",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 210,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1081"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MR",
+      "country": "Mauritania",
+      "gatewayId": "country-mr",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Banc d'Arguin National Park",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/506"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MT",
+      "country": "Malta",
+      "gatewayId": "country-mt",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "City of Valletta",
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/131"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MU",
+      "country": "Mauritius",
+      "gatewayId": "country-mu",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Le Morne Cultural Landscape",
+      "wordCount": 234,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1259"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MV",
+      "country": "Maldives",
+      "gatewayId": "country-mv",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Baa Atoll Biosphere Reserve",
+      "wordCount": 216,
+      "sourceLinks": [
+        "https://www.unesco.org/en/mab/baa-atoll"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MW",
+      "country": "Malawi",
+      "gatewayId": "country-mw",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Lake Malawi National Park",
+      "wordCount": 252,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/289"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 228
+        }
+      ]
+    },
+    {
+      "iso2": "MX",
+      "country": "Mexico",
+      "gatewayId": "country-mx",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Pre-Hispanic City of Teotihuacan",
+      "wordCount": 247,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/414"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MY",
+      "country": "Malaysia",
+      "gatewayId": "country-my",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Gunung Mulu National Park",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1013"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "MZ",
+      "country": "Mozambique",
+      "gatewayId": "country-mz",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Island of Mozambique",
+      "wordCount": 231,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/599"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 228
+        }
+      ]
+    },
+    {
+      "iso2": "NA",
+      "country": "Namibia",
+      "gatewayId": "country-na",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1430"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NE",
+      "country": "Niger",
+      "gatewayId": "country-ne",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 225,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1268"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NG",
+      "country": "Nigeria",
+      "gatewayId": "country-ng",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/938"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NI",
+      "country": "Nicaragua",
+      "gatewayId": "country-ni",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "León Cathedral",
+      "wordCount": 242,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1236"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NL",
+      "country": "Netherlands",
+      "gatewayId": "country-nl",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Mill Network at Kinderdijk-Elshout",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/818"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NO",
+      "country": "Norway",
+      "gatewayId": "country-no",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "West Norwegian Fjords",
+      "wordCount": 246,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1195"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NP",
+      "country": "Nepal",
+      "gatewayId": "country-np",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 211,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/121"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NR",
+      "country": "Nauru",
+      "gatewayId": "country-nr",
+      "sourceFile": "editorial/full_country_stories_batch17_5_20261023.json",
+      "focus": "Phosphate landscape and land rehabilitation",
+      "wordCount": 220,
+      "sourceLinks": [
+        "https://www.fao.org/in-action/food-systems-integrated-program/country-projects/nauru"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "NZ",
+      "country": "New Zealand",
+      "gatewayId": "country-nz",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Te Wāhipounamu – South West New Zealand",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/551"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "OM",
+      "country": "Oman",
+      "gatewayId": "country-om",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Land of Frankincense",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1010"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PA",
+      "country": "Panama",
+      "gatewayId": "country-pa",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Coiba National Park and Marine Protection Zone",
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1138"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PE",
+      "country": "Peru",
+      "gatewayId": "country-pe",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Chan Chan Archaeological Zone",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/366"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PG",
+      "country": "Papua New Guinea",
+      "gatewayId": "country-pg",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 222,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/887"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PH",
+      "country": "Philippines",
+      "gatewayId": "country-ph",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 211,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/722"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PK",
+      "country": "Pakistan",
+      "gatewayId": "country-pk",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Archaeological Ruins at Moenjodaro",
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/138"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PL",
+      "country": "Poland",
+      "gatewayId": "country-pl",
+      "sourceFile": "editorial/full_country_stories_batch7_12_20261023.json",
+      "focus": "Wieliczka and Bochnia Royal Salt Mines",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/32"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PS",
+      "country": "Palestine",
+      "gatewayId": "country-ps",
+      "sourceFile": "editorial/full_country_stories_batch16_5_20261023.json",
+      "focus": "Church of the Nativity and Pilgrimage Route, Bethlehem",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1433/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PT",
+      "country": "Portugal",
+      "gatewayId": "country-pt",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Cultural Landscape of Sintra",
+      "wordCount": 256,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/723"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PW",
+      "country": "Palau",
+      "gatewayId": "country-pw",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 213,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1386"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "PY",
+      "country": "Paraguay",
+      "gatewayId": "country-py",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Jesuit Missions of Trinidad and Jesús de Tavarangue",
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/648"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "QA",
+      "country": "Qatar",
+      "gatewayId": "country-qa",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Al Zubarah Archaeological Site",
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1402"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "RO",
+      "country": "Romania",
+      "gatewayId": "country-ro",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Danube Delta",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/588"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "RS",
+      "country": "Serbia",
+      "gatewayId": "country-rs",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Studenica Monastery",
+      "wordCount": 236,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/389"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "RU",
+      "country": "Russia",
+      "gatewayId": "country-ru",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/ru",
+        "https://whc.unesco.org/en/list/1654",
+        "https://whc.unesco.org/en/list/754/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "RW",
+      "country": "Rwanda",
+      "gatewayId": "country-rw",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Nyungwe National Park",
+      "wordCount": 223,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1697"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SA",
+      "country": "Saudi Arabia",
+      "gatewayId": "country-sa",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Hegra Archaeological Site",
+      "wordCount": 251,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1293"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SB",
+      "country": "Solomon Islands",
+      "gatewayId": "country-sb",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 226,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/854"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SC",
+      "country": "Seychelles",
+      "gatewayId": "country-sc",
+      "sourceFile": "editorial/full_country_stories_batch12_8_20261023.json",
+      "focus": "Aldabra Atoll",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/185"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SD",
+      "country": "Sudan",
+      "gatewayId": "country-sd",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Archaeological Sites of the Island of Meroe",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1336"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SE",
+      "country": "Sweden",
+      "gatewayId": "country-se",
+      "sourceFile": "editorial/full_country_stories_batch16_5_20261023.json",
+      "focus": "High Coast / Kvarken Archipelago",
+      "wordCount": 227,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/898/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SG",
+      "country": "Singapore",
+      "gatewayId": "country-sg",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Singapore Botanic Gardens",
+      "wordCount": 255,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1483"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SI",
+      "country": "Slovenia",
+      "gatewayId": "country-si",
+      "sourceFile": "editorial/full_country_stories_batch10_12_20261023.json",
+      "focus": "Škocjan Caves",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/390"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SK",
+      "country": "Slovakia",
+      "gatewayId": "country-sk",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Banská Štiavnica Mining Landscape",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/618"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SL",
+      "country": "Sierra Leone",
+      "gatewayId": "country-sl",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Gola-Tiwai Complex",
+      "wordCount": 217,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1746/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SM",
+      "country": "San Marino",
+      "gatewayId": "country-sm",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Historic Centre and Mount Titano",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1245/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SN",
+      "country": "Senegal",
+      "gatewayId": "country-sn",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 222,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1226"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SO",
+      "country": "Somalia",
+      "gatewayId": "country-so",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Bushbushle National Park",
+      "wordCount": 231,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/6752/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SR",
+      "country": "Suriname",
+      "gatewayId": "country-sr",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 212,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1017"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SS",
+      "country": "South Sudan",
+      "gatewayId": "country-ss",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Boma–Badingilo Migratory Landscape",
+      "wordCount": 219,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1808/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ST",
+      "country": "São Tomé and Príncipe",
+      "gatewayId": "country-st",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Príncipe Island Biosphere Reserve",
+      "wordCount": 219,
+      "sourceLinks": [
+        "https://www.unesco.org/en/mab/island-principe"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SV",
+      "country": "El Salvador",
+      "gatewayId": "country-sv",
+      "sourceFile": "editorial/full_country_stories_batch16_5_20261023.json",
+      "focus": "Joya de Cerén Archaeological Site",
+      "wordCount": 224,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/675/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SY",
+      "country": "Syria",
+      "gatewayId": "country-sy",
+      "sourceFile": "editorial/full_country_stories_batch17_5_20261023.json",
+      "focus": "Site of Palmyra",
+      "wordCount": 222,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/23/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "SZ",
+      "country": "Eswatini",
+      "gatewayId": "country-sz",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Ngwenya Mines",
+      "wordCount": 224,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5421/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TD",
+      "country": "Chad",
+      "gatewayId": "country-td",
+      "sourceFile": "editorial/country_stories_africa_10_source_only_20261023.json",
+      "focus": "Lakes of Ounianga",
+      "wordCount": 235,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1400"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TG",
+      "country": "Togo",
+      "gatewayId": "country-tg",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 227,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1140"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TH",
+      "country": "Thailand",
+      "gatewayId": "country-th",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Historic City of Ayutthaya",
+      "wordCount": 237,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/576"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TJ",
+      "country": "Tajikistan",
+      "gatewayId": "country-tj",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 204,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1252"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TL",
+      "country": "Timor-Leste",
+      "gatewayId": "country-tl",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Nino Konis Santana Biosphere Reserve",
+      "wordCount": 214,
+      "sourceLinks": [
+        "https://www.unesco.org/en/articles/nino-konis-santana-designated-timor-lestes-first-unesco-biosphere-reserve"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TM",
+      "country": "Turkmenistan",
+      "gatewayId": "country-tm",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Kunya-Urgench",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1199/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TN",
+      "country": "Tunisia",
+      "gatewayId": "country-tn",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Archaeological Site of Carthage",
+      "wordCount": 238,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/37"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TO",
+      "country": "Tonga",
+      "gatewayId": "country-to",
+      "sourceFile": "editorial/full_country_stories_batch15_12_20261023.json",
+      "focus": "Ancient Capitals of the Kingdom of Tonga",
+      "wordCount": 216,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5167"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TR",
+      "country": "Türkiye",
+      "gatewayId": "country-tr",
+      "sourceFile": "editorial/full_country_stories_batch4_12_20261023.json",
+      "focus": "Göbekli Tepe",
+      "wordCount": 250,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1572"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TT",
+      "country": "Trinidad and Tobago",
+      "gatewayId": "country-tt",
+      "sourceFile": "editorial/full_country_stories_batch18_5_20261023.json",
+      "focus": "La Brea Pitch Lake",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5645"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TV",
+      "country": "Tuvalu",
+      "gatewayId": "country-tv",
+      "sourceFile": "editorial/full_country_stories_batch18_5_20261023.json",
+      "focus": "Pacific atoll-island cultural landscape",
+      "wordCount": 230,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/tv"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "TZ",
+      "country": "Tanzania",
+      "gatewayId": "country-tz",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Kilimanjaro National Park",
+      "wordCount": 228,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/403"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 227
+        }
+      ]
+    },
+    {
+      "iso2": "UA",
+      "country": "Ukraine",
+      "gatewayId": "country-ua",
+      "sourceFile": "editorial/full_country_stories_batch11_12_20261023.json",
+      "focus": "Saint Sophia and Kyiv-Pechersk Lavra",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/527"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "UG",
+      "country": "Uganda",
+      "gatewayId": "country-ug",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Rwenzori Mountains National Park",
+      "wordCount": 248,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/684"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": [
+        {
+          "file": "editorial/country_stories_africa_10_source_only_20261023.json",
+          "wordCount": 229
+        }
+      ]
+    },
+    {
+      "iso2": "US",
+      "country": "United States",
+      "gatewayId": "country-us",
+      "sourceFile": "editorial/full_country_stories_existing7_enriched_20261023.json",
+      "focus": null,
+      "wordCount": 221,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/28",
+        "https://www.nps.gov/yell/learn/historyculture/associatedtribes.htm"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "UY",
+      "country": "Uruguay",
+      "gatewayId": "country-uy",
+      "sourceFile": "editorial/full_country_stories_batch2_10_20261023.json",
+      "focus": null,
+      "wordCount": 213,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/747"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "UZ",
+      "country": "Uzbekistan",
+      "gatewayId": "country-uz",
+      "sourceFile": "editorial/full_country_stories_batch6_12_20261023.json",
+      "focus": "Samarkand – Crossroad of Cultures",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/603"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "VA",
+      "country": "Vatican City",
+      "gatewayId": "country-va",
+      "sourceFile": "editorial/full_country_stories_batch14_12_20261023.json",
+      "focus": "Vatican City",
+      "wordCount": 234,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/286/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "VC",
+      "country": "Saint Vincent and the Grenadines",
+      "gatewayId": "country-vc",
+      "sourceFile": "editorial/full_country_stories_batch18_5_20261023.json",
+      "focus": "The La Soufrière National Park",
+      "wordCount": 221,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/statesparties/vc/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "VE",
+      "country": "Venezuela",
+      "gatewayId": "country-ve",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Canaima National Park",
+      "wordCount": 227,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/701"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "VN",
+      "country": "Viet Nam",
+      "gatewayId": "country-vn",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Tràng An Landscape Complex",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1438"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "VU",
+      "country": "Vanuatu",
+      "gatewayId": "country-vu",
+      "sourceFile": "editorial/full_country_stories_batch1_19_20261023.json",
+      "focus": null,
+      "wordCount": 221,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1280"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "WS",
+      "country": "Samoa",
+      "gatewayId": "country-ws",
+      "sourceFile": "editorial/full_country_stories_batch18_5_20261023.json",
+      "focus": "Fagaloa Bay – Uafato Tiavea Conservation Zone",
+      "wordCount": 211,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/tentativelists/5090/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "XK",
+      "country": "Kosovo",
+      "gatewayId": "country-xk",
+      "sourceFile": "editorial/full_country_stories_batch18_5_20261023.json",
+      "focus": "Medieval Monuments in Kosovo",
+      "wordCount": 227,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/724/"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "YE",
+      "country": "Yemen",
+      "gatewayId": "country-ye",
+      "sourceFile": "editorial/full_country_stories_batch13_4_20261023.json",
+      "focus": "Socotra Archipelago",
+      "wordCount": 233,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/1263"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ZA",
+      "country": "South Africa",
+      "gatewayId": "country-za",
+      "sourceFile": "editorial/full_country_stories_batch8_12_20261023.json",
+      "focus": "Robben Island",
+      "wordCount": 239,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/916"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ZM",
+      "country": "Zambia",
+      "gatewayId": "country-zm",
+      "sourceFile": "editorial/full_country_stories_batch9_12_20261023.json",
+      "focus": "Mosi-oa-Tunya / Victoria Falls",
+      "wordCount": 241,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/509"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    },
+    {
+      "iso2": "ZW",
+      "country": "Zimbabwe",
+      "gatewayId": "country-zw",
+      "sourceFile": "editorial/full_country_stories_batch5_12_20261023.json",
+      "focus": "Great Zimbabwe National Monument",
+      "wordCount": 234,
+      "sourceLinks": [
+        "https://whc.unesco.org/en/list/364"
+      ],
+      "editorialStatus": "needs-human-review",
+      "mediaStatus": "photos-not-attached",
+      "live": false,
+      "alternateSources": []
+    }
+  ]
+}

@@ -668,6 +668,14 @@ LOCATIONS.forEach((l,i)=>{
   MAJOR_LOCATION_IDS.has(l.id)?(175+(i%5)*10):
   (100+(i%8)*10);
 });
+// Additional country/ocean/sea pins have NEW IDs. Do not change the old
+// locations, historical cost tiers, or any saved purchase identifier.
+if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations)){
+ const existing=new Set(LOCATIONS.map(x=>x.id));
+ for(const destination of window.RevisionWorldDestinations){
+  if(!existing.has(destination.id)){LOCATIONS.push({...destination});existing.add(destination.id)}
+ }
+}
 
 const EARTH_TEXTURE_URL='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Blue_Marble_2002.jpg/1280px-Blue_Marble_2002.jpg';
 const earthTexture=new Image();earthTexture.crossOrigin='anonymous';let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;earthTexture.onload=()=>{try{const t=document.createElement('canvas');t.width=720;t.height=360;const x=t.getContext('2d',{willReadFrequently:true});x.drawImage(earthTexture,0,0,t.width,t.height);earthPixels=x.getImageData(0,0,t.width,t.height).data;earthW=t.width;earthH=t.height;earthTextureReady=true}catch{earthTextureReady=false}drawGlobe()};earthTexture.src=EARTH_TEXTURE_URL;
@@ -678,9 +686,38 @@ function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));loca
 function ensureProfile(){
  profile.daily=profile.daily||{};profile.examResults=profile.examResults||{};profile.topicWeakness=profile.topicWeakness||{};profile.topicStats=profile.topicStats||{};
  profile.errorLog=profile.errorLog||[];profile.dailyChallenges=profile.dailyChallenges||{};profile.challengeStreak=profile.challengeStreak||0;profile.lastChallengeDate=profile.lastChallengeDate||'';
- profile.shopOwned=profile.shopOwned||{};profile.shopOwned.characters=(profile.shopOwned.characters||[]).filter(id=>CHARACTERS.some(c=>c.id===id));profile.shopOwned.outfits=(profile.shopOwned.outfits||[]).filter(id=>OUTFITS.some(o=>o.id===id));profile.shopOwned.locations=(profile.shopOwned.locations||[]).filter(id=>LOCATIONS.some(l=>l.id===id));if(!profile.shopOwned.characters.length)profile.shopOwned.characters=['lelouch'];if(!profile.shopOwned.outfits.length)profile.shopOwned.outfits=['lelouch-default'];if(!profile.shopOwned.locations.includes('london'))profile.shopOwned.locations.unshift('london');if(!CHARACTERS.some(c=>c.id===profile.equippedCharacter))profile.equippedCharacter=profile.shopOwned.characters[0]||'lelouch';if(!OUTFITS.some(o=>o.id===profile.equippedOutfit&&o.character===profile.equippedCharacter))profile.equippedOutfit=profile.equippedCharacter+'-default';profile.equippedLocation=LOCATIONS.some(l=>l.id===profile.equippedLocation)?profile.equippedLocation:'london';
- if(profile.economyVersion!==2){profile.lifetimeXp=0;profile.points=0;profile.economyVersion=2}
- profile.lifetimeXp=profile.lifetimeXp||0;profile.points=profile.points||0;profile.reviews=profile.reviews||0;
+ // Back up the exact last saved profile before the first economy migration.
+ // Never reset previously earned XP/points or discard unfamiliar historical purchases.
+ if(profile.economyVersion!==2){
+  try{
+   const backupKey='revisionLoopProfile-pre-world-v62';
+   if(!localStorage.getItem(backupKey)){
+    const original=localStorage.getItem(PROFILE_KEY);
+    if(original)localStorage.setItem(backupKey,original);
+   }
+  }catch{}
+ }
+ const safety=window.RevisionWorldProfileSafety;
+ if(safety){
+  profile=safety.migrateProfile(profile);
+ }else{
+  // Safe offline fallback if the additional script is not cached yet:
+  // preserve the whole object, all historic IDs, and earned balances.
+  profile.shopOwned=profile.shopOwned||{};
+  for(const kind of ['characters','outfits','locations']){
+   profile.shopOwned[kind]=Array.isArray(profile.shopOwned[kind])?profile.shopOwned[kind]:[];
+  }
+  if(!profile.shopOwned.characters.includes('lelouch'))profile.shopOwned.characters.unshift('lelouch');
+  if(!profile.shopOwned.outfits.includes('lelouch-default'))profile.shopOwned.outfits.unshift('lelouch-default');
+  if(!profile.shopOwned.locations.includes('london'))profile.shopOwned.locations.unshift('london');
+  profile.points=Number.isFinite(profile.points)?Math.max(0,profile.points):0;
+  profile.lifetimeXp=Number.isFinite(profile.lifetimeXp)?Math.max(0,profile.lifetimeXp):0;
+  profile.reviews=Number.isFinite(profile.reviews)?Math.max(0,profile.reviews):0;
+  profile.equippedCharacter=profile.equippedCharacter||'lelouch';
+  profile.equippedOutfit=profile.equippedOutfit||'lelouch-default';
+  profile.equippedLocation=profile.equippedLocation||'london';
+  profile.economyVersion=2;
+ }
  settings.dailyNew=settings.dailyNew||18;settings.physicsUnits=settings.physicsUnits||{};
 }
 function now(){return Date.now()}
@@ -2046,6 +2083,21 @@ function renderProgress(){
 }
 
 function buy(kind,id){
+ // Route destination purchases through a non-destructive, alias-aware operation.
+ // A historical purchase of cape_town/addis_ababa/victoria_falls is already owned.
+ if(kind==='location'){
+  const destination=LOCATIONS.find(x=>x.id===id);
+  if(!destination)return;
+  const safety=window.RevisionWorldProfileSafety;
+  if(!safety){showToast('Location purchases unavailable until the safety module loads');return}
+  const outcome=safety.purchaseLocation(profile,destination);
+  if(outcome.insufficientPoints){showToast('Not enough points yet');return}
+  profile=outcome.profile;
+  save();
+  if(!outcome.alreadyOwned)showToast('Unlocked '+destination.name);
+  renderAll();
+  return;
+ }
  let item,owned;
  if(kind==='character'){item=CHARACTERS.find(x=>x.id===id);owned=profile.shopOwned.characters}
  else if(kind==='outfit'){item=OUTFITS.find(x=>x.id===id);owned=profile.shopOwned.outfits}
@@ -2082,29 +2134,21 @@ const LOCATION_PHOTO_SEARCH={
 };
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
- if(wikiPhotoCache[location.id]){placeImage(el,wikiPhotoCache[location.id],location);return}
- let url=null;
- if(LOCATION_PHOTO_SEARCH[location.id]){
-  try{
-   const q=LOCATION_PHOTO_SEARCH[location.id];
-   const api='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
-   const res=await fetch(api,{cache:'force-cache'});if(res.ok){
-    const data=await res.json();
-    const pages=(data.query?.pages||[]).filter(p=>/\.(?:jpg|jpeg|png|webp)$/i.test(p.title||'')&&!/logo|map|flag|coat of arms|diagram/i.test(p.title||''));
-    const found=pages.find(p=>p.imageinfo?.[0]?.thumburl);
-    if(found)url=found.imageinfo[0].thumburl;
-   }
-  }catch{}
- }
- if(!url){
-  try{
-   const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&formatversion=2&pithumbsize=640&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
-   const res=await fetch(endpoint,{cache:'force-cache'});
-   if(res.ok){const d=await res.json();url=d.query?.pages?.[0]?.thumbnail?.source||null}
-  }catch{}
- }
- if(url){wikiPhotoCache[location.id]=url;placeImage(el,url,location)}
- else el.textContent='Photograph unavailable';
+ const images=window.RevisionWorldCommonsMedia;
+ if(!images){el.textContent='Licensed images unavailable offline';return}
+ const loadPhotos=async()=>{
+  const query=LOCATION_PHOTO_SEARCH[location.id]||location.name+' '+location.wiki.replace(/_/g,' ');
+  const results=await images.search(query,{limit:1});
+  if(el.isConnected)images.append(el,results);
+ };
+ // Avoid dozens of off-screen external image searches on every shop rerender.
+ if(typeof IntersectionObserver==='function'&&el.closest('#locationShop')){
+  const observer=new IntersectionObserver(entries=>{
+   if(!entries.some(entry=>entry.isIntersecting))return;
+   observer.disconnect();loadPhotos();
+  },{rootMargin:'260px'});
+  observer.observe(el);
+ }else await loadPhotos();
 }
 function evenlySpacedLocations(locations){
  const regions=['Africa','Asia','Europe','North America','South America','Oceania'];
@@ -2116,15 +2160,16 @@ function evenlySpacedLocations(locations){
 }
 function renderLocationGallery(){
  const selected=document.getElementById('locationRegion').value;
- const pool=selected?LOCATIONS.filter(l=>l.region===selected):evenlySpacedLocations(LOCATIONS);
+ const distinct=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const pool=selected?distinct.filter(l=>l.region===selected):evenlySpacedLocations(distinct);
  const visible=pool.slice(0,locationVisibleLimit);
- document.getElementById('regionCount').textContent=selected?pool.length+' places':LOCATIONS.length+' worldwide';
+ document.getElementById('regionCount').textContent=selected?pool.length+' places':distinct.length+' worldwide';
  document.getElementById('locationShop').innerHTML=visible.map(l=>{
-  const owned=profile.shopOwned.locations.includes(l.id);
+  const owned=window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??profile.shopOwned.locations.includes(l.id);
   return '<div class="shop-item location-card"><div class="location-photo" data-location-photo="'+esc(l.id)+'">Loading photograph…</div>'+
    '<div class="location-body"><b>'+esc(l.name)+'</b><small class="region-tag">'+esc(l.region||'Global')+'</small>'+
    '<button class="'+(!owned?'buy':'')+'" data-location="'+esc(l.id)+'" '+(!owned&&profile.points<l.cost?'disabled':'')+'>'+
-   (owned?(profile.equippedLocation===l.id?'Active location':'Use location'):l.cost+' points')+'</button></div></div>';
+   (owned?((window.RevisionWorldProfileSafety?.family(l.id)||[l.id]).includes(profile.equippedLocation)?'Active location':'Use location'):l.cost+' points')+'</button></div></div>';
  }).join('');
  document.querySelectorAll('[data-location]').forEach(b=>b.onclick=()=>buy('location',b.dataset.location));
  document.querySelectorAll('[data-location-photo]').forEach(el=>locationPhoto(LOCATIONS.find(l=>l.id===el.dataset.locationPhoto),el));
@@ -2242,7 +2287,7 @@ async function setLocationInfo(id){
  if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
  const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
  if(!l)return;
- if(!profile.shopOwned.locations.includes(id)){showToast('Unlock '+l.name+' to explore its details');return}
+ if(!(window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id))){showToast('Unlock '+l.name+' to explore its details');return}
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
  host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
@@ -2288,11 +2333,13 @@ async function setLocationInfo(id){
   }
  }
  try{
-  const endpoint='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(l.name+' panorama photograph')+'&gsrlimit=5&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
-  const response=await fetch(endpoint);const data=await response.json();
-  const imgs=(data.query?.pages||[]).flatMap(p=>p.imageinfo||[]).map(i=>i.thumburl||i.url).filter(x=>/\.(jpg|jpeg|png|webp)(?:\?|$)/i.test(x));
-  if(openLocationId===id&&host.isConnected&&imgs.length)placeImage(document.getElementById('detailPhotoTwo'),imgs[0],l);
-  else if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable';
+  const images=window.RevisionWorldCommonsMedia;
+  const photos=images?await images.search(l.name+' landscape',{limit:2}):[];
+  if(openLocationId===id&&host.isConnected){
+   const second=document.getElementById('detailPhotoTwo');
+   if(images)images.append(second,photos.slice(photos.length>1?1:0,photos.length>1?2:1));
+   else second.textContent='Licensed image information unavailable';
+  }
  }catch{if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable'}
  drawGlobe();
 }
@@ -2307,7 +2354,8 @@ function renderShop(){
  const allVisibleChars=CHARACTERS.filter(c=>(!seriesFilter||c.series===seriesFilter)&&(ownedFilter==='all'||(ownedFilter==='owned'&&oc.includes(c.id))||(ownedFilter==='locked'&&!oc.includes(c.id))));const visibleChars=allVisibleChars.slice(0,characterVisibleLimit);
  document.getElementById('characterCount').textContent=oc.length+' / '+CHARACTERS.length+' unlocked';
  document.getElementById('outfitCount').textContent=oo.length+' / '+OUTFITS.length+' unlocked';
- document.getElementById('locationCount').textContent=ol.length+' / '+LOCATIONS.length+' unlocked';
+ const uniqueLocations=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ document.getElementById('locationCount').textContent=uniqueLocations.filter(l=>window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??ol.includes(l.id)).length+' / '+uniqueLocations.length+' unlocked';
  document.getElementById('characterShop').innerHTML=visibleChars.map(c=>{const def=OUTFITS.find(o=>o.id===c.id+'-default');return '<div class="shop-item character-card '+(curr===c.id?'active-character':'')+'"><div class="shop-icon">'+characterArtwork(c,def)+'</div><b>'+esc(c.name)+'</b><small>'+esc(c.series)+'</small><button class="'+(!oc.includes(c.id)?'buy':'')+'" data-character="'+c.id+'" '+(!oc.includes(c.id)&&profile.points<c.cost?'disabled':'')+'>'+(oc.includes(c.id)?(curr===c.id?'Selected':'Select'):c.cost+' points')+'</button></div>'}).join('');
  const outfits=OUTFITS.filter(o=>o.character===curr),ch=CHARACTERS.find(c=>c.id===curr)||CHARACTERS[0];
  document.getElementById('outfitHeading').textContent='Outfits for '+ch.name;
@@ -2344,8 +2392,9 @@ function renderShop(){
 }
 function project(lat,lon,w,h){const la=lat*Math.PI/180,lo=(lon-globeLon)*Math.PI/180,cl=globeLat*Math.PI/180,x=Math.cos(la)*Math.sin(lo),y=Math.sin(la)*Math.cos(cl)-Math.cos(la)*Math.cos(lo)*Math.sin(cl),z=Math.sin(la)*Math.sin(cl)+Math.cos(la)*Math.cos(lo)*Math.cos(cl);const R=Math.min(w,h)*.4;return {x:w/2+x*R,y:h/2-y*R,z}}
 function visibleGlobePins(w,h,region=''){
- const projected=LOCATIONS.filter(l=>!region||l.region===region)
-  .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:profile.shopOwned.locations.includes(l.id)}))
+ const distinct=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const projected=distinct.filter(l=>!region||l.region===region)
+  .map(l=>({location:l,p:project(l.lat,l.lon,w,h),owned:window.RevisionWorldProfileSafety?.isOwnedLocation(profile,l.id)??profile.shopOwned.locations.includes(l.id)}))
   .filter(x=>x.p.z>0)
   .sort((a,b)=>Number(a.owned)-Number(b.owned));
  // Use the geographical projection for EVERY eligible destination.
@@ -2431,6 +2480,9 @@ function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classLis
 function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
 
 ensureProfile();
+// Keep the world shop and unlocked locations usable even when the exam-bank
+// sync is offline or temporarily unavailable. A later successful sync rerenders.
+try{renderShop();drawGlobe()}catch(error){console.warn('World panel could not initialise',error)}
 document.getElementById('pinForm').onsubmit=async e=>{e.preventDefault();const ok=await unlock(document.getElementById('pinInput').value,document.getElementById('rememberPin').checked);document.getElementById('pinError').textContent=ok?'':'Incorrect code';if(ok)sync()};
 document.getElementById('pinInput').oninput=e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,4)};
 if(localStorage.getItem('rl_auth')==='1'||sessionStorage.getItem('rl_auth')==='1'){document.getElementById('authGate').classList.add('hidden');document.getElementById('app').classList.remove('app-locked');sync()}else document.getElementById('pinInput').focus();
@@ -2456,7 +2508,9 @@ document.getElementById('locationRegion').onchange=()=>{locationVisibleLimit=24;
 
 const globe=document.getElementById('globe');
 globe.addEventListener('pointerdown',e=>{dragging=true;dragDistance=0;lastPointer={x:e.clientX,y:e.clientY};globe.setPointerCapture(e.pointerId)});
-globe.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;dragDistance+=Math.hypot(dx,dy);globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
-globe.addEventListener('pointerup',e=>{if(dragging&&dragDistance<10){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
+globe.addEventListener('pointermove',e=>{if(window.RevisionWorldGlobeGesture?.isPinching()){dragging=false;return}if(!dragging)return;const dx=e.clientX-lastPointer.x,dy=e.clientY-lastPointer.y;dragDistance+=Math.hypot(dx,dy);globeLon=(globeLon-dx*.45+540)%360-180;globeLat=clamp(globeLat+dy*.3,-65,65);lastPointer={x:e.clientX,y:e.clientY};drawGlobe()});
+globe.addEventListener('pointerup',e=>{if(window.RevisionWorldGlobeGesture?.isPinching()){dragging=false;return}if(dragging&&dragDistance<10){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
+globe.addEventListener('pointercancel',()=>{dragging=false});
+if(window.RevisionWorldGlobeGesture)window.RevisionWorldGlobeGesture.onComplete=()=>{dragging=false};
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}

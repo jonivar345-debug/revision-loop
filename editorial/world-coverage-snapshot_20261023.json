@@ -1,0 +1,105 @@
+{
+  "snapshotDate": "2026-10-23",
+  "workstream": "world-and-locations PR #2",
+  "branch": "automation/world-zoom-controls-20261021",
+  "deployment": "NOT MERGED; main site remains v60",
+  "liveAppAudit": {
+    "locationRecords": 161,
+    "uniqueLocationIds": 161,
+    "duplicateVisibleNames": [
+      {
+        "name": "Cape Town",
+        "ids": [
+          "capetown",
+          "cape_town"
+        ]
+      },
+      {
+        "name": "Addis Ababa",
+        "ids": [
+          "addis",
+          "addis_ababa"
+        ]
+      },
+      {
+        "name": "Victoria Falls",
+        "ids": [
+          "victoriafalls",
+          "victoria_falls"
+        ]
+      }
+    ],
+    "actualMaximumLocationCost": 250,
+    "locationsAbove250": 0,
+    "locationsAbove100": 142,
+    "locationFactEntries": 48,
+    "cultureDetailEntries": 46,
+    "pricingCaution": "These numbers were calculated directly from PR#2 app.js on 2026-10-23; older project ledger claiming 825 max is stale for this branch. Desired 50-100 point general location pricing is NOT deployed."
+  },
+  "editorialArchive": {
+    "primaryCountryFeatures": 195,
+    "additionalAfricanVersions": 10,
+    "duplicateAfricanAlternatives": 9,
+    "uniqueCountryCodes": 196,
+    "totalArticleVersions": 205,
+    "wordRequirement": "All checked >=200 words per article body",
+    "newCountryFeaturesThisSession": 39,
+    "targetCountryGateways": 196,
+    "remainingWithoutSourceBacked200WordDraft": 0,
+    "countryCoveragePercent": 100,
+    "editorialStatus": "Content saved to editorial JSON; never loaded by app.js",
+    "photosWithIndividualAttributionAndCCLicenceMetadata": 13,
+    "photosInstalledInWorldUI": 0,
+    "photosStatus": "13 file records in batches 3+4 have named authors and licence metadata; this is not a total of all earlier prototype photos, and image binaries or live rendering were not tested",
+    "separateWorldTaskAdditions": 12,
+    "separateWorldTaskBatch": "editorial/full_country_stories_batch6_12_20261023.json",
+    "latestBatches": [
+      "editorial/full_country_stories_batch14_12_20261023.json",
+      "editorial/full_country_stories_batch15_12_20261023.json",
+      "editorial/full_country_stories_batch16_5_20261023.json",
+      "editorial/full_country_stories_batch17_5_20261023.json",
+      "editorial/full_country_stories_batch18_5_20261023.json"
+    ],
+    "index": "editorial/country_gateway_release_index_20261023.json",
+    "oceanFeatures": 5,
+    "oceanArticleWordsMin": 200,
+    "oceanSourceFile": "editorial/ocean_stories_5_20261023.json",
+    "oceanReleaseState": "Non-runtime draft; no new purchasable shop items or old IDs changed",
+    "seaFeatures": 17,
+    "seaArticleFiles": [
+      "editorial/sea_stories_batch1_9_20261023.json",
+      "editorial/sea_stories_batch2_8_20261023.json"
+    ],
+    "previewHtml": "world-library-preview.html",
+    "previewJavaScript": "world-library-preview.js",
+    "previewStatus": "Standalone read-only development-branch explorer. Still needs browser/mobile acceptance, image verification, integrated globe linking and local saved-progress migration.",
+    "remainingGoalNote": "The 196 gateway taxonomy is explicitly 193 UN members, two observers and Kosovo as a geographic entry with disputed status. A future Taiwan/territory feature could be added outside the canonical 196 without claiming an uncontested political status.",
+    "inclusionPolicy": "editorial/country_gateway_inclusion_policy_196_20261023.json",
+    "releaseNote": "196 distinct draft gateways / 205 article versions (including nine independently written Africa alternatives); all remain editorial drafts and have not been integrated into app.js."
+  },
+  "integrity": {
+    "test": "tests/world-editorial-integrity.cjs verifies all 196 scope codes, articles, 17 seas, five oceans and UNESCO source references.",
+    "ci": "CI runs archive 196 country scope, historical ID preservation, preview smoke, index check and existing AQA marking regressions.",
+    "productionStateChanged": false,
+    "purchasesMigrated": false,
+    "storeCostsChanged": false,
+    "historicalPurchaseIdsRemoved": false,
+    "auditCorrection": "Six overlapping African alternatives including TZ; concurrent country batch 6 added 12 previously unrepresented countries, raising total to 88 distinct codes.",
+    "shopIdBaseline": "editorial/shop_historical_identity_baseline_20261023.json",
+    "shopIdTest": "tests/world-shop-id-preservation.cjs",
+    "snapshotNote": "121 verified distinct country codes in 130 200+ word drafts. 9 overlapping African alternatives, including newly added Uganda, Malawi and Mozambique. 116 legacy character and 161 location IDs inventoried and guarded in CI. The world UI remains unintegrated.",
+    "oceanQA": "tests/world-editorial-integrity.cjs verifies the five named oceans, minimum lengths and source references",
+    "previewSmoke": "tests/world-library-preview.cjs loads documents in simulated DOM and filters by kind and search.",
+    "indexBuilder": "scripts/rebuild-world-index.cjs --check ensures generated release index stays in sync with country sources."
+  },
+  "releaseGates": [
+    "Preservation-aware profile migration for old and new save versions, including arbitrary historical unlock IDs",
+    "Resolve three duplicate-place names without deleting bought item IDs or double-charging",
+    "Merge source-backed articles into world interface with tested mappings and native attribution",
+    "Integrate vetted photos with clear credits, licences and edit notifications",
+    "Adjust shop prices only after purchase migration and test correct point deduction",
+    "Verify globe rotation/pinch together and service-worker offline loads on mobile and desktop",
+    "Regression CI, browser tests and recovery/export strategy before merging PR #2",
+    "Keep PR #1 exam and marking changes isolated until integration testing"
+  ]
+}
