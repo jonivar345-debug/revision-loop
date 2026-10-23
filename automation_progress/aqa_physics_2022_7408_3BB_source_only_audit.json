@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "type": "original-official-source-only-audit",
+  "qualification": "A-level",
+  "subject": "Physics",
+  "specification": "7408",
+  "year": 2022,
+  "series": "June",
+  "paper": "7408/3BB",
+  "paperTitle": "Paper 3 Section B Option B — Medical physics",
+  "optionalSection": "B",
+  "oneOptionOnly": true,
+  "pairedCompulsorySection": "7408/3A",
+  "pairedCompulsoryMarks": 45,
+  "sectionMarks": 35,
+  "combinedPaperMarksForCandidate": 80,
+  "numberedQuestions": 5,
+  "partCount": 12,
+  "questionTotals": [
+    8,
+    11,
+    7,
+    6,
+    3
+  ],
+  "officialQuestionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BB-QP-JUN22.PDF",
+  "officialMarkSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BB-MS-JUN22.PDF",
+  "officialSpecificationUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/medical-physics-a-level-only",
+  "questionPaperPages": 16,
+  "markSchemePages": 12,
+  "markSchemeVersion": "1.0 Final",
+  "sourceVerification": "All 12 official part marks and original page positions checked against AQA June 2022 QP and final MS. AQA specification codes verified against official 3.10 page. Q04 is cross-topic imaging comparison; primary 3.10.6.6 used with 3.10.4.1, 3.10.4.3, 3.10.5.4.",
+  "sourceOnly": true,
+  "playableQuestionCount": 0,
+  "markingGuidanceOriginalSummary": [
+    "The eye-lens calculation has distinguishable method, substitution and result credit; a wrong sign restricts full marks.",
+    "The radiographic energy estimate allows different calculation orders and consequential arithmetic marking.",
+    "Drawn loudness-response curves need a valid axis scale and visible minimum; plain text is not sufficient evidence.",
+    "The six-mark imaging decision is level-based, not a keyword checklist.",
+    "Conflicting statements may cancel otherwise correct points; accept valid alternative explanations within the official boundaries."
+  ],
+  "copyrightNotice": "This is an original editorial source map, not an interactive paper. No AQA question wording, diagram, answer key or detailed marking text is reproduced.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 1,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Vision defect corrected by converging lens",
+      "aqaSpecificationReference": "3.10.1.2",
+      "assessmentFormat": "multiple-choice",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Correct defect classification rather than unrelated optical labels.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.2",
+      "marks": 3,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Corrective lens magnification from power and distance",
+      "aqaSpecificationReference": "3.10.1.2",
+      "assessmentFormat": "calculation",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Independent method, substitution and final-value marks; sign mistakes cap available credit.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.3",
+      "marks": 4,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        7
+      ],
+      "editorialSkillLabel": "Eye anatomy and optical functions",
+      "aqaSpecificationReference": "3.10.1.1",
+      "assessmentFormat": "labelled-figure",
+      "needsSourceFigureOrData": true,
+      "markingRisk": "Identification mark is linked to the complete set; function marks can stand independently.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.1",
+      "marks": 4,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        8
+      ],
+      "editorialSkillLabel": "Detector choice for a static radiographic image",
+      "aqaSpecificationReference": "3.10.5.2",
+      "assessmentFormat": "comparative-evaluation",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Selection, reasons and contextual trade-offs need separate credit; no-selection response has a lower maximum.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.2",
+      "marks": 5,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Attenuation-based estimate of absorbed X-ray energy",
+      "aqaSpecificationReference": "3.10.5.3",
+      "assessmentFormat": "multistep-calculation",
+      "needsSourceFigureOrData": true,
+      "markingRisk": "Equivalent calculation orders accepted; transmitted, absorbed, area, power and energy stages are separable.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.3",
+      "marks": 2,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Limitations of a simplified X-ray absorption estimate",
+      "aqaSpecificationReference": "3.10.5.3",
+      "assessmentFormat": "evaluation",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Specific geometric or prior tissue-absorption assumptions are needed, not generic uncertainty.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.1",
+      "marks": 3,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Equal-loudness curve sketch and scale",
+      "aqaSpecificationReference": "3.10.2.2",
+      "assessmentFormat": "graph-sketch",
+      "needsSourceFigureOrData": true,
+      "markingRisk": "Lowest-frequency response point and scale must be supported by the drawn curve; a prose description cannot earn graph marks.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Procedure for measuring equal-loudness response",
+      "aqaSpecificationReference": "3.10.2.2",
+      "assessmentFormat": "procedure",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Compare varying frequencies to a reference, adjusting amplitude for equal perceived loudness.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.3",
+      "marks": 2,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Sound intensity from decibel level",
+      "aqaSpecificationReference": "3.10.2.2",
+      "assessmentFormat": "calculation",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Check logarithm base, reference intensity and units; algebraic alternatives accepted.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04",
+      "marks": 6,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "Selecting medical imaging for a particular clinical context",
+      "aqaSpecificationReference": "3.10.6.6",
+      "assessmentFormat": "level-of-response",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Assess overall comparison of image quality, safety and practical factors; top levels require a justified choice.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "05.1",
+      "marks": 1,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Magnetic-field function in MR imaging",
+      "aqaSpecificationReference": "3.10.4.3",
+      "assessmentFormat": "short-answer",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Do not conflate proton spin alignment with atom alignment.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "05.2",
+      "marks": 2,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Radio-frequency pulses in magnetic resonance imaging",
+      "aqaSpecificationReference": "3.10.4.3",
+      "assessmentFormat": "explanation",
+      "needsSourceFigureOrData": false,
+      "markingRisk": "Credit two valid distinct pulse/excitation/relaxation points, not duplicated synonyms.",
+      "officialQuestionPartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    }
+  ]
+}
