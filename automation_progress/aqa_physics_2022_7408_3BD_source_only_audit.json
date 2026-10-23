@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "type": "original-official-source-only-audit",
+  "qualification": "A-level",
+  "subject": "Physics",
+  "specification": "7408",
+  "year": 2022,
+  "series": "June",
+  "paper": "7408/3BD",
+  "paperTitle": "Paper 3 Section B Option D — Turning points in physics",
+  "optionalSection": "B",
+  "oneOptionOnly": true,
+  "pairedCompulsorySection": "7408/3A",
+  "pairedCompulsoryMarks": 45,
+  "sectionMarks": 35,
+  "combinedPaperMarksForCandidate": 80,
+  "numberedQuestions": 4,
+  "partCount": 14,
+  "questionTotals": [
+    11,
+    12,
+    6,
+    6
+  ],
+  "officialQuestionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BD-QP-JUN22.PDF",
+  "officialMarkSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083BD-MS-JUN22.PDF",
+  "officialSpecificationUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/turning-points-in-physics-a-level-only",
+  "questionPaperPages": 16,
+  "markSchemePages": 15,
+  "markSchemeVersion": "1.0 Final",
+  "sourceVerification": "Each part and marks checked against official June 2022 AQA question paper and final mark scheme; 3.12 topic codes cross-checked against AQA official specification. Source figures inspected visually on question-paper pages 2, 6, 10 and 12.",
+  "sourceOnly": true,
+  "playableQuestionCount": 0,
+  "workedSolutionCount": 0,
+  "markingGuidanceOriginalSummary": [
+    "Question 01.2 is six-mark level-of-response: evaluate three strands together using the official descriptors; do not award full marks from scattered keywords.",
+    "Question 02.3 has a dependent second algebra mark; the second cannot be awarded without the first.",
+    "Question 02.4 requires evidence of comparison with the elementary charge; arithmetic-error follow-through is restricted.",
+    "Question 03.2 allows alternative calculation routes, and a final conclusion consistent with the route used.",
+    "Question 04.1 depends on the actual plotted answer choices; no plain-text stand-in is source-equivalent.",
+    "Calculation questions permit source-specified valid alternate methods and ECF; contradiction and prohibited statements must be handled before point allocation."
+  ],
+  "copyrightNotice": "Contains independently written skill summaries, topic codes, source references and mark totals only. No original AQA question stems, mark-scheme answers, diagrams or figure content reproduced.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        2
+      ],
+      "markSchemePdfPages": [
+        6
+      ],
+      "editorialSkillLabel": "Newton corpuscular model and observed sharp boundaries",
+      "aqaSpecificationReference": "3.12.2.1",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Independent corpuscular/straight-line premise and distinct boundary consequence; interference mentions neutral.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.2",
+      "marks": 6,
+      "questionPaperPdfPages": [
+        3,
+        4
+      ],
+      "markSchemePdfPages": [
+        7
+      ],
+      "editorialSkillLabel": "Huygens wavelets and interference-fringe interpretation",
+      "aqaSpecificationReference": "3.12.2.2",
+      "assessmentFormat": "level-of-response",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Six-mark level-of-response across apparatus alterations, wavefront/wavelets and phase/path-difference interpretation. Holistic level judgement, not six isolated keywords.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "01.3",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        5
+      ],
+      "markSchemePdfPages": [
+        8
+      ],
+      "editorialSkillLabel": "Predictions of competing light models at circular apertures",
+      "aqaSpecificationReference": "3.12.2.1",
+      "assessmentFormat": "comparison",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Distinguish each theory's prediction and the edge/fringe appearance; accept properly labelled diagram annotations.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.1",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        6
+      ],
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Charge polarity and equilibrium in Millikan apparatus",
+      "aqaSpecificationReference": "3.12.1.4",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "One combined mark needs correct polarity and force-field explanation; incorrect viscous-force rationale not accepted.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.2",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        6
+      ],
+      "markSchemePdfPages": [
+        9
+      ],
+      "editorialSkillLabel": "Stokes terminal-speed model and oil-drop mass",
+      "aqaSpecificationReference": "3.12.1.4",
+      "assessmentFormat": "show-that",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Separate terminal force balance, density/sphere geometry and evaluated mass; final precision threshold from source.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.3",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        7
+      ],
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Millikan rise/fall terminal-speed algebra",
+      "aqaSpecificationReference": "3.12.1.4",
+      "assessmentFormat": "show-that",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Second algebra mark depends on correctly established first force equation; method evidence mandatory.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.4",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        7
+      ],
+      "markSchemePdfPages": [
+        10
+      ],
+      "editorialSkillLabel": "Charge quantisation test using Millikan measurements",
+      "aqaSpecificationReference": "3.12.1.4",
+      "assessmentFormat": "calculation-and-conclusion",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Use relation, compute charge, compare to integer electron-charge multiples; follow-through only under source conditions.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "02.5",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        8
+      ],
+      "markSchemePdfPages": [
+        11
+      ],
+      "editorialSkillLabel": "Viscosity measurement error propagated to electron charge",
+      "aqaSpecificationReference": "3.12.1.4",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Track error direction through viscous drag, inferred droplet mass and charge; formula references required for final inference.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.1",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        10
+      ],
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Meaning of extinction rotation frequency in Fizeau experiment",
+      "aqaSpecificationReference": "3.12.2.3",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Second mark depends on identifying frequency at absence of return light; distinguish lowest extinction frequency.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        11
+      ],
+      "markSchemePdfPages": [
+        12
+      ],
+      "editorialSkillLabel": "Feasibility of Fizeau light-speed measurement",
+      "aqaSpecificationReference": "3.12.2.3",
+      "assessmentFormat": "calculation-and-conclusion",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Accept maximum measurable speed OR required frequency, with units and consistent feasibility conclusion; limited arithmetic ECF.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "03.3",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        11
+      ],
+      "markSchemePdfPages": [
+        13
+      ],
+      "editorialSkillLabel": "Electric and magnetic vacuum constants in Maxwell model",
+      "aqaSpecificationReference": "3.12.2.3",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": false,
+      "sourceFirstMarkingRisk": "Distinguish electric field and magnetic flux density roles; generic field labels alone limited.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04.1",
+      "marks": 1,
+      "questionPaperPdfPages": [
+        12
+      ],
+      "markSchemePdfPages": [
+        14
+      ],
+      "editorialSkillLabel": "Relativistic kinetic-energy graph identification",
+      "aqaSpecificationReference": "3.12.3.5",
+      "assessmentFormat": "graph-choice",
+      "requiresOriginalFigureOrPriorData": true,
+      "sourceFirstMarkingRisk": "Original multiple-choice curves must be available; correct option only, no keyword substitutes.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04.2",
+      "marks": 3,
+      "questionPaperPdfPages": [
+        13
+      ],
+      "markSchemePdfPages": [
+        14
+      ],
+      "editorialSkillLabel": "Relativistic speed when kinetic and rest energies coincide",
+      "aqaSpecificationReference": "3.12.3.5",
+      "assessmentFormat": "calculation",
+      "requiresOriginalFigureOrPriorData": false,
+      "sourceFirstMarkingRisk": "Separate energy relationship, substitution and speed; correct result approximately 0.866c.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    },
+    {
+      "id": "04.3",
+      "marks": 2,
+      "questionPaperPdfPages": [
+        13
+      ],
+      "markSchemePdfPages": [
+        15
+      ],
+      "editorialSkillLabel": "Stored elastic energy and observable mass",
+      "aqaSpecificationReference": "3.12.3.5",
+      "assessmentFormat": "explanation",
+      "requiresOriginalFigureOrPriorData": false,
+      "sourceFirstMarkingRisk": "Mass-energy equivalence and consequent direction of spring-mass change; negligible magnitude treated as neutral.",
+      "officialQuestionPartVerified": true,
+      "officialFinalMarkSchemePartVerified": true,
+      "studentFacingPlayableQuestionCreated": false
+    }
+  ]
+}
