@@ -2126,29 +2126,21 @@ const LOCATION_PHOTO_SEARCH={
 };
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
- if(wikiPhotoCache[location.id]){placeImage(el,wikiPhotoCache[location.id],location);return}
- let url=null;
- if(LOCATION_PHOTO_SEARCH[location.id]){
-  try{
-   const q=LOCATION_PHOTO_SEARCH[location.id];
-   const api='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
-   const res=await fetch(api,{cache:'force-cache'});if(res.ok){
-    const data=await res.json();
-    const pages=(data.query?.pages||[]).filter(p=>/\.(?:jpg|jpeg|png|webp)$/i.test(p.title||'')&&!/logo|map|flag|coat of arms|diagram/i.test(p.title||''));
-    const found=pages.find(p=>p.imageinfo?.[0]?.thumburl);
-    if(found)url=found.imageinfo[0].thumburl;
-   }
-  }catch{}
- }
- if(!url){
-  try{
-   const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&formatversion=2&pithumbsize=640&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
-   const res=await fetch(endpoint,{cache:'force-cache'});
-   if(res.ok){const d=await res.json();url=d.query?.pages?.[0]?.thumbnail?.source||null}
-  }catch{}
- }
- if(url){wikiPhotoCache[location.id]=url;placeImage(el,url,location)}
- else el.textContent='Photograph unavailable';
+ const images=window.RevisionWorldCommonsMedia;
+ if(!images){el.textContent='Licensed images unavailable offline';return}
+ const loadPhotos=async()=>{
+  const query=LOCATION_PHOTO_SEARCH[location.id]||location.name+' '+location.wiki.replace(/_/g,' ');
+  const results=await images.search(query,{limit:1});
+  if(el.isConnected)images.append(el,results);
+ };
+ // Avoid dozens of off-screen external image searches on every shop rerender.
+ if(typeof IntersectionObserver==='function'&&el.closest('#locationShop')){
+  const observer=new IntersectionObserver(entries=>{
+   if(!entries.some(entry=>entry.isIntersecting))return;
+   observer.disconnect();loadPhotos();
+  },{rootMargin:'260px'});
+  observer.observe(el);
+ }else await loadPhotos();
 }
 function evenlySpacedLocations(locations){
  const regions=['Africa','Asia','Europe','North America','South America','Oceania'];
@@ -2333,11 +2325,13 @@ async function setLocationInfo(id){
   }
  }
  try{
-  const endpoint='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch='+encodeURIComponent(l.name+' panorama photograph')+'&gsrlimit=5&prop=imageinfo&iiprop=url&iiurlwidth=640&format=json&formatversion=2&origin=*';
-  const response=await fetch(endpoint);const data=await response.json();
-  const imgs=(data.query?.pages||[]).flatMap(p=>p.imageinfo||[]).map(i=>i.thumburl||i.url).filter(x=>/\.(jpg|jpeg|png|webp)(?:\?|$)/i.test(x));
-  if(openLocationId===id&&host.isConnected&&imgs.length)placeImage(document.getElementById('detailPhotoTwo'),imgs[0],l);
-  else if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable';
+  const images=window.RevisionWorldCommonsMedia;
+  const photos=images?await images.search(l.name+' landscape',{limit:2}):[];
+  if(openLocationId===id&&host.isConnected){
+   const second=document.getElementById('detailPhotoTwo');
+   if(images)images.append(second,photos.slice(photos.length>1?1:0,photos.length>1?2:1));
+   else second.textContent='Licensed image information unavailable';
+  }
  }catch{if(openLocationId===id&&host.isConnected)document.getElementById('detailPhotoTwo').textContent='Second photo unavailable'}
  drawGlobe();
 }
