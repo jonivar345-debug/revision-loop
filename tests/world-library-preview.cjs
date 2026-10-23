@@ -59,6 +59,15 @@ const poll=async (fn)=>{
   await poll(()=>el.articlePanel.children.some(x=>x.tagName==='details'&&x.children[0]?.textContent?.includes('Checked image references')));
   const photoDetails=el.articlePanel.children.find(x=>x.tagName==='details'&&x.children[0]?.textContent?.includes('Checked image references'));
   assert.equal(photoDetails.children.find(x=>x.tagName==='ul').children.length,2,'Albania verified source-photo count');
+  const gallery=el.articlePanel.children.find(x=>x.className==='licensed-world-photo-gallery');
+  assert(gallery&&gallery.children.length===2,'Two genuinely licensed Albania photos should render');
+  for(const figure of gallery.children){
+    assert(figure.children.some(x=>x.tagName==='img'&&x.alt),'Photograph missing accessible caption');
+    const credit=figure.children.find(x=>x.tagName==='figcaption');
+    assert(credit,'Photographer credit missing');
+    assert(credit.children.filter(x=>x.tagName==='a').length>=2,'Missing source and licence links');
+  }
+
   el.worldSearch.value='Bhutan';el.worldSearch.listeners.input();
   assert.equal(el.entryList.children.length,1);
   el.entryList.children[0].children[0].listeners.click();
