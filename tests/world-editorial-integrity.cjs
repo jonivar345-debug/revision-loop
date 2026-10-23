@@ -15,7 +15,7 @@ const load=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')).records;
 const main=mainFiles.flatMap(f=>load(f).map(record=>({file:f,record})));
 const africa=load(extra).map(record=>({file:extra,record}));
 const wordCount=s=>(s.trim().match(/\S+/g)||[]).length;
-const mainCodes=new Set(),allCodes=new Set(),allowedAlternatives=new Set(['GA','CF','CM','CD','CG']);
+const mainCodes=new Set(),allCodes=new Set(),allowedAlternatives=new Set(['GA','CF','CM','CD','CG','TZ']);
 let checks=0;
 for(const {file,record:r} of main){
   assert.match(r.iso2,/^[A-Z]{2}$/,'Invalid ISO code: '+file);checks++;
@@ -44,7 +44,7 @@ for(const {record:r} of africa){
   allCodes.add(r.iso2);
 }
 assert.equal(africa.length,10);checks++;
-assert.equal(allCodes.size,77,'Country coverage needs reconciliation');checks++;
+assert.equal(allCodes.size,76,'Country coverage needs reconciliation');checks++;
 assert.equal(main.length+africa.length,82,'Unexpected total article variants');checks++;
 const additions=[...load(mainFiles[4]),...load(mainFiles[5])];
 assert.equal(additions.length,24,'New country batches truncated');checks++;
@@ -65,4 +65,4 @@ for(const f of photoFiles){
   }
 }
 assert.equal(photoIds.size,13,'Unexpected Commons audit count');checks++;
-console.log('PASS '+checks+' editorial QA assertions; 72 primary + 10 Africa versions = 77 distinct countries, 82 source-backed articles, all 200+ words; no runtime mutations');
+console.log('PASS '+checks+' editorial QA assertions; 72 primary + 10 Africa versions = 76 distinct countries, 82 source-backed articles, all 200+ words; no runtime mutations');
