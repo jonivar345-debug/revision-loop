@@ -225,7 +225,12 @@ const initialise = async () => {
         requested=new URLSearchParams(window.location.search).get('country')?.trim().toUpperCase()||null;
       }
     }catch{}
-    if(entries.length) await showArticle(entries.find(x=>x.kind==='country'&&x.iso2===requested)||entries[0]);
+    const requestedArticle=requested?entries.find(x=>x.kind==='country'&&x.iso2===requested):null;
+    if(requested&&!requestedArticle){
+      panel.replaceChildren(text('p','This geographic area is not one of the 196 country gateways in this edition. Its existing Revision Loop location remains available, and the full library can be browsed on the left.','empty'));
+    }else if(entries.length){
+      await showArticle(requestedArticle||entries[0]);
+    }
   } catch(error) {
     count.textContent='Preview unavailable';
     list.replaceChildren(text('li','The editorial files could not be loaded. Open this page through a web server, not directly as a file.','empty'));
