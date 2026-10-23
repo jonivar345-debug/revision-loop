@@ -9,6 +9,8 @@
   const MIN = 1, MAX = 2.2;
   let zoom = 1;
   const touches = new Map();
+  const gesture={isPinching:()=>suppressTouchDrag,onComplete:null};
+  window.RevisionWorldGlobeGesture=gesture;
   let pinchDistance = 0, pinchStartZoom = 1, suppressTouchDrag = false;
 
   function clampZoom(value) {
@@ -58,7 +60,7 @@
       if (suppressTouchDrag && touches.has(event.pointerId)) event.stopImmediatePropagation();
       touches.delete(event.pointerId);
       if (touches.size < 2) pinchDistance = 0;
-      if (!touches.size) suppressTouchDrag = false;
+      if (!touches.size && suppressTouchDrag) {suppressTouchDrag = false;if(typeof gesture.onComplete==='function')gesture.onComplete();}
     }, true);
   }
   setZoom(1);
