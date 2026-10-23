@@ -5,7 +5,7 @@ const root=path.join(__dirname,'..');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 const files=fs.readdirSync(path.join(root,'editorial')).filter(x=>
  /^full_country_stories_|^sea_stories_|^ocean_stories_|^commons_verified_photos_|^country_gateway_(?:inclusion_policy|release_index)|^world_destination_coordinates_218/.test(x));
-assert.equal(files.length,27,'Offline world research asset inventory changed');
+assert.equal(files.length,28,'Offline world research asset inventory changed');
 for(const filename of files){
  assert(sw.includes("'./editorial/"+filename+"'"),'Missing offline article source '+filename);
 }
