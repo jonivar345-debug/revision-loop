@@ -77,7 +77,7 @@ assert.equal((shop.innerHTML.match(/class="shop-item location-card"/g)||[]).leng
 assert(shop.innerHTML.includes('data-location="capetown"')&&!shop.innerHTML.includes('data-location="cape_town"'));
 assert(shop.innerHTML.includes('data-location="addis"')&&!shop.innerHTML.includes('data-location="addis_ababa"'));
 assert(shop.innerHTML.includes('data-location="victoriafalls"')&&!shop.innerHTML.includes('data-location="victoria_falls"'));
-const globe={profile:context.profile,window:context.window,LOCATIONS:inventory,project:()=>({x:0,y:0,z:1})};
+const globe={profile:context.profile,window:context.window,LOCATIONS:inventory,project:()=>({x:0,y:0,z:1}),document:{getElementById:()=>({checked:true})}};
 vm.createContext(globe);
 vm.runInContext(cut('function visibleGlobePins(','function drawGlobe()')+'\nthis.pins=visibleGlobePins(700,360);',globe);
 assert.equal(globe.pins.length,158,'Globe has duplicate pin');
