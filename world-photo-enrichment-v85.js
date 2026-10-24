@@ -1132,21 +1132,6 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
-  "country-ba": [
-    {
-      "file": "Flag of Bosnia and Herzegovina in White Fortress, Sarajevo.jpg",
-      "author": "Bernard Gagnon",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Flag of Bosnia and Herzegovina in the White Fortress, Sarajevo, Bosnia and Herzegovina",
-      "width": 3872,
-      "height": 2581,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Bosnia and Herzegovina",
-      "photoSource": "Commons exact File-title search"
-    }
-  ],
   "country-bb": [
     {
       "file": "066a Britannia in Port of Bridgetown at night - Barbados - 3 1 - V-P.jpg",
@@ -5517,19 +5502,6 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Kigali",
       "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Panorama of Room Where Belgian Peacekeeprs Were Murdered - Former Camp Kigali - Kigali - Rwanda (9024569329).jpg",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Panorama of Room Where Belgian Peacekeeprs Were Murdered - Former Camp Kigali - Kigali - Rwanda",
-      "width": 4912,
-      "height": 1080,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Kigali",
-      "photoSource": "Commons exact File-title search"
     }
   ],
   "kotor": [
@@ -7048,19 +7020,6 @@
       "subject": "Šeher-Ćehaja Bridge, Sarajevo, Bosnia and Herzegovina",
       "width": 4450,
       "height": 2967,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Sarajevo",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Flag of Bosnia and Herzegovina in White Fortress, Sarajevo.jpg",
-      "author": "Bernard Gagnon",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Flag of Bosnia and Herzegovina in the White Fortress, Sarajevo, Bosnia and Herzegovina",
-      "width": 3872,
-      "height": 2581,
       "editorialMetadata": true,
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Sarajevo",
