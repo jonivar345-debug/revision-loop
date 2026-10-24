@@ -16,5 +16,5 @@ for(const required of ['world-location-photo-gallery.js','world-geographic-desti
 assert(sw.includes("c.addAll(SHELL)"),'Offline install does not precache the editorial library');
 assert(sw.includes('caches.match(e.request,{ignoreSearch:true})'),'Offline navigation must match precached pages even when ?country= or ?feature= is present');
 assert(sw.includes("'./data/natural-earth-coastlines-110m.json'"),'Actual public-domain Earth boundaries missing from offline bundle');
-assert(sw.includes("revision-loop-v71-location-gallery"),'Cache version not advanced');
+assert(sw.includes("revision-loop-v72-unlocked-guides-only"),'Cache version not advanced');
 console.log('PASS offline world assets: 27 editorial source files and seven world runtime files precached on service worker install.');
