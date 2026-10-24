@@ -99,7 +99,7 @@ try{
    togglePresent:!!document.getElementById('showAllGlobePins')
   };
  });
- assert.deepEqual(globeState.texture,[1024,512]);
+ assert.deepEqual(globeState.texture,[2048,1024]);
  assert(globeState.africanLand.some((n,i)=>Math.abs(n-globeState.atlanticWater[i])>25),
    'Africa and the Atlantic still look like the same blue globe');
  assert(Math.abs(globeState.london.lat-51.507)<.05&&Math.abs(globeState.london.lon+0.128)<.05);
@@ -118,26 +118,29 @@ try{
  await page.locator('#globeLocationInfo .globe-info-top h3').waitFor({timeout:10000});
  assert.equal((await page.locator('#globeLocationInfo .globe-info-top h3').textContent())?.trim(),'London');
  assert(await page.evaluate(()=>Math.abs(globeLon+0.1276)<0.05),'London camera is not at the real longitude');
- await page.locator('#detailPhotoOne .location-accurate-map').waitFor({timeout:12000});
- const imageState=await page.evaluate(()=>{
-   const photo=document.querySelector('#detailPhotoOne .location-accurate-map');
-   return {title:document.querySelector('#detailPhotoOne .location-map-caption')?.textContent,
-     imageAlt:photo?.getAttribute('aria-label'),width:photo?.width,height:photo?.height};
- });
- assert(imageState.title.includes('London'),'Fallback uses unrelated place name');
- assert(imageState.imageAlt.includes('London')&&imageState.width===520,'Missing real-world location map fallback');
+ await page.locator('#detailPhotoOne.destination-photo-gallery').waitFor({timeout:15000});
+ assert.equal(await page.locator('#detailPhotoOne .location-accurate-map').count(),0,'Maps must not appear as substitute photographs');
+ assert.equal(await page.locator('#globeLocationInfo [data-world-long-story]').count(),0,'London should not display unrelated country content');
+ assert.equal(await page.locator('#globeLocationInfo .detail-links').count(),0,'Unwanted source links still visible');
  // A genuine canvas click on the accurately projected owned pin opens the guide.
  await page.evaluate(()=>setLocationInfo('london'));
  const locationPixel=await page.evaluate(()=>{
-   const l=LOCATIONS.find(x=>x.id==='london'),p=project(l.lat,l.lon,700,360);
-   const bounds=document.getElementById('globe').getBoundingClientRect();
-   return {x:p.x*bounds.width/700,y:p.y*bounds.height/360};
+   const l=LOCATIONS.find(x=>x.id==='london'),canvas=document.getElementById('globe'),p=project(l.lat,l.lon,canvas.width,canvas.height);
+   const bounds=canvas.getBoundingClientRect();
+   return {x:p.x*bounds.width/canvas.width,y:p.y*bounds.height/canvas.height};
  });
  await page.locator('#globe').click({position:locationPixel});
  await page.locator('#globeLocationInfo .globe-info-top h3').waitFor({timeout:10000});
  assert.equal((await page.locator('#globeLocationInfo h3').first().textContent())?.trim(),'London');
- console.log('PASS geographic interaction: London search centres the exact longitude, location-map fallback is correct, and clicking an owned pin opens its article.');
+ console.log('PASS geographic interaction: London search centres the exact longitude, a photo gallery replaces maps, and clicking an owned pin opens the guide.');
 
+ // Verify a new country pin loads its four research sections automatically.
+ await page.evaluate(()=>buy('location','country-fr'));
+ await page.evaluate(()=>setLocationInfo('country-fr'));
+ await page.locator('#globeLocationInfo .location-full-story .location-background h4').first().waitFor({timeout:15000});
+ assert.equal(await page.locator('#globeLocationInfo .location-full-story .location-background').count(),4);
+ assert.equal(await page.locator('#globeLocationInfo a[href*="world-library-preview"]').count(),0);
+ await page.evaluate(()=>{profile.points+=75;save()}); // Restore test-only point balance.
  await page.evaluate(()=>buy('location','capetown'));
  await page.evaluate(()=>buy('location','addis'));
  await page.evaluate(()=>buy('location','victoriafalls'));
