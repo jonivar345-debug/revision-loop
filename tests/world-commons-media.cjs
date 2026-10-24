@@ -68,6 +68,18 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  const exact=await media.searchPage('Busan',{fetcher:exactFetcher,doc:dom});
  assert.equal(exact.length,1,'Busan page image was not verified');
  assert.equal(pageRequests.length,2,'Wikipedia page and Commons rights must both be queried');
+ const londonHint=media.approvedFor('london');
+ const acceptedPhoto={...good,title:'File:'+londonHint.file};
+ const trusted=await media.verifyApproved('london',{fetcher:async()=>({ok:true,json:async()=>({query:{pages:[acceptedPhoto]}})}),doc:dom});
+ assert(trusted?.checked===true,'Curated file not independently rechecked');
+ assert.equal(trusted.author,'A. Photographer','Current Commons artist must override stale hard-coded credits');
+ assert.equal(trusted.file,'File:'+londonHint.file);
+ const wrongPhoto=await media.verifyApproved('london',{fetcher:async()=>({ok:true,json:async()=>({query:{pages:[good]}})}),doc:dom});
+ assert.equal(wrongPhoto,null,'Different Commons file must never be substituted as a curated landmark');
+ const unlicensed=await media.verifyApproved('london',{fetcher:async()=>({ok:true,json:async()=>({query:{pages:[{...unknown,title:'File:'+londonHint.file}]}})}}),doc:dom});
+ assert.equal(unlicensed,null,'Stored curated image must still satisfy live Commons CC licence');
+ assert.equal(media.inspect({...good,title:'File:London locator map.png'},dom),null,'Maps must not be used as purported photos');
+
  assert(pageRequests[0].includes('titles=Busan'));
  assert(pageRequests[1].includes('File%3AExample'));
  assert(!app.includes("images.search(l.name+' landscape'"),'Incorrect loosely matched second image still queried');
