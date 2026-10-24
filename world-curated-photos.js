@@ -2631,8 +2631,148 @@
     const index=typeof window==='object'?window.RevisionWorldDiscoveryPhotos:null;
     return Array.isArray(index?.[id])?index[id]:[];
   }
+  // Country photographs may also depict a separately purchaseable exact
+  // landmark. Reuse ONLY explicitly inspected matches, never nearby towns
+  // or similarly named sites. Each file keeps the original Commons credits.
+  const exactDestinationReuse=Object.freeze({
+    "machupicchu": [
+      [
+        "country-pe",
+        "Machu Picchu, Peru - Laslovarga (107).jpg"
+      ]
+    ],
+    "prague": [
+      [
+        "country-cz",
+        "Charles Bridge-Prague-4.jpg"
+      ],
+      [
+        "country-cz",
+        "Astronomical Clock Prague (20190520 120955).jpg"
+      ]
+    ],
+    "athens": [
+      [
+        "country-gr",
+        "Erechtheion Acropolis Athens.jpg"
+      ]
+    ],
+    "budapest": [
+      [
+        "country-hu",
+        "Hungarian Parliament Building, Budapest, Hungary.jpg"
+      ],
+      [
+        "country-hu",
+        "Buda Castle the BHM IMG 1043.jpg"
+      ]
+    ],
+    "luxor": [
+      [
+        "country-eg",
+        "Karnak Hypostyle Hall R02.jpg"
+      ]
+    ],
+    "zanzibar": [
+      [
+        "country-tz",
+        "Stone town -Zanzibar.jpg"
+      ]
+    ],
+    "victoriafalls": [
+      [
+        "country-zm",
+        "Victoria falls, zambia.jpg"
+      ],
+      [
+        "country-zm",
+        "VicFalls.jpg"
+      ],
+      [
+        "country-zw",
+        "Victoria Falls, Zimbabwe 04.jpg"
+      ]
+    ],
+    "sossusvlei": [
+      [
+        "country-na",
+        "Sossusvlei namib desert.jpg"
+      ],
+      [
+        "country-na",
+        "Landscape Sossusvlei, Namibia.jpg"
+      ]
+    ],
+    "antiguaguatemala": [
+      [
+        "country-gt",
+        "Arco de Santa Catalina.jpg"
+      ]
+    ],
+    "panamacity": [
+      [
+        "country-pa",
+        "Miraflores Locks Panama Canal.jpg"
+      ],
+      [
+        "country-pa",
+        "Casco Viejo, Panamá.jpg"
+      ]
+    ],
+    "banff": [
+      [
+        "country-ca",
+        "Banff National Park landscape.jpg"
+      ]
+    ],
+    "torres": [
+      [
+        "country-cl",
+        "National park Torres del Paine, Chile.jpg"
+      ],
+      [
+        "country-cl",
+        "Torres del Paine. Chile..JPG"
+      ]
+    ],
+    "peritomoreno": [
+      [
+        "country-ar",
+        "Argentina - Perito Moreno Glacier 02.jpg"
+      ],
+      [
+        "country-ar",
+        "Trekking at Perito Moreno Glacier.jpg"
+      ]
+    ],
+    "okavango": [
+      [
+        "country-bw",
+        "Okavango Delta.jpg"
+      ],
+      [
+        "country-bw",
+        "Okavango Delta, Botswana (2674373339).jpg"
+      ]
+    ],
+    "uyuni": [
+      [
+        "country-bo",
+        "Bolivia - Salar de Uyuni - Wiki Commons.jpg"
+      ],
+      [
+        "country-bo",
+        "SAL - Salt piles on Salar de Uyuni, Bolivia, 2013.jpg"
+      ]
+    ]
+  });
+  function reusedFor(id){
+    return (exactDestinationReuse[id]||[]).flatMap(([sourceId,file])=>
+      [...(editorial[sourceId]||[]),...(additionalEditorialA[sourceId]||[]),...(additionalEditorialB[sourceId]||[])]
+      .filter(item=>item.file===file));
+  }
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...discoveredFor(id)];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...reusedFor(id),...discoveredFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
