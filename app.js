@@ -2358,7 +2358,7 @@ async function setLocationInfo(id){
   const response=await fetch(url,{cache:'force-cache'});
   if(!response.ok)throw Error('Location introduction unavailable');
   const pages=(await response.json()).query?.pages||[];
-  const extract=String(pages[0]?.extract||'').replace(/\\s+/g,' ').trim();
+  const extract=String(pages[0]?.extract||'').replace(/\s+/g,' ').trim();
   if(!extract)throw Error('No summary returned');
   if(openLocationId===id&&host.isConnected){
    const sentences=extract.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(t=>t.trim()).filter(Boolean)||[extract];
