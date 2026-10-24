@@ -679,7 +679,7 @@ if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations))
 
 // Use actual WGS84 Natural Earth geography, pre-cached with the app.
  // Blue Marble remote-image failures previously left a blue circle with no continents.
-const EARTH_TEXTURE_URL='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=1280';
+const EARTH_TEXTURE_URL='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=2048';
 let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;
 let satelliteReady=false;
 if(window.RevisionWorldEarth){
@@ -697,12 +697,12 @@ const nasaEarth=new Image();
 nasaEarth.crossOrigin='anonymous';
 nasaEarth.onload=()=>{
  try{
-  const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=512;
+  const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1024;
   const c=canvas.getContext('2d',{willReadFrequently:true});
-  c.drawImage(nasaEarth,0,0,1024,512);
+  c.drawImage(nasaEarth,0,0,2048,1024);
   const pixels=c.getImageData(0,0,1024,512);
-  if(pixels?.data?.length===1024*512*4){
-   earthPixels=pixels.data;earthW=1024;earthH=512;earthTextureReady=true;
+  if(pixels?.data?.length===2048*1024*4){
+   earthPixels=pixels.data;earthW=2048;earthH=1024;earthTextureReady=true;
    satelliteReady=true;drawGlobe();
   }
  }catch(error){console.warn('Using offline Natural Earth globe instead of remote satellite imagery',error)}
@@ -2440,7 +2440,7 @@ function visibleGlobePins(w,h,region=''){
    +(item.location.worldKind==='country'?90:item.location.worldKind==='sea'||item.location.worldKind==='ocean'?8:200)
    +item.p.z*40;
  const queue=all.sort((a,b)=>score(b)-score(a));
- const shown=[],distance=15; // keep overlapping locked locations selectable via finder or Show every pin
+ const shown=[],distance=15*(w/700); // same visual spacing at higher rendering resolution
  for(const item of queue){
   if(shown.every(other=>Math.hypot(item.p.x-other.p.x,item.p.y-other.p.y)>distance)){
     shown.push(item);
@@ -2450,6 +2450,9 @@ function visibleGlobePins(w,h,region=''){
 }
 function drawGlobe(){
  const c=document.getElementById('globe');if(!c)return;
+ // Paint twice as many intrinsic pixels as the 700×360 CSS presentation.
+ // Pin coordinates use this same canvas space; no geographic coordinates move.
+ if(c.width!==1400||c.height!==720){c.width=1400;c.height=720}
  const ctx=c.getContext('2d'),w=c.width,h=c.height,R=Math.min(w,h)*.4,cx=w/2,cy=h/2;
  ctx.clearRect(0,0,w,h);ctx.fillStyle='#020617';ctx.fillRect(0,0,w,h);
  if(earthTextureReady&&earthPixels){
@@ -2485,11 +2488,12 @@ function drawGlobe(){
  const regionFilter=document.getElementById('locationRegion')?.value||'';
  for(const {location:l,p,owned} of visibleGlobePins(w,h,regionFilter)){
  const active=l.id===openLocationId;
- const radius=active?6.2:owned?5.4:3.2;
+ const scale=w/700;
+ const radius=(active?6.2:owned?5.4:3.2)*scale;
  ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);
  ctx.fillStyle=active?'#fbbf24':owned?'#22c55e':'rgba(219,239,255,.7)';ctx.fill();
- ctx.lineWidth=owned?1.9:0.8;ctx.strokeStyle=owned?'#eaffea':'rgba(20,51,74,.6)';ctx.stroke();
- if(active){ctx.beginPath();ctx.arc(p.x,p.y,10,0,Math.PI*2);ctx.strokeStyle='#fde68a';ctx.lineWidth=2.1;ctx.stroke()}
+ ctx.lineWidth=(owned?1.9:0.8)*scale;ctx.strokeStyle=owned?'#eaffea':'rgba(20,51,74,.6)';ctx.stroke();
+ if(active){ctx.beginPath();ctx.arc(p.x,p.y,10*scale,0,Math.PI*2);ctx.strokeStyle='#fde68a';ctx.lineWidth=2.1;ctx.stroke()}
  }
  document.getElementById('globeLabel').textContent='Drag to rotate · green = unlocked · pale = locked · gold = selected · tap a green pin for details';
 }
@@ -2515,7 +2519,7 @@ function focusOnGlobeLocation(id,open=false){
  return true;
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
-function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(700,360,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
+function nearestPin(x,y){const canvas=document.getElementById('globe');let best=null,dist=14*(canvas.width/700);const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(canvas.width,canvas.height,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();if(document.getElementById('shop').classList.contains('active'))renderShop()}
 async function sync(manual=false){
