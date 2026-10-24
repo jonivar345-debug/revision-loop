@@ -2576,8 +2576,57 @@
       }
     ]
   });
+  // Bangkok's four contrasting source-reviewed Commons photographs.
+  const featuredCitiesF=Object.freeze({
+    "bangkok": [
+      {
+        "file": "Grand Palace Bangkok, Thailand.jpg",
+        "author": "Andy Marchand",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Grand Palace complex in Bangkok",
+        "width": 6158,
+        "height": 3464,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending"
+      },
+      {
+        "file": "Wat Arun Bangkok ,Thailand.jpg",
+        "author": "SupawatR",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Wat Arun temple near sunset",
+        "width": 5472,
+        "height": 3648,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending"
+      },
+      {
+        "file": "Chao Phraya River in Bangkok 01.jpg",
+        "author": "Krzysztof Golik",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Chao Phraya River through Bangkok",
+        "width": 3964,
+        "height": 2643,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending"
+      },
+      {
+        "file": "Bangkok-Chinatown-14-Einkaufstrasse-1976-gje.jpg",
+        "author": "Gerd Eichmann",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic shopping street in Bangkok Chinatown, 1976",
+        "width": 2311,
+        "height": 2379,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
