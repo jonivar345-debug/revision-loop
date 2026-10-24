@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "14 independently written six-mark AQA-style challenge problems. Not copied verbatim from past papers; the ionic comparison uses established AQA numerical data.",
+  "notes": "15 independently written six-mark AQA-style challenge problems, not verbatim AQA paper text.",
   "questions": [
     {
       "id": "gap_v49_extended_01",
@@ -575,6 +575,47 @@
         "Lattice formation Mg²⁺(g) + O²⁻(g) → MgO(s), shown as an exothermic downward arrow. Positive enthalpy arrows point up, negative down."
       ],
       "modelAnswer": "Overall standard formation: Mg(s) + ½O₂(g) → MgO(s), with ΔHf arrow connecting start to final ionic solid. Correct atomisations: Mg(s) → Mg(g) and ½O₂(g) → O(g), with gaseous atoms and positive (+) endothermic arrows. First ionisation of Mg: Mg(g) → Mg⁺(g) + e⁻, followed by second ionisation Mg⁺(g) → Mg²⁺(g) + e⁻, both endothermic. Correct charge and electron accounting at the fully ionised intermediate stage: Mg²⁺(g) + O(g) + 2e⁻. First and second electron affinities: O(g) + e⁻ → O⁻(g) (exothermic) and O⁻(g) + e⁻ → O²⁻(g) (endothermic), ending with Mg²⁺(g) + O²⁻(g). Lattice formation Mg²⁺(g) + O²⁻(g) → MgO(s), shown as an exothermic downward arrow. Positive enthalpy arrows point up, negative down."
+    },
+    {
+      "id": "gap_v49_extended_15",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style extended problem",
+      "paper": "Original",
+      "question": "Extended independent practice",
+      "topic": "Gibbs free energy",
+      "subtopic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "courseTopic": "Thermodynamics",
+      "marks": 6,
+      "prompt": "A student argues: 'An endothermic reaction cannot be feasible because energy is absorbed. If ΔG is negative, the reaction must occur quickly. Increasing temperature always makes reactions more feasible.' Discuss each claim using ΔG=ΔH−TΔS, the signs of ΔH and ΔS, activation energy and the role of a catalyst. [6 marks]",
+      "markPoints": [
+        "Thermodynamic feasibility depends on the Gibbs relation ΔG=ΔH−TΔS; negative ΔG favours the forward change.",
+        "An endothermic reaction with ΔH positive can be feasible if ΔS is positive and TΔS exceeds ΔH.",
+        "For such a process, raising temperature can make ΔG negative even though energy is absorbed.",
+        "Negative ΔG predicts feasibility, not reaction speed; a high activation energy can make the reaction very slow.",
+        "A catalyst lowers activation energy and increases rate but does not alter ΔG of the overall reaction.",
+        "When ΔS is positive, increasing temperature lowers ΔG; when ΔS is negative, increasing temperature raises ΔG, so heating does not always improve feasibility."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Thermodynamic feasibility depends on ΔG=ΔH−TΔS. Even when ΔH is positive (endothermic), a sufficiently large positive ΔS at high T makes TΔS exceed ΔH and ΔG negative. A negative ΔG signals a thermodynamically favourable direction but does not mean the reaction is fast: a high activation-energy barrier can make the rate very slow. A catalyst lowers activation energy and raises rate, but does not change ΔG. Increasing temperature makes ΔG more negative only if ΔS is positive; if ΔS is negative, increasing temperature makes ΔG more positive. Thus all three claims are incorrect.",
+      "answerType": "points",
+      "questionType": "extended explanation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "gap_v49_extended_15",
+      "groupOrder": 1
     }
   ]
 }
