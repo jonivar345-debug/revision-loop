@@ -55,7 +55,7 @@ for(const [id,notPhoto] of Object.entries({
 })){assert(!catalog.get(id).some(p=>p.file==='File:'+notPhoto),'Reject unrelated place or satellite image '+id);}
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
-assert(html.includes('world-photo-enrichment-v85.js?v=87'),'Browser must fetch refreshed photo manifest');
-assert(sw.includes('revision-loop-v87-last-mile-photo'),'Service worker cache must be versioned');
+assert(html.includes('world-photo-enrichment-v85.js?v=88'),'Browser must fetch refreshed photo manifest');
+assert(sw.includes('revision-loop-v88-photo-quality'),'Service worker cache must be versioned');
 assert(sw.includes("'./world-photo-enrichment-v85.js'"),'Offline source data must remain cached');
 console.log('PASS v87: '+complete+'/376 sourced four-photo galleries; '+total+' unique destination-photo pairs; '+JSON.stringify(unfinished)+' incomplete; source metadata only, not pixel approved');
