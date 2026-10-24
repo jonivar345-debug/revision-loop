@@ -44,12 +44,15 @@ for(const [id,items] of Object.entries(photos)){
  assert(display.some(x=>x.source==='editorial-source'&&x.checked===false),'Unreviewed file bypasses live Commons verification '+id);
  candidateCount+=display.length;
 }
-assert(!photos['country-jm']&&!photos['ocean-atlantic'],'Reject plane/bird images used as Jamaica/Atlantic scenery');
+for(const photo of photos['country-jm']||[])
+ assert(!/Jamaica Bay Wildlife|Jamaica Street|plane Photo Don Ramey Logan/i.test(photo.file),'Reject off-island, aircraft and London road images for Jamaica');
+for(const photo of photos['ocean-atlantic']||[])
+ assert(!/Nesocichla eremita|Show Your Stripes/i.test(photo.file),'Reject island-bird and climate chart images in Atlantic scenery');
 assert(world.get('bergen').some(p=>p.file.includes('Bryggen')),'Exact old country photo not reused in Bergen');
 assert(world.get('granada').some(p=>p.file.includes('Alhambra')),'Exact Granada landmark reuse missing');
 assert(world.get('vilnius').some(p=>p.file.includes('Vilnius Old Town')),'Vilnius landmark reuse missing');
 assert(world.get('chicago').every(p=>!p.file.includes('Police Interceptor')),'Wrong Chicago photo not removed');
 assert(world.get('country-az').every(p=>!p.file.includes('population pyramid')),'Population charts cannot count as country pictures');
 for(const id of ['london','busan'])assert.equal(world.get(id).filter(p=>p.checked).length,4,'Original individually pixel-reviewed gallery must remain');
-assert(fs.readFileSync(path.join(base,'sw.js'),'utf8').includes("revision-loop-v83-262-photo-destinations"));
+assert(fs.readFileSync(path.join(base,'sw.js'),'utf8').includes("revision-loop-v84-commons-recovery"));
 console.log('PASS v83 extensive coverage: '+compiled.length+' source-backed locations, '+sum+' source records, '+ids.length+' discovery groups, '+photoCount+' provisional CC photographs; existing London/Busan unchanged, rejects scenery mismatches, current Commons validation remains required.');

@@ -35,6 +35,8 @@ jobs:
           node tests/world-featured-city-photos.cjs
           node tests/world-photo-bulk-coverage.cjs
           node tests/world-photo-v83-expansion.cjs
+          node tests/world-photo-v84-remaining-coverage.cjs
+          node tests/world-photo-national-reuse-v84.cjs
           node tests/world-photo-original-resolution.cjs
           node tests/world-library-preview.cjs
           node tests/outfit-and-source-regression.cjs

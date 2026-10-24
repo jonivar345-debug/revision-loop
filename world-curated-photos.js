@@ -3197,8 +3197,462 @@
       }
     ]
   });
+  // Explicit cross-linking only where a photograph depicts a landmark that
+  // IS in the corresponding country. Never perform country-name fuzzy matching.
+  // Copies are provisional and MUST pass CURRENT Commons CC validation even if
+  // the source city had a pixel-reviewed featured selection.
+  const nationalLandmarks=Object.freeze({
+    "country-au": [
+      [
+        "sydney",
+        "Sydney skyline at dusk - Dec 2008.jpg"
+      ],
+      [
+        "uluru",
+        "Uluru Australia.jpg"
+      ],
+      [
+        "greatbarrier",
+        "Great barrière reef.jpg"
+      ],
+      [
+        "melbourne",
+        "City Skyline of Melbourne.jpg"
+      ]
+    ],
+    "country-br": [
+      [
+        "rio",
+        "Christ-Redeemer-Rio-de-Janeiro.jpg"
+      ]
+    ],
+    "country-co": [
+      [
+        "bogota",
+        "Bogota, Colombia (36668708290).jpg"
+      ],
+      [
+        "medellin",
+        "Centro de Medellín en dron 04.jpg"
+      ],
+      [
+        "cartagena",
+        "Museo Naval del Caribe.JPG"
+      ]
+    ],
+    "country-dk": [
+      [
+        "copenhagen",
+        "2018 - Christiansborg from the Marble Bridge.jpg"
+      ],
+      [
+        "copenhagen",
+        "Cityscape and skyline by the Copenhagen Lakes, Denmark - (36018109956).jpg"
+      ]
+    ],
+    "country-ge": [
+      [
+        "tbilisi",
+        "Old Town and Narikala, Tbilisi.jpg"
+      ],
+      [
+        "tbilisi",
+        "Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg"
+      ]
+    ],
+    "country-jm": [
+      [
+        "montegobay",
+        "Montego Bay Photo Don Ramey Logan.jpg"
+      ]
+    ],
+    "country-kh": [
+      [
+        "angkor",
+        "Sunrise at Angkor Wat Cambodia.jpg"
+      ]
+    ],
+    "country-me": [
+      [
+        "kotor",
+        "20090719 Crkva Gospa od Zdravlja Kotor Bay Montenegro.jpg"
+      ]
+    ],
+    "country-mx": [
+      [
+        "chichenitza",
+        "Chichen Itzá Pyramide.jpg"
+      ],
+      [
+        "mexicocity",
+        "Panorama of Mexico City from Torre Latinoamericana.jpg"
+      ]
+    ],
+    "country-my": [
+      [
+        "kualalumpur",
+        "Downtown Kuala Lumpur at Night (49125936143).jpg"
+      ],
+      [
+        "kualalumpur",
+        "2016 Kuala Lumpur, Park KLCC i Suria KLCC.jpg"
+      ]
+    ],
+    "country-nl": [
+      [
+        "amsterdam",
+        "Amsterdam Cityscape.jpg"
+      ],
+      [
+        "amsterdam",
+        "Amsterdam (NL), Begijnhof -- 2015 -- 7215-8.jpg"
+      ]
+    ],
+    "country-nz": [
+      [
+        "auckland",
+        "AucklandCBD2026.jpg"
+      ],
+      [
+        "rotorua",
+        "Government Gardens in Rotorua 01.jpg"
+      ]
+    ],
+    "country-ph": [
+      [
+        "manila",
+        "Cityscape of Manila, 2025 (01).jpg"
+      ],
+      [
+        "bohol",
+        "Panglao Island Beach.jpg"
+      ],
+      [
+        "coron",
+        "Coron - Kayangan Lake.jpg"
+      ]
+    ],
+    "country-se": [
+      [
+        "stockholm",
+        "Royal Dramatic Theatre Stockholm.jpg"
+      ]
+    ],
+    "country-us": [
+      [
+        "newyork",
+        "New York City, Skyline.jpg"
+      ],
+      [
+        "grandcanyon",
+        "The Grand Canyon, Arizona.jpg"
+      ],
+      [
+        "yellowstone",
+        "Yellowstone Grand Prismatic.jpg"
+      ],
+      [
+        "newyork",
+        "Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg"
+      ]
+    ],
+    "country-za": [
+      [
+        "capetown",
+        "Table mountain in Cape Town.jpg"
+      ]
+    ],
+    "country-uz": [
+      [
+        "samarkand",
+        "Registan Samarkand.jpg"
+      ]
+    ],
+    "country-cu": [
+      [
+        "havana",
+        "Havana aerial.jpg"
+      ],
+      [
+        "havana",
+        "Havana street view.jpg"
+      ]
+    ],
+    "country-ba": [
+      [
+        "mostar",
+        "Stari Most viewed from North.jpg"
+      ],
+      [
+        "sarajevo",
+        "Sarajevo City Panorama.JPG"
+      ]
+    ]
+  });
+  function nationalSources(id){
+    return (nationalLandmarks[id]||[]).flatMap(([placeId,file])=>{
+      const direct=[...(verified[placeId]||[]),...(featuredCities[placeId]||[]),...(featuredCitiesB[placeId]||[]),...(featuredCitiesC[placeId]||[]),...(featuredCitiesD[placeId]||[]),...(featuredCitiesE[placeId]||[]),...(featuredCitiesF[placeId]||[]),...(editorial[placeId]||[]),...(additionalEditorialA[placeId]||[]),...(additionalEditorialB[placeId]||[]),...(independentlySourced[placeId]||[]),...reusedFor(placeId),...discoveredFor(placeId)];
+      const image=direct.find(photo=>photo.file===file);
+      return image?[{...image,editorialMetadata:true,reviewStatus:'Exact nationally located place source, Commons licence rechecked on display; pixels for this national placement not individually inspected'}]:[];
+    });
+  }
+  // File pages individually checked for the final three gaps that search
+  // titles did not recover (including genuine sea photographs rather than maps).
+  const lastThreePlaceSources=Object.freeze({
+    "dakar": [
+      {
+        "file": "Dakar from above.jpg",
+        "author": "Hichammohsen",
+        "license": "CC BY-SA 4.0",
+        "subject": "Aerial photograph of Dakar's Atlantic coastline and skyline",
+        "width": 5184,
+        "height": 3456,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Dakar vue de haut 04.jpg",
+        "author": "Ourytima",
+        "license": "CC BY-SA 4.0",
+        "subject": "Cityscape of Dakar photographed from above",
+        "width": 4080,
+        "height": 3060,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      }
+    ],
+    "country-ag": [
+      {
+        "file": "Beach in Old Road, Antigua and Barbuda.jpg",
+        "author": "AntiguaAndBarbudaMedia",
+        "license": "CC BY-SA 4.0",
+        "subject": "Carlisle Beach at Old Road in Saint Mary, Antigua and Barbuda",
+        "width": 4032,
+        "height": 3024,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      }
+    ],
+    "sea-bering": [
+      {
+        "file": "Nome Alaska bering sea.jpg",
+        "author": "ra64 from Nome, USA",
+        "license": "CC BY-SA 2.0",
+        "subject": "Open Bering Sea water seen from Nome, Alaska",
+        "width": 2256,
+        "height": 1496,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Bering sea...mar de bering ,alaska - panoramio.jpg",
+        "author": "Leo Macias",
+        "license": "CC BY-SA 3.0",
+        "subject": "Photograph of the Bering Sea coast near Unalaska, Alaska",
+        "width": 2576,
+        "height": 1932,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Bering Sea Ice 2 (8683679273).jpg",
+        "author": "Joseph / The Cabin On The Road",
+        "license": "CC BY-SA 2.0",
+        "subject": "Sea ice near Nome on the Bering Sea coast",
+        "width": 2614,
+        "height": 1894,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      }
+    ],
+    "country-iq": [
+      {
+        "file": "View of Erbil skyline from the Citadel in the Kurdistan Region of Iraq 01.jpg",
+        "author": "Levi Clancy",
+        "license": "CC BY-SA 4.0",
+        "subject": "Erbil city skyline from the ancient Citadel in Iraq",
+        "width": 6016,
+        "height": 4000,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "View of the Erbil skyline from the Cristal Hotel in Erbil.jpg",
+        "author": "Levi Clancy",
+        "license": "CC0 1.0",
+        "subject": "Erbil cityscape and skyline in Iraq",
+        "width": 5876,
+        "height": 3917,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
+    ],
+    "country-lr": [
+      {
+        "file": "Central Monrovia.jpg",
+        "author": "Jefferson Krua",
+        "license": "CC BY-SA 4.0",
+        "subject": "Central Monrovia, Liberia",
+        "width": 6000,
+        "height": 4000,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Monrovia, Liberia - panoramio (65).jpg",
+        "author": "blk24ga",
+        "license": "CC BY 3.0",
+        "subject": "Monrovia city scene in Liberia",
+        "width": 4000,
+        "height": 3000,
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
+    ],
+    "country-ne": [
+      {
+        "file": "Niger, Niamey, Dunes (1), landscape.jpg",
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "subject": "Dunes near Niamey in Niger, with Niamey and Niger River in the distance",
+        "width": 4288,
+        "height": 2848,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Niger, Agadez (43), Grand Mosque.jpg",
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Grand Mosque in historic Agadez, Niger",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons source page author, exact historic Niger location, licence and resolution checked; no pixel-level inspection claimed"
+      },
+      {
+        "file": "Niger, Agadez (14), scene in the old city.jpg",
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic streets of Agadez in Niger, with the Grand Mosque minaret",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons source page author, exact historic Niger location, licence and resolution checked; no pixel-level inspection claimed"
+      }
+    ],
+    "sea-red": [
+      {
+        "file": "Coral Reef, Red Sea.jpg",
+        "author": "Menna.Hassan100",
+        "license": "CC BY-SA 4.0",
+        "subject": "A colourful underwater coral reef in the Red Sea",
+        "width": 3000,
+        "height": 4000,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Red sea underwater coral.jpg",
+        "author": "Andrey Korman",
+        "license": "CC BY-SA 4.0",
+        "subject": "Red Sea underwater coral formations",
+        "width": 2304,
+        "height": 3072,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
+    ],
+    "country-bb": [
+      {
+        "file": "Bathsheba, Barbados 39.jpg",
+        "author": "Postdlf",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Rugged Atlantic coastline at Bathsheba, Barbados",
+        "width": 4272,
+        "height": 2848,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      },
+      {
+        "file": "Bathsheba, Barbados 45.jpg",
+        "author": "Postdlf",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Coastal rock formations at Bathsheba on Barbados",
+        "width": 4272,
+        "height": 2848,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      }
+    ],
+    "lagos": [
+      {
+        "file": "Lagos skyline.jpg",
+        "author": "Clara Sanchiz",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Skyline of Lagos, Nigeria, viewed from Victoria Island",
+        "width": 3726,
+        "height": 1970,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      },
+      {
+        "file": "Mafoluku Oshodi Lagos skyline.jpg",
+        "author": "Canih28",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Neighbourhood and urban skyline at Oshodi in Lagos, Nigeria",
+        "width": 2560,
+        "height": 1920,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      }
+    ],
+    "country-mk": [
+      {
+        "file": "Ohrid lake, North Macedonia.jpg",
+        "author": "MiroJP",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lake Ohrid and the city of Ohrid in North Macedonia",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      },
+      {
+        "file": "Lake Ohrid.jpg",
+        "author": "Markus Bernet",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "subject": "Lake Ohrid landscape in North Macedonia",
+        "width": 2048,
+        "height": 1536,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...discoveredFor(id)];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
