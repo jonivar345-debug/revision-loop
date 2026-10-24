@@ -33,5 +33,6 @@ jobs:
           node tests/world-location-photo-gallery.cjs
           node tests/world-photo-coverage-20261024.cjs
           node tests/world-featured-city-photos.cjs
+          node tests/world-photo-original-resolution.cjs
           node tests/world-library-preview.cjs
           node tests/outfit-and-source-regression.cjs
