@@ -94,7 +94,7 @@
      msg.textContent='Photographs unavailable';
      el.append(msg);return [];
    }
-   const grid=doc.createElement('div');grid.className='destination-photo-grid';
+   const grid=doc.createElement('div');grid.className='destination-photo-grid photo-count-'+photos.length;
    const credits=doc.createElement('details');credits.className='destination-photo-credits';
    const summary=doc.createElement('summary');summary.textContent='Photo credits';credits.append(summary);
    const list=doc.createElement('ul');
@@ -105,6 +105,7 @@
     img.src=photo.url;
     img.onerror=()=>{
       figure.remove();
+      grid.className='destination-photo-grid photo-count-'+grid.querySelectorAll('figure').length;
       if(!grid.querySelector('img')){
         const empty=doc.createElement('span');empty.className='destination-photo-status';empty.textContent='Photographs unavailable';grid.append(empty);
       }
