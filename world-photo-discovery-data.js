@@ -5901,7 +5901,7 @@
       "width": 4000,
       "height": 3000,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Commons File page manually checked for place, author, CC licence and original image dimensions; NOT full image pixel/quality approval",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
       "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     },
     {
@@ -5943,7 +5943,7 @@
       "width": 6000,
       "height": 4000,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Commons File page manually checked for place, author, CC licence and original image dimensions; NOT full image pixel/quality approval",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
       "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     },
     {
@@ -6034,7 +6034,7 @@
       "width": 3648,
       "height": 2736,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Commons File page manually checked for place, author, CC licence and original image dimensions; NOT full image pixel/quality approval",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
       "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     }
   ],
@@ -6139,7 +6139,7 @@
       "width": 2360,
       "height": 1591,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Commons File page manually checked for place, author, CC licence and original image dimensions; NOT full image pixel/quality approval",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
       "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     },
     {
