@@ -1888,8 +1888,149 @@
       }
     ]
   });
+  // Fixed landmark selections from individually read Commons file-description
+  // pages. These remain CURRENT-LICENCE-VERIFIED candidates, NOT pixel-reviewed
+  // approvals, until the live Commons check succeeds at display time.
+  const featuredCities=Object.freeze({
+    "tokyo": [
+      {
+        "file": "2025 Shibuya Crossing at night.jpg",
+        "author": "Kakidai",
+        "license": "CC BY-SA 4.0",
+        "subject": "Shibuya Crossing at night",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Tokyo Tower 2020.jpg",
+        "author": "Jordy Meow",
+        "license": "CC BY-SA 3.0",
+        "subject": "Illuminated Tokyo Tower",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "Senso-ji.jpg",
+        "author": "Felix Filnkössl",
+        "license": "CC BY-SA 3.0",
+        "subject": "Kaminarimon gate at Sensō-ji in Asakusa",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "Tokyo Skytree 20250831 105130.jpg",
+        "author": "Taufik",
+        "license": "CC0 1.0",
+        "subject": "Tokyo Skytree",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    ],
+    "seoul": [
+      {
+        "file": "Seoul from Namsan.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "subject": "Wide view across Seoul from Namsan",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Panoramic view of Hyangwonjeong Pavilion in its pond at Gyeongbokgung Palace with blue sky in Seoul.jpg",
+        "author": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "subject": "Hyangwonjeong Pavilion at Gyeongbokgung Palace",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg",
+        "author": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "subject": "Traditional hanok houses in Bukchon",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Myeongdong Cathedral 2.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "subject": "Myeongdong Cathedral",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "tbilisi": [
+      {
+        "file": "Old Town and Narikala, Tbilisi.jpg",
+        "author": "Saskia Heijltjes",
+        "license": "CC BY-SA 2.0",
+        "subject": "Old Tbilisi and Narikala at dusk",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      {
+        "file": "Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg",
+        "author": "Andrzej Wójtowicz",
+        "license": "CC BY-SA 2.0",
+        "subject": "Holy Trinity Cathedral of Tbilisi",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      {
+        "file": "Roofs of the sulfur baths in Tbilisi.jpg",
+        "author": "Wowan1978",
+        "license": "CC BY-SA 4.0",
+        "subject": "Abanotubani sulphur bathhouse rooftops",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Panorama from Narikala.jpg",
+        "author": "Gaeser",
+        "license": "CC BY-SA 3.0",
+        "subject": "Panorama of Tbilisi from Narikala",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
+    "singapore": [
+      {
+        "file": "Marina Bay Sands.jpeg",
+        "author": "Misaochan",
+        "license": "CC BY-SA 3.0",
+        "subject": "Marina Bay Sands",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "file": "Gardens-by-the-bay.jpg",
+        "author": "Nightcrafter",
+        "license": "CC BY-SA 4.0",
+        "subject": "Supertree Grove at Gardens by the Bay",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Chinatown Singapore.jpg",
+        "author": "Supersusage",
+        "license": "CC BY-SA 4.0",
+        "subject": "A street in Singapore's Chinatown",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "The Jewel, Singapore (IMG 20230827 155118).jpg",
+        "author": "Matti Blume",
+        "license": "CC BY-SA 4.0",
+        "subject": "Jewel Changi Airport",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
