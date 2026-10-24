@@ -9,6 +9,7 @@ import fs from 'node:fs/promises';
 const root=process.cwd();
 const arg=k=>process.argv.find(x=>x.startsWith('--'+k+'='))?.split('=').slice(1).join('=');
 const limit=Math.max(1,Math.min(376,Number(arg('limit')||376)));
+const offset=Math.max(0,Math.min(375,Number(arg('offset')||0)));
 const writing=process.argv.includes('--write');
 const dest='world-photo-discovery-data.js';
 const csv=await fs.readFile('editorial/world_photo_collection_template_376.csv','utf8');
@@ -25,7 +26,7 @@ for(const m of geography.matchAll(/"id":"([^"]+)","name":"[^"]+","wiki":"([^"]+)
 const rows=csv.split(/\r?\n/).slice(1).filter(Boolean).map(l=>{
  const p=[...l.matchAll(/"([^"]*)"/g)].map(m=>m[1]);
  return {name:p[0],type:p[1],region:p[2],id:p[3]};
-}).filter(x=>x.id&&!covered.has(x.id)).slice(0,limit);
+}).filter(x=>x.id&&!covered.has(x.id)).slice(offset,offset+limit);
 const rejected=/\b(?:map|flag|locator|diagram|graph|chart|logo|coat.of.arms|drawing|montage|collage|seal|emblem|illustration|poster|route|infographic|seal|icon|coat of arms|satellite map|covid|mask|selfie|portrait of|panorama map)\b/i;
 const scenic=/panoram|skyline|sunset|sunrise|coast|beach|river|lake|mountain|landscape|town|city|square|temple|bridge|cathedral|harbour|harbor|historic|fort|palace|street|park|garden|valley|waterfall|forest|cliff|castle|aerial|island|monument|basilica|bay|village/i;
 function matchTerm(name,place){
@@ -36,15 +37,16 @@ function matchTerm(name,place){
 }
 function apiUrl(host,params){const u=new URL('https://'+host+'/w/api.php');for(const [k,v] of Object.entries(params))u.searchParams.set(k,v);return u;}
 async function getJson(url){
- for(let i=0;i<2;i++){
+ let last='unavailable';
+ for(let i=0;i<3;i++){
   try{
-   const resp=await fetch(url,{headers:{'User-Agent':'RevisionLoopPhotoAudit/1.0 (noncommercial revision website; github.com/jonivar345-debug/revision-loop)','Accept':'application/json'},signal:AbortSignal.timeout(12000)});
-   if(!resp.ok){if(resp.status===429||resp.status>=500)continue;return {error:'HTTP '+resp.status};}
+   const resp=await fetch(url,{headers:{'User-Agent':'RevisionLoopPhotoAudit/1.0 (noncommercial revision website; github.com/jonivar345-debug/revision-loop)','Accept':'application/json'},signal:AbortSignal.timeout(9000)});
+   if(!resp.ok){last='HTTP '+resp.status+' at '+url.hostname;if(resp.status===429||resp.status>=500){await new Promise(resolve=>setTimeout(resolve,700*(i+1)));continue;}return {error:last};}
    const raw=await resp.json();
    return raw;
-  }catch(e){if(i) return {error:String(e).slice(0,120)};}
+  }catch(e){last=String(e).slice(0,100)+' at '+url.hostname;await new Promise(resolve=>setTimeout(resolve,450*(i+1)));}
  }
- return {error:'request failed'};
+ return {error:last};
 }
 function decodeAuthor(v){return String(v||'').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,160);}
 function parseImage(page,lead,loc){
@@ -105,13 +107,19 @@ async function worker(){
  while(cursor<rows.length){const loc=rows[cursor++];await one({...loc,wiki:wiki.get(loc.id)||loc.name});stats.attempted++;
   if(stats.attempted%25===0)console.log('DISCOVERY PROGRESS '+JSON.stringify({attempted:stats.attempted,candidates:stats.articleResults,photos:stats.records,failures:stats.failures.length}));}
 }
-await Promise.all(Array.from({length:5},()=>worker()));
+await Promise.all(Array.from({length:2},()=>worker()));
 const details={created:new Date().toISOString(),candidateDestinations:stats.articleResults,sourcePhotos:stats.records,
  considered:stats.attempted,failedRequests:stats.failures.length,missingPhotoCount:stats.noMatch.length,byRegion:stats.byRegion,
  warning:'Machine-selected article-associated photos, not personally reviewed; exact Commons author/licence checked during discovery and rechecked at display time'};
 console.log('DISCOVERY RESULT '+JSON.stringify({...details,sampleFailures:stats.failures.slice(0,8),sampleNoMatch:stats.noMatch.slice(0,12)}));
 if(writing&&stats.articleResults>=1){
- const data=Object.fromEntries(Object.entries(stats.discovered).sort(([a],[b])=>a.localeCompare(b)));
+ const existing=await fs.readFile(dest,'utf8').catch(()=> '');
+ const match=existing.match(/const data=(\{[\s\S]*?\});/);
+ let previous={};
+ try{previous=match?JSON.parse(match[1]):{}}catch{}
+ const data=Object.fromEntries(Object.entries({...previous,...stats.discovered}).sort(([a],[b])=>a.localeCompare(b)));
+ details.cumulativeDestinationCount=Object.keys(data).length;
+ details.cumulativeSourcePhotos=Object.values(data).reduce((n,v)=>n+v.length,0);
  const js='/* Automated source-backed Wikipedia/Commons photo candidates; NOT visual approval.\n'+
   '   Commons author/licence and original bytes are checked again before display. */\n'+
   '(function(root){ "use strict";\n  const data='+JSON.stringify(data,null,2)+';\n'+
