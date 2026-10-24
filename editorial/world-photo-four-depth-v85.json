@@ -1,17 +1,17 @@
 {
   "date": "2026-10-24",
   "totalDestinations": 376,
-  "completeFourSources": 356,
-  "incompleteDestinations": 20,
+  "completeFourSources": 349,
+  "incompleteDestinations": 27,
   "missingSourceDestinations": 0,
-  "totalDistinctSourcedPhotos": 1493,
-  "unfilledPhotoSlots": 32,
+  "totalDistinctSourcedPhotos": 1488,
+  "unfilledPhotoSlots": 37,
   "byPhotoCount": {
     "0": 0,
-    "1": 0,
-    "2": 12,
-    "3": 8,
-    "4+": 356
+    "1": 1,
+    "2": 8,
+    "3": 18,
+    "4+": 349
   },
   "byRegion": {
     "Europe": {
@@ -21,39 +21,39 @@
       "locations": 80
     },
     "Asia": {
-      "four": 72,
-      "incomplete": 1,
-      "missingSlots": 2,
+      "four": 71,
+      "incomplete": 2,
+      "missingSlots": 3,
       "locations": 73
     },
     "Africa": {
-      "four": 79,
-      "incomplete": 9,
+      "four": 78,
+      "incomplete": 10,
       "missingSlots": 13,
       "locations": 88
     },
     "South America": {
-      "four": 32,
-      "incomplete": 1,
-      "missingSlots": 2,
+      "four": 33,
+      "incomplete": 0,
+      "missingSlots": 0,
       "locations": 33
     },
     "North America": {
-      "four": 42,
-      "incomplete": 2,
-      "missingSlots": 4,
+      "four": 43,
+      "incomplete": 1,
+      "missingSlots": 1,
       "locations": 44
     },
     "Oceania": {
-      "four": 34,
-      "incomplete": 2,
+      "four": 33,
+      "incomplete": 3,
       "missingSlots": 4,
       "locations": 36
     },
     "Oceans & Seas": {
-      "four": 18,
-      "incomplete": 4,
-      "missingSlots": 6,
+      "four": 12,
+      "incomplete": 10,
+      "missingSlots": 15,
       "locations": 22
     }
   },
@@ -585,8 +585,8 @@
       "name": "Dakar",
       "kind": "City / landmark / area",
       "region": "Africa",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -1584,8 +1584,8 @@
       "name": "Bosnia and Herzegovina",
       "kind": "Country",
       "region": "Europe",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -1593,8 +1593,8 @@
       "name": "Barbados",
       "kind": "Country",
       "region": "North America",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -1782,8 +1782,8 @@
       "name": "Côte d'Ivoire",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -1917,8 +1917,8 @@
       "name": "Algeria",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -1944,8 +1944,8 @@
       "name": "Egypt",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -1953,8 +1953,8 @@
       "name": "Eritrea",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2016,8 +2016,8 @@
       "name": "Gabon",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 3,
-      "neededToReachFour": 1,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2070,8 +2070,8 @@
       "name": "Guinea",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 1,
+      "neededToReachFour": 3,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2286,8 +2286,8 @@
       "name": "Kiribati",
       "kind": "Country",
       "region": "Oceania",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2502,8 +2502,8 @@
       "name": "North Macedonia",
       "kind": "Country",
       "region": "Europe",
-      "sourcedCount": 3,
-      "neededToReachFour": 1,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2718,8 +2718,8 @@
       "name": "Papua New Guinea",
       "kind": "Country",
       "region": "Oceania",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2754,8 +2754,8 @@
       "name": "Palestine",
       "kind": "Country",
       "region": "Asia",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
       "fourVerifiedOnScreen": false
     },
     {
@@ -2934,8 +2934,8 @@
       "name": "Somalia",
       "kind": "Country",
       "region": "Africa",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3042,8 +3042,8 @@
       "name": "Turkmenistan",
       "kind": "Country",
       "region": "Asia",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3078,8 +3078,8 @@
       "name": "Trinidad and Tobago",
       "kind": "Country",
       "region": "North America",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3132,8 +3132,8 @@
       "name": "Uruguay",
       "kind": "Country",
       "region": "South America",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3159,8 +3159,8 @@
       "name": "Saint Vincent and the Grenadines",
       "kind": "Country",
       "region": "North America",
-      "sourcedCount": 2,
-      "neededToReachFour": 2,
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3249,8 +3249,8 @@
       "name": "Pacific Ocean",
       "kind": "Ocean",
       "region": "Oceans & Seas",
-      "sourcedCount": 3,
-      "neededToReachFour": 1,
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3258,8 +3258,8 @@
       "name": "Atlantic Ocean",
       "kind": "Ocean",
       "region": "Oceans & Seas",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3276,8 +3276,8 @@
       "name": "Arctic Ocean",
       "kind": "Ocean",
       "region": "Oceans & Seas",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3330,8 +3330,8 @@
       "name": "Red Sea",
       "kind": "Sea",
       "region": "Oceans & Seas",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3348,8 +3348,8 @@
       "name": "Bering Sea",
       "kind": "Sea",
       "region": "Oceans & Seas",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3357,8 +3357,8 @@
       "name": "Sea of Okhotsk",
       "kind": "Sea",
       "region": "Oceans & Seas",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {
@@ -3384,8 +3384,8 @@
       "name": "South China Sea",
       "kind": "Sea",
       "region": "Oceans & Seas",
-      "sourcedCount": 4,
-      "neededToReachFour": 0,
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
       "fourVerifiedOnScreen": false
     },
     {

@@ -1,4 +1,4 @@
-/* Commons file-title-source-check enrichment. These are NOT visually reviewed. */
+/* Commons photo candidates, NOT pixel-level editorial review. */
 (function(root){'use strict';const data={
   "addis": [
     {
@@ -1145,19 +1145,6 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Barbados",
       "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "2017-04-08 02 PELICAN II - IMO 9044815 – Port of Bridgetown, Barbados.jpg",
-      "author": "Gordon Leggett",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Switzer tugboat, PELICAN II - IMO 9044815, MMSI 314000001 in the Port of Bridgetown, Barbados on April 8, 2017. The ship at the dock in the background is the BENGUELA STREAM - IMO 9158549.",
-      "width": 5378,
-      "height": 3590,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Barbados",
-      "photoSource": "Commons exact File-title search"
     }
   ],
   "country-bd": [
@@ -1552,21 +1539,6 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
-  "country-ci": [
-    {
-      "file": "Show Your Stripes change in temperature graphic for Ivory Coast.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Ivory Coast. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or city over the past 100+ years. Each stri",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Côte d'Ivoire",
-      "photoSource": "Commons exact File-title search"
-    }
-  ],
   "country-cl": [
     {
       "file": "Laguna Miscanti, Chile, 2016-02-08, DD 15-21 PAN.JPG",
@@ -1935,19 +1907,6 @@
   ],
   "country-eg": [
     {
-      "file": "Landscape with the Flight into Egypt - Claude Gellée dit Le Lorrain.jpg",
-      "author": "Claude Lorrain",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Landscape with the Flight into Egypt - Claude Gellée dit Le Lorrain",
-      "width": 6641,
-      "height": 5461,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Egypt",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
       "file": "Statue of Ramesses II in Karnak Temple in Luxor Egypt.JPG",
       "author": "MusikAnimal",
       "license": "CC BY-SA 4.0",
@@ -1959,6 +1918,34 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Egypt",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-er": [
+    {
+      "file": "St.Joseph's Cathedral Asmara, Eritrea (30740941256).jpg",
+      "author": "Clay Gilliland from Chandler, U.S.A.",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "St. Joseph's Cathedral is a large Revival First Romanesque style cathedral in the centre of the city of Asmara, Eritrea. It was built in 1922 by the colonial authorities in Italian Eritrea. The edifice was constructed in",
+      "width": 4560,
+      "height": 3420,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Eritrea",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Cast iron utility cover in Asmara, Eritrea (30142134424).jpg",
+      "author": "Clay Gilliland from Chandler, U.S.A.",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Product of an Italian iron works in the city of Pisa.",
+      "width": 4608,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Eritrea",
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "country-es": [
@@ -2101,6 +2088,21 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-ga": [
+    {
+      "file": "Alenakiri, Libreville, Gabon - panoramio.jpg",
+      "author": "Ahmet Colakoglu",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "APR Energy, Alenakiri, Libreville, Gabon",
+      "width": 4320,
+      "height": 3240,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Gabon",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    }
+  ],
   "country-gb": [
     {
       "file": "The Round Church Church of the Holy Sepulchre Cambridge England Britain UK United Kingdom United Kingdom of Great Britain and Northern Ireland (41203633591).jpg",
@@ -2197,47 +2199,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Gambia",
-      "photoSource": "Commons exact File-title search"
-    }
-  ],
-  "country-gn": [
-    {
-      "file": "177 Helmeted guinea fowl fighting in Etosha National Park Photo by Giles Laurent.jpg",
-      "author": "Giles Laurent",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Helmeted guinea fowl fighting in Etosha National Park, Namibia",
-      "width": 6674,
-      "height": 4449,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Guinea",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Gallina de Guinea (Numida meleagris), parque nacional del lago Nakuru, Kenia, 2024-05-18, DD 40.jpg",
-      "author": "Diego Delso",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Helmeted guineafowl ( Numida meleagris ), Lake Nakuru National Park, Kenya",
-      "width": 5749,
-      "height": 3833,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Guinea",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Speckled pigeon (Columba guinea guinea) Ethiopia.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Speckled pigeon ( Columba guinea guinea ), Lake Ziway, Ethiopia",
-      "width": 4668,
-      "height": 3112,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Guinea",
       "photoSource": "Commons exact File-title search"
     }
   ],
@@ -2747,19 +2708,6 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Kiribati",
       "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Humboldt Forum Ethnological Museum Object from Kiribati - Nauru 1170.jpg",
-      "author": "Dosseman",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "The Republic of Kiribati is an archipelagic state in Oceania in the central Pacific Ocean.",
-      "width": 5504,
-      "height": 8256,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Kiribati",
-      "photoSource": "Commons exact File-title search"
     }
   ],
   "country-km": [
@@ -3227,6 +3175,21 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-mk": [
+    {
+      "file": "Fortaleza de Samuel, Ohrid, Macedonia, 2014-04-17, DD 40.JPG",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Samuil's Fortress, Ohrid, Macedonia",
+      "width": 5479,
+      "height": 3653,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "North Macedonia",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    }
+  ],
   "country-ml": [
     {
       "file": "A touareg at the Festival au Desert near Timbuktu, Mali 2012.jpg",
@@ -3567,6 +3530,21 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-pg": [
+    {
+      "file": "Kokoda track Papua New Guinea.JPG",
+      "author": "Luke Brindley",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Walking the Kokoda track, Papua New Guinea. This section of the track is known as the potato fields and is located between the village of Kokoda and the village of Isurava. The kokoda track was the scene of fighting betw",
+      "width": 2304,
+      "height": 1728,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Papua New Guinea",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    }
+  ],
   "country-pl": [
     {
       "file": "Winter in Tatry Mountains - Poland.jpg",
@@ -3604,32 +3582,6 @@
       "subject": "West Bank and East Bank",
       "width": 3776,
       "height": 2520,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Palestine",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Palestine sunbird (Cinnyris osea osea) male.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Palestine sunbird ( Cinnyris osea osea ) male, Dana Biosphere Reserve, Jordan",
-      "width": 3410,
-      "height": 2273,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Palestine",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Palestine sunbird (Cinnyris osea osea) female.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Palestine sunbird ( Cinnyris osea osea ) female, Dana Biosphere Reserve, Jordan",
-      "width": 2708,
-      "height": 1806,
       "editorialMetadata": true,
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Palestine",
@@ -4112,6 +4064,34 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-so": [
+    {
+      "file": "ASC Leiden - van de Bruinhorst Collection - Somaliland 2019 - 4450 - Roman Catholic church closed in 2017, Hargeisa, Somaliland.jpg",
+      "author": "Gerard van de Bruinhorst",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Roman Catholic church closed in 2017, Hargeisa, Somaliland.",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Somalia",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Street Market Hargeisa, Somaliland (29322262370).jpg",
+      "author": "Clay Gilliland from Chandler, U.S.A.",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Street Market Hargeisa, Somaliland",
+      "width": 3264,
+      "height": 2448,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Somalia",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    }
+  ],
   "country-sr": [
     {
       "file": "Upper Suriname River, Suriname (12075447455).jpg",
@@ -4396,17 +4376,30 @@
   ],
   "country-tm": [
     {
-      "file": "Parthian ivory rhyton (ritual drinking horn) from the Parthian royal fortress of Nisa, dated 3rd century BC, National Museum of Turkmenistan, Ashgabat, Turkmenistan - 54449769532.jpg",
-      "author": "Carole Raddato from FRANKFURT, Germany",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Ivory rhyton from Nisa",
-      "width": 3851,
-      "height": 5736,
+      "file": "Monument to the Constitution, Ashgabat, Turkmenistan (closeup).jpg",
+      "author": "Tinss",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Closeup of the Monument to the Constitution, Ashgabat, Turkmenistan",
+      "width": 3648,
+      "height": 5472,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Turkmenistan",
-      "photoSource": "Commons exact File-title search"
+      "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Monument to the Constitution, Ashgabat, Turkmenistan.jpg",
+      "author": "Tinss",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Monument to the Constitution, Ashgabat, Turkmenistan",
+      "width": 3648,
+      "height": 5472,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Turkmenistan",
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "country-tn": [
@@ -4506,6 +4499,34 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-tt": [
+    {
+      "file": "Pigeon Point, Tobago - panoramio.jpg",
+      "author": "sarah moolchan",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Pigeon Point, Tobago",
+      "width": 4752,
+      "height": 3168,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Trinidad and Tobago",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Glass Bottom Tour Boat at Pigeon Point, Tobago - panoramio.jpg",
+      "author": "sarah moolchan",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Glass Bottom Tour Boat at Pigeon Point, Tobago",
+      "width": 4752,
+      "height": 3168,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Trinidad and Tobago",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    }
+  ],
   "country-tv": [
     {
       "file": "Tuvalu Funafuti atoll beach.jpg",
@@ -4590,6 +4611,34 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-uy": [
+    {
+      "file": "Cessna 340 Aeropuerto El Jagüel,Maldonado,Punta del Este,Uruguay - panoramio.jpg",
+      "author": "Ricardo Neuman",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Cessna 340 Aeropuerto El Jagüel,Maldonado,Punta del Este,Uruguay",
+      "width": 10658,
+      "height": 4924,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Uruguay",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Sunset in Punta del Este- Uruguay.JPG",
+      "author": "Bshaham",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "אורוגואי,Punta del Este-שקיעה ב",
+      "width": 4608,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Uruguay",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    }
+  ],
   "country-va": [
     {
       "file": "Palace of the Governorate. Vatican City State..jpg",
@@ -4603,6 +4652,34 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Vatican City",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-vc": [
+    {
+      "file": "Collectie Nationaal Museum van Wereldculturen TM-60062182 Man te paard in Kingstown Saint Vincent Grenadines fotograaf niet bekend.jpg",
+      "author": "niet bekend / unknown (Fotograaf)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Foto.",
+      "width": 3792,
+      "height": 2587,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Saint Vincent and the Grenadines",
+      "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Kingstown Saint Vincent.jpg",
+      "author": "Flickr user: ctsnow",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "A trip to St. Vincent and the Grenadines in the Caribbean in 2006. Kingstown, Saint Vincent, Saint Vincent and the Grenadines.",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Saint Vincent and the Grenadines",
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "country-ve": [
@@ -4883,6 +4960,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Cusco",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "dakar": [
+    {
+      "file": "Beautiful sunset dakar corniche.jpg",
+      "author": "Issiaga_Photography",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Beautiful sunset at the corniche of dakar",
+      "width": 5184,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Dakar",
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "dubai": [
@@ -5502,6 +5594,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Kigali",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Panorama of Photos of Genocide Victims - Genocide Memorial Center - Kigali - Rwanda.jpg",
+      "author": "Adam Jones, Ph.D.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Panorama of Photos of Genocide Victims - Genocide Memorial Center - Kigali - Rwanda",
+      "width": 4599,
+      "height": 1080,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Kigali",
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "kotor": [
@@ -6222,47 +6327,6 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Arctic Ocean",
       "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Arctic Ocean, Baffin Bay.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Arctic Ocean, Baffin Bay. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or city over the past 100+ yea",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Arctic Ocean",
-      "photoSource": "Commons exact File-title search"
-    }
-  ],
-  "ocean-atlantic": [
-    {
-      "file": "Show Your Stripes change in temperature graphic for Atlantic Ocean, All of Atlantic Ocean.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Atlantic Ocean, All of Atlantic Ocean . These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or city over the",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Atlantic Ocean",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for North Atlantic Ocean, Atlantic Ocean with bars with labels.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for North Atlantic Ocean, Atlantic Ocean with bars with labels. These warming stripe graphics are visual representations of the change in temperature as measured in each country, reg",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Atlantic Ocean",
-      "photoSource": "Commons exact File-title search"
     }
   ],
   "ocean-indian": [
@@ -6295,30 +6359,17 @@
   ],
   "ocean-pacific": [
     {
-      "file": "Show Your Stripes change in temperature graphic for Pacific Ocean, All of Pacific Ocean.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Pacific Ocean, All of Pacific Ocean . These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or city over the p",
-      "width": 3780,
-      "height": 2126,
+      "file": "The Pacific Ocean coastline as seen from Valencia Peak.jpg",
+      "author": "Mike Baird",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "The Pacific Ocean coastline as seen from Valencia Peak trail in Montana de Oro.",
+      "width": 4148,
+      "height": 2765,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Pacific Ocean",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for North Pacific Ocean, Pacific Ocean with bars with labels.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for North Pacific Ocean, Pacific Ocean with bars with labels. These warming stripe graphics are visual representations of the change in temperature as measured in each country, regio",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Pacific Ocean",
-      "photoSource": "Commons exact File-title search"
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "okavango": [
@@ -7037,6 +7088,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Sarajevo",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Sarajevo – Baščaršija View from Zlatište 2.jpg",
+      "author": "Julian Nyča",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Blick vom Hügel Zlatište in die Sarajevoer Altstadt",
+      "width": 4500,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
+      "locationText": "Sarajevo",
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "sea-andaman": [
@@ -7107,21 +7171,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Baltic Sea",
-      "photoSource": "Commons exact File-title search"
-    }
-  ],
-  "sea-bering": [
-    {
-      "file": "2011 Bering Sea superstorm track.png",
-      "author": "Meow",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Track map of the 2011 Bering Sea superstorm . The points show the location of the storm at 6-hour intervals. The color represents the storm's maximum sustained wind speeds as classified in the Saffir-Simpson Hurricane Scale (see b",
-      "width": 2700,
-      "height": 1669,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Bering Sea",
       "photoSource": "Commons exact File-title search"
     }
   ],
@@ -7239,19 +7288,6 @@
   ],
   "sea-okhotsk": [
     {
-      "file": "Show Your Stripes change in temperature graphic for Pacific Ocean, Sea of Okhotsk.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Pacific Ocean, Sea of Okhotsk. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or city over the past 100",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Sea of Okhotsk",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
       "file": "オホーツク海 (Sea of Okhotsk) at Soyamisaki - panoramio.jpg",
       "author": "Benford Choi",
       "license": "CC BY-SA 3.0",
@@ -7280,48 +7316,7 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
-  "sea-red": [
-    {
-      "file": "Ostracion cubicus in Red Sea Aquarium.jpg",
-      "author": "Хомелка",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Ostracion cubicus in Red Sea Aquarium",
-      "width": 3872,
-      "height": 2592,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Red Sea",
-      "photoSource": "Commons exact File-title search"
-    },
-    {
-      "file": "Piaractus in Red Sea Aquarium 01.jpg",
-      "author": "Хомелка",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Unidentified fish in Red Sea Aquarium",
-      "width": 3872,
-      "height": 2592,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Red Sea",
-      "photoSource": "Commons exact File-title search"
-    }
-  ],
   "sea-south-china": [
-    {
-      "file": "South China Sea Museum 05.jpg",
-      "author": "STW932",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Interior of the China (Hainan) Museum of the South China Sea.",
-      "width": 4000,
-      "height": 3000,
-      "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "South China Sea",
-      "photoSource": "Commons exact File-title search"
-    },
     {
       "file": "Two scrawled filefish eat a jellyfish in the water column of the South China Sea.jpg",
       "author": "Dmitry Domrin",
@@ -7338,17 +7333,17 @@
   ],
   "sea-weddell": [
     {
-      "file": "Dropstone manganese-crust weddell-sea hg.jpg",
-      "author": "Hannes Grobe/AWI",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Concretion",
-      "width": 5237,
-      "height": 4490,
+      "file": "Skuas -Weddell Sea, Antarctica-8.jpg",
+      "author": "Matteo X",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Stercorarius maccormicki near the Weddell Sea, Antarctica.",
+      "width": 2488,
+      "height": 1868,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
+      "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Weddell Sea",
-      "photoSource": "Commons exact File-title search"
+      "photoSource": "Commons curated place-query, source metadata checked"
     }
   ],
   "seville": [
