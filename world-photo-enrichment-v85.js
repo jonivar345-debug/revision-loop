@@ -1033,6 +1033,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Angola",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Sunset over Luanda 1.JPG",
+      "author": "Manuel Dohmen",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Coastal sunset overlooking Luanda, Angola",
+      "width": 3264,
+      "height": 2448,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-ao",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-ar": [
@@ -1132,6 +1145,21 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-ba": [
+    {
+      "file": "Mostar Stari Most BW 2024-10-01 12-30-46.jpg",
+      "author": "Berthold Werner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Stari Most bridge and Neretva River in Mostar, Bosnia and Herzegovina",
+      "width": 4000,
+      "height": 6016,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-ba",
+      "photoSource": "Commons manually source-checked geographic photo"
+    }
+  ],
   "country-bb": [
     {
       "file": "066a Britannia in Port of Bridgetown at night - Barbados - 3 1 - V-P.jpg",
@@ -1145,6 +1173,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Barbados",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Carlisle Bay - Barbados.jpg",
+      "author": "P. Hughes",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Carlisle Bay looking southwest, Barbados",
+      "width": 3873,
+      "height": 2766,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-bb",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-bd": [
@@ -1257,6 +1298,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Bahrain",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-bi": [
+    {
+      "file": "Au bord du lac Tanganyika.jpg",
+      "author": "Ntahonsigaye",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sunset across Lake Tanganyika from Burundi",
+      "width": 4160,
+      "height": 1872,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-bi",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-bj": [
@@ -1498,17 +1554,58 @@
   ],
   "country-cd": [
     {
-      "file": "Congo River CBERS4 MUX satellite image at Democratic Republic of the Congo, Africa.jpg",
-      "author": "Coordenação-Geral de Observação da Terra/INPE",
+      "file": "Virunga National Park - Lake Edward January 2015.jpg",
+      "author": "MONUSCO Photos / Abel Kavanagh",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Em amarelo, ao centro, a cidade de Bumba, com mais de 100.000 habitantes e sem eletricidade nem água potável. Ao sul do rio, em tons de marrom, por sua água barrenta, está a paisagem ecológica em risco Maringa-Lopori-Wamba, flores",
-      "width": 2475,
-      "height": 1390,
+      "subject": "Mountain scenery and waterfall in Virunga National Park above Lake Edward, DR Congo",
+      "width": 5760,
+      "height": 3840,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Democratic Republic of the Congo",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Replaced misleading location match after Commons geographic and licensing check; NOT visually pixel-reviewed",
+      "locationText": "country-cd",
+      "photoSource": "Commons manually source-checked replacement for unrelated media"
+    },
+    {
+      "file": "Congo River from Kinshasa in Democratic Republic of the Congo (DRC).jpg",
+      "author": "EdwinAlden.1995",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Congo River viewed from Kinshasa, Democratic Republic of the Congo",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-cd",
+      "photoSource": "Commons manually source-checked geographic photo"
+    }
+  ],
+  "country-cg": [
+    {
+      "file": "Déplacement sur le fleuve Congo.jpg",
+      "author": "Happiraphael",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Pirogues on the Congo River at Brazzaville, Republic of the Congo",
+      "width": 3872,
+      "height": 2592,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-cg",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Rive nord du Pool Malebo.JPG",
+      "author": "Bsm15",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "North bank of Pool Malebo viewed from a river barge heading towards Brazzaville",
+      "width": 2560,
+      "height": 1920,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-cg",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-ch": [
@@ -1537,6 +1634,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Switzerland",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-ci": [
+    {
+      "file": "Basilique notre Dame de la Paix de Yamoussoukro.jpg",
+      "author": "Didierwiki",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "subject": "Basilica of Our Lady of Peace in Yamoussoukro, Côte d’Ivoire",
+      "width": 4000,
+      "height": 2252,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ci",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-cl": [
@@ -1847,6 +1959,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Algeria",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Sahara Algérien.jpg",
+      "author": "HATTAB Mohamed",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Camels in a landscape in the Algerian Sahara",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-dz",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-ec": [
@@ -1918,6 +2043,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Egypt",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "The Great Temple of Ramesses II and the Temple of Nefertari at Abu Simbel, Egypt.jpg",
+      "author": "Mohamed Suttra",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Wide photograph of both Abu Simbel temples in southern Egypt",
+      "width": 7008,
+      "height": 4672,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-eg",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-er": [
@@ -2060,6 +2198,34 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-fm": [
+    {
+      "file": "Chuuk coral reef.jpg",
+      "author": "Zykasaa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Chuuk coral reef in the Federated States of Micronesia",
+      "width": 4032,
+      "height": 2268,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-fm",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Inside the lagoon of Ant Atoll, southwest of Pohnpei (Federated States of Micronesia).jpg",
+      "author": "Patrick Nunn",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Lagoon of Ant Atoll off Pohnpei, Federated States of Micronesia",
+      "width": 4288,
+      "height": 3216,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-fm",
+      "photoSource": "Commons manually source-checked geographic photo"
+    }
+  ],
   "country-fr": [
     {
       "file": "Laon Cathedral Nave 2, Picardie, France - Diliff.jpg",
@@ -2200,6 +2366,47 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Gambia",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-gn": [
+    {
+      "file": "Magnifique vue de la nature.jpg",
+      "author": "Thie Abdoul",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Guinea landscape selected from Wiki Loves Africa",
+      "width": 3264,
+      "height": 2448,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-gn",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Village de Mali.jpg",
+      "author": "Aboubacarkhoraa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Rural landscape in Moyenne-Guinée, Guinea",
+      "width": 5152,
+      "height": 3864,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-gn",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "On the road between Base Vie and Siguiri - panoramio.jpg",
+      "author": "darrylkeith",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Wide countryside panorama near Siguiri, Guinea",
+      "width": 7258,
+      "height": 2147,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-gn",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-gq": [
@@ -2708,6 +2915,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Kiribati",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Abaiang, view from the church to the ocean side - panoramio.jpg",
+      "author": "Flexman",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Ocean-side view of Abaiang, Kiribati",
+      "width": 2816,
+      "height": 1584,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ki",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-km": [
@@ -2723,6 +2943,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Comoros",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Grande Comore shores.jpg",
+      "author": "Radosław Botev",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Volcanic coastline on Grande Comore island, Comoros",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-km",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-kn": [
@@ -3543,6 +3776,19 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Papua New Guinea",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "White Island, Bougainville.jpg",
+      "author": "Jeremy Weate",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "White Island in Bougainville, Papua New Guinea",
+      "width": 5601,
+      "height": 3723,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-pg",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-pl": [
@@ -3586,6 +3832,32 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Palestine",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Old markets in the city of Bethlehem-Palestine.jpg",
+      "author": "Bashar Nayfeh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Traditional market streets in Bethlehem, Palestine",
+      "width": 3456,
+      "height": 5184,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ps",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Church of the Nativity, Bethlehem.jpg",
+      "author": "Nevborg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Church of the Nativity in Bethlehem, Palestine",
+      "width": 5184,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ps",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-pt": [
@@ -4400,6 +4672,19 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Turkmenistan",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Turkmenistan - Sultan Sanjar mausoleum.jpg",
+      "author": "P. Hughes",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Sultan Sanjar mausoleum in Merv, Turkmenistan",
+      "width": 3469,
+      "height": 2387,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-tm",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-tn": [
@@ -6316,17 +6601,58 @@
   ],
   "ocean-arctic": [
     {
-      "file": "CSCL Arctic Ocean (ship, 2015) 001.jpg",
-      "author": "kees torn",
+      "file": "Arctic Ice (4370262641).jpg",
+      "author": "U.S. Geological Survey / U.S. Coast Guard, Patrick Kelley",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "subject": "Sunshine over the sea ice of the Arctic Ocean in September 2009",
+      "width": 4288,
+      "height": 2848,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Replaced misleading location match after Commons geographic and licensing check; NOT visually pixel-reviewed",
+      "locationText": "ocean-arctic",
+      "photoSource": "Commons manually source-checked replacement for unrelated media"
+    },
+    {
+      "file": "North Pole, Arctic Ocean, sea ice 04.jpg",
+      "author": "Matti&Keti",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sea ice and pressure ridges at the Geographic North Pole",
+      "width": 3270,
+      "height": 2161,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-arctic",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    }
+  ],
+  "ocean-atlantic": [
+    {
+      "file": "Coastal waves.jpg",
+      "author": "GreenGlobin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Atlantic Ocean surf off Swakopmund, Namibia",
+      "width": 3024,
+      "height": 4032,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-atlantic",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    },
+    {
+      "file": "Atlantic Ocean (35744235792).jpg",
+      "author": "Dennis G. Jarvis",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Container ship CSCL Arctic Ocean, Calandkanaal, Rotterdam",
-      "width": 3824,
-      "height": 1894,
+      "subject": "Atlantic Ocean coastline at Cape Breton, Nova Scotia",
+      "width": 6000,
+      "height": 4000,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Arctic Ocean",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-atlantic",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "ocean-indian": [
@@ -6370,6 +6696,32 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Pacific Ocean",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Pacific-Sunrise.jpg",
+      "author": "Petr Vodička",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sunrise over the Pacific Ocean near Japan",
+      "width": 3728,
+      "height": 5600,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-pacific",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    },
+    {
+      "file": "Sunset over the Pacific Ocean from Maui, Hawaii.jpg",
+      "author": "Peckphotographyart",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sunset over the Pacific Ocean from Maui, Hawaii",
+      "width": 5472,
+      "height": 3648,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-pacific",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "okavango": [
@@ -7174,6 +7526,21 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "sea-bering": [
+    {
+      "file": "Bering Sea Sunset In Alaska.jpg",
+      "author": "Allan Shimada, NOAA NMFS/OST/AMD",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Fishing vessels and birds silhouetted against sunset over the Bering Sea",
+      "width": 5295,
+      "height": 3515,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "sea-bering",
+      "photoSource": "Commons manually source-checked geographic photo"
+    }
+  ],
   "sea-coral": [
     {
       "file": "Coral Sea 8A Coral Sea Ferry Sam Ka Tsuen to Tsim Sha Tsui and Central Central Ferry Pier 10 aboarding place 24-06-2025.jpg",
@@ -7256,6 +7623,32 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Labrador Sea",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Coast of Labrador.jpg",
+      "author": "Endlisnis",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Aerial coastal sea-ice and coastline photograph in Labrador, Canada",
+      "width": 2816,
+      "height": 2112,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page verified actual Labrador coast/offshore island source, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-labrador",
+      "photoSource": "Commons manually source-checked geographic marine coast photo"
+    },
+    {
+      "file": "Labrador coast islands - panoramio.jpg",
+      "author": "allgaeu-erleben.com",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Aerial view of the offshore Adlavik Islands near Makkovik on the Labrador coast",
+      "width": 2136,
+      "height": 2056,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page verified actual Labrador coast/offshore island source, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-labrador",
+      "photoSource": "Commons manually source-checked geographic marine coast photo"
     }
   ],
   "sea-north": [
@@ -7299,21 +7692,60 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Sea of Okhotsk",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "140828 Otoko-no-namida Shiretoko Peninsula Hokkaido Japan01s5.jpg",
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Shiretoko coast and waterfall viewed from the Sea of Okhotsk at Shari, Hokkaido, Japan",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page confirms source location, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-okhotsk",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "sea-philippine": [
     {
-      "file": "USS Philippine Sea in Plymouth Sound.jpg",
-      "author": "Nilfanion",
+      "file": "Divilacan Isabela.jpg",
+      "author": "P199",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "USS Philippine Sea (CG-58) in Plymouth Sound, UK, for a courtesy visit to the port.",
-      "width": 3860,
-      "height": 2740,
+      "subject": "Aerial photograph of Palanan Bay and the Philippine Sea along the Isabela coast, Philippines",
+      "width": 2100,
+      "height": 1400,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Philippine Sea",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Replaced misleading location match after Commons geographic and licensing check; NOT visually pixel-reviewed",
+      "locationText": "sea-philippine",
+      "photoSource": "Commons manually source-checked replacement for unrelated media"
+    },
+    {
+      "file": "Batanes waters and cliffs.jpg",
+      "author": "Jane Constantino",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Coastal scenery on Batan Island in the Philippine Sea region",
+      "width": 5312,
+      "height": 2988,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-philippine",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    },
+    {
+      "file": "Dark clouds on the sea of Hualien.jpg",
+      "author": "Tzuhsun Hsu",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Cloudscape over the Philippine Sea viewed from Hualien, eastern Taiwan",
+      "width": 4000,
+      "height": 2250,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page confirms source location, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-philippine",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "sea-south-china": [
@@ -7329,6 +7761,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "South China Sea",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Da Nang - coastal view from Marble Mountains Mar 2024 01.jpg",
+      "author": "Dominic Nelson",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Coast of the South China Sea near Da Nang, Vietnam",
+      "width": 5836,
+      "height": 3891,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-south-china",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "sea-weddell": [
@@ -7344,6 +7789,19 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Weddell Sea",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Tabular-iceberg weddellsea hg.jpg",
+      "author": "Hannes Grobe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Giant tabular iceberg in the southwestern Weddell Sea",
+      "width": 4866,
+      "height": 2470,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-weddell",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "seville": [
