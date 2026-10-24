@@ -108,6 +108,6 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert(sw.includes("'./world-commons-media.js'"),'Photo validator not cached offline');
  assert(app.includes('gallery.render(el,location,{card:!!el.closest'), 'Actual app does not invoke photo gallery');
  const gallery=fs.readFileSync(path.join(root,'world-location-photo-gallery.js'),'utf8');
- for(const marker of ['verifyApproved','searchPage','destination-photo-credits','photo.filePage','photo.licenseUrl'])assert(gallery.includes(marker),'Photo gallery missing source verification or credits: '+marker);
+ for(const marker of ['verifyApproved','searchPage','destination-photo-credits','p.filePage','p.licenseUrl'])assert(gallery.includes(marker),'Photo gallery missing source verification or credits: '+marker);
  console.log('PASS world gallery CC validation: no unlicensed/unknown-author/third-party image; photographer, licence and source rendered; real app and offline shell wired.');
 })().catch(e=>{console.error(e);process.exitCode=1});
