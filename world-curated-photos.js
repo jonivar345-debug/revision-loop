@@ -1127,8 +1127,769 @@
       }
     ]
   });
+  // Provisional source-linked records from the remaining nine editorial audits.
+  const additionalEditorialB=Object.freeze({
+    "country-er": [
+      {
+        "file": "2006-11-01 13-58-33 Eritrea - Asmara.jpg",
+        "author": "Hansueli Krapf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Asmara city centre, Eritrea.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Massawa , Eritrea (30129478664).jpg",
+        "author": "Clay Gilliland",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Historic streetscape in Massawa, Eritrea.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-so": [
+      {
+        "file": "Mogadishu Liido beach.JPG",
+        "author": "Khadija Isse",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Liido Beach on the coast of Mogadishu, Somalia.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Laas Geel alcove.jpg",
+        "author": "najeeb",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "An alcove with ancient rock paintings at Laas Geel near Hargeisa, Somaliland.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-sd": [
+      {
+        "file": "Sudan Meroe Pyramids 15jan2005.jpg",
+        "author": "Steve Evans",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Pyramids at Meroë in Sudan.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Suakin,national bank.jpg",
+        "author": "Bertramz",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "subject": "Ruins of the former National Bank building at Suakin, Sudan.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ss": [
+      {
+        "file": "Juba Bridge.jpg",
+        "author": "Zamwan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Juba Bridge crossing the White Nile in South Sudan.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Nimule South Sudan.jpg",
+        "author": "Guwo Josephine",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "A scene photographed at Nimule in South Sudan.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ml": [
+      {
+        "file": "Moschee von Djenné.jpg",
+        "author": "qiv",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Great Mosque of Djenné and its surrounding Monday market in Mali.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Bandiagara, Mali.jpg",
+        "author": "Dr. Ondřej Havelka (cestovatel)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Dogon-country landscape and architecture around Bandiagara, Mali.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-fr": [
+      {
+        "file": "2017-04 Mont Saint-Michel 02.jpg",
+        "author": "Antoine Lamielle",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Mont Saint-Michel viewed from the surrounding salt meadows in Normandy.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Mont-Saint-Michel at sunset.jpg",
+        "author": "Giladtop",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Mont Saint-Michel village and abbey photographed at sunset.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-de": [
+      {
+        "file": "Neuschwanstein Castle.jpg",
+        "author": "Cezary Piwowarski",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Neuschwanstein Castle in Schwangau, Bavaria.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Neuschwanstein Castle at sunrise.jpg",
+        "author": "Giladtop",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Neuschwanstein Castle in Schwangau at sunrise.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-es": [
+      {
+        "file": "Alhambra from Generalife (2017).jpg",
+        "author": "Martinvl",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "View of Granada's Alhambra complex from the Generalife.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "-Alhambra-.jpg",
+        "author": "Cgbpict",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Alhambra and Generalife monument complex in Granada.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-it": [
+      {
+        "file": "Rome Colosseum 2017.jpg",
+        "author": "Helloworld314",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The Colosseum in Rome, photographed in 2017.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Pompeii, Italy 121.jpg",
+        "author": "Simon Burchell",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Ancient Roman ruins at Pompeii, Italy.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-gr": [
+      {
+        "file": "Meteora, 45.jpg",
+        "author": "LBM1948",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "View from Meteora towards Kalabaka, the Pineios valley and the Pindus range.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Erechtheion Acropolis Athens.jpg",
+        "author": "Andrzej Barabasz (Chepry)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Erechtheion temple on the Acropolis of Athens.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ga": [
+      {
+        "file": "La-lopé-gabon.jpg",
+        "author": "Vincent.vaquin",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "View identified by the uploader as Lopé National Park, Gabon",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Elephants in Lopé National Park.JPG",
+        "author": "Ngangorica",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Elephants on the savannah in Lopé National Park, Gabon",
+        "editorialMetadata": true
+      },
+      {
+        "file": "La lopé-rupestre3.jpg",
+        "author": "Vincent.vaquin",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Rock engraving identified on Commons as being in Lopé National Park, Gabon",
+        "editorialMetadata": true
+      }
+    ],
+    "country-td": [
+      {
+        "file": "Ounianga Serir.jpg",
+        "author": "Jacques Taberlet",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Ounianga Sérir lake in northern Chad, photographed in 1998",
+        "editorialMetadata": true
+      }
+    ],
+    "country-gq": [
+      {
+        "file": "Lago Biaó.jpg",
+        "author": "Churlos",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lago Biaó on Bioko island, Equatorial Guinea",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Begonia prismatocarpa Bioko 2013.jpg",
+        "author": "Denis Barthel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Begonia prismatocarpa in montane cloud forest near Moka on Bioko island",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Ureca, Bioko Island Equatorial Guinea.jpg",
+        "author": "Bioko Islander",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Scene identified as Ureca on Bioko island, Equatorial Guinea",
+        "editorialMetadata": true
+      }
+    ],
+    "country-cg": [
+      {
+        "file": "Les Gorilles du Parc National d'odzala Kokoua.jpg",
+        "author": "Ekassa",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Gorillas in a forest clearing, described as being in Odzala-Kokoua National Park, Republic of the Congo",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Loxodonta cyclotis, Odzala-Kokoua National Park, Republic of the Congo 53146541.jpg",
+        "author": "John P Friel",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "African forest elephant in Odzala-Kokoua National Park, Republic of the Congo",
+        "editorialMetadata": true
+      }
+    ],
+    "country-gy": [
+      {
+        "file": "Kaieteur Falls, Guyana (23580581821).jpg",
+        "author": "Dan Sloan",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Kaieteur Falls on the Potaro River in Guyana.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Kaieteur Falls, Guyana1.jpg",
+        "author": "Ian Mackenzie (madmack66)",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "A second photographer's view of Kaieteur Falls in Guyana.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-sr": [
+      {
+        "file": "Fort Zeelandia, Paramaribo, Suriname.jpg",
+        "author": "Medimir",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The front of Fort Zeelandia, a historic fort in Paramaribo, Suriname.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Palmentuin Paramaribo- Suriname.jpg",
+        "author": "Pinkgirl Didi",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Palmentuin palm garden in the historic centre of Paramaribo, Suriname.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-py": [
+      {
+        "file": "PMa 000004 PY Trinidad.jpg",
+        "author": "PMRMaeyaert (Paul M. R. Maeyaert)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Architectural remains of the Jesuit mission at Trinidad, Paraguay.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Paraguay - Church ruins, Jesuit Mission of Jesús de Tavarangüé.jpg",
+        "author": "P. Hughes",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Church ruins at the Jesuit Mission of Jesús de Tavarangüé in Paraguay.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-uy": [
+      {
+        "file": "Colonia del Sacramento 2016 004.jpg",
+        "author": "Mike Peel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The lighthouse at Colonia del Sacramento, Uruguay, built on the ruins of the San Francisco Convent.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Uruguay - Colonia del Sacramento 05.jpg",
+        "author": "P. Hughes",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Basílica del Santísimo Sacramento in Colonia del Sacramento, Uruguay.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ec": [
+      {
+        "file": "Galápagos Islands Aerial photograph.JPG",
+        "author": "David Adam Kess",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "An aerial view of the Galápagos Islands, Ecuador.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Marine iguana.jpg",
+        "author": "Tim Krieger",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Marine iguanas resting on a beach on Isabela Island in the Galápagos, Ecuador.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-mg": [
+      {
+        "file": "The Avenue of the Baobabs in Madagascar near the city of Morondava at sunrise (22).jpg",
+        "author": "Hanay",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The Avenue of the Baobabs near Morondava at sunrise, Madagascar.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Walking the Avenue of the Baobabs.jpg",
+        "author": "Gavinevans",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "A walking-level view of the Avenue of the Baobabs, Madagascar.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-mu": [
+      {
+        "file": "Le Morne Brabant.jpg",
+        "author": "LisanneD",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Le Morne Brabant mountain in south-west Mauritius.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Le Morne Brabant, Maurizio.jpg",
+        "author": "Jolaus",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "A separate photograph identified as Le Morne Brabant, Mauritius.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-sc": [
+      {
+        "file": "Coco-fesse de la vallée de Mai (île de Praslin, Seychelles).jpg",
+        "author": "Lmulud",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Coco-de-mer fruit in the Vallée de Mai on Praslin, Seychelles.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Valleé de mai at Praslin.jpg",
+        "author": "Brocken Inaglory",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Coco-de-mer palms inside Vallée de Mai Nature Reserve, Praslin, Seychelles.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-sz": [
+      {
+        "file": "Mlilwane Wildlife Sanctuary in Eswatini 01.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Landscape in Mlilwane Wildlife Sanctuary, Eswatini.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Impala, Mlilwane Wildlife Sanctuary.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "A male impala photographed in Mlilwane Wildlife Sanctuary, Eswatini.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ie": [
+      {
+        "file": "Cliffs of Moher, Ireland 06.jpg",
+        "author": "Holger Uwe Schmitt",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Cliffs of Moher in County Clare",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Round Tower, Glendalough.jpg",
+        "author": "Knocko",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Round tower of the Glendalough monastic settlement, County Wicklow",
+        "editorialMetadata": true
+      }
+    ],
+    "country-gb": [
+      {
+        "file": "20120830 Giant's Causeway.jpg",
+        "author": "JoachimKohler-HB",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Basalt formations at Giant's Causeway, Northern Ireland",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Snowdonia - Wales.jpg",
+        "author": "Sunsetsareawesome",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Snowdonia (Eryri) mountain scenery, Wales",
+        "editorialMetadata": true
+      }
+    ],
+    "country-pl": [
+      {
+        "file": "02021 0762 Main Market Square in Kraków.jpg",
+        "author": "Silar",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Main Market Square in Kraków",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Poland 2025 594 Tatra National Park.jpg",
+        "author": "Scotch Mist",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Małe Ciche village and ski resort near the Tatra Mountains, southern Poland",
+        "editorialMetadata": true
+      }
+    ],
+    "country-at": [
+      {
+        "file": "Hallstatt - Zentrum .JPG",
+        "author": "C.Stadler/Bwag",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Hallstatt village centre with Vordere Hirlatz mountain, Upper Austria",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Wachau 8432.JPG",
+        "author": "Karl Gruber",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Villages and river scenery viewed on a boat journey through the Wachau valley",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ch": [
+      {
+        "file": "Matterhorn 4.jpg",
+        "author": "Mike Peel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The Matterhorn, Switzerland",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Lauterbrunnen 2.jpg",
+        "author": "Nashwini",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lauterbrunnen valley and village, Switzerland",
+        "editorialMetadata": true
+      }
+    ],
+    "country-sb": [
+      {
+        "file": "Solomon Shoreline.jpg",
+        "author": "Alex DeCiccio",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Eroding shoreline on Nggatokae Island, Western Province, Solomon Islands",
+        "editorialMetadata": true
+      },
+      {
+        "file": "US WWII War Memorial, Honiara, Solomon Islands - 515992409.jpg",
+        "author": "David Jones",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "US war memorial on Skyline Ridge, Honiara, commemorating the Guadalcanal Campaign",
+        "editorialMetadata": true
+      }
+    ],
+    "country-pg": [
+      {
+        "file": "Mount Hagen Cultural Show, Papua New Guinea, 2009.jpg",
+        "author": "Yves Picq",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Performer at the Mount Hagen Cultural Show, Papua New Guinea",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Naduri Village 2009.jpg",
+        "author": "Arthur Chapman",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Naduri village on the Kokoda Track, Papua New Guinea",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ki": [
+      {
+        "file": "South Tarawa from the air.jpg",
+        "author": "Government of Kiribati (employee photographer)",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "subject": "Aerial view of South Tarawa, a narrow strip between lagoon and ocean, Kiribati",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Abaiang, Kiribati (10664706744).jpg",
+        "author": "AusAID (Australian Aid Photolibrary)",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Abaiang, Kiribati, in an AusAID climate-adaptation photo",
+        "editorialMetadata": true
+      }
+    ],
+    "country-tv": [
+      {
+        "file": "Tuvalu Funafuti Atoll.JPG",
+        "author": "Gabriella Jacobi",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Funafuti Atoll, Tuvalu, photographed in June 2006",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Tuvalu - Funafuti - Beach.jpg",
+        "author": "Stefan Lins (mrlins)",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Beach on Funafuti Atoll, Tuvalu",
+        "editorialMetadata": true
+      }
+    ],
+    "country-fm": [
+      {
+        "file": "Nan Madol (Pohnpei, Federated States of Micronesia) (9462733000).jpg",
+        "author": "Scot Nelson",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "Nan Madol archaeological site on Pohnpei, Federated States of Micronesia",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Nan Madol megalithic site, Pohnpei (Federated States of Micronesia).jpg",
+        "author": "Patrick Nunn",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Stone structures of the Nan Madol megalithic site on Pohnpei",
+        "editorialMetadata": true
+      }
+    ],
+    "country-no": [
+      {
+        "file": "View of the Geirangerfjord from Ørnesvingen.jpg",
+        "author": "Yair-haklai",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "View of Geirangerfjord from the Ørnesvingen viewpoint.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Bryggen, Bergen, Norway.jpg",
+        "author": "Iain MacFadzean",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic Bryggen waterfront buildings in Bergen, Norway, on a misty morning.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-fi": [
+      {
+        "file": "Fortress of Suomenlinna, 2019 (02).jpg",
+        "author": "Bahnfrend",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic Suomenlinna sea-fortress fortifications near Helsinki.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Koli, Autiovaara ja Pieni Honkavaara.jpg",
+        "author": "Tuohirulla",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The Koli, Autiovaara and Pieni Honkavaara hills in North Karelia, Finland.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ee": [
+      {
+        "file": "Tallinna vanalinn, Tallinn Old Town.jpg",
+        "author": "Hei1972",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic Old Town of Tallinn, Estonia.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Wooden walkway in Lahemaa National Park, Estonia.jpg",
+        "author": "Hartmut Schmidt Heidelberg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Wooden boardwalk through Lahemaa National Park in Estonia.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-lv": [
+      {
+        "file": "Riga Castle seen across the river Daugava .jpg",
+        "author": "Bjørn Erik Pedersen",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Riga Castle seen from across the Daugava River, Latvia.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Gauja National Park Latvia.jpg",
+        "author": "Raul Cortez999",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Landscape in Gauja National Park, Latvia.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-lt": [
+      {
+        "file": "Vilnius Old Town 2024-07-02.jpg",
+        "author": "Renata3",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "View of Vilnius Old Town in Lithuania.",
+        "editorialMetadata": true
+      },
+      {
+        "file": "The Curonian spit, Lithuania.jpg",
+        "author": "Baltictrails",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Coastal landscape of the Curonian Spit in Lithuania.",
+        "editorialMetadata": true
+      }
+    ],
+    "country-fj": [
+      {
+        "file": "Yasawa Islands, Fiji - August 2016.jpg",
+        "author": "Rickard Törnblad (Rt26)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Yasawa Islands seen from a boat in August 2016, Fiji",
+        "editorialMetadata": true
+      },
+      {
+        "file": "Bounty Island beach Fiji.jpg",
+        "author": "JaredWiltshire",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Beach at Bounty Island in Fiji's Mamanuca Islands",
+        "editorialMetadata": true
+      }
+    ],
+    "country-ws": [
+      {
+        "file": "To Sua Ocean Trench.jpg",
+        "author": "Gelu Purcelu",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "To Sua Ocean Trench in Samoa",
+        "editorialMetadata": true
+      },
+      {
+        "file": "To Sua Ocean Trench - Lotofaga village - Samoa.jpg",
+        "author": "Neil",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "To Sua coastal lava-tube swimming hole near Lotofaga, Upolu, Samoa",
+        "editorialMetadata": true
+      }
+    ],
+    "country-to": [
+      {
+        "file": "Haamonga-A-Maui.jpg",
+        "author": "Tony Bowden",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Haʻamonga ʻa Maui stone monument in Tonga",
+        "editorialMetadata": true
+      }
+    ],
+    "country-vu": [
+      {
+        "file": "Mt Yasur volcano, Tanna, Vanuatu.JPG",
+        "author": "Jocy H",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "View into the active Mount Yasur volcanic crater on Tanna, Vanuatu",
+        "editorialMetadata": true
+      }
+    ],
+    "country-pw": [
+      {
+        "file": "Rock Islands, Palau.jpg",
+        "author": "Charles J. Sharp",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Rock Islands of Palau, photographed in March 2026",
+        "editorialMetadata": true
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[])];
+    return [...(verified[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
