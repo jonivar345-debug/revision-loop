@@ -2463,7 +2463,7 @@ function visibleGlobePins(w,h,region=''){
    +(item.location.worldKind==='country'?90:item.location.worldKind==='sea'||item.location.worldKind==='ocean'?8:200)
    +item.p.z*40;
  const queue=all.sort((a,b)=>score(b)-score(a));
- const shown=[],distance=11;
+ const shown=[],distance=15; // keep overlapping locked locations selectable via finder or Show every pin
  for(const item of queue){
   if(shown.every(other=>Math.hypot(item.p.x-other.p.x,item.p.y-other.p.y)>distance)){
     shown.push(item);
