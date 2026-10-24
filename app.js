@@ -1210,8 +1210,88 @@ function diagram(t){
  if(t==='vector')return S+'<line x1="70" y1="130" x2="265" y2="55" stroke="#2563eb" stroke-width="4"/><polygon points="265,55 249,54 256,67" fill="#2563eb"/><line x1="70" y1="130" x2="265" y2="130" stroke="#94a3b8" stroke-width="2"/><line x1="265" y1="130" x2="265" y2="55" stroke="#94a3b8" stroke-width="2"/><text x="148" y="151" font-size="12">components</text></svg>';
  if(t==='newton')return S+'<rect x="142" y="62" width="76" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><line x1="142" y1="86" x2="72" y2="86" stroke="#b45309" stroke-width="4"/><polygon points="72,86 86,79 86,93" fill="#b45309"/><line x1="218" y1="86" x2="292" y2="86" stroke="#16a34a" stroke-width="4"/><polygon points="292,86 278,79 278,93" fill="#16a34a"/><line x1="180" y1="62" x2="180" y2="28" stroke="#64748b" stroke-width="4"/><polygon points="180,28 173,42 187,42" fill="#64748b"/><line x1="180" y1="110" x2="180" y2="148" stroke="#dc2626" stroke-width="4"/><polygon points="180,148 173,134 187,134" fill="#dc2626"/><text x="122" y="165" font-size="13">label forces on the object</text></svg>';
  if(t==='work-angle')return S+'<line x1="64" y1="132" x2="310" y2="132" stroke="#64748b" stroke-width="3"/><line x1="92" y1="122" x2="250" y2="50" stroke="#2563eb" stroke-width="5"/><polygon points="250,50 234,51 241,64" fill="#2563eb"/><path d="M125 132 A48 48 0 0 1 164 103" fill="none" stroke="#b45309" stroke-width="2"/><text x="142" y="122" font-size="16">θ</text><text x="111" y="160" font-size="13">W = Fs cos θ</text></svg>';
+ if(t.startsWith('particle-'))return particleDiagram(t);
  return '';
 }
+
+
+function particleDiagram(t){
+ // First-party self-contained, authored SVG diagrams for AQA 7408 particle-interaction revision.
+ // Time flows left-to-right in exchange diagrams. They are schematics, not to scale.
+ const P=(d,color='#2563eb',width=2.5)=>'<path d="'+d+'" stroke="'+color+'" stroke-width="'+width+'" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
+ const X=(x,y,label,color='#0f172a',size=12)=>'<text x="'+x+'" y="'+y+'" font-family="Arial,sans-serif" fill="'+color+'" font-size="'+size+'">'+label+'</text>';
+ const V=(x,y)=>'<circle cx="'+x+'" cy="'+y+'" r="3.8" fill="#0f172a"/>';
+ const W=(x1,y1,x2,y2,color='#e49b26')=>{
+  const dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy),px=-dy/len,py=dx/len;
+  const pts=Array.from({length:33},(_,i)=>{const u=i/32,offset=5*Math.sin(u*Math.PI*12);return (x1+dx*u+px*offset).toFixed(1)+','+(y1+dy*u+py*offset).toFixed(1)}).join(' ');
+  return '<polyline points="'+pts+'" fill="none" stroke="'+color+'" stroke-width="2.7" stroke-linecap="round"/>';
+ };
+ const frame=(label,body)=>'<svg viewBox="0 0 360 190" role="img" aria-label="'+label+'">'+
+ '<rect x="2" y="2" width="356" height="186" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>'+body+X(23,178,'Time →','#64748b',11)+'</svg>';
+ if(t==='particle-beta-minus'){
+  const b=P('M24 80 L112 80')+P('M112 80 L300 39')+W(112,80,228,115)+
+   P('M228 115 L321 89')+P('M228 115 L321 148')+V(112,80)+V(228,115)+
+   X(26,70,'d')+X(294,31,'u')+X(144,102,'W⁻','#b45309')+X(320,80,'e⁻')+X(292,164,'anti-νₑ');
+  return frame('Beta-minus quark interaction: d becomes u and emits W minus, then W minus becomes electron and electron antineutrino',b);
+ }
+ if(t==='particle-beta-plus'){
+  const b=P('M24 80 L112 80')+P('M112 80 L300 39')+W(112,80,228,115)+
+   P('M228 115 L321 89')+P('M228 115 L321 148')+V(112,80)+V(228,115)+
+   X(26,70,'u')+X(294,31,'d')+X(144,102,'W⁺','#b45309')+X(320,80,'e⁺')+X(301,164,'νₑ');
+  return frame('Beta-plus quark interaction: u becomes d and emits W plus, then W plus becomes positron and electron neutrino',b);
+ }
+ if(t==='particle-electron-capture'){
+  const b=P('M25 49 L132 53')+P('M132 53 L314 44')+P('M25 134 L228 130')+
+   P('M228 130 L315 140')+W(132,53,228,130)+V(132,53)+V(228,130)+
+   X(28,38,'e⁻')+X(296,32,'νₑ')+X(28,126,'u')+X(304,157,'d')+X(177,90,'W⁻','#b45309');
+  return frame('Electron capture: incoming electron and up quark exchange W minus, producing electron neutrino and down quark',b);
+ }
+ if(t==='particle-virtual-photon'){
+  const b=P('M25 46 L107 70')+P('M107 70 L317 42')+P('M25 139 L246 119')+
+   P('M246 119 L316 142')+W(107,70,246,119,'#a855f7')+V(107,70)+V(246,119)+
+   X(28,34,'e⁻')+X(301,30,'e⁻')+X(28,156,'e⁻')+X(311,163,'e⁻')+
+   X(136,82,'virtual γ','#7c3aed')+X(65,177,'Electromagnetic interaction','#64748b',11);
+  return frame('Two charged particles interacting by exchanging a virtual photon',b);
+ }
+ if(t==='particle-pion-exchange'){
+  const b=P('M25 45 L111 60')+P('M111 60 L314 39')+P('M25 143 L246 129')+
+   P('M246 129 L316 150')+W(111,60,246,129)+V(111,60)+V(246,129)+
+   X(28,34,'p')+X(304,28,'n')+X(28,159,'n')+X(308,168,'p')+
+   X(157,90,'π⁺','#b45309')+X(62,178,'Residual strong interaction','#64748b',11);
+  return frame('Pion exchange between nucleons: proton changes to neutron emitting a virtual positive pion, neutron absorbs it to become proton',b);
+ }
+ if(t==='particle-annihilation'){
+  const b=P('M60 28 L171 93')+P('M60 159 L171 93')+V(171,93)+
+   W(171,93,282,31,'#e49b26')+W(171,93,60,155,'#e49b26')+
+   X(43,25,'e⁻')+X(43,174,'e⁺')+X(287,33,'γ')+X(42,145,'γ')+
+   X(199,157,'Process schematic','#64748b',11);
+  return frame('Electron positron annihilation into two opposite-direction gamma photons; process sketch, not Feynman diagram',b);
+ }
+ if(t==='particle-pair-production'){
+  const b=W(26,77,152,91)+P('M152 91 L296 38')+P('M152 91 L296 137')+V(152,91)+
+   '<circle cx="154" cy="151" r="11" fill="#dbeafe" stroke="#64748b"/>'+
+   X(18,58,'γ')+X(300,35,'e⁻')+X(300,153,'e⁺')+X(172,170,'Nearby nucleus','#64748b',11)+
+   P('M155 140 L155 103','#94a3b8',1.3);
+  return frame('Pair production: gamma photon creates electron and positron near a nucleus to conserve momentum; process schematic',b);
+ }
+ if(t==='particle-diffraction'){
+  let circles='';
+  for(const r of [15,31,46])circles+='<circle cx="264" cy="88" r="'+r+'" fill="none" stroke="#38bdf8" stroke-width="3"/>';
+  const b=P('M24 88 L121 88')+P('M137 88 L207 88','#94a3b8',1.8)+
+  '<rect x="119" y="54" width="8" height="68" rx="3" fill="#64748b"/>'+circles+
+  X(26,74,'e⁻ beam')+X(96,43,'Crystal')+X(229,159,'Diffraction rings','#64748b',11);
+  return frame('Electron beam passes through thin crystal and produces concentric diffraction rings',b);
+ }
+ if(t==='particle-lines'){
+  let b='<rect x="25" y="31" width="310" height="102" rx="7" fill="#0f172a"/>';
+  for(const [x,col] of [[66,'#c084fc'],[113,'#60a5fa'],[207,'#67e8f9'],[291,'#f87171']]){
+   b+='<line x1="'+x+'" y1="42" x2="'+x+'" y2="122" stroke="'+col+'" stroke-width="3.5"/>';
+  }
+  return frame('Illustrative discrete emission lines separated by dark regions',b);
+ }
+ return '';
+}
+
 
 function renderLevel(){const li=levelInfo(profile.lifetimeXp);document.getElementById('levelNum').textContent=li.level;document.getElementById('xpTotal').textContent=profile.lifetimeXp+' XP';document.getElementById('pointBalance').textContent=profile.points;document.getElementById('xpNext').textContent=li.level>=500?'Maximum level reached':(li.req-li.into)+' XP to level '+(li.level+1);document.getElementById('xpBar').style.width=(li.level>=500?100:clamp(li.into/li.req*100,0,100))+'%'}
 function renderStats(){document.getElementById('dueCount').textContent=cards.filter(c=>c.active!==false&&isDue(c)).length;document.getElementById('newCount').textContent=daily().newCards;document.getElementById('reviewedCount').textContent=daily().reviews;document.getElementById('masteredCount').textContent=cards.filter(c=>state(c.id).mastered).length}
@@ -1525,8 +1605,8 @@ function renderTopicCounts(){
 function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(b=>b.classList.toggle('active',b.dataset.study===studyType));document.getElementById('mockControls').classList.toggle('hidden',studyType!=='mock');document.getElementById('flashControls').classList.toggle('hidden',studyType!=='flashcards');document.getElementById('examControls').classList.toggle('hidden',studyType!=='exam')}
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
 function renderCard(c){
- currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text;document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
