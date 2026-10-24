@@ -43,19 +43,6 @@
       "wasArticleLead": false
     },
     {
-      "file": "Adelaide Street Circuit.jpg",
-      "author": "Avatar5991",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "View of the Adelaide Street Circuit as seen from a helicopter.",
-      "width": 3520,
-      "height": 1980,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Adelaide",
-      "wasArticleLead": false
-    },
-    {
       "file": "Adelaide Chinatown.jpg",
       "author": "Scott W.",
       "license": "CC BY 2.5",
@@ -85,19 +72,6 @@
     }
   ],
   "amsterdam": [
-    {
-      "file": "Imagen de los canales concéntricos en Ámsterdam.png",
-      "author": "Andrés Barrios",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Aerial view of the concentric canal belt (grachtengordel) in Amsterdam.",
-      "width": 2480,
-      "height": 1654,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Amsterdam",
-      "wasArticleLead": true
-    },
     {
       "file": "Amsterdam Cityscape.jpg",
       "author": "Swimmerguy269",
@@ -571,45 +545,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Chicago",
       "wasArticleLead": true
-    },
-    {
-      "file": "Chicago O'Hare International Airport (KORD) - Terminal 5 (48867913602).jpg",
-      "author": "Charles from Port Chester, New York",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Nice line up with: - Swiss Airbus A330 from Zürich, Switzerland - KLM Boeing 777 from the Netherlands - Hainan Boeing 787 from China - Iberia Airbus A350 from S",
-      "width": 4608,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Chicago",
-      "wasArticleLead": false
-    },
-    {
-      "file": "CTA bus route 151 along Lake Shore Dr - Chicago, IL - June 2025.jpg",
-      "author": "AlphaBeta135",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "CTA bus route 151 along Lake Shore Drive (Inner Drive)",
-      "width": 3225,
-      "height": 2150,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Chicago",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Chicago Police Ford Police Interceptor Utility 7905 (Front left view) b.jpg",
-      "author": "File:Chicago Police Ford Police Interceptor Utility 7905 (Front left view).jpg : Jason Lawrence derivative work: Georgfotoart",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Chicago Police Ford Police Interceptor Utility 7905 (Front left view)",
-      "width": 5184,
-      "height": 3172,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Chicago",
-      "wasArticleLead": false
     }
   ],
   "copenhagen": [
@@ -746,19 +681,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Andorra",
       "wasArticleLead": false
-    },
-    {
-      "file": "2010 Opening Ceremony - Andorra entering.jpg",
-      "author": "Jude Freeman",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "The athletes from Andorra entering the stadium at the opening ceremonies of the 2010 Winter Olympics",
-      "width": 2955,
-      "height": 1752,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Andorra",
-      "wasArticleLead": false
     }
   ],
   "country-ae": [
@@ -871,19 +793,6 @@
   ],
   "country-az": [
     {
-      "file": "Azerbaijan single age population pyramid 2020.png",
-      "author": "Sdgedfegw",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Generated from US Census Bureau International Data Base using Excel 2019",
-      "width": 2212,
-      "height": 1777,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Azerbaijan",
-      "wasArticleLead": false
-    },
-    {
       "file": "Azərbaycan ipəyindən kəlağayılar 1.JPG",
       "author": "Urmen19",
       "license": "CC BY-SA 4.0",
@@ -940,19 +849,6 @@
       "wasArticleLead": false
     },
     {
-      "file": "Ethnographic distribution in Cyprus 1960.jpg",
-      "author": "Alexander-Michael Hadjilyra",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "subject": "Map showing the distribution of population in Cyprus during the 1960 census.",
-      "width": 4250,
-      "height": 2573,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Cyprus",
-      "wasArticleLead": false
-    },
-    {
       "file": "Cafes in a stoa small path in Nicosia Republic of Cyprus.JPG",
       "author": "ModernNicosia",
       "license": "CC BY-SA 3.0",
@@ -960,19 +856,6 @@
       "subject": "Cafes in a stoa small path in Nicosia Republic of Cyprus",
       "width": 3456,
       "height": 4608,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Cyprus",
-      "wasArticleLead": false
-    },
-    {
-      "file": "EU Foreign Ministers Gymnich Meeting in Cyprus. 7.-8. September 2012 (7954502290).jpg",
-      "author": "Estonian Foreign Ministry",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "EU Foreign Ministers Gymnich Meeting in Cyprus. 7.-8. September 2012",
-      "width": 3130,
-      "height": 1949,
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Cyprus",
@@ -1087,35 +970,9 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Guinea-Bissau",
       "wasArticleLead": false
-    },
-    {
-      "file": "Voter education for guinea bissau elections 2008.jpg",
-      "author": "Nammarci",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Voter education posters for Guinea Bissau legislative elections 2008, Biombo region",
-      "width": 2592,
-      "height": 1944,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Guinea-Bissau",
-      "wasArticleLead": false
     }
   ],
   "country-hn": [
-    {
-      "file": "2009 Honduras political crisis 11.jpg",
-      "author": "[https://www.flickr.com/people/38727033@N05 Yamil Gonzales ]",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "2009 Honduran coup d'état",
-      "width": 3888,
-      "height": 2592,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Honduras",
-      "wasArticleLead": false
-    },
     {
       "file": "Exterior Fuerte de Omoa Honduras.jpg",
       "author": "Dennis Garcia",
@@ -1124,19 +981,6 @@
       "subject": "Vista exterior de la Fortaleza de San Fernando de Omoa, Honduras.",
       "width": 3072,
       "height": 2304,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Honduras",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Ara macao - two at Lowry Park Zoo.jpg",
-      "author": "Matthew Romack",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Scarlet Macaw ( Ara macao ). Two at Lowry Park Zoo, Tampa, Florida, USA.",
-      "width": 2178,
-      "height": 2944,
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Honduras",
@@ -1168,34 +1012,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Iceland",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Iceland's Olympic Handball Team, Beijing 2008.jpg",
-      "author": "Steve",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "They won the silver, and the country was ecstatic. This is part of the team, during the homecoming parade. It was the 4th Olympic medal ever for Iceland.",
-      "width": 2203,
-      "height": 1261,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Iceland",
-      "wasArticleLead": false
-    }
-  ],
-  "country-jm": [
-    {
-      "file": "Montego Bay plane Photo Don Ramey Logan.jpg",
-      "author": "Don Ramey Logan",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Aircraft on short final into Montego Bay Photo Don Ramey Logan",
-      "width": 2144,
-      "height": 1424,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Jamaica",
       "wasArticleLead": false
     }
   ],
@@ -1294,32 +1110,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Luxembourg",
       "wasArticleLead": false
-    },
-    {
-      "file": "Soldats luxembourgeois.jpg",
-      "author": "Disquatufais",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Luxembourgish soldiers on national day.",
-      "width": 3072,
-      "height": 2304,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Luxembourg",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Luxembourg2022OSM.png",
-      "author": "Kelisi",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "This map of Luxembourg shows the country's cities, towns, villages and some other geographical details, and is likely the most comprehensive map of the country ",
-      "width": 3025,
-      "height": 4393,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Luxembourg",
-      "wasArticleLead": false
     }
   ],
   "country-mv": [
@@ -1357,19 +1147,6 @@
       "subject": "A beach of Bathala island (Maldives).",
       "width": 4928,
       "height": 3264,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Maldives",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Presidential Address 2024 in Maldives (49).jpg",
-      "author": "The President's Office, Maldives",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Presidential Address 2024 in Maldives",
-      "width": 4928,
-      "height": 3280,
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Maldives",
@@ -1460,19 +1237,6 @@
       "wasArticleLead": false
     },
     {
-      "file": "Portsmouth korvet Al-Shamikh Oman 18-10-2011 15-15-51.png",
-      "author": "Paul Hermans",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "corvette Al-Shamikh, Oman in the harbour of Portsmouth, England",
-      "width": 3996,
-      "height": 2248,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Oman",
-      "wasArticleLead": false
-    },
-    {
       "file": "Aflaj Gallery in The National Museum Oman,.jpg",
       "author": "Yusi AlK",
       "license": "CC BY-SA 4.0",
@@ -1501,19 +1265,6 @@
   ],
   "country-pt": [
     {
-      "file": "Funchal (Madeira, Portugal), Rua Dr. Fernão de Ornelas, Nata 7 - Fernão Ornelas -- 2025 -- 1205.jpg",
-      "author": "Dietmar Rabich",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Display case with “Pastel de Nata” in a shop, Funchal , Madeira , Portugal",
-      "width": 6720,
-      "height": 4480,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Portugal",
-      "wasArticleLead": false
-    },
-    {
       "file": "Estatua de Vimara Peres, Oporto, Portugal, 2012-05-09, DD 01.JPG",
       "author": "Diego Delso",
       "license": "CC BY-SA 3.0",
@@ -1536,19 +1287,6 @@
       "subject": "The Peterhof Palace is a series of palaces and gardens located in Petergof, Saint Petersburg, Russia, laid out on the orders of Peter the Great. These palaces a",
       "width": 3202,
       "height": 1873,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Russia",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Ethnic groups in Russia of more than 1 million people 2010 Census English.png",
-      "author": "Nikolay Omonov",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Ethnic groups in Russia of more than 1 million people, 2010 Census (English)",
-      "width": 4836,
-      "height": 2820,
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Russia",
@@ -1611,19 +1349,6 @@
       "wasArticleLead": false
     },
     {
-      "file": "Hospital El Salvador.jpg",
-      "author": "JMRAFFi",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Vista aerea del Hospital El Salvador",
-      "width": 3968,
-      "height": 2976,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "El Salvador",
-      "wasArticleLead": false
-    },
-    {
       "file": "32-0032 Monumento a la Memoria y la Verdad.jpg",
       "author": "Olivia Isabel Flores",
       "license": "CC BY-SA 3.0",
@@ -1674,32 +1399,6 @@
       "subject": "National Library of Kosovo",
       "width": 4492,
       "height": 2524,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Kosovo",
-      "wasArticleLead": false
-    },
-    {
-      "file": "Gebäude der UNMIK NEW BORN SIGN PRISTINA KOSOVO Giv Owned Image 23 August 2008.jpg",
-      "author": "qiv",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "New Born sign in Pristina Kosovo.",
-      "width": 3467,
-      "height": 1916,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Kosovo",
-      "wasArticleLead": false
-    },
-    {
-      "file": "KP-PK During Kosovo Independence Parade.JPG",
-      "author": "SUHEJLO",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Units of the Kosovo Armed Forces, Kosovo Police and Correctional Services paraded in \"Zahir Pjaziti\" square for the sixth anniversary of the declaration of inde",
-      "width": 2496,
-      "height": 1664,
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Kosovo",
@@ -2298,21 +1997,6 @@
       "wasArticleLead": false
     }
   ],
-  "ocean-atlantic": [
-    {
-      "file": "Nesocichla eremita -Inaccessible Island, British overseas territory-8 (3).jpg",
-      "author": "Brian Gratwicke from DC, USA",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Tristan thrush ( Nesocichla eremita ) on Inaccessible Island strewn with oceanic trash.",
-      "width": 3814,
-      "height": 2543,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Atlantic Ocean",
-      "wasArticleLead": false
-    }
-  ],
   "ocean-indian": [
     {
       "file": "Padadita Beach, Waingapu 18.jpg",
@@ -2586,19 +2270,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Baltic Sea",
       "wasArticleLead": false
-    },
-    {
-      "file": "Таллин. - panoramio.jpg",
-      "author": "Natalia Semenova",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "subject": "Таллин.",
-      "width": 3648,
-      "height": 2736,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Baltic Sea",
-      "wasArticleLead": false
     }
   ],
   "sea-black": [
@@ -2679,19 +2350,6 @@
       "subject": "East China Sea near Shanghai 25 February 2017 as seen by Sentinel-2A satellite.",
       "width": 4806,
       "height": 1534,
-      "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "East China Sea",
-      "wasArticleLead": false
-    },
-    {
-      "file": "View of South China Sea.jpg",
-      "author": "Jacob.jose",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "View of East China Sea from Yeliou, Taiwan",
-      "width": 2048,
-      "height": 1536,
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "East China Sea",
