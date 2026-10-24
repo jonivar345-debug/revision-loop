@@ -63,6 +63,8 @@
    if(!/^(?:upload\.wikimedia\.org|commons\.wikimedia\.org)$/.test(photoURL.hostname))return null;
   }catch{return null}
   return {file,author,license:licence,licenseUrl:licenseURL.href,filePage:sourceURL.href,url:photoURL.href,
+    originalUrl:typeof info.url==='string'?info.url:photoURL.href,
+    width:Number(info.width)||0,height:Number(info.height)||0,thumbWidth:Number(info.thumbwidth)||0,
     description:cleanHTML(value('ImageDescription'),doc)||file.replace(/^File:/,'')};
  }
  async function searchUncached(query,{fetcher,doc,limit=2}={}){
@@ -70,8 +72,8 @@
   const trimmed=String(query||'').trim().slice(0,150);
   if(!fetchFn||trimmed.length<3)return [];
   const u=new URL('https://commons.wikimedia.org/w/api.php');
-  const params={action:'query',generator:'search',gsrnamespace:'6',gsrsearch:trimmed,gsrlimit:'12',prop:'imageinfo',
-   iiprop:'url|extmetadata',iiurlwidth:'780',format:'json',formatversion:'2',origin:'*'};
+  const params={action:'query',generator:'search',gsrnamespace:'6',gsrsearch:trimmed,gsrlimit:'35',prop:'imageinfo',
+   iiprop:'url|extmetadata',iiurlwidth:'2048',format:'json',formatversion:'2',origin:'*'};
   Object.entries(params).forEach(([key,value])=>u.searchParams.set(key,value));
   try {
    const response=await fetchFn(u.href,{cache:'force-cache',credentials:'omit'});
@@ -106,7 +108,7 @@
      if(!name)return [];
      const commonsUrl=new URL('https://commons.wikimedia.org/w/api.php');
      for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',titles:'File:'+name.replace(/^File:/,''),
-       iiprop:'url|extmetadata',iiurlwidth:'780',format:'json',formatversion:'2',origin:'*'}))commonsUrl.searchParams.set(k,v);
+       iiprop:'url|extmetadata',iiurlwidth:'2048',format:'json',formatversion:'2',origin:'*'}))commonsUrl.searchParams.set(k,v);
      const rightsResponse=await get(commonsUrl.href,{cache:'force-cache',credentials:'omit'});
      if(!rightsResponse.ok)return [];
      const rights=(await rightsResponse.json()).query?.pages||[];
@@ -123,7 +125,7 @@
    try{
      const req=new URL('https://commons.wikimedia.org/w/api.php');
      for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',titles:'File:'+hint.file,
-       iiprop:'url|extmetadata',iiurlwidth:'780',format:'json',formatversion:'2',origin:'*'}))req.searchParams.set(k,v);
+       iiprop:'url|extmetadata',iiurlwidth:'2048',format:'json',formatversion:'2',origin:'*'}))req.searchParams.set(k,v);
      const response=await get(req.href,{cache:'force-cache',credentials:'omit'});
      if(!response.ok)return null;
      const records=(await response.json()).query?.pages||[];
@@ -131,6 +133,44 @@
      if(!actual||actual.file.replaceAll('_',' ').toLowerCase()!==('File:'+hint.file).replaceAll('_',' ').toLowerCase())return null;
      return {...actual,checked:true,description:hint.description+' — '+actual.description};
    }catch{return null}
+ }
+ // Commons GeoData supports location-tagged FILES, not just articles. This
+ // avoids rejecting good photographs whose filename omits the city name.
+ async function nearbyUncached(lat,lon,{fetcher,doc,radius=8000,limit=16}={}){
+  const get=fetcher||(typeof fetch==='function'?fetch:null);
+  if(!get||!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180)return [];
+  const u=new URL('https://commons.wikimedia.org/w/api.php');
+  for(const [k,v] of Object.entries({action:'query',list:'geosearch',gscoord:lat+'|'+lon,
+   gsradius:String(Math.min(10000,Math.max(500,radius))),gsnamespace:'6',gsprimary:'all',
+   gslimit:'50',format:'json',formatversion:'2',origin:'*'}))u.searchParams.set(k,v);
+  try{
+   const first=await get(u.href,{credentials:'omit'});
+   if(!first.ok)return [];
+   const geo=(await first.json()).query?.geosearch||[];
+   const names=geo.filter(p=>String(p.title||'').startsWith('File:')).slice(0,32).map(p=>p.title);
+   if(!names.length)return [];
+   const details=new URL('https://commons.wikimedia.org/w/api.php');
+   for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',titles:names.join('|'),
+    iiprop:'url|size|extmetadata',iiurlwidth:'2048',format:'json',formatversion:'2',origin:'*'}))
+    details.searchParams.set(k,v);
+   const second=await get(details.href,{credentials:'omit'});
+   if(!second.ok)return [];
+   const images=(await second.json()).query?.pages||[];
+   const allowed=images.map(p=>inspect(p,doc||(typeof document!=='undefined'?document:null)))
+     .filter(x=>x&&!badFileName(x.file)&&!(/\\.(?:svg|gif|tif|tiff|pdf)$/i.test(x.file)));
+   allowed.sort((a,b)=>((b.width||0)*(b.height||0))-((a.width||0)*(a.height||0)));
+   return allowed.slice(0,Math.max(1,limit));
+  }catch{return []}
+ }
+ const nearbyJobs=new Map();
+ function searchNearby(lat,lon,options={}){
+  if(options.fetcher)return nearbyUncached(lat,lon,options);
+  const key=[Number(lat).toFixed(3),Number(lon).toFixed(3),options.radius||8000].join('|');
+  if(!nearbyJobs.has(key)){
+   const task=new Promise(resolve=>{queue.push({work:()=>nearbyUncached(lat,lon,options),resolve});drain()});
+   nearbyJobs.set(key,task);
+  }
+  return nearbyJobs.get(key);
  }
  const pageJobs=new Map();
  function searchPage(wiki,options={}){
@@ -184,5 +224,5 @@
    figure.append(img,caption);el.append(figure);
   }
  }
- return Object.freeze({inspect,search,searchPage,approvedFor,verifyApproved,append});
+ return Object.freeze({inspect,search,searchPage,searchNearby,approvedFor,verifyApproved,append});
 });
