@@ -44,7 +44,7 @@ const queryMap={
  'country-ba':['Mostar Bridge Bosnia','Sarajevo Bosnia panoramic','Blagaj Bosnia'],
  'country-jm':['Blue Mountains Jamaica','Negril Jamaica beach','Port Antonio Jamaica']
 };
-delete queryMap['country-tt'][2]; // Tobago Cays is in St Vincent; never mislabel it Trinidad.
+queryMap['country-tt'].pop(); // Tobago Cays is in St Vincent; never mislabel it Trinidad.
 const norm=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[_-]/g,' ').replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
 const strip=x=>String(x||'').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,220);
 const bad=/\b(?:map|chart|graph|diagram|logo|flag|coat.of.arms|military|soldier|political|minister|president|meeting|portrait|selfie|advert|museum specimen|airplane|aircraft|airport|hospital|conference|sports team|film festival|shirt|climate stripes|banknote|crisis|police|poster|location diagram|zoo|train station|ticket|collage)\b/i;
@@ -94,7 +94,7 @@ function candidate(page,phrase,loc){
 const refreshed=require('../world-photo-enrichment-v85.js'),additions={},short=[];
 let reused=0;
 for(const loc of rows){
- const present=catalog.get(loc.id),known=new Set(present.map(x=>norm(x.file)));
+ const present=catalog.get(loc.id),known=new Set(present.map(x=>norm(String(x.file||'').replace(/^File:/i,''))));
  const need=4-known.size;if(need<=0)continue;
  const phrases=queryMap[loc.id]||[];
  if(!phrases.length){short.push({id:loc.id,needed:need,noQueries:true});continue}
