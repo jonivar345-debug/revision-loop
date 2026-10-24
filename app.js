@@ -2178,8 +2178,9 @@ async function locationPhoto(location,el){
  const loadPhotos=async()=>{
   // Wikipedia's actual place article chooses the photograph: never search
   // for a vaguely related market, river or skyline by keywords.
-  const approved=images.approvedFor?.(location.id);
-  const matches=approved?[approved]:await images.searchPage(location.wiki);
+  const checked=await images.verifyApproved?.(location.id);
+  // A curated name with a broken URL must not block the actual city's article.
+  const matches=checked?[checked]:await images.searchPage(location.wiki);
   if(!el.isConnected||el.dataset.locationPhoto&&el.dataset.locationPhoto!==location.id)return;
   if(matches.length){
    el.classList.remove('location-image-map-fallback');images.append(el,matches);
@@ -2337,7 +2338,7 @@ async function setLocationInfo(id){
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
  host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
- '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Checking this place’s lead photograph and image licence…</div></div>'+
+ '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Finding a suitable photograph…</div></div>'+
  '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">Loading a local introduction…</p></div>'+
  '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
  '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>'+
