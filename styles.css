@@ -495,3 +495,11 @@
 .location-card .location-photo:has(.commons-credited-photo){height:auto!important;min-height:170px;padding:0!important;overflow:visible}
 .location-card .location-photo .commons-credited-photo img{height:122px!important;max-height:122px!important}
 .location-card .location-photo .commons-credited-photo figcaption{height:auto!important;min-height:46px!important;max-height:none!important;overflow:visible!important;padding:7px 8px!important;font-size:.64rem!important;line-height:1.35!important;word-break:break-word}
+
+/* Real, geo-referenced offline cartography replaces empty photo placeholders. */
+.location-image-map-fallback{position:relative;overflow:hidden!important;padding:0!important;background:#123b60!important}
+.location-image-map-fallback .location-accurate-map{display:block;width:100%;height:100%;min-height:140px;object-fit:cover}
+.location-image-map-fallback .location-map-caption{position:absolute;left:10px;right:10px;bottom:10px;padding:6px 9px;border-radius:7px;background:rgba(5,28,48,.83);color:#fff;font-weight:700;font-size:.74rem;text-align:left;letter-spacing:.012em;pointer-events:none}
+.globe-location-info .detail-media .location-accurate-map{height:240px;min-height:200px}
+.location-card .location-photo.location-image-map-fallback{height:150px;min-height:150px}
+.location-card .location-photo .location-accurate-map{height:150px;min-height:150px}
