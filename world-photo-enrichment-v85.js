@@ -7681,6 +7681,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Philippine Sea",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Batanes waters and cliffs.jpg",
+      "author": "Jane Constantino",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Coastal scenery on Batan Island in the Philippine Sea region",
+      "width": 5312,
+      "height": 2988,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-philippine",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "sea-south-china": [
@@ -7696,6 +7709,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "South China Sea",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Da Nang - coastal view from Marble Mountains Mar 2024 01.jpg",
+      "author": "Dominic Nelson",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Coast of the South China Sea near Da Nang, Vietnam",
+      "width": 5836,
+      "height": 3891,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-south-china",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "sea-weddell": [
@@ -7711,6 +7737,19 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Weddell Sea",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Tabular-iceberg weddellsea hg.jpg",
+      "author": "Hannes Grobe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Giant tabular iceberg in the southwestern Weddell Sea",
+      "width": 4866,
+      "height": 2470,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-weddell",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "seville": [
