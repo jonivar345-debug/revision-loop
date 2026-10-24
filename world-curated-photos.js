@@ -3197,8 +3197,193 @@
       }
     ]
   });
+  // Explicit cross-linking only where a photograph depicts a landmark that
+  // IS in the corresponding country. Never perform country-name fuzzy matching.
+  // Copies are provisional and MUST pass CURRENT Commons CC validation even if
+  // the source city had a pixel-reviewed featured selection.
+  const nationalLandmarks=Object.freeze({
+    "country-au": [
+      [
+        "sydney",
+        "Sydney skyline at dusk - Dec 2008.jpg"
+      ],
+      [
+        "uluru",
+        "Uluru Australia.jpg"
+      ],
+      [
+        "greatbarrier",
+        "Great barrière reef.jpg"
+      ],
+      [
+        "melbourne",
+        "City Skyline of Melbourne.jpg"
+      ]
+    ],
+    "country-br": [
+      [
+        "rio",
+        "Christ-Redeemer-Rio-de-Janeiro.jpg"
+      ]
+    ],
+    "country-co": [
+      [
+        "bogota",
+        "Bogota, Colombia (36668708290).jpg"
+      ],
+      [
+        "medellin",
+        "Centro de Medellín en dron 04.jpg"
+      ],
+      [
+        "cartagena",
+        "Museo Naval del Caribe.JPG"
+      ]
+    ],
+    "country-dk": [
+      [
+        "copenhagen",
+        "2018 - Christiansborg from the Marble Bridge.jpg"
+      ],
+      [
+        "copenhagen",
+        "Cityscape and skyline by the Copenhagen Lakes, Denmark - (36018109956).jpg"
+      ]
+    ],
+    "country-ge": [
+      [
+        "tbilisi",
+        "Old Town and Narikala, Tbilisi.jpg"
+      ],
+      [
+        "tbilisi",
+        "Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg"
+      ]
+    ],
+    "country-jm": [
+      [
+        "montegobay",
+        "Montego Bay Photo Don Ramey Logan.jpg"
+      ]
+    ],
+    "country-kh": [
+      [
+        "angkor",
+        "Sunrise at Angkor Wat Cambodia.jpg"
+      ]
+    ],
+    "country-me": [
+      [
+        "kotor",
+        "20090719 Crkva Gospa od Zdravlja Kotor Bay Montenegro.jpg"
+      ]
+    ],
+    "country-mx": [
+      [
+        "chichenitza",
+        "Chichen Itzá Pyramide.jpg"
+      ],
+      [
+        "mexicocity",
+        "Panorama of Mexico City from Torre Latinoamericana.jpg"
+      ]
+    ],
+    "country-my": [
+      [
+        "kualalumpur",
+        "Downtown Kuala Lumpur at Night (49125936143).jpg"
+      ],
+      [
+        "kualalumpur",
+        "2016 Kuala Lumpur, Park KLCC i Suria KLCC.jpg"
+      ]
+    ],
+    "country-nl": [
+      [
+        "amsterdam",
+        "Amsterdam Cityscape.jpg"
+      ],
+      [
+        "amsterdam",
+        "Amsterdam (NL), Begijnhof -- 2015 -- 7215-8.jpg"
+      ]
+    ],
+    "country-nz": [
+      [
+        "auckland",
+        "AucklandCBD2026.jpg"
+      ],
+      [
+        "rotorua",
+        "Government Gardens in Rotorua 01.jpg"
+      ]
+    ],
+    "country-ph": [
+      [
+        "manila",
+        "Cityscape of Manila, 2025 (01).jpg"
+      ],
+      [
+        "bohol",
+        "Panglao Island Beach.jpg"
+      ],
+      [
+        "coron",
+        "Coron - Kayangan Lake.jpg"
+      ]
+    ],
+    "country-se": [
+      [
+        "stockholm",
+        "Royal Dramatic Theatre Stockholm.jpg"
+      ]
+    ],
+    "country-us": [
+      [
+        "newyork",
+        "New York City, Skyline.jpg"
+      ],
+      [
+        "grandcanyon",
+        "The Grand Canyon, Arizona.jpg"
+      ],
+      [
+        "yellowstone",
+        "Yellowstone Grand Prismatic.jpg"
+      ],
+      [
+        "newyork",
+        "Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg"
+      ]
+    ],
+    "country-za": [
+      [
+        "capetown",
+        "Table mountain in Cape Town.jpg"
+      ]
+    ],
+    "country-uz": [
+      [
+        "samarkand",
+        "Registan Samarkand.jpg"
+      ]
+    ],
+    "country-cu": [
+      [
+        "havana",
+        "Havana old town.jpg"
+      ]
+    ]
+  });
+  function nationalSources(id){
+    return (nationalLandmarks[id]||[]).flatMap(([placeId,file])=>{
+      const direct=[...(verified[placeId]||[]),...(featuredCities[placeId]||[]),...(featuredCitiesB[placeId]||[]),...(featuredCitiesC[placeId]||[]),...(featuredCitiesD[placeId]||[]),...(featuredCitiesE[placeId]||[]),...(featuredCitiesF[placeId]||[]),...(editorial[placeId]||[]),...(additionalEditorialA[placeId]||[]),...(additionalEditorialB[placeId]||[]),...(independentlySourced[placeId]||[]),...reusedFor(placeId),...discoveredFor(placeId)];
+      const image=direct.find(photo=>photo.file===file);
+      return image?[{...image,editorialMetadata:true,reviewStatus:'Exact nationally located place source, Commons licence rechecked on display; pixels for this national placement not individually inspected'}]:[];
+    });
+  }
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...discoveredFor(id)];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...discoveredFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
