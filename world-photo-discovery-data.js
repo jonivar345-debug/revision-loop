@@ -1753,17 +1753,16 @@
       "wasArticleLead": false
     },
     {
-      "file": "Dominican Day Parade 2019 (50335870922).jpg",
-      "author": "S Pakhrin from NYC, USA",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Dominican Day Parade 2019",
-      "width": 5520,
-      "height": 3680,
+      "file": "Santo Domingo - Fortaleza Ozama 0891.jpg",
+      "author": "Phyrexian",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Exterior of Ozama Fortress in Santo Domingo's colonial city, Dominican Republic",
+      "width": 5160,
+      "height": 3440,
       "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Dominican Republic",
-      "wasArticleLead": false
+      "reviewStatus": "Exact Wikimedia Commons file, location, attribution and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Manual Commons File-page location and licensing review"
     },
     {
       "file": "Cabo Cabrón, (Rincón Beach) Samaná, DR.JPG",
@@ -3323,30 +3322,28 @@
       "wasArticleLead": false
     },
     {
-      "file": "Aflaj Gallery in The National Museum Oman,.jpg",
-      "author": "Yusi AlK",
+      "file": "Nizwa Fort - Oman.jpg",
+      "author": "P. Hughes",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Aflaj Gallery in The National Museum Oman, shows the water system in Oman.",
-      "width": 3942,
-      "height": 1697,
+      "subject": "Exterior of Nizwa Fort in Nizwa, Oman",
+      "width": 2848,
+      "height": 4288,
       "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Oman",
-      "wasArticleLead": false
+      "reviewStatus": "Exact Wikimedia Commons file, location, attribution and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Manual Commons File-page location and licensing review"
     },
     {
-      "file": "Traditional Omani Food.jpg",
-      "author": "Erkan Pinar",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Omani food is heavily influenced by Indian cuisine, and is generally centered on richly-seasoned chicken, fish, and lamb, as well as rice.",
-      "width": 3216,
-      "height": 2136,
+      "file": "Wahiba Sands, Oman.jpg",
+      "author": "Christoph Strässler",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Wahiba Sands sand-dune landscape in Oman",
+      "width": 8256,
+      "height": 4644,
       "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Oman",
-      "wasArticleLead": false
+      "reviewStatus": "Exact Wikimedia Commons file, location, attribution and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Manual Commons File-page location and licensing review"
     }
   ],
   "country-ph": [
