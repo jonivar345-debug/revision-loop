@@ -1,0 +1,40 @@
+name: One-time final difficult World photo matching + live CDN smoke v85
+on:
+  push:
+    branches: [feature/four-photo-galleries-v85]
+    paths: ['.github/workflows/world-photo-v85-last-mile.yml']
+permissions:
+  contents: write
+concurrency:
+  group: world-v85-hard-location-audit
+  cancel-in-progress: true
+jobs:
+  verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Commons licence and photographer for geographically specific missing photo slots
+        run: node scripts/enrich-hard-world-photos-v85.mjs --write
+      - name: Recompute four-photo depth excluding gallery-rejected filenames
+        run: node scripts/audit-world-photo-depth.cjs --save
+      - name: Sample actual Commons image delivery over 30 geographic locations
+        run: node scripts/audit-world-photo-delivery-v85.mjs --write
+        continue-on-error: true
+      - name: Commit current source records, depth results and CDN smoke report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add world-photo-enrichment-v85.js editorial/world-photo-hard-location-v85.json editorial/world-photo-four-depth-v85.json
+          test ! -f editorial/world-photo-live-delivery-v85.json || git add editorial/world-photo-live-delivery-v85.json
+          git diff --staged --quiet && exit 0
+          git commit -m 'Finish hard location photo source research and measure actual Commons delivery'
+          git fetch origin feature/four-photo-galleries-v85
+          git rebase origin/feature/four-photo-galleries-v85
+          git push origin HEAD:feature/four-photo-galleries-v85
