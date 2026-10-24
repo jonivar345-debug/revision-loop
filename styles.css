@@ -580,3 +580,13 @@
  .destination-photo-gallery .photo-count-3 .destination-photo-tile:nth-child(2){grid-column:1;grid-row:2}
  .destination-photo-gallery .photo-count-3 .destination-photo-tile:nth-child(3){grid-column:2;grid-row:2}
 }
+
+
+/* Small expandable attribution control, including locked shop cards. */
+.location-card .destination-card-photo{position:relative;overflow:visible!important}
+.location-card .destination-card-photo .destination-photo-grid{overflow:hidden;border-radius:9px 9px 0 0}
+.destination-card-photo .card-photo-credit{position:absolute;right:7px;top:7px;z-index:4;font-size:.72rem;margin:0;max-width:250px}
+.destination-card-photo .card-photo-credit summary{display:grid;place-items:center;margin-left:auto;width:25px;height:25px;padding:0;border-radius:99px;background:rgba(3,22,39,.82);color:white;font-size:16px;cursor:pointer;list-style:none;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.destination-card-photo .card-photo-credit summary::-webkit-details-marker{display:none}
+.destination-card-photo .card-photo-credit ul{position:absolute;right:0;top:24px;width:min(270px,80vw);max-height:180px;overflow:auto;box-shadow:0 6px 20px rgba(7,23,45,.25);background:#f4f8fc;border:1px solid #bdd1e2;color:#263a4e;border-radius:8px;padding:8px 12px;margin:4px 0 0}
+.destination-card-photo .card-photo-credit li{font-size:.73rem;line-height:1.55;list-style:none;overflow-wrap:anywhere;margin:0 0 6px}
