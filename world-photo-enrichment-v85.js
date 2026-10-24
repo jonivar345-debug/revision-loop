@@ -6657,30 +6657,30 @@
   ],
   "ocean-indian": [
     {
-      "file": "Cscl indian ocean 07022016 Bagger.jpg",
-      "author": "Dirtsc",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Contship CSCL Indian Ocean aground near Grünendeich",
-      "width": 5184,
-      "height": 3456,
+      "file": "Aerial shot of a small island on a coral reef in the Maldives.jpg",
+      "author": "Dr. Ondřej Havelka (cestovatel)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Aerial view of a reef and island in the Maldives, Indian Ocean",
+      "width": 3756,
+      "height": 1872,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Indian Ocean",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "locationText": "ocean-indian",
+      "photoSource": "Commons specific-location human-checked replacement"
     },
     {
-      "file": "Cscl indian ocean 07022016 Steuerbord.jpg",
-      "author": "Dirtsc",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Contship CSCL Indian Ocean aground near Grünendeich",
-      "width": 5184,
-      "height": 3456,
+      "file": "Indian Ocean,Kenya Coastline.jpg",
+      "author": "Benedict Malomba",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Seascape near Wasini Island off the Kenyan coast, Indian Ocean",
+      "width": 4032,
+      "height": 3024,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Indian Ocean",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "locationText": "ocean-indian",
+      "photoSource": "Commons specific-location human-checked replacement"
     }
   ],
   "ocean-pacific": [
@@ -7543,43 +7543,43 @@
   ],
   "sea-coral": [
     {
-      "file": "Coral Sea 8A Coral Sea Ferry Sam Ka Tsuen to Tsim Sha Tsui and Central Central Ferry Pier 10 aboarding place 24-06-2025.jpg",
-      "author": "LN9267",
+      "file": "Arlington-Reef-2018-aerial-view-Luka-Peternel.jpg",
+      "author": "Luka Peternel",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "​這張照片在中環拍攝。",
-      "width": 8064,
-      "height": 6048,
+      "subject": "Aerial view of Arlington Reef, Great Barrier Reef, Queensland, Coral Sea",
+      "width": 5472,
+      "height": 3648,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Coral Sea",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "locationText": "sea-coral",
+      "photoSource": "Commons specific-location human-checked replacement"
     },
     {
-      "file": "Coral Sea 18 Coral Sea Ferry Sai Wan Ho to Lei Yue Mun(Sam Ka Tsuen) cabin 29-06-2025(1).jpg",
-      "author": "LN9267",
+      "file": "Vue aérienne raprochée du grand récif de Gatope et son trou bleu.jpg",
+      "author": "Kévin Thenaisie",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "​這張照片在船上拍攝。",
-      "width": 8064,
-      "height": 6048,
+      "subject": "Aerial photograph of Gatope coral reef and blue hole, Coral Sea Marine Park, New Caledonia",
+      "width": 4928,
+      "height": 3264,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Coral Sea",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "locationText": "sea-coral",
+      "photoSource": "Commons specific-location human-checked replacement"
     },
     {
-      "file": "Coral Sea 1 Coral Sea Ferry Sam Ka Tsuen to Tsim Sha Tsui and Central 18-01-2025.jpg",
-      "author": "LN9267",
+      "file": "Mar de Coral 3.jpg",
+      "author": "LBM1948",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "​這張照片在尖沙咀拍攝。",
-      "width": 4744,
-      "height": 3558,
+      "subject": "Aerial photograph of surf waves on the Coral Sea near Curtis Island, Queensland",
+      "width": 3392,
+      "height": 1960,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Coral Sea",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "locationText": "sea-coral",
+      "photoSource": "Commons specific-location human-checked replacement"
     }
   ],
   "sea-east-china": [
