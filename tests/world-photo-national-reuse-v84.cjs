@@ -34,6 +34,20 @@ for(const [country,names] of Object.entries(places)){
   count++;
  }
 }
+const lastThree={
+ dakar:['Dakar from above.jpg','Dakar vue de haut 04.jpg'],
+ 'country-ag':['Beach in Old Road, Antigua and Barbuda.jpg'],
+ 'sea-bering':['Nome Alaska bering sea.jpg','Bering sea...mar de bering ,alaska - panoramio.jpg','Bering Sea Ice 2 (8683679273).jpg']
+};
+for(const [loc,files] of Object.entries(lastThree)){
+ const cards=registry.get(loc);
+ for(const file of files){
+  const photo=cards.find(p=>p.file.endsWith(file));
+  assert(photo,loc+' missing credible Commons File: '+file);
+  assert(photo.checked===false&&photo.source==='editorial-source',loc+' source cannot bypass current Commons rights check');
+  assert(photo.width>=2048&&photo.height>=900&&photo.author&&photo.licenseUrl);
+ }
+}
 for(const city of ['london','busan']){
  const originals=registry.get(city).filter(p=>p.checked);
  assert.equal(originals.length,4, city+' historic four pixel-reviewed sources changed');
