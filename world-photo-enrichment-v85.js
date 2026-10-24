@@ -2779,43 +2779,43 @@
   ],
   "country-jm": [
     {
-      "file": "Jamaica Bay Wildlife Refuge East Pond (61277p).jpg",
-      "author": "Rhododendrites",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Jamaica Bay Wildlife Refuge East Pond",
-      "width": 15830,
-      "height": 3653,
+      "file": "Dunn's River Falls.jpg",
+      "author": "Thank You (23 Millions+) views",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Dunn's River Falls at Ocho Rios, Jamaica",
+      "width": 6000,
+      "height": 4000,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Jamaica",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "locationText": "country-jm",
+      "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     },
     {
-      "file": "Jamaica Bay Wildlife Refuge East Pond (61289p).jpg",
-      "author": "Rhododendrites",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Jamaica Bay Wildlife Refuge East Pond",
-      "width": 6819,
-      "height": 3873,
+      "file": "Negril.jpg",
+      "author": "gustavo.kunst",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Negril beach on Jamaica's western coast",
+      "width": 3264,
+      "height": 2448,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Jamaica",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "locationText": "country-jm",
+      "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     },
     {
-      "file": "Jamaica Bay Wildlife Refuge (41031).jpg",
-      "author": "Rhododendrites",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Saplings in Jamaica Bay Wildlife Refuge. Broad Channel, Queens, New York.",
-      "width": 4608,
-      "height": 3456,
+      "file": "Blue and John Crow Mountains.jpg",
+      "author": "xiquinhosilva",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Mountain landscape in the Blue and John Crow Mountains, Jamaica",
+      "width": 3000,
+      "height": 2000,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Jamaica",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "locationText": "country-jm",
+      "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     }
   ],
   "country-jp": [
@@ -3862,17 +3862,17 @@
   ],
   "country-pt": [
     {
-      "file": "Cabruza (Parablennius gattorugine), Parque natural de la Arrábida, Portugal, 2022-07-22, DD 48.jpg",
-      "author": "Diego Delso",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Tompot blenny ( Parablennius gattorugine ), Arrábida National Park, Portugal. Note: no FP of this species. It can be found in shallow, coastal waters off western Europe, the Mediterranean and North Africa. The tompot blenny is a r",
-      "width": 8688,
-      "height": 5792,
+      "file": "A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg",
+      "author": "www.mgaylard.co.uk and thanks for looking",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Dom Luís I Bridge, Douro River and Porto's old town, Portugal",
+      "width": 6048,
+      "height": 4032,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Portugal",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "locationText": "country-pt",
+      "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     },
     {
       "file": "Yellow leaves floating next to water volcano, Alameda dos Oceanos, Parque das Nações, Lisbon, Portugal julesvernex2.jpg",
@@ -3888,17 +3888,17 @@
       "photoSource": "Commons exact File-title search"
     },
     {
-      "file": "Ascidia bombillo (Clavelina lepadiformis), Parque natural de la Arrábida, Portugal, 2022-07-20, DD 52.jpg",
-      "author": "Diego Delso",
+      "file": "View over the river Tagus, Lisbon, Portugal.jpg",
+      "author": "TravelPhotosNL",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Light-bulb sea squirt ( Clavelina lepadiformis ), Arrábida National Park, Portugal. It's a colonial sea squirt common in the British Islands and that can be found from Norway along European coasts south to the Mediterranean. A sin",
-      "width": 5087,
-      "height": 5087,
+      "subject": "View over the Tagus river at Lisbon, Portugal",
+      "width": 4096,
+      "height": 3072,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Portugal",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "locationText": "country-pt",
+      "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     }
   ],
   "country-pw": [
