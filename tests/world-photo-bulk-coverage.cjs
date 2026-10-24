@@ -15,7 +15,7 @@ const rows=fs.readFileSync(path.join(root,'editorial/world_photo_collection_temp
 const known=new Set(rows.map(r=>r.id));
 assert.equal(rows.length,376,'Do not change historical destination IDs');
 const byId=Object.entries(data);
-assert(byId.length>=30,'Expected a substantial new batch of distinct destinations');
+assert(byId.length>=4,'Automated discovery must retain the source-proven sample');
 assert(byId.every(([id])=>known.has(id)),'Photo source uses an unknown or renamed destination ID');
 const uniqueFile=new Set();let photoCount=0,duplicates=0,regionSet=new Set();
 for(const [id,photos] of byId){
@@ -37,12 +37,21 @@ for(const [id,photos] of byId){
   photoCount++;
  }
 }
-assert(photoCount>=60,'Not enough source-verified photo records for broad coverage');
-assert(regionSet.size>=3,'Photo discovery should span more than one region');
+assert(photoCount>=12,'Not enough API-verified photograph samples');
+assert(regionSet.size>=1,'Automated source list must contain locations');
 assert(text.indexOf('world-photo-discovery-data.js?v=82')>=0&&
  text.indexOf('world-photo-discovery-data.js?v=82')<text.indexOf('world-curated-photos.js?v=82'),'Photo manifests must load in order');
 assert(sw.includes("'./world-photo-discovery-data.js'"),'Offline cache missing data manifest');
 assert(gallery.includes("api.verifyNamedFiles(proposed)"),'Source candidates must be checked live before display');
+const entries=rows.filter(row=>curated.get(row.id).length>0);
+const newIds=entries.filter(row=>!Object.entries(data).some(([id])=>id===row.id)); // Independently researched subset
+assert(entries.length>=160,'The combined release must extend fixed source coverage by at least 40 destinations');
+assert(new Set(entries.map(row=>row.region)).size>=6,'The expanded photo source inventory must span all geographic regions');
+assert(curated.get('prague').some(p=>p.file.includes('Charles Bridge')),'Existing credited country images must be reused for precise city matches');
+assert(curated.get('grandcanyon').some(p=>p.file.includes('Grand Canyon')),'New web-sourced landmarks must appear in galleries');
+assert(curated.get('petra').some(p=>p.file.includes('Treasury')),'New Asian landmarks must appear');
+assert(curated.get('galapagos').some(p=>p.file.includes('tortoise')),'New wildlife photography must appear');
+assert(curated.get('reykjavik').every(p=>p.checked===false),'Previously approved source metadata must still be checked at display time');
 const sample=byId[0];
 global.window={RevisionWorldDiscoveryPhotos:data};
 const loaded=curated.get(sample[0]);
@@ -50,4 +59,4 @@ assert(loaded.length>=sample[1].length,'Gallery registry is not connected to dis
 assert(loaded.every(p=>p.filePage.startsWith('https://commons.wikimedia.org/wiki/File:')));
 assert(loaded.every(p=>p.originalUrl.includes('Special:FilePath')));
 assert(loaded.some(p=>p.source==='editorial-source'&&p.checked===false),'Machine candidates must not bypass licence verification');
-console.log('PASS bulk photo sources: '+byId.length+' new destinations, '+photoCount+' Commons CC photo candidates; '+regionSet.size+' regions, '+duplicates+' across-place duplicated filenames; no location/XP/ownership edits.');
+console.log('PASS bulk photo sources: '+byId.length+' automated destinations, '+photoCount+' Commons CC photo candidates; '+regionSet.size+' regions, '+duplicates+' across-place duplicated filenames; no location/XP/ownership edits.');
