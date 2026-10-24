@@ -21,8 +21,8 @@ for(const loc of rows){
  if(n===0)unsourced++;
 }
 assert.equal(unsourced,0,'Each destination must have a source-checked candidate');
-assert(complete>=373,'v87 must leave at least 373 of 376 destinations with four distinct photographs');
-assert(unfinished.reduce((n,x)=>n+x.missing,0)<=4,'No more than four source slots should remain');
+assert.equal(complete,376,'Every destination must have at least four distinct source-checked photographs');
+assert.equal(unfinished.reduce((n,x)=>n+x.missing,0),0,'All four-photo source slots must be filled');
 const checked={
  'country-ao':['Sunset over Luanda 1.JPG'],
  'country-gn':['Magnifique vue de la nature.jpg','Village de Mali.jpg','On the road between Base Vie and Siguiri - panoramio.jpg'],
@@ -31,7 +31,11 @@ const checked={
  'sea-bering':['Bering Sea Sunset In Alaska.jpg'],
  'sea-weddell':['Tabular-iceberg weddellsea hg.jpg'],
  'sea-south-china':['Da Nang - coastal view from Marble Mountains Mar 2024 01.jpg'],
- 'sea-philippine':['Batanes waters and cliffs.jpg']
+ 'sea-philippine':['Batanes waters and cliffs.jpg','Dark clouds on the sea of Hualien.jpg','Divilacan Isabela.jpg'],
+ 'sea-labrador':['Coast of Labrador.jpg','Labrador coast islands - panoramio.jpg'],
+ 'sea-okhotsk':['140828 Otoko-no-namida Shiretoko Peninsula Hokkaido Japan01s5.jpg'],
+ 'ocean-arctic':['North Pole, Arctic Ocean, sea ice 04.jpg','Arctic Ice (4370262641).jpg'],
+ 'country-cd':['Congo River from Kinshasa in Democratic Republic of the Congo (DRC).jpg','Virunga National Park - Lake Edward January 2015.jpg']
 };
 for(const [id,files] of Object.entries(checked)){
  const photos=catalog.get(id);
@@ -44,6 +48,11 @@ for(const [id,files] of Object.entries(checked)){
   assert(gallery.allowed(p,{id,name:id,worldKind:id.startsWith('sea-')?'sea':'country'}));
  }
 }
+for(const [id,notPhoto] of Object.entries({
+ 'sea-philippine':'USS Philippine Sea in Plymouth Sound.jpg',
+ 'ocean-arctic':'CSCL Arctic Ocean (ship, 2015) 001.jpg',
+ 'country-cd':'Congo River CBERS4 MUX satellite image at Democratic Republic of the Congo, Africa.jpg'
+})){assert(!catalog.get(id).some(p=>p.file==='File:'+notPhoto),'Reject unrelated place or satellite image '+id);}
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 assert(html.includes('world-photo-enrichment-v85.js?v=87'),'Browser must fetch refreshed photo manifest');
