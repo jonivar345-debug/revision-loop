@@ -13,6 +13,15 @@
   'use strict';
   const MAX_PHOTOS=4;
   const cache=new Map();
+  // Preserve deliberately ordered iconic landmark sets and the 8 original
+  // visually reviewed London/Busan photographs. Remaining source candidates
+  // are ranked for scenic coverage and recognisable location-specific covers.
+  const fixedLeadPlaces=new Set([
+    'london','busan','tokyo','seoul','tbilisi','singapore','paris','newyork',
+    'hongkong','sydney','shanghai','beijing','kyoto','rome','istanbul',
+    'barcelona','venice','dubrovnik','bangkok'
+  ]);
+
   const keywords=Object.freeze({
     london:['london','tower bridge','westminster','millennium bridge','st paul'],
     busan:['busan','haeundae','gwangalli','gwangan','gamcheon','yonggungsa','jagalchi'],
@@ -135,6 +144,8 @@
     const safe=promise=>Promise.resolve(promise).catch(()=>[]);
     if(typeof api.verifyNamedFiles==='function'){
       const proposed=suggested.filter(p=>p.source==='editorial-source');
+      if(!fixedLeadPlaces.has(location.id))
+        proposed.sort((a,b)=>imageScore(b,location)-imageScore(a,location));
       if(proposed.length){
         const checked=await safe(api.verifyNamedFiles(proposed));
         for(const photo of checked||[])add(photo);
