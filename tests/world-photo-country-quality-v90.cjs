@@ -12,7 +12,7 @@ const groups={
  'country-bn':{expected:['Omar Ali Saifuddien Mosque Brunei.jpg'],banned:['Anduki Airfield main terminal building, Brunei (DSCF1450).jpg'],lead:'Omar Ali Saifuddien Mosque Brunei.jpg'},
  'country-bh':{expected:['Manama Manama Skyline 01.jpg'],banned:['Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James Mattis visits Bahrain King Hamad bin Isa Al Khalifa, south of Manama, Bahrain on October 27, 2018 - 6.jpg'],lead:'Manama Manama Skyline 01.jpg'},
  'country-bf':{expected:['Bobo-Dioulasso Mosque.jpg'],banned:['EU Humanitarian Air Bridge to Burkina Faso (1).jpg'],lead:'Bobo-Dioulasso Mosque.jpg'},
- 'country-dk':{expected:['Nyhavn, Copenhague.jpg'],banned:['Cityscape and skyline by the Copenhagen Lakes, Denmark - (36018109956).jpg'],lead:'Nyhavn, Copenhague.jpg'},
+ 'country-dk':{expected:['Nyhavn, Copenhague.jpg'],banned:[],lead:'Nyhavn, Copenhague.jpg'},
  'country-bb':{expected:['Bridgetown, Barbados..JPG'],banned:['066a Britannia in Port of Bridgetown at night - Barbados - 3 1 - V-P.jpg'],lead:'Bridgetown, Barbados..JPG'},
  'country-ec':{expected:['Cotopaxi Volcano.jpg','Quito Panorama of the historic center from Casa Bella Vista 15.jpg'],banned:['Iguana marina (Amblyrhynchus cristatus), Las Bachas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-23, DD 23.jpg','Iguana marina (Amblyrhynchus cristatus), isla Lobos, islas Galápagos, Ecuador, 2015-07-25, DD 47.JPG'],lead:'Quito Panorama of the historic center from Casa Bella Vista 15.jpg'},
  'country-cm':{expected:['Mount Cameroon.jpg'],banned:['Rothmannia lateriflora (Rubiaceae) from the Dja Faunal Reserve.jpg'],lead:'Mount Cameroon.jpg'}
