@@ -2125,6 +2125,9 @@ function buy(kind,id){
   profile=outcome.profile;
   save();
   if(!outcome.alreadyOwned)showToast('Unlocked '+destination.name);
+  // Centre the Earth on the newly owned/selected destination, keeping the
+  // original pin coordinates unchanged. The pin is green once owned.
+  focusOnGlobeLocation(destination.id,false);
   renderAll();drawGlobe();
   return;
  }
@@ -2498,6 +2501,27 @@ function drawGlobe(){
  }
  document.getElementById('globeLabel').textContent='Drag to rotate · green = unlocked · pale = locked · gold = selected · tap a green pin for details';
 }
+function focusOnGlobeLocation(id,open=false){
+ const place=LOCATIONS.find(l=>l.id===id);
+ if(!place)return false;
+ globeLon=place.lon;
+ globeLat=clamp(place.lat,-65,65);
+ const selector=document.getElementById('locationRegion');
+ if(selector&&selector.value&&selector.value!==place.region){
+   selector.value='';
+   // Don't alter ownership or saved shop data when adjusting the filter.
+   renderLocationGallery();
+ }
+ drawGlobe();
+ if(open){
+   const owned=window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id);
+   if(owned){
+     if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo')?.classList.add('hidden')}
+     setLocationInfo(id);
+   }else showToast('Unlock '+place.name+' to read its location guide');
+ }
+ return true;
+}
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
 function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(700,360,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
 
@@ -2566,5 +2590,27 @@ globe.addEventListener('pointermove',e=>{if(window.RevisionWorldGlobeGesture?.is
 globe.addEventListener('pointerup',e=>{if(window.RevisionWorldGlobeGesture?.isPinching()){dragging=false;return}if(dragging&&dragDistance<10){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
 globe.addEventListener('pointercancel',()=>{dragging=false});
 if(window.RevisionWorldGlobeGesture)window.RevisionWorldGlobeGesture.onComplete=()=>{dragging=false};
+
+const globeFindInput=document.getElementById('globePlaceSearch');
+const globeFindButton=document.getElementById('globeFindPlace');
+const globeOptions=document.getElementById('globePlaceOptions');
+if(globeFindInput&&globeFindButton&&globeOptions){
+ const entries=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const fragment=document.createDocumentFragment();
+ for(const place of entries){
+   const option=document.createElement('option');
+   option.value=place.name;
+   fragment.append(option);
+ }
+ globeOptions.append(fragment);
+ const locate=()=>{
+   const query=globeFindInput.value.trim().toLowerCase();
+   const match=entries.find(l=>l.name.toLowerCase()===query||l.id.toLowerCase()===query);
+   if(!match){showToast('Choose a destination from the suggestions');return}
+   focusOnGlobeLocation(match.id,true);
+ };
+ globeFindButton.onclick=locate;
+ globeFindInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();locate()}});
+}
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
