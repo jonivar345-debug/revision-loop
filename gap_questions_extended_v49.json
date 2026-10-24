@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "12 independently written six-mark AQA-style challenge problems. Not copied from past papers.",
+  "notes": "14 independently written six-mark AQA-style challenge problems. Not copied verbatim from past papers; the ionic comparison uses established AQA numerical data.",
   "questions": [
     {
       "id": "gap_v49_extended_01",
@@ -493,6 +493,88 @@
       "difficulty": "stretch",
       "groupId": "gap_v49_extended_12",
       "groupOrder": 1
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style extended problem",
+      "paper": "Original",
+      "question": "Extended independent practice",
+      "topic": "Born–Haber cycles",
+      "subtopic": "Born–Haber cycles",
+      "revisionTopic": "Born–Haber cycles",
+      "courseTopic": "Thermodynamics",
+      "marks": 6,
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "extended explanation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupOrder": 1,
+      "id": "gap_v49_extended_13",
+      "groupId": "gap_v49_extended_13",
+      "prompt": "Lattice dissociation enthalpies (kJ mol⁻¹) are: CaCl₂ 2223 (perfect ionic) / 2237 (Born–Haber); KCl 690 / 701; AgCl 770 / 905. In a coherent six-mark answer, explain the relative lattice strengths and what the differences between the perfect ionic model and Born–Haber results reveal about bonding in all three compounds.",
+      "markPoints": [
+        "CaCl₂ has the largest ideal lattice dissociation enthalpy: Ca²⁺ has a greater positive charge than K⁺ and Ag⁺.",
+        "Higher charge and small interionic separation lead to stronger electrostatic attractions and more energy required to dissociate CaCl₂.",
+        "Ag⁺ is smaller than K⁺, so AgCl has a higher theoretical lattice enthalpy than KCl due to shorter ionic separation.",
+        "CaCl₂ and KCl have small perfect-model/Born–Haber discrepancies (14 and 11 kJ mol⁻¹), consistent with predominantly ionic bonding.",
+        "AgCl has a much larger discrepancy (135 kJ mol⁻¹), suggesting greater covalent character than predicted by the perfect ionic model.",
+        "Ag⁺ distorts the Cl⁻ electron cloud (polarisation), creating shared electron density and covalent character that adds lattice stabilisation."
+      ],
+      "modelAnswer": "CaCl₂ has the largest ideal lattice dissociation enthalpy: Ca²⁺ has a greater positive charge than K⁺ and Ag⁺. Higher charge and small interionic separation lead to stronger electrostatic attractions and more energy required to dissociate CaCl₂. Ag⁺ is smaller than K⁺, so AgCl has a higher theoretical lattice enthalpy than KCl due to shorter ionic separation. CaCl₂ and KCl have small perfect-model/Born–Haber discrepancies (14 and 11 kJ mol⁻¹), consistent with predominantly ionic bonding. AgCl has a much larger discrepancy (135 kJ mol⁻¹), suggesting greater covalent character than predicted by the perfect ionic model. Ag⁺ distorts the Cl⁻ electron cloud (polarisation), creating shared electron density and covalent character that adds lattice stabilisation."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style extended problem",
+      "paper": "Original",
+      "question": "Extended independent practice",
+      "topic": "Born–Haber cycles",
+      "subtopic": "Born–Haber cycles",
+      "revisionTopic": "Born–Haber cycles",
+      "courseTopic": "Thermodynamics",
+      "marks": 6,
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "extended explanation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupOrder": 1,
+      "id": "gap_v49_extended_14",
+      "groupId": "gap_v49_extended_14",
+      "prompt": "Draw and fully label a Born–Haber cycle for the formation of MgO(s) from Mg(s) and ½O₂(g). Include every atomisation, Mg first and second ionisation, O first and second electron affinity, intermediate gaseous species, any free electrons, lattice formation, direct standard enthalpy of formation, and correct endothermic/exothermic arrow directions. You can draw on paper then check your steps against the mark points.",
+      "markPoints": [
+        "Overall standard formation: Mg(s) + ½O₂(g) → MgO(s), with ΔHf arrow connecting start to final ionic solid.",
+        "Correct atomisations: Mg(s) → Mg(g) and ½O₂(g) → O(g), with gaseous atoms and positive (+) endothermic arrows.",
+        "First ionisation of Mg: Mg(g) → Mg⁺(g) + e⁻, followed by second ionisation Mg⁺(g) → Mg²⁺(g) + e⁻, both endothermic.",
+        "Correct charge and electron accounting at the fully ionised intermediate stage: Mg²⁺(g) + O(g) + 2e⁻.",
+        "First and second electron affinities: O(g) + e⁻ → O⁻(g) (exothermic) and O⁻(g) + e⁻ → O²⁻(g) (endothermic), ending with Mg²⁺(g) + O²⁻(g).",
+        "Lattice formation Mg²⁺(g) + O²⁻(g) → MgO(s), shown as an exothermic downward arrow. Positive enthalpy arrows point up, negative down."
+      ],
+      "modelAnswer": "Overall standard formation: Mg(s) + ½O₂(g) → MgO(s), with ΔHf arrow connecting start to final ionic solid. Correct atomisations: Mg(s) → Mg(g) and ½O₂(g) → O(g), with gaseous atoms and positive (+) endothermic arrows. First ionisation of Mg: Mg(g) → Mg⁺(g) + e⁻, followed by second ionisation Mg⁺(g) → Mg²⁺(g) + e⁻, both endothermic. Correct charge and electron accounting at the fully ionised intermediate stage: Mg²⁺(g) + O(g) + 2e⁻. First and second electron affinities: O(g) + e⁻ → O⁻(g) (exothermic) and O⁻(g) + e⁻ → O²⁻(g) (endothermic), ending with Mg²⁺(g) + O²⁻(g). Lattice formation Mg²⁺(g) + O²⁻(g) → MgO(s), shown as an exothermic downward arrow. Positive enthalpy arrows point up, negative down."
     }
   ]
 }
