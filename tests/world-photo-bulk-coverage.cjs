@@ -41,7 +41,7 @@ assert(photoCount>=12,'Not enough API-verified photograph samples');
 assert(regionSet.size>=1,'Automated source list must contain locations');
 const sourcePosition=text.indexOf('world-photo-discovery-data.js?v=84');
 const enrichmentPosition=text.indexOf('world-photo-enrichment-v85.js?v=85');
-const catalogPosition=text.indexOf('world-curated-photos.js?v=85');
+const catalogPosition=text.indexOf('world-curated-photos.js?v=86');
 assert(sourcePosition>=0&&enrichmentPosition>sourcePosition&&catalogPosition>enrichmentPosition,
  'The discovery and enrichment manifests must load before the World catalogue');
 assert(sw.includes("'./world-photo-discovery-data.js'"),'Offline cache missing data manifest');
