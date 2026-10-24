@@ -28,7 +28,33 @@
     tbilisi:['tbilisi','narikala','metekhi'],
     rome:['rome','colosseum','pantheon'],
     istanbul:['istanbul','hagia sophia','galata'],
-    kyoto:['kyoto','fushimi inari','kiyomizu']
+    kyoto:['kyoto','fushimi inari','kiyomizu'],
+    tbilisi:['tbilisi','narikala','metekhi','sameba'],
+    hongkong:['hong kong','victoria harbour','victoria peak','tsim sha tsui'],
+    shanghai:['shanghai','bund','pudong','oriental pearl'],
+    shenzhen:['shenzhen','ping an finance','futian'],
+    beijing:['beijing','forbidden city','temple of heaven','tiananmen'],
+    bohol:['bohol','chocolate hills','panglao'],
+    coron:['coron','kayangan lake','twin lagoon','palawan'],
+    bali:['bali','uluwatu','tanah lot','ubud'],
+    hanoi:['hanoi','hoan kiem','old quarter'],
+    hochiminh:['ho chi minh','saigon','ben thanh'],
+    bangkok:['bangkok','wat arun','grand palace'],
+    kualalumpur:['kuala lumpur','petronas towers','batu caves'],
+    almaty:['almaty','kok tobe','medeau'],
+    samarkand:['samarkand','registan','shah i zinda'],
+    machupicchu:['machu picchu','machupicchu'],
+    angkor:['angkor wat','bayon','ta prohm'],
+    venice:['venice','rialto','grand canal','san marco'],
+    dublin:['dublin','ha penny bridge','trinity college'],
+    edinburgh:['edinburgh','calton hill','royal mile'],
+    athens:['athens','acropolis','parthenon'],
+    rio:['rio de janeiro','christ the redeemer','sugarloaf'],
+    dubai:['dubai','burj khalifa','palm jumeirah'],
+    banff:['banff','lake louise','moraine lake'],
+    victoriafalls:['victoria falls','mosi oa tunya'],
+    sossusvlei:['sossusvlei','deadvlei'],
+    petra:['petra','al khazneh','treasury jordan']
   });
   const rejected=/\b(?:collage|montage|photomontage|flag|poster|map|locator|drawing|diagram|logo|seal|coats? of arms|illustration|infographic|screenshot|portrait of|selfie|food menu|shop sign|chart|atlas)\b/i;
   const clean=v=>String(v||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -59,7 +85,15 @@
       singapore:['Singapore Marina Bay','Singapore Gardens by the Bay','Singapore skyline'],
       paris:['Paris Eiffel Tower','Paris Seine','Paris Sacre Coeur'],
       capetown:['Cape Town Table Mountain','Cape Town waterfront'],
-      newyork:['New York Manhattan skyline','New York Brooklyn Bridge']
+      newyork:['New York Manhattan skyline','New York Brooklyn Bridge'],
+      hongkong:['Hong Kong Victoria Harbour','Hong Kong skyline','Victoria Peak Hong Kong'],
+      tbilisi:['Tbilisi Narikala fortress','Tbilisi Old Town','Tbilisi Sameba Cathedral'],
+      beijing:['Beijing Forbidden City','Beijing Temple of Heaven','Beijing skyline'],
+      shanghai:['Shanghai Bund skyline','Shanghai Pudong skyline','Shanghai historic streets'],
+      seoul:['Seoul Gyeongbokgung Palace','Seoul Namsan tower','Seoul Han River'],
+      kyoto:['Kyoto Fushimi Inari','Kyoto Kiyomizu-dera','Kyoto Gion'],
+      paris:['Paris Eiffel Tower','Paris Seine','Paris Montmartre'],
+      singapore:['Singapore Marina Bay','Singapore Gardens by the Bay','Singapore Botanic Gardens']
     };
     if(landmark[location.id])return landmark[location.id];
     if(location.worldKind==='ocean'||location.worldKind==='sea')
@@ -102,12 +136,23 @@
       for(const photo of lead||[])add(photo,{lead:true});
     }
     if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    // Associated with the exact Wikipedia article, then checked against the
+    // named destination or landmark (article membership alone is insufficient).
+    if(typeof api.searchArticleImages==='function'){
+      const article=await safe(api.searchArticleImages(location.wiki||properName(location)));
+      for(const photo of (article||[]).sort((a,b)=>imageScore(b,location)-imageScore(a,location)))add(photo);
+    }
+    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
     // Commons coordinates verify the photograph was taken near this city; this
     // catches excellent images whose filename doesn't contain the place name.
     let nearbyCandidates=[];
     if(geoNearby(location)&&typeof api.searchNearby==='function'){
       const nearby=await safe(api.searchNearby(location.lat,location.lon,{radius:7000,limit:24}));
-      nearbyCandidates=(nearby||[]).sort((a,b)=>imageScore(b,location)-imageScore(a,location));
+      // Geotag alone does not make a feature photo: reject generic interiors,
+      // portraits and filenames lacking a descriptive scenic/landmark cue.
+      const scenic=/panoram|skyline|aerial|scenic|view|waterfront|sunset|sunrise|cityscape|landscape|historic|bridge|harbour|harbor|mountain|cathedral|temple|beach|coast|park|garden|square|old town|palace|castle|street|river|lake|fortress|waterfall/i;
+      nearbyCandidates=(nearby||[]).filter(item=>scenic.test(item.file+' '+(item.description||'')))
+        .sort((a,b)=>imageScore(b,location)-imageScore(a,location));
       // Leave room for pictures of the destination's recognisable landmarks.
       const slots=Math.max(0,3-collected.length);
       for(const photo of nearbyCandidates.slice(0,slots))add(photo,{geo:true});
