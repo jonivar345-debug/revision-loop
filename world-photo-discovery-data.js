@@ -5893,17 +5893,16 @@
   ],
   "sea-east-china": [
     {
-      "file": "East China Sea 2017 02 25 (33105952485).jpg",
-      "author": "Antti Lipponen",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "East China Sea near Shanghai 25 February 2017 as seen by Sentinel-2A satellite.",
-      "width": 4806,
-      "height": 1534,
+      "file": "View of the East China Sea from Kunigami Forest Park 2018.JPG",
+      "author": "Kugel~commonswiki",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Ground-level East China Sea view including Iheya-Izena Islands from Kunigami Forest Park, Okinawa",
+      "width": 4000,
+      "height": 3000,
       "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "East China Sea",
-      "wasArticleLead": false
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     },
     {
       "file": "Dayu Bay - Damen Shan - P1210677.JPG",
@@ -5936,17 +5935,16 @@
   ],
   "sea-mediterranean": [
     {
-      "file": "Area of the Mediterranean.jpg",
-      "author": "Janwillemvanaalst",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Mediterranean Sea , Compiled from Natural Earth open data, this map from 2020 shows land cover, hillshade, populated places, infrastructure and administrative d",
-      "width": 5441,
-      "height": 2699,
+      "file": "Coastal aerial of Barcelona with Port-Nou in foreground.jpg",
+      "author": "Joe Mabel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Mediterranean Sea and Barcelona coastline photographed from offshore, with Port-Nou in the foreground",
+      "width": 6000,
+      "height": 4000,
       "editorialMetadata": true,
-      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
-      "sourceArticle": "Mediterranean Sea",
-      "wasArticleLead": false
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     },
     {
       "file": "Aerial image of Stromboli (view from the northeast).jpg",
@@ -6028,16 +6026,16 @@
       "sourceArticle": "Commons exact-title file search: Sea of Okhotsk"
     },
     {
-      "file": "Raikoke Volcano ash cloud, Kuril Islands, Sea of Okhotsk, Russia - June 23rd, 2019 (48122331232).jpg",
-      "author": "Pierre Markuse from Hamm, Germany",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Contains modified Copernicus Sentinel data [2019], processed by <a href=\" https://twitter.com/Pierre_Markuse \" rel=\"noreferrer nofollow\">Pierre Markuse</a> Raikoke Volcano ash cloud, Kuril Islands, Se",
-      "width": 4172,
-      "height": 4242,
+      "file": "Ryuhyo abashiri oki.JPG",
+      "author": "Muramasa~commonswiki",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Drift ice in the Sea of Okhotsk offshore of Abashiri, Hokkaido, Japan",
+      "width": 3648,
+      "height": 2736,
       "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Sea of Okhotsk"
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     }
   ],
   "sea-philippine": [
@@ -6133,16 +6131,16 @@
   ],
   "sea-weddell": [
     {
-      "file": "Weddell Sea, Antartica.jpg",
-      "author": "Coordenação-Geral de Observação da Terra/INPE",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Imagem do Mar de Weddell, na Antártica com cerca de 52 km x 30 km, com iceberg tabular, na sexta passada. A 74 graus S, iceberg com 10 km2, e se distingue das placas de banquisa de água do mar congela",
-      "width": 10457,
-      "height": 5882,
+      "file": "Emperor-iceberg hg.jpg",
+      "author": "Hannes Grobe/AWI",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Emperor penguin beside an iceberg in Atka Bay, Weddell Sea, Antarctica",
+      "width": 2360,
+      "height": 1591,
       "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Weddell Sea"
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT individually visually inspected",
+      "sourceArticle": "Commons manually source-checked photographic replacement for map or satellite"
     },
     {
       "file": "Pygoscelis papua -near Weddell Sea, Antarctica -nests-8 (1).jpg",
