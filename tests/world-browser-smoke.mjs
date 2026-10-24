@@ -145,6 +145,14 @@ try{
  assert.equal(result.points,700,'Existing alias was charged');
  assert.equal(result.equippedLocation,'victoria_falls','Alias equipment changed');
  await page.evaluate(()=>buy('location','tbilisi'));
+ const focussed=await page.evaluate(()=>{
+   const p=LOCATIONS.find(x=>x.id==='tbilisi');
+   const pins=visibleGlobePins(700,360);
+   return {lon:globeLon,lat:globeLat,location:p,owned:pins.find(x=>x.location.id==='tbilisi')?.owned};
+ });
+ assert(Math.abs(focussed.lon-focussed.location.lon)<.001&&Math.abs(focussed.lat-focussed.location.lat)<.001,
+   'Unlocking a location must turn the Earth to its real position');
+ assert(focussed.owned===true,'Newly purchased Tbilisi pin did not become unlocked');
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('revisionLoopProfile11')));
  const actualCost=await page.evaluate(()=>LOCATIONS.find(x=>x.id==='tbilisi').cost);
  assert.equal(result.points,700-actualCost);
