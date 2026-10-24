@@ -56,7 +56,7 @@ assert.equal(complete,376,'All 376 galleries must retain four distinct source ca
 assert.equal(checked,19,'Nineteen replacement photographs must stay present');
 const index=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
-assert(index.includes('world-photo-discovery-data.js?v=88'));
-assert(index.includes('world-photo-enrichment-v85.js?v=88'));
-assert(sw.includes('revision-loop-v88-photo-quality'));
+assert(index.includes('world-photo-discovery-data.js?v=89'));
+assert(index.includes('world-photo-enrichment-v85.js?v=89'));
+assert(sw.includes('revision-loop-v89-country-gallery'));
 console.log('PASS world-photo-quality v88: '+complete+'/376 source-complete, '+checked+' place-correct replacement photos, '+distinctTotal+' distinct location-file pairs. Not image-pixel review.');
