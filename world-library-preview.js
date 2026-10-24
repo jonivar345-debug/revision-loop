@@ -194,7 +194,7 @@ const showArticle = async item => {
     panel.focus({preventScroll:true});
     if(automatedMediaHost){
       // On-demand only. Never show an unlicensed image or assume Commons search proves the location.
-      window.RevisionWorldCommonsMedia.search((article.focus||article.country)+' '+article.country,{limit:2})
+      window.RevisionWorldCommonsMedia.searchPage(article.focus||article.country)
         .then(images=>{
           if(version!==renderVersion||!automatedMediaHost.isConnected)return;
           window.RevisionWorldCommonsMedia.append(automatedMediaHost,images,{emptyText:'No automatically licensed images found for this feature. Check the source links.'});
