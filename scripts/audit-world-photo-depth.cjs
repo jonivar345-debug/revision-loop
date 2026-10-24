@@ -10,6 +10,7 @@ const data=require('../world-photo-discovery-data.js');
 const enrichment=require('../world-photo-enrichment-v85.js');
 global.window={RevisionWorldDiscoveryPhotos:data,RevisionWorldPhotoEnrichment:enrichment};
 const catalog=require('../world-curated-photos.js');
+const gallery=require('../world-location-photo-gallery.js');
 const raw=fs.readFileSync(path.join(root,'editorial/world_photo_collection_template_376.csv'),'utf8');
 const rows=raw.split(/\r?\n/).slice(1).filter(Boolean).map(line=>{
  const a=[...line.matchAll(/"([^"]*)"/g)].map(x=>x[1]);return{id:a[3],name:a[0],kind:a[1],region:a[2]};
@@ -19,7 +20,7 @@ const result={date:'2026-10-24',totalDestinations:rows.length,completeFourSource
 for(const loc of rows){
  const files=catalog.get(loc.id),unique=new Map();
  for(const item of files){
-  if(!item.file||!item.author||!item.licenseUrl||!item.filePage)continue;
+  if(!item.file||!item.author||!item.licenseUrl||!item.filePage||!gallery.allowed(item,{id:loc.id,name:loc.name,worldKind:loc.kind}))continue;
   const normalized=item.file.replace(/^File:/i,'').replace(/_/g,' ').toLowerCase().trim();
   if(!unique.has(normalized))unique.set(normalized,item);
  }
