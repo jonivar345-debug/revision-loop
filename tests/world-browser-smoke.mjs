@@ -112,6 +112,32 @@ try{
    return visibleGlobePins(700,360).length;
  });
  assert(allPinState>globeState.pinCount,'Show-all toggle should reveal accurate hidden markers');
+ await page.locator('.tab[data-panel="shop"]').click();
+ await page.locator('#globePlaceSearch').fill('London');
+ await page.locator('#globeFindPlace').click();
+ await page.locator('#globeLocationInfo .globe-info-top h3').waitFor({timeout:10000});
+ assert.equal((await page.locator('#globeLocationInfo .globe-info-top h3').textContent())?.trim(),'London');
+ assert(await page.evaluate(()=>Math.abs(globeLon+0.1276)<0.05),'London camera is not at the real longitude');
+ await page.locator('#detailPhotoOne .location-accurate-map').waitFor({timeout:12000});
+ const imageState=await page.evaluate(()=>{
+   const photo=document.querySelector('#detailPhotoOne .location-accurate-map');
+   return {title:document.querySelector('#detailPhotoOne .location-map-caption')?.textContent,
+     imageAlt:photo?.getAttribute('aria-label'),width:photo?.width,height:photo?.height};
+ });
+ assert(imageState.title.includes('London'),'Fallback uses unrelated place name');
+ assert(imageState.imageAlt.includes('London')&&imageState.width===520,'Missing real-world location map fallback');
+ // A genuine canvas click on the accurately projected owned pin opens the guide.
+ await page.evaluate(()=>setLocationInfo('london'));
+ const locationPixel=await page.evaluate(()=>{
+   const l=LOCATIONS.find(x=>x.id==='london'),p=project(l.lat,l.lon,700,360);
+   const bounds=document.getElementById('globe').getBoundingClientRect();
+   return {x:p.x*bounds.width/700,y:p.y*bounds.height/360};
+ });
+ await page.locator('#globe').click({position:locationPixel});
+ await page.locator('#globeLocationInfo .globe-info-top h3').waitFor({timeout:10000});
+ assert.equal((await page.locator('#globeLocationInfo h3').first().textContent())?.trim(),'London');
+ console.log('PASS geographic interaction: London search centres the exact longitude, location-map fallback is correct, and clicking an owned pin opens its article.');
+
  await page.evaluate(()=>buy('location','capetown'));
  await page.evaluate(()=>buy('location','addis'));
  await page.evaluate(()=>buy('location','victoriafalls'));
