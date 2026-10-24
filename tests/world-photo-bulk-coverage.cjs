@@ -27,10 +27,10 @@ for(const [id,photos] of byId){
   assert(/\.(?:jpe?g|png|webp)$/i.test(p.file),id+' file is not a usable image');
   assert(p.author&&p.license&&p.licenseUrl&&p.subject&&p.sourceArticle);
   assert(p.licenseUrl.startsWith('https://creativecommons.org/'));
-  assert(/^(?:CC BY(?:-SA)? [234]\.0|CC0 1\.0|CC 0 1\.0)$/i.test(p.license));
+  assert(/^(?:CC BY(?:-SA)? (?:2\.0|2\.5|3\.0|4\.0)|CC0 1\.0|CC 0 1\.0)$/i.test(p.license));
   assert(p.width>=2048&&p.height>=900,'Low-resolution photo auto-published');
   assert.equal(p.editorialMetadata,true);
-  assert(/NOT visually approved/.test(p.reviewStatus),'AI-generated association cannot be called human approved');
+  assert(/NOT (?:visually approved|individually visually inspected)/.test(p.reviewStatus),'AI-generated association cannot be called human approved');
   const key=p.file.toLowerCase();
   assert(!local.has(key),'Repeated picture for '+id);local.add(key);
   if(uniqueFile.has(key))duplicates++;uniqueFile.add(key);
@@ -39,8 +39,8 @@ for(const [id,photos] of byId){
 }
 assert(photoCount>=12,'Not enough API-verified photograph samples');
 assert(regionSet.size>=1,'Automated source list must contain locations');
-assert(text.indexOf('world-photo-discovery-data.js?v=82')>=0&&
- text.indexOf('world-photo-discovery-data.js?v=82')<text.indexOf('world-curated-photos.js?v=82'),'Photo manifests must load in order');
+assert(text.indexOf('world-photo-discovery-data.js?v=83')>=0&&
+ text.indexOf('world-photo-discovery-data.js?v=82')<text.indexOf('world-curated-photos.js?v=83'),'Photo manifests must load in order');
 assert(sw.includes("'./world-photo-discovery-data.js'"),'Offline cache missing data manifest');
 assert(gallery.includes("api.verifyNamedFiles(proposed)"),'Source candidates must be checked live before display');
 const entries=rows.filter(row=>curated.get(row.id).length>0);

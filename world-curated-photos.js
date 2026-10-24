@@ -2764,6 +2764,52 @@
         "country-bo",
         "SAL - Salt piles on Salar de Uyuni, Bolivia, 2013.jpg"
       ]
+    ],
+    "bergen": [
+      [
+        "country-no",
+        "Bryggen, Bergen, Norway.jpg"
+      ]
+    ],
+    "ljubljana": [
+      [
+        "country-si",
+        "Triple Bridge, Ljubljana.jpg"
+      ]
+    ],
+    "chefchaouen": [
+      [
+        "country-ma",
+        "Chefchaouen.JPG"
+      ]
+    ],
+    "granada": [
+      [
+        "country-es",
+        "Alhambra from Generalife (2017).jpg"
+      ],
+      [
+        "country-es",
+        "-Alhambra-.jpg"
+      ]
+    ],
+    "krakow": [
+      [
+        "country-pl",
+        "02021 0762 Main Market Square in Kraków.jpg"
+      ]
+    ],
+    "tallinn": [
+      [
+        "country-ee",
+        "Tallinna vanalinn, Tallinn Old Town.jpg"
+      ]
+    ],
+    "vilnius": [
+      [
+        "country-lt",
+        "Vilnius Old Town 2024-07-02.jpg"
+      ]
     ]
   });
   function reusedFor(id){
