@@ -23,7 +23,8 @@ const list={tokyo:['Shibuya Crossing','Tokyo Tower','Sensō-ji','Tokyo Skytree']
  istanbul:['Hagia Sophia','Galata Tower','Bosphorus Bridge','Grand Bazaar'],
  barcelona:['Sagrada Família','Parc Güell','Casa Batlló','Gothic Quarter'],
  venice:['Grand Canal','St Mark','Bridge of Sighs','gondolas'],
- dubrovnik:['Old Town','city walls','Stradun','Minčeta Tower']};
+ dubrovnik:['Old Town','city walls','Stradun','Minčeta Tower'],
+ bangkok:['Grand Palace','Wat Arun','Chao Phraya','Chinatown']};
 let total=0;
 for(const [city,subjects] of Object.entries(list)){
  const records=curated.get(city);
@@ -37,7 +38,7 @@ for(const [city,subjects] of Object.entries(list)){
   assert.equal(p.checked,false,'Source candidates must not bypass live Commons verification');
   assert(p.locationVerified);
   assert(p.author&&p.license&&p.filePage&&p.licenseUrl);
-  if(['hongkong','sydney','shanghai','beijing','kyoto','rome','istanbul','barcelona','venice','dubrovnik'].includes(city)){
+  if(['hongkong','sydney','shanghai','beijing','kyoto','rome','istanbul','barcelona','venice','dubrovnik','bangkok'].includes(city)){
    assert(p.width>=2048&&p.height>=900,city+' original source is too small');
    assert(p.reviewStatus.includes('2026-10-24'),'Exact Commons source check missing');
   }
@@ -48,8 +49,8 @@ for(const [city,subjects] of Object.entries(list)){
 }
 const html=fs.readFileSync(path.join(base,'index.html'),'utf8');
 const worker=fs.readFileSync(path.join(base,'sw.js'),'utf8');
-assert(html.includes('world-curated-photos.js?v=80'),'Latest photo selection script must bypass stale URL caches');
-assert(worker.includes('revision-loop-v80-historic-city-photo-batch'),'Offline shell version must be advanced');
+assert(html.includes('world-curated-photos.js?v=81'),'Latest photo selection script must bypass stale URL caches');
+assert(worker.includes('revision-loop-v81-17-city-photo-batch'),'Offline shell version must be advanced');
 const fakeMedia={
  verifyNamedFiles:async proposals=>proposals.map((p,i)=>({
   ...p,url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/example-'+i+'.jpg/2048px-example.jpg',
@@ -78,5 +79,5 @@ const fakeMedia={
  };
  const none=await gallery.photosFor({id:'seoul',name:'Seoul'},{media:failed});
  assert.equal(none.length,0,'Outdated unverified images may not bypass source verification');
- console.log('PASS featured cities: '+total+' source-checked photo candidates across 16 places, high-resolution delivery, four-image selection and safe Commons failure handling');
+ console.log('PASS featured cities: '+total+' source-checked photo candidates across 17 places, high-resolution delivery, four-image selection and safe Commons failure handling');
 })().catch(e=>{console.error(e);process.exitCode=1});
