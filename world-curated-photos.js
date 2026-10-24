@@ -3421,6 +3421,17 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "editorialMetadata": true,
         "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Dakar, la corniche.jpg",
+        "author": "Tbo47",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "Dakar's Atlantic coastal Corniche, Senegal",
+        "width": 4080,
+        "height": 3072,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page inspected 2026-10-24 for author, Creative Commons licence, physical destination and original image dimensions. Still subject to live Commons verification and human image-quality review."
       }
     ],
     "country-ag": [
@@ -3576,6 +3587,28 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "editorialMetadata": true,
         "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Al-Qusayr beach, Red Sea.jpg",
+        "author": "Summering2018",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "The Red Sea coastline at Al-Qusayr, Egypt",
+        "width": 6197,
+        "height": 4426,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page inspected 2026-10-24 for author, Creative Commons licence, physical destination and original image dimensions. Still subject to live Commons verification and human image-quality review."
+      },
+      {
+        "file": "Sunset-at redsea shore.jpg",
+        "author": "Neurotologist",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Sunset over Egypt's Red Sea shore beneath the Etaka mountains",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page inspected 2026-10-24 for author, Creative Commons licence, physical destination and original image dimensions. Still subject to live Commons verification and human image-quality review."
       }
     ],
     "country-bb": [
