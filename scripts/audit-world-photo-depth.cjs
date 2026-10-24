@@ -7,7 +7,8 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..');
 const data=require('../world-photo-discovery-data.js');
-global.window={RevisionWorldDiscoveryPhotos:data};
+const enrichment=require('../world-photo-enrichment-v85.js');
+global.window={RevisionWorldDiscoveryPhotos:data,RevisionWorldPhotoEnrichment:enrichment};
 const catalog=require('../world-curated-photos.js');
 const raw=fs.readFileSync(path.join(root,'editorial/world_photo_collection_template_376.csv'),'utf8');
 const rows=raw.split(/\r?\n/).slice(1).filter(Boolean).map(line=>{
