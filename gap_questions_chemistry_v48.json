@@ -807,6 +807,43 @@
       "difficulty": "hard",
       "groupId": "gap_v48_chem_20",
       "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_21",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "topic": "Entropy",
+      "subtopic": "Entropy",
+      "revisionTopic": "Entropy",
+      "courseTopic": "Thermodynamics",
+      "marks": 4,
+      "prompt": "For 2NO(g) + O2(g) -> 2NO2(g), entropies are NO 211, O2 205, NO2 240 J K-1 mol-1. Calculate delta S and explain its sign.",
+      "markPoints": [
+        "Products: 2 x 240 = 480",
+        "Reactants: 2 x 211 + 205 = 627",
+        "Delta S = 480 - 627 = -147 J K-1 mol-1",
+        "Three moles of gas give two; fewer possible gas arrangements."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_21",
+      "groupOrder": 1,
+      "modelAnswer": "Products: 2 x 240 = 480. Reactants: 2 x 211 + 205 = 627. Delta S = 480 - 627 = -147 J K-1 mol-1. Three moles of gas give two; fewer possible gas arrangements."
     }
   ]
 }
