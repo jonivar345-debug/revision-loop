@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 23,
-  "updatedAt": "2026-10-24T13:25:00.000Z",
+  "deckVersion": 24,
+  "updatedAt": "2026-10-24T14:41:00.000Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -832,8 +832,8 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What equation links ΔG, ΔH, T and ΔS, and what unit trap matters?",
-      "back": "ΔG = ΔH − TΔS. ΔH and TΔS must use matching units.",
+      "front": "State the Gibbs free-energy equation and the unit rule.",
+      "back": "ΔG = ΔH − TΔS. T in K; use matching energy units for ΔH and TΔS (convert J to kJ if needed).",
       "active": true,
       "concepts": [
         [
@@ -855,6 +855,10 @@
           "units",
           "same units",
           "matching units"
+        ],
+        [
+          "k",
+          "kelvin"
         ]
       ],
       "stage": "A2",
@@ -4804,7 +4808,7 @@
       "subject": "Chemistry",
       "topic": "Gibbs free energy",
       "kind": "content",
-      "priority": 1,
+      "priority": 2,
       "scope": "mock",
       "front": "What sign of ΔG indicates thermodynamic feasibility under the stated conditions?",
       "back": "ΔG ≤ 0; negative ΔG is feasible.",
@@ -7221,21 +7225,22 @@
       "subject": "Chemistry",
       "topic": "Entropy",
       "kind": "content",
-      "priority": 1,
-      "scope": "full",
+      "priority": 2,
+      "scope": "mock",
       "stage": "A2",
-      "mock": false,
+      "mock": true,
       "front": "What is entropy, qualitatively?",
-      "back": "A measure of the dispersal of energy / disorder of a system.",
+      "back": "A measure of disorder of a system, related to the possible arrangements of particles and energy.",
       "active": true,
       "concepts": [
         [
-          "dispersal",
-          "spread"
+          "disorder",
+          "possible arrangements"
         ],
         [
-          "energy",
-          "disorder"
+          "system",
+          "particles",
+          "energy"
         ]
       ],
       "taught": true,
@@ -13955,6 +13960,359 @@
       "back": "Ionic charge/radius → attraction; model-vs-Born–Haber discrepancies; anion polarisation → covalent character.",
       "accept": [
         "Ionic charge/radius → attraction; model-vs-Born–Haber discrepancies; anion polarisation → covalent character."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_entropy_change",
+      "topic": "Entropy",
+      "revisionTopic": "Entropy",
+      "front": "How do you calculate ΔS° from standard molar entropies?",
+      "back": "ΔS° = ΣS°(products) − ΣS°(reactants); multiply each S° by its balanced-equation coefficient.",
+      "concepts": [
+        [
+          "products"
+        ],
+        [
+          "reactants"
+        ],
+        [
+          "subtract",
+          "minus"
+        ],
+        [
+          "coefficients",
+          "multiply"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_gibbs_threshold",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "How do you calculate a Gibbs feasibility threshold temperature?",
+      "back": "Set ΔG = 0, then T = ΔH / ΔS using matching energy units. Check whether it is a minimum or maximum.",
+      "concepts": [
+        [
+          "delta g",
+          "dg",
+          "zero"
+        ],
+        [
+          "delta h",
+          "dh"
+        ],
+        [
+          "delta s",
+          "ds"
+        ],
+        [
+          "units"
+        ],
+        [
+          "minimum",
+          "maximum",
+          "sign"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_signs_high_temp",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "Which ΔH and ΔS signs make a reaction feasible only at high T?",
+      "back": "ΔH positive, ΔS positive: as T rises, TΔS can exceed ΔH, making ΔG negative.",
+      "concepts": [
+        [
+          "positive",
+          "+"
+        ],
+        [
+          "delta h",
+          "dh"
+        ],
+        [
+          "delta s",
+          "ds"
+        ],
+        [
+          "high",
+          "higher"
+        ],
+        [
+          "delta g",
+          "dg"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_signs_low_temp",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "Which ΔH and ΔS signs make a reaction feasible only at low T?",
+      "back": "ΔH negative, ΔS negative: at low T the favourable enthalpy dominates; high T makes ΔG positive.",
+      "concepts": [
+        [
+          "negative",
+          "-"
+        ],
+        [
+          "delta h",
+          "dh"
+        ],
+        [
+          "delta s",
+          "ds"
+        ],
+        [
+          "low",
+          "lower"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_gibbs_graph",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "On a graph of ΔG against T, what are gradient and intercept?",
+      "back": "Gradient = −ΔS; vertical intercept = ΔH; crossing ΔG = 0 gives the feasibility boundary.",
+      "concepts": [
+        [
+          "gradient"
+        ],
+        [
+          "delta s",
+          "ds"
+        ],
+        [
+          "intercept"
+        ],
+        [
+          "delta h",
+          "dh"
+        ],
+        [
+          "delta g",
+          "dg"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_sixmark_outline",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "Outline a full six-mark reply to three false claims about Gibbs feasibility.",
+      "back": "1) Endothermic can be feasible if TΔS > ΔH. 2) ΔG < 0 need not be fast: high Ea. 3) Raising T helps if ΔS > 0, hinders if ΔS < 0.",
+      "concepts": [
+        [
+          "endothermic",
+          "positive dh"
+        ],
+        [
+          "entropy",
+          "t delta s",
+          "tds"
+        ],
+        [
+          "activation",
+          "ea",
+          "barrier"
+        ],
+        [
+          "temperature"
+        ],
+        [
+          "positive",
+          "negative"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_endothermic_feasible",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "Explain how an endothermic reaction can be thermodynamically feasible.",
+      "back": "With ΔH > 0 and ΔS > 0, sufficiently high T gives TΔS > ΔH, so ΔG = ΔH − TΔS < 0.",
+      "concepts": [
+        [
+          "delta h",
+          "dh",
+          "endothermic"
+        ],
+        [
+          "delta s",
+          "ds",
+          "entropy"
+        ],
+        [
+          "temperature",
+          "high"
+        ],
+        [
+          "delta g",
+          "dg",
+          "negative"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_negative_not_fast",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "Why does negative ΔG not guarantee a rapid reaction?",
+      "back": "ΔG predicts thermodynamic feasibility, not rate. A high activation energy can make the reaction very slow.",
+      "concepts": [
+        [
+          "feasible",
+          "thermodynamic"
+        ],
+        [
+          "not rate",
+          "slow",
+          "speed"
+        ],
+        [
+          "activation energy",
+          "ea",
+          "barrier"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_catalyst_gibbs",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "Does a catalyst change ΔG or thermodynamic feasibility?",
+      "back": "No. A catalyst lowers activation energy and increases rate; it does not change ΔG for the overall reaction.",
+      "concepts": [
+        [
+          "no",
+          "not change"
+        ],
+        [
+          "activation energy",
+          "ea"
+        ],
+        [
+          "rate",
+          "speed"
+        ],
+        [
+          "delta g",
+          "dg"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "id": "chem_entropy_gibbs_recap_20261024_entropy_temp_effect",
+      "topic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "front": "How does increasing T affect ΔG when ΔS is positive versus negative?",
+      "back": "For ΔS > 0, ΔG decreases (more favourable). For ΔS < 0, ΔG increases (less favourable).",
+      "concepts": [
+        [
+          "positive"
+        ],
+        [
+          "negative"
+        ],
+        [
+          "increases",
+          "decreases"
+        ],
+        [
+          "delta g",
+          "dg"
+        ]
       ]
     }
   ],
