@@ -50,7 +50,7 @@ assert(regions.size>=4,'Photo enrichment must span at least four World regions')
 for(const id of ['london','busan'])assert.equal(curated.get(id).filter(x=>x.checked).length,4,'Do not change original four pixel-reviewed gallery pictures');
 const shell=fs.readFileSync(require('node:path').join(base,'index.html'),'utf8');
 const worker=fs.readFileSync(require('node:path').join(base,'sw.js'),'utf8');
-assert(shell.indexOf('world-photo-enrichment-v85.js?v=89')<shell.indexOf('world-curated-photos.js?v=89'),'Enrichment manifest must load before curated registry');
-assert(worker.includes("revision-loop-v89-country-gallery"),'Offline cache must pick up source changes');
+assert(shell.indexOf('world-photo-enrichment-v85.js?v=90')<shell.indexOf('world-curated-photos.js?v=90'),'Enrichment manifest must load before curated registry');
+assert(worker.includes("revision-loop-v90-stronger-covers"),'Offline cache must pick up source changes');
 assert(worker.includes("'./world-photo-enrichment-v85.js'"),'Offline preload must include source manifest');
 console.log('PASS v85: '+four+'/376 locations with >=4 distinct Commons sources, '+allFiles+' distinct location-file pairs; '+entries.length+' enriched galleries with '+newCount+' live-CC-sourced extras, '+short+' still under four, none unsourced');
