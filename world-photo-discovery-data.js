@@ -1198,32 +1198,6 @@
       "sourceArticle": "Commons exact-title file search: Bosnia and Herzegovina"
     }
   ],
-  "country-bb": [
-    {
-      "file": "066a Britannia in Port of Bridgetown at night - Barbados - 3 1 - V-P.jpg",
-      "author": "Virtual-Pano",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Cruise ship Britannia night view of starboard side - alongside in Bridgetown, Barbados - 2.25:1 format - stitched from 4 images",
-      "width": 14469,
-      "height": 6381,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Barbados"
-    },
-    {
-      "file": "Absolut Watering Hole, Christ Church, Barbados.jpg",
-      "author": "Lewis Hulbert",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Absolut Watering Hole",
-      "width": 3928,
-      "height": 2403,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Barbados"
-    }
-  ],
   "country-bd": [
     {
       "file": "Bangladesh Tea Research Institute (02).jpg",
@@ -1233,30 +1207,6 @@
       "subject": "Bangladesh Tea Research Institute , (west exposure, front) Sreemangal, Maulvibazar District, Sylhet, Bangladesh.",
       "width": 4600,
       "height": 3059,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bangladesh"
-    },
-    {
-      "file": "Portal of Bangladesh Naval Academy (07).jpg",
-      "author": "Aminulbn",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Portal of Bangladesh Naval Academy , Chittagong",
-      "width": 4288,
-      "height": 2848,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bangladesh"
-    },
-    {
-      "file": "Butterfly Park Bangladesh (01).jpg",
-      "author": "Roy Upam",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Welcome sign in Butterfly Park Bangladesh , Chittagong",
-      "width": 4000,
-      "height": 6016,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Bangladesh"
@@ -1275,18 +1225,6 @@
     }
   ],
   "country-be": [
-    {
-      "file": "De Molen (windmill) and the nuclear power plant cooling tower in Doel, Belgium (DSCF3859).jpg",
-      "author": "Trougnouf",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "De Molen (windmill) and the nuclear power plant cooling tower in Doel , Belgium",
-      "width": 4821,
-      "height": 3295,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Belgium"
-    },
     {
       "file": "Sainte-Elisabeth church in Binche, Belgium (DSCF7800).jpg",
       "author": "Trougnouf (Benoit Brummer)",
@@ -1437,18 +1375,6 @@
       "subject": "Muara Port, Brunei on 10 December 2025.",
       "width": 6960,
       "height": 4640,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Brunei"
-    },
-    {
-      "file": "Diamondback Airboats (Brunei 2024).jpg",
-      "author": "Chin Yu Chu",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Taken during the 63rd anniversary of the Royal Brunei Armed Forces (RBAF) on 1 June 2024",
-      "width": 6628,
-      "height": 4229,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Brunei"
@@ -1666,18 +1592,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Cuba"
-    },
-    {
-      "file": "2017, cuba, jardines aggressor, patricia, red lipped blennie (36883094923).jpg",
-      "author": "q phia",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Red lipped blennie ( Ophioblennius atlanticus ). Coast of Cuba",
-      "width": 4519,
-      "height": 2824,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Cuba"
     }
   ],
   "country-cv": [
@@ -1695,18 +1609,6 @@
     },
     {
       "file": "Ministério da Cultura - Cabo Verde.jpg",
-      "author": "Ministério da Cultura",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Ministro da Cultura do Brasil, Juca Ferreira, visitou o Centro Cultural Brasil em Cabo Verde",
-      "width": 4368,
-      "height": 2912,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Cabo Verde"
-    },
-    {
-      "file": "Ministério da Cultura - Cabo Verde (2).jpg",
       "author": "Ministério da Cultura",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -1796,18 +1698,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Denmark"
-    },
-    {
-      "file": "Beached fishing vessel, Nørre Vorupør, Denmark 2017-04-14 3.jpg",
-      "author": "Colin",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Beached fishing vessel Skagerak , Nørre Vorupør, Denmark",
-      "width": 4695,
-      "height": 2894,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Denmark"
     }
   ],
   "country-dm": [
@@ -1819,18 +1709,6 @@
       "subject": "Dominica Botanical Gardens in Roseau , Saint George parish, Dominica",
       "width": 5512,
       "height": 3314,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Dominica"
-    },
-    {
-      "file": "Dominica, Karibik - Flossie's Supermarket - Hanover Street - panoramio.jpg",
-      "author": "giggel",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "subject": "Dominica, Karibik - Flossie's Supermarket - Hanover Street",
-      "width": 4000,
-      "height": 2504,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Dominica"
@@ -2209,18 +2087,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Iran"
-    },
-    {
-      "file": "Casa histórica de Boroujerdi, Kashan, Irán, 2016-09-19, DD 40-42 HDR.jpg",
-      "author": "Diego Delso",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "This is a photo of a monument in Iran identified by the ID",
-      "width": 7385,
-      "height": 4874,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Iran"
     }
   ],
   "country-is": [
@@ -2327,18 +2193,6 @@
       "sourceArticle": "Commons exact-title file search: Cambodia"
     },
     {
-      "file": "Sihanoukville. Fishing boats of Cambodia.jpg",
-      "author": "Dmitry Makeev",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Sihanoukville. Fishing boats of Cambodia.",
-      "width": 5000,
-      "height": 3334,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Cambodia"
-    },
-    {
       "file": "Tonle Sap Siem Reap Cambodia Girl-steering-her-boat-01.jpg",
       "author": "CEphoto, Uwe Aranas",
       "license": "CC BY-SA 3.0",
@@ -2388,30 +2242,6 @@
       "subject": "Brimstone Hill Fortress , UNESCO World Heritage Site Ref. Number 910 , March 2016. Detail of the Orientation Center.",
       "width": 5726,
       "height": 2903,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Saint Kitts and Nevis"
-    },
-    {
-      "file": "Saint Kitts - Brimstone Hill Fortress 01.JPG",
-      "author": "Martin Falbisoner",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Brimstone Hill Fortress, UNESCO World Heritage Site Ref. Number 910 : Fort George Citadel, March 2016.",
-      "width": 5503,
-      "height": 3003,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Saint Kitts and Nevis"
-    },
-    {
-      "file": "Saint Kitts - Brimstone Hill Fortress 05.JPG",
-      "author": "Martin Falbisoner",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "The Brimstone Hill Fortress on the island of St. Kitts , which was recognized World Heritage Site by the UNESCO in 1999.",
-      "width": 5162,
-      "height": 2354,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Saint Kitts and Nevis"
@@ -2663,31 +2493,7 @@
   ],
   "country-ls": [
     {
-      "file": "Unnamed Road, Lesotho - panoramio (226).jpg",
-      "author": "Graham Maclachlan",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Unnamed Road, Lesotho",
-      "width": 7320,
-      "height": 2936,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Lesotho"
-    },
-    {
       "file": "Unnamed Road, Kokolia, Lesotho - panoramio (16).jpg",
-      "author": "Graham Maclachlan",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Unnamed Road, Kokolia, Lesotho",
-      "width": 4608,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Lesotho"
-    },
-    {
-      "file": "Unnamed Road, Kokolia, Lesotho - panoramio (17).jpg",
       "author": "Graham Maclachlan",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -3998,18 +3804,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Syria"
-    },
-    {
-      "file": "Damascus, Syria, The city square.jpg",
-      "author": "Vyacheslav Argenberg",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Damascus is one of the oldest continuously inhabited cities in the world, and a major cultural centre of the Levant and the Arab world. Damascus, Syria.",
-      "width": 4000,
-      "height": 3000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Syria"
     }
   ],
   "country-tg": [
@@ -4176,30 +3970,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: United States"
-    },
-    {
-      "file": "United States Botanic Garden Washington April 2017 001.jpg",
-      "author": "King of Hearts",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "United States Botanic Garden , Washington, D.C.",
-      "width": 5640,
-      "height": 3760,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: United States"
-    },
-    {
-      "file": "United States Botanic Garden Washington April 2017 003.jpg",
-      "author": "King of Hearts",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "United States Botanic Garden , Washington, D.C.",
-      "width": 5000,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: United States"
     }
   ],
   "country-uz": [
@@ -4273,18 +4043,6 @@
       "subject": "View of gardens in the Vatican City from the dome of Saint Peter's Basilica",
       "width": 8420,
       "height": 4315,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Vatican City"
-    },
-    {
-      "file": "Gardens in the Vatican City (3).jpg",
-      "author": "Krzysztof Golik",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "View of gardens in the Vatican City from the dome of Saint Peter's Basilica",
-      "width": 7906,
-      "height": 2872,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Vatican City"
@@ -4867,18 +4625,6 @@
       "sourceArticle": "Commons exact-title file search: Mahé"
     },
     {
-      "file": "Aldabra giant tortoise (Aldabrachelys gigantea) - Alibel Tortoise Park - Mahe - Seychelles - 04.jpg",
-      "author": "NorbertNagel",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Aldabra giant tortoise (Aldabrachelys gigantea) at Alibel Tortoise Park, Mahe, Seychelles (2025).",
-      "width": 6192,
-      "height": 3680,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Mahé"
-    },
-    {
       "file": "Baie Lazare Public Beach - Mahe - Seychelles - 01.jpg",
       "author": "NorbertNagel",
       "license": "CC BY-SA 4.0",
@@ -5395,18 +5141,6 @@
       "sourceArticle": "Commons exact-title file search: Oaxaca"
     },
     {
-      "file": "Sculpture of Sea Turtle - Santo Domingo Cultural Center - Oaxaca City - Oaxaca - Mexico (6492533875).jpg",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Sculpture of Sea Turtle - Santo Domingo Cultural Center - Oaxaca City - Oaxaca - Mexico",
-      "width": 3648,
-      "height": 2736,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Oaxaca"
-    },
-    {
       "file": "Chinese Dragon Dance - Oaxaca City - Oaxaca - Mexico (6490919299).jpg",
       "author": "Adam Jones from Kelowna, BC, Canada",
       "license": "CC BY-SA 2.0",
@@ -5683,30 +5417,6 @@
       "sourceArticle": "Commons exact-title file search: Port Vila"
     },
     {
-      "file": "Ramada Port Vila (29247616526).jpg",
-      "author": "Simon_sees from Australia",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "The new Ramada which is being built in Port Vila Vanuatu and due to open in 2017",
-      "width": 4608,
-      "height": 3072,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Port Vila"
-    },
-    {
-      "file": "Ramada Port Vila (29173250042).jpg",
-      "author": "Simon_sees from Australia",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "The new Ramada which is being built in Port Vila Vanuatu and due to open in 2017",
-      "width": 4608,
-      "height": 3072,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Port Vila"
-    },
-    {
       "file": "Port Vila, Vanuatu, 6 June 2006 (162245060).jpg",
       "author": "Phillip Capper from Wellington, New Zealand",
       "license": "CC BY 2.0",
@@ -5755,18 +5465,6 @@
       "subject": "Queenstown Bay towards Cecil Peak (in clouds)",
       "width": 5184,
       "height": 3320,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Queenstown"
-    },
-    {
-      "file": "Bowls laid out for sale at the Queenstown market.jpg",
-      "author": "Avenue",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Bowls arrayed for sale at the Queenstown market.",
-      "width": 4800,
-      "height": 2456,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Queenstown"
@@ -6736,18 +6434,6 @@
       "subject": "flight of a little egret on Lake Tunis",
       "width": 19008,
       "height": 12672,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Tunis"
-    },
-    {
-      "file": "Aigrette garzette sur le lac de Tunis.jpg",
-      "author": "Skander zarrad",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Little egret on Lake Tunis",
-      "width": 9762,
-      "height": 6508,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Tunis"
