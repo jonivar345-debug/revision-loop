@@ -2,7 +2,7 @@ name: Scanner marking regression
 
 on:
   push:
-    branches: [main]
+    branches: [main, fix/world-earth-photos-pin-ui-20261023]
   pull_request:
 
 jobs:
