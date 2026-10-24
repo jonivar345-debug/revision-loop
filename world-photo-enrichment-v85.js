@@ -1554,17 +1554,17 @@
   ],
   "country-cd": [
     {
-      "file": "Congo River CBERS4 MUX satellite image at Democratic Republic of the Congo, Africa.jpg",
-      "author": "Coordenação-Geral de Observação da Terra/INPE",
+      "file": "Virunga National Park - Lake Edward January 2015.jpg",
+      "author": "MONUSCO Photos / Abel Kavanagh",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Em amarelo, ao centro, a cidade de Bumba, com mais de 100.000 habitantes e sem eletricidade nem água potável. Ao sul do rio, em tons de marrom, por sua água barrenta, está a paisagem ecológica em risco Maringa-Lopori-Wamba, flores",
-      "width": 2475,
-      "height": 1390,
+      "subject": "Mountain scenery and waterfall in Virunga National Park above Lake Edward, DR Congo",
+      "width": 5760,
+      "height": 3840,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Democratic Republic of the Congo",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Replaced misleading location match after Commons geographic and licensing check; NOT visually pixel-reviewed",
+      "locationText": "country-cd",
+      "photoSource": "Commons manually source-checked replacement for unrelated media"
     },
     {
       "file": "Congo River from Kinshasa in Democratic Republic of the Congo (DRC).jpg",
@@ -6601,17 +6601,17 @@
   ],
   "ocean-arctic": [
     {
-      "file": "CSCL Arctic Ocean (ship, 2015) 001.jpg",
-      "author": "kees torn",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Container ship CSCL Arctic Ocean, Calandkanaal, Rotterdam",
-      "width": 3824,
-      "height": 1894,
+      "file": "Arctic Ice (4370262641).jpg",
+      "author": "U.S. Geological Survey / U.S. Coast Guard, Patrick Kelley",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "subject": "Sunshine over the sea ice of the Arctic Ocean in September 2009",
+      "width": 4288,
+      "height": 2848,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Arctic Ocean",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Replaced misleading location match after Commons geographic and licensing check; NOT visually pixel-reviewed",
+      "locationText": "ocean-arctic",
+      "photoSource": "Commons manually source-checked replacement for unrelated media"
     },
     {
       "file": "North Pole, Arctic Ocean, sea ice 04.jpg",
@@ -7709,17 +7709,17 @@
   ],
   "sea-philippine": [
     {
-      "file": "USS Philippine Sea in Plymouth Sound.jpg",
-      "author": "Nilfanion",
+      "file": "Divilacan Isabela.jpg",
+      "author": "P199",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "USS Philippine Sea (CG-58) in Plymouth Sound, UK, for a courtesy visit to the port.",
-      "width": 3860,
-      "height": 2740,
+      "subject": "Aerial photograph of Palanan Bay and the Philippine Sea along the Isabela coast, Philippines",
+      "width": 2100,
+      "height": 1400,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Philippine Sea",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "2026-10-24: Replaced misleading location match after Commons geographic and licensing check; NOT visually pixel-reviewed",
+      "locationText": "sea-philippine",
+      "photoSource": "Commons manually source-checked replacement for unrelated media"
     },
     {
       "file": "Batanes waters and cliffs.jpg",
