@@ -28,7 +28,33 @@
     tbilisi:['tbilisi','narikala','metekhi'],
     rome:['rome','colosseum','pantheon'],
     istanbul:['istanbul','hagia sophia','galata'],
-    kyoto:['kyoto','fushimi inari','kiyomizu']
+    kyoto:['kyoto','fushimi inari','kiyomizu'],
+    tbilisi:['tbilisi','narikala','metekhi','sameba'],
+    hongkong:['hong kong','victoria harbour','victoria peak','tsim sha tsui'],
+    shanghai:['shanghai','bund','pudong','oriental pearl'],
+    shenzhen:['shenzhen','ping an finance','futian'],
+    beijing:['beijing','forbidden city','temple of heaven','tiananmen'],
+    bohol:['bohol','chocolate hills','panglao'],
+    coron:['coron','kayangan lake','twin lagoon','palawan'],
+    bali:['bali','uluwatu','tanah lot','ubud'],
+    hanoi:['hanoi','hoan kiem','old quarter'],
+    hochiminh:['ho chi minh','saigon','ben thanh'],
+    bangkok:['bangkok','wat arun','grand palace'],
+    kualalumpur:['kuala lumpur','petronas towers','batu caves'],
+    almaty:['almaty','kok tobe','medeau'],
+    samarkand:['samarkand','registan','shah i zinda'],
+    machupicchu:['machu picchu','machupicchu'],
+    angkor:['angkor wat','bayon','ta prohm'],
+    venice:['venice','rialto','grand canal','san marco'],
+    dublin:['dublin','ha penny bridge','trinity college'],
+    edinburgh:['edinburgh','calton hill','royal mile'],
+    athens:['athens','acropolis','parthenon'],
+    rio:['rio de janeiro','christ the redeemer','sugarloaf'],
+    dubai:['dubai','burj khalifa','palm jumeirah'],
+    banff:['banff','lake louise','moraine lake'],
+    victoriafalls:['victoria falls','mosi oa tunya'],
+    sossusvlei:['sossusvlei','deadvlei'],
+    petra:['petra','al khazneh','treasury jordan']
   });
   const rejected=/\b(?:collage|montage|photomontage|flag|poster|map|locator|drawing|diagram|logo|seal|coats? of arms|illustration|infographic|screenshot|portrait of|selfie|food menu|shop sign|chart|atlas)\b/i;
   const clean=v=>String(v||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -59,7 +85,15 @@
       singapore:['Singapore Marina Bay','Singapore Gardens by the Bay','Singapore skyline'],
       paris:['Paris Eiffel Tower','Paris Seine','Paris Sacre Coeur'],
       capetown:['Cape Town Table Mountain','Cape Town waterfront'],
-      newyork:['New York Manhattan skyline','New York Brooklyn Bridge']
+      newyork:['New York Manhattan skyline','New York Brooklyn Bridge'],
+      hongkong:['Hong Kong Victoria Harbour','Hong Kong skyline','Victoria Peak Hong Kong'],
+      tbilisi:['Tbilisi Narikala fortress','Tbilisi Old Town','Tbilisi Sameba Cathedral'],
+      beijing:['Beijing Forbidden City','Beijing Temple of Heaven','Beijing skyline'],
+      shanghai:['Shanghai Bund skyline','Shanghai Pudong skyline','Shanghai historic streets'],
+      seoul:['Seoul Gyeongbokgung Palace','Seoul Namsan tower','Seoul Han River'],
+      kyoto:['Kyoto Fushimi Inari','Kyoto Kiyomizu-dera','Kyoto Gion'],
+      paris:['Paris Eiffel Tower','Paris Seine','Paris Montmartre'],
+      singapore:['Singapore Marina Bay','Singapore Gardens by the Bay','Singapore Botanic Gardens']
     };
     if(landmark[location.id])return landmark[location.id];
     if(location.worldKind==='ocean'||location.worldKind==='sea')
@@ -81,7 +115,7 @@
     if(/entrance|window|signboard|interior|construction|parking|carpark|person|people|advert|hotel room|museum object/.test(name))score-=14;
     return score;
   }
-  async function assemble(location,api){
+  async function assemble(location,api,target=MAX_PHOTOS){
     const collected=[],seen=new Set();
     function add(photo,{lead=false,geo=false}={}){
       if(!photo)return;
@@ -92,27 +126,49 @@
       seen.add(key);
       collected.push(item);
     }
-    // Hand-reviewed destination sets are always first and need no CORS/API call.
-    for(const image of curated(location))add(image);
-    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    const suggested=curated(location);
+    // Only the London/Busan gallery has pixel-reviewed selections. Records
+    // from the editorial archives require a CURRENT Commons licence check;
+    // metadata copied from a previous file page is not enough.
+    for(const image of suggested.filter(p=>p.source==='curated'))add(image);
+    if(collected.length>=target)return collected.slice(0,target);
     const safe=promise=>Promise.resolve(promise).catch(()=>[]);
+    if(typeof api.verifyNamedFiles==='function'){
+      const proposed=suggested.filter(p=>p.source==='editorial-source');
+      if(proposed.length){
+        const checked=await safe(api.verifyNamedFiles(proposed));
+        for(const photo of checked||[])add(photo);
+      }
+    }
+    if(collected.length>=target)return collected.slice(0,target);
     // Check the EXACT encyclopaedia page, not a keyword result.
     if(typeof api.searchPage==='function'){
       const lead=await safe(api.searchPage(location.wiki||properName(location)));
       for(const photo of lead||[])add(photo,{lead:true});
     }
-    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    if(collected.length>=target)return collected.slice(0,target);
+    // Associated with the exact Wikipedia article, then checked against the
+    // named destination or landmark (article membership alone is insufficient).
+    if(typeof api.searchArticleImages==='function'){
+      const article=await safe(api.searchArticleImages(location.wiki||properName(location)));
+      for(const photo of (article||[]).sort((a,b)=>imageScore(b,location)-imageScore(a,location)))add(photo);
+    }
+    if(collected.length>=target)return collected.slice(0,target);
     // Commons coordinates verify the photograph was taken near this city; this
     // catches excellent images whose filename doesn't contain the place name.
     let nearbyCandidates=[];
     if(geoNearby(location)&&typeof api.searchNearby==='function'){
       const nearby=await safe(api.searchNearby(location.lat,location.lon,{radius:7000,limit:24}));
-      nearbyCandidates=(nearby||[]).sort((a,b)=>imageScore(b,location)-imageScore(a,location));
+      // Geotag alone does not make a feature photo: reject generic interiors,
+      // portraits and filenames lacking a descriptive scenic/landmark cue.
+      const scenic=/panoram|skyline|aerial|scenic|view|waterfront|sunset|sunrise|cityscape|landscape|historic|bridge|harbour|harbor|mountain|cathedral|temple|beach|coast|park|garden|square|old town|palace|castle|street|river|lake|fortress|waterfall/i;
+      nearbyCandidates=(nearby||[]).filter(item=>scenic.test(item.file+' '+(item.description||'')))
+        .sort((a,b)=>imageScore(b,location)-imageScore(a,location));
       // Leave room for pictures of the destination's recognisable landmarks.
-      const slots=Math.max(0,3-collected.length);
+      const slots=Math.max(0,Math.min(3,target)-collected.length);
       for(const photo of nearbyCandidates.slice(0,slots))add(photo,{geo:true});
     }
-    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    if(collected.length>=target)return collected.slice(0,target);
     if(typeof api.verifyApproved==='function'){
       const item=await safe(api.verifyApproved(location.id));
       if(item&&!Array.isArray(item))add(item);
@@ -120,33 +176,35 @@
     // Restrict un-geotagged search results to named places or landmarks.
     if(typeof api.search==='function'){
       for(const query of candidatesFor(location)){
-        if(collected.length>=MAX_PHOTOS)break;
+        if(collected.length>=target)break;
         const result=await safe(api.search(query,{limit:24}));
         for(const photo of result||[])add(photo);
       }
     }
     // Geo coordinates remain a trustworthy fallback when search doesn't yield
     // enough directly identifiable features.
-    if(collected.length<MAX_PHOTOS){
+    if(collected.length<target){
       for(const photo of nearbyCandidates){
-        if(collected.length>=MAX_PHOTOS)break;
+        if(collected.length>=target)break;
         add(photo,{geo:true});
       }
     }
-    return collected.slice(0,MAX_PHOTOS);
+    return collected.slice(0,target);
   }
   function photosFor(location,{limit=MAX_PHOTOS,media}={}){
     const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
-    if(!api)return Promise.resolve(curated(location).slice(0,limit));
-    const key=keyOf(location);
-    // Injected clients are not cached across test runs. The real website reuses
-    // its chosen set between shop thumbnails and unlocked galleries.
-    if(media)return assemble(location,api).then(items=>items.slice(0,limit));
+    if(!api)return Promise.resolve(curated(location).filter(p=>p.source==='curated').slice(0,limit));
+    const target=Math.max(1,Math.min(MAX_PHOTOS,Math.trunc(limit)||MAX_PHOTOS));
+    // Shop cards only need one cover photograph: do not make every thumbnail
+    // wait for the other three gallery requests. Both paths use the same
+    // deterministic source order, so the cover remains gallery photo one.
+    const key=keyOf(location)+'|'+target;
+    if(media)return assemble(location,api,target);
     if(!cache.has(key)){
-      const task=assemble(location,api).catch(()=>curated(location));
+      const task=assemble(location,api,target).catch(()=>curated(location).filter(p=>p.source==='curated').slice(0,target));
       cache.set(key,task);
     }
-    return cache.get(key).then(items=>items.slice(0,limit));
+    return cache.get(key);
   }
   function render(el,location,{card=false,media}={}){
     if(!el)return Promise.resolve([]);
