@@ -1,0 +1,36 @@
+name: Final one-time v85 World Commons four-photo enrichment
+on:
+  push:
+    branches: [feature/four-photo-galleries-v85]
+    paths: ['.github/workflows/world-photo-enrich-final-v85.yml']
+permissions:
+  contents: write
+concurrency:
+  group: world-v85-final-photo-enrichment
+  cancel-in-progress: true
+jobs:
+  source-audit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 27
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Collect distinct licensed Commons photographs for under-four-photo World galleries
+        run: node scripts/enrich-world-photos-v85.mjs --write
+      - name: Build exact 376-destination photo depth audit
+        run: node scripts/audit-world-photo-depth.cjs --save
+      - name: Preserve generated source records on development branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add world-photo-enrichment-v85.js editorial/world-photo-enrichment-report-v85.json editorial/world-photo-four-depth-v85.json
+          git diff --staged --quiet && exit 0
+          git commit -m 'Record separately attributed Commons gallery enrichment sources'
+          git fetch origin feature/four-photo-galleries-v85
+          git rebase origin/feature/four-photo-galleries-v85
+          git push origin HEAD:feature/four-photo-galleries-v85
