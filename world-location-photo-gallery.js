@@ -1,4 +1,4 @@
-/* Four-image destination galleries. A real photo must be verified for its CC licence
+/* Up to five-image destination galleries. A real photo must be verified for its CC licence
    and matched to the destination; a failed search never substitutes a map for a photograph.
    Attribution is retained behind an unobtrusive disclosure, not over the photos. */
 (function(root,factory){
@@ -37,7 +37,7 @@
   const terms=keywords[location.id]||[clean(location.name).replace(/^country:\s*/,'').trim()];
   return lead||terms.some(term=>term.length>=4&&name.includes(clean(term)));
  }
- async function photosFor(location,{limit=4,media}={}){
+ async function photosFor(location,{limit=5,media}={}){
   const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
   if(!api)return [];
   const key=keyOf(location)+'|'+limit;
@@ -61,7 +61,7 @@
     };
     const phrases=landmarks[location.id]||[name+' cityscape',name+' landscape'];
     for(const query of phrases){
-      if(candidates.length>=Math.min(limit,4))break;
+      if(candidates.length>=Math.min(limit,5))break;
       const results=await api.search(query,{limit:10}).catch(()=>[]);
       for(const item of results)if(allowed(item,location))candidates.push(item);
     }
@@ -70,7 +70,7 @@
       const key=clean(item.file);
       if(seen.has(key))return false;
       seen.add(key);return true;
-    }).slice(0,Math.min(limit,4));
+    }).slice(0,Math.min(limit,5));
    })();
    cache.set(key,job);
   }
@@ -86,7 +86,7 @@
   el.classList.add(card?'destination-card-photo':'destination-photo-gallery');
   el.replaceChildren();
   const loading=doc.createElement('span');loading.className='destination-photo-status';loading.textContent='Loading photographs…';el.append(loading);
-  return photosFor(location,{limit:card?1:4,media}).then(photos=>{
+  return photosFor(location,{limit:card?1:5,media}).then(photos=>{
    if(!el.isConnected||el.dataset.galleryVersion!==version)return photos;
    el.replaceChildren();
    if(!photos.length){
