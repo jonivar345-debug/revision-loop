@@ -7,6 +7,7 @@ const discover=require('../world-photo-discovery-data.js');
 const enrichment=require('../world-photo-enrichment-v85.js');
 global.window={RevisionWorldDiscoveryPhotos:discover,RevisionWorldPhotoEnrichment:enrichment};
 const curated=require('../world-curated-photos.js');
+const gallery=require('../world-location-photo-gallery.js');
 const rows=fs.readFileSync(require('node:path').join(base,'editorial/world_photo_collection_template_376.csv'),'utf8')
  .split(/\r?\n/).slice(1).filter(Boolean).map(line=>{
   const p=[...line.matchAll(/"([^"]*)"/g)].map(x=>x[1]);return{id:p[3],region:p[2],name:p[0]};
@@ -20,7 +21,7 @@ assert(newCount>=120,'Release needs at least 120 independently sourced additiona
 let four=0,zero=0,short=0,allFiles=0;const regions=new Set();
 for(const loc of rows){
  const files=curated.get(loc.id);
- const distinct=new Set(files.filter(f=>f.file&&f.author&&f.licenseUrl&&f.filePage).map(p=>p.file.replace(/^File:/,'').replace(/_/g,' ').toLowerCase()));
+ const distinct=new Set(files.filter(f=>f.file&&f.author&&f.licenseUrl&&f.filePage&&gallery.allowed(f,{id:loc.id,name:loc.name,worldKind:'city'})).map(p=>p.file.replace(/^File:/,'').replace(/_/g,' ').toLowerCase()));
  if(distinct.size>=4)four++;else short++;
  if(!distinct.size)zero++;
  allFiles+=distinct.size;
