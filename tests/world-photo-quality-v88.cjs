@@ -20,7 +20,9 @@ const bad={
  'sea-weddell':['Weddell Sea, Antartica.jpg'],
  'sea-okhotsk':['Raikoke Volcano ash cloud, Kuril Islands, Sea of Okhotsk, Russia - June 23rd, 2019 (48122331232).jpg'],
  'country-ws':['Samoa Beach near Eureka, California.jpg','Buoy at the Humboldt Bay Maritime Museum in Samoa, California.jpg'],
- 'country-td':['102nd Chad Ministerial Review (4291102482).jpg','102nd Chad Ministerial Review (4290363065).jpg','102nd Chad Ministerial Review (4290343863).jpg']
+ 'country-td':['102nd Chad Ministerial Review (4291102482).jpg','102nd Chad Ministerial Review (4290363065).jpg','102nd Chad Ministerial Review (4290343863).jpg'],
+ 'country-jm':['Jamaica Bay Wildlife Refuge East Pond (61277p).jpg','Jamaica Bay Wildlife Refuge East Pond (61289p).jpg','Jamaica Bay Wildlife Refuge (41031).jpg'],
+ 'country-pt':['Cabruza (Parablennius gattorugine), Parque natural de la Arrábida, Portugal, 2022-07-22, DD 48.jpg','Ascidia bombillo (Clavelina lepadiformis), Parque natural de la Arrábida, Portugal, 2022-07-20, DD 52.jpg']
 };
 const newFiles={
  'ocean-indian':['Aerial shot of a small island on a coral reef in the Maldives.jpg','Indian Ocean,Kenya Coastline.jpg'],
@@ -30,7 +32,9 @@ const newFiles={
  'sea-weddell':['Emperor-iceberg hg.jpg'],
  'sea-okhotsk':['Ryuhyo abashiri oki.JPG'],
  'country-ws':['Beach fales at Lalomanu beach, Upolu, Samoa - August 2016.jpg',"Blowholes Savai'i 2009.jpg"],
- 'country-td':['Girl walking within the Ennedi sandstone, Chad (26726395628).jpg',"Place de la Nation - N'djamena.jpg","Une vue de près du fleuve Chari de N'Djamena à son coucher.jpg"]
+ 'country-td':['Girl walking within the Ennedi sandstone, Chad (26726395628).jpg',"Place de la Nation - N'djamena.jpg","Une vue de près du fleuve Chari de N'Djamena à son coucher.jpg"],
+ 'country-jm':["Dunn's River Falls.jpg",'Negril.jpg','Blue and John Crow Mountains.jpg'],
+ 'country-pt':['A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg','View over the river Tagus, Lisbon, Portugal.jpg']
 };
 let complete=0,checked=0,distinctTotal=0;
 for(const loc of rows){
@@ -49,7 +53,7 @@ for(const loc of rows){
  }
 }
 assert.equal(complete,376,'All 376 galleries must retain four distinct source candidates');
-assert.equal(checked,14,'Fourteen replacement photographs must stay present');
+assert.equal(checked,19,'Nineteen replacement photographs must stay present');
 const index=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 assert(index.includes('world-photo-discovery-data.js?v=88'));
