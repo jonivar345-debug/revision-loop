@@ -209,7 +209,11 @@
     const key=keyOf(location)+'|'+target;
     if(media)return assemble(location,api,target);
     if(!cache.has(key)){
-      const task=assemble(location,api,target).catch(()=>curated(location).filter(p=>p.source==='curated').slice(0,target));
+      // Failed Commons requests and empty transient searches should be retried
+      // next time the user opens this place, not frozen as a blank card forever.
+      const task=assemble(location,api,target)
+        .then(photos=>{if(!photos.length)cache.delete(key);return photos})
+        .catch(()=>{cache.delete(key);return curated(location).filter(p=>p.source==='curated').slice(0,target)});
       cache.set(key,task);
     }
     return cache.get(key);
