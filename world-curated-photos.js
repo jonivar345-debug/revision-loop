@@ -2295,8 +2295,289 @@
       }
     ]
   });
+  // Independently checked file-page metadata for six additional cities.
+  // These source records remain subject to current Commons licence validation;
+  // a reviewed description is not the same as human-reviewed image pixels.
+  const featuredCitiesE=Object.freeze({
+    "kyoto": [
+      {
+        "file": "Kyoto Fushimi Inari-taisha 1.jpg",
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Fushimi Inari shrine",
+        "width": 4364,
+        "height": 2888,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "JAP Kyoto Kiyomizu-dera.jpg",
+        "author": "Grueslayer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Kiyomizu-dera temple hall",
+        "width": 4320,
+        "height": 3240,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Kyoto Gion 01.jpg",
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Traditional Gion quarter",
+        "width": 4592,
+        "height": 2965,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Bamboo forest arashiyama.jpg",
+        "author": "Helito",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Arashiyama bamboo forest",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      }
+    ],
+    "rome": [
+      {
+        "file": "Rome colosseum.jpg",
+        "author": "Alexander Popkov (engineerontour.com)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Colosseum in Rome",
+        "width": 5472,
+        "height": 3648,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Trevi Fountain 1 - Rome.jpg",
+        "author": "NikonZ7II",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Trevi Fountain",
+        "width": 8792,
+        "height": 5752,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "The Pantheon, Rome.jpg",
+        "author": "Sanjib Chaudhary",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Pantheon in Rome",
+        "width": 4000,
+        "height": 3000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Roman Forum in Rome.jpg",
+        "author": "Stefano Costantini",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Roman Forum archaeological site",
+        "width": 3264,
+        "height": 2456,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      }
+    ],
+    "istanbul": [
+      {
+        "file": "Hagia Sophia and Blue Mosque.jpg",
+        "author": "Husain007",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Hagia Sophia and Blue Mosque panorama",
+        "width": 8022,
+        "height": 1736,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "İstanbul Galata Kulesi.jpg",
+        "author": "OkanKeskin",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Galata Tower",
+        "width": 6016,
+        "height": 4000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Bosphorus Bridge at night.jpg",
+        "author": "Andrey Filippov 安德烈",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Bosphorus Bridge at night",
+        "width": 5760,
+        "height": 3840,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Grand Bazaar, Istanbul.jpg",
+        "author": "Gah341",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lanterns in the Grand Bazaar",
+        "width": 3024,
+        "height": 4032,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      }
+    ],
+    "barcelona": [
+      {
+        "file": "Park Güell - view of Sagrada Familia.jpg",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Sagrada Família from Parc Güell",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Parc Güell Barcelona.JPG",
+        "author": "Steven Lek",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Mosaic architecture at Parc Güell",
+        "width": 4608,
+        "height": 3072,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Casa Batlló, Barcelona.jpg",
+        "author": "Teodoir",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Casa Batlló facade",
+        "width": 4032,
+        "height": 3024,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Gothic Quarter, Barcelona (1) (30884069420).jpg",
+        "author": "Richard Mortel",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Barcelona Gothic Quarter",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      }
+    ],
+    "venice": [
+      {
+        "file": "Grand Canal from Rialto Bridge.jpg",
+        "author": "aconcagua",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Grand Canal viewed from Rialto Bridge",
+        "width": 4000,
+        "height": 2664,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "St. Mark's Basilica, St Mark's Square, Venice, Italy.jpg",
+        "author": "Vyacheslav Argenberg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "St Mark's Basilica and Piazza San Marco",
+        "width": 3072,
+        "height": 2048,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Bridge of Sighs Venice.jpg",
+        "author": "Ahmer Jamil Khan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Bridge of Sighs",
+        "width": 3024,
+        "height": 4032,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Gondolas, Venice, Italy.jpg",
+        "author": "Vyacheslav Argenberg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Traditional gondolas at the waterfront",
+        "width": 3072,
+        "height": 2048,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      }
+    ],
+    "dubrovnik": [
+      {
+        "file": "Dubrovnik Old Town 1.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Dubrovnik Old Town panoramic view",
+        "width": 5100,
+        "height": 3140,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Dubrovnik City Walls.jpg",
+        "author": "Sumitsurai",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Dubrovnik city walls",
+        "width": 5704,
+        "height": 3064,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Dubrovnik - Stradun.jpg",
+        "author": "Jean-Christophe BENOIST",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "subject": "Stradun historic pedestrian street",
+        "width": 3461,
+        "height": 4711,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      },
+      {
+        "file": "Dubrovnik Old Town From Minčeta Tower.jpg",
+        "author": "Sumitsurai",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Dubrovnik Old Town from Minčeta Tower",
+        "width": 4000,
+        "height": 5648,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
