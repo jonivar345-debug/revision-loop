@@ -291,6 +291,60 @@
       "wasArticleLead": true
     }
   ],
+  "bishkek": [
+    {
+      "file": "City Hall, Bishkek.jpg",
+      "author": "Davide Mauro",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "City Hall, Bishkek",
+      "width": 3942,
+      "height": 2958,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Bishkek",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Russian Orthodox cathedral in Bishkek.jpg",
+      "author": "Petar Milošević",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Russian Orthodox cathedral of Holy Resurrection, Bishkek, Kyrgystan.",
+      "width": 2754,
+      "height": 2514,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Bishkek",
+      "wasArticleLead": false
+    },
+    {
+      "file": "E7903-Bishkek-Ala-Too-Square.jpg",
+      "author": "Vmenkov",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Bishkek's central Ala Too Square, with the Erkindik (Freedom) Monument. Seen from a window in the National Museum.",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Bishkek",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Bishkek, Kyrgyzstan (44662092801).jpg",
+      "author": "Ninara from Helsinki, Finland",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Victory Square is a public square in the city of Bishkek, the capital of Kyrgyzstan. It is dedicated to the Victory over Nazi Germany. It was created in 1984, i",
+      "width": 3446,
+      "height": 2030,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Bishkek",
+      "wasArticleLead": false
+    }
+  ],
   "bogota": [
     {
       "file": "Bogota, Colombia (36668708290).jpg",
@@ -433,6 +487,60 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Cartagena, Colombia",
       "wasArticleLead": true
+    }
+  ],
+  "casablanca": [
+    {
+      "file": "Arab League Park, Casablanca; حديقة الجامعة العربية، الدار البيضاء.jpg",
+      "author": "Petar Milošević",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Arab League Park, Casablanca; Moroccan cultural heritage ID Q52166753",
+      "width": 6120,
+      "height": 8160,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Casablanca",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Downtown, Casablanca.jpg",
+      "author": "Achalhikarim",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Crossing Boulevard Hassan I with the Avenue des FAR, seen from the place of the United Nations, Casablanca",
+      "width": 5184,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Casablanca",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Casablanca - panoramio (11).jpg",
+      "author": "Patrick Nouhailler's…",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Casablanca",
+      "width": 4272,
+      "height": 2848,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Casablanca",
+      "wasArticleLead": false
+    },
+    {
+      "file": "La Casablancaise athletics track in Arab League Park, Casablanca.jpg",
+      "author": "Philip Mallis",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "La Casablancaise athletics track in Arab League Park, Casablanca.jpg",
+      "width": 4040,
+      "height": 3041,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Casablanca",
+      "wasArticleLead": false
     }
   ],
   "chefchaouen": [
@@ -653,6 +761,444 @@
       "wasArticleLead": false
     }
   ],
+  "country-ae": [
+    {
+      "file": "Dubai Marina Skyline.jpg",
+      "author": "Norlando Pobre",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "The skyscrapers of Dubai Marina",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "United Arab Emirates",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Abu dhabi skylines 2014.jpg",
+      "author": "Wadiia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Abu Dhabi's skyline in December 2014",
+      "width": 5726,
+      "height": 3143,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "United Arab Emirates",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Burj Khalifa (worlds tallest building) and the Dubai skyline (25781049892).jpg",
+      "author": "imran shahabuddin",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Burj Khalifa (worlds tallest building) and the Dubai skyline",
+      "width": 5496,
+      "height": 3670,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "United Arab Emirates",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Dhayah Fort showing hilltop location.jpg",
+      "author": "Alexandermcnabb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "The hilltop fort of Dhayah, in Ras Al Khaimah, UAE.",
+      "width": 3024,
+      "height": 3024,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "United Arab Emirates",
+      "wasArticleLead": false
+    }
+  ],
+  "country-af": [
+    {
+      "file": "Françoise Foliot - Afghanistan 043.jpg",
+      "author": "Françoise Foliot",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Salang Tunnel, Afghanistan",
+      "width": 13284,
+      "height": 8802,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Afghanistan",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Buzkashi game in Afghanistan.jpg",
+      "author": "Gideon Tsang",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Exif_JPEG_PICTURE",
+      "width": 2881,
+      "height": 1921,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Afghanistan",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Lake in Band-e Amir National Park, March 2008.jpg",
+      "author": "Afghanistan Matters from Brunssum, Netherlands",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "The Lakes at Band-e-Amir in March, showing the strange combination of desert, snow, and crystal clear waters.",
+      "width": 3872,
+      "height": 2592,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Afghanistan",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Kuchi Village.jpg",
+      "author": "Todd Huffman from Phoenix, AZ",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Unoccupied buildings which part of the year house members of the Kuchi tribe. From wikipedia... \"According to the UN High Commission on Refugees, before the 30 ",
+      "width": 3110,
+      "height": 2332,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Afghanistan",
+      "wasArticleLead": false
+    }
+  ],
+  "country-az": [
+    {
+      "file": "Azerbaijan single age population pyramid 2020.png",
+      "author": "Sdgedfegw",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Generated from US Census Bureau International Data Base using Excel 2019",
+      "width": 2212,
+      "height": 1777,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Azerbaijan",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Azərbaycan ipəyindən kəlağayılar 1.JPG",
+      "author": "Urmen19",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Azərbaycan ipəyindən kəlağayılar",
+      "width": 4752,
+      "height": 3168,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Azerbaijan",
+      "wasArticleLead": false
+    }
+  ],
+  "country-bg": [
+    {
+      "file": "Bulgaria-Nesebar-09.JPG",
+      "author": "www.vacacionesbulgaria.com",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Nesebar",
+      "width": 2592,
+      "height": 1944,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Bulgaria",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG",
+      "author": "Pudelek (Marcin Szala)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Alexander Nevsky Cathedral, Sofia, Bulgaria",
+      "width": 2908,
+      "height": 1883,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Bulgaria",
+      "wasArticleLead": false
+    }
+  ],
+  "country-cy": [
+    {
+      "file": "Former UN tower, North Nicosia, Cyprus.jpg",
+      "author": "Michal Klajban",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Former UN tower, North Nicosia, Cyprus",
+      "width": 2870,
+      "height": 4990,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Cyprus",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Ethnographic distribution in Cyprus 1960.jpg",
+      "author": "Alexander-Michael Hadjilyra",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Map showing the distribution of population in Cyprus during the 1960 census.",
+      "width": 4250,
+      "height": 2573,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Cyprus",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Cafes in a stoa small path in Nicosia Republic of Cyprus.JPG",
+      "author": "ModernNicosia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Cafes in a stoa small path in Nicosia Republic of Cyprus",
+      "width": 3456,
+      "height": 4608,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Cyprus",
+      "wasArticleLead": false
+    },
+    {
+      "file": "EU Foreign Ministers Gymnich Meeting in Cyprus. 7.-8. September 2012 (7954502290).jpg",
+      "author": "Estonian Foreign Ministry",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "EU Foreign Ministers Gymnich Meeting in Cyprus. 7.-8. September 2012",
+      "width": 3130,
+      "height": 1949,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Cyprus",
+      "wasArticleLead": false
+    }
+  ],
+  "country-do": [
+    {
+      "file": "Downtown Puerto Plata Dominican Republic Architecture.jpg",
+      "author": "https://www.flickr.com/photos/scubabix/",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Downtown Puerto Plata, Dominican Republic architecture",
+      "width": 6720,
+      "height": 4279,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Dominican Republic",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Dominican Day Parade 2019 (50335870922).jpg",
+      "author": "S Pakhrin from NYC, USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Dominican Day Parade 2019",
+      "width": 5520,
+      "height": 3680,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Dominican Republic",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Cabo Cabrón, (Rincón Beach) Samaná, DR.JPG",
+      "author": "Caballero1967",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Cape Cabrón, (Rincón Beach) Samaná, DR",
+      "width": 3648,
+      "height": 2736,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Dominican Republic",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Church and Convent Regina Angelorum CCSD 07 2018 0762.jpg",
+      "author": "Mariordo (Mario Roberto Durán Ortiz)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Church and Convent Regina Angelorum, Ciudad Colonial Santo Domingo",
+      "width": 3500,
+      "height": 2800,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Dominican Republic",
+      "wasArticleLead": false
+    }
+  ],
+  "country-gn": [
+    {
+      "file": "Fisher women on River Niger in Guinea, Africa.jpg",
+      "author": "Julien Harneis",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Women fishing on River Niger in Guinea, Africa",
+      "width": 4272,
+      "height": 2828,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Guinea",
+      "wasArticleLead": false
+    }
+  ],
+  "country-gw": [
+    {
+      "file": "Universidade Lusófona, Bissau.jpg",
+      "author": "Joehawkins",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Entrance area to the Universidade Lusófona in Bissau, located next to the Fortaleza de São José da Amura on the right, actual headquarter of the national army.",
+      "width": 4608,
+      "height": 2592,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Guinea-Bissau",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Palácio Presidencial em Bissau (2).jpg",
+      "author": "Joehawkins",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "The presidential palace in Bissau, formerly the palace of the colonial governor of Portuguese-Guinea, located at the Praça dos Herois Nacionais square (formerly",
+      "width": 4518,
+      "height": 2422,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Guinea-Bissau",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Fernanda Nossa, Guinea-Bissau, photo 3.jpg",
+      "author": "Fernanda.nossa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "This is an image of \"African people at work\" from",
+      "width": 2992,
+      "height": 2000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Guinea-Bissau",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Voter education for guinea bissau elections 2008.jpg",
+      "author": "Nammarci",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Voter education posters for Guinea Bissau legislative elections 2008, Biombo region",
+      "width": 2592,
+      "height": 1944,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Guinea-Bissau",
+      "wasArticleLead": false
+    }
+  ],
+  "country-hn": [
+    {
+      "file": "2009 Honduras political crisis 11.jpg",
+      "author": "[https://www.flickr.com/people/38727033@N05 Yamil Gonzales ]",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "2009 Honduran coup d'état",
+      "width": 3888,
+      "height": 2592,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Honduras",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Exterior Fuerte de Omoa Honduras.jpg",
+      "author": "Dennis Garcia",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Vista exterior de la Fortaleza de San Fernando de Omoa, Honduras.",
+      "width": 3072,
+      "height": 2304,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Honduras",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Ara macao - two at Lowry Park Zoo.jpg",
+      "author": "Matthew Romack",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Scarlet Macaw ( Ara macao ). Two at Lowry Park Zoo, Tampa, Florida, USA.",
+      "width": 2178,
+      "height": 2944,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Honduras",
+      "wasArticleLead": false
+    }
+  ],
+  "country-is": [
+    {
+      "file": "Icelandic landscapes.jpg",
+      "author": "Fran Cano Cabal",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "A sample of three typical Icelandic landscapes.",
+      "width": 8192,
+      "height": 5568,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Iceland",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Iceland - 2017-02-22 - Gullfoss - 3677.jpg",
+      "author": "Pierre-Selim Huard",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Waterfalls of Gullfoss under the snow in Iceland",
+      "width": 5184,
+      "height": 2916,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Iceland",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Iceland's Olympic Handball Team, Beijing 2008.jpg",
+      "author": "Steve",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "They won the silver, and the country was ecstatic. This is part of the team, during the homecoming parade. It was the 4th Olympic medal ever for Iceland.",
+      "width": 2203,
+      "height": 1261,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Iceland",
+      "wasArticleLead": false
+    }
+  ],
+  "country-jm": [
+    {
+      "file": "Montego Bay plane Photo Don Ramey Logan.jpg",
+      "author": "Don Ramey Logan",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Aircraft on short final into Montego Bay Photo Don Ramey Logan",
+      "width": 2144,
+      "height": 1424,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Jamaica",
+      "wasArticleLead": false
+    }
+  ],
   "country-km": [
     {
       "file": "Anjouan - Islands of Comoros.jpg",
@@ -681,6 +1227,155 @@
       "wasArticleLead": false
     }
   ],
+  "country-lb": [
+    {
+      "file": "Lebanon, Baalbek, Temple of Bacchus 2.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "The Temple of Bacchus is one of the best preserved and grandest Roman temple ruins in the world. 150 AD to 250 AD. The Baalbek temple complex. UNESCO World Heri",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Lebanon",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Lebanon, Baalbek, Temple of Jupiter in Baalbek.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "It was a colossal temple dedicated to the cult of Zeus, located in Heliopolis of Roman Phoenicia (Baalbeck of modern Lebanon). The columns were 30 meters high w",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Lebanon",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Beirut Corniche, Beirut, Lebanon.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Walking along the corniche. Beirut, Lebanon.",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Lebanon",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Cedar of Lebanon (Cedar of God), Lebanon.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Cedrus libani, known as the Cedar of Lebanon, a species of cedar native to the mountains of the Eastern Mediterranean. Slopes of Mount Lebanon. Kadisha Valley.",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Lebanon",
+      "wasArticleLead": false
+    }
+  ],
+  "country-lu": [
+    {
+      "file": "Luxembourg City Chambre des députés Nov 2009.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Luxembourg City: Chambre des députés, the Parliament of Luxembourg.",
+      "width": 3058,
+      "height": 2559,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Luxembourg",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Soldats luxembourgeois.jpg",
+      "author": "Disquatufais",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Luxembourgish soldiers on national day.",
+      "width": 3072,
+      "height": 2304,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Luxembourg",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Luxembourg2022OSM.png",
+      "author": "Kelisi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "This map of Luxembourg shows the country's cities, towns, villages and some other geographical details, and is likely the most comprehensive map of the country ",
+      "width": 3025,
+      "height": 4393,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Luxembourg",
+      "wasArticleLead": false
+    }
+  ],
+  "country-mv": [
+    {
+      "file": "Man on sand bank in the Maldives looking at sea.jpg",
+      "author": "Pittigrilli",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Man looking at very dense clouds and the rough sea. The location is a sand bank in the Maldives.",
+      "width": 4320,
+      "height": 2880,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Maldives",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Maldives soft coral.jpg",
+      "author": "Tchami",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Maldives soft coral (probably Sarcophyton sp. ).",
+      "width": 5184,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Maldives",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Bathala (Maldives) 8.JPG",
+      "author": "Gzzz",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "A beach of Bathala island (Maldives).",
+      "width": 4928,
+      "height": 3264,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Maldives",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Presidential Address 2024 in Maldives (49).jpg",
+      "author": "The President's Office, Maldives",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Presidential Address 2024 in Maldives",
+      "width": 4928,
+      "height": 3280,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Maldives",
+      "wasArticleLead": false
+    }
+  ],
   "country-mw": [
     {
       "file": "Livingstoniamountainsmalawi.jpg",
@@ -706,6 +1401,198 @@
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Malawi",
+      "wasArticleLead": false
+    }
+  ],
+  "country-mz": [
+    {
+      "file": "A boat on Bazaruto Island Mozambique.jpg",
+      "author": "FrogsLegs71",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "A boat on Bazaruto Island Mozambique",
+      "width": 12000,
+      "height": 9000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mozambique",
+      "wasArticleLead": false
+    },
+    {
+      "file": "A rainstorm at a beach lodge in Mozambique.jpg",
+      "author": "FrogsLegs71",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "A rainstorm at a beach lodge in Mozambique",
+      "width": 4000,
+      "height": 2252,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mozambique",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Fortaleza de São Sebastião-01.jpg",
+      "author": "F Mira from Lisbon, Portugal",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Fortaleza de S. Sebastião, Ilha de Moçambique, Mozambique",
+      "width": 2592,
+      "height": 3872,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mozambique",
+      "wasArticleLead": false
+    }
+  ],
+  "country-om": [
+    {
+      "file": "Fort Mutrah in Muscat, Oman.jpg",
+      "author": "Safa.daneshvar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "January 2022, Photo by: Safa Daneshvar",
+      "width": 5100,
+      "height": 3400,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Oman",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Portsmouth korvet Al-Shamikh Oman 18-10-2011 15-15-51.png",
+      "author": "Paul Hermans",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "corvette Al-Shamikh, Oman in the harbour of Portsmouth, England",
+      "width": 3996,
+      "height": 2248,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Oman",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Aflaj Gallery in The National Museum Oman,.jpg",
+      "author": "Yusi AlK",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Aflaj Gallery in The National Museum Oman, shows the water system in Oman.",
+      "width": 3942,
+      "height": 1697,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Oman",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Traditional Omani Food.jpg",
+      "author": "Erkan Pinar",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Omani food is heavily influenced by Indian cuisine, and is generally centered on richly-seasoned chicken, fish, and lamb, as well as rice.",
+      "width": 3216,
+      "height": 2136,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Oman",
+      "wasArticleLead": false
+    }
+  ],
+  "country-pt": [
+    {
+      "file": "Funchal (Madeira, Portugal), Rua Dr. Fernão de Ornelas, Nata 7 - Fernão Ornelas -- 2025 -- 1205.jpg",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Display case with “Pastel de Nata” in a shop, Funchal , Madeira , Portugal",
+      "width": 6720,
+      "height": 4480,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Portugal",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Estatua de Vimara Peres, Oporto, Portugal, 2012-05-09, DD 01.JPG",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "1968 statue of Vímara Peres by Barata Feyo (1899-1990), Porto, Portugal",
+      "width": 2967,
+      "height": 5108,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Portugal",
+      "wasArticleLead": false
+    }
+  ],
+  "country-ru": [
+    {
+      "file": "Peterhof Palace, Saint Petersburg, Russia (44408938295).jpg",
+      "author": "Ninara from Helsinki, Finland",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "The Peterhof Palace is a series of palaces and gardens located in Petergof, Saint Petersburg, Russia, laid out on the orders of Peter the Great. These palaces a",
+      "width": 3202,
+      "height": 1873,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Russia",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Ethnic groups in Russia of more than 1 million people 2010 Census English.png",
+      "author": "Nikolay Omonov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Ethnic groups in Russia of more than 1 million people, 2010 Census (English)",
+      "width": 4836,
+      "height": 2820,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Russia",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Lake Baikal in winter.jpg",
+      "author": "Sergey Pesterev",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Frozen lake Baikal near Olkhon island.",
+      "width": 7360,
+      "height": 4912,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Russia",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Winter Palace Panorama 3.jpg",
+      "author": "Florstein ( Telegram: WikiPhoto.Space )",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Winter Palace in Saint Petersburg, the Central Part of the South Facade",
+      "width": 5000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Russia",
+      "wasArticleLead": false
+    }
+  ],
+  "country-sm": [
+    {
+      "file": "Cathedral San Marino - Exterior.jpg",
+      "author": "Newbio623",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Cathedral San Marino - Exterior",
+      "width": 8524,
+      "height": 6520,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "San Marino",
       "wasArticleLead": false
     }
   ],
@@ -747,6 +1634,88 @@
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "El Salvador",
+      "wasArticleLead": false
+    }
+  ],
+  "country-vc": [
+    {
+      "file": "St. Vincent, Karibik - Kingstown - Looking north from Fort Charlotte - panoramio.jpg",
+      "author": "giggel",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "St. Vincent, Karibik - Kingstown - Looking north from Fort Charlotte",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Saint Vincent and the Grenadines",
+      "wasArticleLead": false
+    },
+    {
+      "file": "St. Vincent, Karibik - St. Mary's R.C. School ^ St. Mary's R.C. Cathedral - panoramio.jpg",
+      "author": "giggel",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "St. Vincent, Karibik - St. Mary's R.C. School & St. Mary's R.C. Cathedral",
+      "width": 3744,
+      "height": 2536,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Saint Vincent and the Grenadines",
+      "wasArticleLead": false
+    }
+  ],
+  "country-xk": [
+    {
+      "file": "National Library of Kosovo Arben Llapashtica.jpg",
+      "author": "Arben Llapashtica ©",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "National Library of Kosovo",
+      "width": 4492,
+      "height": 2524,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kosovo",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Gebäude der UNMIK NEW BORN SIGN PRISTINA KOSOVO Giv Owned Image 23 August 2008.jpg",
+      "author": "qiv",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "New Born sign in Pristina Kosovo.",
+      "width": 3467,
+      "height": 1916,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kosovo",
+      "wasArticleLead": false
+    },
+    {
+      "file": "KP-PK During Kosovo Independence Parade.JPG",
+      "author": "SUHEJLO",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Units of the Kosovo Armed Forces, Kosovo Police and Correctional Services paraded in \"Zahir Pjaziti\" square for the sixth anniversary of the declaration of inde",
+      "width": 2496,
+      "height": 1664,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kosovo",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Parku Kombëtar Bjeshkët Nemuna, Liqeni i madh ne Liqenat, Rugove.jpg",
+      "author": "Gashi Bujar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "This is a photo of a natural heritage site in Kosovo, id:",
+      "width": 4914,
+      "height": 3181,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kosovo",
       "wasArticleLead": false
     }
   ],
@@ -825,6 +1794,60 @@
       "wasArticleLead": true
     }
   ],
+  "hobart": [
+    {
+      "file": "Greater Hobart Panorama.jpg",
+      "author": "Flying Freddy",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "A panorama of the Hobart region from Sandy Bay (left hand side) to the Hobart Domain (right hand side).",
+      "width": 16110,
+      "height": 2000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Hobart",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Hobart from Mount Wellington Panorama 2.jpg",
+      "author": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Greater Hobart area from Mt. Wellington",
+      "width": 8883,
+      "height": 1629,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Hobart",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Hobart Town Hall 01 (2).jpg",
+      "author": "edwardhblake",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Hobart Town Hall in Hobart, Tasmania",
+      "width": 5353,
+      "height": 4016,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Hobart",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Hobart convict era Church - panoramio.jpg",
+      "author": "Annette Teng",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Hobart convict era Church",
+      "width": 5032,
+      "height": 3210,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Hobart",
+      "wasArticleLead": false
+    }
+  ],
   "hochiminh": [
     {
       "file": "Ho Chi Minh City, City Hall, 2020-01 CN-03.jpg",
@@ -883,6 +1906,60 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Kraków",
       "wasArticleLead": true
+    }
+  ],
+  "kualalumpur": [
+    {
+      "file": "Downtown Kuala Lumpur at Night (49125936143).jpg",
+      "author": "Will Simmonds from Kuala Lumpur, Malaysia, China",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "The bright lights of Bukit Bintang.",
+      "width": 6150,
+      "height": 4100,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kuala Lumpur",
+      "wasArticleLead": false
+    },
+    {
+      "file": "2016 Kuala Lumpur, Park KLCC i Suria KLCC.jpg",
+      "author": "Marcin Konsek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "KLCC Park and Suria KLCC . Kuala Lumpur , Malaysia.",
+      "width": 4988,
+      "height": 3611,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kuala Lumpur",
+      "wasArticleLead": false
+    },
+    {
+      "file": "2016 Kuala Lumpur, Park KLCC, Fontanna na jeziorze Symphony (01).jpg",
+      "author": "Marcin Konsek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Water fountain on Symphony Lake. KLCC Park . Kuala Lumpur , Malaysia.",
+      "width": 4661,
+      "height": 3107,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kuala Lumpur",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Kuala Lumpur. The Sultan Abdul Samad Building. Central part. 2019-12-01 23-33-18.jpg",
+      "author": "Shesmax",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "This is a photo of a monument in Malaysia, identified by ID",
+      "width": 5760,
+      "height": 3840,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Kuala Lumpur",
+      "wasArticleLead": false
     }
   ],
   "lapaz": [
@@ -1014,6 +2091,60 @@
       "wasArticleLead": true
     }
   ],
+  "mexicocity": [
+    {
+      "file": "Panorama of Mexico City from Torre Latinoamericana.jpg",
+      "author": "Bart Sw",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Panorama of Mexico City, made from Torre Latino in May 2014",
+      "width": 24115,
+      "height": 2306,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mexico City",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Mexico City Reforma Street.jpg",
+      "author": "Nan Palmero",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Panorama de la avenida Paseo de la Reforma en Cuauhtémoc, Ciudad de México",
+      "width": 7666,
+      "height": 4791,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mexico City",
+      "wasArticleLead": false
+    },
+    {
+      "file": "AerialViewPhotochemicalSmogMexicoCity 2.jpg",
+      "author": "Creator:Fidel Gonzalez",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Aerial View of Photochemical Smog Pollution Over Mexico City",
+      "width": 2592,
+      "height": 1936,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mexico City",
+      "wasArticleLead": false
+    },
+    {
+      "file": "MexicoCityStockExchange01.jpg",
+      "author": "AlejandroLinaresGarcia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Stock exchange building in Mexico City",
+      "width": 2592,
+      "height": 3872,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mexico City",
+      "wasArticleLead": false
+    }
+  ],
   "montegobay": [
     {
       "file": "Montego Bay Photo Don Ramey Logan.jpg",
@@ -1027,6 +2158,60 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Montego Bay",
       "wasArticleLead": true
+    }
+  ],
+  "montevideo": [
+    {
+      "file": "Calle Washington en Ciudad Vieja, Montevideo, Uruguay.jpg",
+      "author": "Intendencia de Montevideo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Calle Washington en Ciudad Vieja, Montevideo, Uruguay.",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Montevideo",
+      "wasArticleLead": false
+    },
+    {
+      "file": "2016 cementerio Montevideo.jpg",
+      "author": "Felipe Restrepo Acosta",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Montevideo",
+      "width": 4992,
+      "height": 3793,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Montevideo",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Facultad de Ingeniería ubicada en Montevideo.jpg",
+      "author": "Monte San Savino",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "This is a photo of a Uruguayan monument identified by the ID",
+      "width": 4345,
+      "height": 2828,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Montevideo",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Faro Punta Brava, Montevideo.jpg",
+      "author": "Diode",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Punta Brava lighthouse, Montevideo",
+      "width": 3240,
+      "height": 4320,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Montevideo",
+      "wasArticleLead": false
     }
   ],
   "montreal": [
@@ -1057,6 +2242,103 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Mostar",
       "wasArticleLead": true
+    }
+  ],
+  "mount_cook": [
+    {
+      "file": "Aoraki (Mount Cook) from Hooker Glacier Lake.jpg",
+      "author": "Atanamir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Aoraki / Mount Cook as seen from the end of the Hooker Valley trail, with the Hooker Glacier's moraine lake in the foreground.",
+      "width": 10467,
+      "height": 3962,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Aoraki / Mount Cook",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Hooker Valley towards Aoraki Mount Cook at sunset.jpg",
+      "author": "Pseudopanax at English Wikipedia",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Hooker Valley towards Aoraki / Mount Cook at sunset",
+      "width": 4896,
+      "height": 3240,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Aoraki / Mount Cook",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Aoraki Mount Cook view from helicopter with Franz Joseph Glacier below.jpg",
+      "author": "David Wipf",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Aoraki / Mount Cook view from helicopter with Franz Joseph Glacier below",
+      "width": 2437,
+      "height": 3412,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Aoraki / Mount Cook",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Aoraki peak from Mt Tasman summit NZ Mon 21 March 1983 closeup.jpg",
+      "author": "Asmdorje",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Photo taken before Aoraki summit block collapsed in December 1991",
+      "width": 5000,
+      "height": 3265,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Aoraki / Mount Cook",
+      "wasArticleLead": false
+    }
+  ],
+  "ocean-atlantic": [
+    {
+      "file": "Nesocichla eremita -Inaccessible Island, British overseas territory-8 (3).jpg",
+      "author": "Brian Gratwicke from DC, USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Tristan thrush ( Nesocichla eremita ) on Inaccessible Island strewn with oceanic trash.",
+      "width": 3814,
+      "height": 2543,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Atlantic Ocean",
+      "wasArticleLead": false
+    }
+  ],
+  "ocean-indian": [
+    {
+      "file": "Padadita Beach, Waingapu 18.jpg",
+      "author": "06Ivonne",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Taken at Padadita Beach, Waingapu, East Sumba, East Nusa Tenggara",
+      "width": 3264,
+      "height": 2448,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Indian Ocean",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Vaavu Atoll, Maldives - panoramio (20).jpg",
+      "author": "goldpicasa",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Vaavu Atoll, Maldives",
+      "width": 2972,
+      "height": 1671,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Indian Ocean",
+      "wasArticleLead": false
     }
   ],
   "perth": [
@@ -1209,6 +2491,47 @@
       "wasArticleLead": true
     }
   ],
+  "sea-andaman": [
+    {
+      "file": "Andaman Islands, Neil, Mangrove trees.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Because mangrove trees live in salt water, they have ways of keeping water from escaping through their leaves. Shaheed Dweep, Neil Island, Andaman and Nicobar I",
+      "width": 4032,
+      "height": 2688,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Andaman Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Andaman Sea, Andaman Islands.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Pure tropical bliss. Turquoise tropical colors of Andaman Sea, a blue/green color, based on the gem of the same name. Andaman Sea, Havelock Island, Andaman Isla",
+      "width": 4032,
+      "height": 2688,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Andaman Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Andaman sea.jpg",
+      "author": "RIDH-1",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Andaman sea as seen from Ross Island near Port Blair",
+      "width": 4000,
+      "height": 2910,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Andaman Sea",
+      "wasArticleLead": false
+    }
+  ],
   "sea-arabian": [
     {
       "file": "A boat sailing through Arabina sea from Cabo de Rama Fort.jpg",
@@ -1221,6 +2544,170 @@
       "editorialMetadata": true,
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Arabian Sea",
+      "wasArticleLead": false
+    }
+  ],
+  "sea-baltic": [
+    {
+      "file": "Baltic Sea 1551 (5496745361).jpg",
+      "author": "Bengt Nyman from Vaxholm, Sweden",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Winter in the Baltic Sea",
+      "width": 5579,
+      "height": 3689,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Baltic Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Sunny day on the coast on Baltic sea.jpg",
+      "author": "Mantas Volungevicius",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Sunny day on the coast on Baltic Sea near Karklė.",
+      "width": 4739,
+      "height": 2750,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Baltic Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Mrzezyno east beach 2010-07 A.jpg",
+      "author": "JDavid",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Kąpielisko na plaży we wschodniej części Mrzeżyna",
+      "width": 3874,
+      "height": 2585,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Baltic Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Таллин. - panoramio.jpg",
+      "author": "Natalia Semenova",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Таллин.",
+      "width": 3648,
+      "height": 2736,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Baltic Sea",
+      "wasArticleLead": false
+    }
+  ],
+  "sea-black": [
+    {
+      "file": "Black Sea coast of Georgia (country), with skyline of Batumi on the horizon.jpg",
+      "author": "Jagermesh",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Black Sea coast of Georgia, overlooking the skyline of Batumi",
+      "width": 4577,
+      "height": 2927,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Black Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Costanza porto - panoramio.jpg",
+      "author": "Luca Sironi",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Costanza porto",
+      "width": 4896,
+      "height": 3672,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Black Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Samsun - panoramio (11).jpg",
+      "author": "sami yılmaz",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Samsun",
+      "width": 4320,
+      "height": 3240,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Black Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Burgas Bridge, Бургаският мост.jpg",
+      "author": "TodorBelomorski",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Burgas Bridge",
+      "width": 4128,
+      "height": 3096,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Black Sea",
+      "wasArticleLead": false
+    }
+  ],
+  "sea-coral": [
+    {
+      "file": "Coral Outcrop Flynn Reef.jpg",
+      "author": "Toby Hudson",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "A variety of corals form an outcrop on Flynn Reef, part of the Great Barrier Reef near Cairns, Queensland, Australia.",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Coral Sea",
+      "wasArticleLead": false
+    }
+  ],
+  "sea-east-china": [
+    {
+      "file": "East China Sea 2017 02 25 (33105952485).jpg",
+      "author": "Antti Lipponen",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "East China Sea near Shanghai 25 February 2017 as seen by Sentinel-2A satellite.",
+      "width": 4806,
+      "height": 1534,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "East China Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "View of South China Sea.jpg",
+      "author": "Jacob.jose",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "View of East China Sea from Yeliou, Taiwan",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "East China Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Dayu Bay - Damen Shan - P1210677.JPG",
+      "author": "User:Vmenkov",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Damen Shan (大门山), a peninsula in Dayu Bay connected with the mainland by a very narrow and low isthmus (which may be covered with water in high tide) . Chixi To",
+      "width": 2560,
+      "height": 1920,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "East China Sea",
       "wasArticleLead": false
     }
   ],
@@ -1237,6 +2724,75 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Labrador Sea",
       "wasArticleLead": true
+    }
+  ],
+  "sea-mediterranean": [
+    {
+      "file": "Area of the Mediterranean.jpg",
+      "author": "Janwillemvanaalst",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Mediterranean Sea , Compiled from Natural Earth open data, this map from 2020 shows land cover, hillshade, populated places, infrastructure and administrative d",
+      "width": 5441,
+      "height": 2699,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mediterranean Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Aerial image of Stromboli (view from the northeast).jpg",
+      "author": "Carsten Steger",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Aerial image of Stromboli (view from the northeast); to the right, the Sciara del Fuoco located in the northwestern part of the island can be seen; the island o",
+      "width": 5000,
+      "height": 2700,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mediterranean Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Blue Lagoon - 2014.10 - panoramio.jpg",
+      "author": "rheins",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Blue Lagoon, Ölüdeniz, Turkey - 2014.10",
+      "width": 4286,
+      "height": 3214,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mediterranean Sea",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Bat Galim neighborhood and Haifa Bay.jpg",
+      "author": "Zvi Roger",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Haifa - Mount Carmel by the sea",
+      "width": 2100,
+      "height": 1500,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Mediterranean Sea",
+      "wasArticleLead": false
+    }
+  ],
+  "sea-philippine": [
+    {
+      "file": "View towards the sea from the coastal path on Guanyinbi.jpg",
+      "author": "中岑 范姜",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "View of the beach, rocky coastline and the Philippine Sea from the Alangyi Historic Trail above Guanyinbi in Pingtung County, Taiwan.",
+      "width": 3928,
+      "height": 2946,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Philippine Sea",
+      "wasArticleLead": false
     }
   ],
   "seville": [
@@ -1411,6 +2967,60 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Vienna",
       "wasArticleLead": true
+    }
+  ],
+  "vilnius": [
+    {
+      "file": "St. Peter and St. Paul's Church 1, Vilnius, Lithuania - Diliff.jpg",
+      "author": "Diliff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "St. Peter and St. Paul's Church in Vilnius, Lithuania.",
+      "width": 6884,
+      "height": 6626,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Vilnius",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Foggy Winter Sunrise in Vilnius.jpg",
+      "author": "domantasm.",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Foggy winter sunrise in Vilnius, Lithuania.",
+      "width": 4928,
+      "height": 3264,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Vilnius",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Kempinski Hotel Cathedral Square Vilnius.jpg",
+      "author": "Pofka",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Grand Hotel Kempinski Vilnius in Vilnius, Lithuania.",
+      "width": 4032,
+      "height": 3024,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Vilnius",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Gate of the Greek Catholic Church of Holy Trinity in Vilnius in 2013.jpg",
+      "author": "xorge",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Vue de Vilnius.",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
+      "sourceArticle": "Vilnius",
+      "wasArticleLead": false
     }
   ],
   "washingtondc": [
