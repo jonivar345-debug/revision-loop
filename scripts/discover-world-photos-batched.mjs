@@ -53,7 +53,7 @@ async function query(domain,params){
  }
  failures.push('Exhausted retries '+domain);return null;
 }
-const BAD=/\b(?:locator|flag|emblem|coat[\s_-]*of[\s_-]*arms|seal|logo|outline|drawing|svg|diagram|graph|map|district[\s_-]*map|passport|badge|montage|collage|icon|poster|video|chart|political[\s_-]*parties|physical[\s_-]*map|screenshot|coatofarms)\b/i;
+const BAD=/\b(?:locator|flag|emblem|coat[\s_-]*of[\s_-]*arms|seal|logo|outline|drawing|svg|diagram|graph|map|district[\s_-]*map|passport|badge|montage|collage|icon|poster|video|chart|political[\s_-]*parties|physical[\s_-]*map|screenshot|coatofarms|police|airport|aircraft|hospital|ceremony|football|cricket|basketball|motorsport|circuit|election|prime[\s_-]*minister|military|anthem|award|official[\s_-]*portrait|official[\s_-]*visit)\b/i;
 const SCENIC=/panoram|skyline|sunset|sunrise|coast|beach|river|lake|mountain|landscape|town|city|square|temple|bridge|cathedral|harbour|harbor|historic|fort|palace|street|park|garden|valley|waterfall|forest|cliff|castle|aerial|island|monument|basilica|bay|village|coast|gorge|reef|desert|canyon|waterfront|national\s+park|sea|ocean|waves|clouds|church|mosque|tower|pagoda|port|glacier/i;
 const norm=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/_/g,' ').replace(/\s+/g,' ').trim();
 const author=v=>String(v||'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,160);
@@ -76,6 +76,9 @@ function parseImage(p,owner,lead){
  // country; for a specific city/landmark, insist on named or unmistakable lead.
  const scenic=SCENIC.test(file);
  if(!lead&&!named&&!scenic)return null;
+ // City gallery covers are place/streetscape photos, not generic article images.
+ // Country galleries can legitimately include scenic pictures of national
+ // landmarks whose file names omit the country name.
  if((owner.type||'').includes('City')&&!lead&&!named&&!scenic)return null;
  const score=(lead?100:0)+(named?40:0)+(scenic?15:0)+Math.min(15,Math.floor(info.width/500));
  return {file,author:creator,license,licenseUrl,subject:desc||file.replaceAll('_',' '),width:Number(info.width),height:Number(info.height),
@@ -83,12 +86,14 @@ function parseImage(p,owner,lead){
 }
 function chunks(a,n){const out=[];for(let i=0;i<a.length;i+=n)out.push(a.slice(i,i+n));return out;}
 const found={};const diagnostics={attempted:0,sourcePhotos:0,articlePages:0,noImages:[],queries:[],across:[],failed:[]};
-for(const group of chunks(missing,18)){
+// Deeper second pass: smaller groups allow more photographs per Wikipedia
+// article, especially for countries with several distinct regions.
+for(const group of chunks(missing,8)){
  diagnostics.attempted+=group.length;
  // Query 18 exact encyclopaedia article titles in ONE API call. Responses may
  // contain redirects; use MediaWiki's normalized and redirected title mapping.
  const titles=[...new Set(group.map(x=>x.article))];
- const api=await query('en.wikipedia.org',{titles:titles.join('|'),prop:'pageimages|images',piprop:'name',imlimit:'20',redirects:'1'});
+ const api=await query('en.wikipedia.org',{titles:titles.join('|'),prop:'pageimages|images',piprop:'name',imlimit:'120',redirects:'1'});
  if(!api?.query?.pages){diagnostics.failed.push(...group.map(x=>x.id));console.log('BATCH FAILED '+group[0].id+' through '+group.at(-1).id);continue}
  const resolved={};for(const t of titles)resolved[t]=t;
  for(const n of (api.query.normalized||[]))for(const [k,v]of Object.entries(resolved))if(norm(v)===norm(n.from))resolved[k]=n.to;
@@ -103,7 +108,7 @@ for(const group of chunks(missing,18)){
   const lead=page.pageimage&&('File:'+page.pageimage.replace(/^File:/,''));
   const names=[lead,...(page.images||[]).map(x=>x.title)].filter(Boolean)
    .filter(x=>/^File:.+\.(?:jpg|jpeg|png|webp)$/i.test(x)&&!BAD.test(x));
-  const unique=[...new Set(names)].slice(0,22);
+  const unique=[...new Set(names)].slice(0,65);
   indexes.set(row.id,{row,lead,names:unique});
   for(const f of unique)requested.add(f);
  }
