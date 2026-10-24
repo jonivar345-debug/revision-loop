@@ -173,19 +173,25 @@ try{
  assert(await page.locator('[data-location="capetown"]').count());
  assert(!errors.some(e=>/ReferenceError|SyntaxError|TypeError/.test(e)),'Client runtime error(s): '+errors.join(' | '));
  console.log('PASS browser: historical XP, points and purchases preserved; 376 unique country, marine and historic destination cards.');
- // The pre-cached library must be navigable and display the already-downloaded
- // country research after disconnecting. Photos may need network access.
+ // The research archive is precached, but the retired standalone preview
+ // must send visitors to the main app instead of exposing a public article list.
  await page.evaluate(()=>navigator.serviceWorker.ready);
  await page.waitForFunction(()=>!!navigator.serviceWorker.controller,null,{timeout:30000});
- await page.unroute('**/*'); // Allow service worker to respond to offline navigation.
+ await page.unroute('**/*');
  await page.context().setOffline(true);
  await page.goto(origin+'/world-library-preview.html?country=GE',{waitUntil:'domcontentloaded',timeout:30000});
- await page.waitForFunction(()=>document.getElementById('worldCount')?.textContent==='218 of 218 articles',null,{timeout:30000});
- await page.waitForFunction(()=>document.getElementById('articlePanel')?.textContent?.includes('Upper Svaneti'),null,{timeout:30000});
- assert((await page.locator('#articlePanel h2').textContent())?.includes('Georgia'));
+ await page.waitForURL('**/index.html#shop',{timeout:30000});
+ await page.locator('#shop.active').waitFor({timeout:15000});
+ assert.equal(await page.locator('#articlePanel').count(),0,'Standalone article browser still visible');
+ // Unlocking a country now exposes the same article only under the owned pin.
+ await page.evaluate(()=>buy('location','country-ge'));
+ await page.evaluate(()=>setLocationInfo('country-ge'));
+ await page.locator('#globeLocationInfo .location-full-story').waitFor({timeout:15000});
+ await page.waitForFunction(()=>document.querySelector('#globeLocationInfo .location-full-story')?.textContent?.includes('Upper Svaneti'),null,{timeout:20000});
+ assert.equal(await page.locator('#globeLocationInfo [data-world-long-story]').count(),1);
  await page.context().setOffline(false);
- console.log('PASS browser offline: complete 218-feature World Library and Georgia country article accessible after service worker installation.');
- const mobile=await browser.newPage({viewport:{width:390,height:780},isMobile:true,hasTouch:true});
+ console.log('PASS browser offline: old public preview redirects to the World shop; Georgia country research is readable only in the unlocked pin details.');
+  const mobile=await browser.newPage({viewport:{width:390,height:780},isMobile:true,hasTouch:true});
  await mobile.route('**/*',route=>route.request().url().startsWith(origin+'/')?route.continue():route.abort());
  await mobile.addInitScript(()=>localStorage.setItem('rl_auth','1'));
  await mobile.goto(origin+'/',{waitUntil:'domcontentloaded'});
