@@ -100,7 +100,7 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert(empty.textContent.includes('No openly licensed photograph'));
  assert(!app.includes("gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15"),'Old uncredited gallery search still present');
  assert(!app.includes("if(url){wikiPhotoCache[location.id]=url;placeImage"),'Old uncredited image path still active');
- assert(html.indexOf('world-commons-media.js?v=75')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('world-location-photo-gallery.js?v=75')&&html.indexOf('world-location-photo-gallery.js?v=73')<html.indexOf('app.js?v=73'),'Media/photo scripts must load before the app');
+ assert(html.indexOf('world-commons-media.js?v=78')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('world-location-photo-gallery.js?v=75')&&html.indexOf('world-location-photo-gallery.js?v=73')<html.indexOf('app.js?v=73'),'Media/photo scripts must load before the app');
  assert(sw.includes("'./world-commons-media.js'"),'Photo validator not cached offline');
  assert(app.includes('gallery.render(el,location,{card:!!el.closest'), 'Actual app does not invoke photo gallery');
  const gallery=fs.readFileSync(path.join(root,'world-location-photo-gallery.js'),'utf8');
