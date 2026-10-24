@@ -7623,6 +7623,32 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Labrador Sea",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Coast of Labrador.jpg",
+      "author": "Endlisnis",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Aerial coastal sea-ice and coastline photograph in Labrador, Canada",
+      "width": 2816,
+      "height": 2112,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page verified actual Labrador coast/offshore island source, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-labrador",
+      "photoSource": "Commons manually source-checked geographic marine coast photo"
+    },
+    {
+      "file": "Labrador coast islands - panoramio.jpg",
+      "author": "allgaeu-erleben.com",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "subject": "Aerial view of the offshore Adlavik Islands near Makkovik on the Labrador coast",
+      "width": 2136,
+      "height": 2056,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page verified actual Labrador coast/offshore island source, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-labrador",
+      "photoSource": "Commons manually source-checked geographic marine coast photo"
     }
   ],
   "sea-north": [
