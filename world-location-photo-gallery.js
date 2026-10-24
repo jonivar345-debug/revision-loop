@@ -126,10 +126,21 @@
       seen.add(key);
       collected.push(item);
     }
-    // Hand-reviewed destination sets are always first and need no CORS/API call.
-    for(const image of curated(location))add(image);
+    const suggested=curated(location);
+    // Only the London/Busan gallery has pixel-reviewed selections. Records
+    // from the editorial archives require a CURRENT Commons licence check;
+    // metadata copied from a previous file page is not enough.
+    for(const image of suggested.filter(p=>p.source==='curated'))add(image);
     if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
     const safe=promise=>Promise.resolve(promise).catch(()=>[]);
+    if(typeof api.verifyNamedFiles==='function'){
+      const proposed=suggested.filter(p=>p.source==='editorial-source');
+      if(proposed.length){
+        const checked=await safe(api.verifyNamedFiles(proposed));
+        for(const photo of checked||[])add(photo);
+      }
+    }
+    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
     // Check the EXACT encyclopaedia page, not a keyword result.
     if(typeof api.searchPage==='function'){
       const lead=await safe(api.searchPage(location.wiki||properName(location)));
@@ -182,13 +193,13 @@
   }
   function photosFor(location,{limit=MAX_PHOTOS,media}={}){
     const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
-    if(!api)return Promise.resolve(curated(location).slice(0,limit));
+    if(!api)return Promise.resolve(curated(location).filter(p=>p.source==='curated').slice(0,limit));
     const key=keyOf(location);
     // Injected clients are not cached across test runs. The real website reuses
     // its chosen set between shop thumbnails and unlocked galleries.
     if(media)return assemble(location,api).then(items=>items.slice(0,limit));
     if(!cache.has(key)){
-      const task=assemble(location,api).catch(()=>curated(location));
+      const task=assemble(location,api).catch(()=>curated(location).filter(p=>p.source==='curated'));
       cache.set(key,task);
     }
     return cache.get(key).then(items=>items.slice(0,limit));
