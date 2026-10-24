@@ -2101,8 +2101,105 @@
       }
     ]
   });
+  // Hong Kong and Sydney: eight exact Wikimedia Commons file pages checked
+  // against current page descriptions, original source sizes and CC authors.
+  // These are metadata-verified candidates, not full pixel-review approvals.
+  const featuredCitiesC=Object.freeze({
+    "hongkong": [
+      {
+        "file": "Hong Kong as seen from Victoria Peak.jpg",
+        "author": "Choinowski",
+        "license": "CC BY-SA 4.0",
+        "subject": "Hong Kong skyline from Victoria Peak",
+        "width": 5384,
+        "height": 3589,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      },
+      {
+        "file": "Star Ferry ships at Hong Kong.jpg",
+        "author": "Dudva",
+        "license": "CC BY-SA 4.0",
+        "subject": "Star Ferry boats crossing Victoria Harbour",
+        "width": 3033,
+        "height": 1926,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      },
+      {
+        "file": "Hong Kong tram 110.jpg",
+        "author": "Mike Peel (www.mikepeel.net)",
+        "license": "CC BY-SA 4.0",
+        "subject": "Traditional double-decker Hong Kong tram",
+        "width": 3456,
+        "height": 5184,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      },
+      {
+        "file": "Tian Tan Buddha, Hong Kong.jpg",
+        "author": "DestinationFearFan",
+        "license": "CC BY-SA 4.0",
+        "subject": "Tian Tan Buddha on Lantau Island",
+        "width": 2448,
+        "height": 3264,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      }
+    ],
+    "sydney": [
+      {
+        "file": "Sydney skyline at dusk - Dec 2008.jpg",
+        "author": "David Iliff (Diliff)",
+        "license": "CC BY-SA 3.0",
+        "subject": "Sydney Harbour and Opera House skyline at dusk",
+        "width": 2500,
+        "height": 990,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      },
+      {
+        "file": "Sydney Opera House from ferry.jpg",
+        "author": "Chris Mitchell (LeicesterChris)",
+        "license": "CC BY-SA 4.0",
+        "subject": "Sydney Opera House seen from the ferry",
+        "width": 3508,
+        "height": 2367,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      },
+      {
+        "file": "Sydney - Harbour Bridge.jpg",
+        "author": "Codex",
+        "license": "CC BY-SA 4.0",
+        "subject": "Sydney Harbour Bridge from the Opera House",
+        "width": 3264,
+        "height": 1836,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      },
+      {
+        "file": "Bondi Beach - 2009.JPG",
+        "author": "Dr-Victor-von-Doom",
+        "license": "CC BY-SA 4.0",
+        "subject": "Bondi Beach and Sydney's Pacific coastline",
+        "width": 4752,
+        "height": 3168,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file page verified 2026-10-24; live Commons imageinfo checks before display; image pixels not independently accepted"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
