@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 21,
-  "updatedAt": "2026-10-24T13:21:00.000Z",
+  "deckVersion": 22,
+  "updatedAt": "2026-10-24T13:22:00.000Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -13559,6 +13559,41 @@
       "accept": [
         "NaCl(s) -> Na+(aq) + Cl-(aq).",
         "NaCl(s) → Na⁺(aq) + Cl⁻(aq)."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_first_ionisation_bh",
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "front": "In a Born–Haber cycle, define first ionisation energy.",
+      "back": "Energy required to remove 1 mole of electrons from 1 mole of gaseous atoms, forming gaseous 1+ ions.",
+      "concepts": [
+        [
+          "energy",
+          "enthalpy"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "electrons"
+        ],
+        [
+          "gaseous atoms"
+        ],
+        [
+          "gaseous 1+ ions"
+        ]
       ]
     }
   ],
