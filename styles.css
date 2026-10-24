@@ -503,3 +503,11 @@
 .globe-location-info .detail-media .location-accurate-map{height:240px;min-height:200px}
 .location-card .location-photo.location-image-map-fallback{height:150px;min-height:150px}
 .location-card .location-photo .location-accurate-map{height:150px;min-height:150px}
+
+/* Accessible globe locator: zoom to the real coordinate, no fake pin offsets. */
+.globe-finder{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:4px auto 0;padding:0 14px}
+.globe-finder label{font-size:.75rem;color:#e2edf8;font-weight:700}
+.globe-finder input{max-width:310px;flex:1 1 190px;min-width:150px;padding:10px 12px;border-radius:9px;border:1px solid #5c738c;background:#142a46;color:#fff}
+.globe-finder input::placeholder{color:#b0c4d5}
+.globe-finder button{min-height:39px;padding:8px 13px!important;border-radius:8px!important;border:1px solid #94a3b8!important;background:#1f5371!important;color:#fff!important}
+.globe-finder :focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
