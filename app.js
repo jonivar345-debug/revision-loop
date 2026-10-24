@@ -679,7 +679,7 @@ if(typeof window!=='undefined'&&Array.isArray(window.RevisionWorldDestinations))
 
 // Use actual WGS84 Natural Earth geography, pre-cached with the app.
  // Blue Marble remote-image failures previously left a blue circle with no continents.
-const EARTH_TEXTURE_URL='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=1280';
+const EARTH_TEXTURE_URL='https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.jpg?width=2048';
 let earthTextureReady=false,earthPixels=null,earthW=0,earthH=0;
 let satelliteReady=false;
 if(window.RevisionWorldEarth){
@@ -697,12 +697,12 @@ const nasaEarth=new Image();
 nasaEarth.crossOrigin='anonymous';
 nasaEarth.onload=()=>{
  try{
-  const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=512;
+  const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1024;
   const c=canvas.getContext('2d',{willReadFrequently:true});
-  c.drawImage(nasaEarth,0,0,1024,512);
+  c.drawImage(nasaEarth,0,0,2048,1024);
   const pixels=c.getImageData(0,0,1024,512);
-  if(pixels?.data?.length===1024*512*4){
-   earthPixels=pixels.data;earthW=1024;earthH=512;earthTextureReady=true;
+  if(pixels?.data?.length===2048*1024*4){
+   earthPixels=pixels.data;earthW=2048;earthH=1024;earthTextureReady=true;
    satelliteReady=true;drawGlobe();
   }
  }catch(error){console.warn('Using offline Natural Earth globe instead of remote satellite imagery',error)}
@@ -2166,41 +2166,19 @@ const LOCATION_PHOTO_SEARCH={
  papeete:'Papeete Tahiti harbour',apia:'Apia Samoa town',grandcanyon:'Grand Canyon South Rim panorama'
 };
 function locationImageFallback(el,location){
- if(!el?.isConnected)return;
- el.classList.add('location-image-map-fallback');
- el.replaceChildren();
- const title=document.createElement('span');
- title.className='location-image-fallback-label';
- title.textContent='Map view · '+location.name;
- el.append(title);
- // The geographic overview works offline and never pretends to be a photograph.
- window.RevisionWorldMapPreview?.render(el,location).catch(()=>{});
+ if(el?.isConnected)el.textContent='Photographs unavailable';
 }
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
- const images=window.RevisionWorldCommonsMedia;
- if(!images){locationImageFallback(el,location);return}
- const loadPhotos=async()=>{
-  // Wikipedia's actual place article chooses the photograph: never search
-  // for a vaguely related market, river or skyline by keywords.
-  const checked=await images.verifyApproved?.(location.id);
-  // A curated name with a broken URL must not block the actual city's article.
-  const matches=checked?[checked]:await images.searchPage(location.wiki);
-  if(!el.isConnected||el.dataset.locationPhoto&&el.dataset.locationPhoto!==location.id)return;
-  if(matches.length){
-   el.classList.remove('location-image-map-fallback');images.append(el,matches);
-   // A blocked external thumbnail must not leave an empty image or a broken icon.
-   el.querySelector('img')?.addEventListener('error',()=>locationImageFallback(el,location),{once:true});
-  }
-  else locationImageFallback(el,location);
- };
+ const gallery=window.RevisionWorldPhotoGallery;
+ if(!gallery){el.textContent='Photographs unavailable';return}
+ const load=()=>gallery.render(el,location,{card:!!el.closest('#locationShop')});
  if(typeof IntersectionObserver==='function'&&el.closest('#locationShop')){
-  const observer=new IntersectionObserver(entries=>{
-   if(!entries.some(entry=>entry.isIntersecting))return;
-   observer.disconnect();loadPhotos();
-  },{rootMargin:'180px'});
-  observer.observe(el);
- }else await loadPhotos();
+  const io=new IntersectionObserver(entries=>{
+   if(entries.some(entry=>entry.isIntersecting)){io.disconnect();load()}
+  },{rootMargin:'300px'});
+  io.observe(el);
+ }else await load();
 }
 function evenlySpacedLocations(locations){
  const regions=['Africa','Asia','Europe','North America','South America','Oceania'];
@@ -2350,53 +2328,52 @@ const LOCATION_LOCAL_OVERVIEWS={
   "singapore": "Singapore is a city-state at the southern end of the Malay Peninsula. Its harbour and position on important maritime routes helped it grow as a trading hub. Gardens, public housing and historic neighbourhoods illustrate how city planning responds to migration and limited land."
 };
 async function setLocationInfo(id){
- if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
- const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
- if(!l)return;
- if(!(window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id))){showToast('Unlock '+l.name+' to explore its details');return}
+ if(openLocationId===id){
+  openLocationId=null;
+  document.getElementById('globeLocationInfo').classList.add('hidden');
+  drawGlobe();return;
+ }
+ const location=LOCATIONS.find(place=>place.id===id),host=document.getElementById('globeLocationInfo');
+ if(!location)return;
+ if(!(window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id))){
+  showToast('Unlock '+location.name+' to explore its details');return;
+ }
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
- host.setAttribute('role','region');host.setAttribute('aria-label',l.name+' unlocked location details');
- host.innerHTML='<div class="globe-info-top"><div class="globe-place-heading"><span class="globe-owned-pill">✓ Unlocked location</span><h3>'+esc(l.name)+'</h3><span class="globe-place-meta">'+esc(l.region||'World')+' · Select its green pin to return here</span></div><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
- '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Finding a suitable photograph…</div></div>'+
- '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||'Loading a local introduction…')+'</p></div>'+
- '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
- '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>'+
- '<p class="location-coordinate">Approximate map position: '+Math.abs(l.lat).toFixed(3)+'° '+(l.lat>=0?'N':'S')+', '+Math.abs(l.lon).toFixed(3)+'° '+(l.lon>=0?'E':'W')+'</p>'+
- '<div class="detail-links">Photographs and introductory text: <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(l.wiki)+'" target="_blank" rel="noopener noreferrer">Wikipedia</a> / <a href="https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search='+encodeURIComponent(l.name)+'" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></div>';
+ host.setAttribute('role','region');
+ host.setAttribute('aria-label',location.name+' unlocked location details');
+ const isFeature=!!location.worldKind;
+ // One destination guide only. Cities have their own text; new country and
+ // sea/ocean pins receive their longer article from the read-only story module.
+ host.innerHTML='<div class="globe-info-top"><div class="globe-place-heading"><span class="globe-owned-pill">✓ Unlocked location</span><h3>'+esc(location.name)+'</h3><span class="globe-place-meta">'+esc(location.region||'World')+'</span></div><button id="closeLocationInfo" type="button" aria-label="Close location information">Close</button></div>'+
+  '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback"></div></div>'+
+  (isFeature?'':'<div class="location-background"><h4>About '+esc(location.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||'Loading a local introduction…')+'</p></div>'+
+   '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
+   '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>');
  document.getElementById('closeLocationInfo').onclick=()=>setLocationInfo(id);
- locationPhoto(l,document.getElementById('detailPhotoOne'));
+ locationPhoto(location,document.getElementById('detailPhotoOne'));
+ if(isFeature){drawGlobe();return}
  if(!LOCATION_LOCAL_OVERVIEWS[id])try{
-  // Each destination pulls its own encyclopedia introduction; factual
-  // paragraphs are not assembled from a repeated region-wide template.
-  const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exchars=1700&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(l.wiki.replace(/_/g,' '));
-  const response=await fetch(endpoint,{cache:'force-cache'});
-  if(!response.ok)throw Error('Summary unavailable');
-  const data=await response.json(),extract=String(data.query?.pages?.[0]?.extract||'').replace(/\s+/g,' ').trim();
-  if(!extract)throw Error('No location summary');
+  const url='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exchars=1700&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
+  const response=await fetch(url,{cache:'force-cache'});
+  if(!response.ok)throw Error('Location introduction unavailable');
+  const pages=(await response.json()).query?.pages||[];
+  const extract=String(pages[0]?.extract||'').replace(/\s+/g,' ').trim();
+  if(!extract)throw Error('No summary returned');
   if(openLocationId===id&&host.isConnected){
-   const sentences=extract.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s=>s.trim()).filter(Boolean)||[extract];
-   const first=!LOCATION_FACTS[id]?1:0;
-   document.getElementById('locationOverview').textContent=
-     (sentences.slice(first,first+5).join(' ')||extract).slice(0,900);
-   if(!LOCATION_CULTURE_DETAILS[id]){
-    const extra=sentences.slice(first+5,first+10).join(' ').slice(0,650);
-    document.getElementById('locationCulture').textContent=extra||
-      'Explore the history and local traditions of '+l.name+' through its linked encyclopaedia article.';
-   }
-   if(!LOCATION_FACTS[id]){
-    const firstFact=sentences[0]||'';
-    document.getElementById('locationQuickFact').textContent=firstFact?
-      firstFact.slice(0,300):
-      'Approximate coordinates: '+Math.abs(l.lat).toFixed(3)+'° '+(l.lat>=0?'N':'S')+', '+Math.abs(l.lon).toFixed(3)+'° '+(l.lon>=0?'E':'W')+'.';
-   }
+   const sentences=extract.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(t=>t.trim()).filter(Boolean)||[extract];
+   const first=LOCATION_FACTS[id]?0:1;
+   document.getElementById('locationOverview').textContent=(sentences.slice(first,first+5).join(' ')||extract).slice(0,900);
+   if(!LOCATION_CULTURE_DETAILS[id])
+    document.getElementById('locationCulture').textContent=sentences.slice(first+5,first+10).join(' ').slice(0,650)||'Further local history is unavailable.';
+   if(!LOCATION_FACTS[id])
+    document.getElementById('locationQuickFact').textContent=(sentences[0]||'').slice(0,300)||'A distinctive local fact is not yet available.';
   }
  }catch{
   if(openLocationId===id&&host.isConnected){
-   document.getElementById('locationOverview').textContent=
-    LOCATION_FACTS[id]||('The background for '+l.name+' could not be loaded. Open the source article below.');
-   if(!LOCATION_CULTURE_DETAILS[id])document.getElementById('locationCulture').textContent='Local history unavailable offline. Open the source article below.';
-   if(!LOCATION_FACTS[id])document.getElementById('locationQuickFact').textContent='Verified local fact unavailable offline.';
+   document.getElementById('locationOverview').textContent=LOCATION_FACTS[id]||'Location information is temporarily unavailable.';
+   if(!LOCATION_CULTURE_DETAILS[id])document.getElementById('locationCulture').textContent='Further local history is unavailable offline.';
+   if(!LOCATION_FACTS[id])document.getElementById('locationQuickFact').textContent='A local fact is not yet available.';
   }
  }
  drawGlobe();
@@ -2463,7 +2440,7 @@ function visibleGlobePins(w,h,region=''){
    +(item.location.worldKind==='country'?90:item.location.worldKind==='sea'||item.location.worldKind==='ocean'?8:200)
    +item.p.z*40;
  const queue=all.sort((a,b)=>score(b)-score(a));
- const shown=[],distance=15; // keep overlapping locked locations selectable via finder or Show every pin
+ const shown=[],distance=15*(w/700); // same visual spacing at higher rendering resolution
  for(const item of queue){
   if(shown.every(other=>Math.hypot(item.p.x-other.p.x,item.p.y-other.p.y)>distance)){
     shown.push(item);
@@ -2473,6 +2450,9 @@ function visibleGlobePins(w,h,region=''){
 }
 function drawGlobe(){
  const c=document.getElementById('globe');if(!c)return;
+ // Paint twice as many intrinsic pixels as the 700×360 CSS presentation.
+ // Pin coordinates use this same canvas space; no geographic coordinates move.
+ if(c.width!==1400||c.height!==720){c.width=1400;c.height=720}
  const ctx=c.getContext('2d'),w=c.width,h=c.height,R=Math.min(w,h)*.4,cx=w/2,cy=h/2;
  ctx.clearRect(0,0,w,h);ctx.fillStyle='#020617';ctx.fillRect(0,0,w,h);
  if(earthTextureReady&&earthPixels){
@@ -2508,11 +2488,12 @@ function drawGlobe(){
  const regionFilter=document.getElementById('locationRegion')?.value||'';
  for(const {location:l,p,owned} of visibleGlobePins(w,h,regionFilter)){
  const active=l.id===openLocationId;
- const radius=active?6.2:owned?5.4:3.2;
+ const scale=w/700;
+ const radius=(active?6.2:owned?5.4:3.2)*scale;
  ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);
  ctx.fillStyle=active?'#fbbf24':owned?'#22c55e':'rgba(219,239,255,.7)';ctx.fill();
- ctx.lineWidth=owned?1.9:0.8;ctx.strokeStyle=owned?'#eaffea':'rgba(20,51,74,.6)';ctx.stroke();
- if(active){ctx.beginPath();ctx.arc(p.x,p.y,10,0,Math.PI*2);ctx.strokeStyle='#fde68a';ctx.lineWidth=2.1;ctx.stroke()}
+ ctx.lineWidth=(owned?1.9:0.8)*scale;ctx.strokeStyle=owned?'#eaffea':'rgba(20,51,74,.6)';ctx.stroke();
+ if(active){ctx.beginPath();ctx.arc(p.x,p.y,10*scale,0,Math.PI*2);ctx.strokeStyle='#fde68a';ctx.lineWidth=2.1;ctx.stroke()}
  }
  document.getElementById('globeLabel').textContent='Drag to rotate · green = unlocked · pale = locked · gold = selected · tap a green pin for details';
 }
@@ -2538,7 +2519,7 @@ function focusOnGlobeLocation(id,open=false){
  return true;
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
-function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(700,360,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
+function nearestPin(x,y){const canvas=document.getElementById('globe');let best=null,dist=14*(canvas.width/700);const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(canvas.width,canvas.height,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
 
 function renderAll(){renderLevel();renderStats();renderAvatar();renderChallenge();renderStudyType();renderSessionBanner();renderStudy();renderWeak();renderProgress();if(document.getElementById('shop').classList.contains('active'))renderShop()}
 async function sync(manual=false){

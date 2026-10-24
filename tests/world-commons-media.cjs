@@ -88,8 +88,10 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert(empty.textContent.includes('No openly licensed photograph'));
  assert(!app.includes("gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15"),'Old uncredited gallery search still present');
  assert(!app.includes("if(url){wikiPhotoCache[location.id]=url;placeImage"),'Old uncredited image path still active');
- assert(html.indexOf('world-commons-media.js?v=69')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('app.js?v=70'),'Media validator must load before the app');
+ assert(html.indexOf('world-commons-media.js?v=69')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('world-location-photo-gallery.js?v=71')&&html.indexOf('world-location-photo-gallery.js?v=71')<html.indexOf('app.js?v=71'),'Media/photo scripts must load before the app');
  assert(sw.includes("'./world-commons-media.js'"),'Photo validator not cached offline');
- for(const marker of ['locationPhoto(location,el)','images.searchPage(location.wiki)','images.append(el,matches)','locationImageFallback(el,location)'])assert(app.includes(marker),'Actual app lacks Commons attribution use: '+marker);
+ assert(app.includes('gallery.render(el,location,{card:!!el.closest'), 'Actual app does not invoke photo gallery');
+ const gallery=fs.readFileSync(path.join(root,'world-location-photo-gallery.js'),'utf8');
+ for(const marker of ['verifyApproved','searchPage','destination-photo-credits','photo.filePage','photo.licenseUrl'])assert(gallery.includes(marker),'Photo gallery missing source verification or credits: '+marker);
  console.log('PASS world gallery CC validation: no unlicensed/unknown-author/third-party image; photographer, licence and source rendered; real app and offline shell wired.');
 })().catch(e=>{console.error(e);process.exitCode=1});

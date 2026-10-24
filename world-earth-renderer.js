@@ -37,7 +37,7 @@
      }
    }
  }
- function rasterise(doc,world,{width=1024,height=512}={}){
+ function rasterise(doc,world,{width=2048,height=1024}={}){
    if(!doc||!Array.isArray(world?.rings)||world.rings.length<150)throw Error('Natural Earth geometry missing');
    const canvas=doc.createElement('canvas');canvas.width=width;canvas.height=height;
    const ctx=canvas.getContext('2d',{willReadFrequently:true});

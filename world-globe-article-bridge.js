@@ -1,6 +1,5 @@
-/* Read-only world article integration for unlocked globe details.
-   Does not read or change user profiles, purchases, points, XP or payment logic.
-   A country's gateway text is a researched feature, not necessarily about this exact city. */
+/* Single-panel unlocked destination stories. No store links or duplicate country articles
+   beneath city guides. This module never reads or writes profile data. */
 (() => {
   'use strict';
   const LOCATION_COUNTRIES=Object.freeze({
@@ -166,184 +165,80 @@
   "papeete": "PF",
   "copenhagen": "DK"
 });
+
   const target=document.getElementById('globeLocationInfo');
-  const worldArea=document.getElementById('locationShop');
-  if(!target || !worldArea)return;
-  const status=document.createElement('p');
-  status.className='world-encyclopedia-access';
-  const allLink=document.createElement('a');
-  allLink.href='./world-library-preview.html';
-  allLink.target='_blank';
-  allLink.rel='noopener noreferrer';
-  allLink.textContent='Browse the World Library — 196 countries, five oceans, 17 seas';
-  status.append(allLink);
-  worldArea.parentNode.insertBefore(status,worldArea);
-  let indexJob=null;
-  const loadIndex=()=>indexJob||(indexJob=fetch('./editorial/country_gateway_release_index_20261023.json',{cache:'force-cache'})
-    .then(r=>{if(!r.ok)throw Error('Country index unavailable');return r.json()})
-    .catch(e=>{indexJob=null;throw e}));
-  const text=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'');return el};
-  const verifiedFile=path=>typeof path==='string' && path.startsWith('editorial/full_country_stories_') && path.endsWith('.json') && !path.includes('..');
-  let lastLocationId='',token=0;
-  async function addArticle(container,iso,label,featureId=''){
-    const current=++token;
-    container.replaceChildren(text('p','Loading the researched country guide…'));
-    try {
-      const isMarine=/^(?:ocean|sea)-[a-z-]+$/.test(featureId);
-      let story=null;
-      if(isMarine){
-        const files=featureId.startsWith('ocean-')
-          ?['editorial/ocean_stories_5_20261023.json']
-          :['editorial/sea_stories_batch1_9_20261023.json','editorial/sea_stories_batch2_8_20261023.json'];
-        for(const file of files){
-          const result=await fetch('./'+file,{cache:'force-cache'});
-          if(!result.ok)continue;
-          const data=await result.json();
-          story=(data.records||[]).find(x=>x.id===featureId);
-          if(story)break;
-        }
-        if(!story)throw Error('This sea or ocean guide is unavailable');
-      }else{
-        const data=await loadIndex();
-        const chosen=(data.entries||[]).find(e=>e.iso2===iso);
-        if(!chosen||!verifiedFile(chosen.sourceFile))throw Error('No article for this geographic region');
-        const result=await fetch('./'+chosen.sourceFile,{cache:'force-cache'});
-        if(!result.ok)throw Error('Country story is not available offline');
-        const dataPack=await result.json();
-        story=(dataPack.records||[]).find(e=>e.iso2===iso);
-        if(!story)throw Error('Selected country story not found');
-      }
-      if(current!==token||!container.isConnected)return;
-      const section=document.createDocumentFragment();
-      section.append(text('h4',story.country||story.name||label));
-      section.append(text('p',isMarine?'Marine geography feature: '+(story.subtitle||story.name)+'. Approximate map pin, not a legal maritime boundary.':'Country feature: '+(story.focus||'geography and cultural heritage')+'. This is background about the country, not necessarily about the selected city.'));
-      let reviewedCountryPhotos=false;
-      // Prefer manually checked files where available; otherwise fetch Commons metadata on demand.
-      if(!isMarine)try{
-        const vettedFiles=await Promise.all([
-          fetch('./editorial/commons_verified_photos_batch3_20261023.json',{cache:'force-cache'}),
-          fetch('./editorial/commons_verified_photos_batch4_20261023.json',{cache:'force-cache'})
-        ]);
-        if(vettedFiles.every(r=>r.ok)){
-          const packages=await Promise.all(vettedFiles.map(r=>r.json()));
-          const allowed=new Set([
-            'Butrint. theatre.jpg','Butrint theatre.jpg',
-            'Geghard Monastery, Armenia.jpg','Geghard Monastery, Church, Armenia.jpg','Geghard Monastery, Entrance, Armenia.jpg',
-            'Stupa in Borobudur Temple, Indonesia.jpg','Borobudur temple.jpg','Stupa Candi Borobudur.jpg',
-            'Banff National Park landscape.jpg','Gobekli Tepe 4.jpg','Göbeklitepe.jpg',
-            'Singapore Botanic Gardens.jpg','Singapore Botanic Gardens (1).jpg'
-          ]);
-          const images=packages.flatMap(p=>p.files||[]).filter(p=>p.countryCode===iso&&allowed.has(p.file)).slice(0,2);
-          reviewedCountryPhotos=images.length>0;
-          for(const photo of images){
-            const figure=document.createElement('figure');figure.className='world-guide-photo';
-            const img=document.createElement('img');
-            img.loading='lazy';img.decoding='async';img.alt=photo.caption;img.referrerPolicy='no-referrer';
-            img.src='https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(photo.file)+'?width=640';
-            img.onerror=()=>{img.remove();figure.prepend(text('p','Image unavailable; source link remains below.'))};
-            figure.append(img);
-            const caption=document.createElement('figcaption');
-            caption.append(text('span',photo.caption+' — '+photo.author+' · '));
-            for(const [link,label] of [[photo.filePage,'Original photograph'],[photo.licenseUrl,photo.license]]){
-              try{const url=new URL(link);if(url.protocol!=='https:')continue;
-                const a=text('a',label);a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';caption.append(a);
-                caption.append(text('span',' · '));
-              }catch{}
-            }
-            caption.append(text('span','Resized only; no other modifications.'));
-            figure.append(caption);section.append(figure);
-          }
-        }
-      }catch{ /* Photo metadata unavailable: keep the researched text accessible. */ }
-      if(!reviewedCountryPhotos&&window.RevisionWorldCommonsMedia){
-        // Strictly check returned file-level CC licence and artist.
-        // Automated search cannot establish exact site depiction, so label that clearly.
-        const media=window.RevisionWorldCommonsMedia;
-        const photos=await media.searchPage(story.focus||story.name||story.country);
-        if(current!==token||!container.isConnected)return;
-        const host=document.createElement('div');host.className='world-auto-photo-results';
-        media.append(host,photos,{emptyText:'No CC-licensed image with a named photographer was found.'});
-        section.append(host);
-      }
-      if(current!==token||!container.isConnected)return;
-      for(const part of story.sections||[]){
-        section.append(text('h5',part.title));
-        section.append(text('p',part.body));
-      }
-      if(!story.sections && story.article)section.append(text('p',story.article));
-      if(story.quickFact){
-        section.append(text('h5','Remember'));
-        section.append(text('p',story.quickFact));
-      }
-      const sourceList=document.createElement('ul');
-      for(const source of story.sources||[]){
-        try{
-          const url=new URL(source);
-          if(url.protocol!=='https:')continue;
-          const li=document.createElement('li'),a=text('a','Read original source');
-          a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';
-          li.append(a);sourceList.append(li);
-        }catch{}
-      }
-      section.append(text('h5','Research sources'));
-      section.append(sourceList);
-      container.replaceChildren(section);
-    } catch(err){
-      if(current===token&&container.isConnected){
-        container.replaceChildren(text('p','Guide unavailable here. The original unlocked location details remain available.'));
-        const a=text('a','Open the World Library');
-        a.href='./world-library-preview.html';a.target='_blank';a.rel='noopener noreferrer';
-        container.append(a);
-      }
-    }
+  if(!target)return;
+  let version=0;
+  let indexPromise=null;
+  const node=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'');return el};
+  const countryIndex=()=>indexPromise||(indexPromise=fetch('./editorial/country_gateway_release_index_20261023.json')
+   .then(r=>{if(!r.ok)throw Error('Country archive unavailable');return r.json()})
+   .catch(err=>{indexPromise=null;throw err}));
+  function activeId(){
+    try{return typeof openLocationId==='string'?openLocationId:null}catch{return null}
   }
-  function detectLocationId(){
-    try {
-      // app.js uses a classic script; its top-level lexical binding is shared.
-      if(typeof openLocationId==='string'&&(LOCATION_COUNTRIES[openLocationId]||/^(?:country|ocean|sea)-[a-z-]+$/.test(openLocationId)))return openLocationId;
-    }catch{}
-    const title=target.querySelector('.globe-info-top h3')?.textContent?.trim();
-    try{
-      if(typeof LOCATIONS!=='undefined')return LOCATIONS.find(x=>x.name===title)?.id||null;
-    }catch{}
+  function validFile(name){
+    return typeof name==='string' && /^editorial\/full_country_stories_(?:batch\d+_\d+_\d{8}|existing7_enriched_\d{8})\.json$/.test(name);
+  }
+  async function readStory(id){
+    if(id.startsWith('country-')){
+      const iso=id.slice(8).toUpperCase();
+      const index=await countryIndex();
+      const row=(index.entries||[]).find(entry=>entry.iso2===iso);
+      if(!row||!validFile(row.sourceFile))throw Error('Country entry unavailable');
+      const response=await fetch('./'+row.sourceFile);
+      if(!response.ok)throw Error('Country article unavailable');
+      return (await response.json()).records.find(entry=>entry.iso2===iso);
+    }
+    const paths=id.startsWith('ocean-')?['editorial/ocean_stories_5_20261023.json']:
+      ['editorial/sea_stories_batch1_9_20261023.json','editorial/sea_stories_batch2_8_20261023.json'];
+    for(const path of paths){
+      const res=await fetch('./'+path);
+      if(!res.ok)continue;
+      const record=(await res.json()).records.find(entry=>entry.id===id);
+      if(record)return record;
+    }
     return null;
   }
   function attach(){
-    if(target.classList.contains('hidden')||!target.querySelector('.globe-info-top'))return;
-    const id=detectLocationId(),existing=target.querySelector('[data-world-article-bridge]');
-    if(!id||!(LOCATION_COUNTRIES[id]||/^(?:country|ocean|sea)-[a-z-]+$/.test(id)))return;
-    if(existing?.dataset.locationId===id)return;
-    if(existing)existing.remove();
-    lastLocationId=id;
-    ++token;
-    const isMarine=/^(?:ocean|sea)-/.test(id);
-    const iso=id.startsWith('country-')?id.slice(8).toUpperCase():LOCATION_COUNTRIES[id];
-    const host=document.createElement('section');
-    host.className='world-guide-panel';
-    host.dataset.worldArticleBridge='1';
-    host.dataset.locationId=id;
-    const heading=text('h4',isMarine?'Go deeper: sea or ocean story':'Go deeper: country story');
-    const intro=text('p',isMarine?'Read the source-backed marine feature for this unlocked globe pin. Your points and purchases are unchanged.':'Read one researched country feature connected with this unlocked globe location. Your existing purchase and points are unchanged.');
-    const link=text('a','Open the World Library');
-    link.href=isMarine?'./world-library-preview.html?feature='+encodeURIComponent(id):'./world-library-preview.html?country='+encodeURIComponent(iso);
-    link.target='_blank';link.rel='noopener noreferrer';
-    const button=text('button',isMarine?'Read sea or ocean story here':'Read country story here');
-    button.type='button';button.className='mini-btn';
-    const content=document.createElement('div');content.className='world-guide-article';
-    if(!isMarine&&(iso==='TW'||iso==='PF')){
-      button.disabled=true;
-      intro.textContent='This geographical area is not in the defined 196-country archive. The existing location still works normally; additional regional stories may be added later.';
-    } else {
-      button.addEventListener('click',()=>{button.disabled=true;button.textContent='Country story opened';addArticle(content,iso,id,isMarine?id:'')});
-    }
-    host.append(heading,intro,button,link,content);
-    target.append(host);
+    const id=activeId();
+    if(!id||!(/^(?:country|sea|ocean)-[a-z-]+$/.test(id))||target.classList.contains('hidden'))return;
+    const intro=target.querySelector('[data-world-long-story]');
+    if(intro?.dataset.locationId===id)return;
+    if(intro)intro.remove();
+    const thisVersion=++version;
+    const section=document.createElement('section');
+    section.className='location-full-story';
+    section.dataset.worldLongStory='true';
+    section.dataset.locationId=id;
+    section.append(node('p','Loading location information…'));
+    target.append(section);
+    readStory(id).then(story=>{
+      if(version!==thisVersion||!section.isConnected||activeId()!==id)return;
+      if(!story)throw Error('No entry for this location');
+      const parts=document.createDocumentFragment();
+      for(const block of story.sections||[]){
+        const group=document.createElement('div');group.className='location-background';
+        group.append(node('h4',block.title),node('p',block.body));parts.append(group);
+      }
+      if(!story.sections&&story.article){
+        const group=document.createElement('div');group.className='location-background';
+        group.append(node('h4','About this place'),node('p',story.article));parts.append(group);
+      }
+      section.replaceChildren(parts);
+    }).catch(()=>{
+      if(version===thisVersion&&section.isConnected)section.replaceChildren(node('p','Location information is temporarily unavailable.'));
+    });
   }
   const observer=new MutationObserver(()=>{
-    if(target.classList.contains('hidden')){++token;lastLocationId='';return}
+    if(target.classList.contains('hidden')){version++;return}
     attach();
   });
-  observer.observe(target,{childList:true,subtree:false,attributes:true,attributeFilter:['class']});
+  observer.observe(target,{childList:true,attributes:true,attributeFilter:['class']});
   attach();
-  window.RevisionWorldArticleBridge=Object.freeze({countryForLocation:id=>id?.startsWith('country-')?id.slice(8).toUpperCase():LOCATION_COUNTRIES[id]||null,historicalLocationCount:Object.keys(LOCATION_COUNTRIES).length,locationCount:Object.keys(LOCATION_COUNTRIES).length+218});
+  window.RevisionWorldArticleBridge=Object.freeze({
+    countryForLocation:id=>id?.startsWith('country-')?id.slice(8).toUpperCase():LOCATION_COUNTRIES[id]||null,
+    historicalLocationCount:Object.keys(LOCATION_COUNTRIES).length,
+    locationCount:Object.keys(LOCATION_COUNTRIES).length+218
+  });
 })();
