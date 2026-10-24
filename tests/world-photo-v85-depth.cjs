@@ -43,12 +43,12 @@ for(const [id,records] of entries){
   assert(/NOT (?:visually pixel-reviewed|individual pixel-level visual approval)/.test(p.reviewStatus),'Machine-sourced != fully visual inspected');
  }
  const enriched=curated.get(id).filter(p=>String(p.photoSource||'').startsWith('Commons'));
- const qualityReplacements=new Set(['country-at','country-be','country-bj','country-bn','country-bh','country-bf','country-dk','country-bb','country-ec','country-cm']);
+ const qualityReplacements=new Set(['country-at','country-be','country-bj','country-bn','country-bh','country-bf','country-dk','country-bb','country-ec','country-cm','country-md','country-er','country-pw','country-gm','country-ng']);
  const omitted=records.filter(p=>!enriched.some(e=>e.file.toLowerCase()==='file:'+p.file.toLowerCase()));
  assert.equal(records.length-enriched.length,omitted.length,'Unexpected enrichment duplicate or provenance loss '+id);
  if(omitted.length){
   assert(qualityReplacements.has(id),'Unapproved removal of an enriched image '+id);
-  assert(curated.get(id).some(p=>p.qualityPriority===1000),'An omitted candidate must have a verified quality replacement '+id);
+  assert(curated.get(id).some(p=>p.qualityPriority===1000||p.qualityPriority===900),'An omitted candidate must have a verified quality replacement '+id);
   assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=4,'Do not remove a photo without preserving four options '+id);
  }
  assert(enriched.every(p=>p.checked===false&&p.source==='editorial-source'),'New candidates must pass browser current-licence validation');
@@ -57,7 +57,7 @@ assert(regions.size>=4,'Photo enrichment must span at least four World regions')
 for(const id of ['london','busan'])assert.equal(curated.get(id).filter(x=>x.checked).length,4,'Do not change original four pixel-reviewed gallery pictures');
 const shell=fs.readFileSync(require('node:path').join(base,'index.html'),'utf8');
 const worker=fs.readFileSync(require('node:path').join(base,'sw.js'),'utf8');
-assert(shell.indexOf('world-photo-enrichment-v85.js?v=90')<shell.indexOf('world-curated-photos.js?v=90'),'Enrichment manifest must load before curated registry');
-assert(worker.includes("revision-loop-v90-stronger-covers"),'Offline cache must pick up source changes');
+assert(shell.indexOf('world-photo-enrichment-v85.js?v=91')<shell.indexOf('world-curated-photos.js?v=91'),'Enrichment manifest must load before curated registry');
+assert(worker.includes("revision-loop-v91-place-matching"),'Offline cache must pick up source changes');
 assert(worker.includes("'./world-photo-enrichment-v85.js'"),'Offline preload must include source manifest');
 console.log('PASS v85: '+four+'/376 locations with >=4 distinct Commons sources, '+allFiles+' distinct location-file pairs; '+entries.length+' enriched galleries with '+newCount+' live-CC-sourced extras, '+short+' still under four, none unsourced');

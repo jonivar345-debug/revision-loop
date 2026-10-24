@@ -3887,6 +3887,187 @@
   function acceptedPhotoV90(id,item){
     return !(rejectedPhotoV90[id]||[]).some(file=>file.toLowerCase()===item.file.toLowerCase());
   }
+  // v91 manually source-checked geographic corrections; not full visual approval.
+  const priorityPhotoV91=Object.freeze({
+  "country-md": [
+    {
+      "file": "Orheiul Vechi panorama.jpg",
+      "author": "Eugene Patrashko",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Panorama of Orheiul Vechi cultural landscape, Moldova",
+      "width": 8934,
+      "height": 3958,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    },
+    {
+      "file": "Arco del triunfo, Chisináu, Moldavia, 2023-11-03, DD 27.jpg",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Triumphal Arch in central Chișinău, Moldova",
+      "width": 8033,
+      "height": 5355,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-er": [
+    {
+      "file": "Asmara Eritrea Fiat Tagliero Building (30476150040).jpg",
+      "author": "Clay Gilliland",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "Fiat Tagliero modernist architecture in Asmara, Eritrea",
+      "width": 3963,
+      "height": 2829,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-pw": [
+    {
+      "file": "Jellyfish Lake aerial (March 2008).jpg",
+      "author": "Lukas from Munich",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "subject": "Aerial view of Jellyfish Lake on Eil Malk, Palau",
+      "width": 3456,
+      "height": 2304,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-gm": [
+    {
+      "file": "Gambia, Banjul, Arch 22.jpg",
+      "author": "Hannu Sääskilahti",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Arch 22 photographed from above in Banjul, The Gambia",
+      "width": 3992,
+      "height": 2992,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    },
+    {
+      "file": "The river of the Gambia.JPG",
+      "author": "Peter van der Sluijs",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "River Gambia waterside landscape in The Gambia",
+      "width": 5184,
+      "height": 3456,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-ng": [
+    {
+      "file": "ZUMA ROCK.jpg",
+      "author": "Nzenwa Chinomso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Zuma Rock near Abuja, Niger State, Nigeria",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    },
+    {
+      "file": "Lagos skyline.jpg",
+      "author": "Clara Sanchiz",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "City skyline of Lagos, Nigeria",
+      "width": 3726,
+      "height": 1970,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-be": [
+    {
+      "file": "Ghent from Graslei.jpg",
+      "author": "Pythagoreio",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Medieval waterside architecture at Graslei in Ghent, Belgium",
+      "width": 4032,
+      "height": 3024,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-bn": [
+    {
+      "file": "Kampong Ayer, Water Village, Mosque. Brunei, Southeast Asia.jpg",
+      "author": "Mstyslav Chernov",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Kampong Ayer water village and mosque in Brunei",
+      "width": 4000,
+      "height": 2662,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ],
+  "country-cm": [
+    {
+      "file": "Parc Waza.jpg",
+      "author": "Photokadaffi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Landscape of Waza National Park in northern Cameroon",
+      "width": 2896,
+      "height": 1944,
+      "editorialMetadata": true,
+      "qualityPriority": 900,
+      "reviewStatus": "Exact Commons File page checked 2026-10-24: geographical subject, author, original dimensions and CC licence. NOT visually pixel-reviewed; current licence and delivery must be rechecked."
+    }
+  ]
+});
+  const rejectedPhotoV91=Object.freeze({
+  "country-md": [
+    "Romania Mănăstirea Sfântul Mina din Roșiori View of Moldova River.jpg",
+    "Moldova - landscape in Hîncești District 02.jpg"
+  ],
+  "country-er": [
+    "Cast iron utility cover in Asmara, Eritrea (30142134424).jpg"
+  ],
+  "country-pw": [
+    "Palau fantail (Rhipidura lepida) Rock Islands 3.jpg"
+  ],
+  "country-gm": [
+    "River Crab, Gambia (12561151994).jpg",
+    "Coco Ocean Resort & Spa (The Gambia) (23707583812).jpg"
+  ],
+  "country-ng": [
+    "National Church of Nigeria in Abuja 03.jpg",
+    "National Church of Nigeria in Abuja 22.jpg"
+  ],
+  "country-be": [
+    "De Molen (windmill) and the nuclear power plant cooling tower in Doel, Belgium (DSCF3859).jpg"
+  ],
+  "country-bn": [
+    "Jasra Harrisons building in Kuala Belait, Brunei (DSCF1391).jpg"
+  ],
+  "country-cm": [
+    "Spinach farming in Cameroon (Water leave gardening) 01.jpg"
+  ]
+});
+  function acceptedPhotoV91(id,item){return !(rejectedPhotoV91[id]||[]).some(f=>f.toLowerCase()===item.file.toLowerCase());}
   // Source-verified candidate additions to reach four where Wikimedia has
   // enough distinct photos. Never label machine selection as visual approval.
   function enrichmentFor(id){
@@ -3896,8 +4077,8 @@
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
-    return [...(priorityPhotoV90[id]||[]),...rest]
-      .filter(photo=>acceptedPhotoV90(id,photo))
+    return [...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
+      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
