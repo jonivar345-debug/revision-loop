@@ -71,19 +71,6 @@
       "wasArticleLead": false
     },
     {
-      "file": "Man made Forest.jpg",
-      "author": "Wilson S. Sarmiento",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "A man made forest in Bohol Philippines",
-      "width": 4608,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Automated Wikipedia article-associated candidate; original Commons licence checked during sourcing; pixels NOT visually approved",
-      "sourceArticle": "Bohol",
-      "wasArticleLead": false
-    },
-    {
       "file": "Forest road in Bohol 2, Philippines.jpg",
       "author": "Vyacheslav Argenberg",
       "license": "CC BY 4.0",
@@ -97,13 +84,26 @@
       "wasArticleLead": false
     },
     {
-      "file": "Panglao Island Beach.jpg",
-      "author": "Francisco M. Pajares, Jr.",
+      "file": "Loboc, Museum of Loboc, Loboc Church, Bohol, Philippines.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Museum of Loboc, Bohol, Philippines.",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Automated Wikipedia article-associated candidate; original Commons licence checked during sourcing; pixels NOT visually approved",
+      "sourceArticle": "Bohol",
+      "wasArticleLead": false
+    },
+    {
+      "file": "Chocolate Hills Bohol Philippines.jpg",
+      "author": "Philip Nalangan",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Beach in Dumaluan Resort, Panglao Island, Bohol",
-      "width": 3600,
-      "height": 2400,
+      "subject": "Chocolate Hills in Bohol, Philippines",
+      "width": 3872,
+      "height": 2592,
       "editorialMetadata": true,
       "reviewStatus": "Automated Wikipedia article-associated candidate; original Commons licence checked during sourcing; pixels NOT visually approved",
       "sourceArticle": "Bohol",
