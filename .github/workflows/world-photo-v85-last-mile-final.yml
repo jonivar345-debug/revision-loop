@@ -1,0 +1,44 @@
+name: One-time corrected landmark gallery audit and real image delivery v85
+on:
+  push:
+    branches: [feature/four-photo-galleries-v85]
+    paths: ['.github/workflows/world-photo-v85-last-mile-final.yml']
+permissions:
+  contents: write
+concurrency:
+  group: world-final-landmark-photo-sweep-v85
+  cancel-in-progress: true
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax-check last-mile Commons photo search
+        run: node --check scripts/enrich-hard-world-photos-v85.mjs
+      - name: Match precise landmarks to underfilled World galleries
+        run: node scripts/enrich-hard-world-photos-v85.mjs --write
+      - name: Reject demonstrably wrong-subject file-source candidates
+        run: node scripts/prune-world-photo-enrichment-v85.cjs
+      - name: Recompute source depth using actual gallery rejection rules
+        run: node scripts/audit-world-photo-depth.cjs --save
+      - name: Download real Commons cover thumbnails across seven World regions
+        run: node scripts/audit-world-photo-delivery-v85.mjs --write
+        continue-on-error: true
+      - name: Commit QA-checked source photo manifest and truthful count
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add world-photo-enrichment-v85.js editorial/world-photo-hard-location-v85.json editorial/world-photo-four-depth-v85.json editorial/world-photo-enrichment-exclusions-v85.json
+          test ! -f editorial/world-photo-live-delivery-v85.json || git add editorial/world-photo-live-delivery-v85.json
+          git diff --staged --quiet && exit 0
+          git commit -m 'Source hard-location Commons galleries, prune mismatches and audit real delivery'
+          git fetch origin feature/four-photo-galleries-v85
+          git rebase origin/feature/four-photo-galleries-v85
+          git push origin HEAD:feature/four-photo-galleries-v85
