@@ -7666,6 +7666,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Sea of Okhotsk",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "140828 Otoko-no-namida Shiretoko Peninsula Hokkaido Japan01s5.jpg",
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Shiretoko coast and waterfall viewed from the Sea of Okhotsk at Shari, Hokkaido, Japan",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page confirms source location, photographer, licence and original resolution; NOT visually pixel-reviewed",
+      "locationText": "sea-okhotsk",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "sea-philippine": [
@@ -7692,6 +7705,19 @@
       "height": 2988,
       "editorialMetadata": true,
       "reviewStatus": "2026-10-24: Commons geographic category and File page checked for author, licence and original dimensions; NOT visually pixel-reviewed",
+      "locationText": "sea-philippine",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    },
+    {
+      "file": "Dark clouds on the sea of Hualien.jpg",
+      "author": "Tzuhsun Hsu",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Cloudscape over the Philippine Sea viewed from Hualien, eastern Taiwan",
+      "width": 4000,
+      "height": 2250,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page confirms source location, photographer, licence and original resolution; NOT visually pixel-reviewed",
       "locationText": "sea-philippine",
       "photoSource": "Commons manually source-checked marine geography photo"
     }
