@@ -3530,6 +3530,28 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "editorialMetadata": true,
         "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Niger, Agadez (43), Grand Mosque.jpg",
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Grand Mosque in historic Agadez, Niger",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons source page author, exact historic Niger location, licence and resolution checked; no pixel-level inspection claimed"
+      },
+      {
+        "file": "Niger, Agadez (14), scene in the old city.jpg",
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic streets of Agadez in Niger, with the Grand Mosque minaret",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons source page author, exact historic Niger location, licence and resolution checked; no pixel-level inspection claimed"
       }
     ],
     "sea-red": [
