@@ -2356,7 +2356,8 @@ async function setLocationInfo(id){
  if(!(window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id))){showToast('Unlock '+l.name+' to explore its details');return}
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
- host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
+ host.setAttribute('role','region');host.setAttribute('aria-label',l.name+' unlocked location details');
+ host.innerHTML='<div class="globe-info-top"><div class="globe-place-heading"><span class="globe-owned-pill">✓ Unlocked location</span><h3>'+esc(l.name)+'</h3><span class="globe-place-meta">'+esc(l.region||'World')+' · Select its green pin to return here</span></div><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
  '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Finding a suitable photograph…</div></div>'+
  '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||'Loading a local introduction…')+'</p></div>'+
  '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
