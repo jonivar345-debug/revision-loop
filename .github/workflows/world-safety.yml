@@ -43,6 +43,7 @@ jobs:
           node tests/world-photo-quality-v88.cjs
           node tests/world-photo-country-quality-v89.cjs
           node tests/world-photo-country-quality-v90.cjs
+          node tests/world-photo-country-quality-v91.cjs
           node tests/world-photo-cover-fallback-v85.cjs
           node scripts/audit-world-photo-depth.cjs
           node tests/world-photo-original-resolution.cjs
