@@ -10,11 +10,11 @@ assert.equal(files.length,28,'Offline world research asset inventory changed');
 for(const filename of files){
  assert(sw.includes("'./editorial/"+filename+"'"),'Missing offline article source '+filename);
 }
-for(const required of ['world-curated-photos.js','world-photo-discovery-data.js','world-location-photo-gallery.js','world-geographic-destinations.js','world-globe-article-bridge.js','world-profile-preservation.js','world-commons-media.js','world-library-preview.html','world-library-preview.js','world-zoom-helpers.js','world-earth-renderer.js']){
+for(const required of ['world-curated-photos.js','world-photo-discovery-data.js','world-photo-enrichment-v85.js','world-location-photo-gallery.js','world-geographic-destinations.js','world-globe-article-bridge.js','world-profile-preservation.js','world-commons-media.js','world-library-preview.html','world-library-preview.js','world-zoom-helpers.js','world-earth-renderer.js']){
  assert(sw.includes("'./"+required+"'"),'World app shell missing '+required);
 }
 assert(sw.includes("c.addAll(SHELL)"),'Offline install does not precache the editorial library');
 assert(sw.includes('caches.match(e.request,{ignoreSearch:true})'),'Offline navigation must match precached pages even when ?country= or ?feature= is present');
 assert(sw.includes("'./data/natural-earth-coastlines-110m.json'"),'Actual public-domain Earth boundaries missing from offline bundle');
-assert(sw.includes("revision-loop-v84-commons-recovery"),'Cache version not advanced');
+assert(sw.includes("revision-loop-v85-photo-depth-and-cover"),'Cache version not advanced');
 console.log('PASS offline world assets: 27 editorial source files and seven world runtime files precached on service worker install.');

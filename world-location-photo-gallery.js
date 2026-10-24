@@ -13,6 +13,15 @@
   'use strict';
   const MAX_PHOTOS=4;
   const cache=new Map();
+  // Preserve deliberately ordered iconic landmark sets and the 8 original
+  // visually reviewed London/Busan photographs. Remaining source candidates
+  // are ranked for scenic coverage and recognisable location-specific covers.
+  const fixedLeadPlaces=new Set([
+    'london','busan','tokyo','seoul','tbilisi','singapore','paris','newyork',
+    'hongkong','sydney','shanghai','beijing','kyoto','rome','istanbul',
+    'barcelona','venice','dubrovnik','bangkok'
+  ]);
+
   const keywords=Object.freeze({
     london:['london','tower bridge','westminster','millennium bridge','st paul'],
     busan:['busan','haeundae','gwangalli','gwangan','gamcheon','yonggungsa','jagalchi'],
@@ -135,6 +144,8 @@
     const safe=promise=>Promise.resolve(promise).catch(()=>[]);
     if(typeof api.verifyNamedFiles==='function'){
       const proposed=suggested.filter(p=>p.source==='editorial-source');
+      if(!fixedLeadPlaces.has(location.id))
+        proposed.sort((a,b)=>imageScore(b,location)-imageScore(a,location));
       if(proposed.length){
         const checked=await safe(api.verifyNamedFiles(proposed));
         for(const photo of checked||[])add(photo);
@@ -191,6 +202,14 @@
     }
     return collected.slice(0,target);
   }
+  // The shop only displays small covers: request a real Commons derivative
+  // rather than loading the 2048px gallery rendition for every shop card.
+  // The original-resolution file remains linked in photo credits.
+  function coverSizedUrl(photo){
+    if(!String(photo.filePage||'').startsWith('https://commons.wikimedia.org/wiki/File:'))return photo.url;
+    const filename=String(photo.file||'').replace(/^File:/i,'').replace(/ /g,'_');
+    return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(filename)+'?width=960';
+  }
   function photosFor(location,{limit=MAX_PHOTOS,media}={}){
     const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
     if(!api)return Promise.resolve(curated(location).filter(p=>p.source==='curated').slice(0,limit));
@@ -201,7 +220,11 @@
     const key=keyOf(location)+'|'+target;
     if(media)return assemble(location,api,target);
     if(!cache.has(key)){
-      const task=assemble(location,api,target).catch(()=>curated(location).filter(p=>p.source==='curated').slice(0,target));
+      // Failed Commons requests and empty transient searches should be retried
+      // next time the user opens this place, not frozen as a blank card forever.
+      const task=assemble(location,api,target)
+        .then(photos=>{if(!photos.length)cache.delete(key);return photos})
+        .catch(()=>{cache.delete(key);return curated(location).filter(p=>p.source==='curated').slice(0,target)});
       cache.set(key,task);
     }
     return cache.get(key);
@@ -234,34 +257,54 @@
       photos.forEach((photo,i)=>{
         const figure=doc.createElement('figure');figure.className='destination-photo-tile';
         const image=doc.createElement('img');
-        image.alt=photo.description||('Photograph of '+location.name+' ('+(i+1)+')');
         image.loading=card?'lazy':i===0?'eager':'lazy';
-        image.decoding='async';
-        image.referrerPolicy='no-referrer';
-        image.src=photo.url;
-        let usedFallback=false;
-        image.onerror=()=>{
-          // If Wikimedia thumbnail delivery fails, try the full source file
-          // rather than silently removing a perfectly suitable photograph.
-          const original=photo.originalUrl;
-          if(!usedFallback&&original&&original!==image.src){
-            usedFallback=true;image.src=original;return;
+        image.decoding='async';image.referrerPolicy='no-referrer';
+        const li=doc.createElement('li');
+        let active=photo,stage=0,swapping=false;
+        const tried=new Set([photo.filePage]);
+        function updateCredit(p){
+          li.replaceChildren();
+          li.append(doc.createTextNode('Photo '+(i+1)+': '+p.author+' · '));
+          for(const [url,label] of [[p.filePage,'Original full-quality file'],[p.licenseUrl,p.license]]){
+            const link=doc.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';
+            link.textContent=label;li.append(link,doc.createTextNode(' · '));
           }
-          figure.remove();
+          li.append(doc.createTextNode('Display-sized derivative; original retained at source.'));
+        }
+        function display(p){
+          active=p;stage=0;
+          image.alt=p.description||('Photograph of '+location.name+' ('+(i+1)+')');
+          image.src=card?coverSizedUrl(p):p.url;
+          updateCredit(p);
+        }
+        image.onerror=async()=>{
+          if(!el.isConnected||el.dataset.galleryVersion!==version)return;
+          // First retry a shop cover with the standard 2048px Commons image.
+          if(stage===0&&image.src!==active.url){stage=1;image.src=active.url;return}
+          // Some Commons thumbnail servers intermittently fail even though the
+          // original is intact. Do not replace an image with a different place.
+          if(stage<2&&active.originalUrl&&active.originalUrl!==image.src){
+            stage=2;image.src=active.originalUrl;return;
+          }
+          if(card&&!swapping){
+            swapping=true;
+            // A failed leading cover may use the NEXT currently verified photo
+            // from this destination's own gallery, with matching new credits.
+            const alternatives=await photosFor(location,{limit:4,media}).catch(()=>[]);
+            swapping=false;
+            if(!el.isConnected||el.dataset.galleryVersion!==version)return;
+            const next=alternatives.find(p=>p?.filePage&&!tried.has(p.filePage));
+            if(next){tried.add(next.filePage);display(next);return}
+          }
+          figure.remove();li.remove();
           grid.className='destination-photo-grid photo-count-'+grid.querySelectorAll('figure').length;
           if(!grid.querySelector('img')){
             const empty=doc.createElement('span');empty.className='destination-photo-status';
             empty.textContent='Photographs unavailable';grid.append(empty);
           }
         };
+        display(photo);
         figure.append(image);grid.append(figure);
-        const li=doc.createElement('li');
-        li.append(doc.createTextNode('Photo '+(i+1)+': '+photo.author+' · '));
-        for(const [url,label] of [[photo.filePage,'Original full-quality file'],[photo.licenseUrl,photo.license]]){
-          const link=doc.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';
-          link.textContent=label;li.append(link,doc.createTextNode(' · '));
-        }
-        li.append(doc.createTextNode('Display-sized derivative; original retained at source.'));
         list.append(li);
       });
       el.append(grid);

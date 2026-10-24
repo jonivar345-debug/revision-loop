@@ -37,5 +37,5 @@ for(const ui of [library]){
  assert(ui.includes('licenseUrl'),'Licence hyperlink omitted');checks++;
  assert(ui.includes('filePage'),'Original Commons file link omitted');checks++;
 }
-assert(gallery.includes('photo.filePage')&&gallery.includes('photo.licenseUrl'),'Photo credits or source links missing from new gallery');checks++;
+assert(gallery.includes('p.filePage')&&gallery.includes('p.licenseUrl')&&gallery.includes('destination-photo-credits'),'Photo credits or source links missing from new gallery');checks++;
 console.log('PASS '+checks+' image source, CC metadata, whitelist and attribution assertions: 13 reviewed photos across '+countries.size+' countries. 190 countries still need verified photos.');

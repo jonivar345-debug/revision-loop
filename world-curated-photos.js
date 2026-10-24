@@ -3651,8 +3651,14 @@
       }
     ]
   });
+  // Source-verified candidate additions to reach four where Wikimedia has
+  // enough distinct photos. Never label machine selection as visual approval.
+  function enrichmentFor(id){
+    const records=typeof window==='object'?window.RevisionWorldPhotoEnrichment:null;
+    return Array.isArray(records?.[id])?records[id]:[];
+  }
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id)];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');

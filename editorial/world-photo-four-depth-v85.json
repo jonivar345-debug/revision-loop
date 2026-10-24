@@ -1,0 +1,3446 @@
+{
+  "date": "2026-10-24",
+  "totalDestinations": 376,
+  "completeFourSources": 349,
+  "incompleteDestinations": 27,
+  "missingSourceDestinations": 0,
+  "totalDistinctSourcedPhotos": 1488,
+  "unfilledPhotoSlots": 37,
+  "byPhotoCount": {
+    "0": 0,
+    "1": 1,
+    "2": 8,
+    "3": 18,
+    "4+": 349
+  },
+  "byRegion": {
+    "Europe": {
+      "four": 79,
+      "incomplete": 1,
+      "missingSlots": 1,
+      "locations": 80
+    },
+    "Asia": {
+      "four": 71,
+      "incomplete": 2,
+      "missingSlots": 3,
+      "locations": 73
+    },
+    "Africa": {
+      "four": 78,
+      "incomplete": 10,
+      "missingSlots": 13,
+      "locations": 88
+    },
+    "South America": {
+      "four": 33,
+      "incomplete": 0,
+      "missingSlots": 0,
+      "locations": 33
+    },
+    "North America": {
+      "four": 43,
+      "incomplete": 1,
+      "missingSlots": 1,
+      "locations": 44
+    },
+    "Oceania": {
+      "four": 33,
+      "incomplete": 3,
+      "missingSlots": 4,
+      "locations": 36
+    },
+    "Oceans & Seas": {
+      "four": 12,
+      "incomplete": 10,
+      "missingSlots": 15,
+      "locations": 22
+    }
+  },
+  "destinations": [
+    {
+      "id": "london",
+      "name": "London",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "tbilisi",
+      "name": "Tbilisi",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "seoul",
+      "name": "Seoul",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "busan",
+      "name": "Busan",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "hongkong",
+      "name": "Hong Kong",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "shanghai",
+      "name": "Shanghai",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "shenzhen",
+      "name": "Shenzhen",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "beijing",
+      "name": "Beijing",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "manila",
+      "name": "Manila",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "bohol",
+      "name": "Bohol",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "coron",
+      "name": "Coron",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "bali",
+      "name": "Bali",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "hanoi",
+      "name": "Hanoi",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "hochiminh",
+      "name": "Ho Chi Minh City",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "bangkok",
+      "name": "Bangkok",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "kualalumpur",
+      "name": "Kuala Lumpur",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "almaty",
+      "name": "Almaty",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "bishkek",
+      "name": "Bishkek",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "samarkand",
+      "name": "Samarkand",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "petra",
+      "name": "Petra",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "nairobi",
+      "name": "Nairobi",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "capetown",
+      "name": "Cape Town",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "cusco",
+      "name": "Cusco",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "machupicchu",
+      "name": "Machu Picchu",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "rio",
+      "name": "Rio de Janeiro",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "newyork",
+      "name": "New York City",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "vancouver",
+      "name": "Vancouver",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "reykjavik",
+      "name": "Reykjavík",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sydney",
+      "name": "Sydney",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "kyoto",
+      "name": "Kyoto",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "gyeongju",
+      "name": "Gyeongju",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "taipei",
+      "name": "Taipei",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "angkor",
+      "name": "Angkor Wat",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "dubai",
+      "name": "Dubai",
+      "kind": "City / landmark / area",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "istanbul",
+      "name": "Istanbul",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "venice",
+      "name": "Venice",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "edinburgh",
+      "name": "Edinburgh",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "lisbon",
+      "name": "Lisbon",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "prague",
+      "name": "Prague",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "vienna",
+      "name": "Vienna",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "athens",
+      "name": "Athens",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "zurich",
+      "name": "Zürich",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "stockholm",
+      "name": "Stockholm",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "dubrovnik",
+      "name": "Dubrovnik",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "budapest",
+      "name": "Budapest",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "marrakech",
+      "name": "Marrakesh",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "fes",
+      "name": "Fez",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "cairo",
+      "name": "Cairo",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "luxor",
+      "name": "Luxor",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "alexandria",
+      "name": "Alexandria",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "tunis",
+      "name": "Tunis",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "dakar",
+      "name": "Dakar",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "accra",
+      "name": "Accra",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "lagos",
+      "name": "Lagos",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "addis",
+      "name": "Addis Ababa",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "zanzibar",
+      "name": "Stone Town, Zanzibar",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "victoriafalls",
+      "name": "Victoria Falls",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sossusvlei",
+      "name": "Sossusvlei",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "mahe",
+      "name": "Mahé",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "antananarivo",
+      "name": "Antananarivo",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "portlouis",
+      "name": "Port Louis",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "toronto",
+      "name": "Toronto",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "montreal",
+      "name": "Montréal",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "quebec",
+      "name": "Québec City",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "washingtondc",
+      "name": "Washington, DC",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sanfrancisco",
+      "name": "San Francisco",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "losangeles",
+      "name": "Los Angeles",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "mexicocity",
+      "name": "Mexico City",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "oaxaca",
+      "name": "Oaxaca",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "chichenitza",
+      "name": "Chichén Itzá",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "havana",
+      "name": "Havana",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "antiguaguatemala",
+      "name": "Antigua Guatemala",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sanjosecr",
+      "name": "San José, Costa Rica",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "panamacity",
+      "name": "Panama City",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "banff",
+      "name": "Banff National Park",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "yellowstone",
+      "name": "Yellowstone National Park",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "buenosaires",
+      "name": "Buenos Aires",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "iguazu",
+      "name": "Iguazú Falls",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "santiago",
+      "name": "Santiago",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "atacama",
+      "name": "San Pedro de Atacama",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "torres",
+      "name": "Torres del Paine",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "lapaz",
+      "name": "La Paz",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "uyuni",
+      "name": "Salar de Uyuni",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "lima",
+      "name": "Lima",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "bogota",
+      "name": "Bogotá",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "cartagena",
+      "name": "Cartagena",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "medellin",
+      "name": "Medellín",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "quito",
+      "name": "Quito",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "galapagos",
+      "name": "Galápagos Islands",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "manaus",
+      "name": "Manaus",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "montevideo",
+      "name": "Montevideo",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "melbourne",
+      "name": "Melbourne",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "canberra",
+      "name": "Canberra",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "brisbane",
+      "name": "Brisbane",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "perth",
+      "name": "Perth",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "cairns",
+      "name": "Cairns",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "adelaide",
+      "name": "Adelaide",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "hobart",
+      "name": "Hobart",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "uluru",
+      "name": "Uluru",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "greatbarrier",
+      "name": "Great Barrier Reef",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "whitsundays",
+      "name": "Whitsunday Islands",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "auckland",
+      "name": "Auckland",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "wellington",
+      "name": "Wellington",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "queenstown",
+      "name": "Queenstown",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "rotorua",
+      "name": "Rotorua",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "milfordsound",
+      "name": "Milford Sound",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "nadi",
+      "name": "Nadi",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "borabora",
+      "name": "Bora Bora",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "copenhagen",
+      "name": "Copenhagen",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "bergen",
+      "name": "Bergen",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "ljubljana",
+      "name": "Ljubljana",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "chefchaouen",
+      "name": "Chefchaouen",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "okavango",
+      "name": "Okavango Delta",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "kigali",
+      "name": "Kigali",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "grandcanyon",
+      "name": "Grand Canyon",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "montegobay",
+      "name": "Montego Bay",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "anchorage",
+      "name": "Anchorage",
+      "kind": "City / landmark / area",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "peritomoreno",
+      "name": "Perito Moreno Glacier",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "easterisland",
+      "name": "Rapa Nui",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "valparaiso",
+      "name": "Valparaíso",
+      "kind": "City / landmark / area",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "apia",
+      "name": "Apia",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "portvila",
+      "name": "Port Vila",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "papeete",
+      "name": "Papeete",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "porto",
+      "name": "Porto",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "granada",
+      "name": "Granada",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "seville",
+      "name": "Seville",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "valencia",
+      "name": "Valencia",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "florence",
+      "name": "Florence",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "krakow",
+      "name": "Kraków",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "tallinn",
+      "name": "Tallinn",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "riga",
+      "name": "Riga",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "vilnius",
+      "name": "Vilnius",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 5,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "salzburg",
+      "name": "Salzburg",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sarajevo",
+      "name": "Sarajevo",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "mostar",
+      "name": "Mostar",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "kotor",
+      "name": "Kotor",
+      "kind": "City / landmark / area",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "casablanca",
+      "name": "Casablanca",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "essaouira",
+      "name": "Essaouira",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "aswan",
+      "name": "Aswan",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sidi_bou_said",
+      "name": "Sidi Bou Said",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "cape_coast",
+      "name": "Cape Coast",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "stellenbosch",
+      "name": "Stellenbosch",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "windhoek",
+      "name": "Windhoek",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "swakopmund",
+      "name": "Swakopmund",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "stone_town",
+      "name": "Stone Town",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "arusha",
+      "name": "Arusha",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "kampala",
+      "name": "Kampala",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "mombasa",
+      "name": "Mombasa",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "nosy_be",
+      "name": "Nosy Be",
+      "kind": "City / landmark / area",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "mount_cook",
+      "name": "Aoraki / Mount Cook",
+      "kind": "City / landmark / area",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ad",
+      "name": "Andorra",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ae",
+      "name": "United Arab Emirates",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-af",
+      "name": "Afghanistan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ag",
+      "name": "Antigua and Barbuda",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 5,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-al",
+      "name": "Albania",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 5,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-am",
+      "name": "Armenia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ao",
+      "name": "Angola",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ar",
+      "name": "Argentina",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-at",
+      "name": "Austria",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-au",
+      "name": "Australia",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-az",
+      "name": "Azerbaijan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ba",
+      "name": "Bosnia and Herzegovina",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bb",
+      "name": "Barbados",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bd",
+      "name": "Bangladesh",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-be",
+      "name": "Belgium",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bf",
+      "name": "Burkina Faso",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bg",
+      "name": "Bulgaria",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bh",
+      "name": "Bahrain",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bi",
+      "name": "Burundi",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bj",
+      "name": "Benin",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bn",
+      "name": "Brunei",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bo",
+      "name": "Bolivia",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-br",
+      "name": "Brazil",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bs",
+      "name": "Bahamas",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bt",
+      "name": "Bhutan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bw",
+      "name": "Botswana",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-by",
+      "name": "Belarus",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-bz",
+      "name": "Belize",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ca",
+      "name": "Canada",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cd",
+      "name": "Democratic Republic of the Congo",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cf",
+      "name": "Central African Republic",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cg",
+      "name": "Republic of the Congo",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ch",
+      "name": "Switzerland",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ci",
+      "name": "Côte d'Ivoire",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cl",
+      "name": "Chile",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cm",
+      "name": "Cameroon",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cn",
+      "name": "China",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-co",
+      "name": "Colombia",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 7,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cr",
+      "name": "Costa Rica",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cu",
+      "name": "Cuba",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cv",
+      "name": "Cabo Verde",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cy",
+      "name": "Cyprus",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-cz",
+      "name": "Czechia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-de",
+      "name": "Germany",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-dj",
+      "name": "Djibouti",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-dk",
+      "name": "Denmark",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-dm",
+      "name": "Dominica",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-do",
+      "name": "Dominican Republic",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-dz",
+      "name": "Algeria",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ec",
+      "name": "Ecuador",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ee",
+      "name": "Estonia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-eg",
+      "name": "Egypt",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-er",
+      "name": "Eritrea",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-es",
+      "name": "Spain",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-et",
+      "name": "Ethiopia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-fi",
+      "name": "Finland",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-fj",
+      "name": "Fiji",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-fm",
+      "name": "Micronesia",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-fr",
+      "name": "France",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ga",
+      "name": "Gabon",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gb",
+      "name": "United Kingdom",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gd",
+      "name": "Grenada",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ge",
+      "name": "Georgia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gh",
+      "name": "Ghana",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gm",
+      "name": "Gambia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gn",
+      "name": "Guinea",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 1,
+      "neededToReachFour": 3,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gq",
+      "name": "Equatorial Guinea",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gr",
+      "name": "Greece",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gt",
+      "name": "Guatemala",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gw",
+      "name": "Guinea-Bissau",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-gy",
+      "name": "Guyana",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-hn",
+      "name": "Honduras",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-hr",
+      "name": "Croatia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ht",
+      "name": "Haiti",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-hu",
+      "name": "Hungary",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-id",
+      "name": "Indonesia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ie",
+      "name": "Ireland",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-il",
+      "name": "Israel",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-in",
+      "name": "India",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-iq",
+      "name": "Iraq",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ir",
+      "name": "Iran",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-is",
+      "name": "Iceland",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-it",
+      "name": "Italy",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-jm",
+      "name": "Jamaica",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-jo",
+      "name": "Jordan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-jp",
+      "name": "Japan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ke",
+      "name": "Kenya",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kg",
+      "name": "Kyrgyzstan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kh",
+      "name": "Cambodia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ki",
+      "name": "Kiribati",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-km",
+      "name": "Comoros",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kn",
+      "name": "Saint Kitts and Nevis",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kp",
+      "name": "North Korea",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kr",
+      "name": "South Korea",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kw",
+      "name": "Kuwait",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-kz",
+      "name": "Kazakhstan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-la",
+      "name": "Laos",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lb",
+      "name": "Lebanon",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lc",
+      "name": "Saint Lucia",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-li",
+      "name": "Liechtenstein",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lk",
+      "name": "Sri Lanka",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lr",
+      "name": "Liberia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ls",
+      "name": "Lesotho",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lt",
+      "name": "Lithuania",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lu",
+      "name": "Luxembourg",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-lv",
+      "name": "Latvia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ly",
+      "name": "Libya",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ma",
+      "name": "Morocco",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mc",
+      "name": "Monaco",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-md",
+      "name": "Moldova",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-me",
+      "name": "Montenegro",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mg",
+      "name": "Madagascar",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mh",
+      "name": "Marshall Islands",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mk",
+      "name": "North Macedonia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ml",
+      "name": "Mali",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mm",
+      "name": "Myanmar",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mn",
+      "name": "Mongolia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mr",
+      "name": "Mauritania",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mt",
+      "name": "Malta",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mu",
+      "name": "Mauritius",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mv",
+      "name": "Maldives",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mw",
+      "name": "Malawi",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mx",
+      "name": "Mexico",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-my",
+      "name": "Malaysia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-mz",
+      "name": "Mozambique",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-na",
+      "name": "Namibia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ne",
+      "name": "Niger",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ng",
+      "name": "Nigeria",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ni",
+      "name": "Nicaragua",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-nl",
+      "name": "Netherlands",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-no",
+      "name": "Norway",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-np",
+      "name": "Nepal",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-nr",
+      "name": "Nauru",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-nz",
+      "name": "New Zealand",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-om",
+      "name": "Oman",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pa",
+      "name": "Panama",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pe",
+      "name": "Peru",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pg",
+      "name": "Papua New Guinea",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ph",
+      "name": "Philippines",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pk",
+      "name": "Pakistan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pl",
+      "name": "Poland",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ps",
+      "name": "Palestine",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pt",
+      "name": "Portugal",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-pw",
+      "name": "Palau",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-py",
+      "name": "Paraguay",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-qa",
+      "name": "Qatar",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ro",
+      "name": "Romania",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-rs",
+      "name": "Serbia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ru",
+      "name": "Russia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-rw",
+      "name": "Rwanda",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sa",
+      "name": "Saudi Arabia",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sb",
+      "name": "Solomon Islands",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sc",
+      "name": "Seychelles",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sd",
+      "name": "Sudan",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-se",
+      "name": "Sweden",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 5,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sg",
+      "name": "Singapore",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-si",
+      "name": "Slovenia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sk",
+      "name": "Slovakia",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sl",
+      "name": "Sierra Leone",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sm",
+      "name": "San Marino",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sn",
+      "name": "Senegal",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-so",
+      "name": "Somalia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sr",
+      "name": "Suriname",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ss",
+      "name": "South Sudan",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-st",
+      "name": "São Tomé and Príncipe",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sv",
+      "name": "El Salvador",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sy",
+      "name": "Syria",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-sz",
+      "name": "Eswatini",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-td",
+      "name": "Chad",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tg",
+      "name": "Togo",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-th",
+      "name": "Thailand",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tj",
+      "name": "Tajikistan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tl",
+      "name": "Timor-Leste",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tm",
+      "name": "Turkmenistan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tn",
+      "name": "Tunisia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-to",
+      "name": "Tonga",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tr",
+      "name": "Türkiye",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tt",
+      "name": "Trinidad and Tobago",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tv",
+      "name": "Tuvalu",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-tz",
+      "name": "Tanzania",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ua",
+      "name": "Ukraine",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ug",
+      "name": "Uganda",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-us",
+      "name": "United States",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 6,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-uy",
+      "name": "Uruguay",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-uz",
+      "name": "Uzbekistan",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-va",
+      "name": "Vatican City",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-vc",
+      "name": "Saint Vincent and the Grenadines",
+      "kind": "Country",
+      "region": "North America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ve",
+      "name": "Venezuela",
+      "kind": "Country",
+      "region": "South America",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-vn",
+      "name": "Viet Nam",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-vu",
+      "name": "Vanuatu",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ws",
+      "name": "Samoa",
+      "kind": "Country",
+      "region": "Oceania",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-xk",
+      "name": "Kosovo",
+      "kind": "Country",
+      "region": "Europe",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-ye",
+      "name": "Yemen",
+      "kind": "Country",
+      "region": "Asia",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-za",
+      "name": "South Africa",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-zm",
+      "name": "Zambia",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "country-zw",
+      "name": "Zimbabwe",
+      "kind": "Country",
+      "region": "Africa",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "ocean-pacific",
+      "name": "Pacific Ocean",
+      "kind": "Ocean",
+      "region": "Oceans & Seas",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "ocean-atlantic",
+      "name": "Atlantic Ocean",
+      "kind": "Ocean",
+      "region": "Oceans & Seas",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "ocean-indian",
+      "name": "Indian Ocean",
+      "kind": "Ocean",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "ocean-arctic",
+      "name": "Arctic Ocean",
+      "kind": "Ocean",
+      "region": "Oceans & Seas",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "ocean-southern",
+      "name": "Southern Ocean",
+      "kind": "Ocean",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-mediterranean",
+      "name": "Mediterranean Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-baltic",
+      "name": "Baltic Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-north",
+      "name": "North Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-black",
+      "name": "Black Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-red",
+      "name": "Red Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-caribbean",
+      "name": "Caribbean Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-bering",
+      "name": "Bering Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-okhotsk",
+      "name": "Sea of Okhotsk",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-weddell",
+      "name": "Weddell Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-arabian",
+      "name": "Arabian Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-south-china",
+      "name": "South China Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 3,
+      "neededToReachFour": 1,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-east-china",
+      "name": "East China Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-philippine",
+      "name": "Philippine Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-coral",
+      "name": "Coral Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-tasman",
+      "name": "Tasman Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-andaman",
+      "name": "Andaman Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 4,
+      "neededToReachFour": 0,
+      "fourVerifiedOnScreen": false
+    },
+    {
+      "id": "sea-labrador",
+      "name": "Labrador Sea",
+      "kind": "Sea",
+      "region": "Oceans & Seas",
+      "sourcedCount": 2,
+      "neededToReachFour": 2,
+      "fourVerifiedOnScreen": false
+    }
+  ]
+}
