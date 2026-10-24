@@ -166,6 +166,22 @@
   "copenhagen": "DK"
 });
 
+  // City-specific long guides appear only inside the actual unlocked pin panel.
+  // They must not be replaced with unrelated country highlights (e.g. Jodrell Bank under London).
+  const CITY_GUIDES=Object.freeze({
+    london:[
+      {title:'From Londinium to a capital',body:'Roman London grew around a crossing of the Thames and the settlement of Londinium. The medieval city developed within and beyond the old walls, while Westminster became a separate centre of royal government. After the Great Fire of 1666, streets and buildings were rebuilt, and London expanded rapidly during the industrial period. Its history remains visible in the contrast between the City, Westminster and later neighbourhoods.'},
+      {title:'The river and the changing city',body:'The Thames shaped London’s trade, food supply and transport. For centuries, ships carried goods through its docks and warehouses; container shipping later moved much of that activity downstream. Former docklands have become housing and office districts, although working river traffic continues. Bridges, railway terminals and Underground lines connect areas whose growth was once constrained by the river and its tributaries.'},
+      {title:'Neighbourhoods, museums and culture',body:'London’s cultural life extends far beyond its famous landmarks. Markets, theatres, libraries, music venues and places of worship reflect generations of migration and local change. The British Museum, National Gallery and other major institutions sit alongside smaller community museums and arts organisations. The West End is known for theatre, while areas such as Southall, Brixton and Brick Lane have particularly distinctive cultural histories.'},
+      {title:'Parks, planning and modern challenges',body:'Large parks, squares and riverside paths give London important green space within a dense urban region. The Green Belt has influenced where development takes place, while housing demand, air quality and public transport continue to shape planning decisions. Flood protection, including the Thames Barrier downstream, is another part of the city’s infrastructure. London’s story is therefore also about how an old city adapts to environmental and social pressures.'}
+    ],
+    busan:[
+      {title:'A port between mountains and sea',body:'Busan sits on South Korea’s south-eastern coast, where mountains meet sheltered inlets and beaches. Its geography has shaped neighbourhoods, road and rail routes, and the concentration of port facilities along the waterfront. The city became a major gateway for international shipping and still has a close relationship with the sea, from container terminals and fishing markets to ferry connections and coastal recreation.'},
+      {title:'History and the Korean War',body:'During the Korean War, Busan served as the temporary capital of South Korea and received large numbers of people displaced by fighting. Steep hillside settlements developed as residents sought places to live, leaving a distinctive pattern of narrow lanes and closely packed homes. Gamcheon Culture Village, now known for murals and tourism, is connected with this wider history of migration and adaptation, although it remains a residential neighbourhood.'},
+      {title:'Districts, food and waterfront life',body:'Haeundae and Gwangalli are among Busan’s best-known beaches, with Gwangandaegyo Bridge forming a prominent part of the evening waterfront view. Jagalchi Market reflects the city’s long fishing and seafood trade, while Nampo-dong and Seomyeon offer different shopping and entertainment districts. Local food is shaped by coastal ingredients and the region’s culinary traditions, and the annual Busan International Film Festival brings attention to cinema from South Korea and elsewhere.'},
+      {title:'Landscape and getting around',body:'The city’s hills and coastline provide varied viewpoints, but they also make routes less direct than a flat street map suggests. The metro, buses and regional railways connect major districts; walking routes and cable cars offer different ways to experience the coast. Temples and parks, including the coastal Haedong Yonggungsa temple and parts of Geumjeongsan, show that Busan combines dense urban areas with significant natural and cultural landscapes.'}
+    ]
+  });
   const target=document.getElementById('globeLocationInfo');
   if(!target)return;
   let version=0;
@@ -202,7 +218,7 @@
   }
   function attach(){
     const id=activeId();
-    if(!id||!(/^(?:country|sea|ocean)-[a-z-]+$/.test(id))||target.classList.contains('hidden'))return;
+    if(!id||!((/^(?:country|sea|ocean)-[a-z-]+$/.test(id))||CITY_GUIDES[id])||target.classList.contains('hidden'))return;
     const intro=target.querySelector('[data-world-long-story]');
     if(intro?.dataset.locationId===id)return;
     if(intro)intro.remove();
@@ -213,7 +229,7 @@
     section.dataset.locationId=id;
     section.append(node('p','Loading location information…'));
     target.append(section);
-    readStory(id).then(story=>{
+    Promise.resolve(CITY_GUIDES[id]?{sections:CITY_GUIDES[id]}:readStory(id)).then(story=>{
       if(version!==thisVersion||!section.isConnected||activeId()!==id)return;
       if(!story)throw Error('No entry for this location');
       const parts=document.createDocumentFragment();

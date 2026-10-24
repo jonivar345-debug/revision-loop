@@ -7,7 +7,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 const baseline=JSON.parse(fs.readFileSync(path.join(root,'editorial/shop_historical_identity_baseline_20261023.json'),'utf8'));
 new vm.Script(script);
-assert(html.includes('world-globe-article-bridge.js?v=71'));
+assert(html.includes('world-globe-article-bridge.js?v=73'));
 assert(sw.includes("'./world-globe-article-bridge.js'"));
 for(const unwanted of ['localStorage','sessionStorage','indexedDB','World Library','Research sources','Open the World Library','Go deeper: country story'])
  assert(!script.includes(unwanted),'Unwanted duplicate research panel or profile access: '+unwanted);
@@ -35,11 +35,20 @@ const open=(id)=>{
  return {host,window};
 };
 const london=open('london');
-assert.equal(london.host.children.length,0,'London must not get a separate United Kingdom research panel');
+assert.equal(london.host.children.length,1,'Owned London should have one local long guide under its main panel');
 assert.equal(london.window.RevisionWorldArticleBridge.historicalLocationCount,161);
 assert.equal(london.window.RevisionWorldArticleBridge.locationCount,379);
 for(const id of baseline.locations)assert(london.window.RevisionWorldArticleBridge.countryForLocation(id),'Lost location country mapping '+id);
 (async()=>{
+ for(let i=0;i<100&&!london.host.children[0]?.children.some(x=>x.className==='location-background');i++)await new Promise(resolve=>setTimeout(resolve,5));
+ assert.equal(london.host.children[0].children.length,4,'London should have four place-specific long sections');
+ const londonText=london.host.children[0].children.flatMap(x=>x.children.map(y=>y.textContent)).join(' ');
+ assert(londonText.includes('Thames')&&londonText.includes('Westminster'),'London history missing');
+ assert(!londonText.includes('Jodrell'),'Unrelated country article displayed beneath London');
+ const busan=open('busan');
+ for(let i=0;i<100&&!busan.host.children[0]?.children.some(x=>x.className==='location-background');i++)await new Promise(resolve=>setTimeout(resolve,5));
+ assert.equal(busan.host.children[0].children.length,4,'Busan should have four place-specific long sections');
+ assert(busan.host.children[0].children.some(x=>x.children.some(y=>y.textContent.includes('Gwangalli'))),'Busan long guide does not cover local waterfront');
  const country=open('country-gb');
  for(let i=0;i<100&&!country.host.children[0]?.children.some(x=>x.className==='location-background');i++)await new Promise(resolve=>setTimeout(resolve,5));
  assert.equal(country.host.children.length,1,'Country should have one article block');
@@ -52,6 +61,6 @@ for(const id of baseline.locations)assert(london.window.RevisionWorldArticleBrid
  assert.equal(sea.host.children[0].children.length,4,'Marine pin should load four detailed sections');
  assert(requests.includes('editorial/country_gateway_release_index_20261023.json'));
  assert(requests.includes('editorial/sea_stories_batch1_9_20261023.json'));
- assert.equal(requests.filter(x=>x.includes('full_country_stories_')).length,1,'City must not fetch unrelated country article');
+ assert.equal(requests.filter(x=>x.includes('full_country_stories_')).length,1,'Cities must not fetch unrelated country articles');
  console.log('PASS unified location pages: no London duplication, four sections for unlocked country and sea pins, no research links or profile access.');
 })().catch(e=>{console.error(e);process.exitCode=1});
