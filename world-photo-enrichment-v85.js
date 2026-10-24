@@ -6612,6 +6612,47 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Arctic Ocean",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "North Pole, Arctic Ocean, sea ice 04.jpg",
+      "author": "Matti&Keti",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sea ice and pressure ridges at the Geographic North Pole",
+      "width": 3270,
+      "height": 2161,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-arctic",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    }
+  ],
+  "ocean-atlantic": [
+    {
+      "file": "Coastal waves.jpg",
+      "author": "GreenGlobin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Atlantic Ocean surf off Swakopmund, Namibia",
+      "width": 3024,
+      "height": 4032,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-atlantic",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    },
+    {
+      "file": "Atlantic Ocean (35744235792).jpg",
+      "author": "Dennis G. Jarvis",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Atlantic Ocean coastline at Cape Breton, Nova Scotia",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-atlantic",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "ocean-indian": [
@@ -6655,6 +6696,32 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Pacific Ocean",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Pacific-Sunrise.jpg",
+      "author": "Petr Vodička",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sunrise over the Pacific Ocean near Japan",
+      "width": 3728,
+      "height": 5600,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-pacific",
+      "photoSource": "Commons manually source-checked marine geography photo"
+    },
+    {
+      "file": "Sunset over the Pacific Ocean from Maui, Hawaii.jpg",
+      "author": "Peckphotographyart",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sunset over the Pacific Ocean from Maui, Hawaii",
+      "width": 5472,
+      "height": 3648,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for author, licence, original resolution and location; NOT visually pixel-reviewed",
+      "locationText": "ocean-pacific",
+      "photoSource": "Commons manually source-checked marine geography photo"
     }
   ],
   "okavango": [
