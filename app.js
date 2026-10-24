@@ -2125,6 +2125,9 @@ function buy(kind,id){
   profile=outcome.profile;
   save();
   if(!outcome.alreadyOwned)showToast('Unlocked '+destination.name);
+  // Centre the Earth on the newly owned/selected destination, keeping the
+  // original pin coordinates unchanged. The pin is green once owned.
+  focusOnGlobeLocation(destination.id,false);
   renderAll();drawGlobe();
   return;
  }
@@ -2166,10 +2169,12 @@ function locationImageFallback(el,location){
  if(!el?.isConnected)return;
  el.classList.add('location-image-map-fallback');
  el.replaceChildren();
- const globe=document.createElement('span');globe.className='location-image-earth';globe.setAttribute('aria-hidden','true');globe.textContent='🌐';
- const label=document.createElement('span');label.className='location-image-fallback-label';
- label.textContent=location.worldKind==='sea'||location.worldKind==='ocean'?'Marine location':location.worldKind==='country'?'Country on Earth':'Find on the globe';
- el.append(globe,label);
+ const title=document.createElement('span');
+ title.className='location-image-fallback-label';
+ title.textContent='Map view · '+location.name;
+ el.append(title);
+ // The geographic overview works offline and never pretends to be a photograph.
+ window.RevisionWorldMapPreview?.render(el,location).catch(()=>{});
 }
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
@@ -2178,8 +2183,9 @@ async function locationPhoto(location,el){
  const loadPhotos=async()=>{
   // Wikipedia's actual place article chooses the photograph: never search
   // for a vaguely related market, river or skyline by keywords.
-  const approved=images.approvedFor?.(location.id);
-  const matches=approved?[approved]:await images.searchPage(location.wiki);
+  const checked=await images.verifyApproved?.(location.id);
+  // A curated name with a broken URL must not block the actual city's article.
+  const matches=checked?[checked]:await images.searchPage(location.wiki);
   if(!el.isConnected||el.dataset.locationPhoto&&el.dataset.locationPhoto!==location.id)return;
   if(matches.length){
    el.classList.remove('location-image-map-fallback');images.append(el,matches);
@@ -2329,6 +2335,20 @@ const LOCATION_CULTURE_DETAILS={
  "london": "London's museums, theatres and diverse neighbourhoods reflect the city's layered history and communities.",
  "tokyo": "Tokyo ranges from older districts such as Asakusa to modern districts; festivals, food and design traditions vary by neighbourhood."
 };
+const LOCATION_LOCAL_OVERVIEWS={
+  "london": "London stands on the River Thames in south-east England and is the UK's capital. River crossings, docks and railways shaped its growth from Roman Londinium into a major international city. Westminster, the historic City and many other neighbourhoods reflect different stages of that history.",
+  "busan": "Busan is a major port on South Korea's south-eastern coast, facing the Korea Strait. Hills, beaches and waterfront neighbourhoods create a different setting from Seoul. Its harbour, markets and rail connections reflect its importance to trade and contemporary Korean culture.",
+  "tbilisi": "Tbilisi, Georgia's capital, extends along the Mtkvari River between surrounding hills. Its old streets, sulphur-bath district and Narikala area show layers of Georgian and wider regional history, while newer districts and bridges reflect a changing city.",
+  "nairobi": "Nairobi is Kenya's capital, located in the East African highlands. It grew as a railway and administrative centre and is now a major commercial city. Nearby Nairobi National Park makes the relationship between urban development and wildlife especially visible.",
+  "newyork": "New York City lies where the Hudson River reaches the Atlantic, with five boroughs connected by bridges, tunnels and ferries. Its harbour helped it become a centre for migration, trade and culture. Manhattan's skyline is only one part of its varied neighbourhoods.",
+  "cusco": "Cusco lies high in the Peruvian Andes and was a centre of the Inca Empire. Streets preserve examples of Inca stonework alongside later Spanish colonial buildings. The surrounding valleys and mountain routes are essential to understanding the city's historic role.",
+  "sydney": "Sydney sits around Port Jackson on Australia's east coast. This area has long been Country for Aboriginal peoples, including Gadigal communities. The natural harbour, transport network and expanding suburbs matter as much to the modern city as the Opera House and Harbour Bridge.",
+  "capetown": "Cape Town occupies a coastal setting beneath Table Mountain in South Africa. Mountain, ocean and port shaped its growth. The city's history includes colonial settlement, forced displacement and apartheid; its diverse communities continue to shape its identity.",
+  "tokyo": "Tokyo grew from the former city of Edo on the Pacific side of Honshu. Extensive railway networks connect residential neighbourhoods, business districts, parks and historic sites. Its geography includes bayside land and inland suburbs, not just the familiar skyscrapers.",
+  "reykjavik": "Reykjavík is Iceland's capital on the south-west coast, overlooking Faxaflói Bay. Its waterfront reflects a history of fishing and trade, while nearby volcanic landscapes and geothermal energy are important parts of the region's geography and modern infrastructure.",
+  "seoul": "Seoul, South Korea's capital, occupies the Han River valley amid surrounding mountains. Palaces and older neighbourhoods stand beside dense modern districts. Bridges and its extensive metro system connect the metropolitan area across the river.",
+  "singapore": "Singapore is a city-state at the southern end of the Malay Peninsula. Its harbour and position on important maritime routes helped it grow as a trading hub. Gardens, public housing and historic neighbourhoods illustrate how city planning responds to migration and limited land."
+};
 async function setLocationInfo(id){
  if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
  const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
@@ -2336,16 +2356,17 @@ async function setLocationInfo(id){
  if(!(window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id))){showToast('Unlock '+l.name+' to explore its details');return}
  openLocationId=id;selectedLocation=id;
  host.classList.remove('hidden');
- host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
- '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Checking this place’s lead photograph and image licence…</div></div>'+
- '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">Loading a local introduction…</p></div>'+
+ host.setAttribute('role','region');host.setAttribute('aria-label',l.name+' unlocked location details');
+ host.innerHTML='<div class="globe-info-top"><div class="globe-place-heading"><span class="globe-owned-pill">✓ Unlocked location</span><h3>'+esc(l.name)+'</h3><span class="globe-place-meta">'+esc(l.region||'World')+' · Select its green pin to return here</span></div><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
+ '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Finding a suitable photograph…</div></div>'+
+ '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||'Loading a local introduction…')+'</p></div>'+
  '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
  '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>'+
  '<p class="location-coordinate">Approximate map position: '+Math.abs(l.lat).toFixed(3)+'° '+(l.lat>=0?'N':'S')+', '+Math.abs(l.lon).toFixed(3)+'° '+(l.lon>=0?'E':'W')+'</p>'+
  '<div class="detail-links">Photographs and introductory text: <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(l.wiki)+'" target="_blank" rel="noopener noreferrer">Wikipedia</a> / <a href="https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search='+encodeURIComponent(l.name)+'" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></div>';
  document.getElementById('closeLocationInfo').onclick=()=>setLocationInfo(id);
  locationPhoto(l,document.getElementById('detailPhotoOne'));
- try{
+ if(!LOCATION_LOCAL_OVERVIEWS[id])try{
   // Each destination pulls its own encyclopedia introduction; factual
   // paragraphs are not assembled from a repeated region-wide template.
   const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exchars=1700&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(l.wiki.replace(/_/g,' '));
@@ -2442,7 +2463,7 @@ function visibleGlobePins(w,h,region=''){
    +(item.location.worldKind==='country'?90:item.location.worldKind==='sea'||item.location.worldKind==='ocean'?8:200)
    +item.p.z*40;
  const queue=all.sort((a,b)=>score(b)-score(a));
- const shown=[],distance=11;
+ const shown=[],distance=15; // keep overlapping locked locations selectable via finder or Show every pin
  for(const item of queue){
   if(shown.every(other=>Math.hypot(item.p.x-other.p.x,item.p.y-other.p.y)>distance)){
     shown.push(item);
@@ -2494,6 +2515,27 @@ function drawGlobe(){
  if(active){ctx.beginPath();ctx.arc(p.x,p.y,10,0,Math.PI*2);ctx.strokeStyle='#fde68a';ctx.lineWidth=2.1;ctx.stroke()}
  }
  document.getElementById('globeLabel').textContent='Drag to rotate · green = unlocked · pale = locked · gold = selected · tap a green pin for details';
+}
+function focusOnGlobeLocation(id,open=false){
+ const place=LOCATIONS.find(l=>l.id===id);
+ if(!place)return false;
+ globeLon=place.lon;
+ globeLat=clamp(place.lat,-65,65);
+ const selector=document.getElementById('locationRegion');
+ if(selector&&selector.value&&selector.value!==place.region){
+   selector.value='';
+   // Don't alter ownership or saved shop data when adjusting the filter.
+   renderLocationGallery();
+ }
+ drawGlobe();
+ if(open){
+   const owned=window.RevisionWorldProfileSafety?.isOwnedLocation(profile,id)??profile.shopOwned.locations.includes(id);
+   if(owned){
+     if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo')?.classList.add('hidden')}
+     setLocationInfo(id);
+   }else showToast('Unlock '+place.name+' to read its location guide');
+ }
+ return true;
 }
 function globePointer(e){const c=document.getElementById('globe'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height;return {x,y}}
 function nearestPin(x,y){let best=null,dist=14;const region=document.getElementById('locationRegion').value;for(const item of visibleGlobePins(700,360,region)){const d=Math.hypot(item.p.x-x,item.p.y-y);if(d<dist){dist=d;best=item.location}}return best}
@@ -2563,5 +2605,27 @@ globe.addEventListener('pointermove',e=>{if(window.RevisionWorldGlobeGesture?.is
 globe.addEventListener('pointerup',e=>{if(window.RevisionWorldGlobeGesture?.isPinching()){dragging=false;return}if(dragging&&dragDistance<10){const p=globePointer(e),l=nearestPin(p.x,p.y);if(l)setLocationInfo(l.id)}dragging=false});
 globe.addEventListener('pointercancel',()=>{dragging=false});
 if(window.RevisionWorldGlobeGesture)window.RevisionWorldGlobeGesture.onComplete=()=>{dragging=false};
+
+const globeFindInput=document.getElementById('globePlaceSearch');
+const globeFindButton=document.getElementById('globeFindPlace');
+const globeOptions=document.getElementById('globePlaceOptions');
+if(globeFindInput&&globeFindButton&&globeOptions){
+ const entries=window.RevisionWorldProfileSafety?.distinctLocations(LOCATIONS)||LOCATIONS;
+ const fragment=document.createDocumentFragment();
+ for(const place of entries){
+   const option=document.createElement('option');
+   option.value=place.name;
+   fragment.append(option);
+ }
+ globeOptions.append(fragment);
+ const locate=()=>{
+   const query=globeFindInput.value.trim().toLowerCase();
+   const match=entries.find(l=>l.name.toLowerCase()===query||l.id.toLowerCase()===query);
+   if(!match){showToast('Choose a destination from the suggestions');return}
+   focusOnGlobeLocation(match.id,true);
+ };
+ globeFindButton.onclick=locate;
+ globeFindInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();locate()}});
+}
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
