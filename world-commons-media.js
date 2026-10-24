@@ -116,6 +116,55 @@
      return verified?[verified]:[];
    }catch{return []}
  }
+ // Look at files actually used on the destination's exact Wikipedia article
+ // before relying on broad Commons search results. The article association is
+ // NOT treated as proof of depiction: gallery.js still checks the file name
+ // against the place or recognisable named landmarks. Each Commons file must
+ // independently pass the author/licence/host checks above.
+ async function articleImagesUncached(wiki,{fetcher,doc,limit=50}={}){
+  const get=fetcher||(typeof fetch==='function'?fetch:null);
+  const title=String(wiki||'').replace(/_/g,' ').trim().slice(0,120);
+  if(!get||!title)return [];
+  try{
+   const wikiUrl=new URL('https://en.wikipedia.org/w/api.php');
+   for(const [k,v] of Object.entries({action:'query',prop:'images',titles:title,
+    imlimit:'50',format:'json',formatversion:'2',origin:'*'}))wikiUrl.searchParams.set(k,v);
+   const wikiResponse=await get(wikiUrl.href,{cache:'force-cache',credentials:'omit'});
+   if(!wikiResponse.ok)return [];
+   const pages=(await wikiResponse.json()).query?.pages||[];
+   const names=[...new Set(pages.flatMap(p=>(p.images||[]).map(i=>i.title))
+    .filter(name=>/^File:.+\.(?:jpg|jpeg|png|webp)$/i.test(name)&&!badFileName(name)))].slice(0,50);
+   if(!names.length)return [];
+   const out=[];
+   // MediaWiki GET requests have length limits: verify files in smaller batches.
+   for(let index=0;index<names.length;index+=20){
+    const u=new URL('https://commons.wikimedia.org/w/api.php');
+    for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',
+     titles:names.slice(index,index+20).join('|'),iiprop:'url|size|extmetadata',
+     iiurlwidth:'2048',format:'json',formatversion:'2',origin:'*'}))
+     u.searchParams.set(k,v);
+    const response=await get(u.href,{cache:'force-cache',credentials:'omit'});
+    if(!response.ok)continue;
+    const images=(await response.json()).query?.pages||[];
+    for(const item of images){
+     const entry=inspect(item,doc||(typeof document!=='undefined'?document:null));
+     if(entry&&!out.some(e=>e.file===entry.file))out.push(entry);
+     if(out.length>=limit)return out;
+    }
+   }
+   return out;
+  }catch{return []}
+ }
+ const articleJobs=new Map();
+ function searchArticleImages(wiki,options={}){
+  if(options.fetcher)return articleImagesUncached(wiki,options);
+  const key=String(wiki||'').trim().toLowerCase();
+  if(!articleJobs.has(key)){
+   const task=new Promise(resolve=>{queue.push({work:()=>articleImagesUncached(wiki,options),resolve});drain()});
+   articleJobs.set(key,task);
+  }
+  return articleJobs.get(key);
+ }
  // Curated file names are *hints*, never permission or proof. Recheck the
  // Commons file's current licence, artist and actual thumbnail before display.
  async function verifyApproved(locationId,{fetcher,doc}={}){
@@ -224,5 +273,5 @@
    figure.append(img,caption);el.append(figure);
   }
  }
- return Object.freeze({inspect,search,searchPage,searchNearby,approvedFor,verifyApproved,append});
+ return Object.freeze({inspect,search,searchPage,searchArticleImages,searchNearby,approvedFor,verifyApproved,append});
 });
