@@ -2787,7 +2787,7 @@
       "width": 6000,
       "height": 4000,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-jm",
       "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     },
@@ -2800,7 +2800,7 @@
       "width": 3264,
       "height": 2448,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-jm",
       "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     },
@@ -2813,7 +2813,7 @@
       "width": 3000,
       "height": 2000,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-jm",
       "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     }
@@ -3870,7 +3870,7 @@
       "width": 6048,
       "height": 4032,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-pt",
       "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     },
@@ -3896,7 +3896,7 @@
       "width": 4096,
       "height": 3072,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Place identity, original pixels dimensions and current Commons author/CC licence checked; source-level review not individual visual sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-pt",
       "photoSource": "Commons source-checked replacement for misleading or unrepresentative photos"
     }
@@ -4529,7 +4529,7 @@
       "width": 6240,
       "height": 4160,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Replaced demonstrably wrong location; Commons File page confirms location, author, licence and dimensions. Not pixel/visual quality approved.",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-td",
       "photoSource": "Commons source-checked location correction"
     },
@@ -4542,7 +4542,7 @@
       "width": 3264,
       "height": 2448,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Replaced demonstrably wrong location; Commons File page confirms location, author, licence and dimensions. Not pixel/visual quality approved.",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-td",
       "photoSource": "Commons source-checked location correction"
     },
@@ -4555,7 +4555,7 @@
       "width": 3048,
       "height": 4064,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Replaced demonstrably wrong location; Commons File page confirms location, author, licence and dimensions. Not pixel/visual quality approved.",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-td",
       "photoSource": "Commons source-checked location correction"
     }
@@ -5074,7 +5074,7 @@
       "width": 4608,
       "height": 3456,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Replaced demonstrably wrong location; Commons File page confirms location, author, licence and dimensions. Not pixel/visual quality approved.",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-ws",
       "photoSource": "Commons source-checked location correction"
     },
@@ -5087,7 +5087,7 @@
       "width": 2736,
       "height": 3648,
       "editorialMetadata": true,
-      "reviewStatus": "2026-10-24: Replaced demonstrably wrong location; Commons File page confirms location, author, licence and dimensions. Not pixel/visual quality approved.",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "country-ws",
       "photoSource": "Commons source-checked location correction"
     }
@@ -6665,7 +6665,7 @@
       "width": 3756,
       "height": 1872,
       "editorialMetadata": true,
-      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "ocean-indian",
       "photoSource": "Commons specific-location human-checked replacement"
     },
@@ -6678,7 +6678,7 @@
       "width": 4032,
       "height": 3024,
       "editorialMetadata": true,
-      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "ocean-indian",
       "photoSource": "Commons specific-location human-checked replacement"
     }
@@ -7551,7 +7551,7 @@
       "width": 5472,
       "height": 3648,
       "editorialMetadata": true,
-      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "sea-coral",
       "photoSource": "Commons specific-location human-checked replacement"
     },
@@ -7564,7 +7564,7 @@
       "width": 4928,
       "height": 3264,
       "editorialMetadata": true,
-      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "sea-coral",
       "photoSource": "Commons specific-location human-checked replacement"
     },
@@ -7577,7 +7577,7 @@
       "width": 3392,
       "height": 1960,
       "editorialMetadata": true,
-      "reviewStatus": "Manual Wikimedia Commons file page checked for named location, author, CC licence and original dimensions 2026-10-24; no full image pixel/composition sign-off",
+      "reviewStatus": "Commons File source, photographer, location and resolution checked; NOT visually pixel-reviewed",
       "locationText": "sea-coral",
       "photoSource": "Commons specific-location human-checked replacement"
     }
