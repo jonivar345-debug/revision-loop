@@ -1,0 +1,38 @@
+name: World v89 photograph delivery check
+
+on:
+  pull_request:
+    paths:
+      - 'world-curated-photos.js'
+      - 'world-photo-discovery-data.js'
+      - 'world-photo-enrichment-v85.js'
+      - 'scripts/audit-world-photo-delivery-v89.mjs'
+      - '.github/workflows/world-photo-delivery-v89.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'world-curated-photos.js'
+      - 'world-photo-discovery-data.js'
+      - 'world-photo-enrichment-v85.js'
+      - 'scripts/audit-world-photo-delivery-v89.mjs'
+  workflow_dispatch:
+
+jobs:
+  actual-image-delivery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe real Commons images and published GitHub Pages version
+        # Network errors are reported rather than blocking the verified source/rights release.
+        run: node scripts/audit-world-photo-delivery-v89.mjs --write
+      - name: Attach source-image delivery report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: world-v89-image-delivery-report
+          path: world-photo-delivery-v89-results.json
+          if-no-files-found: warn
