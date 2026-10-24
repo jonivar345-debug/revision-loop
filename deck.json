@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 20,
-  "updatedAt": "2026-10-20T22:21:15.829Z",
+  "deckVersion": 21,
+  "updatedAt": "2026-10-24T13:21:00.000Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -4686,20 +4686,24 @@
       "priority": 1,
       "scope": "mock",
       "front": "Define lattice dissociation enthalpy.",
-      "back": "Enthalpy change when one mole of an ionic solid is separated into gaseous ions.",
+      "back": "The enthalpy change when 1 mole of an ionic solid is completely separated into its constituent gaseous ions.",
       "concepts": [
         [
-          "one mole"
+          "enthalpy change"
         ],
         [
-          "ionic solid"
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "ionic solid",
+          "solid ionic compound"
+        ],
+        [
+          "separated"
         ],
         [
           "gaseous ions"
-        ],
-        [
-          "separated",
-          "dissociation"
         ]
       ],
       "active": true,
@@ -13086,6 +13090,475 @@
       "back": "The newton uses SI base units kg m s⁻²; using grams without conversion makes the numerical force incorrect.",
       "accept": [
         "The newton uses SI base units kg m s⁻²; using grams without conversion makes the numerical force incorrect."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_ionic_lattice",
+      "front": "What is an ionic lattice?",
+      "back": "A giant 3D repeating arrangement of oppositely charged ions held by electrostatic attractions.",
+      "concepts": [
+        [
+          "giant",
+          "three-dimensional",
+          "3d"
+        ],
+        [
+          "oppositely charged"
+        ],
+        [
+          "ions"
+        ],
+        [
+          "electrostatic attraction"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_latt_formation_def",
+      "front": "Define lattice enthalpy of formation.",
+      "back": "The enthalpy change when 1 mole of a solid ionic compound is formed from its constituent gaseous ions.",
+      "concepts": [
+        [
+          "enthalpy change"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "solid ionic compound",
+          "ionic solid"
+        ],
+        [
+          "gaseous ions"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_latt_formation_eq",
+      "front": "Write the lattice formation equation for NaCl.",
+      "back": "Na⁺(g) + Cl⁻(g) → NaCl(s).",
+      "accept": [
+        "Na+(g) + Cl-(g) -> NaCl(s).",
+        "Na⁺(g) + Cl⁻(g) → NaCl(s)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_latt_diss_eq",
+      "front": "Write the lattice dissociation equation for NaCl.",
+      "back": "NaCl(s) → Na⁺(g) + Cl⁻(g).",
+      "accept": [
+        "NaCl(s) -> Na+(g) + Cl-(g).",
+        "NaCl(s) → Na⁺(g) + Cl⁻(g)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_standard_formation_def",
+      "front": "Define standard enthalpy of formation.",
+      "back": "The enthalpy change when 1 mole of compound forms from its constituent elements in their standard states under standard conditions.",
+      "concepts": [
+        [
+          "enthalpy change"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "compound"
+        ],
+        [
+          "elements"
+        ],
+        [
+          "standard states"
+        ],
+        [
+          "standard conditions"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_standard_formation_eq",
+      "front": "Write the standard formation equation for MgO.",
+      "back": "Mg(s) + ½O₂(g) → MgO(s).",
+      "accept": [
+        "Mg(s) + 1/2O2(g) -> MgO(s).",
+        "Mg(s) + ½O₂(g) → MgO(s)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_atomisation_def",
+      "front": "Define enthalpy of atomisation.",
+      "back": "The enthalpy change when 1 mole of gaseous atoms forms from an element in its standard state.",
+      "concepts": [
+        [
+          "enthalpy change"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "gaseous atoms"
+        ],
+        [
+          "element"
+        ],
+        [
+          "standard state"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_atomisation_cl_eq",
+      "front": "Write the atomisation equation for chlorine.",
+      "back": "½Cl₂(g) → Cl(g).",
+      "accept": [
+        "1/2Cl2(g) -> Cl(g).",
+        "½Cl₂(g) → Cl(g)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_second_ionisation_def",
+      "front": "Define second ionisation energy.",
+      "back": "Energy required to remove 1 mole of electrons from 1 mole of gaseous 1+ ions, forming gaseous 2+ ions.",
+      "concepts": [
+        [
+          "energy"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "electrons"
+        ],
+        [
+          "gaseous 1+ ions"
+        ],
+        [
+          "gaseous 2+ ions"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_mg_first_ie_eq",
+      "front": "Write the equation for magnesium's first ionisation energy.",
+      "back": "Mg(g) → Mg⁺(g) + e⁻.",
+      "accept": [
+        "Mg(g) -> Mg+(g) + e-.",
+        "Mg(g) → Mg⁺(g) + e⁻."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_mg_second_ie_eq",
+      "front": "Write the equation for magnesium's second ionisation energy.",
+      "back": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "accept": [
+        "Mg+(g) -> Mg²+(g) + e-.",
+        "Mg⁺(g) → Mg²⁺(g) + e⁻."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_second_ea_def",
+      "front": "Define second electron affinity.",
+      "back": "The enthalpy change when 1 mole of gaseous 1− ions each gains an electron, forming gaseous 2− ions.",
+      "concepts": [
+        [
+          "enthalpy change"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "gaseous 1- ions"
+        ],
+        [
+          "electron"
+        ],
+        [
+          "gaseous 2- ions"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_oxygen_first_ea_eq",
+      "front": "Write the equation for oxygen's first electron affinity.",
+      "back": "O(g) + e⁻ → O⁻(g).",
+      "accept": [
+        "O(g) + e- -> O-(g).",
+        "O(g) + e⁻ → O⁻(g)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_oxygen_second_ea_eq",
+      "front": "Write the equation for oxygen's second electron affinity.",
+      "back": "O⁻(g) + e⁻ → O²⁻(g).",
+      "accept": [
+        "O-(g) + e- -> O²-(g).",
+        "O⁻(g) + e⁻ → O²⁻(g)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_hydration_def",
+      "front": "Define enthalpy of hydration.",
+      "back": "The enthalpy change when 1 mole of gaseous ions becomes hydrated, forming aqueous ions.",
+      "concepts": [
+        [
+          "enthalpy change"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "gaseous ions"
+        ],
+        [
+          "aqueous ions",
+          "hydrated"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_hydration_na_eq",
+      "front": "Write the hydration equation for Na⁺.",
+      "back": "Na⁺(g) → Na⁺(aq).",
+      "accept": [
+        "Na+(g) -> Na+(aq).",
+        "Na⁺(g) → Na⁺(aq)."
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_solution_def",
+      "front": "Define enthalpy of solution.",
+      "back": "The enthalpy change when 1 mole of solute dissolves in enough solvent to form an infinitely dilute solution.",
+      "concepts": [
+        [
+          "enthalpy change"
+        ],
+        [
+          "one mole",
+          "1 mole"
+        ],
+        [
+          "solute"
+        ],
+        [
+          "dissolves"
+        ],
+        [
+          "infinitely dilute solution"
+        ]
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "active": true,
+      "stage": "A2",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Born–Haber cycles",
+      "id": "chem_bh_defs_20261024_solution_nacl_eq",
+      "front": "Write the enthalpy of solution equation for NaCl.",
+      "back": "NaCl(s) → Na⁺(aq) + Cl⁻(aq).",
+      "accept": [
+        "NaCl(s) -> Na+(aq) + Cl-(aq).",
+        "NaCl(s) → Na⁺(aq) + Cl⁻(aq)."
       ]
     }
   ],
