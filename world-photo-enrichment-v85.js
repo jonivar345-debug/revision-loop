@@ -1033,6 +1033,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Angola",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Sunset over Luanda 1.JPG",
+      "author": "Manuel Dohmen",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Coastal sunset overlooking Luanda, Angola",
+      "width": 3264,
+      "height": 2448,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-ao",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-ar": [
@@ -1130,6 +1143,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Azerbaijan",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-ba": [
+    {
+      "file": "Mostar Stari Most BW 2024-10-01 12-30-46.jpg",
+      "author": "Berthold Werner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Stari Most bridge and Neretva River in Mostar, Bosnia and Herzegovina",
+      "width": 4000,
+      "height": 6016,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-ba",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-bb": [
@@ -1257,6 +1285,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Bahrain",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-bi": [
+    {
+      "file": "Au bord du lac Tanganyika.jpg",
+      "author": "Ntahonsigaye",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Sunset across Lake Tanganyika from Burundi",
+      "width": 4160,
+      "height": 1872,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-bi",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-bj": [
@@ -1847,6 +1890,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Algeria",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Sahara Algérien.jpg",
+      "author": "HATTAB Mohamed",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Camels in a landscape in the Algerian Sahara",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-dz",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-ec": [
@@ -1918,6 +1974,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Egypt",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "The Great Temple of Ramesses II and the Temple of Nefertari at Abu Simbel, Egypt.jpg",
+      "author": "Mohamed Suttra",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Wide photograph of both Abu Simbel temples in southern Egypt",
+      "width": 7008,
+      "height": 4672,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-eg",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-er": [
@@ -2060,6 +2129,34 @@
       "photoSource": "Commons exact File-title search"
     }
   ],
+  "country-fm": [
+    {
+      "file": "Chuuk coral reef.jpg",
+      "author": "Zykasaa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Chuuk coral reef in the Federated States of Micronesia",
+      "width": 4032,
+      "height": 2268,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-fm",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Inside the lagoon of Ant Atoll, southwest of Pohnpei (Federated States of Micronesia).jpg",
+      "author": "Patrick Nunn",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Lagoon of Ant Atoll off Pohnpei, Federated States of Micronesia",
+      "width": 4288,
+      "height": 3216,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-fm",
+      "photoSource": "Commons manually source-checked geographic photo"
+    }
+  ],
   "country-fr": [
     {
       "file": "Laon Cathedral Nave 2, Picardie, France - Diliff.jpg",
@@ -2200,6 +2297,47 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Gambia",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-gn": [
+    {
+      "file": "Magnifique vue de la nature.jpg",
+      "author": "Thie Abdoul",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Guinea landscape selected from Wiki Loves Africa",
+      "width": 3264,
+      "height": 2448,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-gn",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Village de Mali.jpg",
+      "author": "Aboubacarkhoraa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Rural landscape in Moyenne-Guinée, Guinea",
+      "width": 5152,
+      "height": 3864,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-gn",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "On the road between Base Vie and Siguiri - panoramio.jpg",
+      "author": "darrylkeith",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Wide countryside panorama near Siguiri, Guinea",
+      "width": 7258,
+      "height": 2147,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, photograph dimensions and geographic description; NOT visually pixel-reviewed",
+      "locationText": "country-gn",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-gq": [
