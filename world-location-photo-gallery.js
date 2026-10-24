@@ -72,6 +72,15 @@
     const store=typeof window!=='undefined'?window.RevisionWorldCuratedPhotos:null;
     return store?.get(location.id)||[];
   }
+  function imageScore(item,location){
+    const name=uniqueName(item.file+' '+(item.description||''));
+    const main=uniqueName(properName(location));
+    let score=(Number(item.width)>=3000?8:Number(item.width)>=1800?4:0);
+    if(main.length>=4&&name.includes(main))score+=10;
+    if(/panoram|skyline|aerial|scenic|view|waterfront|sunset|sunrise|cityscape|landscape|historic|bridge|harbour|harbor|mountain|cathedral|temple|beach|coast/.test(name))score+=8;
+    if(/entrance|window|signboard|interior|construction|parking|carpark|person|people|advert|hotel room|museum object/.test(name))score-=14;
+    return score;
+  }
   async function assemble(location,api){
     const collected=[],seen=new Set();
     function add(photo,{lead=false,geo=false}={}){
@@ -95,9 +104,13 @@
     if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
     // Commons coordinates verify the photograph was taken near this city; this
     // catches excellent images whose filename doesn't contain the place name.
+    let nearbyCandidates=[];
     if(geoNearby(location)&&typeof api.searchNearby==='function'){
       const nearby=await safe(api.searchNearby(location.lat,location.lon,{radius:7000,limit:24}));
-      for(const photo of nearby||[])add(photo,{geo:true});
+      nearbyCandidates=(nearby||[]).sort((a,b)=>imageScore(b,location)-imageScore(a,location));
+      // Leave room for pictures of the destination's recognisable landmarks.
+      const slots=Math.max(0,3-collected.length);
+      for(const photo of nearbyCandidates.slice(0,slots))add(photo,{geo:true});
     }
     if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
     if(typeof api.verifyApproved==='function'){
@@ -110,6 +123,14 @@
         if(collected.length>=MAX_PHOTOS)break;
         const result=await safe(api.search(query,{limit:24}));
         for(const photo of result||[])add(photo);
+      }
+    }
+    // Geo coordinates remain a trustworthy fallback when search doesn't yield
+    // enough directly identifiable features.
+    if(collected.length<MAX_PHOTOS){
+      for(const photo of nearbyCandidates){
+        if(collected.length>=MAX_PHOTOS)break;
+        add(photo,{geo:true});
       }
     }
     return collected.slice(0,MAX_PHOTOS);
