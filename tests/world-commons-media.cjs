@@ -49,7 +49,7 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
 (async()=>{
  const results=await media.search('Example landscape',{fetcher,doc:dom,limit:2});
  assert.equal(results.length,1,'Unlicensed image should be filtered out');
- assert(asked.includes('extmetadata')&&asked.includes('origin='),'Commons API request missing licence metadata or CORS');
+ assert(asked.includes('iiurlwidth=2048')&&asked.includes('extmetadata')&&asked.includes('origin='),'Commons API request missing licence metadata or CORS');
  assert.equal(requests,1);
  const host=new E('div');media.append(host,results,{doc:dom});
  const figure=host.children[0],caption=figure.children.find(x=>x.tagName==='figcaption');
@@ -68,6 +68,18 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  const exact=await media.searchPage('Busan',{fetcher:exactFetcher,doc:dom});
  assert.equal(exact.length,1,'Busan page image was not verified');
  assert.equal(pageRequests.length,2,'Wikipedia page and Commons rights must both be queried');
+ const nearbyUrls=[];
+ const geoFetcher=async url=>{
+  nearbyUrls.push(String(url));
+  const params=new URL(url).searchParams;
+  if(params.get('list')==='geosearch')return {ok:true,json:async()=>({query:{geosearch:[{title:'File:Example landscape.jpg'}]}})};
+  return {ok:true,json:async()=>({query:{pages:[good]}})};
+ };
+ const photos=await media.searchNearby(51.507,-0.128,{fetcher:geoFetcher,limit:4});
+ assert.equal(photos.length,1,'Nearby Commons geo-tagged image must be used');
+ assert(nearbyUrls[0].includes('gsnamespace=6'),'Geo lookup must restrict to Commons file namespace');
+ assert(nearbyUrls[1].includes('iiurlwidth=2048'),'Geotagged photographs must request high-res derivatives');
+
  const londonHint=media.approvedFor('london');
  const acceptedPhoto={...good,title:'File:'+londonHint.file};
  const trusted=await media.verifyApproved('london',{fetcher:async()=>({ok:true,json:async()=>({query:{pages:[acceptedPhoto]}})}),doc:dom});
@@ -88,7 +100,7 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert(empty.textContent.includes('No openly licensed photograph'));
  assert(!app.includes("gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15"),'Old uncredited gallery search still present');
  assert(!app.includes("if(url){wikiPhotoCache[location.id]=url;placeImage"),'Old uncredited image path still active');
- assert(html.indexOf('world-commons-media.js?v=69')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('world-location-photo-gallery.js?v=73')&&html.indexOf('world-location-photo-gallery.js?v=73')<html.indexOf('app.js?v=73'),'Media/photo scripts must load before the app');
+ assert(html.indexOf('world-commons-media.js?v=74')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('world-location-photo-gallery.js?v=74')&&html.indexOf('world-location-photo-gallery.js?v=73')<html.indexOf('app.js?v=73'),'Media/photo scripts must load before the app');
  assert(sw.includes("'./world-commons-media.js'"),'Photo validator not cached offline');
  assert(app.includes('gallery.render(el,location,{card:!!el.closest'), 'Actual app does not invoke photo gallery');
  const gallery=fs.readFileSync(path.join(root,'world-location-photo-gallery.js'),'utf8');

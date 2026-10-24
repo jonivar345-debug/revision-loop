@@ -81,6 +81,25 @@ try{
  assert(state.locationCount.includes('/ 376'),'Duplicate destinations still count separately');
  assert.equal(state.gesture,'object');
  assert.equal(state.media,'object');
+ const proof=await page.evaluate(async()=>{
+   const pairs=[];
+   for(const id of ['london','busan']){
+     const place=LOCATIONS.find(location=>location.id===id);
+     const pictures=await window.RevisionWorldPhotoGallery.photosFor(place,{limit:4});
+     const first=await window.RevisionWorldPhotoGallery.photosFor(place,{limit:1});
+     pairs.push({id,pictures:pictures.map(p=>({url:p.url,license:p.license,filePage:p.filePage,author:p.author})),
+       first:first[0]?.filePage});
+   }
+   return pairs;
+ });
+ for(const p of proof){
+   assert.equal(p.pictures.length,4,p.id+' must have four genuine featured images');
+   assert(p.pictures.every(x=>x.url.includes('width=2048')&&x.author&&x.filePage.includes('commons.wikimedia.org')),
+     p.id+' high-resolution original attribution missing');
+   assert.equal(p.pictures[0].filePage,p.first,p.id+' shop thumbnail should match the unlocked gallery');
+ }
+ console.log('PASS London and Busan: four high-resolution real photos each, identical shop cover and unlocked first image.');
+
  await page.waitForFunction(()=>earthTextureReady===true&&earthW>=700,null,{timeout:25000});
  const globeState=await page.evaluate(()=>{
   const color=(lat,lon)=>{

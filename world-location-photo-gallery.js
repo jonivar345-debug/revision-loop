@@ -1,136 +1,224 @@
-/* Up to five-image destination galleries. A real photo must be verified for its CC licence
-   and matched to the destination; a failed search never substitutes a map for a photograph.
-   Attribution is retained behind an unobtrusive disclosure, not over the photos. */
+/* Four genuinely place-matched photographs per destination when Commons has them.
+   Curated photos load without search API access. Other photographs come from the
+   exact Wikipedia page, location-tagged Commons media, then strict place searches.
+   Source pixels are not transcoded or compressed in-browser: Commons serves a
+   2048px derivative and credits link to the original full-resolution photograph.
+   Never substitute a map/diagram or an unrelated city merely to fill a slot. */
 (function(root,factory){
- 'use strict';
- const api=factory();
- if(typeof module==='object'&&module.exports)module.exports=api;
- if(root)root.RevisionWorldPhotoGallery=Object.freeze(api);
+  'use strict';
+  const api=factory();
+  if(typeof module==='object'&&module.exports)module.exports=api;
+  if(root)root.RevisionWorldPhotoGallery=Object.freeze(api);
 })(typeof window==='object'?window:null,function(){
- 'use strict';
- const cache=new Map();
- const keywords=Object.freeze({
-  busan:['busan','haeundae','gwangalli','gwangan','gamcheon'],
-  london:['london','tower bridge','westminster','big ben','st pauls'],
-  tokyo:['tokyo','shinjuku','shibuya','skytree'],
-  seoul:['seoul','namsan','gyeongbokgung','han river'],
-  sydney:['sydney','opera house','harbour bridge'],
-  singapore:['singapore','marina bay','gardens by the bay'],
-  newyork:['new york','manhattan','brooklyn bridge','times square'],
-  reykjavik:['reykjavik','hallgrimskirkja'],
-  capetown:['cape town','table mountain'],
-  cape_town:['cape town','table mountain'],
-  paris:['paris','eiffel tower','notre dame'],
-  tbilisi:['tbilisi','narikala','metekhi'],
-  rome:['rome','colosseum','pantheon'],
-  istanbul:['istanbul','hagia sophia','galata'],
-  kyoto:['kyoto','fushimi inari','kiyomizu']
- });
- const rejected=/\b(?:collage|montage|photomontage|flag|poster|map|drawing|diagram|logo|seal|coats? of arms|illustration|infographic|screenshot|portrait of|selfie|food menu|shop sign)\b/i;
- function clean(v){return String(v||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
- const keyOf=location=>location.id+'|'+(location.wiki||location.name);
- function allowed(item,location,lead=false){
-  if(!item?.url||!item.file||!item.author||!item.licenseUrl)return false;
-  const name=clean(item.file.replace(/^File:/i,'').replace(/[_-]/g,' '));
-  if(rejected.test(name)||!(/\.(?:jpg|jpeg|png|webp)$/i.test(name)))return false;
-  if(item.checked)return true;
-  const terms=keywords[location.id]||[clean(location.name).replace(/^country:\s*/,'').trim()];
-  return lead||terms.some(term=>term.length>=4&&name.includes(clean(term)));
- }
- async function photosFor(location,{limit=5,media}={}){
-  const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
-  if(!api)return [];
-  const key=keyOf(location)+'|'+limit;
-  if(!cache.has(key)){
-   const job=(async()=>{
-    const candidates=[];
-    // Exact place and its Wikipedia page take priority over generic search.
-    const approved=await api.verifyApproved?.(location.id).catch(()=>null);
-    if(approved&&location.id!=='busan')candidates.push(approved);
-    const lead=await api.searchPage?.(location.wiki||location.name).catch(()=>[]);
-    for(const item of lead||[])if(allowed(item,location,true))candidates.push(item);
-    // Search filenames for the named destination or a named landmark. The match
-    // criterion rejects unrelated pictures even if Commons search ranks them highly.
-    const name=location.name.replace(/^Country:\s*/,'').trim();
-    const landmarks={
-      busan:['Busan Gwangan Bridge','Busan Haeundae Beach','Busan Gamcheon Culture Village'],
-      london:['London Tower Bridge','London Westminster','London Thames'],
-      tokyo:['Tokyo Shinjuku','Tokyo Shibuya crossing','Tokyo Skytree'],
-      seoul:['Seoul Gyeongbokgung','Seoul Namsan tower'],
-      sydney:['Sydney Opera House','Sydney Harbour Bridge']
-    };
-    const phrases=landmarks[location.id]||[name+' cityscape',name+' landscape'];
-    for(const query of phrases){
-      if(candidates.length>=Math.min(limit,5))break;
-      const results=await api.search(query,{limit:10}).catch(()=>[]);
-      for(const item of results)if(allowed(item,location))candidates.push(item);
-    }
-    const seen=new Set();
-    return candidates.filter(item=>{
-      const key=clean(item.file);
-      if(seen.has(key))return false;
-      seen.add(key);return true;
-    }).slice(0,Math.min(limit,5));
-   })();
-   cache.set(key,job);
-  }
-  return (await cache.get(key)).slice(0,limit);
- }
- function render(el,location,{card=false,media}={}){
-  if(!el)return Promise.resolve([]);
-  const doc=el.ownerDocument||(typeof document!=='undefined'?document:null);
-  if(!doc)return Promise.resolve([]);
-  const version=String((Number(el.dataset.galleryVersion)||0)+1);
-  el.dataset.galleryVersion=version;
-  el.classList.remove('location-image-map-fallback');
-  el.classList.add(card?'destination-card-photo':'destination-photo-gallery');
-  el.replaceChildren();
-  const loading=doc.createElement('span');loading.className='destination-photo-status';loading.textContent='Loading photographs…';el.append(loading);
-  return photosFor(location,{limit:card?1:5,media}).then(photos=>{
-   if(!el.isConnected||el.dataset.galleryVersion!==version)return photos;
-   el.replaceChildren();
-   if(!photos.length){
-     const msg=doc.createElement('span');msg.className='destination-photo-status';
-     msg.textContent='Photographs unavailable';
-     el.append(msg);return [];
-   }
-   const grid=doc.createElement('div');grid.className='destination-photo-grid photo-count-'+photos.length;
-   const credits=doc.createElement('details');credits.className='destination-photo-credits';
-   const summary=doc.createElement('summary');summary.textContent='Photo credits';credits.append(summary);
-   const list=doc.createElement('ul');
-   photos.forEach((photo,i)=>{
-    const figure=doc.createElement('figure');figure.className='destination-photo-tile';
-    const img=doc.createElement('img');img.alt='Photograph of '+location.name+(photos.length>1?' ('+(i+1)+')':'');
-    img.loading=card?'lazy':i===0?'eager':'lazy';img.decoding='async';img.referrerPolicy='no-referrer';
-    img.src=photo.url;
-    img.onerror=()=>{
-      figure.remove();
-      grid.className='destination-photo-grid photo-count-'+grid.querySelectorAll('figure').length;
-      if(!grid.querySelector('img')){
-        const empty=doc.createElement('span');empty.className='destination-photo-status';empty.textContent='Photographs unavailable';grid.append(empty);
-      }
-    };
-    figure.append(img);grid.append(figure);
-    const li=doc.createElement('li');li.append(doc.createTextNode('Photo '+(i+1)+': '+photo.author+' · '));
-    for(const [url,label] of [[photo.filePage,'Original file'],[photo.licenseUrl,photo.license]]){
-     const link=doc.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label;
-     li.append(link,doc.createTextNode(' · '));
-    }
-    li.append(doc.createTextNode('Resized for display.'));list.append(li);
-   });
-   el.append(grid);
-   credits.append(list);
-   if(card){
-    credits.classList.add('card-photo-credit');
-    summary.textContent='ⓘ';
-    summary.setAttribute('aria-label','Photo credits and licence');
-   }
-   el.append(credits);
-   return photos;
-  }).catch(()=>{
-   if(el.isConnected&&el.dataset.galleryVersion===version)el.textContent='Photographs unavailable';
-   return [];
+  'use strict';
+  const MAX_PHOTOS=4;
+  const cache=new Map();
+  const keywords=Object.freeze({
+    london:['london','tower bridge','westminster','millennium bridge','st paul'],
+    busan:['busan','haeundae','gwangalli','gwangan','gamcheon','yonggungsa','jagalchi'],
+    tokyo:['tokyo','shinjuku','shibuya','skytree','asakusa'],
+    seoul:['seoul','namsan','gyeongbokgung','han river'],
+    sydney:['sydney','opera house','harbour bridge'],
+    singapore:['singapore','marina bay','gardens by the bay'],
+    newyork:['new york','manhattan','brooklyn bridge','times square'],
+    reykjavik:['reykjavik','hallgrimskirkja'],
+    capetown:['cape town','table mountain'],
+    cape_town:['cape town','table mountain'],
+    paris:['paris','eiffel tower','notre dame'],
+    tbilisi:['tbilisi','narikala','metekhi'],
+    rome:['rome','colosseum','pantheon'],
+    istanbul:['istanbul','hagia sophia','galata'],
+    kyoto:['kyoto','fushimi inari','kiyomizu']
   });
- }
- return Object.freeze({photosFor,render,allowed,keywords});
+  const rejected=/\b(?:collage|montage|photomontage|flag|poster|map|locator|drawing|diagram|logo|seal|coats? of arms|illustration|infographic|screenshot|portrait of|selfie|food menu|shop sign|chart|atlas)\b/i;
+  const clean=v=>String(v||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const uniqueName=v=>clean(v).replace(/[^a-z0-9]+/g,' ');
+  const keyOf=location=>location.id+'|'+(location.wiki||location.name);
+  const properName=location=>String(location.name||'').replace(/^Country:\s*/,'').trim();
+  const geoNearby=location=>Number.isFinite(location.lat)&&Number.isFinite(location.lon)
+    &&!['ocean','sea','country'].includes(location.worldKind);
+  const validMedia=item=>!!(item?.url&&item?.file&&item?.author&&item?.licenseUrl&&item?.filePage);
+  function allowed(item,location,lead=false){
+    if(!validMedia(item))return false;
+    const filename=clean(item.file.replace(/^File:/i,'').replace(/[_-]/g,' '));
+    if(rejected.test(filename)||!/\.(?:jpg|jpeg|png|webp)$/i.test(filename))return false;
+    if(Number.isFinite(item.width)&&item.width>0&&item.width<900)return false;
+    if(Number.isFinite(item.height)&&item.height>0&&item.height<500)return false;
+    if(item.checked||lead||item.locationVerified)return true;
+    const terms=keywords[location.id]||[properName(location)];
+    return terms.some(term=>uniqueName(term).length>=4&&uniqueName(filename).includes(uniqueName(term)));
+  }
+  function candidatesFor(location){
+    const title=properName(location);
+    const landmark={
+      london:['London Tower Bridge','London Westminster','London Millennium Bridge'],
+      busan:['Busan Haeundae','Busan Gwangalli Bridge','Busan Gamcheon Culture Village'],
+      tokyo:['Tokyo Shinjuku skyline','Tokyo Senso-ji temple','Tokyo skyline'],
+      seoul:['Seoul Gyeongbokgung','Seoul Namsan','Seoul skyline'],
+      sydney:['Sydney Opera House','Sydney Harbour Bridge','Sydney waterfront'],
+      singapore:['Singapore Marina Bay','Singapore Gardens by the Bay','Singapore skyline'],
+      paris:['Paris Eiffel Tower','Paris Seine','Paris Sacre Coeur'],
+      capetown:['Cape Town Table Mountain','Cape Town waterfront'],
+      newyork:['New York Manhattan skyline','New York Brooklyn Bridge']
+    };
+    if(landmark[location.id])return landmark[location.id];
+    if(location.worldKind==='ocean'||location.worldKind==='sea')
+      return [title+' ocean coast photograph',title+' sea aerial photograph',title+' coastline'];
+    if(location.worldKind==='country')
+      return [title+' landscape',title+' national park',title+' architecture'];
+    return [title+' skyline',title+' landmark',title+' city panorama'];
+  }
+  function curated(location){
+    const store=typeof window!=='undefined'?window.RevisionWorldCuratedPhotos:null;
+    return store?.get(location.id)||[];
+  }
+  function imageScore(item,location){
+    const name=uniqueName(item.file+' '+(item.description||''));
+    const main=uniqueName(properName(location));
+    let score=(Number(item.width)>=3000?8:Number(item.width)>=1800?4:0);
+    if(main.length>=4&&name.includes(main))score+=10;
+    if(/panoram|skyline|aerial|scenic|view|waterfront|sunset|sunrise|cityscape|landscape|historic|bridge|harbour|harbor|mountain|cathedral|temple|beach|coast/.test(name))score+=8;
+    if(/entrance|window|signboard|interior|construction|parking|carpark|person|people|advert|hotel room|museum object/.test(name))score-=14;
+    return score;
+  }
+  async function assemble(location,api){
+    const collected=[],seen=new Set();
+    function add(photo,{lead=false,geo=false}={}){
+      if(!photo)return;
+      const item=geo?{...photo,locationVerified:true}:photo;
+      if(!allowed(item,location,lead))return;
+      const key=uniqueName(item.file);
+      if(seen.has(key))return;
+      seen.add(key);
+      collected.push(item);
+    }
+    // Hand-reviewed destination sets are always first and need no CORS/API call.
+    for(const image of curated(location))add(image);
+    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    const safe=promise=>Promise.resolve(promise).catch(()=>[]);
+    // Check the EXACT encyclopaedia page, not a keyword result.
+    if(typeof api.searchPage==='function'){
+      const lead=await safe(api.searchPage(location.wiki||properName(location)));
+      for(const photo of lead||[])add(photo,{lead:true});
+    }
+    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    // Commons coordinates verify the photograph was taken near this city; this
+    // catches excellent images whose filename doesn't contain the place name.
+    let nearbyCandidates=[];
+    if(geoNearby(location)&&typeof api.searchNearby==='function'){
+      const nearby=await safe(api.searchNearby(location.lat,location.lon,{radius:7000,limit:24}));
+      nearbyCandidates=(nearby||[]).sort((a,b)=>imageScore(b,location)-imageScore(a,location));
+      // Leave room for pictures of the destination's recognisable landmarks.
+      const slots=Math.max(0,3-collected.length);
+      for(const photo of nearbyCandidates.slice(0,slots))add(photo,{geo:true});
+    }
+    if(collected.length>=MAX_PHOTOS)return collected.slice(0,MAX_PHOTOS);
+    if(typeof api.verifyApproved==='function'){
+      const item=await safe(api.verifyApproved(location.id));
+      if(item&&!Array.isArray(item))add(item);
+    }
+    // Restrict un-geotagged search results to named places or landmarks.
+    if(typeof api.search==='function'){
+      for(const query of candidatesFor(location)){
+        if(collected.length>=MAX_PHOTOS)break;
+        const result=await safe(api.search(query,{limit:24}));
+        for(const photo of result||[])add(photo);
+      }
+    }
+    // Geo coordinates remain a trustworthy fallback when search doesn't yield
+    // enough directly identifiable features.
+    if(collected.length<MAX_PHOTOS){
+      for(const photo of nearbyCandidates){
+        if(collected.length>=MAX_PHOTOS)break;
+        add(photo,{geo:true});
+      }
+    }
+    return collected.slice(0,MAX_PHOTOS);
+  }
+  function photosFor(location,{limit=MAX_PHOTOS,media}={}){
+    const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
+    if(!api)return Promise.resolve(curated(location).slice(0,limit));
+    const key=keyOf(location);
+    // Injected clients are not cached across test runs. The real website reuses
+    // its chosen set between shop thumbnails and unlocked galleries.
+    if(media)return assemble(location,api).then(items=>items.slice(0,limit));
+    if(!cache.has(key)){
+      const task=assemble(location,api).catch(()=>curated(location));
+      cache.set(key,task);
+    }
+    return cache.get(key).then(items=>items.slice(0,limit));
+  }
+  function render(el,location,{card=false,media}={}){
+    if(!el)return Promise.resolve([]);
+    const doc=el.ownerDocument||(typeof document!=='undefined'?document:null);
+    if(!doc)return Promise.resolve([]);
+    const version=String((Number(el.dataset.galleryVersion)||0)+1);
+    el.dataset.galleryVersion=version;
+    el.classList.remove('location-image-map-fallback');
+    el.classList.add(card?'destination-card-photo':'destination-photo-gallery');
+    el.replaceChildren();
+    const loading=doc.createElement('span');loading.className='destination-photo-status';
+    loading.textContent='Loading photographs…';el.append(loading);
+    const current=photosFor(location,{limit:card?1:MAX_PHOTOS,media});
+    return current.then(photos=>{
+      if(!el.isConnected||el.dataset.galleryVersion!==version)return photos;
+      el.replaceChildren();
+      if(!photos.length){
+        const msg=doc.createElement('span');msg.className='destination-photo-status';
+        msg.textContent='Photographs unavailable';el.append(msg);return [];
+      }
+      const grid=doc.createElement('div');
+      grid.className='destination-photo-grid photo-count-'+photos.length;
+      const credits=doc.createElement('details');credits.className='destination-photo-credits';
+      const summary=doc.createElement('summary');
+      summary.textContent='Photo credits';credits.append(summary);
+      const list=doc.createElement('ul');
+      photos.forEach((photo,i)=>{
+        const figure=doc.createElement('figure');figure.className='destination-photo-tile';
+        const image=doc.createElement('img');
+        image.alt=photo.description||('Photograph of '+location.name+' ('+(i+1)+')');
+        image.loading=card?'lazy':i===0?'eager':'lazy';
+        image.decoding='async';
+        image.referrerPolicy='no-referrer';
+        image.src=photo.url;
+        let usedFallback=false;
+        image.onerror=()=>{
+          // If Wikimedia thumbnail delivery fails, try the full source file
+          // rather than silently removing a perfectly suitable photograph.
+          const original=photo.originalUrl;
+          if(!usedFallback&&original&&original!==image.src){
+            usedFallback=true;image.src=original;return;
+          }
+          figure.remove();
+          grid.className='destination-photo-grid photo-count-'+grid.querySelectorAll('figure').length;
+          if(!grid.querySelector('img')){
+            const empty=doc.createElement('span');empty.className='destination-photo-status';
+            empty.textContent='Photographs unavailable';grid.append(empty);
+          }
+        };
+        figure.append(image);grid.append(figure);
+        const li=doc.createElement('li');
+        li.append(doc.createTextNode('Photo '+(i+1)+': '+photo.author+' · '));
+        for(const [url,label] of [[photo.filePage,'Original full-quality file'],[photo.licenseUrl,photo.license]]){
+          const link=doc.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';
+          link.textContent=label;li.append(link,doc.createTextNode(' · '));
+        }
+        li.append(doc.createTextNode('Display-sized derivative; original retained at source.'));
+        list.append(li);
+      });
+      el.append(grid);
+      credits.append(list);
+      if(card){
+        credits.classList.add('card-photo-credit');
+        summary.textContent='ⓘ';
+        summary.setAttribute('aria-label','Photo credits and licence');
+      }
+      el.append(credits);
+      return photos;
+    }).catch(()=>{
+      if(el.isConnected&&el.dataset.galleryVersion===version)el.textContent='Photographs unavailable';
+      return [];
+    });
+  }
+  return Object.freeze({photosFor,render,allowed,keywords,candidatesFor});
 });
