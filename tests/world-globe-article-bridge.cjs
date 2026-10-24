@@ -7,7 +7,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 const baseline=JSON.parse(fs.readFileSync(path.join(root,'editorial/shop_historical_identity_baseline_20261023.json'),'utf8'));
 new vm.Script(script);
-assert(html.includes('world-globe-article-bridge.js?v=71'));
+assert(html.includes('world-globe-article-bridge.js?v=73'));
 assert(sw.includes("'./world-globe-article-bridge.js'"));
 for(const unwanted of ['localStorage','sessionStorage','indexedDB','World Library','Research sources','Open the World Library','Go deeper: country story'])
  assert(!script.includes(unwanted),'Unwanted duplicate research panel or profile access: '+unwanted);
