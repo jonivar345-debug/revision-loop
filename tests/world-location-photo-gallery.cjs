@@ -20,7 +20,7 @@ const api={
  search:async()=>[...unwanted,...wanted.slice(1)]
 };
 class E{
- constructor(tag,doc){this.tagName=tag;this.ownerDocument=doc;this.children=[];this.dataset={};this.textContent='';this.className='';this.isConnected=true;this.classList={add:()=>{},remove:()=>{}};this.src='';}
+ constructor(tag,doc){this.tagName=tag;this.ownerDocument=doc;this.children=[];this.dataset={};this.textContent='';this.className='';this.isConnected=true;this.classList={add:v=>{this.className+=' '+v},remove:()=>{}};this.src='';}
  append(...nodes){this.children.push(...nodes)}
  replaceChildren(...nodes){this.children=[...nodes]}
  remove(){}
@@ -42,7 +42,7 @@ const doc={createElement:tag=>new E(tag,doc),createTextNode:text=>({tagName:'tex
  const card=new E('div',doc);
  await gallery.render(card,busan,{card:true,media:api});
  assert.equal(card.children.find(x=>x.className.startsWith('destination-photo-grid')).children.length,1);
- assert(!card.children.some(x=>x.className==='destination-photo-credits'),'Shop cards must be photograph-led, not licence-text led');
+ assert(card.children.some(x=>x.className.includes('card-photo-credit')),'Shop photographs must retain accessible CC attribution without a large caption');
  assert(!source.slice(source.indexOf('async function setLocationInfo(id){'),source.indexOf('function renderShop(){')).includes('Research sources'));
  assert(!source.slice(source.indexOf('async function setLocationInfo(id){'),source.indexOf('function renderShop(){')).includes('Wikimedia Commons</a>'));
  assert(!bridge.includes('Open the World Library'));
