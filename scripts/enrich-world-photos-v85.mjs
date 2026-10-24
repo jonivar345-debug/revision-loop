@@ -56,12 +56,12 @@ const contextual={
 function aliases(loc){
  const name=norm(loc.name.replace(/^Country:\s*/,'')),other=contextual[loc.id]||[];
  const a=[name,...other.map(norm)];
- return [...new Set(a.filter(x=>x.length>=4))];
+ return [...new Set(a.filter(x=>x.length>=3))];
 }
 let last=0,requests=0,rateLimited=0;const errors=[];
 async function getCommons(loc,term){
  const url=new URL('https://commons.wikimedia.org/w/api.php');
- const params={action:'query',generator:'search',gsrsearch:'intitle:"'+term.replace(/"/g,'')+'"',
+ const params={action:'query',generator:'search',gsrsearch:'intitle:"'+String(term||'').replace(/"/g,'')+'"',
   gsrnamespace:'6',gsrlimit:'50',prop:'imageinfo',
   iiprop:'url|size|extmetadata',iiurlwidth:'2048',
   format:'json',formatversion:'2'};
@@ -125,7 +125,7 @@ for(const loc of targets){
  const names=aliases(loc);
  // Base search first; the exact place name is always preferred. Only
  // use a second search if the first returned too few permitted photographs.
- const queries=[names[0],...names.slice(1,3)];
+ const queries=[names[0],...names.slice(1,3)].filter(Boolean);
  for(const term of queries){
   const pages=await getCommons(loc,term);
   for(const page of pages){
