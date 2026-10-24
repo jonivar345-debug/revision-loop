@@ -1,0 +1,421 @@
+{
+  "schema": "aqa-official-source-only-part-inventory-v1",
+  "created": "2026-10-24",
+  "kind": "original paper/part metadata; not student-visible exam questions",
+  "subject": "Chemistry",
+  "qualification": "AS",
+  "year": 2024,
+  "series": "June",
+  "paper": "7404/2",
+  "sourceAuthorship": "AQA",
+  "questionPaperSource": {
+    "documentPages": 36,
+    "verifiedCopy": "https://cdn.sanity.io/files/p28bar15/green/96aae147a7c07bce2da6ef5bd6609f6a65f7d1ba.pdf",
+    "hosting": "Independent mirror of AQA-authored PDF; original AQA-hosted link not independently opened"
+  },
+  "markSchemeSource": {
+    "documentPages": 29,
+    "version": "1.0 Final",
+    "verifiedCopy": "https://cdn.sanity.io/files/p28bar15/green/a76767f1e07f22c09289826f329b04655289eccd.pdf",
+    "hosting": "Independent mirror of AQA-authored final mark scheme"
+  },
+  "officialResourceFinder": "https://www.aqa.org.uk/past-papers-and-mark-schemes-finder",
+  "summary": {
+    "numberedStructuredQuestions": 7,
+    "structuredParts": 26,
+    "structuredMarks": 65,
+    "multipleChoiceParts": 15,
+    "multipleChoiceMarks": 15,
+    "totalPartReferences": 41,
+    "totalMarks": 80,
+    "studentFacingQuestionsAdded": 0,
+    "completePlayablePaper": false,
+    "exactSpecificationSubtopicCodesVerified": 0
+  },
+  "markingDesignNotes": [
+    "Q04.1 is levels-of-response and must be assessed as a coherent explanation.",
+    "Q04.2 and Q07.4 are drawn electron-pair mechanisms and cannot be reliably scored by text keywords.",
+    "Q05.1 and Q07.7 explicitly require consequential calculation marking and unit checks.",
+    "Q06.2 is a graph drawing and extrapolation task.",
+    "Q02.1 accepts multiple distinct chemically correct structures.",
+    "Do not reproduce AQA copyrighted question stems, source figures, worked official answers or MCQ answer keys in this metadata."
+  ],
+  "validation": {
+    "uniquePartIds": true,
+    "structuredAndMcqTotalsReconciled": true,
+    "perNumberedQuestionMarksReconciled": true,
+    "pdfPageBoundsChecked": true,
+    "studentFacing": false
+  },
+  "parts": [
+    {
+      "partId": "01.1",
+      "marks": 3,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 11,
+      "topic": "Organic functional-group test observations",
+      "markingCaution": "Three separate table entries; do not treat an ambiguous observation as sufficient.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "01.2",
+      "marks": 3,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 11,
+      "topic": "Empirical formula from mass composition",
+      "markingCaution": "Alternative percentage method and error-carried-forward credit.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "02.1",
+      "marks": 2,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 12,
+      "topic": "Infrared spectra and structural isomers",
+      "markingCaution": "Accept chemically valid structures consistent with both spectra, not a single memorised structure.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "02.2",
+      "marks": 2,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 13,
+      "topic": "IR fingerprint-region comparison",
+      "markingCaution": "Both fingerprint region and comparison with known spectrum needed.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "02.3",
+      "marks": 1,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 13,
+      "topic": "Infrared absorption and greenhouse gases",
+      "markingCaution": "Absorption of infrared radiation is required.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "03.1",
+      "marks": 1,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 14,
+      "topic": "IUPAC nomenclature of halogenated alkanes",
+      "markingCaution": "Requires correct systematic name.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.2",
+      "marks": 2,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 14,
+      "topic": "Free-radical substitution propagation",
+      "markingCaution": "Two correct radical propagation equations; alternative order accepted.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.3",
+      "marks": 1,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 14,
+      "topic": "Photochemical bond homolysis",
+      "markingCaution": "Radical dots and photolytic cleavage.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.4",
+      "marks": 2,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 15,
+      "topic": "Catalytic ozone depletion by chlorine radicals",
+      "markingCaution": "Two linked equations; alternative valid mechanism recognised.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.5",
+      "marks": 1,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 15,
+      "topic": "Role of stratospheric ozone",
+      "markingCaution": "Requires explanation of harmful UV removal.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "04.1",
+      "marks": 6,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 16,
+      "topic": "E/Z stereoisomerism and Cahn–Ingold–Prelog priorities",
+      "markingCaution": "LEVELS OF RESPONSE: best-fit descriptors, stereoisomerism, restricted rotation and priority reasoning; not six keyword marks.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "04.2",
+      "marks": 5,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 17,
+      "topic": "Electrophilic addition mechanism",
+      "markingCaution": "One mechanism identification plus four structural/arrow marks; wrong carbocation imposes cap.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "04.3",
+      "marks": 3,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 18,
+      "topic": "Carbocation stability and major products",
+      "markingCaution": "Must compare carbocation intermediates, not merely product stability.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "05.1",
+      "marks": 7,
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 19,
+      "topic": "Limiting reagents and ideal-gas equation",
+      "markingCaution": "Seven staged marks; ECF allowed with important limitations on method.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "05.2",
+      "marks": 2,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 20,
+      "topic": "Gas volume ratios and combustion equations",
+      "markingCaution": "Equation may use multiples/fractions; subsequent ratio can receive ECF.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "06.1",
+      "marks": 1,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 20,
+      "topic": "Halogenoalkane hydrolysis test",
+      "markingCaution": "If name and formula both provided, both must be correct.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "06.2",
+      "marks": 3,
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 21,
+      "topic": "Rates practical: plotting and extrapolating graphs",
+      "markingCaution": "Requires plotted points, curved best-fit and extrapolation; numerical-only response insufficient.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "06.3",
+      "marks": 3,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 22,
+      "topic": "Bond strength and relative hydrolysis rate",
+      "markingCaution": "Rate and bond-strength marks independent; graph comparison may allow ECF.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "07.1",
+      "marks": 1,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 23,
+      "topic": "Oxidation of primary alcohols",
+      "markingCaution": "Recognise oxidising-agent colour change.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.2",
+      "marks": 1,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 23,
+      "topic": "Aldehyde intermediate during oxidation",
+      "markingCaution": "Valid name or structure; if both given they must agree.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.3",
+      "marks": 3,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 24,
+      "topic": "Hydrogen-bond diagram with water",
+      "markingCaution": "Must show donor/acceptor, charges and linear geometry; wrong diagram can cap credit.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "07.4",
+      "marks": 3,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 25,
+      "topic": "Nucleophilic substitution mechanism",
+      "markingCaution": "Name and correct electron-pair arrows; incorrect arrow type penalised.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "07.5",
+      "marks": 1,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 26,
+      "topic": "Solvent selection for nucleophilic substitution",
+      "markingCaution": "Requires a chemically valid reason.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.6",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 26,
+      "topic": "Equilibrium constant Kc expression",
+      "markingCaution": "Concentration brackets and powers must be correct.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.7",
+      "marks": 4,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 26,
+      "topic": "Equilibrium concentrations, Kc and units",
+      "markingCaution": "ECF for concentration and expression; units must be consistent with expression.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.8",
+      "marks": 3,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 27,
+      "topic": "Le Chatelier principle and temperature",
+      "markingCaution": "Independent effect, shift and explanation marks.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "8",
+      "marks": 1,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 28,
+      "topic": "Percentage yield and limiting reagent",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "9",
+      "marks": 1,
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 28,
+      "topic": "Relative molecular mass",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "10",
+      "marks": 1,
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 28,
+      "topic": "Activation energy and catalysis",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "11",
+      "marks": 1,
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPage": 28,
+      "topic": "Curly-arrow mechanisms",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "12",
+      "marks": 1,
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPage": 28,
+      "topic": "Elimination products and stereoisomers",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "13",
+      "marks": 1,
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 28,
+      "topic": "Distillation versus reflux apparatus",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "14",
+      "marks": 1,
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 28,
+      "topic": "Halogenation stoichiometry",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "15",
+      "marks": 1,
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 28,
+      "topic": "Addition polymer structure",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "16",
+      "marks": 1,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 28,
+      "topic": "Cracking and equation balancing",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "17",
+      "marks": 1,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 28,
+      "topic": "Intermolecular forces and boiling point",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "18",
+      "marks": 1,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 28,
+      "topic": "High-resolution mass spectrometry",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "19",
+      "marks": 1,
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 28,
+      "topic": "Hess law combustion enthalpy",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "20",
+      "marks": 1,
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 29,
+      "topic": "Hess law enthalpy changes",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "21",
+      "marks": 1,
+      "questionPaperPdfPage": 30,
+      "markSchemePdfPage": 29,
+      "topic": "Atom economy",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "22",
+      "marks": 1,
+      "questionPaperPdfPage": 30,
+      "markSchemePdfPage": 29,
+      "topic": "Moles and Avogadro constant",
+      "markingCaution": "Single-best-answer MCQ; mark against source choice, not prose.",
+      "requiresSourceFigure": false
+    }
+  ]
+}
