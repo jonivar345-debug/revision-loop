@@ -33,7 +33,7 @@ const doc={createElement:tag=>new E(tag,doc),createTextNode:text=>({tagName:'tex
  assert(chosen.every(x=>!x.file.includes('Seoul')&&!x.file.includes('Seomyeon')&&!x.file.includes('collage')&&!x.file.includes('map')));
  const host=new E('div',doc);
  await gallery.render(host,busan,{media:api});
- const tiles=host.children.find(x=>x.className==='destination-photo-grid');
+ const tiles=host.children.find(x=>x.className.startsWith('destination-photo-grid'));
  assert.equal(tiles.children.length,4,'Four photographs should appear together');
  const credits=host.children.find(x=>x.className==='destination-photo-credits');
  assert.equal(credits.tagName,'details','Credits should be available, not displayed over pictures');
@@ -41,7 +41,7 @@ const doc={createElement:tag=>new E(tag,doc),createTextNode:text=>({tagName:'tex
  for(const entry of credits.children[1].children)assert(entry.children.filter(x=>x.tagName==='a').length===2,'Must retain original and licence URLs');
  const card=new E('div',doc);
  await gallery.render(card,busan,{card:true,media:api});
- assert.equal(card.children.find(x=>x.className==='destination-photo-grid').children.length,1);
+ assert.equal(card.children.find(x=>x.className.startsWith('destination-photo-grid')).children.length,1);
  assert(!card.children.some(x=>x.className==='destination-photo-credits'),'Shop cards must be photograph-led, not licence-text led');
  assert(!source.slice(source.indexOf('async function setLocationInfo(id){'),source.indexOf('function renderShop(){')).includes('Research sources'));
  assert(!source.slice(source.indexOf('async function setLocationInfo(id){'),source.indexOf('function renderShop(){')).includes('Wikimedia Commons</a>'));
