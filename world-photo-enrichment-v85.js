@@ -1173,6 +1173,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Barbados",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Carlisle Bay - Barbados.jpg",
+      "author": "P. Hughes",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Carlisle Bay looking southwest, Barbados",
+      "width": 3873,
+      "height": 2766,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-bb",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-bd": [
@@ -1552,6 +1565,47 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Democratic Republic of the Congo",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Congo River from Kinshasa in Democratic Republic of the Congo (DRC).jpg",
+      "author": "EdwinAlden.1995",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Congo River viewed from Kinshasa, Democratic Republic of the Congo",
+      "width": 2048,
+      "height": 1536,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-cd",
+      "photoSource": "Commons manually source-checked geographic photo"
+    }
+  ],
+  "country-cg": [
+    {
+      "file": "Déplacement sur le fleuve Congo.jpg",
+      "author": "Happiraphael",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Pirogues on the Congo River at Brazzaville, Republic of the Congo",
+      "width": 3872,
+      "height": 2592,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-cg",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Rive nord du Pool Malebo.JPG",
+      "author": "Bsm15",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "North bank of Pool Malebo viewed from a river barge heading towards Brazzaville",
+      "width": 2560,
+      "height": 1920,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-cg",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-ch": [
@@ -1580,6 +1634,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Switzerland",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "country-ci": [
+    {
+      "file": "Basilique notre Dame de la Paix de Yamoussoukro.jpg",
+      "author": "Didierwiki",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "subject": "Basilica of Our Lady of Peace in Yamoussoukro, Côte d’Ivoire",
+      "width": 4000,
+      "height": 2252,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ci",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-cl": [
@@ -2846,6 +2915,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Kiribati",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Abaiang, view from the church to the ocean side - panoramio.jpg",
+      "author": "Flexman",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "subject": "Ocean-side view of Abaiang, Kiribati",
+      "width": 2816,
+      "height": 1584,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ki",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-km": [
@@ -2861,6 +2943,19 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Comoros",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Grande Comore shores.jpg",
+      "author": "Radosław Botev",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Volcanic coastline on Grande Comore island, Comoros",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-km",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-kn": [
@@ -3681,6 +3776,19 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Papua New Guinea",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "White Island, Bougainville.jpg",
+      "author": "Jeremy Weate",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "White Island in Bougainville, Papua New Guinea",
+      "width": 5601,
+      "height": 3723,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-pg",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-pl": [
@@ -3724,6 +3832,32 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Palestine",
       "photoSource": "Commons exact File-title search"
+    },
+    {
+      "file": "Old markets in the city of Bethlehem-Palestine.jpg",
+      "author": "Bashar Nayfeh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Traditional market streets in Bethlehem, Palestine",
+      "width": 3456,
+      "height": 5184,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ps",
+      "photoSource": "Commons manually source-checked geographic photo"
+    },
+    {
+      "file": "Church of the Nativity, Bethlehem.jpg",
+      "author": "Nevborg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "subject": "Church of the Nativity in Bethlehem, Palestine",
+      "width": 5184,
+      "height": 3456,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-ps",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-pt": [
@@ -4538,6 +4672,19 @@
       "reviewStatus": "Human-specified geographic landmark search, current Commons author/CC licence/size checked; NOT individual pixel-level visual approval",
       "locationText": "Turkmenistan",
       "photoSource": "Commons curated place-query, source metadata checked"
+    },
+    {
+      "file": "Turkmenistan - Sultan Sanjar mausoleum.jpg",
+      "author": "P. Hughes",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "subject": "Sultan Sanjar mausoleum in Merv, Turkmenistan",
+      "width": 3469,
+      "height": 2387,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "country-tm",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "country-tn": [
@@ -7310,6 +7457,21 @@
       "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
       "locationText": "Baltic Sea",
       "photoSource": "Commons exact File-title search"
+    }
+  ],
+  "sea-bering": [
+    {
+      "file": "Bering Sea Sunset In Alaska.jpg",
+      "author": "Allan Shimada, NOAA NMFS/OST/AMD",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Fishing vessels and birds silhouetted against sunset over the Bering Sea",
+      "width": 5295,
+      "height": 3515,
+      "editorialMetadata": true,
+      "reviewStatus": "2026-10-24: Commons File page checked for photographer, licence, image dimensions and specific geography; NOT visually pixel-reviewed",
+      "locationText": "sea-bering",
+      "photoSource": "Commons manually source-checked geographic photo"
     }
   ],
   "sea-coral": [
