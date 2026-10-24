@@ -42,6 +42,13 @@ const loc={id:'busan',name:'Busan',wiki:'Busan'};
  const loaded=open.children.find(x=>x.className.includes('destination-photo-grid'));
  assert.equal(loaded.children.length,4);
  assert(loaded.children[0].children[0].src.includes('width=2048'),'Unlocked gallery keeps full-resolution Commons derivative');
+ const motel={...full[0],file:'File:Example destination hotel room.jpg',description:'Generic indoor hotel room',source:'editorial-source'};
+ const skyline={...full[1],file:'File:Example destination scenic skyline panorama.jpg',description:'Scenic skyline panorama of Example Destination',source:'editorial-source'};
+ global.window.RevisionWorldCuratedPhotos={get:id=>id==='scenic-v85'?[motel,skyline]:catalog.get(id)};
+ const echo={...fakeMedia,verifyNamedFiles:async sources=>sources};
+ const ranked=await gallery.photosFor({id:'scenic-v85',name:'Example Destination',wiki:'Example Destination'},{limit:1,media:echo});
+ assert(ranked[0]?.file.includes('scenic skyline'),'A recognisable city skyline should be chosen before generic interior cover source');
+ global.window.RevisionWorldCuratedPhotos=catalog;
  let attempts=0;
  global.window.RevisionWorldCommonsMedia={
   verifyNamedFiles:async()=>[],searchPage:async()=>{attempts++;return []},
