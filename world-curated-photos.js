@@ -2625,8 +2625,14 @@
       }
     ]
   });
+  // Machine-discovered Wikipedia-article-associated Commons files, never
+  // marked as visually reviewed. Runtime validation checks current CC rights.
+  function discoveredFor(id){
+    const index=typeof window==='object'?window.RevisionWorldDiscoveryPhotos:null;
+    return Array.isArray(index?.[id])?index[id]:[];
+  }
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...discoveredFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
