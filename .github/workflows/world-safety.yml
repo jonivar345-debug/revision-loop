@@ -30,5 +30,6 @@ jobs:
           node tests/world-globe-article-bridge.cjs
           node tests/world-photo-licence-audit.cjs
           node tests/world-commons-media.cjs
+          node tests/world-location-photo-gallery.cjs
           node tests/world-library-preview.cjs
           node tests/outfit-and-source-regression.cjs
