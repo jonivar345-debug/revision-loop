@@ -3684,6 +3684,211 @@
       }
     ]
   });
+  // v90: source-checked priority additions. These remain editorial-source entries
+  // and REQUIRE current Commons licence verification before any image is displayed.
+  const priorityPhotoV90=Object.freeze({
+  "country-at": [
+    {
+      "file": "Schloß Schönbrunn.jpg",
+      "author": "Philipp Mayer",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Schönbrunn Palace in Vienna, Austria",
+      "width": 4428,
+      "height": 2079,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-be": [
+    {
+      "file": "The Grand Place, Brussels.jpg",
+      "author": "Silva.1994",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Grand Place square in Brussels at night",
+      "width": 4160,
+      "height": 3120,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    },
+    {
+      "file": "Brujas, canal.jpg",
+      "author": "LBM1948",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Bruges canal, Belgium",
+      "width": 4104,
+      "height": 2764,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-bj": [
+    {
+      "file": "Benin village on water Ganvié.jpg",
+      "author": "Dr. Ondřej Havelka (cestovatel)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Stilt village of Ganvié on Lake Nokoué, Benin",
+      "width": 2448,
+      "height": 1244,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-bn": [
+    {
+      "file": "Omar Ali Saifuddien Mosque Brunei.jpg",
+      "author": "Philip Nalangan",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "subject": "Omar Ali Saifuddien Mosque in Bandar Seri Begawan, Brunei, at night",
+      "width": 6016,
+      "height": 4000,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-bh": [
+    {
+      "file": "Manama Manama Skyline 01.jpg",
+      "author": "Zairon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Manama skyline, Bahrain",
+      "width": 4529,
+      "height": 1623,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-bf": [
+    {
+      "file": "Bobo-Dioulasso Mosque.jpg",
+      "author": "Jurgen",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "subject": "Grand Mosque of Bobo-Dioulasso, Burkina Faso",
+      "width": 3072,
+      "height": 2304,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-dk": [
+    {
+      "file": "Nyhavn, Copenhague.jpg",
+      "author": "Bene Riobó",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Colourful Nyhavn waterfront in Copenhagen, Denmark",
+      "width": 4800,
+      "height": 3200,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-bb": [
+    {
+      "file": "Bridgetown, Barbados..JPG",
+      "author": "Pgbk1987",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "City of Bridgetown, Barbados",
+      "width": 4912,
+      "height": 3264,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-ec": [
+    {
+      "file": "Cotopaxi Volcano.jpg",
+      "author": "J. Miers (Wikivoyage user Jtesla16)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Cotopaxi volcano with Tambopaxi in the foreground, Ecuador",
+      "width": 3072,
+      "height": 2304,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    },
+    {
+      "file": "Quito Panorama of the historic center from Casa Bella Vista 15.jpg",
+      "author": "Ymblanter",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Historic centre of Quito seen from Casa Bella Vista, Ecuador",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ],
+  "country-cm": [
+    {
+      "file": "Mount Cameroon.jpg",
+      "author": "Daina",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Mount Cameroon viewed from the Molyko district of Buea",
+      "width": 1944,
+      "height": 2592,
+      "editorialMetadata": true,
+      "qualityPriority": 1000,
+      "reviewStatus": "Wikimedia Commons File page verified for named location, author, CC licence and source resolution on 2026-10-24; not a full-resolution pixel/composition sign-off."
+    }
+  ]
+});
+  const rejectedPhotoV90=Object.freeze({
+  "country-at": [
+    "Maria Carolina of Austria in the Palace of Caserta.jpg"
+  ],
+  "country-be": [
+    "Sainte-Elisabeth church in Binche, Belgium (DSCF7800).jpg",
+    "Liberation monument in Tielt, Belgium (DSCF0068).jpg"
+  ],
+  "country-bj": [
+    "Benignus of Dijon church in St-Benin-des-Bois (3).jpg"
+  ],
+  "country-bn": [
+    "Anduki Airfield main terminal building, Brunei (DSCF1450).jpg"
+  ],
+  "country-bh": [
+    "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James Mattis visits Bahrain King Hamad bin Isa Al Khalifa, south of Manama, Bahrain on October 27, 2018 - 6.jpg"
+  ],
+  "country-bf": [
+    "EU Humanitarian Air Bridge to Burkina Faso (1).jpg"
+  ],
+  "country-dk": [
+    "Cityscape and skyline by the Copenhagen Lakes, Denmark - (36018109956).jpg"
+  ],
+  "country-bb": [
+    "066a Britannia in Port of Bridgetown at night - Barbados - 3 1 - V-P.jpg"
+  ],
+  "country-ec": [
+    "Iguana marina (Amblyrhynchus cristatus), Las Bachas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-23, DD 23.jpg",
+    "Iguana marina (Amblyrhynchus cristatus), isla Lobos, islas Galápagos, Ecuador, 2015-07-25, DD 47.JPG"
+  ],
+  "country-cm": [
+    "Rothmannia lateriflora (Rubiaceae) from the Dja Faunal Reserve.jpg"
+  ]
+});
+  function acceptedPhotoV90(id,item){
+    return !(rejectedPhotoV90[id]||[]).some(file=>file.toLowerCase()===item.file.toLowerCase());
+  }
   // Source-verified candidate additions to reach four where Wikimedia has
   // enough distinct photos. Never label machine selection as visual approval.
   function enrichmentFor(id){
@@ -3691,7 +3896,11 @@
     return Array.isArray(records?.[id])?records[id]:[];
   }
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
+    const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
+    const seen=new Set();
+    return [...(priorityPhotoV90[id]||[]),...rest]
+      .filter(photo=>acceptedPhotoV90(id,photo))
+      .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
