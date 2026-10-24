@@ -51,4 +51,12 @@ for(const [id,latitude,longitude] of referenceCities){
  assert(Math.abs(Number(match[1])-latitude)<.06,'Incorrect north/south position '+id);
  assert(Math.abs(Number(match[2])-longitude)<.06,'Incorrect east/west position '+id);
 }
+// Map-image fallbacks must preserve the same WGS84 transform as globe pins.
+const preview=require('../world-location-map-preview.js');
+assert(Math.abs(preview.locate(-.1276,51.5072).x-(180-.1276)/360)<1e-8);
+assert(Math.abs(preview.locate(139.65,35.67).y-(90-35.67)/180)<1e-8);
+assert(preview.locate(181,0).x<.01,'Dateline wrap should use the same location on both sides');
+assert(html.includes('world-location-map-preview.js?v=69'),'No offline geographic preview in the main app');
+assert(style.includes('.location-accurate-map'),'Place map thumbnails missing from card styles');
+assert(app.includes('window.RevisionWorldMapPreview?.render(el,location)'),'Missing photo fallback into real geographic map');
 console.log('PASS geographic Earth: '+geo.rings.length+' public-domain WGS84 rings; clean dateline, new country/marine pins, ownership colours and uncluttered click targets.');
