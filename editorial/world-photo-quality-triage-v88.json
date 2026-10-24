@@ -4,13 +4,13 @@
   "totals": {
     "destinations": 376,
     "sourceComplete": 376,
-    "highPriority": 5,
-    "mediumPriority": 221,
+    "highPriority": 3,
+    "mediumPriority": 223,
     "standardPriority": 150,
     "fullVisualInspections": 0,
     "liveImageLoadsIndividuallyVerified": 0
   },
-  "workflow": "Use this to review candidate files and live renders; prioritize high-risk areas. Flagged filenames may be legitimate (for example, a museum is not necessarily wrong). Do not describe source-complete as visually approved.",
+  "workflow": "376-destination source inventory refreshed after replacing 19 incorrect/weak images. Source checks only; high-resolution pixel-level visual quality, actual live cover and 4-gallery image delivery remain unreviewed unless explicitly signed off.",
   "destinations": [
     {
       "id": "london",
@@ -7371,27 +7371,24 @@
       "region": "North America",
       "kind": "Country",
       "sourceCount": 4,
-      "priority": "high",
-      "riskFlags": [
-        "potential_generic_wildlife",
-        "limited_photographer_variety"
-      ],
+      "priority": "medium",
+      "riskFlags": [],
       "sourceFiles": [
         {
           "file": "Montego Bay Photo Don Ramey Logan.jpg",
           "source": "https://commons.wikimedia.org/wiki/File:Montego_Bay_Photo_Don_Ramey_Logan.jpg"
         },
         {
-          "file": "Jamaica Bay Wildlife Refuge East Pond (61277p).jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Jamaica_Bay_Wildlife_Refuge_East_Pond_(61277p).jpg"
+          "file": "Dunn's River Falls.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Dunn's_River_Falls.jpg"
         },
         {
-          "file": "Jamaica Bay Wildlife Refuge East Pond (61289p).jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Jamaica_Bay_Wildlife_Refuge_East_Pond_(61289p).jpg"
+          "file": "Negril.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Negril.jpg"
         },
         {
-          "file": "Jamaica Bay Wildlife Refuge (41031).jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Jamaica_Bay_Wildlife_Refuge_(41031).jpg"
+          "file": "Blue and John Crow Mountains.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Blue_and_John_Crow_Mountains.jpg"
         }
       ],
       "visualInspection": "not_done",
@@ -9178,11 +9175,9 @@
       "region": "Europe",
       "kind": "Country",
       "sourceCount": 4,
-      "priority": "high",
+      "priority": "medium",
       "riskFlags": [
-        "museum_or_small_indoor_subject",
-        "potential_generic_wildlife",
-        "limited_photographer_variety"
+        "museum_or_small_indoor_subject"
       ],
       "sourceFiles": [
         {
@@ -9190,16 +9185,16 @@
           "source": "https://commons.wikimedia.org/wiki/File:Estatua_de_Vimara_Peres%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG"
         },
         {
-          "file": "Cabruza (Parablennius gattorugine), Parque natural de la Arrábida, Portugal, 2022-07-22, DD 48.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Cabruza_(Parablennius_gattorugine)%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2022-07-22%2C_DD_48.jpg"
+          "file": "A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:A_panoramic_view_of_the_Dom_Lu%C3%ADs_I_Bridge_spanning_the_Douro_River_in_Porto%2C_Portugal%2C_with_a_yellow_tram_crossing_and_the_historic_city_skyline_in_the_background._(55246746406).jpg"
         },
         {
           "file": "Yellow leaves floating next to water volcano, Alameda dos Oceanos, Parque das Nações, Lisbon, Portugal julesvernex2.jpg",
           "source": "https://commons.wikimedia.org/wiki/File:Yellow_leaves_floating_next_to_water_volcano%2C_Alameda_dos_Oceanos%2C_Parque_das_Na%C3%A7%C3%B5es%2C_Lisbon%2C_Portugal_julesvernex2.jpg"
         },
         {
-          "file": "Ascidia bombillo (Clavelina lepadiformis), Parque natural de la Arrábida, Portugal, 2022-07-20, DD 52.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Ascidia_bombillo_(Clavelina_lepadiformis)%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2022-07-20%2C_DD_52.jpg"
+          "file": "View over the river Tagus, Lisbon, Portugal.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:View_over_the_river_Tagus%2C_Lisbon%2C_Portugal.jpg"
         }
       ],
       "visualInspection": "not_done",
