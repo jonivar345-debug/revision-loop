@@ -3872,9 +3872,7 @@
   "country-bf": [
     "EU Humanitarian Air Bridge to Burkina Faso (1).jpg"
   ],
-  "country-dk": [
-    "Cityscape and skyline by the Copenhagen Lakes, Denmark - (36018109956).jpg"
-  ],
+
   "country-bb": [
     "066a Britannia in Port of Bridgetown at night - Barbados - 3 1 - V-P.jpg"
   ],
