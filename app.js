@@ -2335,6 +2335,20 @@ const LOCATION_CULTURE_DETAILS={
  "london": "London's museums, theatres and diverse neighbourhoods reflect the city's layered history and communities.",
  "tokyo": "Tokyo ranges from older districts such as Asakusa to modern districts; festivals, food and design traditions vary by neighbourhood."
 };
+const LOCATION_LOCAL_OVERVIEWS={
+  "london": "London stands on the River Thames in south-east England and is the UK's capital. River crossings, docks and railways shaped its growth from Roman Londinium into a major international city. Westminster, the historic City and many other neighbourhoods reflect different stages of that history.",
+  "busan": "Busan is a major port on South Korea's south-eastern coast, facing the Korea Strait. Hills, beaches and waterfront neighbourhoods create a different setting from Seoul. Its harbour, markets and rail connections reflect its importance to trade and contemporary Korean culture.",
+  "tbilisi": "Tbilisi, Georgia's capital, extends along the Mtkvari River between surrounding hills. Its old streets, sulphur-bath district and Narikala area show layers of Georgian and wider regional history, while newer districts and bridges reflect a changing city.",
+  "nairobi": "Nairobi is Kenya's capital, located in the East African highlands. It grew as a railway and administrative centre and is now a major commercial city. Nearby Nairobi National Park makes the relationship between urban development and wildlife especially visible.",
+  "newyork": "New York City lies where the Hudson River reaches the Atlantic, with five boroughs connected by bridges, tunnels and ferries. Its harbour helped it become a centre for migration, trade and culture. Manhattan's skyline is only one part of its varied neighbourhoods.",
+  "cusco": "Cusco lies high in the Peruvian Andes and was a centre of the Inca Empire. Streets preserve examples of Inca stonework alongside later Spanish colonial buildings. The surrounding valleys and mountain routes are essential to understanding the city's historic role.",
+  "sydney": "Sydney sits around Port Jackson on Australia's east coast. This area has long been Country for Aboriginal peoples, including Gadigal communities. The natural harbour, transport network and expanding suburbs matter as much to the modern city as the Opera House and Harbour Bridge.",
+  "capetown": "Cape Town occupies a coastal setting beneath Table Mountain in South Africa. Mountain, ocean and port shaped its growth. The city's history includes colonial settlement, forced displacement and apartheid; its diverse communities continue to shape its identity.",
+  "tokyo": "Tokyo grew from the former city of Edo on the Pacific side of Honshu. Extensive railway networks connect residential neighbourhoods, business districts, parks and historic sites. Its geography includes bayside land and inland suburbs, not just the familiar skyscrapers.",
+  "reykjavik": "Reykjavík is Iceland's capital on the south-west coast, overlooking Faxaflói Bay. Its waterfront reflects a history of fishing and trade, while nearby volcanic landscapes and geothermal energy are important parts of the region's geography and modern infrastructure.",
+  "seoul": "Seoul, South Korea's capital, occupies the Han River valley amid surrounding mountains. Palaces and older neighbourhoods stand beside dense modern districts. Bridges and its extensive metro system connect the metropolitan area across the river.",
+  "singapore": "Singapore is a city-state at the southern end of the Malay Peninsula. Its harbour and position on important maritime routes helped it grow as a trading hub. Gardens, public housing and historic neighbourhoods illustrate how city planning responds to migration and limited land."
+};
 async function setLocationInfo(id){
  if(openLocationId===id){openLocationId=null;document.getElementById('globeLocationInfo').classList.add('hidden');drawGlobe();return}
  const l=LOCATIONS.find(x=>x.id===id),host=document.getElementById('globeLocationInfo');
@@ -2344,14 +2358,14 @@ async function setLocationInfo(id){
  host.classList.remove('hidden');
  host.innerHTML='<div class="globe-info-top"><h3>'+esc(l.name)+'</h3><button id="closeLocationInfo" aria-label="Close location information">Close</button></div>'+
  '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback">Finding a suitable photograph…</div></div>'+
- '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">Loading a local introduction…</p></div>'+
+ '<div class="location-background"><h4>About '+esc(l.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||'Loading a local introduction…')+'</p></div>'+
  '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
  '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>'+
  '<p class="location-coordinate">Approximate map position: '+Math.abs(l.lat).toFixed(3)+'° '+(l.lat>=0?'N':'S')+', '+Math.abs(l.lon).toFixed(3)+'° '+(l.lon>=0?'E':'W')+'</p>'+
  '<div class="detail-links">Photographs and introductory text: <a href="https://en.wikipedia.org/wiki/'+encodeURIComponent(l.wiki)+'" target="_blank" rel="noopener noreferrer">Wikipedia</a> / <a href="https://commons.wikimedia.org/wiki/Special:MediaSearch?type=image&search='+encodeURIComponent(l.name)+'" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></div>';
  document.getElementById('closeLocationInfo').onclick=()=>setLocationInfo(id);
  locationPhoto(l,document.getElementById('detailPhotoOne'));
- try{
+ if(!LOCATION_LOCAL_OVERVIEWS[id])try{
   // Each destination pulls its own encyclopedia introduction; factual
   // paragraphs are not assembled from a repeated region-wide template.
   const endpoint='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exchars=1700&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(l.wiki.replace(/_/g,' '));
