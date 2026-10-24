@@ -42,5 +42,14 @@ const loc={id:'busan',name:'Busan',wiki:'Busan'};
  const loaded=open.children.find(x=>x.className.includes('destination-photo-grid'));
  assert.equal(loaded.children.length,4);
  assert(loaded.children[0].children[0].src.includes('width=2048'),'Unlocked gallery keeps full-resolution Commons derivative');
+ let attempts=0;
+ global.window.RevisionWorldCommonsMedia={
+  verifyNamedFiles:async()=>[],searchPage:async()=>{attempts++;return []},
+  searchArticleImages:async()=>[],searchNearby:async()=>[],search:async()=>[],verifyApproved:async()=>null
+ };
+ const missing={id:'not-a-real-world-destination-v85',name:'Unknown Destination',wiki:'Unknown Destination'};
+ await gallery.photosFor(missing);
+ await gallery.photosFor(missing);
+ assert(attempts>=2,'A transient Commons failure may not permanently cache a blank cover');
  console.log('PASS v85 covers: 960px Commons source derivative, 2048px gallery, real failed-cover alternate and matching photographer/licence credits');
 })().catch(e=>{console.error(e);process.exitCode=1});
