@@ -1485,17 +1485,17 @@
   ],
   "country-bz": [
     {
-      "file": "Hirtella racemosa Mountain Pine Ridge Belize.jpg",
-      "author": "Denis Barthel",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hirtella racemosa var. hexandra , near Big Rock Falls, Mountain Pine Ridge Forest Reserve, Belize The production, editing or release of this file was supported by the Community-Budget of Wikimedia Deutschland . To see other files ",
-      "width": 4000,
-      "height": 5423,
+      "file": "Big Rock Falls Belize.jpg",
+      "author": "Russell Harrison Photography",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "subject": "Big Rock Falls waterfall in Belize's Mountain Pine Ridge Forest Reserve",
+      "width": 3072,
+      "height": 2304,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Belize",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Original Commons file page verified for exact site, author, Creative Commons licence and resolution; NOT visually pixel-reviewed",
+      "locationText": "country-bz",
+      "photoSource": "Commons location-checked landscape replacement"
     },
     {
       "file": "St Johns Cathedral Belize City DB2015 1.jpg",
@@ -2680,30 +2680,30 @@
   ],
   "country-iq": [
     {
-      "file": "Sumerian scene, milking cows and making dairy products. From the facade of the Temple of Ninhursag at Tell al-'Ubaid, Iraq, 2800-2600 BCE. Iraq Museum.jpg",
-      "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+      "file": "Marshes in southern Iraq.jpeg",
+      "author": "Almendilawi",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Inlay frieze with limestone figures. A Sumerian scene showing milking cows and making dairy products. From the facade of the Temple of Ninhursag at Tell al-'Ubaid, Iraq. Early Dynastic period, 2800-2600 BCE. On display at the Sume",
-      "width": 5870,
-      "height": 2715,
+      "subject": "Natural marshlands and waterways in southern Iraq",
+      "width": 3264,
+      "height": 2448,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Iraq",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Original Commons file page verified for exact site, author, Creative Commons licence and resolution; NOT visually pixel-reviewed",
+      "locationText": "country-iq",
+      "photoSource": "Commons location-checked landscape replacement"
     },
     {
-      "file": "Inscribed wall slab from the Great Mosque of al-Nuri in Mosul, Iraq, 6th century AH. Iraq Museum.jpg",
-      "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+      "file": "مأذنة الملوية في سامراء Malwiya Minaret Samarra.jpg",
+      "author": "حكمت العياشي",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Inscribed marble wall slab from the Great Mosque of al-Nuri in Mosul, Iraq, 6th century AH (12th century CE). The Arabic Kufic inscription reads \"In the Name of God, the Most Gracious, the Most Merciful\". On display at the Iraq Mu",
-      "width": 5339,
-      "height": 2078,
+      "subject": "Spiral Malwiya minaret at Samarra, Iraq",
+      "width": 6016,
+      "height": 4016,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Iraq",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Original Commons file page verified for exact site, author, Creative Commons licence and resolution; NOT visually pixel-reviewed",
+      "locationText": "country-iq",
+      "photoSource": "Commons location-checked landscape replacement"
     }
   ],
   "country-ir": [
@@ -4493,17 +4493,17 @@
   ],
   "country-sz": [
     {
-      "file": "ESwatini Road Sunrise with road works.jpg",
-      "author": "Reflexus34",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "A photo of the sunrise while going through some roadworks in eSwatini",
-      "width": 4032,
-      "height": 3024,
+      "file": "Mantenga Falls.jpg",
+      "author": "TheLizardQueen (Caitlin)",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "subject": "Mantenga Falls waterfall in Eswatini, geotagged near -26.4424,31.1590",
+      "width": 2280,
+      "height": 3468,
       "editorialMetadata": true,
-      "reviewStatus": "Automatic exact Commons filename source match; current CC author/licence and pixel dimensions confirmed; NOT visually pixel-reviewed or manually composition-approved",
-      "locationText": "Eswatini",
-      "photoSource": "Commons exact File-title search"
+      "reviewStatus": "Original Commons file page verified for exact site, author, Creative Commons licence and resolution; NOT visually pixel-reviewed",
+      "locationText": "country-sz",
+      "photoSource": "Commons location-checked landscape replacement"
     },
     {
       "file": "Parliament building of Eswatini, Lobamba.jpg",

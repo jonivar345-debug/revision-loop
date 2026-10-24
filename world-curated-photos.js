@@ -57,19 +57,19 @@
         "editorialMetadata": true
       },
       {
-        "file": "Geghard Monastery, Church, Armenia.jpg",
-        "author": "Vyacheslav Argenberg",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "subject": "Geghard church photographed in 2014",
+        "file": "Lake Sevan and Sevan National Park.jpg",
+        "author": "Մարի Ավետիսյան",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lake Sevan and surrounding national park scenery in Armenia",
         "editorialMetadata": true
       },
       {
-        "file": "Geghard Monastery, Entrance, Armenia.jpg",
-        "author": "Vyacheslav Argenberg",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-        "subject": "Entrance to Geghard monastery",
+        "file": "Noravank D 01.jpg",
+        "author": "Dav Sargsyan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Noravank monastery and landscape in Armenia",
         "editorialMetadata": true
       }
     ],
@@ -630,11 +630,11 @@
         "editorialMetadata": true
       },
       {
-        "file": "Great Blue Hole Belize.jpg",
-        "author": "Axelspace Corporation",
+        "file": "Xunantunich Belize 1 16.jpg",
+        "author": "Denis Barthel",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "subject": "Satellite view of the Great Blue Hole at Lighthouse Reef, Belize",
+        "subject": "Archaeological plazas and El Castillo at the Xunantunich Maya site, Belize",
         "editorialMetadata": true
       }
     ],
