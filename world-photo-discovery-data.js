@@ -229,18 +229,6 @@
   ],
   "antananarivo": [
     {
-      "file": "Text summurization on stone, in Queen's Palace, Manjakamiadana - Antananarivo -- Madagascar.jpg",
-      "author": "Anai171",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Text summurization on stone, in Queen's Palace, Manjakamiadana - Antananarivo -- Madagascar",
-      "width": 4000,
-      "height": 3000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Antananarivo"
-    },
-    {
       "file": "Rova of Antananarivo, Madagascar.jpg",
       "author": "EnfesDino",
       "license": "CC BY-SA 4.0",
@@ -248,18 +236,6 @@
       "subject": "Palace or Rova in Antananarivo.",
       "width": 4676,
       "height": 3122,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Antananarivo"
-    },
-    {
-      "file": "Canons du palais de Manjakamiadana, Rova de Madagascar à Antananarivo.jpg",
-      "author": "Anai171",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Cannons of Manjakamiadana Palace, Rova of Madagascar in Antananarivo.",
-      "width": 4629,
-      "height": 4013,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Antananarivo"
@@ -1191,30 +1167,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Australia"
-    },
-    {
-      "file": "Hippotion scrofa MHNT CUT 2010 0 345 Mount Glorious S.E.Queensland Australia, female dorsal.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hippotion scrofa - Dorsal side Collection of the Mathematician Laurent Schwartz",
-      "width": 6583,
-      "height": 4351,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Australia"
-    },
-    {
-      "file": "Hippotion scrofa MHNT CUT 2010 0 345 Mount Glorious S.E.Queensland Australia, female ventral.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hippotion scrofa - △ Ventral side Collection of the Mathematician Laurent Schwartz",
-      "width": 6583,
-      "height": 4424,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Australia"
     }
   ],
   "country-az": [
@@ -1234,30 +1186,6 @@
   ],
   "country-ba": [
     {
-      "file": "Hemaris croatica - MHNT CUT 2010 0 510 - Bihać, Federation of Bosnia and Herzegovina - male dorsal.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hemaris croatica (narrow-bordered bee hawk-moth) -Dorsal side Collection of the Mathematician Laurent Schwartz",
-      "width": 6578,
-      "height": 4639,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bosnia and Herzegovina"
-    },
-    {
-      "file": "Hemaris croatica - MHNT CUT 2010 0 510 - Bihać, Federation of Bosnia and Herzegovina - male ventral.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hemaris croatica (narrow-bordered bee hawk-moth) - Ventral side Collection of the Mathematician Laurent Schwartz",
-      "width": 6578,
-      "height": 5105,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bosnia and Herzegovina"
-    },
-    {
       "file": "01 Ajvatovica Islamic tradition pilgrimage in Bosnia and Herzegovina.jpg",
       "author": "Marek Ślusarczyk ( Tupungato ) Photo portfolio",
       "license": "CC BY 3.0",
@@ -1265,18 +1193,6 @@
       "subject": "Procession for w:Ajvatovica , a traditional Islamic event in Bosnia and Herzegovina. Donji Vakuf, Bosnia and Herzegovina.",
       "width": 3888,
       "height": 2592,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bosnia and Herzegovina"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Bosnia and Herzegovina.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Bosnia and Herzegovina. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or",
-      "width": 3780,
-      "height": 2126,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Bosnia and Herzegovina"
@@ -1291,30 +1207,6 @@
       "subject": "Cruise ship Britannia night view of starboard side - alongside in Bridgetown, Barbados - 2.25:1 format - stitched from 4 images",
       "width": 14469,
       "height": 6381,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Barbados"
-    },
-    {
-      "file": "2017-04-08 02 PELICAN II - IMO 9044815 – Port of Bridgetown, Barbados.jpg",
-      "author": "Gordon Leggett",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Switzer tugboat, PELICAN II - IMO 9044815, MMSI 314000001 in the Port of Bridgetown, Barbados on April 8, 2017. The ship at the dock in the background is the BENGUELA STREAM - IMO 9158549.",
-      "width": 5378,
-      "height": 3590,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Barbados"
-    },
-    {
-      "file": "AIDAperla in Bridgetown, Barbados - February 2020.jpg",
-      "author": "Martin Falbisoner",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "AIDAperla in the port of Bridgetown , Barbados .",
-      "width": 5090,
-      "height": 2073,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Barbados"
@@ -1512,30 +1404,6 @@
   ],
   "country-bh": [
     {
-      "file": "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James Mattis visits Bahrain King Hamad bin Isa Al Khalifa, south of Manama, Bahrain on October 27, 2018 - 10.jpg",
-      "author": "U.S. Secretary of Defense",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James N. Mattis attends a dinner with Bahrain’s King Hamad bin Isa Al Khalifa, south of Manama, Bahrain, Oct. 27, 2018. (DOD photo by",
-      "width": 6016,
-      "height": 4016,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bahrain"
-    },
-    {
-      "file": "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James Mattis visits Bahrain King Hamad bin Isa Al Khalifa, south of Manama, Bahrain on October 27, 2018 - 9.jpg",
-      "author": "U.S. Secretary of Defense",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James N. Mattis attends a dinner with Bahrain’s King Hamad bin Isa Al Khalifa, south of Manama, Bahrain, Oct. 27, 2018. (DOD photo by",
-      "width": 5404,
-      "height": 3608,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bahrain"
-    },
-    {
       "file": "Bahrain Fort March 2015.JPG",
       "author": "Martin Falbisoner",
       "license": "CC BY-SA 4.0",
@@ -1543,18 +1411,6 @@
       "subject": "Bahrain Fort ( Qalʿat al-Bahrain ), UNESCO World Heritage Site Ref. Number 1192 .",
       "width": 4957,
       "height": 2775,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bahrain"
-    },
-    {
-      "file": "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James Mattis visits Bahrain King Hamad bin Isa Al Khalifa, south of Manama, Bahrain on October 27, 2018 - 6.jpg",
-      "author": "U.S. Secretary of Defense",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Scenes from Sakhir Palace in Bahrain, as U.S. Secretary of Defense James N. Mattis attends a dinner with Bahrain’s King Hamad bin Isa Al Khalifa, south of Manama, Bahrain, Oct. 27, 2018. (DOD photo by",
-      "width": 3960,
-      "height": 2643,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Bahrain"
@@ -1611,18 +1467,6 @@
     }
   ],
   "country-br": [
-    {
-      "file": "Capsicum baccatum in Saúde flea market, São Paulo, Brazil.jpg",
-      "author": "Wilfredor",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Capsicum peppers of various types in the Saúde flea market, São Paulo, Brazil.",
-      "width": 6212,
-      "height": 4928,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Brazil"
-    },
     {
       "file": "Porto Alegre - Brazil Landscape-Night.jpg",
       "author": "Felipe Valduga from Porto Alegre, Brazil",
@@ -1724,18 +1568,6 @@
       "sourceArticle": "Commons exact-title file search: Côte d'Ivoire"
     },
     {
-      "file": "Hybosoridae, Ceratocanthinae, Melanophilharmostes cf. posthi; Ivory Coast; Ivory Coast; 2017-228 (1).jpg",
-      "author": "NHM Beetles and Bugs",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "Alberto Ballerio det. 2020 Photo by Keita Matsumoto. Copyright Natural History Museum, London.",
-      "width": 5658,
-      "height": 3770,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Côte d'Ivoire"
-    },
-    {
       "file": "A woman works hard in a platation in Ivory coast.jpg",
       "author": "Melchisedek ABAKA",
       "license": "CC BY-SA 4.0",
@@ -1824,18 +1656,6 @@
       "sourceArticle": "Commons exact-title file search: Cuba"
     },
     {
-      "file": "First floor, Alma de Cuba 1.jpg",
-      "author": "Rodhullandemu",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "View southeast along the first floor restaurant area of Alma de Cuba, the Grade II listed former St Peter's RC church, Seel Street, Liverpool.",
-      "width": 5184,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Cuba"
-    },
-    {
       "file": "Arrow blenny (Lucayablennius zingaro) by q phia - Cuba 2017.jpg",
       "author": "q phia",
       "license": "CC BY 2.0",
@@ -1869,18 +1689,6 @@
       "subject": "Fontainhas, on the island of Santo Antao, Cabo Verde.",
       "width": 5184,
       "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Cabo Verde"
-    },
-    {
-      "file": "2021 Cerimônia Oficial de Chegada do Presidente da República de Cabo Verde, Senhor Jorge Carlos de Almeida Fonseca 55.jpg",
-      "author": "Palácio do Planalto",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "(Brasília - DF, 30/07/2021) Cerimônia Oficial de Chegada do Presidente da República de Cabo Verde, Senhor Jorge Carlos de Almeida Fonseca. Foto: Alan Santos/PR",
-      "width": 4813,
-      "height": 3209,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Cabo Verde"
@@ -1962,18 +1770,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Djibouti"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Djibouti, Djibouti.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Djibouti, Djibouti. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or cit",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Djibouti"
     }
   ],
   "country-dk": [
@@ -2009,18 +1805,6 @@
       "subject": "Beached fishing vessel Skagerak , Nørre Vorupør, Denmark",
       "width": 4695,
       "height": 2894,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Denmark"
-    },
-    {
-      "file": "Rudder and propeller Beached fishing vessel Nørre Vorupør Denmark 2017-04-14.jpg",
-      "author": "Kim Hansen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Rudder and propeller on beached fishing vessel Skagerak , Nørre Vorupør beach, Denmark.",
-      "width": 4621,
-      "height": 3340,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Denmark"
@@ -2181,18 +1965,6 @@
     }
   ],
   "country-gm": [
-    {
-      "file": "Catfish caught at sea in Gambia.jpg",
-      "author": "Peter van der Sluijs",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Catfish caught at sea in Gambia",
-      "width": 4608,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Gambia"
-    },
     {
       "file": "Gambia - Smiling Coast of Africa.jpg",
       "author": "Jiří Učeň",
@@ -2401,56 +2173,6 @@
       "sourceArticle": "Commons exact-title file search: India"
     }
   ],
-  "country-iq": [
-    {
-      "file": "Sumerian scene, milking cows and making dairy products. From the facade of the Temple of Ninhursag at Tell al-'Ubaid, Iraq, 2800-2600 BCE. Iraq Museum.jpg",
-      "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Inlay frieze with limestone figures. A Sumerian scene showing milking cows and making dairy products. From the facade of the Temple of Ninhursag at Tell al-'Ubaid, Iraq. Early Dynastic period, 2800-26",
-      "width": 5870,
-      "height": 2715,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Iraq"
-    },
-    {
-      "file": "Inscribed wall slab from the Great Mosque of al-Nuri in Mosul, Iraq, 6th century AH. Iraq Museum.jpg",
-      "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Inscribed marble wall slab from the Great Mosque of al-Nuri in Mosul, Iraq, 6th century AH (12th century CE). The Arabic Kufic inscription reads \"In the Name of God, the Most Gracious, the Most Mercif",
-      "width": 5339,
-      "height": 2078,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Iraq"
-    },
-    {
-      "file": "Temple Ritual Scene of Sanatruq I from Hatra, Iraq. 2nd century CE. Iraq Museum.jpg",
-      "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "This limestone slab was carved in prominent sunken relief and depicts a temple ritual scene. A male figure wearing the head cap of Hatrene kings (very probably Sanatruq I who reigned c. 140-180 CE), h",
-      "width": 3517,
-      "height": 5624,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Iraq"
-    },
-    {
-      "file": "Dazzler mounted on M-240B in Iraq.jpg",
-      "author": "Dainomite ( talk · contribs )",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "subject": "A BE Meyers GLARE MOUT dazzler mounted on a M240B machine gun during the Iraq War",
-      "width": 3264,
-      "height": 2448,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Iraq"
-    }
-  ],
   "country-ir": [
     {
       "file": "Casa histórica de Boroujerdi, Kashan, Irán, 2016-09-19, DD 34-36 HDR.jpg",
@@ -2527,56 +2249,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Iceland",
       "wasArticleLead": false
-    }
-  ],
-  "country-jm": [
-    {
-      "file": "Jamaica Bay Wildlife Refuge East Pond (61277p).jpg",
-      "author": "Rhododendrites",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Jamaica Bay Wildlife Refuge East Pond",
-      "width": 15830,
-      "height": 3653,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Jamaica"
-    },
-    {
-      "file": "Jamaica Bay Wildlife Refuge East Pond (61289p).jpg",
-      "author": "Rhododendrites",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Jamaica Bay Wildlife Refuge East Pond",
-      "width": 6819,
-      "height": 3873,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Jamaica"
-    },
-    {
-      "file": "32 Jamaica Street and 4 Hillgrove Street, Bristol - DSC 7395.jpg",
-      "author": "Tadeusz Hare",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "32 Jamaica Street and 4 Hillgrove Street, Bristol",
-      "width": 5724,
-      "height": 3950,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Jamaica"
-    },
-    {
-      "file": "Jamaica Bay Wildlife Refuge (41031).jpg",
-      "author": "Rhododendrites",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Saplings in Jamaica Bay Wildlife Refuge. Broad Channel, Queens, New York.",
-      "width": 4608,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Jamaica"
     }
   ],
   "country-jo": [
@@ -2793,18 +2465,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: North Korea"
-    },
-    {
-      "file": "High-voltage overhead power line and tractor in North Korea.jpg",
-      "author": "Christophe95",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "High-voltage overhead power line and tractor in North Korea (view from a train Pyongyang-Dandong, 25 minutes after the departure in Pyongyang).",
-      "width": 3867,
-      "height": 2899,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: North Korea"
     }
   ],
   "country-kw": [
@@ -2816,18 +2476,6 @@
       "subject": "Aerial Photography of Jahra Nature Reserve, Kuwait",
       "width": 8000,
       "height": 6000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Kuwait"
-    },
-    {
-      "file": "Desert Monitor Eating Lizard Aliyah reserve Kuwait.jpg",
-      "author": "Mohdalsaleh",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Desert Monitor Eating a Lizard, Al-Abdaliyah Reserve, Kuwait.",
-      "width": 6000,
-      "height": 4500,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Kuwait"
@@ -2963,18 +2611,6 @@
   ],
   "country-li": [
     {
-      "file": "Sankt Veit Wayer Strasse 19 Schloss Weyer Supraporte Wappenrelief Liechtenstein 14122016 4650.jpg",
-      "author": "Johann Jaritz",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Coat of arms of Liechtenstein family at the overdoor of castle Weyer`s portal on the Wayer Strasse #19, municipality Sankt Veit an der Glan , district St. Veit an der Glan, Carinthia , Austria , EU",
-      "width": 4928,
-      "height": 3280,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liechtenstein"
-    },
-    {
       "file": "Vaduz Castle, Liechtenstein, 20250502 1326 8609.jpg",
       "author": "Jakub Hałun",
       "license": "CC BY 4.0",
@@ -2985,47 +2621,11 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Liechtenstein"
-    },
-    {
-      "file": "Liechtenstein Palace - Vienna - 2.jpg",
-      "author": "MrPanyGoff",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "The north facade of Liechtenstein Palace, Vienna.",
-      "width": 3334,
-      "height": 1800,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liechtenstein"
-    },
-    {
-      "file": "Liechtenstein Palace gardens - Vienna.jpg",
-      "author": "MrPanyGoff",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Fragment of the gardens of Liechtenstein Palace in Vienna.",
-      "width": 2931,
-      "height": 2100,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liechtenstein"
     }
   ],
   "country-lk": [
     {
       "file": "Dirt road in Hurulu Eco Park, North Central Province, Sri Lanka, 20260201 1028 7853.jpg",
-      "author": "Jakub Hałun",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Dirt road in Hurulu Eco Park, North Central Province, Sri Lanka",
-      "width": 6063,
-      "height": 4016,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Sri Lanka"
-    },
-    {
-      "file": "Dirt road in Hurulu Eco Park, North Central Province, Sri Lanka, 20260201 1027 7849.jpg",
       "author": "Jakub Hałun",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -3059,56 +2659,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Sri Lanka"
-    }
-  ],
-  "country-lr": [
-    {
-      "file": "Fort Libéria 02.jpg",
-      "author": "H. Zell",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Access to the Fort Libéria , Villefranche-de-Conflent , Pyrénées-Orientales department , France",
-      "width": 8830,
-      "height": 6838,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liberia"
-    },
-    {
-      "file": "Fort Libéria 01.jpg",
-      "author": "H. Zell",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Fort Libéria , Villefranche-de-Conflent , Pyrénées-Orientales department , France",
-      "width": 6000,
-      "height": 2468,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liberia"
-    },
-    {
-      "file": "Fort Libéria 09.jpg",
-      "author": "H. Zell",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Women's prison, Fort Libéria , Villefranche-de-Conflent , Pyrénées-Orientales department , France",
-      "width": 6000,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liberia"
-    },
-    {
-      "file": "Fort Libéria 03.jpg",
-      "author": "H. Zell",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "View from the wall of the niveau 1 on the niveau 2 with the casern for the soldiers, Fort Libéria , Villefranche-de-Conflent , Pyrénées-Orientales department , France",
-      "width": 5718,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Liberia"
     }
   ],
   "country-ls": [
@@ -3227,18 +2777,6 @@
     }
   ],
   "country-md": [
-    {
-      "file": "Romania Mănăstirea Sfântul Mina din Roșiori View of Moldova River.jpg",
-      "author": "Alexander Klink",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "View of Moldova River from Mănăstirea Sfântul Mina din Roșiori",
-      "width": 6022,
-      "height": 4024,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Moldova"
-    },
     {
       "file": "Lakes near Chișinău, Moldova.jpg",
       "author": "Pudelek",
@@ -3377,42 +2915,6 @@
     }
   ],
   "country-mk": [
-    {
-      "file": "Hooded Crow (Corvus cornix) City Park, Skopje, North Macedonia.jpg",
-      "author": "Chuck Homler d/b/a Focus On Wildlife",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "A Hooded Crow in \"City Park,\" Skopje, North Macedonia",
-      "width": 8192,
-      "height": 5464,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: North Macedonia"
-    },
-    {
-      "file": "Old ski lift, Kodra e Diellit, North Macedonia 03.jpg",
-      "author": "Liridon",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Old ski lift, Kodra e Diellit, North Macedonia",
-      "width": 4000,
-      "height": 6000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: North Macedonia"
-    },
-    {
-      "file": "Old ski lift, Kodra e Diellit, North Macedonia 04.jpg",
-      "author": "Liridon",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Old ski lift, Kodra e Diellit, North Macedonia",
-      "width": 4000,
-      "height": 6000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: North Macedonia"
-    },
     {
       "file": "Old ski lift, Kodra e Diellit, North Macedonia 05.jpg",
       "author": "Liridon",
@@ -3719,30 +3221,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Malaysia"
-    },
-    {
-      "file": "Hippotion rafflesii MHNT CUT 2010 0 263 Taiping Perak Malaysia female ventral.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hippotion rafflesii - △ Ventral side Collection of the Mathematician Laurent Schwartz",
-      "width": 8749,
-      "height": 6023,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Malaysia"
-    },
-    {
-      "file": "Hippotion rafflesii MHNT CUT 2010 0 263 Taiping Perak Malaysia female dorsal.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Hippotion rafflesii - Dorsal side Collection of the Mathematician Laurent Schwartz",
-      "width": 8256,
-      "height": 5868,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Malaysia"
     }
   ],
   "country-mz": [
@@ -3784,56 +3262,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Mozambique",
       "wasArticleLead": false
-    }
-  ],
-  "country-ne": [
-    {
-      "file": "Rynchops niger on Venice Beach 2.jpg",
-      "author": "Grendelkhan",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "A black skimmer, Rynchops niger , on Venice Beach in Venice, Florida.",
-      "width": 6000,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Niger"
-    },
-    {
-      "file": "Rynchops niger on Venice Beach.jpg",
-      "author": "Grendelkhan",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "A black skimmer, Rynchops niger , on Venice Beach in Venice, Florida.",
-      "width": 5329,
-      "height": 3549,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Niger"
-    },
-    {
-      "file": "Black garden ant (Lasius niger) and green peach aphids (Myzus persicae) on a branch, Jardim da Fundação Calouste Gulbenkian, Lisbon, Portugal julesvernex2.jpg",
-      "author": "Jules Verne Times Two",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Black garden ant (Lasius niger) and green peach aphids (Myzus persicae) on a branch, Jardim da Fundação Calouste Gulbenkian, Lisbon, Portugal",
-      "width": 2932,
-      "height": 3507,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Niger"
-    },
-    {
-      "file": "Lagarto (Cordylus niger), cabo de Buena Esparanza, Sudáfrica, 2018-07-23, DD 107.jpg",
-      "author": "Diego Delso",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Black girdled lizard ( Cordylus niger ), Cape of Good Hope, South Africa",
-      "width": 8688,
-      "height": 4105,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Niger"
     }
   ],
   "country-ng": [
@@ -4022,18 +3450,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Nauru"
-    },
-    {
-      "file": "2013 -Nauru Mission (14214429532).jpg",
-      "author": "UN WOMEN Pacific",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "UN Women Representative at the Fiji Multi-Country Office, Elzira Sagynbaeva's mission to Nauru. Photo:UN Women/ Olivia Owen",
-      "width": 6016,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Nauru"
     }
   ],
   "country-nz": [
@@ -4139,42 +3555,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Philippines"
-    },
-    {
-      "file": "Cechenena transpacifica MHNT CUT 2010 0 302 Mindanao, Surigao, Philippines, male dorsal.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Cechenena transpacifica - Dorsal side Collection of the Mathematician Laurent Schwartz",
-      "width": 7532,
-      "height": 5189,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Philippines"
-    },
-    {
-      "file": "Cechenena transpacifica MHNT CUT 2010 0 302 Mindanao, Surigao, Philippines, male ventral.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Cechenena transpacifica - △ Ventral side Collection of the Mathematician Laurent Schwartz",
-      "width": 7532,
-      "height": 5133,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Philippines"
-    },
-    {
-      "file": "Amplypterus mansoni mansoni MHNT CUT 2010 0 419 Philippines male dorsal.jpg",
-      "author": "Didier Descouens",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Amplypterus mansoni - Dorsal side Collection of the Mathematician Laurent Schwartz",
-      "width": 7430,
-      "height": 4227,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Philippines"
     }
   ],
   "country-pk": [
@@ -4239,42 +3619,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Palestine"
-    },
-    {
-      "file": "Palestine sunbird (Cinnyris osea osea) male in flight.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Palestine sunbird ( Cinnyris osea osea ) male, Dana Biosphere Reserve, Jordan",
-      "width": 4707,
-      "height": 3138,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Palestine"
-    },
-    {
-      "file": "Palestine sunbird (Cinnyris osea osea) male.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Palestine sunbird ( Cinnyris osea osea ) male, Dana Biosphere Reserve, Jordan",
-      "width": 3410,
-      "height": 2273,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Palestine"
-    },
-    {
-      "file": "Palestine sunbird (Cinnyris osea osea) female.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Palestine sunbird ( Cinnyris osea osea ) female, Dana Biosphere Reserve, Jordan",
-      "width": 2708,
-      "height": 1806,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Palestine"
     }
   ],
   "country-pt": [
@@ -4304,57 +3648,9 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Qatar"
-    },
-    {
-      "file": "Qatar Boeing 777-300ER A7-BES IAD VA1.jpg",
-      "author": "Acroterion",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "2018 Qatar Airways Boeing 777-300ER A7-BES on final approach at Washington Dulles International Airport, Virginia, USA",
-      "width": 7064,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Qatar"
-    },
-    {
-      "file": "Qatar Boeing 777-300ER A7-BEP IAD VA2.jpg",
-      "author": "Acroterion",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Qatar Airways Boeing 777-300ER A7-BEP on final approach at Washington Dulles International Airport, Virginia, USA",
-      "width": 6290,
-      "height": 2975,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Qatar"
-    },
-    {
-      "file": "Qatar Boeing 777-300ER A7-BEP IAD VA1.jpg",
-      "author": "Acroterion",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Qatar Airways Boeing 777-300ER A7-BEP on final approach at Washington Dulles International Airport, Virginia, USA",
-      "width": 5954,
-      "height": 2915,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Qatar"
     }
   ],
   "country-ro": [
-    {
-      "file": "Horse-drawn transport forage Romania.jpg",
-      "author": "Myrabella",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Horse-drawn transport of forage, Râșnov, Romania.",
-      "width": 4259,
-      "height": 2833,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Romania"
-    },
     {
       "file": "01 Magura, Romania - Piatra Craiului mountains.jpg",
       "author": "Marek Ślusarczyk ( Tupungato ) Photo gallery",
@@ -4497,18 +3793,6 @@
       "sourceArticle": "Commons exact-title file search: Saudi Arabia"
     },
     {
-      "file": "Tubarjal, Al Jawf Region, Saudi Arabia (wyvern dragonette-002 20250508T120023 a2d6c4ec).png",
-      "author": "Wyvern Inc.",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Tubarjal, Al Jawf Region, Saudi Arabia",
-      "width": 4308,
-      "height": 2941,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Saudi Arabia"
-    },
-    {
       "file": "Saudi Arabia Empty Quarter Nov. 2021 (138).jpg",
       "author": "Richard Mortel",
       "license": "CC BY 2.0",
@@ -4516,18 +3800,6 @@
       "subject": "Empty Quarter of Saudi Arabia",
       "width": 4000,
       "height": 3000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Saudi Arabia"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Saudi Arabia, All of Saudi Arabia.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Saudi Arabia, All of Saudi Arabia . These warming stripe graphics are visual representations of the change in temperature as measured in each countr",
-      "width": 3780,
-      "height": 2126,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Saudi Arabia"
@@ -4584,18 +3856,6 @@
     }
   ],
   "country-sl": [
-    {
-      "file": "MV Karadeniz Powership Doğan Bey, Freetown, Sierra Leone.jpg",
-      "author": "Adrian Turner",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "MV Karadeniz Powership Doğan Bey, Freetown, Sierra Leone",
-      "width": 4754,
-      "height": 3169,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Sierra Leone"
-    },
     {
       "file": "The village of Kakoya (Koya), Sierra Leone (West Africa) (2118689384).jpg",
       "author": "John Atherton",
@@ -4662,18 +3922,6 @@
       "sourceArticle": "Commons exact-title file search: São Tomé and Príncipe"
     },
     {
-      "file": "Espaço de atendimento dos registos e identificação à São Tomé (1).jpg",
-      "author": "Ji-Elle",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Architecture coloniale à São Tomé : Espaço de atendimento dos registos e identificação (à l'angle de l'Avenida 12 Julho).",
-      "width": 5472,
-      "height": 3648,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: São Tomé and Príncipe"
-    },
-    {
       "file": "São Tomé skink (Trachylepis thomensis).jpg",
       "author": "Charles J. Sharp",
       "license": "CC BY-SA 4.0",
@@ -4681,18 +3929,6 @@
       "subject": "São Tomé skink ( Trachylepis thomensis ), São Tomé island, São Tomé and Príncipe",
       "width": 5106,
       "height": 2553,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: São Tomé and Príncipe"
-    },
-    {
-      "file": "Acraea niobe male Sao Tome.jpg",
-      "author": "Charles J. Sharp",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Acraea niobe male, Near Bom Sucesso, São Tomé island, São Tomé and Príncipe",
-      "width": 4040,
-      "height": 2694,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: São Tomé and Príncipe"
@@ -4812,18 +4048,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Togo"
-    },
-    {
-      "file": "Minnesota Correctional Facility Togo (MCF-Togo), Department of Corrections (27010237098).jpg",
-      "author": "Tony Webster from Minneapolis, Minnesota, United States",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "The entrance to Minnesota Correctional Facility Togo (MCF Togo), a minimum security prison camp in the George Washington State Forest in Northern Minnesota. -- (C) 2018 Tony Webster tony@tonywebster.c",
-      "width": 2948,
-      "height": 1906,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Togo"
     }
   ],
   "country-tl": [
@@ -4852,18 +4076,6 @@
       "sourceArticle": "Commons exact-title file search: Timor-Leste"
     },
     {
-      "file": "A political rally in support of Lu Olo (Baucau, Timor Leste, March 2012).jpg",
-      "author": "Kate Dixon",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "subject": "A political rally in support of Lu Olo (Baucau, Timor Leste, March 2012). Lu Olo, the nom de guerre of Francisco Guterres, president of the Fretilin party, is one of the candidates in the third presid",
-      "width": 2244,
-      "height": 1685,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Timor-Leste"
-    },
-    {
       "file": "National University of East Timor, 2018 (02).jpg",
       "author": "Bahnfrend",
       "license": "CC BY-SA 4.0",
@@ -4878,18 +4090,6 @@
   ],
   "country-tm": [
     {
-      "file": "Show Your Stripes change in temperature graphic for Turkmenistan.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Turkmenistan. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region or city over",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Turkmenistan"
-    },
-    {
       "file": "Darvaza gas crater, Jähennem derwezesi, Door to Hell, Gates of Hell, Derweze, Turkmenistan.jpg",
       "author": "Benjamin Goetzinger",
       "license": "CC BY-SA 4.0",
@@ -4897,30 +4097,6 @@
       "subject": "Darvaza gas crater, Jähennem derwezesi, Door to Hell, Gates of Hell, Derweze, Turkmenistan, a gas crater burning since 1971",
       "width": 5184,
       "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Turkmenistan"
-    },
-    {
-      "file": "Rustam Minnikhanov's trip to Turkmenistan 2008 07.jpg",
-      "author": "tatarstan.ru",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Рабочая поездка премьер-министра Республики Татарстан в Туркменистан",
-      "width": 4288,
-      "height": 2848,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Turkmenistan"
-    },
-    {
-      "file": "Rustam Minnikhanov's trip to Turkmenistan 2008 17.jpg",
-      "author": "tatarstan.ru",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Встреча премьер-министра Татарстана Рустама Минниханова с президентом Туркменистана Гурбангулы Бердымухамедовым",
-      "width": 4288,
-      "height": 2848,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Turkmenistan"
@@ -5196,18 +4372,6 @@
       "sourceArticle": "Commons exact-title file search: Yemen"
     },
     {
-      "file": "Yemen and the livestock in Yemen from plastic.jpg",
-      "author": "Mhm500mhm",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "The environment is crying in Yemen from plastic waste",
-      "width": 8160,
-      "height": 6144,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Yemen"
-    },
-    {
       "file": "20150115 SB Yemen IMG 8130.jpg",
       "author": "Stanislav Beloglazov",
       "license": "CC BY-SA 4.0",
@@ -5247,30 +4411,6 @@
     },
     {
       "file": "R381, Loxton to Beaufort West, South Africa 02.jpg",
-      "author": "Photograph by Mike Peel ( www.mikepeel.net ).",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "R381 road from Loxton to Beaufort West, Northern Cape, South Africa.",
-      "width": 5184,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: South Africa"
-    },
-    {
-      "file": "R381, Loxton to Beaufort West, South Africa 03.jpg",
-      "author": "Photograph by Mike Peel ( www.mikepeel.net ).",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "R381 road from Loxton to Beaufort West, Northern Cape, South Africa.",
-      "width": 5184,
-      "height": 3456,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: South Africa"
-    },
-    {
-      "file": "R381, Loxton to Beaufort West, South Africa 06.jpg",
       "author": "Photograph by Mike Peel ( www.mikepeel.net ).",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -5376,30 +4516,6 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "subject": "Pink sunrise over ponds in the Tumuli Park of Gyeongju Historic Site Wolseong District. Contre-jour view from a hill, in South Korea .",
-      "width": 6720,
-      "height": 4480,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Gyeongju"
-    },
-    {
-      "file": "Two bees absorbing pollen from an Iceland poppy in the flower garden of Gyeongju South Korea.jpg",
-      "author": "Basile Morin",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Two Western honey bee ( Apis mellifera ) absorbing pollen from an Iceland poppy ( Papaver nudicaule ), in the flower garden of the Tumuli Park, at golden hour in Gyeongju Historic Site Wolseong Distri",
-      "width": 6720,
-      "height": 4480,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Gyeongju"
-    },
-    {
-      "file": "Red Geranium in the flower garden of the Tumuli Park at sunset in Gyeongju South Korea.jpg",
-      "author": "Basile Morin",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Red Geranium in the flower garden of the Tumuli Park, at sunset, in Gyeongju Historic Site Wolseong District, South Korea . Contre-jour photograph, high-dynamic-range imaging .",
       "width": 6720,
       "height": 4480,
       "editorialMetadata": true,
@@ -5565,30 +4681,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Kigali"
-    },
-    {
-      "file": "Panorama of Room Where Belgian Peacekeeprs Were Murdered - Former Camp Kigali - Kigali - Rwanda (9024569329).jpg",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Panorama of Room Where Belgian Peacekeeprs Were Murdered - Former Camp Kigali - Kigali - Rwanda",
-      "width": 4912,
-      "height": 1080,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Kigali"
-    },
-    {
-      "file": "Panorama of Building Where Belgian Peacekeepers Were Murdered - Former Camp Kigali - Kigali - Rwanda (9026806240).jpg",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Panorama of Building Where Belgian Peacekeepers Were Murdered - Former Camp Kigali - Kigali - Rwanda",
-      "width": 4912,
-      "height": 1080,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Kigali"
     }
   ],
   "kotor": [
@@ -5677,30 +4769,6 @@
   ],
   "lagos": [
     {
-      "file": "20101016 Agios Nikolaos Metoxi Batopediou Porto Lagos Vistonida Lake Rhodope Greece.jpg",
-      "author": "Ggia",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Porto Lagos, Agios Nikolas (Metochi of monastery of Batopedio), Vistonida lake, Xanthi, Greece.",
-      "width": 7968,
-      "height": 2140,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Lagos"
-    },
-    {
-      "file": "Avenida dos Descobrimentos in Lagos, Portugal.jpg",
-      "author": "Lacobrigo",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Panoramic view of Lagos's main avenue",
-      "width": 6587,
-      "height": 1575,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Lagos"
-    },
-    {
       "file": "Lagos State Waterways Authority building, Ikoyi, Lagos 07.jpg",
       "author": "Johnbrainyvisuals (Ogedengbe Tobi John)",
       "license": "CC BY-SA 4.0",
@@ -5708,18 +4776,6 @@
       "subject": "Notable landmarks in Lagos state",
       "width": 6000,
       "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Lagos"
-    },
-    {
-      "file": "Estadio de Futebol do Esperanca de Lagos 2 - Lagos, Algarve - Portugal - 22.02.2025.jpg",
-      "author": "Bextrel",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Aerial photography of the Esperança de Lagos football stadium, in the city of Lagos, Algarve region, Portugal.",
-      "width": 4000,
-      "height": 3000,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Lagos"
@@ -5849,18 +4905,6 @@
       "sourceArticle": "Commons exact-title file search: Manaus"
     },
     {
-      "file": "Piaya melanogaster Black-bellied Cuckoo; ZF Canopy Tower, Manaus, Amazonas, Brazil.jpg",
-      "author": "Hector Bottai",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Black-bellied Cuckoo; ZF Canopy Tower, Manaus, Amazonas, Brazil",
-      "width": 3671,
-      "height": 2753,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Manaus"
-    },
-    {
       "file": "Amazonia fotos aérea região de Manaus 2005 AM Brasil - panoramio (24).jpg",
       "author": "James Martins",
       "license": "CC BY 3.0",
@@ -5868,18 +4912,6 @@
       "subject": "Amazonia fotos aérea região de Manaus 2005 AM Brasil",
       "width": 3504,
       "height": 2336,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Manaus"
-    },
-    {
-      "file": "Phylloscartes virescens Olive-green Tyrannulet; Manaus, Amazonas, Brazil.jpg",
-      "author": "Hector Bottai",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Olive-green Tyrannulet; ZF Canopy Tower, Manaus, Amazonas, Brazil",
-      "width": 4591,
-      "height": 3443,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Manaus"
@@ -6263,18 +5295,6 @@
   ],
   "nadi": [
     {
-      "file": "A Nadi (small johad) in village Laporiya, Rajasthan.jpg",
-      "author": "Amar singh kangarot",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "A Nadi is a small Johad, usually constructed on naturally occurring patches of thick clay where water cannot seep into ground, thus providing drinkable water to village cattle.",
-      "width": 4160,
-      "height": 3120,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Nadi"
-    },
-    {
       "file": "Sri Siva Subramaniya Swami Temple - Nadi, Fiji 4.jpg",
       "author": "Mark Heard from Canada",
       "license": "CC BY 2.0",
@@ -6363,18 +5383,6 @@
   ],
   "oaxaca": [
     {
-      "file": "Indigenous Woman with Autonomy Banner - Oaxaca City - Oaxaca - Mexico (6492434149).jpg",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Indigenous Woman with Autonomy Banner - Oaxaca City - Oaxaca - Mexico",
-      "width": 3648,
-      "height": 2736,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Oaxaca"
-    },
-    {
       "file": "Street Scene with Mural Commemorating Centenary of Zapata's Plan de Ayala (1911) - Oaxaca City - Oaxaca - Mexico (6492492593).jpg",
       "author": "Adam Jones from Kelowna, BC, Canada",
       "license": "CC BY-SA 2.0",
@@ -6435,30 +5443,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Arctic Ocean"
-    },
-    {
-      "file": "CSCL Arctic Ocean (ship, 2015) 001.jpg",
-      "author": "kees torn",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Container ship CSCL Arctic Ocean, Calandkanaal, Rotterdam",
-      "width": 3824,
-      "height": 1894,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Arctic Ocean"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Arctic Ocean, Baffin Bay.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Arctic Ocean, Baffin Bay. These warming stripe graphics are visual representations of the change in temperature as measured in each country, region ",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Arctic Ocean"
     }
   ],
   "ocean-atlantic": [
@@ -6482,30 +5466,6 @@
       "subject": "Atlantic Ocean",
       "width": 4710,
       "height": 3140,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Atlantic Ocean"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Atlantic Ocean, All of Atlantic Ocean.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Atlantic Ocean, All of Atlantic Ocean . These warming stripe graphics are visual representations of the change in temperature as measured in each co",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Atlantic Ocean"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Atlantic Ocean, North Atlantic Ocean.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Atlantic Ocean, North Atlantic Ocean. These warming stripe graphics are visual representations of the change in temperature as measured in each coun",
-      "width": 3780,
-      "height": 2126,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Atlantic Ocean"
@@ -6548,42 +5508,6 @@
       "subject": "View of the Pacific Ocean from the deck of 34988 Crows Nest Drive, Sea Ranch, California",
       "width": 4322,
       "height": 6483,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Pacific Ocean"
-    },
-    {
-      "file": "JGSDF AH-1S(73455) cyclic stick & right side console(fwd) at Asia and The Pacific Ocean Trade Center March 10, 2013.jpg",
-      "author": "Hunini",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "陸上自衛隊 AH-1S対戦車ヘリコプター（73455号機） 前席側コックピット右側面のサイクリック・スティック及びサイドコンソール。2013年3月10日 OSAKA防衛・防災フェスティバルが開催されたアジア太平洋トレードセンターにて。",
-      "width": 4240,
-      "height": 2400,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Pacific Ocean"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Pacific Ocean, All of Pacific Ocean.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Pacific Ocean, All of Pacific Ocean . These warming stripe graphics are visual representations of the change in temperature as measured in each coun",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Pacific Ocean"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Pacific Ocean, North Pacific Ocean.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Pacific Ocean, North Pacific Ocean. These warming stripe graphics are visual representations of the change in temperature as measured in each countr",
-      "width": 3780,
-      "height": 2126,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Pacific Ocean"
@@ -6725,30 +5649,6 @@
       "subject": "Mauritius , panoramic view of Port Louis",
       "width": 13308,
       "height": 2475,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Port Louis"
-    },
-    {
-      "file": "Marais de Port-Louis (4).jpg",
-      "author": "Tournasol7",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Marais de Port-Louis in Port-Louis , Guadeloupe, France",
-      "width": 8448,
-      "height": 3474,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Port Louis"
-    },
-    {
-      "file": "ND-du-Bon-Secours in Port-Louis (1).jpg",
-      "author": "Tournasol7",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Notre-Dame-du-Bon-Secours church in Port-Louis , Guadeloupe, France",
-      "width": 5863,
-      "height": 3592,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Port Louis"
@@ -6953,18 +5853,6 @@
       "subject": "North-west minaret of Bibi-Khanym Mosque, Samarkand, Uzbekistan",
       "width": 7560,
       "height": 10152,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Samarkand"
-    },
-    {
-      "file": "Passengers Dismounting from Afrosiyab Express Train - Samarkand Train Station - Samarkand - Uzbekistan (7480148270).jpg",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "subject": "Passengers Dismounting from Afrosiyab Express Train - Samarkand Train Station - Samarkand - Uzbekistan",
-      "width": 3648,
-      "height": 2736,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Samarkand"
@@ -7184,32 +6072,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Baltic Sea",
       "wasArticleLead": false
-    }
-  ],
-  "sea-bering": [
-    {
-      "file": "2011 Bering Sea superstorm track.png",
-      "author": "Meow",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Track map of the 2011 Bering Sea superstorm . The points show the location of the storm at 6-hour intervals. The color represents the storm's maximum sustained wind speeds as classified in the Saffir-",
-      "width": 2700,
-      "height": 1669,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bering Sea"
-    },
-    {
-      "file": "November 2014 Bering Sea bomb cyclone track.png",
-      "author": "Meow",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Track map of the November 2014 Bering Sea bomb cyclone . The points show the location of the storm at 6-hour intervals. The color represents the storm's maximum sustained wind speeds as classified in ",
-      "width": 2700,
-      "height": 1740,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Bering Sea"
     }
   ],
   "sea-black": [
@@ -7442,30 +6304,6 @@
       "sourceArticle": "Commons exact-title file search: North Sea"
     },
     {
-      "file": "North Sea Summit, Esbjerg, 2022 (p).jpg",
-      "author": "Thomas Dahlstrøm Nielsen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "North Sea Summit, Esbjerg, 2022",
-      "width": 6000,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: North Sea"
-    },
-    {
-      "file": "North Sea Summit, Esbjerg, 2022 (y).jpg",
-      "author": "Thomas Dahlstrøm Nielsen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "North Sea Summit, Esbjerg, 2022",
-      "width": 6000,
-      "height": 4000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: North Sea"
-    },
-    {
       "file": "2023-05-02 WILSON FLEX IV - IMO 9911460 on North Sea.jpg",
       "author": "GRDN711",
       "license": "CC BY 4.0",
@@ -7502,30 +6340,6 @@
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Sea of Okhotsk"
-    },
-    {
-      "file": "Show Your Stripes change in temperature graphic for Pacific Ocean, Sea of Okhotsk.png",
-      "author": "Professor Ed Hawkins",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Show Your Stripes change in temperature graphic for Pacific Ocean, Sea of Okhotsk. These warming stripe graphics are visual representations of the change in temperature as measured in each country, re",
-      "width": 3780,
-      "height": 2126,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Sea of Okhotsk"
-    },
-    {
-      "file": "Sea of Okhotsk & Bering Tundra & Taiga Subrealm.png",
-      "author": "Z3lvs",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Sea of Okhotsk & Bering Tundra & Taiga Subrealm",
-      "width": 2422,
-      "height": 1529,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Sea of Okhotsk"
     }
   ],
   "sea-philippine": [
@@ -7541,56 +6355,6 @@
       "reviewStatus": "Batch-discovered image from exact Wikipedia article; current Commons CC metadata checked at source; image NOT individually visually inspected",
       "sourceArticle": "Philippine Sea",
       "wasArticleLead": false
-    }
-  ],
-  "sea-red": [
-    {
-      "file": "Mohammed AlDokhei - Yazeed Almajyul - Abrar Fisalb at the 2025 Red Sea Film Festival 20251206.jpg",
-      "author": "Zafer",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Mohammed AlDokhei - Yazeed Almajyul - Abrar Fisalb at the 2025 Red Sea Film Festival",
-      "width": 7728,
-      "height": 5152,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Red Sea"
-    },
-    {
-      "file": "Rosy Khodr - at the 2025 Red Sea Film Festival 20251205 (7).jpg",
-      "author": "Zafer",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Rosy Khodr - at the 2025 Red Sea Film Festival",
-      "width": 7728,
-      "height": 5152,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Red Sea"
-    },
-    {
-      "file": "Firas Dehni - Zeinab Abu Alsamh - Jay Abdo - Mouthanna Al-Sayegh at the 2025 Red Sea Film Festival 20251210 (1).jpg",
-      "author": "Zafer",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Firas Dehni - Zeinab Abu Alsamh - Jay Abdo - Mouthanna Al-Sayegh at the 2025 Red Sea Film Festival",
-      "width": 7728,
-      "height": 5152,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Red Sea"
-    },
-    {
-      "file": "Eslam Shaker - Abdullah Asiri at the 2025 Red Sea Film Festival 20251208 (2).jpg",
-      "author": "Zafer",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "subject": "Eslam Shaker - Abdullah Asiri at the 2025 Red Sea Film Festival",
-      "width": 7728,
-      "height": 5152,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Red Sea"
     }
   ],
   "sea-south-china": [
@@ -7614,30 +6378,6 @@
       "subject": "​南海海域的一艘船",
       "width": 4013,
       "height": 3010,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: South China Sea"
-    },
-    {
-      "file": "South China Sea Museum 04.jpg",
-      "author": "STW932",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Exterior of the China (Hainan) Museum of the South China Sea.",
-      "width": 4000,
-      "height": 3000,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: South China Sea"
-    },
-    {
-      "file": "South China Sea Museum 06.jpg",
-      "author": "STW932",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Pottery on display at the China (Hainan) Museum of the South China Sea.",
-      "width": 4000,
-      "height": 3000,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: South China Sea"
@@ -7702,18 +6442,6 @@
       "subject": "Imagem do Mar de Weddell, na Antártica com cerca de 52 km x 30 km, com iceberg tabular, na sexta passada. A 74 graus S, iceberg com 10 km2, e se distingue das placas de banquisa de água do mar congela",
       "width": 10457,
       "height": 5882,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Weddell Sea"
-    },
-    {
-      "file": "Dropstone manganese-crust weddell-sea hg.jpg",
-      "author": "Hannes Grobe/AWI",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "subject": "Concretion",
-      "width": 5237,
-      "height": 4490,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Weddell Sea"
@@ -8191,18 +6919,6 @@
   ],
   "whitsundays": [
     {
-      "file": "Whitsunday Islands banner.jpg",
-      "author": "Elemaki",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Panoramic view of the Whitsunday Islands National Park in Queensland, Australia.",
-      "width": 6451,
-      "height": 920,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Whitsunday Islands"
-    },
-    {
       "file": "Tidal sandbank in the Whitsunday Islands.JPG",
       "author": "Dr-Victor-von-Doom",
       "license": "CC BY-SA 4.0",
@@ -8287,18 +7003,6 @@
       "subject": "Zürich, Switzerland: Entrance to University of Zurich (Main Building)",
       "width": 5760,
       "height": 3840,
-      "editorialMetadata": true,
-      "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
-      "sourceArticle": "Commons exact-title file search: Zürich"
-    },
-    {
-      "file": "Hall in the main building of the University of Zürich.jpg",
-      "author": "Ximeg",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "subject": "Fancy hall in the main building of the University of Zürich",
-      "width": 3810,
-      "height": 4199,
       "editorialMetadata": true,
       "reviewStatus": "Wikimedia Commons File: title matched to destination and live CC author/licence/size verified; image pixels NOT individually visually inspected",
       "sourceArticle": "Commons exact-title file search: Zürich"
