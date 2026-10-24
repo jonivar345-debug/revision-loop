@@ -119,7 +119,13 @@
     li.append(doc.createTextNode('Resized for display.'));list.append(li);
    });
    el.append(grid);
-   if(!card){credits.append(list);el.append(credits)}
+   credits.append(list);
+   if(card){
+    credits.classList.add('card-photo-credit');
+    summary.textContent='ⓘ';
+    summary.setAttribute('aria-label','Photo credits and licence');
+   }
+   el.append(credits);
    return photos;
   }).catch(()=>{
    if(el.isConnected&&el.dataset.galleryVersion===version)el.textContent='Photographs unavailable';
