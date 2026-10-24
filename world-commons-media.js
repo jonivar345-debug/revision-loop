@@ -31,6 +31,9 @@
  }
 
  const ALLOWED=/^CC (?:BY(?:-SA)? (?:2\.0|3\.0|4\.0)|0 (?:1\.0))$/i;
+ const UNSUITABLE=/\b(?:flag|coat.of.arms|emblem|locator|location.map|route.map|logo|seal|diagram|chart|icon|poster|screenshot|administrative.map|blank.map)\b/i;
+ const badFileName=name=>UNSUITABLE.test(String(name||'').replace(/[_-]/g,' '));
+
  function cleanHTML(html,doc){
   if(typeof html!=='string')return '';
   if(doc?.implementation?.createHTMLDocument){
@@ -49,6 +52,7 @@
   const file=String(page?.title||'');
   const imageURL=info?.thumburl||info?.url;
   if(!ALLOWED.test(licence)||!author||!file.startsWith('File:')||!imageURL)return null;
+  if(badFileName(file))return null;
   let licenseURL,sourceURL,photoURL;
   try {
    licenseURL=new URL(url);
@@ -110,6 +114,24 @@
      return verified?[verified]:[];
    }catch{return []}
  }
+ // Curated file names are *hints*, never permission or proof. Recheck the
+ // Commons file's current licence, artist and actual thumbnail before display.
+ async function verifyApproved(locationId,{fetcher,doc}={}){
+   const hint=approvedFor(locationId);
+   const get=fetcher||(typeof fetch==='function'?fetch:null);
+   if(!hint||!get)return null;
+   try{
+     const req=new URL('https://commons.wikimedia.org/w/api.php');
+     for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',titles:'File:'+hint.file,
+       iiprop:'url|extmetadata',iiurlwidth:'780',format:'json',formatversion:'2',origin:'*'}))req.searchParams.set(k,v);
+     const response=await get(req.href,{cache:'force-cache',credentials:'omit'});
+     if(!response.ok)return null;
+     const records=(await response.json()).query?.pages||[];
+     const actual=records.map(p=>inspect(p,doc||(typeof document!=='undefined'?document:null))).find(Boolean);
+     if(!actual||actual.file.replaceAll('_',' ').toLowerCase()!==('File:'+hint.file).replaceAll('_',' ').toLowerCase())return null;
+     return {...actual,checked:true,description:hint.description+' — '+actual.description};
+   }catch{return null}
+ }
  const pageJobs=new Map();
  function searchPage(wiki,options={}){
    if(options.fetcher)return searchPageUncached(wiki,options);
@@ -162,5 +184,5 @@
    figure.append(img,caption);el.append(figure);
   }
  }
- return Object.freeze({inspect,search,searchPage,approvedFor,append});
+ return Object.freeze({inspect,search,searchPage,approvedFor,verifyApproved,append});
 });
