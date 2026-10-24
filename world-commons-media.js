@@ -214,6 +214,12 @@
     for(const hint of batch){
      const current=allowedFiles.get(hint.filename.toLowerCase());
      if(!current||current.width&&current.width<900||current.height&&current.height<500)continue;
+     // When a source candidate has been checked against an original resolution,
+     // do not silently accept a lower-quality replacement uploaded to the
+     // same Commons file page. Unmeasured editorial records keep the existing
+     // baseline image-quality checks.
+     if(Number(hint.width)>=2048&&(current.width||0)<2048)continue;
+     if(Number(hint.height)>=900&&(current.height||0)<900)continue;
      result.push({...current,description:hint.subject||current.description,
       source:'editorial-live-checked',locationVerified:true,checked:false});
     }
