@@ -40,6 +40,7 @@ jobs:
           node tests/world-photo-v85-depth.cjs
           node tests/world-photo-v86-focused.cjs
           node tests/world-photo-v87-last-mile.cjs
+          node tests/world-photo-quality-v88.cjs
           node tests/world-photo-cover-fallback-v85.cjs
           node scripts/audit-world-photo-depth.cjs
           node tests/world-photo-original-resolution.cjs
