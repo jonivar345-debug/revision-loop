@@ -113,7 +113,7 @@ for(const loc of rows){
  if(picked.length){additions[loc.id]=picked;reused+=picked.length}
  if(picked.length<need)short.push({id:loc.id,needed:need,added:picked.length});
 }
-const merged=Object.fromEntries(Object.entries(refreshed).map(([id,v])=>[id,[...v,...(additions[id]||[])]));
+const merged=Object.fromEntries(Object.entries(refreshed).map(([id,v])=>[id,[...v,...(additions[id]||[])]]));
 for(const [id,v] of Object.entries(additions))if(!merged[id])merged[id]=v;
 const ordered=Object.fromEntries(Object.entries(merged).sort(([a],[b])=>a.localeCompare(b)));
 const report={created:new Date().toISOString(),sourcedDestinations:Object.keys(additions).length,addedRecords:reused,
