@@ -40,21 +40,28 @@
  async function photosFor(location,{limit=4,media}={}){
   const api=media||(typeof window!=='undefined'?window.RevisionWorldCommonsMedia:null);
   if(!api)return [];
-  const key=keyOf(location);
+  const key=keyOf(location)+'|'+limit;
   if(!cache.has(key)){
    const job=(async()=>{
     const candidates=[];
     // Exact place and its Wikipedia page take priority over generic search.
     const approved=await api.verifyApproved?.(location.id).catch(()=>null);
-    if(approved)candidates.push(approved);
+    if(approved&&location.id!=='busan')candidates.push(approved);
     const lead=await api.searchPage?.(location.wiki||location.name).catch(()=>[]);
     for(const item of lead||[])if(allowed(item,location,true))candidates.push(item);
     // Search filenames for the named destination or a named landmark. The match
     // criterion rejects unrelated pictures even if Commons search ranks them highly.
-    const phrases=[location.name.replace(/^Country:\s*/,'').trim()+' landscape',
-      location.name.replace(/^Country:\s*/,'').trim()+' architecture'];
+    const name=location.name.replace(/^Country:\s*/,'').trim();
+    const landmarks={
+      busan:['Busan Gwangan Bridge','Busan Haeundae Beach','Busan Gamcheon Culture Village'],
+      london:['London Tower Bridge','London Westminster','London Thames'],
+      tokyo:['Tokyo Shinjuku','Tokyo Shibuya crossing','Tokyo Skytree'],
+      seoul:['Seoul Gyeongbokgung','Seoul Namsan tower'],
+      sydney:['Sydney Opera House','Sydney Harbour Bridge']
+    };
+    const phrases=landmarks[location.id]||[name+' cityscape',name+' landscape'];
     for(const query of phrases){
-      if(candidates.length>=4)break;
+      if(candidates.length>=Math.min(limit,4))break;
       const results=await api.search(query,{limit:10}).catch(()=>[]);
       for(const item of results)if(allowed(item,location))candidates.push(item);
     }
@@ -63,7 +70,7 @@
       const key=clean(item.file);
       if(seen.has(key))return false;
       seen.add(key);return true;
-    }).slice(0,4);
+    }).slice(0,Math.min(limit,4));
    })();
    cache.set(key,job);
   }
