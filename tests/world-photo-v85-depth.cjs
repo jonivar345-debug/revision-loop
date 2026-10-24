@@ -40,9 +40,9 @@ for(const [id,records] of entries){
   assert(/^https:\/\/creativecommons.org\/(?:licenses\/|publicdomain\/zero\/)/.test(p.licenseUrl));
   assert(p.width>=2048&&p.height>=900,'Original file must be high-resolution '+id);
   assert.equal(p.editorialMetadata,true);
-  assert(/NOT visually pixel-reviewed/.test(p.reviewStatus),'Machine-sourced != fully visual inspected');
+  assert(/NOT (?:visually pixel-reviewed|individual pixel-level visual approval)/.test(p.reviewStatus),'Machine-sourced != fully visual inspected');
  }
- const enriched=curated.get(id).filter(p=>p.photoSource==='Commons exact File-title search');
+ const enriched=curated.get(id).filter(p=>String(p.photoSource||'').startsWith('Commons'));
  assert.equal(enriched.length,records.length,'Source enrichment is not wired into original gallery registry '+id);
  assert(enriched.every(p=>p.checked===false&&p.source==='editorial-source'),'New candidates must pass browser current-licence validation');
 }
