@@ -844,6 +844,45 @@
       "groupId": "gap_v48_chem_21",
       "groupOrder": 1,
       "modelAnswer": "Products: 2 x 240 = 480. Reactants: 2 x 211 + 205 = 627. Delta S = 480 - 627 = -147 J K-1 mol-1. Three moles of gas give two; fewer possible gas arrangements."
+    },
+    {
+      "id": "gap_v48_chem_22",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "topic": "Gibbs free energy",
+      "subtopic": "Gibbs free energy",
+      "revisionTopic": "Gibbs free energy",
+      "courseTopic": "Thermodynamics",
+      "marks": 5,
+      "prompt": "At T = 200, 400, 600 and 800 K, the corresponding delta G values are -42, -36, -30 and -24 kJ mol-1. Calculate the gradient of delta G against T, determine delta S and delta H, calculate the temperature where delta G is zero, and identify the favourable temperature range. [5 marks]",
+      "markPoints": [
+        "Gradient = (-24 - (-42))/(800 - 200) = +0.030 kJ K-1 mol-1.",
+        "As gradient = -delta S, delta S = -30 J K-1 mol-1.",
+        "At 200 K: -42 = (0.030 x 200) + intercept, so delta H = -48 kJ mol-1.",
+        "Set delta G = 0: 0 = -48 + 0.030T, hence T = 1600 K.",
+        "Below 1600 K delta G is negative and the forward reaction is favourable; above it delta G is positive."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Gradient = (-24 - (-42))/(800 - 200) = +0.030 kJ K-1 mol-1. As gradient = -delta S, delta S = -30 J K-1 mol-1. At 200 K: -42 = (0.030 x 200) + intercept, so delta H = -48 kJ mol-1. Set delta G = 0: 0 = -48 + 0.030T, hence T = 1600 K. Below 1600 K delta G is negative and the forward reaction is favourable; above it delta G is positive.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_22",
+      "groupOrder": 1
     }
   ]
 }
