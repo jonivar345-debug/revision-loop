@@ -2029,8 +2029,80 @@
       }
     ]
   });
+  // Paris and New York: further exact Commons source-checked landmark sets.
+  // The runtime revalidates each file's current licence and author.
+  const featuredCitiesB=Object.freeze({
+    "paris": [
+      {
+        "file": "Eiffel Tower from Trocadero-2026-07-msu--.jpg",
+        "author": "Matthias Süßen",
+        "license": "CC BY-SA 4.0",
+        "subject": "Eiffel Tower viewed from the Trocadéro",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Panorama of the Musée du Louvre.jpg",
+        "author": "DiscoA340",
+        "license": "CC BY-SA 4.0",
+        "subject": "Panorama of the Louvre from the Tuileries",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Montmartre - Paris1.jpg",
+        "author": "Stavros Argyropoulos",
+        "license": "CC BY-SA 2.0",
+        "subject": "Montmartre in Paris",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      {
+        "file": "Notre Dame Cathedral, Paris.jpg",
+        "author": "Feramasa55",
+        "license": "CC BY-SA 4.0",
+        "subject": "Notre-Dame cathedral in Paris",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "newyork": [
+      {
+        "file": "New York City, Skyline.jpg",
+        "author": "Davidswiki",
+        "license": "CC BY-SA 4.0",
+        "subject": "New York skyline and Lower Manhattan",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg",
+        "author": "John Rakis",
+        "license": "CC BY-SA 4.0",
+        "subject": "Brooklyn Bridge illuminated at night",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Central Park New York.jpg",
+        "author": "Juan Francisco Contreras Fernández",
+        "license": "CC BY-SA 4.0",
+        "subject": "Central Park in New York",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "file": "Times Square at night 2014.jpg",
+        "author": "Andrés Nieto Porras",
+        "license": "CC BY-SA 2.0",
+        "subject": "Times Square at night",
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
