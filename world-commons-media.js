@@ -30,7 +30,7 @@
    url:'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=780'};
  }
 
- const ALLOWED=/^CC (?:BY(?:-SA)? (?:2\.0|3\.0|4\.0)|0 (?:1\.0))$/i;
+ const ALLOWED=/^(?:CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)|CC0 1\.0|CC 0 1\.0)$/i;
  const UNSUITABLE=/\b(?:flag|coat.of.arms|emblem|locator|location.map|route.map|logo|seal|diagram|chart|icon|poster|screenshot|administrative.map|blank.map)\b/i;
  const badFileName=name=>UNSUITABLE.test(String(name||'').replace(/[_-]/g,' '));
 
@@ -183,6 +183,44 @@
      return {...actual,checked:true,description:hint.description+' — '+actual.description};
    }catch{return null}
  }
+ // Only use editorial source records after obtaining the CURRENT Commons
+ // photographer, licence and high-resolution image URL for the exact file.
+ // The stored draft metadata is never treated as a current licence grant.
+ async function verifyNamedFiles(hints,{fetcher,doc}={}){
+  const get=fetcher||(typeof fetch==='function'?fetch:null);
+  if(!get||!Array.isArray(hints)||!hints.length)return [];
+  const unique=new Map();
+  for(const hint of hints){
+   const key=String(hint?.file||'').replace(/^File:/i,'').replace(/_/g,' ').trim();
+   if(key&&!badFileName(key)&&/\.(?:jpe?g|png|webp)$/i.test(key))
+    unique.set(key.toLowerCase(),{...hint,filename:key});
+  }
+  const result=[];
+  for(const batch of Array.from(unique.values()).reduce((chunks,item,i)=>{
+   if(i%20===0)chunks.push([]);chunks[chunks.length-1].push(item);return chunks;
+  },[])){
+   const u=new URL('https://commons.wikimedia.org/w/api.php');
+   for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',
+    titles:batch.map(p=>'File:'+p.filename).join('|'),iiprop:'url|size|extmetadata',
+    iiurlwidth:'2048',format:'json',formatversion:'2',origin:'*'}))u.searchParams.set(k,v);
+   try{
+    const response=await get(u.href,{cache:'no-cache',credentials:'omit'});
+    if(!response.ok)continue;
+    const pages=(await response.json()).query?.pages||[];
+    const allowedFiles=new Map(pages.map(page=>{
+     const current=inspect(page,doc||(typeof document!=='undefined'?document:null));
+     return current?[current.file.replace(/^File:/i,'').replace(/_/g,' ').toLowerCase(),current]:[null,null];
+    }).filter(([key])=>key));
+    for(const hint of batch){
+     const current=allowedFiles.get(hint.filename.toLowerCase());
+     if(!current||current.width&&current.width<900||current.height&&current.height<500)continue;
+     result.push({...current,description:hint.subject||current.description,
+      source:'editorial-live-checked',locationVerified:true,checked:false});
+    }
+   }catch{continue}
+  }
+  return result;
+ }
  // Commons GeoData supports location-tagged FILES, not just articles. This
  // avoids rejecting good photographs whose filename omits the city name.
  async function nearbyUncached(lat,lon,{fetcher,doc,radius=8000,limit=16}={}){
@@ -273,5 +311,5 @@
    figure.append(img,caption);el.append(figure);
   }
  }
- return Object.freeze({inspect,search,searchPage,searchArticleImages,searchNearby,approvedFor,verifyApproved,append});
+ return Object.freeze({inspect,search,searchPage,searchArticleImages,searchNearby,approvedFor,verifyApproved,verifyNamedFiles,append});
 });
