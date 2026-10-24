@@ -76,7 +76,8 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert.equal(trusted.file,'File:'+londonHint.file);
  const wrongPhoto=await media.verifyApproved('london',{fetcher:async()=>({ok:true,json:async()=>({query:{pages:[good]}})}),doc:dom});
  assert.equal(wrongPhoto,null,'Different Commons file must never be substituted as a curated landmark');
- const unlicensed=await media.verifyApproved('london',{fetcher:async()=>({ok:true,json:async()=>({query:{pages:[{...unknown,title:'File:'+londonHint.file}]}})}}),doc:dom});
+ const unlicensedFetcher=async()=>({ok:true,json:async()=>({query:{pages:[{...unknown,title:'File:'+londonHint.file}]}})});
+ const unlicensed=await media.verifyApproved('london',{fetcher:unlicensedFetcher,doc:dom});
  assert.equal(unlicensed,null,'Stored curated image must still satisfy live Commons CC licence');
  assert.equal(media.inspect({...good,title:'File:London locator map.png'},dom),null,'Maps must not be used as purported photos');
 
