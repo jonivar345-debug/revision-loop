@@ -36,6 +36,7 @@
       file:'File:'+entry.file,
       filePage:'https://commons.wikimedia.org/wiki/File:'+encoded,
       url:'https://commons.wikimedia.org/wiki/Special:FilePath/'+encoded+'?width=2048',
+      originalUrl:'https://commons.wikimedia.org/wiki/Special:FilePath/'+encoded,
       originalPage:'https://commons.wikimedia.org/wiki/File:'+encoded,
       description:entry.subject,
       source:'curated'
