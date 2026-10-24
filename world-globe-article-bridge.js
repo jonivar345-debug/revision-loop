@@ -259,7 +259,7 @@
         // Strictly check returned file-level CC licence and artist.
         // Automated search cannot establish exact site depiction, so label that clearly.
         const media=window.RevisionWorldCommonsMedia;
-        const photos=await media.search((story.focus||story.name||story.country)+' '+(story.country||'sea ocean'),{limit:2});
+        const photos=await media.searchPage(story.focus||story.name||story.country);
         if(current!==token||!container.isConnected)return;
         const host=document.createElement('div');host.className='world-auto-photo-results';
         media.append(host,photos,{emptyText:'No CC-licensed image with a named photographer was found.'});
