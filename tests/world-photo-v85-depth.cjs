@@ -43,7 +43,14 @@ for(const [id,records] of entries){
   assert(/NOT (?:visually pixel-reviewed|individual pixel-level visual approval)/.test(p.reviewStatus),'Machine-sourced != fully visual inspected');
  }
  const enriched=curated.get(id).filter(p=>String(p.photoSource||'').startsWith('Commons'));
- assert.equal(enriched.length,records.length,'Source enrichment is not wired into original gallery registry '+id);
+ const qualityReplacements=new Set(['country-at','country-be','country-bj','country-bn','country-bh','country-bf','country-dk','country-bb','country-ec','country-cm']);
+ const omitted=records.filter(p=>!enriched.some(e=>e.file.toLowerCase()==='file:'+p.file.toLowerCase()));
+ assert.equal(records.length-enriched.length,omitted.length,'Unexpected enrichment duplicate or provenance loss '+id);
+ if(omitted.length){
+  assert(qualityReplacements.has(id),'Unapproved removal of an enriched image '+id);
+  assert(curated.get(id).some(p=>p.qualityPriority===1000),'An omitted candidate must have a verified quality replacement '+id);
+  assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=4,'Do not remove a photo without preserving four options '+id);
+ }
  assert(enriched.every(p=>p.checked===false&&p.source==='editorial-source'),'New candidates must pass browser current-licence validation');
 }
 assert(regions.size>=4,'Photo enrichment must span at least four World regions');
