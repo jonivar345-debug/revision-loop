@@ -75,7 +75,7 @@ const dom={createElement:t=>new E(t),createTextNode:t=>({tagName:'text',textCont
  assert(empty.textContent.includes('No openly licensed photograph'));
  assert(!app.includes("gsrsearch='+encodeURIComponent(q)+'&gsrlimit=15"),'Old uncredited gallery search still present');
  assert(!app.includes("if(url){wikiPhotoCache[location.id]=url;placeImage"),'Old uncredited image path still active');
- assert(html.indexOf('world-commons-media.js?v=68')>=0&&html.indexOf('world-commons-media.js?v=68')<html.indexOf('app.js?v=68'),'Media validator must load before the app');
+ assert(html.indexOf('world-commons-media.js?v=69')>=0&&html.indexOf('world-commons-media.js?v=69')<html.indexOf('app.js?v=70'),'Media validator must load before the app');
  assert(sw.includes("'./world-commons-media.js'"),'Photo validator not cached offline');
  for(const marker of ['locationPhoto(location,el)','images.searchPage(location.wiki)','images.append(el,matches)','locationImageFallback(el,location)'])assert(app.includes(marker),'Actual app lacks Commons attribution use: '+marker);
  console.log('PASS world gallery CC validation: no unlicensed/unknown-author/third-party image; photographer, licence and source rendered; real app and offline shell wired.');
