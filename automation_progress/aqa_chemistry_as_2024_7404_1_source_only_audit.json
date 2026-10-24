@@ -1,0 +1,440 @@
+{
+  "schema": "aqa-official-source-only-part-inventory-v1",
+  "created": "2026-10-24",
+  "kind": "original part-reference metadata; not student-visible questions or a reproduced AQA paper",
+  "subject": "Chemistry",
+  "qualification": "AS",
+  "year": 2024,
+  "series": "June",
+  "paper": "7404/1",
+  "sourceAuthorship": "AQA",
+  "questionPaperSource": {
+    "documentPages": 28,
+    "verifiedCopy": "https://cdn.sanity.io/files/p28bar15/green/13564e39f76a6547c1b2a6b1cc622d55d2dbeb43.pdf",
+    "hosting": "Independent mirror of AQA-authored paper; direct AQA file indexed but could not be retrieved"
+  },
+  "markSchemeSource": {
+    "documentPages": 29,
+    "version": "1.0 Final",
+    "verifiedCopy": "https://cdn.sanity.io/files/p28bar15/green/2858d6419eac25ad13894af28424166080ede4d0.pdf",
+    "hosting": "Independent mirror of AQA-authored final scheme"
+  },
+  "officialResourceFinder": "https://www.aqa.org.uk/past-papers-and-mark-schemes-finder",
+  "summary": {
+    "numberedStructuredQuestions": 9,
+    "structuredParts": 28,
+    "structuredMarks": 65,
+    "multipleChoiceParts": 15,
+    "multipleChoiceMarks": 15,
+    "totalPartReferences": 43,
+    "totalMarks": 80,
+    "studentFacingQuestionsAdded": 0,
+    "completePlayablePaper": false,
+    "exactSpecificationSubtopicCodesVerified": 0
+  },
+  "markingDesignNotes": [
+    "Q04 is a 6-mark levels-of-response task, not six separate one-mark keyword checks.",
+    "Q07.3 and Q08.2 require consequential numerical method marking.",
+    "Q08.4 requires each practical limitation to be paired with its matching improvement.",
+    "Q01.3 allows specified error carried forward.",
+    "Question 06.3 and 03.5 require a graph/diagram; the source PDF is necessary.",
+    "Chemistry general scheme treats contradictions, alternative chemical structures, equation multiples and state-symbol exceptions explicitly."
+  ],
+  "validation": {
+    "allUnique": true,
+    "partCountReconciled": true,
+    "perQuestionMarksReconciled": true,
+    "pdfPageBoundsChecked": true,
+    "sourceQuestionTextReproduced": false,
+    "sourceMarkSchemeAnswerTextReproduced": false
+  },
+  "parts": [
+    {
+      "partId": "01.1",
+      "marks": 2,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 11,
+      "topic": "Halogen displacement and ionic equations",
+      "markingCaution": "Ionic equation accepts equivalent multiples; state symbols not essential.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "01.2",
+      "marks": 2,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 11,
+      "topic": "Halogens and relative oxidising strength",
+      "markingCaution": "Reject descriptions that wrongly assign oxidising ability to halide ions.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "01.3",
+      "marks": 3,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 12,
+      "topic": "Halide ion qualitative tests",
+      "markingCaution": "Test and both observations needed; scheme explicitly allows error carried forward from 01.1.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "02.1",
+      "marks": 3,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 13,
+      "topic": "Successive ionisation energies and electron shells",
+      "markingCaution": "Three independent reasons; inner-shell electron versus outer-shell electron.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "02.2",
+      "marks": 2,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 13,
+      "topic": "Group 2 reactions with water and steam",
+      "markingCaution": "Credit one valid similarity and one difference.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "02.3",
+      "marks": 2,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 13,
+      "topic": "Oxidation states in redox",
+      "markingCaution": "Allow stated oxidation-state changes; scheme offers partial fallback.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.1",
+      "marks": 1,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 14,
+      "topic": "Electronegativity",
+      "markingCaution": "Definition must refer to electron density in a covalent bond.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.2",
+      "marks": 2,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 14,
+      "topic": "Bond polarity",
+      "markingCaution": "Electronegativity difference plus electron-density asymmetry.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.3",
+      "marks": 2,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 14,
+      "topic": "Molecular shape and dipole cancellation",
+      "markingCaution": "Must distinguish bond dipoles from whole-molecule polarity.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.4",
+      "marks": 3,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 15,
+      "topic": "London dispersion forces",
+      "markingCaution": "Temporary dipole, induced dipole and attraction each contribute.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "03.5",
+      "marks": 2,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 16,
+      "topic": "Giant ionic lattice diagrams",
+      "markingCaution": "Needs alternating ion charges and a 3D cubic eight-particle arrangement.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "04",
+      "marks": 6,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 17,
+      "topic": "Inorganic ion identification and ionic equations",
+      "markingCaution": "LEVELS OF RESPONSE: MS pages 17–18; best-fit descriptors, linked observations/tests/equations, not six independent keyword points.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "05",
+      "marks": 6,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 19,
+      "topic": "Electron-pair repulsion and molecular shapes",
+      "markingCaution": "Six independent criteria include geometry, angles and lone-pair repulsion.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "06.1",
+      "marks": 1,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 20,
+      "topic": "Electron configuration",
+      "markingCaution": "Accept equivalent full subshell ordering.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "06.2",
+      "marks": 1,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 20,
+      "topic": "Electron impact ionisation",
+      "markingCaution": "Alternative valid ionisation equation forms accepted.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "06.3",
+      "marks": 3,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 21,
+      "topic": "Mass spectra of isotopic molecules",
+      "markingCaution": "Requires source spectrum; axes, peaks and intensity ratios.",
+      "requiresSourceFigure": true
+    },
+    {
+      "partId": "06.4",
+      "marks": 1,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 22,
+      "topic": "Mass spectrometer detector",
+      "markingCaution": "Current magnitude and relative abundance.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.1",
+      "marks": 1,
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 23,
+      "topic": "Percentage uncertainty",
+      "markingCaution": "Correct doubling of balance uncertainty.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.2",
+      "marks": 1,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 23,
+      "topic": "Moles from concentration and volume",
+      "markingCaution": "Answer precision is explicitly assessed.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "07.3",
+      "marks": 6,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 24,
+      "topic": "Back titration and mass percentage",
+      "markingCaution": "Six sequential method marks; preserve ECF and intermediate-stage credit.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "08.1",
+      "marks": 2,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 25,
+      "topic": "Standard enthalpy of formation",
+      "markingCaution": "Requires one mole from elements and standard states.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "08.2",
+      "marks": 2,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 25,
+      "topic": "Hess's law and enthalpy of formation",
+      "markingCaution": "Second mark consequential on first method.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "08.3",
+      "marks": 1,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 25,
+      "topic": "Calorimetry limitations",
+      "markingCaution": "Accept the approved practical limitations, not unrelated heat-loss claims.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "08.4",
+      "marks": 6,
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 26,
+      "topic": "Calorimetry experimental improvements",
+      "markingCaution": "Award paired inaccuracy–improvement points; mismatched improvements must not score.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "09.1",
+      "marks": 1,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 27,
+      "topic": "Oxidising agents",
+      "markingCaution": "Electron acceptor; distinguish from Lewis acid.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "09.2",
+      "marks": 1,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 27,
+      "topic": "Oxidation half-equations",
+      "markingCaution": "Ignore state symbols; multiples acceptable.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "09.3",
+      "marks": 1,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 27,
+      "topic": "Reduction half-equations in acidic solution",
+      "markingCaution": "Charge, electrons and atom balance essential; multiples acceptable.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "09.4",
+      "marks": 1,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 27,
+      "topic": "Combining redox half-equations",
+      "markingCaution": "Overall charge and stoichiometry; multiples acceptable.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "10",
+      "marks": 1,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 28,
+      "topic": "Atom economy",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "11",
+      "marks": 1,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 28,
+      "topic": "Dative covalent bonding",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "12",
+      "marks": 1,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 28,
+      "topic": "Titration mean and concordance",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "13",
+      "marks": 1,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 28,
+      "topic": "Chlorine reactions with water",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "14",
+      "marks": 1,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 28,
+      "topic": "Group 2 chemistry and uses",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "15",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 28,
+      "topic": "Period 3 and Group 1 melting points",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "16",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 28,
+      "topic": "Period 3 trends",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "17",
+      "marks": 1,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 28,
+      "topic": "Balancing equations",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "18",
+      "marks": 1,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 28,
+      "topic": "Empirical formula calculations",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "19",
+      "marks": 1,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 28,
+      "topic": "Halide reducing ability with concentrated sulfuric acid",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "20",
+      "marks": 1,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 28,
+      "topic": "Time-of-flight mass spectrometry",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "21",
+      "marks": 1,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 28,
+      "topic": "Isotopes, protons and neutrons",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "22",
+      "marks": 1,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 29,
+      "topic": "Second ionisation energy equations",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "23",
+      "marks": 1,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 29,
+      "topic": "Titration accuracy and glassware",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    },
+    {
+      "partId": "24",
+      "marks": 1,
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 29,
+      "topic": "Electronic configuration and unpaired electrons",
+      "markingCaution": "Single-best-answer multiple choice; do not treat as free-text marking.",
+      "requiresSourceFigure": false
+    }
+  ]
+}
