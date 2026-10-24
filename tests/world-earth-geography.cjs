@@ -25,7 +25,7 @@ vm.runInNewContext(globe,registry);
 const items=registry.window.RevisionWorldDestinations;
 for(const id of ['country-gb','country-kr','country-cn','country-us','ocean-pacific','sea-mediterranean'])
  assert(items.some(place=>place.id===id&&Number.isFinite(place.lat)&&Number.isFinite(place.lon)));
-assert(html.indexOf('world-earth-renderer.js?v=68')<html.indexOf('app.js?v=70'),'Earth renderer should load before app');
+assert(html.indexOf('world-earth-renderer.js?v=68')<html.indexOf('app.js?v=71'),'Earth renderer should load before app');
 assert(app.includes("const EARTH_TEXTURE_URL="),'Legacy source anchor missing');
 assert(app.includes('NASA')&&app.includes('RevisionWorldEarth.load()'),'NASA image + geographic fallback not configured');
 assert(app.includes('const queue=all.sort((a,b)=>score(b)-score(a))'),'No owned-first map declutter');
@@ -33,7 +33,7 @@ assert(app.includes("owned?'#22c55e'"),'Unlocked pins should turn green');
 assert(app.includes("if(expanded)return all.sort"),'Missing all-pins inspection mode');
 assert(app.includes('drawGlobe();')&&app.includes('renderAll();drawGlobe();'),'Buying should redraw owned pins immediately');
 assert(html.includes('id="showAllGlobePins"'),'Pin density toggle not accessible');
-assert(style.includes('.location-image-map-fallback'),'Photo fallbacks should use descriptive map art');
+assert(style.includes('.destination-photo-gallery'),'Unlocked locations must provide a photographic gallery');
 assert(!app.includes("images.search(l.name+' landscape'"),'Unrelated second photo API still in location details');
 // Guard the coordinates of the locations visible in the reported screenshots
 // and major cities on nearby parts of the globe. Coordinates are WGS84 degrees.
@@ -58,5 +58,6 @@ assert(Math.abs(preview.locate(139.65,35.67).y-(90-35.67)/180)<1e-8);
 assert(preview.locate(181,0).x<.01,'Dateline wrap should use the same location on both sides');
 assert(html.includes('world-location-map-preview.js?v=69'),'No offline geographic preview in the main app');
 assert(style.includes('.location-accurate-map'),'Place map thumbnails missing from card styles');
-assert(app.includes('window.RevisionWorldMapPreview?.render(el,location)'),'Missing photo fallback into real geographic map');
+assert(app.includes('gallery.render(el,location,{card:!!el.closest'),'Location photos must use the place-specific photo gallery');
+assert(app.includes('if(c.width!==1400||c.height!==720)'),'Globe needs high-resolution canvas pixels for zoom');
 console.log('PASS geographic Earth: '+geo.rings.length+' public-domain WGS84 rings; clean dateline, new country/marine pins, ownership colours and uncluttered click targets.');
