@@ -3382,8 +3382,84 @@
       return image?[{...image,editorialMetadata:true,reviewStatus:'Exact nationally located place source, Commons licence rechecked on display; pixels for this national placement not individually inspected'}]:[];
     });
   }
+  // File pages individually checked for the final three gaps that search
+  // titles did not recover (including genuine sea photographs rather than maps).
+  const lastThreePlaceSources=Object.freeze({
+    "dakar": [
+      {
+        "file": "Dakar from above.jpg",
+        "author": "Hichammohsen",
+        "license": "CC BY-SA 4.0",
+        "subject": "Aerial photograph of Dakar's Atlantic coastline and skyline",
+        "width": 5184,
+        "height": 3456,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Dakar vue de haut 04.jpg",
+        "author": "Ourytima",
+        "license": "CC BY-SA 4.0",
+        "subject": "Cityscape of Dakar photographed from above",
+        "width": 4080,
+        "height": 3060,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      }
+    ],
+    "country-ag": [
+      {
+        "file": "Beach in Old Road, Antigua and Barbuda.jpg",
+        "author": "AntiguaAndBarbudaMedia",
+        "license": "CC BY-SA 4.0",
+        "subject": "Carlisle Beach at Old Road in Saint Mary, Antigua and Barbuda",
+        "width": 4032,
+        "height": 3024,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      }
+    ],
+    "sea-bering": [
+      {
+        "file": "Nome Alaska bering sea.jpg",
+        "author": "ra64 from Nome, USA",
+        "license": "CC BY-SA 2.0",
+        "subject": "Open Bering Sea water seen from Nome, Alaska",
+        "width": 2256,
+        "height": 1496,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Bering sea...mar de bering ,alaska - panoramio.jpg",
+        "author": "Leo Macias",
+        "license": "CC BY-SA 3.0",
+        "subject": "Photograph of the Bering Sea coast near Unalaska, Alaska",
+        "width": 2576,
+        "height": 1932,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      },
+      {
+        "file": "Bering Sea Ice 2 (8683679273).jpg",
+        "author": "Joseph / The Cabin On The Road",
+        "license": "CC BY-SA 2.0",
+        "subject": "Sea ice near Nome on the Bering Sea coast",
+        "width": 2614,
+        "height": 1894,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...discoveredFor(id)];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
