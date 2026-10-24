@@ -3371,7 +3371,21 @@
     "country-cu": [
       [
         "havana",
-        "Havana old town.jpg"
+        "Havana aerial.jpg"
+      ],
+      [
+        "havana",
+        "Havana street view.jpg"
+      ]
+    ],
+    "country-ba": [
+      [
+        "mostar",
+        "Stari Most viewed from North.jpg"
+      ],
+      [
+        "sarajevo",
+        "Sarajevo City Panorama.JPG"
       ]
     ]
   });
