@@ -2198,8 +2198,105 @@
       }
     ]
   });
+  // Shanghai and Beijing photo pages checked against current Commons source,
+  // authors, CC licence and >=2048px original widths. Do not confuse source
+  // verification with visual pixel-by-pixel approval.
+  const featuredCitiesD=Object.freeze({
+    "shanghai": [
+      {
+        "file": "The Bund Shanghai.jpg",
+        "author": "Mattias Hill",
+        "license": "CC BY-SA 4.0",
+        "subject": "The Bund and Shanghai night skyline",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      },
+      {
+        "file": "Shanghai Yu Garden.jpg",
+        "author": "钉钉",
+        "license": "CC BY-SA 4.0",
+        "subject": "Yu Garden traditional architecture in Shanghai",
+        "width": 4000,
+        "height": 3000,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      },
+      {
+        "file": "Oriental Pearl Tower Shanghai 1.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "subject": "Oriental Pearl Tower in Pudong",
+        "width": 3980,
+        "height": 5500,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      },
+      {
+        "file": "East Nanjing road Shanghai.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "subject": "East Nanjing Road shopping street",
+        "width": 4300,
+        "height": 2420,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      }
+    ],
+    "beijing": [
+      {
+        "file": "Forbidden City, Beijing.jpg",
+        "author": "World3000",
+        "license": "CC BY-SA 3.0",
+        "subject": "The Forbidden City imperial palace in Beijing",
+        "width": 4000,
+        "height": 3000,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      },
+      {
+        "file": "Temple-of-heaven.jpg",
+        "author": "Khushwant8693",
+        "license": "CC BY-SA 4.0",
+        "subject": "Temple of Heaven in Beijing",
+        "width": 4032,
+        "height": 3024,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      },
+      {
+        "file": "Summer Palace, Beijing.jpg",
+        "author": "Lettucecup",
+        "license": "CC BY-SA 4.0",
+        "subject": "Beijing Summer Palace gardens and lake",
+        "width": 4000,
+        "height": 3000,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      },
+      {
+        "file": "Old districts 'hutong' in Beijing.jpg",
+        "author": "Ekaterina Kvelidze",
+        "license": "CC BY-SA 4.0",
+        "subject": "Historic Beijing hutong streets",
+        "width": 4032,
+        "height": 3024,
+        "editorialMetadata": true,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reviewStatus": "exact Commons file description checked 2026-10-24; source resolution and licence recorded; current Commons metadata required at display time; pixel-level approval pending"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[])];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
