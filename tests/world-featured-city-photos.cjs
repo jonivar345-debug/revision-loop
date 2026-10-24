@@ -5,6 +5,8 @@ const fs=require('node:fs');
 const path=require('node:path');
 const curated=require('../world-curated-photos.js');
 const gallery=require('../world-location-photo-gallery.js');
+// Simulate the browser global used by the source registry; Node has no window.
+global.window={RevisionWorldCuratedPhotos:curated};
 const base=path.join(__dirname,'..');
 const list={tokyo:['Shibuya Crossing','Tokyo Tower','Sensō-ji','Tokyo Skytree'],
  seoul:['Seoul from Namsan','Gyeongbokgung','Bukchon','Myeongdong Cathedral'],
