@@ -25,7 +25,7 @@ vm.runInNewContext(globe,registry);
 const items=registry.window.RevisionWorldDestinations;
 for(const id of ['country-gb','country-kr','country-cn','country-us','ocean-pacific','sea-mediterranean'])
  assert(items.some(place=>place.id===id&&Number.isFinite(place.lat)&&Number.isFinite(place.lon)));
-assert(html.indexOf('world-earth-renderer.js?v=68')<html.indexOf('app.js?v=68'),'Earth renderer should load before app');
+assert(html.indexOf('world-earth-renderer.js?v=68')<html.indexOf('app.js?v=70'),'Earth renderer should load before app');
 assert(app.includes("const EARTH_TEXTURE_URL="),'Legacy source anchor missing');
 assert(app.includes('NASA')&&app.includes('RevisionWorldEarth.load()'),'NASA image + geographic fallback not configured');
 assert(app.includes('const queue=all.sort((a,b)=>score(b)-score(a))'),'No owned-first map declutter');
