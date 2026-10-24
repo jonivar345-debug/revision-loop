@@ -3541,6 +3541,78 @@
         "editorialMetadata": true,
         "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
       }
+    ],
+    "country-bb": [
+      {
+        "file": "Bathsheba, Barbados 39.jpg",
+        "author": "Postdlf",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Rugged Atlantic coastline at Bathsheba, Barbados",
+        "width": 4272,
+        "height": 2848,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      },
+      {
+        "file": "Bathsheba, Barbados 45.jpg",
+        "author": "Postdlf",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Coastal rock formations at Bathsheba on Barbados",
+        "width": 4272,
+        "height": 2848,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      }
+    ],
+    "lagos": [
+      {
+        "file": "Lagos skyline.jpg",
+        "author": "Clara Sanchiz",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Skyline of Lagos, Nigeria, viewed from Victoria Island",
+        "width": 3726,
+        "height": 1970,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      },
+      {
+        "file": "Mafoluku Oshodi Lagos skyline.jpg",
+        "author": "Canih28",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Neighbourhood and urban skyline at Oshodi in Lagos, Nigeria",
+        "width": 2560,
+        "height": 1920,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      }
+    ],
+    "country-mk": [
+      {
+        "file": "Ohrid lake, North Macedonia.jpg",
+        "author": "MiroJP",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lake Ohrid and the city of Ohrid in North Macedonia",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      },
+      {
+        "file": "Lake Ohrid.jpg",
+        "author": "Markus Bernet",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "subject": "Lake Ohrid landscape in North Macedonia",
+        "width": 2048,
+        "height": 1536,
+        "editorialMetadata": true,
+        "reviewStatus": "Specific place, author, CC licence and original resolution checked on Commons File page 2026-10-24; current licence reverified at display; not claimed to be image-pixel inspected."
+      }
     ]
   });
   function filesFor(id){
