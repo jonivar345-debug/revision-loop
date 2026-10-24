@@ -1,0 +1,430 @@
+{
+  "schema": "aqa-physics-2021-p1-official-pdf-page-crosscheck-v1",
+  "date": "2026-10-24",
+  "kind": "source-only page and mark-scheme reference audit; no original AQA question stems, diagrams, official answers or playable questions",
+  "paper": "AQA 7408/1",
+  "year": 2021,
+  "series": "November archive; source PDF cover carries June 2021 internal code",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74081-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74081-MS-NOV21.PDF",
+  "questionPaperPdfPages": 44,
+  "markSchemePdfPages": 20,
+  "sourceBranchHead": "16cc7a91f1fff71089ec8a4d7b112f9090d6e495",
+  "sourceBlobSha": "ddb1b87d53393cf3a650938ebb874c0c2925000c",
+  "method": "Independently opened both official AQA PDFs; located the start of each numbered part in the question-paper PDF and the corresponding entry in the final mark-scheme PDF. All page numbers are 1-based PDF page indices, not question-paper print numbers.",
+  "verification": {
+    "parts": 48,
+    "marks": 85,
+    "structuredParts": 23,
+    "structuredMarks": 60,
+    "multipleChoiceParts": 25,
+    "multipleChoiceMarks": 25,
+    "uniqueSourcePartIds": true,
+    "allPageReferencesWithinDocumentBounds": true,
+    "sourcePartMarksPreserved": true,
+    "exactSpecificationSubtopicCodesVerified": false,
+    "sourceRubricsMachineEncoded": false,
+    "studentFacingPracticeCreated": 0,
+    "workedAnswersCreated": 0
+  },
+  "markingRisksOriginalSummaries": {
+    "01.1": "Separate evidence for charge, proton/nucleon count and neutron count; avoid awarding every mark from a keyword.",
+    "02.4": "Official scheme accepts an alternative interference/fringe-based approach; assess the chosen route, not a fixed wording.",
+    "03.1": "Single-mark numerical response requires more than one significant figure.",
+    "04.2": "Angular speed must be distinguished from linear speed in the dependent derivation.",
+    "04.4": "Safety factor and justified stress choice matter; consequential values may earn credit.",
+    "05.1": "A stated approximate result requires sufficient working and precision.",
+    "05.2": "Showing the target equation requires both the motion equation and valid substitution.",
+    "05.3": "The two physical roots and explanation are separate marks; follow-through is permitted.",
+    "05.4": "The calculation must be visible; a bare conclusion is not sufficient.",
+    "05.5": "Graph-gradient and graph-area interpretations require explanatory support.",
+    "06.1": "Allow consequential marking for a graph-derived resistance.",
+    "06.2": "Allow consequential numerical values; conclusion must use the stated comparison."
+  },
+  "parts": [
+    {
+      "sourcePartId": "01.1",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "01.2",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "01.3",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "01.4",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "01.5",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 8,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "02.1",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 9,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "02.2",
+      "officialMarks": 4,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 9,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "02.3",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 10,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "02.4",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 10,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "03.1",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 11,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "03.2",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 11,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "03.3",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 12,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "04.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 13,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "04.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 13,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "04.3",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 13,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "04.4",
+      "officialMarks": 5,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 14,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "05.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 15,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "05.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 15,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "05.3",
+      "officialMarks": 4,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 16,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "05.4",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 16,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "05.5",
+      "officialMarks": 5,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 17,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "06.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 18,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "06.2",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 18,
+      "sourceType": "structured",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "07",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "08",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "09",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "10",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "11",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "12",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "13",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "14",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "15",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "16",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "17",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "18",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "19",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "20",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "21",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 30,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "22",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 31,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "23",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 32,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "24",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 32,
+      "markSchemePdfPage": 19,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "25",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 33,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "26",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 34,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "27",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 35,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "28",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 36,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "29",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 37,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "30",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 38,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    },
+    {
+      "sourcePartId": "31",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 38,
+      "markSchemePdfPage": 20,
+      "sourceType": "mcq",
+      "studentFacing": false
+    }
+  ]
+}
