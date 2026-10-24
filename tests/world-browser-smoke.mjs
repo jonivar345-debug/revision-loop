@@ -120,7 +120,9 @@ try{
  assert(await page.evaluate(()=>Math.abs(globeLon+0.1276)<0.05),'London camera is not at the real longitude');
  await page.locator('#detailPhotoOne.destination-photo-gallery').waitFor({timeout:15000});
  assert.equal(await page.locator('#detailPhotoOne .location-accurate-map').count(),0,'Maps must not appear as substitute photographs');
- assert.equal(await page.locator('#globeLocationInfo [data-world-long-story]').count(),0,'London should not display unrelated country content');
+ await page.locator('#globeLocationInfo [data-world-long-story] .location-background').first().waitFor({timeout:15000});
+ assert.equal(await page.locator('#globeLocationInfo [data-world-long-story] .location-background').count(),4,'London should have four London-specific sections');
+ assert(!(await page.locator('#globeLocationInfo [data-world-long-story]').textContent()).includes('Jodrell Bank'),'Unrelated country text should not appear beneath London');
  assert.equal(await page.locator('#globeLocationInfo .detail-links').count(),0,'Unwanted source links still visible');
  // A genuine canvas click on the accurately projected owned pin opens the guide.
  await page.evaluate(()=>setLocationInfo('london'));
