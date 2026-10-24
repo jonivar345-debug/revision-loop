@@ -50,6 +50,6 @@ const doc={createElement:tag=>new E(tag,doc),createTextNode:text=>({tagName:'tex
  assert(!bridge.includes('Go deeper'));
  assert(!source.includes("locationImageFallback(el,location);"),'Location photo must not fall back to map thumbnails');
  assert(style.includes('.destination-photo-gallery .destination-photo-grid'));
- assert(html.includes('world-location-photo-gallery.js?v=71'));
+ assert(html.includes('world-location-photo-gallery.js?v=73'));
  console.log('PASS location galleries: five valid Busan photos, matching rejects unrelated imagery, credits are collapsible, shop cards are photo-only.');
 })().catch(e=>{console.error(e);process.exitCode=1});
