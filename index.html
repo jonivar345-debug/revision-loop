@@ -207,6 +207,12 @@
       <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock destinations, rotate a geographically accurate Earth, and open researched information by selecting an owned pin.</p></div><strong id="locationCount">0 / 0</strong></div>
       <div class="globe-card">
         <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing collectable world locations"></canvas>
+        <div class="globe-finder">
+          <label for="globePlaceSearch">Find a destination</label>
+          <input id="globePlaceSearch" list="globePlaceOptions" placeholder="Search London, Busan, Pacific Ocean…" autocomplete="off">
+          <datalist id="globePlaceOptions"></datalist>
+          <button id="globeFindPlace" type="button" class="mini-btn">Locate pin</button>
+        </div>
         <div class="globe-zoom-controls" role="group" aria-label="Globe zoom controls">
           <button id="globeZoomOut" type="button" class="mini-btn" aria-label="Zoom globe out">−</button>
           <output id="globeZoomValue" aria-live="polite">100%</output>
@@ -237,7 +243,7 @@
 <script src="world-geographic-destinations.js?v=65" defer></script>
 <script src="world-profile-preservation.js?v=63" defer></script>
 <script src="world-commons-media.js?v=69" defer></script>
-<script src="app.js?v=69" defer></script>
+<script src="app.js?v=70" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=62" defer></script>
 <script>
