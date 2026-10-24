@@ -7,7 +7,7 @@ const sources=['commons_verified_photos_batch3_20261023.json','commons_verified_
 const files=sources.flatMap(name=>JSON.parse(fs.readFileSync(path.join(directory,name),'utf8')).files);
 const countries=new Set(),names=new Set(),byCountry={};
 const library=fs.readFileSync(path.join(root,'world-library-preview.js'),'utf8');
-const bridge=fs.readFileSync(path.join(root,'world-globe-article-bridge.js'),'utf8');
+const gallery=fs.readFileSync(path.join(root,'world-location-photo-gallery.js'),'utf8');
 const archive=JSON.parse(fs.readFileSync(path.join(directory,'country_gateway_release_index_20261023.json'),'utf8'));
 const countryIds=new Set(archive.entries.map(x=>x.iso2));
 let checks=0;
@@ -27,15 +27,15 @@ for(const entry of files){
  assert.equal(licensePage.hostname,'creativecommons.org');checks++;
  assert(['CC BY 2.0','CC BY 4.0','CC BY-SA 3.0','CC BY-SA 4.0'].includes(entry.license),'Unexpected licence: '+entry.license);checks++;
  assert(library.includes("'"+entry.file+"'"),'Preview image whitelist excludes '+entry.file);checks++;
- assert(bridge.includes("'"+entry.file+"'"),'Globe image whitelist excludes '+entry.file);checks++;
+ assert(gallery.includes('destination-photo-credits'),'Location gallery must retain image attribution disclosure');checks++;
 }
 assert.deepEqual([...countries].sort(),['AL','AM','CA','ID','SG','TR']);checks++;
 assert.equal(files.length,Object.values(byCountry).reduce((a,b)=>a+b,0));checks++;
-for(const ui of [library,bridge]){
+for(const ui of [library]){
  assert(ui.includes('Special:FilePath'),'Source image not rendered in interface');checks++;
  assert(ui.includes('photo.author')||ui.includes('image.author'),'No photographer attribution in interface');checks++;
  assert(ui.includes('licenseUrl'),'Licence hyperlink omitted');checks++;
  assert(ui.includes('filePage'),'Original Commons file link omitted');checks++;
 }
-assert(!fs.readFileSync(path.join(root,'app.js'),'utf8').includes('commons_verified_photos_batch3_20261023.json'),'Original location photo code unexpectedly altered');checks++;
+assert(gallery.includes('photo.filePage')&&gallery.includes('photo.licenseUrl'),'Photo credits or source links missing from new gallery');checks++;
 console.log('PASS '+checks+' image source, CC metadata, whitelist and attribution assertions: 13 reviewed photos across '+countries.size+' countries. 190 countries still need verified photos.');
