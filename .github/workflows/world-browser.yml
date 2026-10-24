@@ -2,7 +2,7 @@ name: World browser acceptance
 
 on:
   push:
-    branches: [automation/world-zoom-controls-20261021]
+    branches: [automation/world-zoom-controls-20261021, fix/world-earth-photos-pin-ui-20261023]
   pull_request:
 
 jobs:
