@@ -3456,6 +3456,91 @@
         "editorialMetadata": true,
         "reviewStatus": "Exact Wikimedia Commons File page checked 2026-10-24 for depicted subject, credited photographer, declared CC licence and original pixel dimensions. Current file rights still rechecked in browser; full image-pixel inspection pending."
       }
+    ],
+    "country-iq": [
+      {
+        "file": "View of Erbil skyline from the Citadel in the Kurdistan Region of Iraq 01.jpg",
+        "author": "Levi Clancy",
+        "license": "CC BY-SA 4.0",
+        "subject": "Erbil city skyline from the ancient Citadel in Iraq",
+        "width": 6016,
+        "height": 4000,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "View of the Erbil skyline from the Cristal Hotel in Erbil.jpg",
+        "author": "Levi Clancy",
+        "license": "CC0 1.0",
+        "subject": "Erbil cityscape and skyline in Iraq",
+        "width": 5876,
+        "height": 3917,
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
+    ],
+    "country-lr": [
+      {
+        "file": "Central Monrovia.jpg",
+        "author": "Jefferson Krua",
+        "license": "CC BY-SA 4.0",
+        "subject": "Central Monrovia, Liberia",
+        "width": 6000,
+        "height": 4000,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Monrovia, Liberia - panoramio (65).jpg",
+        "author": "blk24ga",
+        "license": "CC BY 3.0",
+        "subject": "Monrovia city scene in Liberia",
+        "width": 4000,
+        "height": 3000,
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
+    ],
+    "country-ne": [
+      {
+        "file": "Niger, Niamey, Dunes (1), landscape.jpg",
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "subject": "Dunes near Niamey in Niger, with Niamey and Niger River in the distance",
+        "width": 4288,
+        "height": 2848,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
+    ],
+    "sea-red": [
+      {
+        "file": "Coral Reef, Red Sea.jpg",
+        "author": "Menna.Hassan100",
+        "license": "CC BY-SA 4.0",
+        "subject": "A colourful underwater coral reef in the Red Sea",
+        "width": 3000,
+        "height": 4000,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      },
+      {
+        "file": "Red sea underwater coral.jpg",
+        "author": "Andrey Korman",
+        "license": "CC BY-SA 4.0",
+        "subject": "Red Sea underwater coral formations",
+        "width": 2304,
+        "height": 3072,
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Commons file page checked 2026-10-24 for location, author, current CC licence and full-resolution image. Gallery rechecks current metadata; no blanket pixel-level approval."
+      }
     ]
   });
   function filesFor(id){
