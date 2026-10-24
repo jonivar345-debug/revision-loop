@@ -1,0 +1,88 @@
+{
+  "schema": "aqa-source-only-internal-integrity-20261024-v1",
+  "created": "2026-10-24",
+  "kind": "independent READ-ONLY metadata integrity check, NOT official PDF source re-verification, not executable or playable questions",
+  "examBranchHeadAtAudit": "2bc6b42087f051abcf796e5fca52a27efb9c1177",
+  "mainHeadAtAudit": "21f1642bd80f420f28118eff1af895dc51d3802a",
+  "scope": "Five source-only AQA 2024-2025 Chemistry AS and Maths A-level audit JSON files not covered by existing crosspaper_internal_integrity_20261024",
+  "sourceOnlyPaperFiles": 5,
+  "sourceOnlyPartReferences": 204,
+  "nominalPaperMarks": 460,
+  "sourceOnlyNotStudentFacing": true,
+  "method": "Independently re-fetched each named JSON from current exam PR head; checked distinct nonempty part identifiers, positive integer part marks, sum against declared paper total, and 1-based PDF page fields for every part. No original AQA PDF reopened, no mark scheme wording, question stems, diagrams or worked solutions reproduced. This is NOT source-first rubric validation, precise spec mapping, playable coverage, combined browser QA or release approval.",
+  "knownOutstanding": [
+    "Exact specification subtopic codes not independently verified",
+    "Official paper and mark scheme pages require independent external PDF re-check",
+    "Student-visible original practice and worked answers not created by this audit",
+    "Exam branch app.js retains old destructive profile migration; latest main has protective world migration; combined release unsafe until verified",
+    "Known adversarial Maths binomial overcredit remains",
+    "World PR #2 already merged; exam PR #1 remains draft"
+  ],
+  "files": [
+    {
+      "file": "aqa_chemistry_as_2024_7404_1_source_only_audit.json",
+      "sourceBlobSha": "b5f931ad16ab2ca352444ce46a61fb8082c6e004",
+      "partCount": 43,
+      "nominalMarks": 80,
+      "checks": {
+        "uniqueSourcePartReferences": true,
+        "partMarksPositiveIntegers": true,
+        "declaredTotalEqualsPartSum": true,
+        "allPartQuestionPaperPdfPagePresent": true,
+        "allPartMarkSchemePdfPagePresent": true
+      }
+    },
+    {
+      "file": "aqa_chemistry_as_2024_7404_2_source_only_audit.json",
+      "sourceBlobSha": "15f1e2b256069dfe212a0cfaf70f59402387a5db",
+      "partCount": 41,
+      "nominalMarks": 80,
+      "checks": {
+        "uniqueSourcePartReferences": true,
+        "partMarksPositiveIntegers": true,
+        "declaredTotalEqualsPartSum": true,
+        "allPartQuestionPaperPdfPagePresent": true,
+        "allPartMarkSchemePdfPagePresent": true
+      }
+    },
+    {
+      "file": "aqa_maths_2024_7357_1_source_only_audit.json",
+      "sourceBlobSha": "28050bd4cd07384f36757d65e005348b1e8a1bd2",
+      "partCount": 41,
+      "nominalMarks": 100,
+      "checks": {
+        "uniqueSourcePartReferences": true,
+        "partMarksPositiveIntegers": true,
+        "declaredTotalEqualsPartSum": true,
+        "allPartQuestionPaperPdfPagePresent": true,
+        "allPartMarkSchemePdfPagePresent": true
+      }
+    },
+    {
+      "file": "aqa_maths_2024_7357_2_source_only_audit.json",
+      "sourceBlobSha": "f0a2580b65930330bbb63b3b6381e1b3b7c41168",
+      "partCount": 41,
+      "nominalMarks": 100,
+      "checks": {
+        "uniqueSourcePartReferences": true,
+        "partMarksPositiveIntegers": true,
+        "declaredTotalEqualsPartSum": true,
+        "allPartQuestionPaperPdfPagePresent": true,
+        "allPartMarkSchemePdfPagePresent": true
+      }
+    },
+    {
+      "file": "aqa_maths_2025_7357_1_source_only_audit.json",
+      "sourceBlobSha": "fcee8ee3e8830d4103e84a6d50dd7650c6308349",
+      "partCount": 38,
+      "nominalMarks": 100,
+      "checks": {
+        "uniqueSourcePartReferences": true,
+        "partMarksPositiveIntegers": true,
+        "declaredTotalEqualsPartSum": true,
+        "allPartQuestionPaperPdfPagePresent": true,
+        "allPartMarkSchemePdfPagePresent": true
+      }
+    }
+  ]
+}

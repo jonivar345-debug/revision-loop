@@ -1,0 +1,759 @@
+{
+  "schemaVersion": 1,
+  "recordType": "official-source-part-inventory-only",
+  "auditDate": "2026-10-23",
+  "subject": "Chemistry",
+  "qualification": "A-level",
+  "specification": "7405",
+  "series": "June",
+  "year": 2022,
+  "paperCode": "7405/1",
+  "paperTitle": "Inorganic and physical chemistry",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74051-QP-JUN22.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74051-MS-JUN22.PDF",
+  "questionPaperPdfPages": 32,
+  "markSchemePdfPages": 39,
+  "markSchemeVersion": "1.0 Final",
+  "numberedQuestions": 8,
+  "partCount": 47,
+  "totalMarks": 105,
+  "questionTotals": [
+    12,
+    12,
+    17,
+    16,
+    15,
+    15,
+    12,
+    6
+  ],
+  "questionPartMarksCrossCheckedWithOfficialPaper": true,
+  "allIndividualMarkSchemeRubricsIndependentlyVerified": false,
+  "exactSpecificationSubtopicCodesIndependentlyVerified": false,
+  "studentVisibleQuestionsCreated": 0,
+  "copyrightNote": "Independent editorial skill labels only. No AQA stems, figures, diagrams, model answers or full mark scheme text reproduced. Original official PDFs linked for reference.",
+  "markingRiskNotes": [
+    "A correct numerical answer may earn full marks without working unless working or justification is explicitly required.",
+    "Award process marks, alternative valid methods and follow-through only as permitted by each official part-specific rubric.",
+    "Equivalent equations and chemical representations can be accepted when the source rubric permits.",
+    "List contradictions must be assessed, not rewarded by matching isolated keywords.",
+    "Diagram- and displayed-formula-dependent answers need actual visual evidence.",
+    "Part 5.7 uses six-mark levels-of-response assessment; six isolated keyword matches do not establish six marks.",
+    "Buffer pH can be derived by valid equivalent concentration-ratio or mole-ratio approaches."
+  ],
+  "verificationLimits": [
+    "Source question part marks and totals reconciled to official PDFs; complete per-part mark-scheme acceptance and dependency rules require further independent verification.",
+    "Original topics are not certified AQA specification subtopic codes.",
+    "This audit creates no usable website question, model answer, worked solution or playable paper equivalent."
+  ],
+  "parts": [
+    {
+      "id": "1.1",
+      "marks": 2,
+      "editorialTopic": "Dynamic equilibrium features",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        11
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "1.2",
+      "marks": 1,
+      "editorialTopic": "Gas equilibrium response to pressure",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        11
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "1.3",
+      "marks": 3,
+      "editorialTopic": "Equilibrium partial pressure from mole fractions",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPages": [
+        12
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "1.4",
+      "marks": 1,
+      "editorialTopic": "Gaseous equilibrium constant expression",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPages": [
+        12
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "1.5",
+      "marks": 3,
+      "editorialTopic": "Partial pressure from Kp",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        13
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "1.6",
+      "marks": 2,
+      "editorialTopic": "Reverse Kp and units",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        13
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "2.1",
+      "marks": 2,
+      "editorialTopic": "Relative atomic mass",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPages": [
+        14
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "2.2",
+      "marks": 2,
+      "editorialTopic": "Isotopic abundance calculation",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPages": [
+        14
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "2.3",
+      "marks": 1,
+      "editorialTopic": "Isotope electron structure",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPages": [
+        15
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "2.4",
+      "marks": 5,
+      "editorialTopic": "Time-of-flight mass spectrometry",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        16,
+        17
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "2.5",
+      "marks": 2,
+      "editorialTopic": "Ion detector and relative abundance",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        18
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "3.1",
+      "marks": 5,
+      "editorialTopic": "Redox titration and dilution",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        19
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "3.2",
+      "marks": 1,
+      "editorialTopic": "Self-indicating redox titration",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPages": [
+        20
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "3.3",
+      "marks": 1,
+      "editorialTopic": "Peroxide oxidation state",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPages": [
+        20
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "3.4",
+      "marks": 5,
+      "editorialTopic": "Ideal gas law and stoichiometry",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPages": [
+        21
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "3.5",
+      "marks": 5,
+      "editorialTopic": "Mean bond enthalpy calculation",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPages": [
+        22
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "4.1",
+      "marks": 3,
+      "editorialTopic": "Weak acid pH",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPages": [
+        23
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "4.2",
+      "marks": 3,
+      "editorialTopic": "Strong base pH with temperature-dependent Kw",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPages": [
+        23
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "4.3",
+      "marks": 2,
+      "editorialTopic": "Temperature and neutralisation",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPages": [
+        24
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "4.4",
+      "marks": 3,
+      "editorialTopic": "Buffer preparation and action",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPages": [
+        24
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "4.5",
+      "marks": 5,
+      "editorialTopic": "Buffer pH from neutralisation",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPages": [
+        25,
+        26
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.1",
+      "marks": 1,
+      "editorialTopic": "Group 2 hydroxide solubility",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPages": [
+        27
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.2",
+      "marks": 1,
+      "editorialTopic": "Aluminium oxide amphoteric reaction",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPages": [
+        27
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.3",
+      "marks": 3,
+      "editorialTopic": "Sulfur oxide solution analysis",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPages": [
+        28
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.4",
+      "marks": 2,
+      "editorialTopic": "Phosphorus mass spectrum",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPages": [
+        29
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.5",
+      "marks": 1,
+      "editorialTopic": "Phosphorus oxide neutralisation",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPages": [
+        29
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.6",
+      "marks": 1,
+      "editorialTopic": "Displayed formula of phosphorus acid",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPages": [
+        29
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": true,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "5.7",
+      "marks": 6,
+      "editorialTopic": "Bonding and intermolecular force comparison",
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPages": [
+        30,
+        31
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "levels-of-response",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.1",
+      "marks": 1,
+      "editorialTopic": "Chlorine water treatment considerations",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPages": [
+        32
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.2",
+      "marks": 2,
+      "editorialTopic": "Chlorine disproportionation",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPages": [
+        32
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.3",
+      "marks": 2,
+      "editorialTopic": "Halogen displacement",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPages": [
+        32
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.4",
+      "marks": 3,
+      "editorialTopic": "Halide redox and oxidising-agent role",
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPages": [
+        33
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.5",
+      "marks": 3,
+      "editorialTopic": "Halide analysis",
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPages": [
+        34
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.6",
+      "marks": 3,
+      "editorialTopic": "Electron-pair repulsion and ion geometry",
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPages": [
+        34
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": true,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "6.7",
+      "marks": 1,
+      "editorialTopic": "Titanium extraction equation",
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPages": [
+        35
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.1",
+      "marks": 2,
+      "editorialTopic": "Transition-metal complex colour",
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPages": [
+        36
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.2",
+      "marks": 2,
+      "editorialTopic": "Photon energy and frequency",
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPages": [
+        36
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.3",
+      "marks": 3,
+      "editorialTopic": "Changing complex colour",
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPages": [
+        36
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "multi-mark",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.4",
+      "marks": 1,
+      "editorialTopic": "Coordination geometry",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPages": [
+        37
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.5",
+      "marks": 1,
+      "editorialTopic": "Ligand exchange",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPages": [
+        37
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.6",
+      "marks": 2,
+      "editorialTopic": "Complex colour and ligand exchange",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPages": [
+        37
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "7.7",
+      "marks": 1,
+      "editorialTopic": "Complex identification from reaction scheme",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPages": [
+        37
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "8.1",
+      "marks": 1,
+      "editorialTopic": "Oxidising agent in electrochemical cell",
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPages": [
+        38
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "8.2",
+      "marks": 1,
+      "editorialTopic": "Porous separator in a cell",
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPages": [
+        38
+      ],
+      "requiresOriginalFigureTableOrScheme": true,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "8.3",
+      "marks": 1,
+      "editorialTopic": "Rechargeable cell reaction direction",
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPages": [
+        38
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "8.4",
+      "marks": 2,
+      "editorialTopic": "Fuel-cell electrode half-equation and potential",
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPages": [
+        39
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    },
+    {
+      "id": "8.5",
+      "marks": 1,
+      "editorialTopic": "Fuel-cell EMF comparison",
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPages": [
+        39
+      ],
+      "requiresOriginalFigureTableOrScheme": false,
+      "responseRequiresDiagramOrDisplayedFormula": false,
+      "assessmentType": "short-answer",
+      "exactSpecificationSubtopicCode": null,
+      "partSpecificRubricFullyVerified": false,
+      "studentVisiblePracticeCreated": false
+    }
+  ]
+}

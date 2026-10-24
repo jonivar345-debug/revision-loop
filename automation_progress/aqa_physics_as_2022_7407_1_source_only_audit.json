@@ -1,0 +1,658 @@
+{
+  "schema": "aqa-source-only-part-and-spec-mapping-v1",
+  "created": "2026-10-24",
+  "examBoard": "AQA",
+  "qualification": "AS",
+  "subject": "Physics",
+  "series": "June",
+  "year": 2022,
+  "paper": "7407/1",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74071-QP-JUN22.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74071-MS-JUN22.PDF",
+  "markSchemeVersion": "1.0 Final",
+  "specificationSources": [
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/particles-and-radiation",
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves",
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/electricity"
+  ],
+  "questionPaperPdfPages": 28,
+  "markSchemePdfPages": 32,
+  "officialPaperMarks": 70,
+  "sourcePartCount": 29,
+  "questionTotals": [
+    {
+      "question": "01",
+      "parts": 3,
+      "marks": 6
+    },
+    {
+      "question": "02",
+      "parts": 3,
+      "marks": 6
+    },
+    {
+      "question": "03",
+      "parts": 4,
+      "marks": 8
+    },
+    {
+      "question": "04",
+      "parts": 2,
+      "marks": 9
+    },
+    {
+      "question": "05",
+      "parts": 2,
+      "marks": 5
+    },
+    {
+      "question": "06",
+      "parts": 4,
+      "marks": 9
+    },
+    {
+      "question": "07",
+      "parts": 5,
+      "marks": 13
+    },
+    {
+      "question": "08",
+      "parts": 6,
+      "marks": 14
+    }
+  ],
+  "sourceOnly": true,
+  "studentFacingQuestionCountAdded": 0,
+  "originalQuestionTextIncluded": false,
+  "officialRubricTextIncluded": false,
+  "independentVerification": "Question-part numbering, mark totals and 1-based PDF page locations checked against official AQA QP and final MS; specification codes correspond to official AQA AS headings. Topic-to-code links are editorial mappings, not official AQA per-question classifications. Full marking rubrics and student-visible equivalents remain outstanding.",
+  "releaseStatus": "non-executable metadata; no student-facing questions, answers, scoring changes or live deployment",
+  "parts": [
+    {
+      "id": "aqa_phy_as22_p1_q01_1",
+      "sourcePart": "01.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "editorialTopic": "Conservation quantities in a strong particle interaction",
+      "specificationSubtopicCodes": [
+        "3.2.1.7",
+        "3.2.1.5"
+      ],
+      "assessmentType": "table",
+      "markingCaution": "Treat all table entries as a combined allocation; do not assume one mark per row.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q01_2",
+      "sourcePart": "01.2",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "editorialTopic": "Identifying quark composition of a baryon",
+      "specificationSubtopicCodes": [
+        "3.2.1.6"
+      ],
+      "assessmentType": "multiple-choice",
+      "markingCaution": "One selected answer only; contradictory choices are not creditable.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q01_3",
+      "sourcePart": "01.3",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "editorialTopic": "Comparing specific charge of two mesons",
+      "specificationSubtopicCodes": [
+        "3.2.1.5",
+        "3.2.1.7"
+      ],
+      "assessmentType": "explanation",
+      "markingCaution": "Dependent inference; follow-through from the preceding table must be considered.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q02_1",
+      "sourcePart": "02.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 8,
+      "editorialTopic": "Electron-impact ionisation",
+      "specificationSubtopicCodes": [
+        "3.2.2.2"
+      ],
+      "assessmentType": "explanation",
+      "markingCaution": "Do not equate excitation with loss of an electron; conflicting mechanisms invalidate credit.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q02_2",
+      "sourcePart": "02.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 9,
+      "editorialTopic": "Proton, neutron and isotope composition",
+      "specificationSubtopicCodes": [
+        "3.2.1.1"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Award valid isotope method even if the final neutron count is wrong.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q02_3",
+      "sourcePart": "02.3",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 10,
+      "editorialTopic": "Inferring isotope proportions from molecular mass distribution",
+      "specificationSubtopicCodes": [
+        "3.2.1.1"
+      ],
+      "assessmentType": "reasoning",
+      "markingCaution": "Distinguish molecular proportions from atomic isotope proportions.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q03_1",
+      "sourcePart": "03.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 11,
+      "editorialTopic": "Frequency and pulse duration",
+      "specificationSubtopicCodes": [
+        "3.3.1.1"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Recognise frequency-times-time or reciprocal-period methods.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q03_2",
+      "sourcePart": "03.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 12,
+      "editorialTopic": "Round-trip propagation time and distance",
+      "specificationSubtopicCodes": [
+        "3.3.1.1"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Round-trip travel requires halving the total propagation distance.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q03_3",
+      "sourcePart": "03.3",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 13,
+      "editorialTopic": "Refractive index from ray geometry",
+      "specificationSubtopicCodes": [
+        "3.3.2.3"
+      ],
+      "assessmentType": "diagram-calculation",
+      "markingCaution": "Angle measured to the normal, not the surface; permit supported alternative angle conventions.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q03_4",
+      "sourcePart": "03.4",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 14,
+      "editorialTopic": "Wave speed and wavelength inside a medium",
+      "specificationSubtopicCodes": [
+        "3.3.2.3",
+        "3.3.1.1"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Consequence of an earlier refractive-index answer can earn follow-through.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q04_1",
+      "sourcePart": "04.1",
+      "officialMarks": 6,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 15,
+      "editorialTopic": "Photoelectric threshold, emission rate and intensity",
+      "specificationSubtopicCodes": [
+        "3.2.2.1"
+      ],
+      "assessmentType": "level-of-response",
+      "markingCaution": "Apply the holistic three-level descriptor, not a six-keyword checklist.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q04_2",
+      "sourcePart": "04.2",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 16,
+      "editorialTopic": "Work function using the photoelectric equation",
+      "specificationSubtopicCodes": [
+        "3.2.2.1"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Credit correct photon-energy conversion and method; check consistent energy units.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q05_1",
+      "sourcePart": "05.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 17,
+      "editorialTopic": "Locating wave behaviour in electron diffraction apparatus",
+      "specificationSubtopicCodes": [
+        "3.2.2.4"
+      ],
+      "assessmentType": "diagram-explanation",
+      "markingCaution": "An unsupported location or description of particle behaviour cannot receive both marks.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q05_2",
+      "sourcePart": "05.2",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 18,
+      "editorialTopic": "Electron momentum, de Broglie wavelength and diffraction",
+      "specificationSubtopicCodes": [
+        "3.2.2.4"
+      ],
+      "assessmentType": "explanation",
+      "markingCaution": "Distinguish decreased wavelength from increased frequency of a light wave.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q06_1",
+      "sourcePart": "06.1",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 19,
+      "editorialTopic": "Equilibrium using moments of forces",
+      "specificationSubtopicCodes": [
+        "3.4.1.2"
+      ],
+      "assessmentType": "multistep",
+      "markingCaution": "Several valid pivot choices and force-distribution methods; allow method credit.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q06_2",
+      "sourcePart": "06.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 20,
+      "editorialTopic": "Strain, extension and graphical interpolation",
+      "specificationSubtopicCodes": [
+        "3.4.2.2"
+      ],
+      "assessmentType": "graph-calculation",
+      "markingCaution": "Check extension from strain and tolerate graph-reading intervals.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q06_3",
+      "sourcePart": "06.3",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 20,
+      "editorialTopic": "Stress from Young modulus and strain",
+      "specificationSubtopicCodes": [
+        "3.4.2.2"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "One-mark answer; no extra unsupported method requirements.",
+      "dependsOnVisual": false,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q06_4",
+      "sourcePart": "06.4",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 21,
+      "editorialTopic": "Sketching changed cable extension graph",
+      "specificationSubtopicCodes": [
+        "3.4.2.2"
+      ],
+      "assessmentType": "graph-drawing",
+      "markingCaution": "Requires graph position and slope; cannot auto-mark from text alone.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q07_1",
+      "sourcePart": "07.1",
+      "officialMarks": 1,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 22,
+      "editorialTopic": "Resolving weight parallel to an inclined plane",
+      "specificationSubtopicCodes": [
+        "3.4.1.1"
+      ],
+      "assessmentType": "expression",
+      "markingCaution": "Accept mg sin(theta) or equivalent, not the perpendicular component.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q07_2",
+      "sourcePart": "07.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 23,
+      "editorialTopic": "Cyclist power and gradient of slope",
+      "specificationSubtopicCodes": [
+        "3.4.1.7"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Follow-through from the resolved component in the preceding part is explicit.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q07_3",
+      "sourcePart": "07.3",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 24,
+      "editorialTopic": "Power along alternative route up a hill",
+      "specificationSubtopicCodes": [
+        "3.4.1.7",
+        "3.4.1.8"
+      ],
+      "assessmentType": "reasoning",
+      "markingCaution": "Accept multiple physical arguments but reject conflicting power comparisons.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q07_4",
+      "sourcePart": "07.4",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 25,
+      "editorialTopic": "Instantaneous acceleration from velocity-time graph tangent",
+      "specificationSubtopicCodes": [
+        "3.4.1.3"
+      ],
+      "assessmentType": "graph-calculation",
+      "markingCaution": "A tangent construction is required for full credit; use published gradient tolerance.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q07_5",
+      "sourcePart": "07.5",
+      "officialMarks": 4,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 26,
+      "editorialTopic": "Gravitational energy transfer and increasing resistance",
+      "specificationSubtopicCodes": [
+        "3.4.1.8"
+      ],
+      "assessmentType": "explanation",
+      "markingCaution": "The explanation must refer to energy transfers rather than forces alone.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q08_1",
+      "sourcePart": "08.1",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 27,
+      "editorialTopic": "Potential divider and lamp resistance",
+      "specificationSubtopicCodes": [
+        "3.5.1.5"
+      ],
+      "assessmentType": "circuit-calculation",
+      "markingCaution": "Distinguish voltage across the lamp from the variable resistor.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q08_2",
+      "sourcePart": "08.2",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 28,
+      "editorialTopic": "Reading current-voltage graph to calculate resistance",
+      "specificationSubtopicCodes": [
+        "3.5.1.2"
+      ],
+      "assessmentType": "graph-calculation",
+      "markingCaution": "Allow graph reading within the published current interval.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q08_3",
+      "sourcePart": "08.3",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 29,
+      "editorialTopic": "Filament resistance and lattice vibrations",
+      "specificationSubtopicCodes": [
+        "3.5.1.2"
+      ],
+      "assessmentType": "explanation",
+      "markingCaution": "Do not credit an account claiming current falls as voltage rises.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q08_4",
+      "sourcePart": "08.4",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 30,
+      "editorialTopic": "Equivalent resistance of parallel branches",
+      "specificationSubtopicCodes": [
+        "3.5.1.4"
+      ],
+      "assessmentType": "circuit-calculation",
+      "markingCaution": "Accept parallel resistance or valid total-current method.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q08_5",
+      "sourcePart": "08.5",
+      "officialMarks": 2,
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 31,
+      "editorialTopic": "Electrical power with previous resistance result",
+      "specificationSubtopicCodes": [
+        "3.5.1.4"
+      ],
+      "assessmentType": "calculation",
+      "markingCaution": "Error carried forward from preceding total resistance is allowed.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    },
+    {
+      "id": "aqa_phy_as22_p1_q08_6",
+      "sourcePart": "08.6",
+      "officialMarks": 3,
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 32,
+      "editorialTopic": "Circuit voltage range and energy efficiency",
+      "specificationSubtopicCodes": [
+        "3.5.1.5",
+        "3.5.1.4"
+      ],
+      "assessmentType": "evaluation",
+      "markingCaution": "Two claims must be evaluated separately; distinguish wider range from lower efficiency.",
+      "dependsOnVisual": true,
+      "sourceOnly": true,
+      "studentFacing": false,
+      "originalQuestionTextIncluded": false,
+      "officialRubricTextIncluded": false,
+      "originalPracticeCreated": false,
+      "fullRubricIndependentlyVerified": false
+    }
+  ]
+}

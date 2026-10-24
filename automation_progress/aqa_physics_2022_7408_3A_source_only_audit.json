@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "type": "official-source-only-question-part-inventory",
+  "qualification": "A-level",
+  "subject": "Physics",
+  "specification": "7408",
+  "year": 2022,
+  "series": "June",
+  "paper": "7408/3A",
+  "paperTitle": "Paper 3 Section A: Practical skills and data analysis",
+  "partOfCombinedPaper3": true,
+  "compulsorySectionMarks": 45,
+  "requiredOptionalSectionBMarks": 35,
+  "totalForCandidateTakingThisSectionAndOneOption": 80,
+  "numberedQuestions": 4,
+  "partCount": 16,
+  "sectionMarks": 45,
+  "questionTotals": [
+    8,
+    7,
+    11,
+    19
+  ],
+  "officialQuestionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083A-QP-JUN22.PDF",
+  "officialMarkSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-74083A-MS-JUN22.PDF",
+  "questionPaperVerificationCopyUrl": "https://school.ninja/documents/64634/pdf",
+  "questionPaperPages": 24,
+  "markSchemePages": 21,
+  "markSchemeVersion": "1.0 Final",
+  "verification": {
+    "officialMarkSchemeOpenedAndInspected": true,
+    "questionPaperOfficialHostDirectFetchSucceeded": false,
+    "questionPaperPageReferencesCheckedAgainstRenderedOfficialDocumentOnSecondaryHost": true,
+    "marksReconciledAgainstQuestionPaperAndFinalMarkScheme": true,
+    "allQuestionPartsIndividuallyChecked": true,
+    "exactSpecificationCodesChecked": false,
+    "fullMarkingRubricsDigitised": false,
+    "copyrightSafeOriginalPlayableEquivalentsCreated": 0,
+    "note": "The original 24-page AQA paper was inspected via a secondary host because the official-host question-paper request timed out; final mark scheme was inspected directly on AQA. Original editorial labels only; no official question stems, figures or answers reproduced."
+  },
+  "globalMarkingConsiderations": [
+    "Mark valid methods and mathematical equivalents, not keywords alone; reject contradictory statements according to the official scheme.",
+    "Credit independent method marks and eligible follow-through, while respecting explicit dependent marks and question-specific caps.",
+    "Where graphs, apparatus diagrams or drawn extrapolations are essential, a plain text answer cannot establish the drawing mark.",
+    "Respect alternative experimental designs in 02.1 and 02.2; the experimental constraints in 02.2 prevent mixed-variable plans.",
+    "Do not treat a correct isolated final number as proof of a required show-that explanation, data interpretation or graphical method.",
+    "Check numerical uncertainty, units, powers of ten, graph gradients, and appropriate significant figures in practical questions."
+  ],
+  "copyrightNotice": "AQA owns the question papers and mark schemes. This metadata contains independently written brief topic summaries, part references, mark counts, page pointers and assessment cautions only. Use the official links to view the originals.",
+  "parts": [
+    {
+      "originalPartReference": "01.1",
+      "marks": 1,
+      "originalShortSkillLabel": "Oscilloscope vertical position control",
+      "broadTopic": "oscilloscope-controls",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        6
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Single-option identification; avoid awarding marks to competing selections.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "01.2",
+      "marks": 3,
+      "originalShortSkillLabel": "Wave transit speed from oscilloscope trace",
+      "broadTopic": "waves-oscilloscope",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        6
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Round-trip distance and contact-time scale must be interpreted; partial credit for consistent intermediate method.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "01.3",
+      "marks": 4,
+      "originalShortSkillLabel": "Changed rod length and display time-base",
+      "broadTopic": "waves-oscilloscope",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        7
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Two linked waveform effects plus quantitative time-base adjustment; incorrect trace/wavelength terminology can invalidate a claim.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "02.1",
+      "marks": 2,
+      "originalShortSkillLabel": "Parallax-free pin and ruler measurement",
+      "broadTopic": "practical-measurement",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        8
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Mirror and set-square methods are both acceptable; diagrams/annotations can supply evidence.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "02.2",
+      "marks": 5,
+      "originalShortSkillLabel": "Young modulus graphical experimental design",
+      "broadTopic": "young-modulus",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        9,
+        10
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Only one independent variable; accept alternative valid plots, control choices and gradient/intercept methods; inconsistent variable plans must not receive full marks.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "03.1",
+      "marks": 1,
+      "originalShortSkillLabel": "Soft conductive material and calliper distortion",
+      "broadTopic": "measurement-limitations",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        11
+      ],
+      "figureOrGraphContextRequired": false,
+      "markingRisk": "Reject conflation of deformation and density change; neutral wording differs from contradictory wording.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "03.2",
+      "marks": 2,
+      "originalShortSkillLabel": "Repeated diameter readings and uncertainty",
+      "broadTopic": "uncertainty",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        12
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Both mean/half-range routes can support method; rounding and rejected measurements matter.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "03.3",
+      "marks": 4,
+      "originalShortSkillLabel": "Uncertainty propagation for cylinder volume",
+      "broadTopic": "uncertainty",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPages": [
+        13
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Accept equivalent volume and absolute-uncertainty routes with follow-through; units and powers of ten must be checked.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "03.4",
+      "marks": 4,
+      "originalShortSkillLabel": "Graph gradient and resistivity",
+      "broadTopic": "resistivity",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPages": [
+        14
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "One mark requires a drawn line; numerical gradient, resistivity and unit are separately assessed.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.1",
+      "marks": 2,
+      "originalShortSkillLabel": "Testing inverse proportionality using plotted data",
+      "broadTopic": "gas-laws-data-analysis",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPages": [
+        15
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "A numerical comparison is required; qualitative unsupported statements cannot gain reasoning mark.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.2",
+      "marks": 3,
+      "originalShortSkillLabel": "Pressure difference and force balance in inverted piston",
+      "broadTopic": "gas-pressure-forces",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPages": [
+        16
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Must explain equilibrium and pressure equalisation; do not credit pressure=force or vague suction.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.3",
+      "marks": 4,
+      "originalShortSkillLabel": "Extrapolating a nonlinear graph for inverted piston",
+      "broadTopic": "graph-extrapolation",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPages": [
+        17
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Drawing is essential; numerical result depends on curve/line method, with method-specific caps.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.4",
+      "marks": 2,
+      "originalShortSkillLabel": "Reading a liquid meniscus and scale",
+      "broadTopic": "measurement-reading",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPages": [
+        18
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Error diagnosis and numerical corrected reading are independent; vague meniscus language insufficient.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.5",
+      "marks": 3,
+      "originalShortSkillLabel": "Logarithmic gradient evidence for Boyle law",
+      "broadTopic": "boyle-law",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPages": [
+        19
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Signed gradient and algebraic inverse-proportionality interpretation required; accept valid alternative rearrangements.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.6",
+      "marks": 3,
+      "originalShortSkillLabel": "Log-scale interpolation and volume calculation",
+      "broadTopic": "boyle-law",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPages": [
+        20
+      ],
+      "figureOrGraphContextRequired": true,
+      "markingRisk": "Accept consistent graph read-offs and alternate log/antilog calculations; penalise false intercept interpretations.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    },
+    {
+      "originalPartReference": "04.7",
+      "marks": 2,
+      "originalShortSkillLabel": "Isothermal control in gas-law experiment",
+      "broadTopic": "experimental-controls",
+      "exactSpecificationSubtopicCode": null,
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPages": [
+        21
+      ],
+      "figureOrGraphContextRequired": false,
+      "markingRisk": "State temperature and a feasible procedure to keep it constant; independent credit as per official scheme.",
+      "officialPartMarksChecked": true,
+      "originalQuestionCopied": false,
+      "studentVisiblePracticeCreated": false,
+      "workedAnswerCreated": false,
+      "exactPartRubricDigitised": false
+    }
+  ]
+}

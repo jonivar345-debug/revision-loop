@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "scope": "Copyright-safe original AQA source question-part reference inventory only, NOT reproduced student-facing questions or official mark-scheme answers",
+  "subject": "Maths",
+  "qualification": "A-level",
+  "paper": "7357/1",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "internalPdfHeading": "June 2021",
+  "maximumMarks": 100,
+  "numberedQuestions": 15,
+  "partCount": 39,
+  "totalMarks": 100,
+  "questionTotals": [
+    {
+      "question": "01",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "02",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "03",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "04",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "05",
+      "parts": 2,
+      "marks": 6
+    },
+    {
+      "question": "06",
+      "parts": 2,
+      "marks": 7
+    },
+    {
+      "question": "07",
+      "parts": 4,
+      "marks": 7
+    },
+    {
+      "question": "08",
+      "parts": 3,
+      "marks": 9
+    },
+    {
+      "question": "09",
+      "parts": 8,
+      "marks": 15
+    },
+    {
+      "question": "10",
+      "parts": 2,
+      "marks": 8
+    },
+    {
+      "question": "11",
+      "parts": 1,
+      "marks": 8
+    },
+    {
+      "question": "12",
+      "parts": 2,
+      "marks": 8
+    },
+    {
+      "question": "13",
+      "parts": 3,
+      "marks": 8
+    },
+    {
+      "question": "14",
+      "parts": 4,
+      "marks": 10
+    },
+    {
+      "question": "15",
+      "parts": 4,
+      "marks": 10
+    }
+  ],
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73571-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-73571-MS-NOV21.PDF",
+  "questionPaperPdfPages": 36,
+  "markSchemePdfPages": 25,
+  "markingPrinciples": [
+    "Official mark scheme separates method M, accuracy A, independent B, reasoning R, explanation E and follow-through F; do not model every mark as a separate keyword.",
+    "Where a valid final answer could reasonably be obtained without working and no method is explicitly required, official marking guidance can award full marks; where specified method/justification is required it must be shown.",
+    "Question 05(b) has follow-through from the perpendicular-line method in 05(a), with a distance formula method stage and final accuracy mark.",
+    "Question 07(a) requires sign-change and bracket justification; question 07(d) requires a sufficiently narrow root interval.",
+    "Question 08(a) and 10(a)/(b) explicitly request proofs/particular methods, not just memorised final results.",
+    "Question 09(b)(ii) involves an actual plotted graph, not a plain-text-only answer; 09(c)(i) uses measured graph gradient.",
+    "Question 11 uses differential equations plus a rigorous one-axis-intercept argument; the final intercept alone is not all eight marks.",
+    "Question 12(a) requires implicit differentiation and proof of stated gradient; part (b) follows through the point and gradient.",
+    "Question 13(c) requires a divisibility argument, not merely expanded polynomial arithmetic.",
+    "Question 14(b)(ii) carries an explicit substitution proof and correct transformed bounds.",
+    "Question 15(c) explains why a local small-angle approximation needs periodic shifting for distant limits."
+  ],
+  "verification": "Source QP bracketed part marks cross-checked against 25-page published final AQA mark scheme including mark-scheme part totals and PDF screenshots: 15 questions total 100. Some parts are sub-labelled (b)(i) etc; recorded IDs are editorial locators. This metadata does NOT certify student-facing paper coverage or authored practice.",
+  "copyrightNote": "Only source location identifiers, published mark totals, neutral original skill labels, PDF page references and marking categories; no original AQA question prompts, choice options, answers, diagrams or long mark scheme passages copied.",
+  "parts": [
+    {
+      "id": "01",
+      "marks": 1,
+      "topic": "Quadratic sign inequality, single selected option",
+      "questionPaperPdfPage": 1,
+      "markSchemePdfPage": 5,
+      "assessmentType": "single-choice",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "02",
+      "marks": 1,
+      "topic": "Differentiate composite logarithmic expression, single selected option",
+      "questionPaperPdfPage": 1,
+      "markSchemePdfPage": 5,
+      "assessmentType": "single-choice",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "03",
+      "marks": 1,
+      "topic": "Change of scale in convergent geometric series",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 5,
+      "assessmentType": "single-choice",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "04",
+      "marks": 1,
+      "topic": "Logical negation needed for contradiction argument",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 5,
+      "assessmentType": "single-choice",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "05.a",
+      "marks": 2,
+      "topic": "Equation of a perpendicular line through a point",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "05.b",
+      "marks": 4,
+      "topic": "Shortest distance from point to given line",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "follow-through-calculation",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "06.a",
+      "marks": 4,
+      "topic": "Find unknown arithmetic sequence initial term and difference",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 7,
+      "assessmentType": "simultaneous-equations-method",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "06.b",
+      "marks": 3,
+      "topic": "Equate two arithmetic-series sums to obtain index",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 7,
+      "assessmentType": "follow-through-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "07.a",
+      "marks": 2,
+      "topic": "Numerical root bracketing via sign change",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 8,
+      "assessmentType": "method-and-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "07.b",
+      "marks": 2,
+      "topic": "Rearrange nonlinear equation into iterative form",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 8,
+      "assessmentType": "method-and-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "07.c",
+      "marks": 2,
+      "topic": "Compute three successive fixed-point iterations",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 9,
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "07.d",
+      "marks": 1,
+      "topic": "Give sufficiently narrow interval containing the root",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 9,
+      "assessmentType": "reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "08.a",
+      "marks": 4,
+      "topic": "Derive reciprocal-trigonometric quadratic using identities",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 10,
+      "assessmentType": "identity-proof",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "08.b",
+      "marks": 3,
+      "topic": "Solve reciprocal-trigonometric equation over full interval",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 10,
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "08.c",
+      "marks": 2,
+      "topic": "Apply compound-angle transformation to a restricted trig solution",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 11,
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "09.a",
+      "marks": 3,
+      "topic": "Linearise an exponential model using logarithms",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 12,
+      "assessmentType": "method-accuracy-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "09.b.i",
+      "marks": 1,
+      "topic": "Complete transformed logarithm table",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 12,
+      "assessmentType": "data-transformation",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "09.b.ii",
+      "marks": 2,
+      "topic": "Plot transformed points and fit a straight trend line",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 13,
+      "assessmentType": "graph",
+      "requiresOriginalGraphOrDiagram": true,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "09.c.i",
+      "marks": 2,
+      "topic": "Estimate model exponent from measured straight-line gradient",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 13,
+      "assessmentType": "graph-and-calculation",
+      "requiresOriginalGraphOrDiagram": true,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "09.c.ii",
+      "marks": 1,
+      "topic": "Find exponential initial-value constant",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 14,
+      "assessmentType": "calculation",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "09.d",
+      "marks": 2,
+      "topic": "Extrapolate model prediction to later date",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 14,
+      "assessmentType": "modelling-calculation",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "09.e",
+      "marks": 3,
+      "topic": "Determine threshold-crossing date from exponential model",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 15,
+      "assessmentType": "logarithmic-calculation",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "09.f",
+      "marks": 1,
+      "topic": "Explain a limitation of long-term extrapolation",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 15,
+      "assessmentType": "modelling-critique",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "10.a",
+      "marks": 3,
+      "topic": "Differentiate tangent by quotient rule and identity",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 16,
+      "assessmentType": "method-accuracy-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "10.b",
+      "marks": 5,
+      "topic": "Calculate area bounded by squared tangent curve and line",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 16,
+      "assessmentType": "integration-proof",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "11",
+      "marks": 8,
+      "topic": "Separate variables and prove unique intercept with axis",
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 17,
+      "assessmentType": "multi-stage-proof",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "12.a",
+      "marks": 6,
+      "topic": "Implicit differentiation at x-axis intersection",
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 18,
+      "assessmentType": "multi-stage-derivative",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "12.b",
+      "marks": 2,
+      "topic": "Equation of normal to implicitly defined curve",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 18,
+      "assessmentType": "follow-through-line",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "13.a",
+      "marks": 2,
+      "topic": "Use factor theorem to verify linear factor",
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 19,
+      "assessmentType": "method-and-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "13.b",
+      "marks": 3,
+      "topic": "Factor cubic polynomial fully",
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPage": 19,
+      "assessmentType": "algebraic-method",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "13.c",
+      "marks": 3,
+      "topic": "Proof of integer divisibility via consecutive factors",
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPage": 20,
+      "assessmentType": "method-and-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "14.a",
+      "marks": 5,
+      "topic": "Gradient at parameter-defined axis crossing",
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPage": 21,
+      "assessmentType": "parametric-derivative",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "14.b.i",
+      "marks": 1,
+      "topic": "Find x-bound for enclosed parametric area",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 21,
+      "assessmentType": "follow-through",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "14.b.ii",
+      "marks": 3,
+      "topic": "Transform area integral to parameter variable",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 21,
+      "assessmentType": "substitution-proof",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "14.b.iii",
+      "marks": 1,
+      "topic": "Evaluate definite polynomial area integral",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPage": 22,
+      "assessmentType": "numerical-result",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "15.a",
+      "marks": 3,
+      "topic": "Use small-angle approximations to justify limit expression",
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 23,
+      "assessmentType": "method-and-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "15.b",
+      "marks": 4,
+      "topic": "Approximate area using local series and definite integration",
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPage": 23,
+      "assessmentType": "integration-and-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    },
+    {
+      "id": "15.c.i",
+      "marks": 1,
+      "topic": "Recognise range where small-angle approximation invalid",
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPage": 23,
+      "assessmentType": "explanation",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": false
+    },
+    {
+      "id": "15.c.ii",
+      "marks": 2,
+      "topic": "Use periodicity to shift an integral interval",
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPage": 24,
+      "assessmentType": "periodic-reasoning",
+      "requiresOriginalGraphOrDiagram": false,
+      "requiresMethodOrReasoning": true
+    }
+  ]
+}

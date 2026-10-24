@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "subject": "Physics",
+  "qualification": "A-level",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "paper": "7408/3BA",
+  "section": "B",
+  "option": "Astrophysics",
+  "totalMarks": 35,
+  "numberedQuestions": 5,
+  "partCount": 12,
+  "note": "Optional AQA Physics Paper 3 Section B Option A only (35 marks). Pair with the compulsory 7408/3A (45 marks) for an 80-mark Paper 3 for a student taking this option. Do NOT sum multiple Section B options, or treat this optional section as compulsory for all students. This is source reference METADATA, not student-facing practice.",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BA-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BA-MS-NOV21.PDF",
+  "questionPaperPdfPages": 16,
+  "markSchemePdfPages": 12,
+  "questionTotals": [
+    {
+      "question": "01",
+      "partCount": 4,
+      "marks": 11
+    },
+    {
+      "question": "02",
+      "partCount": 2,
+      "marks": 4
+    },
+    {
+      "question": "03",
+      "partCount": 1,
+      "marks": 6
+    },
+    {
+      "question": "04",
+      "partCount": 2,
+      "marks": 6
+    },
+    {
+      "question": "05",
+      "partCount": 3,
+      "marks": 8
+    }
+  ],
+  "markingWarnings": [
+    "01.1 awards a combined mark for two distinct stellar-evolution identifications; scoring four diagram labels independently can over-award.",
+    "01.2 requires annotation on the HR diagram; typed text alone cannot verify the plotted position.",
+    "01.3 requires the transit mechanism and its application to a small planet; a contradictory description of directly seeing the planet is disallowed by the official scheme.",
+    "01.4 has five method/accuracy stages and allows specified error carried forward. Do not reduce to a single numerical keyword.",
+    "02.2 requires magnitude calculation and correct comparison with naked-eye visibility; a number alone may omit conclusion marks.",
+    "03 is a holistic six-mark levels-of-response answer involving three areas, not six independent keywords.",
+    "04.1 explanation credit depends on identifying the black hole, not a generic loss of emission.",
+    "04.2 contains a unit mark contingent on an attempted calculation; accept valid converted units only with correct conversion.",
+    "05.2 requires the wavelength-to-aperture resolution relationship, not just a claim that UV is better.",
+    "05.3 compares radio collecting power and spherical-aberration effects; the official scheme caps at two marks without a discussion of shape.",
+    "Paper mark scheme includes contradiction handling, appropriate numerical working and limited consequential credit; local auto-marking must be independently tested."
+  ],
+  "verification": "All question-part numbers and bracketed marks cross-checked against official AQA 16-page November 2021 QP and 12-page final MS (the MS internally says June 2021). Editorial topics are original paraphrases. Source links are official AQA filestore.",
+  "copyrightNote": "No copyrighted AQA question text, figures, mark scheme answers or complete answer keys reproduced. Metadata only; not a new student-visible question, model answer or verified full website paper.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 3,
+      "topic": "Stellar evolution on a Hertzsprung–Russell diagram",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "diagram-identification",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.2",
+      "marks": 1,
+      "topic": "Locate a hot luminous star on an HR diagram",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "diagram-annotation",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.3",
+      "marks": 2,
+      "topic": "Assess exoplanet transit detectability",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "assessmentType": "linked-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.4",
+      "marks": 5,
+      "topic": "Use Stefan–Boltzmann law and inverse-square flux to infer orbital radius",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "assessmentType": "multi-step-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 1,
+      "topic": "Interpret a type-Ia supernova light curve",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 8,
+      "assessmentType": "diagram-multiple-choice",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.2",
+      "marks": 3,
+      "topic": "Use apparent and absolute magnitude to assess naked-eye visibility",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 8,
+      "assessmentType": "calculation-and-conclusion",
+      "requiresFigure": false
+    },
+    {
+      "id": "03",
+      "marks": 6,
+      "topic": "Analyse stellar spectrum, absorption lines and spectral class",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 9,
+      "assessmentType": "levels-of-response",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.1",
+      "marks": 2,
+      "topic": "Explain quasar activity in terms of black-hole accretion",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 10,
+      "assessmentType": "linked-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.2",
+      "marks": 4,
+      "topic": "Use redshift and Hubble law to estimate distance with correct units",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 10,
+      "assessmentType": "multi-step-calculation-with-unit-mark",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.1",
+      "marks": 2,
+      "topic": "Explain angular resolution under Rayleigh criterion",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 11,
+      "assessmentType": "definition-and-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.2",
+      "marks": 3,
+      "topic": "Compare ultraviolet space telescope constraints and resolving power",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 11,
+      "assessmentType": "reasoned-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.3",
+      "marks": 3,
+      "topic": "Compare radio telescope collecting power, resolution and optical aberration",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 12,
+      "assessmentType": "quantitative-evaluation-from-table",
+      "requiresFigure": true
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "subject": "Physics",
+  "qualification": "A-level",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "paper": "7408/3BE",
+  "section": "B",
+  "option": "Electronics",
+  "numberedQuestions": 5,
+  "partCount": 17,
+  "totalMarks": 35,
+  "note": "35-mark optional Electronics Section B only. Each student's Paper 3 is compulsory 3A (45 marks) PLUS ONE 35-mark option selected from 3BA–3BE, not all options. Original copyrighted question/diagram content is NOT reproduced; this is metadata not student-visible exam practice.",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BE-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BE-MS-NOV21.PDF",
+  "questionPaperPdfPages": 24,
+  "markSchemePdfPages": 15,
+  "questionTotals": [
+    {
+      "question": "01",
+      "parts": 4,
+      "marks": 7
+    },
+    {
+      "question": "02",
+      "parts": 5,
+      "marks": 7
+    },
+    {
+      "question": "03",
+      "parts": 4,
+      "marks": 8
+    },
+    {
+      "question": "04",
+      "parts": 3,
+      "marks": 7
+    },
+    {
+      "question": "05",
+      "parts": 1,
+      "marks": 6
+    }
+  ],
+  "markingWarnings": [
+    "01.3 obtains the result from a transistor characteristic curve after a distinct numeric current stage; do not award full marks to a guessed voltage unsupported by the method unless the official scheme explicitly permits it.",
+    "01.4 separates current, available charge and a reasoned power/standby comparison.",
+    "02.1 is one mark for the entire correct truth-table row set; it cannot be divided into per-row marks.",
+    "02.2 depends on labelled circuit schematics and cannot be fully assessed by text-only keyword matching.",
+    "02.3 requires logical equivalence with the specified operators, so a generic Boolean expression may not satisfy every mark.",
+    "02.5 requires a consequence of the chosen implementation, not a generic 'simpler' claim.",
+    "03.3 allows a range in the graph-derived responsivity and consequential marking for calculated photocurrent.",
+    "03.4 assigns configuration, ratio and input-label marks to a drawing; a prose-only answer cannot show everything.",
+    "04.1 awards independent difference and similarity marks.",
+    "04.2 grants method marks for measured waveform timing and handles consequential duty-cycle arithmetic.",
+    "04.3 gives independent marks for frequencies of two distinct digital counter designs.",
+    "05 is six-mark LEVELS-OF-RESPONSE assessment of several radio transmission routes and explanations, not six disconnected keywords."
+  ],
+  "verification": "Source-first comparison to official AQA November 2021 Question Paper 7408/3BE and final mark scheme, PDF pages visually checked; part totals Q01=7, Q02=7, Q03=8, Q04=7, Q05=6 sum 35.",
+  "copyrightNote": "Only original editorial high-level skill summaries, official part IDs, mark counts, page references, classification. No AQA question stems, circuit diagrams or solutions reproduced.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 1,
+      "topic": "Identify an insulating layer in a field-effect transistor",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "short-identification",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.2",
+      "marks": 1,
+      "topic": "Identify a transistor terminal from schematic context",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "single-choice",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.3",
+      "marks": 2,
+      "topic": "Infer switching threshold from transistor characteristic curves",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 6,
+      "assessmentType": "graph-and-numerical",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.4",
+      "marks": 3,
+      "topic": "Use leakage current and charge capacity to evaluate power consumption",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 7,
+      "assessmentType": "multi-step-evaluation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 1,
+      "topic": "Complete a combinational-logic truth table",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 8,
+      "assessmentType": "truth-table",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.2",
+      "marks": 2,
+      "topic": "Complete an abstract detector circuit schematic",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 8,
+      "assessmentType": "circuit-diagram",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.3",
+      "marks": 2,
+      "topic": "Represent a Boolean expression using restricted logical operators",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 9,
+      "assessmentType": "Boolean-equivalence",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.4",
+      "marks": 1,
+      "topic": "Identify a logic-gate function in a given diagram",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 9,
+      "assessmentType": "short-response",
+      "requiresFigure": true
+    },
+    {
+      "id": "02.5",
+      "marks": 1,
+      "topic": "Evaluate implementation trade-offs between equivalent logic networks",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 9,
+      "assessmentType": "reason-and-consequence",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.1",
+      "marks": 1,
+      "topic": "Identify photodiode operating mode from bias",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 10,
+      "assessmentType": "short-response",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.2",
+      "marks": 1,
+      "topic": "Explain dark-current influence on optical signal-to-noise ratio",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 10,
+      "assessmentType": "linked-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.3",
+      "marks": 3,
+      "topic": "Read photodiode responsivity and calculate an electronic detector signal",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 10,
+      "assessmentType": "graph-and-multi-step-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.4",
+      "marks": 3,
+      "topic": "Analyse the required amplifier gain and diagrammatic component relationship",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPage": 11,
+      "assessmentType": "circuit-drawing",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.1",
+      "marks": 2,
+      "topic": "Compare binary-coded and Johnson decade counter outputs",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 12,
+      "assessmentType": "difference-and-similarity",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.2",
+      "marks": 3,
+      "topic": "Read oscilloscope timing to determine duty cycle and frequency",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 12,
+      "assessmentType": "diagram-and-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.3",
+      "marks": 2,
+      "topic": "Compare frequency relationships at outputs of digital counters",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 13,
+      "assessmentType": "calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "05",
+      "marks": 6,
+      "topic": "Evaluate radio-frequency transmission pathways and wave properties",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 14,
+      "assessmentType": "levels-of-response",
+      "requiresFigure": false
+    }
+  ]
+}

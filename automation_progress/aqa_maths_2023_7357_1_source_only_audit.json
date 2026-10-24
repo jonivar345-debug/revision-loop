@@ -1,0 +1,897 @@
+{
+  "schemaVersion": 1,
+  "scope": "Official source-part metadata only. Not a playable paper or reproduction of official question stems, diagrams, answer keys or mark-scheme text.",
+  "subject": "Mathematics",
+  "qualification": "A-level",
+  "specification": "7357",
+  "year": 2023,
+  "series": "June",
+  "paper": "7357/1",
+  "title": "Pure Mathematics Paper 1",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-73571-QP-JUN23.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-73571-MS-JUN23.PDF",
+  "questionPaperPdfPages": 36,
+  "markSchemePdfPages": 28,
+  "markSchemeVersion": "Final 1.1",
+  "numberedQuestions": 16,
+  "partCount": 41,
+  "totalMarks": 100,
+  "questionTotals": [
+    {
+      "question": "01",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "02",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "03",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "04",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "question": "05",
+      "parts": 2,
+      "marks": 4
+    },
+    {
+      "question": "06",
+      "parts": 1,
+      "marks": 5
+    },
+    {
+      "question": "07",
+      "parts": 2,
+      "marks": 4
+    },
+    {
+      "question": "08",
+      "parts": 1,
+      "marks": 6
+    },
+    {
+      "question": "09",
+      "parts": 4,
+      "marks": 9
+    },
+    {
+      "question": "10",
+      "parts": 4,
+      "marks": 8
+    },
+    {
+      "question": "11",
+      "parts": 5,
+      "marks": 9
+    },
+    {
+      "question": "12",
+      "parts": 3,
+      "marks": 8
+    },
+    {
+      "question": "13",
+      "parts": 4,
+      "marks": 9
+    },
+    {
+      "question": "14",
+      "parts": 5,
+      "marks": 11
+    },
+    {
+      "question": "15",
+      "parts": 2,
+      "marks": 9
+    },
+    {
+      "question": "16",
+      "parts": 4,
+      "marks": 14
+    }
+  ],
+  "officialPaperMarkTotalsVerified": true,
+  "questionPaperPartMarksChecked": true,
+  "partSpecificMarkSchemeRubricsIndependentlyChecked": false,
+  "exactSpecSubtopicMappingIndependentlyChecked": false,
+  "originalStudentFacingQuestionsCreated": 0,
+  "copyrightNote": "Original skill summaries and source locators only; consult AQA's linked PDFs for copyrighted question statements, diagrams and exact examiner marking instructions.",
+  "markingPrinciples": [
+    "Official M, A, B, R, E and follow-through F marks cannot be replaced by token/keyword counts.",
+    "Accept algebraically equivalent forms and legitimate alternative methods.",
+    "A correct answer without working can earn full marks only where official marking rules permit it; proofs and prescribed methods need evidence.",
+    "Check contradictions and incorrect signs before granting accuracy credit.",
+    "Retain manual marking/adjustment for graph sketches and other cases needing visual evidence."
+  ],
+  "verification": "Independently reconciled the 36-page AQA June 2023 question paper's 41 bracketed part marks against the 28-page final 1.1 mark scheme's 16 numbered question totals (100 marks). PDF pages are one-based. Fine-grained per-mark rubric and exact spec code checks remain pending; no student-visible paper coverage is claimed.",
+  "parts": [
+    {
+      "id": "01",
+      "question": "01",
+      "marks": 1,
+      "skill": "Binomial coefficient in a single-choice item",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPages": [
+        6
+      ],
+      "assessmentType": "single-choice",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "02",
+      "question": "02",
+      "marks": 1,
+      "skill": "Differentiate a power function",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPages": [
+        6
+      ],
+      "assessmentType": "single-choice",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "03",
+      "question": "03",
+      "marks": 1,
+      "skill": "Horizontal stretch of a logarithmic graph",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        6
+      ],
+      "assessmentType": "single-choice",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "04",
+      "question": "04",
+      "marks": 1,
+      "skill": "Small-angle cosine approximation",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPages": [
+        6
+      ],
+      "assessmentType": "single-choice",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "05(a)",
+      "question": "05",
+      "marks": 3,
+      "skill": "Trapezium-rule numerical integration",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPages": [
+        7
+      ],
+      "assessmentType": "calculation",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "05(b)",
+      "question": "05",
+      "marks": 1,
+      "skill": "Scale a numerical integral by a constant",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPages": [
+        7
+      ],
+      "assessmentType": "follow-through",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "06",
+      "question": "06",
+      "marks": 5,
+      "skill": "Logarithmic equations and admissible roots",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPages": [
+        8
+      ],
+      "assessmentType": "proof-and-calculation",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Must justify why the extraneous root is outside the logarithm's domain; do not credit a quadratic root list alone."
+    },
+    {
+      "id": "07(a)",
+      "question": "07",
+      "marks": 3,
+      "skill": "Rationalise surd denominators",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        9
+      ],
+      "assessmentType": "algebra",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "07(b)",
+      "question": "07",
+      "marks": 1,
+      "skill": "Explain why a resulting expression is rational",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPages": [
+        9
+      ],
+      "assessmentType": "reasoning-follow-through",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Award method, reasoning, accuracy and accepted equivalent forms according to the official mark scheme."
+    },
+    {
+      "id": "08",
+      "question": "08",
+      "marks": 6,
+      "skill": "Definite integration using integration by parts",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPages": [
+        10,
+        11
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "A given result must be demonstrated by integration by parts and correct limits, not accepted by final-answer keyword matching."
+    },
+    {
+      "id": "09(a(i))",
+      "question": "09",
+      "marks": 1,
+      "skill": "Midpoint of two coordinates",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        12
+      ],
+      "assessmentType": "calculation",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Equivalent perpendicular-line and circle equations must be recognised algebraically; follow-through from the learner's earlier midpoint or centre may apply."
+    },
+    {
+      "id": "09(a(ii))",
+      "question": "09",
+      "marks": 4,
+      "skill": "Equation of a perpendicular bisector",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPages": [
+        12
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Equivalent perpendicular-line and circle equations must be recognised algebraically; follow-through from the learner's earlier midpoint or centre may apply."
+    },
+    {
+      "id": "09(b(i))",
+      "question": "09",
+      "marks": 3,
+      "skill": "Circle equation from intersecting lines",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPages": [
+        12
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Equivalent perpendicular-line and circle equations must be recognised algebraically; follow-through from the learner's earlier midpoint or centre may apply."
+    },
+    {
+      "id": "09(b(ii))",
+      "question": "09",
+      "marks": 1,
+      "skill": "Count circle intersections with coordinate axes",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPages": [
+        12
+      ],
+      "assessmentType": "reasoning",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Equivalent perpendicular-line and circle equations must be recognised algebraically; follow-through from the learner's earlier midpoint or centre may apply."
+    },
+    {
+      "id": "10(a(i))",
+      "question": "10",
+      "marks": 2,
+      "skill": "Use periodicity of a sine graph to find an angle",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPages": [
+        13
+      ],
+      "assessmentType": "calculation",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Signs depend on quadrants; rejecting an otherwise correct equivalent trigonometric identity is an under-marking risk."
+    },
+    {
+      "id": "10(a(ii))",
+      "question": "10",
+      "marks": 1,
+      "skill": "Exact sine symmetry identity",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPages": [
+        13
+      ],
+      "assessmentType": "calculation",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Signs depend on quadrants; rejecting an otherwise correct equivalent trigonometric identity is an under-marking risk."
+    },
+    {
+      "id": "10(b(i))",
+      "question": "10",
+      "marks": 2,
+      "skill": "Sine identity using a quadrant constraint",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPages": [
+        13
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Signs depend on quadrants; rejecting an otherwise correct equivalent trigonometric identity is an under-marking risk."
+    },
+    {
+      "id": "10(b(ii))",
+      "question": "10",
+      "marks": 3,
+      "skill": "Cosine sign and exact value from trigonometric identities",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPages": [
+        14
+      ],
+      "assessmentType": "method-and-reasoning",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Signs depend on quadrants; rejecting an otherwise correct equivalent trigonometric identity is an under-marking risk."
+    },
+    {
+      "id": "11(a)",
+      "question": "11",
+      "marks": 1,
+      "skill": "One iteration of a recurrence relation",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPages": [
+        15
+      ],
+      "assessmentType": "algebra",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "A decreasing sequence constrains the choice of root; method and later-term accuracy are distinct."
+    },
+    {
+      "id": "11(b(i))",
+      "question": "11",
+      "marks": 3,
+      "skill": "Derive a quadratic constraint from a recurrence",
+      "questionPaperPdfPage": 14,
+      "markSchemePdfPages": [
+        15
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "A decreasing sequence constrains the choice of root; method and later-term accuracy are distinct."
+    },
+    {
+      "id": "11(b(ii))",
+      "question": "11",
+      "marks": 3,
+      "skill": "Select the admissible recurrence parameter and calculate later terms",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPages": [
+        16
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "A decreasing sequence constrains the choice of root; method and later-term accuracy are distinct."
+    },
+    {
+      "id": "11(c(i))",
+      "question": "11",
+      "marks": 1,
+      "skill": "Fixed-point equation for a convergent recurrence",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPages": [
+        16
+      ],
+      "assessmentType": "algebra",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "A decreasing sequence constrains the choice of root; method and later-term accuracy are distinct."
+    },
+    {
+      "id": "11(c(ii))",
+      "question": "11",
+      "marks": 1,
+      "skill": "Solve a recurrence fixed point",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPages": [
+        16
+      ],
+      "assessmentType": "calculation",
+      "requiresOriginalFigureOrContext": false,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "A decreasing sequence constrains the choice of root; method and later-term accuracy are distinct."
+    },
+    {
+      "id": "12(a)",
+      "question": "12",
+      "marks": 1,
+      "skill": "Initial separation between two periodic motion models",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPages": [
+        17
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Accept equivalent phase shifts and positive-amplitude representations; later parts can follow through an earlier value."
+    },
+    {
+      "id": "12(b)",
+      "question": "12",
+      "marks": 5,
+      "skill": "Combine sine and cosine into phase-amplitude form",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPages": [
+        17
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Accept equivalent phase shifts and positive-amplitude representations; later parts can follow through an earlier value."
+    },
+    {
+      "id": "12(c)",
+      "question": "12",
+      "marks": 2,
+      "skill": "Minimum separation from phase-amplitude model",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPages": [
+        18
+      ],
+      "assessmentType": "follow-through",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Accept equivalent phase shifts and positive-amplitude representations; later parts can follow through an earlier value."
+    },
+    {
+      "id": "13(a)",
+      "question": "13",
+      "marks": 1,
+      "skill": "Domain of an inverse cosine graph",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPages": [
+        19
+      ],
+      "assessmentType": "single-value",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "The sketch needs actual drawing evidence; inverse-graph explanation and Newton–Raphson iterations require distinct reasoning/method checks."
+    },
+    {
+      "id": "13(b(i))",
+      "question": "13",
+      "marks": 4,
+      "skill": "Sketch inverse cosine, cosine and identity curves",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPages": [
+        19
+      ],
+      "assessmentType": "drawing",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": true,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "The sketch needs actual drawing evidence; inverse-graph explanation and Newton–Raphson iterations require distinct reasoning/method checks."
+    },
+    {
+      "id": "13(b(ii))",
+      "question": "13",
+      "marks": 1,
+      "skill": "Explain inverse-function reflection and fixed-point equivalence",
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPages": [
+        19
+      ],
+      "assessmentType": "reasoning",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "The sketch needs actual drawing evidence; inverse-graph explanation and Newton–Raphson iterations require distinct reasoning/method checks."
+    },
+    {
+      "id": "13(c)",
+      "question": "13",
+      "marks": 3,
+      "skill": "Newton–Raphson iteration for a transcendental equation",
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPages": [
+        20
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "The sketch needs actual drawing evidence; inverse-graph explanation and Newton–Raphson iterations require distinct reasoning/method checks."
+    },
+    {
+      "id": "14(a(i))",
+      "question": "14",
+      "marks": 1,
+      "skill": "Differentiate an exponential with constant base",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPages": [
+        21
+      ],
+      "assessmentType": "algebra",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Exact exponential, surd and geometric-series forms matter; a graph-based rectangle claim cannot be marked from isolated tokens."
+    },
+    {
+      "id": "14(a(ii))",
+      "question": "14",
+      "marks": 2,
+      "skill": "Integrate an exponential with constant base",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPages": [
+        21
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Exact exponential, surd and geometric-series forms matter; a graph-based rectangle claim cannot be marked from isolated tokens."
+    },
+    {
+      "id": "14(b(i))",
+      "question": "14",
+      "marks": 2,
+      "skill": "Exact area of a rectangle under an exponential graph",
+      "questionPaperPdfPage": 23,
+      "markSchemePdfPages": [
+        21
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Exact exponential, surd and geometric-series forms matter; a graph-based rectangle claim cannot be marked from isolated tokens."
+    },
+    {
+      "id": "14(b(ii))",
+      "question": "14",
+      "marks": 3,
+      "skill": "Sum a finite geometric series in exact surd form",
+      "questionPaperPdfPage": 24,
+      "markSchemePdfPages": [
+        22
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Exact exponential, surd and geometric-series forms matter; a graph-based rectangle claim cannot be marked from isolated tokens."
+    },
+    {
+      "id": "14(b(iii))",
+      "question": "14",
+      "marks": 3,
+      "skill": "Limit of rectangular approximations via a definite integral",
+      "questionPaperPdfPage": 25,
+      "markSchemePdfPages": [
+        23
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Exact exponential, surd and geometric-series forms matter; a graph-based rectangle claim cannot be marked from isolated tokens."
+    },
+    {
+      "id": "15(a)",
+      "question": "15",
+      "marks": 7,
+      "skill": "Implicit differentiation and stationary-point elimination",
+      "questionPaperPdfPage": 26,
+      "markSchemePdfPages": [
+        24
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Seven-mark show-that needs actual implicit differentiation and valid elimination; final stated identity alone earns no full credit."
+    },
+    {
+      "id": "15(b)",
+      "question": "15",
+      "marks": 2,
+      "skill": "Coordinates of a stationary point from a polynomial condition",
+      "questionPaperPdfPage": 27,
+      "markSchemePdfPages": [
+        25
+      ],
+      "assessmentType": "follow-through",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Seven-mark show-that needs actual implicit differentiation and valid elimination; final stated identity alone earns no full credit."
+    },
+    {
+      "id": "16(a)",
+      "question": "16",
+      "marks": 3,
+      "skill": "Partial fractions of a difference-of-squares denominator",
+      "questionPaperPdfPage": 28,
+      "markSchemePdfPages": [
+        26
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Volume–depth conversion, differential-equation modelling, partial fractions and integration constant each require evidence; follow through earlier algebra where permitted."
+    },
+    {
+      "id": "16(b(i))",
+      "question": "16",
+      "marks": 4,
+      "skill": "Derive a differential equation from volume flow rates",
+      "questionPaperPdfPage": 29,
+      "markSchemePdfPages": [
+        27
+      ],
+      "assessmentType": "show-that",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Volume–depth conversion, differential-equation modelling, partial fractions and integration constant each require evidence; follow through earlier algebra where permitted."
+    },
+    {
+      "id": "16(b(ii))",
+      "question": "16",
+      "marks": 5,
+      "skill": "Separate variables and integrate a rational differential equation",
+      "questionPaperPdfPage": 30,
+      "markSchemePdfPages": [
+        27
+      ],
+      "assessmentType": "method-and-accuracy",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Volume–depth conversion, differential-equation modelling, partial fractions and integration constant each require evidence; follow through earlier algebra where permitted."
+    },
+    {
+      "id": "16(b(iii))",
+      "question": "16",
+      "marks": 2,
+      "skill": "Find filling time using an integrated model",
+      "questionPaperPdfPage": 30,
+      "markSchemePdfPages": [
+        28
+      ],
+      "assessmentType": "follow-through",
+      "requiresOriginalFigureOrContext": true,
+      "requiresDrawingResponse": false,
+      "sourceQuestionPaperMarkChecked": true,
+      "questionTotalCrossCheckedAgainstFinalMarkScheme": true,
+      "partSpecificRubricIndependentlyChecked": false,
+      "exactSpecCode": null,
+      "studentFacingEquivalentCreated": false,
+      "markingCaution": "Volume–depth conversion, differential-equation modelling, partial fractions and integration constant each require evidence; follow through earlier algebra where permitted."
+    }
+  ]
+}

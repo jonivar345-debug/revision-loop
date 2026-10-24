@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "workstream": "exam-bank-and-marking",
+  "owns": [
+    "exam_questions.json",
+    "paper_supplement_2016_2017.json",
+    "exam_answer_corrections.json",
+    "marking algorithms in app.js",
+    "AQA source and coverage manifests",
+    "exam marking regression tests"
+  ],
+  "companionOwns": [
+    "character and outfit assets",
+    "world and globe",
+    "location details and prices",
+    "daily challenge streak rewards",
+    "unrelated frontend"
+  ],
+  "baseline": {
+    "branch": "main",
+    "sha": "74c1e1144e11020de274ec0f2a400c67011028d7",
+    "ci": "Scanner marking regression and GitHub Pages completed successfully for baseline",
+    "source": "GitHub checked 2026-10-21"
+  },
+  "inheritedAudit": {
+    "from": "marking_quality_handover_v60.json",
+    "usableQuestionPartsReported": 1271,
+    "sourceLinkedPartsReported": 231,
+    "paperSlotsReported": 134,
+    "slotsWithSourceLinkedPartsReported": 31,
+    "emptySourceLinkedPaperSlotsReported": 103,
+    "completePapersVerifiedReported": 0,
+    "independentlyRecountedThisRun": false
+  },
+  "batches": [
+    {
+      "id": "2026-10-21-transitive-dependencies",
+      "status": "branch-change-awaiting-CI",
+      "branch": "automation/exam-dependency-chain-20261021",
+      "change": "Fix dependent method/accuracy marks being retained when a prerequisite fails later in an unordered dependency map.",
+      "reproduction": {
+        "dependencies": {
+          "1": [
+            2
+          ],
+          "2": [
+            0
+          ]
+        },
+        "rawPredictions": [
+          false,
+          true,
+          true
+        ],
+        "before": [
+          false,
+          true,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ]
+      },
+      "regression": "tests/mark-dependency-order-regression.cjs",
+      "affectedOwnedFiles": [
+        "app.js",
+        "tests/mark-dependency-order-regression.cjs",
+        ".github/workflows/marking-regression.yml"
+      ],
+      "existingQuestionIdsChanged": 0,
+      "newQuestionsAdded": 0,
+      "officialMarksReverifiedThisRun": 0,
+      "modelAnswerChecksThisRun": 0
+    }
+  ],
+  "next": [
+    "Check CI on the isolated PR, verify no unrelated files changed, then merge if green and current main is compatible.",
+    "Add per-paper per-part mapping ledger derived from current bank, explicitly marking unverified original-paper coverage.",
+    "Audit marking alternatives and contradictory answers for existing source-linked multi-part questions.",
+    "Add independently written questions for genuine uncovered 2017-2025 paper skills after verifying source papers and marks."
+  ],
+  "coordination": {
+    "doNotEditCompanionFiles": true,
+    "sharedInterface": "Only primary task edits marking algorithms inside app.js; companion should request changes through a GitHub issue/triage.",
+    "mergePolicy": "No force pushes; if conflict persists after one safe attempt, leave PR and continue independent work."
+  }
+}

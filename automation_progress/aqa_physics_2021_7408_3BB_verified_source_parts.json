@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "subject": "Physics",
+  "qualification": "A-level",
+  "year": 2021,
+  "archiveSeries": "November",
+  "sitting": "Autumn 2021",
+  "paper": "7408/3BB",
+  "section": "B",
+  "option": "Medical physics",
+  "totalMarks": 35,
+  "numberedQuestions": 5,
+  "partCount": 11,
+  "note": "2021 AQA Physics Paper 3 optional Section B Medical physics only: 35 marks. The student's full Paper 3 is the compulsory Section A (45 marks) PLUS exactly ONE selected optional Section B (35 marks) for 80 total, not a sum of all Section B options. Metadata only, no exam question stems or complete mark scheme copied.",
+  "questionPaperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BB-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74083BB-MS-NOV21.PDF",
+  "questionPaperPdfPages": 16,
+  "markSchemePdfPages": 13,
+  "questionTotals": [
+    {
+      "question": "01",
+      "parts": 4,
+      "marks": 15
+    },
+    {
+      "question": "02",
+      "parts": 1,
+      "marks": 4
+    },
+    {
+      "question": "03",
+      "parts": 2,
+      "marks": 5
+    },
+    {
+      "question": "04",
+      "parts": 2,
+      "marks": 4
+    },
+    {
+      "question": "05",
+      "parts": 2,
+      "marks": 7
+    }
+  ],
+  "markingWarnings": [
+    "01.1 and 01.2 are distinct four-mark explanations with linked scientific justifications, not bare keyword matching.",
+    "01.3 is supported by a supplied photomultiplier schematic; correct explanation must distinguish stages of electron multiplication.",
+    "01.4 grants error-carried-forward for specified intermediate half-life and decay calculations and a conclusion consistent with the calculation.",
+    "02 requires identifying medical scans from three supplied images AND explaining relevant visual evidence; cannot be safely marked from a plain-text guess alone.",
+    "03.1 includes intermediate geometric and intensity calculations with error-carried-forward for later stages.",
+    "04.1 requires a figure-based similar-triangles calculation; official source allows equivalent geometric methods.",
+    "04.2 allows distinct relevant explanations up to the two-mark cap.",
+    "05.1 is a one-mark option, must not turn into a multiple-point rubric.",
+    "05.2 is a six-mark LEVELS-OF-RESPONSE question incorporating ray diagram and reasoning; marking requires overall best-fit level, not six independent ticks, and is not fully automatable from plain text."
+  ],
+  "verification": "Source-first audit of original AQA November 2021 7408/3BB question paper, final mark scheme and PDF page screenshots. Q01=15, Q02=4, Q03=5, Q04=4, Q05=7, sum35. Editorial skill topics are new paraphrases. Do not claim these references are ready-to-answer practice questions.",
+  "copyrightNote": "Only identifiers, official mark totals, PDF page numbers, skills and marking method classifications. No copied official question stems/diagrams or model solutions.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 4,
+      "topic": "Tracer isotope half-life suitability and on-site availability",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "linked-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.2",
+      "marks": 4,
+      "topic": "Gamma-emitting tracer detection and tissue-exposure principles",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 6,
+      "assessmentType": "linked-explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "01.3",
+      "marks": 3,
+      "topic": "Scintillation detection and electron multiplication in a photomultiplier",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "assessmentType": "diagram-supported-explanation",
+      "requiresFigure": true
+    },
+    {
+      "id": "01.4",
+      "marks": 4,
+      "topic": "Distinguish biological and physical decay and evaluate a decay threshold",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 8,
+      "assessmentType": "multi-step-decay-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "02",
+      "marks": 4,
+      "topic": "Identify medical scan types using image characteristics",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 9,
+      "assessmentType": "image-comparison-and-explanation",
+      "requiresFigure": true
+    },
+    {
+      "id": "03.1",
+      "marks": 3,
+      "topic": "Convert sound power and distance into sound intensity level",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 10,
+      "assessmentType": "multi-step-logarithmic-calculation",
+      "requiresFigure": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "topic": "Explain perceived loudness variation with frequency",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 10,
+      "assessmentType": "explanation",
+      "requiresFigure": false
+    },
+    {
+      "id": "04.1",
+      "marks": 2,
+      "topic": "Use X-ray projection geometry to estimate partial-shadow size",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 11,
+      "assessmentType": "diagram-dependent-calculation",
+      "requiresFigure": true
+    },
+    {
+      "id": "04.2",
+      "marks": 2,
+      "topic": "Compare source-to-detector image sharpness for different subjects",
+      "questionPaperPdfPage": 9,
+      "markSchemePdfPage": 11,
+      "assessmentType": "reasoned-comparison",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.1",
+      "marks": 1,
+      "topic": "Interpret a correcting-lens prescription for a vision condition",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 12,
+      "assessmentType": "single-choice",
+      "requiresFigure": false
+    },
+    {
+      "id": "05.2",
+      "marks": 6,
+      "topic": "Reason about a vision defect, a correcting lens and virtual-image ray diagram",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 13,
+      "assessmentType": "levels-of-response-with-diagram",
+      "requiresFigure": true
+    }
+  ]
+}

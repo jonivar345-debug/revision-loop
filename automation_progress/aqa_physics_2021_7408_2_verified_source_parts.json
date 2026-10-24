@@ -1,0 +1,716 @@
+{
+  "schemaVersion": 1,
+  "scope": "Metadata-only audit of official AQA question references and marks. NOT student-facing question text, answer keys or new practice questions.",
+  "subject": "Physics",
+  "qualification": "A-level",
+  "paper": "7408/2",
+  "year": 2021,
+  "archiveSeries": "November",
+  "internalPaperCode": "IB/M/Jun21/7408/2",
+  "sitting": "Autumn 2021",
+  "paperUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74082-QP-NOV21.PDF",
+  "markSchemeUrl": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-74082-MS-NOV21.PDF",
+  "questionPaperPages": 44,
+  "markSchemePages": 23,
+  "numberedQuestionLabels": 31,
+  "partCount": 52,
+  "totalMarks": 85,
+  "structuredParts": 27,
+  "structuredMarks": 60,
+  "multipleChoiceParts": 25,
+  "multipleChoiceMarks": 25,
+  "questionTotals": [
+    {
+      "id": "01",
+      "parts": 5,
+      "marks": 12
+    },
+    {
+      "id": "02",
+      "parts": 5,
+      "marks": 10
+    },
+    {
+      "id": "03",
+      "parts": 6,
+      "marks": 11
+    },
+    {
+      "id": "04",
+      "parts": 3,
+      "marks": 8
+    },
+    {
+      "id": "05",
+      "parts": 4,
+      "marks": 10
+    },
+    {
+      "id": "06",
+      "parts": 4,
+      "marks": 9
+    },
+    {
+      "id": "07",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "08",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "09",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "10",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "11",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "12",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "13",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "14",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "15",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "16",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "17",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "18",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "19",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "20",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "21",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "22",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "23",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "24",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "25",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "26",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "27",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "28",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "29",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "30",
+      "parts": 1,
+      "marks": 1
+    },
+    {
+      "id": "31",
+      "parts": 1,
+      "marks": 1
+    }
+  ],
+  "markingPitfalls": [
+    "Part 01.4 requires an actual graph sketch, so keyword matching cannot certify a correct graph.",
+    "Part 02.2 can award both marks for a correct numerical final period, while valid substitution can gain method credit when arithmetic differs.",
+    "Part 02.4 requires negative gravitational potential energy for its final accuracy mark.",
+    "Part 03.3 allows different rounded temperatures based on an earlier speed value, subject to documented source conditions.",
+    "Part 03.5 supports error carried forward from the temperature in 03.3.",
+    "Part 03.6 is an experiment-figure interpretation with separate physical justification.",
+    "Part 04.3 needs a graph-derived gradient, Faraday relation, evaluation and a reasoned conclusion; source distinguishes method from accuracy marks.",
+    "Part 05.3 gives a dependent three-stage derivation, not three independent phrases.",
+    "Part 05.4 contains a correct configuration choice that depends on energy calculation/justification and a separate cost result.",
+    "Part 06.3's correct final result may receive full calculation credit without written working.",
+    "Every question in Section B (07–31) is exactly one multiple-choice mark."
+  ],
+  "copyrightNote": "Original short skill labels and structural mark metadata only; no AQA stems, diagram images, answer keys, or copied mark-scheme explanations.",
+  "validationNote": "Independently counted structured part mark brackets from the AQA official QP and cross-checked six structured question totals and one-mark MCQ key against AQA final mark scheme. Section B skill labels and PDF page references independently checked against the official QP and corrected where prior labels were inaccurate.",
+  "parts": [
+    {
+      "id": "01.1",
+      "marks": 1,
+      "section": "A",
+      "skill": "Meaning of a relative permittivity value",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 7,
+      "assessmentType": "short-explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "01.2",
+      "marks": 3,
+      "section": "A",
+      "skill": "Polarisation and capacitor behaviour",
+      "questionPaperPdfPage": 2,
+      "markSchemePdfPage": 7,
+      "assessmentType": "multi-step-explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "01.3",
+      "marks": 3,
+      "section": "A",
+      "skill": "Energy stored in a modified capacitor",
+      "questionPaperPdfPage": 3,
+      "markSchemePdfPage": 7,
+      "assessmentType": "multi-step-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "01.4",
+      "marks": 2,
+      "section": "A",
+      "skill": "Capacitance-versus-angle graph sketch",
+      "questionPaperPdfPage": 4,
+      "markSchemePdfPage": 8,
+      "assessmentType": "graph-drawing",
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "01.5",
+      "marks": 3,
+      "section": "A",
+      "skill": "Scale-up constraints in capacitor design",
+      "questionPaperPdfPage": 5,
+      "markSchemePdfPage": 8,
+      "assessmentType": "reasoned-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "02.1",
+      "marks": 2,
+      "section": "A",
+      "skill": "Derive orbital angular-speed relation",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 9,
+      "assessmentType": "mathematical-derivation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "02.2",
+      "marks": 2,
+      "section": "A",
+      "skill": "Orbital period from gravitational data",
+      "questionPaperPdfPage": 6,
+      "markSchemePdfPage": 9,
+      "assessmentType": "calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "02.3",
+      "marks": 2,
+      "section": "A",
+      "skill": "Evaluate satellite launch position",
+      "questionPaperPdfPage": 7,
+      "markSchemePdfPage": 10,
+      "assessmentType": "reasoned-choice",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "02.4",
+      "marks": 2,
+      "section": "A",
+      "skill": "Gravitational potential-energy calculation",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 10,
+      "assessmentType": "calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "02.5",
+      "marks": 2,
+      "section": "A",
+      "skill": "Compare orbital speeds at different heights",
+      "questionPaperPdfPage": 8,
+      "markSchemePdfPage": 11,
+      "assessmentType": "reasoned-comparison",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "03.1",
+      "marks": 1,
+      "section": "A",
+      "skill": "Evaluate experimental isolation assumption",
+      "questionPaperPdfPage": 10,
+      "markSchemePdfPage": 12,
+      "assessmentType": "short-explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "03.2",
+      "marks": 2,
+      "section": "A",
+      "skill": "Rotational timing and particle speed",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 12,
+      "assessmentType": "multi-step-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "03.3",
+      "marks": 3,
+      "section": "A",
+      "skill": "Root mean square speed and absolute temperature",
+      "questionPaperPdfPage": 11,
+      "markSchemePdfPage": 12,
+      "assessmentType": "multi-step-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "03.4",
+      "marks": 2,
+      "section": "A",
+      "skill": "Particle model explanation of pressure change",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 13,
+      "assessmentType": "alternative-method-explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "03.5",
+      "marks": 1,
+      "section": "A",
+      "skill": "Moles of ideal gas displaced",
+      "questionPaperPdfPage": 12,
+      "markSchemePdfPage": 13,
+      "assessmentType": "calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "03.6",
+      "marks": 2,
+      "section": "A",
+      "skill": "Interpret changes in experimental detector pattern",
+      "questionPaperPdfPage": 13,
+      "markSchemePdfPage": 14,
+      "assessmentType": "diagram-reasoning",
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "04.1",
+      "marks": 2,
+      "section": "A",
+      "skill": "Magnetic flux linkage from field graph",
+      "questionPaperPdfPage": 15,
+      "markSchemePdfPage": 15,
+      "assessmentType": "graph-and-calculation",
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "04.2",
+      "marks": 2,
+      "section": "A",
+      "skill": "Rate of change of flux and induced electromotive force",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 15,
+      "assessmentType": "explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "04.3",
+      "marks": 4,
+      "section": "A",
+      "skill": "Evaluate maximum electromotive force using graphical gradient",
+      "questionPaperPdfPage": 16,
+      "markSchemePdfPage": 16,
+      "assessmentType": "graph-dependent-multi-step-calculation",
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "05.1",
+      "marks": 2,
+      "section": "A",
+      "skill": "Magnetic centripetal force explanation",
+      "questionPaperPdfPage": 17,
+      "markSchemePdfPage": 17,
+      "assessmentType": "explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "05.2",
+      "marks": 1,
+      "section": "A",
+      "skill": "Energy-gain count in accelerator",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 17,
+      "assessmentType": "numeric-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "05.3",
+      "marks": 3,
+      "section": "A",
+      "skill": "Derive kinetic-energy equation for charged particle",
+      "questionPaperPdfPage": 18,
+      "markSchemePdfPage": 17,
+      "assessmentType": "mathematical-derivation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "05.4",
+      "marks": 4,
+      "section": "A",
+      "skill": "Compare accelerator configurations and cost",
+      "questionPaperPdfPage": 19,
+      "markSchemePdfPage": 18,
+      "assessmentType": "multi-step-reasoned-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "06.1",
+      "marks": 2,
+      "section": "A",
+      "skill": "Nuclear binding-energy explanation",
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 19,
+      "assessmentType": "explanation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "06.2",
+      "marks": 2,
+      "section": "A",
+      "skill": "Mass difference and released nuclear energy",
+      "questionPaperPdfPage": 20,
+      "markSchemePdfPage": 19,
+      "assessmentType": "multi-step-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "06.3",
+      "marks": 2,
+      "section": "A",
+      "skill": "Electrostatic potential change for nuclei",
+      "questionPaperPdfPage": 21,
+      "markSchemePdfPage": 20,
+      "assessmentType": "multi-step-calculation",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "06.4",
+      "marks": 3,
+      "section": "A",
+      "skill": "Competing factors in fusion-rate comparison",
+      "questionPaperPdfPage": 22,
+      "markSchemePdfPage": 21,
+      "assessmentType": "reasoned-comparison",
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "07",
+      "marks": 1,
+      "section": "B",
+      "skill": "Specific heat capacity and rate of energy transfer",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 23,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "08",
+      "marks": 1,
+      "section": "B",
+      "skill": "Gas root-mean-square speed at constant temperature",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 24,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "09",
+      "marks": 1,
+      "section": "B",
+      "skill": "Pressure-temperature graph interpretation",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 24,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "10",
+      "marks": 1,
+      "section": "B",
+      "skill": "Calculating a mean square speed from vectors",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 25,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "11",
+      "marks": 1,
+      "section": "B",
+      "skill": "Gravitational equipotential field strength",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 26,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "12",
+      "marks": 1,
+      "section": "B",
+      "skill": "Surface gravity scaling",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 27,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "13",
+      "marks": 1,
+      "section": "B",
+      "skill": "Work against gravity",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 27,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "14",
+      "marks": 1,
+      "section": "B",
+      "skill": "Electrostatic-force scaling",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 28,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "15",
+      "marks": 1,
+      "section": "B",
+      "skill": "Compare electric and gravitational forces",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 28,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "16",
+      "marks": 1,
+      "section": "B",
+      "skill": "Electric field force between plates",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 29,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "17",
+      "marks": 1,
+      "section": "B",
+      "skill": "Zero-potential position between charges",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 29,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "18",
+      "marks": 1,
+      "section": "B",
+      "skill": "Electric field and potential of spherical conductor",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 30,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "19",
+      "marks": 1,
+      "section": "B",
+      "skill": "Work along equipotentials",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 22,
+      "questionPaperPdfPage": 31,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "20",
+      "marks": 1,
+      "section": "B",
+      "skill": "Capacitor charging current and voltage graphs",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 32,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "21",
+      "marks": 1,
+      "section": "B",
+      "skill": "Magnetic force direction on a current-carrying conductor",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 33,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "22",
+      "marks": 1,
+      "section": "B",
+      "skill": "Magnetic flux linkage changes with motion",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 34,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "23",
+      "marks": 1,
+      "section": "B",
+      "skill": "RMS voltage and peak-to-peak AC voltage",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 34,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "24",
+      "marks": 1,
+      "section": "B",
+      "skill": "Mean AC power in resistors",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 35,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "25",
+      "marks": 1,
+      "section": "B",
+      "skill": "Transformer voltage ratio, efficiency and current",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 35,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "26",
+      "marks": 1,
+      "section": "B",
+      "skill": "Charged-particle deflection and force",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 36,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "27",
+      "marks": 1,
+      "section": "B",
+      "skill": "Gamma-photon flux and inverse-square geometry",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 36,
+      "needsOriginalFigure": true
+    },
+    {
+      "id": "28",
+      "marks": 1,
+      "section": "B",
+      "skill": "Radioactive decay and half-life comparison",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 37,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "29",
+      "marks": 1,
+      "section": "B",
+      "skill": "Neutron moderation in a nuclear reactor",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 37,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "30",
+      "marks": 1,
+      "section": "B",
+      "skill": "Nuclear power from rate of mass change",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 37,
+      "needsOriginalFigure": false
+    },
+    {
+      "id": "31",
+      "marks": 1,
+      "section": "B",
+      "skill": "Beta-decay energy levels and conservation",
+      "assessmentType": "multiple-choice",
+      "markSchemePdfPage": 23,
+      "questionPaperPdfPage": 38,
+      "needsOriginalFigure": true
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "schema": "exam-independent-crosspaper-internal-consistency-v1",
+  "created": "2026-10-24",
+  "kind": "read-only source-inventory internal-integrity audit, not official-source re-verification or playable content",
+  "sourceBranchHeadAtAudit": "d823047556300e29bc11e3e6bfc78024c7bffc3d",
+  "scope": "12 existing independently authored 2022-2024 AQA Physics, Chemistry and Mathematics source-only inventory JSON files",
+  "paperCount": 12,
+  "metadataPartCount": 513,
+  "nominalMarkSumAcrossDistinctPapers": 1000,
+  "method": "Read each GitHub JSON at the stated source branch head; validate per-part unique references, integer marks, aggregate declared paper totals, claimed part counts, QP/MS PDF page fields and bounds where the document states page counts. No PDFs independently reopened in this audit; previous editorial claims of official verification are not independently re-established here.",
+  "findings": {
+    "internalConsistencyErrors": 0,
+    "verifiedExactSpecificationSubtopicCodes": 0,
+    "studentFacingQuestionsAdded": 0,
+    "sourceRubricsReproduced": 0,
+    "chemistryFilesWithoutDeclaredDocumentPageCount": 5
+  },
+  "releaseGate": "This is metadata QA only. Do not merge exam app.js over main: current exam branch still contains the old profile migration whereas merged world main preserves historical XP/points/purchases. Both PRs' latest-head CI and combined browser/mobile/touch/offline/source-first marking/storage tests are mandatory before release. Do not modify or bypass any previously safety-blocked write.",
+  "papers": [
+    {
+      "file": "aqa_physics_as_2023_7407_1_source_only_audit.json",
+      "sourceBlobSha": "f0d90052dcbb45945a61894054f67db7aae2aa24",
+      "partCount": 27,
+      "partMarkSum": 70,
+      "declaredPaperMarks": 70,
+      "declaredQuestionPaperPdfPages": 28,
+      "declaredMarkSchemePdfPages": 29,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_physics_as_2023_7407_2_source_only_audit.json",
+      "sourceBlobSha": "6a2058fc9e8e2df960ea24dd9272c0405804ba34",
+      "partCount": 50,
+      "partMarkSum": 70,
+      "declaredPaperMarks": 70,
+      "declaredQuestionPaperPdfPages": 44,
+      "declaredMarkSchemePdfPages": 20,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_physics_as_2022_7407_1_source_only_audit.json",
+      "sourceBlobSha": "791d833f08cfd82b870fa6ec851144456a462fa3",
+      "partCount": 29,
+      "partMarkSum": 70,
+      "declaredPaperMarks": 70,
+      "declaredQuestionPaperPdfPages": 28,
+      "declaredMarkSchemePdfPages": 32,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_physics_2023_7408_1_source_only_audit.json",
+      "sourceBlobSha": "f80a38754d17d08cab2e0623e52630048bf7e105",
+      "partCount": 51,
+      "partMarkSum": 85,
+      "declaredPaperMarks": 85,
+      "declaredQuestionPaperPdfPages": 40,
+      "declaredMarkSchemePdfPages": 28,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_physics_2023_7408_2_source_only_audit.json",
+      "sourceBlobSha": "f3ef9643a2e42c722c651f1d78b11444c8c1f9bd",
+      "partCount": 53,
+      "partMarkSum": 85,
+      "declaredPaperMarks": 85,
+      "declaredQuestionPaperPdfPages": 44,
+      "declaredMarkSchemePdfPages": 32,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_chemistry_as_2023_7404_1_source_only_audit.json",
+      "sourceBlobSha": "050d03a670d29362d2e55842cfc2e1385380f120",
+      "partCount": 39,
+      "partMarkSum": 80,
+      "declaredPaperMarks": 80,
+      "declaredQuestionPaperPdfPages": null,
+      "declaredMarkSchemePdfPages": null,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "not-checked-declared-page-count-absent",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_chemistry_as_2023_7404_2_source_only_audit.json",
+      "sourceBlobSha": "b6216a2788abf863aec6139ae713cc1fb52a3157",
+      "partCount": 42,
+      "partMarkSum": 80,
+      "declaredPaperMarks": 80,
+      "declaredQuestionPaperPdfPages": null,
+      "declaredMarkSchemePdfPages": null,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "not-checked-declared-page-count-absent",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_chemistry_2023_7405_1_source_only_audit.json",
+      "sourceBlobSha": "6ea26594138c3809efa6068907af07f75c53e14f",
+      "partCount": 57,
+      "partMarkSum": 105,
+      "declaredPaperMarks": 105,
+      "declaredQuestionPaperPdfPages": null,
+      "declaredMarkSchemePdfPages": null,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "not-checked-declared-page-count-absent",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_chemistry_2023_7405_2_source_only_audit.json",
+      "sourceBlobSha": "35ea3bb0d566efe846df0122dbc316bfcab71a9f",
+      "partCount": 40,
+      "partMarkSum": 105,
+      "declaredPaperMarks": 105,
+      "declaredQuestionPaperPdfPages": null,
+      "declaredMarkSchemePdfPages": null,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "not-checked-declared-page-count-absent",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_chemistry_2023_7405_3_source_only_audit.json",
+      "sourceBlobSha": "5e36f1b9c346eaee61073cbc3b1c46dc212b4e83",
+      "partCount": 57,
+      "partMarkSum": 90,
+      "declaredPaperMarks": 90,
+      "declaredQuestionPaperPdfPages": null,
+      "declaredMarkSchemePdfPages": null,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "not-checked-declared-page-count-absent",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_maths_as_2024_7356_1_source_only_audit.json",
+      "sourceBlobSha": "69cc27227620617d2194d05a154a2cf6c92e86bc",
+      "partCount": 33,
+      "partMarkSum": 80,
+      "declaredPaperMarks": 80,
+      "declaredQuestionPaperPdfPages": 28,
+      "declaredMarkSchemePdfPages": 17,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    },
+    {
+      "file": "aqa_maths_as_2024_7356_2_source_only_audit.json",
+      "sourceBlobSha": "9843854f088b631ad7e9bc340006a8f70b319da7",
+      "partCount": 35,
+      "partMarkSum": 80,
+      "declaredPaperMarks": 80,
+      "declaredQuestionPaperPdfPages": 28,
+      "declaredMarkSchemePdfPages": 17,
+      "checks": {
+        "uniquePartReferences": "pass",
+        "positiveIntegerPartMarks": "pass",
+        "declaredPartCountMatches": "pass",
+        "paperMarkSumMatches": "pass",
+        "allPartQPAndMSPageRefsPresent": "pass",
+        "pageBounds": "pass",
+        "copyrightedStemsCopied": 0,
+        "studentFacingPartsAdded": 0,
+        "exactSpecificationCodesVerified": 0
+      }
+    }
+  ]
+}

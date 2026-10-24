@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "20 independently written AQA-style Chemistry questions, not past-paper reproductions.",
+  "notes": "25 independently written AQA-style Chemistry standalone questions plus seven original multipart subparts; not past-paper reproductions.",
   "questions": [
     {
       "id": "gap_v48_chem_01",
@@ -807,6 +807,464 @@
       "difficulty": "hard",
       "groupId": "gap_v48_chem_20",
       "groupOrder": 1
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "21(a)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_21a",
+      "groupId": "gap_v48_chem_rates_21",
+      "groupOrder": 1,
+      "revisionTopic": "Rate equations",
+      "topic": "Rate equations",
+      "subtopic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "marks": 3,
+      "prompt": "The following initial-rate results were obtained at constant temperature (concentrations in mol dm⁻³, rates in mol dm⁻³ s⁻¹): experiment 1: [A]=0.10, [B]=0.10, rate=1.20×10⁻⁴; experiment 2: [A]=0.20, [B]=0.10, rate=4.80×10⁻⁴; experiment 3: [A]=0.20, [B]=0.20, rate=9.60×10⁻⁴. (a) Determine the order with respect to A and the order with respect to B. Explain using the experimental comparisons.",
+      "markPoints": [
+        "Doubling [A] at fixed [B] in experiments 1 and 2 increases the rate by a factor of 4.",
+        "The reaction is second order with respect to A.",
+        "Doubling [B] at fixed [A] in experiments 2 and 3 doubles the rate, so it is first order with respect to B."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Doubling [A] at fixed [B] in experiments 1 and 2 increases the rate by a factor of 4. The reaction is second order with respect to A. Doubling [B] at fixed [A] in experiments 2 and 3 doubles the rate, so it is first order with respect to B."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "21(b)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_21b",
+      "groupId": "gap_v48_chem_rates_21",
+      "groupOrder": 2,
+      "revisionTopic": "Rate equations",
+      "topic": "Rate equations",
+      "subtopic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "marks": 3,
+      "prompt": "The following initial-rate results were obtained at constant temperature (concentrations in mol dm⁻³, rates in mol dm⁻³ s⁻¹): experiment 1: [A]=0.10, [B]=0.10, rate=1.20×10⁻⁴; experiment 2: [A]=0.20, [B]=0.10, rate=4.80×10⁻⁴; experiment 3: [A]=0.20, [B]=0.20, rate=9.60×10⁻⁴. (b) Calculate the rate constant k in rate=k[A]²[B] and give its units.",
+      "markPoints": [
+        "Substitute a complete set of experimental data, for example k=4.80×10⁻⁴/(0.20²×0.10).",
+        "Calculate k=0.120.",
+        "Give units dm⁶ mol⁻² s⁻¹."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Substitute a complete set of experimental data, for example k=4.80×10⁻⁴/(0.20²×0.10). Calculate k=0.120. Give units dm⁶ mol⁻² s⁻¹."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "21(c)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_21c",
+      "groupId": "gap_v48_chem_rates_21",
+      "groupOrder": 3,
+      "revisionTopic": "Rate equations",
+      "topic": "Rate equations",
+      "subtopic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "marks": 2,
+      "prompt": "The following initial-rate results were obtained at constant temperature (concentrations in mol dm⁻³, rates in mol dm⁻³ s⁻¹): experiment 1: [A]=0.10, [B]=0.10, rate=1.20×10⁻⁴; experiment 2: [A]=0.20, [B]=0.10, rate=4.80×10⁻⁴; experiment 3: [A]=0.20, [B]=0.20, rate=9.60×10⁻⁴. (c) Use the experiments to calculate the initial rate when [A]=0.150 mol dm⁻³ and [B]=0.300 mol dm⁻³.",
+      "markPoints": [
+        "Use rate=0.120×0.150²×0.300 with the second and first orders established from the data.",
+        "Obtain rate=8.10×10⁻⁴ mol dm⁻³ s⁻¹."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "modelAnswer": "Use rate=0.120×0.150²×0.300 with the second and first orders established from the data. Obtain rate=8.10×10⁻⁴ mol dm⁻³ s⁻¹."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "22(a)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_22a",
+      "groupId": "gap_v48_chem_buffers_22",
+      "groupOrder": 1,
+      "revisionTopic": "Buffers",
+      "topic": "Buffers",
+      "subtopic": "Buffers",
+      "courseTopic": "Acids & bases",
+      "marks": 3,
+      "prompt": "25.0 cm³ of a 0.100 mol dm⁻³ weak monoprotic acid HA (Ka=1.80×10⁻⁵ mol dm⁻³) is titrated with 0.100 mol dm⁻³ NaOH at 25 °C. Assume volumes are additive and use pH=pKa+log₁₀([A⁻]/[HA]) within the buffer region. (a) Calculate the pH immediately after 12.5 cm³ of NaOH has been added.",
+      "markPoints": [
+        "Original acid amount is 2.50 mmol and 1.25 mmol OH⁻ reacts, leaving 1.25 mmol HA and producing 1.25 mmol A⁻.",
+        "Because [A⁻]/[HA]=1, pH=pKa.",
+        "pH=−log₁₀(1.80×10⁻⁵)=4.74 or 4.745."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Original acid amount is 2.50 mmol and 1.25 mmol OH⁻ reacts, leaving 1.25 mmol HA and producing 1.25 mmol A⁻. Because [A⁻]/[HA]=1, pH=pKa. pH=−log₁₀(1.80×10⁻⁵)=4.74 or 4.745."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "22(b)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_22b",
+      "groupId": "gap_v48_chem_buffers_22",
+      "groupOrder": 2,
+      "revisionTopic": "Buffers",
+      "topic": "Buffers",
+      "subtopic": "Buffers",
+      "courseTopic": "Acids & bases",
+      "marks": 3,
+      "prompt": "25.0 cm³ of a 0.100 mol dm⁻³ weak monoprotic acid HA (Ka=1.80×10⁻⁵ mol dm⁻³) is titrated with 0.100 mol dm⁻³ NaOH at 25 °C. Assume volumes are additive and use pH=pKa+log₁₀([A⁻]/[HA]) within the buffer region. (b) Calculate the pH immediately after 20.0 cm³ of NaOH has been added.",
+      "markPoints": [
+        "Original HA amount is 2.50 mmol; 2.00 mmol OH⁻ reacts, leaving 0.50 mmol HA and producing 2.00 mmol A⁻.",
+        "Use [A⁻]/[HA]=2.00/0.50=4.00 in the Henderson–Hasselbalch equation.",
+        "pH=4.7447+log₁₀(4.00)=5.35."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Original HA amount is 2.50 mmol; 2.00 mmol OH⁻ reacts, leaving 0.50 mmol HA and producing 2.00 mmol A⁻. Use [A⁻]/[HA]=2.00/0.50=4.00 in the Henderson–Hasselbalch equation. pH=4.7447+log₁₀(4.00)=5.35."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "23(a)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_23a",
+      "groupId": "gap_v48_chem_gibbs_23",
+      "groupOrder": 1,
+      "revisionTopic": "Gibbs free energy",
+      "topic": "Gibbs free energy",
+      "subtopic": "Gibbs free energy",
+      "courseTopic": "Thermodynamics",
+      "marks": 3,
+      "prompt": "A hypothetical reaction has ΔH=−75.0 kJ mol⁻¹ and ΔS=−150 J K⁻¹ mol⁻¹, both assumed constant over the temperature range. Use ΔG=ΔH−TΔS and assume feasibility is assessed by the sign of ΔG. (a) Calculate ΔG at 298 K in kJ mol⁻¹ and state whether the reaction is thermodynamically feasible under the stated assumptions.",
+      "markPoints": [
+        "Convert entropy to −0.150 kJ K⁻¹ mol⁻¹ and substitute ΔG=−75.0−298(−0.150).",
+        "ΔG=−30.3 kJ mol⁻¹.",
+        "Since ΔG is negative at 298 K, the reaction is thermodynamically feasible."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Convert entropy to −0.150 kJ K⁻¹ mol⁻¹ and substitute ΔG=−75.0−298(−0.150). ΔG=−30.3 kJ mol⁻¹. Since ΔG is negative at 298 K, the reaction is thermodynamically feasible."
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "23(b)",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "id": "gap_v48_chem_23b",
+      "groupId": "gap_v48_chem_gibbs_23",
+      "groupOrder": 2,
+      "revisionTopic": "Gibbs free energy",
+      "topic": "Gibbs free energy",
+      "subtopic": "Gibbs free energy",
+      "courseTopic": "Thermodynamics",
+      "marks": 2,
+      "prompt": "A hypothetical reaction has ΔH=−75.0 kJ mol⁻¹ and ΔS=−150 J K⁻¹ mol⁻¹, both assumed constant over the temperature range. Use ΔG=ΔH−TΔS and assume feasibility is assessed by the sign of ΔG. (b) Find the temperature at which ΔG=0 and state the temperature range over which ΔG<0.",
+      "markPoints": [
+        "Set −75.0+0.150T=0, giving T=500 K.",
+        "ΔG is negative for T<500 K (positive above 500 K)."
+      ],
+      "markPointMarks": [
+        1,
+        1
+      ],
+      "modelAnswer": "Set −75.0+0.150T=0, giving T=500 K. ΔG is negative for T<500 K (positive above 500 K)."
+    },
+    {
+      "id": "gap_v48_chem_24",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "revisionTopic": "Kp",
+      "topic": "Kp",
+      "subtopic": "Kp",
+      "courseTopic": "Physical chemistry",
+      "marks": 4,
+      "prompt": "At a fixed temperature, the gas equilibrium 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) has equilibrium partial pressures of 30.0 kPa for SO₂, 20.0 kPa for O₂ and 40.0 kPa for SO₃. Calculate Kp with its units, then predict and explain the equilibrium shift when the container volume is reduced at constant temperature.",
+      "markPoints": [
+        "Kp = (pSO₃)² / ((pSO₂)² × pO₂).",
+        "Substitution gives Kp = 40.0² / (30.0² × 20.0) = 0.0889.",
+        "The units are kPa⁻¹ because the overall pressure exponent is −1.",
+        "Reducing volume raises pressure and favours SO₃ on the right, which has two gas molecules rather than three."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Kp = (pSO₃)² / ((pSO₂)² × pO₂). Substitution gives Kp = 40.0² / (30.0² × 20.0) = 0.0889. The units are kPa⁻¹ because the overall pressure exponent is −1. Reducing volume raises pressure and favours SO₃ on the right, which has two gas molecules rather than three.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_24",
+      "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_25",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "revisionTopic": "Kw",
+      "topic": "Kw",
+      "subtopic": "Kw",
+      "courseTopic": "Physical chemistry",
+      "marks": 4,
+      "prompt": "The ionic product of water at 40 °C is Kw = 2.92 × 10⁻¹⁴ mol² dm⁻⁶. Calculate the pH of pure water at this temperature and explain why the water is still neutral even though its pH is not 7. Show how you obtain the hydrogen ion concentration.",
+      "markPoints": [
+        "For pure water, [H⁺] = [OH⁻] and Kw = [H⁺][OH⁻].",
+        "Therefore [H⁺] = √Kw = √(2.92 × 10⁻¹⁴) = 1.71 × 10⁻⁷ mol dm⁻³.",
+        "pH = −log₁₀(1.71 × 10⁻⁷) = 6.77.",
+        "The water remains neutral because [H⁺] equals [OH⁻]; neutrality does not require pH 7 at every temperature."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "For pure water, [H⁺] = [OH⁻] and Kw = [H⁺][OH⁻]. Therefore [H⁺] = √Kw = √(2.92 × 10⁻¹⁴) = 1.71 × 10⁻⁷ mol dm⁻³. pH = −log₁₀(1.71 × 10⁻⁷) = 6.77. The water remains neutral because [H⁺] equals [OH⁻]; neutrality does not require pH 7 at every temperature.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_25",
+      "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_26",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "revisionTopic": "Rate equations",
+      "topic": "Rate equations",
+      "subtopic": "Rate equations",
+      "courseTopic": "Physical chemistry",
+      "marks": 4,
+      "prompt": "For a reaction at constant temperature, the rate equation is rate = k[A][B]², where k = 0.040 dm⁶ mol⁻² s⁻¹. Calculate the initial rate when [A] = 0.30 mol dm⁻³ and [B] = 0.20 mol dm⁻³. Predict the effect on the rate if [B] is halved while [A] and temperature remain constant, and state what happens to k.",
+      "markPoints": [
+        "Substitute rate = 0.040 × 0.30 × (0.20)².",
+        "The initial rate is 4.80 × 10⁻⁴ mol dm⁻³ s⁻¹.",
+        "Halving [B] reduces the rate to one quarter because the reaction is second order in B.",
+        "The rate constant k remains unchanged because temperature is constant."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Substitute rate = 0.040 × 0.30 × (0.20)². The initial rate is 4.80 × 10⁻⁴ mol dm⁻³ s⁻¹. Halving [B] reduces the rate to one quarter because the reaction is second order in B. The rate constant k remains unchanged because temperature is constant.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "gap_v48_chem_26",
+      "groupOrder": 1
+    },
+    {
+      "id": "gap_v48_chem_27",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "marks": 4,
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupOrder": 1,
+      "revisionTopic": "Aromatic chemistry",
+      "topic": "Aromatic chemistry",
+      "subtopic": "Aromatic chemistry",
+      "courseTopic": "Organic chemistry",
+      "prompt": "In a theoretical Friedel–Crafts acylation, benzene reacts with ethanoyl chloride and AlCl₃ acts as a catalyst. Outline the electrophilic substitution mechanism, identifying the electrophile, the role of benzene electrons, how aromaticity is restored and the organic product.",
+      "markPoints": [
+        "AlCl₃ accepts chloride from CH₃COCl, generating the CH₃CO⁺ acylium electrophile and AlCl₄⁻.",
+        "Benzene's delocalised π electrons attack CH₃CO⁺, forming a positively charged intermediate.",
+        "AlCl₄⁻ removes a proton from the intermediate, restoring aromaticity and regenerating AlCl₃.",
+        "The organic product is phenylethanone, C₆H₅COCH₃, and HCl is also formed."
+      ],
+      "markPointExpressionAlternatives": [
+        [
+          "CH3CO+"
+        ],
+        [],
+        [],
+        [
+          "phenylethanone"
+        ]
+      ],
+      "groupId": "gap_v48_chem_27",
+      "modelAnswer": "AlCl₃ accepts chloride from CH₃COCl, generating the CH₃CO⁺ acylium electrophile and AlCl₄⁻. Benzene's delocalised π electrons attack CH₃CO⁺, forming a positively charged intermediate. AlCl₄⁻ removes a proton from the intermediate, restoring aromaticity and regenerating AlCl₃. The organic product is phenylethanone, C₆H₅COCH₃, and HCl is also formed."
+    },
+    {
+      "id": "gap_v48_chem_28",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": "Practice",
+      "series": "Original AQA-style practice",
+      "paper": "Original",
+      "question": "Independent practice",
+      "marks": 4,
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupOrder": 1,
+      "revisionTopic": "Transition metals",
+      "topic": "Transition metals",
+      "subtopic": "Transition metals",
+      "courseTopic": "Transition metals",
+      "prompt": "Consider the equilibrium [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O. Describe the colour, shape and coordination number of the copper complexes, explain why replacing water with chloride changes the coordination number, and predict the effect of increasing chloride concentration.",
+      "markPoints": [
+        "The hexaaquacopper(II) complex is blue, octahedral and has coordination number six.",
+        "The tetrachlorocuprate(II) complex is yellow-green, tetrahedral and has coordination number four.",
+        "Chloride ions are larger ligands than water molecules, so fewer fit around Cu²⁺.",
+        "Adding chloride shifts the equilibrium towards [CuCl₄]²⁻, making the yellow-green complex more abundant."
+      ],
+      "markEvidenceRules": [
+        null,
+        null,
+        null,
+        [
+          [
+            "adding",
+            "chloride",
+            "[cucl4]2-"
+          ],
+          [
+            "more",
+            "chloride",
+            "right"
+          ],
+          [
+            "increasing",
+            "chloride",
+            "right"
+          ]
+        ]
+      ],
+      "groupId": "gap_v48_chem_28",
+      "modelAnswer": "The hexaaquacopper(II) complex is blue, octahedral and has coordination number six. The tetrachlorocuprate(II) complex is yellow-green, tetrahedral and has coordination number four. Chloride ions are larger ligands than water molecules, so fewer fit around Cu²⁺. Adding chloride shifts the equilibrium towards [CuCl₄]²⁻, making the yellow-green complex more abundant."
     }
   ]
 }
