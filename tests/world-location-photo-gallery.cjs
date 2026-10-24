@@ -24,6 +24,7 @@ class E{
  append(...nodes){this.children.push(...nodes)}
  replaceChildren(...nodes){this.children=[...nodes]}
  remove(){}
+ setAttribute(key,value){this[key]=value}
  querySelector(tag){return this.children.find(x=>x.tagName===tag)||null}
 }
 const doc={createElement:tag=>new E(tag,doc),createTextNode:text=>({tagName:'text',textContent:String(text)})};
