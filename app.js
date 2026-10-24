@@ -2166,10 +2166,12 @@ function locationImageFallback(el,location){
  if(!el?.isConnected)return;
  el.classList.add('location-image-map-fallback');
  el.replaceChildren();
- const globe=document.createElement('span');globe.className='location-image-earth';globe.setAttribute('aria-hidden','true');globe.textContent='🌐';
- const label=document.createElement('span');label.className='location-image-fallback-label';
- label.textContent=location.worldKind==='sea'||location.worldKind==='ocean'?'Marine location':location.worldKind==='country'?'Country on Earth':'Find on the globe';
- el.append(globe,label);
+ const title=document.createElement('span');
+ title.className='location-image-fallback-label';
+ title.textContent='Map view · '+location.name;
+ el.append(title);
+ // The geographic overview works offline and never pretends to be a photograph.
+ window.RevisionWorldMapPreview?.render(el,location).catch(()=>{});
 }
 async function locationPhoto(location,el){
  if(!location||!el?.isConnected)return;
