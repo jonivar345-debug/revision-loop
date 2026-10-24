@@ -10,6 +10,7 @@ class E{
  append(...s){this.children.push(...s)}
  replaceChildren(...s){this.children=s}
  remove(){this.isConnected=false}
+ setAttribute(name,value){this[name]=value}
  querySelector(tag){return this.children.find(x=>x.tagName===tag)||null}
  querySelectorAll(tag){return this.children.filter(x=>x.tagName===tag)}
 }
