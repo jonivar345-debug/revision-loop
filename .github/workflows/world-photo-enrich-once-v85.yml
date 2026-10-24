@@ -1,0 +1,36 @@
+name: One-time exact Commons photo-depth enrichment v85
+on:
+  push:
+    branches: [feature/four-photo-galleries-v85]
+    paths: ['.github/workflows/world-photo-enrich-once-v85.yml']
+permissions:
+  contents: write
+concurrency:
+  group: one-time-world-v85-photo-source-enrichment
+  cancel-in-progress: true
+jobs:
+  collect:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Collect Commons filenames with current CC licence, photographer and original size
+        run: node scripts/enrich-world-photos-v85.mjs --write
+      - name: Produce comprehensive 376-gallery source-depth ledger
+        run: node scripts/audit-world-photo-depth.cjs --save
+      - name: Save results after synchronizing with the active development branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add world-photo-enrichment-v85.js editorial/world-photo-enrichment-report-v85.json editorial/world-photo-four-depth-v85.json
+          git diff --staged --quiet && exit 0
+          git commit -m 'Source more distinctly named CC photographs for incomplete World galleries'
+          git fetch origin feature/four-photo-galleries-v85
+          git rebase origin/feature/four-photo-galleries-v85
+          git push origin HEAD:feature/four-photo-galleries-v85
