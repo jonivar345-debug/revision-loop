@@ -36,7 +36,7 @@ assert.equal(new Set([...baseline.locations,...ids]).size,379);
 const legacyPricing=app.indexOf("LOCATIONS.forEach((l,i)=>{");
 const appended=app.indexOf("LOCATIONS.push({...destination})");
 assert(legacyPricing>=0&&appended>legacyPricing,'New entries must be appended after all historical price assignments');
-assert(index.indexOf('world-geographic-destinations.js')<index.indexOf('app.js?v=68'),'Pin data must load before app.js');
+assert(index.indexOf('world-geographic-destinations.js')<index.indexOf('app.js?v='),'Pin data must load before app.js');
 assert(index.includes('<option>Oceans &amp; Seas</option>'),'Marine location filter missing');
 assert(sw.includes("'./world-geographic-destinations.js'"),'New map data unavailable in offline shell');
 console.log('PASS 196 country, five ocean, 17 sea positions and costs; 379 underlying IDs, three historic duplicate aliases kept; 376 distinct displayed destinations.');
