@@ -2771,8 +2771,388 @@
       [...(editorial[sourceId]||[]),...(additionalEditorialA[sourceId]||[]),...(additionalEditorialB[sourceId]||[])]
       .filter(item=>item.file===file));
   }
+  // Directly read Commons File: pages across all six inhabited continents.
+  // These are source/metadata-checked, NOT pixel-level visual approvals.
+  const independentlySourced=Object.freeze({
+    "hanoi": [
+      {
+        "file": "Hanoi Panoramic.jpg",
+        "author": "Ilovemcribs",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Panorama of Hanoi",
+        "width": 9332,
+        "height": 3862,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "vancouver": [
+      {
+        "file": "Skyline of Vancouver, BC.jpg",
+        "author": "Quintin Soloviev",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Vancouver downtown skyline",
+        "width": 6662,
+        "height": 4442,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      },
+      {
+        "file": "Skyline of Vancouver, Canada.jpg",
+        "author": "Quintin Soloviev",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Aerial Vancouver skyline",
+        "width": 7302,
+        "height": 4381,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "petra": [
+      {
+        "file": "Petra, Jordan -The Treasury.JPG",
+        "author": "Davidchocron",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Al-Khazneh Treasury at Petra",
+        "width": 5184,
+        "height": 3456,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "rio": [
+      {
+        "file": "Christ-Redeemer-Rio-de-Janeiro.jpg",
+        "author": "acediscovery",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Christ the Redeemer in Rio de Janeiro",
+        "width": 3200,
+        "height": 2400,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "capetown": [
+      {
+        "file": "Table mountain in Cape Town.jpg",
+        "author": "Shoodho",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Table Mountain above Cape Town",
+        "width": 3468,
+        "height": 4624,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "cusco": [
+      {
+        "file": "Plaza de Armas Cusco.jpg",
+        "author": "Yanela Sharumi Ccalluco Vargas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Plaza de Armas in central Cusco",
+        "width": 4080,
+        "height": 3060,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "uluru": [
+      {
+        "file": "Uluru Australia.jpg",
+        "author": "Kate Branch",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Uluru sandstone monolith",
+        "width": 3092,
+        "height": 3100,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "iguazu": [
+      {
+        "file": "Iguazu Falls, Argentina.JPG",
+        "author": "Flauta",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Iguazu Falls from Argentina",
+        "width": 3648,
+        "height": 2736,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "marrakech": [
+      {
+        "file": "Djemaa el Fna Marrakesch.jpg",
+        "author": "Herbert wie",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Jemaa el-Fnaa square Marrakesh",
+        "width": 3089,
+        "height": 2048,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      },
+      {
+        "file": "Marrakesh, Djemaa el Fna in the evening (js).jpg",
+        "author": "Jerzy Strzelecki",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Jemaa el-Fnaa in the evening",
+        "width": 5610,
+        "height": 3658,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "yellowstone": [
+      {
+        "file": "Yellowstone Grand Prismatic.jpg",
+        "author": "David L. Sifry",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Grand Prismatic Spring, Yellowstone",
+        "width": 4368,
+        "height": 2056,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "grandcanyon": [
+      {
+        "file": "The Grand Canyon, Arizona.jpg",
+        "author": "Paxson Woelber",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "South Rim panorama of the Grand Canyon",
+        "width": 5256,
+        "height": 2253,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "edinburgh": [
+      {
+        "file": "Edinburgh Castle seen from The Vennel steps.jpg",
+        "author": "Aneza Palaiou",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Edinburgh Castle seen from the Vennel",
+        "width": 3967,
+        "height": 5950,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "chichenitza": [
+      {
+        "file": "Chichen Itzá Pyramide.jpg",
+        "author": "Genius9423",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Temple of Kukulcan at Chichen Itza",
+        "width": 2448,
+        "height": 3264,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      },
+      {
+        "file": "Chichen-Itza.jpg",
+        "author": "Berenice Lara Ramírez",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "El Castillo pyramid at Chichen Itza",
+        "width": 3956,
+        "height": 2967,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "melbourne": [
+      {
+        "file": "City Skyline of Melbourne.jpg",
+        "author": "李沛钊",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Melbourne modern skyline",
+        "width": 4030,
+        "height": 2267,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      },
+      {
+        "file": "Skylinemelbourne2026.jpg",
+        "author": "Celco85",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Melbourne skyline in 2026",
+        "width": 3487,
+        "height": 1898,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "toronto": [
+      {
+        "file": "Toronto-skyline.jpg",
+        "author": "Daynarama",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Toronto skyline with CN Tower",
+        "width": 3198,
+        "height": 2116,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "auckland": [
+      {
+        "file": "AucklandCBD2026.jpg",
+        "author": "ThomasNiuNiu",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Auckland skyline from Mount Victoria",
+        "width": 4096,
+        "height": 1864,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "galapagos": [
+      {
+        "file": "Galápagos giant tortoise.jpg",
+        "author": "Mary Farnkoff",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Giant tortoise photographed on the Galápagos Islands",
+        "width": 6736,
+        "height": 5389,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      },
+      {
+        "file": "Giant tortoise of the galapagos islands.jpg",
+        "author": "FelixReyesPhotography",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Galápagos giant tortoise in its habitat",
+        "width": 4259,
+        "height": 2989,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "lisbon": [
+      {
+        "file": "Lisboa, tranvía 28.jpg",
+        "author": "LBM1948",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic Lisbon tram 28",
+        "width": 2765,
+        "height": 4223,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "dublin": [
+      {
+        "file": "Dublin - Trinity College Dublin.jpeg",
+        "author": "Thoslee",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Trinity College Dublin historic buildings",
+        "width": 4096,
+        "height": 3072,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "angkor": [
+      {
+        "file": "Sunrise at Angkor Wat Cambodia.jpg",
+        "author": "Vladimir Pankratov",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "subject": "Sunrise at Angkor Wat",
+        "width": 4896,
+        "height": 3264,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "greatbarrier": [
+      {
+        "file": "Great barrière reef.jpg",
+        "author": "Mohesa83",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Coral and tropical reef fish in the Great Barrier Reef",
+        "width": 3264,
+        "height": 2448,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "dubai": [
+      {
+        "file": "Dubai Burj Khalifa.jpg",
+        "author": "Bahaa aldien",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Burj Khalifa viewed from Dubai marina water",
+        "width": 3000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "cairo": [
+      {
+        "file": "Cairo skyline, Nile River, Egypt.jpg",
+        "author": "Vyacheslav Argenberg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Cairo skyline beside the Nile River",
+        "width": 3072,
+        "height": 2048,
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "nairobi": [
+      {
+        "file": "Nairobi skyline P1000021.jpg",
+        "author": "Lmwangi",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Nairobi city skyline",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ],
+    "reykjavik": [
+      {
+        "file": "Reykjavik from Hallgrimskikrja.jpg",
+        "author": "Wa17gs",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Reykjavík city skyline viewed from Hallgrímskirkja",
+        "editorialMetadata": true,
+        "reviewStatus": "Exact Wikimedia Commons file page reviewed for depicted subject, photographer, CC licence and original resolution on 2026-10-24; actual rendered image awaits independent visual review and current file-level licence verification"
+      }
+    ]
+  });
   function filesFor(id){
-    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...reusedFor(id),...discoveredFor(id)];
+    return [...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...discoveredFor(id)];
   }
   function image(entry){
     const file=entry.file.replace(/ /g,'_');
