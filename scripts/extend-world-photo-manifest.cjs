@@ -15,14 +15,7 @@ const catalogue=require('../world-curated-photos.js');
 const targetPath=path.resolve(__dirname,'../editorial/world-local-photo-pilot.json');
 // IDs from the site's existing World destination catalog. Previously prioritized
 // scenic/cultural cities, then major landscape and marine destinations.
-const targets=[
-  'athens', 'budapest', 'florence', 'krakow', 'ljubljana',
-  'mostar', 'porto', 'reykjavik', 'sarajevo', 'seville',
-  'stockholm', 'tallinn', 'vienna', 'zurich', 'bergen',
-  'shenzhen', 'gyeongju', 'bohol', 'petra', 'angkor',
-  'samarkand', 'taipei', 'banff', 'grandcanyon', 'machupicchu',
-  'rio', 'iguazu', 'uluru', 'queenstown', 'whitsundays',
-];
+const targets=require('../editorial/world-v105-batch-targets.json').targets;
 const manifest=JSON.parse(fs.readFileSync(targetPath,'utf8'));
 const selected=[];const skipped=[];
 const valid=p=>p&&typeof p.file==='string'&&/\.(?:jpe?g)$/i.test(p.file)&&
@@ -44,7 +37,7 @@ for(const id of targets){
 }
 // This threshold ensures we don't silently pretend a batch succeeded.
 console.log('Selection candidates: '+selected.length+'; skipped: '+JSON.stringify(skipped));
-assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length>=20,'Not enough source-backed complete galleries for this World batch');
+assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length>=20,'Not enough source-backed candidate galleries for the v105 batch');
 manifest.description='World v105: seven targeted quality replacements and up to 30 further complete local galleries, selected from the curated place-specific four-source catalogue; preserve authors, source pages and licences.';
 manifest.quality='Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.';
 fs.writeFileSync(targetPath,JSON.stringify(manifest,null,2)+'\n');
