@@ -32,6 +32,7 @@ jobs:
           node tests/chemistry-amount-v44.cjs
           node tests/chemistry-bonding-v49.cjs
           node tests/chemistry-energetics-v50.cjs
+          node tests/chemistry-energetics-v51.cjs
           node tests/adversarial-marking-regression.cjs
           node tests/world-economy-integrity.cjs
           node tests/world-editorial-integrity.cjs
