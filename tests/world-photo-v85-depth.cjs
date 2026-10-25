@@ -47,9 +47,21 @@ for(const [id,records] of entries){
  const omitted=records.filter(p=>!enriched.some(e=>e.file.toLowerCase()==='file:'+p.file.toLowerCase()));
  assert.equal(records.length-enriched.length,omitted.length,'Unexpected enrichment duplicate or provenance loss '+id);
  if(omitted.length){
-  assert(qualityReplacements.has(id),'Unapproved removal of an enriched image '+id);
-  assert(curated.get(id).some(p=>p.qualityPriority===1000||p.qualityPriority===900||p.qualityPriority===950),'An omitted candidate must have a verified quality replacement '+id);
-  assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=4,'Do not remove a photo without preserving four options '+id);
+  // V107 explicitly rejects files named after a different place, an unrelated
+  // person, ship or species. A smaller accurate source set is preferable to
+  // restoring a known wrong-country photo merely to hit a four-image quota.
+  const v107Corrections=new Set([
+    'country-is','country-li','country-lu','country-qa','country-pt',
+    'cartagena','porto','florence','bergen','stockholm','gyeongju'
+  ]);
+  if(v107Corrections.has(id)){
+   assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=1,
+    'At least one real source must survive correction '+id);
+  }else{
+   assert(qualityReplacements.has(id),'Unapproved removal of an enriched image '+id);
+   assert(curated.get(id).some(p=>p.qualityPriority===1000||p.qualityPriority===900||p.qualityPriority===950),'An omitted candidate must have a verified quality replacement '+id);
+   assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=4,'Do not remove a photo without preserving four options '+id);
+  }
  }
  assert(enriched.every(p=>p.checked===false&&p.source==='editorial-source'),'New candidates must pass browser current-licence validation');
 }
