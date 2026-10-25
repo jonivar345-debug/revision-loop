@@ -35,7 +35,7 @@ for(const [country,names] of Object.entries(places)){
  }
 }
 const lastThree={
- dakar:['Dakar from above.jpg','Dakar vue de haut 04.jpg'],
+ dakar:['Dakar from above.jpg','African Renaissance Monument Dakar 2025.jpg'],
  'country-ag':['Beach in Old Road, Antigua and Barbuda.jpg'],
  'sea-bering':['Nome Alaska bering sea.jpg','Bering sea...mar de bering ,alaska - panoramio.jpg','Bering Sea Ice 2 (8683679273).jpg']
 };
