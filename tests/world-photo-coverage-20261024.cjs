@@ -35,7 +35,9 @@ for(const id of ids){
 assert.equal(curated.get('london').length,4);
 assert.equal(curated.get('busan').length,4);
 assert.equal(curated.get('country-cf').length,4,'Central African Republic must have four distinct source references');
-assert.equal(checked,9,'Eight London/Busan source records plus the verified v110 Arctic Ocean photograph');
+assert.equal(checked,10,'Eight London/Busan source records plus Arctic and Bering Sea verified replacements');
+assert(curated.get('sea-bering').some(p=>p.file==='File:Waves from the Shallow Bering Sea Lap up Against the Untouched Coastline (9514199534).jpg'&&p.license==='CC BY 2.0'),
+ 'New Bering Sea replacement must retain verified Commons attribution and licence');
 assert(curated.get('ocean-arctic').some(p=>p.file==='File:North Pole, Arctic Ocean, sea ice 01.jpg'&&p.license==='CC BY-SA 4.0'),
  'The v110 Arctic Ocean replacement must retain its verified Commons licence');
 assert(editorial>=200,'The sourced editorial archive did not reach the live candidate registry');
