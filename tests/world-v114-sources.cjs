@@ -9,7 +9,7 @@ global.window={
 };
 const curated=require('../world-curated-photos.js');
 const previousAttribution=require('../assets/world/ATTRIBUTION.json');
-assert.equal(batch.targets.length,8,'Expected 3 destination review selections');
+assert.equal(batch.targets.length,8,'Expected 8 destination source selections');
 assert.equal(new Set(batch.targets).size,8);
 for(const id of batch.targets){
  const chosen=batch.approvedSelections[id];
@@ -25,4 +25,4 @@ for(const id of batch.targets){
   assert(photo.licenseUrl.startsWith('https://creativecommons.org/'),'No redistributable CC licence for '+file);
  }
 }
-console.log('PASS v114: 3 explicit four-file photo sets, licensed authors, source descriptions and originals.');
+console.log('PASS v114: 8 explicit four-file photo sets, licensed authors, source descriptions and originals.');
