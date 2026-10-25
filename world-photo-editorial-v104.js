@@ -40,13 +40,13 @@
       "reviewStatus": "Exact Commons file source and declared attribution researched on 2026-10-25, final download must validate current author/licence and pixels; full-resolution compositional acceptance still pending"
     },
     {
-      "file": "Porto view from Clerigos Church.jpg",
-      "author": "ManuelMarioVieira",
+      "file": "Porto view.JPG",
+      "author": "Anastasia Glebko",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "subject": "Porto rooftop cityscape from Clérigos Church",
-      "width": 6000,
-      "height": 4000,
+      "subject": "Historic Porto skyline viewed across Ribeira from the riverbank",
+      "width": 4272,
+      "height": 2848,
       "editorialMetadata": true,
       "qualityPriority": 1400,
       "reviewStatus": "Exact Commons file source and declared attribution researched on 2026-10-25, final download must validate current author/licence and pixels; full-resolution compositional acceptance still pending"
