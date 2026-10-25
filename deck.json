@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 32,
+  "deckVersion": 33,
   "updatedAt": "2026-10-24T17:21:00.000Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -16693,6 +16693,89 @@
       "priority": 2,
       "front": "How do you calculate the maximum speed of emitted photoelectrons?",
       "back": "Find Eₖ(max) = hf − φ in joules, then use vₘₐₓ = √(2Eₖ(max)/mₑ)."
+    },
+    {
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "revisionTopic": "Wave-particle duality",
+      "courseTopic": "Particles & radiation",
+      "kind": "content",
+      "scope": "mock",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "priority": 4,
+      "id": "phy_electron_diffraction_exam_q9a",
+      "front": "Electron diffraction [2 marks]: How does it support wave–particle duality?",
+      "back": "Electrons have mass and charge (particle properties), but produce a diffraction pattern through a thin crystal (wave behaviour).",
+      "visualBack": "particle-diffraction",
+      "concepts": [
+        [
+          "mass",
+          "charge",
+          "particle properties"
+        ],
+        [
+          "diffraction",
+          "wave",
+          "rings"
+        ]
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "revisionTopic": "Wave-particle duality",
+      "courseTopic": "Particles & radiation",
+      "kind": "content",
+      "scope": "mock",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "priority": 4,
+      "id": "phy_electron_diffraction_exam_q9b",
+      "front": "Electron diffraction [3 marks]: Why do the rings shrink when accelerating voltage increases?",
+      "back": "Higher voltage → greater electron kinetic energy and momentum; λ = h/p decreases; diffraction angle and ring diameter decrease.",
+      "concepts": [
+        [
+          "kinetic energy",
+          "momentum"
+        ],
+        [
+          "wavelength",
+          "lambda",
+          "h/p"
+        ],
+        [
+          "angle",
+          "rings",
+          "diameter"
+        ]
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "revisionTopic": "Wave-particle duality",
+      "courseTopic": "Particles & radiation",
+      "kind": "content",
+      "scope": "mock",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "priority": 4,
+      "id": "phy_electron_diffraction_exam_q9c",
+      "front": "Electron diffraction [1 mark]: Why can p = mv fail for very fast electrons?",
+      "back": "At speeds approaching the speed of light, relativistic effects become significant, so the non-relativistic formula p = mv is inaccurate.",
+      "accept": [
+        "relativity",
+        "relativistic effects",
+        "at speeds near the speed of light relativistic momentum is needed",
+        "when electron speeds approach c p=mv is inaccurate"
+      ]
     }
   ],
   "meta": {
