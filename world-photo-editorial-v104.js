@@ -1,5 +1,162 @@
 /* V104/V105 place-specific editorial sources. Source records are not final pixel-level visual approval. */
 (function(root){'use strict';const data={
+  "cartagena": [
+    {
+      "file": "Castillo San Felipe Cartagena.jpg",
+      "author": "Jose Luis Quiroga Lema",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Castillo San Felipe de Barajas exterior, Cartagena de Indias, Colombia",
+      "width": 3456,
+      "height": 4608,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    },
+    {
+      "file": "City of Cartagena view from San Felipe fortress.jpg",
+      "author": "Leon petrosyan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "City of Cartagena, Colombia, seen from the San Felipe fortress",
+      "width": 3456,
+      "height": 2592,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    }
+  ],
+  "country-is": [
+    {
+      "file": "Skógafoss Waterfall, Iceland, 20240720 1318 2975.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "subject": "Skógafoss waterfall, southern Iceland",
+      "width": 5276,
+      "height": 3523,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    },
+    {
+      "file": "Kirkjufell 1.jpg",
+      "author": "Thomas Fabian",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "Kirkjufell mountain, western Iceland",
+      "width": 4550,
+      "height": 3033,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    },
+    {
+      "file": "Jökusarlon Diamond Beach - 34641858224.jpg",
+      "author": "salomon10",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "subject": "Diamond Beach and glacier ice near Jökulsárlón, Iceland",
+      "width": 7725,
+      "height": 5153,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    }
+  ],
+  "country-li": [
+    {
+      "file": "Malbun Stachlerkopf.jpg",
+      "author": "Rémih",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Malbun and Stachlerkopf mountain, Liechtenstein",
+      "width": 4608,
+      "height": 3456,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    },
+    {
+      "file": "Burg Gutenberg - Balzers- Liechtenstein.jpg",
+      "author": "St9191",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Gutenberg Castle above Balzers, Liechtenstein",
+      "width": 3724,
+      "height": 2549,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    },
+    {
+      "file": "MalbunFL 1.jpg",
+      "author": "böhringer friedrich",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "subject": "Snowy winter landscape in Malbun, Liechtenstein",
+      "width": 3888,
+      "height": 2592,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    }
+  ],
+  "country-lu": [
+    {
+      "file": "Grund, Luxembourg from wall above.jpg",
+      "author": "Yoo Chung",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Grund neighbourhood along the Alzette River in Luxembourg City",
+      "width": 3872,
+      "height": 2592,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    },
+    {
+      "file": "Château de Vianden (2025).jpg",
+      "author": "Moncle",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Vianden Castle in Luxembourg, photographed in 2025",
+      "width": 5328,
+      "height": 4000,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    }
+  ],
+  "country-pt": [
+    {
+      "file": "Palace da Pena Sintra.jpg",
+      "author": "Javiercomellys",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Pena Palace in Sintra, Portugal",
+      "width": 5184,
+      "height": 2916,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    }
+  ],
+  "country-qa": [
+    {
+      "file": "Souq Waqif by night.jpg",
+      "author": "Isabell Schulz",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "Souq Waqif traditional market at night in Doha, Qatar",
+      "width": 3072,
+      "height": 2304,
+      "editorialMetadata": true,
+      "qualityPriority": 1550,
+      "reviewStatus": "Exact Wikimedia Commons file page, place, photographer, CC licence and original dimensions individually checked 2026-10-25; archive builder must revalidate live metadata, full pixel/composition sign-off remains separate."
+    }
+  ],
+
   "florence": [
     {
       "file": "Santa Croce (Florence) - Facade.jpg",

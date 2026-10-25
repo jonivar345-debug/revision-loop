@@ -34,7 +34,7 @@ for(const [id,names] of Object.entries(manifest.locations)){
 const attributions=JSON.parse(fs.readFileSync(path.resolve(directory,'assets/world/ATTRIBUTION.json')));
 assert.equal(attributions.length,count);
 assert(attributions.every(p=>p.format==='image/webp'&&p.galleryBytes>=6000&&p.coverBytes>=6000));
-const report=JSON.parse(fs.readFileSync(path.resolve(directory,'editorial/world-local-photo-audit-v107.json'),'utf8'));
+const report=JSON.parse(fs.readFileSync(path.resolve(directory,'editorial/world-local-photo-audit-v108.json'),'utf8'));
 assert.equal(report.localPhotographs,count);
 assert.equal(report.localDestinations,Object.keys(manifest.locations).length);
 assert.equal(report.fourPhotoLocalGalleries,Object.values(manifest.locations).filter(x=>x.length===4).length);
@@ -42,9 +42,10 @@ const newAssetRecords=attributions.filter(photo=>photo.newSizeBudgeted);
 assert(newAssetRecords.every(photo=>photo.galleryBytes<=720*1024&&photo.coverBytes<=170*1024),
   'A newly archived photo exceeded its image-size budget');
 assert.equal(report.newBudgetedPhotographs,newAssetRecords.length,'Image optimization audit missing records');
-assert(report.combinedImageBytes<285*1024*1024,'Photo library too large for the current staged release');
+assert(report.combinedImageBytes<305*1024*1024,'Photo library too large for the current staged release');
 assert.equal(report.selectionIssuesAddressed.length,17);
 assert.equal(report.excludedCrossPlaceSourceCandidates,20,'Cross-place exclusion audit missing');
+assert.equal(report.correctedSixSourceGalleries.length,6,'The six source-gallery fixes are not recorded');
 assert.equal(report.suspectedVisualDuplicates.length,0,
   'Near-duplicate photos require review before calling all four images distinct');
 assert.equal(report.visualReviewStatus.startsWith('Unreviewed'),true,'Cannot claim full visual approval');

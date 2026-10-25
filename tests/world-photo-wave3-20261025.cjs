@@ -42,8 +42,8 @@ const bare=file=>String(file).replace(/^File:/,'');
  }
  const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
  const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
- assert(html.includes('world-curated-photos.js?v=107'),'Browser would load stale photo catalogue');checks++;
- assert(sw.includes('revision-loop-v107-place-checked-gallery-expansion'),'Offline cache version stale');checks++;
+ assert(html.includes('world-curated-photos.js?v=108'),'Browser would load stale photo catalogue');checks++;
+ assert(sw.includes('revision-loop-v108-six-source-galleries-and-photo-quality'),'Offline cache version stale');checks++;
  assert(sw.includes("k.startsWith('revision-loop-')&&k!==CACHE"),'App deletes unrelated caches');checks++;
  assert(!sw.includes('caches.match(e.request,{ignoreSearch:true})'),'Global cache lookup not scoped to app');checks++;
  console.log('PASS '+checks+' v92 source, cover, catalogue and scoped-cache checks; 8 galleries. Pixel inspection and live image loads remain separate.');
