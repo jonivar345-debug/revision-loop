@@ -34,4 +34,9 @@ for(const [id,names] of Object.entries(manifest.locations)){
 const attributions=JSON.parse(fs.readFileSync(path.resolve(directory,'assets/world/ATTRIBUTION.json')));
 assert.equal(attributions.length,count);
 assert(attributions.every(p=>p.format==='image/webp'&&p.galleryBytes>=6000&&p.coverBytes>=6000));
+const report=JSON.parse(fs.readFileSync(path.resolve(directory,'editorial/world-local-photo-audit-v103.json'),'utf8'));
+assert.equal(report.localPhotographs,count);
+assert.equal(report.localDestinations,Object.keys(manifest.locations).length);
+assert.equal(report.fourPhotoLocalGalleries,Object.values(manifest.locations).filter(x=>x.length===4).length);
+assert.equal(report.visualReviewStatus.startsWith('Unreviewed'),true,'Cannot claim full visual approval');
 console.log('Local photo archive validated: '+count+' licensed photographs and '+count*2+' real WebP files.');
