@@ -7,7 +7,7 @@ const root=path.join(__dirname,'..');
 const batch=require('../editorial/world-v110-batch-targets.json');
 const manifest=require('../editorial/world-local-photo-pilot.json');
 const local=require('../world-local-photos.js');
-const accepted=batch.targets.filter(id=>manifest.locations[id]);
+const accepted=batch.targets.filter(id=>manifest.locations[id]?.length===4&&JSON.stringify(manifest.locations[id])===JSON.stringify(batch.approvedSelections[id]));
 assert(accepted.length>=batch.minimumGalleries&&accepted.length<=batch.maxGalleries,
  'Only '+accepted.length+' accepted galleries (minimum '+batch.minimumGalleries+')');
 assert(Object.keys(manifest.locations).length>=158,'Some earlier locally hosted destinations disappeared');
