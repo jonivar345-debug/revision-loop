@@ -1,13 +1,15 @@
-name: Build locally hosted optimized World photos
+name: Build locally hosted World v103 photo expansion
 
 on:
   push:
-    branches: [feature/world-v102-webp-and-more-cities]
+    branches: [feature/world-v103-local-photos-scale]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
       - 'scripts/build-local-world-photos.cjs'
       - 'scripts/optimize-world-photos.py'
+      - 'scripts/extend-world-photo-manifest.cjs'
+      - 'scripts/audit-local-world-photo-quality.py'
   workflow_dispatch:
 
 permissions:
@@ -29,17 +31,21 @@ jobs:
           python-version: '3.12'
       - name: Install image codec
         run: python -m pip install Pillow==11.3.0
+      - name: Select next batch from existing, source-checked destination catalogue
+        run: node scripts/extend-world-photo-manifest.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
         run: python scripts/optimize-world-photos.py
+      - name: Audit photo dimensions and near-duplicates
+        run: python scripts/audit-local-world-photo-quality.py
       - name: Verify real WebP files and source attributions
         run: node tests/world-local-photos.cjs
       - name: Publish the generated files to this development branch only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v103.json
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else

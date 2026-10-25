@@ -30,7 +30,7 @@ for(const [id,name,hero,banned] of tests){
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
 assert(html.includes('world-curated-photos.js?v=99'));checks++;
-assert(sw.includes('revision-loop-v102-optimized-local-photos'));checks++;
+assert(sw.includes('revision-loop-v103-local-photos-and-stories'));checks++;
 assert(sw.includes("k.startsWith('revision-loop-')&&k!==CACHE"));checks++;
 assert(!sw.includes('caches.match(e.request,{ignoreSearch:true})'));checks++;
 console.log('PASS '+checks+' World v93 photo sources, six distinct four-photo galleries, consistent shop covers and private cache scope. Live pixels NOT certified.');

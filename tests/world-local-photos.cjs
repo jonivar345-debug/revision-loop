@@ -3,6 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const manifest=require('../editorial/world-local-photo-pilot.json');
+global.window={RevisionWorldDiscoveryPhotos:require('../world-photo-discovery-data.js'),RevisionWorldPhotoEnrichment:require('../world-photo-enrichment-v85.js')};
 const curated=require('../world-curated-photos.js');
 const local=require('../world-local-photos.js');
 const directory=path.resolve(__dirname,'../');
@@ -33,4 +34,16 @@ for(const [id,names] of Object.entries(manifest.locations)){
 const attributions=JSON.parse(fs.readFileSync(path.resolve(directory,'assets/world/ATTRIBUTION.json')));
 assert.equal(attributions.length,count);
 assert(attributions.every(p=>p.format==='image/webp'&&p.galleryBytes>=6000&&p.coverBytes>=6000));
+const report=JSON.parse(fs.readFileSync(path.resolve(directory,'editorial/world-local-photo-audit-v103.json'),'utf8'));
+assert.equal(report.localPhotographs,count);
+assert.equal(report.localDestinations,Object.keys(manifest.locations).length);
+assert.equal(report.fourPhotoLocalGalleries,Object.values(manifest.locations).filter(x=>x.length===4).length);
+const newAssetRecords=attributions.filter(photo=>photo.newSizeBudgeted);
+assert(newAssetRecords.every(photo=>photo.galleryBytes<=720*1024&&photo.coverBytes<=170*1024),
+  'A newly archived photo exceeded its image-size budget');
+assert.equal(report.newBudgetedPhotographs,newAssetRecords.length,'Image optimization audit missing records');
+assert(report.combinedImageBytes<180*1024*1024,'Photo library too large for the current staged release');
+assert.equal(report.suspectedVisualDuplicates.length,0,
+  'Near-duplicate photos require review before calling all four images distinct');
+assert.equal(report.visualReviewStatus.startsWith('Unreviewed'),true,'Cannot claim full visual approval');
 console.log('Local photo archive validated: '+count+' licensed photographs and '+count*2+' real WebP files.');

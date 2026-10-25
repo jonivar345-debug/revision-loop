@@ -2742,17 +2742,18 @@ async function setLocationInfo(id){
  host.setAttribute('role','region');
  host.setAttribute('aria-label',location.name+' unlocked location details');
  const isFeature=!!location.worldKind;
+ const offlineGuide=window.RevisionWorldOfflineCityGuides?.[id];
  // One destination guide only. Cities have their own text; new country and
  // sea/ocean pins receive their longer article from the read-only story module.
  host.innerHTML='<div class="globe-info-top"><div class="globe-place-heading"><span class="globe-owned-pill">✓ Unlocked location</span><h3>'+esc(location.name)+'</h3><span class="globe-place-meta">'+esc(location.region||'World')+'</span></div><button id="closeLocationInfo" type="button" aria-label="Close location information">Close</button></div>'+
   '<div class="detail-media"><div id="detailPhotoOne" class="image-fallback"></div></div>'+
-  (isFeature?'':'<div class="location-background"><h4>About '+esc(location.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||'Loading a local introduction…')+'</p></div>'+
-   '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||'Loading location-specific background…')+'</p></div>'+
-   '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||'Finding a distinctive fact…')+'</p></div>');
+  (isFeature?'':'<div class="location-background"><h4>About '+esc(location.name)+'</h4><p id="locationOverview">'+esc(LOCATION_LOCAL_OVERVIEWS[id]||offlineGuide?.overview||'Loading a local introduction…')+'</p></div>'+
+   '<div class="location-background"><h4>Culture and history</h4><p id="locationCulture">'+esc(LOCATION_CULTURE_DETAILS[id]||offlineGuide?.culture||'Loading location-specific background…')+'</p></div>'+
+   '<div class="location-background"><h4>Quick fact</h4><p id="locationQuickFact">'+esc(LOCATION_FACTS[id]||offlineGuide?.fact||'Finding a distinctive fact…')+'</p></div>');
  document.getElementById('closeLocationInfo').onclick=()=>setLocationInfo(id);
  locationPhoto(location,document.getElementById('detailPhotoOne'));
  if(isFeature){drawGlobe();return}
- if(!LOCATION_LOCAL_OVERVIEWS[id])try{
+ if(!LOCATION_LOCAL_OVERVIEWS[id]&&!offlineGuide?.overview)try{
   const url='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exintro=1&exchars=1700&format=json&formatversion=2&origin=*&titles='+encodeURIComponent(location.wiki.replace(/_/g,' '));
   const response=await fetch(url,{cache:'force-cache'});
   if(!response.ok)throw Error('Location introduction unavailable');
