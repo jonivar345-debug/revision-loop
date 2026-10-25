@@ -43,7 +43,7 @@ const bare=x=>String(x.file||'').replace(/^File:/,'');
  const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
  const worker=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
  assert(html.includes('world-curated-photos.js?v=109'));checks++;
- assert(worker.includes('revision-loop-v113-complete-partial-world-galleries'));checks++;
+ assert(worker.includes('revision-loop-v114-catalogue-sourced-world-galleries'));checks++;
  assert(worker.includes("k.startsWith('revision-loop-')&&k!==CACHE"));checks++;
  console.log('PASS v99 '+checks+' country-source, four-photo gallery, portrait-versus-cover, author, copyright and cache checks. Full 376 pixel-review remains pending.');
 })().catch(err=>{console.error(err);process.exitCode=1});
