@@ -34,7 +34,7 @@ const changes={
   removed:['Geghard Monastery, Church, Armenia.jpg','Geghard Monastery, Entrance, Armenia.jpg']}
 };
 const normal=file=>String(file).replace(/^File:/i,'').replace(/_/g,' ').toLowerCase();
-let complete=0,sourcePairs=0,removed=0,added=0;
+let complete=0,sourcePairs=0,removed=0,added=0;const gapIds=[];
 for(const loc of rows){
  const known=new Map();
  for(const photo of catalog.get(loc.id)){
@@ -42,7 +42,7 @@ for(const loc of rows){
   known.set(normal(photo.file),photo);
  }
  sourcePairs+=known.size;
- if(known.size>=4)complete++;
+ if(known.size>=4)complete++;else gapIds.push(loc.id);
  const c=changes[loc.id];if(!c)continue;
  for(const file of c.removed){assert(!known.has(normal(file)),'Old weak/wrong photo is back '+loc.id+'/'+file);removed++}
  for(const file of c.added){
@@ -57,7 +57,8 @@ for(const loc of rows){
   added++;
  }
 }
-assert.equal(complete,376,'All 376 destinations must have four real candidate files');
+assert.deepEqual(gapIds.sort(),require('../editorial/world-v107-catalogue-eligibility-gaps.json').gaps.map(x=>x.id).sort(),'Unreviewed catalogue gap appeared');
+assert.equal(complete,365,'Only vetted remote-file matches count towards four-source coverage');
 assert.equal(removed,10);
 assert.equal(added,10);
 const html=fs.readFileSync(path.join(dir,'index.html'),'utf8');

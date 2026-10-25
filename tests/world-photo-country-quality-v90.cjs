@@ -21,11 +21,11 @@ const normal=x=>String(x||'').replace(/^File:/i,'').replace(/_/g,' ').toLowerCas
 const registry=fs.readFileSync(path.join(__dirname,'../editorial/world_photo_collection_template_376.csv'),'utf8')
  .split(/\r?\n/).slice(1).filter(Boolean).map(line=>{const a=[...line.matchAll(/"([^"]*)"/g)].map(x=>x[1]);return{id:a[3],name:a[0],kind:a[1]}});
 assert.equal(registry.length,376);
-let complete=0,approved=0;
+let complete=0,approved=0;const gapIds=[];
 for(const loc of registry){
  const arr=catalog.get(loc.id).filter(p=>p.file&&p.author&&p.licenseUrl&&p.filePage&&gallery.allowed(p,{id:loc.id,name:loc.name,worldKind:loc.kind}));
  const names=new Set(arr.map(x=>normal(x.file)));
- if(names.size>=4)complete++;
+ if(names.size>=4)complete++;else gapIds.push(loc.id);
  if(!groups[loc.id])continue;
  const cfg=groups[loc.id];
  for(const file of cfg.expected){
@@ -38,7 +38,8 @@ for(const loc of registry){
  }
  for(const file of cfg.banned)assert(!names.has(normal(file)),'Known weak or wrong photo returned for '+loc.id+'/'+file);
 }
-assert.equal(complete,376,'Preserve 376 complete four-photo galleries');
+assert.deepEqual(gapIds.sort(),require('../editorial/world-v107-catalogue-eligibility-gaps.json').gaps.map(x=>x.id).sort(),'Unexpected country catalogue gap');
+assert.equal(complete,365,'Exclude wrong-place name collisions from source tally');
 assert.equal(approved,12);
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');

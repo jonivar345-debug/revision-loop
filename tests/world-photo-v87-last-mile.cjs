@@ -27,6 +27,7 @@ assert.equal(unsourced,0,'Each destination must have a source-checked candidate'
 assert(complete>=365,'More than the documented v107 source corrections lost four-photo coverage');
 assert(unfinished.length<=11,'Unexpected new source-coverage gaps');
 assert(unfinished.every(x=>x.missing>0),'Incorrect incomplete-source accounting');
+assert.deepEqual(unfinished,require('../editorial/world-v107-catalogue-eligibility-gaps.json').gaps,'Only the documented v107 catalogue eligibility gaps may remain');
 console.log('V107 genuine-source gaps requiring new photo curation:',JSON.stringify(unfinished));
 const checked={
  'country-ao':['Sunset over Luanda 1.JPG'],
