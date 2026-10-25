@@ -1,8 +1,8 @@
-name: Build locally hosted World v108 six-gallery repairs and photo review
+name: Build World v109 quality-gated photos and full-archive review index
 
 on:
   push:
-    branches: [feature/world-v108-six-galleries-photo-review]
+    branches: [feature/world-v109-photo-quality-and-local-expansion]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -18,6 +18,13 @@ on:
       - 'scripts/build-world-v108-contact-sheet.py'
       - 'tests/world-v108-sources.cjs'
       - 'tests/world-v108-local.cjs'
+      - 'editorial/world-v109-batch-targets.json'
+      - 'scripts/build-world-v109-contact-sheet.py'
+      - 'scripts/build-world-local-review-index.py'
+      - 'tests/world-v109-sources.cjs'
+      - 'tests/world-v109-archive.cjs'
+      - 'tests/world-v109-review.cjs'
+      - 'editorial/reviews/world-photo-review.html'
       - 'tests/world-v107-sources.cjs'
       - 'tests/world-v107-archive.cjs'
   workflow_dispatch:
@@ -28,7 +35,7 @@ permissions:
 jobs:
   archive-photos:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
@@ -51,6 +58,8 @@ jobs:
         run: node tests/world-v107-sources.cjs
       - name: Check 14 locked source selections and six corrected galleries
         run: node tests/world-v108-sources.cjs
+      - name: Check 25 locked destination photo source lists
+        run: node tests/world-v109-sources.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
@@ -65,11 +74,19 @@ jobs:
         run: node tests/world-v108-local.cjs
       - name: Generate real gallery and shop-cover crop contact sheet
         run: python scripts/build-world-v108-contact-sheet.py
+      - name: Verify v109 imported files and older accepted locations
+        run: node tests/world-v109-archive.cjs
+      - name: Generate v109 full-frame and shop-card contact sheet
+        run: python scripts/build-world-v109-contact-sheet.py
+      - name: Create whole-archive local photo review index
+        run: python scripts/build-world-local-review-index.py
+      - name: Check all local photos are browseable in review page
+        run: node tests/world-v109-review.cjs
       - name: Publish the generated files to this development branch only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v108.json editorial/world-v108-visual-review.json editorial/reviews/world-v108-cover-contact-sheet.jpg
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v109.json editorial/world-v109-visual-review.json editorial/reviews/world-v109-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else
