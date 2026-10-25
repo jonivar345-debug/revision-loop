@@ -27,4 +27,15 @@ for(const id of accepted){
 }
 const previous=require('../editorial/world-v113-batch-targets.json');
 for(const id of previous.targets)assert.deepEqual(manifest.locations[id],previous.approvedSelections[id],'Regression in previously accepted v113 gallery '+id);
+const previousAudit=require('../editorial/world-local-photo-audit-v113.json');
+const currentAudit=require('../editorial/world-local-photo-audit-v114.json');
+const review=require('../editorial/reviews/world-local-photo-review-index.json');
+assert(currentAudit.localPhotographs>=previousAudit.localPhotographs+4*batch.minimumGalleries,
+ 'Existing photo archive shrank during v114');
+assert(currentAudit.fourPhotoLocalGalleries>=previousAudit.fourPhotoLocalGalleries+batch.minimumGalleries,
+ 'Existing full galleries vanished during v114');
+assert.equal(currentAudit.localPhotographs,review.photoCount,'v114 photo review count is stale');
+assert.equal(currentAudit.fourPhotoLocalGalleries,review.fullyLocal,'v114 gallery review count is stale');
+assert.equal(review.destinations.filter(x=>x.images.length!==4).length,0,
+ 'A previously complete World destination is now missing photos');
 console.log('PASS v114: '+accepted.length+' additional complete first-party galleries, previous v113 assets and attribution preserved.');
