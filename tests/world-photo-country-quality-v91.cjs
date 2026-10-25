@@ -49,7 +49,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 for(const x of ['world-photo-discovery-data.js','world-photo-enrichment-v85.js','world-curated-photos.js','world-location-photo-gallery.js'])
  assert(html.includes(x+'?v='+(x==='world-curated-photos.js'?'109':x==='world-location-photo-gallery.js'?'101':'91')),'Missing revised browser script: '+x);
-assert(sw.includes('revision-loop-v109-local-photo-review-and-gallery-expansion'));
+assert(sw.includes('revision-loop-v111-local-world-photos-cover-quality'));
 (async()=>{
  const media={verifyNamedFiles:async candidates=>candidates};
  for(const [id,info] of Object.entries(pairs)){
