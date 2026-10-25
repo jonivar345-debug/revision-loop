@@ -9,7 +9,7 @@ global.window={
 };
 const curated=require('../world-curated-photos.js');
 assert.equal(batch.targets.length,26,'Expected 26 destination review selections');
-assert.equal(new Set(batch.targets).size,25);
+assert.equal(new Set(batch.targets).size,26);
 for(const id of batch.targets){
  const chosen=batch.approvedSelections[id];
  assert.equal(chosen?.length,4,id+' requires exactly four reviewed source file names');
