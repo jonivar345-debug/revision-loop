@@ -12,6 +12,8 @@ const {promises:fsp}=fs;
 global.window={RevisionWorldDiscoveryPhotos:require('../world-photo-discovery-data.js'),RevisionWorldPhotoEnrichment:require('../world-photo-enrichment-v85.js'),RevisionWorldV104Photos:require('../world-photo-editorial-v104.js')};
 const {get}=require('../world-curated-photos.js');
 const manifest=require('../editorial/world-local-photo-pilot.json');
+const v105Batch=require('../editorial/world-v105-batch-targets.json');
+const v105Targets=new Set(v105Batch.targets);
 const base=path.resolve(__dirname,'../assets/world');
 const headers={'User-Agent':'RevisionLoopPhotoArchive/1.0 (https://github.com/jonivar345-debug/revision-loop; educational static site)','Accept':'application/json,image/jpeg;q=0.9,*/*;q=0.1'};
 const sleep=ms=>new Promise(done=>setTimeout(done,ms));
@@ -35,7 +37,9 @@ function licenseAllowed(expected,current){
   if(canonical==='CC0 1.0')return /^CC\s?0(?:\s1\.0)?$/.test(lic);
   return canonical===lic&&/^CC BY(?:-SA)? (?:2\.0|2\.5|3\.0|4\.0)$/.test(lic);
 }
+const metadataMemo=new Map();
 async function metadata(filename){
+  if(metadataMemo.has(filename))return metadataMemo.get(filename);
   const api=new URL('https://commons.wikimedia.org/w/api.php');
   for(const [k,v] of Object.entries({action:'query',prop:'imageinfo',titles:'File:'+filename,
     iiprop:'url|size|extmetadata',iiurlwidth:'1800',format:'json',formatversion:'2'}))api.searchParams.set(k,v);
@@ -43,7 +47,9 @@ async function metadata(filename){
   const image=(data.query?.pages||[]).find(p=>normalise(p.title)===normalise('File:'+filename));
   const info=image?.imageinfo?.[0];
   if(!info?.thumburl||!info?.url)throw new Error('Missing Commons file: '+filename);
-  return {info,meta:info.extmetadata||{}};
+  const answer={info,meta:info.extmetadata||{}};
+  metadataMemo.set(filename,answer);
+  return answer;
 }
 function derivativeUrl(filename,width){
   return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(filename.replace(/ /g,'_'))+'?width='+width;
@@ -60,6 +66,8 @@ async function download(filename,width,destination,preferred){
 }
 async function main(){
   const output={};const attribution=[];let totalBytes=0;
+  let acceptedV105=0;
+  const skippedV105=[];
   // Preserve optimization provenance for assets already present in the archive.
   // Do not clear size-budget status when a later batch revalidates the source.
   let pastAttribution=[];
@@ -77,7 +85,44 @@ async function main(){
     }catch{return 0;}
   }
   for(const [id,names] of Object.entries(manifest.locations)){
-    const known=get(id);const selected=[];const seen=new Set();
+    const known=get(id);
+    // New v105 galleries must pass live Commons resolution/rights checks before
+    // acceptance. Earlier locally accepted selections must never be auto-replaced.
+    if(v105Targets.has(id)){
+      if(acceptedV105>=v105Batch.maxGalleries){
+        delete manifest.locations[id];
+        continue;
+      }
+      const good=[],used=new Set();
+      for(const candidate of known){
+        if(good.length===4)break;
+        const candidateName=String(candidate.file||'').replace(/^File:/i,'');
+        const key=normalise(candidateName);
+        if(!/\.jpe?g$/i.test(candidateName)||used.has(key)||
+          !candidate.author||!candidate.licenseUrl||!candidate.filePage)continue;
+        used.add(key);
+        try{
+          const {info,meta}=await metadata(candidateName);
+          const licence=meta.LicenseShortName?.value||'';
+          if(!licenseAllowed(candidate.license,licence))throw new Error('licence mismatch: '+licence);
+          if(!String(meta.Artist?.value||'').trim())throw new Error('missing credited author');
+          if(Number(info.width)<1800||Number(info.height)<800)throw new Error('insufficient source resolution');
+          good.push(candidateName);
+        }catch(error){
+          console.log('Skipping weak/unavailable v105 candidate '+id+': '+candidateName+' ('+error.message+')');
+        }
+      }
+      if(good.length<4){
+        delete manifest.locations[id];
+        skippedV105.push({id,found:good.length});
+        console.log('Deferring v105 destination '+id+': only '+good.length+' validated photographs');
+        continue;
+      }
+      names.splice(0,names.length,...good);
+      acceptedV105++;
+      console.log('Accepted v105 destination '+id+' ('+acceptedV105+'/'+v105Batch.maxGalleries+')');
+    }
+    const selected=[];const seen=new Set();
     await fsp.mkdir(path.join(base,id),{recursive:true});
     for(let i=0;i<names.length;i++){
       const name=names[i];
@@ -137,6 +182,10 @@ async function main(){
     }
     output[id]=selected;
   }
+  if(acceptedV105<v105Batch.minimumGalleries)
+    throw new Error('Only '+acceptedV105+' validated v105 galleries, below minimum '+v105Batch.minimumGalleries+'; deferred '+JSON.stringify(skippedV105));
+  await fsp.writeFile(path.resolve(__dirname,'../editorial/world-local-photo-pilot.json'),JSON.stringify(manifest,null,2)+'\n');
+  console.log('v105 accepted '+acceptedV105+' additional four-photo galleries, deferred '+skippedV105.length+'.');
   const js='/* Generated by scripts/build-local-world-photos.cjs; keep original author/licence details. */\n'+
     '(function(root){ "use strict"; const data='+JSON.stringify(output,null,2)+
     ';\nconst api=Object.freeze({get:id=>(data[id]||[]).map(photo=>({...photo}))});'+
