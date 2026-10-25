@@ -1,5 +1,89 @@
-/* V104 place-specific landmark replacements. Source records are not final visual acceptance. */
+/* V104/V105 place-specific editorial sources. Source records are not final pixel-level visual approval. */
 (function(root){'use strict';const data={
+  "adelaide": [
+    {
+      "file": "The Jetty. Glenelg, SA.jpg",
+      "author": "Amanda Slater",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "Glenelg beach and jetty on Adelaide's coastline",
+      "width": 2272,
+      "height": 1704,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    }
+  ],
+  "country-tm": [
+    {
+      "file": "Turkmenistan - Yangykala Canyon.jpg",
+      "author": "Kalpak Travel",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "subject": "Yangykala Canyon and the surrounding desert landscape, Turkmenistan",
+      "width": 6000,
+      "height": 4000,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    }
+  ],
+  "country-sm": [
+    {
+      "file": "La Cesta, San Marino (2).jpg",
+      "author": "Mannivu",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Cesta, the second tower of San Marino, viewed from Guaita",
+      "width": 3024,
+      "height": 4032,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    }
+  ],
+  "country-ni": [
+    {
+      "file": "Calles de Granada en Nicaragua.JPG",
+      "author": "ElmerGuevara",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Colourful historic street in Granada, Nicaragua",
+      "width": 4272,
+      "height": 2848,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    }
+  ],
+  "country-ro": [
+    {
+      "file": "Bucegi Mountains, Romania.jpg",
+      "author": "xulescu_g",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "Panoramic landscape of the Bucegi Mountains, Prahova County, Romania",
+      "width": 10549,
+      "height": 3831,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    }
+  ],
+  "coron": [
+    {
+      "file": "Twin Lagoon Coron Palawan.jpg",
+      "author": "Franz C. Trinidad",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Aerial view of Twin Lagoon and limestone islands, Coron, Palawan",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    }
+  ],
   "bali": [
     {
       "file": "Tegalalang Rice Terraces.jpg",
@@ -143,6 +227,18 @@
     }
   ],
   "manila": [
+    {
+      "file": "Jones Bridge, Manila.jpg",
+      "author": "Zirconaut",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Jones Bridge and Pasig River in Manila, photographed in December 2024",
+      "width": 4096,
+      "height": 3072,
+      "editorialMetadata": true,
+      "qualityPriority": 1350,
+      "reviewStatus": "Exact Commons file page, photographer, place, original dimensions and CC licence researched 2026-10-25; live archive builder must revalidate; not independently approved after full-resolution on-site visual inspection"
+    },
     {
       "file": "Manila Cathedral at Intramuros.jpg",
       "author": "MaxixKatana",

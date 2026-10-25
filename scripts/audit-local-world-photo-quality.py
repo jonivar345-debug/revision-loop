@@ -44,21 +44,15 @@ for id,items in groups.items():
             if d<=5:
                 similar.append({'id':id,'files':[hashes[a][0],hashes[b][0]],'dHashDistance':d})
 manual=[
-  {'id':'adelaide','issue':'Two closely related skyline views; evaluate stronger natural or heritage variety'},
-  {'id':'country-tm','issue':'Two Constitution Monument photographs; find a different Turkmenistan landmark'},
-  {'id':'country-sm','issue':'Two views of Guaita Fortress; look for a distinct San Marino landscape'},
-  {'id':'country-ni','issue':'Bus-route photograph is less recognisable than volcanoes or Lake Nicaragua'},
-  {'id':'country-ro','issue':'Religious buildings dominate; consider a Romanian city or countryside alternative'},
-  {'id':'coron','issue':'Church street view is less scenic than nearby islands and lagoons'}
+  {'id':id,'issue':'Replacement source selected, but detailed visual inspection and crop approval remain outstanding'}
+  for id in ['manila','adelaide','country-tm','country-sm','country-ni','country-ro','coron']
 ]
-addressed=[
-  'bali','almaty','dubai','marrakech','vancouver','manila'
-]
+addressed=['manila','adelaide','country-tm','country-sm','country-ni','country-ro','coron']
 assert not identical,'Exact duplicate files inside one destination: '+repr(identical)
 budgeted=[p for p in photos if p.get('newSizeBudgeted')]
 assert all(p['galleryBytes']<=720*1024 and p['coverBytes']<=170*1024 for p in budgeted)
 report={
-  'release':'v104','localDestinations':len(groups),'localPhotographs':len(photos),
+  'release':'v105','localDestinations':len(groups),'localPhotographs':len(photos),
   'fourPhotoLocalGalleries':sum(len(x)==4 for x in groups.values()),
   'combinedImageBytes':bytes_total,
   'newBudgetedPhotographs':len(budgeted),
@@ -68,7 +62,7 @@ report={
   'selectionIssuesAddressed':addressed,
   'visualReviewStatus':'Unreviewed; metadata verification, checksum checks and perceptual similarity checks are not human inspection'
 }
-dest=root/'editorial/world-local-photo-audit-v104.json'
+dest=root/'editorial/world-local-photo-audit-v105.json'
 dest.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f"Photo audit: {report['localPhotographs']} sources across {report['localDestinations']} destinations;"
       f" {report['fourPhotoLocalGalleries']} four-photo galleries; "

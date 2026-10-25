@@ -1,5 +1,5 @@
 {
-  "description": "World v103: local-first curated photo expansion, prioritizing 4 distinct subject-matched photographs per destination; preserve artist, Commons page and licence, with an ongoing visual audit.",
+  "description": "World v105: seven targeted quality replacements and up to 30 further complete local galleries, selected from the curated place-specific four-source catalogue; preserve authors, source pages and licences.",
   "quality": "Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.",
   "locations": {
     "london": [
@@ -273,7 +273,7 @@
       "Dai Trung gate, Temple of Literature, Hanoi, Vietnam, 20240123 0928 3065.jpg"
     ],
     "manila": [
-      "Cityscape of Manila, 2025 (01).jpg",
+      "Jones Bridge, Manila.jpg",
       "Manila Cathedral at Intramuros.jpg",
       "Fort Santiago, Intramuros, Manila.jpg",
       "Binondo Chinese New Year Ongpin Street 2024-02-10.jpg"
@@ -340,7 +340,7 @@
     ],
     "adelaide": [
       "Adelaide skyline, December 2022 b.jpg",
-      "Adelaide 2022 Skyline.jpg",
+      "The Jetty. Glenelg, SA.jpg",
       "Adelaide Chinatown.jpg",
       "Adelaide Club building on North Terrace, Adelaide (DSCF4797).jpg"
     ],
@@ -378,7 +378,7 @@
       "Coron skyline Tapyas (Coron, Palwan; 03-16-2024).jpg",
       "Coron - Kayangan Lake.jpg",
       "Waling-Waling Island.jpg",
-      "Coron church(코론 시내의 교회) - panoramio.jpg"
+      "Twin Lagoon Coron Palawan.jpg"
     ],
     "havana": [
       "Gemini Cruise, Havana Harbor.jpg",
@@ -455,18 +455,18 @@
     "country-ro": [
       "01 Magura, Romania - Piatra Craiului mountains.jpg",
       "Humor Monastery, Romania - church.jpg",
-      "Lutheran church in Alma (Almen), Romania.jpg",
+      "Bucegi Mountains, Romania.jpg",
       "Bârsana Monastery, Maramureș, Romania (2023) - IMG 03.jpg"
     ],
     "country-ni": [
       "Ometepe Island with Concepcion Volcano - From Lake Nicaragua - Nicaragua - 01 (31377352020).jpg",
-      "Aboard the Bus - En Route to Altagracia - Ometepe Island - Nicaragua 2016.jpg",
+      "Calles de Granada en Nicaragua.JPG",
       "Along Lake Nicaragua - Near Santo Domingo - Ometepe Island - Nicaragua (30987289423).jpg",
       "Sunset Scene around Maderas Volcano - Balgue - Ometepe Island - Nicaragua - 03 (31699818411).jpg"
     ],
     "country-tm": [
       "Darvaza gas crater, Jähennem derwezesi, Door to Hell, Gates of Hell, Derweze, Turkmenistan.jpg",
-      "Monument to the Constitution, Ashgabat, Turkmenistan (closeup).jpg",
+      "Turkmenistan - Yangykala Canyon.jpg",
       "Monument to the Constitution, Ashgabat, Turkmenistan.jpg",
       "Turkmenistan - Sultan Sanjar mausoleum.jpg"
     ],
@@ -480,7 +480,157 @@
       "Cathedral San Marino - Exterior.jpg",
       "San Marino and Romagna background - Panorama.jpg",
       "Guaita Fortress - San Marino - 2024 02 13 - GT 01 ver2.jpg",
-      "Guaita Fortress and San Marino (2023).jpg"
+      "La Cesta, San Marino (2).jpg"
+    ],
+    "athens": [
+      "Erechtheion Acropolis Athens.jpg",
+      "20101024 Acropolis panoramic view from Areopagus hill Athens Greece.jpg",
+      "Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill.jpg",
+      "Attica 06-13 Athens 25 Olympian Zeus Temple.jpg"
+    ],
+    "florence": [
+      "Firenze - Piazzale Michelangelo, Firenze, Italy - April 6, 2015 02.jpg",
+      "Florence Cathedral seen from Piazzale Michelangelo night dllu.jpg",
+      "Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg",
+      "Dramatic Views of Hurricane Florence from the International Space Station From 9 12 (42828603210).jpg"
+    ],
+    "krakow": [
+      "02021 0762 Main Market Square in Kraków.jpg",
+      "Krakow Rynek Glowny panorama 2.jpg",
+      "Former “Energoprojekt Kraków” administration building,, 1968 design. Antoni Mazur,, demolition, 21 Mazowiecka Street,,, Kraków, Poland.jpg",
+      "Tenement house, 1900, 7 Kalwaryjska street, Kraków, Poland.jpg"
+    ],
+    "ljubljana": [
+      "Triple Bridge, Ljubljana.jpg",
+      "Ljubljana Old Town, Slovenia (Old Camera) (33286165680).jpg",
+      "Ceiling of Ljubljana Cathedral (strop Cerkev sv. Nikolaja, Ljubljana).jpg",
+      "Dragons Bridge, Ljubljana 2.jpg"
+    ],
+    "mostar": [
+      "Stari Most viewed from North.jpg",
+      "View of Mostar 01.jpg",
+      "Church of St. Peter and Paul (Mostar).jpg",
+      "View over Mostar from Old Bridge Museum - Mostar - Bosnia and Herzegovina.jpg"
+    ],
+    "porto": [
+      "Puente Don Luis I, Oporto, Portugal, 2012-05-09, DD 13.JPG",
+      "Isola di Pianosa Vecchio Porto panoramic01 2018-05-30.jpg",
+      "20101016 Agios Nikolaos Metoxi Batopediou Porto Lagos Vistonida Lake Rhodope Greece.jpg",
+      "Porto Alegre - Brazil Landscape-Night.jpg"
+    ],
+    "sarajevo": [
+      "Sarajevo City Panorama.JPG",
+      "Šeher-Ćehaja Bridge, Sarajevo.jpg",
+      "Sarajevo Cathedral 01.jpg",
+      "Sarajevo – Baščaršija View from Zlatište 2.jpg"
+    ],
+    "seville": [
+      "Sevilla Cathedral - Southeast.jpg",
+      "Seville April 2019-9.jpg",
+      "JardinLasDamas Alcazar Seville.jpg",
+      "Plaza Virgen de los Reyes, Seville, Spain - Sep 2009.jpg"
+    ],
+    "stockholm": [
+      "Royal Dramatic Theatre Stockholm.jpg",
+      "Vasabron Vasa bridge Stockholm 2016 01.jpg",
+      "Riddarfjärden Stockholm Waterfront Congress Centre Stockholm 2019 08 12.jpg",
+      "SS Stockholm August 2015 01.jpg"
+    ],
+    "tallinn": [
+      "Tallinna vanalinn, Tallinn Old Town.jpg",
+      "Raekoja plats at night.jpg",
+      "Tallinn St Peter and St Paul's Cathedral forecourt houses 02.jpg",
+      "Freedom Square (Tallinn 2014).JPG"
+    ],
+    "vienna": [
+      "Schoenbrunn philharmoniker 2012.jpg",
+      "MUSA Vienna South view DSC 10153w.jpg",
+      "Schonbrunn Palace - Vienna.jpg",
+      "Suedbahnhof from arsenal tower vienna.jpg"
+    ],
+    "zurich": [
+      "Zürich view Quaibrücke 20200702.jpg",
+      "Zürich Switzerland-City-view-01.jpg",
+      "Zürich Switzerland-University-of-Zurich-Main-Building-02.jpg",
+      "Hall in the main building of the University of Zürich.jpg"
+    ],
+    "bergen": [
+      "Bryggen, Bergen, Norway.jpg",
+      "Bergen panorama at night - panoramio (1).jpg",
+      "Bergen city centre and surroundings Panorama edited.jpg",
+      "Bridge of KV Bergen W341.jpg"
+    ],
+    "shenzhen": [
+      "Coco park.jpg",
+      "Civic Center, Shenzhen Lianhuashan Park (2018.9) Daytime.jpg",
+      "Civic Center, Shenzhen Lianhuashan Park (2018.9) Night cropped.jpg",
+      "Coco Park at Night, Shenzhen, China.jpg"
+    ],
+    "gyeongju": [
+      "Sunset over the Tumuli Park in Gyeongju Historic Site Wolseong District South Korea.jpg",
+      "Pink sunrise over ponds in the Tumuli Park of Gyeongju Historic Site Wolseong District South Korea.jpg",
+      "Two bees absorbing pollen from an Iceland poppy in the flower garden of Gyeongju South Korea.jpg",
+      "Red Geranium in the flower garden of the Tumuli Park at sunset in Gyeongju South Korea.jpg"
+    ],
+    "bohol": [
+      "Loboc river cruise Bohol 2017.jpg",
+      "Man made Forest.jpg",
+      "Forest road in Bohol 2, Philippines.jpg",
+      "Panglao Island Beach.jpg"
+    ],
+    "petra": [
+      "Petra, Jordan -The Treasury.JPG",
+      "The Monastery, Petra, Jordan6.jpg",
+      "Mosaic of the Petra Church, Petra, Jordan4.jpg",
+      "Mosaic of the Petra Church, Petra, Jordan1.jpg"
+    ],
+    "angkor": [
+      "Sunrise at Angkor Wat Cambodia.jpg",
+      "2016 Angkor, Angkor Wat, Główna świątynia, Zewnętrzna galeria, Płaskorzeźby (06).jpg",
+      "20171126 Angkor Wat 4712 DxO.jpg",
+      "2016 Angkor, Angkor Wat, Główna świątynia, Zewnętrzna galeria, Devata (02).jpg"
+    ],
+    "samarkand": [
+      "North-west minaret of Bibi-Khanym Mosque, Samarkand (минарет Биби-Ханум мечеть).jpg",
+      "Samarkand Shah-i Zinda general view.JPG",
+      "Bibi-Khanym Mosque, Samarkand (мечеть Биби-Ханум, Южный зал мечети).jpg",
+      "Beruni Street in Samarkand 2.jpg"
+    ],
+    "taipei": [
+      "Taipei Skyline 2022.06.29.jpg",
+      "1 taipei sunrise panorama dxr edit pangen 141215 1.jpg",
+      "Chung-Shan Building, Taipei City; March 2016 (14).jpg",
+      "Taipei Taiwan Taipei-101-Tower-01.jpg"
+    ],
+    "machupicchu": [
+      "Machu Picchu, Peru - Laslovarga (107).jpg",
+      "2013-02-16 View from Machu Picchu.jpg",
+      "147 View from Intiwatana Machu Picchu Peru 2410 (15160881331).jpg",
+      "Machu Picchu and Waynapicchu (Landscape).jpg"
+    ],
+    "rio": [
+      "Christ-Redeemer-Rio-de-Janeiro.jpg",
+      "Contrasts of Rio de Janeiro - Rocinha, Ipanema, and Mountains at Sunrise.jpg",
+      "Vista de Favela, Río de Janeiro A74250020241123.jpg",
+      "Boca da Baía de Guanabara e orlas artificiais - Parque do Flamengo, Fortes Históricos de Niterói, Monumento Natural do Pão de Açúcar, orla marítima de Copacabana - Rio de Janeiro - 20240623064031.jpg"
+    ],
+    "iguazu": [
+      "Iguazu Falls, Argentina.JPG",
+      "A view of Iguazu Falls from the Argentina side.jpg",
+      "Iguazu Falls Panorama 2009.jpg",
+      "Iguazu Falls from the Argentinian side.JPG"
+    ],
+    "uluru": [
+      "Uluru Australia.jpg",
+      "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru -- 2019 -- 3602-6.jpg",
+      "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3615.jpg",
+      "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Mutitjulu Waterhole -- 2019 -- 3648.jpg"
+    ],
+    "queenstown": [
+      "Queenstown Park, Queenstown, New Zealand - panoramio.jpg",
+      "Queenstown - Queenstown Bay 2 (31305610010).jpg",
+      "Lake Wakatipu from Queenstown gondola.jpg",
+      "Skyline Queenstown Gondola.jpg"
     ]
   }
 }
