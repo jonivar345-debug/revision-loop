@@ -91,5 +91,8 @@ jobs:
             echo 'Local photo files already up-to-date.'
           else
             git commit -m "Archive verified Commons World photographs as local assets"
-            git push
+            # Merge new edits to tests or workflows made while WebP conversion ran.
+            # Never force-push; a true photo-file conflict fails this job safely.
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
           fi
