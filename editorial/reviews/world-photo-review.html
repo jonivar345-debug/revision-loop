@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World local photograph review | Revision Loop</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#182b3c;background:#f0f3f7}
+*{box-sizing:border-box}body{margin:0}header{padding:22px max(16px,calc((100vw - 1260px)/2));background:#153449;color:#fff}
+h1{font-size:1.5rem;margin:0 0 8px}h2{font-size:1.08rem;margin:0}p{line-height:1.5;margin:6px 0 10px}
+header a{color:#b7dff4}.sub{font-size:.9rem;max-width:80ch;color:#dbe7ef}
+main{max-width:1260px;margin:auto;padding:18px 16px 55px}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;padding:15px;background:#fff;border:1px solid #dbe1e8;border-radius:12px;margin-bottom:12px}
+label{display:flex;flex-direction:column;gap:4px;font-size:.79rem;font-weight:700}
+input,select,textarea,button{font:inherit;border:1px solid #b9c8d5;border-radius:7px;padding:9px;background:#fff;color:#173047}
+input{min-width:220px}button{cursor:pointer}button:hover{background:#ebf3f8}button:focus-visible,a:focus-visible{outline:3px solid #e99c38;outline-offset:2px}
+button.primary{color:white;background:#1b5978;border-color:#1b5978}button.primary:hover{background:#124664}
+#summary{font-size:.86rem;color:#526171;margin:8px 0 16px}
+#cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,495px),1fr));gap:16px}
+.card{min-width:0;background:white;border:1px solid #dbe1e8;border-radius:13px;padding:14px;box-shadow:0 2px 12px #1730470a}
+.card header{background:transparent;color:#173047;display:flex;justify-content:space-between;align-items:center;gap:9px;padding:0;margin:0 0 8px}
+.meta{font-size:.77rem;color:#586c7d}.flags{font-size:.78rem;color:#774b21;margin:6px 0}
+.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+figure{margin:0;min-width:0}figure a{display:block;background:#dde5eb;border-radius:7px;overflow:hidden}
+figure img{display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover}
+body.full figure img{object-fit:contain}
+figcaption{font-size:.69rem;line-height:1.35;margin:4px 0 5px;color:#41566a;overflow-wrap:anywhere;min-height:30px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+details{font-size:.78rem;color:#41566a;margin-top:10px}details summary{cursor:pointer;font-weight:600;padding:5px}
+details ul{padding-left:20px;line-height:1.5}details li{margin:6px 0;overflow-wrap:anywhere}
+details a{color:#175e86}
+.feedback{display:none;margin-top:10px}.feedback.open{display:block}
+.feedback textarea{display:block;min-height:65px;width:100%;resize:vertical;margin:5px 0 8px}
+footer{font-size:.8rem;color:#697888;margin-top:16px}
+#pages{display:flex;justify-content:center;align-items:center;gap:12px;margin:20px 0}
+#loading{padding:20px;color:#556678}.hidden{display:none!important}
+@media(max-width:520px){header{padding:16px}main{padding:10px}.card{padding:10px}.controls{padding:10px}input{min-width:0;width:100%}}
+</style></head>
+<body>
+<header><h1>Revision Loop — World photograph review</h1>
+<p class="sub">Review the <strong>actual locally hosted WebPs</strong>, four views per destination. Switch between the 16:9 centre-cropped shop view and the full photograph. This is an editorial tool, not the World shop. Photos keep author, Commons page and licence details.</p>
+<a href="../../index.html">Return to Revision Loop</a></header>
+<main>
+<section class="controls" aria-label="Photo review controls">
+<label>Search destination or photograph<input id="search" type="search" placeholder="e.g. Iceland or Venice"></label>
+<label>Filter<select id="filter"><option value="all">All locally hosted destinations</option><option value="flagged">Automated review flags</option><option value="new">New in v109</option><option value="incomplete">Not yet four local photographs</option></select></label>
+<label>View<select id="view"><option value="cover">Shop-card crops (16:9)</option><option value="full">Full gallery photographs</option></select></label>
+<label>Order<select id="sort"><option value="priority">Flagged first</option><option value="alpha">Destination A to Z</option></select></label>
+</section>
+<div id="summary" role="status">Reading local photo index…</div>
+<div id="loading">Loading photo records…</div>
+<div id="cards"></div>
+<nav id="pages" aria-label="Review pages"></nav>
+<footer>Each photo links to its local image. A lead crop flag is calculated from image dimensions; good framing and subject accuracy still require a person to inspect the pictures. Feedback notes are copied to your clipboard only, and are not saved or sent by this page.</footer>
+</main>
+<script>
+'use strict';
+const $=s=>document.querySelector(s);
+const state={records:[],filtered:[],page:0,pageSize:12};
+function elem(tag,cls,text){
+ const e=document.createElement(tag);
+ if(cls)e.className=cls;
+ if(text!==undefined)e.textContent=text;
+ return e;
+}
+function sourceLink(p){
+ const link=document.createElement('a');link.href=p.sourcePage;link.target='_blank';link.rel='noopener noreferrer';
+ link.textContent='Commons source';return link;
+}
+function makeCard(item){
+ const card=elem('article','card');
+ const heading=elem('header');heading.append(elem('h2','',item.id));
+ const info=elem('span','meta',item.images.length+'/4 local · '+(item.newInV109?'v109 new':'existing'));
+ heading.append(info);card.append(heading);
+ if(item.reasons.length)card.append(elem('p','flags','Check: '+item.reasons.join(', ').replaceAll('-',' ')));
+ const grid=elem('div','photos');
+ item.images.forEach(photo=>{
+  const fig=elem('figure');const link=elem('a');link.href=photo.gallery;link.target='_blank';link.rel='noopener noreferrer';link.title='Open locally hosted full image';
+  const img=elem('img');img.loading='lazy';img.decoding='async';img.src=photo.cover;
+  img.alt=item.id+': '+photo.originalFile;img.dataset.gallery=photo.gallery;img.dataset.cover=photo.cover;
+  link.append(img);fig.append(link);
+  fig.append(elem('figcaption','',photo.slot+'. '+photo.originalFile));
+  grid.append(fig);
+ });
+ card.append(grid);
+ const actions=elem('div','actions');
+ const toggle=elem('button','','Write review note');toggle.type='button';
+ actions.append(toggle);card.append(actions);
+ const details=elem('details');details.append(elem('summary','','Photographer credits and image licences'));
+ const ul=elem('ul');
+ item.images.forEach(p=>{let li=elem('li');li.append(document.createTextNode(p.slot+'. '+p.author+' — '+p.license+' · '));li.append(sourceLink(p));ul.append(li)});
+ details.append(ul);card.append(details);
+ const fb=elem('div','feedback');
+ const textarea=elem('textarea');textarea.placeholder='What should change? Describe the photo or slot.';textarea.setAttribute('aria-label','Review note for '+item.id);
+ const copy=elem('button','primary','Copy feedback text');copy.type='button';const msg=elem('span','meta','');
+ copy.addEventListener('click',async()=>{
+  const report='World photo review — '+item.id+'\nLead: '+item.lead+'\nIssue: '+(textarea.value.trim()||'Please inspect this gallery')+'\n'+item.images.map(p=>p.slot+'. '+p.originalFile).join('\n');
+  try{await navigator.clipboard.writeText(report);msg.textContent='Copied. Paste the note into your chat.'}
+  catch{textarea.value=report;textarea.select();msg.textContent='Select and copy this report.'}
+ });
+ toggle.addEventListener('click',()=>{fb.classList.toggle('open');if(fb.classList.contains('open'))textarea.focus()});
+ fb.append(textarea,copy,msg);card.append(fb);return card;
+}
+function compute(){
+ const query=$('#search').value.trim().toLowerCase(),filter=$('#filter').value;
+ let list=state.records.filter(x=>{
+  if(filter==='new'&&!x.newInV109)return false;
+  if(filter==='flagged'&&!x.reasons.length)return false;
+  if(filter==='incomplete'&&x.images.length===4)return false;
+  return !query||x.id.toLowerCase().includes(query)||x.images.some(p=>p.originalFile.toLowerCase().includes(query));
+ });
+ if($('#sort').value==='priority')list.sort((a,b)=>b.reasons.length-a.reasons.length||a.id.localeCompare(b.id));
+ else list.sort((a,b)=>a.id.localeCompare(b.id));
+ state.filtered=list;state.page=0;render();
+}
+function render(){
+ const list=state.filtered,limit=Math.ceil(list.length/state.pageSize)||1;
+ state.page=Math.max(0,Math.min(state.page,limit-1));
+ $('#loading').classList.add('hidden');
+ const count=state.records.reduce((n,x)=>n+x.images.length,0);
+ $('#summary').textContent=list.length+' matching destinations • '+state.records.length+' total local destinations • '+count+' photographs • '+state.records.filter(x=>x.images.length===4).length+' four-photo galleries. All still need individual human visual approval.';
+ const cards=$('#cards');cards.replaceChildren();
+ const full=$('#view').value==='full';document.body.classList.toggle('full',full);
+ list.slice(state.page*state.pageSize,(state.page+1)*state.pageSize).forEach(x=>{
+  const card=makeCard(x);
+  if(full)card.querySelectorAll('img').forEach(img=>img.src=img.dataset.gallery);
+  cards.append(card);
+ });
+ const nav=$('#pages');nav.replaceChildren();
+ if(limit>1){
+  const previous=elem('button','','Previous');previous.disabled=state.page===0;
+  previous.addEventListener('click',()=>{state.page--;render();scrollTo(0,0)});
+  const next=elem('button','','Next');next.disabled=state.page===limit-1;
+  next.addEventListener('click',()=>{state.page++;render();scrollTo(0,0)});
+  nav.append(previous,elem('span','',`Page ${state.page+1} of ${limit}`),next);
+ }
+}
+['search','filter','sort'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',compute));
+$('#view').addEventListener('change',render);
+fetch('./world-local-photo-review-index.json').then(r=>{if(!r.ok)throw new Error('Missing review index');return r.json()})
+ .then(data=>{state.records=data.destinations||[];compute()})
+ .catch(err=>{$('#loading').textContent='The local review index is not available. '+err.message;$('#summary').textContent='';});
+</script></body></html>

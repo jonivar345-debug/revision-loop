@@ -340,6 +340,30 @@ try{
   'Touch rotation returned to pinch state');
  console.log('PASS browser mobile multi-touch: pinch zoom '+afterPinch+'%, drag-after-pinch moved globe '+longitudeDelta.toFixed(1)+' degrees without pointer capture leak.');
 
+ // Review the actual local photo gallery index and shop-card crops in Chromium.
+ assert.equal(await page.locator('a[href="editorial/reviews/world-photo-review.html"]').count(),1,'Photo review access link missing from the World shop');
+ const reviewData=JSON.parse(await fs.readFile(path.join(cwd,'editorial/reviews/world-local-photo-review-index.json'),'utf8'));
+ const reviewPage=await browser.newPage({viewport:{width:980,height:780}});
+ const reviewErrors=[];
+ reviewPage.on('pageerror',error=>reviewErrors.push(error.message));
+ await reviewPage.route('**/*',route=>route.request().url().startsWith(origin+'/')?route.continue():route.abort());
+ await reviewPage.goto(origin+'/editorial/reviews/world-photo-review.html',{waitUntil:'domcontentloaded'});
+ await reviewPage.waitForFunction(count=>document.querySelector('#summary')?.textContent?.includes(count+' photographs'),reviewData.photoCount,{timeout:20000});
+ assert.equal(await reviewPage.locator('.card').count(),12,'Review should paginate galleries for mobile performance');
+ const firstReviewImage=reviewPage.locator('.card figure img').first();
+ await firstReviewImage.evaluate(image=>image.decode());
+ assert((await firstReviewImage.getAttribute('src')).includes('-cover.webp'),'Review must show real first-party shop-cover pixels');
+ await reviewPage.locator('#view').selectOption('full');
+ assert((await firstReviewImage.getAttribute('src')).includes('-gallery.webp'),'Full-frame review does not load local gallery image');
+ assert.equal(await firstReviewImage.evaluate(image=>getComputedStyle(image).objectFit),'contain');
+ await reviewPage.locator('#filter').selectOption('new');
+ await reviewPage.waitForFunction(count=>document.querySelector('#summary')?.textContent?.startsWith(count+' matching destinations'),reviewData.destinations.filter(x=>x.newInV109).length);
+ await reviewPage.locator('#search').fill('swakopmund');
+ assert.equal(await reviewPage.locator('.card').count(),1,'Destination photo filtering failed');
+ assert(!reviewErrors.length,'Photo review page JavaScript errors: '+reviewErrors.join(' | '));
+ await reviewPage.close();
+ console.log('PASS real browser visual review: paginated local images, cover/full-photo toggle, searchable v109 galleries and decoded WebP files.');
+
 } finally{
  if(browser)await browser.close();
  await new Promise(resolve=>server.close(resolve));
