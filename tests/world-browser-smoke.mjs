@@ -81,6 +81,28 @@ try{
  assert(state.locationCount.includes('/ 376'),'Duplicate destinations still count separately');
  assert.equal(state.gesture,'object');
  assert.equal(state.media,'object');
+ const auditedPriority=await page.evaluate(async()=>{
+   const expected={
+     bali:'Tegalalang Rice Terraces.jpg',
+     almaty:'Almaty Skyline from the Kök Töbe hill.jpg',
+     dubai:'Dubai Burj Khalifa.jpg',
+     marrakech:'Djemaa el Fna Marrakesch.jpg',
+     vancouver:'Stanley Park - Vancouver BC - Canada.jpg',
+     manila:'Cityscape of Manila, 2025 (01).jpg'
+   };
+   const rows=[];
+   for(const [id,filename] of Object.entries(expected)){
+     const x=window.RevisionWorldLocalPhotos.get(id);
+     if(x.length!==4||x[0].file!=='File:'+filename)throw Error('v104 editor lost place-specific source: '+id);
+     if(new Set(x.map(p=>p.file)).size!==4)throw Error('Duplicate photo source for '+id);
+     const lead=await window.RevisionWorldPhotoGallery.photosFor(LOCATIONS.find(p=>p.id===id),{limit:1});
+     if(lead[0]?.file!==x[0].file)throw Error('Shop cover out of sync: '+id);
+     rows.push(id);
+   }
+   return rows;
+ });
+ assert.equal(auditedPriority.length,6);
+
  const proof=await page.evaluate(async()=>{
    const pairs=[];
    for(const id of ['london','busan']){
@@ -103,7 +125,7 @@ try{
  // Check actual WebP decoding; a correct filename alone does not prove it loads.
  const decodedWorldImages=await page.evaluate(async()=>{
    const output=[];
-   for(const id of ['london','busan','tokyo','rome','istanbul']){
+   for(const id of ['london','busan','tokyo','rome','istanbul','bali','almaty','dubai','marrakech','vancouver','manila']){
      const images=window.RevisionWorldLocalPhotos.get(id);
      if(images.length!==4)throw Error('Missing four local photos for '+id);
      const first=images[0];
@@ -118,9 +140,9 @@ try{
    }
    return output;
  });
- assert.equal(decodedWorldImages.length,10,'Failed local image decoding coverage');
+ assert.equal(decodedWorldImages.length,22,'Failed local image decoding coverage');
  assert(decodedWorldImages.every(x=>x.width>=360&&x.height>=60),'Local gallery or cover decoded at invalid resolution');
- console.log('PASS WebP image decoding: 10 local files across five World destinations, both image sizes.');
+ console.log('PASS WebP image decoding: 22 local files across 11 World destinations, both image sizes.');
 
 
  await page.waitForFunction(()=>earthTextureReady===true&&earthW>=700,null,{timeout:25000});

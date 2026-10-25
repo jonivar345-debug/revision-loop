@@ -4861,7 +4861,7 @@
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
-    return [...(priorityPhotoV99[id]||[]),...(priorityPhotoV97[id]||[]),...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
+    return [...(typeof window==='object'&&window.RevisionWorldV104Photos?.[id]||[]),...(priorityPhotoV99[id]||[]),...(priorityPhotoV97[id]||[]),...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
       .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo)&&acceptedPhotoV97(id,photo)&&acceptedPhotoV99(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }

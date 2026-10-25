@@ -9,7 +9,7 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const {promises:fsp}=fs;
-global.window={RevisionWorldDiscoveryPhotos:require('../world-photo-discovery-data.js'),RevisionWorldPhotoEnrichment:require('../world-photo-enrichment-v85.js')};
+global.window={RevisionWorldDiscoveryPhotos:require('../world-photo-discovery-data.js'),RevisionWorldPhotoEnrichment:require('../world-photo-enrichment-v85.js'),RevisionWorldV104Photos:require('../world-photo-editorial-v104.js')};
 const {get}=require('../world-curated-photos.js');
 const manifest=require('../editorial/world-local-photo-pilot.json');
 const base=path.resolve(__dirname,'../assets/world');
@@ -33,7 +33,7 @@ function licenseAllowed(expected,current){
   const lic=String(current||'').replace(/\s+/g,' ').trim().toUpperCase();
   const canonical=String(expected||'').replace(/\s+/g,' ').trim().toUpperCase();
   if(canonical==='CC0 1.0')return /^CC\s?0(?:\s1\.0)?$/.test(lic);
-  return canonical===lic&&/^CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)$/.test(lic);
+  return canonical===lic&&/^CC BY(?:-SA)? (?:2\.0|2\.5|3\.0|4\.0)$/.test(lic);
 }
 async function metadata(filename){
   const api=new URL('https://commons.wikimedia.org/w/api.php');
@@ -94,7 +94,16 @@ async function main(){
       // CC licences for previously downloaded, correctly attributed versions
       // remain valid. Don't hammer Commons on every archive rerun: it rate-limits
       // large requests, and our actual JPEG/WebP assets are already local.
-      const reuse=!!(prior&&galleryWebp&&coverWebp&&
+      // A slot is numbered, not keyed by Commons title. If a curated source
+      // was replaced or reordered, never mistake the previous photo bytes for
+      // the new source (even though its local path has the same number).
+      const priorMatchesSlot=!!(prior&&prior.displayedGallery==='./assets/world/'+gallery&&prior.displayedCover==='./assets/world/'+cover);
+      if(!priorMatchesSlot){
+        await Promise.all([gallery,cover].map(f=>fsp.rm(path.join(base,f),{force:true})));
+      }
+      const usableGallery=priorMatchesSlot?galleryWebp:0;
+      const usableCover=priorMatchesSlot?coverWebp:0;
+      const reuse=!!(priorMatchesSlot&&prior&&usableGallery&&usableCover&&
         prior.author===entry.author&&prior.license===entry.license&&
         prior.licenseUrl===entry.licenseUrl&&
         Number(prior.originalWidth)>=1800&&Number(prior.originalHeight)>=800&&prior.originalUrl);
@@ -111,8 +120,8 @@ async function main(){
         throw new Error('Original resolution below accepted minimum: '+name);
       // Existing optimized copies remain first-party assets and are never
       // downloaded from Commons again; new sources stage JPEGs for Pillow.
-      const gallerySize=galleryWebp||((await savedJpeg(path.join(base,id+'/'+index+'-gallery.jpg')))||await download(name,1800,path.join(base,id+'/'+index+'-gallery.jpg'),info.thumburl));
-      const coverSize=coverWebp||((await savedJpeg(path.join(base,id+'/'+index+'-cover.jpg')))||await download(name,880,path.join(base,id+'/'+index+'-cover.jpg')));
+      const gallerySize=usableGallery||((await savedJpeg(path.join(base,id+'/'+index+'-gallery.jpg')))||await download(name,1800,path.join(base,id+'/'+index+'-gallery.jpg'),info.thumburl));
+      const coverSize=usableCover||((await savedJpeg(path.join(base,id+'/'+index+'-cover.jpg')))||await download(name,880,path.join(base,id+'/'+index+'-cover.jpg')));
       totalBytes+=gallerySize+coverSize;
       const result={...entry,source:'local-library',checked:true,locationVerified:true,
         url:'./assets/world/'+gallery,localCoverUrl:'./assets/world/'+cover};
