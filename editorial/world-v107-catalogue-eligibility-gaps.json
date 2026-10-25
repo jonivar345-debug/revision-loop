@@ -1,0 +1,53 @@
+{
+  "release": "v107",
+  "audit": "Legacy metadata-only source eligibility, NOT the count of actual local photos in the World shop.",
+  "description": "The earlier four-source 376/376 tally included misleading foreign place-name matches. Local previously accepted WebP galleries remain separate and complete. The affected IDs below need source catalogue review or eligibility-rule correction before claiming four approved remote source candidates each.",
+  "completeEligible": 365,
+  "totalDestinations": 376,
+  "gaps": [
+    {
+      "id": "gyeongju",
+      "missing": 2
+    },
+    {
+      "id": "stockholm",
+      "missing": 1
+    },
+    {
+      "id": "cartagena",
+      "missing": 2
+    },
+    {
+      "id": "bergen",
+      "missing": 1
+    },
+    {
+      "id": "porto",
+      "missing": 3
+    },
+    {
+      "id": "florence",
+      "missing": 1
+    },
+    {
+      "id": "country-is",
+      "missing": 3
+    },
+    {
+      "id": "country-li",
+      "missing": 3
+    },
+    {
+      "id": "country-lu",
+      "missing": 2
+    },
+    {
+      "id": "country-pt",
+      "missing": 1
+    },
+    {
+      "id": "country-qa",
+      "missing": 1
+    }
+  ]
+}
