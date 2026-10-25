@@ -11,6 +11,18 @@
 })(typeof window==='object'?window:null,function(){
   'use strict';
   const verified=Object.freeze({
+    "country-bz":[
+      {file:'Belize Caye Caulker-226.jpg',author:'Dronepicr',license:'CC BY 3.0',licenseUrl:'https://creativecommons.org/licenses/by/3.0/',subject:'Scenic aerial view over the Belizean island of Caye Caulker and its turquoise sea',width:3992,height:2242}
+    ],
+    "country-sz":[
+      {file:'Impala, Mlilwane Wildlife Sanctuary.jpg',author:'Bernard Gagnon',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',subject:'Wild impala photographed in the Mlilwane Wildlife Sanctuary, Eswatini',width:2773,height:1849},
+      {file:'Parliament building of Eswatini, Lobamba.jpg',author:'Bernard Gagnon',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',subject:'Parliament building at Lobamba, Eswatini',width:2755,height:1837}
+    ],
+    "country-kz":[
+      {file:'Charyn Canyon, Kazakhstan 04.jpg',author:'Bgag',license:'CC0 1.0',licenseUrl:'https://creativecommons.org/publicdomain/zero/1.0/',subject:'Rock formations of Charyn Canyon, south-eastern Kazakhstan',width:4974,height:3059},
+      {file:'Lake Kaindy, Kazakhstan.jpg',author:'Anna Powaska',license:'CC BY-SA 4.0',subject:'Lake Kaindy and submerged trees in Kazakhstan',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:2048,height:1362},
+      {file:'Astana - 190217 DSC 3595.jpg',author:'Ilya Varlamov',license:'CC BY-SA 4.0',subject:'Urban scene in Astana, capital of Kazakhstan',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:5568,height:3712}
+    ],
     "ocean-arctic":[
       {file:'North Pole, Arctic Ocean, sea ice 01.jpg',author:'Matti&Keti; Lorenz King',license:'CC BY-SA 4.0',subject:'Pressure-ridged Arctic Ocean sea ice at the geographic North Pole',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:4117,height:2698}
     ],
@@ -641,6 +653,8 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "subject": "Archaeological plazas and El Castillo at the Xunantunich Maya site, Belize",
+        "width": 6000,
+        "height": 4000,
         "editorialMetadata": true
       }
     ],

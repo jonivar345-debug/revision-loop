@@ -15,7 +15,7 @@ const catalogue=require('../world-curated-photos.js');
 const targetPath=path.resolve(__dirname,'../editorial/world-local-photo-pilot.json');
 // IDs from the site's existing World destination catalog. Previously prioritized
 // scenic/cultural cities, then major landscape and marine destinations.
-const batch=require('../editorial/world-v112-batch-targets.json');
+const batch=require('../editorial/world-v113-batch-targets.json');
 const targets=batch.targets;
 const manifest=JSON.parse(fs.readFileSync(targetPath,'utf8'));
 const selected=[];const skipped=[];
@@ -24,7 +24,8 @@ const valid=p=>p&&typeof p.file==='string'&&/\.(?:jpe?g)$/i.test(p.file)&&
  /^(?:CC (?:BY|BY-SA)|CC0)/i.test(p.license||'')&&
  p.licenseUrl&&p.filePage?.startsWith('https://commons.wikimedia.org/wiki/File:');
 for(const id of targets){
-  if(manifest.locations[id])continue;
+  // Existing incomplete galleries are finished by the archive builder after live licence validation.
+  if(manifest.locations[id]){if(manifest.locations[id].length<4)selected.push({id,names:batch.approvedSelections[id],existingPartial:manifest.locations[id]});continue;}
   // Unlike earlier automated imports, accept exactly these reviewed file names.
   // A loose place-name keyword may refer to a flower, ship, palace or another city.
   const names=batch.approvedSelections[id];
@@ -39,8 +40,8 @@ for(const id of targets){
 }
 // This threshold ensures we don't silently pretend a batch succeeded.
 console.log('Selection candidates: '+selected.length+'; skipped: '+JSON.stringify(skipped));
-assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length  >=batch.minimumGalleries,'Insufficient source-checked v112 galleries');
-manifest.description='World v112: extend the locally hosted World archive with 18 place-specific source selections while protecting previously hosted photographs.';
+assert(targets.filter(id=>(Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4)||selected.some(v=>v.id===id)).length  >=batch.minimumGalleries,'Insufficient source-checked v113 galleries');
+manifest.description='World v113: extend the locally hosted World archive with three source-verified previously partial galleries while protecting previously hosted photographs.';
 manifest.quality='Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.';
 fs.writeFileSync(targetPath,JSON.stringify(manifest,null,2)+'\n');
 console.log('New four-photo locations:',selected.length,'('+(selected.length*4)+' photos)');

@@ -1,0 +1,38 @@
+{
+  "release": "v113",
+  "goal": "Complete the remaining three partially local World galleries with precisely attributed place-specific sources; retain earlier gallery leading photos and all v112 archive data.",
+  "minimumGalleries": 3,
+  "maxGalleries": 3,
+  "requiredGalleries": [
+    "country-bz",
+    "country-kz",
+    "country-sz"
+  ],
+  "targets": [
+    "country-bz",
+    "country-kz",
+    "country-sz"
+  ],
+  "approvedSelections": {
+    "country-bz": [
+      "Belize Blue Hole.jpg",
+      "Cockscomb Basin waterfall.jpg",
+      "Belize Caye Caulker-226.jpg",
+      "Xunantunich Belize 1 16.jpg"
+    ],
+    "country-kz": [
+      "ПОЮЩИЙ БАРХАН.jpg",
+      "Charyn Canyon, Kazakhstan 04.jpg",
+      "Lake Kaindy, Kazakhstan.jpg",
+      "Astana - 190217 DSC 3595.jpg"
+    ],
+    "country-sz": [
+      "Mlilwane Wildlife Sanctuary in Eswatini 01.jpg",
+      "Mantenga Falls.jpg",
+      "Impala, Mlilwane Wildlife Sanctuary.jpg",
+      "Parliament building of Eswatini, Lobamba.jpg"
+    ]
+  },
+  "reviewLevel": "Source pages, names, places, photographer and stated licence screened. The import rechecks Commons live metadata and downloaded image integrity; pixel-level visual approval remains incomplete.",
+  "existingPhotosMustKeepOriginalSlots": true
+}
