@@ -29,6 +29,7 @@ const context={
 };
 vm.createContext(context);
 vm.runInContext(cut('function now(){','function clamp(')+
+ cut('function daily(){','function state(')+
  cut('function award(','function levelInfo(')+
  cut('function advanceSession(){','function diagram('),context);
 function complete(key){
