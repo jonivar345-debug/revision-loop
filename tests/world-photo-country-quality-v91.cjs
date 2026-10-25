@@ -47,7 +47,7 @@ const root=path.join(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 for(const x of ['world-photo-discovery-data.js','world-photo-enrichment-v85.js','world-curated-photos.js','world-location-photo-gallery.js'])
- assert(html.includes(x+'?v='+(x==='world-curated-photos.js'?'104':x==='world-location-photo-gallery.js'?'101':'91')),'Missing revised browser script: '+x);
+ assert(html.includes(x+'?v='+(x==='world-curated-photos.js'?'105':x==='world-location-photo-gallery.js'?'101':'91')),'Missing revised browser script: '+x);
 assert(sw.includes('revision-loop-v105-manila-and-local-gallery-expansion'));
 (async()=>{
  const media={verifyNamedFiles:async candidates=>candidates};
