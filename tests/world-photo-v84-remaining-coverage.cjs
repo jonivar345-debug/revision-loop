@@ -42,7 +42,7 @@ for(const id of ['london','busan'])
  assert.equal(catalog.get(id).filter(p=>p.checked).length,4,'Original hand-inspected gallery changed: '+id);
 const cache=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert(cache.includes('revision-loop-v94-streak-points-only'),'Missing updated offline cache');
+assert(cache.includes('revision-loop-v95-fair-shop-prices'),'Missing updated offline cache');
 assert(html.includes('world-photo-discovery-data.js?v=91')&&html.includes('world-curated-photos.js?v=93'),
  'New photo sources might not load through existing browser cache');
 const coveredRegions=new Set(expanded.map(x=>x.region));
