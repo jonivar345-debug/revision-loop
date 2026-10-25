@@ -1,6 +1,6 @@
 {
-  "description": "Growing first-party photo library: preserve strongest curated sources and stable city landmarks; retain legally required author and source metadata; do not confuse metadata checks with final visual acceptance.",
-  "quality": "Gallery JPEG derivatives at 1800px, cover copies at 880px; originals remain at Commons. Do not upsample or silently substitute unrelated images.",
+  "description": "World v102 progressively archives existing hand-curated Commons sources as optimized local WebP gallery and cover assets. Four subjects per featured city, with original photographer, source and CC licence retained.",
+  "quality": "1800px gallery and 880px cover source derivatives converted to WebP at 86/81 quality, without upsampling. Visual editorial approval remains separate from Commons metadata and source checks.",
   "locations": {
     "london": [
       "The Tower Bridge, London, UK.jpg",
@@ -103,6 +103,36 @@
       "Parc Güell Barcelona.JPG",
       "Casa Batlló, Barcelona.jpg",
       "Gothic Quarter, Barcelona (1) (30884069420).jpg"
+    ],
+    "rome": [
+      "Rome colosseum.jpg",
+      "Trevi Fountain 1 - Rome.jpg",
+      "The Pantheon, Rome.jpg",
+      "Roman Forum in Rome.jpg"
+    ],
+    "istanbul": [
+      "Hagia Sophia and Blue Mosque.jpg",
+      "İstanbul Galata Kulesi.jpg",
+      "Bosphorus Bridge at night.jpg",
+      "Grand Bazaar, Istanbul.jpg"
+    ],
+    "venice": [
+      "Grand Canal from Rialto Bridge.jpg",
+      "St. Mark's Basilica, St Mark's Square, Venice, Italy.jpg",
+      "Bridge of Sighs Venice.jpg",
+      "Gondolas, Venice, Italy.jpg"
+    ],
+    "dubrovnik": [
+      "Dubrovnik Old Town 1.jpg",
+      "Dubrovnik City Walls.jpg",
+      "Dubrovnik - Stradun.jpg",
+      "Dubrovnik Old Town From Minčeta Tower.jpg"
+    ],
+    "bangkok": [
+      "Grand Palace Bangkok, Thailand.jpg",
+      "Wat Arun Bangkok ,Thailand.jpg",
+      "Chao Phraya River in Bangkok 01.jpg",
+      "Bangkok-Chinatown-14-Einkaufstrasse-1976-gje.jpg"
     ]
   }
 }

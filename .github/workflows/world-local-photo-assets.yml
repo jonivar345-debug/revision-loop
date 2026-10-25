@@ -1,12 +1,13 @@
-name: Build locally hosted World photo expansion
+name: Build locally hosted optimized World photos
 
 on:
   push:
-    branches: [feature/world-v101-local-photo-expansion]
+    branches: [feature/world-v102-webp-and-more-cities]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
       - 'scripts/build-local-world-photos.cjs'
+      - 'scripts/optimize-world-photos.py'
   workflow_dispatch:
 
 permissions:
@@ -23,9 +24,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image codec
+        run: python -m pip install Pillow==11.3.0
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
-      - name: Verify real JPEG files and source attributions
+      - name: Convert first-party image assets to high-quality WebP
+        run: python scripts/optimize-world-photos.py
+      - name: Verify real WebP files and source attributions
         run: node tests/world-local-photos.cjs
       - name: Publish the generated files to this development branch only
         run: |
