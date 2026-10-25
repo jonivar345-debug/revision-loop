@@ -9,6 +9,7 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const {promises:fsp}=fs;
+global.window={RevisionWorldDiscoveryPhotos:require('../world-photo-discovery-data.js'),RevisionWorldPhotoEnrichment:require('../world-photo-enrichment-v85.js')};
 const {get}=require('../world-curated-photos.js');
 const manifest=require('../editorial/world-local-photo-pilot.json');
 const base=path.resolve(__dirname,'../assets/world');
