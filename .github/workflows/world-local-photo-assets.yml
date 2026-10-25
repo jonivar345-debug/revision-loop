@@ -1,8 +1,8 @@
-name: Build locally hosted World v103 photo expansion
+name: Build locally hosted World v104 gallery expansion
 
 on:
   push:
-    branches: [feature/world-v103-local-photos-scale]
+    branches: [feature/world-v104-quality-and-scale]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -10,6 +10,7 @@ on:
       - 'scripts/optimize-world-photos.py'
       - 'scripts/extend-world-photo-manifest.cjs'
       - 'scripts/audit-local-world-photo-quality.py'
+      - 'world-photo-editorial-v104.js'
   workflow_dispatch:
 
 permissions:
