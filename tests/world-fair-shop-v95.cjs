@@ -99,6 +99,9 @@ assert.equal(ctx.profile.challengeStreak,19);
 assert.deepEqual(JSON.parse(JSON.stringify(ctx.profile.examResults)),original.examResults);
 assert.deepEqual(JSON.parse(JSON.stringify(ctx.profile.errorLog)),original.errorLog);
 assert.equal(ctx.progress.saved_card.due,271);
+// Test insufficient funds on an independent low-balance synthetic state.
+ctx.profile.points=49;
+vm.runInContext('save()',ctx);
 const prevBalance=ctx.profile.points;
 buy('location','reykjavik');
 assert.equal(ctx.profile.points,prevBalance,'Insufficient points purchase charged');
