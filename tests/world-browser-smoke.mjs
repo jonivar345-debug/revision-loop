@@ -341,6 +341,7 @@ try{
  console.log('PASS browser mobile multi-touch: pinch zoom '+afterPinch+'%, drag-after-pinch moved globe '+longitudeDelta.toFixed(1)+' degrees without pointer capture leak.');
 
  // Review the actual local photo gallery index and shop-card crops in Chromium.
+ assert.equal(await page.locator('a[href="editorial/reviews/world-photo-review.html"]').count(),1,'Photo review access link missing from the World shop');
  const reviewData=JSON.parse(await fs.readFile(path.join(cwd,'editorial/reviews/world-local-photo-review-index.json'),'utf8'));
  const reviewPage=await browser.newPage({viewport:{width:980,height:780}});
  const reviewErrors=[];
