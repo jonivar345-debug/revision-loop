@@ -43,7 +43,7 @@ for(const [id,records] of entries){
   assert(/NOT (?:visually pixel-reviewed|individual pixel-level visual approval)/.test(p.reviewStatus),'Machine-sourced != fully visual inspected');
  }
  const enriched=curated.get(id).filter(p=>String(p.photoSource||'').startsWith('Commons'));
- const qualityReplacements=new Set(['country-at','country-be','country-bj','country-bn','country-bh','country-bf','country-dk','country-bb','country-ec','country-cm','country-md','country-er','country-pw','country-gm','country-ng']);
+ const qualityReplacements=new Set(['country-at','country-be','country-bj','country-bn','country-bh','country-bf','country-dk','country-bb','country-ec','country-cm','country-md','country-er','country-pw','country-gm','country-ng','cairns','losangeles','quebec','dublin','tunis','oaxaca','dakar','brisbane']);
  const omitted=records.filter(p=>!enriched.some(e=>e.file.toLowerCase()==='file:'+p.file.toLowerCase()));
  assert.equal(records.length-enriched.length,omitted.length,'Unexpected enrichment duplicate or provenance loss '+id);
  if(omitted.length){
