@@ -132,6 +132,25 @@ try{
  });
  assert(allPinState>globeState.pinCount,'Show-all toggle should reveal accurate hidden markers');
  await page.locator('.tab[data-panel="shop"]').click();
+ const wardrobeDom=await page.evaluate(()=>{
+   const card=document.querySelector('#characterShop .character-card .character-art');
+   const costumes=[...document.querySelectorAll('#outfitShop .outfit-card .character-art')];
+   return {
+     characterCount:document.querySelectorAll('#characterShop .character-card').length,
+     count:costumes.length,
+     illustratedFace:!!card?.querySelector('.character-loading>svg[role="img"]'),
+     garmentShapes:costumes.map(node=>node.querySelector('.costume-silhouette .outfit-garment-details')?.innerHTML||''),
+     privateUploadsStillAvailable:document.querySelectorAll('[data-outfit-upload]').length,
+     characterLookup:typeof matchName==='function'&&matchName(['C.C.'],'C.C.')&&!matchName(['C.C.'],'C. D.')
+   };
+ });
+ assert(wardrobeDom.characterCount>0&&wardrobeDom.illustratedFace,'No recognisable offline character illustration in shop');
+ assert.equal(wardrobeDom.count,8,'Selected character lost wardrobe slots');
+ assert.equal(new Set(wardrobeDom.garmentShapes).size,8,'Outfits still render the same clothing silhouette');
+ assert.equal(wardrobeDom.privateUploadsStillAvailable,8,'Personal artwork upload slots disappeared');
+ assert(wardrobeDom.characterLookup,'Safer character identity matching regressed in real browser');
+ console.log('PASS browser wardrobe: 8 distinct garments, character-specific illustrated fallback, private image controls and safer full-name matching.');
+
  await page.locator('#globePlaceSearch').fill('London');
  await page.locator('#globeFindPlace').click();
  await page.locator('#globeLocationInfo .globe-info-top h3').waitFor({timeout:10000});

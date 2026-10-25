@@ -272,24 +272,331 @@ async function setSavedOutfitImage(id,data){
  });
  outfitImageCache.set(id,data||null);
 }
+const SERIES_COSTUME_TONES=Object.freeze({
+  "Code Geass": [
+    "#222a4a",
+    "#c8a860"
+  ],
+  "Death Note": [
+    "#242b3b",
+    "#b9c5d8"
+  ],
+  "Attack on Titan": [
+    "#415446",
+    "#d7bd83"
+  ],
+  "Blue Lock": [
+    "#16356a",
+    "#7fd0e5"
+  ],
+  "Jujutsu Kaisen": [
+    "#233044",
+    "#ab9ce7"
+  ],
+  "Re:Zero": [
+    "#514176",
+    "#e9d8c1"
+  ],
+  "Lord of the Mysteries": [
+    "#312e4a",
+    "#c7b087"
+  ],
+  "Omniscient Reader": [
+    "#202c3d",
+    "#88a5ce"
+  ],
+  "Vinland Saga": [
+    "#554532",
+    "#dcc39b"
+  ],
+  "Tokyo Ghoul": [
+    "#25222c",
+    "#c35570"
+  ],
+  "Monster": [
+    "#3a404b",
+    "#c7b09b"
+  ],
+  "Parasyte – the Maxim": [
+    "#3e5250",
+    "#bfd3ce"
+  ],
+  "Cowboy Bebop": [
+    "#263a56",
+    "#e7bb74"
+  ],
+  "Neon Genesis Evangelion": [
+    "#43305d",
+    "#b8df6f"
+  ],
+  "Fullmetal Alchemist": [
+    "#4b3038",
+    "#d8b18e"
+  ],
+  "Hunter x Hunter": [
+    "#314b39",
+    "#d1cb8b"
+  ],
+  "Chainsaw Man": [
+    "#3a3d47",
+    "#eac8a8"
+  ],
+  "Kaiju No. 8": [
+    "#284b55",
+    "#b1ced5"
+  ],
+  "Spy x Family": [
+    "#345b50",
+    "#ddc8a8"
+  ],
+  "Classroom of the Elite": [
+    "#273e61",
+    "#a8c4e3"
+  ],
+  "Oshi no Ko": [
+    "#492f59",
+    "#dfb5df"
+  ],
+  "Tokyo Revengers": [
+    "#242938",
+    "#c7b78c"
+  ],
+  "Wind Breaker": [
+    "#31525a",
+    "#b5d1ce"
+  ],
+  "Solo Leveling": [
+    "#292a51",
+    "#9a8cff"
+  ]
+});
+
 function outfitPalette(c,o){
  const base={coat:o?.top||'#243858',trim:o?.accent||'#dce9fc'};
+ // Character-specific accents remain for the five central leads; every
+ // other series now has its own recognisable colour family rather than
+ // all 111 remaining characters sharing the same eight generic palettes.
  const special={
-  lelouch:[['#153269','#efcf83'],['#181421','#bb1f32'],['#243a67','#f2f2ed'],['#f6f4e9','#c6a34c'],['#11121b','#cf172d'],['#222d4b','#d0d8ef'],['#f0ede6','#be9a4a'],['#201625','#b90c2d']],
-  light:[['#455f88','#e8e7e2'],['#333c4c','#ced0d4'],['#6b4b3e','#d5b198'],['#191f2c','#8d94a8'],['#f9f9f6','#4b596e'],['#34465f','#a0b8d5'],['#8a7270','#f2f0ec'],['#252d35','#a1a1aa']],
-  eren:[['#8c6f52','#d0b69a'],['#47715b','#d9d5bd'],['#dad3c2','#837261'],['#222b35','#8a7766'],['#405c4c','#d4a779'],['#5b5544','#d1b996'],['#595f67','#d9d6ce'],['#38644f','#d7d6cd']],
-  gojo:[['#151d35','#a8c2ff'],['#242944','#cacad5'],['#eceae7','#324059'],['#19141e','#8f7ac1'],['#474f65','#d3d7e4'],['#f5f3f0','#8a95af'],['#202e4c','#b0c7e7'],['#1b1835','#b4aaff']],
-  kaneki:[['#202632','#e8e8eb'],['#161520','#c82e3f'],['#20232a','#d0d1d4'],['#767d87','#d1d1d4'],['#262638','#b83d54'],['#14141e','#f4f2f2'],['#14171c','#ac242d'],['#211b25','#f5e5ee']]
- };
- const choices=special[c.id];
- if(!choices)return base;
+  "lelouch": [
+    [
+      "#153269",
+      "#efcf83"
+    ],
+    [
+      "#181421",
+      "#bb1f32"
+    ],
+    [
+      "#243a67",
+      "#f2f2ed"
+    ],
+    [
+      "#f6f4e9",
+      "#c6a34c"
+    ],
+    [
+      "#11121b",
+      "#cf172d"
+    ],
+    [
+      "#222d4b",
+      "#d0d8ef"
+    ],
+    [
+      "#f0ede6",
+      "#be9a4a"
+    ],
+    [
+      "#201625",
+      "#b90c2d"
+    ]
+  ],
+  "light": [
+    [
+      "#455f88",
+      "#e8e7e2"
+    ],
+    [
+      "#333c4c",
+      "#ced0d4"
+    ],
+    [
+      "#6b4b3e",
+      "#d5b198"
+    ],
+    [
+      "#191f2c",
+      "#8d94a8"
+    ],
+    [
+      "#f9f9f6",
+      "#4b596e"
+    ],
+    [
+      "#34465f",
+      "#a0b8d5"
+    ],
+    [
+      "#8a7270",
+      "#f2f0ec"
+    ],
+    [
+      "#252d35",
+      "#a1a1aa"
+    ]
+  ],
+  "eren": [
+    [
+      "#8c6f52",
+      "#d0b69a"
+    ],
+    [
+      "#47715b",
+      "#d9d5bd"
+    ],
+    [
+      "#dad3c2",
+      "#837261"
+    ],
+    [
+      "#222b35",
+      "#8a7766"
+    ],
+    [
+      "#405c4c",
+      "#d4a779"
+    ],
+    [
+      "#5b5544",
+      "#d1b996"
+    ],
+    [
+      "#595f67",
+      "#d9d6ce"
+    ],
+    [
+      "#38644f",
+      "#d7d6cd"
+    ]
+  ],
+  "gojo": [
+    [
+      "#151d35",
+      "#a8c2ff"
+    ],
+    [
+      "#242944",
+      "#cacad5"
+    ],
+    [
+      "#eceae7",
+      "#324059"
+    ],
+    [
+      "#19141e",
+      "#8f7ac1"
+    ],
+    [
+      "#474f65",
+      "#d3d7e4"
+    ],
+    [
+      "#f5f3f0",
+      "#8a95af"
+    ],
+    [
+      "#202e4c",
+      "#b0c7e7"
+    ],
+    [
+      "#1b1835",
+      "#b4aaff"
+    ]
+  ],
+  "kaneki": [
+    [
+      "#202632",
+      "#e8e8eb"
+    ],
+    [
+      "#161520",
+      "#c82e3f"
+    ],
+    [
+      "#20232a",
+      "#d0d1d4"
+    ],
+    [
+      "#767d87",
+      "#d1d1d4"
+    ],
+    [
+      "#262638",
+      "#b83d54"
+    ],
+    [
+      "#14141e",
+      "#f4f2f2"
+    ],
+    [
+      "#14171c",
+      "#ac242d"
+    ],
+    [
+      "#211b25",
+      "#f5e5ee"
+    ]
+  ]
+};
  const index=Math.max(0,OUTFIT_STYLES.findIndex(x=>x.id===o?.styleId));
- return {coat:choices[index]?.[0]||base.coat,trim:choices[index]?.[1]||base.trim};
+ const tuned=special[c?.id]?.[index];
+ if(tuned)return {coat:tuned[0],trim:tuned[1]};
+ const pair=SERIES_COSTUME_TONES[c?.series];
+ if(!pair)return base;
+ const seriesStyles=[
+  [pair[0],pair[1]],
+  [pair[0],base.trim],
+  [base.coat,pair[1]],
+  [pair[0],base.trim],
+  [pair[0],pair[1]],
+  [base.coat,pair[1]],
+  [pair[0],base.trim],
+  [base.coat,pair[1]]
+ ];
+ return {coat:seriesStyles[index][0],trim:seriesStyles[index][1]};
+}
+function costumeStyleDetails(style,p){
+ // Each wardrobe slot changes the actual clothing silhouette, not only
+ // its hue. This is original conceptual SVG art, NOT official anime art.
+ const trim=esc(p.trim),coat=esc(p.coat);
+ const details={
+  default:'<path d="M71 43 L120 70 169 43 M105 83 H135" fill="none" stroke="'+trim+'" stroke-width="3"/><path d="M157 68 L174 76 161 91 147 84Z" fill="'+trim+'" opacity=".75"/>',
+  hoodie:'<path d="M66 47 Q73 18 120 31 Q167 18 174 47 L157 61 Q120 39 83 61Z" fill="'+coat+'" stroke="'+trim+'" stroke-width="4"/><path d="M82 102 Q120 93 158 102 L158 116 H82Z" fill="'+trim+'" opacity=".22"/><path d="M113 59 L110 94 M127 59 L130 94" stroke="'+trim+'" stroke-width="3"/>',
+  casual:'<path d="M54 64 L73 58 L77 91 L58 98Z M186 64 L167 58 L163 91 L182 98Z" fill="'+trim+'" opacity=".33"/><path d="M117 60 V114 M136 91 L163 91" stroke="'+trim+'" stroke-width="3"/><path d="M153 69 H173 V80 H153Z" fill="none" stroke="'+trim+'" stroke-width="2"/>',
+  winter:'<path d="M73 43 Q44 52 16 78 L-2 116 H89 L99 45 Z M167 43 Q197 52 224 78 L242 116 H151 L140 45Z" fill="'+coat+'" stroke="'+trim+'" stroke-width="3"/><path d="M82 40 Q120 70 158 40 L169 56 Q120 89 71 56Z" fill="'+trim+'" opacity=".78"/><path d="M115 78 H125 M115 97 H125" stroke="'+trim+'" stroke-width="5"/>',
+  smart:'<path d="M70 37 L118 70 102 92 87 76 70 101 61 61Z M170 37 L122 70 138 92 153 76 170 101 179 61Z" fill="'+trim+'" opacity=".92" stroke="'+coat+'" stroke-width="3"/><path d="M113 64 L127 64 122 82 133 116 H107 L118 82Z" fill="'+coat+'" stroke="'+trim+'" stroke-width="2"/><circle cx="95" cy="94" r="3" fill="'+trim+'"/><circle cx="145" cy="94" r="3" fill="'+trim+'"/>',
+  traveller:'<path d="M44 42 Q77 54 100 83 L108 116 H-6 V90 Q21 53 44 42Z M196 42 Q166 54 140 83 L132 116 H246 V90 Q219 53 196 42Z" fill="'+coat+'" stroke="'+trim+'" stroke-width="2"/><path d="M92 38 Q145 71 183 49 L164 74 Q130 91 99 71Z" fill="'+trim+'" opacity=".83"/><path d="M170 42 L89 116" stroke="'+trim+'" stroke-width="6" opacity=".6"/>',
+  sport:'<path d="M42 56 L70 43 88 48 62 81 42 75Z M198 56 L170 43 152 48 178 81 198 75Z" fill="'+trim+'" opacity=".9"/><path d="M120 56 V116 M111 77 H129" stroke="'+trim+'" stroke-width="3"/><path d="M65 94 H87 M153 94 H175" stroke="'+trim+'" stroke-width="5"/><circle cx="161" cy="75" r="9" fill="none" stroke="'+trim+'" stroke-width="2"/>',
+  festival:'<path d="M41 56 L66 35 87 47 62 71Z M199 56 L174 35 153 47 178 71Z" fill="'+trim+'" opacity=".85"/><path d="M72 44 L170 112" stroke="'+trim+'" stroke-width="11" opacity=".75"/><path d="M74 41 L172 109" stroke="'+coat+'" stroke-width="3"/><path d="M112 72 L120 82 128 72 124 88 140 93 124 96 120 110 116 96 100 93 116 88Z" fill="'+trim+'"/>'
+ };
+ return details[style]||details.default;
+}
+function costumeCharacterDetail(c,p){
+ // Small non-official motifs reflect a character's colour/wardrobe identity.
+ const accent=esc(p.trim);
+ const motifs={
+  lelouch:'<path d="M182 79 Q197 61 212 79 Q197 89 182 79Z" fill="'+accent+'" opacity=".92"/>',
+  eren:'<path d="M177 72 L203 72 203 92 190 99 177 92Z" fill="none" stroke="'+accent+'" stroke-width="2"/><path d="M182 87 L190 76 198 87" fill="none" stroke="'+accent+'" stroke-width="2"/>',
+  mikasa:'<path d="M75 33 Q108 62 150 33 L144 52 Q111 80 81 55Z" fill="#9a252a" opacity=".94"/>',
+  gojo:'<path d="M181 75 L191 65 201 75 191 85Z" fill="'+accent+'" opacity=".7"/>',
+  kaneki:'<path d="M183 74 L196 66 201 80 194 94 182 86Z" fill="none" stroke="'+accent+'" stroke-width="2.4"/>',
+  light:'<path d="M188 70 L198 70 198 88 188 88Z" fill="'+accent+'" opacity=".8"/>'
+ };
+ return motifs[c?.id]||'';
 }
 function illustratedCostume(c,o){
  if(!o)return '';
  const p=outfitPalette(c,o),style=String(o.styleId||'default');
- // A simple colour-and-cut concept, not a falsely labelled official costume.
  return '<svg class="costume-silhouette costume-'+esc(style)+'" viewBox="0 0 240 116" preserveAspectRatio="none" aria-hidden="true" style="--coat:'+esc(p.coat)+';--trim:'+esc(p.trim)+'">'+
   '<path class="costume-shoulders" d="M-7 116V74Q13 54 69 39L95 32 120 59 145 32 171 39Q227 54 247 74V116Z"/>'+
   '<path class="costume-inner" d="M95 32L120 59 145 32 136 116H104Z"/>'+
@@ -298,6 +605,8 @@ function illustratedCostume(c,o){
   '<path class="costume-centre" d="M119 58V116"/>'+
   '<path class="costume-detail" d="M31 85L69 64 M209 85L171 64"/>'+
   '<path class="costume-scarf" d="M86 39Q120 72 154 39L141 64 126 73 136 116 111 116 112 73Z"/>'+
+  '<g class="outfit-garment-details outfit-garment-'+esc(style)+'">'+costumeStyleDetails(style,p)+'</g>'+
+  costumeCharacterDetail(c,p)+
   '</svg>';
 }
 function compressOutfitPhoto(file){
@@ -356,23 +665,30 @@ const characterArtCache=new Map(),characterArtJobs=new Map();
 let characterVisibleLimit=16;
 function characterArtQuery(c){return ANIME_ART_QUERY[c.id]||c.lookup||c.name}
 function matchName(name,target){
+ // Compare complete names/aliases, allowing name-order reversal. Do not
+ // accept loose substring hits: those can show the wrong character.
  const clean=x=>String(x||'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
- const a=clean(name),b=clean(target),words=b.split(' ').filter(x=>x.length>1);
- return a===b||words.filter(w=>a.includes(w)).length>=Math.max(1,Math.ceil(words.length*.66));
+ const wanted=clean(target);
+ if(!wanted)return false;
+ const tokens=wanted.split(' ').filter(Boolean).sort().join('|');
+ return (Array.isArray(name)?name:[name]).some(candidate=>{
+  const supplied=clean(candidate);
+  return supplied===wanted||(wanted.includes(' ')&&supplied.split(' ').filter(Boolean).sort().join('|')===tokens);
+ });
 }
 async function findAniListArt(query){
  const payload={query:'query ($search:String){Character(search:$search){name{full native alternative}image{large medium}}}',variables:{search:query}};
  const response=await fetch('https://graphql.anilist.co',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
  if(!response.ok)throw Error('AniList response '+response.status);
  const data=await response.json(),character=data.data?.Character;
- if(!character||!matchName([character.name.full,...(character.name.alternative||[])].join(' '),query))throw Error('AniList name mismatch');
+ if(!character||!matchName([character.name.full,character.name.native,...(character.name.alternative||[])],query))throw Error('AniList name mismatch');
  return character.image?.large||character.image?.medium||null;
 }
 async function findJikanArt(query){
  const response=await fetch('https://api.jikan.moe/v4/characters?q='+encodeURIComponent(query)+'&limit=8');
  if(!response.ok)throw Error('Jikan response '+response.status);
  const data=await response.json();
- const match=(data.data||[]).find(p=>matchName(p.name,query)||matchName((p.name_kanji||'')+' '+(p.nicknames||[]).join(' '),query));
+ const match=(data.data||[]).find(p=>matchName([p.name,p.name_kanji,...(p.nicknames||[])],query));
  return match?.images?.webp?.image_url||match?.images?.jpg?.image_url||null;
 }
 async function getCharacterArt(c,skipVerified=false,forceRefresh=false){
@@ -415,7 +731,7 @@ function loadCharacterArt(root=document){
    if(!el.isConnected)return;
    el.dataset.loading='0';
    el.classList.add('art-unavailable');
-   if(note)note.textContent='Portrait currently unavailable';
+   if(note)note.textContent='Illustrated preview · portrait unavailable';
   };
   const tryImage=url=>new Promise(resolve=>{
    if(!url||!el.isConnected){resolve(false);return}
@@ -475,16 +791,17 @@ function loadCharacterArt(root=document){
 }
 function characterArtwork(c,o){
  const outfit=o?.name||'';
- const initials=c.name.split(/[\s.-]+/).filter(Boolean).slice(0,2).map(p=>p[0]).join('').toUpperCase();
  const gradient='linear-gradient(140deg,'+(c.hair||'#172554')+','+(c.hair2||'#334155')+',#0b142c)';
  const preview=o&&o.id!==c.id+'-default';
+ // An original character-colour sketch is the immediate offline fallback.
+ // Public character portraits are loaded on top where their host permits it;
+ // privately uploaded outfit pictures take priority over both.
  return '<div class="character-art outfit-style-'+esc(o?.styleId||'default')+'" data-character-art="'+esc(c.id)+'" data-outfit-art="'+esc(o?.id||'')+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
-  '<div class="character-loading" style="background:'+gradient+'"><span class="portrait-monogram">'+esc(initials)+'</span><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div>'+
+  '<div class="character-loading" style="background:'+gradient+'">'+avatarSVG(c,o)+'<small>Illustrated preview · finding portrait…</small></div>'+
   (o?illustratedCostume(c,o):'')+
   (preview?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
   '</div>';
 }
-
 const LOCATIONS=[
  {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:0,region:'Europe'},
  {id:'tbilisi',name:'Tbilisi',wiki:'Tbilisi',lat:41.7151,lon:44.8271,cost:25,region:'Asia'},
