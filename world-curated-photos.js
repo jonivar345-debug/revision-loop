@@ -4042,6 +4042,179 @@
   // World v92: eight source-checked iconic destination photos, with one
   // weak or geographically incorrect legacy candidate rejected per gallery.
   // These are Commons metadata approvals, not pixel-level visual sign-offs.
+  // World v93: six more iconic location gallery updates, retaining original
+  // full-size sources, named CC creators, and per-file live rights verification.
+  // Metadata checks are NOT visual quality or end-to-end delivery approval.
+  const priorityPhotoV93=Object.freeze({
+    "capetown": [
+      {
+        "file": "Cape Town dawn cityscape with Table Mountain.jpg",
+        "author": "Daniel Case",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Table Mountain with Cape Town city skyline at dawn",
+        "width": 5160,
+        "height": 2892,
+        "editorialMetadata": true,
+        "qualityPriority": 1000,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      },
+      {
+        "file": "Bo-Kaap Cape Town.jpg",
+        "author": "Witstinkhout",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Colourful Bo-Kaap neighbourhood of Cape Town",
+        "width": 4322,
+        "height": 2898,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      },
+      {
+        "file": "Cape Town - Table Mountain seen from Waterfront (1).jpg",
+        "author": "Romaine",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "Table Mountain viewed from the Cape Town waterfront",
+        "width": 4032,
+        "height": 2268,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      }
+    ],
+    "sanfrancisco": [
+      {
+        "file": "Golden Gate Bridge and San Francisco skyline from Hawk Hill at Blue Hour dllu.jpg",
+        "author": "Daniel L. Lu",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Golden Gate Bridge and skyline at blue hour",
+        "width": 13706,
+        "height": 4094,
+        "editorialMetadata": true,
+        "qualityPriority": 1000,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      },
+      {
+        "file": "The Painted Ladies.jpg",
+        "author": "Briana Berger",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Painted Ladies Victorian houses in San Francisco",
+        "width": 5184,
+        "height": 3456,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      }
+    ],
+    "lisbon": [
+      {
+        "file": "City view of Lisbon with Castelo de São Jorge.jpg",
+        "author": "SIryn",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Lisbon cityscape with São Jorge Castle",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "qualityPriority": 1000,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      }
+    ],
+    "greatbarrier": [
+      {
+        "file": "Aerial View of Great Barrier Reef (Ank Kumar) 04.jpg",
+        "author": "Ank Kumar",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Aerial view over the Great Barrier Reef",
+        "width": 6000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "qualityPriority": 1000,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      },
+      {
+        "file": "Great Barrier Reef Coral.jpg",
+        "author": "Camille Gerstenhaber",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Coral formations underwater in the Great Barrier Reef",
+        "width": 4000,
+        "height": 3000,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      }
+    ],
+    "uyuni": [
+      {
+        "file": "El salar.jpg",
+        "author": "Panquequesitos",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Flooded Salar de Uyuni salt flats forming a natural reflection mirror",
+        "width": 4272,
+        "height": 2848,
+        "editorialMetadata": true,
+        "qualityPriority": 1000,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      }
+    ],
+    "chichenitza": [
+      {
+        "file": "Chichen-Itza.jpg",
+        "author": "Berenice Lara Ramírez",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "El Castillo pyramid at Chichén Itzá, Yucatán",
+        "width": 3956,
+        "height": 2967,
+        "editorialMetadata": true,
+        "qualityPriority": 1000,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      },
+      {
+        "file": "El caracol de Chichén Itzá.JPG",
+        "author": "Noyolcont",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "El Caracol Maya observatory at Chichén Itzá",
+        "width": 4608,
+        "height": 3072,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Wikimedia Commons exact file-page filename, location, author, original dimensions and reuse licence checked 2026-10-25; still requires individual photo-pixel approval and live Commons metadata checks"
+      }
+    ]
+  });
+  const rejectedPhotoV93=Object.freeze({
+    "capetown": [
+      "Cape Town (ZA), Waterfront, Kran -- 2024 -- 2907.jpg",
+      "Cape Town (ZA), Wale Street -- 2024 -- 3536.jpg",
+      "Cape Town (ZA), Wale Street -- 2024 -- 3544.jpg"
+    ],
+    "sanfrancisco": [
+      "Zeppelin-ride-020100925-195 (5029394846).jpg"
+    ],
+    "lisbon": [
+      "Yellow leaves floating next to water volcano, Alameda dos Oceanos, Parque das Nações, Lisbon, Portugal julesvernex2.jpg"
+    ],
+    "greatbarrier": [
+      "Chilli Beach, Lockhart QLD Australia - Great Barrier Reef Marine Park.jpg"
+    ],
+    "uyuni": [
+      "SAL - Waterbird in a flooded area of Salar de Uyuni, Bolivia, 2013.jpg"
+    ],
+    "chichenitza": [
+      "El Castillo ,Chichen Itza MEXICO - panoramio.jpg"
+    ]
+  });
+  function acceptedPhotoV93(id,item){return !(rejectedPhotoV93[id]||[]).some(f=>f.toLowerCase()===item.file.toLowerCase());}
+
   const priorityPhotoV92=Object.freeze({
     "cairns": [
       {
@@ -4222,8 +4395,8 @@
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
-    return [...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
-      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo))
+    return [...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
+      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
