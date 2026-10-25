@@ -1,15 +1,16 @@
 {
-  "release": "v111",
+  "release": "v112",
   "description": "Real locally hosted gallery and shop-cover image index. Nothing in this audit implies individual human pixel approval.",
-  "galleryCount": 219,
-  "photoCount": 869,
-  "fullyLocal": 216,
+  "galleryCount": 237,
+  "photoCount": 941,
+  "fullyLocal": 234,
   "destinations": [
     {
       "id": "accra",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Black Star Square, Accra Ghana.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -99,6 +100,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Addis in night.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.91,
@@ -188,6 +190,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Adelaide skyline, December 2022 b.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.854,
@@ -277,6 +280,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Almaty Skyline from the Kök Töbe hill.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -366,6 +370,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Amsterdam Cityscape.jpg",
       "shopCoverSlot": 4,
       "shopCoverCropRetained": 0.703,
@@ -455,6 +460,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Anchorage, Alaska skyline.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -544,6 +550,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sunrise at Angkor Wat Cambodia.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -629,10 +636,101 @@
       ]
     },
     {
+      "id": "antananarivo",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Rova of Antananarivo, Madagascar.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.843,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Rova of Antananarivo, Madagascar.jpg",
+          "gallery": "../../assets/world/antananarivo/01-gallery.webp",
+          "cover": "../../assets/world/antananarivo/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1068
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "EnfesDino",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Rova_of_Antananarivo%2C_Madagascar.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Antananarivo from the top.jpg",
+          "gallery": "../../assets/world/antananarivo/02-gallery.webp",
+          "cover": "../../assets/world/antananarivo/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            978
+          ],
+          "coverDimensions": [
+            760,
+            464
+          ],
+          "cropRetained": 0.921,
+          "author": "Chad Teer",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Antananarivo_from_the_top.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Church Rova Antananarivo Madagascar.jpg",
+          "gallery": "../../assets/world/antananarivo/03-gallery.webp",
+          "cover": "../../assets/world/antananarivo/03-cover.webp",
+          "galleryDimensions": [
+            1063,
+            1600
+          ],
+          "coverDimensions": [
+            505,
+            760
+          ],
+          "cropRetained": 0.374,
+          "author": "Hery Zo Rakotondramanana",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Church_Rova_Antananarivo_Madagascar.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Canons du palais de Manjakamiadana, Rova de Madagascar à Antananarivo.jpg",
+          "gallery": "../../assets/world/antananarivo/04-gallery.webp",
+          "cover": "../../assets/world/antananarivo/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1387
+          ],
+          "coverDimensions": [
+            760,
+            659
+          ],
+          "cropRetained": 0.649,
+          "author": "Anai171",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Canons_du_palais_de_Manjakamiadana%2C_Rova_de_Madagascar_%C3%A0_Antananarivo.jpg"
+        }
+      ]
+    },
+    {
       "id": "apia",
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "View of Apia, Samoa, with rainbow - August 2016.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -722,6 +820,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Arusha City view.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.808,
@@ -811,6 +910,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Laguna Miscanti.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -902,6 +1002,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Erechtheion Acropolis Athens.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -991,6 +1092,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Tegalalang Rice Terraces.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.747,
@@ -1080,6 +1182,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Grand Palace Bangkok, Thailand.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 1.0,
@@ -1169,6 +1272,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sagrada Familia Barcelona 1.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -1258,6 +1362,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Forbidden City, Beijing.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -1347,6 +1452,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Bryggen, Bergen, Norway.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.845,
@@ -1438,6 +1544,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "City Hall, Bishkek.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -1527,6 +1634,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Loboc river cruise Bohol 2017.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -1616,6 +1724,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Bora-Bora French Polynesia - panoramio (33).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.781,
@@ -1705,6 +1814,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Story Bridge, Brisbane City views, 2021, 04.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -1794,6 +1904,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Puerto Madero, Buenos Aires (40689219792) (cropped).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.727,
@@ -1885,6 +1996,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Haeundae District and Beach.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.775,
@@ -1974,6 +2086,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Esplanade Lagoon, Cairns, 2025, 12.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -2063,6 +2176,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Cairo skyline, Nile River, Egypt.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -2154,6 +2268,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Canberra panorama from Mount Ainslie.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.784,
@@ -2245,6 +2360,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Cape Town dawn cityscape with Table Mountain.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.996,
@@ -2334,6 +2450,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "City of Cartagena view from San Felipe fortress.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -2423,6 +2540,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Arab League Park, Casablanca; حديقة الجامعة العربية، الدار البيضاء.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -2512,6 +2630,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Chicago River ferry b.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.795,
@@ -2603,6 +2722,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Chichen-Itza.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -2692,6 +2812,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "2018 - Christiansborg from the Marble Bridge.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.852,
@@ -2781,6 +2902,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Coron skyline Tapyas (Coron, Palwan; 03-16-2024).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -2870,6 +2992,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Andorra - panoramio (2).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -2959,6 +3082,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Dubai Marina Skyline.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -3048,6 +3172,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Lake in Band-e Amir National Park, March 2008.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.84,
@@ -3137,6 +3262,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Beach in Old Road, Antigua and Barbuda.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -3226,6 +3352,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Thethi landscape.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -3315,6 +3442,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sydney skyline at dusk - Dec 2008.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.704,
@@ -3404,6 +3532,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Stari Most viewed from North.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.942,
@@ -3493,6 +3622,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Bridgetown, Barbados..JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.847,
@@ -3582,6 +3712,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Bangladesh Tea Research Institute (02).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.847,
@@ -3671,6 +3802,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "The Grand Place, Brussels.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -3756,10 +3888,101 @@
       ]
     },
     {
+      "id": "country-bf",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Bobo-Dioulasso Mosque.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.75,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Bobo-Dioulasso Mosque.jpg",
+          "gallery": "../../assets/world/country-bf/01-gallery.webp",
+          "cover": "../../assets/world/country-bf/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Jurgen",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Bobo-Dioulasso_Mosque.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Villagers Gather Near Mosque - Bani - Sahel Region - Burkina Faso.jpg",
+          "gallery": "../../assets/world/country-bf/02-gallery.webp",
+          "cover": "../../assets/world/country-bf/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Adam Jones, Ph.D.",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Villagers_Gather_Near_Mosque_-_Bani_-_Sahel_Region_-_Burkina_Faso.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Street Vendor - Bobo-Dioulasso - Burkina Faso.jpg",
+          "gallery": "../../assets/world/country-bf/03-gallery.webp",
+          "cover": "../../assets/world/country-bf/03-cover.webp",
+          "galleryDimensions": [
+            1067,
+            1600
+          ],
+          "coverDimensions": [
+            507,
+            760
+          ],
+          "cropRetained": 0.375,
+          "author": "Adam Jones, Ph.D.",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Street_Vendor_-_Bobo-Dioulasso_-_Burkina_Faso.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Arbre Centenaire du Burkina Faso.jpg",
+          "gallery": "../../assets/world/country-bf/04-gallery.webp",
+          "cover": "../../assets/world/country-bf/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Priad123456789",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Arbre_Centenaire_du_Burkina_Faso.jpg"
+        }
+      ]
+    },
+    {
       "id": "country-bg",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Bulgaria-Nesebar-09.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -3851,6 +4074,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Manama Manama Skyline 01.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.994,
@@ -3940,6 +4164,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Omar Ali Saifuddien Mosque Brunei.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.847,
@@ -4029,6 +4254,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Christ-Redeemer-Rio-de-Janeiro.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -4114,10 +4340,101 @@
       ]
     },
     {
+      "id": "country-by",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "2026.08.19 Church of the Nativity of Our Lady in Pladovaja village, Masty District, Hrodna Region, Belarus.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.81,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "2026.08.19 Church of the Nativity of Our Lady in Pladovaja village, Masty District, Hrodna Region, Belarus.jpg",
+          "gallery": "../../assets/world/country-by/01-gallery.webp",
+          "cover": "../../assets/world/country-by/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1112
+          ],
+          "coverDimensions": [
+            760,
+            528
+          ],
+          "cropRetained": 0.81,
+          "author": "Denis Klim",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:2026.08.19_Church_of_the_Nativity_of_Our_Lady_in_Pladovaja_village%2C_Masty_District%2C_Hrodna_Region%2C_Belarus.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "2015.02.22 Stone Sphinx with Infants on the Pylons of Gate of New Castle in Grodno, Belarus.jpg",
+          "gallery": "../../assets/world/country-by/02-gallery.webp",
+          "cover": "../../assets/world/country-by/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Tess Mattew",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:2015.02.22_Stone_Sphinx_with_Infants_on_the_Pylons_of_Gate_of_New_Castle_in_Grodno%2C_Belarus.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "The bank of the river Iput at Dobrush Belarus 2.jpg",
+          "gallery": "../../assets/world/country-by/03-gallery.webp",
+          "cover": "../../assets/world/country-by/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1038
+          ],
+          "coverDimensions": [
+            760,
+            492
+          ],
+          "cropRetained": 0.869,
+          "author": "Ввласенко",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:The_bank_of_the_river_Iput_at_Dobrush_Belarus_2.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "2025.07.12 Mosar Village, Udziela Rural Council, Hlybokaje District, Viciebsk Region, Belarus 28.jpg",
+          "gallery": "../../assets/world/country-by/04-gallery.webp",
+          "cover": "../../assets/world/country-by/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Tess Mattew",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:2025.07.12_Mosar_Village%2C_Udziela_Rural_Council%2C_Hlybokaje_District%2C_Viciebsk_Region%2C_Belarus_28.jpg"
+        }
+      ]
+    },
+    {
       "id": "country-bz",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Belize Blue Hole.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -4171,6 +4488,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Public Transport in Abidjan, Ivory Coast 05.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -4260,6 +4578,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Bogota, Colombia (36668708290).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -4349,6 +4668,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Havana aerial.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -4438,6 +4758,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Former UN tower, North Nicosia, Cyprus.jpg",
       "shopCoverSlot": 4,
       "shopCoverCropRetained": 0.751,
@@ -4527,6 +4848,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Djibouti Womans Work is never done.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -4616,6 +4938,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Nyhavn, Copenhague.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -4701,10 +5024,103 @@
       ]
     },
     {
+      "id": "country-dm",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Dominica Botanical Gardens (3).jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.935,
+      "reasons": [
+        "extreme-aspect-gallery-image"
+      ],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Dominica Botanical Gardens (3).jpg",
+          "gallery": "../../assets/world/country-dm/01-gallery.webp",
+          "cover": "../../assets/world/country-dm/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            962
+          ],
+          "coverDimensions": [
+            760,
+            457
+          ],
+          "cropRetained": 0.935,
+          "author": "Tournasol7",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Botanical_Gardens_(3).jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Dominica, Karibik - Dominica, Karibik - Trois Pitons National Park - near the Mountain Station - panoramio.jpg",
+          "gallery": "../../assets/world/country-dm/02-gallery.webp",
+          "cover": "../../assets/world/country-dm/02-cover.webp",
+          "galleryDimensions": [
+            1200,
+            1600
+          ],
+          "coverDimensions": [
+            570,
+            760
+          ],
+          "cropRetained": 0.422,
+          "author": "giggel",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica%2C_Karibik_-_Dominica%2C_Karibik_-_Trois_Pitons_National_Park_-_near_the_Mountain_Station_-_panoramio.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Ixora Sp. in Dominica BG (9).jpg",
+          "gallery": "../../assets/world/country-dm/03-gallery.webp",
+          "cover": "../../assets/world/country-dm/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Tournasol7",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Ixora_Sp._in_Dominica_BG_(9).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Dominica Panorama.jpg",
+          "gallery": "../../assets/world/country-dm/04-gallery.webp",
+          "cover": "../../assets/world/country-dm/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            365
+          ],
+          "coverDimensions": [
+            760,
+            173
+          ],
+          "cropRetained": 0.405,
+          "author": "Dirk.heldmaier",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Dominica_Panorama.jpg"
+        }
+      ]
+    },
+    {
       "id": "country-do",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Downtown Puerto Plata Dominican Republic Architecture.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.883,
@@ -4794,6 +5210,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Old Town and Narikala, Tbilisi.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -4883,6 +5300,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Gambia, Banjul, Arch 22.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -4972,6 +5390,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Fisher women on River Niger in Guinea, Africa.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.848,
@@ -5057,10 +5476,101 @@
       ]
     },
     {
+      "id": "country-gw",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Universidade Lusófona, Bissau.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.999,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Universidade Lusófona, Bissau.jpg",
+          "gallery": "../../assets/world/country-gw/01-gallery.webp",
+          "cover": "../../assets/world/country-gw/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            900
+          ],
+          "coverDimensions": [
+            760,
+            428
+          ],
+          "cropRetained": 0.999,
+          "author": "Joehawkins",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Universidade_Lus%C3%B3fona%2C_Bissau.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Palácio Presidencial em Bissau (2).jpg",
+          "gallery": "../../assets/world/country-gw/02-gallery.webp",
+          "cover": "../../assets/world/country-gw/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            858
+          ],
+          "coverDimensions": [
+            760,
+            408
+          ],
+          "cropRetained": 0.954,
+          "author": "Joehawkins",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_Presidencial_em_Bissau_(2).jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Fernanda Nossa, Guinea-Bissau, photo 3.jpg",
+          "gallery": "../../assets/world/country-gw/03-gallery.webp",
+          "cover": "../../assets/world/country-gw/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1069
+          ],
+          "coverDimensions": [
+            760,
+            508
+          ],
+          "cropRetained": 0.842,
+          "author": "Fernanda.nossa",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Fernanda_Nossa%2C_Guinea-Bissau%2C_photo_3.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Mahindra Gambia tractor, Bijagos Archipelago, Guinea-Bissau.jpg",
+          "gallery": "../../assets/world/country-gw/04-gallery.webp",
+          "cover": "../../assets/world/country-gw/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1080
+          ],
+          "coverDimensions": [
+            760,
+            513
+          ],
+          "cropRetained": 0.833,
+          "author": "Adrian Turner",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Mahindra_Gambia_tractor%2C_Bijagos_Archipelago%2C_Guinea-Bissau.jpg"
+        }
+      ]
+    },
+    {
       "id": "country-il",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Ein Bokek. Dead Sea. Israel. 08.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.894,
@@ -5152,6 +5662,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Panorama of Himalayas from Ranikhet, Uttarakhand, India.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -5241,6 +5752,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "View of Erbil skyline from the Citadel in the Kurdistan Region of Iraq 01.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.846,
@@ -5326,10 +5838,101 @@
       ]
     },
     {
+      "id": "country-ir",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Casa histórica de Boroujerdi, Kashan, Irán, 2016-09-19, DD 34-36 HDR.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.843,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Casa histórica de Boroujerdi, Kashan, Irán, 2016-09-19, DD 34-36 HDR.jpg",
+          "gallery": "../../assets/world/country-ir/01-gallery.webp",
+          "cover": "../../assets/world/country-ir/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Casa_hist%C3%B3rica_de_Boroujerdi%2C_Kashan%2C_Ir%C3%A1n%2C_2016-09-19%2C_DD_34-36_HDR.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Fortaleza de Bam, Irán, 2016-09-23, DD 04.jpg",
+          "gallery": "../../assets/world/country-ir/02-gallery.webp",
+          "cover": "../../assets/world/country-ir/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Fortaleza_de_Bam%2C_Ir%C3%A1n%2C_2016-09-23%2C_DD_04.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Casa histórica de Boroujerdi, Kashan, Irán, 2016-09-19, DD 32.jpg",
+          "gallery": "../../assets/world/country-ir/03-gallery.webp",
+          "cover": "../../assets/world/country-ir/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1053
+          ],
+          "coverDimensions": [
+            760,
+            500
+          ],
+          "cropRetained": 0.855,
+          "author": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Casa_hist%C3%B3rica_de_Boroujerdi%2C_Kashan%2C_Ir%C3%A1n%2C_2016-09-19%2C_DD_32.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Casa histórica de Abbasi, Kashan, Irán, 2016-09-19, DD 75.jpg",
+          "gallery": "../../assets/world/country-ir/04-gallery.webp",
+          "cover": "../../assets/world/country-ir/04-cover.webp",
+          "galleryDimensions": [
+            1128,
+            1600
+          ],
+          "coverDimensions": [
+            536,
+            760
+          ],
+          "cropRetained": 0.397,
+          "author": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Casa_hist%C3%B3rica_de_Abbasi%2C_Kashan%2C_Ir%C3%A1n%2C_2016-09-19%2C_DD_75.jpg"
+        }
+      ]
+    },
+    {
       "id": "country-is",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Iceland - 2017-02-22 - Gullfoss - 3677.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -5419,6 +6022,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Montego Bay Photo Don Ramey Logan.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.919,
@@ -5508,6 +6112,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Karak Castle, Jordan (قلعة الكرك).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.699,
@@ -5599,6 +6204,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Kyoto Fushimi Inari Shrine.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -5688,6 +6294,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sunrise at Angkor Wat Cambodia.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -5777,6 +6384,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Anjouan - Islands of Comoros.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.787,
@@ -5866,6 +6474,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Karibik, St. Kitts - Look at the southern tip of St. Kitts on the neighboring Island Nevis - panoramio.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.786,
@@ -5951,10 +6560,101 @@
       ]
     },
     {
+      "id": "country-kp",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Pyongyang, North Korea - panoramio (26).jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.75,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Pyongyang, North Korea - panoramio (26).jpg",
+          "gallery": "../../assets/world/country-kp/01-gallery.webp",
+          "cover": "../../assets/world/country-kp/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Yoni Rubin",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Pyongyang%2C_North_Korea_-_panoramio_(26).jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Road leading to the Ulim Waterfalls - North Korea (10352802746).jpg",
+          "gallery": "../../assets/world/country-kp/02-gallery.webp",
+          "cover": "../../assets/world/country-kp/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            991
+          ],
+          "coverDimensions": [
+            760,
+            470
+          ],
+          "cropRetained": 0.91,
+          "author": "Uri Tours",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Road_leading_to_the_Ulim_Waterfalls_-_North_Korea_(10352802746).jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Fall Foliage in Kaesong, North Korea (15469712728).jpg",
+          "gallery": "../../assets/world/country-kp/03-gallery.webp",
+          "cover": "../../assets/world/country-kp/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            899
+          ],
+          "coverDimensions": [
+            760,
+            427
+          ],
+          "cropRetained": 0.999,
+          "author": "Uri Tours",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Fall_Foliage_in_Kaesong%2C_North_Korea_(15469712728).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Fall Foliage in Kaesong, North Korea (15655843205).jpg",
+          "gallery": "../../assets/world/country-kp/04-gallery.webp",
+          "cover": "../../assets/world/country-kp/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            899
+          ],
+          "coverDimensions": [
+            760,
+            427
+          ],
+          "cropRetained": 0.999,
+          "author": "Uri Tours",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Fall_Foliage_in_Kaesong%2C_North_Korea_(15655843205).jpg"
+        }
+      ]
+    },
+    {
       "id": "country-kr",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Korea Gyeongbokgung Palace.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.855,
@@ -6044,6 +6744,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Jahra Nature Reserve in Kuwait - Aerial photography.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -6133,6 +6834,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "ПОЮЩИЙ БАРХАН.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.835,
@@ -6167,6 +6869,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Square plot of a green paddy field and water reflection of mountains with mist and blue sky, Vang Vieng, Laos.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -6256,6 +6959,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Lebanon, Baalbek, Temple of Bacchus 2.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -6345,6 +7049,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Vaduz Castle, Liechtenstein, 20250502 1326 8609.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -6434,6 +7139,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Goyambokka Beach, Tangalle, Sri Lanka.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -6519,10 +7225,101 @@
       ]
     },
     {
+      "id": "country-lr",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Central Monrovia.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.843,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Central Monrovia.jpg",
+          "gallery": "../../assets/world/country-lr/01-gallery.webp",
+          "cover": "../../assets/world/country-lr/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Jefferson Krua",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Central_Monrovia.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Monrovia, Liberia - panoramio (65).jpg",
+          "gallery": "../../assets/world/country-lr/02-gallery.webp",
+          "cover": "../../assets/world/country-lr/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "blk24ga",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Monrovia%2C_Liberia_-_panoramio_(65).jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Monrovia, Liberia - panoramio (5).jpg",
+          "gallery": "../../assets/world/country-lr/03-gallery.webp",
+          "cover": "../../assets/world/country-lr/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "blk24ga",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Monrovia%2C_Liberia_-_panoramio_(5).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Rice experiments at CARI's HQ in Suakoko, Bong county, Liberia - panoramio (12).jpg",
+          "gallery": "../../assets/world/country-lr/04-gallery.webp",
+          "cover": "../../assets/world/country-lr/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Africa Rice Center",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Rice_experiments_at_CARI's_HQ_in_Suakoko%2C_Bong_county%2C_Liberia_-_panoramio_(12).jpg"
+        }
+      ]
+    },
+    {
       "id": "country-lu",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Château de Vianden (2025).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.749,
@@ -6612,6 +7409,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Monaco Panorama 2015.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.83,
@@ -6703,6 +7501,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Orheiul Vechi panorama.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.786,
@@ -6792,6 +7591,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "20090719 Crkva Gospa od Zdravlja Kotor Bay Montenegro.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.845,
@@ -6881,6 +7681,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "The Marshall Islands - Majuro - 3-2000.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.84,
@@ -6970,6 +7771,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Ohrid lake, North Macedonia.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -7059,6 +7861,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Leg Rowing Fisherman Inle Lake Myanmar.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -7148,6 +7951,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Mauritania, panorámicas (1997) 01.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -7237,6 +8041,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Monumento a la guerra, Floriana, isla de Malta, Malta, 2021-08-25, DD 177.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.838,
@@ -7326,6 +8131,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Man on sand bank in the Maldives looking at sea.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -7415,6 +8221,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Livingstoniamountainsmalawi.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -7504,6 +8311,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Mezcala Bridge - Mexico edit1.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.75,
@@ -7593,6 +8401,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Downtown Kuala Lumpur at Night (49125936143).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -7682,6 +8491,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "A boat on Bazaruto Island Mozambique.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -7771,6 +8581,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "ZUMA ROCK.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -7860,6 +8671,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Ometepe Island with Concepcion Volcano - From Lake Nicaragua - Nicaragua - 01 (31377352020).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -7949,6 +8761,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Amsterdam Cityscape.jpg",
       "shopCoverSlot": 3,
       "shopCoverCropRetained": 0.807,
@@ -8038,6 +8851,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Buada Lagoon, Nauru 2007.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.847,
@@ -8127,6 +8941,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "AucklandCBD2026.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.809,
@@ -8218,6 +9033,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Fort Mutrah in Muscat, Oman.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -8307,6 +9123,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Cityscape of Manila, 2025 (01).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -8396,6 +9213,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Blue Hour at Pakistan Monument.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -8485,6 +9303,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Church of the Nativity, Bethlehem.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -8574,6 +9393,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Palace da Pena Sintra.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -8663,6 +9483,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Qatar, Aerial view of Doha, Qatar.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -8752,6 +9573,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "01 Magura, Romania - Piatra Craiului mountains.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -8841,6 +9663,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Prayer in St Marko church, Belgrade, Serbia.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.961,
@@ -8930,6 +9753,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Peterhof Palace, Saint Petersburg, Russia (44408938295).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.961,
@@ -9019,6 +9843,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Saudi Arabia Empty Quarter Nov. 2021 (138).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -9108,6 +9933,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "0660 Sweden Gothenburg Waterfront.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -9197,6 +10023,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Cathedral San Marino - Exterior.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.736,
@@ -9284,10 +10111,191 @@
       ]
     },
     {
+      "id": "country-st",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Praia Ize, Sao Tome and Principe - September 2022.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.75,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Praia Ize, Sao Tome and Principe - September 2022.jpg",
+          "gallery": "../../assets/world/country-st/01-gallery.webp",
+          "cover": "../../assets/world/country-st/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Vasco Pessoa Jorge",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Praia_Ize%2C_Sao_Tome_and_Principe_-_September_2022.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "São Tomé skink (Trachylepis thomensis).jpg",
+          "gallery": "../../assets/world/country-st/02-gallery.webp",
+          "cover": "../../assets/world/country-st/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            800
+          ],
+          "coverDimensions": [
+            760,
+            380
+          ],
+          "cropRetained": 0.889,
+          "author": "Charles J. Sharp",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:S%C3%A3o_Tom%C3%A9_skink_(Trachylepis_thomensis).jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Acraea niobe male Sao Tome.jpg",
+          "gallery": "../../assets/world/country-st/03-gallery.webp",
+          "cover": "../../assets/world/country-st/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Charles J. Sharp",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Acraea_niobe_male_Sao_Tome.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Yellow-billed kite (Milvus aegyptius parasitus) in flight Sao Tome.jpg",
+          "gallery": "../../assets/world/country-st/04-gallery.webp",
+          "cover": "../../assets/world/country-st/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Charles J. Sharp",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yellow-billed_kite_(Milvus_aegyptius_parasitus)_in_flight_Sao_Tome.jpg"
+        }
+      ]
+    },
+    {
+      "id": "country-sv",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Asociación Salvadoreña de Astronomía Observatorio \"Dr. Prudencio Llach\".jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.847,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Asociación Salvadoreña de Astronomía Observatorio \"Dr. Prudencio Llach\".jpg",
+          "gallery": "../../assets/world/country-sv/01-gallery.webp",
+          "cover": "../../assets/world/country-sv/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1064
+          ],
+          "coverDimensions": [
+            760,
+            505
+          ],
+          "cropRetained": 0.847,
+          "author": "Joshue",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Asociaci%C3%B3n_Salvadore%C3%B1a_de_Astronom%C3%ADa_Observatorio_%22Dr._Prudencio_Llach%22.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "32-0032 Monumento a la Memoria y la Verdad.jpg",
+          "gallery": "../../assets/world/country-sv/02-gallery.webp",
+          "cover": "../../assets/world/country-sv/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Olivia Isabel Flores",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:32-0032_Monumento_a_la_Memoria_y_la_Verdad.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "El Salvador - El Balsamar - panoramio (7).jpg",
+          "gallery": "../../assets/world/country-sv/03-gallery.webp",
+          "cover": "../../assets/world/country-sv/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            899
+          ],
+          "coverDimensions": [
+            760,
+            428
+          ],
+          "cropRetained": 0.999,
+          "author": "randreu",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:El_Salvador_-_El_Balsamar_-_panoramio_(7).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Ciudad de Sesori, El Salvador. - panoramio.jpg",
+          "gallery": "../../assets/world/country-sv/04-gallery.webp",
+          "cover": "../../assets/world/country-sv/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Daniel chavez castro",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Ciudad_de_Sesori%2C_El_Salvador._-_panoramio.jpg"
+        }
+      ]
+    },
+    {
       "id": "country-sy",
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Syria, Panorama of Damascus city.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -9377,6 +10385,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Mlilwane Wildlife Sanctuary in Eswatini 01.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -9430,6 +10439,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Togo Town Skyline2021.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -9519,6 +10529,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Procuradoria Geral da República (East Timor) (building), 2018 (01).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -9608,6 +10619,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Darvaza gas crater, Jähennem derwezesi, Door to Hell, Gates of Hell, Derweze, Turkmenistan.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -9697,6 +10709,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Venetian channel and beach. View from the Venetian bridge. Kyiv, Ukraine.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.938,
@@ -9786,6 +10799,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "The Grand Canyon, Arizona.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.763,
@@ -9875,6 +10889,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Khudayar Khan Palace, Kokand, Uzbekistan (Дворец Худояр-хана, Коканд, Узбекистан).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.77,
@@ -9964,6 +10979,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "National Library of Kosovo Arben Llapashtica.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -10049,10 +11065,193 @@
       ]
     },
     {
+      "id": "country-ye",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Zahar Himyar, Sana'a, Yemen - panoramio - الدياني (3).jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.75,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Zahar Himyar, Sana'a, Yemen - panoramio - الدياني (3).jpg",
+          "gallery": "../../assets/world/country-ye/01-gallery.webp",
+          "cover": "../../assets/world/country-ye/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "الدياني",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Zahar_Himyar%2C_Sana'a%2C_Yemen_-_panoramio_-_%D8%A7%D9%84%D8%AF%D9%8A%D8%A7%D9%86%D9%8A_(3).jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "20150115 SB Yemen IMG 8130.jpg",
+          "gallery": "../../assets/world/country-ye/02-gallery.webp",
+          "cover": "../../assets/world/country-ye/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Stanislav Beloglazov",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:20150115_SB_Yemen_IMG_8130.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Yemen (9636917434).jpg",
+          "gallery": "../../assets/world/country-ye/03-gallery.webp",
+          "cover": "../../assets/world/country-ye/03-cover.webp",
+          "galleryDimensions": [
+            1119,
+            1600
+          ],
+          "coverDimensions": [
+            532,
+            760
+          ],
+          "cropRetained": 0.394,
+          "author": "Rod Waddington from Kergunyah, Australia",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yemen_(9636917434).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Children in Old Town of Mukalla, Yemen; 2010.jpg",
+          "gallery": "../../assets/world/country-ye/04-gallery.webp",
+          "cover": "../../assets/world/country-ye/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Грищук Юрий Николаевич, г.Одесса",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Children_in_Old_Town_of_Mukalla%2C_Yemen%3B_2010.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cusco",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Plaza de Armas Cusco.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.75,
+      "reasons": [
+        "extreme-aspect-gallery-image"
+      ],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Plaza de Armas Cusco.jpg",
+          "gallery": "../../assets/world/cusco/01-gallery.webp",
+          "cover": "../../assets/world/cusco/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Yanela Sharumi Ccalluco Vargas",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Plaza_de_Armas_Cusco.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Mural of the History of Cusco by Juan Bravo for the Municipality of Cusco.jpg",
+          "gallery": "../../assets/world/cusco/02-gallery.webp",
+          "cover": "../../assets/world/cusco/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            253
+          ],
+          "coverDimensions": [
+            760,
+            120
+          ],
+          "cropRetained": 0.281,
+          "author": "AgainErick",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Mural_of_the_History_of_Cusco_by_Juan_Bravo_for_the_Municipality_of_Cusco.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Plaza junto al Palacio de Justicia, Cusco, Perú, 2015-07-31, DD 71.jpg",
+          "gallery": "../../assets/world/cusco/03-gallery.webp",
+          "cover": "../../assets/world/cusco/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            919
+          ],
+          "coverDimensions": [
+            760,
+            436
+          ],
+          "cropRetained": 0.981,
+          "author": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Plaza_junto_al_Palacio_de_Justicia%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_71.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Sacsayhuamán, Cusco, Perú, 2015-07-31, DD 05.JPG",
+          "gallery": "../../assets/world/cusco/04-gallery.webp",
+          "cover": "../../assets/world/cusco/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            867
+          ],
+          "coverDimensions": [
+            760,
+            412
+          ],
+          "cropRetained": 0.964,
+          "author": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Sacsayhuam%C3%A1n%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_05.JPG"
+        }
+      ]
+    },
+    {
       "id": "dakar",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "African Renaissance Monument Dakar 2025.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -10142,6 +11341,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Dubai Burj Khalifa.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.75,
@@ -10233,6 +11433,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Ha'penny Bridge, Dublin, at night.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.862,
@@ -10322,6 +11523,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Dubrovnik Old Town 1.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.914,
@@ -10411,6 +11613,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "The Royal Mile, Edinburgh, Scotland.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.85,
@@ -10498,10 +11701,101 @@
       ]
     },
     {
+      "id": "essaouira",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "\"Ein bemerkenswertes historisches Denkmal\". 16.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.786,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "\"Ein bemerkenswertes historisches Denkmal\". 16.jpg",
+          "gallery": "../../assets/world/essaouira/01-gallery.webp",
+          "cover": "../../assets/world/essaouira/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1145
+          ],
+          "coverDimensions": [
+            760,
+            544
+          ],
+          "cropRetained": 0.786,
+          "author": "Holger Uwe Schmitt",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:%22Ein_bemerkenswertes_historisches_Denkmal%22._16.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Mellah square Essaouira.jpg",
+          "gallery": "../../assets/world/essaouira/02-gallery.webp",
+          "cover": "../../assets/world/essaouira/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1063
+          ],
+          "coverDimensions": [
+            760,
+            505
+          ],
+          "cropRetained": 0.847,
+          "author": "TomiValny",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Mellah_square_Essaouira.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Essaouira Harbor - panoramio (77).jpg",
+          "gallery": "../../assets/world/essaouira/03-gallery.webp",
+          "cover": "../../assets/world/essaouira/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Patrick Nouhailler's…",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Essaouira_Harbor_-_panoramio_(77).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Fishing Boats in Essaouira Harbor Morocco.jpg",
+          "gallery": "../../assets/world/essaouira/04-gallery.webp",
+          "cover": "../../assets/world/essaouira/04-cover.webp",
+          "galleryDimensions": [
+            1197,
+            1600
+          ],
+          "coverDimensions": [
+            569,
+            760
+          ],
+          "cropRetained": 0.421,
+          "author": "CastlesCatalog",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Fishing_Boats_in_Essaouira_Harbor_Morocco.jpg"
+        }
+      ]
+    },
+    {
       "id": "fes",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Tanneries of Fez.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.84,
@@ -10591,6 +11885,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Firenze - Piazzale Michelangelo, Firenze, Italy - April 6, 2015 02.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -10680,6 +11975,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Galápagos giant tortoise.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.703,
@@ -10769,6 +12065,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Aerial View of Great Barrier Reef (Ank Kumar) 04.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -10858,6 +12155,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sunset over the Tumuli Park in Gyeongju Historic Site Wolseong District South Korea.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.925,
@@ -10947,6 +12245,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Hanoi Panoramic.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.735,
@@ -11036,6 +12335,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Gemini Cruise, Havana Harbor.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -11125,6 +12425,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Greater Hobart Panorama.jpg",
       "shopCoverSlot": 3,
       "shopCoverCropRetained": 0.75,
@@ -11216,6 +12517,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Ho Chi Minh City, City Hall, 2020-01 CN-03.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.733,
@@ -11305,6 +12607,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Hong Kong as seen from Victoria Peak.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -11394,6 +12697,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Iguazu Falls, Argentina.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -11483,6 +12787,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Hagia Sophia and Blue Mosque.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.846,
@@ -11570,10 +12875,101 @@
       ]
     },
     {
+      "id": "kampala",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Urban Rising, KAMPALA, Uganda.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.843,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Urban Rising, KAMPALA, Uganda.jpg",
+          "gallery": "../../assets/world/kampala/01-gallery.webp",
+          "cover": "../../assets/world/kampala/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Chapelle musa",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Urban_Rising%2C_KAMPALA%2C_Uganda.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "All Saints Cathedral, Kampala. Kampala Diocese, Church of Uganda - Anglican 01.jpg",
+          "gallery": "../../assets/world/kampala/02-gallery.webp",
+          "cover": "../../assets/world/kampala/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Ssemmanda will",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:All_Saints_Cathedral%2C_Kampala._Kampala_Diocese%2C_Church_of_Uganda_-_Anglican_01.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Uganda Supreme court building in Kampala 01.jpg",
+          "gallery": "../../assets/world/kampala/03-gallery.webp",
+          "cover": "../../assets/world/kampala/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1205
+          ],
+          "coverDimensions": [
+            760,
+            572
+          ],
+          "cropRetained": 0.747,
+          "author": "Geossegawa",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Uganda_Supreme_court_building_in_Kampala_01.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Hare Krishna Temple in Iskcon Kampala.jpg",
+          "gallery": "../../assets/world/kampala/04-gallery.webp",
+          "cover": "../../assets/world/kampala/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1071
+          ],
+          "coverDimensions": [
+            760,
+            509
+          ],
+          "cropRetained": 0.84,
+          "author": "Dave Proffer",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Hare_Krishna_Temple_in_Iskcon_Kampala.jpg"
+        }
+      ]
+    },
+    {
       "id": "kotor",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "20090719 Crkva Gospa od Zdravlja Kotor Bay Montenegro.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.845,
@@ -11665,6 +13061,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "02021 0762 Main Market Square in Kraków.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.813,
@@ -11754,6 +13151,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Downtown Kuala Lumpur at Night (49125936143).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -11843,6 +13241,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Kyoto Fushimi Inari-taisha 1.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.85,
@@ -11932,6 +13331,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "City view of Lisbon with Castelo de São Jorge.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -12021,6 +13421,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Triple Bridge, Ljubljana.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -12110,6 +13511,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "The Tower Bridge, London, UK.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.87,
@@ -12199,6 +13601,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Thebes, Luxor, Egypt, Panoramic view of the Valley of the Kings.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -12288,6 +13691,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Machu Picchu, Peru - Laslovarga (107).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -12377,6 +13781,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sunrise on the coast of Anse Royale - Mahe - Seychelles - 2025 - 01.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.987,
@@ -12466,6 +13871,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Amazonia fotos aérea região de Manaus 2005 AM Brasil - panoramio (24).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -12555,6 +13961,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Jones Bridge, Manila.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -12644,6 +14051,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Djemaa el Fna Marrakesch.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.848,
@@ -12733,6 +14141,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Centro de Medellín en dron 04.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.944,
@@ -12818,10 +14227,101 @@
       ]
     },
     {
+      "id": "melbourne",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "City Skyline of Melbourne.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.999,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "City Skyline of Melbourne.jpg",
+          "gallery": "../../assets/world/melbourne/01-gallery.webp",
+          "cover": "../../assets/world/melbourne/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            900
+          ],
+          "coverDimensions": [
+            760,
+            428
+          ],
+          "cropRetained": 0.999,
+          "author": "李沛钊",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:City_Skyline_of_Melbourne.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Skylinemelbourne2026.jpg",
+          "gallery": "../../assets/world/melbourne/02-gallery.webp",
+          "cover": "../../assets/world/melbourne/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            871
+          ],
+          "coverDimensions": [
+            760,
+            414
+          ],
+          "cropRetained": 0.968,
+          "author": "Celco85",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Skylinemelbourne2026.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Melbourne Skyline from Rialto Crop - Nov 2008.jpg",
+          "gallery": "../../assets/world/melbourne/03-gallery.webp",
+          "cover": "../../assets/world/melbourne/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            515
+          ],
+          "coverDimensions": [
+            760,
+            245
+          ],
+          "cropRetained": 0.573,
+          "author": "Diliff",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Melbourne_Skyline_from_Rialto_Crop_-_Nov_2008.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Southbank and Yarra River, Melbourne, as seen from Evan Walker Bridge 20230219 1.jpg",
+          "gallery": "../../assets/world/melbourne/04-gallery.webp",
+          "cover": "../../assets/world/melbourne/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1000
+          ],
+          "coverDimensions": [
+            760,
+            475
+          ],
+          "cropRetained": 0.9,
+          "author": "DXR",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Southbank_and_Yarra_River%2C_Melbourne%2C_as_seen_from_Evan_Walker_Bridge_20230219_1.jpg"
+        }
+      ]
+    },
+    {
       "id": "mexicocity",
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Panorama of Mexico City from Torre Latinoamericana.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.9,
@@ -12913,6 +14413,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Milford Sound in Fiordland National Park 12.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.994,
@@ -13002,6 +14503,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Calle Washington en Ciudad Vieja, Montevideo, Uruguay.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -13091,6 +14593,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Notre-Dame Basilica Montreal.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.938,
@@ -13180,6 +14683,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Stari Most viewed from North.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.643,
@@ -13271,6 +14775,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Aoraki (Mount Cook) from Hooker Glacier Lake.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.671,
@@ -13360,6 +14865,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Sri Siva Subramaniya Swami Temple - Nadi, Fiji 4.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -13449,6 +14955,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "New York City, Skyline.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.941,
@@ -13538,6 +15045,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Puesta de sol desde Mont Passot, Nosy Be, Madagascar, 2025-09-21, DD 115-117 HDR.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -13627,6 +15135,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Church of Santo Domingo Oaxaca.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.422,
@@ -13718,6 +15227,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Table iceberg west of Sjuøyane, Arctic ocean.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -13807,6 +15317,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Eldhusøya by the Atlantic Ocean Road.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -13896,6 +15407,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Aerial shot of a small island on a coral reef in the Maldives.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.884,
@@ -13985,6 +15497,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sunset over the Pacific Ocean from Maui, Hawaii.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -14074,6 +15587,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "South Shetland-2016-Southern Ocean (off Elephant Island)–Iceberg 01.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -14163,6 +15677,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Eiffel Tower from Trocadero-2026-07-msu--.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -14252,6 +15767,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Kings Park, Perth.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.959,
@@ -14343,6 +15859,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Petra, Jordan -The Treasury.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -14432,6 +15949,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "2011-06-27 12-34-43 Mauritius Port Louis Port Louis 6hl.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.344,
@@ -14524,6 +16042,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Puente Don Luis I, Oporto, Portugal, 2012-05-09, DD 13.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.912,
@@ -14613,6 +16132,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Night view of the Castle and Charles Bridge, Prague - 8019.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.91,
@@ -14704,6 +16224,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Chateau Frontenac seen from the ramparts of Quebec City.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -14793,6 +16314,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Queenstown Park, Queenstown, New Zealand - panoramio.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.848,
@@ -14882,6 +16404,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Vista de Quito desde El Panecillo, Ecuador, 2015-07-22, DD 25-29 PAN.JPG",
       "shopCoverSlot": 4,
       "shopCoverCropRetained": 0.833,
@@ -14973,6 +16496,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Riga (33844464828).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.938,
@@ -15064,6 +16588,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Christ-Redeemer-Rio-de-Janeiro.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -15153,6 +16678,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Rome colosseum.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -15242,6 +16768,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Government Gardens in Rotorua 01.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.926,
@@ -15331,6 +16858,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "North-west minaret of Bibi-Khanym Mosque, Samarkand (минарет Биби-Ханум мечеть).jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -15420,6 +16948,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Golden Gate Bridge and San Francisco skyline from Hawk Hill at Blue Hour dllu.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.531,
@@ -15508,10 +17037,101 @@
       ]
     },
     {
+      "id": "sanjosecr",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Merced, Provincia de San José, San José, Costa Rica - panoramio (2).jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.95,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Merced, Provincia de San José, San José, Costa Rica - panoramio (2).jpg",
+          "gallery": "../../assets/world/sanjosecr/01-gallery.webp",
+          "cover": "../../assets/world/sanjosecr/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            949
+          ],
+          "coverDimensions": [
+            760,
+            450
+          ],
+          "cropRetained": 0.95,
+          "author": "hh oldman",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Merced%2C_Provincia_de_San_Jos%C3%A9%2C_San_Jos%C3%A9%2C_Costa_Rica_-_panoramio_(2).jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Downtown San Jose - Costa Rica - 02 (8477724716).jpg",
+          "gallery": "../../assets/world/sanjosecr/02-gallery.webp",
+          "cover": "../../assets/world/sanjosecr/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Adam Jones from Kelowna, BC, Canada",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Downtown_San_Jose_-_Costa_Rica_-_02_(8477724716).jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Edificio Metálico - Metallic Building - Downtown San Jose - Costa Rica (8477713550).jpg",
+          "gallery": "../../assets/world/sanjosecr/03-gallery.webp",
+          "cover": "../../assets/world/sanjosecr/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Adam Jones from Kelowna, BC, Canada",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Edificio_Met%C3%A1lico_-_Metallic_Building_-_Downtown_San_Jose_-_Costa_Rica_(8477713550).jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Street in San José, Costa Rica.jpg",
+          "gallery": "../../assets/world/sanjosecr/04-gallery.webp",
+          "cover": "../../assets/world/sanjosecr/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Eric Fredericks",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Street_in_San_Jos%C3%A9%2C_Costa_Rica.jpg"
+        }
+      ]
+    },
+    {
       "id": "sarajevo",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sarajevo City Panorama.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.942,
@@ -15601,6 +17221,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Andaman Islands, Neil, Mangrove trees.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -15690,6 +17311,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "A boat sailing through Arabina sea from Cabo de Rama Fort.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -15779,6 +17401,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Baltic Sea 1551 (5496745361).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.85,
@@ -15868,6 +17491,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Nome Alaska bering sea.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.848,
@@ -15957,6 +17581,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Black Sea coast of Georgia (country), with skyline of Batumi on the horizon.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.88,
@@ -16046,6 +17671,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Coast of the Caribbean Sea in Pointe-Noire (1).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.883,
@@ -16135,6 +17761,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Arlington-Reef-2018-aerial-view-Luka-Peternel.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -16224,6 +17851,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "View of the East China Sea from Kunigami Forest Park 2018.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -16313,6 +17941,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Alanngorsuaq-fjordmouth-labrador-sea-iceberg.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.999,
@@ -16402,6 +18031,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Coastal aerial of Barcelona with Port-Nou in foreground.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -16491,6 +18121,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "North Sea Sunset, 1807042229, ako.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -16580,6 +18211,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Freezing the waters of the Sea of Okhotsk. Magadan.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.974,
@@ -16669,6 +18301,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "View towards the sea from the coastal path on Guanyinbi.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -16758,6 +18391,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Coral Reef, Red Sea.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.422,
@@ -16849,6 +18483,7 @@
       "newInV109": false,
       "newInV110": true,
       "newInV111": false,
+      "newInV112": false,
       "lead": "South China Sea (3).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.749,
@@ -16938,6 +18573,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Aurora Australis Over the Tasman Sea from SouthWest National Park.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -17027,6 +18663,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Emperor-iceberg hg.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.835,
@@ -17116,6 +18753,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Seoul from Namsan.jpg",
       "shopCoverSlot": 3,
       "shopCoverCropRetained": 0.991,
@@ -17205,6 +18843,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sevilla Cathedral - Southeast.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.754,
@@ -17294,6 +18933,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "The Bund Shanghai.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.844,
@@ -17383,6 +19023,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Dameisha.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -17472,6 +19113,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sidi Chebaan.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.869,
@@ -17561,6 +19203,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Marina Bay Sands.jpeg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -17646,10 +19289,101 @@
       ]
     },
     {
+      "id": "stellenbosch",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Theological Seminary, Dorp Street, Stellenbosch.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.749,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Theological Seminary, Dorp Street, Stellenbosch.jpg",
+          "gallery": "../../assets/world/stellenbosch/01-gallery.webp",
+          "cover": "../../assets/world/stellenbosch/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1202
+          ],
+          "coverDimensions": [
+            760,
+            571
+          ],
+          "cropRetained": 0.749,
+          "author": "Martinvl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Theological_Seminary%2C_Dorp_Street%2C_Stellenbosch.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Schoongezicht. Ida's Valley. Stellenbosch. Garden..jpg",
+          "gallery": "../../assets/world/stellenbosch/02-gallery.webp",
+          "cover": "../../assets/world/stellenbosch/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1053
+          ],
+          "coverDimensions": [
+            760,
+            500
+          ],
+          "cropRetained": 0.855,
+          "author": "Chris Snelling",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Schoongezicht._Ida's_Valley._Stellenbosch._Garden..jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Stellenbosch & Mountains Brian Burger.jpg",
+          "gallery": "../../assets/world/stellenbosch/03-gallery.webp",
+          "cover": "../../assets/world/stellenbosch/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1200
+          ],
+          "coverDimensions": [
+            760,
+            570
+          ],
+          "cropRetained": 0.75,
+          "author": "Brian Burger from Victoria, Canada",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Stellenbosch_%26_Mountains_Brian_Burger.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Stellenbosch Dutch Reformed Mother Church 04.jpg",
+          "gallery": "../../assets/world/stellenbosch/04-gallery.webp",
+          "cover": "../../assets/world/stellenbosch/04-cover.webp",
+          "galleryDimensions": [
+            988,
+            1600
+          ],
+          "coverDimensions": [
+            469,
+            760
+          ],
+          "cropRetained": 0.347,
+          "author": "Ad Meskens You are free to use this picture for any purpose as long as you credit its author, Ad Meskens . Example: © Ad Meskens / Wikimedia Commons If you use this work outside of the Wikimedia proje",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Stellenbosch_Dutch_Reformed_Mother_Church_04.jpg"
+        }
+      ]
+    },
+    {
       "id": "stockholm",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Royal Dramatic Theatre Stockholm.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.848,
@@ -17739,6 +19473,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Puerto de Stone Town, Zanzíbar, Tanzania, 2024-05-31, DD 03.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -17830,6 +19565,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Aerial view Swakopmund (2018).jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -17919,6 +19655,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Sydney skyline at dusk - Dec 2008.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.704,
@@ -18008,6 +19745,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Taipei Skyline 2022.06.29.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -18097,6 +19835,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Tallinna vanalinn, Tallinn Old Town.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.843,
@@ -18186,6 +19925,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Old Tbilisi town in Tbilisi, Georgia.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.75,
@@ -18275,6 +20015,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "2025 Shibuya Crossing at night.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.704,
@@ -18364,6 +20105,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Toronto-skyline.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.85,
@@ -18455,6 +20197,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "La medina, Tunis, Tunisia.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.792,
@@ -18544,6 +20287,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Uluru Australia.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.561,
@@ -18635,6 +20379,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "El salar.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -18726,6 +20471,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": true,
+      "newInV112": false,
       "lead": "Templeman y Almirante Montt, Valparaíso.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.896,
@@ -18815,6 +20561,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Stanley Park - Vancouver BC - Canada.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -18904,6 +20651,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Grand Canal from Rialto Bridge.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.845,
@@ -18993,6 +20741,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Schoenbrunn philharmoniker 2012.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.8,
@@ -19084,6 +20833,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Foggy Winter Sunrise in Vilnius.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.848,
@@ -19173,6 +20923,7 @@
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Tidal sandbank in the Whitsunday Islands.JPG",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.843,
@@ -19262,6 +21013,7 @@
       "newInV109": true,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Windhoek Panorama Three Circles 20190518.jpg",
       "shopCoverSlot": 2,
       "shopCoverCropRetained": 0.999,
@@ -19349,10 +21101,101 @@
       ]
     },
     {
+      "id": "yellowstone",
+      "newInV109": false,
+      "newInV110": false,
+      "newInV111": false,
+      "newInV112": true,
+      "lead": "Yellowstone Grand Prismatic.jpg",
+      "shopCoverSlot": 1,
+      "shopCoverCropRetained": 0.837,
+      "reasons": [],
+      "reviewStatus": "needs-human-visual-approval",
+      "images": [
+        {
+          "slot": 1,
+          "originalFile": "Yellowstone Grand Prismatic.jpg",
+          "gallery": "../../assets/world/yellowstone/01-gallery.webp",
+          "cover": "../../assets/world/yellowstone/01-cover.webp",
+          "galleryDimensions": [
+            1600,
+            753
+          ],
+          "coverDimensions": [
+            760,
+            358
+          ],
+          "cropRetained": 0.837,
+          "author": "David L. Sifry",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yellowstone_Grand_Prismatic.jpg"
+        },
+        {
+          "slot": 2,
+          "originalFile": "Yellowstone National Park (WY, USA), Grand Prismatic Spring -- 2022 -- 2492.jpg",
+          "gallery": "../../assets/world/yellowstone/02-gallery.webp",
+          "cover": "../../assets/world/yellowstone/02-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park_(WY%2C_USA)%2C_Grand_Prismatic_Spring_--_2022_--_2492.jpg"
+        },
+        {
+          "slot": 3,
+          "originalFile": "Yellowstone National Park (WY, USA), Fountain Geyser -- 2022 -- 2443.jpg",
+          "gallery": "../../assets/world/yellowstone/03-gallery.webp",
+          "cover": "../../assets/world/yellowstone/03-cover.webp",
+          "galleryDimensions": [
+            1600,
+            1067
+          ],
+          "coverDimensions": [
+            760,
+            507
+          ],
+          "cropRetained": 0.843,
+          "author": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park_(WY%2C_USA)%2C_Fountain_Geyser_--_2022_--_2443.jpg"
+        },
+        {
+          "slot": 4,
+          "originalFile": "Yellowstone National Park (WY, USA), Red Spouter -- 2022 -- 2465.jpg",
+          "gallery": "../../assets/world/yellowstone/04-gallery.webp",
+          "cover": "../../assets/world/yellowstone/04-cover.webp",
+          "galleryDimensions": [
+            1600,
+            900
+          ],
+          "coverDimensions": [
+            760,
+            428
+          ],
+          "cropRetained": 0.999,
+          "author": "Dietmar Rabich",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park_(WY%2C_USA)%2C_Red_Spouter_--_2022_--_2465.jpg"
+        }
+      ]
+    },
+    {
       "id": "zurich",
       "newInV109": false,
       "newInV110": false,
       "newInV111": false,
+      "newInV112": false,
       "lead": "Zürich view Quaibrücke 20200702.jpg",
       "shopCoverSlot": 1,
       "shopCoverCropRetained": 0.924,
