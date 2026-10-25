@@ -7,7 +7,7 @@ const base=path.resolve(__dirname,'..');
 const declared=require('../editorial/world-v111-cover-priorities.json').shopCoverSelections;
 const runtime=require('../world-shop-cover-priorities.js');
 const index=require('../editorial/reviews/world-local-photo-review-index.json');
-assert.equal(Object.keys(declared).length,26);
+assert.equal(Object.keys(declared).length,30);
 assert.deepEqual(runtime.all(),declared);
 for(const [id,choice] of Object.entries(declared)){
   const record=index.destinations.find(x=>x.id===id);
@@ -22,8 +22,8 @@ for(const [id,choice] of Object.entries(declared)){
   assert(fs.statSync(file).size>6000,'Missing chosen local shop cover: '+id);
 }
 const html=fs.readFileSync(path.join(base,'index.html'),'utf8');
-assert(html.includes('world-shop-cover-priorities.js?v=111'));
+assert(html.includes('world-shop-cover-priorities.js?v=114'));
 const gallery=fs.readFileSync(path.join(base,'world-location-photo-gallery.js'),'utf8');
 assert(gallery.includes('RevisionWorldShopCoverPriorities?.get(location.id)'));
 assert(gallery.includes('candidate')||gallery.includes('choice?.localCoverUrl'));
-console.log('PASS 26 v111 shop cover source guards and crop-area improvements. Full gallery order untouched.');
+console.log('PASS 30 v114 shop cover source guards and crop-area improvements. Full gallery order untouched.');

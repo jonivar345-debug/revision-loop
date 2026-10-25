@@ -110,6 +110,22 @@
   "samarkand": {
     "slot": 2,
     "file": "Samarkand Shah-i Zinda general view.JPG"
+  },
+  "country-va": {
+    "slot": 2,
+    "file": "Gardens in the Vatican City (2).jpg"
+  },
+  "country-za": {
+    "slot": 2,
+    "file": "A view from Pinnacle Point, Mossel Bay, South Africa.jpg"
+  },
+  "mostar": {
+    "slot": 4,
+    "file": "View over Mostar from Old Bridge Museum - Mostar - Bosnia and Herzegovina.jpg"
+  },
+  "uluru": {
+    "slot": 3,
+    "file": "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3615.jpg"
   }
 });
   return Object.freeze({get:id=>selections[id]||null,all:()=>({...selections})});
