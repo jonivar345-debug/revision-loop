@@ -1,0 +1,62 @@
+{
+  "release": "v108",
+  "scope": "First cover selection; source-place matching and original attribution unaffected.",
+  "type": "Preview crop metrics and original file subject comparison",
+  "subjectiveApproval": "Pending complete human pixel inspection",
+  "decisions": [
+    {
+      "id": "cartagena",
+      "from": "Museo Naval del Caribe.JPG",
+      "to": "City of Cartagena view from San Felipe fortress.jpg",
+      "reason": "Prioritise recognisable landscape or landmark over generic street, interior, or infrastructure image."
+    },
+    {
+      "id": "country-lu",
+      "from": "Luxembourg City Chambre des députés Nov 2009.jpg",
+      "to": "Château de Vianden (2025).jpg",
+      "reason": "Prioritise recognisable landscape or landmark over generic street, interior, or infrastructure image."
+    },
+    {
+      "id": "country-pt",
+      "from": "Estatua de Vimara Peres, Oporto, Portugal, 2012-05-09, DD 01.JPG",
+      "to": "Palace da Pena Sintra.jpg",
+      "reason": "Avoid a severely cropped isolated statue in the shop; use Sintra's landmark palace."
+    },
+    {
+      "id": "vilnius",
+      "from": "St. Peter and St. Paul's Church 1, Vilnius, Lithuania - Diliff.jpg",
+      "to": "Foggy Winter Sunrise in Vilnius.jpg",
+      "reason": "Prioritise recognisable landscape or landmark over generic street, interior, or infrastructure image."
+    },
+    {
+      "id": "country-jo",
+      "from": "Jordan River valley 02.jpg",
+      "to": "Karak Castle, Jordan (قلعة الكرك).jpg",
+      "reason": "Use identifiable castle rather than a very wide valley crop."
+    },
+    {
+      "id": "country-ps",
+      "from": "Palestine-2013-Aerial-Mar Saba Monastery.jpg",
+      "to": "Church of the Nativity, Bethlehem.jpg",
+      "reason": "Use a landscape-orientated identifiable landmark instead of aggressive centre-cropping a vertical aerial."
+    },
+    {
+      "id": "country-lk",
+      "from": "Dirt road in Hurulu Eco Park, North Central Province, Sri Lanka, 20260201 1028 7853.jpg",
+      "to": "Goyambokka Beach, Tangalle, Sri Lanka.jpg",
+      "reason": "Prioritise recognisable landscape or landmark over generic street, interior, or infrastructure image."
+    },
+    {
+      "id": "country-af",
+      "from": "Françoise Foliot - Afghanistan 043.jpg",
+      "to": "Lake in Band-e Amir National Park, March 2008.jpg",
+      "reason": "Prioritise recognisable landscape or landmark over generic street, interior, or infrastructure image."
+    },
+    {
+      "id": "country-sa",
+      "from": "Uruq Bani Ma'arid Reserve, Saudi Arabia (2025).jpg",
+      "to": "Saudi Arabia Empty Quarter Nov. 2021 (138).jpg",
+      "reason": "Prioritise recognisable landscape or landmark over generic street, interior, or infrastructure image."
+    }
+  ]
+}
