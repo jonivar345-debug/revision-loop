@@ -23,7 +23,8 @@ for(const q of all){
 let checks=0;
 for(const q of additions){
  assert(topics[q.subject].has(q.revisionTopic),'Invalid topic '+q.id);checks++;
- assert.equal(q.marks,q.id.startsWith('gap_v49_extended_')?6:4,'Correct independent marking-point count '+q.id);checks++;
+ const expectedMarks=q.id==='gap_v48_chem_22'?5:q.id.startsWith('gap_v49_extended_')?6:4;
+ assert.equal(q.marks,expectedMarks,'Correct independent marking-point count '+q.id);checks++;
  assert.equal(q.markPoints.length,q.markPointMarks.length,'Mark-point alignment '+q.id);checks++;
  assert.equal(q.markPointMarks.reduce((a,b)=>a+b,0),q.marks,'Mark totals '+q.id);checks++;
  assert.equal(q.year,'Practice','Original practice cannot be falsely labelled a past paper '+q.id);checks++;
@@ -39,8 +40,15 @@ for(const q of additions){
  const swapped={...q,markPoints:[...q.markPoints].reverse()};assert.equal(swapped.markPoints.length,q.marks);checks++;
  tallies[q.subject]++;
 }
-assert.deepEqual(tallies,{Physics:24,Chemistry:24,Maths:27},'Question batch size');
-assert.equal(additions.length,75);
+const gibbs=additions.find(q=>q.id==='gap_v48_chem_22');
+assert(gibbs,'Original Gibbs graph practice question missing');
+assert.equal(gibbs.marks,5,'Gradient, entropy, enthalpy, zero crossing and feasibility each earn one mark');
+assert.equal(gibbs.markPoints.length,5);
+assert.deepEqual(gibbs.markPointMarks,[1,1,1,1,1]);
+assert(gibbs.prompt.includes('[5 marks]'),'Displayed exam question must correctly show five marks');
+checks+=5;
+assert.deepEqual(tallies,{Physics:24,Chemistry:29,Maths:27},'Question batch size including five additional Chemistry questions');
+assert.equal(additions.length,80,'Twenty-four Physics, twenty-nine Chemistry and twenty-seven Maths questions expected');
 const numeric=[
  ['Young modulus',32*1.5/(Math.PI*(0.0002**2)*0.0019),2.01e11,0.02],
  ['Energy efficiency',(360*9.81*7.5/45)/950,0.620,0.01],
