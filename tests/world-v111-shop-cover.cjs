@@ -22,7 +22,7 @@ for(const [id,choice] of Object.entries(declared)){
   assert(fs.statSync(file).size>6000,'Missing chosen local shop cover: '+id);
 }
 const html=fs.readFileSync(path.join(base,'index.html'),'utf8');
-assert(html.includes('world-shop-cover-priorities.js?v=111'));
+assert(html.includes('world-shop-cover-priorities.js?v=114'));
 const gallery=fs.readFileSync(path.join(base,'world-location-photo-gallery.js'),'utf8');
 assert(gallery.includes('RevisionWorldShopCoverPriorities?.get(location.id)'));
 assert(gallery.includes('candidate')||gallery.includes('choice?.localCoverUrl'));
