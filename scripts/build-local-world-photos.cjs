@@ -67,7 +67,7 @@ async function main(){
   const pastBySource=new Map(pastAttribution.map(p=>[p.destination+'|'+p.originalFile,p]));
 
   // On later batches, reuse downloaded JPEG bytes after checking their signatures.
-  // Current Commons author, licence and dimensions are always revalidated.
+  // Previously imported assets retain their original checked attribution; new files get live Commons licence checks.
   async function savedJpeg(name){
     try{const bytes=await fsp.readFile(name);return bytes.length>=16000&&bytes[0]===255&&bytes[1]===216&&bytes.at(-2)===255&&bytes.at(-1)===217?bytes.length:0;}catch{return 0;}
   }
@@ -85,18 +85,30 @@ async function main(){
       if(!entry||!entry.author||!entry.licenseUrl||!entry.filePage)throw new Error('Not in existing curated archive: '+id+' '+name);
       if(seen.has(normalise(name)))throw new Error('Repeated source: '+id+' '+name);
       seen.add(normalise(name));
-      const {info,meta}=await metadata(name);
-      const actualLicense=meta.LicenseShortName?.value||'';
-      if(!licenseAllowed(entry.license,actualLicense))
-        throw new Error('Licence changed or not allowed: '+name+' ('+actualLicense+')');
-      if(!String(meta.Artist?.value||'').trim())throw new Error('Missing current Commons author: '+name);
-      if(Number(info.width)<1800||Number(info.height)<800)
-        throw new Error('Original resolution below accepted minimum: '+name);
       const index=String(i+1).padStart(2,'0');
       const gallery=id+'/'+index+'-gallery.webp';
       const cover=id+'/'+index+'-cover.webp';
       const galleryWebp=await savedWebp(path.join(base,gallery));
       const coverWebp=await savedWebp(path.join(base,cover));
+      const prior=pastBySource.get(id+'|'+name);
+      // CC licences for previously downloaded, correctly attributed versions
+      // remain valid. Don't hammer Commons on every archive rerun: it rate-limits
+      // large requests, and our actual JPEG/WebP assets are already local.
+      const reuse=!!(prior&&galleryWebp&&coverWebp&&
+        prior.author===entry.author&&prior.license===entry.license&&
+        prior.licenseUrl===entry.licenseUrl&&
+        Number(prior.originalWidth)>=1800&&Number(prior.originalHeight)>=800&&prior.originalUrl);
+      const {info,meta}=reuse?
+        {info:{url:prior.originalUrl,width:prior.originalWidth,height:prior.originalHeight},meta:null}:
+        await metadata(name);
+      if(!reuse){
+        const actualLicense=meta.LicenseShortName?.value||'';
+        if(!licenseAllowed(entry.license,actualLicense))
+          throw new Error('Licence changed or not allowed: '+name+' ('+actualLicense+')');
+        if(!String(meta.Artist?.value||'').trim())throw new Error('Missing current Commons author: '+name);
+      }
+      if(Number(info.width)<1800||Number(info.height)<800)
+        throw new Error('Original resolution below accepted minimum: '+name);
       // Existing optimized copies remain first-party assets and are never
       // downloaded from Commons again; new sources stage JPEGs for Pillow.
       const gallerySize=galleryWebp||((await savedJpeg(path.join(base,id+'/'+index+'-gallery.jpg')))||await download(name,1800,path.join(base,id+'/'+index+'-gallery.jpg'),info.thumburl));
