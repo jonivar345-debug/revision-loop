@@ -4045,13 +4045,13 @@
   const priorityPhotoV92=Object.freeze({
     "cairns": [
       {
-        "file": "AU-cairns-esplanade.jpg",
-        "author": "Balou46",
+        "file": "Esplanade Lagoon, Cairns, 2025, 12.jpg",
+        "author": "Chris Olszewski",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "subject": "Cairns waterfront Esplanade, Queensland",
-        "width": 4756,
-        "height": 2889,
+        "subject": "Esplanade Lagoon waterfront, tropical trees and hills behind Cairns, Queensland",
+        "width": 8064,
+        "height": 6048,
         "editorialMetadata": true,
         "qualityPriority": 900,
         "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
