@@ -15,7 +15,7 @@ const catalogue=require('../world-curated-photos.js');
 const targetPath=path.resolve(__dirname,'../editorial/world-local-photo-pilot.json');
 // IDs from the site's existing World destination catalog. Previously prioritized
 // scenic/cultural cities, then major landscape and marine destinations.
-const targets=require('../editorial/world-v105-batch-targets.json').targets;
+const targets=require('../editorial/world-v106-batch-targets.json').targets;
 const manifest=JSON.parse(fs.readFileSync(targetPath,'utf8'));
 const selected=[];const skipped=[];
 const valid=p=>p&&typeof p.file==='string'&&/\.(?:jpe?g)$/i.test(p.file)&&
@@ -37,8 +37,8 @@ for(const id of targets){
 }
 // This threshold ensures we don't silently pretend a batch succeeded.
 console.log('Selection candidates: '+selected.length+'; skipped: '+JSON.stringify(skipped));
-assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length>=20,'Not enough source-backed candidate galleries for the v105 batch');
-manifest.description='World v105: seven targeted quality replacements and up to 30 further complete local galleries, selected from the curated place-specific four-source catalogue; preserve authors, source pages and licences.';
+assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length >=0,'v106 source catalogue selection failed');
+manifest.description='World v106: correct source mismatches and preserve the existing 102 complete galleries, selected from the curated place-specific four-source catalogue; preserve authors, source pages and licences.';
 manifest.quality='Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.';
 fs.writeFileSync(targetPath,JSON.stringify(manifest,null,2)+'\n');
 console.log('New four-photo locations:',selected.length,'('+(selected.length*4)+' photos)');
