@@ -18,10 +18,13 @@ assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'Do not silently res
 new Function(app); // Compile only: never run the browser application in Node.
 const eligibleTopics=new Set(deck.cards.filter(c=>c.subject==='Physics').map(c=>c.revisionTopic||c.topic));
 const ids=new Set();
-const score=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
- app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule(')))+
- app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')))+
- 'return examSuggested')();
+const scoreStart=app.indexOf('function evidenceRuleScore(');
+const scoreEnd=app.indexOf('function renderExam(',scoreStart);
+assert(scoreStart>=0&&scoreEnd>scoreStart,'Scoring function locations must still be present');
+const scoreSource='function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
+ app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('))+
+ app.slice(scoreStart,scoreEnd)+'\nreturn examSuggested;';
+const score=new Function(scoreSource)();
 let chartCount=0,checks=0;
 for(const q of bank.questions){
  assert(!ids.has(q.id),'Duplicate ID: '+q.id);ids.add(q.id);
