@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 33,
+  "deckVersion": 34,
   "updatedAt": "2026-10-24T17:21:00.000Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -14,7 +14,7 @@
       "subject": "Physics",
       "topic": "Resolving vectors",
       "kind": "weak",
-      "priority": 3,
+      "priority": 9,
       "scope": "mock",
       "front": "How do you decide whether to use sin or cos when resolving a force?",
       "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'.",
@@ -16776,6 +16776,57 @@
         "at speeds near the speed of light relativistic momentum is needed",
         "when electron speeds approach c p=mv is inaccurate"
       ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resolving vectors",
+      "revisionTopic": "Resolving vectors",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "scope": "mock",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "priority": 9,
+      "id": "phy_resolve_weakness_20261025_marked_angle",
+      "front": "When resolving a vector, what decides whether to use sin or cos?",
+      "back": "Look at the marked angle: adjacent side uses cos θ; opposite side uses sin θ. Never rely on horizontal or vertical.",
+      "visual": "resolve"
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resolving vectors",
+      "revisionTopic": "Resolving vectors",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "scope": "mock",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "priority": 9,
+      "id": "phy_resolve_weakness_20261025_horizontal_30",
+      "front": "50 N at 30° above horizontal: find horizontal and vertical components.",
+      "back": "Horizontal = 50 cos 30° = 43.3 N; vertical = 50 sin 30° = 25.0 N.",
+      "visual": "resolve"
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resolving vectors",
+      "revisionTopic": "Resolving vectors",
+      "courseTopic": "Mechanics & materials",
+      "kind": "content",
+      "scope": "mock",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "priority": 9,
+      "id": "phy_resolve_weakness_20261025_vertical_30",
+      "front": "50 N at 30° to vertical: find horizontal and vertical components.",
+      "back": "Horizontal = 50 sin 30° = 25.0 N; vertical = 50 cos 30° = 43.3 N.",
+      "visual": "resolve"
     }
   ],
   "meta": {
