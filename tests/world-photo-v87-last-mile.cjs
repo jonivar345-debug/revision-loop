@@ -56,6 +56,6 @@ for(const [id,notPhoto] of Object.entries({
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 assert(html.includes('world-photo-enrichment-v85.js?v=91'),'Browser must fetch refreshed photo manifest');
-assert(sw.includes('revision-loop-v96-character-art'),'Service worker cache must be versioned');
+assert(sw.includes('revision-loop-v97-place-photos'),'Service worker cache must be versioned');
 assert(sw.includes("'./world-photo-enrichment-v85.js'"),'Offline source data must remain cached');
 console.log('PASS v87: '+complete+'/376 sourced four-photo galleries; '+total+' unique destination-photo pairs; '+JSON.stringify(unfinished)+' incomplete; source metadata only, not pixel approved');
