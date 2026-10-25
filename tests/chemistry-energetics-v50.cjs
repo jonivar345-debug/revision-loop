@@ -19,7 +19,7 @@ for(const c of cards){assert(c.subject==='Chemistry'&&c.stage==='AS'&&c.active==
 assert(app.includes("'./energetics_focus_v50.json'"),'Bank not loaded');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'Saved progress key changed');
 assert(app.includes("q.mock===true||q.level==='AS'"),'Mock questions ineligible');
-const p1=app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule(')));
+const p1=app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('));
 const p2=app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')));
 const score=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+p1+p2+'return examSuggested')();
 for(const q of bank.questions){
