@@ -4038,6 +4038,151 @@
     }
   ]
 });
+
+  // World v92: eight source-checked iconic destination photos, with one
+  // weak or geographically incorrect legacy candidate rejected per gallery.
+  // These are Commons metadata approvals, not pixel-level visual sign-offs.
+  const priorityPhotoV92=Object.freeze({
+    "cairns": [
+      {
+        "file": "AU-cairns-esplanade.jpg",
+        "author": "Balou46",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Cairns waterfront Esplanade, Queensland",
+        "width": 4756,
+        "height": 2889,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "losangeles": [
+      {
+        "file": "Skyline from Griffith Observatory.jpg",
+        "author": "Dancorona21",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Los Angeles skyline and Griffith Observatory at night",
+        "width": 5182,
+        "height": 3456,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "quebec": [
+      {
+        "file": "Chateau Frontenac seen from the ramparts of Quebec City.jpg",
+        "author": "Wilfredor",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "Château Frontenac in historic Quebec City",
+        "width": 8256,
+        "height": 5504,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "dublin": [
+      {
+        "file": "Ha'penny Bridge, Dublin, at night.jpg",
+        "author": "Bob Collowan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Ha'penny Bridge and River Liffey in Dublin",
+        "width": 3876,
+        "height": 2532,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "tunis": [
+      {
+        "file": "La medina, Tunis, Tunisia.JPG",
+        "author": "Fares Rjeibi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic medina souk in Tunis",
+        "width": 4000,
+        "height": 2840,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "oaxaca": [
+      {
+        "file": "Church of Santo Domingo Oaxaca.jpg",
+        "author": "Alison Platt Kendall",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Santo Domingo Church, Oaxaca City",
+        "width": 3024,
+        "height": 4032,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "dakar": [
+      {
+        "file": "African Renaissance Monument Dakar 2025.jpg",
+        "author": "Gromane",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "African Renaissance Monument, Dakar",
+        "width": 3000,
+        "height": 4000,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ],
+    "brisbane": [
+      {
+        "file": "Story Bridge, Brisbane City views, 2021, 04.jpg",
+        "author": "Kgbo",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Story Bridge with the Brisbane cityscape",
+        "width": 3934,
+        "height": 2950,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      }
+    ]
+  });
+  const rejectedPhotoV92=Object.freeze({
+    "cairns": [
+      "Rock cairns on Kuikkapää in Urho Kekkonen national park, Sodankylä (July 2018).jpg"
+    ],
+    "losangeles": [
+      "Ceiling at the entrance to Saint Vincent de Paul Roman Catholic Church, Los Angeles, California, US.jpg"
+    ],
+    "quebec": [
+      "Glass office building on Avenue Honoré-Mercier, Quebec City.jpg"
+    ],
+    "dublin": [
+      "St Patrick's Cathedral Nave 3, Dublin, Ireland - Diliff.jpg"
+    ],
+    "tunis": [
+      "Aigrette garzette sur le lac de Tunis.jpg"
+    ],
+    "oaxaca": [
+      "Sculpture of Sea Turtle - Santo Domingo Cultural Center - Oaxaca City - Oaxaca - Mexico (6492533875).jpg"
+    ],
+    "dakar": [
+      "Dakar vue de haut 04.jpg"
+    ],
+    "brisbane": [
+      "Intellagama lesueurii lesueurii , Eastern Water Dragon, Brisbane.jpg"
+    ]
+  });
+  function acceptedPhotoV92(id,item){return !(rejectedPhotoV92[id]||[]).some(f=>f.toLowerCase()===item.file.toLowerCase());}
   const rejectedPhotoV91=Object.freeze({
   "country-md": [
     "Romania Mănăstirea Sfântul Mina din Roșiori View of Moldova River.jpg",
@@ -4077,8 +4222,8 @@
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
-    return [...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
-      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo))
+    return [...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
+      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
