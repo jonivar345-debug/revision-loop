@@ -28,6 +28,7 @@ jobs:
           node tests/gap-practice-regression.cjs
           node tests/mechanics-focus-v39.cjs
           node tests/chemistry-organic-v42.cjs
+          node tests/chemistry-atomic-v43.cjs
           node tests/adversarial-marking-regression.cjs
           node tests/world-economy-integrity.cjs
           node tests/world-editorial-integrity.cjs
