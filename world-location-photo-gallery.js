@@ -253,9 +253,11 @@
     el.replaceChildren();
     const loading=doc.createElement('span');loading.className='destination-photo-status';
     loading.textContent='Loading photographs…';el.append(loading);
-    const current=photosFor(location,{limit:card?1:MAX_PHOTOS,media});
+    const pref=card&&typeof window!=='undefined' ? window.RevisionWorldShopCoverPriorities?.get(location.id) : null;
+    const current=photosFor(location,{limit:pref?MAX_PHOTOS:card?1:MAX_PHOTOS,media});
     return current.then(photos=>{
       if(!el.isConnected||el.dataset.galleryVersion!==version)return photos;
+      if(card&&pref){const choice=photos[pref.slot-1];photos=[choice?.localCoverUrl&&choice.file==='File:'+pref.file?choice:photos[0]].filter(Boolean)}
       el.replaceChildren();
       if(!photos.length){
         const msg=doc.createElement('span');msg.className='destination-photo-status';

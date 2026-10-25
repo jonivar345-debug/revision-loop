@@ -18,11 +18,13 @@ PHOTO_RECORDS=json.loads((ASSETS/'ATTRIBUTION.json').read_text(encoding='utf-8')
 GROUPS=defaultdict(list)
 for photo in PHOTO_RECORDS:
     GROUPS[photo['destination']].append(photo)
-AUDIT=json.loads((ROOT/'editorial/world-local-photo-audit-v110.json').read_text(encoding='utf-8'))
-NEW_IDS=set(json.loads((ROOT/'editorial/world-v110-batch-targets.json').read_text(encoding='utf-8'))['targets'])
+AUDIT=json.loads((ROOT/'editorial/world-local-photo-audit-v111.json').read_text(encoding='utf-8'))
+NEW_IDS=set(json.loads((ROOT/'editorial/world-v111-batch-targets.json').read_text(encoding='utf-8'))['targets'])
+V110_IDS=set(json.loads((ROOT/'editorial/world-v110-batch-targets.json').read_text(encoding='utf-8'))['targets'])
 OLD_IDS=set(json.loads((ROOT/'editorial/world-v109-batch-targets.json').read_text(encoding='utf-8'))['targets'])-{'ocean-arctic'}
 DUPLICATES={p['id'] for p in AUDIT.get('suspectedVisualDuplicates',[])}
 STRETCHED={p['id'] for p in AUDIT.get('extremeAspectRatioCandidates',[])}
+COVER_PICKS=json.loads((ROOT/'editorial/world-v111-cover-priorities.json').read_text(encoding='utf-8'))['shopCoverSelections']
 def dimensions(relative):
     with Image.open(ROOT/relative) as img:
         img.load()
@@ -53,16 +55,26 @@ for id,records in sorted(GROUPS.items()):
             'licenseUrl':p['licenseUrl'],
             'sourcePage':p['sourcePage']
         })
+    chosen=COVER_PICKS.get(id)
+    selected_slot=1
+    if chosen:
+        slot=chosen['slot']
+        if 1<=slot<=len(reviews) and reviews[slot-1]['originalFile']==chosen['file']:
+            selected_slot=slot
+        else:
+            raise ValueError('Shop cover priority no longer matches source image: '+id)
+    chosen_cover=reviews[selected_slot-1]
     reasons=[]
     if len(reviews)!=4:reasons.append('incomplete-four-photo-gallery')
-    if reviews[0]['cropRetained']<0.67:reasons.append('lead-cover-aggressive-centre-crop')
+    if chosen_cover['cropRetained']<0.67:reasons.append('lead-cover-aggressive-centre-crop')
     if id in DUPLICATES:reasons.append('possible-similar-views')
     if id in STRETCHED:reasons.append('extreme-aspect-gallery-image')
-    destinations.append({'id':id,'newInV109':id in OLD_IDS,'newInV110':id in NEW_IDS,'lead':reviews[0]['originalFile'],
+    destinations.append({'id':id,'newInV109':id in OLD_IDS,'newInV110':id in V110_IDS,'newInV111':id in NEW_IDS,'lead':reviews[0]['originalFile'],
+                         'shopCoverSlot':selected_slot,'shopCoverCropRetained':chosen_cover['cropRetained'],
                          'reasons':reasons,'reviewStatus':'needs-human-visual-approval',
                          'images':reviews})
 result={
-    'release':'v110',
+    'release':'v111',
     'description':'Real locally hosted gallery and shop-cover image index. Nothing in this audit implies individual human pixel approval.',
     'galleryCount':len(destinations),
     'photoCount':len(PHOTO_RECORDS),
