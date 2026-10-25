@@ -60,6 +60,12 @@ async function download(filename,width,destination,preferred){
 }
 async function main(){
   const output={};const attribution=[];let totalBytes=0;
+  // Preserve optimization provenance for assets already present in the archive.
+  // Do not clear size-budget status when a later batch revalidates the source.
+  let pastAttribution=[];
+  try{pastAttribution=JSON.parse(await fsp.readFile(path.join(base,'ATTRIBUTION.json'),'utf8'))}catch{}
+  const pastBySource=new Map(pastAttribution.map(p=>[p.destination+'|'+p.originalFile,p]));
+
   // On later batches, reuse downloaded JPEG bytes after checking their signatures.
   // Current Commons author, licence and dimensions are always revalidated.
   async function savedJpeg(name){
@@ -103,6 +109,7 @@ async function main(){
         licenseUrl:entry.licenseUrl,sourcePage:entry.filePage,
         originalUrl:info.url,originalWidth:info.width,originalHeight:info.height,
         displayedGallery:result.url,displayedCover:result.localCoverUrl,
+        newSizeBudgeted:!!pastBySource.get(id+'|'+name)?.newSizeBudgeted,
         changes:'Display-sized Commons derivative converted to WebP for local hosting; no upscaling',
         galleryBytes:gallerySize,coverBytes:coverSize});
       process.stdout.write(id+' '+(i+1)+'/'+names.length+': '+name+'\n');
