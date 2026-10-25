@@ -6,6 +6,11 @@
  */
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const discovered=require('../world-photo-discovery-data.js');
+const enrichment=require('../world-photo-enrichment-v85.js');
+// The browser supplies these registries via window globals. Replicate the
+// complete runtime registry in Node; otherwise ~75% of eligible photos vanish.
+global.window={RevisionWorldDiscoveryPhotos:discovered,RevisionWorldPhotoEnrichment:enrichment};
 const catalogue=require('../world-curated-photos.js');
 const targetPath=path.resolve(__dirname,'../editorial/world-local-photo-pilot.json');
 // IDs from the site's existing World destination catalog. Previously prioritized
@@ -22,7 +27,7 @@ const manifest=JSON.parse(fs.readFileSync(targetPath,'utf8'));
 const selected=[];const skipped=[];
 const valid=p=>p&&typeof p.file==='string'&&/\.(?:jpe?g)$/i.test(p.file)&&
  typeof p.author==='string'&&p.author.trim()&&
- /^CC (?:BY|BY-SA|0)/i.test(p.license||'')&&
+ /^(?:CC (?:BY|BY-SA)|CC0)/i.test(p.license||'')&&
  p.licenseUrl&&p.filePage?.startsWith('https://commons.wikimedia.org/wiki/File:');
 for(const id of targets){
   if(manifest.locations[id])continue;
@@ -39,7 +44,7 @@ for(const id of targets){
 }
 // This threshold ensures we don't silently pretend a batch succeeded.
 console.log('Selection candidates: '+selected.length+'; skipped: '+JSON.stringify(skipped));
-assert(selected.length>=8,'Not enough source-backed complete galleries for this World batch');
+assert(selected.length>=20,'Not enough source-backed complete galleries for this World batch');
 manifest.description='World v103: local-first curated photo expansion, prioritizing 4 distinct subject-matched photographs per destination; preserve artist, Commons page and licence, with an ongoing visual audit.';
 manifest.quality='Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.';
 fs.writeFileSync(targetPath,JSON.stringify(manifest,null,2)+'\n');
