@@ -1,8 +1,8 @@
-name: Build World v112 quality-gated photos and full-archive review index
+name: Build World v113 quality-gated photos and full-archive review index
 
 on:
   push:
-    branches: [feature/world-v112-source-checked-photos]
+    branches: [feature/world-v113-complete-partial-galleries]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -22,6 +22,9 @@ on:
       - 'editorial/world-v110-batch-targets.json'
       - 'editorial/world-v111-batch-targets.json'
       - 'editorial/world-v112-batch-targets.json'
+      - 'editorial/world-v113-batch-targets.json'
+      - 'tests/world-v113-sources.cjs'
+      - 'tests/world-v113-archive.cjs'
       - 'tests/world-v112-sources.cjs'
       - 'tests/world-v112-archive.cjs'
       - 'editorial/world-v111-cover-priorities.json'
@@ -87,6 +90,8 @@ jobs:
         run: node tests/world-v111-sources.cjs
       - name: Validate 18 new v112 source sets
         run: node tests/world-v112-sources.cjs
+      - name: Check source metadata for three gallery completions
+        run: node tests/world-v113-sources.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
@@ -113,10 +118,16 @@ jobs:
         run: |
           sed -e 's/v110/v111/g' -e 's/V110/V111/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v111-contact-sheet.py
           python scripts/_world-v111-contact-sheet.py
+      - name: Verify all three partial galleries are complete and old photos protected
+        run: node tests/world-v113-archive.cjs
       - name: Generate v112 source-by-source contact sheet
         run: |
           sed -e 's/v110/v112/g' -e 's/V110/V112/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v112-contact-sheet.py
           python scripts/_world-v112-contact-sheet.py
+      - name: Generate v113 source-by-source contact sheet
+        run: |
+          sed -e 's/v110/v113/g' -e 's/V110/V113/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v113-contact-sheet.py
+          python scripts/_world-v113-contact-sheet.py
       - name: Create whole-archive local photo review index
         run: python scripts/build-world-local-review-index.py
       - name: Check all local photos are browseable in review page
@@ -127,7 +138,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v112.json editorial/world-v112-visual-review.json editorial/reviews/world-v112-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v113.json editorial/world-v113-visual-review.json editorial/reviews/world-v113-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else
