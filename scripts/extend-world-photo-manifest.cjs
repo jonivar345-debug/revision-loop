@@ -44,7 +44,7 @@ for(const id of targets){
 }
 // This threshold ensures we don't silently pretend a batch succeeded.
 console.log('Selection candidates: '+selected.length+'; skipped: '+JSON.stringify(skipped));
-assert(selected.length>=20,'Not enough source-backed complete galleries for this World batch');
+assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length>=20,'Not enough source-backed complete galleries for this World batch');
 manifest.description='World v103: local-first curated photo expansion, prioritizing 4 distinct subject-matched photographs per destination; preserve artist, Commons page and licence, with an ongoing visual audit.';
 manifest.quality='Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.';
 fs.writeFileSync(targetPath,JSON.stringify(manifest,null,2)+'\n');
