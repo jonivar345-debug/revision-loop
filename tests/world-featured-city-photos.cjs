@@ -49,8 +49,8 @@ for(const [city,subjects] of Object.entries(list)){
 }
 const html=fs.readFileSync(path.join(base,'index.html'),'utf8');
 const worker=fs.readFileSync(path.join(base,'sw.js'),'utf8');
-assert(html.includes('world-curated-photos.js?v=97'),'Latest photo selection script must bypass stale URL caches');
-assert(worker.includes('revision-loop-v97-place-photos'),'Offline shell version must be advanced');
+assert(html.includes('world-curated-photos.js?v=99'),'Latest photo selection script must bypass stale URL caches');
+assert(worker.includes('revision-loop-v99-country-photo-variety'),'Offline shell version must be advanced');
 const fakeMedia={
  verifyNamedFiles:async proposals=>proposals.map((p,i)=>({
   ...p,url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/example-'+i+'.jpg/2048px-example.jpg',

@@ -4048,6 +4048,135 @@
   // World v97: close user-reported gallery quality gaps without altering
   // location IDs, purchased collections or stored XP and points. Metadata
   // approval is NOT a claim of per-pixel visual acceptance.
+  // World v99: remedy specific country photo variety errors while preserving
+  // source licences, old purchased country IDs and the four-photo gallery.
+  const priorityPhotoV99=Object.freeze({
+    "country-bz": [
+      {
+        "file": "Belize Blue Hole.jpg",
+        "author": "The TerraMar Project",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Aerial photograph of Belize Great Blue Hole and Lighthouse Reef",
+        "width": 4992,
+        "height": 3328,
+        "qualityPriority": 1000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      },
+      {
+        "file": "Cockscomb Basin waterfall.jpg",
+        "author": "Kaldari",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "Cockscomb Basin waterfall in tropical rainforest, Belize",
+        "width": 2400,
+        "height": 3600,
+        "qualityPriority": 900,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      }
+    ],
+    "country-al": [
+      {
+        "file": "Thethi landscape.jpg",
+        "author": "Rrozafa",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Theth valley and Albanian Alps scenery",
+        "width": 4608,
+        "height": 3456,
+        "qualityPriority": 1000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      }
+    ],
+    "country-kz": [
+      {
+        "file": "ПОЮЩИЙ БАРХАН.jpg",
+        "author": "RS128",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Singing Dune of Altyn-Emel National Park, Kazakhstan",
+        "width": 3000,
+        "height": 2021,
+        "qualityPriority": 1000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      }
+    ],
+    "country-iq": [
+      {
+        "file": "View of Erbil skyline from the Citadel in the Kurdistan Region of Iraq 01.jpg",
+        "author": "Levi Clancy",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Erbil city skyline from the ancient Citadel",
+        "width": 6016,
+        "height": 4000,
+        "qualityPriority": 1000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      },
+      {
+        "file": "Samrraa 01.jpg",
+        "author": "Fakhri Mahmood",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Spiral Minaret of the Great Mosque of Samarra in Iraq",
+        "width": 3479,
+        "height": 5219,
+        "qualityPriority": 900,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      }
+    ],
+    "country-sz": [
+      {
+        "file": "Mlilwane Wildlife Sanctuary in Eswatini 01.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Landscape in Mlilwane Wildlife Sanctuary Eswatini",
+        "qualityPriority": 1000,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      },
+      {
+        "file": "Mantenga Falls.jpg",
+        "author": "TheLizardQueen (Caitlin)",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Mantenga Falls in Eswatini",
+        "width": 2280,
+        "height": 3468,
+        "qualityPriority": 900,
+        "editorialMetadata": true,
+        "reviewStatus": "Commons exact file, location, creator, licence and resolution checked 2026-10-25; final original pixels and site crop still require visual approval"
+      }
+    ]
+  });
+  const rejectedPhotoV99=Object.freeze({
+    "country-bz": [
+      "Great Blue Hole Belize.jpg",
+      "Hirtella racemosa Mountain Pine Ridge Belize.jpg",
+      "St Johns Cathedral Belize City DB2015 1.jpg"
+    ],
+    "country-al": [
+      "Butrint theatre.jpg"
+    ],
+    "country-kz": [
+      "Charyn canyon.jpg"
+    ],
+    "country-iq": [
+      "View of the Erbil skyline from the Cristal Hotel in Erbil.jpg"
+    ],
+    "country-sz": [
+      "ESwatini Road Sunrise with road works.jpg"
+    ]
+  });
+  function acceptedPhotoV99(id,item){return !(rejectedPhotoV99[id]||[]).some(f=>f.toLowerCase()===item.file.toLowerCase());}
+
   const priorityPhotoV97=Object.freeze({
     "tbilisi": [
       {
@@ -4732,8 +4861,8 @@
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
-    return [...(priorityPhotoV97[id]||[]),...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
-      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo)&&acceptedPhotoV97(id,photo))
+    return [...(priorityPhotoV99[id]||[]),...(priorityPhotoV97[id]||[]),...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
+      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo)&&acceptedPhotoV97(id,photo)&&acceptedPhotoV99(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
