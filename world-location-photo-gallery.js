@@ -115,6 +115,12 @@
     const store=typeof window!=='undefined'?window.RevisionWorldCuratedPhotos:null;
     return store?.get(location.id)||[];
   }
+  // First-party photographs are already archived with verified source rights;
+  // do not make them wait for a live Commons API request.
+  function local(location){
+    const store=typeof window!=='undefined'?window.RevisionWorldLocalPhotos:null;
+    return store?.get(location.id)||[];
+  }
   function imageScore(item,location){
     const name=uniqueName(item.file+' '+(item.description||''));
     const main=uniqueName(properName(location));
@@ -140,6 +146,8 @@
       collected.push(item);
     }
     const suggested=curated(location);
+    for(const image of local(location))add(image);
+    if(collected.length>=target)return collected.slice(0,target);
     // Only the London/Busan gallery has pixel-reviewed selections. Records
     // from the editorial archives require a CURRENT Commons licence check;
     // metadata copied from a previous file page is not enough.
@@ -210,6 +218,7 @@
   // rather than loading the 2048px gallery rendition for every shop card.
   // The original-resolution file remains linked in photo credits.
   function coverSizedUrl(photo){
+    if(photo.localCoverUrl)return photo.localCoverUrl;
     if(!String(photo.filePage||'').startsWith('https://commons.wikimedia.org/wiki/File:'))return photo.url;
     const filename=String(photo.file||'').replace(/^File:/i,'').replace(/ /g,'_');
     return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(filename)+'?width=960';
@@ -273,7 +282,7 @@
             const link=doc.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';
             link.textContent=label;li.append(link,doc.createTextNode(' · '));
           }
-          li.append(doc.createTextNode('Display-sized derivative; original retained at source.'));
+          li.append(doc.createTextNode(p.localCoverUrl?'Locally hosted display-sized copy; original retained at source.':'Display-sized derivative; original retained at source.'));
         }
         function display(p){
           active=p;stage=0;

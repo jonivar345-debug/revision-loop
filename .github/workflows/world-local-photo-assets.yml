@@ -1,0 +1,40 @@
+name: Build locally hosted World photo pilot
+
+on:
+  push:
+    branches: [feature/local-world-photo-pilot-20261025]
+    paths:
+      - '.github/workflows/world-local-photo-assets.yml'
+      - 'editorial/world-local-photo-pilot.json'
+      - 'scripts/build-local-world-photos.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive-photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch licence-checked Commons derivatives into local asset directory
+        run: node scripts/build-local-world-photos.cjs
+      - name: Verify real JPEG files and source attributions
+        run: node tests/world-local-photos.cjs
+      - name: Publish the generated files to this development branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/world world-local-photos.js
+          if git diff --cached --quiet; then
+            echo 'Local photo files already up-to-date.'
+          else
+            git commit -m "Archive verified Commons World photographs as local assets"
+            git push
+          fi
