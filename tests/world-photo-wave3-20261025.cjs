@@ -10,7 +10,7 @@ global.window={
 const catalog=require('../world-curated-photos.js');
 const gallery=require('../world-location-photo-gallery.js');
 const tests=[
- {id:'cairns',name:'Cairns',hero:'AU-cairns-esplanade.jpg',reject:'Rock cairns on Kuikkapää in Urho Kekkonen national park, Sodankylä (July 2018).jpg'},
+ {id:'cairns',name:'Cairns',hero:'Esplanade Lagoon, Cairns, 2025, 12.jpg',reject:'Rock cairns on Kuikkapää in Urho Kekkonen national park, Sodankylä (July 2018).jpg'},
  {id:'losangeles',name:'Los Angeles',hero:'Skyline from Griffith Observatory.jpg',reject:'Ceiling at the entrance to Saint Vincent de Paul Roman Catholic Church, Los Angeles, California, US.jpg'},
  {id:'quebec',name:'Québec City',hero:'Chateau Frontenac seen from the ramparts of Quebec City.jpg',reject:'Glass office building on Avenue Honoré-Mercier, Quebec City.jpg'},
  {id:'dublin',name:'Dublin',hero:"Ha'penny Bridge, Dublin, at night.jpg",reject:"St Patrick's Cathedral Nave 3, Dublin, Ireland - Diliff.jpg"},
