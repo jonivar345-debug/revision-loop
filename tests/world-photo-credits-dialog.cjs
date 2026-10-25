@@ -1,0 +1,16 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const html=fs.readFileSync('index.html','utf8');
+const js=fs.readFileSync('world-photo-credits.js','utf8');
+const css=fs.readFileSync('styles.css','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+assert(html.includes('id="worldPhotoCreditsButton"'),'Single licence control is missing');
+assert(html.includes('id="worldPhotoCreditsDialog"'),'Central accessible credit panel is missing');
+assert(html.includes('world-photo-credits.js?v=101'),'Shared credit script is not loaded');
+assert(css.includes('.destination-photo-credits{display:none!important}'),'Old image badges remain visible');
+assert(js.includes('li.cloneNode(true)'),'Source metadata is not retained when credits are requested');
+assert(js.includes('commons.wikimedia.org/wiki/File:'),'Credits must link to original images');
+assert(js.includes('creativecommons.org/'),'Creative Commons licences need source links');
+assert(sw.includes("'./world-photo-credits.js'"),'Image credit viewer not cached');
+console.log('PASS single image licence panel; per-card credits hidden but accessible on request.');

@@ -132,6 +132,16 @@ try{
  });
  assert(allPinState>globeState.pinCount,'Show-all toggle should reveal accurate hidden markers');
  await page.locator('.tab[data-panel="shop"]').click();
+ await page.waitForFunction(()=>document.querySelectorAll('.destination-photo-credits li').length>0,null,{timeout:20000});
+ await page.locator('#worldPhotoCreditsButton').click();
+ assert.equal(await page.locator('#worldPhotoCreditsDialog').evaluate(node=>node.open),true,'Image licences dialog failed to open');
+ const displayedCredits=await page.locator('#worldPhotoCreditsList li').count();
+ assert(displayedCredits>0,'Photo credits disappeared from the shared licence dialog');
+ const creditLinks=await page.locator('#worldPhotoCreditsList a').count();
+ assert(creditLinks>=2,'Shared panel must retain original and licence links');
+ await page.locator('#worldPhotoCreditsClose').click();
+ assert.equal(await page.locator('#worldPhotoCreditsDialog').evaluate(node=>node.open),false,'Image licences dialog failed to close');
+
  const wardrobeDom=await page.evaluate(()=>{
    const card=document.querySelector('#characterShop .character-card .character-art');
    const costumes=[...document.querySelectorAll('#outfitShop .outfit-card .character-art')];
