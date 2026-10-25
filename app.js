@@ -1,6 +1,6 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
-const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json'];
+const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json'];
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
 let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
@@ -2311,8 +2311,44 @@ function examSuggested(q,answer){
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
 
+function examGraphDiagram(spec){
+ if(!spec||!Array.isArray(spec.points)||spec.points.length<2)return '';
+ const {xMin,xMax,yMin,yMax}=spec;
+ if(![xMin,xMax,yMin,yMax].every(Number.isFinite)||xMax<=xMin||yMax<=yMin)return '';
+ if(spec.points.some(p=>!Array.isArray(p)||p.length!==2||!p.every(Number.isFinite)))return '';
+ const left=76,right=446,top=17,bottom=232,width=right-left,height=bottom-top;
+ const X=x=>left+(x-xMin)/(xMax-xMin)*width;
+ const Y=y=>bottom-(y-yMin)/(yMax-yMin)*height;
+ const fmt=x=>String(Number(x.toPrecision(5)));
+ const ticks=(min,max,step)=>{
+  if(!(step>0)||!Number.isFinite(step))return [];
+  const first=Math.ceil((min-1e-10)/step),last=Math.floor((max+1e-10)/step);
+  if(last-first>25)return [];
+  return Array.from({length:Math.max(0,last-first+1)},(_,i)=>Number(((first+i)*step).toPrecision(10)));
+ };
+ const escAttr=x=>esc(String(x||''));
+ let out='<svg viewBox="0 0 470 289" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+escAttr(spec.description||'Question graph')+'" style="max-width:100%;height:auto">';
+ for(const v of ticks(xMin,xMax,spec.xStep)){
+  const x=X(v).toFixed(2);
+  out+='<line x1="'+x+'" y1="'+top+'" x2="'+x+'" y2="'+bottom+'" stroke="currentColor" stroke-opacity=".13"/>';
+  out+='<text x="'+x+'" y="'+(bottom+16)+'" fill="currentColor" font-size="11" text-anchor="middle">'+escAttr(fmt(v))+'</text>';
+ }
+ for(const v of ticks(yMin,yMax,spec.yStep)){
+  const y=Y(v).toFixed(2);
+  out+='<line x1="'+left+'" y1="'+y+'" x2="'+right+'" y2="'+y+'" stroke="currentColor" stroke-opacity=".13"/>';
+  out+='<text x="'+(left-9)+'" y="'+(Number(y)+4)+'" fill="currentColor" font-size="11" text-anchor="end">'+escAttr(fmt(v))+'</text>';
+ }
+ const x0=xMin<=0&&xMax>=0?X(0):left,y0=yMin<=0&&yMax>=0?Y(0):bottom;
+ out+='<line x1="'+left+'" y1="'+y0+'" x2="'+right+'" y2="'+y0+'" stroke="currentColor" stroke-width="1.5"/>';
+ out+='<line x1="'+x0+'" y1="'+top+'" x2="'+x0+'" y2="'+bottom+'" stroke="currentColor" stroke-width="1.5"/>';
+ out+='<polyline points="'+spec.points.map(p=>X(p[0]).toFixed(2)+','+Y(p[1]).toFixed(2)).join(' ')+'" fill="none" stroke="#247cc7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+ out+=spec.points.filter((p,i,a)=>i===0||i===a.length-1||p[0]!==a[i-1][0]&&p[1]!==a[i-1][1]).map(p=>'<circle cx="'+X(p[0]).toFixed(2)+'" cy="'+Y(p[1]).toFixed(2)+'" r="3.2" fill="#247cc7"/>').join('');
+ out+='<text x="'+((left+right)/2)+'" y="269" fill="currentColor" text-anchor="middle" font-size="13">'+escAttr(spec.xLabel)+'</text>';
+ out+='<text transform="translate(16 '+((top+bottom)/2)+') rotate(-90)" fill="currentColor" text-anchor="middle" font-size="13">'+escAttr(spec.yLabel)+'</text>';
+ return out+'</svg>';
+}
 function renderExam(q){
- const prev=profile.examResults[q.id]?.last,diag=q.visual?diagram(q.visual):'',secondary=q.verificationLevel==='secondary-indexed',original=q.verificationLevel==='original-exam-style'||q.year==='Practice';
+ const prev=profile.examResults[q.id]?.last,diag=q.graphSpec?examGraphDiagram(q.graphSpec):(q.visual?diagram(q.visual):''),secondary=q.verificationLevel==='secondary-indexed',original=q.verificationLevel==='original-exam-style'||q.year==='Practice';
  const markStatusNote=original?'':q.originalMarkVerified?
   '<div class="copyright-note">Original mark total checked against the published AQA mark scheme.'+(q.answerType==='levels'?' This is a level-of-response question: the suggested checklist breakdown is not AQA\'s official point-by-point allocation. Review the overall explanation and level before accepting marks.':'')+'</div>':
   '<div class="copyright-note">The stated mark total is held in the question bank; its exact allocation has not yet been independently checked against the original AQA mark scheme. Use the linked scheme to verify it.</div>';
