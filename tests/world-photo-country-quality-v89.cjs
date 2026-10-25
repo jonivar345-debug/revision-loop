@@ -64,7 +64,7 @@ assert.equal(added,10);
 const html=fs.readFileSync(path.join(dir,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(dir,'sw.js'),'utf8');
 for(const part of ['world-photo-discovery-data.js?v=91','world-photo-enrichment-v85.js?v=91','world-curated-photos.js?v=109'])assert(html.includes(part),'Browser must use latest photo registry: '+part);
-assert(sw.includes('revision-loop-v111-local-world-photos-cover-quality'),'New image sources require new service-worker cache');
+assert(sw.includes('revision-loop-v112-local-world-photos-library-expansion'),'New image sources require new service-worker cache');
 (async()=>{
  const fakeMedia={verifyNamedFiles:async photos=>photos,searchPage:async()=>[],searchArticleImages:async()=>[],searchNearby:async()=>[],search:async()=>[],verifyApproved:async()=>null};
  for(const id of Object.keys(changes)){

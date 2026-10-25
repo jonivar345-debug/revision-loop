@@ -41,7 +41,7 @@ footer{font-size:.8rem;color:#697888;margin-top:16px}
 <main>
 <section class="controls" aria-label="Photo review controls">
 <label>Search destination or photograph<input id="search" type="search" placeholder="e.g. Iceland or Venice"></label>
-<label>Filter<select id="filter"><option value="all">All locally hosted destinations</option><option value="flagged">Automated review flags</option><option value="new111">New in v111</option><option value="new110">New in v110</option><option value="new">New in v109</option><option value="incomplete">Not yet four local photographs</option></select></label>
+<label>Filter<select id="filter"><option value="all">All locally hosted destinations</option><option value="flagged">Automated review flags</option><option value="new112">New in v112</option><option value="new111">New in v111</option><option value="new110">New in v110</option><option value="new">New in v109</option><option value="incomplete">Not yet four local photographs</option></select></label>
 <label>View<select id="view"><option value="cover">Shop-card crops (16:9)</option><option value="full">Full gallery photographs</option></select></label>
 <label>Order<select id="sort"><option value="priority">Flagged first</option><option value="alpha">Destination A to Z</option></select></label>
 </section>
@@ -68,7 +68,7 @@ function sourceLink(p){
 function makeCard(item){
  const card=elem('article','card');
  const heading=elem('header');heading.append(elem('h2','',item.id));
- const info=elem('span','meta',item.images.length+'/4 local · '+(item.newInV111?'v111 new':item.newInV110?'v110 new':item.newInV109?'v109 new':'existing'));
+ const info=elem('span','meta',item.images.length+'/4 local · '+(item.newInV112?'v112 new':item.newInV111?'v111 new':item.newInV110?'v110 new':item.newInV109?'v109 new':'existing'));
  heading.append(info);card.append(heading);
  if(item.reasons.length)card.append(elem('p','flags','Check: '+item.reasons.join(', ').replaceAll('-',' ')));
  const grid=elem('div','photos');
@@ -105,6 +105,7 @@ function compute(){
   if(filter==='new'&&!x.newInV109)return false;
   if(filter==='new110'&&!x.newInV110)return false;
   if(filter==='new111'&&!x.newInV111)return false;
+  if(filter==='new112'&&!x.newInV112)return false;
   if(filter==='flagged'&&!x.reasons.length)return false;
   if(filter==='incomplete'&&x.images.length===4)return false;
   return !query||x.id.toLowerCase().includes(query)||x.images.some(p=>p.originalFile.toLowerCase().includes(query));
