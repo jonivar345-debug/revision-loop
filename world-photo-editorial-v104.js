@@ -1,4 +1,4 @@
-/* V104 place-specific landmark replacements. Source records are not final visual acceptance. */
+/* V104/V105 place-specific editorial sources. Source records are not final pixel-level visual approval. */
 (function(root){'use strict';const data={
   "adelaide": [
     {
