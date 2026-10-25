@@ -1,8 +1,8 @@
-name: Build locally hosted World v107 verified destination expansion
+name: Build locally hosted World v108 six-gallery repairs and photo review
 
 on:
   push:
-    branches: [feature/world-v107-place-verified-country-expansion]
+    branches: [feature/world-v108-six-galleries-photo-review]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -14,6 +14,10 @@ on:
       - 'tests/world-v105-editorial.cjs'
       - 'tests/world-v106-editorial.cjs'
       - 'editorial/world-v107-batch-targets.json'
+      - 'editorial/world-v108-batch-targets.json'
+      - 'scripts/build-world-v108-contact-sheet.py'
+      - 'tests/world-v108-sources.cjs'
+      - 'tests/world-v108-local.cjs'
       - 'tests/world-v107-sources.cjs'
       - 'tests/world-v107-archive.cjs'
   workflow_dispatch:
@@ -45,6 +49,8 @@ jobs:
         run: node tests/world-v106-editorial.cjs
       - name: Check fixed gallery selections and cross-place photo exclusions
         run: node tests/world-v107-sources.cjs
+      - name: Check 14 locked source selections and six corrected galleries
+        run: node tests/world-v108-sources.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
@@ -55,11 +61,15 @@ jobs:
         run: node tests/world-local-photos.cjs
       - name: Verify 20-place source shortlist against resulting local asset archive
         run: node tests/world-v107-archive.cjs
+      - name: Validate actual 14-gallery files and six mandatory repairs
+        run: node tests/world-v108-local.cjs
+      - name: Generate real gallery and shop-cover crop contact sheet
+        run: python scripts/build-world-v108-contact-sheet.py
       - name: Publish the generated files to this development branch only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v107.json
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v108.json editorial/world-v108-visual-review.json editorial/reviews/world-v108-cover-contact-sheet.jpg
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else
