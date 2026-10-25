@@ -42,7 +42,7 @@ assert.equal(complete,376,'Preserve 376 complete four-photo galleries');
 assert.equal(approved,12);
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
-for(const source of ['world-curated-photos.js','world-location-photo-gallery.js'])assert(html.includes(source+'?v='+(source==='world-curated-photos.js'?'104':'101')));
+for(const source of ['world-curated-photos.js','world-location-photo-gallery.js'])assert(html.includes(source+'?v='+(source==='world-curated-photos.js'?'105':'101')));
 assert(sw.includes('revision-loop-v105-manila-and-local-gallery-expansion'));
 (async()=>{
  const media={verifyNamedFiles:async photos=>photos};
