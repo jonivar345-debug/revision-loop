@@ -33,7 +33,7 @@ for(const country of countries.entries)assert(ids.has(country.gatewayId),'Countr
 for(const ocean of oceans.records)assert(ids.has(ocean.id),'Ocean missing globe pin '+ocean.id);
 for(const sea of seas)assert(ids.has(sea.id),'Sea missing globe pin '+sea.id);
 assert.equal(new Set([...baseline.locations,...ids]).size,379);
-const legacyPricing=app.indexOf("LOCATIONS.forEach((l,i)=>{");
+const legacyPricing=app.indexOf("LOCATIONS.forEach(l=>{");
 const appended=app.indexOf("LOCATIONS.push({...destination})");
 assert(legacyPricing>=0&&appended>legacyPricing,'New entries must be appended after all historical price assignments');
 assert(index.indexOf('world-geographic-destinations.js')<index.indexOf('app.js?v='),'Pin data must load before app.js');
