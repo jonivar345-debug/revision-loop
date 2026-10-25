@@ -34,6 +34,7 @@ jobs:
           node tests/world-commons-media.cjs
           node tests/world-location-photo-gallery.cjs
           node tests/world-photo-credits-dialog.cjs
+          node tests/world-city-offline-guides.cjs
           node tests/world-photo-coverage-20261024.cjs
           node tests/world-featured-city-photos.cjs
           node tests/world-photo-bulk-coverage.cjs
