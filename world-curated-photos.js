@@ -4188,6 +4188,148 @@
         "qualityPriority": 950,
         "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
       }
+    ],
+    "brisbane": [
+      {
+        "file": "Story Bridge, Brisbane City views, 2021, 04.jpg",
+        "author": "Kgbo",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Story Bridge with the Brisbane cityscape",
+        "width": 3934,
+        "height": 2950,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      },
+      {
+        "file": "South Bank Parkland.jpg",
+        "author": "misaochan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "South Bank Parklands greenery and night lighting in Brisbane",
+        "width": 4032,
+        "height": 3024,
+        "editorialMetadata": true,
+        "qualityPriority": 850,
+        "reviewStatus": "Exact place, original resolution, Commons file author and CC BY-SA 4.0 checked on 2026-10-25; not manually pixel-approved"
+      }
+    ],
+    "quebec": [
+      {
+        "file": "Chateau Frontenac seen from the ramparts of Quebec City.jpg",
+        "author": "Wilfredor",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "subject": "Château Frontenac in historic Quebec City",
+        "width": 8256,
+        "height": 5504,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      },
+      {
+        "file": "Petit-Champlain - Quebec City.jpg",
+        "author": "AK-Bino",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic Rue Petit-Champlain in old Québec City",
+        "width": 4608,
+        "height": 3456,
+        "editorialMetadata": true,
+        "qualityPriority": 850,
+        "reviewStatus": "Exact place, original resolution, Commons file author and CC BY-SA 4.0 checked on 2026-10-25; not manually pixel-approved"
+      }
+    ],
+    "dublin": [
+      {
+        "file": "Ha'penny Bridge, Dublin, at night.jpg",
+        "author": "Bob Collowan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Ha'penny Bridge and River Liffey in Dublin",
+        "width": 3876,
+        "height": 2532,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      },
+      {
+        "file": "Dublin City Temple Bar.jpg",
+        "author": "Oliver Gargan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Dublin Temple Bar Square and street market",
+        "width": 5701,
+        "height": 3801,
+        "editorialMetadata": true,
+        "qualityPriority": 850,
+        "reviewStatus": "Exact place, original resolution, Commons file author and CC BY-SA 4.0 checked on 2026-10-25; not manually pixel-approved"
+      }
+    ],
+    "tunis": [
+      {
+        "file": "La medina, Tunis, Tunisia.JPG",
+        "author": "Fares Rjeibi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic medina souk in Tunis",
+        "width": 4000,
+        "height": 2840,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      },
+      {
+        "file": "Panorama - Medina de Tunis.jpg",
+        "author": "Clement Arbib",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Panorama of historic Tunis medina skyline and mosques",
+        "width": 4088,
+        "height": 1699,
+        "editorialMetadata": true,
+        "qualityPriority": 850,
+        "reviewStatus": "Exact place, original resolution, Commons file author and CC BY-SA 4.0 checked on 2026-10-25; not manually pixel-approved"
+      }
+    ],
+    "losangeles": [
+      {
+        "file": "Skyline from Griffith Observatory.jpg",
+        "author": "Dancorona21",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Los Angeles skyline and Griffith Observatory at night",
+        "width": 5182,
+        "height": 3456,
+        "editorialMetadata": true,
+        "qualityPriority": 900,
+        "reviewStatus": "Exact Commons file page, author, original resolution and CC licence checked on 2026-10-25. Not claimed to be pixel-reviewed. Runtime verifies current licence."
+      },
+      {
+        "file": "Santa Monica - Pier beach.jpg",
+        "author": "Oshotoxx",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Santa Monica beach and pier in Los Angeles",
+        "width": 3072,
+        "height": 1728,
+        "editorialMetadata": true,
+        "qualityPriority": 850,
+        "reviewStatus": "Exact place, original resolution, Commons file author and CC BY-SA 4.0 checked on 2026-10-25; not manually pixel-approved"
+      },
+      {
+        "file": "Griffith Observatory, Los Angeles.png",
+        "author": "Srishti Sethi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Griffith Observatory building in Los Angeles",
+        "width": 2890,
+        "height": 2165,
+        "editorialMetadata": true,
+        "qualityPriority": 850,
+        "reviewStatus": "Exact place, original resolution, Commons file author and CC BY-SA 4.0 checked on 2026-10-25; not manually pixel-approved"
+      }
     ]
   });
   const rejectedPhotoV97=Object.freeze({
