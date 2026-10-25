@@ -14,7 +14,7 @@ assert.equal(bank.questions.length,9);
 assert.equal(bank.questions.reduce((sum,q)=>sum+q.marks,0),63);
 assert(app.includes("'./amount_of_substance_focus_v44.json'"));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
-const p1=app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule(')));
+const p1=app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('));
 const p2=app.slice(app.indexOf('function evidenceRuleScore('),app.indexOf('function renderExam(',app.indexOf('function evidenceRuleScore(')));
 const score=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+p1+p2+'return examSuggested')();
 for(const q of bank.questions){
