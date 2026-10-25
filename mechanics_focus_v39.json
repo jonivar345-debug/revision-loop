@@ -1,0 +1,936 @@
+{
+  "schemaVersion": 1,
+  "notes": "Independently authored challenging AQA-style Year 1 Mechanics & Materials problems. Not official past-paper wording. Some graphs are represented by both exact plotted coordinates and an accessible SVG chart. Do not classify reading a solution as independent mastery.",
+  "questions": [
+    {
+      "id": "mechanics_v39_01",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "1",
+      "topic": "Motion graphs",
+      "subtopic": "Motion graphs",
+      "revisionTopic": "Motion graphs",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "A velocity–time graph has straight-line segments joining (time in s, velocity in m s⁻¹): (0, −6), (4, +10), (7, +10) and (12, −10). (a) Find the accelerations in the first and last segments. (b) Find both times when the object changes direction. (c) Calculate signed displacement and total distance for the 12 s. (d) Explain why the final segment includes both slowing down and speeding up.",
+      "markPoints": [
+        "In the first 4 s, gradient a=(10−(−6))/4=+4.0 m s⁻².",
+        "From 7 to 12 s, gradient a=(−10−10)/5=−4.0 m s⁻².",
+        "First zero-velocity crossing: −6+4t=0, hence t=1.5 s.",
+        "Second zero crossing: 10−4(t−7)=0, hence t=9.5 s.",
+        "Displacement in first section: ((−6+10)/2)×4=+8 m.",
+        "Displacement in middle section: 10×3=+30 m; final signed trapezium contributes 0 m, giving net +38 m.",
+        "Distance = ½(1.5)(6)+½(2.5)(10)+(3)(10)+½(2.5)(10)+½(2.5)(10)=72 m.",
+        "During final segment v>0 until 9.5 s and a<0 so speed falls; after reversal v<0 and a<0 so speed rises."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "In the first 4 s, gradient a=(10−(−6))/4=+4.0 m s⁻². From 7 to 12 s, gradient a=(−10−10)/5=−4.0 m s⁻². First zero-velocity crossing: −6+4t=0, hence t=1.5 s. Second zero crossing: 10−4(t−7)=0, hence t=9.5 s. Displacement in first section: ((−6+10)/2)×4=+8 m. Displacement in middle section: 10×3=+30 m; final signed trapezium contributes 0 m, giving net +38 m. Distance = ½(1.5)(6)+½(2.5)(10)+(3)(10)+½(2.5)(10)+½(2.5)(10)=72 m. During final segment v>0 until 9.5 s and a<0 so speed falls; after reversal v<0 and a<0 so speed rises.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_01",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "Time / s",
+        "yLabel": "Velocity / m s⁻¹",
+        "xMin": 0,
+        "xMax": 12,
+        "yMin": -12,
+        "yMax": 12,
+        "xStep": 2,
+        "yStep": 4,
+        "points": [
+          [
+            0,
+            -6
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            12,
+            -10
+          ]
+        ],
+        "description": "Velocity versus time; vertices (0,−6), (4,+10), (7,+10), (12,−10) joined by straight lines."
+      }
+    },
+    {
+      "id": "mechanics_v39_02",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "2",
+      "topic": "Motion graphs",
+      "subtopic": "Motion graphs",
+      "revisionTopic": "Motion graphs",
+      "courseTopic": "Mechanics & materials",
+      "marks": 6,
+      "prompt": "The displacement–time graph of a trolley consists of straight segments joining (time in s, displacement in m): (0, 0), (3, 12), (6, 12), (10, −4). (a) Determine its velocity in each segment. (b) Identify when it is stationary. (c) Find when it passes the original position on the last segment. (d) Calculate its displacement and total distance.",
+      "markPoints": [
+        "From 0 to 3 s, gradient = (12−0)/3 = +4.0 m s⁻¹.",
+        "From 3 to 6 s, gradient = 0, hence velocity is zero and the trolley is stationary.",
+        "From 6 to 10 s, gradient = (−4−12)/4 = −4.0 m s⁻¹.",
+        "On the final segment it moves 12 m back to the origin at 4.0 m s⁻¹, taking 3 s after t=6: t=9 s.",
+        "Total displacement = final position minus starting position = −4−0=−4 m.",
+        "Distance travelled = 12+0+16 = 28 m; signs must not be used to cancel distance."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "From 0 to 3 s, gradient = (12−0)/3 = +4.0 m s⁻¹. From 3 to 6 s, gradient = 0, hence velocity is zero and the trolley is stationary. From 6 to 10 s, gradient = (−4−12)/4 = −4.0 m s⁻¹. On the final segment it moves 12 m back to the origin at 4.0 m s⁻¹, taking 3 s after t=6: t=9 s. Total displacement = final position minus starting position = −4−0=−4 m. Distance travelled = 12+0+16 = 28 m; signs must not be used to cancel distance.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_02",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "Time / s",
+        "yLabel": "Displacement / m",
+        "xMin": 0,
+        "xMax": 10,
+        "yMin": -6,
+        "yMax": 14,
+        "xStep": 2,
+        "yStep": 4,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            10,
+            -4
+          ]
+        ],
+        "description": "Displacement versus time; vertices (0,0),(3,12),(6,12),(10,−4) joined by straight lines."
+      }
+    },
+    {
+      "id": "mechanics_v39_03",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "3",
+      "topic": "Motion graphs",
+      "subtopic": "Motion graphs",
+      "revisionTopic": "Motion graphs",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "A body has initial velocity −3.0 m s⁻¹. Its acceleration–time graph shows +2.0 m s⁻² from 0 to 3 s, −1.0 m s⁻² from 3 to 7 s, and +3.0 m s⁻² from 7 to 9 s. (a) Calculate the change in velocity in each interval. (b) Find the velocity at 3, 7 and 9 s. (c) Determine every time the object reverses direction.",
+      "markPoints": [
+        "+2.0×3=+6.0 m s⁻¹ for 0–3 s.",
+        "−1.0×4=−4.0 m s⁻¹ for 3–7 s.",
+        "+3.0×2=+6.0 m s⁻¹ for 7–9 s.",
+        "Starting at −3.0, velocity at 3 s is −3+6=+3.0 m s⁻¹.",
+        "At 7 s, v=+3−4=−1.0 m s⁻¹; at 9 s v=−1+6=+5.0 m s⁻¹.",
+        "First reversal at t=1.5 s, since −3+2t=0.",
+        "Second reversal at t=6.0 s, since +3−1(t−3)=0.",
+        "Third reversal at t=7+1/3≈7.33 s, since −1+3(t−7)=0."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "+2.0×3=+6.0 m s⁻¹ for 0–3 s. −1.0×4=−4.0 m s⁻¹ for 3–7 s. +3.0×2=+6.0 m s⁻¹ for 7–9 s. Starting at −3.0, velocity at 3 s is −3+6=+3.0 m s⁻¹. At 7 s, v=+3−4=−1.0 m s⁻¹; at 9 s v=−1+6=+5.0 m s⁻¹. First reversal at t=1.5 s, since −3+2t=0. Second reversal at t=6.0 s, since +3−1(t−3)=0. Third reversal at t=7+1/3≈7.33 s, since −1+3(t−7)=0.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_03",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "Time / s",
+        "yLabel": "Acceleration / m s⁻²",
+        "xMin": 0,
+        "xMax": 9,
+        "yMin": -2,
+        "yMax": 4,
+        "xStep": 1,
+        "yStep": 1,
+        "points": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            -1
+          ],
+          [
+            7,
+            -1
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ]
+        ],
+        "description": "Acceleration: +2 from 0 to 3 s, −1 from 3 to 7 s, +3 from 7 to 9 s; vertical jumps at 3 and 7 s."
+      }
+    },
+    {
+      "id": "mechanics_v39_04",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "4",
+      "topic": "Forces on a slope",
+      "subtopic": "Forces on a slope",
+      "revisionTopic": "Forces on a slope",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "An 8.0 kg crate is pulled UP a 25° slope by a 70 N force acting 20° above the surface of the slope. The coefficient of kinetic friction is 0.15. It is moving up the slope at 2.0 m s⁻¹ when the force starts. (a) Resolve the pull parallel and perpendicular to the surface. (b) Determine normal reaction and friction. (c) Find acceleration and displacement over the next 4.0 s. Use g=9.81 m s⁻².",
+      "markPoints": [
+        "The applied force component up the slope is 70cos20° = 65.8 N.",
+        "Its perpendicular outward component is 70sin20° = 23.9 N, reducing the reaction.",
+        "Normal reaction R=8(9.81)cos25°−70sin20°≈47.2 N.",
+        "Friction is μR=0.15×47.2≈7.08 N downhill because the crate moves uphill.",
+        "Downslope weight component is 8(9.81)sin25°≈33.2 N.",
+        "Net upslope force≈65.8−33.2−7.08≈25.5 N, so a≈25.5/8≈3.19 m s⁻².",
+        "Displacement s=ut+½at²=2×4+½×3.19×16≈33.5 m up the slope.",
+        "The normal reaction is not simply mgcos25°: part of the angled pull lifts the crate away from the surface."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The applied force component up the slope is 70cos20° = 65.8 N. Its perpendicular outward component is 70sin20° = 23.9 N, reducing the reaction. Normal reaction R=8(9.81)cos25°−70sin20°≈47.2 N. Friction is μR=0.15×47.2≈7.08 N downhill because the crate moves uphill. Downslope weight component is 8(9.81)sin25°≈33.2 N. Net upslope force≈65.8−33.2−7.08≈25.5 N, so a≈25.5/8≈3.19 m s⁻². Displacement s=ut+½at²=2×4+½×3.19×16≈33.5 m up the slope. The normal reaction is not simply mgcos25°: part of the angled pull lifts the crate away from the surface.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_04",
+      "groupOrder": 1,
+      "visual": "slope"
+    },
+    {
+      "id": "mechanics_v39_05",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "5",
+      "topic": "Resolving vectors",
+      "subtopic": "Resolving vectors",
+      "revisionTopic": "Resolving vectors",
+      "courseTopic": "Mechanics & materials",
+      "marks": 7,
+      "prompt": "A 3.0 kg object remains in contact with a horizontal surface. A force of 50 N acts up and to the right at 65° to the VERTICAL. A resistive horizontal force of 6.0 N acts left. (a) Resolve the applied force. (b) Calculate normal reaction. (c) Determine the object's horizontal acceleration. Use g=9.81 m s⁻².",
+      "markPoints": [
+        "The horizontal component is 50sin65°≈45.3 N to the right, because it is opposite the given angle.",
+        "The upward vertical component is 50cos65°≈21.1 N, adjacent to the angle.",
+        "Weight mg=3.0×9.81=29.43 N acts downwards.",
+        "Vertical equilibrium gives R=29.43−21.1≈8.30 N upwards.",
+        "Horizontal resultant force =45.3−6.0≈39.3 N to the right.",
+        "Acceleration a≈39.3/3.0=13.1 m s⁻² to the right.",
+        "R remains positive, consistent with the stated surface contact."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The horizontal component is 50sin65°≈45.3 N to the right, because it is opposite the given angle. The upward vertical component is 50cos65°≈21.1 N, adjacent to the angle. Weight mg=3.0×9.81=29.43 N acts downwards. Vertical equilibrium gives R=29.43−21.1≈8.30 N upwards. Horizontal resultant force =45.3−6.0≈39.3 N to the right. Acceleration a≈39.3/3.0=13.1 m s⁻² to the right. R remains positive, consistent with the stated surface contact.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_05",
+      "groupOrder": 1,
+      "visual": "resolve"
+    },
+    {
+      "id": "mechanics_v39_06",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "6",
+      "topic": "Projectiles",
+      "subtopic": "Projectiles",
+      "revisionTopic": "Projectiles",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "A ball is launched at 20.0 m s⁻¹ at 35° above the horizontal from the top of a vertical cliff 18.0 m high. Ignore air resistance; g=9.81 m s⁻². (a) Calculate initial horizontal and vertical velocity. (b) Solve for the flight time to ground level. (c) Calculate horizontal range from the foot of the cliff. (d) Find the speed and direction just before impact.",
+      "markPoints": [
+        "Horizontal launch velocity uₓ=20cos35°≈16.38 m s⁻¹.",
+        "Upward launch velocity uᵧ=20sin35°≈11.47 m s⁻¹.",
+        "Taking launch height as 0, vertical displacement to ground is −18 m, so −18=11.47t−4.905t².",
+        "Solve the quadratic for the positive time: t=(uᵧ+√(uᵧ²+2g×18))/g≈3.41 s; reject the negative root.",
+        "Range x=uₓt≈16.38×3.41≈55.9 m.",
+        "Just before impact vᵧ=uᵧ−gt≈−22.0 m s⁻¹.",
+        "Impact speed = √(vₓ²+vᵧ²) = √(20²+2×9.81×18)≈27.4 m s⁻¹.",
+        "Direction below horizontal = arctan(|vᵧ|/vₓ)≈53.3°."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Horizontal launch velocity uₓ=20cos35°≈16.38 m s⁻¹. Upward launch velocity uᵧ=20sin35°≈11.47 m s⁻¹. Taking launch height as 0, vertical displacement to ground is −18 m, so −18=11.47t−4.905t². Solve the quadratic for the positive time: t=(uᵧ+√(uᵧ²+2g×18))/g≈3.41 s; reject the negative root. Range x=uₓt≈16.38×3.41≈55.9 m. Just before impact vᵧ=uᵧ−gt≈−22.0 m s⁻¹. Impact speed = √(vₓ²+vᵧ²) = √(20²+2×9.81×18)≈27.4 m s⁻¹. Direction below horizontal = arctan(|vᵧ|/vₓ)≈53.3°.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_06",
+      "groupOrder": 1,
+      "visual": "projectile"
+    },
+    {
+      "id": "mechanics_v39_07",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "7",
+      "topic": "Projectiles",
+      "subtopic": "Projectiles",
+      "revisionTopic": "Projectiles",
+      "courseTopic": "Mechanics & materials",
+      "marks": 7,
+      "prompt": "A ball is kicked at 28.0 m s⁻¹ and 50° above level ground. A wall 22.0 m high is 40.0 m horizontally from the launch position. Air resistance is negligible. (a) Find the time at the wall. (b) Find the ball's height there. (c) Decide whether it clears the wall and by how much. (d) Explain whether it is rising or falling as it passes the wall. Use g=9.81 m s⁻².",
+      "markPoints": [
+        "Horizontal component uₓ=28cos50°≈18.00 m s⁻¹.",
+        "Vertical component uᵧ=28sin50°≈21.45 m s⁻¹.",
+        "Time to wall = 40/(28cos50°)≈2.22 s.",
+        "Height y=uᵧt−½gt²≈23.5 m.",
+        "The ball clears the 22.0 m wall by approximately 1.5 m.",
+        "At the wall vᵧ=uᵧ−gt≈−0.35 m s⁻¹, so it is falling.",
+        "The apex occurs when vᵧ=0 at t≈2.19 s, slightly before the wall."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Horizontal component uₓ=28cos50°≈18.00 m s⁻¹. Vertical component uᵧ=28sin50°≈21.45 m s⁻¹. Time to wall = 40/(28cos50°)≈2.22 s. Height y=uᵧt−½gt²≈23.5 m. The ball clears the 22.0 m wall by approximately 1.5 m. At the wall vᵧ=uᵧ−gt≈−0.35 m s⁻¹, so it is falling. The apex occurs when vᵧ=0 at t≈2.19 s, slightly before the wall.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_07",
+      "groupOrder": 1,
+      "visual": "projectile"
+    },
+    {
+      "id": "mechanics_v39_08",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "8",
+      "topic": "Newton's laws",
+      "subtopic": "Newton's laws",
+      "revisionTopic": "Newton's laws",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "Blocks A (3.0 kg) and B (5.0 kg) rest on a horizontal surface joined by a light taut string. B is pulled to the right by a 30 N force 25° ABOVE the horizontal. Resistive forces are 4.0 N on A and 6.0 N on B, each to the left. The blocks remain in contact with the floor. (a) Find acceleration. (b) Find tension. (c) Find the normal reaction on B. (d) Explain the relation between the tensions on each block. Take g=9.81 m s⁻².",
+      "markPoints": [
+        "Driving horizontal component on B=30cos25°≈27.2 N.",
+        "Combined horizontal resultant =27.2−4−6≈17.2 N.",
+        "Both blocks share acceleration a≈17.2/(3+5)=2.15 m s⁻² to the right.",
+        "For A, T−4=3a, so T≈10.4 N.",
+        "For B, upward pull component is 30sin25°≈12.7 N.",
+        "B has no vertical acceleration, so normal reaction R_B=5g−30sin25°≈36.4 N.",
+        "The string pulls A to the right and B to the left with equal-magnitude tensions; they act on different blocks.",
+        "The two tension forces cancel only when treating A and B together as one system."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Driving horizontal component on B=30cos25°≈27.2 N. Combined horizontal resultant =27.2−4−6≈17.2 N. Both blocks share acceleration a≈17.2/(3+5)=2.15 m s⁻² to the right. For A, T−4=3a, so T≈10.4 N. For B, upward pull component is 30sin25°≈12.7 N. B has no vertical acceleration, so normal reaction R_B=5g−30sin25°≈36.4 N. The string pulls A to the right and B to the left with equal-magnitude tensions; they act on different blocks. The two tension forces cancel only when treating A and B together as one system.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_08",
+      "groupOrder": 1,
+      "visual": "resolve"
+    },
+    {
+      "id": "mechanics_v39_09",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "9",
+      "topic": "Newton's laws",
+      "subtopic": "Newton's laws",
+      "revisionTopic": "Newton's laws",
+      "courseTopic": "Mechanics & materials",
+      "marks": 7,
+      "prompt": "A 1300 kg car is driven forwards on level ground. Its tyres push backwards on the road with a horizontal force of 2200 N; total resistance on the car is 700 N. (a) State Newton's three laws in words. (b) Identify the force exerted by the road on the tyres. (c) Determine acceleration. (d) Explain why the equal and opposite tyre–road forces do not cancel in the force balance for the car.",
+      "markPoints": [
+        "First law: zero resultant external force means an object stays at rest or continues at constant velocity.",
+        "Second law: resultant force equals the rate of change of momentum; for constant mass F=ma.",
+        "Third law: interacting bodies exert equal and opposite forces of the same type on one another.",
+        "The road exerts 2200 N FORWARDS on the tyres (third-law partner to the tyres' backward push).",
+        "Horizontal net force on the car is 2200−700=1500 N.",
+        "Acceleration a=1500/1300≈1.15 m s⁻² forwards.",
+        "The backwards force is exerted by the tyres ON THE ROAD, so it is not part of the car's free-body diagram."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "First law: zero resultant external force means an object stays at rest or continues at constant velocity. Second law: resultant force equals the rate of change of momentum; for constant mass F=ma. Third law: interacting bodies exert equal and opposite forces of the same type on one another. The road exerts 2200 N FORWARDS on the tyres (third-law partner to the tyres' backward push). Horizontal net force on the car is 2200−700=1500 N. Acceleration a=1500/1300≈1.15 m s⁻² forwards. The backwards force is exerted by the tyres ON THE ROAD, so it is not part of the car's free-body diagram.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_09",
+      "groupOrder": 1,
+      "visual": "resolve"
+    },
+    {
+      "id": "mechanics_v39_10",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "10",
+      "topic": "Moments",
+      "subtopic": "Moments",
+      "revisionTopic": "Moments",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "A uniform 3.0 m horizontal beam has weight 50 N acting at its centre and carries a 90 N load 2.4 m from its hinge at the left end. A cable attached at the right end pulls UP AND LEFT at 45° to the beam. The beam is in equilibrium. (a) Find cable tension by moments about the hinge. (b) Find the horizontal and vertical components of the hinge reaction. (c) Explain why the hinge reaction has zero moment about the hinge.",
+      "markPoints": [
+        "Weight of beam contributes clockwise moment 50×1.5=75 N m.",
+        "Load contributes clockwise moment 90×2.4=216 N m.",
+        "Anticlockwise cable moment is (Tsin45°)×3.0 N m.",
+        "Balance moments: 3Tsin45°=75+216=291; hence T≈137 N.",
+        "Cable's upward component is Tsin45°=97 N.",
+        "Vertical force balance gives hinge reaction 50+90−97=43 N upward.",
+        "Cable's leftward component is Tcos45°=97 N; hinge reaction is 97 N to the right.",
+        "Hinge force acts through the pivot, so its perpendicular lever arm and moment about that pivot are zero."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Weight of beam contributes clockwise moment 50×1.5=75 N m. Load contributes clockwise moment 90×2.4=216 N m. Anticlockwise cable moment is (Tsin45°)×3.0 N m. Balance moments: 3Tsin45°=75+216=291; hence T≈137 N. Cable's upward component is Tsin45°=97 N. Vertical force balance gives hinge reaction 50+90−97=43 N upward. Cable's leftward component is Tcos45°=97 N; hinge reaction is 97 N to the right. Hinge force acts through the pivot, so its perpendicular lever arm and moment about that pivot are zero.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_10",
+      "groupOrder": 1,
+      "visual": "moment"
+    },
+    {
+      "id": "mechanics_v39_11",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "11",
+      "topic": "Momentum",
+      "subtopic": "Momentum",
+      "revisionTopic": "Momentum",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "On a frictionless track a 0.40 kg trolley A travels at +5.0 m s⁻¹ and collides with a 0.60 kg trolley B travelling at −1.0 m s⁻¹. They stick together. Contact lasts 0.080 s. (a) Find their common velocity. (b) Calculate the kinetic energy lost. (c) Find the impulse and average force on trolley A. (d) State the relevant conservation principles.",
+      "markPoints": [
+        "Initial total momentum =0.40×5.0+0.60×(−1.0)=+1.4 kg m s⁻¹.",
+        "After sticking together mass is 1.00 kg, so v=+1.4 m s⁻¹ by conservation of momentum.",
+        "Initial total kinetic energy =½(0.40)(5²)+½(0.60)(1²)=5.3 J.",
+        "Final kinetic energy=½(1.00)(1.4²)=0.98 J.",
+        "Kinetic energy lost=5.3−0.98=4.32 J.",
+        "Impulse on A=Δp_A=0.40(1.4−5.0)=−1.44 N s.",
+        "Average force on A=−1.44/0.080=−18 N, directed left.",
+        "Total momentum is conserved (isolated system) but kinetic energy is not conserved in this sticking collision."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Initial total momentum =0.40×5.0+0.60×(−1.0)=+1.4 kg m s⁻¹. After sticking together mass is 1.00 kg, so v=+1.4 m s⁻¹ by conservation of momentum. Initial total kinetic energy =½(0.40)(5²)+½(0.60)(1²)=5.3 J. Final kinetic energy=½(1.00)(1.4²)=0.98 J. Kinetic energy lost=5.3−0.98=4.32 J. Impulse on A=Δp_A=0.40(1.4−5.0)=−1.44 N s. Average force on A=−1.44/0.080=−18 N, directed left. Total momentum is conserved (isolated system) but kinetic energy is not conserved in this sticking collision.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_11",
+      "groupOrder": 1
+    },
+    {
+      "id": "mechanics_v39_12",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "12",
+      "topic": "Graph interpretation",
+      "subtopic": "Graph interpretation",
+      "revisionTopic": "Graph interpretation",
+      "courseTopic": "Mechanics & materials",
+      "marks": 7,
+      "prompt": "A force–time graph consists of a positive triangle rising from (0 s, 0 N) to (0.040 s, 400 N) and falling to (0.080 s, 0 N), followed by a rectangle with force −100 N from 0.080 to 0.140 s. The force acts on a 2.0 kg body initially moving at −2.0 m s⁻¹. (a) Calculate the positive and negative impulses. (b) Determine net momentum change and final velocity. (c) Explain why total area cannot be treated as distance.",
+      "markPoints": [
+        "Positive triangular impulse =½×0.080×400 = +16 N s.",
+        "Negative rectangular impulse =−100×(0.140−0.080)=−6 N s.",
+        "Net impulse, signed area under F–t graph, =+16−6=+10 N s.",
+        "This equals the change in momentum of the object, Δp=+10 kg m s⁻¹.",
+        "Initial momentum=2.0×(−2.0)=−4 kg m s⁻¹, final momentum=−4+10=+6 kg m s⁻¹.",
+        "Final velocity=+6/2.0=+3.0 m s⁻¹.",
+        "Area units N×s=N s = kg m s⁻¹, not metres; it represents impulse, not displacement."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Positive triangular impulse =½×0.080×400 = +16 N s. Negative rectangular impulse =−100×(0.140−0.080)=−6 N s. Net impulse, signed area under F–t graph, =+16−6=+10 N s. This equals the change in momentum of the object, Δp=+10 kg m s⁻¹. Initial momentum=2.0×(−2.0)=−4 kg m s⁻¹, final momentum=−4+10=+6 kg m s⁻¹. Final velocity=+6/2.0=+3.0 m s⁻¹. Area units N×s=N s = kg m s⁻¹, not metres; it represents impulse, not displacement.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_12",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "Time / s",
+        "yLabel": "Force / N",
+        "xMin": 0,
+        "xMax": 0.14,
+        "yMin": -150,
+        "yMax": 450,
+        "xStep": 0.02,
+        "yStep": 100,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.04,
+            400
+          ],
+          [
+            0.08,
+            0
+          ],
+          [
+            0.08,
+            -100
+          ],
+          [
+            0.14,
+            -100
+          ]
+        ],
+        "description": "Force positive triangle 0 to 0.08 s peaking at 400 N at 0.04 s; negative rectangle −100 N from 0.08 to 0.14 s."
+      }
+    },
+    {
+      "id": "mechanics_v39_13",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "13",
+      "topic": "Energy",
+      "subtopic": "Energy",
+      "revisionTopic": "Energy",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "The resultant force on a 3.0 kg object, parallel to its motion, varies with distance s: from 0 to 2.0 m it increases linearly from 0 to 40 N, from 2.0 to 5.0 m it is 40 N, and from 5.0 to 6.0 m it decreases linearly to zero. Initial speed is 4.0 m s⁻¹. (a) Calculate work in each section. (b) Determine total work. (c) Find final speed using the work–energy principle.",
+      "markPoints": [
+        "First section work is triangular area ½×2×40=40 J.",
+        "Middle section work is rectangular area 3×40=120 J.",
+        "Final section work is triangular area ½×1×40=20 J.",
+        "Total net work =40+120+20=180 J.",
+        "Initial kinetic energy=½×3×4²=24 J.",
+        "Final kinetic energy=24+180=204 J.",
+        "From ½mv²=204, v=√(408/3)=√136≈11.7 m s⁻¹.",
+        "Area under a force–displacement graph has units N m = J and represents work done."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "First section work is triangular area ½×2×40=40 J. Middle section work is rectangular area 3×40=120 J. Final section work is triangular area ½×1×40=20 J. Total net work =40+120+20=180 J. Initial kinetic energy=½×3×4²=24 J. Final kinetic energy=24+180=204 J. From ½mv²=204, v=√(408/3)=√136≈11.7 m s⁻¹. Area under a force–displacement graph has units N m = J and represents work done.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_13",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "Displacement / m",
+        "yLabel": "Resultant force / N",
+        "xMin": 0,
+        "xMax": 6,
+        "yMin": 0,
+        "yMax": 50,
+        "xStep": 1,
+        "yStep": 10,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            40
+          ],
+          [
+            5,
+            40
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "description": "Force versus displacement: (0,0), (2,40), (5,40), (6,0) joined with straight segments."
+      }
+    },
+    {
+      "id": "mechanics_v39_14",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "14",
+      "topic": "Materials",
+      "subtopic": "Materials",
+      "revisionTopic": "Materials",
+      "courseTopic": "Mechanics & materials",
+      "marks": 8,
+      "prompt": "A wire of length 1.80 m and diameter (0.40 ± 0.01) mm extends by 1.50 mm under a 24.0 N load, while obeying Hooke's law. Ignore uncertainties in other measurements. (a) Calculate area, tensile stress, tensile strain and Young modulus. (b) Estimate percentage uncertainty in area and Young modulus due to diameter uncertainty alone.",
+      "markPoints": [
+        "Convert d=0.40 mm=4.0×10⁻⁴ m and ΔL=1.50×10⁻³ m.",
+        "Cross-sectional area A=πd²/4≈1.26×10⁻⁷ m².",
+        "Tensile stress σ=24.0/A≈1.91×10⁸ Pa.",
+        "Strain ε=ΔL/L=0.00150/1.80≈8.33×10⁻⁴ (no unit).",
+        "Young modulus E=σ/ε≈2.29×10¹¹ Pa.",
+        "Percentage uncertainty in diameter =0.01/0.40×100=2.5%.",
+        "Area depends on d², so percentage uncertainty in area ≈2×2.5%=5.0%.",
+        "E is inversely proportional to d² in E=4FL/(πd²ΔL), so diameter contributes ≈5.0% uncertainty to E."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Convert d=0.40 mm=4.0×10⁻⁴ m and ΔL=1.50×10⁻³ m. Cross-sectional area A=πd²/4≈1.26×10⁻⁷ m². Tensile stress σ=24.0/A≈1.91×10⁸ Pa. Strain ε=ΔL/L=0.00150/1.80≈8.33×10⁻⁴ (no unit). Young modulus E=σ/ε≈2.29×10¹¹ Pa. Percentage uncertainty in diameter =0.01/0.40×100=2.5%. Area depends on d², so percentage uncertainty in area ≈2×2.5%=5.0%. E is inversely proportional to d² in E=4FL/(πd²ΔL), so diameter contributes ≈5.0% uncertainty to E.",
+      "answerType": "points",
+      "questionType": "multi-step problem",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_14",
+      "groupOrder": 1,
+      "visual": "young"
+    },
+    {
+      "id": "mechanics_v39_15",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "15",
+      "topic": "Materials",
+      "subtopic": "Materials",
+      "revisionTopic": "Materials",
+      "courseTopic": "Mechanics & materials",
+      "marks": 6,
+      "prompt": "A spring's force–extension graph is a straight line from extension 0 and force 0 to extension 0.080 m and force 24 N. It then rises linearly to 40 N at extension 0.120 m. (a) Calculate its stiffness over the first section. (b) Calculate work done in stretching it from 0 to 0.120 m. (c) Explain why using ½kx² with your first-section stiffness for the full extension is incorrect.",
+      "markPoints": [
+        "In initial Hooke's-law region stiffness k=F/x=24/0.080=300 N m⁻¹.",
+        "Energy/work from 0 to 0.080 m is triangular area ½×0.080×24=0.96 J.",
+        "Further 0.080 to 0.120 m area is a trapezium ½(24+40)×0.040=1.28 J.",
+        "Total work done stretching =0.96+1.28=2.24 J.",
+        "The force–extension slope changes beyond 0.080 m, so the original constant stiffness does not apply there.",
+        "The full work must use the area under the actual graph, rather than a single ½kx² expression."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "In initial Hooke's-law region stiffness k=F/x=24/0.080=300 N m⁻¹. Energy/work from 0 to 0.080 m is triangular area ½×0.080×24=0.96 J. Further 0.080 to 0.120 m area is a trapezium ½(24+40)×0.040=1.28 J. Total work done stretching =0.96+1.28=2.24 J. The force–extension slope changes beyond 0.080 m, so the original constant stiffness does not apply there. The full work must use the area under the actual graph, rather than a single ½kx² expression.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_15",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "Extension / m",
+        "yLabel": "Force / N",
+        "xMin": 0,
+        "xMax": 0.12,
+        "yMin": 0,
+        "yMax": 50,
+        "xStep": 0.02,
+        "yStep": 10,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.08,
+            24
+          ],
+          [
+            0.12,
+            40
+          ]
+        ],
+        "description": "Force versus extension vertices (0,0), (0.080,24), (0.120,40) joined by straight lines."
+      }
+    },
+    {
+      "id": "mechanics_v39_16",
+      "subject": "Physics",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style higher-demand Mechanics",
+      "paper": "Original",
+      "question": "16",
+      "topic": "RP3 Free fall",
+      "subtopic": "RP3 Free fall",
+      "revisionTopic": "RP3 Free fall",
+      "courseTopic": "Mechanics & materials",
+      "marks": 6,
+      "prompt": "In a free-fall investigation from rest, a student plots vertical displacement s in metres on the vertical axis against t² in s² on the horizontal axis. The best-fit straight line passes approximately through (0.040, 0.180) and (0.160, 0.750). (a) Determine the gradient with units. (b) Estimate gravitational acceleration. (c) Find the y-intercept of this best-fit line. (d) Explain two possible systematic issues when the best-fit line fails to pass through the origin.",
+      "markPoints": [
+        "From s=½gt², the gradient of s against t² should equal g/2.",
+        "Gradient=(0.750−0.180)/(0.160−0.040)=0.570/0.120=4.75 m s⁻².",
+        "Hence estimated g=2×4.75=9.50 m s⁻².",
+        "From s=4.75t²+b and (0.040,0.180), b=0.180−4.75×0.040=−0.010 m.",
+        "Non-zero intercept can indicate a systematic displacement zero-offset or distance-scale calibration error.",
+        "Timing zero offsets or delayed release/gate triggering can also affect the plotted relationship; check the apparatus and best-fit trend."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "From s=½gt², the gradient of s against t² should equal g/2. Gradient=(0.750−0.180)/(0.160−0.040)=0.570/0.120=4.75 m s⁻². Hence estimated g=2×4.75=9.50 m s⁻². From s=4.75t²+b and (0.040,0.180), b=0.180−4.75×0.040=−0.010 m. Non-zero intercept can indicate a systematic displacement zero-offset or distance-scale calibration error. Timing zero offsets or delayed release/gate triggering can also affect the plotted relationship; check the apparatus and best-fit trend.",
+      "answerType": "points",
+      "questionType": "graph interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "stretch",
+      "groupId": "mechanics_v39_16",
+      "groupOrder": 1,
+      "graphSpec": {
+        "kind": "polyline",
+        "xLabel": "t² / s²",
+        "yLabel": "Displacement / m",
+        "xMin": 0,
+        "xMax": 0.18,
+        "yMin": -0.05,
+        "yMax": 0.9,
+        "xStep": 0.03,
+        "yStep": 0.15,
+        "points": [
+          [
+            0,
+            -0.01
+          ],
+          [
+            0.04,
+            0.18
+          ],
+          [
+            0.09,
+            0.4175
+          ],
+          [
+            0.16,
+            0.75
+          ],
+          [
+            0.18,
+            0.845
+          ]
+        ],
+        "description": "Best-fit line on s versus t squared graph; it passes (0.040,0.180), (0.160,0.750), with intercept approximately −0.010 m."
+      }
+    }
+  ]
+}
