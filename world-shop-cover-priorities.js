@@ -1,0 +1,88 @@
+/* Source-specific shop cover alternatives. Gallery image order is unchanged.
+ * A full gallery's other locally hosted photo can be the small World shop cover
+ * when centre cropping makes the first photograph difficult to recognise.
+ * Each selection is checked against its original Commons filename at runtime.
+ * Metadata-based selection only: independent visual composition review pending.
+ */
+(function(root,factory){'use strict';const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;if(root)root.RevisionWorldShopCoverPriorities=api;})(typeof window==='object'?window:null,function(){
+  'use strict';
+  const selections=Object.freeze({
+  "amsterdam": {
+    "slot": 4,
+    "file": "Water reflection of canal houses at blue hour in Damrak Amsterdam the Netherlands.jpg"
+  },
+  "bergen": {
+    "slot": 2,
+    "file": "Bergen panorama at night - panoramio (1).jpg"
+  },
+  "country-cy": {
+    "slot": 4,
+    "file": "Coast with Dome Hotel, Kyrenia, Northern Cyprus 03.jpg"
+  },
+  "country-il": {
+    "slot": 2,
+    "file": "Israel-2013-Aerial 00-Negev-Makhtesh Ramon.jpg"
+  },
+  "country-in": {
+    "slot": 2,
+    "file": "Gurudongmar Lake Sikkim, India (edit).jpg"
+  },
+  "country-jp": {
+    "slot": 2,
+    "file": "Japan 040416 Himeji Castle 001.jpg"
+  },
+  "country-mr": {
+    "slot": 2,
+    "file": "Sahara Desert between Akjoujt and Atar, Mauritania 1967 (2834157152).jpg"
+  },
+  "country-mx": {
+    "slot": 2,
+    "file": "Mexico City Palacio de bellas artes.jpg"
+  },
+  "country-nl": {
+    "slot": 3,
+    "file": "De Haar Castle South in the Netherlands.jpg"
+  },
+  "dakar": {
+    "slot": 2,
+    "file": "Dakar from above.jpg"
+  },
+  "dubai": {
+    "slot": 2,
+    "file": "Dubai Creek.jpg"
+  },
+  "hobart": {
+    "slot": 3,
+    "file": "Hobart Town Hall 01 (2).jpg"
+  },
+  "istanbul": {
+    "slot": 2,
+    "file": "İstanbul Galata Kulesi.jpg"
+  },
+  "montreal": {
+    "slot": 2,
+    "file": "Montreal, Quebec skyline.jpg"
+  },
+  "perth": {
+    "slot": 2,
+    "file": "Perth CBD skyline from State War Memorial Lookout, 2023, 04 b.jpg"
+  },
+  "seoul": {
+    "slot": 3,
+    "file": "Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg"
+  },
+  "stone_town": {
+    "slot": 2,
+    "file": "Centre Kelele Square Stone Town Oct26 A7CR 14686.jpg"
+  },
+  "tallinn": {
+    "slot": 2,
+    "file": "Raekoja plats at night.jpg"
+  },
+  "windhoek": {
+    "slot": 2,
+    "file": "Christ Church in Windhoek, Namibia.jpg"
+  }
+});
+  return Object.freeze({get:id=>selections[id]||null,all:()=>({...selections})});
+});
