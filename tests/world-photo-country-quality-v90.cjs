@@ -43,7 +43,7 @@ assert.equal(approved,12);
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
 for(const source of ['world-curated-photos.js','world-location-photo-gallery.js'])assert(html.includes(source+'?v='+(source==='world-curated-photos.js'?'99':'97')));
-assert(sw.includes('revision-loop-v99-country-photo-variety'));
+assert(sw.includes('revision-loop-v100-local-photo-pilot'));
 (async()=>{
  const media={verifyNamedFiles:async photos=>photos};
  for(const [id,cfg] of Object.entries(groups)){
