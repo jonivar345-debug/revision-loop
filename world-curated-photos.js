@@ -12,8 +12,7 @@
   'use strict';
   const verified=Object.freeze({
     "country-bz":[
-      {file:'Belize Caye Caulker-226.jpg',author:'Dronepicr',license:'CC BY 3.0',licenseUrl:'https://creativecommons.org/licenses/by/3.0/',subject:'Scenic aerial view over the Belizean island of Caye Caulker and its turquoise sea',width:3992,height:2242},
-      {file:'Xunantunich Belize 1 16.jpg',author:'Denis Barthel',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',subject:'Xunantunich archaeological plazas and the El Castillo Maya site in Belize',width:6000,height:4000}
+      {file:'Belize Caye Caulker-226.jpg',author:'Dronepicr',license:'CC BY 3.0',licenseUrl:'https://creativecommons.org/licenses/by/3.0/',subject:'Scenic aerial view over the Belizean island of Caye Caulker and its turquoise sea',width:3992,height:2242}
     ],
     "country-sz":[
       {file:'Impala, Mlilwane Wildlife Sanctuary.jpg',author:'Bernard Gagnon',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',subject:'Wild impala photographed in the Mlilwane Wildlife Sanctuary, Eswatini',width:2773,height:1849},
@@ -654,6 +653,8 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "subject": "Archaeological plazas and El Castillo at the Xunantunich Maya site, Belize",
+        "width": 6000,
+        "height": 4000,
         "editorialMetadata": true
       }
     ],
