@@ -10,8 +10,17 @@ const cards=deck.cards.filter(c=>c.id.startsWith('chem_atomic_v43_'));
 assert(deck.deckVersion>=43,'Atomic structure flashcards missing');
 assert.equal(cards.length,51,'51 AQA Atomic Structure cards must remain');
 assert.equal(cards.filter(c=>c.topic==='Mass spectrometry').length,26,'26 TOF cards required');
-assert.equal(bank.questions.length,14);
-assert.equal(bank.questions.reduce((n,q)=>n+q.marks,0),83);
+assert.equal(bank.questions.length,15);
+assert.equal(bank.questions.reduce((n,q)=>n+q.marks,0),88);
+const period3Ids=['chem_ie_focus_v46_01','chem_ie_focus_v46_02','chem_ie_focus_v46_03'];
+for(const id of period3Ids){
+ const c=deck.cards.find(c=>c.id===id);
+ assert(c,'Missing focused Period 3 card '+id);
+ assert(c.mock&&c.active&&c.taught&&c.scope==='mock'&&c.priority===9&&c.kind==='weak',
+  'Focused Period 3 card must be prioritised for mock: '+id);
+}
+const qPeriod=bank.questions.find(q=>q.id==='atomic_period3_focus_v46_01');
+assert(qPeriod&&qPeriod.marks===5,'Dedicated five-mark Period 3 question must exist');
 const topics=new Set(deck.cards.filter(c=>c.subject==='Chemistry').map(c=>c.revisionTopic||c.topic));
 const ids=new Set();
 for(const c of deck.cards){assert(!ids.has(c.id),'duplicate card '+c.id);ids.add(c.id);}
@@ -55,4 +64,4 @@ const speed=Math.sqrt(2*1.99e-16/3.98e-26),time=1.2/speed;
 assert(Math.abs(speed-1e5)<1,'TOF speed');
 assert(Math.abs(time-1.2e-5)<1e-12,'TOF time');
 new Function(app);
-console.log('PASS atomic v43: 51 cards, 26 TOF, 14 questions, 83 marks; all model answers checked');
+console.log('PASS atomic v43 + Period 3 v46: 51 cards, 26 TOF, 3 high-priority exceptions cards, 15 questions, 88 marks');
