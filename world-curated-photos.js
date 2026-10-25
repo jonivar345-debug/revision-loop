@@ -4858,11 +4858,61 @@
     const records=typeof window==='object'?window.RevisionWorldPhotoEnrichment:null;
     return Array.isArray(records?.[id])?records[id]:[];
   }
+  // V107: explicit cross-place/weak-filler rejections. Commons filename searches
+  // often match a person, plant, ship, palace or a different city of the same name.
+  // Keep correct local photos and source attributions; never claim full pixel review.
+  const rejectedPhotoV107=Object.freeze({
+    "country-is": [
+      "Two bees absorbing pollen from an Iceland poppy in the flower garden of Gyeongju South Korea.jpg",
+      "Field of Iceland poppies in the flower garden near Cheomseongdae Observatory in Gyeongju South Korea.jpg",
+      "Icelandic landscapes.jpg"
+    ],
+    "country-li": [
+      "Liechtenstein Palace gardens - Vienna.jpg",
+      "Liechtenstein Palace - Vienna.jpg",
+      "Liechtenstein Palace Gate - Vienna.jpg"
+    ],
+    "country-lu": [
+      "Palais du Luxembourg, South View 140116 1.jpg",
+      "Palais Luxembourg Sunset Edit.JPG"
+    ],
+    "country-qa": [
+      "Tulpe 'Qatar' im botanischen Garten in München 01.jpg"
+    ],
+    "country-pt": [
+      "Yellow leaves floating next to water volcano, Alameda dos Oceanos, Parque das Nações, Lisbon, Portugal julesvernex2.jpg"
+    ],
+    "cartagena": [
+      "Agricultural landscape around Rambla de la Mina in Campo Nubla, Cartagena, Murcia, Spain, 2022 January.jpg",
+      "La Manga cityscape from Mirador de Monte Blanco, Cartagena, Murcia, Spain, 2022 January.jpg"
+    ],
+    "porto": [
+      "Isola di Pianosa Vecchio Porto panoramic01 2018-05-30.jpg",
+      "20101016 Agios Nikolaos Metoxi Batopediou Porto Lagos Vistonida Lake Rhodope Greece.jpg",
+      "Porto Alegre - Brazil Landscape-Night.jpg"
+    ],
+    "florence": [
+      "Dramatic Views of Hurricane Florence from the International Space Station From 9 12 (42828603210).jpg"
+    ],
+    "bergen": [
+      "Bridge of KV Bergen W341.jpg"
+    ],
+    "stockholm": [
+      "SS Stockholm August 2015 01.jpg"
+    ],
+    "gyeongju": [
+      "Two bees absorbing pollen from an Iceland poppy in the flower garden of Gyeongju South Korea.jpg",
+      "Red Geranium in the flower garden of the Tumuli Park at sunset in Gyeongju South Korea.jpg"
+    ]
+  });
+  function acceptedPhotoV107(id,item){
+    return !(rejectedPhotoV107[id]||[]).some(file=>file.toLowerCase()===item.file.toLowerCase());
+  }
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
     return [...(typeof window==='object'&&window.RevisionWorldV104Photos?.[id]||[]),...(priorityPhotoV99[id]||[]),...(priorityPhotoV97[id]||[]),...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
-      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo)&&acceptedPhotoV97(id,photo)&&acceptedPhotoV99(id,photo))
+      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo)&&acceptedPhotoV97(id,photo)&&acceptedPhotoV99(id,photo)&&acceptedPhotoV107(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
