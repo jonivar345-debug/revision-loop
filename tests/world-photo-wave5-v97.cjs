@@ -71,7 +71,7 @@ const file=p=>String(p.file).replace(/^File:/,'');
  const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
  const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
  assert(html.includes('world-curated-photos.js?v=109'));checks++;
- assert(sw.includes('revision-loop-v111-local-world-photos-cover-quality'));checks++;
+ assert(sw.includes('revision-loop-v112-local-world-photos-library-expansion'));checks++;
  assert(sw.includes("k.startsWith('revision-loop-')&&k!==CACHE"),'Do not delete unrelated caches');checks++;
  console.log('PASS v97: '+checks+' checks; ten new Commons heroes, five gallery cleanups, 11 pre-existing strong city sets preserved, four photos each; licenses supplied and pixel review not falsely claimed');
 })().catch(e=>{console.error(e);process.exitCode=1});
