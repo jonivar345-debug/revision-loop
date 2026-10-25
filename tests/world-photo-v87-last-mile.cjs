@@ -21,8 +21,14 @@ for(const loc of rows){
  if(n===0)unsourced++;
 }
 assert.equal(unsourced,0,'Each destination must have a source-checked candidate');
-assert.equal(complete,376,'Every destination must have at least four distinct source-checked photographs');
-assert.equal(unfinished.reduce((n,x)=>n+x.missing,0),0,'All four-photo source slots must be filled');
+// V107 removes false positives deliberately: a gallery with three genuine
+// Commons matches must not be counted as complete because a fourth photograph
+// happens to contain the name of a foreign palace, flower, ship or city.
+assert(complete>=365,'More than the documented v107 source corrections lost four-photo coverage');
+assert(unfinished.length<=11,'Unexpected new source-coverage gaps');
+assert(unfinished.every(x=>x.missing>0),'Incorrect incomplete-source accounting');
+assert.deepEqual(unfinished,require('../editorial/world-v107-catalogue-eligibility-gaps.json').gaps,'Only the documented v107 catalogue eligibility gaps may remain');
+console.log('V107 genuine-source gaps requiring new photo curation:',JSON.stringify(unfinished));
 const checked={
  'country-ao':['Sunset over Luanda 1.JPG'],
  'country-gn':['Magnifique vue de la nature.jpg','Village de Mali.jpg','On the road between Base Vie and Siguiri - panoramio.jpg'],
@@ -56,6 +62,6 @@ for(const [id,notPhoto] of Object.entries({
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 assert(html.includes('world-photo-enrichment-v85.js?v=91'),'Browser must fetch refreshed photo manifest');
-assert(sw.includes('revision-loop-v106-place-accuracy-and-local-quality'),'Service worker cache must be versioned');
+assert(sw.includes('revision-loop-v107-place-checked-gallery-expansion'),'Service worker cache must be versioned');
 assert(sw.includes("'./world-photo-enrichment-v85.js'"),'Offline source data must remain cached');
 console.log('PASS v87: '+complete+'/376 sourced four-photo galleries; '+total+' unique destination-photo pairs; '+JSON.stringify(unfinished)+' incomplete; source metadata only, not pixel approved');

@@ -22,11 +22,11 @@ const places=fs.readFileSync(file,'utf8').split(/\r?\n/).slice(1).filter(Boolean
  const m=[...row.matchAll(/"([^"]*)"/g)].map(x=>x[1]);return{id:m[3],name:m[0],kind:m[1]};
 });
 assert.equal(places.length,376);
-let complete=0,added=0;
+let complete=0,added=0;const gapIds=[];
 for(const loc of places){
  const found=curated.get(loc.id).filter(p=>p.file&&p.author&&p.licenseUrl&&p.filePage&&gallery.allowed(p,{id:loc.id,name:loc.name,worldKind:loc.kind}));
  const set=new Map(found.map(x=>[norm(x.file),x]));
- if(set.size>=4)complete++;
+ if(set.size>=4)complete++;else gapIds.push(loc.id);
  const pair=pairs[loc.id];if(!pair)continue;
  for(const name of pair.bad)assert(!set.has(norm(name)),loc.id+' has known poor image '+name);
  for(const name of pair.added){
@@ -41,14 +41,15 @@ for(const loc of places){
   added++;
  }
 }
-assert.equal(complete,376,'All 376 galleries must remain source-complete');
+assert.deepEqual(gapIds.sort(),require('../editorial/world-v107-catalogue-eligibility-gaps.json').gaps.map(x=>x.id).sort(),'Unexpected photo-source eligibility gap');
+assert.equal(complete,365,'Do not count disqualified image name collisions as source-complete');
 assert.equal(added,11);
 const root=path.join(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 for(const x of ['world-photo-discovery-data.js','world-photo-enrichment-v85.js','world-curated-photos.js','world-location-photo-gallery.js'])
- assert(html.includes(x+'?v='+(x==='world-curated-photos.js'?'106':x==='world-location-photo-gallery.js'?'101':'91')),'Missing revised browser script: '+x);
-assert(sw.includes('revision-loop-v106-place-accuracy-and-local-quality'));
+ assert(html.includes(x+'?v='+(x==='world-curated-photos.js'?'107':x==='world-location-photo-gallery.js'?'101':'91')),'Missing revised browser script: '+x);
+assert(sw.includes('revision-loop-v107-place-checked-gallery-expansion'));
 (async()=>{
  const media={verifyNamedFiles:async candidates=>candidates};
  for(const [id,info] of Object.entries(pairs)){

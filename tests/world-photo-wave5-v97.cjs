@@ -70,8 +70,8 @@ const file=p=>String(p.file).replace(/^File:/,'');
  for(const id of keep){assert(catalog.get(id).length>=4,'Strong existing gallery unexpectedly lost source: '+id);checks++;}
  const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
  const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
- assert(html.includes('world-curated-photos.js?v=106'));checks++;
- assert(sw.includes('revision-loop-v106-place-accuracy-and-local-quality'));checks++;
+ assert(html.includes('world-curated-photos.js?v=107'));checks++;
+ assert(sw.includes('revision-loop-v107-place-checked-gallery-expansion'));checks++;
  assert(sw.includes("k.startsWith('revision-loop-')&&k!==CACHE"),'Do not delete unrelated caches');checks++;
  console.log('PASS v97: '+checks+' checks; ten new Commons heroes, five gallery cleanups, 11 pre-existing strong city sets preserved, four photos each; licenses supplied and pixel review not falsely claimed');
 })().catch(e=>{console.error(e);process.exitCode=1});

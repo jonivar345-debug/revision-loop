@@ -36,11 +36,11 @@ const newFiles={
  'country-jm':["Dunn's River Falls.jpg",'Negril.jpg','Blue and John Crow Mountains.jpg'],
  'country-pt':['A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg','View over the river Tagus, Lisbon, Portugal.jpg']
 };
-let complete=0,checked=0,distinctTotal=0;
+let complete=0,checked=0,distinctTotal=0;const gapIds=[];
 for(const loc of rows){
  const all=catalog.get(loc.id),norm=x=>x.replace(/^File:/i,'').replace(/_/g,' ').toLowerCase();
  const named=new Map(all.filter(p=>p.file&&p.author&&p.filePage&&p.licenseUrl&&gallery.allowed(p,{id:loc.id,name:loc.name,worldKind:loc.kind})).map(p=>[norm(p.file),p]));
- if(named.size>=4)complete++;
+ if(named.size>=4)complete++;else gapIds.push(loc.id);
  distinctTotal+=named.size;
  for(const badFile of bad[loc.id]||[])
   assert(!all.some(p=>norm(p.file)===norm(badFile)),loc.id+' still contains wrong-place/nonphoto '+badFile);
@@ -52,11 +52,12 @@ for(const loc of rows){
   checked++;
  }
 }
-assert.equal(complete,376,'All 376 galleries must retain four distinct source candidates');
+assert.deepEqual(gapIds.sort(),require('../editorial/world-v107-catalogue-eligibility-gaps.json').gaps.map(x=>x.id).sort(),'Unexpected catalogue eligibility loss');
+assert.equal(complete,365,'V107 excludes misleading images rather than inventing four real candidates');
 assert.equal(checked,19,'Nineteen replacement photographs must stay present');
 const index=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 assert(index.includes('world-photo-discovery-data.js?v=91'));
 assert(index.includes('world-photo-enrichment-v85.js?v=91'));
-assert(sw.includes('revision-loop-v106-place-accuracy-and-local-quality'));
+assert(sw.includes('revision-loop-v107-place-checked-gallery-expansion'));
 console.log('PASS world-photo-quality v88: '+complete+'/376 source-complete, '+checked+' place-correct replacement photos, '+distinctTotal+' distinct location-file pairs. Not image-pixel review.');

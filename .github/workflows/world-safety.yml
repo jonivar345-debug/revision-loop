@@ -50,6 +50,8 @@ jobs:
           node tests/world-photo-country-quality-v91.cjs
           node tests/world-v105-editorial.cjs
           node tests/world-v106-editorial.cjs
+          node tests/world-v107-sources.cjs
+          node tests/world-v107-archive.cjs
           node tests/world-photo-wave3-20261025.cjs
           node tests/world-photo-wave4-20261025.cjs
           node tests/world-photo-wave5-v97.cjs

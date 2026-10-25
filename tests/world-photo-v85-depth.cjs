@@ -47,9 +47,21 @@ for(const [id,records] of entries){
  const omitted=records.filter(p=>!enriched.some(e=>e.file.toLowerCase()==='file:'+p.file.toLowerCase()));
  assert.equal(records.length-enriched.length,omitted.length,'Unexpected enrichment duplicate or provenance loss '+id);
  if(omitted.length){
-  assert(qualityReplacements.has(id),'Unapproved removal of an enriched image '+id);
-  assert(curated.get(id).some(p=>p.qualityPriority===1000||p.qualityPriority===900||p.qualityPriority===950),'An omitted candidate must have a verified quality replacement '+id);
-  assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=4,'Do not remove a photo without preserving four options '+id);
+  // V107 explicitly rejects files named after a different place, an unrelated
+  // person, ship or species. A smaller accurate source set is preferable to
+  // restoring a known wrong-country photo merely to hit a four-image quota.
+  const v107Corrections=new Set([
+    'country-is','country-li','country-lu','country-qa','country-pt',
+    'cartagena','porto','florence','bergen','stockholm','gyeongju'
+  ]);
+  if(v107Corrections.has(id)){
+   assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=1,
+    'At least one real source must survive correction '+id);
+  }else{
+   assert(qualityReplacements.has(id),'Unapproved removal of an enriched image '+id);
+   assert(curated.get(id).some(p=>p.qualityPriority===1000||p.qualityPriority===900||p.qualityPriority===950),'An omitted candidate must have a verified quality replacement '+id);
+   assert(curated.get(id).filter(p=>p.file&&p.author&&p.licenseUrl).length>=4,'Do not remove a photo without preserving four options '+id);
+  }
  }
  assert(enriched.every(p=>p.checked===false&&p.source==='editorial-source'),'New candidates must pass browser current-licence validation');
 }
@@ -57,7 +69,7 @@ assert(regions.size>=4,'Photo enrichment must span at least four World regions')
 for(const id of ['london','busan'])assert.equal(curated.get(id).filter(x=>x.checked).length,4,'Do not change original four pixel-reviewed gallery pictures');
 const shell=fs.readFileSync(require('node:path').join(base,'index.html'),'utf8');
 const worker=fs.readFileSync(require('node:path').join(base,'sw.js'),'utf8');
-assert(shell.indexOf('world-photo-enrichment-v85.js?v=91')<shell.indexOf('world-curated-photos.js?v=106'),'Enrichment manifest must load before curated registry');
-assert(worker.includes("revision-loop-v106-place-accuracy-and-local-quality"),'Offline cache must pick up source changes');
+assert(shell.indexOf('world-photo-enrichment-v85.js?v=91')<shell.indexOf('world-curated-photos.js?v=107'),'Enrichment manifest must load before curated registry');
+assert(worker.includes("revision-loop-v107-place-checked-gallery-expansion"),'Offline cache must pick up source changes');
 assert(worker.includes("'./world-photo-enrichment-v85.js'"),'Offline preload must include source manifest');
 console.log('PASS v85: '+four+'/376 locations with >=4 distinct Commons sources, '+allFiles+' distinct location-file pairs; '+entries.length+' enriched galleries with '+newCount+' live-CC-sourced extras, '+short+' still under four, none unsourced');
