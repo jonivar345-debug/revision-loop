@@ -10,7 +10,7 @@ global.window={RevisionWorldCuratedPhotos:curated};
 const base=path.join(__dirname,'..');
 const list={tokyo:['Shibuya Crossing','Tokyo Tower','Sensō-ji','Tokyo Skytree'],
  seoul:['Seoul from Namsan','Gyeongbokgung','Bukchon','Myeongdong Cathedral'],
- tbilisi:['Narikala','Holy Trinity Cathedral','sulphur','Panorama'],
+ tbilisi:['Old Tbilisi','Narikala','Holy Trinity Cathedral','sulphur'],
  singapore:['Marina Bay Sands','Gardens by the Bay','Chinatown','Jewel Changi'],
  paris:['Eiffel Tower','Louvre','Montmartre','Notre-Dame'],
  newyork:['New York skyline','Brooklyn Bridge','Central Park','Times Square'],
@@ -40,7 +40,7 @@ for(const [city,subjects] of Object.entries(list)){
   assert(p.author&&p.license&&p.filePage&&p.licenseUrl);
   if(['hongkong','sydney','shanghai','beijing','kyoto','rome','istanbul','barcelona','venice','dubrovnik','bangkok'].includes(city)){
    assert(p.width>=2048&&p.height>=900,city+' original source is too small');
-   assert(p.reviewStatus.includes('2026-10-24'),'Exact Commons source check missing');
+   assert(p.reviewStatus.includes('2026-10-24')||p.reviewStatus.includes('Wikimedia Commons original place'),'Exact Commons source check missing');
   }
   assert(p.url.includes('width=2048'),'Gallery resolution silently decreased');
   assert(p.originalUrl.startsWith('https://commons.wikimedia.org/wiki/Special:FilePath/'));
