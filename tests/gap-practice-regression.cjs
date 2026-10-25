@@ -45,7 +45,7 @@ assert(gibbs,'Original Gibbs graph practice question missing');
 assert.equal(gibbs.marks,5,'Gradient, entropy, enthalpy, zero crossing and feasibility each earn one mark');
 assert.equal(gibbs.markPoints.length,5);
 assert.deepEqual(gibbs.markPointMarks,[1,1,1,1,1]);
-assert(/\\[5 marks\\]/i.test(gibbs.prompt),'Displayed exam question must correctly show five marks');
+assert(gibbs.prompt.includes('[5 marks]'),'Displayed exam question must correctly show five marks');
 checks+=5;
 assert.deepEqual(tallies,{Physics:24,Chemistry:24,Maths:27},'Question batch size');
 assert.equal(additions.length,75);
