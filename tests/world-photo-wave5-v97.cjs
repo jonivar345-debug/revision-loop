@@ -20,6 +20,13 @@ const improvements=[
  ['perth','Perth','Kings Park, Perth.jpg','Perth (AU), View from Kings Park -- 2019 -- 0435-42.jpg'],
  ['edinburgh','Edinburgh','The Royal Mile, Edinburgh, Scotland.jpg','Half-Moon battery Edinburgh Castle dec.23.jpg']
 ];
+const mustShow={
+ brisbane:['South Bank Parkland.jpg'],
+ quebec:['Petit-Champlain - Quebec City.jpg'],
+ dublin:['Dublin City Temple Bar.jpg'],
+ tunis:['Panorama - Medina de Tunis.jpg'],
+ losangeles:['Santa Monica - Pier beach.jpg','Griffith Observatory, Los Angeles.png']
+};
 const moreRejects={
  brisbane:['CityCat Spirit of Brisbane during royal visit to South Bank South Brisbane Reach Brisbane River P1190234.jpg'],
  quebec:['Stone office building on a corner, Quebec City.jpg'],
@@ -52,6 +59,9 @@ const file=p=>String(p.file).replace(/^File:/,'');
  for(const [id,excluded] of Object.entries(moreRejects)){
   const full=catalog.get(id);
   assert(full.length>=4,id+' lost image depth');checks++;
+  for(const desired of mustShow[id]||[]){
+   assert(full.slice(0,4).some(p=>file(p).toLowerCase()===desired.toLowerCase()),id+' missing diverse photo '+desired);checks++;
+  }
   for(const b of excluded){assert(!full.some(p=>file(p).toLowerCase()===b.toLowerCase()),id+' retained redundant original');checks++;}
   assert.equal(new Set(full.slice(0,4).map(p=>file(p).toLowerCase())).size,4,id+' gallery duplicated');checks++;
  }
