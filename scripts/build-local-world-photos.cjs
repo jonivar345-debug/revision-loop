@@ -59,6 +59,11 @@ async function download(filename,width,destination,preferred){
 }
 async function main(){
   const output={};const attribution=[];let totalBytes=0;
+  // On later batches, reuse downloaded JPEG bytes after checking their signatures.
+  // Current Commons author, licence and dimensions are always revalidated.
+  async function savedJpeg(name){
+    try{const bytes=await fsp.readFile(name);return bytes.length>=16000&&bytes[0]===255&&bytes[1]===216&&bytes.at(-2)===255&&bytes.at(-1)===217?bytes.length:0;}catch{return 0;}
+  }
   for(const [id,names] of Object.entries(manifest.locations)){
     const known=get(id);const selected=[];const seen=new Set();
     await fsp.mkdir(path.join(base,id),{recursive:true});
@@ -78,8 +83,8 @@ async function main(){
       const index=String(i+1).padStart(2,'0');
       const gallery=id+'/'+index+'-gallery.jpg';
       const cover=id+'/'+index+'-cover.jpg';
-      const gallerySize=await download(name,1800,path.join(base,gallery),info.thumburl);
-      const coverSize=await download(name,880,path.join(base,cover));
+      const gallerySize=(await savedJpeg(path.join(base,gallery)))||await download(name,1800,path.join(base,gallery),info.thumburl);
+      const coverSize=(await savedJpeg(path.join(base,cover)))||await download(name,880,path.join(base,cover));
       totalBytes+=gallerySize+coverSize;
       const result={...entry,source:'local-library',checked:true,locationVerified:true,
         url:'./assets/world/'+gallery,localCoverUrl:'./assets/world/'+cover};

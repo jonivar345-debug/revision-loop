@@ -1,6 +1,6 @@
 {
-  "description": "Pilot for first-party hosting of existing curated destination images; sources and credits are preserved, with final pixel-by-pixel visual acceptance remaining a separate editorial review.",
-  "quality": "Originals remain at Wikimedia Commons. Display derivatives are not upscaled and use Commons' own 1800px/880px thumbnail generation.",
+  "description": "Growing first-party photo library: preserve strongest curated sources and stable city landmarks; retain legally required author and source metadata; do not confuse metadata checks with final visual acceptance.",
+  "quality": "Gallery JPEG derivatives at 1800px, cover copies at 880px; originals remain at Commons. Do not upsample or silently substitute unrelated images.",
   "locations": {
     "london": [
       "The Tower Bridge, London, UK.jpg",
@@ -31,6 +31,78 @@
     "country-sz": [
       "Mlilwane Wildlife Sanctuary in Eswatini 01.jpg",
       "Mantenga Falls.jpg"
+    ],
+    "tokyo": [
+      "2025 Shibuya Crossing at night.jpg",
+      "Tokyo Tower 2020.jpg",
+      "Senso-ji.jpg",
+      "Tokyo Skytree 20250831 105130.jpg"
+    ],
+    "seoul": [
+      "Seoul from Namsan.jpg",
+      "Panoramic view of Hyangwonjeong Pavilion in its pond at Gyeongbokgung Palace with blue sky in Seoul.jpg",
+      "Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg",
+      "Myeongdong Cathedral 2.jpg"
+    ],
+    "tbilisi": [
+      "Old Tbilisi town in Tbilisi, Georgia.jpg",
+      "Old Town and Narikala, Tbilisi.jpg",
+      "Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg",
+      "Roofs of the sulfur baths in Tbilisi.jpg"
+    ],
+    "singapore": [
+      "Marina Bay Sands.jpeg",
+      "Gardens-by-the-bay.jpg",
+      "Chinatown Singapore.jpg",
+      "The Jewel, Singapore (IMG 20230827 155118).jpg"
+    ],
+    "paris": [
+      "Eiffel Tower from Trocadero-2026-07-msu--.jpg",
+      "Panorama of the Musée du Louvre.jpg",
+      "Montmartre - Paris1.jpg",
+      "Notre Dame Cathedral, Paris.jpg"
+    ],
+    "newyork": [
+      "New York City, Skyline.jpg",
+      "Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg",
+      "Central Park New York.jpg",
+      "Times Square at night 2014.jpg"
+    ],
+    "hongkong": [
+      "Hong Kong as seen from Victoria Peak.jpg",
+      "Star Ferry ships at Hong Kong.jpg",
+      "Hong Kong tram 110.jpg",
+      "Tian Tan Buddha, Hong Kong.jpg"
+    ],
+    "sydney": [
+      "Sydney skyline at dusk - Dec 2008.jpg",
+      "Sydney Opera House from ferry.jpg",
+      "Sydney - Harbour Bridge.jpg",
+      "Bondi Beach - 2009.JPG"
+    ],
+    "shanghai": [
+      "The Bund Shanghai.jpg",
+      "Shanghai Yu Garden.jpg",
+      "Oriental Pearl Tower Shanghai 1.jpg",
+      "East Nanjing road Shanghai.jpg"
+    ],
+    "beijing": [
+      "Forbidden City, Beijing.jpg",
+      "Temple-of-heaven.jpg",
+      "Summer Palace, Beijing.jpg",
+      "Old districts 'hutong' in Beijing.jpg"
+    ],
+    "kyoto": [
+      "Kyoto Fushimi Inari-taisha 1.jpg",
+      "JAP Kyoto Kiyomizu-dera.jpg",
+      "Kyoto Gion 01.jpg",
+      "Bamboo forest arashiyama.jpg"
+    ],
+    "barcelona": [
+      "Sagrada Familia Barcelona 1.jpg",
+      "Parc Güell Barcelona.JPG",
+      "Casa Batlló, Barcelona.jpg",
+      "Gothic Quarter, Barcelona (1) (30884069420).jpg"
     ]
   }
 }
