@@ -88,12 +88,12 @@ try{
      dubai:'Dubai Burj Khalifa.jpg',
      marrakech:'Djemaa el Fna Marrakesch.jpg',
      vancouver:'Stanley Park - Vancouver BC - Canada.jpg',
-     manila:'Cityscape of Manila, 2025 (01).jpg'
+     manila:'Jones Bridge, Manila.jpg'
    };
    const rows=[];
    for(const [id,filename] of Object.entries(expected)){
      const x=window.RevisionWorldLocalPhotos.get(id);
-     if(x.length!==4||x[0].file!=='File:'+filename)throw Error('v104 editor lost place-specific source: '+id);
+     if(x.length!==4||x[0].file!=='File:'+filename)throw Error('v105 editor lost place-specific source: '+id);
      if(new Set(x.map(p=>p.file)).size!==4)throw Error('Duplicate photo source for '+id);
      const lead=await window.RevisionWorldPhotoGallery.photosFor(LOCATIONS.find(p=>p.id===id),{limit:1});
      if(lead[0]?.file!==x[0].file)throw Error('Shop cover out of sync: '+id);
