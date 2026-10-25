@@ -30,9 +30,9 @@ for(const destination of records.destinations){
  }
 }
 const page=fs.readFileSync(path.join(root,'editorial/reviews/world-photo-review.html'),'utf8');
-for(const text of ['world-local-photo-review-index.json','loading=','Copy feedback text','Full gallery photographs'])
+for(const text of ['world-local-photo-review-index.json','img.loading','Copy feedback text','Full gallery photographs'])
  assert(page.includes(text),'Review browser page missing '+text);
 const batch=require('../editorial/world-v109-batch-targets.json');
 const updated=records.destinations.filter(x=>x.newInV109);
-assert(updated.length>=batch.minGalleries,'New destinations not shown in review page');
+assert(updated.length>=batch.minimumGalleries,'New destinations not shown in review page');
 console.log('PASS v109: all '+records.photoCount+' genuine local WebPs indexed with cover crop metrics, photo URLs and attribution.');
