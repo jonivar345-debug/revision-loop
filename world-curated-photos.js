@@ -4051,13 +4051,13 @@
   const priorityPhotoV97=Object.freeze({
     "tbilisi": [
       {
-        "file": "The Mtkvari River in downtown Tbilisi.jpg",
-        "author": "Kober",
-        "license": "Public domain (author dedication)",
-        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
-        "subject": "Downtown Mtkvari River and Narikala skyline; replaces a second repetitive Narikala panorama",
-        "width": 4000,
-        "height": 3000,
+        "file": "Old Tbilisi town in Tbilisi, Georgia.jpg",
+        "author": "GeoO",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Old Tbilisi town and Mtkvari River panorama from Metekhi; replaces a second repetitive Narikala view",
+        "width": 3886,
+        "height": 2914,
         "editorialMetadata": true,
         "qualityPriority": 950,
         "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
