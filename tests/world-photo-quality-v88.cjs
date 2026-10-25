@@ -58,5 +58,5 @@ const index=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
 assert(index.includes('world-photo-discovery-data.js?v=91'));
 assert(index.includes('world-photo-enrichment-v85.js?v=91'));
-assert(sw.includes('revision-loop-v100-local-photo-pilot'));
+assert(sw.includes('revision-loop-v101-local-photo-expansion'));
 console.log('PASS world-photo-quality v88: '+complete+'/376 source-complete, '+checked+' place-correct replacement photos, '+distinctTotal+' distinct location-file pairs. Not image-pixel review.');
