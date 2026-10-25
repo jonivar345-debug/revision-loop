@@ -66,5 +66,7 @@ for(const essential of ["indexedDB.open('revision-loop-personal-outfit-art',1)",
  assert(personal.includes(essential),'Personal outfit image persistence lost '+essential);
 assert(!/fetch\s*\(/.test(personal),'Personal artwork must not be uploaded');
 assert(app.includes('if(outfitId){const custom=await limit(savedOutfitImage(outfitId),1500);if(custom&&await tryImage(custom))return}'),'Uploaded image must take precedence over public portrait');
+assert(app.includes("'<div class=\"character-loading\" style=\"background:'+gradient+'\">'+avatarSVG(c,o)"),'Offline art must use original character illustration, not generic monograms');
+assert(app.includes("if(note)note.textContent='Illustrated preview · portrait unavailable'"),'Offline illustrated fallback must be labelled accurately');
 assert(app.includes("validPortraitUrl(url)"),'Portrait URL host checks removed');
 console.log('PASS v96: 24 series palettes, '+outfitsChecked+' distinct character-outfit SVGs, full-name matching, and private image precedence without data migration');
