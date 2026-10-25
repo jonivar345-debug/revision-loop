@@ -94,11 +94,11 @@ try{
  });
  for(const p of proof){
    assert.equal(p.pictures.length,4,p.id+' must have four genuine featured images');
-   assert(p.pictures.every(x=>x.url.includes('width=2048')&&x.author&&x.filePage.includes('commons.wikimedia.org')),
-     p.id+' high-resolution original attribution missing');
+   assert(p.pictures.every(x=>x.url.startsWith('./assets/world/'+p.id+'/')&&x.author&&x.filePage.includes('commons.wikimedia.org')),
+     p.id+' locally hosted photo or original Commons attribution missing');
    assert.equal(p.pictures[0].filePage,p.first,p.id+' shop thumbnail should match the unlocked gallery');
  }
- console.log('PASS London and Busan: four high-resolution real photos each, identical shop cover and unlocked first image.');
+ console.log('PASS London and Busan: four local real photos each, with original-source credits and matching shop/gallery lead.');
 
  await page.waitForFunction(()=>earthTextureReady===true&&earthW>=700,null,{timeout:25000});
  const globeState=await page.evaluate(()=>{
