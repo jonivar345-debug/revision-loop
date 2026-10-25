@@ -11,6 +11,37 @@
 })(typeof window==='object'?window:null,function(){
   'use strict';
   const verified=Object.freeze({
+    "washingtondc":[
+      {file:"Washington Monument at Washington DC National mall.jpg",author:"Dhrubodt3560",license:"CC BY-SA 4.0",subject:"Washington Monument illuminated at night on the National Mall, Washington DC",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:6000,height:4000}
+    ],
+    "alexandria":[
+      {file:"Bibliotheca Alexandrina (1).jpg",author:"A maraqa",license:"CC BY-SA 4.0",subject:"Bibliotheca Alexandrina modern library complex in Alexandria, Egypt",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:5216,height:3477}
+    ],
+    "lagos":[
+      {file:"National Theater, Lagos.jpg",author:"Omoeko Media",license:"CC BY-SA 4.0",subject:"Nigeria National Theatre building, Lagos",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:6016,height:3848}
+    ],
+    "auckland":[
+      {file:"Auckland Harbour Bridge From Sky Tower.jpg",author:"James Shih",license:"CC BY-SA 4.0",subject:"Auckland Harbour Bridge, Westhaven Marina and waterfront from Sky Tower",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:4032,height:3024}
+    ],
+    "papeete":[
+      {file:"Tahitian local market 01.jpg",author:"grandmasterhuon",license:"CC0 1.0",subject:"Local public market in Papeete, Tahiti, French Polynesia",licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/",width:4032,height:3024}
+    ],
+    "valencia":[
+      {file:"Valencia, Ciudad de las Ciencias y de las Artes.jpg",author:"Jcca76",license:"CC BY-SA 4.0",subject:"City of Arts and Sciences architectural panorama in Valencia, Spain",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:4288,height:2848},
+      {file:"Torres de Serranos. Valencia.jpg",author:"José Luis Filpo Cabana",license:"CC BY 3.0",subject:"Medieval Serranos Towers city gate in Valencia, Spain",licenseUrl:"https://creativecommons.org/licenses/by/3.0/",width:2736,height:2736}
+    ],
+    "cape_coast":[
+      {file:"Beach by Cape Coast.jpg",author:"Kradolferp",license:"CC BY-SA 4.0",subject:"Beach landscape and coastline at Cape Coast, Ghana",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:7360,height:4912}
+    ],
+    "country-ne":[
+      {file:"Niger, Agadez (29), busy street, city centre.jpg",author:"Vincent van Zeijst",license:"CC BY-SA 4.0",subject:"Historic Agadez town-centre market and busy street in Niger",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:3264,height:2448}
+    ],
+    "country-hn":[
+      {file:"Some of the Copan Ruins further from the entrance.jpg",author:"ButteBag",license:"CC BY-SA 4.0",subject:"Copán archaeological ruins and Maya remains in Honduras",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:4032,height:3024}
+    ],
+    "country-cv":[
+      {file:"Port Mindelo.jpg",author:"Cadouf",license:"CC BY-SA 4.0",subject:"Fishing boats and harbour in Mindelo, São Vicente, Cabo Verde",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",width:2048,height:1536}
+    ],
     "country-bz":[
       {file:'Belize Caye Caulker-226.jpg',author:'Dronepicr',license:'CC BY 3.0',licenseUrl:'https://creativecommons.org/licenses/by/3.0/',subject:'Scenic aerial view over the Belizean island of Caye Caulker and its turquoise sea',width:3992,height:2242}
     ],
