@@ -43,8 +43,8 @@ assert.equal(complete,365,'Exclude wrong-place name collisions from source tally
 assert.equal(approved,12);
 const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
 const sw=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
-for(const source of ['world-curated-photos.js','world-location-photo-gallery.js'])assert(html.includes(source+'?v='+(source==='world-curated-photos.js'?'109':'111')));
-assert(sw.includes('revision-loop-v113-complete-partial-world-galleries'));
+for(const source of ['world-curated-photos.js','world-location-photo-gallery.js'])assert(html.includes(source+'?v='+(source==='world-curated-photos.js'?'114':'111')));
+assert(sw.includes('revision-loop-v114-distinct-place-galleries'));
 (async()=>{
  const media={verifyNamedFiles:async photos=>photos};
  for(const [id,cfg] of Object.entries(groups)){
