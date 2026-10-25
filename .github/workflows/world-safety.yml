@@ -26,6 +26,7 @@ jobs:
           node tests/world-profile-preservation.cjs
           node tests/world-production-economy-integration.cjs
           node tests/world-streak-points-only-v94.cjs
+          node tests/world-fair-shop-v95.cjs
       - name: Verify country explorer, globe bridge and photo licensing
         run: |
           node tests/world-globe-article-bridge.cjs
