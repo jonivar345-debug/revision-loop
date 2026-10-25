@@ -126,6 +126,10 @@
   "uluru": {
     "slot": 3,
     "file": "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3615.jpg"
+  },
+  "country-va": {
+    "slot": 2,
+    "file": "Gardens in the Vatican City (2).jpg"
   }
 });
   return Object.freeze({get:id=>selections[id]||null,all:()=>({...selections})});
