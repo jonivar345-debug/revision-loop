@@ -653,3 +653,17 @@
  color:#e2e8f0;background:linear-gradient(transparent,rgba(3,9,25,.88));font-size:.55rem;line-height:1.3}
 .outfit-card .character-art .character-loading>small{display:none}
 .character-art .outfit-garment-details{pointer-events:none}
+
+/* World v101: gallery tiles remain photography-first. Source attributions are
+   available through the single Image licences control instead of per-card badges. */
+.destination-photo-credits{display:none!important}
+.world-photo-credits-access{display:flex;justify-content:flex-end;margin:-.5rem 0 .7rem}
+.world-image-licences-btn{border:0;background:transparent;color:var(--muted);font-size:.8rem;text-decoration:underline;text-underline-offset:3px;padding:.4rem .25rem}
+.world-image-licences-btn:hover,.world-image-licences-btn:focus-visible{color:var(--blue)}
+.world-photo-credits-dialog{border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);width:min(680px,calc(100vw - 32px));max-height:min(80vh,700px);padding:1.2rem;box-shadow:0 15px 45px #0003}
+.world-photo-credits-dialog::backdrop{background:rgba(15,23,42,.55)}
+.world-photo-credits-dialog header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.world-photo-credits-dialog h2{font-size:1.2rem;margin:0}
+.world-photo-credits-dialog p{font-size:.9rem;line-height:1.5;color:var(--muted)}
+.world-photo-credits-list{padding-left:1.25rem;display:grid;gap:.85rem;font-size:.88rem;overflow-wrap:anywhere}
+.world-photo-credits-list a{color:var(--blue);text-decoration:underline}

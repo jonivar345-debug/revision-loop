@@ -205,6 +205,7 @@
       </section>
 
       <div class="section-head globe-head"><div><h2>World locations</h2><p>Unlock destinations, rotate a geographically accurate Earth, and open researched information by selecting an owned pin.</p></div><strong id="locationCount">0 / 0</strong></div>
+      <div class="world-photo-credits-access"><button id="worldPhotoCreditsButton" type="button" class="world-image-licences-btn">Image licences</button></div>
       <div class="globe-card">
         <canvas id="globe" width="700" height="360" aria-label="Interactive globe showing collectable world locations"></canvas>
         <div class="globe-finder">
@@ -237,6 +238,11 @@
       <button id="moreLocations" class="mini-btn world-more hidden">Show more locations</button>
     </section>
   </main>
+  <dialog id="worldPhotoCreditsDialog" class="world-photo-credits-dialog" aria-labelledby="worldPhotoCreditsTitle">
+    <header><h2 id="worldPhotoCreditsTitle">Image licences</h2><button id="worldPhotoCreditsClose" type="button" class="mini-btn">Close</button></header>
+    <p>Photographer, original image and reuse licence for photographs currently shown in the World shop and unlocked galleries. Locally stored photographs retain their original attribution.</p>
+    <ul id="worldPhotoCreditsList" class="world-photo-credits-list"></ul>
+  </dialog>
 </div>
 <script src="world-earth-renderer.js?v=68" defer></script>
 <script src="world-location-map-preview.js?v=69" defer></script>
@@ -246,8 +252,9 @@
 <script src="world-photo-discovery-data.js?v=91" defer></script>
 <script src="world-photo-enrichment-v85.js?v=91" defer></script>
   <script src="world-curated-photos.js?v=99" defer></script>
-<script src="world-local-photos.js?v=100" defer></script>
-<script src="world-location-photo-gallery.js?v=100" defer></script>
+<script src="world-local-photos.js?v=101" defer></script>
+<script src="world-photo-credits.js?v=101" defer></script>
+<script src="world-location-photo-gallery.js?v=101" defer></script>
 <script src="app.js?v=78" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>

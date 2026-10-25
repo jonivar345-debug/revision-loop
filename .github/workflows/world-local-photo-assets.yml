@@ -1,8 +1,8 @@
-name: Build locally hosted World photo pilot
+name: Build locally hosted World photo expansion
 
 on:
   push:
-    branches: [feature/local-world-photo-pilot-20261025]
+    branches: [feature/world-v101-local-photo-expansion]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
