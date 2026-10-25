@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "14 independently authored AQA AS Atomic Structure practice questions. Emphasis on TOF spectrometry; no official paper provenance is claimed. Explanations stay hidden until after an attempt.",
+  "notes": "14 independently authored AQA AS Atomic Structure practice questions. Emphasis on TOF spectrometry; no official paper provenance is claimed. Explanations stay hidden until after an attempt. Added a separate original 5-mark data-linked Period 3 first-ionisation-energy explanation in v46, covering general trend, Mg/Al and P/S exceptions; not an official published AQA question.",
   "questions": [
     {
       "id": "atomic_v43_01",
@@ -586,6 +586,46 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "atomic_v43_14",
+      "groupOrder": 1
+    },
+    {
+      "id": "atomic_period3_focus_v46_01",
+      "subject": "Chemistry",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Period 3 ionisation energy question",
+      "paper": "Original",
+      "question": "15",
+      "topic": "Ionisation energy",
+      "subtopic": "Period 3 first-ionisation-energy exceptions",
+      "revisionTopic": "Ionisation energy",
+      "courseTopic": "Atomic structure",
+      "marks": 5,
+      "prompt": "The first ionisation energies of four Period 3 elements are: Mg 738 kJ mol⁻¹, Al 578 kJ mol⁻¹, P 1012 kJ mol⁻¹ and S 1000 kJ mol⁻¹. The general trend across Period 3 is an increase in first ionisation energy. Explain the general trend and account for both decreases from Mg to Al and P to S. Refer to electron subshells and electron pairing in your explanation. [5 marks]",
+      "markPoints": [
+        "Nuclear charge increases across Period 3 because proton number rises.",
+        "Outer electrons are added to the same principal shell, so shielding stays approximately constant and the stronger nuclear attraction usually raises the first ionisation energy.",
+        "Aluminium loses a higher-energy 3p electron, whereas magnesium loses a lower-energy 3s electron, making aluminium's first ionisation energy lower.",
+        "Phosphorus has three singly occupied 3p orbitals, whereas sulfur has two electrons paired in one 3p orbital.",
+        "Repulsion between the paired 3p electrons in sulfur makes one electron easier to remove, so the first ionisation energy of S is below P."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Nuclear charge increases across Period 3 because proton number rises. Outer electrons are added to the same principal shell, so shielding stays approximately constant and the stronger nuclear attraction usually raises the first ionisation energy. Aluminium loses a higher-energy 3p electron, whereas magnesium loses a lower-energy 3s electron, making aluminium's first ionisation energy lower. Phosphorus has three singly occupied 3p orbitals, whereas sulfur has two electrons paired in one 3p orbital. Repulsion between the paired 3p electrons in sulfur makes one electron easier to remove, so the first ionisation energy of S is below P.",
+      "answerType": "points",
+      "questionType": "extended explanation",
+      "requiresWorking": false,
+      "standalone": true,
+      "mock": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "atomic_period3_focus_v46_01",
       "groupOrder": 1
     }
   ]
