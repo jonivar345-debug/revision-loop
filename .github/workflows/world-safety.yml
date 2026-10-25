@@ -49,6 +49,7 @@ jobs:
           node tests/world-photo-wave3-20261025.cjs
           node tests/world-photo-wave4-20261025.cjs
           node tests/world-photo-wave5-v97.cjs
+          node tests/world-country-photos-v99.cjs
           node tests/world-photo-cover-fallback-v85.cjs
           node scripts/audit-world-photo-depth.cjs
           node tests/world-photo-original-resolution.cjs
