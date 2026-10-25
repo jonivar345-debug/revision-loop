@@ -122,6 +122,7 @@
     let score=(Number(item.width)>=3000?8:Number(item.width)>=1800?4:0);
     if(item.qualityPriority===1000&&item.source==='editorial-source')score+=1000;
     if(item.qualityPriority===900&&item.source==='editorial-source')score+=900;
+    if(item.qualityPriority===950&&item.source==='editorial-source')score+=950;
     if(main.length>=4&&name.includes(main))score+=10;
     if(/panoram|skyline|aerial|scenic|view|waterfront|sunset|sunrise|cityscape|landscape|historic|bridge|harbour|harbor|mountain|cathedral|temple|beach|coast/.test(name))score+=8;
     if(/entrance|window|signboard|interior|construction|parking|carpark|person|people|advert|hotel room|museum object/.test(name))score-=14;
