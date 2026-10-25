@@ -54,5 +54,5 @@ assert(world.get('vilnius').some(p=>p.file.includes('Vilnius Old Town')),'Vilniu
 assert(world.get('chicago').every(p=>!p.file.includes('Police Interceptor')),'Wrong Chicago photo not removed');
 assert(world.get('country-az').every(p=>!p.file.includes('population pyramid')),'Population charts cannot count as country pictures');
 for(const id of ['london','busan'])assert.equal(world.get(id).filter(p=>p.checked).length,4,'Original individually pixel-reviewed gallery must remain');
-assert(fs.readFileSync(path.join(base,'sw.js'),'utf8').includes("revision-loop-v101-local-photo-expansion"));
+assert(fs.readFileSync(path.join(base,'sw.js'),'utf8').includes("revision-loop-v102-optimized-local-photos"));
 console.log('PASS v83 extensive coverage: '+compiled.length+' source-backed locations, '+sum+' source records, '+ids.length+' discovery groups, '+photoCount+' provisional CC photographs; existing London/Busan unchanged, rejects scenery mismatches, current Commons validation remains required.');

@@ -22,15 +22,15 @@ for(const [id,names] of Object.entries(manifest.locations)){
     for(const file of [p.url,p.localCoverUrl]){
       const pathname=path.join(directory,file);
       const bytes=fs.readFileSync(pathname);
-      assert(bytes.length>=16000,file+' too small');
-      assert.equal(bytes[0],0xff,file+' not JPEG');
-      assert.equal(bytes[1],0xd8,file+' not JPEG');
-      assert.equal(bytes.at(-2),0xff,file+' incomplete JPEG');
-      assert.equal(bytes.at(-1),0xd9,file+' incomplete JPEG');
+      assert(bytes.length>=6000,file+' too small');
+      assert.equal(bytes.toString('ascii',0,4),'RIFF',file+' not RIFF');
+      assert.equal(bytes.toString('ascii',8,12),'WEBP',file+' not WebP');
+      assert(file.endsWith('.webp'),'JPEG delivery path reintroduced');
     }
     count++;
   }
 }
 const attributions=JSON.parse(fs.readFileSync(path.resolve(directory,'assets/world/ATTRIBUTION.json')));
 assert.equal(attributions.length,count);
-console.log('Local photo archive validated: '+count+' credited photographs and '+count*2+' real JPEG files.');
+assert(attributions.every(p=>p.format==='image/webp'&&p.galleryBytes>=6000&&p.coverBytes>=6000));
+console.log('Local photo archive validated: '+count+' licensed photographs and '+count*2+' real WebP files.');

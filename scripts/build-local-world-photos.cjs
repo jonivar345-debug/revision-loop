@@ -64,6 +64,11 @@ async function main(){
   async function savedJpeg(name){
     try{const bytes=await fsp.readFile(name);return bytes.length>=16000&&bytes[0]===255&&bytes[1]===216&&bytes.at(-2)===255&&bytes.at(-1)===217?bytes.length:0;}catch{return 0;}
   }
+  async function savedWebp(name){
+    try{const bytes=await fsp.readFile(name);
+      return bytes.length>=6000&&bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP'?bytes.length:0;
+    }catch{return 0;}
+  }
   for(const [id,names] of Object.entries(manifest.locations)){
     const known=get(id);const selected=[];const seen=new Set();
     await fsp.mkdir(path.join(base,id),{recursive:true});
@@ -81,10 +86,14 @@ async function main(){
       if(Number(info.width)<1800||Number(info.height)<800)
         throw new Error('Original resolution below accepted minimum: '+name);
       const index=String(i+1).padStart(2,'0');
-      const gallery=id+'/'+index+'-gallery.jpg';
-      const cover=id+'/'+index+'-cover.jpg';
-      const gallerySize=(await savedJpeg(path.join(base,gallery)))||await download(name,1800,path.join(base,gallery),info.thumburl);
-      const coverSize=(await savedJpeg(path.join(base,cover)))||await download(name,880,path.join(base,cover));
+      const gallery=id+'/'+index+'-gallery.webp';
+      const cover=id+'/'+index+'-cover.webp';
+      const galleryWebp=await savedWebp(path.join(base,gallery));
+      const coverWebp=await savedWebp(path.join(base,cover));
+      // Existing optimized copies remain first-party assets and are never
+      // downloaded from Commons again; new sources stage JPEGs for Pillow.
+      const gallerySize=galleryWebp||((await savedJpeg(path.join(base,id+'/'+index+'-gallery.jpg')))||await download(name,1800,path.join(base,id+'/'+index+'-gallery.jpg'),info.thumburl));
+      const coverSize=coverWebp||((await savedJpeg(path.join(base,id+'/'+index+'-cover.jpg')))||await download(name,880,path.join(base,id+'/'+index+'-cover.jpg')));
       totalBytes+=gallerySize+coverSize;
       const result={...entry,source:'local-library',checked:true,locationVerified:true,
         url:'./assets/world/'+gallery,localCoverUrl:'./assets/world/'+cover};
@@ -93,7 +102,7 @@ async function main(){
         licenseUrl:entry.licenseUrl,sourcePage:entry.filePage,
         originalUrl:info.url,originalWidth:info.width,originalHeight:info.height,
         displayedGallery:result.url,displayedCover:result.localCoverUrl,
-        changes:'Resized/display-sized JPEG derivatives supplied by Wikimedia Commons',
+        changes:'Display-sized Commons derivative converted to WebP for local hosting; no upscaling',
         galleryBytes:gallerySize,coverBytes:coverSize});
       process.stdout.write(id+' '+(i+1)+'/'+names.length+': '+name+'\n');
     }
@@ -107,6 +116,6 @@ async function main(){
     '})(typeof window==="object"?window:null);\n';
   await fsp.writeFile(path.resolve(__dirname,'../world-local-photos.js'),js);
   await fsp.writeFile(path.join(base,'ATTRIBUTION.json'),JSON.stringify(attribution,null,2)+'\n');
-  console.log('Saved '+attribution.length+' photographs × 2 sizes ('+(totalBytes/1048576).toFixed(1)+' MiB)');
+  console.log('Verified '+attribution.length+' Commons photo sources; staging/optimized assets ('+(totalBytes/1048576).toFixed(1)+' MiB before conversion)');
 }
 main().catch(err=>{console.error(err.stack||String(err));process.exitCode=1;});

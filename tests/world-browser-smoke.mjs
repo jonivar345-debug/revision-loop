@@ -7,7 +7,7 @@ import path from 'node:path';
 import { chromium } from 'playwright';
 
 const cwd=process.cwd();
-const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.svg':'image/svg+xml','.jpg':'image/jpeg'};
+const mime={'.webp':'image/webp','.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webmanifest':'application/manifest+json','.png':'image/png','.svg':'image/svg+xml','.jpg':'image/jpeg'};
 const server=http.createServer(async(req,res)=>{
  try{
   const uri=new URL(req.url||'/', 'http://localhost/');
@@ -99,6 +99,29 @@ try{
    assert.equal(p.pictures[0].filePage,p.first,p.id+' shop thumbnail should match the unlocked gallery');
  }
  console.log('PASS London and Busan: four local real photos each, with original-source credits and matching shop/gallery lead.');
+
+ // Check actual WebP decoding; a correct filename alone does not prove it loads.
+ const decodedWorldImages=await page.evaluate(async()=>{
+   const output=[];
+   for(const id of ['london','busan','tokyo','rome','istanbul']){
+     const images=window.RevisionWorldLocalPhotos.get(id);
+     if(images.length!==4)throw Error('Missing four local photos for '+id);
+     const first=images[0];
+     for(const field of ['url','localCoverUrl']){
+       const relative=first[field];
+       if(!relative.endsWith('.webp')||!relative.startsWith('./assets/world/'))throw Error('Nonlocal or non-WebP '+id+' '+field);
+       const element=new Image();
+       element.src=relative;
+       await element.decode();
+       output.push({id,field,width:element.naturalWidth,height:element.naturalHeight});
+     }
+   }
+   return output;
+ });
+ assert.equal(decodedWorldImages.length,10,'Failed local image decoding coverage');
+ assert(decodedWorldImages.every(x=>x.width>=360&&x.height>=60),'Local gallery or cover decoded at invalid resolution');
+ console.log('PASS WebP image decoding: 10 local files across five World destinations, both image sizes.');
+
 
  await page.waitForFunction(()=>earthTextureReady===true&&earthW>=700,null,{timeout:25000});
  const globeState=await page.evaluate(()=>{

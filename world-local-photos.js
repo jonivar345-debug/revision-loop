@@ -10,12 +10,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:The_Tower_Bridge%2C_London%2C_UK.jpg",
-      "url": "./assets/world/london/01-gallery.jpg",
+      "url": "./assets/world/london/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tower_Bridge%2C_London%2C_UK.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:The_Tower_Bridge%2C_London%2C_UK.jpg",
       "description": "Tower Bridge",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/london/01-cover.jpg"
+      "localCoverUrl": "./assets/world/london/01-cover.webp"
     },
     {
       "file": "File:Panorama London 2012.jpg",
@@ -26,12 +26,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_London_2012.jpg",
-      "url": "./assets/world/london/02-gallery.jpg",
+      "url": "./assets/world/london/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_London_2012.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Panorama_London_2012.jpg",
       "description": "Westminster and Big Ben",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/london/02-cover.jpg"
+      "localCoverUrl": "./assets/world/london/02-cover.webp"
     },
     {
       "file": "File:At London 2024 019.jpg",
@@ -42,12 +42,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:At_London_2024_019.jpg",
-      "url": "./assets/world/london/03-gallery.jpg",
+      "url": "./assets/world/london/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/At_London_2024_019.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:At_London_2024_019.jpg",
       "description": "Millennium Bridge and the City",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/london/03-cover.jpg"
+      "localCoverUrl": "./assets/world/london/03-cover.webp"
     },
     {
       "file": "File:St Pauls Cathedral in London.jpg",
@@ -58,12 +58,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:St_Pauls_Cathedral_in_London.jpg",
-      "url": "./assets/world/london/04-gallery.jpg",
+      "url": "./assets/world/london/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Pauls_Cathedral_in_London.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:St_Pauls_Cathedral_in_London.jpg",
       "description": "St Paul’s Cathedral",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/london/04-cover.jpg"
+      "localCoverUrl": "./assets/world/london/04-cover.webp"
     }
   ],
   "busan": [
@@ -76,12 +76,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Haeundae_District_and_Beach.jpg",
-      "url": "./assets/world/busan/01-gallery.jpg",
+      "url": "./assets/world/busan/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Haeundae_District_and_Beach.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Haeundae_District_and_Beach.jpg",
       "description": "Haeundae beachfront and skyline",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/busan/01-cover.jpg"
+      "localCoverUrl": "./assets/world/busan/01-cover.webp"
     },
     {
       "file": "File:Gwangalli bridge at sunset.jpg",
@@ -92,12 +92,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Gwangalli_bridge_at_sunset.jpg",
-      "url": "./assets/world/busan/02-gallery.jpg",
+      "url": "./assets/world/busan/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gwangalli_bridge_at_sunset.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Gwangalli_bridge_at_sunset.jpg",
       "description": "Gwangalli Bridge at sunset",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/busan/02-cover.jpg"
+      "localCoverUrl": "./assets/world/busan/02-cover.webp"
     },
     {
       "file": "File:Gamcheon Culture Village in Busan, South Korea.jpg",
@@ -108,12 +108,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Gamcheon_Culture_Village_in_Busan%2C_South_Korea.jpg",
-      "url": "./assets/world/busan/03-gallery.jpg",
+      "url": "./assets/world/busan/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gamcheon_Culture_Village_in_Busan%2C_South_Korea.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Gamcheon_Culture_Village_in_Busan%2C_South_Korea.jpg",
       "description": "Gamcheon Culture Village",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/busan/03-cover.jpg"
+      "localCoverUrl": "./assets/world/busan/03-cover.webp"
     },
     {
       "file": "File:Haedong Yonggungsa, Busan.jpg",
@@ -124,12 +124,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa%2C_Busan.jpg",
-      "url": "./assets/world/busan/04-gallery.jpg",
+      "url": "./assets/world/busan/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Haedong_Yonggungsa%2C_Busan.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa%2C_Busan.jpg",
       "description": "Haedong Yonggungsa Temple",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/busan/04-cover.jpg"
+      "localCoverUrl": "./assets/world/busan/04-cover.webp"
     }
   ],
   "country-bz": [
@@ -147,12 +147,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Belize_Blue_Hole.jpg",
-      "url": "./assets/world/country-bz/01-gallery.jpg",
+      "url": "./assets/world/country-bz/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Belize_Blue_Hole.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Belize_Blue_Hole.jpg",
       "description": "Aerial photograph of Belize Great Blue Hole and Lighthouse Reef",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-bz/01-cover.jpg"
+      "localCoverUrl": "./assets/world/country-bz/01-cover.webp"
     },
     {
       "file": "File:Cockscomb Basin waterfall.jpg",
@@ -168,12 +168,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Cockscomb_Basin_waterfall.jpg",
-      "url": "./assets/world/country-bz/02-gallery.jpg",
+      "url": "./assets/world/country-bz/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cockscomb_Basin_waterfall.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Cockscomb_Basin_waterfall.jpg",
       "description": "Cockscomb Basin waterfall in tropical rainforest, Belize",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-bz/02-cover.jpg"
+      "localCoverUrl": "./assets/world/country-bz/02-cover.webp"
     }
   ],
   "country-al": [
@@ -191,12 +191,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Thethi_landscape.jpg",
-      "url": "./assets/world/country-al/01-gallery.jpg",
+      "url": "./assets/world/country-al/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Thethi_landscape.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Thethi_landscape.jpg",
       "description": "Theth valley and Albanian Alps scenery",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-al/01-cover.jpg"
+      "localCoverUrl": "./assets/world/country-al/01-cover.webp"
     }
   ],
   "country-kz": [
@@ -214,12 +214,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%9E%D0%AE%D0%A9%D0%98%D0%99_%D0%91%D0%90%D0%A0%D0%A5%D0%90%D0%9D.jpg",
-      "url": "./assets/world/country-kz/01-gallery.jpg",
+      "url": "./assets/world/country-kz/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%9E%D0%AE%D0%A9%D0%98%D0%99_%D0%91%D0%90%D0%A0%D0%A5%D0%90%D0%9D.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%9E%D0%AE%D0%A9%D0%98%D0%99_%D0%91%D0%90%D0%A0%D0%A5%D0%90%D0%9D.jpg",
       "description": "Singing Dune of Altyn-Emel National Park, Kazakhstan",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-kz/01-cover.jpg"
+      "localCoverUrl": "./assets/world/country-kz/01-cover.webp"
     }
   ],
   "country-iq": [
@@ -237,12 +237,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:View_of_Erbil_skyline_from_the_Citadel_in_the_Kurdistan_Region_of_Iraq_01.jpg",
-      "url": "./assets/world/country-iq/01-gallery.jpg",
+      "url": "./assets/world/country-iq/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Erbil_skyline_from_the_Citadel_in_the_Kurdistan_Region_of_Iraq_01.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:View_of_Erbil_skyline_from_the_Citadel_in_the_Kurdistan_Region_of_Iraq_01.jpg",
       "description": "Erbil city skyline from the ancient Citadel",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-iq/01-cover.jpg"
+      "localCoverUrl": "./assets/world/country-iq/01-cover.webp"
     },
     {
       "file": "File:Samrraa 01.jpg",
@@ -258,12 +258,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Samrraa_01.jpg",
-      "url": "./assets/world/country-iq/02-gallery.jpg",
+      "url": "./assets/world/country-iq/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Samrraa_01.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Samrraa_01.jpg",
       "description": "Spiral Minaret of the Great Mosque of Samarra in Iraq",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-iq/02-cover.jpg"
+      "localCoverUrl": "./assets/world/country-iq/02-cover.webp"
     }
   ],
   "country-sz": [
@@ -279,12 +279,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Mlilwane_Wildlife_Sanctuary_in_Eswatini_01.jpg",
-      "url": "./assets/world/country-sz/01-gallery.jpg",
+      "url": "./assets/world/country-sz/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mlilwane_Wildlife_Sanctuary_in_Eswatini_01.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Mlilwane_Wildlife_Sanctuary_in_Eswatini_01.jpg",
       "description": "Landscape in Mlilwane Wildlife Sanctuary Eswatini",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-sz/01-cover.jpg"
+      "localCoverUrl": "./assets/world/country-sz/01-cover.webp"
     },
     {
       "file": "File:Mantenga Falls.jpg",
@@ -300,12 +300,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Mantenga_Falls.jpg",
-      "url": "./assets/world/country-sz/02-gallery.jpg",
+      "url": "./assets/world/country-sz/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mantenga_Falls.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Mantenga_Falls.jpg",
       "description": "Mantenga Falls in Eswatini",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/country-sz/02-cover.jpg"
+      "localCoverUrl": "./assets/world/country-sz/02-cover.webp"
     }
   ],
   "tokyo": [
@@ -319,12 +319,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:2025_Shibuya_Crossing_at_night.jpg",
-      "url": "./assets/world/tokyo/01-gallery.jpg",
+      "url": "./assets/world/tokyo/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Shibuya_Crossing_at_night.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:2025_Shibuya_Crossing_at_night.jpg",
       "description": "Shibuya Crossing at night",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tokyo/01-cover.jpg"
+      "localCoverUrl": "./assets/world/tokyo/01-cover.webp"
     },
     {
       "file": "File:Tokyo Tower 2020.jpg",
@@ -336,12 +336,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2020.jpg",
-      "url": "./assets/world/tokyo/02-gallery.jpg",
+      "url": "./assets/world/tokyo/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Tower_2020.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2020.jpg",
       "description": "Illuminated Tokyo Tower",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tokyo/02-cover.jpg"
+      "localCoverUrl": "./assets/world/tokyo/02-cover.webp"
     },
     {
       "file": "File:Senso-ji.jpg",
@@ -353,12 +353,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Senso-ji.jpg",
-      "url": "./assets/world/tokyo/03-gallery.jpg",
+      "url": "./assets/world/tokyo/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Senso-ji.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Senso-ji.jpg",
       "description": "Kaminarimon gate at Sensō-ji in Asakusa",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tokyo/03-cover.jpg"
+      "localCoverUrl": "./assets/world/tokyo/03-cover.webp"
     },
     {
       "file": "File:Tokyo Skytree 20250831 105130.jpg",
@@ -370,12 +370,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_20250831_105130.jpg",
-      "url": "./assets/world/tokyo/04-gallery.jpg",
+      "url": "./assets/world/tokyo/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo_Skytree_20250831_105130.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_20250831_105130.jpg",
       "description": "Tokyo Skytree",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tokyo/04-cover.jpg"
+      "localCoverUrl": "./assets/world/tokyo/04-cover.webp"
     }
   ],
   "seoul": [
@@ -389,12 +389,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Seoul_from_Namsan.jpg",
-      "url": "./assets/world/seoul/01-gallery.jpg",
+      "url": "./assets/world/seoul/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul_from_Namsan.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Seoul_from_Namsan.jpg",
       "description": "Wide view across Seoul from Namsan",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/seoul/01-cover.jpg"
+      "localCoverUrl": "./assets/world/seoul/01-cover.webp"
     },
     {
       "file": "File:Panoramic view of Hyangwonjeong Pavilion in its pond at Gyeongbokgung Palace with blue sky in Seoul.jpg",
@@ -406,12 +406,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Hyangwonjeong_Pavilion_in_its_pond_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg",
-      "url": "./assets/world/seoul/02-gallery.jpg",
+      "url": "./assets/world/seoul/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Hyangwonjeong_Pavilion_in_its_pond_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Hyangwonjeong_Pavilion_in_its_pond_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg",
       "description": "Hyangwonjeong Pavilion at Gyeongbokgung Palace",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/seoul/02-cover.jpg"
+      "localCoverUrl": "./assets/world/seoul/02-cover.webp"
     },
     {
       "file": "File:Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg",
@@ -423,12 +423,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Traditional_hanok_houses_at_golden_hour_in_Bukchon_Hanok_Village_in_Seoul.jpg",
-      "url": "./assets/world/seoul/03-gallery.jpg",
+      "url": "./assets/world/seoul/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional_hanok_houses_at_golden_hour_in_Bukchon_Hanok_Village_in_Seoul.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Traditional_hanok_houses_at_golden_hour_in_Bukchon_Hanok_Village_in_Seoul.jpg",
       "description": "Traditional hanok houses in Bukchon",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/seoul/03-cover.jpg"
+      "localCoverUrl": "./assets/world/seoul/03-cover.webp"
     },
     {
       "file": "File:Myeongdong Cathedral 2.jpg",
@@ -440,12 +440,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Myeongdong_Cathedral_2.jpg",
-      "url": "./assets/world/seoul/04-gallery.jpg",
+      "url": "./assets/world/seoul/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Myeongdong_Cathedral_2.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Myeongdong_Cathedral_2.jpg",
       "description": "Myeongdong Cathedral",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/seoul/04-cover.jpg"
+      "localCoverUrl": "./assets/world/seoul/04-cover.webp"
     }
   ],
   "tbilisi": [
@@ -463,12 +463,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Old_Tbilisi_town_in_Tbilisi%2C_Georgia.jpg",
-      "url": "./assets/world/tbilisi/01-gallery.jpg",
+      "url": "./assets/world/tbilisi/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Tbilisi_town_in_Tbilisi%2C_Georgia.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Old_Tbilisi_town_in_Tbilisi%2C_Georgia.jpg",
       "description": "Old Tbilisi town and Mtkvari River panorama from Metekhi; replaces a second repetitive Narikala view",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tbilisi/01-cover.jpg"
+      "localCoverUrl": "./assets/world/tbilisi/01-cover.webp"
     },
     {
       "file": "File:Old Town and Narikala, Tbilisi.jpg",
@@ -480,12 +480,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Old_Town_and_Narikala%2C_Tbilisi.jpg",
-      "url": "./assets/world/tbilisi/02-gallery.jpg",
+      "url": "./assets/world/tbilisi/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_and_Narikala%2C_Tbilisi.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Old_Town_and_Narikala%2C_Tbilisi.jpg",
       "description": "Old Tbilisi and Narikala at dusk",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tbilisi/02-cover.jpg"
+      "localCoverUrl": "./assets/world/tbilisi/02-cover.webp"
     },
     {
       "file": "File:Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg",
@@ -497,12 +497,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Holy_Trinity_Cathedral_(Sameba)_(9458174189).jpg",
-      "url": "./assets/world/tbilisi/03-gallery.jpg",
+      "url": "./assets/world/tbilisi/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_-_Holy_Trinity_Cathedral_(Sameba)_(9458174189).jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Holy_Trinity_Cathedral_(Sameba)_(9458174189).jpg",
       "description": "Holy Trinity Cathedral of Tbilisi",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tbilisi/03-cover.jpg"
+      "localCoverUrl": "./assets/world/tbilisi/03-cover.webp"
     },
     {
       "file": "File:Roofs of the sulfur baths in Tbilisi.jpg",
@@ -514,12 +514,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Roofs_of_the_sulfur_baths_in_Tbilisi.jpg",
-      "url": "./assets/world/tbilisi/04-gallery.jpg",
+      "url": "./assets/world/tbilisi/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Roofs_of_the_sulfur_baths_in_Tbilisi.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Roofs_of_the_sulfur_baths_in_Tbilisi.jpg",
       "description": "Abanotubani sulphur bathhouse rooftops",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/tbilisi/04-cover.jpg"
+      "localCoverUrl": "./assets/world/tbilisi/04-cover.webp"
     }
   ],
   "singapore": [
@@ -533,12 +533,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands.jpeg",
-      "url": "./assets/world/singapore/01-gallery.jpg",
+      "url": "./assets/world/singapore/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Sands.jpeg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands.jpeg",
       "description": "Marina Bay Sands",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/singapore/01-cover.jpg"
+      "localCoverUrl": "./assets/world/singapore/01-cover.webp"
     },
     {
       "file": "File:Gardens-by-the-bay.jpg",
@@ -550,12 +550,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Gardens-by-the-bay.jpg",
-      "url": "./assets/world/singapore/02-gallery.jpg",
+      "url": "./assets/world/singapore/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gardens-by-the-bay.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Gardens-by-the-bay.jpg",
       "description": "Supertree Grove at Gardens by the Bay",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/singapore/02-cover.jpg"
+      "localCoverUrl": "./assets/world/singapore/02-cover.webp"
     },
     {
       "file": "File:Chinatown Singapore.jpg",
@@ -567,12 +567,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Chinatown_Singapore.jpg",
-      "url": "./assets/world/singapore/03-gallery.jpg",
+      "url": "./assets/world/singapore/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chinatown_Singapore.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Chinatown_Singapore.jpg",
       "description": "A street in Singapore's Chinatown",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/singapore/03-cover.jpg"
+      "localCoverUrl": "./assets/world/singapore/03-cover.webp"
     },
     {
       "file": "File:The Jewel, Singapore (IMG 20230827 155118).jpg",
@@ -584,12 +584,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:The_Jewel%2C_Singapore_(IMG_20230827_155118).jpg",
-      "url": "./assets/world/singapore/04-gallery.jpg",
+      "url": "./assets/world/singapore/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Jewel%2C_Singapore_(IMG_20230827_155118).jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:The_Jewel%2C_Singapore_(IMG_20230827_155118).jpg",
       "description": "Jewel Changi Airport",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/singapore/04-cover.jpg"
+      "localCoverUrl": "./assets/world/singapore/04-cover.webp"
     }
   ],
   "paris": [
@@ -603,12 +603,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_from_Trocadero-2026-07-msu--.jpg",
-      "url": "./assets/world/paris/01-gallery.jpg",
+      "url": "./assets/world/paris/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower_from_Trocadero-2026-07-msu--.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_from_Trocadero-2026-07-msu--.jpg",
       "description": "Eiffel Tower viewed from the Trocadéro",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/paris/01-cover.jpg"
+      "localCoverUrl": "./assets/world/paris/01-cover.webp"
     },
     {
       "file": "File:Panorama of the Musée du Louvre.jpg",
@@ -620,12 +620,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_of_the_Mus%C3%A9e_du_Louvre.jpg",
-      "url": "./assets/world/paris/02-gallery.jpg",
+      "url": "./assets/world/paris/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_the_Mus%C3%A9e_du_Louvre.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Panorama_of_the_Mus%C3%A9e_du_Louvre.jpg",
       "description": "Panorama of the Louvre from the Tuileries",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/paris/02-cover.jpg"
+      "localCoverUrl": "./assets/world/paris/02-cover.webp"
     },
     {
       "file": "File:Montmartre - Paris1.jpg",
@@ -637,12 +637,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Montmartre_-_Paris1.jpg",
-      "url": "./assets/world/paris/03-gallery.jpg",
+      "url": "./assets/world/paris/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Montmartre_-_Paris1.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Montmartre_-_Paris1.jpg",
       "description": "Montmartre in Paris",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/paris/03-cover.jpg"
+      "localCoverUrl": "./assets/world/paris/03-cover.webp"
     },
     {
       "file": "File:Notre Dame Cathedral, Paris.jpg",
@@ -654,12 +654,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Notre_Dame_Cathedral%2C_Paris.jpg",
-      "url": "./assets/world/paris/04-gallery.jpg",
+      "url": "./assets/world/paris/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Notre_Dame_Cathedral%2C_Paris.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Notre_Dame_Cathedral%2C_Paris.jpg",
       "description": "Notre-Dame cathedral in Paris",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/paris/04-cover.jpg"
+      "localCoverUrl": "./assets/world/paris/04-cover.webp"
     }
   ],
   "newyork": [
@@ -673,12 +673,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:New_York_City%2C_Skyline.jpg",
-      "url": "./assets/world/newyork/01-gallery.jpg",
+      "url": "./assets/world/newyork/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/New_York_City%2C_Skyline.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:New_York_City%2C_Skyline.jpg",
       "description": "New York skyline and Lower Manhattan",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/newyork/01-cover.jpg"
+      "localCoverUrl": "./assets/world/newyork/01-cover.webp"
     },
     {
       "file": "File:Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg",
@@ -690,12 +690,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_at_Night_taken_from_Brooklyn_Bridge_Park.jpg",
-      "url": "./assets/world/newyork/02-gallery.jpg",
+      "url": "./assets/world/newyork/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Bridge_at_Night_taken_from_Brooklyn_Bridge_Park.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_at_Night_taken_from_Brooklyn_Bridge_Park.jpg",
       "description": "Brooklyn Bridge illuminated at night",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/newyork/02-cover.jpg"
+      "localCoverUrl": "./assets/world/newyork/02-cover.webp"
     },
     {
       "file": "File:Central Park New York.jpg",
@@ -707,12 +707,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Central_Park_New_York.jpg",
-      "url": "./assets/world/newyork/03-gallery.jpg",
+      "url": "./assets/world/newyork/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Park_New_York.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Central_Park_New_York.jpg",
       "description": "Central Park in New York",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/newyork/03-cover.jpg"
+      "localCoverUrl": "./assets/world/newyork/03-cover.webp"
     },
     {
       "file": "File:Times Square at night 2014.jpg",
@@ -724,12 +724,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Times_Square_at_night_2014.jpg",
-      "url": "./assets/world/newyork/04-gallery.jpg",
+      "url": "./assets/world/newyork/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Times_Square_at_night_2014.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Times_Square_at_night_2014.jpg",
       "description": "Times Square at night",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/newyork/04-cover.jpg"
+      "localCoverUrl": "./assets/world/newyork/04-cover.webp"
     }
   ],
   "hongkong": [
@@ -746,12 +746,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Hong_Kong_as_seen_from_Victoria_Peak.jpg",
-      "url": "./assets/world/hongkong/01-gallery.jpg",
+      "url": "./assets/world/hongkong/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_as_seen_from_Victoria_Peak.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Hong_Kong_as_seen_from_Victoria_Peak.jpg",
       "description": "Hong Kong skyline from Victoria Peak",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/hongkong/01-cover.jpg"
+      "localCoverUrl": "./assets/world/hongkong/01-cover.webp"
     },
     {
       "file": "File:Star Ferry ships at Hong Kong.jpg",
@@ -766,12 +766,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Star_Ferry_ships_at_Hong_Kong.jpg",
-      "url": "./assets/world/hongkong/02-gallery.jpg",
+      "url": "./assets/world/hongkong/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Star_Ferry_ships_at_Hong_Kong.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Star_Ferry_ships_at_Hong_Kong.jpg",
       "description": "Star Ferry boats crossing Victoria Harbour",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/hongkong/02-cover.jpg"
+      "localCoverUrl": "./assets/world/hongkong/02-cover.webp"
     },
     {
       "file": "File:Hong Kong tram 110.jpg",
@@ -786,12 +786,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Hong_Kong_tram_110.jpg",
-      "url": "./assets/world/hongkong/03-gallery.jpg",
+      "url": "./assets/world/hongkong/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_tram_110.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Hong_Kong_tram_110.jpg",
       "description": "Traditional double-decker Hong Kong tram",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/hongkong/03-cover.jpg"
+      "localCoverUrl": "./assets/world/hongkong/03-cover.webp"
     },
     {
       "file": "File:Tian Tan Buddha, Hong Kong.jpg",
@@ -806,12 +806,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Tian_Tan_Buddha%2C_Hong_Kong.jpg",
-      "url": "./assets/world/hongkong/04-gallery.jpg",
+      "url": "./assets/world/hongkong/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tian_Tan_Buddha%2C_Hong_Kong.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Tian_Tan_Buddha%2C_Hong_Kong.jpg",
       "description": "Tian Tan Buddha on Lantau Island",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/hongkong/04-cover.jpg"
+      "localCoverUrl": "./assets/world/hongkong/04-cover.webp"
     }
   ],
   "sydney": [
@@ -828,12 +828,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_at_dusk_-_Dec_2008.jpg",
-      "url": "./assets/world/sydney/01-gallery.jpg",
+      "url": "./assets/world/sydney/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_skyline_at_dusk_-_Dec_2008.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_at_dusk_-_Dec_2008.jpg",
       "description": "Sydney Harbour and Opera House skyline at dusk",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/sydney/01-cover.jpg"
+      "localCoverUrl": "./assets/world/sydney/01-cover.webp"
     },
     {
       "file": "File:Sydney Opera House from ferry.jpg",
@@ -848,12 +848,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_from_ferry.jpg",
-      "url": "./assets/world/sydney/02-gallery.jpg",
+      "url": "./assets/world/sydney/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Opera_House_from_ferry.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_from_ferry.jpg",
       "description": "Sydney Opera House seen from the ferry",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/sydney/02-cover.jpg"
+      "localCoverUrl": "./assets/world/sydney/02-cover.webp"
     },
     {
       "file": "File:Sydney - Harbour Bridge.jpg",
@@ -868,12 +868,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Sydney_-_Harbour_Bridge.jpg",
-      "url": "./assets/world/sydney/03-gallery.jpg",
+      "url": "./assets/world/sydney/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_-_Harbour_Bridge.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Sydney_-_Harbour_Bridge.jpg",
       "description": "Sydney Harbour Bridge from the Opera House",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/sydney/03-cover.jpg"
+      "localCoverUrl": "./assets/world/sydney/03-cover.webp"
     },
     {
       "file": "File:Bondi Beach - 2009.JPG",
@@ -888,12 +888,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Bondi_Beach_-_2009.JPG",
-      "url": "./assets/world/sydney/04-gallery.jpg",
+      "url": "./assets/world/sydney/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bondi_Beach_-_2009.JPG",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Bondi_Beach_-_2009.JPG",
       "description": "Bondi Beach and Sydney's Pacific coastline",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/sydney/04-cover.jpg"
+      "localCoverUrl": "./assets/world/sydney/04-cover.webp"
     }
   ],
   "shanghai": [
@@ -910,12 +910,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:The_Bund_Shanghai.jpg",
-      "url": "./assets/world/shanghai/01-gallery.jpg",
+      "url": "./assets/world/shanghai/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Bund_Shanghai.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:The_Bund_Shanghai.jpg",
       "description": "The Bund and Shanghai night skyline",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/shanghai/01-cover.jpg"
+      "localCoverUrl": "./assets/world/shanghai/01-cover.webp"
     },
     {
       "file": "File:Shanghai Yu Garden.jpg",
@@ -930,12 +930,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Shanghai_Yu_Garden.jpg",
-      "url": "./assets/world/shanghai/02-gallery.jpg",
+      "url": "./assets/world/shanghai/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Yu_Garden.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Shanghai_Yu_Garden.jpg",
       "description": "Yu Garden traditional architecture in Shanghai",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/shanghai/02-cover.jpg"
+      "localCoverUrl": "./assets/world/shanghai/02-cover.webp"
     },
     {
       "file": "File:Oriental Pearl Tower Shanghai 1.jpg",
@@ -950,12 +950,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Oriental_Pearl_Tower_Shanghai_1.jpg",
-      "url": "./assets/world/shanghai/03-gallery.jpg",
+      "url": "./assets/world/shanghai/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Oriental_Pearl_Tower_Shanghai_1.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Oriental_Pearl_Tower_Shanghai_1.jpg",
       "description": "Oriental Pearl Tower in Pudong",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/shanghai/03-cover.jpg"
+      "localCoverUrl": "./assets/world/shanghai/03-cover.webp"
     },
     {
       "file": "File:East Nanjing road Shanghai.jpg",
@@ -970,12 +970,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:East_Nanjing_road_Shanghai.jpg",
-      "url": "./assets/world/shanghai/04-gallery.jpg",
+      "url": "./assets/world/shanghai/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/East_Nanjing_road_Shanghai.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:East_Nanjing_road_Shanghai.jpg",
       "description": "East Nanjing Road shopping street",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/shanghai/04-cover.jpg"
+      "localCoverUrl": "./assets/world/shanghai/04-cover.webp"
     }
   ],
   "beijing": [
@@ -992,12 +992,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Forbidden_City%2C_Beijing.jpg",
-      "url": "./assets/world/beijing/01-gallery.jpg",
+      "url": "./assets/world/beijing/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Forbidden_City%2C_Beijing.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Forbidden_City%2C_Beijing.jpg",
       "description": "The Forbidden City imperial palace in Beijing",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/beijing/01-cover.jpg"
+      "localCoverUrl": "./assets/world/beijing/01-cover.webp"
     },
     {
       "file": "File:Temple-of-heaven.jpg",
@@ -1012,12 +1012,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Temple-of-heaven.jpg",
-      "url": "./assets/world/beijing/02-gallery.jpg",
+      "url": "./assets/world/beijing/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple-of-heaven.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Temple-of-heaven.jpg",
       "description": "Temple of Heaven in Beijing",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/beijing/02-cover.jpg"
+      "localCoverUrl": "./assets/world/beijing/02-cover.webp"
     },
     {
       "file": "File:Summer Palace, Beijing.jpg",
@@ -1032,12 +1032,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Summer_Palace%2C_Beijing.jpg",
-      "url": "./assets/world/beijing/03-gallery.jpg",
+      "url": "./assets/world/beijing/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Summer_Palace%2C_Beijing.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Summer_Palace%2C_Beijing.jpg",
       "description": "Beijing Summer Palace gardens and lake",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/beijing/03-cover.jpg"
+      "localCoverUrl": "./assets/world/beijing/03-cover.webp"
     },
     {
       "file": "File:Old districts 'hutong' in Beijing.jpg",
@@ -1052,12 +1052,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Old_districts_'hutong'_in_Beijing.jpg",
-      "url": "./assets/world/beijing/04-gallery.jpg",
+      "url": "./assets/world/beijing/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_districts_'hutong'_in_Beijing.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Old_districts_'hutong'_in_Beijing.jpg",
       "description": "Historic Beijing hutong streets",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/beijing/04-cover.jpg"
+      "localCoverUrl": "./assets/world/beijing/04-cover.webp"
     }
   ],
   "kyoto": [
@@ -1074,12 +1074,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Kyoto_Fushimi_Inari-taisha_1.jpg",
-      "url": "./assets/world/kyoto/01-gallery.jpg",
+      "url": "./assets/world/kyoto/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Fushimi_Inari-taisha_1.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Kyoto_Fushimi_Inari-taisha_1.jpg",
       "description": "Fushimi Inari shrine",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/kyoto/01-cover.jpg"
+      "localCoverUrl": "./assets/world/kyoto/01-cover.webp"
     },
     {
       "file": "File:JAP Kyoto Kiyomizu-dera.jpg",
@@ -1094,12 +1094,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:JAP_Kyoto_Kiyomizu-dera.jpg",
-      "url": "./assets/world/kyoto/02-gallery.jpg",
+      "url": "./assets/world/kyoto/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/JAP_Kyoto_Kiyomizu-dera.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:JAP_Kyoto_Kiyomizu-dera.jpg",
       "description": "Kiyomizu-dera temple hall",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/kyoto/02-cover.jpg"
+      "localCoverUrl": "./assets/world/kyoto/02-cover.webp"
     },
     {
       "file": "File:Kyoto Gion 01.jpg",
@@ -1114,12 +1114,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Kyoto_Gion_01.jpg",
-      "url": "./assets/world/kyoto/03-gallery.jpg",
+      "url": "./assets/world/kyoto/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Gion_01.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Kyoto_Gion_01.jpg",
       "description": "Traditional Gion quarter",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/kyoto/03-cover.jpg"
+      "localCoverUrl": "./assets/world/kyoto/03-cover.webp"
     },
     {
       "file": "File:Bamboo forest arashiyama.jpg",
@@ -1134,12 +1134,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Bamboo_forest_arashiyama.jpg",
-      "url": "./assets/world/kyoto/04-gallery.jpg",
+      "url": "./assets/world/kyoto/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bamboo_forest_arashiyama.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Bamboo_forest_arashiyama.jpg",
       "description": "Arashiyama bamboo forest",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/kyoto/04-cover.jpg"
+      "localCoverUrl": "./assets/world/kyoto/04-cover.webp"
     }
   ],
   "barcelona": [
@@ -1157,12 +1157,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_Barcelona_1.jpg",
-      "url": "./assets/world/barcelona/01-gallery.jpg",
+      "url": "./assets/world/barcelona/01-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada_Familia_Barcelona_1.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_Barcelona_1.jpg",
       "description": "Full Basilica de la Sagrada Família view instead of distant look from Park Güell",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/barcelona/01-cover.jpg"
+      "localCoverUrl": "./assets/world/barcelona/01-cover.webp"
     },
     {
       "file": "File:Parc Güell Barcelona.JPG",
@@ -1177,12 +1177,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Parc_G%C3%BCell_Barcelona.JPG",
-      "url": "./assets/world/barcelona/02-gallery.jpg",
+      "url": "./assets/world/barcelona/02-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Parc_G%C3%BCell_Barcelona.JPG",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Parc_G%C3%BCell_Barcelona.JPG",
       "description": "Mosaic architecture at Parc Güell",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/barcelona/02-cover.jpg"
+      "localCoverUrl": "./assets/world/barcelona/02-cover.webp"
     },
     {
       "file": "File:Casa Batlló, Barcelona.jpg",
@@ -1197,12 +1197,12 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Casa_Batll%C3%B3%2C_Barcelona.jpg",
-      "url": "./assets/world/barcelona/03-gallery.jpg",
+      "url": "./assets/world/barcelona/03-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Batll%C3%B3%2C_Barcelona.jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Casa_Batll%C3%B3%2C_Barcelona.jpg",
       "description": "Casa Batlló facade",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/barcelona/03-cover.jpg"
+      "localCoverUrl": "./assets/world/barcelona/03-cover.webp"
     },
     {
       "file": "File:Gothic Quarter, Barcelona (1) (30884069420).jpg",
@@ -1217,12 +1217,422 @@
       "checked": true,
       "locationVerified": true,
       "filePage": "https://commons.wikimedia.org/wiki/File:Gothic_Quarter%2C_Barcelona_(1)_(30884069420).jpg",
-      "url": "./assets/world/barcelona/04-gallery.jpg",
+      "url": "./assets/world/barcelona/04-gallery.webp",
       "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gothic_Quarter%2C_Barcelona_(1)_(30884069420).jpg",
       "originalPage": "https://commons.wikimedia.org/wiki/File:Gothic_Quarter%2C_Barcelona_(1)_(30884069420).jpg",
       "description": "Barcelona Gothic Quarter",
       "source": "local-library",
-      "localCoverUrl": "./assets/world/barcelona/04-cover.jpg"
+      "localCoverUrl": "./assets/world/barcelona/04-cover.webp"
+    }
+  ],
+  "rome": [
+    {
+      "file": "File:Rome colosseum.jpg",
+      "author": "Alexander Popkov (engineerontour.com)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Colosseum in Rome",
+      "width": 5472,
+      "height": 3648,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Rome_colosseum.jpg",
+      "url": "./assets/world/rome/01-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rome_colosseum.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Rome_colosseum.jpg",
+      "description": "Colosseum in Rome",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/rome/01-cover.webp"
+    },
+    {
+      "file": "File:Trevi Fountain 1 - Rome.jpg",
+      "author": "NikonZ7II",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Trevi Fountain",
+      "width": 8792,
+      "height": 5752,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain_1_-_Rome.jpg",
+      "url": "./assets/world/rome/02-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Trevi_Fountain_1_-_Rome.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain_1_-_Rome.jpg",
+      "description": "Trevi Fountain",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/rome/02-cover.webp"
+    },
+    {
+      "file": "File:The Pantheon, Rome.jpg",
+      "author": "Sanjib Chaudhary",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Pantheon in Rome",
+      "width": 4000,
+      "height": 3000,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:The_Pantheon%2C_Rome.jpg",
+      "url": "./assets/world/rome/03-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Pantheon%2C_Rome.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:The_Pantheon%2C_Rome.jpg",
+      "description": "Pantheon in Rome",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/rome/03-cover.webp"
+    },
+    {
+      "file": "File:Roman Forum in Rome.jpg",
+      "author": "Stefano Costantini",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "subject": "Roman Forum archaeological site",
+      "width": 3264,
+      "height": 2456,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Roman_Forum_in_Rome.jpg",
+      "url": "./assets/world/rome/04-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Forum_in_Rome.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Roman_Forum_in_Rome.jpg",
+      "description": "Roman Forum archaeological site",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/rome/04-cover.webp"
+    }
+  ],
+  "istanbul": [
+    {
+      "file": "File:Hagia Sophia and Blue Mosque.jpg",
+      "author": "Husain007",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Hagia Sophia and Blue Mosque panorama",
+      "width": 8022,
+      "height": 1736,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_and_Blue_Mosque.jpg",
+      "url": "./assets/world/istanbul/01-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_and_Blue_Mosque.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_and_Blue_Mosque.jpg",
+      "description": "Hagia Sophia and Blue Mosque panorama",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/istanbul/01-cover.webp"
+    },
+    {
+      "file": "File:İstanbul Galata Kulesi.jpg",
+      "author": "OkanKeskin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Galata Tower",
+      "width": 6016,
+      "height": 4000,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:%C4%B0stanbul_Galata_Kulesi.jpg",
+      "url": "./assets/world/istanbul/02-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%C4%B0stanbul_Galata_Kulesi.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:%C4%B0stanbul_Galata_Kulesi.jpg",
+      "description": "Galata Tower",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/istanbul/02-cover.webp"
+    },
+    {
+      "file": "File:Bosphorus Bridge at night.jpg",
+      "author": "Andrey Filippov 安德烈",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "subject": "Bosphorus Bridge at night",
+      "width": 5760,
+      "height": 3840,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Bosphorus_Bridge_at_night.jpg",
+      "url": "./assets/world/istanbul/03-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge_at_night.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Bosphorus_Bridge_at_night.jpg",
+      "description": "Bosphorus Bridge at night",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/istanbul/03-cover.webp"
+    },
+    {
+      "file": "File:Grand Bazaar, Istanbul.jpg",
+      "author": "Gah341",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Lanterns in the Grand Bazaar",
+      "width": 3024,
+      "height": 4032,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Grand_Bazaar%2C_Istanbul.jpg",
+      "url": "./assets/world/istanbul/04-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Bazaar%2C_Istanbul.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Grand_Bazaar%2C_Istanbul.jpg",
+      "description": "Lanterns in the Grand Bazaar",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/istanbul/04-cover.webp"
+    }
+  ],
+  "venice": [
+    {
+      "file": "File:Grand Canal from Rialto Bridge.jpg",
+      "author": "aconcagua",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Grand Canal viewed from Rialto Bridge",
+      "width": 4000,
+      "height": 2664,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Grand_Canal_from_Rialto_Bridge.jpg",
+      "url": "./assets/world/venice/01-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canal_from_Rialto_Bridge.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Grand_Canal_from_Rialto_Bridge.jpg",
+      "description": "Grand Canal viewed from Rialto Bridge",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/venice/01-cover.webp"
+    },
+    {
+      "file": "File:St. Mark's Basilica, St Mark's Square, Venice, Italy.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "subject": "St Mark's Basilica and Piazza San Marco",
+      "width": 3072,
+      "height": 2048,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:St._Mark's_Basilica%2C_St_Mark's_Square%2C_Venice%2C_Italy.jpg",
+      "url": "./assets/world/venice/02-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Mark's_Basilica%2C_St_Mark's_Square%2C_Venice%2C_Italy.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:St._Mark's_Basilica%2C_St_Mark's_Square%2C_Venice%2C_Italy.jpg",
+      "description": "St Mark's Basilica and Piazza San Marco",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/venice/02-cover.webp"
+    },
+    {
+      "file": "File:Bridge of Sighs Venice.jpg",
+      "author": "Ahmer Jamil Khan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Bridge of Sighs",
+      "width": 3024,
+      "height": 4032,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Bridge_of_Sighs_Venice.jpg",
+      "url": "./assets/world/venice/03-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_of_Sighs_Venice.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Bridge_of_Sighs_Venice.jpg",
+      "description": "Bridge of Sighs",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/venice/03-cover.webp"
+    },
+    {
+      "file": "File:Gondolas, Venice, Italy.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "subject": "Traditional gondolas at the waterfront",
+      "width": 3072,
+      "height": 2048,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Gondolas%2C_Venice%2C_Italy.jpg",
+      "url": "./assets/world/venice/04-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gondolas%2C_Venice%2C_Italy.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Gondolas%2C_Venice%2C_Italy.jpg",
+      "description": "Traditional gondolas at the waterfront",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/venice/04-cover.webp"
+    }
+  ],
+  "dubrovnik": [
+    {
+      "file": "File:Dubrovnik Old Town 1.jpg",
+      "author": "kallerna",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Dubrovnik Old Town panoramic view",
+      "width": 5100,
+      "height": 3140,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_Old_Town_1.jpg",
+      "url": "./assets/world/dubrovnik/01-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_1.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_Old_Town_1.jpg",
+      "description": "Dubrovnik Old Town panoramic view",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/dubrovnik/01-cover.webp"
+    },
+    {
+      "file": "File:Dubrovnik City Walls.jpg",
+      "author": "Sumitsurai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Dubrovnik city walls",
+      "width": 5704,
+      "height": 3064,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_City_Walls.jpg",
+      "url": "./assets/world/dubrovnik/02-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_City_Walls.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_City_Walls.jpg",
+      "description": "Dubrovnik city walls",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/dubrovnik/02-cover.webp"
+    },
+    {
+      "file": "File:Dubrovnik - Stradun.jpg",
+      "author": "Jean-Christophe BENOIST",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "subject": "Stradun historic pedestrian street",
+      "width": 3461,
+      "height": 4711,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_-_Stradun.jpg",
+      "url": "./assets/world/dubrovnik/03-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_-_Stradun.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_-_Stradun.jpg",
+      "description": "Stradun historic pedestrian street",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/dubrovnik/03-cover.webp"
+    },
+    {
+      "file": "File:Dubrovnik Old Town From Minčeta Tower.jpg",
+      "author": "Sumitsurai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Dubrovnik Old Town from Minčeta Tower",
+      "width": 4000,
+      "height": 5648,
+      "editorialMetadata": true,
+      "reviewStatus": "Commons exact-file page, creator, CC licence, subject and original pixel dimensions checked on 2026-10-24; current metadata verified again in browser; image pixels not visually approved",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_Old_Town_From_Min%C4%8Deta_Tower.jpg",
+      "url": "./assets/world/dubrovnik/04-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_From_Min%C4%8Deta_Tower.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Dubrovnik_Old_Town_From_Min%C4%8Deta_Tower.jpg",
+      "description": "Dubrovnik Old Town from Minčeta Tower",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/dubrovnik/04-cover.webp"
+    }
+  ],
+  "bangkok": [
+    {
+      "file": "File:Grand Palace Bangkok, Thailand.jpg",
+      "author": "Andy Marchand",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "subject": "Grand Palace complex in Bangkok",
+      "width": 6158,
+      "height": 3464,
+      "editorialMetadata": true,
+      "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Grand_Palace_Bangkok%2C_Thailand.jpg",
+      "url": "./assets/world/bangkok/01-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Palace_Bangkok%2C_Thailand.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Grand_Palace_Bangkok%2C_Thailand.jpg",
+      "description": "Grand Palace complex in Bangkok",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/bangkok/01-cover.webp"
+    },
+    {
+      "file": "File:Wat Arun Bangkok ,Thailand.jpg",
+      "author": "SupawatR",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Wat Arun temple near sunset",
+      "width": 5472,
+      "height": 3648,
+      "editorialMetadata": true,
+      "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Wat_Arun_Bangkok_%2CThailand.jpg",
+      "url": "./assets/world/bangkok/02-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Arun_Bangkok_%2CThailand.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Wat_Arun_Bangkok_%2CThailand.jpg",
+      "description": "Wat Arun temple near sunset",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/bangkok/02-cover.webp"
+    },
+    {
+      "file": "File:Chao Phraya River in Bangkok 01.jpg",
+      "author": "Krzysztof Golik",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Chao Phraya River through Bangkok",
+      "width": 3964,
+      "height": 2643,
+      "editorialMetadata": true,
+      "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Chao_Phraya_River_in_Bangkok_01.jpg",
+      "url": "./assets/world/bangkok/03-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chao_Phraya_River_in_Bangkok_01.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Chao_Phraya_River_in_Bangkok_01.jpg",
+      "description": "Chao Phraya River through Bangkok",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/bangkok/03-cover.webp"
+    },
+    {
+      "file": "File:Bangkok-Chinatown-14-Einkaufstrasse-1976-gje.jpg",
+      "author": "Gerd Eichmann",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "subject": "Historic shopping street in Bangkok Chinatown, 1976",
+      "width": 2311,
+      "height": 2379,
+      "editorialMetadata": true,
+      "reviewStatus": "Exact Commons file page, author, declared licence, subject and original resolution checked 2026-10-24; current metadata verified again when displayed, pixel-level acceptance pending",
+      "checked": true,
+      "locationVerified": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Bangkok-Chinatown-14-Einkaufstrasse-1976-gje.jpg",
+      "url": "./assets/world/bangkok/04-gallery.webp",
+      "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok-Chinatown-14-Einkaufstrasse-1976-gje.jpg",
+      "originalPage": "https://commons.wikimedia.org/wiki/File:Bangkok-Chinatown-14-Einkaufstrasse-1976-gje.jpg",
+      "description": "Historic shopping street in Bangkok Chinatown, 1976",
+      "source": "local-library",
+      "localCoverUrl": "./assets/world/bangkok/04-cover.webp"
     }
   ]
 };
