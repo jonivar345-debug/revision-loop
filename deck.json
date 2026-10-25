@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 45,
-  "updatedAt": "2026-10-25T19:50:00.000Z",
+  "deckVersion": 46,
+  "updatedAt": "2026-10-25T19:55:00.000Z",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -3298,8 +3298,8 @@
       "id": "chem_ie_trend",
       "subject": "Chemistry",
       "topic": "Ionisation energy",
-      "kind": "content",
-      "priority": 6,
+      "kind": "weak",
+      "priority": 9,
       "scope": "mock",
       "front": "Why generally does first ionisation energy increase across a period?",
       "back": "Nuclear charge increases while shielding is similar, so attraction to the outer electron increases and atomic radius falls.",
@@ -3324,7 +3324,8 @@
       "mock": true,
       "taught": true,
       "courseTopic": "Atomic structure",
-      "revisionTopic": "Ionisation energy"
+      "revisionTopic": "Ionisation energy",
+      "userWeakness": true
     },
     {
       "id": "chem_avogadro",
@@ -12305,9 +12306,9 @@
       "topic": "Periodicity",
       "revisionTopic": "Periodicity",
       "courseTopic": "Periodicity",
-      "kind": "content",
-      "priority": 6,
-      "userWeakness": false,
+      "kind": "weak",
+      "priority": 9,
+      "userWeakness": true,
       "scope": "mock",
       "stage": "AS",
       "mock": true,
@@ -20322,8 +20323,8 @@
       "topic": "Ionisation energy",
       "revisionTopic": "Ionisation energy",
       "courseTopic": "Atomic structure",
-      "kind": "content",
-      "priority": 8,
+      "kind": "weak",
+      "priority": 9,
       "scope": "mock",
       "front": "Why does first IE usually rise across Period 3?",
       "back": "Nuclear charge rises; shielding changes little; outer electrons are held more strongly.",
@@ -20331,7 +20332,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": false
+      "userWeakness": true
     },
     {
       "id": "chem_atomic_v43_44",
@@ -20339,8 +20340,8 @@
       "topic": "Ionisation energy",
       "revisionTopic": "Ionisation energy",
       "courseTopic": "Atomic structure",
-      "kind": "content",
-      "priority": 8,
+      "kind": "weak",
+      "priority": 9,
       "scope": "mock",
       "front": "Why is Al first IE lower than Mg first IE?",
       "back": "Al loses a higher-energy 3p electron; Mg loses a lower-energy 3s electron.",
@@ -20348,7 +20349,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": false
+      "userWeakness": true
     },
     {
       "id": "chem_atomic_v43_45",
@@ -20356,8 +20357,8 @@
       "topic": "Ionisation energy",
       "revisionTopic": "Ionisation energy",
       "courseTopic": "Atomic structure",
-      "kind": "content",
-      "priority": 8,
+      "kind": "weak",
+      "priority": 9,
       "scope": "mock",
       "front": "Why is S first IE lower than P first IE?",
       "back": "Electron repulsion within a paired 3p orbital in S helps one electron escape.",
@@ -20365,7 +20366,7 @@
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": false
+      "userWeakness": true
     },
     {
       "id": "chem_atomic_v43_46",
@@ -21406,13 +21407,64 @@
       "mock": true,
       "taught": true,
       "userWeakness": true
+    },
+    {
+      "id": "chem_ie_focus_v46_01",
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "revisionTopic": "Ionisation energy",
+      "courseTopic": "Atomic structure",
+      "kind": "weak",
+      "priority": 9,
+      "scope": "mock",
+      "front": "What is the full chain explaining rising first IE across Period 3?",
+      "back": "More nuclear protons; similar shielding; stronger attraction to outer electrons; more energy to remove one.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "userWeakness": true
+    },
+    {
+      "id": "chem_ie_focus_v46_02",
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "revisionTopic": "Ionisation energy",
+      "courseTopic": "Atomic structure",
+      "kind": "weak",
+      "priority": 9,
+      "scope": "mock",
+      "front": "Which two different causes explain the Period 3 first-IE dips?",
+      "back": "Mg→Al: higher-energy 3p versus 3s. P→S: extra repulsion from paired 3p electrons.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "userWeakness": true
+    },
+    {
+      "id": "chem_ie_focus_v46_03",
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "revisionTopic": "Ionisation energy",
+      "courseTopic": "Atomic structure",
+      "kind": "weak",
+      "priority": 9,
+      "scope": "mock",
+      "front": "In a 5-mark Period 3 first-IE explanation, what must you include?",
+      "back": "Increasing nuclear charge and near-constant shielding; Al 3p vs Mg 3s; P/S 3p orbital pairing and repulsion.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "userWeakness": true
     }
   ],
   "meta": {
     "dailyNewDefault": 18,
     "weakFirst": true,
     "practicalMix": "1 practical per 5 content cards",
-    "note": "Mechanics & Materials reported broad weakness; especially motion graphs, slope components, projectile motion and exact Newton law recall. Independent performance on harder practice has not yet been established. Advanced 16-question Mechanics bank available in exam practice (select Practice and Extended). Chemistry v40 adds syllabus-level esters, oils/fats, soaps, biodiesel, transesterification and carboxylic acids. These are review cards, not independently assessed performance. Acylation v41 covers acid anhydride/chloride and amide structure, 4 nucleophile classes, addition-elimination electron-flow theory and aspirin-related context. Mechanisms v42 includes electron-arrow interpretation for Year 1 organic reactions plus carbonyl nucleophilic addition and optical isomerism. Later separate aromatic and amine chapters remain unconfirmed for mock. Atomic structure v43 includes TOF mass spectrometry full stages, isotope spectra and weighted means, electron configuration to Z36, Period3/Group2 ionisation trends, and worked exam-style practice, with TOF self-reported revision priority. Guided answers are not independent marks. AQA 3.1.2 v44 comprehensive remainder: empirical/molecular formula, ideal gas equation, mass and gas stoichiometry, percentage yield/atom economy, ionic equations, hydrated salts, RP1 and direct/back titrations. All v44 cards are mock eligible; note explanations alone are not independent attainment. Electron-configuration exceptions (Cr/Cu and 4s electron removal) added as user-reported weak recall area on 25 October 2026; existing Cr/Cu and Fe ion cards upgraded to priority 9, plus 10 high-priority mock flashcards. No independent scored assessment yet.",
+    "note": "Mechanics & Materials reported broad weakness; especially motion graphs, slope components, projectile motion and exact Newton law recall. Independent performance on harder practice has not yet been established. Advanced 16-question Mechanics bank available in exam practice (select Practice and Extended). Chemistry v40 adds syllabus-level esters, oils/fats, soaps, biodiesel, transesterification and carboxylic acids. These are review cards, not independently assessed performance. Acylation v41 covers acid anhydride/chloride and amide structure, 4 nucleophile classes, addition-elimination electron-flow theory and aspirin-related context. Mechanisms v42 includes electron-arrow interpretation for Year 1 organic reactions plus carbonyl nucleophilic addition and optical isomerism. Later separate aromatic and amine chapters remain unconfirmed for mock. Atomic structure v43 includes TOF mass spectrometry full stages, isotope spectra and weighted means, electron configuration to Z36, Period3/Group2 ionisation trends, and worked exam-style practice, with TOF self-reported revision priority. Guided answers are not independent marks. AQA 3.1.2 v44 comprehensive remainder: empirical/molecular formula, ideal gas equation, mass and gas stoichiometry, percentage yield/atom economy, ionic equations, hydrated salts, RP1 and direct/back titrations. All v44 cards are mock eligible; note explanations alone are not independent attainment. Electron-configuration exceptions (Cr/Cu and 4s electron removal) added as user-reported weak recall area on 25 October 2026; existing Cr/Cu and Fe ion cards upgraded to priority 9, plus 10 high-priority mock flashcards. No independent scored assessment yet. Period 3 first-ionisation-energy explanation highlighted for focused revision (Mg/Al 3s→3p subshell change; P/S paired-electron repulsion in 3p; overall trend with nuclear charge/shielding). Prioritized 5 existing cards and added 3 integrated-recall mock cards; user not independently tested.",
     "modeSupport": [
       "mock",
       "full-a-level",
