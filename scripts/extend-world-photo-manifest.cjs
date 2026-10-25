@@ -15,7 +15,7 @@ const catalogue=require('../world-curated-photos.js');
 const targetPath=path.resolve(__dirname,'../editorial/world-local-photo-pilot.json');
 // IDs from the site's existing World destination catalog. Previously prioritized
 // scenic/cultural cities, then major landscape and marine destinations.
-const batch=require('../editorial/world-v108-batch-targets.json');
+const batch=require('../editorial/world-v109-batch-targets.json');
 const targets=batch.targets;
 const manifest=JSON.parse(fs.readFileSync(targetPath,'utf8'));
 const selected=[];const skipped=[];
@@ -40,7 +40,7 @@ for(const id of targets){
 // This threshold ensures we don't silently pretend a batch succeeded.
 console.log('Selection candidates: '+selected.length+'; skipped: '+JSON.stringify(skipped));
 assert(targets.filter(id=>Array.isArray(manifest.locations[id])&&manifest.locations[id].length===4).length  >=batch.minimumGalleries,'Insufficient source-checked v108 galleries');
-manifest.description='World v108: complete the six previously false-matched galleries and eight further locked and correctly attributed first-party photo destinations.';
+manifest.description='World v109: add 25 explicitly chosen scenic and landmark galleries, preserve previous approved WebPs, and enable review of all locally hosted image compositions.';
 manifest.quality='Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.';
 fs.writeFileSync(targetPath,JSON.stringify(manifest,null,2)+'\n');
 console.log('New four-photo locations:',selected.length,'('+(selected.length*4)+' photos)');
