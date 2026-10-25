@@ -4045,6 +4045,201 @@
   // World v93: six more iconic location gallery updates, retaining original
   // full-size sources, named CC creators, and per-file live rights verification.
   // Metadata checks are NOT visual quality or end-to-end delivery approval.
+  // World v97: close user-reported gallery quality gaps without altering
+  // location IDs, purchased collections or stored XP and points. Metadata
+  // approval is NOT a claim of per-pixel visual acceptance.
+  const priorityPhotoV97=Object.freeze({
+    "tbilisi": [
+      {
+        "file": "The Mtkvari River in downtown Tbilisi.jpg",
+        "author": "Kober",
+        "license": "Public domain (author dedication)",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "subject": "Downtown Mtkvari River and Narikala skyline; replaces a second repetitive Narikala panorama",
+        "width": 4000,
+        "height": 3000,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "barcelona": [
+      {
+        "file": "Sagrada Familia Barcelona 1.jpg",
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Full Basilica de la Sagrada Família view instead of distant look from Park Güell",
+        "width": 5100,
+        "height": 3400,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "prague": [
+      {
+        "file": "Night view of the Castle and Charles Bridge, Prague - 8019.jpg",
+        "author": "Jorge Royan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Prague Castle and Charles Bridge at night instead of an isolated lesser palace",
+        "width": 4368,
+        "height": 2704,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "luxor": [
+      {
+        "file": "Thebes, Luxor, Egypt, Panoramic view of the Valley of the Kings.jpg",
+        "author": "Vyacheslav Argenberg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "subject": "Valley of the Kings landscape, complementing Karnak and Luxor temples",
+        "width": 3072,
+        "height": 2048,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "fes": [
+      {
+        "file": "Tanneries of Fez.jpg",
+        "author": "Yair Haklai",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Historic Fes-el-Bali tanneries, alongside gates and medina",
+        "width": 4032,
+        "height": 1908,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "atacama": [
+      {
+        "file": "Laguna Miscanti.jpg",
+        "author": "Daniel Espinoza Charrier",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Laguna Miscanti, volcanic altiplano and high-altitude lagoon",
+        "width": 4032,
+        "height": 3024,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "vancouver": [
+      {
+        "file": "Stanley Park - Vancouver BC - Canada.jpg",
+        "author": "Adam Jones, Ph.D.",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "subject": "Stanley Park forest replaces second generic harbour photo",
+        "width": 3456,
+        "height": 2304,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "montreal": [
+      {
+        "file": "Notre-Dame Basilica Montreal.jpg",
+        "author": "Nahannip",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Notre-Dame Basilica adds Montreal historic architecture rather than another skyline",
+        "width": 3024,
+        "height": 4032,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "perth": [
+      {
+        "file": "Kings Park, Perth.jpg",
+        "author": "Iurii Ostakhov",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "subject": "Kings Park greenery replaces second panoramic view",
+        "width": 2448,
+        "height": 3264,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ],
+    "edinburgh": [
+      {
+        "file": "The Royal Mile, Edinburgh, Scotland.jpg",
+        "author": "rboed",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "subject": "Royal Mile street scene replaces repeated Edinburgh Castle detail",
+        "width": 7482,
+        "height": 4947,
+        "editorialMetadata": true,
+        "qualityPriority": 950,
+        "reviewStatus": "Wikimedia Commons original place, creator, licence and dimensions checked. Full-resolution visual audit of all 376 galleries remains outstanding."
+      }
+    ]
+  });
+  const rejectedPhotoV97=Object.freeze({
+    "tbilisi": [
+      "Panorama from Narikala.jpg"
+    ],
+    "barcelona": [
+      "Park Güell - view of Sagrada Familia.jpg"
+    ],
+    "prague": [
+      "Czech-2013-Prague-Lichtenstein Palace.jpg"
+    ],
+    "luxor": [
+      "Luxor Temple detail R01.jpg"
+    ],
+    "fes": [
+      "Bou Jeloud Mosque Fez Morocco Nov25 A7CR 09121.jpg"
+    ],
+    "atacama": [
+      "Paisaje cerca de San Pedro de Atacama, Chile, 2016-02-01, DD 129.JPG"
+    ],
+    "vancouver": [
+      "Vancouver (BC, Canada), Vancouver Harbour Flight Centre -- 2022 -- 1874.jpg"
+    ],
+    "montreal": [
+      "Montreal Twilight Panorama 2006.jpg"
+    ],
+    "perth": [
+      "Perth (AU), View from Kings Park -- 2019 -- 0435-42.jpg"
+    ],
+    "edinburgh": [
+      "Half-Moon battery Edinburgh Castle dec.23.jpg"
+    ],
+    "brisbane": [
+      "CityCat Spirit of Brisbane during royal visit to South Bank South Brisbane Reach Brisbane River P1190234.jpg"
+    ],
+    "quebec": [
+      "Stone office building on a corner, Quebec City.jpg"
+    ],
+    "dublin": [
+      "St Patrick's Cathedral Choir 360x180, Dublin, Ireland.jpg"
+    ],
+    "tunis": [
+      "Vol d'une aigrette garzette sur le lac de tunis.jpg"
+    ],
+    "losangeles": [
+      "Los Angeles River Atwater LA Mar23 A7R 04054.jpg",
+      "Sunnynook Bridge Los Angeles Rivert LA Mar23 A7R 04048.jpg"
+    ]
+  });
+  function acceptedPhotoV97(id,item){return !(rejectedPhotoV97[id]||[]).some(f=>f.toLowerCase()===item.file.toLowerCase());}
+
   const priorityPhotoV93=Object.freeze({
     "capetown": [
       {
@@ -4395,8 +4590,8 @@
   function filesFor(id){
     const rest=[...(verified[id]||[]),...(featuredCities[id]||[]),...(featuredCitiesB[id]||[]),...(featuredCitiesC[id]||[]),...(featuredCitiesD[id]||[]),...(featuredCitiesE[id]||[]),...(featuredCitiesF[id]||[]),...(editorial[id]||[]),...(additionalEditorialA[id]||[]),...(additionalEditorialB[id]||[]),...(independentlySourced[id]||[]),...reusedFor(id),...nationalSources(id),...(lastThreePlaceSources[id]||[]),...discoveredFor(id),...enrichmentFor(id)];
     const seen=new Set();
-    return [...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
-      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo))
+    return [...(priorityPhotoV97[id]||[]),...(priorityPhotoV93[id]||[]),...(priorityPhotoV92[id]||[]),...(priorityPhotoV90[id]||[]),...(priorityPhotoV91[id]||[]),...rest]
+      .filter(photo=>acceptedPhotoV90(id,photo)&&acceptedPhotoV91(id,photo)&&acceptedPhotoV92(id,photo)&&acceptedPhotoV93(id,photo)&&acceptedPhotoV97(id,photo))
       .filter(photo=>{const k=photo.file.replace(/_/g,' ').trim().toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
   }
   function image(entry){
