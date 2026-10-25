@@ -17,5 +17,5 @@ assert(sw.includes("c.addAll(SHELL)"),'Offline install does not precache the edi
 assert(sw.includes('caches.open(CACHE).then(c=>c.match(e.request,{ignoreSearch:true}))'),'Offline navigation must match the app’s own precached pages even with URL query parameters');
 assert(sw.includes("k.startsWith('revision-loop-')&&k!==CACHE"),'Activation must not delete caches owned by other applications');
 assert(sw.includes("'./data/natural-earth-coastlines-110m.json'"),'Actual public-domain Earth boundaries missing from offline bundle');
-assert(sw.includes("revision-loop-v92-photo-curation"),'Cache version not advanced');
+assert(sw.includes("revision-loop-v93-photo-curation"),'Cache version not advanced');
 console.log('PASS offline world assets: 27 editorial source files and seven world runtime files precached on service worker install.');
