@@ -12,8 +12,8 @@ const {promises:fsp}=fs;
 global.window={RevisionWorldDiscoveryPhotos:require('../world-photo-discovery-data.js'),RevisionWorldPhotoEnrichment:require('../world-photo-enrichment-v85.js'),RevisionWorldV104Photos:require('../world-photo-editorial-v104.js')};
 const {get}=require('../world-curated-photos.js');
 const manifest=require('../editorial/world-local-photo-pilot.json');
-const v106Batch=require('../editorial/world-v106-batch-targets.json');
-const v106Targets=new Set(v106Batch.targets);
+const v107Batch=require('../editorial/world-v107-batch-targets.json');
+const v107Targets=new Set(v107Batch.targets);
 const base=path.resolve(__dirname,'../assets/world');
 const headers={'User-Agent':'RevisionLoopPhotoArchive/1.0 (https://github.com/jonivar345-debug/revision-loop; educational static site)','Accept':'application/json,image/jpeg;q=0.9,*/*;q=0.1'};
 const sleep=ms=>new Promise(done=>setTimeout(done,ms));
@@ -66,8 +66,8 @@ async function download(filename,width,destination,preferred){
 }
 async function main(){
   const output={};const attribution=[];let totalBytes=0;
-  let acceptedV106=0;
-  const skippedV106=[];
+  let acceptedV107=0;
+  const skippedV107=[];
   // Preserve optimization provenance for assets already present in the archive.
   // Do not clear size-budget status when a later batch revalidates the source.
   let pastAttribution=[];
@@ -86,21 +86,23 @@ async function main(){
   }
   for(const [id,names] of Object.entries(manifest.locations)){
     const known=get(id);
-    // New v106 galleries must pass live Commons resolution/rights checks before
+    // New v107 galleries must pass live Commons resolution/rights checks before
     // acceptance. Earlier locally accepted selections must never be auto-replaced.
-    if(v106Targets.has(id)){
-      if(acceptedV106>=v106Batch.maxGalleries){
+    if(v107Targets.has(id)){
+      if(acceptedV107>=v107Batch.maxGalleries){
         delete manifest.locations[id];
         continue;
       }
-      const good=[],used=new Set();
-      for(const candidate of known){
-        if(good.length===4)break;
-        const candidateName=String(candidate.file||'').replace(/^File:/i,'');
-        const key=normalise(candidateName);
-        if(!/\.jpe?g$/i.test(candidateName)||used.has(key)||
-          !candidate.author||!candidate.licenseUrl||!candidate.filePage)continue;
-        used.add(key);
+      const good=[];
+      const approved=v107Batch.approvedSelections[id]||[];
+      if(approved.length!==4)throw new Error('Missing explicit four-photo source set: '+id);
+      for(const candidateName of approved){
+        const candidate=known.find(p=>normalise(p.file)===normalise('File:'+candidateName));
+        if(!candidate||!/\.jpe?g$/i.test(candidateName)||
+          !candidate.author||!candidate.licenseUrl||!candidate.filePage){
+          console.log('Missing approved source: '+id+' '+candidateName);
+          continue;
+        }
         try{
           const {info,meta}=await metadata(candidateName);
           const licence=meta.LicenseShortName?.value||'';
@@ -109,18 +111,18 @@ async function main(){
           if(Number(info.width)<1800||Number(info.height)<800)throw new Error('insufficient source resolution');
           good.push(candidateName);
         }catch(error){
-          console.log('Skipping weak/unavailable v106 candidate '+id+': '+candidateName+' ('+error.message+')');
+          console.log('Deferring v107 candidate '+id+': '+candidateName+' ('+error.message+')');
         }
       }
-      if(good.length<4){
+      if(good.length<4 || new Set(good.map(normalise)).size!==4){
         delete manifest.locations[id];
-        skippedV106.push({id,found:good.length});
-        console.log('Deferring v106 destination '+id+': only '+good.length+' validated photographs');
+        skippedV107.push({id,found:good.length});
+        console.log('Deferring v107 destination '+id+': only '+good.length+' validated photographs');
         continue;
       }
       names.splice(0,names.length,...good);
-      acceptedV106++;
-      console.log('Accepted v106 destination '+id+' ('+acceptedV106+'/'+v106Batch.maxGalleries+')');
+      acceptedV107++;
+      console.log('Accepted v107 destination '+id+' ('+acceptedV107+'/'+v107Batch.maxGalleries+')');
     }
     const selected=[];const seen=new Set();
     await fsp.mkdir(path.join(base,id),{recursive:true});
@@ -182,10 +184,10 @@ async function main(){
     }
     output[id]=selected;
   }
-  if(acceptedV106<v106Batch.minimumGalleries)
-    throw new Error('Only '+acceptedV106+' validated v106 galleries, below minimum '+v106Batch.minimumGalleries+'; deferred '+JSON.stringify(skippedV106));
+  if(acceptedV107<v107Batch.minimumGalleries)
+    throw new Error('Only '+acceptedV107+' validated v107 galleries, below minimum '+v107Batch.minimumGalleries+'; deferred '+JSON.stringify(skippedV107));
   await fsp.writeFile(path.resolve(__dirname,'../editorial/world-local-photo-pilot.json'),JSON.stringify(manifest,null,2)+'\n');
-  console.log('v106 accepted '+acceptedV106+' additional four-photo galleries, deferred '+skippedV106.length+'.');
+  console.log('v107 accepted '+acceptedV107+' additional four-photo galleries, deferred '+skippedV107.length+'.');
   const js='/* Generated by scripts/build-local-world-photos.cjs; keep original author/licence details. */\n'+
     '(function(root){ "use strict"; const data='+JSON.stringify(output,null,2)+
     ';\nconst api=Object.freeze({get:id=>(data[id]||[]).map(photo=>({...photo}))});'+
