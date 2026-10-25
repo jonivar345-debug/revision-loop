@@ -1,8 +1,8 @@
-name: Build locally hosted World v105 quality and gallery expansion
+name: Build locally hosted World v106 geographic accuracy and gallery repair
 
 on:
   push:
-    branches: [feature/world-v105-manila-quality-and-local-expansion]
+    branches: [feature/world-v106-editorial-place-accuracy]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -12,6 +12,7 @@ on:
       - 'scripts/audit-local-world-photo-quality.py'
       - 'world-photo-editorial-v104.js'
       - 'tests/world-v105-editorial.cjs'
+      - 'tests/world-v106-editorial.cjs'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +21,7 @@ permissions:
 jobs:
   archive-photos:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,6 +38,8 @@ jobs:
         run: node scripts/extend-world-photo-manifest.cjs
       - name: Verify seven curated v105 replacement sources
         run: node tests/world-v105-editorial.cjs
+      - name: Verify geographically accurate v106 replacement sources
+        run: node tests/world-v106-editorial.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
@@ -49,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v105.json
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v106.json
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else
