@@ -33,7 +33,7 @@ function licenseAllowed(expected,current){
   const lic=String(current||'').replace(/\s+/g,' ').trim().toUpperCase();
   const canonical=String(expected||'').replace(/\s+/g,' ').trim().toUpperCase();
   if(canonical==='CC0 1.0')return /^CC\s?0(?:\s1\.0)?$/.test(lic);
-  return canonical===lic&&/^CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)$/.test(lic);
+  return canonical===lic&&/^CC BY(?:-SA)? (?:2\.0|2\.5|3\.0|4\.0)$/.test(lic);
 }
 async function metadata(filename){
   const api=new URL('https://commons.wikimedia.org/w/api.php');
