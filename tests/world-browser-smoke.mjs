@@ -243,6 +243,38 @@ try{
  assert(Number.parseInt(zoom)>100,'Touch viewport zoom buttons failed');
  assert(!errors.length,'Desktop page errors: '+errors.join(' | '));
  console.log('PASS browser mobile: world zoom accessible in touch viewport; no profile interaction required.');
+ // Real Chromium multi-touch events, not a zoom-button mock.
+ // The pin globe should pinch without rotating, then resume one-finger drag.
+ await mobile.locator('#globeZoomReset').click();
+ assert.equal(await mobile.locator('#globeZoomValue').textContent(),'100%');
+ await mobile.locator('#globe').scrollIntoViewIfNeeded();
+ const rect=await mobile.locator('#globe').boundingBox();
+ assert(rect&&rect.width>100&&rect.height>100,'Touch globe is not laid out');
+ const centre={x:rect.x+rect.width/2,y:rect.y+rect.height/2};
+ const point=(x,y,id)=>({x,y,id,radiusX:6,radiusY:6,force:1});
+ const cdp=await mobile.context().newCDPSession(mobile);
+ const left=point(centre.x-25,centre.y,1),right=point(centre.x+25,centre.y,2);
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[left]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[left,right]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[
+  point(centre.x-68,centre.y,1),point(centre.x+68,centre.y,2)]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ const afterPinch=parseInt(await mobile.locator('#globeZoomValue').textContent(),10);
+ assert(afterPinch>=125,'Two-finger pinch did not magnify globe: '+afterPinch+'%');
+ assert(afterPinch<=220,'Globe zoom exceeded safe maximum');
+ assert(await mobile.evaluate(()=>window.RevisionWorldGlobeGesture?.isPinching()===false),
+  'Pinch capture failed to reset after touch release');
+ const oldLongitude=await mobile.evaluate(()=>globeLon);
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[point(centre.x-44,centre.y+3,3)]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[point(centre.x+42,centre.y+3,3)]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ const newLongitude=await mobile.evaluate(()=>globeLon);
+ const longitudeDelta=Math.abs(((newLongitude-oldLongitude+540)%360)-180);
+ assert(longitudeDelta>3,'One-finger rotation remained suppressed after pinch: '+longitudeDelta);
+ assert(await mobile.evaluate(()=>window.RevisionWorldGlobeGesture?.isPinching()===false),
+  'Touch rotation returned to pinch state');
+ console.log('PASS browser mobile multi-touch: pinch zoom '+afterPinch+'%, drag-after-pinch moved globe '+longitudeDelta.toFixed(1)+' degrees without pointer capture leak.');
+
 } finally{
  if(browser)await browser.close();
  await new Promise(resolve=>server.close(resolve));
