@@ -11,6 +11,10 @@
 })(typeof window==='object'?window:null,function(){
   'use strict';
   const verified=Object.freeze({
+    "country-kz":[
+      {file:'Lake Kaindy, Kazakhstan.jpg',author:'Anna Powaska',license:'CC BY-SA 4.0',subject:'Lake Kaindy and submerged trees in Kazakhstan',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:2048,height:1362},
+      {file:'Astana - 190217 DSC 3595.jpg',author:'Ilya Varlamov',license:'CC BY-SA 4.0',subject:'Urban scene in Astana, capital of Kazakhstan',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:5568,height:3712}
+    ],
     "ocean-arctic":[
       {file:'North Pole, Arctic Ocean, sea ice 01.jpg',author:'Matti&Keti; Lorenz King',license:'CC BY-SA 4.0',subject:'Pressure-ridged Arctic Ocean sea ice at the geographic North Pole',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:4117,height:2698}
     ],
