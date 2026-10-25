@@ -132,7 +132,16 @@ try{
  });
  assert(allPinState>globeState.pinCount,'Show-all toggle should reveal accurate hidden markers');
  await page.locator('.tab[data-panel="shop"]').click();
- await page.waitForFunction(()=>document.querySelectorAll('.destination-photo-credits li').length>0,null,{timeout:20000});
+ // Render a real local London shop cover for deterministic licence testing.
+ // Lazy shop pagination may otherwise leave no covers mounted in this fixture.
+ await page.evaluate(async()=>{
+   const host=document.createElement('div');
+   host.id='worldPhotoCreditsSmokeFixture';
+   document.getElementById('locationShop').append(host);
+   await window.RevisionWorldPhotoGallery.render(host,LOCATIONS.find(x=>x.id==='london'),{card:true});
+ });
+ assert((await page.locator('#worldPhotoCreditsSmokeFixture .destination-photo-credits li').count())>0,
+    'Local shop image lost its accessible attribution data');
  await page.locator('#worldPhotoCreditsButton').click();
  assert.equal(await page.locator('#worldPhotoCreditsDialog').evaluate(node=>node.open),true,'Image licences dialog failed to open');
  const displayedCredits=await page.locator('#worldPhotoCreditsList li').count();
@@ -141,6 +150,7 @@ try{
  assert(creditLinks>=2,'Shared panel must retain original and licence links');
  await page.locator('#worldPhotoCreditsClose').click();
  assert.equal(await page.locator('#worldPhotoCreditsDialog').evaluate(node=>node.open),false,'Image licences dialog failed to close');
+ await page.locator('#worldPhotoCreditsSmokeFixture').evaluate(node=>node.remove());
 
  const wardrobeDom=await page.evaluate(()=>{
    const card=document.querySelector('#characterShop .character-card .character-art');
