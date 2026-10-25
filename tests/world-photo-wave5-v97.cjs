@@ -9,7 +9,7 @@ global.window={
 const catalog=require('../world-curated-photos.js');
 const gallery=require('../world-location-photo-gallery.js');
 const improvements=[
- ['tbilisi','Tbilisi','The Mtkvari River in downtown Tbilisi.jpg','Panorama from Narikala.jpg'],
+ ['tbilisi','Tbilisi','Old Tbilisi town in Tbilisi, Georgia.jpg','Panorama from Narikala.jpg'],
  ['barcelona','Barcelona','Sagrada Familia Barcelona 1.jpg','Park Güell - view of Sagrada Familia.jpg'],
  ['prague','Prague','Night view of the Castle and Charles Bridge, Prague - 8019.jpg','Czech-2013-Prague-Lichtenstein Palace.jpg'],
  ['luxor','Luxor','Thebes, Luxor, Egypt, Panoramic view of the Valley of the Kings.jpg','Luxor Temple detail R01.jpg'],
