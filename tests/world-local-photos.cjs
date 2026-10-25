@@ -34,7 +34,7 @@ for(const [id,names] of Object.entries(manifest.locations)){
 const attributions=JSON.parse(fs.readFileSync(path.resolve(directory,'assets/world/ATTRIBUTION.json')));
 assert.equal(attributions.length,count);
 assert(attributions.every(p=>p.format==='image/webp'&&p.galleryBytes>=6000&&p.coverBytes>=6000));
-const report=JSON.parse(fs.readFileSync(path.resolve(directory,'editorial/world-local-photo-audit-v112.json'),'utf8'));
+const report=JSON.parse(fs.readFileSync(path.resolve(directory,'editorial/world-local-photo-audit-v113.json'),'utf8'));
 assert.equal(report.localPhotographs,count);
 assert.equal(report.localDestinations,Object.keys(manifest.locations).length);
 assert.equal(report.fourPhotoLocalGalleries,Object.values(manifest.locations).filter(x=>x.length===4).length);
