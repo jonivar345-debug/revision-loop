@@ -24,6 +24,6 @@ for(const [place,files]of Object.entries(expected)){
 }
 const html=require('node:fs').readFileSync(require('node:path').join(__dirname,'../index.html'),'utf8');
 const sw=require('node:fs').readFileSync(require('node:path').join(__dirname,'../sw.js'),'utf8');
-assert(html.includes('world-curated-photos.js?v=106'));
-assert(sw.includes('revision-loop-v106-place-accuracy-and-local-quality'));
+assert(html.includes('world-curated-photos.js?v=107'));
+assert(sw.includes('revision-loop-v107-place-checked-gallery-expansion'));
 console.log('PASS v86: four distinct sourced photos each for Dakar and Red Sea, 3 new high-resolution licensed sources, original links and safe Commons rights checks');
