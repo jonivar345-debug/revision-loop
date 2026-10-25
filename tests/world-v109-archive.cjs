@@ -7,7 +7,8 @@ const root=path.join(__dirname,'..');
 const batch=require('../editorial/world-v109-batch-targets.json');
 const manifest=require('../editorial/world-local-photo-pilot.json');
 const local=require('../world-local-photos.js');
-const accepted=batch.targets.filter(id=>manifest.locations[id]);
+// Arctic Ocean was deferred in v109 and is newly completed by the v110 batch.
+const accepted=batch.targets.filter(id=>id!=='ocean-arctic'&&manifest.locations[id]);
 assert(accepted.length>=batch.minimumGalleries&&accepted.length<=batch.maxGalleries,
  'Only '+accepted.length+' accepted galleries (minimum '+batch.minimumGalleries+')');
 assert(Object.keys(manifest.locations).length>=158,'Some earlier locally hosted destinations disappeared');

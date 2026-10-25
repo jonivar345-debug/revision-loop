@@ -11,6 +11,12 @@
 })(typeof window==='object'?window:null,function(){
   'use strict';
   const verified=Object.freeze({
+    "ocean-arctic":[
+      {file:'North Pole, Arctic Ocean, sea ice 01.jpg',author:'Matti&Keti; Lorenz King',license:'CC BY-SA 4.0',subject:'Pressure-ridged Arctic Ocean sea ice at the geographic North Pole',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',width:4117,height:2698}
+    ],
+    "sea-bering":[
+      {file:'Waves from the Shallow Bering Sea Lap up Against the Untouched Coastline (9514199534).jpg',author:'Bering Land Bridge National Preserve',license:'CC BY 2.0',subject:'Bering Sea waves on the wild coast of Cape Espenberg, Alaska',licenseUrl:'https://creativecommons.org/licenses/by/2.0/',width:3196,height:2131}
+    ],
     london:[
       {file:'The Tower Bridge, London, UK.jpg',author:'Maksim Sokolov (maxergon.com)',license:'CC BY-SA 4.0',subject:'Tower Bridge',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/'},
       {file:'Panorama London 2012.jpg',author:'FiatLUX',license:'CC BY-SA 3.0',subject:'Westminster and Big Ben',licenseUrl:'https://creativecommons.org/licenses/by-sa/3.0/'},

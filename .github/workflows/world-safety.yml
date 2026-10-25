@@ -59,6 +59,8 @@ jobs:
           node tests/world-v109-sources.cjs
           node tests/world-v109-archive.cjs
           node tests/world-v109-review.cjs
+          node tests/world-v110-sources.cjs
+          node tests/world-v110-archive.cjs
           node tests/world-photo-wave3-20261025.cjs
           node tests/world-photo-wave4-20261025.cjs
           node tests/world-photo-wave5-v97.cjs
