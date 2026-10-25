@@ -1,0 +1,470 @@
+{
+  "schema": "revision-loop-world-wave3-photo-editorial-audit-v1",
+  "updated": "2026-10-25",
+  "status": "EDITORIAL-ONLY; exact Wikimedia Commons photo descriptions and licences checked, not yet pixel-level inspected, accepted or published in live app",
+  "sourceInventory": "main's editorial/world-photo-quality-triage-v88.json, source list only",
+  "locations": [
+    {
+      "id": "rio",
+      "name": "Rio de Janeiro",
+      "decision": "cover_comparison_only",
+      "existingFour": [
+        "Christ-Redeemer-Rio-de-Janeiro.jpg",
+        "Contrasts of Rio de Janeiro - Rocinha, Ipanema, and Mountains at Sunrise.jpg",
+        "Vista de Favela, Río de Janeiro A74250020241123.jpg",
+        "Boca da Baía de Guanabara e orlas artificiais - Parque do Flamengo, Fortes Históricos de Niterói, Monumento Natural do Pão de Açúcar, orla marítima de Copacabana - Rio de Janeiro - 20240623064031.jpg"
+      ],
+      "proposedReplace": [],
+      "finding": "Existing Christ statue, mountain, favela and coastline subjects differ; compare the hero to a broad Sugarloaf panorama before swapping.",
+      "idealShopCover": "Christ the Redeemer or Sugarloaf and bay",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "vancouver",
+      "name": "Vancouver",
+      "decision": "replace_repetitive_harbour",
+      "existingFour": [
+        "Skyline of Vancouver, BC.jpg",
+        "Skyline of Vancouver, Canada.jpg",
+        "Vancouver (BC, Canada), Vancouver Harbour -- 2022 -- 1997-2009.jpg",
+        "Vancouver (BC, Canada), Vancouver Harbour Flight Centre -- 2022 -- 1874.jpg"
+      ],
+      "proposedReplace": [
+        "Vancouver (BC, Canada), Vancouver Harbour Flight Centre -- 2022 -- 1874.jpg"
+      ],
+      "finding": "Two skylines plus two closely related harbour images lack Pacific rainforest identity; add a Stanley Park forest scene.",
+      "idealShopCover": "City and North Shore mountains; woodland within other gallery slots",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "montreal",
+      "name": "Montréal",
+      "decision": "replace_redundant_panorama",
+      "existingFour": [
+        "Montreal, Quebec skyline.jpg",
+        "Panorama 360 of Basilique Saint-Patrick, Montreal, Quebec, Canada.jpg",
+        "Montreal Twilight Panorama 2006.jpg",
+        "Montreal - Olympic Park panorama - Cropped version.jpg"
+      ],
+      "proposedReplace": [
+        "Montreal Twilight Panorama 2006.jpg"
+      ],
+      "finding": "Two city panoramas and Olympic Park leave little distinctive old-town architecture; add Notre-Dame Basilica exterior.",
+      "idealShopCover": "Old Montréal or city skyline",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "brisbane",
+      "name": "Brisbane",
+      "decision": "replace_wildlife_and_event",
+      "existingFour": [
+        "Brisbane CBD seen from Kangaroo Point, 2024, 01 (2).jpg",
+        "Sunset over Brisbane Australia 2018 dllu.jpg",
+        "Intellagama lesueurii lesueurii , Eastern Water Dragon, Brisbane.jpg",
+        "CityCat Spirit of Brisbane during royal visit to South Bank South Brisbane Reach Brisbane River P1190234.jpg"
+      ],
+      "proposedReplace": [
+        "Intellagama lesueurii lesueurii , Eastern Water Dragon, Brisbane.jpg",
+        "CityCat Spirit of Brisbane during royal visit to South Bank South Brisbane Reach Brisbane River P1190234.jpg"
+      ],
+      "finding": "A close-up lizard and a royal-visit boat are less geographically recognisable than the Story Bridge and South Bank; keep the two strong city panoramas.",
+      "idealShopCover": "Skyline and river or Story Bridge",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "perth",
+      "name": "Perth",
+      "decision": "consider_one_swap",
+      "existingFour": [
+        "Perth CBD skyline from State War Memorial Lookout, 2023, 04 b.jpg",
+        "Perth (AU), View from Kings Park -- 2019 -- 0525-30.jpg",
+        "Perth (AU), View from Kings Park -- 2019 -- 0435-42.jpg",
+        "Perth (AU), Elizabeth Quay Bridge -- 2019 -- 0252.jpg"
+      ],
+      "proposedReplace": [
+        "Perth (AU), View from Kings Park -- 2019 -- 0435-42.jpg"
+      ],
+      "finding": "Two Kings Park city views repeat. An actual botanic-garden scene adds diversity alongside CBD, Elizabeth Quay and skyline.",
+      "idealShopCover": "Perth and Swan River from Kings Park",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "quebec",
+      "name": "Québec City",
+      "decision": "replace_two_office_buildings",
+      "existingFour": [
+        "Quebec City skyline from Lévis.jpg",
+        "Glass office building on Avenue Honoré-Mercier, Quebec City.jpg",
+        "Stone office building on a corner, Quebec City.jpg",
+        "Québec city at night, view from Lévis city.jpg"
+      ],
+      "proposedReplace": [
+        "Glass office building on Avenue Honoré-Mercier, Quebec City.jpg",
+        "Stone office building on a corner, Quebec City.jpg"
+      ],
+      "finding": "Two generic office blocks are much weaker than Château Frontenac, the old town and city walls.",
+      "idealShopCover": "Château Frontenac over the St Lawrence",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "edinburgh",
+      "name": "Edinburgh",
+      "decision": "replace_duplicate_castle",
+      "existingFour": [
+        "Edinburgh Castle seen from The Vennel steps.jpg",
+        "Palace of Holyroodhouse quadrangle Edinburgh 2025 dllu.jpg",
+        "Edinburgh panorama 2014-07-05 (01).jpg",
+        "Half-Moon battery Edinburgh Castle dec.23.jpg"
+      ],
+      "proposedReplace": [
+        "Half-Moon battery Edinburgh Castle dec.23.jpg"
+      ],
+      "finding": "Two castle pictures and a city panorama; introduce Royal Mile street life or Arthur's Seat while preserving the Vennel steps hero.",
+      "idealShopCover": "Castle from Vennel steps",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin",
+      "decision": "replace_indoor_repetition",
+      "existingFour": [
+        "Dublin - Trinity College Dublin.jpeg",
+        "Chapel Royal 360x180, Dublin Castle, Dublin, Ireland - Diliff.jpg",
+        "St Patrick's Cathedral Choir 360x180, Dublin, Ireland.jpg",
+        "St Patrick's Cathedral Nave 3, Dublin, Ireland - Diliff.jpg"
+      ],
+      "proposedReplace": [
+        "St Patrick's Cathedral Choir 360x180, Dublin, Ireland.jpg",
+        "St Patrick's Cathedral Nave 3, Dublin, Ireland - Diliff.jpg"
+      ],
+      "finding": "Three of four images focus on a chapel or church interiors; Dublin needs the River Liffey/Ha'penny Bridge in the collection.",
+      "idealShopCover": "River Liffey and Ha'penny Bridge",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "tunis",
+      "name": "Tunis",
+      "decision": "replace_bird_duplicates",
+      "existingFour": [
+        "Cathedral Saint-Vincent-de-Paul in Tunis.jpg",
+        "Medina old Town of Tunis.jpeg",
+        "Vol d'une aigrette garzette sur le lac de tunis.jpg",
+        "Aigrette garzette sur le lac de Tunis.jpg"
+      ],
+      "proposedReplace": [
+        "Vol d'une aigrette garzette sur le lac de tunis.jpg",
+        "Aigrette garzette sur le lac de Tunis.jpg"
+      ],
+      "finding": "Two egret photographs are similar, and neither clearly represents Tunis city. Add historic medina streets and architecture.",
+      "idealShopCover": "Medina or prominent city landmark",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "dakar",
+      "name": "Dakar",
+      "decision": "replace_one_repeated_skyline",
+      "existingFour": [
+        "Dakar from above.jpg",
+        "Dakar vue de haut 04.jpg",
+        "Dakar, la corniche.jpg",
+        "Beautiful sunset dakar corniche.jpg"
+      ],
+      "proposedReplace": [
+        "Dakar vue de haut 04.jpg"
+      ],
+      "finding": "Two similar aerial skyline views and two Corniche sunset/coast images need a new heritage/cultural subject.",
+      "idealShopCover": "Dakar waterfront or African Renaissance Monument",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "losangeles",
+      "name": "Los Angeles",
+      "decision": "replace_noniconic_three",
+      "existingFour": [
+        "Hollywood sign (8485145044).jpg",
+        "Los Angeles River Atwater LA Mar23 A7R 04054.jpg",
+        "Sunnynook Bridge Los Angeles Rivert LA Mar23 A7R 04048.jpg",
+        "Ceiling at the entrance to Saint Vincent de Paul Roman Catholic Church, Los Angeles, California, US.jpg"
+      ],
+      "proposedReplace": [
+        "Los Angeles River Atwater LA Mar23 A7R 04054.jpg",
+        "Sunnynook Bridge Los Angeles Rivert LA Mar23 A7R 04048.jpg",
+        "Ceiling at the entrance to Saint Vincent de Paul Roman Catholic Church, Los Angeles, California, US.jpg"
+      ],
+      "finding": "Only the Hollywood Sign is instantly recognisable; the other three are very weak LA gallery selections. Add Griffith Observatory/downtown skyline, coast and a distinctive neighbourhood.",
+      "idealShopCover": "Hollywood Sign or Griffith Observatory and downtown skyline",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "decision": "keep_subjects_check_images",
+      "existingFour": [
+        "Amsterdam Cityscape.jpg",
+        "Amsterdam Royal Palace 1699.jpg",
+        "Amsterdam (NL), Begijnhof -- 2015 -- 7215-8.jpg",
+        "Water reflection of canal houses at blue hour in Damrak Amsterdam the Netherlands.jpg"
+      ],
+      "proposedReplace": [],
+      "finding": "Cityscape, Royal Palace, Begijnhof and canal house reflection are four varied city subjects. Check framing/actual download before replacing.",
+      "idealShopCover": "Canal houses and bridge at dusk",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "oaxaca",
+      "name": "Oaxaca",
+      "decision": "replace_small_museum_subject",
+      "existingFour": [
+        "Street Scene with Mural Commemorating Centenary of Zapata's Plan de Ayala (1911) - Oaxaca City - Oaxaca - Mexico (6492492593).jpg",
+        "Chinese Dragon Dance - Oaxaca City - Oaxaca - Mexico (6490919299).jpg",
+        "Sculpture of Sea Turtle - Santo Domingo Cultural Center - Oaxaca City - Oaxaca - Mexico (6492533875).jpg",
+        "Street Scene in Los Arquitos (Aqueduct) Neighborhood - Oaxaca City - Oaxaca - Mexico - 03 (6499421923).jpg"
+      ],
+      "proposedReplace": [
+        "Sculpture of Sea Turtle - Santo Domingo Cultural Center - Oaxaca City - Oaxaca - Mexico (6492533875).jpg"
+      ],
+      "finding": "Street mural, dance, turtle sculpture and local aqueduct fail to include Oaxaca's highly identifiable Santo Domingo facade; add it.",
+      "idealShopCover": "Santo Domingo church or historic centre",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "uluru",
+      "name": "Uluru",
+      "decision": "keep_subjects_check_respectful_depiction",
+      "existingFour": [
+        "Uluru Australia.jpg",
+        "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru -- 2019 -- 3602-6.jpg",
+        "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3615.jpg",
+        "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Mutitjulu Waterhole -- 2019 -- 3648.jpg"
+      ],
+      "proposedReplace": [],
+      "finding": "Main Uluru rock, national park wide view, Kuniya Walk and Mutitjulu waterhole are sufficiently different; inspect composition and cultural sensitivity before any replacement.",
+      "idealShopCover": "Full landscape Uluru wide view",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    },
+    {
+      "id": "cairns",
+      "name": "Cairns",
+      "decision": "remove_wrong_country_image",
+      "existingFour": [
+        "Cairns (Queensland) (cropped).jpg",
+        "Cairns Foreshore Promenade, 2025, 13.jpg",
+        "Rock cairns on Kuikkapää in Urho Kekkonen national park, Sodankylä (July 2018).jpg",
+        "Cairns Marlin Marina, 2025.jpg"
+      ],
+      "proposedReplace": [
+        "Rock cairns on Kuikkapää in Urho Kekkonen national park, Sodankylä (July 2018).jpg"
+      ],
+      "finding": "This is a photograph of stacked rocks in a Finnish national park, not the city of Cairns, Queensland. Definite incorrect destination and release-blocking mismatch.",
+      "idealShopCover": "Cairns Esplanade and mountains",
+      "manualImageReview": "not_done",
+      "liveBrowserReview": "not_done"
+    }
+  ],
+  "newSourceAlternatives": [
+    {
+      "destinationId": "rio",
+      "file": "Rio-panorama-Botafogo-Sugarloaf.jpg",
+      "author": "Acediscovery",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "originalWidth": 4600,
+      "originalHeight": 3450,
+      "subject": "Rio de Janeiro city overview including Sugarloaf and Botafogo",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Rio-panorama-Botafogo-Sugarloaf.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "vancouver",
+      "file": "Stanley Park - Vancouver BC - Canada.jpg",
+      "author": "Adam Jones, Ph.D.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "originalWidth": 3456,
+      "originalHeight": 2304,
+      "subject": "Stanley Park forest, Vancouver",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Stanley_Park_-_Vancouver_BC_-_Canada.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "montreal",
+      "file": "Notre-Dame Basilica Montreal.jpg",
+      "author": "Nahannip",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 3024,
+      "originalHeight": 4032,
+      "subject": "Notre-Dame Basilica, Montréal",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Notre-Dame_Basilica_Montreal.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "brisbane",
+      "file": "Story Bridge, Brisbane City views, 2021, 04.jpg",
+      "author": "Kgbo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 3934,
+      "originalHeight": 2950,
+      "subject": "Story Bridge, Brisbane city",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Story_Bridge%2C_Brisbane_City_views%2C_2021%2C_04.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "perth",
+      "file": "Kings Park, Perth.jpg",
+      "author": "Iurii Ostakhov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 2448,
+      "originalHeight": 3264,
+      "subject": "Kings Park and Botanic Garden, Perth",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Kings_Park%2C_Perth.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "quebec",
+      "file": "Chateau Frontenac seen from the ramparts of Quebec City.jpg",
+      "author": "Wilfredor",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "originalWidth": 8256,
+      "originalHeight": 5504,
+      "subject": "Château Frontenac and historic Québec City",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Chateau_Frontenac_seen_from_the_ramparts_of_Quebec_City.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "edinburgh",
+      "file": "The Royal Mile, Edinburgh, Scotland.jpg",
+      "author": "rboed",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "originalWidth": 7482,
+      "originalHeight": 4947,
+      "subject": "Edinburgh's Royal Mile",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:The_Royal_Mile%2C_Edinburgh%2C_Scotland.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "dublin",
+      "file": "Ha'penny Bridge, Dublin, at night.jpg",
+      "author": "Bob Collowan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 3876,
+      "originalHeight": 2532,
+      "subject": "Ha'penny Bridge at night over the River Liffey, Dublin",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Ha'penny_Bridge%2C_Dublin%2C_at_night.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "tunis",
+      "file": "La medina, Tunis, Tunisia.JPG",
+      "author": "Fares Rjeibi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 4000,
+      "originalHeight": 2840,
+      "subject": "Historic Tunis souk and medina street",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:La_medina%2C_Tunis%2C_Tunisia.JPG",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "dakar",
+      "file": "African Renaissance Monument Dakar 2025.jpg",
+      "author": "Gromane",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "originalWidth": 3000,
+      "originalHeight": 4000,
+      "subject": "African Renaissance Monument in Dakar",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:African_Renaissance_Monument_Dakar_2025.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "losangeles",
+      "file": "Skyline from Griffith Observatory.jpg",
+      "author": "Dancorona21",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 5182,
+      "originalHeight": 3456,
+      "subject": "Los Angeles skyline and Griffith Observatory",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Skyline_from_Griffith_Observatory.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "oaxaca",
+      "file": "Church of Santo Domingo Oaxaca.jpg",
+      "author": "Alison Platt Kendall",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 3024,
+      "originalHeight": 4032,
+      "subject": "Oaxaca de Juárez historic Santo Domingo church",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Church_of_Santo_Domingo_Oaxaca.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    },
+    {
+      "destinationId": "cairns",
+      "file": "AU-cairns-esplanade.jpg",
+      "author": "Balou46",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 4756,
+      "originalHeight": 2889,
+      "subject": "Cairns city esplanade and waterfront, Queensland Australia",
+      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:AU-cairns-esplanade.jpg",
+      "sourcePageChecked": "2026-10-25",
+      "approval": "await actual visible image pixels and 960px card crop; require Commons licence revalidation before runtime integration"
+    }
+  ],
+  "priorities": [
+    "CRITICAL: remove Finnish cairns photo wrongly attached to Australian Cairns",
+    "HIGH: remove repetitive interiors/office blocks/river bridge details in LA, Dublin, Québec and Tunis",
+    "HIGH: mobile shop-cover photo crops for landscapes must be inspected",
+    "MEDIUM: preserve currently diverse and iconic Amsterdam, Uluru, Rio unless visibly poor"
+  ],
+  "nonDestructiveRules": [
+    "Do not remove or rename any historical destination ID",
+    "Preserve earned points, lifetime XP, cards, revision progress, purchases and unlocked custom outfits",
+    "Store existing filenames and source metadata; do not overwrite local user images",
+    "Do not reduce original source resolution or replace with unlicensed content",
+    "Retain photo credit/CC licence and link back to full-resolution original"
+  ],
+  "totals": {
+    "destinationReviews": 15,
+    "sourceAlternatives": 13,
+    "proposedOldFilesToReplace": 18,
+    "deployedChanges": 0,
+    "finalPixelApprovals": 0,
+    "requiresIntegration": true
+  }
+}
