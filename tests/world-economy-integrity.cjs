@@ -4,22 +4,22 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const root=path.join(__dirname,'..');
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const cut=(from,to)=>{const i=app.indexOf(from),j=app.indexOf(to,i);assert(i>=0&&j>i,'Missing source anchor: '+from);return app.slice(i,j)};
-const {CHARACTERS,OUTFITS,MAIN_CHARACTER_IDS}=new Function(cut('const CHARACTERS=[','// Read-only official character-profile previews.')+'return {CHARACTERS,OUTFITS,MAIN_CHARACTER_IDS};')();
-const {LOCATIONS}=new Function(cut('const LOCATIONS=[','const EARTH_TEXTURE_URL=')+'return {LOCATIONS};')();
+const {CHARACTERS,OUTFITS,MAIN_CHARACTER_IDS,POPULAR_LEAD_IDS}=new Function(cut('const CHARACTERS=[','// Read-only official character-profile previews.')+'return {CHARACTERS,OUTFITS,MAIN_CHARACTER_IDS,POPULAR_LEAD_IDS};')();
+const {LOCATIONS,ICONIC_LOCATION_IDS,MAJOR_LOCATION_IDS}=new Function(cut('const LOCATIONS=[','const EARTH_TEXTURE_URL=')+'return {LOCATIONS,ICONIC_LOCATION_IDS,MAJOR_LOCATION_IDS};')();
 const facts=new Function(cut('const LOCATION_FACTS=','async function setLocationInfo(id)')+'return {LOCATION_FACTS,LOCATION_CULTURE_DETAILS};')();
 const score=new Function(cut('function now(){','function clamp(')+'return {challengeBonusForStreak,dateKey};')();
 let checks=0;
 assert.equal(CHARACTERS.length,116);checks++;
 assert.equal(LOCATIONS.length,161);checks++;
 for(const c of CHARACTERS){
- assert.equal(c.id==='lelouch'?c.cost:MAIN_CHARACTER_IDS.has(c.id)?Math.min(50,Math.max(40,c.cost)):Math.min(40,Math.max(30,c.cost)),
- c.cost,'Character cost outside agreed tier: '+c.id);checks++;
+ assert.equal(c.cost,c.id==='lelouch'?0:POPULAR_LEAD_IDS.has(c.id)?20:MAIN_CHARACTER_IDS.has(c.id)?15:10,
+ 'Character cost outside fair tier: '+c.id);checks++;
 }
-for(const outfit of OUTFITS){assert.equal(outfit.cost,outfit.styleId==='default'?0:15,'Incorrect outfit price: '+outfit.id);checks++}
+for(const outfit of OUTFITS){assert.equal(outfit.cost,outfit.styleId==='default'?0:5,'Incorrect outfit price: '+outfit.id);checks++}
 for(const loc of LOCATIONS){
  assert(loc.id&&Number.isFinite(loc.lat)&&Number.isFinite(loc.lon),'Missing position: '+loc.id);checks++;
  assert(loc.lat>=-90&&loc.lat<=90&&loc.lon>=-180&&loc.lon<=180,'Out-of-range coordinates: '+loc.id);checks++;
- assert(loc.id==='london'?loc.cost===0:loc.cost>=100&&loc.cost<=250,'Unexpected price: '+loc.id);checks++;
+ assert(loc.id==='london'?loc.cost===0:ICONIC_LOCATION_IDS.has(loc.id)?loc.cost===100:MAJOR_LOCATION_IDS.has(loc.id)?loc.cost===75:loc.cost===50,'Unexpected price: '+loc.id);checks++;
 }
 const ids=x=>x.map(v=>v.id);
 assert.equal(new Set(ids(CHARACTERS)).size,116);checks++;
@@ -54,4 +54,4 @@ for(const question of q){
  assert(question.marks>0&&question.marks<=25,'Invalid score '+question.id);checks++;
  if(question.markPointMarks)assert.equal(question.markPointMarks.reduce((a,b)=>a+b,0),question.marks,'Marking allocation invalid '+question.id),checks++;
 }
-console.log('PASS '+checks+' characters, 15-point outfits, region-balanced locations, precise globe pins, streak bonus, distinct culture and 1262 usable exam questions');
+console.log('PASS '+checks+' characters, 5-point outfits, region-balanced locations, precise globe pins, streak bonus, distinct culture and 1262 usable exam questions');
