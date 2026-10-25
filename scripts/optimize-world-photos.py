@@ -24,7 +24,9 @@ for item in records:
         if source.exists():
             with Image.open(source) as original:
                 picture = ImageOps.exif_transpose(original).convert("RGB")
-                if picture.width < 360 or picture.height < 210:
+                if picture.width < 360 or picture.height < 60:
+                    # A legitimate 880px-wide panorama can be only ~100px tall.
+                    # Original Commons size and rights are checked by the builder.
                     raise ValueError(f"Undersized source {source}")
                 picture.save(target, "WEBP", quality=quality, method=5)
             converted += 1
@@ -32,7 +34,7 @@ for item in records:
             raise FileNotFoundError(f"Missing local photo asset {target}")
         with Image.open(target) as checked:
             checked.load()
-            if checked.format != "WEBP" or checked.width < 360 or checked.height < 210:
+            if checked.format != "WEBP" or checked.width < 360 or checked.height < 60:
                 raise ValueError(f"Invalid WebP file {target}")
         size = target.stat().st_size
         if size < 6000 or size > 7 * 1024 * 1024:
