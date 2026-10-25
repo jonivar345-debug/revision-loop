@@ -1,0 +1,362 @@
+{
+  "schema": "revision-loop-wave1-editorial-photo-audit-v1",
+  "date": "2026-10-25",
+  "status": "SOURCE-ONLY EDITORIAL COMMIT; NOT INSTALLED ON SITE",
+  "sourceMainVersion": "World v91 (c0d1fe4b6e0ddca30195e9d20bb990c733893306)",
+  "basis": "Four-file inventory from main's world-photo-quality-triage-v88.json, cross-checked against current main World curated/editorial filenames. v88 is a source-inventory snapshot, not proof of actual on-screen order.",
+  "policy": {
+    "photosPerDestination": 4,
+    "keepGoodImages": true,
+    "iconicShopCover": true,
+    "diverseScenes": true,
+    "doNotSacrificeOriginalDimensions": true,
+    "displayCreditsAndCC": true,
+    "neverUseSourcePageChecksAsPixelApproval": true,
+    "protectExistingProgressPurchasesAndIds": true
+  },
+  "locations": [
+    {
+      "id": "tbilisi",
+      "name": "Tbilisi",
+      "decision": "review_two",
+      "keep": [
+        "Old Town and Narikala, Tbilisi.jpg",
+        "Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg",
+        "Roofs of the sulfur baths in Tbilisi.jpg"
+      ],
+      "reviewRemove": [
+        "Panorama from Narikala.jpg"
+      ],
+      "reason": "Narikala/Old Town is represented in both lead and panorama; fourth slot could show the Mtkvari river or Metekhi instead. The wide-angle panorama may crop poorly on a small card.",
+      "cover": "Old Town and Narikala at dusk, unless another verified wider city view performs better at phone size",
+      "candidates": [
+        "The Mtkvari River in downtown Tbilisi.jpg"
+      ],
+      "currentFourFromSourceInventory": [
+        "Old Town and Narikala, Tbilisi.jpg",
+        "Tbilisi - Holy Trinity Cathedral (Sameba) (9458174189).jpg",
+        "Roofs of the sulfur baths in Tbilisi.jpg",
+        "Panorama from Narikala.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "newyork",
+      "name": "New York City",
+      "decision": "keep_until_pixels_checked",
+      "keep": [
+        "New York City, Skyline.jpg",
+        "Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg",
+        "Central Park New York.jpg",
+        "Times Square at night 2014.jpg"
+      ],
+      "reviewRemove": [],
+      "reason": "Current four subjects cover skyline, landmark bridge, park and street life; no obvious duplicate on metadata alone. User still flagged displayed results: verify actual crops and network load.",
+      "cover": "Lower Manhattan skyline",
+      "candidates": [],
+      "currentFourFromSourceInventory": [
+        "New York City, Skyline.jpg",
+        "Brooklyn Bridge at Night taken from Brooklyn Bridge Park.jpg",
+        "Central Park New York.jpg",
+        "Times Square at night 2014.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "capetown",
+      "name": "Cape Town",
+      "decision": "replace_two_priority",
+      "keep": [
+        "Table mountain in Cape Town.jpg"
+      ],
+      "reviewRemove": [
+        "Cape Town (ZA), Waterfront, Kran -- 2024 -- 2907.jpg",
+        "Cape Town (ZA), Wale Street -- 2024 -- 3536.jpg",
+        "Cape Town (ZA), Wale Street -- 2024 -- 3544.jpg"
+      ],
+      "reason": "Harbour-crane detail is a weak destination cover, while two Wale Street photographs repeat the same narrow urban scene. Replace at least crane and one street scene, preferably all three after pixel review.",
+      "cover": "Landscape view of Table Mountain and city skyline at dawn rather than an object close-up",
+      "candidates": [
+        "Cape Town dawn cityscape with Table Mountain.jpg",
+        "Bo-Kaap Cape Town.jpg",
+        "Cape Town - Table Mountain seen from Waterfront (1).jpg"
+      ],
+      "currentFourFromSourceInventory": [
+        "Table mountain in Cape Town.jpg",
+        "Cape Town (ZA), Waterfront, Kran -- 2024 -- 2907.jpg",
+        "Cape Town (ZA), Wale Street -- 2024 -- 3536.jpg",
+        "Cape Town (ZA), Wale Street -- 2024 -- 3544.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "busan",
+      "name": "Busan",
+      "decision": "keep_source_set_verify_rendering",
+      "keep": [
+        "Haeundae District and Beach.jpg",
+        "Gwangalli bridge at sunset.jpg",
+        "Gamcheon Culture Village in Busan, South Korea.jpg",
+        "Haedong Yonggungsa, Busan.jpg"
+      ],
+      "reviewRemove": [],
+      "reason": "This is one of the two original deliberately selected galleries. Beach, bridge, hillside village and temple are distinct; user reported photos not good, so check card crop and end-to-end loading before deciding on replacements.",
+      "cover": "Haeundae coast or Gwangan Bridge, chosen by actual thumbnail appearance",
+      "candidates": [],
+      "currentFourFromSourceInventory": [
+        "Haeundae District and Beach.jpg",
+        "Gwangalli bridge at sunset.jpg",
+        "Gamcheon Culture Village in Busan, South Korea.jpg",
+        "Haedong Yonggungsa, Busan.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "hongkong",
+      "name": "Hong Kong",
+      "decision": "review_cover_and_vertical_images",
+      "keep": [
+        "Hong Kong as seen from Victoria Peak.jpg",
+        "Star Ferry ships at Hong Kong.jpg",
+        "Tian Tan Buddha, Hong Kong.jpg"
+      ],
+      "reviewRemove": [
+        "Hong Kong tram 110.jpg"
+      ],
+      "reason": "Four subjects are geographically varied. The tram and Buddha are vertical compositions; test smartphone gallery cropping, and only replace the tram if its crop proves poor. Avoid a 26,001-pixel-wide panoramic image as a card cover.",
+      "cover": "Recognisable Victoria Harbour skyline at normal landscape crop",
+      "candidates": [
+        "Panorama of Hong Kong Harbour from The Peak dllu.jpg"
+      ],
+      "currentFourFromSourceInventory": [
+        "Hong Kong as seen from Victoria Peak.jpg",
+        "Star Ferry ships at Hong Kong.jpg",
+        "Hong Kong tram 110.jpg",
+        "Tian Tan Buddha, Hong Kong.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "decision": "keep_until_pixels_checked",
+      "keep": [
+        "Marina Bay Sands.jpeg",
+        "Gardens-by-the-bay.jpg",
+        "Chinatown Singapore.jpg",
+        "The Jewel, Singapore (IMG 20230827 155118).jpg"
+      ],
+      "reviewRemove": [],
+      "reason": "Marina Bay, Gardens, Chinatown and Jewel represent four different aspects; verify shop cover and image resolution before swapping. A super-wide night panorama would not necessarily be better in a short card.",
+      "cover": "Strong Marina Bay skyline",
+      "candidates": [],
+      "currentFourFromSourceInventory": [
+        "Marina Bay Sands.jpeg",
+        "Gardens-by-the-bay.jpg",
+        "Chinatown Singapore.jpg",
+        "The Jewel, Singapore (IMG 20230827 155118).jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "venice",
+      "name": "Venice",
+      "decision": "keep_until_pixels_checked",
+      "keep": [
+        "Grand Canal from Rialto Bridge.jpg",
+        "St. Mark's Basilica, St Mark's Square, Venice, Italy.jpg",
+        "Bridge of Sighs Venice.jpg",
+        "Gondolas, Venice, Italy.jpg"
+      ],
+      "reviewRemove": [],
+      "reason": "Canal, basilica, bridge and gondolas provide four distinct recognisable subjects; no evidence supports replacing them purely because the destination was flagged.",
+      "cover": "Grand Canal from Rialto Bridge",
+      "candidates": [],
+      "currentFourFromSourceInventory": [
+        "Grand Canal from Rialto Bridge.jpg",
+        "St. Mark's Basilica, St Mark's Square, Venice, Italy.jpg",
+        "Bridge of Sighs Venice.jpg",
+        "Gondolas, Venice, Italy.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "sanfrancisco",
+      "name": "San Francisco",
+      "decision": "replace_bad_lead",
+      "keep": [
+        "San Francisco Panorama from Twin Peaks 2013.jpg",
+        "Golden Gate Bridge and San Francisco skyline from Hawk Hill at Blue Hour dllu.jpg",
+        "Ferry Building San Francisco from Hyatt Regency with R-Evolution and Bay Bridge 2026 dllu.jpg"
+      ],
+      "reviewRemove": [
+        "Zeppelin-ride-020100925-195 (5029394846).jpg"
+      ],
+      "reason": "A zeppelin ride should not lead the gallery ahead of Golden Gate Bridge imagery, and its source description is generic rather than landmark-specific. Replace that source with Painted Ladies for a distinct neighbourhood feature, and promote the existing bridge picture as lead when editing runtime data is permitted.",
+      "cover": "Existing Golden Gate Bridge and skyline at blue hour (not zeppelin)",
+      "candidates": [
+        "The Painted Ladies.jpg"
+      ],
+      "currentFourFromSourceInventory": [
+        "Zeppelin-ride-020100925-195 (5029394846).jpg",
+        "San Francisco Panorama from Twin Peaks 2013.jpg",
+        "Golden Gate Bridge and San Francisco skyline from Hawk Hill at Blue Hour dllu.jpg",
+        "Ferry Building San Francisco from Hyatt Regency with R-Evolution and Bay Bridge 2026 dllu.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "decision": "keep_until_pixels_checked",
+      "keep": [
+        "Rome colosseum.jpg",
+        "Trevi Fountain 1 - Rome.jpg",
+        "The Pantheon, Rome.jpg",
+        "Roman Forum in Rome.jpg"
+      ],
+      "reviewRemove": [],
+      "reason": "Colosseum, fountain, Pantheon and Forum are different major sites. Metadata-level variety is good; inspect image presentation before rejecting a specific photo.",
+      "cover": "Colosseum",
+      "candidates": [],
+      "currentFourFromSourceInventory": [
+        "Rome colosseum.jpg",
+        "Trevi Fountain 1 - Rome.jpg",
+        "The Pantheon, Rome.jpg",
+        "Roman Forum in Rome.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "decision": "keep_until_pixels_checked",
+      "keep": [
+        "Eiffel Tower from Trocadero-2026-07-msu--.jpg",
+        "Panorama of the Musée du Louvre.jpg",
+        "Montmartre - Paris1.jpg",
+        "Notre Dame Cathedral, Paris.jpg"
+      ],
+      "reviewRemove": [],
+      "reason": "Eiffel Tower, Louvre, Montmartre and Notre-Dame cover separate iconic scenes. Retain unless inspection shows poor composition, loading or inaccurate subject.",
+      "cover": "Eiffel Tower from Trocadero",
+      "candidates": [],
+      "currentFourFromSourceInventory": [
+        "Eiffel Tower from Trocadero-2026-07-msu--.jpg",
+        "Panorama of the Musée du Louvre.jpg",
+        "Montmartre - Paris1.jpg",
+        "Notre Dame Cathedral, Paris.jpg"
+      ],
+      "sourceReviewCompleted": true,
+      "highResolutionPixelReviewCompleted": false,
+      "actualLiveUserGalleryTested": false
+    }
+  ],
+  "replacementCandidates": [
+    {
+      "file": "The Mtkvari River in downtown Tbilisi.jpg",
+      "id": "tbilisi",
+      "author": "Kober",
+      "license": "Public domain (author dedication)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "width": 4000,
+      "height": 3000,
+      "source": "https://commons.wikimedia.org/wiki/File:The_Mtkvari_River_in_downtown_Tbilisi.jpg",
+      "role": "alternative river/old-city gallery photo",
+      "review": "file-page source and dimensions checked; crop and pixel approval not complete"
+    },
+    {
+      "file": "Cape Town dawn cityscape with Table Mountain.jpg",
+      "id": "capetown",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "width": 5160,
+      "height": 2892,
+      "source": "https://commons.wikimedia.org/wiki/File:Cape_Town_dawn_cityscape_with_Table_Mountain.jpg",
+      "role": "proposed hero cover; city and landmark together",
+      "review": "source-page author/licence/dimensions checked; thumbnail and gallery pixels not approved"
+    },
+    {
+      "file": "Bo-Kaap Cape Town.jpg",
+      "id": "capetown",
+      "author": "Witstinkhout",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "width": 4322,
+      "height": 2898,
+      "source": "https://commons.wikimedia.org/wiki/File:Bo-Kaap_Cape_Town.jpg",
+      "role": "colourful distinctive historic-neighbourhood gallery photo",
+      "review": "source-page author/licence/dimensions checked; thumbnail and gallery pixels not approved"
+    },
+    {
+      "file": "Cape Town - Table Mountain seen from Waterfront (1).jpg",
+      "id": "capetown",
+      "author": "Romaine",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "width": 4032,
+      "height": 2268,
+      "source": "https://commons.wikimedia.org/wiki/File:Cape_Town_-_Table_Mountain_seen_from_Waterfront_(1).jpg",
+      "role": "scenic waterfront gallery alternative to harbour crane",
+      "review": "source-page author/licence/dimensions checked; thumbnail and gallery pixels not approved"
+    },
+    {
+      "file": "Panorama of Hong Kong Harbour from The Peak dllu.jpg",
+      "id": "hongkong",
+      "author": "Dllu",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 26001,
+      "height": 10329,
+      "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_Hong_Kong_Harbour_from_The_Peak_dllu.jpg",
+      "role": "optional hero landscape *within unlocked gallery only*; not safe as original-resolution in-site download or narrow-card cover",
+      "review": "Commons featured image; source-page authorship/licence/dimensions checked; large original 181.67 MB, derivatives only"
+    },
+    {
+      "file": "The Painted Ladies.jpg",
+      "id": "sanfrancisco",
+      "author": "Briana Berger",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 5184,
+      "height": 3456,
+      "source": "https://commons.wikimedia.org/wiki/File:The_Painted_Ladies.jpg",
+      "role": "replace weak Zeppelin photograph with landmark neighbourhood",
+      "review": "source-page author/licence/dimensions checked; thumbnail and gallery pixels not approved"
+    }
+  ],
+  "counts": {
+    "locationsAssessed": 10,
+    "sourcePagesVerified": 6,
+    "proposedRemovalItems": 6,
+    "runtimeChanges": 0,
+    "livePhotoChanges": 0,
+    "pixelApprovals": 0
+  },
+  "releaseGate": [
+    "human view actual pixels at ~2048px and shop 960px cover, including composition/blur and copyright notices",
+    "check all final four have correct city/place and do not duplicate perspective",
+    "re-verify Commons file author current licence and original resolution",
+    "integrate only when code-writing restrictions and release tests allow",
+    "test browser/mobile shop cover and unlocked 4-image gallery; preserve all existing local-storage profiles and purchases"
+  ]
+}
