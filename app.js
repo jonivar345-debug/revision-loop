@@ -731,7 +731,7 @@ function loadCharacterArt(root=document){
    if(!el.isConnected)return;
    el.dataset.loading='0';
    el.classList.add('art-unavailable');
-   if(note)note.textContent='Portrait currently unavailable';
+   if(note)note.textContent='Illustrated preview · portrait unavailable';
   };
   const tryImage=url=>new Promise(resolve=>{
    if(!url||!el.isConnected){resolve(false);return}
@@ -791,16 +791,17 @@ function loadCharacterArt(root=document){
 }
 function characterArtwork(c,o){
  const outfit=o?.name||'';
- const initials=c.name.split(/[\s.-]+/).filter(Boolean).slice(0,2).map(p=>p[0]).join('').toUpperCase();
  const gradient='linear-gradient(140deg,'+(c.hair||'#172554')+','+(c.hair2||'#334155')+',#0b142c)';
  const preview=o&&o.id!==c.id+'-default';
+ // An original character-colour sketch is the immediate offline fallback.
+ // Public character portraits are loaded on top where their host permits it;
+ // privately uploaded outfit pictures take priority over both.
  return '<div class="character-art outfit-style-'+esc(o?.styleId||'default')+'" data-character-art="'+esc(c.id)+'" data-outfit-art="'+esc(o?.id||'')+'" title="'+esc(c.name)+(outfit?' · '+esc(outfit):'')+'">'+
-  '<div class="character-loading" style="background:'+gradient+'"><span class="portrait-monogram">'+esc(initials)+'</span><span>'+esc(c.name)+'</span><small>Finding character portrait…</small></div>'+
+  '<div class="character-loading" style="background:'+gradient+'">'+avatarSVG(c,o)+'<small>Illustrated preview · finding portrait…</small></div>'+
   (o?illustratedCostume(c,o):'')+
   (preview?'<div class="outfit-overlay">'+esc(outfit)+'</div>':'')+
   '</div>';
 }
-
 const LOCATIONS=[
  {id:'london',name:'London',wiki:'London',lat:51.5072,lon:-0.1276,cost:0,region:'Europe'},
  {id:'tbilisi',name:'Tbilisi',wiki:'Tbilisi',lat:41.7151,lon:44.8271,cost:25,region:'Asia'},
