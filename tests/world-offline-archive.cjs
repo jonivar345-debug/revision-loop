@@ -20,6 +20,7 @@ assert(sw.includes("'./data/natural-earth-coastlines-110m.json'"),'Actual public
 const version=sw.match(/CACHE='revision-loop-v(\d+)-/);
 assert(version&&Number(version[1])>=104,'Cache version not advanced');
 assert(sw.includes("'./world-local-photos.js'"),'Local photo library not precached in offline shell');
+assert(sw.includes("'./world-shop-cover-priorities.js'"),'Selected locally hosted World shop covers must be precached');
 assert(sw.includes("'./world-photo-editorial-v104.js'"),'Priority photo metadata not precached');
 assert(sw.includes("'./world-photo-credits.js'"),'Shared image licence panel not cached');
 console.log('PASS offline world assets: 27 editorial source files and seven world runtime files precached on service worker install.');
