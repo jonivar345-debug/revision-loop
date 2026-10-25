@@ -1,8 +1,8 @@
-name: Build World v109 quality-gated photos and full-archive review index
+name: Build World v110 quality-gated photos and full-archive review index
 
 on:
   push:
-    branches: [feature/world-v109-photo-quality-and-local-expansion]
+    branches: [feature/world-v110-photo-expansion]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -19,6 +19,11 @@ on:
       - 'tests/world-v108-sources.cjs'
       - 'tests/world-v108-local.cjs'
       - 'editorial/world-v109-batch-targets.json'
+      - 'editorial/world-v110-batch-targets.json'
+      - 'world-curated-photos.js'
+      - 'scripts/build-world-v110-contact-sheet.py'
+      - 'tests/world-v110-sources.cjs'
+      - 'tests/world-v110-archive.cjs'
       - 'scripts/build-world-v109-contact-sheet.py'
       - 'scripts/build-world-local-review-index.py'
       - 'tests/world-v109-sources.cjs'
@@ -60,6 +65,8 @@ jobs:
         run: node tests/world-v108-sources.cjs
       - name: Check 25 locked destination photo source lists
         run: node tests/world-v109-sources.cjs
+      - name: Check 26 locked v110 source selections
+        run: node tests/world-v110-sources.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
@@ -76,8 +83,10 @@ jobs:
         run: python scripts/build-world-v108-contact-sheet.py
       - name: Verify v109 imported files and older accepted locations
         run: node tests/world-v109-archive.cjs
-      - name: Generate v109 full-frame and shop-card contact sheet
-        run: python scripts/build-world-v109-contact-sheet.py
+      - name: Verify new v110 gallery files and historical v109 image preservation
+        run: node tests/world-v110-archive.cjs
+      - name: Generate v110 full-frame and shop-card contact sheet
+        run: python scripts/build-world-v110-contact-sheet.py
       - name: Create whole-archive local photo review index
         run: python scripts/build-world-local-review-index.py
       - name: Check all local photos are browseable in review page
@@ -86,7 +95,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v109.json editorial/world-v109-visual-review.json editorial/reviews/world-v109-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v110.json editorial/world-v110-visual-review.json editorial/reviews/world-v110-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else
