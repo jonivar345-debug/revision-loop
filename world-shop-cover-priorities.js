@@ -110,6 +110,22 @@
   "samarkand": {
     "slot": 2,
     "file": "Samarkand Shah-i Zinda general view.JPG"
+  },
+  "mostar": {
+    "slot": 2,
+    "file": "View of Mostar 01.jpg"
+  },
+  "oaxaca": {
+    "slot": 4,
+    "file": "Street Scene in Los Arquitos (Aqueduct) Neighborhood - Oaxaca City - Oaxaca - Mexico - 03 (6499421923).jpg"
+  },
+  "sanfrancisco": {
+    "slot": 2,
+    "file": "The Painted Ladies.jpg"
+  },
+  "uluru": {
+    "slot": 3,
+    "file": "Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3615.jpg"
   }
 });
   return Object.freeze({get:id=>selections[id]||null,all:()=>({...selections})});
