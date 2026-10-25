@@ -1153,8 +1153,10 @@ function advanceSession(){
   if(profile.challengeBonusDate!==today){
     const bonus=challengeBonusForStreak(profile.challengeStreak);
     profile.challengeBonusDate=today;
-    if(bonus)award(bonus,'challenge-streak');
-    showToast('Daily challenge complete · '+profile.challengeStreak+'-day streak'+(bonus?' · +'+bonus+' bonus points / XP':''));
+    // Streak adds spendable points only; daily challenge completions award no XP.
+    // The date guards above prevent a repeat streak bonus on the same day.
+    if(bonus)profile.points+=bonus;
+    showToast('Daily challenge complete · '+profile.challengeStreak+'-day streak'+(bonus?' · +'+bonus+' bonus point'+(bonus===1?'':'s'):''));
   }
  }activeSession=null}else activeSession={...activeSession,index:s.index};save()}
  else if(activeSession.index>=activeSession.items.length)activeSession={...activeSession,done:true};
