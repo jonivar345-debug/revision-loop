@@ -35,6 +35,11 @@ on:
       - 'tests/world-v107-archive.cjs'
   workflow_dispatch:
 
+# Prevent concurrent image-archive runs from racing to publish the same binary assets.
+concurrency:
+  group: world-photo-archive-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
