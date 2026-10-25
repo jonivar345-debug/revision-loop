@@ -23,7 +23,7 @@ for(const c of CHARACTERS){
  const previews=new Set();
  for(const [i,o] of costumes.entries()){
   assert(!ids.has(o.id));ids.add(o.id);checks++;
-  assert.equal(o.cost,i===0?0:15);checks++;
+  assert.equal(o.cost,i===0?0:5);checks++;
   const svg=illustratedCostume(c,o);
   assert(svg.includes('costume-silhouette')&&svg.includes('aria-hidden'));checks++;
   assert(svg.includes('costume-'+o.styleId));checks++;
