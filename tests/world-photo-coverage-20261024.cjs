@@ -35,7 +35,9 @@ for(const id of ids){
 assert.equal(curated.get('london').length,4);
 assert.equal(curated.get('busan').length,4);
 assert.equal(curated.get('country-cf').length,4,'Central African Republic must have four distinct source references');
-assert.equal(checked,8,'Only London and Busan are fully hand-curated');
+assert.equal(checked,9,'Eight London/Busan source records plus the verified v110 Arctic Ocean photograph');
+assert(curated.get('ocean-arctic').some(p=>p.file==='File:North Pole, Arctic Ocean, sea ice 01.jpg'&&p.license==='CC BY-SA 4.0'),
+ 'The v110 Arctic Ocean replacement must retain its verified Commons licence');
 assert(editorial>=200,'The sourced editorial archive did not reach the live candidate registry');
 assert(destinations>=90,'Expected improved country-gateway photo coverage');
 const source=fs.readFileSync(path.join(root,'world-location-photo-gallery.js'),'utf8');
