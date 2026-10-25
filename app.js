@@ -142,11 +142,11 @@ const CHARACTERS=[
 // supporting characters 30–40. The starter character stays free.
 const MAIN_CHARACTER_IDS=new Set(["light","eren","isagi","yuji","gojo","subaru","klein","dokja","joonghyuk","thorfinn","kaneki","phase2_kenzo_tenma","phase2_johan_liebert","phase2_shinichi_izumi","phase2_spike_spiegel","phase2_shinji_ikari","phase2_edward_elric","phase2_gon_freecss","phase2_denji","phase2_kafka_hibino","phase2_loid_forger","phase2_anya_forger","phase2_kiyotaka_ayanokoji","phase2_aqua_hoshino","phase2_takemichi_hanagaki","phase2_manjiro_sano","phase2_haruka_sakura","phase2_sung_jinwoo","lelouch"]);
 const POPULAR_LEAD_IDS=new Set(["light","eren","gojo","isagi","yuji","kaneki","phase2_sung_jinwoo","phase2_denji","phase2_anya_forger","phase2_edward_elric","phase2_gon_freecss"]);
-CHARACTERS.forEach((c,i)=>{
+// Accessible World shop pricing. Older owned IDs and earned balances
+// are preserved; only the next unowned purchase uses this price.
+CHARACTERS.forEach(c=>{
  if(c.id==='lelouch'){c.cost=0;return}
- c.cost=MAIN_CHARACTER_IDS.has(c.id)?
-   (POPULAR_LEAD_IDS.has(c.id)?50:(i%2?45:40)):
-   (30+((i%3)*5));
+ c.cost=POPULAR_LEAD_IDS.has(c.id)?20:MAIN_CHARACTER_IDS.has(c.id)?15:10;
 });
 
 const OUTFIT_STYLES=[
@@ -185,7 +185,7 @@ const SERIES_OUTFIT_NAMES={
 };
 const OUTFITS=CHARACTERS.flatMap(ch=>OUTFIT_STYLES.map((o,i)=>({
  id:ch.id+'-'+o.id,character:ch.id,name:(CHARACTER_OUTFIT_NAMES[ch.id]||SERIES_OUTFIT_NAMES[ch.series]||[])[i]||o.name,
- cost:i===0?0:15,
+ cost:i===0?0:5,
  top:o.top,accent:o.accent,styleId:o.id
 })));
 
@@ -651,7 +651,8 @@ const LOCATIONS=[
 
 
 // Location costs reflect broad destination prominence rather than insertion order.
-// London remains the free starting location; the full paid range is 100–250.
+// London is the free starting location. Other historical destinations
+// are 50 (regular), 75 (major), or 100 (iconic) points for new purchases.
 const ICONIC_LOCATION_IDS=new Set([
  'tokyo','london','paris','newyork','rome','sydney','singapore','hongkong','bali',
  'kyoto','machupicchu','petra','venice','cairo','rio','capetown','grandcanyon',
@@ -662,11 +663,10 @@ const MAJOR_LOCATION_IDS=new Set([
  'edinburgh','marrakesh','sanfrancisco','losangeles','vancouver','hanoi',
  'berlin','prague','florence','almaty','nairobi','cusco','buenosaires','seville'
 ]);
-LOCATIONS.forEach((l,i)=>{
+LOCATIONS.forEach(l=>{
  if(l.id==='london'){l.cost=0;return}
- l.cost=ICONIC_LOCATION_IDS.has(l.id)?(230+(i%3)*10):
-  MAJOR_LOCATION_IDS.has(l.id)?(175+(i%5)*10):
-  (100+(i%8)*10);
+ l.cost=ICONIC_LOCATION_IDS.has(l.id)?100:
+  MAJOR_LOCATION_IDS.has(l.id)?75:50;
 });
 // Additional country/ocean/sea pins have NEW IDs. Do not change the old
 // locations, historical cost tiers, or any saved purchase identifier.
