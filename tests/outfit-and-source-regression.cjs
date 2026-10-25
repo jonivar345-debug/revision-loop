@@ -8,7 +8,7 @@ function cut(a,b){
  return app.slice(i,j);
 }
 const definitions=cut('const CHARACTERS=[','// Read-only official character-profile previews.');
-const art=cut('function outfitPalette(c,o){','function compressOutfitPhoto(file){');
+const art=cut('const SERIES_COSTUME_TONES=','function compressOutfitPhoto(file){');
 const model=new Function(definitions+
  'function esc(value){return String(value).replace(/&/g,"&amp;").replace(/"/g,"&quot;")};'+art+
  'return {CHARACTERS,OUTFITS,illustratedCostume,outfitPalette}')();
