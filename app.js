@@ -8,7 +8,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,toastTimer=null;
-let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
+let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -1396,7 +1396,8 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c)))}
+function flashEligible(c){return flashScopeFilter==='mock'?c.mock===true:flashScopeFilter==='taught'?taughtCard(c):true}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
  const picked=weightedPick(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
@@ -1691,10 +1692,39 @@ function renderAvatar(){
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today · next streak bonus '+profile.challengeStreak+' point'+(profile.challengeStreak===1?'':'s'):( (s.index||0)+' / '+s.items.length+' completed')):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
+function flashCourseFamily(c){
+ const p=String(c.specRef||''),t=String(c.topic||''),u=String(c.unit||'');
+ if(c.subject==='Physics'){
+  if(p.startsWith('3.10')||u==='medical'||t.startsWith('Medical physics'))return '3.10 Medical physics (option)';
+  if(p.startsWith('3.8')||u==='a2-nuclear')return '3.8 Nuclear physics';
+  if(p.startsWith('3.7')||u.startsWith('a2-gravity')||u.startsWith('a2-electric')||u.startsWith('a2-capacitance')||u.startsWith('a2-magnetic')||u.startsWith('a2-induction'))return '3.7 Fields and their consequences';
+  if(p.startsWith('3.6')||u==='a2-periodic'||u==='a2-thermal')return '3.6 Further mechanics and thermal physics';
+  const core=[['as-measurements','3.1 Measurements and errors'],['as-particles','3.2 Particles and radiation'],['as-waves','3.3 Waves'],['as-mechanics','3.4 Mechanics and materials'],['as-electricity','3.5 Electricity']];
+  for(const [prefix,label] of core)if(u===prefix)return label;
+  const num=p.match(/^3\.[1-5](?=\.|$)/)?.[0];
+  const byNum={'3.1':'3.1 Measurements and errors','3.2':'3.2 Particles and radiation','3.3':'3.3 Waves','3.4':'3.4 Mechanics and materials','3.5':'3.5 Electricity'};
+  if(num&&byNum[num])return byNum[num];
+ }else if(c.subject==='Chemistry'){
+  const s=p.match(/^3\.[123](?:\.\d+)?/)?.[0];
+  if(s?.startsWith('3.1'))return '3.1 Physical chemistry';
+  if(s?.startsWith('3.2'))return '3.2 Inorganic chemistry';
+  if(s?.startsWith('3.3'))return '3.3 Organic chemistry';
+  const inorganic=new Set(['Periodicity','Period 3','Group 2','Group 7','Transition metals','Transition metal complexes','Aqueous ions','Aqueous metal ions','Period 3 oxides']);
+  const organic=new Set(['Organic chemistry','Alkanes','Alkenes','Halogenoalkanes','Alcohols','Organic analysis','Optical isomerism','Aldehydes and ketones','Carboxylic acids','Esters','Acyl chlorides','Aromatic chemistry','Amines','Polymers','Amino acids','DNA','Proteins and DNA','Organic synthesis','NMR','NMR spectroscopy','Chromatography']);
+  if(inorganic.has(t))return '3.2 Inorganic chemistry';
+  if(organic.has(t)||t.startsWith('RP5 ')||t.startsWith('RP6 '))return '3.3 Organic chemistry';
+  return '3.1 Physical chemistry';
+ }else if(c.subject==='Maths'){
+  if(['Statistics','Statistical distributions','Statistical sampling','Data presentation and interpretation','Probability','Hypothesis testing'].includes(t))return 'Statistics';
+  if(['Mechanics','Forces','Moments','Kinematics','Quantities and units in mechanics'].includes(t))return 'Mechanics';
+  return 'Pure mathematics';
+ }
+ return c.courseTopic||'Other';
+}
 function revisionTopicIndex(subject,qualification='both'){
  const groups=new Map();
  for(const c of subjectCards(subject)){
-  const group=c.courseTopic||'Other',topic=flashTopicLabel(c);
+  const group=flashCourseFamily(c),topic=flashTopicLabel(c);
   if(!groups.has(group))groups.set(group,new Map());
   if(!groups.get(group).has(topic))groups.get(group).set(topic,{cards:0,questions:0});
   groups.get(group).get(topic).cards++;
@@ -1740,12 +1770,13 @@ function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
- if(defaultIfEmpty&&!flashTopics.size)base.filter(c=>c.taught).forEach(c=>flashTopics.add(flashTopicLabel(c)));
+ if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
 }
 function applyFlashPreset(p){
+ flashScopeFilter=['mock','taught','all'].includes(p)?p:'all';
  const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
  if(p!=='clear'){const filtered=p==='mock'?base.filter(c=>c.mock===true):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
@@ -1918,7 +1949,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
 function renderTopicCounts(){
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+selectedFlashCards().length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  document.getElementById('examTopicCount').textContent=examTopics.size+' selected';
  document.getElementById('examYearCount').textContent=examYears.size+' selected';
  const count=examGroups().reduce((n,g)=>n+g.length,0);
