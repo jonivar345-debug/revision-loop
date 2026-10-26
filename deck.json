@@ -29373,7 +29373,7 @@
       "priority": 2,
       "scope": "mock",
       "front": "Why does sulfur have a higher melting point than phosphorus?",
-      "back": "S₈ molecules have more electrons and stronger London forces.",
+      "back": "S₈ molecules have more electrons and stronger van der Waals' forces.",
       "active": true,
       "stage": "AS",
       "mock": true,
@@ -29390,7 +29390,7 @@
       "priority": 2,
       "scope": "mock",
       "front": "Why does argon melt at a very low temperature?",
-      "back": "Monatomic particles have weak London forces.",
+      "back": "Monatomic particles have weak van der Waals' forces.",
       "active": true,
       "stage": "AS",
       "mock": true,
@@ -29645,7 +29645,7 @@
       "priority": 2,
       "scope": "mock",
       "front": "Why do halogen boiling points rise down the group?",
-      "back": "More electrons produce stronger London forces.",
+      "back": "More electrons produce stronger van der Waals' forces.",
       "active": true,
       "stage": "AS",
       "mock": true,
@@ -42225,8 +42225,9 @@
       "priority": 5,
       "scope": "mock",
       "front": "Why does sulfur melt above phosphorus?",
-      "back": "S₈ has stronger London forces than P₄.",
+      "back": "S₈ has stronger van der Waals' forces than P₄.",
       "accept": [
+        "S₈ has stronger van der Waals' forces than P₄.",
         "S₈ has stronger London forces than P₄.",
         "S₈ has stronger London forces than P₄"
       ],
@@ -42246,8 +42247,9 @@
       "priority": 5,
       "scope": "mock",
       "front": "Why does argon have a very low melting point?",
-      "back": "Only weak London forces act between atoms.",
+      "back": "Only weak van der Waals' forces act between atoms.",
       "accept": [
+        "Only weak van der Waals' forces act between atoms.",
         "Only weak London forces act between atoms.",
         "Only weak London forces act between atoms"
       ],
@@ -51754,7 +51756,7 @@
     "dailyNewDefault": 18,
     "weakFirst": true,
     "practicalMix": "1 practical per 5 content cards",
-    "note": "Mechanics & Materials reported broad weakness; especially motion graphs, slope components, projectile motion and exact Newton law recall. Independent performance on harder practice has not yet been established. Advanced 16-question Mechanics bank available in exam practice (select Practice and Extended). Chemistry v40 adds syllabus-level esters, oils/fats, soaps, biodiesel, transesterification and carboxylic acids. These are review cards, not independently assessed performance. Acylation v41 covers acid anhydride/chloride and amide structure, 4 nucleophile classes, addition-elimination electron-flow theory and aspirin-related context. Mechanisms v42 includes electron-arrow interpretation for Year 1 organic reactions plus carbonyl nucleophilic addition and optical isomerism. Later separate aromatic and amine chapters remain unconfirmed for mock. Atomic structure v43 includes TOF mass spectrometry full stages, isotope spectra and weighted means, electron configuration to Z36, Period3/Group2 ionisation trends, and worked exam-style practice, with TOF self-reported revision priority. Guided answers are not independent marks. AQA 3.1.2 v44 comprehensive remainder: empirical/molecular formula, ideal gas equation, mass and gas stoichiometry, percentage yield/atom economy, ionic equations, hydrated salts, RP1 and direct/back titrations. All v44 cards are mock eligible; note explanations alone are not independent attainment. Electron-configuration exceptions (Cr/Cu and 4s electron removal) added as user-reported weak recall area on 25 October 2026; existing Cr/Cu and Fe ion cards upgraded to priority 9, plus 10 high-priority mock flashcards. No independent scored assessment yet. Period 3 first-ionisation-energy explanation highlighted for focused revision (Mg/Al 3s→3p subshell change; P/S paired-electron repulsion in 3p; overall trend with nuclear charge/shielding). Prioritized 5 existing cards and added 3 integrated-recall mock cards; user not independently tested. AQA 3.1.3 bonding v47: ionic formulas, dative and metallic models, six specified crystal examples and structure–property reasoning covered on mock cards. Bonding v48 covers VSEPR shapes 2–6 electron domains (lone-pair cases), polarity, London/permanent dipole/H bonds, water and ice density, exam-linked physics and chemistry explanations. Year 1 Energetics AQA 3.1.4: 65 targeted cards covering reaction enthalpy signs and definitions, calorimetry and RP2, standard formation/combustion enthalpies, Hess formation/combustion/hydration cycles, mean gaseous bond enthalpies; previously revised Born-Haber/entropy/Gibbs not duplicated. New content is notes/revision eligibility, not independently assessed mastery. Energetics v51: five targeted follow-up cards for calorimetry uncertainties, thermometer response, formation equation stoichiometry and diatomic bond enthalpy precision; three new original questions add 17 marks without repeating the combustion Hess and RP2 evaluations in v50. Bonding weakness focus v52 (26 Oct 2026): five individually testable compound-ion formulae and charges; high-priority unfamiliar VSEPR shapes, electronegativity/polarity, van der Waals' (induced dipole–dipole) comparisons, and four-mark explanation structures. AQA treats 'van der Waals', 'London' and 'dispersion' as synonyms here. Prior weak-area cards promoted; original study IDs retained. No independent marks earned by creating cards. Chemistry Energetics v53 focused weak-area programme: standard conditions/definitions, -q/n unit conversion and mole meaning, stoichiometric coefficients across calorimetry/Hess/bond enthalpies, Hess signs/paths and RP2 basic practical reasoning. New items are for revision, not independently assessed success. RP2 retained because paper 1/2 may assess practical skills even without Paper 3. Task 1 v122 first-pass Physics specification gap cards: short single-recall items (AS core and selected A2, optional Medical separated); original IDs preserved. Scope reflects taught vs future content. These are revision aids, not a certified exhaustive specification sign-off. | Year 1 Chemistry chat v126: 100 distinct short cards for the six newly taught topics (Kinetics, Equilibria, Redox, Periodicity, Group 2, Group 7), focused on missing reaction equations, formulas, explanations, calculations and RP3/RP4. Earlier Atomic Structure, Amount, Bonding, Energetics retained. Additions do not count as independently demonstrated mastery.",
+    "note": "Mechanics & Materials reported broad weakness; especially motion graphs, slope components, projectile motion and exact Newton law recall. Independent performance on harder practice has not yet been established. Advanced 16-question Mechanics bank available in exam practice (select Practice and Extended). Chemistry v40 adds syllabus-level esters, oils/fats, soaps, biodiesel, transesterification and carboxylic acids. These are review cards, not independently assessed performance. Acylation v41 covers acid anhydride/chloride and amide structure, 4 nucleophile classes, addition-elimination electron-flow theory and aspirin-related context. Mechanisms v42 includes electron-arrow interpretation for Year 1 organic reactions plus carbonyl nucleophilic addition and optical isomerism. Later separate aromatic and amine chapters remain unconfirmed for mock. Atomic structure v43 includes TOF mass spectrometry full stages, isotope spectra and weighted means, electron configuration to Z36, Period3/Group2 ionisation trends, and worked exam-style practice, with TOF self-reported revision priority. Guided answers are not independent marks. AQA 3.1.2 v44 comprehensive remainder: empirical/molecular formula, ideal gas equation, mass and gas stoichiometry, percentage yield/atom economy, ionic equations, hydrated salts, RP1 and direct/back titrations. All v44 cards are mock eligible; note explanations alone are not independent attainment. Electron-configuration exceptions (Cr/Cu and 4s electron removal) added as user-reported weak recall area on 25 October 2026; existing Cr/Cu and Fe ion cards upgraded to priority 9, plus 10 high-priority mock flashcards. No independent scored assessment yet. Period 3 first-ionisation-energy explanation highlighted for focused revision (Mg/Al 3s→3p subshell change; P/S paired-electron repulsion in 3p; overall trend with nuclear charge/shielding). Prioritized 5 existing cards and added 3 integrated-recall mock cards; user not independently tested. AQA 3.1.3 bonding v47: ionic formulas, dative and metallic models, six specified crystal examples and structure–property reasoning covered on mock cards. Bonding v48 covers VSEPR shapes 2–6 electron domains (lone-pair cases), polarity, London/permanent dipole/H bonds, water and ice density, exam-linked physics and chemistry explanations. Year 1 Energetics AQA 3.1.4: 65 targeted cards covering reaction enthalpy signs and definitions, calorimetry and RP2, standard formation/combustion enthalpies, Hess formation/combustion/hydration cycles, mean gaseous bond enthalpies; previously revised Born-Haber/entropy/Gibbs not duplicated. New content is notes/revision eligibility, not independently assessed mastery. Energetics v51: five targeted follow-up cards for calorimetry uncertainties, thermometer response, formation equation stoichiometry and diatomic bond enthalpy precision; three new original questions add 17 marks without repeating the combustion Hess and RP2 evaluations in v50. Bonding weakness focus v52 (26 Oct 2026): five individually testable compound-ion formulae and charges; high-priority unfamiliar VSEPR shapes, electronegativity/polarity, van der Waals' (induced dipole–dipole) comparisons, and four-mark explanation structures. AQA treats 'van der Waals', 'London' and 'dispersion' as synonyms here. Prior weak-area cards promoted; original study IDs retained. No independent marks earned by creating cards. Chemistry Energetics v53 focused weak-area programme: standard conditions/definitions, -q/n unit conversion and mole meaning, stoichiometric coefficients across calorimetry/Hess/bond enthalpies, Hess signs/paths and RP2 basic practical reasoning. New items are for revision, not independently assessed success. RP2 retained because paper 1/2 may assess practical skills even without Paper 3. Task 1 v122 first-pass Physics specification gap cards: short single-recall items (AS core and selected A2, optional Medical separated); original IDs preserved. Scope reflects taught vs future content. These are revision aids, not a certified exhaustive specification sign-off. | Year 1 Chemistry chat v126: 100 distinct short cards for the six newly taught topics (Kinetics, Equilibria, Redox, Periodicity, Group 2, Group 7), focused on missing reaction equations, formulas, explanations, calculations and RP3/RP4. Earlier Atomic Structure, Amount, Bonding, Energetics retained. Additions do not count as independently demonstrated mastery. | Updated five existing Group 7/Periodicity cards to classroom-preferred van der Waals' forces wording; retained London wording as accepted alternatives where present.",
     "modeSupport": [
       "mock",
       "full-a-level",
