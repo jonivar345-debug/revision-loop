@@ -76,6 +76,8 @@
          ' lifetime XP and '+info.ownedLocations+' unlocked locations. This replaces saved progress, purchases and settings on this browser. Download your current backup first.';
        if(!window.confirm(words)){message('Restore cancelled. Current progress is unchanged.');return}
        restore(localStorage,incoming);
+       // A manual restore must not silently replace the current cloud version.
+       localStorage.setItem('revisionLoopCloudManualRestorePending','1');
        message('Backup restored successfully. Reloading saved progress.');
        window.location.reload();
      }catch(error){message('Restore not completed: '+error.message)}
