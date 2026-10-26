@@ -21,8 +21,8 @@ status('Fill the gap: an octahedral complex has coordination number ____.','6','
 status('What coordination number is typical of a tetrahedral complex?','4','correct');
 status('What colour is Fe(OH)₂ precipitate?','green','correct');
 status('What colour is Fe(OH)₂ precipitate?','brown','wrong');
-status('What is magnetic flux density's SI unit?','tesla','correct');
-status('What is magnetic flux density's SI unit?','joule','wrong');
+status("What is magnetic flux density's SI unit?",'tesla','correct');
+status("What is magnetic flux density's SI unit?",'joule','wrong');
 status('Fill the gap: radioactive activity is measured in ____.','Bq','correct');
 status('Fill the gap: a Brønsted–Lowry acid is a proton ____.','donor','correct');
 status('Fill the gap: an octahedral complex has coordination number ____.','six','correct');
@@ -30,7 +30,7 @@ status('What is an NTC thermistor?','resistance decreases when temperature rises
 const familyStart=source.indexOf('function flashCourseFamily('),familyEnd=source.indexOf('function revisionTopicIndex(');
 assert(familyStart>0&&familyEnd>familyStart,'Flashcard grouping helper exists');
 const family=new Function(source.slice(familyStart,familyEnd)+'\nreturn flashCourseFamily;')();
-assert.equal(family(byFront('What is magnetic flux density's SI unit?')),'3.7 Fields and their consequences');
+assert.equal(family(byFront("What is magnetic flux density's SI unit?")),'3.7 Fields and their consequences');
 assert.equal(family(byFront('What colour is Fe(OH)₂ precipitate?')),'3.2 Inorganic chemistry');
 assert.equal(family(byFront('What happens to Kp as temperature rises for an exothermic forward reaction?')),'3.1 Physical chemistry');
 assert.match(source,/flashScopeFilter==='mock'\?c\.mock===true/,'Mock flashcard selection must filter at card level');
