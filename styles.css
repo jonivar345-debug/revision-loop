@@ -686,3 +686,35 @@
   object-fit:contain!important;filter:drop-shadow(0 0 5px rgba(0,12,22,.4))!important;
   transform:none!important
 }
+
+/* v120: voluntary device-specific layout, with responsive layout remaining the
+   default. Forced PC never creates horizontal viewport scrolling on a phone. */
+.layout-switch{display:inline-flex;gap:3px;align-items:center;padding:3px;border:1px solid #cbd5e1;border-radius:11px;background:#f1f5f9}
+.layout-switch span{font-size:.65rem;font-weight:800;color:#64748b;padding:0 6px}
+.layout-switch button{appearance:none;border:0;background:transparent;color:#475569;border-radius:8px;padding:6px 9px;font-size:.7rem;font-weight:800;min-height:31px}
+.layout-switch button[aria-pressed="true"]{color:#fff;background:#1e40af;box-shadow:0 1px 3px #0f172a22}
+.layout-switch button:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
+.auth-gate .layout-switch{margin-bottom:15px}
+.top-layout-switch{display:flex;justify-content:flex-end;margin-top:6px}
+html[data-layout-mode="phone"] .app-shell{width:min(100%,460px)}
+html[data-layout-mode="phone"] .top-layout-switch{justify-content:center}
+html[data-layout-mode="phone"] .starter-controls{grid-template-columns:1fr}
+html[data-layout-mode="phone"] .starter-controls .primary-btn{grid-column:1}
+html[data-layout-mode="phone"] .control-row.three{grid-template-columns:minmax(0,1fr)}
+html[data-layout-mode="phone"] .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+html[data-layout-mode="pc"] .app-shell{width:min(100%,1160px)}
+html[data-layout-mode="pc"] .top-layout-switch{justify-content:flex-end}
+html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr))}
+.reset-progress-btn{border-color:#fecaca;color:#9f1239;background:#fff1f2}
+.reset-progress-btn:focus-visible{outline:2px solid #e11d48;outline-offset:2px}
+@media(max-width:650px){
+  html[data-layout-mode="pc"] .app-shell{width:100%}
+  html[data-layout-mode="pc"] .top-layout-switch{justify-content:center}
+  html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .top-layout-switch{justify-content:center}
+  .layout-switch button{padding:7px 10px}
+}
+@media(max-width:400px){
+  html[data-layout-mode="phone"] .shop-grid,
+  html[data-layout-mode="pc"] .shop-grid{grid-template-columns:1fr}
+}
