@@ -184,6 +184,16 @@
         <div class="schedule-row"><span>Level requirement</span><b>10 XP, then +5 XP each level</b></div>
         <div class="schedule-row"><span>Maximum level</span><b>500</b></div>
       </div>
+      <section class="progress-card" aria-labelledby="revisionBackupHeading">
+        <h3 id="revisionBackupHeading">Keep your progress safe</h3>
+        <p>Your XP, points, purchases, flashcard reviews and exam results are saved in this browser, not synced between devices. Download a backup before clearing browser data or moving devices.</p>
+        <div class="preset-row">
+          <button id="downloadRevisionBackup" type="button" class="mini-btn">Download progress backup</button>
+          <label class="mini-btn" for="restoreRevisionBackup">Restore a saved backup</label>
+          <input id="restoreRevisionBackup" type="file" accept="application/json,.json" aria-label="Select Revision Loop JSON progress backup" style="max-width:190px">
+        </div>
+        <p id="revisionBackupStatus" role="status" aria-live="polite"></p>
+      </section>
     </section>
 
     <section id="shop" class="panel">
@@ -258,6 +268,7 @@
 <script src="world-photo-credits.js?v=101" defer></script>
 <script src="world-location-photo-gallery.js?v=115" defer></script>
 <script src="world-city-offline-guides.js?v=103" defer></script>
+<script src="progress-backup.js?v=1" defer></script>
 <script src="app.js?v=103" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
