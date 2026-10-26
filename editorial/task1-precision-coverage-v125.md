@@ -5,11 +5,11 @@
 ## Current draft inventory
 
 - Merged v124 baseline: **2,251 total, 2,247 active**.
-- New v125: **165** concise cards: **85 Physics**, **80 Chemistry**, **0 Maths**.
-- Proposed total: **2,416 total, 2,412 active**.
+- New v125: **163** concise cards: **85 Physics**, **78 Chemistry**, **0 Maths**.
+- Proposed total: **2,414 total, 2,410 active**.
 - **All 2,251 old card records and IDs remain**. No local storage, cloud/Firebase, XP, points, purchases, World galleries, source questions, or marking algorithms were altered.
-- **80** v125 prompts have manually added alternative correct answers (some have several).
-- Two proposed prompts were excluded before release: an ambiguous enthalpy question and a third-order rate-order prompt outside AQA's individual order range. Three exact/high-similarity candidates were also excluded.
+- **78** v125 prompts have manually added alternative correct answers (some have several).
+- Four proposed prompts were excluded before release: an ambiguous enthalpy question, a third-order rate-order prompt outside AQA's individual order range, and two chemical-handling prompts better suited to supervised school practicals. Three exact/high-similarity candidates were also excluded.
 - Scope rules: v125 Year 1 Physics is mock-eligible; taught A2 Chemistry is Chemistry-mock-eligible; v124 untaught A2 Physics and optional Medical cards stay outside mock mode.
 - Full v125 tests: counts, historical ID retention, length and section refs, short-answer examples, wrong-answer counterexamples and scope controls. Existing v124, v123 and v122 tests remain in CI.
 
