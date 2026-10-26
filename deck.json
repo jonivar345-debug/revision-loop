@@ -1736,9 +1736,11 @@
       "front": "What is specific charge?",
       "back": "charge ÷ mass, Q/m, with unit C kg⁻¹.",
       "accept": [
+        "charge ÷ mass, Q/m, with unit C kg⁻¹.",
         "q/m",
         "charge/mass",
-        "charge divided by mass"
+        "charge divided by mass",
+        "charge per unit mass"
       ],
       "active": true,
       "stage": "AS",
@@ -2750,9 +2752,11 @@
       "front": "What is tensile stress?",
       "back": "stress = F/A, in Pa.",
       "accept": [
+        "stress = F/A, in Pa.",
         "f/a",
         "force/area",
-        "force divided by area"
+        "force divided by area",
+        "force divided by cross sectional area"
       ],
       "active": true,
       "stage": "AS",
@@ -2774,9 +2778,12 @@
       "front": "What is tensile strain?",
       "back": "strain = ΔL/L; it has no unit.",
       "accept": [
+        "strain = ΔL/L; it has no unit.",
         "delta l/l",
         "extension/original length",
-        "extension divided by original length"
+        "extension divided by original length",
+        "extension over original length",
+        "ΔL/L"
       ],
       "active": true,
       "stage": "AS",
@@ -2863,7 +2870,13 @@
       "unit": "as-electricity",
       "taught": true,
       "courseTopic": "Electricity",
-      "revisionTopic": "Electricity"
+      "revisionTopic": "Electricity",
+      "accept": [
+        "Energy transferred per unit charge: V = W/Q.",
+        "energy transferred per coulomb",
+        "work done per unit charge",
+        "energy transferred per unit charge"
+      ]
     },
     {
       "id": "phy_emf",
@@ -4169,6 +4182,7 @@
       "front": "What is an electrophile?",
       "back": "An electron-pair acceptor.",
       "accept": [
+        "An electron-pair acceptor.",
         "electron pair acceptor",
         "accepts electron pair"
       ],
@@ -4189,8 +4203,10 @@
       "front": "What is a nucleophile?",
       "back": "An electron-pair donor.",
       "accept": [
+        "An electron-pair donor.",
         "electron pair donor",
-        "donates electron pair"
+        "donates electron pair",
+        "lone pair donor"
       ],
       "active": true,
       "stage": "AS",
@@ -26252,7 +26268,13 @@
       "taught": true,
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "accept": [
+        "Maximum displacement from equilibrium.",
+        "maximum displacement",
+        "greatest displacement from equilibrium",
+        "maximum displacement from rest position"
+      ]
     },
     {
       "id": "task1_phy_035",
@@ -26342,7 +26364,12 @@
       "taught": true,
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "accept": [
+        "Oscillations are perpendicular to energy transfer.",
+        "oscillations perpendicular to wave travel",
+        "vibrations perpendicular to energy transfer"
+      ]
     },
     {
       "id": "task1_phy_040",
@@ -26360,7 +26387,12 @@
       "taught": true,
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "accept": [
+        "Oscillations are parallel to energy transfer.",
+        "oscillations parallel to wave travel",
+        "vibrations parallel to energy transfer"
+      ]
     },
     {
       "id": "task1_phy_041",
@@ -26415,7 +26447,13 @@
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
       "specRef": "3.3.1",
-      "visualBack": "stationary"
+      "visualBack": "stationary",
+      "accept": [
+        "A point of zero amplitude.",
+        "zero displacement amplitude",
+        "no oscillation",
+        "point with zero amplitude"
+      ]
     },
     {
       "id": "task1_phy_045",
@@ -26434,7 +26472,12 @@
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
       "specRef": "3.3.1",
-      "visualBack": "stationary"
+      "visualBack": "stationary",
+      "accept": [
+        "A point of maximum amplitude.",
+        "maximum amplitude",
+        "maximum displacement amplitude"
+      ]
     },
     {
       "id": "task1_phy_046",
@@ -26561,7 +26604,13 @@
       "taught": true,
       "courseTopic": "Interference",
       "revisionTopic": "Interference",
-      "specRef": "3.3.2"
+      "specRef": "3.3.2",
+      "accept": [
+        "An integer multiple of λ.",
+        "nλ",
+        "whole number of wavelengths",
+        "integer wavelengths"
+      ]
     },
     {
       "id": "task1_phy_053",
@@ -26579,7 +26628,13 @@
       "taught": true,
       "courseTopic": "Interference",
       "revisionTopic": "Interference",
-      "specRef": "3.3.2"
+      "specRef": "3.3.2",
+      "accept": [
+        "An odd multiple of λ/2.",
+        "(n+1/2)λ",
+        "odd half wavelengths",
+        "half-integer wavelengths"
+      ]
     },
     {
       "id": "task1_phy_054",
@@ -26836,7 +26891,12 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1"
+      "specRef": "3.4.1",
+      "accept": [
+        "Magnitude only; no direction.",
+        "magnitude only",
+        "magnitude no direction"
+      ]
     },
     {
       "id": "task1_phy_068",
@@ -26854,7 +26914,11 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1"
+      "specRef": "3.4.1",
+      "accept": [
+        "Magnitude and direction.",
+        "magnitude and direction"
+      ]
     },
     {
       "id": "task1_phy_069",
@@ -27053,7 +27117,12 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1"
+      "specRef": "3.4.1",
+      "accept": [
+        "A collision conserving total kinetic energy.",
+        "kinetic energy is conserved",
+        "total kinetic energy stays the same"
+      ]
     },
     {
       "id": "task1_phy_080",
@@ -27199,7 +27268,13 @@
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
       "specRef": "3.5.1",
-      "visualBack": "internal-resistance"
+      "visualBack": "internal-resistance",
+      "accept": [
+        "Energy supplied by a source per unit charge.",
+        "energy supplied per coulomb",
+        "energy supplied per unit charge",
+        "work done per unit charge by source"
+      ]
     },
     {
       "id": "task1_phy_093",
@@ -27235,7 +27310,12 @@
       "taught": true,
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
-      "specRef": "3.5.1"
+      "specRef": "3.5.1",
+      "accept": [
+        "Infinite.",
+        "infinite resistance",
+        "infinity"
+      ]
     },
     {
       "id": "task1_phy_095",
@@ -27307,7 +27387,11 @@
       "taught": true,
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
-      "specRef": "3.5.1"
+      "specRef": "3.5.1",
+      "accept": [
+        "A component whose resistance falls as temperature rises.",
+        "resistance decreases when temperature rises"
+      ]
     },
     {
       "id": "task1_phy_099",
@@ -27325,7 +27409,12 @@
       "taught": true,
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
-      "specRef": "3.5.1"
+      "specRef": "3.5.1",
+      "accept": [
+        "A material with zero resistivity below its critical temperature.",
+        "zero resistance below critical temperature",
+        "zero resistivity below critical temperature"
+      ]
     },
     {
       "id": "task1_phy_100",
@@ -27800,7 +27889,7 @@
       "taught": false,
       "courseTopic": "Gravitational fields",
       "revisionTopic": "Gravitational fields",
-      "specRef": "3.7.1"
+      "specRef": "3.7.2"
     },
     {
       "id": "task1_phy_133",
@@ -27818,7 +27907,7 @@
       "taught": false,
       "courseTopic": "Gravitational fields",
       "revisionTopic": "Gravitational fields",
-      "specRef": "3.7.1"
+      "specRef": "3.7.2"
     },
     {
       "id": "task1_phy_134",
@@ -27836,7 +27925,7 @@
       "taught": false,
       "courseTopic": "Gravitational fields",
       "revisionTopic": "Gravitational fields",
-      "specRef": "3.7.1"
+      "specRef": "3.7.2"
     },
     {
       "id": "task1_phy_136",
@@ -27854,7 +27943,7 @@
       "taught": false,
       "courseTopic": "Electric fields",
       "revisionTopic": "Electric fields",
-      "specRef": "3.7.2"
+      "specRef": "3.7.3"
     },
     {
       "id": "task1_phy_138",
@@ -27872,7 +27961,7 @@
       "taught": false,
       "courseTopic": "Electric fields",
       "revisionTopic": "Electric fields",
-      "specRef": "3.7.2"
+      "specRef": "3.7.3"
     },
     {
       "id": "task1_phy_141",
@@ -27890,7 +27979,7 @@
       "taught": false,
       "courseTopic": "Capacitance",
       "revisionTopic": "Capacitance",
-      "specRef": "3.7.3"
+      "specRef": "3.7.4"
     },
     {
       "id": "task1_phy_142",
@@ -27908,7 +27997,7 @@
       "taught": false,
       "courseTopic": "Capacitance",
       "revisionTopic": "Capacitance",
-      "specRef": "3.7.3"
+      "specRef": "3.7.4"
     },
     {
       "id": "task1_phy_143",
@@ -27926,7 +28015,7 @@
       "taught": false,
       "courseTopic": "Magnetic fields",
       "revisionTopic": "Magnetic fields",
-      "specRef": "3.7.4"
+      "specRef": "3.7.5"
     },
     {
       "id": "task1_phy_144",
@@ -27944,7 +28033,7 @@
       "taught": false,
       "courseTopic": "Magnetic fields",
       "revisionTopic": "Magnetic fields",
-      "specRef": "3.7.4"
+      "specRef": "3.7.5"
     },
     {
       "id": "task1_phy_145",
@@ -27962,7 +28051,7 @@
       "taught": false,
       "courseTopic": "Magnetic fields",
       "revisionTopic": "Magnetic fields",
-      "specRef": "3.7.4"
+      "specRef": "3.7.5"
     },
     {
       "id": "task1_phy_149",
@@ -27980,7 +28069,7 @@
       "taught": false,
       "courseTopic": "Electromagnetic induction",
       "revisionTopic": "Electromagnetic induction",
-      "specRef": "3.7.5",
+      "specRef": "3.7.6",
       "visualBack": "induction"
     },
     {
@@ -27999,7 +28088,7 @@
       "taught": false,
       "courseTopic": "Electromagnetic induction",
       "revisionTopic": "Electromagnetic induction",
-      "specRef": "3.7.5"
+      "specRef": "3.7.6"
     },
     {
       "id": "task1_phy_151",
@@ -28072,7 +28161,12 @@
       "taught": false,
       "courseTopic": "Nuclear physics",
       "revisionTopic": "Nuclear physics",
-      "specRef": "3.8"
+      "specRef": "3.8",
+      "accept": [
+        "Becquerel (Bq).",
+        "becquerel",
+        "Bq"
+      ]
     },
     {
       "id": "task1_phy_155",
@@ -28421,7 +28515,12 @@
       "taught": true,
       "courseTopic": "Amount of substance",
       "revisionTopic": "Amount of substance",
-      "specRef": "3.1.2"
+      "specRef": "3.1.2",
+      "accept": [
+        "A solution of accurately known concentration.",
+        "known concentration",
+        "solution with accurately known concentration"
+      ]
     },
     {
       "id": "task1_chem_018",
@@ -28729,7 +28828,11 @@
       "taught": true,
       "courseTopic": "Kinetics",
       "revisionTopic": "Kinetics",
-      "specRef": "3.1.5"
+      "specRef": "3.1.5",
+      "accept": [
+        "Minimum energy required for a successful collision.",
+        "minimum energy for successful collision"
+      ]
     },
     {
       "id": "task1_chem_043",
@@ -29783,7 +29886,12 @@
       "taught": true,
       "courseTopic": "Organic chemistry",
       "revisionTopic": "Organic chemistry",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "accept": [
+        "Compounds with the same functional group and general formula.",
+        "same functional group and general formula",
+        "same functional group and similar chemical reactions"
+      ]
     },
     {
       "id": "task1_chem_109",
@@ -29800,7 +29908,11 @@
       "taught": true,
       "courseTopic": "Organic chemistry",
       "revisionTopic": "Organic chemistry",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "accept": [
+        "The part of a molecule responsible for its characteristic reactions.",
+        "part of a molecule responsible for its reactions"
+      ]
     },
     {
       "id": "task1_chem_110",
@@ -30243,7 +30355,11 @@
       "courseTopic": "Alkenes",
       "revisionTopic": "Alkenes",
       "specRef": "3.3.4",
-      "visualBack": "organic-reaction"
+      "visualBack": "organic-reaction",
+      "accept": [
+        "An electrophile reacts across a multiple bond.",
+        "addition of an electrophile across a double bond"
+      ]
     },
     {
       "id": "task1_chem_139",
@@ -30770,7 +30886,12 @@
       "taught": true,
       "courseTopic": "Acids and bases",
       "revisionTopic": "Acids and bases",
-      "specRef": "3.1.12"
+      "specRef": "3.1.12",
+      "accept": [
+        "A proton donor.",
+        "proton donor",
+        "h+ donor"
+      ]
     },
     {
       "id": "task1_chem_175",
@@ -30787,7 +30908,12 @@
       "taught": true,
       "courseTopic": "Acids and bases",
       "revisionTopic": "Acids and bases",
-      "specRef": "3.1.12"
+      "specRef": "3.1.12",
+      "accept": [
+        "A proton acceptor.",
+        "proton acceptor",
+        "h+ acceptor"
+      ]
     },
     {
       "id": "task1_chem_176",
@@ -30821,7 +30947,12 @@
       "taught": true,
       "courseTopic": "Acids and bases",
       "revisionTopic": "Acids and bases",
-      "specRef": "3.1.12"
+      "specRef": "3.1.12",
+      "accept": [
+        "An acid that fully dissociates in aqueous solution.",
+        "fully ionised in solution",
+        "fully dissociates in water"
+      ]
     },
     {
       "id": "task1_chem_178",
@@ -30838,7 +30969,12 @@
       "taught": true,
       "courseTopic": "Acids and bases",
       "revisionTopic": "Acids and bases",
-      "specRef": "3.1.12"
+      "specRef": "3.1.12",
+      "accept": [
+        "An acid that only partially dissociates in aqueous solution.",
+        "partially ionised in solution",
+        "partly dissociates"
+      ]
     },
     {
       "id": "task1_chem_179",
@@ -30889,7 +31025,13 @@
       "taught": true,
       "courseTopic": "Acids and bases",
       "revisionTopic": "Acids and bases",
-      "specRef": "3.1.12"
+      "specRef": "3.1.12",
+      "accept": [
+        "−log₁₀Ka.",
+        "negative log ka",
+        "-log10Ka",
+        "−log10Ka"
+      ]
     },
     {
       "id": "task1_chem_182",
@@ -30906,7 +31048,12 @@
       "taught": true,
       "courseTopic": "Acids and bases",
       "revisionTopic": "Acids and bases",
-      "specRef": "3.1.12"
+      "specRef": "3.1.12",
+      "accept": [
+        "[H⁺][OH⁻].",
+        "[H+][OH-]",
+        "h+ times oh-"
+      ]
     },
     {
       "id": "task1_chem_183",
@@ -31610,7 +31757,12 @@
       "taught": true,
       "courseTopic": "Transformations",
       "revisionTopic": "Transformations",
-      "specRef": "3.3"
+      "specRef": "3.3",
+      "accept": [
+        "Reflects it in the y-axis.",
+        "reflect in y axis",
+        "reflection in y axis"
+      ]
     },
     {
       "id": "task1_maths_006",
@@ -32363,7 +32515,8 @@
       "accept": [
         "Al₂O₃.",
         "aluminium oxide",
-        "aluminum oxide"
+        "aluminum oxide",
+        "al2o3"
       ]
     },
     {
@@ -32407,7 +32560,8 @@
       "accept": [
         "SiO₂.",
         "silicon dioxide",
-        "silica"
+        "silica",
+        "sio2"
       ]
     },
     {
@@ -32579,7 +32733,12 @@
       "taught": false,
       "courseTopic": "Period 3 oxides",
       "revisionTopic": "Period 3 oxides",
-      "specRef": "3.2.4"
+      "specRef": "3.2.4",
+      "accept": [
+        "Reaction with both acids and bases.",
+        "reacts with acids and alkalis",
+        "reacts with both acids and bases"
+      ]
     },
     {
       "id": "task1_full_013",
@@ -32675,7 +32834,8 @@
       "specRef": "3.2.5",
       "accept": [
         "Six.",
-        "6"
+        "6",
+        "six"
       ]
     },
     {
@@ -32696,7 +32856,8 @@
       "specRef": "3.2.5",
       "accept": [
         "Four.",
-        "4"
+        "4",
+        "four"
       ]
     },
     {
@@ -32759,7 +32920,8 @@
       "specRef": "3.2.5",
       "accept": [
         "Cisplatin.",
-        "cis-platin"
+        "cis-platin",
+        "cisplatin"
       ]
     },
     {
@@ -32780,7 +32942,8 @@
       "specRef": "3.2.5",
       "accept": [
         "Two.",
-        "2"
+        "2",
+        "two"
       ]
     },
     {
@@ -32798,7 +32961,11 @@
       "taught": false,
       "courseTopic": "Transition metal complexes",
       "revisionTopic": "Transition metal complexes",
-      "specRef": "3.2.5"
+      "specRef": "3.2.5",
+      "accept": [
+        "Linear.",
+        "linear"
+      ]
     },
     {
       "id": "task1_full_024",
@@ -33007,7 +33174,9 @@
       "specRef": "3.2.5",
       "accept": [
         "Iron.",
-        "fe"
+        "fe",
+        "Fe",
+        "iron"
       ]
     },
     {
@@ -33029,7 +33198,9 @@
       "accept": [
         "Vanadium(V) oxide, V₂O₅.",
         "vanadium pentoxide",
-        "v2o5"
+        "v2o5",
+        "V2O5",
+        "vanadium(V) oxide"
       ]
     },
     {
@@ -33047,7 +33218,12 @@
       "taught": false,
       "courseTopic": "Transition metal complexes",
       "revisionTopic": "Transition metal complexes",
-      "specRef": "3.2.5"
+      "specRef": "3.2.5",
+      "accept": [
+        "A reaction product catalyses that reaction.",
+        "reaction product acts as catalyst",
+        "a product catalyses the reaction"
+      ]
     },
     {
       "id": "task1_full_037",
@@ -33123,7 +33299,8 @@
       "accept": [
         "Pale green.",
         "green",
-        "light green"
+        "light green",
+        "pale green"
       ]
     },
     {
@@ -33507,7 +33684,9 @@
       "accept": [
         "Kp decreases.",
         "decreases",
-        "falls"
+        "falls",
+        "decrease",
+        "lower"
       ]
     },
     {
@@ -33529,7 +33708,9 @@
       "accept": [
         "Kp increases.",
         "increases",
-        "rises"
+        "rises",
+        "increase",
+        "higher"
       ]
     },
     {
@@ -33598,7 +33779,13 @@
       "taught": false,
       "courseTopic": "Electrochemical cells",
       "revisionTopic": "Electrochemical cells",
-      "specRef": "3.1.11"
+      "specRef": "3.1.11",
+      "accept": [
+        "Maintains charge balance by allowing ion movement.",
+        "allows ions to move",
+        "completes circuit by carrying ions",
+        "maintains electrical neutrality"
+      ]
     },
     {
       "id": "task1_full_066",
@@ -33832,7 +34019,11 @@
       "taught": false,
       "courseTopic": "Organic synthesis",
       "revisionTopic": "Organic synthesis",
-      "specRef": "3.3.14"
+      "specRef": "3.3.14",
+      "accept": [
+        "The intermediate is converted further; the final product is the target.",
+        "intermediate reacts again, final target compound"
+      ]
     },
     {
       "id": "task1_full_079",
@@ -33849,7 +34040,12 @@
       "taught": false,
       "courseTopic": "Proteins and DNA",
       "revisionTopic": "Proteins and DNA",
-      "specRef": "3.3.13"
+      "specRef": "3.3.13",
+      "accept": [
+        "Its amino-acid sequence.",
+        "amino acid sequence",
+        "sequence of amino acids"
+      ]
     },
     {
       "id": "task1_full_080",
@@ -33866,7 +34062,12 @@
       "taught": false,
       "courseTopic": "Proteins and DNA",
       "revisionTopic": "Proteins and DNA",
-      "specRef": "3.3.13"
+      "specRef": "3.3.13",
+      "accept": [
+        "Alpha helices and beta pleated sheets.",
+        "alpha helix and beta pleated sheet",
+        "α helix and β sheet"
+      ]
     },
     {
       "id": "task1_full_081",
@@ -33956,7 +34157,12 @@
       "taught": false,
       "courseTopic": "Proteins and DNA",
       "revisionTopic": "Proteins and DNA",
-      "specRef": "3.3.13"
+      "specRef": "3.3.13",
+      "accept": [
+        "Phosphate, 2-deoxyribose and a base.",
+        "phosphate sugar and base",
+        "phosphate deoxyribose and base"
+      ]
     },
     {
       "id": "task1_full_086",
@@ -33976,7 +34182,10 @@
       "specRef": "3.3.13",
       "accept": [
         "A with T; C with G.",
-        "adenine with thymine and cytosine with guanine"
+        "adenine with thymine and cytosine with guanine",
+        "adenine thymine, guanine cytosine",
+        "A-T and C-G",
+        "AT and CG"
       ]
     },
     {
@@ -34100,7 +34309,12 @@
       "taught": false,
       "courseTopic": "Chromatography",
       "revisionTopic": "Chromatography",
-      "specRef": "3.3.16"
+      "specRef": "3.3.16",
+      "accept": [
+        "It carries the components through the stationary phase.",
+        "carries components",
+        "moves the solutes"
+      ]
     },
     {
       "id": "task1_full_094",
@@ -34345,7 +34559,12 @@
       "courseTopic": "Gravitational fields",
       "revisionTopic": "Gravitational fields",
       "specRef": "3.7.2",
-      "unit": "a2-gravity"
+      "unit": "a2-gravity",
+      "accept": [
+        "Minimum speed to escape a gravitational field without further propulsion.",
+        "minimum speed to escape gravitational field",
+        "minimum speed to reach infinity"
+      ]
     },
     {
       "id": "task1_full_108",
@@ -34363,7 +34582,14 @@
       "courseTopic": "Gravitational fields",
       "revisionTopic": "Gravitational fields",
       "specRef": "3.7.2",
-      "unit": "a2-gravity"
+      "unit": "a2-gravity",
+      "accept": [
+        "One sidereal day, about 24 hours.",
+        "one sidereal day",
+        "approximately 24 hours",
+        "24 hours",
+        "23 hours 56 minutes"
+      ]
     },
     {
       "id": "task1_full_109",
@@ -34407,7 +34633,8 @@
       "unit": "a2-gravity",
       "accept": [
         "Negative at finite distance.",
-        "negative"
+        "negative",
+        "less than zero"
       ]
     },
     {
@@ -34430,7 +34657,8 @@
       "accept": [
         "Zero.",
         "zero",
-        "0"
+        "0",
+        "none"
       ]
     },
     {
@@ -34642,7 +34870,8 @@
       "accept": [
         "Zero.",
         "0",
-        "none"
+        "none",
+        "zero"
       ]
     },
     {
@@ -34751,7 +34980,13 @@
       "courseTopic": "Capacitance",
       "revisionTopic": "Capacitance",
       "specRef": "3.7.4",
-      "unit": "a2-capacitance"
+      "unit": "a2-capacitance",
+      "accept": [
+        "Permittivity of a material divided by permittivity of free space.",
+        "epsilon r",
+        "εr",
+        "ε/ε0"
+      ]
     },
     {
       "id": "task1_full_129",
@@ -34787,7 +35022,14 @@
       "courseTopic": "Capacitance",
       "revisionTopic": "Capacitance",
       "specRef": "3.7.4",
-      "unit": "a2-capacitance"
+      "unit": "a2-capacitance",
+      "accept": [
+        "1/e ≈ 0.37.",
+        "37%",
+        "0.37",
+        "one over e",
+        "1/e"
+      ]
     },
     {
       "id": "task1_full_131",
@@ -35152,7 +35394,12 @@
       "courseTopic": "Nuclear physics",
       "revisionTopic": "Nuclear physics",
       "specRef": "3.8.1",
-      "unit": "a2-nuclear"
+      "unit": "a2-nuclear",
+      "accept": [
+        "Counts detected without the source contribution.",
+        "counts per second without a source",
+        "background radiation count rate"
+      ]
     },
     {
       "id": "task1_full_151",
@@ -35170,7 +35417,12 @@
       "courseTopic": "Nuclear physics",
       "revisionTopic": "Nuclear physics",
       "specRef": "3.8.1",
-      "unit": "a2-nuclear"
+      "unit": "a2-nuclear",
+      "accept": [
+        "Subtract background count rate.",
+        "subtract background",
+        "subtract background count rate"
+      ]
     },
     {
       "id": "task1_full_152",
@@ -35567,7 +35819,9 @@
         "Chemistry": 105,
         "Physics": 61
       },
-      "secondPassSource": "AQA 7405 3.1,3.2,3.3 and 7408 3.7,3.8 official specification pages"
+      "secondPassSource": "AQA 7405 3.1,3.2,3.3 and 7408 3.7,3.8 official specification pages",
+      "explicitAliasCards": 71,
+      "aliasesNote": "Curated answer variants only. Exact and fuzzy scoring still require checking against realistic wrong answers."
     }
   }
 }
