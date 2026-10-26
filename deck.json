@@ -50698,8 +50698,12 @@
       "back": "Fe²⁺.",
       "accept": [
         "Fe²⁺.",
+        "Fe²⁺",
+        "Fe2+",
         "iron(II)",
-        "Fe2+"
+        "iron 2+",
+        "ferrous ion",
+        "ferrous"
       ],
       "id": "task1_v126_048",
       "active": true,
@@ -50708,7 +50712,8 @@
       "mock": false,
       "taught": false,
       "courseTopic": "Aqueous metal ions",
-      "revisionTopic": "Aqueous metal ions"
+      "revisionTopic": "Aqueous metal ions",
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -50720,8 +50725,12 @@
       "back": "Fe³⁺.",
       "accept": [
         "Fe³⁺.",
+        "Fe³⁺",
+        "Fe3+",
         "iron(III)",
-        "Fe3+"
+        "iron 3+",
+        "ferric ion",
+        "ferric"
       ],
       "id": "task1_v126_049",
       "active": true,
@@ -50730,7 +50739,8 @@
       "mock": false,
       "taught": false,
       "courseTopic": "Aqueous metal ions",
-      "revisionTopic": "Aqueous metal ions"
+      "revisionTopic": "Aqueous metal ions",
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -50742,8 +50752,11 @@
       "back": "Cu²⁺.",
       "accept": [
         "Cu²⁺.",
+        "Cu²⁺",
+        "Cu2+",
         "copper(II)",
-        "Cu2+"
+        "copper 2+",
+        "cupric ion"
       ],
       "id": "task1_v126_050",
       "active": true,
@@ -50752,7 +50765,8 @@
       "mock": false,
       "taught": false,
       "courseTopic": "Aqueous metal ions",
-      "revisionTopic": "Aqueous metal ions"
+      "revisionTopic": "Aqueous metal ions",
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -50764,8 +50778,12 @@
       "back": "Al³⁺.",
       "accept": [
         "Al³⁺.",
+        "Al³⁺",
+        "Al3+",
         "aluminium(III)",
-        "Al3+"
+        "aluminum(III)",
+        "aluminium 3+",
+        "aluminum 3+"
       ],
       "id": "task1_v126_051",
       "active": true,
@@ -50774,7 +50792,8 @@
       "mock": false,
       "taught": false,
       "courseTopic": "Aqueous metal ions",
-      "revisionTopic": "Aqueous metal ions"
+      "revisionTopic": "Aqueous metal ions",
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -51910,7 +51929,8 @@
         ],
         "prioritised": "AQA required-practical observation recognition and exact definitions",
         "accuracyEdits": 3,
-        "proposedTotal": 2503
+        "proposedTotal": 2503,
+        "chargeSensitiveExactCards": 4
       }
     }
   }
