@@ -54373,28 +54373,6 @@
       "topic": "RP10 Purity",
       "specRef": "7.2 RP10",
       "stage": "A2",
-      "front": "What does a melting range rather than one temperature indicate?",
-      "back": "The solid melts over an interval.",
-      "accept": [
-        "The solid melts over an interval.",
-        "melting interval",
-        "range of temperatures"
-      ],
-      "id": "task1_v128_035",
-      "kind": "content",
-      "active": true,
-      "priority": 3,
-      "scope": "full",
-      "taught": false,
-      "mock": false,
-      "courseTopic": "RP10 Purity",
-      "revisionTopic": "RP10 Purity"
-    },
-    {
-      "subject": "Chemistry",
-      "topic": "RP10 Purity",
-      "specRef": "7.2 RP10",
-      "stage": "A2",
       "front": "Why must a melting point be compared with a reference?",
       "back": "It supports identity and purity assessment.",
       "accept": [
@@ -54425,28 +54403,6 @@
         "ratio of distances"
       ],
       "id": "task1_v128_037",
-      "kind": "content",
-      "active": true,
-      "priority": 3,
-      "scope": "full",
-      "taught": false,
-      "mock": false,
-      "courseTopic": "RP12 Chromatography",
-      "revisionTopic": "RP12 Chromatography"
-    },
-    {
-      "subject": "Chemistry",
-      "topic": "RP12 Chromatography",
-      "specRef": "7.2 RP12",
-      "stage": "A2",
-      "front": "Can two substances share the same Rf in one solvent?",
-      "back": "Yes.",
-      "accept": [
-        "Yes.",
-        "yes",
-        "same retention factor possible"
-      ],
-      "id": "task1_v128_038",
       "kind": "content",
       "active": true,
       "priority": 3,
@@ -54609,50 +54565,6 @@
       "mock": false,
       "courseTopic": "RP12 Chromatography",
       "revisionTopic": "RP12 Chromatography"
-    },
-    {
-      "subject": "Chemistry",
-      "topic": "RP12 Chromatography",
-      "specRef": "7.2 RP12",
-      "stage": "A2",
-      "front": "Why can chromatography separate differently coloured compounds?",
-      "back": "Their relative affinities differ.",
-      "accept": [
-        "Their relative affinities differ.",
-        "different partitioning",
-        "differing affinities"
-      ],
-      "id": "task1_v128_046",
-      "kind": "content",
-      "active": true,
-      "priority": 3,
-      "scope": "full",
-      "taught": false,
-      "mock": false,
-      "courseTopic": "RP12 Chromatography",
-      "revisionTopic": "RP12 Chromatography"
-    },
-    {
-      "subject": "Chemistry",
-      "topic": "RP11 Aqueous ions",
-      "specRef": "7.2 RP11",
-      "stage": "A2",
-      "front": "Which common Fe ion gives a green hydroxide precipitate?",
-      "back": "Iron(II), Fe²⁺.",
-      "accept": [
-        "Iron(II), Fe²⁺.",
-        "iron(II)",
-        "Fe2+"
-      ],
-      "id": "task1_v128_049",
-      "kind": "content",
-      "active": true,
-      "priority": 3,
-      "scope": "full",
-      "taught": false,
-      "mock": false,
-      "courseTopic": "RP11 Aqueous ions",
-      "revisionTopic": "RP11 Aqueous ions"
     },
     {
       "subject": "Chemistry",
@@ -55111,7 +55023,7 @@
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 820,
+      "chemistryNew": 816,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -55223,13 +55135,13 @@
         "draft": true,
         "focus": "AQA Chemistry required-practical result interpretation & precise definitions; Physics practical data definitions",
         "startingCards": 2603,
-        "newCards": 60,
+        "newCards": 56,
         "physicsNew": 7,
-        "chemistryNew": 53,
+        "chemistryNew": 49,
         "excludedExact": 3,
         "excludedSemantic": 0,
         "uncertifiedSyllabus": true,
-        "excludedSemanticAfterReview": 21,
+        "excludedSemanticAfterReview": 25,
         "removedCardIds": [
           "task1_v128_001",
           "task1_v128_015",
@@ -55251,9 +55163,13 @@
           "task1_v128_077",
           "task1_v128_079",
           "task1_v128_080",
-          "task1_v128_081"
+          "task1_v128_081",
+          "task1_v128_035",
+          "task1_v128_038",
+          "task1_v128_046",
+          "task1_v128_049"
         ],
-        "currentProposedTotal": 2663,
+        "currentProposedTotal": 2659,
         "notes": "Removed near-synonyms of existing cards and out-of-scope reaction quotient/confidence interval."
       }
     },
