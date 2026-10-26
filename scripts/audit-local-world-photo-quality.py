@@ -52,7 +52,7 @@ assert not identical,'Exact duplicate files inside one destination: '+repr(ident
 budgeted=[p for p in photos if p.get('newSizeBudgeted')]
 assert all(p['galleryBytes']<=720*1024 and p['coverBytes']<=170*1024 for p in budgeted)
 report={
-  'release':'v116','localDestinations':len(groups),'localPhotographs':len(photos),
+  'release':'v117','localDestinations':len(groups),'localPhotographs':len(photos),
   'fourPhotoLocalGalleries':sum(len(x)==4 for x in groups.values()),
   'combinedImageBytes':bytes_total,
   'newBudgetedPhotographs':len(budgeted),
@@ -67,6 +67,7 @@ report={
 dest=root/'editorial/world-local-photo-audit-v114.json'
 dest.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (root/'editorial/world-local-photo-audit-v116.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(root/'editorial/world-local-photo-audit-v117.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f"Photo audit: {report['localPhotographs']} sources across {report['localDestinations']} destinations;"
       f" {report['fourPhotoLocalGalleries']} four-photo galleries; "
       f" {len(similar)} visually similar pairs flagged; "
