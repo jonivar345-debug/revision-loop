@@ -599,6 +599,152 @@
     }
   ]
 };
+data["mombasa"]=[...[
+  {
+    "file": "The Fort Jesus Mombasa, Kenya.JPG",
+    "author": "Zahra Abdulmajid",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Portuguese-era Fort Jesus fortress in Mombasa",
+    "width": 3072,
+    "height": 2304,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["mombasa"]||[])];
+data["bogota"]=[...[
+  {
+    "file": "Monserrate y centro de Bogota.jpg",
+    "author": "Jos Cuevasc",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Bogotá centre and Monserrate mountain skyline",
+    "width": 3791,
+    "height": 2527,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  },
+  {
+    "file": "BOG Museo del Oro.JPG",
+    "author": "Felipe Restrepo Acosta",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Museo del Oro exterior in downtown Bogotá",
+    "width": 3664,
+    "height": 2748,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["bogota"]||[])];
+data["cape_coast"]=[...[
+  {
+    "file": "Beach of Cape Coast.jpg",
+    "author": "Afus199620",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "subject": "Fishing boats on the beach at Cape Coast",
+    "width": 4032,
+    "height": 3024,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  },
+  {
+    "file": "A fisherman in Cape Coast, Ghana.jpg",
+    "author": "Daria Stepanova",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Local fisherman working on the Cape Coast shore",
+    "width": 4586,
+    "height": 3440,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  },
+  {
+    "file": "View off the Cape Coast-Elmina Road.JPG",
+    "author": "Nicholas Seun Adatsi",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Landscape between Cape Coast and Elmina in Ghana",
+    "width": 5184,
+    "height": 3456,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["cape_coast"]||[])];
+data["washingtondc"]=[...[
+  {
+    "file": "DC Washington Monument.jpg",
+    "author": "Daniel Schwen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Washington Monument seen from the Old Post Office tower",
+    "width": 4368,
+    "height": 2912,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["washingtondc"]||[])];
+data["country-za"]=[...[
+  {
+    "file": "Kruger National Park.jpg",
+    "author": "Dario Crespi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Kruger National Park landscape in South Africa",
+    "width": 3888,
+    "height": 2592,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  },
+  {
+    "file": "Blyde river canyon.JPG",
+    "author": "Wayne77",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Blyde River Canyon landscape in Mpumalanga South Africa",
+    "width": 3672,
+    "height": 4896,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["country-za"]||[])];
+data["alexandria"]=[...[
+  {
+    "file": "Bibliotheca Alexandrina (1).jpg",
+    "author": "A maraqa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Contemporary Bibliotheca Alexandrina library on Alexandria's coast",
+    "width": 5216,
+    "height": 3477,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["alexandria"]||[])];
+data["papeete"]=[...[
+  {
+    "file": "Marché de Papeete.JPG",
+    "author": "Saga70",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Covered public market in Papeete French Polynesia",
+    "width": 3253,
+    "height": 2569,
+    "editorialMetadata": true,
+    "qualityPriority": 1600,
+    "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
+  }
+],...(data["papeete"]||[])];
 if(root)root.RevisionWorldV104Photos=Object.freeze(data);
 if(typeof module==='object'&&module.exports)module.exports=data;
 })(typeof window==='object'?window:null);
