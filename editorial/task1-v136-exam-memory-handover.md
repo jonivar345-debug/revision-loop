@@ -32,3 +32,10 @@ The wider draft had **127 candidate** questions, with five exact duplicates elim
 
 ## Next logical work
 Complete the full per-requirement spec-to-card ledger for all three subjects, cross-check formula-booklet coverage, and use the same duplicate/marking checks before future smaller targeted releases. Longer calculations remain in exam questions.
+
+## Final editorial corrections before merge
+- Reworded chemistry card 047: concentration units do not change simply because a volume is expressed in cm³; convert cm³ to dm³ for mol dm⁻³ calculations.
+- Replaced vague substitution card 072 with precise formula du = g′(x) dx.
+- Rechecked AQA AS 7356 against AQA A-level 7357: 15 advanced Maths cards are marked A2, not AS mock-eligible.
+- Seven Maths statistics/mechanics AS cards are excluded from the school's November Year 1 Pure-only mock, without misclassifying their AQA level.
+- Preserved all original 3,008 records and new card IDs.
