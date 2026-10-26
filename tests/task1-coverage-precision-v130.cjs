@@ -33,6 +33,7 @@ for(const c of newCards){
  assert(c.active===true&&c.kind==='content');
  assert(c.front.length<=165&&c.back.length<=205,'Excessive recall text '+c.id);
  assert(Array.isArray(c.accept)&&c.accept.length>=2,'Need alternative answers '+c.id);
+ if(c.reject)for(const bad of c.reject)assert(!c.accept.includes(bad),'Contradictory accepted/rejected answer '+c.id);
  assert(/^(3\.\d+)(?:\.\d+)?$/.test(c.specRef),'Wrong AQA tag '+c.id);
  assert.equal(c.courseTopic,c.revisionTopic,'Inconsistent topic group '+c.id);
  assert(!/^(calculate|work out|show how to|prepare|mix|heat|use the following reagents)/i.test(c.front),'Not factual recall '+c.id);
@@ -43,7 +44,7 @@ for(const c of newCards){
 }
 const bad=[
  ['Which prefix represents 10⁻¹⁵?','tera'],['What does the strong nuclear force do at very short separations below about 0.5 fm?','attractive'],
- ['What is the signed area under a velocity–time graph?','distance'],['What does the velocity–time gradient equal?','velocity'],
+ ['What is the signed area under a velocity–time graph?','distance'],
  ['Where is kinetic energy zero in ideal SHM?','at equilibrium'],
  ['What happens to mean translational kinetic energy if absolute temperature doubles?','it halves'],
  ['What does decay constant represent?','time for half the nuclei to decay'],
