@@ -69,6 +69,8 @@ jobs:
           node tests/world-v113-archive.cjs
           node tests/world-v114-sources.cjs
           node tests/world-v114-archive.cjs
+          node tests/world-v116-sources.cjs
+          node tests/world-v116-archive.cjs
           node tests/world-v115-shop-cover-composition.cjs
           node -e "const a=require('./editorial/world-local-photo-audit-v114.json');const r=require('./editorial/reviews/world-local-photo-review-index.json');if(a.localPhotographs!==r.photoCount||a.fourPhotoLocalGalleries!==r.fullyLocal||r.destinations.some(d=>d.images.length!==4))throw Error('World v114 incomplete local archive')"
           node tests/world-v111-shop-cover.cjs
