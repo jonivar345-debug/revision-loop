@@ -2,11 +2,11 @@
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const d=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v132.json','utf8'));
-const a=d.cards,old=a.filter(c=>!c.id.startsWith('task1_v132_')),fresh=a.filter(c=>c.id.startsWith('task1_v132_'));
-assert.equal(d.deckVersion,132);assert.equal(old.length,2975);assert.equal(old.filter(c=>c.active!==false).length,2971);
+const a=d.cards,old=a.filter(c=>!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_')),fresh=a.filter(c=>c.id.startsWith('task1_v132_')),historic=a.filter(c=>!c.id.startsWith('task1_v133_'));
+assert(d.deckVersion>=132);assert.equal(old.length,2975);assert.equal(old.filter(c=>c.active!==false).length,2971);
 assert.equal(fresh.length,6);assert.equal(fresh.filter(c=>c.subject==='Physics').length,3);
 assert.equal(fresh.filter(c=>c.subject==='Chemistry').length,3);
-assert.equal(a.length,2981);assert.equal(a.filter(c=>c.active!==false).length,2977);
+assert.equal(historic.length,2981);assert.equal(historic.filter(c=>c.active!==false).length,2977);
 assert.equal(audit.coverage.activeLegacyCards,1216);
 assert.equal(audit.coverage.reviewed,354);assert.equal(audit.coverage.notYetReviewed,862);
 assert.equal(audit.records.length,354);
