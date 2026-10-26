@@ -68,7 +68,7 @@
         "The second zero-velocity crossing occurs at t=7 s.",
         "Signed area from 0–2 s is zero; 2–5 s is −12 m.",
         "From 5–8 s the signed trapezium area is −3 m; total displacement is −15 m.",
-        "Distance is 4+4+12+4+1=25 m, adding positive and negative areas by magnitude."
+        "Distance is 2+2+12+4+1=21 m, summing the absolute triangular/rectangular areas."
       ],
       "markPointMarks": [
         1,
@@ -80,7 +80,7 @@
         1,
         1
       ],
-      "modelAnswer": "For 0–2 s the acceleration is (−4−4)/2=−4 m s⁻². For 2–5 s the acceleration is 0 m s⁻². For 5–8 s the acceleration is (2−(−4))/3=+2 m s⁻². The first zero-velocity crossing occurs at t=1 s. The second zero-velocity crossing occurs at t=7 s. Signed area from 0–2 s is zero; 2–5 s is −12 m. From 5–8 s the signed trapezium area is −3 m; total displacement is −15 m. Distance is 4+4+12+4+1=25 m, adding positive and negative areas by magnitude.",
+      "modelAnswer": "For 0–2 s the acceleration is (−4−4)/2=−4 m s⁻². For 2–5 s the acceleration is 0 m s⁻². For 5–8 s the acceleration is (2−(−4))/3=+2 m s⁻². The first zero-velocity crossing occurs at t=1 s. The second zero-velocity crossing occurs at t=7 s. Signed area from 0–2 s is zero; 2–5 s is −12 m. From 5–8 s the signed trapezium area is −3 m; total displacement is −15 m. Distance is 2+2+12+4+1=21 m, summing the absolute triangular/rectangular areas.",
       "answerType": "points",
       "questionType": "graph interpretation",
       "requiresWorking": true,
