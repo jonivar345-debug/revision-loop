@@ -8,7 +8,7 @@ service cloud.firestore {
     }
 
     function validSegment(segment) {
-      return segment in ['progress', 'profile', 'settings'];
+      return segment in ['bundle'];
     }
 
     function validState() {
@@ -16,7 +16,7 @@ service cloud.firestore {
         && request.resource.data.keys().hasAll(['payload', 'revision', 'updatedAt'])
         && request.resource.data.payload is string
         // Conservative character-count guard; app must also enforce byte limit.
-        && request.resource.data.payload.size() < 850000
+        && request.resource.data.payload.size() < 800000
         && request.resource.data.revision is int
         && request.resource.data.revision > 0
         && request.resource.data.updatedAt is timestamp;
@@ -31,7 +31,7 @@ service cloud.firestore {
         ])
         && validSegment(request.resource.data.segment)
         && request.resource.data.payload is string
-        && request.resource.data.payload.size() < 850000
+        && request.resource.data.payload.size() < 800000
         && request.resource.data.baseRevision is int
         && request.resource.data.baseRevision >= 0
         && request.resource.data.createdAt is timestamp;
