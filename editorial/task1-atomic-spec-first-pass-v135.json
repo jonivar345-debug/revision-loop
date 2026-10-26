@@ -3,10 +3,12 @@
   "sourceDeckVersion": 134,
   "reviewDate": "2026-10-26",
   "scope": "First prioritised set of atomic syllabus outcomes, NOT the entire AQA specification",
-  "method": "Paraphrased requirement list derived from official AQA pages. Regex matches FRONT of an active card only, never validates its answer or fully certifies an outcome. Candidates require human review; zeros may be false negatives. Does not change deck.",
+  "method": "Paraphrased requirement list derived from official AQA pages. Regex matches FRONT of an active card only, never validates its answer or fully certifies an outcome. Candidates require human review; zeros may be false negatives. Does not change deck. Reviewed source-checked rows contain exact existing front/back snapshots; no review of them changes study progress.",
   "statusDefinitions": {
     "candidate_evidence_unverified": "At least one active card front matches this focused search; verify question, answer and scope manually",
-    "manual_search_required": "No front match; do a semantic inspection before adding a new card"
+    "manual_search_required": "No front match; do a semantic inspection before adding a new card",
+    "answer_checked_existing": "Question and answer reviewed against the stated narrow requirement; this alone does not establish full specification completion",
+    "partially_supported_needs_card": "Some evidence checked but a distinct required recall point remains weak or absent"
   },
   "totals": {
     "requirements": 113,
@@ -14,14 +16,10 @@
       "Physics": 37,
       "Chemistry": 76
     },
-    "Physics": {
-      "candidates": 35,
-      "manual": 2
-    },
-    "Chemistry": {
-      "candidates": 71,
-      "manual": 5
-    }
+    "front_match_only": 106,
+    "answer_checked_existing": 6,
+    "partially_supported_needs_card": 1,
+    "still_no_evidence": 0
   },
   "requirements": [
     {
@@ -673,11 +671,23 @@
       "requirement": "Relate intermolecular strength to boiling points",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "answer_checked_existing",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "boiling point.*(intermolecular|hydrogen|forces)|intermolecular.*boiling"
+      "candidateCardIds": [
+        "chem_bonding_v52_39"
+      ],
+      "candidatePrompts": [
+        "How do stronger van der Waals' forces affect boiling point?"
+      ],
+      "searchPromptPattern": "boiling point.*(intermolecular|hydrogen|forces)|intermolecular.*boiling",
+      "answerChecked": [
+        {
+          "id": "chem_bonding_v52_39",
+          "front": "How do stronger van der Waals' forces affect boiling point?",
+          "back": "More energy is needed to separate molecules, so the boiling point increases."
+        }
+      ],
+      "reviewerNote": "Explicit statement that stronger London forces raise boiling point."
     },
     {
       "id": "A032",
@@ -877,11 +887,23 @@
       "requirement": "Distinguish effective and ineffective collisions",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "answer_checked_existing",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "successful collision|collision theory|sufficient energy"
+      "candidateCardIds": [
+        "chem_collision"
+      ],
+      "candidatePrompts": [
+        "What two conditions make a collision successful?"
+      ],
+      "searchPromptPattern": "successful collision|collision theory|sufficient energy",
+      "answerChecked": [
+        {
+          "id": "chem_collision",
+          "front": "What two conditions make a collision successful?",
+          "back": "Particles collide with energy at least equal to Ea and with a suitable orientation."
+        }
+      ],
+      "reviewerNote": "Two conditions for an effective collision are present in the model answer."
     },
     {
       "id": "A042",
@@ -1043,11 +1065,30 @@
       "requirement": "Explain industrial compromise conditions",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "answer_checked_existing",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "compromise temperature|compromise pressure|industrial.*equilibrium"
+      "candidateCardIds": [
+        "chem_y1_chat_v126_021",
+        "chem_y1_chat_v126_022"
+      ],
+      "candidatePrompts": [
+        "Why not use an extremely low temperature in the Haber process?",
+        "Why not use an extremely high Haber-process pressure?"
+      ],
+      "searchPromptPattern": "compromise temperature|compromise pressure|industrial.*equilibrium",
+      "answerChecked": [
+        {
+          "id": "chem_y1_chat_v126_021",
+          "front": "Why not use an extremely low temperature in the Haber process?",
+          "back": "Equilibrium yield rises, but ammonia production becomes too slow."
+        },
+        {
+          "id": "chem_y1_chat_v126_022",
+          "front": "Why not use an extremely high Haber-process pressure?",
+          "back": "Compression is costly and demands expensive high-pressure equipment."
+        }
+      ],
+      "reviewerNote": "Separately covers why low temperature and extreme high pressure are unsuitable industrial compromises."
     },
     {
       "id": "A050",
@@ -1224,11 +1265,30 @@
       "requirement": "Explain ionisation energy anomalies across Period 3",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "answer_checked_existing",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "period 3.*ionisation|aluminium.*magnesium.*ionisation"
+      "candidateCardIds": [
+        "task1_chem_071",
+        "task1_chem_072"
+      ],
+      "candidatePrompts": [
+        "Why is the first ionisation energy of Al below Mg?",
+        "Why is the first ionisation energy of S below P?"
+      ],
+      "searchPromptPattern": "period 3.*ionisation|aluminium.*magnesium.*ionisation",
+      "answerChecked": [
+        {
+          "id": "task1_chem_071",
+          "front": "Why is the first ionisation energy of Al below Mg?",
+          "back": "Al loses a higher-energy 3p electron."
+        },
+        {
+          "id": "task1_chem_072",
+          "front": "Why is the first ionisation energy of S below P?",
+          "back": "Paired 3p electrons repel, easing removal."
+        }
+      ],
+      "reviewerNote": "Both Al/Mg subshell and S/P paired-electron ionisation anomalies covered."
     },
     {
       "id": "A059",
@@ -1258,11 +1318,30 @@
       "requirement": "Explain first ionisation energy and radius trends down Group 2",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "answer_checked_existing",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "group 2.*(radius|ionisation)"
+      "candidateCardIds": [
+        "chem_atomic_v43_46",
+        "task1_v131_081"
+      ],
+      "candidatePrompts": [
+        "Why does first IE fall down Group 2?",
+        "What happens to atomic radius down Group 2?"
+      ],
+      "searchPromptPattern": "group 2.*(radius|ionisation)",
+      "answerChecked": [
+        {
+          "id": "chem_atomic_v43_46",
+          "front": "Why does first IE fall down Group 2?",
+          "back": "Outer electrons are farther away and more shielded, despite a larger nuclear charge."
+        },
+        {
+          "id": "task1_v131_081",
+          "front": "What happens to atomic radius down Group 2?",
+          "back": "It increases."
+        }
+      ],
+      "reviewerNote": "Down-group shielding explanation and radius trend covered."
     },
     {
       "id": "A061",
@@ -1732,11 +1811,23 @@
       "requirement": "Combine percentage uncertainty for multiplication and powers",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "partially_supported_needs_card",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "uncertainty.*power|uncertainty.*multiply|percentage uncertainty.*product|uncertainty.*squared"
+      "candidateCardIds": [
+        "phy_uncert_power"
+      ],
+      "candidatePrompts": [
+        "If y = xⁿ, what happens to percentage uncertainty?"
+      ],
+      "searchPromptPattern": "uncertainty.*power|uncertainty.*multiply|percentage uncertainty.*product|uncertainty.*squared",
+      "answerChecked": [
+        {
+          "id": "phy_uncert_power",
+          "front": "If y = xⁿ, what happens to percentage uncertainty?",
+          "back": "Multiply the percentage uncertainty in x by |n|."
+        }
+      ],
+      "reviewerNote": "Exponent-related percentage uncertainty covered; no concise multiplication/division uncertainty card identified in first semantic pass."
     },
     {
       "id": "A083",
@@ -2194,7 +2285,7 @@
     {
       "id": "A104",
       "subject": "Physics",
-      "specRef": "3.4.1.4",
+      "specRef": "3.4.1.5",
       "requirement": "Apply Newton second law force and acceleration",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
       "stage": "AS",
@@ -2219,16 +2310,35 @@
       "requirement": "Explain drag and terminal velocity",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
       "stage": "AS",
-      "status": "manual_search_required",
+      "status": "answer_checked_existing",
       "candidateCount": 0,
-      "candidateCardIds": [],
-      "candidatePrompts": [],
-      "searchPromptPattern": "terminal velocity|drag force|resistive force"
+      "candidateCardIds": [
+        "task1_v125_029",
+        "task1_v130_032"
+      ],
+      "candidatePrompts": [
+        "For a falling object, how does greater upward drag affect the resultant downward force?",
+        "What does terminal speed mean for net force?"
+      ],
+      "searchPromptPattern": "terminal velocity|drag force|resistive force",
+      "answerChecked": [
+        {
+          "id": "task1_v125_029",
+          "front": "For a falling object, how does greater upward drag affect the resultant downward force?",
+          "back": "It decreases."
+        },
+        {
+          "id": "task1_v130_032",
+          "front": "What does terminal speed mean for net force?",
+          "back": "The resultant force is zero."
+        }
+      ],
+      "reviewerNote": "Drag changes the resultant force and at terminal speed the resultant force is zero."
     },
     {
       "id": "A106",
       "subject": "Physics",
-      "specRef": "3.4.1.5",
+      "specRef": "3.4.1.4",
       "requirement": "Treat independent vertical and horizontal projectile motion",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
       "stage": "AS",
@@ -2402,6 +2512,41 @@
         "What distinguishes a ductile material from a brittle one?"
       ],
       "searchPromptPattern": "brittle|ductile"
+    }
+  ],
+  "candidateMatchingCaveat": "Regex results are only search suggestions. Even a high match count does not prove coverage.",
+  "nextPrecisionCandidates": [
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "front": "When independent quantities are multiplied or divided, how are percentage uncertainties combined?",
+      "back": "Add their percentage uncertainties (the usual worst-case A-level approximation).",
+      "reason": "No concise front-side rule found in targeted search; distinguish from existing power-law cards.",
+      "status": "candidate_addition_not_released"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "front": "How can you estimate uncertainty in a straight-line graph's y-intercept?",
+      "back": "Compare the best-fit intercept with intercepts from the steepest and shallowest acceptable lines.",
+      "reason": "Existing graph uncertainty cards focus on gradients; no direct intercept-uncertainty prompt found.",
+      "status": "candidate_addition_not_released"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "front": "For a Hooke's-law spring, what is the elastic strain energy stored at extension x?",
+      "back": "E = ½Fx = ½kx²; it is the area under the force–extension graph.",
+      "reason": "Existing example calculates energy; a compact stand-alone formula recall card would complement it.",
+      "status": "candidate_addition_not_released"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3.2",
+      "front": "Why are the benefits and risks of adding chlorine to drinking water considered together?",
+      "back": "Chlorine reduces harmful microorganisms, but its toxic effects and unwanted by-products must be managed.",
+      "reason": "Specification explicitly asks for health-benefit and risk evaluation; no direct front-side recall found.",
+      "status": "candidate_addition_not_released"
     }
   ]
 }
