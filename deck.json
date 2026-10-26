@@ -59481,7 +59481,11 @@
       "accept": [
         "From the positive plate to the negative plate.",
         "positive to negative",
-        "from + to -"
+        "from + to -",
+        "from positive to negative",
+        "from positive plate to negative plate",
+        "from the positive plate to the negative plate",
+        "+ to -"
       ],
       "taught": false,
       "mock": false,
@@ -59491,7 +59495,16 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Electric fields",
-      "revisionTopic": "Electric fields"
+      "revisionTopic": "Electric fields",
+      "strictRecall": true,
+      "reject": [
+        "negative to positive",
+        "from negative to positive",
+        "from negative plate to positive plate",
+        "from the negative plate to the positive plate",
+        "- to +",
+        "from - to +"
+      ]
     },
     {
       "subject": "Physics",
