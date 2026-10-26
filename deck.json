@@ -27179,7 +27179,11 @@
       "taught": true,
       "courseTopic": "Materials",
       "revisionTopic": "Materials",
-      "specRef": "3.4.2"
+      "specRef": "3.4.2",
+      "accept": [
+        "Beyond it, unloading leaves permanent deformation.",
+        "last point beyond which permanent extension occurs"
+      ]
     },
     {
       "id": "task1_phy_086",
@@ -37163,7 +37167,9 @@
       "front": "What is the total energy of a satellite in a circular orbit?",
       "back": "E = −GMm/(2r).",
       "accept": [
-        "-GMm/(2r)"
+        "-GMm/(2r)",
+        "minus GMm over 2r",
+        "E = −GMm/(2r)"
       ],
       "active": true,
       "stage": "A2",
@@ -37184,7 +37190,8 @@
       "front": "What is the kinetic energy of a satellite in a circular orbit?",
       "back": "Eₖ = GMm/(2r).",
       "accept": [
-        "GMm/(2r)"
+        "GMm/(2r)",
+        "Eₖ = GMm/(2r)"
       ],
       "active": true,
       "stage": "A2",
@@ -37205,7 +37212,8 @@
       "front": "What is gravitational potential energy of mass m at distance r from mass M?",
       "back": "Eₚ = −GMm/r, taking zero at infinity.",
       "accept": [
-        "-GMm/r"
+        "-GMm/r",
+        "Eₚ = −GMm/r, taking zero at infinity"
       ],
       "active": true,
       "stage": "A2",
@@ -37248,7 +37256,8 @@
       "back": "It increases towards zero (becomes less negative).",
       "accept": [
         "increases towards zero",
-        "becomes less negative"
+        "becomes less negative",
+        "It increases towards zero (becomes less negative)"
       ],
       "active": true,
       "stage": "A2",
@@ -37270,7 +37279,8 @@
       "back": "In the same direction as Earth's rotation.",
       "accept": [
         "same direction as earth rotates",
-        "eastwards"
+        "eastwards",
+        "In the same direction as Earth's rotation"
       ],
       "active": true,
       "stage": "A2",
@@ -37292,7 +37302,8 @@
       "back": "The magnitude of gravitational potential difference between those positions.",
       "accept": [
         "change in gravitational potential",
-        "gravitational potential difference"
+        "gravitational potential difference",
+        "magnitude of gravitational potential difference between those positions"
       ],
       "active": true,
       "stage": "A2",
@@ -37314,7 +37325,8 @@
       "back": "There is no change in gravitational potential.",
       "accept": [
         "no potential difference",
-        "no change in potential"
+        "no change in potential",
+        "There is no change in gravitational potential"
       ],
       "active": true,
       "stage": "A2",
@@ -37336,7 +37348,8 @@
       "back": "With constant acceleration, if other forces are negligible.",
       "accept": [
         "constant acceleration",
-        "uniform acceleration"
+        "uniform acceleration",
+        "With constant acceleration, if other forces are negligible"
       ],
       "active": true,
       "stage": "A2",
@@ -37358,7 +37371,8 @@
       "back": "The magnitude of the potential difference across the interval.",
       "accept": [
         "potential difference",
-        "change in electric potential"
+        "change in electric potential",
+        "magnitude of the potential difference across the interval"
       ],
       "active": true,
       "stage": "A2",
@@ -37380,7 +37394,8 @@
       "back": "Polarisation reduces the field and p.d. for a given stored charge.",
       "accept": [
         "polarisation reduces potential difference",
-        "polar molecules align reducing pd"
+        "polar molecules align reducing pd",
+        "Polarisation reduces the field and p.d. for a given stored charge"
       ],
       "active": true,
       "stage": "A2",
@@ -37402,7 +37417,8 @@
       "back": "Inversely proportional: C ∝ 1/d.",
       "accept": [
         "inversely proportional",
-        "1/d"
+        "1/d",
+        "Inversely proportional: C ∝ 1/d"
       ],
       "active": true,
       "stage": "A2",
@@ -37424,7 +37440,8 @@
       "back": "Thumb: force; first finger: field; second finger: conventional current.",
       "accept": [
         "thumb force first field second current",
-        "force field current"
+        "force field current",
+        "Thumb: force; first finger: field; second finger: conventional current"
       ],
       "active": true,
       "stage": "A2",
@@ -37446,7 +37463,8 @@
       "back": "It reverses relative to a positive charge with the same velocity.",
       "accept": [
         "opposite direction",
-        "reversed"
+        "reversed",
+        "It reverses relative to a positive charge with the same velocity"
       ],
       "active": true,
       "stage": "A2",
@@ -37491,7 +37509,8 @@
       "back": "Changing flux linkage induces an emf in the secondary coil.",
       "accept": [
         "induced emf in secondary",
-        "faradays law"
+        "faradays law",
+        "Changing flux linkage induces an emf in the secondary coil"
       ],
       "active": true,
       "stage": "A2",
@@ -37513,7 +37532,9 @@
       "back": "Efficiency = IₛVₛ/(IₚVₚ).",
       "accept": [
         "IsVs/IpVp",
-        "output power/input power"
+        "output power/input power",
+        "output power divided by input power",
+        "Efficiency = IₛVₛ/(IₚVₚ)"
       ],
       "active": true,
       "stage": "A2",
@@ -37535,7 +37556,9 @@
       "back": "Iᵣₘₛ = I₀/√2.",
       "accept": [
         "I0/sqrt2",
-        "peak current divided by root 2"
+        "peak current divided by root 2",
+        "Ipeak/sqrt2",
+        "Iᵣₘₛ = I₀/√2"
       ],
       "active": true,
       "stage": "A2",
@@ -37557,7 +37580,9 @@
       "back": "Vᵣₘₛ = V₀/√2.",
       "accept": [
         "V0/sqrt2",
-        "peak voltage divided by root 2"
+        "peak voltage divided by root 2",
+        "Vpeak/sqrt2",
+        "Vᵣₘₛ = V₀/√2"
       ],
       "active": true,
       "stage": "A2",
@@ -37601,7 +37626,8 @@
       "back": "A weak base and its conjugate acid (usually its salt).",
       "accept": [
         "weak base and conjugate acid",
-        "weak base and its salt"
+        "weak base and its salt",
+        "weak base and its conjugate acid (usually its salt)"
       ],
       "active": true,
       "stage": "A2",
@@ -37622,7 +37648,8 @@
       "back": "The weak base accepts H⁺, forming its conjugate acid.",
       "accept": [
         "weak base reacts with added acid",
-        "base accepts hydrogen ions"
+        "base accepts hydrogen ions",
+        "weak base accepts H⁺, forming its conjugate acid"
       ],
       "active": true,
       "stage": "A2",
@@ -37643,7 +37670,8 @@
       "back": "Its conjugate acid donates H⁺ to neutralise OH⁻.",
       "accept": [
         "conjugate acid reacts with hydroxide",
-        "acid donates proton to hydroxide"
+        "acid donates proton to hydroxide",
+        "Its conjugate acid donates H⁺ to neutralise OH⁻"
       ],
       "active": true,
       "stage": "A2",
@@ -37664,7 +37692,8 @@
       "back": "Their backbones contain C–C bonds, not hydrolysable ester or amide links.",
       "accept": [
         "no hydrolysable bonds",
-        "carbon carbon bonds only"
+        "carbon carbon bonds only",
+        "Their backbones contain C–C bonds, not hydrolysable ester or amide links"
       ],
       "active": true,
       "stage": "A2",
@@ -37685,7 +37714,8 @@
       "back": "Their polymer chains contain ester links.",
       "accept": [
         "ester bonds",
-        "ester linkages"
+        "ester linkages",
+        "Their polymer chains contain ester links"
       ],
       "active": true,
       "stage": "A2",
@@ -37706,7 +37736,8 @@
       "back": "Their polymer chains contain amide links.",
       "accept": [
         "amide bonds",
-        "peptide links"
+        "peptide links",
+        "Their polymer chains contain amide links"
       ],
       "active": true,
       "stage": "A2",
@@ -37727,7 +37758,8 @@
       "back": "Ester links, producing a polyester.",
       "accept": [
         "ester bonds",
-        "ester linkages"
+        "ester linkages",
+        "Ester links, producing a polyester"
       ],
       "active": true,
       "stage": "A2",
@@ -37748,7 +37780,8 @@
       "back": "Amide links, producing a polyamide.",
       "accept": [
         "amide bonds",
-        "amide linkages"
+        "amide linkages",
+        "Amide links, producing a polyamide"
       ],
       "active": true,
       "stage": "A2",
@@ -37770,7 +37803,8 @@
       "accept": [
         "less landfill",
         "reduces raw material use",
-        "reduces waste"
+        "reduces waste",
+        "It can reduce demand for raw materials and landfill waste"
       ],
       "active": true,
       "stage": "A2",
@@ -37791,7 +37825,8 @@
       "back": "Its nitrogen lone pair is delocalised into the benzene ring.",
       "accept": [
         "lone pair delocalised",
-        "lone pair less available"
+        "lone pair less available",
+        "Its nitrogen lone pair is delocalised into the benzene ring"
       ],
       "active": true,
       "stage": "A2",
@@ -37812,7 +37847,8 @@
       "back": "A positively charged nitrogen bonded to four carbon groups.",
       "accept": [
         "nitrogen with four organic groups and a positive charge",
-        "R4N+"
+        "R4N+",
+        "positively charged nitrogen bonded to four carbon groups"
       ],
       "active": true,
       "stage": "A2",
@@ -37833,7 +37869,8 @@
       "back": "They can act as cationic surfactants.",
       "accept": [
         "cationic surfactants",
-        "surfactants"
+        "surfactants",
+        "They can act as cationic surfactants"
       ],
       "active": true,
       "stage": "A2",
@@ -37854,7 +37891,8 @@
       "back": "A salt bridge between half-cells.",
       "accept": [
         "salt bridge",
-        "separates half cells"
+        "separates half cells",
+        "salt bridge between half-cells"
       ],
       "active": true,
       "stage": "A2",
@@ -37875,7 +37913,8 @@
       "back": "A phase boundary, such as metal against aqueous ions.",
       "accept": [
         "phase boundary",
-        "phase change"
+        "phase change",
+        "phase boundary, such as metal against aqueous ions"
       ],
       "active": true,
       "stage": "A2",
@@ -37897,7 +37936,8 @@
       "accept": [
         "ionic conduction",
         "maintains electrical neutrality",
-        "completes circuit"
+        "completes circuit",
+        "To allow ions to move and maintain charge balance"
       ],
       "active": true,
       "stage": "A2",
@@ -37918,7 +37958,8 @@
       "back": "Higher charge density polarises coordinated water O–H bonds more strongly.",
       "accept": [
         "higher charge density",
-        "greater polarisation of water"
+        "greater polarisation of water",
+        "Higher charge density polarises coordinated water O–H bonds more strongly"
       ],
       "active": true,
       "stage": "A2",
@@ -37939,7 +37980,8 @@
       "back": "It binds strongly to Fe²⁺ in haemoglobin, displacing oxygen.",
       "accept": [
         "binds to haemoglobin instead of oxygen",
-        "displaces oxygen"
+        "displaces oxygen",
+        "It binds strongly to Fe²⁺ in haemoglobin, displacing oxygen"
       ],
       "active": true,
       "stage": "A2",
@@ -37960,7 +38002,8 @@
       "back": "A coordinate (dative covalent) bond.",
       "accept": [
         "coordinate bond",
-        "dative covalent bond"
+        "dative covalent bond",
+        "coordinate (dative covalent) bond"
       ],
       "active": true,
       "stage": "A2",
@@ -37980,7 +38023,8 @@
       "front": "How many joules is one electronvolt?",
       "back": "1.60 × 10⁻¹⁹ J.",
       "accept": [
-        "1.60 × 10⁻¹⁹ J."
+        "1.60 × 10⁻¹⁹ J.",
+        "1.60 × 10⁻¹⁹ J"
       ],
       "active": true,
       "stage": "AS",
@@ -38000,7 +38044,8 @@
       "front": "Which base SI unit is used for amount of substance?",
       "back": "Mole (mol).",
       "accept": [
-        "Mole (mol)."
+        "Mole (mol).",
+        "Mole (mol)"
       ],
       "active": true,
       "stage": "AS",
@@ -38020,7 +38065,11 @@
       "front": "What are the base SI units of a newton?",
       "back": "kg m s⁻².",
       "accept": [
-        "kg m s⁻²."
+        "kg m s⁻².",
+        "kg m/s^2",
+        "kg m s^-2",
+        "kgms^-2",
+        "kg m s⁻²"
       ],
       "active": true,
       "stage": "AS",
@@ -38040,7 +38089,10 @@
       "front": "What are the base SI units of a joule?",
       "back": "kg m² s⁻².",
       "accept": [
-        "kg m² s⁻²."
+        "kg m² s⁻².",
+        "kg m^2 s^-2",
+        "kg m2/s2",
+        "kg m² s⁻²"
       ],
       "active": true,
       "stage": "AS",
@@ -38060,7 +38112,8 @@
       "front": "What is an anomalous reading?",
       "back": "A result inconsistent with the trend of the other results.",
       "accept": [
-        "A result inconsistent with the trend of the other results."
+        "A result inconsistent with the trend of the other results.",
+        "result inconsistent with the trend of the other results"
       ],
       "active": true,
       "stage": "AS",
@@ -38080,7 +38133,8 @@
       "front": "How does a zero error affect all measurements?",
       "back": "It adds a systematic offset.",
       "accept": [
-        "It adds a systematic offset."
+        "It adds a systematic offset.",
+        "It adds a systematic offset"
       ],
       "active": true,
       "stage": "AS",
@@ -38100,7 +38154,8 @@
       "front": "What is a random error's effect on repeated readings?",
       "back": "Readings scatter about the mean.",
       "accept": [
-        "Readings scatter about the mean."
+        "Readings scatter about the mean.",
+        "Readings scatter about the mean"
       ],
       "active": true,
       "stage": "AS",
@@ -38120,7 +38175,8 @@
       "front": "How can repeating readings reduce random uncertainty?",
       "back": "Taking a mean reduces its effect.",
       "accept": [
-        "Taking a mean reduces its effect."
+        "Taking a mean reduces its effect.",
+        "Taking a mean reduces its effect"
       ],
       "active": true,
       "stage": "AS",
@@ -38140,7 +38196,8 @@
       "front": "Why is a graph through the origin not always justified?",
       "back": "A systematic offset or real intercept may exist.",
       "accept": [
-        "A systematic offset or real intercept may exist."
+        "A systematic offset or real intercept may exist.",
+        "systematic offset or real intercept may exist"
       ],
       "active": true,
       "stage": "AS",
@@ -38160,7 +38217,8 @@
       "front": "What should an uncertainty normally be rounded to?",
       "back": "Usually one significant figure.",
       "accept": [
-        "Usually one significant figure."
+        "Usually one significant figure.",
+        "Usually one significant figure"
       ],
       "active": true,
       "stage": "AS",
@@ -38180,7 +38238,8 @@
       "front": "What is the approximate percentage uncertainty in a value x?",
       "back": "(Absolute uncertainty / x) × 100%.",
       "accept": [
-        "(Absolute uncertainty / x) × 100%."
+        "(Absolute uncertainty / x) × 100%.",
+        "(Absolute uncertainty / x) × 100%"
       ],
       "active": true,
       "stage": "AS",
@@ -38200,7 +38259,8 @@
       "front": "How are percentage uncertainties combined for a product of measured quantities?",
       "back": "Add the individual percentage uncertainties.",
       "accept": [
-        "Add the individual percentage uncertainties."
+        "Add the individual percentage uncertainties.",
+        "Add the individual percentage uncertainties"
       ],
       "active": true,
       "stage": "AS",
@@ -38220,7 +38280,11 @@
       "front": "What is the charge of an up quark?",
       "back": "+2/3 of the elementary charge.",
       "accept": [
-        "+2/3 of the elementary charge."
+        "+2/3 of the elementary charge.",
+        "+2/3",
+        "2/3 e",
+        "+2/3e",
+        "+2/3 of the elementary charge"
       ],
       "active": true,
       "stage": "AS",
@@ -38241,7 +38305,10 @@
       "front": "What is the charge of a down quark?",
       "back": "−1/3 of the elementary charge.",
       "accept": [
-        "−1/3 of the elementary charge."
+        "−1/3 of the elementary charge.",
+        "-1/3",
+        "-1/3e",
+        "−1/3 of the elementary charge"
       ],
       "active": true,
       "stage": "AS",
@@ -38342,7 +38409,8 @@
       "front": "Which conservation law is obeyed in all particle interactions?",
       "back": "Conservation of charge.",
       "accept": [
-        "Conservation of charge."
+        "Conservation of charge.",
+        "Conservation of charge"
       ],
       "active": true,
       "stage": "AS",
@@ -38362,7 +38430,8 @@
       "front": "What carries the electromagnetic interaction?",
       "back": "Virtual photons.",
       "accept": [
-        "Virtual photons."
+        "Virtual photons.",
+        "Virtual photons"
       ],
       "active": true,
       "stage": "AS",
@@ -38382,7 +38451,8 @@
       "front": "What carries the weak interaction?",
       "back": "W⁺, W⁻ and Z⁰ bosons.",
       "accept": [
-        "W⁺, W⁻ and Z⁰ bosons."
+        "W⁺, W⁻ and Z⁰ bosons.",
+        "W⁺, W⁻ and Z⁰ bosons"
       ],
       "active": true,
       "stage": "AS",
@@ -38402,7 +38472,8 @@
       "front": "What is the lepton number of an antilepton?",
       "back": "−1 (for its lepton family).",
       "accept": [
-        "−1 (for its lepton family)."
+        "−1 (for its lepton family).",
+        "−1 (for its lepton family)"
       ],
       "active": true,
       "stage": "AS",
@@ -38422,7 +38493,8 @@
       "front": "What is the role of a neutrino in beta-minus decay?",
       "back": "An electron antineutrino balances lepton number.",
       "accept": [
-        "An electron antineutrino balances lepton number."
+        "An electron antineutrino balances lepton number.",
+        "electron antineutrino balances lepton number"
       ],
       "active": true,
       "stage": "AS",
@@ -38442,7 +38514,10 @@
       "front": "What is the stopping potential of photoelectrons?",
       "back": "The reverse p.d. that just stops the fastest photoelectrons.",
       "accept": [
-        "The reverse p.d. that just stops the fastest photoelectrons."
+        "The reverse p.d. that just stops the fastest photoelectrons.",
+        "reverse voltage that stops the fastest photoelectrons",
+        "voltage needed to stop the most energetic photoelectrons",
+        "reverse p.d. that just stops the fastest photoelectrons"
       ],
       "active": true,
       "stage": "AS",
@@ -38462,7 +38537,8 @@
       "front": "Why does increasing light intensity not raise photoelectron maximum energy?",
       "back": "Photon energy depends on frequency, not intensity.",
       "accept": [
-        "Photon energy depends on frequency, not intensity."
+        "Photon energy depends on frequency, not intensity.",
+        "Photon energy depends on frequency, not intensity"
       ],
       "active": true,
       "stage": "AS",
@@ -38482,7 +38558,8 @@
       "front": "How does increasing light intensity above threshold affect photoelectric current?",
       "back": "It can increase current by ejecting more electrons per second.",
       "accept": [
-        "It can increase current by ejecting more electrons per second."
+        "It can increase current by ejecting more electrons per second.",
+        "It can increase current by ejecting more electrons per second"
       ],
       "active": true,
       "stage": "AS",
@@ -38502,7 +38579,8 @@
       "front": "What does the frequency-axis intercept of an Eₖ,max–frequency graph show?",
       "back": "The threshold frequency.",
       "accept": [
-        "The threshold frequency."
+        "The threshold frequency.",
+        "threshold frequency"
       ],
       "active": true,
       "stage": "AS",
@@ -38522,7 +38600,8 @@
       "front": "What does the Eₖ,max–frequency graph gradient equal?",
       "back": "Planck's constant h.",
       "accept": [
-        "Planck's constant h."
+        "Planck's constant h.",
+        "Planck's constant h"
       ],
       "active": true,
       "stage": "AS",
@@ -38542,7 +38621,8 @@
       "front": "What phase difference corresponds to a quarter of a cycle?",
       "back": "π/2 radians (90°).",
       "accept": [
-        "π/2 radians (90°)."
+        "π/2 radians (90°).",
+        "π/2 radians (90°)"
       ],
       "active": true,
       "stage": "AS",
@@ -38562,7 +38642,8 @@
       "front": "What happens to wave speed when frequency doubles in the same medium?",
       "back": "It stays the same.",
       "accept": [
-        "It stays the same."
+        "It stays the same.",
+        "It stays the same"
       ],
       "active": true,
       "stage": "AS",
@@ -38582,7 +38663,8 @@
       "front": "Which wave property is fixed by its source across a boundary?",
       "back": "Frequency.",
       "accept": [
-        "Frequency."
+        "Frequency.",
+        "Frequency"
       ],
       "active": true,
       "stage": "AS",
@@ -38602,7 +38684,8 @@
       "front": "Why can polarising filters reduce glare?",
       "back": "They preferentially transmit one polarisation direction.",
       "accept": [
-        "They preferentially transmit one polarisation direction."
+        "They preferentially transmit one polarisation direction.",
+        "They preferentially transmit one polarisation direction"
       ],
       "active": true,
       "stage": "AS",
@@ -38622,7 +38705,8 @@
       "front": "What must be true of the waves at a stationary-wave node?",
       "back": "They interfere destructively at all times.",
       "accept": [
-        "They interfere destructively at all times."
+        "They interfere destructively at all times.",
+        "They interfere destructively at all times"
       ],
       "active": true,
       "stage": "AS",
@@ -38642,7 +38726,8 @@
       "front": "What is the distance between adjacent stationary-wave nodes?",
       "back": "Half a wavelength.",
       "accept": [
-        "Half a wavelength."
+        "Half a wavelength.",
+        "Half a wavelength"
       ],
       "active": true,
       "stage": "AS",
@@ -38662,7 +38747,8 @@
       "front": "Why does a stationary wave not transfer net energy along the medium?",
       "back": "Opposite travelling waves carry equal energy in opposite directions.",
       "accept": [
-        "Opposite travelling waves carry equal energy in opposite directions."
+        "Opposite travelling waves carry equal energy in opposite directions.",
+        "Opposite travelling waves carry equal energy in opposite directions"
       ],
       "active": true,
       "stage": "AS",
@@ -38682,7 +38768,8 @@
       "front": "What is the phase relation of particles between adjacent nodes?",
       "back": "They oscillate in phase.",
       "accept": [
-        "They oscillate in phase."
+        "They oscillate in phase.",
+        "They oscillate in phase"
       ],
       "active": true,
       "stage": "AS",
@@ -38702,7 +38789,8 @@
       "front": "What is the phase relation of particles on either side of a node?",
       "back": "They oscillate in antiphase.",
       "accept": [
-        "They oscillate in antiphase."
+        "They oscillate in antiphase.",
+        "They oscillate in antiphase"
       ],
       "active": true,
       "stage": "AS",
@@ -38722,7 +38810,8 @@
       "front": "What is the path difference for a first-order bright fringe?",
       "back": "One wavelength.",
       "accept": [
-        "One wavelength."
+        "One wavelength.",
+        "One wavelength"
       ],
       "active": true,
       "stage": "AS",
@@ -38742,7 +38831,8 @@
       "front": "What path difference gives destructive interference?",
       "back": "(n + ½) wavelengths, for integer n.",
       "accept": [
-        "(n + ½) wavelengths, for integer n."
+        "(n + ½) wavelengths, for integer n.",
+        "(n + ½) wavelengths, for integer n"
       ],
       "active": true,
       "stage": "AS",
@@ -38762,7 +38852,8 @@
       "front": "How does fringe spacing change if double-slit separation increases?",
       "back": "It decreases.",
       "accept": [
-        "It decreases."
+        "It decreases.",
+        "It decreases"
       ],
       "active": true,
       "stage": "AS",
@@ -38782,7 +38873,8 @@
       "front": "How does fringe spacing change if screen distance increases?",
       "back": "It increases.",
       "accept": [
-        "It increases."
+        "It increases.",
+        "It increases"
       ],
       "active": true,
       "stage": "AS",
@@ -38802,7 +38894,8 @@
       "front": "Why is monochromatic light useful in a double-slit experiment?",
       "back": "It gives a single consistent fringe spacing.",
       "accept": [
-        "It gives a single consistent fringe spacing."
+        "It gives a single consistent fringe spacing.",
+        "It gives a single consistent fringe spacing"
       ],
       "active": true,
       "stage": "AS",
@@ -38822,7 +38915,8 @@
       "front": "Why do two independent lamps not produce stable fringes?",
       "back": "Their relative phase changes randomly.",
       "accept": [
-        "Their relative phase changes randomly."
+        "Their relative phase changes randomly.",
+        "Their relative phase changes randomly"
       ],
       "active": true,
       "stage": "AS",
@@ -38843,7 +38937,8 @@
       "front": "What does a diffraction grating allow you to measure?",
       "back": "Wavelength from the angular positions of maxima.",
       "accept": [
-        "Wavelength from the angular positions of maxima."
+        "Wavelength from the angular positions of maxima.",
+        "Wavelength from the angular positions of maxima"
       ],
       "active": true,
       "stage": "AS",
@@ -38863,7 +38958,8 @@
       "front": "What is the condition for a grating maximum?",
       "back": "d sin θ = nλ.",
       "accept": [
-        "d sin θ = nλ."
+        "d sin θ = nλ.",
+        "d sin θ = nλ"
       ],
       "active": true,
       "stage": "AS",
@@ -38884,7 +38980,8 @@
       "front": "What does the critical angle mean?",
       "back": "Incidence angle in denser medium for a refracted ray at 90°.",
       "accept": [
-        "Incidence angle in denser medium for a refracted ray at 90°."
+        "Incidence angle in denser medium for a refracted ray at 90°.",
+        "Incidence angle in denser medium for a refracted ray at 90°"
       ],
       "active": true,
       "stage": "AS",
@@ -38904,7 +39001,8 @@
       "front": "What is the relationship between refractive index and critical angle?",
       "back": "sin c = 1/n, for a boundary with air.",
       "accept": [
-        "sin c = 1/n, for a boundary with air."
+        "sin c = 1/n, for a boundary with air.",
+        "sin c = 1/n, for a boundary with air"
       ],
       "active": true,
       "stage": "AS",
@@ -38925,7 +39023,8 @@
       "front": "What condition gives equilibrium for three coplanar forces?",
       "back": "Their vector sum is zero.",
       "accept": [
-        "Their vector sum is zero."
+        "Their vector sum is zero.",
+        "Their vector sum is zero"
       ],
       "active": true,
       "stage": "AS",
@@ -38945,7 +39044,9 @@
       "front": "What does the gradient of a displacement–time graph give?",
       "back": "Velocity, including its sign.",
       "accept": [
-        "Velocity, including its sign."
+        "Velocity, including its sign.",
+        "velocity",
+        "Velocity, including its sign"
       ],
       "active": true,
       "stage": "AS",
@@ -38966,7 +39067,10 @@
       "front": "What does the area below a negative velocity–time graph represent?",
       "back": "Negative displacement.",
       "accept": [
-        "Negative displacement."
+        "Negative displacement.",
+        "negative displacement",
+        "signed negative displacement",
+        "Negative displacement"
       ],
       "active": true,
       "stage": "AS",
@@ -38987,7 +39091,12 @@
       "front": "How is impulse related to momentum?",
       "back": "Impulse equals change in momentum.",
       "accept": [
-        "Impulse equals change in momentum."
+        "Impulse equals change in momentum.",
+        "change in momentum",
+        "momentum change",
+        "delta p",
+        "Δp",
+        "Impulse equals change in momentum"
       ],
       "active": true,
       "stage": "AS",
@@ -39008,7 +39117,13 @@
       "front": "What is the SI unit of impulse?",
       "back": "N s, equivalent to kg m s⁻¹.",
       "accept": [
-        "N s, equivalent to kg m s⁻¹."
+        "N s, equivalent to kg m s⁻¹.",
+        "N s",
+        "Ns",
+        "newton second",
+        "kg m/s",
+        "kg m s^-1",
+        "N s, equivalent to kg m s⁻¹"
       ],
       "active": true,
       "stage": "AS",
@@ -39029,7 +39144,8 @@
       "front": "What does the principle of conservation of momentum require?",
       "back": "No resultant external force on the system.",
       "accept": [
-        "No resultant external force on the system."
+        "No resultant external force on the system.",
+        "No resultant external force on the system"
       ],
       "active": true,
       "stage": "AS",
@@ -39049,7 +39165,8 @@
       "front": "When is the net moment of forces zero?",
       "back": "In rotational equilibrium.",
       "accept": [
-        "In rotational equilibrium."
+        "In rotational equilibrium.",
+        "In rotational equilibrium"
       ],
       "active": true,
       "stage": "AS",
@@ -39089,7 +39206,8 @@
       "front": "What quantity does a couple produce even when resultant force is zero?",
       "back": "A turning moment.",
       "accept": [
-        "A turning moment."
+        "A turning moment.",
+        "turning moment"
       ],
       "active": true,
       "stage": "AS",
@@ -39109,7 +39227,8 @@
       "front": "How does the normal reaction change on an incline without other perpendicular forces?",
       "back": "R = mg cos θ.",
       "accept": [
-        "R = mg cos θ."
+        "R = mg cos θ.",
+        "R = mg cos θ"
       ],
       "active": true,
       "stage": "AS",
@@ -39129,7 +39248,11 @@
       "front": "What is the weight component down a slope of angle θ?",
       "back": "mg sin θ.",
       "accept": [
-        "mg sin θ."
+        "mg sin θ.",
+        "mg sinθ",
+        "mg sin theta",
+        "mgsinθ",
+        "mg sin θ"
       ],
       "active": true,
       "stage": "AS",
@@ -39150,7 +39273,8 @@
       "front": "What does the gradient of an elastic force–extension graph give?",
       "back": "The spring constant k.",
       "accept": [
-        "The spring constant k."
+        "The spring constant k.",
+        "spring constant k"
       ],
       "active": true,
       "stage": "AS",
@@ -39170,7 +39294,8 @@
       "front": "Why does strain have no unit?",
       "back": "It is a ratio of two lengths.",
       "accept": [
-        "It is a ratio of two lengths."
+        "It is a ratio of two lengths.",
+        "a ratio of two lengths"
       ],
       "active": true,
       "stage": "AS",
@@ -39190,7 +39315,8 @@
       "front": "What is the gradient of a linear stress–strain graph?",
       "back": "Young modulus.",
       "accept": [
-        "Young modulus."
+        "Young modulus.",
+        "Young modulus"
       ],
       "active": true,
       "stage": "AS",
@@ -39210,7 +39336,8 @@
       "front": "How does a brittle material usually fail?",
       "back": "With little or no plastic deformation.",
       "accept": [
-        "With little or no plastic deformation."
+        "With little or no plastic deformation.",
+        "With little or no plastic deformation"
       ],
       "active": true,
       "stage": "AS",
@@ -39230,7 +39357,8 @@
       "front": "What does plastic deformation mean?",
       "back": "Permanent change of shape after load removal.",
       "accept": [
-        "Permanent change of shape after load removal."
+        "Permanent change of shape after load removal.",
+        "Permanent change of shape after load removal"
       ],
       "active": true,
       "stage": "AS",
@@ -39250,7 +39378,8 @@
       "front": "Why is an ammeter connected in series?",
       "back": "It measures current through the component.",
       "accept": [
-        "It measures current through the component."
+        "It measures current through the component.",
+        "It measures current through the component"
       ],
       "active": true,
       "stage": "AS",
@@ -39270,7 +39399,8 @@
       "front": "Why is a voltmeter connected in parallel?",
       "back": "It measures potential difference across the component.",
       "accept": [
-        "It measures potential difference across the component."
+        "It measures potential difference across the component.",
+        "It measures potential difference across the component"
       ],
       "active": true,
       "stage": "AS",
@@ -39290,7 +39420,8 @@
       "front": "How does a filament lamp's resistance change as it heats?",
       "back": "It increases.",
       "accept": [
-        "It increases."
+        "It increases.",
+        "It increases"
       ],
       "active": true,
       "stage": "AS",
@@ -39310,7 +39441,8 @@
       "front": "Why does a diode have a strongly asymmetric I–V graph?",
       "back": "It mainly conducts in one direction.",
       "accept": [
-        "It mainly conducts in one direction."
+        "It mainly conducts in one direction.",
+        "It mainly conducts in one direction"
       ],
       "active": true,
       "stage": "AS",
@@ -39330,7 +39462,8 @@
       "front": "What is the internal resistance of an ideal voltmeter?",
       "back": "Infinite.",
       "accept": [
-        "Infinite."
+        "Infinite.",
+        "Infinite"
       ],
       "active": true,
       "stage": "AS",
@@ -39370,7 +39503,8 @@
       "front": "What is the terminal p.d. of a discharging cell?",
       "back": "ε − Ir.",
       "accept": [
-        "ε − Ir."
+        "ε − Ir.",
+        "ε − Ir"
       ],
       "active": true,
       "stage": "AS",
@@ -39390,7 +39524,11 @@
       "front": "What does the y-intercept of terminal p.d. against current show?",
       "back": "The cell's emf.",
       "accept": [
-        "The cell's emf."
+        "The cell's emf.",
+        "emf",
+        "electromotive force",
+        "ε",
+        "cell's emf"
       ],
       "active": true,
       "stage": "AS",
@@ -39411,7 +39549,8 @@
       "front": "What does the negative gradient of terminal p.d. against current show?",
       "back": "Internal resistance.",
       "accept": [
-        "Internal resistance."
+        "Internal resistance.",
+        "Internal resistance"
       ],
       "active": true,
       "stage": "AS",
@@ -39431,7 +39570,8 @@
       "front": "What happens to an NTC thermistor's resistance as temperature rises?",
       "back": "It decreases.",
       "accept": [
-        "It decreases."
+        "It decreases.",
+        "It decreases"
       ],
       "active": true,
       "stage": "AS",
@@ -39451,7 +39591,8 @@
       "front": "What happens to an LDR's resistance in brighter light?",
       "back": "It decreases.",
       "accept": [
-        "It decreases."
+        "It decreases.",
+        "It decreases"
       ],
       "active": true,
       "stage": "AS",
@@ -39471,7 +39612,8 @@
       "front": "How does total resistance change when another resistor is added in parallel?",
       "back": "It decreases.",
       "accept": [
-        "It decreases."
+        "It decreases.",
+        "It decreases"
       ],
       "active": true,
       "stage": "AS",
@@ -39491,7 +39633,8 @@
       "front": "What is the p.d. across components connected in parallel?",
       "back": "The same across each branch.",
       "accept": [
-        "The same across each branch."
+        "The same across each branch.",
+        "same across each branch"
       ],
       "active": true,
       "stage": "AS",
@@ -39511,7 +39654,8 @@
       "front": "What happens to current at a circuit junction?",
       "back": "Total current entering equals total current leaving.",
       "accept": [
-        "Total current entering equals total current leaving."
+        "Total current entering equals total current leaving.",
+        "Total current entering equals total current leaving"
       ],
       "active": true,
       "stage": "AS",
@@ -39531,7 +39675,8 @@
       "front": "When does an SHM oscillator have maximum speed?",
       "back": "At its equilibrium position.",
       "accept": [
-        "At its equilibrium position."
+        "At its equilibrium position.",
+        "At its equilibrium position"
       ],
       "active": true,
       "stage": "A2",
@@ -39551,7 +39696,8 @@
       "front": "How does the pendulum period vary with length for small angles?",
       "back": "T ∝ √L.",
       "accept": [
-        "T ∝ √L."
+        "T ∝ √L.",
+        "T ∝ √L"
       ],
       "active": true,
       "stage": "A2",
@@ -39571,7 +39717,8 @@
       "front": "How does spring–mass oscillation period vary with mass?",
       "back": "T ∝ √m.",
       "accept": [
-        "T ∝ √m."
+        "T ∝ √m.",
+        "T ∝ √m"
       ],
       "active": true,
       "stage": "A2",
@@ -39592,7 +39739,8 @@
       "front": "What does resonance occur when the driving frequency approaches?",
       "back": "The natural frequency of the oscillator.",
       "accept": [
-        "The natural frequency of the oscillator."
+        "The natural frequency of the oscillator.",
+        "natural frequency of the oscillator"
       ],
       "active": true,
       "stage": "A2",
@@ -39612,7 +39760,8 @@
       "front": "Why does damping reduce resonant amplitude?",
       "back": "Energy is dissipated each cycle.",
       "accept": [
-        "Energy is dissipated each cycle."
+        "Energy is dissipated each cycle.",
+        "Energy is dissipated each cycle"
       ],
       "active": true,
       "stage": "A2",
@@ -39632,7 +39781,8 @@
       "front": "What does a velocity–time graph's gradient give in SHM?",
       "back": "Instantaneous acceleration.",
       "accept": [
-        "Instantaneous acceleration."
+        "Instantaneous acceleration.",
+        "Instantaneous acceleration"
       ],
       "active": true,
       "stage": "A2",
@@ -39652,7 +39802,8 @@
       "front": "What is the difference between specific and latent heat?",
       "back": "Specific heat changes temperature; latent heat changes state.",
       "accept": [
-        "Specific heat changes temperature; latent heat changes state."
+        "Specific heat changes temperature; latent heat changes state.",
+        "Specific heat changes temperature; latent heat changes state"
       ],
       "active": true,
       "stage": "A2",
@@ -39672,7 +39823,8 @@
       "front": "Why does temperature stay steady during an ideal phase change?",
       "back": "Energy changes intermolecular potential energy.",
       "accept": [
-        "Energy changes intermolecular potential energy."
+        "Energy changes intermolecular potential energy.",
+        "Energy changes intermolecular potential energy"
       ],
       "active": true,
       "stage": "A2",
@@ -39692,7 +39844,8 @@
       "front": "What is the internal energy of an ideal monatomic gas?",
       "back": "Total random translational kinetic energy of its atoms.",
       "accept": [
-        "Total random translational kinetic energy of its atoms."
+        "Total random translational kinetic energy of its atoms.",
+        "Total random translational kinetic energy of its atoms"
       ],
       "active": true,
       "stage": "A2",
@@ -39712,7 +39865,10 @@
       "front": "How is a kelvin temperature related to Celsius temperature?",
       "back": "T/K = θ/°C + 273.15.",
       "accept": [
-        "T/K = θ/°C + 273.15."
+        "T/K = θ/°C + 273.15.",
+        "celsius plus 273.15",
+        "T=theta+273.15",
+        "T/K = θ/°C + 273.15"
       ],
       "active": true,
       "stage": "A2",
@@ -39732,7 +39888,8 @@
       "front": "What does pV/T equal for a fixed amount of ideal gas?",
       "back": "A constant.",
       "accept": [
-        "A constant."
+        "A constant.",
+        "constant"
       ],
       "active": true,
       "stage": "A2",
@@ -39752,7 +39909,8 @@
       "front": "Why must T be in kelvin for gas-law equations?",
       "back": "Gas pressure/volume proportions use absolute temperature.",
       "accept": [
-        "Gas pressure/volume proportions use absolute temperature."
+        "Gas pressure/volume proportions use absolute temperature.",
+        "Gas pressure/volume proportions use absolute temperature"
       ],
       "active": true,
       "stage": "A2",
@@ -39772,7 +39930,8 @@
       "front": "What physical process produces gas pressure?",
       "back": "Particle collisions with container walls.",
       "accept": [
-        "Particle collisions with container walls."
+        "Particle collisions with container walls.",
+        "Particle collisions with container walls"
       ],
       "active": true,
       "stage": "A2",
@@ -39792,7 +39951,8 @@
       "front": "What does mean square molecular speed mean?",
       "back": "Average of the squared speeds.",
       "accept": [
-        "Average of the squared speeds."
+        "Average of the squared speeds.",
+        "Average of the squared speeds"
       ],
       "active": true,
       "stage": "A2",
@@ -39812,7 +39972,10 @@
       "front": "What does root mean square speed mean?",
       "back": "Square root of the mean of squared speeds.",
       "accept": [
-        "Square root of the mean of squared speeds."
+        "Square root of the mean of squared speeds.",
+        "square root of mean squared speed",
+        "sqrt(mean square speed)",
+        "Square root of the mean of squared speeds"
       ],
       "active": true,
       "stage": "A2",
@@ -39832,7 +39995,10 @@
       "front": "Why does gas internal energy depend only on temperature in an ideal model?",
       "back": "Intermolecular potential energy is neglected.",
       "accept": [
-        "Intermolecular potential energy is neglected."
+        "Intermolecular potential energy is neglected.",
+        "no intermolecular potential energy",
+        "intermolecular potential neglected",
+        "Intermolecular potential energy is neglected"
       ],
       "active": true,
       "stage": "A2",
@@ -39853,7 +40019,8 @@
       "front": "Why can a gravitational field not repel a test mass?",
       "back": "Gravitational force between masses is always attractive.",
       "accept": [
-        "Gravitational force between masses is always attractive."
+        "Gravitational force between masses is always attractive.",
+        "Gravitational force between masses is always attractive"
       ],
       "active": true,
       "stage": "A2",
@@ -39873,7 +40040,8 @@
       "front": "How do electric and gravitational inverse-square fields differ?",
       "back": "Electric forces can attract or repel; gravity attracts only.",
       "accept": [
-        "Electric forces can attract or repel; gravity attracts only."
+        "Electric forces can attract or repel; gravity attracts only.",
+        "Electric forces can attract or repel; gravity attracts only"
       ],
       "active": true,
       "stage": "A2",
@@ -39893,7 +40061,8 @@
       "front": "What does the gradient of gravitational potential against radial distance give?",
       "back": "Negative radial field strength.",
       "accept": [
-        "Negative radial field strength."
+        "Negative radial field strength.",
+        "Negative radial field strength"
       ],
       "active": true,
       "stage": "A2",
@@ -39913,7 +40082,9 @@
       "front": "What is the orbital speed in a circular orbit of radius r about mass M?",
       "back": "√(GM/r).",
       "accept": [
-        "√(GM/r)."
+        "√(GM/r).",
+        "sqrt(GM/r)",
+        "√(GM/r)"
       ],
       "active": true,
       "stage": "A2",
@@ -39933,7 +40104,8 @@
       "front": "What is the time period for a circular orbit of radius r around mass M?",
       "back": "2π√(r³/GM).",
       "accept": [
-        "2π√(r³/GM)."
+        "2π√(r³/GM).",
+        "2π√(r³/GM)"
       ],
       "active": true,
       "stage": "A2",
@@ -39953,7 +40125,12 @@
       "front": "What is the unit of electric field strength?",
       "back": "N C⁻¹, equivalent to V m⁻¹.",
       "accept": [
-        "N C⁻¹, equivalent to V m⁻¹."
+        "N C⁻¹, equivalent to V m⁻¹.",
+        "N/C",
+        "V/m",
+        "newtons per coulomb",
+        "volts per metre",
+        "N C⁻¹, equivalent to V m⁻¹"
       ],
       "active": true,
       "stage": "A2",
@@ -39974,7 +40151,8 @@
       "front": "How does electric force on a charged object relate to field strength?",
       "back": "F = QE.",
       "accept": [
-        "F = QE."
+        "F = QE.",
+        "F = QE"
       ],
       "active": true,
       "stage": "A2",
@@ -39994,7 +40172,8 @@
       "front": "Why do field lines never cross?",
       "back": "Field direction at a point is unique.",
       "accept": [
-        "Field direction at a point is unique."
+        "Field direction at a point is unique.",
+        "Field direction at a point is unique"
       ],
       "active": true,
       "stage": "A2",
@@ -40014,7 +40193,8 @@
       "front": "What is the potential energy of charge Q at potential V?",
       "back": "Eₚ = QV.",
       "accept": [
-        "Eₚ = QV."
+        "Eₚ = QV.",
+        "Eₚ = QV"
       ],
       "active": true,
       "stage": "A2",
@@ -40034,7 +40214,8 @@
       "front": "How does stored charge change if capacitance doubles at fixed p.d.?",
       "back": "It doubles.",
       "accept": [
-        "It doubles."
+        "It doubles.",
+        "It doubles"
       ],
       "active": true,
       "stage": "A2",
@@ -40054,7 +40235,10 @@
       "front": "What is the time constant of an RC discharge?",
       "back": "The time for Q to drop to 1/e of its initial value.",
       "accept": [
-        "The time for Q to drop to 1/e of its initial value."
+        "The time for Q to drop to 1/e of its initial value.",
+        "RC",
+        "resistance times capacitance",
+        "time for Q to drop to 1/e of its initial value"
       ],
       "active": true,
       "stage": "A2",
@@ -40075,7 +40259,10 @@
       "front": "What does the gradient of ln Q against time equal in RC discharge?",
       "back": "−1/(RC).",
       "accept": [
-        "−1/(RC)."
+        "−1/(RC).",
+        "-1/RC",
+        "-1/(RC)",
+        "−1/(RC)"
       ],
       "active": true,
       "stage": "A2",
@@ -40095,7 +40282,8 @@
       "front": "Why does a magnetic force do no work on a moving point charge?",
       "back": "Force is perpendicular to the velocity.",
       "accept": [
-        "Force is perpendicular to the velocity."
+        "Force is perpendicular to the velocity.",
+        "Force is perpendicular to the velocity"
       ],
       "active": true,
       "stage": "A2",
@@ -40116,7 +40304,8 @@
       "front": "What supplies centripetal force in a cyclotron?",
       "back": "Magnetic force on the moving charge.",
       "accept": [
-        "Magnetic force on the moving charge."
+        "Magnetic force on the moving charge.",
+        "Magnetic force on the moving charge"
       ],
       "active": true,
       "stage": "A2",
@@ -40136,7 +40325,8 @@
       "front": "How do two parallel currents in the same direction interact?",
       "back": "Their wires attract.",
       "accept": [
-        "Their wires attract."
+        "Their wires attract.",
+        "Their wires attract"
       ],
       "active": true,
       "stage": "A2",
@@ -40156,7 +40346,11 @@
       "front": "What is the magnitude of induced emf across a straight conductor moving perpendicularly to B?",
       "back": "ε = Blv.",
       "accept": [
-        "ε = Blv."
+        "ε = Blv.",
+        "Blv",
+        "B L v",
+        "Bℓv",
+        "ε = Blv"
       ],
       "active": true,
       "stage": "A2",
@@ -40176,7 +40370,12 @@
       "front": "What does the gradient of ln activity against time equal?",
       "back": "−λ, the decay constant with negative sign.",
       "accept": [
-        "−λ, the decay constant with negative sign."
+        "−λ, the decay constant with negative sign.",
+        "-lambda",
+        "−λ",
+        "negative decay constant",
+        "-λ",
+        "−λ, the decay constant with negative sign"
       ],
       "active": true,
       "stage": "A2",
@@ -40196,7 +40395,8 @@
       "front": "How does half-life relate to decay constant?",
       "back": "T½ = ln 2 / λ.",
       "accept": [
-        "T½ = ln 2 / λ."
+        "T½ = ln 2 / λ.",
+        "T½ = ln 2 / λ"
       ],
       "active": true,
       "stage": "A2",
@@ -40216,7 +40416,8 @@
       "front": "What is the meaning of the decay constant λ?",
       "back": "Probability of a nucleus decaying per unit time.",
       "accept": [
-        "Probability of a nucleus decaying per unit time."
+        "Probability of a nucleus decaying per unit time.",
+        "Probability of a nucleus decaying per unit time"
       ],
       "active": true,
       "stage": "A2",
@@ -40236,7 +40437,8 @@
       "front": "What is the nuclear radius relationship with nucleon number?",
       "back": "R = r₀A^(1/3).",
       "accept": [
-        "R = r₀A^(1/3)."
+        "R = r₀A^(1/3).",
+        "R = r₀A^(1/3)"
       ],
       "active": true,
       "stage": "A2",
@@ -40256,7 +40458,8 @@
       "front": "What does binding energy per nucleon indicate?",
       "back": "Average energy needed to separate a nucleon from the nucleus.",
       "accept": [
-        "Average energy needed to separate a nucleon from the nucleus."
+        "Average energy needed to separate a nucleon from the nucleus.",
+        "Average energy needed to separate a nucleon from the nucleus"
       ],
       "active": true,
       "stage": "A2",
@@ -40276,7 +40479,8 @@
       "front": "Why are nuclei near iron especially stable?",
       "back": "They have high binding energy per nucleon.",
       "accept": [
-        "They have high binding energy per nucleon."
+        "They have high binding energy per nucleon.",
+        "They have high binding energy per nucleon"
       ],
       "active": true,
       "stage": "A2",
@@ -40296,7 +40500,8 @@
       "front": "Why do nuclei formed by fusion release energy when appropriate light nuclei combine?",
       "back": "Binding energy per nucleon increases.",
       "accept": [
-        "Binding energy per nucleon increases."
+        "Binding energy per nucleon increases.",
+        "Binding energy per nucleon increases"
       ],
       "active": true,
       "stage": "A2",
@@ -40316,7 +40521,8 @@
       "front": "Why can heavy nuclei release energy by fission?",
       "back": "Products may have greater binding energy per nucleon.",
       "accept": [
-        "Products may have greater binding energy per nucleon."
+        "Products may have greater binding energy per nucleon.",
+        "Products may have greater binding energy per nucleon"
       ],
       "active": true,
       "stage": "A2",
@@ -40336,7 +40542,8 @@
       "front": "What is the moderator's purpose in a thermal nuclear reactor?",
       "back": "Slow neutrons so further fission is more likely.",
       "accept": [
-        "Slow neutrons so further fission is more likely."
+        "Slow neutrons so further fission is more likely.",
+        "Slow neutrons so further fission is more likely"
       ],
       "active": true,
       "stage": "A2",
@@ -40356,7 +40563,8 @@
       "front": "What is the control rod's purpose in a nuclear reactor?",
       "back": "Absorb neutrons to control reaction rate.",
       "accept": [
-        "Absorb neutrons to control reaction rate."
+        "Absorb neutrons to control reaction rate.",
+        "Absorb neutrons to control reaction rate"
       ],
       "active": true,
       "stage": "A2",
@@ -40376,7 +40584,8 @@
       "front": "What causes spatial encoding in MRI?",
       "back": "Magnetic field gradients make resonance frequency position dependent.",
       "accept": [
-        "Magnetic field gradients make resonance frequency position dependent."
+        "Magnetic field gradients make resonance frequency position dependent.",
+        "Magnetic field gradients make resonance frequency position dependent"
       ],
       "active": true,
       "stage": "Option",
@@ -40397,7 +40606,8 @@
       "front": "What determines the Larmor frequency in MRI?",
       "back": "Magnetic field strength.",
       "accept": [
-        "Magnetic field strength."
+        "Magnetic field strength.",
+        "Magnetic field strength"
       ],
       "active": true,
       "stage": "Option",
@@ -40418,7 +40628,8 @@
       "front": "How does a spin-echo MRI sequence reduce field-inhomogeneity effects?",
       "back": "An RF refocusing pulse rephases spins.",
       "accept": [
-        "An RF refocusing pulse rephases spins."
+        "An RF refocusing pulse rephases spins.",
+        "RF refocusing pulse rephases spins"
       ],
       "active": true,
       "stage": "Option",
@@ -40439,7 +40650,8 @@
       "front": "Why do ions of different mass take different flight times in a TOF mass spectrometer?",
       "back": "At the same kinetic energy, lighter ions travel faster.",
       "accept": [
-        "At the same kinetic energy, lighter ions travel faster."
+        "At the same kinetic energy, lighter ions travel faster.",
+        "At the same kinetic energy, lighter ions travel faster"
       ],
       "active": true,
       "stage": "AS",
@@ -40459,7 +40671,8 @@
       "front": "What causes ions to produce a signal at the TOF detector?",
       "back": "Ion impacts produce an electrical signal.",
       "accept": [
-        "Ion impacts produce an electrical signal."
+        "Ion impacts produce an electrical signal.",
+        "Ion impacts produce an electrical signal"
       ],
       "active": true,
       "stage": "AS",
@@ -40479,7 +40692,8 @@
       "front": "How is the weighted mean relative atomic mass calculated?",
       "back": "Sum of (isotopic mass × abundance) divided by total abundance.",
       "accept": [
-        "Sum of (isotopic mass × abundance) divided by total abundance."
+        "Sum of (isotopic mass × abundance) divided by total abundance.",
+        "Sum of (isotopic mass × abundance) divided by total abundance"
       ],
       "active": true,
       "stage": "AS",
@@ -40499,7 +40713,8 @@
       "front": "What change occurs to electron configuration when forming a cation?",
       "back": "Electrons are removed from the outermost occupied shell first.",
       "accept": [
-        "Electrons are removed from the outermost occupied shell first."
+        "Electrons are removed from the outermost occupied shell first.",
+        "Electrons are removed from the outermost occupied shell first"
       ],
       "active": true,
       "stage": "AS",
@@ -40539,7 +40754,10 @@
       "front": "Why is the first ionisation energy of sulfur below phosphorus?",
       "back": "Electron-pair repulsion in sulfur's 3p sub-shell.",
       "accept": [
-        "Electron-pair repulsion in sulfur's 3p sub-shell."
+        "Electron-pair repulsion in sulfur's 3p sub-shell.",
+        "paired 3p electron repulsion",
+        "repulsion between paired 3p electrons",
+        "Electron-pair repulsion in sulfur's 3p sub-shell"
       ],
       "active": true,
       "stage": "AS",
@@ -40559,7 +40777,10 @@
       "front": "Why is the first ionisation energy of aluminium below magnesium?",
       "back": "Aluminium loses a higher-energy 3p electron.",
       "accept": [
-        "Aluminium loses a higher-energy 3p electron."
+        "Aluminium loses a higher-energy 3p electron.",
+        "3p electron removed",
+        "higher energy 3p subshell",
+        "Aluminium loses a higher-energy 3p electron"
       ],
       "active": true,
       "stage": "AS",
@@ -40579,7 +40800,8 @@
       "front": "Why is a big jump in successive ionisation energies significant?",
       "back": "It indicates removal from a new, inner electron shell.",
       "accept": [
-        "It indicates removal from a new, inner electron shell."
+        "It indicates removal from a new, inner electron shell.",
+        "It indicates removal from a new, inner electron shell"
       ],
       "active": true,
       "stage": "AS",
@@ -40599,7 +40821,8 @@
       "front": "What does a 1:2 coefficient ratio in a balanced equation represent?",
       "back": "One mole reacts with or forms two moles of the other species.",
       "accept": [
-        "One mole reacts with or forms two moles of the other species."
+        "One mole reacts with or forms two moles of the other species.",
+        "One mole reacts with or forms two moles of the other species"
       ],
       "active": true,
       "stage": "AS",
@@ -40619,7 +40842,8 @@
       "front": "What is the unit of solution concentration in molar calculations?",
       "back": "mol dm⁻³.",
       "accept": [
-        "mol dm⁻³."
+        "mol dm⁻³.",
+        "mol dm⁻³"
       ],
       "active": true,
       "stage": "AS",
@@ -40639,7 +40863,10 @@
       "front": "How many cm³ make one dm³?",
       "back": "1000 cm³.",
       "accept": [
-        "1000 cm³."
+        "1000 cm³.",
+        "1000",
+        "1000 cm3",
+        "1000 cm³"
       ],
       "active": true,
       "stage": "AS",
@@ -40659,7 +40886,10 @@
       "front": "What does percentage yield compare?",
       "back": "Actual yield divided by theoretical yield, times 100%.",
       "accept": [
-        "Actual yield divided by theoretical yield, times 100%."
+        "Actual yield divided by theoretical yield, times 100%.",
+        "actual yield over theoretical yield",
+        "actual/theoretical x 100",
+        "Actual yield divided by theoretical yield, times 100%"
       ],
       "active": true,
       "stage": "AS",
@@ -40679,7 +40909,10 @@
       "front": "What does atom economy compare?",
       "back": "Mass of desired product divided by total product mass.",
       "accept": [
-        "Mass of desired product divided by total product mass."
+        "Mass of desired product divided by total product mass.",
+        "desired product mass over all product masses",
+        "Mr desired/total Mr products",
+        "Mass of desired product divided by total product mass"
       ],
       "active": true,
       "stage": "AS",
@@ -40699,7 +40932,8 @@
       "front": "Why can percentage yield be less than 100%?",
       "back": "Incomplete reaction or loss of product.",
       "accept": [
-        "Incomplete reaction or loss of product."
+        "Incomplete reaction or loss of product.",
+        "Incomplete reaction or loss of product"
       ],
       "active": true,
       "stage": "AS",
@@ -40719,7 +40953,10 @@
       "front": "What does an empirical formula show?",
       "back": "Simplest whole-number ratio of atoms of each element.",
       "accept": [
-        "Simplest whole-number ratio of atoms of each element."
+        "Simplest whole-number ratio of atoms of each element.",
+        "simplest atom ratio",
+        "simplest whole number ratio",
+        "Simplest whole-number ratio of atoms of each element"
       ],
       "active": true,
       "stage": "AS",
@@ -40739,7 +40976,9 @@
       "front": "What does molecular formula show?",
       "back": "Actual number of each type of atom in a molecule.",
       "accept": [
-        "Actual number of each type of atom in a molecule."
+        "Actual number of each type of atom in a molecule.",
+        "actual numbers of atoms",
+        "Actual number of each type of atom in a molecule"
       ],
       "active": true,
       "stage": "AS",
@@ -40759,7 +40998,9 @@
       "front": "What does the ideal gas equation relate?",
       "back": "pV = nRT.",
       "accept": [
-        "pV = nRT."
+        "pV = nRT.",
+        "pV=nRT",
+        "pV = nRT"
       ],
       "active": true,
       "stage": "AS",
@@ -40779,7 +41020,8 @@
       "front": "Why must pressure be in pascals when using R = 8.31 in SI units?",
       "back": "So pV and nRT use compatible SI units.",
       "accept": [
-        "So pV and nRT use compatible SI units."
+        "So pV and nRT use compatible SI units.",
+        "So pV and nRT use compatible SI units"
       ],
       "active": true,
       "stage": "AS",
@@ -40799,7 +41041,8 @@
       "front": "What does a back titration determine indirectly?",
       "back": "An unknown amount from the excess reagent remaining.",
       "accept": [
-        "An unknown amount from the excess reagent remaining."
+        "An unknown amount from the excess reagent remaining.",
+        "unknown amount from the excess reagent remaining"
       ],
       "active": true,
       "stage": "AS",
@@ -40819,7 +41062,9 @@
       "front": "What does a hydrated salt contain?",
       "back": "Water of crystallisation.",
       "accept": [
-        "Water of crystallisation."
+        "Water of crystallisation.",
+        "water of crystallisation",
+        "Water of crystallisation"
       ],
       "active": true,
       "stage": "AS",
@@ -40839,7 +41084,10 @@
       "front": "Why can ionic compounds conduct electricity when molten?",
       "back": "Their ions can move and carry charge.",
       "accept": [
-        "Their ions can move and carry charge."
+        "Their ions can move and carry charge.",
+        "ions are mobile",
+        "mobile ions",
+        "Their ions can move and carry charge"
       ],
       "active": true,
       "stage": "AS",
@@ -40859,7 +41107,10 @@
       "front": "Why do ionic solids not conduct electricity?",
       "back": "Ions are fixed in lattice positions.",
       "accept": [
-        "Ions are fixed in lattice positions."
+        "Ions are fixed in lattice positions.",
+        "fixed ions",
+        "ions cannot move",
+        "Ions are fixed in lattice positions"
       ],
       "active": true,
       "stage": "AS",
@@ -40879,7 +41130,10 @@
       "front": "Why can graphite conduct electricity parallel to its layers?",
       "back": "Delocalised electrons move along the layers.",
       "accept": [
-        "Delocalised electrons move along the layers."
+        "Delocalised electrons move along the layers.",
+        "delocalised electrons",
+        "mobile delocalised electrons",
+        "Delocalised electrons move along the layers"
       ],
       "active": true,
       "stage": "AS",
@@ -40899,7 +41153,10 @@
       "front": "Why does diamond have a very high melting point?",
       "back": "Many strong covalent bonds extend throughout its structure.",
       "accept": [
-        "Many strong covalent bonds extend throughout its structure."
+        "Many strong covalent bonds extend throughout its structure.",
+        "strong covalent bonds",
+        "giant covalent bonds",
+        "Many strong covalent bonds extend throughout its structure"
       ],
       "active": true,
       "stage": "AS",
@@ -40919,7 +41176,8 @@
       "front": "Why does iodine have a low melting point compared with diamond?",
       "back": "It is molecular and has weaker intermolecular forces.",
       "accept": [
-        "It is molecular and has weaker intermolecular forces."
+        "It is molecular and has weaker intermolecular forces.",
+        "molecular and has weaker intermolecular forces"
       ],
       "active": true,
       "stage": "AS",
@@ -40939,7 +41197,8 @@
       "front": "Why is the bond angle of ammonia smaller than methane?",
       "back": "A lone pair repels bonding pairs more strongly.",
       "accept": [
-        "A lone pair repels bonding pairs more strongly."
+        "A lone pair repels bonding pairs more strongly.",
+        "lone pair repels bonding pairs more strongly"
       ],
       "active": true,
       "stage": "AS",
@@ -40959,7 +41218,8 @@
       "front": "Why does water have a smaller bond angle than ammonia?",
       "back": "Two lone pairs increase repulsion on the bonding pairs.",
       "accept": [
-        "Two lone pairs increase repulsion on the bonding pairs."
+        "Two lone pairs increase repulsion on the bonding pairs.",
+        "Two lone pairs increase repulsion on the bonding pairs"
       ],
       "active": true,
       "stage": "AS",
@@ -40979,7 +41239,8 @@
       "front": "Why can a symmetrical molecule be non-polar despite polar bonds?",
       "back": "Its bond dipoles cancel.",
       "accept": [
-        "Its bond dipoles cancel."
+        "Its bond dipoles cancel.",
+        "Its bond dipoles cancel"
       ],
       "active": true,
       "stage": "AS",
@@ -40999,7 +41260,8 @@
       "front": "Why is hydrogen bonding stronger than typical dipole–dipole attraction?",
       "back": "Strong attraction involves H bonded to N, O or F and a lone pair.",
       "accept": [
-        "Strong attraction involves H bonded to N, O or F and a lone pair."
+        "Strong attraction involves H bonded to N, O or F and a lone pair.",
+        "Strong attraction involves H bonded to N, O or F and a lone pair"
       ],
       "active": true,
       "stage": "AS",
@@ -41019,7 +41281,8 @@
       "front": "What causes London dispersion forces?",
       "back": "Temporary dipoles induce dipoles in nearby particles.",
       "accept": [
-        "Temporary dipoles induce dipoles in nearby particles."
+        "Temporary dipoles induce dipoles in nearby particles.",
+        "Temporary dipoles induce dipoles in nearby particles"
       ],
       "active": true,
       "stage": "AS",
@@ -41039,7 +41302,8 @@
       "front": "Why are London forces stronger in larger molecules?",
       "back": "More electrons and greater polarizability.",
       "accept": [
-        "More electrons and greater polarizability."
+        "More electrons and greater polarizability.",
+        "More electrons and greater polarizability"
       ],
       "active": true,
       "stage": "AS",
@@ -41080,7 +41344,9 @@
       "front": "What is the ideal bond angle for trigonal planar geometry?",
       "back": "120°.",
       "accept": [
-        "120°."
+        "120°.",
+        "120 degrees",
+        "120°"
       ],
       "active": true,
       "stage": "AS",
@@ -41100,7 +41366,10 @@
       "front": "What is the typical bond angle for trigonal pyramidal NH₃?",
       "back": "About 107°.",
       "accept": [
-        "About 107°."
+        "About 107°.",
+        "107 degrees",
+        "107°",
+        "About 107°"
       ],
       "active": true,
       "stage": "AS",
@@ -41120,7 +41389,8 @@
       "front": "How is heat energy related to mass, specific heat capacity and temperature change?",
       "back": "q = mcΔT.",
       "accept": [
-        "q = mcΔT."
+        "q = mcΔT.",
+        "q = mcΔT"
       ],
       "active": true,
       "stage": "AS",
@@ -41140,7 +41410,8 @@
       "front": "Why must q be divided by moles to obtain molar enthalpy change?",
       "back": "The enthalpy is per mole of reaction as written.",
       "accept": [
-        "The enthalpy is per mole of reaction as written."
+        "The enthalpy is per mole of reaction as written.",
+        "enthalpy is per mole of reaction as written"
       ],
       "active": true,
       "stage": "AS",
@@ -41160,7 +41431,8 @@
       "front": "What sign does an exothermic reaction enthalpy have?",
       "back": "Negative.",
       "accept": [
-        "Negative."
+        "Negative.",
+        "Negative"
       ],
       "active": true,
       "stage": "AS",
@@ -41180,7 +41452,8 @@
       "front": "What sign does an endothermic reaction enthalpy have?",
       "back": "Positive.",
       "accept": [
-        "Positive."
+        "Positive.",
+        "Positive"
       ],
       "active": true,
       "stage": "AS",
@@ -41200,7 +41473,8 @@
       "front": "Why does temperature usually fall in an endothermic process?",
       "back": "Energy is absorbed from the surroundings.",
       "accept": [
-        "Energy is absorbed from the surroundings."
+        "Energy is absorbed from the surroundings.",
+        "Energy is absorbed from the surroundings"
       ],
       "active": true,
       "stage": "AS",
@@ -41220,7 +41494,8 @@
       "front": "What does a negative ΔH mean on a reaction profile?",
       "back": "Products have lower enthalpy than reactants.",
       "accept": [
-        "Products have lower enthalpy than reactants."
+        "Products have lower enthalpy than reactants.",
+        "Products have lower enthalpy than reactants"
       ],
       "active": true,
       "stage": "AS",
@@ -41240,7 +41515,8 @@
       "front": "What is the difference between bond breaking and bond making?",
       "back": "Breaking requires energy; forming releases energy.",
       "accept": [
-        "Breaking requires energy; forming releases energy."
+        "Breaking requires energy; forming releases energy.",
+        "Breaking requires energy; forming releases energy"
       ],
       "active": true,
       "stage": "AS",
@@ -41260,7 +41536,8 @@
       "front": "Why is a mean bond enthalpy approximate for a particular bond?",
       "back": "Its value is averaged across several compounds.",
       "accept": [
-        "Its value is averaged across several compounds."
+        "Its value is averaged across several compounds.",
+        "Its value is averaged across several compounds"
       ],
       "active": true,
       "stage": "AS",
@@ -41280,7 +41557,8 @@
       "front": "What happens to a calorimetry-derived exothermic ΔH if heat is lost?",
       "back": "Its calculated magnitude is too small.",
       "accept": [
-        "Its calculated magnitude is too small."
+        "Its calculated magnitude is too small.",
+        "Its calculated magnitude is too small"
       ],
       "active": true,
       "stage": "AS",
@@ -41300,7 +41578,8 @@
       "front": "Why can a polystyrene cup improve a calorimetry result?",
       "back": "It reduces heat transfer to the surroundings.",
       "accept": [
-        "It reduces heat transfer to the surroundings."
+        "It reduces heat transfer to the surroundings.",
+        "It reduces heat transfer to the surroundings"
       ],
       "active": true,
       "stage": "AS",
@@ -41320,7 +41599,8 @@
       "front": "What is Hess's law based on?",
       "back": "Enthalpy is independent of the reaction path.",
       "accept": [
-        "Enthalpy is independent of the reaction path."
+        "Enthalpy is independent of the reaction path.",
+        "Enthalpy is independent of the reaction path"
       ],
       "active": true,
       "stage": "AS",
@@ -41340,7 +41620,8 @@
       "front": "What is the enthalpy cycle rule when reversing an equation?",
       "back": "Reverse the sign of ΔH.",
       "accept": [
-        "Reverse the sign of ΔH."
+        "Reverse the sign of ΔH.",
+        "Reverse the sign of ΔH"
       ],
       "active": true,
       "stage": "AS",
@@ -41360,7 +41641,8 @@
       "front": "Why does temperature raise the fraction of collisions above activation energy?",
       "back": "The Maxwell–Boltzmann energy distribution shifts towards higher energies.",
       "accept": [
-        "The Maxwell–Boltzmann energy distribution shifts towards higher energies."
+        "The Maxwell–Boltzmann energy distribution shifts towards higher energies.",
+        "Maxwell–Boltzmann energy distribution shifts towards higher energies"
       ],
       "active": true,
       "stage": "AS",
@@ -41380,7 +41662,8 @@
       "front": "What remains constant under a Maxwell–Boltzmann curve for a fixed number of particles?",
       "back": "Total area.",
       "accept": [
-        "Total area."
+        "Total area.",
+        "Total area"
       ],
       "active": true,
       "stage": "AS",
@@ -41400,7 +41683,8 @@
       "front": "How does the Maxwell–Boltzmann peak change when temperature rises?",
       "back": "It becomes lower and moves towards greater energy.",
       "accept": [
-        "It becomes lower and moves towards greater energy."
+        "It becomes lower and moves towards greater energy.",
+        "It becomes lower and moves towards greater energy"
       ],
       "active": true,
       "stage": "AS",
@@ -41420,7 +41704,8 @@
       "front": "Why does a catalyst raise the rate without raising temperature?",
       "back": "It provides a path with lower activation energy.",
       "accept": [
-        "It provides a path with lower activation energy."
+        "It provides a path with lower activation energy.",
+        "It provides a path with lower activation energy"
       ],
       "active": true,
       "stage": "AS",
@@ -41440,7 +41725,8 @@
       "front": "Why does greater gas pressure often increase reaction rate?",
       "back": "More frequent particle collisions.",
       "accept": [
-        "More frequent particle collisions."
+        "More frequent particle collisions.",
+        "More frequent particle collisions"
       ],
       "active": true,
       "stage": "AS",
@@ -41460,7 +41746,8 @@
       "front": "Why does higher solution concentration often increase rate?",
       "back": "More collisions per unit time.",
       "accept": [
-        "More collisions per unit time."
+        "More collisions per unit time.",
+        "More collisions per unit time"
       ],
       "active": true,
       "stage": "AS",
@@ -41480,7 +41767,8 @@
       "front": "What does the gradient of a concentration–time graph represent?",
       "back": "Instantaneous rate of concentration change.",
       "accept": [
-        "Instantaneous rate of concentration change."
+        "Instantaneous rate of concentration change.",
+        "Instantaneous rate of concentration change"
       ],
       "active": true,
       "stage": "AS",
@@ -41502,7 +41790,8 @@
       "accept": [
         "Magnitude of change in measured quantity divided by the time interval.",
         "change in quantity per unit time",
-        "change divided by time"
+        "change divided by time",
+        "Magnitude of change in measured quantity divided by the time interval"
       ],
       "active": true,
       "stage": "AS",
@@ -41523,7 +41812,10 @@
       "front": "What is the defining feature of dynamic equilibrium?",
       "back": "Forward and reverse reactions continue at equal rates.",
       "accept": [
-        "Forward and reverse reactions continue at equal rates."
+        "Forward and reverse reactions continue at equal rates.",
+        "equal forward and reverse rates",
+        "same forward and backward rates",
+        "Forward and reverse reactions continue at equal rates"
       ],
       "active": true,
       "stage": "AS",
@@ -41543,7 +41835,8 @@
       "front": "What happens to Kc when a catalyst is added at fixed temperature?",
       "back": "It does not change.",
       "accept": [
-        "It does not change."
+        "It does not change.",
+        "It does not change"
       ],
       "active": true,
       "stage": "AS",
@@ -41563,7 +41856,8 @@
       "front": "Why does a catalyst not change equilibrium position?",
       "back": "It speeds forward and reverse reactions equally.",
       "accept": [
-        "It speeds forward and reverse reactions equally."
+        "It speeds forward and reverse reactions equally.",
+        "It speeds forward and reverse reactions equally"
       ],
       "active": true,
       "stage": "AS",
@@ -41583,7 +41877,8 @@
       "front": "How does cooling favour equilibrium in an exothermic forward reaction?",
       "back": "It favours the forward products.",
       "accept": [
-        "It favours the forward products."
+        "It favours the forward products.",
+        "It favours the forward products"
       ],
       "active": true,
       "stage": "AS",
@@ -41603,7 +41898,8 @@
       "front": "How does increasing pressure affect an equilibrium with fewer gaseous moles on the right?",
       "back": "It shifts equilibrium to the right.",
       "accept": [
-        "It shifts equilibrium to the right."
+        "It shifts equilibrium to the right.",
+        "It shifts equilibrium to the right"
       ],
       "active": true,
       "stage": "AS",
@@ -41623,7 +41919,8 @@
       "front": "What does a very large Kc usually indicate?",
       "back": "Products are favoured at equilibrium.",
       "accept": [
-        "Products are favoured at equilibrium."
+        "Products are favoured at equilibrium.",
+        "Products are favoured at equilibrium"
       ],
       "active": true,
       "stage": "AS",
@@ -41643,7 +41940,8 @@
       "front": "Why do pure solids not appear in a Kc expression?",
       "back": "Their effective concentration is constant.",
       "accept": [
-        "Their effective concentration is constant."
+        "Their effective concentration is constant.",
+        "Their effective concentration is constant"
       ],
       "active": true,
       "stage": "AS",
@@ -41663,7 +41961,8 @@
       "front": "What happens to an equilibrium mixture immediately after adding reactant?",
       "back": "It shifts to consume some added reactant.",
       "accept": [
-        "It shifts to consume some added reactant."
+        "It shifts to consume some added reactant.",
+        "It shifts to consume some added reactant"
       ],
       "active": true,
       "stage": "AS",
@@ -41683,7 +41982,8 @@
       "front": "What happens to oxidation number during oxidation?",
       "back": "It increases.",
       "accept": [
-        "It increases."
+        "It increases.",
+        "It increases"
       ],
       "active": true,
       "stage": "AS",
@@ -41703,7 +42003,8 @@
       "front": "What happens to oxidation number during reduction?",
       "back": "It decreases.",
       "accept": [
-        "It decreases."
+        "It decreases.",
+        "It decreases"
       ],
       "active": true,
       "stage": "AS",
@@ -41783,7 +42084,8 @@
       "front": "What is the sum of oxidation numbers in an ion?",
       "back": "Equal to the ion charge.",
       "accept": [
-        "Equal to the ion charge."
+        "Equal to the ion charge.",
+        "Equal to the ion charge"
       ],
       "active": true,
       "stage": "AS",
@@ -41803,7 +42105,8 @@
       "front": "How does an oxidising agent change during a redox reaction?",
       "back": "It is reduced.",
       "accept": [
-        "It is reduced."
+        "It is reduced.",
+        "reduced"
       ],
       "active": true,
       "stage": "AS",
@@ -41823,7 +42126,8 @@
       "front": "How does a reducing agent change during a redox reaction?",
       "back": "It is oxidised.",
       "accept": [
-        "It is oxidised."
+        "It is oxidised.",
+        "oxidised"
       ],
       "active": true,
       "stage": "AS",
@@ -41843,7 +42147,8 @@
       "front": "What does the block of an element show?",
       "back": "Which sub-shell receives its outermost electron.",
       "accept": [
-        "Which sub-shell receives its outermost electron."
+        "Which sub-shell receives its outermost electron.",
+        "Which sub-shell receives its outermost electron"
       ],
       "active": true,
       "stage": "AS",
@@ -41863,7 +42168,8 @@
       "front": "Why does first ionisation energy generally rise across Period 3?",
       "back": "Nuclear attraction rises for outer electrons.",
       "accept": [
-        "Nuclear attraction rises for outer electrons."
+        "Nuclear attraction rises for outer electrons.",
+        "Nuclear attraction rises for outer electrons"
       ],
       "active": true,
       "stage": "AS",
@@ -41883,7 +42189,8 @@
       "front": "Why does Period 3 melting point peak at silicon?",
       "back": "Silicon forms a giant covalent network.",
       "accept": [
-        "Silicon forms a giant covalent network."
+        "Silicon forms a giant covalent network.",
+        "Silicon forms a giant covalent network"
       ],
       "active": true,
       "stage": "AS",
@@ -41903,7 +42210,8 @@
       "front": "Why do phosphorus and sulfur melt below silicon?",
       "back": "They are simple molecular substances.",
       "accept": [
-        "They are simple molecular substances."
+        "They are simple molecular substances.",
+        "simple molecular substances"
       ],
       "active": true,
       "stage": "AS",
@@ -41923,7 +42231,8 @@
       "front": "Why does sulfur melt above phosphorus?",
       "back": "S₈ has stronger London forces than P₄.",
       "accept": [
-        "S₈ has stronger London forces than P₄."
+        "S₈ has stronger London forces than P₄.",
+        "S₈ has stronger London forces than P₄"
       ],
       "active": true,
       "stage": "AS",
@@ -41943,7 +42252,8 @@
       "front": "Why does argon have a very low melting point?",
       "back": "Only weak London forces act between atoms.",
       "accept": [
-        "Only weak London forces act between atoms."
+        "Only weak London forces act between atoms.",
+        "Only weak London forces act between atoms"
       ],
       "active": true,
       "stage": "AS",
@@ -41963,7 +42273,8 @@
       "front": "Why does the reactivity of Group 2 metals increase down the group?",
       "back": "Outer electrons are removed more readily.",
       "accept": [
-        "Outer electrons are removed more readily."
+        "Outer electrons are removed more readily.",
+        "Outer electrons are removed more readily"
       ],
       "active": true,
       "stage": "AS",
@@ -41983,7 +42294,8 @@
       "front": "Why is magnesium hydroxide used as an antacid?",
       "back": "It neutralises stomach acid.",
       "accept": [
-        "It neutralises stomach acid."
+        "It neutralises stomach acid.",
+        "It neutralises stomach acid"
       ],
       "active": true,
       "stage": "AS",
@@ -42003,7 +42315,8 @@
       "front": "Why can calcium hydroxide improve acidic soil?",
       "back": "It neutralises soil acidity.",
       "accept": [
-        "It neutralises soil acidity."
+        "It neutralises soil acidity.",
+        "It neutralises soil acidity"
       ],
       "active": true,
       "stage": "AS",
@@ -42023,7 +42336,8 @@
       "front": "Which Group 2 sulfate is particularly insoluble?",
       "back": "Barium sulfate.",
       "accept": [
-        "Barium sulfate."
+        "Barium sulfate.",
+        "Barium sulfate"
       ],
       "active": true,
       "stage": "AS",
@@ -42043,7 +42357,8 @@
       "front": "Why is acid included in the sulfate-ion test?",
       "back": "It prevents false precipitates from carbonate and sulfite ions.",
       "accept": [
-        "It prevents false precipitates from carbonate and sulfite ions."
+        "It prevents false precipitates from carbonate and sulfite ions.",
+        "It prevents false precipitates from carbonate and sulfite ions"
       ],
       "active": true,
       "stage": "AS",
@@ -42063,7 +42378,11 @@
       "front": "What precipitate confirms sulfate with barium ions?",
       "back": "White BaSO₄.",
       "accept": [
-        "White BaSO₄."
+        "White BaSO₄.",
+        "barium sulfate",
+        "white precipitate",
+        "BaSO4",
+        "White BaSO₄"
       ],
       "active": true,
       "stage": "AS",
@@ -42083,7 +42402,8 @@
       "front": "Why is BaSO₄ suitable as a contrast agent in medical imaging?",
       "back": "It is insoluble and strongly absorbs X-rays.",
       "accept": [
-        "It is insoluble and strongly absorbs X-rays."
+        "It is insoluble and strongly absorbs X-rays.",
+        "insoluble and strongly absorbs X-rays"
       ],
       "active": true,
       "stage": "AS",
@@ -42103,7 +42423,8 @@
       "front": "Why does electronegativity fall down Group 7?",
       "back": "Outer bonding electrons are farther from the nucleus and more shielded.",
       "accept": [
-        "Outer bonding electrons are farther from the nucleus and more shielded."
+        "Outer bonding electrons are farther from the nucleus and more shielded.",
+        "Outer bonding electrons are farther from the nucleus and more shielded"
       ],
       "active": true,
       "stage": "AS",
@@ -42123,7 +42444,9 @@
       "front": "What colour is silver bromide precipitate?",
       "back": "Cream.",
       "accept": [
-        "Cream."
+        "Cream.",
+        "cream",
+        "Cream"
       ],
       "active": true,
       "stage": "AS",
@@ -42143,7 +42466,9 @@
       "front": "What colour is silver iodide precipitate?",
       "back": "Yellow.",
       "accept": [
-        "Yellow."
+        "Yellow.",
+        "yellow",
+        "Yellow"
       ],
       "active": true,
       "stage": "AS",
@@ -42163,7 +42488,8 @@
       "front": "Why does AgCl dissolve in dilute ammonia?",
       "back": "It forms a soluble silver–ammonia complex.",
       "accept": [
-        "It forms a soluble silver–ammonia complex."
+        "It forms a soluble silver–ammonia complex.",
+        "It forms a soluble silver–ammonia complex"
       ],
       "active": true,
       "stage": "AS",
@@ -42183,7 +42509,10 @@
       "front": "Which halogen displaces bromide ions from solution?",
       "back": "Chlorine.",
       "accept": [
-        "Chlorine."
+        "Chlorine.",
+        "chlorine",
+        "Cl2",
+        "Chlorine"
       ],
       "active": true,
       "stage": "AS",
@@ -42203,7 +42532,8 @@
       "front": "Why is chlorine used in water treatment?",
       "back": "It destroys many harmful microorganisms.",
       "accept": [
-        "It destroys many harmful microorganisms."
+        "It destroys many harmful microorganisms.",
+        "It destroys many harmful microorganisms"
       ],
       "active": true,
       "stage": "AS",
@@ -42223,7 +42553,8 @@
       "front": "What is the difference between a molecular and displayed formula?",
       "back": "Molecular gives atom counts; displayed shows all bonds.",
       "accept": [
-        "Molecular gives atom counts; displayed shows all bonds."
+        "Molecular gives atom counts; displayed shows all bonds.",
+        "Molecular gives atom counts; displayed shows all bonds"
       ],
       "active": true,
       "stage": "AS",
@@ -42243,7 +42574,8 @@
       "front": "What is an organic functional group?",
       "back": "An atom or group of atoms responsible for characteristic reactions.",
       "accept": [
-        "An atom or group of atoms responsible for characteristic reactions."
+        "An atom or group of atoms responsible for characteristic reactions.",
+        "atom or group of atoms responsible for characteristic reactions"
       ],
       "active": true,
       "stage": "AS",
@@ -42263,7 +42595,8 @@
       "front": "What does a homologous series share?",
       "back": "Same functional group and general formula.",
       "accept": [
-        "Same functional group and general formula."
+        "Same functional group and general formula.",
+        "Same functional group and general formula"
       ],
       "active": true,
       "stage": "AS",
@@ -42283,7 +42616,8 @@
       "front": "What changes by CH₂ from one member of a homologous series to the next?",
       "back": "The carbon chain length.",
       "accept": [
-        "The carbon chain length."
+        "The carbon chain length.",
+        "carbon chain length"
       ],
       "active": true,
       "stage": "AS",
@@ -42303,7 +42637,8 @@
       "front": "What does a curly arrow starting from a bond represent?",
       "back": "Movement of an electron pair from that bond.",
       "accept": [
-        "Movement of an electron pair from that bond."
+        "Movement of an electron pair from that bond.",
+        "Movement of an electron pair from that bond"
       ],
       "active": true,
       "stage": "AS",
@@ -42323,7 +42658,8 @@
       "front": "What does a single-headed curly arrow represent?",
       "back": "Movement of one electron.",
       "accept": [
-        "Movement of one electron."
+        "Movement of one electron.",
+        "Movement of one electron"
       ],
       "active": true,
       "stage": "AS",
@@ -42343,7 +42679,9 @@
       "front": "What is a positional isomer?",
       "back": "Same functional group and formula, at a different position.",
       "accept": [
-        "Same functional group and formula, at a different position."
+        "Same functional group and formula, at a different position.",
+        "same functional group different position",
+        "Same functional group and formula, at a different position"
       ],
       "active": true,
       "stage": "AS",
@@ -42363,7 +42701,9 @@
       "front": "What is a chain isomer?",
       "back": "Same molecular formula but a different carbon skeleton.",
       "accept": [
-        "Same molecular formula but a different carbon skeleton."
+        "Same molecular formula but a different carbon skeleton.",
+        "different carbon skeleton",
+        "Same molecular formula but a different carbon skeleton"
       ],
       "active": true,
       "stage": "AS",
@@ -42383,7 +42723,8 @@
       "front": "Why can a C=C bond give E/Z isomers?",
       "back": "Restricted rotation with two different groups on each carbon.",
       "accept": [
-        "Restricted rotation with two different groups on each carbon."
+        "Restricted rotation with two different groups on each carbon.",
+        "Restricted rotation with two different groups on each carbon"
       ],
       "active": true,
       "stage": "AS",
@@ -42403,7 +42744,8 @@
       "front": "What is the general formula for acyclic alkanes?",
       "back": "CₙH₂ₙ₊₂.",
       "accept": [
-        "CₙH₂ₙ₊₂."
+        "CₙH₂ₙ₊₂.",
+        "CₙH₂ₙ₊₂"
       ],
       "active": true,
       "stage": "AS",
@@ -42423,7 +42765,8 @@
       "front": "Why do shorter alkanes boil at lower temperatures?",
       "back": "Weaker London forces.",
       "accept": [
-        "Weaker London forces."
+        "Weaker London forces.",
+        "Weaker London forces"
       ],
       "active": true,
       "stage": "AS",
@@ -42443,7 +42786,10 @@
       "front": "What is an initiation step in free-radical substitution?",
       "back": "Homolytic bond fission produces radicals.",
       "accept": [
-        "Homolytic bond fission produces radicals."
+        "Homolytic bond fission produces radicals.",
+        "radicals generated by homolytic fission",
+        "formation of free radicals",
+        "Homolytic bond fission produces radicals"
       ],
       "active": true,
       "stage": "AS",
@@ -42463,7 +42809,9 @@
       "front": "What is a propagation step in a radical chain reaction?",
       "back": "A radical reacts and another radical is formed.",
       "accept": [
-        "A radical reacts and another radical is formed."
+        "A radical reacts and another radical is formed.",
+        "radical consumed and another produced",
+        "radical reacts and another radical is formed"
       ],
       "active": true,
       "stage": "AS",
@@ -42483,7 +42831,9 @@
       "front": "What is a termination step in a radical chain reaction?",
       "back": "Two radicals combine to form a stable product.",
       "accept": [
-        "Two radicals combine to form a stable product."
+        "Two radicals combine to form a stable product.",
+        "two radicals combine",
+        "Two radicals combine to form a stable product"
       ],
       "active": true,
       "stage": "AS",
@@ -42503,7 +42853,8 @@
       "front": "Why can radical substitution produce a mixture?",
       "back": "Different positions and multiple substitutions are possible.",
       "accept": [
-        "Different positions and multiple substitutions are possible."
+        "Different positions and multiple substitutions are possible.",
+        "Different positions and multiple substitutions are possible"
       ],
       "active": true,
       "stage": "AS",
@@ -42523,7 +42874,8 @@
       "front": "What makes the carbon atom in C–Br susceptible to nucleophilic attack?",
       "back": "It is δ⁺ because the C–Br bond is polar.",
       "accept": [
-        "It is δ⁺ because the C–Br bond is polar."
+        "It is δ⁺ because the C–Br bond is polar.",
+        "δ⁺ because the C–Br bond is polar"
       ],
       "active": true,
       "stage": "AS",
@@ -42543,7 +42895,8 @@
       "front": "What does a nucleophile donate?",
       "back": "A lone pair of electrons.",
       "accept": [
-        "A lone pair of electrons."
+        "A lone pair of electrons.",
+        "lone pair of electrons"
       ],
       "active": true,
       "stage": "AS",
@@ -42563,7 +42916,8 @@
       "front": "What is the leaving group in hydrolysis of bromoethane?",
       "back": "Bromide ion, Br⁻.",
       "accept": [
-        "Bromide ion, Br⁻."
+        "Bromide ion, Br⁻.",
+        "Bromide ion, Br⁻"
       ],
       "active": true,
       "stage": "AS",
@@ -42583,7 +42937,8 @@
       "front": "What does nucleophilic substitution replace?",
       "back": "A leaving group with a nucleophile.",
       "accept": [
-        "A leaving group with a nucleophile."
+        "A leaving group with a nucleophile.",
+        "leaving group with a nucleophile"
       ],
       "active": true,
       "stage": "AS",
@@ -42603,7 +42958,8 @@
       "front": "How does hydrolysis rate generally change from chloroalkane to iodoalkane?",
       "back": "It increases as the C–halogen bond gets weaker.",
       "accept": [
-        "It increases as the C–halogen bond gets weaker."
+        "It increases as the C–halogen bond gets weaker.",
+        "It increases as the C–halogen bond gets weaker"
       ],
       "active": true,
       "stage": "AS",
@@ -42623,7 +42979,8 @@
       "front": "What is the organic product of elimination from a halogenoalkane?",
       "back": "An alkene.",
       "accept": [
-        "An alkene."
+        "An alkene.",
+        "alkene"
       ],
       "active": true,
       "stage": "AS",
@@ -42643,7 +43000,8 @@
       "front": "How do substitution and elimination differ?",
       "back": "Substitution replaces a group; elimination removes groups to form C=C.",
       "accept": [
-        "Substitution replaces a group; elimination removes groups to form C=C."
+        "Substitution replaces a group; elimination removes groups to form C=C.",
+        "Substitution replaces a group; elimination removes groups to form C=C"
       ],
       "active": true,
       "stage": "AS",
@@ -42663,7 +43021,8 @@
       "front": "What makes a carbon–carbon double bond electron-rich?",
       "back": "Its π bond electrons.",
       "accept": [
-        "Its π bond electrons."
+        "Its π bond electrons.",
+        "Its π bond electrons"
       ],
       "active": true,
       "stage": "AS",
@@ -42683,7 +43042,8 @@
       "front": "What type of species attacks a C=C bond first in electrophilic addition?",
       "back": "An electrophile.",
       "accept": [
-        "An electrophile."
+        "An electrophile.",
+        "electrophile"
       ],
       "active": true,
       "stage": "AS",
@@ -42703,7 +43063,8 @@
       "front": "What happens to the π bond during electrophilic addition?",
       "back": "It breaks as new σ bonds form.",
       "accept": [
-        "It breaks as new σ bonds form."
+        "It breaks as new σ bonds form.",
+        "It breaks as new σ bonds form"
       ],
       "active": true,
       "stage": "AS",
@@ -42723,7 +43084,8 @@
       "front": "Why is a major product formed from some unsymmetrical alkene additions?",
       "back": "The more stable carbocation intermediate is favoured.",
       "accept": [
-        "The more stable carbocation intermediate is favoured."
+        "The more stable carbocation intermediate is favoured.",
+        "more stable carbocation intermediate is favoured"
       ],
       "active": true,
       "stage": "AS",
@@ -42743,7 +43105,8 @@
       "front": "What observation suggests an alkene is present in a bromine-water test?",
       "back": "Orange colour disappears.",
       "accept": [
-        "Orange colour disappears."
+        "Orange colour disappears.",
+        "Orange colour disappears"
       ],
       "active": true,
       "stage": "AS",
@@ -42763,7 +43126,9 @@
       "front": "What is the product of hydration of ethene?",
       "back": "Ethanol.",
       "accept": [
-        "Ethanol."
+        "Ethanol.",
+        "ethanol",
+        "Ethanol"
       ],
       "active": true,
       "stage": "AS",
@@ -42783,7 +43148,8 @@
       "front": "What is a repeat unit in an addition polymer?",
       "back": "The smallest repeating section of the chain.",
       "accept": [
-        "The smallest repeating section of the chain."
+        "The smallest repeating section of the chain.",
+        "smallest repeating section of the chain"
       ],
       "active": true,
       "stage": "AS",
@@ -42803,7 +43169,8 @@
       "front": "What can a plasticiser do to PVC?",
       "back": "Weaken intermolecular forces, increasing flexibility.",
       "accept": [
-        "Weaken intermolecular forces, increasing flexibility."
+        "Weaken intermolecular forces, increasing flexibility.",
+        "Weaken intermolecular forces, increasing flexibility"
       ],
       "active": true,
       "stage": "AS",
@@ -42823,7 +43190,8 @@
       "front": "How do you identify a primary alcohol?",
       "back": "Its C–OH carbon bonds to one or no other carbon atoms.",
       "accept": [
-        "Its C–OH carbon bonds to one or no other carbon atoms."
+        "Its C–OH carbon bonds to one or no other carbon atoms.",
+        "Its C–OH carbon bonds to one or no other carbon atoms"
       ],
       "active": true,
       "stage": "AS",
@@ -42843,7 +43211,8 @@
       "front": "How do you identify a secondary alcohol?",
       "back": "Its C–OH carbon bonds to two other carbon atoms.",
       "accept": [
-        "Its C–OH carbon bonds to two other carbon atoms."
+        "Its C–OH carbon bonds to two other carbon atoms.",
+        "Its C–OH carbon bonds to two other carbon atoms"
       ],
       "active": true,
       "stage": "AS",
@@ -42863,7 +43232,8 @@
       "front": "How do you identify a tertiary alcohol?",
       "back": "Its C–OH carbon bonds to three other carbon atoms.",
       "accept": [
-        "Its C–OH carbon bonds to three other carbon atoms."
+        "Its C–OH carbon bonds to three other carbon atoms.",
+        "Its C–OH carbon bonds to three other carbon atoms"
       ],
       "active": true,
       "stage": "AS",
@@ -42883,7 +43253,8 @@
       "front": "What carbonyl class forms from oxidation of a secondary alcohol?",
       "back": "A ketone.",
       "accept": [
-        "A ketone."
+        "A ketone.",
+        "ketone"
       ],
       "active": true,
       "stage": "AS",
@@ -42903,7 +43274,8 @@
       "front": "Why is a tertiary alcohol resistant to normal oxidation?",
       "back": "It lacks a hydrogen on the carbon bearing OH.",
       "accept": [
-        "It lacks a hydrogen on the carbon bearing OH."
+        "It lacks a hydrogen on the carbon bearing OH.",
+        "It lacks a hydrogen on the carbon bearing OH"
       ],
       "active": true,
       "stage": "AS",
@@ -42923,7 +43295,9 @@
       "front": "What is formed by acid-catalysed dehydration of an alcohol?",
       "back": "An alkene and water.",
       "accept": [
-        "An alkene and water."
+        "An alkene and water.",
+        "alkene",
+        "alkene and water"
       ],
       "active": true,
       "stage": "AS",
@@ -42943,7 +43317,8 @@
       "front": "Why does fermentation ethanol not guarantee carbon-neutral fuel overall?",
       "back": "Production, transport and processing may emit greenhouse gases.",
       "accept": [
-        "Production, transport and processing may emit greenhouse gases."
+        "Production, transport and processing may emit greenhouse gases.",
+        "Production, transport and processing may emit greenhouse gases"
       ],
       "active": true,
       "stage": "AS",
@@ -42963,7 +43338,8 @@
       "front": "Where does a strong carbonyl C=O IR absorption appear approximately?",
       "back": "Around 1700 cm⁻¹.",
       "accept": [
-        "Around 1700 cm⁻¹."
+        "Around 1700 cm⁻¹.",
+        "Around 1700 cm⁻¹"
       ],
       "active": true,
       "stage": "AS",
@@ -42983,7 +43359,8 @@
       "front": "What information does IR spectroscopy mainly provide?",
       "back": "Evidence for types of bonds and functional groups.",
       "accept": [
-        "Evidence for types of bonds and functional groups."
+        "Evidence for types of bonds and functional groups.",
+        "Evidence for types of bonds and functional groups"
       ],
       "active": true,
       "stage": "AS",
@@ -43003,7 +43380,8 @@
       "front": "Why can a molecular-ion peak help identify a compound?",
       "back": "It gives its relative molecular mass.",
       "accept": [
-        "It gives its relative molecular mass."
+        "It gives its relative molecular mass.",
+        "It gives its relative molecular mass"
       ],
       "active": true,
       "stage": "AS",
@@ -43023,7 +43401,8 @@
       "front": "What is a fragment-ion peak in mass spectrometry?",
       "back": "A charged piece of the original molecule.",
       "accept": [
-        "A charged piece of the original molecule."
+        "A charged piece of the original molecule.",
+        "charged piece of the original molecule"
       ],
       "active": true,
       "stage": "AS",
@@ -43043,7 +43422,8 @@
       "front": "What is the fingerprint region in IR?",
       "back": "A complex absorption pattern below about 1500 cm⁻¹.",
       "accept": [
-        "A complex absorption pattern below about 1500 cm⁻¹."
+        "A complex absorption pattern below about 1500 cm⁻¹.",
+        "complex absorption pattern below about 1500 cm⁻¹"
       ],
       "active": true,
       "stage": "AS",
@@ -43063,7 +43443,9 @@
       "front": "What is the sign of lattice formation enthalpy?",
       "back": "Negative for gaseous ions forming solid lattice.",
       "accept": [
-        "Negative for gaseous ions forming solid lattice."
+        "Negative for gaseous ions forming solid lattice.",
+        "negative",
+        "Negative for gaseous ions forming solid lattice"
       ],
       "active": true,
       "stage": "A2",
@@ -43083,7 +43465,9 @@
       "front": "What is the sign of lattice dissociation enthalpy?",
       "back": "Positive for separating an ionic solid into gaseous ions.",
       "accept": [
-        "Positive for separating an ionic solid into gaseous ions."
+        "Positive for separating an ionic solid into gaseous ions.",
+        "positive",
+        "Positive for separating an ionic solid into gaseous ions"
       ],
       "active": true,
       "stage": "A2",
@@ -43103,7 +43487,8 @@
       "front": "Why is the second electron affinity often positive?",
       "back": "Energy is needed to add an electron to a negative ion.",
       "accept": [
-        "Energy is needed to add an electron to a negative ion."
+        "Energy is needed to add an electron to a negative ion.",
+        "Energy is needed to add an electron to a negative ion"
       ],
       "active": true,
       "stage": "A2",
@@ -43123,7 +43508,8 @@
       "front": "What happens to lattice enthalpy magnitude when ionic charge increases?",
       "back": "It generally increases.",
       "accept": [
-        "It generally increases."
+        "It generally increases.",
+        "It generally increases"
       ],
       "active": true,
       "stage": "A2",
@@ -43143,7 +43529,8 @@
       "front": "What happens to lattice enthalpy magnitude when ionic radius increases?",
       "back": "It generally decreases.",
       "accept": [
-        "It generally decreases."
+        "It generally decreases.",
+        "It generally decreases"
       ],
       "active": true,
       "stage": "A2",
@@ -43163,7 +43550,8 @@
       "front": "Why can experimental lattice enthalpy differ from a perfect ionic model?",
       "back": "The real solid may have covalent character.",
       "accept": [
-        "The real solid may have covalent character."
+        "The real solid may have covalent character.",
+        "real solid may have covalent character"
       ],
       "active": true,
       "stage": "A2",
@@ -43183,7 +43571,8 @@
       "front": "What is entropy change a measure of in A-level chemistry?",
       "back": "Change in dispersal of energy and arrangement possibilities.",
       "accept": [
-        "Change in dispersal of energy and arrangement possibilities."
+        "Change in dispersal of energy and arrangement possibilities.",
+        "Change in dispersal of energy and arrangement possibilities"
       ],
       "active": true,
       "stage": "A2",
@@ -43203,7 +43592,8 @@
       "front": "When is ΔG negative?",
       "back": "A reaction is thermodynamically feasible under those conditions.",
       "accept": [
-        "A reaction is thermodynamically feasible under those conditions."
+        "A reaction is thermodynamically feasible under those conditions.",
+        "reaction is thermodynamically feasible under those conditions"
       ],
       "active": true,
       "stage": "A2",
@@ -43223,7 +43613,8 @@
       "front": "How does increasing temperature affect ΔG when ΔS is positive?",
       "back": "The −TΔS term makes ΔG smaller.",
       "accept": [
-        "The −TΔS term makes ΔG smaller."
+        "The −TΔS term makes ΔG smaller.",
+        "−TΔS term makes ΔG smaller"
       ],
       "active": true,
       "stage": "A2",
@@ -43284,7 +43675,10 @@
       "front": "What happens to rate when [A] doubles in a first-order reaction?",
       "back": "It doubles, if other conditions stay fixed.",
       "accept": [
-        "It doubles, if other conditions stay fixed."
+        "It doubles, if other conditions stay fixed.",
+        "doubles",
+        "x2",
+        "It doubles, if other conditions stay fixed"
       ],
       "active": true,
       "stage": "A2",
@@ -43304,7 +43698,11 @@
       "front": "What happens to rate when [A] doubles in a second-order reaction?",
       "back": "It becomes four times as great.",
       "accept": [
-        "It becomes four times as great."
+        "It becomes four times as great.",
+        "quadruples",
+        "x4",
+        "fourfold",
+        "It becomes four times as great"
       ],
       "active": true,
       "stage": "A2",
@@ -43324,7 +43722,10 @@
       "front": "What happens to rate when [A] doubles in a zero-order reaction?",
       "back": "It does not change.",
       "accept": [
-        "It does not change."
+        "It does not change.",
+        "unchanged",
+        "same",
+        "It does not change"
       ],
       "active": true,
       "stage": "A2",
@@ -43344,7 +43745,10 @@
       "front": "What is the total reaction order?",
       "back": "Sum of all reactant orders in the rate equation.",
       "accept": [
-        "Sum of all reactant orders in the rate equation."
+        "Sum of all reactant orders in the rate equation.",
+        "sum of powers in rate equation",
+        "sum of partial orders",
+        "Sum of all reactant orders in the rate equation"
       ],
       "active": true,
       "stage": "A2",
@@ -43384,7 +43788,8 @@
       "front": "Why must reaction order be measured experimentally?",
       "back": "It does not reliably follow balanced equation coefficients.",
       "accept": [
-        "It does not reliably follow balanced equation coefficients."
+        "It does not reliably follow balanced equation coefficients.",
+        "It does not reliably follow balanced equation coefficients"
       ],
       "active": true,
       "stage": "A2",
@@ -43404,7 +43809,8 @@
       "front": "What does a straight concentration–time decline indicate?",
       "back": "Zero-order reaction, while conditions apply.",
       "accept": [
-        "Zero-order reaction, while conditions apply."
+        "Zero-order reaction, while conditions apply.",
+        "Zero-order reaction, while conditions apply"
       ],
       "active": true,
       "stage": "A2",
@@ -43424,7 +43830,8 @@
       "front": "What does a constant first-order half-life show?",
       "back": "The same fraction reacts in equal time intervals.",
       "accept": [
-        "The same fraction reacts in equal time intervals."
+        "The same fraction reacts in equal time intervals.",
+        "same fraction reacts in equal time intervals"
       ],
       "active": true,
       "stage": "A2",
@@ -43444,7 +43851,8 @@
       "front": "What appears in a Kp expression?",
       "back": "Equilibrium partial pressures of gaseous species.",
       "accept": [
-        "Equilibrium partial pressures of gaseous species."
+        "Equilibrium partial pressures of gaseous species.",
+        "Equilibrium partial pressures of gaseous species"
       ],
       "active": true,
       "stage": "A2",
@@ -43464,7 +43872,8 @@
       "front": "What is the partial pressure of a gas in a mixture?",
       "back": "Its mole fraction multiplied by total pressure.",
       "accept": [
-        "Its mole fraction multiplied by total pressure."
+        "Its mole fraction multiplied by total pressure.",
+        "Its mole fraction multiplied by total pressure"
       ],
       "active": true,
       "stage": "A2",
@@ -43484,7 +43893,8 @@
       "front": "How do the powers in a Kp expression arise?",
       "back": "From the stoichiometric coefficients.",
       "accept": [
-        "From the stoichiometric coefficients."
+        "From the stoichiometric coefficients.",
+        "From the stoichiometric coefficients"
       ],
       "active": true,
       "stage": "A2",
@@ -43504,7 +43914,8 @@
       "front": "Does adding an inert gas at constant volume change ideal-gas partial pressures?",
       "back": "No, at constant temperature and volume.",
       "accept": [
-        "No, at constant temperature and volume."
+        "No, at constant temperature and volume.",
+        "No, at constant temperature and volume"
       ],
       "active": true,
       "stage": "A2",
@@ -43524,7 +43935,10 @@
       "front": "How does increasing temperature change Kp for an endothermic forward reaction?",
       "back": "It increases.",
       "accept": [
-        "It increases."
+        "It increases.",
+        "increases",
+        "rises",
+        "It increases"
       ],
       "active": true,
       "stage": "A2",
@@ -43544,7 +43958,8 @@
       "front": "What is a Brønsted–Lowry base?",
       "back": "A proton acceptor.",
       "accept": [
-        "A proton acceptor."
+        "A proton acceptor.",
+        "proton acceptor"
       ],
       "active": true,
       "stage": "A2",
@@ -43564,7 +43979,8 @@
       "front": "What does complete dissociation of a strong acid mean?",
       "back": "Essentially all acid molecules donate protons in aqueous solution.",
       "accept": [
-        "Essentially all acid molecules donate protons in aqueous solution."
+        "Essentially all acid molecules donate protons in aqueous solution.",
+        "Essentially all acid molecules donate protons in aqueous solution"
       ],
       "active": true,
       "stage": "A2",
@@ -43584,7 +44000,8 @@
       "front": "Why does weak acid pH require an equilibrium calculation?",
       "back": "The acid only partially ionises.",
       "accept": [
-        "The acid only partially ionises."
+        "The acid only partially ionises.",
+        "acid only partially ionises"
       ],
       "active": true,
       "stage": "A2",
@@ -43604,7 +44021,8 @@
       "front": "What approximation is often used for a weak monoprotic acid?",
       "back": "[HA] at equilibrium is approximately its initial concentration.",
       "accept": [
-        "[HA] at equilibrium is approximately its initial concentration."
+        "[HA] at equilibrium is approximately its initial concentration.",
+        "[HA] at equilibrium is approximately its initial concentration"
       ],
       "active": true,
       "stage": "A2",
@@ -43624,7 +44042,8 @@
       "front": "How does dilution affect the fraction ionised for a weak acid?",
       "back": "It generally increases.",
       "accept": [
-        "It generally increases."
+        "It generally increases.",
+        "It generally increases"
       ],
       "active": true,
       "stage": "A2",
@@ -43644,7 +44063,8 @@
       "front": "What is the pH of pure water at 298 K?",
       "back": "7.",
       "accept": [
-        "7."
+        "7.",
+        "7"
       ],
       "active": true,
       "stage": "A2",
@@ -43664,7 +44084,10 @@
       "front": "What equals pKa in a weak acid/strong base titration?",
       "back": "pH at half-neutralisation.",
       "accept": [
-        "pH at half-neutralisation."
+        "pH at half-neutralisation.",
+        "pH at half neutralisation",
+        "pH at half equivalence",
+        "pH at half-neutralisation"
       ],
       "active": true,
       "stage": "A2",
@@ -43684,7 +44107,8 @@
       "front": "What chemical change causes the steep region of a titration curve?",
       "back": "Rapid change in [H⁺] near equivalence.",
       "accept": [
-        "Rapid change in [H⁺] near equivalence."
+        "Rapid change in [H⁺] near equivalence.",
+        "Rapid change in [H⁺] near equivalence"
       ],
       "active": true,
       "stage": "A2",
@@ -43704,7 +44128,8 @@
       "front": "What is the nature of Na₂O when it reacts with water?",
       "back": "Basic; it forms NaOH.",
       "accept": [
-        "Basic; it forms NaOH."
+        "Basic; it forms NaOH.",
+        "Basic; it forms NaOH"
       ],
       "active": true,
       "stage": "A2",
@@ -43724,7 +44149,9 @@
       "front": "What is the nature of MgO as an oxide?",
       "back": "Basic.",
       "accept": [
-        "Basic."
+        "Basic.",
+        "basic",
+        "Basic"
       ],
       "active": true,
       "stage": "A2",
@@ -43744,7 +44171,9 @@
       "front": "What is the nature of Al₂O₃?",
       "back": "Amphoteric: it reacts with acids and bases.",
       "accept": [
-        "Amphoteric: it reacts with acids and bases."
+        "Amphoteric: it reacts with acids and bases.",
+        "amphoteric",
+        "Amphoteric: it reacts with acids and bases"
       ],
       "active": true,
       "stage": "A2",
@@ -43764,7 +44193,9 @@
       "front": "What is the nature of SiO₂?",
       "back": "Acidic oxide with a giant covalent structure.",
       "accept": [
-        "Acidic oxide with a giant covalent structure."
+        "Acidic oxide with a giant covalent structure.",
+        "acidic",
+        "Acidic oxide with a giant covalent structure"
       ],
       "active": true,
       "stage": "A2",
@@ -43784,7 +44215,8 @@
       "front": "What is the nature of P₄O₁₀?",
       "back": "Acidic oxide.",
       "accept": [
-        "Acidic oxide."
+        "Acidic oxide.",
+        "Acidic oxide"
       ],
       "active": true,
       "stage": "A2",
@@ -43804,7 +44236,8 @@
       "front": "What is the nature of SO₃?",
       "back": "Acidic oxide.",
       "accept": [
-        "Acidic oxide."
+        "Acidic oxide.",
+        "Acidic oxide"
       ],
       "active": true,
       "stage": "A2",
@@ -43824,7 +44257,8 @@
       "front": "Why does Na₂O have a high melting point?",
       "back": "Strong ionic electrostatic attraction in its lattice.",
       "accept": [
-        "Strong ionic electrostatic attraction in its lattice."
+        "Strong ionic electrostatic attraction in its lattice.",
+        "Strong ionic electrostatic attraction in its lattice"
       ],
       "active": true,
       "stage": "A2",
@@ -43844,7 +44278,8 @@
       "front": "Which ligand type forms two coordinate bonds to one metal centre?",
       "back": "Bidentate.",
       "accept": [
-        "Bidentate."
+        "Bidentate.",
+        "Bidentate"
       ],
       "active": true,
       "stage": "A2",
@@ -43864,7 +44299,8 @@
       "front": "How does replacing H₂O ligands with Cl⁻ often change geometry?",
       "back": "Octahedral may become tetrahedral.",
       "accept": [
-        "Octahedral may become tetrahedral."
+        "Octahedral may become tetrahedral.",
+        "Octahedral may become tetrahedral"
       ],
       "active": true,
       "stage": "A2",
@@ -43884,7 +44320,8 @@
       "front": "Why can ligand exchange produce a colour change?",
       "back": "The ligand changes d-orbital energy splitting.",
       "accept": [
-        "The ligand changes d-orbital energy splitting."
+        "The ligand changes d-orbital energy splitting.",
+        "ligand changes d-orbital energy splitting"
       ],
       "active": true,
       "stage": "A2",
@@ -43924,7 +44361,8 @@
       "front": "Why does cisplatin have a square-planar geometry?",
       "back": "Pt(II) can form four-coordinate square-planar complexes.",
       "accept": [
-        "Pt(II) can form four-coordinate square-planar complexes."
+        "Pt(II) can form four-coordinate square-planar complexes.",
+        "Pt(II) can form four-coordinate square-planar complexes"
       ],
       "active": true,
       "stage": "A2",
@@ -43944,7 +44382,8 @@
       "front": "What is optical isomerism in an octahedral complex?",
       "back": "Non-superimposable mirror-image arrangements.",
       "accept": [
-        "Non-superimposable mirror-image arrangements."
+        "Non-superimposable mirror-image arrangements.",
+        "Non-superimposable mirror-image arrangements"
       ],
       "active": true,
       "stage": "A2",
@@ -43964,7 +44403,8 @@
       "front": "What is the chelate effect's common entropy benefit?",
       "back": "Several monodentate ligands may be released per chelating ligand.",
       "accept": [
-        "Several monodentate ligands may be released per chelating ligand."
+        "Several monodentate ligands may be released per chelating ligand.",
+        "Several monodentate ligands may be released per chelating ligand"
       ],
       "active": true,
       "stage": "A2",
@@ -43984,7 +44424,8 @@
       "front": "Why can a hexaaqua 3+ ion donate a proton to water?",
       "back": "The high-charge metal ion polarises O–H bonds.",
       "accept": [
-        "The high-charge metal ion polarises O–H bonds."
+        "The high-charge metal ion polarises O–H bonds.",
+        "high-charge metal ion polarises O–H bonds"
       ],
       "active": true,
       "stage": "A2",
@@ -44004,7 +44445,10 @@
       "front": "What is formed when Fe²⁺ reacts with a limited amount of hydroxide?",
       "back": "Green Fe(OH)₂ precipitate.",
       "accept": [
-        "Green Fe(OH)₂ precipitate."
+        "Green Fe(OH)₂ precipitate.",
+        "green Fe(OH)2",
+        "green precipitate",
+        "Green Fe(OH)₂ precipitate"
       ],
       "active": true,
       "stage": "A2",
@@ -44024,7 +44468,10 @@
       "front": "What is formed when Fe³⁺ reacts with hydroxide?",
       "back": "Brown Fe(OH)₃ precipitate.",
       "accept": [
-        "Brown Fe(OH)₃ precipitate."
+        "Brown Fe(OH)₃ precipitate.",
+        "brown Fe(OH)3",
+        "brown precipitate",
+        "Brown Fe(OH)₃ precipitate"
       ],
       "active": true,
       "stage": "A2",
@@ -44044,7 +44491,9 @@
       "front": "What colour precipitate does Cu²⁺ form with hydroxide ions?",
       "back": "Blue Cu(OH)₂.",
       "accept": [
-        "Blue Cu(OH)₂."
+        "Blue Cu(OH)₂.",
+        "blue",
+        "Blue Cu(OH)₂"
       ],
       "active": true,
       "stage": "A2",
@@ -44064,7 +44513,8 @@
       "front": "What colour precipitate does Al³⁺ form with hydroxide ions?",
       "back": "White Al(OH)₃.",
       "accept": [
-        "White Al(OH)₃."
+        "White Al(OH)₃.",
+        "White Al(OH)₃"
       ],
       "active": true,
       "stage": "A2",
@@ -44084,7 +44534,9 @@
       "front": "Why can Al(OH)₃ dissolve in excess hydroxide?",
       "back": "It is amphoteric and forms soluble hydroxoaluminate species.",
       "accept": [
-        "It is amphoteric and forms soluble hydroxoaluminate species."
+        "It is amphoteric and forms soluble hydroxoaluminate species.",
+        "amphoteric",
+        "amphoteric and forms soluble hydroxoaluminate species"
       ],
       "active": true,
       "stage": "A2",
@@ -44104,7 +44556,8 @@
       "front": "What is a chiral carbon atom in basic A-level organic chemistry?",
       "back": "A tetrahedral carbon bonded to four different groups.",
       "accept": [
-        "A tetrahedral carbon bonded to four different groups."
+        "A tetrahedral carbon bonded to four different groups.",
+        "tetrahedral carbon bonded to four different groups"
       ],
       "active": true,
       "stage": "A2",
@@ -44124,7 +44577,8 @@
       "front": "What does a racemic mixture contain?",
       "back": "Equal amounts of both enantiomers.",
       "accept": [
-        "Equal amounts of both enantiomers."
+        "Equal amounts of both enantiomers.",
+        "Equal amounts of both enantiomers"
       ],
       "active": true,
       "stage": "A2",
@@ -44164,7 +44618,8 @@
       "front": "What functional group do aldehydes and ketones share?",
       "back": "Carbonyl group, C=O.",
       "accept": [
-        "Carbonyl group, C=O."
+        "Carbonyl group, C=O.",
+        "Carbonyl group, C=O"
       ],
       "active": true,
       "stage": "A2",
@@ -44184,7 +44639,8 @@
       "front": "Why does the carbonyl carbon attract nucleophiles?",
       "back": "Oxygen makes the carbon δ⁺.",
       "accept": [
-        "Oxygen makes the carbon δ⁺."
+        "Oxygen makes the carbon δ⁺.",
+        "Oxygen makes the carbon δ⁺"
       ],
       "active": true,
       "stage": "A2",
@@ -44204,7 +44660,8 @@
       "front": "Which carbonyl class forms an orange precipitate with 2,4-DNPH?",
       "back": "Both aldehydes and ketones.",
       "accept": [
-        "Both aldehydes and ketones."
+        "Both aldehydes and ketones.",
+        "Both aldehydes and ketones"
       ],
       "active": true,
       "stage": "A2",
@@ -44224,7 +44681,10 @@
       "front": "Which carbonyl class reacts with Tollens' reagent?",
       "back": "Aldehydes.",
       "accept": [
-        "Aldehydes."
+        "Aldehydes.",
+        "aldehydes",
+        "aldehyde",
+        "Aldehydes"
       ],
       "active": true,
       "stage": "A2",
@@ -44244,7 +44704,8 @@
       "front": "What does reduction of an aldehyde produce?",
       "back": "A primary alcohol.",
       "accept": [
-        "A primary alcohol."
+        "A primary alcohol.",
+        "primary alcohol"
       ],
       "active": true,
       "stage": "A2",
@@ -44264,7 +44725,8 @@
       "front": "What does reduction of a ketone produce?",
       "back": "A secondary alcohol.",
       "accept": [
-        "A secondary alcohol."
+        "A secondary alcohol.",
+        "secondary alcohol"
       ],
       "active": true,
       "stage": "A2",
@@ -44284,7 +44746,8 @@
       "front": "Why does nucleophilic addition to a planar carbonyl sometimes produce a racemate?",
       "back": "Attack can occur from either face.",
       "accept": [
-        "Attack can occur from either face."
+        "Attack can occur from either face.",
+        "Attack can occur from either face"
       ],
       "active": true,
       "stage": "A2",
@@ -44306,7 +44769,8 @@
       "accept": [
         "The ethanoate ion, CH₃COO⁻.",
         "ethanoate",
-        "CH3COO-"
+        "CH3COO-",
+        "ethanoate ion, CH₃COO⁻"
       ],
       "active": true,
       "stage": "A2",
@@ -44326,7 +44790,11 @@
       "front": "What is the conjugate base of ethanoic acid?",
       "back": "Ethanoate ion, CH₃COO⁻.",
       "accept": [
-        "Ethanoate ion, CH₃COO⁻."
+        "Ethanoate ion, CH₃COO⁻.",
+        "ethanoate",
+        "CH3COO-",
+        "CH₃COO⁻",
+        "Ethanoate ion, CH₃COO⁻"
       ],
       "active": true,
       "stage": "A2",
@@ -44346,7 +44814,10 @@
       "front": "What is formed by reaction of a carboxylic acid with a carbonate?",
       "back": "A carboxylate salt, CO₂ and water.",
       "accept": [
-        "A carboxylate salt, CO₂ and water."
+        "A carboxylate salt, CO₂ and water.",
+        "salt, water and carbon dioxide",
+        "carboxylate, co2 and h2o",
+        "carboxylate salt, CO₂ and water"
       ],
       "active": true,
       "stage": "A2",
@@ -44366,7 +44837,8 @@
       "front": "What is the bond in the functional group of an ester?",
       "back": "–COO–.",
       "accept": [
-        "–COO–."
+        "–COO–.",
+        "–COO–"
       ],
       "active": true,
       "stage": "A2",
@@ -44386,7 +44858,8 @@
       "front": "Why do esters often have lower boiling points than comparable acids?",
       "back": "Esters do not donate hydrogen bonds to each other.",
       "accept": [
-        "Esters do not donate hydrogen bonds to each other."
+        "Esters do not donate hydrogen bonds to each other.",
+        "Esters do not donate hydrogen bonds to each other"
       ],
       "active": true,
       "stage": "A2",
@@ -44406,7 +44879,10 @@
       "front": "What does alkaline hydrolysis of an ester produce?",
       "back": "Carboxylate salt and an alcohol.",
       "accept": [
-        "Carboxylate salt and an alcohol."
+        "Carboxylate salt and an alcohol.",
+        "carboxylate and alcohol",
+        "salt and alcohol",
+        "Carboxylate salt and an alcohol"
       ],
       "active": true,
       "stage": "A2",
@@ -44426,7 +44902,9 @@
       "front": "What does acidic hydrolysis of an ester produce?",
       "back": "Carboxylic acid and alcohol.",
       "accept": [
-        "Carboxylic acid and alcohol."
+        "Carboxylic acid and alcohol.",
+        "carboxylic acid and alcohol",
+        "Carboxylic acid and alcohol"
       ],
       "active": true,
       "stage": "A2",
@@ -44446,7 +44924,8 @@
       "front": "What acyl product forms when an acyl chloride reacts with ammonia?",
       "back": "A primary amide.",
       "accept": [
-        "A primary amide."
+        "A primary amide.",
+        "primary amide"
       ],
       "active": true,
       "stage": "A2",
@@ -44466,7 +44945,8 @@
       "front": "What acyl product forms when an acyl chloride reacts with a primary amine?",
       "back": "An N-substituted amide.",
       "accept": [
-        "An N-substituted amide."
+        "An N-substituted amide.",
+        "N-substituted amide"
       ],
       "active": true,
       "stage": "A2",
@@ -44486,7 +44966,8 @@
       "front": "Why are acyl chlorides more reactive than amides?",
       "back": "Chloride is a much better leaving group.",
       "accept": [
-        "Chloride is a much better leaving group."
+        "Chloride is a much better leaving group.",
+        "Chloride is a much better leaving group"
       ],
       "active": true,
       "stage": "A2",
@@ -44506,7 +44987,8 @@
       "front": "What makes benzene especially stable?",
       "back": "Delocalisation of π electrons around the ring.",
       "accept": [
-        "Delocalisation of π electrons around the ring."
+        "Delocalisation of π electrons around the ring.",
+        "Delocalisation of π electrons around the ring"
       ],
       "active": true,
       "stage": "A2",
@@ -44526,7 +45008,8 @@
       "front": "Why does benzene generally undergo substitution instead of addition?",
       "back": "Substitution preserves aromatic stabilisation.",
       "accept": [
-        "Substitution preserves aromatic stabilisation."
+        "Substitution preserves aromatic stabilisation.",
+        "Substitution preserves aromatic stabilisation"
       ],
       "active": true,
       "stage": "A2",
@@ -44546,7 +45029,10 @@
       "front": "What is the electrophile in benzene nitration?",
       "back": "Nitronium ion, NO₂⁺.",
       "accept": [
-        "Nitronium ion, NO₂⁺."
+        "Nitronium ion, NO₂⁺.",
+        "NO2+",
+        "nitronium ion",
+        "Nitronium ion, NO₂⁺"
       ],
       "active": true,
       "stage": "A2",
@@ -44566,7 +45052,8 @@
       "front": "What type of reaction is Friedel–Crafts acylation?",
       "back": "Electrophilic aromatic substitution.",
       "accept": [
-        "Electrophilic aromatic substitution."
+        "Electrophilic aromatic substitution.",
+        "Electrophilic aromatic substitution"
       ],
       "active": true,
       "stage": "A2",
@@ -44586,7 +45073,10 @@
       "front": "What is the role of AlCl₃ in Friedel–Crafts acylation?",
       "back": "Lewis acid catalyst for acylium-ion formation.",
       "accept": [
-        "Lewis acid catalyst for acylium-ion formation."
+        "Lewis acid catalyst for acylium-ion formation.",
+        "lewis acid catalyst",
+        "catalyst",
+        "Lewis acid catalyst for acylium-ion formation"
       ],
       "active": true,
       "stage": "A2",
@@ -44606,7 +45096,8 @@
       "front": "How does an amine act as a Brønsted–Lowry base?",
       "back": "Its nitrogen lone pair accepts H⁺.",
       "accept": [
-        "Its nitrogen lone pair accepts H⁺."
+        "Its nitrogen lone pair accepts H⁺.",
+        "Its nitrogen lone pair accepts H⁺"
       ],
       "active": true,
       "stage": "A2",
@@ -44626,7 +45117,8 @@
       "front": "Why are primary aliphatic amines often stronger bases than ammonia?",
       "back": "Alkyl electron donation increases lone-pair availability.",
       "accept": [
-        "Alkyl electron donation increases lone-pair availability."
+        "Alkyl electron donation increases lone-pair availability.",
+        "Alkyl electron donation increases lone-pair availability"
       ],
       "active": true,
       "stage": "A2",
@@ -44646,7 +45138,8 @@
       "front": "Why is phenylamine weaker as a base than ammonia?",
       "back": "Its nitrogen lone pair is delocalised into the benzene ring.",
       "accept": [
-        "Its nitrogen lone pair is delocalised into the benzene ring."
+        "Its nitrogen lone pair is delocalised into the benzene ring.",
+        "Its nitrogen lone pair is delocalised into the benzene ring"
       ],
       "active": true,
       "stage": "A2",
@@ -44666,7 +45159,9 @@
       "front": "What is the common product of a primary amine and an acyl chloride?",
       "back": "A secondary amide.",
       "accept": [
-        "A secondary amide."
+        "A secondary amide.",
+        "N substituted amide",
+        "secondary amide"
       ],
       "active": true,
       "stage": "A2",
@@ -44687,7 +45182,10 @@
       "front": "What is the general difference between addition and condensation polymerisation?",
       "back": "Condensation eliminates a small molecule; addition does not.",
       "accept": [
-        "Condensation eliminates a small molecule; addition does not."
+        "Condensation eliminates a small molecule; addition does not.",
+        "small molecule eliminated in condensation",
+        "water removed in condensation",
+        "Condensation eliminates a small molecule; addition does not"
       ],
       "active": true,
       "stage": "A2",
@@ -44707,7 +45205,8 @@
       "front": "Why can biodegradable condensation polymers break down more readily?",
       "back": "Ester or amide links can undergo hydrolysis.",
       "accept": [
-        "Ester or amide links can undergo hydrolysis."
+        "Ester or amide links can undergo hydrolysis.",
+        "Ester or amide links can undergo hydrolysis"
       ],
       "active": true,
       "stage": "A2",
@@ -44727,7 +45226,8 @@
       "front": "Why do thermoplastic polymer chains soften on heating?",
       "back": "Intermolecular forces between chains weaken.",
       "accept": [
-        "Intermolecular forces between chains weaken."
+        "Intermolecular forces between chains weaken.",
+        "Intermolecular forces between chains weaken"
       ],
       "active": true,
       "stage": "A2",
@@ -44747,7 +45247,8 @@
       "front": "What causes amino acids to exist as zwitterions near neutral pH?",
       "back": "Proton transfer from –COOH to –NH₂.",
       "accept": [
-        "Proton transfer from –COOH to –NH₂."
+        "Proton transfer from –COOH to –NH₂.",
+        "Proton transfer from –COOH to –NH₂"
       ],
       "active": true,
       "stage": "A2",
@@ -44767,7 +45268,10 @@
       "front": "What is a peptide bond chemically?",
       "back": "Amide link –CONH–.",
       "accept": [
-        "Amide link –CONH–."
+        "Amide link –CONH–.",
+        "amide bond",
+        "-CONH-",
+        "Amide link –CONH–"
       ],
       "active": true,
       "stage": "A2",
@@ -44787,7 +45291,8 @@
       "front": "What does the primary structure of a protein specify?",
       "back": "Its amino-acid sequence.",
       "accept": [
-        "Its amino-acid sequence."
+        "Its amino-acid sequence.",
+        "Its amino-acid sequence"
       ],
       "active": true,
       "stage": "A2",
@@ -44807,7 +45312,10 @@
       "front": "What interactions help stabilise an alpha helix?",
       "back": "Hydrogen bonds along the polypeptide backbone.",
       "accept": [
-        "Hydrogen bonds along the polypeptide backbone."
+        "Hydrogen bonds along the polypeptide backbone.",
+        "hydrogen bonding",
+        "hydrogen bonds",
+        "Hydrogen bonds along the polypeptide backbone"
       ],
       "active": true,
       "stage": "A2",
@@ -44827,7 +45335,8 @@
       "front": "What holds complementary DNA base pairs together?",
       "back": "Hydrogen bonds.",
       "accept": [
-        "Hydrogen bonds."
+        "Hydrogen bonds.",
+        "Hydrogen bonds"
       ],
       "active": true,
       "stage": "A2",
@@ -44847,7 +45356,10 @@
       "front": "Which DNA base pairs with adenine?",
       "back": "Thymine.",
       "accept": [
-        "Thymine."
+        "Thymine.",
+        "thymine",
+        "T",
+        "Thymine"
       ],
       "active": true,
       "stage": "A2",
@@ -44867,7 +45379,10 @@
       "front": "Which DNA base pairs with cytosine?",
       "back": "Guanine.",
       "accept": [
-        "Guanine."
+        "Guanine.",
+        "guanine",
+        "G",
+        "Guanine"
       ],
       "active": true,
       "stage": "A2",
@@ -44887,7 +45402,8 @@
       "front": "What chemical groups form the DNA backbone?",
       "back": "Alternating deoxyribose and phosphate units.",
       "accept": [
-        "Alternating deoxyribose and phosphate units."
+        "Alternating deoxyribose and phosphate units.",
+        "Alternating deoxyribose and phosphate units"
       ],
       "active": true,
       "stage": "A2",
@@ -44907,7 +45423,8 @@
       "front": "How can cisplatin prevent DNA replication?",
       "back": "It binds to DNA bases, disrupting copying.",
       "accept": [
-        "It binds to DNA bases, disrupting copying."
+        "It binds to DNA bases, disrupting copying.",
+        "It binds to DNA bases, disrupting copying"
       ],
       "active": true,
       "stage": "A2",
@@ -44927,7 +45444,8 @@
       "front": "Why is a short synthetic route often preferred?",
       "back": "Fewer steps reduce material losses and waste.",
       "accept": [
-        "Fewer steps reduce material losses and waste."
+        "Fewer steps reduce material losses and waste.",
+        "Fewer steps reduce material losses and waste"
       ],
       "active": true,
       "stage": "A2",
@@ -44947,7 +45465,8 @@
       "front": "Why is atom economy relevant to planning synthesis?",
       "back": "It measures how many reactant atoms enter the desired product.",
       "accept": [
-        "It measures how many reactant atoms enter the desired product."
+        "It measures how many reactant atoms enter the desired product.",
+        "It measures how many reactant atoms enter the desired product"
       ],
       "active": true,
       "stage": "A2",
@@ -44967,7 +45486,8 @@
       "front": "Why might a chemist avoid unnecessary solvents in synthesis?",
       "back": "To reduce material use and waste.",
       "accept": [
-        "To reduce material use and waste."
+        "To reduce material use and waste.",
+        "To reduce material use and waste"
       ],
       "active": true,
       "stage": "A2",
@@ -44987,7 +45507,9 @@
       "front": "What does the number of signals in a carbon-13 NMR spectrum indicate?",
       "back": "Number of different carbon environments.",
       "accept": [
-        "Number of different carbon environments."
+        "Number of different carbon environments.",
+        "different carbon environments",
+        "Number of different carbon environments"
       ],
       "active": true,
       "stage": "A2",
@@ -45007,7 +45529,10 @@
       "front": "What does proton NMR integration reveal?",
       "back": "Relative numbers of protons in each environment.",
       "accept": [
-        "Relative numbers of protons in each environment."
+        "Relative numbers of protons in each environment.",
+        "relative number of protons",
+        "ratio of hydrogens",
+        "Relative numbers of protons in each environment"
       ],
       "active": true,
       "stage": "A2",
@@ -45028,7 +45553,8 @@
       "front": "What does an n+1 proton NMR splitting pattern suggest?",
       "back": "n equivalent neighbouring protons.",
       "accept": [
-        "n equivalent neighbouring protons."
+        "n equivalent neighbouring protons.",
+        "n equivalent neighbouring protons"
       ],
       "active": true,
       "stage": "A2",
@@ -45048,7 +45574,8 @@
       "front": "Why is CDCl₃ used in proton NMR?",
       "back": "Its deuterium produces negligible ordinary ¹H background.",
       "accept": [
-        "Its deuterium produces negligible ordinary ¹H background."
+        "Its deuterium produces negligible ordinary ¹H background.",
+        "Its deuterium produces negligible ordinary ¹H background"
       ],
       "active": true,
       "stage": "A2",
@@ -45068,7 +45595,8 @@
       "front": "Why is TMS assigned chemical shift zero?",
       "back": "It is the reference standard.",
       "accept": [
-        "It is the reference standard."
+        "It is the reference standard.",
+        "the reference standard"
       ],
       "active": true,
       "stage": "A2",
@@ -45088,7 +45616,8 @@
       "front": "Why are chemically equivalent protons assigned one signal?",
       "back": "They experience the same average chemical environment.",
       "accept": [
-        "They experience the same average chemical environment."
+        "They experience the same average chemical environment.",
+        "They experience the same average chemical environment"
       ],
       "active": true,
       "stage": "A2",
@@ -45108,7 +45637,10 @@
       "front": "What is a chemical shift measured in?",
       "back": "Parts per million (ppm).",
       "accept": [
-        "Parts per million (ppm)."
+        "Parts per million (ppm).",
+        "ppm",
+        "parts per million",
+        "Parts per million (ppm)"
       ],
       "active": true,
       "stage": "A2",
@@ -45128,7 +45660,9 @@
       "front": "What is the mobile phase in TLC?",
       "back": "A solvent moving up the plate.",
       "accept": [
-        "A solvent moving up the plate."
+        "A solvent moving up the plate.",
+        "solvent",
+        "solvent moving up the plate"
       ],
       "active": true,
       "stage": "A2",
@@ -45148,7 +45682,10 @@
       "front": "What determines an Rf value?",
       "back": "Distance travelled by spot divided by distance of solvent front.",
       "accept": [
-        "Distance travelled by spot divided by distance of solvent front."
+        "Distance travelled by spot divided by distance of solvent front.",
+        "distance spot divided by distance solvent front",
+        "spot distance/solvent distance",
+        "Distance travelled by spot divided by distance of solvent front"
       ],
       "active": true,
       "stage": "A2",
@@ -45168,7 +45705,8 @@
       "front": "Why must solvent front position be marked promptly?",
       "back": "It may evaporate and become hard to identify.",
       "accept": [
-        "It may evaporate and become hard to identify."
+        "It may evaporate and become hard to identify.",
+        "It may evaporate and become hard to identify"
       ],
       "active": true,
       "stage": "A2",
@@ -45188,7 +45726,8 @@
       "front": "Why do different substances separate in chromatography?",
       "back": "They partition differently between mobile and stationary phases.",
       "accept": [
-        "They partition differently between mobile and stationary phases."
+        "They partition differently between mobile and stationary phases.",
+        "They partition differently between mobile and stationary phases"
       ],
       "active": true,
       "stage": "A2",
@@ -45208,7 +45747,8 @@
       "front": "What is the purpose of a locating agent for colourless spots?",
       "back": "Make otherwise invisible spots visible.",
       "accept": [
-        "Make otherwise invisible spots visible."
+        "Make otherwise invisible spots visible.",
+        "Make otherwise invisible spots visible"
       ],
       "active": true,
       "stage": "A2",
@@ -45229,7 +45769,8 @@
       "back": "It must be one-to-one.",
       "accept": [
         "It must be one-to-one.",
-        "injective"
+        "injective",
+        "It must be one-to-one"
       ],
       "active": true,
       "stage": "A2",
@@ -45250,7 +45791,11 @@
       "back": "x ≥ 0.",
       "accept": [
         "x ≥ 0.",
-        "nonnegative x"
+        "nonnegative x",
+        "x>=0",
+        "x≥0",
+        "x is non-negative",
+        "x ≥ 0"
       ],
       "active": true,
       "stage": "AS",
@@ -45271,7 +45816,8 @@
       "back": "All real x except x = 2.",
       "accept": [
         "All real x except x = 2.",
-        "x not equal to 2"
+        "x not equal to 2",
+        "All real x except x = 2"
       ],
       "active": true,
       "stage": "AS",
@@ -45292,7 +45838,8 @@
       "back": "f′(x) = 0.",
       "accept": [
         "f′(x) = 0.",
-        "derivative zero"
+        "derivative zero",
+        "f′(x) = 0"
       ],
       "active": true,
       "stage": "AS",
@@ -45313,7 +45860,8 @@
       "back": "A local minimum.",
       "accept": [
         "A local minimum.",
-        "minimum"
+        "minimum",
+        "local minimum"
       ],
       "active": true,
       "stage": "A2",
@@ -45334,7 +45882,8 @@
       "back": "A local maximum.",
       "accept": [
         "A local maximum.",
-        "maximum"
+        "maximum",
+        "local maximum"
       ],
       "active": true,
       "stage": "A2",
@@ -45355,7 +45904,8 @@
       "back": "One case showing a universal claim is false.",
       "accept": [
         "One case showing a universal claim is false.",
-        "disproof by example"
+        "disproof by example",
+        "One case showing a universal claim is false"
       ],
       "active": true,
       "stage": "AS",
@@ -45376,7 +45926,8 @@
       "back": "tan x = sin x / cos x.",
       "accept": [
         "tan x = sin x / cos x.",
-        "sine over cosine"
+        "sine over cosine",
+        "tan x = sin x / cos x"
       ],
       "active": true,
       "stage": "AS",
@@ -45397,7 +45948,8 @@
       "back": "Displacement.",
       "accept": [
         "Displacement.",
-        "signed displacement"
+        "signed displacement",
+        "Displacement"
       ],
       "active": true,
       "stage": "A2",
@@ -45440,7 +45992,8 @@
       "accept": [
         "beta-minus.",
         "β-",
-        "beta-"
+        "beta-",
+        "beta-minus"
       ],
       "active": true,
       "stage": "AS",
@@ -45482,7 +46035,8 @@
       "back": "phase.",
       "accept": [
         "phase.",
-        "phase difference"
+        "phase difference",
+        "phase"
       ],
       "active": true,
       "stage": "AS",
@@ -45524,7 +46078,8 @@
       "back": "current.",
       "accept": [
         "current.",
-        "electric current"
+        "electric current",
+        "current"
       ],
       "active": true,
       "stage": "AS",
@@ -45545,7 +46100,8 @@
       "back": "displacement.",
       "accept": [
         "displacement.",
-        "x"
+        "x",
+        "displacement"
       ],
       "active": true,
       "stage": "A2",
@@ -45567,7 +46123,8 @@
       "accept": [
         "(3/2)kT.",
         "1.5kT",
-        "3kT/2"
+        "3kT/2",
+        "(3/2)kT"
       ],
       "active": true,
       "stage": "A2",
@@ -45588,7 +46145,8 @@
       "back": "infinity.",
       "accept": [
         "infinity.",
-        "infinite distance"
+        "infinite distance",
+        "infinity"
       ],
       "active": true,
       "stage": "A2",
@@ -45609,7 +46167,8 @@
       "back": "capacitance.",
       "accept": [
         "capacitance.",
-        "C"
+        "C",
+        "capacitance"
       ],
       "active": true,
       "stage": "A2",
@@ -45630,7 +46189,8 @@
       "back": "shell structure.",
       "accept": [
         "shell structure.",
-        "shells"
+        "shells",
+        "shell structure"
       ],
       "active": true,
       "stage": "AS",
@@ -45673,7 +46233,8 @@
       "back": "states.",
       "accept": [
         "states.",
-        "states only"
+        "states only",
+        "states"
       ],
       "active": true,
       "stage": "AS",
@@ -45695,7 +46256,8 @@
       "accept": [
         "electrons.",
         "two electrons",
-        "2 electrons"
+        "2 electrons",
+        "electrons"
       ],
       "active": true,
       "stage": "AS",
@@ -45716,7 +46278,8 @@
       "back": "experimentally.",
       "accept": [
         "experimentally.",
-        "from experiments"
+        "from experiments",
+        "experimentally"
       ],
       "active": true,
       "stage": "A2",
@@ -45737,7 +46300,8 @@
       "back": "amino acid.",
       "accept": [
         "amino acid.",
-        "amino-acid"
+        "amino-acid",
+        "amino acid"
       ],
       "active": true,
       "stage": "A2",
@@ -45758,7 +46322,8 @@
       "back": "environment.",
       "accept": [
         "environment.",
-        "chemical environment"
+        "chemical environment",
+        "environment"
       ],
       "active": true,
       "stage": "A2",
@@ -45933,7 +46498,9 @@
         "currentProposedCount": 2251,
         "shortRecallAllSections": "First sweep across compulsory Physics 3.1–3.8 and Chemistry 3.1–3.3; not full line-by-line certification.",
         "illustratedAnswerSide": 21,
-        "additionalCloze": 17
+        "additionalCloze": 17,
+        "curatedAnswerUpdates": 98,
+        "articleVariantsAdded": 393
       }
     }
   }
