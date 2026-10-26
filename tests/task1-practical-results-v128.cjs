@@ -5,7 +5,7 @@ const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const fresh=cards.filter(c=>c.id.startsWith('task1_v128_'));
-const prior=cards.filter(c=>!c.id.startsWith('task1_v128_')&&!c.id.startsWith('task1_v129_')&&!c.id.startsWith('task1_v130_')&&!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_'));
+const prior=cards.filter(c=>!c.id.startsWith('task1_v128_')&&!c.id.startsWith('task1_v129_')&&!c.id.startsWith('task1_v130_')&&!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_')&&!c.id.startsWith('task1_v134_'));
 assert(deck.deckVersion>=128);
 assert(cards.length>=2659);
 assert(cards.filter(c=>c.active!==false).length>=2655);
