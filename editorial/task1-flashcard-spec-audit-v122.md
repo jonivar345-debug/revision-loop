@@ -10,7 +10,7 @@
 - New short-recall cards: **378**; Physics **155**, Chemistry **213**, Maths **10**.
 - Bank after merge: **1598** total, **1594** active (four inactive legacy cards retained).
 - **35** new cards deal with written assessment of practical interpretation and measurement.
-- **34** new cards include existing built-in labelled SVG explanations on the *answer* side.
+- **31** new cards include existing built-in labelled SVG explanations on the *answer* side.
 - The new cards have brief prompts and answers (front <=170 characters, back <=205 characters). All new IDs are prefixed `task1_`, all reference an AQA section in `specRef`.
 - A semantic-duplicate review removed **40** proposed cards whose points were already tested elsewhere. Existing cards such as key Hess's law definitions were not replaced by redundant copies.
 
