@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 132,
+  "deckVersion": 133,
   "updatedAt": "2026-10-26",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -62093,6 +62093,371 @@
       "scope": "mock",
       "courseTopic": "RP1 Titration",
       "revisionTopic": "RP1 Titration"
+    },
+    {
+      "id": "task1_v133_001",
+      "subject": "Physics",
+      "specRef": "7.2 RP7",
+      "stage": "A2",
+      "topic": "RP7 SHM",
+      "front": "For a small-angle pendulum, what is the gradient of T² against length?",
+      "back": "4π²/g.",
+      "accept": [
+        "4π²/g.",
+        "4pi²/g",
+        "4pi^2/g",
+        "four pi squared divided by g"
+      ],
+      "reject": [
+        "g/4pi²",
+        "4pi²g"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP7 SHM",
+      "revisionTopic": "RP7 SHM"
+    },
+    {
+      "id": "task1_v133_002",
+      "subject": "Physics",
+      "specRef": "7.2 RP7",
+      "stage": "A2",
+      "topic": "RP7 SHM",
+      "front": "How can g be obtained from a graph of pendulum T² against length?",
+      "back": "g = 4π² ÷ gradient.",
+      "accept": [
+        "g = 4π² ÷ gradient.",
+        "4pi² / gradient",
+        "4pi^2/gradient",
+        "four pi squared divided by gradient"
+      ],
+      "reject": [
+        "g equals gradient",
+        "gradient divided by 4pi²"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP7 SHM",
+      "revisionTopic": "RP7 SHM"
+    },
+    {
+      "id": "task1_v133_003",
+      "subject": "Physics",
+      "specRef": "7.2 RP12",
+      "stage": "A2",
+      "topic": "RP12 Gamma radiation",
+      "front": "For N independent radioactive counts, what is the approximate count uncertainty?",
+      "back": "√N counts.",
+      "accept": [
+        "√N counts.",
+        "square root N",
+        "sqrt(N)",
+        "root N"
+      ],
+      "reject": [
+        "N counts",
+        "N² counts"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP12 Gamma radiation",
+      "revisionTopic": "RP12 Gamma radiation"
+    },
+    {
+      "id": "task1_v133_004",
+      "subject": "Physics",
+      "specRef": "7.2 RP12",
+      "stage": "A2",
+      "topic": "RP12 Gamma radiation",
+      "front": "What is the approximate percentage uncertainty in N radioactive counts?",
+      "back": "100/√N %.",
+      "accept": [
+        "100/√N %.",
+        "100/sqrt(N) %",
+        "100 divided by root N percent",
+        "100 / root N"
+      ],
+      "reject": [
+        "100/N %",
+        "sqrt(N) percent"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP12 Gamma radiation",
+      "revisionTopic": "RP12 Gamma radiation"
+    },
+    {
+      "id": "task1_v133_005",
+      "subject": "Physics",
+      "specRef": "7.2 RP12",
+      "stage": "A2",
+      "topic": "RP12 Gamma radiation",
+      "front": "Why does increasing the radioactive counting interval improve precision?",
+      "back": "More counts reduce the fractional counting uncertainty.",
+      "accept": [
+        "More counts reduce the fractional counting uncertainty.",
+        "more counts reduce percentage uncertainty",
+        "increased counts reduce relative uncertainty",
+        "percentage uncertainty becomes smaller"
+      ],
+      "reject": [
+        "shorter time reduces random error",
+        "counts become less random"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP12 Gamma radiation",
+      "revisionTopic": "RP12 Gamma radiation"
+    },
+    {
+      "id": "task1_v133_006",
+      "subject": "Chemistry",
+      "specRef": "3.1.12.5",
+      "stage": "A2",
+      "topic": "RP9 pH curves",
+      "front": "At equivalence, what is the pH range for weak acid–strong base titration at 25°C?",
+      "back": "Above 7.",
+      "accept": [
+        "Above 7.",
+        "greater than 7",
+        "alkaline",
+        "pH above 7"
+      ],
+      "reject": [
+        "below 7",
+        "acidic",
+        "exactly 7"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP9 pH curves",
+      "revisionTopic": "RP9 pH curves"
+    },
+    {
+      "id": "task1_v133_007",
+      "subject": "Chemistry",
+      "specRef": "3.1.12.5",
+      "stage": "A2",
+      "topic": "RP9 pH curves",
+      "front": "At equivalence, what is the pH range for strong acid–weak base titration at 25°C?",
+      "back": "Below 7.",
+      "accept": [
+        "Below 7.",
+        "less than 7",
+        "acidic",
+        "pH below 7"
+      ],
+      "reject": [
+        "above 7",
+        "alkaline",
+        "exactly 7"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "RP9 pH curves",
+      "revisionTopic": "RP9 pH curves"
+    },
+    {
+      "id": "task1_v133_008",
+      "subject": "Chemistry",
+      "specRef": "3.3.6.3",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "front": "Why do bonds absorb characteristic frequencies of infrared radiation?",
+      "back": "Different bond vibrations have different energy gaps.",
+      "accept": [
+        "Different bond vibrations have different energy gaps.",
+        "different vibrational frequencies",
+        "bond vibrations have different frequencies",
+        "different vibrational energy gaps"
+      ],
+      "reject": [
+        "all bonds absorb the same frequency",
+        "IR absorption is random"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis"
+    },
+    {
+      "id": "task1_v133_009",
+      "subject": "Chemistry",
+      "specRef": "3.3.6.3",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "front": "Why can CO₂ and methane contribute to global warming?",
+      "back": "They absorb and re-emit infrared radiation from Earth.",
+      "accept": [
+        "They absorb and re-emit infrared radiation from Earth.",
+        "absorb infrared radiation",
+        "absorb and emit infrared radiation",
+        "absorb thermal IR"
+      ],
+      "reject": [
+        "reflect all sunlight",
+        "absorb only UV"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis"
+    },
+    {
+      "id": "task1_v133_010",
+      "subject": "Chemistry",
+      "specRef": "3.3.13.5",
+      "stage": "A2",
+      "topic": "Proteins and DNA",
+      "front": "Which DNA base bonds to platinum in cisplatin's action?",
+      "back": "Guanine.",
+      "accept": [
+        "Guanine.",
+        "guanine",
+        "G"
+      ],
+      "reject": [
+        "adenine",
+        "thymine"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "Proteins and DNA",
+      "revisionTopic": "Proteins and DNA"
+    },
+    {
+      "id": "task1_v133_011",
+      "subject": "Chemistry",
+      "specRef": "3.3.13.5",
+      "stage": "A2",
+      "topic": "Proteins and DNA",
+      "front": "Why can cisplatin have adverse effects on healthy cells?",
+      "back": "It may also interfere with DNA replication in healthy cells.",
+      "accept": [
+        "It may also interfere with DNA replication in healthy cells.",
+        "affects DNA replication in healthy cells",
+        "can damage healthy dividing cells",
+        "can inhibit healthy-cell division"
+      ],
+      "reject": [
+        "it only affects cancer cells",
+        "it has no side effects"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "Proteins and DNA",
+      "revisionTopic": "Proteins and DNA"
+    },
+    {
+      "id": "task1_v133_012",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "stage": "A2",
+      "topic": "Chromatography",
+      "front": "What does adding mass spectrometry to gas chromatography help identify?",
+      "back": "Mass spectra of the separated components.",
+      "accept": [
+        "Mass spectra of the separated components.",
+        "identifies components by mass spectra",
+        "molecular and fragment ions",
+        "mass spectrum of each component"
+      ],
+      "reject": [
+        "colour of each component",
+        "the colour of spots"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "Chromatography",
+      "revisionTopic": "Chromatography"
+    },
+    {
+      "id": "task1_v133_013",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "stage": "A2",
+      "topic": "Chromatography",
+      "front": "Why is gas-chromatography retention time alone not proof of identity?",
+      "back": "Different substances can have the same or similar retention time.",
+      "accept": [
+        "Different substances can have the same or similar retention time.",
+        "different substances can have similar retention times",
+        "retention times may coincide",
+        "retention time is not unique"
+      ],
+      "reject": [
+        "retention time never changes",
+        "every compound has a unique retention time"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "full",
+      "courseTopic": "Chromatography",
+      "revisionTopic": "Chromatography"
     }
   ],
   "meta": {
@@ -62197,11 +62562,11 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 656,
+      "physicsNew": 661,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 982,
+      "chemistryNew": 990,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -62401,6 +62766,17 @@
         "activeLegacyStillUnreviewed": 862,
         "claimAllSpecificationCovered": false,
         "focus": "Evidence-led legacy audit and Group 2 melting, titration uncertainty, centre-of-mass and free-fall graph precision"
+      },
+      "v133": {
+        "startingCards": 2981,
+        "added": 13,
+        "physicsAdded": 5,
+        "chemistryAdded": 8,
+        "legacyReviewedCumulative": 796,
+        "legacyStillPending": 420,
+        "completeSpecClaim": false,
+        "previousIdsUnchanged": true,
+        "reviewSource": "editorial/task1-legacy-card-content-audit-v133.json"
       }
     },
     "chatYear1CoverageV126": {

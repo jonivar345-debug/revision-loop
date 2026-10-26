@@ -23,6 +23,9 @@ on:
       - 'tests/task1-coverage-precision-v130.cjs'
       - 'tests/task1-fields-nuclear-inorganic-v131.cjs'
       - 'tests/task1-legacy-content-audit-v132.cjs'
+      - 'tests/task1-practical-legacy-v133.cjs'
+      - 'editorial/task1-legacy-card-content-audit-v133.json'
+      - 'editorial/task1-required-practicals-ledger-v133.json'
       - 'editorial/task1-legacy-card-content-audit-v132.json'
       - 'tests/task1-short-answer-marking-v122.cjs'
       - 'tests/cloud-sync-v119.cjs'
@@ -57,6 +60,7 @@ jobs:
       - run: node tests/task1-coverage-precision-v130.cjs
       - run: node tests/task1-fields-nuclear-inorganic-v131.cjs
       - run: node tests/task1-legacy-content-audit-v132.cjs
+      - run: node tests/task1-practical-legacy-v133.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
