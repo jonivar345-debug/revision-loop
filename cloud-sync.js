@@ -32,6 +32,7 @@ function buttons(){
   visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
   visible('cloudDownloadRemote',!!user&&!!latestRemote);
   visible('cloudSaveNow',!!user&&active);
+  visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   if(el('cloudAccountLabel'))el('cloudAccountLabel').textContent=user?
     'Google account: '+(user.email||'signed in'):'Not signed in. Browser saving remains available.';
 }
@@ -193,6 +194,92 @@ async function push(){
     }
   }
 }
+/* A fresh start deliberately supersedes the existing cloud version. Both the
+   local and remote copies are exported to one recovery archive before writing.
+   Unlike routine sync, this flow explicitly authorises a reset after a typed
+   confirmation, and checks that the remote hasn't changed since the preview. */
+function savePreResetArchive(local,remote){
+  const archive={
+    format:'revision-loop-pre-reset-archive-v120',
+    createdAt:new Date().toISOString(),
+    local:backup.validate(local),
+    cloud:remote?remoteBackup(remote):null
+  };
+  const blob=new Blob([JSON.stringify(archive,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;
+  a.download='revision-loop-before-reset-'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.append(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),15000);
+}
+async function resetAllProgress(){
+  if(!user||working)return;
+  // Prevent an account switch from resetting a different user's progress.
+  const bound=localStorage.getItem(BOUND_KEY);
+  if(bound&&bound!==user.uid){
+    message('This device belongs to another Google login. No progress changed.');
+    return;
+  }
+  working=true;
+  const wasActive=active;
+  active=false;
+  clearTimeout(saveTimer);
+  try{
+    // Read fresh data from the server, not its offline cache.
+    const original=await retrieve();
+    const local=current(),fresh=backup.validate(core.freshStartSnapshot());
+    const account=user.email||'this Google account';
+    const typed=window.prompt(
+      'Reset ALL Revision Loop progress for '+account+
+      '? This resets reviews, XP, points, exam results, achievements and purchased items on your linked devices. A recovery archive will be downloaded. Type RESET to confirm:'
+    );
+    if(typed!=='RESET'){
+      active=wasActive;
+      changePhase(wasActive?'active':phase,'Reset cancelled. Your existing progress has not been changed.');
+      return;
+    }
+    // Keep an independent recovery file; downloading is a user action, not a
+    // permanent server-side deletion of backups/history.
+    savePreResetArchive(local,original);
+    changePhase('resetting','Resetting your private cloud progress; local data has not changed yet…');
+    const payload=JSON.stringify(fresh),hash=await fingerprint(fresh.values);
+    if(new TextEncoder().encode(payload).byteLength>800000)
+      throw new Error('Unexpectedly large fresh-start snapshot.');
+    const nextRevision=await runTransaction(db,async tx=>{
+      const stateRef=remoteRef(),latest=await tx.get(stateRef);
+      const exists=latest.exists();
+      if(exists!==!!original || (exists&&latest.data().revision!==original.revision))
+        throw new Error('Cloud data changed on another device. Reset cancelled to protect that newer version.');
+      let historyRef=null,historyExists=false;
+      if(exists){
+        historyRef=doc(db,'users',user.uid,'history',new Date().toISOString().slice(0,10));
+        historyExists=(await tx.get(historyRef)).exists();
+      }
+      const revision=exists?original.revision+1:1;
+      if(exists&&!historyExists){
+        tx.set(historyRef,{
+          segment:'bundle',payload:latest.data().payload,
+          baseRevision:latest.data().revision,createdAt:serverTimestamp()
+        });
+      }
+      const data={payload,revision,updatedAt:serverTimestamp()};
+      if(exists)tx.update(stateRef,data);
+      else tx.set(stateRef,data);
+      return revision;
+    });
+    // Only clear the local browser AFTER the cloud transaction has committed.
+    backup.restore(localStorage,fresh);
+    saveCheckpoint(user.uid,nextRevision,hash);
+    localStorage.removeItem(MANUAL_RESTORE_KEY);
+    changePhase('active','Progress reset to zero locally and online. Reloading…');
+    window.location.reload();
+  }catch(error){
+    active=false;
+    changePhase('error','Reset did not complete: '+error.message+
+      '. Check your saved recovery archive and cloud status before retrying. Do not clear browser storage.');
+  }finally{working=false}
+}
+
 async function connect(){
   try{
     message('Opening Google sign-in…');
@@ -213,6 +300,7 @@ async function useRemote(){
 function boot(){
   if(!backup||!core){message('Cloud sync helper did not load; local progress is unaffected.');return}
   el('cloudGoogleSignIn')?.addEventListener('click',()=>void connect());
+  el('cloudResetAll')?.addEventListener('click',()=>void resetAllProgress());
   el('cloudGoogleSignOut')?.addEventListener('click',()=>void disconnect());
   el('cloudUploadDevice')?.addEventListener('click',()=>void firstUpload());
   el('cloudUseRemote')?.addEventListener('click',()=>void useRemote());

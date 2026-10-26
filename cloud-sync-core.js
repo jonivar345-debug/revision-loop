@@ -26,5 +26,14 @@
     if(remoteRevision===checkpoint.revision)return 'local-ahead';
     return 'conflict';
   }
-  return Object.freeze({KEYS,sameValues,hasData,assess});
+  // Fresh learning state: free starter characters/locations are restored by
+  // app.js ensureProfile() on reload, but no earned XP or reviews remain.
+  function freshStartSnapshot(at){
+    return {
+      app:'revision-loop',schemaVersion:1,
+      createdAt:new Date(at||Date.now()).toISOString(),
+      values:Object.fromEntries(KEYS.map(key=>[key,'{}']))
+    };
+  }
+  return Object.freeze({KEYS,sameValues,hasData,assess,freshStartSnapshot});
 });
