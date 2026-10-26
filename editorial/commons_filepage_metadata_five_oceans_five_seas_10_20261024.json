@@ -1,0 +1,130 @@
+{
+  "schema": "commons-file-level-editorial-audit-v1",
+  "created": "2026-10-24",
+  "status": "NON-EXECUTABLE EDITORIAL RESEARCH ONLY; draft PR, not integrated or live; no image bytes downloaded, no saved user data accessed",
+  "scope": "One individually researched Commons file-page candidate for each of the five ocean IDs and five selected sea IDs in world-geographic-destinations.js. Not a claim that the other 12 sea galleries or full site are cleared.",
+  "method": "Read each specific Commons file-description page and check creator, subject/location evidence, and displayed licence. Exact 10 file names checked against main curated, discovery and enrichment JS registries; all ten names are absent. Rights-chain and actual pixel review still required before publication.",
+  "displayRequirements": "For each displayed photo show linked creator, linked exact Commons file page, linked file-specific licence, and indication of modifications; follow ShareAlike when adapting BY-SA media. Verify source again before release. Do not infer the location of a gateway pin from the coastal or shipboard photograph.",
+  "photos": [
+    {
+      "locationId": "ocean-pacific",
+      "file": "Pacific Ocean (1).jpg",
+      "caption": "Open-water Pacific Ocean photograph dated November 2008",
+      "author": "contri",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Pacific_Ocean_(1).jpg",
+      "depictionEvidence": "Flickr image DSCN1784; Commons Flickr review confirmed the BY-SA licence on 31 December 2012.",
+      "geographicCaveat": "Pacific Ocean, no specific coast established from the file description.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "ocean-atlantic",
+      "file": "Atlantic Ocean Santander.jpg",
+      "caption": "Atlantic Ocean off Santander, Spain",
+      "author": "Tiia Monto",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Atlantic_Ocean_Santander.jpg",
+      "depictionEvidence": "Own work, 30 August 2016; file description gives camera coordinates near Santander.",
+      "geographicCaveat": "Santander coastline, not the whole Atlantic Ocean.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "ocean-indian",
+      "file": "Indian Ocean sunrise.jpg",
+      "caption": "Sunrise by the Indian Ocean",
+      "author": "Bett Duncan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Indian_Ocean_sunrise.jpg",
+      "depictionEvidence": "Own work, 11 June 2022; creator and licence shown on the file page.",
+      "geographicCaveat": "Specific shoreline is not named in the description; do not invent one.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "ocean-arctic",
+      "file": "North Pole, Arctic Ocean, sea ice 02.jpg",
+      "caption": "Sea ice at the North Pole in the Arctic Ocean",
+      "author": "Matti&Keti",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:North_Pole%2C_Arctic_Ocean%2C_sea_ice_02.jpg",
+      "depictionEvidence": "Own-work file dated 17 April 1990; file categories and structured metadata identify Arctic sea ice.",
+      "geographicCaveat": "Arctic Ocean near North Pole as stated by Commons; not evidence of current ice extent.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "ocean-southern",
+      "file": "Iceberg-ant-viii3-03 hg.jpg",
+      "caption": "Iceberg in the Atlantic sector of the Southern Ocean, photographed from RV Polarstern",
+      "author": "Hannes Grobe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Iceberg-ant-viii3-03_hg.jpg",
+      "depictionEvidence": "Own work, November 1989, POLARSTERN expedition ANT-VIII/3; image page specifies the Southern Ocean Atlantic sector.",
+      "geographicCaveat": "Historical 1989 expedition image; not current conditions.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "sea-red",
+      "file": "Red Sea Corals5.JPG",
+      "caption": "Coral reef off Egypt's Red Sea coast north of Marsa Alam",
+      "author": "Wusel007",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Red_Sea_Corals5.JPG",
+      "depictionEvidence": "Own work, 7 November 2012; file has camera coordinates 25.371375 N, 34.732425 E.",
+      "geographicCaveat": "Specific reef near Marsa Alam, not representative of the entire Red Sea.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "sea-baltic",
+      "file": "Dusk in Rowy - Baltic Sea.jpg",
+      "caption": "Baltic Sea at dusk seen from Rowy, Poland",
+      "author": "LoMit",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Dusk_in_Rowy_-_Baltic_Sea.jpg",
+      "depictionEvidence": "Own work, 27 July 2018; file includes camera coordinates near Rowy.",
+      "geographicCaveat": "Polish coast of Baltic Sea.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "sea-black",
+      "file": "Black Sea shore in Espiye, Giresun 06-2.jpg",
+      "caption": "Black Sea shoreline at Espiye, Giresun, Türkiye",
+      "author": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Black_Sea_shore_in_Espiye%2C_Giresun_06-2.jpg",
+      "depictionEvidence": "Own work, 9 September 2016; file includes coordinates 40.949498 N, 38.698055 E.",
+      "geographicCaveat": "Turkish Black Sea coast.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "sea-mediterranean",
+      "file": "Mediterranean Sea near Costa del Sol.jpg",
+      "caption": "Mediterranean Sea off Spain's Costa del Sol",
+      "author": "kallerna",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_near_Costa_del_Sol.jpg",
+      "depictionEvidence": "Own work, 3 April 2021; exact Commons file page states location and author.",
+      "geographicCaveat": "Spanish Mediterranean coast, not the whole sea.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    },
+    {
+      "locationId": "sea-caribbean",
+      "file": "Costa del mar Caribe en Pilón.jpg",
+      "caption": "Caribbean Sea coast near Pilón, Granma, Cuba",
+      "author": "Óðinn",
+      "license": "CC BY-SA 2.5 Canada",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/ca/deed.en",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Costa_del_mar_Caribe_en_Pil%C3%B3n.jpg",
+      "depictionEvidence": "Own work, 29 January 2014; Commons Quality Image with coordinates 19.905211 N, -77.203406 W.",
+      "geographicCaveat": "Coast near Marea del Portillo in Cuba, not a generic Caribbean island.",
+      "reviewStatus": "Exact Wikimedia Commons file-description page checked for named creator, declared file licence and subject on 2026-10-24; pixels, original rights chain, current image bytes and offline use NOT independently cleared."
+    }
+  ]
+}

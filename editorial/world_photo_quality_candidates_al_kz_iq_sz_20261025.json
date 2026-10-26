@@ -1,0 +1,96 @@
+{
+  "schema": "revision-loop-world-photo-quality-candidates-v1",
+  "reviewedOn": "2026-10-25",
+  "status": "EDITORIAL-ONLY: exact Commons file pages checked for source/author/licence/original dimensions; no picture installed, no pixel-level approval, no automatic release approval",
+  "purpose": "Improve place accuracy, four-photo subject variety and recognisable scenery; propose replacing a repetitive or weak photo only after live pixel review.",
+  "keepSafeguards": [
+    "Do not remove existing location IDs or previous purchases",
+    "Keep full-size Commons original file and correct attribution/CC licence visible",
+    "Preserve four *distinct* image sources per affected destination",
+    "Prefer high-quality scenery as shop cover, avoid portrait image crops",
+    "Require license revalidation, real image load and desktop/mobile unlocked gallery tests before integration"
+  ],
+  "candidates": [
+    {
+      "id": "country-al",
+      "destination": "Albania",
+      "file": "Thethi landscape.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Thethi_landscape.jpg",
+      "subject": "Theth valley and Albanian Alps mountain landscape, Shkodër County",
+      "author": "Rrozafa",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 4608,
+      "originalHeight": 3456,
+      "sourceEvidence": "Wikimedia Commons exact File page, own-work description; viewed 2026-10-25",
+      "reason": "Current editorial core includes two separate Butrint theatre photographs, making a natural-landscape alternative better for four-image variety.",
+      "reviewFlags": [
+        "Human inspect image pixels and crop before replacing a Butrint duplicate",
+        "Keep at least one Butrint photo"
+      ]
+    },
+    {
+      "id": "country-kz",
+      "destination": "Kazakhstan",
+      "file": "ПОЮЩИЙ БАРХАН.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%9E%D0%AE%D0%A9%D0%98%D0%99_%D0%91%D0%90%D0%A0%D0%A5%D0%90%D0%9D.jpg",
+      "subject": "Singing Dune in Altyn-Emel National Park, Kazakhstan",
+      "author": "RS128",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 3000,
+      "originalHeight": 2021,
+      "sourceEvidence": "Wikimedia Commons exact File page, photo of protected area with author and geotag; viewed 2026-10-25",
+      "reason": "Current curated source records repeat Charyn Canyon; a verified dune photo provides a different iconic landscape.",
+      "reviewFlags": [
+        "Inspect pixels and cover framing",
+        "Retain one strong Charyn Canyon photo"
+      ]
+    },
+    {
+      "id": "country-iq",
+      "destination": "Iraq",
+      "file": "Samrraa 01.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Samrraa_01.jpg",
+      "subject": "Spiral Minaret of the Great Mosque of Samarra, Iraq",
+      "author": "Fakhri Mahmood",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "originalWidth": 3479,
+      "originalHeight": 5219,
+      "sourceEvidence": "Wikimedia Commons exact File page, own-work description and author; viewed 2026-10-25",
+      "reason": "Current curated sources focus on two Erbil skyline views by the same photographer; distinctive Samarra heritage would diversify the gallery.",
+      "reviewFlags": [
+        "Portrait orientation: put in unlocked four-photo gallery rather than forcing cropped cover",
+        "Human review exact site depiction and photo crop",
+        "Retain one high-quality Erbil skyline"
+      ]
+    },
+    {
+      "id": "country-sz",
+      "destination": "Eswatini",
+      "file": "Mantenga Falls.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mantenga_Falls.jpg",
+      "subject": "Mantenga Falls in Eswatini",
+      "author": "TheLizardQueen (Caitlin)",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "originalWidth": 2280,
+      "originalHeight": 3468,
+      "sourceEvidence": "Wikimedia Commons exact File page, coordinates, Flickr licence checked by a Commons reviewer; viewed 2026-10-25",
+      "reason": "The existing curated set includes one sanctuary landscape and one impala photo; a waterfall provides more varied geography.",
+      "reviewFlags": [
+        "Portrait orientation: test responsive gallery crop",
+        "Human inspect actual image before use",
+        "Do not remove the most distinctive sanctuary landscape"
+      ]
+    }
+  ],
+  "approval": {
+    "sourcePagesChecked": 4,
+    "imagePixelReviewed": 0,
+    "realPublicSiteLoadsVerified": 0,
+    "replacementsPublished": 0,
+    "releaseReady": false
+  }
+}
