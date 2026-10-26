@@ -1,18 +1,26 @@
 # Task 1 — Flashcard specification audit and release ledger (v122)
 
 **Date:** 26 October 2026  
-**Status:** Proposed flashcard content release; publication only after CI and merge.  
+**Status:** First substantial full A-level expansion in PR #68; publication only after CI and merge. Precise sub-bullet completeness remains under review.  
 **Course:** AQA Physics 7408, Chemistry 7405, Mathematics 7357.
 
 ## Count and preservation
 
 - Existing IDs retained: **1220**. No original IDs have been deleted or renumbered.
-- New short-recall cards: **378**; Physics **155**, Chemistry **213**, Maths **10**.
-- Bank after merge: **1598** total, **1594** active (four inactive legacy cards retained).
+- New short-recall cards: **537**; Physics **212**, Chemistry **315**, Maths **10**.
+- Bank after merge: **1,757** total, **1,753** active (four inactive legacy cards retained).
 - **35** new cards deal with written assessment of practical interpretation and measurement.
 - **31** new cards include existing built-in labelled SVG explanations on the *answer* side.
 - The new cards have brief prompts and answers (front <=170 characters, back <=205 characters). All new IDs are prefixed `task1_`, all reference an AQA section in `specRef`.
-- A semantic-duplicate review removed **40** proposed cards whose points were already tested elsewhere. Existing cards such as key Hess's law definitions were not replaced by redundant copies.
+- A semantic-duplicate review removed **47** proposed cards whose points were already tested elsewhere. Existing cards such as key Hess's law definitions were not replaced by redundant copies.
+
+## Topic organisation and fairer marking
+
+- Flashcards are grouped under AQA chapter families in the topic picker; the exam-question picker remains separate.
+- Mock and taught presets are checked again when starting a flashcard session, so sharing a topic name cannot accidentally include untaught A2 cards.
+- 71 cards have curated alternative correct answers (plain-language definitions, equivalent formulae, ion names and colour descriptions). Opposite trends are explicitly guarded against in the scorer.
+- Twelve short fill-in-the-gap questions are flagged as such in the card display.
+- Added a second targeted full A-level pass: advanced Period 3 oxides, complexes and aqueous ions, Kp, electrode potentials, organic synthesis, proteins, DNA, spectroscopy and later Physics fields/nuclear knowledge. Further option-topic additions may be needed.
 
 ## Syllabus sections strengthened
 
