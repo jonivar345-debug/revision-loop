@@ -18,7 +18,7 @@ Maths: four very short Year 1 Pure reminders. Calculations remain in exam practi
 - All 2,686 previous card IDs preserved; no exact repeated ID or new repeated prompt.
 - New test tests/task1-coverage-precision-v130.cjs checks concise prompts, subject distribution, mock filtering, every model answer and alternative, and negative answers.
 - Older v127, v128 and v129 tests still verify exact historical counts excluding later additive v130 cards.
-- Atomisation tagged Chemistry 3.1.8 rather than AS Energetics. Required graphite structure-property content instead of graphene. Uniform circular motion correctly Year 2.
+- Atomisation tagged Chemistry 3.1.8 rather than AS Energetics. Replaced a graphite duplicate with a six-bond-pair VSEPR shape card. Uniform circular motion correctly Year 2.
 
 ## Limitations
 Even 2,846 cards do not prove every assessed AQA bullet is addressed. Older topic-only crosswalk entries remain uncertified. Long calculations, experimental design and mechanisms belong in exam question practice. A full per-bullet coverage audit, including practicals and the school's Physics option, remains outstanding.
