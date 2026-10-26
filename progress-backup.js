@@ -40,6 +40,14 @@
      throw new Error('Browser storage is full or unavailable. Existing data was restored where possible.');
    }
  }
+ function fromResetArchive(data,source){
+   if(!IS_OBJECT(data)||data.format!=='revision-loop-pre-reset-archive-v120')
+     throw new Error('This is not a Revision Loop pre-reset archive.');
+   if(source!=='local'&&source!=='cloud')
+     throw new Error('Choose LOCAL or CLOUD to restore.');
+   if(source==='cloud'&&!data.cloud)throw new Error('This archive has no earlier cloud backup.');
+   return validate(data[source]);
+ }
  function summary(data){
    validate(data);
    const p=JSON.parse(data.values.revisionLoopProfile11);
@@ -70,7 +78,23 @@
      if(!file)return;
      try{
        if(file.size>8*1024*1024)throw new Error('Backup file is too large.');
-       const incoming=validate(JSON.parse(await file.text()));
+       const source=JSON.parse(await file.text());
+       let incoming;
+       if(source?.format==='revision-loop-pre-reset-archive-v120'){
+         let selected='local';
+         if(source.cloud){
+           const choice=window.prompt(
+             'This file holds your progress from before the reset. Type LOCAL to restore the old browser copy, or CLOUD to restore the old online copy. Cancel to keep current progress unchanged.'
+           );
+           if(choice!== 'LOCAL'&&choice!=='CLOUD'){
+             message('Restore cancelled. No progress changed.');return;
+           }
+           selected=choice.toLowerCase();
+         }else if(!window.confirm('Restore the saved local progress from before your reset?')){
+           message('Restore cancelled. No progress changed.');return;
+         }
+         incoming=fromResetArchive(source,selected);
+       }else incoming=validate(source);
        const info=summary(incoming);
        const words='Restore the backup dated '+info.importedAt+'? It contains '+info.xp+
          ' lifetime XP and '+info.ownedLocations+' unlocked locations. This replaces saved progress, purchases and settings on this browser. Download your current backup first.';
@@ -87,5 +111,5 @@
    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
    else boot();
  }
- return Object.freeze({KEYS,validate,snapshot,restore,summary});
+ return Object.freeze({KEYS,validate,snapshot,restore,summary,fromResetArchive});
 });
