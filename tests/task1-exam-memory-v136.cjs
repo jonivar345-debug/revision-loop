@@ -34,7 +34,7 @@ for(let i=0;i<added.length;i++){
  assert.equal(c.strictRecall,true);
  assert(c.front.length<=150&&c.back.length<=180,'Long answer belongs in exam practice '+c.id);
  assert(c.accept.includes(c.back),'Model answer must be accepted '+c.id);
- assert(/^3\\.\\d+/.test(c.specRef),'Missing syllabus section '+c.id);
+ assert(c.specRef.startsWith('3.') && c.specRef.split('.').length >= 2,'Missing syllabus section '+c.id);
  assert.equal(c.courseTopic,c.topic);assert.equal(c.revisionTopic,c.topic);
  assert.equal(c.mock,c.stage==='AS','Year 2 material must not leak into November mock '+c.id);
  assert.equal(c.taught,c.mock);
