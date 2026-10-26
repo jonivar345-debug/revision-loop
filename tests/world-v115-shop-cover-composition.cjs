@@ -22,7 +22,7 @@ assert(css.includes('.full-frame-card-cover img.card-cover-full-image'));
 assert(css.includes('object-fit:contain!important'));
 assert(html.includes('styles.css?v=77'));
 assert(html.includes('world-location-photo-gallery.js?v=115'));
-assert(sw.includes('revision-loop-v115-composition-checked-world-galleries'));
+assert(sw.includes('revision-loop-v114-catalogue-sourced-world-galleries-energetics-v51-v115-full-frame-covers'));
 for(const id of ids){
   const rec=index.destinations.find(x=>x.id===id);
   assert(rec,id+' needs an existing local gallery');
