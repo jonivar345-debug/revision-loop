@@ -30,6 +30,7 @@ OLD_IDS=set(json.loads((ROOT/'editorial/world-v109-batch-targets.json').read_tex
 DUPLICATES={p['id'] for p in AUDIT.get('suspectedVisualDuplicates',[])}
 STRETCHED={p['id'] for p in AUDIT.get('extremeAspectRatioCandidates',[])}
 COVER_PICKS=json.loads((ROOT/'editorial/world-v111-cover-priorities.json').read_text(encoding='utf-8'))['shopCoverSelections']
+COVER_PICKS.update({'budapest':{'slot':3,'file':"Fisherman's Bastion, Budapest, Hungary.jpg"},'victoriafalls':{'slot':2,'file':'Victoria Falls from Air.jpg'}})
 def dimensions(relative):
     with Image.open(ROOT/relative) as img:
         img.load()
