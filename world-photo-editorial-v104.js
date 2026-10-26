@@ -823,6 +823,298 @@ data["cape_coast"]=[{
   "qualityPriority": 1700,
   "reviewStatus": "Exact Commons file, photographer, CC licence, place and dimensions checked 2026-10-26; builder must verify live metadata and image pixels"
 },...(data["cape_coast"]||[])];
+data["nairobi"]=[...[
+  {
+    "file": "The Kenyatta International Conference Centre.jpg",
+    "author": "Endesia94",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Kenyatta International Conference Centre and Jomo Kenyatta statue, Nairobi",
+    "width": 2160,
+    "height": 3840,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["nairobi"]||[])];
+data["reykjavik"]=[...[
+  {
+    "file": "Harpa (concert hall).jpg",
+    "author": "Manuelarosi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Harpa concert hall in Reykjavík",
+    "width": 4032,
+    "height": 3024,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Hallgrimskirkja 2026.jpg",
+    "author": "VeraVidiVici",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Hallgrímskirkja exterior in Reykjavík",
+    "width": 4080,
+    "height": 3060,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["reykjavik"]||[])];
+data["budapest"]=[...[
+  {
+    "file": "Budapest Parlament panorama.jpg",
+    "author": "Andrzej Otrębski",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Hungarian Parliament building, Budapest, across the Danube",
+    "width": 8549,
+    "height": 1412,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Fisherman's Bastion, Budapest, Hungary.jpg",
+    "author": "Veronika.szappanos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Fisherman's Bastion terraces in Budapest",
+    "width": 6000,
+    "height": 4000,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["budapest"]||[])];
+data["grandcanyon"]=[...[
+  {
+    "file": "GrandCanyonColoradoRiver.jpg",
+    "author": "Massimo Catarinella",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Colorado River within the Grand Canyon, Arizona",
+    "width": 3456,
+    "height": 2304,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["grandcanyon"]||[])];
+data["sossusvlei"]=[...[
+  {
+    "file": "Deadvlei Sossusvlei.JPG",
+    "author": "Harald Süpfle",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+    "subject": "Deadvlei dead trees and sand dunes near Sossusvlei Namibia",
+    "width": 2272,
+    "height": 1704,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Sossusvlei with Oryx.jpg",
+    "author": "Buiobuione",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Oryx standing in the dunes of Sossusvlei Namibia",
+    "width": 5173,
+    "height": 3449,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["sossusvlei"]||[])];
+data["torres"]=[...[
+  {
+    "file": "Lago Pehoe Torres del Paine.jpg",
+    "author": "Solange Muñoz",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Pehoé Lake in Torres del Paine Chile",
+    "width": 4000,
+    "height": 3000,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Guanaco en Torres del Paine.jpg",
+    "author": "Valgarri",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Guanaco wildlife in Torres del Paine national park",
+    "width": 2048,
+    "height": 1536,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["torres"]||[])];
+data["antiguaguatemala"]=[...[
+  {
+    "file": "Santa Catalina Arch.jpg",
+    "author": "Chad Davis",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "subject": "Santa Catalina Arch and street in Antigua Guatemala",
+    "width": 7717,
+    "height": 5147,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["antiguaguatemala"]||[])];
+data["panamacity"]=[...[
+  {
+    "file": "Casco Viejo, Panama City.jpg",
+    "author": "-Chupacabras-",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "subject": "Casco Viejo historic district, Panama City",
+    "width": 3072,
+    "height": 2304,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Miraflores Locks Panama Canal.jpg",
+    "author": "John23Ms",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "subject": "Miraflores locks of the Panama Canal near Panama City",
+    "width": 4080,
+    "height": 3056,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["panamacity"]||[])];
+data["lagos"]=[...[
+  {
+    "file": "The Lagos Lagoon and The Third Mainland Bridge.jpg",
+    "author": "Solasly",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Third Mainland Bridge across Lagos Lagoon Nigeria",
+    "width": 4032,
+    "height": 3024,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["lagos"]||[])];
+data["kigali"]=[...[
+  {
+    "file": "Kigali convention centre.jpg",
+    "author": "Schlawgclart",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "subject": "Kigali Convention Centre exterior Rwanda",
+    "width": 3060,
+    "height": 4080,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["kigali"]||[])];
+data["country-bt"]=[...[
+  {
+    "file": "Punakha dzong.JPG",
+    "author": "Carmen Haeßner",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Punakha Dzong riverside monastery and fortress Bhutan",
+    "width": 2560,
+    "height": 1920,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["country-bt"]||[])];
+data["country-np"]=[...[
+  {
+    "file": "PanoAnnapurana.JPG",
+    "author": "James Heilman",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "subject": "Annapurna and Dhaulagiri mountains as viewed from Poon Hill Nepal",
+    "width": 4800,
+    "height": 920,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["country-np"]||[])];
+data["country-sg"]=[...[
+  {
+    "file": "Merlion statue in Singapore.jpg",
+    "author": "Stryn",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Merlion Park landmark overlooking Marina Bay in Singapore",
+    "width": 4032,
+    "height": 2268,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "The Gardens by the Bay, Singapore 4.jpg",
+    "author": "Uzoma Ozurumba",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Night illumination at Gardens by the Bay Supertree Grove Singapore",
+    "width": 4000,
+    "height": 1800,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["country-sg"]||[])];
+data["victoriafalls"]=[...[
+  {
+    "file": "Victoria Falls Rainbow.jpg",
+    "author": "Blackhole1111",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Rainbow in the spray of Victoria Falls from the Zambian side",
+    "width": 4032,
+    "height": 3024,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Victoria Falls from Air.jpg",
+    "author": "Nynative",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Victoria Falls aerial view from aircraft departing Livingstone",
+    "width": 4912,
+    "height": 3264,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  },
+  {
+    "file": "Victoria Falls Zambia.jpg",
+    "author": "Gypsy Denise",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Victoria Falls waterfall viewed from Zambia",
+    "width": 3648,
+    "height": 2736,
+    "editorialMetadata": true,
+    "qualityPriority": 1700,
+    "reviewStatus": "Wikimedia Commons exact place, original file, photographer, dimensions and CC licence reviewed 26 October 2026. CI must re-check live metadata and actual pixels before acceptance."
+  }
+],...(data["victoriafalls"]||[])];
 if(root)root.RevisionWorldV104Photos=Object.freeze(data);
 if(typeof module==='object'&&module.exports)module.exports=data;
 })(typeof window==='object'?window:null);
