@@ -745,6 +745,60 @@ data["papeete"]=[...[
     "reviewStatus": "Exact Commons file and geographic description checked 2026-10-26; live rights/size retrieval and individual rendered-image approval remain required."
   }
 ],...(data["papeete"]||[])];
+data["losangeles"]=[...[
+  {
+    "file": "Disney Concert Hall.jpg",
+    "author": "Codera23",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Walt Disney Concert Hall exterior in downtown Los Angeles",
+    "width": 4032,
+    "height": 3024,
+    "editorialMetadata": true,
+    "qualityPriority": 1650,
+    "reviewStatus": "Exact CC licence, original dimensions and geolocated subject reviewed 26 Oct 2026; archive builder must verify live metadata and photo bytes."
+  }
+],...(data["losangeles"]||[])];
+data["country-ec"]=[...[
+  {
+    "file": "Cuenca, Ecuador.JPG",
+    "author": "Natalia Cartolini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Cuenca historic skyline and architecture in Ecuador",
+    "width": 5184,
+    "height": 2912,
+    "editorialMetadata": true,
+    "qualityPriority": 1650,
+    "reviewStatus": "Exact CC licence, original dimensions and geolocated subject reviewed 26 Oct 2026; archive builder must verify live metadata and photo bytes."
+  },
+  {
+    "file": "Galapagos sea lion 2025-09-04 (54872992596).jpg",
+    "author": "Enoch Leung",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Galápagos sea lion photographed at Española Island Ecuador",
+    "width": 8256,
+    "height": 5504,
+    "editorialMetadata": true,
+    "qualityPriority": 1650,
+    "reviewStatus": "Exact CC licence, original dimensions and geolocated subject reviewed 26 Oct 2026; archive builder must verify live metadata and photo bytes."
+  }
+],...(data["country-ec"]||[])];
+data["country-pw"]=[...[
+  {
+    "file": "Palau Rock Islands 01.jpg",
+    "author": "Dbuges33",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "subject": "Kayaking between the limestone Rock Islands of Palau",
+    "width": 3024,
+    "height": 4032,
+    "editorialMetadata": true,
+    "qualityPriority": 1650,
+    "reviewStatus": "Exact CC licence, original dimensions and geolocated subject reviewed 26 Oct 2026; archive builder must verify live metadata and photo bytes."
+  }
+],...(data["country-pw"]||[])];
 if(root)root.RevisionWorldV104Photos=Object.freeze(data);
 if(typeof module==='object'&&module.exports)module.exports=data;
 })(typeof window==='object'?window:null);
