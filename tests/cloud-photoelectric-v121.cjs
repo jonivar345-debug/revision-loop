@@ -40,7 +40,7 @@ assert.match(html,/cloud-sync\.js\?v=121/);
 assert.ok(html.indexOf('photoelectric-flashcard-marking.js')<html.indexOf('app.js?v=121'));
 assert.match(sw,/photoelectric-flashcard-marking\.js/);
 assert.match(app,/c\.id===window\.RevisionPhotoelectricCardMarking\?\.TARGET_ID/);
-assert.match(app,/Choose a rating to save the review/);
+assert.match(app,/Choose a rating to (?:record|save) (?:the|your) review/);
 assert.match(cloud,/onSnapshot\(remoteRef\(\)/);
 assert.match(cloud,/requestCloudCheck\(\)/);
 assert.match(cloud,/function hasUnsavedAnswer\(\)/);
