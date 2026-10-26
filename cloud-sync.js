@@ -97,7 +97,7 @@ async function inspect(){
     const action=core.assess({
       remoteRevision:remote?.revision||0,checkpoint:cp,
       localFingerprint:hash,remoteFingerprint:remote?await fingerprint(remoteBackup(remote).values):null,
-      uid:user.uid,manualRestore:localStorage.getItem(MANUAL_RESTORE_KEY)==='1'
+      uid:user.uid,manualRestore:!!cp&&localStorage.getItem(MANUAL_RESTORE_KEY)==='1'
     });
     if(action==='first-upload'){
       active=false;changePhase('first-upload','No online backup yet. Select Upload this device to start cloud saving; nothing has been uploaded.');
@@ -134,6 +134,7 @@ async function firstUpload(){
     });
     latestRemote={payload,revision:1};
     saveCheckpoint(user.uid,1,hash);
+    localStorage.removeItem(MANUAL_RESTORE_KEY);
     active=true;changePhase('active','Cloud backup created. Future progress will synchronise automatically.');
   }catch(err){
     changePhase('error','Cloud backup not created: '+err.message+'. Your local progress is safe.');
