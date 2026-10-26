@@ -36,8 +36,9 @@ for(let i=0;i<added.length;i++){
  assert(c.accept.includes(c.back),'Model answer must be accepted '+c.id);
  assert(c.specRef.startsWith('3.') && c.specRef.split('.').length >= 2,'Missing syllabus section '+c.id);
  assert.equal(c.courseTopic,c.topic);assert.equal(c.revisionTopic,c.topic);
- assert.equal(c.mock,c.stage==='AS','Year 2 material must not leak into November mock '+c.id);
- assert.equal(c.taught,c.mock);
+ const pureMathsMock = c.subject !== 'Maths' || !['3.15','3.16','3.18','3.19'].includes(c.specRef);
+ assert.equal(c.mock,c.stage==='AS'&&pureMathsMock,'Pure Year 1 mock must exclude Stats, Mechanics and A2 '+c.id);
+ assert.equal(c.taught,c.stage==='AS','AS non-Pure cards can be taught but not mock-eligible');
  assert.equal(c.scope,c.mock?'mock':'full');
  const key=c.subject+':'+normalize(c.front);
  assert(!questions.has(key),'Duplicate front with live history '+c.id);
