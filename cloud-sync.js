@@ -30,7 +30,7 @@ function buttons(){
   visible('cloudGoogleSignIn',!user);
   visible('cloudGoogleSignOut',!!user);
   visible('cloudUploadDevice',!!user&&phase==='first-upload');
-  visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'||phase==='remote-ready'));
+  visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
   visible('cloudDownloadRemote',!!user&&!!latestRemote);
   visible('cloudSaveNow',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
@@ -100,7 +100,7 @@ async function applyRemote(record,automatic=false){
   const incoming=remoteBackup(record);
   if(automatic&&hasUnsavedAnswer()){
     active=false;
-    changePhase('remote-ready','Newer cloud progress is available. Finish the current flashcard, then select Use cloud progress here. Your answer has not been replaced.');
+    changePhase('remote-ready','Newer cloud progress is available. Finish the flashcard, then press Check cloud now. If you rate this answer, cloud saving will pause to protect both versions.');
     return;
   }
   if(!automatic){
