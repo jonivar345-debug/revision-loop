@@ -1,6 +1,6 @@
 {
-  "description": "World v114: extend the locally hosted World archive with eight place-specific photo gallery candidates while protecting previously hosted photographs.",
-  "quality": "Earlier high-quality local WebPs retained; new galleries and covers use progressive size-budgeted WebP with 1600px/760px long-edge limits and minimum readable detail, never upscaled.",
+  "description": "World v116 editorial candidate: 7 new four-photo destinations, plus replacement of four repeated/weak slots in 3 existing galleries; no photo count claimed until binary import passes",
+  "quality": "Preserve all prior local WebPs where selected Commons source/slot remains unchanged; source rights and derivatives must be checked before publication",
   "locations": {
     "london": [
       "The Tower Bridge, London, UK.jpg",
@@ -1451,8 +1451,8 @@
     "country-za": [
       "Table mountain in Cape Town.jpg",
       "A view from Pinnacle Point, Mossel Bay, South Africa.jpg",
-      "R381, Loxton to Beaufort West, South Africa 02.jpg",
-      "R381, Loxton to Beaufort West, South Africa 03.jpg"
+      "Kruger National Park.jpg",
+      "Blyde river canyon.JPG"
     ],
     "auckland": [
       "AucklandCBD2026.jpg",
@@ -1463,14 +1463,56 @@
     "alexandria": [
       "San Stefano Grand Plaza.JPG",
       "Lighthouse beside the Montazah garden in Alexandria.jpg",
-      "Lighthouse beside the Montaza garden in Alexandria.jpg",
+      "Bibliotheca Alexandrina (1).jpg",
       "Alexandria Beach.JPG"
     ],
     "papeete": [
       "Papeete Town Hall (48816284567).jpg",
-      "Papeete Town Hall, Papeete, 2009.jpg",
+      "Marché de Papeete.JPG",
       "Park (Papeete - Tahiti).jpg",
       "Rade de Papeete.jpg"
+    ],
+    "losangeles": [
+      "Hollywood sign (8485145044).jpg",
+      "Skyline from Griffith Observatory.jpg",
+      "Santa Monica - Pier beach.jpg",
+      "Los Angeles River Atwater LA Mar23 A7R 04054.jpg"
+    ],
+    "washingtondc": [
+      "12-07-13-washington-by-RalfR-08.jpg",
+      "DC Washington Monument.jpg",
+      "Key Bridge Georgetown waterfront Washington DC 2023-10-28 07-53-55.jpg",
+      "Frederick Douglass Memorial Bridge from the southwest Washington DC 2022-11-26 16-48-14.jpg"
+    ],
+    "mombasa": [
+      "Man pulling a cart packed with goods in a Mombasa street.jpg",
+      "The Fort Jesus Mombasa, Kenya.JPG",
+      "Shree Cutch Satsang Swaminarayan Temple (Mombasa), 2025 (04).jpg",
+      "Government Square (Mombasa), 2025 (01).jpg"
+    ],
+    "bogota": [
+      "Bogota, Colombia (36668708290).jpg",
+      "Monserrate y centro de Bogota.jpg",
+      "Primatial Cathedral of Bogotá 01.jpg",
+      "BOG Museo del Oro.JPG"
+    ],
+    "cape_coast": [
+      "Castle, Cape Coast (P1100223).jpg",
+      "A fisherman in Cape Coast, Ghana.jpg",
+      "Beach of Cape Coast.jpg",
+      "View off the Cape Coast-Elmina Road.JPG"
+    ],
+    "country-ec": [
+      "Cotopaxi Volcano.jpg",
+      "Quito Panorama of the historic center from Casa Bella Vista 15.jpg",
+      "Iguana marina (Amblyrhynchus cristatus), Las Bachas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-23, DD 23.jpg",
+      "Iguana marina (Amblyrhynchus cristatus), isla Lobos, islas Galápagos, Ecuador, 2015-07-25, DD 47.JPG"
+    ],
+    "country-pw": [
+      "Rock-Islands-Palau-1-2016-sea-view-Luka-Peternel.jpg",
+      "Jellyfish Lake aerial (March 2008).jpg",
+      "Palau fruit dove (Ptilinopus pelewensis) Rock Islands.jpg",
+      "Palau fantail (Rhipidura lepida) Rock Islands 3.jpg"
     ]
   }
 }
