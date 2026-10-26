@@ -55889,12 +55889,13 @@
       "specRef": "3.2.2",
       "stage": "AS",
       "topic": "Particles",
-      "front": "What does the negative slope of maximum photoelectron energy against wavelength fail to show?",
-      "back": "The relationship is not linear in wavelength.",
+      "front": "Is maximum photoelectron kinetic energy linear with incident wavelength?",
+      "back": "No. It is linear with frequency, not with wavelength.",
       "accept": [
-        "The relationship is not linear in wavelength.",
-        "not linear",
-        "nonlinear"
+        "No. It is linear with frequency, not with wavelength.",
+        "no",
+        "not linear with wavelength",
+        "linear with frequency"
       ],
       "taught": true,
       "mock": true,
@@ -56238,9 +56239,9 @@
     {
       "id": "task1_v130_034",
       "subject": "Physics",
-      "specRef": "3.4.1",
-      "stage": "AS",
-      "topic": "Mechanics",
+      "specRef": "3.6.1",
+      "stage": "A2",
+      "topic": "Circular motion",
       "front": "What is the centripetal direction of an object's net force in uniform circular motion?",
       "back": "Towards the centre.",
       "accept": [
@@ -56249,13 +56250,13 @@
         "towards centre"
       ],
       "taught": true,
-      "mock": true,
+      "mock": false,
       "active": true,
       "kind": "content",
       "priority": 4,
-      "scope": "mock",
-      "courseTopic": "Mechanics",
-      "revisionTopic": "Mechanics"
+      "scope": "full",
+      "courseTopic": "Circular motion",
+      "revisionTopic": "Circular motion"
     },
     {
       "id": "task1_v130_035",
@@ -58983,6 +58984,50 @@
       "scope": "mock",
       "courseTopic": "Trigonometry",
       "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v130_159",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "stage": "AS",
+      "topic": "Organic chemistry",
+      "front": "On an E-alkene, where are the two higher-priority substituents?",
+      "back": "On opposite sides of the C=C bond.",
+      "accept": [
+        "opposite sides",
+        "opposite sides of the double bond",
+        "on opposite sides"
+      ],
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 4,
+      "scope": "mock",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry"
+    },
+    {
+      "id": "task1_v130_160",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "stage": "A2",
+      "topic": "NMR spectroscopy",
+      "front": "How many adjacent equivalent H atoms normally give a quartet in ¹H NMR?",
+      "back": "Three.",
+      "accept": [
+        "three",
+        "3",
+        "three neighbouring hydrogens"
+      ],
+      "taught": false,
+      "mock": false,
+      "active": true,
+      "kind": "content",
+      "priority": 4,
+      "scope": "full",
+      "courseTopic": "NMR spectroscopy",
+      "revisionTopic": "NMR spectroscopy"
     }
   ],
   "meta": {
@@ -59091,7 +59136,7 @@
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 918,
+      "chemistryNew": 920,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -59253,13 +59298,13 @@
       },
       "v130": {
         "startingCards": 2686,
-        "added": 158,
+        "added": 160,
         "bySubject": {
           "Physics": 72,
-          "Chemistry": 82,
+          "Chemistry": 84,
           "Maths": 4
         },
-        "mockEligible": 105,
+        "mockEligible": 106,
         "duplicateCandidatesPruned": 19,
         "source": "AQA 7408/7405 subject content and AQA 7357 Year 1 syllabus",
         "allSpecBulletsCertified": false,
