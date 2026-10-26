@@ -1161,8 +1161,9 @@ const OPPOSITES=[
  ['constructive','destructive'],['maximum','minimum']
 ];
 function hasMeaning(text,word){
- const nt=' '+normalise(text)+' ',nw=' '+normalise(word)+' ';
- return nt.includes(nw)||normalise(text).split(' ').includes(normalise(word));
+ const nt=' '+normalise(text)+' ',tokens=normalise(text).split(' ');
+ const alternatives=synonymSet(word);
+ return alternatives.some(alt=>nt.includes(' '+alt+' ')||tokens.includes(alt));
 }
 function contradicts(answer,point){
  for(const [a,b] of OPPOSITES){
@@ -1188,8 +1189,14 @@ function synonymSet(t){
 }
 function tokens(x){return normalise(x).split(' ').map(t=>t.replace(/^[.,;:!?]+|[.,;:!?]+$/g,'')).filter(t=>t&&!STOP.has(t)).map(stemToken)}
 function lev(a,b){const n=b.length;let p=Array.from({length:n+1},(_,i)=>i),c=new Array(n+1);for(let i=1;i<=a.length;i++){c[0]=i;for(let j=1;j<=n;j++)c[j]=Math.min(c[j-1]+1,p[j]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));[p,c]=[c,p]}return p[n]}
+function oppositeDirectionWords(a,b){
+ const up=/^(?:increas(?:e|es)?|rise|rises|higher|greater|larger|positive|gain|gains)$/;
+ const down=/^(?:decreas(?:e|es)?|fall|falls|lower|smaller|negative|lose|loses)$/;
+ return (up.test(a)&&down.test(b))||(up.test(b)&&down.test(a));
+}
 function close(a,b){
  a=stemToken(a);b=stemToken(b);
+ if(oppositeDirectionWords(a,b))return false;
  if(a===b)return true;
  for(const x of synonymSet(a))for(const y of synonymSet(b))if(stemToken(x)===stemToken(y))return true;
  const m=Math.max(a.length,b.length),d=lev(a,b);
