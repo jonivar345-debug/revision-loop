@@ -1,0 +1,66 @@
+// Revision Loop proposed Firestore rules.
+// NOT DEPLOYED. Review and emulator-test before adding a Firebase web client.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    function validSegment(segment) {
+      return segment in ['bundle'];
+    }
+
+    function validState() {
+      return request.resource.data.keys().hasOnly(['payload', 'revision', 'updatedAt'])
+        && request.resource.data.keys().hasAll(['payload', 'revision', 'updatedAt'])
+        && request.resource.data.payload is string
+        // Conservative character-count guard; app must also enforce byte limit.
+        && request.resource.data.payload.size() < 800000
+        && request.resource.data.revision is int
+        && request.resource.data.revision > 0
+        && request.resource.data.updatedAt is timestamp;
+    }
+
+    function validHistory() {
+      return request.resource.data.keys().hasOnly([
+          'segment', 'payload', 'baseRevision', 'createdAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'segment', 'payload', 'baseRevision', 'createdAt'
+        ])
+        && validSegment(request.resource.data.segment)
+        && request.resource.data.payload is string
+        && request.resource.data.payload.size() < 800000
+        && request.resource.data.baseRevision is int
+        && request.resource.data.baseRevision >= 0
+        && request.resource.data.createdAt is timestamp;
+    }
+
+    match /users/{userId}/state/{segment} {
+      allow read: if isOwner(userId) && validSegment(segment);
+      allow create: if isOwner(userId)
+        && validSegment(segment)
+        && validState()
+        && request.resource.data.revision == 1;
+      // A stale write MUST fail rather than clobber another device's revision.
+      allow update: if isOwner(userId)
+        && validSegment(segment)
+        && validState()
+        && resource.data.revision is int
+        && request.resource.data.revision == resource.data.revision + 1;
+      allow delete: if false;
+    }
+
+    match /users/{userId}/history/{snapshotId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && validHistory();
+      // History is append-only. Recovery must create a new current revision.
+      allow update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

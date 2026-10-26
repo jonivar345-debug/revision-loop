@@ -194,6 +194,21 @@
         </div>
         <p id="revisionBackupStatus" role="status" aria-live="polite"></p>
       </section>
+      <section class="progress-card" aria-labelledby="cloudSyncHeading">
+        <h3 id="cloudSyncHeading">Automatic private cloud backup</h3>
+        <p>Sign in with Google to back up your XP, points, unlocks, exam results, revision history and settings. Your existing four-digit website PIN remains unchanged. Local saving continues without internet or Google sign-in.</p>
+        <p id="cloudAccountLabel">Not signed in. Browser saving remains available.</p>
+        <div class="preset-row">
+          <button type="button" class="mini-btn" id="cloudGoogleSignIn">Sign in with Google</button>
+          <button type="button" class="mini-btn" id="cloudGoogleSignOut" hidden>Sign out of Google</button>
+          <button type="button" class="mini-btn" id="cloudUploadDevice" hidden>Upload this device to cloud</button>
+          <button type="button" class="mini-btn" id="cloudUseRemote" hidden>Use cloud progress here</button>
+          <button type="button" class="mini-btn" id="cloudDownloadRemote" hidden>Download cloud backup</button>
+          <button type="button" class="mini-btn" id="cloudSaveNow" hidden>Check cloud now</button>
+        </div>
+        <p id="cloudSyncStatus" role="status" aria-live="polite">Cloud saving is optional and not active until you link this device.</p>
+        <p>Before first linking, download a JSON backup above. If two devices have conflicting changes, cloud saving pauses to protect both copies.</p>
+      </section>
     </section>
 
     <section id="shop" class="panel">
@@ -269,6 +284,8 @@
 <script src="world-location-photo-gallery.js?v=117" defer></script>
 <script src="world-city-offline-guides.js?v=103" defer></script>
 <script src="progress-backup.js?v=1" defer></script>
+<script src="cloud-sync-core.js?v=119" defer></script>
+<script type="module" src="cloud-sync.js?v=119"></script>
 <script src="app.js?v=118" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>

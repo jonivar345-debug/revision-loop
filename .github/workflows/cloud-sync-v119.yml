@@ -1,0 +1,31 @@
+name: Cloud sync v119 safety
+on:
+  pull_request:
+    paths:
+      - 'cloud-sync.js'
+      - 'cloud-sync-core.js'
+      - 'firestore.rules'
+      - 'index.html'
+      - 'app.js'
+      - 'progress-backup.js'
+      - 'sw.js'
+      - 'tests/cloud-sync-v119.cjs'
+      - '.github/workflows/cloud-sync-v119.yml'
+  workflow_dispatch:
+jobs:
+  cloud-sync-checks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check cloud-sync-core.js
+      - run: node --input-type=module --check < cloud-sync.js
+      - run: node --check app.js
+      - run: node --check progress-backup.js
+      - run: node tests/cloud-sync-v119.cjs
+      - run: node tests/revision-backup.cjs
+      - run: node tests/world-profile-preservation.cjs
