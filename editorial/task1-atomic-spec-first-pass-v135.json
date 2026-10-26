@@ -1,0 +1,2552 @@
+{
+  "schemaVersion": 1,
+  "sourceDeckVersion": 134,
+  "reviewDate": "2026-10-26",
+  "scope": "First prioritised set of atomic syllabus outcomes, NOT the entire AQA specification",
+  "method": "Paraphrased requirement list derived from official AQA pages. Regex matches FRONT of an active card only, never validates its answer or fully certifies an outcome. Candidates require human review; zeros may be false negatives. Does not change deck. Reviewed source-checked rows contain exact existing front/back snapshots; no review of them changes study progress.",
+  "statusDefinitions": {
+    "candidate_evidence_unverified": "At least one active card front matches this focused search; verify question, answer and scope manually",
+    "manual_search_required": "No front match; do a semantic inspection before adding a new card",
+    "answer_checked_existing": "Question and answer reviewed against the stated narrow requirement; this alone does not establish full specification completion",
+    "partially_supported_needs_card": "Some evidence checked but a distinct required recall point remains weak or absent"
+  },
+  "totals": {
+    "requirements": 113,
+    "bySubject": {
+      "Physics": 37,
+      "Chemistry": 76
+    },
+    "front_match_only": 106,
+    "answer_checked_existing": 6,
+    "partially_supported_needs_card": 1,
+    "still_no_evidence": 0
+  },
+  "requirements": [
+    {
+      "id": "A001",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.1",
+      "requirement": "Relative charges and masses of protons, neutrons and electrons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "chem_atomic_v43_01"
+      ],
+      "candidatePrompts": [
+        "State the relative charge and mass of a proton."
+      ],
+      "searchPromptPattern": "relative (charge|mass).*proton|proton.*neutron.*electron"
+    },
+    {
+      "id": "A002",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "requirement": "Distinguish proton number and mass number",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "v33_card_chemistry_atomic_structure_40",
+        "chem_atomic_v43_04"
+      ],
+      "candidatePrompts": [
+        "What is the difference between atomic number and mass number?",
+        "What does the proton number Z measure?"
+      ],
+      "searchPromptPattern": "mass number|proton number"
+    },
+    {
+      "id": "A003",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "requirement": "Explain isotopes using neutron numbers",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_isotope",
+        "chem_atomic_v43_08",
+        "chem_atomic_v43_11",
+        "chem_atomic_v43_12"
+      ],
+      "candidatePrompts": [
+        "What are isotopes?",
+        "Why do isotopes often have similar chemical properties?",
+        "How do you calculate Ar from two isotope abundances?",
+        "Why is Ar of an isotope mixture a weighted mean?"
+      ],
+      "searchPromptPattern": "isotope"
+    },
+    {
+      "id": "A004",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "requirement": "Explain time-of-flight mass spectrometer stages",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_001",
+        "task1_v130_073"
+      ],
+      "candidatePrompts": [
+        "Why do ions of different mass take different flight times in a TOF mass spectrometer?",
+        "Why are time-of-flight mass-spectrometer ions given the same kinetic energy?"
+      ],
+      "searchPromptPattern": "time.of.flight|tof mass"
+    },
+    {
+      "id": "A005",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "requirement": "Interpret isotopic-abundance spectra or weighted mean",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_003"
+      ],
+      "candidatePrompts": [
+        "How is the weighted mean relative atomic mass calculated?"
+      ],
+      "searchPromptPattern": "isotopic abundance|weighted mean.*(atomic|isotop)|relative atomic mass.*isotop"
+    },
+    {
+      "id": "A006",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.3",
+      "requirement": "Represent electron arrangements in shells and subshells",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "chem_atomic_v43_48",
+        "chem_config_weak_v45_01",
+        "chem_config_weak_v45_02",
+        "chem_config_weak_v45_06"
+      ],
+      "candidatePrompts": [
+        "Why are chromium and copper electron configurations exceptional?",
+        "What is the correct electron configuration of Cr?",
+        "What is the correct electron configuration of Cu?",
+        "What is the electron configuration of Cr³⁺?"
+      ],
+      "searchPromptPattern": "electron configuration|electron arrangement|orbital.*configuration"
+    },
+    {
+      "id": "A007",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.3",
+      "requirement": "Define first ionisation energy precisely",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 13,
+      "candidateCardIds": [
+        "chem_ionisation_def",
+        "chem_ie_trend",
+        "v33_card_chemistry_periodicity_71",
+        "chem_bh_defs_20261024_mg_first_ie_eq"
+      ],
+      "candidatePrompts": [
+        "Define first ionisation energy.",
+        "Why generally does first ionisation energy increase across a period?",
+        "Why does aluminium have a lower first ionisation energy than magnesium?",
+        "Write the equation for magnesium's first ionisation energy."
+      ],
+      "searchPromptPattern": "first ionisation energy"
+    },
+    {
+      "id": "A008",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.3",
+      "requirement": "Interpret successive ionisation energy jumps",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_atomic_v43_41",
+        "task1_chem_004",
+        "task1_chem_005",
+        "task1_v124_bulk_chem_008"
+      ],
+      "candidatePrompts": [
+        "Why do successive ionisation energies increase?",
+        "Why are successive ionisation energies always positive?",
+        "What causes a large jump between successive ionisation energies?",
+        "Why is a big jump in successive ionisation energies significant?"
+      ],
+      "searchPromptPattern": "successive ionisation|ionisation energy.*jump"
+    },
+    {
+      "id": "A009",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.1",
+      "requirement": "Define relative atomic and relative molecular mass against carbon-12",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_ar_def",
+        "chem_atomic_v43_09",
+        "task1_v124_bulk_chem_003"
+      ],
+      "candidatePrompts": [
+        "Define relative atomic mass, Ar.",
+        "Define relative molecular mass Mr.",
+        "How is the weighted mean relative atomic mass calculated?"
+      ],
+      "searchPromptPattern": "relative atomic mass|relative molecular mass"
+    },
+    {
+      "id": "A010",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2",
+      "requirement": "Define mole and Avogadro constant",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_avogadro",
+        "chem_atomic_v43_09",
+        "chem_amount_v44_28",
+        "chem_amount_v44_29"
+      ],
+      "candidatePrompts": [
+        "What is the Avogadro constant?",
+        "Define relative molecular mass Mr.",
+        "What number is represented by the Avogadro constant?",
+        "How do you count ions in a salt using Avogadro's constant?"
+      ],
+      "searchPromptPattern": "avogadro|define.*mole"
+    },
+    {
+      "id": "A011",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2",
+      "requirement": "Recall mole-mass relationship",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "chem_moles_mass"
+      ],
+      "candidatePrompts": [
+        "How do you calculate moles from mass?"
+      ],
+      "searchPromptPattern": "n = m|moles.*mass|mass.*moles"
+    },
+    {
+      "id": "A012",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2",
+      "requirement": "Recall concentration-volume-moles relationship",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_titration_001",
+        "chem_concentration",
+        "task1_chem_011",
+        "task1_v124_bulk_chem_010"
+      ],
+      "candidatePrompts": [
+        "What conversion is needed before using n = cV when volume is given in cm³?",
+        "How do you calculate concentration in mol dm⁻³?",
+        "What does concentration in mol dm⁻³ mean?",
+        "What is the unit of solution concentration in molar calculations?"
+      ],
+      "searchPromptPattern": "concentration.*mol|moles.*concentration|n ?= ?c ?v"
+    },
+    {
+      "id": "A013",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.3",
+      "requirement": "Recall ideal-gas equation and SI conventions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "chem_gas_001",
+        "chem_amount_v44_07",
+        "chem_amount_v44_08",
+        "chem_amount_v44_09"
+      ],
+      "candidatePrompts": [
+        "Which units must be used in pV = nRT?",
+        "State the ideal gas equation and what its symbols mean.",
+        "What three unit conversions are important for pV=nRT?",
+        "Why must Celsius temperatures be converted for pV=nRT?"
+      ],
+      "searchPromptPattern": "ideal gas|pV.?=.?nRT"
+    },
+    {
+      "id": "A014",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.4",
+      "requirement": "Distinguish empirical and molecular formulae",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 12,
+      "candidateCardIds": [
+        "chem_empirical_001",
+        "chem_amount_v44_01",
+        "chem_amount_v44_02",
+        "chem_amount_v44_03"
+      ],
+      "candidatePrompts": [
+        "What is the route from masses to an empirical formula?",
+        "What is the difference between empirical and molecular formula?",
+        "How should percentages be treated when calculating empirical formula?",
+        "What are the three stages of empirical formula calculation?"
+      ],
+      "searchPromptPattern": "empirical formula|molecular formula"
+    },
+    {
+      "id": "A015",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "requirement": "Recognise limiting reagents and balanced-equation ratios",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_amount_v44_13",
+        "chem_energetics_v49_28",
+        "task1_chem_012",
+        "task1_v130_076"
+      ],
+      "candidatePrompts": [
+        "How is the limiting reagent identified?",
+        "Why must a reaction mole ratio be checked before finding molar ΔH?",
+        "What is the limiting reagent?",
+        "Define a limiting reactant."
+      ],
+      "searchPromptPattern": "limiting reagent|limiting reactant|mole ratio"
+    },
+    {
+      "id": "A016",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "requirement": "Define and interpret percentage yield",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 12,
+      "candidateCardIds": [
+        "chem_yield",
+        "v33_card_chemistry_amount_of_substance_38",
+        "chem_amount_v44_16",
+        "chem_amount_v44_17"
+      ],
+      "candidatePrompts": [
+        "What is percentage yield?",
+        "Distinguish theoretical yield from percentage yield.",
+        "What is the formula for percentage yield?",
+        "Why may actual percentage yield be below 100%?"
+      ],
+      "searchPromptPattern": "percentage yield"
+    },
+    {
+      "id": "A017",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "requirement": "Define and interpret atom economy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "chem_atom_economy",
+        "chem_amount_v44_18",
+        "chem_amount_v44_19",
+        "chem_amount_v44_20"
+      ],
+      "candidatePrompts": [
+        "What is atom economy?",
+        "What is the formula for percentage atom economy?",
+        "What is the difference between atom economy and percentage yield?",
+        "Why might industries prefer high atom economy?"
+      ],
+      "searchPromptPattern": "atom economy"
+    },
+    {
+      "id": "A018",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "requirement": "Choose concordant titres and mean titre",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_amount_v44_31",
+        "task1_chem_018",
+        "task1_v127_057",
+        "task1_v127_064"
+      ],
+      "candidatePrompts": [
+        "How are concordant titre values treated?",
+        "What is a concordant titre?",
+        "What does a concordant titre mean?",
+        "Why are concordant titres averaged instead of all titres uncritically?"
+      ],
+      "searchPromptPattern": "concordant|mean titre"
+    },
+    {
+      "id": "A019",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "requirement": "Account for both burette readings in uncertainty",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "v33_card_chemistry_practical_skills_39",
+        "chem_amount_v44_33",
+        "chem_amount_v44_34",
+        "task1_v132_006"
+      ],
+      "candidatePrompts": [
+        "Why does taking a larger titre generally lower percentage burette uncertainty?",
+        "Why are two burette readings included in uncertainty?",
+        "How is percentage titre uncertainty found?",
+        "Each burette reading is ±0.05 cm³. What is the titre's absolute uncertainty?"
+      ],
+      "searchPromptPattern": "burette.*uncertainty|titre.*uncertainty"
+    },
+    {
+      "id": "A020",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.1",
+      "requirement": "Explain electrostatic attraction in an ionic lattice",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "chem_ionic_bond",
+        "v33_card_chemistry_bonding_41",
+        "chem_bh_defs_20261024_ionic_lattice",
+        "chem_bh_weak_20261024_sixmark_theoretical_rank"
+      ],
+      "candidatePrompts": [
+        "What is ionic bonding?",
+        "What holds ions together in a giant ionic lattice?",
+        "What is an ionic lattice?",
+        "Rank the perfect ionic lattice dissociation enthalpies of CaCl₂, AgCl and KCl."
+      ],
+      "searchPromptPattern": "ionic bond|ionic lattice"
+    },
+    {
+      "id": "A021",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.1",
+      "requirement": "Recall charges and formulae of common compound ions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "chem_bonding_v47_05"
+      ],
+      "candidatePrompts": [
+        "Give formulae and charges of sulfate, carbonate and nitrate."
+      ],
+      "searchPromptPattern": "sulfate.*carbonate|ammonium.*nitrate|compound ions"
+    },
+    {
+      "id": "A022",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.2",
+      "requirement": "Distinguish covalent and co-ordinate bonds",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_bonding_v47_12",
+        "chem_bonding_v47_13",
+        "chem_bonding_v47_16",
+        "task1_v124_bulk_chem_182"
+      ],
+      "candidatePrompts": [
+        "What is a coordinate or dative covalent bond?",
+        "How is a coordinate bond represented in a diagram?",
+        "After formation, is a dative bond weaker by definition?",
+        "Which ligand type forms two coordinate bonds to one metal centre?"
+      ],
+      "searchPromptPattern": "dative|coordinate bond|co.ordinate bond"
+    },
+    {
+      "id": "A023",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.3",
+      "requirement": "Define metallic bonding using delocalised electrons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_metallic_bond",
+        "chem_bonding_v47_17",
+        "chem_bonding_v47_20"
+      ],
+      "candidatePrompts": [
+        "What is metallic bonding?",
+        "State the complete definition of metallic bonding.",
+        "Why is Mg metallic bonding often stronger than Na?"
+      ],
+      "searchPromptPattern": "metallic bond"
+    },
+    {
+      "id": "A024",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.4",
+      "requirement": "Explain properties of ionic metallic giant-covalent and molecular lattices",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "v33_card_chemistry_bonding_41",
+        "chem_bonding_v47_21",
+        "task1_full_003",
+        "task1_v125_103"
+      ],
+      "candidatePrompts": [
+        "What holds ions together in a giant ionic lattice?",
+        "Name the four AQA crystal structure types.",
+        "Which Period 3 oxide is a giant covalent solid?",
+        "Which Period 3 element forms a giant covalent lattice?"
+      ],
+      "searchPromptPattern": "giant covalent|giant ionic|crystal structure|structure.*conduct"
+    },
+    {
+      "id": "A025",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.4",
+      "requirement": "Explain ice density through hydrogen-bonded structure",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "chem_bonding_v48_43"
+      ],
+      "candidatePrompts": [
+        "Why is ice less dense than liquid water?"
+      ],
+      "searchPromptPattern": "ice.*(density|hydrogen|less dense)"
+    },
+    {
+      "id": "A026",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.5",
+      "requirement": "Explain electron-pair repulsion hierarchy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "chem_bonding_v52_13"
+      ],
+      "candidatePrompts": [
+        "Why are lone-pair repulsions stronger than bond-pair repulsions?"
+      ],
+      "searchPromptPattern": "lone pair.*repul|repulsion.*(bond|lone)"
+    },
+    {
+      "id": "A027",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.5",
+      "requirement": "Deduce shapes and angles of molecules and ions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 20,
+      "candidateCardIds": [
+        "chem_shape_linear",
+        "chem_shape_trig",
+        "chem_shape_tetra",
+        "chem_lone_pair"
+      ],
+      "candidatePrompts": [
+        "What bond angle is expected for two electron pairs around a central atom?",
+        "What bond angle is expected for three bonding pairs around a central atom?",
+        "What bond angle is expected for four bonding pairs?",
+        "Why do lone pairs reduce bond angles?"
+      ],
+      "searchPromptPattern": "bond angle|molecular shape|vsepr"
+    },
+    {
+      "id": "A028",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.6",
+      "requirement": "Define electronegativity and bond polarity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 10,
+      "candidateCardIds": [
+        "chem_bonding_v48_23",
+        "chem_bonding_v48_24",
+        "chem_bonding_v48_30",
+        "chem_bonding_v52_27"
+      ],
+      "candidatePrompts": [
+        "Define electronegativity.",
+        "What do δ+ and δ− mean on a polar bond?",
+        "How can a molecule have polar bonds but no permanent dipole?",
+        "How do you identify δ+ and δ− in a polar bond?"
+      ],
+      "searchPromptPattern": "electronegativity|polar bond"
+    },
+    {
+      "id": "A029",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.6",
+      "requirement": "Explain why bond dipoles can cancel in a molecule",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_bonding_v48_26",
+        "chem_bonding_v48_27",
+        "chem_bonding_v48_28",
+        "chem_bonding_v52_32"
+      ],
+      "candidatePrompts": [
+        "Why is CO₂ overall non-polar despite two polar C=O bonds?",
+        "Why is BF₃ overall non-polar despite polar B–F bonds?",
+        "Why is CCl₄ overall non-polar despite polar C–Cl bonds?",
+        "Can a non-polar molecule contain polar bonds? Example?"
+      ],
+      "searchPromptPattern": "dipole.*cancel|polar bond.*(non.polar|not polar)|non.polar.*bond"
+    },
+    {
+      "id": "A030",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.7",
+      "requirement": "Distinguish permanent induced and hydrogen-bond forces",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 26,
+      "candidateCardIds": [
+        "chem_hbond",
+        "v33_card_chemistry_intermolecular_forces_43",
+        "chem_bonding_v48_31",
+        "chem_bonding_v48_32"
+      ],
+      "candidatePrompts": [
+        "When can hydrogen bonding occur?",
+        "What must hydrogen be bonded to for usual strong intermolecular hydrogen bonding?",
+        "Which three intermolecular forces are in AQA 3.1.3.7?",
+        "Do all atoms and molecules have van der Waals' (induced dipole–dipole) forces?"
+      ],
+      "searchPromptPattern": "intermolecular|hydrogen bond|london force|van der waals"
+    },
+    {
+      "id": "A031",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.7",
+      "requirement": "Relate intermolecular strength to boiling points",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "answer_checked_existing",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "chem_bonding_v52_39"
+      ],
+      "candidatePrompts": [
+        "How do stronger van der Waals' forces affect boiling point?"
+      ],
+      "searchPromptPattern": "boiling point.*(intermolecular|hydrogen|forces)|intermolecular.*boiling",
+      "answerChecked": [
+        {
+          "id": "chem_bonding_v52_39",
+          "front": "How do stronger van der Waals' forces affect boiling point?",
+          "back": "More energy is needed to separate molecules, so the boiling point increases."
+        }
+      ],
+      "reviewerNote": "Explicit statement that stronger London forces raise boiling point."
+    },
+    {
+      "id": "A032",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "requirement": "Distinguish exothermic and endothermic enthalpy signs",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 29,
+      "candidateCardIds": [
+        "chem_entropy_gibbs_recap_20261024_endothermic_feasible",
+        "chem_kp_recap_20261024_temp_exothermic",
+        "chem_kp_recap_20261024_temp_endothermic",
+        "chem_kc_recap_20261024_temp_exothermic"
+      ],
+      "candidatePrompts": [
+        "Explain how an endothermic reaction can be thermodynamically feasible.",
+        "What happens to Kp when temperature increases for an exothermic forward reaction?",
+        "What happens to Kp when temperature increases for an endothermic forward reaction?",
+        "How does raising T affect Kc for an exothermic forward reaction?"
+      ],
+      "searchPromptPattern": "exothermic|endothermic"
+    },
+    {
+      "id": "A033",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "requirement": "State standard conditions for enthalpy changes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_energetics_v49_08",
+        "chem_energetics_v53_03"
+      ],
+      "candidatePrompts": [
+        "What pressure counts as standard pressure for AQA ΔH°?",
+        "What does 'standard state' mean in enthalpy definitions?"
+      ],
+      "searchPromptPattern": "standard conditions.*enthalpy|standard pressure|standard state.*enthalpy"
+    },
+    {
+      "id": "A034",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "requirement": "Define standard enthalpy of formation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_bh_defs_20261024_latt_formation_def",
+        "chem_bh_defs_20261024_standard_formation_def",
+        "chem_energetics_v49_10",
+        "chem_energetics_v53_05"
+      ],
+      "candidatePrompts": [
+        "Define lattice enthalpy of formation.",
+        "Define standard enthalpy of formation.",
+        "Define standard enthalpy of formation precisely.",
+        "What must a standard enthalpy of formation equation produce?"
+      ],
+      "searchPromptPattern": "enthalpy of formation"
+    },
+    {
+      "id": "A035",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "requirement": "Define standard enthalpy of combustion",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_energetics_v49_15",
+        "chem_energetics_v53_06"
+      ],
+      "candidatePrompts": [
+        "Define standard enthalpy of combustion.",
+        "What must a standard enthalpy of combustion equation consume?"
+      ],
+      "searchPromptPattern": "enthalpy of combustion"
+    },
+    {
+      "id": "A036",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.2",
+      "requirement": "Recall q=mcΔT and heat-to-molar-enthalpy sign",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 21,
+      "candidateCardIds": [
+        "chem_rp2",
+        "chem_energetics_v49_23",
+        "chem_energetics_v49_24",
+        "chem_energetics_v49_30"
+      ],
+      "candidatePrompts": [
+        "What is the core calorimetry calculation?",
+        "In a solution calorimeter, what mass usually goes in q=mcΔT?",
+        "How do you convert calorimetry q from J into kJ?",
+        "What is the purpose of a calorimeter's insulation?"
+      ],
+      "searchPromptPattern": "q ?= ?mc|calorimet|molar enthalpy.*q"
+    },
+    {
+      "id": "A037",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.3",
+      "requirement": "State Hess law and reverse/scale enthalpy changes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 15,
+      "candidateCardIds": [
+        "chem_hess",
+        "chem_energetics_v49_38",
+        "chem_energetics_v49_40",
+        "chem_energetics_v49_41"
+      ],
+      "candidatePrompts": [
+        "What principle is used in Hess cycles?",
+        "State Hess's law.",
+        "What is the combustion-enthalpy Hess calculation?",
+        "Why do equation coefficients matter in Hess calculations?"
+      ],
+      "searchPromptPattern": "hess|reverse.*enthalpy|enthalpy.*reverse"
+    },
+    {
+      "id": "A038",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.4",
+      "requirement": "Define mean bond enthalpy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_energetics_v49_50",
+        "task1_v124_bulk_chem_042"
+      ],
+      "candidatePrompts": [
+        "Define mean bond enthalpy.",
+        "Why is a mean bond enthalpy approximate for a particular bond?"
+      ],
+      "searchPromptPattern": "mean bond enthalpy"
+    },
+    {
+      "id": "A039",
+      "subject": "Chemistry",
+      "specRef": "3.1.4.4",
+      "requirement": "Explain why mean-bond estimates differ from standard values",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_energetics_v49_56",
+        "task1_v124_bulk_chem_042"
+      ],
+      "candidatePrompts": [
+        "Why can mean bond-enthalpy ΔH differ from standard experimental ΔH?",
+        "Why is a mean bond enthalpy approximate for a particular bond?"
+      ],
+      "searchPromptPattern": "average bond|mean bond.*(approx|differ)"
+    },
+    {
+      "id": "A040",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.1",
+      "requirement": "Define activation energy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_energetics_v49_06",
+        "task1_chem_042",
+        "task1_chem_047",
+        "task1_v124_bulk_chem_047"
+      ],
+      "candidatePrompts": [
+        "Does an exothermic reaction necessarily have zero activation energy?",
+        "What is activation energy?",
+        "What does a catalyst do to activation energy?",
+        "Why does temperature raise the fraction of collisions above activation energy?"
+      ],
+      "searchPromptPattern": "activation energy"
+    },
+    {
+      "id": "A041",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.1",
+      "requirement": "Distinguish effective and ineffective collisions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "answer_checked_existing",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "chem_collision"
+      ],
+      "candidatePrompts": [
+        "What two conditions make a collision successful?"
+      ],
+      "searchPromptPattern": "successful collision|collision theory|sufficient energy",
+      "answerChecked": [
+        {
+          "id": "chem_collision",
+          "front": "What two conditions make a collision successful?",
+          "back": "Particles collide with energy at least equal to Ea and with a suitable orientation."
+        }
+      ],
+      "reviewerNote": "Two conditions for an effective collision are present in the model answer."
+    },
+    {
+      "id": "A042",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.2",
+      "requirement": "Interpret Maxwell-Boltzmann distribution and temperature effects",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_chem_044",
+        "task1_chem_050",
+        "task1_v124_bulk_chem_048",
+        "task1_v124_bulk_chem_049"
+      ],
+      "candidatePrompts": [
+        "How does increasing temperature change the Maxwell–Boltzmann curve?",
+        "What does the area under a Maxwell–Boltzmann curve represent?",
+        "What remains constant under a Maxwell–Boltzmann curve for a fixed number of particles?",
+        "How does the Maxwell–Boltzmann peak change when temperature rises?"
+      ],
+      "searchPromptPattern": "maxwell|boltzmann|distribution of energies"
+    },
+    {
+      "id": "A043",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.3",
+      "requirement": "Explain the temperature dependence of rate",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_v123_chem_042",
+        "task1_v124_bulk_chem_050",
+        "chem_y1_chat_v126_013",
+        "task1_v130_096"
+      ],
+      "candidatePrompts": [
+        "Why must temperature be controlled when comparing initial rates?",
+        "Why does a catalyst raise the rate without raising temperature?",
+        "Give two controls in a temperature–rate practical.",
+        "What changes in a rate equation when temperature changes?"
+      ],
+      "searchPromptPattern": "temperature.*rate|rate.*temperature"
+    },
+    {
+      "id": "A044",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.3",
+      "requirement": "Interpret measured-rate graph or reciprocal time in RP3",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 19,
+      "candidateCardIds": [
+        "chem_arrhenius_001",
+        "chem_arrhenius_002",
+        "chem_rp3",
+        "v33_card_chemistry_arrhenius_50"
+      ],
+      "candidatePrompts": [
+        "For a graph of ln k against 1/T, what are the gradient and y-intercept?",
+        "How do you calculate Ea from the gradient of ln k against 1/T?",
+        "Why can 1/t be used as a measure of rate in a clock reaction?",
+        "What does the gradient of ln k plotted against 1/T equal?"
+      ],
+      "searchPromptPattern": "disappearing cross|1/t|reciprocal time|rate.*graph"
+    },
+    {
+      "id": "A045",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.4",
+      "requirement": "Explain rate changes from concentration or gas pressure",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v125_140"
+      ],
+      "candidatePrompts": [
+        "What does a horizontal rate–concentration plot imply for that reactant?"
+      ],
+      "searchPromptPattern": "concentration.*collision|pressure.*collision|rate.*concentration"
+    },
+    {
+      "id": "A046",
+      "subject": "Chemistry",
+      "specRef": "3.1.5.5",
+      "requirement": "Explain how a catalyst changes activation energy but not equilibrium",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 25,
+      "candidateCardIds": [
+        "chem_catalyst",
+        "chem_esterification",
+        "chem_a2_tm_catalyst",
+        "chem_a2_friedel"
+      ],
+      "candidatePrompts": [
+        "How does a catalyst increase reaction rate?",
+        "What are the reagents and catalyst for esterification?",
+        "Why are transition metals often good catalysts?",
+        "What catalyst is commonly used for Friedel–Crafts acylation?"
+      ],
+      "searchPromptPattern": "catalyst"
+    },
+    {
+      "id": "A047",
+      "subject": "Chemistry",
+      "specRef": "3.1.6.1",
+      "requirement": "Describe dynamic equilibrium and equal opposing rates",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_chem_051",
+        "task1_v124_bulk_chem_055",
+        "task1_v125_094",
+        "task1_v130_089"
+      ],
+      "candidatePrompts": [
+        "What defines dynamic equilibrium?",
+        "What is the defining feature of dynamic equilibrium?",
+        "What stays constant in a closed system at dynamic equilibrium?",
+        "What is meant by dynamic equilibrium?"
+      ],
+      "searchPromptPattern": "dynamic equilibrium|forward.*reverse.*rate"
+    },
+    {
+      "id": "A048",
+      "subject": "Chemistry",
+      "specRef": "3.1.6.1",
+      "requirement": "Apply Le Chatelier to pressure concentration and temperature",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_lechatelier",
+        "v33_card_chemistry_equilibria_52",
+        "task1_v130_087"
+      ],
+      "candidatePrompts": [
+        "State Le Chatelier's principle.",
+        "Does a catalyst change the equilibrium constant or position of equilibrium?",
+        "Why does a catalyst not change the position of equilibrium?"
+      ],
+      "searchPromptPattern": "le chatelier|position of equilibrium|equilibrium.*pressure"
+    },
+    {
+      "id": "A049",
+      "subject": "Chemistry",
+      "specRef": "3.1.6.1",
+      "requirement": "Explain industrial compromise conditions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "answer_checked_existing",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "chem_y1_chat_v126_021",
+        "chem_y1_chat_v126_022"
+      ],
+      "candidatePrompts": [
+        "Why not use an extremely low temperature in the Haber process?",
+        "Why not use an extremely high Haber-process pressure?"
+      ],
+      "searchPromptPattern": "compromise temperature|compromise pressure|industrial.*equilibrium",
+      "answerChecked": [
+        {
+          "id": "chem_y1_chat_v126_021",
+          "front": "Why not use an extremely low temperature in the Haber process?",
+          "back": "Equilibrium yield rises, but ammonia production becomes too slow."
+        },
+        {
+          "id": "chem_y1_chat_v126_022",
+          "front": "Why not use an extremely high Haber-process pressure?",
+          "back": "Compression is costly and demands expensive high-pressure equipment."
+        }
+      ],
+      "reviewerNote": "Separately covers why low temperature and extreme high pressure are unsuitable industrial compromises."
+    },
+    {
+      "id": "A050",
+      "subject": "Chemistry",
+      "specRef": "3.1.6.2",
+      "requirement": "Construct Kc expressions from stoichiometric equations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_kc",
+        "chem_kc_recap_20261024_solids_liquids",
+        "task1_chem_057",
+        "task1_chem_058"
+      ],
+      "candidatePrompts": [
+        "What goes into a Kc expression?",
+        "Which species are omitted from Kc expressions?",
+        "What goes into the Kc expression?",
+        "Which species are omitted from a Kc expression?"
+      ],
+      "searchPromptPattern": "Kc.*expression|expression.*Kc"
+    },
+    {
+      "id": "A051",
+      "subject": "Chemistry",
+      "specRef": "3.1.6.2",
+      "requirement": "Explain when Kc changes with temperature",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_chem_060",
+        "task1_v124_bulk_chem_056",
+        "task1_v125_095",
+        "task1_v125_098"
+      ],
+      "candidatePrompts": [
+        "Does changing initial concentration change Kc at fixed temperature?",
+        "What happens to Kc when a catalyst is added at fixed temperature?",
+        "Does changing initial concentration alter Kc at fixed temperature?",
+        "What happens to Kc when total pressure changes at fixed temperature?"
+      ],
+      "searchPromptPattern": "Kc.*temperature|temperature.*Kc"
+    },
+    {
+      "id": "A052",
+      "subject": "Chemistry",
+      "specRef": "3.1.6.2",
+      "requirement": "Explain why concentration changes and catalysts do not change Kc",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_056"
+      ],
+      "candidatePrompts": [
+        "What happens to Kc when a catalyst is added at fixed temperature?"
+      ],
+      "searchPromptPattern": "Kc.*catalyst|Kc.*concentration"
+    },
+    {
+      "id": "A053",
+      "subject": "Chemistry",
+      "specRef": "3.1.7",
+      "requirement": "Define oxidation/reduction and agents in terms of electrons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 18,
+      "candidateCardIds": [
+        "chem_redox_reduc",
+        "chem_halogen_oxidising",
+        "chem_alcohol_primary",
+        "chem_alcohol_primary_reflux"
+      ],
+      "candidatePrompts": [
+        "What is reduction in terms of electrons and oxidation state?",
+        "How does halogen oxidising power change down Group 7?",
+        "What forms when a primary alcohol is oxidised gently and distilled?",
+        "What forms when a primary alcohol is oxidised under reflux with excess oxidant?"
+      ],
+      "searchPromptPattern": "oxidis|reduc.*electron|oxidant"
+    },
+    {
+      "id": "A054",
+      "subject": "Chemistry",
+      "specRef": "3.1.7",
+      "requirement": "Determine oxidation states from formulae",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 18,
+      "candidateCardIds": [
+        "chem_redox_oxid",
+        "chem_redox_reduc",
+        "task1_chem_065",
+        "task1_chem_066"
+      ],
+      "candidatePrompts": [
+        "What is oxidation in terms of electrons and oxidation state?",
+        "What is reduction in terms of electrons and oxidation state?",
+        "What is the oxidation state of a free element?",
+        "What is the oxidation state of oxygen in a peroxide?"
+      ],
+      "searchPromptPattern": "oxidation state"
+    },
+    {
+      "id": "A055",
+      "subject": "Chemistry",
+      "specRef": "3.1.7",
+      "requirement": "Construct and combine ionic half-equations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 8,
+      "candidateCardIds": [
+        "chem_y1_chat_v126_037",
+        "chem_y1_chat_v126_038",
+        "chem_y1_chat_v126_039",
+        "chem_y1_chat_v126_040"
+      ],
+      "candidatePrompts": [
+        "Write the oxidation half-equation for iodide to iodine.",
+        "Write the reduction half-equation for chlorine.",
+        "Write the oxidation half-equation for magnesium.",
+        "Write the reduction half-equation Fe³⁺ to Fe²⁺."
+      ],
+      "searchPromptPattern": "half.equation|combine.*half"
+    },
+    {
+      "id": "A056",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.1",
+      "requirement": "Identify element block from outer electron",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "chem_y1_chat_v126_049"
+      ],
+      "candidatePrompts": [
+        "Why is helium an s-block element although placed in Group 0?"
+      ],
+      "searchPromptPattern": "s.block|p.block|d.block|periodic.*block"
+    },
+    {
+      "id": "A057",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "Explain Period 3 atomic-radius trends",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_period_atomic",
+        "task1_chem_069"
+      ],
+      "candidatePrompts": [
+        "Why does atomic radius generally decrease across Period 3?",
+        "How does atomic radius change across Period 3?"
+      ],
+      "searchPromptPattern": "period 3.*atomic radius|atomic radius.*period 3"
+    },
+    {
+      "id": "A058",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "Explain ionisation energy anomalies across Period 3",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "answer_checked_existing",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "task1_chem_071",
+        "task1_chem_072"
+      ],
+      "candidatePrompts": [
+        "Why is the first ionisation energy of Al below Mg?",
+        "Why is the first ionisation energy of S below P?"
+      ],
+      "searchPromptPattern": "period 3.*ionisation|aluminium.*magnesium.*ionisation",
+      "answerChecked": [
+        {
+          "id": "task1_chem_071",
+          "front": "Why is the first ionisation energy of Al below Mg?",
+          "back": "Al loses a higher-energy 3p electron."
+        },
+        {
+          "id": "task1_chem_072",
+          "front": "Why is the first ionisation energy of S below P?",
+          "back": "Paired 3p electrons repel, easing removal."
+        }
+      ],
+      "reviewerNote": "Both Al/Mg subshell and S/P paired-electron ionisation anomalies covered."
+    },
+    {
+      "id": "A059",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "Explain Period 3 melting point trends through bonding",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "task1_chem_073",
+        "task1_chem_074",
+        "task1_v124_bulk_chem_074"
+      ],
+      "candidatePrompts": [
+        "Which Period 3 element has the highest melting point?",
+        "Why does silicon have a very high melting point?",
+        "Why does Period 3 melting point peak at silicon?"
+      ],
+      "searchPromptPattern": "period 3.*melting|silicon.*melting"
+    },
+    {
+      "id": "A060",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "requirement": "Explain first ionisation energy and radius trends down Group 2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "answer_checked_existing",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "chem_atomic_v43_46",
+        "task1_v131_081"
+      ],
+      "candidatePrompts": [
+        "Why does first IE fall down Group 2?",
+        "What happens to atomic radius down Group 2?"
+      ],
+      "searchPromptPattern": "group 2.*(radius|ionisation)",
+      "answerChecked": [
+        {
+          "id": "chem_atomic_v43_46",
+          "front": "Why does first IE fall down Group 2?",
+          "back": "Outer electrons are farther away and more shielded, despite a larger nuclear charge."
+        },
+        {
+          "id": "task1_v131_081",
+          "front": "What happens to atomic radius down Group 2?",
+          "back": "It increases."
+        }
+      ],
+      "reviewerNote": "Down-group shielding explanation and radius trend covered."
+    },
+    {
+      "id": "A061",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "requirement": "Compare reactions of Group 2 elements with water",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_chem_082",
+        "chem_y1_chat_v126_062",
+        "chem_y1_chat_v126_066",
+        "task1_v131_071"
+      ],
+      "candidatePrompts": [
+        "What forms when a Group 2 metal reacts with water?",
+        "Write magnesium's slow reaction with cold water.",
+        "Write barium's reaction with water.",
+        "Which Group 2 metal is least reactive with cold water among Mg–Ba?"
+      ],
+      "searchPromptPattern": "group 2.*water|barium.*water|magnesium.*water"
+    },
+    {
+      "id": "A062",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "requirement": "Explain trend in Group 2 hydroxide solubility",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_group2_hydroxide",
+        "task1_chem_083"
+      ],
+      "candidatePrompts": [
+        "How does Group 2 hydroxide solubility change down the group?",
+        "What is the trend in Group 2 hydroxide solubility?"
+      ],
+      "searchPromptPattern": "hydroxide.*solubility|solubility.*hydroxide"
+    },
+    {
+      "id": "A063",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "requirement": "Explain trend in Group 2 sulfate solubility",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_group2_sulfate",
+        "task1_chem_084"
+      ],
+      "candidatePrompts": [
+        "How does Group 2 sulfate solubility change down the group?",
+        "What is the trend in Group 2 sulfate solubility?"
+      ],
+      "searchPromptPattern": "sulfate.*solubility|solubility.*sulfate"
+    },
+    {
+      "id": "A064",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "requirement": "Interpret sulfate-ion test with acidified barium reagent",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "chem_amount_v44_24",
+        "task1_chem_089",
+        "task1_chem_090",
+        "task1_v124_bulk_chem_084"
+      ],
+      "candidatePrompts": [
+        "Write the net ionic equation for barium sulfate precipitation.",
+        "Why acidify the barium-chloride sulfate test?",
+        "What observation indicates sulfate ions in the barium-ion test?",
+        "Why is acid included in the sulfate-ion test?"
+      ],
+      "searchPromptPattern": "sulfate.*test|barium.*(acidif|sulfate)"
+    },
+    {
+      "id": "A065",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "requirement": "Recall uses of Mg(OH)2 Ca(OH)2 and BaSO4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_chem_086",
+        "task1_v124_bulk_chem_081"
+      ],
+      "candidatePrompts": [
+        "Which Group 2 hydroxide is an antacid?",
+        "Why is magnesium hydroxide used as an antacid?"
+      ],
+      "searchPromptPattern": "antacid|soil.*(lime|pH)|barium sulfate.*(medical|contrast)"
+    },
+    {
+      "id": "A066",
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "requirement": "Explain halogen electronegativity and boiling trends",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "task1_chem_092",
+        "task1_chem_093",
+        "task1_v131_085"
+      ],
+      "candidatePrompts": [
+        "How does halogen electronegativity change down Group 7?",
+        "How do halogen boiling points change down Group 7?",
+        "Why does halogen electronegativity decrease down the group?"
+      ],
+      "searchPromptPattern": "halogen.*electronegativ|boiling.*group 7|boiling.*halogen"
+    },
+    {
+      "id": "A067",
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "requirement": "Explain halogen oxidising power down Group 7",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_halogen_oxidising",
+        "task1_chem_096",
+        "chem_y1_chat_v126_082",
+        "task1_v131_082"
+      ],
+      "candidatePrompts": [
+        "How does halogen oxidising power change down Group 7?",
+        "How does oxidising strength change down Group 7?",
+        "Which is the strongest oxidising halogen?",
+        "How does oxidising ability of halogens change down Group 7?"
+      ],
+      "searchPromptPattern": "oxidising.*(halogen|group 7)|halogen.*oxidis"
+    },
+    {
+      "id": "A068",
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "requirement": "Explain halide reducing power down Group 7",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_halide_reducing",
+        "task1_chem_097",
+        "task1_v131_083"
+      ],
+      "candidatePrompts": [
+        "How does halide-ion reducing power change down Group 7?",
+        "How does reducing strength of halide ions change down the group?",
+        "How does reducing ability of halide ions change down Group 7?"
+      ],
+      "searchPromptPattern": "halide.*reduc|reduc.*halide"
+    },
+    {
+      "id": "A069",
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "requirement": "Predict halogen displacement reactions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_displacement_halogen",
+        "task1_v124_bulk_chem_094",
+        "task1_v131_086",
+        "task1_v131_087"
+      ],
+      "candidatePrompts": [
+        "When will one halogen displace another halide?",
+        "Which halogen displaces bromide ions from solution?",
+        "Which halogen displaces bromide and iodide from aqueous solutions?",
+        "Which halogen displaces iodide but not chloride from aqueous solutions?"
+      ],
+      "searchPromptPattern": "halogen.*displace|displacement.*halogen"
+    },
+    {
+      "id": "A070",
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "requirement": "Interpret silver nitrate tests of Cl- Br- I-",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 13,
+      "candidateCardIds": [
+        "task1_chem_102",
+        "task1_chem_103",
+        "task1_chem_104",
+        "task1_chem_105"
+      ],
+      "candidatePrompts": [
+        "Which silver halide dissolves in dilute ammonia?",
+        "Which silver halide dissolves in concentrated ammonia, but not dilute?",
+        "Which silver halide is insoluble in ammonia?",
+        "Why acidify silver nitrate in a halide test?"
+      ],
+      "searchPromptPattern": "silver nitrate|silver halide|halide test"
+    },
+    {
+      "id": "A071",
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "requirement": "Explain role of chlorine in water treatment and risks",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_096"
+      ],
+      "candidatePrompts": [
+        "Why is chlorine used in water treatment?"
+      ],
+      "searchPromptPattern": "chlorin.*water treat|chlorin.*disinfect|chlorin.*water purification"
+    },
+    {
+      "id": "A072",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.1",
+      "requirement": "Distinguish molecular structural displayed skeletal formulae",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_chem_113",
+        "task1_chem_114",
+        "task1_v124_bulk_chem_097",
+        "task1_v125_154"
+      ],
+      "candidatePrompts": [
+        "What does 'displayed formula' show?",
+        "What is a skeletal formula?",
+        "What is the difference between a molecular and displayed formula?",
+        "What does a displayed formula show that a structural formula may omit?"
+      ],
+      "searchPromptPattern": "skeletal formula|displayed formula|structural formula"
+    },
+    {
+      "id": "A073",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.2",
+      "requirement": "Distinguish radical and curly-arrow mechanisms",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_mechanisms_v42_01",
+        "task1_chem_118",
+        "task1_v124_bulk_chem_101",
+        "task1_v124_bulk_chem_102"
+      ],
+      "candidatePrompts": [
+        "Where should the tail of a curly arrow be placed?",
+        "What does a curly arrow represent in an organic mechanism?",
+        "What does a curly arrow starting from a bond represent?",
+        "What does a single-headed curly arrow represent?"
+      ],
+      "searchPromptPattern": "curly arrow|radical mechanism"
+    },
+    {
+      "id": "A074",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.3",
+      "requirement": "Define structural isomer and stereoisomer",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_chem_110",
+        "task1_chem_141",
+        "task1_chem_142",
+        "task1_v130_116"
+      ],
+      "candidatePrompts": [
+        "What is a structural isomer?",
+        "What does E mean in E/Z stereoisomerism?",
+        "What does Z mean in E/Z stereoisomerism?",
+        "What makes two molecules structural isomers?"
+      ],
+      "searchPromptPattern": "structural isomer|stereoisomer"
+    },
+    {
+      "id": "A075",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.3",
+      "requirement": "Apply E/Z CIP priority rules",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 50,
+      "candidateCardIds": [
+        "chem_rp4",
+        "chem_hess",
+        "chem_lechatelier",
+        "chem_cip"
+      ],
+      "candidatePrompts": [
+        "What precipitate colours identify chloride, bromide and iodide after acidifying and adding AgNO₃?",
+        "What principle is used in Hess cycles?",
+        "State Le Chatelier's principle.",
+        "How are priorities assigned using CIP rules?"
+      ],
+      "searchPromptPattern": "CIP|E.Z isomer"
+    },
+    {
+      "id": "A076",
+      "subject": "Chemistry",
+      "specRef": "3.3.6.3",
+      "requirement": "Recognise IR fingerprint and characteristic bond absorptions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "chem_ir_oh",
+        "task1_chem_153",
+        "task1_chem_155",
+        "task1_v124_bulk_chem_139"
+      ],
+      "candidatePrompts": [
+        "Where is the broad O–H absorption of an alcohol in an IR spectrum?",
+        "What does a broad O–H infrared absorption suggest?",
+        "What does a fingerprint region help identify?",
+        "What is the fingerprint region in IR?"
+      ],
+      "searchPromptPattern": "infrared.*absorp|IR.*spectrum|fingerprint region"
+    },
+    {
+      "id": "A077",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "requirement": "Recall SI base quantities and units",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "phy_measure_recap_20261024_base_si",
+        "phy_measure_recap_20261024_derived_n",
+        "phy_measure_recap_20261024_derived_j",
+        "phy_measure_recap_20261024_derived_w"
+      ],
+      "candidatePrompts": [
+        "Name the six SI base units covered by AQA Physics 3.1.",
+        "Express the newton (N) using SI base units.",
+        "Express the joule (J) using SI base units.",
+        "Express the watt (W) using SI base units."
+      ],
+      "searchPromptPattern": "SI base|base unit|fundamental unit"
+    },
+    {
+      "id": "A078",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "requirement": "Use SI prefixes and scientific notation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "phy_measure_recap_20261024_prefix_micro_nano",
+        "task1_phy_001",
+        "task1_phy_002",
+        "task1_phy_003"
+      ],
+      "candidatePrompts": [
+        "What powers of ten do micro (μ) and nano (n) mean?",
+        "What does the SI prefix pico (p) mean?",
+        "What does the SI prefix femto (f) mean?",
+        "What does the SI prefix tera (T) mean?"
+      ],
+      "searchPromptPattern": "SI prefix|micro.*nano|prefix"
+    },
+    {
+      "id": "A079",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "requirement": "Convert electronvolts joules and kilowatt-hours",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_measure_recap_20261024_ev_j",
+        "phy_measure_recap_20261024_kwh_j",
+        "task1_phy_006",
+        "task1_v124_bulk_phy_005"
+      ],
+      "candidatePrompts": [
+        "Convert 1 electronvolt (eV) into joules.",
+        "Convert 1 kilowatt-hour into joules.",
+        "How many joules are in one kilowatt-hour?",
+        "How many joules is one electronvolt?"
+      ],
+      "searchPromptPattern": "electronvolt.*joule|joule.*electronvolt|kW.?h|kilowatt.hour"
+    },
+    {
+      "id": "A080",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "requirement": "Distinguish random and systematic measurement error",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_uncert_random",
+        "phy_uncert_systematic",
+        "v33_card_physics_practical_skills_31",
+        "task1_v124_bulk_phy_011"
+      ],
+      "candidatePrompts": [
+        "What is a random error?",
+        "What is a systematic error?",
+        "What is a systematic error and why don't repeats remove it?",
+        "What is a random error's effect on repeated readings?"
+      ],
+      "searchPromptPattern": "random error|systematic error"
+    },
+    {
+      "id": "A081",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "requirement": "Define repeatability reproducibility and resolution",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "phy_med_ultrasound_resolution",
+        "task1_phy_011",
+        "task1_phy_012",
+        "task1_phy_013"
+      ],
+      "candidatePrompts": [
+        "What trade-off affects ultrasound resolution and penetration?",
+        "What is resolution?",
+        "What is repeatability?",
+        "What is reproducibility?"
+      ],
+      "searchPromptPattern": "repeatabil|reproducib|resolution"
+    },
+    {
+      "id": "A082",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "requirement": "Combine percentage uncertainty for multiplication and powers",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "partially_supported_needs_card",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "phy_uncert_power"
+      ],
+      "candidatePrompts": [
+        "If y = xⁿ, what happens to percentage uncertainty?"
+      ],
+      "searchPromptPattern": "uncertainty.*power|uncertainty.*multiply|percentage uncertainty.*product|uncertainty.*squared",
+      "answerChecked": [
+        {
+          "id": "phy_uncert_power",
+          "front": "If y = xⁿ, what happens to percentage uncertainty?",
+          "back": "Multiply the percentage uncertainty in x by |n|."
+        }
+      ],
+      "reviewerNote": "Exponent-related percentage uncertainty covered; no concise multiplication/division uncertainty card identified in first semantic pass."
+    },
+    {
+      "id": "A083",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "requirement": "Combine absolute uncertainty for addition and subtraction",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_phy_017"
+      ],
+      "candidatePrompts": [
+        "For quantities added, how do absolute uncertainties combine?"
+      ],
+      "searchPromptPattern": "add.*uncertaint|absolute uncertainty.*sum|subtract.*uncertaint"
+    },
+    {
+      "id": "A084",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "requirement": "Determine graph-gradient and intercept uncertainties",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_measure_recap_20261024_gradient_uncert",
+        "task1_phy_020",
+        "task1_v130_006"
+      ],
+      "candidatePrompts": [
+        "How is a percentage gradient uncertainty estimated from graph lines?",
+        "How is uncertainty in a graph gradient estimated?",
+        "Which graph lines estimate uncertainty in a straight-line gradient?"
+      ],
+      "searchPromptPattern": "gradient.*uncertainty|uncertainty.*gradient|intercept.*uncertainty"
+    },
+    {
+      "id": "A085",
+      "subject": "Physics",
+      "specRef": "3.3.1.1",
+      "requirement": "Use wavelength frequency speed and period relations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "phy_wave_speed",
+        "phy_refractive_index",
+        "task1_phy_049",
+        "task1_v124_bulk_phy_036"
+      ],
+      "candidatePrompts": [
+        "What equation links wave speed, frequency and wavelength?",
+        "How is refractive index related to wave speed?",
+        "How does increasing string tension change wave speed?",
+        "What happens to wave speed when frequency doubles in the same medium?"
+      ],
+      "searchPromptPattern": "wave speed|wavelength.*frequency|frequency.*wavelength"
+    },
+    {
+      "id": "A086",
+      "subject": "Physics",
+      "specRef": "3.3.1.1",
+      "requirement": "Define amplitude and phase difference",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 15,
+      "candidateCardIds": [
+        "phy_phase_cycle",
+        "task1_phy_034",
+        "task1_phy_036",
+        "task1_phy_037"
+      ],
+      "candidatePrompts": [
+        "What phase difference is one complete cycle?",
+        "What is wave amplitude?",
+        "What is phase difference?",
+        "What phase difference is half a cycle?"
+      ],
+      "searchPromptPattern": "phase difference|amplitude"
+    },
+    {
+      "id": "A087",
+      "subject": "Physics",
+      "specRef": "3.3.1.2",
+      "requirement": "Compare longitudinal and transverse waves",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_phy_039",
+        "task1_phy_040",
+        "task1_v125_051",
+        "task1_v125_052"
+      ],
+      "candidatePrompts": [
+        "What is a transverse wave?",
+        "What is a longitudinal wave?",
+        "Can longitudinal waves be plane-polarised?",
+        "Which way do particles oscillate in a transverse wave?"
+      ],
+      "searchPromptPattern": "longitudinal|transverse"
+    },
+    {
+      "id": "A088",
+      "subject": "Physics",
+      "specRef": "3.3.1.2",
+      "requirement": "Explain why polarisation proves waves are transverse",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "v33_card_physics_waves_18",
+        "task1_phy_041",
+        "task1_phy_042",
+        "task1_v124_bulk_phy_038"
+      ],
+      "candidatePrompts": [
+        "What kind of waves can be polarised?",
+        "What is polarisation evidence for?",
+        "Why can sound in air not be polarised?",
+        "Why can polarising filters reduce glare?"
+      ],
+      "searchPromptPattern": "polaris"
+    },
+    {
+      "id": "A089",
+      "subject": "Physics",
+      "specRef": "3.3.1.3",
+      "requirement": "Explain nodes antinodes and formation of stationary waves",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "phy_stationary_nodes",
+        "phy_stationary_spacing",
+        "v33_card_physics_stationary_waves_15",
+        "task1_phy_046"
+      ],
+      "candidatePrompts": [
+        "What are nodes and antinodes?",
+        "What is the separation of adjacent nodes in a stationary wave?",
+        "What is the difference between a node and an antinode?",
+        "How do stationary waves form?"
+      ],
+      "searchPromptPattern": "stationary wave|node.*antinode"
+    },
+    {
+      "id": "A090",
+      "subject": "Physics",
+      "specRef": "3.3.1.3",
+      "requirement": "Recall fundamental string frequency relation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_practical_001",
+        "task1_v125_074"
+      ],
+      "candidatePrompts": [
+        "In string-wave RP1, what controls the fundamental frequency?",
+        "Why is tension a controlled variable in a string-frequency investigation?"
+      ],
+      "searchPromptPattern": "fundamental frequency|first harmonic|string.*frequency"
+    },
+    {
+      "id": "A091",
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "requirement": "Interpret double-slit path difference and fringes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 16,
+      "candidateCardIds": [
+        "phy_rp2",
+        "phy_double_slit",
+        "task1_phy_052",
+        "task1_phy_053"
+      ],
+      "candidatePrompts": [
+        "What are the key equations for double-slit and diffraction-grating work?",
+        "What is the Young double-slit fringe-spacing equation?",
+        "What path difference produces constructive interference?",
+        "What path difference produces destructive interference?"
+      ],
+      "searchPromptPattern": "double.slit|fringe spacing|path difference"
+    },
+    {
+      "id": "A092",
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "requirement": "Use diffraction grating equation with orders",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_grating",
+        "task1_phy_058",
+        "task1_v124_bulk_phy_050"
+      ],
+      "candidatePrompts": [
+        "What is the diffraction-grating equation?",
+        "Which colour spreads most in a white-light diffraction grating?",
+        "What does a diffraction grating allow you to measure?"
+      ],
+      "searchPromptPattern": "diffraction grating|grating equation"
+    },
+    {
+      "id": "A093",
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "requirement": "Explain single-slit diffraction in terms of aperture and wavelength",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_phy_059",
+        "task1_v134_003"
+      ],
+      "candidatePrompts": [
+        "What happens to a single-slit central maximum when the slit narrows?",
+        "How does a narrower single slit change its central diffraction maximum?"
+      ],
+      "searchPromptPattern": "single.slit|diffraction.*gap"
+    },
+    {
+      "id": "A094",
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "requirement": "Recognise refraction refractive index and critical angle",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "phy_refractive_index",
+        "phy_tir_conditions",
+        "v33_card_physics_total_internal_reflection_17",
+        "task1_phy_061"
+      ],
+      "candidatePrompts": [
+        "How is refractive index related to wave speed?",
+        "What are the two conditions for total internal reflection?",
+        "State the two conditions for total internal reflection.",
+        "What is refractive index?"
+      ],
+      "searchPromptPattern": "refractive index|critical angle|total internal reflection"
+    },
+    {
+      "id": "A095",
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "requirement": "Distinguish scalar from vector quantities",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "phy_resultant_perp",
+        "v33_card_physics_resolving_vectors_4",
+        "phy_resolve_weakness_20261025_marked_angle",
+        "task1_phy_067"
+      ],
+      "candidatePrompts": [
+        "How do you find the magnitude of two perpendicular vector components x and y?",
+        "How should you select sine or cosine for a vector component?",
+        "When resolving a vector, what decides whether to use sin or cos?",
+        "What is a scalar quantity?"
+      ],
+      "searchPromptPattern": "scalar|vector"
+    },
+    {
+      "id": "A096",
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "requirement": "Resolve forces along and perpendicular to slopes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "phy_vectors_001",
+        "phy_slope_001",
+        "phy_resolve_weakness_20261025_marked_angle",
+        "phy_mechanics_weakness_v35_slope_direction"
+      ],
+      "candidatePrompts": [
+        "How do you decide whether to use sin or cos when resolving a force?",
+        "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+        "When resolving a vector, what decides whether to use sin or cos?",
+        "On a slope, which way do weight and its two components act?"
+      ],
+      "searchPromptPattern": "resolv|slope.*(force|weight)|inclined plane"
+    },
+    {
+      "id": "A097",
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "requirement": "State principle of moments using perpendicular distance",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_moment_eq",
+        "task1_phy_069",
+        "task1_v125_011"
+      ],
+      "candidatePrompts": [
+        "What is the principle of moments in equilibrium?",
+        "What is the principle of moments?",
+        "What happens to moment if perpendicular distance doubles?"
+      ],
+      "searchPromptPattern": "principle of moments|moment.*perpendicular"
+    },
+    {
+      "id": "A098",
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "requirement": "Define a force couple and its turning moment",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "phy_couple_001",
+        "v33_card_physics_couples_32",
+        "phy_mechanics_weakness_v35_couple_turn",
+        "phy_mechanics_weakness_v35_couple_distance"
+      ],
+      "candidatePrompts": [
+        "What is a couple, and what is the moment of a couple?",
+        "Why is the moment of a couple independent of pivot choice?",
+        "Why can a couple turn an object without a resultant force?",
+        "For a couple, what distance is d in M = Fd? Do you multiply by two?"
+      ],
+      "searchPromptPattern": "couple"
+    },
+    {
+      "id": "A099",
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "requirement": "Locate or define centre of mass",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_phy_070",
+        "task1_v132_001"
+      ],
+      "candidatePrompts": [
+        "What is the centre of mass?",
+        "Where is the centre of mass of a uniform, regular solid?"
+      ],
+      "searchPromptPattern": "centre of mass"
+    },
+    {
+      "id": "A100",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "requirement": "Read gradients of displacement-time and velocity-time graphs",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "phy_motion_v",
+        "phy_graph_weakness_v36_s_negative",
+        "phy_graph_weakness_v36_s_tangent_numeric",
+        "phy_mechanics_focus_v37_01"
+      ],
+      "candidatePrompts": [
+        "What do the gradient and signed area of a velocity–time graph represent?",
+        "On a displacement–time graph, what does a negative gradient mean?",
+        "A tangent to an s–t graph passes through (2 s, 4 m) and (6 s, 20 m). Find v.",
+        "A displacement–time curve has a positive gradient which becomes less steep. What happens to velocity?"
+      ],
+      "searchPromptPattern": "displacement.time.*gradient|gradient.*velocity.time|s.t graph"
+    },
+    {
+      "id": "A101",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "requirement": "Find signed displacement from velocity-time area",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "phy_motion_v",
+        "phy_motion_a",
+        "v33_card_physics_motion_graphs_11",
+        "phy_graph_weakness_v36_v_signed_vs_distance"
+      ],
+      "candidatePrompts": [
+        "What do the gradient and signed area of a velocity–time graph represent?",
+        "What does the signed area under an acceleration–time graph represent?",
+        "What does the area under a velocity–time graph represent?",
+        "A v–t graph gives +20 m and −8 m of signed area. Find displacement and distance."
+      ],
+      "searchPromptPattern": "signed area|area.*velocity.time|displacement.*velocity.time"
+    },
+    {
+      "id": "A102",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "requirement": "Find velocity change from acceleration-time area",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "phy_motion_a",
+        "v33_card_physics_motion_graphs_13",
+        "phy_graph_weakness_v36_a_negative_area",
+        "phy_graph_v118_06"
+      ],
+      "candidatePrompts": [
+        "What does the signed area under an acceleration–time graph represent?",
+        "What does area under an acceleration–time graph give?",
+        "What does area below the time axis on an acceleration–time graph mean?",
+        "Acceleration–time area gives which quantity?"
+      ],
+      "searchPromptPattern": "acceleration.time.*area|area.*acceleration.time"
+    },
+    {
+      "id": "A103",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "requirement": "Use uniform-acceleration equations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "phy_suvat_condition"
+      ],
+      "candidatePrompts": [
+        "When can SUVAT equations be used?"
+      ],
+      "searchPromptPattern": "SUVAT|v².*u²|v.?=.?(u.*at)"
+    },
+    {
+      "id": "A104",
+      "subject": "Physics",
+      "specRef": "3.4.1.5",
+      "requirement": "Apply Newton second law force and acceleration",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_newton2",
+        "phy_focus_v38_06",
+        "phy_focus_v39_08"
+      ],
+      "candidatePrompts": [
+        "State Newton's second law for constant mass.",
+        "State Newton's second law in its general momentum form.",
+        "How does Newton's second law differ from the third law?"
+      ],
+      "searchPromptPattern": "F ?= ?ma|newton.*second law"
+    },
+    {
+      "id": "A105",
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "requirement": "Explain drag and terminal velocity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "answer_checked_existing",
+      "candidateCount": 0,
+      "candidateCardIds": [
+        "task1_v125_029",
+        "task1_v130_032"
+      ],
+      "candidatePrompts": [
+        "For a falling object, how does greater upward drag affect the resultant downward force?",
+        "What does terminal speed mean for net force?"
+      ],
+      "searchPromptPattern": "terminal velocity|drag force|resistive force",
+      "answerChecked": [
+        {
+          "id": "task1_v125_029",
+          "front": "For a falling object, how does greater upward drag affect the resultant downward force?",
+          "back": "It decreases."
+        },
+        {
+          "id": "task1_v130_032",
+          "front": "What does terminal speed mean for net force?",
+          "back": "The resultant force is zero."
+        }
+      ],
+      "reviewerNote": "Drag changes the resultant force and at terminal speed the resultant force is zero."
+    },
+    {
+      "id": "A106",
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "requirement": "Treat independent vertical and horizontal projectile motion",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 15,
+      "candidateCardIds": [
+        "phy_projectile_independent",
+        "phy_projectile_horizontal",
+        "phy_mechanics_focus_v37_13",
+        "phy_focus_v38_01"
+      ],
+      "candidatePrompts": [
+        "What key idea lets you solve projectile motion?",
+        "Ignoring air resistance, what is horizontal acceleration of a projectile?",
+        "Ignoring air resistance, which force acts on a projectile after release?",
+        "A projectile is launched horizontally. What changes if the launch height doubles while speed stays constant?"
+      ],
+      "searchPromptPattern": "projectile|horizontal.*vertical.*motion"
+    },
+    {
+      "id": "A107",
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "requirement": "Define momentum and impulse",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 16,
+      "candidateCardIds": [
+        "phy_momentum",
+        "phy_impulse",
+        "phy_pandr_v29_momentum_relation",
+        "phy_graph_weakness_v36_force_time_tri"
+      ],
+      "candidatePrompts": [
+        "What is momentum?",
+        "How are impulse and momentum change related?",
+        "How does doubling particle momentum affect de Broglie wavelength?",
+        "Force rises 0→80 N then returns to 0 over 0.20 s. Find impulse."
+      ],
+      "searchPromptPattern": "momentum|impulse"
+    },
+    {
+      "id": "A108",
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "requirement": "Apply conservation of momentum in collisions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_phy_078",
+        "task1_v124_bulk_phy_061"
+      ],
+      "candidatePrompts": [
+        "What condition allows use of conservation of momentum?",
+        "What does the principle of conservation of momentum require?"
+      ],
+      "searchPromptPattern": "conservation of momentum|momentum.*collis"
+    },
+    {
+      "id": "A109",
+      "subject": "Physics",
+      "specRef": "3.4.1.7",
+      "requirement": "Recall work energy power and efficiency relations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "v33_card_physics_energy_6",
+        "phy_mechanics_focus_v37_21",
+        "phy_mechanics_focus_v37_22",
+        "phy_mechanics_focus_v37_25"
+      ],
+      "candidatePrompts": [
+        "In work done W=Fs cosθ, which two directions form angle θ?",
+        "An object's kinetic energy rises from 5 J to 30 J. What is the net work done on it?",
+        "A force parallel to motion rises linearly from 0 to 40 N across 2.0 m. Find work done.",
+        "A device receives 150 J and transfers 60 J usefully. Calculate efficiency."
+      ],
+      "searchPromptPattern": "work done|power.*energy|efficiency"
+    },
+    {
+      "id": "A110",
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "requirement": "Describe Hooke's law and force-extension gradients",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 8,
+      "candidateCardIds": [
+        "phy_hooke",
+        "phy_graph_weakness_v36_force_extension_dual",
+        "phy_mechanics_focus_v37_26",
+        "phy_mechanics_focus_v37_27"
+      ],
+      "candidatePrompts": [
+        "State Hooke's law equation.",
+        "For a Hookean force–extension graph (F vs ΔL), what do gradient and area give?",
+        "A spring extends 0.060 m under 12 N within its Hooke's-law region. Find stiffness.",
+        "A spring reaches 12 N at 0.060 m extension and obeys Hooke's law. Find elastic energy stored."
+      ],
+      "searchPromptPattern": "hooke|force.extension|spring constant"
+    },
+    {
+      "id": "A111",
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "requirement": "Define tensile stress and tensile strain",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_stress",
+        "phy_strain",
+        "phy_mechanics_focus_v37_28",
+        "task1_phy_087"
+      ],
+      "candidatePrompts": [
+        "What is tensile stress?",
+        "What is tensile strain?",
+        "A wire has force 200 N and cross-sectional area 2.0 mm². Find tensile stress.",
+        "What is the ultimate tensile stress?"
+      ],
+      "searchPromptPattern": "tensile stress|tensile strain"
+    },
+    {
+      "id": "A112",
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "requirement": "Define Young modulus and elastic deformation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "phy_rp4",
+        "phy_young",
+        "phy_graph_weakness_v36_rp4_force_extension",
+        "phy_mechanics_focus_v37_29"
+      ],
+      "candidatePrompts": [
+        "What equation is used to determine Young modulus from a wire?",
+        "What is Young modulus?",
+        "For a wire, how is Young modulus found from a force (y) vs extension (x) graph?",
+        "For a stress–strain graph, when does the gradient give Young modulus?"
+      ],
+      "searchPromptPattern": "young modulus|young.s modulus|elastic deformation"
+    },
+    {
+      "id": "A113",
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "requirement": "Distinguish brittle and ductile materials",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "stage": "AS",
+      "status": "candidate_evidence_unverified",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_mechanics_focus_v37_31",
+        "task1_v124_bulk_phy_074",
+        "task1_v130_036"
+      ],
+      "candidatePrompts": [
+        "How does ductile failure typically differ from brittle failure?",
+        "How does a brittle material usually fail?",
+        "What distinguishes a ductile material from a brittle one?"
+      ],
+      "searchPromptPattern": "brittle|ductile"
+    }
+  ],
+  "candidateMatchingCaveat": "Regex results are only search suggestions. Even a high match count does not prove coverage.",
+  "nextPrecisionCandidates": [
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "front": "When independent quantities are multiplied or divided, how are percentage uncertainties combined?",
+      "back": "Add their percentage uncertainties (the usual worst-case A-level approximation).",
+      "reason": "No concise front-side rule found in targeted search; distinguish from existing power-law cards.",
+      "status": "candidate_addition_not_released"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "front": "How can you estimate uncertainty in a straight-line graph's y-intercept?",
+      "back": "Compare the best-fit intercept with intercepts from the steepest and shallowest acceptable lines.",
+      "reason": "Existing graph uncertainty cards focus on gradients; no direct intercept-uncertainty prompt found.",
+      "status": "candidate_addition_not_released"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "front": "For a Hooke's-law spring, what is the elastic strain energy stored at extension x?",
+      "back": "E = ½Fx = ½kx²; it is the area under the force–extension graph.",
+      "reason": "Existing example calculates energy; a compact stand-alone formula recall card would complement it.",
+      "status": "candidate_addition_not_released"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3.2",
+      "front": "Why are the benefits and risks of adding chlorine to drinking water considered together?",
+      "back": "Chlorine reduces harmful microorganisms, but its toxic effects and unwanted by-products must be managed.",
+      "reason": "Specification explicitly asks for health-benefit and risk evaluation; no direct front-side recall found.",
+      "status": "candidate_addition_not_released"
+    }
+  ]
+}
