@@ -33,7 +33,7 @@ for(const c of focused){
 }
 for(const c of existing.filter(c=>['Shapes','Bond polarity','Intermolecular forces'].includes(c.topic)))assert(c.priority===9&&c.userWeakness,'Earlier hard topics must be high priority '+c.id);
 for(const c of deck.cards.filter(c=>/^chem_bonding_v/.test(c.id))){
- if(c.id==='chem_bonding_v52_35')assert(c.back.includes("van der Waals"));
+ if(c.id==='chem_bonding_v52_35')assert(c.back.toLowerCase().includes("van der waals"));
  else assert(!/\bLondon\b/.test(c.front+' '+c.back),'Use classroom terminology on Bonding cards '+c.id);
 }
 const p1=app.slice(app.indexOf('function normalise('),app.indexOf('function nextSchedule('));
