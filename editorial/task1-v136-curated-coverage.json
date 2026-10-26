@@ -1,8 +1,8 @@
 {
   "sourceVersion": 134,
-  "status": "reviewed candidates, not yet live",
+  "status": "curated after exact existing-prompt comparison; proposed v136 additions",
   "rejectionPolicy": "Avoid duplicate meaning; retain complementary explicit formula/assumption cards when the existing card covers only a numerical example.",
-  "total": 106,
+  "total": 105,
   "originalCandidateNos": [
     1,
     3,
@@ -865,15 +865,6 @@
       "specRef": "3.3",
       "stage": "AS",
       "topic": "Algebra & functions",
-      "front": "What does (f ∘ g)(x) mean?",
-      "back": "f(g(x)): apply g first, then f."
-    },
-    {
-      "originalCandidate": null,
-      "subject": "Maths",
-      "specRef": "3.3",
-      "stage": "AS",
-      "topic": "Algebra & functions",
       "front": "What does a remainder of zero show about a polynomial divisor (x−a)?",
       "back": "(x−a) is a factor of the polynomial."
     },
@@ -1237,5 +1228,8 @@
       "front": "Why is TMS a useful chemical-shift reference?",
       "back": "It produces a single signal defined as δ = 0 ppm."
     }
+  ],
+  "removedExactExisting": [
+    "What does (f ∘ g)(x) mean?"
   ]
 }
