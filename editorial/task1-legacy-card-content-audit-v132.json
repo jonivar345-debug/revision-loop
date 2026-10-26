@@ -1,0 +1,2156 @@
+{
+  "schemaVersion": 1,
+  "verifiedAgainstDeckVersion": 131,
+  "date": "2026-10-26",
+  "status": "PROMPT_AND_ANSWER_REVIEWED_WITH_SECTION_ALIGNMENT; NOT CERTIFICATION_OF_EACH_AQA_BULLET",
+  "sourceSpecifications": {
+    "Physics": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+    "Chemistry": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content"
+  },
+  "coverage": {
+    "activeLegacyCards": 1216,
+    "reviewed": 205,
+    "notYetReviewed": 1011,
+    "physicsReviewed": 64,
+    "chemistryReviewed": 141,
+    "mathsReviewed": 0
+  },
+  "policy": {
+    "oldCardIdsModified": false,
+    "bulkAutomaticTagging": false,
+    "meaning": "Content matched to broad AQA section after inspecting both question and answer; a topic-level match alone does not establish every required sub-bullet is covered.",
+    "quality": "Cards that ask for calculations or several facts are flagged for a later exam-practice conversion, not deactivated.",
+    "next": "Continue manual inspection of the other 1,011 active legacy cards; keep maths exam practice rather than blanket-tagging."
+  },
+  "summaries": [
+    {
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "cards": 36,
+      "section": "3.4.1.3",
+      "focus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "cards": 9,
+      "section": "3.4.1.1",
+      "focus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resolving vectors",
+      "cards": 6,
+      "section": "3.4.1.1",
+      "focus": "Perpendicular vector resolution and components"
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particles",
+      "cards": 13,
+      "section": "3.2.1",
+      "focus": "Particle classification, interactions and conservation"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Shapes",
+      "cards": 44,
+      "section": "3.1.3.5",
+      "focus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "cards": 4,
+      "section": "3.2.3",
+      "focus": "Halogens, oxidising/reducing trends and silver-halide tests"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "cards": 3,
+      "section": "3.2.2",
+      "focus": "Group 2 solubility and reactivity trends"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "cards": 42,
+      "section": "3.1.8",
+      "focus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "cards": 27,
+      "section": "3.1.4.2",
+      "focus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Aldehydes and ketones",
+      "cards": 11,
+      "section": "3.3.8",
+      "focus": "Carbonyl properties and reactions"
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Back titrations",
+      "cards": 10,
+      "section": "3.1.2.5",
+      "focus": "Mole subtraction and back titration analysis"
+    }
+  ],
+  "records": [
+    {
+      "id": "phy_motion_d",
+      "front": "What does the gradient of a displacement–time graph represent?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_motion_v",
+      "front": "What do the gradient and signed area of a velocity–time graph represent?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_motion_a",
+      "front": "What does the signed area under an acceleration–time graph represent?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "v33_card_physics_motion_graphs_11",
+      "front": "What does the area under a velocity–time graph represent?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "v33_card_physics_motion_graphs_12",
+      "front": "How do you find instantaneous velocity on a curved displacement–time graph?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "v33_card_physics_motion_graphs_13",
+      "front": "What does area under an acceleration–time graph give?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_s_negative",
+      "front": "On a displacement–time graph, what does a negative gradient mean?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_s_horizontal_vs_v_horizontal",
+      "front": "What is the difference between a horizontal line on s–t and v–t graphs?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "multi-point-recall-review",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_s_tangent_numeric",
+      "front": "A tangent to an s–t graph passes through (2 s, 4 m) and (6 s, 20 m). Find v.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_gradient_numeric",
+      "front": "A v–t graph rises from 4 to 12 m s⁻¹ in 5.0 s. Find acceleration.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_trapezium_numeric",
+      "front": "Velocity rises uniformly from 4 to 12 m s⁻¹ in 5 s. Find displacement.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_signed_vs_distance",
+      "front": "A v–t graph gives +20 m and −8 m of signed area. Find displacement and distance.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_zero_crossing",
+      "front": "What does crossing the time axis on a velocity–time graph mean?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_negative_acceleration",
+      "front": "If velocity is negative and acceleration is negative, is the object slowing down?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_a_area_numeric",
+      "front": "Acceleration stays at +3.0 m s⁻² for 4.0 s. Find the velocity change.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_a_negative_area",
+      "front": "What does area below the time axis on an acceleration–time graph mean?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_multistage_area",
+      "front": "A v–t graph rises 0→10 m s⁻¹ in 4 s, then stays at 10 m s⁻¹ for 3 s. Find s.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_compare_slope_vs_area",
+      "front": "In motion graphs, what do a gradient and a signed area each represent?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_weakness_v36_axis_unit_check",
+      "front": "What units confirm the gradient of a v–t graph and the area under it?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_01",
+      "front": "A displacement–time curve has a positive gradient which becomes less steep. What happens to velocity?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_02",
+      "front": "What does a horizontal velocity–time graph below the time axis show?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_03",
+      "front": "Velocity changes from −8 to −2 m s⁻¹ in 3.0 s. Find acceleration and describe the speed.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_04",
+      "front": "Velocity falls from +6 to −2 m s⁻¹ uniformly in 4.0 s. Find a and the time of reversal.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_05",
+      "front": "A velocity–time graph encloses +15 m and −21 m of area. Find displacement and total distance.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_06",
+      "front": "An object starts at −4 m s⁻¹ and has constant acceleration +3 m s⁻² for 2 s. Final velocity?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_07",
+      "front": "Acceleration rises uniformly from zero to 4.0 m s⁻² over 3.0 s. Find the change in velocity.",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_08",
+      "front": "On an s–t graph the gradient is negative but becomes less steep. Is the object speeding up?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_focus_v39_07",
+      "front": "If v<0 and a<0, what happens to speed?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_01",
+      "front": "Displacement–time: what does a negative gradient mean?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_02",
+      "front": "What does zero gradient on a displacement–time graph show?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_03",
+      "front": "On a velocity–time graph, what does an area below the axis mean?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_04",
+      "front": "Why is total distance different from displacement on a v–t graph?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_05",
+      "front": "A straight sloping v–t line crosses zero. What changes?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_06",
+      "front": "Acceleration–time area gives which quantity?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_07",
+      "front": "For curved s–t graphs, how is instantaneous velocity found?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_graph_v118_08",
+      "front": "How do you identify acceleration on a v–t graph?",
+      "subject": "Physics",
+      "originalTopic": "Motion graphs",
+      "candidateSpecSection": "3.4.1.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Graph gradient, signed area and motion interpretation"
+    },
+    {
+      "id": "phy_slope_001",
+      "front": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "v33_card_physics_forces_on_a_slope_5",
+      "front": "When does R=mg cosθ hold for an object on a slope?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_slope_direction",
+      "front": "On a slope, which way do weight and its two components act?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_slope_numeric",
+      "front": "For a 10 kg block on a 30° slope, what is the down-slope weight component?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_focus_v39_01",
+      "front": "Why does the normal reaction on a simple slope not equal the full weight?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_focus_v39_02",
+      "front": "On a slope, why resolve weight parallel and perpendicular to the surface?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_focus_v39_03",
+      "front": "A force pulls a block at angle α above an inclined plane. How does this affect R?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_graph_v118_09",
+      "front": "On a 30° slope, which component of weight pulls downhill?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_graph_v118_10",
+      "front": "A horizontal push up a slope does what to the reaction?",
+      "subject": "Physics",
+      "originalTopic": "Forces on a slope",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Vector components and force resolution on inclined planes"
+    },
+    {
+      "id": "phy_vectors_001",
+      "front": "How do you decide whether to use sin or cos when resolving a force?",
+      "subject": "Physics",
+      "originalTopic": "Resolving vectors",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Perpendicular vector resolution and components"
+    },
+    {
+      "id": "v33_card_physics_resolving_vectors_4",
+      "front": "How should you select sine or cosine for a vector component?",
+      "subject": "Physics",
+      "originalTopic": "Resolving vectors",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Perpendicular vector resolution and components"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_marked_angle",
+      "front": "When resolving a vector, what decides whether to use sin or cos?",
+      "subject": "Physics",
+      "originalTopic": "Resolving vectors",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Perpendicular vector resolution and components"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_horizontal_30",
+      "front": "50 N at 30° above horizontal: find horizontal and vertical components.",
+      "subject": "Physics",
+      "originalTopic": "Resolving vectors",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Perpendicular vector resolution and components"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_vertical_30",
+      "front": "50 N at 30° to vertical: find horizontal and vertical components.",
+      "subject": "Physics",
+      "originalTopic": "Resolving vectors",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Perpendicular vector resolution and components"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_11",
+      "front": "A 12 N force is 30° from the vertical. Find its horizontal and vertical components.",
+      "subject": "Physics",
+      "originalTopic": "Resolving vectors",
+      "candidateSpecSection": "3.4.1.1",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Perpendicular vector resolution and components"
+    },
+    {
+      "id": "phy_specific_charge",
+      "front": "What is specific charge?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_nuclide",
+      "front": "In nuclide notation, what do A and Z mean?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_antiparticle",
+      "front": "How does an antiparticle compare with its particle?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_annihilation",
+      "front": "What happens in particle–antiparticle annihilation?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_pair_production",
+      "front": "What is needed for pair production?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_hadrons",
+      "front": "What are hadrons?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_baryon_meson",
+      "front": "How do baryons and mesons differ?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_proton_quarks",
+      "front": "What is the quark composition of a proton?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_neutron_quarks",
+      "front": "What is the quark composition of a neutron?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_pion_plus",
+      "front": "What is the quark composition of π⁺?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_conservation_particle",
+      "front": "Which conservation rules apply to particle interactions?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.1",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_photon_energy",
+      "front": "What is the energy of a photon?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "phy_debroglie",
+      "front": "What is the de Broglie wavelength equation?",
+      "subject": "Physics",
+      "originalTopic": "Particles",
+      "candidateSpecSection": "3.2.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Particle classification, interactions and conservation"
+    },
+    {
+      "id": "chem_shape_linear",
+      "front": "What bond angle is expected for two electron pairs around a central atom?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_shape_trig",
+      "front": "What bond angle is expected for three bonding pairs around a central atom?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_shape_tetra",
+      "front": "What bond angle is expected for four bonding pairs?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_lone_pair",
+      "front": "Why do lone pairs reduce bond angles?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_01",
+      "front": "What determines molecular geometry by VSEPR?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_02",
+      "front": "Rank lone–lone, lone–bond and bond–bond pair repulsion.",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "multi-point-recall-review",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_03",
+      "front": "Why does a lone pair make neighbouring bond angles smaller?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_04",
+      "front": "What shape and angle result from two electron domains and no lone pairs?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_05",
+      "front": "What shape and angle result from three bonding domains?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_06",
+      "front": "What shape is SO₂ with two bonding regions and one lone pair?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_07",
+      "front": "What shape and angle has CH₄?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_08",
+      "front": "What shape and approximate angle has NH₃?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_09",
+      "front": "What shape and approximate angle has H₂O?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_10",
+      "front": "What shape does NH₄⁺ have?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_11",
+      "front": "What shape does H₃O⁺ have, and how many lone pairs?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_12",
+      "front": "Why does NH₃ have a smaller bond angle than CH₄?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_13",
+      "front": "Why does H₂O have a smaller angle than NH₃?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_14",
+      "front": "What shape and angles has PCl₅ in the gas phase?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_15",
+      "front": "What shape does SF₄ have with 5 electron domains?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "advanced-shape-example",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_16",
+      "front": "What shape does ClF₃ have with 5 electron domains?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "advanced-shape-example",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_17",
+      "front": "What shape is XeF₂ despite having 3 lone pairs?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "advanced-shape-example",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_18",
+      "front": "What shape and angles does SF₆ have?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_19",
+      "front": "What shape does BrF₅ have?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "advanced-shape-example",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_20",
+      "front": "What shape and bond angles does XeF₄ have?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "advanced-shape-example",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_21",
+      "front": "Does a double bond count as one or two electron domains in VSEPR?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v48_22",
+      "front": "What is the safest method for an unfamiliar VSEPR molecule?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_10",
+      "front": "First step for an unfamiliar molecular-shape question?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_11",
+      "front": "How are double and triple bonds counted in VSEPR?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_12",
+      "front": "What decides a molecule's shape rather than electron geometry?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_13",
+      "front": "Why are lone-pair repulsions stronger than bond-pair repulsions?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_14",
+      "front": "What electron-domain shape results from three domains?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_15",
+      "front": "Three electron domains: 2 bonds and 1 lone pair. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_16",
+      "front": "Four electron domains: 2 bonds and 2 lone pairs. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_17",
+      "front": "Four electron domains: 3 bonds and 1 lone pair. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_18",
+      "front": "Four electron domains: 4 bonds and no lone pairs. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_19",
+      "front": "Five electron domains without lone pairs: shape and angles?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_20",
+      "front": "Why do lone pairs prefer equatorial sites in a trigonal bipyramid?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_21",
+      "front": "Five domains: 3 bonds, 2 lone pairs. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_22",
+      "front": "Five domains: 2 bonds, 3 lone pairs. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_23",
+      "front": "Six domains: 5 bonds and 1 lone pair. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_24",
+      "front": "Six domains: 4 bonds and 2 lone pairs. Shape?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_25",
+      "front": "Why are H₂O bond angles smaller than those in NH₃?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_26",
+      "front": "What must a full 4-mark molecular-shape explanation include?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "multi-point-recall-review",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_bonding_v52_47",
+      "front": "How should you justify a lower bond angle in a 4-mark answer?",
+      "subject": "Chemistry",
+      "originalTopic": "Shapes",
+      "candidateSpecSection": "3.1.3.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "VSEPR shapes and lone-pair repulsion"
+    },
+    {
+      "id": "chem_halogen_oxidising",
+      "front": "How does halogen oxidising power change down Group 7?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 7",
+      "candidateSpecSection": "3.2.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Halogens, oxidising/reducing trends and silver-halide tests"
+    },
+    {
+      "id": "chem_halide_reducing",
+      "front": "How does halide-ion reducing power change down Group 7?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 7",
+      "candidateSpecSection": "3.2.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Halogens, oxidising/reducing trends and silver-halide tests"
+    },
+    {
+      "id": "chem_displacement_halogen",
+      "front": "When will one halogen displace another halide?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 7",
+      "candidateSpecSection": "3.2.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Halogens, oxidising/reducing trends and silver-halide tests"
+    },
+    {
+      "id": "v33_card_chemistry_group_7_70",
+      "front": "Why is chlorine a stronger oxidising agent than iodine?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 7",
+      "candidateSpecSection": "3.2.3",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Halogens, oxidising/reducing trends and silver-halide tests"
+    },
+    {
+      "id": "chem_group2_reactivity",
+      "front": "How does Group 2 reactivity change down the group?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 2",
+      "candidateSpecSection": "3.2.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Group 2 solubility and reactivity trends"
+    },
+    {
+      "id": "chem_group2_hydroxide",
+      "front": "How does Group 2 hydroxide solubility change down the group?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 2",
+      "candidateSpecSection": "3.2.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Group 2 solubility and reactivity trends"
+    },
+    {
+      "id": "chem_group2_sulfate",
+      "front": "How does Group 2 sulfate solubility change down the group?",
+      "subject": "Chemistry",
+      "originalTopic": "Group 2",
+      "candidateSpecSection": "3.2.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Group 2 solubility and reactivity trends"
+    },
+    {
+      "id": "chem_lattice_diss",
+      "front": "Define lattice dissociation enthalpy.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_lattice_form",
+      "front": "How is lattice formation enthalpy related to lattice dissociation enthalpy?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_ea1",
+      "front": "What is first electron affinity?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "v33_card_chemistry_born_haber_cycles_44",
+      "front": "What sign usually accompanies lattice formation enthalpy?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_ionic_lattice",
+      "front": "What is an ionic lattice?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_def",
+      "front": "Define lattice enthalpy of formation.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_eq",
+      "front": "Write the lattice formation equation for NaCl.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_diss_eq",
+      "front": "Write the lattice dissociation equation for NaCl.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_def",
+      "front": "Define standard enthalpy of formation.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_eq",
+      "front": "Write the standard formation equation for MgO.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_def",
+      "front": "Define enthalpy of atomisation.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_cl_eq",
+      "front": "Write the atomisation equation for chlorine.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_second_ionisation_def",
+      "front": "Define second ionisation energy.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_first_ie_eq",
+      "front": "Write the equation for magnesium's first ionisation energy.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_second_ie_eq",
+      "front": "Write the equation for magnesium's second ionisation energy.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_second_ea_def",
+      "front": "Define second electron affinity.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_first_ea_eq",
+      "front": "Write the equation for oxygen's first electron affinity.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_second_ea_eq",
+      "front": "Write the equation for oxygen's second electron affinity.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_def",
+      "front": "Define enthalpy of hydration.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_na_eq",
+      "front": "Write the hydration equation for Na⁺.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_def",
+      "front": "Define enthalpy of solution.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_nacl_eq",
+      "front": "Write the enthalpy of solution equation for NaCl.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_defs_20261024_first_ionisation_bh",
+      "front": "In a Born–Haber cycle, define first ionisation energy.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_identify_ions",
+      "front": "Before drawing a Born–Haber cycle for MgO, which ions are formed?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_start_end",
+      "front": "What are the starting and final states in MgO's Born–Haber cycle?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_mg",
+      "front": "What is magnesium's atomisation step in the MgO cycle?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_o",
+      "front": "What is oxygen's atomisation step in the MgO cycle?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_mg_ionisations",
+      "front": "Which two magnesium ionisation equations belong in an MgO cycle?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_o_affinities",
+      "front": "Which two oxygen electron-affinity equations belong in an MgO cycle?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_electron_accounting",
+      "front": "What happens to the 2e⁻ released when Mg forms Mg²⁺?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_lattice_last",
+      "front": "What is the final lattice formation step for magnesium oxide?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_arrow_signs",
+      "front": "How should enthalpy arrows be drawn in a Born–Haber diagram?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_step_list",
+      "front": "List the energy changes needed in MgO's Born–Haber cycle.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "multi-point-recall-review",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_balance",
+      "front": "Why must CaCl₂ cycles use two Cl atomisations and two electron affinities?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_theoretical_rank",
+      "front": "Rank the perfect ionic lattice dissociation enthalpies of CaCl₂, AgCl and KCl.",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "multi-point-recall-review",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_calcium_why",
+      "front": "Why is CaCl₂ lattice dissociation much larger than KCl's?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_ag_k_radius",
+      "front": "Why does the perfect ionic model predict AgCl has a greater lattice enthalpy than KCl?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_discrepancies",
+      "front": "How large are the ideal-vs-Born–Haber differences for CaCl₂, KCl and AgCl?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_small_difference",
+      "front": "What does a small perfect-ionic/Born–Haber lattice enthalpy difference suggest?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_polarisation",
+      "front": "Why does AgCl have more covalent character than KCl?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_link",
+      "front": "How do you explain AgCl's unexpectedly high lattice dissociation enthalpy?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_structure",
+      "front": "What three ideas must a six-mark lattice comparison link?",
+      "subject": "Chemistry",
+      "originalTopic": "Born–Haber cycles",
+      "candidateSpecSection": "3.1.8",
+      "contentChecked": true,
+      "reviewKind": "multi-point-recall-review",
+      "contentFocus": "Lattice, atomisation, ionisation and enthalpy cycles"
+    },
+    {
+      "id": "chem_energetics_v49_20",
+      "front": "What equation relates heat, mass, specific heat capacity and temperature rise?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_21",
+      "front": "How is ΔT calculated from initial and final temperatures?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_22",
+      "front": "When liquid density is 1 g cm⁻³, how does mass relate to volume?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_23",
+      "front": "In a solution calorimeter, what mass usually goes in q=mcΔT?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_24",
+      "front": "How do you convert calorimetry q from J into kJ?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_25",
+      "front": "How do you calculate reaction molar ΔH using solution q?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_26",
+      "front": "Why is ΔH negative if the solution warms?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_27",
+      "front": "Why is ΔH positive if the solution cools?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_28",
+      "front": "Why must a reaction mole ratio be checked before finding molar ΔH?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_29",
+      "front": "For 25 cm³ 1 M HCl plus 25 cm³ 1 M NaOH, how many mol water form?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_30",
+      "front": "What is the purpose of a calorimeter's insulation?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_31",
+      "front": "What happens to the measured magnitude of exothermic ΔH if heat escapes?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_32",
+      "front": "What happens when an endothermic experiment gains external heat?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_33",
+      "front": "Why might a fuel combustion calorimetry estimate be too weak?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_34",
+      "front": "Why can incomplete combustion affect fuel calorimetry?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_35",
+      "front": "What does extrapolating a temperature–time graph estimate?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_36",
+      "front": "What are possible uncertainties in simple calorimetry?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v49_37",
+      "front": "Does AQA require the specific heat capacity of water from memory?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_08",
+      "front": "What is the molar enthalpy formula if q_solution is in joules?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_09",
+      "front": "What does n mean in ΔH = −q/n?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_10",
+      "front": "Why is there a minus sign in ΔH = −q_solution/n?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_11",
+      "front": "When finding q=mcΔT, do equation coefficients multiply m?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_12",
+      "front": "What must you do to q in joules before obtaining kJ mol⁻¹?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_13",
+      "front": "If 2 mol of A react per equation, what is n_reaction from 0.10 mol A?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_14",
+      "front": "In H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, 0.040 mol NaOH is how many reactions?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_15",
+      "front": "For neutralisation enthalpy per mole of water, which n do you use?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_energetics_v53_16",
+      "front": "What tells you whether to use n of reactant, product or reaction?",
+      "subject": "Chemistry",
+      "originalTopic": "Calorimetry",
+      "candidateSpecSection": "3.1.4.2",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Calorimetry, q=mcΔT and sources of error"
+    },
+    {
+      "id": "chem_aldehyde_tollens",
+      "front": "What does Tollens' reagent do with an aldehyde?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_carbonyl_reduction",
+      "front": "What reagent reduces aldehydes and ketones?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_carbonyl_hcn",
+      "front": "What mechanism occurs when HCN adds to a carbonyl compound?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "v33_card_chemistry_aldehydes_and_ketones_59",
+      "front": "Which class normally gives a silver mirror with Tollens' reagent?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_20",
+      "front": "Why are carbonyl compounds attacked at carbon?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_21",
+      "front": "Where do carbonyl π electrons go in nucleophilic addition?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_22",
+      "front": "How is a negatively charged oxygen intermediate converted to –OH?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_23",
+      "front": "What organic class comes from aldehyde reduction?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_24",
+      "front": "What organic class comes from ketone reduction?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_25",
+      "front": "What groups are attached to the same carbon in a hydroxynitrile?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_mechanisms_v42_26",
+      "front": "Why can some carbonyl additions create enantiomer pairs?",
+      "subject": "Chemistry",
+      "originalTopic": "Aldehydes and ketones",
+      "candidateSpecSection": "3.3.8",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Carbonyl properties and reactions"
+    },
+    {
+      "id": "chem_back_001",
+      "front": "What is the core calculation route in a back titration?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "v33_card_chemistry_back_titrations_36",
+      "front": "In a back titration, which amount is subtracted from the initial reagent amount?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_41",
+      "front": "Why use a back titration rather than a direct titration?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_42",
+      "front": "What quantity does a back titration determine directly?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_43",
+      "front": "State the essential subtraction in a back titration.",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_44",
+      "front": "Why must dilution factors be applied in a back titration?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_45",
+      "front": "A 25 cm³ aliquot came from 250 cm³. What is the factor?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_46",
+      "front": "Why calculate the excess acid before finding sample mass?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_47",
+      "front": "For CaCO₃+2HCl, how are CaCO₃ moles found?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "worked-example-candidate",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    },
+    {
+      "id": "chem_amount_v44_48",
+      "front": "What is the last step after computing analyte mass?",
+      "subject": "Chemistry",
+      "originalTopic": "Back titrations",
+      "candidateSpecSection": "3.1.2.5",
+      "contentChecked": true,
+      "reviewKind": "concise-recall",
+      "contentFocus": "Mole subtraction and back titration analysis"
+    }
+  ]
+}
