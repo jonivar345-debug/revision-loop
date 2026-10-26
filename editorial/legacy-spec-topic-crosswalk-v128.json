@@ -1,0 +1,2252 @@
+{
+  "deckVersion": 128,
+  "created": "2026-10-26",
+  "status": "PROVISIONAL TOPIC-BASED CROSSWALK, NOT VERIFIED AQA SUB-BULLET COVERAGE",
+  "important": "Never automatically attach these tags to old cards or claim per-card assessment alignment without reading each prompt and back.",
+  "overview": {
+    "Physics": {
+      "activeUntagged": 408,
+      "topicGroups": 77,
+      "candidateMapped": 408,
+      "remainingUnmapped": 0,
+      "unmappedTopics": []
+    },
+    "Chemistry": {
+      "activeUntagged": 705,
+      "topicGroups": 63,
+      "candidateMapped": 692,
+      "remainingUnmapped": 13,
+      "unmappedTopics": [
+        {
+          "topic": "Organic chemistry",
+          "cards": 9
+        },
+        {
+          "topic": "Practical skills",
+          "cards": 3
+        },
+        {
+          "topic": "Period 3",
+          "cards": 1
+        }
+      ]
+    },
+    "Maths": {
+      "activeUntagged": 103,
+      "topicGroups": 27,
+      "candidateMapped": 0,
+      "remainingUnmapped": 103,
+      "unmappedTopics": [
+        {
+          "topic": "Trigonometry",
+          "cards": 13
+        },
+        {
+          "topic": "Differentiation",
+          "cards": 12
+        },
+        {
+          "topic": "Integration",
+          "cards": 7
+        },
+        {
+          "topic": "Functions",
+          "cards": 6
+        },
+        {
+          "topic": "Coordinate geometry",
+          "cards": 5
+        },
+        {
+          "topic": "Transformations",
+          "cards": 4
+        },
+        {
+          "topic": "Algebra",
+          "cards": 4
+        },
+        {
+          "topic": "Algebra and functions",
+          "cards": 4
+        },
+        {
+          "topic": "Statistical sampling",
+          "cards": 4
+        },
+        {
+          "topic": "Data presentation and interpretation",
+          "cards": 4
+        },
+        {
+          "topic": "Probability",
+          "cards": 4
+        },
+        {
+          "topic": "Quantities and units in mechanics",
+          "cards": 4
+        },
+        {
+          "topic": "Proof",
+          "cards": 3
+        },
+        {
+          "topic": "Quadratics",
+          "cards": 3
+        },
+        {
+          "topic": "Sequences",
+          "cards": 3
+        },
+        {
+          "topic": "Logs",
+          "cards": 3
+        },
+        {
+          "topic": "Vectors",
+          "cards": 3
+        },
+        {
+          "topic": "Statistical distributions",
+          "cards": 3
+        },
+        {
+          "topic": "Hypothesis testing",
+          "cards": 3
+        },
+        {
+          "topic": "Numerical methods",
+          "cards": 2
+        },
+        {
+          "topic": "Mechanics",
+          "cards": 2
+        },
+        {
+          "topic": "Moments",
+          "cards": 2
+        },
+        {
+          "topic": "Exponentials and logs",
+          "cards": 1
+        },
+        {
+          "topic": "Differential equations",
+          "cards": 1
+        },
+        {
+          "topic": "Statistics",
+          "cards": 1
+        },
+        {
+          "topic": "Forces",
+          "cards": 1
+        },
+        {
+          "topic": "Kinematics",
+          "cards": 1
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "count": 36,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_motion_d",
+        "phy_motion_v",
+        "phy_motion_a",
+        "v33_card_physics_motion_graphs_11",
+        "v33_card_physics_motion_graphs_12"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Measurements",
+      "count": 23,
+      "candidateSection": "3.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_uncert_random",
+        "phy_uncert_systematic",
+        "phy_uncert_percent",
+        "phy_uncert_products",
+        "phy_uncert_power"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "count": 20,
+      "candidateSection": "3.2.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_photoelectric_001",
+        "phy_photoelectric_002",
+        "v33_card_physics_photoelectric_effect_19",
+        "v33_card_physics_photoelectric_effect_20",
+        "phy_pandr_v29_work_function"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Materials",
+      "count": 14,
+      "candidateSection": "3.4.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_hooke",
+        "phy_stress",
+        "phy_strain",
+        "phy_young",
+        "phy_graph_weakness_v36_force_extension_dual"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particles",
+      "count": 13,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_specific_charge",
+        "phy_nuclide",
+        "phy_antiparticle",
+        "phy_annihilation",
+        "phy_pair_production"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "count": 11,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_projectile_independent",
+        "phy_projectile_horizontal",
+        "phy_top_projectile",
+        "phy_mechanics_focus_v37_17",
+        "phy_focus_v38_01"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "count": 11,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_newton3",
+        "phy_newton1",
+        "phy_newton2",
+        "v33_card_physics_newton_s_laws_1",
+        "v33_card_physics_newton_s_laws_2"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Line spectra",
+      "count": 11,
+      "candidateSection": "3.2.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_emission_photon",
+        "phy_pandr_v29_discrete_lines",
+        "phy_pandr_v29_absorption_lines",
+        "phy_pandr_v29_sketch_energy_levels",
+        "phy_pandr_v29_sketch_emission_lines"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Electricity",
+      "count": 10,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_current",
+        "phy_pd",
+        "phy_emf",
+        "phy_resistance",
+        "phy_resistivity"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Pions and kaons",
+      "count": 10,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_pion_minus_structure",
+        "phy_pandr_v29_pion_neutral",
+        "phy_pandr_v29_pion_charge",
+        "phy_pandr_v29_kplus_structure",
+        "phy_pandr_v29_kminus_structure"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "count": 9,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_slope_001",
+        "v33_card_physics_forces_on_a_slope_5",
+        "phy_mechanics_weakness_v35_slope_direction",
+        "phy_mechanics_weakness_v35_slope_numeric",
+        "phy_focus_v39_01"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particle interactions",
+      "count": 9,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_four_forces",
+        "phy_pandr_v29_strong_between",
+        "phy_pandr_v29_electromagnetic",
+        "phy_pandr_v29_weak_bosons",
+        "phy_pandr_v29_gravity"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Weak interactions",
+      "count": 9,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_beta_minus_equation",
+        "phy_pandr_v29_beta_plus_equation",
+        "phy_pandr_v29_electron_capture",
+        "phy_pandr_v29_beta_minus_numbers",
+        "phy_pandr_v29_beta_plus_numbers"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particle diagrams",
+      "count": 9,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_sketch_beta_minus",
+        "phy_pandr_v29_sketch_beta_plus",
+        "phy_pandr_v29_sketch_capture",
+        "phy_pandr_v29_sketch_em",
+        "phy_pandr_v29_sketch_pion"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Energy",
+      "count": 8,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_work_angle",
+        "phy_work_angle_signs",
+        "phy_work_angle_theta",
+        "v33_card_physics_energy_6",
+        "phy_mechanics_focus_v37_21"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particle classifications",
+      "count": 8,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_baryon_definition",
+        "phy_pandr_v29_meson_definition",
+        "phy_pandr_v29_lepton_definition",
+        "phy_pandr_v29_baryon_stability",
+        "phy_pandr_v29_lepton_examples"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "count": 8,
+      "candidateSection": "3.2.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_duality",
+        "phy_pandr_v29_electron_diffraction",
+        "phy_pandr_v29_photo_evidence",
+        "phy_pandr_v29_momentum_relation",
+        "phy_pandr_v29_rings_acceleration"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Momentum",
+      "count": 7,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_momentum",
+        "phy_impulse",
+        "phy_force_time_area",
+        "phy_graph_weakness_v36_force_time_tri",
+        "phy_mechanics_focus_v37_18"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resolving vectors",
+      "count": 6,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_vectors_001",
+        "v33_card_physics_resolving_vectors_4",
+        "phy_resolve_weakness_20261025_marked_angle",
+        "phy_resolve_weakness_20261025_horizontal_30",
+        "phy_resolve_weakness_20261025_vertical_30"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Gravitational fields",
+      "count": 6,
+      "candidateSection": "3.7.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_field_strength",
+        "phy_a2_grav_potential",
+        "phy_a2_grav_potential_eq",
+        "phy_a2_grav_field_eq",
+        "phy_a2_orbit"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Electromagnetic induction",
+      "count": 6,
+      "candidateSection": "3.7.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_flux",
+        "phy_a2_flux_linkage",
+        "phy_a2_faraday",
+        "phy_a2_lenz",
+        "v33_card_physics_electromagnetic_induction_25"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: eye",
+      "count": 6,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_eye_image",
+        "phy_med_rods_cones",
+        "phy_med_myopia",
+        "phy_med_hypermetropia",
+        "phy_med_lens_power"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: ultrasound",
+      "count": 6,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_acoustic_impedance",
+        "phy_med_ultrasound_reflection",
+        "phy_med_ultrasound_gel",
+        "phy_med_piezo",
+        "phy_med_ascan_bscan"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: X-rays",
+      "count": 6,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_xray_tube",
+        "phy_med_xray_max",
+        "phy_med_xray_intensity",
+        "phy_med_xray_atten",
+        "phy_med_half_value"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Free-body diagrams",
+      "count": 6,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_force_diagram_001",
+        "phy_force_diagram_002",
+        "phy_fbd_common_forces",
+        "v33_card_physics_free_body_diagrams_3",
+        "phy_mechanics_focus_v37_12"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Couples",
+      "count": 5,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_couple_001",
+        "v33_card_physics_couples_32",
+        "phy_mechanics_weakness_v35_couple_turn",
+        "phy_mechanics_weakness_v35_couple_distance",
+        "phy_mechanics_focus_v37_16"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Energy levels",
+      "count": 5,
+      "candidateSection": "3.2.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_energy_levels_001",
+        "phy_pandr_v29_excitation",
+        "phy_pandr_v29_ionisation",
+        "phy_pandr_v29_fluorescent_tube",
+        "phy_pandr_v29_ev_definition"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Waves",
+      "count": 5,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_wave_speed",
+        "phy_period_frequency",
+        "phy_phase_cycle",
+        "phy_superposition",
+        "v33_card_physics_waves_18"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Electric fields",
+      "count": 5,
+      "candidateSection": "3.7.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_electric_field",
+        "phy_a2_coulomb",
+        "phy_a2_electric_potential",
+        "phy_a2_electric_potential_eq",
+        "v33_card_physics_electric_fields_24"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Nuclear physics",
+      "count": 5,
+      "candidateSection": "3.8",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_binding",
+        "phy_a2_mass_energy",
+        "phy_a2_fission",
+        "phy_a2_chain",
+        "v33_card_physics_nuclear_physics_29"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: ear",
+      "count": 5,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_ear_transmission",
+        "phy_med_intensity",
+        "phy_med_db",
+        "phy_med_equal_loudness",
+        "phy_med_hearing_loss"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: radionuclide imaging",
+      "count": 5,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_tracer",
+        "phy_med_tc99m",
+        "phy_med_pet",
+        "phy_med_half_lives",
+        "phy_med_gamma_camera"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Moments",
+      "count": 4,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_moments_001",
+        "phy_moment_eq",
+        "phy_mechanics_focus_v37_15",
+        "phy_graph_v118_11"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Kinetic theory",
+      "count": 4,
+      "candidateSection": "3.6.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pressure_001",
+        "phy_a2_kinetic_eq",
+        "v33_card_physics_kinetic_theory_7",
+        "v33_card_physics_kinetic_theory_33"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "RP3 Free fall",
+      "count": 4,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_rp3",
+        "phy_graph_weakness_v36_rp3_v2_s",
+        "phy_mechanics_focus_v37_34",
+        "phy_graph_v118_12"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Simple harmonic motion",
+      "count": 4,
+      "candidateSection": "3.6.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_shm_def",
+        "phy_a2_shm_period",
+        "phy_a2_shm_energy",
+        "v33_card_physics_simple_harmonic_motion_22"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Capacitance",
+      "count": 4,
+      "candidateSection": "3.7.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_capacitance_def",
+        "phy_a2_cap_energy",
+        "phy_a2_cap_discharge",
+        "phy_a2_time_constant"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Magnetic fields",
+      "count": 4,
+      "candidateSection": "3.7.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_magnetic_force_wire",
+        "phy_a2_flux_density_def",
+        "phy_a2_force_charge",
+        "v33_card_physics_magnetic_fields_30"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Radioactivity",
+      "count": 4,
+      "candidateSection": "3.8",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_decay_constant",
+        "phy_a2_decay_law",
+        "phy_a2_half_life",
+        "v33_card_physics_radioactivity_28"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: MRI",
+      "count": 4,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_mri_align",
+        "phy_med_mri_rf",
+        "phy_med_mri_gradient",
+        "v33_card_physics_medical_physics_mri_34"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Fluorescent tubes",
+      "count": 4,
+      "candidateSection": "3.2.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_spectra_photo_v32_accelerate_electrons",
+        "phy_spectra_photo_v32_collision_excitation",
+        "phy_spectra_photo_v32_uv_origin",
+        "phy_spectra_photo_v32_tube_sequence"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Internal resistance",
+      "count": 3,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_internal_001",
+        "v33_card_physics_internal_resistance_8",
+        "v33_card_physics_internal_resistance_9"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "RP4 Young modulus",
+      "count": 3,
+      "candidateSection": "3.4.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_rp4",
+        "phy_graph_weakness_v36_rp4_force_extension",
+        "phy_mechanics_focus_v37_33"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Stationary waves",
+      "count": 3,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_stationary_nodes",
+        "phy_stationary_spacing",
+        "v33_card_physics_stationary_waves_15"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Kinematics",
+      "count": 3,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_suvat_condition",
+        "phy_mechanics_focus_v37_09",
+        "phy_mechanics_focus_v37_10"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "I–V characteristics",
+      "count": 3,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_filament_iv",
+        "phy_diode",
+        "v33_card_physics_i_v_characteristics_10"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Practical skills",
+      "count": 3,
+      "candidateSection": "3.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_prac_uncert",
+        "phy_prac_graph",
+        "v33_card_physics_practical_skills_31"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Thermal physics",
+      "count": 3,
+      "candidateSection": "3.6.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_heat_capacity",
+        "phy_a2_latent",
+        "v33_card_physics_thermal_physics_27"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Ideal gases",
+      "count": 3,
+      "candidateSection": "3.6.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_ideal_gas",
+        "phy_a2_molar_gas",
+        "v33_card_physics_ideal_gases_21"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Strange particles",
+      "count": 3,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_strong_pairs",
+        "phy_pandr_v29_strangeness_weak",
+        "phy_pandr_v29_strange_lifetime"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Graph interpretation",
+      "count": 3,
+      "candidateSection": "3.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_graph_weakness_v36_force_distance_vs_time",
+        "phy_graph_weakness_v36_iv_axes_resistance",
+        "phy_focus_v39_10"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Equilibrium",
+      "count": 2,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_equilibrium_001",
+        "phy_mechanics_focus_v37_14"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Circular motion insurance",
+      "count": 2,
+      "candidateSection": "3.6.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_ins_circular_001",
+        "phy_ins_circular_002"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "SHM insurance",
+      "count": 2,
+      "candidateSection": "3.6.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_ins_shm_001",
+        "phy_ins_shm_002"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Interference",
+      "count": 2,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_double_slit",
+        "v33_card_physics_interference_16"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Refraction",
+      "count": 2,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_refractive_index",
+        "phy_snell"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Total internal reflection",
+      "count": 2,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_tir_conditions",
+        "v33_card_physics_total_internal_reflection_17"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Power",
+      "count": 2,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_power_fv",
+        "phy_mechanics_focus_v37_24"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Sensors",
+      "count": 2,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_thermistor",
+        "phy_ldr"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Circular motion",
+      "count": 2,
+      "candidateSection": "3.6.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_circular_acc",
+        "phy_a2_circular_force"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resonance",
+      "count": 2,
+      "candidateSection": "3.6.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_a2_resonance",
+        "phy_a2_damping"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: ECG",
+      "count": 2,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_ecg",
+        "phy_med_ecg_contact"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: endoscopy",
+      "count": 2,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_endoscope",
+        "phy_med_coherent_bundle"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: therapy",
+      "count": 2,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_radiotherapy_xray",
+        "phy_med_brachy"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particle physics",
+      "count": 1,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_quarks_001"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Gas laws",
+      "count": 1,
+      "candidateSection": "3.6.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_combined_gas_001"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "RP1 Stationary waves",
+      "count": 1,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_rp1"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "RP2 Interference",
+      "count": 1,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_rp2"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "RP5 Resistivity",
+      "count": 1,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_rp5"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "RP6 EMF/internal resistance",
+      "count": 1,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_rp6"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Diffraction grating",
+      "count": 1,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_grating"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Diffraction",
+      "count": 1,
+      "candidateSection": "3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_diffraction"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Vectors",
+      "count": 1,
+      "candidateSection": "3.4.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_resultant_perp"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Potential dividers",
+      "count": 1,
+      "candidateSection": "3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_potential_divider"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: CT",
+      "count": 1,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_ct"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Medical physics: imaging",
+      "count": 1,
+      "candidateSection": "3.10 (optional)",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_med_imaging_compare"
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Conservation laws",
+      "count": 1,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "phy_pandr_v29_charge_not_enough"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Shapes",
+      "count": 44,
+      "candidateSection": "3.1.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_shape_linear",
+        "chem_shape_trig",
+        "chem_shape_tetra",
+        "chem_lone_pair",
+        "chem_bonding_v48_01"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "count": 42,
+      "candidateSection": "3.1.8",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_lattice_diss",
+        "chem_lattice_form",
+        "chem_ea1",
+        "v33_card_chemistry_born_haber_cycles_44",
+        "chem_bh_defs_20261024_ionic_lattice"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Bonding",
+      "count": 35,
+      "candidateSection": "3.1.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_ionic_bond",
+        "chem_covalent_bond",
+        "chem_metallic_bond",
+        "v33_card_chemistry_bonding_41",
+        "v33_card_chemistry_bonding_42"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Acyl chlorides",
+      "count": 34,
+      "candidateSection": "3.3.9",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_acyl_chloride_water",
+        "chem_acyl_chloride_alcohol",
+        "chem_acyl_chloride_ammonia",
+        "v33_card_chemistry_acyl_chlorides_62",
+        "chem_acyl_review_v41_01"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "count": 31,
+      "candidateSection": "3.1.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_enthalpy_def",
+        "chem_hess",
+        "chem_bondenthalpy",
+        "v33_card_chemistry_energetics_45",
+        "chem_energetics_v49_01"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Intermolecular forces",
+      "count": 30,
+      "candidateSection": "3.1.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_hbond",
+        "v33_card_chemistry_intermolecular_forces_43",
+        "chem_bonding_v48_31",
+        "chem_bonding_v48_32",
+        "chem_bonding_v48_33"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "count": 28,
+      "candidateSection": "3.1.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_ionisation_def",
+        "chem_ie_trend",
+        "chem_atomic_v43_39",
+        "chem_atomic_v43_40",
+        "chem_atomic_v43_41"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "count": 27,
+      "candidateSection": "3.1.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_energetics_v49_20",
+        "chem_energetics_v49_21",
+        "chem_energetics_v49_22",
+        "chem_energetics_v49_23",
+        "chem_energetics_v49_24"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "count": 26,
+      "candidateSection": "3.1.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_avogadro",
+        "chem_moles_mass",
+        "chem_concentration",
+        "chem_yield",
+        "chem_atom_economy"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Mass spectrometry",
+      "count": 26,
+      "candidateSection": "3.1.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_atomic_v43_13",
+        "chem_atomic_v43_14",
+        "chem_atomic_v43_15",
+        "chem_atomic_v43_16",
+        "chem_atomic_v43_17"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Esters",
+      "count": 25,
+      "candidateSection": "3.3.9",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_esterification",
+        "v33_card_chemistry_esters_64",
+        "chem_spec_v40_006",
+        "chem_spec_v40_007",
+        "chem_spec_v40_008"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "count": 23,
+      "candidateSection": "3.1.9",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rates_001",
+        "chem_rate_order0",
+        "chem_rate_order1",
+        "chem_rate_order2",
+        "chem_k_units"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Crystal structures",
+      "count": 22,
+      "candidateSection": "3.1.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_bonding_v47_21",
+        "chem_bonding_v47_22",
+        "chem_bonding_v47_23",
+        "chem_bonding_v47_24",
+        "chem_bonding_v47_25"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "count": 21,
+      "candidateSection": "3.1.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_energetics_v49_38",
+        "chem_energetics_v49_39",
+        "chem_energetics_v49_40",
+        "chem_energetics_v49_41",
+        "chem_energetics_v49_42"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "count": 20,
+      "candidateSection": "3.1.10",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_kp_001",
+        "chem_kp_002",
+        "chem_kp_temp",
+        "chem_kp_pressure",
+        "chem_a2_kp_only_temp"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "count": 18,
+      "candidateSection": "3.1.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rp2",
+        "chem_energetics_v49_60",
+        "chem_energetics_v49_61",
+        "chem_energetics_v49_62",
+        "chem_energetics_v49_63"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "count": 18,
+      "candidateSection": "3.1.6",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_lechatelier",
+        "chem_kc",
+        "v33_card_chemistry_equilibria_52",
+        "chem_kc_recap_20261024_definition",
+        "chem_kc_recap_20261024_general"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Bond polarity",
+      "count": 17,
+      "candidateSection": "3.1.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_bonding_v48_23",
+        "chem_bonding_v48_24",
+        "chem_bonding_v48_25",
+        "chem_bonding_v48_26",
+        "chem_bonding_v48_27"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Atomic structure",
+      "count": 15,
+      "candidateSection": "3.1.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_ar_def",
+        "chem_isotope",
+        "v33_card_chemistry_atomic_structure_40",
+        "chem_atomic_v43_01",
+        "chem_atomic_v43_02"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "count": 14,
+      "candidateSection": "3.1.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_energetics_v49_50",
+        "chem_energetics_v49_51",
+        "chem_energetics_v49_52",
+        "chem_energetics_v49_53",
+        "chem_energetics_v49_54"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Gibbs free energy",
+      "count": 13,
+      "candidateSection": "3.1.8",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_gibbs_001",
+        "chem_gibbs_feasible",
+        "chem_a2_gibbs_feasible",
+        "v33_card_chemistry_gibbs_free_energy_47",
+        "chem_entropy_gibbs_recap_20261024_gibbs_threshold"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Aldehydes and ketones",
+      "count": 11,
+      "candidateSection": "3.3.8",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_aldehyde_tollens",
+        "chem_carbonyl_reduction",
+        "chem_carbonyl_hcn",
+        "v33_card_chemistry_aldehydes_and_ketones_59",
+        "chem_mechanisms_v42_20"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Back titrations",
+      "count": 10,
+      "candidateSection": "3.1.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_back_001",
+        "v33_card_chemistry_back_titrations_36",
+        "chem_amount_v44_41",
+        "chem_amount_v44_42",
+        "chem_amount_v44_43"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "count": 9,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "chem_homolytic",
+        "chem_heterolytic",
+        "chem_electrophile",
+        "chem_nucleophile",
+        "v33_card_chemistry_organic_chemistry_61"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "RP1 Titration",
+      "count": 8,
+      "candidateSection": "3.1.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rp1",
+        "v33_card_chemistry_rp1_titration_37",
+        "chem_amount_v44_35",
+        "chem_amount_v44_36",
+        "chem_amount_v44_37"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "count": 8,
+      "candidateSection": "3.1.12",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_strong_acid",
+        "chem_ph",
+        "chem_ka",
+        "chem_kw_relation",
+        "chem_a2_ph_def"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Ideal gas equation",
+      "count": 7,
+      "candidateSection": "3.1.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_gas_001",
+        "chem_amount_v44_07",
+        "chem_amount_v44_08",
+        "chem_amount_v44_09",
+        "chem_amount_v44_10"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Empirical formula",
+      "count": 7,
+      "candidateSection": "3.1.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_empirical_001",
+        "chem_amount_v44_01",
+        "chem_amount_v44_02",
+        "chem_amount_v44_03",
+        "chem_amount_v44_04"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Halogenoalkanes",
+      "count": 7,
+      "candidateSection": "3.3.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_halogeno_sub",
+        "chem_elimination",
+        "chem_mechanisms_v42_08",
+        "chem_mechanisms_v42_09",
+        "chem_mechanisms_v42_10"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Alcohols",
+      "count": 7,
+      "candidateSection": "3.3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_alcohol_primary",
+        "chem_alcohol_primary_reflux",
+        "chem_alcohol_secondary",
+        "v33_card_chemistry_alcohols_60",
+        "chem_mechanisms_v42_17"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Carboxylic acids",
+      "count": 7,
+      "candidateSection": "3.3.9",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_carboxy_acid",
+        "v33_card_chemistry_carboxylic_acids_63",
+        "chem_spec_v40_001",
+        "chem_spec_v40_002",
+        "chem_spec_v40_003"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Transition metals",
+      "count": 7,
+      "candidateSection": "3.2.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_transition_def",
+        "chem_a2_complex",
+        "chem_a2_ligand",
+        "chem_a2_coordination",
+        "chem_a2_tm_colours"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Titration calculations",
+      "count": 6,
+      "candidateSection": "3.1.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_titration_001",
+        "chem_amount_v44_30",
+        "chem_amount_v44_31",
+        "chem_amount_v44_32",
+        "chem_amount_v44_33"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Alkenes",
+      "count": 6,
+      "candidateSection": "3.3.4",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_alkene_bromine",
+        "chem_markovnikov",
+        "chem_mechanisms_v42_13",
+        "chem_mechanisms_v42_14",
+        "chem_mechanisms_v42_15"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Alkanes",
+      "count": 5,
+      "candidateSection": "3.3.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_radical_sub",
+        "chem_halogen_uv",
+        "chem_mechanisms_v42_05",
+        "chem_mechanisms_v42_06",
+        "chem_mechanisms_v42_07"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Optical isomerism",
+      "count": 5,
+      "candidateSection": "3.3.7",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_optical",
+        "chem_cip",
+        "v33_card_chemistry_optical_isomerism_58",
+        "chem_mechanisms_v42_27",
+        "chem_mechanisms_v42_28"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Aromatic chemistry",
+      "count": 5,
+      "candidateSection": "3.3.10",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_benzene",
+        "chem_a2_benzene_sub",
+        "chem_a2_nitration",
+        "chem_a2_friedel",
+        "v33_card_chemistry_aromatic_chemistry_65"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "NMR",
+      "count": 5,
+      "candidateSection": "3.3.15",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_nmr_tms",
+        "chem_a2_nmr_shift",
+        "chem_a2_nmr_integration",
+        "chem_a2_nmr_split",
+        "v33_card_chemistry_nmr_67"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Arrhenius",
+      "count": 4,
+      "candidateSection": "3.1.9",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_arrhenius_001",
+        "chem_arrhenius_002",
+        "chem_arr_eq",
+        "v33_card_chemistry_arrhenius_50"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "count": 4,
+      "candidateSection": "3.2.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_halogen_oxidising",
+        "chem_halide_reducing",
+        "chem_displacement_halogen",
+        "v33_card_chemistry_group_7_70"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Entropy",
+      "count": 4,
+      "candidateSection": "3.1.8",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_entropy",
+        "chem_a2_entropy_def",
+        "v33_card_chemistry_entropy_46",
+        "chem_entropy_gibbs_recap_20261024_entropy_change"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Buffers",
+      "count": 4,
+      "candidateSection": "3.1.12",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_buffer",
+        "chem_a2_buffer_acid",
+        "chem_a2_buffer_alkali",
+        "v33_card_chemistry_buffers_57"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "count": 3,
+      "candidateSection": "3.2.2",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_group2_reactivity",
+        "chem_group2_hydroxide",
+        "chem_group2_sulfate"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Practical skills",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "chem_prac_meniscus",
+        "chem_prac_burette",
+        "v33_card_chemistry_practical_skills_39"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Electrode potentials",
+      "count": 3,
+      "candidateSection": "3.1.11",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_electrode_potential",
+        "chem_a2_cell_emf",
+        "chem_a2_feasibility_cell"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Polymers",
+      "count": 3,
+      "candidateSection": "3.3.12",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_poly_add",
+        "chem_a2_poly_cond",
+        "v33_card_chemistry_polymers_66"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Chromatography",
+      "count": 3,
+      "candidateSection": "3.3.16",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_chrom_r_f",
+        "chem_a2_chrom_stationary",
+        "v33_card_chemistry_chromatography_68"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Weak acids",
+      "count": 2,
+      "candidateSection": "3.1.12",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_weak_acid_001",
+        "v33_card_chemistry_weak_acids_54"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Kw",
+      "count": 2,
+      "candidateSection": "3.1.12",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_kw_001",
+        "v33_card_chemistry_kw_56"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "count": 2,
+      "candidateSection": "3.1.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_collision",
+        "chem_catalyst"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "count": 2,
+      "candidateSection": "3.1.7",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_redox_oxid",
+        "chem_redox_reduc"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "count": 2,
+      "candidateSection": "3.2.1",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_period_atomic",
+        "v33_card_chemistry_periodicity_71"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Organic analysis",
+      "count": 2,
+      "candidateSection": "3.3.6",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_ir_oh",
+        "chem_ir_carbonyl"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Amines",
+      "count": 2,
+      "candidateSection": "3.3.11",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_amine_base",
+        "chem_a2_amine_nucleophile"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Amino acids",
+      "count": 2,
+      "candidateSection": "3.3.13",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_amino_zwitterion",
+        "chem_a2_peptide"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "DNA",
+      "count": 2,
+      "candidateSection": "3.3.13",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_dna_hbond",
+        "chem_a2_dna_pair"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "RP3 Rates",
+      "count": 1,
+      "candidateSection": "3.1.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rp3"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "RP4 Ion tests",
+      "count": 1,
+      "candidateSection": "3.2.3",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rp4"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "RP5 Distillation",
+      "count": 1,
+      "candidateSection": "3.3.5",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rp5"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "RP6 Organic tests",
+      "count": 1,
+      "candidateSection": "3.3.6",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_rp6"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Period 3",
+      "count": 1,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "chem_a2_period3_oxides"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Aqueous ions",
+      "count": 1,
+      "candidateSection": "3.2.6",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_aqueous_precip"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Organic synthesis",
+      "count": 1,
+      "candidateSection": "3.3.14",
+      "confidence": "topic-name-only; content unreviewed",
+      "sampleCardIds": [
+        "chem_a2_synthesis"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "count": 13,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "maths_trig_001",
+        "math_sine_rule",
+        "math_cosine_rule",
+        "math_triangle_area",
+        "math_tan_identity"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "count": 12,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_diff_power",
+        "math_diff_gradient",
+        "math_stationary",
+        "math_second_deriv",
+        "math_a2_product_rule_use"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Integration",
+      "count": 7,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_integrate_power",
+        "math_area_curve",
+        "math_a2_substitution",
+        "math_a2_parts_use",
+        "math_a2_partial_integral"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Functions",
+      "count": 6,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_function_composite",
+        "math_inverse",
+        "math_inverse_condition",
+        "math_modulus",
+        "v33_card_maths_functions_76"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Coordinate geometry",
+      "count": 5,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_line_gradient",
+        "math_perp_grad",
+        "math_circle",
+        "math_circle_tangent",
+        "v33_card_maths_coordinate_geometry_86"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Transformations",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "maths_transform_001",
+        "maths_transform_002",
+        "maths_transform_003",
+        "v33_card_maths_transformations_75"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Algebra",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_indices_neg",
+        "math_indices_frac",
+        "math_surds_rationalise",
+        "v33_card_maths_algebra_85"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Algebra and functions",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_partial_fraction",
+        "math_a2_modulus_equation",
+        "math_a2_composite_domain",
+        "math_a2_inverse_graph"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Statistical sampling",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "v34_spec_maths_statistical_sampling_1",
+        "v34_spec_maths_statistical_sampling_2",
+        "v34_spec_maths_statistical_sampling_3",
+        "v34_spec_maths_statistical_sampling_4"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Data presentation and interpretation",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "v34_spec_maths_data_presentation_and_interpretation_1",
+        "v34_spec_maths_data_presentation_and_interpretation_2",
+        "v34_spec_maths_data_presentation_and_interpretation_3",
+        "v34_spec_maths_data_presentation_and_interpretation_4"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Probability",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "v34_spec_maths_probability_1",
+        "v34_spec_maths_probability_2",
+        "v34_spec_maths_probability_3",
+        "v34_spec_maths_probability_4"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Quantities and units in mechanics",
+      "count": 4,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "v34_spec_maths_quantities_and_units_in_mechanics_1",
+        "v34_spec_maths_quantities_and_units_in_mechanics_2",
+        "v34_spec_maths_quantities_and_units_in_mechanics_3",
+        "v34_spec_maths_quantities_and_units_in_mechanics_4"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Proof",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_proof_counter",
+        "math_proof_exhaust",
+        "v33_card_maths_proof_79"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Quadratics",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_quad_discriminant",
+        "math_complete_square",
+        "v33_card_maths_quadratics_78"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Sequences",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_arith_nth",
+        "math_geom_nth",
+        "v33_card_maths_sequences_87"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Logs",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_logs_product",
+        "math_logs_power",
+        "math_logs_change"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Vectors",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_vector_mag",
+        "math_vector_line",
+        "math_a2_vector3d"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Statistical distributions",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_binomial_conditions",
+        "math_a2_normal_model",
+        "v33_card_maths_statistical_distributions_88"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Hypothesis testing",
+      "count": 3,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_hypothesis_p",
+        "math_a2_significance",
+        "v33_card_maths_hypothesis_testing_89"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Numerical methods",
+      "count": 2,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_iteration_fail",
+        "math_a2_sign_change"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Mechanics",
+      "count": 2,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_mech_model",
+        "v33_card_maths_mechanics_90"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Moments",
+      "count": 2,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_moments_method",
+        "v33_card_maths_moments_91"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Exponentials and logs",
+      "count": 1,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_exp_inverse"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Differential equations",
+      "count": 1,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_diff_eq"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Statistics",
+      "count": 1,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_sampling_bias"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Forces",
+      "count": 1,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_friction_limit"
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Kinematics",
+      "count": 1,
+      "candidateSection": null,
+      "confidence": "unmapped; manual examination required",
+      "sampleCardIds": [
+        "math_a2_variable_acc"
+      ]
+    }
+  ]
+}
