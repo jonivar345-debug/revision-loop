@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 118,
+  "deckVersion": 121,
   "updatedAt": "2026-10-26",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -16700,8 +16700,14 @@
       "topic": "Photoelectric effect",
       "revisionTopic": "Photoelectric effect",
       "priority": 2,
-      "front": "What does a kinetic-energy-against-frequency graph show below threshold?",
-      "back": "No photoelectrons are emitted; an extrapolated negative kinetic energy is not physical."
+      "front": "On a photoelectric-effect graph of maximum photoelectron kinetic energy against light frequency, what happens below the threshold frequency?",
+      "back": "No photoelectrons are emitted because each photon has less energy than the metal's work function. No maximum kinetic energy is measured below threshold; extending the straight line into negative energy is only mathematical, not physical.",
+      "accept": [
+        "No photoelectrons are emitted below threshold frequency.",
+        "There are no emitted electrons so no kinetic energy is measurable.",
+        "Photon energy is below the work function, so no electrons escape.",
+        "No emission of electrons; no data points are plotted below the threshold."
+      ]
     },
     {
       "subject": "Physics",
