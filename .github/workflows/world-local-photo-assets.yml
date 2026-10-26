@@ -135,8 +135,6 @@ jobs:
         run: |
           sed -e 's/v110/v112/g' -e 's/V110/V112/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v112-contact-sheet.py
           python scripts/_world-v112-contact-sheet.py
-      - name: Verify v114 photo integrity and preserve earlier galleries
-        run: node tests/world-v114-archive.cjs
       - name: Generate v113 source-by-source contact sheet
         run: |
           sed -e 's/v110/v113/g' -e 's/V110/V113/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v113-contact-sheet.py
@@ -147,6 +145,8 @@ jobs:
           python scripts/_world-v116-contact-sheet.py
       - name: Create whole-archive local photo review index
         run: python scripts/build-world-local-review-index.py
+      - name: Verify v114 photo integrity and preserve earlier galleries
+        run: node tests/world-v114-archive.cjs
       - name: Check all local photos are browseable in review page
         run: node tests/world-v109-review.cjs
       - name: Verify improved shop covers map to real local photos
