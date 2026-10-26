@@ -25819,7 +25819,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What is the SI base unit for temperature?",
+      "front": "Fill the gap: the base unit of thermodynamic temperature is ____.",
       "back": "Kelvin (K).",
       "active": true,
       "stage": "AS",
@@ -25828,7 +25828,8 @@
       "taught": true,
       "courseTopic": "Measurements",
       "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
+      "specRef": "3.1.1",
+      "format": "cloze"
     },
     {
       "id": "task1_phy_006",
@@ -26437,7 +26438,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What is a node in a stationary wave?",
+      "front": "Fill the gap: a stationary-wave node has ____ amplitude.",
       "back": "A point of zero amplitude.",
       "active": true,
       "stage": "AS",
@@ -26453,7 +26454,8 @@
         "zero displacement amplitude",
         "no oscillation",
         "point with zero amplitude"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_phy_045",
@@ -26462,7 +26464,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What is an antinode in a stationary wave?",
+      "front": "Fill the gap: an antinode has ____ amplitude.",
       "back": "A point of maximum amplitude.",
       "active": true,
       "stage": "AS",
@@ -26477,7 +26479,8 @@
         "A point of maximum amplitude.",
         "maximum amplitude",
         "maximum displacement amplitude"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_phy_046",
@@ -28152,7 +28155,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "full",
-      "front": "What is the SI unit of activity?",
+      "front": "Fill the gap: radioactive activity is measured in ____.",
       "back": "Becquerel (Bq).",
       "active": true,
       "stage": "A2",
@@ -28166,7 +28169,8 @@
         "Becquerel (Bq).",
         "becquerel",
         "Bq"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_phy_155",
@@ -30878,7 +30882,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What is a Brønsted–Lowry acid?",
+      "front": "Fill the gap: a Brønsted–Lowry acid is a proton ____.",
       "back": "A proton donor.",
       "active": true,
       "stage": "A2",
@@ -30891,7 +30895,8 @@
         "A proton donor.",
         "proton donor",
         "h+ donor"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_chem_175",
@@ -30900,7 +30905,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What is a Brønsted–Lowry base?",
+      "front": "Fill the gap: a Brønsted–Lowry base is a proton ____.",
       "back": "A proton acceptor.",
       "active": true,
       "stage": "A2",
@@ -30913,7 +30918,8 @@
         "A proton acceptor.",
         "proton acceptor",
         "h+ acceptor"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_chem_176",
@@ -31017,7 +31023,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What is pKa?",
+      "front": "Fill the gap: pKa = ____.",
       "back": "−log₁₀Ka.",
       "active": true,
       "stage": "A2",
@@ -31031,7 +31037,8 @@
         "negative log ka",
         "-log10Ka",
         "−log10Ka"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_chem_182",
@@ -32503,7 +32510,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "full",
-      "front": "Which oxide is amphoteric: MgO or Al₂O₃?",
+      "front": "Fill the gap: between MgO and Al₂O₃, the amphoteric oxide is ____.",
       "back": "Al₂O₃.",
       "active": true,
       "stage": "A2",
@@ -32517,7 +32524,8 @@
         "aluminium oxide",
         "aluminum oxide",
         "al2o3"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_full_002",
@@ -32823,7 +32831,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "full",
-      "front": "What coordination number is typical of an octahedral complex?",
+      "front": "Fill the gap: an octahedral complex has coordination number ____.",
       "back": "Six.",
       "active": true,
       "stage": "A2",
@@ -32836,7 +32844,8 @@
         "Six.",
         "6",
         "six"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_full_018",
@@ -32953,7 +32962,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "full",
-      "front": "What shape does [Ag(NH₃)₂]⁺ have?",
+      "front": "Fill the gap: [Ag(NH₃)₂]⁺ is ____ in shape.",
       "back": "Linear.",
       "active": true,
       "stage": "A2",
@@ -32965,7 +32974,8 @@
       "accept": [
         "Linear.",
         "linear"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_full_024",
@@ -33163,7 +33173,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "full",
-      "front": "Which catalyst is used in the Haber process?",
+      "front": "Fill the gap: the Haber-process catalyst is ____.",
       "back": "Iron.",
       "active": true,
       "stage": "A2",
@@ -33177,7 +33187,8 @@
         "fe",
         "Fe",
         "iron"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_full_035",
@@ -35408,7 +35419,7 @@
       "kind": "content",
       "priority": 2,
       "scope": "full",
-      "front": "How do you correct a measured count rate for background?",
+      "front": "Fill the gap: corrected count rate = measured rate − ____.",
       "back": "Subtract background count rate.",
       "active": true,
       "stage": "A2",
@@ -35422,7 +35433,8 @@
         "Subtract background count rate.",
         "subtract background",
         "subtract background count rate"
-      ]
+      ],
+      "format": "cloze"
     },
     {
       "id": "task1_full_152",
@@ -35797,11 +35809,11 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 155,
+      "physicsNew": 216,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 213,
+      "chemistryNew": 318,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -35821,7 +35833,9 @@
       },
       "secondPassSource": "AQA 7405 3.1,3.2,3.3 and 7408 3.7,3.8 official specification pages",
       "explicitAliasCards": 71,
-      "aliasesNote": "Curated answer variants only. Exact and fuzzy scoring still require checking against realistic wrong answers."
+      "aliasesNote": "Curated answer variants only. Exact and fuzzy scoring still require checking against realistic wrong answers.",
+      "reviewStatus": "Second pass created; full AQA line-by-line audit remains outstanding.",
+      "clozePrompts": 12
     }
   }
 }
