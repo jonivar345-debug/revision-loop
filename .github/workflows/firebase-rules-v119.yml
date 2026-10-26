@@ -1,0 +1,25 @@
+name: Firebase Firestore rules emulator v119
+on:
+  pull_request:
+    paths:
+      - 'firestore.rules'
+      - 'firebase-emulator-v119.json'
+      - 'tests/cloud-firestore-rules-v119.cjs'
+      - '.github/workflows/firebase-rules-v119.yml'
+  workflow_dispatch:
+jobs:
+  firebase-rules:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - run: npm install --no-save --no-package-lock firebase @firebase/rules-unit-testing firebase-tools
+      - run: npx firebase emulators:exec --only firestore --project demo-revision-loop --config firebase-emulator-v119.json "node tests/cloud-firestore-rules-v119.cjs"
