@@ -56,7 +56,7 @@ assert.equal((html.match(/data-layout-choice="phone"/g)||[]).length,2);
 assert.equal((html.match(/data-layout-choice="pc"/g)||[]).length,2);
 assert.match(html,/cloudResetAll/);
 assert.match(html,/layout-mode\.js\?v=120/);
-assert.match(html,/cloud-sync\.js\?v=120/);
+assert.match(html,/cloud-sync\.js\?v=121/);
 assert.match(html,/progress-backup\.js\?v=120/);
 assert.match(css,/data-layout-mode="phone"/);
 assert.match(css,/data-layout-mode="pc"/);
