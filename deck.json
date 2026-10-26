@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 133,
+  "deckVersion": 134,
   "updatedAt": "2026-10-26",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -62458,6 +62458,395 @@
       "scope": "full",
       "courseTopic": "Chromatography",
       "revisionTopic": "Chromatography"
+    },
+    {
+      "id": "task1_v134_001",
+      "subject": "Physics",
+      "specRef": "3.3.1",
+      "stage": "AS",
+      "topic": "Waves",
+      "front": "How should a receiving aerial align to a linearly polarised radio wave?",
+      "back": "Parallel to the wave's electric-field oscillations.",
+      "accept": [
+        "Parallel to the wave's electric-field oscillations.",
+        "parallel to electric field",
+        "same direction as E field",
+        "aligned with electric vector"
+      ],
+      "reject": [
+        "perpendicular to electric field",
+        "at right angles to E field"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves"
+    },
+    {
+      "id": "task1_v134_002",
+      "subject": "Physics",
+      "specRef": "3.3.1",
+      "stage": "AS",
+      "topic": "Waves",
+      "front": "What happens to ideal light transmission through two crossed polarisers?",
+      "back": "No light is transmitted.",
+      "accept": [
+        "No light is transmitted.",
+        "none",
+        "zero transmitted light",
+        "no transmitted light"
+      ],
+      "reject": [
+        "maximum light",
+        "unchanged intensity"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves"
+    },
+    {
+      "id": "task1_v134_003",
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "front": "How does a narrower single slit change its central diffraction maximum?",
+      "back": "The central maximum becomes wider.",
+      "accept": [
+        "The central maximum becomes wider.",
+        "wider",
+        "broadens",
+        "greater angular width"
+      ],
+      "reject": [
+        "narrower",
+        "smaller angular width"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction"
+    },
+    {
+      "id": "task1_v134_004",
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "front": "At fixed slit width, what increases the angular spread of diffraction?",
+      "back": "Increasing the wavelength.",
+      "accept": [
+        "Increasing the wavelength.",
+        "longer wavelength",
+        "greater wavelength",
+        "increased wavelength"
+      ],
+      "reject": [
+        "decreasing wavelength",
+        "shorter wavelength"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction"
+    },
+    {
+      "id": "task1_v134_005",
+      "subject": "Physics",
+      "specRef": "3.7.2",
+      "stage": "A2",
+      "topic": "Gravitational fields",
+      "front": "What is the gravitational potential energy of a satellite of mass m at radius r?",
+      "back": "−GMm/r.",
+      "accept": [
+        "−GMm/r.",
+        "-GMm/r",
+        "negative GMm/r"
+      ],
+      "reject": [
+        "+GMm/r",
+        "GMm/r"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Gravitational fields",
+      "revisionTopic": "Gravitational fields"
+    },
+    {
+      "id": "task1_v134_006",
+      "subject": "Physics",
+      "specRef": "3.7.2",
+      "stage": "A2",
+      "topic": "Gravitational fields",
+      "front": "What is the kinetic energy of a satellite in a circular orbit of radius r?",
+      "back": "GMm/(2r).",
+      "accept": [
+        "GMm/(2r).",
+        "GMm/2r",
+        "half GMm over r"
+      ],
+      "reject": [
+        "-GMm/2r",
+        "GMm/r"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Gravitational fields",
+      "revisionTopic": "Gravitational fields"
+    },
+    {
+      "id": "task1_v134_007",
+      "subject": "Physics",
+      "specRef": "3.7.2",
+      "stage": "A2",
+      "topic": "Gravitational fields",
+      "front": "What is the total orbital energy of a satellite in a circular orbit?",
+      "back": "−GMm/(2r).",
+      "accept": [
+        "−GMm/(2r).",
+        "-GMm/2r",
+        "negative GMm over 2r"
+      ],
+      "reject": [
+        "+GMm/2r",
+        "GMm/r"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Gravitational fields",
+      "revisionTopic": "Gravitational fields"
+    },
+    {
+      "id": "task1_v134_008",
+      "subject": "Physics",
+      "specRef": "3.7.2",
+      "stage": "A2",
+      "topic": "Gravitational fields",
+      "front": "Why does raising a satellite to a larger circular orbit require energy?",
+      "back": "Its total orbital energy becomes less negative.",
+      "accept": [
+        "Its total orbital energy becomes less negative.",
+        "total energy increases",
+        "total energy becomes less negative",
+        "less tightly bound"
+      ],
+      "reject": [
+        "total energy decreases",
+        "more negative total energy"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Gravitational fields",
+      "revisionTopic": "Gravitational fields"
+    },
+    {
+      "id": "task1_v134_009",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "stage": "A2",
+      "topic": "Chromatography",
+      "front": "Why is a TLC baseline generally marked in pencil rather than ink?",
+      "back": "Pencil graphite does not dissolve in the solvent like ink may.",
+      "accept": [
+        "Pencil graphite does not dissolve in the solvent like ink may.",
+        "ink may dissolve",
+        "pencil does not dissolve in solvent",
+        "ink would travel with solvent"
+      ],
+      "reject": [
+        "graphite travels with the solvent",
+        "ink cannot dissolve"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Chromatography",
+      "revisionTopic": "Chromatography"
+    },
+    {
+      "id": "task1_v134_010",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "stage": "A2",
+      "topic": "NMR spectroscopy",
+      "front": "Do chemically equivalent protons usually split each other's ¹H NMR signals?",
+      "back": "No; splitting comes from adjacent non-equivalent protons.",
+      "accept": [
+        "No; splitting comes from adjacent non-equivalent protons.",
+        "no",
+        "equivalent protons do not split one another",
+        "non equivalent neighbours cause splitting"
+      ],
+      "reject": [
+        "yes",
+        "equivalent protons split"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "NMR spectroscopy",
+      "revisionTopic": "NMR spectroscopy"
+    },
+    {
+      "id": "task1_v134_011",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "stage": "A2",
+      "topic": "NMR spectroscopy",
+      "front": "What happens to a proton's chemical shift if it is more shielded?",
+      "back": "Its chemical shift decreases (moves upfield).",
+      "accept": [
+        "Its chemical shift decreases (moves upfield).",
+        "lower chemical shift",
+        "upfield",
+        "smaller delta value"
+      ],
+      "reject": [
+        "higher chemical shift",
+        "downfield"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "NMR spectroscopy",
+      "revisionTopic": "NMR spectroscopy"
+    },
+    {
+      "id": "task1_v134_012",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "stage": "A2",
+      "topic": "NMR spectroscopy",
+      "front": "Why are ordinary carbon-13 NMR spectra typically less complex than ¹H spectra?",
+      "back": "Signals are usually recorded without proton-coupling splitting.",
+      "accept": [
+        "Signals are usually recorded without proton-coupling splitting.",
+        "proton decoupling",
+        "usually no splitting",
+        "no carbon hydrogen splitting"
+      ],
+      "reject": [
+        "more peaks due to proton splitting",
+        "carbon spectra always show quartets"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "NMR spectroscopy",
+      "revisionTopic": "NMR spectroscopy"
+    },
+    {
+      "id": "task1_v134_013",
+      "subject": "Chemistry",
+      "specRef": "3.3.14",
+      "stage": "A2",
+      "topic": "Organic synthesis",
+      "front": "Why may a solvent-free synthetic route produce less waste?",
+      "back": "There is no reaction solvent to dispose of or recover.",
+      "accept": [
+        "There is no reaction solvent to dispose of or recover.",
+        "less solvent waste",
+        "no solvent disposal",
+        "reduced solvent usage"
+      ],
+      "reject": [
+        "more solvent waste",
+        "more solvent disposal"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Organic synthesis",
+      "revisionTopic": "Organic synthesis"
+    },
+    {
+      "id": "task1_v134_014",
+      "subject": "Chemistry",
+      "specRef": "3.3.14",
+      "stage": "A2",
+      "topic": "Organic synthesis",
+      "front": "Why are non-hazardous starting materials preferred in green chemistry?",
+      "back": "They reduce risks to people and the environment.",
+      "accept": [
+        "They reduce risks to people and the environment.",
+        "safer for people and environment",
+        "lower health and environmental risks",
+        "reduce risks"
+      ],
+      "reject": [
+        "increase toxicity",
+        "raise health risks"
+      ],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "courseTopic": "Organic synthesis",
+      "revisionTopic": "Organic synthesis"
     }
   ],
   "meta": {
@@ -62562,11 +62951,11 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 661,
+      "physicsNew": 669,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 990,
+      "chemistryNew": 996,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -62777,6 +63166,16 @@
         "completeSpecClaim": false,
         "previousIdsUnchanged": true,
         "reviewSource": "editorial/task1-legacy-card-content-audit-v133.json"
+      },
+      "v134": {
+        "startingCards": 2994,
+        "added": 14,
+        "physicsAdded": 8,
+        "chemistryAdded": 6,
+        "scienceLegacyMapped": 1113,
+        "mathsLegacyPending": 103,
+        "fullSpecCoverageCertified": false,
+        "notes": "Targeted AQA Waves, satellite-energy, NMR, chromatography and green synthesis cards; all existing IDs and progress preserved."
       }
     },
     "chatYear1CoverageV126": {
