@@ -3,7 +3,7 @@
    Offline local saves continue to use the original app.js/localStorage mechanism. */
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
 import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
-import {getFirestore, doc, getDocFromServer, runTransaction, serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
+import {getFirestore, doc, getDocFromServer, onSnapshot, runTransaction, serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
 
 const CONFIG=Object.freeze({
   apiKey:'AIzaSyDE4sxy81d4JSBLGJlBPdt8UfprpePeym8',
@@ -22,6 +22,7 @@ const CHECKPOINT_KEY='revisionLoopCloudCheckpointV1';
 const MANUAL_RESTORE_KEY='revisionLoopCloudManualRestorePending';
 const el=id=>document.getElementById(id);
 let user=null,latestRemote=null,active=false,working=false,saveTimer=0,phase='idle';
+let stopRemoteListener=null,queuedServerCheck=false;
 
 function message(text){if(el('cloudSyncStatus'))el('cloudSyncStatus').textContent=text;}
 function visible(id,show){if(el(id))el(id).hidden=!show;}
@@ -31,7 +32,7 @@ function buttons(){
   visible('cloudUploadDevice',!!user&&phase==='first-upload');
   visible('cloudUseRemote',!!user&&(phase==='first-restore'||phase==='conflict'||phase==='review'));
   visible('cloudDownloadRemote',!!user&&!!latestRemote);
-  visible('cloudSaveNow',!!user&&active);
+  visible('cloudSaveNow',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   visible('cloudResetAll',!!user&&phase!=='loading'&&phase!=='resetting'&&phase!=='blocked');
   if(el('cloudAccountLabel'))el('cloudAccountLabel').textContent=user?
     'Google account: '+(user.email||'signed in'):'Not signed in. Browser saving remains available.';
@@ -71,9 +72,37 @@ async function retrieve(){
   buttons();
   return latestRemote;
 }
+// A phone can update Firestore while a PC tab is open. Never interrupt an
+// unfinished answer: let the learner finish before restoring remote progress.
+function hasUnsavedAnswer(){
+  const input=el('answerInput');
+  return !!(input&&input.value.trim()&&input.offsetParent!==null);
+}
+function requestCloudCheck(){
+  if(!user)return;
+  if(working){queuedServerCheck=true;return}
+  void inspect();
+}
+function watchRemote(){
+  if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
+  if(!user)return;
+  const uid=user.uid;
+  stopRemoteListener=onSnapshot(remoteRef(),snap=>{
+    if(!user||user.uid!==uid||snap.metadata.fromCache||!snap.exists())return;
+    const cp=checkpoint(),remoteRevision=Number(snap.data().revision)||0;
+    if(cp&&cp.uid===uid&&remoteRevision>cp.revision)requestCloudCheck();
+  },error=>{
+    // Keep local saves available if a listener cannot connect.
+    if(user?.uid===uid)message('Live cloud updates unavailable: '+error.message+'. You can still check progress manually.');
+  });
+}
 async function applyRemote(record,automatic=false){
   const incoming=remoteBackup(record);
-  const values=current().values;
+  if(automatic&&hasUnsavedAnswer()){
+    active=false;
+    changePhase('remote-ready','Newer cloud progress is available. Finish the flashcard, then press Check cloud now. If you rate this answer, cloud saving will pause to protect both versions.');
+    return;
+  }
   if(!automatic){
     const ok=confirm('Use your cloud progress on this device? This will replace the current browser progress. A local JSON backup will download first. Continue?');
     if(!ok)return;
@@ -119,7 +148,13 @@ async function inspect(){
     }
   }catch(error){
     active=false;changePhase('error','Cloud unavailable: '+(error?.message||'Please check your internet connection and Firebase setup')+'. Browser saves continue.');
-  }finally{working=false}
+  }finally{
+    working=false;
+    if(queuedServerCheck&&user){
+      queuedServerCheck=false;
+      queueMicrotask(()=>requestCloudCheck());
+    }
+  }
 }
 async function firstUpload(){
   if(!user||working||phase!=='first-upload')return;
@@ -187,6 +222,10 @@ async function push(){
     }else message('Saved locally; cloud upload pending: '+error.message);
   }finally{
     working=false;
+    if(queuedServerCheck&&user){
+      queuedServerCheck=false;
+      queueMicrotask(()=>requestCloudCheck());
+    }
     if(active){
       const cp=checkpoint();
       const hash=await fingerprint(current().values);
@@ -307,20 +346,22 @@ function boot(){
   el('cloudDownloadRemote')?.addEventListener('click',()=>{
     if(latestRemote)download(remoteBackup(latestRemote),'revision-loop-cloud-progress.json');
   });
-  el('cloudSaveNow')?.addEventListener('click',()=>{if(active)void inspect();});
+  el('cloudSaveNow')?.addEventListener('click',()=>requestCloudCheck());
   buttons();
   onAuthStateChanged(auth,async account=>{
-    user=account||null;active=false;
+    if(stopRemoteListener){stopRemoteListener();stopRemoteListener=null}
+    user=account||null;active=false;queuedServerCheck=false;
     if(!user){changePhase('idle','Google sign-in is optional. Revision Loop continues saving locally.');return}
     changePhase('loading','Checking your private cloud progress…');
     await inspect();
+    if(user)watchRemote();
   },error=>changePhase('error','Google sign-in unavailable: '+error.message));
   document.addEventListener('visibilitychange',()=>{
     if(!document.hidden&&user){
-      if(active){if(!working)void inspect()}else if(phase==='error')void inspect();
+      if(active||phase==='error'||phase==='remote-ready')requestCloudCheck();
     }
   });
-  window.addEventListener('online',()=>{if(user)void inspect()});
+  window.addEventListener('online',()=>requestCloudCheck());
 }
 window.RevisionLoopCloudSync=Object.freeze({onLocalSaved:scheduleSave});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);

@@ -31,7 +31,7 @@ for(const id of ['cloudGoogleSignIn','cloudGoogleSignOut','cloudUploadDevice','c
  assert.ok(cloud.includes("'"+id+"'"));
 }
 assert.match(index,/cloud-sync-core\.js\?v=119/);
-assert.match(index,/cloud-sync\.js\?v=120/);
+assert.match(index,/cloud-sync\.js\?v=121/);
 assert.match(app,/RevisionLoopCloudSync\.onLocalSaved/);
 assert.match(backup,/revisionLoopCloudManualRestorePending/);
 assert.match(sw,/cloud-sync-core\.js/);
