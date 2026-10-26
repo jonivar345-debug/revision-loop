@@ -30,7 +30,9 @@ for(const c of v124){
  assert(/^3\.\d/.test(c.specRef),'No AQA subsection tag '+c.id);
  assert(Array.isArray(c.accept)&&c.accept.length>=1,'Missing answer alternatives '+c.id);
  assert(!/^(calculate|work out)\b/i.test(c.front),'Long calculation belongs in practice '+c.id);
- if(c.stage==='A2'||c.stage==='Option')assert(c.mock===false,'Future/Year 2 must be outside AS mock '+c.id);
+ if(c.stage==='Option'||(c.stage==='A2'&&c.taught===false))assert(c.mock===false,'Untaught or optional A2 must be hidden from mock '+c.id);
+ if(c.stage==='A2'&&c.mock)assert(c.subject==='Chemistry'&&c.taught===true&&new Set(['3.1.8','3.1.9','3.1.10','3.1.12','3.3.7','3.3.8','3.3.9']).has(c.specRef),'Only taught A2 Chemistry is mock eligible '+c.id);
+ if(c.stage==='A2'&&c.subject==='Physics')assert(c.mock===false,'Physics November mock is AS only '+c.id);
  if(c.visual||c.visualBack)assert(visualNames.has(c.visual||c.visualBack),'Unknown diagram '+c.id);
 }
 for(const id of ['phy_motion_d','chem_ar_def','math_modulus','task1_v123_phy_001','task1_v123_chem_071'])assert(ids.has(id),'Progress ID missing: '+id);
@@ -62,6 +64,7 @@ const cases=[
 for(const [front,answer,status] of cases)assert.equal(evaluate(card(front),answer).status,status,'Marking error: '+front+' / '+answer);
 assert.notEqual(evaluate(card('Why do ionic solids not conduct electricity?'),'ions are free to move').status,'correct','Opposite physical statement must not be credited as fully correct');
 const stats=deck.meta.task1FlashcardAudit.v124;
+assert.equal(stats.chemistryTaughtA2MockCards,52);
 assert.equal(stats.illustratedAnswerSide,21);
 assert.equal(stats.additionalCloze,17);
 assert.equal(stats.currentProposedCount,2251);
