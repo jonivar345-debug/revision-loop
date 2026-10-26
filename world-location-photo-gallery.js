@@ -15,6 +15,12 @@
   // These four first-party photographs are more recognisable at full frame than
   // a replacement chosen purely to improve the shop-card crop-area statistic.
   const FULL_FRAME_CARD_IDS=new Set(['oaxaca','portlouis','sanfrancisco','sea-red']);
+  // Actual WebP images inspected in the final v117 batch: keep the original
+  // four-photo gallery sequence but show clearer slot-specific shop covers.
+  const V117_SHOP_COVERS=Object.freeze({
+    budapest:{slot:3,file:"Fisherman's Bastion, Budapest, Hungary.jpg"},
+    victoriafalls:{slot:2,file:'Victoria Falls from Air.jpg'}
+  });
   const cache=new Map();
   // Preserve deliberately ordered iconic landmark sets and the 8 original
   // visually reviewed London/Busan photographs. Remaining source candidates
@@ -256,7 +262,7 @@
     el.replaceChildren();
     const loading=doc.createElement('span');loading.className='destination-photo-status';
     loading.textContent='Loading photographs…';el.append(loading);
-    const pref=card&&typeof window!=='undefined' ? window.RevisionWorldShopCoverPriorities?.get(location.id) : null;
+    const pref=card&&typeof window!=='undefined' ? (window.RevisionWorldShopCoverPriorities?.get(location.id)||V117_SHOP_COVERS[location.id]) : null;
     const current=photosFor(location,{limit:pref?MAX_PHOTOS:card?1:MAX_PHOTOS,media});
     return current.then(photos=>{
       if(!el.isConnected||el.dataset.galleryVersion!==version)return photos;

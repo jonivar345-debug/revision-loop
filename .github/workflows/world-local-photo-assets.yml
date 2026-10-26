@@ -1,8 +1,8 @@
-name: Build World v116 quality-gated photos and full-archive review index
+name: Build World v117 final quality-gated photo batch and full-archive review
 
 on:
   push:
-    branches: [feature/world-v116-local-gallery-quality]
+    branches: [feature/world-v117-final-photo-batch]
     paths:
       - '.github/workflows/world-local-photo-assets.yml'
       - 'editorial/world-local-photo-pilot.json'
@@ -25,6 +25,10 @@ on:
       - 'editorial/world-v113-batch-targets.json'
       - 'editorial/world-v114-batch-targets.json'
       - 'editorial/world-v116-batch-targets.json'
+      - 'editorial/world-v117-batch-targets.json'
+      - 'editorial/world-v116-protected-source-baseline.json'
+      - 'tests/world-v117-sources.cjs'
+      - 'tests/world-v117-archive.cjs'
       - 'tests/world-v116-sources.cjs'
       - 'tests/world-v116-archive.cjs'
       - 'editorial/world-v114-protected-source-baseline.json'
@@ -37,6 +41,8 @@ on:
       - 'editorial/world-v111-cover-priorities.json'
       - 'world-shop-cover-priorities.js'
       - 'world-location-photo-gallery.js'
+      - 'scripts/build-world-local-review-index.py'
+      - 'tests/world-v117-archive.cjs'
       - 'tests/world-v111-sources.cjs'
       - 'tests/world-v111-archive.cjs'
       - 'tests/world-v111-shop-cover.cjs'
@@ -103,6 +109,8 @@ jobs:
         run: node tests/world-v114-sources.cjs
       - name: Check v116 selected source licences, variety and protected v114 baseline
         run: node tests/world-v116-sources.cjs
+      - name: Verify 14 new photo galleries protect all 1008 previous selections
+        run: node tests/world-v117-sources.cjs
       - name: Fetch licence-checked Commons derivatives into local asset directory
         run: node scripts/build-local-world-photos.cjs
       - name: Convert first-party image assets to high-quality WebP
@@ -139,10 +147,10 @@ jobs:
         run: |
           sed -e 's/v110/v113/g' -e 's/V110/V113/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v113-contact-sheet.py
           python scripts/_world-v113-contact-sheet.py
-      - name: Generate v116 source-by-source visual contact sheet
+      - name: Generate v117 source-by-source visual contact sheet
         run: |
-          sed -e 's/v110/v116/g' -e 's/V110/V116/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v116-contact-sheet.py
-          python scripts/_world-v116-contact-sheet.py
+          sed -e 's/v110/v117/g' -e 's/V110/V117/g' scripts/build-world-v110-contact-sheet.py > scripts/_world-v117-contact-sheet.py
+          python scripts/_world-v117-contact-sheet.py
       - name: Create whole-archive local photo review index
         run: python scripts/build-world-local-review-index.py
       - name: Verify v114 photo integrity and preserve earlier galleries
@@ -153,11 +161,13 @@ jobs:
         run: node tests/world-v111-shop-cover.cjs
       - name: Verify 1008 real v116 assets and protected historical sources
         run: node tests/world-v116-archive.cjs
+      - name: Verify 1064 local photo files and unchanged older galleries
+        run: node tests/world-v117-archive.cjs
       - name: Publish the generated files to this development branch only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v114.json editorial/world-local-photo-audit-v116.json editorial/world-v116-visual-review.json editorial/reviews/world-v116-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
+          git add assets/world world-local-photos.js editorial/world-local-photo-pilot.json editorial/world-local-photo-audit-v114.json editorial/world-local-photo-audit-v116.json editorial/world-local-photo-audit-v117.json editorial/world-v117-visual-review.json editorial/reviews/world-v117-cover-contact-sheet.jpg editorial/reviews/world-local-photo-review-index.json
           if git diff --cached --quiet; then
             echo 'Local photo files already up-to-date.'
           else

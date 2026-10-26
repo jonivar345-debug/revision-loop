@@ -61,7 +61,7 @@ const doc={createElement:tag=>new E(tag,doc),createTextNode:text=>({tagName:'tex
  assert(!bridge.includes('Go deeper'));
  assert(!source.includes("locationImageFallback(el,location);"),'Location photo must not fall back to map thumbnails');
  assert(style.includes('.destination-photo-gallery .destination-photo-grid'));
- assert(html.includes('world-location-photo-gallery.js?v=115'));
- assert(html.includes('world-local-photos.js?v=116'),'Local photo library script not loaded');
+ assert(html.includes('world-location-photo-gallery.js?v=117'));
+ assert(html.includes('world-local-photos.js?v=117'),'Local photo library script not loaded');
  console.log('PASS location galleries: four valid Busan photos, matching rejects unrelated imagery, credits are collapsible, shop cards are photo-only.');
 })().catch(e=>{console.error(e);process.exitCode=1});

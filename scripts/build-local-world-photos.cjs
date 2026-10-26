@@ -17,6 +17,9 @@ const v114Targets=new Set(v114Batch.targets);
 const v116Batch=require('../editorial/world-v116-batch-targets.json');
 const v116Repaired=new Set(Object.keys(v116Batch.replacements));
 const v116New=new Set(v116Batch.newDestinations);
+const v117Batch=require('../editorial/world-v117-batch-targets.json');
+const v117New=new Set(v117Batch.newDestinations);
+const v116Baseline=require('../editorial/world-v116-protected-source-baseline.json');
 // Preserve partial galleries if a new four-photo set fails live validation.
 const partialFallbacks=Object.fromEntries(Object.entries(manifest.locations).filter(([id,photos])=>v114Targets.has(id)&&photos.length<4).map(([id,photos])=>[id,[...photos]]));
 const base=path.resolve(__dirname,'../assets/world');
@@ -78,6 +81,13 @@ async function main(){
       throw new Error('v116 unapproved manifest mutation: '+id);
   }
   for(const id of v116New){if(v114Targets.has(id)||partialFallbacks[id])throw new Error('Existing gallery cannot be a new v116 destination: '+id)}
+  for(const [id,prior] of Object.entries(v116Baseline.locations)){
+    if(JSON.stringify(manifest.locations[id])!==JSON.stringify(prior))throw new Error('Protected v116 gallery altered: '+id);
+  }
+  for(const [id,names] of Object.entries(v117Batch.approvedSelections)){
+    if(v116Baseline.locations[id]||JSON.stringify(manifest.locations[id])!==JSON.stringify(names))
+      throw new Error('v117 source selection changed or collides with old location: '+id);
+  }
   // Preserve optimization provenance for assets already present in the archive.
   // Do not clear size-budget status when a later batch revalidates the source.
   let pastAttribution=[];
@@ -200,9 +210,9 @@ async function main(){
     }
     output[id]=selected;
   }
-  for(const id of [...v116New,...v116Repaired]){
+  for(const id of [...v116New,...v116Repaired,...v117New]){
     if(!output[id]||output[id].length!==4)
-      throw new Error('v116 exact four-photo local import incomplete: '+id);
+      throw new Error('v116/v117 exact four-photo local import incomplete: '+id);
   }
   for(const required of v114Batch.requiredGalleries||[])
     if(!manifest.locations[required] || !output[required] || output[required].length!==4)
