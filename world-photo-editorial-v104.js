@@ -629,8 +629,8 @@ data["bogota"]=[...[
   {
     "file": "BOG Museo del Oro.JPG",
     "author": "Felipe Restrepo Acosta",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "subject": "Museo del Oro exterior in downtown Bogotá",
     "width": 3664,
     "height": 2748,
