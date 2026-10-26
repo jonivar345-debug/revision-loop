@@ -9,9 +9,9 @@
 | Checkpoint | Local photos | Complete four-photo galleries | Still incomplete | Missing local photo slots |
 |---|---:|---:|---:|---:|
 | World v116, previously published | 1,008 | 252 / 376 | 124 | 496 |
-| World v117, after its archive build passes | **1,064** | **266 / 376** | **110** | **440** |
+| World v117, merged into `main` | **1,064** | **266 / 376** | **110** | **440** |
 
-The v117 archive workflow passed **45 steps** (including source licensing, dimensions, genuine locally hosted WebP files, digital duplicate checks, prior-source preservation, attribution records and the generated review index). These values describe actual committed images on the **v117 development branch** until PR #63 is merged and Pages deployment succeeds; do not confuse an archive build with live publication. `editorial/world-local-photo-audit-v117.json` and `editorial/reviews/world-local-photo-review-index.json` must agree. All 252 existing v116 gallery source sequences are protected against silent replacement by `editorial/world-v116-protected-source-baseline.json`.
+The v117 archive workflow passed **45 steps** (including source licensing, dimensions, genuine locally hosted WebP files, digital duplicate checks, prior-source preservation, attribution records and the generated review index). These values describe the 1,064 locally hosted photos merged via PR #63. Pages deployment for this merge succeeded. Do not confuse a later development-branch archive build with live publication. `editorial/world-local-photo-audit-v117.json` and `editorial/reviews/world-local-photo-review-index.json` must agree. All 252 existing v116 gallery source sequences are protected against silent replacement by `editorial/world-v116-protected-source-baseline.json`.
 
 ### Fourteen new local four-photo galleries
 
@@ -64,6 +64,19 @@ The working site is GitHub Pages. Locally hosted photos are served from `assets/
 
 **Third: reliable backups/UX and performance.** Provide clear user controls for manual backup/restore, verify mobile/browser reload behaviour, optimise photo loading and check that updating a service worker does not regress exam or world modules.
 
+## New revision development after the photograph pause: Mechanics v118
+
+**Published source work:** PR #64, merge commit `ae057b11ac61bf4b803481a7ebca01f6e81a30e0`.
+
+- `mechanics_graphs_v118.json`: **10 new independently authored AQA-style Year 1 Physics Mechanics questions, 70 marks**. Covers s–t, v–t and a–t graphs (signed areas, velocity, distance, changes of direction), inclined-plane force components and reaction, moments and couples, impulse and free-fall experiment gradients.
+- `deck.json`: **12 new targeted Physics flashcards** (deck version 118, 1,220 total cards at merge).
+- Existing `mechanics_focus_v39.json`: 16 original questions, 118 marks, preserved.
+- Website loads the extra bank via `app.js` and pre-caches its data file via `sw.js`; the document references `app.js?v=118`.
+- Regression `tests/mechanics-graphs-v118.cjs` confirms numerical answers, unique IDs, mark totals and local progress key invariants; **World safety, browser acceptance and scanner marking all passed before merge**.
+- Existing credits/photos, purchased items, XP, stored profiles and JSON progress-backup tool were not intentionally changed.
+
+**Next actions:** independently test the new questions in live use, especially the signed-area ones, and repair any marking edge cases. Then strengthen Maths Pure and Chemistry physical topics from weak areas, followed by remaining character/shop/globe reliability. **Do not resume World photo scraping automatically.**
+
 ## Safe future working order
 
 1. Read this handover, check `main`, GitHub Pages, recent PRs and any concurrent code changes.
@@ -72,4 +85,4 @@ The working site is GitHub Pages. Locally hosted photos are served from `assets/
 4. Run World safety, browser acceptance and scanner/marking workflows; review failures and preserve unrelated concurrent work before merging.
 5. When photos are deliberately resumed, start from **266/376** rather than redoing the original 252, and recheck Commons rights and image quality.
 
-**Reference PRs:** #62 progress backup; #63 v117 photographs; #57 v116 photographs; #56 ongoing photo-development issue. The actual merge SHA and successful Pages workflow must be checked after release.
+**Reference PRs:** #62 progress backup; #63 v117 photographs; #64 Mechanics question bank; #57 v116 photographs; #56 ongoing photo-development issue. Check the most recent production Pages workflow if the site is updated again.
