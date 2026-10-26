@@ -37971,66 +37971,6 @@
       "specRef": "3.2.5"
     },
     {
-      "id": "task1_v124_bulk_phy_001",
-      "subject": "Physics",
-      "topic": "Measurements",
-      "kind": "content",
-      "priority": 5,
-      "scope": "mock",
-      "front": "What does the SI prefix femto mean?",
-      "back": "10⁻¹⁵.",
-      "accept": [
-        "10⁻¹⁵."
-      ],
-      "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
-      "courseTopic": "Measurements",
-      "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
-    },
-    {
-      "id": "task1_v124_bulk_phy_002",
-      "subject": "Physics",
-      "topic": "Measurements",
-      "kind": "content",
-      "priority": 5,
-      "scope": "mock",
-      "front": "What does the SI prefix pico mean?",
-      "back": "10⁻¹².",
-      "accept": [
-        "10⁻¹²."
-      ],
-      "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
-      "courseTopic": "Measurements",
-      "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
-    },
-    {
-      "id": "task1_v124_bulk_phy_003",
-      "subject": "Physics",
-      "topic": "Measurements",
-      "kind": "content",
-      "priority": 5,
-      "scope": "mock",
-      "front": "What does the SI prefix tera mean?",
-      "back": "10¹².",
-      "accept": [
-        "10¹²."
-      ],
-      "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
-      "courseTopic": "Measurements",
-      "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
-    },
-    {
       "id": "task1_v124_bulk_phy_005",
       "subject": "Physics",
       "topic": "Measurements",
@@ -38511,26 +38451,6 @@
       "specRef": "3.2.2"
     },
     {
-      "id": "task1_v124_bulk_phy_029",
-      "subject": "Physics",
-      "topic": "Photoelectric effect",
-      "kind": "content",
-      "priority": 5,
-      "scope": "mock",
-      "front": "How is stopping potential linked to maximum photoelectron kinetic energy?",
-      "back": "Eₖ,max = eVₛ.",
-      "accept": [
-        "Eₖ,max = eVₛ."
-      ],
-      "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
-      "courseTopic": "Photoelectric effect",
-      "revisionTopic": "Photoelectric effect",
-      "specRef": "3.2.2"
-    },
-    {
       "id": "task1_v124_bulk_phy_030",
       "subject": "Physics",
       "topic": "Photoelectric effect",
@@ -38621,26 +38541,6 @@
       "back": "π/2 radians (90°).",
       "accept": [
         "π/2 radians (90°)."
-      ],
-      "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
-      "courseTopic": "Waves",
-      "revisionTopic": "Waves",
-      "specRef": "3.3.1"
-    },
-    {
-      "id": "task1_v124_bulk_phy_035",
-      "subject": "Physics",
-      "topic": "Waves",
-      "kind": "content",
-      "priority": 5,
-      "scope": "mock",
-      "front": "What phase difference corresponds to half a cycle?",
-      "back": "π radians (180°).",
-      "accept": [
-        "π radians (180°)."
       ],
       "active": true,
       "stage": "AS",
@@ -39251,26 +39151,6 @@
       "specRef": "3.4.2"
     },
     {
-      "id": "task1_v124_bulk_phy_070",
-      "subject": "Physics",
-      "topic": "Materials",
-      "kind": "content",
-      "priority": 5,
-      "scope": "mock",
-      "front": "What does the elastic limit mean?",
-      "back": "Maximum loading allowing full return to original shape.",
-      "accept": [
-        "Maximum loading allowing full return to original shape."
-      ],
-      "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
-      "courseTopic": "Materials",
-      "revisionTopic": "Materials",
-      "specRef": "3.4.2"
-    },
-    {
       "id": "task1_v124_bulk_phy_072",
       "subject": "Physics",
       "topic": "Materials",
@@ -39641,46 +39521,6 @@
       "back": "At its equilibrium position.",
       "accept": [
         "At its equilibrium position."
-      ],
-      "active": true,
-      "stage": "A2",
-      "mock": false,
-      "taught": true,
-      "courseTopic": "Simple harmonic motion",
-      "revisionTopic": "Simple harmonic motion",
-      "specRef": "3.6.1"
-    },
-    {
-      "id": "task1_v124_bulk_phy_091",
-      "subject": "Physics",
-      "topic": "Simple harmonic motion",
-      "kind": "content",
-      "priority": 2,
-      "scope": "taught",
-      "front": "When is acceleration magnitude greatest in SHM?",
-      "back": "At maximum displacement.",
-      "accept": [
-        "At maximum displacement."
-      ],
-      "active": true,
-      "stage": "A2",
-      "mock": false,
-      "taught": true,
-      "courseTopic": "Simple harmonic motion",
-      "revisionTopic": "Simple harmonic motion",
-      "specRef": "3.6.1"
-    },
-    {
-      "id": "task1_v124_bulk_phy_092",
-      "subject": "Physics",
-      "topic": "Simple harmonic motion",
-      "kind": "content",
-      "priority": 2,
-      "scope": "taught",
-      "front": "What is the phase difference between SHM displacement and acceleration?",
-      "back": "π radians (180°).",
-      "accept": [
-        "π radians (180°)."
       ],
       "active": true,
       "stage": "A2",
@@ -40461,26 +40301,6 @@
       "back": "Products may have greater binding energy per nucleon.",
       "accept": [
         "Products may have greater binding energy per nucleon."
-      ],
-      "active": true,
-      "stage": "A2",
-      "mock": false,
-      "taught": false,
-      "courseTopic": "Nuclear physics",
-      "revisionTopic": "Nuclear physics",
-      "specRef": "3.8.1"
-    },
-    {
-      "id": "task1_v124_bulk_phy_132",
-      "subject": "Physics",
-      "topic": "Nuclear physics",
-      "kind": "content",
-      "priority": 2,
-      "scope": "full",
-      "front": "What is a chain reaction in nuclear fission?",
-      "back": "Neutrons from fission trigger further fissions.",
-      "accept": [
-        "Neutrons from fission trigger further fissions."
       ],
       "active": true,
       "stage": "A2",
@@ -41661,9 +41481,11 @@
       "priority": 5,
       "scope": "mock",
       "front": "What is the mean reaction rate from a quantity–time graph?",
-      "back": "Change in quantity divided by time interval.",
+      "back": "Magnitude of change in measured quantity divided by the time interval.",
       "accept": [
-        "Change in quantity divided by time interval."
+        "Magnitude of change in measured quantity divided by the time interval.",
+        "change in quantity per unit time",
+        "change divided by time"
       ],
       "active": true,
       "stage": "AS",
@@ -45381,7 +45203,7 @@
       "topic": "Functions",
       "kind": "content",
       "priority": 3,
-      "scope": "mock",
+      "scope": "full",
       "front": "What must be true for a function to have an inverse over its domain?",
       "back": "It must be one-to-one.",
       "accept": [
@@ -45389,9 +45211,9 @@
         "injective"
       ],
       "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
+      "stage": "A2",
+      "mock": false,
+      "taught": false,
       "courseTopic": "Functions",
       "revisionTopic": "Functions",
       "specRef": "3.3"
@@ -45465,7 +45287,7 @@
       "topic": "Differentiation",
       "kind": "content",
       "priority": 3,
-      "scope": "mock",
+      "scope": "full",
       "front": "What does f″(x) > 0 at a stationary point usually indicate?",
       "back": "A local minimum.",
       "accept": [
@@ -45473,9 +45295,9 @@
         "minimum"
       ],
       "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
+      "stage": "A2",
+      "mock": false,
+      "taught": false,
       "courseTopic": "Differentiation",
       "revisionTopic": "Differentiation",
       "specRef": "3.8"
@@ -45486,7 +45308,7 @@
       "topic": "Differentiation",
       "kind": "content",
       "priority": 3,
-      "scope": "mock",
+      "scope": "full",
       "front": "What does f″(x) < 0 at a stationary point indicate?",
       "back": "A local maximum.",
       "accept": [
@@ -45494,9 +45316,9 @@
         "maximum"
       ],
       "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
+      "stage": "A2",
+      "mock": false,
+      "taught": false,
       "courseTopic": "Differentiation",
       "revisionTopic": "Differentiation",
       "specRef": "3.8"
@@ -45549,7 +45371,7 @@
       "topic": "Integration",
       "kind": "content",
       "priority": 3,
-      "scope": "mock",
+      "scope": "full",
       "front": "What does a definite integral of velocity over time give?",
       "back": "Displacement.",
       "accept": [
@@ -45557,9 +45379,9 @@
         "signed displacement"
       ],
       "active": true,
-      "stage": "AS",
-      "mock": true,
-      "taught": true,
+      "stage": "A2",
+      "mock": false,
+      "taught": false,
       "courseTopic": "Integration",
       "revisionTopic": "Integration",
       "specRef": "3.9"
@@ -45667,7 +45489,7 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 398,
+      "physicsNew": 389,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
@@ -45719,14 +45541,15 @@
           "3.3.12"
         ],
         "notes": "Untaught A2-only cards remain out of November mock and taught presets. Review concept-level duplicates and acceptance in CI.",
-        "physicsBroadAdd": 131,
+        "physicsBroadAdd": 122,
         "revisionNote": "Expanded Physics coverage including AS, taught Y2, future compulsory content, optional Medical explicitly locked; original v123 preserved",
         "chemistryBroadAdd": 239,
         "chemistrySkippedDuplicates": 14,
         "mathsBroadAdd": 9,
-        "exactAndSemanticDuplicatesPruned": 0,
+        "exactAndSemanticDuplicatesPruned": 9,
         "oldCardCount": 1826,
-        "currentProposedCount": 2243
+        "currentProposedCount": 2234,
+        "shortRecallAllSections": "First sweep across compulsory Physics 3.1–3.8 and Chemistry 3.1–3.3; not full line-by-line certification."
       }
     }
   }
