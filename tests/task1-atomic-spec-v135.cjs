@@ -16,8 +16,8 @@ for(const e of ledger.requirements) {
   assert(!ids.has(e.id),'Repeated bullet id '+e.id); ids.add(e.id);
   assert(['Physics','Chemistry'].includes(e.subject),'Unexpected subject '+e.id);
   assert(e.stage==='AS','Only Year 1 content in first atomic pass '+e.id);
-  assert(/^3\\.\\d+(?:\\.\\d+){0,2}$/.test(e.specRef),'Invalid section id '+e.id);
-  assert(/^https:\/\/www\\.aqa\\.org\\.uk\//.test(e.sourceUrl),'Official source missing '+e.id);
+  assert(e.specRef.startsWith('3.') && e.specRef.split('.').slice(1).every(x=>/^[0-9]+$/.test(x)),'Invalid section id '+e.id);
+  assert(e.sourceUrl.startsWith('https://www.aqa.org.uk/'),'Official source missing '+e.id);
   assert(e.requirement.length>=18,'Requirement too vague '+e.id);
   assert(e.candidateCardIds.length===e.candidatePrompts.length,'Mismatched prompts '+e.id);
   if(e.status==='candidate_evidence_unverified')assert(e.candidateCardIds.length>0,'Search candidate lost '+e.id);
