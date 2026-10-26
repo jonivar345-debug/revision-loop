@@ -5,7 +5,7 @@
 - Starting point: v129 branch, 2,686 total cards / 2,682 active.
 - New: 160 short recall cards — 72 Physics, 84 Chemistry, 4 Maths.
 - Draft count: 2,846 total / 2,842 active, with every previous card ID retained.
-- 106 new cards are marked mock-eligible; later untaught A2 material excluded. Year 2 Physics is excluded from the Year 1 Physics mock even where taught.
+- 105 new cards are marked mock-eligible; later untaught A2 material excluded. Year 2 Physics is excluded from the Year 1 Physics mock even where taught.
 - 19 candidates were removed during lexical duplicate checks. Distinct E/Z and NMR triplet/quartet facts were retained separately.
 - No Firestore, profile, purchases, XP, cloud save, World photos or exam-bank data changed.
 
