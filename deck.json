@@ -55552,7 +55552,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Measurements",
-      "revisionTopic": "Measurements"
+      "revisionTopic": "Measurements",
+      "reject": [
+        "tera"
+      ]
     },
     {
       "id": "task1_v130_003",
@@ -55728,7 +55731,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Particles",
-      "revisionTopic": "Particles"
+      "revisionTopic": "Particles",
+      "reject": [
+        "attractive"
+      ]
     },
     {
       "id": "task1_v130_011",
@@ -56124,7 +56130,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Mechanics",
-      "revisionTopic": "Mechanics"
+      "revisionTopic": "Mechanics",
+      "reject": [
+        "distance"
+      ]
     },
     {
       "id": "task1_v130_029",
@@ -56542,7 +56551,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Simple harmonic motion",
-      "revisionTopic": "Simple harmonic motion"
+      "revisionTopic": "Simple harmonic motion",
+      "reject": [
+        "at equilibrium"
+      ]
     },
     {
       "id": "task1_v130_048",
@@ -56674,7 +56686,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Thermal physics",
-      "revisionTopic": "Thermal physics"
+      "revisionTopic": "Thermal physics",
+      "reject": [
+        "it halves"
+      ]
     },
     {
       "id": "task1_v130_054",
@@ -57026,7 +57041,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Nuclear physics",
-      "revisionTopic": "Nuclear physics"
+      "revisionTopic": "Nuclear physics",
+      "reject": [
+        "time for half the nuclei to decay"
+      ]
     },
     {
       "id": "task1_v130_070",
@@ -57753,7 +57771,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Acids and bases",
-      "revisionTopic": "Acids and bases"
+      "revisionTopic": "Acids and bases",
+      "reject": [
+        "base dissociation"
+      ]
     },
     {
       "id": "task1_v130_103",
@@ -57929,7 +57950,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Period 3 oxides",
-      "revisionTopic": "Period 3 oxides"
+      "revisionTopic": "Period 3 oxides",
+      "reject": [
+        "basic"
+      ]
     },
     {
       "id": "task1_v130_111",
@@ -58060,7 +58084,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Organic chemistry",
-      "revisionTopic": "Organic chemistry"
+      "revisionTopic": "Organic chemistry",
+      "reject": [
+        "different molecular formula"
+      ]
     },
     {
       "id": "task1_v130_117",
@@ -58104,7 +58131,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Organic chemistry",
-      "revisionTopic": "Organic chemistry"
+      "revisionTopic": "Organic chemistry",
+      "reject": [
+        "opposite sides"
+      ]
     },
     {
       "id": "task1_v130_119",
@@ -58280,7 +58310,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Alkenes",
-      "revisionTopic": "Alkenes"
+      "revisionTopic": "Alkenes",
+      "reject": [
+        "primary"
+      ]
     },
     {
       "id": "task1_v130_127",
@@ -58698,7 +58731,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Amines",
-      "revisionTopic": "Amines"
+      "revisionTopic": "Amines",
+      "reject": [
+        "lone pair more available"
+      ]
     },
     {
       "id": "task1_v130_146",
@@ -58742,7 +58778,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "Polymers",
-      "revisionTopic": "Polymers"
+      "revisionTopic": "Polymers",
+      "reject": [
+        "amide"
+      ]
     },
     {
       "id": "task1_v130_148",
@@ -59006,7 +59045,10 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Organic chemistry",
-      "revisionTopic": "Organic chemistry"
+      "revisionTopic": "Organic chemistry",
+      "reject": [
+        "same side"
+      ]
     },
     {
       "id": "task1_v130_160",
@@ -59028,7 +59070,10 @@
       "priority": 4,
       "scope": "full",
       "courseTopic": "NMR spectroscopy",
-      "revisionTopic": "NMR spectroscopy"
+      "revisionTopic": "NMR spectroscopy",
+      "reject": [
+        "two"
+      ]
     }
   ],
   "meta": {
@@ -59309,7 +59354,8 @@
         "duplicateCandidatesPruned": 19,
         "source": "AQA 7408/7405 subject content and AQA 7357 Year 1 syllabus",
         "allSpecBulletsCertified": false,
-        "preservation": "All v129 and older card IDs retained; no changes to progress, Firestore, World, or rewards"
+        "preservation": "All v129 and older card IDs retained; no changes to progress, Firestore, World, or rewards",
+        "markingEnhancement": "15 card-specific incorrect responses blocked by exact normalisation before fuzzy matching; short correct alternatives remain accepted."
       }
     },
     "chatYear1CoverageV126": {
