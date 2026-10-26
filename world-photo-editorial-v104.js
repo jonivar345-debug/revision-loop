@@ -799,6 +799,30 @@ data["country-pw"]=[...[
     "reviewStatus": "Exact CC licence, original dimensions and geolocated subject reviewed 26 Oct 2026; archive builder must verify live metadata and photo bytes."
   }
 ],...(data["country-pw"]||[])];
+data["country-za"]=[{
+  "file": "An Elephant herd by Paul Kruger Gate.jpg",
+  "author": "DrPrattDatta",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "subject": "African elephant herd near Paul Kruger Gate, Kruger National Park, South Africa",
+  "width": 4983,
+  "height": 3253,
+  "editorialMetadata": true,
+  "qualityPriority": 1700,
+  "reviewStatus": "Exact Commons file, photographer, CC licence, place and dimensions checked 2026-10-26; final image chosen after reviewing photograph of elephant herd, builder must verify live source"
+},...(data["country-za"]||[])];
+data["cape_coast"]=[{
+  "file": "Fort William (Lighthouse).jpg",
+  "author": "Macabe5387",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "subject": "Fort William Lighthouse above Cape Coast, Ghana",
+  "width": 4000,
+  "height": 3000,
+  "editorialMetadata": true,
+  "qualityPriority": 1700,
+  "reviewStatus": "Exact Commons file, photographer, CC licence, place and dimensions checked 2026-10-26; builder must verify live metadata and image pixels"
+},...(data["cape_coast"]||[])];
 if(root)root.RevisionWorldV104Photos=Object.freeze(data);
 if(typeof module==='object'&&module.exports)module.exports=data;
 })(typeof window==='object'?window:null);
