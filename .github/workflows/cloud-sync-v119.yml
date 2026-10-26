@@ -13,6 +13,7 @@ on:
       - 'progress-backup.js'
       - 'sw.js'
       - 'tests/task1-deck-audit-v122.cjs'
+      - 'tests/task1-practicals-v123.cjs'
       - 'tests/task1-short-answer-marking-v122.cjs'
       - 'tests/cloud-sync-v119.cjs'
       - 'tests/reset-layout-v120.cjs'
@@ -36,6 +37,7 @@ jobs:
       - run: node --check app.js
       - run: node --check progress-backup.js
       - run: node tests/task1-deck-audit-v122.cjs
+      - run: node tests/task1-practicals-v123.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
