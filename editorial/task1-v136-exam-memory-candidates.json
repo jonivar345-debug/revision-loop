@@ -1,0 +1,1570 @@
+{
+  "sourceDeckVersion": 134,
+  "date": "2026-10-26",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content"
+  ],
+  "status": "DRAFT; semantic duplicate check and answer grading still required before publishing",
+  "candidates": [
+    {
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "What is the quadratic formula for ax² + bx + c = 0?",
+      "back": "x = (−b ± √(b² − 4ac)) / (2a).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "What does b² − 4ac < 0 mean for real roots?",
+      "back": "The quadratic has no real roots.",
+      "similarCandidates": [
+        {
+          "id": "v33_card_maths_quadratics_78",
+          "front": "What does a negative discriminant say about real roots?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "State the index law a^m × a^n.",
+      "back": "a^(m+n), for the same non-zero base.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "State the index law (a^m)^n.",
+      "back": "a^(mn).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.7",
+      "stage": "AS",
+      "topic": "Exponentials & logarithms",
+      "front": "What is logₐ1?",
+      "back": "0, since a⁰ = 1 (a > 0, a ≠ 1).",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.7",
+      "stage": "AS",
+      "topic": "Exponentials & logarithms",
+      "front": "What is logₐa?",
+      "back": "1, for a > 0 and a ≠ 1.",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.4",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "front": "State the point–gradient form of a straight-line equation.",
+      "back": "y − y₁ = m(x − x₁).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.4",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "front": "How are perpendicular non-vertical line gradients related?",
+      "back": "m₁m₂ = −1.",
+      "similarCandidates": [
+        {
+          "id": "math_perp_grad",
+          "front": "How are gradients of perpendicular non-vertical lines related?",
+          "score": 1
+        },
+        {
+          "id": "v33_card_maths_coordinate_geometry_86",
+          "front": "How are gradients of two nonvertical perpendicular lines related?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.4",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "front": "What equation describes a circle with centre (a,b) and radius r?",
+      "back": "(x − a)² + (y − b)² = r².",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.5",
+      "stage": "AS",
+      "topic": "Sequences & series",
+      "front": "What is the sum of n terms of an arithmetic progression?",
+      "back": "Sₙ = n[2a + (n−1)d]/2.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.5",
+      "stage": "AS",
+      "topic": "Sequences & series",
+      "front": "What is the sum of n terms of a geometric progression?",
+      "back": "Sₙ = a(1−rⁿ)/(1−r), when r ≠ 1.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.5",
+      "stage": "A2",
+      "topic": "Sequences & series",
+      "front": "What is the sum to infinity for a convergent geometric series?",
+      "back": "S∞ = a/(1−r), valid when |r| < 1.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "State the sine rule for a triangle ABC.",
+      "back": "a/sin A = b/sin B = c/sin C.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "State the cosine rule for the side opposite angle A.",
+      "back": "a² = b² + c² − 2bc cos A.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "How is a triangle's area found from two sides and their included angle?",
+      "back": "Area = ½ab sin C.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "What is the radian arc-length formula?",
+      "back": "s = rθ, with θ in radians.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "What is the radian sector-area formula?",
+      "back": "A = ½r²θ, with θ in radians.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "A2",
+      "topic": "Trigonometry",
+      "front": "State the identity linking sec²x and tan²x.",
+      "back": "sec²x = 1 + tan²x.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "A2",
+      "topic": "Trigonometry",
+      "front": "State the identity linking cosec²x and cot²x.",
+      "back": "cosec²x = 1 + cot²x.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "A2",
+      "topic": "Trigonometry",
+      "front": "What is sin 2x in terms of sin x and cos x?",
+      "back": "sin 2x = 2 sin x cos x.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "A2",
+      "topic": "Trigonometry",
+      "front": "What is cos 2x in terms of cos²x and sin²x?",
+      "back": "cos 2x = cos²x − sin²x.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "A2",
+      "topic": "Trigonometry",
+      "front": "What is tan 2x in terms of tan x?",
+      "back": "tan 2x = 2 tan x/(1−tan²x), where defined.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "front": "What is d(sin kx)/dx?",
+      "back": "k cos(kx), using radians.",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "front": "What is d(cos kx)/dx?",
+      "back": "−k sin(kx), using radians.",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "front": "What is d(e^(kx))/dx?",
+      "back": "k e^(kx).",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "front": "What is d(ln x)/dx?",
+      "back": "1/x (for x > 0).",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "A2",
+      "topic": "Differentiation",
+      "front": "State the product rule for y = uv.",
+      "back": "dy/dx = u′v + uv′.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "A2",
+      "topic": "Differentiation",
+      "front": "State the quotient rule for y = u/v.",
+      "back": "dy/dx = (vu′ − uv′)/v².",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "stage": "A2",
+      "topic": "Differentiation",
+      "front": "State the chain rule for y = f(g(x)).",
+      "back": "dy/dx = f′(g(x))g′(x).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "AS",
+      "topic": "Integration",
+      "front": "What is ∫e^(kx) dx, for k ≠ 0?",
+      "back": "e^(kx)/k + C.",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "AS",
+      "topic": "Integration",
+      "front": "What is ∫1/x dx?",
+      "back": "ln|x| + C (on a suitable interval).",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "AS",
+      "topic": "Integration",
+      "front": "What is ∫sin(kx) dx for k ≠ 0?",
+      "back": "−cos(kx)/k + C.",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "AS",
+      "topic": "Integration",
+      "front": "What is ∫cos(kx) dx for k ≠ 0?",
+      "back": "sin(kx)/k + C.",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "A2",
+      "topic": "Integration",
+      "front": "State integration by parts in its standard form.",
+      "back": "∫u(dv/dx) dx = uv − ∫v(du/dx) dx.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.11",
+      "stage": "A2",
+      "topic": "Vectors",
+      "front": "How is the magnitude of vector (x,y,z) found?",
+      "back": "√(x²+y²+z²).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.15",
+      "stage": "AS",
+      "topic": "Statistics",
+      "front": "How is a value standardised for X ~ N(μ,σ²)?",
+      "back": "z = (x−μ)/σ.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.14",
+      "stage": "AS",
+      "topic": "Statistics",
+      "front": "State the formula for the conditional probability P(A|B).",
+      "back": "P(A∩B)/P(B), when P(B) > 0.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.15",
+      "stage": "AS",
+      "topic": "Statistics",
+      "front": "For X~B(n,p), what are E(X) and Var(X)?",
+      "back": "E(X) = np; Var(X) = np(1−p).",
+      "similarCandidates": [
+        {
+          "id": "maths_trig_001",
+          "front": "What is the Pythagorean trigonometric identity?",
+          "score": 1
+        },
+        {
+          "id": "maths_transform_003",
+          "front": "For y = f(ax), what happens to x-coordinates?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.16",
+      "stage": "AS",
+      "topic": "Statistics",
+      "front": "What is a one-sided hypothesis test looking for?",
+      "back": "Evidence of a difference in one specified direction.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.18",
+      "stage": "AS",
+      "topic": "Mechanics",
+      "front": "In variable-acceleration motion, how is v related to displacement s?",
+      "back": "v = ds/dt.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.18",
+      "stage": "AS",
+      "topic": "Mechanics",
+      "front": "In variable-acceleration motion, how is a related to v?",
+      "back": "a = dv/dt.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.20",
+      "stage": "AS",
+      "topic": "Mechanics",
+      "front": "What is the turning moment of a force about a point?",
+      "back": "Force × perpendicular distance from the point to its line of action.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Measurements & errors",
+      "front": "For a product or quotient, how do percentage uncertainties combine?",
+      "back": "Add percentage uncertainties (usual worst-case estimate).",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_phy_016",
+          "front": "How are percentage uncertainties combined for a product of measured quantities?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Measurements & errors",
+      "front": "How can uncertainty in a fitted line's y-intercept be estimated?",
+      "back": "Compare best-fit with extreme acceptable line intercepts.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Measurements & errors",
+      "front": "What happens to absolute uncertainties when measured values are added?",
+      "back": "Add their absolute uncertainties (worst-case estimate).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "How do a particle and its antiparticle compare in mass and charge?",
+      "back": "Equal mass and opposite electric charge.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What two conservation laws must hold in pair production?",
+      "back": "Energy and momentum are both conserved.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "Why can't a single photon create a pair in empty space?",
+      "back": "A lone photon cannot conserve both energy and momentum.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What is baryon number for a baryon and an antibaryon?",
+      "back": "+1 and −1 respectively.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_phy_022",
+          "front": "What is the baryon number of an antibaryon?",
+          "score": 1
+        },
+        {
+          "id": "task1_v124_bulk_phy_021",
+          "front": "What is the baryon number of a meson?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What is baryon number for a meson?",
+      "back": "Zero.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_phy_021",
+          "front": "What is the baryon number of a meson?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "Which quark combination makes a meson?",
+      "back": "One quark plus one antiquark.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "Which quark combination makes a baryon?",
+      "back": "Three quarks (an antibaryon has three antiquarks).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What is the strangeness of an s quark?",
+      "back": "−1 (an anti-s has +1).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What does the threshold frequency mean in the photoelectric effect?",
+      "back": "Minimum light frequency needed for photoemission.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What happens to maximum photoelectron energy when light intensity rises?",
+      "back": "It stays unchanged if the frequency is fixed.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "topic": "Particles & radiation",
+      "front": "What does the gradient of Eₖ,max against frequency represent?",
+      "back": "Planck's constant h.",
+      "similarCandidates": [
+        {
+          "id": "task1_practical_006",
+          "front": "What does the gradient of distance against time squared represent for free fall from rest?",
+          "score": 0.8333333333333334
+        },
+        {
+          "id": "task1_full_112",
+          "front": "What does the gradient of gravitational potential against r represent?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.1",
+      "stage": "AS",
+      "topic": "Waves",
+      "front": "What is the distinction between amplitude and peak-to-peak displacement?",
+      "back": "Peak-to-peak displacement is twice the amplitude.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "stage": "AS",
+      "topic": "Waves",
+      "front": "When are two superposed waves exactly in antiphase?",
+      "back": "They have a phase difference of 180° or π radians.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "stage": "AS",
+      "topic": "Mechanics & materials",
+      "front": "For a Hooke's-law spring, how is stored strain energy found?",
+      "back": "E = ½Fx = ½kx², from the force–extension graph area.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "stage": "AS",
+      "topic": "Mechanics & materials",
+      "front": "What is the limit of proportionality on a force–extension graph?",
+      "back": "The point beyond which extension is not proportional to force.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What resistance is assumed for an ideal ammeter?",
+      "back": "Zero ohms.",
+      "similarCandidates": [
+        {
+          "id": "task1_phy_093",
+          "front": "What is an ideal ammeter's resistance?",
+          "score": 0.8
+        },
+        {
+          "id": "task1_v124_bulk_phy_081",
+          "front": "What is the internal resistance of an ideal ammeter?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What resistance is assumed for an ideal voltmeter?",
+      "back": "Infinite resistance.",
+      "similarCandidates": [
+        {
+          "id": "task1_phy_094",
+          "front": "What is an ideal voltmeter's resistance?",
+          "score": 0.8
+        },
+        {
+          "id": "task1_v124_bulk_phy_080",
+          "front": "What is the internal resistance of an ideal voltmeter?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For a negative-temperature-coefficient thermistor, how does R change as T rises?",
+      "back": "Its resistance decreases.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For an LDR, what happens to its resistance as light intensity rises?",
+      "back": "Resistance decreases.",
+      "similarCandidates": [
+        {
+          "id": "phy_ldr",
+          "front": "What happens to an LDR's resistance as light intensity increases?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What defines the critical temperature of a superconductor?",
+      "back": "At or below it the material's resistivity is zero.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "Which conservation law explains current at a junction?",
+      "back": "Conservation of charge: current entering equals current leaving.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "In a series potential divider, what determines the output voltage fraction?",
+      "back": "The share of total resistance across the output component.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What changes in an emf–terminal-voltage graph as current rises?",
+      "back": "Lost volts Ir increases; terminal p.d. decreases.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1",
+      "stage": "A2",
+      "topic": "Periodic motion",
+      "front": "Why can a body moving at constant speed in a circle be accelerating?",
+      "back": "Velocity changes direction continuously.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1",
+      "stage": "A2",
+      "topic": "Periodic motion",
+      "front": "What is the acceleration at the equilibrium position in SHM?",
+      "back": "Zero, because displacement x = 0.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1",
+      "stage": "A2",
+      "topic": "Periodic motion",
+      "front": "When is speed greatest during SHM?",
+      "back": "At the equilibrium position.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1",
+      "stage": "A2",
+      "topic": "Periodic motion",
+      "front": "When is acceleration magnitude greatest during SHM?",
+      "back": "At maximum displacement from equilibrium.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1",
+      "stage": "A2",
+      "topic": "Periodic motion",
+      "front": "How does damping affect resonance peak height and sharpness?",
+      "back": "It lowers and broadens the resonance peak.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.2",
+      "stage": "A2",
+      "topic": "Thermal physics",
+      "front": "What happens to average particle kinetic energy during a phase change at fixed temperature?",
+      "back": "It stays constant; potential energy changes instead.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.2",
+      "stage": "A2",
+      "topic": "Thermal physics",
+      "front": "In the gas equation pV = NkT, what does N count?",
+      "back": "The number of gas molecules, not moles.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.2",
+      "stage": "A2",
+      "topic": "Thermal physics",
+      "front": "Why is rms speed not the same as mean speed?",
+      "back": "Rms uses the square root of the mean squared speed.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.3",
+      "stage": "A2",
+      "topic": "Electric fields",
+      "front": "Which way does an electric field point at a point?",
+      "back": "The direction of force on a positive test charge.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.3",
+      "stage": "A2",
+      "topic": "Electric fields",
+      "front": "What does an equipotential surface tell you about work along it?",
+      "back": "No work is done by the electric field moving charge along it.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.4",
+      "stage": "A2",
+      "topic": "Capacitance",
+      "front": "At a fixed voltage, what happens to charge when capacitance doubles?",
+      "back": "Stored charge doubles (Q = CV).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.8.1",
+      "stage": "A2",
+      "topic": "Nuclear physics",
+      "front": "What is the decay constant λ in terms of the half-life?",
+      "back": "λ = ln2 / t½.",
+      "similarCandidates": [
+        {
+          "id": "task1_phy_157",
+          "front": "What is the relationship between half-life and decay constant?",
+          "score": 0.8333333333333334
+        },
+        {
+          "id": "task1_v131_069",
+          "front": "What is the relation between half-life and decay constant?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.8.1",
+      "stage": "A2",
+      "topic": "Nuclear physics",
+      "front": "Why is background radiation subtracted before calculating a source count rate?",
+      "back": "To estimate the count rate due to the source alone.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "front": "Why does the unit of molar concentration change when volume uses cm³?",
+      "back": "Concentration uses dm³, so convert cm³ to dm³ first.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "front": "How many cm³ make 1 dm³?",
+      "back": "1000 cm³.",
+      "similarCandidates": [
+        {
+          "id": "chem_bonding_v47_27",
+          "front": "How many covalent bonds does each carbon make in diamond?",
+          "score": 1
+        },
+        {
+          "id": "task1_v124_bulk_chem_011",
+          "front": "How many cm³ make one dm³?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.3",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "Why is ordinary ice less dense than liquid water?",
+      "back": "Hydrogen bonding holds water molecules in a more open structure.",
+      "similarCandidates": [
+        {
+          "id": "chem_bonding_v48_43",
+          "front": "Why is ice less dense than liquid water?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.3",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "What can make a molecule non-polar despite polar bonds?",
+      "back": "Symmetrical geometry can cancel bond dipoles.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.3",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "What is the difference between a bond pair and a lone pair?",
+      "back": "A bond pair is shared between atoms; a lone pair is not.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4",
+      "stage": "AS",
+      "topic": "Energetics",
+      "front": "In calorimetry, why may the calculated |ΔH| be too small?",
+      "back": "Heat loss to surroundings makes measured |ΔT| too small.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "topic": "Kinetics",
+      "front": "Why does increasing concentration usually increase collision frequency?",
+      "back": "More particles occupy the same volume.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "topic": "Kinetics",
+      "front": "When a catalyst is added, what happens to the Maxwell–Boltzmann curve?",
+      "back": "At fixed temperature it is unchanged; the activation-energy threshold falls.",
+      "similarCandidates": [
+        {
+          "id": "chem_y1_chat_v126_008",
+          "front": "What happens to the Maxwell–Boltzmann curve when a catalyst is added?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "topic": "Equilibria",
+      "front": "What happens to the value of Kc when a catalyst is added?",
+      "back": "It stays unchanged at constant temperature.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_056",
+          "front": "What happens to Kc when a catalyst is added at fixed temperature?",
+          "score": 0.8333333333333334
+        },
+        {
+          "id": "chem_y1_chat_v126_008",
+          "front": "What happens to the Maxwell–Boltzmann curve when a catalyst is added?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "topic": "Equilibria",
+      "front": "What happens to Kc if concentrations change but temperature stays constant?",
+      "back": "It stays the same; the position may shift.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "topic": "Periodicity",
+      "front": "Why is aluminium's first ionisation energy below magnesium's?",
+      "back": "Al loses a higher-energy 3p electron; Mg loses a 3s electron.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_007",
+          "front": "Why is the first ionisation energy of aluminium below magnesium?",
+          "score": 1
+        },
+        {
+          "id": "v33_card_chemistry_periodicity_71",
+          "front": "Why does aluminium have a lower first ionisation energy than magnesium?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "topic": "Periodicity",
+      "front": "Why is sulfur's first ionisation energy below phosphorus's?",
+      "back": "Repulsion between paired sulfur 3p electrons eases removal.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_006",
+          "front": "Why is the first ionisation energy of sulfur below phosphorus?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Group 2",
+      "front": "Why does first ionisation energy fall down Group 2 despite nuclear-charge increase?",
+      "back": "More shielding and greater outer-electron distance dominate.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "topic": "Group 7",
+      "front": "What gas is used to disinfect public drinking water?",
+      "back": "Chlorine, which helps kill harmful microorganisms.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "topic": "Group 7",
+      "front": "Why do we weigh both benefits and risks of water chlorination?",
+      "back": "It prevents infections, but toxic chlorine or by-products require control.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "stage": "AS",
+      "topic": "Organic reactions",
+      "front": "What does a full curly arrow represent?",
+      "back": "Movement of an electron pair.",
+      "similarCandidates": [
+        {
+          "id": "task1_chem_118",
+          "front": "What does a curly arrow represent in an organic mechanism?",
+          "score": 0.8333333333333334
+        },
+        {
+          "id": "task1_v124_bulk_chem_101",
+          "front": "What does a curly arrow starting from a bond represent?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "stage": "AS",
+      "topic": "Organic reactions",
+      "front": "What does a half-headed curly arrow represent?",
+      "back": "Movement of one electron.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_102",
+          "front": "What does a single-headed curly arrow represent?",
+          "score": 0.8571428571428571
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "front": "What is a propagation step in free-radical substitution?",
+      "back": "A radical reacts and another radical is formed.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_108",
+          "front": "What is an initiation step in free-radical substitution?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "front": "What is a termination step in a radical mechanism?",
+      "back": "Two radicals combine, forming no new radical.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_110",
+          "front": "What is a termination step in a radical chain reaction?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "stage": "AS",
+      "topic": "Halogenoalkanes",
+      "front": "Why do iodoalkanes usually hydrolyse faster than chloroalkanes?",
+      "back": "The C–I bond is weaker than the C–Cl bond.",
+      "similarCandidates": [
+        {
+          "id": "task1_v130_122",
+          "front": "Why do iodoalkanes generally hydrolyse faster than chloroalkanes?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "stage": "AS",
+      "topic": "Halogenoalkanes",
+      "front": "What is the role of the nucleophile in nucleophilic substitution?",
+      "back": "It donates an electron pair to the electrophilic carbon.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "stage": "AS",
+      "topic": "Alkenes",
+      "front": "What distinguishes an addition polymer from its monomer?",
+      "back": "The monomer's C=C bonds open to form a saturated chain.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.5",
+      "stage": "AS",
+      "topic": "Alcohols",
+      "front": "What distinguishes oxidation of primary and secondary alcohols?",
+      "back": "Primary can form aldehyde/acid; secondary forms ketone.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "front": "What does a positive 2,4-DNPH test usually indicate?",
+      "back": "An aldehyde or ketone carbonyl group.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "front": "Why does an IR fingerprint region help identify a compound?",
+      "back": "Its complex absorption pattern can be matched to a reference.",
+      "similarCandidates": [
+        {
+          "id": "task1_chem_155",
+          "front": "What does a fingerprint region help identify?",
+          "score": 0.8333333333333334
+        },
+        {
+          "id": "task1_v127_041",
+          "front": "Why does an IR fingerprint match help identify a compound?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8",
+      "stage": "A2",
+      "topic": "Thermodynamics",
+      "front": "What is the condition for thermodynamic feasibility at constant T and p?",
+      "back": "ΔG ≤ 0; ΔG < 0 favours a forward reaction.",
+      "similarCandidates": [
+        {
+          "id": "chem_gibbs_feasible",
+          "front": "What sign of ΔG indicates thermodynamic feasibility under the stated conditions?",
+          "score": 0.8
+        },
+        {
+          "id": "task1_chem_164",
+          "front": "What is the condition for thermodynamic feasibility using Gibbs free energy?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8",
+      "stage": "A2",
+      "topic": "Thermodynamics",
+      "front": "What is ΔG in terms of ΔH and ΔS?",
+      "back": "ΔG = ΔH − TΔS, with consistent units.",
+      "similarCandidates": [
+        {
+          "id": "chem_redox_oxid",
+          "front": "What is oxidation in terms of electrons and oxidation state?",
+          "score": 1
+        },
+        {
+          "id": "chem_redox_reduc",
+          "front": "What is reduction in terms of electrons and oxidation state?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.9",
+      "stage": "A2",
+      "topic": "Rates and orders",
+      "front": "How is overall reaction order obtained from a rate equation?",
+      "back": "Add the exponents of all concentration terms.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.9",
+      "stage": "A2",
+      "topic": "Rates and orders",
+      "front": "For a zero-order reactant, what is the concentration exponent?",
+      "back": "Zero: rate is independent of its concentration.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "stage": "A2",
+      "topic": "Kp",
+      "front": "What is partial pressure in terms of mole fraction?",
+      "back": "pᵢ = xᵢ × total pressure.",
+      "similarCandidates": [
+        {
+          "id": "task1_full_056",
+          "front": "What is the relationship between partial pressure and mole fraction?",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "stage": "A2",
+      "topic": "Kp",
+      "front": "What quantity, not concentration, is used in a Kp expression?",
+      "back": "Equilibrium partial pressure of each gas.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.11",
+      "stage": "A2",
+      "topic": "Electrochemistry",
+      "front": "At standard conditions, what does a more positive standard electrode potential imply?",
+      "back": "Greater tendency for reduction in the stated half-cell.",
+      "similarCandidates": [
+        {
+          "id": "task1_v130_100",
+          "front": "What does a more positive standard electrode potential indicate?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.11",
+      "stage": "A2",
+      "topic": "Electrochemistry",
+      "front": "How is a standard cell EMF calculated from reduction potentials?",
+      "back": "E°cell = E°(positive electrode) − E°(negative electrode).",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.12",
+      "stage": "A2",
+      "topic": "Acids and bases",
+      "front": "What is the Brønsted–Lowry definition of a base?",
+      "back": "A proton (H⁺) acceptor.",
+      "similarCandidates": [
+        {
+          "id": "task1_v124_bulk_chem_165",
+          "front": "What is a Brønsted–Lowry base?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.12",
+      "stage": "A2",
+      "topic": "Acids and bases",
+      "front": "What is the pKa definition?",
+      "back": "pKa = −log₁₀(Ka).",
+      "similarCandidates": [
+        {
+          "id": "chem_energetics_v53_03",
+          "front": "What does 'standard state' mean in enthalpy definitions?",
+          "score": 1
+        },
+        {
+          "id": "chem_energetics_v53_07",
+          "front": "What is the definition of Hess's law?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.12",
+      "stage": "A2",
+      "topic": "Acids and bases",
+      "front": "How is [H⁺] found from a pH value?",
+      "back": "[H⁺] = 10^(−pH) mol dm⁻³.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.12",
+      "stage": "A2",
+      "topic": "Acids and bases",
+      "front": "How does an acidic buffer resist small pH changes?",
+      "back": "HA removes added OH⁻; A⁻ removes added H⁺.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.4",
+      "stage": "A2",
+      "topic": "Period 3 oxides",
+      "front": "Which Period 3 oxide is amphoteric?",
+      "back": "Aluminium oxide, Al₂O₃.",
+      "similarCandidates": [
+        {
+          "id": "task1_v131_101",
+          "front": "Which oxide of Period 3 is amphoteric?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.5",
+      "stage": "A2",
+      "topic": "Transition metals",
+      "front": "Why do transition-metal complex ions often have colour?",
+      "back": "Ligand-field splitting allows absorption of visible wavelengths.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.5",
+      "stage": "A2",
+      "topic": "Transition metals",
+      "front": "What is a bidentate ligand?",
+      "back": "A ligand donating two lone pairs to one metal centre.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.5",
+      "stage": "A2",
+      "topic": "Transition metals",
+      "front": "What is the coordination number of a complex ion?",
+      "back": "Number of coordinate bonds to its central metal ion.",
+      "similarCandidates": [
+        {
+          "id": "v33_card_chemistry_transition_metals_69",
+          "front": "What does coordination number count in a complex?",
+          "score": 1
+        },
+        {
+          "id": "task1_full_018",
+          "front": "What coordination number is typical of a tetrahedral complex?",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "stage": "A2",
+      "topic": "Optical isomerism",
+      "front": "Why is a racemic mixture optically inactive?",
+      "back": "Equal and opposite rotations of plane-polarised light cancel.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "front": "How can Tollens' reagent distinguish aldehydes and ketones?",
+      "back": "Aldehydes give a silver deposit; ordinary ketones do not.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "stage": "A2",
+      "topic": "NMR spectroscopy",
+      "front": "What does integration of a ¹H NMR peak show?",
+      "back": "The relative number of hydrogens giving that signal.",
+      "similarCandidates": [
+        {
+          "id": "chem_a2_nmr_integration",
+          "front": "What does integration in a ¹H NMR spectrum show?",
+          "score": 0.8
+        },
+        {
+          "id": "task1_chem_009",
+          "front": "What does the molecular-ion peak show in a mass spectrum?",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "stage": "A2",
+      "topic": "NMR spectroscopy",
+      "front": "What is the purpose of using a deuterated solvent in ¹H NMR?",
+      "back": "Reduce interfering solvent proton signals.",
+      "similarCandidates": []
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "stage": "A2",
+      "topic": "Chromatography",
+      "front": "What is retention time in gas chromatography?",
+      "back": "Time from injection until a component reaches the detector.",
+      "similarCandidates": [
+        {
+          "id": "task1_full_097",
+          "front": "What does a retention time help identify in gas chromatography?",
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "exactDuplicatePrompts": [
+    [
+      "Maths",
+      "State the index law a^m ÷ a^n."
+    ],
+    [
+      "Maths",
+      "What is logₐ(x/y)?"
+    ],
+    [
+      "Physics",
+      "What is specific charge?"
+    ],
+    [
+      "Chemistry",
+      "Why does benzene favour substitution over addition?"
+    ],
+    [
+      "Chemistry",
+      "What is a zwitterion?"
+    ]
+  ]
+}
