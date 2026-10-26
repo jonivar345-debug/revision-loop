@@ -3,7 +3,7 @@
   "parentRelease": 136,
   "preparedOn": "2026-10-26",
   "scope": "Second prioritised sampling of atomic AQA outcomes across Physics particles/electricity, Chemistry organic, Maths Appendix B; NOT the entire specification and NOT verified answer coverage",
-  "warning": "This is a SEARCH LEDGER, not a coverage certification. Regex front-side candidates need actual answer checks, and zero regex matches may be false negatives. Individual section labels should also be validated in a deeper rubric audit.",
+  "warning": "This is a SEARCH LEDGER, not a coverage certification. Regex front-side candidates need actual answer checks, and zero regex matches may be false negatives. Individual section labels should also be validated in a deeper rubric audit. Verified-existing snapshots only support their single narrow prompt; total cards for the three full syllabuses have NOT been exhaustively audited.",
   "sourceKeys": {
     "P32": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
     "P35": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
@@ -18,7 +18,12 @@
       "Maths": 24
     },
     "candidates": 109,
-    "needsSemantic": 33
+    "needsSemantic": 33,
+    "questionAnswerChecked": 23,
+    "possibleMemoryGap": 1,
+    "partialOrUnclear": 4,
+    "unverifiedFrontMatches": 109,
+    "unresolvedNoFrontMatches": 5
   },
   "rows": [
     {
@@ -138,12 +143,21 @@
       "requirement": "State the attractive and repulsive ranges of the strong nuclear force",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "strong nuclear force.*range|nuclear force.*repul|femtometre"
+      "searchPattern": "strong nuclear force.*range|nuclear force.*repul|femtometre",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_pandr_v29_strong_range",
+          "front": "How does the strong nuclear force vary with nucleon separation?",
+          "back": "Repulsive below ~0.5 fm; attractive up to ~3 fm; negligible beyond.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B008",
@@ -152,12 +166,21 @@
       "requirement": "Describe changes in nucleon and proton number during alpha decay",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "alpha decay.*(proton|nucleon|number)"
+      "searchPattern": "alpha decay.*(proton|nucleon|number)",
+      "verifiedExisting": [
+        {
+          "cardId": "task1_phy_025",
+          "front": "What changes in a nucleus during alpha decay?",
+          "back": "Nucleon number −4; proton number −2.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B009",
@@ -214,12 +237,21 @@
       "requirement": "Relate antiparticle mass and charge to its corresponding particle",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "antiparticle.*(mass|charge)|positron.*charge"
+      "searchPattern": "antiparticle.*(mass|charge)|positron.*charge",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_antiparticle",
+          "front": "How does an antiparticle compare with its particle?",
+          "back": "Same mass and rest energy, but opposite charge and other additive quantum numbers.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B012",
@@ -330,12 +362,21 @@
       "requirement": "Identify W bosons as mediators of the weak interaction",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "W.?boson|W.?[+−].*exchange|weak.*exchange"
+      "searchPattern": "W.?boson|W.?[+−].*exchange|weak.*exchange",
+      "verifiedExisting": [
+        {
+          "cardId": "task1_phy_030",
+          "front": "Which bosons carry the weak interaction at A-level?",
+          "back": "W⁺ and W⁻ bosons.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B018",
@@ -546,12 +587,21 @@
       "requirement": "Apply conservation of charge in a particle reaction",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "particle.*charge.*conserv|charge.*particle interaction"
+      "searchPattern": "particle.*charge.*conserv|charge.*particle interaction",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_conservation_particle",
+          "front": "Which conservation rules apply to particle interactions?",
+          "back": "Charge, baryon number, electron and muon lepton numbers, energy and momentum conserved; strangeness conserved in strong, may change in weak.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B029",
@@ -560,12 +610,21 @@
       "requirement": "Apply conservation of baryon and lepton number",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "baryon.*conserv|lepton.*conserv"
+      "searchPattern": "baryon.*conserv|lepton.*conserv",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_conservation_particle",
+          "front": "Which conservation rules apply to particle interactions?",
+          "back": "Charge, baryon number, electron and muon lepton numbers, energy and momentum conserved; strangeness conserved in strong, may change in weak.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B030",
@@ -708,12 +767,27 @@
       "requirement": "Distinguish atomic excitation from ionisation",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "excit.*ionis|ionis.*excit"
+      "searchPattern": "excit.*ionis|ionis.*excit",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_pandr_v29_excitation",
+          "front": "What is excitation of an atom?",
+          "back": "A bound electron moves to a higher allowed energy level, staying in the atom.",
+          "active": true
+        },
+        {
+          "cardId": "phy_pandr_v29_ionisation",
+          "front": "What is ionisation?",
+          "back": "An electron is removed from an atom, leaving a positive ion.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B037",
@@ -764,12 +838,21 @@
       "requirement": "Relate energy-level transitions to photon frequency",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "energy levels.*photon|transition.*photon"
+      "searchPattern": "energy levels.*photon|transition.*photon",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_pandr_v29_emission_photon",
+          "front": "What is the photon energy when an excited electron falls to a lower level?",
+          "back": "E = hf = E(high) − E(low), using the positive energy difference.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B040",
@@ -882,12 +965,21 @@
       "requirement": "Define electrical resistance",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "define resistance|R.?=.?V.?/I"
+      "searchPattern": "define resistance|R.?=.?V.?/I",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_resistance",
+          "front": "What is resistance?",
+          "back": "R = V/I.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B046",
@@ -1008,12 +1100,21 @@
       "requirement": "Explain effect of temperature on resistivity of metallic wire",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "wire.*(temperature|resistance)|metal.*resistivity"
+      "searchPattern": "wire.*(temperature|resistance)|metal.*resistivity",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_filament_iv",
+          "front": "Why does a filament lamp's resistance rise at high current?",
+          "back": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B052",
@@ -1088,12 +1189,21 @@
       "requirement": "State Kirchhoff current law as charge conservation",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "kirchhoff.*first|junction.*current|conservation.*current"
+      "searchPattern": "kirchhoff.*first|junction.*current|conservation.*current",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_parallel_current",
+          "front": "How does current behave at a junction?",
+          "back": "Total current into a junction equals total current out.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B056",
@@ -1102,12 +1212,21 @@
       "requirement": "State potential difference distribution in series circuits",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "series circuit.*(p.d|voltage)|voltage.*series"
+      "searchPattern": "series circuit.*(p.d|voltage)|voltage.*series",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_series_pd",
+          "front": "What happens to p.d. in a series circuit?",
+          "back": "The supply p.d. equals the sum of component p.d.s.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B057",
@@ -1116,12 +1235,21 @@
       "requirement": "State common potential difference across parallel branches",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "parallel.*(p.d|potential difference|voltage)"
+      "searchPattern": "parallel.*(p.d|potential difference|voltage)",
+      "verifiedExisting": [
+        {
+          "cardId": "phy_parallel_pd",
+          "front": "What is true of p.d. across parallel branches?",
+          "back": "It is the same across each branch.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B058",
@@ -1194,12 +1322,13 @@
       "requirement": "Predict temperature-sensor potential-divider output change",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "targeted_semantic_review",
+      "status": "partial_existing_or_unclear",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "thermistor.*potential divider|potential divider.*thermistor"
+      "searchPattern": "thermistor.*potential divider|potential divider.*thermistor",
+      "reviewNote": "Relevant neighbouring cards exist but a directly focused short recall prompt remains uncertain; perform a full semantic check before adding."
     },
     {
       "id": "B063",
@@ -1208,12 +1337,13 @@
       "requirement": "Predict light-dependent resistor divider response",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "targeted_semantic_review",
+      "status": "partial_existing_or_unclear",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "LDR.*potential divider|potential divider.*LDR"
+      "searchPattern": "LDR.*potential divider|potential divider.*LDR",
+      "reviewNote": "Relevant neighbouring cards exist but a directly focused short recall prompt remains uncertain; perform a full semantic check before adding."
     },
     {
       "id": "B064",
@@ -1268,12 +1398,21 @@
       "requirement": "Interpret graph gradient as negative internal resistance",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "internal resistance.*gradient|gradient.*internal resistance"
+      "searchPattern": "internal resistance.*gradient|gradient.*internal resistance",
+      "verifiedExisting": [
+        {
+          "cardId": "v33_card_physics_internal_resistance_9",
+          "front": "What do gradient and intercept represent on a terminal voltage V against current I graph?",
+          "back": "The vertical intercept is emf; gradient is negative internal resistance.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B067",
@@ -1282,12 +1421,21 @@
       "requirement": "Interpret graph intercept as emf",
       "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "emf.*intercept|intercept.*emf"
+      "searchPattern": "emf.*intercept|intercept.*emf",
+      "verifiedExisting": [
+        {
+          "cardId": "task1_phy_105",
+          "front": "What is the intercept of a V–I graph for a cell?",
+          "back": "The emf.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B068",
@@ -1394,12 +1542,13 @@
       "requirement": "Represent free radicals with an unpaired electron dot",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "targeted_semantic_review",
+      "status": "partial_existing_or_unclear",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "free radical.*dot|unpaired electron"
+      "searchPattern": "free radical.*dot|unpaired electron",
+      "reviewNote": "Relevant neighbouring cards exist but a directly focused short recall prompt remains uncertain; perform a full semantic check before adding."
     },
     {
       "id": "B073",
@@ -1434,12 +1583,13 @@
       "requirement": "Define alkane as saturated hydrocarbon",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "targeted_semantic_review",
+      "status": "partial_existing_or_unclear",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "saturated hydrocarbon|alkane.*saturated"
+      "searchPattern": "saturated hydrocarbon|alkane.*saturated",
+      "reviewNote": "Relevant neighbouring cards exist but a directly focused short recall prompt remains uncertain; perform a full semantic check before adding."
     },
     {
       "id": "B075",
@@ -1556,12 +1706,21 @@
       "requirement": "Recall that CFC chlorine radicals damage ozone",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "CFC.*ozone|chlorine radical.*ozone"
+      "searchPattern": "CFC.*ozone|chlorine radical.*ozone",
+      "verifiedExisting": [
+        {
+          "cardId": "task1_chem_135",
+          "front": "Why are CFCs damaging in the stratosphere?",
+          "back": "UV releases chlorine radicals that destroy ozone.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B081",
@@ -1692,12 +1851,27 @@
       "requirement": "Distinguish distillation and reflux in primary alcohol oxidation",
       "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "distil.*reflux|reflux.*distil"
+      "searchPattern": "distil.*reflux|reflux.*distil",
+      "verifiedExisting": [
+        {
+          "cardId": "chem_alcohol_primary",
+          "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+          "back": "An aldehyde.",
+          "active": true
+        },
+        {
+          "cardId": "chem_alcohol_primary_reflux",
+          "front": "What forms when a primary alcohol is oxidised under reflux with excess oxidant?",
+          "back": "A carboxylic acid.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B087",
@@ -2532,12 +2706,21 @@
       "requirement": "Recall conversion between exponent and logarithm",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "logarithm.*exponen|logarithm.*definition"
+      "searchPattern": "logarithm.*exponen|logarithm.*definition",
+      "verifiedExisting": [
+        {
+          "cardId": "math_logs_change",
+          "front": "How can a^x=b be rewritten using logs?",
+          "back": "x = logₐb.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B124",
@@ -2546,12 +2729,21 @@
       "requirement": "Recall logarithm product law",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "log.*product|log.*multiply"
+      "searchPattern": "log.*product|log.*multiply",
+      "verifiedExisting": [
+        {
+          "cardId": "math_logs_product",
+          "front": "What is logₐ(xy)?",
+          "back": "logₐx + logₐy.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B125",
@@ -2560,12 +2752,13 @@
       "requirement": "Recall logarithm quotient law",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "full_maths_log_front_scan",
+      "status": "probable_memory_gap",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "log.*quotient|log.*division"
+      "searchPattern": "log.*quotient|log.*division",
+      "reviewNote": "Maths existing prompts include log product, power and exponent conversion but no quotient law recall. AQA Appendix B requires logₐ(x/y)=logₐx−logₐy; add a short flashcard after a second duplicate/marking check."
     },
     {
       "id": "B126",
@@ -2574,12 +2767,21 @@
       "requirement": "Recall logarithm power law",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "log.*power|log.*exponent"
+      "searchPattern": "log.*power|log.*exponent",
+      "verifiedExisting": [
+        {
+          "cardId": "math_logs_power",
+          "front": "What is logₐ(xᵏ)?",
+          "back": "k logₐx.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B127",
@@ -2606,12 +2808,21 @@
       "requirement": "Recall condition for perpendicular line gradients",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "perpendicular.*gradient"
+      "searchPattern": "perpendicular.*gradient",
+      "verifiedExisting": [
+        {
+          "cardId": "math_perp_grad",
+          "front": "How are gradients of perpendicular non-vertical lines related?",
+          "back": "m₁m₂ = −1.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B129",
@@ -2856,12 +3067,21 @@
       "requirement": "Recall binomial variance and expected value",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "binomial.*variance|binomial.*mean"
+      "searchPattern": "binomial.*variance|binomial.*mean",
+      "verifiedExisting": [
+        {
+          "cardId": "task1_v136_029",
+          "front": "For X~B(n,p), what are E(X) and Var(X)?",
+          "back": "E(X) = np; Var(X) = np(1−p).",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     },
     {
       "id": "B142",
@@ -2870,12 +3090,21 @@
       "requirement": "Recall variable-acceleration velocity derivative of displacement",
       "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
       "stage": "AS or A2: must verify by syllabus point",
-      "method": "front_search_only",
-      "status": "needs_semantic_search",
+      "method": "manual_front_and_back",
+      "status": "question_answer_checked_existing",
       "candidateCount": 0,
       "candidateCardIds": [],
       "candidateFronts": [],
-      "searchPattern": "ds/dt|velocity.*differenti"
+      "searchPattern": "ds/dt|velocity.*differenti",
+      "verifiedExisting": [
+        {
+          "cardId": "task1_v136_031",
+          "front": "In variable-acceleration motion, how is v related to displacement s?",
+          "back": "v = ds/dt.",
+          "active": true
+        }
+      ],
+      "reviewNote": "Specific card front and model answer directly support this narrow recall requirement; full syllabus-bullet skills assessment still pending."
     }
   ]
 }
