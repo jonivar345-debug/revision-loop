@@ -1,8 +1,10 @@
-name: Cloud sync and layout v120 safety
+name: Cloud sync, layout and flashcard v121 safety
 on:
   pull_request:
     paths:
       - 'cloud-sync.js'
+      - 'photoelectric-flashcard-marking.js'
+      - 'deck.json'
       - 'cloud-sync-core.js'
       - 'layout-mode.js'
       - 'firestore.rules'
@@ -12,6 +14,7 @@ on:
       - 'sw.js'
       - 'tests/cloud-sync-v119.cjs'
       - 'tests/reset-layout-v120.cjs'
+      - 'tests/cloud-photoelectric-v121.cjs'
       - '.github/workflows/cloud-sync-v119.yml'
   workflow_dispatch:
 jobs:
@@ -26,10 +29,12 @@ jobs:
           node-version: '22'
       - run: node --check cloud-sync-core.js
       - run: node --check layout-mode.js
+      - run: node --check photoelectric-flashcard-marking.js
       - run: node --input-type=module --check < cloud-sync.js
       - run: node --check app.js
       - run: node --check progress-backup.js
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
+      - run: node tests/cloud-photoelectric-v121.cjs
       - run: node tests/revision-backup.cjs
       - run: node tests/world-profile-preservation.cjs
