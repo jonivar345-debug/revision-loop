@@ -19,16 +19,12 @@
 
 The current `progress-backup.js` exports exactly these keys and validates before restoration. Do not upload `rl_auth`, the PIN, Firebase auth credentials, tokens, or optional caches (such as image thumbnails) to Firestore.
 
-## Proposed Firestore layout
+## Firestore layout used in the v119 draft
 
-- `users/{uid}/state/progress`: `{payload: JSON string, revision: integer, updatedAt: serverTimestamp}`
-- `users/{uid}/state/profile`: same shape
-- `users/{uid}/state/settings`: same shape
-- `users/{uid}/history/{snapshotId}`: immutable per-segment snapshots, each with `segment`, `payload`, `baseRevision`, `createdAt`. Retention should be bounded in app code once recovery policy is agreed.
+- `users/{uid}/state/bundle`: one versioned `payload` JSON string representing the three existing browser storage values (plus `revision` and `updatedAt`).
+- `users/{uid}/history/{yyyy-mm-dd}`: immutable daily pre-update recovery snapshot with `segment:'bundle'`, `payload`, `baseRevision` and `createdAt`.
 
-`firestore.rules` restricts reads and writes to the authenticated Firebase UID. Writes to current state must increment the revision to avoid accepting stale snapshots. A write rejected because its revision is old must fetch remote state and request/perform a tested merge, **not** discard or overwrite progress. Firebase's built-in last-write-wins behaviour is not sufficient on its own for XP and exam history.
-
-Check actual data sizes before enabling this: **Cloud Firestore documents cannot exceed 1 MiB**. Large keys may need to be partitioned further, while maintaining backwards-compatible browser saving.
+The web client checks size before upload (800,000 UTF-8 bytes), and `firestore.rules` restricts each signed-in person to their own UID. `runTransaction` checks the previous revision, refusing stale writes. Device disagreements **pause** synchronisation; no automatic merge of XP or purchases has been implemented. Future work should provide explicit retention and tested recovery for history snapshots, not assume a daily snapshot is a complete backup history.
 
 ## Setup action needed from the project owner
 
@@ -49,7 +45,7 @@ Check actual data sizes before enabling this: **Cloud Firestore documents cannot
 - Devices cannot read/write another user's Firestore documents.
 - Conflicting writes fail safely and preserve both recoverable versions until reconciled.
 - Blank browser restores backed-up values only for an explicitly signed-in account.
-- No network service is contacted for local-only users.
+- Local-only progress is never uploaded to Firestore. Firebase client scripts load over HTTPS.
 - Google account sign-out must not delete local progress. A device's locally saved data should not be exposed to a different signed-in account.
 - JSON export/restore remains fully functional.
 - Validate Chrome and mobile; test Firebase rules with the emulator before enabling writes.
