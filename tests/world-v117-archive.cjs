@@ -15,6 +15,12 @@ assert.equal(audit.localPhotographs,1064);assert.equal(audit.fourPhotoLocalGalle
 assert.equal(audit.release,'v117');
 assert.equal(index.photoCount,1064);assert.equal(index.fullyLocal,266);
 assert.equal(index.galleryCount,266);
+for(const [id,slot,file] of [['budapest',3,"Fisherman's Bastion, Budapest, Hungary.jpg"],['victoriafalls',2,'Victoria Falls from Air.jpg']]){
+ const entry=index.destinations.find(x=>x.id===id);
+ assert.equal(entry.shopCoverSlot,slot,'Wrong visually reviewed shop cover '+id);
+ assert.equal(entry.images[slot-1].originalFile,file,'Wrong original source '+id);
+}
+
 assert.deepEqual(batch.newDestinations,batch.targets);
 for(const [id,prior] of Object.entries(base.locations)){
  assert.deepEqual(now[id],prior,'Preserved v116 photo set changed: '+id);
