@@ -16,9 +16,9 @@ assert.equal(old.length,2981);assert.equal(old.filter(c=>c.active!==false).lengt
 assert.equal(newCards.length,13);assert.equal(newCards.filter(c=>c.subject==='Physics').length,5);
 assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,8);
 assert.equal(d.length,2994);assert.equal(d.filter(c=>c.active!==false).length,2990);
-assert.equal(audit.coverage.reviewed,602);assert.equal(audit.coverage.notYetReviewed,614);
-assert.equal(audit.coverage.physicsReviewed,232);assert.equal(audit.coverage.chemistryReviewed,370);
-assert.equal(audit.records.length,602);assert.equal(history.records.length,354);
+assert.equal(audit.coverage.reviewed,796);assert.equal(audit.coverage.notYetReviewed,420);
+assert.equal(audit.coverage.physicsReviewed,232);assert.equal(audit.coverage.chemistryReviewed,564);
+assert.equal(audit.records.length,796);assert.equal(history.records.length,354);
 const ids=new Set(d.map(c=>c.id));assert.equal(ids.size,d.length,'duplicate progress IDs');
 const previouslyAudited=new Map(history.records.map(c=>[c.id,c]));
 for(const prev of history.records){
@@ -37,7 +37,7 @@ for(const c of audit.records){
  assert(!source.specRef,'Legacy entries only '+c.id);
  assert(c.contentChecked===true);
  assert(/^(3\.\d+(?:\.\d+){0,2}|7\.3)$/.test(c.candidateSpecSection),'Section reference invalid '+c.id);
- assert(['concise-recall','worked-example-candidate','multi-point-recall-review','advanced-shape-example','diagram-practice-candidate','exam-question-candidate'].includes(c.reviewKind));
+ assert(['concise-recall','worked-example-candidate','multi-point-recall-review','advanced-shape-example','diagram-practice-candidate','exam-question-candidate','method-context-card-review'].includes(c.reviewKind));
 }
 const app=fs.readFileSync('app.js','utf8');const a=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
 assert(a>=0&&end>a,'Flashcard grading evaluator not found');
@@ -55,8 +55,8 @@ for(const c of newCards){
 const meta=deck.meta.task1FlashcardAudit.v133;
 assert.equal(meta.startingCards,2981);assert.equal(meta.added,13);
 assert.equal(meta.physicsAdded,5);assert.equal(meta.chemistryAdded,8);
-assert.equal(meta.legacyReviewedCumulative,602);assert.equal(meta.legacyStillPending,614);
+assert.equal(meta.legacyReviewedCumulative,796);assert.equal(meta.legacyStillPending,420);
 assert.equal(meta.completeSpecClaim,false);
 assert.equal(deck.meta.task1FlashcardAudit.physicsNew,d.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')).length);
 assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,d.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')).length);
-console.log('PASS v133: 248 newly reviewed legacy cards; 602 total. 13 concise practical recall cards; all 2,981 prior IDs preserved.');
+console.log('PASS v133: 442 newly reviewed legacy cards; 796 total. 13 concise practical recall cards; all 2,981 prior IDs preserved.');
