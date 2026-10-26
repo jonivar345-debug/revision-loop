@@ -5,7 +5,7 @@ const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const source=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const v124=cards.filter(c=>c.id.startsWith('task1_v124_'));
-const old=cards.filter(c=>!c.id.startsWith('task1_v124_')&&!c.id.startsWith('task1_v125_'));
+const old=cards.filter(c=>!/^task1_v12[4-6]_/.test(c.id));
 assert(deck.deckVersion>=124);
 assert(cards.length>=2251);
 assert(cards.filter(c=>c.active!==false).length>=2247);
