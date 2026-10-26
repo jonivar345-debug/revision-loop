@@ -7,12 +7,12 @@ const cards=deck.cards;
 const newCards=cards.filter(c=>c.id.startsWith('task1_v125_'));
 const previous=cards.filter(c=>!c.id.startsWith('task1_v125_'));
 assert.equal(deck.deckVersion,125);
-assert.equal(cards.length,2416);
-assert.equal(cards.filter(c=>c.active!==false).length,2412);
+assert.equal(cards.length,2414);
+assert.equal(cards.filter(c=>c.active!==false).length,2410);
 assert.equal(previous.length,2251);
-assert.equal(newCards.length,165);
+assert.equal(newCards.length,163);
 assert.equal(newCards.filter(c=>c.subject==='Physics').length,85);
-assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,80);
+assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,78);
 assert.equal(newCards.filter(c=>c.subject==='Maths').length,0);
 const canonical=s=>String(s).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 const ids=new Set(),fronts=new Set();
@@ -34,12 +34,12 @@ for(const c of newCards){
  assert(!/^(calculate|work out)\b/i.test(c.front),'Worked question not flashcard');
 }
 for(const id of ['phy_motion_d','chem_ar_def','math_modulus','task1_v123_phy_001','task1_v124_phy_001','task1_v124_chem_001','task1_v124_bulk_math_001'])assert(ids.has(id),'Preserved ID missing '+id);
-assert(!ids.has('task1_v125_086')&&!ids.has('task1_v125_137'),'Ambiguous/out-of-scope drafts must stay excluded');
+for(const excluded of ['task1_v125_086','task1_v125_116','task1_v125_137','task1_v125_162'])assert(!ids.has(excluded),'Excluded draft reappeared: '+excluded);
 const audit=deck.meta.task1FlashcardAudit;
-assert.equal(audit.v125.added,165);
+assert.equal(audit.v125.added,163);
 assert.equal(audit.v125.physicsAdded,85);
-assert.equal(audit.v125.chemistryAdded,80);
-assert.equal(audit.v125.curatedVariantsOnCards,80);
+assert.equal(audit.v125.chemistryAdded,78);
+assert.equal(audit.v125.curatedVariantsOnCards,78);
 assert.equal(audit.physicsNew,cards.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')).length);
 assert.equal(audit.chemistryNew,cards.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')).length);
 const b=app.indexOf('function normalise('),e=app.indexOf('function importantTokens(');
@@ -65,4 +65,4 @@ const examples=[
  ['If forward reaction is exothermic, how does warming affect Kc?','increases','wrong']
 ];
 for(const [front,answer,status] of examples)assert.equal(evaluate(card(front),answer).status,status,'Marking error: '+front+' / '+answer);
-console.log('PASS v125: 165 short AQA prompts; 2,251 existing IDs kept; 80 answer variants and 16 representative marking checks');
+console.log('PASS v125: 163 short AQA prompts; 2,251 existing IDs kept; 78 short-answer variants and 16 marking checks');
