@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 125,
+  "deckVersion": 126,
   "updatedAt": "2026-10-26",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -49748,13 +49748,2013 @@
       "active": true,
       "courseTopic": "Carboxylic acids",
       "revisionTopic": "Carboxylic acids"
+    },
+    {
+      "id": "chem_y1_chat_v126_001",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What calculation gives average gas-production rate?",
+      "back": "Change in gas volume ÷ change in time.",
+      "accept": [
+        "Change in gas volume ÷ change in time."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_002",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What units can a gas-volume reaction rate have?",
+      "back": "cm³ s⁻¹.",
+      "accept": [
+        "cm³ s⁻¹."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_003",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How do you find instantaneous rate on a curved graph?",
+      "back": "Draw a tangent and calculate its gradient.",
+      "accept": [
+        "Draw a tangent and calculate its gradient."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_004",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why is the gradient negative for disappearing reactant?",
+      "back": "Its concentration falls with time; rate of disappearance uses −gradient.",
+      "accept": [
+        "Its concentration falls with time; rate of disappearance uses −gradient."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_005",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What does a flat gas-volume–time graph mean?",
+      "back": "No further gas is produced; gradient and measured rate are zero.",
+      "accept": [
+        "No further gas is produced; gradient and measured rate are zero."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_006",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why does a gas-producing reaction normally slow over time?",
+      "back": "Reactant concentrations fall, reducing successful collision frequency.",
+      "accept": [
+        "Reactant concentrations fall, reducing successful collision frequency."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_007",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Does heating lower activation energy?",
+      "back": "No. It increases the fraction of collisions with energy ≥ Eₐ.",
+      "accept": [
+        "No. It increases the fraction of collisions with energy ≥ Eₐ."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_008",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What happens to the Maxwell–Boltzmann curve when a catalyst is added?",
+      "back": "Nothing at constant temperature; the Eₐ threshold moves left.",
+      "accept": [
+        "Nothing at constant temperature; the Eₐ threshold moves left."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_009",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How does greater solid surface area increase reaction rate?",
+      "back": "More surface particles are accessible to reacting particles.",
+      "accept": [
+        "More surface particles are accessible to reacting particles."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_010",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What makes the mixture cloudy in a thiosulfate rate practical?",
+      "back": "Formation of solid sulfur.",
+      "accept": [
+        "Formation of solid sulfur."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_011",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why use 1/t in a fixed-endpoint rate investigation?",
+      "back": "The same visible change occurs in less time when the reaction is faster.",
+      "accept": [
+        "The same visible change occurs in less time when the reaction is faster."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_012",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What are the units of a 1/t relative-rate measure?",
+      "back": "s⁻¹, if t is measured in seconds.",
+      "accept": [
+        "s⁻¹, if t is measured in seconds."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_013",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Give two controls in a temperature–rate practical.",
+      "back": "Reactant concentrations and total reaction-mixture volume.",
+      "accept": [
+        "Reactant concentrations and total reaction-mixture volume."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_014",
+      "subject": "Chemistry",
+      "topic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why is the disappearing-cross endpoint imprecise?",
+      "back": "Different observers may judge the obscuring time differently.",
+      "accept": [
+        "Different observers may judge the obscuring time differently."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_015",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why must an equilibrium system be closed?",
+      "back": "To prevent loss or gain of substances while reversible reactions continue.",
+      "accept": [
+        "To prevent loss or gain of substances while reversible reactions continue."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_016",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "At equilibrium, do reactions stop?",
+      "back": "No; both directions continue at equal, non-zero rates.",
+      "accept": [
+        "No; both directions continue at equal, non-zero rates."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_017",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What happens if a product is removed at equilibrium?",
+      "back": "The equilibrium shifts towards the products to replace some of it.",
+      "accept": [
+        "The equilibrium shifts towards the products to replace some of it."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_018",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Which states count when predicting a pressure shift?",
+      "back": "Count gaseous moles only; omit solids and liquids.",
+      "accept": [
+        "Count gaseous moles only; omit solids and liquids."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_019",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Does adding an inert gas at constant volume shift a gas equilibrium?",
+      "back": "No; partial pressures of reacting gases remain unchanged.",
+      "accept": [
+        "No; partial pressures of reacting gases remain unchanged."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_020",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How many gaseous moles are on each side of N₂ + 3H₂ ⇌ 2NH₃?",
+      "back": "Four on the left; two on the right.",
+      "accept": [
+        "Four on the left; two on the right."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_021",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why not use an extremely low temperature in the Haber process?",
+      "back": "Equilibrium yield rises, but ammonia production becomes too slow.",
+      "accept": [
+        "Equilibrium yield rises, but ammonia production becomes too slow."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_022",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why not use an extremely high Haber-process pressure?",
+      "back": "Compression is costly and demands expensive high-pressure equipment.",
+      "accept": [
+        "Compression is costly and demands expensive high-pressure equipment."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_023",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why use an iron catalyst in ammonia production?",
+      "back": "Faster approach to equilibrium; it does not change equilibrium yield.",
+      "accept": [
+        "Faster approach to equilibrium; it does not change equilibrium yield."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_024",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "In an equilibrium mole table, how much H₂ is used to make 0.60 mol HI?",
+      "back": "0.30 mol, for H₂ + I₂ ⇌ 2HI.",
+      "accept": [
+        "0.30 mol, for H₂ + I₂ ⇌ 2HI."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_025",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How do you convert equilibrium moles to concentration?",
+      "back": "Concentration = moles ÷ volume in dm³.",
+      "accept": [
+        "Concentration = moles ÷ volume in dm³."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_026",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "For A + B ⇌ 2C, how is [C] found once [C]² is known?",
+      "back": "Take the positive square root.",
+      "accept": [
+        "Take the positive square root."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_027",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Does a large Kc mean the reaction is fast?",
+      "back": "No; it means products are favoured at equilibrium, not a fast rate.",
+      "accept": [
+        "No; it means products are favoured at equilibrium, not a fast rate."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_028",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "revisionTopic": "Equilibria",
+      "courseTopic": "Equilibria",
+      "specRef": "3.1.6",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "On a concentration–time graph, what causes an immediate vertical jump?",
+      "back": "Direct addition or removal of a species, before gradual re-equilibration.",
+      "accept": [
+        "Direct addition or removal of a species, before gradual re-equilibration."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_029",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What oxidation state does fluorine always have in its compounds?",
+      "back": "−1.",
+      "accept": [
+        "−1."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_030",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is hydrogen's oxidation state in NaH?",
+      "back": "−1, because it is a metal hydride.",
+      "accept": [
+        "−1, because it is a metal hydride."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_031",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is oxygen's oxidation state in OF₂?",
+      "back": "+2; each fluorine is −1.",
+      "accept": [
+        "+2; each fluorine is −1."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_032",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is sulfur's oxidation state in SO₄²⁻?",
+      "back": "+6: x + 4(−2) = −2.",
+      "accept": [
+        "+6: x + 4(−2) = −2."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_033",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is nitrogen's oxidation state in NH₄⁺?",
+      "back": "−3: x + 4(+1) = +1.",
+      "accept": [
+        "−3: x + 4(+1) = +1."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_034",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is nitrogen's oxidation state in NO₃⁻?",
+      "back": "+5: x + 3(−2) = −1.",
+      "accept": [
+        "+5: x + 3(−2) = −1."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_035",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is manganese's oxidation state in MnO₄⁻?",
+      "back": "+7.",
+      "accept": [
+        "+7."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_036",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is chromium's oxidation state in Cr₂O₇²⁻?",
+      "back": "+6 for each chromium atom.",
+      "accept": [
+        "+6 for each chromium atom."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_037",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the oxidation half-equation for iodide to iodine.",
+      "back": "2I⁻ → I₂ + 2e⁻.",
+      "accept": [
+        "2I⁻ → I₂ + 2e⁻."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_038",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the reduction half-equation for chlorine.",
+      "back": "Cl₂ + 2e⁻ → 2Cl⁻.",
+      "accept": [
+        "Cl₂ + 2e⁻ → 2Cl⁻."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_039",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the oxidation half-equation for magnesium.",
+      "back": "Mg → Mg²⁺ + 2e⁻.",
+      "accept": [
+        "Mg → Mg²⁺ + 2e⁻."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_040",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the reduction half-equation Fe³⁺ to Fe²⁺.",
+      "back": "Fe³⁺ + e⁻ → Fe²⁺.",
+      "accept": [
+        "Fe³⁺ + e⁻ → Fe²⁺."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_041",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How do you balance oxygen in an acidic half-equation?",
+      "back": "Add H₂O to the side needing oxygen.",
+      "accept": [
+        "Add H₂O to the side needing oxygen."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_042",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How do you balance hydrogen in an acidic half-equation?",
+      "back": "Add H⁺ to the side needing hydrogen.",
+      "accept": [
+        "Add H⁺ to the side needing hydrogen."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_043",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the acidic reduction half-equation for MnO₄⁻ → Mn²⁺.",
+      "back": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.",
+      "accept": [
+        "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_044",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the acidic reduction half-equation for dichromate(VI).",
+      "back": "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O.",
+      "accept": [
+        "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_045",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "When equalising electrons, what must you multiply?",
+      "back": "Every term of the entire half-equation, not electrons alone.",
+      "accept": [
+        "Every term of the entire half-equation, not electrons alone."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_046",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "revisionTopic": "Redox",
+      "courseTopic": "Redox",
+      "specRef": "3.1.7",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Combine Fe³⁺ reduction with I⁻ oxidation.",
+      "back": "2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂.",
+      "accept": [
+        "2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_047",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is periodicity?",
+      "back": "A repeating pattern of properties as atomic number increases.",
+      "accept": [
+        "A repeating pattern of properties as atomic number increases."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_048",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What determines an element's position in the modern periodic table?",
+      "back": "Its atomic number (proton number).",
+      "accept": [
+        "Its atomic number (proton number)."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_049",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why is helium an s-block element although placed in Group 0?",
+      "back": "Its electronic configuration is 1s².",
+      "accept": [
+        "Its electronic configuration is 1s²."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_050",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Which subshell is filling from Al to Ar?",
+      "back": "The 3p subshell.",
+      "accept": [
+        "The 3p subshell."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_051",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write sodium's electron configuration beyond [Ne].",
+      "back": "3s¹.",
+      "accept": [
+        "3s¹."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_052",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write aluminium's electron configuration beyond [Ne].",
+      "back": "3s² 3p¹.",
+      "accept": [
+        "3s² 3p¹."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_053",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the first-ionisation equation for Na.",
+      "back": "Na(g) → Na⁺(g) + e⁻.",
+      "accept": [
+        "Na(g) → Na⁺(g) + e⁻."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_054",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Which Period 3 elements have giant metallic structures?",
+      "back": "Sodium, magnesium and aluminium.",
+      "accept": [
+        "Sodium, magnesium and aluminium."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_055",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How many covalent bonds does each silicon atom make in its network?",
+      "back": "Four, in a giant covalent structure.",
+      "accept": [
+        "Four, in a giant covalent structure."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_056",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What molecular formula is used for white phosphorus?",
+      "back": "P₄.",
+      "accept": [
+        "P₄."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_057",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What molecular formula is used for the common sulfur molecule?",
+      "back": "S₈.",
+      "accept": [
+        "S₈."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_058",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": "3.2.1",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why are measured argon radii not directly like chlorine's covalent radius?",
+      "back": "Argon is monatomic; its quoted van der Waals radius uses a different definition.",
+      "accept": [
+        "Argon is monatomic; its quoted van der Waals radius uses a different definition."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_059",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is the general outer configuration of Group 2 atoms?",
+      "back": "ns².",
+      "accept": [
+        "ns²."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_060",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What general formula do Group 2 oxides have?",
+      "back": "MO, e.g. MgO.",
+      "accept": [
+        "MO, e.g. MgO."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_061",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What formula results when Mg²⁺ combines with OH⁻?",
+      "back": "Mg(OH)₂.",
+      "accept": [
+        "Mg(OH)₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_062",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write magnesium's slow reaction with cold water.",
+      "back": "Mg + 2H₂O → Mg(OH)₂ + H₂.",
+      "accept": [
+        "Mg + 2H₂O → Mg(OH)₂ + H₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_063",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write magnesium's reaction with steam.",
+      "back": "Mg + H₂O(g) → MgO + H₂.",
+      "accept": [
+        "Mg + H₂O(g) → MgO + H₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_064",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write calcium's reaction with water.",
+      "back": "Ca + 2H₂O → Ca(OH)₂ + H₂.",
+      "accept": [
+        "Ca + 2H₂O → Ca(OH)₂ + H₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_065",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write strontium's reaction with water.",
+      "back": "Sr + 2H₂O → Sr(OH)₂ + H₂.",
+      "accept": [
+        "Sr + 2H₂O → Sr(OH)₂ + H₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_066",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write barium's reaction with water.",
+      "back": "Ba + 2H₂O → Ba(OH)₂ + H₂.",
+      "accept": [
+        "Ba + 2H₂O → Ba(OH)₂ + H₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_067",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What product differs for Mg reacting with steam versus cold water?",
+      "back": "Steam gives MgO; cold water gives Mg(OH)₂.",
+      "accept": [
+        "Steam gives MgO; cold water gives Mg(OH)₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_068",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "How do first and second ionisation energies affect Group 2 reactivity?",
+      "back": "Both generally decrease down the group, so losing two electrons is easier.",
+      "accept": [
+        "Both generally decrease down the group, so losing two electrons is easier."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_069",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why is a saturated Ba(OH)₂ solution more alkaline than Mg(OH)₂?",
+      "back": "More Ba(OH)₂ dissolves, giving a higher OH⁻ concentration.",
+      "accept": [
+        "More Ba(OH)₂ dissolves, giving a higher OH⁻ concentration."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_070",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the neutralisation of Mg(OH)₂ by HCl.",
+      "back": "Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O.",
+      "accept": [
+        "Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_071",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write calcium hydroxide neutralising H⁺ in acidic soil.",
+      "back": "Ca(OH)₂ + 2H⁺ → Ca²⁺ + 2H₂O.",
+      "accept": [
+        "Ca(OH)₂ + 2H⁺ → Ca²⁺ + 2H₂O."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_072",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the reaction extracting titanium using magnesium.",
+      "back": "TiCl₄ + 2Mg → Ti + 2MgCl₂.",
+      "accept": [
+        "TiCl₄ + 2Mg → Ti + 2MgCl₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_073",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What are the titanium oxidation states before and after extraction?",
+      "back": "+4 in TiCl₄; 0 in Ti metal.",
+      "accept": [
+        "+4 in TiCl₄; 0 in Ti metal."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_074",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write calcium oxide removing sulfur dioxide.",
+      "back": "CaO + SO₂ → CaSO₃.",
+      "accept": [
+        "CaO + SO₂ → CaSO₃."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_075",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why can BaSO₄ be used in medical imaging?",
+      "back": "Very insoluble, so little Ba²⁺ is released; also absorbs X-rays.",
+      "accept": [
+        "Very insoluble, so little Ba²⁺ is released; also absorbs X-rays."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_076",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the net ionic equation for the sulfate ion test.",
+      "back": "Ba²⁺ + SO₄²⁻ → BaSO₄(s), a white precipitate.",
+      "accept": [
+        "Ba²⁺ + SO₄²⁻ → BaSO₄(s), a white precipitate."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_077",
+      "subject": "Chemistry",
+      "topic": "Group 2",
+      "revisionTopic": "Group 2",
+      "courseTopic": "Group 2",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why should you not acidify the sulfate test using H₂SO₄?",
+      "back": "It introduces sulfate and can give a false positive.",
+      "accept": [
+        "It introduces sulfate and can give a false positive."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_078",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is the general outer configuration of halogens?",
+      "back": "ns²np⁵.",
+      "accept": [
+        "ns²np⁵."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_079",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is the formula of a halogen molecule?",
+      "back": "X₂: e.g. F₂, Cl₂, Br₂ or I₂.",
+      "accept": [
+        "X₂: e.g. F₂, Cl₂, Br₂ or I₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_080",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is the colour and state of fluorine at room temperature?",
+      "back": "Pale yellow gas.",
+      "accept": [
+        "Pale yellow gas."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_081",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why is aqueous silver fluoride not a halide-test precipitate?",
+      "back": "AgF is soluble in water.",
+      "accept": [
+        "AgF is soluble in water."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_082",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Which is the strongest oxidising halogen?",
+      "back": "Fluorine, F₂.",
+      "accept": [
+        "Fluorine, F₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_083",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write chlorine displacing bromide ions.",
+      "back": "Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂.",
+      "accept": [
+        "Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_084",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write chlorine displacing iodide ions.",
+      "back": "Cl₂ + 2I⁻ → 2Cl⁻ + I₂.",
+      "accept": [
+        "Cl₂ + 2I⁻ → 2Cl⁻ + I₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_085",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write bromine displacing iodide ions.",
+      "back": "Br₂ + 2I⁻ → 2Br⁻ + I₂.",
+      "accept": [
+        "Br₂ + 2I⁻ → 2Br⁻ + I₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_086",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "In Cl₂ + 2Br⁻, which is the oxidising agent?",
+      "back": "Cl₂, because it is reduced from 0 to −1.",
+      "accept": [
+        "Cl₂, because it is reduced from 0 to −1."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_087",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write NaCl reacting with concentrated H₂SO₄ (acid–base only).",
+      "back": "NaCl + H₂SO₄ → NaHSO₄ + HCl.",
+      "accept": [
+        "NaCl + H₂SO₄ → NaHSO₄ + HCl."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_088",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the redox equation for HBr reducing sulfuric acid.",
+      "back": "2HBr + H₂SO₄ → Br₂ + SO₂ + 2H₂O.",
+      "accept": [
+        "2HBr + H₂SO₄ → Br₂ + SO₂ + 2H₂O."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_089",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What sulfur-containing products can iodide form from H₂SO₄?",
+      "back": "SO₂, elemental sulfur and H₂S.",
+      "accept": [
+        "SO₂, elemental sulfur and H₂S."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_090",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is sulfur's oxidation state in H₂S?",
+      "back": "−2.",
+      "accept": [
+        "−2."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_091",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why use nitric, not hydrochloric, acid in a silver-halide test?",
+      "back": "HCl introduces chloride ions and could give a false AgCl precipitate.",
+      "accept": [
+        "HCl introduces chloride ions and could give a false AgCl precipitate."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_092",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write the ionic equation for a silver bromide precipitate.",
+      "back": "Ag⁺ + Br⁻ → AgBr(s), a cream precipitate.",
+      "accept": [
+        "Ag⁺ + Br⁻ → AgBr(s), a cream precipitate."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_093",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Which soluble complex helps silver chloride dissolve in NH₃?",
+      "back": "[Ag(NH₃)₂]⁺.",
+      "accept": [
+        "[Ag(NH₃)₂]⁺."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_094",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write chlorine reacting reversibly with water.",
+      "back": "Cl₂ + H₂O ⇌ HCl + HClO.",
+      "accept": [
+        "Cl₂ + H₂O ⇌ HCl + HClO."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_095",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What happens to Cl oxidation states in chlorine-water disproportionation?",
+      "back": "0 in Cl₂ becomes −1 in HCl and +1 in HClO.",
+      "accept": [
+        "0 in Cl₂ becomes −1 in HCl and +1 in HClO."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_096",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write chlorine-water's oxygen-forming overall equation.",
+      "back": "2Cl₂ + 2H₂O → 4HCl + O₂.",
+      "accept": [
+        "2Cl₂ + 2H₂O → 4HCl + O₂."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_097",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Write chlorine reacting with cold, dilute NaOH.",
+      "back": "Cl₂ + 2NaOH → NaCl + NaClO + H₂O.",
+      "accept": [
+        "Cl₂ + 2NaOH → NaCl + NaClO + H₂O."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_098",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "What is chlorate(I)'s formula and Cl oxidation state?",
+      "back": "ClO⁻, with chlorine +1.",
+      "accept": [
+        "ClO⁻, with chlorine +1."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_099",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Which oxyanion is chlorate(V), not chlorate(I)?",
+      "back": "ClO₃⁻, with chlorine +5.",
+      "accept": [
+        "ClO₃⁻, with chlorine +5."
+      ]
+    },
+    {
+      "id": "chem_y1_chat_v126_100",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "revisionTopic": "Group 7",
+      "courseTopic": "Group 7",
+      "specRef": "3.2.3",
+      "stage": "AS",
+      "kind": "content",
+      "priority": 8,
+      "scope": "mock",
+      "mock": true,
+      "taught": true,
+      "active": true,
+      "front": "Why is chlorination used despite possible by-products?",
+      "back": "It prevents waterborne infections; treatment is controlled and monitored.",
+      "accept": [
+        "It prevents waterborne infections; treatment is controlled and monitored."
+      ]
     }
   ],
   "meta": {
     "dailyNewDefault": 18,
     "weakFirst": true,
     "practicalMix": "1 practical per 5 content cards",
-    "note": "Mechanics & Materials reported broad weakness; especially motion graphs, slope components, projectile motion and exact Newton law recall. Independent performance on harder practice has not yet been established. Advanced 16-question Mechanics bank available in exam practice (select Practice and Extended). Chemistry v40 adds syllabus-level esters, oils/fats, soaps, biodiesel, transesterification and carboxylic acids. These are review cards, not independently assessed performance. Acylation v41 covers acid anhydride/chloride and amide structure, 4 nucleophile classes, addition-elimination electron-flow theory and aspirin-related context. Mechanisms v42 includes electron-arrow interpretation for Year 1 organic reactions plus carbonyl nucleophilic addition and optical isomerism. Later separate aromatic and amine chapters remain unconfirmed for mock. Atomic structure v43 includes TOF mass spectrometry full stages, isotope spectra and weighted means, electron configuration to Z36, Period3/Group2 ionisation trends, and worked exam-style practice, with TOF self-reported revision priority. Guided answers are not independent marks. AQA 3.1.2 v44 comprehensive remainder: empirical/molecular formula, ideal gas equation, mass and gas stoichiometry, percentage yield/atom economy, ionic equations, hydrated salts, RP1 and direct/back titrations. All v44 cards are mock eligible; note explanations alone are not independent attainment. Electron-configuration exceptions (Cr/Cu and 4s electron removal) added as user-reported weak recall area on 25 October 2026; existing Cr/Cu and Fe ion cards upgraded to priority 9, plus 10 high-priority mock flashcards. No independent scored assessment yet. Period 3 first-ionisation-energy explanation highlighted for focused revision (Mg/Al 3s→3p subshell change; P/S paired-electron repulsion in 3p; overall trend with nuclear charge/shielding). Prioritized 5 existing cards and added 3 integrated-recall mock cards; user not independently tested. AQA 3.1.3 bonding v47: ionic formulas, dative and metallic models, six specified crystal examples and structure–property reasoning covered on mock cards. Bonding v48 covers VSEPR shapes 2–6 electron domains (lone-pair cases), polarity, London/permanent dipole/H bonds, water and ice density, exam-linked physics and chemistry explanations. Year 1 Energetics AQA 3.1.4: 65 targeted cards covering reaction enthalpy signs and definitions, calorimetry and RP2, standard formation/combustion enthalpies, Hess formation/combustion/hydration cycles, mean gaseous bond enthalpies; previously revised Born-Haber/entropy/Gibbs not duplicated. New content is notes/revision eligibility, not independently assessed mastery. Energetics v51: five targeted follow-up cards for calorimetry uncertainties, thermometer response, formation equation stoichiometry and diatomic bond enthalpy precision; three new original questions add 17 marks without repeating the combustion Hess and RP2 evaluations in v50. Bonding weakness focus v52 (26 Oct 2026): five individually testable compound-ion formulae and charges; high-priority unfamiliar VSEPR shapes, electronegativity/polarity, van der Waals' (induced dipole–dipole) comparisons, and four-mark explanation structures. AQA treats 'van der Waals', 'London' and 'dispersion' as synonyms here. Prior weak-area cards promoted; original study IDs retained. No independent marks earned by creating cards. Chemistry Energetics v53 focused weak-area programme: standard conditions/definitions, -q/n unit conversion and mole meaning, stoichiometric coefficients across calorimetry/Hess/bond enthalpies, Hess signs/paths and RP2 basic practical reasoning. New items are for revision, not independently assessed success. RP2 retained because paper 1/2 may assess practical skills even without Paper 3. Task 1 v122 first-pass Physics specification gap cards: short single-recall items (AS core and selected A2, optional Medical separated); original IDs preserved. Scope reflects taught vs future content. These are revision aids, not a certified exhaustive specification sign-off.",
+    "note": "Mechanics & Materials reported broad weakness; especially motion graphs, slope components, projectile motion and exact Newton law recall. Independent performance on harder practice has not yet been established. Advanced 16-question Mechanics bank available in exam practice (select Practice and Extended). Chemistry v40 adds syllabus-level esters, oils/fats, soaps, biodiesel, transesterification and carboxylic acids. These are review cards, not independently assessed performance. Acylation v41 covers acid anhydride/chloride and amide structure, 4 nucleophile classes, addition-elimination electron-flow theory and aspirin-related context. Mechanisms v42 includes electron-arrow interpretation for Year 1 organic reactions plus carbonyl nucleophilic addition and optical isomerism. Later separate aromatic and amine chapters remain unconfirmed for mock. Atomic structure v43 includes TOF mass spectrometry full stages, isotope spectra and weighted means, electron configuration to Z36, Period3/Group2 ionisation trends, and worked exam-style practice, with TOF self-reported revision priority. Guided answers are not independent marks. AQA 3.1.2 v44 comprehensive remainder: empirical/molecular formula, ideal gas equation, mass and gas stoichiometry, percentage yield/atom economy, ionic equations, hydrated salts, RP1 and direct/back titrations. All v44 cards are mock eligible; note explanations alone are not independent attainment. Electron-configuration exceptions (Cr/Cu and 4s electron removal) added as user-reported weak recall area on 25 October 2026; existing Cr/Cu and Fe ion cards upgraded to priority 9, plus 10 high-priority mock flashcards. No independent scored assessment yet. Period 3 first-ionisation-energy explanation highlighted for focused revision (Mg/Al 3s→3p subshell change; P/S paired-electron repulsion in 3p; overall trend with nuclear charge/shielding). Prioritized 5 existing cards and added 3 integrated-recall mock cards; user not independently tested. AQA 3.1.3 bonding v47: ionic formulas, dative and metallic models, six specified crystal examples and structure–property reasoning covered on mock cards. Bonding v48 covers VSEPR shapes 2–6 electron domains (lone-pair cases), polarity, London/permanent dipole/H bonds, water and ice density, exam-linked physics and chemistry explanations. Year 1 Energetics AQA 3.1.4: 65 targeted cards covering reaction enthalpy signs and definitions, calorimetry and RP2, standard formation/combustion enthalpies, Hess formation/combustion/hydration cycles, mean gaseous bond enthalpies; previously revised Born-Haber/entropy/Gibbs not duplicated. New content is notes/revision eligibility, not independently assessed mastery. Energetics v51: five targeted follow-up cards for calorimetry uncertainties, thermometer response, formation equation stoichiometry and diatomic bond enthalpy precision; three new original questions add 17 marks without repeating the combustion Hess and RP2 evaluations in v50. Bonding weakness focus v52 (26 Oct 2026): five individually testable compound-ion formulae and charges; high-priority unfamiliar VSEPR shapes, electronegativity/polarity, van der Waals' (induced dipole–dipole) comparisons, and four-mark explanation structures. AQA treats 'van der Waals', 'London' and 'dispersion' as synonyms here. Prior weak-area cards promoted; original study IDs retained. No independent marks earned by creating cards. Chemistry Energetics v53 focused weak-area programme: standard conditions/definitions, -q/n unit conversion and mole meaning, stoichiometric coefficients across calorimetry/Hess/bond enthalpies, Hess signs/paths and RP2 basic practical reasoning. New items are for revision, not independently assessed success. RP2 retained because paper 1/2 may assess practical skills even without Paper 3. Task 1 v122 first-pass Physics specification gap cards: short single-recall items (AS core and selected A2, optional Medical separated); original IDs preserved. Scope reflects taught vs future content. These are revision aids, not a certified exhaustive specification sign-off. | Year 1 Chemistry chat v126: 100 distinct short cards for the six newly taught topics (Kinetics, Equilibria, Redox, Periodicity, Group 2, Group 7), focused on missing reaction equations, formulas, explanations, calculations and RP3/RP4. Earlier Atomic Structure, Amount, Bonding, Energetics retained. Additions do not count as independently demonstrated mastery.",
     "modeSupport": [
       "mock",
       "full-a-level",
@@ -49953,6 +51953,19 @@
         "currentProposedCount": 2414,
         "requiredPracticalSubtopics": 6
       }
+    },
+    "chatYear1CoverageV126": {
+      "count": 100,
+      "perTopic": {
+        "Kinetics": 14,
+        "Equilibria": 14,
+        "Redox": 18,
+        "Periodicity": 12,
+        "Group 2": 19,
+        "Group 7": 23
+      },
+      "coverage": "Part 5–10 gaps after audit of existing Parts 1–10 and earlier flashcard additions",
+      "allPreviousIdsRetained": true
     }
   }
 }
