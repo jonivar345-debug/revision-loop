@@ -20,7 +20,8 @@ for photo in PHOTO_RECORDS:
     GROUPS[photo['destination']].append(photo)
 AUDIT=json.loads((ROOT/'editorial/world-local-photo-audit-v114.json').read_text(encoding='utf-8'))
 V114_IDS=set(json.loads((ROOT/'editorial/world-v114-batch-targets.json').read_text(encoding='utf-8'))['targets'])
-NEW_IDS=set(json.loads((ROOT/'editorial/world-v116-batch-targets.json').read_text(encoding='utf-8'))['newDestinations'])
+V116_IDS=set(json.loads((ROOT/'editorial/world-v116-batch-targets.json').read_text(encoding='utf-8'))['newDestinations'])
+NEW_IDS=set(json.loads((ROOT/'editorial/world-v117-batch-targets.json').read_text(encoding='utf-8'))['newDestinations'])
 V113_IDS=set(json.loads((ROOT/'editorial/world-v113-batch-targets.json').read_text(encoding='utf-8'))['targets'])
 V112_IDS=set(json.loads((ROOT/'editorial/world-v112-batch-targets.json').read_text(encoding='utf-8'))['targets'])
 V111_IDS=set(json.loads((ROOT/'editorial/world-v111-batch-targets.json').read_text(encoding='utf-8'))['targets'])
@@ -73,12 +74,12 @@ for id,records in sorted(GROUPS.items()):
     if chosen_cover['cropRetained']<0.67:reasons.append('lead-cover-aggressive-centre-crop')
     if id in DUPLICATES:reasons.append('possible-similar-views')
     if id in STRETCHED:reasons.append('extreme-aspect-gallery-image')
-    destinations.append({'id':id,'newInV109':id in OLD_IDS,'newInV110':id in V110_IDS,'newInV111':id in V111_IDS,'newInV112':id in V112_IDS,'newInV113':id in V113_IDS,'newInV114':id in V114_IDS,'newInV116':id in NEW_IDS,'lead':reviews[0]['originalFile'],
+    destinations.append({'id':id,'newInV109':id in OLD_IDS,'newInV110':id in V110_IDS,'newInV111':id in V111_IDS,'newInV112':id in V112_IDS,'newInV113':id in V113_IDS,'newInV114':id in V114_IDS,'newInV116':id in V116_IDS,'newInV117':id in NEW_IDS,'lead':reviews[0]['originalFile'],
                          'shopCoverSlot':selected_slot,'shopCoverCropRetained':chosen_cover['cropRetained'],
                          'reasons':reasons,'reviewStatus':'needs-human-visual-approval',
                          'images':reviews})
 result={
-    'release':'v116',
+    'release':'v117',
     'description':'Real locally hosted gallery and shop-cover image index. Nothing in this audit implies individual human pixel approval.',
     'galleryCount':len(destinations),
     'photoCount':len(PHOTO_RECORDS),
