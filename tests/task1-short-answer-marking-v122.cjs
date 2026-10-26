@@ -1,0 +1,38 @@
+'use strict';
+const fs=require('node:fs');
+const assert=require('node:assert/strict');
+const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const source=fs.readFileSync('app.js','utf8');
+const begin=source.indexOf('function normalise('),end=source.indexOf('function importantTokens(');
+assert(begin>0&&end>begin,'Flashcard marking functions are present');
+const evaluate=new Function('window',source.slice(begin,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+const byFront=front=>{const c=deck.cards.find(c=>c.front===front);assert(c,'Card not found: '+front);return c};
+function status(front,answer,expected){
+ const c=byFront(front),r=evaluate(c,answer);
+ assert.equal(r.status,expected,JSON.stringify({front,answer,r,expected}));
+}
+status('Fill the gap: between MgO and Al₂O₃, the amphoteric oxide is ____.','aluminium oxide','correct');
+status('Fill the gap: between MgO and Al₂O₃, the amphoteric oxide is ____.','MgO','wrong');
+status('What happens to Kp as temperature rises for an exothermic forward reaction?','decreases','correct');
+status('What happens to Kp as temperature rises for an exothermic forward reaction?','increases','wrong');
+status('What happens to Kp as temperature rises for an endothermic forward reaction?','rises','correct');
+status('What happens to Kp as temperature rises for an endothermic forward reaction?','falls','wrong');
+status('Fill the gap: an octahedral complex has coordination number ____.','6','correct');
+status('What coordination number is typical of a tetrahedral complex?','4','correct');
+status('What colour is Fe(OH)₂ precipitate?','green','correct');
+status('What colour is Fe(OH)₂ precipitate?','brown','wrong');
+status("What is magnetic flux density's SI unit?",'tesla','correct');
+status("What is magnetic flux density's SI unit?",'joule','wrong');
+status('Fill the gap: radioactive activity is measured in ____.','Bq','correct');
+status('Fill the gap: a Brønsted–Lowry acid is a proton ____.','donor','correct');
+status('Fill the gap: an octahedral complex has coordination number ____.','six','correct');
+status('What is an NTC thermistor?','resistance decreases when temperature rises','correct');
+const familyStart=source.indexOf('function flashCourseFamily('),familyEnd=source.indexOf('function revisionTopicIndex(');
+assert(familyStart>0&&familyEnd>familyStart,'Flashcard grouping helper exists');
+const family=new Function(source.slice(familyStart,familyEnd)+'\nreturn flashCourseFamily;')();
+assert.equal(family(byFront("What is magnetic flux density's SI unit?")),'3.7 Fields and their consequences');
+assert.equal(family(byFront('What colour is Fe(OH)₂ precipitate?')),'3.2 Inorganic chemistry');
+assert.equal(family(byFront('What happens to Kp as temperature rises for an exothermic forward reaction?')),'3.1 Physical chemistry');
+assert.match(source,/flashScopeFilter==='mock'\?c\.mock===true/,'Mock flashcard selection must filter at card level');
+assert.match(source,/selectedFlashCards\(\).*flashEligible\(c\)/s,'Session selection must enforce scope');
+console.log('PASS: flashcard marking accepts verified alternatives, rejects opposite concepts, separates chapters and enforces mock scope.');

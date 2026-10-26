@@ -8,7 +8,7 @@ let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
 let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,toastTimer=null;
-let flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
+let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
  {id:'lelouch',name:'Lelouch',series:'Code Geass',cost:0,skin:'#efd0b5',hair:'#111827',hair2:'#312e81',style:'swept',eye:'#5b21b6'},
@@ -1161,8 +1161,9 @@ const OPPOSITES=[
  ['constructive','destructive'],['maximum','minimum']
 ];
 function hasMeaning(text,word){
- const nt=' '+normalise(text)+' ',nw=' '+normalise(word)+' ';
- return nt.includes(nw)||normalise(text).split(' ').includes(normalise(word));
+ const nt=' '+normalise(text)+' ',tokens=normalise(text).split(' ');
+ const alternatives=synonymSet(word);
+ return alternatives.some(alt=>nt.includes(' '+alt+' ')||tokens.includes(alt));
 }
 function contradicts(answer,point){
  for(const [a,b] of OPPOSITES){
@@ -1188,8 +1189,14 @@ function synonymSet(t){
 }
 function tokens(x){return normalise(x).split(' ').map(t=>t.replace(/^[.,;:!?]+|[.,;:!?]+$/g,'')).filter(t=>t&&!STOP.has(t)).map(stemToken)}
 function lev(a,b){const n=b.length;let p=Array.from({length:n+1},(_,i)=>i),c=new Array(n+1);for(let i=1;i<=a.length;i++){c[0]=i;for(let j=1;j<=n;j++)c[j]=Math.min(c[j-1]+1,p[j]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));[p,c]=[c,p]}return p[n]}
+function oppositeDirectionWords(a,b){
+ const up=/^(?:increas(?:e|es)?|rise|rises|higher|greater|larger|positive|gain|gains)$/;
+ const down=/^(?:decreas(?:e|es)?|fall|falls|lower|smaller|negative|lose|loses)$/;
+ return (up.test(a)&&down.test(b))||(up.test(b)&&down.test(a));
+}
 function close(a,b){
  a=stemToken(a);b=stemToken(b);
+ if(oppositeDirectionWords(a,b))return false;
  if(a===b)return true;
  for(const x of synonymSet(a))for(const y of synonymSet(b))if(stemToken(x)===stemToken(y))return true;
  const m=Math.max(a.length,b.length),d=lev(a,b);
@@ -1396,7 +1403,8 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c)))}
+function flashEligible(c){return flashScopeFilter==='mock'?c.mock===true:flashScopeFilter==='taught'?taughtCard(c):true}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
  const picked=weightedPick(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
@@ -1691,10 +1699,39 @@ function renderAvatar(){
 function renderChallenge(){document.getElementById('challengeStreak').textContent=profile.challengeStreak+' day'+(profile.challengeStreak===1?'':'s')+' streak';const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,key=dateKey()+'|'+(sub||'All')+'|'+scope,s=profile.dailyChallenges[key];document.getElementById('challengeStatus').textContent=s?(s.done?'Completed today · next streak bonus '+profile.challengeStreak+' point'+(profile.challengeStreak===1?'':'s'):( (s.index||0)+' / '+s.items.length+' completed')):'Not started yet';document.getElementById('startChallenge').textContent=s&&!s.done?'Resume challenge':s?.done?'Review challenge':'Start today’s challenge'}
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
+function flashCourseFamily(c){
+ const p=String(c.specRef||''),t=String(c.topic||''),u=String(c.unit||'');
+ if(c.subject==='Physics'){
+  if(p.startsWith('3.10')||u==='medical'||t.startsWith('Medical physics'))return '3.10 Medical physics (option)';
+  if(p.startsWith('3.8')||u==='a2-nuclear')return '3.8 Nuclear physics';
+  if(p.startsWith('3.7')||u.startsWith('a2-gravity')||u.startsWith('a2-electric')||u.startsWith('a2-capacitance')||u.startsWith('a2-magnetic')||u.startsWith('a2-induction'))return '3.7 Fields and their consequences';
+  if(p.startsWith('3.6')||u==='a2-periodic'||u==='a2-thermal')return '3.6 Further mechanics and thermal physics';
+  const core=[['as-measurements','3.1 Measurements and errors'],['as-particles','3.2 Particles and radiation'],['as-waves','3.3 Waves'],['as-mechanics','3.4 Mechanics and materials'],['as-electricity','3.5 Electricity']];
+  for(const [prefix,label] of core)if(u===prefix)return label;
+  const num=p.match(/^3\.[1-5](?=\.|$)/)?.[0];
+  const byNum={'3.1':'3.1 Measurements and errors','3.2':'3.2 Particles and radiation','3.3':'3.3 Waves','3.4':'3.4 Mechanics and materials','3.5':'3.5 Electricity'};
+  if(num&&byNum[num])return byNum[num];
+ }else if(c.subject==='Chemistry'){
+  const s=p.match(/^3\.[123](?:\.\d+)?/)?.[0];
+  if(s?.startsWith('3.1'))return '3.1 Physical chemistry';
+  if(s?.startsWith('3.2'))return '3.2 Inorganic chemistry';
+  if(s?.startsWith('3.3'))return '3.3 Organic chemistry';
+  const inorganic=new Set(['Periodicity','Period 3','Group 2','Group 7','Transition metals','Transition metal complexes','Aqueous ions','Aqueous metal ions','Period 3 oxides']);
+  const organic=new Set(['Organic chemistry','Alkanes','Alkenes','Halogenoalkanes','Alcohols','Organic analysis','Optical isomerism','Aldehydes and ketones','Carboxylic acids','Esters','Acyl chlorides','Aromatic chemistry','Amines','Polymers','Amino acids','DNA','Proteins and DNA','Organic synthesis','NMR','NMR spectroscopy','Chromatography']);
+  if(inorganic.has(t))return '3.2 Inorganic chemistry';
+  if(organic.has(t)||t.startsWith('RP5 ')||t.startsWith('RP6 '))return '3.3 Organic chemistry';
+  return '3.1 Physical chemistry';
+ }else if(c.subject==='Maths'){
+  if(['Statistics','Statistical distributions','Statistical sampling','Data presentation and interpretation','Probability','Hypothesis testing'].includes(t))return 'Statistics';
+  if(['Mechanics','Forces','Moments','Kinematics','Quantities and units in mechanics'].includes(t))return 'Mechanics';
+  return 'Pure mathematics';
+ }
+ return c.courseTopic||'Other';
+}
 function revisionTopicIndex(subject,qualification='both'){
  const groups=new Map();
  for(const c of subjectCards(subject)){
-  const group=c.courseTopic||'Other',topic=flashTopicLabel(c);
+  const group=flashCourseFamily(c),topic=flashTopicLabel(c);
   if(!groups.has(group))groups.set(group,new Map());
   if(!groups.get(group).has(topic))groups.get(group).set(topic,{cards:0,questions:0});
   groups.get(group).get(topic).cards++;
@@ -1709,7 +1746,7 @@ function revisionTopicIndex(subject,qualification='both'){
 }
 function groupedTopicPicker(subject,kind,selected){
  const groups=revisionTopicIndex(subject,kind==='exam'?(document.getElementById('examLevel')?.value||'both'):'both');
- return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
+ return [...groups].filter(([group,topics])=>[...topics.values()].some(v=>kind==='flash'?v.cards>0:v.questions>0)).sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
   const count=[...topics.values()].reduce((n,c)=>n+(kind==='flash'?c.cards:c.questions),0);
   const groupId=group.replace(/[^a-zA-Z0-9]/g,'-').toLowerCase();
   return '<details class="topic-family" open><summary><b>'+esc(group)+'</b><span>'+count+' '+(kind==='flash'?'cards':'questions')+'</span></summary>'+
@@ -1740,12 +1777,13 @@ function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
- if(defaultIfEmpty&&!flashTopics.size)base.filter(c=>c.taught).forEach(c=>flashTopics.add(flashTopicLabel(c)));
+ if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
 }
 function applyFlashPreset(p){
+ flashScopeFilter=['mock','taught','all'].includes(p)?p:'all';
  const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
  if(p!=='clear'){const filtered=p==='mock'?base.filter(c=>c.mock===true):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
@@ -1918,7 +1956,7 @@ function refreshExamFilters(defaultIfEmpty=false){
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
 function renderTopicCounts(){
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' selected';
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+selectedFlashCards().length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  document.getElementById('examTopicCount').textContent=examTopics.size+' selected';
  document.getElementById('examYearCount').textContent=examYears.size+' selected';
  const count=examGroups().reduce((n,g)=>n+g.length,0);
@@ -1929,7 +1967,7 @@ function renderStudyType(){document.querySelectorAll('.study-type-btn').forEach(
 function renderSessionBanner(){const e=document.getElementById('sessionBanner');if(!activeSession||activeSession.done){e.classList.add('hidden');return}e.classList.remove('hidden');e.textContent=activeSession.title+' · '+Math.min(activeSession.index+1,activeSession.items.length)+' / '+activeSession.items.length}
 function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div><span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
