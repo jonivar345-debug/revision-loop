@@ -10621,8 +10621,8 @@
       "active": true,
       "taught": true,
       "unit": "as-mechanics",
-      "front": "For work done by a force, state whether the work is positive, negative or zero when force and displacement are respectively (i) in the same direction, (ii) opposite and (iii) perpendicular.",
-      "back": "W = Fs cos θ. Same direction: positive work. Opposite directions: negative work. Perpendicular force: zero work.",
+      "front": "Complete the signs of work: force along / against / perpendicular to displacement.",
+      "back": "Positive / negative / zero, respectively.",
       "concepts": [
         [
           "positive same direction",
@@ -16700,8 +16700,8 @@
       "topic": "Photoelectric effect",
       "revisionTopic": "Photoelectric effect",
       "priority": 2,
-      "front": "On a photoelectric-effect graph of maximum photoelectron kinetic energy against light frequency, what happens below the threshold frequency?",
-      "back": "No photoelectrons are emitted because each photon has less energy than the metal's work function. No maximum kinetic energy is measured below threshold; extending the straight line into negative energy is only mathematical, not physical.",
+      "front": "On a graph of maximum photoelectron energy against frequency, what is shown below threshold?",
+      "back": "No photoelectrons are emitted, so there are no measured kinetic-energy points below threshold.",
       "accept": [
         "No photoelectrons are emitted below threshold frequency.",
         "There are no emitted electrons so no kinetic energy is measurable.",
@@ -16767,8 +16767,8 @@
       "taught": true,
       "priority": 4,
       "id": "phy_electron_diffraction_exam_q9b",
-      "front": "Electron diffraction [3 marks]: Why do the rings shrink when accelerating voltage increases?",
-      "back": "Higher voltage → greater electron kinetic energy and momentum; λ = h/p decreases; diffraction angle and ring diameter decrease.",
+      "front": "Why do electron-diffraction rings shrink at higher accelerating voltage?",
+      "back": "Momentum rises, so de Broglie wavelength and diffraction angle fall.",
       "concepts": [
         [
           "kinetic energy",
@@ -25740,7 +25740,8 @@
       "taught": true,
       "courseTopic": "Measurements",
       "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
+      "specRef": "3.1.1",
+      "visualBack": "wire"
     },
     {
       "id": "task1_phy_002",
@@ -25758,7 +25759,8 @@
       "taught": true,
       "courseTopic": "Measurements",
       "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
+      "specRef": "3.1.1",
+      "visualBack": "wire"
     },
     {
       "id": "task1_phy_003",
@@ -25776,7 +25778,8 @@
       "taught": true,
       "courseTopic": "Measurements",
       "revisionTopic": "Measurements",
-      "specRef": "3.1.1"
+      "specRef": "3.1.1",
+      "visualBack": "wire"
     },
     {
       "id": "task1_phy_004",
@@ -26288,7 +26291,8 @@
       "taught": true,
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "visualBack": "stationary"
     },
     {
       "id": "task1_phy_035",
@@ -26306,7 +26310,8 @@
       "taught": true,
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "visualBack": "stationary"
     },
     {
       "id": "task1_phy_036",
@@ -26324,7 +26329,8 @@
       "taught": true,
       "courseTopic": "Waves",
       "revisionTopic": "Waves",
-      "specRef": "3.3.1"
+      "specRef": "3.3.1",
+      "visualBack": "stationary"
     },
     {
       "id": "task1_phy_037",
@@ -26576,7 +26582,8 @@
       "taught": true,
       "courseTopic": "Interference",
       "revisionTopic": "Interference",
-      "specRef": "3.3.2"
+      "specRef": "3.3.2",
+      "visualBack": "grating"
     },
     {
       "id": "task1_phy_052",
@@ -26594,7 +26601,8 @@
       "taught": true,
       "courseTopic": "Interference",
       "revisionTopic": "Interference",
-      "specRef": "3.3.2"
+      "specRef": "3.3.2",
+      "visualBack": "grating"
     },
     {
       "id": "task1_phy_053",
@@ -26612,7 +26620,8 @@
       "taught": true,
       "courseTopic": "Interference",
       "revisionTopic": "Interference",
-      "specRef": "3.3.2"
+      "specRef": "3.3.2",
+      "visualBack": "grating"
     },
     {
       "id": "task1_phy_054",
@@ -26756,7 +26765,8 @@
       "taught": true,
       "courseTopic": "Refraction",
       "revisionTopic": "Refraction",
-      "specRef": "3.3.2.3"
+      "specRef": "3.3.2.3",
+      "visualBack": "refraction"
     },
     {
       "id": "task1_phy_062",
@@ -26774,7 +26784,8 @@
       "taught": true,
       "courseTopic": "Refraction",
       "revisionTopic": "Refraction",
-      "specRef": "3.3.2.3"
+      "specRef": "3.3.2.3",
+      "visualBack": "refraction"
     },
     {
       "id": "task1_phy_063",
@@ -26792,7 +26803,8 @@
       "taught": true,
       "courseTopic": "Refraction",
       "revisionTopic": "Refraction",
-      "specRef": "3.3.2.3"
+      "specRef": "3.3.2.3",
+      "visualBack": "refraction"
     },
     {
       "id": "task1_phy_064",
@@ -26865,7 +26877,7 @@
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
       "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "visualBack": "force-time"
     },
     {
       "id": "task1_phy_068",
@@ -26884,7 +26896,7 @@
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
       "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "visualBack": "force-time"
     },
     {
       "id": "task1_phy_069",
@@ -26903,7 +26915,7 @@
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
       "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "visualBack": "force-time"
     },
     {
       "id": "task1_phy_070",
@@ -26921,8 +26933,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_071",
@@ -26940,8 +26951,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_072",
@@ -26959,8 +26969,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_073",
@@ -26978,8 +26987,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_074",
@@ -26997,8 +27005,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_075",
@@ -27016,8 +27023,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_076",
@@ -27035,8 +27041,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_077",
@@ -27054,8 +27059,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_078",
@@ -27073,8 +27077,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_079",
@@ -27092,8 +27095,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_080",
@@ -27111,8 +27113,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_081",
@@ -27130,8 +27131,7 @@
       "taught": true,
       "courseTopic": "Mechanics",
       "revisionTopic": "Mechanics",
-      "specRef": "3.4.1",
-      "visualBack": "velocity-time"
+      "specRef": "3.4.1"
     },
     {
       "id": "task1_phy_085",
@@ -27149,7 +27149,8 @@
       "taught": true,
       "courseTopic": "Materials",
       "revisionTopic": "Materials",
-      "specRef": "3.4.2"
+      "specRef": "3.4.2",
+      "visualBack": "young"
     },
     {
       "id": "task1_phy_086",
@@ -27167,7 +27168,8 @@
       "taught": true,
       "courseTopic": "Materials",
       "revisionTopic": "Materials",
-      "specRef": "3.4.2"
+      "specRef": "3.4.2",
+      "visualBack": "young"
     },
     {
       "id": "task1_phy_087",
@@ -27185,7 +27187,8 @@
       "taught": true,
       "courseTopic": "Materials",
       "revisionTopic": "Materials",
-      "specRef": "3.4.2"
+      "specRef": "3.4.2",
+      "visualBack": "young"
     },
     {
       "id": "task1_phy_088",
@@ -27239,7 +27242,8 @@
       "taught": true,
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
-      "specRef": "3.5.1"
+      "specRef": "3.5.1",
+      "visualBack": "internal-resistance"
     },
     {
       "id": "task1_phy_092",
@@ -27257,7 +27261,8 @@
       "taught": true,
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
-      "specRef": "3.5.1"
+      "specRef": "3.5.1",
+      "visualBack": "internal-resistance"
     },
     {
       "id": "task1_phy_093",
@@ -27275,7 +27280,8 @@
       "taught": true,
       "courseTopic": "Electricity",
       "revisionTopic": "Electricity",
-      "specRef": "3.5.1"
+      "specRef": "3.5.1",
+      "visualBack": "internal-resistance"
     },
     {
       "id": "task1_phy_094",
@@ -27545,7 +27551,8 @@
       "taught": true,
       "courseTopic": "Circular motion",
       "revisionTopic": "Circular motion",
-      "specRef": "3.6.1.1"
+      "specRef": "3.6.1.1",
+      "visualBack": "circular"
     },
     {
       "id": "task1_phy_109",
@@ -27563,7 +27570,8 @@
       "taught": true,
       "courseTopic": "Circular motion",
       "revisionTopic": "Circular motion",
-      "specRef": "3.6.1.1"
+      "specRef": "3.6.1.1",
+      "visualBack": "circular"
     },
     {
       "id": "task1_phy_110",
@@ -27581,7 +27589,8 @@
       "taught": true,
       "courseTopic": "Circular motion",
       "revisionTopic": "Circular motion",
-      "specRef": "3.6.1.1"
+      "specRef": "3.6.1.1",
+      "visualBack": "circular"
     },
     {
       "id": "task1_phy_111",
@@ -27617,7 +27626,8 @@
       "taught": true,
       "courseTopic": "Simple harmonic motion",
       "revisionTopic": "Simple harmonic motion",
-      "specRef": "3.6.1.2"
+      "specRef": "3.6.1.2",
+      "visualBack": "shm"
     },
     {
       "id": "task1_phy_113",
@@ -27635,7 +27645,8 @@
       "taught": true,
       "courseTopic": "Simple harmonic motion",
       "revisionTopic": "Simple harmonic motion",
-      "specRef": "3.6.1.2"
+      "specRef": "3.6.1.2",
+      "visualBack": "shm"
     },
     {
       "id": "task1_phy_114",
@@ -27653,7 +27664,8 @@
       "taught": true,
       "courseTopic": "Simple harmonic motion",
       "revisionTopic": "Simple harmonic motion",
-      "specRef": "3.6.1.2"
+      "specRef": "3.6.1.2",
+      "visualBack": "shm"
     },
     {
       "id": "task1_phy_115",
@@ -27743,7 +27755,8 @@
       "taught": true,
       "courseTopic": "Thermal physics",
       "revisionTopic": "Thermal physics",
-      "specRef": "3.6.2"
+      "specRef": "3.6.2",
+      "visualBack": "gas-particles"
     },
     {
       "id": "task1_phy_121",
@@ -27761,7 +27774,8 @@
       "taught": true,
       "courseTopic": "Thermal physics",
       "revisionTopic": "Thermal physics",
-      "specRef": "3.6.2"
+      "specRef": "3.6.2",
+      "visualBack": "gas-particles"
     },
     {
       "id": "task1_phy_122",
@@ -27779,7 +27793,8 @@
       "taught": true,
       "courseTopic": "Thermal physics",
       "revisionTopic": "Thermal physics",
-      "specRef": "3.6.2"
+      "specRef": "3.6.2",
+      "visualBack": "gas-particles"
     },
     {
       "id": "task1_phy_123",
@@ -28139,7 +28154,8 @@
       "taught": false,
       "courseTopic": "Magnetic fields",
       "revisionTopic": "Magnetic fields",
-      "specRef": "3.7.4"
+      "specRef": "3.7.4",
+      "visualBack": "magnetic"
     },
     {
       "id": "task1_phy_144",
@@ -28157,7 +28173,8 @@
       "taught": false,
       "courseTopic": "Magnetic fields",
       "revisionTopic": "Magnetic fields",
-      "specRef": "3.7.4"
+      "specRef": "3.7.4",
+      "visualBack": "magnetic"
     },
     {
       "id": "task1_phy_145",
@@ -28175,7 +28192,8 @@
       "taught": false,
       "courseTopic": "Magnetic fields",
       "revisionTopic": "Magnetic fields",
-      "specRef": "3.7.4"
+      "specRef": "3.7.4",
+      "visualBack": "magnetic"
     },
     {
       "id": "task1_phy_146",
@@ -28211,7 +28229,8 @@
       "taught": false,
       "courseTopic": "Electromagnetic induction",
       "revisionTopic": "Electromagnetic induction",
-      "specRef": "3.7.5"
+      "specRef": "3.7.5",
+      "visualBack": "induction"
     },
     {
       "id": "task1_phy_148",
@@ -28229,7 +28248,8 @@
       "taught": false,
       "courseTopic": "Electromagnetic induction",
       "revisionTopic": "Electromagnetic induction",
-      "specRef": "3.7.5"
+      "specRef": "3.7.5",
+      "visualBack": "induction"
     },
     {
       "id": "task1_phy_149",
@@ -28247,7 +28267,8 @@
       "taught": false,
       "courseTopic": "Electromagnetic induction",
       "revisionTopic": "Electromagnetic induction",
-      "specRef": "3.7.5"
+      "specRef": "3.7.5",
+      "visualBack": "induction"
     },
     {
       "id": "task1_phy_150",
@@ -28283,7 +28304,8 @@
       "taught": false,
       "courseTopic": "Nuclear physics",
       "revisionTopic": "Nuclear physics",
-      "specRef": "3.8"
+      "specRef": "3.8",
+      "visualBack": "decay"
     },
     {
       "id": "task1_phy_152",
@@ -28301,7 +28323,8 @@
       "taught": false,
       "courseTopic": "Nuclear physics",
       "revisionTopic": "Nuclear physics",
-      "specRef": "3.8"
+      "specRef": "3.8",
+      "visualBack": "decay"
     },
     {
       "id": "task1_phy_153",
@@ -28319,7 +28342,8 @@
       "taught": false,
       "courseTopic": "Nuclear physics",
       "revisionTopic": "Nuclear physics",
-      "specRef": "3.8"
+      "specRef": "3.8",
+      "visualBack": "decay"
     },
     {
       "id": "task1_phy_154",
@@ -28669,7 +28693,8 @@
       "taught": true,
       "courseTopic": "Amount of substance",
       "revisionTopic": "Amount of substance",
-      "specRef": "3.1.2"
+      "specRef": "3.1.2",
+      "visualBack": "titration"
     },
     {
       "id": "task1_chem_011",
@@ -28686,7 +28711,8 @@
       "taught": true,
       "courseTopic": "Amount of substance",
       "revisionTopic": "Amount of substance",
-      "specRef": "3.1.2"
+      "specRef": "3.1.2",
+      "visualBack": "titration"
     },
     {
       "id": "task1_chem_012",
@@ -28992,7 +29018,8 @@
       "taught": true,
       "courseTopic": "Energetics",
       "revisionTopic": "Energetics",
-      "specRef": "3.1.4"
+      "specRef": "3.1.4",
+      "visualBack": "hess"
     },
     {
       "id": "task1_chem_033",
@@ -29009,7 +29036,8 @@
       "taught": true,
       "courseTopic": "Energetics",
       "revisionTopic": "Energetics",
-      "specRef": "3.1.4"
+      "specRef": "3.1.4",
+      "visualBack": "hess"
     },
     {
       "id": "task1_chem_034",
@@ -31083,7 +31111,8 @@
       "taught": true,
       "courseTopic": "Thermodynamics",
       "revisionTopic": "Thermodynamics",
-      "specRef": "3.1.8"
+      "specRef": "3.1.8",
+      "visualBack": "born-haber"
     },
     {
       "id": "task1_chem_159",
@@ -31100,7 +31129,8 @@
       "taught": true,
       "courseTopic": "Thermodynamics",
       "revisionTopic": "Thermodynamics",
-      "specRef": "3.1.8"
+      "specRef": "3.1.8",
+      "visualBack": "born-haber"
     },
     {
       "id": "task1_chem_160",
@@ -31763,7 +31793,8 @@
       "taught": true,
       "courseTopic": "Aldehydes and ketones",
       "revisionTopic": "Aldehydes and ketones",
-      "specRef": "3.3.8"
+      "specRef": "3.3.8",
+      "visualBack": "organic-reaction"
     },
     {
       "id": "task1_chem_204",
@@ -31780,7 +31811,8 @@
       "taught": true,
       "courseTopic": "Aldehydes and ketones",
       "revisionTopic": "Aldehydes and ketones",
-      "specRef": "3.3.8"
+      "specRef": "3.3.8",
+      "visualBack": "organic-reaction"
     },
     {
       "id": "task1_chem_205",
@@ -32137,7 +32169,8 @@
       "taught": false,
       "courseTopic": "NMR",
       "revisionTopic": "NMR",
-      "specRef": "3.3.15"
+      "specRef": "3.3.15",
+      "visualBack": "nmr"
     },
     {
       "id": "task1_chem_228",
@@ -32154,7 +32187,8 @@
       "taught": false,
       "courseTopic": "NMR",
       "revisionTopic": "NMR",
-      "specRef": "3.3.15"
+      "specRef": "3.3.15",
+      "visualBack": "nmr"
     },
     {
       "id": "task1_chem_229",
@@ -32205,7 +32239,8 @@
       "taught": false,
       "courseTopic": "Chromatography",
       "revisionTopic": "Chromatography",
-      "specRef": "3.3.16"
+      "specRef": "3.3.16",
+      "visualBack": "chromatography"
     },
     {
       "id": "task1_chem_232",
@@ -32222,7 +32257,8 @@
       "taught": false,
       "courseTopic": "Chromatography",
       "revisionTopic": "Chromatography",
-      "specRef": "3.3.16"
+      "specRef": "3.3.16",
+      "visualBack": "chromatography"
     },
     {
       "id": "task1_chem_233",
@@ -32240,6 +32276,176 @@
       "courseTopic": "Chromatography",
       "revisionTopic": "Chromatography",
       "specRef": "3.3.16"
+    },
+    {
+      "id": "task1_maths_001",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "A translation by vector (a, b) does what to (x, y)?",
+      "back": "Maps it to (x + a, y + b).",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_maths_002",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What does y = f(x − a) do to y = f(x)?",
+      "back": "Shifts the graph a units right.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_maths_004",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What does y = f(−x) do to the graph?",
+      "back": "Reflects it in the y-axis.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_maths_006",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What does a one-to-one function mean?",
+      "back": "Distinct inputs have distinct outputs.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Functions",
+      "revisionTopic": "Functions",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_maths_007",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What is the domain of a function?",
+      "back": "Its permitted input values.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Functions",
+      "revisionTopic": "Functions",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_maths_008",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What is the range of a function?",
+      "back": "Its possible output values.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Functions",
+      "revisionTopic": "Functions",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_maths_009",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What angle in radians is a full turn?",
+      "back": "2π radians.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry",
+      "specRef": "3.6"
+    },
+    {
+      "id": "task1_maths_010",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "Complete: arc length s = ____ for angle θ in radians.",
+      "back": "rθ.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry",
+      "specRef": "3.6"
+    },
+    {
+      "id": "task1_maths_011",
+      "subject": "Maths",
+      "topic": "Proof",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What is a counterexample?",
+      "back": "One example showing a universal claim is false.",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "3.2"
+    },
+    {
+      "id": "task1_maths_012",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 2,
+      "scope": "mock",
+      "front": "What does the derivative f′(x) represent?",
+      "back": "The instantaneous gradient of y = f(x).",
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8"
     }
   ],
   "meta": {
@@ -32351,7 +32557,14 @@
       "chemistryNew": 220,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
-      "warning": "First pass across specification headings, not a certified subpoint-by-subpoint pass. Review semantic duplicates and answer checking before release."
+      "warning": "First pass across specification headings, not a certified subpoint-by-subpoint pass. Review semantic duplicates and answer checking before release.",
+      "mathsNew": 10,
+      "oldCardsReworded": [
+        "phy_work_angle_signs",
+        "phy_spectra_photo_v32_below_threshold_graph",
+        "phy_electron_diffraction_exam_q9b"
+      ],
+      "visualNote": "Relevant explanatory SVG diagrams shown on answer side only, to avoid giving away answers."
     }
   }
 }
