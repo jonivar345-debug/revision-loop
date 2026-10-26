@@ -39,6 +39,10 @@ const old={app:'revision-loop',schemaVersion:1,values:{
   revisionLoopProfile11:'{"lifetimeXp":750,"points":400,"shopOwned":{"locations":["london","seoul"]}}',
   revisionLoopSettings11:'{"dailyNew":22}'
 },createdAt:'2026-10-26T13:00:00Z'};
+const archive={format:'revision-loop-pre-reset-archive-v120',createdAt:new Date().toISOString(),local:old,cloud:empty};
+assert.equal(backup.summary(backup.fromResetArchive(archive,'local')).xp,750);
+assert.equal(backup.summary(backup.fromResetArchive(archive,'cloud')).xp,0);
+assert.throws(()=>backup.fromResetArchive(archive,'invalid'),/Choose LOCAL or CLOUD/);
 backup.restore(storage,old);
 const fresh=cloud.freshStartSnapshot();
 backup.restore(storage,fresh);
@@ -53,6 +57,7 @@ assert.equal((html.match(/data-layout-choice="pc"/g)||[]).length,2);
 assert.match(html,/cloudResetAll/);
 assert.match(html,/layout-mode\.js\?v=120/);
 assert.match(html,/cloud-sync\.js\?v=120/);
+assert.match(html,/progress-backup\.js\?v=120/);
 assert.match(css,/data-layout-mode="phone"/);
 assert.match(css,/data-layout-mode="pc"/);
 assert.match(code,/function resetAllProgress\(/);
