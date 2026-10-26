@@ -37,6 +37,6 @@ for(const id of ids){
     assert(fs.existsSync(path.resolve(root,'editorial/reviews',image.cover)),id+' local cover lost');
   }
 }
-assert.equal(index.photoCount,980,'No photograph may disappear from v114 baseline');
-assert.equal(index.fullyLocal,245,'No full gallery may disappear from v114 baseline');
+assert(index.photoCount>=980,'No photograph may disappear from v114 baseline');
+assert(index.fullyLocal>=245,'No full gallery may disappear from v114 baseline');
 console.log('PASS v115: four iconic local cover photographs retained, full-frame CSS available, no photo/progress changes.');

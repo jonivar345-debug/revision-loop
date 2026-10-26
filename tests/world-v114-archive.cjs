@@ -7,10 +7,18 @@ const root=path.join(__dirname,'..');
 const batch=require('../editorial/world-v114-batch-targets.json');
 const manifest=require('../editorial/world-local-photo-pilot.json');
 const local=require('../world-local-photos.js');
+const repairs=require('../editorial/world-v116-batch-targets.json').replacements;
+const allowedReplacementCount=Object.keys(repairs).filter(id=>batch.targets.includes(id)).length;
 const accepted=batch.targets.filter(id=>manifest.locations[id]?.length===4&&JSON.stringify(manifest.locations[id])===JSON.stringify(batch.approvedSelections[id]));
-assert(accepted.length>=batch.minimumGalleries&&accepted.length<=batch.maxGalleries,
+assert(accepted.length>=batch.minimumGalleries-allowedReplacementCount&&accepted.length<=batch.maxGalleries,
  'Only '+accepted.length+' accepted galleries (minimum '+batch.minimumGalleries+')');
 assert(Object.keys(manifest.locations).length>=158,'Some earlier locally hosted destinations disappeared');
+for(const [id,repair] of Object.entries(repairs)){
+ if(!batch.targets.includes(id))continue;
+ const previous=batch.approvedSelections[id], current=manifest.locations[id];
+ assert.equal(current.length,4);
+ for(const slot of repair.keep){assert.equal(current[slot-1],previous[slot-1],id+' protected original photo lost');}
+}
 for(const id of accepted){
  assert.deepEqual(manifest.locations[id],batch.approvedSelections[id],id+' got unexpected photo replacements');
  const photos=local.get(id);
@@ -38,4 +46,4 @@ assert.equal(currentAudit.localPhotographs,review.photoCount,'v114 photo review 
 assert.equal(currentAudit.fourPhotoLocalGalleries,review.fullyLocal,'v114 gallery review count is stale');
 assert.equal(review.destinations.filter(x=>x.images.length!==4).length,0,
  'A previously complete World destination is now missing photos');
-console.log('PASS v114: '+accepted.length+' additional complete first-party galleries, previous v113 assets and attribution preserved.');
+console.log('PASS v114 historical sources protected: '+accepted.length+' unmodified galleries and '+allowedReplacementCount+' explicit later editorial repairs; v113 assets intact.');

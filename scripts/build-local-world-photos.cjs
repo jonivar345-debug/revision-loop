@@ -14,6 +14,9 @@ const {get}=require('../world-curated-photos.js');
 const manifest=require('../editorial/world-local-photo-pilot.json');
 const v114Batch=require('../editorial/world-v114-batch-targets.json');
 const v114Targets=new Set(v114Batch.targets);
+const v116Batch=require('../editorial/world-v116-batch-targets.json');
+const v116Repaired=new Set(Object.keys(v116Batch.replacements));
+const v116New=new Set(v116Batch.newDestinations);
 // Preserve partial galleries if a new four-photo set fails live validation.
 const partialFallbacks=Object.fromEntries(Object.entries(manifest.locations).filter(([id,photos])=>v114Targets.has(id)&&photos.length<4).map(([id,photos])=>[id,[...photos]]));
 const base=path.resolve(__dirname,'../assets/world');
@@ -70,6 +73,11 @@ async function main(){
   const output={};const attribution=[];let totalBytes=0;
   let acceptedV114=0;
   const skippedV114=[];
+  for(const [id,selection] of Object.entries(v116Batch.approvedSelections)){
+    if(JSON.stringify(manifest.locations[id])!==JSON.stringify(selection))
+      throw new Error('v116 unapproved manifest mutation: '+id);
+  }
+  for(const id of v116New){if(v114Targets.has(id)||partialFallbacks[id])throw new Error('Existing gallery cannot be a new v116 destination: '+id)}
   // Preserve optimization provenance for assets already present in the archive.
   // Do not clear size-budget status when a later batch revalidates the source.
   let pastAttribution=[];
@@ -90,7 +98,7 @@ async function main(){
     const known=get(id);
     // New v114 galleries must pass live Commons resolution/rights checks before
     // acceptance. Earlier locally accepted selections must never be auto-replaced.
-    if(v114Targets.has(id)){
+    if(v114Targets.has(id)&&!v116Repaired.has(id)){
       if(acceptedV114>=v114Batch.maxGalleries){
         delete manifest.locations[id];
         continue;
@@ -192,10 +200,14 @@ async function main(){
     }
     output[id]=selected;
   }
+  for(const id of [...v116New,...v116Repaired]){
+    if(!output[id]||output[id].length!==4)
+      throw new Error('v116 exact four-photo local import incomplete: '+id);
+  }
   for(const required of v114Batch.requiredGalleries||[])
     if(!manifest.locations[required] || !output[required] || output[required].length!==4)
       throw new Error('Essential v114 approved gallery unavailable: '+required);
-  if(acceptedV114<v114Batch.minimumGalleries)
+  if(acceptedV114+v116Repaired.size<v114Batch.minimumGalleries)
     throw new Error('Only '+acceptedV114+' validated v114 galleries, below minimum '+v114Batch.minimumGalleries+'; deferred '+JSON.stringify(skippedV114));
   await fsp.writeFile(path.resolve(__dirname,'../editorial/world-local-photo-pilot.json'),JSON.stringify(manifest,null,2)+'\n');
   console.log('v114 accepted '+acceptedV114+' additional four-photo galleries, deferred '+skippedV114.length+'.');
