@@ -12,6 +12,7 @@ on:
       - 'app.js'
       - 'progress-backup.js'
       - 'sw.js'
+      - 'tests/task1-deck-audit-v122.cjs'
       - 'tests/cloud-sync-v119.cjs'
       - 'tests/reset-layout-v120.cjs'
       - 'tests/cloud-photoelectric-v121.cjs'
@@ -33,6 +34,7 @@ jobs:
       - run: node --input-type=module --check < cloud-sync.js
       - run: node --check app.js
       - run: node --check progress-backup.js
+      - run: node tests/task1-deck-audit-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
       - run: node tests/cloud-photoelectric-v121.cjs
