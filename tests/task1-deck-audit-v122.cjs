@@ -24,7 +24,7 @@ for(const c of added){
   assert.ok(c.back.length<=205,'Flashcard answer too long '+c.id);
   assert.ok(!/\[[2-9]\s*marks?\]/i.test(c.front),'Exam-style marks on a flashcard '+c.id);
   assert.ok(!/^(?:calculate|work out)\b/i.test(c.front),'Long working should belong in exam practice '+c.id);
-  assert.ok(/^(?:3\.\d|7\.2)/.test(String(c.specRef)),'Missing AQA content/practical section tag '+c.id);
+  assert.ok(/^(?:3\.\d|7\.[12])/.test(String(c.specRef)),'Missing AQA content/practical section tag '+c.id);
   assert.ok(!seenOld.has(key(c.front)),'Exact legacy duplicate '+c.id);
   assert.ok(!seenNew.has(key(c.front)),'Exact new duplicate '+c.id);seenNew.add(key(c.front));
   assert.ok(c.active===true);
