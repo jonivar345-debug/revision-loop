@@ -20,6 +20,7 @@ on:
       - 'tests/task1-tests-definitions-v127.cjs'
       - 'tests/task1-practical-results-v128.cjs'
       - 'tests/task1-targeted-gaps-v129.cjs'
+      - 'tests/task1-coverage-precision-v130.cjs'
       - 'tests/task1-short-answer-marking-v122.cjs'
       - 'tests/cloud-sync-v119.cjs'
       - 'tests/reset-layout-v120.cjs'
@@ -50,6 +51,7 @@ jobs:
       - run: node tests/task1-tests-definitions-v127.cjs
       - run: node tests/task1-practical-results-v128.cjs
       - run: node tests/task1-targeted-gaps-v129.cjs
+      - run: node tests/task1-coverage-precision-v130.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
