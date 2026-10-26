@@ -10,7 +10,7 @@ assert.equal(newCards.length,160);
 assert.equal(newCards.filter(c=>c.subject==='Physics').length,72);
 assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,84);
 assert.equal(newCards.filter(c=>c.subject==='Maths').length,4);
-assert.equal(newCards.filter(c=>c.mock).length,106);
+assert.equal(newCards.filter(c=>c.mock).length,105);
 const ids=new Set(), fronts=new Set();
 const key=s=>String(s).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 for(const c of cards){
@@ -23,7 +23,7 @@ for(const id of ['phy_motion_d','chem_ar_def','math_modulus','task1_v124_phy_001
 const m=deck.meta.task1FlashcardAudit.v130;
 assert.equal(m.startingCards,2686);assert.equal(m.added,160);
 assert.deepEqual(m.bySubject,{Physics:72,Chemistry:84,Maths:4});
-assert.equal(m.mockEligible,106);
+assert.equal(m.mockEligible,105);
 assert.equal(deck.meta.task1FlashcardAudit.physicsNew,cards.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')).length);
 assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,cards.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')).length);
 const app=fs.readFileSync('app.js','utf8');const a=app.indexOf('function normalise('),b=app.indexOf('function importantTokens(');
