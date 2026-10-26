@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 131,
+  "deckVersion": 132,
   "updatedAt": "2026-10-26",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -61925,6 +61925,174 @@
       "scope": "full",
       "courseTopic": "Carboxylic acids and derivatives",
       "revisionTopic": "Carboxylic acids and derivatives"
+    },
+    {
+      "id": "task1_v132_001",
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "stage": "AS",
+      "topic": "Moments",
+      "front": "Where is the centre of mass of a uniform, regular solid?",
+      "back": "At its geometric centre.",
+      "accept": [
+        "At its geometric centre.",
+        "geometric centre",
+        "centre of the solid"
+      ],
+      "reject": [
+        "at the edge",
+        "always at the base"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "Moments",
+      "revisionTopic": "Moments"
+    },
+    {
+      "id": "task1_v132_002",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "stage": "AS",
+      "topic": "RP3 Free fall",
+      "front": "For free fall from rest, where should a graph of s against t² ideally intercept?",
+      "back": "At the origin.",
+      "accept": [
+        "At the origin.",
+        "origin",
+        "0,0",
+        "zero intercept"
+      ],
+      "reject": [
+        "at t=1",
+        "positive intercept"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "RP3 Free fall",
+      "revisionTopic": "RP3 Free fall"
+    },
+    {
+      "id": "task1_v132_003",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "stage": "AS",
+      "topic": "RP3 Free fall",
+      "front": "In a free-fall s against t² graph, what can a non-zero intercept indicate?",
+      "back": "A systematic measurement offset.",
+      "accept": [
+        "A systematic measurement offset.",
+        "systematic error",
+        "systematic offset",
+        "distance offset"
+      ],
+      "reject": [
+        "perfect measurement",
+        "no error"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "RP3 Free fall",
+      "revisionTopic": "RP3 Free fall"
+    },
+    {
+      "id": "task1_v132_004",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Group 2",
+      "front": "Do melting points fall steadily from magnesium to barium?",
+      "back": "No. Calcium melts above magnesium; values then fall towards barium.",
+      "accept": [
+        "No. Calcium melts above magnesium; values then fall towards barium.",
+        "no",
+        "not steadily",
+        "calcium higher than magnesium"
+      ],
+      "reject": [
+        "yes",
+        "steady decrease"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "Group 2",
+      "revisionTopic": "Group 2"
+    },
+    {
+      "id": "task1_v132_005",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Group 2",
+      "front": "Why does the melting point generally decrease from Ca to Ba?",
+      "back": "Larger metal ions lead to weaker metallic attraction.",
+      "accept": [
+        "Larger metal ions lead to weaker metallic attraction.",
+        "larger ions weaken metallic bonding",
+        "weaker metallic attraction",
+        "ions become larger"
+      ],
+      "reject": [
+        "stronger metallic bonds",
+        "metal ions get smaller"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "Group 2",
+      "revisionTopic": "Group 2"
+    },
+    {
+      "id": "task1_v132_006",
+      "subject": "Chemistry",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "RP1 Titration",
+      "front": "Each burette reading is ±0.05 cm³. What is the titre's absolute uncertainty?",
+      "back": "±0.10 cm³.",
+      "accept": [
+        "±0.10 cm³.",
+        "0.10 cm3",
+        "±0.10",
+        "0.1 cm3"
+      ],
+      "reject": [
+        "0.05",
+        "±0.05 cm3",
+        "0.20 cm3"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "active": true,
+      "kind": "content",
+      "priority": 5,
+      "scope": "mock",
+      "courseTopic": "RP1 Titration",
+      "revisionTopic": "RP1 Titration"
     }
   ],
   "meta": {
@@ -62029,11 +62197,11 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 653,
+      "physicsNew": 656,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 979,
+      "chemistryNew": 982,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -62220,6 +62388,19 @@
         "baselinePreserved": true,
         "fullSpecCoverageCertified": false,
         "focus": "AQA 7408 3.7 and 3.8; AQA 7405 Group 2 and 7, Period 3 oxides, transition metals and organic specification definitions"
+      },
+      "v132": {
+        "startingCards": 2975,
+        "added": 6,
+        "subjectCounts": {
+          "Physics": 3,
+          "Chemistry": 3
+        },
+        "legacyCardsContentReviewed": 354,
+        "oldCardsPreserved": 2975,
+        "activeLegacyStillUnreviewed": 862,
+        "claimAllSpecificationCovered": false,
+        "focus": "Evidence-led legacy audit and Group 2 melting, titration uncertainty, centre-of-mass and free-fall graph precision"
       }
     },
     "chatYear1CoverageV126": {
