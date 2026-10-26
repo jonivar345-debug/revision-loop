@@ -1230,6 +1230,9 @@ function evaluateCard(c,input){
     return window.RevisionPhotoelectricCardMarking.evaluate(input);
  if(String(input||'').trim()&&(normalise(c.back)===normalise(input)||(Array.isArray(c.accept)&&c.accept.some(a=>normalise(a)===normalise(input)))))return {status:'correct',score:1,text:'Correct answer or accepted equivalent wording.',missing:[]};
  if(!String(input||'').trim())return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+ // For highly confusable identification labels (e.g. Fe(II) vs Fe(III)),
+ // accept only explicitly curated alternatives rather than fuzzy near-matches.
+ if(c.strictRecall===true)return {status:'wrong',score:0,text:'Check the exact ion or oxidation state against the accepted answer.',missing:[]};
  let best=0,missing=[];
  for(const alt of (c.accept||[]))best=Math.max(best,formulaScore(input,alt),phraseScore(input,alt));
  if(c.concepts?.length){
