@@ -55132,7 +55132,6 @@
         "note": "Short identification observations and key definitions; no procedural chemical-handling instructions, no full-spec completion claim."
       },
       "v128": {
-        "draft": true,
         "focus": "AQA Chemistry required-practical result interpretation & precise definitions; Physics practical data definitions",
         "startingCards": 2603,
         "newCards": 56,
@@ -55170,7 +55169,8 @@
           "task1_v128_049"
         ],
         "currentProposedTotal": 2659,
-        "notes": "Removed near-synonyms of existing cards and out-of-scope reaction quotient/confidence interval."
+        "notes": "Removed near-synonyms of existing cards and out-of-scope reaction quotient/confidence interval.",
+        "status": "Release candidate, merge subject to CI"
       }
     },
     "chatYear1CoverageV126": {
