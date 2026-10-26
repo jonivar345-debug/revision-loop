@@ -44460,10 +44460,12 @@
       "kind": "content",
       "priority": 2,
       "scope": "taught",
-      "front": "Which acid forms when ethanoic acid donates a proton?",
-      "back": "Ethanoate's conjugate acid is ethanoic acid.",
+      "front": "Which ion forms when ethanoic acid donates a proton?",
+      "back": "The ethanoate ion, CH₃COO⁻.",
       "accept": [
-        "Ethanoate's conjugate acid is ethanoic acid."
+        "The ethanoate ion, CH₃COO⁻.",
+        "ethanoate",
+        "CH3COO-"
       ],
       "active": true,
       "stage": "A2",
@@ -45372,6 +45374,195 @@
       "courseTopic": "Chromatography",
       "revisionTopic": "Chromatography",
       "specRef": "3.3.16"
+    },
+    {
+      "id": "task1_v124_bulk_math_001",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What must be true for a function to have an inverse over its domain?",
+      "back": "It must be one-to-one.",
+      "accept": [
+        "It must be one-to-one.",
+        "injective"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Functions",
+      "revisionTopic": "Functions",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_v124_bulk_math_002",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What is the domain of f(x) = √x over the real numbers?",
+      "back": "x ≥ 0.",
+      "accept": [
+        "x ≥ 0.",
+        "nonnegative x"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Functions",
+      "revisionTopic": "Functions",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_v124_bulk_math_003",
+      "subject": "Maths",
+      "topic": "Functions",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What is the domain of f(x) = 1/(x−2)?",
+      "back": "All real x except x = 2.",
+      "accept": [
+        "All real x except x = 2.",
+        "x not equal to 2"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Functions",
+      "revisionTopic": "Functions",
+      "specRef": "3.3"
+    },
+    {
+      "id": "task1_v124_bulk_math_004",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What condition must a differentiable function satisfy at a stationary point?",
+      "back": "f′(x) = 0.",
+      "accept": [
+        "f′(x) = 0.",
+        "derivative zero"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8"
+    },
+    {
+      "id": "task1_v124_bulk_math_005",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What does f″(x) > 0 at a stationary point usually indicate?",
+      "back": "A local minimum.",
+      "accept": [
+        "A local minimum.",
+        "minimum"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8"
+    },
+    {
+      "id": "task1_v124_bulk_math_006",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What does f″(x) < 0 at a stationary point indicate?",
+      "back": "A local maximum.",
+      "accept": [
+        "A local maximum.",
+        "maximum"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8"
+    },
+    {
+      "id": "task1_v124_bulk_math_008",
+      "subject": "Maths",
+      "topic": "Proof",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What is a counterexample in mathematical proof?",
+      "back": "One case showing a universal claim is false.",
+      "accept": [
+        "One case showing a universal claim is false.",
+        "disproof by example"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "3.2"
+    },
+    {
+      "id": "task1_v124_bulk_math_009",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "How does tan x relate to sin x and cos x?",
+      "back": "tan x = sin x / cos x.",
+      "accept": [
+        "tan x = sin x / cos x.",
+        "sine over cosine"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry",
+      "specRef": "3.6"
+    },
+    {
+      "id": "task1_v124_bulk_math_010",
+      "subject": "Maths",
+      "topic": "Integration",
+      "kind": "content",
+      "priority": 3,
+      "scope": "mock",
+      "front": "What does a definite integral of velocity over time give?",
+      "back": "Displacement.",
+      "accept": [
+        "Displacement.",
+        "signed displacement"
+      ],
+      "active": true,
+      "stage": "AS",
+      "mock": true,
+      "taught": true,
+      "courseTopic": "Integration",
+      "revisionTopic": "Integration",
+      "specRef": "3.9"
     }
   ],
   "meta": {
@@ -45476,15 +45667,15 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 267,
+      "physicsNew": 398,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 367,
+      "chemistryNew": 606,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
-      "mathsNew": 10,
+      "mathsNew": 19,
       "oldCardsReworded": [
         "phy_work_angle_signs",
         "phy_electron_diffraction_exam_q9b"
@@ -45531,7 +45722,11 @@
         "physicsBroadAdd": 131,
         "revisionNote": "Expanded Physics coverage including AS, taught Y2, future compulsory content, optional Medical explicitly locked; original v123 preserved",
         "chemistryBroadAdd": 239,
-        "chemistrySkippedDuplicates": 14
+        "chemistrySkippedDuplicates": 14,
+        "mathsBroadAdd": 9,
+        "exactAndSemanticDuplicatesPruned": 0,
+        "oldCardCount": 1826,
+        "currentProposedCount": 2243
       }
     }
   }
