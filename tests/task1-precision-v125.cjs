@@ -45,6 +45,10 @@ assert.equal(audit.chemistryNew,cards.filter(c=>c.subject==='Chemistry'&&c.id.st
 const b=app.indexOf('function normalise('),e=app.indexOf('function importantTokens(');
 assert(b>0&&e>b,'Current marker not found');
 const evaluate=new Function('window',app.slice(b,e)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+for(const c of newCards){
+ assert.equal(evaluate(c,c.back).status,'correct','Model answer wrongly rejected: '+c.id);
+ for(const alt of c.accept)assert.equal(evaluate(c,alt).status,'correct','Curated alternative wrongly rejected: '+c.id+' / '+alt);
+}
 function card(front){const c=newCards.find(x=>x.front===front);assert(c,'Missing test card '+front);return c}
 const examples=[
  ['What is a closed vector triangle used to represent?','three-force equilibrium','correct'],
@@ -65,4 +69,4 @@ const examples=[
  ['If forward reaction is exothermic, how does warming affect Kc?','increases','wrong']
 ];
 for(const [front,answer,status] of examples)assert.equal(evaluate(card(front),answer).status,status,'Marking error: '+front+' / '+answer);
-console.log('PASS v125: 163 short AQA prompts; 2,251 existing IDs kept; 78 short-answer variants and 16 marking checks');
+console.log('PASS v125: 163 short AQA prompts; 2,251 existing IDs kept; all curated answers plus 16 marking checks');
