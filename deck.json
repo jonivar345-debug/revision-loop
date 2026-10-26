@@ -35610,29 +35610,6 @@
       "unit": "a2-periodic"
     },
     {
-      "id": "task1_v123_phy_002",
-      "subject": "Physics",
-      "topic": "Simple harmonic motion",
-      "kind": "practical",
-      "priority": 2,
-      "scope": "secondary",
-      "front": "What does the square of a spring oscillator's period depend on?",
-      "back": "Mass, if spring stiffness is constant.",
-      "accept": [
-        "Mass, if spring stiffness is constant.",
-        "T squared proportional to mass"
-      ],
-      "active": true,
-      "stage": "A2",
-      "mock": false,
-      "taught": false,
-      "courseTopic": "Simple harmonic motion",
-      "revisionTopic": "Simple harmonic motion",
-      "specRef": "7.2 RP7",
-      "practicalNumber": 7,
-      "unit": "a2-periodic"
-    },
-    {
       "id": "task1_v123_phy_003",
       "subject": "Physics",
       "topic": "Simple harmonic motion",
@@ -36645,28 +36622,6 @@
       "practicalNumber": 8
     },
     {
-      "id": "task1_v123_chem_047",
-      "subject": "Chemistry",
-      "topic": "Electrochemical cells",
-      "kind": "practical",
-      "priority": 2,
-      "scope": "secondary",
-      "front": "How is a cell's EMF related to its two reduction potentials?",
-      "back": "Their difference, with consistent orientation.",
-      "accept": [
-        "Their difference, with consistent orientation.",
-        "difference in potentials"
-      ],
-      "active": true,
-      "stage": "A2",
-      "mock": false,
-      "taught": false,
-      "courseTopic": "Electrochemical cells",
-      "revisionTopic": "Electrochemical cells",
-      "specRef": "7.2 RP8",
-      "practicalNumber": 8
-    },
-    {
       "id": "task1_v123_chem_048",
       "subject": "Chemistry",
       "topic": "Electrochemical cells",
@@ -37297,11 +37252,11 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 248,
+      "physicsNew": 247,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 350,
+      "chemistryNew": 349,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -37325,10 +37280,11 @@
       "reviewStatus": "Second pass created; full AQA line-by-line audit remains outstanding.",
       "clozePrompts": 12,
       "practicalsSecondPass": {
-        "physics": 36,
-        "chemistry": 35,
+        "physics": 35,
+        "chemistry": 34,
         "source": "AQA Physics 7408 and Chemistry 7405 required practicals 7.2",
-        "note": "Exam-facing interpretation, no unsupervised practical instruction"
+        "note": "Exam-facing interpretation, no unsupervised practical instruction",
+        "nearDuplicatesRemoved": 2
       }
     }
   }
