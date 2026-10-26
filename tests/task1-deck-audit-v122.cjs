@@ -9,7 +9,8 @@ const existing=cards.filter(c=>!c.id.startsWith('task1_'));
 const key=x=>String(x).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 const visualNames=new Set([...source.matchAll(/if\(t==='([^']+)'\)/g)].map(x=>x[1]));
 const ids=new Set();
-assert.equal(existing.length,1220,'All 1,220 pre-existing IDs should remain');
+// Later topic-specific cards may add non-task1 IDs; preserve the baseline rather than freezing the count.
+assert.ok(existing.length>=1220,'All 1,220 original non-Task-1 IDs should remain');
 assert.ok(added.length>=300,'This is intended to be a substantial coverage batch');
 assert.ok(deck.deckVersion>=122);
 for(const c of cards){

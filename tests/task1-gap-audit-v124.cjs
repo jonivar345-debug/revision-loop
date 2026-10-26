@@ -9,7 +9,7 @@ const old=cards.filter(c=>!c.id.startsWith('task1_v124_')&&!c.id.startsWith('tas
 assert(deck.deckVersion>=124);
 assert(cards.length>=2251);
 assert(cards.filter(c=>c.active!==false).length>=2247);
-assert.equal(old.length,1826,'All previously live cards retained');
+assert.ok(old.length>=1826,'All previously live cards retained; later topic cards are additive');
 assert.equal(v124.length,425);
 for(const [subject,n] of Object.entries({Physics:152,Chemistry:264,Maths:9})){
  assert.equal(v124.filter(c=>c.subject===subject).length,n,subject+' v124 count mismatch');

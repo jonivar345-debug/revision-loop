@@ -36,6 +36,7 @@ jobs:
           node tests/chemistry-energetics-v50.cjs
           node tests/chemistry-energetics-v51.cjs
           node tests/chemistry-energetics-v53.cjs
+          node tests/chemistry-year1-chat-v126.cjs
           node tests/adversarial-marking-regression.cjs
           node tests/world-economy-integrity.cjs
           node tests/world-editorial-integrity.cjs
