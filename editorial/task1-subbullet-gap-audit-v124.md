@@ -48,7 +48,7 @@ Nine brief Maths prompts on proof, domains and functions, differentiation, trigo
 ## Mock and saved-progress safeguards
 
 - AS review cards from confirmed Year 1 content can be selected in November mock mode.
-- Selected taught A2 Physics 3.6 and Chemistry 3.1.8/9/10/12 and 3.3.7–9 are tagged taught where appropriate but **not** inserted into the AS Physics or Year 1 Maths presets merely because the topic exists.
+- **52 new taught Year 2 Chemistry cards** covering thermodynamics, rates, Kp, acids/bases, optical isomerism, carbonyls and carboxylic acid derivatives are included in the November Chemistry mock selector. Physics Year 2 remains outside its AS-only mock, and Maths is restricted to Year 1 Pure.
 - Future compulsory A2 and Medical option cards are `taught:false, mock:false`.
 - CI verifies previous card IDs, new card lengths, current totals, distinct prompts, mock gating, actual diagram IDs, alternate correct answers, common wrong answers and AQA subsection tags.
 - Old version regressions are cumulative: v123 required-practical test no longer wrongly assumes the entire future deck must remain exactly 1,826.
