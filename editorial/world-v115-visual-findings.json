@@ -1,0 +1,75 @@
+{
+  "release": "v115 development",
+  "reviewDate": "2026-10-26",
+  "baseline": {
+    "localPhotographs": 980,
+    "completeLocalGalleries": 245,
+    "destinations": 376
+  },
+  "method": "Individually viewed actual first-party WebP covers and local alternatives from GitHub. The final composed browser layout has not yet been screenshot-approved.",
+  "coverFindings": [
+    {
+      "id": "oaxaca",
+      "retainSlot": 1,
+      "subject": "Santo Domingo Church",
+      "decision": "Keep recognisable church; alternate mural, dance and archway are weaker primary destination covers. Show first image uncropped with blurred edge fill."
+    },
+    {
+      "id": "portlouis",
+      "retainSlot": 1,
+      "subject": "Port Louis panorama",
+      "decision": "Keep actual city skyline; the flatter waterfront panoramas and indoor museum display are less informative as primary destination covers. Show panorama uncropped with blurred edge fill."
+    },
+    {
+      "id": "sanfrancisco",
+      "retainSlot": 1,
+      "subject": "Golden Gate Bridge at blue hour",
+      "decision": "Keep iconic bridge; Painted Ladies and Ferry Building are viable alternatives but lose the familiar bridge view. Show panorama uncropped."
+    },
+    {
+      "id": "sea-red",
+      "retainSlot": 1,
+      "subject": "Red Sea reef",
+      "decision": "Keep locally accurate coral reef view; underwater alternative is more colourful but also portrait, while coast/sunset no longer foreground reef habitat. Show reef uncropped."
+    }
+  ],
+  "remainingGalleriesToLocalise": 131,
+  "remainingPhotographSlots": 524,
+  "unresolvedSubjectVariety": [
+    {
+      "id": "alexandria",
+      "issue": "Two very similar Montazah lighthouse views"
+    },
+    {
+      "id": "papeete",
+      "issue": "Two town-hall views"
+    },
+    {
+      "id": "country-za",
+      "issue": "Two frames of the R381 road"
+    },
+    {
+      "id": "country-va",
+      "issue": "Multiple garden photographs"
+    }
+  ],
+  "deferredFromOldDraftPR52": [
+    {
+      "id": "mombasa",
+      "issue": "Two Government Square views; check alternatives before release"
+    },
+    {
+      "id": "cape_coast",
+      "issue": "All four candidates show Cape Coast Castle"
+    },
+    {
+      "id": "bogota",
+      "issue": "Three of four candidates concentrate on the cathedral"
+    },
+    {
+      "id": "country-sl",
+      "issue": "Two Kamabai Rock Shelter views and a doubtful open-water landscape selection"
+    }
+  ],
+  "releaseStatus": "Branch code and tests prepared; no new images added, no human sign-off on rendered CSS, no live deployment claimed."
+}

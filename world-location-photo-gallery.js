@@ -12,6 +12,9 @@
 })(typeof window==='object'?window:null,function(){
   'use strict';
   const MAX_PHOTOS=4;
+  // These four first-party photographs are more recognisable at full frame than
+  // a replacement chosen purely to improve the shop-card crop-area statistic.
+  const FULL_FRAME_CARD_IDS=new Set(['oaxaca','portlouis','sanfrancisco','sea-red']);
   const cache=new Map();
   // Preserve deliberately ordered iconic landmark sets and the 8 original
   // visually reviewed London/Busan photographs. Remaining source candidates
@@ -272,6 +275,19 @@
       photos.forEach((photo,i)=>{
         const figure=doc.createElement('figure');figure.className='destination-photo-tile';
         const image=doc.createElement('img');
+        const preserveEntireFrame=card&&Boolean(photo.localCoverUrl)&&FULL_FRAME_CARD_IDS.has(location.id);
+        const backdrop=preserveEntireFrame?doc.createElement('img'):null;
+        if(backdrop){
+          figure.classList.add('full-frame-card-cover');
+          backdrop.className='card-cover-backdrop';
+          backdrop.alt='';
+          backdrop.setAttribute('aria-hidden','true');
+          backdrop.loading='lazy';
+          backdrop.decoding='async';
+          backdrop.referrerPolicy='no-referrer';
+          figure.append(backdrop);
+          image.classList.add('card-cover-full-image');
+        }
         image.loading=card?'lazy':i===0?'eager':'lazy';
         image.decoding='async';image.referrerPolicy='no-referrer';
         const li=doc.createElement('li');
@@ -290,6 +306,7 @@
           active=p;stage=0;
           image.alt=p.description||('Photograph of '+location.name+' ('+(i+1)+')');
           image.src=card?coverSizedUrl(p):p.url;
+          if(backdrop)backdrop.src=image.src;
           updateCredit(p);
         }
         image.onerror=async()=>{

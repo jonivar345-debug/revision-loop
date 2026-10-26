@@ -667,3 +667,22 @@
 .world-photo-credits-dialog p{font-size:.9rem;line-height:1.5;color:var(--muted)}
 .world-photo-credits-list{padding-left:1.25rem;display:grid;gap:.85rem;font-size:.88rem;overflow-wrap:anywhere}
 .world-photo-credits-list a{color:var(--blue);text-decoration:underline}
+
+
+/* World v115: retain the recognisable original photograph on four difficult
+   portrait/panorama shop covers. Blurred background fills the unused card space;
+   the foreground remains sharp, uncropped and locally hosted. No gallery
+   photograph, credit or purchase selection changes. */
+.location-card .destination-card-photo .destination-photo-tile.full-frame-card-cover{
+  position:relative;isolation:isolate;overflow:hidden;background:#173249
+}
+.location-card .destination-card-photo .full-frame-card-cover img.card-cover-backdrop{
+  position:absolute!important;inset:0;z-index:0;width:100%!important;height:150px!important;
+  object-fit:cover!important;filter:blur(12px) brightness(.56) saturate(.85)!important;
+  transform:scale(1.12);pointer-events:none
+}
+.location-card .destination-card-photo .full-frame-card-cover img.card-cover-full-image{
+  position:relative!important;z-index:1;width:100%!important;height:150px!important;
+  object-fit:contain!important;filter:drop-shadow(0 0 5px rgba(0,12,22,.4))!important;
+  transform:none!important
+}
