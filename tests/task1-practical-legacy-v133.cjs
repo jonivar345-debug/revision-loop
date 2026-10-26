@@ -3,8 +3,15 @@ const fs=require('node:fs'), assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const d=deck.cards,old=d.filter(x=>!x.id.startsWith('task1_v133_')),newCards=d.filter(x=>x.id.startsWith('task1_v133_'));
 const history=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v132.json','utf8'));
+const ledger=JSON.parse(fs.readFileSync('editorial/task1-required-practicals-ledger-v133.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v133.json','utf8'));
 assert.equal(deck.deckVersion,133);
+assert.equal(ledger.activities.length,24);
+for(const rp of ledger.activities){
+ assert(rp.cardCountByTaggedOrTopicMatch>0,'Missing representation for '+rp.subject+' RP'+rp.requiredPractical);
+ assert(rp.linkedCardIds.length>0);
+ for(const id of rp.linkedCardIds)assert(d.some(c=>c.id===id),'Practical ledger ID missing '+id);
+}
 assert.equal(old.length,2981);assert.equal(old.filter(c=>c.active!==false).length,2977);
 assert.equal(newCards.length,13);assert.equal(newCards.filter(c=>c.subject==='Physics').length,5);
 assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,8);
