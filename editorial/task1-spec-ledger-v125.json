@@ -1,0 +1,2151 @@
+{
+  "revisionLoopVersion": 125,
+  "asOf": "2026-10-26",
+  "source": "deck.json on v125 branch",
+  "total": 2414,
+  "active": 2410,
+  "untaggedActive": 1216,
+  "definitions": "Counts indicate tagged cards, not verified coverage of every assessable specification bullet. 'Untagged' includes historically retained cards whose subject/topic labels must be considered before claiming a gap.",
+  "sections": [
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.1",
+      "total": 16,
+      "active": 16,
+      "mockEligible": 16,
+      "taught": 16,
+      "topics": [
+        {
+          "name": "Atomic structure",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.2",
+      "total": 22,
+      "active": 22,
+      "mockEligible": 22,
+      "taught": 22,
+      "topics": [
+        {
+          "name": "Amount of substance",
+          "count": 21
+        },
+        {
+          "name": "Practical skills",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.2 RP1",
+      "total": 4,
+      "active": 4,
+      "mockEligible": 4,
+      "taught": 4,
+      "topics": [
+        {
+          "name": "RP1 Titration",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.3",
+      "total": 21,
+      "active": 21,
+      "mockEligible": 21,
+      "taught": 21,
+      "topics": [
+        {
+          "name": "Bonding",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4",
+      "total": 28,
+      "active": 28,
+      "mockEligible": 28,
+      "taught": 28,
+      "topics": [
+        {
+          "name": "Energetics",
+          "count": 27
+        },
+        {
+          "name": "Practical skills",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4 RP2",
+      "total": 3,
+      "active": 3,
+      "mockEligible": 3,
+      "taught": 3,
+      "topics": [
+        {
+          "name": "RP2 Enthalpy",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.5",
+      "total": 16,
+      "active": 16,
+      "mockEligible": 16,
+      "taught": 16,
+      "topics": [
+        {
+          "name": "Kinetics",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.5 RP3",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP3 Rates",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.6",
+      "total": 24,
+      "active": 24,
+      "mockEligible": 24,
+      "taught": 24,
+      "topics": [
+        {
+          "name": "Equilibria",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.7",
+      "total": 16,
+      "active": 16,
+      "mockEligible": 16,
+      "taught": 16,
+      "topics": [
+        {
+          "name": "Redox",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8",
+      "total": 27,
+      "active": 27,
+      "mockEligible": 27,
+      "taught": 27,
+      "topics": [
+        {
+          "name": "Thermodynamics",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.9",
+      "total": 25,
+      "active": 25,
+      "mockEligible": 24,
+      "taught": 25,
+      "topics": [
+        {
+          "name": "Rate equations",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "total": 14,
+      "active": 14,
+      "mockEligible": 5,
+      "taught": 5,
+      "topics": [
+        {
+          "name": "Kp and gas equilibria",
+          "count": 9
+        },
+        {
+          "name": "Kp",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.11",
+      "total": 16,
+      "active": 16,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Electrode potentials",
+          "count": 3
+        },
+        {
+          "name": "Electrochemical cells",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.12",
+      "total": 35,
+      "active": 35,
+      "mockEligible": 32,
+      "taught": 32,
+      "topics": [
+        {
+          "name": "Acids and bases",
+          "count": 32
+        },
+        {
+          "name": "Buffers",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1",
+      "total": 19,
+      "active": 19,
+      "mockEligible": 19,
+      "taught": 19,
+      "topics": [
+        {
+          "name": "Periodicity",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "total": 25,
+      "active": 25,
+      "mockEligible": 25,
+      "taught": 25,
+      "topics": [
+        {
+          "name": "Group 2",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.2 RP4",
+      "total": 1,
+      "active": 1,
+      "mockEligible": 1,
+      "taught": 1,
+      "topics": [
+        {
+          "name": "RP4 Ion tests",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3",
+      "total": 31,
+      "active": 31,
+      "mockEligible": 31,
+      "taught": 31,
+      "topics": [
+        {
+          "name": "Group 7",
+          "count": 31
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3 RP4",
+      "total": 1,
+      "active": 1,
+      "mockEligible": 1,
+      "taught": 1,
+      "topics": [
+        {
+          "name": "RP4 Ion tests",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.4",
+      "total": 22,
+      "active": 22,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Period 3 oxides",
+          "count": 22
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.5",
+      "total": 37,
+      "active": 37,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Transition metals",
+          "count": 10
+        },
+        {
+          "name": "Transition metal complexes",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.6",
+      "total": 18,
+      "active": 18,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Aqueous metal ions",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "total": 21,
+      "active": 21,
+      "mockEligible": 21,
+      "taught": 21,
+      "topics": [
+        {
+          "name": "Organic chemistry",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "total": 15,
+      "active": 15,
+      "mockEligible": 15,
+      "taught": 15,
+      "topics": [
+        {
+          "name": "Alkanes",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "total": 15,
+      "active": 15,
+      "mockEligible": 15,
+      "taught": 15,
+      "topics": [
+        {
+          "name": "Halogenoalkanes",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "total": 17,
+      "active": 17,
+      "mockEligible": 17,
+      "taught": 17,
+      "topics": [
+        {
+          "name": "Alkenes",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.5",
+      "total": 15,
+      "active": 15,
+      "mockEligible": 15,
+      "taught": 15,
+      "topics": [
+        {
+          "name": "Alcohols",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.5 RP5",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP5 Distillation",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "total": 10,
+      "active": 10,
+      "mockEligible": 10,
+      "taught": 10,
+      "topics": [
+        {
+          "name": "Organic analysis",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.6 RP6",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP6 Organic tests",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 6,
+      "taught": 6,
+      "topics": [
+        {
+          "name": "Optical isomerism",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "total": 16,
+      "active": 16,
+      "mockEligible": 16,
+      "taught": 16,
+      "topics": [
+        {
+          "name": "Aldehydes and ketones",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.9",
+      "total": 20,
+      "active": 20,
+      "mockEligible": 20,
+      "taught": 20,
+      "topics": [
+        {
+          "name": "Carboxylic acids",
+          "count": 10
+        },
+        {
+          "name": "Carboxylic acids and derivatives",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "total": 8,
+      "active": 8,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Aromatic chemistry",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.11",
+      "total": 9,
+      "active": 9,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Amines",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.12",
+      "total": 12,
+      "active": 12,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Polymers",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "total": 25,
+      "active": 25,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Amino acids",
+          "count": 11
+        },
+        {
+          "name": "Proteins and DNA",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.14",
+      "total": 9,
+      "active": 9,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Organic synthesis",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "total": 18,
+      "active": 18,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "NMR",
+          "count": 4
+        },
+        {
+          "name": "NMR spectroscopy",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "total": 14,
+      "active": 14,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Chromatography",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "7.2 RP7",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Rate equations",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "7.2 RP8",
+      "total": 5,
+      "active": 5,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Electrochemical cells",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "7.2 RP9",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Acids and bases",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "7.2 RP10",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Organic synthesis",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "7.2 RP11",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Aqueous metal ions",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "7.2 RP12",
+      "total": 5,
+      "active": 5,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Chromatography",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": null,
+      "total": 705,
+      "active": 705,
+      "mockEligible": 660,
+      "taught": 666,
+      "topics": [
+        {
+          "name": "Back titrations",
+          "count": 10
+        },
+        {
+          "name": "Ideal gas equation",
+          "count": 7
+        },
+        {
+          "name": "Titration calculations",
+          "count": 6
+        },
+        {
+          "name": "Empirical formula",
+          "count": 7
+        },
+        {
+          "name": "Arrhenius",
+          "count": 4
+        },
+        {
+          "name": "Kp",
+          "count": 20
+        },
+        {
+          "name": "Weak acids",
+          "count": 2
+        },
+        {
+          "name": "Kw",
+          "count": 2
+        },
+        {
+          "name": "Gibbs free energy",
+          "count": 13
+        },
+        {
+          "name": "Rate equations",
+          "count": 23
+        },
+        {
+          "name": "RP1 Titration",
+          "count": 8
+        },
+        {
+          "name": "RP2 Enthalpy",
+          "count": 18
+        },
+        {
+          "name": "RP3 Rates",
+          "count": 1
+        },
+        {
+          "name": "RP4 Ion tests",
+          "count": 1
+        },
+        {
+          "name": "RP5 Distillation",
+          "count": 1
+        },
+        {
+          "name": "RP6 Organic tests",
+          "count": 1
+        },
+        {
+          "name": "Atomic structure",
+          "count": 15
+        },
+        {
+          "name": "Ionisation energy",
+          "count": 28
+        },
+        {
+          "name": "Amount of substance",
+          "count": 26
+        },
+        {
+          "name": "Bonding",
+          "count": 35
+        },
+        {
+          "name": "Shapes",
+          "count": 44
+        },
+        {
+          "name": "Intermolecular forces",
+          "count": 30
+        },
+        {
+          "name": "Energetics",
+          "count": 31
+        },
+        {
+          "name": "Kinetics",
+          "count": 2
+        },
+        {
+          "name": "Equilibria",
+          "count": 18
+        },
+        {
+          "name": "Redox",
+          "count": 2
+        },
+        {
+          "name": "Periodicity",
+          "count": 2
+        },
+        {
+          "name": "Group 2",
+          "count": 3
+        },
+        {
+          "name": "Group 7",
+          "count": 4
+        },
+        {
+          "name": "Organic chemistry",
+          "count": 9
+        },
+        {
+          "name": "Alkanes",
+          "count": 5
+        },
+        {
+          "name": "Alkenes",
+          "count": 6
+        },
+        {
+          "name": "Halogenoalkanes",
+          "count": 7
+        },
+        {
+          "name": "Alcohols",
+          "count": 7
+        },
+        {
+          "name": "Organic analysis",
+          "count": 2
+        },
+        {
+          "name": "Optical isomerism",
+          "count": 5
+        },
+        {
+          "name": "Aldehydes and ketones",
+          "count": 11
+        },
+        {
+          "name": "Carboxylic acids",
+          "count": 7
+        },
+        {
+          "name": "Esters",
+          "count": 25
+        },
+        {
+          "name": "Acyl chlorides",
+          "count": 34
+        },
+        {
+          "name": "Born–Haber cycles",
+          "count": 42
+        },
+        {
+          "name": "Entropy",
+          "count": 4
+        },
+        {
+          "name": "Acids and bases",
+          "count": 8
+        },
+        {
+          "name": "Practical skills",
+          "count": 3
+        },
+        {
+          "name": "Electrode potentials",
+          "count": 3
+        },
+        {
+          "name": "Buffers",
+          "count": 4
+        },
+        {
+          "name": "Period 3",
+          "count": 1
+        },
+        {
+          "name": "Transition metals",
+          "count": 7
+        },
+        {
+          "name": "Aqueous ions",
+          "count": 1
+        },
+        {
+          "name": "Aromatic chemistry",
+          "count": 5
+        },
+        {
+          "name": "Amines",
+          "count": 2
+        },
+        {
+          "name": "Polymers",
+          "count": 3
+        },
+        {
+          "name": "Amino acids",
+          "count": 2
+        },
+        {
+          "name": "DNA",
+          "count": 2
+        },
+        {
+          "name": "Organic synthesis",
+          "count": 1
+        },
+        {
+          "name": "NMR",
+          "count": 5
+        },
+        {
+          "name": "Chromatography",
+          "count": 3
+        },
+        {
+          "name": "Mass spectrometry",
+          "count": 26
+        },
+        {
+          "name": "Crystal structures",
+          "count": 22
+        },
+        {
+          "name": "Bond polarity",
+          "count": 17
+        },
+        {
+          "name": "Calorimetry",
+          "count": 27
+        },
+        {
+          "name": "Hess's law",
+          "count": 21
+        },
+        {
+          "name": "Bond enthalpies",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.2",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "Proof",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.3",
+      "total": 9,
+      "active": 9,
+      "mockEligible": 8,
+      "taught": 8,
+      "topics": [
+        {
+          "name": "Transformations",
+          "count": 3
+        },
+        {
+          "name": "Functions",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.6",
+      "total": 3,
+      "active": 3,
+      "mockEligible": 3,
+      "taught": 3,
+      "topics": [
+        {
+          "name": "Trigonometry",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.8",
+      "total": 4,
+      "active": 4,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "Differentiation",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": "3.9",
+      "total": 1,
+      "active": 1,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Integration",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "specRef": null,
+      "total": 107,
+      "active": 103,
+      "mockEligible": 58,
+      "taught": 87,
+      "topics": [
+        {
+          "name": "Trigonometry",
+          "count": 13
+        },
+        {
+          "name": "Transformations",
+          "count": 4
+        },
+        {
+          "name": "Proof",
+          "count": 3
+        },
+        {
+          "name": "Algebra",
+          "count": 4
+        },
+        {
+          "name": "Quadratics",
+          "count": 3
+        },
+        {
+          "name": "Functions",
+          "count": 6
+        },
+        {
+          "name": "Coordinate geometry",
+          "count": 5
+        },
+        {
+          "name": "Sequences",
+          "count": 6
+        },
+        {
+          "name": "Binomial expansion",
+          "count": 1
+        },
+        {
+          "name": "Logs",
+          "count": 3
+        },
+        {
+          "name": "Exponentials and logs",
+          "count": 1
+        },
+        {
+          "name": "Differentiation",
+          "count": 12
+        },
+        {
+          "name": "Integration",
+          "count": 7
+        },
+        {
+          "name": "Vectors",
+          "count": 3
+        },
+        {
+          "name": "Algebra and functions",
+          "count": 4
+        },
+        {
+          "name": "Differential equations",
+          "count": 1
+        },
+        {
+          "name": "Numerical methods",
+          "count": 2
+        },
+        {
+          "name": "Statistics",
+          "count": 1
+        },
+        {
+          "name": "Statistical distributions",
+          "count": 3
+        },
+        {
+          "name": "Hypothesis testing",
+          "count": 3
+        },
+        {
+          "name": "Mechanics",
+          "count": 2
+        },
+        {
+          "name": "Forces",
+          "count": 1
+        },
+        {
+          "name": "Moments",
+          "count": 2
+        },
+        {
+          "name": "Kinematics",
+          "count": 1
+        },
+        {
+          "name": "Statistical sampling",
+          "count": 4
+        },
+        {
+          "name": "Data presentation and interpretation",
+          "count": 4
+        },
+        {
+          "name": "Probability",
+          "count": 4
+        },
+        {
+          "name": "Quantities and units in mechanics",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "total": 11,
+      "active": 11,
+      "mockEligible": 11,
+      "taught": 11,
+      "topics": [
+        {
+          "name": "Measurements",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "total": 14,
+      "active": 14,
+      "mockEligible": 14,
+      "taught": 14,
+      "topics": [
+        {
+          "name": "Practical skills",
+          "count": 5
+        },
+        {
+          "name": "Measurements",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2–3.1.3",
+      "total": 11,
+      "active": 11,
+      "mockEligible": 11,
+      "taught": 11,
+      "topics": [
+        {
+          "name": "Measurements",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.1",
+      "total": 22,
+      "active": 22,
+      "mockEligible": 22,
+      "taught": 22,
+      "topics": [
+        {
+          "name": "Particles",
+          "count": 22
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2",
+      "total": 5,
+      "active": 5,
+      "mockEligible": 5,
+      "taught": 5,
+      "topics": [
+        {
+          "name": "Photoelectric effect",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.1",
+      "total": 34,
+      "active": 34,
+      "mockEligible": 34,
+      "taught": 34,
+      "topics": [
+        {
+          "name": "Waves",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.1 RP1",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP1 Stationary waves",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.2",
+      "total": 21,
+      "active": 21,
+      "mockEligible": 21,
+      "taught": 21,
+      "topics": [
+        {
+          "name": "Interference",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.2 RP2",
+      "total": 3,
+      "active": 3,
+      "mockEligible": 3,
+      "taught": 3,
+      "topics": [
+        {
+          "name": "RP2 Interference",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.2.3",
+      "total": 10,
+      "active": 10,
+      "mockEligible": 10,
+      "taught": 10,
+      "topics": [
+        {
+          "name": "Refraction",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1",
+      "total": 27,
+      "active": 27,
+      "mockEligible": 27,
+      "taught": 27,
+      "topics": [
+        {
+          "name": "Mechanics",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1 RP3",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP3 Free fall",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "total": 8,
+      "active": 8,
+      "mockEligible": 8,
+      "taught": 8,
+      "topics": [
+        {
+          "name": "Mechanics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 6,
+      "taught": 6,
+      "topics": [
+        {
+          "name": "Moments",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "total": 10,
+      "active": 10,
+      "mockEligible": 10,
+      "taught": 10,
+      "topics": [
+        {
+          "name": "Motion graphs",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "total": 7,
+      "active": 7,
+      "mockEligible": 7,
+      "taught": 7,
+      "topics": [
+        {
+          "name": "Projectile motion",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 6,
+      "taught": 6,
+      "topics": [
+        {
+          "name": "Momentum",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.7",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 6,
+      "taught": 6,
+      "topics": [
+        {
+          "name": "Energy and power",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2",
+      "total": 17,
+      "active": 17,
+      "mockEligible": 17,
+      "taught": 17,
+      "topics": [
+        {
+          "name": "Materials",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2 RP4",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP4 Young modulus",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1",
+      "total": 40,
+      "active": 40,
+      "mockEligible": 40,
+      "taught": 40,
+      "topics": [
+        {
+          "name": "Electricity",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1 RP5",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP5 Resistivity",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.5.1 RP6",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP6 EMF/internal resistance",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1",
+      "total": 7,
+      "active": 7,
+      "mockEligible": 0,
+      "taught": 7,
+      "topics": [
+        {
+          "name": "Simple harmonic motion",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1.1",
+      "total": 4,
+      "active": 4,
+      "mockEligible": 4,
+      "taught": 4,
+      "topics": [
+        {
+          "name": "Circular motion",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.1.2",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 6,
+      "taught": 6,
+      "topics": [
+        {
+          "name": "Simple harmonic motion",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.6.2",
+      "total": 19,
+      "active": 19,
+      "mockEligible": 8,
+      "taught": 19,
+      "topics": [
+        {
+          "name": "Thermal physics",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.1",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Fields",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.2",
+      "total": 24,
+      "active": 24,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Gravitational fields",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.3",
+      "total": 17,
+      "active": 17,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Electric fields",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.4",
+      "total": 17,
+      "active": 17,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Capacitance",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.7.5",
+      "total": 29,
+      "active": 29,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Magnetic fields",
+          "count": 15
+        },
+        {
+          "name": "Electromagnetic induction",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.8",
+      "total": 7,
+      "active": 7,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Nuclear physics",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.8.1",
+      "total": 28,
+      "active": 28,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Nuclear physics",
+          "count": 28
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.10",
+      "total": 8,
+      "active": 8,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Medical physics: imaging",
+          "count": 5
+        },
+        {
+          "name": "Medical physics: MRI",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP1",
+      "total": 3,
+      "active": 3,
+      "mockEligible": 3,
+      "taught": 3,
+      "topics": [
+        {
+          "name": "RP1 Stationary waves",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP2",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP2 Interference",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP3",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP3 Free fall",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP4",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP4 Young modulus",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP5",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP5 Resistivity",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP6",
+      "total": 2,
+      "active": 2,
+      "mockEligible": 2,
+      "taught": 2,
+      "topics": [
+        {
+          "name": "RP6 EMF/internal resistance",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP7",
+      "total": 5,
+      "active": 5,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Simple harmonic motion",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP8",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Thermal physics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP9",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Capacitance",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP10",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Magnetic fields",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP11",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Electromagnetic induction",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": "7.2 RP12",
+      "total": 6,
+      "active": 6,
+      "mockEligible": 0,
+      "taught": 0,
+      "topics": [
+        {
+          "name": "Nuclear physics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "specRef": null,
+      "total": 408,
+      "active": 408,
+      "mockEligible": 311,
+      "taught": 334,
+      "topics": [
+        {
+          "name": "Resolving vectors",
+          "count": 6
+        },
+        {
+          "name": "Forces on a slope",
+          "count": 9
+        },
+        {
+          "name": "Couples",
+          "count": 5
+        },
+        {
+          "name": "Motion graphs",
+          "count": 36
+        },
+        {
+          "name": "Moments",
+          "count": 4
+        },
+        {
+          "name": "Equilibrium",
+          "count": 2
+        },
+        {
+          "name": "Internal resistance",
+          "count": 3
+        },
+        {
+          "name": "Photoelectric effect",
+          "count": 20
+        },
+        {
+          "name": "Energy levels",
+          "count": 5
+        },
+        {
+          "name": "Particle physics",
+          "count": 1
+        },
+        {
+          "name": "Kinetic theory",
+          "count": 4
+        },
+        {
+          "name": "Gas laws",
+          "count": 1
+        },
+        {
+          "name": "RP1 Stationary waves",
+          "count": 1
+        },
+        {
+          "name": "RP2 Interference",
+          "count": 1
+        },
+        {
+          "name": "RP3 Free fall",
+          "count": 4
+        },
+        {
+          "name": "RP4 Young modulus",
+          "count": 3
+        },
+        {
+          "name": "RP5 Resistivity",
+          "count": 1
+        },
+        {
+          "name": "RP6 EMF/internal resistance",
+          "count": 1
+        },
+        {
+          "name": "Circular motion insurance",
+          "count": 2
+        },
+        {
+          "name": "SHM insurance",
+          "count": 2
+        },
+        {
+          "name": "Measurements",
+          "count": 23
+        },
+        {
+          "name": "Particles",
+          "count": 13
+        },
+        {
+          "name": "Waves",
+          "count": 5
+        },
+        {
+          "name": "Stationary waves",
+          "count": 3
+        },
+        {
+          "name": "Interference",
+          "count": 2
+        },
+        {
+          "name": "Diffraction grating",
+          "count": 1
+        },
+        {
+          "name": "Refraction",
+          "count": 2
+        },
+        {
+          "name": "Total internal reflection",
+          "count": 2
+        },
+        {
+          "name": "Diffraction",
+          "count": 1
+        },
+        {
+          "name": "Vectors",
+          "count": 1
+        },
+        {
+          "name": "Kinematics",
+          "count": 3
+        },
+        {
+          "name": "Projectiles",
+          "count": 11
+        },
+        {
+          "name": "Newton's laws",
+          "count": 11
+        },
+        {
+          "name": "Momentum",
+          "count": 7
+        },
+        {
+          "name": "Energy",
+          "count": 8
+        },
+        {
+          "name": "Power",
+          "count": 2
+        },
+        {
+          "name": "Materials",
+          "count": 14
+        },
+        {
+          "name": "Electricity",
+          "count": 10
+        },
+        {
+          "name": "Potential dividers",
+          "count": 1
+        },
+        {
+          "name": "Sensors",
+          "count": 2
+        },
+        {
+          "name": "I–V characteristics",
+          "count": 3
+        },
+        {
+          "name": "Practical skills",
+          "count": 3
+        },
+        {
+          "name": "Circular motion",
+          "count": 2
+        },
+        {
+          "name": "Simple harmonic motion",
+          "count": 4
+        },
+        {
+          "name": "Resonance",
+          "count": 2
+        },
+        {
+          "name": "Thermal physics",
+          "count": 3
+        },
+        {
+          "name": "Ideal gases",
+          "count": 3
+        },
+        {
+          "name": "Gravitational fields",
+          "count": 6
+        },
+        {
+          "name": "Electric fields",
+          "count": 5
+        },
+        {
+          "name": "Capacitance",
+          "count": 4
+        },
+        {
+          "name": "Magnetic fields",
+          "count": 4
+        },
+        {
+          "name": "Electromagnetic induction",
+          "count": 6
+        },
+        {
+          "name": "Radioactivity",
+          "count": 4
+        },
+        {
+          "name": "Nuclear physics",
+          "count": 5
+        },
+        {
+          "name": "Medical physics: eye",
+          "count": 6
+        },
+        {
+          "name": "Medical physics: ear",
+          "count": 5
+        },
+        {
+          "name": "Medical physics: ECG",
+          "count": 2
+        },
+        {
+          "name": "Medical physics: ultrasound",
+          "count": 6
+        },
+        {
+          "name": "Medical physics: endoscopy",
+          "count": 2
+        },
+        {
+          "name": "Medical physics: MRI",
+          "count": 4
+        },
+        {
+          "name": "Medical physics: X-rays",
+          "count": 6
+        },
+        {
+          "name": "Medical physics: CT",
+          "count": 1
+        },
+        {
+          "name": "Medical physics: radionuclide imaging",
+          "count": 5
+        },
+        {
+          "name": "Medical physics: therapy",
+          "count": 2
+        },
+        {
+          "name": "Medical physics: imaging",
+          "count": 1
+        },
+        {
+          "name": "Free-body diagrams",
+          "count": 6
+        },
+        {
+          "name": "Particle classifications",
+          "count": 8
+        },
+        {
+          "name": "Particle interactions",
+          "count": 9
+        },
+        {
+          "name": "Conservation laws",
+          "count": 1
+        },
+        {
+          "name": "Pions and kaons",
+          "count": 10
+        },
+        {
+          "name": "Weak interactions",
+          "count": 9
+        },
+        {
+          "name": "Strange particles",
+          "count": 3
+        },
+        {
+          "name": "Line spectra",
+          "count": 11
+        },
+        {
+          "name": "Wave-particle duality",
+          "count": 8
+        },
+        {
+          "name": "Particle diagrams",
+          "count": 9
+        },
+        {
+          "name": "Fluorescent tubes",
+          "count": 4
+        },
+        {
+          "name": "Graph interpretation",
+          "count": 3
+        }
+      ]
+    }
+  ]
+}

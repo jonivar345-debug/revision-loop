@@ -5,10 +5,10 @@ const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const source=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const v124=cards.filter(c=>c.id.startsWith('task1_v124_'));
-const old=cards.filter(c=>!c.id.startsWith('task1_v124_'));
-assert.equal(deck.deckVersion,124);
-assert.equal(cards.length,2251);
-assert.equal(cards.filter(c=>c.active!==false).length,2247);
+const old=cards.filter(c=>!c.id.startsWith('task1_v124_')&&!c.id.startsWith('task1_v125_'));
+assert(deck.deckVersion>=124);
+assert(cards.length>=2251);
+assert(cards.filter(c=>c.active!==false).length>=2247);
 assert.equal(old.length,1826,'All previously live cards retained');
 assert.equal(v124.length,425);
 for(const [subject,n] of Object.entries({Physics:152,Chemistry:264,Maths:9})){
