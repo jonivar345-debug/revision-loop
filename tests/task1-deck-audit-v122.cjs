@@ -6,7 +6,7 @@ const source=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const added=cards.filter(c=>c.id.startsWith('task1_'));
 const existing=cards.filter(c=>!c.id.startsWith('task1_'));
-const key=x=>String(x).toLowerCase().replace(/[^a-z0-9]/g,'');
+const key=x=>String(x).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 const visualNames=new Set([...source.matchAll(/if\(t==='([^']+)'\)/g)].map(x=>x[1]));
 const ids=new Set();
 assert.equal(existing.length,1220,'All 1,220 pre-existing IDs should remain');
