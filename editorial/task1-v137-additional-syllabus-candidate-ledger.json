@@ -1,0 +1,2881 @@
+{
+  "schemaVersion": 1,
+  "parentRelease": 136,
+  "preparedOn": "2026-10-26",
+  "scope": "Second prioritised sampling of atomic AQA outcomes across Physics particles/electricity, Chemistry organic, Maths Appendix B; NOT the entire specification and NOT verified answer coverage",
+  "warning": "This is a SEARCH LEDGER, not a coverage certification. Regex front-side candidates need actual answer checks, and zero regex matches may be false negatives. Individual section labels should also be validated in a deeper rubric audit.",
+  "sourceKeys": {
+    "P32": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+    "P35": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "C33": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "MAPP": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities"
+  },
+  "totals": {
+    "number": 142,
+    "bySubject": {
+      "Physics": 68,
+      "Chemistry": 50,
+      "Maths": 24
+    },
+    "candidates": 109,
+    "needsSemantic": 33
+  },
+  "rows": [
+    {
+      "id": "B001",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Recall proton, neutron and electron relative charges",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "proton.*neutron.*electron|charges.*(proton|neutron)"
+    },
+    {
+      "id": "B002",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Recall the order of magnitude of proton and electron masses",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "mass.*(proton|electron)|relative masses"
+    },
+    {
+      "id": "B003",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Define specific charge",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "phy_specific_charge"
+      ],
+      "candidateFronts": [
+        "What is specific charge?"
+      ],
+      "searchPattern": "specific charge"
+    },
+    {
+      "id": "B004",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Distinguish nucleon number from proton number",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 10,
+      "candidateCardIds": [
+        "task1_full_156",
+        "task1_full_158",
+        "task1_full_159",
+        "task1_v124_bulk_phy_127",
+        "task1_v124_cloze_002"
+      ],
+      "candidateFronts": [
+        "How does nuclear radius scale with nucleon number A?",
+        "What does electron capture do to proton number?",
+        "What does beta-plus decay do to proton number?",
+        "What is the nuclear radius relationship with nucleon number?",
+        "Fill the gap: the proton number increases by one in ____ decay."
+      ],
+      "searchPattern": "nucleon number|proton number"
+    },
+    {
+      "id": "B005",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Use nuclide notation for number of neutrons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_nuclide",
+        "task1_phy_163"
+      ],
+      "candidateFronts": [
+        "In nuclide notation, what do A and Z mean?",
+        "Why is a radionuclide tracer useful in imaging?"
+      ],
+      "searchPattern": "nuclide|number of neutrons"
+    },
+    {
+      "id": "B006",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Explain meaning of isotopes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "phy_med_tracer"
+      ],
+      "candidateFronts": [
+        "What properties make a radioisotope suitable as a medical tracer?"
+      ],
+      "searchPattern": "isotope"
+    },
+    {
+      "id": "B007",
+      "subject": "Physics",
+      "specRef": "3.2.1.2",
+      "requirement": "State the attractive and repulsive ranges of the strong nuclear force",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "strong nuclear force.*range|nuclear force.*repul|femtometre"
+    },
+    {
+      "id": "B008",
+      "subject": "Physics",
+      "specRef": "3.2.1.2",
+      "requirement": "Describe changes in nucleon and proton number during alpha decay",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "alpha decay.*(proton|nucleon|number)"
+    },
+    {
+      "id": "B009",
+      "subject": "Physics",
+      "specRef": "3.2.1.2",
+      "requirement": "Describe changes in nucleon and proton number during beta minus decay",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "phy_pandr_v29_beta_minus_equation",
+        "phy_pandr_v29_beta_minus_numbers",
+        "phy_pandr_v29_beta_minus_change",
+        "phy_pandr_v29_beta_minus_antinu",
+        "phy_pandr_v29_sketch_beta_minus"
+      ],
+      "candidateFronts": [
+        "Write the beta-minus decay particle equation.",
+        "What happens to Z and A in beta-minus nuclear decay?",
+        "What quark change occurs in beta-minus decay?",
+        "Why is an electron antineutrino emitted in beta-minus decay?",
+        "Draw a quark-level beta-minus interaction diagram."
+      ],
+      "searchPattern": "beta.minus|beta.*proton number|β. decay"
+    },
+    {
+      "id": "B010",
+      "subject": "Physics",
+      "specRef": "3.2.1.2",
+      "requirement": "Explain why an antineutrino accompanies beta minus decay",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_pandr_v29_beta_minus_antinu",
+        "task1_v124_bulk_phy_027",
+        "task1_v130_017"
+      ],
+      "candidateFronts": [
+        "Why is an electron antineutrino emitted in beta-minus decay?",
+        "What is the role of a neutrino in beta-minus decay?",
+        "What are the electron-lepton numbers of an electron and its antineutrino?"
+      ],
+      "searchPattern": "antineutrino|neutrino.*beta"
+    },
+    {
+      "id": "B011",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "requirement": "Relate antiparticle mass and charge to its corresponding particle",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "antiparticle.*(mass|charge)|positron.*charge"
+    },
+    {
+      "id": "B012",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "requirement": "Define annihilation using conversion of rest energy into photons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_annihilation",
+        "phy_pandr_v29_sketch_annihilation",
+        "task1_v136_077"
+      ],
+      "candidateFronts": [
+        "What happens in particle–antiparticle annihilation?",
+        "Sketch electron–positron annihilation at negligible initial KE.",
+        "What must happen to both momentum and energy in annihilation?"
+      ],
+      "searchPattern": "annihilat"
+    },
+    {
+      "id": "B013",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "requirement": "Explain minimum energy conditions for electron-positron pair creation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_pair_production",
+        "phy_pandr_v29_sketch_pair",
+        "task1_v136_035"
+      ],
+      "candidateFronts": [
+        "What is needed for pair production?",
+        "Sketch electron–positron pair production near a nucleus.",
+        "What two conservation laws must hold in pair production?"
+      ],
+      "searchPattern": "pair production"
+    },
+    {
+      "id": "B014",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "requirement": "Calculate photon energy from frequency",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_med_xray_max",
+        "phy_med_xray_intensity",
+        "phy_pandr_v29_emission_photon"
+      ],
+      "candidateFronts": [
+        "How is maximum X-ray photon energy related to accelerating voltage?",
+        "How can X-ray beam intensity be increased without changing maximum photon energy?",
+        "What is the photon energy when an excited electron falls to a lower level?"
+      ],
+      "searchPattern": "photon energy|E.?=.?hf"
+    },
+    {
+      "id": "B015",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "requirement": "Name the four fundamental interactions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "phy_pandr_v29_four_forces"
+      ],
+      "candidateFronts": [
+        "Name the four fundamental interactions."
+      ],
+      "searchPattern": "four.*(interaction|force)|fundamental.*interactions"
+    },
+    {
+      "id": "B016",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "requirement": "Identify virtual photons as exchange particles of electromagnetic interaction",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v130_014"
+      ],
+      "candidateFronts": [
+        "Which exchange particle represents the electromagnetic interaction?"
+      ],
+      "searchPattern": "virtual photon|exchange particle.*electromagnetic"
+    },
+    {
+      "id": "B017",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "requirement": "Identify W bosons as mediators of the weak interaction",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "W.?boson|W.?[+−].*exchange|weak.*exchange"
+    },
+    {
+      "id": "B018",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "requirement": "Recognise beta and electron-capture interactions as weak",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 11,
+      "candidateCardIds": [
+        "phy_quarks_001",
+        "phy_pandr_v29_weak_bosons",
+        "phy_pandr_v29_electron_capture",
+        "phy_pandr_v29_strangeness_weak",
+        "phy_pandr_v29_sketch_capture"
+      ],
+      "candidateFronts": [
+        "Can strangeness change in a weak interaction?",
+        "What exchange particles mediate the weak interaction?",
+        "Write the particle equation for electron capture.",
+        "What changes in strangeness are possible for a weak interaction?",
+        "Draw the electron-capture weak interaction at quark level."
+      ],
+      "searchPattern": "weak interaction|electron capture"
+    },
+    {
+      "id": "B019",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "Distinguish baryons, mesons and leptons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_baryon_meson",
+        "task1_v124_bulk_phy_021"
+      ],
+      "candidateFronts": [
+        "How do baryons and mesons differ?",
+        "What is the baryon number of a meson?"
+      ],
+      "searchPattern": "baryon.*meson|lepton.*baryon|classify.*particle"
+    },
+    {
+      "id": "B020",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "Recall baryon numbers for baryons and antibaryons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v124_bulk_phy_021",
+        "task1_v124_bulk_phy_022"
+      ],
+      "candidateFronts": [
+        "What is the baryon number of a meson?",
+        "What is the baryon number of an antibaryon?"
+      ],
+      "searchPattern": "baryon number"
+    },
+    {
+      "id": "B021",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "Distinguish electron and muon lepton-number conservation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v124_bulk_phy_026",
+        "task1_v130_017"
+      ],
+      "candidateFronts": [
+        "What is the lepton number of an antilepton?",
+        "What are the electron-lepton numbers of an electron and its antineutrino?"
+      ],
+      "searchPattern": "lepton number|muon lepton"
+    },
+    {
+      "id": "B022",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "Explain why strange particles are created in pairs by strong interactions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "phy_pandr_v29_strong_pairs"
+      ],
+      "candidateFronts": [
+        "Why are strange particles produced in associated pairs by strong interactions?"
+      ],
+      "searchPattern": "strange particle.*pair|strangeness.*conserv"
+    },
+    {
+      "id": "B023",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "State what interactions can change strangeness",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_quarks_001",
+        "phy_pandr_v29_strangeness_weak"
+      ],
+      "candidateFronts": [
+        "Can strangeness change in a weak interaction?",
+        "What changes in strangeness are possible for a weak interaction?"
+      ],
+      "searchPattern": "strangeness.*weak|strangeness.*strong"
+    },
+    {
+      "id": "B024",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "requirement": "Recall charges of up, down and strange quarks",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v124_bulk_phy_017",
+        "task1_v124_bulk_phy_018"
+      ],
+      "candidateFronts": [
+        "What is the charge of an up quark?",
+        "What is the charge of a down quark?"
+      ],
+      "searchPattern": "quark charge|up quark|down quark"
+    },
+    {
+      "id": "B025",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "requirement": "Recall proton and neutron quark compositions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_proton_quarks",
+        "phy_neutron_quarks",
+        "task1_v124_bulk_phy_019",
+        "task1_v124_bulk_phy_020"
+      ],
+      "candidateFronts": [
+        "What is the quark composition of a proton?",
+        "What is the quark composition of a neutron?",
+        "Which quarks form a proton?",
+        "Which quarks form a neutron?"
+      ],
+      "searchPattern": "quark.*(proton|neutron)|uud|udd"
+    },
+    {
+      "id": "B026",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "requirement": "Distinguish quark-antiquark mesons from three-quark baryons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_phy_032",
+        "task1_phy_033"
+      ],
+      "candidateFronts": [
+        "Complete: a meson is a quark plus an _____.",
+        "Complete: a baryon contains _____ quarks."
+      ],
+      "searchPattern": "meson.*(quark|antiquark)|baryon.*quark"
+    },
+    {
+      "id": "B027",
+      "subject": "Physics",
+      "specRef": "3.2.1.7",
+      "requirement": "Explain neutron decay as transformation of down into up quark",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "neutron.*(quark|decay)|down.*up.*quark"
+    },
+    {
+      "id": "B028",
+      "subject": "Physics",
+      "specRef": "3.2.1.7",
+      "requirement": "Apply conservation of charge in a particle reaction",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "particle.*charge.*conserv|charge.*particle interaction"
+    },
+    {
+      "id": "B029",
+      "subject": "Physics",
+      "specRef": "3.2.1.7",
+      "requirement": "Apply conservation of baryon and lepton number",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "baryon.*conserv|lepton.*conserv"
+    },
+    {
+      "id": "B030",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Define work function for electron emission",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_pandr_v29_work_function",
+        "phy_pandr_v29_threshold_eq",
+        "phy_pandr_v29_threshold_wavelength"
+      ],
+      "candidateFronts": [
+        "Define the work function φ.",
+        "What equation relates threshold frequency and work function?",
+        "How do you calculate threshold wavelength from the work function?"
+      ],
+      "searchPattern": "work function"
+    },
+    {
+      "id": "B031",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Define threshold frequency and its relation to work function",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "phy_photoelectric_002",
+        "v33_card_physics_photoelectric_effect_19",
+        "phy_pandr_v29_threshold_frequency",
+        "phy_pandr_v29_threshold_eq",
+        "phy_spectra_photo_v32_below_threshold_graph"
+      ],
+      "candidateFronts": [
+        "Why can intense light below the threshold frequency still emit no photoelectrons?",
+        "Why does extra light intensity not cause emission below threshold frequency?",
+        "Define the threshold frequency f₀.",
+        "What equation relates threshold frequency and work function?",
+        "On a photoelectric-effect graph of maximum photoelectron kinetic energy against light frequency, what happens below the threshold frequency?"
+      ],
+      "searchPattern": "threshold frequency"
+    },
+    {
+      "id": "B032",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Explain maximum photoelectron kinetic energy equation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_pandr_v29_photo_eq",
+        "phy_spectra_photo_v32_below_threshold_graph",
+        "task1_v130_018"
+      ],
+      "candidateFronts": [
+        "Write Einstein's photoelectric equation.",
+        "On a photoelectric-effect graph of maximum photoelectron kinetic energy against light frequency, what happens below the threshold frequency?",
+        "Is maximum photoelectron kinetic energy linear with incident wavelength?"
+      ],
+      "searchPattern": "photoelectric equation|photoelectron.*kinetic energy"
+    },
+    {
+      "id": "B033",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Explain effect of light intensity above threshold on photoelectron number",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_phy_030"
+      ],
+      "candidateFronts": [
+        "Why does increasing light intensity not raise photoelectron maximum energy?"
+      ],
+      "searchPattern": "intensit.*(photoelectron|electron emission)|photoelectron.*intensit"
+    },
+    {
+      "id": "B034",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Explain effect of frequency above threshold on maximum photoelectron energy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_photoelectric_002",
+        "phy_pandr_v29_frequency_fixed_i"
+      ],
+      "candidateFronts": [
+        "Why can intense light below the threshold frequency still emit no photoelectrons?",
+        "How does increasing frequency above threshold affect photoelectrons?"
+      ],
+      "searchPattern": "frequency.*photoelectron|frequency.*kinetic energy"
+    },
+    {
+      "id": "B035",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Define stopping potential in photoelectric effect",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "v33_card_physics_photoelectric_effect_20",
+        "phy_pandr_v29_stopping_eq",
+        "phy_pandr_v29_stopping_gradient",
+        "phy_spectra_photo_v32_intensity_stopping",
+        "task1_v124_bulk_phy_028"
+      ],
+      "candidateFronts": [
+        "What does the stopping potential measure in the photoelectric effect?",
+        "How is stopping potential linked to maximum photoelectron energy?",
+        "For stopping potential against frequency, what is the gradient?",
+        "What happens to stopping potential if light intensity doubles at fixed frequency?",
+        "What is the stopping potential of photoelectrons?"
+      ],
+      "searchPattern": "stopping potential"
+    },
+    {
+      "id": "B036",
+      "subject": "Physics",
+      "specRef": "3.2.2.2",
+      "requirement": "Distinguish atomic excitation from ionisation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "excit.*ionis|ionis.*excit"
+    },
+    {
+      "id": "B037",
+      "subject": "Physics",
+      "specRef": "3.2.2.2",
+      "requirement": "Convert electronvolts to joules",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_measure_recap_20261024_ev_j",
+        "phy_pandr_v29_ev_definition",
+        "task1_v124_bulk_phy_005"
+      ],
+      "candidateFronts": [
+        "Convert 1 electronvolt (eV) into joules.",
+        "What is one electronvolt (eV)?",
+        "How many joules is one electronvolt?"
+      ],
+      "searchPattern": "electronvolt|eV.*joule"
+    },
+    {
+      "id": "B038",
+      "subject": "Physics",
+      "specRef": "3.2.2.3",
+      "requirement": "Explain why isolated atoms produce line spectra",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_pandr_v29_discrete_lines",
+        "task1_v130_020"
+      ],
+      "candidateFronts": [
+        "Why do atoms produce emission line spectra?",
+        "Why do atoms produce discrete line spectra?"
+      ],
+      "searchPattern": "line spectra|emission spectrum"
+    },
+    {
+      "id": "B039",
+      "subject": "Physics",
+      "specRef": "3.2.2.3",
+      "requirement": "Relate energy-level transitions to photon frequency",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "energy levels.*photon|transition.*photon"
+    },
+    {
+      "id": "B040",
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "requirement": "State the de Broglie wavelength relationship",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_debroglie",
+        "phy_pandr_v29_momentum_relation",
+        "task1_v130_021"
+      ],
+      "candidateFronts": [
+        "What is the de Broglie wavelength equation?",
+        "How does doubling particle momentum affect de Broglie wavelength?",
+        "What happens to de Broglie wavelength if a particle's momentum doubles?"
+      ],
+      "searchPattern": "de broglie"
+    },
+    {
+      "id": "B041",
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "requirement": "Explain particle momentum effects on diffraction",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_pandr_v29_rings_acceleration",
+        "phy_electron_diffraction_exam_q9a",
+        "phy_electron_diffraction_exam_q9c",
+        "task1_v130_022"
+      ],
+      "candidateFronts": [
+        "Why do electron diffraction rings shrink as accelerating voltage rises?",
+        "Electron diffraction [2 marks]: How does it support wave–particle duality?",
+        "Electron diffraction [1 mark]: Why can p = mv fail for very fast electrons?",
+        "How does increasing accelerating voltage change electron diffraction ring size?"
+      ],
+      "searchPattern": "electron diffraction|momentum.*diffraction"
+    },
+    {
+      "id": "B042",
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "requirement": "Use wave-particle duality evidence from both photons and electrons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_pandr_v29_duality",
+        "phy_electron_diffraction_exam_q9a"
+      ],
+      "candidateFronts": [
+        "What is wave–particle duality?",
+        "Electron diffraction [2 marks]: How does it support wave–particle duality?"
+      ],
+      "searchPattern": "wave.particle|particle.*wave.*nature"
+    },
+    {
+      "id": "B043",
+      "subject": "Physics",
+      "specRef": "3.5.1.1",
+      "requirement": "Define current as rate of charge flow",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_full_132"
+      ],
+      "candidateFronts": [
+        "What happens to charging current as a capacitor approaches full charge?"
+      ],
+      "searchPattern": "current.*(rate|charge)|I.?=.?Q.?/t"
+    },
+    {
+      "id": "B044",
+      "subject": "Physics",
+      "specRef": "3.5.1.1",
+      "requirement": "Define potential difference as energy transferred per unit charge",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v123_phy_016",
+        "task1_v131_032"
+      ],
+      "candidateFronts": [
+        "What happens to the capacitor's p.d. during discharge?",
+        "What does the area under a p.d.–charge graph represent for a capacitor?"
+      ],
+      "searchPattern": "potential difference.*charge|p.d.*charge"
+    },
+    {
+      "id": "B045",
+      "subject": "Physics",
+      "specRef": "3.5.1.1",
+      "requirement": "Define electrical resistance",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "define resistance|R.?=.?V.?/I"
+    },
+    {
+      "id": "B046",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "requirement": "State conditions under which Ohm's law applies",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_phy_095"
+      ],
+      "candidateFronts": [
+        "What condition is required for Ohm's law?"
+      ],
+      "searchPattern": "ohm.*law|constant temperature.*resistance"
+    },
+    {
+      "id": "B047",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "requirement": "Explain current-voltage graph of a filament lamp",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_filament_iv",
+        "task1_v124_bulk_phy_078",
+        "task1_v130_044",
+        "task1_v136_085"
+      ],
+      "candidateFronts": [
+        "Why does a filament lamp's resistance rise at high current?",
+        "How does a filament lamp's resistance change as it heats?",
+        "Why can a filament lamp's resistance rise as it glows brighter?",
+        "Why does a filament lamp show increasing resistance as voltage rises?"
+      ],
+      "searchPattern": "filament lamp.*(graph|resistance|current)"
+    },
+    {
+      "id": "B048",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "requirement": "Explain diode current-voltage characteristics",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_phy_097",
+        "task1_v136_086"
+      ],
+      "candidateFronts": [
+        "Why is a diode's current very small in reverse bias?",
+        "Why does a diode have negligible reverse current normally?"
+      ],
+      "searchPattern": "diode.*(current|reverse|voltage|bias)"
+    },
+    {
+      "id": "B049",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "requirement": "Explain ideal ammeter and voltmeter resistance assumptions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_phy_093",
+        "task1_phy_094",
+        "task1_v124_bulk_phy_080",
+        "task1_v124_bulk_phy_081"
+      ],
+      "candidateFronts": [
+        "What is an ideal ammeter's resistance?",
+        "What is an ideal voltmeter's resistance?",
+        "What is the internal resistance of an ideal voltmeter?",
+        "What is the internal resistance of an ideal ammeter?"
+      ],
+      "searchPattern": "ideal ammeter|ideal voltmeter"
+    },
+    {
+      "id": "B050",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Define electrical resistivity and its SI unit",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "phy_rp5",
+        "phy_resistivity",
+        "task1_phy_008",
+        "task1_v125_065",
+        "task1_v125_082"
+      ],
+      "candidateFronts": [
+        "How is the resistivity of a wire found?",
+        "What equation links resistance and resistivity?",
+        "What is the unit of resistivity in base units?",
+        "What does resistivity measure?",
+        "In a resistivity experiment, what two dimensions must be measured?"
+      ],
+      "searchPattern": "resistivity"
+    },
+    {
+      "id": "B051",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Explain effect of temperature on resistivity of metallic wire",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "wire.*(temperature|resistance)|metal.*resistivity"
+    },
+    {
+      "id": "B052",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Explain negative temperature coefficient thermistor response",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "phy_thermistor",
+        "task1_phy_098",
+        "task1_v124_bulk_phy_085"
+      ],
+      "candidateFronts": [
+        "For an NTC thermistor, what happens to resistance as temperature rises?",
+        "What is an NTC thermistor?",
+        "What happens to an NTC thermistor's resistance as temperature rises?"
+      ],
+      "searchPattern": "thermistor"
+    },
+    {
+      "id": "B053",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Describe zero resistance below a superconducting critical temperature",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_phy_099",
+        "task1_v136_041"
+      ],
+      "candidateFronts": [
+        "What is a superconductor?",
+        "What defines the critical temperature of a superconductor?"
+      ],
+      "searchPattern": "superconductor|superconductivity"
+    },
+    {
+      "id": "B054",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Link micrometer measurement and cross-sectional area for resistivity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "phy_mechanics_focus_v37_28",
+        "phy_mechanics_focus_v37_33",
+        "task1_phy_107",
+        "task1_practical_010"
+      ],
+      "candidateFronts": [
+        "A wire has force 200 N and cross-sectional area 2.0 mm². Find tensile stress.",
+        "Why does percentage uncertainty in wire diameter approximately double for cross-sectional area?",
+        "Why use a micrometer for a wire's diameter?",
+        "How is wire cross-sectional area obtained from diameter d?"
+      ],
+      "searchPattern": "micromet.*(diameter|wire)|wire.*cross.section|resistivity.*diameter"
+    },
+    {
+      "id": "B055",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "State Kirchhoff current law as charge conservation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "kirchhoff.*first|junction.*current|conservation.*current"
+    },
+    {
+      "id": "B056",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "State potential difference distribution in series circuits",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "series circuit.*(p.d|voltage)|voltage.*series"
+    },
+    {
+      "id": "B057",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "State common potential difference across parallel branches",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "parallel.*(p.d|potential difference|voltage)"
+    },
+    {
+      "id": "B058",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "State how equivalent resistance combines in series",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "resistance.*series"
+    },
+    {
+      "id": "B059",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "State how equivalent resistance combines in parallel",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_phy_087"
+      ],
+      "candidateFronts": [
+        "How does total resistance change when another resistor is added in parallel?"
+      ],
+      "searchPattern": "resistance.*parallel"
+    },
+    {
+      "id": "B060",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "Explain charge and energy conservation in dc circuits",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "(conservation|energy).*(circuit|junction)"
+    },
+    {
+      "id": "B061",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "requirement": "Explain potential-divider output relation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v125_072"
+      ],
+      "candidateFronts": [
+        "What is the purpose of a potential divider?"
+      ],
+      "searchPattern": "potential divider"
+    },
+    {
+      "id": "B062",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "requirement": "Predict temperature-sensor potential-divider output change",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "thermistor.*potential divider|potential divider.*thermistor"
+    },
+    {
+      "id": "B063",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "requirement": "Predict light-dependent resistor divider response",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "LDR.*potential divider|potential divider.*LDR"
+    },
+    {
+      "id": "B064",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Define electromotive force in terms of energy per charge",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "phy_emf",
+        "task1_phy_090"
+      ],
+      "candidateFronts": [
+        "Define emf.",
+        "Define electromotive force (emf)."
+      ],
+      "searchPattern": "define emf|electromotive force"
+    },
+    {
+      "id": "B065",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Relate terminal potential difference to emf and lost volts",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 10,
+      "candidateCardIds": [
+        "phy_internal_001",
+        "phy_rp6",
+        "v33_card_physics_internal_resistance_8",
+        "v33_card_physics_internal_resistance_9",
+        "task1_v124_bulk_phy_082"
+      ],
+      "candidateFronts": [
+        "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+        "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+        "What are 'lost volts' in a cell?",
+        "What do gradient and intercept represent on a terminal voltage V against current I graph?",
+        "What is the terminal p.d. of a discharging cell?"
+      ],
+      "searchPattern": "lost volts|terminal p.d.|terminal voltage"
+    },
+    {
+      "id": "B066",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Interpret graph gradient as negative internal resistance",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "internal resistance.*gradient|gradient.*internal resistance"
+    },
+    {
+      "id": "B067",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Interpret graph intercept as emf",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "emf.*intercept|intercept.*emf"
+    },
+    {
+      "id": "B068",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Explain why terminal voltage falls as current increases",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "phy_rp6",
+        "v33_card_physics_internal_resistance_8",
+        "v33_card_physics_internal_resistance_9",
+        "task1_v124_bulk_phy_083",
+        "task1_v124_bulk_phy_084"
+      ],
+      "candidateFronts": [
+        "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+        "What are 'lost volts' in a cell?",
+        "What do gradient and intercept represent on a terminal voltage V against current I graph?",
+        "What does the y-intercept of terminal p.d. against current show?",
+        "What does the negative gradient of terminal p.d. against current show?"
+      ],
+      "searchPattern": "terminal.*(current|decrease)|lost volts"
+    },
+    {
+      "id": "B069",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Distinguish displayed and skeletal formulae",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_chem_113",
+        "task1_chem_114",
+        "task1_v124_bulk_chem_097",
+        "task1_v125_154"
+      ],
+      "candidateFronts": [
+        "What does 'displayed formula' show?",
+        "What is a skeletal formula?",
+        "What is the difference between a molecular and displayed formula?",
+        "What does a displayed formula show that a structural formula may omit?"
+      ],
+      "searchPattern": "skeletal formula|displayed formula"
+    },
+    {
+      "id": "B070",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Explain what a homologous series has in common",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "task1_chem_108",
+        "task1_v124_bulk_chem_099",
+        "task1_v124_bulk_chem_100"
+      ],
+      "candidateFronts": [
+        "What is a homologous series?",
+        "What does a homologous series share?",
+        "What changes by CH₂ from one member of a homologous series to the next?"
+      ],
+      "searchPattern": "homologous series"
+    },
+    {
+      "id": "B071",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Distinguish structural isomers and stereoisomers",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_chem_110",
+        "task1_chem_141",
+        "task1_chem_142",
+        "task1_v130_116",
+        "task1_v130_117"
+      ],
+      "candidateFronts": [
+        "What is a structural isomer?",
+        "What does E mean in E/Z stereoisomerism?",
+        "What does Z mean in E/Z stereoisomerism?",
+        "What makes two molecules structural isomers?",
+        "What makes a pair of molecules stereoisomers?"
+      ],
+      "searchPattern": "structural isomer|stereoisomer"
+    },
+    {
+      "id": "B072",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Represent free radicals with an unpaired electron dot",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "free radical.*dot|unpaired electron"
+    },
+    {
+      "id": "B073",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Recognise curly arrow starts at an electron pair",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 7,
+      "candidateCardIds": [
+        "chem_mechanisms_v42_01",
+        "task1_chem_118",
+        "task1_v124_bulk_chem_101",
+        "task1_v124_bulk_chem_102",
+        "task1_v131_116"
+      ],
+      "candidateFronts": [
+        "Where should the tail of a curly arrow be placed?",
+        "What does a curly arrow represent in an organic mechanism?",
+        "What does a curly arrow starting from a bond represent?",
+        "What does a single-headed curly arrow represent?",
+        "What do curly arrows show in an ionic organic mechanism?"
+      ],
+      "searchPattern": "curly arrow|electron pair.*mechanism"
+    },
+    {
+      "id": "B074",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "requirement": "Define alkane as saturated hydrocarbon",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "saturated hydrocarbon|alkane.*saturated"
+    },
+    {
+      "id": "B075",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "requirement": "Explain incomplete combustion products of hydrocarbons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_energetics_v49_34",
+        "task1_v124_chem_017"
+      ],
+      "candidateFronts": [
+        "Why can incomplete combustion affect fuel calorimetry?",
+        "Why can carbon monoxide stop haemoglobin transporting oxygen?"
+      ],
+      "searchPattern": "incomplete combustion|carbon monoxide"
+    },
+    {
+      "id": "B076",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "requirement": "Name initiation, propagation and termination in radical substitution",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_radical_sub",
+        "chem_halogen_uv",
+        "task1_chem_122",
+        "task1_v124_bulk_chem_108",
+        "task1_v130_120"
+      ],
+      "candidateFronts": [
+        "What are the three stages of free-radical substitution?",
+        "What condition starts free-radical substitution of an alkane with a halogen?",
+        "What begins a free-radical substitution chain?",
+        "What is an initiation step in free-radical substitution?",
+        "Why is a termination step important in free-radical substitution?"
+      ],
+      "searchPattern": "initiat.*propagat|free.radical substitution"
+    },
+    {
+      "id": "B077",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "requirement": "Explain catalytic cracking and its chemical products",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v130_119"
+      ],
+      "candidateFronts": [
+        "What distinguishes thermal from catalytic cracking in product emphasis?"
+      ],
+      "searchPattern": "cracking.*(alkene|alkane)|catalytic cracking"
+    },
+    {
+      "id": "B078",
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "requirement": "Explain relative rates of halogenoalkane hydrolysis by C–X bond enthalpy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_116"
+      ],
+      "candidateFronts": [
+        "How does hydrolysis rate generally change from chloroalkane to iodoalkane?"
+      ],
+      "searchPattern": "halogenoalkane.*bond|hydrolysis.*rate|C.X bond"
+    },
+    {
+      "id": "B079",
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "requirement": "Compare substitution and elimination reaction outcomes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_elimination",
+        "chem_mechanisms_v42_11",
+        "task1_chem_132",
+        "task1_v124_bulk_chem_117",
+        "task1_v124_bulk_chem_118"
+      ],
+      "candidateFronts": [
+        "What conditions favour elimination of a halogenoalkane with OH⁻?",
+        "What is the mechanistic difference between substitution and elimination?",
+        "What happens in elimination from a halogenoalkane?",
+        "What is the organic product of elimination from a halogenoalkane?",
+        "How do substitution and elimination differ?"
+      ],
+      "searchPattern": "substitution.*elimination|elimination.*halogenoalkane"
+    },
+    {
+      "id": "B080",
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "requirement": "Recall that CFC chlorine radicals damage ozone",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "CFC.*ozone|chlorine radical.*ozone"
+    },
+    {
+      "id": "B081",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "requirement": "Define electrophile and electrophilic addition",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 13,
+      "candidateCardIds": [
+        "chem_electrophile",
+        "chem_markovnikov",
+        "v33_card_chemistry_organic_chemistry_61",
+        "chem_mechanisms_v42_04",
+        "chem_mechanisms_v42_08"
+      ],
+      "candidateFronts": [
+        "What is an electrophile?",
+        "Why is one electrophilic-addition product often major?",
+        "Distinguish electrophile from nucleophile.",
+        "What makes a substance electrophilic rather than nucleophilic?",
+        "Why is the C atom bonded to a halogen electrophilic?"
+      ],
+      "searchPattern": "electrophil"
+    },
+    {
+      "id": "B082",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "requirement": "Distinguish major and minor products from unsymmetrical alkene addition",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_mechanisms_v42_15",
+        "task1_v124_bulk_chem_122",
+        "task1_v130_127"
+      ],
+      "candidateFronts": [
+        "Why can an unsymmetrical alkene give unequal quantities of two products?",
+        "Why is a major product formed from some unsymmetrical alkene additions?",
+        "What does the major product of an unsymmetrical alkene addition reflect?"
+      ],
+      "searchPattern": "major.*product|unsymmetrical alkene"
+    },
+    {
+      "id": "B083",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "requirement": "Explain bromine-water indication of unsaturation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "task1_chem_139",
+        "task1_v127_018",
+        "task1_v127_019"
+      ],
+      "candidateFronts": [
+        "What colour change indicates an alkene with bromine water?",
+        "Bromine water changes from orange to colourless in a functional-group test. What bond is suggested?",
+        "What does unchanged orange bromine water suggest about an unknown sample?"
+      ],
+      "searchPattern": "bromine water|unsaturation"
+    },
+    {
+      "id": "B084",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "requirement": "Describe formation of addition polymers from alkenes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "chem_a2_poly_add",
+        "chem_a2_poly_cond",
+        "v33_card_chemistry_polymers_66",
+        "task1_chem_143",
+        "task1_chem_144"
+      ],
+      "candidateFronts": [
+        "What happens in addition polymerisation?",
+        "What happens in condensation polymerisation?",
+        "What links are formed in condensation polymerisation of a diol with dicarboxylic acid?",
+        "What forms when ethene undergoes addition polymerisation?",
+        "Why are addition polymers often chemically unreactive?"
+      ],
+      "searchPattern": "addition polymer|polymerisation"
+    },
+    {
+      "id": "B085",
+      "subject": "Chemistry",
+      "specRef": "3.3.5",
+      "requirement": "Compare oxidisability of primary, secondary and tertiary alcohols",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_chem_149",
+        "task1_v124_bulk_chem_131",
+        "task1_v127_025",
+        "task1_v130_129",
+        "task1_v136_054"
+      ],
+      "candidateFronts": [
+        "Why are tertiary alcohols resistant to normal oxidation?",
+        "Why is a tertiary alcohol resistant to normal oxidation?",
+        "Can the orange-to-green oxidation observation alone distinguish primary from secondary alcohols?",
+        "Why are tertiary alcohols resistant to straightforward oxidation?",
+        "What distinguishes oxidation of primary and secondary alcohols?"
+      ],
+      "searchPattern": "primary.*secondary.*alcohol|tertiary.*oxid"
+    },
+    {
+      "id": "B086",
+      "subject": "Chemistry",
+      "specRef": "3.3.5",
+      "requirement": "Distinguish distillation and reflux in primary alcohol oxidation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "distil.*reflux|reflux.*distil"
+    },
+    {
+      "id": "B087",
+      "subject": "Chemistry",
+      "specRef": "3.3.5",
+      "requirement": "Explain formation of alkenes through dehydration of alcohols",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_mechanisms_v42_17",
+        "task1_v124_bulk_chem_132"
+      ],
+      "candidateFronts": [
+        "What structural change defines dehydration of an alcohol?",
+        "What is formed by acid-catalysed dehydration of an alcohol?"
+      ],
+      "searchPattern": "dehydr.*alcohol|elimination.*alcohol"
+    },
+    {
+      "id": "B088",
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "requirement": "Interpret tests distinguishing aldehydes, ketones and carboxylic acids",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 31,
+      "candidateCardIds": [
+        "chem_aldehyde_tollens",
+        "chem_carbonyl_hcn",
+        "v33_card_chemistry_aldehydes_and_ketones_59",
+        "chem_acyl_review_v41_03",
+        "chem_acyl_review_v41_10"
+      ],
+      "candidateFronts": [
+        "What does Tollens' reagent do with an aldehyde?",
+        "What mechanism occurs when HCN adds to a carbonyl compound?",
+        "Which class normally gives a silver mirror with Tollens' reagent?",
+        "What group links the two carbonyls in an acid anhydride?",
+        "What shape does the carbonyl carbon adopt in the addition intermediate?"
+      ],
+      "searchPattern": "Fehling|Tollens|2.4.DNPH|carbonyl"
+    },
+    {
+      "id": "B089",
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "requirement": "Link IR absorption band to O–H, C=O and C–H presence",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 9,
+      "candidateCardIds": [
+        "chem_ir_oh",
+        "task1_chem_153",
+        "task1_v124_bulk_chem_135",
+        "task1_v127_037",
+        "task1_v128_058"
+      ],
+      "candidateFronts": [
+        "Where is the broad O–H absorption of an alcohol in an IR spectrum?",
+        "What does a broad O–H infrared absorption suggest?",
+        "Where does a strong carbonyl C=O IR absorption appear approximately?",
+        "An IR spectrum shows C=O near 1700 cm⁻¹ and very broad O–H. What group is likely?",
+        "Why can an IR spectrum confirm an identity more securely than one peak?"
+      ],
+      "searchPattern": "infrared|IR.*spectrum|IR.*absorp"
+    },
+    {
+      "id": "B090",
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "requirement": "Explain mass spectrum molecular ion for Mr",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_atomic_v43_29",
+        "chem_atomic_v43_30",
+        "chem_atomic_v43_31",
+        "chem_atomic_v43_32",
+        "task1_chem_009"
+      ],
+      "candidateFronts": [
+        "What does the position of a mass spectrum peak indicate?",
+        "What does the height/intensity of a mass spectrum peak indicate?",
+        "What is the base peak in a mass spectrum?",
+        "Why is the base peak not necessarily the molecular ion?",
+        "What does the molecular-ion peak show in a mass spectrum?"
+      ],
+      "searchPattern": "molecular ion|mass spectrum"
+    },
+    {
+      "id": "B091",
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "requirement": "Define optical isomerism in terms of non-superimposable mirror images",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_optical",
+        "v33_card_chemistry_optical_isomerism_58",
+        "chem_mechanisms_v42_26",
+        "task1_v124_bulk_chem_187",
+        "task1_v130_139"
+      ],
+      "candidateFronts": [
+        "What causes optical isomerism?",
+        "What is an enantiomer?",
+        "Why can some carbonyl additions create enantiomer pairs?",
+        "What is optical isomerism in an octahedral complex?",
+        "Why can nucleophilic addition to a planar carbonyl produce enantiomers?"
+      ],
+      "searchPattern": "optical isomer|enantiomer"
+    },
+    {
+      "id": "B092",
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "requirement": "Identify chiral carbon in an organic structure",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_mechanisms_v42_27",
+        "task1_chem_199",
+        "task1_v124_bulk_chem_196"
+      ],
+      "candidateFronts": [
+        "What is required for a common chiral carbon centre?",
+        "What is a chiral centre?",
+        "What is a chiral carbon atom in basic A-level organic chemistry?"
+      ],
+      "searchPattern": "chiral carbon|chiral centre"
+    },
+    {
+      "id": "B093",
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "requirement": "Explain how racemic mixture affects optical rotation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_mechanisms_v42_28",
+        "task1_chem_201",
+        "task1_chem_202",
+        "task1_v124_bulk_chem_198",
+        "task1_v130_135"
+      ],
+      "candidateFronts": [
+        "Why does a racemic mixture give no net optical rotation?",
+        "What is a racemic mixture?",
+        "What does a racemic mixture do to plane-polarised light?",
+        "What does a racemic mixture contain?",
+        "Define a racemic mixture."
+      ],
+      "searchPattern": "racemic|plane.polarised"
+    },
+    {
+      "id": "B094",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "requirement": "Explain carboxylic-acid reaction with carbonates",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "v33_card_chemistry_carboxylic_acids_63",
+        "chem_spec_v40_003",
+        "task1_v124_bulk_chem_209"
+      ],
+      "candidateFronts": [
+        "Which gas forms when a carboxylic acid reacts with carbonate?",
+        "Why do carboxylic acids react with carbonates?",
+        "What is formed by reaction of a carboxylic acid with a carbonate?"
+      ],
+      "searchPattern": "carboxylic acid.*carbonate"
+    },
+    {
+      "id": "B095",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "requirement": "Explain formation and hydrolysis of esters",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 12,
+      "candidateCardIds": [
+        "chem_esterification",
+        "v33_card_chemistry_esters_64",
+        "chem_spec_v40_008",
+        "chem_spec_v40_009",
+        "chem_spec_v40_011"
+      ],
+      "candidateFronts": [
+        "What are the reagents and catalyst for esterification?",
+        "Why is Fischer esterification usually written as reversible?",
+        "Which two functional groups combine in esterification?",
+        "What is the general equation for esterification?",
+        "What is produced by acidic ester hydrolysis?"
+      ],
+      "searchPattern": "esterif|ester.*hydrolys"
+    },
+    {
+      "id": "B096",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "requirement": "Define biodiesel as methyl or ethyl esters of fatty acids",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "chem_spec_v40_022",
+        "chem_spec_v40_025"
+      ],
+      "candidateFronts": [
+        "What type of substances make up biodiesel?",
+        "What substance is common to production of soap and biodiesel from triglycerides?"
+      ],
+      "searchPattern": "biodiesel"
+    },
+    {
+      "id": "B097",
+      "subject": "Chemistry",
+      "specRef": "3.3.9",
+      "requirement": "Distinguish acyl chloride and acid anhydride functional structures",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 23,
+      "candidateCardIds": [
+        "chem_acyl_chloride_water",
+        "chem_acyl_chloride_alcohol",
+        "chem_acyl_chloride_ammonia",
+        "v33_card_chemistry_acyl_chlorides_62",
+        "chem_acyl_review_v41_01"
+      ],
+      "candidateFronts": [
+        "What happens when an acyl chloride reacts with water?",
+        "What does an acyl chloride form with an alcohol?",
+        "What does an acyl chloride form with ammonia?",
+        "What two products form from an acyl chloride reacting with an alcohol?",
+        "What is the general formula of an acyl chloride?"
+      ],
+      "searchPattern": "acyl chloride|acid anhydride"
+    },
+    {
+      "id": "B098",
+      "subject": "Chemistry",
+      "specRef": "3.3.9",
+      "requirement": "Describe nucleophilic addition-elimination in acyl derivatives",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_acyl_review_v41_07",
+        "chem_acyl_review_v41_08",
+        "chem_acyl_review_v41_13"
+      ],
+      "candidateFronts": [
+        "What makes the acyl carbon attractive to a nucleophile?",
+        "In acylation mechanisms, where should the nucleophile's arrow point?",
+        "Why is nucleophilic acylation called addition–elimination?"
+      ],
+      "searchPattern": "addition.elimination|acyl.*nucleophil"
+    },
+    {
+      "id": "B099",
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "requirement": "Explain benzene stability using delocalisation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_a2_benzene",
+        "task1_chem_215",
+        "task1_v124_bulk_chem_217"
+      ],
+      "candidateFronts": [
+        "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+        "What is delocalisation in benzene?",
+        "What makes benzene especially stable?"
+      ],
+      "searchPattern": "benzene.*(delocalis|stable)|delocalis.*benzene"
+    },
+    {
+      "id": "B100",
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "requirement": "Explain preference for substitution rather than addition in benzene",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "task1_chem_216",
+        "task1_v124_bulk_chem_218",
+        "task1_v130_143"
+      ],
+      "candidateFronts": [
+        "Why does benzene favour substitution over addition?",
+        "Why does benzene generally undergo substitution instead of addition?",
+        "Why does benzene react by substitution rather than addition?"
+      ],
+      "searchPattern": "benzene.*substitution|benzene.*addition"
+    },
+    {
+      "id": "B101",
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "requirement": "Explain purpose of electrophile generation in aromatic substitution",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_219"
+      ],
+      "candidateFronts": [
+        "What is the electrophile in benzene nitration?"
+      ],
+      "searchPattern": "electrophile.*benzene|nitration.*electrophile"
+    },
+    {
+      "id": "B102",
+      "subject": "Chemistry",
+      "specRef": "3.3.11",
+      "requirement": "Relate basicity of amines to available nitrogen lone pair",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_chem_218"
+      ],
+      "candidateFronts": [
+        "What makes amines basic?"
+      ],
+      "searchPattern": "amine.*basic|amine.*lone pair"
+    },
+    {
+      "id": "B103",
+      "subject": "Chemistry",
+      "specRef": "3.3.11",
+      "requirement": "Distinguish primary secondary and tertiary amines",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 6,
+      "candidateCardIds": [
+        "chem_acyl_review_v41_18",
+        "chem_acyl_review_v41_23",
+        "task1_chem_219",
+        "task1_v124_bulk_chem_215",
+        "task1_v124_bulk_chem_225"
+      ],
+      "candidateFronts": [
+        "What is the organic product class when a primary amine is acylated?",
+        "What type of amide forms from anhydride and a primary amine?",
+        "What is a primary amine?",
+        "What acyl product forms when an acyl chloride reacts with a primary amine?",
+        "What is the common product of a primary amine and an acyl chloride?"
+      ],
+      "searchPattern": "primary amine|secondary amine|tertiary amine"
+    },
+    {
+      "id": "B104",
+      "subject": "Chemistry",
+      "specRef": "3.3.12",
+      "requirement": "Explain addition polymer disposal and biodegradable considerations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_227",
+        "task1_v130_149"
+      ],
+      "candidateFronts": [
+        "Why can biodegradable condensation polymers break down more readily?",
+        "Why are many polyesters biodegradable while polyalkenes are not?"
+      ],
+      "searchPattern": "biodegradable|polymer.*dispose|polymer.*degrad"
+    },
+    {
+      "id": "B105",
+      "subject": "Chemistry",
+      "specRef": "3.3.12",
+      "requirement": "Explain how condensation polymer forms link and small molecule",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 12,
+      "candidateCardIds": [
+        "chem_a2_poly_cond",
+        "v33_card_chemistry_polymers_66",
+        "task1_chem_221",
+        "task1_chem_222",
+        "task1_chem_223"
+      ],
+      "candidateFronts": [
+        "What happens in condensation polymerisation?",
+        "What links are formed in condensation polymerisation of a diol with dicarboxylic acid?",
+        "What distinguishes condensation polymerisation?",
+        "What bond links monomers in a polyester?",
+        "What bond links monomers in a polyamide?"
+      ],
+      "searchPattern": "condensation polymer|polyester|polyamide"
+    },
+    {
+      "id": "B106",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Distinguish amino acid zwitterion at isoelectric point",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "chem_a2_amino_zwitterion",
+        "task1_v124_bulk_chem_229",
+        "task1_v129_008"
+      ],
+      "candidateFronts": [
+        "What is a zwitterion?",
+        "What causes amino acids to exist as zwitterions near neutral pH?",
+        "Define a zwitterion."
+      ],
+      "searchPattern": "zwitterion|isoelectric point"
+    },
+    {
+      "id": "B107",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Explain peptide bond link and condensation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_a2_peptide",
+        "task1_v124_bulk_chem_230",
+        "task1_v129_013",
+        "task1_v129_018"
+      ],
+      "candidateFronts": [
+        "What is a peptide bond?",
+        "What is a peptide bond chemically?",
+        "What is produced when all the peptide bonds in a protein are hydrolysed?",
+        "Which levels of protein structure may denaturation disrupt without breaking peptide bonds?"
+      ],
+      "searchPattern": "peptide bond"
+    },
+    {
+      "id": "B108",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Distinguish primary to tertiary protein structure",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_full_080",
+        "task1_full_081",
+        "task1_full_082",
+        "task1_full_083"
+      ],
+      "candidateFronts": [
+        "What are two common protein secondary structures?",
+        "What is a protein's tertiary structure?",
+        "What interactions stabilise protein secondary structure?",
+        "What covalent link can stabilise a protein's tertiary structure?"
+      ],
+      "searchPattern": "protein.*(primary|secondary|tertiary)"
+    },
+    {
+      "id": "B109",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Explain base-pair hydrogen bonding between DNA strands",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_233",
+        "task1_v124_bulk_chem_234",
+        "task1_v124_bulk_chem_235",
+        "task1_v129_015",
+        "task1_v129_016"
+      ],
+      "candidateFronts": [
+        "What holds complementary DNA base pairs together?",
+        "Which DNA base pairs with adenine?",
+        "Which DNA base pairs with cytosine?",
+        "How many hydrogen bonds link adenine and thymine in DNA?",
+        "How many hydrogen bonds link cytosine and guanine in DNA?"
+      ],
+      "searchPattern": "DNA.*base pair|hydrogen bonds.*DNA"
+    },
+    {
+      "id": "B110",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Relate enzyme stereospecific binding to enantiomers",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_full_091"
+      ],
+      "candidateFronts": [
+        "Why can enzymes be stereospecific?"
+      ],
+      "searchPattern": "enzyme.*(stereospecific|enantiomer)"
+    },
+    {
+      "id": "B111",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Explain cisplatin binding and DNA replication disruption",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "task1_full_088",
+        "task1_v124_bulk_chem_186",
+        "task1_v124_bulk_chem_237",
+        "task1_v133_010",
+        "task1_v133_011"
+      ],
+      "candidateFronts": [
+        "How does cisplatin disrupt DNA replication?",
+        "Why does cisplatin have a square-planar geometry?",
+        "How can cisplatin prevent DNA replication?",
+        "Which DNA base bonds to platinum in cisplatin's action?",
+        "Why can cisplatin have adverse effects on healthy cells?"
+      ],
+      "searchPattern": "cisplatin|DNA replication"
+    },
+    {
+      "id": "B112",
+      "subject": "Chemistry",
+      "specRef": "3.3.14",
+      "requirement": "Explain why short routes and high atom economy reduce waste",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "task1_full_075",
+        "task1_v124_bulk_chem_239",
+        "task1_v130_151",
+        "task1_v134_014"
+      ],
+      "candidateFronts": [
+        "Why can high atom economy benefit a synthesis?",
+        "Why is atom economy relevant to planning synthesis?",
+        "Why is high atom economy useful for green synthesis?",
+        "Why are non-hazardous starting materials preferred in green chemistry?"
+      ],
+      "searchPattern": "atom economy.*(synthesis|steps)|green chemistry"
+    },
+    {
+      "id": "B113",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "requirement": "Interpret proton NMR splitting from neighbouring protons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_chem_229",
+        "task1_v124_bulk_chem_243"
+      ],
+      "candidateFronts": [
+        "What causes NMR peak splitting?",
+        "What does an n+1 proton NMR splitting pattern suggest?"
+      ],
+      "searchPattern": "NMR.*split|proton.*splitting"
+    },
+    {
+      "id": "B114",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "requirement": "Interpret integral peak ratios for proton environments",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 5,
+      "candidateCardIds": [
+        "chem_a2_nmr_integration",
+        "v33_card_chemistry_nmr_67",
+        "task1_chem_228",
+        "task1_v124_bulk_chem_242",
+        "task1_v130_154"
+      ],
+      "candidateFronts": [
+        "What does integration in a ¹H NMR spectrum show?",
+        "What does the integration of a ¹H NMR signal indicate?",
+        "What does a ¹H NMR integration trace reveal?",
+        "What does proton NMR integration reveal?",
+        "What does a 3:2:1 NMR integration ratio represent?"
+      ],
+      "searchPattern": "NMR.*integrat|integration.*NMR"
+    },
+    {
+      "id": "B115",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "requirement": "Explain carbon-13 NMR peak count as carbon environments",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v124_bulk_chem_241",
+        "task1_v134_012"
+      ],
+      "candidateFronts": [
+        "What does the number of signals in a carbon-13 NMR spectrum indicate?",
+        "Why are ordinary carbon-13 NMR spectra typically less complex than ¹H spectra?"
+      ],
+      "searchPattern": "carbon.13.*NMR|13C NMR"
+    },
+    {
+      "id": "B116",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "requirement": "Explain why TMS defines reference chemical shift",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "chem_a2_nmr_tms",
+        "task1_full_101",
+        "task1_v124_bulk_chem_245",
+        "task1_v136_105"
+      ],
+      "candidateFronts": [
+        "Why is TMS used as an NMR reference?",
+        "Why is TMS useful as an NMR reference?",
+        "Why is TMS assigned chemical shift zero?",
+        "Why is TMS a useful chemical-shift reference?"
+      ],
+      "searchPattern": "TMS|chemical shift.*reference"
+    },
+    {
+      "id": "B117",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "requirement": "Define Rf as distance ratio in chromatography",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 15,
+      "candidateCardIds": [
+        "chem_a2_chrom_r_f",
+        "v33_card_chemistry_chromatography_68",
+        "chem_bh_weak_20261024_sixmark_theoretical_rank",
+        "chem_bh_weak_20261024_sixmark_ag_k_radius",
+        "chem_bh_weak_20261024_sixmark_small_difference"
+      ],
+      "candidateFronts": [
+        "What is Rf in thin-layer chromatography?",
+        "How is Rf calculated on a TLC plate?",
+        "Rank the perfect ionic lattice dissociation enthalpies of CaCl₂, AgCl and KCl.",
+        "Why does the perfect ionic model predict AgCl has a greater lattice enthalpy than KCl?",
+        "What does a small perfect-ionic/Born–Haber lattice enthalpy difference suggest?"
+      ],
+      "searchPattern": "Rf|chromatograph.*distance"
+    },
+    {
+      "id": "B118",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "requirement": "Explain how mobile and stationary phases affect separation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 8,
+      "candidateCardIds": [
+        "task1_chem_233",
+        "task1_full_093",
+        "task1_full_094",
+        "task1_v123_chem_070",
+        "task1_v124_bulk_chem_249"
+      ],
+      "candidateFronts": [
+        "How does a higher affinity for the stationary phase affect travel?",
+        "What does the mobile phase do in chromatography?",
+        "What is the stationary phase?",
+        "What is the stationary phase in TLC typically?",
+        "What is the mobile phase in TLC?"
+      ],
+      "searchPattern": "mobile phase|stationary phase"
+    },
+    {
+      "id": "B119",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "requirement": "Use the discriminant to distinguish repeated real roots",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "math_quad_discriminant",
+        "v33_card_maths_quadratics_78",
+        "task1_v136_062"
+      ],
+      "candidateFronts": [
+        "What does the discriminant tell you?",
+        "What does a negative discriminant say about real roots?",
+        "What does a zero discriminant tell you about a quadratic?"
+      ],
+      "searchPattern": "discriminant"
+    },
+    {
+      "id": "B120",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "requirement": "Recall the quadratic formula without being given it",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v136_001"
+      ],
+      "candidateFronts": [
+        "What is the quadratic formula for ax² + bx + c = 0?"
+      ],
+      "searchPattern": "quadratic formula"
+    },
+    {
+      "id": "B121",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "requirement": "Recall index multiplication law",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v136_002",
+        "task1_v136_003"
+      ],
+      "candidateFronts": [
+        "State the index law a^m × a^n.",
+        "State the index law (a^m)^n."
+      ],
+      "searchPattern": "index law|indices.*multip"
+    },
+    {
+      "id": "B122",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "requirement": "Recall index power-of-a-power law",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_v136_002",
+        "task1_v136_003"
+      ],
+      "candidateFronts": [
+        "State the index law a^m × a^n.",
+        "State the index law (a^m)^n."
+      ],
+      "searchPattern": "power.*power|index law"
+    },
+    {
+      "id": "B123",
+      "subject": "Maths",
+      "specRef": "3.7",
+      "requirement": "Recall conversion between exponent and logarithm",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "logarithm.*exponen|logarithm.*definition"
+    },
+    {
+      "id": "B124",
+      "subject": "Maths",
+      "specRef": "3.7",
+      "requirement": "Recall logarithm product law",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "log.*product|log.*multiply"
+    },
+    {
+      "id": "B125",
+      "subject": "Maths",
+      "specRef": "3.7",
+      "requirement": "Recall logarithm quotient law",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "log.*quotient|log.*division"
+    },
+    {
+      "id": "B126",
+      "subject": "Maths",
+      "specRef": "3.7",
+      "requirement": "Recall logarithm power law",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "log.*power|log.*exponent"
+    },
+    {
+      "id": "B127",
+      "subject": "Maths",
+      "specRef": "3.4",
+      "requirement": "Recall point–gradient equation of a line",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v136_006"
+      ],
+      "candidateFronts": [
+        "State the point–gradient form of a straight-line equation."
+      ],
+      "searchPattern": "point.gradient"
+    },
+    {
+      "id": "B128",
+      "subject": "Maths",
+      "specRef": "3.4",
+      "requirement": "Recall condition for perpendicular line gradients",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "perpendicular.*gradient"
+    },
+    {
+      "id": "B129",
+      "subject": "Maths",
+      "specRef": "3.5",
+      "requirement": "Recall arithmetic progression nth-term formula",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "math_arith_nth"
+      ],
+      "candidateFronts": [
+        "What is the nth term of an arithmetic sequence?"
+      ],
+      "searchPattern": "arithmetic progression.*nth|arithmetic sequence"
+    },
+    {
+      "id": "B130",
+      "subject": "Maths",
+      "specRef": "3.5",
+      "requirement": "Recall geometric progression nth-term formula",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "math_geom_nth"
+      ],
+      "candidateFronts": [
+        "What is the nth term of a geometric sequence?"
+      ],
+      "searchPattern": "geometric progression.*nth|geometric sequence"
+    },
+    {
+      "id": "B131",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall secant and tangent Pythagorean identity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "v33_card_maths_trigonometry_84",
+        "task1_v136_011",
+        "task1_v136_012"
+      ],
+      "candidateFronts": [
+        "Which identity relates sec²θ and tan²θ?",
+        "State the identity linking sec²x and tan²x.",
+        "State the identity linking cosec²x and cot²x."
+      ],
+      "searchPattern": "sec²|secant.*tan"
+    },
+    {
+      "id": "B132",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall cosecant and cotangent Pythagorean identity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v136_012"
+      ],
+      "candidateFronts": [
+        "State the identity linking cosec²x and cot²x."
+      ],
+      "searchPattern": "cosec²|cotangent.*cosecant"
+    },
+    {
+      "id": "B133",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall double angle sine identity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v136_013"
+      ],
+      "candidateFronts": [
+        "What is sin 2x in terms of sin x and cos x?"
+      ],
+      "searchPattern": "sin 2|double.angle.*sin"
+    },
+    {
+      "id": "B134",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall double angle cosine identity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v136_014"
+      ],
+      "candidateFronts": [
+        "What is cos 2x in terms of cos²x and sin²x?"
+      ],
+      "searchPattern": "cos 2|double.angle.*cos"
+    },
+    {
+      "id": "B135",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall radian arc length relation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "task1_maths_010",
+        "task1_v130_158"
+      ],
+      "candidateFronts": [
+        "Complete: arc length s = ____ for angle θ in radians.",
+        "In radians, what is arc length in a circle?"
+      ],
+      "searchPattern": "arc length|radian.*arc"
+    },
+    {
+      "id": "B136",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall radian sector area relation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 1,
+      "candidateCardIds": [
+        "task1_v136_010"
+      ],
+      "candidateFronts": [
+        "What is the radian sector-area formula?"
+      ],
+      "searchPattern": "sector area|radian.*area"
+    },
+    {
+      "id": "B137",
+      "subject": "Maths",
+      "specRef": "3.8",
+      "requirement": "Recall product differentiation rule",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 4,
+      "candidateCardIds": [
+        "math_a2_product_rule_use",
+        "v33_card_maths_differentiation_82",
+        "v33_card_maths_differentiation_83",
+        "task1_v136_020"
+      ],
+      "candidateFronts": [
+        "When should you use the product rule?",
+        "When is the product rule needed?",
+        "What distinguishes the chain rule from the product rule?",
+        "State the product rule for y = uv."
+      ],
+      "searchPattern": "product rule"
+    },
+    {
+      "id": "B138",
+      "subject": "Maths",
+      "specRef": "3.8",
+      "requirement": "Recall quotient differentiation rule",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "math_a2_quotient_rule_use",
+        "task1_v136_021"
+      ],
+      "candidateFronts": [
+        "When should you use the quotient rule?",
+        "State the quotient rule for y = u/v."
+      ],
+      "searchPattern": "quotient rule"
+    },
+    {
+      "id": "B139",
+      "subject": "Maths",
+      "specRef": "3.8",
+      "requirement": "Recall chain differentiation rule",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 3,
+      "candidateCardIds": [
+        "math_a2_chain_rule_use",
+        "v33_card_maths_differentiation_83",
+        "task1_v136_022"
+      ],
+      "candidateFronts": [
+        "What tells you the chain rule is needed?",
+        "What distinguishes the chain rule from the product rule?",
+        "State the chain rule for y = f(g(x))."
+      ],
+      "searchPattern": "chain rule"
+    },
+    {
+      "id": "B140",
+      "subject": "Maths",
+      "specRef": "3.9",
+      "requirement": "Recall integration by parts",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "unverified_candidate",
+      "candidateCount": 2,
+      "candidateCardIds": [
+        "math_a2_parts_use",
+        "task1_v136_027"
+      ],
+      "candidateFronts": [
+        "When is integration by parts often useful?",
+        "State integration by parts in its standard form."
+      ],
+      "searchPattern": "integration by parts"
+    },
+    {
+      "id": "B141",
+      "subject": "Maths",
+      "specRef": "3.15",
+      "requirement": "Recall binomial variance and expected value",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "binomial.*variance|binomial.*mean"
+    },
+    {
+      "id": "B142",
+      "subject": "Maths",
+      "specRef": "3.18",
+      "requirement": "Recall variable-acceleration velocity derivative of displacement",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "stage": "AS or A2: must verify by syllabus point",
+      "method": "front_search_only",
+      "status": "needs_semantic_search",
+      "candidateCount": 0,
+      "candidateCardIds": [],
+      "candidateFronts": [],
+      "searchPattern": "ds/dt|velocity.*differenti"
+    }
+  ]
+}
