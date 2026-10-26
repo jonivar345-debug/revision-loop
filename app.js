@@ -1746,7 +1746,7 @@ function revisionTopicIndex(subject,qualification='both'){
 }
 function groupedTopicPicker(subject,kind,selected){
  const groups=revisionTopicIndex(subject,kind==='exam'?(document.getElementById('examLevel')?.value||'both'):'both');
- return [...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
+ return [...groups].filter(([group,topics])=>[...topics.values()].some(v=>kind==='flash'?v.cards>0:v.questions>0)).sort((a,b)=>a[0].localeCompare(b[0])).map(([group,topics])=>{
   const count=[...topics.values()].reduce((n,c)=>n+(kind==='flash'?c.cards:c.questions),0);
   const groupId=group.replace(/[^a-zA-Z0-9]/g,'-').toLowerCase();
   return '<details class="topic-family" open><summary><b>'+esc(group)+'</b><span>'+count+' '+(kind==='flash'?'cards':'questions')+'</span></summary>'+
