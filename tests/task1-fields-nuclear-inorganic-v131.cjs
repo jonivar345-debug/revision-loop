@@ -2,8 +2,8 @@
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const cards=deck.cards, fresh=cards.filter(c=>c.id.startsWith('task1_v131_'));
-const prior=cards.filter(c=>!c.id.startsWith('task1_v131_'));
-assert.equal(deck.deckVersion,131);
+const prior=cards.filter(c=>!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_'));
+assert(deck.deckVersion>=131);
 assert.equal(prior.length,2846,'All previous review IDs must remain');
 assert.equal(prior.filter(c=>c.active!==false).length,2842);
 assert.equal(fresh.length,129);
