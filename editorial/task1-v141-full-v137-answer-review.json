@@ -1,0 +1,907 @@
+{
+  "schemaVersion": 1,
+  "sourceDeckVersion": 138,
+  "preparedOn": "2026-10-27",
+  "scope": "Selected narrow AQA v137 items only, NOT a full syllabus completeness certificate",
+  "sourceAudit": "editorial/task1-v137-additional-syllabus-candidate-ledger.json",
+  "counts": {
+    "answer_checked_for_narrow_recall": 33,
+    "partial_answer_needs_targeted_follow_up": 12,
+    "no_direct_recall_card_found": 1
+  },
+  "bySubject": {
+    "Physics": 25,
+    "Chemistry": 18,
+    "Maths": 3
+  },
+  "previouslyChecked": {
+    "v137": 23,
+    "v139": 48,
+    "v140": 25
+  },
+  "all142Reconciled": true,
+  "remainingInV137Sample": 0,
+  "remainingIncompleteOrMissingHere": [
+    "B005",
+    "B006",
+    "B020",
+    "B024",
+    "B050",
+    "B060",
+    "B075",
+    "B077",
+    "B089",
+    "B096",
+    "B103",
+    "B104",
+    "B106"
+  ],
+  "separateV135FrontOnlyRowsStillNeedingReview": 106,
+  "reviewed": [
+    {
+      "requirementId": "B004",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Distinguish nucleon number from proton number",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_nuclide",
+          "front": "In nuclide notation, what do A and Z mean?",
+          "back": "A = nucleon number; Z = proton number."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B005",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Use nuclide notation for number of neutrons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "phy_nuclide",
+          "front": "In nuclide notation, what do A and Z mean?",
+          "back": "A = nucleon number; Z = proton number."
+        }
+      ],
+      "limitation": "A and Z are defined, but the number of neutrons A − Z is not stated directly in a short answer."
+    },
+    {
+      "requirementId": "B006",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "requirement": "Explain meaning of isotopes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "no_direct_recall_card_found",
+      "support": [],
+      "limitation": "No active Physics flashcard directly defines isotopes as nuclides with the same proton number but different neutron number."
+    },
+    {
+      "requirementId": "B009",
+      "subject": "Physics",
+      "specRef": "3.2.1.2",
+      "requirement": "Describe changes in nucleon and proton number during beta minus decay",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_beta_minus_numbers",
+          "front": "What happens to Z and A in beta-minus nuclear decay?",
+          "back": "Proton number Z increases by 1; nucleon number A is unchanged."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B014",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "requirement": "Calculate photon energy from frequency",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_emission_photon",
+          "front": "What is the photon energy when an excited electron falls to a lower level?",
+          "back": "E = hf = E(high) − E(low), using the positive energy difference."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B018",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "requirement": "Recognise beta and electron-capture interactions as weak",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_beta_minus_change",
+          "front": "What quark change occurs in beta-minus decay?",
+          "back": "d → u + W⁻; W⁻ → e⁻ + electron antineutrino."
+        },
+        {
+          "id": "phy_pandr_v29_sketch_capture",
+          "front": "Draw the electron-capture weak interaction at quark level.",
+          "back": "e⁻ + u → νₑ + d, with W⁻ exchanged between lepton and quark."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B020",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "Recall baryon numbers for baryons and antibaryons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "task1_v124_bulk_phy_022",
+          "front": "What is the baryon number of an antibaryon?",
+          "back": "−1."
+        },
+        {
+          "id": "phy_pandr_v29_charge_not_enough",
+          "front": "Why is p → e⁺ + γ forbidden despite conserving charge?",
+          "back": "Baryon number changes from +1 to 0, so the reaction is forbidden."
+        }
+      ],
+      "limitation": "The antibaryon value −1 is direct; baryon number +1 is only illustrated via a proton example, not clearly stated as a general rule."
+    },
+    {
+      "requirementId": "B021",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "requirement": "Distinguish electron and muon lepton-number conservation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_conservation_particle",
+          "front": "Which conservation rules apply to particle interactions?",
+          "back": "Charge, baryon number, electron and muon lepton numbers, energy and momentum conserved; strangeness conserved in strong, may change in weak."
+        },
+        {
+          "id": "phy_pandr_v29_muon_decay",
+          "front": "State the products of muon-minus decay.",
+          "back": "μ⁻ → e⁻ + electron antineutrino + muon neutrino."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B024",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "requirement": "Recall charges of up, down and strange quarks",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "task1_v124_bulk_phy_017",
+          "front": "What is the charge of an up quark?",
+          "back": "+2/3 of the elementary charge."
+        },
+        {
+          "id": "task1_v124_bulk_phy_018",
+          "front": "What is the charge of a down quark?",
+          "back": "−1/3 of the elementary charge."
+        }
+      ],
+      "limitation": "Up and down charges are explicitly recalled; the strange quark charge is missing from the checked Physics cards."
+    },
+    {
+      "requirementId": "B025",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "requirement": "Recall proton and neutron quark compositions",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_proton_quarks",
+          "front": "What is the quark composition of a proton?",
+          "back": "uud."
+        },
+        {
+          "id": "phy_neutron_quarks",
+          "front": "What is the quark composition of a neutron?",
+          "back": "udd."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B026",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "requirement": "Distinguish quark-antiquark mesons from three-quark baryons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_baryon_meson",
+          "front": "How do baryons and mesons differ?",
+          "back": "Baryons contain three quarks; mesons contain a quark and an antiquark."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B027",
+      "subject": "Physics",
+      "specRef": "3.2.1.7",
+      "requirement": "Explain neutron decay as transformation of down into up quark",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_beta_minus_change",
+          "front": "What quark change occurs in beta-minus decay?",
+          "back": "d → u + W⁻; W⁻ → e⁻ + electron antineutrino."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B031",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Define threshold frequency and its relation to work function",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_threshold_frequency",
+          "front": "Define the threshold frequency f₀.",
+          "back": "Minimum photon frequency needed to emit photoelectrons from that metal."
+        },
+        {
+          "id": "phy_pandr_v29_threshold_eq",
+          "front": "What equation relates threshold frequency and work function?",
+          "back": "hf₀ = φ; so f₀ = φ/h."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B033",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Explain effect of light intensity above threshold on photoelectron number",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_intensity_fixed_f",
+          "front": "How does increasing light intensity above threshold affect emission?",
+          "back": "More photoelectrons per second; no increase in maximum kinetic energy."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B034",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Explain effect of frequency above threshold on maximum photoelectron energy",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_frequency_fixed_i",
+          "front": "How does increasing frequency above threshold affect photoelectrons?",
+          "back": "Maximum kinetic energy increases because Eₖ(max) = hf − φ."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B043",
+      "subject": "Physics",
+      "specRef": "3.5.1.1",
+      "requirement": "Define current as rate of charge flow",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_current",
+          "front": "What is electric current?",
+          "back": "I = ΔQ/Δt, rate of flow of charge."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B044",
+      "subject": "Physics",
+      "specRef": "3.5.1.1",
+      "requirement": "Define potential difference as energy transferred per unit charge",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pd",
+          "front": "Define potential difference.",
+          "back": "Energy transferred per unit charge: V = W/Q."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B050",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Define electrical resistivity and its SI unit",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "phy_rp5",
+          "front": "How is the resistivity of a wire found?",
+          "back": "ρ = RA/L, with R = V/I and A = πd²/4."
+        },
+        {
+          "id": "task1_phy_008",
+          "front": "What is the unit of resistivity in base units?",
+          "back": "Ω m."
+        },
+        {
+          "id": "task1_v125_065",
+          "front": "What does resistivity measure?",
+          "back": "Resistance normalised for a material's length and cross-section."
+        }
+      ],
+      "limitation": "Formula and Ω m unit exist, but the material-property definition could be more precise and standalone."
+    },
+    {
+      "requirementId": "B052",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Explain negative temperature coefficient thermistor response",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_thermistor",
+          "front": "For an NTC thermistor, what happens to resistance as temperature rises?",
+          "back": "Resistance decreases."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B054",
+      "subject": "Physics",
+      "specRef": "3.5.1.3",
+      "requirement": "Link micrometer measurement and cross-sectional area for resistivity",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_phy_107",
+          "front": "Why use a micrometer for a wire's diameter?",
+          "back": "Small diameter needs a high-resolution measurement."
+        },
+        {
+          "id": "task1_practical_010",
+          "front": "How is wire cross-sectional area obtained from diameter d?",
+          "back": "A = πd²/4."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B060",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "requirement": "Explain charge and energy conservation in dc circuits",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "phy_parallel_current",
+          "front": "How does current behave at a junction?",
+          "back": "Total current into a junction equals total current out."
+        },
+        {
+          "id": "phy_series_pd",
+          "front": "What happens to p.d. in a series circuit?",
+          "back": "The supply p.d. equals the sum of component p.d.s."
+        }
+      ],
+      "limitation": "Junction-current and loop-voltage rules are stored, but their connection to charge and energy conservation is only implicit in the answers."
+    },
+    {
+      "requirementId": "B061",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "requirement": "Explain potential-divider output relation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_potential_divider",
+          "front": "For two series resistors, how is output p.d. found?",
+          "back": "Vout = Vin × R₂/(R₁ + R₂), taking R₂ across the output."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B064",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Define electromotive force in terms of energy per charge",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_emf",
+          "front": "Define emf.",
+          "back": "Energy supplied by the source per unit charge."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B065",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Relate terminal potential difference to emf and lost volts",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_internal_001",
+          "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+          "back": "V = ε − Ir. The term Ir is the lost volts inside the cell."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B068",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "requirement": "Explain why terminal voltage falls as current increases",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v136_042",
+          "front": "What changes in an emf–terminal-voltage graph as current rises?",
+          "back": "Lost volts Ir increases; terminal p.d. decreases."
+        },
+        {
+          "id": "phy_internal_001",
+          "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+          "back": "V = ε − Ir. The term Ir is the lost volts inside the cell."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B069",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Distinguish displayed and skeletal formulae",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_113",
+          "front": "What does 'displayed formula' show?",
+          "back": "Every atom and every covalent bond."
+        },
+        {
+          "id": "task1_chem_114",
+          "front": "What is a skeletal formula?",
+          "back": "A line representation omitting C symbols and most attached H atoms."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B071",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "requirement": "Distinguish structural isomers and stereoisomers",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_110",
+          "front": "What is a structural isomer?",
+          "back": "Same molecular formula, different structural formula."
+        },
+        {
+          "id": "task1_v130_117",
+          "front": "What makes a pair of molecules stereoisomers?",
+          "back": "Same structural formula but different spatial arrangement."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B075",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "requirement": "Explain incomplete combustion products of hydrocarbons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "task1_v130_121",
+          "front": "What pollutant is formed by incomplete hydrocarbon combustion?",
+          "back": "Carbon monoxide, CO."
+        }
+      ],
+      "limitation": "The card states carbon monoxide, but not carbon/soot formation or the fuller set of products under oxygen deficiency."
+    },
+    {
+      "requirementId": "B077",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "requirement": "Explain catalytic cracking and its chemical products",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "task1_chem_126",
+          "front": "What is cracking?",
+          "back": "Breaking large hydrocarbons into smaller hydrocarbons."
+        },
+        {
+          "id": "task1_v130_119",
+          "front": "What distinguishes thermal from catalytic cracking in product emphasis?",
+          "back": "Thermal cracking favours alkenes; catalytic cracking favours fuels and aromatics."
+        }
+      ],
+      "limitation": "The cracking definition and rough product emphasis exist; catalyst/conditions and the expected product families are not directly captured."
+    },
+    {
+      "requirementId": "B079",
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "requirement": "Compare substitution and elimination reaction outcomes",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_mechanisms_v42_11",
+          "front": "What is the mechanistic difference between substitution and elimination?",
+          "back": "Substitution replaces a group; elimination removes atoms/groups to create C=C."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B088",
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "requirement": "Interpret tests distinguishing aldehydes, ketones and carboxylic acids",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_aldehyde_tollens",
+          "front": "What does Tollens' reagent do with an aldehyde?",
+          "back": "It is reduced to silver, producing a silver mirror; ketones give no reaction."
+        },
+        {
+          "id": "chem_spec_v40_003",
+          "front": "Why do carboxylic acids react with carbonates?",
+          "back": "Their acidic protons react with carbonate ions, releasing carbon dioxide."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B089",
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "requirement": "Link IR absorption band to O–H, C=O and C–H presence",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "chem_ir_oh",
+          "front": "Where is the broad O–H absorption of an alcohol in an IR spectrum?",
+          "back": "About 3230–3550 cm⁻¹."
+        },
+        {
+          "id": "task1_v124_bulk_chem_135",
+          "front": "Where does a strong carbonyl C=O IR absorption appear approximately?",
+          "back": "Around 1700 cm⁻¹."
+        }
+      ],
+      "limitation": "O–H and C=O are recalled; no concise checked C–H absorption card in the existing bank."
+    },
+    {
+      "requirementId": "B090",
+      "subject": "Chemistry",
+      "specRef": "3.3.6",
+      "requirement": "Explain mass spectrum molecular ion for Mr",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_009",
+          "front": "What does the molecular-ion peak show in a mass spectrum?",
+          "back": "The relative molecular mass of the molecular ion."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B095",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "requirement": "Explain formation and hydrolysis of esters",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_spec_v40_009",
+          "front": "What is the general equation for esterification?",
+          "back": "Carboxylic acid + alcohol ⇌ ester + water."
+        },
+        {
+          "id": "chem_spec_v40_011",
+          "front": "What is produced by acidic ester hydrolysis?",
+          "back": "A carboxylic acid and an alcohol."
+        },
+        {
+          "id": "chem_spec_v40_012",
+          "front": "What is produced by alkaline ester hydrolysis?",
+          "back": "A carboxylate salt and an alcohol."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B096",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "requirement": "Define biodiesel as methyl or ethyl esters of fatty acids",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "chem_spec_v40_022",
+          "front": "What type of substances make up biodiesel?",
+          "back": "Methyl esters of long-chain carboxylic acids."
+        }
+      ],
+      "limitation": "Methyl esters are covered; ethyl esters are not stated explicitly in the checked answer."
+    },
+    {
+      "requirementId": "B097",
+      "subject": "Chemistry",
+      "specRef": "3.3.9",
+      "requirement": "Distinguish acyl chloride and acid anhydride functional structures",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_acyl_review_v41_01",
+          "front": "What is the general formula of an acyl chloride?",
+          "back": "R–C(=O)–Cl."
+        },
+        {
+          "id": "task1_v130_140",
+          "front": "What is the functional group of an acid anhydride?",
+          "back": "–CO–O–CO–."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B098",
+      "subject": "Chemistry",
+      "specRef": "3.3.9",
+      "requirement": "Describe nucleophilic addition-elimination in acyl derivatives",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_acyl_review_v41_13",
+          "front": "Why is nucleophilic acylation called addition–elimination?",
+          "back": "The nucleophile adds before a leaving group is expelled."
+        },
+        {
+          "id": "chem_acyl_review_v41_08",
+          "front": "In acylation mechanisms, where should the nucleophile's arrow point?",
+          "back": "Toward the electrophilic carbonyl carbon."
+        }
+      ],
+      "limitation": "Detailed curved-arrow drawings still belong in exam practice, not proof of drawing competence from a short card."
+    },
+    {
+      "requirementId": "B103",
+      "subject": "Chemistry",
+      "specRef": "3.3.11",
+      "requirement": "Distinguish primary secondary and tertiary amines",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "task1_chem_219",
+          "front": "What is a primary amine?",
+          "back": "Nitrogen bonded to one carbon-containing group."
+        }
+      ],
+      "limitation": "Only the primary amine definition is direct; secondary and tertiary amine classification requires cards."
+    },
+    {
+      "requirementId": "B104",
+      "subject": "Chemistry",
+      "specRef": "3.3.12",
+      "requirement": "Explain addition polymer disposal and biodegradable considerations",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "task1_v124_chem_004",
+          "front": "Why are polyalkenes generally resistant to hydrolysis?",
+          "back": "Their backbones contain C–C bonds, not hydrolysable ester or amide links."
+        },
+        {
+          "id": "task1_v124_chem_009",
+          "front": "Give one benefit of recycling polymers rather than discarding them.",
+          "back": "It can reduce demand for raw materials and landfill waste."
+        }
+      ],
+      "limitation": "Hydrolysis resistance and one recycling benefit are recalled; other disposal options and constraints remain outside direct recall."
+    },
+    {
+      "requirementId": "B106",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Distinguish amino acid zwitterion at isoelectric point",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "partial_answer_needs_targeted_follow_up",
+      "support": [
+        {
+          "id": "chem_a2_amino_zwitterion",
+          "front": "What is a zwitterion?",
+          "back": "A molecule containing both positive and negative charges but with no overall charge."
+        },
+        {
+          "id": "task1_v124_bulk_chem_229",
+          "front": "What causes amino acids to exist as zwitterions near neutral pH?",
+          "back": "Proton transfer from –COOH to –NH₂."
+        }
+      ],
+      "limitation": "Zwitterion and proton transfer are defined, but not the meaning of an isoelectric point."
+    },
+    {
+      "requirementId": "B108",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "requirement": "Distinguish primary to tertiary protein structure",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_full_079",
+          "front": "What is the primary structure of a protein?",
+          "back": "Its amino-acid sequence."
+        },
+        {
+          "id": "task1_full_080",
+          "front": "What are two common protein secondary structures?",
+          "back": "Alpha helices and beta pleated sheets."
+        },
+        {
+          "id": "task1_full_081",
+          "front": "What is a protein's tertiary structure?",
+          "back": "Its overall three-dimensional folding."
+        },
+        {
+          "id": "task1_full_082",
+          "front": "What interactions stabilise protein secondary structure?",
+          "back": "Hydrogen bonds."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B112",
+      "subject": "Chemistry",
+      "specRef": "3.3.14",
+      "requirement": "Explain why short routes and high atom economy reduce waste",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v124_bulk_chem_238",
+          "front": "Why is a short synthetic route often preferred?",
+          "back": "Fewer steps reduce material losses and waste."
+        },
+        {
+          "id": "task1_full_075",
+          "front": "Why can high atom economy benefit a synthesis?",
+          "back": "It reduces unwanted by-products and resource waste."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B113",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "requirement": "Interpret proton NMR splitting from neighbouring protons",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_nmr_split",
+          "front": "What does the n+1 rule describe in simple ¹H NMR spectra?",
+          "back": "A proton environment with n equivalent neighbouring protons is split into n+1 peaks."
+        },
+        {
+          "id": "task1_v124_bulk_chem_243",
+          "front": "What does an n+1 proton NMR splitting pattern suggest?",
+          "back": "n equivalent neighbouring protons."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B129",
+      "subject": "Maths",
+      "specRef": "3.5",
+      "requirement": "Recall arithmetic progression nth-term formula",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "math_arith_nth",
+          "front": "What is the nth term of an arithmetic sequence?",
+          "back": "uₙ = a + (n−1)d."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B130",
+      "subject": "Maths",
+      "specRef": "3.5",
+      "requirement": "Recall geometric progression nth-term formula",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "math_geom_nth",
+          "front": "What is the nth term of a geometric sequence?",
+          "back": "uₙ = ar^(n−1)."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    },
+    {
+      "requirementId": "B135",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "requirement": "Recall radian arc length relation",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/appendix-b-mathematical-formulae-and-identities",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v130_158",
+          "front": "In radians, what is arc length in a circle?",
+          "back": "s = rθ."
+        }
+      ],
+      "limitation": "Supports the stated narrow recall point only; practical, diagrammatic and extended exam application are not certified."
+    }
+  ]
+}
