@@ -47,8 +47,8 @@ for(let i=0;i<added.length;i++){
  if(/draw|on paper|diagram/i.test(q.prompt))drawings++;
 }
 assert(drawings>=9,'Missing diagram/mechanism tasks');
-for(const topic of ['Electrophilic addition','Nucleophilic substitution','Elimination','Free-radical mechanism','RP5 Distillation','RP6 Functional-group tests','Organic analysis','Addition polymers'])
- assert(added.some(q=>q.subtopic===topic),'Missing subtopic '+topic);
+for(const topic of ['Alkenes','Halogenoalkanes','Alkanes','Alcohols','Organic chemistry','RP5 Distillation','RP6 Organic tests','Organic analysis'])
+ assert(added.some(q=>q.revisionTopic===topic),'Missing mapped revision topic '+topic);
 const deckTopics=new Set(deck.cards.filter(c=>c.subject==='Chemistry').map(c=>c.revisionTopic||c.topic));
 for(const q of added)assert(deckTopics.has(q.revisionTopic),'Question topic missing from flashcard filters '+q.id);
 const cards=new Map(deck.cards.map(c=>[c.id,c]));
