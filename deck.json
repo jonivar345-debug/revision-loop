@@ -65834,13 +65834,13 @@
     {
       "id": "task1_v142_015",
       "subject": "Chemistry",
-      "specRef": "3.3.12",
+      "specRef": "3.3.12.2",
       "stage": "A2",
-      "topic": "Amino acids",
-      "front": "What is the isoelectric point of an amino acid?",
-      "back": "The pH at which its average net electrical charge is zero.",
+      "topic": "Polymers",
+      "front": "Why can incinerating polymer waste cause environmental problems?",
+      "back": "It releases CO₂ and may produce harmful gases if emissions are not controlled.",
       "accept": [
-        "The pH at which its average net electrical charge is zero."
+        "It releases CO₂ and may produce harmful gases if emissions are not controlled."
       ],
       "reject": [],
       "strictRecall": true,
@@ -65850,30 +65850,30 @@
       "active": true,
       "kind": "content",
       "priority": 6,
-      "courseTopic": "Amino acids",
-      "revisionTopic": "Amino acids"
+      "courseTopic": "Polymers",
+      "revisionTopic": "Polymers"
     },
     {
       "id": "task1_v142_016",
       "subject": "Chemistry",
-      "specRef": "3.3.10",
+      "specRef": "3.3.12.2",
       "stage": "A2",
-      "topic": "Esters and biodiesel",
-      "front": "What kind of esters make up biodiesel derived from fatty acids?",
-      "back": "Fatty acid methyl or ethyl esters.",
+      "topic": "Polymers",
+      "front": "Why can recycling mixed polymer waste be difficult?",
+      "back": "Different polymers have different properties and may need sorting before reprocessing.",
       "accept": [
-        "Fatty acid methyl or ethyl esters."
+        "Different polymers have different properties and may need sorting before reprocessing."
       ],
       "reject": [],
       "strictRecall": true,
-      "taught": true,
-      "mock": true,
-      "scope": "mock",
+      "taught": false,
+      "mock": false,
+      "scope": "full",
       "active": true,
       "kind": "content",
       "priority": 6,
-      "courseTopic": "Esters and biodiesel",
-      "revisionTopic": "Esters and biodiesel"
+      "courseTopic": "Polymers",
+      "revisionTopic": "Polymers"
     }
   ],
   "meta": {
@@ -66238,9 +66238,10 @@
           "Physics": 8,
           "Chemistry": 8
         },
-        "source": "AQA 7408 Particles/Electricity and 7405 Alkanes/Amines/Esters/Amino acids",
+        "source": "AQA 7408 3.2/3.5 and 7405 3.3.2, 3.3.11, 3.3.12",
         "preservation": "All 3,128 prior records and progress IDs unchanged",
-        "fullSpecCoverageCertified": false
+        "fullSpecCoverageCertified": false,
+        "note": "Official AQA 7405 identifies biodiesel specifically as methyl esters (already in an existing card); an isoelectric point is not an explicit AQA requirement. v142 cards 015-016 instead address assessed polymer disposal/recycling discussion."
       }
     },
     "chatYear1CoverageV126": {
