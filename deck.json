@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 142,
+  "deckVersion": 144,
   "updatedAt": "2026-10-27",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -65874,6 +65874,182 @@
       "priority": 6,
       "courseTopic": "Polymers",
       "revisionTopic": "Polymers"
+    },
+    {
+      "id": "task1_v144_001",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "front": "What does one mole of specified particles represent?",
+      "back": "An amount containing the Avogadro number of particles (atoms, ions, molecules or other entities).",
+      "accept": [
+        "An amount containing the Avogadro number of particles (atoms, ions, molecules or other entities)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance"
+    },
+    {
+      "id": "task1_v144_002",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.1",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "Give the formulae and charges of phosphate and hydrogencarbonate ions.",
+      "back": "Phosphate PO₄³⁻; hydrogencarbonate HCO₃⁻.",
+      "accept": [
+        "Phosphate PO₄³⁻; hydrogencarbonate HCO₃⁻."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding"
+    },
+    {
+      "id": "task1_v144_003",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.1",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "What charge rule must the formula of an ionic compound satisfy?",
+      "back": "The total positive and negative ionic charges must cancel to give zero overall charge.",
+      "accept": [
+        "The total positive and negative ionic charges must cancel to give zero overall charge."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding"
+    },
+    {
+      "id": "task1_v144_004",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.4",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "Why can a solid metal conduct electricity?",
+      "back": "It contains mobile delocalised electrons that carry charge through the solid.",
+      "accept": [
+        "It contains mobile delocalised electrons that carry charge through the solid."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding"
+    },
+    {
+      "id": "task1_v144_005",
+      "subject": "Chemistry",
+      "specRef": "3.1.3.6",
+      "stage": "AS",
+      "topic": "Bonding",
+      "front": "Why do simple molecular substances usually not conduct electricity?",
+      "back": "They have no freely moving ions or delocalised electrons to carry charge.",
+      "accept": [
+        "They have no freely moving ions or delocalised electrons to carry charge."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding"
+    },
+    {
+      "id": "task1_v144_006",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "stage": "AS",
+      "topic": "Periodicity",
+      "front": "Why does the melting point generally rise from sodium to aluminium?",
+      "back": "Metallic bonds strengthen as ion charge and delocalised electrons increase and ion size falls.",
+      "accept": [
+        "Metallic bonds strengthen as ion charge and delocalised electrons increase and ion size falls."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Periodicity",
+      "revisionTopic": "Periodicity"
+    },
+    {
+      "id": "task1_v144_007",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "stage": "AS",
+      "topic": "Periodicity",
+      "front": "Why does sulfur have a higher melting point than chlorine?",
+      "back": "S₈ molecules are larger than Cl₂ and have more electrons, giving stronger induced dipole forces.",
+      "accept": [
+        "S₈ molecules are larger than Cl₂ and have more electrons, giving stronger induced dipole forces."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Periodicity",
+      "revisionTopic": "Periodicity"
+    },
+    {
+      "id": "task1_v144_008",
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "stage": "AS",
+      "topic": "Periodicity",
+      "front": "Why does argon have a lower melting point than chlorine?",
+      "back": "Ar is monatomic, with fewer electrons and weaker induced dipole attractions than Cl₂.",
+      "accept": [
+        "Ar is monatomic, with fewer electrons and weaker induced dipole attractions than Cl₂."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Periodicity",
+      "revisionTopic": "Periodicity"
     }
   ],
   "meta": {
@@ -65982,7 +66158,7 @@
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 1039,
+      "chemistryNew": 1047,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
@@ -66242,6 +66418,18 @@
         "preservation": "All 3,128 prior records and progress IDs unchanged",
         "fullSpecCoverageCertified": false,
         "note": "Official AQA 7405 identifies biodiesel specifically as methyl esters (already in an existing card); an isoelectric point is not an explicit AQA requirement. v142 cards 015-016 instead address assessed polymer disposal/recycling discussion."
+      },
+      "v144": {
+        "status": "draft pending CI and merge",
+        "baselineCards": 3144,
+        "added": 8,
+        "breakdown": {
+          "Chemistry": 8
+        },
+        "focus": "Narrow Year 1 recall gaps following exact AQA v135 audit; definitions, ions, structure and Period 3 melting",
+        "source": "AQA Chemistry 7405 3.1.2, 3.1.3, 3.2.1",
+        "previousCardIdsRetained": true,
+        "fullSpecCoverageCertified": false
       }
     },
     "chatYear1CoverageV126": {
