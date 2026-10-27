@@ -1,3 +1,15 @@
+# Revision Loop — v145 science audit development (27 October 2026)
+
+**Live baseline:** v144 published, 3,152 cards (3,148 active), merge #91 and successful GitHub Pages deployment. Do not describe v145 as published before PR merge and successful Pages build.
+
+**Proposed v145:** 27 short A-level-only recall cards (8 Physics, 19 Chemistry) after reviewing existing answers, with 3,179 cards (3,175 active) if released. A separate source-linked evidence ledger records 24 checked existing recall facts, 27 new recall prompts and 8 outcomes needing applied exam questions. These 59 are selected atomic outcomes, **not** a complete compulsory AQA syllabus certification.
+
+**Focus:** Physics capacitor/electric-field graph interpretation and nuclear size; Chemistry electrochemical cells, Period 3 oxides and their acids, transition-metal oxidation states and aqueous ion observations. All 27 proposed cards are A2 stage, `taught:false`, `mock:false`, `scope:full`, protecting November mock filters. Original 3,152 records/IDs retained. No app runtime, Firebase, progress keys, World, shop, images or question banks altered.
+
+**Next:** Confirm all four workflows green on PR head, merge, verify Pages; then continue complete 7408/7405/7357 specification-to-deck and question crosswalk, practical and graph questions, with optional Physics module unconfirmed. See `editorial/task1-v145-a2-science-handover.md` and `editorial/task1-v145-a2-science-evidence.json`.
+
+---
+
 # Revision Loop — current project checkpoint (27 October 2026)
 
 **Latest published flashcards:** v142, PR #89, **3,144 cards (3,140 active)**, on GitHub Pages. All original 3,128 pre-v142 records and stable review IDs were preserved.
