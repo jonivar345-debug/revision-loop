@@ -27,4 +27,5 @@ assert.deepEqual(statuses,a.counts.byStatus);
 assert(a.rows.some(r=>r.specRef==='3.3.6.2'&&r.status==='gap_applied'),'Must report precise mass application gap');
 assert(a.rows.some(r=>r.specRef==='3.3.5.1'&&r.status==='gap_recall'),'Must report fermentation recall gap');
 assert(a.scope.includes('not a guarantee'));
+assert.equal(a.policy.excludesA2,true);
 console.log('PASS v148: '+a.rows.length+' Year 1 organic evidence checks over 19 subsections, exact card/question snapshots verified, older records unchanged');
