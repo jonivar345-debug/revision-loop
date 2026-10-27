@@ -1878,7 +1878,7 @@
           "back": "A straight line at fixed length and mass per unit length."
         }
       ],
-      "limitation": "The deck recalls the factors affecting fundamental string frequency and f² versus tension, but has no direct general equation f₁ = (1/(2L))√(T/μ). Check booklet coverage before adding a memory card."
+      "limitation": "The deck recalls the factors affecting string fundamental frequency, but does not state the general f₁ = (1/(2L))√(T/μ) formula. AQA provides this formula in the data-and-formulae booklet; the remaining need is applying it and interpreting string experiments, not necessarily another memorisation card."
     },
     {
       "requirementId": "A091",
@@ -2344,5 +2344,11 @@
       ],
       "limitation": "Existing answers checked for this narrow memory fact only; no certification of complete exam skills, diagrams, practical work or all specification sub-bullets."
     }
-  ]
+  ],
+  "formulaBookletReview": {
+    "requirementId": "A090",
+    "suppliedInAqaBooklet": true,
+    "source": "https://store.aqa.org.uk/resources/physics/AQA-7408-SDB.PDF",
+    "otherNoteworthyGivenData": "AQA also supplies SI masses of electrons and protons; do not prioritise duplicates merely because they can be memorised."
+  }
 }
