@@ -15,7 +15,7 @@ assert.equal(evidence.sourceDeckCardCount,3144);
 assert.equal(pending.length,106);
 assert.equal(evidence.reviewedCount,106);
 assert.deepEqual(evidence.bySubject,{Chemistry:71,Physics:35});
-assert.deepEqual(evidence.statuses,{answer_checked_for_narrow_recall:88,partially_supported_or_needs_application:18});
+assert.deepEqual(evidence.statuses,{answer_checked_for_narrow_recall:90,partially_supported_or_needs_application:16});
 assert(evidence.scope.includes('Not whole-syllabus certification'));
 assert.equal(evidence.reviewed.length,106);
 const seen=new Set();
@@ -41,4 +41,4 @@ for(const item of evidence.reviewed){
 assert.deepEqual(new Set(pending.map(r=>r.id)),seen);
 const partial=evidence.reviewed.filter(x=>x.status==='partially_supported_or_needs_application').map(x=>x.requirementId);
 assert.deepEqual(partial,evidence.partialRequirementIds);
-console.log('PASS v143: 106 original AQA candidate requirements have exact model-answer snapshots; 88 narrow supported and 18 partial, with no changed card IDs');
+console.log('PASS v143: 106 original AQA candidate requirements have exact model-answer snapshots; 90 narrow supported and 16 partial, with no changed card IDs');
