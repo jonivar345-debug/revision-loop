@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 136,
-  "updatedAt": "2026-10-26",
+  "deckVersion": 138,
+  "updatedAt": "2026-10-27",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -65192,6 +65192,336 @@
       "priority": 6,
       "courseTopic": "NMR spectroscopy",
       "revisionTopic": "NMR spectroscopy"
+    },
+    {
+      "id": "task1_v138_001",
+      "subject": "Maths",
+      "specRef": "3.7",
+      "stage": "AS",
+      "topic": "Exponentials & logarithms",
+      "front": "State the logarithm quotient law for logₐ(x/y).",
+      "back": "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1).",
+      "accept": [
+        "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Exponentials & logarithms",
+      "revisionTopic": "Exponentials & logarithms"
+    },
+    {
+      "id": "task1_v138_002",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "front": "What are the relative charges of proton, neutron and electron?",
+      "back": "Proton +1; neutron 0; electron −1.",
+      "accept": [
+        "Proton +1; neutron 0; electron −1."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation"
+    },
+    {
+      "id": "task1_v138_003",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "front": "What are the approximate relative masses of proton, neutron and electron?",
+      "back": "About 1, 1 and 1/1836, respectively.",
+      "accept": [
+        "About 1, 1 and 1/1836, respectively."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation"
+    },
+    {
+      "id": "task1_v138_004",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "How do the resistances of series-connected components combine?",
+      "back": "Rₜ = R₁ + R₂ + … .",
+      "accept": [
+        "Rₜ = R₁ + R₂ + … ."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_005",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What is the rule for equivalent resistance of two parallel resistors?",
+      "back": "1/Rₜ = 1/R₁ + 1/R₂.",
+      "accept": [
+        "1/Rₜ = 1/R₁ + 1/R₂."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_006",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What happens to Vout across an NTC thermistor as temperature increases?",
+      "back": "Vout falls when supply voltage and the other series resistance are fixed.",
+      "accept": [
+        "Vout falls when supply voltage and the other series resistance are fixed."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_007",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What happens to Vout across the fixed resistor as an NTC warms?",
+      "back": "Vout rises because the thermistor resistance falls.",
+      "accept": [
+        "Vout rises because the thermistor resistance falls."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_008",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What happens to Vout across an LDR in brighter light?",
+      "back": "Vout falls for fixed supply voltage and other series resistance.",
+      "accept": [
+        "Vout falls for fixed supply voltage and other series resistance."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_009",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For an ohmic V–I graph (V vertical), what is its gradient?",
+      "back": "Resistance R.",
+      "accept": [
+        "Resistance R."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_010",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For an ohmic I–V graph (I vertical), what is its gradient?",
+      "back": "Conductance 1/R.",
+      "accept": [
+        "Conductance 1/R."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v138_011",
+      "subject": "Chemistry",
+      "specRef": "3.3.2.1",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "front": "What does saturated mean for an alkane?",
+      "back": "No carbon–carbon multiple bonds; only C–C single bonds.",
+      "accept": [
+        "No carbon–carbon multiple bonds; only C–C single bonds."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Alkanes",
+      "revisionTopic": "Alkanes"
+    },
+    {
+      "id": "task1_v138_012",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.2",
+      "stage": "AS",
+      "topic": "Organic mechanisms",
+      "front": "How is the unpaired electron of a radical drawn?",
+      "back": "With a single dot, e.g. Cl•.",
+      "accept": [
+        "With a single dot, e.g. Cl•."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Organic mechanisms",
+      "revisionTopic": "Organic mechanisms"
+    },
+    {
+      "id": "task1_v138_013",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.2",
+      "stage": "AS",
+      "topic": "Organic mechanisms",
+      "front": "Are full curly electron-pair arrows needed for radical substitution?",
+      "back": "No. Radical mechanisms are shown without electron-pair curly arrows.",
+      "accept": [
+        "No. Radical mechanisms are shown without electron-pair curly arrows."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Organic mechanisms",
+      "revisionTopic": "Organic mechanisms"
+    },
+    {
+      "id": "task1_v138_014",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "stage": "A2",
+      "topic": "Chromatography",
+      "front": "If a TLC spot stays put but the solvent front travels further, what happens to Rf?",
+      "back": "Rf decreases: the solvent-front distance in the denominator increases.",
+      "accept": [
+        "Rf decreases: the solvent-front distance in the denominator increases."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Chromatography",
+      "revisionTopic": "Chromatography"
+    },
+    {
+      "id": "task1_v138_015",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "stage": "A2",
+      "topic": "Chromatography",
+      "front": "Why must a TLC starting spot be above the solvent level?",
+      "back": "So the sample travels up the plate rather than dissolving in the solvent pool.",
+      "accept": [
+        "So the sample travels up the plate rather than dissolving in the solvent pool."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 6,
+      "courseTopic": "Chromatography",
+      "revisionTopic": "Chromatography"
     }
   ],
   "meta": {
@@ -65296,15 +65626,15 @@
     "task1FlashcardAudit": {
       "date": "2026-10-26",
       "baseDeck": 121,
-      "physicsNew": 698,
+      "physicsNew": 707,
       "physicsSkippedExactDuplicates": 10,
       "emphasis": "Definitions and single-fact retrieval; no lengthy worked questions.",
       "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
-      "chemistryNew": 1026,
+      "chemistryNew": 1031,
       "chemistrySkippedExactDuplicates": 13,
       "chemistrySource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
       "warning": "A further coverage expansion. Certification of every assessable AQA sub-bullet still requires verification; choice of Physics option must be confirmed.",
-      "mathsNew": 69,
+      "mathsNew": 70,
       "oldCardsReworded": [
         "phy_work_angle_signs",
         "phy_electron_diffraction_exam_q9b"
@@ -65534,6 +65864,19 @@
         },
         "scope": "Memory-heavy precise definitions, non-given formulae, practical data interpretation, selective Maths; not full spec certification",
         "preservation": "All existing flashcard records and IDs left unchanged"
+      },
+      "v138": {
+        "status": "draft: awaiting tests and release",
+        "source": "AQA 7357 Appendix B; Physics 7408 sections 3.2 and 3.5; Chemistry 7405 3.3",
+        "baselineCards": 3113,
+        "added": 15,
+        "breakdown": {
+          "Maths": 1,
+          "Physics": 9,
+          "Chemistry": 5
+        },
+        "protection": "All pre-v138 card IDs preserved, AS mock restrictions retained; no profile, cloud, World or scanner changes",
+        "fullSpecCoverageCertified": false
       }
     },
     "chatYear1CoverageV126": {
