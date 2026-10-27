@@ -1,16 +1,17 @@
 # Revision Loop — current project checkpoint (27 October 2026)
 
-**Latest published:** v142, PR #89, deployed to GitHub Pages. Deck v142 contains **3,144 flashcards (3,140 active)**. All 3,128 pre-v142 card records and review identities were preserved.
+**Latest published flashcards:** v142, PR #89, **3,144 cards (3,140 active)**, on GitHub Pages. All original 3,128 pre-v142 records and stable review IDs were preserved.
 
-**Task 1 v143:** detailed editorial follow-up to the first v135 specification sample; in development until checks, merge and deployment. The release adds **no flashcards or runtime code**. See `editorial/task1-v143-106-requirement-handover.md` and `editorial/task1-v143-v135-106-answer-evidence.json`.
+**v143 completed:** PR #90 merged after all four CI checks passed; answered the previously outstanding **106 front-only candidate requirements** in the v135 selected AQA sample. **90 narrowly supported**, **16 partial or requiring applied exam-question work**. This was an audit-only release: no flashcards or progress keys altered.
 
-- The v135 sample contains **113 selected narrow AQA requirements**. Of those, 106 originally had front-keyword candidates only. The v143 follow-up checked their actual question and model-answer text: **88 narrowly supported, 18 partial or needing exam application** (Chemistry 71, Physics 35). The other seven items received scrutiny in the original v135 ledger.
-- The separate v137 **142-item selected sample** was triaged through v137, v139, v140 and v141, with incomplete outcomes explicitly recorded. Both historical samples are *selected* and overlap in subject content; neither establishes full AQA specification coverage.
-- **Next:** resolve truly missing concise definitions from the partial rows, build an exhaustive AQA 7408/7405/7357 bullet-to-card/practice ledger and assess required practical observations, uncertainties, evaluation and marking. Prioritise first-year Physics and already-taught Chemistry for the November mocks.
-- The student's centre-selected **Physics optional topic is still unconfirmed**; do not require Medical Physics or any alternative until confirmed. Keep untaught advanced content excluded from mock mode.
-- **World photographs are deliberately paused:** 1,064 local images, 266 of 376 complete four-picture galleries; 110 incomplete, with no new photo work authorised in this task.
-- **Saved progress:** preserve `revisionLoopProgress5`, `revisionLoopProfile11`, `revisionLoopSettings11`, existing review IDs, Firestore/cloud progress, XP, purchases and backups. Automated source tests do not themselves reveal the student's private cloud progress or prove it synced on every device.
-- **Release gates:** green cloud/flashcard, scanner marking, World safety and browser acceptance; verify merge and GitHub Pages deployment separately. Do not claim v143 is published until all gates pass.
+**v144 proposed:** eight new Chemistry Year 1 flashcards, bringing the deck to **3,152 (3,148 active)** if the branch passes checks and is merged/deployed. See `editorial/task1-v144-chemistry-precision-handover.md`. Do not assume publication until the Pages workflow succeeds.
+
+- Both selected earlier audits, v135 (113 rows) and v137 (142 rows), have been individually checked, but neither constitutes a complete AQA syllabus crosswalk. Different rows can overlap. Prioritise complete compulsory Physics, Chemistry and Maths specification-to-activity checks next.
+- The v143 partial rows are **not all absent flashcards**: some test calculation, experimental interpretation, unfamiliar chemical structures, graph application or multi-step explanation. Reserve these for exam questions; only missing short definitions/facts belong in flashcards.
+- The school's **Physics optional topic is still unconfirmed**. Do not claim Medical Physics or another option is compulsory before confirmation. Keep untaught advanced material out of mock revision.
+- **World expansion remains paused:** 1,064 locally hosted photos and 266/376 complete galleries, leaving 110 incomplete.
+- **Progress safety:** do not reset `revisionLoopProgress5`, `revisionLoopProfile11`, `revisionLoopSettings11`, original card IDs, Firebase/cloud history, XP, purchases or backups. Source tests cannot directly inspect private review history.
+- **Release gates:** flashcard/cloud, scanner marking, World safety and World browser acceptance all need to pass on the final PR head, followed by merge and successful Pages deployment.
 
 ## Archived development handover (26 October 2026)
 
