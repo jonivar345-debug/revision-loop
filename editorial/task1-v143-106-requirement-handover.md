@@ -8,8 +8,8 @@ All **106 previously keyword-matched-only** requirements from the earlier v135 s
 
 | Classification of 106 further rows | Chemistry | Physics | Total |
 |---|---:|---:|---:|
-| Narrow memory requirement supported by reviewed answers |  |  | **88** |
-| Partial coverage or separate applied-question assessment necessary |  |  | **18** |
+| Narrow memory requirement supported by reviewed answers | **59** | **29** | **88** |
+| Partial coverage or separate applied-question assessment necessary | **12** | **6** | **18** |
 | **Total checked** | **71** | **35** | **106** |
 
 The original v135 seven other sampled outcomes had already received initial scrutiny (six answer-supported and one partial). Therefore **all 113 requirements in that selected sample now have an initial answer-level review**, albeit with unresolved skills/gaps. The separate 142-item v137 sample has also been triaged through v137–v141. Overlap between these two samples is possible; do **not** count them as 255 unique AQA specification points or infer complete subject coverage.
