@@ -1,0 +1,825 @@
+{
+  "schemaVersion": 1,
+  "sourceDeckVersion": 138,
+  "preparedOn": "2026-10-27",
+  "sourceAudit": "editorial/task1-v137-additional-syllabus-candidate-ledger.json",
+  "scope": "Supplementary narrow question-answer evidence, not whole AQA syllabus certification",
+  "reviewedCount": 48,
+  "bySubject": {
+    "Physics": 21,
+    "Chemistry": 27
+  },
+  "reviewed": [
+    {
+      "requirementId": "B003",
+      "subject": "Physics",
+      "specRef": "3.2.1.1",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Define specific charge",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_specific_charge",
+          "front": "What is specific charge?",
+          "back": "charge ÷ mass, Q/m, with unit C kg⁻¹."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B010",
+      "subject": "Physics",
+      "specRef": "3.2.1.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Explain why an antineutrino accompanies beta minus decay",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_beta_minus_antinu",
+          "front": "Why is an electron antineutrino emitted in beta-minus decay?",
+          "back": "To conserve electron lepton number, energy and momentum."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B012",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Define annihilation using conversion of rest energy into photons",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_annihilation",
+          "front": "What happens in particle–antiparticle annihilation?",
+          "back": "Their rest mass/energy is converted to photons while energy and momentum are conserved."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B013",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Explain minimum energy conditions for electron-positron pair creation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pair_production",
+          "front": "What is needed for pair production?",
+          "back": "A photon with enough energy creates a particle–antiparticle pair, usually near a nucleus to conserve momentum."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B015",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Name the four fundamental interactions",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_four_forces",
+          "front": "Name the four fundamental interactions.",
+          "back": "Strong nuclear, electromagnetic, weak nuclear and gravitational."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B016",
+      "subject": "Physics",
+      "specRef": "3.2.1.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Identify virtual photons as exchange particles of electromagnetic interaction",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v130_014",
+          "front": "Which exchange particle represents the electromagnetic interaction?",
+          "back": "A virtual photon."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B019",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Distinguish baryons, mesons and leptons",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_baryon_meson",
+          "front": "How do baryons and mesons differ?",
+          "back": "Baryons contain three quarks; mesons contain a quark and an antiquark."
+        },
+        {
+          "id": "phy_pandr_v29_lepton_definition",
+          "front": "Define a lepton.",
+          "back": "A fundamental particle that does not experience the strong interaction."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B022",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Explain why strange particles are created in pairs by strong interactions",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_strong_pairs",
+          "front": "Why are strange particles produced in associated pairs by strong interactions?",
+          "back": "Total strangeness must be conserved, so opposite strangeness must balance."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B023",
+      "subject": "Physics",
+      "specRef": "3.2.1.5",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "State what interactions can change strangeness",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_quarks_001",
+          "front": "Can strangeness change in a weak interaction?",
+          "back": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B030",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Define work function for electron emission",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_work_function",
+          "front": "Define the work function φ.",
+          "back": "Minimum energy needed to remove an electron from a metal surface."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B032",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Explain maximum photoelectron kinetic energy equation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_photo_eq",
+          "front": "Write Einstein's photoelectric equation.",
+          "back": "hf = φ + Eₖ(max)."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B035",
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Define stopping potential in photoelectric effect",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "v33_card_physics_photoelectric_effect_20",
+          "front": "What does the stopping potential measure in the photoelectric effect?",
+          "back": "The maximum photoelectron kinetic energy per unit charge, eVs=Kmax."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B037",
+      "subject": "Physics",
+      "specRef": "3.2.2.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Convert electronvolts to joules",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_measure_recap_20261024_ev_j",
+          "front": "Convert 1 electronvolt (eV) into joules.",
+          "back": "1 eV = 1.60 × 10⁻¹⁹ J."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B038",
+      "subject": "Physics",
+      "specRef": "3.2.2.3",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Explain why isolated atoms produce line spectra",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_discrete_lines",
+          "front": "Why do atoms produce emission line spectra?",
+          "back": "Electrons occupy discrete energy levels, so only specific photon energies are emitted."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B040",
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "State the de Broglie wavelength relationship",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_debroglie",
+          "front": "What is the de Broglie wavelength equation?",
+          "back": "λ = h/p."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B041",
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Explain particle momentum effects on diffraction",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_rings_acceleration",
+          "front": "Why do electron diffraction rings shrink as accelerating voltage rises?",
+          "back": "Electrons gain momentum, λ = h/p falls, and diffraction angles decrease."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B042",
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+      "requirement": "Use wave-particle duality evidence from both photons and electrons",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_pandr_v29_duality",
+          "front": "What is wave–particle duality?",
+          "back": "Quantum objects can display wave-like and particle-like behaviour."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B046",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "requirement": "State conditions under which Ohm's law applies",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_phy_095",
+          "front": "What condition is required for Ohm's law?",
+          "back": "Constant physical conditions, including temperature."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B047",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "requirement": "Explain current-voltage graph of a filament lamp",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "phy_filament_iv",
+          "front": "Why does a filament lamp's resistance rise at high current?",
+          "back": "The filament gets hotter, increasing lattice vibrations and electron collisions."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B048",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "requirement": "Explain diode current-voltage characteristics",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_phy_097",
+          "front": "Why is a diode's current very small in reverse bias?",
+          "back": "It strongly resists current in the reverse direction."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B049",
+      "subject": "Physics",
+      "specRef": "3.5.1.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+      "requirement": "Explain ideal ammeter and voltmeter resistance assumptions",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_phy_093",
+          "front": "What is an ideal ammeter's resistance?",
+          "back": "Zero."
+        },
+        {
+          "id": "task1_phy_094",
+          "front": "What is an ideal voltmeter's resistance?",
+          "back": "Infinite."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B070",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain what a homologous series has in common",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_108",
+          "front": "What is a homologous series?",
+          "back": "Compounds with the same functional group and general formula."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B073",
+      "subject": "Chemistry",
+      "specRef": "3.3.1",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Recognise curly arrow starts at an electron pair",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_mechanisms_v42_01",
+          "front": "Where should the tail of a curly arrow be placed?",
+          "back": "At an electron pair: a lone pair or covalent bond."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B076",
+      "subject": "Chemistry",
+      "specRef": "3.3.2",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Name initiation, propagation and termination in radical substitution",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_radical_sub",
+          "front": "What are the three stages of free-radical substitution?",
+          "back": "Initiation, propagation and termination."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B078",
+      "subject": "Chemistry",
+      "specRef": "3.3.3",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain relative rates of halogenoalkane hydrolysis by C–X bond enthalpy",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v124_bulk_chem_116",
+          "front": "How does hydrolysis rate generally change from chloroalkane to iodoalkane?",
+          "back": "It increases as the C–halogen bond gets weaker."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B081",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Define electrophile and electrophilic addition",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_electrophile",
+          "front": "What is an electrophile?",
+          "back": "An electron-pair acceptor."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B082",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Distinguish major and minor products from unsymmetrical alkene addition",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_mechanisms_v42_15",
+          "front": "Why can an unsymmetrical alkene give unequal quantities of two products?",
+          "back": "The competing carbocation intermediates have different stabilities."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B083",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain bromine-water indication of unsaturation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_139",
+          "front": "What colour change indicates an alkene with bromine water?",
+          "back": "Orange to colourless."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B084",
+      "subject": "Chemistry",
+      "specRef": "3.3.4",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Describe formation of addition polymers from alkenes",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_poly_add",
+          "front": "What happens in addition polymerisation?",
+          "back": "C=C double bonds open and monomers join with no small molecule eliminated."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B087",
+      "subject": "Chemistry",
+      "specRef": "3.3.5",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain formation of alkenes through dehydration of alcohols",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_mechanisms_v42_17",
+          "front": "What structural change defines dehydration of an alcohol?",
+          "back": "Loss of a water molecule and formation of C=C."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B091",
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Define optical isomerism in terms of non-superimposable mirror images",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_optical",
+          "front": "What causes optical isomerism?",
+          "back": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B092",
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Identify chiral carbon in an organic structure",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_mechanisms_v42_27",
+          "front": "What is required for a common chiral carbon centre?",
+          "back": "Four different substituent groups."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B093",
+      "subject": "Chemistry",
+      "specRef": "3.3.7",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain how racemic mixture affects optical rotation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_mechanisms_v42_28",
+          "front": "Why does a racemic mixture give no net optical rotation?",
+          "back": "The enantiomers' rotations cancel."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B094",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain carboxylic-acid reaction with carbonates",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "v33_card_chemistry_carboxylic_acids_63",
+          "front": "Which gas forms when a carboxylic acid reacts with carbonate?",
+          "back": "Carbon dioxide (CO₂)."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B099",
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain benzene stability using delocalisation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_benzene",
+          "front": "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+          "back": "Its π electrons are delocalised around the ring, lowering the energy."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B100",
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain preference for substitution rather than addition in benzene",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_216",
+          "front": "Why does benzene favour substitution over addition?",
+          "back": "Addition would disrupt the stable delocalised π system."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B101",
+      "subject": "Chemistry",
+      "specRef": "3.3.10",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain purpose of electrophile generation in aromatic substitution",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v124_bulk_chem_219",
+          "front": "What is the electrophile in benzene nitration?",
+          "back": "Nitronium ion, NO₂⁺."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B102",
+      "subject": "Chemistry",
+      "specRef": "3.3.11",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Relate basicity of amines to available nitrogen lone pair",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_218",
+          "front": "What makes amines basic?",
+          "back": "A nitrogen lone pair can accept a proton."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B105",
+      "subject": "Chemistry",
+      "specRef": "3.3.12",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain how condensation polymer forms link and small molecule",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_poly_cond",
+          "front": "What happens in condensation polymerisation?",
+          "back": "Bifunctional monomers join and a small molecule such as H₂O or HCl is eliminated."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B107",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain peptide bond link and condensation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_peptide",
+          "front": "What is a peptide bond?",
+          "back": "The amide link, −CONH−, formed between amino acids by condensation."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B109",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain base-pair hydrogen bonding between DNA strands",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v124_bulk_chem_233",
+          "front": "What holds complementary DNA base pairs together?",
+          "back": "Hydrogen bonds."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B110",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Relate enzyme stereospecific binding to enantiomers",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_full_091",
+          "front": "Why can enzymes be stereospecific?",
+          "back": "The active-site shape can favour only one enantiomer."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B111",
+      "subject": "Chemistry",
+      "specRef": "3.3.13",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain cisplatin binding and DNA replication disruption",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_full_088",
+          "front": "How does cisplatin disrupt DNA replication?",
+          "back": "Platinum forms bonds to DNA bases, hindering strand separation."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B114",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Interpret integral peak ratios for proton environments",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_nmr_integration",
+          "front": "What does integration in a ¹H NMR spectrum show?",
+          "back": "The relative number of protons in each environment."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B115",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain carbon-13 NMR peak count as carbon environments",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_v124_bulk_chem_241",
+          "front": "What does the number of signals in a carbon-13 NMR spectrum indicate?",
+          "back": "Number of different carbon environments."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B116",
+      "subject": "Chemistry",
+      "specRef": "3.3.15",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain why TMS defines reference chemical shift",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_nmr_tms",
+          "front": "Why is TMS used as an NMR reference?",
+          "back": "It gives one sharp signal at δ = 0 and is chemically inert/volatile."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B117",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Define Rf as distance ratio in chromatography",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "chem_a2_chrom_r_f",
+          "front": "What is Rf in thin-layer chromatography?",
+          "back": "distance moved by solute ÷ distance moved by solvent front."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    },
+    {
+      "requirementId": "B118",
+      "subject": "Chemistry",
+      "specRef": "3.3.16",
+      "sourceUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+      "requirement": "Explain how mobile and stationary phases affect separation",
+      "status": "answer_checked_for_narrow_recall",
+      "support": [
+        {
+          "id": "task1_chem_233",
+          "front": "How does a higher affinity for the stationary phase affect travel?",
+          "back": "The component travels more slowly."
+        }
+      ],
+      "limitation": "Supporting question and model answer inspected; does not certify diagram, practical or exam-application coverage."
+    }
+  ],
+  "specials": [
+    {
+      "requirementId": "B050",
+      "status": "partial_evidence",
+      "reason": "Resistivity formula and unit exist; still check an explicit definition.",
+      "requirement": "Define electrical resistivity and its SI unit",
+      "support": [
+        {
+          "id": "phy_resistivity",
+          "front": "What equation links resistance and resistivity?",
+          "back": "R = ρL/A."
+        },
+        {
+          "id": "task1_phy_008",
+          "front": "What is the unit of resistivity in base units?",
+          "back": "Ω m."
+        }
+      ]
+    },
+    {
+      "requirementId": "B125",
+      "status": "filled_by_v138",
+      "reason": "The missing Maths quotient rule has a dedicated new card, not present at the time of v137.",
+      "requirement": "Recall logarithm quotient law",
+      "support": [
+        {
+          "id": "task1_v138_001",
+          "front": "State the logarithm quotient law for logₐ(x/y).",
+          "back": "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1)."
+        }
+      ]
+    }
+  ]
+}
