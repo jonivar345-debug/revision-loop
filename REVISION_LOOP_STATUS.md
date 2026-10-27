@@ -1,3 +1,13 @@
+# Revision Loop — v149 Year 1 Organic Chemistry exam practice (27 October 2026)
+
+**Published starting baseline:** v148, 3,263 flashcards (3,259 active) and 1,200 exam questions. **Proposed v149:** 12 original AS Chemistry applied questions worth **66 marks**, raising the main bank to **1,212** (bank v61). No flashcards, review IDs, XP, purchases, cloud data, Firebase, scanner runtime, mock filters, or World photographs have been changed.
+
+The v149 practice tasks cover precise-mass formula selection, E/Z and unfamiliar ring drawing, types of isomerism, cracked-product mass balance, vehicle pollutants, ozone chemistry and evidence, polyalkene/PVC intermolecular forces, polymer-to-monomer diagrams, IR structure suggestions, atmospheric infrared absorption, and biofuel lifecycle evaluation. All are **original practice questions**, not official AQA past-paper questions or mark schemes; each has explicit marking points. No practical chemical preparation instructions are included.
+
+Evidence: `editorial/task1-v149-organic-applied-questions.json`; regression: `tests/task1-v149-organic-applied.cjs`. Historical v147/v148 tests filter v149 additions without relaxing preserved source snapshots. All four PR checks must pass before merging. Confirm GitHub Pages deployment before reporting publication. Next: duplicate-screened short recall cards, remaining Organic Analysis questions and A-level-only science specification coverage.
+
+---
+
 # Revision Loop — v147 applied organic exam questions (27 October 2026)
 
 **Published baseline:** v146 / 3,263 flashcards (3,259 active) and 1,182 main-bank exam questions. No changes to any flashcards, saved-progress IDs, Firebase, XP, shop or World in v147.
