@@ -1,3 +1,20 @@
+# Revision Loop — v147 applied organic exam questions (27 October 2026)
+
+**Published baseline:** v146 / 3,263 flashcards (3,259 active) and 1,182 main-bank exam questions. No changes to any flashcards, saved-progress IDs, Firebase, XP, shop or World in v147.
+
+**Pending release v147:** adds **18 original AQA-style Chemistry exam questions (97 marks)** to the main bank, bringing total to **1,200** if published. Includes 11 drawing/diagram/mechanism prompts with detailed mark points, and application questions covering theoretical electrophilic addition, nucleophilic substitution, elimination, free radicals, alkene polymers, stereoisomerism, **Required Practical 5** distillation interpretation, **Required Practical 6** functional-group observations and IR/organic analysis. All are short-answer/multi-mark **exam questions**, not flashcards; 84 v146 flashcards remain short and unchanged.
+
+- Checked all 10 separately created ChatGPT review-card concepts against published website cards: ten conceptually supported, but skeletal corner is represented by adjacent line-end/general skeletal formula cards rather than an exact duplicate sentence.
+- Record: editorial/task1-v147-organic-exam-audit.json. This is **not complete specification coverage** or demonstrated student mastery.
+- Source: user's Year 1 organic notes, official AQA Chemistry 7405 sections 3.3.1–3.3.6 and practical assessment. Questions are **original**, not official AQA past-paper extracts or official mark schemes.
+- No experimental procedures for hazardous reagents; practical questions involve apparatus reasoning and supplied observations.
+- New regression tests verify 18 question IDs, 97 marks, marking points, original provenance, pre-existing 1,182-question records, all old deck IDs and progress storage keys.
+- Release gate: CI success and GitHub Pages publication; do not claim live until confirmed.
+
+**Next:** Detailed compulsory-syllabus crosswalk (each bullet against validated flashcards *and* questions); expand 3.3.6 organic analysis application where gaps remain and later A-level-only 3.3.7–3.3.14, plus Physics and Maths specification checks.
+
+---
+
 # Revision Loop — v146 Organic Chemistry mechanisms (27 October 2026)
 
 **Published baseline:** v145 / 3,179 records (3,175 active). v146 is not live until all four CI workflows pass, PR merges and Pages deploys successfully.

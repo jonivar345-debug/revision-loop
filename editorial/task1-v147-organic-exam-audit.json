@@ -1,0 +1,362 @@
+{
+  "version": "v147",
+  "baseline": {
+    "deckVersion": 146,
+    "flashcards": 3263,
+    "activeFlashcards": 3259,
+    "questionBankVersion": 59,
+    "questionCount": 1182
+  },
+  "new": {
+    "questions": 18,
+    "marks": 97,
+    "questionCount": 1200,
+    "questionBankVersion": 60,
+    "flashcardsAdded": 0
+  },
+  "course": "AQA A-level Chemistry 7405",
+  "sourceUrls": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment"
+  ],
+  "basedOn": "User's Parts 11-15 organic notes, v146 published flashcards, AQA 7405 first-year organic sections and Required Practicals 5 and 6.",
+  "coverage": "Selected applied tasks only, not full spec or mastery certification.",
+  "separateChatReviewCards": [
+    {
+      "review": "Where must a full curly arrow begin?",
+      "ids": [
+        "task1_v136_096"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_v136_096",
+          "front": "Where must a full curly arrow start in an organic mechanism?",
+          "back": "At a lone pair or covalent bond containing the moving electron pair."
+        }
+      ]
+    },
+    {
+      "review": "What does a full curly arrow show?",
+      "ids": [
+        "task1_chem_118"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_chem_118",
+          "front": "What does a curly arrow represent in an organic mechanism?",
+          "back": "Movement of an electron pair."
+        }
+      ]
+    },
+    {
+      "review": "Why do alkenes undergo electrophilic addition?",
+      "ids": [
+        "task1_v130_125"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_v130_125",
+          "front": "Why is the alkene double bond attacked by electrophiles?",
+          "back": "The π bond has high electron density."
+        }
+      ]
+    },
+    {
+      "review": "What does E mean in E/Z isomerism?",
+      "ids": [
+        "task1_chem_141"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_chem_141",
+          "front": "What does E mean in E/Z stereoisomerism?",
+          "back": "Higher-priority groups are on opposite sides."
+        }
+      ]
+    },
+    {
+      "review": "If CIP first atoms tie, what next?",
+      "ids": [
+        "task1_v146_012"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_v146_012",
+          "front": "In CIP ranking, if attached atoms tie, what do you compare next?",
+          "back": "Their attached atoms, ordered by atomic number, until the first difference."
+        }
+      ]
+    },
+    {
+      "review": "What does a skeletal formula corner represent?",
+      "ids": [
+        "task1_chem_114",
+        "task1_v146_001"
+      ],
+      "status": "supported_concept_but_not_exact_corner_prompt",
+      "limitation": "The deck describes the skeletal formula and individual line ends, but does not repeat this exact corner sentence.",
+      "evidence": [
+        {
+          "id": "task1_chem_114",
+          "front": "What is a skeletal formula?",
+          "back": "A line representation omitting C symbols and most attached H atoms."
+        },
+        {
+          "id": "task1_v146_001",
+          "front": "In a skeletal formula, what does each unlabelled line end represent?",
+          "back": "One carbon atom."
+        }
+      ]
+    },
+    {
+      "review": "What first forms on primary alcohol oxidation?",
+      "ids": [
+        "task1_chem_146"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_chem_146",
+          "front": "What does oxidising a primary alcohol first produce?",
+          "back": "An aldehyde."
+        }
+      ]
+    },
+    {
+      "review": "What happens to vapour during reflux?",
+      "ids": [
+        "task1_v146_067"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_v146_067",
+          "front": "Why does reflux prevent loss of volatile reactants?",
+          "back": "Vapour condenses and returns to the reaction vessel."
+        }
+      ]
+    },
+    {
+      "review": "What happens to C=C during addition polymerisation?",
+      "ids": [
+        "chem_a2_poly_add"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "chem_a2_poly_add",
+          "front": "What happens in addition polymerisation?",
+          "back": "C=C double bonds open and monomers join with no small molecule eliminated."
+        }
+      ]
+    },
+    {
+      "review": "What do characteristic IR peaks help identify?",
+      "ids": [
+        "task1_v146_075"
+      ],
+      "status": "existing_concise_card",
+      "evidence": [
+        {
+          "id": "task1_v146_075",
+          "front": "How does an IR spectrum help identify a functional group?",
+          "back": "Characteristic bonds absorb at characteristic wavenumbers."
+        }
+      ]
+    }
+  ],
+  "questionEvidence": [
+    {
+      "id": "organic_v147_01",
+      "topic": "HBr addition to ethene",
+      "marks": 6,
+      "questionType": "multi-step problem",
+      "markPointCount": 6,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "organic_v147_02",
+      "topic": "Regioselectivity in propene",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "organic_v147_03",
+      "topic": "Bromine addition to ethene",
+      "marks": 6,
+      "questionType": "multi-step problem",
+      "markPointCount": 6,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "organic_v147_04",
+      "topic": "Sulfuric acid addition",
+      "marks": 6,
+      "questionType": "multi-step problem",
+      "markPointCount": 6,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "organic_v147_05",
+      "topic": "Hydroxide arrow drawing",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Halogenoalkanes"
+    },
+    {
+      "id": "organic_v147_06",
+      "topic": "Ammonia intermediate",
+      "marks": 6,
+      "questionType": "multi-step problem",
+      "markPointCount": 6,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Halogenoalkanes"
+    },
+    {
+      "id": "organic_v147_07",
+      "topic": "Three electron movements",
+      "marks": 6,
+      "questionType": "multi-step problem",
+      "markPointCount": 6,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Halogenoalkanes"
+    },
+    {
+      "id": "organic_v147_08",
+      "topic": "Methane chlorination chain",
+      "marks": 7,
+      "questionType": "multi-step problem",
+      "markPointCount": 7,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alkanes"
+    },
+    {
+      "id": "organic_v147_09",
+      "topic": "Catalytic ozone cycle",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "Halogenoalkanes"
+    },
+    {
+      "id": "organic_v147_10",
+      "topic": "Acid-catalysed dehydration",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alcohols"
+    },
+    {
+      "id": "organic_v147_11",
+      "topic": "Repeat-unit interpretation",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "organic_v147_12",
+      "topic": "Unfamiliar naming and stereoisomerism",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": true,
+      "revisionTopic": "Organic chemistry"
+    },
+    {
+      "id": "organic_v147_13",
+      "topic": "Interpreting a distillation run",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "RP5 Distillation"
+    },
+    {
+      "id": "organic_v147_14",
+      "topic": "Reflux versus distillation",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "RP5 Distillation"
+    },
+    {
+      "id": "organic_v147_15",
+      "topic": "Four mystery liquids",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "RP6 Organic tests"
+    },
+    {
+      "id": "organic_v147_16",
+      "topic": "Aldehyde versus ketone",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "RP6 Organic tests"
+    },
+    {
+      "id": "organic_v147_17",
+      "topic": "Combining IR and test observations",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "Organic analysis"
+    },
+    {
+      "id": "organic_v147_18",
+      "topic": "Hydrolysis comparison data",
+      "marks": 5,
+      "questionType": "multi-step problem",
+      "markPointCount": 5,
+      "sourceVerified": false,
+      "hasDrawingPrompt": false,
+      "revisionTopic": "Halogenoalkanes"
+    }
+  ],
+  "limits": [
+    "Questions are original exam-style practice, not official AQA past-paper questions.",
+    "Mechanisms are theoretical drawing and electron movement; no laboratory preparation instructions.",
+    "RP5/6 items assess provided data, apparatus concepts and interpretation rather than procedures for harmful reagents.",
+    "Flashcard content and all progress/reward/cloud records remain unmodified.",
+    "Scanner marking is automated and should be treated as a study aid; use supplied mark points to verify diagram answers."
+  ]
+}

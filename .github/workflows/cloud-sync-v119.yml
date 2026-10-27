@@ -37,6 +37,9 @@ on:
       - 'tests/task1-v144-chemistry-precision.cjs'
       - 'tests/task1-v145-a2-science.cjs'
       - 'tests/task1-v146-organic-recall.cjs'
+      - 'tests/task1-v147-organic-exam.cjs'
+      - 'editorial/task1-v147-organic-exam-audit.json'
+      - 'exam_questions.json'
       - 'editorial/task1-v146-organic-recall-audit.json'
       - 'editorial/task1-v145-a2-science-evidence.json'
       - 'editorial/task1-v143-v135-106-answer-evidence.json'
@@ -97,6 +100,8 @@ jobs:
       - run: node tests/task1-v144-chemistry-precision.cjs
       - run: node tests/task1-v145-a2-science.cjs
       - run: node tests/task1-v146-organic-recall.cjs
+      - run: node tests/task1-v147-organic-exam.cjs
+      - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
