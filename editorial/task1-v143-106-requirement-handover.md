@@ -8,16 +8,16 @@ All **106 previously keyword-matched-only** requirements from the earlier v135 s
 
 | Classification of 106 further rows | Chemistry | Physics | Total |
 |---|---:|---:|---:|
-| Narrow memory requirement supported by reviewed answers | **59** | **29** | **88** |
-| Partial coverage or separate applied-question assessment necessary | **12** | **6** | **18** |
+| Narrow memory requirement supported by reviewed answers | **59** | **31** | **90** |
+| Partial coverage or separate applied-question assessment necessary | **12** | **4** | **16** |
 | **Total checked** | **71** | **35** | **106** |
 
 The original v135 seven other sampled outcomes had already received initial scrutiny (six answer-supported and one partial). Therefore **all 113 requirements in that selected sample now have an initial answer-level review**, albeit with unresolved skills/gaps. The separate 142-item v137 sample has also been triaged through v137–v141. Overlap between these two samples is possible; do **not** count them as 255 unique AQA specification points or infer complete subject coverage.
 
 ## Remaining 18 qualifications
 
-- **Chemistry:** A006 (representing arbitrary configurations and ions), A010 (direct definition of the mole), A021 (complete range of common ionic formulae), A024 (comparative structure–property explanations), A027 (new VSEPR deductions), A048 (applying Le Chatelier under changed conditions), A055 (new ionic half-equations), A059 (the full Period 3 melting-point explanation), A062 and A063 (whether explanation beyond Group 2 solubility trends is expected), A075 (CIP decisions on unfamiliar structures), A076 (interpreting unseen IR spectra).
-- **Physics:** A085 (period/frequency relation alongside wave speed), A090 (applying stretched-string equation to measurements), A095 (a standalone definition of vector), A100 (non-linear motion graph applications), A103 (using SUVAT in calculations), A109 (linked work/energy/power/efficiency problems).
+- **Chemistry:** A006 (representing arbitrary configurations and ions), A010 (direct definition of the mole), A021 (complete range of common ionic formulae), A024 (comparative structure–property explanations), A027 (new VSEPR deductions), A048 (applying Le Chatelier under changed conditions), A055 (new ionic half-equations), A059 (the full Period 3 melting-point explanation), A062 and A063 (trend statements are already recalled; the initial ledger used 'explain', whereas AQA explicitly lists relative solubilities without requiring a separate mechanism), A075 (CIP decisions on unfamiliar structures), A076 (interpreting unseen IR spectra).
+- **Physics:** A090 (applying stretched-string equation to measurements), A100 (non-linear motion graph applications), A103 (using SUVAT in calculations), A109 (linked work/energy/power/efficiency problems). Exact existing cards resolve earlier suspicions about period/frequency (A085) and the vector definition (A095).
 
 These are **not 18 definitively missing flashcards**. Many are calculation, diagram, experimental interpretation or multi-step explanation outcomes better assessed in short or longer exam questions. Before writing more short cards, confirm truly absent recall and specification/formula-booklet requirements. For example the AQA Physics and Chemistry data booklets supply some equations; practising correct application is often more useful than copying them onto many flashcards.
 
