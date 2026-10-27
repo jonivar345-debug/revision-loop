@@ -1,17 +1,16 @@
 # Revision Loop — current project checkpoint (27 October 2026)
 
-**Current main:** v141 PR #88 merged after all four checks passed (deck still v138 with 3,128 records). The v142 16-card content addition is in review until all tests and deployment succeed. See `editorial/task1-v142-precision-recall-handover.md`.
+**Latest published:** v142, PR #89, deployed to GitHub Pages. Deck v142 contains **3,144 flashcards (3,140 active)**. All 3,128 pre-v142 card records and review identities were preserved.
 
-- **Live flashcard release:** deck v138, **3,128 cards (3,124 active)**, deployed by GitHub Pages after PR #85. This count also applies to v139: its 48 narrow specification answer checks were editorial only.
-- **v140 released audit:** 25 additional exact answer checks: 22 narrowly supported and 3 partial.
-- **v141 merged audit:** the remaining 46 selected v137 requirements checked, with 33 narrow recall points supported, 12 partial, and one absent. Audit-only.
-- **v142 proposed:** 16 new precise Physics/Chemistry recall flashcards, proposed deck **3,144 records / 3,140 active**. Until green tests, merge and Pages deployment, the live deck remains v138 (**3,128 / 3,124**).
-- **Outstanding selected audit:** all 142 v137 sampled requirements have now been individually triaged across v137/v139/v140/proposed v141; several are **partial or absent** (details in v141 handover). A separate v135 sample still has **106 front-keyword-only candidate matches** needing semantic checking. None of these represents exhaustive specification coverage.
-- **Top priority:** complete AQA Physics/Chemistry flashcard audits down to individual assessable facts and required practical observations, then selectively reinforce Maths formula memory. Avoid duplicates and reserve multi-step calculations/diagrams for exam practice. Mock scope must match what was taught.
-- **Unresolved Physics optional topic:** do not presume the school chose Medical Physics. Maintain optional cards outside compulsory completion claims.
-- **World/photo pause:** last photo release **v117**, 1,064 locally hosted photos and 266/376 complete galleries. Keep the remaining 110 destinations for a later explicit photo task.
-- **Progress safety:** never clear local browser keys, overwrite Firestore/user XP, change card IDs, purchases, or reset profiles during content work. Manual JSON backups remain available. The student has previously reported Google cloud progress syncing across devices, but repository tests cannot read personal live progress. Verify cross-device behaviour separately before claiming it is universally reliable.
-- **Verification:** v139, v140 and v141 passed flashcard/cloud, scanner, World safety and World browser acceptance before merging. v142 must pass those same checks and its new model-answer acceptance regression before merge; confirm Pages independently.
+**Task 1 v143:** detailed editorial follow-up to the first v135 specification sample; in development until checks, merge and deployment. The release adds **no flashcards or runtime code**. See `editorial/task1-v143-106-requirement-handover.md` and `editorial/task1-v143-v135-106-answer-evidence.json`.
+
+- The v135 sample contains **113 selected narrow AQA requirements**. Of those, 106 originally had front-keyword candidates only. The v143 follow-up checked their actual question and model-answer text: **88 narrowly supported, 18 partial or needing exam application** (Chemistry 71, Physics 35). The other seven items received scrutiny in the original v135 ledger.
+- The separate v137 **142-item selected sample** was triaged through v137, v139, v140 and v141, with incomplete outcomes explicitly recorded. Both historical samples are *selected* and overlap in subject content; neither establishes full AQA specification coverage.
+- **Next:** resolve truly missing concise definitions from the partial rows, build an exhaustive AQA 7408/7405/7357 bullet-to-card/practice ledger and assess required practical observations, uncertainties, evaluation and marking. Prioritise first-year Physics and already-taught Chemistry for the November mocks.
+- The student's centre-selected **Physics optional topic is still unconfirmed**; do not require Medical Physics or any alternative until confirmed. Keep untaught advanced content excluded from mock mode.
+- **World photographs are deliberately paused:** 1,064 local images, 266 of 376 complete four-picture galleries; 110 incomplete, with no new photo work authorised in this task.
+- **Saved progress:** preserve `revisionLoopProgress5`, `revisionLoopProfile11`, `revisionLoopSettings11`, existing review IDs, Firestore/cloud progress, XP, purchases and backups. Automated source tests do not themselves reveal the student's private cloud progress or prove it synced on every device.
+- **Release gates:** green cloud/flashcard, scanner marking, World safety and browser acceptance; verify merge and GitHub Pages deployment separately. Do not claim v143 is published until all gates pass.
 
 ## Archived development handover (26 October 2026)
 
