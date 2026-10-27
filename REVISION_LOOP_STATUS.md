@@ -1,3 +1,20 @@
+# Revision Loop — current project checkpoint (27 October 2026)
+
+**Authoritative current branch:** `main` after Task 1 v139 merged as PR #86. The v140 follow-up remains review-only until all its checks pass; use `editorial/task1-v140-continuation-handover.md` and `editorial/task1-v140-evidence-follow-up.json` for its exact candidate states.
+
+- **Live flashcard release:** deck v138, **3,128 cards (3,124 active)**, deployed by GitHub Pages after PR #85. This count also applies to v139: its 48 narrow specification answer checks were editorial only.
+- **v140 review work:** 25 additional exact answer checks, comprising **22 narrowly supported** requirements and **3 partial** ones. This is not 25 new cards.
+- **Outstanding selected audit rows:** 46 remaining without a substantive answer check in the v137 sample (25 Physics, 18 Chemistry, 3 Maths). A separate v135 sample has 106 front-keyword-only candidates outstanding. These are *selected samples*, not exhaustive specification counts.
+- **Top priority:** complete AQA Physics/Chemistry flashcard audits down to individual assessable facts and required practical observations, then selectively reinforce Maths formula memory. Avoid duplicates and reserve multi-step calculations/diagrams for exam practice. Mock scope must match what was taught.
+- **Unresolved Physics optional topic:** do not presume the school chose Medical Physics. Maintain optional cards outside compulsory completion claims.
+- **World/photo pause:** last photo release **v117**, 1,064 locally hosted photos and 266/376 complete galleries. Keep the remaining 110 destinations for a later explicit photo task.
+- **Progress safety:** never clear local browser keys, overwrite Firestore/user XP, change card IDs, purchases, or reset profiles during content work. Manual JSON backups remain available. The student has previously reported Google cloud progress syncing across devices, but repository tests cannot read personal live progress. Verify cross-device behaviour separately before claiming it is universally reliable.
+- **Verification:** v139 passed flashcard/cloud, scanner, World safety and World browser acceptance before merging. v140 must pass those same checks before merge and any Pages deployment.
+
+## Archived development handover (26 October 2026)
+
+The following earlier snapshot remains for historical photo and Mechanics v118 context. Its older statements about cloud sync and the then-current card counts have been superseded by the current checkpoint above.
+
 # Revision Loop — stable development handover
 **Recorded:** 26 October 2026  
 **Website:** https://jonivar345-debug.github.io/revision-loop/  
