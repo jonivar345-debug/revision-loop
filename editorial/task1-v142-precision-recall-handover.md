@@ -22,10 +22,10 @@
 | Chemistry | Economic reasons for cracking | 3.3.2.2 | Yes |
 | Chemistry | Secondary amine classification | 3.3.11 | No (untaught A2) |
 | Chemistry | Tertiary amine classification | 3.3.11 | No (untaught A2) |
-| Chemistry | Isoelectric point of an amino acid | 3.3.12 | No (untaught A2) |
-| Chemistry | Methyl/ethyl fatty-acid ester classes in biodiesel | 3.3.10 | Yes (reported taught) |
+| Chemistry | Environmental drawback of polymer incineration | 3.3.12.2 | No (untaught A2) |
+| Chemistry | Difficulty of recycling mixed polymers | 3.3.12.2 | No (untaught A2) |
 
-Existing tertiary-alcohol oxidation cards were deliberately not duplicated; the AQA Chemistry IR C–H absorption *number* is in the supplied Chemistry data booklet, so memorising it is lower value than interpretation. Likewise, extended polymer disposal evaluation, molecule drawings and reaction mechanisms remain exam-question skills, not long flashcards.
+Existing tertiary-alcohol oxidation and AQA-defined biodiesel (methyl ester) cards were deliberately not duplicated. AQA Chemistry IR C–H absorption values are in the supplied data booklet, so interpreting supplied data is more useful than rote recall. Extended polymer evaluation, molecule drawings and reaction mechanisms remain exam-question skills, not long flashcards. A proposed isoelectric-point card was removed after verifying that it is not expressly required by the AQA amino-acid specification.
 
 ## Audit and quality safeguards
 
@@ -34,7 +34,7 @@ Existing tertiary-alcohol oxidation cards were deliberately not duplicated; the 
 - Existing Physics and Chemistry flashcards remain untouched; progress IDs and save keys retain their names. Existing cloud sync, XP, purchases, World, photos and scanner code are unchanged.
 - `tests/task1-v142-precision-cards.cjs` checks 3,128 pre-existing records, total 3,144, active 3,140, exact prefix IDs, short answer size, subject grouping, scope, unique fronts, accepted model answers and saved-key invariants.
 - Historical v127–v141 tests are adapted to ignore **only** the additive `task1_v142_` cards when comparing their original exact-count baselines, rather than editing their protected old records.
-- New A2 amino-acid and amine cards are explicitly excluded from taught/mocks. Biodiesel is an A2 topic already reported as taught and appears in taught/mock selection; review the mock filter with the student's school scope if that changes.
+- The four A2 amine/polymer cards are excluded from taught/mock selection. The 12 AS cards are included. Biodiesel is already covered by pre-existing cards and remains unaffected.
 - No statement of 100% AQA syllabus coverage is made by this release.
 
 ## Still open after these cards
