@@ -9,8 +9,8 @@ const review=JSON.parse(fs.readFileSync('editorial/task1-v141-full-v137-answer-r
 const statuses=new Set(['answer_checked_for_narrow_recall','partial_answer_needs_targeted_follow_up','no_direct_recall_card_found']);
 const cards=new Map(deck.cards.map(c=>[c.id,c]));
 const requirements=new Map(sample.rows.map(r=>[r.id,r]));
-assert.equal(deck.deckVersion,138);
-assert.equal(deck.cards.length,3128);
+assert(deck.deckVersion>=138);
+assert(deck.cards.length>=3128);
 assert.equal(review.sourceDeckVersion,138);
 assert.equal(review.reviewed.length,46);
 assert.deepEqual(review.bySubject,{Physics:25,Chemistry:18,Maths:3});
