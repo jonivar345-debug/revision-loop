@@ -35,13 +35,12 @@ for(let i=0;i<added.length;i++){
  if(c.stage==='AS')assert(c.taught&&c.mock,'AS card missing from Year 1 study '+c.id);
  else assert(c.stage==='A2','Invalid stage '+c.id);
 }
-for(const id of ['task1_v142_013','task1_v142_014','task1_v142_015']){
+for(const id of ['task1_v142_013','task1_v142_014','task1_v142_015','task1_v142_016']){
  const c=added.find(x=>x.id===id);
- assert(c.stage==='A2'&&!c.taught&&!c.mock,'Untaught advanced chemistry must be out of mock');
+ assert(c.stage==='A2'&&!c.taught&&!c.mock,'Untaught advanced chemistry must stay out of mock '+id);
 }
-const bio=added.find(c=>c.id==='task1_v142_016');
-assert.equal(bio.stage,'A2');
-assert(bio.taught&&bio.mock,'Previously taught biodiesel recall should stay in taught mock mode');
+assert.equal(added.filter(c=>c.stage==='AS').length,12);
+assert.equal(added.filter(c=>c.stage==='A2').length,4);
 const app=fs.readFileSync('app.js','utf8');
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
 assert(start>=0&&end>start);
