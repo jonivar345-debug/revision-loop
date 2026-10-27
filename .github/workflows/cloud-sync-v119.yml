@@ -31,6 +31,8 @@ on:
       - 'tests/task1-precision-memory-v138.cjs'
       - 'tests/task1-v139-verified-evidence.cjs'
       - 'tests/task1-v140-evidence.cjs'
+      - 'tests/task1-v141-full-v137-review.cjs'
+      - 'editorial/task1-v141-full-v137-answer-review.json'
       - 'editorial/task1-v140-evidence-follow-up.json'
       - 'editorial/task1-v139-verified-answer-evidence.json'
       - 'editorial/task1-v137-additional-syllabus-candidate-ledger.json'
@@ -81,6 +83,7 @@ jobs:
       - run: node tests/task1-precision-memory-v138.cjs
       - run: node tests/task1-v139-verified-evidence.cjs
       - run: node tests/task1-v140-evidence.cjs
+      - run: node tests/task1-v141-full-v137-review.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
