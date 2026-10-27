@@ -3,7 +3,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const oldAudit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v133.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v134.json','utf8'));
-const a=deck.cards, prior=a.filter(c=>!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')), fresh=a.filter(c=>c.id.startsWith('task1_v134_'));
+const a=deck.cards, prior=a.filter(c=>!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_')), fresh=a.filter(c=>c.id.startsWith('task1_v134_'));
 assert(deck.deckVersion>=134);
 assert.equal(prior.length,2994,'All older card records must survive');
 assert.equal(prior.filter(c=>c.active!==false).length,2990);
