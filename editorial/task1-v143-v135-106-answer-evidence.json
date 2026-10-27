@@ -11,8 +11,8 @@
     "Physics": 35
   },
   "statuses": {
-    "answer_checked_for_narrow_recall": 88,
-    "partially_supported_or_needs_application": 18
+    "answer_checked_for_narrow_recall": 90,
+    "partially_supported_or_needs_application": 16
   },
   "partialRequirementIds": [
     "A006",
@@ -27,9 +27,7 @@
     "A063",
     "A075",
     "A076",
-    "A085",
     "A090",
-    "A095",
     "A100",
     "A103",
     "A109"
@@ -1709,7 +1707,7 @@
       "specRef": "3.3.1.1",
       "requirement": "Use wavelength frequency speed and period relations",
       "initialLedgerStatus": "candidate_evidence_unverified",
-      "status": "partially_supported_or_needs_application",
+      "status": "answer_checked_for_narrow_recall",
       "support": [
         {
           "id": "phy_wave_speed",
@@ -1720,9 +1718,14 @@
           "id": "phy_phase_cycle",
           "front": "What phase difference is one complete cycle?",
           "back": "360° or 2π radians."
+        },
+        {
+          "id": "phy_period_frequency",
+          "front": "How are period and frequency related?",
+          "back": "T = 1/f."
         }
       ],
-      "limitation": "v=fλ is covered; standalone period/frequency relationship is not established by these exact cited answers."
+      "limitation": "The added exact recall answer resolves the formerly suspected omission; this still does not certify unseen applied-question performance."
     },
     {
       "requirementId": "A086",
@@ -1919,15 +1922,20 @@
       "specRef": "3.4.1.1",
       "requirement": "Distinguish scalar from vector quantities",
       "initialLedgerStatus": "candidate_evidence_unverified",
-      "status": "partially_supported_or_needs_application",
+      "status": "answer_checked_for_narrow_recall",
       "support": [
         {
           "id": "task1_phy_067",
           "front": "What is a scalar quantity?",
           "back": "Magnitude only; no direction."
+        },
+        {
+          "id": "task1_phy_068",
+          "front": "What is a vector quantity?",
+          "back": "Magnitude and direction."
         }
       ],
-      "limitation": "Scalar definition is supported; the specific general definition of a vector (magnitude and direction) is not shown in this cited answer."
+      "limitation": "The added exact recall answer resolves the formerly suspected omission; this still does not certify unseen applied-question performance."
     },
     {
       "requirementId": "A096",
