@@ -1,0 +1,710 @@
+{
+  "release": "v146",
+  "baselineDeckVersion": 145,
+  "baselineCards": 3179,
+  "baselineActive": 3175,
+  "newCards": 84,
+  "newTotal": 3263,
+  "newActive": 3259,
+  "byRef": {
+    "3.3.1.1": 8,
+    "3.3.1.2": 2,
+    "3.3.1.3": 3,
+    "3.3.2.1": 5,
+    "3.3.2.2": 2,
+    "3.3.2.3": 5,
+    "3.3.2.4": 7,
+    "3.3.3.1": 9,
+    "3.3.3.2": 5,
+    "3.3.3.3": 4,
+    "3.3.4.1": 2,
+    "3.3.4.2": 11,
+    "3.3.4.3": 5,
+    "3.3.5.1": 2,
+    "3.3.5.2": 4,
+    "3.3.5.3": 6,
+    "3.3.6.1": 1,
+    "3.3.6.2": 1,
+    "3.3.6.3": 2
+  },
+  "source": {
+    "userFile": "Pasted text(20261027-135405).txt: Part 11 Introduction to Organic Chemistry, Part 12 Alkanes, Part 13 Halogenoalkanes, Part 14 Alkenes, Part 15 Alcohols",
+    "official": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  },
+  "fullSpecCoverageCertified": false,
+  "courseStage": "All new cards are Year 1 mock eligible; earlier A2 cards remain unchanged",
+  "cards": [
+    {
+      "id": "task1_v146_001",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "In a skeletal formula, what does each unlabelled line end represent?",
+      "back": "One carbon atom.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_002",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "In a skeletal formula, how many bonds does neutral carbon normally make?",
+      "back": "Four covalent bonds, with omitted C–H bonds implied.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_003",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "Fill the gap: an empirical formula gives the simplest whole-number ___ of atoms.",
+      "back": "ratio",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_004",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "Name CH₃CH(CH₃)CH₂CH₃.",
+      "back": "2-methylbutane.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_005",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "Name CH₃CH(OH)CH₂CH₃.",
+      "back": "Butan-2-ol.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_006",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "When naming an ester, which part of the name comes first?",
+      "back": "The alkyl part derived from the alcohol.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_007",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "How many carbons are in the parent chain named pent-?",
+      "back": "Five.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_008",
+      "specRef": "3.3.1.1",
+      "topic": "Organic chemistry",
+      "front": "Which atom counts as carbon 1 in a carboxylic acid?",
+      "back": "The carbon atom of the –COOH group.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_009",
+      "specRef": "3.3.1.2",
+      "topic": "Organic mechanisms",
+      "front": "When a C–Br bond breaks heterolytically, where does its curly arrow point?",
+      "back": "Towards Br, which takes the bonding electron pair.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_010",
+      "specRef": "3.3.1.2",
+      "topic": "Organic mechanisms",
+      "front": "Choose the correct arrow source: A electrophile; B lone pair; C positive charge.",
+      "back": "B: the lone pair supplying the electrons.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_011",
+      "specRef": "3.3.1.3",
+      "topic": "Organic chemistry",
+      "front": "How is stereoisomerism different from structural isomerism?",
+      "back": "Same connectivity but a different arrangement in space.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_012",
+      "specRef": "3.3.1.3",
+      "topic": "Organic chemistry",
+      "front": "In CIP ranking, if attached atoms tie, what do you compare next?",
+      "back": "Their attached atoms, ordered by atomic number, until the first difference.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_013",
+      "specRef": "3.3.1.3",
+      "topic": "Organic chemistry",
+      "front": "CIP: which has higher priority, –CH₂OH or –CH₃?",
+      "back": "–CH₂OH: its next attached atoms include oxygen.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_014",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "front": "What is a crude-oil fraction?",
+      "back": "A mixture of hydrocarbons with similar boiling points.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_015",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "front": "Fill the gap: a fractionating column is cooler near the ___.",
+      "back": "top",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_016",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "front": "Where do higher-boiling crude-oil fractions condense?",
+      "back": "Lower down the hotter fractionating column.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_017",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "front": "Is fractional distillation a chemical change or physical separation?",
+      "back": "Physical separation; no hydrocarbon molecules are changed.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_018",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "front": "Why do larger alkane molecules generally have higher boiling points?",
+      "back": "More electrons produce stronger London dispersion forces.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_019",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "front": "Which cracking method uses high temperature and high pressure?",
+      "back": "Thermal cracking.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_020",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "front": "Fill the gap: catalytic cracking uses a ___ catalyst.",
+      "back": "zeolite",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_021",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "front": "Why can nitrogen oxides form inside combustion engines?",
+      "back": "High temperatures allow nitrogen and oxygen from air to react.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_022",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "front": "In a catalytic converter, CO is oxidised to which gas?",
+      "back": "Carbon dioxide, CO₂.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_023",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "front": "In a catalytic converter, nitrogen oxides are reduced to what?",
+      "back": "Nitrogen, N₂.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_024",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "front": "Complete the flue-gas equation: CaO + SO₂ → ___",
+      "back": "CaSO₃.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_025",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "front": "Complete the flue-gas equation: CaCO₃ + SO₂ → CaSO₃ + ___",
+      "back": "CO₂.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_026",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "Radical initiation: fill the gap, Cl₂ → ___ (under UV).",
+      "back": "2Cl•",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_027",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "Radical propagation 1: Cl• + CH₄ → HCl + ___",
+      "back": "CH₃•",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_028",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "Radical propagation 2: CH₃• + Cl₂ → CH₃Cl + ___",
+      "back": "Cl•",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_029",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "What happens next after CH₃• reacts with Cl₂ in propagation?",
+      "back": "A chlorine radical is regenerated and can continue the chain.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_030",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "Termination: complete CH₃• + CH₃• → ___",
+      "back": "C₂H₆.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_031",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "Why can methane chlorination give several chlorinated products?",
+      "back": "The products can undergo further radical substitution.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_032",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "front": "In a radical mechanism, what does a dot after a symbol mean?",
+      "back": "An unpaired electron, not an ionic charge.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_033",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "A C–X carbon is bonded to two other carbons. Classify the halogenoalkane.",
+      "back": "Secondary.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_034",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "Substitution arrow 1: OH⁻ attacks which atom of a halogenoalkane?",
+      "back": "The δ⁺ carbon bonded to the halogen.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_035",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "Substitution arrow 2: where does the C–Br bond's electron pair move?",
+      "back": "To bromine, which leaves as Br⁻.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_036",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "In nucleophilic substitution by CN⁻, which end forms the C–C bond?",
+      "back": "The carbon end of CN⁻.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_037",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "Fill the gap: substitution of R–Br with NH₃ first gives R–NH₃___.",
+      "back": "⁺",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_038",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "What happens after the positively charged RNH₃⁺ intermediate forms?",
+      "back": "A base removes H⁺, giving a neutral primary amine.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_039",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "front": "In elimination by OH⁻, does OH⁻ attack carbon or an adjacent hydrogen?",
+      "back": "An adjacent (β) hydrogen; OH⁻ acts as a base.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_040",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "front": "Elimination arrow 1: where does the oxygen lone pair of OH⁻ point?",
+      "back": "To a hydrogen on the carbon next to the C–Br carbon.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_041",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "front": "Elimination arrow 2: where do the β C–H bonding electrons move?",
+      "back": "Into the bond between the two carbons, forming C=C.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_042",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "front": "Elimination arrow 3: where do the C–Br bonding electrons move?",
+      "back": "To Br, forming Br⁻.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_043",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "front": "Elimination of 2-bromobutane: name two possible alkene position isomers.",
+      "back": "But-1-ene and but-2-ene.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_044",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "front": "Ozone cycle step 1: Cl• + O₃ → ClO• + ___",
+      "back": "O₂.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_045",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "front": "Ozone cycle step 2: ClO• + O₃ → Cl• + ___",
+      "back": "2O₂.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_046",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "front": "What is cancelled when the two chlorine-radical ozone steps are added?",
+      "back": "Cl• and ClO•, as both are regenerated or intermediates.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_047",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "front": "Complete the net ozone-decomposition equation: 2O₃ → ___",
+      "back": "3O₂.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_048",
+      "specRef": "3.3.4.1",
+      "topic": "Alkenes",
+      "front": "An alkene C=C consists of which two bond types?",
+      "back": "One σ bond and one π bond.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_049",
+      "specRef": "3.3.4.1",
+      "topic": "Alkenes",
+      "front": "Why does a C=C bond restrict rotation?",
+      "back": "Rotation would disrupt sideways overlap forming the π bond.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_050",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "HBr addition arrow 2: where does the H–Br bond's electron pair go?",
+      "back": "To bromine, forming Br⁻.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_051",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "After HBr protonates ethene, which charged intermediate forms?",
+      "back": "The ethyl carbocation, CH₃CH₂⁺.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_052",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "HBr addition final arrow: where does the Br⁻ lone pair point?",
+      "back": "Towards the positively charged carbon of the carbocation.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_053",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "Why does Br₂ become polarised as it approaches an alkene?",
+      "back": "The alkene π electrons repel Br₂ electrons, inducing a dipole.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_054",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "What is the product of adding Br₂ to ethene?",
+      "back": "1,2-dibromoethane.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_055",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "What is the immediate product of ethene + H₂SO₄?",
+      "back": "Ethyl hydrogensulfate, CH₃CH₂OSO₃H.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_056",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "After H₂SO₄ protonates ethene, which ion attacks the carbocation?",
+      "back": "Hydrogensulfate, HSO₄⁻, through oxygen.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_057",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "In the major product from propene + HBr, which carbon bears bromine?",
+      "back": "Carbon 2 (forming 2-bromopropane).",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_058",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "front": "In a polymer repeating-unit diagram, where is n placed?",
+      "back": "Outside the square brackets.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_059",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "front": "What must pass through both ends of a polymer's repeating-unit brackets?",
+      "back": "The two continuation bonds.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_060",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "front": "Poly(propene) has which side group on its carbon backbone?",
+      "back": "A methyl (–CH₃) group.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_061",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "front": "What is the monomer of poly(chloroethene), PVC?",
+      "back": "Chloroethene, CH₂=CHCl.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_062",
+      "specRef": "3.3.5.1",
+      "topic": "Alcohols",
+      "front": "What is the overall fermentation equation for glucose to ethanol?",
+      "back": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_063",
+      "specRef": "3.3.5.1",
+      "topic": "Alcohols",
+      "front": "What is the reaction type when ethene becomes ethanol with water?",
+      "back": "Hydration (addition).",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_064",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "front": "Which colour change shows Cr₂O₇²⁻ reducing to Cr³⁺ in alcohol oxidation?",
+      "back": "Orange to green.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_065",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "front": "Which oxidation state does chromium change from/to in dichromate oxidation?",
+      "back": "+6 to +3.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_066",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "front": "Why use distillation rather than reflux to isolate an aldehyde?",
+      "back": "Distillation removes the aldehyde before it can oxidise further.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_067",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "front": "Why does reflux prevent loss of volatile reactants?",
+      "back": "Vapour condenses and returns to the reaction vessel.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_068",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "front": "Alcohol dehydration mechanism step 1: what happens to the –OH group?",
+      "back": "It is protonated to –OH₂⁺, making water a better leaving group.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_069",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "front": "Alcohol dehydration: after protonation, what group can leave?",
+      "back": "Water, H₂O.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_070",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "front": "Alcohol dehydration: which proton is removed to form the C=C bond?",
+      "back": "A β-hydrogen on a carbon next to the former –OH carbon.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_071",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "front": "Alcohol dehydration: what happens to the acid catalyst overall?",
+      "back": "It is regenerated.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_072",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "front": "Why can dehydration of an unsymmetrical alcohol give different alkenes?",
+      "back": "A β-hydrogen can be removed from different adjacent carbons.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_073",
+      "specRef": "3.3.6.1",
+      "topic": "Organic analysis",
+      "front": "Which test would show an aldehyde but not a typical simple ketone?",
+      "back": "Tollens' or Fehling's reagent gives a positive result.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_074",
+      "specRef": "3.3.6.2",
+      "topic": "Organic analysis",
+      "front": "How can a high-resolution mass spectrum help find a molecular formula?",
+      "back": "Its precise molecular mass can distinguish elemental compositions.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_075",
+      "specRef": "3.3.6.3",
+      "topic": "Organic analysis",
+      "front": "How does an IR spectrum help identify a functional group?",
+      "back": "Characteristic bonds absorb at characteristic wavenumbers.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_076",
+      "specRef": "3.3.6.3",
+      "topic": "Organic analysis",
+      "front": "How can an IR spectrum help reveal an impurity?",
+      "back": "It may show additional absorption peaks absent from the pure compound.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_077",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "Ammonia substitution: where does the next NH₃ lone-pair arrow point?",
+      "back": "Towards H on the positively charged RNH₃⁺ intermediate.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_078",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "Ammonia deprotonation: where do the R–NH₃⁺ N–H bond electrons go?",
+      "back": "Back onto its nitrogen atom, giving the neutral amine.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_079",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "front": "When CN⁻ replaces a halogen in R–X, how does the carbon count change?",
+      "back": "It increases by one carbon atom.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_080",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "Br₂ addition arrow 1: where do the alkene π electrons move?",
+      "back": "Towards the induced δ⁺ bromine atom.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_081",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "Br₂ addition arrow 2: where do the Br–Br bonding electrons go?",
+      "back": "Towards the other Br, forming Br⁻.",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_082",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "front": "Ethene + H₂SO₄: what breaks when ethene bonds to H⁺?",
+      "back": "The acid O–H bond breaks heterolytically to form HSO₄⁻.",
+      "activity": "short_recall"
+    },
+    {
+      "id": "task1_v146_083",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "front": "Complete the monomer: [–CH₂–CH(Cl)–]ₙ comes from ___",
+      "back": "CH₂=CHCl (chloroethene).",
+      "activity": "staged_or_cloze"
+    },
+    {
+      "id": "task1_v146_084",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "front": "During alcohol dehydration, which electrons form the alkene's π bond?",
+      "back": "A pair from a C–H bond next to the carbon losing water.",
+      "activity": "staged_or_cloze"
+    }
+  ]
+}

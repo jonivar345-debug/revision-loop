@@ -1,3 +1,20 @@
+# Revision Loop — v146 Organic Chemistry mechanisms (27 October 2026)
+
+**Published baseline:** v145 / 3,179 records (3,175 active). v146 is not live until all four CI workflows pass, PR merges and Pages deploys successfully.
+
+**v146 proposal:** 84 additional concise Chemistry flashcards, increasing the deck to **3,263 records (3,259 active)** if published. All pre-v146 3,179 records and stable review IDs remain unchanged. Cards cover uploaded **Parts 11–15 (AQA 3.3.1–3.3.5)** plus initial **Part 16 (3.3.6)** Organic Analysis. **35** new cards are staged mechanisms, equation-completion, cloze or next-step prompts.
+
+- Direct source: user-supplied pasted Chemistry notes covering organic foundations, alkanes, halogenoalkanes, alkenes and alcohols.
+- Compared against active Chemistry flashcard fronts and backs; 12 proposed prompts removed for direct or near-semantic duplication and eight targeted follow-up mechanisms added.
+- New cards are Year 1 mock-eligible; previous Year 2/mock boundaries unchanged.
+- Source evidence and exact card mapping: editorial/task1-v146-organic-recall-audit.json. **This is not full syllabus-to-card-and-question certification.**
+- Further exam questions needed for drawn curly arrows, carbocation structures, radical equations, elimination, polymer units, RP5/RP6 apparatus and practical interpretation.
+- Cloud/Firebase, saved review keys, points/shop, World, scanner and question banks untouched.
+
+**Release:** tests/task1-v146-organic-recall.cjs checks grading, mock eligibility, ID persistence and source snapshots. Historical tests exclude only additive v146 IDs. Merge only after all four green workflows and successful Pages deployment.
+
+---
+
 # Revision Loop — v145 science audit development (27 October 2026)
 
 **Live baseline:** v144 published, 3,152 cards (3,148 active), merge #91 and successful GitHub Pages deployment. Do not describe v145 as published before PR merge and successful Pages build.
