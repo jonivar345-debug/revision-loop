@@ -2,7 +2,7 @@
 const fs=require('node:fs'), assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const cards=deck.cards, newCards=cards.filter(c=>c.id.startsWith('task1_v130_'));
-const prior=cards.filter(c=>!c.id.startsWith('task1_v130_')&&!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_')&&!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_'));
+const prior=cards.filter(c=>!c.id.startsWith('task1_v130_')&&!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_')&&!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_')&&!c.id.startsWith('task1_v145_'));
 assert(deck.deckVersion>=130);
 assert.equal(prior.length,2686,'Every previous card ID must be retained');
 assert.equal(prior.filter(c=>c.active!==false).length,2682);
