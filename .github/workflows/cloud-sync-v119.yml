@@ -28,6 +28,7 @@ on:
       - 'tests/task1-atomic-spec-v135.cjs'
       - 'tests/task1-exam-memory-v136.cjs'
       - 'tests/task1-syllabus-crosswalk-v137.cjs'
+      - 'tests/task1-precision-memory-v138.cjs'
       - 'editorial/task1-v137-additional-syllabus-candidate-ledger.json'
       - 'editorial/task1-v136-curated-coverage.json'
       - 'editorial/task1-atomic-spec-first-pass-v135.json'
@@ -73,6 +74,7 @@ jobs:
       - run: node tests/task1-atomic-spec-v135.cjs
       - run: node tests/task1-exam-memory-v136.cjs
       - run: node tests/task1-syllabus-crosswalk-v137.cjs
+      - run: node tests/task1-precision-memory-v138.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
       - run: node tests/reset-layout-v120.cjs
