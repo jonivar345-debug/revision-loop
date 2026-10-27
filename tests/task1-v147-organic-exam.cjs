@@ -48,7 +48,9 @@ for(let i=0;i<added.length;i++){
 }
 assert(drawings>=9,'Missing diagram/mechanism tasks');
 for(const topic of ['Electrophilic addition','Nucleophilic substitution','Elimination','Free-radical mechanism','RP5 Distillation','RP6 Functional-group tests','Organic analysis','Addition polymers'])
- assert(added.some(q=>q.revisionTopic===topic),'Missing topic '+topic);
+ assert(added.some(q=>q.subtopic===topic),'Missing subtopic '+topic);
+const deckTopics=new Set(deck.cards.filter(c=>c.subject==='Chemistry').map(c=>c.revisionTopic||c.topic));
+for(const q of added)assert(deckTopics.has(q.revisionTopic),'Question topic missing from flashcard filters '+q.id);
 const cards=new Map(deck.cards.map(c=>[c.id,c]));
 assert.equal(audit.separateChatReviewCards.length,10);
 for(const row of audit.separateChatReviewCards){
