@@ -1,0 +1,2147 @@
+{
+  "release": "v148",
+  "date": "2026-10-27",
+  "course": "AQA Chemistry 7405",
+  "scope": "3.3.1–3.3.6 Year 1 organic compulsory curriculum, 19 numbered subsections; sampled atomic checks are not a guarantee that every AQA learning outcome or skill has been certified.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment"
+  ],
+  "baseline": {
+    "deckVersion": 146,
+    "cards": 3263,
+    "activeCards": 3259,
+    "questionBankVersion": 60,
+    "questions": 1200
+  },
+  "counts": {
+    "subsections": 19,
+    "atomicChecks": 80,
+    "byStatus": {
+      "supported_recall": 44,
+      "partial": 9,
+      "supported_application": 19,
+      "gap_applied": 5,
+      "gap_recall": 3
+    }
+  },
+  "policy": {
+    "narrowEvidenceOnly": true,
+    "studentMasteryNotAsserted": true,
+    "allExistingIdsUntouched": true,
+    "includesUnverifiedGaps": true,
+    "legacyNoExactQuestionBackUnverified": false,
+    "noMockFilterChanges": true,
+    "excludesA2": false
+  },
+  "rows": [
+    {
+      "id": "ASORG-001",
+      "specRef": "3.3.1.1",
+      "requirement": "Meanings of empirical, molecular, displayed and skeletal formulae",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_015",
+            "front": "What is an empirical formula?",
+            "back": "Simplest whole-number ratio of atoms of each element."
+          },
+          {
+            "id": "task1_chem_016",
+            "front": "What is a molecular formula?",
+            "back": "Actual number of atoms of each element per molecule."
+          },
+          {
+            "id": "task1_chem_113",
+            "front": "What does 'displayed formula' show?",
+            "back": "Every atom and every covalent bond."
+          },
+          {
+            "id": "task1_chem_114",
+            "front": "What is a skeletal formula?",
+            "back": "A line representation omitting C symbols and most attached H atoms."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-002",
+      "specRef": "3.3.1.1",
+      "requirement": "Characteristics of a homologous series and successive CH2 units",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_108",
+            "front": "What is a homologous series?",
+            "back": "Compounds with the same functional group and general formula."
+          },
+          {
+            "id": "task1_v124_bulk_chem_100",
+            "front": "What changes by CH₂ from one member of a homologous series to the next?",
+            "back": "The carbon chain length."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-003",
+      "specRef": "3.3.1.1",
+      "requirement": "Interpret carbon positions and attached hydrogens in skeletal formulae",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_001",
+            "front": "In a skeletal formula, what does each unlabelled line end represent?",
+            "back": "One carbon atom."
+          },
+          {
+            "id": "task1_v146_002",
+            "front": "In a skeletal formula, how many bonds does neutral carbon normally make?",
+            "back": "Four covalent bonds, with omitted C–H bonds implied."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-004",
+      "specRef": "3.3.1.1",
+      "requirement": "Name straightforward organic chains with substituents",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_004",
+            "front": "Name CH₃CH(CH₃)CH₂CH₃.",
+            "back": "2-methylbutane."
+          },
+          {
+            "id": "task1_v146_005",
+            "front": "Name CH₃CH(OH)CH₂CH₃.",
+            "back": "Butan-2-ol."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Examples are short, not the full six-carbon chains-and-rings range.",
+      "next": null
+    },
+    {
+      "id": "ASORG-005",
+      "specRef": "3.3.1.1",
+      "requirement": "Draw structural, displayed and skeletal structures from unfamiliar names up to six carbons and rings",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_114",
+            "front": "What is a skeletal formula?",
+            "back": "A line representation omitting C symbols and most attached H atoms."
+          },
+          {
+            "id": "task1_v146_004",
+            "front": "Name CH₃CH(CH₃)CH₂CH₃.",
+            "back": "2-methylbutane."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_12",
+            "prompt": "For CH₃CH=CHCH₂OH: give the correct IUPAC name, explain whether E/Z isomerism is possible, and state a reliable method for determining E or Z from a displayed drawing.",
+            "marks": 5,
+            "markPoints": [
+              "Principal functional group is the alcohol: number chain from the –CH₂OH end.",
+              "Name is but-2-en-1-ol.",
+              "Each C=C carbon has two different substituents, so E/Z is possible.",
+              "Compare atomic numbers of directly attached atoms; move outward after ties.",
+              "Higher priorities same side gives Z; opposite sides gives E."
+            ]
+          }
+        ]
+      },
+      "limitation": "The drawing question is one sample, not a systematic variety of named rings and functional groups.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-006",
+      "specRef": "3.3.1.1",
+      "requirement": "Distinguish a general formula from a specific structural formula",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_119",
+            "front": "What is the general formula for an acyclic alkane?",
+            "back": "CₙH₂ₙ₊₂."
+          },
+          {
+            "id": "task1_chem_113",
+            "front": "What does 'displayed formula' show?",
+            "back": "Every atom and every covalent bond."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "General formula is illustrated through alkanes but the contrast is not directly tested.",
+      "next": "short_flashcard_if_not_duplicate"
+    },
+    {
+      "id": "ASORG-007",
+      "specRef": "3.3.1.2",
+      "requirement": "Radical dots and distinction between homolytic and heterolytic fission",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_homolytic",
+            "front": "What is homolytic fission?",
+            "back": "Each atom takes one electron from the covalent bond, forming radicals."
+          },
+          {
+            "id": "chem_heterolytic",
+            "front": "What is heterolytic fission?",
+            "back": "Both bonding electrons go to one atom, forming ions."
+          },
+          {
+            "id": "task1_v146_032",
+            "front": "In a radical mechanism, what does a dot after a symbol mean?",
+            "back": "An unpaired electron, not an ionic charge."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-008",
+      "specRef": "3.3.1.2",
+      "requirement": "Show electron-pair movement using curly-arrow origins and direction",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_01",
+            "front": "Where should the tail of a curly arrow be placed?",
+            "back": "At an electron pair: a lone pair or covalent bond."
+          },
+          {
+            "id": "task1_v146_009",
+            "front": "When a C–Br bond breaks heterolytically, where does its curly arrow point?",
+            "back": "Towards Br, which takes the bonding electron pair."
+          },
+          {
+            "id": "task1_v146_010",
+            "front": "Choose the correct arrow source: A electrophile; B lone pair; C positive charge.",
+            "back": "B: the lone pair supplying the electrons."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-009",
+      "specRef": "3.3.1.2",
+      "requirement": "Write a complete balanced sequence of radical initiation, propagation and termination steps",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_026",
+            "front": "Radical initiation: fill the gap, Cl₂ → ___ (under UV).",
+            "back": "2Cl•"
+          },
+          {
+            "id": "task1_v146_027",
+            "front": "Radical propagation 1: Cl• + CH₄ → HCl + ___",
+            "back": "CH₃•"
+          },
+          {
+            "id": "task1_v146_028",
+            "front": "Radical propagation 2: CH₃• + Cl₂ → CH₃Cl + ___",
+            "back": "Cl•"
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_08",
+            "prompt": "On paper set out the initiation, two propagation and two different termination equations for free-radical chlorination of methane. Explain why it is a chain reaction and why a mixture can form.",
+            "marks": 7,
+            "markPoints": [
+              "Initiation under UV: Cl₂ → 2Cl•.",
+              "Propagation 1: Cl• + CH₄ → HCl + CH₃•.",
+              "Propagation 2: CH₃• + Cl₂ → CH₃Cl + Cl•.",
+              "Valid termination: Cl• + CH₃• → CH₃Cl (or equivalent).",
+              "Different valid termination: CH₃• + CH₃• → C₂H₆ (or Cl• + Cl• → Cl₂).",
+              "Radicals are regenerated in propagation, sustaining a chain.",
+              "Further substitution or alternative terminations give a product mixture."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-010",
+      "specRef": "3.3.1.2",
+      "requirement": "Draw ionic mechanisms showing intermediate charges and every relevant arrow",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_009",
+            "front": "When a C–Br bond breaks heterolytically, where does its curly arrow point?",
+            "back": "Towards Br, which takes the bonding electron pair."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_05",
+            "prompt": "A student draws OH⁻ attacking the Br atom in CH₃CH₂Br. Explain why this is wrong and draw or describe the corrected two-curly-arrow substitution mechanism, including product ions.",
+            "marks": 5,
+            "markPoints": [
+              "C–Br is polar; its carbon is δ⁺.",
+              "OH⁻ acts as a nucleophile, donating a lone pair from O.",
+              "Arrow from O lone pair to the carbon attached to Br (not to Br).",
+              "Arrow from the C–Br bond to Br, forming Br⁻.",
+              "Organic product is ethanol, CH₃CH₂OH."
+            ]
+          },
+          {
+            "id": "organic_v147_06",
+            "prompt": "A halogenoalkane RBr reacts with ammonia to give a primary amine. Draw or describe the two stages with all charges, the initially formed organic ion and the subsequent proton transfer.",
+            "marks": 6,
+            "markPoints": [
+              "NH₃ is a neutral nucleophile with a nitrogen lone pair.",
+              "Arrow from the N lone pair to the δ⁺ carbon bonded to Br.",
+              "Arrow from the C–Br bond to Br, which leaves as Br⁻.",
+              "The first organic intermediate is positively charged RNH₃⁺.",
+              "A second ammonia molecule accepts a proton from RNH₃⁺.",
+              "The organic product is RNH₂, a primary amine; NH₄⁺ is also formed."
+            ]
+          },
+          {
+            "id": "organic_v147_07",
+            "prompt": "2-Bromobutane can undergo elimination. Draw the concerted elimination mechanism on paper (or explain all three curly arrows). Identify the organic product types and why more than one alkene is possible.",
+            "marks": 6,
+            "markPoints": [
+              "OH⁻ acts as a base and accepts a hydrogen from a β carbon.",
+              "First arrow: O lone pair of OH⁻ to a β hydrogen.",
+              "Second arrow: β C–H bond pair to the C–C bond, forming C=C.",
+              "Third arrow: C–Br bond electron pair to Br, giving Br⁻.",
+              "Products include an alkene, water and Br⁻.",
+              "Removing H from either adjacent carbon allows but-1-ene or but-2-ene; but-2-ene has E/Z forms."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-011",
+      "specRef": "3.3.1.3",
+      "requirement": "Define structural isomers, stereoisomers and their structural relationship",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_110",
+            "front": "What is a structural isomer?",
+            "back": "Same molecular formula, different structural formula."
+          },
+          {
+            "id": "task1_v146_011",
+            "front": "How is stereoisomerism different from structural isomerism?",
+            "back": "Same connectivity but a different arrangement in space."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-012",
+      "specRef": "3.3.1.3",
+      "requirement": "Distinguish chain, position and functional-group isomerism",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_111",
+            "front": "What is a position isomer?",
+            "back": "Same skeleton and group type, but in a different position."
+          },
+          {
+            "id": "task1_chem_112",
+            "front": "What is chain isomerism?",
+            "back": "Same molecular formula but a different carbon skeleton."
+          },
+          {
+            "id": "task1_v131_119",
+            "front": "What is a functional-group isomer?",
+            "back": "Same molecular formula but different functional groups."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-013",
+      "specRef": "3.3.1.3",
+      "requirement": "State E/Z conditions and interpret E and Z using priority groups",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_140",
+            "front": "What condition permits E/Z isomerism around a C=C bond?",
+            "back": "Each double-bond carbon has two different groups."
+          },
+          {
+            "id": "task1_chem_141",
+            "front": "What does E mean in E/Z stereoisomerism?",
+            "back": "Higher-priority groups are on opposite sides."
+          },
+          {
+            "id": "task1_chem_142",
+            "front": "What does Z mean in E/Z stereoisomerism?",
+            "back": "Higher-priority groups are on the same side."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-014",
+      "specRef": "3.3.1.3",
+      "requirement": "Apply CIP ranking including a tie at the first attached atom",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_cip",
+            "front": "How are priorities assigned using CIP rules?",
+            "back": "Higher atomic number of the directly attached atom gets higher priority; move outward at the first difference."
+          },
+          {
+            "id": "task1_v146_012",
+            "front": "In CIP ranking, if attached atoms tie, what do you compare next?",
+            "back": "Their attached atoms, ordered by atomic number, until the first difference."
+          },
+          {
+            "id": "task1_v146_013",
+            "front": "CIP: which has higher priority, –CH₂OH or –CH₃?",
+            "back": "–CH₂OH: its next attached atoms include oxygen."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-015",
+      "specRef": "3.3.1.3",
+      "requirement": "Draw and classify unfamiliar E/Z pairs and other isomers",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_011",
+            "front": "How is stereoisomerism different from structural isomerism?",
+            "back": "Same connectivity but a different arrangement in space."
+          },
+          {
+            "id": "task1_v146_012",
+            "front": "In CIP ranking, if attached atoms tie, what do you compare next?",
+            "back": "Their attached atoms, ordered by atomic number, until the first difference."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_12",
+            "prompt": "For CH₃CH=CHCH₂OH: give the correct IUPAC name, explain whether E/Z isomerism is possible, and state a reliable method for determining E or Z from a displayed drawing.",
+            "marks": 5,
+            "markPoints": [
+              "Principal functional group is the alcohol: number chain from the –CH₂OH end.",
+              "Name is but-2-en-1-ol.",
+              "Each C=C carbon has two different substituents, so E/Z is possible.",
+              "Compare atomic numbers of directly attached atoms; move outward after ties.",
+              "Higher priorities same side gives Z; opposite sides gives E."
+            ]
+          }
+        ]
+      },
+      "limitation": "A combined question exists, but systematic variation in drawn E/Z structures remains to be checked.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-016",
+      "specRef": "3.3.2.1",
+      "requirement": "Define an alkane as a saturated hydrocarbon",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_009",
+            "front": "Define an alkane.",
+            "back": "A saturated hydrocarbon containing only carbon–carbon single bonds."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-017",
+      "specRef": "3.3.2.1",
+      "requirement": "Explain fractionation using boiling ranges and the temperature gradient",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_014",
+            "front": "What is a crude-oil fraction?",
+            "back": "A mixture of hydrocarbons with similar boiling points."
+          },
+          {
+            "id": "task1_v146_015",
+            "front": "Fill the gap: a fractionating column is cooler near the ___.",
+            "back": "top"
+          },
+          {
+            "id": "task1_v146_016",
+            "front": "Where do higher-boiling crude-oil fractions condense?",
+            "back": "Lower down the hotter fractionating column."
+          },
+          {
+            "id": "task1_v146_017",
+            "front": "Is fractional distillation a chemical change or physical separation?",
+            "back": "Physical separation; no hydrocarbon molecules are changed."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-018",
+      "specRef": "3.3.2.1",
+      "requirement": "Relate alkane boiling-point trend to London forces",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_018",
+            "front": "Why do larger alkane molecules generally have higher boiling points?",
+            "back": "More electrons produce stronger London dispersion forces."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-019",
+      "specRef": "3.3.2.2",
+      "requirement": "Define cracking and distinguish thermal from catalytic cracking",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_126",
+            "front": "What is cracking?",
+            "back": "Breaking large hydrocarbons into smaller hydrocarbons."
+          },
+          {
+            "id": "task1_v130_119",
+            "front": "What distinguishes thermal from catalytic cracking in product emphasis?",
+            "back": "Thermal cracking favours alkenes; catalytic cracking favours fuels and aromatics."
+          },
+          {
+            "id": "task1_v146_019",
+            "front": "Which cracking method uses high temperature and high pressure?",
+            "back": "Thermal cracking."
+          },
+          {
+            "id": "task1_v146_020",
+            "front": "Fill the gap: catalytic cracking uses a ___ catalyst.",
+            "back": "zeolite"
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-020",
+      "specRef": "3.3.2.2",
+      "requirement": "Recall zeolite and catalytic cracking product emphasis",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_011",
+            "front": "What catalyst is associated with catalytic cracking and what products are valuable?",
+            "back": "A zeolite catalyst; valuable products include motor fuels and aromatic hydrocarbons."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-021",
+      "specRef": "3.3.2.2",
+      "requirement": "Explain industrial economic reason for cracking heavier fractions",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_012",
+            "front": "What is the economic reason for cracking long-chain alkane fractions?",
+            "back": "To convert less-demanded heavy fractions into more useful, higher-demand fuels and chemical feedstocks."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-022",
+      "specRef": "3.3.2.2",
+      "requirement": "Apply atom-balance ideas to unfamiliar cracking product equations",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_126",
+            "front": "What is cracking?",
+            "back": "Breaking large hydrocarbons into smaller hydrocarbons."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Existing prompts recall cracking rather than checking unfamiliar balanced product equations.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-023",
+      "specRef": "3.3.2.3",
+      "requirement": "Distinguish complete and incomplete hydrocarbon combustion products",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_127",
+            "front": "What is complete combustion of a hydrocarbon?",
+            "back": "Reaction with sufficient oxygen producing CO₂ and H₂O."
+          },
+          {
+            "id": "task1_v142_010",
+            "front": "What carbon-containing products can form in incomplete hydrocarbon combustion?",
+            "back": "Carbon monoxide (CO) and solid carbon (soot); some CO₂ may also form."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-024",
+      "specRef": "3.3.2.3",
+      "requirement": "Explain why nitrogen oxides form in vehicle engines",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_021",
+            "front": "Why can nitrogen oxides form inside combustion engines?",
+            "back": "High temperatures allow nitrogen and oxygen from air to react."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-025",
+      "specRef": "3.3.2.3",
+      "requirement": "Identify roles of oxidation and reduction in catalytic converters",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_022",
+            "front": "In a catalytic converter, CO is oxidised to which gas?",
+            "back": "Carbon dioxide, CO₂."
+          },
+          {
+            "id": "task1_v146_023",
+            "front": "In a catalytic converter, nitrogen oxides are reduced to what?",
+            "back": "Nitrogen, N₂."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-026",
+      "specRef": "3.3.2.3",
+      "requirement": "Explain removing sulfur dioxide using oxide and carbonate chemistry",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_024",
+            "front": "Complete the flue-gas equation: CaO + SO₂ → ___",
+            "back": "CaSO₃."
+          },
+          {
+            "id": "task1_v146_025",
+            "front": "Complete the flue-gas equation: CaCO₃ + SO₂ → CaSO₃ + ___",
+            "back": "CO₂."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-027",
+      "specRef": "3.3.2.3",
+      "requirement": "Evaluate multiple pollutants and relevant environmental consequences from a case study",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_010",
+            "front": "What carbon-containing products can form in incomplete hydrocarbon combustion?",
+            "back": "Carbon monoxide (CO) and solid carbon (soot); some CO₂ may also form."
+          },
+          {
+            "id": "task1_v146_021",
+            "front": "Why can nitrogen oxides form inside combustion engines?",
+            "back": "High temperatures allow nitrogen and oxygen from air to react."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Individual emissions appear as recall, but a combined case-study justification is not evidenced here.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-028",
+      "specRef": "3.3.2.4",
+      "requirement": "Complete the stages of methane chlorination as a radical chain",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_026",
+            "front": "Radical initiation: fill the gap, Cl₂ → ___ (under UV).",
+            "back": "2Cl•"
+          },
+          {
+            "id": "task1_v146_027",
+            "front": "Radical propagation 1: Cl• + CH₄ → HCl + ___",
+            "back": "CH₃•"
+          },
+          {
+            "id": "task1_v146_030",
+            "front": "Termination: complete CH₃• + CH₃• → ___",
+            "back": "C₂H₆."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_08",
+            "prompt": "On paper set out the initiation, two propagation and two different termination equations for free-radical chlorination of methane. Explain why it is a chain reaction and why a mixture can form.",
+            "marks": 7,
+            "markPoints": [
+              "Initiation under UV: Cl₂ → 2Cl•.",
+              "Propagation 1: Cl• + CH₄ → HCl + CH₃•.",
+              "Propagation 2: CH₃• + Cl₂ → CH₃Cl + Cl•.",
+              "Valid termination: Cl• + CH₃• → CH₃Cl (or equivalent).",
+              "Different valid termination: CH₃• + CH₃• → C₂H₆ (or Cl• + Cl• → Cl₂).",
+              "Radicals are regenerated in propagation, sustaining a chain.",
+              "Further substitution or alternative terminations give a product mixture."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-029",
+      "specRef": "3.3.2.4",
+      "requirement": "Explain multiple substitution and mixture of products",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_031",
+            "front": "Why can methane chlorination give several chlorinated products?",
+            "back": "The products can undergo further radical substitution."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-030",
+      "specRef": "3.3.3.1",
+      "requirement": "Explain polar C–halogen bond and electrophilic carbon",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_128",
+            "front": "What bond property makes halogenoalkanes reactive?",
+            "back": "The C–halogen bond is polar."
+          },
+          {
+            "id": "chem_mechanisms_v42_08",
+            "front": "Why is the C atom bonded to a halogen electrophilic?",
+            "back": "Bond polarisation gives that carbon a partial positive charge."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-031",
+      "specRef": "3.3.3.1",
+      "requirement": "Identify product classes for OH– and CN– substitution",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_133",
+            "front": "What is the main type of product from nucleophilic substitution by OH⁻?",
+            "back": "An alcohol."
+          },
+          {
+            "id": "task1_chem_134",
+            "front": "What is the organic product type from substitution by CN⁻?",
+            "back": "A nitrile."
+          },
+          {
+            "id": "task1_v146_079",
+            "front": "When CN⁻ replaces a halogen in R–X, how does the carbon count change?",
+            "back": "It increases by one carbon atom."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-032",
+      "specRef": "3.3.3.1",
+      "requirement": "Draw nucleophilic substitution including bond-breaking arrow",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_034",
+            "front": "Substitution arrow 1: OH⁻ attacks which atom of a halogenoalkane?",
+            "back": "The δ⁺ carbon bonded to the halogen."
+          },
+          {
+            "id": "task1_v146_035",
+            "front": "Substitution arrow 2: where does the C–Br bond's electron pair move?",
+            "back": "To bromine, which leaves as Br⁻."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_05",
+            "prompt": "A student draws OH⁻ attacking the Br atom in CH₃CH₂Br. Explain why this is wrong and draw or describe the corrected two-curly-arrow substitution mechanism, including product ions.",
+            "marks": 5,
+            "markPoints": [
+              "C–Br is polar; its carbon is δ⁺.",
+              "OH⁻ acts as a nucleophile, donating a lone pair from O.",
+              "Arrow from O lone pair to the carbon attached to Br (not to Br).",
+              "Arrow from the C–Br bond to Br, forming Br⁻.",
+              "Organic product is ethanol, CH₃CH₂OH."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-033",
+      "specRef": "3.3.3.1",
+      "requirement": "Track NH3 intermediate charges and proton transfer on a structure",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_037",
+            "front": "Fill the gap: substitution of R–Br with NH₃ first gives R–NH₃___.",
+            "back": "⁺"
+          },
+          {
+            "id": "task1_v146_038",
+            "front": "What happens after the positively charged RNH₃⁺ intermediate forms?",
+            "back": "A base removes H⁺, giving a neutral primary amine."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_06",
+            "prompt": "A halogenoalkane RBr reacts with ammonia to give a primary amine. Draw or describe the two stages with all charges, the initially formed organic ion and the subsequent proton transfer.",
+            "marks": 6,
+            "markPoints": [
+              "NH₃ is a neutral nucleophile with a nitrogen lone pair.",
+              "Arrow from the N lone pair to the δ⁺ carbon bonded to Br.",
+              "Arrow from the C–Br bond to Br, which leaves as Br⁻.",
+              "The first organic intermediate is positively charged RNH₃⁺.",
+              "A second ammonia molecule accepts a proton from RNH₃⁺.",
+              "The organic product is RNH₂, a primary amine; NH₄⁺ is also formed."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-034",
+      "specRef": "3.3.3.1",
+      "requirement": "Relate hydrolysis rates to C–halogen bond enthalpy and comparative data",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_122",
+            "front": "Why do iodoalkanes generally hydrolyse faster than chloroalkanes?",
+            "back": "The C–I bond has lower bond enthalpy."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_18",
+            "prompt": "Three otherwise comparable halogenoalkanes show an observable silver-halide precipitate after 45 s (iodo), 90 s (bromo), and 180 s (chloro). Rank their apparent rates, calculate the ratio of the fastest and slowest times, and explain the trend and a limitation of timing precipitate appearance.",
+            "marks": 5,
+            "markPoints": [
+              "Order of apparent hydrolysis speed is iodo > bromo > chloro.",
+              "Time ratio slowest/fastest = 180/45 = 4.",
+              "C–I has a lower bond enthalpy than C–Br or C–Cl.",
+              "Weaker C–X bond makes hydrolysis more rapid for otherwise comparable structures.",
+              "First visible precipitate time gives an approximate comparison, not an exact initial rate."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-035",
+      "specRef": "3.3.3.2",
+      "requirement": "Explain how hydroxide can act as nucleophile or base",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_12",
+            "front": "Why may the same species be a base in one reaction and nucleophile in another?",
+            "back": "It may accept H+ or donate an electron pair to carbon, respectively."
+          },
+          {
+            "id": "task1_v146_039",
+            "front": "In elimination by OH⁻, does OH⁻ attack carbon or an adjacent hydrogen?",
+            "back": "An adjacent (β) hydrogen; OH⁻ acts as a base."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-036",
+      "specRef": "3.3.3.2",
+      "requirement": "Draw all electron movements in halogenoalkane elimination",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_040",
+            "front": "Elimination arrow 1: where does the oxygen lone pair of OH⁻ point?",
+            "back": "To a hydrogen on the carbon next to the C–Br carbon."
+          },
+          {
+            "id": "task1_v146_041",
+            "front": "Elimination arrow 2: where do the β C–H bonding electrons move?",
+            "back": "Into the bond between the two carbons, forming C=C."
+          },
+          {
+            "id": "task1_v146_042",
+            "front": "Elimination arrow 3: where do the C–Br bonding electrons move?",
+            "back": "To Br, forming Br⁻."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_07",
+            "prompt": "2-Bromobutane can undergo elimination. Draw the concerted elimination mechanism on paper (or explain all three curly arrows). Identify the organic product types and why more than one alkene is possible.",
+            "marks": 6,
+            "markPoints": [
+              "OH⁻ acts as a base and accepts a hydrogen from a β carbon.",
+              "First arrow: O lone pair of OH⁻ to a β hydrogen.",
+              "Second arrow: β C–H bond pair to the C–C bond, forming C=C.",
+              "Third arrow: C–Br bond electron pair to Br, giving Br⁻.",
+              "Products include an alkene, water and Br⁻.",
+              "Removing H from either adjacent carbon allows but-1-ene or but-2-ene; but-2-ene has E/Z forms."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-037",
+      "specRef": "3.3.3.2",
+      "requirement": "Identify possible positional isomers from elimination",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_043",
+            "front": "Elimination of 2-bromobutane: name two possible alkene position isomers.",
+            "back": "But-1-ene and but-2-ene."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-038",
+      "specRef": "3.3.3.3",
+      "requirement": "Explain how CFC-derived chlorine radicals are generated by UV",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_135",
+            "front": "Why are CFCs damaging in the stratosphere?",
+            "back": "UV releases chlorine radicals that destroy ozone."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-039",
+      "specRef": "3.3.3.3",
+      "requirement": "Explain chlorine-radical catalysis and write linked ozone equations",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_044",
+            "front": "Ozone cycle step 1: Cl• + O₃ → ClO• + ___",
+            "back": "O₂."
+          },
+          {
+            "id": "task1_v146_045",
+            "front": "Ozone cycle step 2: ClO• + O₃ → Cl• + ___",
+            "back": "2O₂."
+          },
+          {
+            "id": "task1_v146_047",
+            "front": "Complete the net ozone-decomposition equation: 2O₃ → ___",
+            "back": "3O₂."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_09",
+            "prompt": "An exam question gives Cl• reacting with stratospheric ozone. Write the two radical steps and deduce the net equation. Explain why chlorine atoms are catalysts rather than reactants overall.",
+            "marks": 5,
+            "markPoints": [
+              "Cl• + O₃ → ClO• + O₂.",
+              "ClO• + O₃ → Cl• + 2O₂.",
+              "Cl• is consumed in one step but regenerated in the next.",
+              "ClO• is an intermediate and cancels when equations are summed.",
+              "Overall 2O₃ → 3O₂, with net ozone depletion."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-040",
+      "specRef": "3.3.3.3",
+      "requirement": "Explain upper-atmosphere ozone absorbing UV radiation",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [],
+        "questions": []
+      },
+      "limitation": "A short direct definition and purpose question was not located in the audited topic-specific cards.",
+      "next": "short_flashcard_if_not_duplicate"
+    },
+    {
+      "id": "ASORG-041",
+      "specRef": "3.3.3.3",
+      "requirement": "Interpret research evidence and regulation of ozone-depleting CFCs",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_135",
+            "front": "Why are CFCs damaging in the stratosphere?",
+            "back": "UV releases chlorine radicals that destroy ozone."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "A causal flashcard is present, but not an evidence/legislation interpretation question.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-042",
+      "specRef": "3.3.4.1",
+      "requirement": "Explain high electron density in the carbon–carbon double bond",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_125",
+            "front": "Why is the alkene double bond attacked by electrophiles?",
+            "back": "The π bond has high electron density."
+          },
+          {
+            "id": "task1_v146_048",
+            "front": "An alkene C=C consists of which two bond types?",
+            "back": "One σ bond and one π bond."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-043",
+      "specRef": "3.3.4.1",
+      "requirement": "Recognise an alkene as unsaturated and explain restricted double-bond rotation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_136",
+            "front": "What is the general formula for an acyclic monoalkene?",
+            "back": "CₙH₂ₙ."
+          },
+          {
+            "id": "task1_v146_049",
+            "front": "Why does a C=C bond restrict rotation?",
+            "back": "Rotation would disrupt sideways overlap forming the π bond."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-044",
+      "specRef": "3.3.4.2",
+      "requirement": "Draw electrophilic addition to ethene with HBr",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_050",
+            "front": "HBr addition arrow 2: where does the H–Br bond's electron pair go?",
+            "back": "To bromine, forming Br⁻."
+          },
+          {
+            "id": "task1_v146_051",
+            "front": "After HBr protonates ethene, which charged intermediate forms?",
+            "back": "The ethyl carbocation, CH₃CH₂⁺."
+          },
+          {
+            "id": "task1_v146_052",
+            "front": "HBr addition final arrow: where does the Br⁻ lone pair point?",
+            "back": "Towards the positively charged carbon of the carbocation."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_01",
+            "prompt": "Ethene reacts with HBr. On paper draw the full electrophilic addition mechanism with charges and every curly arrow. Alternatively describe where each arrow starts and ends. Identify the organic product.",
+            "marks": 6,
+            "markPoints": [
+              "Show Hδ⁺–Brδ⁻ (or otherwise identify the polar H–Br bond).",
+              "First curly arrow goes from C=C π bond towards the H atom.",
+              "Second curly arrow goes from the H–Br bond to Br, giving Br⁻.",
+              "Show the CH₃CH₂⁺ carbocation intermediate with charge on carbon.",
+              "Arrow goes from a Br⁻ lone pair towards the carbocation carbon.",
+              "Final organic product is CH₃CH₂Br, bromoethane."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-045",
+      "specRef": "3.3.4.2",
+      "requirement": "Show the induced dipole and electron movements in Br2 addition",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_053",
+            "front": "Why does Br₂ become polarised as it approaches an alkene?",
+            "back": "The alkene π electrons repel Br₂ electrons, inducing a dipole."
+          },
+          {
+            "id": "task1_v146_080",
+            "front": "Br₂ addition arrow 1: where do the alkene π electrons move?",
+            "back": "Towards the induced δ⁺ bromine atom."
+          },
+          {
+            "id": "task1_v146_081",
+            "front": "Br₂ addition arrow 2: where do the Br–Br bonding electrons go?",
+            "back": "Towards the other Br, forming Br⁻."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_03",
+            "prompt": "Bromine molecules are non-polar before they approach ethene. Explain their reaction and, on paper, draw a mechanism showing a polarised Br₂, the electron-pair movements and the product.",
+            "marks": 6,
+            "markPoints": [
+              "C=C is an electron-rich π bond.",
+              "The π electrons induce a dipole in approaching Br₂; nearest Br becomes δ⁺.",
+              "Arrow from the C=C electron pair to the δ⁺ bromine atom.",
+              "Arrow from Br–Br bonding pair to the other bromine; Br⁻ forms.",
+              "A positively charged bromine-containing intermediate is attacked by Br⁻.",
+              "Product is CH₂BrCH₂Br, 1,2-dibromoethane."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-046",
+      "specRef": "3.3.4.2",
+      "requirement": "Account for addition of H2SO4 to an alkene",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_055",
+            "front": "What is the immediate product of ethene + H₂SO₄?",
+            "back": "Ethyl hydrogensulfate, CH₃CH₂OSO₃H."
+          },
+          {
+            "id": "task1_v146_056",
+            "front": "After H₂SO₄ protonates ethene, which ion attacks the carbocation?",
+            "back": "Hydrogensulfate, HSO₄⁻, through oxygen."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_04",
+            "prompt": "Ethene undergoes electrophilic addition with H₂SO₄. Draw or describe the arrow movements, intermediates and immediate organic product; then state how that product relates to ethanol.",
+            "marks": 6,
+            "markPoints": [
+              "Ethene's C=C π electrons attack an H of H₂SO₄.",
+              "The O–H bonding pair goes to oxygen, giving HSO₄⁻.",
+              "A CH₃CH₂⁺ carbocation forms.",
+              "The HSO₄⁻ oxygen donates a lone pair to the carbocation carbon.",
+              "The immediate product is CH₃CH₂OSO₃H (ethyl hydrogensulfate).",
+              "Hydrolysis of the alkyl hydrogensulfate yields ethanol."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-047",
+      "specRef": "3.3.4.2",
+      "requirement": "Relate major/minor products to carbocation stability",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_16",
+            "front": "Order typical carbocations by stability.",
+            "back": "Tertiary is more stable than secondary, which is more stable than primary."
+          },
+          {
+            "id": "task1_v146_057",
+            "front": "In the major product from propene + HBr, which carbon bears bromine?",
+            "back": "Carbon 2 (forming 2-bromopropane)."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_02",
+            "prompt": "Propene reacts with HBr and produces two bromoalkane isomers. Draw or describe the two possible carbocations, give their classes and explain the major product using intermediate stability.",
+            "marks": 5,
+            "markPoints": [
+              "One pathway forms a secondary carbocation: CH₃CH⁺CH₃.",
+              "The alternative pathway forms a primary carbocation: CH₃CH₂CH₂⁺.",
+              "The secondary carbocation is more stable than the primary one.",
+              "Attack by Br⁻ on the secondary carbocation gives 2-bromopropane.",
+              "Identify 2-bromopropane as major and 1-bromopropane as minor."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-048",
+      "specRef": "3.3.4.2",
+      "requirement": "Interpret bromine-water decolourisation as evidence for unsaturation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_139",
+            "front": "What colour change indicates an alkene with bromine water?",
+            "back": "Orange to colourless."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-049",
+      "specRef": "3.3.4.3",
+      "requirement": "Convert between substituted monomers and polymer repeat units",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_058",
+            "front": "In a polymer repeating-unit diagram, where is n placed?",
+            "back": "Outside the square brackets."
+          },
+          {
+            "id": "task1_v146_083",
+            "front": "Complete the monomer: [–CH₂–CH(Cl)–]ₙ comes from ___",
+            "back": "CH₂=CHCl (chloroethene)."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_11",
+            "prompt": "The monomer CH₂=CHCl forms a polymer. Draw the correctly bracketed repeating unit, with continuation bonds, and explain how you would recover the monomer from the unit.",
+            "marks": 5,
+            "markPoints": [
+              "C=C becomes a single C–C bond in the backbone.",
+              "Correct repeat structure is [–CH₂–CH(Cl)–]ₙ.",
+              "Cl remains a side group, not in the backbone.",
+              "Continuation bonds pass through each side of the brackets.",
+              "Monomer is reconstructed as CH₂=CHCl by restoring the C=C."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-050",
+      "specRef": "3.3.4.3",
+      "requirement": "Explain unreactivity of saturated addition-polymer backbones",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_144",
+            "front": "Why are addition polymers often chemically unreactive?",
+            "back": "Strong carbon–carbon backbones lack easily attacked functional groups."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-051",
+      "specRef": "3.3.4.3",
+      "requirement": "Explain intermolecular attractions between polyalkene chains",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_126",
+            "front": "What can a plasticiser do to PVC?",
+            "back": "Weaken intermolecular forces, increasing flexibility."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Plasticiser evidence touches the forces, but a general polyalkene chain-force explanation is not directly evidenced.",
+      "next": "short_flashcard_if_not_duplicate"
+    },
+    {
+      "id": "ASORG-052",
+      "specRef": "3.3.4.3",
+      "requirement": "Recall how plasticisers affect PVC flexibility",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_126",
+            "front": "What can a plasticiser do to PVC?",
+            "back": "Weaken intermolecular forces, increasing flexibility."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-053",
+      "specRef": "3.3.4.3",
+      "requirement": "Give typical PVC uses and connect properties to application",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_061",
+            "front": "What is the monomer of poly(chloroethene), PVC?",
+            "back": "Chloroethene, CH₂=CHCl."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "The monomer and plasticiser are covered, but typical-use recall was not directly found.",
+      "next": "short_flashcard_if_not_duplicate"
+    },
+    {
+      "id": "ASORG-054",
+      "specRef": "3.3.5.1",
+      "requirement": "Recognise hydration of an alkene and its product",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_063",
+            "front": "What is the reaction type when ethene becomes ethanol with water?",
+            "back": "Hydration (addition)."
+          },
+          {
+            "id": "task1_v124_bulk_chem_124",
+            "front": "What is the product of hydration of ethene?",
+            "back": "Ethanol."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-055",
+      "specRef": "3.3.5.1",
+      "requirement": "Draw the acid-catalysed addition mechanism for alcohol formation from an alkene",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_055",
+            "front": "What is the immediate product of ethene + H₂SO₄?",
+            "back": "Ethyl hydrogensulfate, CH₃CH₂OSO₃H."
+          },
+          {
+            "id": "task1_v146_056",
+            "front": "After H₂SO₄ protonates ethene, which ion attacks the carbocation?",
+            "back": "Hydrogensulfate, HSO₄⁻, through oxygen."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_04",
+            "prompt": "Ethene undergoes electrophilic addition with H₂SO₄. Draw or describe the arrow movements, intermediates and immediate organic product; then state how that product relates to ethanol.",
+            "marks": 6,
+            "markPoints": [
+              "Ethene's C=C π electrons attack an H of H₂SO₄.",
+              "The O–H bonding pair goes to oxygen, giving HSO₄⁻.",
+              "A CH₃CH₂⁺ carbocation forms.",
+              "The HSO₄⁻ oxygen donates a lone pair to the carbocation carbon.",
+              "The immediate product is CH₃CH₂OSO₃H (ethyl hydrogensulfate).",
+              "Hydrolysis of the alkyl hydrogensulfate yields ethanol."
+            ]
+          }
+        ]
+      },
+      "limitation": "The parallel acid-addition example does not fully assess the hydrolysis/steam-to-alcohol sequence.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-056",
+      "specRef": "3.3.5.1",
+      "requirement": "Balance glucose fermentation into ethanol and carbon dioxide",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_062",
+            "front": "What is the overall fermentation equation for glucose to ethanol?",
+            "back": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-057",
+      "specRef": "3.3.5.1",
+      "requirement": "Recall and justify conditions of industrial fermentation",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_062",
+            "front": "What is the overall fermentation equation for glucose to ethanol?",
+            "back": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "The equation is present but not a complete short card on conditions and justifications.",
+      "next": "short_flashcard_if_not_duplicate"
+    },
+    {
+      "id": "ASORG-058",
+      "specRef": "3.3.5.1",
+      "requirement": "Define biofuel and explain why production is not automatically carbon neutral",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_130",
+            "front": "What is a biofuel?",
+            "back": "A fuel made from recently living biomass."
+          },
+          {
+            "id": "task1_v130_131",
+            "front": "Why is ethanol from biomass not automatically carbon neutral?",
+            "back": "Growing, processing and transporting biomass may emit greenhouse gases."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-059",
+      "specRef": "3.3.5.1",
+      "requirement": "Use balanced photosynthesis/ethanol-combustion equations to critique carbon-neutral claims",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_131",
+            "front": "Why is ethanol from biomass not automatically carbon neutral?",
+            "back": "Growing, processing and transporting biomass may emit greenhouse gases."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Concept covered, but no mapped equation-based evaluation question.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-060",
+      "specRef": "3.3.5.1",
+      "requirement": "Discuss land-use and food-production trade-offs of biofuels",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [],
+        "questions": []
+      },
+      "limitation": "A direct evidence-based ethical/environmental evaluation is not located.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-061",
+      "specRef": "3.3.5.2",
+      "requirement": "Recognise primary, secondary and tertiary alcohol structures",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_127",
+            "front": "How do you identify a primary alcohol?",
+            "back": "Its C–OH carbon bonds to one or no other carbon atoms."
+          },
+          {
+            "id": "task1_v124_bulk_chem_128",
+            "front": "How do you identify a secondary alcohol?",
+            "back": "Its C–OH carbon bonds to two other carbon atoms."
+          },
+          {
+            "id": "task1_v124_bulk_chem_129",
+            "front": "How do you identify a tertiary alcohol?",
+            "back": "Its C–OH carbon bonds to three other carbon atoms."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-062",
+      "specRef": "3.3.5.2",
+      "requirement": "State oxidation products of primary and secondary alcohols",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_alcohol_primary",
+            "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+            "back": "An aldehyde."
+          },
+          {
+            "id": "chem_alcohol_primary_reflux",
+            "front": "What forms when a primary alcohol is oxidised under reflux with excess oxidant?",
+            "back": "A carboxylic acid."
+          },
+          {
+            "id": "chem_alcohol_secondary",
+            "front": "What forms when a secondary alcohol is oxidised?",
+            "back": "A ketone."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-063",
+      "specRef": "3.3.5.2",
+      "requirement": "Explain why tertiary alcohols resist common oxidation conditions",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_149",
+            "front": "Why are tertiary alcohols resistant to normal oxidation?",
+            "back": "No hydrogen on the carbon attached to –OH."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-064",
+      "specRef": "3.3.5.2",
+      "requirement": "Use orange-to-green oxidation observation and distinguish oxidation states",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_064",
+            "front": "Which colour change shows Cr₂O₇²⁻ reducing to Cr³⁺ in alcohol oxidation?",
+            "back": "Orange to green."
+          },
+          {
+            "id": "task1_v146_065",
+            "front": "Which oxidation state does chromium change from/to in dichromate oxidation?",
+            "back": "+6 to +3."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-065",
+      "specRef": "3.3.5.2",
+      "requirement": "Explain reflux versus distillation for aldehyde isolation",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_066",
+            "front": "Why use distillation rather than reflux to isolate an aldehyde?",
+            "back": "Distillation removes the aldehyde before it can oxidise further."
+          },
+          {
+            "id": "task1_v146_067",
+            "front": "Why does reflux prevent loss of volatile reactants?",
+            "back": "Vapour condenses and returns to the reaction vessel."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_14",
+            "prompt": "A student suggests reflux rather than distillation to isolate a volatile oxidation product, even though the product can oxidise further. Explain why this change is unsuitable and what general apparatus principles are important in interpreting distillation data.",
+            "marks": 5,
+            "markPoints": [
+              "Reflux condenses vapour and returns it to the reaction mixture.",
+              "Returning product allows further oxidation instead of isolating it.",
+              "Distillation removes the more volatile product as it forms.",
+              "The thermometer should represent vapour entering the condenser, not liquid temperature.",
+              "The collected boiling range is evidence for identity/purity only with comparison data."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-066",
+      "specRef": "3.3.5.2",
+      "requirement": "Distinguish aldehydes and ketones using characteristic test observations",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_073",
+            "front": "Which test would show an aldehyde but not a typical simple ketone?",
+            "back": "Tollens' or Fehling's reagent gives a positive result."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_16",
+            "prompt": "Two unknown substances X and Y each give a positive 2,4-DNPH test. X also gives a Tollens' silver deposit; Y does not. Explain the conclusions, including what 2,4-DNPH alone cannot establish.",
+            "marks": 5,
+            "markPoints": [
+              "Positive 2,4-DNPH indicates a carbonyl of an aldehyde or ketone.",
+              "2,4-DNPH alone cannot distinguish an aldehyde from a ketone.",
+              "X is an aldehyde under these conditions because Tollens' is positive.",
+              "Y is consistent with a ketone because Tollens' is negative.",
+              "An independent test or spectrum can confirm identification."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-067",
+      "specRef": "3.3.5.3",
+      "requirement": "Explain acid-catalysed dehydration to an alkene with key electron movements",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_068",
+            "front": "Alcohol dehydration mechanism step 1: what happens to the –OH group?",
+            "back": "It is protonated to –OH₂⁺, making water a better leaving group."
+          },
+          {
+            "id": "task1_v146_070",
+            "front": "Alcohol dehydration: which proton is removed to form the C=C bond?",
+            "back": "A β-hydrogen on a carbon next to the former –OH carbon."
+          },
+          {
+            "id": "task1_v146_084",
+            "front": "During alcohol dehydration, which electrons form the alkene's π bond?",
+            "back": "A pair from a C–H bond next to the carbon losing water."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_10",
+            "prompt": "A generic alcohol undergoes acid-catalysed dehydration to give an alkene. Describe the electron and proton changes or draw a schematic curly-arrow mechanism; explain why the acid is a catalyst.",
+            "marks": 5,
+            "markPoints": [
+              "Alcohol oxygen is protonated so –OH becomes –OH₂⁺.",
+              "This makes neutral water a possible leaving group.",
+              "The molecule loses water and a β hydrogen, creating C=C.",
+              "Deprotonation restores a neutral organic product.",
+              "The H⁺ catalyst is regenerated overall."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-068",
+      "specRef": "3.3.5.3",
+      "requirement": "Recall regeneration of acid catalyst in dehydration",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_071",
+            "front": "Alcohol dehydration: what happens to the acid catalyst overall?",
+            "back": "It is regenerated."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-069",
+      "specRef": "3.3.5.3",
+      "requirement": "Connect alcohol-derived alkene polymers with reduced crude-oil dependence",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_150",
+            "front": "What forms when an alcohol undergoes dehydration?",
+            "back": "An alkene and water."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Reaction facts exist, but the sustainability explanation needs applied evaluation.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-070",
+      "specRef": "3.3.6.1",
+      "requirement": "Identify unsaturation from bromine-water observations",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_rp6",
+            "front": "What is the test for an alkene?",
+            "back": "Bromine water is decolourised from orange/brown."
+          },
+          {
+            "id": "task1_v127_018",
+            "front": "Bromine water changes from orange to colourless in a functional-group test. What bond is suggested?",
+            "back": "A carbon–carbon double bond, C=C."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-071",
+      "specRef": "3.3.6.1",
+      "requirement": "Distinguish carboxylic acid via carbonate observations",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v127_021",
+            "front": "A positive carbonate–acid identification gives which observable sign?",
+            "back": "Bubbles of carbon dioxide."
+          },
+          {
+            "id": "task1_v127_022",
+            "front": "What class of organic compounds commonly gives CO₂ in a carbonate test?",
+            "back": "Carboxylic acids."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_15",
+            "prompt": "Four unknown organic liquids show these results: A decolourises bromine water; B effervesces with carbonate; C oxidises acidified dichromate(VI) from orange to green but has no carbonyl test; D forms an orange precipitate with 2,4-DNPH and gives a silver mirror. Identify the most likely functional group in each and one limitation of the evidence.",
+            "marks": 5,
+            "markPoints": [
+              "A is consistent with an alkene (C=C) under the stated conditions.",
+              "B is consistent with a carboxylic acid, producing CO₂.",
+              "C is consistent with an oxidisable alcohol (primary or secondary).",
+              "D contains an aldehyde group (carbonyl plus positive Tollens').",
+              "Some tests are not exclusive, so confirmation with complementary evidence is needed."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-072",
+      "specRef": "3.3.6.1",
+      "requirement": "Distinguish aldehyde from ketone with paired positive and negative tests",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v127_027",
+            "front": "What extra evidence can distinguish an aldehyde from a ketone?",
+            "back": "A positive Tollens’ or Fehling’s result indicates an aldehyde."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_16",
+            "prompt": "Two unknown substances X and Y each give a positive 2,4-DNPH test. X also gives a Tollens' silver deposit; Y does not. Explain the conclusions, including what 2,4-DNPH alone cannot establish.",
+            "marks": 5,
+            "markPoints": [
+              "Positive 2,4-DNPH indicates a carbonyl of an aldehyde or ketone.",
+              "2,4-DNPH alone cannot distinguish an aldehyde from a ketone.",
+              "X is an aldehyde under these conditions because Tollens' is positive.",
+              "Y is consistent with a ketone because Tollens' is negative.",
+              "An independent test or spectrum can confirm identification."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-073",
+      "specRef": "3.3.6.1",
+      "requirement": "Interpret alcohol oxidation observations without overclaiming the alcohol class",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v127_025",
+            "front": "Can the orange-to-green oxidation observation alone distinguish primary from secondary alcohols?",
+            "back": "No; both types can be oxidised."
+          },
+          {
+            "id": "task1_v127_026",
+            "front": "Why is no orange-to-green change consistent with a tertiary alcohol?",
+            "back": "Tertiary alcohols resist oxidation under standard test conditions."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-074",
+      "specRef": "3.3.6.2",
+      "requirement": "Explain what high-resolution molecular-ion mass can reveal",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_074",
+            "front": "How can a high-resolution mass spectrum help find a molecular formula?",
+            "back": "Its precise molecular mass can distinguish elemental compositions."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-075",
+      "specRef": "3.3.6.2",
+      "requirement": "Use precise atomic masses to decide molecular formula between candidates",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_074",
+            "front": "How can a high-resolution mass spectrum help find a molecular formula?",
+            "back": "Its precise molecular mass can distinguish elemental compositions."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "There is a principle card but no located exact-mass formula-selection exam calculation.",
+      "next": "exam_question_bank"
+    },
+    {
+      "id": "ASORG-076",
+      "specRef": "3.3.6.3",
+      "requirement": "Identify major functional-group absorptions from IR data",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_153",
+            "front": "What does a broad O–H infrared absorption suggest?",
+            "back": "An alcohol or carboxylic acid."
+          },
+          {
+            "id": "task1_chem_154",
+            "front": "What does a strong absorption near 1700 cm⁻¹ suggest?",
+            "back": "A carbonyl C=O group."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-077",
+      "specRef": "3.3.6.3",
+      "requirement": "Explain fingerprint comparison and recognizing impurity peaks",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_155",
+            "front": "What does a fingerprint region help identify?",
+            "back": "A specific compound by comparing its IR spectrum."
+          },
+          {
+            "id": "task1_v146_076",
+            "front": "How can an IR spectrum help reveal an impurity?",
+            "back": "It may show additional absorption peaks absent from the pure compound."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-078",
+      "specRef": "3.3.6.3",
+      "requirement": "Combine IR and organic observations without asserting unique identification",
+      "status": "supported_application",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v127_043",
+            "front": "Why is one positive functional-group test insufficient for an exact identity?",
+            "back": "Many molecules share that functional group."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_17",
+            "prompt": "A molecular sample has a strong IR absorption around 1700 cm⁻¹, no very broad O–H absorption from 2500–3300 cm⁻¹, and gives no Tollens' silver deposit. Explain the most likely carbonyl class and the limitations of each clue.",
+            "marks": 5,
+            "markPoints": [
+              "Absorption near 1700 cm⁻¹ indicates a C=O bond.",
+              "No broad acid O–H feature makes a carboxylic acid less likely.",
+              "Negative Tollens' result makes an ordinary aldehyde less likely.",
+              "A ketone is the most likely class under these conditions.",
+              "IR and chemical tests should be interpreted together; neither alone proves a unique structure."
+            ]
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "ASORG-079",
+      "specRef": "3.3.6.3",
+      "requirement": "Explain greenhouse IR absorption by carbon dioxide, methane and water vapour",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v133_009",
+            "front": "Why can CO₂ and methane contribute to global warming?",
+            "back": "They absorb and re-emit infrared radiation from Earth."
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "CO2/methane card exists; water vapour and multi-molecule interpretation are not evidenced.",
+      "next": "short_flashcard_if_not_duplicate"
+    },
+    {
+      "id": "ASORG-080",
+      "specRef": "3.3.6.3",
+      "requirement": "Infer a possible structure from a data-sheet spectrum plus formula",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_075",
+            "front": "How does an IR spectrum help identify a functional group?",
+            "back": "Characteristic bonds absorb at characteristic wavenumbers."
+          }
+        ],
+        "questions": [
+          {
+            "id": "organic_v147_17",
+            "prompt": "A molecular sample has a strong IR absorption around 1700 cm⁻¹, no very broad O–H absorption from 2500–3300 cm⁻¹, and gives no Tollens' silver deposit. Explain the most likely carbonyl class and the limitations of each clue.",
+            "marks": 5,
+            "markPoints": [
+              "Absorption near 1700 cm⁻¹ indicates a C=O bond.",
+              "No broad acid O–H feature makes a carboxylic acid less likely.",
+              "Negative Tollens' result makes an ordinary aldehyde less likely.",
+              "A ketone is the most likely class under these conditions.",
+              "IR and chemical tests should be interpreted together; neither alone proves a unique structure."
+            ]
+          }
+        ]
+      },
+      "limitation": "The sample assesses a carbonyl class, not an unfamiliar full molecular structure.",
+      "next": "exam_question_bank"
+    }
+  ]
+}
