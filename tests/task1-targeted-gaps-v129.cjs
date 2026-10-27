@@ -5,7 +5,7 @@ const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const fresh=cards.filter(c=>c.id.startsWith('task1_v129_'));
-const prior=cards.filter(c=>!c.id.startsWith('task1_v129_')&&!c.id.startsWith('task1_v130_')&&!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_')&&!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_'));
+const prior=cards.filter(c=>!c.id.startsWith('task1_v129_')&&!c.id.startsWith('task1_v130_')&&!c.id.startsWith('task1_v131_')&&!c.id.startsWith('task1_v132_')&&!c.id.startsWith('task1_v133_')&&!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_'));
 assert(deck.deckVersion>=129);
 assert.equal(prior.length,2659,'Preserve every pre-v129 record and review ID');
 assert.equal(prior.filter(c=>c.active!==false).length,2655);

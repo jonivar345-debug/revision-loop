@@ -1,16 +1,17 @@
 # Revision Loop — current project checkpoint (27 October 2026)
 
-**Current main:** v140 PR #87 merged after all four checks passed. The v141 evidence review is proposed separately and should not be treated as merged until its tests pass. See `editorial/task1-v141-review-and-precision-gaps.md` and `editorial/task1-v141-full-v137-answer-review.json`.
+**Current main:** v141 PR #88 merged after all four checks passed (deck still v138 with 3,128 records). The v142 16-card content addition is in review until all tests and deployment succeed. See `editorial/task1-v142-precision-recall-handover.md`.
 
 - **Live flashcard release:** deck v138, **3,128 cards (3,124 active)**, deployed by GitHub Pages after PR #85. This count also applies to v139: its 48 narrow specification answer checks were editorial only.
 - **v140 released audit:** 25 additional exact answer checks: 22 narrowly supported and 3 partial.
-- **v141 proposed audit:** the remaining 46 selected v137 requirements reviewed, with 33 narrow recall points supported, 12 partial, and one absent. No new cards are published by this audit.
+- **v141 merged audit:** the remaining 46 selected v137 requirements checked, with 33 narrow recall points supported, 12 partial, and one absent. Audit-only.
+- **v142 proposed:** 16 new precise Physics/Chemistry recall flashcards, proposed deck **3,144 records / 3,140 active**. Until green tests, merge and Pages deployment, the live deck remains v138 (**3,128 / 3,124**).
 - **Outstanding selected audit:** all 142 v137 sampled requirements have now been individually triaged across v137/v139/v140/proposed v141; several are **partial or absent** (details in v141 handover). A separate v135 sample still has **106 front-keyword-only candidate matches** needing semantic checking. None of these represents exhaustive specification coverage.
 - **Top priority:** complete AQA Physics/Chemistry flashcard audits down to individual assessable facts and required practical observations, then selectively reinforce Maths formula memory. Avoid duplicates and reserve multi-step calculations/diagrams for exam practice. Mock scope must match what was taught.
 - **Unresolved Physics optional topic:** do not presume the school chose Medical Physics. Maintain optional cards outside compulsory completion claims.
 - **World/photo pause:** last photo release **v117**, 1,064 locally hosted photos and 266/376 complete galleries. Keep the remaining 110 destinations for a later explicit photo task.
 - **Progress safety:** never clear local browser keys, overwrite Firestore/user XP, change card IDs, purchases, or reset profiles during content work. Manual JSON backups remain available. The student has previously reported Google cloud progress syncing across devices, but repository tests cannot read personal live progress. Verify cross-device behaviour separately before claiming it is universally reliable.
-- **Verification:** v139 and v140 passed flashcard/cloud, scanner, World safety and World browser acceptance before merging. v141 must pass those same checks before its merge; confirm Pages independently.
+- **Verification:** v139, v140 and v141 passed flashcard/cloud, scanner, World safety and World browser acceptance before merging. v142 must pass those same checks and its new model-answer acceptance regression before merge; confirm Pages independently.
 
 ## Archived development handover (26 October 2026)
 
