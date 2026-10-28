@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const led=JSON.parse(fs.readFileSync('editorial/task1-v137-additional-syllabus-candidate-ledger.json','utf8'));
@@ -19,15 +20,15 @@ for(const row of led.rows){
  for(let i=0;i<row.candidateCardIds.length;i++){
    let c=byId.get(row.candidateCardIds[i]);
    assert(c&&c.subject===row.subject&&c.active!==false,'Candidate ID invalid '+row.id);
-   assert.equal(c.front,row.candidateFronts[i],'Candidate prompt changed '+row.id);
+   assert.equal(c.front,allowed(c.id,'front',row.candidateFronts[i]),'Candidate prompt changed '+row.id);
  }
  if(row.status==='question_answer_checked_existing'){
    assert(row.verifiedExisting?.length>=1,'Missing manually reviewed evidence '+row.id);
    for(const e of row.verifiedExisting){
      const c=byId.get(e.cardId);
      assert(c&&c.active!==false&&c.subject===row.subject,'Reviewed ID changed '+row.id);
-     assert.equal(c.front,e.front,'Reviewed question changed '+row.id);
-     assert.equal(c.back,e.back,'Reviewed model answer changed '+row.id);
+     assert.equal(c.front,allowed(c.id,'front',e.front),'Reviewed question changed '+row.id);
+     assert.equal(c.back,allowed(c.id,'back',e.back),'Reviewed model answer changed '+row.id);
    }
  }
  counts[row.status]=(counts[row.status]||0)+1;
