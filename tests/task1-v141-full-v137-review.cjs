@@ -2,7 +2,7 @@
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const sample=JSON.parse(fs.readFileSync('editorial/task1-v137-additional-syllabus-candidate-ledger.json','utf8'));
 const v139=JSON.parse(fs.readFileSync('editorial/task1-v139-verified-answer-evidence.json','utf8'));
 const v140=JSON.parse(fs.readFileSync('editorial/task1-v140-evidence-follow-up.json','utf8'));
