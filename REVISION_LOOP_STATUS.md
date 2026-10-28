@@ -1,3 +1,13 @@
+# Revision Loop v168 — repair incomplete Physics model answers (28 October 2026)
+
+**Proposed until all CI, merge and public website verification.** A complete, local marking audit of the current 1,268-question main bank found **four older 3-mark original Physics practice questions where the stored model answer failed to demonstrate all three separate marking points**. Two were free-body diagrams, one Boyle's law and one electric fields. Their old displayed answers earned only 1/3 when checked honestly, because they omitted diagrams/force directions, physical conditions or working.
+
+The four model answers now state the complete method and outcome. Their `requiresWorking` flags are corrected so a bare numeric result cannot be mistaken for all requested diagram, explanation and calculation marks. **All four revised model answers earn 3/3 while their old bare answers still earn less than full marks**. Twelve separately verified equivalent phrasings (three per question) and four case-specific error-carried-forward method review notes are added. Every alternate statement on its own earns just its own mark; explicit denials earn none. The new regression is `tests/task1-v168-physics-model-marking.cjs`, supported by `editorial/task1-v168-physics-model-answer-audit.json`.
+
+No question IDs, mark totals, original criteria, flashcards, saved revision states, scanner data, photos, World, XP or published AQA paper text were changed. The bank remains 1,268 questions; the deck remains 3,335 card records. **These are original practice model schemes, not official AQA mark schemes.** The student must still review method credit, OCR accuracy and any unfamiliar valid working before saving.
+
+---
+
 # Revision Loop v167 — fairer free marking and clearer mark schemes (28 October 2026)
 
 **Proposed until all CI checks, merge and GitHub Pages verification.** This revision improves the real answer-marking user interface and the free ChatGPT marking hand-off while preserving all existing questions, marks, flashcards, progress and scanner data.
