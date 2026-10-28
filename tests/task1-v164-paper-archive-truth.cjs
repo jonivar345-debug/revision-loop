@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const inv=JSON.parse(fs.readFileSync('paper_inventory_2015_2025.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v164-paper-and-science-coverage-truth.json','utf8'));
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v171-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const app=fs.readFileSync('app.js','utf8');
 
 assert.equal(inv.papers.length,134);

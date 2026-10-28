@@ -1,3 +1,11 @@
+# Revision Loop v171 — targeted Maths Year 1 Pure recall gap closure (28 October 2026)
+
+**PR stage until checks, merge and Pages verification.** The active Maths mock deck gains **10 concise single-fact cards** for proof by deduction, the remainder theorem, 2D vector operations and quadrant selection, positive sine quadrants, tangent undefined angles, odd/even trig graph symmetries and total geometric area when a graph crosses the axis. These were checked against the existing 196 active Maths cards to avoid exact front duplicates, with Year 1 Pure scope cross-referenced to AQA AS 7356 (Proof A1, Algebra B, Trigonometry E, Integration H, Vectors J). The bank retains **1,268 original questions**. Current proposed deck: **3,345 records, 3,341 active, 2,379 mock-eligible** (730 Physics, 1,533 Chemistry, 116 Maths).
+
+All prior card IDs, acceptance arrays, questions, progress keys, scanner, World and XP remain unchanged. Historical v162/v164/v165 audits deliberately compare their original snapshots; dedicated v171 regression checks the new actual deck. This targeted update does **not** certify complete AQA coverage or score the user's mastery. Physics/Chemistry legacy card answer-level checks and overall Task 1 completion gates remain open.
+
+---
+
 # Revision Loop v170 — practical calculation method marks and fair ECF review (28 October 2026)
 
 **Proposed until CI, merge, and Pages deployment verification.** Continues the merged v169 marking work without changing question IDs, prompt text, mark totals, old flashcards, progress keys, World content, or saved results.

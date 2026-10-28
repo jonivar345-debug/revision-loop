@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const app=fs.readFileSync('app.js','utf8');
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v171-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v169-marking-calibration.json','utf8'));
 const begin=app.indexOf('function normalise('),middle=app.indexOf('function nextSchedule(',begin);
 const start=app.indexOf('function evidenceRuleScore(',middle),end=app.indexOf('function renderExam(',start);
