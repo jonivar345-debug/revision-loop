@@ -11,7 +11,9 @@
   if(!q||!Array.isArray(q.markPoints))return '';
   const list=q.markPoints.map((point,i)=>{
    const weight=q.markingMode==='anyN'?1:(q.markPointMarks?.[i]??1);
-   return (i+1)+'. ['+weight+' mark'+(weight===1?'':'s')+'] '+point;
+   const accepted=q.markPointAcceptedAlternatives?.[i];
+   return (i+1)+'. ['+weight+' mark'+(weight===1?'':'s')+'] '+point+
+    (Array.isArray(accepted)&&accepted.length?'\n   Also accept: '+accepted.join(' OR '):'');
   }).join('\n');
   return [
    'Please act as a careful AQA '+(q.level||'AS/A-level')+' '+q.subject+' examiner for REVISION ONLY.',
@@ -22,6 +24,8 @@
    list,
    q.markingMode==='anyN'?'Any '+q.marks+' distinct accepted points can score, capped at '+q.marks+'.':'Award each criterion its given marks when supported.',
    'Read all steps, including calculations, equations and sketches. Accept equivalent correct reasoning, error carried forward where appropriate, and alternative wording. Do not reward a result that was not actually written.',
+   q.ecfGuidance?'Carry forward method-review guidance: '+q.ecfGuidance:'',
+   'The listed alternatives are examples, not an exhaustive list. Award different valid reasoning only where supported by visible working.',
    'Award full credit when the correct answer is sufficient for that criterion. For distinct requested explanations or demonstrations, look for evidence.',
    'If handwriting is ambiguous, tell me and do not invent working. Do not assume a machine OCR transcript is accurate.',
    'First give a SHORT reason for each awarded or missed marking point. Then end with exactly this format:',
