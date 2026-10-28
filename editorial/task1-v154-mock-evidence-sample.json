@@ -1,0 +1,443 @@
+{
+  "release": "v154",
+  "date": "2026-10-28",
+  "type": "Representative evidence, NOT exhaustive specification certification",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content"
+  ],
+  "mockScope": {
+    "Physics": "AS sections 3.1-3.5 only",
+    "Chemistry": "Year 1 + specific taught Year 2 topics to Kp; buffers excluded",
+    "Maths": "Year 1 Pure only"
+  },
+  "counts": {
+    "activeMockCards": 2311,
+    "bySubject": {
+      "Physics": 709,
+      "Chemistry": 1525,
+      "Maths": 77
+    },
+    "sampledEvidence": 50,
+    "sampledBySubject": {
+      "Physics": 17,
+      "Chemistry": 23,
+      "Maths": 10
+    }
+  },
+  "method": "Every row references a currently mock-eligible active card and records its actual question and answer. This is a selected spot check of recall; not proof that every atomic syllabus detail or longer question skill is covered.",
+  "limitations": [
+    "Not a complete line-by-line crosswalk for all Chemistry 7405/Physics 7408/Maths 7357 examinable demand statements.",
+    "Flashcards alone do not establish diagram, calculation, experimental-data or extended-answer ability.",
+    "School mock boundaries reflect the most recent confirmed teacher scope; any later scope change needs a new review.",
+    "Some historic flashcards have similar or duplicate concepts; unchanged IDs preserve saved progress."
+  ],
+  "priorityNext": [
+    "Complete line-by-line Physics AS 3.1–3.5 audit, especially graphs, data and practicals.",
+    "Complete Chemistry Year 1 3.1.1–3.1.7, 3.2.1–3.2.3, 3.3.1–3.3.6 and chosen taught Year 2 subtopics.",
+    "Audit Year 1 Maths Pure against AS sections A–J with calculations and transformations judged by exam questions."
+  ],
+  "rows": [
+    {
+      "id": "phy_uncert_percent",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "specRef": null,
+      "front": "How do you calculate percentage uncertainty?",
+      "back": "percentage uncertainty = absolute uncertainty ÷ measured value × 100%"
+    },
+    {
+      "id": "task1_v124_bulk_phy_012",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "specRef": "3.1.2",
+      "front": "How can repeating readings reduce random uncertainty?",
+      "back": "Taking a mean reduces its effect."
+    },
+    {
+      "id": "phy_pandr_v29_kef_gradient",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "specRef": null,
+      "front": "For Eₖ(max) against frequency, what are gradient and intercept?",
+      "back": "Gradient = h; extrapolated vertical intercept = −φ; horizontal intercept = f₀."
+    },
+    {
+      "id": "phy_stationary_nodes",
+      "subject": "Physics",
+      "topic": "Stationary waves",
+      "specRef": null,
+      "front": "What are nodes and antinodes?",
+      "back": "Nodes have zero amplitude; antinodes have maximum amplitude."
+    },
+    {
+      "id": "phy_newton1",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "specRef": null,
+      "front": "State Newton's first law.",
+      "back": "An object remains at rest or continues at constant velocity unless there is a resultant external force."
+    },
+    {
+      "id": "phy_newton3",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "specRef": null,
+      "front": "What makes a Newton's third-law pair?",
+      "back": "Equal and opposite forces of the same type acting on different objects."
+    },
+    {
+      "id": "phy_slope_001",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "specRef": null,
+      "front": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+      "back": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ."
+    },
+    {
+      "id": "phy_couple_001",
+      "subject": "Physics",
+      "topic": "Couples",
+      "specRef": null,
+      "front": "What is a couple, and what is the moment of a couple?",
+      "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation."
+    },
+    {
+      "id": "phy_motion_v",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "specRef": null,
+      "front": "What do the gradient and signed area of a velocity–time graph represent?",
+      "back": "Gradient = acceleration. Signed area under the graph = displacement."
+    },
+    {
+      "id": "phy_motion_a",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "specRef": null,
+      "front": "What does the signed area under an acceleration–time graph represent?",
+      "back": "Change in velocity, Δv."
+    },
+    {
+      "id": "phy_projectile_independent",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "specRef": null,
+      "front": "What key idea lets you solve projectile motion?",
+      "back": "Horizontal and vertical motion are independent and share the same time."
+    },
+    {
+      "id": "phy_rp4",
+      "subject": "Physics",
+      "topic": "RP4 Young modulus",
+      "specRef": null,
+      "front": "What equation is used to determine Young modulus from a wire?",
+      "back": "E = FL/(AΔL), with A = πd²/4."
+    },
+    {
+      "id": "phy_emf",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "specRef": null,
+      "front": "Define emf.",
+      "back": "Energy supplied by the source per unit charge."
+    },
+    {
+      "id": "phy_internal_001",
+      "subject": "Physics",
+      "topic": "Internal resistance",
+      "specRef": null,
+      "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+      "back": "V = ε − Ir. The term Ir is the lost volts inside the cell."
+    },
+    {
+      "id": "phy_rp6",
+      "subject": "Physics",
+      "topic": "RP6 EMF/internal resistance",
+      "specRef": null,
+      "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+      "back": "y-intercept = emf ε and gradient = −r."
+    },
+    {
+      "id": "phy_diode",
+      "subject": "Physics",
+      "topic": "I–V characteristics",
+      "specRef": null,
+      "front": "How does an idealised diode conduct?",
+      "back": "It conducts strongly in the forward direction after its threshold and very little in reverse."
+    },
+    {
+      "id": "phy_filament_iv",
+      "subject": "Physics",
+      "topic": "I–V characteristics",
+      "specRef": null,
+      "front": "Why does a filament lamp's resistance rise at high current?",
+      "back": "The filament gets hotter, increasing lattice vibrations and electron collisions."
+    },
+    {
+      "id": "chem_ionisation_def",
+      "subject": "Chemistry",
+      "topic": "Ionisation energy",
+      "specRef": null,
+      "front": "Define first ionisation energy.",
+      "back": "Energy required to remove one electron from each atom in one mole of gaseous atoms to form gaseous 1+ ions."
+    },
+    {
+      "id": "task1_chem_015",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "specRef": "3.1.2",
+      "front": "What is an empirical formula?",
+      "back": "Simplest whole-number ratio of atoms of each element."
+    },
+    {
+      "id": "chem_ionic_bond",
+      "subject": "Chemistry",
+      "topic": "Bonding",
+      "specRef": null,
+      "front": "What is ionic bonding?",
+      "back": "Electrostatic attraction between oppositely charged ions."
+    },
+    {
+      "id": "chem_rp2",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "specRef": null,
+      "front": "What is the core calorimetry calculation?",
+      "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount."
+    },
+    {
+      "id": "chem_hess",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "specRef": null,
+      "front": "What principle is used in Hess cycles?",
+      "back": "Enthalpy change is independent of route because enthalpy is a state function."
+    },
+    {
+      "id": "chem_rates_001",
+      "subject": "Chemistry",
+      "topic": "Rate equations",
+      "specRef": null,
+      "front": "What does the overall order of a rate equation mean?",
+      "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation."
+    },
+    {
+      "id": "chem_kc_recap_20261024_definition",
+      "subject": "Chemistry",
+      "topic": "Equilibria",
+      "specRef": null,
+      "front": "Define Kc.",
+      "back": "The equilibrium constant expressed using equilibrium concentrations, each raised to its equation coefficient."
+    },
+    {
+      "id": "chem_redox_oxid",
+      "subject": "Chemistry",
+      "topic": "Redox",
+      "specRef": null,
+      "front": "What is oxidation in terms of electrons and oxidation state?",
+      "back": "Loss of electrons; oxidation state increases."
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_def",
+      "subject": "Chemistry",
+      "topic": "Born–Haber cycles",
+      "specRef": null,
+      "front": "Define lattice enthalpy of formation.",
+      "back": "The enthalpy change when 1 mole of a solid ionic compound is formed from its constituent gaseous ions."
+    },
+    {
+      "id": "chem_arr_eq",
+      "subject": "Chemistry",
+      "topic": "Arrhenius",
+      "specRef": null,
+      "front": "State the logarithmic Arrhenius equation.",
+      "back": "ln k = ln A − Ea/(RT)."
+    },
+    {
+      "id": "chem_kp_001",
+      "subject": "Chemistry",
+      "topic": "Kp",
+      "specRef": null,
+      "front": "What goes into a Kp expression?",
+      "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient."
+    },
+    {
+      "id": "task1_chem_181",
+      "subject": "Chemistry",
+      "topic": "Acids and bases",
+      "specRef": "3.1.12",
+      "front": "Fill the gap: pKa = ____.",
+      "back": "−log₁₀Ka."
+    },
+    {
+      "id": "v33_card_chemistry_periodicity_71",
+      "subject": "Chemistry",
+      "topic": "Periodicity",
+      "specRef": null,
+      "front": "Why does aluminium have a lower first ionisation energy than magnesium?",
+      "back": "The electron removed from aluminium is in a higher-energy 3p subshell compared with magnesium's 3s electron."
+    },
+    {
+      "id": "task1_chem_094",
+      "subject": "Chemistry",
+      "topic": "Group 7",
+      "specRef": "3.2.3",
+      "front": "Why do halogen boiling points rise down the group?",
+      "back": "More electrons produce stronger van der Waals' forces."
+    },
+    {
+      "id": "chem_electrophile",
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "specRef": null,
+      "front": "What is an electrophile?",
+      "back": "An electron-pair acceptor."
+    },
+    {
+      "id": "task1_v146_014",
+      "subject": "Chemistry",
+      "topic": "Alkanes",
+      "specRef": "3.3.2.1",
+      "front": "What is a crude-oil fraction?",
+      "back": "A mixture of hydrocarbons with similar boiling points."
+    },
+    {
+      "id": "task1_v146_020",
+      "subject": "Chemistry",
+      "topic": "Alkanes",
+      "specRef": "3.3.2.2",
+      "front": "Fill the gap: catalytic cracking uses a ___ catalyst.",
+      "back": "zeolite"
+    },
+    {
+      "id": "task1_v146_031",
+      "subject": "Chemistry",
+      "topic": "Alkanes",
+      "specRef": "3.3.2.4",
+      "front": "Why can methane chlorination give several chlorinated products?",
+      "back": "The products can undergo further radical substitution."
+    },
+    {
+      "id": "chem_halogeno_sub",
+      "subject": "Chemistry",
+      "topic": "Halogenoalkanes",
+      "specRef": null,
+      "front": "What mechanism occurs when OH⁻ reacts with a halogenoalkane to form an alcohol?",
+      "back": "Nucleophilic substitution."
+    },
+    {
+      "id": "task1_chem_139",
+      "subject": "Chemistry",
+      "topic": "Alkenes",
+      "specRef": "3.3.4",
+      "front": "What colour change indicates an alkene with bromine water?",
+      "back": "Orange to colourless."
+    },
+    {
+      "id": "chem_alcohol_primary",
+      "subject": "Chemistry",
+      "topic": "Alcohols",
+      "specRef": null,
+      "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+      "back": "An aldehyde."
+    },
+    {
+      "id": "chem_aldehyde_tollens",
+      "subject": "Chemistry",
+      "topic": "Aldehydes and ketones",
+      "specRef": null,
+      "front": "What does Tollens' reagent do with an aldehyde?",
+      "back": "It is reduced to silver, producing a silver mirror; ketones give no reaction."
+    },
+    {
+      "id": "chem_acyl_chloride_ammonia",
+      "subject": "Chemistry",
+      "topic": "Acyl chlorides",
+      "specRef": null,
+      "front": "What does an acyl chloride form with ammonia?",
+      "back": "A primary amide; HCl is neutralised by excess ammonia."
+    },
+    {
+      "id": "math_proof_counter",
+      "subject": "Maths",
+      "topic": "Proof",
+      "specRef": null,
+      "front": "How can a universal statement be disproved?",
+      "back": "Give one valid counterexample."
+    },
+    {
+      "id": "math_quad_discriminant",
+      "subject": "Maths",
+      "topic": "Quadratics",
+      "specRef": null,
+      "front": "What does the discriminant tell you?",
+      "back": "For ax²+bx+c, Δ=b²−4ac: >0 two real roots, =0 repeated root, <0 no real roots."
+    },
+    {
+      "id": "math_function_composite",
+      "subject": "Maths",
+      "topic": "Functions",
+      "specRef": null,
+      "front": "What does fg(x) mean?",
+      "back": "f(g(x)): apply g first, then f."
+    },
+    {
+      "id": "math_circle_tangent",
+      "subject": "Maths",
+      "topic": "Coordinate geometry",
+      "specRef": null,
+      "front": "How is a tangent to a circle related to the radius at the contact point?",
+      "back": "They are perpendicular."
+    },
+    {
+      "id": "math_arith_nth",
+      "subject": "Maths",
+      "topic": "Sequences",
+      "specRef": null,
+      "front": "What is the nth term of an arithmetic sequence?",
+      "back": "uₙ = a + (n−1)d."
+    },
+    {
+      "id": "math_sine_rule",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "specRef": null,
+      "front": "State the sine rule.",
+      "back": "a/sin A = b/sin B = c/sin C."
+    },
+    {
+      "id": "math_logs_product",
+      "subject": "Maths",
+      "topic": "Logs",
+      "specRef": null,
+      "front": "What is logₐ(xy)?",
+      "back": "logₐx + logₐy."
+    },
+    {
+      "id": "math_diff_power",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "specRef": null,
+      "front": "Differentiate xⁿ.",
+      "back": "nx^(n−1)."
+    },
+    {
+      "id": "math_integrate_power",
+      "subject": "Maths",
+      "topic": "Integration",
+      "specRef": null,
+      "front": "Integrate xⁿ for n≠−1.",
+      "back": "x^(n+1)/(n+1) + C."
+    },
+    {
+      "id": "math_vector_mag",
+      "subject": "Maths",
+      "topic": "Vectors",
+      "specRef": null,
+      "front": "Magnitude of vector (a,b)?",
+      "back": "√(a²+b²)."
+    }
+  ]
+}
