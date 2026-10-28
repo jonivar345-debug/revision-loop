@@ -8,7 +8,9 @@
     "Show question-specific error-carried-forward method guidance, with no automatic award solely because an earlier error occurred.",
     "Include alternative phrases and ECF guidance in the free manual ChatGPT marking hand-off; no paid API calls.",
     "Warn explicitly when a manual total-score override disagrees with the checked mark-point criteria; do not silently claim missing points were awarded.",
-    "Block explicitly negated curated alternatives, reject single-word/number shortcuts."
+    "Block explicitly negated curated alternatives, reject single-word/number shortcuts.",
+    "Local OCR/transcription suggestions may recognise the same vetted alternatives after transcript review, unless arithmetic inconsistency or restrictive evidence rules apply; all marks remain provisional.",
+    "A conservative automatic cap is now visibly distinguished from an actual user-selected manual score override."
   ],
   "existingQuestionCount": 1268,
   "existingCardCount": 3335,
