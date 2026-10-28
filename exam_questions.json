@@ -45648,7 +45648,19 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "bond enthalpy data are averages from different chemical environments",
+          "mean bond energies differ between molecules so the estimate is not exact"
+        ]
+      ],
+      "ecfGuidance": "If the student has an earlier arithmetic slip but clearly subtracts their own total bond-formation energy from bond-breaking energy, consider the subtraction method separately from the numerical ΔH result."
     },
     {
       "id": "mock_v154_09",
@@ -45692,7 +45704,20 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "extrapolating the cooling curve corrects for energy lost before the peak reading",
+          "the maximum reading was affected by heat transfer to the surroundings before measurement"
+        ]
+      ],
+      "ecfGuidance": "If a mistaken extrapolated temperature is carried consistently into ΔT and q=mcΔT, credit separately demonstrated formula/substitution steps where appropriate, not the independent correct-value points."
     },
     {
       "id": "mock_v157_01",
@@ -45908,7 +45933,20 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "series cells produce a larger voltage across the load despite increased lost volts",
+          "the series arrangement has a higher terminal voltage despite more internal resistance"
+        ]
+      ],
+      "ecfGuidance": "For the two current calculations, recognise a demonstrated E/(R+r) setup using the student's own preceding internal-resistance value. Award the method only where the substitution is shown; do not automatically award the correct-result point."
     },
     {
       "id": "mock_v158_03",
@@ -45994,7 +46032,20 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "frequency is proportional to the square root of the tension so it halves to 125 hz",
+          "quarter the tension and the frequency becomes half its original value"
+        ]
+      ],
+      "ecfGuidance": "A correctly shown f=v/λ using a student's earlier speed or wavelength can receive method consideration, while the separate accurate numerical answer remains conditional on its result."
     },
     {
       "id": "mock_v159_02",
@@ -46298,7 +46349,23 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [
+          "translate the curve three units in the positive x direction",
+          "move the whole graph three units to the right"
+        ],
+        [
+          "reflect in the horizontal axis and multiply all y coordinates by two",
+          "flip about the x axis and stretch vertically by a factor of two"
+        ],
+        [],
+        [],
+        []
+      ],
+      "ecfGuidance": "If an earlier transformed coordinate is incorrect, consider whether later coordinate-transformation operations were applied correctly to that earlier value. Do not award independent correct-coordinate points without evidence."
     },
     {
       "id": "mock_v163_02",
@@ -46386,7 +46453,21 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "the gradient changes from positive to negative at 1 and negative to positive at 3",
+          "the derivative switches from positive to negative at x 1 and negative to positive at x 3"
+        ],
+        [],
+        []
+      ],
+      "ecfGuidance": "The first-derivative sign-change test is an equally valid classification method; the second-derivative step is a separate criterion and should not be invented when it is absent."
     },
     {
       "id": "mock_v163_04",
@@ -46474,7 +46555,20 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [],
+        [],
+        [
+          "split the area at both roots and add the magnitudes of all three regions",
+          "separate the positive regions from the negative one and use absolute areas"
+        ],
+        [],
+        [],
+        []
+      ],
+      "ecfGuidance": "Method marks for an integral setup or signed-area split can be awarded if demonstrated, even when an earlier arithmetic error affects a later value. Correct final-area marks still require a valid result."
     },
     {
       "id": "mock_v163_06",
@@ -46518,7 +46612,23 @@
       "groupOrder": 1,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "difficulty": "challenging"
+      "difficulty": "challenging",
+      "markPointAcceptedAlternatives": [
+        [],
+        [
+          "strictly decreasing over x greater than one means every output is unique",
+          "the function decreases for the entire domain so no output can repeat"
+        ],
+        [],
+        [
+          "the outputs are always greater than two when x is greater than one",
+          "all values of the function lie strictly above two"
+        ],
+        [],
+        [],
+        []
+      ],
+      "ecfGuidance": "If a student's algebraic inverse method is correct but an earlier rearrangement contained an arithmetic slip, review method evidence separately rather than automatically accepting the incorrect inverse formula."
     },
     {
       "id": "mock_v163_07",
