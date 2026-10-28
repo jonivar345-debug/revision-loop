@@ -45,6 +45,9 @@ on:
       - 'tests/task1-v152-a2-organic-additions.cjs'
       - 'tests/task1-v153-organic-mechanism-audit.cjs'
       - 'tests/task1-v154-mock-aqa-regression.cjs'
+      - 'tests/task1-v155-mock-scope-recall.cjs'
+      - 'editorial/task1-v155-mock-scope-recall.json'
+      - 'editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json'
       - 'editorial/task1-v154-mock-aqa-terminology-audit.json'
       - 'editorial/task1-v154-mock-applied-questions.json'
       - 'editorial/task1-v153-organic-theory-questions.json'
@@ -124,6 +127,7 @@ jobs:
       - run: node tests/task1-v152-a2-organic-additions.cjs
       - run: node tests/task1-v153-organic-mechanism-audit.cjs
       - run: node tests/task1-v154-mock-aqa-regression.cjs
+      - run: node tests/task1-v155-mock-scope-recall.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
