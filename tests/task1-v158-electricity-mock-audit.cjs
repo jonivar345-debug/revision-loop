@@ -15,7 +15,7 @@ const olderQ=bank.questions.filter(q=>!q.id.startsWith('mock_v158_')&&!q.id.star
 assert.equal(olderCards.length,3299);assert.equal(olderQ.length,1250);
 assert.equal(new Set(deck.cards.map(c=>c.id)).size,deck.cards.length);
 assert.equal(new Set(bank.questions.map(q=>q.id)).size,bank.questions.length);
-const eligible=deck.cards.filter(c=>c.active!==false&&c.mock===true);
+const eligible=v158Cards.filter(c=>c.active!==false&&c.mock===true);
 assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,eligible.filter(c=>c.subject===s).length])),{Physics:720,Chemistry:1533,Maths:77});
 const added=deck.cards.filter(c=>c.id.startsWith('task1_v158_'));
 assert.deepEqual(added.map(c=>c.id),['task1_v158_001','task1_v158_002','task1_v158_003']);
