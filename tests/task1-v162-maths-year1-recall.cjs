@@ -41,6 +41,6 @@ const legacy=require('./task1-v162-historical-snapshot.cjs')({deckVersion:162,ca
 assert.equal(legacy.cards.length,3312);
 assert.equal(legacy.cards.filter(c=>c.active!==false&&c.mock===true).length,2340);
 assert.equal(legacy.deckVersion,160);
-assert.equal(audit.limits.completeSpecificationCoverage,false);
-assert.equal(audit.limits.independentStudentMastery,false);
+assert.equal(audit.limitations.completeSpecificationCoverage,false);
+assert.equal(audit.limitations.independentStudentMastery,false);
 console.log('PASS v162: 23 concise Maths cards, eight restored Year 1 facts, two radian cards excluded from school mock, original 3312 IDs and 1260 questions preserved.');
