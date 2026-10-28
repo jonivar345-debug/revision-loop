@@ -1,3 +1,15 @@
+## v167: broader valid-answer marking (proposed, awaiting tests)
+
+The free local checker now supports **question-specific accepted alternative explanations** alongside the original marking points. An alternative is recognised only when a substantial, vetted phrase appears in the student's typed answer. A shared isolated number or keyword is not enough, and restrictive source-verified evidence rules take priority.
+
+The marking panel shows **the weight of each mark point**, examples of accepted alternative wording, and, on selected questions, an **error-carried-forward note**. These notes are guidance for checking demonstrated method, not permission to give an incorrect final value full marks. The free ChatGPT Plus hand-off includes the same evidence and ECF guidance.
+
+The **manual total-score override** now displays a warning when it differs from the ticked mark points. Changing the total does not pretend that the individual method criteria were ticked. Always compare your answer and calculation steps with the criteria before saving.
+
+This first release adds 20 vetted alternative phrasings across 8 original AQA-style questions, not to every question. Other valid correct solutions may still need a manual tick or score correction. Handwritten OCR is experimental, particularly for equations and diagrams; the student remains responsible for confirming any transcription and provisional score.
+
+---
+
 # Free-first marking in Revision Loop (v51)
 
 The public site is still on GitHub Pages. The established local scanner,
