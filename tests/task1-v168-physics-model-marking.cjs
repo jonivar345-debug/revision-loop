@@ -23,7 +23,7 @@ for(const id of ids){
  assert.equal(q.year,'Practice');
  assert.equal(q.marks,3);
  assert.equal(q.requiresWorking,true);
- assert(q.modelAnswer.length>85,'full solution missing '+id);
+ assert(q.modelAnswer.length>(ledger.corrections.find(x=>x.id===id)?.originalModelAnswer.length||0)+30,'full solution missing '+id);
  assert.deepEqual(q.markPointMarks,[1,1,1]);
  assert.deepEqual(q.markPointAcceptedAlternatives.map(x=>x.length),[1,1,1]);
  assert(q.ecfGuidance.length>=70);
