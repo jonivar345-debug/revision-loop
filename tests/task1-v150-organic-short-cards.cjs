@@ -1,0 +1,41 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const exam=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const audit=JSON.parse(fs.readFileSync('editorial/task1-v150-organic-short-cards.json','utf8'));
+const all=deck.cards,added=all.filter(c=>c.id.startsWith('task1_v150_'));
+const old=all.filter(c=>!c.id.startsWith('task1_v150_'));
+assert.equal(deck.deckVersion,150);assert.equal(all.length,3270);
+assert.equal(all.filter(c=>c.active!==false).length,3266);
+assert.equal(old.length,3263);assert.equal(old.filter(c=>c.active!==false).length,3259);
+assert.equal(exam.bankVersion,61);assert.equal(exam.questions.length,1212);
+assert.equal(added.length,7);assert.equal(audit.newCards.length,7);
+assert.equal(audit.fullSpecCoverageCertified,false);
+const norm=s=>s.normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
+const fronts=new Set(old.filter(c=>c.active!==false).map(c=>c.subject+':'+norm(c.front)));
+const oldIds=new Set(old.map(c=>c.id));
+const topics=new Set(old.filter(c=>c.subject==='Chemistry').map(c=>c.revisionTopic||c.topic));
+let count=0;
+for(let i=0;i<added.length;i++){
+ const c=added[i],e=audit.newCards[i],id='task1_v150_'+String(i+1).padStart(3,'0');
+ assert.equal(c.id,id);assert(!oldIds.has(id));oldIds.add(id);
+ assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'AS');assert.equal(c.scope,'mock');
+ assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.active,true);
+ assert.equal(c.kind,'content');assert.equal(c.strictRecall,true);
+ assert(c.front.length<=130&&c.back.length<=120,'Overlong recall card '+id);
+ assert(c.specRef.startsWith('3.3.'));
+ assert(topics.has(c.topic)&&c.topic===c.revisionTopic);
+ assert(c.accept.includes(c.back),'Missing accepted model answer');
+ const key=c.subject+':'+norm(c.front);assert(!fronts.has(key),'Duplicate '+id);fronts.add(key);
+ assert.equal(e.id,c.id);assert.equal(e.front,c.front);assert.equal(e.back,c.back);
+ count++;
+}
+const app=fs.readFileSync('app.js','utf8');
+const begin=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
+assert(begin>=0&&end>begin);
+const evaluate=new Function('window',app.slice(begin,end)+'\\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+for(const c of added)assert.equal(evaluate(c,c.back).status,'correct','Grader must accept model answer '+c.id);
+for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
+ assert(app.includes(k),'Saved progress keys changed');
+assert.equal(deck.meta.task1FlashcardAudit.v150.added,7);
+console.log('PASS v150: '+count+' concise, AS-mock eligible organic recall cards; all 3263 previous cards and progress keys preserved');
