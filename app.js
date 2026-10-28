@@ -2013,6 +2013,17 @@ function totalMarkingPoints(q,flags){
  if(q.markingMode==='anyN')return Math.min(q.marks,flags.filter(Boolean).length);
  return clamp(flags.reduce((sum,on,i)=>sum+(on?(q.markPointMarks?.[i]??1):0),0),0,q.marks);
 }
+// Editor-vetted alternatives require a complete, substantive statement.
+// One shared keyword or number is not evidence for an independent method mark.
+function acceptedMarkPointAlternative(answer,variants,point){
+ if(!Array.isArray(variants)||contradicts(answer,point))return false;
+ const actual=' '+normalise(answer)+' ';
+ return variants.some(variant=>{
+  const phrase=normalise(variant);
+  return phrase.length>=14&&phrase.split(/\s+/).length>=3&&actual.includes(' '+phrase+' ');
+ });
+}
+
 function examSuggested(q,answer){
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  // AQA source-first repairs (2020–21): award only the distinct
@@ -2251,8 +2262,12 @@ function examSuggested(q,answer){
   return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  }
 
- const scores=q.markPoints.map((p,i)=>Array.isArray(q.markEvidenceRules?.[i])?
-   evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p));
+ const scores=q.markPoints.map((p,i)=>{
+   const strictEvidence=Array.isArray(q.markEvidenceRules?.[i]);
+   const main=strictEvidence?evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p);
+   // Never bypass an independently verified restrictive evidence rule.
+   return strictEvidence?main:(acceptedMarkPointAlternative(answer,q.markPointAcceptedAlternatives?.[i],p)?1:main);
+ });
  // Preserve equivalent formula notation without requiring the student's
  // algebra to reproduce the exact English marking-point sentence.
  // Only explicitly curated expressions are eligible for this shortcut.
@@ -2474,8 +2489,9 @@ function renderExam(q){
     res.confidence=vision?(vision.uncertain?'low':'medium'):'low';
    }
    marking.classList.add('show');
-   marking.innerHTML='<b>'+(q.year==='Practice'?'Practice marking criteria:':'Question marking criteria:')+'</b>'+(q.markingMode==='anyN'?'<p class="copyright-note">Any '+q.marks+' distinct valid points can earn '+q.marks+' marks, even if more alternatives are shown.</p>':'')+'<div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+esc(p)+(scannedText?'<small class="scan-evidence '+(evidence?.[i]?.strong?'scan-evidence-found':'')+'">'+(evidence?.[i]?.strong?'Likely evidence: “'+esc((evidence[i].line||'').slice(0,175))+'”'+(vision&&evidence[i].reason?' — '+esc(evidence[i].reason):''):(vision?'Not awarded: '+esc((evidence?.[i]?.reason||'No clear evidence detected.').slice(0,210)):'No matching step identified; check the photograph and decide manually.'))+'</small>':'')+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Checked numerical answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'')+
-    (q.officialMarkingNotes?'<p class="official-marking-note"><b>AQA marking detail:</b> '+esc(q.officialMarkingNotes)+'</p>':'');
+   marking.innerHTML='<b>'+(q.year==='Practice'?'Practice marking criteria:':'Question marking criteria:')+'</b>'+(q.markingMode==='anyN'?'<p class="copyright-note">Any '+q.marks+' distinct valid points can earn '+q.marks+' marks, even if more alternatives are shown.</p>':'')+'<div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+'<b class="point-weight">'+(q.markingMode==='anyN'?'Accepted point':(q.markPointMarks?.[i]??1)+' mark'+((q.markPointMarks?.[i]??1)===1?'':'s'))+'</b> '+esc(p)+(Array.isArray(q.markPointAcceptedAlternatives?.[i])&&q.markPointAcceptedAlternatives[i].length?'<small class="mark-alternatives">Also accept: '+q.markPointAcceptedAlternatives[i].map(esc).join(' · ')+'</small>':'')+(scannedText?'<small class="scan-evidence '+(evidence?.[i]?.strong?'scan-evidence-found':'')+'">'+(evidence?.[i]?.strong?'Likely evidence: “'+esc((evidence[i].line||'').slice(0,175))+'”'+(vision&&evidence[i].reason?' — '+esc(evidence[i].reason):''):(vision?'Not awarded: '+esc((evidence?.[i]?.reason||'No clear evidence detected.').slice(0,210)):'No matching step identified; check the photograph and decide manually.'))+'</small>':'')+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Checked numerical answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'')+
+    (q.officialMarkingNotes?'<p class="official-marking-note"><b>AQA marking detail:</b> '+esc(q.officialMarkingNotes)+'</p>':'')+
+    (q.ecfGuidance?'<p class="official-marking-note"><b>Error carried forward:</b> '+esc(q.ecfGuidance)+' Check the actual substitution and method before awarding a point; this is not automatic credit.</p>':'');
    currentExamScore=res.suggested;
    const ef=document.getElementById('examFeedback');ef.className='feedback show '+(scannedText?'neutral':res.finalCorrect?'correct':'neutral');
    ef.textContent=vision?(vision.source==='chatgpt-manual-import'?'ChatGPT suggestions imported: '+res.suggested+'/'+q.marks+' provisional marks. This was not checked directly by Revision Loop; compare every tick with your answer before saving. '+(vision.reviewNotes||''):'AI vision suggested '+res.suggested+'/'+q.marks+' provisional marks by inspecting the photograph directly. Check every credited method step and adjust marks before saving. '+(vision.uncertain?'Some handwriting was uncertain. ':'')+(vision.reviewNotes||'')):scannedText?'Suggested '+res.suggested+'/'+q.marks+' marks from your corrected transcription. Evidence is shown beside each proposed mark. Handwritten symbols and method steps can be misread, so adjust every check before saving.':res.finalCorrect?'High-confidence check: final numerical answer matches. Method marks are checked below.':'Auto-check confidence: '+res.confidence+'. It checks equivalent wording, ordinary spelling errors, formulas and direct contradictions. Review highlighted marking points before saving.';
@@ -2496,7 +2512,7 @@ function renderExam(q){
  };
 }
 
-function renderScoreEditor(q,answer){const ed=document.getElementById('scoreEditor');ed.classList.add('show');const missed=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);ed.innerHTML='<div class="score-line"><strong>Suggested mark: '+currentExamScore+'/'+q.marks+'</strong><span>Tap a mark to correct it</span></div><div class="mark-buttons">'+Array.from({length:q.marks+1},(_,i)=>'<button class="mark-btn '+(i===currentExamScore?'selected':'')+'" data-score="'+i+'">'+i+'</button>').join('')+'</div>'+(missed.length?'<div class="missed-summary"><b>Likely missing:</b> '+missed.map(esc).join(' • ')+'</div>':'<div class="feedback show correct">No mark-scheme point is currently flagged as missing.</div>')+'<button id="saveExamScore" class="primary-btn save-score">Save '+currentExamScore+'/'+q.marks+'</button>';document.querySelectorAll('[data-score]').forEach(b=>b.onclick=()=>{currentExamScore=Number(b.dataset.score);renderScoreEditor(q,answer)});document.getElementById('saveExamScore').onclick=()=>{const mp=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);awardExam(q,currentExamScore,answer,mp)}}
+function renderScoreEditor(q,answer){const ed=document.getElementById('scoreEditor');ed.classList.add('show');const checks=[...document.querySelectorAll('[data-mp]')].map(el=>el.checked);const checkboxTotal=totalMarkingPoints(q,checks);const overridden=checkboxTotal!==currentExamScore;const missed=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);ed.innerHTML='<div class="score-line"><strong>Suggested mark: '+currentExamScore+'/'+q.marks+'</strong><span>Tap a mark to correct it</span></div>'+(overridden?'<p class="copyright-note">Manual total override: '+currentExamScore+'/'+q.marks+' differs from '+checkboxTotal+'/'+q.marks+' checked marking points. This does not tick or untick the points; review the marks before saving.</p>':'')+'<div class="mark-buttons">'+Array.from({length:q.marks+1},(_,i)=>'<button class="mark-btn '+(i===currentExamScore?'selected':'')+'" data-score="'+i+'">'+i+'</button>').join('')+'</div>'+(missed.length?'<div class="missed-summary"><b>Likely missing:</b> '+missed.map(esc).join(' • ')+'</div>':'<div class="feedback show correct">No mark-scheme point is currently flagged as missing.</div>')+'<button id="saveExamScore" class="primary-btn save-score">Save '+currentExamScore+'/'+q.marks+'</button>';document.querySelectorAll('[data-score]').forEach(b=>b.onclick=()=>{currentExamScore=Number(b.dataset.score);renderScoreEditor(q,answer)});document.getElementById('saveExamScore').onclick=()=>{const mp=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);awardExam(q,currentExamScore,answer,mp)}}
 function renderStudy(){
  renderStudyType();renderSessionBanner();
  if(activeSession?.done){document.getElementById('studyHost').innerHTML='<div class="empty-card"><h3>Session complete</h3><p>Your results have been saved into the memory and weakness model.</p><button id="endSession" class="primary-small">Finish</button></div>';document.getElementById('endSession').onclick=()=>{activeSession=null;renderAll()};return}
