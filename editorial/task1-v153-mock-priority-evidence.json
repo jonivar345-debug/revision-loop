@@ -1,0 +1,940 @@
+{
+  "release": "v153",
+  "auditDate": "2026-10-28",
+  "name": "Targeted mock-focus Physics/Chemistry evidence review",
+  "scope": "33 selected demand-level checks across Physics Mechanics and Materials, Electricity and Chemistry Bonding, Energetics. NOT complete exhaustive syllabus crosswalk or proof of student mastery.",
+  "sources": {
+    "Physics": [
+      "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+      "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity"
+    ],
+    "Chemistry": [
+      "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+    ]
+  },
+  "counts": {
+    "rows": 33,
+    "byStatus": {
+      "supported_recall": 11,
+      "supported_practice": 13,
+      "partial": 9
+    },
+    "subjects": {
+      "Physics": 18,
+      "Chemistry": 15
+    }
+  },
+  "policy": {
+    "auditOnly": true,
+    "noNewMockContent": true,
+    "fullSpecCertified": false,
+    "statedUncertainty": "Partial denotes missing directly mapped demonstration, not proof an item is absent everywhere in bank.",
+    "noGradesClaimed": true
+  },
+  "rows": [
+    {
+      "id": "MOCKAUD-001",
+      "subject": "Physics",
+      "ref": "3.4.1.1",
+      "requirement": "Choose sine or cosine from a marked vector angle",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_vectors_001",
+            "front": "How do you decide whether to use sin or cos when resolving a force?",
+            "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-002",
+      "subject": "Physics",
+      "ref": "3.4.1.1",
+      "requirement": "Resolve weight parallel/perpendicular to an inclined plane",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_slope_001",
+            "front": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+            "back": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "stretch_v34_physics_forces_on_a_slope",
+            "prompt": "A 75.0 kg crate moves at constant speed up a slope inclined at 18.0° to the horizontal. A worker applies a 320 N force at 12.0° above the slope, in the direction of motion. The crate travels 5.00 m. Take g = 9.81 m s⁻². Calculate (a) the component of weight down the slope, (b) friction on the crate, and (c) work done by the applied force over the 5.00 m. Explain why friction acts down the slope.",
+            "marks": 6,
+            "markPoints": [
+              "Weight component down slope = 75.0 × 9.81 × sin18° ≈ 227 N.",
+              "Applied-force component up the slope = 320 cos12° ≈ 313 N.",
+              "Constant velocity means the resultant force parallel to the slope is zero.",
+              "Friction = 313 − 227 ≈ 85.6 N down the slope.",
+              "Work by applied force = Fs cos12° = 320 × 5.00 × cos12° ≈ 1565 J.",
+              "Friction opposes the relative motion of the sliding crate up the surface."
+            ],
+            "revisionTopic": "Forces on a slope"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-003",
+      "subject": "Physics",
+      "ref": "3.4.1.2",
+      "requirement": "State the definition and moment of a couple",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_couple_001",
+            "front": "What is a couple, and what is the moment of a couple?",
+            "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-004",
+      "subject": "Physics",
+      "ref": "3.4.1.3",
+      "requirement": "Interpret signed area on velocity–time graph as displacement",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_motion_v",
+            "front": "What do the gradient and signed area of a velocity–time graph represent?",
+            "back": "Gradient = acceleration. Signed area under the graph = displacement.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v34_physics_29",
+            "prompt": "A velocity–time graph shows a velocity of +3.0 m s⁻¹ for 4.0 s, then −2.0 m s⁻¹ for 5.0 s. Calculate resultant displacement and explain its sign.",
+            "marks": 3,
+            "markPoints": [
+              "First signed area = +3.0×4.0=+12 m.",
+              "Second signed area = −2.0×5.0=−10 m.",
+              "Resultant displacement = +2.0 m; positive means net displacement in the chosen positive direction."
+            ],
+            "revisionTopic": "Motion graphs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-005",
+      "subject": "Physics",
+      "ref": "3.4.1.3",
+      "requirement": "Distinguish total distance and signed displacement across several intervals",
+      "status": "partial",
+      "limitation": "Existing mapped exam prompt uses signed displacement only; needs unfamiliar multi-interval distance comparison.",
+      "next": "exam_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_graph_weakness_v36_v_signed_vs_distance",
+            "front": "A v–t graph gives +20 m and −8 m of signed area. Find displacement and distance.",
+            "back": "Displacement = 20−8 = +12 m. Total distance = 20+8 = 28 m.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v34_physics_29",
+            "prompt": "A velocity–time graph shows a velocity of +3.0 m s⁻¹ for 4.0 s, then −2.0 m s⁻¹ for 5.0 s. Calculate resultant displacement and explain its sign.",
+            "marks": 3,
+            "markPoints": [
+              "First signed area = +3.0×4.0=+12 m.",
+              "Second signed area = −2.0×5.0=−10 m.",
+              "Resultant displacement = +2.0 m; positive means net displacement in the chosen positive direction."
+            ],
+            "revisionTopic": "Motion graphs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-006",
+      "subject": "Physics",
+      "ref": "3.4.1.3",
+      "requirement": "Use a tangent to estimate instantaneous velocity from curved displacement–time graph",
+      "status": "partial",
+      "limitation": "Explicit recall is present but no mapped unfamiliar numerical tangent-drawing task.",
+      "next": "graph_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_motion_d",
+            "front": "What does the gradient of a displacement–time graph represent?",
+            "back": "Velocity. A steeper gradient means greater speed; a horizontal line means v = 0. On a curve, use a tangent for instantaneous velocity.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-007",
+      "subject": "Physics",
+      "ref": "3.4.1.4",
+      "requirement": "Separate horizontal and vertical projectile motion",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_projectile_independent",
+            "front": "What key idea lets you solve projectile motion?",
+            "back": "Horizontal and vertical motion are independent and share the same time.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v31_phys_kinematics_4",
+            "prompt": "A ball leaves a level table horizontally at 3.0 m s⁻¹ and lands 0.80 s later. Ignore air resistance. Find the horizontal range and vertical distance fallen.",
+            "marks": 2,
+            "markPoints": [
+              "Horizontal range = 3.0×0.80 = 2.4 m.",
+              "Vertical distance = ½×9.81×0.80² ≈ 3.14 m."
+            ],
+            "revisionTopic": "Kinematics"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-008",
+      "subject": "Physics",
+      "ref": "3.4.1.4",
+      "requirement": "Solve projectiles landing at a different height from launch",
+      "status": "partial",
+      "limitation": "Recall warning is present, but a fully independent non-equal-height trajectory exercise needs checking.",
+      "next": "exam_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_focus_v39_04",
+            "front": "Why can't you double ascent time to find flight time when a projectile lands below launch height?",
+            "back": "The vertical journey is asymmetric; use vertical displacement and solve a quadratic for landing time.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-009",
+      "subject": "Physics",
+      "ref": "3.4.2.1",
+      "requirement": "Interpret gradient and area of a force–extension graph",
+      "status": "partial",
+      "limitation": "Existing question asks comparison of deformation; mapped evidence does not explicitly use unfamiliar numerical graph areas.",
+      "next": "graph_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_graph_weakness_v36_force_extension_dual",
+            "front": "For a Hookean force–extension graph (F vs ΔL), what do gradient and area give?",
+            "back": "Gradient = spring stiffness k; area = work done / elastic strain energy (for elastic loading).",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v31_phys_materials_2",
+            "prompt": "Describe how a force–extension graph differs for an ideal spring and a ductile metal past its limit of proportionality.",
+            "marks": 2,
+            "markPoints": [
+              "Ideal spring: straight line through the origin over the elastic range.",
+              "Ductile metal: gradient changes after limit of proportionality; plastic deformation may follow."
+            ],
+            "revisionTopic": "Materials"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-010",
+      "subject": "Physics",
+      "ref": "3.4.2.2",
+      "requirement": "Calculate Young modulus from wire dimensions and extension",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_rp4",
+            "front": "What equation is used to determine Young modulus from a wire?",
+            "back": "E = FL/(AΔL), with A = πd²/4.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v31_phys_materials_1",
+            "prompt": "A metal wire has length 2.0 m, cross-sectional area 1.5×10⁻⁶ m² and extends 1.2 mm under a 90 N load. Calculate Young modulus.",
+            "marks": 3,
+            "markPoints": [
+              "Stress=90/(1.5×10⁻⁶)=6.0×10⁷ Pa.",
+              "Strain=0.0012/2.0=6.0×10⁻⁴.",
+              "E=stress/strain=1.0×10¹¹ Pa."
+            ],
+            "revisionTopic": "Materials"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-011",
+      "subject": "Physics",
+      "ref": "3.5.1.1",
+      "requirement": "State electromotive force as energy per charge supplied",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_emf",
+            "front": "Define emf.",
+            "back": "Energy supplied by the source per unit charge.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-012",
+      "subject": "Physics",
+      "ref": "3.5.1.6",
+      "requirement": "Calculate terminal p.d. and explain lost volts from internal resistance",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_internal_001",
+            "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+            "back": "V = ε − Ir. The term Ir is the lost volts inside the cell.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v34_physics_24",
+            "prompt": "A 9.0 V cell has internal resistance 1.0 Ω and supplies 2.0 A. Explain why a connected device receives less than 9.0 V and calculate its terminal p.d.",
+            "marks": 3,
+            "markPoints": [
+              "Current produces lost volts Ir=2.0×1.0=2.0 V across internal resistance.",
+              "Terminal p.d. = ε−Ir=9.0−2.0=7.0 V.",
+              "The external device receives terminal p.d., not the full emf."
+            ],
+            "revisionTopic": "Internal resistance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-013",
+      "subject": "Physics",
+      "ref": "3.5.1.6",
+      "requirement": "Infer emf and internal resistance from voltage–current graph",
+      "status": "partial",
+      "limitation": "Intercept and gradient recall exists; independent extraction from noisy plotted data is not mapped.",
+      "next": "graph_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_rp6",
+            "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+            "back": "y-intercept = emf ε and gradient = −r.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-014",
+      "subject": "Physics",
+      "ref": "3.5.1.5",
+      "requirement": "Calculate unloaded potential divider output",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v125_072",
+            "front": "What is the purpose of a potential divider?",
+            "back": "Produce a fraction of the supply p.d.",
+            "specRef": "3.5.1",
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_physics_potential_dividers_4",
+            "prompt": "A 9 V potential divider uses upper resistor 6 kΩ and lower resistor 3 kΩ. A voltmeter of very high resistance measures across lower resistor. Determine its reading.",
+            "marks": 3,
+            "markPoints": [
+              "Assume negligible voltmeter current.",
+              "Voltage divides in the ratio of the resistances.",
+              "Vout=9×3/(6+3)=3.0 V."
+            ],
+            "revisionTopic": "Potential dividers"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-015",
+      "subject": "Physics",
+      "ref": "3.5.1.5",
+      "requirement": "Explain change in output when a potential divider is loaded",
+      "status": "partial",
+      "limitation": "Basic divider coverage does not prove modelling a finite load connected in parallel.",
+      "next": "exam_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v125_072",
+            "front": "What is the purpose of a potential divider?",
+            "back": "Produce a fraction of the supply p.d.",
+            "specRef": "3.5.1",
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-016",
+      "subject": "Physics",
+      "ref": "3.5.1.3",
+      "requirement": "Calculate wire resistivity from dimensions and resistance",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_resistivity",
+            "front": "What equation links resistance and resistivity?",
+            "back": "R = ρL/A.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v33_ph_17_3",
+            "prompt": "A test wire of length 1.75 m and area 5e-7 m² has resistance 6 Ω. Determine its resistivity.",
+            "marks": 2,
+            "markPoints": [
+              "ρ=RA/L.",
+              "ρ=0.000001714 Ω m."
+            ],
+            "revisionTopic": "RP5 Resistivity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-017",
+      "subject": "Physics",
+      "ref": "3.5.1.3",
+      "requirement": "Interpret a non-zero resistance–length graph intercept",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_rp5",
+            "front": "How is the resistivity of a wire found?",
+            "back": "ρ = RA/L, with R = V/I and A = πd²/4.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v34_physics_26",
+            "prompt": "A resistivity graph of resistance against length is approximately straight but has a positive intercept. Explain two plausible systematic causes without changing the physical resistivity equation.",
+            "marks": 3,
+            "markPoints": [
+              "Lead or contact resistance can add a nearly constant resistance offset.",
+              "Incorrect zero length or measurement offset can shift the plotted intercept.",
+              "The gradient can still estimate ρ/A if the extra resistance is constant."
+            ],
+            "revisionTopic": "RP5 Resistivity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-018",
+      "subject": "Physics",
+      "ref": "3.5.1.2",
+      "requirement": "Explain the non-ohmic current–voltage characteristic of a filament lamp",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "phy_filament_iv",
+            "front": "Why does a filament lamp's resistance rise at high current?",
+            "back": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-019",
+      "subject": "Chemistry",
+      "ref": "3.1.3.1",
+      "requirement": "Define ionic bonding in a lattice",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v47_01",
+            "front": "State the complete definition of ionic bonding.",
+            "back": "Strong electrostatic attraction between oppositely charged ions in a lattice.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-020",
+      "subject": "Chemistry",
+      "ref": "3.1.3.3",
+      "requirement": "Describe metallic bonding in terms of positive ions and delocalised electrons",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_metallic_bond",
+            "front": "What is metallic bonding?",
+            "back": "Electrostatic attraction between positive metal ions and delocalised electrons.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-021",
+      "subject": "Chemistry",
+      "ref": "3.1.3.2",
+      "requirement": "Identify dative-bond electron-pair donor and diagram arrow direction",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v47_12",
+            "front": "What is a coordinate or dative covalent bond?",
+            "back": "A shared pair where both electrons originate from one atom.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_bonding_v47_13",
+            "front": "How is a coordinate bond represented in a diagram?",
+            "back": "With an arrow pointing from electron-pair donor to acceptor.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-022",
+      "subject": "Chemistry",
+      "ref": "3.1.3.5",
+      "requirement": "Deduce shape and bond angles for unfamiliar 5–6-domain species",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v48_01",
+            "front": "What determines molecular geometry by VSEPR?",
+            "back": "Electron domains repel and occupy positions as far apart as possible.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "aqa_chem_as24_p1_q5",
+            "prompt": "SF₆ and SF₃⁺ have different shapes and bond angles. Deduce the shape and bond angle of each species and justify the angles using electron-pair repulsion.",
+            "marks": 6,
+            "markPoints": [
+              "SF₆ is octahedral.",
+              "The bond angle in SF₆ is 90°.",
+              "All six bonding pairs in SF₆ repel equally.",
+              "SF₃⁺ is trigonal pyramidal.",
+              "Its bond angle is about 103–107°.",
+              "Lone-pair–bond-pair repulsion is stronger than bond-pair–bond-pair repulsion, reducing the angle."
+            ],
+            "revisionTopic": "Shapes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-023",
+      "subject": "Chemistry",
+      "ref": "3.1.3.6",
+      "requirement": "Explain why symmetrical molecules can have polar bonds without an overall dipole",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v48_26",
+            "front": "Why is CO₂ overall non-polar despite two polar C=O bonds?",
+            "back": "Its linear, symmetrical bond dipoles cancel.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-024",
+      "subject": "Chemistry",
+      "ref": "3.1.3.4",
+      "requirement": "Distinguish ionic solids and melts using charge carriers",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v47_24",
+            "front": "Why does solid NaCl not conduct electricity?",
+            "back": "Its ions are fixed within the giant ionic lattice.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_bonding_v47_25",
+            "front": "Why can aqueous NaCl solution conduct electricity?",
+            "back": "Dissolved Na⁺ and Cl⁻ ions can move and carry charge.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-025",
+      "subject": "Chemistry",
+      "ref": "3.1.3.7",
+      "requirement": "Explain why ice is less dense due to open hydrogen-bond structure",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v48_43",
+            "front": "Why is ice less dense than liquid water?",
+            "back": "Its hydrogen bonds create an open tetrahedral network with more empty space.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-026",
+      "subject": "Chemistry",
+      "ref": "3.1.3.7",
+      "requirement": "Apply London-force size/branching comparisons to unfamiliar structures",
+      "status": "partial",
+      "limitation": "One branched-isomer question is present, but not a varied unfamiliar molecule set for comparison.",
+      "next": "exam_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bonding_v48_30",
+            "front": "How can a molecule have polar bonds but no permanent dipole?",
+            "back": "Its geometry may make equal bond dipoles cancel vectorially.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "aqa_2018_C_4_2",
+            "prompt": "Nonane has a higher boiling point than its more highly branched isomer 2,4-dimethylheptane. Explain this difference.",
+            "marks": 2,
+            "markPoints": [
+              "Nonane has a less-branched structure and a larger contact surface area.",
+              "Stronger London dispersion forces act between nonane molecules, requiring more energy to separate."
+            ],
+            "revisionTopic": "Intermolecular forces"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-027",
+      "subject": "Chemistry",
+      "ref": "3.1.4.1",
+      "requirement": "Define standard enthalpy of formation for one mole of compound",
+      "status": "supported_recall",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_bh_defs_20261024_standard_formation_def",
+            "front": "Define standard enthalpy of formation.",
+            "back": "The enthalpy change when 1 mole of compound forms from its constituent elements in their standard states under standard conditions.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-028",
+      "subject": "Chemistry",
+      "ref": "3.1.4.2",
+      "requirement": "Use q=mcΔT and negative sign to obtain molar exothermic ΔH",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_rp2",
+            "front": "What is the core calorimetry calculation?",
+            "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v33_ch_10_0",
+            "prompt": "A reaction releases heat into 90 g water, raising it by 4 K. If 0.02 mol reacts, calculate ΔH in kJ mol⁻¹ (c=4.18 J g⁻¹ K⁻¹).",
+            "marks": 2,
+            "markPoints": [
+              "q=mcΔT=1505 J.",
+              "ΔH=−q/(1000n)=-75.24 kJ mol⁻¹."
+            ],
+            "revisionTopic": "Energetics"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-029",
+      "subject": "Chemistry",
+      "ref": "3.1.4.3",
+      "requirement": "Use a Hess combustion cycle to calculate enthalpy of formation",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_energetics_v49_40",
+            "front": "What is the combustion-enthalpy Hess calculation?",
+            "back": "Sum combustion enthalpies of reactants minus those of products.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "aschem19p2_03_3",
+            "prompt": "Use ΔcH° values C(s) = −394, H₂(g) = −286 and C₆H₁₂(l) = −3920 kJ mol⁻¹ to calculate the enthalpy of formation of liquid cyclohexane: 6C(s) + 6H₂(g) → C₆H₁₂(l). Show the Hess-cycle calculation.",
+            "marks": 3,
+            "markPoints": [
+              "Use six moles each of C and H₂ combustion data.",
+              "ΔH = 6(−394)+6(−286)−(−3920).",
+              "The enthalpy change is −160 kJ mol⁻¹."
+            ],
+            "revisionTopic": "Energetics"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-030",
+      "subject": "Chemistry",
+      "ref": "3.1.4.4",
+      "requirement": "State that mean bond enthalpy is gas-phase average, and estimate ΔH",
+      "status": "partial",
+      "limitation": "Recall is supported, but a verified unfamiliar multi-bond calculation question is not mapped here.",
+      "next": "exam_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_energetics_v49_50",
+            "front": "Define mean bond enthalpy.",
+            "back": "Average enthalpy to break 1 mol of a stated covalent bond in gaseous molecules.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_bondenthalpy",
+            "front": "Using mean bond enthalpies, how is ΔH estimated?",
+            "back": "Σ bonds broken − Σ bonds formed.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-031",
+      "subject": "Chemistry",
+      "ref": "3.1.4.2",
+      "requirement": "Explain why heat lost to surroundings biases measured ΔH",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_energetics_v53_33",
+            "front": "What effect does heat loss have on calculated exothermic ΔH?",
+            "back": "Measured ΔT is too small, so ΔH is less negative than the true value.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "aschem19p2_03_2",
+            "prompt": "A flame calorimetry experiment gives a much less exothermic enthalpy of combustion than a data-book value. Suggest one experimental cause.",
+            "marks": 1,
+            "markPoints": [
+              "Heat is lost to the surroundings or the apparatus, or the fuel burns incompletely."
+            ],
+            "revisionTopic": "RP2 Enthalpy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MOCKAUD-032",
+      "subject": "Chemistry",
+      "ref": "3.1.4.2",
+      "requirement": "Interpret extrapolated cooling curves for RP2 temperature change",
+      "status": "partial",
+      "limitation": "Mapped work recalls calorimetry but does not directly support a cooling-curve extrapolation graph exercise.",
+      "next": "graph_question",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_rp2",
+            "front": "What is the core calorimetry calculation?",
+            "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      }
+    },
+    {
+      "id": "MOCKAUD-033",
+      "subject": "Chemistry",
+      "ref": "3.1.4.4",
+      "requirement": "Interpret positive versus negative enthalpy-change signs",
+      "status": "supported_practice",
+      "limitation": null,
+      "next": null,
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_energetics_v49_56",
+            "front": "Why can mean bond-enthalpy ΔH differ from standard experimental ΔH?",
+            "back": "Mean gas-phase energies are approximate and actual substances may have other states.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_energetics_2",
+            "prompt": "A bond-enthalpy calculation gives ΔH=+85 kJ mol⁻¹. Explain what the positive sign means.",
+            "marks": 2,
+            "markPoints": [
+              "More energy is required to break reactant bonds than released making product bonds.",
+              "The reaction is endothermic and absorbs energy overall."
+            ],
+            "revisionTopic": "Energetics"
+          }
+        ]
+      }
+    }
+  ]
+}
