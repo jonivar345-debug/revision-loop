@@ -32,7 +32,8 @@ for(const q of curated){
      q.id+' should reject a negated alternative');
    const result=funcs.examSuggested(q,variant);
    assert.equal(result.preds[i],true,q.id+' should recognise alternative evidence at point '+(i+1));
-   assert(result.suggested>=1&&result.suggested<=q.marks,q.id+' suggested score range');
+   assert.equal(result.suggested,q.markPointMarks?.[i]??1,q.id+' standalone alternative awards only its own mark');
+   assert.equal(result.preds.filter(Boolean).length,1,q.id+' standalone explanation must not trigger unrelated criteria');
    checked++;
   }
  }
