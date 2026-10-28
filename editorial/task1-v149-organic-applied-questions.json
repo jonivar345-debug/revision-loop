@@ -29,13 +29,13 @@
       "subtopic": "Exact mass: select a molecular formula",
       "revisionTopic": "Organic analysis",
       "marks": 6,
-      "prompt": "An electron-impact mass spectrum has an intact molecular-ion peak at m/z 46.0419. The only possible formulae are C₂H₆O and CH₂O₂. Precise atomic masses: ¹²C = 12.000000, ¹H = 1.007825, ¹⁶O = 15.994915. Show the exact mass of each candidate, identify the consistent molecular formula and explain why a nominal mass of 46 alone is insufficient to identify it.",
+      "prompt": "The inferred exact mass of a neutral organic molecule is 46.0419 u, determined from high-resolution mass spectrometry. The only possible formulae are C₂H₆O and CH₂O₂. Precise atomic masses: ¹²C = 12.000000, ¹H = 1.007825, ¹⁶O = 15.994915. Show the exact mass of each candidate, identify the consistent molecular formula and explain why a nominal mass of 46 alone is insufficient to identify it.",
       "markPoints": [
         "C₂H₆O has exact neutral atomic mass 2(12.000000) + 6(1.007825) + 15.994915.",
         "Calculated mass of C₂H₆O is 46.041865 u (approximately 46.0419).",
         "CH₂O₂ has exact neutral atomic mass 12.000000 + 2(1.007825) + 2(15.994915).",
         "Calculated mass of CH₂O₂ is 46.005480 u (approximately 46.0055).",
-        "The observed precise peak is consistent with C₂H₆O, not CH₂O₂.",
+        "The precise molecular mass is consistent with C₂H₆O, not CH₂O₂.",
         "Both candidates have nominal mass 46; precise mass distinguishes formulae but does not uniquely establish a structural isomer."
       ]
     },
