@@ -133,5 +133,11 @@
   "independentHandwritingAccuracyCertified": false,
   "next": "Extend rubric evidence tests to specific demanding required practical and multi-stage calculations; validate against real student answers while avoiding automatic full credit when steps are missing.",
   "combinedWith": "Merged PR #117: four repaired complete Physics model answers and 12 additional accepted phrases; both releases preserved.",
-  "notes": "Direct answer-marking benchmarks were run on the combined bank before the pull request, with complete model solutions retained."
+  "notes": "Direct answer-marking benchmarks were run on the combined bank before the pull request, with complete model solutions retained.",
+  "modelAnswerSelfConsistency": {
+    "questionBankChecked": 1268,
+    "receivedFullMarks": 1268,
+    "scoringErrors": 0,
+    "meaning": "Each stored answer scored full against its own original rubric using the revised checker. This does not independently certify model-answer correctness, exam relevance or completeness."
+  }
 }
