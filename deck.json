@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 150,
+  "deckVersion": 152,
   "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -68646,6 +68646,138 @@
       "priority": 7,
       "courseTopic": "Organic analysis",
       "revisionTopic": "Organic analysis"
+    },
+    {
+      "id": "task1_v152_001",
+      "subject": "Chemistry",
+      "specRef": "3.3.12.1",
+      "stage": "A2",
+      "topic": "Polymers",
+      "front": "Give one typical use of Terylene polyester.",
+      "back": "Textile fibres, such as clothing fabric.",
+      "accept": [
+        "Textile fibres, such as clothing fabric."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Polymers",
+      "revisionTopic": "Polymers"
+    },
+    {
+      "id": "task1_v152_002",
+      "subject": "Chemistry",
+      "specRef": "3.3.12.1",
+      "stage": "A2",
+      "topic": "Polymers",
+      "front": "Give one typical use of nylon 6,6.",
+      "back": "Strong textile fibres or rope.",
+      "accept": [
+        "Strong textile fibres or rope."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Polymers",
+      "revisionTopic": "Polymers"
+    },
+    {
+      "id": "task1_v152_003",
+      "subject": "Chemistry",
+      "specRef": "3.3.12.1",
+      "stage": "A2",
+      "topic": "Polymers",
+      "front": "Give one typical use of Kevlar.",
+      "back": "Protective fabrics or high-strength reinforcing fibres.",
+      "accept": [
+        "Protective fabrics or high-strength reinforcing fibres."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Polymers",
+      "revisionTopic": "Polymers"
+    },
+    {
+      "id": "task1_v152_004",
+      "subject": "Chemistry",
+      "specRef": "3.3.12.1",
+      "stage": "A2",
+      "topic": "Polymers",
+      "front": "Which groups form hydrogen bonds between typical polyamide chains?",
+      "back": "N–H groups donate to carbonyl oxygen atoms on other chains.",
+      "accept": [
+        "N–H groups donate to carbonyl oxygen atoms on other chains."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Polymers",
+      "revisionTopic": "Polymers"
+    },
+    {
+      "id": "task1_v152_005",
+      "subject": "Chemistry",
+      "specRef": "3.3.11.1",
+      "stage": "A2",
+      "topic": "Amines",
+      "front": "What functional group forms when a nitrile group is reduced?",
+      "back": "A primary amine group, –CH₂NH₂.",
+      "accept": [
+        "A primary amine group, –CH₂NH₂."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Amines",
+      "revisionTopic": "Amines"
+    },
+    {
+      "id": "task1_v152_006",
+      "subject": "Chemistry",
+      "specRef": "3.3.11.1",
+      "stage": "A2",
+      "topic": "Amines",
+      "front": "What group replaces a nitro group on an aromatic ring upon reduction?",
+      "back": "An amino group, –NH₂, giving an aromatic amine.",
+      "accept": [
+        "An amino group, –NH₂, giving an aromatic amine."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": false,
+      "mock": false,
+      "scope": "full",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Amines",
+      "revisionTopic": "Amines"
     }
   ],
   "meta": {
@@ -69055,6 +69187,16 @@
         "shortRecallOnly": true,
         "fullSpecCoverageCertified": false,
         "noOriginalCardIdsChanged": true
+      },
+      "v152": {
+        "baselineCards": 3270,
+        "added": 6,
+        "allSingleFactRecall": true,
+        "originalIdsPreserved": true,
+        "fullSpecCoverageCertified": false,
+        "mockScope": "A-level only; no new November mock-eligible records",
+        "source": "AQA Chemistry 7405 3.3.11.1, 3.3.12.1; v151 selected evidence gaps",
+        "next": "Continue unfinished organic drawn mechanism and four-step synthesis applications as separate theoretical questions"
       }
     },
     "chatYear1CoverageV126": {
