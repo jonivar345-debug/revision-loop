@@ -2020,7 +2020,12 @@ function acceptedMarkPointAlternative(answer,variants,point){
  const actual=' '+normalise(answer)+' ';
  return variants.some(variant=>{
   const phrase=normalise(variant);
-  return phrase.length>=14&&phrase.split(/\s+/).length>=3&&actual.includes(' '+phrase+' ');
+  if(phrase.length<14||phrase.split(/\s+/).length<3)return false;
+  const target=' '+phrase+' ';
+  const pos=actual.indexOf(target);
+  if(pos<0)return false;
+  const preceding=actual.slice(Math.max(0,pos-16),pos);
+  return !/(?:\bnot|\bnever|\bno)\s*$/.test(preceding);
  });
 }
 
