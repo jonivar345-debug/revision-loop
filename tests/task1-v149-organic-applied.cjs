@@ -1,4 +1,5 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const assert=require('node:assert/strict');const fs=require('node:fs');
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -25,7 +26,7 @@ for (let i=0;i<added.length;i++){
  assert.equal(q.answerType,'points');assert.equal(q.requiresWorking,true);
  assert.equal(q.marks,q.markPoints.length);assert(q.marks>=5 && q.marks<=6);
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
- assert.deepEqual(q.markPoints,evidence.markPoints);assert.equal(q.prompt,evidence.prompt);
+ assert.deepEqual(q.markPoints,expectedQuestionPoints(evidence.markPoints));assert.equal(q.prompt,expectedQuestionText(evidence.prompt));
  assert.equal(q.modelAnswer,q.markPoints.join(' '));
  assert(!q.qpUrl&&!q.msUrl);
 }
