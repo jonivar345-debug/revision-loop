@@ -1,3 +1,15 @@
+# Revision Loop — v153 Organic exam mechanisms and Year 1 science audit (28 October 2026)
+
+**Release candidate v153:** 12 original A-level-only Chemistry exam questions worth **81 marks**. Bank v62 → v63, **1,226 → 1,238 questions**. The questions are paper-only mechanism and functional-group mapping exercises: carbonyl electron-pair arrows; abstract nitrogen substitution and acylation; theoretical electrophilic aromatic substitution; and four-stage route ordering, evaluation, overall yield and atom economy. No practical chemical preparation or material-handling instructions. All new questions have `mock:false` and original—not AQA past paper—provenance. **Flashcards remain at 3,276 (3,272 active)** and all saved card IDs remain untouched.
+
+**Year 1/mock priorities:** A second evidence ledger reviews **33 selected checks** in AQA Physics 7408 Mechanics and Materials (3.4), Electricity (3.5), and AQA Chemistry 7405 Bonding (3.1.3) and Energetics (3.1.4). Status breakdown: **11 supported recall**, **13 supported applied practice**, **9 partial**, with complete snapshots of every cited card answer and question marking point. Priority gaps for following releases: multi-interval distance vs displacement, curved s–t tangent, unequal-height projectile, unknown force-extension data, emf–current graph, loaded dividers, London-force unfamiliar comparisons, bond-enthalpy calculations and RP2 cooling-curve analysis. 'Partial' means limited mapped evidence, not absence or poor personal performance.
+
+**Files:** `editorial/task1-v153-organic-theory-questions.json`, `editorial/task1-v153-mock-priority-evidence.json`, regression `tests/task1-v153-organic-mechanism-audit.cjs`. Sources are official AQA specifications. This is **not exhaustive qualification-wide coverage**; theoretical generic route maps do not demonstrate mastery of named compound synthesis. The specific hydroxynitrile mechanism from the v151 audit remains a partly unresolved advanced applied target. No new flashcards were required by this selected audit.
+
+**Preservation:** no changes to `deck.json`, `app.js`, progress/Firebase, XP/shop, World, scanner or mock settings. Existing historical exam tests now exclude additive v153 IDs when testing their older exact release baselines. Release only after **all four PR checks**, merge and confirmed GitHub Pages deployment.
+
+---
+
 # Revision Loop — v152 A-level Organic Chemistry applied practice and recall (28 October 2026)
 
 **Proposed v152 (not live until PR checks, merge and Pages deployment):** 14 independently written A-level-only Chemistry questions worth **84 marks** and six short, single-fact recall cards. Totals: **3,270 → 3,276 flashcards (3,266 → 3,272 active)**; **1,212 → 1,226 main-bank questions** (bank v61 → v62). All 3,270 old card IDs and 1,212 existing question IDs remain in place. New A2 material has `mock:false`, `taught:false` on cards and `scope:full`, so none is newly included in the November mock preset.
