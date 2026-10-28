@@ -1,3 +1,15 @@
+# Revision Loop v162 — targeted Year 1 Pure Maths recall correction (28 October 2026)
+
+**Proposed until CI, merge and Pages deployment.** Deck v162: **3,335 total cards (3,331 active), 2,369 mock-eligible**: Physics 730, Chemistry 1,533, Maths **106**. Main bank stays at **1,260 original exam-style questions**; Year 1 Pure Maths question selection stays **121** from v161.
+
+AQA AS Pure sections 3.3–3.10 have been checked against the current Maths recall prompts for selected, demonstrably missing single facts. **23 short, single-fact cards** added: vertical reflection and stretch, leftward translation, factorials/binomial coefficients/general term, sequences and recurrence, quadratic inequalities, reciprocal-curve asymptotes, circle properties, degree-based exact trigonometry, change of base, first-principles differentiation, normals, monotonicity and 2D vector subtraction.
+
+**Eight existing Maths cards reclassified**, rather than duplicated, from full/A2 to mock/AS: arithmetic and geometric series sums, inverse domain/range, sigma notation, the r=1 geometric case, and the inconclusive second-derivative test. **Two radian-worded exact-value cards removed from the school's November mock**, while retained intact in full A-level revision; the same important trigonometric values are now asked in degrees. All old IDs, fronts, backs, accepted answers, saved progress keys, XP, marking, scanner, Firebase, World and images remain unchanged.
+
+Evidence and regression: `editorial/task1-v162-maths-year1-recall-audit.json`, `tests/task1-v162-maths-year1-recall.cjs`. Historical v160-and-earlier tests use `tests/task1-v162-historical-snapshot.cjs` to reconstruct their exact old flags and avoid treating deliberate v162 retagging as regression; the separate v162 regression verifies *current* live records. **This is a targeted recall audit, not certification of every AS Maths specification line or independent exam mastery.**
+
+---
+
 # Revision Loop v161 — November Maths mock-only exam scope correction (28 October 2026)
 
 **Proposed until CI, merge and Pages deployment.** This release changes mock-session and daily-challenge question eligibility in `app.js`, not the question bank or flashcard deck. **Existing totals remain 3,312 flashcards (3,308 active; 2,340 mock-eligible) and 1,260 original exam questions**.
