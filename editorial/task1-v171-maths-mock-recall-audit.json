@@ -1,0 +1,118 @@
+{
+  "version": "v171",
+  "date": "2026-10-28",
+  "focus": "Ten evidence-led Year 1 Pure Maths mock recall gaps",
+  "officialSources": {
+    "proof": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/a-proof",
+    "algebra": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/b-algebra-and-functions",
+    "trigonometry": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/e-trigonometry",
+    "integration": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/h-integration",
+    "vectors": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/j-vectors"
+  },
+  "baseline": {
+    "records": 3335,
+    "active": 3331,
+    "mockTotal": 2369,
+    "physicsMock": 730,
+    "chemistryMock": 1533,
+    "mathsMock": 106,
+    "originalPracticeQuestions": 1268
+  },
+  "result": {
+    "records": 3345,
+    "active": 3341,
+    "mockTotal": 2379,
+    "physicsMock": 730,
+    "chemistryMock": 1533,
+    "mathsMock": 116,
+    "originalPracticeQuestions": 1268
+  },
+  "additions": [
+    {
+      "specRef": "3.2",
+      "requirement": "A1 proof by deduction",
+      "topic": "Proof",
+      "id": "task1_v171_001",
+      "reason": "Existing mock cards covered exhaustion and counterexamples but not deduction itself"
+    },
+    {
+      "specRef": "3.3",
+      "requirement": "B polynomial factor and remainder methods",
+      "topic": "Algebra",
+      "id": "task1_v171_002",
+      "reason": "Factor theorem card existed; standalone remainder f(a) was absent"
+    },
+    {
+      "specRef": "3.10",
+      "requirement": "J3 algebraic vector addition",
+      "topic": "Vectors",
+      "id": "task1_v171_003",
+      "reason": "Existing vector mock cards focused on magnitude and position differences"
+    },
+    {
+      "specRef": "3.10",
+      "requirement": "J3 vector scalar multiplication",
+      "topic": "Vectors",
+      "id": "task1_v171_004",
+      "reason": "Explicit one-step multiplication rule absent"
+    },
+    {
+      "specRef": "3.10",
+      "requirement": "J2 vector direction",
+      "topic": "Vectors",
+      "id": "task1_v171_005",
+      "reason": "Quadrant check when converting components to direction absent"
+    },
+    {
+      "specRef": "3.6",
+      "requirement": "E1 trigonometric signs for all arguments",
+      "topic": "Trigonometry",
+      "id": "task1_v171_006",
+      "reason": "Single short quadrant sign recall absent"
+    },
+    {
+      "specRef": "3.6",
+      "requirement": "E3 tangent graph undefined angles",
+      "topic": "Trigonometry",
+      "id": "task1_v171_007",
+      "reason": "Periodicity recorded; undefined degree-angles of tan not separately recalled"
+    },
+    {
+      "specRef": "3.6",
+      "requirement": "E3 cosine graph symmetry",
+      "topic": "Trigonometry",
+      "id": "task1_v171_008",
+      "reason": "Symmetry of cosine graph not a short mock card"
+    },
+    {
+      "specRef": "3.6",
+      "requirement": "E3 sine graph symmetry",
+      "topic": "Trigonometry",
+      "id": "task1_v171_009",
+      "reason": "Symmetry of sine graph not a short mock card"
+    },
+    {
+      "specRef": "3.9",
+      "requirement": "H definite integration, geometric area",
+      "topic": "Integration",
+      "id": "task1_v171_010",
+      "reason": "Signed area distinction existed, but splitting at roots for total geometric area was not a standalone recall prompt"
+    }
+  ],
+  "checks": {
+    "allNewCardsAreShortSingleFacts": true,
+    "existingCardIdsPreserved": true,
+    "verifiedNoExactFrontDuplicates": true,
+    "newMathsRadianCards": 0,
+    "mathsStatisticsMechanicsMockCardsAdded": 0,
+    "physicsChemistryContentModified": false,
+    "priorAuditsUseHistoricalSnapshot": true
+  },
+  "limitations": {
+    "wholeASMathsSpecCertified": false,
+    "physicsChemistryMockContentIndividuallyReviewed": false,
+    "studentMasteryCertified": false,
+    "allHistoricalPapersFullyIndexed": false,
+    "task1Complete": false
+  }
+}

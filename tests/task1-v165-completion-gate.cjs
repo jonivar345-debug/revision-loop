@@ -1,7 +1,7 @@
 'use strict';
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const deck = JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck = require('./task1-v171-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const bank = JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const inventory = JSON.parse(fs.readFileSync('paper_inventory_2015_2025.json','utf8'));
 const ledger = JSON.parse(fs.readFileSync('editorial/task1-v165-completion-gate.json','utf8'));

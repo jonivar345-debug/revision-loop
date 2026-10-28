@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v171-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v162-maths-year1-recall-audit.json','utf8'));
 assert.equal(deck.deckVersion,162);

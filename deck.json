@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 162,
+  "deckVersion": 171,
   "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -70079,6 +70079,226 @@
       "priority": 8,
       "courseTopic": "Vectors",
       "revisionTopic": "Vectors"
+    },
+    {
+      "id": "task1_v171_001",
+      "subject": "Maths",
+      "specRef": "3.2",
+      "stage": "AS",
+      "topic": "Proof",
+      "front": "What does proof by deduction involve?",
+      "back": "Logical steps from stated assumptions to a justified conclusion.",
+      "accept": [
+        "Logical steps from stated assumptions to a justified conclusion."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof"
+    },
+    {
+      "id": "task1_v171_002",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra",
+      "front": "On division of polynomial f(x) by (x−a), what is the remainder?",
+      "back": "f(a).",
+      "accept": [
+        "f(a)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Algebra",
+      "revisionTopic": "Algebra"
+    },
+    {
+      "id": "task1_v171_003",
+      "subject": "Maths",
+      "specRef": "3.10",
+      "stage": "AS",
+      "topic": "Vectors",
+      "front": "How do you add 2D vectors (a,b) and (c,d)?",
+      "back": "(a+c, b+d).",
+      "accept": [
+        "(a+c, b+d)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors"
+    },
+    {
+      "id": "task1_v171_004",
+      "subject": "Maths",
+      "specRef": "3.10",
+      "stage": "AS",
+      "topic": "Vectors",
+      "front": "What is k times the vector (a,b)?",
+      "back": "(ka, kb).",
+      "accept": [
+        "(ka, kb)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors"
+    },
+    {
+      "id": "task1_v171_005",
+      "subject": "Maths",
+      "specRef": "3.10",
+      "stage": "AS",
+      "topic": "Vectors",
+      "front": "After using tan⁻¹(y/x) for a vector's angle, what should you check?",
+      "back": "The quadrant, using the signs of both components.",
+      "accept": [
+        "The quadrant, using the signs of both components."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors"
+    },
+    {
+      "id": "task1_v171_006",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "In which quadrants is sin θ positive?",
+      "back": "Quadrants I and II.",
+      "accept": [
+        "Quadrants I and II."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v171_007",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "At which angles in degrees is tan θ undefined?",
+      "back": "90° + 180°n, for any integer n.",
+      "accept": [
+        "90° + 180°n, for any integer n."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v171_008",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "What symmetry does the graph of cos x have?",
+      "back": "It is even: cos(−x)=cos x.",
+      "accept": [
+        "It is even: cos(−x)=cos x."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v171_009",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "What symmetry does the graph of sin x have?",
+      "back": "It is odd: sin(−x)=−sin x.",
+      "accept": [
+        "It is odd: sin(−x)=−sin x."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v171_010",
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "AS",
+      "topic": "Integration",
+      "front": "For total area where a graph crosses the x-axis, what is needed?",
+      "back": "Split at the roots and add the positive areas.",
+      "accept": [
+        "Split at the roots and add the positive areas."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Integration",
+      "revisionTopic": "Integration"
     }
   ],
   "meta": {
@@ -70529,6 +70749,14 @@
       },
       "coverage": "Part 5–10 gaps after audit of existing Parts 1–10 and earlier flashcard additions",
       "allPreviousIdsRetained": true
+    },
+    "v171": {
+      "added": 10,
+      "subject": "Maths",
+      "focus": "AS Year 1 Pure proof, vector components, trig symmetries and total area",
+      "fullSpecCertified": false,
+      "priorCardIdsPreserved": true,
+      "schoolMockPureOnly": true
     }
   }
 }

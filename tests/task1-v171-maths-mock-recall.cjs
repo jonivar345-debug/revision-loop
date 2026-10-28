@@ -1,0 +1,37 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const audit=JSON.parse(fs.readFileSync('editorial/task1-v171-maths-mock-recall-audit.json','utf8'));
+const all=deck.cards, added=all.filter(c=>c.id.startsWith('task1_v171_'));
+assert.equal(deck.deckVersion,171);
+assert.equal(all.length,3345);
+assert.equal(all.filter(c=>c.active!==false).length,3341);
+assert.equal(new Set(all.map(c=>c.id)).size,all.length);
+const mocks=all.filter(c=>c.active!==false&&c.mock===true);
+assert.equal(mocks.length,2379);
+assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,mocks.filter(c=>c.subject===s).length])),{Physics:730,Chemistry:1533,Maths:116});
+assert.equal(added.length,10);
+assert.deepEqual(added.map(c=>c.id),Array.from({length:10},(_,i)=>'task1_v171_'+String(i+1).padStart(3,'0')));
+assert.deepEqual(added.map(c=>c.id),audit.additions.map(r=>r.id));
+assert.equal(all.filter(c=>!c.id.startsWith('task1_v171_')).length,3335);
+const normalise=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const before=new Set(all.filter(c=>!c.id.startsWith('task1_v171_')&&c.subject==='Maths').map(c=>normalise(c.front)));
+const newly=new Set();
+for(const c of added){
+ assert.equal(c.subject,'Maths');assert.equal(c.stage,'AS');assert.equal(c.scope,'mock');
+ assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.active,true);assert.equal(c.strictRecall,true);
+ assert(c.front.length<=125&&c.back.length<=135);
+ assert.deepEqual(c.accept,[c.back]);assert.deepEqual(c.reject,[]);
+ assert(['3.2','3.3','3.6','3.9','3.10'].includes(c.specRef));
+ assert(!/radians|π|statistics|mechanics/i.test(c.front+' '+c.back+' '+c.topic));
+ assert(!before.has(normalise(c.front)));assert(!newly.has(normalise(c.front)));newly.add(normalise(c.front));
+ const row=audit.additions.find(r=>r.id===c.id);
+ assert(row&&row.topic===c.topic&&row.specRef===c.specRef);
+}
+const historic=require('./task1-v171-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
+assert.equal(historic.deckVersion,162);assert.equal(historic.cards.length,3335);
+assert.equal(historic.cards.filter(c=>c.active!==false&&c.mock===true).length,2369);
+assert.equal(audit.result.originalPracticeQuestions,1268);
+assert.equal(audit.limitations.task1Complete,false);
+console.log('PASS v171: 10 short Maths mock recall cards, 3345 records, 2379 mock, old cards and audited snapshots preserved.');
