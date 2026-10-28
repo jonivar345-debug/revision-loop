@@ -810,5 +810,6 @@ function scanCalculusStage(q,point,lines){
  function hasArithmeticMistakes(answer){
   return String(answer||'').split(/\r?\n|;/).some(line=>possiblyIncorrectArithmetic(line));
  }
- window.RevisionScan={mount,commit,countFor,getPages,useVisionText,proposeLocalText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes,attachDrawing};
+ window.RevisionScan={mount,commit,countFor,getPages,useVisionText,proposeLocalText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};
+ window.RevisionScan.attachDrawing=attachDrawing;
 })();
