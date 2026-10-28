@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v154-mock-aqa-terminology-audit.json','utf8'));
 const questions=JSON.parse(fs.readFileSync('editorial/task1-v154-mock-applied-questions.json','utf8'));
