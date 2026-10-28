@@ -2341,9 +2341,13 @@ function examSuggested(q,answer){
  // Shared constants/formula symbols can otherwise trigger unrelated points.
  if(q.requiresWorking===true && q.markPoints.length>1 && String(answer||'').trim()){
   const singleIndex=q.markPoints.findIndex(point=>compact(point)===compact(answer));
-  if(singleIndex>=0){
-   preds=preds.map((_,i)=>i===singleIndex);
-   suggested=Number(q.markPointMarks?.[singleIndex])||1;
+  const singleAlternativeIndex=q.markPointAcceptedAlternatives?.findIndex((alts,i)=>
+    acceptedMarkPointAlternative(answer,alts,q.markPoints[i])&&
+    alts.some(alt=>normalise(alt)===normalise(answer)))??-1;
+  const onlyIndex=singleIndex>=0?singleIndex:singleAlternativeIndex;
+  if(onlyIndex>=0){
+   preds=preds.map((_,i)=>i===onlyIndex);
+   suggested=Number(q.markPointMarks?.[onlyIndex])||1;
   }
  }
  // A bare number or isolated keyword in a multi-part question cannot be
