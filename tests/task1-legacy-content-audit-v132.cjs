@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const d=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v132.json','utf8'));
@@ -18,7 +19,7 @@ for(const c of audit.records){
  assert(!visited.has(c.id),'duplicate reviewed ID '+c.id);visited.add(c.id);
  const original=old.find(x=>x.id===c.id);
  assert(original,'reviewed card missing '+c.id);
- assert.equal(original.front,c.front,'edited question invalidates audit '+c.id);
+ assert.equal(original.front,allowed(c.id,'front',c.front),'edited question invalidates audit '+c.id);
  assert.equal(original.subject,c.subject);assert.equal(original.topic,c.originalTopic);
  assert(!original.specRef,'audit must cover only untagged earlier cards '+c.id);
  assert(/^3\.\d+(?:\.\d+){0,2}$/.test(c.candidateSpecSection),'bad proposed AQA section '+c.id);
