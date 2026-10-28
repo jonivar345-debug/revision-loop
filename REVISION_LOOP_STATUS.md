@@ -1,3 +1,13 @@
+# Revision Loop v159 — Physics AS Waves mock audit (28 October 2026)
+
+**Release candidate until checks, merge and Pages deployment:** deck v159 **3,306 flashcards** (3,302 active), **2,334 mock-eligible**: Physics 724, Chemistry 1,533, Maths 77. Exam bank v67 **1,256 original questions**. All existing card and question IDs, app code, progress keys and settings are unchanged.
+
+Targeted AQA 7408 section 3.3 Waves review: **45 selected** evidence-linked outcomes across progressive and stationary waves, polarisation, interference, diffraction, refraction, fibre optics and RP1/RP2. Four short mock cards fill directly checked recall gaps: absorption of light in fibres; the white central single-slit diffraction maximum; integer harmonic frequencies; and red fringes farther from the centre in white-light double-slit interference. There are three original harder mock questions worth **20 marks**: fixed-string wave speed and harmonics (7), double-slit fringe spacing and white light (6), and fibre critical angle, dispersion, attenuation and pulse broadening (7). Existing covered facts were not duplicated.
+
+Evidence ledger: `editorial/task1-v159-waves-mock-audit.json`, with full live front/back, specification subsection, selected question mark points and explicit limitations. Regression: `tests/task1-v159-waves-mock-audit.cjs`, plus historical v122–v158 baselines excluding *only* additive v159 IDs. This does **not** certify complete AQA coverage or independent student mastery. No modification to marking, scanner, XP, images or World. All new questions are original rather than official AQA paper content.
+
+---
+
 # Revision Loop v158 — Physics AS Electricity mock coverage (28 October 2026)
 
 **Release candidate until checks, merge and Pages:** deck v158 **3,302 cards** (3,298 active), **2,330 mock-eligible** (Physics 720, Chemistry 1,533, Maths 77). Exam bank v66 **1,253 questions**. The update adds three short AQA 3.5 recall cards: identical cell emfs and internal resistances in series, in parallel, and terminal p.d. when no current flows. Three original theoretical exam-style questions (6+7+6 = **19 marks**) cover combined cells including internal resistance, comparison of identical series/parallel cells, and the effect of loading and warming an NTC potential divider. All prior cards, questions, IDs, progress/settings and app runtime remain intact.

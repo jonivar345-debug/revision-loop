@@ -1,0 +1,931 @@
+{
+  "release": "v159",
+  "date": "2026-10-28",
+  "specification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "scope": "45 selected, exact-evidence AQA AS Physics Waves statements across 3.3.1 and 3.3.2; not a complete line-by-line AQA mock audit.",
+  "counts": {
+    "checked": 45,
+    "newCards": 4,
+    "newQuestions": 3,
+    "newMarks": 20,
+    "deckCards": 3306,
+    "activeCards": 3302,
+    "mockEligible": 2334,
+    "subjects": {
+      "Physics": 724,
+      "Chemistry": 1533,
+      "Maths": 77
+    },
+    "bankQuestions": 1256
+  },
+  "rows": [
+    {
+      "id": "PHW-159-001",
+      "specRef": "3.3.1.1",
+      "requirement": "Amplitude definition",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_034",
+        "front": "What is wave amplitude?",
+        "back": "Maximum displacement from equilibrium.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-002",
+      "specRef": "3.3.1.1",
+      "requirement": "Wavelength definition",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_035",
+        "front": "What is wavelength?",
+        "back": "Shortest distance between two points in phase.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-003",
+      "specRef": "3.3.1.1",
+      "requirement": "Phase difference definition",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_036",
+        "front": "What is phase difference?",
+        "back": "The difference in position within an oscillation cycle.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-004",
+      "specRef": "3.3.1.1",
+      "requirement": "Period and frequency relationship",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_period_frequency",
+        "front": "How are period and frequency related?",
+        "back": "T = 1/f.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-005",
+      "specRef": "3.3.1.1",
+      "requirement": "Wave speed and wavelength-frequency relation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_wave_speed",
+        "front": "What equation links wave speed, frequency and wavelength?",
+        "back": "v = fλ.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-006",
+      "specRef": "3.3.1.1",
+      "requirement": "Full cycle phase in degrees and radians",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_phase_cycle",
+        "front": "What phase difference is one complete cycle?",
+        "back": "360° or 2π radians.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-007",
+      "specRef": "3.3.1.1",
+      "requirement": "Travelling waves transfer energy without net mass transfer",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_038",
+        "front": "What is a progressive wave?",
+        "back": "A travelling disturbance that transfers energy without net mass transfer.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-008",
+      "specRef": "3.3.1.2",
+      "requirement": "Transverse oscillations are perpendicular to travel",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_039",
+        "front": "What is a transverse wave?",
+        "back": "Oscillations are perpendicular to energy transfer.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-009",
+      "specRef": "3.3.1.2",
+      "requirement": "Longitudinal oscillations are parallel to travel",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_040",
+        "front": "What is a longitudinal wave?",
+        "back": "Oscillations are parallel to energy transfer.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-010",
+      "specRef": "3.3.1.2",
+      "requirement": "Polarisation shows the transverse nature of waves",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_041",
+        "front": "What is polarisation evidence for?",
+        "back": "Transverse oscillations.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-011",
+      "specRef": "3.3.1.2",
+      "requirement": "Sound in air cannot be plane polarised",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_042",
+        "front": "Why can sound in air not be polarised?",
+        "back": "It is longitudinal.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-012",
+      "specRef": "3.3.1.2",
+      "requirement": "Aerial alignment for polarised radio signals",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v134_001",
+        "front": "How should a receiving aerial align to a linearly polarised radio wave?",
+        "back": "Parallel to the wave's electric-field oscillations.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-013",
+      "specRef": "3.3.1.3",
+      "requirement": "Principle of superposition",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_superposition",
+        "front": "What is the principle of superposition?",
+        "back": "When waves overlap, resultant displacement is the vector/algebraic sum of the individual displacements.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-014",
+      "specRef": "3.3.1.3",
+      "requirement": "Formation of stationary waves",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_046",
+        "front": "How do stationary waves form?",
+        "back": "Two coherent waves travel in opposite directions and superpose.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-015",
+      "specRef": "3.3.1.3",
+      "requirement": "Node and antinode definitions",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_stationary_nodes",
+        "front": "What are nodes and antinodes?",
+        "back": "Nodes have zero amplitude; antinodes have maximum amplitude.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-016",
+      "specRef": "3.3.1.3",
+      "requirement": "Half-wavelength spacing between adjacent nodes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_stationary_spacing",
+        "front": "What is the separation of adjacent nodes in a stationary wave?",
+        "back": "λ/2.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-017",
+      "specRef": "3.3.1.3",
+      "requirement": "First-harmonic wavelength for a fixed string",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_048",
+        "front": "For a string fixed at both ends, what is the first-harmonic wavelength?",
+        "back": "Twice the vibrating length, λ = 2L.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": {
+        "id": "mock_v159_01",
+        "prompt": "A uniform string is fixed at both ends with vibrating length 0.80 m, mass per unit length 0.50 g m⁻¹ and tension 80 N. Calculate the wave speed, wavelength and frequency of its first harmonic. Calculate the wavelength and frequency of its third harmonic, then determine the first-harmonic frequency if tension is reduced to 20 N while length and mass per unit length stay unchanged.",
+        "marks": 7,
+        "markPoints": [
+          "Mass per unit length = 0.50 g m⁻¹ = 5.0 × 10⁻⁴ kg m⁻¹.",
+          "Wave speed = √(80/(5.0 × 10⁻⁴)) = 400 m s⁻¹.",
+          "First-harmonic wavelength = 2 × 0.80 = 1.60 m.",
+          "First-harmonic frequency = v/λ = 400/1.60 = 250 Hz.",
+          "Third-harmonic wavelength = 2L/3 = 0.533 m.",
+          "Third-harmonic frequency = 3 × 250 = 750 Hz.",
+          "With tension reduced from 80 N to 20 N, speed and first-harmonic frequency halve, so f₁ becomes 125 Hz."
+        ],
+        "revisionTopic": "RP1 Stationary waves"
+      }
+    },
+    {
+      "id": "PHW-159-018",
+      "specRef": "3.3.1.3",
+      "requirement": "String length, tension and linear density determine frequency",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_practical_001",
+        "front": "In string-wave RP1, what controls the fundamental frequency?",
+        "back": "Vibrating length, tension and mass per unit length.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1 RP1"
+      },
+      "question": {
+        "id": "mock_v159_01",
+        "prompt": "A uniform string is fixed at both ends with vibrating length 0.80 m, mass per unit length 0.50 g m⁻¹ and tension 80 N. Calculate the wave speed, wavelength and frequency of its first harmonic. Calculate the wavelength and frequency of its third harmonic, then determine the first-harmonic frequency if tension is reduced to 20 N while length and mass per unit length stay unchanged.",
+        "marks": 7,
+        "markPoints": [
+          "Mass per unit length = 0.50 g m⁻¹ = 5.0 × 10⁻⁴ kg m⁻¹.",
+          "Wave speed = √(80/(5.0 × 10⁻⁴)) = 400 m s⁻¹.",
+          "First-harmonic wavelength = 2 × 0.80 = 1.60 m.",
+          "First-harmonic frequency = v/λ = 400/1.60 = 250 Hz.",
+          "Third-harmonic wavelength = 2L/3 = 0.533 m.",
+          "Third-harmonic frequency = 3 × 250 = 750 Hz.",
+          "With tension reduced from 80 N to 20 N, speed and first-harmonic frequency halve, so f₁ becomes 125 Hz."
+        ],
+        "revisionTopic": "RP1 Stationary waves"
+      }
+    },
+    {
+      "id": "PHW-159-019",
+      "specRef": "3.3.1.3",
+      "requirement": "Integer multiples of first-harmonic frequency",
+      "status": "new_short_recall",
+      "card": {
+        "id": "task1_v159_003",
+        "front": "For a string fixed at both ends, how do harmonic frequencies relate to the first harmonic?",
+        "back": "The nth harmonic has frequency n times the first-harmonic frequency.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1.3"
+      },
+      "question": {
+        "id": "mock_v159_01",
+        "prompt": "A uniform string is fixed at both ends with vibrating length 0.80 m, mass per unit length 0.50 g m⁻¹ and tension 80 N. Calculate the wave speed, wavelength and frequency of its first harmonic. Calculate the wavelength and frequency of its third harmonic, then determine the first-harmonic frequency if tension is reduced to 20 N while length and mass per unit length stay unchanged.",
+        "marks": 7,
+        "markPoints": [
+          "Mass per unit length = 0.50 g m⁻¹ = 5.0 × 10⁻⁴ kg m⁻¹.",
+          "Wave speed = √(80/(5.0 × 10⁻⁴)) = 400 m s⁻¹.",
+          "First-harmonic wavelength = 2 × 0.80 = 1.60 m.",
+          "First-harmonic frequency = v/λ = 400/1.60 = 250 Hz.",
+          "Third-harmonic wavelength = 2L/3 = 0.533 m.",
+          "Third-harmonic frequency = 3 × 250 = 750 Hz.",
+          "With tension reduced from 80 N to 20 N, speed and first-harmonic frequency halve, so f₁ becomes 125 Hz."
+        ],
+        "revisionTopic": "RP1 Stationary waves"
+      }
+    },
+    {
+      "id": "PHW-159-020",
+      "specRef": "3.3.1.3",
+      "requirement": "Phase relation of particles between adjacent nodes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v124_bulk_phy_042",
+        "front": "What is the phase relation of particles between adjacent nodes?",
+        "back": "They oscillate in phase.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-021",
+      "specRef": "3.3.1.3",
+      "requirement": "RP1 tension-frequency squared relation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_practical_002",
+        "front": "What relation can be tested by plotting f² against tension?",
+        "back": "A straight line at fixed length and mass per unit length.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.1 RP1"
+      },
+      "question": {
+        "id": "mock_v159_01",
+        "prompt": "A uniform string is fixed at both ends with vibrating length 0.80 m, mass per unit length 0.50 g m⁻¹ and tension 80 N. Calculate the wave speed, wavelength and frequency of its first harmonic. Calculate the wavelength and frequency of its third harmonic, then determine the first-harmonic frequency if tension is reduced to 20 N while length and mass per unit length stay unchanged.",
+        "marks": 7,
+        "markPoints": [
+          "Mass per unit length = 0.50 g m⁻¹ = 5.0 × 10⁻⁴ kg m⁻¹.",
+          "Wave speed = √(80/(5.0 × 10⁻⁴)) = 400 m s⁻¹.",
+          "First-harmonic wavelength = 2 × 0.80 = 1.60 m.",
+          "First-harmonic frequency = v/λ = 400/1.60 = 250 Hz.",
+          "Third-harmonic wavelength = 2L/3 = 0.533 m.",
+          "Third-harmonic frequency = 3 × 250 = 750 Hz.",
+          "With tension reduced from 80 N to 20 N, speed and first-harmonic frequency halve, so f₁ becomes 125 Hz."
+        ],
+        "revisionTopic": "RP1 Stationary waves"
+      }
+    },
+    {
+      "id": "PHW-159-022",
+      "specRef": "3.3.2.1",
+      "requirement": "Coherence definition",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_051",
+        "front": "What does coherent mean for two wave sources?",
+        "back": "Same frequency with constant phase difference.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-023",
+      "specRef": "3.3.2.1",
+      "requirement": "Constructive interference path difference",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_052",
+        "front": "What path difference produces constructive interference?",
+        "back": "An integer multiple of λ.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-024",
+      "specRef": "3.3.2.1",
+      "requirement": "Destructive interference path difference",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_053",
+        "front": "What path difference produces destructive interference?",
+        "back": "An odd multiple of λ/2.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-025",
+      "specRef": "3.3.2.1",
+      "requirement": "Young double-slit fringe-spacing equation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_double_slit",
+        "front": "What is the Young double-slit fringe-spacing equation?",
+        "back": "w = λD/s.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": {
+        "id": "mock_v159_02",
+        "prompt": "In Young's double-slit experiment, monochromatic light of wavelength 600 nm passes through slits separated by 0.30 mm. A screen is 2.0 m away. Calculate the fringe spacing and the distance spanning eight consecutive fringe intervals. State the effect on fringe spacing if the slit separation doubles. If white light is used instead, explain why the central fringe is white and which colour has fringes further from the centre.",
+        "marks": 6,
+        "markPoints": [
+          "Convert wavelength 600 nm = 6.0 × 10⁻⁷ m and slit separation 0.30 mm = 3.0 × 10⁻⁴ m.",
+          "Fringe spacing w = λD/s = (6.0 × 10⁻⁷ × 2.0)/(3.0 × 10⁻⁴) = 0.0040 m = 4.0 mm.",
+          "Eight consecutive fringe intervals span 8 × 4.0 = 32 mm.",
+          "If slit separation doubles, fringe spacing halves to 2.0 mm.",
+          "With white light, the centre is white because path difference there is zero for all wavelengths.",
+          "Outside the centre, longer-wavelength red fringes lie further out than shorter-wavelength blue/violet fringes."
+        ],
+        "revisionTopic": "Interference"
+      }
+    },
+    {
+      "id": "PHW-159-026",
+      "specRef": "3.3.2.1",
+      "requirement": "How increasing slit separation affects spacing",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_055",
+        "front": "What happens to fringe spacing if the double-slit separation increases?",
+        "back": "It decreases.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": {
+        "id": "mock_v159_02",
+        "prompt": "In Young's double-slit experiment, monochromatic light of wavelength 600 nm passes through slits separated by 0.30 mm. A screen is 2.0 m away. Calculate the fringe spacing and the distance spanning eight consecutive fringe intervals. State the effect on fringe spacing if the slit separation doubles. If white light is used instead, explain why the central fringe is white and which colour has fringes further from the centre.",
+        "marks": 6,
+        "markPoints": [
+          "Convert wavelength 600 nm = 6.0 × 10⁻⁷ m and slit separation 0.30 mm = 3.0 × 10⁻⁴ m.",
+          "Fringe spacing w = λD/s = (6.0 × 10⁻⁷ × 2.0)/(3.0 × 10⁻⁴) = 0.0040 m = 4.0 mm.",
+          "Eight consecutive fringe intervals span 8 × 4.0 = 32 mm.",
+          "If slit separation doubles, fringe spacing halves to 2.0 mm.",
+          "With white light, the centre is white because path difference there is zero for all wavelengths.",
+          "Outside the centre, longer-wavelength red fringes lie further out than shorter-wavelength blue/violet fringes."
+        ],
+        "revisionTopic": "Interference"
+      }
+    },
+    {
+      "id": "PHW-159-027",
+      "specRef": "3.3.2.1",
+      "requirement": "Why central white-light fringe is white",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_057",
+        "front": "Why is the central white-light double-slit fringe white?",
+        "back": "All wavelengths have zero path difference there.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": {
+        "id": "mock_v159_02",
+        "prompt": "In Young's double-slit experiment, monochromatic light of wavelength 600 nm passes through slits separated by 0.30 mm. A screen is 2.0 m away. Calculate the fringe spacing and the distance spanning eight consecutive fringe intervals. State the effect on fringe spacing if the slit separation doubles. If white light is used instead, explain why the central fringe is white and which colour has fringes further from the centre.",
+        "marks": 6,
+        "markPoints": [
+          "Convert wavelength 600 nm = 6.0 × 10⁻⁷ m and slit separation 0.30 mm = 3.0 × 10⁻⁴ m.",
+          "Fringe spacing w = λD/s = (6.0 × 10⁻⁷ × 2.0)/(3.0 × 10⁻⁴) = 0.0040 m = 4.0 mm.",
+          "Eight consecutive fringe intervals span 8 × 4.0 = 32 mm.",
+          "If slit separation doubles, fringe spacing halves to 2.0 mm.",
+          "With white light, the centre is white because path difference there is zero for all wavelengths.",
+          "Outside the centre, longer-wavelength red fringes lie further out than shorter-wavelength blue/violet fringes."
+        ],
+        "revisionTopic": "Interference"
+      }
+    },
+    {
+      "id": "PHW-159-028",
+      "specRef": "3.3.2.1",
+      "requirement": "Red fringe relative position for white-light double slits",
+      "status": "new_short_recall",
+      "card": {
+        "id": "task1_v159_004",
+        "front": "In white-light double-slit interference, which colour has fringes further from the centre?",
+        "back": "Red, because its longer wavelength gives larger fringe spacing.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.1"
+      },
+      "question": {
+        "id": "mock_v159_02",
+        "prompt": "In Young's double-slit experiment, monochromatic light of wavelength 600 nm passes through slits separated by 0.30 mm. A screen is 2.0 m away. Calculate the fringe spacing and the distance spanning eight consecutive fringe intervals. State the effect on fringe spacing if the slit separation doubles. If white light is used instead, explain why the central fringe is white and which colour has fringes further from the centre.",
+        "marks": 6,
+        "markPoints": [
+          "Convert wavelength 600 nm = 6.0 × 10⁻⁷ m and slit separation 0.30 mm = 3.0 × 10⁻⁴ m.",
+          "Fringe spacing w = λD/s = (6.0 × 10⁻⁷ × 2.0)/(3.0 × 10⁻⁴) = 0.0040 m = 4.0 mm.",
+          "Eight consecutive fringe intervals span 8 × 4.0 = 32 mm.",
+          "If slit separation doubles, fringe spacing halves to 2.0 mm.",
+          "With white light, the centre is white because path difference there is zero for all wavelengths.",
+          "Outside the centre, longer-wavelength red fringes lie further out than shorter-wavelength blue/violet fringes."
+        ],
+        "revisionTopic": "Interference"
+      }
+    },
+    {
+      "id": "PHW-159-029",
+      "specRef": "3.3.2.1",
+      "requirement": "Why measuring across several fringes reduces uncertainty",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_practical_004",
+        "front": "Why measure across several interference fringes?",
+        "back": "It reduces the percentage uncertainty of fringe spacing.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2 RP2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-030",
+      "specRef": "3.3.2.1",
+      "requirement": "Basic laser safety recall",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_practical_005",
+        "front": "What is a key laser safety precaution?",
+        "back": "Never look directly into the beam.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2 RP2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-031",
+      "specRef": "3.3.2.2",
+      "requirement": "Single-slit narrowing increases central width",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_059",
+        "front": "What happens to a single-slit central maximum when the slit narrows?",
+        "back": "It becomes wider.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-032",
+      "specRef": "3.3.2.2",
+      "requirement": "White-light single-slit central maximum and side fringes",
+      "status": "new_short_recall",
+      "card": {
+        "id": "task1_v159_002",
+        "front": "What is seen at the centre of a white-light single-slit diffraction pattern?",
+        "back": "A white central maximum, with coloured side fringes.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-033",
+      "specRef": "3.3.2.2",
+      "requirement": "Grating equation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_grating",
+        "front": "What is the diffraction-grating equation?",
+        "back": "d sin θ = nλ.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-034",
+      "specRef": "3.3.2.2",
+      "requirement": "Maximum diffraction order",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_060",
+        "front": "What is the highest possible order for a grating?",
+        "back": "The largest integer n with nλ ≤ d.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-035",
+      "specRef": "3.3.2.2",
+      "requirement": "Diffraction grating can determine wavelength",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v124_bulk_phy_050",
+        "front": "What does a diffraction grating allow you to measure?",
+        "back": "Wavelength from the angular positions of maxima.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2"
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-036",
+      "specRef": "3.3.2.3",
+      "requirement": "Refractive index and speed",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_refractive_index",
+        "front": "How is refractive index related to wave speed?",
+        "back": "n = c/v.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-037",
+      "specRef": "3.3.2.3",
+      "requirement": "Snell law",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_snell",
+        "front": "State Snell's law for two media.",
+        "back": "n₁ sin θ₁ = n₂ sin θ₂.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHW-159-038",
+      "specRef": "3.3.2.3",
+      "requirement": "Necessary direction for total internal reflection",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_064",
+        "front": "When can total internal reflection occur?",
+        "back": "Light travels from higher to lower refractive index.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-039",
+      "specRef": "3.3.2.3",
+      "requirement": "Critical-angle equation for medium-air boundary",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_065",
+        "front": "What is the critical-angle equation for air outside a material?",
+        "back": "sin c = 1/n.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-040",
+      "specRef": "3.3.2.3",
+      "requirement": "Core and cladding refractive-index relationship",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v129_001",
+        "front": "Why must the cladding of an optical fibre have a lower refractive index than its core?",
+        "back": "To allow total internal reflection at the core–cladding boundary.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-041",
+      "specRef": "3.3.2.3",
+      "requirement": "Modal dispersion",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v129_003",
+        "front": "What is modal dispersion in a step-index optical fibre?",
+        "back": "Pulse spreading because light travels along different paths of different lengths.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-042",
+      "specRef": "3.3.2.3",
+      "requirement": "Material dispersion",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v129_002",
+        "front": "What is material dispersion in an optical fibre?",
+        "back": "Pulse spreading because different wavelengths travel at different speeds.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-043",
+      "specRef": "3.3.2.3",
+      "requirement": "Pulse broadening effect on data rate",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v129_004",
+        "front": "Why can pulse broadening reduce an optical fibre's maximum data rate?",
+        "back": "Adjacent light pulses may overlap and become hard to distinguish.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-044",
+      "specRef": "3.3.2.3",
+      "requirement": "Attenuation of a guided optical signal",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v129_005",
+        "front": "What does attenuation mean for light travelling along an optical fibre?",
+        "back": "A reduction in the optical signal's power or intensity.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    },
+    {
+      "id": "PHW-159-045",
+      "specRef": "3.3.2.3",
+      "requirement": "Absorption mechanism reducing signal intensity",
+      "status": "new_short_recall",
+      "card": {
+        "id": "task1_v159_001",
+        "front": "How does absorption affect a light signal in an optical fibre?",
+        "back": "Light energy is transferred to the fibre material, reducing signal intensity.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.3.2.3"
+      },
+      "question": {
+        "id": "mock_v159_03",
+        "prompt": "An optical fibre has a core refractive index of 1.50 and cladding refractive index of 1.46. Calculate the critical angle at their boundary. State whether a ray in the core incident at 79.0° to the normal undergoes total internal reflection, explaining why. Distinguish modal from material dispersion, explain how pulse broadening limits the data rate, and state the effect of absorption on the signal.",
+        "marks": 7,
+        "markPoints": [
+          "At the core–cladding boundary, sin θc = ncladding/ncore = 1.46/1.50.",
+          "Critical angle θc ≈ 76.7° measured from the normal.",
+          "At 79.0° incidence, total internal reflection occurs since light travels from higher to lower refractive index and 79.0° is greater than θc.",
+          "Modal dispersion is pulse spreading because rays follow paths of different lengths in a step-index fibre.",
+          "Material dispersion is pulse spreading because different wavelengths travel at different speeds in the fibre.",
+          "Pulse broadening can cause neighbouring digital pulses to overlap, limiting data rate.",
+          "Absorption transfers light energy to the fibre material, reducing optical signal intensity."
+        ],
+        "revisionTopic": "Refraction"
+      }
+    }
+  ],
+  "limitations": {
+    "completePhysicsSpecificationCertified": false,
+    "studentMasteryCertified": false,
+    "yearTwoMaterialNotIncluded": true,
+    "examQuestionsAreOriginalNotOfficial": true,
+    "uncheckedRequirementsStillPossible": true
+  },
+  "preservation": {
+    "allOldCardIdsPreserved": true,
+    "allOldQuestionIdsPreserved": true,
+    "appRuntimeUnchanged": true,
+    "progressKeysUnchanged": true
+  }
+}
