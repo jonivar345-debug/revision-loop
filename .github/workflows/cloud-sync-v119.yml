@@ -50,6 +50,9 @@ on:
       - 'tests/task1-v157-physics-mock-mechanics.cjs'
       - 'tests/task1-v158-electricity-mock-audit.cjs'
       - 'tests/task1-v159-waves-mock-audit.cjs'
+      - 'tests/task1-v160-particles-measurements-mock.cjs'
+      - 'editorial/task1-v160-particles-mock-audit.json'
+      - 'editorial/task1-v160-measurements-mock-audit.json'
       - 'editorial/task1-v159-waves-mock-audit.json'
       - 'editorial/task1-v158-physics-electricity-mock-audit.json'
       - 'editorial/task1-v157-physics-mechanics-mock-audit.json'
@@ -140,6 +143,7 @@ jobs:
       - run: node tests/task1-v157-physics-mock-mechanics.cjs
       - run: node tests/task1-v158-electricity-mock-audit.cjs
       - run: node tests/task1-v159-waves-mock-audit.cjs
+      - run: node tests/task1-v160-particles-measurements-mock.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

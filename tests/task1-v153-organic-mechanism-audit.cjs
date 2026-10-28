@@ -9,14 +9,14 @@ const mockAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-mock-priority-e
 const earlier=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 assert(deck.deckVersion>=152);
-assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')).length,3276);
-assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')).length,3272);
+assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_')).length,3276);
+assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_')).length,3272);
 assert(bank.bankVersion>=63);
-assert.equal(bank.questions.filter(q=>!q.id.startsWith('mock_v154_')&&!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')&&!q.id.startsWith('mock_v159_')).length,1238);
+assert.equal(bank.questions.filter(q=>!q.id.startsWith('mock_v154_')&&!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')&&!q.id.startsWith('mock_v159_')&&!q.id.startsWith('mock_v160_')).length,1238);
 assert.equal(bank.questions[1225].id,'organic_v152_14');
 assert.equal(new Set(deck.cards.map(c=>c.id)).size,deck.cards.length);
 assert.equal(new Set(bank.questions.map(q=>q.id)).size,bank.questions.length);
-assert.equal(bank.questions.filter(q=>!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')&&!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')&&!q.id.startsWith('mock_v159_')).length,1226);
+assert.equal(bank.questions.filter(q=>!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')&&!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')&&!q.id.startsWith('mock_v159_')&&!q.id.startsWith('mock_v160_')).length,1226);
 assert.equal(newAudit.additions.cards,0);
 assert.equal(newAudit.additions.questions,12);
 assert.equal(newAudit.additions.marks,81);

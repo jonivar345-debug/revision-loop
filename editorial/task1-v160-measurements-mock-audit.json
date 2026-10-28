@@ -1,0 +1,613 @@
+{
+  "release": "v160",
+  "date": "2026-10-28",
+  "subject": "AQA 7408 Physics",
+  "area": "Measurements and their errors 3.1",
+  "specificationUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+  "scope": "Targeted sampled atomic checks for fundamentals, prefixes, uncertainty, graphs and estimation; not a full line-by-line practical-competence audit",
+  "counts": {
+    "checked": 32,
+    "newCards": 3,
+    "newQuestions": 2,
+    "newMarks": 13
+  },
+  "rows": [
+    {
+      "id": "PHM-160-001",
+      "specRef": "3.1.1",
+      "requirement": "Six tested fundamental SI units",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_base_si",
+        "front": "Name the six SI base units covered by AQA Physics 3.1.",
+        "back": "metre (m), kilogram (kg), second (s), ampere (A), kelvin (K), mole (mol).",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-002",
+      "specRef": "3.1.1",
+      "requirement": "Newton in base SI units",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_derived_n",
+        "front": "Express the newton (N) using SI base units.",
+        "back": "1 N = 1 kg m s⁻², from F = ma.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-003",
+      "specRef": "3.1.1",
+      "requirement": "Joule in base SI units",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_derived_j",
+        "front": "Express the joule (J) using SI base units.",
+        "back": "1 J = 1 kg m² s⁻², because work done = force × distance.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-004",
+      "specRef": "3.1.1",
+      "requirement": "Watt in base SI units",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_derived_w",
+        "front": "Express the watt (W) using SI base units.",
+        "back": "1 W = 1 kg m² s⁻³, because power = energy ÷ time.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-005",
+      "specRef": "3.1.1",
+      "requirement": "Coulomb in base SI units",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_derived_c",
+        "front": "Express the coulomb (C) using SI base units.",
+        "back": "1 C = 1 A s, because Q = It.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-006",
+      "specRef": "3.1.1",
+      "requirement": "Tera/giga unit prefixes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_prefix_tera_giga",
+        "front": "What powers of ten do tera (T) and giga (G) mean?",
+        "back": "tera = 10¹²; giga = 10⁹.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-007",
+      "specRef": "3.1.1",
+      "requirement": "Mega/kilo unit prefixes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_prefix_mega_kilo",
+        "front": "What powers of ten do mega (M) and kilo (k) mean?",
+        "back": "mega = 10⁶; kilo = 10³.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-008",
+      "specRef": "3.1.1",
+      "requirement": "Centi/milli unit prefixes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_prefix_centi_milli",
+        "front": "What powers of ten do centi (c) and milli (m) mean?",
+        "back": "centi = 10⁻²; milli = 10⁻³.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-009",
+      "specRef": "3.1.1",
+      "requirement": "Micro/nano unit prefixes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_prefix_micro_nano",
+        "front": "What powers of ten do micro (μ) and nano (n) mean?",
+        "back": "micro = 10⁻⁶; nano = 10⁻⁹.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-010",
+      "specRef": "3.1.1",
+      "requirement": "Pico/femto prefixes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_prefix_pico_femto",
+        "front": "What powers of ten do pico (p) and femto (f) mean?",
+        "back": "pico = 10⁻¹²; femto = 10⁻¹⁵.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-011",
+      "specRef": "3.1.1",
+      "requirement": "Convert square centimetres to square metres",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_squared_unit",
+        "front": "Convert 1 cm² into m².",
+        "back": "1 cm² = (10⁻² m)² = 10⁻⁴ m².",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_03",
+        "prompt": "The resistance of a uniform wire is (4.8 ± 0.1) Ω, its original length is (1.25 ± 0.01) m, and its diameter is (0.320 ± 0.010) mm. Calculate its cross-sectional area and resistivity using ρ = RA/L. Estimate its percentage uncertainty in resistivity, taking the given uncertainties as worst-case. State the result with a suitable absolute uncertainty, in Ω m.",
+        "marks": 7,
+        "markPoints": [
+          "Convert diameter to 0.320 mm = 3.20 × 10⁻⁴ m.",
+          "Area = πd²/4 = π(3.20 × 10⁻⁴)²/4 = 8.04 × 10⁻⁸ m².",
+          "Resistivity ρ = 4.8 × 8.04 × 10⁻⁸/1.25 = 3.09 × 10⁻⁷ Ω m.",
+          "Percentage uncertainty in R = 0.1/4.8 × 100 = 2.08%.",
+          "Percentage uncertainty from diameter squared = 2 × (0.010/0.320 × 100) = 6.25%.",
+          "Percentage uncertainty in length = 0.01/1.25 × 100 = 0.80%; combined = 2.08 + 6.25 + 0.80 = 9.13%.",
+          "Absolute uncertainty = 0.0913 × 3.09 × 10⁻⁷ ≈ 0.28 × 10⁻⁷ Ω m; an appropriately rounded result is (3.1 ± 0.3) × 10⁻⁷ Ω m."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-012",
+      "specRef": "3.1.1",
+      "requirement": "Energy conversion joules to electronvolts",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_ev_j",
+        "front": "Convert 1 electronvolt (eV) into joules.",
+        "back": "1 eV = 1.60 × 10⁻¹⁹ J.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-013",
+      "specRef": "3.1.1",
+      "requirement": "Energy conversion kilowatt-hour to joules",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_kwh_j",
+        "front": "Convert 1 kilowatt-hour into joules.",
+        "back": "1 kWh = 3.60 × 10⁶ J.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-014",
+      "specRef": "3.1.2",
+      "requirement": "Definition of random errors",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_uncert_random",
+        "front": "What is a random error?",
+        "back": "An unpredictable variation that causes scatter in repeated readings; repeats and a mean can reduce its effect.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_04",
+        "prompt": "Repeated times for one event are 1.28, 1.32, 1.35, 1.31 and 1.34 s. Estimate the mean and an absolute uncertainty using half the range. A separate graph has best-fit gradient 2.40 units, steepest acceptable gradient 2.65 units and shallowest acceptable gradient 2.10 units. Estimate the largest absolute and percentage uncertainties in its gradient. Explain why repeating measurements cannot correct a systematic zero error.",
+        "marks": 6,
+        "markPoints": [
+          "Mean time = (1.28+1.32+1.35+1.31+1.34)/5 = 1.32 s.",
+          "Half-range uncertainty = (1.35 − 1.28)/2 = 0.035 s, approximately 0.04 s; quote (1.32 ± 0.04) s.",
+          "Steepest-line difference from best = 2.65 − 2.40 = 0.25 units.",
+          "Shallowest-line difference from best = 2.40 − 2.10 = 0.30 units; take the larger, ±0.30 units.",
+          "Percentage gradient uncertainty = 0.30/2.40 × 100 = 12.5%.",
+          "A systematic zero error shifts readings consistently; averaging or repeating them does not remove the offset."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-015",
+      "specRef": "3.1.2",
+      "requirement": "Definition of systematic errors",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_uncert_systematic",
+        "front": "What is a systematic error?",
+        "back": "A consistent shift in readings caused by the method or instrument; repeats do not remove it.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_04",
+        "prompt": "Repeated times for one event are 1.28, 1.32, 1.35, 1.31 and 1.34 s. Estimate the mean and an absolute uncertainty using half the range. A separate graph has best-fit gradient 2.40 units, steepest acceptable gradient 2.65 units and shallowest acceptable gradient 2.10 units. Estimate the largest absolute and percentage uncertainties in its gradient. Explain why repeating measurements cannot correct a systematic zero error.",
+        "marks": 6,
+        "markPoints": [
+          "Mean time = (1.28+1.32+1.35+1.31+1.34)/5 = 1.32 s.",
+          "Half-range uncertainty = (1.35 − 1.28)/2 = 0.035 s, approximately 0.04 s; quote (1.32 ± 0.04) s.",
+          "Steepest-line difference from best = 2.65 − 2.40 = 0.25 units.",
+          "Shallowest-line difference from best = 2.40 − 2.10 = 0.30 units; take the larger, ±0.30 units.",
+          "Percentage gradient uncertainty = 0.30/2.40 × 100 = 12.5%.",
+          "A systematic zero error shifts readings consistently; averaging or repeating them does not remove the offset."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-016",
+      "specRef": "3.1.2",
+      "requirement": "Resolution meaning",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_011",
+        "front": "What is resolution?",
+        "back": "The smallest change an instrument can distinguish.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-017",
+      "specRef": "3.1.2",
+      "requirement": "Repeatability meaning",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_012",
+        "front": "What is repeatability?",
+        "back": "Same result using the same method, equipment and operator.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-018",
+      "specRef": "3.1.2",
+      "requirement": "Reproducibility meaning",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_013",
+        "front": "What is reproducibility?",
+        "back": "Consistent results when the method is repeated under changed conditions.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-019",
+      "specRef": "3.1.2",
+      "requirement": "Precision meaning",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_014",
+        "front": "What is precision in measurements?",
+        "back": "How close repeated readings are to one another.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-020",
+      "specRef": "3.1.2",
+      "requirement": "Accuracy meaning",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_015",
+        "front": "What is accuracy in measurements?",
+        "back": "How close a measured value is to the true value.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-021",
+      "specRef": "3.1.2",
+      "requirement": "Percentage uncertainty",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_uncert_percent",
+        "front": "How do you calculate percentage uncertainty?",
+        "back": "percentage uncertainty = absolute uncertainty ÷ measured value × 100%",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_03",
+        "prompt": "The resistance of a uniform wire is (4.8 ± 0.1) Ω, its original length is (1.25 ± 0.01) m, and its diameter is (0.320 ± 0.010) mm. Calculate its cross-sectional area and resistivity using ρ = RA/L. Estimate its percentage uncertainty in resistivity, taking the given uncertainties as worst-case. State the result with a suitable absolute uncertainty, in Ω m.",
+        "marks": 7,
+        "markPoints": [
+          "Convert diameter to 0.320 mm = 3.20 × 10⁻⁴ m.",
+          "Area = πd²/4 = π(3.20 × 10⁻⁴)²/4 = 8.04 × 10⁻⁸ m².",
+          "Resistivity ρ = 4.8 × 8.04 × 10⁻⁸/1.25 = 3.09 × 10⁻⁷ Ω m.",
+          "Percentage uncertainty in R = 0.1/4.8 × 100 = 2.08%.",
+          "Percentage uncertainty from diameter squared = 2 × (0.010/0.320 × 100) = 6.25%.",
+          "Percentage uncertainty in length = 0.01/1.25 × 100 = 0.80%; combined = 2.08 + 6.25 + 0.80 = 9.13%.",
+          "Absolute uncertainty = 0.0913 × 3.09 × 10⁻⁷ ≈ 0.28 × 10⁻⁷ Ω m; an appropriately rounded result is (3.1 ± 0.3) × 10⁻⁷ Ω m."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-022",
+      "specRef": "3.1.2",
+      "requirement": "Products and quotients combine percentage uncertainties",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_uncert_products",
+        "front": "For multiplication or division, how are percentage uncertainties combined?",
+        "back": "Add the percentage uncertainties.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_03",
+        "prompt": "The resistance of a uniform wire is (4.8 ± 0.1) Ω, its original length is (1.25 ± 0.01) m, and its diameter is (0.320 ± 0.010) mm. Calculate its cross-sectional area and resistivity using ρ = RA/L. Estimate its percentage uncertainty in resistivity, taking the given uncertainties as worst-case. State the result with a suitable absolute uncertainty, in Ω m.",
+        "marks": 7,
+        "markPoints": [
+          "Convert diameter to 0.320 mm = 3.20 × 10⁻⁴ m.",
+          "Area = πd²/4 = π(3.20 × 10⁻⁴)²/4 = 8.04 × 10⁻⁸ m².",
+          "Resistivity ρ = 4.8 × 8.04 × 10⁻⁸/1.25 = 3.09 × 10⁻⁷ Ω m.",
+          "Percentage uncertainty in R = 0.1/4.8 × 100 = 2.08%.",
+          "Percentage uncertainty from diameter squared = 2 × (0.010/0.320 × 100) = 6.25%.",
+          "Percentage uncertainty in length = 0.01/1.25 × 100 = 0.80%; combined = 2.08 + 6.25 + 0.80 = 9.13%.",
+          "Absolute uncertainty = 0.0913 × 3.09 × 10⁻⁷ ≈ 0.28 × 10⁻⁷ Ω m; an appropriately rounded result is (3.1 ± 0.3) × 10⁻⁷ Ω m."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-023",
+      "specRef": "3.1.2",
+      "requirement": "Addition/subtraction combine absolute uncertainties",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_measure_recap_20261024_uncert_add",
+        "front": "How do you combine uncertainties when adding or subtracting measurements?",
+        "back": "Add the absolute uncertainties.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-024",
+      "specRef": "3.1.2",
+      "requirement": "Percentage uncertainty of powers",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_uncert_power",
+        "front": "If y = xⁿ, what happens to percentage uncertainty?",
+        "back": "Multiply the percentage uncertainty in x by |n|.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_03",
+        "prompt": "The resistance of a uniform wire is (4.8 ± 0.1) Ω, its original length is (1.25 ± 0.01) m, and its diameter is (0.320 ± 0.010) mm. Calculate its cross-sectional area and resistivity using ρ = RA/L. Estimate its percentage uncertainty in resistivity, taking the given uncertainties as worst-case. State the result with a suitable absolute uncertainty, in Ω m.",
+        "marks": 7,
+        "markPoints": [
+          "Convert diameter to 0.320 mm = 3.20 × 10⁻⁴ m.",
+          "Area = πd²/4 = π(3.20 × 10⁻⁴)²/4 = 8.04 × 10⁻⁸ m².",
+          "Resistivity ρ = 4.8 × 8.04 × 10⁻⁸/1.25 = 3.09 × 10⁻⁷ Ω m.",
+          "Percentage uncertainty in R = 0.1/4.8 × 100 = 2.08%.",
+          "Percentage uncertainty from diameter squared = 2 × (0.010/0.320 × 100) = 6.25%.",
+          "Percentage uncertainty in length = 0.01/1.25 × 100 = 0.80%; combined = 2.08 + 6.25 + 0.80 = 9.13%.",
+          "Absolute uncertainty = 0.0913 × 3.09 × 10⁻⁷ ≈ 0.28 × 10⁻⁷ Ω m; an appropriately rounded result is (3.1 ± 0.3) × 10⁻⁷ Ω m."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-025",
+      "specRef": "3.1.2",
+      "requirement": "Half-range uncertainty from repeated readings",
+      "status": "new_concise_recall",
+      "card": {
+        "id": "task1_v160_004",
+        "front": "How can uncertainty from a set of repeated readings be estimated using their range?",
+        "back": "Half the range: (highest reading − lowest reading)/2.",
+        "specRef": "3.1.2",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_04",
+        "prompt": "Repeated times for one event are 1.28, 1.32, 1.35, 1.31 and 1.34 s. Estimate the mean and an absolute uncertainty using half the range. A separate graph has best-fit gradient 2.40 units, steepest acceptable gradient 2.65 units and shallowest acceptable gradient 2.10 units. Estimate the largest absolute and percentage uncertainties in its gradient. Explain why repeating measurements cannot correct a systematic zero error.",
+        "marks": 6,
+        "markPoints": [
+          "Mean time = (1.28+1.32+1.35+1.31+1.34)/5 = 1.32 s.",
+          "Half-range uncertainty = (1.35 − 1.28)/2 = 0.035 s, approximately 0.04 s; quote (1.32 ± 0.04) s.",
+          "Steepest-line difference from best = 2.65 − 2.40 = 0.25 units.",
+          "Shallowest-line difference from best = 2.40 − 2.10 = 0.30 units; take the larger, ±0.30 units.",
+          "Percentage gradient uncertainty = 0.30/2.40 × 100 = 12.5%.",
+          "A systematic zero error shifts readings consistently; averaging or repeating them does not remove the offset."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-026",
+      "specRef": "3.1.2",
+      "requirement": "Measurement and absolute uncertainty use compatible decimal places",
+      "status": "new_concise_recall",
+      "card": {
+        "id": "task1_v160_005",
+        "front": "When quoting a value and its absolute uncertainty, how should their decimal places compare?",
+        "back": "Quote the value to the same decimal place as its absolute uncertainty.",
+        "specRef": "3.1.2",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_04",
+        "prompt": "Repeated times for one event are 1.28, 1.32, 1.35, 1.31 and 1.34 s. Estimate the mean and an absolute uncertainty using half the range. A separate graph has best-fit gradient 2.40 units, steepest acceptable gradient 2.65 units and shallowest acceptable gradient 2.10 units. Estimate the largest absolute and percentage uncertainties in its gradient. Explain why repeating measurements cannot correct a systematic zero error.",
+        "marks": 6,
+        "markPoints": [
+          "Mean time = (1.28+1.32+1.35+1.31+1.34)/5 = 1.32 s.",
+          "Half-range uncertainty = (1.35 − 1.28)/2 = 0.035 s, approximately 0.04 s; quote (1.32 ± 0.04) s.",
+          "Steepest-line difference from best = 2.65 − 2.40 = 0.25 units.",
+          "Shallowest-line difference from best = 2.40 − 2.10 = 0.30 units; take the larger, ±0.30 units.",
+          "Percentage gradient uncertainty = 0.30/2.40 × 100 = 12.5%.",
+          "A systematic zero error shifts readings consistently; averaging or repeating them does not remove the offset."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-027",
+      "specRef": "3.1.2",
+      "requirement": "Meaning of graph error bars",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_019",
+        "front": "What do error bars usually represent?",
+        "back": "The range of uncertainty around a measured point.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-028",
+      "specRef": "3.1.2",
+      "requirement": "Gradient uncertainty from extreme lines",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_020",
+        "front": "How is uncertainty in a graph gradient estimated?",
+        "back": "Compare the steepest and shallowest acceptable gradients.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_04",
+        "prompt": "Repeated times for one event are 1.28, 1.32, 1.35, 1.31 and 1.34 s. Estimate the mean and an absolute uncertainty using half the range. A separate graph has best-fit gradient 2.40 units, steepest acceptable gradient 2.65 units and shallowest acceptable gradient 2.10 units. Estimate the largest absolute and percentage uncertainties in its gradient. Explain why repeating measurements cannot correct a systematic zero error.",
+        "marks": 6,
+        "markPoints": [
+          "Mean time = (1.28+1.32+1.35+1.31+1.34)/5 = 1.32 s.",
+          "Half-range uncertainty = (1.35 − 1.28)/2 = 0.035 s, approximately 0.04 s; quote (1.32 ± 0.04) s.",
+          "Steepest-line difference from best = 2.65 − 2.40 = 0.25 units.",
+          "Shallowest-line difference from best = 2.40 − 2.10 = 0.30 units; take the larger, ±0.30 units.",
+          "Percentage gradient uncertainty = 0.30/2.40 × 100 = 12.5%.",
+          "A systematic zero error shifts readings consistently; averaging or repeating them does not remove the offset."
+        ]
+      }
+    },
+    {
+      "id": "PHM-160-029",
+      "specRef": "3.1.2",
+      "requirement": "Graph intercept uncertainty from extreme lines",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v136_034",
+        "front": "How can uncertainty in a fitted line's y-intercept be estimated?",
+        "back": "Compare best-fit with extreme acceptable line intercepts.",
+        "specRef": "3.1.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-030",
+      "specRef": "3.1.2",
+      "requirement": "How to check intercept agreement with zero",
+      "status": "new_concise_recall",
+      "card": {
+        "id": "task1_v160_006",
+        "front": "When is a graph's y-intercept consistent with zero?",
+        "back": "When zero lies within the plausible intercept range from acceptable lines.",
+        "specRef": "3.1.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-031",
+      "specRef": "3.1.2",
+      "requirement": "Reason not to draw forced origin intercept",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v124_bulk_phy_013",
+        "front": "Why is a graph through the origin not always justified?",
+        "back": "A systematic offset or real intercept may exist.",
+        "specRef": "3.1.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHM-160-032",
+      "specRef": "3.1.3",
+      "requirement": "Order-of-magnitude estimate is a power-of-ten estimate",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_021",
+        "front": "What is an order of magnitude?",
+        "back": "The nearest power of ten to a quantity.",
+        "specRef": "3.1.2–3.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    }
+  ],
+  "limitations": {
+    "completeSpecificationCertified": false,
+    "independentStudentMastery": false,
+    "practicalCompetenceNotProven": true
+  }
+}
