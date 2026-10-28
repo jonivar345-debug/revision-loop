@@ -1,0 +1,135 @@
+{
+  "version": "v168",
+  "date": "2026-10-28",
+  "focus": "Conservative suggested scores for isolated claims on longer multi-step questions; extra acceptable method explanations with explicit ECF guidance",
+  "latestMainBaseline": {
+    "flashcardRecords": 3335,
+    "examQuestions": 1268
+  },
+  "problemExamples": [
+    {
+      "questionId": "mock_v163_03",
+      "response": "The second derivative is positive at x=3 so it is a minimum.",
+      "beforeSuggested": 4,
+      "correctedSuggested": 2,
+      "maxMarks": 8
+    },
+    {
+      "questionId": "mock_v163_08",
+      "response": "The factor theorem proves that x-3 divides f(x).",
+      "beforeSuggested": 2,
+      "correctedSuggested": 1,
+      "maxMarks": 7
+    },
+    {
+      "questionId": "organic_v153_10",
+      "response": "Overall yield is 32.4%.",
+      "beforeSuggested": 2,
+      "correctedSuggested": 1,
+      "maxMarks": 7
+    },
+    {
+      "questionId": "mock_v157_03",
+      "response": "Work done is area under force-displacement graph.",
+      "beforeSuggested": 2,
+      "correctedSuggested": 1,
+      "maxMarks": 6
+    }
+  ],
+  "approach": "When a working-required question has 5+ marks and 4+ criteria, a short single-claim answer with at most one equation and no distinct stages receives a conservative suggested cap of 1 or 2 depending on the expressed link of two ideas. Existing ticked criteria are not silently rewritten; the user is clearly shown that the automatic estimate may be conservative and can adjust the score.",
+  "guards": [
+    "Do not apply cap to numeric-only questions or to lengthy/multiple-stage workings",
+    "Complete mark-point model solutions still achieve full score in tested examples",
+    "Source-verified strict evidence rules unchanged",
+    "AQA original paper marking remains source-specific; new variants are for independently written practice questions"
+  ],
+  "addedQuestions": [
+    {
+      "id": "mock_v157_03",
+      "subject": "Physics",
+      "topic": "Mechanics and materials",
+      "marks": 6,
+      "addedAlternatives": 3,
+      "indices": [
+        0,
+        3,
+        5
+      ],
+      "ecfGuidance": "If a valid trapezium and rectangle calculation is followed by an arithmetic slip, review the separate W=ΔEk and P=Fv method steps. Do not award the correct-result marks automatically."
+    },
+    {
+      "id": "mock_v160_03",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "marks": 7,
+      "addedAlternatives": 3,
+      "indices": [
+        4,
+        5,
+        6
+      ],
+      "ecfGuidance": "A wrong area carried consistently through ρ=RA/L can still show a valid resistivity substitution. Uncertainty propagation should be evaluated from the student's own stated measurements; the accurate final numerical results are separate criteria."
+    },
+    {
+      "id": "organic_v153_10",
+      "subject": "Chemistry",
+      "topic": "Organic chemistry",
+      "marks": 7,
+      "addedAlternatives": 3,
+      "indices": [
+        2,
+        5,
+        6
+      ],
+      "ecfGuidance": "If an earlier fractional yield is wrong but it is carried consistently into the final-mass multiplication, consider the multiplication method separately from the correct overall yield and mass results."
+    },
+    {
+      "id": "mock_v154_07",
+      "subject": "Chemistry",
+      "topic": "Physical chemistry",
+      "marks": 5,
+      "addedAlternatives": 3,
+      "indices": [
+        1,
+        3,
+        4
+      ],
+      "ecfGuidance": "This is a qualitative explanation rather than a calculation. There is no numerical error-carried-forward credit; assess distinct molecular formula, shape, contact area and intermolecular-force ideas separately."
+    },
+    {
+      "id": "mock_v163_02",
+      "subject": "Maths",
+      "topic": "Trigonometry",
+      "marks": 6,
+      "addedAlternatives": 3,
+      "indices": [
+        0,
+        3,
+        5
+      ],
+      "ecfGuidance": "A sound equation-solving method with an earlier algebra slip can still merit the demonstrated identity and factorisation method marks. Award the correct-angle marks only if the student's solutions satisfy the original equation and interval."
+    },
+    {
+      "id": "mock_v163_08",
+      "subject": "Maths",
+      "topic": "Algebra & functions",
+      "marks": 7,
+      "addedAlternatives": 3,
+      "indices": [
+        0,
+        5,
+        6
+      ],
+      "ecfGuidance": "If a factorisation error is carried into a consistent sign-table method, distinguish the method mark from the correct factors and final inequality solution. Do not credit incorrect intervals automatically."
+    }
+  ],
+  "newCuratedQuestions": 6,
+  "newAlternativePhrases": 18,
+  "totalCuratedQuestions": 14,
+  "totalCuratedPhrases": 38,
+  "questionBankTotal": 1268,
+  "fullAqaMarkSchemeCoverage": false,
+  "automaticEcFCertified": false,
+  "independentHandwritingAccuracyCertified": false,
+  "next": "Extend rubric evidence tests to specific demanding required practical and multi-stage calculations; validate against real student answers while avoiding automatic full credit when steps are missing."
+}
