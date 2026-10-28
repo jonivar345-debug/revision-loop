@@ -1,3 +1,17 @@
+# Revision Loop — v155 mock-only scope repair and AQA recall audit (28 October 2026)
+
+**Proposed v155, not live until CI/merge/Pages:** **3,293 flashcards (3,289 active)**, including **2,321 eligible in mock-only revision** (Physics 713, Chemistry 1,531, Maths 77). The decrease in mock eligibility is **deliberate**: 35 existing cards are no longer presented in mock-only selection, but **remain available in full A-level revision, unchanged and with their original IDs**. Specifically 18 Physics Year 2 periodic-motion/thermal cards (teacher confirmed Year 1/AS Physics mock), 8 excluded Chemistry buffers/half-neutralisation cards, and 9 Maths Year 2/radian concepts (Year 1 Pure-only mock).
+
+Added **13 one-fact AQA-aligned flashcards**: Chemistry crude-oil fractions, volatility, converter equation, sulfur impurity, condenser, bioethanol carbon-neutrality, alkene definition, CFC research and economic role of cracking; Physics loaded potential-divider fundamentals. Longer explanations, graph interpretation, unfamiliar mechanisms and calculations continue to belong in **exam questions**. Main exam bank stays at **1,247 questions**, bank v64; all existing questions and their IDs are preserved.
+
+**Evidence**: `editorial/task1-v155-mock-scope-recall.json` documents exact before/after mock flags and every added card. `editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json` maps 67 selected single-fact prompts from AQA Chemistry 3.3.2–3.3.5 against the **actual active mock-only flashcard pool**, capturing exact front/back answers. **56 matched a direct recall question, 11 were not matched by the conservative wording search**; this is a screening result, not a claim that those facts are absent or that all 67 are mastered. More atomic spec points and full subject audits remain.
+
+**AQA precision:** none of the new cards introduce sigma/pi bond terminology. AQA expects recognition of the electron-rich C=C bond and mechanistic curly arrows, not extra orbital vocabulary. The remaining legacy question wording must be reviewed separately; old exam-question text was not changed in this release.
+
+**Safety:** no `app.js`, Firebase, scanner, XP, purchases, shop, images or World changes. Existing study/progress IDs remain stable. Regression: `tests/task1-v155-mock-scope-recall.cjs`, included in CI. Do not claim website publication until all four PR checks pass, merge and Pages deployment success.
+
+---
+
 # Revision Loop v154 — AQA-only mock recall and harder applied questions (28 October 2026)
 
 **Release candidate (NOT live until merged and Pages completes):** 22 existing Chemistry card prompts/answers reworded to AQA-relevant descriptions of double-bond electron density, curly-arrow electron-pair movement and delocalised electrons, without optional sigma/pi bond terminology. The original card IDs are unchanged and saved user progress remains keyed to those IDs. Mathematical π in Physics and Maths is unaffected. **Four new short, single-fact Physics cards** cover superconductors and loading a potential divider. **Nine original AS/mock-only Physics/Chemistry exam questions worth 55 marks** target all nine selected partial-applied evidence demands from v153.
