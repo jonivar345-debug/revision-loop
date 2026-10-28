@@ -7,7 +7,7 @@ let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=
 let progress=load(PROGRESS_KEY,{});
 let profile=load(PROFILE_KEY,{});
 let settings=load(SETTINGS_KEY,{});
-let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,manualScoreOverride=false,toastTimer=null;
+let studyType='mock',activeSession=null,currentCardId=null,currentEvaluation=null,currentFlashAwarded=false,currentExamScore=0,manualScoreOverride=false,currentExamMarkingRoute='suggested',toastTimer=null;
 let flashScopeFilter='taught',flashTopics=new Set(),examTopics=new Set(),examYears=new Set(),examTypes=new Set(),globeLon=0,globeLat=5,dragging=false,lastPointer=null,dragDistance=0,selectedLocation='london',openLocationId=null,locationVisibleLimit=24;
 
 const CHARACTERS=[
@@ -1453,7 +1453,7 @@ function startExamSession(){
 }
 function awardExam(q,marks,answer,missedPoints){
  const ts=topicStat(q.subject,q.revisionTopic||q.topic);ts.examMarks+=marks;ts.examMax+=q.marks;ts.attempts++;ts.last=now();if(marks<q.marks)ts.lastMiss=now();
- if(!profile.examResults[q.id])profile.examResults[q.id]={attempts:[]};const rec={marks,max:q.marks,date:now(),answer:String(answer||'').slice(0,1000),missedPoints,scannedPages:window.RevisionScan?.countFor(q.id)||0};profile.examResults[q.id].attempts.push(rec);profile.examResults[q.id].last=rec;
+ if(!profile.examResults[q.id])profile.examResults[q.id]={attempts:[]};const rec={marks,max:q.marks,date:now(),answer:String(answer||'').slice(0,1000),missedPoints,scannedPages:window.RevisionScan?.countFor(q.id)||0,markingRoute:currentExamMarkingRoute==='manual'?'self-reviewed':'local-suggestion-reviewed'};profile.examResults[q.id].attempts.push(rec);profile.examResults[q.id].last=rec;
  let w=profile.topicWeakness[topicKey(q.subject,q.revisionTopic||q.topic)]||0;if(marks/q.marks<.5)w=Math.min(10,w+2);else if(marks<q.marks)w=Math.min(10,w+1);else w=Math.max(0,w-1);profile.topicWeakness[topicKey(q.subject,q.revisionTopic||q.topic)]=w;
  if(marks<q.marks)addError({type:'exam',id:q.id,subject:q.subject,topic:q.revisionTopic||q.topic,result:marks+'/'+q.marks,answer:String(answer||'').slice(0,1000),missedPoints});
  window.RevisionScan?.commit(q.id);
@@ -2002,11 +2002,17 @@ function evidenceRuleScore(answer,alternatives){
 function enforceMarkDependencies(q,flags){
  if(!q.markPointDependencies||typeof q.markPointDependencies!=='object')return flags;
  const checked=[...flags];
- Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
-  const i=Number(index);
-  if(!Number.isInteger(i)||!checked[i]||!Array.isArray(prerequisites))return;
-  if(prerequisites.some(p=>!checked[p]))checked[i]=false;
- });
+ // Apply prerequisites repeatedly so chains work regardless of object-key order.
+ // This applies only to suggested marks; manual marking remains reviewable.
+ for(let pass=0;pass<checked.length;pass++){
+  let changed=false;
+  Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
+   const i=Number(index);
+   if(!Number.isInteger(i)||!checked[i]||!Array.isArray(prerequisites))return;
+   if(prerequisites.some(p=>!checked[p])){checked[i]=false;changed=true}
+  });
+  if(!changed)break;
+ }
  return checked;
 }
 function totalMarkingPoints(q,flags){
@@ -2442,14 +2448,7 @@ function reviewedExpressionEvidence(answer,expression){
  }
  // Conditional marks in genuine AQA schemes: a justification cannot
  // score where the prerequisite experimental change was not justified.
- const permitted=[...preds];
- if(q.markPointDependencies&&typeof q.markPointDependencies==='object'){
-  Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
-   const i=Number(index);
-   if(!Number.isInteger(i)||!permitted[i]||!Array.isArray(prerequisites))return;
-   if(prerequisites.some(p=>!permitted[p]))permitted[i]=false;
-  });
- }
+ const permitted=enforceMarkDependencies(q,preds);
  if(permitted.some((ok,i)=>ok!==preds[i])){
   preds=permitted;
   suggested=totalMarkingPoints(q,preds);
@@ -2497,6 +2496,7 @@ function examGraphDiagram(spec){
  return out+'</svg>';
 }
 function renderExam(q){
+ currentExamMarkingRoute='suggested';
  const prev=profile.examResults[q.id]?.last,diag=q.graphSpec?examGraphDiagram(q.graphSpec):(q.visual?diagram(q.visual):''),secondary=q.verificationLevel==='secondary-indexed',original=q.verificationLevel==='original-exam-style'||q.year==='Practice';
  const markStatusNote=original?'':q.originalMarkVerified?
   '<div class="copyright-note">Original mark total checked against the published AQA mark scheme.'+(q.answerType==='levels'?' This is a level-of-response question: the suggested checklist breakdown is not AQA\'s official point-by-point allocation. Review the overall explanation and level before accepting marks.':'')+'</div>':
@@ -2507,7 +2507,7 @@ function renderExam(q){
  const qpOfficial=/^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.qpUrl||'');
  const msOfficial=/^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.msUrl||'');
  const sourceNote=original?'<div class="copyright-note">Original exam-style practice question, not an AQA past-paper question or official mark scheme.</div>':q.sourceFirst?'<div class="copyright-note">Source-linked entry: open the original question because its figure, table or context is needed.</div>':secondary?'<div class="copyright-note">2025 AQA paper entry cross-checked against external indexes. The adaptation is not certified identical to the original.</div>':'<div class="copyright-note">Adapted from a source-linked AQA question. Check exact wording, context and marks against the linked sources.</div>';
- document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(original?'Original practice':secondary?'AQA 2025 · cross-checked':'AQA source-linked')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(original?'Practice Q'+q.question:q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+markStatusNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div>'+(original?'':'<div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(qpOfficial?'AQA question paper':'Question source/index')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(msOfficial?'AQA mark scheme':'Mark scheme source/index')+'</a></div>')+'<textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<p class="exam-marking-help">Suggested marks are not final: the checker can miss valid algebra, alternative methods, labelled diagrams and error-carried-forward work. Review each mark point and correct the total before saving.</p><button id="markExam" class="check-btn">Suggest marks (review before saving)</button><button id="reportExamIssue" class="exam-report-link" type="button">Copy question details to report an issue</button><span id="reportExamStatus" class="exam-report-status" role="status"></span><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(original?'Original practice':secondary?'AQA 2025 · cross-checked':'AQA source-linked')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(original?'Practice Q'+q.question:q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+markStatusNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div>'+(original?'':'<div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(qpOfficial?'AQA question paper':'Question source/index')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(msOfficial?'AQA mark scheme':'Mark scheme source/index')+'</a></div>')+'<textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<p class="exam-marking-help">Suggested marks are not final: the checker can miss valid algebra, alternative methods, labelled diagrams and error-carried-forward work. Review each mark point and correct the total before saving.</p><button id="markExam" class="check-btn">Suggest marks (review before saving)</button><button id="reviewExamManually" class="exam-report-link" type="button">Review marking points manually (diagrams / photos)</button><button id="reportExamIssue" class="exam-report-link" type="button">Copy question details to report an issue</button><span id="reportExamStatus" class="exam-report-status" role="status"></span><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
  window.RevisionScan?.mount(q.id);
  window.RevisionSketch?.mount(q);
  window.RevisionFree?.mount(q);
@@ -2519,6 +2519,7 @@ function renderExam(q){
    'Original mark total independently checked: '+(q.originalMarkVerified?'yes':'not yet'),
    'Question: '+q.prompt,'Your typed answer: '+(document.getElementById('examAnswer')?.value||'[no typed answer]').slice(0,5000),
    'Reviewed total (if marking shown): '+(document.getElementById('scoreEditor')?.classList.contains('show')?currentExamScore+'/'+q.marks:'not marked yet'),
+   'Marking route: '+(currentExamMarkingRoute==='manual'?'Self-marked from original work / image':'Local suggested marks, then reviewed'),
    'Currently ticked criteria: '+[...document.querySelectorAll('[data-mp]')].filter(x=>x.checked).map(x=>Number(x.dataset.mp)+1).join(', '),
    'Marking criteria: '+(q.markPoints||[]).map((p,i)=>'['+(i+1)+'] '+p).join(' | '),
    'Question source: '+(q.qpUrl||'None'),'Mark scheme source: '+(q.msUrl||'None')].join('\n');
@@ -2530,6 +2531,7 @@ function renderExam(q){
    if(status)status.textContent='Copy unavailable. Question ID: '+q.id;
   }
  };
+ document.getElementById('reviewExamManually').onclick=()=>beginManualExamReview(q);
  document.getElementById('markExam').onclick=async()=>{
    const submit=document.getElementById('markExam');
    if(submit?.disabled)return;
@@ -2576,6 +2578,7 @@ function renderExam(q){
     res.suggested=totalMarkingPoints(q,res.preds);
     res.confidence=vision?(vision.uncertain?'low':'medium'):'low';
    }
+   currentExamMarkingRoute='suggested';
    marking.classList.add('show');
    marking.innerHTML='<b>'+(q.year==='Practice'?'Practice marking criteria:':'Question marking criteria:')+'</b>'+(q.markingMode==='anyN'?'<p class="copyright-note">Any '+q.marks+' distinct valid points can earn '+q.marks+' marks, even if more alternatives are shown.</p>':'')+'<div class="markpoint-grid">'+q.markPoints.map((p,i)=>'<label class="markpoint '+(res.preds[i]?'predicted':'')+'"><input type="checkbox" data-mp="'+i+'" '+(res.preds[i]?'checked':'')+'><span>'+'<b class="point-weight">'+(q.markingMode==='anyN'?'Accepted point':(q.markPointMarks?.[i]??1)+' mark'+((q.markPointMarks?.[i]??1)===1?'':'s'))+'</b> '+esc(p)+(Array.isArray(q.markPointAcceptedAlternatives?.[i])&&q.markPointAcceptedAlternatives[i].length?'<small class="mark-alternatives">Also accept: '+q.markPointAcceptedAlternatives[i].map(esc).join(' · ')+'</small>':'')+(scannedText?'<small class="scan-evidence '+(evidence?.[i]?.strong?'scan-evidence-found':'')+'">'+(evidence?.[i]?.strong?'Likely evidence: “'+esc((evidence[i].line||'').slice(0,175))+'”'+(vision&&evidence[i].reason?' — '+esc(evidence[i].reason):''):(vision?'Not awarded: '+esc((evidence?.[i]?.reason||'No clear evidence detected.').slice(0,210)):'No matching step identified; check the photograph and decide manually.'))+'</small>':'')+'</span></label>').join('')+'</div>'+(q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+(q.answerType==='numeric'?'<p><b>Checked numerical answer:</b> '+q.numericAnswer+(q.unit?' '+esc(q.unit):'')+'</p>':'')+
     (q.officialMarkingNotes?'<p class="official-marking-note"><b>AQA marking detail:</b> '+esc(q.officialMarkingNotes)+'</p>':'')+
@@ -2598,6 +2601,45 @@ function renderExam(q){
      if(button){button.disabled=false;button.textContent='Suggest marks (review before saving)'}
    }
  };
+}
+
+
+function beginManualExamReview(q){
+ // Manual route for photographed working, mechanisms and sketches which local OCR
+ // cannot reliably read. No marks are suggested or awarded automatically here.
+ const marking=document.getElementById('examMarking');
+ const feedback=document.getElementById('examFeedback');
+ if(!marking||!feedback||!Array.isArray(q.markPoints))return;
+ const answer=document.getElementById('examAnswer')?.value||'';
+ currentExamMarkingRoute='manual';
+ currentExamScore=0;manualScoreOverride=false;
+ const type=q.year==='Practice'?'Practice marking criteria':'Question marking criteria';
+ marking.classList.add('show');
+ marking.innerHTML='<b>'+type+' — mark your work point by point</b>'+
+  '<p class="copyright-note">Self-assessment, not automated verification. Compare the original drawing/photo and any written working with each criterion, tick only genuinely demonstrated steps, and check the linked official mark scheme where available. No boxes start ticked.</p>'+
+  (q.markingMode==='anyN'?'<p class="copyright-note">Any '+q.marks+' distinct acceptable points may count, up to '+q.marks+' marks.</p>':'')+
+  (q.answerType==='levels'?'<p class="copyright-note">This is a level-of-response question. The checklist is guidance, not necessarily the official AQA level descriptor. Set the overall mark using the full response.</p>':'')+
+  '<div class="markpoint-grid">'+q.markPoints.map((p,i)=>{
+   const weight=q.markingMode==='anyN'?'Accepted point':(q.markPointMarks?.[i]??1)+' mark'+((q.markPointMarks?.[i]??1)===1?'':'s');
+   const alternatives=q.markPointAcceptedAlternatives?.[i];
+   const requirements=q.markPointDependencies?.[i];
+   return '<label class="markpoint"><input type="checkbox" data-mp="'+i+'"><span><b class="point-weight">'+weight+'</b> '+esc(p)+
+    (Array.isArray(alternatives)&&alternatives.length?'<small class="mark-alternatives">Also accept: '+alternatives.map(esc).join(' · ')+'</small>':'')+
+    (Array.isArray(requirements)&&requirements.length?'<small class="mark-alternatives">Normally depends on point(s): '+requirements.map(n=>Number(n)+1).join(', ')+'</small>':'')+
+    '</span></label>';
+  }).join('')+'</div>'+
+  (q.modelAnswer?'<p><b>Model outcome:</b> '+esc(q.modelAnswer)+'</p>':'')+
+  (q.answerType==='numeric'?'<p><b>Checked numerical answer:</b> '+esc(q.numericAnswer)+(q.unit?' '+esc(q.unit):'')+'</p>':'')+
+  (q.officialMarkingNotes?'<p class="official-marking-note"><b>AQA marking detail:</b> '+esc(q.officialMarkingNotes)+'</p>':'')+
+  (q.ecfGuidance?'<p class="official-marking-note"><b>Error carried forward:</b> '+esc(q.ecfGuidance)+' Check the actual substitution and method; credit is not automatic.</p>':'');
+ feedback.className='feedback show neutral';
+ feedback.textContent='Manual review opened. No handwriting or diagram has been automatically read or credited. Check your own evidence and mark each point before saving.';
+ renderScoreEditor(q,answer);
+ document.querySelectorAll('[data-mp]').forEach(box=>box.onchange=()=>{
+  const checked=[...document.querySelectorAll('[data-mp]')].map(el=>el.checked);
+  currentExamScore=totalMarkingPoints(q,checked);manualScoreOverride=false;
+  renderScoreEditor(q,answer);
+ });
 }
 
 function renderScoreEditor(q,answer){const ed=document.getElementById('scoreEditor');ed.classList.add('show');const checks=[...document.querySelectorAll('[data-mp]')].map(el=>el.checked);const checkboxTotal=totalMarkingPoints(q,checks);const overridden=checkboxTotal!==currentExamScore;const missed=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);ed.innerHTML='<div class="score-line"><strong>Reviewable mark: '+currentExamScore+'/'+q.marks+'</strong><span>Tick valid alternative steps or correct the total</span></div><p class="mark-fairness-note">Equivalent correct methods, valid labelled diagrams and working with a carried-forward error may deserve credit even if the checker missed them. Tick the corresponding mark point or change the total. Save your reviewed score.</p>'+(overridden?'<p class="copyright-note">'+(manualScoreOverride?'Manual total override':'Conservative automatic estimate')+': '+currentExamScore+'/'+q.marks+' differs from '+checkboxTotal+'/'+q.marks+' checked marking points. The ticked criteria were not changed by this total; review both before saving.</p>':'')+'<div class="mark-buttons">'+Array.from({length:q.marks+1},(_,i)=>'<button class="mark-btn '+(i===currentExamScore?'selected':'')+'" data-score="'+i+'">'+i+'</button>').join('')+'</div>'+(missed.length?'<div class="missed-summary"><b>Likely missing:</b> '+missed.map(esc).join(' • ')+'</div>':'<div class="feedback show correct">No mark-scheme point is currently flagged as missing.</div>')+'<button id="saveExamScore" class="primary-btn save-score">Save '+currentExamScore+'/'+q.marks+'</button>';document.querySelectorAll('[data-score]').forEach(b=>b.onclick=()=>{currentExamScore=Number(b.dataset.score);manualScoreOverride=true;renderScoreEditor(q,answer)});document.getElementById('saveExamScore').onclick=()=>{const mp=q.markPoints.filter((_,i)=>!document.querySelector('[data-mp="'+i+'"]')?.checked);awardExam(q,currentExamScore,answer,mp)}}
