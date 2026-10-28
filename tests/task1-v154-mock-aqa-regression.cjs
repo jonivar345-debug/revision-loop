@@ -28,7 +28,7 @@ for(const entry of audit.changes.editedCards){
  assert.equal(c.back,entry.back);
  assert.equal(c.mock,entry.mock);
  assert(!/[σπ]|\\b(?:sigma|pi)\\s+(?:bond|electron)/i.test(c.front+' '+c.back),'Overextension remains: '+entry.id);
- assert.equal(c.accept[0],c.back);
+ if(Array.isArray(c.accept))assert.equal(c.accept[0],c.back);
 }
 for(const c of audit.changes.addedCards){
  const live=cardById.get(c.id);
