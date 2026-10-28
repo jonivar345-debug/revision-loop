@@ -10,7 +10,7 @@ assert.equal(newCards.length,160);
 assert.equal(newCards.filter(c=>c.subject==='Physics').length,72);
 assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,84);
 assert.equal(newCards.filter(c=>c.subject==='Maths').length,4);
-assert.equal(newCards.filter(c=>c.mock).length,105);
+assert.equal(newCards.filter(c=>c.mock).length,102,'Three v130 cards are deliberately outside the revised school mock scope');
 const ids=new Set(), fronts=new Set();
 const key=s=>String(s).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 for(const c of cards){
