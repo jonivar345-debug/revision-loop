@@ -1,0 +1,121 @@
+{
+  "version": "v172",
+  "date": "2026-10-28",
+  "summary": "Structural mock-card audit of all 2,263 active Physics/Chemistry mock cards. Eight Chemistry multistage mark-plan cards manually shortened to single recall questions. Not exhaustive AQA content verification.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content"
+  ],
+  "baseline": {
+    "deckRecords": 3345,
+    "activeCards": 3341,
+    "mockTotal": 2379,
+    "physicsMock": 730,
+    "chemistryMock": 1533,
+    "mathsMock": 116,
+    "scienceMock": 2263,
+    "scienceLegacyWithoutDirectSpecRef": 971,
+    "physicsLegacy": 311,
+    "chemistryLegacy": 660,
+    "untaggedChemistryA2Mock": 194,
+    "questionBank": 1268
+  },
+  "unchangedTotals": true,
+  "edited": [
+    {
+      "id": "chem_bh_weak_20261024_sixmark_structure",
+      "oldFront": "What three ideas must a six-mark lattice comparison link?",
+      "oldBack": "Ionic charge/radius → attraction; model-vs-Born–Haber discrepancies; anion polarisation → covalent character.",
+      "newFront": "What can a large Born–Haber versus perfect-ionic lattice enthalpy difference indicate?",
+      "newBack": "Significant covalent character in the ionic compound."
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_sixmark_outline",
+      "oldFront": "Outline a full six-mark reply to three false claims about Gibbs feasibility.",
+      "oldBack": "1) Endothermic can be feasible if TΔS > ΔH. 2) ΔG < 0 need not be fast: high Ea. 3) Raising T helps if ΔS > 0, hinders if ΔS < 0.",
+      "newFront": "Does a negative ΔG guarantee a fast reaction?",
+      "newBack": "No. A high activation energy can make a feasible reaction very slow."
+    },
+    {
+      "id": "chem_ie_focus_v46_03",
+      "oldFront": "In a 5-mark Period 3 first-IE explanation, what must you include?",
+      "oldBack": "Increasing nuclear charge and near-constant shielding; Al 3p vs Mg 3s; P/S 3p orbital pairing and repulsion.",
+      "newFront": "Which two drops interrupt the general rise in first ionisation energy across Period 3?",
+      "newBack": "Mg to Al (3p electron) and P to S (3p electron pairing)."
+    },
+    {
+      "id": "chem_bonding_v52_26",
+      "oldFront": "What must a full 4-mark molecular-shape explanation include?",
+      "oldBack": "Electron domains, lone-pair count, repulsion order, shape and approximate bond angle.",
+      "newFront": "What must you count first to predict a molecule's shape?",
+      "newBack": "Bonding regions and lone pairs around the central atom."
+    },
+    {
+      "id": "chem_bonding_v52_44",
+      "oldFront": "How should a four-mark ionic melting-point answer be built?",
+      "oldBack": "State giant ionic lattice, opposite-ion electrostatic forces, strong attractions, much energy.",
+      "newFront": "What must be overcome when an ionic solid melts?",
+      "newBack": "Strong electrostatic attractions between oppositely charged ions."
+    },
+    {
+      "id": "chem_bonding_v52_46",
+      "oldFront": "How should a four-mark bond-polarity comparison be built?",
+      "oldBack": "Identify polar bonds, δ charges, 3D shapes, then cancel/non-cancel bond dipoles.",
+      "newFront": "When can a molecule with polar bonds still be non-polar?",
+      "newBack": "When its bond dipoles cancel because of the molecule's shape."
+    },
+    {
+      "id": "chem_bonding_v52_47",
+      "oldFront": "How should you justify a lower bond angle in a 4-mark answer?",
+      "oldBack": "Count bond/lone pairs, compare repulsions, name shape and resulting reduced angle.",
+      "newFront": "Why is NH₃'s bond angle smaller than CH₄'s?",
+      "newBack": "NH₃ has a lone pair; its stronger repulsion reduces the bond angle."
+    },
+    {
+      "id": "chem_bonding_v52_48",
+      "oldFront": "Four-mark plan: why does one liquid hydrogen-bond more strongly?",
+      "oldBack": "Identify N/O/F–H bond, δ+ H, acceptor lone pair, and energy needed to separate molecules.",
+      "newFront": "When a hydrogen-bonded liquid boils, which bonds are overcome?",
+      "newBack": "Intermolecular hydrogen bonds, not covalent O–H or N–H bonds."
+    }
+  ],
+  "observations": [
+    {
+      "finding": "194 Chemistry A2 mock cards lacking direct specRef sit in provisional taught topic groups such as rate equations, Kp, thermodynamics, selected acids and bases, optical isomerism and carboxylic acid derivatives",
+      "status": "candidate group mapping only, not individual spec signoff"
+    },
+    {
+      "finding": "8 Chemistry RP9 pH-curve cards remain tagged as mock-eligible",
+      "status": "verify precisely whether school includes curves and indicators; exclusion of buffers alone does not settle this"
+    },
+    {
+      "finding": "Long Physics photoelectric graph card has its own tested acceptance and partial-credit rule",
+      "status": "do not shorten without also updating its specialised marking rules"
+    },
+    {
+      "finding": "No explicitly A2-tagged Physics cards eligible in the AS-only Physics mock",
+      "status": "narrow metadata check, not full card-level verification"
+    },
+    {
+      "finding": "No explicitly-tagged future A2 Chemistry electrode, transition metal, NMR or related later-topic cards in current mock",
+      "status": "narrow metadata check, not full card-level verification"
+    }
+  ],
+  "checks": {
+    "oldCardIdsPreserved": true,
+    "oldQuestionBankPreserved": true,
+    "oldMockFlagsPreserved": true,
+    "exactDuplicateNewFronts": 0,
+    "removedFromSchoolMock": 0,
+    "allLegacy971ManuallyReviewed": false,
+    "fullSpecCertified": false,
+    "userMasteryCertified": false,
+    "task1Complete": false
+  },
+  "remaining": [
+    "Individually review the 971 legacy mock cards against each AQA requirement and answer",
+    "Confirm Chemistry school scope for RP9 pH-curve cards",
+    "Audit original exam questions and mark schemes across harder practical applications",
+    "Verify GitHub Pages after successful CI and merge"
+  ]
+}

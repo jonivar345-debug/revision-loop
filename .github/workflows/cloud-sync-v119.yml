@@ -62,6 +62,7 @@ on:
       - 'tests/task1-v169-marking-calibration.cjs'
       - 'tests/task1-v170-practical-marking.cjs'
       - 'tests/task1-v171-maths-mock-recall.cjs'
+      - 'tests/task1-v172-science-mock-review.cjs'
       - 'tests/task1-v171-historical-snapshot.cjs'
       - 'tests/task1-v163-historical-bank.cjs'
       - 'tests/task1-v162-historical-snapshot.cjs'
@@ -78,6 +79,7 @@ on:
       - 'editorial/task1-v169-marking-calibration.json'
       - 'editorial/task1-v170-practical-method-marking-audit.json'
       - 'editorial/task1-v171-maths-mock-recall-audit.json'
+      - 'editorial/task1-v172-science-mock-review.json'
       - 'editorial/task1-v160-measurements-mock-audit.json'
       - 'editorial/task1-v159-waves-mock-audit.json'
       - 'editorial/task1-v158-physics-electricity-mock-audit.json'
@@ -181,6 +183,7 @@ jobs:
       - run: node tests/task1-v169-marking-calibration.cjs
       - run: node tests/task1-v170-practical-marking.cjs
       - run: node tests/task1-v171-maths-mock-recall.cjs
+      - run: node tests/task1-v172-science-mock-review.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
