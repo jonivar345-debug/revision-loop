@@ -1,0 +1,178 @@
+{
+  "release": "v154",
+  "date": "2026-10-28",
+  "purpose": "Close nine selected v153 mock-coverage application gaps using original Year 1 theoretical questions",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "limits": {
+    "fullMockCoverageCertified": false,
+    "studentMasteryDemonstrated": false,
+    "questionsAreOriginalNotAQA": true,
+    "provenance": "Original revision examples aligned to AQA content, not official mark schemes"
+  },
+  "counts": {
+    "questions": 9,
+    "marks": 55,
+    "physics": 6,
+    "chemistry": 3
+  },
+  "questions": [
+    {
+      "id": "mock_v154_01",
+      "subject": "Physics",
+      "revisionTopic": "Motion graphs",
+      "subtopic": "Signed velocity–time displacement versus distance",
+      "auditId": "MOCKAUD-005",
+      "prompt": "A velocity–time graph has three straight segments: (i) from t=0 to 4.0 s, velocity is +6.0 m s⁻¹; (ii) from 4.0 to 7.0 s it falls linearly from +6.0 to −3.0 m s⁻¹; (iii) from 7.0 to 9.0 s it remains at −3.0 m s⁻¹. Calculate net displacement and total distance; identify the direction of motion from 7.0 to 9.0 s.",
+      "marks": 7,
+      "markPoints": [
+        "First interval displacement is +6.0 × 4.0 = +24 m.",
+        "On the second interval, v=0 at t=6.0 s.",
+        "Second-interval positive area is ½ × 2.0 × 6.0 = +6.0 m.",
+        "Second-interval negative area is ½ × 1.0 × 3.0 = −1.5 m.",
+        "Third interval displacement is −3.0 × 2.0 = −6.0 m.",
+        "Total displacement is 24 + 6 − 1.5 − 6 = +22.5 m.",
+        "Total distance is 24 + 6 + 1.5 + 6 = 37.5 m; last interval is negative-direction travel."
+      ]
+    },
+    {
+      "id": "mock_v154_02",
+      "subject": "Physics",
+      "revisionTopic": "Motion graphs",
+      "subtopic": "Instantaneous velocity using a tangent",
+      "auditId": "MOCKAUD-006",
+      "prompt": "On an unfamiliar curved displacement–time graph, a tangent at t=3.0 s passes through two clearly read points (1.0 s, 4.0 m) and (5.0 s, 20.0 m). Determine the instantaneous velocity at t=3.0 s, state its direction and explain why using a tangent is appropriate rather than finding the gradient of the whole curve.",
+      "marks": 6,
+      "markPoints": [
+        "A tangent to the displacement–time curve is used at the specified instant.",
+        "Change in displacement along tangent is 20.0 − 4.0 = 16.0 m.",
+        "Change in time is 5.0 − 1.0 = 4.0 s.",
+        "Tangent gradient = 16.0/4.0 = +4.0 m s⁻¹.",
+        "Positive gradient indicates motion in the positive direction.",
+        "The tangent gives instantaneous velocity whereas a chord over a time interval gives average velocity."
+      ]
+    },
+    {
+      "id": "mock_v154_03",
+      "subject": "Physics",
+      "revisionTopic": "Projectiles",
+      "subtopic": "Horizontal projectile launched from a raised platform",
+      "auditId": "MOCKAUD-008",
+      "prompt": "A ball leaves a raised platform horizontally at 16.0 m s⁻¹ and lands 45.0 m below its launch point. Ignore air resistance, and use g=9.81 m s⁻². Calculate time of flight, horizontal distance, vertical component of impact velocity and magnitude of impact velocity. Explain why horizontal and vertical components share the same flight time.",
+      "marks": 6,
+      "markPoints": [
+        "Horizontal acceleration is zero; horizontal velocity stays 16.0 m s⁻¹.",
+        "Vertically, displacement −45.0 m = ½(−9.81)t², giving t = √(90.0/9.81) = 3.03 s.",
+        "Horizontal distance = 16.0 × 3.03 = 48.5 m.",
+        "Vertical impact velocity = −gt = −29.7 m s⁻¹.",
+        "Impact speed = √(16.0² + 29.7²) = 33.7 m s⁻¹ approximately.",
+        "Horizontal and vertical motion occur simultaneously, so the same elapsed time is used."
+      ]
+    },
+    {
+      "id": "mock_v154_04",
+      "subject": "Physics",
+      "revisionTopic": "Materials",
+      "subtopic": "Area and stiffness from a piecewise-linear force–extension plot",
+      "auditId": "MOCKAUD-009",
+      "prompt": "A force–extension graph joins (extension 0.000 m, force 0 N), (0.040 m, 80 N) and (0.080 m, 110 N) using straight line segments. Determine the initial stiffness, the work done to extend to 0.040 m and to 0.080 m, and explain why extrapolating the first segment's stiffness to 0.080 m is inappropriate.",
+      "marks": 6,
+      "markPoints": [
+        "Initial stiffness is the initial force–extension gradient.",
+        "k = 80 N / 0.040 m = 2000 N m⁻¹.",
+        "Area from 0 to 0.040 m is ½ × 80 × 0.040 = 1.60 J.",
+        "Area from 0.040 to 0.080 m is ½(80 + 110) × 0.040 = 3.80 J.",
+        "Total work done to 0.080 m is 1.60 + 3.80 = 5.40 J.",
+        "The second segment has a different gradient so stiffness is not constant across the full range."
+      ]
+    },
+    {
+      "id": "mock_v154_05",
+      "subject": "Physics",
+      "revisionTopic": "Internal resistance",
+      "subtopic": "Experimental V–I graph with lost volts",
+      "auditId": "MOCKAUD-013",
+      "prompt": "Measurements for a cell give terminal p.d. V=1.60 V at I=0 A, V=1.40 V at I=0.50 A and V=1.20 V at I=1.00 A. Treat the graph V against I as a straight line. Determine emf, internal resistance, lost volts and terminal p.d. at 1.00 A; explain the meaning of the negative graph gradient.",
+      "marks": 6,
+      "markPoints": [
+        "The V-axis intercept at zero current gives emf ε = 1.60 V.",
+        "The gradient ΔV/ΔI = (1.20 − 1.60)/(1.00 − 0) = −0.40 V A⁻¹.",
+        "The internal resistance is r = 0.40 Ω, the magnitude of the negative gradient.",
+        "Lost volts at 1.00 A are Ir = 1.00 × 0.40 = 0.40 V.",
+        "Terminal p.d. at 1.00 A is ε − Ir = 1.20 V.",
+        "The negative gradient shows increasing current causes greater internal voltage drop and hence smaller terminal p.d."
+      ]
+    },
+    {
+      "id": "mock_v154_06",
+      "subject": "Physics",
+      "revisionTopic": "Potential dividers",
+      "subtopic": "Finite load changes a potential divider output",
+      "auditId": "MOCKAUD-015",
+      "prompt": "A 12.0 V ideal supply is connected to a potential divider with a 2.0 kΩ upper resistor and a 4.0 kΩ lower resistor. Output is measured across the lower resistor. A 4.0 kΩ load is then connected in parallel with the lower resistor. Calculate the unloaded output, loaded effective lower resistance and loaded output. Explain the change.",
+      "marks": 6,
+      "markPoints": [
+        "Unloaded output = 12.0 × 4.0/(2.0+4.0) = 8.0 V.",
+        "The load is parallel with the lower 4.0 kΩ resistor.",
+        "The effective lower resistance is 1/(1/4.0 + 1/4.0) = 2.0 kΩ.",
+        "Loaded output = 12.0 × 2.0/(2.0+2.0) = 6.0 V.",
+        "The output falls by 2.0 V.",
+        "With a smaller lower-branch resistance, a smaller fraction of the 12.0 V supply appears across it."
+      ]
+    },
+    {
+      "id": "mock_v154_07",
+      "subject": "Chemistry",
+      "revisionTopic": "Intermolecular forces",
+      "subtopic": "Unfamiliar isomer boiling-point explanation",
+      "auditId": "MOCKAUD-026",
+      "prompt": "Two liquids, straight-chain hexane and 2,2-dimethylbutane, both have formula C₆H₁₄. Hexane has the higher boiling point. Explain why, referring to structure and intermolecular forces. Explain why a claim that hexane has more electrons is incorrect.",
+      "marks": 5,
+      "markPoints": [
+        "The two substances have the same molecular formula, C₆H₁₄.",
+        "They therefore have the same total number of electrons per molecule.",
+        "Hexane has a less branched, more extended molecular shape.",
+        "Its molecules can generally achieve greater contact surface area with neighbours.",
+        "This tends to strengthen induced dipole–dipole (London/van der Waals') forces and increase hexane's boiling point."
+      ]
+    },
+    {
+      "id": "mock_v154_08",
+      "subject": "Chemistry",
+      "revisionTopic": "Energetics",
+      "subtopic": "Mean bond enthalpy hydrogenation calculation",
+      "auditId": "MOCKAUD-030",
+      "prompt": "Use the supplied mean bond enthalpies (kJ mol⁻¹): C=C 612; C–C 347; C–H 413; H–H 436. For the conceptual reaction C₂H₄ + H₂ → C₂H₆, estimate ΔH using bonds broken minus bonds formed. Explain why a result using mean bond enthalpies is approximate.",
+      "marks": 6,
+      "markPoints": [
+        "One C=C bond and one H–H bond are broken in the net change.",
+        "Energy for bonds broken = 612 + 436 = 1048 kJ mol⁻¹.",
+        "One C–C bond and two additional C–H bonds form.",
+        "Energy released by bonds formed = 347 + 2(413) = 1173 kJ mol⁻¹.",
+        "ΔH = 1048 − 1173 = −125 kJ mol⁻¹.",
+        "Mean bond enthalpies are average gaseous-bond values and are approximate for particular molecules."
+      ]
+    },
+    {
+      "id": "mock_v154_09",
+      "subject": "Chemistry",
+      "revisionTopic": "RP2 Enthalpy",
+      "subtopic": "Correct a calorimetry cooling curve by extrapolation",
+      "auditId": "MOCKAUD-032",
+      "prompt": "In an illustrative calorimetry data exercise, mixing occurs at t=60 s. The original mixture temperature is 20.0 °C; after the reaction, the cooling-line readings are 38.0 °C at 120 s and 36.6 °C at 180 s. Treat cooling as linear over this interval. Find the corrected maximum temperature at t=60 s and calculate ΔH when 50.0 g solution (c=4.18 J g⁻¹ K⁻¹) absorbed heat from 0.100 mol of reaction. Explain why extrapolation is used.",
+      "marks": 7,
+      "markPoints": [
+        "Cooling rate = (36.6 − 38.0)/(180 − 120) = −0.0233 °C s⁻¹.",
+        "Extrapolation backwards 60 s to mixing time gives corrected maximum = 38.0 + 1.4 = 39.4 °C.",
+        "Corrected temperature rise = 39.4 − 20.0 = 19.4 K.",
+        "Heat gained by solution q=mcΔT = 50.0 × 4.18 × 19.4 = 4054.6 J.",
+        "Convert q to 4.0546 kJ.",
+        "ΔH per 0.100 mol = −4.0546/0.100 = −40.5 kJ mol⁻¹ (3 s.f.).",
+        "Extrapolation compensates for heat exchange with surroundings before the maximum can be measured directly."
+      ]
+    }
+  ]
+}

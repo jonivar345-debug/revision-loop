@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -34,8 +35,8 @@ for(const item of evidence.reviewed){
   for(const snap of item.support){
     const card=byId.get(snap.id);
     assert(card&&card.active!==false&&card.subject===item.subject,'Card missing '+snap.id);
-    assert.equal(card.front,snap.front,'Front changed '+snap.id);
-    assert.equal(card.back,snap.back,'Answer changed '+snap.id);
+    assert.equal(card.front,allowed(card.id,'front',snap.front),'Front changed '+snap.id);
+    assert.equal(card.back,allowed(card.id,'back',snap.back),'Answer changed '+snap.id);
   }
 }
 assert.deepEqual(new Set(pending.map(r=>r.id)),seen);

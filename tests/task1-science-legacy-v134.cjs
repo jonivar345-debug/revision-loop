@@ -1,9 +1,10 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const oldAudit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v133.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v134.json','utf8'));
-const a=deck.cards, prior=a.filter(c=>!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_')&&!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')), fresh=a.filter(c=>c.id.startsWith('task1_v134_'));
+const a=deck.cards, prior=a.filter(c=>!c.id.startsWith('task1_v134_')&&!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_')&&!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')), fresh=a.filter(c=>c.id.startsWith('task1_v134_'));
 assert(deck.deckVersion>=134);
 assert.equal(prior.length,2994,'All older card records must survive');
 assert.equal(prior.filter(c=>c.active!==false).length,2990);
@@ -24,9 +25,9 @@ for(const c of audit.records){
  assert(o,'Audit ID must refer to existing earlier card: '+c.id);
  assert.equal(o.subject,c.subject,'Audit subject mismatch '+c.id);
  assert.equal(o.topic,c.originalTopic,'Audit topic mismatch '+c.id);
- assert.equal(o.front,c.front,'Audit front mismatch '+c.id);
+ assert.equal(o.front,allowed(c.id,'front',c.front),'Audit front mismatch '+c.id);
  assert(!o.specRef,'Only original untagged cards can be counted as legacy '+c.id);
- if(c.answer!==undefined)assert.equal(o.back,c.answer,'Audited model answer changed '+c.id);
+ if(c.answer!==undefined)assert.equal(o.back,allowed(c.id,'back',c.answer),'Audited model answer changed '+c.id);
  assert(c.contentChecked===true);
  assert(/^(3\.\d+(?:\.\d+){0,2}|7\.3)$/.test(c.candidateSpecSection),'Bad AQA section '+c.id);
 }
@@ -58,6 +59,6 @@ assert.equal(metadata.added,14);
 assert.equal(metadata.startingCards,2994);
 assert.equal(metadata.scienceLegacyMapped,1113);
 assert.equal(metadata.fullSpecCoverageCertified,false);
-assert.equal(deck.meta.task1FlashcardAudit.physicsNew,a.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length);
-assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,a.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length);
+assert.equal(deck.meta.task1FlashcardAudit.physicsNew,a.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length);
+assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,a.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length);
 console.log('PASS v134: all 1,113 original Physics/Chemistry card sections mapped; 103 maths pending; 14 short science additions tested; all 2,994 prior IDs preserved.');

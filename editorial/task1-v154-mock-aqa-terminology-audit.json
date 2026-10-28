@@ -1,0 +1,332 @@
+{
+  "release": "v154",
+  "date": "2026-10-28",
+  "objective": "AQA Chemistry bond wording and evidence-first mock-only revision",
+  "sourceUrls": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity"
+  ],
+  "deck": {
+    "before": 3276,
+    "after": 3280,
+    "active": 3276,
+    "mockEligible": 2343,
+    "existingCardsReworded": 22,
+    "added": 4
+  },
+  "bank": {
+    "before": 1238,
+    "after": 1247,
+    "added": 9,
+    "marks": 55
+  },
+  "status": {
+    "fullMockSpecificationCoverageCertified": false,
+    "independentStudentMastery": false,
+    "partialChecksStrengthened": 9,
+    "notes": "Earlier v153 checklist statuses are historical assessments; new questions improve application evidence without certifying complete coverage, and overlapping core recall remains."
+  },
+  "changes": {
+    "editedCards": [
+      {
+        "id": "chem_a2_benzene",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+        "oldBack": "Its π electrons are delocalised around the ring, lowering the energy.",
+        "front": "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+        "back": "Delocalised electrons are spread around the ring, lowering its energy."
+      },
+      {
+        "id": "v33_card_chemistry_aromatic_chemistry_65",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "Why are benzene C–C bonds equal in length?",
+        "oldBack": "The π electrons are delocalised around the aromatic ring.",
+        "front": "Why are benzene C–C bonds equal in length?",
+        "back": "Delocalised electrons are shared around the ring."
+      },
+      {
+        "id": "chem_acyl_review_v41_09",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "What happens to the C=O π electron pair during initial attack?",
+        "oldBack": "It temporarily moves towards oxygen.",
+        "front": "What happens to the C=O bonding electron pair during initial attack?",
+        "back": "It moves towards the oxygen atom."
+      },
+      {
+        "id": "chem_acyl_review_v41_11",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "What change restores the carbonyl during the elimination stage?",
+        "oldBack": "An oxygen lone pair reforms the C=O π bond.",
+        "front": "What change reforms C=O during the elimination stage?",
+        "back": "An oxygen lone pair reforms the carbon–oxygen double bond."
+      },
+      {
+        "id": "chem_mechanisms_v42_13",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Which bond makes an alkene rich in electrons?",
+        "oldBack": "The π bond of the carbon–carbon double bond.",
+        "front": "Why is an alkene's C=C bond attractive to electrophiles?",
+        "back": "The double bond is a region of high electron density."
+      },
+      {
+        "id": "chem_mechanisms_v42_14",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "What is the source of the first electron-pair arrow in electrophilic addition?",
+        "oldBack": "The alkene π bond.",
+        "front": "Where does the first curly arrow start in alkene electrophilic addition?",
+        "back": "At the electron-rich C=C double bond."
+      },
+      {
+        "id": "chem_mechanisms_v42_21",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Where do carbonyl π electrons go in nucleophilic addition?",
+        "oldBack": "Toward oxygen while a new bond to carbon forms.",
+        "front": "Where do the C=O bonding electrons move during nucleophilic addition?",
+        "back": "Towards oxygen while the incoming group bonds to carbon."
+      },
+      {
+        "id": "task1_chem_120",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "What type of bonds occur in alkanes?",
+        "oldBack": "Single covalent σ bonds.",
+        "front": "What carbon–carbon bonds occur in alkanes?",
+        "back": "Only single covalent bonds."
+      },
+      {
+        "id": "task1_chem_137",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Which part of a C=C bond is attacked in electrophilic addition?",
+        "oldBack": "The electron-rich π bond.",
+        "front": "Which part of an alkene reacts with an electrophile?",
+        "back": "Its electron-rich C=C double bond."
+      },
+      {
+        "id": "task1_chem_215",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "What is delocalisation in benzene?",
+        "oldBack": "π electrons are spread over the ring rather than fixed between pairs.",
+        "front": "What is delocalisation in benzene?",
+        "back": "Electrons are shared across the benzene ring rather than fixed between pairs of atoms."
+      },
+      {
+        "id": "task1_chem_216",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "Why does benzene favour substitution over addition?",
+        "oldBack": "Addition would disrupt the stable delocalised π system.",
+        "front": "Why does benzene favour substitution over addition?",
+        "back": "Addition would disrupt benzene's stable delocalised electron ring."
+      },
+      {
+        "id": "task1_v124_bulk_chem_119",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "What makes a carbon–carbon double bond electron-rich?",
+        "oldBack": "Its π bond electrons.",
+        "front": "Why is an alkene's carbon–carbon double bond electron-rich?",
+        "back": "It contains an electron pair available for electrophilic addition."
+      },
+      {
+        "id": "task1_v124_bulk_chem_121",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "What happens to the π bond during electrophilic addition?",
+        "oldBack": "It breaks as new σ bonds form.",
+        "front": "What happens to the C=C bond during electrophilic addition?",
+        "back": "It becomes a single bond as new bonds form to the carbons."
+      },
+      {
+        "id": "task1_v124_bulk_chem_217",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "What makes benzene especially stable?",
+        "oldBack": "Delocalisation of π electrons around the ring.",
+        "front": "What makes benzene especially stable?",
+        "back": "Delocalised electrons around the benzene ring lower its energy."
+      },
+      {
+        "id": "task1_v130_125",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Why is the alkene double bond attacked by electrophiles?",
+        "oldBack": "The π bond has high electron density.",
+        "front": "Why is the alkene double bond attacked by electrophiles?",
+        "back": "The C=C double bond is a region of high electron density."
+      },
+      {
+        "id": "task1_v130_143",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "Why does benzene react by substitution rather than addition?",
+        "oldBack": "Substitution retains its delocalised π-electron ring.",
+        "front": "Why does benzene react by substitution rather than addition?",
+        "back": "Substitution retains the stable delocalised electrons in the ring."
+      },
+      {
+        "id": "task1_v130_144",
+        "subject": "Chemistry",
+        "mock": false,
+        "oldFront": "Why are the six carbon–carbon bonds in benzene equal in length?",
+        "oldBack": "The π electrons are delocalised across the ring.",
+        "front": "Why are the six carbon–carbon bonds in benzene equal in length?",
+        "back": "Electrons are delocalised across all six carbon atoms."
+      },
+      {
+        "id": "task1_v146_048",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "An alkene C=C consists of which two bond types?",
+        "oldBack": "One σ bond and one π bond.",
+        "front": "How does AQA describe the bonding in an alkene?",
+        "back": "A C=C double covalent bond that is a centre of high electron density."
+      },
+      {
+        "id": "task1_v146_049",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Why does a C=C bond restrict rotation?",
+        "oldBack": "Rotation would disrupt sideways overlap forming the π bond.",
+        "front": "What structural feature of C=C makes E/Z isomerism possible?",
+        "back": "Rotation around a C=C double bond is restricted."
+      },
+      {
+        "id": "task1_v146_053",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Why does Br₂ become polarised as it approaches an alkene?",
+        "oldBack": "The alkene π electrons repel Br₂ electrons, inducing a dipole.",
+        "front": "Why does Br₂ become polarised as it approaches an alkene?",
+        "back": "The electron-rich C=C bond repels Br₂ electrons, inducing a dipole."
+      },
+      {
+        "id": "task1_v146_080",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "Br₂ addition arrow 1: where do the alkene π electrons move?",
+        "oldBack": "Towards the induced δ⁺ bromine atom.",
+        "front": "In Br₂ addition, where does the first arrow from C=C point?",
+        "back": "To the bromine atom with induced δ⁺ charge."
+      },
+      {
+        "id": "task1_v146_084",
+        "subject": "Chemistry",
+        "mock": true,
+        "oldFront": "During alcohol dehydration, which electrons form the alkene's π bond?",
+        "oldBack": "A pair from a C–H bond next to the carbon losing water.",
+        "front": "During alcohol dehydration, which electrons form the new C=C bond?",
+        "back": "Electrons from a C–H bond on the adjacent carbon."
+      }
+    ],
+    "addedCards": [
+      {
+        "id": "task1_v154_001",
+        "front": "Name one use of superconductors in the AQA specification.",
+        "back": "Strong magnetic fields or lower energy losses in power transmission.",
+        "scope": "mock",
+        "mock": true,
+        "specRef": "3.5.1.3"
+      },
+      {
+        "id": "task1_v154_002",
+        "front": "Why can a superconducting power cable reduce heating losses?",
+        "back": "It has zero electrical resistance below its critical temperature.",
+        "scope": "mock",
+        "mock": true,
+        "specRef": "3.5.1.3"
+      },
+      {
+        "id": "task1_v154_003",
+        "front": "What happens to resistance when a load is added in parallel?",
+        "back": "The combined resistance of that branch decreases.",
+        "scope": "mock",
+        "mock": true,
+        "specRef": "3.5.1.5"
+      },
+      {
+        "id": "task1_v154_004",
+        "front": "Why can loading the lower part of a divider lower its output voltage?",
+        "back": "The parallel load lowers that branch resistance and its share of the supply p.d.",
+        "scope": "mock",
+        "mock": true,
+        "specRef": "3.5.1.5"
+      }
+    ],
+    "addedQuestions": [
+      {
+        "id": "mock_v154_01",
+        "subject": "Physics",
+        "mock": true,
+        "marks": 7,
+        "revisionTopic": "Motion graphs"
+      },
+      {
+        "id": "mock_v154_02",
+        "subject": "Physics",
+        "mock": true,
+        "marks": 6,
+        "revisionTopic": "Motion graphs"
+      },
+      {
+        "id": "mock_v154_03",
+        "subject": "Physics",
+        "mock": true,
+        "marks": 6,
+        "revisionTopic": "Projectiles"
+      },
+      {
+        "id": "mock_v154_04",
+        "subject": "Physics",
+        "mock": true,
+        "marks": 6,
+        "revisionTopic": "Materials"
+      },
+      {
+        "id": "mock_v154_05",
+        "subject": "Physics",
+        "mock": true,
+        "marks": 6,
+        "revisionTopic": "Internal resistance"
+      },
+      {
+        "id": "mock_v154_06",
+        "subject": "Physics",
+        "mock": true,
+        "marks": 6,
+        "revisionTopic": "Potential dividers"
+      },
+      {
+        "id": "mock_v154_07",
+        "subject": "Chemistry",
+        "mock": true,
+        "marks": 5,
+        "revisionTopic": "Intermolecular forces"
+      },
+      {
+        "id": "mock_v154_08",
+        "subject": "Chemistry",
+        "mock": true,
+        "marks": 6,
+        "revisionTopic": "Energetics"
+      },
+      {
+        "id": "mock_v154_09",
+        "subject": "Chemistry",
+        "mock": true,
+        "marks": 7,
+        "revisionTopic": "RP2 Enthalpy"
+      }
+    ]
+  },
+  "scope": "Physics Year 1 mock and Chemistry Year 1; no A2 scope change; no app or progress changes",
+  "followUp": "Perform complete specification-by-specification audit of mock preset including A2 Chemistry taught content and validate all older question wording for AQA relevance."
+}

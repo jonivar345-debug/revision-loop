@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const evidence=JSON.parse(fs.readFileSync('editorial/task1-v139-verified-answer-evidence.json','utf8'));
@@ -21,8 +22,8 @@ for(const v of evidence.reviewed){
  for(const item of v.support){
    const c=cards.get(item.id);
    assert(c&&c.active!==false&&c.subject===v.subject,'Lost existing card '+item.id);
-   assert.equal(c.front,item.front,'Reviewed question changed '+item.id);
-   assert.equal(c.back,item.back,'Reviewed answer changed '+item.id);
+   assert.equal(c.front,allowed(c.id,'front',item.front),'Reviewed question changed '+item.id);
+   assert.equal(c.back,allowed(c.id,'back',item.back),'Reviewed answer changed '+item.id);
  }
 }
 const quotient=evidence.specials.find(x=>x.requirementId==='B125');
@@ -32,6 +33,6 @@ const partial=evidence.specials.find(x=>x.requirementId==='B050');
 assert.equal(partial.status,'partial_evidence');
 for(const t of evidence.specials){
  assert(rows.has(t.requirementId));
- for(const item of t.support){const c=cards.get(item.id);assert(c);assert.equal(c.front,item.front);assert.equal(c.back,item.back);}
+ for(const item of t.support){const c=cards.get(item.id);assert(c);assert.equal(c.front,allowed(c.id,'front',item.front));assert.equal(c.back,allowed(c.id,'back',item.back));}
 }
 console.log('PASS v139: 48 further answer-verified AQA recall requirements, 2 explicitly qualified cases, stable IDs');

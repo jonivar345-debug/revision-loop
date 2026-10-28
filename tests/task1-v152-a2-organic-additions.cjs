@@ -7,11 +7,11 @@ const a=JSON.parse(fs.readFileSync('editorial/task1-v152-a2-organic-additions.js
 const previousAudit=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 
-assert.equal(d.deckVersion,152);
+assert(d.deckVersion>=152);
 assert(b.bankVersion>=62);
-assert.equal(d.cards.length,3276);
-assert.equal(d.cards.filter(c=>c.active!==false).length,3272);
-assert.equal(b.questions.filter(q=>!q.id.startsWith('organic_v153_')).length,1226);
+assert.equal(d.cards.filter(c=>!c.id.startsWith('task1_v154_')).length,3276);
+assert.equal(d.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v154_')).length,3272);
+assert.equal(b.questions.filter(q=>!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')).length,1226);
 assert.equal(d.cards[3269].id,'task1_v150_007');
 assert.equal(b.questions[1211].id,'organic_v149_12');
 assert.equal(new Set(d.cards.map(c=>c.id)).size,d.cards.length);
@@ -24,8 +24,8 @@ assert.equal(a.additions.questions,14);
 assert.equal(a.additions.flashcards,6);
 assert.equal(a.additions.marks,84);
 
-const oldCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_'));
-const oldQuestions=b.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_'));
+const oldCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_'));
+const oldQuestions=b.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_'));
 assert.equal(oldCards.length,3270);
 assert.equal(oldCards.filter(c=>c.active!==false).length,3266);
 assert.equal(oldQuestions.length,1212);

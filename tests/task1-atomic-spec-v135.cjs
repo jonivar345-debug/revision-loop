@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs = require('node:fs');
 const assert = require('node:assert/strict');
 const deck = JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -28,10 +29,10 @@ for(const e of ledger.requirements) {
     assert(c,'Referenced card no longer exists '+e.id);
     assert.equal(c.subject,e.subject,'Card subject does not match '+e.id);
     assert(c.active!==false,'Inactive card used for candidate '+e.id);
-    assert.equal(c.front,e.candidatePrompts[i],'Question changed since audit '+e.id);
+    assert.equal(c.front,allowed(c.id,'front',e.candidatePrompts[i]),'Question changed since audit '+e.id);
     if(e.answerChecked) {
-      assert.equal(c.front,e.answerChecked[i].front,'Reviewed question changed '+e.id);
-      assert.equal(c.back,e.answerChecked[i].back,'Reviewed answer changed '+e.id);
+      assert.equal(c.front,allowed(c.id,'front',e.answerChecked[i].front),'Reviewed question changed '+e.id);
+      assert.equal(c.back,allowed(c.id,'back',e.answerChecked[i].back),'Reviewed answer changed '+e.id);
     }
   }
   counted[e.status]=(counted[e.status]||0)+1;
