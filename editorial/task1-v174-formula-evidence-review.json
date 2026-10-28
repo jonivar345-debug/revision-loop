@@ -1,0 +1,41 @@
+{
+  "version": "v174",
+  "date": "2026-10-28",
+  "title": "Evidence-boundary and negation protection for explicitly curated mathematical formula marks",
+  "overallTask1": "NOT YET COMPLETE",
+  "source": "Actual existing practice question bank and marking implementation; this update does not certify full AQA coverage.",
+  "finding": "Existing expression-alternative shortcut matched formulae as substrings after removing whitespace. Confirmed an incorrect/negated formula could be awarded one mark on two practice question IDs.",
+  "questionsReviewed": [
+    "verified2019_P_4_2",
+    "verified2019_P_2_2"
+  ],
+  "fixes": [
+    "Require whole equation evidence rather than a substring inside a longer variable or number",
+    "Ignore clearly rejected or negated formulae when deciding whether a method point is earned",
+    "Allow spaces around operators and vetted alternative rearrangements such as n=c/v, v=c/n and L=R*A/rho",
+    "On short formula-only responses, do not let fuzzy token matching replace the explicitly required formula",
+    "Maintain per-point manual marking and detailed review, with no changes to card/question IDs or progress"
+  ],
+  "checked": {
+    "originalPracticeQuestions": 1268,
+    "modelAnswersFullMarks": true,
+    "numericExponentBoundaries": true,
+    "wrongEquationSuffixRejects": true,
+    "negatedFormulaRejects": true,
+    "correctSpacedFormulaEarnsCredit": true,
+    "correctRearrangedMethodEarnsCredit": true
+  },
+  "remaining": [
+    "Individual answer-level audit of 971 science mock cards lacking direct specRef",
+    "Complete AQA requirement-to-answer evidence grid for school mocks and full courses",
+    "Broader real student-answer samples and practical/photo diagram marking reliability review",
+    "Historical paper archive completeness and source checks",
+    "School Physics optional A-level module verification"
+  ],
+  "limits": {
+    "specComplete": false,
+    "authenticAqaMarkSchemesFullyVerified": false,
+    "AIHandwritingReliabilityCertified": false,
+    "manualMarkCorrectionsRemain": true
+  }
+}
