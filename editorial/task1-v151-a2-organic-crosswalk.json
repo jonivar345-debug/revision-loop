@@ -1,0 +1,3022 @@
+{
+  "release": "v151",
+  "auditDate": "2026-10-28",
+  "course": "AQA A-level Chemistry 7405",
+  "scope": "A-level-only Organic Chemistry sections 3.3.7–3.3.16, including all 19 numbered subsections; each row is an evidence-backed selected learning demand, not a claim of full exhaustive specification certification.",
+  "specificationUrl": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+  "baseline": {
+    "deckVersion": 150,
+    "cards": 3270,
+    "active": 3266,
+    "questionBankVersion": 61,
+    "questions": 1212
+  },
+  "counts": {
+    "sections": 10,
+    "numberedSubsections": 19,
+    "atomicChecks": 109,
+    "byStatus": {
+      "supported_recall": 55,
+      "partial": 15,
+      "supported_practice": 23,
+      "gap_applied": 12,
+      "gap_recall": 4
+    },
+    "bySubsection": {
+      "3.3.7": {
+        "rows": 8,
+        "byStatus": {
+          "supported_recall": 3,
+          "partial": 1,
+          "supported_practice": 3,
+          "gap_applied": 1
+        }
+      },
+      "3.3.8": {
+        "rows": 11,
+        "byStatus": {
+          "supported_recall": 6,
+          "supported_practice": 1,
+          "gap_applied": 1,
+          "partial": 2,
+          "gap_recall": 1
+        }
+      },
+      "3.3.9.1": {
+        "rows": 10,
+        "byStatus": {
+          "supported_practice": 2,
+          "supported_recall": 7,
+          "partial": 1
+        }
+      },
+      "3.3.9.2": {
+        "rows": 7,
+        "byStatus": {
+          "supported_recall": 5,
+          "partial": 2
+        }
+      },
+      "3.3.10.1": {
+        "rows": 4,
+        "byStatus": {
+          "supported_recall": 1,
+          "supported_practice": 2,
+          "gap_applied": 1
+        }
+      },
+      "3.3.10.2": {
+        "rows": 4,
+        "byStatus": {
+          "supported_recall": 2,
+          "supported_practice": 1,
+          "gap_applied": 1
+        }
+      },
+      "3.3.11.1": {
+        "rows": 4,
+        "byStatus": {
+          "supported_recall": 1,
+          "partial": 1,
+          "gap_recall": 2
+        }
+      },
+      "3.3.11.2": {
+        "rows": 3,
+        "byStatus": {
+          "supported_recall": 1,
+          "supported_practice": 1,
+          "partial": 1
+        }
+      },
+      "3.3.11.3": {
+        "rows": 5,
+        "byStatus": {
+          "supported_recall": 3,
+          "gap_applied": 1,
+          "partial": 1
+        }
+      },
+      "3.3.12.1": {
+        "rows": 8,
+        "byStatus": {
+          "supported_recall": 2,
+          "supported_practice": 2,
+          "gap_applied": 2,
+          "gap_recall": 1,
+          "partial": 1
+        }
+      },
+      "3.3.12.2": {
+        "rows": 3,
+        "byStatus": {
+          "supported_practice": 2,
+          "supported_recall": 1
+        }
+      },
+      "3.3.13.1": {
+        "rows": 3,
+        "byStatus": {
+          "supported_practice": 1,
+          "supported_recall": 1,
+          "partial": 1
+        }
+      },
+      "3.3.13.2": {
+        "rows": 6,
+        "byStatus": {
+          "supported_recall": 3,
+          "partial": 1,
+          "gap_applied": 2
+        }
+      },
+      "3.3.13.3": {
+        "rows": 3,
+        "byStatus": {
+          "supported_recall": 2,
+          "gap_applied": 1
+        }
+      },
+      "3.3.13.4": {
+        "rows": 4,
+        "byStatus": {
+          "supported_practice": 3,
+          "supported_recall": 1
+        }
+      },
+      "3.3.13.5": {
+        "rows": 3,
+        "byStatus": {
+          "supported_recall": 3
+        }
+      },
+      "3.3.14": {
+        "rows": 5,
+        "byStatus": {
+          "supported_practice": 1,
+          "supported_recall": 3,
+          "gap_applied": 1
+        }
+      },
+      "3.3.15": {
+        "rows": 9,
+        "byStatus": {
+          "supported_recall": 4,
+          "supported_practice": 3,
+          "partial": 2
+        }
+      },
+      "3.3.16": {
+        "rows": 9,
+        "byStatus": {
+          "supported_recall": 6,
+          "supported_practice": 1,
+          "partial": 1,
+          "gap_applied": 1
+        }
+      }
+    }
+  },
+  "policy": {
+    "auditOnly": true,
+    "allExistingCardAndQuestionIdsUnchanged": true,
+    "noUserProgressChanges": true,
+    "noMockFlagChanges": true,
+    "originalQuestionsNotAqaPastPapers": true,
+    "sourceScopeIsAqaLeftColumn": true,
+    "fullSpecCertification": false,
+    "studentMasteryNotClaimed": true
+  },
+  "keyFindings": [
+    "Mechanism pieces and reactions are often already memorised; drawn complete electron-arrow mechanisms remain less frequently evidenced.",
+    "Chiral 3D drawing, benzene thermochemistry, polymer repeat units, amino-acid peptides, up-to-four-step synthesis, combined spectroscopy and RP12 interpretation need original assessed application.",
+    "New A2 content must not be placed in a Year 1 mock-only filter merely because it appears in the full specification.",
+    "Some older automated NMR n+1 questions extend beyond AQA's named doublet/triplet/quartet requirement, so the scope should be labelled enrichment rather than deleted."
+  ],
+  "rows": [
+    {
+      "id": "A2ORG-001",
+      "specRef": "3.3.7",
+      "requirement": "Recognise a single chiral centre bonded to four different groups",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_199",
+            "front": "What is a chiral centre?",
+            "back": "Usually a carbon bonded to four different groups.",
+            "specRef": "3.3.7",
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_optical_isomerism_2",
+            "prompt": "Determine whether CH₃CH(OH)CH₂CH₃ can exhibit optical isomerism. Identify the chiral carbon and name the four different groups attached.",
+            "marks": 3,
+            "markPoints": [
+              "Carbon 2 is chiral.",
+              "Groups: H, OH, CH₃ and CH₂CH₃.",
+              "Two enantiomers are possible."
+            ],
+            "revisionTopic": "Optical isomerism"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-002",
+      "specRef": "3.3.7",
+      "requirement": "State that enantiomers are non-superimposable mirror images",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "v33_card_chemistry_optical_isomerism_58",
+            "front": "What is an enantiomer?",
+            "back": "One of two non-superimposable mirror-image stereoisomers.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-003",
+      "specRef": "3.3.7",
+      "requirement": "Explain why enantiomers rotate plane-polarised light differently",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_optical",
+            "front": "What causes optical isomerism?",
+            "back": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-004",
+      "specRef": "3.3.7",
+      "requirement": "Define an equal-mole racemic mixture",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_135",
+            "front": "Define a racemic mixture.",
+            "back": "Equal amounts of the two enantiomers.",
+            "specRef": "3.3.7",
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_optical_isomerism_3",
+            "prompt": "A mixture contains equal amounts of two enantiomers. Explain why its overall rotation of plane-polarised light is zero.",
+            "marks": 3,
+            "markPoints": [
+              "Each enantiomer rotates the plane by equal magnitude.",
+              "The rotations are in opposite directions.",
+              "In a 50:50 racemate they cancel."
+            ],
+            "revisionTopic": "Optical isomerism"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-005",
+      "specRef": "3.3.7",
+      "requirement": "Explain optical inactivity of a racemate",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_28",
+            "front": "Why does a racemic mixture give no net optical rotation?",
+            "back": "The enantiomers' rotations cancel.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_optical_isomerism_3",
+            "prompt": "A mixture contains equal amounts of two enantiomers. Explain why its overall rotation of plane-polarised light is zero.",
+            "marks": 3,
+            "markPoints": [
+              "Each enantiomer rotates the plane by equal magnitude.",
+              "The rotations are in opposite directions.",
+              "In a 50:50 racemate they cancel."
+            ],
+            "revisionTopic": "Optical isomerism"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-006",
+      "specRef": "3.3.7",
+      "requirement": "Identify an asymmetric centre in an unfamiliar 2D formula",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_196",
+            "front": "What is a chiral carbon atom in basic A-level organic chemistry?",
+            "back": "A tetrahedral carbon bonded to four different groups.",
+            "specRef": "3.3.7",
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_optical_isomerism_2",
+            "prompt": "Determine whether CH₃CH(OH)CH₂CH₃ can exhibit optical isomerism. Identify the chiral carbon and name the four different groups attached.",
+            "marks": 3,
+            "markPoints": [
+              "Carbon 2 is chiral.",
+              "Groups: H, OH, CH₃ and CH₂CH₃.",
+              "Two enantiomers are possible."
+            ],
+            "revisionTopic": "Optical isomerism"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-007",
+      "specRef": "3.3.7",
+      "requirement": "Draw a correctly oriented 3D enantiomer pair from one chiral carbon",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_199",
+            "front": "What is a chiral centre?",
+            "back": "Usually a carbon bonded to four different groups.",
+            "specRef": "3.3.7",
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Existing questions discuss chirality; no directly evidenced unfamiliar pair-drawing task.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-008",
+      "specRef": "3.3.7",
+      "requirement": "Explain why interaction with a chiral biological site may differ",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_optical_isomerism_4",
+            "prompt": "Why can two enantiomers have almost identical bulk physical properties yet interact differently with biological receptors?",
+            "marks": 3,
+            "markPoints": [
+              "They are mirror-image stereoisomers.",
+              "Ordinary achiral properties are alike.",
+              "Many receptors are chiral and have stereospecific binding sites."
+            ],
+            "revisionTopic": "Optical isomerism"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-009",
+      "specRef": "3.3.8",
+      "requirement": "Identify polarity of C=O and nucleophilic attack at its carbon",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_20",
+            "front": "Why are carbonyl compounds attacked at carbon?",
+            "back": "Their C=O bond is polar, with carbon δ+.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-010",
+      "specRef": "3.3.8",
+      "requirement": "Distinguish aldehydes from ketones using Tollens and Fehling observations",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v125_158",
+            "front": "What observation shows a positive Tollens' test?",
+            "back": "Silver mirror or grey silver deposit.",
+            "specRef": "3.3.8",
+            "mock": true
+          },
+          {
+            "id": "task1_v125_159",
+            "front": "What observation shows a positive Fehling's test?",
+            "back": "Brick-red precipitate.",
+            "specRef": "3.3.8",
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_aldehydes_and_ketones_1",
+            "prompt": "An unknown carbonyl compound gives a silver mirror with Tollens' reagent. State what functional group is indicated and why a ketone does not usually give this observation.",
+            "marks": 3,
+            "markPoints": [
+              "Tollens' reagent gives a silver mirror with an aldehyde.",
+              "The aldehyde is oxidised to a carboxylate/carboxylic acid derivative.",
+              "Ordinary ketones are not readily oxidised in this test."
+            ],
+            "revisionTopic": "Aldehydes and ketones"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-011",
+      "specRef": "3.3.8",
+      "requirement": "Identify oxidation of an aldehyde to a carboxylic acid",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_137",
+            "front": "What is the oxidation product of an aldehyde?",
+            "back": "A carboxylic acid.",
+            "specRef": "3.3.8",
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-012",
+      "specRef": "3.3.8",
+      "requirement": "Identify alcohol classes formed by aldehyde versus ketone reduction",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_23",
+            "front": "What organic class comes from aldehyde reduction?",
+            "back": "A primary alcohol.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_mechanisms_v42_24",
+            "front": "What organic class comes from ketone reduction?",
+            "back": "A secondary alcohol.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_aldehydes_and_ketones_4",
+            "prompt": "Propanone is reduced by NaBH₄. Explain why propan-2-ol is formed rather than propan-1-ol.",
+            "marks": 3,
+            "markPoints": [
+              "The carbonyl carbon in propanone is carbon 2.",
+              "Nucleophilic hydride addition changes C=O into C–OH at carbon 2.",
+              "The carbon skeleton stays unchanged."
+            ],
+            "revisionTopic": "Aldehydes and ketones"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-013",
+      "specRef": "3.3.8",
+      "requirement": "Explain hydride as the nucleophile in NaBH4 nucleophilic addition",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_carbonyl_reduction",
+            "front": "What reagent reduces aldehydes and ketones?",
+            "back": "NaBH₄, sodium tetrahydridoborate.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_aldehydes_and_ketones_2",
+            "prompt": "Propanal reacts with NaBH₄ followed by acidic work-up. Name the product and explain the role of the hydride ion.",
+            "marks": 3,
+            "markPoints": [
+              "Product is propan-1-ol.",
+              "Hydride H⁻ is a nucleophile that attacks the carbonyl carbon.",
+              "The alkoxide is protonated to form alcohol."
+            ],
+            "revisionTopic": "Aldehydes and ketones"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-014",
+      "specRef": "3.3.8",
+      "requirement": "Draw both stages of carbonyl reduction with H- and electron-pair arrows",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_21",
+            "front": "Where do carbonyl π electrons go in nucleophilic addition?",
+            "back": "Toward oxygen while a new bond to carbon forms.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "The class and arrow location are in cards but no full unfamiliar carbonyl-reduction drawing is directly evidenced.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-015",
+      "specRef": "3.3.8",
+      "requirement": "Write reduction equations using [H] and correct product structures",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_205",
+            "front": "What forms when a ketone is reduced?",
+            "back": "A secondary alcohol.",
+            "specRef": "3.3.8",
+            "mock": true
+          },
+          {
+            "id": "task1_chem_206",
+            "front": "What forms when an aldehyde is reduced?",
+            "back": "A primary alcohol.",
+            "specRef": "3.3.8",
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Product classes recalled, but direct equation-writing application is not clearly tested.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-016",
+      "specRef": "3.3.8",
+      "requirement": "Recall the hydroxynitrile structure formed by carbonyl addition",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_mechanisms_v42_25",
+            "front": "What groups are attached to the same carbon in a hydroxynitrile?",
+            "back": "A hydroxyl group and a nitrile group.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-017",
+      "specRef": "3.3.8",
+      "requirement": "Outline the nucleophilic addition electron-pair movement in hydroxynitrile formation",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_carbonyl_hcn",
+            "front": "What mechanism occurs when HCN adds to a carbonyl compound?",
+            "back": "Nucleophilic addition.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_mechanisms_v42_21",
+            "front": "Where do carbonyl π electrons go in nucleophilic addition?",
+            "back": "Toward oxygen while a new bond to carbon forms.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Separate arrow-location recall exists; a complete drawn mechanism is not shown in the mapped main-bank questions.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-018",
+      "specRef": "3.3.8",
+      "requirement": "Explain why a planar carbonyl may form an enantiomer mixture",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_139",
+            "front": "Why can nucleophilic addition to a planar carbonyl produce enantiomers?",
+            "back": "The nucleophile can approach from either face.",
+            "specRef": "3.3.8",
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-019",
+      "specRef": "3.3.8",
+      "requirement": "Recognise that cyanide-containing compounds have significant toxicity hazards",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [],
+        "questions": []
+      },
+      "limitation": "Safety recognition should be limited to a short hazard-awareness fact without procedures or access details.",
+      "next": "safety_concept_card"
+    },
+    {
+      "id": "A2ORG-020",
+      "specRef": "3.3.9.1",
+      "requirement": "Identify weak acidity and reaction with carbonate",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_002",
+            "front": "Why is a carboxylic acid described as weak?",
+            "back": "Only a fraction of its molecules dissociate into ions in water.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_spec_v40_003",
+            "front": "Why do carboxylic acids react with carbonates?",
+            "back": "Their acidic protons react with carbonate ions, releasing carbon dioxide.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_carboxylic_acids_1",
+            "prompt": "Ethanoic acid reacts with aqueous sodium carbonate. Write the balanced equation and name the gas.",
+            "marks": 2,
+            "markPoints": [
+              "2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂.",
+              "The gas is carbon dioxide."
+            ],
+            "revisionTopic": "Carboxylic acids"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-021",
+      "specRef": "3.3.9.1",
+      "requirement": "State ester functional-group structure and naming convention",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_006",
+            "front": "What is the ester functional group?",
+            "back": "R–C(=O)–O–R′.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_spec_v40_007",
+            "front": "How do you name an ester?",
+            "back": "Alkyl name from the alcohol first, then the acid-derived –oate name.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-022",
+      "specRef": "3.3.9.1",
+      "requirement": "Explain reversible carboxylic-acid and alcohol esterification",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_009",
+            "front": "What is the general equation for esterification?",
+            "back": "Carboxylic acid + alcohol ⇌ ester + water.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_carboxylic_acids_3",
+            "prompt": "Write the reversible reaction of propanoic acid with ethanol. Name the ester produced.",
+            "marks": 2,
+            "markPoints": [
+              "CH₃CH₂COOH + CH₃CH₂OH ⇌ CH₃CH₂COOCH₂CH₃ + H₂O.",
+              "The ester is ethyl propanoate."
+            ],
+            "revisionTopic": "Carboxylic acids"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-023",
+      "specRef": "3.3.9.1",
+      "requirement": "Recall common uses of esters",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_010",
+            "front": "Give four typical applications of esters.",
+            "back": "Solvents, plasticisers, perfume ingredients and food flavourings.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-024",
+      "specRef": "3.3.9.1",
+      "requirement": "Identify fats and oils as glycerol triesters",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_014",
+            "front": "What is glycerol's systematic name?",
+            "back": "Propane-1,2,3-triol.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_spec_v40_015",
+            "front": "What are fats and vegetable oils made from chemically?",
+            "back": "Triglycerides containing three ester links to glycerol.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-025",
+      "specRef": "3.3.9.1",
+      "requirement": "Distinguish acidic ester hydrolysis from alkaline ester hydrolysis products",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_011",
+            "front": "What is produced by acidic ester hydrolysis?",
+            "back": "A carboxylic acid and an alcohol.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_spec_v40_012",
+            "front": "What is produced by alkaline ester hydrolysis?",
+            "back": "A carboxylate salt and an alcohol.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-026",
+      "specRef": "3.3.9.1",
+      "requirement": "Recognise triglyceride hydrolysis as producing soap and glycerol",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_018",
+            "front": "What is saponification?",
+            "back": "Alkaline hydrolysis of fats or oils.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_spec_v40_019",
+            "front": "What are the main products of triglyceride saponification?",
+            "back": "Soap (long-chain carboxylate salts) and glycerol.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-027",
+      "specRef": "3.3.9.1",
+      "requirement": "Define biodiesel as fatty-acid methyl esters",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_022",
+            "front": "What type of substances make up biodiesel?",
+            "back": "Methyl esters of long-chain carboxylic acids.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-028",
+      "specRef": "3.3.9.1",
+      "requirement": "Distinguish transesterification from ordinary hydrolysis",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_023",
+            "front": "What does transesterification mean?",
+            "back": "Exchange of the alcohol-derived part of an ester.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_spec_v40_024",
+            "front": "How is transesterification different from hydrolysis?",
+            "back": "Transesterification exchanges an ester group; hydrolysis breaks an ester bond.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-029",
+      "specRef": "3.3.9.1",
+      "requirement": "Interpret unfamiliar triglyceride structures and product stoichiometry",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_spec_v40_026",
+            "front": "What is the stoichiometric number of fatty acid methyl esters per triglyceride?",
+            "back": "Three methyl ester molecules correspond to one triglyceride.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Stoichiometry recall exists but independently drawing a glycerol triester or identifying individual ester linkages is not mapped.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-030",
+      "specRef": "3.3.9.2",
+      "requirement": "Recognise acyl chlorides, acid anhydrides and amide groups",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_acyl_review_v41_01",
+            "front": "What is the general formula of an acyl chloride?",
+            "back": "R–C(=O)–Cl.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_acyl_review_v41_03",
+            "front": "What group links the two carbonyls in an acid anhydride?",
+            "back": "A bridging oxygen: RCO–O–COR′.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_acyl_review_v41_04",
+            "front": "What is an amide functional group?",
+            "back": "A carbonyl directly bonded to nitrogen, e.g. –CONH₂.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-031",
+      "specRef": "3.3.9.2",
+      "requirement": "Recall products of acyl chloride reaction with water or alcohol",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_acyl_review_v41_15",
+            "front": "What is the organic product class of acyl chloride hydrolysis?",
+            "back": "A carboxylic acid.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_acyl_review_v41_16",
+            "front": "What is the organic product class of alcohol acylation?",
+            "back": "An ester.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_acyl_chlorides_1",
+            "prompt": "Write the reaction of ethanoyl chloride with water and name the organic product.",
+            "marks": 2,
+            "markPoints": [
+              "CH₃COCl + H₂O → CH₃COOH + HCl.",
+              "Organic product is ethanoic acid."
+            ],
+            "revisionTopic": "Acyl chlorides"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-032",
+      "specRef": "3.3.9.2",
+      "requirement": "Recall amide products from ammonia and primary amines",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_acyl_review_v41_17",
+            "front": "What is the organic product class when ammonia is acylated?",
+            "back": "A primary amide, RCONH₂.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_acyl_review_v41_18",
+            "front": "What is the organic product class when a primary amine is acylated?",
+            "back": "An N-substituted amide, RCONHR′.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v25_chemistry_acyl_chlorides_2",
+            "prompt": "Ethanoyl chloride reacts with excess methylamine. Give the name of the organic product and explain the purpose of using excess amine.",
+            "marks": 3,
+            "markPoints": [
+              "N-methylethanamide is formed.",
+              "One equivalent attacks the acyl chloride.",
+              "Excess amine neutralises HCl produced."
+            ],
+            "revisionTopic": "Acyl chlorides"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-033",
+      "specRef": "3.3.9.2",
+      "requirement": "Trace addition–elimination arrow logic in acylation",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_acyl_review_v41_08",
+            "front": "In acylation mechanisms, where should the nucleophile's arrow point?",
+            "back": "Toward the electrophilic carbonyl carbon.",
+            "specRef": null,
+            "mock": true
+          },
+          {
+            "id": "chem_acyl_review_v41_11",
+            "front": "What change restores the carbonyl during the elimination stage?",
+            "back": "An oxygen lone pair reforms the C=O π bond.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Many component recall cards exist, but the tested full curved-arrow reaction variety remains limited.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-034",
+      "specRef": "3.3.9.2",
+      "requirement": "Compare by-products for acid anhydride versus acyl chloride acylation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_acyl_review_v41_19",
+            "front": "Which by-product distinguishes acyl chlorides from acid anhydrides?",
+            "back": "Acyl chlorides give HCl; anhydrides give a carboxylic acid.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-035",
+      "specRef": "3.3.9.2",
+      "requirement": "Explain industrial preference for anhydride over chloride in aspirin context",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_acyl_review_v41_28",
+            "front": "Why is ethanoic anhydride preferred industrially over ethanoyl chloride?",
+            "back": "It avoids producing corrosive hydrogen chloride fumes.",
+            "specRef": null,
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-036",
+      "specRef": "3.3.9.2",
+      "requirement": "Use RP10 melting or boiling data to judge purity",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v128_029",
+            "front": "What can a narrow melting range suggest for an organic solid?",
+            "back": "Higher purity.",
+            "specRef": "7.2 RP10",
+            "mock": false
+          },
+          {
+            "id": "task1_v128_031",
+            "front": "Why can a boiling point help assess liquid purity?",
+            "back": "A pure liquid has a characteristic value at stated pressure.",
+            "specRef": "7.2 RP10",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Individual precision cards exist, but the topic's mapped exam problems have little original sample-data interpretation.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-037",
+      "specRef": "3.3.10.1",
+      "requirement": "Describe planar benzene with equal intermediate-length carbon bonds",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_144",
+            "front": "Why are the six carbon–carbon bonds in benzene equal in length?",
+            "back": "The π electrons are delocalised across the ring.",
+            "specRef": "3.3.10",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-038",
+      "specRef": "3.3.10.1",
+      "requirement": "Explain benzene stability through delocalised pi electrons",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_benzene",
+            "front": "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+            "back": "Its π electrons are delocalised around the ring, lowering the energy.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_aromatic_chemistry_1",
+            "prompt": "Explain why benzene is more stable than the hypothetical cyclohexatriene with three isolated double bonds.",
+            "marks": 3,
+            "markPoints": [
+              "Each carbon has a p orbital; six π electrons are delocalised around the ring.",
+              "Delocalisation lowers the energy of the molecule.",
+              "Benzene has equal C–C bond lengths and a lower enthalpy of hydrogenation than expected."
+            ],
+            "revisionTopic": "Aromatic chemistry"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-039",
+      "specRef": "3.3.10.1",
+      "requirement": "Compare benzene hydrogenation enthalpy with hypothetical isolated double bonds using numbers",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_benzene",
+            "front": "Why is benzene more stable than a hypothetical cyclohexa-1,3,5-triene?",
+            "back": "Its π electrons are delocalised around the ring, lowering the energy.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "The main-bank examples explain benzene qualitatively but no directly mapped numerical stability calculation.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-040",
+      "specRef": "3.3.10.1",
+      "requirement": "Explain substitution rather than addition and retention of aromaticity",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_216",
+            "front": "Why does benzene favour substitution over addition?",
+            "back": "Addition would disrupt the stable delocalised π system.",
+            "specRef": "3.3.10",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_aromatic_chemistry_4",
+            "prompt": "Why does benzene usually undergo electrophilic substitution instead of addition?",
+            "marks": 2,
+            "markPoints": [
+              "Addition would destroy its delocalised aromatic π system.",
+              "Substitution restores/preserves aromatic stability after replacement of a hydrogen."
+            ],
+            "revisionTopic": "Aromatic chemistry"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-041",
+      "specRef": "3.3.10.2",
+      "requirement": "Recall the electrophile in benzene nitration",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_219",
+            "front": "What is the electrophile in benzene nitration?",
+            "back": "Nitronium ion, NO₂⁺.",
+            "specRef": "3.3.10",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-042",
+      "specRef": "3.3.10.2",
+      "requirement": "Explain aromatic electrophilic substitution stages in words",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_217",
+            "front": "What is electrophilic substitution?",
+            "back": "An electrophile replaces an atom or group, commonly H, on a ring.",
+            "specRef": "3.3.10",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_aromatic_chemistry_3",
+            "prompt": "Describe the electrophilic substitution mechanism in nitration of benzene, including restoration of aromaticity.",
+            "marks": 3,
+            "markPoints": [
+              "Benzene π electrons attack NO₂⁺ to form a positively charged intermediate.",
+              "A proton is lost to reform the delocalised π system.",
+              "Product is nitrobenzene."
+            ],
+            "revisionTopic": "Aromatic chemistry"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-043",
+      "specRef": "3.3.10.2",
+      "requirement": "Recognise AlCl3 role in Friedel–Crafts acylation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_221",
+            "front": "What is the role of AlCl₃ in Friedel–Crafts acylation?",
+            "back": "Lewis acid catalyst for acylium-ion formation.",
+            "specRef": "3.3.10",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-044",
+      "specRef": "3.3.10.2",
+      "requirement": "Draw electron arrows and intermediates for Friedel–Crafts acylation",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_friedel",
+            "front": "What catalyst is commonly used for Friedel–Crafts acylation?",
+            "back": "AlCl₃.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "A catalyst card is not a substitute for drawn mechanism exam practice.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-045",
+      "specRef": "3.3.11.1",
+      "requirement": "Identify primary amine from nitrogen atom bonded to one carbon group",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_219",
+            "front": "What is a primary amine?",
+            "back": "Nitrogen bonded to one carbon-containing group.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-046",
+      "specRef": "3.3.11.1",
+      "requirement": "State that ammonia substitution of a halogenoalkane can yield a primary amine",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v146_038",
+            "front": "What happens after the positively charged RNH₃⁺ intermediate forms?",
+            "back": "A base removes H⁺, giving a neutral primary amine.",
+            "specRef": "3.3.3.1",
+            "mock": true
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Year 1 chemistry carries the substitution result, but this is not strongly represented by dedicated A2 amine preparation questions.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-047",
+      "specRef": "3.3.11.1",
+      "requirement": "Recognise nitrile reduction as an aminoalkane formation route",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [],
+        "questions": []
+      },
+      "limitation": "No dedicated short recall evidence identified among the audited amine cards.",
+      "next": "short_flashcard"
+    },
+    {
+      "id": "A2ORG-048",
+      "specRef": "3.3.11.1",
+      "requirement": "Recall aromatic amine formation from reduction of a nitro group conceptually",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [],
+        "questions": []
+      },
+      "limitation": "A-level chemistry spec includes the conversion, but topic-specific current cards focus on base strength.",
+      "next": "short_flashcard"
+    },
+    {
+      "id": "A2ORG-049",
+      "specRef": "3.3.11.2",
+      "requirement": "Explain how aliphatic alkyl substitution increases lone-pair availability",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_223",
+            "front": "Why are primary aliphatic amines often stronger bases than ammonia?",
+            "back": "Alkyl electron donation increases lone-pair availability.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-050",
+      "specRef": "3.3.11.2",
+      "requirement": "Explain why phenylamine is a weaker base than methylamine",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_145",
+            "front": "Why is phenylamine a weaker base than methylamine?",
+            "back": "Its nitrogen lone pair is partly delocalised into the benzene ring.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_amines_2",
+            "prompt": "Compare the basicity of phenylamine and methylamine, referring to the nitrogen lone pair.",
+            "marks": 3,
+            "markPoints": [
+              "In phenylamine the lone pair is partly delocalised into the benzene ring and less available to accept H⁺.",
+              "In methylamine the alkyl group donates electron density, making the lone pair more available.",
+              "Methylamine is the stronger base."
+            ],
+            "revisionTopic": "Amines"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-051",
+      "specRef": "3.3.11.2",
+      "requirement": "Compare ammonia, primary aliphatic and primary aromatic amines",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_223",
+            "front": "Why are primary aliphatic amines often stronger bases than ammonia?",
+            "back": "Alkyl electron donation increases lone-pair availability.",
+            "specRef": "3.3.11",
+            "mock": false
+          },
+          {
+            "id": "task1_v124_bulk_chem_224",
+            "front": "Why is phenylamine weaker as a base than ammonia?",
+            "back": "Its nitrogen lone pair is delocalised into the benzene ring.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Separate comparisons exist; a combined rank/order recall prompt may be helpful if not duplicate.",
+      "next": "duplicate_check_first"
+    },
+    {
+      "id": "A2ORG-052",
+      "specRef": "3.3.11.3",
+      "requirement": "Explain nucleophilic role of an amine lone pair",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_amine_nucleophile",
+            "front": "Why are amines nucleophiles?",
+            "back": "The nitrogen lone pair can be donated to an electron-deficient species.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-053",
+      "specRef": "3.3.11.3",
+      "requirement": "Identify primary, secondary and tertiary amines from nitrogen bonds",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_013",
+            "front": "How is a secondary amine classified by its nitrogen bonds?",
+            "back": "Nitrogen is bonded to two carbon-containing groups.",
+            "specRef": "3.3.11",
+            "mock": false
+          },
+          {
+            "id": "task1_v142_014",
+            "front": "How is a tertiary amine classified by its nitrogen bonds?",
+            "back": "Nitrogen is bonded to three carbon-containing groups.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v31_chemistry_amines_4",
+            "prompt": "Classify (CH₃)₂NH as a primary, secondary or tertiary amine and justify.",
+            "marks": 2,
+            "markPoints": [
+              "It is a secondary amine.",
+              "The nitrogen is bonded to two carbon-containing groups."
+            ],
+            "revisionTopic": "Amines"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-054",
+      "specRef": "3.3.11.3",
+      "requirement": "Recognise quaternary ammonium ions and cationic surfactant use",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_chem_011",
+            "front": "What is a quaternary ammonium ion?",
+            "back": "A positively charged nitrogen bonded to four carbon groups.",
+            "specRef": "3.3.11",
+            "mock": false
+          },
+          {
+            "id": "task1_v124_chem_012",
+            "front": "What is a use of quaternary ammonium salts?",
+            "back": "They can act as cationic surfactants.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-055",
+      "specRef": "3.3.11.3",
+      "requirement": "Trace repeated alkylation to secondary, tertiary and quaternary products",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_013",
+            "front": "How is a secondary amine classified by its nitrogen bonds?",
+            "back": "Nitrogen is bonded to two carbon-containing groups.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "A single classification question is not a full unfamiliar reaction-sequence/structure exercise.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-056",
+      "specRef": "3.3.11.3",
+      "requirement": "Draw substitution and acylation mechanisms for primary amines",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_225",
+            "front": "What is the common product of a primary amine and an acyl chloride?",
+            "back": "A secondary amide.",
+            "specRef": "3.3.11",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Product-class recall is strong; arrow-based mechanisms with more than one amine environment remain thin.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-057",
+      "specRef": "3.3.12.1",
+      "requirement": "Distinguish condensation and addition polymerisation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_poly_cond",
+            "front": "What happens in condensation polymerisation?",
+            "back": "Bifunctional monomers join and a small molecule such as H₂O or HCl is eliminated.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-058",
+      "specRef": "3.3.12.1",
+      "requirement": "Identify ester links from diol and dicarboxylic acid",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_chem_007",
+            "front": "What links form when a diol reacts with a dicarboxylic acid?",
+            "back": "Ester links, producing a polyester.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_polymers_2",
+            "prompt": "What type of polymerisation joins a diol to a dicarboxylic acid, and what small molecule is eliminated?",
+            "marks": 2,
+            "markPoints": [
+              "Condensation polymerisation.",
+              "Ester links form with loss of water."
+            ],
+            "revisionTopic": "Polymers"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-059",
+      "specRef": "3.3.12.1",
+      "requirement": "Identify amide links from diamine and dicarboxylic acid",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_chem_008",
+            "front": "What links form when a diamine reacts with a dicarboxylic acid?",
+            "back": "Amide links, producing a polyamide.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_polymers_3",
+            "prompt": "A polyamide chain is formed by reacting diamine with dicarboxylic acid. Identify the linking functional group.",
+            "marks": 2,
+            "markPoints": [
+              "The repeating link is –CONH– (amide link).",
+              "Water is eliminated during condensation formation."
+            ],
+            "revisionTopic": "Polymers"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-060",
+      "specRef": "3.3.12.1",
+      "requirement": "Identify amino acid polymerisation with peptide links",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_peptide",
+            "front": "What is a peptide bond?",
+            "back": "The amide link, −CONH−, formed between amino acids by condensation.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-061",
+      "specRef": "3.3.12.1",
+      "requirement": "Draw a complete polyester repeat unit from two monomer structures",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_222",
+            "front": "What bond links monomers in a polyester?",
+            "back": "Ester linkage, –COO–.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "No concrete unseen polymer repeat-unit drawing problem mapped in the main bank.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-062",
+      "specRef": "3.3.12.1",
+      "requirement": "Recover monomer structures from a polyamide chain fragment",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_223",
+            "front": "What bond links monomers in a polyamide?",
+            "back": "Amide linkage, –CONH–.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "No concrete reverse-polymer drawing problem mapped.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-063",
+      "specRef": "3.3.12.1",
+      "requirement": "Compare typical uses of Terylene, nylon 6,6 and Kevlar",
+      "status": "gap_recall",
+      "evidence": {
+        "cards": [],
+        "questions": []
+      },
+      "limitation": "General polymer cards do not directly recall uses of these named polymers.",
+      "next": "short_flashcard"
+    },
+    {
+      "id": "A2ORG-064",
+      "specRef": "3.3.12.1",
+      "requirement": "Explain hydrogen bonding between polyamide chains",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_chem_008",
+            "front": "What links form when a diamine reacts with a dicarboxylic acid?",
+            "back": "Amide links, producing a polyamide.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Amide-link formation is recalled, but the intermolecular force explanation is not directly evidenced.",
+      "next": "short_flashcard"
+    },
+    {
+      "id": "A2ORG-065",
+      "specRef": "3.3.12.2",
+      "requirement": "Explain why polyesters and polyamides can undergo hydrolysis",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_chem_005",
+            "front": "Why can polyesters be hydrolysed?",
+            "back": "Their polymer chains contain ester links.",
+            "specRef": "3.3.12",
+            "mock": false
+          },
+          {
+            "id": "task1_v124_chem_006",
+            "front": "Why can polyamides be hydrolysed?",
+            "back": "Their polymer chains contain amide links.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_polymers_1",
+            "prompt": "Explain why a polyester can undergo hydrolysis whereas poly(ethene) is highly resistant.",
+            "marks": 2,
+            "markPoints": [
+              "A polyester has hydrolysable ester links in the backbone.",
+              "Poly(ethene) has a carbon–carbon backbone without hydrolysable functional groups."
+            ],
+            "revisionTopic": "Polymers"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-066",
+      "specRef": "3.3.12.2",
+      "requirement": "Explain why saturated polyalkenes resist hydrolysis",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_chem_004",
+            "front": "Why are polyalkenes generally resistant to hydrolysis?",
+            "back": "Their backbones contain C–C bonds, not hydrolysable ester or amide links.",
+            "specRef": "3.3.12",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-067",
+      "specRef": "3.3.12.2",
+      "requirement": "Discuss incineration versus recycling trade-offs",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v142_015",
+            "front": "Why can incinerating polymer waste cause environmental problems?",
+            "back": "It releases CO₂ and may produce harmful gases if emissions are not controlled.",
+            "specRef": "3.3.12.2",
+            "mock": false
+          },
+          {
+            "id": "task1_v142_016",
+            "front": "Why can recycling mixed polymer waste be difficult?",
+            "back": "Different polymers have different properties and may need sorting before reprocessing.",
+            "specRef": "3.3.12.2",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_polymers_4",
+            "prompt": "Explain a benefit and a drawback of incinerating plastic waste for energy recovery.",
+            "marks": 2,
+            "markPoints": [
+              "Benefit: waste volume decreases and energy can be recovered.",
+              "Drawbacks include CO₂ emissions and potentially harmful gases depending on polymer and controls."
+            ],
+            "revisionTopic": "Polymers"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-068",
+      "specRef": "3.3.13.1",
+      "requirement": "State meaning of zwitterion and dual acid/base properties",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v129_008",
+            "front": "Define a zwitterion.",
+            "back": "An ion with both positive and negative charges but no overall charge.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_amino_acids_2",
+            "prompt": "Explain why amino acids can behave as both acids and bases.",
+            "marks": 3,
+            "markPoints": [
+              "Carboxyl group can donate H⁺.",
+              "Amino group can accept H⁺.",
+              "They are amphoteric."
+            ],
+            "revisionTopic": "Amino acids"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-069",
+      "specRef": "3.3.13.1",
+      "requirement": "Explain amino acid predominant ionic form in acid versus alkali",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v129_009",
+            "front": "What form does a simple amino acid predominantly take in strongly acidic solution?",
+            "back": "A positive ion with –NH₃⁺ and –COOH groups.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_v129_010",
+            "front": "What form does a simple amino acid predominantly take in strongly alkaline solution?",
+            "back": "A negative ion with –NH₂ and –COO⁻ groups.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-070",
+      "specRef": "3.3.13.1",
+      "requirement": "Draw unfamiliar amino acid as zwitterion and acid/alkali forms",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_amino_zwitterion",
+            "front": "What is a zwitterion?",
+            "back": "A molecule containing both positive and negative charges but with no overall charge.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_amino_acids_1",
+            "prompt": "Describe the zwitterion structure of glycine in water around neutral pH.",
+            "marks": 3,
+            "markPoints": [
+              "The amino group is protonated to –NH₃⁺.",
+              "The carboxyl group is deprotonated to –COO⁻.",
+              "Overall molecule carries equal positive and negative charges."
+            ],
+            "revisionTopic": "Amino acids"
+          }
+        ]
+      },
+      "limitation": "Only a simple glycine example is mapped; unfamiliar multi-form drawings need scrutiny.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-071",
+      "specRef": "3.3.13.2",
+      "requirement": "Define peptide bond and state hydrolysis outcome",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_peptide",
+            "front": "What is a peptide bond?",
+            "back": "The amide link, −CONH−, formed between amino acids by condensation.",
+            "specRef": null,
+            "mock": false
+          },
+          {
+            "id": "task1_v129_013",
+            "front": "What is produced when all the peptide bonds in a protein are hydrolysed?",
+            "back": "Its constituent amino acids.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-072",
+      "specRef": "3.3.13.2",
+      "requirement": "Distinguish protein primary, secondary and tertiary structure",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_079",
+            "front": "What is the primary structure of a protein?",
+            "back": "Its amino-acid sequence.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_full_080",
+            "front": "What are two common protein secondary structures?",
+            "back": "Alpha helices and beta pleated sheets.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_full_081",
+            "front": "What is a protein's tertiary structure?",
+            "back": "Its overall three-dimensional folding.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-073",
+      "specRef": "3.3.13.2",
+      "requirement": "Recall hydrogen bonding and sulfur–sulfur stabilisation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_082",
+            "front": "What interactions stabilise protein secondary structure?",
+            "back": "Hydrogen bonds.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_full_083",
+            "front": "What covalent link can stabilise a protein's tertiary structure?",
+            "back": "Disulfide bridge, –S–S–.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_amino_acids_4",
+            "prompt": "What interactions help stabilise the tertiary structure of a protein?",
+            "marks": 3,
+            "markPoints": [
+              "Hydrogen bonding between suitable groups.",
+              "Disulfide links between cysteine residues can stabilise structure.",
+              "Additional ionic and other intermolecular interactions may contribute."
+            ],
+            "revisionTopic": "Amino acids"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-074",
+      "specRef": "3.3.13.2",
+      "requirement": "Identify amino acids by TLC Rf and locating agents",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_092",
+            "front": "What locates amino-acid spots on some chromatograms?",
+            "back": "Ninhydrin.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_chromatography_1",
+            "prompt": "A TLC spot travels 3.2 cm and the solvent front 8.0 cm from the baseline. Calculate Rf.",
+            "marks": 2,
+            "markPoints": [
+              "Rf=distance moved by spot/distance moved by solvent front.",
+              "Rf=3.2/8.0=0.40."
+            ],
+            "revisionTopic": "Chromatography"
+          }
+        ]
+      },
+      "limitation": "A general Rf calculation exists; identification from multiple supplied standards and ninhydrin observations not mapped.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-075",
+      "specRef": "3.3.13.2",
+      "requirement": "Draw dipeptide and tripeptide structures from supplied amino acids",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_084",
+            "front": "What group links neighbouring amino acids in a polypeptide?",
+            "back": "Peptide (amide) link, –CONH–.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "No mapped three-amino-acid structure drawing task.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-076",
+      "specRef": "3.3.13.2",
+      "requirement": "Identify protein secondary/tertiary structure from labelled diagrams",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_080",
+            "front": "What are two common protein secondary structures?",
+            "back": "Alpha helices and beta pleated sheets.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_full_081",
+            "front": "What is a protein's tertiary structure?",
+            "back": "Its overall three-dimensional folding.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "No mapped novel protein-structure diagram problem.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-077",
+      "specRef": "3.3.13.3",
+      "requirement": "Explain stereospecificity of enzyme active sites",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_091",
+            "front": "Why can enzymes be stereospecific?",
+            "back": "The active-site shape can favour only one enantiomer.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-078",
+      "specRef": "3.3.13.3",
+      "requirement": "Explain inhibition by an active-site blocking molecule",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_090",
+            "front": "What is an enzyme inhibitor?",
+            "back": "A substance that reduces the enzyme's catalytic action.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-079",
+      "specRef": "3.3.13.3",
+      "requirement": "Apply stereospecificity to one of two enantiomers binding in a hypothetical active site",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_091",
+            "front": "Why can enzymes be stereospecific?",
+            "back": "The active-site shape can favour only one enantiomer.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Existing cards are primarily definitions, not unfamiliar 3D application.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-080",
+      "specRef": "3.3.13.4",
+      "requirement": "Identify phosphate, deoxyribose and a base as nucleotide constituents",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_085",
+            "front": "What is a nucleotide made of in DNA?",
+            "back": "Phosphate, 2-deoxyribose and a base.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_dna_2",
+            "prompt": "Describe a nucleotide's three components in DNA.",
+            "marks": 3,
+            "markPoints": [
+              "A phosphate group.",
+              "A deoxyribose sugar.",
+              "One nitrogen-containing base (A, T, G or C)."
+            ],
+            "revisionTopic": "DNA"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-081",
+      "specRef": "3.3.13.4",
+      "requirement": "Recall A–T and C–G complementary base pairing",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_dna_pair",
+            "front": "Which bases pair in DNA?",
+            "back": "A with T; C with G.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_dna_1",
+            "prompt": "State the complementary DNA bases pairing with adenine and cytosine.",
+            "marks": 2,
+            "markPoints": [
+              "Adenine pairs with thymine.",
+              "Cytosine pairs with guanine."
+            ],
+            "revisionTopic": "DNA"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-082",
+      "specRef": "3.3.13.4",
+      "requirement": "Explain sugar–phosphate covalent backbone versus hydrogen bonds",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_087",
+            "front": "What is the backbone of each DNA strand?",
+            "back": "Alternating sugar and phosphate units.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_dna_3",
+            "prompt": "Explain which bonds connect nucleotides in one DNA strand and which interactions link opposite strands.",
+            "marks": 2,
+            "markPoints": [
+              "Covalent phosphodiester links connect the sugar–phosphate backbone in one strand.",
+              "Hydrogen bonds form between complementary bases on opposite strands."
+            ],
+            "revisionTopic": "DNA"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-083",
+      "specRef": "3.3.13.4",
+      "requirement": "Interpret hydrogen-bond count for A–T and C–G pairs",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v129_015",
+            "front": "How many hydrogen bonds link adenine and thymine in DNA?",
+            "back": "Two hydrogen bonds.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_v129_016",
+            "front": "How many hydrogen bonds link cytosine and guanine in DNA?",
+            "back": "Three hydrogen bonds.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-084",
+      "specRef": "3.3.13.5",
+      "requirement": "Explain ligand substitution by cisplatin at a guanine nitrogen",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_088",
+            "front": "How does cisplatin disrupt DNA replication?",
+            "back": "Platinum forms bonds to DNA bases, hindering strand separation.",
+            "specRef": "3.3.13",
+            "mock": false
+          },
+          {
+            "id": "task1_v133_010",
+            "front": "Which DNA base bonds to platinum in cisplatin's action?",
+            "back": "Guanine.",
+            "specRef": "3.3.13.5",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-085",
+      "specRef": "3.3.13.5",
+      "requirement": "Explain how cisplatin disrupts DNA replication",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v124_bulk_chem_237",
+            "front": "How can cisplatin prevent DNA replication?",
+            "back": "It binds to DNA bases, disrupting copying.",
+            "specRef": "3.3.13",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-086",
+      "specRef": "3.3.13.5",
+      "requirement": "Discuss harm to non-cancer cells and benefits versus adverse effects",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v133_011",
+            "front": "Why can cisplatin have adverse effects on healthy cells?",
+            "back": "It may also interfere with DNA replication in healthy cells.",
+            "specRef": "3.3.13.5",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-087",
+      "specRef": "3.3.14",
+      "requirement": "Explain why fewer synthetic stages improve overall yield",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_074",
+            "front": "Why are fewer synthesis steps often preferable?",
+            "back": "They usually reduce waste and cumulative product losses.",
+            "specRef": "3.3.14",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v33_ch_40_0",
+            "prompt": "A two-step organic synthesis gives first-step yield 80% then second-step yield 70%. Calculate overall percentage yield.",
+            "marks": 2,
+            "markPoints": [
+              "Multiply fractional yields.",
+              "Overall yield=56%."
+            ],
+            "revisionTopic": "Organic synthesis"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-088",
+      "specRef": "3.3.14",
+      "requirement": "Explain why high atom economy is desirable",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_075",
+            "front": "Why can high atom economy benefit a synthesis?",
+            "back": "It reduces unwanted by-products and resource waste.",
+            "specRef": "3.3.14",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-089",
+      "specRef": "3.3.14",
+      "requirement": "Explain advantages of solvent-free synthesis",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v134_013",
+            "front": "Why may a solvent-free synthetic route produce less waste?",
+            "back": "There is no reaction solvent to dispose of or recover.",
+            "specRef": "3.3.14",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-090",
+      "specRef": "3.3.14",
+      "requirement": "Explain preference for less-hazardous starting materials",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v134_014",
+            "front": "Why are non-hazardous starting materials preferred in green chemistry?",
+            "back": "They reduce risks to people and the environment.",
+            "specRef": "3.3.14",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-091",
+      "specRef": "3.3.14",
+      "requirement": "Devise a four-step organic synthesis from a starting group to a target structure",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_077",
+            "front": "Why use a reaction pathway map in synthesis questions?",
+            "back": "To identify intermediates and compatible functional-group changes.",
+            "specRef": "3.3.14",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Existing route prompts and two-step yield arithmetic do not assess a full four-step route.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-092",
+      "specRef": "3.3.15",
+      "requirement": "Explain what 13C NMR number of environments signifies",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_100",
+            "front": "What does a ¹³C NMR peak correspond to?",
+            "back": "One distinct carbon environment.",
+            "specRef": "3.3.15",
+            "mock": false
+          },
+          {
+            "id": "task1_v124_bulk_chem_241",
+            "front": "What does the number of signals in a carbon-13 NMR spectrum indicate?",
+            "back": "Number of different carbon environments.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-093",
+      "specRef": "3.3.15",
+      "requirement": "Explain chemical shift and reference chemical environments",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_nmr_shift",
+            "front": "What does chemical shift tell you?",
+            "back": "It indicates the electronic environment around a nucleus relative to TMS.",
+            "specRef": null,
+            "mock": false
+          },
+          {
+            "id": "task1_full_102",
+            "front": "What does 'chemical shift' describe?",
+            "back": "Peak position relative to a reference signal, in ppm.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-094",
+      "specRef": "3.3.15",
+      "requirement": "Recall TMS reference and chemical shift zero",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_nmr_tms",
+            "front": "Why is TMS used as an NMR reference?",
+            "back": "It gives one sharp signal at δ = 0 and is chemically inert/volatile.",
+            "specRef": null,
+            "mock": false
+          },
+          {
+            "id": "task1_v124_bulk_chem_245",
+            "front": "Why is TMS assigned chemical shift zero?",
+            "back": "It is the reference standard.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-095",
+      "specRef": "3.3.15",
+      "requirement": "Recall deuterated solvents' purpose in proton NMR",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_105",
+            "front": "What does a deuterated solvent reduce in proton NMR?",
+            "back": "Unwanted solvent ¹H signals.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-096",
+      "specRef": "3.3.15",
+      "requirement": "Use 1H NMR integration to identify relative proton counts",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_nmr_integration",
+            "front": "What does integration in a ¹H NMR spectrum show?",
+            "back": "The relative number of protons in each environment.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v26_chemistry_nmr_3",
+            "prompt": "A proton spectrum contains integrations in ratio 3:2:1. State what this tells you and one limitation of integration alone.",
+            "marks": 2,
+            "markPoints": [
+              "The signals represent three, two and one equivalent proton groups in relative proportion.",
+              "Integration alone does not identify which functional groups or connectivity are present."
+            ],
+            "revisionTopic": "NMR"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-097",
+      "specRef": "3.3.15",
+      "requirement": "Apply n+1 rule to doublets, triplets and quartets",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v130_152",
+            "front": "What splitting pattern does one adjacent equivalent proton cause?",
+            "back": "Doublet.",
+            "specRef": "3.3.15",
+            "mock": false
+          },
+          {
+            "id": "task1_v130_153",
+            "front": "What splitting pattern do two adjacent equivalent protons cause?",
+            "back": "Triplet.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v26_chemistry_nmr_2",
+            "prompt": "A ¹H NMR signal appears as a triplet. Assuming usual n+1 splitting, how many equivalent neighbouring hydrogens cause it?",
+            "marks": 2,
+            "markPoints": [
+              "n+1=3.",
+              "Thus n=2 neighbouring equivalent hydrogens."
+            ],
+            "revisionTopic": "NMR"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-098",
+      "specRef": "3.3.15",
+      "requirement": "Use NMR chemical shift, splitting and integration together for structure inference",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_227",
+            "front": "What does the number of ¹H NMR signals show?",
+            "back": "Number of distinct proton environments.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "stretch_v34_chemistry_nmr",
+            "prompt": "A compound has formula C₄H₈O₂ and three distinct proton NMR signals: δ 1.2 ppm (triplet, integration 3), δ 2.3 ppm (quartet, integration 2), and δ 3.7 ppm (singlet, integration 3). Suggest an ester structure, explain the splitting and integration of each signal, and justify why the total signal integration fits the molecular formula.",
+            "marks": 7,
+            "markPoints": [
+              "The proposed ester is methyl propanoate CH₃CH₂COOCH₃.",
+              "Triplet at ~1.2 ppm integrates to 3H for CH₃ adjacent to CH₂.",
+              "Quartet at ~2.3 ppm integrates to 2H for CH₂ adjacent to CH₃ and carbonyl.",
+              "Singlet at ~3.7 ppm integrates to 3H for OCH₃ with no neighbouring proton on the adjacent oxygen.",
+              "The n+1 rule explains triplet from 2 neighbours and quartet from 3 neighbours.",
+              "Integrated protons total 3 + 2 + 3 = 8, matching C₄H₈O₂.",
+              "The chemical shifts are consistent with alkyl group next to C=O and methoxy ester oxygen."
+            ],
+            "revisionTopic": "NMR"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-099",
+      "specRef": "3.3.15",
+      "requirement": "Use C-13 plus H-1 data with booklet to distinguish multiple possible structures",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_100",
+            "front": "What does a ¹³C NMR peak correspond to?",
+            "back": "One distinct carbon environment.",
+            "specRef": "3.3.15",
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "stretch_v34_chemistry_nmr",
+            "prompt": "A compound has formula C₄H₈O₂ and three distinct proton NMR signals: δ 1.2 ppm (triplet, integration 3), δ 2.3 ppm (quartet, integration 2), and δ 3.7 ppm (singlet, integration 3). Suggest an ester structure, explain the splitting and integration of each signal, and justify why the total signal integration fits the molecular formula.",
+            "marks": 7,
+            "markPoints": [
+              "The proposed ester is methyl propanoate CH₃CH₂COOCH₃.",
+              "Triplet at ~1.2 ppm integrates to 3H for CH₃ adjacent to CH₂.",
+              "Quartet at ~2.3 ppm integrates to 2H for CH₂ adjacent to CH₃ and carbonyl.",
+              "Singlet at ~3.7 ppm integrates to 3H for OCH₃ with no neighbouring proton on the adjacent oxygen.",
+              "The n+1 rule explains triplet from 2 neighbours and quartet from 3 neighbours.",
+              "Integrated protons total 3 + 2 + 3 = 8, matching C₄H₈O₂.",
+              "The chemical shifts are consistent with alkyl group next to C=O and methoxy ester oxygen."
+            ],
+            "revisionTopic": "NMR"
+          }
+        ]
+      },
+      "limitation": "A proton-only integrated example is present; directly mapped combined 13C/1H spectra interpretation remains thin.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-100",
+      "specRef": "3.3.15",
+      "requirement": "Flag that n+1 AQA required cases are limited to doublet, triplet and quartet",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_nmr_split",
+            "front": "What does the n+1 rule describe in simple ¹H NMR spectra?",
+            "back": "A proton environment with n equivalent neighbouring protons is split into n+1 peaks.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "original_v33_ch_34_3",
+            "prompt": "A hydrogen has 5 equivalent neighbouring protons. Using the simple n+1 rule, how many lines are predicted in its ¹H NMR signal?",
+            "marks": 2,
+            "markPoints": [
+              "For simple first-order splitting, multiplicity=n+1.",
+              "Predicted lines=6."
+            ],
+            "revisionTopic": "NMR"
+          }
+        ]
+      },
+      "limitation": "A generated question about five neighbouring protons goes beyond the named required splitting patterns; keep as enrichment, not compulsory core.",
+      "next": "scope_review"
+    },
+    {
+      "id": "A2ORG-101",
+      "specRef": "3.3.16",
+      "requirement": "Define stationary and mobile phases in chromatography",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_093",
+            "front": "What does the mobile phase do in chromatography?",
+            "back": "It carries the components through the stationary phase.",
+            "specRef": "3.3.16",
+            "mock": false
+          },
+          {
+            "id": "task1_full_094",
+            "front": "What is the stationary phase?",
+            "back": "The phase with which sample components interact while separating.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-102",
+      "specRef": "3.3.16",
+      "requirement": "Identify TLC stationary solid and solvent mobile phase",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v123_chem_070",
+            "front": "What is the stationary phase in TLC typically?",
+            "back": "A solid adsorbent such as silica.",
+            "specRef": "7.2 RP12",
+            "mock": false
+          },
+          {
+            "id": "task1_v124_bulk_chem_249",
+            "front": "What is the mobile phase in TLC?",
+            "back": "A solvent moving up the plate.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-103",
+      "specRef": "3.3.16",
+      "requirement": "Recognise column chromatography uses packed solid and moving solvent",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v129_027",
+            "front": "What is the mobile phase in column chromatography?",
+            "back": "A liquid solvent.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-104",
+      "specRef": "3.3.16",
+      "requirement": "Identify GC carrier gas, stationary phase and retention time",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v129_024",
+            "front": "What is the mobile phase in gas chromatography?",
+            "back": "A carrier gas.",
+            "specRef": "3.3.16",
+            "mock": false
+          },
+          {
+            "id": "task1_v129_025",
+            "front": "What can form the stationary phase in gas chromatography?",
+            "back": "A solid or a non-volatile liquid coating a solid.",
+            "specRef": "3.3.16",
+            "mock": false
+          },
+          {
+            "id": "task1_v129_026",
+            "front": "Define retention time in gas chromatography.",
+            "back": "The time between sample injection and detection of a component.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-105",
+      "specRef": "3.3.16",
+      "requirement": "Explain relative solubility and adsorption/retention separation",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_chem_232",
+            "front": "Why can chromatography separate mixture components?",
+            "back": "They distribute differently between stationary and mobile phases.",
+            "specRef": "3.3.16",
+            "mock": false
+          },
+          {
+            "id": "task1_chem_233",
+            "front": "How does a higher affinity for the stationary phase affect travel?",
+            "back": "The component travels more slowly.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-106",
+      "specRef": "3.3.16",
+      "requirement": "Calculate Rf from chromatogram distances",
+      "status": "supported_practice",
+      "evidence": {
+        "cards": [
+          {
+            "id": "chem_a2_chrom_r_f",
+            "front": "What is Rf in thin-layer chromatography?",
+            "back": "distance moved by solute ÷ distance moved by solvent front.",
+            "specRef": null,
+            "mock": false
+          }
+        ],
+        "questions": [
+          {
+            "id": "orig_v32_chem_chromatography_1",
+            "prompt": "A TLC spot travels 3.2 cm and the solvent front 8.0 cm from the baseline. Calculate Rf.",
+            "marks": 2,
+            "markPoints": [
+              "Rf=distance moved by spot/distance moved by solvent front.",
+              "Rf=3.2/8.0=0.40."
+            ],
+            "revisionTopic": "Chromatography"
+          }
+        ]
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-107",
+      "specRef": "3.3.16",
+      "requirement": "Compare Rf values and retention times against standards",
+      "status": "partial",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_096",
+            "front": "Why compare Rf values under identical conditions?",
+            "back": "Rf changes with solvent and stationary phase.",
+            "specRef": "3.3.16",
+            "mock": false
+          },
+          {
+            "id": "task1_full_097",
+            "front": "What does a retention time help identify in gas chromatography?",
+            "back": "A component, when compared under the same conditions.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Numerical Rf drills exist but an unfamiliar multiple-standards interpretation with uncertainty is not mapped.",
+      "next": "exam_question"
+    },
+    {
+      "id": "A2ORG-108",
+      "specRef": "3.3.16",
+      "requirement": "Explain why GC coupled with mass spec improves identification",
+      "status": "supported_recall",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_full_098",
+            "front": "Why may gas chromatography be coupled with mass spectrometry?",
+            "back": "To separate components and help identify them by mass spectra.",
+            "specRef": "3.3.16",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": null,
+      "next": null
+    },
+    {
+      "id": "A2ORG-109",
+      "specRef": "3.3.16",
+      "requirement": "Interpret a full RP12 TLC data table including unknown mixture",
+      "status": "gap_applied",
+      "evidence": {
+        "cards": [
+          {
+            "id": "task1_v123_chem_068",
+            "front": "What does a mixture giving several TLC spots suggest?",
+            "back": "It contains several components.",
+            "specRef": "7.2 RP12",
+            "mock": false
+          }
+        ],
+        "questions": []
+      },
+      "limitation": "Existing practice emphasizes one-spot Rf arithmetic, not a multi-sample chromatogram data interpretation.",
+      "next": "exam_question"
+    }
+  ]
+}
