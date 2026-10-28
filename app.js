@@ -2030,6 +2030,16 @@ function acceptedMarkPointAlternative(answer,variants,point){
 }
 
 function examSuggested(q,answer){
+ // A direct denial of a curated correct statement is not evidence for it.
+ // This guard also prevents the older fuzzy matcher awarding other marks
+ // for the same isolated, explicitly contradicted statement.
+ const denied=String(answer||'').trim().match(/^(?:not|never)\s+(.+?)[.!]?$/i);
+ if(denied&&q.markPointAcceptedAlternatives?.some(alts=>Array.isArray(alts)&&
+   alts.some(v=>normalise(v)===normalise(denied[1])))){
+  return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),
+   finalCorrect:false,confidence:'high',suggested:0};
+ }
+
  if(/^\s*(?:i (?:do not|don't|dont) know|idk|no idea|not sure|unsure)\s*[.!]?\s*$/i.test(String(answer||'')))return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  // AQA source-first repairs (2020–21): award only the distinct
  // reasoning/results actually demonstrated, not keyword overlap.
