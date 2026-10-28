@@ -15,7 +15,7 @@ assert.equal(prior.filter(c=>c.id.startsWith('chem_y1_chat_v126_')).length,100);
 assert.equal(fresh.length,56);
 assert.equal(fresh.filter(c=>c.subject==='Chemistry').length,49);
 assert.equal(fresh.filter(c=>c.subject==='Physics').length,7);
-assert.equal(fresh.filter(c=>c.mock).length,32);
+assert.equal(fresh.filter(c=>c.mock).length,31,'One v128 buffer-region card is intentionally excluded from the school mock in v154');
 assert.equal(fresh.filter(c=>!c.taught).length,24);
 const ids=new Set(),questions=new Set();
 const norm=s=>String(s).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
