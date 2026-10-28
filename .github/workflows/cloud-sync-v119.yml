@@ -70,6 +70,8 @@ on:
       - 'tests/task1-v172-science-mock-review.cjs'
       - 'tests/task1-v174-formula-evidence.cjs'
       - 'tests/task1-v175-manual-diagram-mark-review.cjs'
+      - 'tests/task1-v176-mechanics-manual-spec-audit.cjs'
+      - 'editorial/task1-v176-mechanics-manual-spec-audit.json'
       - 'editorial/task1-v175-manual-diagram-mark-review.json'
       - 'editorial/task1-v174-formula-evidence-review.json'
       - 'tests/task1-v171-historical-snapshot.cjs'
@@ -196,6 +198,7 @@ jobs:
       - run: node tests/task1-v172-science-mock-review.cjs
       - run: node tests/task1-v174-formula-evidence.cjs
       - run: node tests/task1-v175-manual-diagram-mark-review.cjs
+      - run: node tests/task1-v176-mechanics-manual-spec-audit.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
