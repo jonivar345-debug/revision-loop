@@ -1,0 +1,1266 @@
+{
+  "release": "v155",
+  "date": "2026-10-28",
+  "specification": "AQA 7405 Chemistry Year 1 Organic: 3.3.2 to 3.3.5",
+  "basis": "User-supplied comprehensive lesson notes plus official AQA 7405 subsection headings. This is a targeted 67-point recall-prompt audit, not every atomic specification item.",
+  "sourceUrls": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "scope": "Active Chemistry cards with mock:true only",
+  "method": "Conservative exact direct-question keyword matching over existing card fronts; evidence includes actual front/back. Indirect coverage and examination skill must be checked separately; this method is incomplete.",
+  "count": 67,
+  "statusCounts": {
+    "direct_matching_recall_prompt": 54,
+    "not_yet_directly_mapped": 13
+  },
+  "fullSpecCoverageCertified": false,
+  "knownBlindSpots": [
+    "No claim about completeness of specification outside 3.3.2-3.3.5",
+    "Mechanism drawing and numerical problem-solving require practice questions, not oversized flashcards",
+    "An unmatched regex does not establish missing factual coverage",
+    "Known potential out-of-scope items are excluded from mock pool in v155"
+  ],
+  "checks": [
+    {
+      "id": "ASORG-155-001",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Define an alkane and its saturation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v142_009",
+          "front": "Define an alkane.",
+          "back": "A saturated hydrocarbon containing only carbon–carbon single bonds.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-002",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Recall the acyclic alkane general formula",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_chem_119",
+          "front": "What is the general formula for an acyclic alkane?",
+          "back": "CₙH₂ₙ₊₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2"
+        },
+        {
+          "id": "task1_v124_bulk_chem_106",
+          "front": "What is the general formula for acyclic alkanes?",
+          "back": "CₙH₂ₙ₊₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-003",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Define a crude-oil fraction",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v155_001",
+          "front": "What is a fraction of crude oil?",
+          "back": "A mixture of hydrocarbons with similar boiling points.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-004",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Recognise crude oil as a hydrocarbon mixture",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v155_002",
+          "front": "What is crude oil primarily a mixture of?",
+          "back": "Different hydrocarbons, mainly alkanes.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-005",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Understand the fractionating-column temperature gradient",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_015",
+          "front": "Fill the gap: a fractionating column is cooler near the ___.",
+          "back": "top",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-006",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Explain condensation position of high-boiling fractions",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_016",
+          "front": "Where do higher-boiling crude-oil fractions condense?",
+          "back": "Lower down the hotter fractionating column.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-007",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Know the boiling-point trend with longer chains",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-008",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Relate fraction length to volatility",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_067",
+          "front": "Why does reflux prevent loss of volatile reactants?",
+          "back": "Vapour condenses and returns to the reaction vessel.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5.2"
+        },
+        {
+          "id": "task1_v155_003",
+          "front": "Why are longer hydrocarbon fractions generally less volatile?",
+          "back": "Stronger intermolecular forces make them harder to vaporise.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-009",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "requirement": "Define cracking",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_chem_126",
+          "front": "What is cracking?",
+          "back": "Breaking large hydrocarbons into smaller hydrocarbons.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-010",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "requirement": "Recall thermal cracking conditions",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_019",
+          "front": "Which cracking method uses high temperature and high pressure?",
+          "back": "Thermal cracking.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-011",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "requirement": "Recall catalytic cracking catalyst",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_020",
+          "front": "Fill the gap: catalytic cracking uses a ___ catalyst.",
+          "back": "zeolite",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-012",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "requirement": "Distinguish thermal and catalytic products",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v130_119",
+          "front": "What distinguishes thermal from catalytic cracking in product emphasis?",
+          "back": "Thermal cracking favours alkenes; catalytic cracking favours fuels and aromatics.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-013",
+      "specRef": "3.3.2.2",
+      "topic": "Alkanes",
+      "requirement": "Explain economic importance of cracking",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v142_011",
+          "front": "What catalyst is associated with catalytic cracking and what products are valuable?",
+          "back": "A zeolite catalyst; valuable products include motor fuels and aromatic hydrocarbons.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-014",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Identify complete combustion products",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-015",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Identify incomplete combustion products",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-016",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Explain toxicity of carbon monoxide",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-017",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Explain engine NOx formation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_021",
+          "front": "Why can nitrogen oxides form inside combustion engines?",
+          "back": "High temperatures allow nitrogen and oxygen from air to react.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-018",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Identify catalytic converter CO product",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_022",
+          "front": "In a catalytic converter, CO is oxidised to which gas?",
+          "back": "Carbon dioxide, CO₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-019",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Identify catalytic converter NOx product",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_023",
+          "front": "In a catalytic converter, nitrogen oxides are reduced to what?",
+          "back": "Nitrogen, N₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-020",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Write a simple CO/NO catalytic converter equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v155_004",
+          "front": "Give the catalytic-converter equation for CO and NO.",
+          "back": "2CO + 2NO → 2CO₂ + N₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-021",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Recall a CaO flue-gas removal equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_y1_chat_v126_074",
+          "front": "Write calcium oxide removing sulfur dioxide.",
+          "back": "CaO + SO₂ → CaSO₃.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.2.2"
+        },
+        {
+          "id": "task1_v146_024",
+          "front": "Complete the flue-gas equation: CaO + SO₂ → ___",
+          "back": "CaSO₃.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-022",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Recall a CaCO3 flue-gas removal equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_025",
+          "front": "Complete the flue-gas equation: CaCO₃ + SO₂ → CaSO₃ + ___",
+          "back": "CO₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-023",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "requirement": "Define a free radical",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_chem_121",
+          "front": "What is a free radical?",
+          "back": "A species with an unpaired electron.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-024",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "requirement": "Recall initiation equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_026",
+          "front": "Radical initiation: fill the gap, Cl₂ → ___ (under UV).",
+          "back": "2Cl•",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-025",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "requirement": "Recall propagation stage 1 equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_027",
+          "front": "Radical propagation 1: Cl• + CH₄ → HCl + ___",
+          "back": "CH₃•",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-026",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "requirement": "Recall propagation stage 2 equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_028",
+          "front": "Radical propagation 2: CH₃• + Cl₂ → CH₃Cl + ___",
+          "back": "Cl•",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-027",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "requirement": "Recall a radical termination equation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_030",
+          "front": "Termination: complete CH₃• + CH₃• → ___",
+          "back": "C₂H₆.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-028",
+      "specRef": "3.3.2.4",
+      "topic": "Alkanes",
+      "requirement": "Explain formation of multiple chlorination products",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_y1_chat_v126_100",
+          "front": "Why is chlorination used despite possible by-products?",
+          "back": "It prevents waterborne infections; treatment is controlled and monitored.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.2.3"
+        },
+        {
+          "id": "task1_v146_031",
+          "front": "Why can methane chlorination give several chlorinated products?",
+          "back": "The products can undergo further radical substitution.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-029",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain polarity of carbon–halogen bond",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-030",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Define nucleophile",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_nucleophile",
+          "front": "What is a nucleophile?",
+          "back": "An electron-pair donor.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-031",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise OH- substitution gives an alcohol",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_halogeno_sub",
+          "front": "What mechanism occurs when OH⁻ reacts with a halogenoalkane to form an alcohol?",
+          "back": "Nucleophilic substitution.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "task1_chem_133",
+          "front": "What is the main type of product from nucleophilic substitution by OH⁻?",
+          "back": "An alcohol.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3"
+        },
+        {
+          "id": "task1_v146_034",
+          "front": "Substitution arrow 1: OH⁻ attacks which atom of a halogenoalkane?",
+          "back": "The δ⁺ carbon bonded to the halogen.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-032",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise CN- substitution gives a nitrile",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-033",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise NH3 substitution gives an amine",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_077",
+          "front": "Ammonia substitution: where does the next NH₃ lone-pair arrow point?",
+          "back": "Towards H on the positively charged RNH₃⁺ intermediate.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-034",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recall nucleophilic substitution arrow origin",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_acyl_review_v41_08",
+          "front": "In acylation mechanisms, where should the nucleophile's arrow point?",
+          "back": "Toward the electrophilic carbonyl carbon.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-035",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain hydrolysis rate trend by C–X bond strength",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_chem_131",
+          "front": "Which haloalkane reacts fastest in hydrolysis: fluoro or iodo?",
+          "back": "Iodoalkane, because its C–I bond is weaker.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3"
+        },
+        {
+          "id": "task1_v124_bulk_chem_116",
+          "front": "How does hydrolysis rate generally change from chloroalkane to iodoalkane?",
+          "back": "It increases as the C–halogen bond gets weaker.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-036",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "requirement": "Distinguish elimination from substitution",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_043",
+          "front": "Elimination of 2-bromobutane: name two possible alkene position isomers.",
+          "back": "But-1-ene and but-2-ene.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-037",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise hydroxide role as base in elimination",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_elimination",
+          "front": "What conditions favour elimination of a halogenoalkane with OH⁻?",
+          "back": "Hot ethanolic hydroxide.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "task1_v146_039",
+          "front": "In elimination by OH⁻, does OH⁻ attack carbon or an adjacent hydrogen?",
+          "back": "An adjacent (β) hydrogen; OH⁻ acts as a base.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.2"
+        },
+        {
+          "id": "task1_v146_040",
+          "front": "Elimination arrow 1: where does the oxygen lone pair of OH⁻ point?",
+          "back": "To a hydrogen on the carbon next to the C–Br carbon.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-038",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise conventional aqueous/ethanolic contrast",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-039",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain UV production of chlorine radical from CFC",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-040",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recall ozone cycle first step",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_044",
+          "front": "Ozone cycle step 1: Cl• + O₃ → ClO• + ___",
+          "back": "O₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-041",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recall ozone cycle second step",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_045",
+          "front": "Ozone cycle step 2: ClO• + O₃ → Cl• + ___",
+          "back": "2O₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-042",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain why chlorine radical is catalytic",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-043",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recall scientific evidence on CFC restrictions",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-044",
+      "specRef": "3.3.4.1",
+      "topic": "Alkenes",
+      "requirement": "Define alkene and unsaturated",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-045",
+      "specRef": "3.3.4.1",
+      "topic": "Alkenes",
+      "requirement": "Recall acyclic one-double-bond alkene formula",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_chem_136",
+          "front": "What is the general formula for an acyclic monoalkene?",
+          "back": "CₙH₂ₙ.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-046",
+      "specRef": "3.3.4.1",
+      "topic": "Alkenes",
+      "requirement": "Understand double bond as high electron-density region",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_mechanisms_v42_13",
+          "front": "Why is an alkene's C=C bond attractive to electrophiles?",
+          "back": "The double bond is a region of high electron density.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "chem_mechanisms_v42_14",
+          "front": "Where does the first curly arrow start in alkene electrophilic addition?",
+          "back": "At the electron-rich C=C double bond.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "task1_chem_137",
+          "front": "Which part of an alkene reacts with an electrophile?",
+          "back": "Its electron-rich C=C double bond.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-047",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Define electrophile",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_electrophile",
+          "front": "What is an electrophile?",
+          "back": "An electron-pair acceptor.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-048",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Recognise reaction with HBr as electrophilic addition",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_051",
+          "front": "After HBr protonates ethene, which charged intermediate forms?",
+          "back": "The ethyl carbocation, CH₃CH₂⁺.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-049",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Use carbocation stability to explain major product",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_mechanisms_v42_16",
+          "front": "Order typical carbocations by stability.",
+          "back": "Tertiary is more stable than secondary, which is more stable than primary.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-050",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Explain bromine-water test",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v127_018",
+          "front": "Bromine water changes from orange to colourless in a functional-group test. What bond is suggested?",
+          "back": "A carbon–carbon double bond, C=C.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.6 RP6"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-051",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Explain induced dipole in Br2",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-052",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Identify immediate addition product of H2SO4",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_055",
+          "front": "What is the immediate product of ethene + H₂SO₄?",
+          "back": "Ethyl hydrogensulfate, CH₃CH₂OSO₃H.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4.2"
+        },
+        {
+          "id": "task1_v146_082",
+          "front": "Ethene + H₂SO₄: what breaks when ethene bonds to H⁺?",
+          "back": "The acid O–H bond breaks heterolytically to form HSO₄⁻.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-053",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "requirement": "Recognise addition polymerisation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_chem_143",
+          "front": "What forms when ethene undergoes addition polymerisation?",
+          "back": "Poly(ethene).",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-054",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "requirement": "Convert PVC repeating unit to monomer",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_061",
+          "front": "What is the monomer of poly(chloroethene), PVC?",
+          "back": "Chloroethene, CH₂=CHCl.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-055",
+      "specRef": "3.3.4.3",
+      "topic": "Alkenes",
+      "requirement": "Explain plasticiser effect on PVC",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v124_bulk_chem_126",
+          "front": "What can a plasticiser do to PVC?",
+          "back": "Weaken intermolecular forces, increasing flexibility.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-056",
+      "specRef": "3.3.5.1",
+      "topic": "Alcohols",
+      "requirement": "Recall hydration of ethene as ethanol route",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v124_bulk_chem_124",
+          "front": "What is the product of hydration of ethene?",
+          "back": "Ethanol.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-057",
+      "specRef": "3.3.5.1",
+      "topic": "Alcohols",
+      "requirement": "Recall fermentation products",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v124_bulk_chem_133",
+          "front": "Why does fermentation ethanol not guarantee carbon-neutral fuel overall?",
+          "back": "Production, transport and processing may emit greenhouse gases.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5"
+        },
+        {
+          "id": "task1_v146_062",
+          "front": "What is the overall fermentation equation for glucose to ethanol?",
+          "back": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-058",
+      "specRef": "3.3.5.1",
+      "topic": "Alcohols",
+      "requirement": "Evaluate carbon-neutral claim for bioethanol",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v130_131",
+          "front": "Why is ethanol from biomass not automatically carbon neutral?",
+          "back": "Growing, processing and transporting biomass may emit greenhouse gases.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5"
+        },
+        {
+          "id": "task1_v155_008",
+          "front": "Why is bioethanol not automatically carbon neutral?",
+          "back": "Growing, processing and transporting feedstocks can release greenhouse gases.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5.1"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-059",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Distinguish primary and secondary oxidation products",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_alcohol_primary",
+          "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+          "back": "An aldehyde.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "chem_alcohol_primary_reflux",
+          "front": "What forms when a primary alcohol is oxidised under reflux with excess oxidant?",
+          "back": "A carboxylic acid.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "v33_card_chemistry_alcohols_60",
+          "front": "Why can a primary alcohol produce a carboxylic acid on extended oxidation?",
+          "back": "Primary alcohol oxidises to an aldehyde which can oxidise further to carboxylic acid.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-060",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Recall distillation for aldehyde product",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_alcohol_primary",
+          "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+          "back": "An aldehyde.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-061",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Recall reflux for carboxylic acid product",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_alcohol_primary_reflux",
+          "front": "What forms when a primary alcohol is oxidised under reflux with excess oxidant?",
+          "back": "A carboxylic acid.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-062",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Recall oxidation observation with acidified dichromate",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v127_025",
+          "front": "Can the orange-to-green oxidation observation alone distinguish primary from secondary alcohols?",
+          "back": "No; both types can be oxidised.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.6 RP6"
+        },
+        {
+          "id": "task1_v127_026",
+          "front": "Why is no orange-to-green change consistent with a tertiary alcohol?",
+          "back": "Tertiary alcohols resist oxidation under standard test conditions.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.6 RP6"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-063",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Recognise Tollens positive observation",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v127_028",
+          "front": "An orange 2,4-DNPH precipitate and no Tollens silver deposit suggest what?",
+          "back": "A ketone.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.8"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-064",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Recognise Fehling positive observation",
+      "status": "not_yet_directly_mapped",
+      "evidence": [],
+      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+    },
+    {
+      "id": "ASORG-155-065",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Identify condenser lower coolant inlet",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v155_006",
+          "front": "Where should cooling water enter a standard condenser?",
+          "back": "At the lower water inlet, keeping the jacket full.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5.2"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-066",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "requirement": "Understand dehydration as alcohol-to-alkene reaction",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "chem_mechanisms_v42_17",
+          "front": "What structural change defines dehydration of an alcohol?",
+          "back": "Loss of a water molecule and formation of C=C.",
+          "mock": true,
+          "active": true,
+          "specRef": null
+        },
+        {
+          "id": "task1_chem_150",
+          "front": "What forms when an alcohol undergoes dehydration?",
+          "back": "An alkene and water.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5"
+        },
+        {
+          "id": "task1_v124_bulk_chem_132",
+          "front": "What is formed by acid-catalysed dehydration of an alcohol?",
+          "back": "An alkene and water.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    },
+    {
+      "id": "ASORG-155-067",
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "requirement": "Identify protonation as first dehydration stage",
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v146_068",
+          "front": "Alcohol dehydration mechanism step 1: what happens to the –OH group?",
+          "back": "It is protonated to –OH₂⁺, making water a better leaving group.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.5.3"
+        }
+      ],
+      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+    }
+  ]
+}
