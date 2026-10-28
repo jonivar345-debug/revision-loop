@@ -33,7 +33,7 @@ for(let i=0;i<added.length;i++){
 const app=fs.readFileSync('app.js','utf8');
 const begin=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
 assert(begin>=0&&end>begin);
-const evaluate=new Function('window',app.slice(begin,end)+'\\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+const evaluate=new Function('window',app.slice(begin,end)+';return evaluateCard;')({RevisionPhotoelectricCardMarking:null});
 for(const c of added)assert.equal(evaluate(c,c.back).status,'correct','Grader must accept model answer '+c.id);
 for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
  assert(app.includes(k),'Saved progress keys changed');
