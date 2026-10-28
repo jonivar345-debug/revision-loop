@@ -1,7 +1,7 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 146,
-  "updatedAt": "2026-10-27",
+  "deckVersion": 150,
+  "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
     "Chemistry": "Year 1 plus taught Year 2 physical and organic content.",
@@ -68492,6 +68492,160 @@
       "priority": 7,
       "courseTopic": "Alcohols",
       "revisionTopic": "Alcohols"
+    },
+    {
+      "id": "task1_v150_001",
+      "subject": "Chemistry",
+      "specRef": "3.3.1.1",
+      "stage": "AS",
+      "topic": "Organic chemistry",
+      "front": "What does a general formula represent in organic chemistry?",
+      "back": "The composition of a whole homologous series using a variable such as n.",
+      "accept": [
+        "The composition of a whole homologous series using a variable such as n."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry"
+    },
+    {
+      "id": "task1_v150_002",
+      "subject": "Chemistry",
+      "specRef": "3.3.3.3",
+      "stage": "AS",
+      "topic": "Halogenoalkanes",
+      "front": "Which type of radiation does the ozone layer absorb?",
+      "back": "Much of the Sun's harmful ultraviolet (UV) radiation.",
+      "accept": [
+        "Much of the Sun's harmful ultraviolet (UV) radiation."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Halogenoalkanes",
+      "revisionTopic": "Halogenoalkanes"
+    },
+    {
+      "id": "task1_v150_003",
+      "subject": "Chemistry",
+      "specRef": "3.3.4.3",
+      "stage": "AS",
+      "topic": "Alkenes",
+      "front": "Which intermolecular forces act between poly(ethene) chains?",
+      "back": "London dispersion forces.",
+      "accept": [
+        "London dispersion forces."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Alkenes",
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "task1_v150_004",
+      "subject": "Chemistry",
+      "specRef": "3.3.4.3",
+      "stage": "AS",
+      "topic": "Alkenes",
+      "front": "Why do longer poly(ethene) chains usually have stronger attractions?",
+      "back": "More electrons and greater contact area increase London dispersion forces.",
+      "accept": [
+        "More electrons and greater contact area increase London dispersion forces."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Alkenes",
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "task1_v150_005",
+      "subject": "Chemistry",
+      "specRef": "3.3.4.3",
+      "stage": "AS",
+      "topic": "Alkenes",
+      "front": "Name one common use of rigid, unplasticised PVC.",
+      "back": "Drainage pipes or window frames.",
+      "accept": [
+        "Drainage pipes or window frames."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Alkenes",
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "task1_v150_006",
+      "subject": "Chemistry",
+      "specRef": "3.3.4.3",
+      "stage": "AS",
+      "topic": "Alkenes",
+      "front": "Name one common use of flexible, plasticised PVC.",
+      "back": "Electrical cable insulation.",
+      "accept": [
+        "Electrical cable insulation."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Alkenes",
+      "revisionTopic": "Alkenes"
+    },
+    {
+      "id": "task1_v150_007",
+      "subject": "Chemistry",
+      "specRef": "3.3.6.3",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "front": "Which atmospheric gas made of hydrogen and oxygen absorbs Earth's infrared radiation?",
+      "back": "Water vapour (H₂O).",
+      "accept": [
+        "Water vapour (H₂O)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 7,
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis"
     }
   ],
   "meta": {
@@ -68894,6 +69048,13 @@
         "emphasis": "Concision, staged mechanisms, fill-in prompts, avoiding semantic duplicates",
         "previousCardIdsRetained": true,
         "fullSpecCoverageCertified": false
+      },
+      "v150": {
+        "added": 7,
+        "basedOn": "v148 evidence gaps, checked against v146 published flashcard fronts and backs",
+        "shortRecallOnly": true,
+        "fullSpecCoverageCertified": false,
+        "noOriginalCardIdsChanged": true
       }
     },
     "chatYear1CoverageV126": {
