@@ -1,3 +1,19 @@
+# Revision Loop v168 — calibrate partial credit and expand valid method answers (28 October 2026)
+
+**Proposed, not yet merged or deployed.** An evidence-based update to the already merged v167 answer-marking pilot. The 1,268 exam-style questions, 3,335 flashcards, old prompts, marks, accepted model solutions, progress and World assets are retained.
+
+A short, isolated claim on a longer working-required question previously sometimes earned several unrelated method marks through fuzzy vocabulary overlap. New conservative score guidance for 5+-mark, 4+-criterion working-required questions caps a brief single claim to **one or two suggested marks** when multiple distinct stages have not been shown. It does not apply to numeric-only questions, multi-stage workings, or complete worked solutions. Individual marking ticks remain visible and can be manually corrected; a difference is clearly labelled as a conservative estimate.
+
+Observed examples from the real bank: a one-sentence stationary-point explanation falls from 4/8 to 2/8 suggested; naming just the 32.4% yield falls from 2/7 to 1/7; merely naming the factor theorem falls from 2/7 to 1/7. Complete model solutions still achieve full marks in the tested examples.
+
+**18 new editor-checked alternative phrasings** on six further multi-step questions (2 Physics, 2 Chemistry and 2 Maths), with specific error-carried-forward review notes. The cumulative pilot is now **38 phrases on 14 questions**. Each exact standalone alternative is worth its own criterion only; direct denials are rejected. Earlier v167 tests continue to check their original eight-question pilot independently.
+
+The new regression `tests/task1-v168-marking-calibration.cjs` and exact observed-case ledger `editorial/task1-v168-marking-calibration.json` are connected to cloud CI.
+
+**Limitations:** This does not automatically resolve every possible mathematically equivalent derivation, mark all AQA official schemes, or guarantee image/scanner transcription accuracy. Where a correct step is written in an unconventional form, the learner can review and correct the provisional mark.
+
+---
+
 # Revision Loop v167 — fairer free marking and clearer mark schemes (28 October 2026)
 
 **Proposed until all CI checks, merge and GitHub Pages verification.** This revision improves the real answer-marking user interface and the free ChatGPT marking hand-off while preserving all existing questions, marks, flashcards, progress and scanner data.
