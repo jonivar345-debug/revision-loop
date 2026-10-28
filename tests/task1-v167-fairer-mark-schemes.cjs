@@ -44,6 +44,19 @@ for(const q of curated){
  assert.equal(funcs.examSuggested(q,'').suggested,0);
 }
 assert.equal(variants,20);
+// False-positive check for original criteria, not just newly curated alternatives.
+let deniedOriginalChecks=0;
+for(const subject of ['Physics','Chemistry','Maths']){
+ const sample=bank.questions.filter(q=>q.subject===subject&&q.year==='Practice'&&
+  q.requiresWorking===true&&Array.isArray(q.markPoints)&&q.markPoints.length>=4).slice(-45);
+ for(const q of sample){
+  const denied=funcs.examSuggested(q,'not '+q.markPoints[0]);
+  assert.equal(denied.suggested,0,q.id+' explicit denial of the original mark statement');
+  assert(denied.preds.every(v=>!v),q.id+' denied original statement gives no unrelated points');
+  deniedOriginalChecks++;
+ }
+}
+assert(deniedOriginalChecks>=70,'Broad Physics, Chemistry and Maths negative-case coverage');
 assert(app.includes('function acceptedMarkPointAlternative('));
 assert(app.includes('const strictEvidence=Array.isArray(q.markEvidenceRules?.[i]);'));
 assert(app.includes('markPointAcceptedAlternatives?.[i]'));
