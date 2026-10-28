@@ -1,3 +1,15 @@
+# Revision Loop — v152 A-level Organic Chemistry applied practice and recall (28 October 2026)
+
+**Proposed v152 (not live until PR checks, merge and Pages deployment):** 14 independently written A-level-only Chemistry questions worth **84 marks** and six short, single-fact recall cards. Totals: **3,270 → 3,276 flashcards (3,266 → 3,272 active)**; **1,212 → 1,226 main-bank questions** (bank v61 → v62). All 3,270 old card IDs and 1,212 existing question IDs remain in place. New A2 material has `mock:false`, `taught:false` on cards and `scope:full`, so none is newly included in the November mock preset.
+
+This is a *targeted response* to AQA 7405 v151 evidence gaps: 3D optical isomers, glycerol triester structures, RP10 melting-point interpretation, benzene stability arithmetic, polyester and polyamide drawings, unfamiliar amino-acid forms, tripeptide construction, protein structure and enzyme stereospecificity, combined ¹³C/¹H NMR, RP12 TLC/GC data and amine structural classes. New cards cover Terylene, nylon 6,6 and Kevlar uses, interchain polyamide hydrogen bonds and two conceptual amine-formation recall facts. Multi-mark drawing, calculation and interpretation remains in the exam bank, not on flashcards. No handling procedures for dangerous substances are provided.
+
+**Evidence**: `editorial/task1-v152-a2-organic-additions.json`, cross-referenced to v151 row IDs; regression: `tests/task1-v152-a2-organic-additions.cjs`. Questions are original practice, not official AQA past questions/mark schemes. This does **not** establish qualification-wide specification coverage or independently demonstrated mastery. Retained v151 work includes unfinished arrow-based mechanisms, four-step synthesis, and several gap/partial rows. Do not change Firebase, saved progress keys, XP, shop, World, scanner, or app runtime.
+
+**Release gate:** verify four existing CI workflows, merge PR, then verify GitHub Pages before describing the new website content as published.
+
+---
+
 # Revision Loop — v150 short Organic Chemistry recall cards (28 October 2026)
 
 **Proposed v150 (based on the v149 development branch):** seven short AS Chemistry recall flashcards, 3,263 → 3,270 total (3,259 → 3,266 active). All previous card records and progress IDs preserved. One fact per card, no long reaction mechanisms, calculations or practical chemical-handling instructions. Areas: general formula, ozone UV protection, polyalkene London forces and chain length, common PVC applications, and atmospheric water vapour IR absorption.
