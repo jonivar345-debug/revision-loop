@@ -1,0 +1,71 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const newAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-organic-theory-questions.json','utf8'));
+const mockAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-mock-priority-evidence.json','utf8'));
+const earlier=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
+const app=fs.readFileSync('app.js','utf8');
+assert.equal(deck.deckVersion,152);
+assert.equal(deck.cards.length,3276);
+assert.equal(deck.cards.filter(c=>c.active!==false).length,3272);
+assert.equal(bank.bankVersion,63);
+assert.equal(bank.questions.length,1238);
+assert.equal(bank.questions[1225].id,'organic_v152_14');
+assert.equal(new Set(deck.cards.map(c=>c.id)).size,3276);
+assert.equal(new Set(bank.questions.map(q=>q.id)).size,1238);
+assert.equal(bank.questions.filter(q=>!q.id.startsWith('organic_v153_')).length,1226);
+assert.equal(newAudit.additions.cards,0);
+assert.equal(newAudit.additions.questions,12);
+assert.equal(newAudit.additions.marks,81);
+assert.equal(newAudit.policy.allQuestionsOriginal,true);
+assert.equal(newAudit.policy.noPracticalSynthesisInstructions,true);
+assert.equal(newAudit.policy.fullSyllabusCertified,false);
+const added=bank.questions.filter(q=>q.id.startsWith('organic_v153_'));
+const previousIDs=new Set(earlier.rows.map(r=>r.id));
+const validTopics=new Set(deck.cards.filter(c=>c.subject==='Chemistry').map(c=>c.revisionTopic||c.topic));
+let marks=0,routeQuestions=0;
+for(let i=0;i<added.length;i++){
+ const q=added[i],a=newAudit.questions[i];
+ assert.equal(q.id,'organic_v153_'+String(i+1).padStart(2,'0'));
+ assert.equal(a.id,q.id);assert.equal(a.specRef.slice(0,4),'3.3.');
+ assert(a.auditIds.length>=1);for(const id of a.auditIds)assert(previousIDs.has(id));
+ assert.equal(q.subject,'Chemistry');assert.equal(q.level,'A-level');assert.equal(q.mock,false);
+ assert.equal(q.year,'Practice');assert.equal(q.paper,'Original');
+ assert.equal(q.sourceVerified,false);assert.equal(q.verificationLevel,'original-exam-style');
+ assert.equal(q.prompt,a.prompt);assert.equal(q.marks,a.marks);
+ assert.deepEqual(q.markPoints,a.markPoints);
+ assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
+ assert.equal(q.modelAnswer,q.markPoints.join(' '));
+ assert.equal(q.answerType,'points');assert.equal(q.groupId,q.id);
+ assert.equal(q.standalone,true);assert.equal(q.requiresWorking,true);
+ assert(q.marks>=6&&q.marks<=7,'Answer allocation incomplete: '+q.id);
+ assert(validTopics.has(q.revisionTopic),'No revision filter topic for '+q.id);
+ assert(!q.qpUrl&&!q.msUrl,'Do not claim AQA past-paper provenance');
+ if(a.specRef==='3.3.14')routeQuestions++;
+ marks+=q.marks;
+}
+assert.equal(marks,81);
+assert.equal(routeQuestions,4);
+assert.equal(mockAudit.rows.length,33);
+assert.equal(mockAudit.counts.rows,33);
+assert.deepEqual(mockAudit.counts.subjects,{Physics:18,Chemistry:15});
+assert.equal(mockAudit.policy.auditOnly,true);
+assert.equal(mockAudit.policy.fullSpecCertified,false);
+const count={},seen=new Set(),cardMap=new Map(deck.cards.map(c=>[c.id,c])),qMap=new Map(bank.questions.map(q=>[q.id,q]));
+for(const row of mockAudit.rows){
+ assert(!seen.has(row.id),'Duplicate audit row '+row.id);seen.add(row.id);
+ assert(['supported_recall','supported_practice','partial'].includes(row.status));
+ count[row.status]=(count[row.status]||0)+1;
+ assert(row.subject==='Physics'||row.subject==='Chemistry');
+ assert(row.ref.startsWith(row.subject==='Physics'?'3.4':'3.1')||row.subject==='Physics'&&row.ref.startsWith('3.5'));
+ assert(row.evidence.cards.length+row.evidence.questions.length>0);
+ if(row.status==='supported_practice')assert(row.evidence.questions.length>0);
+ if(row.status==='partial')assert(row.limitation&&row.next);
+ for(const e of row.evidence.cards){const c=cardMap.get(e.id);assert(c&&c.active!==false,'Missing card '+e.id);assert.equal(c.front,e.front);assert.equal(c.back,e.back);assert.equal(c.specRef||null,e.specRef);assert.equal(c.mock??null,e.mock)}
+ for(const e of row.evidence.questions){const q=qMap.get(e.id);assert(q,'Missing question '+e.id);assert.equal(q.prompt,e.prompt);assert.equal(q.marks,e.marks);assert.deepEqual(q.markPoints,e.markPoints);assert.equal(q.revisionTopic,e.revisionTopic)}
+}
+assert.deepEqual(count,mockAudit.counts.byStatus);
+for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
+console.log('PASS v153: 12 original A2 theory questions / 81 marks, 33 Physics and Chemistry mock-priority evidence checks; no flashcard changes');
