@@ -1,7 +1,7 @@
 'use strict';
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
-const exam=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const exam=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v147-organic-exam-audit.json','utf8'));
 const all=exam.questions.filter(q=>!q.id.startsWith('organic_v149_')&&!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')&&!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')&&!q.id.startsWith('mock_v159_')&&!q.id.startsWith('mock_v160_')),added=all.filter(q=>q.id.startsWith('organic_v147_'));
