@@ -1,3 +1,15 @@
+# Revision Loop v157 — Physics AS Mechanics and Materials mock audit (28 October 2026)
+
+**Proposed until CI, merge and Pages deployment:** 3,299 flashcards (3,295 active), **2,327 mock-eligible** (Physics 717; Chemistry 1,533; Maths 77). Main exam bank v65 = **1,250 questions**, including three original AS Physics problems worth 20 marks. No existing question, card, or progress ID was removed or altered.
+
+AQA 7408 section 3.4 targeted review: 33 selected, exactly evidenced recall/application requirements across vectors and moments, motion graphs, projectiles, Newton's laws, momentum, work/energy/power, materials and RP3/RP4. Added four **single-fact** Physics mock cards: qualitative meaning of lift, increasing drag at greater speed, breaking stress distinct from maximum tensile stress, and conservation of energy. Added three challenging original mock questions: falling-body drag/terminal speed (7 marks), tensile and breaking stress plus Young modulus (7 marks), and work from a variable-force graph plus kinetic energy and mean power (6 marks). Complex maths and interpretation belong in exam practice, not overlong recall cards.
+
+**Evidence:** `editorial/task1-v157-physics-mechanics-mock-audit.json` contains the exact live fronts, backs, matching AQA subsection labels, and selected question prompts/mark points. `tests/task1-v157-physics-mock-mechanics.cjs` checks snapshots, short cards, 20 marks, preserved bank IDs and mock flags. Historical exact-count regressions filter additive v157 IDs rather than relaxing earlier baselines.
+
+**Limits:** 33 selected checks do not certify every point in AQA 3.4, the other Physics AS topics, or complete three-subject mock coverage. They do not prove independent student mastery. New exam questions are original AQA-aligned practice, not official AQA past questions or mark schemes. App/Firebase, scanner, XP, World, images and saved progress keys are unchanged.
+
+---
+
 # Revision Loop — v156 targeted mock Chemistry recall verification (28 October 2026)
 
 **Release candidate; not live until CI passes, PR merges and Pages deploys:** 3,295 flashcards (3,291 active); **2,323 mock-eligible**: Physics 713, Chemistry 1,533, Maths 77. Exam question bank remains v64 / **1,247** original practice questions.

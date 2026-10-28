@@ -13,7 +13,7 @@ assert.ok(old.length>=1826,'All previously live cards retained; later topic card
 assert.equal(v124.length,425);
 for(const [subject,n] of Object.entries({Physics:152,Chemistry:264,Maths:9})){
  assert.equal(v124.filter(c=>c.subject===subject).length,n,subject+' v124 count mismatch');
- assert.equal(deck.meta.task1FlashcardAudit[subject.toLowerCase()+'New'],cards.filter(c=>c.subject===subject&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')).length,'Audit metadata mismatch');
+ assert.equal(deck.meta.task1FlashcardAudit[subject.toLowerCase()+'New'],cards.filter(c=>c.subject===subject&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')).length,'Audit metadata mismatch');
 }
 const norm=s=>String(s).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 const fronts=new Set(),ids=new Set();

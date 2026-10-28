@@ -7,12 +7,12 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v155-mock-scope-recall.j
 const cross=JSON.parse(fs.readFileSync('editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 assert(deck.deckVersion>=155);
-const v155Cards=deck.cards.filter(c=>!c.id.startsWith('task1_v156_'));
+const v155Cards=deck.cards.filter(c=>!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_'));
 assert.equal(v155Cards.length,3293);
 assert.equal(v155Cards.filter(c=>c.active!==false).length,3289);
 assert.equal(v155Cards.filter(c=>c.active!==false&&c.mock===true).length,2321);
-assert.equal(bank.bankVersion,64);
-assert.equal(bank.questions.length,1247);
+assert(bank.bankVersion>=64);
+assert.equal(bank.questions.filter(q=>!q.id.startsWith('mock_v157_')).length,1247);
 assert.equal(audit.baseline.cards,3280);
 assert.equal(audit.baseline.mockEligible,2343);
 assert.deepEqual(audit.updated.bySubject,{Physics:713,Chemistry:1531,Maths:77});
@@ -22,7 +22,7 @@ assert.equal(audit.policy.fullSpecCertification,false);
 assert.equal(audit.policy.noCardIdsRemoved,true);
 assert.equal(audit.policy.allAddedCardsOneFact,true);
 assert.equal(new Set(deck.cards.map(c=>c.id)).size,deck.cards.length);
-assert.equal(new Set(bank.questions.map(q=>q.id)).size,1247);
+assert.equal(new Set(bank.questions.map(q=>q.id)).size,bank.questions.length);
 const byId=new Map(deck.cards.map(c=>[c.id,c]));
 const excluded=new Set();
 for(const ch of audit.changes.removedFromMock){
