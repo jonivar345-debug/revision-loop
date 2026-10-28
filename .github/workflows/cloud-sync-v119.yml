@@ -69,6 +69,8 @@ on:
       - 'tests/task1-v171-maths-mock-recall.cjs'
       - 'tests/task1-v172-science-mock-review.cjs'
       - 'tests/task1-v174-formula-evidence.cjs'
+      - 'tests/task1-v175-manual-diagram-mark-review.cjs'
+      - 'editorial/task1-v175-manual-diagram-mark-review.json'
       - 'editorial/task1-v174-formula-evidence-review.json'
       - 'tests/task1-v171-historical-snapshot.cjs'
       - 'tests/task1-v163-historical-bank.cjs'
@@ -193,6 +195,7 @@ jobs:
       - run: node tests/task1-v171-maths-mock-recall.cjs
       - run: node tests/task1-v172-science-mock-review.cjs
       - run: node tests/task1-v174-formula-evidence.cjs
+      - run: node tests/task1-v175-manual-diagram-mark-review.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

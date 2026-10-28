@@ -1,0 +1,55 @@
+{
+  "version": "v175",
+  "date": "2026-10-28",
+  "status": "Task 1 is NOT complete",
+  "task1Complete": false,
+  "objective": "Make handwritten diagrams, photo answers and different correct methods reviewable without being blocked by OCR; enforce prerequisite marks consistently in suggestions.",
+  "baseline": {
+    "cardRecords": 3345,
+    "activeCards": 3341,
+    "mockEligible": 2379,
+    "scienceMock": 2263,
+    "legacyScienceMockMissingDirectSpecRef": 971,
+    "physicsLegacyMock": 311,
+    "chemistryLegacyMock": 660,
+    "originalQuestions": 1268
+  },
+  "unverifiedLegacyScienceMockCards": 971,
+  "deliveredCode": [
+    "Add explicit manual marking-points button on each exam question without needing OCR to finish",
+    "No mark checkboxes ticked by default; user checks own drawing, mechanism or photo before awarding any credit",
+    "Use existing weighted rubric/any-N total limits and manual score selector; display accepted alternatives, actual mark-point prerequisites, model answer and relevant error-carried-forward notes",
+    "Store whether the resulting revision score was self-reviewed or a local suggestion subsequently reviewed",
+    "Close dependent-mark transitivity bug in suggested marking; ordering of prerequisite keys no longer affects outcome",
+    "Keep revision history, all question IDs and mark allocations, original cards, World and XP unchanged"
+  ],
+  "evidence": {
+    "officialAqaChemSpec": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "spotCheck": "AQA 3.1.8.2 states Gibbs feasibility requires delta G zero or negative, so the legacy chem_gibbs_feasible card correctly allows ≤0. Do NOT overwrite it with a different threshold just because the simple forward-direction spontaneity rule is ΔG<0.",
+    "existingCardIdVerified": "chem_gibbs_feasible",
+    "testFile": "tests/task1-v175-manual-diagram-mark-review.cjs",
+    "dependencyQuestionExamples": [
+      "aqa_math_as18_p1_q3",
+      "aqa_chem_as16_p1_q3_3",
+      "verified2019_C_8_1"
+    ]
+  },
+  "limitations": {
+    "manualReviewDoesNotReadImagesAutomatically": true,
+    "syntheticBrowserTestsNotPhysicalDeviceTesting": true,
+    "authenticAqaSchemesFullyVerified": false,
+    "allLegacyCardAnswersIndividuallyCertified": false,
+    "sketchOCRReliable": false,
+    "fullAqaSpecCertified": false,
+    "pastPaperCompletenessCertified": false,
+    "studentMasteryAssessed": false
+  },
+  "remaining": [
+    "Individually verify all 971 provisionally mapped legacy Physics/Chemistry mock cards against their actual AQA requirement and school scope",
+    "Add missing short recall only where specific content evidence genuinely shows a gap",
+    "Validate broader marking with real response samples, diagrams and ECF methods; manual review must not be confused with AI recognition",
+    "Check the source-linked historical paper inventory and reconcile 2026 availability",
+    "Identify the Physics Paper 3 optional module taught at school",
+    "All CI and Pages deployment verification"
+  ]
+}
