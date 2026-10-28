@@ -1,0 +1,55 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const audit=JSON.parse(fs.readFileSync('editorial/task1-v163-maths-pure-challenge-audit.json','utf8'));
+assert.equal(bank.bankVersion,69);
+assert.equal(bank.questions.length,1268);
+const old=bank.questions.filter(q=>!q.id.startsWith('mock_v163_'));
+assert.equal(old.length,1260);
+assert.equal(deck.cards.length,3335);
+const add=bank.questions.filter(q=>q.id.startsWith('mock_v163_'));
+assert.deepEqual(add.map(q=>q.id),Array.from({length:8},(_,i)=>'mock_v163_'+String(i+1).padStart(2,'0')));
+assert.equal(add.length,8);assert.equal(add.reduce((n,q)=>n+q.marks,0),56);
+assert.equal(new Set(bank.questions.map(q=>q.id)).size,bank.questions.length);
+for(const q of add) {
+ assert.equal(q.subject,'Maths');assert.equal(q.level,'AS');assert.equal(q.mock,true);
+ assert.equal(q.standalone,true);assert.equal(q.requiresWorking,true);
+ assert.equal(q.year,'Practice');assert.equal(q.sourceVerified,false);
+ assert.equal(q.verificationLevel,'original-exam-style');
+ assert.equal(q.groupId,q.id);assert.equal(q.groupOrder,1);
+ assert.equal(q.marks,q.markPoints.length);
+ assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
+ assert.equal(q.modelAnswer,q.markPoints.join(' '));
+ assert(!['Statistics','Mechanics'].includes(q.topic));
+ assert(!/(?:\bradians?\b|π)/i.test(q.prompt));
+ assert(!q.qpUrl&&!q.msUrl);
+ const a=audit.questions.find(x=>x.id===q.id);
+ assert(a&&a.prompt===q.prompt&&a.marks===q.marks&&JSON.stringify(a.markPoints)===JSON.stringify(q.markPoints));
+}
+const school=q=>q.subject==='Maths'&&q.mock===true&&!['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())&&!/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+assert.equal(old.filter(school).length,121);
+assert.equal(bank.questions.filter(school).length,129);
+const radians=d=>d*Math.PI/180;
+const f=x=>x*x-4*x+1,g=x=>-2*f(x-3)+5;
+assert.equal(g(5),11);assert.equal(g(3),3);
+for(const deg of [30,90,150]){
+ const v=2*Math.cos(radians(deg))**2+3*Math.sin(radians(deg))-3;
+ assert(Math.abs(v)<1e-10);
+}
+const cubic=x=>x**3-6*x*x+9*x+2;
+assert.equal(cubic(1),6);assert.equal(cubic(3),2);
+assert(Math.abs(1.97**5-29.67092)<1e-5);
+const F=x=>x**3/3-4*x;
+assert(Math.abs(F(3)-F(-3)+6)<1e-10);
+assert(Math.abs(32/3+2*7/3-46/3)<1e-10);
+const inverse=x=>(x+3)/(x-2);
+assert.equal(inverse(7),2);
+const poly=x=>2*x**3-5*x*x-4*x+3;
+assert.equal(poly(3),0);
+assert(poly(-2)<0&&poly(0)>0&&poly(1)<0&&poly(4)>0);
+assert.equal(audit.limits?.completeSpecificationCoverageClaim,undefined);
+assert.equal(audit.limitations.noFullSpecificationCoverageClaim,true);
+assert.equal(audit.limitations.existingQuestionIdsAndAnswersUnchanged,true);
+console.log('PASS v163: eight distinct original AS Pure multi-part questions (56 marks), precise worked mark points and 129 in-scope mock questions.');
