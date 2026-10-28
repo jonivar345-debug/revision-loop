@@ -1,7 +1,7 @@
 {
   "release": "v156",
   "date": "2026-10-28",
-  "purpose": "Recheck all 11 unmatched rows from the targeted v155 AS organic recall audit against live mock-only card fronts AND backs; add only missing concise facts",
+  "purpose": "Recheck the 11 unmatched v155 AS organic recall checks against card fronts and backs; resolve genuine gaps without duplicating cards. Add one separate pollution-impact fact.",
   "sources": [
     "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
   ],
@@ -9,8 +9,10 @@
   "counts": {
     "reviewed": 11,
     "existingRecallCoverage": 9,
-    "newRecallCards": 2,
-    "remainingUnmatchedAmongThese11": 0,
+    "newlyCoveredFrom11": 1,
+    "partiallyCoveredAmong11": 1,
+    "additionalPollutionRecallCards": 1,
+    "newRecallCardsTotal": 2,
     "deckCards": 3295,
     "activeCards": 3291,
     "mockEligibleCards": 2323,
@@ -137,7 +139,7 @@
       "specRef": "3.3.3.2",
       "topic": "Halogenoalkanes",
       "requirement": "Recognise conventional aqueous/ethanolic contrast",
-      "resolution": "new_concise_recall_card",
+      "resolution": "partially_covered_existing_mock_card",
       "evidence": [
         {
           "id": "chem_elimination",
@@ -146,16 +148,9 @@
           "specRef": null,
           "mock": true,
           "active": true
-        },
-        {
-          "id": "task1_v156_002",
-          "front": "Which solvent generally favours substitution of a halogenoalkane by OH⁻?",
-          "back": "Water (aqueous hydroxide), rather than ethanol.",
-          "specRef": "3.3.3.2",
-          "mock": true,
-          "active": true
         }
-      ]
+      ],
+      "note": "Hot ethanolic elimination is directly recalled; the aqueous-versus-ethanolic comparison needs separate conceptual/exam assessment. Do not claim it resolved."
     },
     {
       "id": "ASORG-155-039",
@@ -239,5 +234,12 @@
     "questionBankUnchanged": true,
     "progressKeysUnchanged": true,
     "appRuntimeUnchanged": true
+  },
+  "additionalCard": {
+    "id": "task1_v156_002",
+    "specRef": "3.3.2.3",
+    "purpose": "Recall one environmental effect of engine/fossil-fuel pollutants; not counted as resolving any of the 11 previously unmatched outcomes",
+    "front": "Which environmental problem can sulfur dioxide and nitrogen oxides contribute to?",
+    "back": "Acid rain (acid deposition)."
   }
 }
