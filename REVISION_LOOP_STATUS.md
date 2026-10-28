@@ -1,3 +1,11 @@
+# Revision Loop v173 — school Maths mock boundary and optional diagram sketcher
+
+**Pending pull-request CI and GitHub Pages.** The teacher's email (19 October 2026) confirms first Maths mock is an **AS Pure paper only**; a distinct classroom paper on taught Year 13 content will occur **after other mocks**, date TBA. For now 116 Maths mock cards and 129 mock exam-style questions are restricted to Year 12/AS Pure topics across both school Pure papers. Statistics, Mechanics, radian and Year 13-only content stay in the main full-revision decks; the AQA official AS papers normally contain applied topics but the school mock explicitly does not. Added a visible Maths-only scope explanation and enforced `q.level==='AS'` in mock question selection.
+
+Added optional pencil/finger/mouse drawing canvas in exam questions with pen, eraser, undo, clear, and copying an inline question SVG for annotation; the sketch can be attached as a local answer image through the existing scanner, up to five pages. **Drawings do not imply marks have been earned**, and handwriting/diagrams still need a user-checked transcription or manual marking-point review. Marking page now emphasises that valid equivalent methods, diagrams and ECF can deserve credit even when automatic evidence detection fails; user can adjust checkboxes/total and copy a report including the attempted answer. No changes to scored question content, card IDs or cloud keys. See `editorial/v173-maths-school-mock-and-sketch.json` and `tests/v173-maths-sketch-marking.cjs`.
+
+---
+
 # Revision Loop v172 — science mock flashcard single-fact quality audit (28 October 2026)
 
 **Pending pull request, CI and merge.** Inspected the 2,263 active Physics/Chemistry mock card records by metadata and checked all 971 legacy entries lacking direct `specRef` tags by their provisional groups. Reworked eight Chemistry cards that previously asked for four-, five- or six-mark answer plans into short one-recall-item questions. The long original answer structures still have relevant exam-question practice in the existing bank; no bank questions were changed. Card IDs, subject, priority, mock eligibility and saved history keys remain unchanged. Deck remains **3,345 records, 3,341 active, 2,379 mock-eligible** (Physics 730, Chemistry 1,533, Maths 116). Exam bank stays **1,268 original questions**.

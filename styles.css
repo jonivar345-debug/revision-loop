@@ -721,3 +721,18 @@ html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,mi
   html[data-layout-mode="phone"] .shop-grid,
   html[data-layout-mode="pc"] .shop-grid{grid-template-columns:1fr}
 }
+
+/* v173: optional hand-drawn exam working and clearer scope/marking guidance. */
+.maths-mock-scope{padding:12px 14px;margin:12px 0;border:1px solid #a5b4fc;border-radius:10px;background:#eef2ff;color:#312e81;line-height:1.55}
+.maths-mock-scope[hidden]{display:none}
+.exam-sketch{margin:12px 0 16px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:12px}
+.exam-sketch summary{font-weight:750;cursor:pointer}
+.exam-sketch p{font-size:.89rem;line-height:1.45;color:var(--muted);margin:9px 0 12px}
+.exam-sketch canvas{display:block;max-width:100%;width:100%;height:auto;aspect-ratio:16/9;touch-action:none;border-radius:8px;border:1px solid #cbd5e1;background:#fff;cursor:crosshair}
+.sketch-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0}
+.sketch-actions button{padding:8px 13px;border-radius:8px;border:1px solid #cbd5e1;background:#f8fafc;color:var(--ink);font-weight:650}
+.sketch-actions button[aria-pressed="true"]{background:#dbeafe;border-color:#2563eb;color:#1d4ed8}
+.sketch-actions button:disabled{opacity:.55;cursor:wait}
+.sketch-status{font-size:.85rem;color:var(--muted);padding:6px 0}
+.sketch-status.sketch-warning{color:#b45309}
+.exam-marking-help,.mark-fairness-note{font-size:.88rem;line-height:1.5;color:var(--muted);padding:9px 11px;background:var(--bg);border-radius:8px}

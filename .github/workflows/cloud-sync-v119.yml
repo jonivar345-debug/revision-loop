@@ -3,6 +3,11 @@ on:
   pull_request:
     paths:
       - 'cloud-sync.js'
+      - 'exam-sketch-v173.js'
+      - 'scanner.js'
+      - 'styles.css'
+      - 'editorial/v173-maths-school-mock-and-sketch.json'
+      - 'tests/v173-maths-sketch-marking.cjs'
       - 'photoelectric-flashcard-marking.js'
       - 'deck.json'
       - 'cloud-sync-core.js'
@@ -181,6 +186,7 @@ jobs:
       - run: node tests/task1-v167-fairer-mark-schemes.cjs
       - run: node tests/task1-v168-physics-model-marking.cjs
       - run: node tests/task1-v169-marking-calibration.cjs
+      - run: node tests/v173-maths-sketch-marking.cjs
       - run: node tests/task1-v170-practical-marking.cjs
       - run: node tests/task1-v171-maths-mock-recall.cjs
       - run: node tests/task1-v172-science-mock-review.cjs
