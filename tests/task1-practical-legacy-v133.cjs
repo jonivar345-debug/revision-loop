@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'), assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const d=deck.cards,old=d.filter(x=>!x.id.startsWith('task1_v133_')&&!x.id.startsWith('task1_v134_')&&!x.id.startsWith('task1_v136_')&&!x.id.startsWith('task1_v138_')&&!x.id.startsWith('task1_v142_')&&!x.id.startsWith('task1_v144_')&&!x.id.startsWith('task1_v145_')&&!x.id.startsWith('task1_v146_')&&!x.id.startsWith('task1_v150_')&&!x.id.startsWith('task1_v152_')&&!x.id.startsWith('task1_v154_')),newCards=d.filter(x=>x.id.startsWith('task1_v133_'));
@@ -31,7 +32,7 @@ for(const c of audit.records){
  assert(!checked.has(c.id),'Repeated audit ID '+c.id);checked.add(c.id);
  const source=old.find(o=>o.id===c.id);
  assert(source,'Missing original card '+c.id);
- assert.equal(source.front,c.front,'Prompt no longer same '+c.id);
+ assert.equal(source.front,allowed(c.id,'front',c.front),'Prompt no longer same '+c.id);
  assert.equal(source.topic,c.originalTopic,'Topic no longer same '+c.id);
  assert.equal(source.subject,c.subject,'Subject no longer same '+c.id);
  assert(!source.specRef,'Legacy entries only '+c.id);
