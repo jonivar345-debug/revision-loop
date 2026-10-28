@@ -20,7 +20,7 @@ assert(src.includes("image.classList.add('card-cover-full-image')"));
 assert(css.includes('.full-frame-card-cover img.card-cover-backdrop'));
 assert(css.includes('.full-frame-card-cover img.card-cover-full-image'));
 assert(css.includes('object-fit:contain!important'));
-assert(html.includes('styles.css?v=120')||html.includes('styles.css?v=77'));
+assert(html.includes('styles.css?v=173')||html.includes('styles.css?v=120')||html.includes('styles.css?v=77'));
 assert(html.includes('world-location-photo-gallery.js?v=117'));
 assert(sw.includes('revision-loop-v114-catalogue-sourced-world-galleries-energetics-v51-v115-full-frame-covers'));
 for(const id of ids){
