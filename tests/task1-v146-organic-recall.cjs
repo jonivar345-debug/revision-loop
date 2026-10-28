@@ -2,7 +2,7 @@
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v146-organic-recall-audit.json','utf8'));
 const all=deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_')), added=all.filter(c=>c.id.startsWith('task1_v146_'));
 const old=all.filter(c=>!c.id.startsWith('task1_v146_'));

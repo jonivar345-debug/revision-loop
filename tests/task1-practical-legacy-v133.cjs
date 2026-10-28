@@ -1,7 +1,7 @@
 'use strict';
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'), assert=require('node:assert/strict');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const d=deck.cards,old=d.filter(x=>!x.id.startsWith('task1_v133_')&&!x.id.startsWith('task1_v134_')&&!x.id.startsWith('task1_v136_')&&!x.id.startsWith('task1_v138_')&&!x.id.startsWith('task1_v142_')&&!x.id.startsWith('task1_v144_')&&!x.id.startsWith('task1_v145_')&&!x.id.startsWith('task1_v146_')&&!x.id.startsWith('task1_v150_')&&!x.id.startsWith('task1_v152_')&&!x.id.startsWith('task1_v154_')&&!x.id.startsWith('task1_v155_')&&!x.id.startsWith('task1_v156_')&&!x.id.startsWith('task1_v157_')&&!x.id.startsWith('task1_v158_')&&!x.id.startsWith('task1_v159_')&&!x.id.startsWith('task1_v160_')),newCards=d.filter(x=>x.id.startsWith('task1_v133_'));
 const history=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v132.json','utf8'));
 const ledger=JSON.parse(fs.readFileSync('editorial/task1-required-practicals-ledger-v133.json','utf8'));

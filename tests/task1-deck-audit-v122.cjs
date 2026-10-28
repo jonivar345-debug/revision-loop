@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('fs');
 const assert=require('assert');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const source=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const added=cards.filter(c=>c.id.startsWith('task1_'));

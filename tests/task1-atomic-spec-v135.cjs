@@ -2,7 +2,7 @@
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs = require('node:fs');
 const assert = require('node:assert/strict');
-const deck = JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck = require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const ledger = JSON.parse(fs.readFileSync('editorial/task1-atomic-spec-first-pass-v135.json','utf8'));
 const cards = new Map(deck.cards.map(c => [c.id,c]));
 assert(deck.deckVersion>=134,'v135 audits v134; it does not alter any live cards');

@@ -2,7 +2,7 @@
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const a=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
-const d=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const d=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const b=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 assert(d.deckVersion>=150);const priorCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_'));assert.equal(priorCards.length,3270);assert.equal(priorCards.filter(c=>c.active!==false).length,3266);
 assert(b.bankVersion>=61);assert.equal(b.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')&&!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')&&!q.id.startsWith('mock_v159_')&&!q.id.startsWith('mock_v160_')).length,1212);

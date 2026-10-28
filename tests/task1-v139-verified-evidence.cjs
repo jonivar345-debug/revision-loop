@@ -1,7 +1,7 @@
 'use strict';
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const evidence=JSON.parse(fs.readFileSync('editorial/task1-v139-verified-answer-evidence.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v137-additional-syllabus-candidate-ledger.json','utf8'));
 const cards=new Map(deck.cards.map(c=>[c.id,c])),rows=new Map(audit.rows.map(r=>[r.id,r]));

@@ -1,0 +1,280 @@
+{
+  "release": "v162",
+  "date": "2026-10-28",
+  "subject": "AQA Mathematics 7357 / AS Year 1 Pure school mock",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/b-algebra-and-functions",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/d-sequences-and-series",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/g-differentiation",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/h-integration"
+  ],
+  "boundary": "School mock is Year 1 Pure, excludes Statistics, Mechanics, Year 2 trigonometric-radian material; taught Year 1 arithmetic/geometric sums and inverse functions included.",
+  "before": {
+    "deck": 3312,
+    "active": 3308,
+    "mock": 2340,
+    "mathsMock": 77,
+    "questions": 1260
+  },
+  "after": {
+    "deck": 3335,
+    "active": 3331,
+    "mock": 2369,
+    "mathsMock": 106,
+    "physicsMock": 730,
+    "chemistryMock": 1533,
+    "questions": 1260
+  },
+  "added": [
+    {
+      "id": "task1_v162_001",
+      "specRef": "3.3",
+      "topic": "Transformations",
+      "front": "For a>1, what does y = af(x) do to y = f(x)?",
+      "back": "A vertical stretch by scale factor a."
+    },
+    {
+      "id": "task1_v162_002",
+      "specRef": "3.3",
+      "topic": "Transformations",
+      "front": "What transformation maps y = f(x) to y = −f(x)?",
+      "back": "Reflection in the x-axis."
+    },
+    {
+      "id": "task1_v162_003",
+      "specRef": "3.3",
+      "topic": "Transformations",
+      "front": "For a>0, what does y = f(x+a) do to y = f(x)?",
+      "back": "Translate a units to the left."
+    },
+    {
+      "id": "task1_v162_004",
+      "specRef": "3.5",
+      "topic": "Sequences",
+      "front": "For a positive integer n, what does n! mean?",
+      "back": "n! = n × (n−1) × … × 2 × 1."
+    },
+    {
+      "id": "task1_v162_005",
+      "specRef": "3.5",
+      "topic": "Sequences",
+      "front": "What is the factorial of zero (0!)?",
+      "back": "1."
+    },
+    {
+      "id": "task1_v162_006",
+      "specRef": "3.5",
+      "topic": "Sequences",
+      "front": "State the binomial coefficient nCr as a factorial formula.",
+      "back": "nCr = n! / [r!(n−r)!]."
+    },
+    {
+      "id": "task1_v162_007",
+      "specRef": "3.5",
+      "topic": "Sequences",
+      "front": "What is the general x^r term in (a+bx)^n for a positive integer n?",
+      "back": "nCr × a^(n−r) × (bx)^r."
+    },
+    {
+      "id": "task1_v162_008",
+      "specRef": "3.5",
+      "topic": "Sequences",
+      "front": "In the recurrence uₙ₊₁ = f(uₙ), how is the next term found?",
+      "back": "Substitute the previous term uₙ into f."
+    },
+    {
+      "id": "task1_v162_009",
+      "specRef": "3.5",
+      "topic": "Sequences",
+      "front": "When is a sequence strictly increasing?",
+      "back": "When every term is greater than the previous one."
+    },
+    {
+      "id": "task1_v162_010",
+      "specRef": "3.3",
+      "topic": "Quadratics",
+      "front": "For an upward-opening quadratic with two distinct roots, where is f(x)>0?",
+      "back": "Outside the roots."
+    },
+    {
+      "id": "task1_v162_011",
+      "specRef": "3.3",
+      "topic": "Algebra",
+      "front": "What happens to an inequality sign when multiplying by a negative number?",
+      "back": "Reverse the inequality sign."
+    },
+    {
+      "id": "task1_v162_012",
+      "specRef": "3.3",
+      "topic": "Functions",
+      "front": "What are the asymptotes of y = k/x when k≠0?",
+      "back": "x = 0 and y = 0."
+    },
+    {
+      "id": "task1_v162_013",
+      "specRef": "3.4",
+      "topic": "Coordinate geometry",
+      "front": "What is true of the gradients of two non-vertical parallel lines?",
+      "back": "They are equal."
+    },
+    {
+      "id": "task1_v162_014",
+      "specRef": "3.4",
+      "topic": "Coordinate geometry",
+      "front": "What does a perpendicular from a circle's centre to a chord do?",
+      "back": "It bisects the chord."
+    },
+    {
+      "id": "task1_v162_015",
+      "specRef": "3.4",
+      "topic": "Coordinate geometry",
+      "front": "What is the angle in a semicircle, subtended by its diameter?",
+      "back": "90°."
+    },
+    {
+      "id": "task1_v162_016",
+      "specRef": "3.6",
+      "topic": "Trigonometry",
+      "front": "What is the exact value of sin 30°?",
+      "back": "1/2."
+    },
+    {
+      "id": "task1_v162_017",
+      "specRef": "3.6",
+      "topic": "Trigonometry",
+      "front": "What is the exact value of sin 45°?",
+      "back": "√2/2."
+    },
+    {
+      "id": "task1_v162_018",
+      "specRef": "3.6",
+      "topic": "Trigonometry",
+      "front": "What is the exact value of cos 30°?",
+      "back": "√3/2."
+    },
+    {
+      "id": "task1_v162_019",
+      "specRef": "3.7",
+      "topic": "Logs",
+      "front": "State the change-of-base formula for logₐx.",
+      "back": "logₐx = ln x / ln a (a>0, a≠1; x>0)."
+    },
+    {
+      "id": "task1_v162_020",
+      "specRef": "3.8",
+      "topic": "Differentiation",
+      "front": "State the first-principles definition of f′(x).",
+      "back": "lim(h→0) [f(x+h)−f(x)]/h."
+    },
+    {
+      "id": "task1_v162_021",
+      "specRef": "3.8",
+      "topic": "Differentiation",
+      "front": "If the tangent gradient is m≠0, what is the normal gradient?",
+      "back": "−1/m."
+    },
+    {
+      "id": "task1_v162_022",
+      "specRef": "3.8",
+      "topic": "Differentiation",
+      "front": "What does f′(x)>0 mean over an interval?",
+      "back": "The function is increasing there."
+    },
+    {
+      "id": "task1_v162_023",
+      "specRef": "3.10",
+      "topic": "Vectors",
+      "front": "How do position vectors give the vector from A to B?",
+      "back": "AB = OB − OA (position vectors)."
+    }
+  ],
+  "restoredYear1": [
+    {
+      "id": "task1_v136_007",
+      "front": "What is the sum of n terms of an arithmetic progression?",
+      "back": "Sₙ = n[2a + (n−1)d]/2.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "task1_v136_008",
+      "front": "What is the sum of n terms of a geometric progression?",
+      "back": "Sₙ = a(1−rⁿ)/(1−r), when r ≠ 1.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "task1_v136_009",
+      "front": "What is the sum to infinity for a convergent geometric series?",
+      "back": "S∞ = a/(1−r), valid when |r| < 1.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "task1_v136_063",
+      "front": "How is the domain of f⁻¹ related to f?",
+      "back": "It is the range of f.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "task1_v136_064",
+      "front": "How is the range of f⁻¹ related to f?",
+      "back": "It is the domain of f.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "task1_v136_066",
+      "front": "What does Σ from r=1 to n mean?",
+      "back": "Add the listed expression for r = 1, 2, …, n.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "task1_v136_067",
+      "front": "For a geometric sum, what happens when r=1?",
+      "back": "All n terms equal a, so Sₙ = na.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    },
+    {
+      "id": "math_a2_stationary_class",
+      "front": "If d²y/dx²=0 at a stationary point, what should you do?",
+      "back": "Do not classify it automatically; inspect derivative sign changes or use another valid argument.",
+      "newStage": "AS",
+      "newMock": true,
+      "reason": "Relevant AS/Year 1 Pure recall previously classified as A2/full only"
+    }
+  ],
+  "removedFromSchoolMock": [
+    {
+      "id": "task1_v136_068",
+      "front": "What are the exact values of sin(π/6) and cos(π/3)?",
+      "back": "Both equal 1/2.",
+      "mock": false,
+      "reason": "Radian notation excluded from this school's Year 1 Pure mock; exact degree-value cards newly added"
+    },
+    {
+      "id": "task1_v136_069",
+      "front": "What are the exact values of sin(π/4) and cos(π/4)?",
+      "back": "Both equal √2/2.",
+      "mock": false,
+      "reason": "Radian notation excluded from this school's Year 1 Pure mock; exact degree-value cards newly added"
+    }
+  ],
+  "limitations": {
+    "completeSpecificationCoverage": false,
+    "independentStudentMastery": false,
+    "originalQuestionBankUnchanged": true,
+    "oldCardIdsAndAnswersPreserved": true,
+    "existingSavedProgressKeysUnchanged": true
+  }
+}
