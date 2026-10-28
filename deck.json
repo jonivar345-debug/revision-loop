@@ -2618,7 +2618,7 @@
       "priority": 8,
       "scope": "mock",
       "front": "How are impulse and momentum change related?",
-      "back": "Impulse = FΔt = Δp.",
+      "back": "Impulse = Δp. For constant (or mean) force, FΔt = Δp.",
       "accept": [
         "f delta t=delta p",
         "fdt=dp",
@@ -2726,7 +2726,7 @@
       "priority": 8,
       "scope": "mock",
       "front": "State Hooke's law equation.",
-      "back": "F = kΔL, while force is proportional to extension.",
+      "back": "F = kΔL, valid up to the limit of proportionality.",
       "accept": [
         "f=k delta l",
         "f=kx",
