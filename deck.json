@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 171,
+  "deckVersion": 172,
   "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -13995,10 +13995,11 @@
       "courseTopic": "Thermodynamics",
       "revisionTopic": "Born–Haber cycles",
       "id": "chem_bh_weak_20261024_sixmark_structure",
-      "front": "What three ideas must a six-mark lattice comparison link?",
-      "back": "Ionic charge/radius → attraction; model-vs-Born–Haber discrepancies; anion polarisation → covalent character.",
+      "front": "What can a large Born–Haber versus perfect-ionic lattice enthalpy difference indicate?",
+      "back": "Significant covalent character in the ionic compound.",
       "accept": [
-        "Ionic charge/radius → attraction; model-vs-Born–Haber discrepancies; anion polarisation → covalent character."
+        "Significant covalent character in the ionic compound.",
+        "Covalent character from polarisation of the anion."
       ]
     },
     {
@@ -14193,30 +14194,11 @@
       "id": "chem_entropy_gibbs_recap_20261024_sixmark_outline",
       "topic": "Gibbs free energy",
       "revisionTopic": "Gibbs free energy",
-      "front": "Outline a full six-mark reply to three false claims about Gibbs feasibility.",
-      "back": "1) Endothermic can be feasible if TΔS > ΔH. 2) ΔG < 0 need not be fast: high Ea. 3) Raising T helps if ΔS > 0, hinders if ΔS < 0.",
-      "concepts": [
-        [
-          "endothermic",
-          "positive dh"
-        ],
-        [
-          "entropy",
-          "t delta s",
-          "tds"
-        ],
-        [
-          "activation",
-          "ea",
-          "barrier"
-        ],
-        [
-          "temperature"
-        ],
-        [
-          "positive",
-          "negative"
-        ]
+      "front": "Does a negative ΔG guarantee a fast reaction?",
+      "back": "No. A high activation energy can make a feasible reaction very slow.",
+      "accept": [
+        "No. A high activation energy can make a feasible reaction very slow.",
+        "No, ΔG is about feasibility, not reaction rate."
       ]
     },
     {
@@ -21471,13 +21453,17 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "In a 5-mark Period 3 first-IE explanation, what must you include?",
-      "back": "Increasing nuclear charge and near-constant shielding; Al 3p vs Mg 3s; P/S 3p orbital pairing and repulsion.",
+      "front": "Which two drops interrupt the general rise in first ionisation energy across Period 3?",
+      "back": "Mg to Al (3p electron) and P to S (3p electron pairing).",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Mg to Al (3p electron) and P to S (3p electron pairing).",
+        "Mg–Al and P–S."
+      ]
     },
     {
       "id": "chem_bonding_v47_01",
@@ -24529,12 +24515,16 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "What must a full 4-mark molecular-shape explanation include?",
-      "back": "Electron domains, lone-pair count, repulsion order, shape and approximate bond angle.",
+      "front": "What must you count first to predict a molecule's shape?",
+      "back": "Bonding regions and lone pairs around the central atom.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Bonding regions and lone pairs around the central atom.",
+        "Bond pairs and lone pairs around the central atom."
+      ]
     },
     {
       "id": "chem_bonding_v52_27",
@@ -24835,12 +24825,16 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "How should a four-mark ionic melting-point answer be built?",
-      "back": "State giant ionic lattice, opposite-ion electrostatic forces, strong attractions, much energy.",
+      "front": "What must be overcome when an ionic solid melts?",
+      "back": "Strong electrostatic attractions between oppositely charged ions.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Strong electrostatic attractions between oppositely charged ions.",
+        "Strong ionic electrostatic attractions."
+      ]
     },
     {
       "id": "chem_bonding_v52_45",
@@ -24869,12 +24863,16 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "How should a four-mark bond-polarity comparison be built?",
-      "back": "Identify polar bonds, δ charges, 3D shapes, then cancel/non-cancel bond dipoles.",
+      "front": "When can a molecule with polar bonds still be non-polar?",
+      "back": "When its bond dipoles cancel because of the molecule's shape.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "When its bond dipoles cancel because of the molecule's shape.",
+        "When bond dipoles cancel out."
+      ]
     },
     {
       "id": "chem_bonding_v52_47",
@@ -24886,12 +24884,16 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "How should you justify a lower bond angle in a 4-mark answer?",
-      "back": "Count bond/lone pairs, compare repulsions, name shape and resulting reduced angle.",
+      "front": "Why is NH₃'s bond angle smaller than CH₄'s?",
+      "back": "NH₃ has a lone pair; its stronger repulsion reduces the bond angle.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "NH₃ has a lone pair; its stronger repulsion reduces the bond angle.",
+        "Lone-pair repulsion in ammonia compresses its bond angle."
+      ]
     },
     {
       "id": "chem_bonding_v52_48",
@@ -24903,12 +24905,16 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "Four-mark plan: why does one liquid hydrogen-bond more strongly?",
-      "back": "Identify N/O/F–H bond, δ+ H, acceptor lone pair, and energy needed to separate molecules.",
+      "front": "When a hydrogen-bonded liquid boils, which bonds are overcome?",
+      "back": "Intermolecular hydrogen bonds, not covalent O–H or N–H bonds.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Intermolecular hydrogen bonds, not covalent O–H or N–H bonds.",
+        "Hydrogen bonds between molecules."
+      ]
     },
     {
       "id": "chem_energetics_v53_01",
@@ -70757,6 +70763,13 @@
       "fullSpecCertified": false,
       "priorCardIdsPreserved": true,
       "schoolMockPureOnly": true
+    },
+    "v172": {
+      "kind": "targeted science mock-card quality audit",
+      "chemistryCardsSimplified": 8,
+      "physicsCardsChanged": 0,
+      "preservedOldCardIds": true,
+      "task1Complete": false
     }
   }
 }

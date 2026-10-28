@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v171-maths-mock-recall-audit.json','utf8'));
 const all=deck.cards, added=all.filter(c=>c.id.startsWith('task1_v171_'));
-assert.equal(deck.deckVersion,171);
+assert(deck.deckVersion>=171);
 assert.equal(all.length,3345);
 assert.equal(all.filter(c=>c.active!==false).length,3341);
 assert.equal(new Set(all.map(c=>c.id)).size,all.length);

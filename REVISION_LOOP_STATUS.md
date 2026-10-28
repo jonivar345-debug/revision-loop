@@ -1,3 +1,11 @@
+# Revision Loop v172 — science mock flashcard single-fact quality audit (28 October 2026)
+
+**Pending pull request, CI and merge.** Inspected the 2,263 active Physics/Chemistry mock card records by metadata and checked all 971 legacy entries lacking direct `specRef` tags by their provisional groups. Reworked eight Chemistry cards that previously asked for four-, five- or six-mark answer plans into short one-recall-item questions. The long original answer structures still have relevant exam-question practice in the existing bank; no bank questions were changed. Card IDs, subject, priority, mock eligibility and saved history keys remain unchanged. Deck remains **3,345 records, 3,341 active, 2,379 mock-eligible** (Physics 730, Chemistry 1,533, Maths 116). Exam bank stays **1,268 original questions**.
+
+The 971 untagged legacy cards are *not* fully certified by this structural review; in particular 194 Chemistry A2 cards have only provisional topic-group mapping. Eight pH-curve RP9 recall cards stay eligible pending school-scope confirmation (buffers excluded is not sufficient evidence about pH curves). A lengthy Physics photoelectric threshold graph card remains unchanged to preserve its separate correct-versus-partial marking rules. Evidence: `editorial/task1-v172-science-mock-review.json`, regression `tests/task1-v172-science-mock-review.cjs`. Further requirement-by-requirement specification review remains necessary; **Task 1 is not signed off**.
+
+---
+
 # Revision Loop v171 — targeted Maths Year 1 Pure recall gap closure (28 October 2026)
 
 **PR stage until checks, merge and Pages verification.** The active Maths mock deck gains **10 concise single-fact cards** for proof by deduction, the remainder theorem, 2D vector operations and quadrant selection, positive sine quadrants, tangent undefined angles, odd/even trig graph symmetries and total geometric area when a graph crosses the axis. These were checked against the existing 196 active Maths cards to avoid exact front duplicates, with Year 1 Pure scope cross-referenced to AQA AS 7356 (Proof A1, Algebra B, Trigonometry E, Integration H, Vectors J). The bank retains **1,268 original questions**. Current proposed deck: **3,345 records, 3,341 active, 2,379 mock-eligible** (730 Physics, 1,533 Chemistry, 116 Maths).
