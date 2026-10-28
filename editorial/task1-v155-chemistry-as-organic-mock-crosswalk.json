@@ -10,8 +10,8 @@
   "method": "Conservative exact direct-question keyword matching over existing card fronts; evidence includes actual front/back. Indirect coverage and examination skill must be checked separately; this method is incomplete.",
   "count": 67,
   "statusCounts": {
-    "direct_matching_recall_prompt": 54,
-    "not_yet_directly_mapped": 13
+    "direct_matching_recall_prompt": 56,
+    "not_yet_directly_mapped": 11
   },
   "fullSpecCoverageCertified": false,
   "knownBlindSpots": [
@@ -258,9 +258,17 @@
           "mock": true,
           "active": true,
           "specRef": "3.3.2.2"
+        },
+        {
+          "id": "task1_v155_013",
+          "front": "Why is cracking commercially important?",
+          "back": "It converts less-demanded fractions into useful fuels and alkene feedstocks.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.2.2"
         }
       ],
-      "note": "Matching flashcard prompt is present in mock pool; independent mastery and all variations unproven"
+      "note": "Direct concise mock recall card added in v155; no claim of independent mastery."
     },
     {
       "id": "ASORG-155-014",
@@ -773,18 +781,36 @@
       "specRef": "3.3.3.3",
       "topic": "Halogenoalkanes",
       "requirement": "Recall scientific evidence on CFC restrictions",
-      "status": "not_yet_directly_mapped",
-      "evidence": [],
-      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v155_012",
+          "front": "Why did evidence lead to restrictions on CFCs?",
+          "back": "Scientists linked chlorine radicals from CFCs to stratospheric ozone loss.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.3.3"
+        }
+      ],
+      "note": "Direct concise mock recall card added in v155; no claim of independent mastery."
     },
     {
       "id": "ASORG-155-044",
       "specRef": "3.3.4.1",
       "topic": "Alkenes",
       "requirement": "Define alkene and unsaturated",
-      "status": "not_yet_directly_mapped",
-      "evidence": [],
-      "note": "No direct matching front detected in this targeted scan. Check indirect cards and question bank before classifying as absent."
+      "status": "direct_matching_recall_prompt",
+      "evidence": [
+        {
+          "id": "task1_v155_011",
+          "front": "Define an alkene.",
+          "back": "An unsaturated hydrocarbon containing a C=C double bond.",
+          "mock": true,
+          "active": true,
+          "specRef": "3.3.4.1"
+        }
+      ],
+      "note": "Direct concise mock recall card added in v155; no claim of independent mastery."
     },
     {
       "id": "ASORG-155-045",
