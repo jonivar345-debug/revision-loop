@@ -2050,7 +2050,13 @@ function examSuggested(q,answer){
 // longer variable/number, and not explicitly rejected by the student's wording.
 // Whitespace around operators is insignificant; multiplication is not guessed.
 function reviewedExpressionEvidence(answer,expression){
- const tidy=value=>normalise(value).replace(/\s*([=+*/<>^])\s*/g,'$1');
+ const tidy=value=>{
+  const digits={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
+  const raw=String(value||'').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+/g,seq=>'^'+[...seq].map(x=>digits[x]).join(''));
+  return normalise(raw)
+   .replace(/(\d+(?:\.\d+)?)\s*(?:x|\*)\s*10\s*\^\s*([-+]?\d+)\b/gi,'$1e$2')
+   .replace(/\s*([=+*/<>^])\s*/g,'$1');
+ };
  const text=tidy(answer),formula=tidy(expression);
  if(formula.length<5||!text)return {matched:false,rejected:false};
  let at=0,rejected=false;
