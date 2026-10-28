@@ -8052,7 +8052,7 @@
         1,
         1
       ],
-      "modelAnswer": "3.5 m s⁻² to right",
+      "modelAnswer": "Horizontal forces: 60 N right and 18 N left. Vertically, weight mg ≈ 118 N down and normal reaction ≈ 118 N up. Net horizontal force = 42 N right, so acceleration a = 42/12 = 3.5 m s⁻² right.",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 12 kg trolley is pulled right by 60 N and experiences 18 N friction left on a horizontal floor. Describe the free-body diagram and calculate its acceleration, g=9.81 m s⁻².",
@@ -8062,7 +8062,7 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false,
+      "requiresWorking": true,
       "numericAnswer": 3.5,
       "tolerance": 0.063
     },
@@ -8159,7 +8159,7 @@
         1,
         1
       ],
-      "modelAnswer": "27.5 N",
+      "modelAnswer": "Tension acts upward; weight mg downward. Apply T−mg=ma. T = 2.5(9.81+1.2) = 27.5 N.",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 2.5 kg mass hangs from a vertical light string and accelerates upwards at 1.2 m s⁻². Draw or describe the two force arrows and find tension (g=9.81).",
@@ -8169,7 +8169,7 @@
       "mock": true,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false,
+      "requiresWorking": true,
       "numericAnswer": 27.5,
       "tolerance": 0.49499999999999994
     },
@@ -8233,7 +8233,7 @@
         1,
         1
       ],
-      "modelAnswer": "152 kPa",
+      "modelAnswer": "For a fixed amount of gas at constant temperature, Boyle's law gives p₁V₁=p₂V₂. Therefore p₂ = (95 × 4.0)/2.5 = 152 kPa.",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A fixed amount of ideal gas is compressed isothermally from 4.0 L at 95 kPa to 2.5 L. Calculate final pressure and give the physical condition for Boyle's law.",
@@ -8243,7 +8243,7 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false,
+      "requiresWorking": true,
       "numericAnswer": 152,
       "tolerance": 1.824
     },
@@ -8379,7 +8379,7 @@
         1,
         1
       ],
-      "modelAnswer": "5.0×10⁴ V m⁻¹, positive to negative",
+      "modelAnswer": "Use E=V/d, converting 12 mm to 0.012 m. Hence E = 600/0.012 = 5.0×10⁴ V m⁻¹, directed from the positive plate towards the negative plate.",
       "answerType": "numeric",
       "questionType": "calculation and reasoning",
       "prompt": "A 600 V supply is connected across parallel plates 12 mm apart. Neglecting edge effects, find the field strength and give its direction.",
@@ -8389,7 +8389,7 @@
       "mock": false,
       "sourceVerified": false,
       "verificationLevel": "original-exam-style",
-      "requiresWorking": false,
+      "requiresWorking": true,
       "numericAnswer": 50000,
       "tolerance": 600
     },
