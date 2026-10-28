@@ -1,0 +1,665 @@
+{
+  "revision": "v165",
+  "checkedDate": "2026-10-28",
+  "description": "Release gate for Task 1; distinguishes authored content, selected answer-level audits, current mock scope, public archive, and genuine exhaustive completion.",
+  "sources": {
+    "physics": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+    "chemistry": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
+    "maths": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content"
+  },
+  "measurements": {
+    "deckVersion": 162,
+    "bankVersion": 69,
+    "totalFlashcards": 3335,
+    "activeFlashcards": 3331,
+    "mainQuestionBank": 1268,
+    "inventoryHistoricPapers": 134,
+    "sourceIndexedQuestionParts": 231
+  },
+  "subjects": {
+    "Physics": {
+      "activeCards": 1154,
+      "mockEligibleCards": 730,
+      "cardsWithoutDirectSpecRef": 408,
+      "originalPracticeQuestions": 465,
+      "trackedHistoricPapers": 47,
+      "papersWithAnyIndexedParts": 11,
+      "sourceIndexedParts": 68,
+      "fullyVerifiedPapers": 0,
+      "sections": [
+        {
+          "specRef": "3.1",
+          "topic": "Measurements and their errors",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 61,
+          "exampleCardIds": [
+            "task1_phy_001",
+            "task1_phy_002",
+            "task1_phy_003"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2",
+          "topic": "Particles and radiation",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 56,
+          "exampleCardIds": [
+            "task1_phy_023",
+            "task1_phy_024",
+            "task1_phy_025"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3",
+          "topic": "Waves",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 97,
+          "exampleCardIds": [
+            "task1_phy_034",
+            "task1_phy_035",
+            "task1_phy_036"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.4",
+          "topic": "Mechanics and materials",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 115,
+          "exampleCardIds": [
+            "task1_phy_067",
+            "task1_phy_068",
+            "task1_phy_069"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.5",
+          "topic": "Electricity",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 74,
+          "exampleCardIds": [
+            "task1_phy_090",
+            "task1_phy_093",
+            "task1_phy_094"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.6",
+          "topic": "Further mechanics and thermal physics",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 53,
+          "exampleCardIds": [
+            "task1_phy_108",
+            "task1_phy_109",
+            "task1_phy_110"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.7",
+          "topic": "Fields and their consequences",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 160,
+          "exampleCardIds": [
+            "task1_phy_132",
+            "task1_phy_133",
+            "task1_phy_134"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.8",
+          "topic": "Nuclear physics",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 66,
+          "exampleCardIds": [
+            "task1_phy_151",
+            "task1_phy_152",
+            "task1_phy_153"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.9",
+          "topic": "Astrophysics",
+          "stage": "optional",
+          "explicitTaggedActiveCards": 0,
+          "exampleCardIds": [],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.10",
+          "topic": "Medical physics",
+          "stage": "optional",
+          "explicitTaggedActiveCards": 8,
+          "exampleCardIds": [
+            "task1_phy_159",
+            "task1_phy_160",
+            "task1_phy_161"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.11",
+          "topic": "Engineering physics",
+          "stage": "optional",
+          "explicitTaggedActiveCards": 0,
+          "exampleCardIds": [],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.12",
+          "topic": "Turning points in physics",
+          "stage": "optional",
+          "explicitTaggedActiveCards": 0,
+          "exampleCardIds": [],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.13",
+          "topic": "Electronics",
+          "stage": "optional",
+          "explicitTaggedActiveCards": 0,
+          "exampleCardIds": [],
+          "certifiedAllAssessableRequirements": false
+        }
+      ],
+      "optionSelectionConfirmed": false,
+      "optionalPhysicsMaterialIsNotCompulsory": true,
+      "observedMockScope": {
+        "explicitA2TaggedSectionsEligible": 0,
+        "optionalTopicCardsEligible": 0
+      }
+    },
+    "Chemistry": {
+      "activeCards": 1981,
+      "mockEligibleCards": 1533,
+      "cardsWithoutDirectSpecRef": 705,
+      "originalPracticeQuestions": 498,
+      "trackedHistoricPapers": 47,
+      "papersWithAnyIndexedParts": 12,
+      "sourceIndexedParts": 110,
+      "fullyVerifiedPapers": 0,
+      "sections": [
+        {
+          "specRef": "3.1.1",
+          "topic": "Atomic structure",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 19,
+          "exampleCardIds": [
+            "task1_chem_002",
+            "task1_chem_004",
+            "task1_chem_005"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.2",
+          "topic": "Amount of substance",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 41,
+          "exampleCardIds": [
+            "task1_chem_011",
+            "task1_chem_012",
+            "task1_chem_015"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.3",
+          "topic": "Bonding",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 32,
+          "exampleCardIds": [
+            "task1_chem_023",
+            "task1_chem_026",
+            "task1_chem_027"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.4",
+          "topic": "Energetics",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 34,
+          "exampleCardIds": [
+            "task1_chem_032",
+            "task1_chem_033",
+            "task1_chem_036"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.5",
+          "topic": "Kinetics",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 35,
+          "exampleCardIds": [
+            "task1_chem_042",
+            "task1_chem_043",
+            "task1_chem_044"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.6",
+          "topic": "Equilibria, Le Chatelier and Kc",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 44,
+          "exampleCardIds": [
+            "task1_chem_051",
+            "task1_chem_052",
+            "task1_chem_053"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.7",
+          "topic": "Oxidation and reduction",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 34,
+          "exampleCardIds": [
+            "task1_chem_061",
+            "task1_chem_062",
+            "task1_chem_063"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.8",
+          "topic": "Thermodynamics",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 38,
+          "exampleCardIds": [
+            "task1_chem_162",
+            "task1_chem_163",
+            "task1_chem_164"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.9",
+          "topic": "Rate equations",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 30,
+          "exampleCardIds": [
+            "task1_chem_166",
+            "task1_chem_167",
+            "task1_chem_168"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.10",
+          "topic": "Equilibrium constant Kp",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 18,
+          "exampleCardIds": [
+            "task1_full_053",
+            "task1_full_054",
+            "task1_full_056"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.11",
+          "topic": "Electrode potentials and cells",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 28,
+          "exampleCardIds": [
+            "task1_chem_188",
+            "task1_chem_189",
+            "task1_chem_190"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.1.12",
+          "topic": "Acids and bases",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 44,
+          "exampleCardIds": [
+            "task1_chem_174",
+            "task1_chem_175",
+            "task1_chem_176"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2.1",
+          "topic": "Periodicity",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 36,
+          "exampleCardIds": [
+            "task1_chem_069",
+            "task1_chem_071",
+            "task1_chem_072"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2.2",
+          "topic": "Group 2",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 61,
+          "exampleCardIds": [
+            "task1_chem_079",
+            "task1_chem_082",
+            "task1_chem_083"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2.3",
+          "topic": "Group 7",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 86,
+          "exampleCardIds": [
+            "task1_chem_092",
+            "task1_chem_093",
+            "task1_chem_094"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2.4",
+          "topic": "Period 3 elements and oxides",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 37,
+          "exampleCardIds": [
+            "task1_full_001",
+            "task1_full_002",
+            "task1_full_003"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2.5",
+          "topic": "Transition metals",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 61,
+          "exampleCardIds": [
+            "task1_chem_196",
+            "task1_chem_197",
+            "task1_chem_198"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.2.6",
+          "topic": "Reactions of aqueous ions",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 33,
+          "exampleCardIds": [
+            "task1_full_042",
+            "task1_full_043",
+            "task1_full_044"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.1",
+          "topic": "Introduction to organic chemistry",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 46,
+          "exampleCardIds": [
+            "task1_chem_108",
+            "task1_chem_109",
+            "task1_chem_110"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.2",
+          "topic": "Alkanes",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 50,
+          "exampleCardIds": [
+            "task1_chem_119",
+            "task1_chem_120",
+            "task1_chem_121"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.3",
+          "topic": "Halogenoalkanes",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 42,
+          "exampleCardIds": [
+            "task1_chem_128",
+            "task1_chem_129",
+            "task1_chem_130"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.4",
+          "topic": "Alkenes",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 46,
+          "exampleCardIds": [
+            "task1_chem_136",
+            "task1_chem_137",
+            "task1_chem_138"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.5",
+          "topic": "Alcohols",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 37,
+          "exampleCardIds": [
+            "task1_chem_145",
+            "task1_chem_146",
+            "task1_chem_147"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.6",
+          "topic": "Organic analysis",
+          "stage": "AS and A-level",
+          "explicitTaggedActiveCards": 50,
+          "exampleCardIds": [
+            "task1_chem_153",
+            "task1_chem_154",
+            "task1_chem_155"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.7",
+          "topic": "Optical isomerism",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 8,
+          "exampleCardIds": [
+            "task1_chem_199",
+            "task1_chem_201",
+            "task1_chem_202"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.8",
+          "topic": "Aldehydes and ketones",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 28,
+          "exampleCardIds": [
+            "task1_chem_203",
+            "task1_chem_204",
+            "task1_chem_205"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.9",
+          "topic": "Carboxylic acids and derivatives",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 28,
+          "exampleCardIds": [
+            "task1_chem_209",
+            "task1_chem_210",
+            "task1_chem_211"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.10",
+          "topic": "Aromatic chemistry",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 10,
+          "exampleCardIds": [
+            "task1_chem_215",
+            "task1_chem_216",
+            "task1_chem_217"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.11",
+          "topic": "Amines",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 15,
+          "exampleCardIds": [
+            "task1_chem_218",
+            "task1_chem_219",
+            "task1_v124_chem_010"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.12",
+          "topic": "Polymers",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 21,
+          "exampleCardIds": [
+            "task1_chem_221",
+            "task1_chem_222",
+            "task1_chem_223"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.13",
+          "topic": "Amino acids, proteins and DNA",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 38,
+          "exampleCardIds": [
+            "task1_chem_224",
+            "task1_full_079",
+            "task1_full_080"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.14",
+          "topic": "Organic synthesis",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 13,
+          "exampleCardIds": [
+            "task1_full_073",
+            "task1_full_074",
+            "task1_full_075"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.15",
+          "topic": "NMR spectroscopy",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 26,
+          "exampleCardIds": [
+            "task1_chem_227",
+            "task1_chem_228",
+            "task1_chem_229"
+          ],
+          "certifiedAllAssessableRequirements": false
+        },
+        {
+          "specRef": "3.3.16",
+          "topic": "Chromatography",
+          "stage": "A-level only",
+          "explicitTaggedActiveCards": 23,
+          "exampleCardIds": [
+            "task1_chem_231",
+            "task1_chem_232",
+            "task1_chem_233"
+          ],
+          "certifiedAllAssessableRequirements": false
+        }
+      ],
+      "observedMockScope": {
+        "bufferMentioningCardsEligible": 0
+      }
+    },
+    "Maths": {
+      "activeCards": 196,
+      "mockEligibleCards": 106,
+      "cardsWithoutDirectSpecRef": 103,
+      "originalPracticeQuestions": 305,
+      "trackedHistoricPapers": 40,
+      "papersWithAnyIndexedParts": 8,
+      "sourceIndexedParts": 53,
+      "fullyVerifiedPapers": 0
+    }
+  },
+  "auditedEarlier": {
+    "legacyScienceBroadSectionCandidates": "editorial/task1-legacy-card-content-audit-v134.json",
+    "selectedAnswerChecks": "editorial/task1-v143-v135-106-answer-evidence.json",
+    "year2ScienceSample": "editorial/task1-v145-a2-science-evidence.json",
+    "year1OrganicSample": "editorial/task1-v148-as-organic-crosswalk.json",
+    "year2OrganicSample": "editorial/task1-v151-a2-organic-crosswalk.json"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "T1-CARD-CONTENT",
+      "description": "All required Physics and Chemistry assessable specification statements have accurate, digestible recall coverage or an explicitly justified exam-practice alternative.",
+      "status": "incomplete",
+      "evidence": "Selected answer-level audits exist, but no exhaustive row-by-row full-qualification sign-off."
+    },
+    {
+      "id": "T1-MOCK-SCOPE",
+      "description": "School-specific Physics AS, Chemistry through Kp (no buffers) and Maths Year 1 Pure mock presets exclude untaught and out-of-scope items.",
+      "status": "partially_checked",
+      "evidence": "Physics A2 and optional section flags; Chemistry buffer keyword and Maths explicit Pure filter are checked, but older untagged cards need content review."
+    },
+    {
+      "id": "T1-QUESTION-QUALITY",
+      "description": "Relevant topics have challenging original written questions, distinct from recall cards, with independently verified working and fair marking.",
+      "status": "partially_checked",
+      "evidence": "1,268 original questions and targeted regressions, but not every practical or AQA outcome independently checked."
+    },
+    {
+      "id": "T1-OFFICIAL-PAPERS",
+      "description": "Every eligible 2015–2026 paper has a verified year, series, source reference and completeness status, with official paper access linked where permitted.",
+      "status": "incomplete",
+      "evidence": "134 papers in inventory through 2025; 31 with any linked parts; 231 source-linked parts; zero fully certified papers. 2015 is old-spec and summer 2026 not yet public."
+    },
+    {
+      "id": "T1-OPTION",
+      "description": "Required A-level Physics optional topic is confirmed and the correct content made available without treating unrelated options as compulsory.",
+      "status": "unconfirmed",
+      "evidence": "Older Medical Physics cards exist but the school's chosen optional topic is not verified."
+    },
+    {
+      "id": "T1-LIVE-DEPLOYMENT",
+      "description": "All merged updates have passing CI and the public website has been checked after deployment.",
+      "status": "not_captured_in_this_audit",
+      "evidence": "GitHub merged state is not a substitute for live Pages verification."
+    }
+  ],
+  "task1Complete": false,
+  "studentMasteryCertified": false,
+  "notes": [
+    "Counts of cards carrying a specification prefix are only section-level candidates; they do not certify every subsection or the accuracy of individual answers.",
+    "Legacy science cards without direct specRef were previously provisionally crosswalked at broad level; they are not automatically missing or invalid.",
+    "Do not copy AQA copyrighted question papers or close paraphrases as substitute whole-paper repositories; link to official source papers and write independent practice.",
+    "2015 uses legacy qualifications; 2026 summer AQA papers have a published future public release date and must not be marked indexed without verified access."
+  ]
+}

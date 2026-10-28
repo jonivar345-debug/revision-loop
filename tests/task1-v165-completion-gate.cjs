@@ -1,0 +1,54 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const deck = JSON.parse(fs.readFileSync('deck.json','utf8'));
+const bank = JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const inventory = JSON.parse(fs.readFileSync('paper_inventory_2015_2025.json','utf8'));
+const ledger = JSON.parse(fs.readFileSync('editorial/task1-v165-completion-gate.json','utf8'));
+const m = ledger.measurements;
+assert.equal(m.deckVersion,deck.deckVersion);
+assert.equal(m.bankVersion,bank.bankVersion);
+assert.equal(m.totalFlashcards,deck.cards.length);
+assert.equal(m.activeFlashcards,deck.cards.filter(c=>c.active!==false).length);
+assert.equal(m.mainQuestionBank,bank.questions.length);
+assert.equal(m.inventoryHistoricPapers,inventory.papers.length);
+assert.equal(m.sourceIndexedQuestionParts,inventory.papers.reduce((n,p)=>n+p.indexedQuestionParts,0));
+assert.equal(deck.cards.length,3335);
+assert.equal(bank.questions.length,1268);
+assert.equal(inventory.papers.length,134);
+assert.equal(inventory.papers.filter(p=>p.indexedQuestionParts>0).length,31);
+assert.equal(inventory.papers.filter(p=>p.complete===true).length,0);
+assert.deepEqual(Object.keys(ledger.subjects),['Physics','Chemistry','Maths']);
+assert.equal(ledger.subjects.Physics.sections.length,13);
+assert.equal(ledger.subjects.Chemistry.sections.length,34);
+for(const [subject,stats] of Object.entries(ledger.subjects)){
+ const active=deck.cards.filter(c=>c.subject===subject&&c.active!==false);
+ const papers=inventory.papers.filter(p=>p.subject===subject);
+ const qs=bank.questions.filter(q=>q.subject===subject);
+ assert.equal(stats.activeCards,active.length);
+ assert.equal(stats.mockEligibleCards,active.filter(c=>c.mock===true).length);
+ assert.equal(stats.cardsWithoutDirectSpecRef,active.filter(c=>!c.specRef).length);
+ assert.equal(stats.originalPracticeQuestions,qs.length);
+ assert.equal(stats.trackedHistoricPapers,papers.length);
+ assert.equal(stats.papersWithAnyIndexedParts,papers.filter(p=>p.indexedQuestionParts>0).length);
+ assert.equal(stats.sourceIndexedParts,papers.reduce((n,p)=>n+p.indexedQuestionParts,0));
+ assert.equal(stats.fullyVerifiedPapers,papers.filter(p=>p.complete===true).length);
+ for(const sec of stats.sections||[]){
+  const ids=active.filter(c=>c.specRef===sec.specRef||String(c.specRef||'').startsWith(sec.specRef+'.')||String(c.specRef||'').startsWith(sec.specRef+' '));
+  assert.equal(sec.explicitTaggedActiveCards,ids.length);
+  assert.deepEqual(sec.exampleCardIds,ids.slice(0,3).map(c=>c.id));
+  assert.equal(sec.certifiedAllAssessableRequirements,false);
+ }
+}
+const phy=deck.cards.filter(c=>c.subject==='Physics'&&c.active!==false&&c.mock===true);
+const chem=deck.cards.filter(c=>c.subject==='Chemistry'&&c.active!==false&&c.mock===true);
+assert.equal(ledger.subjects.Physics.observedMockScope.explicitA2TaggedSectionsEligible,phy.filter(c=>/^3\.(?:6|7|8|9|10|11|12|13)(?:\.|$)/.test(c.specRef||'')).length);
+assert.equal(ledger.subjects.Physics.observedMockScope.optionalTopicCardsEligible,phy.filter(c=>/medical physics|astrophysics|engineering physics|turning points|electronics/i.test(c.topic||'')).length);
+assert.equal(ledger.subjects.Chemistry.observedMockScope.bufferMentioningCardsEligible,chem.filter(c=>/\bbuffers?\b/i.test(c.front+' '+c.back)).length);
+assert.equal(ledger.subjects.Physics.observedMockScope.explicitA2TaggedSectionsEligible,0);
+assert.equal(ledger.subjects.Chemistry.observedMockScope.bufferMentioningCardsEligible,0);
+assert.deepEqual(ledger.acceptanceCriteria.map(x=>x.id),['T1-CARD-CONTENT','T1-MOCK-SCOPE','T1-QUESTION-QUALITY','T1-OFFICIAL-PAPERS','T1-OPTION','T1-LIVE-DEPLOYMENT']);
+assert(ledger.acceptanceCriteria.every(c=>c.status!=='complete'));
+assert.equal(ledger.task1Complete,false);
+assert.equal(ledger.studentMasteryCertified,false);
+console.log('PASS v165: explicit Physics/Chemistry section evidence and factual Task 1 completion gates; no unsupported completeness claims.');
