@@ -2029,6 +2029,20 @@ function acceptedMarkPointAlternative(answer,variants,point){
  });
 }
 
+// Very short answers cannot establish several independent pieces of
+// working in a multi-step task just because the words resemble many criteria.
+// This is only a conservative suggested-score cap: students can correct it.
+function singleClaimEvidenceCap(q,answer){
+ if(q.requiresWorking!==true||q.marks<5||!Array.isArray(q.markPoints)||
+    q.markPoints.length<4||q.answerType==='numeric')return null;
+ const s=String(answer||'').trim();
+ if(s.length<12||s.length>130||s.split(/\s+/).length>22)return null;
+ if(/[;\n]|⇒|→|=>|\bthen\b/i.test(s))return null;
+ if((s.match(/(?<![<>!])=(?![=>])/g)||[]).length>1)return null;
+ if(s.split(/[.!?](?=\s|$)/).filter(Boolean).length>1)return null;
+ return /\b(?:because|therefore|hence|thus|which|means|since|so|and)\b/i.test(s)?2:1;
+}
+
 function examSuggested(q,answer){
  // A direct denial of a curated correct statement is not evidence for it.
  // This guard also prevents the older fuzzy matcher awarding other marks
@@ -2405,6 +2419,8 @@ function examSuggested(q,answer){
   preds=permitted;
   suggested=totalMarkingPoints(q,preds);
  }
+ const singleClaimCap=typeof singleClaimEvidenceCap==='function'?singleClaimEvidenceCap(q,answer):null;
+ if(singleClaimCap!==null)suggested=Math.min(suggested,singleClaimCap);
  const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }

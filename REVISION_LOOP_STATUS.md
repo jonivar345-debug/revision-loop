@@ -1,3 +1,15 @@
+# Revision Loop v169 — fair partial credit after Physics model-answer repairs (28 October 2026)
+
+**Proposed until CI and merge.** This combines the previous, fully merged v168 Physics model-answer repairs with the next round of marking improvements. All original question IDs, mark totals, past-paper links and **1,268 bank questions** remain intact; the flashcard deck stays at **3,335**.
+
+Independent trials found that a single short assertion could be credited for several similar-sounding criteria in a lengthy multi-step answer. The new `singleClaimEvidenceCap` gives conservative suggested marks for short one-claim responses on a working-required question worth at least five marks, without limiting complete model answers or genuinely multi-stage written working. For example, the isolated statement that the second derivative is positive at x=3 no longer suggests 4/8; it suggests 2/8. A bare statement of 32.4% total yield suggests 1/7 rather than 2/7. These are editable suggestions, not automatic penalties in a formal AQA assessment.
+
+Six more independently written questions have **18 vetted alternate phrasings**, with worked-method and error-carried-forward review notes. The merged bank now contains **50 vetted answer alternatives across 18 questions**, including the 12 phrases and four complete Physics model answers merged in the preceding update. Individually negated alternatives remain rejected; a standalone accepted phrase does not grant unrelated points.
+
+Regression `tests/task1-v169-marking-calibration.cjs` checks actual overcredit cases, completeness of original worked model answers, accepted phrases, negation controls and separated method marks. It runs alongside existing Physics, scanner and World tests. No unverified claims of official AQA mark scheme coverage, automatic ECF judgement or perfect OCR are made.
+
+---
+
 # Revision Loop v168 — repair incomplete Physics model answers (28 October 2026)
 
 **Proposed until all CI, merge and public website verification.** A complete, local marking audit of the current 1,268-question main bank found **four older 3-mark original Physics practice questions where the stored model answer failed to demonstrate all three separate marking points**. Two were free-body diagrams, one Boyle's law and one electric fields. Their old displayed answers earned only 1/3 when checked honestly, because they omitted diagrams/force directions, physical conditions or working.
