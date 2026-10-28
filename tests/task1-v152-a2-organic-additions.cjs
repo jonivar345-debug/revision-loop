@@ -1,4 +1,5 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const d=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -7,10 +8,10 @@ const a=JSON.parse(fs.readFileSync('editorial/task1-v152-a2-organic-additions.js
 const previousAudit=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 
-assert.equal(d.deckVersion,152);
+assert(d.deckVersion>=152);
 assert(b.bankVersion>=62);
-assert.equal(d.cards.length,3276);
-assert.equal(d.cards.filter(c=>c.active!==false).length,3272);
+assert.equal(d.cards.filter(c=>!c.id.startsWith('task1_v154_')).length,3276);
+assert.equal(d.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v154_')).length,3272);
 assert.equal(b.questions.filter(q=>!q.id.startsWith('organic_v153_')).length,1226);
 assert.equal(d.cards[3269].id,'task1_v150_007');
 assert.equal(b.questions[1211].id,'organic_v149_12');
@@ -24,7 +25,7 @@ assert.equal(a.additions.questions,14);
 assert.equal(a.additions.flashcards,6);
 assert.equal(a.additions.marks,84);
 
-const oldCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_'));
+const oldCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_'));
 const oldQuestions=b.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_'));
 assert.equal(oldCards.length,3270);
 assert.equal(oldCards.filter(c=>c.active!==false).length,3266);
@@ -67,7 +68,7 @@ for(let i=0;i<newQuestions.length;i++){
  assert.equal(q.answerType,'points');assert.equal(q.questionType,'multi-step problem');
  assert.equal(q.marks,ev.marks);assert.equal(q.marks,q.markPoints.length);
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
- assert.deepEqual(q.markPoints,ev.markPoints);
+ assert.deepEqual(q.markPoints,expectedQuestionPoints(ev.markPoints));
  assert.equal(q.modelAnswer,q.markPoints.join(' '));
  assert(q.marks>=5&&q.marks<=7);
  assert(q.prompt.length>80);
