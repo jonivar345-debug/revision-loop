@@ -8064,7 +8064,19 @@
       "verificationLevel": "original-exam-style",
       "requiresWorking": true,
       "numericAnswer": 3.5,
-      "tolerance": 0.063
+      "tolerance": 0.063,
+      "markPointAcceptedAlternatives": [
+        [
+          "a 60 n force to the right opposes 18 n of leftward friction"
+        ],
+        [
+          "weight is 118 n down and the normal contact force is 118 n up"
+        ],
+        [
+          "the 42 n resultant to the right gives 3.5 metres per second squared acceleration"
+        ]
+      ],
+      "ecfGuidance": "If the student correctly uses acceleration = their resultant force / 12 kg but made an earlier arithmetic slip, consider the method. Diagram forces/directions must be separately demonstrated; do not infer them from the final acceleration."
     },
     {
       "id": "orig_v25_physics_free_body_diagrams_2",
@@ -8171,7 +8183,19 @@
       "verificationLevel": "original-exam-style",
       "requiresWorking": true,
       "numericAnswer": 27.5,
-      "tolerance": 0.49499999999999994
+      "tolerance": 0.49499999999999994,
+      "markPointAcceptedAlternatives": [
+        [
+          "upward string tension and downward gravitational weight are the only forces"
+        ],
+        [
+          "newtons second law is tension minus weight equals mass times acceleration"
+        ],
+        [
+          "the force in the string works out as 27.5 newtons"
+        ]
+      ],
+      "ecfGuidance": "Consider credit for a correctly oriented T − mg = ma setup even if an earlier weight calculation is incorrect. The right final tension does not imply correctly labelled force arrows."
     },
     {
       "id": "orig_v25_physics_gas_laws_1",
@@ -8245,7 +8269,19 @@
       "verificationLevel": "original-exam-style",
       "requiresWorking": true,
       "numericAnswer": 152,
-      "tolerance": 1.824
+      "tolerance": 1.824,
+      "markPointAcceptedAlternatives": [
+        [
+          "the product of pressure and volume remains constant at a fixed temperature"
+        ],
+        [
+          "multiply 95 by 4.0 and divide by 2.5 for the new pressure"
+        ],
+        [
+          "the gas pressure after compression is 152 kilopascals"
+        ]
+      ],
+      "ecfGuidance": "Boyle's-law setup p1V1 = p2V2 and a correctly formed rearrangement can earn independent method credit if the final arithmetic is wrong. Constant temperature must be stated for its separate mark."
     },
     {
       "id": "orig_v25_physics_gas_laws_3",
@@ -8391,7 +8427,19 @@
       "verificationLevel": "original-exam-style",
       "requiresWorking": true,
       "numericAnswer": 50000,
-      "tolerance": 600
+      "tolerance": 600,
+      "markPointAcceptedAlternatives": [
+        [
+          "the electric field is the voltage divided by the distance between the plates"
+        ],
+        [
+          "twelve millimetres is 0.012 metres"
+        ],
+        [
+          "a 50000 volt per metre field points from positive to negative plate"
+        ]
+      ],
+      "ecfGuidance": "A correct E = V/d setup may deserve method credit even when the student mis-converts 12 mm; the conversion and field magnitude/direction still require their own evidence."
     },
     {
       "id": "orig_v25_physics_electric_fields_3",
