@@ -2448,7 +2448,20 @@ function reviewedExpressionEvidence(answer,expression){
  }
  // Conditional marks in genuine AQA schemes: a justification cannot
  // score where the prerequisite experimental change was not justified.
- const permitted=enforceMarkDependencies(q,preds);
+ const permitted=[...preds];
+ // The scoring fragment is also run in isolated marking tests, so keep this
+ // fixed-point dependency check self-contained.
+ if(q.markPointDependencies&&typeof q.markPointDependencies==='object'){
+  for(let pass=0;pass<permitted.length;pass++){
+   let changed=false;
+   Object.entries(q.markPointDependencies).forEach(([index,prerequisites])=>{
+    const i=Number(index);
+    if(!Number.isInteger(i)||!permitted[i]||!Array.isArray(prerequisites))return;
+    if(prerequisites.some(p=>!permitted[p])){permitted[i]=false;changed=true}
+   });
+   if(!changed)break;
+  }
+ }
  if(permitted.some((ok,i)=>ok!==preds[i])){
   preds=permitted;
   suggested=totalMarkingPoints(q,preds);
