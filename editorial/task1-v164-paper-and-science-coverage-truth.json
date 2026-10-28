@@ -1,0 +1,205 @@
+{
+  "release": "v164",
+  "checkedAt": "2026-10-28",
+  "purpose": "Provide explicit paper-index and science-flashcard completeness checks without treating original practice as whole-paper indexing.",
+  "basis": "paper_inventory_2015_2025.json (last checked 2026-10-21) and current deck.json",
+  "sources": [
+    "https://www.aqa.org.uk/past-papers-and-mark-schemes-finder",
+    "https://www.aqa.org.uk/exams-administration/exams/whats-available-when"
+  ],
+  "totals": {
+    "currentSpecPapers2016to2025": 134,
+    "papersWithAnyIndexedPart": 31,
+    "indexedQuestionParts": 231,
+    "completePaperCertified": 0,
+    "pendingSummer2026Papers": 15
+  },
+  "groups": [
+    {
+      "subject": "Physics",
+      "papersTrackedThrough2025": 47,
+      "papersWithIndexedParts": 11,
+      "indexedQuestionParts": 68,
+      "completePapers": 0,
+      "activeFlashcards": 1154,
+      "mockEligibleFlashcards": 730,
+      "flashcardsWithoutExplicitSpecReference": 408,
+      "fullSpecCardCoverageCertified": false
+    },
+    {
+      "subject": "Chemistry",
+      "papersTrackedThrough2025": 47,
+      "papersWithIndexedParts": 12,
+      "indexedQuestionParts": 110,
+      "completePapers": 0,
+      "activeFlashcards": 1981,
+      "mockEligibleFlashcards": 1533,
+      "flashcardsWithoutExplicitSpecReference": 705,
+      "fullSpecCardCoverageCertified": false
+    },
+    {
+      "subject": "Maths",
+      "papersTrackedThrough2025": 40,
+      "papersWithIndexedParts": 8,
+      "indexedQuestionParts": 53,
+      "completePapers": 0,
+      "activeFlashcards": 196,
+      "mockEligibleFlashcards": 106,
+      "flashcardsWithoutExplicitSpecReference": 103,
+      "fullSpecCardCoverageCertified": false
+    }
+  ],
+  "pending2026Papers": [
+    {
+      "subject": "Physics",
+      "level": "AS",
+      "year": 2026,
+      "paper": "7407/1",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Physics",
+      "level": "AS",
+      "year": 2026,
+      "paper": "7407/2",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Physics",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7408/1",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Physics",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7408/2",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Physics",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7408/3",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Chemistry",
+      "level": "AS",
+      "year": 2026,
+      "paper": "7404/1",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Chemistry",
+      "level": "AS",
+      "year": 2026,
+      "paper": "7404/2",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7405/1",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7405/2",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Chemistry",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7405/3",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2026,
+      "paper": "7356/1",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Maths",
+      "level": "AS",
+      "year": 2026,
+      "paper": "7356/2",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Maths",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7357/1",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Maths",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7357/2",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    },
+    {
+      "subject": "Maths",
+      "level": "A-level",
+      "year": 2026,
+      "paper": "7357/3",
+      "status": "public release scheduled 9 July 2027",
+      "indexedQuestionParts": 0,
+      "completePaperVerified": false
+    }
+  ],
+  "facts": [
+    "2015 uses older AQA specifications and is not equivalent to current reformed papers.",
+    "2020 and 2021 standard summer exams were cancelled; autumn/November series were indexed.",
+    "AQA's public release date for summer 2026 AS/A-level papers and mark schemes is 9 July 2027.",
+    "Indexed question parts and independent practice do not certify whole-paper coverage.",
+    "No entire AQA copyrighted paper or close substitute is reproduced here.",
+    "Physics and Chemistry have thousands of cards but no exhaustive specification-to-card certification."
+  ],
+  "needsNext": [
+    "Evidence-based AQA Physics and Chemistry line-by-line card audits",
+    "Audit every source-paper question and mark scheme before marking a paper complete",
+    "Link to copyright-authorized official full papers",
+    "Add original exam-style questions for uncovered skills without copying paper text"
+  ],
+  "fullSpecificationCertified": false,
+  "studentMasteryCertified": false
+}
