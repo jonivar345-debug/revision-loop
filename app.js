@@ -1999,27 +1999,6 @@ function evidenceRuleScore(answer,alternatives){
  // allowing spelling variation but not unrelated single keywords.
  return alternatives.some(group=>Array.isArray(group)&&group.length>=2&&group.every(term=>present.some(t=>close(t,term))))?1:0;
 }
-// A curated equation is evidence only when it stands on its own: not within a
-// longer variable/number, and not explicitly rejected by the student's wording.
-// Whitespace around operators is insignificant; multiplication is not guessed.
-function reviewedExpressionEvidence(answer,expression){
- const tidy=value=>normalise(value).replace(/\s*([=+*/<>^])\s*/g,'$1');
- const text=tidy(answer),formula=tidy(expression);
- if(formula.length<5||!text)return {matched:false,rejected:false};
- let at=0,rejected=false;
- while((at=text.indexOf(formula,at))>=0){
-  const before=text.slice(0,at),after=text.slice(at+formula.length);
-  at+=formula.length;
-  // For example, 2.26e8 is not 12.26e8 or 2.26e80;
-  // n=c/v must not be inferred from n=c/vx.
-  if(/[a-z0-9.]$/i.test(before)||/^[a-z0-9.]/i.test(after))continue;
-  const denial=/(?:\b(?:not|never|no|wrong|incorrect|invalid|without|avoid)\s*|\b(?:do not use|don't use|instead of|rather than)\s*)$/i.test(before.slice(-45));
-  const rebuttal=/^\s*(?:is|was|would be)?\s*(?:wrong|incorrect|invalid|false)\b|^\s*but\s+(?:wrong|incorrect|invalid)\b/i.test(after.slice(0,45));
-  if(denial||rebuttal){rejected=true;continue}
-  return {matched:true,rejected:false};
- }
- return {matched:false,rejected};
-}
 function enforceMarkDependencies(q,flags){
  if(!q.markPointDependencies||typeof q.markPointDependencies!=='object')return flags;
  const checked=[...flags];
@@ -2067,6 +2046,27 @@ function singleClaimEvidenceCap(q,answer){
 }
 
 function examSuggested(q,answer){
+// A curated equation is evidence only when it stands on its own: not within a
+// longer variable/number, and not explicitly rejected by the student's wording.
+// Whitespace around operators is insignificant; multiplication is not guessed.
+function reviewedExpressionEvidence(answer,expression){
+ const tidy=value=>normalise(value).replace(/\s*([=+*/<>^])\s*/g,'$1');
+ const text=tidy(answer),formula=tidy(expression);
+ if(formula.length<5||!text)return {matched:false,rejected:false};
+ let at=0,rejected=false;
+ while((at=text.indexOf(formula,at))>=0){
+  const before=text.slice(0,at),after=text.slice(at+formula.length);
+  at+=formula.length;
+  // For example, 2.26e8 is not 12.26e8 or 2.26e80;
+  // n=c/v must not be inferred from n=c/vx.
+  if(/[a-z0-9.]$/i.test(before)||/^[a-z0-9.]/i.test(after))continue;
+  const denial=/(?:\b(?:not|never|no|wrong|incorrect|invalid|without|avoid)\s*|\b(?:do not use|don't use|instead of|rather than)\s*)$/i.test(before.slice(-45));
+  const rebuttal=/^\s*(?:is|was|would be)?\s*(?:wrong|incorrect|invalid|false)\b|^\s*but\s+(?:wrong|incorrect|invalid)\b/i.test(after.slice(0,45));
+  if(denial||rebuttal){rejected=true;continue}
+  return {matched:true,rejected:false};
+ }
+ return {matched:false,rejected};
+}
  // A direct denial of a curated correct statement is not evidence for it.
  // This guard also prevents the older fuzzy matcher awarding other marks
  // for the same isolated, explicitly contradicted statement.
