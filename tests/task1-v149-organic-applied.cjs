@@ -6,8 +6,8 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v149-organic-applied-que
 const all=bank.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')), added=all.filter(q=>q.id.startsWith('organic_v149_'));
 assert(bank.bankVersion>=61);assert.equal(all.length,1212);
 assert.equal(added.length,12);assert.equal(all.length-added.length,1200);
-assert(deck.deckVersion>=146);assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length,3263);
-assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length,3259);
+assert(deck.deckVersion>=146);assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')).length,3263);
+assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')).length,3259);
 assert.equal(new Set(all.map(q=>q.id)).size,all.length);
 assert.equal(audit.addedQuestions,12);
 assert.equal(added.reduce((n,q)=>n+q.marks,0),audit.addedMarks);

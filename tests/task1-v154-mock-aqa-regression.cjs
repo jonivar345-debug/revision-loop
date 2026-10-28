@@ -6,13 +6,15 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v154-mock-aqa-terminolog
 const questions=JSON.parse(fs.readFileSync('editorial/task1-v154-mock-applied-questions.json','utf8'));
 const prior=JSON.parse(fs.readFileSync('editorial/task1-v153-mock-priority-evidence.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
-assert.equal(deck.deckVersion,154);
-assert.equal(deck.cards.length,3280);
-assert.equal(deck.cards.filter(x=>x.active!==false).length,3276);
+assert(deck.deckVersion>=154);
+assert.equal(deck.cards.filter(x=>!x.id.startsWith('task1_v155_')).length,3280);
+assert.equal(deck.cards.filter(x=>x.active!==false&&!x.id.startsWith('task1_v155_')).length,3276);
 assert.equal(bank.bankVersion,64);
 assert.equal(bank.questions.length,1247);
-assert.equal(deck.cards.filter(x=>x.active!==false&&x.mock===true).length,2343);
-assert.equal(new Set(deck.cards.map(x=>x.id)).size,3280);
+const v155=JSON.parse(fs.readFileSync('editorial/task1-v155-mock-scope-recall.json','utf8'));
+const oldMock=new Set(v155.changes.removedFromMock.map(x=>x.id));
+assert.equal(deck.cards.filter(x=>x.active!==false&&!x.id.startsWith('task1_v155_')&&(x.mock===true||oldMock.has(x.id))).length,2343);
+assert.equal(new Set(deck.cards.map(x=>x.id)).size,deck.cards.length);
 assert.equal(new Set(bank.questions.map(x=>x.id)).size,1247);
 assert.equal(audit.deck.existingCardsReworded,22);
 assert.equal(audit.deck.added,4);
@@ -37,7 +39,7 @@ for(const c of audit.changes.addedCards){
  assert.equal(live.front,c.front);assert.equal(live.back,c.back);
  assert(live.front.length<=110&&live.back.length<=120);
 }
-assert.equal(deck.cards.filter(x=>!x.id.startsWith('task1_v154_')).length,3276);
+assert.equal(deck.cards.filter(x=>!x.id.startsWith('task1_v154_')&&!x.id.startsWith('task1_v155_')).length,3276);
 assert.equal(bank.questions.filter(x=>!x.id.startsWith('mock_v154_')).length,1238);
 const badChem=deck.cards.filter(c=>c.active!==false&&c.subject==='Chemistry'&&(/[σπ]/.test(c.front+' '+c.back)||/\\b(?:sigma|pi)\\s+(?:bond|electron)/i.test(c.front+' '+c.back)));
 assert.deepEqual(badChem.map(x=>x.id),[],'AQA Chemistry cards should not teach optional sigma/pi concepts');
