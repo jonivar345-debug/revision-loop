@@ -44,6 +44,9 @@ on:
       - 'tests/task1-v151-a2-organic-crosswalk.cjs'
       - 'tests/task1-v152-a2-organic-additions.cjs'
       - 'tests/task1-v153-organic-mechanism-audit.cjs'
+      - 'tests/task1-v154-mock-aqa-precision.cjs'
+      - 'editorial/task1-v154-mock-precision.json'
+      - 'editorial/task1-v154-mock-evidence-sample.json'
       - 'editorial/task1-v153-organic-theory-questions.json'
       - 'editorial/task1-v153-mock-priority-evidence.json'
       - 'editorial/task1-v152-a2-organic-additions.json'
@@ -120,6 +123,7 @@ jobs:
       - run: node tests/task1-v151-a2-organic-crosswalk.cjs
       - run: node tests/task1-v152-a2-organic-additions.cjs
       - run: node tests/task1-v153-organic-mechanism-audit.cjs
+      - run: node tests/task1-v154-mock-aqa-precision.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
