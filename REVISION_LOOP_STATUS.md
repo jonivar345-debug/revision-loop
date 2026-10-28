@@ -1,3 +1,13 @@
+# Revision Loop v161 — November Maths mock-only exam scope correction (28 October 2026)
+
+**Proposed until CI, merge and Pages deployment.** This release changes mock-session and daily-challenge question eligibility in `app.js`, not the question bank or flashcard deck. **Existing totals remain 3,312 flashcards (3,308 active; 2,340 mock-eligible) and 1,260 original exam questions**.
+
+Prior selection used `q.mock === true || q.level === 'AS'` and therefore offered **224** Maths questions despite the school's **Year 1 Pure-only** mock. The centralised `mockEligibleQuestion` predicate now requires the explicit mock flag and excludes Maths **Statistics (26), Mechanics (23), and three school-excluded radian questions**. The corrected Maths mock selection contains **121 Pure questions**. The other **51** Maths AS questions lacking explicit mock eligibility are also excluded. All 103 removed from mock selection **remain in full revision**, with original text, answers, marks, IDs and progress unchanged. Physics and Chemistry mock exam pools continue to use explicit flags (240 and 249 respectively).
+
+**Evidence:** `editorial/task1-v161-maths-mock-question-eligibility.json` includes all excluded IDs and the exact screening logic. `tests/task1-v161-maths-mock-question-scope.cjs` checks the runtime predicate, both filter call sites, counts and the school-specific exclusions. It runs in the cloud-sync CI workflow. **No new cards or questions** in this release. This is a functional eligibility correction, not a full AQA specification or personal mastery certification. Existing historical question-level `mock` flags have not been rewritten; in-scope filtering is enforced when selecting questions for November mock sessions and mock daily challenges.
+
+---
+
 # Revision Loop v160 — AS Physics Particles and Measurements mock coverage (28 October 2026)
 
 **Proposed until CI, merge and Pages:** deck v160 **3,312 cards** (3,308 active), **2,340 mock-eligible** (Physics 730; Chemistry 1,533; Maths 77). Exam bank v68: **1,260 questions**. Existing cards, questions, IDs, app runtime, scanner, progress keys, XP and World assets unchanged.
