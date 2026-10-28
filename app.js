@@ -2484,6 +2484,17 @@ function renderExam(q){
    const evidence=vision?vision.marking.map(p=>({
      strong:p.earned===true,line:p.evidence||'',reason:p.reason||'',confidence:p.confidence||'low'
    })):(scannedText?window.RevisionScan?.reviewEvidence(q,answer,res):null);
+   if(scannedText&&!vision&&Array.isArray(evidence)&&Array.isArray(q.markPointAcceptedAlternatives)){
+    const arithmeticConcern=window.RevisionScan?.hasArithmeticMistakes?.(answer)===true;
+    q.markPointAcceptedAlternatives.forEach((alternatives,i)=>{
+     if(!arithmeticConcern&&!Array.isArray(q.markEvidenceRules?.[i])&&
+       acceptedMarkPointAlternative(answer,alternatives,q.markPoints[i])&&evidence[i]){
+      evidence[i].strong=true;
+      evidence[i].line='Accepted alternative found in reviewed transcription';
+      evidence[i].reason='Provisional match to a vetted equivalent; confirm against the attached photo.';
+     }
+    });
+   }
    if(scannedText&&!vision&&Array.isArray(q.markEvidenceRules)&&Array.isArray(evidence)){
     const matched=res.preds;
     for(let i=0;i<evidence.length;i++)if(Array.isArray(q.markEvidenceRules[i])){
