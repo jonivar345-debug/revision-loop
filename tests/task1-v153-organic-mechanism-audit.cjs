@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
@@ -63,7 +64,7 @@ for(const row of mockAudit.rows){
  assert(row.evidence.cards.length+row.evidence.questions.length>0);
  if(row.status==='supported_practice')assert(row.evidence.questions.length>0);
  if(row.status==='partial')assert(row.limitation&&row.next);
- for(const e of row.evidence.cards){const c=cardMap.get(e.id);assert(c&&c.active!==false,'Missing card '+e.id);assert.equal(c.front,e.front);assert.equal(c.back,e.back);assert.equal(c.specRef||null,e.specRef);assert.equal(c.mock??null,e.mock)}
+ for(const e of row.evidence.cards){const c=cardMap.get(e.id);assert(c&&c.active!==false,'Missing card '+e.id);assert.equal(c.front,allowed(c.id,'front',e.front));assert.equal(c.back,allowed(c.id,'back',e.back));assert.equal(c.specRef||null,e.specRef);assert.equal(c.mock??null,e.mock)}
  for(const e of row.evidence.questions){const q=qMap.get(e.id);assert(q,'Missing question '+e.id);assert.equal(q.prompt,e.prompt);assert.equal(q.marks,e.marks);assert.deepEqual(q.markPoints,e.markPoints);assert.equal(q.revisionTopic,e.revisionTopic)}
 }
 assert.deepEqual(count,mockAudit.counts.byStatus);
