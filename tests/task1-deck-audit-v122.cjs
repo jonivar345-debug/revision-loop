@@ -33,7 +33,7 @@ for(const c of added){
   if(c.visual||c.visualBack)assert.ok(visualNames.has(c.visual||c.visualBack),'Unknown diagram '+c.id);
 }
 const count=subject=>added.filter(c=>c.subject===subject).length;
-const historicalCount=subject=>added.filter(c=>c.subject===subject&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')).length;
+const historicalCount=subject=>added.filter(c=>c.subject===subject&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')).length;
 assert.equal(deck.meta.task1FlashcardAudit.physicsNew,historicalCount('Physics'));
 assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,historicalCount('Chemistry'));
 assert.equal(deck.meta.task1FlashcardAudit.mathsNew,historicalCount('Maths'));

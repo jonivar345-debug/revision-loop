@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 156,
+  "deckVersion": 157,
   "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -69199,6 +69199,94 @@
       "priority": 8,
       "courseTopic": "Alkanes",
       "revisionTopic": "Alkanes"
+    },
+    {
+      "subject": "Physics",
+      "stage": "AS",
+      "id": "task1_v157_001",
+      "specRef": "3.4.1.4",
+      "topic": "Projectiles",
+      "front": "In fluid motion, what is lift?",
+      "back": "A force from the fluid acting perpendicular to the direction of relative flow.",
+      "accept": [
+        "A force from the fluid acting perpendicular to the direction of relative flow."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Projectiles",
+      "revisionTopic": "Projectiles"
+    },
+    {
+      "subject": "Physics",
+      "stage": "AS",
+      "id": "task1_v157_002",
+      "specRef": "3.4.1.4",
+      "topic": "Projectiles",
+      "front": "How does air resistance generally change as an object's speed increases?",
+      "back": "It increases.",
+      "accept": [
+        "It increases."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Projectiles",
+      "revisionTopic": "Projectiles"
+    },
+    {
+      "subject": "Physics",
+      "stage": "AS",
+      "id": "task1_v157_003",
+      "specRef": "3.4.2.1",
+      "topic": "Materials",
+      "front": "What is breaking stress?",
+      "back": "The tensile stress when the material fractures: breaking force divided by original cross-sectional area.",
+      "accept": [
+        "The tensile stress when the material fractures: breaking force divided by original cross-sectional area."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Materials",
+      "revisionTopic": "Materials"
+    },
+    {
+      "subject": "Physics",
+      "stage": "AS",
+      "id": "task1_v157_004",
+      "specRef": "3.4.1.8",
+      "topic": "Energy",
+      "front": "State the principle of conservation of energy.",
+      "back": "Energy cannot be created or destroyed; it is transferred between stores or systems.",
+      "accept": [
+        "Energy cannot be created or destroyed; it is transferred between stores or systems."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Energy",
+      "revisionTopic": "Energy"
     }
   ],
   "meta": {

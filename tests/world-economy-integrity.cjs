@@ -43,12 +43,13 @@ const allFiles=['exam_questions.json','paper_supplement_2016_2017.json','gap_que
 const q=allFiles.flatMap(f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8')).questions);
 const deck=JSON.parse(fs.readFileSync(path.join(root,'deck.json'),'utf8')).cards;
 const available=Object.fromEntries(['Maths','Physics','Chemistry'].map(s=>[s,new Set(deck.filter(x=>x.subject===s).map(x=>x.revisionTopic||x.topic))]));
-assert.equal(q.filter(x=>x.standalone!==false&&!x.id.startsWith('organic_v147_')&&!x.id.startsWith('organic_v149_')&&!x.id.startsWith('organic_v152_')&&!x.id.startsWith('organic_v153_')&&!x.id.startsWith('mock_v154_')).length,1276,'Preserve 1,276 earlier standalone questions');checks++;
+assert.equal(q.filter(x=>x.standalone!==false&&!x.id.startsWith('organic_v147_')&&!x.id.startsWith('organic_v149_')&&!x.id.startsWith('organic_v152_')&&!x.id.startsWith('organic_v153_')&&!x.id.startsWith('mock_v154_')&&!x.id.startsWith('mock_v157_')).length,1276,'Preserve 1,276 earlier standalone questions');checks++;
 assert.equal(q.filter(x=>x.standalone!==false&&x.id.startsWith('organic_v147_')).length,18,'Keep 18 additive original organic practice questions');checks++;
 assert.equal(q.filter(x=>x.standalone!==false&&x.id.startsWith('organic_v149_')).length,12,'Preserve 12 additive v149 organic questions');checks++;
 assert.equal(q.filter(x=>x.standalone!==false&&x.id.startsWith('organic_v152_')).length,14,'Retain 14 additive v152 organic exam questions');checks++;
 assert.equal(q.filter(x=>x.standalone!==false&&x.id.startsWith('organic_v153_')).length,12,'Retain 12 additive v153 original organic questions');checks++;
 assert.equal(q.filter(x=>x.standalone!==false&&x.id.startsWith('mock_v154_')).length,9,'Retain nine v154 original mock exam questions');checks++;
+assert.equal(q.filter(x=>x.standalone!==false&&x.id.startsWith('mock_v157_')).length,3,'Retain three new v157 original Physics mock exam questions');checks++;
 const seen=new Set(),prompts=new Set();
 for(const question of q){
  assert(!seen.has(question.id),'Duplicate question '+question.id);seen.add(question.id);checks++;

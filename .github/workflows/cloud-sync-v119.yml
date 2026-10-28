@@ -47,6 +47,8 @@ on:
       - 'tests/task1-v154-mock-aqa-regression.cjs'
       - 'tests/task1-v155-mock-scope-recall.cjs'
       - 'tests/task1-v156-chemistry-mock-recall.cjs'
+      - 'tests/task1-v157-physics-mock-mechanics.cjs'
+      - 'editorial/task1-v157-physics-mechanics-mock-audit.json'
       - 'editorial/task1-v156-chemistry-mock-recall-resolution.json'
       - 'editorial/task1-v155-mock-scope-recall.json'
       - 'editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json'
@@ -131,6 +133,7 @@ jobs:
       - run: node tests/task1-v154-mock-aqa-regression.cjs
       - run: node tests/task1-v155-mock-scope-recall.cjs
       - run: node tests/task1-v156-chemistry-mock-recall.cjs
+      - run: node tests/task1-v157-physics-mock-mechanics.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
