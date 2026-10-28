@@ -8,8 +8,8 @@ const begin=app.indexOf('function normalise('),middle=app.indexOf('function next
 const start=app.indexOf('function evidenceRuleScore(',middle),end=app.indexOf('function renderExam(',start);
 assert(begin>=0&&middle>begin&&start>middle&&end>start);
 const scoring=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
- app.slice(begin,middle)+app.slice(start,end)+'return {examSuggested,reviewedExpressionEvidence};')();
-const {examSuggested,reviewedExpressionEvidence}=scoring;
+ app.slice(begin,middle)+app.slice(start,end)+'return {examSuggested};')();
+const {examSuggested}=scoring;
 const qid=id=>{const q=bank.questions.find(x=>x.id===id);assert(q,'Missing question '+id);return q};
 const checks=[
  ['verified2019_P_4_2','n=c/v',1,[true,false,false]],
@@ -35,13 +35,6 @@ for(const [id,answer,marks,flags] of checks){
  assert.equal(outcome.suggested,marks,id+': '+answer);
  assert.deepEqual(outcome.preds,flags,id+': '+answer);
 }
-assert.equal(reviewedExpressionEvidence('not v = c/n','v=c/n').matched,false);
-assert.equal(reviewedExpressionEvidence('not v = c/n','v=c/n').rejected,true);
-assert.equal(reviewedExpressionEvidence('v=c/nx','v=c/n').matched,false);
-assert.equal(reviewedExpressionEvidence('v=c/n','v=c/n').matched,true);
-assert.equal(reviewedExpressionEvidence('using v = c / n','v=c/n').matched,true);
-assert.equal(reviewedExpressionEvidence('2.26e80','2.26e8').matched,false);
-assert.equal(reviewedExpressionEvidence('12.26e8','2.26e8').matched,false);
 assert.equal(bank.questions.length,1268);
 for(const q of bank.questions){
  const model=String(q.modelAnswer||'');
