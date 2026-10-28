@@ -12,6 +12,14 @@ const {examSuggested,singleClaimEvidenceCap,acceptedMarkPointAlternative}=new Fu
  'function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+app.slice(begin,middle)+app.slice(start,end)+
  'return {examSuggested,singleClaimEvidenceCap,acceptedMarkPointAlternative};')();
 assert.equal(bank.questions.length,1268);
+let fullModelChecks=0;
+for(const q of bank.questions){
+ if(!q.modelAnswer||!Array.isArray(q.markPoints))continue;
+ const result=examSuggested(q,q.modelAnswer);
+ assert.equal(result.suggested,q.marks,q.id+' stored model answer should receive full marks');
+ fullModelChecks++;
+}
+assert.equal(fullModelChecks,1268,'complete question-bank model-answer self-consistency');
 assert.equal(deck.cards.length,3335);
 const find=id=>{const q=bank.questions.find(q=>q.id===id);assert(q,id+' missing');return q;};
 const examples=[
