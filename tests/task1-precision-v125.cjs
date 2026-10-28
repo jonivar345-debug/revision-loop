@@ -30,7 +30,7 @@ for(const c of newCards){
  assert(Array.isArray(c.accept)&&c.accept.length>=1);
  assert(c.stage==='AS'||c.stage==='A2');
  if(c.subject==='Physics')assert(c.stage==='AS'&&c.mock&&c.taught,'AS Physics availability '+c.id);
- if(c.subject==='Chemistry'&&c.stage==='A2')assert(c.taught===true&&c.mock===true,'Taught Year 2 chemistry availability '+c.id);
+ if(c.subject==='Chemistry'&&c.stage==='A2'){const excluded=new Set(require('../editorial/task1-v155-mock-scope-recall.json').changes.removedFromMock.map(x=>x.id));assert(c.taught===true&&c.mock===!excluded.has(c.id),'Taught A2 cards retain taught status; mock reflects confirmed school scope '+c.id);}
  assert(!/^(calculate|work out)\b/i.test(c.front),'Worked question not flashcard');
 }
 for(const id of ['phy_motion_d','chem_ar_def','math_modulus','task1_v123_phy_001','task1_v124_phy_001','task1_v124_chem_001','task1_v124_bulk_math_001'])assert(ids.has(id),'Preserved ID missing '+id);
