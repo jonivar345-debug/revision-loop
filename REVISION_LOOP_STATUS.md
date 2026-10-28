@@ -1,3 +1,17 @@
+# Revision Loop — v154 AQA-specific mock flashcard precision (28 October 2026)
+
+**Candidate v154, pending CI and Pages deployment:** **3,283 flashcards (3,279 active)**, comprising **2,311 mock-eligible active cards**: **709 Physics**, **1,525 Chemistry**, **77 Maths**. Exam questions remain **1,238** (bank schema v64 solely to record wording corrections). Seven concise flashcards cover specific previously underrepresented recall concepts. No old flashcard or exam-question IDs are deleted; saved progress identifiers and app runtime are unchanged.
+
+**AQA terminology:** Reworded 21 existing Chemistry cards and 17 original practice-question explanations to use the examinable language of *C=C double bond as an electron-rich region*, *movement of bonding electron pairs*, *carbonyl bonding* and *benzene's delocalised electrons*. Avoid requiring sigma/pi bond labels; mathematical capital sigma Σ used in summations is unaffected. This follows the explicit left-hand content of AQA Chemistry 7405 section 3.3.4.1.
+
+**Scope fixes:** 18 Year 2 Physics periodic-motion/thermal cards are now full-A-level-only because the school mock is confirmed as AS Physics; eight Chemistry buffer/half-neutralisation cards are no longer mock-eligible because buffers are excluded; nine A-level-only Maths Pure cards (radian measure, secant, advanced differentiation, proof by contradiction and vector-line form) are kept for full revision, not Year 1 Pure mock. All 35 retain their original IDs and are still active for full revision.
+
+**Evidence:** `editorial/task1-v154-mock-precision.json` details every edited and reclassified ID. `editorial/task1-v154-mock-evidence-sample.json` records the actual front and back of **50** representative, mock-eligible Physics, Chemistry and Maths cards. **This is NOT an exhaustive atomic-specification coverage audit.** We can say the deck has substantial recall breadth, but not yet claim it teaches or tests every AQA line, apparatus/data skill or mathematical method. For a missed flashcard, first revise the explanation of the corresponding specification point; then answer associated exam questions to develop application. The website does not automatically provide a full, adaptive lesson simply because a card is marked missed.
+
+**Release gate:** `tests/task1-v154-mock-aqa-precision.cjs` plus all existing cloud, scanner, World and browser CI checks must pass before merge and Pages deploy. No Firestore/progress, XP, shop, World, scanner or app changes.
+
+---
+
 # Revision Loop — v153 Organic exam mechanisms and Year 1 science audit (28 October 2026)
 
 **Release candidate v153:** 12 original A-level-only Chemistry exam questions worth **81 marks**. Bank v62 → v63, **1,226 → 1,238 questions**. The questions are paper-only mechanism and functional-group mapping exercises: carbonyl electron-pair arrows; abstract nitrogen substitution and acylation; theoretical electrophilic aromatic substitution; and four-stage route ordering, evaluation, overall yield and atom economy. No practical chemical preparation or material-handling instructions. All new questions have `mock:false` and original—not AQA past paper—provenance. **Flashcards remain at 3,276 (3,272 active)** and all saved card IDs remain untouched.
