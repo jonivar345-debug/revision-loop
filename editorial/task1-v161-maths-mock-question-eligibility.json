@@ -1,0 +1,158 @@
+{
+  "release": "v161",
+  "date": "2026-10-28",
+  "subject": "AQA Maths 7357 — November school mock",
+  "scope": "Year 1 Pure only, excluding Statistics, Mechanics and school-excluded radian questions",
+  "cause": "Legacy exam mock sessions and daily challenges used q.mock === true || q.level === 'AS', admitting any AS question even when not mock-tagged.",
+  "baseline": {
+    "year1PureFlashcards": 77,
+    "legacyMathsMockSessionQuestions": 224,
+    "explicitMathsMockTagged": 173
+  },
+  "exclusionEvidence": {
+    "asWithoutExplicitMockFlag": {
+      "count": 51,
+      "ids": [
+        "aqa_math_as23_p1_q4",
+        "aqa_math_as23_p1_q5b",
+        "aqa_math_as23_p1_q6",
+        "aqa_math_as23_p1_q8b",
+        "aqa_math_as23_p1_q10b",
+        "aqa_math_as22_p1_q4",
+        "aqa_math_as22_p1_q5",
+        "aqa_math_as22_p1_q6b",
+        "aqa_math_as22_p1_q6c",
+        "aqa_math_as22_p1_q7",
+        "aqa_math_as22_p1_q8c",
+        "aqa_math_as22_p1_q9",
+        "aqa_math_as22_p1_q10a",
+        "aqa_math_as21_p1_q1_link",
+        "aqa_math_as20_p1_q5_link",
+        "aqa_math_as20_p1_q3a_link",
+        "aqa_math_as20_p1_q3b_link",
+        "aqa_math_as21_p1_q3a_link",
+        "aqa_math_as21_p1_q3b_link",
+        "aqa_math_as24_p1_q3_src",
+        "aqa_math_as24_p1_q4ai_src",
+        "aqa_math_as24_p1_q4aii_src",
+        "aqa_math_as24_p1_q4b_src",
+        "aqa_math_as24_p1_q5a_src",
+        "aqa_math_as24_p1_q5b_src",
+        "aqa_math_as24_p1_q6_src",
+        "aqa_math_as24_p1_q7a",
+        "aqa_math_as24_p1_q7b",
+        "aqa_math_as24_p1_q8a",
+        "aqa_math_as24_p1_q8b",
+        "aqa_math_as25_p1_q3",
+        "aqa_math_as25_p1_q4",
+        "aqa_math_as25_p1_q14",
+        "aqa_math_as25_p1_q17",
+        "original_v34_maths_0",
+        "original_v34_maths_1",
+        "original_v34_maths_2",
+        "original_v34_maths_3",
+        "original_v34_maths_4",
+        "original_v34_maths_5",
+        "original_v34_maths_6",
+        "original_v34_maths_7",
+        "original_v34_maths_8",
+        "original_v34_maths_9",
+        "original_v34_maths_10",
+        "original_v34_maths_11",
+        "original_v34_maths_12",
+        "original_v34_maths_13",
+        "original_v34_maths_14",
+        "original_v34_maths_15",
+        "original_v34_maths_21"
+      ]
+    },
+    "statisticsOrMechanicsMockTagged": {
+      "count": 49,
+      "ids": [
+        "orig_v31_maths_statistics_1",
+        "orig_v31_maths_statistics_2",
+        "orig_v31_maths_statistics_3",
+        "orig_v31_maths_mechanics_1",
+        "orig_v31_maths_mechanics_2",
+        "orig_v31_maths_mechanics_3",
+        "orig_v31_maths_mechanics_4",
+        "orig_v32_math_forces_3",
+        "orig_v32_math_forces_4",
+        "orig_v33_math_28_0",
+        "orig_v33_math_30_0",
+        "orig_v33_math_32_0",
+        "orig_v33_math_33_0",
+        "orig_v33_math_34_0",
+        "orig_v33_math_35_0",
+        "orig_v33_math_36_0",
+        "orig_v33_math_36_1",
+        "orig_v33_math_35_1",
+        "orig_v33_math_34_1",
+        "orig_v33_math_33_1",
+        "orig_v33_math_32_1",
+        "orig_v33_math_31_0",
+        "orig_v33_math_29_0",
+        "orig_v33_math_41_0",
+        "orig_v33_math_30_1",
+        "orig_v33_math_32_2",
+        "orig_v33_math_33_2",
+        "orig_v33_math_34_2",
+        "orig_v33_math_35_2",
+        "orig_v33_math_36_2",
+        "orig_v33_math_36_3",
+        "orig_v33_math_35_3",
+        "orig_v33_math_34_3",
+        "orig_v33_math_33_3",
+        "orig_v33_math_32_3",
+        "orig_v33_math_31_1",
+        "orig_v33_math_28_1",
+        "orig_v33_math_29_1",
+        "orig_v33_math_30_2",
+        "orig_v33_math_31_2",
+        "orig_v33_math_41_1",
+        "orig_v33_math_28_2",
+        "orig_v33_math_30_3",
+        "orig_v33_math_31_3",
+        "orig_v33_math_29_2",
+        "orig_v33_math_41_2",
+        "orig_v33_math_28_3",
+        "stretch_v34_maths_forces",
+        "stretch_v34_maths_probability"
+      ]
+    },
+    "schoolExcludedRadiansAfterAppliedFilter": {
+      "count": 3,
+      "ids": [
+        "orig_v33_math_12_0",
+        "orig_v33_math_13_0",
+        "stretch_v34_maths_trigonometry"
+      ],
+      "prompts": [
+        {
+          "id": "orig_v33_math_12_0",
+          "prompt": "Calculate sector arc length when radius is 3 cm and angle is 0.6 radians."
+        },
+        {
+          "id": "orig_v33_math_13_0",
+          "prompt": "Find area of a circular sector, radius 4 cm, angle 0.7 radians."
+        },
+        {
+          "id": "stretch_v34_maths_trigonometry",
+          "prompt": "Solve 2cos²θ − 3sinθ = 0 for 0 ≤ θ < 2π. Give all solutions exactly in radians, and explain why any extraneous algebraic value must be rejected."
+        }
+      ]
+    }
+  },
+  "corrected": {
+    "mathsMockQuestions": 121,
+    "physicsMockQuestions": 240,
+    "chemistryMockQuestions": 249
+  },
+  "change": "Centralised mockEligibleQuestion is used in both startMockSession and challengeQuestions(mock). Full study, existing question IDs, marking and saved progress are unchanged. Non-mock AS questions and school-excluded Maths topics remain available outside the mock preset.",
+  "limits": {
+    "completeSpecificationAudit": false,
+    "independentMasteryCertified": false,
+    "legacyQuestionMockFlagsNotRewritten": true,
+    "oldQuestionTextUnchanged": true
+  }
+}
