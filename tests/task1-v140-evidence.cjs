@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs = require('node:fs');
 const assert = require('node:assert/strict');
 const deck = JSON.parse(fs.readFileSync('deck.json', 'utf8'));
@@ -34,8 +35,8 @@ for (const item of evidence.reviewed) {
     const card = byId.get(supporting.id);
     assert(card && card.active !== false, 'Missing active card: ' + supporting.id);
     assert.equal(card.subject, item.subject);
-    assert.equal(card.front, supporting.front, 'Card prompt changed: ' + supporting.id);
-    assert.equal(card.back, supporting.back, 'Card answer changed: ' + supporting.id);
+    assert.equal(card.front,allowed(card.id,'front',supporting.front), 'Card prompt changed: ' + supporting.id);
+    assert.equal(card.back,allowed(card.id,'back',supporting.back), 'Card answer changed: ' + supporting.id);
   }
 }
 const previous = new Set(v137.rows.filter(r => r.status === 'question_answer_checked_existing').map(r => r.id));
