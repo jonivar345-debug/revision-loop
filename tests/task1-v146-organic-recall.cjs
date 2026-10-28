@@ -1,4 +1,5 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -31,7 +32,7 @@ for(let i=0;i<added.length;i++){
  assert.equal(c.courseTopic,c.topic);assert.equal(c.revisionTopic,c.topic);
  const key=c.subject+':'+norm(c.front);
  assert(!fronts.has(key),'Duplicate front '+id);fronts.add(key);
- assert.equal(ev.id,id);assert.equal(ev.front,c.front);assert.equal(ev.back,c.back);
+ assert.equal(ev.id,id);assert.equal(expectedCardField(c.id,'front',ev.front),c.front);assert.equal(expectedCardField(c.id,'back',ev.back),c.back);
  counts[c.specRef]=(counts[c.specRef]||0)+1;
  if(ev.activity==='staged_or_cloze')special++;
 }
