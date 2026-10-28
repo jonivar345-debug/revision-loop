@@ -10,7 +10,8 @@ assert.equal(newCards.length,160);
 assert.equal(newCards.filter(c=>c.subject==='Physics').length,72);
 assert.equal(newCards.filter(c=>c.subject==='Chemistry').length,84);
 assert.equal(newCards.filter(c=>c.subject==='Maths').length,4);
-assert.equal(newCards.filter(c=>c.mock).length,105);
+const v155Excluded=new Set(require('../editorial/task1-v155-mock-scope-recall.json').changes.removedFromMock.map(x=>x.id));
+assert.equal(newCards.filter(c=>c.mock||v155Excluded.has(c.id)).length,105,'Historical mock eligibility before v155 exclusions');
 const ids=new Set(), fronts=new Set();
 const key=s=>String(s).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');
 for(const c of cards){
