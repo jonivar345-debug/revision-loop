@@ -1,0 +1,276 @@
+{
+  "release": "v153",
+  "date": "2026-10-28",
+  "scope": "Theoretical A-level Organic Chemistry paper mechanisms and conceptual four-stage route planning, no practical access or handling instructions",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "baseline": {
+    "deckVersion": 152,
+    "cards": 3276,
+    "active": 3272,
+    "bankVersion": 62,
+    "questions": 1226
+  },
+  "additions": {
+    "questions": 12,
+    "marks": 81,
+    "cards": 0
+  },
+  "policy": {
+    "allQuestionsOriginal": true,
+    "fullSyllabusCertified": false,
+    "mock": false,
+    "noPracticalSynthesisInstructions": true,
+    "oldContentUntouched": true,
+    "remainingLimitations": [
+      "Generic Nu model does not itself certify the specification's specific hydroxynitrile mechanism",
+      "Abstract four-step maps are stepping stones, not evidence of mastery of novel real-material syntheses",
+      "Some 3D structural drawings are assessed from paper prompts and mark points, not interactive diagrams"
+    ]
+  },
+  "questions": [
+    {
+      "id": "organic_v153_01",
+      "specRef": "3.3.8",
+      "revisionTopic": "Aldehydes and ketones",
+      "subtopic": "Carbonyl reduction: full two-stage arrow mechanism",
+      "auditIds": [
+        "A2ORG-014",
+        "A2ORG-015"
+      ],
+      "prompt": "On paper, consider the abstract aldehyde R–CHO. The attacking species is shown as H⁻ and a generic proton donor as H⁺. Draw the two-stage nucleophilic addition mechanism, including every electron-pair curly arrow, intermediate and formal charge. Give the overall product structure. This is a theoretical drawing exercise; no reagent preparations or experimental conditions are required.",
+      "marks": 7,
+      "markPoints": [
+        "The attacking arrow starts from the lone pair on H⁻ and ends at the electrophilic carbonyl carbon.",
+        "A second electron-pair arrow starts at the C=O π bond and ends on oxygen.",
+        "The first-stage tetrahedral intermediate is correctly drawn as R–CH₂–O⁻.",
+        "The intermediate oxygen bears the negative formal charge.",
+        "The protonation arrow starts at the alkoxide oxygen lone pair and ends at the supplied H⁺.",
+        "The final structure is R–CH₂–OH, a primary alcohol.",
+        "The student explains that the two hydrogen equivalents have been added across the original carbonyl group."
+      ]
+    },
+    {
+      "id": "organic_v153_02",
+      "specRef": "3.3.8",
+      "revisionTopic": "Aldehydes and ketones",
+      "subtopic": "Ketone reduction: electron movement and equation",
+      "auditIds": [
+        "A2ORG-014",
+        "A2ORG-015"
+      ],
+      "prompt": "A theoretical ketone R–C(=O)–R′ is reduced by the model nucleophile H⁻ and then protonated by H⁺. Draw the curved-arrow mechanism on paper and supply an overall structural equation using 2[H]. Explain how the alcohol class differs from reduction of a typical aldehyde.",
+      "marks": 7,
+      "markPoints": [
+        "A curly arrow shows H⁻ electron-pair donation to the carbonyl carbon.",
+        "The C=O π electrons move to the oxygen atom.",
+        "The intermediate is R–C(H)(O⁻)–R′ with tetrahedral carbon.",
+        "The alkoxide oxygen is protonated to form R–CH(OH)–R′.",
+        "The overall equation is R–C(=O)–R′ + 2[H] → R–CH(OH)–R′.",
+        "The ketone yields a secondary alcohol when R and R′ are both carbon-containing groups.",
+        "A typical aldehyde gives a primary alcohol under the corresponding reduction."
+      ]
+    },
+    {
+      "id": "organic_v153_03",
+      "specRef": "3.3.8",
+      "revisionTopic": "Organic mechanisms",
+      "subtopic": "Generic carbonyl nucleophilic addition arrows",
+      "auditIds": [
+        "A2ORG-017"
+      ],
+      "prompt": "A carbonyl group R–C(=O)–H is approached by an abstract anionic nucleophile Nu⁻. On paper, show the first electron-pair movement, the charged intermediate and its later protonation. Explain why attack is directed at carbon rather than oxygen. No specific hazardous nucleophile is involved in this question.",
+      "marks": 6,
+      "markPoints": [
+        "The C=O bond is polar with the carbonyl carbon partially positive.",
+        "The arrow from the Nu⁻ lone pair points towards the carbonyl carbon.",
+        "The arrow from the C=O π bond points towards oxygen.",
+        "The tetrahedral intermediate is R–CH(Nu)–O⁻.",
+        "Protonation converts the O⁻ group into OH without removing Nu.",
+        "The final generic product is R–CH(OH)(Nu), showing nucleophilic addition."
+      ]
+    },
+    {
+      "id": "organic_v153_04",
+      "specRef": "3.3.9.2",
+      "revisionTopic": "Acyl chlorides",
+      "subtopic": "Addition–elimination arrow logic using abstract groups",
+      "auditIds": [
+        "A2ORG-033",
+        "A2ORG-056"
+      ],
+      "prompt": "A model acyl derivative R–C(=O)–LG is represented with an unspecified leaving group LG. A generic nitrogen lone-pair donor :NH₂R′ attacks. Draw the addition–elimination electron arrows, the tetrahedral intermediate and the organic amide framework after a proton transfer. Treat LG and the proton-transfer species as supplied symbols, not real reagents.",
+      "marks": 7,
+      "markPoints": [
+        "The nitrogen lone pair attacks the carbonyl carbon, not the carbonyl oxygen.",
+        "The C=O π electrons shift to oxygen during nucleophilic addition.",
+        "The intermediate has a tetrahedral carbonyl-derived carbon bearing O⁻, LG and the nitrogen substituent.",
+        "The oxygen lone pair reforms C=O in the elimination stage.",
+        "The C–LG bond electrons transfer to LG, so the leaving group departs.",
+        "A proton transfer gives the neutral framework R–C(=O)–NHR′.",
+        "The reaction class is nucleophilic addition–elimination, not electrophilic addition."
+      ]
+    },
+    {
+      "id": "organic_v153_05",
+      "specRef": "3.3.10.2",
+      "revisionTopic": "Aromatic chemistry",
+      "subtopic": "Electrophilic aromatic substitution with supplied acyl electrophile",
+      "auditIds": [
+        "A2ORG-044"
+      ],
+      "prompt": "An aromatic ring is shown with its delocalised π system. A hypothetical acyl electrophile R–C≡O⁺ is GIVEN in the question: no method of generating it is needed. On paper, draw a theoretical two-stage electrophilic aromatic substitution, including the positively charged intermediate and the arrows that restore aromaticity. Show the final ring carrying a –C(=O)R group.",
+      "marks": 7,
+      "markPoints": [
+        "An electron-pair arrow runs from the aromatic π system to the electrophilic carbon of R–C≡O⁺.",
+        "An arenium (sigma-complex) intermediate with an added substituent is drawn.",
+        "The intermediate carries positive charge delocalised around the remaining ring system.",
+        "The carbon bearing the new substituent also initially retains hydrogen.",
+        "The C–H bond electrons return to the ring π system as H⁺ is removed.",
+        "The final aromatic product is a ring bonded to –C(=O)R.",
+        "Aromaticity is restored and the overall reaction is substitution rather than permanent addition."
+      ]
+    },
+    {
+      "id": "organic_v153_06",
+      "specRef": "3.3.11.3",
+      "revisionTopic": "Amines",
+      "subtopic": "Nucleophilic substitution by a neutral nitrogen donor",
+      "auditIds": [
+        "A2ORG-046",
+        "A2ORG-056"
+      ],
+      "prompt": "A schematic carbon–leaving-group bond is represented by R–X. The neutral nitrogen donor :NH₃ is drawn with a lone pair. Sketch the paper-only substitution electron arrows, the first positively charged nitrogen-containing product and its conceptual deprotonation to R–NH₂. No named reagents or reaction conditions are required.",
+      "marks": 6,
+      "markPoints": [
+        "The electron-pair arrow starts at nitrogen's lone pair and ends at the carbon attached to X.",
+        "The bond-breaking arrow starts at the C–X bond and points towards X.",
+        "The carbon group is attached to the nitrogen after the substitution step.",
+        "The initial nitrogen species is R–NH₃⁺, with nitrogen bonded four times.",
+        "Loss of one proton gives the primary amine R–NH₂.",
+        "The neutral nitrogen donor is a nucleophile because it supplies an electron pair."
+      ]
+    },
+    {
+      "id": "organic_v153_07",
+      "specRef": "3.3.11.3",
+      "revisionTopic": "Amines",
+      "subtopic": "Repeated nitrogen substitution: structures and charges",
+      "auditIds": [
+        "A2ORG-055"
+      ],
+      "prompt": "A paper reaction map starts at the abstract species R–NH₂. Two conceptual substitutions replace each nitrogen-bound H with carbon-containing groups R′ and R″. A final attachment of R‴ uses the tertiary nitrogen lone pair. Draw and classify the structures after each stage (including the final ion), and explain why their charges differ. No reagents or reaction conditions are requested.",
+      "marks": 6,
+      "markPoints": [
+        "After the first substitution the neutral secondary amine framework is R–NH–R′.",
+        "After the second substitution the neutral tertiary amine framework is R–N(R′)–R″.",
+        "The final species has four nitrogen-bound carbon groups, [R–N(R′)(R″)(R‴)]⁺.",
+        "The final species is a quaternary ammonium ion rather than a neutral amine.",
+        "The final nitrogen has four bonds and no available lone pair; the tertiary amine before that attachment does have a lone pair.",
+        "The primary, secondary and tertiary labels count carbon-containing groups bonded directly to nitrogen."
+      ]
+    },
+    {
+      "id": "organic_v153_08",
+      "specRef": "3.3.14",
+      "revisionTopic": "Organic synthesis",
+      "subtopic": "Four-stage functional-group map: alkene to ester",
+      "auditIds": [
+        "A2ORG-091"
+      ],
+      "prompt": "This is a paper-only planning problem with five abstract intermediates A–E, NOT a laboratory synthesis. A has a C=C bond; B has a primary –CH₂OH group; C has –CHO; D has –COOH; and E has –COOR (an ester). Using only the supplied functional-group changes, label the transformation at each of A→B→C→D→E. State which two stages involve oxidation and explain why the carbon skeleton must be checked at each step. Do not specify reagents, quantities or conditions.",
+      "marks": 7,
+      "markPoints": [
+        "A→B is an addition transformation converting an alkene to an alcohol functional group (as supplied).",
+        "B→C is oxidation of a primary alcohol to an aldehyde.",
+        "C→D is oxidation of an aldehyde to a carboxylic acid.",
+        "D→E is formation of an ester from a carboxylic acid functional group.",
+        "Both B→C and C→D are oxidation steps.",
+        "The correct four transformations are placed in a continuous route with all five intermediates.",
+        "The answer notes that regioselectivity and carbon-skeleton/chain-length consistency must be checked before assuming the route is chemically possible."
+      ]
+    },
+    {
+      "id": "organic_v153_09",
+      "specRef": "3.3.14",
+      "revisionTopic": "Organic synthesis",
+      "subtopic": "Four-step route using supplied transformation cards",
+      "auditIds": [
+        "A2ORG-091"
+      ],
+      "prompt": "Four labelled fictional transformations are supplied as a catalogue: T1 converts primary alcohol → aldehyde; T2 converts aldehyde → carboxylic acid; T3 converts carboxylic acid → ester; T4 converts ester → carboxylic acid. From starting material A (primary alcohol), build the exact four-stage A→B→C→D→E route ending in a carboxylic acid. Give the intermediate functional groups, identify any deliberate functional-group reversal, and judge whether it is a sensible industrial route compared with stopping after T2. This tests route selection, not an experimental method.",
+      "marks": 7,
+      "markPoints": [
+        "Step 1 applies T1 to give aldehyde B.",
+        "Step 2 applies T2 to give carboxylic acid C.",
+        "Step 3 applies T3 to give ester D.",
+        "Step 4 applies T4 to regenerate carboxylic acid E.",
+        "The final material has the stated carboxylic acid functional group.",
+        "The T3→T4 detour reverses a functional-group change and adds two unnecessary steps.",
+        "An efficient route would normally stop after T2, reducing steps, waste and likely yield loss."
+      ]
+    },
+    {
+      "id": "organic_v153_10",
+      "specRef": "3.3.14",
+      "revisionTopic": "Organic synthesis",
+      "subtopic": "Four-step route percentage yield and waste",
+      "auditIds": [
+        "A2ORG-091"
+      ],
+      "prompt": "A fictional paper synthesis A→B→C→D→E uses four conceptual transformations with individual percentage yields 80.0%, 75.0%, 90.0% and 60.0%. Calculate the total yield expressed as a fraction of the theoretical maximum, and find the mass of E if the maximum possible mass would be 40.0 g. Explain two reasons why chemists prefer shorter, high-atom-economy routes. This question does not involve planning a laboratory procedure.",
+      "marks": 7,
+      "markPoints": [
+        "The first two percentages are represented as fractions 0.800 and 0.750.",
+        "All four fractional step yields are multiplied: 0.800 × 0.750 × 0.900 × 0.600.",
+        "The overall yield fraction is 0.324.",
+        "The overall percentage yield is 32.4%.",
+        "The expected final mass is 40.0 × 0.324 = 12.96 g, approximately 13.0 g.",
+        "Additional steps tend to compound losses and can increase separation and energy requirements.",
+        "High atom economy puts a greater fraction of reactant atoms into the desired product and can reduce by-product waste."
+      ]
+    },
+    {
+      "id": "organic_v153_11",
+      "specRef": "3.3.14",
+      "revisionTopic": "Organic synthesis",
+      "subtopic": "Evaluate two routes to the same theoretical product",
+      "auditIds": [
+        "A2ORG-091"
+      ],
+      "prompt": "Two abstract four-step routes to the SAME benign polymer precursor are shown only as mass balances. Route P has steps of 90%, 90%, 80%, 85% yield. Route Q has two steps at 75% yield each. No chemical identities or reaction conditions are supplied. Calculate each overall yield, compare them and explain why a route with fewer steps is not automatically safer unless hazards and atom economy are considered.",
+      "marks": 7,
+      "markPoints": [
+        "Route P total fractional yield is 0.90 × 0.90 × 0.80 × 0.85.",
+        "Route P overall yield is 0.5508 = 55.08%.",
+        "Route Q total fractional yield is 0.75 × 0.75.",
+        "Route Q overall yield is 0.5625 = 56.25%.",
+        "On the supplied yields, Q gives a slightly higher overall yield.",
+        "Step count alone does not establish hazard or environmental impact; solvent demand and material hazards matter.",
+        "Atom economy concerns the share of reactant atoms retained in the desired product, not percentage yield alone."
+      ]
+    },
+    {
+      "id": "organic_v153_12",
+      "specRef": "3.3.9.2",
+      "revisionTopic": "Acyl chlorides",
+      "subtopic": "Check wrong curly arrows in addition–elimination",
+      "auditIds": [
+        "A2ORG-033",
+        "A2ORG-056"
+      ],
+      "prompt": "A fictional student's paper mechanism for generic R–C(=O)–LG and :NH₂R′ shows: (i) an arrow from carbonyl oxygen to the nitrogen lone pair, (ii) an arrow from C=O towards oxygen during attack, (iii) elimination of LG while the carbonyl reforms. Identify which arrows are correctly oriented, repair the incorrect arrow, and explain how the formal charge on the tetrahedral intermediate arises. No real substances or preparation details are required.",
+      "marks": 7,
+      "markPoints": [
+        "Arrow (i) is wrong: electron-pair donation must start at the nitrogen lone pair.",
+        "The corrected nucleophilic arrow points from nitrogen to the electrophilic carbonyl carbon.",
+        "Arrow (ii), from C=O π bonding electrons to oxygen, is correctly oriented.",
+        "After donation the nitrogen has four bonds and is formally positive (before proton transfer).",
+        "The intermediate oxygen has a negative charge from receiving the π-electron pair.",
+        "The elimination step reforms C=O and transfers C–LG bond electrons to the leaving group.",
+        "The mechanism is nucleophilic addition–elimination and produces a carbonyl-containing nitrogen derivative after proton transfer."
+      ]
+    }
+  ]
+}

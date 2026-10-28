@@ -8,7 +8,7 @@ const old=all.filter(c=>!c.id.startsWith('task1_v150_'));
 assert(deck.deckVersion>=150);assert.equal(all.length,3270);
 assert.equal(all.filter(c=>c.active!==false).length,3266);
 assert.equal(old.length,3263);assert.equal(old.filter(c=>c.active!==false).length,3259);
-assert(exam.bankVersion>=61);assert.equal(exam.questions.filter(q=>!q.id.startsWith('organic_v152_')).length,1212);
+assert(exam.bankVersion>=61);assert.equal(exam.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')).length,1212);
 assert.equal(added.length,7);assert.equal(audit.newCards.length,7);
 assert.equal(audit.fullSpecCoverageCertified,false);
 const norm=s=>s.normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g,'');

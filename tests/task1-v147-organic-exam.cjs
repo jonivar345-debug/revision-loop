@@ -3,7 +3,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
 const exam=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v147-organic-exam-audit.json','utf8'));
-const all=exam.questions.filter(q=>!q.id.startsWith('organic_v149_')&&!q.id.startsWith('organic_v152_')),added=all.filter(q=>q.id.startsWith('organic_v147_'));
+const all=exam.questions.filter(q=>!q.id.startsWith('organic_v149_')&&!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')),added=all.filter(q=>q.id.startsWith('organic_v147_'));
 assert(exam.bankVersion>=60);
 assert.equal(all.length,1200);
 assert.equal(all.length-added.length,1182);

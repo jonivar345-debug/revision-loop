@@ -8,7 +8,7 @@ const cards=new Map(d.cards.map(x=>[x.id,x]));
 const qs=new Map(q.questions.map(x=>[x.id,x]));
 assert(d.deckVersion>=146);assert.equal(d.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length,3263);
 assert.equal(d.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length,3259);
-assert(q.bankVersion>=60);assert.equal(q.questions.filter(x=>!x.id.startsWith('organic_v149_')&&!x.id.startsWith('organic_v152_')).length,1200);
+assert(q.bankVersion>=60);assert.equal(q.questions.filter(x=>!x.id.startsWith('organic_v149_')&&!x.id.startsWith('organic_v152_')&&!x.id.startsWith('organic_v153_')).length,1200);
 assert.equal(a.counts.subsections,19);assert.equal(a.rows.length,a.counts.atomicChecks);
 assert(a.rows.length>=75,'Insufficient Year 1 organic atomic evidence rows');
 const refs=new Set(a.rows.map(r=>r.specRef));assert.equal(refs.size,19);
