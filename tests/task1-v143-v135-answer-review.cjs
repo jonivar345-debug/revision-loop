@@ -2,7 +2,7 @@
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const old=JSON.parse(fs.readFileSync('editorial/task1-atomic-spec-first-pass-v135.json','utf8'));
 const evidence=JSON.parse(fs.readFileSync('editorial/task1-v143-v135-106-answer-evidence.json','utf8'));
 const byId=new Map(deck.cards.map(x=>[x.id,x]));
