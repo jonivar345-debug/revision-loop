@@ -3,7 +3,7 @@ const allowed=require('./task1-v154-legacy-evidence.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const d=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
-const q=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const q=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const a=JSON.parse(fs.readFileSync('editorial/task1-v148-as-organic-crosswalk.json','utf8'));
 const cards=new Map(d.cards.map(x=>[x.id,x]));
 const qs=new Map(q.questions.map(x=>[x.id,x]));
