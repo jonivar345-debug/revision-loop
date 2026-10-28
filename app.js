@@ -2271,7 +2271,7 @@ function examSuggested(q,answer){
    const strictEvidence=Array.isArray(q.markEvidenceRules?.[i]);
    const main=strictEvidence?evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p);
    // Never bypass an independently verified restrictive evidence rule.
-   return strictEvidence?main:(acceptedMarkPointAlternative(answer,q.markPointAcceptedAlternatives?.[i],p)?1:main);
+   return strictEvidence?main:(typeof acceptedMarkPointAlternative==='function'&&acceptedMarkPointAlternative(answer,q.markPointAcceptedAlternatives?.[i],p)?1:main);
  });
  // Preserve equivalent formula notation without requiring the student's
  // algebra to reproduce the exact English marking-point sentence.
@@ -2341,9 +2341,9 @@ function examSuggested(q,answer){
  // Shared constants/formula symbols can otherwise trigger unrelated points.
  if(q.requiresWorking===true && q.markPoints.length>1 && String(answer||'').trim()){
   const singleIndex=q.markPoints.findIndex(point=>compact(point)===compact(answer));
-  const singleAlternativeIndex=q.markPointAcceptedAlternatives?.findIndex((alts,i)=>
+  const singleAlternativeIndex=typeof acceptedMarkPointAlternative==='function'?q.markPointAcceptedAlternatives?.findIndex((alts,i)=>
     acceptedMarkPointAlternative(answer,alts,q.markPoints[i])&&
-    alts.some(alt=>normalise(alt)===normalise(answer)))??-1;
+    alts.some(alt=>normalise(alt)===normalise(answer)))??-1:-1;
   const onlyIndex=singleIndex>=0?singleIndex:singleAlternativeIndex;
   if(onlyIndex>=0){
    preds=preds.map((_,i)=>i===onlyIndex);
