@@ -1,3 +1,18 @@
+# Revision Loop v167 — fairer free marking and clearer mark schemes (28 October 2026)
+
+**Proposed until all CI checks, merge and GitHub Pages verification.** This revision improves the real answer-marking user interface and the free ChatGPT marking hand-off while preserving all existing questions, marks, flashcards, progress and scanner data.
+
+- Adds **20 independently reviewed alternative correct phrases** to **8 original exam-style questions** across Physics (2), Chemistry (2) and Maths (4); a distinct criterion is credited only for a complete vetted alternative. It does not auto-accept a lone keyword or a negated assertion.
+- Shows individual mark-point weights and accepted alternatives beside tick boxes. Existing **source-verified strict evidence rules remain authoritative** and are not bypassed.
+- Adds **error-carried-forward guidance** to those eight questions, requiring visible method or substitution evidence. An incorrect numerical answer does not automatically receive full marks; ECF decisions still require careful review.
+- Makes a manual total-score override explicitly visible when it differs from ticked marking criteria, preventing misleading missed-point feedback.
+- Includes alternate correct explanations and ECF notes in the existing **free manual ChatGPT marking hand-off**, not an automatic paid API request.
+- Improves readability on mobile; adds a dedicated test `tests/task1-v167-fairer-mark-schemes.cjs` in cloud CI and an honest audit at `editorial/task1-v167-marking-quality-audit.json`.
+
+**Scope limitation:** the bank remains at **1,268 questions** and the deck **3,335 cards**. This is an initial question-specific fair-marking pilot, not verification of every original mark scheme or a guarantee that OCR recognises unfamiliar handwritten workings. The student reviews provisional marking decisions before saving.
+
+---
+
 # Revision Loop v164 — transparent AS/A-level paper archive and 2026 availability (28 October 2026)
 
 **Proposed until CI, merge and Pages verification.** The public website's paper-archive matrix now explicitly shows **2015–2026**, not 2015–2025. Its summer **2026** entry states that the official AQA papers are **not yet publicly released**, with public release of question papers and mark schemes scheduled for **9 July 2027**, linking to AQA's assessment-material release timetable. Do not invent AQA 2026 PDFs or questions.
