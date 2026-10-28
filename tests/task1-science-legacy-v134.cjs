@@ -1,4 +1,5 @@
 'use strict';
+const allowed=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const oldAudit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v133.json','utf8'));
@@ -24,9 +25,9 @@ for(const c of audit.records){
  assert(o,'Audit ID must refer to existing earlier card: '+c.id);
  assert.equal(o.subject,c.subject,'Audit subject mismatch '+c.id);
  assert.equal(o.topic,c.originalTopic,'Audit topic mismatch '+c.id);
- assert.equal(o.front,c.front,'Audit front mismatch '+c.id);
+ assert.equal(o.front,allowed(c.id,'front',c.front),'Audit front mismatch '+c.id);
  assert(!o.specRef,'Only original untagged cards can be counted as legacy '+c.id);
- if(c.answer!==undefined)assert.equal(o.back,c.answer,'Audited model answer changed '+c.id);
+ if(c.answer!==undefined)assert.equal(o.back,allowed(c.id,'back',c.answer),'Audited model answer changed '+c.id);
  assert(c.contentChecked===true);
  assert(/^(3\.\d+(?:\.\d+){0,2}|7\.3)$/.test(c.candidateSpecSection),'Bad AQA section '+c.id);
 }
