@@ -1,0 +1,37 @@
+{
+  "version": "v173",
+  "checkedAt": "2026-10-28",
+  "schoolSource": "Teacher Claire Sharpe email dated 19 October 2026: first Maths mock is an AS Pure paper; separate Year 13 taught-content paper during lessons after other mocks; later date to be arranged.",
+  "userClarification": "For now Maths mock flashcards/questions use Year 12 Pure topics across Pure Papers 1 and 2 only; the later Year 13 paper will be revised separately.",
+  "aqaSource": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/specification-at-a-glance",
+  "importantAQAContext": "Official AS Paper 1 and AS Paper 2 are not both Pure-only: Paper 1 includes Mechanics; Paper 2 includes Statistics. School is setting a narrower Pure-only mock, so neither is included.",
+  "verifiedLiveBank": {
+    "mathsFirstMockFlashcards": 116,
+    "mathsFirstMockQuestions": 129,
+    "allMathsMockCardsStageAS": true,
+    "allMathsMockQuestionsLevelAS": true,
+    "excludedStatisticsMechanicsAndRadians": true
+  },
+  "changes": {
+    "mathsFirstMockPredicate": "Require q.level AS in addition to mock flag and Pure topic; display explicit first-versus-later-paper note.",
+    "mathsCards": "Filter mock session cards by AS stage and Pure topic.",
+    "drawing": "Optional pen/eraser/undo/clear canvas, can copy inline SVG diagram, attach PNG to local scanner photos for user review. Drawings do not automatically earn marks.",
+    "marking": "Clearer advisory text: tick equivalent methods or change total manually; report button now includes typed answer, reviewed total, and checked criterion indexes."
+  },
+  "safety": {
+    "noAutomaticDrawingCredits": true,
+    "photoAttachmentLimit": 5,
+    "existingProgressKeysUnchanged": true,
+    "oldExamMarksAndQuestionIdsPreserved": true,
+    "sketchImagesLocal": true,
+    "explanation": "Local scanner photos remain in the browser; optional Vision may be separately invoked by the user under existing scanner settings."
+  },
+  "limits": {
+    "pureMockLevelASOnly": true,
+    "autoSketchMarking": false,
+    "notOfficialAqaMarkScheme": true,
+    "fullSpecCertified": false,
+    "year13LaterPaperNotYetScheduled": true
+  },
+  "next": "Run browser visual smoke test of sketch on mobile/tablet and real scanner before treating handwriting grading as reliable."
+}

@@ -797,10 +797,19 @@ function scanCalculusStage(q,point,lines){
   status('Experimental reading is a draft. Correct it and tap Confirm transcription and suggest marks.');
   return true;
  }
+ async function attachDrawing(id,imageData){
+  // A drawing is an answer image, not guaranteed automatically readable text.
+  if(id!==currentId||busy||pages.length>=MAX)return false;
+  if(typeof imageData!=='string'||!/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(imageData)||imageData.length>9_000_000)return false;
+  pages.push(imageData);resetOCR();window.RevisionVision?.invalidate?.();render();
+  try{await persist()}catch(e){status('Drawing attached for this session, but browser photo storage failed.',true)}
+  return true;
+ }
  function countFor(id){return currentId===id?pages.length:0}
  function usedOCR(id){return hasRecognizedMarking(id)}
  function hasArithmeticMistakes(answer){
   return String(answer||'').split(/\r?\n|;/).some(line=>possiblyIncorrectArithmetic(line));
  }
  window.RevisionScan={mount,commit,countFor,getPages,useVisionText,proposeLocalText,usedOCR,reviewEvidence,prepareForMark,hasArithmeticMistakes};
+ window.RevisionScan.attachDrawing=attachDrawing;
 })();
