@@ -1,4 +1,5 @@
 'use strict';
+const {expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -30,7 +31,7 @@ for(const c of newCards){
  assert(Array.isArray(c.accept)&&c.accept.length>=1);
  assert(c.stage==='AS'||c.stage==='A2');
  if(c.subject==='Physics')assert(c.stage==='AS'&&c.mock&&c.taught,'AS Physics availability '+c.id);
- if(c.subject==='Chemistry'&&c.stage==='A2')assert(c.taught===true&&c.mock===true,'Taught Year 2 chemistry availability '+c.id);
+ if(c.subject==='Chemistry'&&c.stage==='A2')assert(c.taught===true&&c.mock===expectedCardMock(c.id,true),'Taught Year 2 chemistry eligibility after v154 scope correction '+c.id);
  assert(!/^(calculate|work out)\b/i.test(c.front),'Worked question not flashcard');
 }
 for(const id of ['phy_motion_d','chem_ar_def','math_modulus','task1_v123_phy_001','task1_v124_phy_001','task1_v124_chem_001','task1_v124_bulk_math_001'])assert(ids.has(id),'Preserved ID missing '+id);
