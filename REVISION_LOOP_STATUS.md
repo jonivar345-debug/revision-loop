@@ -1,3 +1,15 @@
+# Revision Loop v163 — challenging Year 1 Pure Maths exam questions (28 October 2026)
+
+**Proposed; CI/merge/Pages verification required.** Based on the school's November AQA Year 1 Pure-only mock, the explicitly eligible Maths question pool rises from **121 to 129**, and the main original exam bank from **1,260 to 1,268**. Adds **eight original multi-part questions, 56 marks**, no new flashcards; deck remains **3,335 total, 3,331 active, 2,369 mock-eligible** as proposed in v162.
+
+New practice: combined horizontal and vertical function transformations (7); trig equations in degrees using identities (6); stationary points, second derivative classification and tangent (8); positive-integer binomial expansion and approximation (7); signed definite integral versus geometric area (7); inverse function, restricted domain and range (7); circle tangent and chord (7); factor theorem, cubic factorisation and inequality (7). Each is an original, standalone, AQA-style challenge with explicit one-mark steps, not an official AQA paper question. All exclude Year 2 calculus and the school's excluded radians, Statistics and Mechanics.
+
+Evidence: `editorial/task1-v163-maths-pure-challenge-audit.json`. CI: `tests/task1-v163-maths-pure-challenge.cjs` checks exact questions, 56 mark points, mathematical results and Year 1 scope. Historical bank projections are for **old regression expectations only**; the dedicated v163 test checks all 1,268 current records. All existing question IDs, marks and answers, flashcard progress keys, Firebase, World, scanner and XP remain unchanged.
+
+**Limitations:** This is a response to observed targeted gaps, not a complete AQA AS Pure specification certification and not evidence of independently demonstrated student mastery. The harder questions should be attempted without worked solutions first.
+
+---
+
 # Revision Loop v162 — targeted Year 1 Pure Maths recall correction (28 October 2026)
 
 **Proposed until CI, merge and Pages deployment.** Deck v162: **3,335 total cards (3,331 active), 2,369 mock-eligible**: Physics 730, Chemistry 1,533, Maths **106**. Main bank stays at **1,260 original exam-style questions**; Year 1 Pure Maths question selection stays **121** from v161.

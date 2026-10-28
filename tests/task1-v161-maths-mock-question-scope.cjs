@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 const app=fs.readFileSync('app.js','utf8');
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
-const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v161-maths-mock-question-eligibility.json','utf8'));
 
 const match=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);

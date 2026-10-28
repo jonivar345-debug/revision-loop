@@ -2,7 +2,7 @@
 const allowed=require('./task1-v154-legacy-evidence.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const newAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-organic-theory-questions.json','utf8'));
 const mockAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-mock-priority-evidence.json','utf8'));

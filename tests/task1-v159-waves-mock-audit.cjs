@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
-const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v159-waves-mock-audit.json','utf8'));
 const v159Cards=deck.cards.filter(c=>!c.id.startsWith('task1_v160_'));
 const v159Questions=bank.questions.filter(q=>!q.id.startsWith('mock_v160_'));
