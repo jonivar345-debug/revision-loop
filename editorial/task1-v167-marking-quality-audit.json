@@ -1,0 +1,126 @@
+{
+  "version": "v167",
+  "checkedAt": "2026-10-28",
+  "goal": "Improve marking fairly without losing method credit for alternative working, inflating scores or inventing official scheme provenance.",
+  "changes": [
+    "Allow substantial, explicitly editorial-vetted phrase alternatives only for individual original-practice mark criteria; source-verified strict evidence rules retain priority.",
+    "Show numeric point weights and alternative valid phrasings directly in the marking-scheme review.",
+    "Show question-specific error-carried-forward method guidance, with no automatic award solely because an earlier error occurred.",
+    "Include alternative phrases and ECF guidance in the free manual ChatGPT marking hand-off; no paid API calls.",
+    "Warn explicitly when a manual total-score override disagrees with the checked mark-point criteria; do not silently claim missing points were awarded.",
+    "Block explicitly negated curated alternatives, reject single-word/number shortcuts."
+  ],
+  "existingQuestionCount": 1268,
+  "existingCardCount": 3335,
+  "curatedQuestionCount": 8,
+  "alternativePhrases": 20,
+  "questions": [
+    {
+      "id": "mock_v154_08",
+      "subject": "Chemistry",
+      "topic": "Physical chemistry",
+      "marks": 6,
+      "alternativePhrases": 2,
+      "alternativeCriteriaIndices": [
+        5
+      ],
+      "ecfGuidance": "If the student has an earlier arithmetic slip but clearly subtracts their own total bond-formation energy from bond-breaking energy, consider the subtraction method separately from the numerical ΔH result."
+    },
+    {
+      "id": "mock_v154_09",
+      "subject": "Chemistry",
+      "topic": "Physical chemistry",
+      "marks": 7,
+      "alternativePhrases": 2,
+      "alternativeCriteriaIndices": [
+        6
+      ],
+      "ecfGuidance": "If a mistaken extrapolated temperature is carried consistently into ΔT and q=mcΔT, credit separately demonstrated formula/substitution steps where appropriate, not the independent correct-value points."
+    },
+    {
+      "id": "mock_v158_02",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "marks": 7,
+      "alternativePhrases": 2,
+      "alternativeCriteriaIndices": [
+        6
+      ],
+      "ecfGuidance": "For the two current calculations, recognise a demonstrated E/(R+r) setup using the student's own preceding internal-resistance value. Award the method only where the substitution is shown; do not automatically award the correct-result point."
+    },
+    {
+      "id": "mock_v159_01",
+      "subject": "Physics",
+      "topic": "Waves",
+      "marks": 7,
+      "alternativePhrases": 2,
+      "alternativeCriteriaIndices": [
+        6
+      ],
+      "ecfGuidance": "A correctly shown f=v/λ using a student's earlier speed or wavelength can receive method consideration, while the separate accurate numerical answer remains conditional on its result."
+    },
+    {
+      "id": "mock_v163_01",
+      "subject": "Maths",
+      "topic": "Transformations",
+      "marks": 7,
+      "alternativePhrases": 4,
+      "alternativeCriteriaIndices": [
+        2,
+        3
+      ],
+      "ecfGuidance": "If an earlier transformed coordinate is incorrect, consider whether later coordinate-transformation operations were applied correctly to that earlier value. Do not award independent correct-coordinate points without evidence."
+    },
+    {
+      "id": "mock_v163_03",
+      "subject": "Maths",
+      "topic": "Differentiation",
+      "marks": 8,
+      "alternativePhrases": 2,
+      "alternativeCriteriaIndices": [
+        5
+      ],
+      "ecfGuidance": "The first-derivative sign-change test is an equally valid classification method; the second-derivative step is a separate criterion and should not be invented when it is absent."
+    },
+    {
+      "id": "mock_v163_05",
+      "subject": "Maths",
+      "topic": "Integration",
+      "marks": 7,
+      "alternativePhrases": 2,
+      "alternativeCriteriaIndices": [
+        3
+      ],
+      "ecfGuidance": "Method marks for an integral setup or signed-area split can be awarded if demonstrated, even when an earlier arithmetic error affects a later value. Correct final-area marks still require a valid result."
+    },
+    {
+      "id": "mock_v163_06",
+      "subject": "Maths",
+      "topic": "Algebra & functions",
+      "marks": 7,
+      "alternativePhrases": 4,
+      "alternativeCriteriaIndices": [
+        1,
+        3
+      ],
+      "ecfGuidance": "If a student's algebraic inverse method is correct but an earlier rearrangement contained an arithmetic slip, review method evidence separately rather than automatically accepting the incorrect inverse formula."
+    }
+  ],
+  "preserved": [
+    "All question IDs, prompts, numeric results, point totals and original mark-point text",
+    "All deck card IDs and revision history",
+    "Photos and scanner local data",
+    "World, images, XP, account profiles"
+  ],
+  "cautions": [
+    "Original exam-style practice criteria are not official published AQA mark schemes.",
+    "Accepted examples are non-exhaustive; other valid but unlisted methods still require manual correction.",
+    "Automatic transcription and OCR cannot fully judge handwriting, diagrams, intermediate steps or errors carried forward.",
+    "A correct final value must not imply separate explanation, diagram or proof marks.",
+    "Individual quoted alternate phrases are checked semantically for the specified question and require sufficient text, not loose word overlap."
+  ],
+  "officialAqaMarkSchemeCertification": false,
+  "independentHandwritingAccuracyCertification": false,
+  "fullyAutomaticGrading": false,
+  "studentReviewRequired": true
+}
