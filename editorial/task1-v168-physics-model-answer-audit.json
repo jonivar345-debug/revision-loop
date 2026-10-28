@@ -1,0 +1,108 @@
+{
+  "release": "v168",
+  "date": "2026-10-28",
+  "goal": "Repair incomplete displayed model answers where a 3-mark Physics question required additional force labels, calculation method, physical condition, or field direction.",
+  "questionIds": [
+    "orig_v25_physics_free_body_diagrams_1",
+    "orig_v25_physics_free_body_diagrams_4",
+    "orig_v25_physics_gas_laws_2",
+    "orig_v25_physics_electric_fields_2"
+  ],
+  "correctedModelAnswers": 4,
+  "acceptedAlternativePhrases": 12,
+  "corrections": [
+    {
+      "id": "orig_v25_physics_free_body_diagrams_1",
+      "originalModelAnswer": "3.5 m s⁻² to right",
+      "correctedModelAnswer": "Horizontal forces: 60 N right and 18 N left. Vertically, weight mg ≈ 118 N down and normal reaction ≈ 118 N up. Net horizontal force = 42 N right, so acceleration a = 42/12 = 3.5 m s⁻² right.",
+      "marks": 3,
+      "requiresWorkingNow": true,
+      "acceptedAlternatives": [
+        [
+          "a 60 n force to the right opposes 18 n of leftward friction"
+        ],
+        [
+          "weight is 118 n down and the normal contact force is 118 n up"
+        ],
+        [
+          "the 42 n resultant to the right gives 3.5 metres per second squared acceleration"
+        ]
+      ],
+      "ecfGuidance": "If the student correctly uses acceleration = their resultant force / 12 kg but made an earlier arithmetic slip, consider the method. Diagram forces/directions must be separately demonstrated; do not infer them from the final acceleration."
+    },
+    {
+      "id": "orig_v25_physics_free_body_diagrams_4",
+      "originalModelAnswer": "27.5 N",
+      "correctedModelAnswer": "Tension acts upward; weight mg downward. Apply T−mg=ma. T = 2.5(9.81+1.2) = 27.5 N.",
+      "marks": 3,
+      "requiresWorkingNow": true,
+      "acceptedAlternatives": [
+        [
+          "upward string tension and downward gravitational weight are the only forces"
+        ],
+        [
+          "newtons second law is tension minus weight equals mass times acceleration"
+        ],
+        [
+          "the force in the string works out as 27.5 newtons"
+        ]
+      ],
+      "ecfGuidance": "Consider credit for a correctly oriented T − mg = ma setup even if an earlier weight calculation is incorrect. The right final tension does not imply correctly labelled force arrows."
+    },
+    {
+      "id": "orig_v25_physics_gas_laws_2",
+      "originalModelAnswer": "152 kPa",
+      "correctedModelAnswer": "For a fixed amount of gas at constant temperature, Boyle's law gives p₁V₁=p₂V₂. Therefore p₂ = (95 × 4.0)/2.5 = 152 kPa.",
+      "marks": 3,
+      "requiresWorkingNow": true,
+      "acceptedAlternatives": [
+        [
+          "the product of pressure and volume remains constant at a fixed temperature"
+        ],
+        [
+          "multiply 95 by 4.0 and divide by 2.5 for the new pressure"
+        ],
+        [
+          "the gas pressure after compression is 152 kilopascals"
+        ]
+      ],
+      "ecfGuidance": "Boyle's-law setup p1V1 = p2V2 and a correctly formed rearrangement can earn independent method credit if the final arithmetic is wrong. Constant temperature must be stated for its separate mark."
+    },
+    {
+      "id": "orig_v25_physics_electric_fields_2",
+      "originalModelAnswer": "5.0×10⁴ V m⁻¹, positive to negative",
+      "correctedModelAnswer": "Use E=V/d, converting 12 mm to 0.012 m. Hence E = 600/0.012 = 5.0×10⁴ V m⁻¹, directed from the positive plate towards the negative plate.",
+      "marks": 3,
+      "requiresWorkingNow": true,
+      "acceptedAlternatives": [
+        [
+          "the electric field is the voltage divided by the distance between the plates"
+        ],
+        [
+          "twelve millimetres is 0.012 metres"
+        ],
+        [
+          "a 50000 volt per metre field points from positive to negative plate"
+        ]
+      ],
+      "ecfGuidance": "A correct E = V/d setup may deserve method credit even when the student mis-converts 12 mm; the conversion and field magnitude/direction still require their own evidence."
+    }
+  ],
+  "verified": {
+    "fourCorrectedModelAnswersNowCreditAllThreeIndividualMarkPoints": true,
+    "oldAnswerAloneDoesNotDemonstrateAllThreePoints": true,
+    "newAlternativePhrasesEachCreditTheirOwnPoint": true,
+    "negatedAlternativePhrasesNeverCredited": true
+  },
+  "preserved": [
+    "Question IDs, marks, prompts and individual canonical rubric text",
+    "1,268 questions in main bank, bankVersion 69",
+    "3,335 flashcard records and all saved progress",
+    "Original photo scanner and private attached answers",
+    "Points, levels, World, images and XP"
+  ],
+  "notOfficialAqaMarkSchemes": true,
+  "allOtherQuestionIdsPreserved": true,
+  "studentReviewStillRequired": true,
+  "limitation": "Model answers and accepted alternatives have been checked for these four original-practice questions only. This is not an automatic guarantee of examiner-equivalent marks for unseen handwritten methods."
+}
