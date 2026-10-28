@@ -1,3 +1,15 @@
+# Revision Loop v160 — AS Physics Particles and Measurements mock coverage (28 October 2026)
+
+**Proposed until CI, merge and Pages:** deck v160 **3,312 cards** (3,308 active), **2,340 mock-eligible** (Physics 730; Chemistry 1,533; Maths 77). Exam bank v68: **1,260 questions**. Existing cards, questions, IDs, app runtime, scanner, progress keys, XP and World assets unchanged.
+
+AQA 7408 **3.2 Particles and Radiation**: 46 selected exact-evidence checks. Three concise cards cover baryon numbers of quarks and antiquarks, antineutron quark content and electron/positron rest energy. Two original mock questions, **14 marks**, assess conservation laws in beta-minus decay and photoelectric-energy/stopping-potential calculations.
+
+AQA 7408 **3.1 Measurements and their Errors**: 32 selected exact-evidence checks. Three concise cards address the half-range estimate from repeated readings, matching decimal places for values and uncertainties, and deciding whether a graph intercept is consistent with zero. Two original applied questions, **13 marks**, cover wire resistivity uncertainty and graph/reading uncertainty.
+
+Evidence: `editorial/task1-v160-particles-mock-audit.json` and `editorial/task1-v160-measurements-mock-audit.json`. Regression: `tests/task1-v160-particles-measurements-mock.cjs`, historical release-count tests amended only to exclude additive v160 IDs, and World economy standalone questions regression updated to preserve its historical baseline. **Selected checks are not full AQA specification certification, practical proficiency or proof of independent student mastery.** Questions are original exam-style, not official AQA papers. Terms the AQA specification expressly excludes from testing, including gluon, Z⁰ and graviton, have not been added as required recall.
+
+---
+
 # Revision Loop v159 — Physics AS Waves mock audit (28 October 2026)
 
 **Release candidate until checks, merge and Pages deployment:** deck v159 **3,306 flashcards** (3,302 active), **2,334 mock-eligible**: Physics 724, Chemistry 1,533, Maths 77. Exam bank v67 **1,256 original questions**. All existing card and question IDs, app code, progress keys and settings are unchanged.

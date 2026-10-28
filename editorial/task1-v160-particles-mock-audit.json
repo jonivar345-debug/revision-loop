@@ -1,0 +1,802 @@
+{
+  "release": "v160",
+  "date": "2026-10-28",
+  "subject": "AQA 7408 Physics",
+  "area": "Particles and radiation 3.2",
+  "specificationUrl": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+  "scope": "Targeted sampled atomic evidence checks, not complete line-by-line AQA coverage",
+  "counts": {
+    "checked": 46,
+    "newCards": 3,
+    "newQuestions": 2,
+    "newMarks": 14
+  },
+  "rows": [
+    {
+      "id": "PHP-160-001",
+      "specRef": "3.2.1.1",
+      "requirement": "Specific charge is charge divided by mass",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_specific_charge",
+        "front": "What is specific charge?",
+        "back": "charge ÷ mass, Q/m, with unit C kg⁻¹.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-002",
+      "specRef": "3.2.1.1",
+      "requirement": "Nucleon and proton numbers from nuclide notation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_nuclide",
+        "front": "In nuclide notation, what do A and Z mean?",
+        "back": "A = nucleon number; Z = proton number.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-003",
+      "specRef": "3.2.1.1",
+      "requirement": "Neutrons equal nucleon number minus proton number",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v142_001",
+        "front": "How do you find the number of neutrons from nuclide notation?",
+        "back": "N = A − Z, where A is nucleon number and Z is proton number.",
+        "specRef": "3.2.1.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-004",
+      "specRef": "3.2.1.1",
+      "requirement": "Isotopes share protons but differ in neutron number",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v142_002",
+        "front": "For two isotopes of one element, what stays the same and what differs?",
+        "back": "Same proton number Z; different neutron numbers and nucleon numbers A.",
+        "specRef": "3.2.1.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-005",
+      "specRef": "3.2.1.1",
+      "requirement": "Proton and electron mass in SI units",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v142_008",
+        "front": "What are approximate proton and electron masses in kilograms?",
+        "back": "Proton 1.67 × 10⁻²⁷ kg; electron 9.11 × 10⁻³¹ kg.",
+        "specRef": "3.2.1.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-006",
+      "specRef": "3.2.1.2",
+      "requirement": "Strong force is repulsive at extremely short distances",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v130_010",
+        "front": "What does the strong nuclear force do at very short separations below about 0.5 fm?",
+        "back": "It becomes repulsive.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-007",
+      "specRef": "3.2.1.2",
+      "requirement": "Strong nuclear attraction has short range",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v130_011",
+        "front": "What is the approximate maximum range of the attractive strong nuclear force?",
+        "back": "About 3 femtometres.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-008",
+      "specRef": "3.2.1.2",
+      "requirement": "Alpha decay reduces proton number and mass number",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_025",
+        "front": "What changes in a nucleus during alpha decay?",
+        "back": "Nucleon number −4; proton number −2.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-009",
+      "specRef": "3.2.1.2",
+      "requirement": "Beta-minus decay nuclear-number changes",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_phy_026",
+        "front": "What changes in a nucleus during beta-minus decay?",
+        "back": "Proton number increases by 1; nucleon number stays the same.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-010",
+      "specRef": "3.2.1.2",
+      "requirement": "Neutrino hypothesised to account for missing beta-decay energy",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v130_012",
+        "front": "What conservation argument led to the prediction of the neutrino?",
+        "back": "Missing energy in beta decay needed an escaping particle.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-011",
+      "specRef": "3.2.1.3",
+      "requirement": "Particle antiparticle symmetry in mass",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_antiparticle",
+        "front": "How does an antiparticle compare with its particle?",
+        "back": "Same mass and rest energy, but opposite charge and other additive quantum numbers.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-012",
+      "specRef": "3.2.1.3",
+      "requirement": "Antineutron contains three antiquarks",
+      "status": "new_concise_recall",
+      "card": {
+        "id": "task1_v160_002",
+        "front": "What are the quarks in an antineutron?",
+        "back": "An anti-up quark and two anti-down quarks (anti-u, anti-d, anti-d).",
+        "specRef": "3.2.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-013",
+      "specRef": "3.2.1.3",
+      "requirement": "Electron or positron rest energy in MeV",
+      "status": "new_concise_recall",
+      "card": {
+        "id": "task1_v160_003",
+        "front": "What is the approximate rest energy of an electron or positron?",
+        "back": "0.511 MeV for either particle.",
+        "specRef": "3.2.1.3",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-014",
+      "specRef": "3.2.1.3",
+      "requirement": "Photon energy follows hf and hc/lambda",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_photon_energy",
+        "front": "What is the energy of a photon?",
+        "back": "E = hf = hc/λ.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-015",
+      "specRef": "3.2.1.3",
+      "requirement": "Annihilation and two photons",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_sketch_annihilation",
+        "front": "Sketch electron–positron annihilation at negligible initial KE.",
+        "back": "e⁻ + e⁺ → 2γ; equal photon energies, opposite momenta.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-016",
+      "specRef": "3.2.1.3",
+      "requirement": "Pair production requires photon energy and momentum conservation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_sketch_pair",
+        "front": "Sketch electron–positron pair production near a nucleus.",
+        "back": "Energetic γ → e⁻ + e⁺ near a nucleus; at least ~1.022 MeV.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-017",
+      "specRef": "3.2.1.4",
+      "requirement": "Four basic particle interactions",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_four_forces",
+        "front": "Name the four fundamental interactions.",
+        "back": "Strong nuclear, electromagnetic, weak nuclear and gravitational.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-018",
+      "specRef": "3.2.1.4",
+      "requirement": "Virtual photons are EM exchange particles",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v130_014",
+        "front": "Which exchange particle represents the electromagnetic interaction?",
+        "back": "A virtual photon.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-019",
+      "specRef": "3.2.1.4",
+      "requirement": "W bosons mediate weak interaction",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v130_013",
+        "front": "Which exchange particles mediate the weak interaction at A-level?",
+        "back": "W⁺ and W⁻ bosons.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-020",
+      "specRef": "3.2.1.4",
+      "requirement": "Beta-minus weak interaction involves a down-to-up transition",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_beta_minus_change",
+        "front": "What quark change occurs in beta-minus decay?",
+        "back": "d → u + W⁻; W⁻ → e⁻ + electron antineutrino.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_01",
+        "prompt": "A neutron undergoes beta-minus decay. Identify its initial and final quark compositions, the quark that changes type, the exchange particle and the two emitted leptons. Use baryon number and electron lepton number to show that both are conserved. State the baryon number of one quark.",
+        "marks": 7,
+        "markPoints": [
+          "The neutron consists of udd quarks.",
+          "The proton consists of uud quarks.",
+          "A down quark changes into an up quark: d → u.",
+          "The weak exchange particle is W⁻.",
+          "An electron and an electron antineutrino are emitted.",
+          "Baryon number is +1 before and +1 after: three quarks of +⅓ each.",
+          "Electron lepton number is initially zero, and afterwards +1 for e⁻ and −1 for the electron antineutrino, giving zero."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-021",
+      "specRef": "3.2.1.4",
+      "requirement": "Electron capture particle equation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_electron_capture",
+        "front": "Write the particle equation for electron capture.",
+        "back": "p + e⁻ → n + electron neutrino.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-022",
+      "specRef": "3.2.1.5",
+      "requirement": "Hadrons feel the strong force",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_hadrons",
+        "front": "What are hadrons?",
+        "back": "Particles made of quarks that experience the strong interaction.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-023",
+      "specRef": "3.2.1.5",
+      "requirement": "Baryons have three quarks",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_baryon_definition",
+        "front": "Define a baryon.",
+        "back": "A hadron made from three quarks; an antibaryon has three antiquarks.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-024",
+      "specRef": "3.2.1.5",
+      "requirement": "Mesons have a quark and an antiquark",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_meson_definition",
+        "front": "Define a meson.",
+        "back": "A hadron consisting of a quark and an antiquark.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-025",
+      "specRef": "3.2.1.5",
+      "requirement": "Leptons do not feel strong interaction",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_lepton_definition",
+        "front": "Define a lepton.",
+        "back": "A fundamental particle that does not experience the strong interaction.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-026",
+      "specRef": "3.2.1.5",
+      "requirement": "Muon-minus decays to electron and two neutrinos",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_muon_decay",
+        "front": "State the products of muon-minus decay.",
+        "back": "μ⁻ → e⁻ + electron antineutrino + muon neutrino.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-027",
+      "specRef": "3.2.1.5",
+      "requirement": "Strong strangeness conservation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_strong_pairs",
+        "front": "Why are strange particles produced in associated pairs by strong interactions?",
+        "back": "Total strangeness must be conserved, so opposite strangeness must balance.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-028",
+      "specRef": "3.2.1.5",
+      "requirement": "Strangeness may change in weak interactions",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_strangeness_weak",
+        "front": "What changes in strangeness are possible for a weak interaction?",
+        "back": "ΔS may be 0, +1 or −1; strong interactions conserve S.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-029",
+      "specRef": "3.2.1.6",
+      "requirement": "Proton quark structure",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_proton_quarks",
+        "front": "What is the quark composition of a proton?",
+        "back": "uud.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-030",
+      "specRef": "3.2.1.6",
+      "requirement": "Neutron quark structure",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_neutron_quarks",
+        "front": "What is the quark composition of a neutron?",
+        "back": "udd.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-031",
+      "specRef": "3.2.1.6",
+      "requirement": "Baryon number of individual quark and antiquark",
+      "status": "new_concise_recall",
+      "card": {
+        "id": "task1_v160_001",
+        "front": "What is the baryon number of a quark and an antiquark?",
+        "back": "+⅓ for a quark; −⅓ for an antiquark.",
+        "specRef": "3.2.1.6",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_01",
+        "prompt": "A neutron undergoes beta-minus decay. Identify its initial and final quark compositions, the quark that changes type, the exchange particle and the two emitted leptons. Use baryon number and electron lepton number to show that both are conserved. State the baryon number of one quark.",
+        "marks": 7,
+        "markPoints": [
+          "The neutron consists of udd quarks.",
+          "The proton consists of uud quarks.",
+          "A down quark changes into an up quark: d → u.",
+          "The weak exchange particle is W⁻.",
+          "An electron and an electron antineutrino are emitted.",
+          "Baryon number is +1 before and +1 after: three quarks of +⅓ each.",
+          "Electron lepton number is initially zero, and afterwards +1 for e⁻ and −1 for the electron antineutrino, giving zero."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-032",
+      "specRef": "3.2.1.6",
+      "requirement": "Strange quark strangeness",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v136_037",
+        "front": "What is the strangeness of an s quark?",
+        "back": "−1 (an anti-s has +1).",
+        "specRef": "3.2.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-033",
+      "specRef": "3.2.1.6",
+      "requirement": "Charged kaon quark content",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_kplus_structure",
+        "front": "What is the quark–antiquark content of K⁺?",
+        "back": "u + anti-s.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-034",
+      "specRef": "3.2.1.7",
+      "requirement": "Conserved charge, baryon number and separate lepton numbers",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_conservation_particle",
+        "front": "Which conservation rules apply to particle interactions?",
+        "back": "Charge, baryon number, electron and muon lepton numbers, energy and momentum conserved; strangeness conserved in strong, may change in weak.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_01",
+        "prompt": "A neutron undergoes beta-minus decay. Identify its initial and final quark compositions, the quark that changes type, the exchange particle and the two emitted leptons. Use baryon number and electron lepton number to show that both are conserved. State the baryon number of one quark.",
+        "marks": 7,
+        "markPoints": [
+          "The neutron consists of udd quarks.",
+          "The proton consists of uud quarks.",
+          "A down quark changes into an up quark: d → u.",
+          "The weak exchange particle is W⁻.",
+          "An electron and an electron antineutrino are emitted.",
+          "Baryon number is +1 before and +1 after: three quarks of +⅓ each.",
+          "Electron lepton number is initially zero, and afterwards +1 for e⁻ and −1 for the electron antineutrino, giving zero."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-035",
+      "specRef": "3.2.1.7",
+      "requirement": "Electron-antineutrino lepton number balances electron",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "task1_v130_017",
+        "front": "What are the electron-lepton numbers of an electron and its antineutrino?",
+        "back": "+1 and −1 respectively.",
+        "specRef": "3.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_01",
+        "prompt": "A neutron undergoes beta-minus decay. Identify its initial and final quark compositions, the quark that changes type, the exchange particle and the two emitted leptons. Use baryon number and electron lepton number to show that both are conserved. State the baryon number of one quark.",
+        "marks": 7,
+        "markPoints": [
+          "The neutron consists of udd quarks.",
+          "The proton consists of uud quarks.",
+          "A down quark changes into an up quark: d → u.",
+          "The weak exchange particle is W⁻.",
+          "An electron and an electron antineutrino are emitted.",
+          "Baryon number is +1 before and +1 after: three quarks of +⅓ each.",
+          "Electron lepton number is initially zero, and afterwards +1 for e⁻ and −1 for the electron antineutrino, giving zero."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-036",
+      "specRef": "3.2.2.1",
+      "requirement": "Work function meaning",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_work_function",
+        "front": "Define the work function φ.",
+        "back": "Minimum energy needed to remove an electron from a metal surface.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_02",
+        "prompt": "A metal has work function 2.20 eV. It is illuminated with monochromatic light of frequency 8.00 × 10¹⁴ Hz. Take h = 6.63 × 10⁻³⁴ J s and e = 1.60 × 10⁻¹⁹ C. Calculate the energy of one photon in joules and electronvolts, the maximum photoelectron kinetic energy in electronvolts and the magnitude of stopping potential. Calculate the threshold frequency, and explain what happens to the maximum kinetic energy and rate of emission when light intensity increases at the same frequency.",
+        "marks": 7,
+        "markPoints": [
+          "Photon energy E=hf = 6.63 × 10⁻³⁴ × 8.00 × 10¹⁴ = 5.304 × 10⁻¹⁹ J.",
+          "Photon energy in electronvolts = (5.304 × 10⁻¹⁹)/(1.60 × 10⁻¹⁹) = 3.315 eV.",
+          "Maximum kinetic energy = 3.315 − 2.20 = 1.115 eV ≈ 1.12 eV.",
+          "Stopping potential magnitude = 1.115 V ≈ 1.12 V, because an electron with 1.115 eV kinetic energy is stopped by 1.115 V.",
+          "Threshold frequency = φ/h = (2.20 × 1.60 × 10⁻¹⁹)/(6.63 × 10⁻³⁴) = 5.31 × 10¹⁴ Hz.",
+          "Increasing intensity at fixed frequency leaves photon energy and maximum photoelectron kinetic energy unchanged.",
+          "More photons arrive per second, so the photoelectron emission rate may increase when the frequency is above threshold."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-037",
+      "specRef": "3.2.2.1",
+      "requirement": "Threshold frequency relation",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_threshold_eq",
+        "front": "What equation relates threshold frequency and work function?",
+        "back": "hf₀ = φ; so f₀ = φ/h.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_02",
+        "prompt": "A metal has work function 2.20 eV. It is illuminated with monochromatic light of frequency 8.00 × 10¹⁴ Hz. Take h = 6.63 × 10⁻³⁴ J s and e = 1.60 × 10⁻¹⁹ C. Calculate the energy of one photon in joules and electronvolts, the maximum photoelectron kinetic energy in electronvolts and the magnitude of stopping potential. Calculate the threshold frequency, and explain what happens to the maximum kinetic energy and rate of emission when light intensity increases at the same frequency.",
+        "marks": 7,
+        "markPoints": [
+          "Photon energy E=hf = 6.63 × 10⁻³⁴ × 8.00 × 10¹⁴ = 5.304 × 10⁻¹⁹ J.",
+          "Photon energy in electronvolts = (5.304 × 10⁻¹⁹)/(1.60 × 10⁻¹⁹) = 3.315 eV.",
+          "Maximum kinetic energy = 3.315 − 2.20 = 1.115 eV ≈ 1.12 eV.",
+          "Stopping potential magnitude = 1.115 V ≈ 1.12 V, because an electron with 1.115 eV kinetic energy is stopped by 1.115 V.",
+          "Threshold frequency = φ/h = (2.20 × 1.60 × 10⁻¹⁹)/(6.63 × 10⁻³⁴) = 5.31 × 10¹⁴ Hz.",
+          "Increasing intensity at fixed frequency leaves photon energy and maximum photoelectron kinetic energy unchanged.",
+          "More photons arrive per second, so the photoelectron emission rate may increase when the frequency is above threshold."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-038",
+      "specRef": "3.2.2.1",
+      "requirement": "Maximum kinetic energy and stopping voltage",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_stopping_eq",
+        "front": "How is stopping potential linked to maximum photoelectron energy?",
+        "back": "Eₖ(max) = eVₛ, using the magnitude of the stopping voltage.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v160_02",
+        "prompt": "A metal has work function 2.20 eV. It is illuminated with monochromatic light of frequency 8.00 × 10¹⁴ Hz. Take h = 6.63 × 10⁻³⁴ J s and e = 1.60 × 10⁻¹⁹ C. Calculate the energy of one photon in joules and electronvolts, the maximum photoelectron kinetic energy in electronvolts and the magnitude of stopping potential. Calculate the threshold frequency, and explain what happens to the maximum kinetic energy and rate of emission when light intensity increases at the same frequency.",
+        "marks": 7,
+        "markPoints": [
+          "Photon energy E=hf = 6.63 × 10⁻³⁴ × 8.00 × 10¹⁴ = 5.304 × 10⁻¹⁹ J.",
+          "Photon energy in electronvolts = (5.304 × 10⁻¹⁹)/(1.60 × 10⁻¹⁹) = 3.315 eV.",
+          "Maximum kinetic energy = 3.315 − 2.20 = 1.115 eV ≈ 1.12 eV.",
+          "Stopping potential magnitude = 1.115 V ≈ 1.12 V, because an electron with 1.115 eV kinetic energy is stopped by 1.115 V.",
+          "Threshold frequency = φ/h = (2.20 × 1.60 × 10⁻¹⁹)/(6.63 × 10⁻³⁴) = 5.31 × 10¹⁴ Hz.",
+          "Increasing intensity at fixed frequency leaves photon energy and maximum photoelectron kinetic energy unchanged.",
+          "More photons arrive per second, so the photoelectron emission rate may increase when the frequency is above threshold."
+        ]
+      }
+    },
+    {
+      "id": "PHP-160-039",
+      "specRef": "3.2.2.1",
+      "requirement": "Intensity below threshold does not produce emission",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_photoelectric_002",
+        "front": "Why can intense light below the threshold frequency still emit no photoelectrons?",
+        "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-040",
+      "specRef": "3.2.2.2",
+      "requirement": "Excitation leaves bound electron in higher level",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_excitation",
+        "front": "What is excitation of an atom?",
+        "back": "A bound electron moves to a higher allowed energy level, staying in the atom.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-041",
+      "specRef": "3.2.2.2",
+      "requirement": "Ionisation removes atomic electron",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_ionisation",
+        "front": "What is ionisation?",
+        "back": "An electron is removed from an atom, leaving a positive ion.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-042",
+      "specRef": "3.2.2.2",
+      "requirement": "eV-to-joule conversion",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_ev_definition",
+        "front": "What is one electronvolt (eV)?",
+        "back": "Energy gained by an electron moved through 1 V; 1 eV = 1.60 × 10⁻¹⁹ J.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-043",
+      "specRef": "3.2.2.3",
+      "requirement": "Emission photon energy equals positive level difference",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_emission_photon",
+        "front": "What is the photon energy when an excited electron falls to a lower level?",
+        "back": "E = hf = E(high) − E(low), using the positive energy difference.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-044",
+      "specRef": "3.2.2.3",
+      "requirement": "Line spectra arise from discrete levels",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_discrete_lines",
+        "front": "Why do atoms produce emission line spectra?",
+        "back": "Electrons occupy discrete energy levels, so only specific photon energies are emitted.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-045",
+      "specRef": "3.2.2.4",
+      "requirement": "Electron diffraction demonstrates matter-wave behaviour",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_pandr_v29_electron_diffraction",
+        "front": "What observation shows wave behaviour of electrons?",
+        "back": "Their diffraction into rings or interference patterns through a crystal.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHP-160-046",
+      "specRef": "3.2.2.4",
+      "requirement": "de Broglie wavelength inversely proportional to momentum",
+      "status": "existing_mock_recall",
+      "card": {
+        "id": "phy_debroglie",
+        "front": "What is the de Broglie wavelength equation?",
+        "back": "λ = h/p.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    }
+  ],
+  "limitations": {
+    "completeSpecificationCertified": false,
+    "independentStudentMastery": false,
+    "exclusionOfUntestedGluonZAndGravitonKnowledge": true
+  }
+}

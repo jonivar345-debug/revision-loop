@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 159,
+  "deckVersion": 160,
   "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -69441,6 +69441,138 @@
       "priority": 8,
       "courseTopic": "Interference",
       "revisionTopic": "Interference"
+    },
+    {
+      "id": "task1_v160_001",
+      "subject": "Physics",
+      "specRef": "3.2.1.6",
+      "stage": "AS",
+      "topic": "Particles",
+      "front": "What is the baryon number of a quark and an antiquark?",
+      "back": "+⅓ for a quark; −⅓ for an antiquark.",
+      "accept": [
+        "+⅓ for a quark; −⅓ for an antiquark."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Particles",
+      "revisionTopic": "Particles"
+    },
+    {
+      "id": "task1_v160_002",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "stage": "AS",
+      "topic": "Particles",
+      "front": "What are the quarks in an antineutron?",
+      "back": "An anti-up quark and two anti-down quarks (anti-u, anti-d, anti-d).",
+      "accept": [
+        "An anti-up quark and two anti-down quarks (anti-u, anti-d, anti-d)."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Particles",
+      "revisionTopic": "Particles"
+    },
+    {
+      "id": "task1_v160_003",
+      "subject": "Physics",
+      "specRef": "3.2.1.3",
+      "stage": "AS",
+      "topic": "Particles",
+      "front": "What is the approximate rest energy of an electron or positron?",
+      "back": "0.511 MeV for either particle.",
+      "accept": [
+        "0.511 MeV for either particle."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Particles",
+      "revisionTopic": "Particles"
+    },
+    {
+      "id": "task1_v160_004",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Measurements",
+      "front": "How can uncertainty from a set of repeated readings be estimated using their range?",
+      "back": "Half the range: (highest reading − lowest reading)/2.",
+      "accept": [
+        "Half the range: (highest reading − lowest reading)/2."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements"
+    },
+    {
+      "id": "task1_v160_005",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Measurements",
+      "front": "When quoting a value and its absolute uncertainty, how should their decimal places compare?",
+      "back": "Quote the value to the same decimal place as its absolute uncertainty.",
+      "accept": [
+        "Quote the value to the same decimal place as its absolute uncertainty."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements"
+    },
+    {
+      "id": "task1_v160_006",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "stage": "AS",
+      "topic": "Measurements",
+      "front": "When is a graph's y-intercept consistent with zero?",
+      "back": "When zero lies within the plausible intercept range from acceptable lines.",
+      "accept": [
+        "When zero lies within the plausible intercept range from acceptable lines."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements"
     }
   ],
   "meta": {
