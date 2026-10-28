@@ -1,3 +1,17 @@
+# Revision Loop v154 — AQA-only mock recall and harder applied questions (28 October 2026)
+
+**Release candidate (NOT live until merged and Pages completes):** 22 existing Chemistry card prompts/answers reworded to AQA-relevant descriptions of double-bond electron density, curly-arrow electron-pair movement and delocalised electrons, without optional sigma/pi bond terminology. The original card IDs are unchanged and saved user progress remains keyed to those IDs. Mathematical π in Physics and Maths is unaffected. **Four new short, single-fact Physics cards** cover superconductors and loading a potential divider. **Nine original AS/mock-only Physics/Chemistry exam questions worth 55 marks** target all nine selected partial-applied evidence demands from v153.
+
+**Totals:** flashcards **3,276 → 3,280**, active **3,272 → 3,276**, mock-eligible **2,339 → 2,343**; exam bank **1,238 → 1,247** (v63 → v64). Each new card is `mock:true`, `taught:true`, `scope:mock`. Each new question is `mock:true` and `level:AS`. **No A2 scope, application UI, Firebase, XP or saved-progress-key changes.**
+
+**Evidence and regression:** `editorial/task1-v154-mock-aqa-terminology-audit.json` records exact before-and-after flashcard text and the new items. `editorial/task1-v154-mock-applied-questions.json` ties the nine problems to the nine previously partly evidenced checks. `tests/task1-v154-mock-aqa-regression.cjs` guards totals, provenance, preserved IDs, mock flags, concise cards and AQA wording. Practice questions are original—not official past-paper questions. All exact counts are conditional on the main branch not changing before merge.
+
+**Important limitation:** 2,343 mock-only recall cards is a large bank, **not proof that every exam assessable demand in all three AQA subjects is covered or that the student knows it independently**. The audit work so far is selective: more specification-by-specification checks remain, including Year 2 Chemistry material taught up to Kp. The five earlier mock question explanations that use sigma/pi wording still need a separate precise editorial review, as do other legacy questions. Exam questions are deliberately more complex than flashcards.
+
+**Release gate:** Four CI workflows, merge, Pages deployment success before saying it is live.
+
+---
+
 # Revision Loop — v153 Organic exam mechanisms and Year 1 science audit (28 October 2026)
 
 **Release candidate v153:** 12 original A-level-only Chemistry exam questions worth **81 marks**. Bank v62 → v63, **1,226 → 1,238 questions**. The questions are paper-only mechanism and functional-group mapping exercises: carbonyl electron-pair arrows; abstract nitrogen substitution and acylation; theoretical electrophilic aromatic substitution; and four-stage route ordering, evaluation, overall yield and atom economy. No practical chemical preparation or material-handling instructions. All new questions have `mock:false` and original—not AQA past paper—provenance. **Flashcards remain at 3,276 (3,272 active)** and all saved card IDs remain untouched.
