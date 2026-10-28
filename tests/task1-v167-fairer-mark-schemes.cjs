@@ -30,6 +30,9 @@ for(const q of curated){
      q.id+' should accept its vetted alternative '+variant);
    assert.equal(funcs.acceptedMarkPointAlternative('not '+variant,alts,q.markPoints[i]),false,
      q.id+' should reject a negated alternative');
+   const denied=funcs.examSuggested(q,'not '+variant);
+   assert.equal(denied.suggested,0,q.id+' old fuzzy matcher must not credit a denied accepted statement');
+   assert(denied.preds.every(v=>!v),q.id+' denied statement must not earn other rubric criteria');
    const result=funcs.examSuggested(q,variant);
    assert.equal(result.preds[i],true,q.id+' should recognise alternative evidence at point '+(i+1));
    assert.equal(result.suggested,q.markPointMarks?.[i]??1,q.id+' standalone alternative awards only its own mark');
