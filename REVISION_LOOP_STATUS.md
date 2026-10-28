@@ -1,3 +1,11 @@
+# Revision Loop — v150 short Organic Chemistry recall cards (28 October 2026)
+
+**Proposed v150 (based on the v149 development branch):** seven short AS Chemistry recall flashcards, 3,263 → 3,270 total (3,259 → 3,266 active). All previous card records and progress IDs preserved. One fact per card, no long reaction mechanisms, calculations or practical chemical-handling instructions. Areas: general formula, ozone UV protection, polyalkene London forces and chain length, common PVC applications, and atmospheric water vapour IR absorption.
+
+Source: AQA Chemistry 7405 Year 1 organic sections 3.3.1, 3.3.3, 3.3.4 and 3.3.6. Evidence: `editorial/task1-v150-organic-short-cards.json`. Regression: `tests/task1-v150-organic-short-cards.cjs`. This does not certify every AQA sub-bullet or independently demonstrated mastery. Do not alter XP, shop, mock-only filters, Firebase, progress keys, exams or World images. Merge v149 first, then v150 only when four CI suites pass and Pages deploys.
+
+---
+
 # Revision Loop — v149 Year 1 Organic Chemistry exam practice (27 October 2026)
 
 **Published starting baseline:** v148, 3,263 flashcards (3,259 active) and 1,200 exam questions. **Proposed v149:** 12 original AS Chemistry applied questions worth **66 marks**, raising the main bank to **1,212** (bank v61). No flashcards, review IDs, XP, purchases, cloud data, Firebase, scanner runtime, mock filters, or World photographs have been changed.
