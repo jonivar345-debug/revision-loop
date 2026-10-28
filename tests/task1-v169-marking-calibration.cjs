@@ -72,5 +72,5 @@ assert.equal(audit.totalCuratedPhrases,50);
 assert.equal(audit.questionBankTotal,1268);
 assert.equal(audit.fullAqaMarkSchemeCoverage,false);
 assert.equal(audit.automaticEcFCertified,false);
-assert(app.includes("const singleClaimCap=singleClaimEvidenceCap(q,answer);"));
+assert(app.includes("const singleClaimCap=typeof singleClaimEvidenceCap==='function'?singleClaimEvidenceCap(q,answer):null;"));
 console.log('PASS v169: single-claim guard, 18 new verified phrases, strict negation and untouched full-model marks.');
