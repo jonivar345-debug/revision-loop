@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
+const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v155-mock-scope-recall.json','utf8'));
 const cross=JSON.parse(fs.readFileSync('editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json','utf8'));
