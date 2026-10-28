@@ -45793,16 +45793,16 @@
       "topic": "Mechanics and materials",
       "courseTopic": "Mechanics and materials",
       "revisionTopic": "Energy",
-      "subtopic": "Variable force graph, energy conservation and power",
+      "subtopic": "Variable force graph, energy conservation and instantaneous power",
       "marks": 6,
-      "prompt": "A 2.0 kg trolley initially at rest moves along a straight horizontal track with negligible resistance. A driving force increases linearly from 0 N at displacement 0 m to 30 N at displacement 4.0 m, then remains at 30 N to displacement 6.0 m. The motion lasts 3.0 s. Calculate the work done by the force, the final trolley speed and the mean power transferred.",
+      "prompt": "A 2.0 kg trolley starts from rest on a straight horizontal track with negligible resistance. A driving force rises linearly from 10 N at displacement 0 m to 30 N at displacement 4.0 m, then remains 30 N to displacement 6.0 m. Calculate the total work done, the trolley's final speed and the instantaneous power supplied by the force at the 6.0 m point.",
       "markPoints": [
-        "Work in first 4.0 m is the triangular force–displacement area = ½ × 4.0 × 30 = 60 J.",
-        "Work from 4.0 m to 6.0 m is the rectangular area = 2.0 × 30 = 60 J.",
-        "Total work done = 120 J.",
-        "With negligible resistive loss, work done becomes trolley kinetic energy: ½mv² = 120 J.",
-        "v = √(2 × 120 / 2.0) = √120 = 11.0 m s⁻¹ (3 s.f.).",
-        "Mean power = total energy transferred / time = 120/3.0 = 40 W."
+        "Work in the first 4.0 m is the trapezium area under the force–displacement graph = ½(10 + 30) × 4.0 = 80 J.",
+        "Work from 4.0 m to 6.0 m is the rectangle area = 30 × 2.0 = 60 J.",
+        "Total work done = 80 + 60 = 140 J.",
+        "With negligible resistive loss, work becomes kinetic energy: ½mv² = 140 J.",
+        "Final speed v = √(2 × 140 / 2.0) = √140 = 11.8 m s⁻¹ (3 s.f.).",
+        "Instantaneous power at 6.0 m is P = Fv = 30 × √140 = 355 W (3 s.f.)."
       ],
       "markPointMarks": [
         1,
@@ -45812,7 +45812,7 @@
         1,
         1
       ],
-      "modelAnswer": "Work in first 4.0 m is the triangular force–displacement area = ½ × 4.0 × 30 = 60 J. Work from 4.0 m to 6.0 m is the rectangular area = 2.0 × 30 = 60 J. Total work done = 120 J. With negligible resistive loss, work done becomes trolley kinetic energy: ½mv² = 120 J. v = √(2 × 120 / 2.0) = √120 = 11.0 m s⁻¹ (3 s.f.). Mean power = total energy transferred / time = 120/3.0 = 40 W.",
+      "modelAnswer": "Work in the first 4.0 m is the trapezium area under the force–displacement graph = ½(10 + 30) × 4.0 = 80 J. Work from 4.0 m to 6.0 m is the rectangle area = 30 × 2.0 = 60 J. Total work done = 80 + 60 = 140 J. With negligible resistive loss, work becomes kinetic energy: ½mv² = 140 J. Final speed v = √(2 × 140 / 2.0) = √140 = 11.8 m s⁻¹ (3 s.f.). Instantaneous power at 6.0 m is P = Fv = 30 × √140 = 355 W (3 s.f.).",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
