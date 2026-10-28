@@ -1,0 +1,591 @@
+{
+  "release": "v158",
+  "date": "2026-10-28",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+  "scope": "33 selected recall and applied checks from Physics Year 1 AQA 3.5.1.1–3.5.1.6, not exhaustive line-by-line coverage.",
+  "method": "Read live mock-only deck front and back, record source ids, and map selected original exam-question evidence.",
+  "counts": {
+    "checked": 33,
+    "newCards": 3,
+    "newQuestions": 3,
+    "newMarks": 19,
+    "totalCards": 3302,
+    "activeCards": 3298,
+    "mockEligible": 2330,
+    "bySubject": {
+      "Physics": 720,
+      "Chemistry": 1533,
+      "Maths": 77
+    },
+    "bankQuestions": 1253
+  },
+  "rows": [
+    {
+      "id": "PHELEC-158-001",
+      "specRef": "3.5.1.1",
+      "requirement": "Electric current means charge flowing per unit time",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_current",
+        "front": "What is electric current?",
+        "back": "I = ΔQ/Δt, rate of flow of charge.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-002",
+      "specRef": "3.5.1.1",
+      "requirement": "Potential difference means energy transferred per unit charge",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_pd",
+        "front": "Define potential difference.",
+        "back": "Energy transferred per unit charge: V = W/Q.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-003",
+      "specRef": "3.5.1.1",
+      "requirement": "Resistance is potential difference divided by current",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_resistance",
+        "front": "What is resistance?",
+        "back": "R = V/I.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-004",
+      "specRef": "3.5.1.2",
+      "requirement": "Ohm's law requires constant physical conditions",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_phy_095",
+        "front": "What condition is required for Ohm's law?",
+        "back": "Constant physical conditions, including temperature.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-005",
+      "specRef": "3.5.1.2",
+      "requirement": "Interpret why a filament lamp is non-ohmic",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_filament_iv",
+        "front": "Why does a filament lamp's resistance rise at high current?",
+        "back": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-006",
+      "specRef": "3.5.1.2",
+      "requirement": "Explain diode current–voltage characteristics",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_diode",
+        "front": "How does an idealised diode conduct?",
+        "back": "It conducts strongly in the forward direction after its threshold and very little in reverse.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-007",
+      "specRef": "3.5.1.2",
+      "requirement": "Distinguish gradients of I against V and V against I",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_graph_weakness_v36_iv_axes_resistance",
+        "front": "For an ohmic conductor, what is the gradient of V against I versus I against V?",
+        "back": "V (y) vs I (x): gradient = R. I (y) vs V (x): gradient = 1/R.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-008",
+      "specRef": "3.5.1.2",
+      "requirement": "An ideal ammeter has zero resistance",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_phy_093",
+        "front": "What is an ideal ammeter's resistance?",
+        "back": "Zero.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-009",
+      "specRef": "3.5.1.2",
+      "requirement": "An ideal voltmeter has infinite resistance",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_phy_094",
+        "front": "What is an ideal voltmeter's resistance?",
+        "back": "Infinite.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-010",
+      "specRef": "3.5.1.3",
+      "requirement": "Use relationship between resistivity, R, L and A",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_resistivity",
+        "front": "What equation links resistance and resistivity?",
+        "back": "R = ρL/A.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-011",
+      "specRef": "3.5.1.3",
+      "requirement": "Recall resistivity unit",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_phy_008",
+        "front": "What is the unit of resistivity in base units?",
+        "back": "Ω m.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.1.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-012",
+      "specRef": "3.5.1.3",
+      "requirement": "Explain metal resistance increasing with temperature",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_v125_064",
+        "front": "Why does a metal's resistance often rise with temperature?",
+        "back": "Greater lattice vibrations increase electron scattering.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-013",
+      "specRef": "3.5.1.3",
+      "requirement": "NTC thermistor resistance falls when temperature increases",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_thermistor",
+        "front": "For an NTC thermistor, what happens to resistance as temperature rises?",
+        "back": "Resistance decreases.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-014",
+      "specRef": "3.5.1.3",
+      "requirement": "Superconductors have zero resistivity below a critical temperature",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_phy_099",
+        "front": "What is a superconductor?",
+        "back": "A material with zero resistivity below its critical temperature.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-015",
+      "specRef": "3.5.1.3",
+      "requirement": "Recognise one application of a superconductor",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_v154_001",
+        "front": "Name one use of superconductors in the AQA specification.",
+        "back": "Strong magnetic fields or lower energy losses in power transmission.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.3"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-016",
+      "specRef": "3.5.1.3",
+      "requirement": "Use resistance–length graph gradient in practical 5",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_practical_011",
+        "front": "What does the gradient of resistance against wire length give?",
+        "back": "ρ/A, for a wire of constant cross-section.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1 RP5"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-017",
+      "specRef": "3.5.1.4",
+      "requirement": "Series components carry equal current",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_series_current",
+        "front": "What is true of current in a series circuit?",
+        "back": "The current is the same at every point.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-018",
+      "specRef": "3.5.1.4",
+      "requirement": "Series potential differences add to supply p.d.",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_series_pd",
+        "front": "What happens to p.d. in a series circuit?",
+        "back": "The supply p.d. equals the sum of component p.d.s.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-019",
+      "specRef": "3.5.1.4",
+      "requirement": "Parallel branches have equal p.d.",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_parallel_pd",
+        "front": "What is true of p.d. across parallel branches?",
+        "back": "It is the same across each branch.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-020",
+      "specRef": "3.5.1.4",
+      "requirement": "Current entering and leaving a circuit junction is equal",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_parallel_current",
+        "front": "How does current behave at a junction?",
+        "back": "Total current into a junction equals total current out.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-021",
+      "specRef": "3.5.1.4",
+      "requirement": "Recall electrical power formulae",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_power_elec",
+        "front": "Give three electrical power equations.",
+        "back": "P = VI = I²R = V²/R.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-022",
+      "specRef": "3.5.1.4",
+      "requirement": "Equivalent resistance in series is sum of resistances",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_v138_004",
+        "front": "How do the resistances of series-connected components combine?",
+        "back": "Rₜ = R₁ + R₂ + … .",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.4"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-023",
+      "specRef": "3.5.1.4",
+      "requirement": "Equivalent resistance in parallel uses reciprocals",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_v138_005",
+        "front": "What is the rule for equivalent resistance of two parallel resistors?",
+        "back": "1/Rₜ = 1/R₁ + 1/R₂.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.4"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-024",
+      "specRef": "3.5.1.4",
+      "requirement": "Combine identical cells in series accounting for internal resistance",
+      "status": "new_short_recall_card",
+      "card": {
+        "id": "task1_v158_001",
+        "front": "For n identical cells connected in series, what are the total emf and internal resistance?",
+        "back": "Total emf = nε; total internal resistance = nr.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.4"
+      },
+      "question": {
+        "id": "mock_v158_01",
+        "prompt": "Three identical cells, each with emf 1.50 V and internal resistance 0.20 Ω, are connected in series to a 4.5 Ω external resistor. Calculate the combined emf and internal resistance, the total circuit resistance, the current, the terminal p.d. across the external resistor and the lost volts.",
+        "marks": 6,
+        "markPoints": [
+          "Combined emf = 3 × 1.50 = 4.50 V.",
+          "Combined internal resistance = 3 × 0.20 = 0.60 Ω.",
+          "Total resistance = 4.5 + 0.60 = 5.10 Ω.",
+          "Current = 4.50/5.10 = 0.882 A (3 s.f.).",
+          "Terminal p.d. across the resistor = IR = 0.88235 × 4.5 = 3.97 V (3 s.f.).",
+          "Lost volts = Ir = 0.88235 × 0.60 = 0.529 V; terminal p.d. plus lost volts equals emf."
+        ]
+      }
+    },
+    {
+      "id": "PHELEC-158-025",
+      "specRef": "3.5.1.4",
+      "requirement": "Combine identical cells in parallel accounting for internal resistance",
+      "status": "new_short_recall_card",
+      "card": {
+        "id": "task1_v158_002",
+        "front": "For n identical cells connected in parallel, what are the total emf and internal resistance?",
+        "back": "Total emf = ε; total internal resistance = r/n.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.4"
+      },
+      "question": {
+        "id": "mock_v158_02",
+        "prompt": "Two identical cells each have emf 1.50 V and internal resistance 0.60 Ω. They power a 6.0 Ω external resistor, first connected in parallel and then in series. For each arrangement calculate combined emf, combined internal resistance and current. Compare the terminal p.d.s across the resistor and explain why they differ.",
+        "marks": 7,
+        "markPoints": [
+          "Parallel arrangement has emf 1.50 V, the same as one cell.",
+          "Parallel internal resistance = 0.60/2 = 0.30 Ω.",
+          "Parallel current = 1.50/(6.0 + 0.30) = 0.238 A (3 s.f.).",
+          "Series arrangement has emf = 2 × 1.50 = 3.00 V.",
+          "Series internal resistance = 2 × 0.60 = 1.20 Ω.",
+          "Series current = 3.00/(6.0 + 1.20) = 0.417 A (3 s.f.).",
+          "Terminal p.d.s across the resistor: parallel ≈ 1.43 V, series = 2.50 V; the larger series emf gives a larger p.d. here despite increased internal resistance."
+        ]
+      }
+    },
+    {
+      "id": "PHELEC-158-026",
+      "specRef": "3.5.1.5",
+      "requirement": "Unloaded divider output depends on resistance fraction",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_potential_divider",
+        "front": "For two series resistors, how is output p.d. found?",
+        "back": "Vout = Vin × R₂/(R₁ + R₂), taking R₂ across the output.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-027",
+      "specRef": "3.5.1.5",
+      "requirement": "Loading the lower divider resistor reduces effective resistance",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_v154_004",
+        "front": "Why can loading the lower part of a divider lower its output voltage?",
+        "back": "The parallel load lowers that branch resistance and its share of the supply p.d.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.5"
+      },
+      "question": {
+        "id": "mock_v158_03",
+        "prompt": "A 12.0 V supply is connected across a 4.0 kΩ upper resistor in series with a 2.0 kΩ NTC thermistor as the lower resistor. Output p.d. is measured across the thermistor. Calculate the unloaded output. A 2.0 kΩ load is then connected in parallel with the thermistor. Calculate the loaded output and explain qualitatively what happens to the loaded output if the thermistor temperature rises.",
+        "marks": 6,
+        "markPoints": [
+          "Before loading, total series resistance = 4.0 + 2.0 = 6.0 kΩ.",
+          "Unloaded output = 12.0 × 2.0/6.0 = 4.0 V.",
+          "Loaded lower branch effective resistance = (2.0 × 2.0)/(2.0 + 2.0) = 1.0 kΩ.",
+          "Loaded output = 12.0 × 1.0/(4.0 + 1.0) = 2.4 V.",
+          "An NTC thermistor's resistance decreases as temperature rises.",
+          "As its resistance falls, lower-branch effective resistance and its fraction of supply p.d. decrease, so loaded output falls."
+        ]
+      }
+    },
+    {
+      "id": "PHELEC-158-028",
+      "specRef": "3.5.1.5",
+      "requirement": "NTC thermistor in lower divider branch reduces output on heating",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_v138_006",
+        "front": "What happens to Vout across an NTC thermistor as temperature increases?",
+        "back": "Vout falls when supply voltage and the other series resistance are fixed.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.5"
+      },
+      "question": {
+        "id": "mock_v158_03",
+        "prompt": "A 12.0 V supply is connected across a 4.0 kΩ upper resistor in series with a 2.0 kΩ NTC thermistor as the lower resistor. Output p.d. is measured across the thermistor. Calculate the unloaded output. A 2.0 kΩ load is then connected in parallel with the thermistor. Calculate the loaded output and explain qualitatively what happens to the loaded output if the thermistor temperature rises.",
+        "marks": 6,
+        "markPoints": [
+          "Before loading, total series resistance = 4.0 + 2.0 = 6.0 kΩ.",
+          "Unloaded output = 12.0 × 2.0/6.0 = 4.0 V.",
+          "Loaded lower branch effective resistance = (2.0 × 2.0)/(2.0 + 2.0) = 1.0 kΩ.",
+          "Loaded output = 12.0 × 1.0/(4.0 + 1.0) = 2.4 V.",
+          "An NTC thermistor's resistance decreases as temperature rises.",
+          "As its resistance falls, lower-branch effective resistance and its fraction of supply p.d. decrease, so loaded output falls."
+        ]
+      }
+    },
+    {
+      "id": "PHELEC-158-029",
+      "specRef": "3.5.1.6",
+      "requirement": "Emf is energy supplied per unit charge",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_emf",
+        "front": "Define emf.",
+        "back": "Energy supplied by the source per unit charge.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-030",
+      "specRef": "3.5.1.6",
+      "requirement": "Terminal voltage is emf minus internal-resistance lost volts",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_internal_001",
+        "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+        "back": "V = ε − Ir. The term Ir is the lost volts inside the cell.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": {
+        "id": "mock_v158_01",
+        "prompt": "Three identical cells, each with emf 1.50 V and internal resistance 0.20 Ω, are connected in series to a 4.5 Ω external resistor. Calculate the combined emf and internal resistance, the total circuit resistance, the current, the terminal p.d. across the external resistor and the lost volts.",
+        "marks": 6,
+        "markPoints": [
+          "Combined emf = 3 × 1.50 = 4.50 V.",
+          "Combined internal resistance = 3 × 0.20 = 0.60 Ω.",
+          "Total resistance = 4.5 + 0.60 = 5.10 Ω.",
+          "Current = 4.50/5.10 = 0.882 A (3 s.f.).",
+          "Terminal p.d. across the resistor = IR = 0.88235 × 4.5 = 3.97 V (3 s.f.).",
+          "Lost volts = Ir = 0.88235 × 0.60 = 0.529 V; terminal p.d. plus lost volts equals emf."
+        ]
+      }
+    },
+    {
+      "id": "PHELEC-158-031",
+      "specRef": "3.5.1.6",
+      "requirement": "On graph of terminal p.d. V against current I, intercept gives emf, gradient -r",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "phy_rp6",
+        "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+        "back": "y-intercept = emf ε and gradient = −r.",
+        "mock": true,
+        "active": true,
+        "specRef": null
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-032",
+      "specRef": "3.5.1.6",
+      "requirement": "A cell with no current has terminal p.d. equal to emf",
+      "status": "new_short_recall_card",
+      "card": {
+        "id": "task1_v158_003",
+        "front": "What is the terminal p.d. of a cell when no current flows?",
+        "back": "It equals the emf because the lost volts Ir are zero.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1.6"
+      },
+      "question": null
+    },
+    {
+      "id": "PHELEC-158-033",
+      "specRef": "3.5.1.6",
+      "requirement": "Required practical 6 uses graph terminal p.d. against current",
+      "status": "supported_existing_recall",
+      "card": {
+        "id": "task1_practical_012",
+        "front": "Which graph is used to find a cell's emf and internal resistance?",
+        "back": "Terminal p.d. V against current I.",
+        "mock": true,
+        "active": true,
+        "specRef": "3.5.1 RP6"
+      },
+      "question": null
+    }
+  ],
+  "unresolved": "More complex circuit interpretation and other Physics Year 1 specification sections require independent full audits. User mastery untested.",
+  "limits": {
+    "completePhysicsSpecificationCertified": false,
+    "studentMasteryCertified": false,
+    "questionsOriginalNotOfficial": true
+  },
+  "preservation": {
+    "existingCardsAndIDsUnchanged": true,
+    "existingQuestionIDsUnchanged": true,
+    "appRuntimeAndProgressKeysUnchanged": true
+  }
+}

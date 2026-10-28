@@ -7,12 +7,12 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v156-chemistry-mock-reca
 const previous=JSON.parse(fs.readFileSync('editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 const cards=new Map(deck.cards.map(c=>[c.id,c]));
-const v156Cards=deck.cards.filter(c=>!c.id.startsWith('task1_v157_'));
+const v156Cards=deck.cards.filter(c=>!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_'));
 assert(deck.deckVersion>=156);
 assert.equal(v156Cards.length,3295);
 assert.equal(v156Cards.filter(c=>c.active!==false).length,3291);
 assert.equal(v156Cards.filter(c=>c.mock===true&&c.active!==false).length,2323);
-assert(bank.bankVersion>=64);assert.equal(bank.questions.filter(q=>!q.id.startsWith('mock_v157_')).length,1247);
+assert(bank.bankVersion>=64);assert.equal(bank.questions.filter(q=>!q.id.startsWith('mock_v157_')&&!q.id.startsWith('mock_v158_')).length,1247);
 assert.equal(new Set(deck.cards.map(c=>c.id)).size,deck.cards.length);
 assert.equal(new Set(bank.questions.map(q=>q.id)).size,bank.questions.length);
 const older=v156Cards.filter(c=>!c.id.startsWith('task1_v156_'));

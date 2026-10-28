@@ -4,7 +4,7 @@ const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const plan=JSON.parse(fs.readFileSync('editorial/task1-v136-curated-coverage.json','utf8'));
 const cards=deck.cards;
 const added=cards.filter(c=>c.id.startsWith('task1_v136_'));
-const old=cards.filter(c=>!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_')&&!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_'));
+const old=cards.filter(c=>!c.id.startsWith('task1_v136_')&&!c.id.startsWith('task1_v138_')&&!c.id.startsWith('task1_v142_')&&!c.id.startsWith('task1_v144_')&&!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_'));
 assert(deck.deckVersion>=136,'v136 deck should have latest version');
 assert.equal(old.length,3008,'Must retain 3,008 pre-v136 records');
 assert.equal(old.filter(c=>c.active!==false).length,3004);

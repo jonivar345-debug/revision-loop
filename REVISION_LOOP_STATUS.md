@@ -1,3 +1,11 @@
+# Revision Loop v158 — Physics AS Electricity mock coverage (28 October 2026)
+
+**Release candidate until checks, merge and Pages:** deck v158 **3,302 cards** (3,298 active), **2,330 mock-eligible** (Physics 720, Chemistry 1,533, Maths 77). Exam bank v66 **1,253 questions**. The update adds three short AQA 3.5 recall cards: identical cell emfs and internal resistances in series, in parallel, and terminal p.d. when no current flows. Three original theoretical exam-style questions (6+7+6 = **19 marks**) cover combined cells including internal resistance, comparison of identical series/parallel cells, and the effect of loading and warming an NTC potential divider. All prior cards, questions, IDs, progress/settings and app runtime remain intact.
+
+Evidence: `editorial/task1-v158-physics-electricity-mock-audit.json` records **33 selected** requirements spanning AQA Physics 3.5.1.1–3.5.1.6 with exact active mock card front/back and selected exam-question mark points. This is targeted evidence, **not comprehensive specification certification or independent mastery**. More topic-specific practice and remaining Year 1/Year 2 audit are needed. Questions are original, not official AQA mark schemes. Regression `tests/task1-v158-electricity-mock-audit.cjs` and cloud safety workflow run with preserved historical exact release baselines.
+
+---
+
 # Revision Loop v157 — Physics AS Mechanics and Materials mock audit (28 October 2026)
 
 **Proposed until CI, merge and Pages deployment:** 3,299 flashcards (3,295 active), **2,327 mock-eligible** (Physics 717; Chemistry 1,533; Maths 77). Main exam bank v65 = **1,250 questions**, including three original AS Physics problems worth 20 marks. No existing question, card, or progress ID was removed or altered.
