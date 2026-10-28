@@ -170,7 +170,7 @@ jobs:
       - run: node tests/task1-v165-completion-gate.cjs
       - run: node tests/task1-v166-legacy-mock-crosswalk.cjs
       - run: node tests/task1-v167-fairer-mark-schemes.cjs
-      - run: node tests/task1-v168-physics-model-marking.cjs'
+      - run: node tests/task1-v168-physics-model-marking.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
