@@ -58,6 +58,7 @@ on:
       - 'tests/task1-v165-completion-gate.cjs'
       - 'tests/task1-v166-legacy-mock-crosswalk.cjs'
       - 'tests/task1-v167-fairer-mark-schemes.cjs'
+      - 'tests/task1-v168-marking-calibration.cjs'
       - 'tests/task1-v163-historical-bank.cjs'
       - 'tests/task1-v162-historical-snapshot.cjs'
       - 'editorial/task1-v160-particles-mock-audit.json'
@@ -69,6 +70,7 @@ on:
       - 'editorial/task1-v165-completion-gate.md'
       - 'editorial/task1-v166-legacy-mock-card-map.json'
       - 'editorial/task1-v167-marking-quality-audit.json'
+      - 'editorial/task1-v168-marking-calibration.json'
       - 'editorial/task1-v160-measurements-mock-audit.json'
       - 'editorial/task1-v159-waves-mock-audit.json'
       - 'editorial/task1-v158-physics-electricity-mock-audit.json'
@@ -168,6 +170,7 @@ jobs:
       - run: node tests/task1-v165-completion-gate.cjs
       - run: node tests/task1-v166-legacy-mock-crosswalk.cjs
       - run: node tests/task1-v167-fairer-mark-schemes.cjs
+      - run: node tests/task1-v168-marking-calibration.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
