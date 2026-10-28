@@ -1,6 +1,6 @@
 {
   "schemaVersion": 8,
-  "deckVersion": 157,
+  "deckVersion": 158,
   "updatedAt": "2026-10-28",
   "scope": {
     "Physics": "AQA AS / Year 1 first. SHM/circular motion are insurance only.",
@@ -69287,6 +69287,72 @@
       "priority": 8,
       "courseTopic": "Energy",
       "revisionTopic": "Energy"
+    },
+    {
+      "id": "task1_v158_001",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For n identical cells connected in series, what are the total emf and internal resistance?",
+      "back": "Total emf = nε; total internal resistance = nr.",
+      "accept": [
+        "Total emf = nε; total internal resistance = nr."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v158_002",
+      "subject": "Physics",
+      "specRef": "3.5.1.4",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For n identical cells connected in parallel, what are the total emf and internal resistance?",
+      "back": "Total emf = ε; total internal resistance = r/n.",
+      "accept": [
+        "Total emf = ε; total internal resistance = r/n."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v158_003",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "What is the terminal p.d. of a cell when no current flows?",
+      "back": "It equals the emf because the lost volts Ir are zero.",
+      "accept": [
+        "It equals the emf because the lost volts Ir are zero."
+      ],
+      "reject": [],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 8,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
     }
   ],
   "meta": {
