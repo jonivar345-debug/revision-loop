@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "bankVersion": 63,
-  "updatedAt": "2026-10-28T12:45:00.000Z",
+  "bankVersion": 64,
+  "updatedAt": "2026-10-28",
   "copyrightNote": "Questions with official AQA source links identify and paraphrase specific past-paper parts. Entries labelled Practice are independently written AQA-style practice, not original past-paper questions or official mark schemes.",
   "questions": [
     {
@@ -17296,7 +17296,7 @@
       "marks": 3,
       "prompt": "Outline the mechanism of adding HBr to propene, explaining the major organic product.",
       "markPoints": [
-        "The π bond attacks H⁺ from polarised HBr, forming the more stable secondary carbocation.",
+        "The C=C double bond attacks H⁺ from polarised HBr, forming the more stable secondary carbocation.",
         "Br⁻ then attacks that carbocation.",
         "Major product is 2-bromopropane."
       ],
@@ -17305,7 +17305,7 @@
         1,
         1
       ],
-      "modelAnswer": "The π bond attacks H⁺ from polarised HBr, forming the more stable secondary carbocation. Br⁻ then attacks that carbocation. Major product is 2-bromopropane.",
+      "modelAnswer": "The C=C double bond attacks H⁺ from polarised HBr, forming the more stable secondary carbocation. Br⁻ then attacks that carbocation. Major product is 2-bromopropane.",
       "answerType": "points",
       "questionType": "explanation",
       "requiresWorking": false,
@@ -17364,7 +17364,7 @@
       "marks": 3,
       "prompt": "Explain why benzene is more stable than the hypothetical cyclohexatriene with three isolated double bonds.",
       "markPoints": [
-        "Each carbon has a p orbital; six π electrons are delocalised around the ring.",
+        "Each carbon has a p orbital; six delocalised electrons are delocalised around the ring.",
         "Delocalisation lowers the energy of the molecule.",
         "Benzene has equal C–C bond lengths and a lower enthalpy of hydrogenation than expected."
       ],
@@ -17373,7 +17373,7 @@
         1,
         1
       ],
-      "modelAnswer": "Each carbon has a p orbital; six π electrons are delocalised around the ring. Delocalisation lowers the energy of the molecule. Benzene has equal C–C bond lengths and a lower enthalpy of hydrogenation than expected.",
+      "modelAnswer": "Each carbon has a p orbital; six delocalised electrons are delocalised around the ring. Delocalisation lowers the energy of the molecule. Benzene has equal C–C bond lengths and a lower enthalpy of hydrogenation than expected.",
       "answerType": "points",
       "questionType": "explanation",
       "requiresWorking": false,
@@ -17432,8 +17432,8 @@
       "marks": 3,
       "prompt": "Describe the electrophilic substitution mechanism in nitration of benzene, including restoration of aromaticity.",
       "markPoints": [
-        "Benzene π electrons attack NO₂⁺ to form a positively charged intermediate.",
-        "A proton is lost to reform the delocalised π system.",
+        "Benzene's delocalised electrons attack NO₂⁺ to form a positively charged intermediate.",
+        "A proton is lost to reform the delocalised electron system.",
         "Product is nitrobenzene."
       ],
       "markPointMarks": [
@@ -17441,7 +17441,7 @@
         1,
         1
       ],
-      "modelAnswer": "Benzene π electrons attack NO₂⁺ to form a positively charged intermediate. A proton is lost to reform the delocalised π system. Product is nitrobenzene.",
+      "modelAnswer": "Benzene's delocalised electrons attack NO₂⁺ to form a positively charged intermediate. A proton is lost to reform the delocalised electron system. Product is nitrobenzene.",
       "answerType": "points",
       "questionType": "explanation",
       "requiresWorking": false,
@@ -17467,14 +17467,14 @@
       "marks": 2,
       "prompt": "Why does benzene usually undergo electrophilic substitution instead of addition?",
       "markPoints": [
-        "Addition would destroy its delocalised aromatic π system.",
+        "Addition would destroy its delocalised aromatic electron system.",
         "Substitution restores/preserves aromatic stability after replacement of a hydrogen."
       ],
       "markPointMarks": [
         1,
         1
       ],
-      "modelAnswer": "Addition would destroy its delocalised aromatic π system. Substitution restores/preserves aromatic stability after replacement of a hydrogen.",
+      "modelAnswer": "Addition would destroy its delocalised aromatic electron system. Substitution restores/preserves aromatic stability after replacement of a hydrogen.",
       "answerType": "points",
       "questionType": "explanation",
       "requiresWorking": false,
@@ -41845,7 +41845,7 @@
       "subtopic": "Aromatic chemistry",
       "marks": 3,
       "markPoints": [
-        "Benzene contains a stable delocalised π electron system.",
+        "Benzene contains a stable delocalised electron system.",
         "An addition product would permanently disrupt that aromatic delocalisation.",
         "Substitution can restore the delocalised ring after proton loss."
       ],
@@ -41854,7 +41854,7 @@
         1,
         1
       ],
-      "modelAnswer": "Benzene contains a stable delocalised π electron system. An addition product would permanently disrupt that aromatic delocalisation. Substitution can restore the delocalised ring after proton loss.",
+      "modelAnswer": "Benzene contains a stable delocalised electron system. An addition product would permanently disrupt that aromatic delocalisation. Substitution can restore the delocalised ring after proton loss.",
       "prompt": "Benzene preferentially forms substitution rather than addition products with electrophiles. Explain this preference in terms of bonding.",
       "answerType": "points",
       "questionType": "explanation",
@@ -42478,7 +42478,7 @@
         "Product is ethyl benzoate, C₆H₅COOCH₂CH₃.",
         "Balanced equation: C₆H₅COCl + CH₃CH₂OH → C₆H₅COOCH₂CH₃ + HCl.",
         "The lone pair on ethanol oxygen attacks the electrophilic acyl carbon.",
-        "C=O π bonding shifts to oxygen, creating a tetrahedral intermediate.",
+        "electrons in the C=O bond shifts to oxygen, creating a tetrahedral intermediate.",
         "The carbonyl re-forms and chloride leaves (addition–elimination).",
         "Loss of a proton gives the neutral ester product.",
         "Acyl chlorides are more reactive electrophiles and do not depend on the slow acid-catalysed reversible esterification equilibrium."
@@ -42492,7 +42492,7 @@
         1,
         1
       ],
-      "modelAnswer": "Product is ethyl benzoate, C₆H₅COOCH₂CH₃. Balanced equation: C₆H₅COCl + CH₃CH₂OH → C₆H₅COOCH₂CH₃ + HCl. The lone pair on ethanol oxygen attacks the electrophilic acyl carbon. C=O π bonding shifts to oxygen, creating a tetrahedral intermediate. The carbonyl re-forms and chloride leaves (addition–elimination). Loss of a proton gives the neutral ester product. Acyl chlorides are more reactive electrophiles and do not depend on the slow acid-catalysed reversible esterification equilibrium.",
+      "modelAnswer": "Product is ethyl benzoate, C₆H₅COOCH₂CH₃. Balanced equation: C₆H₅COCl + CH₃CH₂OH → C₆H₅COOCH₂CH₃ + HCl. The lone pair on ethanol oxygen attacks the electrophilic acyl carbon. electrons in the C=O bond shifts to oxygen, creating a tetrahedral intermediate. The carbonyl re-forms and chloride leaves (addition–elimination). Loss of a proton gives the neutral ester product. Acyl chlorides are more reactive electrophiles and do not depend on the slow acid-catalysed reversible esterification equilibrium.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -42994,7 +42994,7 @@
       "prompt": "Ethene reacts with HBr. On paper draw the full electrophilic addition mechanism with charges and every curly arrow. Alternatively describe where each arrow starts and ends. Identify the organic product.",
       "markPoints": [
         "Show Hδ⁺–Brδ⁻ (or otherwise identify the polar H–Br bond).",
-        "First curly arrow goes from C=C π bond towards the H atom.",
+        "First curly arrow goes from C=C bond towards the H atom.",
         "Second curly arrow goes from the H–Br bond to Br, giving Br⁻.",
         "Show the CH₃CH₂⁺ carbocation intermediate with charge on carbon.",
         "Arrow goes from a Br⁻ lone pair towards the carbocation carbon.",
@@ -43008,7 +43008,7 @@
         1,
         1
       ],
-      "modelAnswer": "Show Hδ⁺–Brδ⁻ (or otherwise identify the polar H–Br bond). First curly arrow goes from C=C π bond towards the H atom. Second curly arrow goes from the H–Br bond to Br, giving Br⁻. Show the CH₃CH₂⁺ carbocation intermediate with charge on carbon. Arrow goes from a Br⁻ lone pair towards the carbocation carbon. Final organic product is CH₃CH₂Br, bromoethane.",
+      "modelAnswer": "Show Hδ⁺–Brδ⁻ (or otherwise identify the polar H–Br bond). First curly arrow goes from C=C bond towards the H atom. Second curly arrow goes from the H–Br bond to Br, giving Br⁻. Show the CH₃CH₂⁺ carbocation intermediate with charge on carbon. Arrow goes from a Br⁻ lone pair towards the carbocation carbon. Final organic product is CH₃CH₂Br, bromoethane.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -43075,8 +43075,8 @@
       "marks": 6,
       "prompt": "Bromine molecules are non-polar before they approach ethene. Explain their reaction and, on paper, draw a mechanism showing a polarised Br₂, the electron-pair movements and the product.",
       "markPoints": [
-        "C=C is an electron-rich π bond.",
-        "The π electrons induce a dipole in approaching Br₂; nearest Br becomes δ⁺.",
+        "C=C is an electron-rich double bond.",
+        "The electrons in the double bond induce a dipole in approaching Br₂; nearest Br becomes δ⁺.",
         "Arrow from the C=C electron pair to the δ⁺ bromine atom.",
         "Arrow from Br–Br bonding pair to the other bromine; Br⁻ forms.",
         "A positively charged bromine-containing intermediate is attacked by Br⁻.",
@@ -43090,7 +43090,7 @@
         1,
         1
       ],
-      "modelAnswer": "C=C is an electron-rich π bond. The π electrons induce a dipole in approaching Br₂; nearest Br becomes δ⁺. Arrow from the C=C electron pair to the δ⁺ bromine atom. Arrow from Br–Br bonding pair to the other bromine; Br⁻ forms. A positively charged bromine-containing intermediate is attacked by Br⁻. Product is CH₂BrCH₂Br, 1,2-dibromoethane.",
+      "modelAnswer": "C=C is an electron-rich double bond. The electrons in the double bond induce a dipole in approaching Br₂; nearest Br becomes δ⁺. Arrow from the C=C electron pair to the δ⁺ bromine atom. Arrow from Br–Br bonding pair to the other bromine; Br⁻ forms. A positively charged bromine-containing intermediate is attacked by Br⁻. Product is CH₂BrCH₂Br, 1,2-dibromoethane.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -43117,7 +43117,7 @@
       "marks": 6,
       "prompt": "Ethene undergoes electrophilic addition with H₂SO₄. Draw or describe the arrow movements, intermediates and immediate organic product; then state how that product relates to ethanol.",
       "markPoints": [
-        "Ethene's C=C π electrons attack an H of H₂SO₄.",
+        "Ethene's electrons in the C=C bond attack an H of H₂SO₄.",
         "The O–H bonding pair goes to oxygen, giving HSO₄⁻.",
         "A CH₃CH₂⁺ carbocation forms.",
         "The HSO₄⁻ oxygen donates a lone pair to the carbocation carbon.",
@@ -43132,7 +43132,7 @@
         1,
         1
       ],
-      "modelAnswer": "Ethene's C=C π electrons attack an H of H₂SO₄. The O–H bonding pair goes to oxygen, giving HSO₄⁻. A CH₃CH₂⁺ carbocation forms. The HSO₄⁻ oxygen donates a lone pair to the carbocation carbon. The immediate product is CH₃CH₂OSO₃H (ethyl hydrogensulfate). Hydrolysis of the alkyl hydrogensulfate yields ethanol.",
+      "modelAnswer": "Ethene's electrons in the C=C bond attack an H of H₂SO₄. The O–H bonding pair goes to oxygen, giving HSO₄⁻. A CH₃CH₂⁺ carbocation forms. The HSO₄⁻ oxygen donates a lone pair to the carbocation carbon. The immediate product is CH₃CH₂OSO₃H (ethyl hydrogensulfate). Hydrolysis of the alkyl hydrogensulfate yields ethanol.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -43774,7 +43774,7 @@
         "On each double-bond carbon CH₃ has higher CIP priority than H.",
         "E-but-2-ene is drawn with the two methyl groups on opposite sides of the C=C.",
         "Z-but-2-ene is drawn with the two methyl groups on the same side of the C=C.",
-        "Rotation about the C=C is restricted by the π bond, so the forms are stereoisomers."
+        "Rotation about the C=C is restricted by the C=C double bond, so the forms are stereoisomers."
       ],
       "markPointMarks": [
         1,
@@ -43784,7 +43784,7 @@
         1,
         1
       ],
-      "modelAnswer": "Both structures retain the same CH₃–CH=CH–CH₃ atom connectivity. Each alkene carbon is bonded to two different groups, CH₃ and H. On each double-bond carbon CH₃ has higher CIP priority than H. E-but-2-ene is drawn with the two methyl groups on opposite sides of the C=C. Z-but-2-ene is drawn with the two methyl groups on the same side of the C=C. Rotation about the C=C is restricted by the π bond, so the forms are stereoisomers.",
+      "modelAnswer": "Both structures retain the same CH₃–CH=CH–CH₃ atom connectivity. Each alkene carbon is bonded to two different groups, CH₃ and H. On each double-bond carbon CH₃ has higher CIP priority than H. E-but-2-ene is drawn with the two methyl groups on opposite sides of the C=C. Z-but-2-ene is drawn with the two methyl groups on the same side of the C=C. Rotation about the C=C is restricted by the C=C double bond, so the forms are stereoisomers.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -44346,7 +44346,7 @@
         "The theoretical value for three isolated C=C bonds is 3 × (−120) = −360 kJ mol⁻¹.",
         "The measured benzene hydrogenation enthalpy is less exothermic than −360 kJ mol⁻¹.",
         "The stabilisation difference is 360 − 208 = 152 kJ mol⁻¹.",
-        "The π electrons in benzene are delocalised over the ring.",
+        "The delocalised electrons in benzene are delocalised over the ring.",
         "Delocalisation lowers the energy of benzene relative to the hypothetical three-isolated-bond structure.",
         "Substitution is favoured over addition because it preserves the delocalised aromatic system."
       ],
@@ -44358,7 +44358,7 @@
         1,
         1
       ],
-      "modelAnswer": "The theoretical value for three isolated C=C bonds is 3 × (−120) = −360 kJ mol⁻¹. The measured benzene hydrogenation enthalpy is less exothermic than −360 kJ mol⁻¹. The stabilisation difference is 360 − 208 = 152 kJ mol⁻¹. The π electrons in benzene are delocalised over the ring. Delocalisation lowers the energy of benzene relative to the hypothetical three-isolated-bond structure. Substitution is favoured over addition because it preserves the delocalised aromatic system.",
+      "modelAnswer": "The theoretical value for three isolated C=C bonds is 3 × (−120) = −360 kJ mol⁻¹. The measured benzene hydrogenation enthalpy is less exothermic than −360 kJ mol⁻¹. The stabilisation difference is 360 − 208 = 152 kJ mol⁻¹. The delocalised electrons in benzene are delocalised over the ring. Delocalisation lowers the energy of benzene relative to the hypothetical three-isolated-bond structure. Substitution is favoured over addition because it preserves the delocalised aromatic system.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -44808,7 +44808,7 @@
       "prompt": "On paper, consider the abstract aldehyde R–CHO. The attacking species is shown as H⁻ and a generic proton donor as H⁺. Draw the two-stage nucleophilic addition mechanism, including every electron-pair curly arrow, intermediate and formal charge. Give the overall product structure. This is a theoretical drawing exercise; no reagent preparations or experimental conditions are required.",
       "markPoints": [
         "The attacking arrow starts from the lone pair on H⁻ and ends at the electrophilic carbonyl carbon.",
-        "A second electron-pair arrow starts at the C=O π bond and ends on oxygen.",
+        "A second electron-pair arrow starts at the C=O bond and ends on oxygen.",
         "The first-stage tetrahedral intermediate is correctly drawn as R–CH₂–O⁻.",
         "The intermediate oxygen bears the negative formal charge.",
         "The protonation arrow starts at the alkoxide oxygen lone pair and ends at the supplied H⁺.",
@@ -44824,7 +44824,7 @@
         1,
         1
       ],
-      "modelAnswer": "The attacking arrow starts from the lone pair on H⁻ and ends at the electrophilic carbonyl carbon. A second electron-pair arrow starts at the C=O π bond and ends on oxygen. The first-stage tetrahedral intermediate is correctly drawn as R–CH₂–O⁻. The intermediate oxygen bears the negative formal charge. The protonation arrow starts at the alkoxide oxygen lone pair and ends at the supplied H⁺. The final structure is R–CH₂–OH, a primary alcohol. The student explains that the two hydrogen equivalents have been added across the original carbonyl group.",
+      "modelAnswer": "The attacking arrow starts from the lone pair on H⁻ and ends at the electrophilic carbonyl carbon. A second electron-pair arrow starts at the C=O bond and ends on oxygen. The first-stage tetrahedral intermediate is correctly drawn as R–CH₂–O⁻. The intermediate oxygen bears the negative formal charge. The protonation arrow starts at the alkoxide oxygen lone pair and ends at the supplied H⁺. The final structure is R–CH₂–OH, a primary alcohol. The student explains that the two hydrogen equivalents have been added across the original carbonyl group.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -44852,7 +44852,7 @@
       "prompt": "A theoretical ketone R–C(=O)–R′ is reduced by the model nucleophile H⁻ and then protonated by H⁺. Draw the curved-arrow mechanism on paper and supply an overall structural equation using 2[H]. Explain how the alcohol class differs from reduction of a typical aldehyde.",
       "markPoints": [
         "A curly arrow shows H⁻ electron-pair donation to the carbonyl carbon.",
-        "The C=O π electrons move to the oxygen atom.",
+        "The electrons in the C=O bond move to the oxygen atom.",
         "The intermediate is R–C(H)(O⁻)–R′ with tetrahedral carbon.",
         "The alkoxide oxygen is protonated to form R–CH(OH)–R′.",
         "The overall equation is R–C(=O)–R′ + 2[H] → R–CH(OH)–R′.",
@@ -44868,7 +44868,7 @@
         1,
         1
       ],
-      "modelAnswer": "A curly arrow shows H⁻ electron-pair donation to the carbonyl carbon. The C=O π electrons move to the oxygen atom. The intermediate is R–C(H)(O⁻)–R′ with tetrahedral carbon. The alkoxide oxygen is protonated to form R–CH(OH)–R′. The overall equation is R–C(=O)–R′ + 2[H] → R–CH(OH)–R′. The ketone yields a secondary alcohol when R and R′ are both carbon-containing groups. A typical aldehyde gives a primary alcohol under the corresponding reduction.",
+      "modelAnswer": "A curly arrow shows H⁻ electron-pair donation to the carbonyl carbon. The electrons in the C=O bond move to the oxygen atom. The intermediate is R–C(H)(O⁻)–R′ with tetrahedral carbon. The alkoxide oxygen is protonated to form R–CH(OH)–R′. The overall equation is R–C(=O)–R′ + 2[H] → R–CH(OH)–R′. The ketone yields a secondary alcohol when R and R′ are both carbon-containing groups. A typical aldehyde gives a primary alcohol under the corresponding reduction.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -44897,7 +44897,7 @@
       "markPoints": [
         "The C=O bond is polar with the carbonyl carbon partially positive.",
         "The arrow from the Nu⁻ lone pair points towards the carbonyl carbon.",
-        "The arrow from the C=O π bond points towards oxygen.",
+        "The arrow from the C=O bond points towards oxygen.",
         "The tetrahedral intermediate is R–CH(Nu)–O⁻.",
         "Protonation converts the O⁻ group into OH without removing Nu.",
         "The final generic product is R–CH(OH)(Nu), showing nucleophilic addition."
@@ -44910,7 +44910,7 @@
         1,
         1
       ],
-      "modelAnswer": "The C=O bond is polar with the carbonyl carbon partially positive. The arrow from the Nu⁻ lone pair points towards the carbonyl carbon. The arrow from the C=O π bond points towards oxygen. The tetrahedral intermediate is R–CH(Nu)–O⁻. Protonation converts the O⁻ group into OH without removing Nu. The final generic product is R–CH(OH)(Nu), showing nucleophilic addition.",
+      "modelAnswer": "The C=O bond is polar with the carbonyl carbon partially positive. The arrow from the Nu⁻ lone pair points towards the carbonyl carbon. The arrow from the C=O bond points towards oxygen. The tetrahedral intermediate is R–CH(Nu)–O⁻. Protonation converts the O⁻ group into OH without removing Nu. The final generic product is R–CH(OH)(Nu), showing nucleophilic addition.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -44938,7 +44938,7 @@
       "prompt": "A model acyl derivative R–C(=O)–LG is represented with an unspecified leaving group LG. A generic nitrogen lone-pair donor :NH₂R′ attacks. Draw the addition–elimination electron arrows, the tetrahedral intermediate and the organic amide framework after a proton transfer. Treat LG and the proton-transfer species as supplied symbols, not real reagents.",
       "markPoints": [
         "The nitrogen lone pair attacks the carbonyl carbon, not the carbonyl oxygen.",
-        "The C=O π electrons shift to oxygen during nucleophilic addition.",
+        "The electrons in the C=O bond shift to oxygen during nucleophilic addition.",
         "The intermediate has a tetrahedral carbonyl-derived carbon bearing O⁻, LG and the nitrogen substituent.",
         "The oxygen lone pair reforms C=O in the elimination stage.",
         "The C–LG bond electrons transfer to LG, so the leaving group departs.",
@@ -44954,7 +44954,7 @@
         1,
         1
       ],
-      "modelAnswer": "The nitrogen lone pair attacks the carbonyl carbon, not the carbonyl oxygen. The C=O π electrons shift to oxygen during nucleophilic addition. The intermediate has a tetrahedral carbonyl-derived carbon bearing O⁻, LG and the nitrogen substituent. The oxygen lone pair reforms C=O in the elimination stage. The C–LG bond electrons transfer to LG, so the leaving group departs. A proton transfer gives the neutral framework R–C(=O)–NHR′. The reaction class is nucleophilic addition–elimination, not electrophilic addition.",
+      "modelAnswer": "The nitrogen lone pair attacks the carbonyl carbon, not the carbonyl oxygen. The electrons in the C=O bond shift to oxygen during nucleophilic addition. The intermediate has a tetrahedral carbonyl-derived carbon bearing O⁻, LG and the nitrogen substituent. The oxygen lone pair reforms C=O in the elimination stage. The C–LG bond electrons transfer to LG, so the leaving group departs. A proton transfer gives the neutral framework R–C(=O)–NHR′. The reaction class is nucleophilic addition–elimination, not electrophilic addition.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -44979,13 +44979,13 @@
       "revisionTopic": "Aromatic chemistry",
       "subtopic": "Electrophilic aromatic substitution with supplied acyl electrophile",
       "marks": 7,
-      "prompt": "An aromatic ring is shown with its delocalised π system. A hypothetical acyl electrophile R–C≡O⁺ is GIVEN in the question: no method of generating it is needed. On paper, draw a theoretical two-stage electrophilic aromatic substitution, including the positively charged intermediate and the arrows that restore aromaticity. Show the final ring carrying a –C(=O)R group.",
+      "prompt": "An aromatic ring is shown with its delocalised electron system. A hypothetical acyl electrophile R–C≡O⁺ is GIVEN in the question: no method of generating it is needed. On paper, draw a theoretical two-stage electrophilic aromatic substitution, including the positively charged intermediate and the arrows that restore aromaticity. Show the final ring carrying a –C(=O)R group.",
       "markPoints": [
-        "An electron-pair arrow runs from the aromatic π system to the electrophilic carbon of R–C≡O⁺.",
+        "An electron-pair arrow runs from the delocalised aromatic electron system to the electrophilic carbon of R–C≡O⁺.",
         "An arenium (sigma-complex) intermediate with an added substituent is drawn.",
         "The intermediate carries positive charge delocalised around the remaining ring system.",
         "The carbon bearing the new substituent also initially retains hydrogen.",
-        "The C–H bond electrons return to the ring π system as H⁺ is removed.",
+        "The C–H bond electrons return to the ring's delocalised electron system as H⁺ is removed.",
         "The final aromatic product is a ring bonded to –C(=O)R.",
         "Aromaticity is restored and the overall reaction is substitution rather than permanent addition."
       ],
@@ -44998,7 +44998,7 @@
         1,
         1
       ],
-      "modelAnswer": "An electron-pair arrow runs from the aromatic π system to the electrophilic carbon of R–C≡O⁺. An arenium (sigma-complex) intermediate with an added substituent is drawn. The intermediate carries positive charge delocalised around the remaining ring system. The carbon bearing the new substituent also initially retains hydrogen. The C–H bond electrons return to the ring π system as H⁺ is removed. The final aromatic product is a ring bonded to –C(=O)R. Aromaticity is restored and the overall reaction is substitution rather than permanent addition.",
+      "modelAnswer": "An electron-pair arrow runs from the delocalised aromatic electron system to the electrophilic carbon of R–C≡O⁺. An arenium (sigma-complex) intermediate with an added substituent is drawn. The intermediate carries positive charge delocalised around the remaining ring system. The carbon bearing the new substituent also initially retains hydrogen. The C–H bond electrons return to the ring's delocalised electron system as H⁺ is removed. The final aromatic product is a ring bonded to –C(=O)R. Aromaticity is restored and the overall reaction is substitution rather than permanent addition.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -45287,9 +45287,9 @@
       "markPoints": [
         "Arrow (i) is wrong: electron-pair donation must start at the nitrogen lone pair.",
         "The corrected nucleophilic arrow points from nitrogen to the electrophilic carbonyl carbon.",
-        "Arrow (ii), from C=O π bonding electrons to oxygen, is correctly oriented.",
+        "Arrow (ii), from electrons in the C=O bond electrons to oxygen, is correctly oriented.",
         "After donation the nitrogen has four bonds and is formally positive (before proton transfer).",
-        "The intermediate oxygen has a negative charge from receiving the π-electron pair.",
+        "The intermediate oxygen has a negative charge from receiving the bonding electron pair.",
         "The elimination step reforms C=O and transfers C–LG bond electrons to the leaving group.",
         "The mechanism is nucleophilic addition–elimination and produces a carbonyl-containing nitrogen derivative after proton transfer."
       ],
@@ -45302,7 +45302,7 @@
         1,
         1
       ],
-      "modelAnswer": "Arrow (i) is wrong: electron-pair donation must start at the nitrogen lone pair. The corrected nucleophilic arrow points from nitrogen to the electrophilic carbonyl carbon. Arrow (ii), from C=O π bonding electrons to oxygen, is correctly oriented. After donation the nitrogen has four bonds and is formally positive (before proton transfer). The intermediate oxygen has a negative charge from receiving the π-electron pair. The elimination step reforms C=O and transfers C–LG bond electrons to the leaving group. The mechanism is nucleophilic addition–elimination and produces a carbonyl-containing nitrogen derivative after proton transfer.",
+      "modelAnswer": "Arrow (i) is wrong: electron-pair donation must start at the nitrogen lone pair. The corrected nucleophilic arrow points from nitrogen to the electrophilic carbonyl carbon. Arrow (ii), from electrons in the C=O bond electrons to oxygen, is correctly oriented. After donation the nitrogen has four bonds and is formally positive (before proton transfer). The intermediate oxygen has a negative charge from receiving the bonding electron pair. The elimination step reforms C=O and transfers C–LG bond electrons to the leaving group. The mechanism is nucleophilic addition–elimination and produces a carbonyl-containing nitrogen derivative after proton transfer.",
       "answerType": "points",
       "questionType": "multi-step problem",
       "requiresWorking": true,
@@ -45352,5 +45352,5 @@
     },
     "recentAddition": "June 2016 Chemistry AS, June 2017 Physics AS, June 2018 Mathematics AS, June 2019 Physics AS; independently checked against official AQA papers and mark schemes."
   },
-  "lastAudit": "Historical source-linked mark checks preserved. v149 adds 12 original AQA-style Year 1 organic exam problems to address gaps found in v148's evidence crosswalk; these are not official past-paper questions or mark schemes. v152 adds 14 original A-level-only organic structural and data questions (84 marks), excluded from mock-only selections; the v151 audit gaps remain a partial checklist. v153 adds 12 original A-level-only theoretical mechanism and abstract synthesis-plan exam questions (81 marks) and 33-row Year 1 science evidence audit without changing card content."
+  "lastAudit": "Historical source-linked mark checks preserved. v149 adds 12 original AQA-style Year 1 organic exam problems to address gaps found in v148's evidence crosswalk; these are not official past-paper questions or mark schemes. v152 adds 14 original A-level-only organic structural and data questions (84 marks), excluded from mock-only selections; the v151 audit gaps remain a partial checklist. v153 adds 12 original A-level-only theoretical mechanism and abstract synthesis-plan exam questions (81 marks) and 33-row Year 1 science evidence audit without changing card content. v154 replaces optional sigma/pi bond labels in 17 original AQA-style chemistry explanations without changing answer marks, question IDs or provenance."
 }

@@ -1,4 +1,5 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const assert=require('node:assert/strict');const fs=require('node:fs');
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -6,8 +7,8 @@ const audit=JSON.parse(fs.readFileSync('editorial/task1-v149-organic-applied-que
 const all=bank.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')), added=all.filter(q=>q.id.startsWith('organic_v149_'));
 assert(bank.bankVersion>=61);assert.equal(all.length,1212);
 assert.equal(added.length,12);assert.equal(all.length-added.length,1200);
-assert(deck.deckVersion>=146);assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length,3263);
-assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length,3259);
+assert(deck.deckVersion>=146);assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length,3263);
+assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length,3259);
 assert.equal(new Set(all.map(q=>q.id)).size,all.length);
 assert.equal(audit.addedQuestions,12);
 assert.equal(added.reduce((n,q)=>n+q.marks,0),audit.addedMarks);
@@ -25,7 +26,7 @@ for (let i=0;i<added.length;i++){
  assert.equal(q.answerType,'points');assert.equal(q.requiresWorking,true);
  assert.equal(q.marks,q.markPoints.length);assert(q.marks>=5 && q.marks<=6);
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
- assert.deepEqual(q.markPoints,evidence.markPoints);assert.equal(q.prompt,evidence.prompt);
+ assert.deepEqual(q.markPoints,expectedQuestionPoints(evidence.markPoints));assert.equal(q.prompt,expectedQuestionText(evidence.prompt));
  assert.equal(q.modelAnswer,q.markPoints.join(' '));
  assert(!q.qpUrl&&!q.msUrl);
 }

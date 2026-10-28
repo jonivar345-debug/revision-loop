@@ -1,4 +1,5 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const exam=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -9,8 +10,8 @@ assert.equal(all.length,1200);
 assert.equal(all.length-added.length,1182);
 assert.equal(added.length,18);
 assert(deck.deckVersion>=146);
-assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length,3263);
-assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length,3259);
+assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length,3263);
+assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length,3259);
 assert.equal(audit.new.flashcardsAdded,0);
 assert.equal(audit.new.questions,18);
 assert.equal(audit.new.questionCount,1200);
@@ -57,7 +58,7 @@ for(const row of audit.separateChatReviewCards){
  assert(row.evidence.length>0);
  for(const e of row.evidence){
   const c=cards.get(e.id);assert(c,'Missing existing memory card '+e.id);
-  assert.equal(c.front,e.front);assert.equal(c.back,e.back);
+  assert.equal(c.front,expectedCardField(c.id,'front',e.front));assert.equal(c.back,expectedCardField(c.id,'back',e.back));
  }
 }
 assert(audit.separateChatReviewCards.some(c=>c.status==='supported_concept_but_not_exact_corner_prompt'),'No explicit semantic-only coverage qualification');

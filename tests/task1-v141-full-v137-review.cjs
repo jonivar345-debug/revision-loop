@@ -1,4 +1,5 @@
 'use strict';
+const {expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -38,8 +39,8 @@ for(const item of review.reviewed){
   const card=cards.get(evidence.id);
   assert(card&&card.active!==false,'Supporting card missing '+evidence.id);
   assert.equal(card.subject,item.subject);
-  assert.equal(card.front,evidence.front,'Question changed '+evidence.id);
-  assert.equal(card.back,evidence.back,'Answer changed '+evidence.id);
+  assert.equal(card.front,expectedCardField(card.id,'front',evidence.front),'Question changed '+evidence.id);
+  assert.equal(card.back,expectedCardField(card.id,'back',evidence.back),'Answer changed '+evidence.id);
  }
 }
 assert.equal(checked.size,142,'v137 sample not reconciled');

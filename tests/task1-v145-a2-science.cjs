@@ -1,11 +1,12 @@
 'use strict';
+const {expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const ledger=JSON.parse(fs.readFileSync('editorial/task1-v145-a2-science-evidence.json','utf8'));
-const cards=deck.cards.filter(c=>!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_'));
+const cards=deck.cards.filter(c=>!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_'));
 const added=cards.filter(c=>c.id.startsWith('task1_v145_'));
-const old=cards.filter(c=>!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_'));
+const old=cards.filter(c=>!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_'));
 assert(deck.deckVersion>=145);
 assert.equal(cards.length,3179);
 assert.equal(cards.filter(c=>c.active!==false).length,3175);
@@ -42,7 +43,7 @@ for(const row of ledger.records){
  assert(row.requirement.length>20,'Vague requirement '+row.id);
  if(row.evidence){
   const c=lookup.get(row.evidence.cardId);assert(c,'Evidence ID missing '+row.id);
-  assert.equal(c.subject,row.subject);assert.equal(c.front,row.evidence.front);assert.equal(c.back,row.evidence.back);
+  assert.equal(c.subject,row.subject);assert.equal(c.front,expectedCardField(c.id,'front',row.evidence.front));assert.equal(c.back,expectedCardField(c.id,'back',row.evidence.back));
  }else assert.equal(row.status,'exam_question_needed');
 }
 assert.deepEqual(statuses,{answer_checked_narrow_recall:24,new_card_added:27,exam_question_needed:8});

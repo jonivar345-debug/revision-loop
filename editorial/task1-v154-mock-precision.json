@@ -1,0 +1,207 @@
+{
+  "version": "v154",
+  "date": "2026-10-28",
+  "sourceUrls": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content"
+  ],
+  "baseline": {
+    "deckVersion": 152,
+    "cards": 3276,
+    "active": 3272,
+    "mock": 2339
+  },
+  "corrections": {
+    "aqaBondWording": {
+      "chem_a2_benzene": {
+        "back": "Its electrons are delocalised around the ring, lowering its energy."
+      },
+      "v33_card_chemistry_aromatic_chemistry_65": {
+        "back": "Electrons are delocalised around the benzene ring."
+      },
+      "chem_acyl_review_v41_09": {
+        "front": "Where do C=O bonding electrons go during initial nucleophilic attack?",
+        "back": "Towards oxygen, forming a negatively charged oxygen in the intermediate."
+      },
+      "chem_acyl_review_v41_11": {
+        "front": "How is the C=O double bond restored during elimination?",
+        "back": "A lone pair on oxygen reforms the double bond."
+      },
+      "chem_mechanisms_v42_13": {
+        "back": "The C=C double bond is a region of high electron density."
+      },
+      "chem_mechanisms_v42_14": {
+        "back": "At the electron-rich C=C double bond."
+      },
+      "chem_mechanisms_v42_21": {
+        "front": "Where do C=O bonding electrons go during nucleophilic addition?",
+        "back": "Towards oxygen while the new bond to carbon forms."
+      },
+      "task1_chem_120": {
+        "back": "Strong C–C and C–H single covalent bonds."
+      },
+      "task1_chem_137": {
+        "front": "Which part of an alkene attracts an electrophile?",
+        "back": "The electron-rich C=C double bond."
+      },
+      "task1_chem_215": {
+        "back": "Electrons are spread over the ring rather than fixed between particular carbon atoms."
+      },
+      "task1_v124_bulk_chem_119": {
+        "back": "High electron density in the C=C double bond."
+      },
+      "task1_v124_bulk_chem_121": {
+        "front": "What changes to C=C during electrophilic addition?",
+        "back": "The C=C becomes a single bond as new bonds form to its two carbon atoms."
+      },
+      "task1_v124_bulk_chem_217": {
+        "back": "Delocalised electrons around the benzene ring lower its energy."
+      },
+      "task1_v130_125": {
+        "back": "Its C=C double bond has high electron density."
+      },
+      "task1_v130_143": {
+        "back": "Substitution retains the delocalised electrons around the ring."
+      },
+      "task1_v130_144": {
+        "back": "Electrons are delocalised across the entire benzene ring."
+      },
+      "task1_v146_048": {
+        "front": "What is special about the C=C double bond in alkenes?",
+        "back": "It is a double covalent bond with high electron density."
+      },
+      "task1_v146_049": {
+        "back": "Free rotation would disrupt the double-bond arrangement."
+      },
+      "task1_v146_053": {
+        "back": "Electrons in the C=C bond repel Br₂'s electrons, inducing a dipole."
+      },
+      "task1_v146_080": {
+        "front": "Br₂ addition arrow 1: where do C=C electrons go?",
+        "back": "Towards the induced δ⁺ bromine atom."
+      },
+      "task1_v146_084": {
+        "front": "During alcohol dehydration, which electrons form C=C?",
+        "back": "The pair from a C–H bond on the adjacent carbon."
+      }
+    },
+    "mockScope": {
+      "physicsYear2": [
+        "task1_phy_108",
+        "task1_phy_109",
+        "task1_phy_110",
+        "task1_phy_111",
+        "task1_phy_113",
+        "task1_phy_114",
+        "task1_phy_115",
+        "task1_phy_116",
+        "task1_phy_117",
+        "task1_phy_119",
+        "task1_phy_120",
+        "task1_phy_123",
+        "task1_phy_124",
+        "task1_phy_125",
+        "task1_phy_126",
+        "task1_phy_127",
+        "task1_phy_128",
+        "task1_phy_129"
+      ],
+      "chemistryBufferOutsideMock": [
+        "task1_chem_185",
+        "task1_v125_148",
+        "task1_v125_149",
+        "task1_v125_150",
+        "task1_v128_014",
+        "task1_v130_103",
+        "task1_v124_bulk_chem_172",
+        "task1_v130_104"
+      ],
+      "mathsA2Pure": [
+        "math_vector_line",
+        "v33_card_maths_trigonometry_72",
+        "v33_card_maths_differentiation_82",
+        "v33_card_maths_differentiation_83",
+        "v33_card_maths_trigonometry_84",
+        "v33_card_maths_proof_79",
+        "task1_maths_009",
+        "task1_maths_010",
+        "task1_v130_158"
+      ]
+    }
+  },
+  "additions": [
+    {
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "specRef": "3.3.2.2",
+      "front": "How does catalytic-cracking pressure compare with thermal cracking?",
+      "back": "Catalytic: slight pressure; thermal: high pressure.",
+      "id": "task1_v154_001"
+    },
+    {
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "specRef": "3.3.2.3",
+      "front": "Why is carbon monoxide from incomplete combustion toxic?",
+      "back": "It binds to haemoglobin, reducing oxygen transport.",
+      "id": "task1_v154_002"
+    },
+    {
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "specRef": "3.3.2.1",
+      "front": "Why are longer-chain hydrocarbon fractions usually more viscous?",
+      "back": "Their larger molecules have stronger intermolecular attractions.",
+      "id": "task1_v154_003"
+    },
+    {
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "specRef": "3.3.6",
+      "front": "What is seen when a carboxylic acid reacts with carbonate?",
+      "back": "Effervescence as carbon dioxide gas forms.",
+      "id": "task1_v154_004"
+    },
+    {
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "RP5 Distillation",
+      "specRef": "3.3.5.2",
+      "front": "Where does cooling water enter a standard condenser?",
+      "back": "At the lower inlet, so the water jacket stays full.",
+      "id": "task1_v154_005"
+    },
+    {
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Potential dividers",
+      "specRef": "3.5.1",
+      "front": "What does a load do to a divider resistor it is connected across?",
+      "back": "It reduces the effective resistance of that part, due to parallel connection.",
+      "id": "task1_v154_006"
+    },
+    {
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Potential dividers",
+      "specRef": "3.5.1",
+      "front": "A load is added across the lower divider resistor: output p.d.?",
+      "back": "It falls, assuming the supply and upper resistor are unchanged.",
+      "id": "task1_v154_007"
+    }
+  ],
+  "policy": {
+    "noOldIdsRemoved": true,
+    "allNewCardsSingleFact": true,
+    "mathsPureFilterUntouched": true,
+    "oldProgressPreserved": true,
+    "mockScopeStudentConfirmed": "Physics AS only, Chemistry to Kp plus taught organic; exclude buffers",
+    "notFullSpecCertified": true,
+    "excludesPracticalChemicalProductionDetails": true,
+    "mockMathsScope": "Year 1 Pure only. Removed Year 2 proof, radians, trig identities, advanced calculus and vector line; kept full-revision card IDs."
+  }
+}

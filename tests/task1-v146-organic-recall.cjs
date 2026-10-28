@@ -1,9 +1,10 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v146-organic-recall-audit.json','utf8'));
-const all=deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')), added=all.filter(c=>c.id.startsWith('task1_v146_'));
+const all=deck.cards.filter(c=>!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')), added=all.filter(c=>c.id.startsWith('task1_v146_'));
 const old=all.filter(c=>!c.id.startsWith('task1_v146_'));
 assert(deck.deckVersion>=146);
 assert.equal(all.length,3263);
@@ -31,7 +32,7 @@ for(let i=0;i<added.length;i++){
  assert.equal(c.courseTopic,c.topic);assert.equal(c.revisionTopic,c.topic);
  const key=c.subject+':'+norm(c.front);
  assert(!fronts.has(key),'Duplicate front '+id);fronts.add(key);
- assert.equal(ev.id,id);assert.equal(ev.front,c.front);assert.equal(ev.back,c.back);
+ assert.equal(ev.id,id);assert.equal(expectedCardField(c.id,'front',ev.front),c.front);assert.equal(expectedCardField(c.id,'back',ev.back),c.back);
  counts[c.specRef]=(counts[c.specRef]||0)+1;
  if(ev.activity==='staged_or_cloze')special++;
 }

@@ -1,11 +1,12 @@
 'use strict';
+const {expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
 const cards=deck.cards;
 const newCards=cards.filter(c=>c.id.startsWith('task1_v125_'));
-const previous=cards.filter(c=>!c.id.startsWith('task1_v125_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_'));
+const previous=cards.filter(c=>!c.id.startsWith('task1_v125_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_'));
 assert.ok(deck.deckVersion>=125);
 assert.ok(cards.length>=2414);
 assert.ok(cards.filter(c=>c.active!==false).length>=2410);
@@ -30,7 +31,7 @@ for(const c of newCards){
  assert(Array.isArray(c.accept)&&c.accept.length>=1);
  assert(c.stage==='AS'||c.stage==='A2');
  if(c.subject==='Physics')assert(c.stage==='AS'&&c.mock&&c.taught,'AS Physics availability '+c.id);
- if(c.subject==='Chemistry'&&c.stage==='A2')assert(c.taught===true&&c.mock===true,'Taught Year 2 chemistry availability '+c.id);
+ if(c.subject==='Chemistry'&&c.stage==='A2')assert(c.taught===true&&c.mock===expectedCardMock(c.id,true),'Taught Year 2 chemistry eligibility after v154 scope correction '+c.id);
  assert(!/^(calculate|work out)\b/i.test(c.front),'Worked question not flashcard');
 }
 for(const id of ['phy_motion_d','chem_ar_def','math_modulus','task1_v123_phy_001','task1_v124_phy_001','task1_v124_chem_001','task1_v124_bulk_math_001'])assert(ids.has(id),'Preserved ID missing '+id);
@@ -40,8 +41,8 @@ assert.equal(audit.v125.added,163);
 assert.equal(audit.v125.physicsAdded,85);
 assert.equal(audit.v125.chemistryAdded,78);
 assert.equal(audit.v125.curatedVariantsOnCards,78);
-assert.equal(audit.physicsNew,cards.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length);
-assert.equal(audit.chemistryNew,cards.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')).length);
+assert.equal(audit.physicsNew,cards.filter(c=>c.subject==='Physics'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length);
+assert.equal(audit.chemistryNew,cards.filter(c=>c.subject==='Chemistry'&&c.id.startsWith('task1_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')).length);
 const b=app.indexOf('function normalise('),e=app.indexOf('function importantTokens(');
 assert(b>0&&e>b,'Current marker not found');
 const evaluate=new Function('window',app.slice(b,e)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
