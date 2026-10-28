@@ -26,7 +26,7 @@ assert(app.includes("'./energetics_weakness_focus_v53.json'"),'Load new question
 assert(sw.includes("'./energetics_weakness_focus_v53.json'"),'Include bank offline');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'Saved progress key must not change');
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"),'Saved profile key must not change');
-assert(app.includes("q.mock===true||q.level==='AS'"),'Mock question eligibility removed');
+assert(app.includes("const qAll=subjectExam(sub).filter(mockEligibleQuestion)") && app.includes("if(q.mock!==true)return false;"),'Mock question eligibility removed');
 const ids=new Set();
 for(const c of deck.cards){assert(!ids.has(c.id),'Duplicate card '+c.id);ids.add(c.id);}
 for(const c of newCards){
