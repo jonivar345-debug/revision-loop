@@ -11,7 +11,7 @@ const ids=new Set(),refs=new Set(),cm=new Map(d.cards.map(c=>[c.id,c])),qm=new M
 const summaries={};const groups={};
 for(const row of a.rows){
  assert(!ids.has(row.id),'Repeated audit row '+row.id);ids.add(row.id);
- assert(/3\\.3\\.(?:[7-9]|1[0-6])(?:\\.[1-5])?$/.test(row.specRef),'Invalid spec ref '+row.specRef);
+ assert(/3\.3\.(?:[7-9]|1[0-6])(?:\.[1-5])?$/.test(row.specRef),'Invalid spec ref '+row.specRef);
  refs.add(row.specRef);
  assert(['supported_recall','supported_practice','partial','gap_applied','gap_recall'].includes(row.status));
  summaries[row.status]=(summaries[row.status]||0)+1;
