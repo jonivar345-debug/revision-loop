@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
-const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v157-physics-mechanics-mock-audit.json','utf8'));
 const beforeDeck=deck.cards.filter(c=>!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_'));
 const v157Deck=deck.cards.filter(c=>!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_'));
