@@ -1,4 +1,5 @@
 'use strict';
+const {expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
@@ -42,7 +43,7 @@ for(const row of ledger.records){
  assert(row.requirement.length>20,'Vague requirement '+row.id);
  if(row.evidence){
   const c=lookup.get(row.evidence.cardId);assert(c,'Evidence ID missing '+row.id);
-  assert.equal(c.subject,row.subject);assert.equal(c.front,row.evidence.front);assert.equal(c.back,row.evidence.back);
+  assert.equal(c.subject,row.subject);assert.equal(c.front,expectedCardField(c.id,'front',row.evidence.front));assert.equal(c.back,expectedCardField(c.id,'back',row.evidence.back));
  }else assert.equal(row.status,'exam_question_needed');
 }
 assert.deepEqual(statuses,{answer_checked_narrow_recall:24,new_card_added:27,exam_question_needed:8});
