@@ -37,7 +37,7 @@ const historicalCount=subject=>added.filter(c=>c.subject===subject&&!c.id.starts
 assert.equal(deck.meta.task1FlashcardAudit.physicsNew,historicalCount('Physics'));
 assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,historicalCount('Chemistry'));
 assert.equal(deck.meta.task1FlashcardAudit.mathsNew,historicalCount('Maths'));
-assert.equal(count('Chemistry')-historicalCount('Chemistry'),13,'Seven v150 plus six v152 Chemistry cards');
+assert.equal(count('Chemistry')-historicalCount('Chemistry'),24,'Seven v150, six v152 and eleven v155 Chemistry cards');
 assert.ok(count('Physics')>100&&count('Chemistry')>100&&count('Maths')<count('Physics')&&count('Maths')<count('Chemistry'),'Task 1 should remain concentrated in Physics and Chemistry');
 for(const id of ['phy_motion_d','phy_spectra_photo_v32_below_threshold_graph','chem_ar_def','chem_bh_defs_20261024_latt_formation_def','math_modulus'])assert.ok(ids.has(id),'Existing progress ID missing '+id);
 console.log('Task 1 deck checks passed:',JSON.stringify({cards:cards.length,legacy:existing.length,added:added.length,physics:count('Physics'),chemistry:count('Chemistry'),maths:count('Maths'),diagrams:added.filter(c=>c.visualBack||c.visual).length}));
