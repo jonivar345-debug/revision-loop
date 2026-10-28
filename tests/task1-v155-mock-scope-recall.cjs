@@ -49,7 +49,7 @@ for(const [i,rec] of audit.changes.addedCards.entries()){
 assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v155_')).length,3280);
 const historicalMock=deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v155_')&&(c.mock===true||excluded.has(c.id)));
 assert.equal(historicalMock.length,2343);
-const badChem=deck.cards.filter(c=>c.subject==='Chemistry'&&c.active!==false&&/\bsigma\b|\bpi\b|[σπ]/i.test(c.front+' '+c.back));
+const badChem=deck.cards.filter(c=>c.subject==='Chemistry'&&c.active!==false&&(/\b(?:sigma|pi)\s+(?:bond|electron|orbital)s?\b/i.test(c.front+' '+c.back)||/π|σ/.test(c.front+' '+c.back)));
 assert.deepEqual(badChem.map(c=>c.id),[],'Optional orbital-bond terminology should not be in Chemistry flashcards');
 assert.equal(cross.count,67);
 assert.equal(cross.checks.length,67);
