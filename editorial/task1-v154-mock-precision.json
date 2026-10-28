@@ -149,38 +149,11 @@
     {
       "subject": "Chemistry",
       "stage": "AS",
-      "topic": "Alcohols",
-      "specRef": "3.3.5.1",
-      "front": "Which catalyst is used industrially to hydrate ethene?",
-      "back": "Phosphoric(V) acid.",
-      "id": "task1_v154_004"
-    },
-    {
-      "subject": "Chemistry",
-      "stage": "AS",
-      "topic": "Alcohols",
-      "specRef": "3.3.5.1",
-      "front": "Which biological catalyst converts glucose in fermentation?",
-      "back": "Enzymes in yeast.",
-      "id": "task1_v154_005"
-    },
-    {
-      "subject": "Chemistry",
-      "stage": "AS",
-      "topic": "Alcohols",
-      "specRef": "3.3.5.1",
-      "front": "Is fermentation of glucose to ethanol aerobic or anaerobic?",
-      "back": "Anaerobic: it occurs without oxygen.",
-      "id": "task1_v154_006"
-    },
-    {
-      "subject": "Chemistry",
-      "stage": "AS",
       "topic": "Organic analysis",
       "specRef": "3.3.6",
       "front": "What is seen when a carboxylic acid reacts with carbonate?",
       "back": "Effervescence as carbon dioxide gas forms.",
-      "id": "task1_v154_007"
+      "id": "task1_v154_004"
     },
     {
       "subject": "Chemistry",
@@ -189,7 +162,7 @@
       "specRef": "3.3.5.2",
       "front": "Where does cooling water enter a standard condenser?",
       "back": "At the lower inlet, so the water jacket stays full.",
-      "id": "task1_v154_008"
+      "id": "task1_v154_005"
     },
     {
       "subject": "Physics",
@@ -198,7 +171,7 @@
       "specRef": "3.5.1",
       "front": "What does a load do to a divider resistor it is connected across?",
       "back": "It reduces the effective resistance of that part, due to parallel connection.",
-      "id": "task1_v154_009"
+      "id": "task1_v154_006"
     },
     {
       "subject": "Physics",
@@ -207,7 +180,7 @@
       "specRef": "3.5.1",
       "front": "A load is added across the lower divider resistor: output p.d.?",
       "back": "It falls, assuming the supply and upper resistor are unchanged.",
-      "id": "task1_v154_010"
+      "id": "task1_v154_007"
     }
   ],
   "policy": {
@@ -216,6 +189,7 @@
     "mathsPureFilterUntouched": true,
     "oldProgressPreserved": true,
     "mockScopeStudentConfirmed": "Physics AS only, Chemistry to Kp plus taught organic; exclude buffers",
-    "notFullSpecCertified": true
+    "notFullSpecCertified": true,
+    "excludesPracticalChemicalProductionDetails": true
   }
 }
