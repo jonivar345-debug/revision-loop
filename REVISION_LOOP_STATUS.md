@@ -1,3 +1,17 @@
+# Revision Loop v170 — practical calculation method marks and fair ECF review (28 October 2026)
+
+**Proposed until CI, merge, and Pages deployment verification.** Continues the merged v169 marking work without changing question IDs, prompt text, mark totals, old flashcards, progress keys, World content, or saved results.
+
+This update records **24 editor-reviewed correct alternative phrases** for **eight long Physics and Chemistry practical/data questions**. Subjects include double-slit uncertainty, emf/internal-resistance graph interpretation, wire breaking stress and Young modulus, repeats and systematic errors, back-titration mole accounting, distillation readings, reflux interpretation, and aldehyde/ketone identification.
+
+Each question gets clear **error-carried-forward review guidance**, distinguishing demonstrated formulas/substitutions from correct numerical answers. ECF marks are **not automatically awarded** for a wrong final number. Each vetted alternative statement must credit its own single criterion, never unrelated points; explicit denial earns none. The cumulative pilot now includes **74 vetted phrases on 26 questions** (from 50 on 18 in v169).
+
+The dedicated `tests/task1-v170-practical-marking.cjs` checks all 24 alternatives, exact-denial noncredit, formula-only noncredit for unrelated steps, and **all 1,268 stored model answers** continue to receive their own total marks. Earlier v167–v169 tests still run. Prior v169 regression's count is scoped to its own original cohort to preserve the historical baseline, not to hide new questions.
+
+**Important limits:** Correct model self-matching is not independent verification of the scientific answers. Handwriting, graphs, diagrams and unfamiliar equivalent methods still need honest human review. This is a fair-marking increment, **not** complete AQA mark scheme certification or the completion of Task 1.
+
+---
+
 # Revision Loop v169 — fair partial credit after Physics model-answer repairs (28 October 2026)
 
 **Proposed until CI and merge.** This combines the previous, fully merged v168 Physics model-answer repairs with the next round of marking improvements. All original question IDs, mark totals, past-paper links and **1,268 bank questions** remain intact; the flashcard deck stays at **3,335**.
