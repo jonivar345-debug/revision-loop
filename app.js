@@ -2034,8 +2034,10 @@ function examSuggested(q,answer){
  // This guard also prevents the older fuzzy matcher awarding other marks
  // for the same isolated, explicitly contradicted statement.
  const denied=String(answer||'').trim().match(/^(?:not|never)\s+(.+?)[.!]?$/i);
- if(denied&&q.markPointAcceptedAlternatives?.some(alts=>Array.isArray(alts)&&
-   alts.some(v=>normalise(v)===normalise(denied[1])))){
+ if(denied&&(
+  q.markPoints?.some(p=>normalise(p)===normalise(denied[1]))||
+  q.markPointAcceptedAlternatives?.some(alts=>Array.isArray(alts)&&
+   alts.some(v=>normalise(v)===normalise(denied[1]))))){
   return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),
    finalCorrect:false,confidence:'high',suggested:0};
  }
