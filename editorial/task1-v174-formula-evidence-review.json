@@ -4,7 +4,7 @@
   "title": "Evidence-boundary and negation protection for explicitly curated mathematical formula marks",
   "overallTask1": "NOT YET COMPLETE",
   "source": "Actual existing practice question bank and marking implementation; this update does not certify full AQA coverage.",
-  "finding": "Existing expression-alternative shortcut matched formulae as substrings after removing whitespace. Confirmed an incorrect/negated formula could be awarded one mark on two practice question IDs.",
+  "finding": "Existing expression-alternative shortcut matched formulae as substrings after removing whitespace. Confirmed an incorrect/negated formula could be awarded one mark on two practice question IDs. Additional original AQA regression demonstrated correct superscript scientific notation must still receive full marks.",
   "questionsReviewed": [
     "verified2019_P_4_2",
     "verified2019_P_2_2"
@@ -14,7 +14,8 @@
     "Ignore clearly rejected or negated formulae when deciding whether a method point is earned",
     "Allow spaces around operators and vetted alternative rearrangements such as n=c/v, v=c/n and L=R*A/rho",
     "On short formula-only responses, do not let fuzzy token matching replace the explicitly required formula",
-    "Maintain per-point manual marking and detailed review, with no changes to card/question IDs or progress"
+    "Maintain per-point manual marking and detailed review, with no changes to card/question IDs or progress",
+    "Treat 2.26×10⁸, 2.26 x 10^8 and 2.26e8 as equivalent forms of the same value, without matching 12.26e8 or 2.26e80."
   ],
   "checked": {
     "originalPracticeQuestions": 1268,
@@ -23,7 +24,8 @@
     "wrongEquationSuffixRejects": true,
     "negatedFormulaRejects": true,
     "correctSpacedFormulaEarnsCredit": true,
-    "correctRearrangedMethodEarnsCredit": true
+    "correctRearrangedMethodEarnsCredit": true,
+    "superscriptScientificNotationAccepted": true
   },
   "remaining": [
     "Individual answer-level audit of 971 science mock cards lacking direct specRef",
