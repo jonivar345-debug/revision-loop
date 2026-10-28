@@ -1,0 +1,245 @@
+{
+  "release": "v156",
+  "date": "2026-10-28",
+  "purpose": "Recheck the 11 unmatched v155 AS organic recall checks against card fronts and backs; resolve genuine gaps without duplicating cards. Add one separate pollution-impact fact.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "basis": "Live v156 deck.json snapshots. The v155 unmatched set reflects conservative keyword search, not confirmed absence.",
+  "counts": {
+    "reviewed": 11,
+    "existingRecallCoverage": 9,
+    "newlyCoveredFrom11": 1,
+    "partiallyCoveredAmong11": 1,
+    "additionalPollutionRecallCards": 1,
+    "newRecallCardsTotal": 2,
+    "deckCards": 3295,
+    "activeCards": 3291,
+    "mockEligibleCards": 2323,
+    "mockBySubject": {
+      "Physics": 713,
+      "Chemistry": 1533,
+      "Maths": 77
+    },
+    "examQuestionsUnchanged": 1247
+  },
+  "checks": [
+    {
+      "id": "ASORG-155-007",
+      "specRef": "3.3.2.1",
+      "topic": "Alkanes",
+      "requirement": "Know the boiling-point trend with longer chains",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_v146_018",
+          "front": "Why do larger alkane molecules generally have higher boiling points?",
+          "back": "More electrons produce stronger London dispersion forces.",
+          "specRef": "3.3.2.1",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-014",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Identify complete combustion products",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_chem_127",
+          "front": "What is complete combustion of a hydrocarbon?",
+          "back": "Reaction with sufficient oxygen producing CO₂ and H₂O.",
+          "specRef": "3.3.2",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-015",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Identify incomplete combustion products",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_v142_010",
+          "front": "What carbon-containing products can form in incomplete hydrocarbon combustion?",
+          "back": "Carbon monoxide (CO) and solid carbon (soot); some CO₂ may also form.",
+          "specRef": "3.3.2.3",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-016",
+      "specRef": "3.3.2.3",
+      "topic": "Alkanes",
+      "requirement": "Explain toxicity of carbon monoxide",
+      "resolution": "new_concise_recall_card",
+      "evidence": [
+        {
+          "id": "task1_v156_001",
+          "front": "Why is carbon monoxide harmful to humans?",
+          "back": "It binds to haemoglobin, reducing the blood's ability to carry oxygen.",
+          "specRef": "3.3.2.3",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-029",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain polarity of carbon–halogen bond",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_v124_bulk_chem_112",
+          "front": "What makes the carbon atom in C–Br susceptible to nucleophilic attack?",
+          "back": "It is δ⁺ because the C–Br bond is polar.",
+          "specRef": "3.3.3",
+          "mock": true,
+          "active": true
+        },
+        {
+          "id": "chem_mechanisms_v42_08",
+          "front": "Why is the C atom bonded to a halogen electrophilic?",
+          "back": "Bond polarisation gives that carbon a partial positive charge.",
+          "specRef": null,
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-032",
+      "specRef": "3.3.3.1",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise CN- substitution gives a nitrile",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_chem_134",
+          "front": "What is the organic product type from substitution by CN⁻?",
+          "back": "A nitrile.",
+          "specRef": "3.3.3",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-038",
+      "specRef": "3.3.3.2",
+      "topic": "Halogenoalkanes",
+      "requirement": "Recognise conventional aqueous/ethanolic contrast",
+      "resolution": "partially_covered_existing_mock_card",
+      "evidence": [
+        {
+          "id": "chem_elimination",
+          "front": "What conditions favour elimination of a halogenoalkane with OH⁻?",
+          "back": "Hot ethanolic hydroxide.",
+          "specRef": null,
+          "mock": true,
+          "active": true
+        }
+      ],
+      "note": "Hot ethanolic elimination is directly recalled; the aqueous-versus-ethanolic comparison needs separate conceptual/exam assessment. Do not claim it resolved."
+    },
+    {
+      "id": "ASORG-155-039",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain UV production of chlorine radical from CFC",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_chem_135",
+          "front": "Why are CFCs damaging in the stratosphere?",
+          "back": "UV releases chlorine radicals that destroy ozone.",
+          "specRef": "3.3.3",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-042",
+      "specRef": "3.3.3.3",
+      "topic": "Halogenoalkanes",
+      "requirement": "Explain why chlorine radical is catalytic",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_v130_124",
+          "front": "Why do chlorofluorocarbon radicals contribute to ozone depletion?",
+          "back": "Chlorine radicals catalyse ozone breakdown and are regenerated.",
+          "specRef": "3.3.3",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-051",
+      "specRef": "3.3.4.2",
+      "topic": "Alkenes",
+      "requirement": "Explain induced dipole in Br2",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_v146_053",
+          "front": "Why does Br₂ become polarised as it approaches an alkene?",
+          "back": "The electron-rich C=C bond repels Br₂ electrons, inducing a dipole.",
+          "specRef": "3.3.4.2",
+          "mock": true,
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "ASORG-155-064",
+      "specRef": "3.3.5.2",
+      "topic": "Alcohols",
+      "requirement": "Recognise Fehling positive observation",
+      "resolution": "already_covered_by_existing_mock_cards",
+      "evidence": [
+        {
+          "id": "task1_v125_159",
+          "front": "What observation shows a positive Fehling's test?",
+          "back": "Brick-red precipitate.",
+          "specRef": "3.3.8",
+          "mock": true,
+          "active": true
+        }
+      ]
+    }
+  ],
+  "limitations": {
+    "isFullAqaSpecAudit": false,
+    "isWholeMockCoverageCertified": false,
+    "isStudentMasteryProven": false,
+    "advancedMechanismsRequireExamQuestions": true,
+    "notAllSingleFactRecallIsExamRequired": true
+  },
+  "preservation": {
+    "allPriorCardIdsRetained": true,
+    "existingAnswersUnchanged": true,
+    "questionBankUnchanged": true,
+    "progressKeysUnchanged": true,
+    "appRuntimeUnchanged": true
+  },
+  "additionalCard": {
+    "id": "task1_v156_002",
+    "specRef": "3.3.2.3",
+    "purpose": "Recall one environmental effect of engine/fossil-fuel pollutants; not counted as resolving any of the 11 previously unmatched outcomes",
+    "front": "Which environmental problem can sulfur dioxide and nitrogen oxides contribute to?",
+    "back": "Acid rain (acid deposition)."
+  }
+}

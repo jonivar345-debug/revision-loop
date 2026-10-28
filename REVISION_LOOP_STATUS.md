@@ -1,3 +1,15 @@
+# Revision Loop — v156 targeted mock Chemistry recall verification (28 October 2026)
+
+**Release candidate; not live until CI passes, PR merges and Pages deploys:** 3,295 flashcards (3,291 active); **2,323 mock-eligible**: Physics 713, Chemistry 1,533, Maths 77. Exam question bank remains v64 / **1,247** original practice questions.
+
+A careful review of the **11 unmatched items** in v155's 67-point AS Organic Chemistry keyword audit found **nine already covered** by active mock cards, **one newly covered** through a concise carbon-monoxide harm card and **one still partly covered** (the solvent-dependent competition between substitution and elimination). The remaining partly covered point must not be labelled closed. A separate one-fact mock card recalls that nitrogen oxides and sulfur dioxide can contribute to acid rain. These are two new short cards, not an 11-card addition.
+
+**Precise evidence:** `editorial/task1-v156-chemistry-mock-recall-resolution.json` records the front, back, ID and mock eligibility of each mapped source card, including the unresolved point. `tests/task1-v156-chemistry-mock-recall.cjs` checks those snapshots, two new recall items, preserved IDs, subject counts and unchanged question bank. The v155 regression now checks its historical snapshot, excluding additive v156 IDs.
+
+This is a **targeted correction**, not a full AQA 7405 or three-subject mock syllabus audit, nor proof of the student's personal recall. Multi-mark mechanisms, unfamiliar interpretation and calculations still need exam-question evidence. No changes to app runtime, Firebase, World, scanner, progress keys, shop, XP, existing cards or exam questions.
+
+---
+
 # Revision Loop — v155 mock-only scope repair and AQA recall audit (28 October 2026)
 
 **Proposed v155, not live until CI/merge/Pages:** **3,293 flashcards (3,289 active)**, including **2,321 eligible in mock-only revision** (Physics 713, Chemistry 1,531, Maths 77). The decrease in mock eligibility is **deliberate**: 35 existing cards are no longer presented in mock-only selection, but **remain available in full A-level revision, unchanged and with their original IDs**. Specifically 18 Physics Year 2 periodic-motion/thermal cards (teacher confirmed Year 1/AS Physics mock), 8 excluded Chemistry buffers/half-neutralisation cards, and 9 Maths Year 2/radian concepts (Year 1 Pure-only mock).

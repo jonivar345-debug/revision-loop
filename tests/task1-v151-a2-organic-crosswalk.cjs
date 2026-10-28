@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const a=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
 const d=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const b=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
-assert(d.deckVersion>=150);const priorCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_'));assert.equal(priorCards.length,3270);assert.equal(priorCards.filter(c=>c.active!==false).length,3266);
+assert(d.deckVersion>=150);const priorCards=d.cards.filter(c=>!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_'));assert.equal(priorCards.length,3270);assert.equal(priorCards.filter(c=>c.active!==false).length,3266);
 assert(b.bankVersion>=61);assert.equal(b.questions.filter(q=>!q.id.startsWith('organic_v152_')&&!q.id.startsWith('organic_v153_')&&!q.id.startsWith('mock_v154_')).length,1212);
 assert.equal(a.counts.sections,10);assert.equal(a.counts.numberedSubsections,19);
 assert.equal(a.counts.atomicChecks,a.rows.length);assert(a.rows.length>=100,'Need real A2 organic atomic checks');

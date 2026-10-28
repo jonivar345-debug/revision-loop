@@ -33,11 +33,11 @@ for(const c of added){
   if(c.visual||c.visualBack)assert.ok(visualNames.has(c.visual||c.visualBack),'Unknown diagram '+c.id);
 }
 const count=subject=>added.filter(c=>c.subject===subject).length;
-const historicalCount=subject=>added.filter(c=>c.subject===subject&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')).length;
+const historicalCount=subject=>added.filter(c=>c.subject===subject&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')).length;
 assert.equal(deck.meta.task1FlashcardAudit.physicsNew,historicalCount('Physics'));
 assert.equal(deck.meta.task1FlashcardAudit.chemistryNew,historicalCount('Chemistry'));
 assert.equal(deck.meta.task1FlashcardAudit.mathsNew,historicalCount('Maths'));
-assert.equal(count('Chemistry')-historicalCount('Chemistry'),24,'Seven v150, six v152 and eleven v155 Chemistry cards');
+assert.equal(count('Chemistry')-historicalCount('Chemistry'),26,'Seven v150, six v152, eleven v155 and two v156 Chemistry cards');
 assert.ok(count('Physics')>100&&count('Chemistry')>100&&count('Maths')<count('Physics')&&count('Maths')<count('Chemistry'),'Task 1 should remain concentrated in Physics and Chemistry');
 for(const id of ['phy_motion_d','phy_spectra_photo_v32_below_threshold_graph','chem_ar_def','chem_bh_defs_20261024_latt_formation_def','math_modulus'])assert.ok(ids.has(id),'Existing progress ID missing '+id);
 console.log('Task 1 deck checks passed:',JSON.stringify({cards:cards.length,legacy:existing.length,added:added.length,physics:count('Physics'),chemistry:count('Chemistry'),maths:count('Maths'),diagrams:added.filter(c=>c.visualBack||c.visual).length}));
