@@ -2419,7 +2419,7 @@ function examSuggested(q,answer){
   preds=permitted;
   suggested=totalMarkingPoints(q,preds);
  }
- const singleClaimCap=singleClaimEvidenceCap(q,answer);
+ const singleClaimCap=typeof singleClaimEvidenceCap==='function'?singleClaimEvidenceCap(q,answer):null;
  if(singleClaimCap!==null)suggested=Math.min(suggested,singleClaimCap);
  const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
