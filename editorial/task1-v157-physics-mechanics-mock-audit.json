@@ -1,0 +1,699 @@
+{
+  "release": "v157",
+  "date": "2026-10-28",
+  "scope": "Selected AS Mechanics and Materials (AQA Physics 7408, section 3.4) atomic requirements. This does not sample every line or prove student mastery.",
+  "specificationURL": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+  "counts": {
+    "checkedRequirements": 33,
+    "newRecallCards": 4,
+    "newPracticeQuestions": 3,
+    "newPracticeMarks": 20,
+    "deckCards": 3299,
+    "activeCards": 3295,
+    "mockEligibleCards": 2327,
+    "mockBySubject": {
+      "Physics": 717,
+      "Chemistry": 1533,
+      "Maths": 77
+    },
+    "examQuestions": 1250
+  },
+  "rows": [
+    {
+      "id": "PHY34-157-001",
+      "specRef": "3.4.1.1",
+      "requirement": "Choose sine or cosine from component angle",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_vectors_001",
+        "front": "How do you decide whether to use sin or cos when resolving a force?",
+        "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-002",
+      "specRef": "3.4.1.1",
+      "requirement": "Condition for translational equilibrium",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_equilibrium_001",
+        "front": "If the resultant force is zero, must the object be stationary?",
+        "back": "No. It may be stationary or moving at constant velocity because acceleration is zero.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-003",
+      "specRef": "3.4.1.1",
+      "requirement": "Represent three coplanar forces in equilibrium",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v125_004",
+        "front": "What is a closed vector triangle used to represent?",
+        "back": "Equilibrium of three forces acting at a point.",
+        "specRef": "3.4.1.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-004",
+      "specRef": "3.4.1.2",
+      "requirement": "Moment uses perpendicular lever arm",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_moments_001",
+        "front": "What distance must be used in moment = force × distance?",
+        "back": "The perpendicular distance from the pivot to the force's line of action.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-005",
+      "specRef": "3.4.1.2",
+      "requirement": "Define a couple and its moment",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_couple_001",
+        "front": "What is a couple, and what is the moment of a couple?",
+        "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-006",
+      "specRef": "3.4.1.2",
+      "requirement": "Locate the centre of mass of uniform regular solids",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v132_001",
+        "front": "Where is the centre of mass of a uniform, regular solid?",
+        "back": "At its geometric centre.",
+        "specRef": "3.4.1.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-007",
+      "specRef": "3.4.1.3",
+      "requirement": "Displacement–time tangent gradient gives instantaneous velocity",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_motion_d",
+        "front": "What does the gradient of a displacement–time graph represent?",
+        "back": "Velocity. A steeper gradient means greater speed; a horizontal line means v = 0. On a curve, use a tangent for instantaneous velocity.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v154_02",
+        "prompt": "On an unfamiliar curved displacement–time graph, a tangent at t=3.0 s passes through two clearly read points (1.0 s, 4.0 m) and (5.0 s, 20.0 m). Determine the instantaneous velocity at t=3.0 s, state its direction and explain why using a tangent is appropriate rather than finding the gradient of the whole curve.",
+        "marks": 6,
+        "markPoints": [
+          "A tangent to the displacement–time curve is used at the specified instant.",
+          "Change in displacement along tangent is 20.0 − 4.0 = 16.0 m.",
+          "Change in time is 5.0 − 1.0 = 4.0 s.",
+          "Tangent gradient = 16.0/4.0 = +4.0 m s⁻¹.",
+          "Positive gradient indicates motion in the positive direction.",
+          "The tangent gives instantaneous velocity whereas a chord over a time interval gives average velocity."
+        ],
+        "revisionTopic": "Motion graphs"
+      }
+    },
+    {
+      "id": "PHY34-157-008",
+      "specRef": "3.4.1.3",
+      "requirement": "Velocity–time signed area gives displacement",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_motion_v",
+        "front": "What do the gradient and signed area of a velocity–time graph represent?",
+        "back": "Gradient = acceleration. Signed area under the graph = displacement.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v154_01",
+        "prompt": "A velocity–time graph has three straight segments: (i) from t=0 to 4.0 s, velocity is +6.0 m s⁻¹; (ii) from 4.0 to 7.0 s it falls linearly from +6.0 to −3.0 m s⁻¹; (iii) from 7.0 to 9.0 s it remains at −3.0 m s⁻¹. Calculate net displacement and total distance; identify the direction of motion from 7.0 to 9.0 s.",
+        "marks": 7,
+        "markPoints": [
+          "First interval displacement is +6.0 × 4.0 = +24 m.",
+          "On the second interval, v=0 at t=6.0 s.",
+          "Second-interval positive area is ½ × 2.0 × 6.0 = +6.0 m.",
+          "Second-interval negative area is ½ × 1.0 × 3.0 = −1.5 m.",
+          "Third interval displacement is −3.0 × 2.0 = −6.0 m.",
+          "Total displacement is 24 + 6 − 1.5 − 6 = +22.5 m.",
+          "Total distance is 24 + 6 + 1.5 + 6 = 37.5 m; last interval is negative-direction travel."
+        ],
+        "revisionTopic": "Motion graphs"
+      }
+    },
+    {
+      "id": "PHY34-157-009",
+      "specRef": "3.4.1.3",
+      "requirement": "Acceleration–time signed area gives velocity change",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_motion_a",
+        "front": "What does the signed area under an acceleration–time graph represent?",
+        "back": "Change in velocity, Δv.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-010",
+      "specRef": "3.4.1.3",
+      "requirement": "Required Practical 3 uses displacement against time squared to infer g",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_rp3",
+        "front": "If you plot s against t² for free fall from rest, how do you obtain g?",
+        "back": "Gradient = g/2, so g = 2 × gradient.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "orig_v32_phy_rp3_free_fall_4",
+        "prompt": "A ball drops from rest through 1.80 m in 0.606 s. Calculate g using constant acceleration.",
+        "marks": 2,
+        "markPoints": [
+          "Use s=½gt².",
+          "g=2×1.80/(0.606²)=9.80 m s⁻²."
+        ],
+        "revisionTopic": "RP3 Free fall"
+      }
+    },
+    {
+      "id": "PHY34-157-011",
+      "specRef": "3.4.1.4",
+      "requirement": "Horizontal projectile acceleration with negligible air resistance",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_projectile_horizontal",
+        "front": "Ignoring air resistance, what is horizontal acceleration of a projectile?",
+        "back": "0 m s⁻².",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v154_03",
+        "prompt": "A ball leaves a raised platform horizontally at 16.0 m s⁻¹ and lands 45.0 m below its launch point. Ignore air resistance, and use g=9.81 m s⁻². Calculate time of flight, horizontal distance, vertical component of impact velocity and magnitude of impact velocity. Explain why horizontal and vertical components share the same flight time.",
+        "marks": 6,
+        "markPoints": [
+          "Horizontal acceleration is zero; horizontal velocity stays 16.0 m s⁻¹.",
+          "Vertically, displacement −45.0 m = ½(−9.81)t², giving t = √(90.0/9.81) = 3.03 s.",
+          "Horizontal distance = 16.0 × 3.03 = 48.5 m.",
+          "Vertical impact velocity = −gt = −29.7 m s⁻¹.",
+          "Impact speed = √(16.0² + 29.7²) = 33.7 m s⁻¹ approximately.",
+          "Horizontal and vertical motion occur simultaneously, so the same elapsed time is used."
+        ],
+        "revisionTopic": "Projectiles"
+      }
+    },
+    {
+      "id": "PHY34-157-012",
+      "specRef": "3.4.1.4",
+      "requirement": "Recognise lift as a fluid force perpendicular to relative flow",
+      "verification": "new_concise_recall_with_verified_evidence",
+      "card": {
+        "id": "task1_v157_001",
+        "front": "In fluid motion, what is lift?",
+        "back": "A force from the fluid acting perpendicular to the direction of relative flow.",
+        "specRef": "3.4.1.4",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-013",
+      "specRef": "3.4.1.4",
+      "requirement": "Recognise that air resistance increases as speed increases",
+      "verification": "new_concise_recall_with_verified_evidence",
+      "card": {
+        "id": "task1_v157_002",
+        "front": "How does air resistance generally change as an object's speed increases?",
+        "back": "It increases.",
+        "specRef": "3.4.1.4",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_01",
+        "prompt": "A ball of mass 0.80 kg falls through air. At one instant, the upward air resistance is 3.0 N. Take g = 9.8 m s⁻². Calculate its weight, resultant force and acceleration. Explain how its acceleration changes as its speed increases, and state the air-resistance force at terminal speed.",
+        "marks": 7,
+        "markPoints": [
+          "Weight = mg = 0.80 × 9.8 = 7.84 N, downwards.",
+          "Resultant force at the specified instant = 7.84 − 3.0 = 4.84 N, downwards.",
+          "Acceleration = 4.84/0.80 = 6.05 m s⁻², downwards.",
+          "Air resistance generally increases as speed increases.",
+          "The resultant downward force therefore decreases.",
+          "The downward acceleration decreases towards zero.",
+          "At terminal speed, air resistance balances the weight, 7.84 N; resultant force and acceleration are zero."
+        ],
+        "revisionTopic": "Projectiles"
+      }
+    },
+    {
+      "id": "PHY34-157-014",
+      "specRef": "3.4.1.4",
+      "requirement": "At terminal speed, drag balances the opposing driving force",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v130_033",
+        "front": "How do the opposing drag and driving forces compare at terminal speed?",
+        "back": "They balance.",
+        "specRef": "3.4.1",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_01",
+        "prompt": "A ball of mass 0.80 kg falls through air. At one instant, the upward air resistance is 3.0 N. Take g = 9.8 m s⁻². Calculate its weight, resultant force and acceleration. Explain how its acceleration changes as its speed increases, and state the air-resistance force at terminal speed.",
+        "marks": 7,
+        "markPoints": [
+          "Weight = mg = 0.80 × 9.8 = 7.84 N, downwards.",
+          "Resultant force at the specified instant = 7.84 − 3.0 = 4.84 N, downwards.",
+          "Acceleration = 4.84/0.80 = 6.05 m s⁻², downwards.",
+          "Air resistance generally increases as speed increases.",
+          "The resultant downward force therefore decreases.",
+          "The downward acceleration decreases towards zero.",
+          "At terminal speed, air resistance balances the weight, 7.84 N; resultant force and acceleration are zero."
+        ],
+        "revisionTopic": "Projectiles"
+      }
+    },
+    {
+      "id": "PHY34-157-015",
+      "specRef": "3.4.1.5",
+      "requirement": "State Newton's first law",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_newton1",
+        "front": "State Newton's first law.",
+        "back": "An object remains at rest or continues at constant velocity unless there is a resultant external force.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-016",
+      "specRef": "3.4.1.5",
+      "requirement": "State Newton's second law for constant mass",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_newton2",
+        "front": "State Newton's second law for constant mass.",
+        "back": "Resultant force equals mass multiplied by acceleration: F = ma. Acceleration is in the direction of the resultant force.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-017",
+      "specRef": "3.4.1.5",
+      "requirement": "State Newton's third law for different interacting bodies",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_newton3",
+        "front": "What makes a Newton's third-law pair?",
+        "back": "Equal and opposite forces of the same type acting on different objects.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-018",
+      "specRef": "3.4.1.6",
+      "requirement": "Define momentum",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_momentum",
+        "front": "What is momentum?",
+        "back": "p = mv.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-019",
+      "specRef": "3.4.1.6",
+      "requirement": "Use momentum conservation for isolated system",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_phy_078",
+        "front": "What condition allows use of conservation of momentum?",
+        "back": "No external resultant force acts on the system.",
+        "specRef": "3.4.1",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-020",
+      "specRef": "3.4.1.6",
+      "requirement": "Area under force–time graph gives impulse",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_force_time_area",
+        "front": "What does area under a force–time graph represent?",
+        "back": "Impulse, equal to change in momentum.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-021",
+      "specRef": "3.4.1.7",
+      "requirement": "Area under force–displacement graph gives work",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v125_038",
+        "front": "What does the area under a force–displacement graph give?",
+        "back": "Work done along the displacement.",
+        "specRef": "3.4.1.7",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_03",
+        "prompt": "A 2.0 kg trolley initially at rest moves along a straight horizontal track with negligible resistance. A driving force increases linearly from 0 N at displacement 0 m to 30 N at displacement 4.0 m, then remains at 30 N to displacement 6.0 m. The motion lasts 3.0 s. Calculate the work done by the force, the final trolley speed and the mean power transferred.",
+        "marks": 6,
+        "markPoints": [
+          "Work in first 4.0 m is the triangular force–displacement area = ½ × 4.0 × 30 = 60 J.",
+          "Work from 4.0 m to 6.0 m is the rectangular area = 2.0 × 30 = 60 J.",
+          "Total work done = 120 J.",
+          "With negligible resistive loss, work done becomes trolley kinetic energy: ½mv² = 120 J.",
+          "v = √(2 × 120 / 2.0) = √120 = 11.0 m s⁻¹ (3 s.f.).",
+          "Mean power = total energy transferred / time = 120/3.0 = 40 W."
+        ],
+        "revisionTopic": "Energy"
+      }
+    },
+    {
+      "id": "PHY34-157-022",
+      "specRef": "3.4.1.7",
+      "requirement": "Recall the P=Fv relation for parallel velocity and force",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_power_fv",
+        "front": "When force and velocity are parallel, what power equation can be used?",
+        "back": "P = Fv.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-023",
+      "specRef": "3.4.1.7",
+      "requirement": "Define efficiency",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v125_040",
+        "front": "What is the definition of efficiency?",
+        "back": "Useful output energy (or power) divided by total input.",
+        "specRef": "3.4.1.7",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-024",
+      "specRef": "3.4.1.8",
+      "requirement": "State conservation of energy",
+      "verification": "new_concise_recall_with_verified_evidence",
+      "card": {
+        "id": "task1_v157_004",
+        "front": "State the principle of conservation of energy.",
+        "back": "Energy cannot be created or destroyed; it is transferred between stores or systems.",
+        "specRef": "3.4.1.8",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_03",
+        "prompt": "A 2.0 kg trolley initially at rest moves along a straight horizontal track with negligible resistance. A driving force increases linearly from 0 N at displacement 0 m to 30 N at displacement 4.0 m, then remains at 30 N to displacement 6.0 m. The motion lasts 3.0 s. Calculate the work done by the force, the final trolley speed and the mean power transferred.",
+        "marks": 6,
+        "markPoints": [
+          "Work in first 4.0 m is the triangular force–displacement area = ½ × 4.0 × 30 = 60 J.",
+          "Work from 4.0 m to 6.0 m is the rectangular area = 2.0 × 30 = 60 J.",
+          "Total work done = 120 J.",
+          "With negligible resistive loss, work done becomes trolley kinetic energy: ½mv² = 120 J.",
+          "v = √(2 × 120 / 2.0) = √120 = 11.0 m s⁻¹ (3 s.f.).",
+          "Mean power = total energy transferred / time = 120/3.0 = 40 W."
+        ],
+        "revisionTopic": "Energy"
+      }
+    },
+    {
+      "id": "PHY34-157-025",
+      "specRef": "3.4.2.1",
+      "requirement": "Calculate density from mass and volume",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_mechanics_focus_v37_32",
+        "front": "A sample has mass 0.54 kg and volume 2.0×10⁻⁴ m³. Find density.",
+        "back": "ρ = m/V = 0.54/(2.0×10⁻⁴) = 2700 kg m⁻³.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-026",
+      "specRef": "3.4.2.1",
+      "requirement": "State Hooke's law in linear region",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_hooke",
+        "front": "State Hooke's law equation.",
+        "back": "F = kΔL, while force is proportional to extension.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-027",
+      "specRef": "3.4.2.1",
+      "requirement": "Define tensile stress",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_stress",
+        "front": "What is tensile stress?",
+        "back": "stress = F/A, in Pa.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_02",
+        "prompt": "A wire initially has uniform cross-sectional area 2.0 mm². During a tensile test, the largest force reached is 550 N, but the wire finally breaks under a force of 500 N. Calculate its breaking stress and its maximum tensile stress. Explain the distinction. In a separate elastic measurement on the same material, a wire 1.0 m long and of the same area extends by 1.0 mm under 100 N. Calculate the Young modulus.",
+        "marks": 7,
+        "markPoints": [
+          "Original cross-sectional area = 2.0 × 10⁻⁶ m².",
+          "Breaking stress = 500/(2.0 × 10⁻⁶) = 2.50 × 10⁸ Pa.",
+          "Maximum tensile stress = 550/(2.0 × 10⁻⁶) = 2.75 × 10⁸ Pa.",
+          "Breaking stress is the stress at fracture, which may be lower than the greatest stress sustained earlier.",
+          "Elastic tensile strain = (1.0 × 10⁻³)/1.0 = 1.0 × 10⁻³.",
+          "Elastic tensile stress = 100/(2.0 × 10⁻⁶) = 5.0 × 10⁷ Pa.",
+          "Young modulus = stress/strain = (5.0 × 10⁷)/(1.0 × 10⁻³) = 5.0 × 10¹⁰ Pa."
+        ],
+        "revisionTopic": "Materials"
+      }
+    },
+    {
+      "id": "PHY34-157-028",
+      "specRef": "3.4.2.1",
+      "requirement": "Define tensile strain",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_strain",
+        "front": "What is tensile strain?",
+        "back": "strain = ΔL/L; it has no unit.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_02",
+        "prompt": "A wire initially has uniform cross-sectional area 2.0 mm². During a tensile test, the largest force reached is 550 N, but the wire finally breaks under a force of 500 N. Calculate its breaking stress and its maximum tensile stress. Explain the distinction. In a separate elastic measurement on the same material, a wire 1.0 m long and of the same area extends by 1.0 mm under 100 N. Calculate the Young modulus.",
+        "marks": 7,
+        "markPoints": [
+          "Original cross-sectional area = 2.0 × 10⁻⁶ m².",
+          "Breaking stress = 500/(2.0 × 10⁻⁶) = 2.50 × 10⁸ Pa.",
+          "Maximum tensile stress = 550/(2.0 × 10⁻⁶) = 2.75 × 10⁸ Pa.",
+          "Breaking stress is the stress at fracture, which may be lower than the greatest stress sustained earlier.",
+          "Elastic tensile strain = (1.0 × 10⁻³)/1.0 = 1.0 × 10⁻³.",
+          "Elastic tensile stress = 100/(2.0 × 10⁻⁶) = 5.0 × 10⁷ Pa.",
+          "Young modulus = stress/strain = (5.0 × 10⁷)/(1.0 × 10⁻³) = 5.0 × 10¹⁰ Pa."
+        ],
+        "revisionTopic": "Materials"
+      }
+    },
+    {
+      "id": "PHY34-157-029",
+      "specRef": "3.4.2.1",
+      "requirement": "Distinguish elastic from plastic deformation",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v127_092",
+        "front": "What is elastic deformation?",
+        "back": "Deformation that reverses when the load is removed.",
+        "specRef": "3.4.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-030",
+      "specRef": "3.4.2.1",
+      "requirement": "Recognise brittle failure involves little plastic deformation",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "task1_v124_bulk_phy_074",
+        "front": "How does a brittle material usually fail?",
+        "back": "With little or no plastic deformation.",
+        "specRef": "3.4.2",
+        "mock": true,
+        "active": true
+      },
+      "question": null
+    },
+    {
+      "id": "PHY34-157-031",
+      "specRef": "3.4.2.1",
+      "requirement": "Define breaking stress distinctly from maximum tensile stress",
+      "verification": "new_concise_recall_with_verified_evidence",
+      "card": {
+        "id": "task1_v157_003",
+        "front": "What is breaking stress?",
+        "back": "The tensile stress when the material fractures: breaking force divided by original cross-sectional area.",
+        "specRef": "3.4.2.1",
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_02",
+        "prompt": "A wire initially has uniform cross-sectional area 2.0 mm². During a tensile test, the largest force reached is 550 N, but the wire finally breaks under a force of 500 N. Calculate its breaking stress and its maximum tensile stress. Explain the distinction. In a separate elastic measurement on the same material, a wire 1.0 m long and of the same area extends by 1.0 mm under 100 N. Calculate the Young modulus.",
+        "marks": 7,
+        "markPoints": [
+          "Original cross-sectional area = 2.0 × 10⁻⁶ m².",
+          "Breaking stress = 500/(2.0 × 10⁻⁶) = 2.50 × 10⁸ Pa.",
+          "Maximum tensile stress = 550/(2.0 × 10⁻⁶) = 2.75 × 10⁸ Pa.",
+          "Breaking stress is the stress at fracture, which may be lower than the greatest stress sustained earlier.",
+          "Elastic tensile strain = (1.0 × 10⁻³)/1.0 = 1.0 × 10⁻³.",
+          "Elastic tensile stress = 100/(2.0 × 10⁻⁶) = 5.0 × 10⁷ Pa.",
+          "Young modulus = stress/strain = (5.0 × 10⁷)/(1.0 × 10⁻³) = 5.0 × 10¹⁰ Pa."
+        ],
+        "revisionTopic": "Materials"
+      }
+    },
+    {
+      "id": "PHY34-157-032",
+      "specRef": "3.4.2.2",
+      "requirement": "Define Young modulus as stress/strain",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_young",
+        "front": "What is Young modulus?",
+        "back": "E = stress/strain.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "mock_v157_02",
+        "prompt": "A wire initially has uniform cross-sectional area 2.0 mm². During a tensile test, the largest force reached is 550 N, but the wire finally breaks under a force of 500 N. Calculate its breaking stress and its maximum tensile stress. Explain the distinction. In a separate elastic measurement on the same material, a wire 1.0 m long and of the same area extends by 1.0 mm under 100 N. Calculate the Young modulus.",
+        "marks": 7,
+        "markPoints": [
+          "Original cross-sectional area = 2.0 × 10⁻⁶ m².",
+          "Breaking stress = 500/(2.0 × 10⁻⁶) = 2.50 × 10⁸ Pa.",
+          "Maximum tensile stress = 550/(2.0 × 10⁻⁶) = 2.75 × 10⁸ Pa.",
+          "Breaking stress is the stress at fracture, which may be lower than the greatest stress sustained earlier.",
+          "Elastic tensile strain = (1.0 × 10⁻³)/1.0 = 1.0 × 10⁻³.",
+          "Elastic tensile stress = 100/(2.0 × 10⁻⁶) = 5.0 × 10⁷ Pa.",
+          "Young modulus = stress/strain = (5.0 × 10⁷)/(1.0 × 10⁻³) = 5.0 × 10¹⁰ Pa."
+        ],
+        "revisionTopic": "Materials"
+      }
+    },
+    {
+      "id": "PHY34-157-033",
+      "specRef": "3.4.2.2",
+      "requirement": "Required Practical 4 uses stress–strain or force–extension gradient",
+      "verification": "existing_mock_recall_verified",
+      "card": {
+        "id": "phy_graph_weakness_v36_rp4_force_extension",
+        "front": "For a wire, how is Young modulus found from a force (y) vs extension (x) graph?",
+        "back": "Gradient = F/ΔL; E = gradient × original length L ÷ cross-sectional area A.",
+        "specRef": null,
+        "mock": true,
+        "active": true
+      },
+      "question": {
+        "id": "orig_v32_phy_rp4_young_modulus_3",
+        "prompt": "How is Young modulus obtained from a graph of force against extension?",
+        "marks": 3,
+        "markPoints": [
+          "Within the linear elastic region F=(EA/L)ΔL.",
+          "Gradient of force against extension = EA/L.",
+          "Young modulus E=gradient×L/A."
+        ],
+        "revisionTopic": "RP4 Young modulus"
+      }
+    }
+  ],
+  "limitations": {
+    "fullSpecificationCoverageCertified": false,
+    "otherPhysicsASSectionsPending": true,
+    "questionPracticeIsOriginalNotOfficial": true,
+    "studentRecallIndependentlyTested": false
+  },
+  "preservation": {
+    "allOldFlashcardIds": true,
+    "oldAnswersUnchanged": true,
+    "allOldQuestionIds": true,
+    "progressAndScoringUnchanged": true
+  }
+}
