@@ -160,14 +160,14 @@
       "auditIds": [
         "A2ORG-055"
       ],
-      "prompt": "A paper reaction map starts at the abstract species R–NH₂. Each successive substitution replaces one remaining nitrogen-bound H with another carbon-containing group R′, then R″, then R‴. Draw and classify the three successive nitrogen-containing structures (including the final ion), and explain why their charges differ. No reagents or reaction conditions are requested.",
+      "prompt": "A paper reaction map starts at the abstract species R–NH₂. Two conceptual substitutions replace each nitrogen-bound H with carbon-containing groups R′ and R″. A final attachment of R‴ uses the tertiary nitrogen lone pair. Draw and classify the structures after each stage (including the final ion), and explain why their charges differ. No reagents or reaction conditions are requested.",
       "marks": 6,
       "markPoints": [
         "After the first substitution the neutral secondary amine framework is R–NH–R′.",
         "After the second substitution the neutral tertiary amine framework is R–N(R′)–R″.",
         "The final species has four nitrogen-bound carbon groups, [R–N(R′)(R″)(R‴)]⁺.",
         "The final species is a quaternary ammonium ion rather than a neutral amine.",
-        "The final nitrogen has four bonds and no available lone pair.",
+        "The final nitrogen has four bonds and no available lone pair; the tertiary amine before that attachment does have a lone pair.",
         "The primary, secondary and tertiary labels count carbon-containing groups bonded directly to nitrogen."
       ]
     },
