@@ -1,3 +1,11 @@
+# Revision Loop v174 — safer matching of vetted mathematical equation marks (28 October 2026)
+
+**Pending PR/CI and deployment.** Reproduced a formula-substring marking fault in two existing source-linked Physics questions. For curated expression alternatives, the local checker now requires whole equations rather than a substring of a longer variable or number, treats explicitly negated/rejected equations as no evidence, and retains correct whitespace-separated formulae and legitimate rearrangements. Short bare incorrect equations cannot earn equivalent-method marks through fuzzy token overlap. A dedicated 17-case regression checks real bank examples and ensures **all 1,268 original practice model answers still achieve full rubric scores**. No card/question IDs or marks, photos, site achievements or saved progress are changed. Manual review remains the final authority.
+
+**Task 1 is still not certified complete.** The 971 provisionally tagged science mock cards, exact AQA bullet coverage, practical diagrams, school topic boundaries, optional Physics unit and historical paper source coverage need additional verification. Evidence: `editorial/task1-v174-formula-evidence-review.json` and regression `tests/task1-v174-formula-evidence.cjs`.
+
+---
+
 # Revision Loop v173 — school Maths mock boundary and optional diagram sketcher
 
 **Pending pull-request CI and GitHub Pages.** The teacher's email (19 October 2026) confirms first Maths mock is an **AS Pure paper only**; a distinct classroom paper on taught Year 13 content will occur **after other mocks**, date TBA. For now 116 Maths mock cards and 129 mock exam-style questions are restricted to Year 12/AS Pure topics across both school Pure papers. Statistics, Mechanics, radian and Year 13-only content stay in the main full-revision decks; the AQA official AS papers normally contain applied topics but the school mock explicitly does not. Added a visible Maths-only scope explanation and enforced `q.level==='AS'` in mock question selection.

@@ -2046,6 +2046,33 @@ function singleClaimEvidenceCap(q,answer){
 }
 
 function examSuggested(q,answer){
+// A curated equation is evidence only when it stands on its own: not within a
+// longer variable/number, and not explicitly rejected by the student's wording.
+// Whitespace around operators is insignificant; multiplication is not guessed.
+function reviewedExpressionEvidence(answer,expression){
+ const tidy=value=>{
+  const digits={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
+  const raw=String(value||'').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+/g,seq=>'^'+[...seq].map(x=>digits[x]).join(''));
+  return normalise(raw)
+   .replace(/(\d+(?:\.\d+)?)\s*(?:x|\*)\s*10\s*\^\s*([-+]?\d+)\b/gi,'$1e$2')
+   .replace(/\s*([=+*/<>^])\s*/g,'$1');
+ };
+ const text=tidy(answer),formula=tidy(expression);
+ if(formula.length<5||!text)return {matched:false,rejected:false};
+ let at=0,rejected=false;
+ while((at=text.indexOf(formula,at))>=0){
+  const before=text.slice(0,at),after=text.slice(at+formula.length);
+  at+=formula.length;
+  // For example, 2.26e8 is not 12.26e8 or 2.26e80;
+  // n=c/v must not be inferred from n=c/vx.
+  if(/[a-z0-9.]$/i.test(before)||/^[a-z0-9.]/i.test(after))continue;
+  const denial=/(?:\b(?:not|never|no|wrong|incorrect|invalid|without|avoid)\s*|\b(?:do not use|don't use|instead of|rather than)\s*)$/i.test(before.slice(-45));
+  const rebuttal=/^\s*(?:is|was|would be)?\s*(?:wrong|incorrect|invalid|false)\b|^\s*but\s+(?:wrong|incorrect|invalid)\b/i.test(after.slice(0,45));
+  if(denial||rebuttal){rejected=true;continue}
+  return {matched:true,rejected:false};
+ }
+ return {matched:false,rejected};
+}
  // A direct denial of a curated correct statement is not evidence for it.
  // This guard also prevents the older fuzzy matcher awarding other marks
  // for the same isolated, explicitly contradicted statement.
@@ -2306,10 +2333,16 @@ function examSuggested(q,answer){
  // algebra to reproduce the exact English marking-point sentence.
  // Only explicitly curated expressions are eligible for this shortcut.
  if(Array.isArray(q.markPointExpressionAlternatives)){
-  const answerCompact=compact(answer);
   q.markPointExpressionAlternatives.forEach((expressions,i)=>{
-   if(i>=scores.length||!Array.isArray(expressions))return;
-   if(expressions.some(expr=>String(expr).length>=5&&answerCompact.includes(compact(expr))))scores[i]=1;
+   if(i>=scores.length||!Array.isArray(expressions)||!expressions.length)return;
+   const evidence=expressions.map(expr=>reviewedExpressionEvidence(answer,expr));
+   if(evidence.some(e=>e.matched)){scores[i]=1;return}
+   // This is a specific formula point, not a generic keyword point. In a short
+   // formula-only response, fuzzy token overlap cannot replace the equation.
+   const raw=String(answer||'').trim();
+   const standaloneFormula=raw.length<=90&&raw.split(/\s+/).length<=8&&
+    /[=/^]/.test(raw)&&/^[a-z]\w*\s*=/i.test(raw);
+   if(evidence.some(e=>e.rejected)||standaloneFormula)scores[i]=0;
   });
  }
  let preds=scores.map(v=>v>=.5);
