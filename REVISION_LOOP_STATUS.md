@@ -1,3 +1,15 @@
+# Revision Loop v164 — transparent AS/A-level paper archive and 2026 availability (28 October 2026)
+
+**Proposed until CI, merge and Pages verification.** The public website's paper-archive matrix now explicitly shows **2015–2026**, not 2015–2025. Its summer **2026** entry states that the official AQA papers are **not yet publicly released**, with public release of question papers and mark schemes scheduled for **9 July 2027**, linking to AQA's assessment-material release timetable. Do not invent AQA 2026 PDFs or questions.
+
+A read-only evidence report, `editorial/task1-v164-paper-and-science-coverage-truth.json`, reconciles the existing `paper_inventory_2015_2025.json` (134 papers, 31 with source-indexed parts, 231 indexed parts, **zero whole papers certified complete**) with current Physics (1,154 active; 730 mock) and Chemistry (1,981 active; 1,533 mock) flashcards. Fifteen summer 2026 AS/A-level paper codes are recorded as **pending public release**, separate from the 134 historical current-specification papers, and are **not counted as indexed**. The 2015 papers use older specifications; the normal summer 2020 and 2021 exam series were cancelled.
+
+The Physics and Chemistry card totals reflect volume, **not final line-by-line AQA specification certification**. Older cards with no explicit `specRef` cannot be treated as proven coverage gaps without reading the relevant content. The archive separates source-linked original-paper parts from independently written original AQA-style practice and links to official original papers where verified. Neither the website nor this release reproduces whole copyrighted papers or close substitute paraphrases.
+
+Regression evidence: `tests/archive-regression.cjs` validates the 12-year public archive and 2026 release notice, while `tests/task1-v164-paper-archive-truth.cjs` validates exact Physics/Chemistry counts and paper inventory. The cloud-sync CI workflow runs the new test. No question, card, mark, World, saved progress or user profile IDs change in this release. This release is a **truthful coverage-status correction**, not completion of the request to cover every 2015–2026 question.
+
+---
+
 # Revision Loop v162 — targeted Year 1 Pure Maths recall correction (28 October 2026)
 
 **Proposed until CI, merge and Pages deployment.** Deck v162: **3,335 total cards (3,331 active), 2,369 mock-eligible**: Physics 730, Chemistry 1,533, Maths **106**. Main bank stays at **1,260 original exam-style questions**; Year 1 Pure Maths question selection stays **121** from v161.
