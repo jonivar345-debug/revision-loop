@@ -1,4 +1,5 @@
 'use strict';
+const {expectedQuestionText,expectedQuestionPoints,expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
@@ -7,13 +8,13 @@ const newAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-organic-theory-q
 const mockAudit=JSON.parse(fs.readFileSync('editorial/task1-v153-mock-priority-evidence.json','utf8'));
 const earlier=JSON.parse(fs.readFileSync('editorial/task1-v151-a2-organic-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
-assert.equal(deck.deckVersion,152);
-assert.equal(deck.cards.length,3276);
-assert.equal(deck.cards.filter(c=>c.active!==false).length,3272);
-assert.equal(bank.bankVersion,63);
+assert(deck.deckVersion>=152);
+assert.equal(deck.cards.filter(c=>!c.id.startsWith('task1_v154_')).length,3276);
+assert.equal(deck.cards.filter(c=>c.active!==false&&!c.id.startsWith('task1_v154_')).length,3272);
+assert(bank.bankVersion>=63);
 assert.equal(bank.questions.length,1238);
 assert.equal(bank.questions[1225].id,'organic_v152_14');
-assert.equal(new Set(deck.cards.map(c=>c.id)).size,3276);
+assert.equal(new Set(deck.cards.map(c=>c.id)).size,deck.cards.length);
 assert.equal(new Set(bank.questions.map(q=>q.id)).size,1238);
 assert.equal(bank.questions.filter(q=>!q.id.startsWith('organic_v153_')).length,1226);
 assert.equal(newAudit.additions.cards,0);
@@ -34,8 +35,8 @@ for(let i=0;i<added.length;i++){
  assert.equal(q.subject,'Chemistry');assert.equal(q.level,'A-level');assert.equal(q.mock,false);
  assert.equal(q.year,'Practice');assert.equal(q.paper,'Original');
  assert.equal(q.sourceVerified,false);assert.equal(q.verificationLevel,'original-exam-style');
- assert.equal(q.prompt,a.prompt);assert.equal(q.marks,a.marks);
- assert.deepEqual(q.markPoints,a.markPoints);
+ assert.equal(q.prompt,expectedQuestionText(a.prompt));assert.equal(q.marks,a.marks);
+ assert.deepEqual(q.markPoints,expectedQuestionPoints(a.markPoints));
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
  assert.equal(q.modelAnswer,q.markPoints.join(' '));
  assert.equal(q.answerType,'points');assert.equal(q.groupId,q.id);
@@ -63,8 +64,8 @@ for(const row of mockAudit.rows){
  assert(row.evidence.cards.length+row.evidence.questions.length>0);
  if(row.status==='supported_practice')assert(row.evidence.questions.length>0);
  if(row.status==='partial')assert(row.limitation&&row.next);
- for(const e of row.evidence.cards){const c=cardMap.get(e.id);assert(c&&c.active!==false,'Missing card '+e.id);assert.equal(c.front,e.front);assert.equal(c.back,e.back);assert.equal(c.specRef||null,e.specRef);assert.equal(c.mock??null,e.mock)}
- for(const e of row.evidence.questions){const q=qMap.get(e.id);assert(q,'Missing question '+e.id);assert.equal(q.prompt,e.prompt);assert.equal(q.marks,e.marks);assert.deepEqual(q.markPoints,e.markPoints);assert.equal(q.revisionTopic,e.revisionTopic)}
+ for(const e of row.evidence.cards){const c=cardMap.get(e.id);assert(c&&c.active!==false,'Missing card '+e.id);assert.equal(c.front,expectedCardField(c.id,'front',e.front));assert.equal(c.back,expectedCardField(c.id,'back',e.back));assert.equal(c.specRef||null,e.specRef);assert.equal(c.mock??null,expectedCardMock(c.id,e.mock))}
+ for(const e of row.evidence.questions){const q=qMap.get(e.id);assert(q,'Missing question '+e.id);assert.equal(q.prompt,expectedQuestionText(e.prompt));assert.equal(q.marks,e.marks);assert.deepEqual(q.markPoints,expectedQuestionPoints(e.markPoints));assert.equal(q.revisionTopic,e.revisionTopic)}
 }
 assert.deepEqual(count,mockAudit.counts.byStatus);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
