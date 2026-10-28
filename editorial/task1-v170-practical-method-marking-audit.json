@@ -1,0 +1,171 @@
+{
+  "version": "v170",
+  "date": "2026-10-28",
+  "goal": "Fairer marking and review of intermediate methods in Physics/Chemistry mock practical, measurement and multi-step data questions",
+  "acceptedMethods": "Each original multi-step question has individually curated alternative statements for selected mark points. One standalone accepted alternative earns exactly its own criterion only. User-confirmed marking and question-specific ECF guidance remain essential.",
+  "additions": {
+    "questionCount": 8,
+    "physicsQuestions": 4,
+    "chemistryQuestions": 4,
+    "addedPhrases": 24
+  },
+  "questions": [
+    {
+      "id": "stretch_v34_physics_rp2_interference",
+      "subject": "Physics",
+      "topic": "Waves",
+      "marks": 6,
+      "acceptedCriteria": [
+        1,
+        4,
+        5
+      ],
+      "acceptedPhrases": [
+        "use fringe width multiplied by slit separation divided by screen distance",
+        "the percentage errors from fringe spacing slit gap and distance add to about 6.13 percent",
+        "measuring ten intervals reduces the percentage uncertainty from reading one tiny gap"
+      ],
+      "ecfGuidance": "Credit a demonstrated use of wavelength = fringe spacing × slit separation / screen distance even if an earlier fringe-width reading was wrong. Award the correct numerical wavelength and uncertainty separately; do not award them solely for quoting a formula."
+    },
+    {
+      "id": "mock_v154_05",
+      "subject": "Physics",
+      "topic": "Electricity",
+      "marks": 6,
+      "acceptedCriteria": [
+        1,
+        2,
+        5
+      ],
+      "acceptedPhrases": [
+        "the voltage current graph falls by 0.4 volts for each ampere of current",
+        "the cell has 0.4 ohms internal resistance from the magnitude of the slope",
+        "greater current causes more voltage to be lost inside the cell leaving less across the load"
+      ],
+      "ecfGuidance": "If the student has a mistaken graph gradient but correctly uses its magnitude as internal resistance and then calculates I r, assess that later method separately. The correct emf, resistance, terminal voltage and lost volts remain distinct numerical criteria."
+    },
+    {
+      "id": "mock_v157_02",
+      "subject": "Physics",
+      "topic": "Mechanics and materials",
+      "marks": 7,
+      "acceptedCriteria": [
+        1,
+        3,
+        6
+      ],
+      "acceptedPhrases": [
+        "at fracture the tensile stress is 500 newtons divided by two times ten to the minus six square metres",
+        "the breaking force can be lower than the previous maximum load when the specimen fractures",
+        "the young modulus is elastic stress divided by tensile strain giving five times ten to the ten pascals"
+      ],
+      "ecfGuidance": "If the student converts area incorrectly but consistently uses the stated original area when calculating stress and Young modulus, credit a demonstrably correct stress or stress/strain method, not the independently required correct numerical stresses or modulus."
+    },
+    {
+      "id": "mock_v160_04",
+      "subject": "Physics",
+      "topic": "Measurements",
+      "marks": 6,
+      "acceptedCriteria": [
+        1,
+        3,
+        5
+      ],
+      "acceptedPhrases": [
+        "half the measured time range is 0.035 seconds and rounds to an uncertainty of 0.04 seconds",
+        "the shallowest acceptable gradient lies 0.30 below the best line so the larger difference is used",
+        "repeated readings do not eliminate a calibration offset because every result is shifted similarly"
+      ],
+      "ecfGuidance": "Separate half-range, best-to-limit gradient differences and percentage uncertainty methods from their correct numbers. If an earlier gradient difference is wrong but the student subsequently computes their own difference divided by 2.40, consider the percentage method independently."
+    },
+    {
+      "id": "stretch_v34_chemistry_back_titrations",
+      "subject": "Chemistry",
+      "topic": "Amount of substance",
+      "marks": 8,
+      "acceptedCriteria": [
+        1,
+        3,
+        7
+      ],
+      "acceptedPhrases": [
+        "the moles of sodium hydroxide equal the leftover hydrochloric acid at 0.0072 mol",
+        "each mole of calcium carbonate consumes two moles of hydrochloric acid",
+        "one mole of acid supplies one proton to neutralise one mole of hydroxide ions"
+      ],
+      "ecfGuidance": "Give method consideration if the student subtracts their calculated residual acid from initial HCl, uses the carbonate to acid ratio 1:2, then converts their own carbonate amount to mass and percentage. Each correct numerical amount and purity is assessed separately; do not credit incorrect values as correct."
+    },
+    {
+      "id": "organic_v147_13",
+      "subject": "Chemistry",
+      "topic": "Practical skills",
+      "marks": 5,
+      "acceptedCriteria": [
+        0,
+        2,
+        3
+      ],
+      "acceptedPhrases": [
+        "the temperature plateau indicates one main component is evaporating and condensing",
+        "a narrow collected temperature interval supports but cannot establish complete purity",
+        "the observed boiling range must be checked against a reference at similar pressure"
+      ],
+      "ecfGuidance": "This is an explanation and practical-data interpretation question, not a numerical calculation. There is no arithmetic error-carried-forward credit; check each independent boiling-temperature observation and purity limitation."
+    },
+    {
+      "id": "organic_v147_14",
+      "subject": "Chemistry",
+      "topic": "Practical skills",
+      "marks": 5,
+      "acceptedCriteria": [
+        0,
+        2,
+        3
+      ],
+      "acceptedPhrases": [
+        "in reflux the condenser sends condensed vapour back into the heated mixture",
+        "distillation takes the volatile product away instead of returning it to the reaction vessel",
+        "the thermometer should measure vapour near the side arm entering the condenser"
+      ],
+      "ecfGuidance": "This qualitative apparatus question has no arithmetic error-carried-forward credit. Award each separately explained principle on its own; merely naming reflux or distillation is not evidence for the mechanism, isolation or temperature-reading marks."
+    },
+    {
+      "id": "organic_v147_16",
+      "subject": "Chemistry",
+      "topic": "Practical skills",
+      "marks": 5,
+      "acceptedCriteria": [
+        0,
+        2,
+        3
+      ],
+      "acceptedPhrases": [
+        "a positive d n p h result means the substance contains an aldehyde or ketone carbonyl",
+        "the silver mirror result makes compound x consistent with an aldehyde",
+        "negative tollens with a positive carbonyl test makes y likely to be a ketone"
+      ],
+      "ecfGuidance": "This is diagnostic interpretation rather than calculation. The DNPH conclusion, its limitation, Tollens result, assignment of X and Y, and confirmation requirement are separate checks; do not infer one response from another merely because the final structures happen to be right."
+    }
+  ],
+  "totals": {
+    "mainBankQuestions": 1268,
+    "curatedQuestions": 26,
+    "curatedPhrases": 74,
+    "flashcardRecords": 3335
+  },
+  "testPolicy": [
+    "All 24 vetted alternatives accepted for their intended mark point",
+    "Standalone alternatives must not receive unrelated marks",
+    "Explicitly negated alternatives receive 0 provisional marks",
+    "All 1,268 stored model answers continue to receive full scores against stored rubrics",
+    "Bad arithmetic is not automatically rewarded as correct final result; ECF guidance must be reviewed manually"
+  ],
+  "limitations": {
+    "officialPastPaperMarkSchemeCertified": false,
+    "automaticErrorCarriedForwardAward": false,
+    "ocrAndDiagramJudgementCertified": false,
+    "allAlternativeMethodsEnumerated": false,
+    "task1SignedOff": false
+  },
+  "status": "Proposed: awaiting four CI workflows and merge."
+}
