@@ -1375,10 +1375,21 @@ function weightedPick(items,n,weightFn){
  const pool=[...items],out=[];while(pool.length&&out.length<n){let total=0,ws=pool.map(x=>{const w=Math.max(.05,weightFn(x));total+=w;return w});let r=Math.random()*total,idx=0;for(;idx<ws.length;idx++){r-=ws[idx];if(r<=0)break}out.push(pool.splice(Math.min(idx,pool.length-1),1)[0])}return out;
 }
 
+// Mock-only exam questions must be explicitly eligible; AS level alone is not a mock flag.
+// The November Maths mock is Year 1 Pure only, so Statistics, Mechanics and
+// school-excluded radian questions remain in full revision, not mock sessions.
+function mockEligibleQuestion(q){
+ if(q.mock!==true)return false;
+ if(q.subject!=='Maths')return true;
+ const topic=String(q.topic||'').trim().toLowerCase();
+ if(topic==='statistics'||topic==='mechanics')return false;
+ return !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+}
+
 function startMockSession(){
  const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value,count=Number(document.getElementById('mockCount').value);
  const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&c.mock===true);
- const qAll=subjectExam(sub).filter(q=>q.mock===true||q.level==='AS');
+ const qAll=subjectExam(sub).filter(mockEligibleQuestion);
  const groups=new Map();for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
  const items=[];
@@ -1448,7 +1459,7 @@ function awardExam(q,marks,answer,missedPoints){
 }
 
 function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(c=>c.mock===true):a.filter(taughtCard)}
-function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(x=>x.mock===true||x.level==='AS');return q}
+function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(mockEligibleQuestion);return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
  const cpool=challengeCards(sub,scope),weak=[...cpool].sort((a,b)=>weakness(b)-weakness(a)),items=[],used=new Set();
