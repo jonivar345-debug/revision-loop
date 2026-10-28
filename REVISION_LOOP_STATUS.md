@@ -1,3 +1,13 @@
+# Revision Loop v175 — marking diagrams directly, without forcing handwriting OCR (28 October 2026)
+
+**Proposed pending CI, merge and Pages deployment.** Added a **Review marking points manually (diagrams / photos)** button to exam questions. It opens the question's rubric with zero points checked; the user can consult a photographed answer or drawn graph/mechanism and tick marks or set a reviewed total without OCR. Where present, accepted answer variants, mark dependencies, AQA/ECF notes and model outcome remain visible; official level-based responses are explicitly identified as holistic, not an AQA checklist. Saved attempts distinguish self-reviewed marks from reviewed automated suggestions. Revised prerequisite enforcement is transitive regardless of key order, so an invalid prerequisite never leaves a later dependent suggested mark behind.
+
+Targeted synthetic tests: `tests/task1-v175-manual-diagram-mark-review.cjs`. Machine-readable review: `editorial/task1-v175-manual-diagram-mark-review.json`. Existing question IDs, original marks, flashcards and saved-progress keys remain unchanged.
+
+**Task 1 remains NOT complete.** There are still 971 active science mock cards lacking direct specification references; a metadata grouping is not individual answer certification. Full AQA bullet-by-bullet verification, real diagram/photo reliability checks, historical paper coverage and the school Physics optional unit remain outstanding. An extra AQA Chemistry Gibbs spot-check verified the existing ΔG ≤ 0 card follows the exact AQA 3.1.8.2 feasibility wording, so it was intentionally not edited.
+
+---
+
 # Revision Loop v174 — safer matching of vetted mathematical equation marks (28 October 2026)
 
 **Pending PR/CI and deployment.** Reproduced a formula-substring marking fault in two existing source-linked Physics questions. For curated expression alternatives, the local checker now requires whole equations rather than a substring of a longer variable or number, treats explicitly negated/rejected equations as no evidence, and retains correct whitespace-separated formulae and legitimate rearrangements. Short bare incorrect equations cannot earn equivalent-method marks through fuzzy token overlap. A dedicated 17-case regression checks real bank examples and ensures **all 1,268 original practice model answers still achieve full rubric scores**. No card/question IDs or marks, photos, site achievements or saved progress are changed. Manual review remains the final authority.
