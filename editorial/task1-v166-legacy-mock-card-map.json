@@ -42,7 +42,7 @@
     "physics": 311,
     "chemistry": 660,
     "chemistryA2": 194,
-    "cardsWithNoSectionCandidate": 2,
+    "cardsWithNoSectionCandidate": 0,
     "blankAnswers": 0,
     "longAnswers": 1
   },
@@ -58,7 +58,7 @@
         "Graph interpretation": 2
       },
       "a2StageCount": 0,
-      "unmappedSectionCandidates": 2,
+      "unmappedSectionCandidates": 0,
       "blankBacks": 0,
       "longBacks": [
         "phy_spectra_photo_v32_below_threshold_graph"
@@ -96,14 +96,6 @@
     {
       "id": "phy_spectra_photo_v32_below_threshold_graph",
       "reason": "long back"
-    },
-    {
-      "id": "phy_graph_weakness_v36_force_distance_vs_time",
-      "reason": "Ambiguous graph interpretation topic"
-    },
-    {
-      "id": "phy_graph_weakness_v36_iv_axes_resistance",
-      "reason": "Ambiguous graph interpretation topic"
     }
   ],
   "records": [
@@ -5683,11 +5675,12 @@
       "stage": "AS",
       "topic": "Graph interpretation",
       "courseTopic": "Graph interpretation",
-      "candidateSpecSection": null,
-      "referenceMapping": "topic-only candidate; individual wording and answer NOT fully audited",
-      "requiresIndividualAnswerReview": true,
+      "candidateSpecSection": "3.4.1",
+      "referenceMapping": "Physics mechanics: force–time impulse and force–displacement work; both relationships checked against the recorded short answer.",
+      "requiresIndividualAnswerReview": false,
       "mockScopeAssessment": "AS-labelled; needs individual scope check",
-      "qualityFlags": []
+      "qualityFlags": [],
+      "manualContentReviewDate": "2026-10-28"
     },
     {
       "id": "phy_graph_weakness_v36_iv_axes_resistance",
@@ -5695,11 +5688,12 @@
       "stage": "AS",
       "topic": "Graph interpretation",
       "courseTopic": "Graph interpretation",
-      "candidateSpecSection": null,
-      "referenceMapping": "topic-only candidate; individual wording and answer NOT fully audited",
-      "requiresIndividualAnswerReview": true,
+      "candidateSpecSection": "3.5.1",
+      "referenceMapping": "Physics electricity: ohmic V–I and I–V gradients are reciprocal; answer reviewed against axes specified.",
+      "requiresIndividualAnswerReview": false,
       "mockScopeAssessment": "AS-labelled; needs individual scope check",
-      "qualityFlags": []
+      "qualityFlags": [],
+      "manualContentReviewDate": "2026-10-28"
     },
     {
       "id": "phy_mechanics_focus_v37_01",
@@ -11769,5 +11763,17 @@
     "oldIDsPreserved": true,
     "flashcardDeckModified": false,
     "siteUserDataModified": false
-  }
+  },
+  "manualContentReviewed": [
+    {
+      "id": "phy_graph_weakness_v36_force_distance_vs_time",
+      "section": "3.4.1",
+      "scope": "This card only; not full section certification"
+    },
+    {
+      "id": "phy_graph_weakness_v36_iv_axes_resistance",
+      "section": "3.5.1",
+      "scope": "This card only; not full section certification"
+    }
+  ]
 }
