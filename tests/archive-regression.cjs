@@ -27,9 +27,13 @@ for(subject of ['Physics','Chemistry','Maths']){
  app();
  const html=out.paperArchiveLinks.innerHTML;
  assert.match(html,/2025/);checks++;
+ assert.match(html,/2026/);checks++;
+ assert.match(html,/9 July 2027/);checks++;
+ assert.match(html,/not yet publicly released/);checks++;
+ assert.match(html,/AQA release schedule/);checks++;
  assert.match(html,/2015/);checks++;
  assert.match(html,/Official AQA paper and mark-scheme finder/);checks++;
- assert.equal((html.match(/<tr><th scope="row">/g)||[]).length,11,'All 11 years shown '+subject);checks++;
+ assert.equal((html.match(/<tr><th scope="row">/g)||[]).length,12,'All 12 years shown '+subject);checks++;
  assert.match(html,/0 indexed parts/,'Never imply all paper parts have been indexed');checks++;
  if(subject==='Maths'){assert.doesNotMatch(html,/source-first/,'All previously dependent Maths parts now have full context');checks++;}
  if(subject==='Maths'){
