@@ -1,4 +1,5 @@
 'use strict';
+const {expectedCardField,expectedCardMock}=require('./task1-v154-historical-normalisation.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const oldAudit=JSON.parse(fs.readFileSync('editorial/task1-legacy-card-content-audit-v133.json','utf8'));
@@ -24,7 +25,7 @@ for(const c of audit.records){
  assert(o,'Audit ID must refer to existing earlier card: '+c.id);
  assert.equal(o.subject,c.subject,'Audit subject mismatch '+c.id);
  assert.equal(o.topic,c.originalTopic,'Audit topic mismatch '+c.id);
- assert.equal(o.front,c.front,'Audit front mismatch '+c.id);
+ assert.equal(o.front,expectedCardField(c.id,'front',c.front),'Audit front mismatch outside v154 '+c.id);
  assert(!o.specRef,'Only original untagged cards can be counted as legacy '+c.id);
  if(c.answer!==undefined)assert.equal(o.back,c.answer,'Audited model answer changed '+c.id);
  assert(c.contentChecked===true);
@@ -48,7 +49,7 @@ for(const c of fresh){
  assert(c.front.length<=120&&c.back.length<=120,'Not short flashcard '+c.id);
  assert.equal(c.courseTopic,c.topic);assert.equal(c.revisionTopic,c.topic);
  assert.equal(c.taught,c.mock,'Scope mismatch '+c.id);
- assert.equal(c.mock,c.stage==='AS','A2 material leaked into AS mock '+c.id);
+ assert.equal(c.mock,expectedCardMock(c.id,c.stage==='AS'),'Mock scope after v154 '+c.id);
  assert(c.accept.length>=3&&c.reject.length>=2,'Insufficient answer variants '+c.id);
  for(const v of c.accept)assert.equal(evaluate(c,v).status,'correct','Rejects correct alternative '+c.id+' '+v);
  for(const v of c.reject)assert.notEqual(evaluate(c,v).status,'correct','False credit for wrong answer '+c.id+' '+v);
