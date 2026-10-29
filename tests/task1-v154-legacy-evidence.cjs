@@ -10,6 +10,7 @@ const v179=require('../editorial/task1-v179-chemistry-organic-physical-audit.jso
 const v180=require('../editorial/task1-v180-born-haber-gibbs-short-recall.json');
 const v181=require('../editorial/task1-v181-science-210-legacy-answer-audit.json');
 const v182=require('../editorial/task1-v182-220-physics-chemistry-precision.json');
+const v183=require('../editorial/task1-v183-bonding-86-precision.json');
 const corrections=new Map(v154.changes.editedCards.map(row=>[row.id,row]));
 const shortCards=new Map(v172.edited.map(row=>[row.id,row]));
 const preciseMechanics=new Map(v176.corrections.map(row=>[row.id,row]));
@@ -19,7 +20,11 @@ const nextChemistry=new Map(v179.corrections.map(row=>[row.id,row]));
 const bornHaberChemistry=new Map(v180.corrections.map(row=>[row.id,row]));
 const moreScience=new Map(v181.corrections.map(row=>[row.id,row]));
 const newerScience=new Map(v182.corrections.map(row=>[row.id,row]));
+const finalBonding=new Map(v183.corrections.map(row=>[row.id,row]));
 module.exports=function expectedAfterReviewedEdits(id,field,historical){
+ const updated=finalBonding.get(id);
+ if(updated&&field==='front')return updated.newFront;
+ if(updated&&field==='back')return updated.newBack;
  const newestScience=newerScience.get(id);
  if(newestScience&&field==='front')return newestScience.newFront;
  if(newestScience&&field==='back')return newestScience.newBack;

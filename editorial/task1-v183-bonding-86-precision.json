@@ -1,0 +1,711 @@
+{
+  "version": "v183",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "goal": "Review remaining 86 historical AQA bonding recall cards, distinguish single-fact flashcards from multistep exam questions; prioritise AQA wording and accepted short answers",
+  "officialReference": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "baseline": {
+    "cards": 3345,
+    "active": 3341,
+    "mock": 2379,
+    "practiceQuestions": 1268,
+    "reviewedBefore": 713,
+    "reviewedHere": 86,
+    "reviewedTotal": 799,
+    "remainingScience": 172,
+    "remainingPhysics": 66,
+    "remainingChemistry": 106
+  },
+  "corrections": [
+    {
+      "id": "chem_bonding_v48_10",
+      "previousFront": "What shape does NH₄⁺ have?",
+      "previousBack": "Tetrahedral, about 109.5°; no lone pairs on N.",
+      "newFront": "What is the molecular shape of NH₄⁺?",
+      "newBack": "Tetrahedral.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v48_11",
+      "previousFront": "What shape does H₃O⁺ have, and how many lone pairs?",
+      "previousBack": "Trigonal pyramidal; 3 O–H bonds and 1 lone pair on O.",
+      "newFront": "What is the molecular shape of H₃O⁺?",
+      "newBack": "Trigonal pyramidal.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v48_14",
+      "previousFront": "What shape and angles has PCl₅ in the gas phase?",
+      "previousBack": "Trigonal bipyramidal, 90°, 120° and 180°.",
+      "newFront": "What is the molecular shape of gaseous PCl₅?",
+      "newBack": "Trigonal bipyramidal.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v48_18",
+      "previousFront": "What shape and angles does SF₆ have?",
+      "previousBack": "Octahedral, 90° and 180°.",
+      "newFront": "What is the molecular shape of SF₆?",
+      "newBack": "Octahedral.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v48_20",
+      "previousFront": "What shape and bond angles does XeF₄ have?",
+      "previousBack": "Square planar, approximately 90° and 180°, with 2 opposing lone pairs.",
+      "newFront": "What is the molecular shape of XeF₄?",
+      "newBack": "Square planar.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v48_33",
+      "previousFront": "What creates a van der Waals' (induced dipole–dipole) forces attraction?",
+      "previousBack": "Temporary dipole in one particle induces an opposite dipole in another.",
+      "newFront": "What causes induced dipole–dipole (van der Waals') attraction?",
+      "newBack": "Temporary electron-density fluctuations induce dipoles in neighbouring particles.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v52_45",
+      "previousFront": "Give the 4-step structure of a halogen boiling-point explanation.",
+      "previousBack": "Non-polar; more electrons; stronger induced dipoles/van der Waals' forces; more energy to boil.",
+      "newFront": "What happens to the strength of induced dipole forces down Group 7?",
+      "newBack": "They increase down the group.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v52_06",
+      "previousFront": "What is the formula of aluminium nitrate?",
+      "previousBack": "Al(NO₃)₃: one Al³⁺ balances three NO₃⁻.",
+      "newFront": "What is the formula of aluminium nitrate?",
+      "newBack": "Al(NO₃)₃.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v52_07",
+      "previousFront": "What is the formula of ammonium sulfate?",
+      "previousBack": "(NH₄)₂SO₄: two NH₄⁺ balance SO₄²⁻.",
+      "newFront": "What is the formula of ammonium sulfate?",
+      "newBack": "(NH₄)₂SO₄.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    },
+    {
+      "id": "chem_bonding_v52_08",
+      "previousFront": "What is the formula of magnesium nitrate?",
+      "previousBack": "Mg(NO₃)₂: Mg²⁺ balances two NO₃⁻.",
+      "newFront": "What is the formula of magnesium nitrate?",
+      "newBack": "Mg(NO₃)₂.",
+      "reason": "Single fact per flashcard; longer explanations are reserved for exam questions"
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "chem_bonding_v48_10",
+      "aqaSection": "3.1.3",
+      "front": "What is the molecular shape of NH₄⁺?",
+      "back": "Tetrahedral.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_11",
+      "aqaSection": "3.1.3",
+      "front": "What is the molecular shape of H₃O⁺?",
+      "back": "Trigonal pyramidal.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_12",
+      "aqaSection": "3.1.3",
+      "front": "Why does NH₃ have a smaller bond angle than CH₄?",
+      "back": "NH₃ has one lone pair, which repels bond pairs more strongly.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_13",
+      "aqaSection": "3.1.3",
+      "front": "Why does H₂O have a smaller angle than NH₃?",
+      "back": "H₂O has two lone pairs, which increase repulsion of bonding regions.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_14",
+      "aqaSection": "3.1.3",
+      "front": "What is the molecular shape of gaseous PCl₅?",
+      "back": "Trigonal bipyramidal.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_15",
+      "aqaSection": "3.1.3",
+      "front": "What shape does SF₄ have with 5 electron domains?",
+      "back": "Seesaw: 4 bonding regions and 1 lone pair, from trigonal bipyramidal.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_16",
+      "aqaSection": "3.1.3",
+      "front": "What shape does ClF₃ have with 5 electron domains?",
+      "back": "T-shaped: 3 bonding regions and 2 lone pairs.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_17",
+      "aqaSection": "3.1.3",
+      "front": "What shape is XeF₂ despite having 3 lone pairs?",
+      "back": "Linear: 2 bonding regions and 3 equatorial lone pairs.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_18",
+      "aqaSection": "3.1.3",
+      "front": "What is the molecular shape of SF₆?",
+      "back": "Octahedral.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_19",
+      "aqaSection": "3.1.3",
+      "front": "What shape does BrF₅ have?",
+      "back": "Square pyramidal: 5 bonding regions and 1 lone pair.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_20",
+      "aqaSection": "3.1.3",
+      "front": "What is the molecular shape of XeF₄?",
+      "back": "Square planar.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_21",
+      "aqaSection": "3.1.3",
+      "front": "Does a double bond count as one or two electron domains in VSEPR?",
+      "back": "One region of electron density, although it contains two shared pairs.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_22",
+      "aqaSection": "3.1.3",
+      "front": "What is the safest method for an unfamiliar VSEPR molecule?",
+      "back": "Draw Lewis structure; count electron domains and lone pairs; assign geometry and angle.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_23",
+      "aqaSection": "3.1.3",
+      "front": "Define electronegativity.",
+      "back": "Ability of an atom to attract the shared electron pair in a covalent bond.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_24",
+      "aqaSection": "3.1.3",
+      "front": "What do δ+ and δ− mean on a polar bond?",
+      "back": "Partial positive and partial negative charges caused by uneven electron sharing.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_25",
+      "aqaSection": "3.1.3",
+      "front": "Why is an H–Cl bond polar?",
+      "back": "Cl is more electronegative and draws the shared electron pair toward itself.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_26",
+      "aqaSection": "3.1.3",
+      "front": "Why is CO₂ overall non-polar despite two polar C=O bonds?",
+      "back": "Its linear, symmetrical bond dipoles cancel.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_27",
+      "aqaSection": "3.1.3",
+      "front": "Why is BF₃ overall non-polar despite polar B–F bonds?",
+      "back": "Three identical bond dipoles cancel in a symmetrical trigonal planar arrangement.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_28",
+      "aqaSection": "3.1.3",
+      "front": "Why is CCl₄ overall non-polar despite polar C–Cl bonds?",
+      "back": "The tetrahedrally arranged bond dipoles cancel.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_29",
+      "aqaSection": "3.1.3",
+      "front": "Why is H₂O polar?",
+      "back": "Its bent geometry means the polar O–H bond dipoles do not cancel.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_30",
+      "aqaSection": "3.1.3",
+      "front": "How can a molecule have polar bonds but no permanent dipole?",
+      "back": "Its geometry may make equal bond dipoles cancel vectorially.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_31",
+      "aqaSection": "3.1.3",
+      "front": "Which three intermolecular forces are in AQA 3.1.3.7?",
+      "back": "van der Waals' (induced dipole–dipole) forces, permanent dipole–dipole and hydrogen bonding.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_32",
+      "aqaSection": "3.1.3",
+      "front": "Do all atoms and molecules have van der Waals' (induced dipole–dipole) forces?",
+      "back": "Yes: instantaneous fluctuations create temporary induced dipoles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_33",
+      "aqaSection": "3.1.3",
+      "front": "What causes induced dipole–dipole (van der Waals') attraction?",
+      "back": "Temporary electron-density fluctuations induce dipoles in neighbouring particles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_34",
+      "aqaSection": "3.1.3",
+      "front": "Why do van der Waals' forces generally increase for larger molecules?",
+      "back": "More electrons and greater polarizability make induced dipoles stronger.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_35",
+      "aqaSection": "3.1.3",
+      "front": "Why can straight-chain molecules boil above more branched isomers?",
+      "back": "Greater surface contact generally strengthens van der Waals' forces.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_36",
+      "aqaSection": "3.1.3",
+      "front": "When do permanent dipole–dipole forces occur?",
+      "back": "Between neighbouring polar molecules with permanent dipoles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_37",
+      "aqaSection": "3.1.3",
+      "front": "What atoms must H be bonded to for strong usual hydrogen bonding?",
+      "back": "Nitrogen, oxygen or fluorine.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_38",
+      "aqaSection": "3.1.3",
+      "front": "What other feature is essential for intermolecular hydrogen bonding?",
+      "back": "A nearby lone pair on N, O or F acts as an electron-pair acceptor site.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_39",
+      "aqaSection": "3.1.3",
+      "front": "Does HCl form conventional hydrogen bonds between HCl molecules?",
+      "back": "No; usual hydrogen bonding in this syllabus needs H bonded to N, O or F.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_40",
+      "aqaSection": "3.1.3",
+      "front": "Why does water have unusually high boiling point for its mass?",
+      "back": "An extensive hydrogen-bond network needs substantial energy to overcome.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_41",
+      "aqaSection": "3.1.3",
+      "front": "Why do NH₃, H₂O and HF have anomalous boiling points?",
+      "back": "They can form intermolecular hydrogen bonds.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_42",
+      "aqaSection": "3.1.3",
+      "front": "What happens to covalent O–H bonds when water boils?",
+      "back": "They stay intact; intermolecular hydrogen bonds are overcome instead.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_43",
+      "aqaSection": "3.1.3",
+      "front": "Why is ice less dense than liquid water?",
+      "back": "Its hydrogen bonds create an open tetrahedral network with more empty space.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_44",
+      "aqaSection": "3.1.3",
+      "front": "How many hydrogen bonds can one water molecule form in ideal ice?",
+      "back": "Four: two via its O–H hydrogens and two via lone-pair acceptor sites.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_45",
+      "aqaSection": "3.1.3",
+      "front": "Why does I₂ boil at a higher temperature than Cl₂?",
+      "back": "I₂ has more electrons; stronger van der Waals' (induced dipole–dipole) forces.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_46",
+      "aqaSection": "3.1.3",
+      "front": "How should a boiling-point comparison be explained fully?",
+      "back": "Identify the forces, compare their strength and state the energy needed to overcome them.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v48_47",
+      "aqaSection": "3.1.3",
+      "front": "Are intermolecular forces and covalent bonds the same?",
+      "back": "No: intermolecular forces attract molecules; covalent bonds join atoms within molecules.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_01",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula and charge of sulfate?",
+      "back": "SO₄²⁻, charge −2.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_02",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula and charge of hydroxide?",
+      "back": "OH⁻, charge −1.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_03",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula and charge of nitrate?",
+      "back": "NO₃⁻, charge −1.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_04",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula and charge of carbonate?",
+      "back": "CO₃²⁻, charge −2.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_05",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula and charge of ammonium?",
+      "back": "NH₄⁺, charge +1.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_06",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula of aluminium nitrate?",
+      "back": "Al(NO₃)₃.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_07",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula of ammonium sulfate?",
+      "back": "(NH₄)₂SO₄.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_08",
+      "aqaSection": "3.1.3",
+      "front": "What is the formula of magnesium nitrate?",
+      "back": "Mg(NO₃)₂.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_09",
+      "aqaSection": "3.1.3",
+      "front": "Why must ionic formulae have balanced charges?",
+      "back": "A compound is neutral: total positive and negative charges sum to zero.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_10",
+      "aqaSection": "3.1.3",
+      "front": "First step for an unfamiliar molecular-shape question?",
+      "back": "Draw a Lewis structure, identifying the central atom and its bonding and lone pairs.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_11",
+      "aqaSection": "3.1.3",
+      "front": "How are double and triple bonds counted in VSEPR?",
+      "back": "Each multiple bond is one region of electron density around the central atom.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_12",
+      "aqaSection": "3.1.3",
+      "front": "What decides a molecule's shape rather than electron geometry?",
+      "back": "Positions of atoms/bonding regions; lone pairs affect angles but are not named as vertices.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_13",
+      "aqaSection": "3.1.3",
+      "front": "Why are lone-pair repulsions stronger than bond-pair repulsions?",
+      "back": "Lone-pair electron density is closer to the central atom and repels bonding pairs more.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_14",
+      "aqaSection": "3.1.3",
+      "front": "What electron-domain shape results from three domains?",
+      "back": "Trigonal planar, approximately 120° before lone-pair distortion.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_15",
+      "aqaSection": "3.1.3",
+      "front": "Three electron domains: 2 bonds and 1 lone pair. Shape?",
+      "back": "Bent (V-shaped), with a bond angle slightly below 120°.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_16",
+      "aqaSection": "3.1.3",
+      "front": "Four electron domains: 2 bonds and 2 lone pairs. Shape?",
+      "back": "Bent, around 104.5° in H₂O.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_17",
+      "aqaSection": "3.1.3",
+      "front": "Four electron domains: 3 bonds and 1 lone pair. Shape?",
+      "back": "Trigonal pyramidal, about 107° in NH₃.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_18",
+      "aqaSection": "3.1.3",
+      "front": "Four electron domains: 4 bonds and no lone pairs. Shape?",
+      "back": "Tetrahedral, about 109.5°.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_19",
+      "aqaSection": "3.1.3",
+      "front": "Five electron domains without lone pairs: shape and angles?",
+      "back": "Trigonal bipyramidal: 90°, 120° and 180°.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_20",
+      "aqaSection": "3.1.3",
+      "front": "Why do lone pairs prefer equatorial sites in a trigonal bipyramid?",
+      "back": "Fewer 90° interactions, so lone-pair repulsion is reduced.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_21",
+      "aqaSection": "3.1.3",
+      "front": "Five domains: 3 bonds, 2 lone pairs. Shape?",
+      "back": "T-shaped (e.g. ClF₃), with two equatorial lone pairs.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_22",
+      "aqaSection": "3.1.3",
+      "front": "Five domains: 2 bonds, 3 lone pairs. Shape?",
+      "back": "Linear (e.g. XeF₂); three lone pairs occupy equatorial sites.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_23",
+      "aqaSection": "3.1.3",
+      "front": "Six domains: 5 bonds and 1 lone pair. Shape?",
+      "back": "Square pyramidal (e.g. BrF₅), approximately 90° angles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_24",
+      "aqaSection": "3.1.3",
+      "front": "Six domains: 4 bonds and 2 lone pairs. Shape?",
+      "back": "Square planar (e.g. XeF₄); lone pairs opposite each other.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_25",
+      "aqaSection": "3.1.3",
+      "front": "Why are H₂O bond angles smaller than those in NH₃?",
+      "back": "H₂O has two lone pairs rather than one, so the bonding pairs are pushed closer together.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_26",
+      "aqaSection": "3.1.3",
+      "front": "What must you count first to predict a molecule's shape?",
+      "back": "Bonding regions and lone pairs around the central atom.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_27",
+      "aqaSection": "3.1.3",
+      "front": "How do you identify δ+ and δ− in a polar bond?",
+      "back": "More electronegative atom is δ−; the other atom is δ+.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_28",
+      "aqaSection": "3.1.3",
+      "front": "Are polar bonds sufficient for a molecular permanent dipole?",
+      "back": "No; the bond dipoles must not cancel when the 3D shape is considered.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_29",
+      "aqaSection": "3.1.3",
+      "front": "Compare the permanent dipoles of CO₂ and SO₂.",
+      "back": "CO₂: none, linear dipoles cancel. SO₂: present, bent dipoles do not cancel.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_30",
+      "aqaSection": "3.1.3",
+      "front": "Why is NH₃ a polar molecule?",
+      "back": "N–H bonds are polar and trigonal pyramidal shape prevents cancellation.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_31",
+      "aqaSection": "3.1.3",
+      "front": "Why does CHCl₃ have a permanent dipole but CCl₄ does not?",
+      "back": "CHCl₃ is asymmetrical; CCl₄ is symmetrical with cancelling C–Cl dipoles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_32",
+      "aqaSection": "3.1.3",
+      "front": "Can a non-polar molecule contain polar bonds? Example?",
+      "back": "Yes. In BF₃ the three polar B–F bond dipoles cancel.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_33",
+      "aqaSection": "3.1.3",
+      "front": "What are the two checks for molecular polarity?",
+      "back": "Check electronegativity differences in bonds, then whether the 3D dipoles cancel.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_34",
+      "aqaSection": "3.1.3",
+      "front": "How do bond polarities differ from intermolecular forces?",
+      "back": "Bond polarity concerns uneven sharing within a bond; intermolecular forces act between molecules.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_35",
+      "aqaSection": "3.1.3",
+      "front": "What name does your class use for induced dipole–dipole attractions?",
+      "back": "Van der Waals' forces (induced dipole–dipole attractions).",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_36",
+      "aqaSection": "3.1.3",
+      "front": "What causes van der Waals' forces?",
+      "back": "Temporary electron fluctuations make dipoles that induce dipoles in neighbouring particles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_37",
+      "aqaSection": "3.1.3",
+      "front": "Do non-polar molecules experience van der Waals' forces?",
+      "back": "Yes; induced dipoles form even without a permanent molecular dipole.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_38",
+      "aqaSection": "3.1.3",
+      "front": "Why are van der Waals' forces stronger in I₂ than Cl₂?",
+      "back": "I₂ has more electrons and a more easily polarised cloud, making stronger induced dipoles.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_39",
+      "aqaSection": "3.1.3",
+      "front": "How do stronger van der Waals' forces affect boiling point?",
+      "back": "More energy is needed to separate molecules, so the boiling point increases.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_40",
+      "aqaSection": "3.1.3",
+      "front": "Why is water's boiling point anomalously high?",
+      "back": "O–H polarity allows H bonds between δ+ H and a lone pair on O of another molecule.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_41",
+      "aqaSection": "3.1.3",
+      "front": "Why does HF hydrogen bond strongly but HCl not normally?",
+      "back": "In HF, H is bonded to F; in HCl, H is bonded to Cl, not N, O or F.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_42",
+      "aqaSection": "3.1.3",
+      "front": "What is overcome when iodine boils: I–I bonds or van der Waals' forces?",
+      "back": "Intermolecular van der Waals' forces; I–I covalent bonds stay intact.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_43",
+      "aqaSection": "3.1.3",
+      "front": "In boiling water, which bonds stay intact?",
+      "back": "The covalent O–H bonds; intermolecular hydrogen bonds are overcome.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_44",
+      "aqaSection": "3.1.3",
+      "front": "What must be overcome when an ionic solid melts?",
+      "back": "Strong electrostatic attractions between oppositely charged ions.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_45",
+      "aqaSection": "3.1.3",
+      "front": "What happens to the strength of induced dipole forces down Group 7?",
+      "back": "They increase down the group.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_46",
+      "aqaSection": "3.1.3",
+      "front": "When can a molecule with polar bonds still be non-polar?",
+      "back": "When its bond dipoles cancel because of the molecule's shape.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_47",
+      "aqaSection": "3.1.3",
+      "front": "Why is NH₃'s bond angle smaller than CH₄'s?",
+      "back": "NH₃ has a lone pair; its stronger repulsion reduces the bond angle.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    },
+    {
+      "id": "chem_bonding_v52_48",
+      "aqaSection": "3.1.3",
+      "front": "When a hydrogen-bonded liquid boils, which bonds are overcome?",
+      "back": "Intermolecular hydrogen bonds, not covalent O–H or N–H bonds.",
+      "assessment": "Individual question and model answer checked; not a claim of complete AQA section coverage"
+    }
+  ],
+  "limits": {
+    "allAqaOutcomesVerified": false,
+    "allPastPapersIncluded": false,
+    "learnerMasteryVerified": false,
+    "progressIdsPreserved": true
+  }
+}
