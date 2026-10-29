@@ -28,6 +28,7 @@ jobs:
           node tests/gap-practice-regression.cjs
           node tests/mechanics-focus-v39.cjs
           node tests/mechanics-graphs-v118.cjs
+          node tests/task1-v197-mechanics-reasoning.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
           node tests/chemistry-amount-v44.cjs
