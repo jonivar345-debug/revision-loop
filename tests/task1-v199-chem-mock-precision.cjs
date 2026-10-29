@@ -36,10 +36,14 @@ assert.notEqual(evaluate(cardBy('task1_v199_chem_001'),'remains blue').status,'c
 assert.equal(evaluate(cardBy('task1_v199_chem_004'),'carboxylic acid').status,'correct');
 assert.notEqual(evaluate(cardBy('task1_v199_chem_004'),'carboxylate salt').status,'correct');
 assert.equal(evaluate(cardBy('task1_v199_chem_005'),'carboxylate salt').status,'correct');
+assert.equal(evaluate(cardBy('task1_v199_chem_008'),'kPa^1').status,'correct');
+assert.notEqual(evaluate(cardBy('task1_v199_chem_008'),'kPa^-1').status,'correct');
+assert.equal(evaluate(cardBy('task1_v199_chem_009'),'kPa^-1').status,'correct');
+assert.notEqual(evaluate(cardBy('task1_v199_chem_009'),'kPa').status,'correct');
 assert.notEqual(evaluate(cardBy('task1_v199_chem_005'),'free carboxylic acid').status,'correct');
 // Reject lists must not collide with an independently accepted wording.
 for(const card of cards.cards){
- const canonical=s=>String(s).toLowerCase().replace(/[^a-z0-9]/g,'');
+ const canonical=s=>String(s).toLowerCase().replace(/[‐‑−–—⁻]/g,'-').replace(/[^a-z0-9-]/g,'');
  const accept=new Set(card.accept.map(canonical));
  for(const bad of card.reject)assert(!accept.has(canonical(bad)),'Cross-labelled Chemistry response: '+card.id+' '+bad);
 }
