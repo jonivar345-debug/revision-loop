@@ -1,0 +1,120 @@
+{
+  "version": "v198",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "reviewedExistingSources": [
+    "editorial/task1-v159-waves-mock-audit.json: 45 assessed wave outcomes with existing cards and three targeted exam questions",
+    "editorial/task1-v180-born-haber-gibbs-short-recall.json: 52 reviewed cards across Energetics/Thermodynamics and associated areas",
+    "energetics_focus_v50.json: 11 previously authored Energetics exam questions",
+    "energetics_weakness_focus_v53.json: 9 focused existing Energetics questions",
+    "science_mock_application_v195.json: existing MgO Born–Haber and other thermodynamics application",
+    "science_practical_data_v194.json: existing RP1/RP2 experimental-data practice",
+    "editorial/task1-v165-completion-gate.md: published limits of archive/spec completeness"
+  ],
+  "officialAQA": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "editorialDecision": "Already extensive conceptual recall and prior similar questions, so avoid duplicating flashcards or generic calculation problems. Focus original data and reasoning combinations not identical to recorded prior prompts. First-harmonic terminology used as in AQA, without unnecessary ‘fundamental/overtone’ labels; Malus's law not introduced.",
+  "counts": {
+    "questions": 10,
+    "physics": 7,
+    "chemistry": 3,
+    "marks": 75,
+    "physicsMarks": 51,
+    "chemistryMarks": 24,
+    "existingCoreFlashcards": 3345,
+    "existingCoreQuestions": 1268,
+    "mathsFirstMockCards": 147,
+    "mathsFirstMockQuestions": 138
+  },
+  "newQuestions": [
+    {
+      "id": "task1_v198_phy_01",
+      "specRef": "3.3.1.1",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "Progressive waves: phase in space and time",
+      "marks": 7
+    },
+    {
+      "id": "task1_v198_phy_02",
+      "specRef": "3.3.2.1",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "Sound interference and coherent sources",
+      "marks": 7
+    },
+    {
+      "id": "task1_v198_phy_03",
+      "specRef": "3.3.1.3",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "RP1 stationary-wave frequency-squared graph",
+      "marks": 9
+    },
+    {
+      "id": "task1_v198_phy_04",
+      "specRef": "3.3.2.2",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "Diffraction grating: angular orders and colours",
+      "marks": 8
+    },
+    {
+      "id": "task1_v198_phy_05",
+      "specRef": "3.3.2.2",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "Single-slit white-light diffraction",
+      "marks": 6
+    },
+    {
+      "id": "task1_v198_phy_06",
+      "specRef": "3.3.1.2",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "Polarisation and transverse-wave evidence",
+      "marks": 6
+    },
+    {
+      "id": "task1_v198_phy_07",
+      "specRef": "3.3.2.3",
+      "stage": "AS",
+      "subject": "Physics",
+      "subtopic": "Snell law, speed and total internal reflection",
+      "marks": 8
+    },
+    {
+      "id": "task1_v198_chem_08",
+      "specRef": "3.1.4.2",
+      "stage": "AS",
+      "subject": "Chemistry",
+      "subtopic": "Calorimetry, limiting reagent and q = n|ΔH|",
+      "marks": 9
+    },
+    {
+      "id": "task1_v198_chem_09",
+      "specRef": "3.1.8.1",
+      "stage": "A2",
+      "subject": "Chemistry",
+      "subtopic": "Born–Haber lattice formation and ionic model comparison",
+      "marks": 8
+    },
+    {
+      "id": "task1_v198_chem_10",
+      "specRef": "3.1.8.2",
+      "stage": "A2",
+      "subject": "Chemistry",
+      "subtopic": "Temperature, entropy and Gibbs feasibility",
+      "marks": 7
+    }
+  ],
+  "limits": [
+    "This is a targeted audit and original practice addition, not verification of all AQA assessment bullets.",
+    "Cannot certify that all 2015–2026 past paper questions are indexed or represented.",
+    "Full model self-matching is not independent mark-scheme certification; equivalent student methods may need manual review.",
+    "No change to cloud keys, original core card IDs, Maths AS Pure first-mock filtering, World, XP or user saved progress."
+  ]
+}
