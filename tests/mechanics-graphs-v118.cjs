@@ -14,7 +14,7 @@ assert.equal(deck.cards.filter(c=>c.id.startsWith('phy_graph_v118_')).length,12)
 assert(deck.deckVersion>=118);
 assert(app.includes("'./mechanics_graphs_v118.json'"));
 assert(sw.includes("'./mechanics_graphs_v118.json'"));
-assert(html.includes('app.js?v=173')||html.includes('app.js?v=122')||html.includes('app.js?v=121')||html.includes('app.js?v=118'));
+assert(/app\.js\?v=\d+/.test(html),'Main app script must be versioned and included');
 assert(html.includes('progress-backup.js?v=120')||html.includes('progress-backup.js?v=1'),'Keep downloadable progress backups');
 assert(sw.includes("'./progress-backup.js'"),'Keep backups available with shell cache');
 for(const k of ['PROGRESS_KEY=\'revisionLoopProgress5\'',"PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(k),'Do not migrate or reset '+k);
