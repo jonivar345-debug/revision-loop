@@ -45,7 +45,7 @@ assert(app.includes("'./science_mock_evidence_v196.json'"));
 assert(app.includes('else if(index===8)')&&app.includes('else if(index===9)'));
 for(const file of ['physics_mock_recall_v196.json','chemistry_mock_recall_v196.json','science_mock_evidence_v196.json'])assert(sw.includes("'./"+file+"'"));
 assert(sw.includes('v196-science-evidence'));
-assert(html.includes('app.js?v=197'));
+assert(html.includes('app.js?v=198'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'")&&app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 const meth=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
 assert(meth);
