@@ -33,6 +33,7 @@ const family=new Function(source.slice(familyStart,familyEnd)+'\nreturn flashCou
 assert.equal(family(byFront("What is magnetic flux density's SI unit?")),'3.7 Fields and their consequences');
 assert.equal(family(byFront('What colour is Fe(OH)₂ precipitate?')),'3.2 Inorganic chemistry');
 assert.equal(family(byFront('What happens to Kp as temperature rises for an exothermic forward reaction?')),'3.1 Physical chemistry');
-assert.match(source,/flashScopeFilter==='mock'\?c\.mock===true/,'Mock flashcard selection must filter at card level');
+assert.match(source,/flashScopeFilter==='mock'\?mockEligibleCard\(c\)/,'Mock flashcard selection must enforce shared card-level mock eligibility');
+assert.match(source,/if\(c\.mock!==true\)return false;/,'Shared eligibility requires explicit mock flag');
 assert.match(source,/selectedFlashCards\(\).*flashEligible\(c\)/s,'Session selection must enforce scope');
 console.log('PASS: flashcard marking accepts verified alternatives, rejects opposite concepts, separates chapters and enforces mock scope.');

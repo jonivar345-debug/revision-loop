@@ -1,0 +1,298 @@
+{
+  "version": "v192",
+  "createdAt": "2026-10-29",
+  "scope": "First school mock, AQA Year 1 Pure: targeted algebra/trigonometry/logarithms/integration; no Year 2, Statistics or Mechanics.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/b-algebra-and-functions",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/e-trigonometry",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/f-exponentials-and-logarithms",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/h-integration"
+  ],
+  "notes": "Ten short high-yield prompts for narrower outcomes not individually evidenced in the earlier 76-outcome crosswalk. This is not a claim that the old full bank entirely lacked these topics.",
+  "cards": [
+    {
+      "id": "task1_v192_maths_001",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "For (x−2)/(x+1) > 0, which x-value must always be excluded?",
+      "back": "x = −1, because the denominator is zero.",
+      "accept": [
+        "x = −1, because the denominator is zero.",
+        "x=-1",
+        "-1",
+        "x = -1, denominator zero"
+      ],
+      "reject": [
+        "x=2",
+        "x=-2"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Algebra & functions",
+      "revisionTopic": "Algebra & functions"
+    },
+    {
+      "id": "task1_v192_maths_002",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "For a rational inequality, which x-values divide the number line into sign-testing intervals?",
+      "back": "Zeros of the numerator and denominator.",
+      "accept": [
+        "Zeros of the numerator and denominator.",
+        "roots of numerator and denominator",
+        "where the numerator or denominator equals zero",
+        "numerator and denominator zeros"
+      ],
+      "reject": [
+        "zeros of the numerator only",
+        "zeros of the denominator only"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Algebra & functions",
+      "revisionTopic": "Algebra & functions"
+    },
+    {
+      "id": "task1_v192_maths_003",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "For the strict inequality x > 3, is x = 3 included?",
+      "back": "No, the boundary is excluded.",
+      "accept": [
+        "No, the boundary is excluded.",
+        "no",
+        "not included",
+        "3 is excluded",
+        "no, x=3 is not included"
+      ],
+      "reject": [
+        "yes",
+        "included"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Algebra & functions",
+      "revisionTopic": "Algebra & functions"
+    },
+    {
+      "id": "task1_v192_maths_004",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "For y = a/x² with a ≠ 0, which axis is the graph symmetric about?",
+      "back": "The y-axis.",
+      "accept": [
+        "The y-axis.",
+        "y-axis",
+        "y axis",
+        "the y axis"
+      ],
+      "reject": [
+        "x-axis",
+        "x axis"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Algebra & functions",
+      "revisionTopic": "Algebra & functions"
+    },
+    {
+      "id": "task1_v192_maths_005",
+      "subject": "Maths",
+      "specRef": "3.3",
+      "stage": "AS",
+      "topic": "Algebra & functions",
+      "front": "For y = a/x² with a > 0, what is the sign of y whenever x ≠ 0?",
+      "back": "Positive (y > 0).",
+      "accept": [
+        "Positive (y > 0).",
+        "positive",
+        "y>0",
+        "above the x-axis"
+      ],
+      "reject": [
+        "negative",
+        "y<0",
+        "zero"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Algebra & functions",
+      "revisionTopic": "Algebra & functions"
+    },
+    {
+      "id": "task1_v192_maths_006",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "What is the period of tan θ in degrees?",
+      "back": "180°.",
+      "accept": [
+        "180°.",
+        "180",
+        "180 degrees",
+        "180°"
+      ],
+      "reject": [
+        "360",
+        "360 degrees",
+        "90"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v192_maths_007",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "To solve sin(2θ) = k for 0° ≤ θ < 360°, what full interval must 2θ cover?",
+      "back": "0° ≤ 2θ < 720°.",
+      "accept": [
+        "0° ≤ 2θ < 720°.",
+        "0 <= 2theta < 720",
+        "0 to less than 720 degrees for 2theta",
+        "0° <= 2θ < 720°"
+      ],
+      "reject": [
+        "0° ≤ 2θ < 360°",
+        "0 to 360 degrees"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v192_maths_008",
+      "subject": "Maths",
+      "specRef": "3.6",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "front": "After solving for every possible value of 2θ, how do you find the corresponding θ values?",
+      "back": "Divide each angle by 2.",
+      "accept": [
+        "Divide each angle by 2.",
+        "divide by 2",
+        "half every angle",
+        "divide each solution by two"
+      ],
+      "reject": [
+        "multiply every angle by two",
+        "add 180 degrees"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry"
+    },
+    {
+      "id": "task1_v192_maths_009",
+      "subject": "Maths",
+      "specRef": "3.7",
+      "stage": "AS",
+      "topic": "Exponentials & logarithms",
+      "front": "For the real logarithm logₐ(x), what must be true about its argument x?",
+      "back": "x > 0.",
+      "accept": [
+        "x > 0.",
+        "x>0",
+        "x is positive",
+        "positive x"
+      ],
+      "reject": [
+        "x>=0",
+        "x=0",
+        "x<0"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Exponentials & logarithms",
+      "revisionTopic": "Exponentials & logarithms"
+    },
+    {
+      "id": "task1_v192_maths_010",
+      "subject": "Maths",
+      "specRef": "3.9",
+      "stage": "AS",
+      "topic": "Integration",
+      "front": "To find total area with the x-axis when a curve crosses it, what must you do with the definite integrals?",
+      "back": "Split at each crossing and add the positive areas.",
+      "accept": [
+        "Split at each crossing and add the positive areas.",
+        "split at the roots and add absolute areas",
+        "split the integral at each crossing and take absolute values",
+        "integrate each side of the crossing and add the magnitudes"
+      ],
+      "reject": [
+        "add signed integrals without taking absolute values",
+        "use the signed integral over the whole interval"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Integration",
+      "revisionTopic": "Integration"
+    }
+  ]
+}

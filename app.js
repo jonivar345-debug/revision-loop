@@ -1,7 +1,7 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json'];
-const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json'];
+const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json'];
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
 let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
@@ -1502,6 +1502,14 @@ function weightedPick(items,n,weightFn){
 // Mock-only exam questions must be explicitly eligible; AS level alone is not a mock flag.
 // The November Maths mock is Year 1 Pure only, so Statistics, Mechanics and
 // school-excluded radian questions remain in full revision, not mock sessions.
+// Exclude A-level-only composite/inverse functions from the first Year 1 Pure mock.
+// Keep the original flashcards in full/taught revision and preserve review history.
+const MOCK_MATHS_YEAR2_EXCLUDED_IDS=new Set(['math_function_composite','math_inverse_condition','task1_v136_063']);
+function mockEligibleCard(c){
+ if(c.mock!==true)return false;
+ if(c.subject!=='Maths')return true;
+ return c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)&&!MOCK_MATHS_YEAR2_EXCLUDED_IDS.has(c.id);
+}
 function mockEligibleQuestion(q){
  if(q.mock!==true)return false;
  if(q.subject!=='Maths')return true;
@@ -1514,7 +1522,7 @@ function mockEligibleQuestion(q){
 
 function startMockSession(){
  const sub=document.getElementById('mockSubject').value,mode=document.getElementById('mockMode').value,count=Number(document.getElementById('mockCount').value);
- const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&c.mock===true).filter(c=>sub!=='Maths'||(c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)));
+ const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c));
  const qAll=subjectExam(sub).filter(mockEligibleQuestion);
  const groups=new Map();for(const q of qAll){if(!groups.has(q.groupId))groups.set(q.groupId,[]);groups.get(q.groupId).push(q)}
  for(const g of groups.values())g.sort((x,y)=>String(x.groupOrder).localeCompare(String(y.groupOrder),undefined,{numeric:true}));
@@ -1543,7 +1551,7 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function flashEligible(c){return flashScopeFilter==='mock'?c.mock===true:flashScopeFilter==='taught'?taughtCard(c):true}
+function flashEligible(c){return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
 function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast('Pick at least one topic');return}
@@ -1584,7 +1592,7 @@ function awardExam(q,marks,answer,missedPoints){
  award(marks,'exam');save();advanceSession();
 }
 
-function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(c=>c.mock===true):a.filter(taughtCard)}
+function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(mockEligibleCard):a.filter(taughtCard)}
 function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(mockEligibleQuestion);return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
@@ -1925,7 +1933,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
 function applyFlashPreset(p){
  flashScopeFilter=['mock','taught','all'].includes(p)?p:'all';
  const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
- if(p!=='clear'){const filtered=p==='mock'?base.filter(c=>c.mock===true):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
+ if(p!=='clear'){const filtered=p==='mock'?base.filter(mockEligibleCard):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
 }
 const PMT_PAPER_INDEX={
@@ -3374,11 +3382,13 @@ async function sync(manual=false){
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
-  // Only the first two Maths banks may add AS Maths cards; the third is AS Chemistry.
+  // Optional Maths banks are indices 0, 1 and 3; index 2 is AS Chemistry.
   if(index<2){
    if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===2){
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else if(index===3){
+   if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }

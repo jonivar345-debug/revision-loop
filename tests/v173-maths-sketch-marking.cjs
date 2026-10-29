@@ -32,7 +32,8 @@ assert(!eligible({subject:'Maths',mock:true,level:'AS',topic:'Statistics',prompt
 assert(!eligible({subject:'Maths',mock:true,level:'AS',topic:'Trigonometry',prompt:'Use 2π radians'}));
 assert(eligible({subject:'Maths',mock:true,level:'AS',topic:'Algebra & functions',prompt:'Find the remainder'}));
 assert.equal(eligible({subject:'Chemistry',mock:true,level:'A2',topic:'Kp',prompt:'Find Kp'}),true);
-assert(app.includes("const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&c.mock===true).filter(c=>sub!=='Maths'||(c.stage==='AS'"));
+assert(app.includes('const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c))'));
+assert(app.includes("return c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)&&!MOCK_MATHS_YEAR2_EXCLUDED_IDS.has(c.id)"));
 assert(html.includes('Maths first mock: Year 12/AS Pure only.'));
 assert(html.includes('The separate Year 13 class paper is after the other mocks'));
 const mainScript=html.match(/app\.js\?v=\d+/);
