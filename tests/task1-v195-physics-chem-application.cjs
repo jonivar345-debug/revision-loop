@@ -48,7 +48,7 @@ assert(app.includes('else if(index===6)')&&app.includes('else if(index===7)'));
 assert(app.includes("!['AS','A2'].includes(c.stage)"));
 assert(app.includes("'./science_mock_application_v195.json'"));
 for(const file of ['physics_mock_recall_v195.json','chemistry_mock_recall_v195.json','science_mock_application_v195.json'])assert(sw.includes("'./"+file+"'"));
-assert(sw.includes('v195-physics-chem-application'));assert(html.includes('app.js?v=195'));
+assert(sw.includes('v195-physics-chem-application'));assert(html.includes('app.js?v=196'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 const gate=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);assert(gate);
 const eligible=vm.runInNewContext(gate[0]+'\nmockEligibleQuestion');

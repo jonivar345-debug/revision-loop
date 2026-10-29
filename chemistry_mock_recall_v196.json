@@ -1,0 +1,100 @@
+{
+  "version": "v196",
+  "createdAt": "2026-10-29",
+  "subject": "Chemistry",
+  "scope": "AS/school-mock single-recall applications; no operational laboratory procedures",
+  "notes": "Context-sensitive contrasts added only where earlier audited cards covered general laws or basic colours rather than this inference. Strict accepted and rejected variants; not an exhaustive spec crosswalk.",
+  "cards": [
+    {
+      "id": "task1_v196_chem_001",
+      "subject": "Chemistry",
+      "specRef": "3.2.3.1",
+      "stage": "AS",
+      "topic": "Group 7",
+      "courseTopic": "Group 7",
+      "revisionTopic": "Group 7",
+      "front": "Why must a silver-nitrate halide test not be acidified with hydrochloric acid?",
+      "back": "Hydrochloric acid introduces chloride ions, causing a false-positive AgCl precipitate.",
+      "accept": [
+        "Hydrochloric acid introduces chloride ions, causing a false-positive AgCl precipitate.",
+        "hydrochloric acid adds chloride ions",
+        "added chloride causes AgCl precipitate",
+        "chloride contaminates the test",
+        "hcl introduces chloride"
+      ],
+      "reject": [
+        "hydrochloric acid adds nitrate",
+        "hcl removes all chloride",
+        "hydrochloric acid prevents precipitation"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v196_chem_002",
+      "subject": "Chemistry",
+      "specRef": "3.2.2",
+      "stage": "AS",
+      "topic": "Group 2",
+      "courseTopic": "Group 2",
+      "revisionTopic": "Group 2",
+      "front": "A white barium precipitate disappears in acid and gives off CO₂. Which interfering anion is suggested?",
+      "back": "Carbonate ions, CO₃²⁻.",
+      "accept": [
+        "Carbonate ions, CO₃²⁻.",
+        "carbonate",
+        "carbonate ions",
+        "co3 2-",
+        "CO3^2-"
+      ],
+      "reject": [
+        "sulfate",
+        "sulphate",
+        "so4 2-",
+        "nitrate"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v196_chem_003",
+      "subject": "Chemistry",
+      "specRef": "3.2.3.1",
+      "stage": "AS",
+      "topic": "Group 7",
+      "courseTopic": "Group 7",
+      "revisionTopic": "Group 7",
+      "front": "A white and cream mixed silver-halide solid is observed. In dilute ammonia, only the white portion disappears. Which silver halide remains?",
+      "back": "Silver bromide, AgBr.",
+      "accept": [
+        "Silver bromide, AgBr.",
+        "silver bromide",
+        "agbr",
+        "silver bromide precipitate"
+      ],
+      "reject": [
+        "silver chloride",
+        "agcl",
+        "silver iodide",
+        "agi"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    }
+  ]
+}
