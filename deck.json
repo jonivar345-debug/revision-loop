@@ -528,33 +528,21 @@
       "kind": "weak",
       "priority": 3,
       "scope": "mock",
-      "front": "What is the core calculation route in a back titration?",
-      "back": "Initial amount added − amount left over = amount that reacted. Then use the balanced-equation mole ratio.",
+      "front": "In a back titration, how do you find the amount that reacted?",
+      "back": "Moles initially added − moles left over.",
       "visual": "back-titration",
-      "concepts": [
-        [
-          "initial"
-        ],
-        [
-          "left over",
-          "remaining",
-          "excess"
-        ],
-        [
-          "subtract",
-          "minus"
-        ],
-        [
-          "mole ratio",
-          "ratio"
-        ]
-      ],
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
       "courseTopic": "Amount of substance",
-      "revisionTopic": "Back titrations"
+      "revisionTopic": "Back titrations",
+      "accept": [
+        "initial moles - remaining moles",
+        "moles added minus moles left over",
+        "initial minus excess",
+        "subtract excess moles from initial moles"
+      ]
     },
     {
       "id": "chem_gas_001",
@@ -771,34 +759,20 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What approximation is often used for a weak monoprotic acid HA of concentration c?",
-      "back": "If dissociation is small: [HA] ≈ c and [H⁺] = [A⁻], so Ka ≈ [H⁺]²/c.",
+      "front": "If weak acid HA dissociates only slightly, what is [HA] approximately?",
+      "back": "[HA] ≈ its initial concentration, c.",
       "active": true,
-      "concepts": [
-        [
-          "ha",
-          "acid"
-        ],
-        [
-          "approximately c",
-          "≈ c",
-          "about c"
-        ],
-        [
-          "h+",
-          "a-"
-        ],
-        [
-          "ka",
-          "h+ squared",
-          "[h+]2"
-        ]
-      ],
       "stage": "A2",
       "mock": true,
       "taught": true,
       "courseTopic": "Acids & bases",
-      "revisionTopic": "Weak acids"
+      "revisionTopic": "Weak acids",
+      "accept": [
+        "[HA] approximately c",
+        "[HA] = c approximately",
+        "the initial acid concentration",
+        "about c"
+      ]
     },
     {
       "id": "chem_kw_001",
@@ -3489,28 +3463,20 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "How do you find x in a hydrated salt, salt·xH₂O?",
-      "back": "Find moles of anhydrous salt and water, then divide by the smaller amount to get the ratio.",
-      "concepts": [
-        [
-          "moles"
-        ],
-        [
-          "salt"
-        ],
-        [
-          "water"
-        ],
-        [
-          "ratio"
-        ]
-      ],
+      "front": "For salt·xH₂O, how is x found from the amounts in moles?",
+      "back": "x = moles of water ÷ moles of anhydrous salt.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
       "courseTopic": "Amount of substance",
-      "revisionTopic": "Amount of substance"
+      "revisionTopic": "Amount of substance",
+      "accept": [
+        "moles of water divided by moles of salt",
+        "water moles/salt moles",
+        "moles H2O / moles anhydrous salt",
+        "water to salt mole ratio"
+      ]
     },
     {
       "id": "chem_ionic_bond",
@@ -3548,8 +3514,12 @@
       "priority": 1,
       "scope": "mock",
       "front": "What is a covalent bond?",
-      "back": "A shared pair of electrons attracted to the nuclei of the bonded atoms.",
+      "back": "Strong electrostatic attraction between a shared pair of electrons and the nuclei of the bonded atoms.",
       "concepts": [
+        [
+          "electrostatic attraction",
+          "attraction"
+        ],
         [
           "shared pair",
           "pair of electrons"
@@ -3564,7 +3534,12 @@
       "mock": true,
       "taught": true,
       "courseTopic": "Bonding",
-      "revisionTopic": "Bonding"
+      "revisionTopic": "Bonding",
+      "accept": [
+        "electrostatic attraction between a shared pair of electrons and two nuclei",
+        "shared pair of electrons attracted to both nuclei",
+        "electrostatic attraction between shared electrons and nuclei"
+      ]
     },
     {
       "id": "chem_metallic_bond",
