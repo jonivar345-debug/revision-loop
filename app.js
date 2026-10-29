@@ -1253,7 +1253,7 @@ function evaluateHalideColours(input){
 function evaluateTollensObservation(input){
  const raw=String(input||'').trim();
  if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
- const s=raw.toLowerCase().replace(/[’‘]/g,\"'\");
+ const s=raw.toLowerCase().replace(/[’‘]/g, String.fromCharCode(39));
  const deniesSilver=/\b(?:no|not|never|without|none)\b.{0,25}\b(?:silver|mirror|deposit)\b|\b(?:don't|doesn't|do not|does not)\b.{0,25}\b(?:silver|mirror|deposit)\b/i.test(s);
  const claimsKetoneSilver=/\bketones?\b.{0,45}\b(?:give|gives|form|forms|produce|produces|show|shows)\b.{0,25}\b(?:silver|mirror|deposit)\b|\b(?:silver mirror|silver deposit)\b.{0,30}\b(?:for|with|from)\s+(?:a\s+)?ketones?\b/i.test(s);
  if(deniesSilver||claimsKetoneSilver)return {status:'wrong',score:0,text:'Aldehydes, rather than ordinary ketones, give the silver-mirror observation.',missing:['silver mirror or grey silver deposit for an aldehyde']};
