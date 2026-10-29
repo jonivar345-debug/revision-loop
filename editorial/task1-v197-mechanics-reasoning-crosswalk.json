@@ -1,0 +1,82 @@
+{
+  "version": "v197",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+  "evidenceReviewed": [
+    "editorial/task1-v157-physics-mechanics-mock-audit.json (33 selected narrow requirements)",
+    "editorial/task1-v176-mechanics-manual-spec-audit.json (85 previously checked legacy Mechanics cards)",
+    "mechanics_focus_v39.json (16 prior original practice questions)",
+    "mechanics_graphs_v118.json (10 earlier graph/slope/couple problems)",
+    "editorial/task1-v165-completion-gate.md (limits of complete specification/paper evidence)"
+  ],
+  "decision": "Existing cards cover core formulae, slopes, couples and graph facts. No duplicate short flashcards added. Provide distinct higher-order worked examples where calculation and signed reasoning need repeated practice; not a claim of newly identified missing syllabus bullets.",
+  "newQuestions": [
+    {
+      "id": "task1_v197_mech_01",
+      "specRef": "3.4.1.1",
+      "subtopic": "Resolving on slopes",
+      "marks": 8,
+      "novelFocus": "Horizontal force on a smooth incline with changing normal reaction"
+    },
+    {
+      "id": "task1_v197_mech_02",
+      "specRef": "3.4.1.4",
+      "subtopic": "Projectiles",
+      "marks": 8,
+      "novelFocus": "Angled projectile launched from a raised platform"
+    },
+    {
+      "id": "task1_v197_mech_03",
+      "specRef": "3.4.1.2",
+      "subtopic": "Moments and couples",
+      "marks": 8,
+      "novelFocus": "Beam equilibrium with a separately applied couple"
+    },
+    {
+      "id": "task1_v197_mech_04",
+      "specRef": "3.4.1.6",
+      "subtopic": "Impulse and momentum",
+      "marks": 7,
+      "novelFocus": "Signed force-time impulses and reversal"
+    },
+    {
+      "id": "task1_v197_mech_05",
+      "specRef": "3.4.1.3",
+      "subtopic": "Motion graphs",
+      "marks": 8,
+      "novelFocus": "Velocity-time reversal, displacement and distance"
+    },
+    {
+      "id": "task1_v197_mech_06",
+      "specRef": "3.4.1.6",
+      "subtopic": "Collisions",
+      "marks": 8,
+      "novelFocus": "Perfectly inelastic collision and mean interaction force"
+    },
+    {
+      "id": "task1_v197_mech_07",
+      "specRef": "3.4.1.4",
+      "subtopic": "Drag and terminal speed",
+      "marks": 7,
+      "novelFocus": "Variable drag, terminal speed and deceleration"
+    }
+  ],
+  "questionCount": 7,
+  "totalMarks": 54,
+  "safety": {
+    "year1Only": true,
+    "chemistryUnchanged": true,
+    "mathsMockUnchanged": true,
+    "preserveCardIDs": true,
+    "preserveCoreBank": true,
+    "preserveProgressKeys": true,
+    "preserveCloudWorldAndPhotos": true
+  },
+  "limitations": [
+    "The question bank has not been exhaustively checked against every historical AQA paper.",
+    "Model answers and automated alternative-mark suggestions remain subject to review.",
+    "This is exam application breadth, not independently demonstrated student mastery or complete Task 1 certification."
+  ]
+}
