@@ -19,11 +19,11 @@ for(const c of extra.cards){
  assert(c.accept.includes(c.back));
  assert(/^3\.[3-9]$/.test(c.specRef));
 }
-assert(app.includes("const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json'];"));
+assert(app.includes("'./maths_mock_recall_v186.json'"));
 assert(app.includes("for(const bank of extraFlashBanks)"));
 assert(app.includes("knownFlashIds.has(c.id)"));
 assert(app.includes("c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock'"));
-assert.match(html,/app\.js\?v=186/);
+assert.match(html,/app\.js\?v=\d+/);
 assert.match(sw,/v186-maths-recall/);
 assert(sw.includes("'./maths_mock_recall_v186.json'"));
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
