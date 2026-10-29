@@ -34,10 +34,11 @@ for(const c of extra.cards){
  assert.equal(evaluate(c,'').status,'neutral',c.id);
 }
 const incorrect=[
-['task1_v186_maths_002','1/2'],['task1_v186_maths_003','sqrt(3)'],['task1_v186_maths_004','(1,0)'],
+['task1_v186_maths_002','1/2'],['task1_v186_maths_002','3'],['task1_v186_maths_003','sqrt(3)'],['task1_v186_maths_004','(1,0)'],
 ['task1_v186_maths_005','e^(kx)'],['task1_v186_maths_006','ln a'],
 ['task1_v186_maths_007','positive'],['task1_v186_maths_009','f(a)-f(b)']];
 for(const [id,answer] of incorrect)
  assert.equal(evaluate(extra.cards.find(c=>c.id===id),answer).status,'wrong','Wrong answer accepted '+id);
+assert(app.includes("[/√/g,' sqrt ']"),'Square roots must not normalise to bare numbers');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 console.log('PASS v186: nine new AS Pure recall cards, core deck unchanged, new maths mock count 125 if extra bank loads');
