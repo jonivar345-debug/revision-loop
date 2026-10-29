@@ -44,7 +44,7 @@ assert.equal([...bank.questions,...oldMaths190.questions,...oldMaths191.question
 assert(app.includes("'./science_practical_data_v194.json'"));
 assert(sw.includes("'./science_practical_data_v194.json'"));
 assert(sw.includes('v194-practical-data'));
-assert(html.includes('app.js?v=195'));
+assert(html.includes('app.js?v=196'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("knownFlashIds.has(c.id)"));
