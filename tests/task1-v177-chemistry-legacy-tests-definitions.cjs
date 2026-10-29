@@ -42,6 +42,7 @@ for(const fix of audit.corrections){const c=byId.get(fix.id);assert.equal(c.fron
 assert.match(html,/app\.js\?v=177/);
 assert.match(sw,/v177-chemistry-test-pair-marking/);
 assert.match(app,/function evaluateHalideColours/);
+assert.match(app,/function evaluateTollensObservation/);
 const b=app.indexOf('function normalise('),e=app.indexOf('function importantTokens(');
 assert(b>=0&&e>b);
 const evaluate=new Function('window',app.slice(b,e)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
@@ -61,6 +62,18 @@ const pairs=[
  ['', 'neutral']
 ];
 for(const [answer,status] of pairs)assert.equal(evaluate(byId.get('chem_rp4'),answer).status,status,'Incorrect halide association marking: '+answer);
+const tollens=[
+ ['A silver mirror or grey silver deposit.','correct'],
+ ['silver mirror','correct'],
+ ['grey silver deposit','correct'],
+ ['Aldehydes give a silver mirror; ketones do not.','correct'],
+ ['Ketones give a silver mirror','wrong'],
+ ['Aldehydes give no silver mirror','wrong'],
+ ['silver mirror from ketones','wrong'],
+ ['Silver','partial'],
+ ['','neutral']
+];
+for(const [answer,status] of tollens)assert.equal(evaluate(byId.get('chem_aldehyde_tollens'),answer).status,status,'Incorrect Tollens observation credit: '+answer);
 const otherWrong=[
  ['chem_aldehyde_tollens','nothing happens'],
  ['chem_aldehyde_tollens','blue precipitate'],
