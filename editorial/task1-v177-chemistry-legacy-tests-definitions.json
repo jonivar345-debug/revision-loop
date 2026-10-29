@@ -1,0 +1,502 @@
+{
+  "version": "v177",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "objective": "Targeted manual review of legacy mock Chemistry tests and definitions after v176 Mechanics, with both correct and incorrect input checks",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "baseline": {
+    "cards": 3345,
+    "active": 3341,
+    "legacyMockScienceRequiringReviewAtV172": 971,
+    "v176ReviewedPhysics": 85,
+    "v177ReviewedChemistry": 54,
+    "remainingScience": 832,
+    "remainingPhysics": 226,
+    "remainingChemistry": 606
+  },
+  "bySubsection": {
+    "7.2 RP4": 1,
+    "7.2 RP6": 1,
+    "3.2.2": 3,
+    "3.2.3": 4,
+    "3.3.3": 7,
+    "3.3.5": 7,
+    "3.3.6": 2,
+    "3.3.7": 4,
+    "3.3.1.3": 1,
+    "3.3.8": 11,
+    "3.3.9": 7,
+    "3.1.12": 6
+  },
+  "corrections": [
+    {
+      "id": "chem_aldehyde_tollens",
+      "previousFront": "What does Tollens' reagent do with an aldehyde?",
+      "previousBack": "It is reduced to silver, producing a silver mirror; ketones give no reaction.",
+      "newFront": "What visible result does an aldehyde give with Tollens' reagent?",
+      "newBack": "A silver mirror or grey silver deposit.",
+      "reason": "Single directly assessable observation, instead of requiring an unrelated ketone comparison."
+    },
+    {
+      "id": "chem_group2_reactivity",
+      "previousFront": "How does Group 2 reactivity change down the group?",
+      "previousBack": "It increases because outer electrons are further from the nucleus and more shielded, so ionisation energies fall.",
+      "newFront": "How does Group 2 metal reactivity change down the group?",
+      "newBack": "It increases.",
+      "reason": "One trend per card; explanations remain on other cards and in exam practice."
+    }
+  ],
+  "marking": {
+    "halideCardId": "chem_rp4",
+    "legacyFailure": "Wrong chloride/iodide colour pairing was given full credit by unordered keyword concepts.",
+    "fix": "Evaluate three explicit ion–precipitate-colour pairs; accept reversed presentation order and ion formulae, give partial for two correct, reject swapped colours.",
+    "targetedAcceptedAnswerVariantCards": 15,
+    "manuallyAddedVariants": 19,
+    "coreModelAnswersChecked": 54
+  },
+  "reviewed": [
+    {
+      "id": "chem_rp4",
+      "topic": "RP4 Ion tests",
+      "aqaSection": "7.2 RP4",
+      "front": "What precipitate colours identify chloride, bromide and iodide after acidifying and adding AgNO₃?",
+      "back": "AgCl white, AgBr cream, AgI yellow.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_rp6",
+      "topic": "RP6 Organic tests",
+      "aqaSection": "7.2 RP6",
+      "front": "What is the test for an alkene?",
+      "back": "Bromine water is decolourised from orange/brown.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_group2_reactivity",
+      "topic": "Group 2",
+      "aqaSection": "3.2.2",
+      "front": "How does Group 2 metal reactivity change down the group?",
+      "back": "It increases.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_group2_hydroxide",
+      "topic": "Group 2",
+      "aqaSection": "3.2.2",
+      "front": "How does Group 2 hydroxide solubility change down the group?",
+      "back": "It increases.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_group2_sulfate",
+      "topic": "Group 2",
+      "aqaSection": "3.2.2",
+      "front": "How does Group 2 sulfate solubility change down the group?",
+      "back": "It decreases.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_halogen_oxidising",
+      "topic": "Group 7",
+      "aqaSection": "3.2.3",
+      "front": "How does halogen oxidising power change down Group 7?",
+      "back": "It decreases.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_halide_reducing",
+      "topic": "Group 7",
+      "aqaSection": "3.2.3",
+      "front": "How does halide-ion reducing power change down Group 7?",
+      "back": "It increases.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_displacement_halogen",
+      "topic": "Group 7",
+      "aqaSection": "3.2.3",
+      "front": "When will one halogen displace another halide?",
+      "back": "A more reactive/stronger oxidising halogen displaces the halide of a less reactive halogen.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_halogeno_sub",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "What mechanism occurs when OH⁻ reacts with a halogenoalkane to form an alcohol?",
+      "back": "Nucleophilic substitution.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_elimination",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "What conditions favour elimination of a halogenoalkane with OH⁻?",
+      "back": "Hot ethanolic hydroxide.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_alcohol_primary",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "What forms when a primary alcohol is oxidised gently and distilled?",
+      "back": "An aldehyde.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_alcohol_primary_reflux",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "What forms when a primary alcohol is oxidised under reflux with excess oxidant?",
+      "back": "A carboxylic acid.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_alcohol_secondary",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "What forms when a secondary alcohol is oxidised?",
+      "back": "A ketone.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_ir_oh",
+      "topic": "Organic analysis",
+      "aqaSection": "3.3.6",
+      "front": "Where is the broad O–H absorption of an alcohol in an IR spectrum?",
+      "back": "About 3230–3550 cm⁻¹.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_ir_carbonyl",
+      "topic": "Organic analysis",
+      "aqaSection": "3.3.6",
+      "front": "Where is the strong C=O absorption approximately?",
+      "back": "Around 1680–1750 cm⁻¹.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_optical",
+      "topic": "Optical isomerism",
+      "aqaSection": "3.3.7",
+      "front": "What causes optical isomerism?",
+      "back": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_cip",
+      "topic": "Optical isomerism",
+      "aqaSection": "3.3.1.3",
+      "front": "How are priorities assigned using CIP rules?",
+      "back": "Higher atomic number of the directly attached atom gets higher priority; move outward at the first difference.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_aldehyde_tollens",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "What visible result does an aldehyde give with Tollens' reagent?",
+      "back": "A silver mirror or grey silver deposit.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_carbonyl_reduction",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "What reagent reduces aldehydes and ketones?",
+      "back": "NaBH₄, sodium tetrahydridoborate.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_carbonyl_hcn",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "What mechanism occurs when HCN adds to a carbonyl compound?",
+      "back": "Nucleophilic addition.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_carboxy_acid",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "Why are carboxylic acids weak acids?",
+      "back": "They only partially dissociate in water.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_strong_acid",
+      "topic": "Acids and bases",
+      "aqaSection": "3.1.12",
+      "front": "For a strong monoprotic acid of concentration c, what is [H⁺]?",
+      "back": "Approximately c because it fully dissociates.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_ph",
+      "topic": "Acids and bases",
+      "aqaSection": "3.1.12",
+      "front": "How is pH calculated from [H⁺]?",
+      "back": "pH = −log₁₀[H⁺].",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_ka",
+      "topic": "Acids and bases",
+      "aqaSection": "3.1.12",
+      "front": "Write the Ka expression for HA ⇌ H⁺ + A⁻.",
+      "back": "Ka = [H⁺][A⁻]/[HA].",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_kw_relation",
+      "topic": "Acids and bases",
+      "aqaSection": "3.1.12",
+      "front": "How do you find [H⁺] from [OH⁻] using Kw?",
+      "back": "[H⁺] = Kw/[OH⁻].",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_acids_and_bases_53",
+      "topic": "Acids and bases",
+      "aqaSection": "3.1.12",
+      "front": "Distinguish a strong acid from a concentrated acid.",
+      "back": "Strong means nearly complete ionisation in water; concentrated means high amount of solute per volume.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_acids_and_bases_55",
+      "topic": "Acids and bases",
+      "aqaSection": "3.1.12",
+      "front": "How is pH defined in terms of hydrogen ion concentration?",
+      "back": "pH=−log₁₀[H⁺], using concentration in mol dm⁻³.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_optical_isomerism_58",
+      "topic": "Optical isomerism",
+      "aqaSection": "3.3.7",
+      "front": "What is an enantiomer?",
+      "back": "One of two non-superimposable mirror-image stereoisomers.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_aldehydes_and_ketones_59",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "Which class normally gives a silver mirror with Tollens' reagent?",
+      "back": "An aldehyde; most simple ketones do not give the same positive test.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_alcohols_60",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "Why can a primary alcohol produce a carboxylic acid on extended oxidation?",
+      "back": "Primary alcohol oxidises to an aldehyde which can oxidise further to carboxylic acid.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_carboxylic_acids_63",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "Which gas forms when a carboxylic acid reacts with carbonate?",
+      "back": "Carbon dioxide (CO₂).",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "v33_card_chemistry_group_7_70",
+      "topic": "Group 7",
+      "aqaSection": "3.2.3",
+      "front": "Why is chlorine a stronger oxidising agent than iodine?",
+      "back": "Chlorine attracts and gains electrons more readily due to smaller size and less shielding.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_spec_v40_001",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "What is the functional group of a carboxylic acid?",
+      "back": "–COOH, a carbonyl and hydroxyl group on the same carbon.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_spec_v40_002",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "Why is a carboxylic acid described as weak?",
+      "back": "Only a fraction of its molecules dissociate into ions in water.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_spec_v40_003",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "Why do carboxylic acids react with carbonates?",
+      "back": "Their acidic protons react with carbonate ions, releasing carbon dioxide.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_spec_v40_004",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "What is a carboxylate ion?",
+      "back": "RCOO−, the conjugate base of a carboxylic acid.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_spec_v40_005",
+      "topic": "Carboxylic acids",
+      "aqaSection": "3.3.9",
+      "front": "What numbering rule applies when naming a carboxylic acid?",
+      "back": "The carbon in –COOH is carbon number 1.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_08",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "Why is the C atom bonded to a halogen electrophilic?",
+      "back": "Bond polarisation gives that carbon a partial positive charge.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_09",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "Which atom is approached by the nucleophile in substitution?",
+      "back": "The electron-poor carbon attached to the halogen.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_10",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "Where do C–halogen bonding electrons go during substitution?",
+      "back": "To the departing halogen, which becomes a halide ion.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_11",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "What is the mechanistic difference between substitution and elimination?",
+      "back": "Substitution replaces a group; elimination removes atoms/groups to create C=C.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_12",
+      "topic": "Halogenoalkanes",
+      "aqaSection": "3.3.3",
+      "front": "Why may the same species be a base in one reaction and nucleophile in another?",
+      "back": "It may accept H+ or donate an electron pair to carbon, respectively.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_17",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "What structural change defines dehydration of an alcohol?",
+      "back": "Loss of a water molecule and formation of C=C.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_18",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "How can proton transfer assist an alcohol elimination mechanism?",
+      "back": "It changes –OH to a better leaving group and permits catalyst regeneration.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_19",
+      "topic": "Alcohols",
+      "aqaSection": "3.3.5",
+      "front": "What distinguishes hydration from dehydration?",
+      "back": "Hydration adds water; dehydration removes it.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_20",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "Why are carbonyl compounds attacked at carbon?",
+      "back": "Their C=O bond is polar, with carbon δ+.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_21",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "Where do the C=O bonding electrons move during nucleophilic addition?",
+      "back": "Towards oxygen while the incoming group bonds to carbon.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_22",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "How is a negatively charged oxygen intermediate converted to –OH?",
+      "back": "It gains a proton.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_23",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "What organic class comes from aldehyde reduction?",
+      "back": "A primary alcohol.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_24",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "What organic class comes from ketone reduction?",
+      "back": "A secondary alcohol.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_25",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "What groups are attached to the same carbon in a hydroxynitrile?",
+      "back": "A hydroxyl group and a nitrile group.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_26",
+      "topic": "Aldehydes and ketones",
+      "aqaSection": "3.3.8",
+      "front": "Why can some carbonyl additions create enantiomer pairs?",
+      "back": "Attack from opposite faces of the planar carbonyl creates different configurations.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_27",
+      "topic": "Optical isomerism",
+      "aqaSection": "3.3.7",
+      "front": "What is required for a common chiral carbon centre?",
+      "back": "Four different substituent groups.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    },
+    {
+      "id": "chem_mechanisms_v42_28",
+      "topic": "Optical isomerism",
+      "aqaSection": "3.3.7",
+      "front": "Why does a racemic mixture give no net optical rotation?",
+      "back": "The enantiomers' rotations cancel.",
+      "review": "Prompt/answer and mock inclusion checked against the stated topic; direct historical tag not modified"
+    }
+  ],
+  "limitations": {
+    "noDirectSpecRefAddedToHistoricalCards": true,
+    "sectionMappingsAreTargetedNotLineByLineCertification": true,
+    "notAll971ScienceLegacyReviewed": true,
+    "officialFullSyllabusCertified": false,
+    "studentMasteryCertified": false
+  }
+}
