@@ -58,8 +58,8 @@
     const x2=flat(/80a\^2|10\*2\^3\*a\^2/);
     const two=flat(/a\^2=9/)&&flat(/a=±3|a=\+\/-3|a=\+-3|a=\+3.*a=-3/);
     const x3=flat(/40a\^3|10\*2\^2\*a\^3/);
-    const plus=flat(/a=3/)&&has(/positiv|x\s*\^?\s*3.{0,36}coefficien|coefficient.{0,36}x\s*\^?\s*3/);
-    const x4=flat(/(?:coefficient|x\^4).{0,40}810|10\*81=810|5\*2\*a\^4=10\*81=810/);
+    const plus=flat(/a=3(?!\d)/)&&has(/positiv|x\s*\^?\s*3.{0,36}coefficien|coefficient.{0,36}x\s*\^?\s*3/);
+    const x4=flat(/10\*81=810|5\*2\*a\^4=10\*81=810/)||has(/(?:coefficient\s+of\s*x\s*\^?\s*4|x\s*\^?\s*4\s+coefficient).{0,22}(?:=|is)\s*\+?810\b/);
     marks=[x2,two,x3,plus,x4];
     break;
    }
@@ -69,7 +69,7 @@
     const first=has(/(?:from\s*x\s*=\s*0\s*to\s*1|0\s*to\s*1|0.{0,6}1).{0,75}4\/3/);
     const middle=has(/(?:from\s*x\s*=\s*1\s*to\s*3|1\s*to\s*3|1.{0,6}3).{0,90}-4\/3/)&&has(/(?:area\s+is|area\s+of|its\s+area|magnitude).{0,25}4\/3/);
     const last=has(/(?:from\s*x\s*=\s*3\s*to\s*4|3\s*to\s*4|3.{0,6}4).{0,80}4\/3/);
-    const total=has(/(?:total\s+area|area\s+total|combined\s+area).{0,35}(?:=\s*)?4(?:\s+square\s+units?)?/);
+    const total=has(/\b(?:total|combined)\s+area\s*(?:=|is|of)\s*\+?4\b|\barea\s+total\s*(?:=|is)\s*\+?4\b/);
     marks=[factor,primitive,first,middle,last,total];
     break;
    }
