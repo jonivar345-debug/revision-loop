@@ -77,6 +77,7 @@ const tollens=[
  ['Ketones give no silver mirror whereas aldehydes give a silver mirror.','correct'],
  ['Aldehydes give no silver mirror whereas ketones give silver.','wrong'],
  ['No silver mirror for aldehydes.','wrong'],
+ ['Ketones do not give a silver mirror, but aldehydes do not.','wrong'],
  ['Ketones give a silver mirror','wrong'],
  ['Aldehydes give no silver mirror','wrong'],
  ['silver mirror from ketones','wrong'],
