@@ -1,0 +1,398 @@
+{
+  "version": "v199",
+  "createdAt": "2026-10-29",
+  "subject": "Chemistry",
+  "scope": "Short, context-distinguishing recall for school Chemistry mock: observed test interpretations, products, pressure units, pH scale and isotopic patterns",
+  "notes": "These 13 cards target applied distinctions after existing 971-card legacy audit. They are not claims that no earlier similar card exists; no experiment or procedural instructions are given.",
+  "cards": [
+    {
+      "id": "task1_v199_chem_001",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Aldehydes and ketones",
+      "revisionTopic": "Aldehydes and ketones",
+      "front": "For an aldehyde, what positive observation is expected with Fehling's solution?",
+      "back": "A brick-red precipitate of copper(I) oxide.",
+      "accept": [
+        "A brick-red precipitate of copper(I) oxide.",
+        "brick-red precipitate",
+        "brick red solid",
+        "red precipitate of Cu2O",
+        "copper(I) oxide precipitate"
+      ],
+      "reject": [
+        "brick-red copper(I) oxide precipitate",
+        "remains blue",
+        "silver mirror"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_002",
+      "subject": "Chemistry",
+      "specRef": "3.3.8",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Aldehydes and ketones",
+      "revisionTopic": "Aldehydes and ketones",
+      "front": "A known carbonyl compound is either an aldehyde or a ketone. Fehling's solution remains blue. Which is more likely?",
+      "back": "A ketone.",
+      "accept": [
+        "A ketone.",
+        "ketone",
+        "a ketone",
+        "ketone compound",
+        "a ketone group"
+      ],
+      "reject": [
+        "aldehyde",
+        "carboxylic acid",
+        "primary alcohol"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_003",
+      "subject": "Chemistry",
+      "specRef": "3.3.9.1",
+      "stage": "A2",
+      "topic": "Carboxylic acids and esters",
+      "courseTopic": "Carboxylic acids and esters",
+      "revisionTopic": "Carboxylic acids and esters",
+      "front": "Which gas accounts for effervescence when a carboxylic acid reacts with a carbonate?",
+      "back": "Carbon dioxide, CO₂.",
+      "accept": [
+        "Carbon dioxide, CO₂.",
+        "carbon dioxide",
+        "co2",
+        "carbon dioxide gas",
+        "carbon dioxide co2"
+      ],
+      "reject": [
+        "hydrogen",
+        "oxygen",
+        "chlorine"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_004",
+      "subject": "Chemistry",
+      "specRef": "3.3.9.1",
+      "stage": "A2",
+      "topic": "Carboxylic acids and esters",
+      "courseTopic": "Carboxylic acids and esters",
+      "revisionTopic": "Carboxylic acids and esters",
+      "front": "In acid-catalysed hydrolysis of an ester, is the acid-derived organic product a carboxylic acid or its salt?",
+      "back": "A carboxylic acid.",
+      "accept": [
+        "A carboxylic acid.",
+        "carboxylic acid",
+        "an organic carboxylic acid",
+        "the carboxylic acid",
+        "carboxylate salt"
+      ],
+      "reject": [
+        "soap",
+        "amide"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_005",
+      "subject": "Chemistry",
+      "specRef": "3.3.9.1",
+      "stage": "A2",
+      "topic": "Carboxylic acids and esters",
+      "courseTopic": "Carboxylic acids and esters",
+      "revisionTopic": "Carboxylic acids and esters",
+      "front": "In alkaline hydrolysis of an ester, what form of the acid-derived product is formed before any acidification?",
+      "back": "A carboxylate salt.",
+      "accept": [
+        "A carboxylate salt.",
+        "carboxylate salt",
+        "carboxylate ion",
+        "salt of a carboxylic acid",
+        "carboxylate"
+      ],
+      "reject": [
+        "free carboxylic acid",
+        "aldehyde",
+        "ester"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_006",
+      "subject": "Chemistry",
+      "specRef": "3.3.9.1",
+      "stage": "A2",
+      "topic": "Carboxylic acids and esters",
+      "courseTopic": "Carboxylic acids and esters",
+      "revisionTopic": "Carboxylic acids and esters",
+      "front": "What three-carbon alcohol is produced when a triglyceride undergoes hydrolysis?",
+      "back": "Glycerol (propane-1,2,3-triol).",
+      "accept": [
+        "Glycerol (propane-1,2,3-triol).",
+        "glycerol",
+        "propane-1,2,3-triol",
+        "glycerine",
+        "glycerol propane-1,2,3-triol"
+      ],
+      "reject": [
+        "ethanol",
+        "methanol",
+        "propan-1-ol"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_007",
+      "subject": "Chemistry",
+      "specRef": "3.3.9.2",
+      "stage": "A2",
+      "topic": "Acyl chlorides",
+      "courseTopic": "Acyl chlorides",
+      "revisionTopic": "Acyl chlorides",
+      "front": "What class of organic product forms when an acyl chloride reacts with a primary amine?",
+      "back": "An N-substituted amide.",
+      "accept": [
+        "An N-substituted amide.",
+        "n substituted amide",
+        "N-substituted amide",
+        "secondary amide",
+        "an n-substituted amide"
+      ],
+      "reject": [
+        "an ester",
+        "a ketone",
+        "a nitrile"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_008",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "stage": "AS",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "front": "If the net exponent on partial pressure in a Kp expression is +1, what are its units when pressures are in kPa?",
+      "back": "kPa.",
+      "accept": [
+        "kPa.",
+        "kpa",
+        "kilopascals",
+        "kPa to the power one",
+        "kPa^1"
+      ],
+      "reject": [
+        "kPa^-1",
+        "unitless",
+        "mol dm-3"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_009",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "stage": "AS",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "front": "If the net exponent on partial pressure in a Kp expression is −1, what are its units when pressures are in kPa?",
+      "back": "kPa⁻¹.",
+      "accept": [
+        "kPa⁻¹.",
+        "kPa^-1",
+        "inverse kilopascals",
+        "per kPa",
+        "1/kPa"
+      ],
+      "reject": [
+        "kpa",
+        "unitless",
+        "kPa^2"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_010",
+      "subject": "Chemistry",
+      "specRef": "3.1.12.2",
+      "stage": "AS",
+      "topic": "Acids and bases",
+      "courseTopic": "Acids and bases",
+      "revisionTopic": "Acids and bases",
+      "front": "At a fixed temperature, what happens to pH when [H⁺] increases by a factor of ten?",
+      "back": "pH decreases by 1.",
+      "accept": [
+        "pH decreases by 1.",
+        "decreases by one",
+        "pH falls by 1",
+        "drops by 1",
+        "one pH unit lower"
+      ],
+      "reject": [
+        "pH increases by one",
+        "stays unchanged",
+        "falls by ten"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_011",
+      "subject": "Chemistry",
+      "specRef": "3.1.12.2",
+      "stage": "AS",
+      "topic": "Acids and bases",
+      "courseTopic": "Acids and bases",
+      "revisionTopic": "Acids and bases",
+      "front": "If [H⁺] doubles, by approximately how many units does pH fall?",
+      "back": "0.301 pH units.",
+      "accept": [
+        "0.301 pH units.",
+        "0.301",
+        "0.30",
+        "0.3",
+        "log10 2"
+      ],
+      "reject": [
+        "1",
+        "2",
+        "10"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_012",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "front": "An organic mass spectrum shows an M and M+2 molecular-ion pair in about a 3:1 intensity ratio. Which halogen atom is indicated?",
+      "back": "One chlorine atom.",
+      "accept": [
+        "One chlorine atom.",
+        "chlorine",
+        "one chlorine atom",
+        "cl",
+        "Cl atom"
+      ],
+      "reject": [
+        "single chlorine atom",
+        "bromine",
+        "iodine"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v199_chem_013",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "front": "The molecular ion of Br₂ gives three isotope peaks at m/z 158, 160 and 162. What is their approximate relative intensity ratio?",
+      "back": "1:2:1.",
+      "accept": [
+        "1:2:1.",
+        "1 2 1",
+        "1:2:1",
+        "one two one",
+        "1 to 2 to 1"
+      ],
+      "reject": [
+        "3:1",
+        "1:1",
+        "3:6:1"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    }
+  ]
+}
