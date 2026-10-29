@@ -56,7 +56,13 @@
     "fix": "Evaluate three explicit ion–precipitate-colour pairs; accept reversed presentation order and ion formulae, give partial for two correct, reject swapped colours.",
     "targetedAcceptedAnswerVariantCards": 15,
     "manuallyAddedVariants": 19,
-    "coreModelAnswersChecked": 54
+    "coreModelAnswersChecked": 54,
+    "tollensCardId": "chem_aldehyde_tollens",
+    "tollensLegacyFailure": "The generic phrase matcher fully credited negated silver-mirror results or wrongly assigned silver mirrors to ketones.",
+    "tollensFix": "Explicit result semantics accept normal silver-mirror wording while rejecting negation and incorrect ketone attribution.",
+    "legacyCorrectAndAliasExamplesVerified": 140,
+    "halideModelAndWrongPairTests": 10,
+    "tollensCorrectAndWrongTests": 9
   },
   "reviewed": [
     {
