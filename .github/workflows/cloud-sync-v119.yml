@@ -100,6 +100,11 @@ on:
       - 'science_practical_data_v194.json'
       - 'editorial/task1-v194-practical-data-application-audit.json'
       - 'tests/task1-v194-practical-data-application.cjs'
+      - 'physics_mock_recall_v195.json'
+      - 'chemistry_mock_recall_v195.json'
+      - 'science_mock_application_v195.json'
+      - 'editorial/task1-v195-physics-chem-application-crosswalk.json'
+      - 'tests/task1-v195-physics-chem-application.cjs'
       - 'editorial/task1-v190-maths-pure-application-audit.json'
       - 'tests/task1-v190-maths-pure-questions.cjs'
       - 'editorial/task1-v189-enthalpy-energy-recall-audit.json'
@@ -264,6 +269,7 @@ jobs:
       - run: node tests/task1-v192-maths-scope-recall.cjs
       - run: node tests/task1-v193-science-mock-precision.cjs
       - run: node tests/task1-v194-practical-data-application.cjs
+      - run: node tests/task1-v195-physics-chem-application.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

@@ -1,0 +1,216 @@
+{
+  "version": "v195",
+  "date": "2026-10-29",
+  "subject": "Chemistry",
+  "scope": "Taught AQA Chemistry 7405 A2 Gibbs, Born-Haber, Period 3 (AS) and Kp; mock excludes buffers",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry"
+  ],
+  "cards": [
+    {
+      "id": "task1_v195_chem_001",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.1.8.2",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "front": "On a straight-line graph of ΔG against temperature T, what does the extrapolated y-intercept equal?",
+      "back": "ΔH.",
+      "accept": [
+        "ΔH.",
+        "enthalpy change",
+        "change in enthalpy",
+        "delta H",
+        "ΔH"
+      ],
+      "reject": [
+        "−ΔS",
+        "ΔS",
+        "activation energy"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v195_chem_002",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.1.8.2",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "front": "If ΔH is positive and ΔS is negative, is the forward reaction thermodynamically feasible at any positive temperature?",
+      "back": "No.",
+      "accept": [
+        "No.",
+        "no",
+        "not feasible at any positive temperature",
+        "never feasible for T > 0"
+      ],
+      "reject": [
+        "yes",
+        "always feasible",
+        "only at high temperature"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v195_chem_003",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.1.8.2",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "front": "If ΔH is negative and ΔS is positive, is the forward reaction thermodynamically feasible at every positive temperature?",
+      "back": "Yes.",
+      "accept": [
+        "Yes.",
+        "yes",
+        "feasible at all positive temperatures",
+        "always feasible for T > 0"
+      ],
+      "reject": [
+        "no",
+        "only at high temperature",
+        "only at low temperature"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v195_chem_004",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "specRef": "3.2.1.2",
+      "topic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "revisionTopic": "Periodicity",
+      "front": "Why does sulfur S8 generally melt at a higher temperature than phosphorus P4?",
+      "back": "S8 has more electrons and stronger London forces.",
+      "accept": [
+        "S8 has more electrons and stronger London forces.",
+        "more electrons and stronger London forces",
+        "S8 molecules have larger electron clouds causing stronger London forces",
+        "stronger induced dipole attractions in S8"
+      ],
+      "reject": [
+        "stronger covalent bonds between S8 molecules",
+        "sulfur has hydrogen bonds",
+        "phosphorus is ionic"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v195_chem_005",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.1.10",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "front": "If the gaseous product and reactant pressure powers are equal in a Kp expression, what are the units of Kp?",
+      "back": "No units.",
+      "accept": [
+        "No units.",
+        "unitless",
+        "dimensionless",
+        "no units",
+        "units cancel"
+      ],
+      "reject": [
+        "kPa",
+        "kPa^-1",
+        "mol dm^-3"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v195_chem_006",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.1.8.1",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "front": "Why is the second electron affinity of oxygen endothermic?",
+      "back": "An electron is added to an already negative ion, against electrostatic repulsion.",
+      "accept": [
+        "An electron is added to an already negative ion, against electrostatic repulsion.",
+        "electron-electron repulsion",
+        "adding an electron to an O- ion requires energy against repulsion",
+        "negative oxygen ion repels another electron"
+      ],
+      "reject": [
+        "the oxygen ion is positive",
+        "strong attraction releases energy"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v195_chem_007",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "specRef": "3.1.8.1",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "front": "What expression links enthalpy of solution to lattice dissociation enthalpy and hydration enthalpies?",
+      "back": "ΔHsolution = ΔHlattice dissociation + ΣΔHhydration.",
+      "accept": [
+        "ΔHsolution = ΔHlattice dissociation + ΣΔHhydration.",
+        "lattice dissociation enthalpy plus enthalpies of hydration",
+        "ΔH solution = lattice dissociation + sum of hydration enthalpies",
+        "lattice dissociation plus total hydration enthalpy"
+      ],
+      "reject": [
+        "lattice formation minus hydration",
+        "hydration only",
+        "negative lattice dissociation only"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "version": "v195",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "studentMasteryCertified": false,
+  "scope": "Selected AQA Physics AS Particles 3.2.2 and Chemistry Year 1 Periodicity plus taught A2 Gibbs/Born-Haber/Kp. First school Maths mock AS Pure only unchanged; Chemistry buffers excluded.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry"
+  ],
+  "crosswalkBasis": [
+    "editorial/task1-v160-particles-mock-audit.json",
+    "editorial/task1-v159-waves-mock-audit.json",
+    "editorial/task1-v180-born-haber-gibbs-short-recall.json",
+    "editorial/task1-v179-chemistry-organic-physical-audit.json",
+    "editorial/task1-v177-chemistry-legacy-tests-definitions.json",
+    "editorial/task1-v143-v135-106-answer-evidence.json",
+    "editorial/task1-v144-chemistry-precision-handover.md",
+    "editorial/task1-v181-science-210-legacy-answer-audit.json"
+  ],
+  "previouslyReviewed": [
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Work function φ definition",
+      "cardId": "phy_pandr_v29_work_function",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v160 particles individual answer"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Threshold condition h f0 = φ",
+      "cardId": "phy_pandr_v29_threshold_eq",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v160 particles individual answer"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Photoemission intensity below threshold",
+      "cardId": "phy_photoelectric_002",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v160 particles individual answer"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "requirement": "Photoelectron stopping voltage to max KE",
+      "cardId": "phy_pandr_v29_stopping_eq",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v160 particles individual answer"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "requirement": "de Broglie equation λ = h/p",
+      "cardId": "phy_debroglie",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v160 particles individual answer"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.3.2.2",
+      "requirement": "Maximum grating diffraction order",
+      "cardId": "task1_phy_060",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v159 waves individual answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "requirement": "ΔG against T plot gradient equals −ΔS",
+      "cardId": "chem_entropy_gibbs_recap_20261024_gibbs_graph",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v180 Born-Haber/Gibbs audited answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "requirement": "Temperature feasibility threshold ΔH/ΔS",
+      "cardId": "chem_entropy_gibbs_recap_20261024_gibbs_threshold",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v180 Born-Haber/Gibbs audited answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "requirement": "Negative ΔG need not imply fast reaction",
+      "cardId": "chem_entropy_gibbs_recap_20261024_negative_not_fast",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v180 Born-Haber/Gibbs audited answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "requirement": "Kp changes only with temperature",
+      "cardId": "chem_kp_temp",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v179 organic/physical audited answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "requirement": "Kp fixed when pressure changes at constant T",
+      "cardId": "chem_kp_pressure",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v179 organic/physical audited answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "requirement": "Definition of lattice dissociation enthalpy",
+      "cardId": "chem_lattice_diss",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v179 organic/physical audited answer"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "Na to Al melting points explained by strengthening metallic bonding",
+      "cardId": "task1_v144_006",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v144 Chemistry precision handover"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "Si to P melting-point fall due to structural change",
+      "cardId": "task1_v130_105",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v143 106 requirement evidence"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "S8 higher MP than Cl2 due to London forces",
+      "cardId": "task1_v144_007",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v144 Chemistry precision handover"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "requirement": "Cl2 versus Ar melting via induced dipoles",
+      "cardId": "task1_v144_008",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v144 Chemistry precision handover"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.3.1",
+      "requirement": "Chloride bromide iodide precipitate colours",
+      "cardId": "chem_rp4",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v177 Chemistry legacy tests answer audit"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "requirement": "TOF drift lighter ions arrive earlier",
+      "cardId": "chem_atomic_v43_27",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v181 Chemistry legacy answer audit"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "requirement": "Random versus systematic errors",
+      "cardId": "phy_uncert_random",
+      "status": "existing_narrow_recall",
+      "evidenceSource": "v160 measurements and v181 legacy answers"
+    }
+  ],
+  "newRecallEvidence": [
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "kind": "flashcards",
+      "ids": [
+        "task1_v195_phy_001",
+        "task1_v195_phy_002",
+        "task1_v195_phy_003",
+        "task1_v195_phy_004",
+        "task1_v195_phy_006"
+      ],
+      "focus": "Stop-voltage/frequency graph gradients, threshold intercept and counterintuitive intensity response"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "kind": "flashcards",
+      "ids": [
+        "task1_v195_phy_005"
+      ],
+      "focus": "Matter-wavelength change with electron kinetic energy"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "kind": "flashcards",
+      "ids": [
+        "task1_v195_chem_001",
+        "task1_v195_chem_002",
+        "task1_v195_chem_003"
+      ],
+      "focus": "Gibbs graph intercept and unconditional sign combinations"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "kind": "flashcards",
+      "ids": [
+        "task1_v195_chem_004"
+      ],
+      "focus": "S8 versus P4 melting comparison"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "kind": "flashcards",
+      "ids": [
+        "task1_v195_chem_005"
+      ],
+      "focus": "Dimensionless Kp when reaction has equal total pressure powers"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "kind": "flashcards",
+      "ids": [
+        "task1_v195_chem_006",
+        "task1_v195_chem_007"
+      ],
+      "focus": "Second electron affinity sign and solution/hydration/lattice energy identity"
+    }
+  ],
+  "newPracticeEvidence": [
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.1",
+      "kind": "original_application_question",
+      "id": "task1_v195_exam_01",
+      "focus": "Unfamiliar stopping-potential graph, h/e slope, f0, φ, intensity interpretation",
+      "status": "new_exam_skill_test_not_mastery_proof"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.2.2.4",
+      "kind": "original_application_question",
+      "id": "task1_v195_exam_02",
+      "focus": "Electron kinetic energy, momentum and wavelength vs accelerating voltage",
+      "status": "new_exam_skill_test_not_mastery_proof"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "kind": "original_application_question",
+      "id": "task1_v195_exam_03",
+      "focus": "MgO Born-Haber energetic cycle and electron-affinity sign",
+      "status": "new_exam_skill_test_not_mastery_proof"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "kind": "original_application_question",
+      "id": "task1_v195_exam_04",
+      "focus": "Mole table, gas partial pressures, Kp and pressure response",
+      "status": "new_exam_skill_test_not_mastery_proof"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.2.1.2",
+      "kind": "original_application_question",
+      "id": "task1_v195_exam_05",
+      "focus": "Metallic, covalent and molecular Period 3 melting-point trend",
+      "status": "new_exam_skill_test_not_mastery_proof"
+    }
+  ],
+  "totals": {
+    "selectedExistingAnswerEvidence": 19,
+    "newAtomicFlashcards": 13,
+    "newPhysicsFlashcards": 6,
+    "newChemistryFlashcards": 7,
+    "newOriginalExamQuestions": 5,
+    "newOriginalExamMarks": 36,
+    "currentCoreCards": 3345,
+    "currentOriginalExamBank": 1268,
+    "mathsFirstMockQuestions": 138,
+    "mathsFirstMockFlashcards": 147,
+    "expectedPhysicsMockFlashcards": 740,
+    "expectedChemistryMockFlashcards": 1545
+  },
+  "criticalTeachingGate": {
+    "physics": "AS only",
+    "chemistry": "Only confirmed taught A2 Gibbs, Born-Haber and Kp; Period 3 card AS",
+    "maths": "First mock Year 12 Pure, no Year 2, Statistics or Mechanics",
+    "buffers": "excluded"
+  },
+  "preservation": [
+    "No original deck cards, original question records, cloud XP, purchases, progress keys or World media modified.",
+    "New supplement IDs are unique and existing evidence IDs retained.",
+    "Only original AQA-style questions, no copyrighted exam-paper reproduction.",
+    "No manual or unsupervised chemistry practical procedures authored."
+  ],
+  "limitations": [
+    "This is a selected subsection crosswalk, not an exhaustive 7405/7408 audit.",
+    "Narrow existing recall evidence does not certify full experimental or calculation competency.",
+    "No user mastery claims. Numerical answer alternatives can require examiner/user review; ECF not fully automated.",
+    "Historical paper inventory still lacks complete 2015–2026 paper-by-paper verification.",
+    "v144 already had a mole definition, so avoid adding further duplicate mole cards; no new redundant Group 7 test-colour cards."
+  ]
+}
