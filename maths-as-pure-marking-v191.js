@@ -27,7 +27,7 @@
     const quadratic=flat(/2cos\^2theta-costheta-1=0/);
     const factor=flat(/\(2costheta\+1\)\(costheta-1\)=0|\(costheta-1\)\(2costheta\+1\)=0/);
     const values=flat(/costheta=1/)&&flat(/costheta=-1\/2|costheta=-0\.5/);
-    const angleText=t.match(/(?:theta\s*=\s*|solutions?\s*(?:are|:|=)\s*)([-+\d°.,\s]+)(?:;|$)/i)?.[1]||'';
+    const angleText=t.match(/(?:\btheta\s*=\s*|\bsolutions?\s*(?:are|:|=)\s*)([-+\d°.,\s]+)/i)?.[1]||'';
     const angles=[...angleText.matchAll(/[-+]?\d+(?:\.\d+)?/g)].map(m=>Number(m[0]));
     const solutions=angles.length===3&&angles.every(v=>[0,120,240].includes(v))&&new Set(angles).size===3;
     marks=[identity,quadratic,factor,values,solutions];
