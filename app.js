@@ -1228,6 +1228,11 @@ function formulaScore(input,expected){
 function evaluateHalideColours(input){
  const raw=String(input||'').trim();
  if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+ // Colour labels without their polarity are not evidence of a correct pair:
+ // "chloride is not white" must not be marked as "chloride white".
+ const negatedColour=/\b(?:no|not|never|isn't|isnt|doesn't|doesnt|aren't|arent)\b(?:\W+\w+){0,5}\W+(?:white|cream|yellow)\b/i.test(raw);
+ const disownsAnswer=/\b(?:this|these|that|those)\s+(?:is|are)\s+(?:wrong|false|incorrect)\b/i.test(raw);
+ if(negatedColour||disownsAnswer)return {status:'wrong',score:0,text:'The answer contradicts a precipitate colour; check the exact ion–colour pairing.',missing:['AgCl → white','AgBr → cream','AgI → yellow']};
  const labels=normalise(raw).match(/\b(?:agcl|agbr|agi|chloride|bromide|iodide|white|cream|yellow)\b/g)||[];
  const ions={agcl:'chloride',chloride:'chloride',agbr:'bromide',bromide:'bromide',agi:'iodide',iodide:'iodide'};
  const colours={chloride:'white',bromide:'cream',iodide:'yellow'};
