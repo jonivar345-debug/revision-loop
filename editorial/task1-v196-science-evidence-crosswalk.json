@@ -1,0 +1,469 @@
+{
+  "version": "v196",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "School mock Physics 7408 AS Electricity 3.5 and Chemistry 7405 AS Group 2 3.2.2, Group 7 3.2.3 and identification practical observations. No year-2 Maths, buffers or untaught Chemistry.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment"
+  ],
+  "reviewMethod": "Conservative: reuse individually saved prior evidence (front/back where available) with topic-specific AQA text. New original applied problems test harder combined reasoning; no retrospective claim that this is all spec bullets.",
+  "physicsPriorEvidence": {
+    "source": "editorial/task1-v158-physics-electricity-mock-audit.json",
+    "count": 33,
+    "items": [
+      {
+        "specRef": "3.5.1.1",
+        "requirement": "Electric current means charge flowing per unit time",
+        "cardId": "phy_current",
+        "front": "What is electric current?",
+        "back": "I = ΔQ/Δt, rate of flow of charge.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.1",
+        "requirement": "Potential difference means energy transferred per unit charge",
+        "cardId": "phy_pd",
+        "front": "Define potential difference.",
+        "back": "Energy transferred per unit charge: V = W/Q.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.1",
+        "requirement": "Resistance is potential difference divided by current",
+        "cardId": "phy_resistance",
+        "front": "What is resistance?",
+        "back": "R = V/I.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.2",
+        "requirement": "Ohm's law requires constant physical conditions",
+        "cardId": "task1_phy_095",
+        "front": "What condition is required for Ohm's law?",
+        "back": "Constant physical conditions, including temperature.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.2",
+        "requirement": "Interpret why a filament lamp is non-ohmic",
+        "cardId": "phy_filament_iv",
+        "front": "Why does a filament lamp's resistance rise at high current?",
+        "back": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.2",
+        "requirement": "Explain diode current–voltage characteristics",
+        "cardId": "phy_diode",
+        "front": "How does an idealised diode conduct?",
+        "back": "It conducts strongly in the forward direction after its threshold and very little in reverse.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.2",
+        "requirement": "Distinguish gradients of I against V and V against I",
+        "cardId": "phy_graph_weakness_v36_iv_axes_resistance",
+        "front": "For an ohmic conductor, what is the gradient of V against I versus I against V?",
+        "back": "V (y) vs I (x): gradient = R. I (y) vs V (x): gradient = 1/R.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.2",
+        "requirement": "An ideal ammeter has zero resistance",
+        "cardId": "task1_phy_093",
+        "front": "What is an ideal ammeter's resistance?",
+        "back": "Zero.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.2",
+        "requirement": "An ideal voltmeter has infinite resistance",
+        "cardId": "task1_phy_094",
+        "front": "What is an ideal voltmeter's resistance?",
+        "back": "Infinite.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "Use relationship between resistivity, R, L and A",
+        "cardId": "phy_resistivity",
+        "front": "What equation links resistance and resistivity?",
+        "back": "R = ρL/A.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "Recall resistivity unit",
+        "cardId": "task1_phy_008",
+        "front": "What is the unit of resistivity in base units?",
+        "back": "Ω m.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "Explain metal resistance increasing with temperature",
+        "cardId": "task1_v125_064",
+        "front": "Why does a metal's resistance often rise with temperature?",
+        "back": "Greater lattice vibrations increase electron scattering.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "NTC thermistor resistance falls when temperature increases",
+        "cardId": "phy_thermistor",
+        "front": "For an NTC thermistor, what happens to resistance as temperature rises?",
+        "back": "Resistance decreases.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "Superconductors have zero resistivity below a critical temperature",
+        "cardId": "task1_phy_099",
+        "front": "What is a superconductor?",
+        "back": "A material with zero resistivity below its critical temperature.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "Recognise one application of a superconductor",
+        "cardId": "task1_v154_001",
+        "front": "Name one use of superconductors in the AQA specification.",
+        "back": "Strong magnetic fields or lower energy losses in power transmission.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.3",
+        "requirement": "Use resistance–length graph gradient in practical 5",
+        "cardId": "task1_practical_011",
+        "front": "What does the gradient of resistance against wire length give?",
+        "back": "ρ/A, for a wire of constant cross-section.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Series components carry equal current",
+        "cardId": "phy_series_current",
+        "front": "What is true of current in a series circuit?",
+        "back": "The current is the same at every point.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Series potential differences add to supply p.d.",
+        "cardId": "phy_series_pd",
+        "front": "What happens to p.d. in a series circuit?",
+        "back": "The supply p.d. equals the sum of component p.d.s.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Parallel branches have equal p.d.",
+        "cardId": "phy_parallel_pd",
+        "front": "What is true of p.d. across parallel branches?",
+        "back": "It is the same across each branch.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Current entering and leaving a circuit junction is equal",
+        "cardId": "phy_parallel_current",
+        "front": "How does current behave at a junction?",
+        "back": "Total current into a junction equals total current out.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Recall electrical power formulae",
+        "cardId": "phy_power_elec",
+        "front": "Give three electrical power equations.",
+        "back": "P = VI = I²R = V²/R.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Equivalent resistance in series is sum of resistances",
+        "cardId": "task1_v138_004",
+        "front": "How do the resistances of series-connected components combine?",
+        "back": "Rₜ = R₁ + R₂ + … .",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Equivalent resistance in parallel uses reciprocals",
+        "cardId": "task1_v138_005",
+        "front": "What is the rule for equivalent resistance of two parallel resistors?",
+        "back": "1/Rₜ = 1/R₁ + 1/R₂.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Combine identical cells in series accounting for internal resistance",
+        "cardId": "task1_v158_001",
+        "front": "For n identical cells connected in series, what are the total emf and internal resistance?",
+        "back": "Total emf = nε; total internal resistance = nr.",
+        "status": "new_short_recall_card"
+      },
+      {
+        "specRef": "3.5.1.4",
+        "requirement": "Combine identical cells in parallel accounting for internal resistance",
+        "cardId": "task1_v158_002",
+        "front": "For n identical cells connected in parallel, what are the total emf and internal resistance?",
+        "back": "Total emf = ε; total internal resistance = r/n.",
+        "status": "new_short_recall_card"
+      },
+      {
+        "specRef": "3.5.1.5",
+        "requirement": "Unloaded divider output depends on resistance fraction",
+        "cardId": "phy_potential_divider",
+        "front": "For two series resistors, how is output p.d. found?",
+        "back": "Vout = Vin × R₂/(R₁ + R₂), taking R₂ across the output.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.5",
+        "requirement": "Loading the lower divider resistor reduces effective resistance",
+        "cardId": "task1_v154_004",
+        "front": "Why can loading the lower part of a divider lower its output voltage?",
+        "back": "The parallel load lowers that branch resistance and its share of the supply p.d.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.5",
+        "requirement": "NTC thermistor in lower divider branch reduces output on heating",
+        "cardId": "task1_v138_006",
+        "front": "What happens to Vout across an NTC thermistor as temperature increases?",
+        "back": "Vout falls when supply voltage and the other series resistance are fixed.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.6",
+        "requirement": "Emf is energy supplied per unit charge",
+        "cardId": "phy_emf",
+        "front": "Define emf.",
+        "back": "Energy supplied by the source per unit charge.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.6",
+        "requirement": "Terminal voltage is emf minus internal-resistance lost volts",
+        "cardId": "phy_internal_001",
+        "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+        "back": "V = ε − Ir. The term Ir is the lost volts inside the cell.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.6",
+        "requirement": "On graph of terminal p.d. V against current I, intercept gives emf, gradient -r",
+        "cardId": "phy_rp6",
+        "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+        "back": "y-intercept = emf ε and gradient = −r.",
+        "status": "supported_existing_recall"
+      },
+      {
+        "specRef": "3.5.1.6",
+        "requirement": "A cell with no current has terminal p.d. equal to emf",
+        "cardId": "task1_v158_003",
+        "front": "What is the terminal p.d. of a cell when no current flows?",
+        "back": "It equals the emf because the lost volts Ir are zero.",
+        "status": "new_short_recall_card"
+      },
+      {
+        "specRef": "3.5.1.6",
+        "requirement": "Required practical 6 uses graph terminal p.d. against current",
+        "cardId": "task1_practical_012",
+        "front": "Which graph is used to find a cell's emf and internal resistance?",
+        "back": "Terminal p.d. V against current I.",
+        "status": "supported_existing_recall"
+      }
+    ]
+  },
+  "chemistryPriorEvidence": {
+    "source": "editorial/task1-v143-v135-106-answer-evidence.json",
+    "items": [
+      {
+        "requirement": "Compare reactions of Group 2 elements with water",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      },
+      {
+        "requirement": "Explain trend in Group 2 hydroxide solubility",
+        "status": "partially_supported_or_needs_application",
+        "cardIds": []
+      },
+      {
+        "requirement": "Explain trend in Group 2 sulfate solubility",
+        "status": "partially_supported_or_needs_application",
+        "cardIds": []
+      },
+      {
+        "requirement": "Interpret sulfate-ion test with acidified barium reagent",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      },
+      {
+        "requirement": "Explain halogen electronegativity and boiling trends",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      },
+      {
+        "requirement": "Explain halogen oxidising power down Group 7",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      },
+      {
+        "requirement": "Explain halide reducing power down Group 7",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      },
+      {
+        "requirement": "Predict halogen displacement reactions",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      },
+      {
+        "requirement": "Interpret silver nitrate tests of Cl- Br- I-",
+        "status": "answer_checked_for_narrow_recall",
+        "cardIds": []
+      }
+    ],
+    "legacySource": "editorial/task1-v177-chemistry-legacy-tests-definitions.json",
+    "legacyTestCards": [
+      {
+        "cardId": "chem_rp4",
+        "front": "What precipitate colours identify chloride, bromide and iodide after acidifying and adding AgNO₃?",
+        "back": "AgCl white, AgBr cream, AgI yellow."
+      },
+      {
+        "cardId": "chem_group2_reactivity",
+        "front": "How does Group 2 metal reactivity change down the group?",
+        "back": "It increases."
+      },
+      {
+        "cardId": "chem_group2_hydroxide",
+        "front": "How does Group 2 hydroxide solubility change down the group?",
+        "back": "It increases."
+      },
+      {
+        "cardId": "chem_group2_sulfate",
+        "front": "How does Group 2 sulfate solubility change down the group?",
+        "back": "It decreases."
+      },
+      {
+        "cardId": "chem_halide_reducing",
+        "front": "How does halide-ion reducing power change down Group 7?",
+        "back": "It increases."
+      },
+      {
+        "cardId": "chem_displacement_halogen",
+        "front": "When will one halogen displace another halide?",
+        "back": "A more reactive/stronger oxidising halogen displaces the halide of a less reactive halogen."
+      },
+      {
+        "cardId": "v33_card_chemistry_group_7_70",
+        "front": "Why is chlorine a stronger oxidising agent than iodine?",
+        "back": "Chlorine attracts and gains electrons more readily due to smaller size and less shielding."
+      }
+    ]
+  },
+  "newFlashcards": [
+    {
+      "subject": "Physics",
+      "id": "task1_v196_phy_001",
+      "specRef": "3.5.1.5",
+      "distinction": "upper-leg NTC and lower fixed-resistor sensor output; v158 had lower-leg NTC instead"
+    },
+    {
+      "subject": "Physics",
+      "id": "task1_v196_phy_002",
+      "specRef": "3.5.1.5",
+      "distinction": "output load increases supply current, a different response from existing loaded-output p.d."
+    },
+    {
+      "subject": "Chemistry",
+      "id": "task1_v196_chem_001",
+      "specRef": "3.2.3.1",
+      "distinction": "chloride contamination makes a silver ion result non-specific, beyond just halide precipitate colours"
+    },
+    {
+      "subject": "Chemistry",
+      "id": "task1_v196_chem_002",
+      "specRef": "3.2.2",
+      "distinction": "barium solid disappearing under acid conditions identifies carbonate interference, rather than just sulfate colour"
+    },
+    {
+      "subject": "Chemistry",
+      "id": "task1_v196_chem_003",
+      "specRef": "3.2.3.1",
+      "distinction": "mixed silver halide observation: selective dissolution leaves AgBr"
+    }
+  ],
+  "newOriginalQuestions": [
+    {
+      "id": "task1_v196_exam_01",
+      "expectedSubject": "Physics",
+      "application": "NTC sensor circuit: currents and output from two temperatures"
+    },
+    {
+      "id": "task1_v196_exam_02",
+      "expectedSubject": "Physics",
+      "application": "Identical cells: series vs parallel emf, internal resistance and current"
+    },
+    {
+      "id": "task1_v196_exam_03",
+      "expectedSubject": "Physics",
+      "application": "Filament I–V dataset: R=V/I vs I–V tangent"
+    },
+    {
+      "id": "task1_v196_exam_04",
+      "expectedSubject": "Physics",
+      "application": "Loaded divider: parallel branches and supply current"
+    },
+    {
+      "id": "task1_v196_exam_05",
+      "expectedSubject": "Chemistry",
+      "application": "Mixed silver-halide results; ionic evidence"
+    },
+    {
+      "id": "task1_v196_exam_06",
+      "expectedSubject": "Chemistry",
+      "application": "Barium sulfate/carbonate false-positive conceptual interpretation"
+    },
+    {
+      "id": "task1_v196_exam_07",
+      "expectedSubject": "Chemistry",
+      "application": "Group 2 solubility contrasts and AQA use-cases"
+    },
+    {
+      "id": "task1_v196_exam_08",
+      "expectedSubject": "Chemistry",
+      "application": "Halogen displacement and oxidation/reduction"
+    }
+  ],
+  "counts": {
+    "existingElectricityRowsReviewed": 33,
+    "selectedChemistrySampleRows": 9,
+    "legacyChemistryTestRows": 7,
+    "newPhysicsCards": 2,
+    "newChemistryCards": 3,
+    "newPhysicsQuestions": 4,
+    "newChemistryQuestions": 4,
+    "newExamMarks": 57,
+    "unchangedMainDeckCards": 3345,
+    "unchangedMainExamQuestions": 1268,
+    "expectedMockPhysicsCards": 742,
+    "expectedMockChemistryCards": 1548,
+    "expectedMathsFirstMockCards": 147,
+    "expectedMathsFirstMockQuestions": 138
+  },
+  "mathsScope": "AS Year 1 Pure first mock; Year 2, Mechanics, Statistics excluded; no changes to Maths data",
+  "limits": [
+    "This is an answer-evidence audit of the named 33 Physics requirements and selected Chemistry tests, not all AQA requirements.",
+    "The 57 marks are from original questions; no official paper provenance or historical full-paper coverage is claimed.",
+    "Chemical content is conceptual interpretation of hypothetical observations, not laboratory method instructions.",
+    "Student mastery, performance of practicals, full automated ECF and reliable diagram recognition not certified.",
+    "Unchanged base deck, exam bank, cloud-progress IDs, XP, scanner, World media."
+  ]
+}
