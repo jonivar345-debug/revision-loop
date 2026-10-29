@@ -77,6 +77,8 @@ on:
       - 'tests/task1-v179-chemistry-organic-physical-audit.cjs'
       - 'tests/task1-v180-born-haber-gibbs-short-recall.cjs'
       - 'tests/task1-v181-science-210-legacy-answer-audit.cjs'
+      - 'tests/task1-v182-220-physics-chemistry-precision.cjs'
+      - 'editorial/task1-v182-220-physics-chemistry-precision.json'
       - 'editorial/task1-v181-science-210-legacy-answer-audit.json'
       - 'editorial/task1-v180-born-haber-gibbs-short-recall.json'
       - 'editorial/task1-v179-chemistry-organic-physical-audit.json'
@@ -216,6 +218,7 @@ jobs:
       - run: node tests/task1-v179-chemistry-organic-physical-audit.cjs
       - run: node tests/task1-v180-born-haber-gibbs-short-recall.cjs
       - run: node tests/task1-v181-science-210-legacy-answer-audit.cjs
+      - run: node tests/task1-v182-220-physics-chemistry-precision.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
