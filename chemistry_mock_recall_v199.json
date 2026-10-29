@@ -20,12 +20,13 @@
         "brick-red precipitate",
         "brick red solid",
         "red precipitate of Cu2O",
-        "copper(I) oxide precipitate"
+        "copper(I) oxide precipitate",
+        "brick-red copper(I) oxide precipitate"
       ],
       "reject": [
-        "brick-red copper(I) oxide precipitate",
         "remains blue",
-        "silver mirror"
+        "silver mirror",
+        "white precipitate"
       ],
       "strictRecall": true,
       "taught": true,
@@ -110,9 +111,10 @@
         "carboxylic acid",
         "an organic carboxylic acid",
         "the carboxylic acid",
-        "carboxylate salt"
+        "the free carboxylic acid"
       ],
       "reject": [
+        "carboxylate salt",
         "soap",
         "amide"
       ],
