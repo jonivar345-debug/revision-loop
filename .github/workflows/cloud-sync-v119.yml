@@ -74,6 +74,8 @@ on:
       - 'tests/task1-v176-mechanics-manual-spec-audit.cjs'
       - 'tests/task1-v177-chemistry-legacy-tests-definitions.cjs'
       - 'tests/task1-v178-chemistry-core-definitions.cjs'
+      - 'tests/task1-v179-chemistry-organic-physical-audit.cjs'
+      - 'editorial/task1-v179-chemistry-organic-physical-audit.json'
       - 'editorial/task1-v178-chemistry-core-definitions.json'
       - 'tests/task1-v154-legacy-evidence.cjs'
       - 'editorial/task1-v177-chemistry-legacy-tests-definitions.json'
@@ -207,6 +209,7 @@ jobs:
       - run: node tests/task1-v176-mechanics-manual-spec-audit.cjs
       - run: node tests/task1-v177-chemistry-legacy-tests-definitions.cjs
       - run: node tests/task1-v178-chemistry-core-definitions.cjs
+      - run: node tests/task1-v179-chemistry-organic-physical-audit.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

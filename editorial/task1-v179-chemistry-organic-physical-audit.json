@@ -1,0 +1,477 @@
+{
+  "version": "v179",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "objective": "AQA answer-level review of 48 more existing Chemistry cards across organic concepts, thermodynamics, kinetics, equilibria and practical recall; five single-target wording corrections",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "baseline": {
+    "cards": 3345,
+    "active": 3341,
+    "mockEligible": 2379,
+    "originalExamQuestions": 1268,
+    "reviewedPhysics": 85,
+    "reviewedChemistryBefore": 98,
+    "reviewedThisBatch": 48,
+    "reviewedScienceTotal": 231,
+    "remainingScience": 740,
+    "remainingChemistry": 514,
+    "remainingPhysics": 226
+  },
+  "bySubsection": {
+    "3.2.1": 1,
+    "3.3.1.2": 2,
+    "3.3.4.2": 3,
+    "3.3.3.1": 1,
+    "3.3.2.2": 2,
+    "3.3.9.1": 1,
+    "3.3.9.2": 3,
+    "3.1.8": 9,
+    "3.1.9": 8,
+    "3.1.10": 3,
+    "7.2": 4,
+    "3.1.2": 3,
+    "3.1.1": 1,
+    "3.1.3": 3,
+    "3.1.4": 1,
+    "3.1.6": 1,
+    "3.1.12": 2
+  },
+  "corrections": [
+    {
+      "id": "chem_prac_burette",
+      "previousFront": "Why are two burette readings involved in one titre?",
+      "previousBack": "The titre is final reading − initial reading, so uncertainty comes from both readings.",
+      "newFront": "How is the titre calculated from initial and final burette readings?",
+      "newBack": "Final reading − initial reading.",
+      "reason": "Keep each recall card focused on the fact requested"
+    },
+    {
+      "id": "v33_card_chemistry_amount_of_substance_38",
+      "previousFront": "Distinguish theoretical yield from percentage yield.",
+      "previousBack": "Theoretical yield is the maximum stoichiometric amount; percentage yield compares actual isolated yield to theoretical.",
+      "newFront": "What is theoretical yield?",
+      "newBack": "The maximum amount of product predicted by the balanced equation.",
+      "reason": "Keep each recall card focused on the fact requested"
+    },
+    {
+      "id": "v33_card_chemistry_intermolecular_forces_43",
+      "previousFront": "What must hydrogen be bonded to for usual strong intermolecular hydrogen bonding?",
+      "previousBack": "Hydrogen covalently bonded to nitrogen, oxygen or fluorine; lone pairs on nearby electronegative atoms interact.",
+      "newFront": "Which three elements must hydrogen be directly bonded to for usual strong intermolecular hydrogen bonding?",
+      "newBack": "Nitrogen, oxygen or fluorine.",
+      "reason": "Keep each recall card focused on the fact requested"
+    },
+    {
+      "id": "chem_gibbs_feasible",
+      "previousFront": "What sign of ΔG indicates thermodynamic feasibility under the stated conditions?",
+      "previousBack": "ΔG ≤ 0; negative ΔG is feasible.",
+      "newFront": "What does a negative ΔG indicate under the stated conditions?",
+      "newBack": "The forward change is thermodynamically feasible.",
+      "reason": "Distinguish strictly negative Gibbs energy from zero at equilibrium"
+    },
+    {
+      "id": "chem_acyl_chloride_ammonia",
+      "previousFront": "What does an acyl chloride form with ammonia?",
+      "previousBack": "A primary amide; HCl is neutralised by excess ammonia.",
+      "newFront": "What organic product is formed when an acyl chloride reacts with ammonia?",
+      "newBack": "A primary amide.",
+      "reason": "Ask only for the named organic product instead of a multi-part account"
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "chem_period_atomic",
+      "topic": "Periodicity",
+      "aqaSection": "3.2.1",
+      "front": "Why does atomic radius generally decrease across Period 3?",
+      "back": "Nuclear charge increases while shielding is similar, so outer electrons are pulled closer.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_homolytic",
+      "topic": "Organic chemistry",
+      "aqaSection": "3.3.1.2",
+      "front": "What is homolytic fission?",
+      "back": "Each atom takes one electron from the covalent bond, forming radicals.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_heterolytic",
+      "topic": "Organic chemistry",
+      "aqaSection": "3.3.1.2",
+      "front": "What is heterolytic fission?",
+      "back": "Both bonding electrons go to one atom, forming ions.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_electrophile",
+      "topic": "Organic chemistry",
+      "aqaSection": "3.3.4.2",
+      "front": "What is an electrophile?",
+      "back": "An electron-pair acceptor.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_nucleophile",
+      "topic": "Organic chemistry",
+      "aqaSection": "3.3.3.1",
+      "front": "What is a nucleophile?",
+      "back": "An electron-pair donor.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_radical_sub",
+      "topic": "Alkanes",
+      "aqaSection": "3.3.2.2",
+      "front": "What are the three stages of free-radical substitution?",
+      "back": "Initiation, propagation and termination.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_halogen_uv",
+      "topic": "Alkanes",
+      "aqaSection": "3.3.2.2",
+      "front": "What condition starts free-radical substitution of an alkane with a halogen?",
+      "back": "UV light.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_alkene_bromine",
+      "topic": "Alkenes",
+      "aqaSection": "3.3.4.2",
+      "front": "What mechanism does bromine undergo with an alkene?",
+      "back": "Electrophilic addition.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_markovnikov",
+      "topic": "Alkenes",
+      "aqaSection": "3.3.4.2",
+      "front": "Why is one electrophilic-addition product often major?",
+      "back": "It forms via the more stable carbocation intermediate.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_esterification",
+      "topic": "Esters",
+      "aqaSection": "3.3.9.1",
+      "front": "What are the reagents and catalyst for esterification?",
+      "back": "A carboxylic acid + alcohol, with concentrated H₂SO₄ catalyst and heat/reflux.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_acyl_chloride_water",
+      "topic": "Acyl chlorides",
+      "aqaSection": "3.3.9.2",
+      "front": "What happens when an acyl chloride reacts with water?",
+      "back": "A carboxylic acid and HCl are formed.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_acyl_chloride_alcohol",
+      "topic": "Acyl chlorides",
+      "aqaSection": "3.3.9.2",
+      "front": "What does an acyl chloride form with an alcohol?",
+      "back": "An ester and HCl.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_acyl_chloride_ammonia",
+      "topic": "Acyl chlorides",
+      "aqaSection": "3.3.9.2",
+      "front": "What organic product is formed when an acyl chloride reacts with ammonia?",
+      "back": "A primary amide.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_lattice_diss",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define lattice dissociation enthalpy.",
+      "back": "The enthalpy change when 1 mole of an ionic solid is completely separated into its constituent gaseous ions.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_lattice_form",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "How is lattice formation enthalpy related to lattice dissociation enthalpy?",
+      "back": "Same magnitude, opposite sign.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_ea1",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What is first electron affinity?",
+      "back": "Enthalpy change when one mole of gaseous atoms each gains one electron to form gaseous 1− ions.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_entropy",
+      "topic": "Entropy",
+      "aqaSection": "3.1.8",
+      "front": "When does entropy usually increase?",
+      "back": "When particles become more dispersed/disordered, especially when more gas particles are formed.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_gibbs_feasible",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "What does a negative ΔG indicate under the stated conditions?",
+      "back": "The forward change is thermodynamically feasible.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_rate_order0",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "What does zero order in A mean?",
+      "back": "Changing [A] does not change the rate; [A]⁰ = 1.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_rate_order1",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "If [A] doubles and rate doubles, what is the order in A?",
+      "back": "First order.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_rate_order2",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "If [A] doubles and rate quadruples, what is the order in A?",
+      "back": "Second order.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_k_units",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "How do you determine units of the rate constant k?",
+      "back": "Rearrange the rate equation and substitute the units of rate and concentration.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_arr_eq",
+      "topic": "Arrhenius",
+      "aqaSection": "3.1.9",
+      "front": "State the logarithmic Arrhenius equation.",
+      "back": "ln k = ln A − Ea/(RT).",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_kp_temp",
+      "topic": "Kp",
+      "aqaSection": "3.1.10",
+      "front": "What factor changes the value of Kp for a given reaction?",
+      "back": "Temperature.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_kp_pressure",
+      "topic": "Kp",
+      "aqaSection": "3.1.10",
+      "front": "Does changing total pressure at constant temperature change Kp?",
+      "back": "No. It may change equilibrium position, but Kp itself is unchanged at fixed temperature.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_prac_meniscus",
+      "topic": "Practical skills",
+      "aqaSection": "7.2",
+      "front": "How should a colourless liquid meniscus be read?",
+      "back": "At eye level, using the bottom of the meniscus.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_prac_burette",
+      "topic": "Practical skills",
+      "aqaSection": "7.2",
+      "front": "How is the titre calculated from initial and final burette readings?",
+      "back": "Final reading − initial reading.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "chem_a2_entropy_def",
+      "topic": "Entropy",
+      "aqaSection": "3.1.8",
+      "front": "What is entropy, qualitatively?",
+      "back": "A measure of disorder of a system, related to the possible arrangements of particles and energy.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_amount_of_substance_35",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "How do you convert solution volume in cm³ into dm³?",
+      "back": "Divide the cm³ value by 1000.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_back_titrations_36",
+      "topic": "Back titrations",
+      "aqaSection": "3.1.2",
+      "front": "In a back titration, which amount is subtracted from the initial reagent amount?",
+      "back": "The amount of reagent remaining unreacted, measured by the subsequent titration.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_rp1_titration_37",
+      "topic": "RP1 Titration",
+      "aqaSection": "7.2",
+      "front": "Where should the bottom of the meniscus be read to avoid parallax?",
+      "back": "At eye level, using the bottom of the meniscus for a clear colourless solution.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_amount_of_substance_38",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "What is theoretical yield?",
+      "back": "The maximum amount of product predicted by the balanced equation.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_practical_skills_39",
+      "topic": "Practical skills",
+      "aqaSection": "7.2",
+      "front": "Why does taking a larger titre generally lower percentage burette uncertainty?",
+      "back": "The absolute burette reading uncertainty is a smaller fraction of the measured volume.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_atomic_structure_40",
+      "topic": "Atomic structure",
+      "aqaSection": "3.1.1",
+      "front": "What is the difference between atomic number and mass number?",
+      "back": "Atomic number is number of protons; mass number is protons plus neutrons.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_bonding_41",
+      "topic": "Bonding",
+      "aqaSection": "3.1.3",
+      "front": "What holds ions together in a giant ionic lattice?",
+      "back": "Strong electrostatic attraction between oppositely charged ions in all directions.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_bonding_42",
+      "topic": "Bonding",
+      "aqaSection": "3.1.3",
+      "front": "What is a coordinate covalent bond?",
+      "back": "A covalent bond in which both electrons in the shared pair come from one atom.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_intermolecular_forces_43",
+      "topic": "Intermolecular forces",
+      "aqaSection": "3.1.3",
+      "front": "Which three elements must hydrogen be directly bonded to for usual strong intermolecular hydrogen bonding?",
+      "back": "Nitrogen, oxygen or fluorine.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_born_haber_cycles_44",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What sign usually accompanies lattice formation enthalpy?",
+      "back": "Negative, because forming the solid ionic lattice from gaseous ions releases energy.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_energetics_45",
+      "topic": "Energetics",
+      "aqaSection": "3.1.4",
+      "front": "Why is ΔH estimated as bond energies broken minus bond energies formed?",
+      "back": "Breaking bonds requires energy; forming bonds releases energy.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_entropy_46",
+      "topic": "Entropy",
+      "aqaSection": "3.1.8",
+      "front": "What are standard molar entropy units?",
+      "back": "J K⁻¹ mol⁻¹.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_gibbs_free_energy_47",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "When does ΔG predict thermodynamic feasibility at constant temperature and pressure?",
+      "back": "Negative ΔG indicates a thermodynamically feasible forward change, not necessarily a fast reaction.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_rate_equations_48",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "What does order with respect to reactant A describe?",
+      "back": "The exponent of [A] in the experimentally determined rate equation.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_rate_equations_49",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "Why can't reaction order normally be read from balanced chemical equation?",
+      "back": "The rate equation depends on the mechanism and is found experimentally, not inferred from overall stoichiometry.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_arrhenius_50",
+      "topic": "Arrhenius",
+      "aqaSection": "3.1.9",
+      "front": "What does the gradient of ln k plotted against 1/T equal?",
+      "back": "−Ea/R, with Ea in J mol⁻¹.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_kp_51",
+      "topic": "Kp",
+      "aqaSection": "3.1.10",
+      "front": "Which numbers become exponents in a Kp expression?",
+      "back": "Stoichiometric coefficients of the gaseous substances in the balanced equation.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_equilibria_52",
+      "topic": "Equilibria",
+      "aqaSection": "3.1.6",
+      "front": "Does a catalyst change the equilibrium constant or position of equilibrium?",
+      "back": "No. It accelerates forward and reverse reactions, so equilibrium is reached sooner without changing K.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_weak_acids_54",
+      "topic": "Weak acids",
+      "aqaSection": "3.1.12",
+      "front": "What is the Ka expression for HA ⇌ H⁺ + A⁻?",
+      "back": "Ka=[H⁺][A⁻]/[HA].",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    },
+    {
+      "id": "v33_card_chemistry_kw_56",
+      "topic": "Kw",
+      "aqaSection": "3.1.12",
+      "front": "Why does pure water's neutral pH change with temperature?",
+      "back": "Kw changes with temperature; neutrality still requires [H⁺]=[OH⁻], not a fixed pH of 7.",
+      "review": "Individual prompt and answer checked against the nominated AQA content; not full section sign-off"
+    }
+  ],
+  "limits": {
+    "originalProgressIdsUnchanged": true,
+    "noQuestionBankChanges": true,
+    "fullSpecBulletCoverageNotCertified": true,
+    "completeAqaPaperArchiveNotCertified": true,
+    "notMasteryEvidence": true
+  }
+}
