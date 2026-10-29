@@ -1,0 +1,29 @@
+{
+  "version": "v188",
+  "date": "2026-10-29",
+  "topic": "AS Pure first Maths mock eligibility",
+  "source": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/a-proof",
+  "excludedId": "orig_v31_maths_proof_2",
+  "reason": "Proof by contradiction is Year 2 A-level (not Year 1/AS); leave original problem accessible in general/A-level practice, but not in first Year 1 Pure Maths school mock.",
+  "before": {
+    "totalCoreQuestions": 1268,
+    "schoolMathsMock": 129,
+    "bankVersion": 69
+  },
+  "after": {
+    "totalCoreQuestions": 1268,
+    "schoolMathsMock": 128,
+    "bankVersion": 70
+  },
+  "preservation": {
+    "id": true,
+    "prompt": true,
+    "marks": true,
+    "modelAnswer": true,
+    "markPoints": true,
+    "questionRecordCount": true,
+    "googleSync": true,
+    "progressKeys": true
+  },
+  "notClaimed": "No blanket certification of whole exam bank, no change to exam paper completeness"
+}
