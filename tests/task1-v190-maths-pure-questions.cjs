@@ -1,0 +1,55 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict'),vm=require('node:vm');
+const supplement=JSON.parse(fs.readFileSync('maths_pure_proof_vectors_v190.json','utf8'));
+const audit=JSON.parse(fs.readFileSync('editorial/task1-v190-maths-pure-application-audit.json','utf8'));
+const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
+const app=fs.readFileSync('app.js','utf8'),sw=fs.readFileSync('sw.js','utf8'),html=fs.readFileSync('index.html','utf8');
+assert.equal(supplement.version,'v190');assert.equal(supplement.questions.length,4);
+assert.equal(bank.questions.length,1268);assert.equal(bank.bankVersion,70);
+assert.deepEqual(supplement.questions.map(q=>q.markingMode),['origPure190Proof6','origPure190OddSquare','origPure190Collinear','origPure190VectorRatio']);
+assert.deepEqual(supplement.questions.map(q=>q.marks),[4,4,5,6]);
+assert.equal(audit.addedMarks,19);assert.equal(audit.newMockQuestionPoolWhenLoaded,132);
+const known=new Set(bank.questions.map(q=>q.id));
+for(const q of supplement.questions){
+ assert(!known.has(q.id),'Duplicate question '+q.id);known.add(q.id);
+ assert(q.level==='AS'&&q.subject==='Maths'&&q.mock===true&&q.year==='Practice'&&q.sourceVerified===false);
+ assert(['Proof','Vectors'].includes(q.topic)&&q.difficulty==='hard');
+ assert(q.requiresWorking===true&&q.standalone===true);
+ assert(q.marks===q.markPoints.length&&q.marks===q.markPointMarks.length);
+ assert(q.markPointMarks.every(x=>x===1));
+ assert(q.modelAnswer===q.markPoints.join(' '));
+ assert(q.verificationLevel==='original-exam-style');
+}
+const predicate=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
+assert(predicate);const eligible=vm.runInNewContext(predicate[0]+'\nmockEligibleQuestion');
+assert(supplement.questions.every(eligible));
+assert.equal(bank.questions.filter(q=>q.subject==='Maths'&&eligible(q)).length,128);
+assert.equal([...bank.questions,...supplement.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,132);
+assert(app.includes("'./maths_pure_proof_vectors_v190.json'"));
+assert(sw.includes("'./maths_pure_proof_vectors_v190.json'"));
+assert(sw.includes('v190-as-pure-proof-vectors'));
+assert.match(html,/app\.js\?v=190/);
+assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
+const a=app.indexOf('function normalise('),mid=app.indexOf('function nextSchedule(',a);
+const b=app.indexOf('function evidenceRuleScore(',mid),e=app.indexOf('function renderExam(',b);
+assert(a>=0&&mid>a&&b>mid&&e>b);
+const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+app.slice(a,mid)+app.slice(b,e)+'return examSuggested')();
+for(const q of supplement.questions){
+ const scored=mark(q,q.modelAnswer);
+ assert.equal(scored.suggested,q.marks,'Complete model answer undercredited: '+q.id);
+ assert(scored.preds.every(Boolean));
+ assert.equal(mark(q,'').suggested,0);
+ assert.equal(mark(q,'not sure').suggested,0);
+}
+const [proof,odd,vectors,ratio]=supplement.questions;
+assert.equal(mark(proof,'n³−n=(n−1)n(n+1)').suggested,1);
+assert.equal(mark(odd,'n=2k+1').suggested,1);
+assert.equal(mark(odd,'n is an integer').suggested,0);
+assert.equal(mark(odd,'n=2k').suggested,0);
+assert.equal(mark(vectors,'k=8').suggested,1);
+assert.equal(mark(vectors,'k=9').suggested,0);
+assert.equal(mark(vectors,'not k=8').suggested,0);
+assert.equal(mark(vectors,'AB:BC=4:5').suggested,1);
+assert.equal(mark(ratio,'AB=(12,12)').suggested,1);
+assert.equal(mark(ratio,'P=(5,-2)').suggested,1);
+console.log('PASS v190: four original AS Pure 19-mark questions, 132 core+extra mock pool, calibrated independent method credit');

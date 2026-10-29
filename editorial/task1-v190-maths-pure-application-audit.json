@@ -1,0 +1,40 @@
+{
+  "version": "v190",
+  "date": "2026-10-29",
+  "purpose": "Strengthen mathematical proof by deduction and two-dimensional vector application in the first AS Pure mock after review of the core question bank.",
+  "priorCoreQuestions": 1268,
+  "priorCoreMathsMockQuestions": 128,
+  "newOriginalMockQuestions": 4,
+  "newMockQuestionPoolWhenLoaded": 132,
+  "addedMarks": 19,
+  "perTopic": {
+    "Proof": 2,
+    "Vectors": 2
+  },
+  "outcomes": [
+    {
+      "id": "task1_v190_maths_001",
+      "checks": "Consecutive integers, factors 2 and 3, divisibility proof"
+    },
+    {
+      "id": "task1_v190_maths_002",
+      "checks": "Odd integer substitution and parity argument"
+    },
+    {
+      "id": "task1_v190_maths_003",
+      "checks": "2D position-vector displacement, scalar multiple and section ratio"
+    },
+    {
+      "id": "task1_v190_maths_004",
+      "checks": "2D section ratio, magnitude and unit vector"
+    }
+  ],
+  "constraints": [
+    "Exclude statistics, mechanics, radians, Year 2 proof by contradiction",
+    "Do not present these as licensed or verified AQA past-paper questions",
+    "Keep Maths recall cards short; multi-stage working belongs in questions",
+    "Existing exam questions/IDs and marking review remain untouched",
+    "Check marking feedback, alternative method support and number of questions after load"
+  ],
+  "completeSpecificationCertified": false
+}

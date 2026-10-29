@@ -1,6 +1,6 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
-const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json'];
+const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json'];
 const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json'];
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
@@ -2176,6 +2176,48 @@ function singleClaimEvidenceCap(q,answer){
 }
 
 function examSuggested(q,answer){
+ // Independent evidence marks for four new original AS Pure multi-step tasks.
+ // Avoid fuzzy token overlap crediting three proof steps for a single formula.
+ if(/^origPure190(?:Proof6|OddSquare|Collinear|VectorRatio)$/.test(String(q.markingMode||''))){
+  const raw=String(answer||'').trim().replace(/[−–—]/g,'-');
+  const flat=raw.toLowerCase().replace(/\s+/g,'').replace(/³/g,'^3').replace(/²/g,'^2').replace(/¼/g,'1/4');
+  const phrase=raw.toLowerCase();
+  if(!raw||/^(?:idk|no idea|not sure|i don't know)\s*[.!]?$/i.test(raw))
+   return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
+  let flags=[];
+  if(q.markingMode==='origPure190Proof6'){
+   const factor=/(?:\(n-1\)n\(n\+1\)|n\(n-1\)\(n\+1\)|n\(n\+1\)\(n-1\))/.test(flat);
+   const even=/\beven\b|divisible\s+by\s+2|multiple\s+of\s+2/i.test(phrase)&&/consecutive|n\s*[-+]\s*1|three\s+successive/i.test(phrase);
+   const three=/(?:multiple|divisible)\s+(?:of|by)\s+3|factor\s+of\s+3/i.test(phrase)&&/consecutive|one|three|among/i.test(phrase);
+   const conclusion=/divisible\s+by\s+6|multiple\s+of\s+6/i.test(phrase);
+   flags=[factor,even,three,conclusion&&even&&three];
+  }else if(q.markingMode==='origPure190OddSquare'){
+   const odd=/n=2[a-z][+-]1(?!\d)/.test(flat);
+   const square=/n\^2=(?:4k\(k\+1\)\+1|4k\^2\+4k\+1|\(2k\+1\)\^2)/.test(flat);
+   const even=/\beven\b/i.test(phrase)&&/consecutive|k\s*\(\s*k\s*\+\s*1\s*\)/i.test(phrase);
+   const conclusion=/n\^2=8[a-z]\+1/.test(flat)||(/remainder\s+(?:of\s+|is\s+)?1/i.test(phrase)&&/\b8\b/.test(phrase));
+   flags=[odd,square,even,conclusion];
+  }else if(q.markingMode==='origPure190Collinear'){
+   const ab=/\bab=\(4,8\)/.test(flat),ac=/\bac=\(k\+1,18\)/.test(flat);
+   const relation=/(?:\(k\+1\)\/4=18\/8|4\*18=8\*\(k\+1\))/.test(flat)||(/scalar\s+multiple/i.test(phrase)&&/\bab\b/i.test(phrase));
+   const kValues=[...raw.matchAll(/\bk\s*=\s*([-+]?\d+(?:\.\d+)?)/gi)].map(m=>Number(m[1]));
+   const correctK=kValues.includes(8)&&kValues.every(k=>k===8)&&!/\b(?:not|never)\s+k\s*=\s*8\b|\bk\s*=\s*8\b.{0,20}\b(?:wrong|incorrect|false)\b/i.test(raw);
+   const ratio=/ab:bc=4:5/.test(flat)||/\bbc=\(5,10\)/.test(flat);
+   flags=[ab,ac,relation,correctK,ratio];
+  }else{
+   const ab=/\bab=\(12,12\)/.test(flat);
+   const ap=/\bap=(?:1\/4ab|3,3|\(3,3\))/.test(flat)||/\bap=1\/4ab=\(3,3\)/.test(flat);
+   const p=/\bp=\(5,-2\)/.test(flat);
+   const cp=/\bcp=(?:p-c=)?\(6,-6\)/.test(flat);
+   const mag=/6√2|6sqrt\(2\)|sqrt\(72\)/.test(flat)&&/(?:cp|magnitude|length|\|)/.test(phrase);
+   const unit=/\(1\/√2,-1\/√2\)|\(√2\/2,-√2\/2\)|\(1\/sqrt\(2\),-1\/sqrt\(2\)\)/.test(flat);
+   flags=[ab,ap,p,cp,mag,unit];
+  }
+  const suggested=flags.filter(Boolean).length;
+  return {preds:flags,scores:flags.map(ok=>ok?1:0),suggested,
+   finalCorrect:suggested===q.marks,confidence:suggested===q.marks?'high':'medium'};
+ }
+
 // A curated equation is evidence only when it stands on its own: not within a
 // longer variable/number, and not explicitly rejected by the student's wording.
 // Whitespace around operators is insignificant; multiplication is not guessed.
