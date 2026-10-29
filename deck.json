@@ -1358,7 +1358,12 @@
       "mock": true,
       "taught": true,
       "courseTopic": "Practical skills",
-      "revisionTopic": "RP4 Ion tests"
+      "revisionTopic": "RP4 Ion tests",
+      "accept": [
+        "AgCl white, AgBr cream, AgI yellow.",
+        "chloride white bromide cream iodide yellow",
+        "AgCl white AgBr cream AgI yellow"
+      ]
     },
     {
       "id": "chem_rp5",
@@ -1419,7 +1424,12 @@
       "mock": true,
       "taught": true,
       "courseTopic": "Practical skills",
-      "revisionTopic": "RP6 Organic tests"
+      "revisionTopic": "RP6 Organic tests",
+      "accept": [
+        "Bromine water is decolourised from orange/brown.",
+        "bromine water turns colourless from orange",
+        "bromine water decolourised from orange"
+      ]
     },
     {
       "id": "phy_ins_circular_001",
@@ -3988,30 +3998,20 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "How does Group 2 reactivity change down the group?",
-      "back": "It increases because outer electrons are further from the nucleus and more shielded, so ionisation energies fall.",
-      "concepts": [
-        [
-          "increases"
-        ],
-        [
-          "shielding"
-        ],
-        [
-          "distance",
-          "further"
-        ],
-        [
-          "ionisation energy",
-          "falls"
-        ]
-      ],
+      "front": "How does Group 2 metal reactivity change down the group?",
+      "back": "It increases.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
       "courseTopic": "Group 2",
-      "revisionTopic": "Group 2"
+      "revisionTopic": "Group 2",
+      "accept": [
+        "It increases.",
+        "increases",
+        "more reactive",
+        "reactivity increases"
+      ]
     },
     {
       "id": "chem_group2_hydroxide",
@@ -4425,7 +4425,8 @@
       "accept": [
         "3230-3550",
         "3230 to 3550",
-        "around 3300"
+        "around 3300",
+        "around 3300 cm-1"
       ],
       "active": true,
       "stage": "AS",
@@ -4446,7 +4447,8 @@
       "accept": [
         "1680-1750",
         "1680 to 1750",
-        "around 1700"
+        "around 1700",
+        "about 1700 cm-1"
       ],
       "active": true,
       "stage": "AS",
@@ -4512,7 +4514,11 @@
       "mock": true,
       "taught": true,
       "courseTopic": "Organic chemistry",
-      "revisionTopic": "Optical isomerism"
+      "revisionTopic": "Optical isomerism",
+      "accept": [
+        "Higher atomic number of the directly attached atom gets higher priority; move outward at the first difference.",
+        "higher atomic number takes priority; move outward on ties"
+      ]
     },
     {
       "id": "chem_aldehyde_tollens",
@@ -4521,28 +4527,21 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "What does Tollens' reagent do with an aldehyde?",
-      "back": "It is reduced to silver, producing a silver mirror; ketones give no reaction.",
-      "concepts": [
-        [
-          "silver mirror",
-          "silver"
-        ],
-        [
-          "aldehyde"
-        ],
-        [
-          "ketone",
-          "no reaction"
-        ]
-      ],
+      "front": "What visible result does an aldehyde give with Tollens' reagent?",
+      "back": "A silver mirror or grey silver deposit.",
       "active": true,
       "stage": "A2",
       "mock": true,
       "taught": true,
       "courseTopic": "Organic chemistry",
       "visual": "organic-reaction",
-      "revisionTopic": "Aldehydes and ketones"
+      "revisionTopic": "Aldehydes and ketones",
+      "accept": [
+        "A silver mirror or grey silver deposit.",
+        "silver mirror",
+        "silver deposit",
+        "grey silver deposit"
+      ]
     },
     {
       "id": "chem_carbonyl_reduction",
@@ -4611,7 +4610,13 @@
       "taught": true,
       "courseTopic": "Organic chemistry",
       "visual": "organic-reaction",
-      "revisionTopic": "Carboxylic acids"
+      "revisionTopic": "Carboxylic acids",
+      "accept": [
+        "They only partially dissociate in water.",
+        "partially ionises in water",
+        "only partially ionises",
+        "partial dissociation"
+      ]
     },
     {
       "id": "chem_esterification",
@@ -5022,7 +5027,8 @@
       "accept": [
         "-log[h+]",
         "negative log h+",
-        "pH=-log10[h+]"
+        "pH=-log10[h+]",
+        "-log10[h+]"
       ],
       "active": true,
       "stage": "A2",
@@ -18243,7 +18249,13 @@
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "–COOH, a carbonyl and hydroxyl group on the same carbon.",
+        "-COOH",
+        "COOH",
+        "carboxyl group"
+      ]
     },
     {
       "id": "chem_spec_v40_002",
@@ -18291,7 +18303,12 @@
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "RCOO−, the conjugate base of a carboxylic acid.",
+        "RCOO-",
+        "carboxylate ion"
+      ]
     },
     {
       "id": "chem_spec_v40_005",
@@ -19427,7 +19444,11 @@
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Loss of a water molecule and formation of C=C.",
+        "elimination of water and formation of alkene"
+      ]
     },
     {
       "id": "chem_mechanisms_v42_18",
@@ -19523,7 +19544,11 @@
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "A primary alcohol.",
+        "primary alcohol"
+      ]
     },
     {
       "id": "chem_mechanisms_v42_24",
@@ -19539,7 +19564,11 @@
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "A secondary alcohol.",
+        "secondary alcohol"
+      ]
     },
     {
       "id": "chem_mechanisms_v42_25",
