@@ -7,7 +7,8 @@ const inventory = JSON.parse(fs.readFileSync('paper_inventory_2015_2025.json','u
 const ledger = JSON.parse(fs.readFileSync('editorial/task1-v165-completion-gate.json','utf8'));
 const m = ledger.measurements;
 assert.equal(m.deckVersion,deck.deckVersion);
-assert.equal(m.bankVersion,bank.bankVersion);
+assert(bank.bankVersion>=m.bankVersion,'Current bank must not precede historical audit');
+assert.equal(bank.bankVersion,70,'v188 correction must be present');
 assert.equal(m.totalFlashcards,deck.cards.length);
 assert.equal(m.activeFlashcards,deck.cards.filter(c=>c.active!==false).length);
 assert.equal(m.mainQuestionBank,bank.questions.length);
