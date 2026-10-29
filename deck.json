@@ -933,26 +933,23 @@
       "kind": "weak",
       "priority": 2,
       "scope": "mock",
-      "front": "For y = f(ax), what happens to x-coordinates?",
-      "back": "They are divided by a, so the horizontal scale factor is 1/a.",
+      "front": "For a > 0, what is the horizontal scale factor of y = f(ax)?",
+      "back": "1/a (x-coordinates are divided by a).",
       "visual": "transform-compress",
-      "concepts": [
-        [
-          "divide by a",
-          "1/a",
-          "one over a"
-        ],
-        [
-          "horizontal",
-          "x"
-        ]
-      ],
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
       "courseTopic": "Algebra & functions",
-      "revisionTopic": "Transformations"
+      "revisionTopic": "Transformations",
+      "accept": [
+        "1/a",
+        "1 over a",
+        "scale factor 1/a",
+        "x coordinates divided by a",
+        "horizontal scale factor 1/a",
+        "divide each x coordinate by a"
+      ]
     },
     {
       "id": "phy_rp1",

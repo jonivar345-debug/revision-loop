@@ -39,7 +39,7 @@ assert.deepEqual(actual,audit.bySubsection);
 assert.equal(audit.reviewed.find(r=>r.id==='chem_cip').aqaSection,'3.3.1.3','CIP prioritisation is taught in E/Z isomerism section');
 assert.equal(audit.corrections.length,2);
 for(const fix of audit.corrections){const c=byId.get(fix.id);assert.equal(c.front,fix.newFront);assert.equal(c.back,fix.newBack);assert(!c.concepts,'Single-fact card must not require several concepts');}
-assert.match(html,/app\.js\?v=177/);
+assert.match(html,/app\.js\?v=\d+/);
 assert.match(sw,/v177-chemistry-test-pair-marking/);
 assert.match(app,/function evaluateHalideColours/);
 assert.match(app,/function evaluateTollensObservation/);

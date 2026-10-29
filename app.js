@@ -1272,7 +1272,69 @@ function evaluateTollensObservation(input){
  if(/\bsilver\b/i.test(s))return {status:'partial',score:.5,text:'Specify a silver mirror or grey silver deposit.',missing:['silver mirror or grey silver deposit']};
  return {status:'wrong',score:0,text:'That is not the characteristic Tollens’ observation.',missing:['silver mirror or grey silver deposit']};
 }
+
+// For Year 1 Pure transformation cards, the direction/axis is the whole answer.
+// Generic word-overlap marking can wrongly credit a left shift as a right shift.
+function evaluateMathsPureTransform(c,input){
+ const movement={
+  maths_transform_001:'right',
+  task1_maths_002:'right',
+  maths_transform_002:'up',
+  task1_v162_003:'left'
+ };
+ const axis={
+  task1_maths_004:'y',
+  task1_v162_002:'x'
+ };
+ const id=c?.id;
+ if(!Object.prototype.hasOwnProperty.call(movement,id)&&
+    !Object.prototype.hasOwnProperty.call(axis,id)&&
+    id!=='task1_v162_001'&&id!=='maths_transform_003')return null;
+ const raw=String(input||'').trim();
+ if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+ const n=normalise(raw).replace(/\b(?:not|never)\s+(?:to\s+the\s+)?(?:left|right|upwards?|downwards?)\b/g,' ');
+ const good=(message)=>({status:'correct',score:1,text:message||'Correct transformation.',missing:[]});
+ const bad=(missing)=>({status:'wrong',score:0,text:'The transformation direction, axis or scale factor is incorrect.',missing:[missing]});
+ const partial=(missing)=>({status:'partial',score:.5,text:'State the precise direction, reflection axis or scale factor.',missing:[missing]});
+ const direction={
+  right:/\bright\b|\bpositive x\b/,
+  left:/\bleft\b|\bnegative x\b/,
+  up:/\bup\b|\bupward\b|\bupwards\b|\bpositive y\b/,
+  down:/\bdown\b|\bdownward\b|\bdownwards\b|\bnegative y\b/
+ };
+ if(Object.prototype.hasOwnProperty.call(movement,id)){
+  const wanted=movement[id],opposite={right:'left',left:'right',up:'down',down:'up'}[wanted];
+  if(direction[opposite].test(n))return bad(wanted);
+  if(direction[wanted].test(n))return good();
+  return /\btranslate\b|\bshift\b|\bmove\b/.test(n)?partial(wanted):bad(wanted);
+ }
+ if(Object.prototype.hasOwnProperty.call(axis,id)){
+  const wanted=axis[id],other=wanted==='x'?'y':'x';
+  const expected=new RegExp('\\b'+wanted+'\\s*-?\\s*axis\\b');
+  const incorrect=new RegExp('\\b'+other+'\\s*-?\\s*axis\\b');
+  if(incorrect.test(n))return bad(wanted+'-axis');
+  if(expected.test(n)||new RegExp('\\breflect(?:ion)?\\s+in\\s+the\\s+'+wanted+'\\s*axis\\b').test(n))return good();
+  return /\breflect\b|\breflection\b/.test(n)?partial(wanted+'-axis'):bad(wanted+'-axis');
+ }
+ if(id==='task1_v162_001'){
+  const wrong=/\bhorizontal(?:ly)?\b|\bx[\s-]*axis\b/.test(n);
+  const right=/\bvertical(?:ly)?\b|\by[\s-]*coordinate/.test(n);
+  if(wrong)return bad('vertical stretch by scale factor a');
+  if(right&&(/\bstretch\b|\bscale\b|\bmultiply\b|\bfactor\b/.test(n)))return good();
+  return right?partial('vertical stretch by scale factor a'):bad('vertical stretch by scale factor a');
+ }
+ if(id==='maths_transform_003'){
+  const wrong=/\b(?:multiply|multiplied|times)\b.{0,22}\b(?:by\s+)?a\b|\bscale\s+factor\s+a\b/.test(n);
+  if(wrong)return bad('1/a');
+  if(/1\s*\/\s*a\b|\bone\s+over\s+a\b|\bdivid(?:e|ed|ing)\s+(?:each\s+)?(?:x\s+)?(?:coordinate(?:s)?\s+)?by\s+a\b/.test(n))return good();
+  return /\bhorizontal\b|\bscale\b|\bcoordinate\b/.test(n)?partial('1/a'):bad('1/a');
+ }
+ return null;
+}
+
 function evaluateCard(c,input){
+ const mathsTransform=evaluateMathsPureTransform(c,input);
+ if(mathsTransform)return mathsTransform;
  if(c.id==='chem_rp4')return evaluateHalideColours(input);
  if(c.id==='chem_aldehyde_tollens')return evaluateTollensObservation(input);
   // Context-specific threshold-frequency marking, including the difference
