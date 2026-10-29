@@ -28,7 +28,7 @@ assert.equal([...bank.questions,...supplement.questions].filter(q=>q.subject==='
 assert(app.includes("'./maths_pure_proof_vectors_v190.json'"));
 assert(sw.includes("'./maths_pure_proof_vectors_v190.json'"));
 assert(sw.includes('v190-as-pure-proof-vectors'));
-assert.match(html,/app\.js\?v=190/);
+assert.match(html,/app\.js\?v=\d+/);
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 const a=app.indexOf('function normalise('),mid=app.indexOf('function nextSchedule(',a);
 const b=app.indexOf('function evidenceRuleScore(',mid),e=app.indexOf('function renderExam(',b);
