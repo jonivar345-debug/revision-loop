@@ -1,0 +1,646 @@
+{
+  "version": "v176",
+  "checkedAt": "2026-10-28",
+  "task1Complete": false,
+  "officialSpecification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+  "objective": "Answer-level accuracy and precise AQA subsection audit of 85 legacy Physics Mechanics mock flashcards; retain single-fact recall and preserve all saved progress.",
+  "priorLegacyMockScienceMissingDirectSpecRef": 971,
+  "reviewCount": 85,
+  "previouslyUnreviewedRemaining": 886,
+  "physicsLegacyBefore": 311,
+  "physicsReviewedInThisBatch": 85,
+  "physicsLegacyRemainingToReview": 226,
+  "chemistryLegacyStillPending": 660,
+  "bySubsection": {
+    "3.4.1.1": 12,
+    "3.4.1.2": 9,
+    "3.4.1.3": 32,
+    "3.4.1.4": 4,
+    "3.4.1.5": 10,
+    "3.4.1.6": 4,
+    "3.4.1.7": 5,
+    "3.4.2.1": 5,
+    "3.4.2.2": 4
+  },
+  "corrections": [
+    {
+      "id": "phy_impulse",
+      "before": "Impulse = FΔt = Δp.",
+      "after": "Impulse = Δp. For constant (or mean) force, FΔt = Δp.",
+      "reason": "The AQA constant-force condition on FΔt must be explicit; Δp holds generally."
+    },
+    {
+      "id": "phy_hooke",
+      "before": "F = kΔL, while force is proportional to extension.",
+      "after": "F = kΔL, valid up to the limit of proportionality.",
+      "reason": "Hooke's law requires proportionality within its valid range."
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "phy_vectors_001",
+      "aqaSubsection": "3.4.1.1",
+      "front": "How do you decide whether to use sin or cos when resolving a force?",
+      "back": "Use the angle: adjacent component = F cos θ; opposite component = F sin θ. Do not memorise 'horizontal = cos'.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_slope_001",
+      "aqaSubsection": "3.4.1.1",
+      "front": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+      "back": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_resultant_perp",
+      "aqaSubsection": "3.4.1.1",
+      "front": "How do you find the magnitude of two perpendicular vector components x and y?",
+      "back": "R = √(x² + y²).",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_equilibrium_001",
+      "aqaSubsection": "3.4.1.1",
+      "front": "If the resultant force is zero, must the object be stationary?",
+      "back": "No. It may be stationary or moving at constant velocity because acceleration is zero.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_resolving_vectors_4",
+      "aqaSubsection": "3.4.1.1",
+      "front": "How should you select sine or cosine for a vector component?",
+      "back": "Cosine gives the component adjacent to the marked angle; sine gives the opposite component.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_forces_on_a_slope_5",
+      "aqaSubsection": "3.4.1.1",
+      "front": "When does R=mg cosθ hold for an object on a slope?",
+      "back": "When there is no acceleration perpendicular to the slope and no other force component perpendicular to it.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_marked_angle",
+      "aqaSubsection": "3.4.1.1",
+      "front": "When resolving a vector, what decides whether to use sin or cos?",
+      "back": "Look at the marked angle: adjacent side uses cos θ; opposite side uses sin θ. Never rely on horizontal or vertical.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_horizontal_30",
+      "aqaSubsection": "3.4.1.1",
+      "front": "50 N at 30° above horizontal: find horizontal and vertical components.",
+      "back": "Horizontal = 50 cos 30° = 43.3 N; vertical = 50 sin 30° = 25.0 N.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_vertical_30",
+      "aqaSubsection": "3.4.1.1",
+      "front": "50 N at 30° to vertical: find horizontal and vertical components.",
+      "back": "Horizontal = 50 sin 30° = 25.0 N; vertical = 50 cos 30° = 43.3 N.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_slope_direction",
+      "aqaSubsection": "3.4.1.1",
+      "front": "On a slope, which way do weight and its two components act?",
+      "back": "Weight mg acts vertically down; mg sin θ acts down the slope; mg cos θ acts into the slope.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_slope_numeric",
+      "aqaSubsection": "3.4.1.1",
+      "front": "For a 10 kg block on a 30° slope, what is the down-slope weight component?",
+      "back": "mg sin 30° = 10 × 9.81 × 0.5 = 49.1 N down the slope.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_11",
+      "aqaSubsection": "3.4.1.1",
+      "front": "A 12 N force is 30° from the vertical. Find its horizontal and vertical components.",
+      "back": "Horizontal = 12 sin30° = 6.0 N; vertical = 12 cos30° ≈ 10.4 N.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_couple_001",
+      "aqaSubsection": "3.4.1.2",
+      "front": "What is a couple, and what is the moment of a couple?",
+      "back": "Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_moments_001",
+      "aqaSubsection": "3.4.1.2",
+      "front": "What distance must be used in moment = force × distance?",
+      "back": "The perpendicular distance from the pivot to the force's line of action.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_moment_eq",
+      "aqaSubsection": "3.4.1.2",
+      "front": "What is the principle of moments in equilibrium?",
+      "back": "Total clockwise moment = total anticlockwise moment about the same point.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_couples_32",
+      "aqaSubsection": "3.4.1.2",
+      "front": "Why is the moment of a couple independent of pivot choice?",
+      "back": "The two forces are equal and opposite, giving zero resultant force and the same total turning moment about any pivot.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_couple_turn",
+      "aqaSubsection": "3.4.1.2",
+      "front": "Why can a couple turn an object without a resultant force?",
+      "back": "Its two equal, opposite, parallel forces cancel as forces, but act along separate lines to cause turning.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_couple_distance",
+      "aqaSubsection": "3.4.1.2",
+      "front": "For a couple, what distance is d in M = Fd? Do you multiply by two?",
+      "back": "d is the perpendicular separation between the forces' lines of action. Use just one F; don't double Fd.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_14",
+      "aqaSubsection": "3.4.1.2",
+      "front": "What two conditions are required for a rigid body to be in equilibrium?",
+      "back": "Resultant force = 0 and resultant moment about any point = 0.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_15",
+      "aqaSubsection": "3.4.1.2",
+      "front": "A 20 N force acts at 30° to a 0.50 m lever arm. Find its moment about the pivot.",
+      "back": "M = Fr sinθ = 20×0.50×sin30° = 5.0 N m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_16",
+      "aqaSubsection": "3.4.1.2",
+      "front": "Two equal opposite 15 N forces form a couple separated by 0.40 m. Find the moment.",
+      "back": "Moment of the couple = Fd = 15×0.40 = 6.0 N m. Do not double it.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_motion_d",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does the gradient of a displacement–time graph represent?",
+      "back": "Velocity. A steeper gradient means greater speed; a horizontal line means v = 0. On a curve, use a tangent for instantaneous velocity.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_motion_v",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What do the gradient and signed area of a velocity–time graph represent?",
+      "back": "Gradient = acceleration. Signed area under the graph = displacement.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_motion_a",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does the signed area under an acceleration–time graph represent?",
+      "back": "Change in velocity, Δv.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_rp3",
+      "aqaSubsection": "3.4.1.3",
+      "front": "If you plot s against t² for free fall from rest, how do you obtain g?",
+      "back": "Gradient = g/2, so g = 2 × gradient.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_suvat_condition",
+      "aqaSubsection": "3.4.1.3",
+      "front": "When can SUVAT equations be used?",
+      "back": "Only when acceleration is constant.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_motion_graphs_11",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does the area under a velocity–time graph represent?",
+      "back": "Signed displacement, with area below the time axis counting as negative.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_motion_graphs_12",
+      "aqaSubsection": "3.4.1.3",
+      "front": "How do you find instantaneous velocity on a curved displacement–time graph?",
+      "back": "Draw a tangent at the time and calculate its gradient.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_motion_graphs_13",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does area under an acceleration–time graph give?",
+      "back": "Change in velocity, including sign.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_s_negative",
+      "aqaSubsection": "3.4.1.3",
+      "front": "On a displacement–time graph, what does a negative gradient mean?",
+      "back": "Negative velocity: the object moves in the negative direction. A steeper slope magnitude means greater speed.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_s_horizontal_vs_v_horizontal",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What is the difference between a horizontal line on s–t and v–t graphs?",
+      "back": "s–t horizontal: v = 0 (stationary). v–t horizontal: a = 0 (constant velocity).",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_s_tangent_numeric",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A tangent to an s–t graph passes through (2 s, 4 m) and (6 s, 20 m). Find v.",
+      "back": "Tangent gradient = Δs/Δt = (20−4)/(6−2) = 4.0 m s⁻¹.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_gradient_numeric",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A v–t graph rises from 4 to 12 m s⁻¹ in 5.0 s. Find acceleration.",
+      "back": "Gradient = Δv/Δt = (12−4)/5.0 = +1.6 m s⁻².",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_trapezium_numeric",
+      "aqaSubsection": "3.4.1.3",
+      "front": "Velocity rises uniformly from 4 to 12 m s⁻¹ in 5 s. Find displacement.",
+      "back": "Area under v–t graph = ½(4+12)×5 = 40 m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_signed_vs_distance",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A v–t graph gives +20 m and −8 m of signed area. Find displacement and distance.",
+      "back": "Displacement = 20−8 = +12 m. Total distance = 20+8 = 28 m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_zero_crossing",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does crossing the time axis on a velocity–time graph mean?",
+      "back": "Velocity passes through zero and changes sign: the object stops momentarily, then reverses direction.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_negative_acceleration",
+      "aqaSubsection": "3.4.1.3",
+      "front": "If velocity is negative and acceleration is negative, is the object slowing down?",
+      "back": "No. Velocity and acceleration have the same direction, so speed increases in the negative direction.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_a_area_numeric",
+      "aqaSubsection": "3.4.1.3",
+      "front": "Acceleration stays at +3.0 m s⁻² for 4.0 s. Find the velocity change.",
+      "back": "Signed area under a–t = 3.0×4.0 = +12 m s⁻¹.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_a_negative_area",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does area below the time axis on an acceleration–time graph mean?",
+      "back": "A negative change in velocity, not a negative distance. It need not mean the object slows down.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_multistage_area",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A v–t graph rises 0→10 m s⁻¹ in 4 s, then stays at 10 m s⁻¹ for 3 s. Find s.",
+      "back": "Triangle + rectangle = ½×4×10 + 3×10 = 50 m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_compare_slope_vs_area",
+      "aqaSubsection": "3.4.1.3",
+      "front": "In motion graphs, what do a gradient and a signed area each represent?",
+      "back": "s–t gradient → v; v–t gradient → a, area → Δs; a–t area → Δv.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_axis_unit_check",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What units confirm the gradient of a v–t graph and the area under it?",
+      "back": "Gradient: (m s⁻¹)/s = m s⁻². Area: (m s⁻¹)×s = m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_rp3_v2_s",
+      "aqaSubsection": "3.4.1.3",
+      "front": "For free fall from rest, what is g from a graph of v² (y) against s (x)?",
+      "back": "v² = 2gs, so gradient = 2g and g = gradient ÷ 2.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_01",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A displacement–time curve has a positive gradient which becomes less steep. What happens to velocity?",
+      "back": "Velocity remains positive but decreases: the object moves forwards while slowing down.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_02",
+      "aqaSubsection": "3.4.1.3",
+      "front": "What does a horizontal velocity–time graph below the time axis show?",
+      "back": "Constant negative velocity; acceleration is zero. The object is moving, not stationary.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_03",
+      "aqaSubsection": "3.4.1.3",
+      "front": "Velocity changes from −8 to −2 m s⁻¹ in 3.0 s. Find acceleration and describe the speed.",
+      "back": "a = (−2 − (−8))/3 = +2.0 m s⁻². Speed falls from 8 to 2 m s⁻¹.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_04",
+      "aqaSubsection": "3.4.1.3",
+      "front": "Velocity falls from +6 to −2 m s⁻¹ uniformly in 4.0 s. Find a and the time of reversal.",
+      "back": "a = (−2−6)/4 = −2.0 m s⁻². v = 0 after 3.0 s; direction then reverses.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_05",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A velocity–time graph encloses +15 m and −21 m of area. Find displacement and total distance.",
+      "back": "Displacement = 15−21 = −6 m. Distance = 15+21 = 36 m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_06",
+      "aqaSubsection": "3.4.1.3",
+      "front": "An object starts at −4 m s⁻¹ and has constant acceleration +3 m s⁻² for 2 s. Final velocity?",
+      "back": "Δv = aΔt = +6 m s⁻¹; final velocity = −4+6 = +2 m s⁻¹.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_07",
+      "aqaSubsection": "3.4.1.3",
+      "front": "Acceleration rises uniformly from zero to 4.0 m s⁻² over 3.0 s. Find the change in velocity.",
+      "back": "Area under a–t graph = ½×3.0×4.0 = +6.0 m s⁻¹.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_08",
+      "aqaSubsection": "3.4.1.3",
+      "front": "On an s–t graph the gradient is negative but becomes less steep. Is the object speeding up?",
+      "back": "No. Velocity is negative but its magnitude decreases, so the object slows down.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_09",
+      "aqaSubsection": "3.4.1.3",
+      "front": "An object has u=5.0 m s⁻¹ and constant a=3.0 m s⁻² for 4.0 s. Find displacement.",
+      "back": "s = ut+½at² = 5×4 + ½×3×16 = 44 m.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_10",
+      "aqaSubsection": "3.4.1.3",
+      "front": "A car slows from 20 to 8 m s⁻¹ uniformly over 6.0 s. Find acceleration.",
+      "back": "a = (8−20)/6 = −2.0 m s⁻²; the negative sign indicates acceleration opposite the chosen positive direction.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_projectile_independent",
+      "aqaSubsection": "3.4.1.4",
+      "front": "What key idea lets you solve projectile motion?",
+      "back": "Horizontal and vertical motion are independent and share the same time.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_projectile_horizontal",
+      "aqaSubsection": "3.4.1.4",
+      "front": "Ignoring air resistance, what is horizontal acceleration of a projectile?",
+      "back": "0 m s⁻².",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_top_projectile",
+      "aqaSubsection": "3.4.1.4",
+      "front": "At maximum height, what are vertical velocity and acceleration?",
+      "back": "Vertical velocity = 0; acceleration is still g downward.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_13",
+      "aqaSubsection": "3.4.1.4",
+      "front": "Ignoring air resistance, which force acts on a projectile after release?",
+      "back": "Only weight (gravity) acts, vertically downwards; no forward driving force is needed.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_newton3",
+      "aqaSubsection": "3.4.1.5",
+      "front": "What makes a Newton's third-law pair?",
+      "back": "Equal and opposite forces of the same type acting on different objects.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_newton1",
+      "aqaSubsection": "3.4.1.5",
+      "front": "State Newton's first law.",
+      "back": "An object remains at rest or continues at constant velocity unless there is a resultant external force.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_newton2",
+      "aqaSubsection": "3.4.1.5",
+      "front": "State Newton's second law for constant mass.",
+      "back": "Resultant force equals mass multiplied by acceleration: F = ma. Acceleration is in the direction of the resultant force.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_force_diagram_001",
+      "aqaSubsection": "3.4.1.5",
+      "front": "What should a free-body diagram show?",
+      "back": "Only the forces acting on the chosen object. Draw labelled arrows in the correct directions. Do not include velocity or acceleration arrows as forces.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_force_diagram_002",
+      "aqaSubsection": "3.4.1.5",
+      "front": "How do you use a free-body diagram to find acceleration?",
+      "back": "Choose axes, resolve angled forces if needed, add the force components to find the resultant force, then use ΣF = ma.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_fbd_common_forces",
+      "aqaSubsection": "3.4.1.5",
+      "front": "What common forces might appear on a free-body diagram?",
+      "back": "Weight acts vertically down; normal contact force acts perpendicular to a surface; tension acts along a string; drag/friction acts opposite relative motion or its tendency.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_newton_s_laws_1",
+      "aqaSubsection": "3.4.1.5",
+      "front": "Why do the forces in Newton's third law not cancel one another?",
+      "back": "They are equal and opposite interaction forces acting on different bodies.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_newton_s_laws_2",
+      "aqaSubsection": "3.4.1.5",
+      "front": "What does a constant non-zero velocity tell you about the resultant external force?",
+      "back": "Resultant external force is zero because acceleration is zero.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_free_body_diagrams_3",
+      "aqaSubsection": "3.4.1.5",
+      "front": "Which forces belong on a free-body diagram for one object?",
+      "back": "Only the external forces acting ON the chosen object, drawn as vectors.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_12",
+      "aqaSubsection": "3.4.1.5",
+      "front": "A 2.0 kg object accelerates at 3.0 m s⁻². Friction is 4.0 N opposite the pull. Find the pull.",
+      "back": "Resultant force = ma = 6.0 N; pulling force = 6.0+4.0 = 10.0 N.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_momentum",
+      "aqaSubsection": "3.4.1.6",
+      "front": "What is momentum?",
+      "back": "p = mv.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_impulse",
+      "aqaSubsection": "3.4.1.6",
+      "front": "How are impulse and momentum change related?",
+      "back": "Impulse = Δp. For constant (or mean) force, FΔt = Δp.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_force_time_area",
+      "aqaSubsection": "3.4.1.6",
+      "front": "What does area under a force–time graph represent?",
+      "back": "Impulse, equal to change in momentum.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_time_tri",
+      "aqaSubsection": "3.4.1.6",
+      "front": "Force rises 0→80 N then returns to 0 over 0.20 s. Find impulse.",
+      "back": "Area of triangular F–t graph = ½×0.20×80 = 8.0 N s (change in momentum).",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_work_angle",
+      "aqaSubsection": "3.4.1.7",
+      "front": "For a constant force at angle θ to the displacement, state the general work-done formula.",
+      "back": "W = Fs cos θ, where θ is the angle between the force and displacement. Only use W = Fs when they are in the same direction.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_power_fv",
+      "aqaSubsection": "3.4.1.7",
+      "front": "When force and velocity are parallel, what power equation can be used?",
+      "back": "P = Fv.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_work_angle_signs",
+      "aqaSubsection": "3.4.1.7",
+      "front": "Complete the signs of work: force along / against / perpendicular to displacement.",
+      "back": "Positive / negative / zero, respectively.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_work_angle_theta",
+      "aqaSubsection": "3.4.1.7",
+      "front": "In W = Fs cos θ, what exactly is θ?",
+      "back": "θ is the angle between the force vector and the displacement vector.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "v33_card_physics_energy_6",
+      "aqaSubsection": "3.4.1.7",
+      "front": "In work done W=Fs cosθ, which two directions form angle θ?",
+      "back": "The force direction and the direction of displacement.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_hooke",
+      "aqaSubsection": "3.4.2.1",
+      "front": "State Hooke's law equation.",
+      "back": "F = kΔL, valid up to the limit of proportionality.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_stress",
+      "aqaSubsection": "3.4.2.1",
+      "front": "What is tensile stress?",
+      "back": "stress = F/A, in Pa.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_strain",
+      "aqaSubsection": "3.4.2.1",
+      "front": "What is tensile strain?",
+      "back": "strain = ΔL/L; it has no unit.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_extension_dual",
+      "aqaSubsection": "3.4.2.1",
+      "front": "For a Hookean force–extension graph (F vs ΔL), what do gradient and area give?",
+      "back": "Gradient = spring stiffness k; area = work done / elastic strain energy (for elastic loading).",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_extension_area",
+      "aqaSubsection": "3.4.2.1",
+      "front": "A spring force rises linearly 0→40 N during 0.50 m extension. Find energy stored.",
+      "back": "Area under F–extension = ½×40×0.50 = 10 J.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_rp4",
+      "aqaSubsection": "3.4.2.2",
+      "front": "What equation is used to determine Young modulus from a wire?",
+      "back": "E = FL/(AΔL), with A = πd²/4.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_young",
+      "aqaSubsection": "3.4.2.2",
+      "front": "What is Young modulus?",
+      "back": "E = stress/strain.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_stress_strain_gradient",
+      "aqaSubsection": "3.4.2.2",
+      "front": "What does gradient of a stress (y) against strain (x) graph give?",
+      "back": "Young modulus E in the linear elastic region: E = stress ÷ strain (in Pa).",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    },
+    {
+      "id": "phy_graph_weakness_v36_rp4_force_extension",
+      "aqaSubsection": "3.4.2.2",
+      "front": "For a wire, how is Young modulus found from a force (y) vs extension (x) graph?",
+      "back": "Gradient = F/ΔL; E = gradient × original length L ÷ cross-sectional area A.",
+      "review": "Checked question, answer and AS mock scope against AQA Physics 7408 section 3.4; direct tag not yet populated"
+    }
+  ],
+  "limitations": {
+    "nineSubsectionsRepresentedNotFullyCovered": true,
+    "unreviewedLegacyCardsRemain": true,
+    "sourceIndexedAqaPaperArchiveNotComplete": true,
+    "fullOfficialMarkSchemeAuditNotComplete": true,
+    "noUserMasteryClaim": true,
+    "noNewQuestionsOrCardsAdded": true,
+    "noDirectSpecRefAddedToCardMetadata": true,
+    "historicalV166CountsRemainValid": true
+  }
+}
