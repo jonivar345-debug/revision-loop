@@ -26,7 +26,7 @@ for(const c of newCards) {
  assert(c.front.length<=175&&c.back.length<=200,'Card too long: '+c.id);
 }
 const start=app.slice(app.indexOf('function startMockSession()'),app.indexOf('function selectedFlashCards()'));
-assert(start.includes("c.mock===true"),'Mock mode must include flagged cards');
+assert(start.includes('mockEligibleCard(c)')&&app.includes("if(c.mock!==true)return false"),'Mock mode must include flagged cards via shared eligibility guard');
 assert(start.includes('weightedPick(cardPool'),'Mock flashcards should remain weighted by weakness');
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'Keep existing flashcard progress keys');
 console.log('PASS Chemistry organic v42: 86 mock flashcards, 10 topic groups, progress preserved');
