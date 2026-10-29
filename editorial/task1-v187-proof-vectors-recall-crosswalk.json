@@ -1,0 +1,111 @@
+{
+  "version": "v187",
+  "date": "2026-10-29",
+  "priorReview": "editorial/task1-v185-maths-as-pure-outcome-crosswalk.json",
+  "scope": "AS Pure Maths first school mock",
+  "checkedCards": {
+    "totalBase": 3345,
+    "mathsBase": 210,
+    "mathsMockBase": 116,
+    "v186Supplement": 9
+  },
+  "finding": "The existing mock subset covers 2D magnitude, vector addition, scalar multiplication and position-vector subtraction, plus the definitions of deduction, exhaustion and counterexample. It lacks dedicated short recall prompts for these 15 more specific vector/proof conventions. Coverage of original exam-question bank has NOT been exhaustively verified.",
+  "addedCards": [
+    {
+      "id": "task1_v187_maths_001",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "For two non-zero vectors a and b, what algebraic relationship proves they are parallel?"
+    },
+    {
+      "id": "task1_v187_maths_002",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "To show distinct points A, B and C are collinear using AB and AC, what must you establish?"
+    },
+    {
+      "id": "task1_v187_maths_003",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "What is the position vector of the midpoint of A and B with position vectors a and b?"
+    },
+    {
+      "id": "task1_v187_maths_004",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "What is the distance AB in terms of position vectors a and b?"
+    },
+    {
+      "id": "task1_v187_maths_005",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "What is a unit vector?"
+    },
+    {
+      "id": "task1_v187_maths_006",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "How do you obtain a unit vector in the direction of non-zero vector v?"
+    },
+    {
+      "id": "task1_v187_maths_007",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "A vector has magnitude r and direction θ from the positive x-axis. What are its components?"
+    },
+    {
+      "id": "task1_v187_maths_008",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "If the position vectors of A and B are a and b, what is BA?"
+    },
+    {
+      "id": "task1_v187_maths_009",
+      "section": "3.10",
+      "topic": "Vectors",
+      "front": "If P divides AB internally in the ratio AP:PB = m:n, what is the position vector of P?"
+    },
+    {
+      "id": "task1_v187_maths_010",
+      "section": "3.2",
+      "topic": "Proof",
+      "front": "How can an even integer be written algebraically?"
+    },
+    {
+      "id": "task1_v187_maths_011",
+      "section": "3.2",
+      "topic": "Proof",
+      "front": "How can an odd integer be written algebraically?"
+    },
+    {
+      "id": "task1_v187_maths_012",
+      "section": "3.2",
+      "topic": "Proof",
+      "front": "How can an integer divisible by positive integer k be represented?"
+    },
+    {
+      "id": "task1_v187_maths_013",
+      "section": "3.2",
+      "topic": "Proof",
+      "front": "How can three consecutive integers be represented?"
+    },
+    {
+      "id": "task1_v187_maths_014",
+      "section": "3.2",
+      "topic": "Proof",
+      "front": "What makes a counterexample to a mathematical claim valid?"
+    },
+    {
+      "id": "task1_v187_maths_015",
+      "section": "3.2",
+      "topic": "Proof",
+      "front": "When proving a claim for all integers by deduction, how should n be chosen?"
+    }
+  ],
+  "limits": [
+    "No claim that AQA specification is fully covered",
+    "No claim that 2015-2026 AQA exam questions are all present",
+    "No Year 2 proof by contradiction",
+    "Any remaining difficulty applying vector geometry and proof belongs in worked exam questions"
+  ]
+}
