@@ -16,7 +16,7 @@
   switch(mode){
    case 'originalAs191Exhaust':{
     const all=has(/n\s*=\s*-3\s*,\s*-2\s*,\s*-1\s*,\s*0\s*,\s*1\s*,\s*2\s*,\s*3/);
-    const neg=has(/(?:n\s*\^?\s*3\s*-\s*n\s*(?:equals?|=)\s*)?-24\s*,\s*-6\s*,\s*0/)&&has(/(?:n\s*=|-3\s*,\s*-2)|n\s*\^?\s*3/i);
+    const neg=has(/(?:n\s*\^?\s*3\s*-\s*n\s*(?:equals?|=)\s*)?-24\s*,\s*-6\s*,\s*0/)&&has(/(?:n\s*=|-3\s*,\s*-2)|n\s*\^?\s*3|\b(?:results?|values?)\b/i);
     const pos=has(/(?:n\s*\^?\s*3\s*-\s*n\s*(?:equals?|=)\s*)?0\s*,\s*0\s*,\s*6\s*,\s*24/);
     const done=has(/(?:all|every|each|seven).{0,90}(?:divisible\s+by\s+6|multiples?\s+of\s+6)|(?:divisible\s+by\s+6|multiples?\s+of\s+6).{0,80}(?:all|every|each|case)/i);
     marks=[all,neg,pos,done&&neg&&pos];
@@ -27,7 +27,9 @@
     const quadratic=flat(/2cos\^2theta-costheta-1=0/);
     const factor=flat(/\(2costheta\+1\)\(costheta-1\)=0|\(costheta-1\)\(2costheta\+1\)=0/);
     const values=flat(/costheta=1/)&&flat(/costheta=-1\/2|costheta=-0\.5/);
-    const solutions=has(/(?:theta\s*=\s*)?0\s*°?\s*,\s*120\s*°?\s*,\s*240\s*°?/);
+    const angleText=t.match(/(?:theta\s*=\s*|solutions?\s*(?:are|:|=)\s*)([-+\d°.,\s]+)(?:;|$)/i)?.[1]||'';
+    const angles=[...angleText.matchAll(/[-+]?\d+(?:\.\d+)?/g)].map(m=>Number(m[0]));
+    const solutions=angles.length===3&&angles.every(v=>[0,120,240].includes(v))&&new Set(angles).size===3;
     marks=[identity,quadratic,factor,values,solutions];
     break;
    }
