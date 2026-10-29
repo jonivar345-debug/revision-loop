@@ -3,9 +3,9 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),vm=require('nod
 const bank=JSON.parse(fs.readFileSync('exam_questions.json','utf8'));
 const app=fs.readFileSync('app.js','utf8'),sw=fs.readFileSync('sw.js','utf8');
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v188-school-pure-scope-correction.json','utf8'));
-const fn=app.match(/function mockEligibleQuestion\\(q\\)\\{[\\s\\S]*?\\n\\}/);
+const fn=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
 assert(fn,'Maths school-mock scope function missing');
-const eligible=vm.runInNewContext(fn[0]+'\\nmockEligibleQuestion');
+const eligible=vm.runInNewContext(fn[0]+'\nmockEligibleQuestion');
 assert.equal(bank.bankVersion,70);
 assert.equal(bank.questions.length,1268);
 const target=bank.questions.find(q=>q.id==='orig_v31_maths_proof_2');
