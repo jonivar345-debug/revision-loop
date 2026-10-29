@@ -1,0 +1,130 @@
+{
+  "version": "v193",
+  "createdAt": "2026-10-29",
+  "scope": "Chemistry atomic structure, amount and taught Kw through Kp",
+  "notes": "Original short recall prompts, distinct from existing audit card examples; not a guarantee of absent duplicates elsewhere in full core deck. AQA-style concepts, no past-paper text.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "cards": [
+    {
+      "id": "task1_v193_chem_001",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "front": "What does one mole of specified entities contain?",
+      "back": "The Avogadro number of entities (about 6.02 × 10²³).",
+      "accept": [
+        "The Avogadro number of entities (about 6.02 × 10²³).",
+        "avogadro number of entities",
+        "the number of particles given by Avogadro's constant",
+        "6.02 x 10^23 specified entities",
+        "6.02214076 x 10^23 entities"
+      ],
+      "reject": [
+        "one gram of atoms",
+        "one molecule",
+        "6.02 x 10^22 particles"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance"
+    },
+    {
+      "id": "task1_v193_chem_002",
+      "subject": "Chemistry",
+      "specRef": "3.1.12.3",
+      "stage": "AS",
+      "topic": "Acids & bases",
+      "front": "At any temperature, for neutral pure water, how can [H⁺] be calculated from Kw?",
+      "back": "[H⁺] = √Kw.",
+      "accept": [
+        "[H⁺] = √Kw.",
+        "[H+]=sqrt(Kw)",
+        "square root of Kw",
+        "[H+] = sqrt Kw",
+        "hydrogen ion concentration equals square root of Kw"
+      ],
+      "reject": [
+        "[H+] = Kw",
+        "[H+] = 1/Kw",
+        "[H+] = Kw^2"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Acids & bases",
+      "revisionTopic": "Acids & bases"
+    },
+    {
+      "id": "task1_v193_chem_003",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "front": "In a time-of-flight mass spectrometer, what is the same for all ions after acceleration, as stated in the AQA model?",
+      "back": "Kinetic energy.",
+      "accept": [
+        "Kinetic energy.",
+        "kinetic energy",
+        "same kinetic energy",
+        "equal kinetic energies"
+      ],
+      "reject": [
+        "same speed",
+        "same velocity",
+        "same mass"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure"
+    },
+    {
+      "id": "task1_v193_chem_004",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "front": "For ions with equal charge and kinetic energy in a TOF mass spectrometer, which ions reach the detector first?",
+      "back": "Ions of lower mass.",
+      "accept": [
+        "Ions of lower mass.",
+        "lower mass",
+        "lighter ions",
+        "ions with a smaller mass",
+        "lower mass-to-charge ratio"
+      ],
+      "reject": [
+        "heavier ions",
+        "greater mass",
+        "same arrival time"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure"
+    }
+  ]
+}
