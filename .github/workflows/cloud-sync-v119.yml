@@ -81,6 +81,8 @@ on:
       - 'tests/task1-v183-bonding-86-precision.cjs'
       - 'tests/task1-v184-final-172-science-legacy-audit.cjs'
       - 'tests/task1-v185-maths-as-pure-marking.cjs'
+      - 'tests/task1-v186-maths-recall-supplement.cjs'
+      - 'maths_mock_recall_v186.json'
       - 'editorial/task1-v185-maths-as-pure-outcome-crosswalk.json'
       - 'editorial/task1-v184-final-172-science-legacy-audit.json'
       - 'editorial/task1-v183-bonding-86-precision.json'
@@ -228,6 +230,7 @@ jobs:
       - run: node tests/task1-v183-bonding-86-precision.cjs
       - run: node tests/task1-v184-final-172-science-legacy-audit.cjs
       - run: node tests/task1-v185-maths-as-pure-marking.cjs
+      - run: node tests/task1-v186-maths-recall-supplement.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

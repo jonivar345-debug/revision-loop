@@ -26,7 +26,7 @@ assert.equal(corrected.front,audit.cardCorrection.newFront);
 assert.equal(corrected.back,audit.cardCorrection.newBack);
 assert.match(corrected.front,/a > 0/);
 assert(corrected.accept.includes('1/a'));assert(!corrected.concepts);
-assert.match(html,/app\.js\?v=185/);assert.match(sw,/v185-as-pure-transform-marking/);
+assert.match(html,/app\.js\?v=\d+/);assert.match(sw,/v185-as-pure-transform-marking/);
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
 assert(start>=0&&end>start,'Cannot isolate flashcard marker');
 const evaluate=new Function('window',app.slice(start,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
