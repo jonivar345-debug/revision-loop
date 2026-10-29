@@ -1,0 +1,431 @@
+{
+  "version": "v178",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "objective": "44 original Chemistry mock cards checked at individual-answer level with four concise wording corrections",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/specification-at-a-glance"
+  ],
+  "baseline": {
+    "cards": 3345,
+    "active": 3341,
+    "mockCards": 2379,
+    "originalExamQuestions": 1268,
+    "priorPhysicsReviewed": 85,
+    "priorChemistryReviewed": 54,
+    "reviewedThisBatch": 44,
+    "remainingScience": 788,
+    "remainingChemistry": 562,
+    "remainingPhysics": 226
+  },
+  "bySubsection": {
+    "3.1.1": 4,
+    "3.1.10": 2,
+    "3.1.12": 2,
+    "3.1.2": 11,
+    "3.1.3": 8,
+    "3.1.4": 3,
+    "3.1.5": 2,
+    "3.1.6": 2,
+    "3.1.7": 2,
+    "3.1.8": 1,
+    "3.1.9": 3,
+    "7.2": 4
+  },
+  "corrections": [
+    {
+      "id": "chem_back_001",
+      "previousFront": "What is the core calculation route in a back titration?",
+      "previousBack": "Initial amount added − amount left over = amount that reacted. Then use the balanced-equation mole ratio.",
+      "newFront": "In a back titration, how do you find the amount that reacted?",
+      "newBack": "Moles initially added − moles left over.",
+      "reason": "Shorten a multi-step recall card to one assessable point"
+    },
+    {
+      "id": "chem_weak_acid_001",
+      "previousFront": "What approximation is often used for a weak monoprotic acid HA of concentration c?",
+      "previousBack": "If dissociation is small: [HA] ≈ c and [H⁺] = [A⁻], so Ka ≈ [H⁺]²/c.",
+      "newFront": "If weak acid HA dissociates only slightly, what is [HA] approximately?",
+      "newBack": "[HA] ≈ its initial concentration, c.",
+      "reason": "Shorten a multi-step recall card to one assessable point"
+    },
+    {
+      "id": "chem_hydrate",
+      "previousFront": "How do you find x in a hydrated salt, salt·xH₂O?",
+      "previousBack": "Find moles of anhydrous salt and water, then divide by the smaller amount to get the ratio.",
+      "newFront": "For salt·xH₂O, how is x found from the amounts in moles?",
+      "newBack": "x = moles of water ÷ moles of anhydrous salt.",
+      "reason": "Shorten a multi-step recall card to one assessable point"
+    },
+    {
+      "id": "chem_covalent_bond",
+      "previousFront": "What is a covalent bond?",
+      "previousBack": "A shared pair of electrons attracted to the nuclei of the bonded atoms.",
+      "newFront": "What is a covalent bond?",
+      "newBack": "Strong electrostatic attraction between a shared pair of electrons and the nuclei of the bonded atoms.",
+      "reason": "Make the complete electrostatic-attraction definition explicit"
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "chem_back_001",
+      "topic": "Back titrations",
+      "aqaSection": "3.1.2",
+      "front": "In a back titration, how do you find the amount that reacted?",
+      "back": "Moles initially added − moles left over.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_gas_001",
+      "topic": "Ideal gas equation",
+      "aqaSection": "3.1.2",
+      "front": "Which units must be used in pV = nRT?",
+      "back": "p in Pa, V in m³, T in K and n in mol.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_titration_001",
+      "topic": "Titration calculations",
+      "aqaSection": "3.1.2",
+      "front": "What conversion is needed before using n = cV when volume is given in cm³?",
+      "back": "Convert cm³ to dm³ by dividing by 1000.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_empirical_001",
+      "topic": "Empirical formula",
+      "aqaSection": "3.1.2",
+      "front": "What is the route from masses to an empirical formula?",
+      "back": "Mass → moles → divide all by the smallest → multiply to obtain a whole-number ratio.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_arrhenius_001",
+      "topic": "Arrhenius",
+      "aqaSection": "3.1.9",
+      "front": "For a graph of ln k against 1/T, what are the gradient and y-intercept?",
+      "back": "Gradient = −Ea/R. y-intercept = ln A. Temperature must be in kelvin.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_arrhenius_002",
+      "topic": "Arrhenius",
+      "aqaSection": "3.1.9",
+      "front": "How do you calculate Ea from the gradient of ln k against 1/T?",
+      "back": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_kp_001",
+      "topic": "Kp",
+      "aqaSection": "3.1.10",
+      "front": "What goes into a Kp expression?",
+      "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_kp_002",
+      "topic": "Kp",
+      "aqaSection": "3.1.10",
+      "front": "How do you find a gas's partial pressure from its mole fraction?",
+      "back": "partial pressure = mole fraction × total pressure.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_weak_acid_001",
+      "topic": "Weak acids",
+      "aqaSection": "3.1.12",
+      "front": "If weak acid HA dissociates only slightly, what is [HA] approximately?",
+      "back": "[HA] ≈ its initial concentration, c.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_kw_001",
+      "topic": "Kw",
+      "aqaSection": "3.1.12",
+      "front": "What is Kw at 298 K?",
+      "back": "Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴ mol² dm⁻⁶.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_gibbs_001",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "State the Gibbs free-energy equation and the unit rule.",
+      "back": "ΔG = ΔH − TΔS. T in K; use matching energy units for ΔH and TΔS (convert J to kJ if needed).",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_rates_001",
+      "topic": "Rate equations",
+      "aqaSection": "3.1.9",
+      "front": "What does the overall order of a rate equation mean?",
+      "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_rp1",
+      "topic": "RP1 Titration",
+      "aqaSection": "7.2",
+      "front": "What are the essential steps for making an accurate standard solution?",
+      "back": "Accurately weigh, dissolve, quantitatively transfer with washings, make to the mark, stopper and invert.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_rp2",
+      "topic": "RP2 Enthalpy",
+      "aqaSection": "7.2",
+      "front": "What is the core calorimetry calculation?",
+      "back": "q = mcΔT, then ΔH = −q/n for the stated reacting amount.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_rp3",
+      "topic": "RP3 Rates",
+      "aqaSection": "7.2",
+      "front": "Why can 1/t be used as a measure of rate in a clock reaction?",
+      "back": "The same fixed amount of change defines the end point each time, so shorter time means faster rate.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_rp5",
+      "topic": "RP5 Distillation",
+      "aqaSection": "7.2",
+      "front": "Where should the thermometer bulb be positioned during distillation?",
+      "back": "At the entrance to the condenser/still head, so it measures vapour entering the condenser.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_ar_def",
+      "topic": "Atomic structure",
+      "aqaSection": "3.1.1",
+      "front": "Define relative atomic mass, Ar.",
+      "back": "Weighted mean mass of an atom relative to 1/12 of the mass of a carbon-12 atom.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_isotope",
+      "topic": "Atomic structure",
+      "aqaSection": "3.1.1",
+      "front": "What are isotopes?",
+      "back": "Atoms of the same element with the same proton number but different neutron numbers.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_ionisation_def",
+      "topic": "Ionisation energy",
+      "aqaSection": "3.1.1",
+      "front": "Define first ionisation energy.",
+      "back": "Energy required to remove one electron from each atom in one mole of gaseous atoms to form gaseous 1+ ions.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_ie_trend",
+      "topic": "Ionisation energy",
+      "aqaSection": "3.1.1",
+      "front": "Why generally does first ionisation energy increase across a period?",
+      "back": "Nuclear charge increases while shielding is similar, so attraction to the outer electron increases and atomic radius falls.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_avogadro",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "What is the Avogadro constant?",
+      "back": "6.02 × 10²³ mol⁻¹ particles per mole.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_moles_mass",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "How do you calculate moles from mass?",
+      "back": "n = m/Mr.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_concentration",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "How do you calculate concentration in mol dm⁻³?",
+      "back": "c = n/V, with V in dm³.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_yield",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "What is percentage yield?",
+      "back": "actual yield ÷ theoretical yield × 100.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_atom_economy",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "What is atom economy?",
+      "back": "Mr of desired product ÷ total Mr of reactants, accounting for coefficients, × 100.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_purity",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "How is percentage purity calculated?",
+      "back": "mass of pure substance ÷ total sample mass × 100.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_hydrate",
+      "topic": "Amount of substance",
+      "aqaSection": "3.1.2",
+      "front": "For salt·xH₂O, how is x found from the amounts in moles?",
+      "back": "x = moles of water ÷ moles of anhydrous salt.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_ionic_bond",
+      "topic": "Bonding",
+      "aqaSection": "3.1.3",
+      "front": "What is ionic bonding?",
+      "back": "Electrostatic attraction between oppositely charged ions.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_covalent_bond",
+      "topic": "Bonding",
+      "aqaSection": "3.1.3",
+      "front": "What is a covalent bond?",
+      "back": "Strong electrostatic attraction between a shared pair of electrons and the nuclei of the bonded atoms.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_metallic_bond",
+      "topic": "Bonding",
+      "aqaSection": "3.1.3",
+      "front": "What is metallic bonding?",
+      "back": "Electrostatic attraction between positive metal ions and delocalised electrons.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_shape_linear",
+      "topic": "Shapes",
+      "aqaSection": "3.1.3",
+      "front": "What bond angle is expected for two electron pairs around a central atom?",
+      "back": "180°.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_shape_trig",
+      "topic": "Shapes",
+      "aqaSection": "3.1.3",
+      "front": "What bond angle is expected for three bonding pairs around a central atom?",
+      "back": "120°.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_shape_tetra",
+      "topic": "Shapes",
+      "aqaSection": "3.1.3",
+      "front": "What bond angle is expected for four bonding pairs?",
+      "back": "109.5°.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_lone_pair",
+      "topic": "Shapes",
+      "aqaSection": "3.1.3",
+      "front": "Why do lone pairs reduce bond angles?",
+      "back": "Lone-pair electron density repels more strongly than bonding-pair electron density.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_hbond",
+      "topic": "Intermolecular forces",
+      "aqaSection": "3.1.3",
+      "front": "When can hydrogen bonding occur?",
+      "back": "When H is bonded to N, O or F and interacts with a lone pair on N, O or F of another molecule.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_enthalpy_def",
+      "topic": "Energetics",
+      "aqaSection": "3.1.4",
+      "front": "Define standard enthalpy change of reaction.",
+      "back": "Enthalpy change when reactants in their standard states react in the stoichiometric equation under standard conditions.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_hess",
+      "topic": "Energetics",
+      "aqaSection": "3.1.4",
+      "front": "What principle is used in Hess cycles?",
+      "back": "Enthalpy change is independent of route because enthalpy is a state function.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_bondenthalpy",
+      "topic": "Energetics",
+      "aqaSection": "3.1.4",
+      "front": "Using mean bond enthalpies, how is ΔH estimated?",
+      "back": "Σ bonds broken − Σ bonds formed.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_collision",
+      "topic": "Kinetics",
+      "aqaSection": "3.1.5",
+      "front": "What two conditions make a collision successful?",
+      "back": "Particles collide with energy at least equal to Ea and with a suitable orientation.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_catalyst",
+      "topic": "Kinetics",
+      "aqaSection": "3.1.5",
+      "front": "How does a catalyst increase reaction rate?",
+      "back": "It provides an alternative route with lower activation energy.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_lechatelier",
+      "topic": "Equilibria",
+      "aqaSection": "3.1.6",
+      "front": "State Le Chatelier's principle.",
+      "back": "A system at equilibrium opposes a change in conditions by shifting to reduce that change.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_kc",
+      "topic": "Equilibria",
+      "aqaSection": "3.1.6",
+      "front": "What goes into a Kc expression?",
+      "back": "Equilibrium concentrations raised to stoichiometric coefficients; pure solids are omitted.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_redox_oxid",
+      "topic": "Redox",
+      "aqaSection": "3.1.7",
+      "front": "What is oxidation in terms of electrons and oxidation state?",
+      "back": "Loss of electrons; oxidation state increases.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    },
+    {
+      "id": "chem_redox_reduc",
+      "topic": "Redox",
+      "aqaSection": "3.1.7",
+      "front": "What is reduction in terms of electrons and oxidation state?",
+      "back": "Gain of electrons; oxidation state decreases.",
+      "review": "Prompt and answer reviewed against nominated AQA topic; not full subsection certification"
+    }
+  ],
+  "limits": {
+    "notFullSyllabusCertification": true,
+    "remainingLegacyAnswerReviews": 788,
+    "studentMasteryNotMeasured": true,
+    "archivedExamPapersNotCertifiedComplete": true,
+    "noChangesToExamQuestionBank": true
+  }
+}
