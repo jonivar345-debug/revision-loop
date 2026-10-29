@@ -5,6 +5,7 @@ const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFil
 const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
 const particle=JSON.parse(fs.readFileSync('editorial/task1-v160-particles-mock-audit.json','utf8'));
 const measure=JSON.parse(fs.readFileSync('editorial/task1-v160-measurements-mock-audit.json','utf8'));
+const reviewedExpected=require('./task1-v154-legacy-evidence.cjs');
 assert.equal(deck.deckVersion,160);assert.equal(bank.bankVersion,68);
 assert.equal(deck.cards.length,3312);assert.equal(deck.cards.filter(c=>c.active!==false).length,3308);
 const eligible=deck.cards.filter(c=>c.active!==false&&c.mock===true);
@@ -52,7 +53,7 @@ for(const [a,expectedN,code,newN,newQ,newMarks] of [[particle,46,'3.2',3,2,14],[
   assert(row.specRef.startsWith(code));
   assert(!seen.has(row.id));seen.add(row.id);
   const c=C.get(row.card.id);assert(c&&c.subject==='Physics'&&c.active!==false&&c.mock===true);
-  assert.equal(c.front,row.card.front);assert.equal(c.back,row.card.back);
+  assert.equal(c.front,reviewedExpected(row.card.id,'front',row.card.front));assert.equal(c.back,reviewedExpected(row.card.id,'back',row.card.back));
   assert.equal(c.specRef||null,row.card.specRef);
   if(row.question){const q=Q.get(row.question.id);
    assert(q&&q.subject==='Physics'&&q.mock===true);
