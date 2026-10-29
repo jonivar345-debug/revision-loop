@@ -2192,7 +2192,7 @@ function examSuggested(q,answer){
    const conclusion=/divisible\s+by\s+6|multiple\s+of\s+6/i.test(phrase);
    flags=[factor,even,three,conclusion&&even&&three];
   }else if(q.markingMode==='origPure190OddSquare'){
-   const odd=/\bn=2[a-z][+-]1\b/.test(flat);
+   const odd=/n=2[a-z][+-]1\b/.test(flat);
    const square=/n\^2=(?:4k\(k\+1\)\+1|4k\^2\+4k\+1|\(2k\+1\)\^2)/.test(flat);
    const even=/\beven\b/i.test(phrase)&&/consecutive|k\s*\(\s*k\s*\+\s*1\s*\)/i.test(phrase);
    const conclusion=/n\^2=8[a-z]\+1/.test(flat)||(/remainder\s+(?:of\s+|is\s+)?1/i.test(phrase)&&/\b8\b/.test(phrase));
