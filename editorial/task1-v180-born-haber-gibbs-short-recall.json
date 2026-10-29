@@ -1,0 +1,550 @@
+{
+  "version": "v180",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "objective": "Narrow content-and-answer audit for 52 legacy Chemistry mock cards, focusing on Born–Haber, entropy and Gibbs; replace case-specific memorisation with transferable AQA recall.",
+  "officialSource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "baseline": {
+    "cards": 3345,
+    "active": 3341,
+    "mockEligible": 2379,
+    "originalExamQuestions": 1268,
+    "reviewedBefore": 231,
+    "reviewedThisBatch": 52,
+    "reviewedTotal": 283,
+    "remainingScience": 688,
+    "remainingChemistry": 462,
+    "remainingPhysics": 226
+  },
+  "reviewed": [
+    {
+      "id": "v33_card_chemistry_organic_chemistry_61",
+      "topic": "Organic chemistry",
+      "aqaSection": "3.3",
+      "front": "Distinguish electrophile from nucleophile.",
+      "back": "An electrophile accepts an electron pair; a nucleophile donates an electron pair.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "v33_card_chemistry_acyl_chlorides_62",
+      "topic": "Acyl chlorides",
+      "aqaSection": "3.3",
+      "front": "What two products form from an acyl chloride reacting with an alcohol?",
+      "back": "An ester and hydrogen chloride.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "v33_card_chemistry_esters_64",
+      "topic": "Esters",
+      "aqaSection": "3.3",
+      "front": "Why is Fischer esterification usually written as reversible?",
+      "back": "The ester and water can hydrolyse back to carboxylic acid and alcohol, so equilibrium is established.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "v33_card_chemistry_periodicity_71",
+      "topic": "Periodicity",
+      "aqaSection": "3.2.1",
+      "front": "Why does aluminium have a lower first ionisation energy than magnesium?",
+      "back": "The electron removed from aluminium is in a higher-energy 3p subshell compared with magnesium's 3s electron.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_ionic_lattice",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What is an ionic lattice?",
+      "back": "A giant 3D repeating arrangement of oppositely charged ions held by electrostatic attractions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define lattice enthalpy of formation.",
+      "back": "The enthalpy change when 1 mole of a solid ionic compound is formed from its constituent gaseous ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the lattice formation equation for NaCl.",
+      "back": "Na⁺(g) + Cl⁻(g) → NaCl(s).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_diss_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the lattice dissociation equation for NaCl.",
+      "back": "NaCl(s) → Na⁺(g) + Cl⁻(g).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define standard enthalpy of formation.",
+      "back": "The enthalpy change when 1 mole of compound forms from its constituent elements in their standard states under standard conditions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the standard formation equation for MgO.",
+      "back": "Mg(s) + ½O₂(g) → MgO(s).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define enthalpy of atomisation.",
+      "back": "The enthalpy change when 1 mole of gaseous atoms forms from an element in its standard state.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_cl_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the atomisation equation for chlorine.",
+      "back": "½Cl₂(g) → Cl(g).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_second_ionisation_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define second ionisation energy.",
+      "back": "Energy required to remove 1 mole of electrons from 1 mole of gaseous 1+ ions, forming gaseous 2+ ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_first_ie_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the equation for magnesium's first ionisation energy.",
+      "back": "Mg(g) → Mg⁺(g) + e⁻.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_second_ie_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the equation for magnesium's second ionisation energy.",
+      "back": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_second_ea_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define second electron affinity.",
+      "back": "The enthalpy change when 1 mole of gaseous 1− ions each gains an electron, forming gaseous 2− ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_first_ea_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the equation for oxygen's first electron affinity.",
+      "back": "O(g) + e⁻ → O⁻(g).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_second_ea_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the equation for oxygen's second electron affinity.",
+      "back": "O⁻(g) + e⁻ → O²⁻(g).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define enthalpy of hydration.",
+      "back": "The enthalpy change when 1 mole of gaseous ions becomes hydrated, forming aqueous ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_na_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the hydration equation for Na⁺.",
+      "back": "Na⁺(g) → Na⁺(aq).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_def",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Define enthalpy of solution.",
+      "back": "The enthalpy change when 1 mole of solute dissolves in enough solvent to form an infinitely dilute solution.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_nacl_eq",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the enthalpy of solution equation for NaCl.",
+      "back": "NaCl(s) → Na⁺(aq) + Cl⁻(aq).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_defs_20261024_first_ionisation_bh",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "In a Born–Haber cycle, define first ionisation energy.",
+      "back": "Energy required to remove 1 mole of electrons from 1 mole of gaseous atoms, forming gaseous 1+ ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_identify_ions",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Which gaseous ions are formed in the MgO Born–Haber cycle?",
+      "back": "Mg²⁺(g) and O²⁻(g).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_start_end",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What are the starting and final states in MgO's Born–Haber cycle?",
+      "back": "Start: Mg(s) + ½O₂(g). End: MgO(s). Link them by the standard formation enthalpy.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_mg",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What is magnesium's atomisation step in the MgO cycle?",
+      "back": "Mg(s) → Mg(g). It is endothermic (+).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_o",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the atomisation equation for oxygen in an MgO Born–Haber cycle.",
+      "back": "½O₂(g) → O(g).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_mg_ionisations",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "How many successive magnesium ionisation energy steps are in the MgO cycle?",
+      "back": "Two: first and second ionisation.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_o_affinities",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "How many successive electron-affinity steps of oxygen are needed for an MgO cycle?",
+      "back": "Two: first and second electron affinity.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_electron_accounting",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What happens to the 2e⁻ released when Mg forms Mg²⁺?",
+      "back": "The electrons are gained by oxygen in its first and second electron-affinity steps; no free e⁻ remain.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_lattice_last",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Write the lattice formation equation for magnesium oxide.",
+      "back": "Mg²⁺(g) + O²⁻(g) → MgO(s).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_arrow_signs",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "How should enthalpy arrows be drawn in a Born–Haber diagram?",
+      "back": "Endothermic (+) steps upwards; exothermic (−) steps downwards. Draw the direct formation route too.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_step_list",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Why is Hess's law used in a Born–Haber cycle?",
+      "back": "To calculate an unknown enthalpy change from a closed enthalpy cycle.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_balance",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Why must CaCl₂ cycles use two Cl atomisations and two electron affinities?",
+      "back": "CaCl₂ has 2Cl⁻ per formula unit: 2Cl atoms must form and each gains one electron.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_theoretical_rank",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Which two ion properties increase the strength of attraction in a perfect ionic lattice?",
+      "back": "Greater ionic charges and smaller ionic radii.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_calcium_why",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Why is CaCl₂ lattice dissociation much larger than KCl's?",
+      "back": "Ca²⁺ has higher charge than K⁺, producing stronger electrostatic attraction to chloride ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_ag_k_radius",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Why does the perfect ionic model predict AgCl has a greater lattice enthalpy than KCl?",
+      "back": "Ag⁺ is smaller than K⁺, so interionic distance is smaller and electrostatic attraction is stronger.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_discrepancies",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Why can Born–Haber lattice enthalpies differ from perfect-ionic model values?",
+      "back": "The perfect ionic model neglects covalent character caused by ion polarisation.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_small_difference",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What does a small perfect-ionic/Born–Haber lattice enthalpy difference suggest?",
+      "back": "Predominantly ionic bonding with little covalent character; the perfect ionic model is a good approximation.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_polarisation",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "Why does AgCl have more covalent character than KCl?",
+      "back": "Ag⁺ polarises Cl⁻ more: its electron cloud is distorted, with electron density shared between the ions.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_link",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "How do you explain AgCl's unexpectedly high lattice dissociation enthalpy?",
+      "back": "Ag⁺ polarises Cl⁻, introducing covalent character and extra lattice stabilisation absent from the ideal ionic model.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_structure",
+      "topic": "Born–Haber cycles",
+      "aqaSection": "3.1.8",
+      "front": "What can a large Born–Haber versus perfect-ionic lattice enthalpy difference indicate?",
+      "back": "Significant covalent character in the ionic compound.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_entropy_change",
+      "topic": "Entropy",
+      "aqaSection": "3.1.8",
+      "front": "How do you calculate ΔS° from standard molar entropies?",
+      "back": "ΔS° = ΣS°(products) − ΣS°(reactants); multiply each S° by its balanced-equation coefficient.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_gibbs_threshold",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "What equation gives the Gibbs feasibility threshold temperature when ΔG = 0?",
+      "back": "T = ΔH/ΔS, using consistent energy units.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_signs_high_temp",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "Which signs of ΔH and ΔS make a reaction feasible only above a threshold temperature?",
+      "back": "ΔH positive and ΔS positive.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_signs_low_temp",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "Which signs of ΔH and ΔS make a reaction feasible only below a threshold temperature?",
+      "back": "ΔH negative and ΔS negative.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_gibbs_graph",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "What is the gradient of a graph of ΔG against temperature T?",
+      "back": "−ΔS.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_sixmark_outline",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "Does a negative ΔG guarantee a fast reaction?",
+      "back": "No. A high activation energy can make a feasible reaction very slow.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_endothermic_feasible",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "For an endothermic reaction with positive ΔS, what inequality makes ΔG negative?",
+      "back": "TΔS > ΔH.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_negative_not_fast",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "Why does negative ΔG not guarantee a rapid reaction?",
+      "back": "ΔG predicts thermodynamic feasibility, not rate. A high activation energy can make the reaction very slow.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_catalyst_gibbs",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "Does a catalyst change ΔG or thermodynamic feasibility?",
+      "back": "No. A catalyst lowers activation energy and increases rate; it does not change ΔG for the overall reaction.",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_entropy_temp_effect",
+      "topic": "Gibbs free energy",
+      "aqaSection": "3.1.8",
+      "front": "How does increasing T affect ΔG when ΔS is positive versus negative?",
+      "back": "For ΔS > 0, ΔG decreases (more favourable). For ΔS < 0, ΔG increases (less favourable).",
+      "comment": "Prompt and answer assessed for clarity and relevance; does not certify entire specification bullet or proficiency"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "chem_bh_weak_20261024_identify_ions",
+      "previousFront": "Before drawing a Born–Haber cycle for MgO, which ions are formed?",
+      "previousBack": "Mg²⁺ and O²⁻. Magnesium loses two electrons; oxygen gains two.",
+      "newFront": "Which gaseous ions are formed in the MgO Born–Haber cycle?",
+      "newBack": "Mg²⁺(g) and O²⁻(g).",
+      "reason": "Keep the flashcard to one core fact; detailed steps belong in the exam bank"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_o",
+      "previousFront": "What is oxygen's atomisation step in the MgO cycle?",
+      "previousBack": "½O₂(g) → O(g). It is endothermic (+). Use half the O₂ bond dissociation enthalpy.",
+      "newFront": "Write the atomisation equation for oxygen in an MgO Born–Haber cycle.",
+      "newBack": "½O₂(g) → O(g).",
+      "reason": "Keep the flashcard to one core fact; detailed steps belong in the exam bank"
+    },
+    {
+      "id": "chem_bh_weak_20261024_mg_ionisations",
+      "previousFront": "Which two magnesium ionisation equations belong in an MgO cycle?",
+      "previousBack": "Mg(g) → Mg⁺(g) + e⁻; then Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "newFront": "How many successive magnesium ionisation energy steps are in the MgO cycle?",
+      "newBack": "Two: first and second ionisation.",
+      "reason": "Keep the flashcard to one core fact; detailed steps belong in the exam bank"
+    },
+    {
+      "id": "chem_bh_weak_20261024_o_affinities",
+      "previousFront": "Which two oxygen electron-affinity equations belong in an MgO cycle?",
+      "previousBack": "O(g) + e⁻ → O⁻(g); then O⁻(g) + e⁻ → O²⁻(g).",
+      "newFront": "How many successive electron-affinity steps of oxygen are needed for an MgO cycle?",
+      "newBack": "Two: first and second electron affinity.",
+      "reason": "Keep the flashcard to one core fact; detailed steps belong in the exam bank"
+    },
+    {
+      "id": "chem_bh_weak_20261024_lattice_last",
+      "previousFront": "What is the final lattice formation step for magnesium oxide?",
+      "previousBack": "Mg²⁺(g) + O²⁻(g) → MgO(s). This is exothermic (negative enthalpy).",
+      "newFront": "Write the lattice formation equation for magnesium oxide.",
+      "newBack": "Mg²⁺(g) + O²⁻(g) → MgO(s).",
+      "reason": "Keep the flashcard to one core fact; detailed steps belong in the exam bank"
+    },
+    {
+      "id": "chem_bh_weak_20261024_cycle_step_list",
+      "previousFront": "List the energy changes needed in MgO's Born–Haber cycle.",
+      "previousBack": "Mg atomisation, O atomisation, Mg IE₁, Mg IE₂, O EA₁, O EA₂, lattice formation; also ΔHf.",
+      "newFront": "Why is Hess's law used in a Born–Haber cycle?",
+      "newBack": "To calculate an unknown enthalpy change from a closed enthalpy cycle.",
+      "reason": "Keep the flashcard to one core fact; detailed steps belong in the exam bank"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_theoretical_rank",
+      "previousFront": "Rank the perfect ionic lattice dissociation enthalpies of CaCl₂, AgCl and KCl.",
+      "previousBack": "CaCl₂ (+2223) > AgCl (+770) > KCl (+690) kJ mol⁻¹.",
+      "newFront": "Which two ion properties increase the strength of attraction in a perfect ionic lattice?",
+      "newBack": "Greater ionic charges and smaller ionic radii.",
+      "reason": "Replace a worked example's memorised numbers or overlong prompt with transferable AQA recall"
+    },
+    {
+      "id": "chem_bh_weak_20261024_sixmark_discrepancies",
+      "previousFront": "How large are the ideal-vs-Born–Haber differences for CaCl₂, KCl and AgCl?",
+      "previousBack": "CaCl₂: 14; KCl: 11; AgCl: 135 kJ mol⁻¹. AgCl has by far the greatest discrepancy.",
+      "newFront": "Why can Born–Haber lattice enthalpies differ from perfect-ionic model values?",
+      "newBack": "The perfect ionic model neglects covalent character caused by ion polarisation.",
+      "reason": "Replace a worked example's memorised numbers or overlong prompt with transferable AQA recall"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_gibbs_threshold",
+      "previousFront": "How do you calculate a Gibbs feasibility threshold temperature?",
+      "previousBack": "Set ΔG = 0, then T = ΔH / ΔS using matching energy units. Check whether it is a minimum or maximum.",
+      "newFront": "What equation gives the Gibbs feasibility threshold temperature when ΔG = 0?",
+      "newBack": "T = ΔH/ΔS, using consistent energy units.",
+      "reason": "Ask for one sign, relationship or inequality rather than several reasoning steps"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_signs_high_temp",
+      "previousFront": "Which ΔH and ΔS signs make a reaction feasible only at high T?",
+      "previousBack": "ΔH positive, ΔS positive: as T rises, TΔS can exceed ΔH, making ΔG negative.",
+      "newFront": "Which signs of ΔH and ΔS make a reaction feasible only above a threshold temperature?",
+      "newBack": "ΔH positive and ΔS positive.",
+      "reason": "Ask for one sign, relationship or inequality rather than several reasoning steps"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_signs_low_temp",
+      "previousFront": "Which ΔH and ΔS signs make a reaction feasible only at low T?",
+      "previousBack": "ΔH negative, ΔS negative: at low T the favourable enthalpy dominates; high T makes ΔG positive.",
+      "newFront": "Which signs of ΔH and ΔS make a reaction feasible only below a threshold temperature?",
+      "newBack": "ΔH negative and ΔS negative.",
+      "reason": "Ask for one sign, relationship or inequality rather than several reasoning steps"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_gibbs_graph",
+      "previousFront": "On a graph of ΔG against T, what are gradient and intercept?",
+      "previousBack": "Gradient = −ΔS; vertical intercept = ΔH; crossing ΔG = 0 gives the feasibility boundary.",
+      "newFront": "What is the gradient of a graph of ΔG against temperature T?",
+      "newBack": "−ΔS.",
+      "reason": "Ask for one sign, relationship or inequality rather than several reasoning steps"
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_endothermic_feasible",
+      "previousFront": "Explain how an endothermic reaction can be thermodynamically feasible.",
+      "previousBack": "With ΔH > 0 and ΔS > 0, sufficiently high T gives TΔS > ΔH, so ΔG = ΔH − TΔS < 0.",
+      "newFront": "For an endothermic reaction with positive ΔS, what inequality makes ΔG negative?",
+      "newBack": "TΔS > ΔH.",
+      "reason": "Ask for one sign, relationship or inequality rather than several reasoning steps"
+    }
+  ],
+  "limitations": {
+    "fullAqaSpecificationCertified": false,
+    "allPastPapersCertified": false,
+    "individualMasteryMeasured": false,
+    "questionBankEdited": false,
+    "oldFlashcardProgressIdsPreserved": true
+  }
+}
