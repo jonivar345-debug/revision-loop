@@ -1117,7 +1117,7 @@ function normalise(x){
  let s=String(x||'').normalize('NFKD').toLowerCase();
  const r=[
   [/θ/g,' theta '],[/λ/g,' lambda '],[/ρ/g,' rho '],[/δ|Δ/g,' delta '],[/φ/g,' phi '],[/ε/g,' epsilon '],
-  [/²/g,'^2'],[/³/g,'^3'],[/−|–|—/g,'-'],[/×|·/g,' * '],[/÷/g,' / '],
+  [/√/g,' sqrt '],[/²/g,'^2'],[/³/g,'^3'],[/−|–|—/g,'-'],[/×|·/g,' * '],[/÷/g,' / '],
   [/\bcosine\b/g,'cos'],[/\bsine\b/g,'sin'],[/\btangent\b/g,'tan'],[/\bperp\b/g,'perpendicular'],
   [/\bdegrees?\b/g,' degree '],[/\bnewtons?\b/g,' n '],[/\bjoules?\b/g,' j '],[/\bvolts?\b/g,' v ']
  ];
