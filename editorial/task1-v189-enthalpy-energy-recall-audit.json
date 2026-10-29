@@ -1,0 +1,20 @@
+{
+  "version": "v189",
+  "date": "2026-10-29",
+  "verifiedAgainst": "Existing 3345 core flashcard records on main. Related cards: chem_rp2, chem_energetics_v49_20, chem_energetics_v49_25, chem_energetics_v53_08, chem_energetics_v53_10.",
+  "existingRecall": "Core contains q=mcΔT and ΔH=−q_solution/n, but no concise direct q=n|ΔH| recall prompt was located.",
+  "action": "Add one original single-fact mock-eligible flashcard; use dedicated optional supplemental bank, not an edit to 3345-card master deck.",
+  "formulas": {
+    "magnitude": "q = n × |ΔH|",
+    "signedReaction": "q_reaction = n ΔH",
+    "calorimeterSolution": "q_solution = −n ΔH",
+    "heatCapacity": "q_solution = mcΔT"
+  },
+  "unitRule": "If n in mol and ΔH in kJ mol^-1, q is kJ. Convert J and kJ explicitly where required.",
+  "cautions": [
+    "n must represent the amount of reaction as defined by ΔH, respecting stoichiometry.",
+    "Do not confuse heat absorbed by the solution with signed reaction enthalpy.",
+    "Absolute value applies to requested heat magnitude; signed heat is n ΔH."
+  ],
+  "claim": "This is a targeted memory gap fix, not proof of complete Energetics coverage."
+}

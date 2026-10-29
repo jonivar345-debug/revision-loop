@@ -1,0 +1,43 @@
+{
+  "version": "v189",
+  "createdAt": "2026-10-29",
+  "scope": "AQA Chemistry AS Energetics and calorimetry recall for taught first mock",
+  "note": "q denotes the non-negative magnitude of heat energy transferred. If ΔH is kJ mol−1 and n is mol, q is kJ; for signed reaction heat use q_reaction = n ΔH.",
+  "cards": [
+    {
+      "id": "task1_v189_chem_001",
+      "subject": "Chemistry",
+      "specRef": "3.1.4",
+      "stage": "AS",
+      "topic": "Energetics",
+      "front": "What formula gives the magnitude of heat transferred for n mol at molar ΔH?",
+      "back": "q = n × |ΔH|.",
+      "accept": [
+        "q = n × |ΔH|.",
+        "q=n|ΔH|",
+        "q = n × |ΔH|",
+        "n x |ΔH|",
+        "n * |ΔH|",
+        "q = n times the magnitude of delta H",
+        "q = n times the absolute value of enthalpy change",
+        "q = n * abs(ΔH)",
+        "n * abs(ΔH)",
+        "q = n multiplied by the absolute value of ΔH"
+      ],
+      "reject": [
+        "q = n + ΔH",
+        "q = ΔH/n",
+        "q = n/ΔH"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Energetics",
+      "revisionTopic": "Energetics"
+    }
+  ]
+}

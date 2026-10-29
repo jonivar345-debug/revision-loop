@@ -84,6 +84,9 @@ on:
       - 'tests/task1-v186-maths-recall-supplement.cjs'
       - 'maths_mock_recall_v186.json'
       - 'maths_mock_recall_v187.json'
+      - 'chemistry_mock_recall_v189.json'
+      - 'editorial/task1-v189-enthalpy-energy-recall-audit.json'
+      - 'tests/task1-v189-enthalpy-recall.cjs'
       - 'editorial/task1-v187-proof-vectors-recall-crosswalk.json'
       - 'tests/task1-v187-proof-vectors-recall.cjs'
       - 'tests/task1-v188-maths-school-scope.cjs'
@@ -238,6 +241,7 @@ jobs:
       - run: node tests/task1-v186-maths-recall-supplement.cjs
       - run: node tests/task1-v187-proof-vectors-recall.cjs
       - run: node tests/task1-v188-maths-school-scope.cjs
+      - run: node tests/task1-v189-enthalpy-recall.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

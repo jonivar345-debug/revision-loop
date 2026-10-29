@@ -1,7 +1,7 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json'];
-const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json'];
+const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json'];
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
 let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
@@ -1334,6 +1334,16 @@ function evaluateMathsPureTransform(c,input){
 }
 
 function evaluateCard(c,input){
+ // Heat-energy *magnitude* needs absolute-value notation: normalise() strips |.
+ if(c?.id==='task1_v189_chem_001'){
+  const raw=String(input||'').trim();
+  if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+  const magnitude=/\|\s*(?:Δ|δ|∆|delta\s*)h\s*\||\b(?:absolute\s+value|magnitude|modulus)\b|\babs\s*\(/i;
+  if(!magnitude.test(raw))return {status:'wrong',score:0,text:'Use the magnitude |ΔH| here, not the signed ΔH.',missing:['absolute value |ΔH|']};
+  if(normalise(c.back)===normalise(raw)||(c.accept||[]).some(a=>normalise(a)===normalise(raw)))
+   return {status:'correct',score:1,text:'Correct heat-magnitude formula.',missing:[]};
+  return {status:'wrong',score:0,text:'Use q = n × |ΔH|, with matching energy units.',missing:['q = n × |ΔH|']};
+ }
  const mathsTransform=evaluateMathsPureTransform(c,input);
  if(mathsTransform)return mathsTransform;
  if(c.id==='chem_rp4')return evaluateHalideColours(input);
@@ -3311,9 +3321,14 @@ async function sync(manual=false){
   catch{return {cards:[]}}
  }));
  const knownFlashIds=new Set(cards.map(c=>c.id));
- for(const bank of extraFlashBanks)for(const c of (bank.cards||[])){
+ for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
-  if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  // Only the first two Maths banks may add AS Maths cards; the third is AS Chemistry.
+  if(index<2){
+   if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else if(index===2){
+   if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();

@@ -25,7 +25,7 @@ for(const c of ext.cards){
 }
 assert(app.includes("'./maths_mock_recall_v186.json','./maths_mock_recall_v187.json'"));
 assert(app.includes('knownFlashIds.has(c.id)'));
-assert.match(html,/app\.js\?v=187/);
+assert.match(html,/app\.js\?v=\d+/);
 assert(sw.includes("'./maths_mock_recall_v187.json'"));
 assert(sw.includes('v187-proof-vectors'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));

@@ -20,7 +20,7 @@ for(const c of extra.cards){
  assert(/^3\.[3-9]$/.test(c.specRef));
 }
 assert(app.includes("'./maths_mock_recall_v186.json'"));
-assert(app.includes("for(const bank of extraFlashBanks)"));
+assert(app.includes("for(const [index,bank] of extraFlashBanks.entries())"));
 assert(app.includes("knownFlashIds.has(c.id)"));
 assert(app.includes("c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock'"));
 assert.match(html,/app\.js\?v=\d+/);
