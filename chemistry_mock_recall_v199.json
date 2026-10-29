@@ -3,7 +3,7 @@
   "createdAt": "2026-10-29",
   "subject": "Chemistry",
   "scope": "Short, context-distinguishing recall for school Chemistry mock: observed test interpretations, products, pressure units, pH scale and isotopic patterns",
-  "notes": "These 13 cards target applied distinctions after existing 971-card legacy audit. They are not claims that no earlier similar card exists; no experiment or procedural instructions are given.",
+  "notes": "13 targeted single-answer cards using AQA-taught test inferences, Kp units, pH, and elementary mononuclear mass spectra. No claim of exhaustive spec coverage; no experimental procedures.",
   "cards": [
     {
       "id": "task1_v199_chem_001",
@@ -342,19 +342,19 @@
       "topic": "Atomic structure",
       "courseTopic": "Atomic structure",
       "revisionTopic": "Atomic structure",
-      "front": "An organic mass spectrum shows an M and M+2 molecular-ion pair in about a 3:1 intensity ratio. Which halogen atom is indicated?",
-      "back": "One chlorine atom.",
+      "front": "Two peaks at m/z 63 and 65 are produced by singly charged mononuclear ions of the same element. What do the peaks represent?",
+      "back": "Different isotopes of that element.",
       "accept": [
-        "One chlorine atom.",
-        "chlorine",
-        "one chlorine atom",
-        "cl",
-        "Cl atom"
+        "Different isotopes of that element.",
+        "isotopes",
+        "different isotopes",
+        "two isotopes of the same element",
+        "atoms with different neutron numbers"
       ],
       "reject": [
-        "single chlorine atom",
-        "bromine",
-        "iodine"
+        "different elements",
+        "different electron configurations of the same isotope",
+        "different chemical compounds"
       ],
       "strictRecall": true,
       "taught": true,
@@ -372,19 +372,19 @@
       "topic": "Atomic structure",
       "courseTopic": "Atomic structure",
       "revisionTopic": "Atomic structure",
-      "front": "The molecular ion of Br₂ gives three isotope peaks at m/z 158, 160 and 162. What is their approximate relative intensity ratio?",
-      "back": "1:2:1.",
+      "front": "A mononuclear isotope ion has mass number 64 and a charge of 2+. What is its approximate m/z?",
+      "back": "32.",
       "accept": [
-        "1:2:1.",
-        "1 2 1",
-        "1:2:1",
-        "one two one",
-        "1 to 2 to 1"
+        "32.",
+        "32",
+        "m/z 32",
+        "32 mass-to-charge",
+        "64/2 = 32"
       ],
       "reject": [
-        "3:1",
-        "1:1",
-        "3:6:1"
+        "64",
+        "128",
+        "2"
       ],
       "strictRecall": true,
       "taught": true,
