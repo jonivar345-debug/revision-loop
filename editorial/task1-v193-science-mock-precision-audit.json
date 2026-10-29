@@ -1,0 +1,78 @@
+{
+  "version": "v193",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "scope": "User's AS Physics mock and Chemistry mock including taught Kw; buffers remain excluded",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "editorial/task1-v158-physics-electricity-mock-audit.json",
+    "editorial/task1-v143-v135-106-answer-evidence.json",
+    "editorial/task1-v178-chemistry-core-definitions.json",
+    "editorial/task1-v179-chemistry-organic-physical-audit.json",
+    "editorial/task1-v181-science-210-legacy-answer-audit.json",
+    "editorial/task1-v182-220-physics-chemistry-precision.json"
+  ],
+  "reviewed": [
+    {
+      "topic": "Physics LDR resistance response",
+      "oldEvidence": "phy_ldr: light up means resistance down",
+      "decision": "Existing recall sufficient; no duplicate direct LDR-resistance card"
+    },
+    {
+      "topic": "Physics NTC lower-leg potential divider",
+      "oldEvidence": "task1_v138_006 already checks NTC lower leg",
+      "decision": "No duplicate NTC card; add distinct LDR layout applications"
+    },
+    {
+      "topic": "Physics cell internal resistance formula",
+      "oldEvidence": "phy_internal_001 already tests V=ε−Ir",
+      "decision": "Do not duplicate formula; isolate load and lost-volts trend applications"
+    },
+    {
+      "topic": "Chemistry Avogadro constant",
+      "oldEvidence": "chem_avogadro covers value, chem_amount_v44_28 covers meaning; sampled 106-outcome audit A010 found no direct mole-definition recall",
+      "decision": "Add one precise definition-of-a-mole card; AQA states numerical constant itself need not be recalled"
+    },
+    {
+      "topic": "Chemistry compound-ion formulae",
+      "oldEvidence": "v183 individual sulfate, nitrate, carbonate, hydroxide, ammonium",
+      "decision": "Already supported, avoid duplicating"
+    },
+    {
+      "topic": "Chemistry neutral pH",
+      "oldEvidence": "v33_card_chemistry_kw_56 tests why neutral pH changes with temperature",
+      "decision": "Avoid duplicating temperature trend; add separate neutral water [H+]=√Kw calculation relation"
+    },
+    {
+      "topic": "Chemistry TOF",
+      "oldEvidence": "AQA specified constant ion kinetic energy; old snippets include charge and m/z numeric examples but no verified dedicated shorter arrival-time recall",
+      "decision": "Add two direct single-fact recall points, application remains practice"
+    }
+  ],
+  "counts": {
+    "newPhysicsMockFlashcards": 4,
+    "newChemistryMockFlashcards": 4,
+    "coreDeckUnchanged": 3345,
+    "corePracticeUnchanged": 1268,
+    "previousPhysicsMockCore": 730,
+    "previousChemistryMockCore": 1533,
+    "previousChemistrySupplement": 1,
+    "expectedPhysicsMockTotal": 734,
+    "expectedChemistryMockTotal": 1538,
+    "mathsFirstMockUnchanged": 147
+  },
+  "preservation": [
+    "No original card ids or old mock flags change",
+    "Original question bank and supplementary Maths questions remain intact",
+    "Optional independent JSON files must be safely cached and validated by loader",
+    "Review progress, Google sync, XP, shop and photos unchanged"
+  ],
+  "limits": [
+    "This is a narrow answer-level extension, not a certified exhaustive bullet-by-bullet review of AQA Physics/Chemistry.",
+    "Some outcomes may already exist elsewhere in full deck beyond the cited audit examples.",
+    "The 2015–2026 paper archive remains incomplete and is not represented as complete.",
+    "Do not add buffer recall to Chemistry mock.",
+    "No student mastery claim."
+  ]
+}
