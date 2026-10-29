@@ -59,6 +59,11 @@ const pairs=[
  ['AgCl yellow, AgBr cream, AgI white','wrong'],
  ['silver chloride yellow bromide cream iodide white','wrong'],
  ['white cream yellow','wrong'],
+ ['chloride is not white bromide cream iodide yellow','wrong'],
+ ['AgCl never white, AgBr cream, AgI yellow','wrong'],
+ ['AgCl white, AgBr not cream, AgI yellow','wrong'],
+ ['chloride white; bromide cream; iodide not yellow','wrong'],
+ ['AgCl white, AgBr cream, AgI yellow but this is wrong','wrong'],
  ['', 'neutral']
 ];
 for(const [answer,status] of pairs)assert.equal(evaluate(byId.get('chem_rp4'),answer).status,status,'Incorrect halide association marking: '+answer);
