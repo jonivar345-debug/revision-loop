@@ -1248,8 +1248,22 @@ function evaluateHalideColours(input){
  if(hit>=2)return {status:'partial',score,text:'Some pairs are right, but check every ion–colour association.',missing};
  return {status:'wrong',score,text:'The halide and precipitate colours must match, not merely be listed.',missing};
 }
+// Tollens' test: a silver-mirror phrase alone must not credit a claim about ketones
+// or a negation of the aldehyde observation.
+function evaluateTollensObservation(input){
+ const raw=String(input||'').trim();
+ if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+ const s=raw.toLowerCase().replace(/[’‘]/g,\"'\");
+ const deniesSilver=/\b(?:no|not|never|without|none)\b.{0,25}\b(?:silver|mirror|deposit)\b|\b(?:don't|doesn't|do not|does not)\b.{0,25}\b(?:silver|mirror|deposit)\b/i.test(s);
+ const claimsKetoneSilver=/\bketones?\b.{0,45}\b(?:give|gives|form|forms|produce|produces|show|shows)\b.{0,25}\b(?:silver|mirror|deposit)\b|\b(?:silver mirror|silver deposit)\b.{0,30}\b(?:for|with|from)\s+(?:a\s+)?ketones?\b/i.test(s);
+ if(deniesSilver||claimsKetoneSilver)return {status:'wrong',score:0,text:'Aldehydes, rather than ordinary ketones, give the silver-mirror observation.',missing:['silver mirror or grey silver deposit for an aldehyde']};
+ if(/\bsilver\s+(?:mirror|deposit|coating)\b|\b(?:grey|gray)\s+silver\b|\bmetallic\s+silver\b/i.test(s))return {status:'correct',score:1,text:'Correct positive Tollens’ observation.',missing:[]};
+ if(/\bsilver\b/i.test(s))return {status:'partial',score:.5,text:'Specify a silver mirror or grey silver deposit.',missing:['silver mirror or grey silver deposit']};
+ return {status:'wrong',score:0,text:'That is not the characteristic Tollens’ observation.',missing:['silver mirror or grey silver deposit']};
+}
 function evaluateCard(c,input){
  if(c.id==='chem_rp4')return evaluateHalideColours(input);
+ if(c.id==='chem_aldehyde_tollens')return evaluateTollensObservation(input);
   // Context-specific threshold-frequency marking, including the difference
   // between zero measured KE and no emitted photoelectrons.
   if(c.id===window.RevisionPhotoelectricCardMarking?.TARGET_ID)
