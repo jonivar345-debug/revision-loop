@@ -1,0 +1,152 @@
+{
+  "version": "v199",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "priorEvidenceReviewed": [
+    "editorial/task1-v177-chemistry-legacy-tests-definitions.json",
+    "editorial/task1-v178-chemistry-core-definitions.json",
+    "editorial/task1-v179-chemistry-organic-physical-audit.json",
+    "editorial/task1-v184-final-172-science-legacy-audit.json",
+    "editorial/task1-v165-completion-gate.md",
+    "chemistry_mock_recall_v195.json",
+    "chemistry_mock_recall_v196.json"
+  ],
+  "officialAqa": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "conclusion": "Existing 971 legacy cards reviewed individually in v184, but not all AQA spec requirements nor original full question archive. Rather than duplicate the known formulae and definitions, add 13 context-dependent single-answer cards and eight original combined analytical questions with theoretical observations and calculations.",
+  "counts": {
+    "existingCoreCards": 3345,
+    "existingCoreExamQuestions": 1268,
+    "newCards": 13,
+    "newOriginalQuestions": 8,
+    "newMarks": 60,
+    "firstMathsMockCards": 147,
+    "firstMathsMockQuestions": 138
+  },
+  "newCards": [
+    {
+      "id": "task1_v199_chem_001",
+      "ref": "3.3.8",
+      "front": "For an aldehyde, what positive observation is expected with Fehling's solution?"
+    },
+    {
+      "id": "task1_v199_chem_002",
+      "ref": "3.3.8",
+      "front": "A known carbonyl compound is either an aldehyde or a ketone. Fehling's solution remains blue. Which is more likely?"
+    },
+    {
+      "id": "task1_v199_chem_003",
+      "ref": "3.3.9.1",
+      "front": "Which gas accounts for effervescence when a carboxylic acid reacts with a carbonate?"
+    },
+    {
+      "id": "task1_v199_chem_004",
+      "ref": "3.3.9.1",
+      "front": "In acid-catalysed hydrolysis of an ester, is the acid-derived organic product a carboxylic acid or its salt?"
+    },
+    {
+      "id": "task1_v199_chem_005",
+      "ref": "3.3.9.1",
+      "front": "In alkaline hydrolysis of an ester, what form of the acid-derived product is formed before any acidification?"
+    },
+    {
+      "id": "task1_v199_chem_006",
+      "ref": "3.3.9.1",
+      "front": "What three-carbon alcohol is produced when a triglyceride undergoes hydrolysis?"
+    },
+    {
+      "id": "task1_v199_chem_007",
+      "ref": "3.3.9.2",
+      "front": "What class of organic product forms when an acyl chloride reacts with a primary amine?"
+    },
+    {
+      "id": "task1_v199_chem_008",
+      "ref": "3.1.10",
+      "front": "If the net exponent on partial pressure in a Kp expression is +1, what are its units when pressures are in kPa?"
+    },
+    {
+      "id": "task1_v199_chem_009",
+      "ref": "3.1.10",
+      "front": "If the net exponent on partial pressure in a Kp expression is −1, what are its units when pressures are in kPa?"
+    },
+    {
+      "id": "task1_v199_chem_010",
+      "ref": "3.1.12.2",
+      "front": "At a fixed temperature, what happens to pH when [H⁺] increases by a factor of ten?"
+    },
+    {
+      "id": "task1_v199_chem_011",
+      "ref": "3.1.12.2",
+      "front": "If [H⁺] doubles, by approximately how many units does pH fall?"
+    },
+    {
+      "id": "task1_v199_chem_012",
+      "ref": "3.1.1.2",
+      "front": "An organic mass spectrum shows an M and M+2 molecular-ion pair in about a 3:1 intensity ratio. Which halogen atom is indicated?"
+    },
+    {
+      "id": "task1_v199_chem_013",
+      "ref": "3.1.1.2",
+      "front": "The molecular ion of Br₂ gives three isotope peaks at m/z 158, 160 and 162. What is their approximate relative intensity ratio?"
+    }
+  ],
+  "newQuestions": [
+    {
+      "id": "task1_v199_exam_01",
+      "ref": "3.3.8",
+      "topic": "Aldehydes and ketones",
+      "marks": 8
+    },
+    {
+      "id": "task1_v199_exam_02",
+      "ref": "3.3.9.1",
+      "topic": "Carboxylic acids and esters",
+      "marks": 8
+    },
+    {
+      "id": "task1_v199_exam_03",
+      "ref": "3.3.9.2",
+      "topic": "Acyl chlorides",
+      "marks": 7
+    },
+    {
+      "id": "task1_v199_exam_04",
+      "ref": "3.1.12.4",
+      "topic": "Acids and bases",
+      "marks": 8
+    },
+    {
+      "id": "task1_v199_exam_05",
+      "ref": "3.1.12.3",
+      "topic": "Acids and bases",
+      "marks": 7
+    },
+    {
+      "id": "task1_v199_exam_06",
+      "ref": "3.1.10",
+      "topic": "Kp",
+      "marks": 8
+    },
+    {
+      "id": "task1_v199_exam_07",
+      "ref": "3.1.9.3",
+      "topic": "Rate equations",
+      "marks": 7
+    },
+    {
+      "id": "task1_v199_exam_08",
+      "ref": "3.1.1.2",
+      "topic": "Atomic structure",
+      "marks": 7
+    }
+  ],
+  "limitations": [
+    "Original model answers are not an AQA official mark scheme and unfamiliar valid workings may require manual review.",
+    "Historical past papers 2015–2026 have not been exhaustively question-indexed.",
+    "AQA Chemistry 3.1.12 in full includes content not taught for the school mock; cards here remain inside pH/Kw/weak acids only.",
+    "No progress keys, original card IDs, main banks, XP or World features are altered."
+  ]
+}
