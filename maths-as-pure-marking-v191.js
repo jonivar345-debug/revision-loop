@@ -9,7 +9,7 @@
   if(!raw)return response(q,[]);
   if(/^(?:idk|no idea|not sure|i don'?t know|unsure)[.!]?$/i.test(raw))return response(q,[]);
   const t=raw.toLowerCase().replace(/[−–—]/g,'-').replace(/θ/g,'theta')
-    .replace(/[²]/g,'^2').replace(/[³]/g,'^3').replace(/×/g,'*').replace(/÷/g,'/');
+    .replace(/[²]/g,'^2').replace(/[³]/g,'^3').replace(/[⁴]/g,'^4').replace(/×/g,'*').replace(/÷/g,'/');
   const compact=t.replace(/\s+/g,'');
   const has=(r)=>r.test(t),flat=(r)=>r.test(compact);
   let marks=[];
