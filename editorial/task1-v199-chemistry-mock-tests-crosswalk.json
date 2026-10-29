@@ -16,7 +16,7 @@
     "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
     "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
   ],
-  "conclusion": "Existing 971 legacy cards reviewed individually in v184, but not all AQA spec requirements nor original full question archive. Rather than duplicate the known formulae and definitions, add 13 context-dependent single-answer cards and eight original combined analytical questions with theoretical observations and calculations.",
+  "conclusion": "Existing 971 legacy cards reviewed individually in v184, but not all AQA spec requirements nor original full question archive. Rather than duplicate the known formulae and definitions, add 13 context-dependent single-answer cards and eight original combined analytical questions with theoretical observations and calculations. The elemental mass-spectrum examples use *mononuclear* ions, matching AQA 3.1.1.2 rather than extending that AS requirement to molecular-ion clusters.",
   "counts": {
     "existingCoreCards": 3345,
     "existingCoreExamQuestions": 1268,
@@ -85,12 +85,12 @@
     {
       "id": "task1_v199_chem_012",
       "ref": "3.1.1.2",
-      "front": "An organic mass spectrum shows an M and M+2 molecular-ion pair in about a 3:1 intensity ratio. Which halogen atom is indicated?"
+      "front": "Two peaks at m/z 63 and 65 are produced by singly charged mononuclear ions of the same element. What do the peaks represent?"
     },
     {
       "id": "task1_v199_chem_013",
       "ref": "3.1.1.2",
-      "front": "The molecular ion of Br₂ gives three isotope peaks at m/z 158, 160 and 162. What is their approximate relative intensity ratio?"
+      "front": "A mononuclear isotope ion has mass number 64 and a charge of 2+. What is its approximate m/z?"
     }
   ],
   "newQuestions": [
