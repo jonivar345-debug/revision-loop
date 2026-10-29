@@ -1,0 +1,131 @@
+{
+  "version": "v193",
+  "createdAt": "2026-10-29",
+  "scope": "Physics electricity Year 1 mock",
+  "notes": "Original short recall prompts, distinct from existing audit card examples; not a guarantee of absent duplicates elsewhere in full core deck. AQA-style concepts, no past-paper text.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity"
+  ],
+  "cards": [
+    {
+      "id": "task1_v193_phy_001",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "In a potential divider, the LDR is the lower resistor and output voltage is measured across it. What happens to Vout when light intensity increases?",
+      "back": "Vout decreases.",
+      "accept": [
+        "Vout decreases.",
+        "decreases",
+        "falls",
+        "goes down",
+        "lower output voltage"
+      ],
+      "reject": [
+        "increases",
+        "rises",
+        "stays the same"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v193_phy_002",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "In a potential divider, the LDR is the upper resistor and output voltage is measured across the lower fixed resistor. What happens to Vout when light intensity increases?",
+      "back": "Vout increases.",
+      "accept": [
+        "Vout increases.",
+        "increases",
+        "rises",
+        "goes up",
+        "higher output voltage"
+      ],
+      "reject": [
+        "decreases",
+        "falls",
+        "stays the same"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v193_phy_003",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For a cell with fixed emf and internal resistance, what happens to its terminal p.d. when the external load resistance increases?",
+      "back": "Terminal p.d. increases towards the emf.",
+      "accept": [
+        "Terminal p.d. increases towards the emf.",
+        "increases",
+        "increases towards the emf",
+        "rises",
+        "terminal voltage gets closer to emf"
+      ],
+      "reject": [
+        "decreases",
+        "falls",
+        "remains the same"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    },
+    {
+      "id": "task1_v193_phy_004",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "stage": "AS",
+      "topic": "Electricity",
+      "front": "For a cell with fixed internal resistance r, what happens to its lost volts Ir when current increases?",
+      "back": "Lost volts increase.",
+      "accept": [
+        "Lost volts increase.",
+        "increases",
+        "lost volts increase",
+        "rises",
+        "goes up"
+      ],
+      "reject": [
+        "decreases",
+        "falls",
+        "stays the same"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1,
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity"
+    }
+  ]
+}
