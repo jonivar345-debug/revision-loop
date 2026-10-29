@@ -321,34 +321,24 @@
       "kind": "weak",
       "priority": 3,
       "scope": "mock",
-      "front": "What must happen for a photoelectron to be emitted?",
-      "back": "One photon transfers energy hf to one electron. Emission occurs if hf ≥ the work function φ.",
+      "front": "What is the photon-energy condition for photoelectric emission?",
+      "back": "hf ≥ φ (photon energy at least the work function).",
       "visual": "photoelectric",
-      "concepts": [
-        [
-          "one photon",
-          "photon"
-        ],
-        [
-          "one electron",
-          "electron"
-        ],
-        [
-          "hf"
-        ],
-        [
-          "work function",
-          "phi",
-          "φ"
-        ]
-      ],
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-particles",
       "taught": true,
       "courseTopic": "Particles & radiation",
-      "revisionTopic": "Photoelectric effect"
+      "revisionTopic": "Photoelectric effect",
+      "accept": [
+        "hf ≥ φ (photon energy at least the work function).",
+        "hf>=phi",
+        "hf>=φ",
+        "hf ≥ φ",
+        "energy at least the work function",
+        "photon energy greater than or equal to work function"
+      ]
     },
     {
       "id": "phy_photoelectric_002",
@@ -427,22 +417,13 @@
       "priority": 2,
       "scope": "mock",
       "front": "Can strangeness change in a weak interaction?",
-      "back": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions.",
+      "back": "Yes, strangeness may change.",
       "active": true,
       "accept": [
+        "Yes, strangeness may change.",
         "yes",
-        "yes weak interaction can change strangeness"
-      ],
-      "concepts": [
-        [
-          "yes"
-        ],
-        [
-          "weak"
-        ],
-        [
-          "strangeness"
-        ]
+        "strangeness can change",
+        "yes in weak interactions"
       ],
       "stage": "AS",
       "mock": true,
@@ -1017,32 +998,15 @@
       "kind": "practical",
       "priority": 1,
       "scope": "secondary",
-      "front": "What are the key equations for double-slit and diffraction-grating work?",
-      "back": "w = λD/s and d sin θ = nλ.",
+      "front": "In Young's double-slit equation w = λD/s, what does D represent?",
+      "back": "Distance from the slits to the screen.",
       "active": true,
       "accept": [
-        "w=lambda d/s and d sin theta=n lambda",
-        "w=λd/s and d sin θ=nλ"
-      ],
-      "concepts": [
-        [
-          "w"
-        ],
-        [
-          "lambda"
-        ],
-        [
-          "d"
-        ],
-        [
-          "s"
-        ],
-        [
-          "sin"
-        ],
-        [
-          "n"
-        ]
+        "Distance from the slits to the screen.",
+        "slit to screen distance",
+        "distance from slits to screen",
+        "slit-screen distance",
+        "distance to the screen"
       ],
       "stage": "AS",
       "mock": true,
@@ -1135,28 +1099,15 @@
       "kind": "practical",
       "priority": 1,
       "scope": "secondary",
-      "front": "How is the resistivity of a wire found?",
-      "back": "ρ = RA/L, with R = V/I and A = πd²/4.",
+      "front": "What equation gives the resistivity of a wire?",
+      "back": "ρ = RA/L.",
       "active": true,
       "accept": [
+        "ρ = RA/L.",
         "rho=ra/l",
-        "ρ=ra/l",
-        "r=rho l/a"
-      ],
-      "concepts": [
-        [
-          "rho",
-          "resistivity"
-        ],
-        [
-          "r"
-        ],
-        [
-          "a"
-        ],
-        [
-          "l"
-        ]
+        "ρ=RA/L",
+        "resistance times cross sectional area divided by length",
+        "RA/L"
       ],
       "stage": "AS",
       "mock": true,
@@ -1545,30 +1496,22 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "What is a random error?",
-      "back": "An unpredictable variation that causes scatter in repeated readings; repeats and a mean can reduce its effect.",
-      "concepts": [
-        [
-          "unpredictable",
-          "random"
-        ],
-        [
-          "scatter",
-          "vary"
-        ],
-        [
-          "repeat",
-          "mean",
-          "average"
-        ]
-      ],
+      "front": "What is a random measurement error?",
+      "back": "An unpredictable variation causing scatter in repeated measurements.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-measurements",
       "taught": true,
       "courseTopic": "Measurements & practical skills",
-      "revisionTopic": "Measurements"
+      "revisionTopic": "Measurements",
+      "accept": [
+        "An unpredictable variation causing scatter in repeated measurements.",
+        "unpredictable variation in readings",
+        "random scatter of readings",
+        "measurement scatter that varies unpredictably",
+        "unpredictable errors causing scatter"
+      ]
     },
     {
       "id": "phy_uncert_systematic",
@@ -1983,26 +1926,21 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "Which conservation rules apply to particle interactions?",
-      "back": "Charge, baryon number, electron and muon lepton numbers, energy and momentum conserved; strangeness conserved in strong, may change in weak.",
-      "concepts": [
-        [
-          "charge"
-        ],
-        [
-          "baryon"
-        ],
-        [
-          "lepton"
-        ]
-      ],
+      "front": "Which fundamental interaction conserves strangeness?",
+      "back": "The strong interaction.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-particles",
       "taught": true,
       "courseTopic": "Particles & radiation",
-      "revisionTopic": "Particles"
+      "revisionTopic": "Particles",
+      "accept": [
+        "The strong interaction.",
+        "strong",
+        "strong interaction",
+        "strong force"
+      ]
     },
     {
       "id": "phy_photon_energy",
@@ -14372,7 +14310,16 @@
       "courseTopic": "Rate equations",
       "id": "chem_rate_recap_20261024_k_unit_first",
       "front": "What are the units of k for an overall first-order reaction?",
-      "back": "s⁻¹."
+      "back": "s⁻¹.",
+      "accept": [
+        "s⁻¹.",
+        "s^-1",
+        "s−1",
+        "per second",
+        "1/s",
+        "s⁻¹"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14388,7 +14335,15 @@
       "courseTopic": "Rate equations",
       "id": "chem_rate_recap_20261024_k_unit_second",
       "front": "What are the units of k for an overall second-order reaction?",
-      "back": "dm³ mol⁻¹ s⁻¹."
+      "back": "dm³ mol⁻¹ s⁻¹.",
+      "accept": [
+        "dm³ mol⁻¹ s⁻¹.",
+        "dm3 mol-1 s-1",
+        "dm^3 mol^-1 s^-1",
+        "dm³ mol⁻¹ s⁻¹",
+        "litres per mole per second"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14404,7 +14359,14 @@
       "courseTopic": "Rate equations",
       "id": "chem_rate_recap_20261024_k_unit_third",
       "front": "What are the units of k for an overall third-order reaction?",
-      "back": "dm⁶ mol⁻² s⁻¹."
+      "back": "dm⁶ mol⁻² s⁻¹.",
+      "accept": [
+        "dm⁶ mol⁻² s⁻¹.",
+        "dm6 mol-2 s-1",
+        "dm^6 mol^-2 s^-1",
+        "dm⁶ mol⁻² s⁻¹"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14483,8 +14445,16 @@
       "taught": true,
       "courseTopic": "Rate equations",
       "id": "chem_rate_recap_20261024_k_constant",
-      "front": "Can concentration change k at fixed temperature?",
-      "back": "No. Concentration can change rate, but k remains constant under unchanged conditions."
+      "front": "At constant temperature, does changing concentration change the rate constant k?",
+      "back": "No. k is unchanged.",
+      "accept": [
+        "No. k is unchanged.",
+        "no",
+        "it stays constant",
+        "k stays the same",
+        "unchanged",
+        "no change"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -14515,8 +14485,14 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_molefraction",
-      "front": "What is the formula for a gas's mole fraction?",
-      "back": "Mole fraction of A = n(A) ÷ total moles of all gases. It has no units."
+      "front": "How is the mole fraction of gas A calculated?",
+      "back": "Moles of A ÷ total moles of gases.",
+      "accept": [
+        "Moles of A ÷ total moles of gases.",
+        "moles of A / total moles of gas",
+        "n(A)/n(total)",
+        "moles of A divided by total gas moles"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -14563,8 +14539,16 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_kp_units",
-      "front": "How do you derive the pressure units of Kp?",
-      "back": "Pressure unit raised to Δn, where Δn = sum of gaseous product coefficients minus reactant coefficients."
+      "front": "What power of the pressure unit gives the units of Kp?",
+      "back": "Δn = total gaseous product coefficients − total gaseous reactant coefficients.",
+      "accept": [
+        "Δn = total gaseous product coefficients − total gaseous reactant coefficients.",
+        "difference in gas stoichiometric coefficients",
+        "product gas moles minus reactant gas moles",
+        "Δn",
+        "delta n",
+        "difference between summed product and reactant gas coefficients"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -14579,8 +14563,16 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_kp_units_ammonia",
-      "front": "What are Kp units for N₂ + 3H₂ ⇌ 2NH₃ if pressure is in kPa?",
-      "back": "kPa⁻²: 2 moles of gaseous products minus 4 moles of gaseous reactants = −2."
+      "front": "For N₂ + 3H₂ ⇌ 2NH₃, what are Kp units if pressure is measured in kPa?",
+      "back": "kPa⁻².",
+      "accept": [
+        "kPa⁻².",
+        "kPa^-2",
+        "kPa−2",
+        "1/kPa^2",
+        "kPa⁻²"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14611,8 +14603,14 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_equilibrium_not_initial",
-      "front": "Which partial pressures go into a numerical Kp calculation?",
-      "back": "Only equilibrium partial pressures, not initial pressures."
+      "front": "Which pressures must be used in a Kp expression?",
+      "back": "Equilibrium partial pressures.",
+      "accept": [
+        "Equilibrium partial pressures.",
+        "equilibrium partial pressures",
+        "partial pressures at equilibrium",
+        "the equilibrium pressures"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -14659,8 +14657,16 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_temp_exothermic",
-      "front": "What happens to Kp when temperature increases for an exothermic forward reaction?",
-      "back": "Kp decreases: increasing T favours the endothermic reverse reaction."
+      "front": "How does increasing temperature change Kp for an exothermic forward reaction?",
+      "back": "Kp decreases.",
+      "accept": [
+        "Kp decreases.",
+        "decreases",
+        "falls",
+        "Kp gets smaller",
+        "Kp decreases"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14675,8 +14681,16 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_temp_endothermic",
-      "front": "What happens to Kp when temperature increases for an endothermic forward reaction?",
-      "back": "Kp increases: increasing T favours the endothermic forward reaction."
+      "front": "How does increasing temperature change Kp for an endothermic forward reaction?",
+      "back": "Kp increases.",
+      "accept": [
+        "Kp increases.",
+        "increases",
+        "rises",
+        "Kp gets larger",
+        "Kp increases"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14707,8 +14721,16 @@
       "taught": true,
       "courseTopic": "Kp",
       "id": "chem_kp_recap_20261024_inert_constantvolume",
-      "front": "What happens if an inert gas is added at constant volume and temperature?",
-      "back": "Total pressure rises, but reacting gases' partial pressures and equilibrium position stay unchanged."
+      "front": "Does adding an inert gas at fixed temperature and volume shift a gaseous equilibrium?",
+      "back": "No. The reacting gases' partial pressures remain unchanged.",
+      "accept": [
+        "No. The reacting gases' partial pressures remain unchanged.",
+        "no",
+        "no shift",
+        "equilibrium position unchanged",
+        "does not shift the equilibrium",
+        "no because reacting gas partial pressures are unchanged"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -14835,8 +14857,15 @@
       "mock": true,
       "taught": true,
       "id": "chem_kc_recap_20261024_kc_units",
-      "front": "How do you derive the units of Kc?",
-      "back": "Concentration unit (mol dm⁻³) to the power Δn; Δn = sum of included product powers − reactant powers."
+      "front": "What determines the power of mol dm⁻³ in the units of Kc?",
+      "back": "The sum of product concentration powers minus the sum of reactant concentration powers.",
+      "accept": [
+        "The sum of product concentration powers minus the sum of reactant concentration powers.",
+        "Δn",
+        "delta n",
+        "product powers minus reactant powers",
+        "sum powers numerator minus sum powers denominator"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -14851,8 +14880,15 @@
       "mock": true,
       "taught": true,
       "id": "chem_kc_recap_20261024_kc_units_ammonia",
-      "front": "What units does Kc have for N₂ + 3H₂ ⇌ 2NH₃?",
-      "back": "dm⁶ mol⁻², because Δn = 2 − 4 = −2."
+      "front": "What are Kc units for N₂ + 3H₂ ⇌ 2NH₃?",
+      "back": "dm⁶ mol⁻².",
+      "accept": [
+        "dm⁶ mol⁻².",
+        "dm6 mol-2",
+        "dm^6 mol^-2",
+        "dm⁶ mol⁻²"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14899,8 +14935,16 @@
       "mock": true,
       "taught": true,
       "id": "chem_kc_recap_20261024_temp_exothermic",
-      "front": "How does raising T affect Kc for an exothermic forward reaction?",
-      "back": "Kc decreases because higher T favours the endothermic reverse reaction."
+      "front": "How does increasing temperature change Kc for an exothermic forward reaction?",
+      "back": "Kc decreases.",
+      "accept": [
+        "Kc decreases.",
+        "decreases",
+        "falls",
+        "Kc becomes smaller",
+        "Kc decreases"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -14915,8 +14959,16 @@
       "mock": true,
       "taught": true,
       "id": "chem_kc_recap_20261024_temp_endothermic",
-      "front": "How does raising T affect Kc for an endothermic forward reaction?",
-      "back": "Kc increases because higher T favours the endothermic forward reaction."
+      "front": "How does increasing temperature change Kc for an endothermic forward reaction?",
+      "back": "Kc increases.",
+      "accept": [
+        "Kc increases.",
+        "increases",
+        "rises",
+        "Kc becomes larger",
+        "Kc increases"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Chemistry",
@@ -18319,12 +18371,22 @@
       "kind": "content",
       "priority": 7,
       "scope": "mock",
-      "front": "Give four typical applications of esters.",
-      "back": "Solvents, plasticisers, perfume ingredients and food flavourings.",
+      "front": "Give one common use of esters.",
+      "back": "Perfume ingredients (also solvents, flavourings or plasticisers).",
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Perfume ingredients (also solvents, flavourings or plasticisers).",
+        "perfumes",
+        "perfume ingredients",
+        "flavourings",
+        "food flavours",
+        "solvents",
+        "plasticisers",
+        "perfume ingredients (also solvents, flavourings or plasticisers)."
+      ]
     },
     {
       "id": "chem_spec_v40_011",
@@ -18527,12 +18589,19 @@
       "kind": "content",
       "priority": 7,
       "scope": "mock",
-      "front": "What does transesterification mean?",
-      "back": "Exchange of the alcohol-derived part of an ester.",
+      "front": "What is transesterification?",
+      "back": "Changing an ester into another ester by exchanging its alcohol-derived group.",
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Changing an ester into another ester by exchanging its alcohol-derived group.",
+        "exchange of the alcohol derived part of an ester",
+        "an ester reacts with an alcohol to form another ester",
+        "exchange alcohol group of an ester",
+        "exchanging alkoxy groups in esters"
+      ]
     },
     {
       "id": "chem_spec_v40_024",
@@ -19055,12 +19124,19 @@
       "kind": "content",
       "priority": 7,
       "scope": "mock",
-      "front": "Why is ethanoic anhydride preferred industrially over ethanoyl chloride?",
-      "back": "It avoids producing corrosive hydrogen chloride fumes.",
+      "front": "Why may ethanoic anhydride be preferred to ethanoyl chloride industrially?",
+      "back": "It avoids producing corrosive HCl fumes.",
       "active": true,
       "stage": "A2",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "It avoids producing corrosive HCl fumes.",
+        "avoids hydrogen chloride",
+        "does not produce corrosive HCl gas",
+        "no HCl fumes",
+        "less corrosive fumes"
+      ]
     },
     {
       "id": "chem_acyl_review_v41_29",
