@@ -25,13 +25,13 @@ for(const c of ext.cards){
 }
 assert(app.includes("'./maths_mock_recall_v186.json','./maths_mock_recall_v187.json'"));
 assert(app.includes('knownFlashIds.has(c.id)'));
-assert.match(html,/app\\.js\\?v=187/);
+assert.match(html,/app\.js\?v=187/);
 assert(sw.includes("'./maths_mock_recall_v187.json'"));
 assert(sw.includes('v187-proof-vectors'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
 assert(start>=0&&end>start);
-const evaluate=new Function('window',app.slice(start,end)+'\\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+const evaluate=new Function('window',app.slice(start,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
 for(const c of ext.cards){
  for(const answer of c.accept)assert.equal(evaluate(c,answer).status,'correct',c.id+': valid wording '+answer);
  assert.equal(evaluate(c,'').status,'neutral',c.id);
