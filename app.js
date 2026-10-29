@@ -1334,6 +1334,16 @@ function evaluateMathsPureTransform(c,input){
 }
 
 function evaluateCard(c,input){
+ // Heat-energy *magnitude* needs absolute-value notation: normalise() strips |.
+ if(c?.id==='task1_v189_chem_001'){
+  const raw=String(input||'').trim();
+  if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+  const magnitude=/\|\s*(?:Δ|δ|∆|delta\s*)h\s*\||\b(?:absolute\s+value|magnitude|modulus)\b|\babs\s*\(/i;
+  if(!magnitude.test(raw))return {status:'wrong',score:0,text:'Use the magnitude |ΔH| here, not the signed ΔH.',missing:['absolute value |ΔH|']};
+  if(normalise(c.back)===normalise(raw)||(c.accept||[]).some(a=>normalise(a)===normalise(raw)))
+   return {status:'correct',score:1,text:'Correct heat-magnitude formula.',missing:[]};
+  return {status:'wrong',score:0,text:'Use q = n × |ΔH|, with matching energy units.',missing:['q = n × |ΔH|']};
+ }
  const mathsTransform=evaluateMathsPureTransform(c,input);
  if(mathsTransform)return mathsTransform;
  if(c.id==='chem_rp4')return evaluateHalideColours(input);
