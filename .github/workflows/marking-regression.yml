@@ -30,6 +30,7 @@ jobs:
           node tests/mechanics-graphs-v118.cjs
           node tests/task1-v197-mechanics-reasoning.cjs
           node tests/task1-v198-waves-energetics.cjs
+          node tests/task1-v199-chem-mock-precision.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
           node tests/chemistry-amount-v44.cjs
