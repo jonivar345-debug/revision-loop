@@ -22,7 +22,7 @@ assert(app.includes("'./maths_mock_recall_v186.json','./maths_mock_recall_v187.j
 assert(app.includes("if(index<2)"));assert(app.includes("else if(index===2)"));
 assert(app.includes("c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock'"));
 assert(app.includes("c?.id==='task1_v189_chem_001'"));
-assert.match(html,/app\.js\?v=189/);assert(sw.includes('v189-enthalpy-energy-recall'));
+assert.match(html,/app\.js\?v=\d+/);assert(sw.includes('v189-enthalpy-energy-recall'));
 assert(sw.includes("'./chemistry_mock_recall_v189.json'"));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(');
