@@ -22467,13 +22467,18 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What shape does NH₄⁺ have?",
-      "back": "Tetrahedral, about 109.5°; no lone pairs on N.",
+      "front": "What is the molecular shape of NH₄⁺?",
+      "back": "Tetrahedral.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Tetrahedral.",
+        "tetrahedral",
+        "tetrahedron"
+      ]
     },
     {
       "id": "chem_bonding_v48_11",
@@ -22484,13 +22489,18 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What shape does H₃O⁺ have, and how many lone pairs?",
-      "back": "Trigonal pyramidal; 3 O–H bonds and 1 lone pair on O.",
+      "front": "What is the molecular shape of H₃O⁺?",
+      "back": "Trigonal pyramidal.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Trigonal pyramidal.",
+        "trigonal pyramidal",
+        "pyramidal"
+      ]
     },
     {
       "id": "chem_bonding_v48_12",
@@ -22535,13 +22545,18 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What shape and angles has PCl₅ in the gas phase?",
-      "back": "Trigonal bipyramidal, 90°, 120° and 180°.",
+      "front": "What is the molecular shape of gaseous PCl₅?",
+      "back": "Trigonal bipyramidal.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Trigonal bipyramidal.",
+        "trigonal bipyramidal",
+        "trigonal bipyramid"
+      ]
     },
     {
       "id": "chem_bonding_v48_15",
@@ -22603,13 +22618,18 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What shape and angles does SF₆ have?",
-      "back": "Octahedral, 90° and 180°.",
+      "front": "What is the molecular shape of SF₆?",
+      "back": "Octahedral.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Octahedral.",
+        "octahedral",
+        "octahedron"
+      ]
     },
     {
       "id": "chem_bonding_v48_19",
@@ -22637,13 +22657,18 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What shape and bond angles does XeF₄ have?",
-      "back": "Square planar, approximately 90° and 180°, with 2 opposing lone pairs.",
+      "front": "What is the molecular shape of XeF₄?",
+      "back": "Square planar.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Square planar.",
+        "square planar",
+        "square-planar"
+      ]
     },
     {
       "id": "chem_bonding_v48_21",
@@ -22858,13 +22883,19 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What creates a van der Waals' (induced dipole–dipole) forces attraction?",
-      "back": "Temporary dipole in one particle induces an opposite dipole in another.",
+      "front": "What causes induced dipole–dipole (van der Waals') attraction?",
+      "back": "Temporary electron-density fluctuations induce dipoles in neighbouring particles.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Temporary electron-density fluctuations induce dipoles in neighbouring particles.",
+        "instantaneous dipoles induce dipoles in neighbouring molecules",
+        "temporary dipoles induce dipoles",
+        "random electron movement induces dipoles"
+      ]
     },
     {
       "id": "chem_bonding_v48_34",
@@ -24344,11 +24375,16 @@
       "userWeakness": true,
       "scope": "mock",
       "front": "What is the formula of aluminium nitrate?",
-      "back": "Al(NO₃)₃: one Al³⁺ balances three NO₃⁻.",
+      "back": "Al(NO₃)₃.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Al(NO₃)₃.",
+        "Al(NO3)3",
+        "al(no3)3"
+      ]
     },
     {
       "id": "chem_bonding_v52_07",
@@ -24361,11 +24397,16 @@
       "userWeakness": true,
       "scope": "mock",
       "front": "What is the formula of ammonium sulfate?",
-      "back": "(NH₄)₂SO₄: two NH₄⁺ balance SO₄²⁻.",
+      "back": "(NH₄)₂SO₄.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "(NH₄)₂SO₄.",
+        "(NH4)2SO4",
+        "ammonium sulfate (NH4)2SO4"
+      ]
     },
     {
       "id": "chem_bonding_v52_08",
@@ -24378,11 +24419,16 @@
       "userWeakness": true,
       "scope": "mock",
       "front": "What is the formula of magnesium nitrate?",
-      "back": "Mg(NO₃)₂: Mg²⁺ balances two NO₃⁻.",
+      "back": "Mg(NO₃)₂.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Mg(NO₃)₂.",
+        "Mg(NO3)2",
+        "magnesium nitrate Mg(NO3)2"
+      ]
     },
     {
       "id": "chem_bonding_v52_09",
@@ -25014,12 +25060,18 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "Give the 4-step structure of a halogen boiling-point explanation.",
-      "back": "Non-polar; more electrons; stronger induced dipoles/van der Waals' forces; more energy to boil.",
+      "front": "What happens to the strength of induced dipole forces down Group 7?",
+      "back": "They increase down the group.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "They increase down the group.",
+        "increases",
+        "stronger down group",
+        "increase down group"
+      ]
     },
     {
       "id": "chem_bonding_v52_46",
