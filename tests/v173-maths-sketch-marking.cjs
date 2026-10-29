@@ -33,8 +33,10 @@ assert.equal(eligible({subject:'Chemistry',mock:true,level:'A2',topic:'Kp',promp
 assert(app.includes("const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&c.mock===true).filter(c=>sub!=='Maths'||(c.stage==='AS'"));
 assert(html.includes('Maths first mock: Year 12/AS Pure only.'));
 assert(html.includes('The separate Year 13 class paper is after the other mocks'));
-assert(html.indexOf('exam-sketch-v173.js?v=173')<html.indexOf('app.js?v=173'));
-assert(html.indexOf('scanner.js?v=173')>html.indexOf('app.js?v=173'));
+const mainScript=html.match(/app\.js\?v=\d+/);
+assert(mainScript,'Main app script version is present');
+assert(html.indexOf('exam-sketch-v173.js?v=173')<html.indexOf(mainScript[0]),'Sketch module must load before main app');
+assert(html.indexOf('scanner.js?v=173')>html.indexOf(mainScript[0]),'Scanner must load after main app');
 assert(sw.includes("'./exam-sketch-v173.js'"));
 assert(css.includes('.exam-sketch canvas'));
 assert(app.includes('window.RevisionSketch?.mount(q);'));

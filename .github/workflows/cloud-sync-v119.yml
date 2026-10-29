@@ -72,6 +72,9 @@ on:
       - 'tests/task1-v174-formula-evidence.cjs'
       - 'tests/task1-v175-manual-diagram-mark-review.cjs'
       - 'tests/task1-v176-mechanics-manual-spec-audit.cjs'
+      - 'tests/task1-v177-chemistry-legacy-tests-definitions.cjs'
+      - 'tests/task1-v154-legacy-evidence.cjs'
+      - 'editorial/task1-v177-chemistry-legacy-tests-definitions.json'
       - 'editorial/task1-v176-mechanics-manual-spec-audit.json'
       - 'editorial/task1-v175-manual-diagram-mark-review.json'
       - 'editorial/task1-v174-formula-evidence-review.json'
@@ -200,6 +203,7 @@ jobs:
       - run: node tests/task1-v174-formula-evidence.cjs
       - run: node tests/task1-v175-manual-diagram-mark-review.cjs
       - run: node tests/task1-v176-mechanics-manual-spec-audit.cjs
+      - run: node tests/task1-v177-chemistry-legacy-tests-definitions.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
