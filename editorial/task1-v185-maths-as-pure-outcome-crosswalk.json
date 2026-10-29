@@ -1,0 +1,1184 @@
+{
+  "version": "v185",
+  "auditedAt": "2026-10-29",
+  "completeSpecificationCertified": false,
+  "scope": "School first Maths mock: AQA Year 1 / AS PURE ONLY (proof, algebra/functions, coordinate geometry, sequences, trigonometry, exponentials/logarithms, differentiation, integration, 2D vectors). Year 2, statistics and mechanics excluded.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/b-algebra-and-functions",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/e-trigonometry",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/g-differentiation"
+  ],
+  "counts": {
+    "allCards": 3345,
+    "active": 3341,
+    "mockEligible": 2379,
+    "mathsMockEligible": 116,
+    "practiceQuestions": 1268,
+    "reviewedMemoryOutcomes": 76,
+    "existingCardEvidenceOutcomes": 67,
+    "candidateRecallGaps": 9
+  },
+  "cardCorrection": {
+    "id": "maths_transform_003",
+    "oldFront": "For y = f(ax), what happens to x-coordinates?",
+    "newFront": "For a > 0, what is the horizontal scale factor of y = f(ax)?",
+    "oldBack": "They are divided by a, so the horizontal scale factor is 1/a.",
+    "newBack": "1/a (x-coordinates are divided by a).",
+    "reason": "Specify a>0 and make the horizontal scale factor one short recall target; avoid the misleading implication that a negative multiplier is only a scale."
+  },
+  "markingTargets": [
+    "maths_transform_001",
+    "maths_transform_002",
+    "maths_transform_003",
+    "task1_maths_002",
+    "task1_v162_003",
+    "task1_maths_004",
+    "task1_v162_002",
+    "task1_v162_001"
+  ],
+  "outcomes": [
+    {
+      "section": "3.2 A1",
+      "outcome": "Deduction proof structure",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v171_001"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v171_001",
+          "answer": "Logical steps from stated assumptions to a justified conclusion."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.2 A1",
+      "outcome": "Exhaustion proof method",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_proof_exhaust"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_proof_exhaust",
+          "answer": "Check every possible case in a finite set of possibilities."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.2 A1",
+      "outcome": "Counterexample disproves universal statement",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_proof_counter"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_proof_counter",
+          "answer": "Give one valid counterexample."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B1",
+      "outcome": "Negative indices",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_indices_neg"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_indices_neg",
+          "answer": "1/xⁿ."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B1",
+      "outcome": "Fractional indices",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_indices_frac"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_indices_frac",
+          "answer": "The nth root of x."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B1",
+      "outcome": "Product of same-base powers",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_002"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_002",
+          "answer": "a^(m+n), for the same non-zero base."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B1",
+      "outcome": "Power of a power",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_003"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_003",
+          "answer": "a^(mn)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B2",
+      "outcome": "Surd rationalisation using conjugate",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_surds_rationalise"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_surds_rationalise",
+          "answer": "Multiply numerator and denominator by the conjugate a−√b."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B3",
+      "outcome": "Discriminant root classifications",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_quad_discriminant"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_quad_discriminant",
+          "answer": "For ax²+bx+c, Δ=b²−4ac: >0 two real roots, =0 repeated root, <0 no real roots."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B3",
+      "outcome": "Completing square links turning point",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_complete_square"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_complete_square",
+          "answer": "It reveals the turning point and helps solve or sketch the quadratic."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B4",
+      "outcome": "Linear-quadratic simultaneous solving",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.3 B5",
+      "outcome": "Quadratic sign between/outside roots",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_010"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_010",
+          "answer": "Outside the roots."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B5",
+      "outcome": "Inequality reversal on multiplying by negative",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_011"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_011",
+          "answer": "Reverse the inequality sign."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B6",
+      "outcome": "Factor theorem",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_065",
+        "task1_v171_002"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_065",
+          "answer": "(x−a) is a factor of the polynomial."
+        },
+        {
+          "id": "task1_v171_002",
+          "answer": "f(a)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B7",
+      "outcome": "Asymptotes of reciprocal graph",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_012"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_012",
+          "answer": "x = 0 and y = 0."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B8",
+      "outcome": "Composite-function order",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_function_composite"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_function_composite",
+          "answer": "f(g(x)): apply g first, then f."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B8",
+      "outcome": "One-to-one condition for inverse",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_inverse_condition"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_inverse_condition",
+          "answer": "When it is one-to-one."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B8",
+      "outcome": "Domain of inverse equals range of original",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_063"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_063",
+          "answer": "It is the range of f."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Horizontal translation f(x-a)",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "maths_transform_001"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "maths_transform_001",
+          "answer": "Translate a units to the right."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Horizontal translation f(x+a)",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_003"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_003",
+          "answer": "Translate a units to the left."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Vertical translation f(x)+a",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "maths_transform_002"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "maths_transform_002",
+          "answer": "Translate a units upwards."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Vertical scaling af(x)",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_001"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_001",
+          "answer": "A vertical stretch by scale factor a."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Horizontal scaling f(ax) for a>0",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "maths_transform_003"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "maths_transform_003",
+          "answer": "1/a (x-coordinates are divided by a)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Reflection y=-f(x)",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_002"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_002",
+          "answer": "Reflection in the x-axis."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.3 B9",
+      "outcome": "Reflection y=f(-x)",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_maths_004"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_maths_004",
+          "answer": "Reflects it in the y-axis."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.4 C1",
+      "outcome": "Gradient of a line",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_line_gradient"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_line_gradient",
+          "answer": "m=(y₂−y₁)/(x₂−x₁)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.4 C1",
+      "outcome": "Perpendicular gradient relationship",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_perp_grad"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_perp_grad",
+          "answer": "m₁m₂ = −1."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.4 C1",
+      "outcome": "Point-gradient line equation",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_006"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_006",
+          "answer": "y − y₁ = m(x − x₁)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.4 C2",
+      "outcome": "Circle centre-radius equation",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_circle"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_circle",
+          "answer": "(x−a)²+(y−b)²=r²."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.4 C2",
+      "outcome": "Tangent perpendicular to radius",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_circle_tangent"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_circle_tangent",
+          "answer": "They are perpendicular."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.4 C2",
+      "outcome": "Chord bisected by centre perpendicular",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_014"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_014",
+          "answer": "It bisects the chord."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D1",
+      "outcome": "Binomial integer power term",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_007"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_007",
+          "answer": "nCr × a^(n−r) × (bx)^r."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D1",
+      "outcome": "Combination factorial formula",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_006"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_006",
+          "answer": "nCr = n! / [r!(n−r)!]."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D2",
+      "outcome": "Next term from recurrence",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_008"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_008",
+          "answer": "Substitute the previous term uₙ into f."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D3",
+      "outcome": "Sigma notation for finite sum",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_066"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_066",
+          "answer": "Add the listed expression for r = 1, 2, …, n."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D4",
+      "outcome": "Arithmetic nth-term",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_arith_nth"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_arith_nth",
+          "answer": "uₙ = a + (n−1)d."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D4",
+      "outcome": "Arithmetic sum",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_007"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_007",
+          "answer": "Sₙ = n[2a + (n−1)d]/2."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D5",
+      "outcome": "Geometric nth-term",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_geom_nth"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_geom_nth",
+          "answer": "uₙ = ar^(n−1)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D5",
+      "outcome": "Geometric finite sum",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v136_008"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v136_008",
+          "answer": "Sₙ = a(1−rⁿ)/(1−r), when r ≠ 1."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.5 D5",
+      "outcome": "Convergence for infinite geometric sum",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "v33_card_maths_sequences_87"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "v33_card_maths_sequences_87",
+          "answer": "When the common ratio satisfies |r|<1."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E1",
+      "outcome": "Sine rule",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_sine_rule"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_sine_rule",
+          "answer": "a/sin A = b/sin B = c/sin C."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E1",
+      "outcome": "Cosine rule",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_cosine_rule"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_cosine_rule",
+          "answer": "a²=b²+c²−2bc cos A."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E1",
+      "outcome": "Area using two sides and included angle",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_triangle_area"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_triangle_area",
+          "answer": "Area = ½ab sin C."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "sin 30 degrees exact",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_016"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_016",
+          "answer": "1/2."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "sin 45 degrees exact",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_017"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_017",
+          "answer": "√2/2."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "cos 30 degrees exact",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_018"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_018",
+          "answer": "√3/2."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "tan 60 degrees exact",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "cos 60 degrees exact",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "Trigonometric symmetry",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v171_008",
+        "task1_v171_009"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v171_008",
+          "answer": "It is even: cos(−x)=cos x."
+        },
+        {
+          "id": "task1_v171_009",
+          "answer": "It is odd: sin(−x)=−sin x."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E5",
+      "outcome": "Pythagorean trigonometric identity",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "maths_trig_001"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "maths_trig_001",
+          "answer": "sin²x + cos²x = 1."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E5",
+      "outcome": "tan as sin divided by cos",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_tan_identity"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_tan_identity",
+          "answer": "tan x = sin x / cos x."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.6 E7",
+      "outcome": "Multiple trig solutions in interval",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "v33_card_maths_trigonometry_74"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "v33_card_maths_trigonometry_74",
+          "answer": "Trigonometric functions are periodic and can have multiple solutions in the specified interval."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.7 F1",
+      "outcome": "Exponential graph y=a^x properties",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.7 F2",
+      "outcome": "Derivative of e^(kx)",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.7 F3",
+      "outcome": "Exponential-logarithm inverse",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_exp_inverse"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_exp_inverse",
+          "answer": "y=eˣ and y=ln x."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.7 F4",
+      "outcome": "Log product law",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_logs_product"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_logs_product",
+          "answer": "logₐx + logₐy."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.7 F4",
+      "outcome": "Log quotient law",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v138_001"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v138_001",
+          "answer": "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.7 F4",
+      "outcome": "Log power law",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_logs_power"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_logs_power",
+          "answer": "k logₐx."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.7 F5",
+      "outcome": "Solve exponential equations using logs",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_logs_change"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_logs_change",
+          "answer": "x = logₐb."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.7 F6",
+      "outcome": "Extract parameters from log-linear plots",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.7 F7",
+      "outcome": "Exponential growth and decay models",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.8 G1",
+      "outcome": "Derivative as tangent gradient",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_diff_gradient"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_diff_gradient",
+          "answer": "The gradient of the curve/tangent at that point."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.8 G1",
+      "outcome": "Derivative from first principles",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_020"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_020",
+          "answer": "lim(h→0) [f(x+h)−f(x)]/h."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.8 G1",
+      "outcome": "Derivative as contextual rate of change",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.8 G2",
+      "outcome": "Power rule differentiation",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_diff_power"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_diff_power",
+          "answer": "nx^(n−1)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.8 G3",
+      "outcome": "Stationary point condition",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_stationary"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_stationary",
+          "answer": "dy/dx = 0."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.8 G3",
+      "outcome": "Normal gradient from tangent",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_021"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_021",
+          "answer": "−1/m."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.8 G3",
+      "outcome": "Positive derivative means increasing",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_022"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_022",
+          "answer": "The function is increasing there."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.9 H1",
+      "outcome": "Fundamental theorem: integral derivative link",
+      "kind": "candidate_recall_gap",
+      "cardIds": [],
+      "existingAnswerSamples": [],
+      "note": "No exact dedicated mock flashcard in this targeted inspection; check the practice bank before adding short recall"
+    },
+    {
+      "section": "3.9 H2",
+      "outcome": "Power-rule integration",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_integrate_power"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_integrate_power",
+          "answer": "x^(n+1)/(n+1) + C."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.9 H3",
+      "outcome": "Definite integral signed area",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_area_curve"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_area_curve",
+          "answer": "∫ₐᵇ f(x) dx."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.10 J2",
+      "outcome": "Two-dimensional vector magnitude",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "math_vector_mag"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "math_vector_mag",
+          "answer": "√(a²+b²)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.10 J3",
+      "outcome": "Vector addition",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v171_003"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v171_003",
+          "answer": "(a+c, b+d)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.10 J3",
+      "outcome": "Scalar multiplication of a vector",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v171_004"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v171_004",
+          "answer": "(ka, kb)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.10 J4",
+      "outcome": "Position-vector displacement",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v162_023"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v162_023",
+          "answer": "AB = OB − OA (position vectors)."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    },
+    {
+      "section": "3.10 J2",
+      "outcome": "Vector quadrant check from arctan",
+      "kind": "recall_evidence",
+      "cardIds": [
+        "task1_v171_005"
+      ],
+      "existingAnswerSamples": [
+        {
+          "id": "task1_v171_005",
+          "answer": "The quadrant, using the signs of both components."
+        }
+      ],
+      "note": "Exact existing flashcard supports a narrow memory outcome; application still needs exam questions"
+    }
+  ],
+  "priorityFollowup": [
+    {
+      "section": "3.3 B4",
+      "outcome": "Linear-quadratic simultaneous solving",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "tan 60 degrees exact",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.6 E3",
+      "outcome": "cos 60 degrees exact",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.7 F1",
+      "outcome": "Exponential graph y=a^x properties",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.7 F2",
+      "outcome": "Derivative of e^(kx)",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.7 F6",
+      "outcome": "Extract parameters from log-linear plots",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.7 F7",
+      "outcome": "Exponential growth and decay models",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.8 G1",
+      "outcome": "Derivative as contextual rate of change",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    },
+    {
+      "section": "3.9 H1",
+      "outcome": "Fundamental theorem: integral derivative link",
+      "action": "Check existing exam questions first, then add one concise new flashcard only if useful and not already adequately covered"
+    }
+  ],
+  "limits": {
+    "targetedSampleNotAllAqaBullets": true,
+    "notASMathsWholeExamCertification": true,
+    "notEveryExamQuestionAudited": true,
+    "noNewCardsAdded": true,
+    "allExistingCardIdsUnchanged": true,
+    "allExamQuestionsUnchanged": true
+  }
+}
