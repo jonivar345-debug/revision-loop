@@ -1,0 +1,147 @@
+{
+  "version": "v194",
+  "date": "2026-10-29",
+  "task1Complete": false,
+  "scope": "Original exam-question application practice for taught school-mock topics only, with Physics AS required practicals 1–6 and Chemistry AS RPs 1,2,3 plus taught A2 RP10 (ester data).",
+  "officialSpecSources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment"
+  ],
+  "evidenceAlreadyPresent": [
+    {
+      "subject": "Physics",
+      "source": "editorial/task1-required-practicals-ledger-v133.json",
+      "practicals": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "decision": "All six already had practical-themed short recall cards, so prioritise unfamiliar dataset application rather than adding redundant formula cards."
+    },
+    {
+      "subject": "Chemistry",
+      "source": "editorial/task1-required-practicals-ledger-v133.json",
+      "practicals": [
+        1,
+        2,
+        3,
+        10
+      ],
+      "decision": "These practicals already had short recall; focus on calculations, uncertainty and interpreting purity/endpoint evidence. RP10 ester work taught; other untaught A2 practicals excluded."
+    },
+    {
+      "subject": "Both",
+      "source": "editorial/task1-v170-practical-method-marking-audit.json",
+      "decision": "Prior app reviewed alternative-method marks for eight other questions; do not claim automated examiner-equivalent ECF or reliable diagram interpretation."
+    },
+    {
+      "subject": "Both",
+      "source": "editorial/task1-v154-mock-applied-questions.json",
+      "decision": "Existing practice covers selected cooling curves, stretched Young modulus and EMF; the new questions use distinct fresh data and cover all six AS Physics RP cases in one bundle."
+    }
+  ],
+  "additions": {
+    "file": "science_practical_data_v194.json",
+    "totalQuestions": 10,
+    "physicsQuestions": 6,
+    "chemistryQuestions": 4,
+    "totalMarks": 65,
+    "ids": [
+      "task1_v194_practical_01",
+      "task1_v194_practical_02",
+      "task1_v194_practical_03",
+      "task1_v194_practical_04",
+      "task1_v194_practical_05",
+      "task1_v194_practical_06",
+      "task1_v194_practical_07",
+      "task1_v194_practical_08",
+      "task1_v194_practical_09",
+      "task1_v194_practical_10"
+    ],
+    "practicalCoverage": [
+      {
+        "subject": "Physics",
+        "practical": 1,
+        "subtopic": "Fundamental string frequency and uncertainty"
+      },
+      {
+        "subject": "Physics",
+        "practical": 2,
+        "subtopic": "Eight fringe intervals and wavelength uncertainty"
+      },
+      {
+        "subject": "Physics",
+        "practical": 3,
+        "subtopic": "Graph slope for g and conservative gradient uncertainty"
+      },
+      {
+        "subject": "Physics",
+        "practical": 4,
+        "subtopic": "Wire stress, strain, Young modulus and squared-diameter uncertainty"
+      },
+      {
+        "subject": "Physics",
+        "practical": 5,
+        "subtopic": "R against L graph, resistivity, non-zero contact resistance"
+      },
+      {
+        "subject": "Physics",
+        "practical": 6,
+        "subtopic": "emf and internal resistance from V-I graph"
+      },
+      {
+        "subject": "Chemistry",
+        "practical": 1,
+        "subtopic": "Concordant titres and 2:1 neutralisation concentration"
+      },
+      {
+        "subject": "Chemistry",
+        "practical": 2,
+        "subtopic": "Extrapolated calorimetry and negative enthalpy sign"
+      },
+      {
+        "subject": "Chemistry",
+        "practical": 3,
+        "subtopic": "Clock-reaction relative 1/t rates and fair comparison"
+      },
+      {
+        "subject": "Chemistry",
+        "practical": 10,
+        "subtopic": "Ester % yield and limits of boiling point as purity evidence"
+      }
+    ]
+  },
+  "arithmeticSpotChecks": {
+    "rp1FundamentalHz": 31.6227766,
+    "rp1UncertaintyPercent": 4.2611111,
+    "rp2WavelengthMetres": 5e-7,
+    "rp2UncertaintyPercent": 7.410714,
+    "rp3G": 9.76,
+    "rp3AbsoluteUncertaintyG": 0.36,
+    "rp4YoungModulusPa": 149207759000,
+    "rp4UncertaintyPercent": 9.82142857,
+    "rp5ResistivityOhmMetres": 7.8539816e-7,
+    "rp6EmfVolts": 1.54,
+    "rp6InternalOhms": 0.48,
+    "chem1ConcentrationMolPerDm3": 0.225225225,
+    "chem2DeltaHKJMol": -55.594,
+    "chem3RateRatio": 2.8,
+    "chem10YieldPercent": 42.025862
+  },
+  "preserved": [
+    "Original 3,345 flashcard records and their IDs",
+    "Original 1,268 exam-question records, even older supplements unchanged",
+    "Current 734 Physics, 1,538 Chemistry and 147 first-mock Maths recall-card counts",
+    "Google cloud backup, progress keys, XP, World/media, marking review buttons and photo scanning",
+    "No buffers or untaught Chemistry practicals in mock"
+  ],
+  "limitations": [
+    "All questions are newly authored practice, not past AQA questions, official mark schemes or verified historical paper indexing.",
+    "Numerical results and rubric methods were independently recomputed; automated marking still needs manual review for correct alternate working and error carried forward.",
+    "The original exam-question bank count stays at 1,268; ten optional original practice questions are additional rather than evidence all 2015–2026 papers are covered.",
+    "This targeted practical application batch does not certify complete AQA specification coverage, actual lab competence, or student mastery."
+  ]
+}
