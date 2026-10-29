@@ -35,7 +35,9 @@ for(const x of a.edited){
 const exceptions=science.filter(c=>c.subject==='Physics'&&/^3\.(?:6|7|8|9|10|11|12|13)(?:\.|$)/.test(c.specRef||''));
 assert.equal(exceptions.length,0);
 const photo=d.cards.find(c=>c.id==='phy_spectra_photo_v32_below_threshold_graph');
-assert(photo&&/negative energy/i.test(photo.back),'Preserve specialised photoelectric evidence rule');
+// v184 reviewed this card: the answer now states the essential physical result without treating the negative extrapolated graph as an emitted kinetic energy.
+assert(photo&&/no photoelectrons are emitted/i.test(photo.back),'Preserve correct below-threshold photoelectric evidence');
+assert(!/negative (?:kinetic )?energy/i.test(photo.back),'Do not claim negative kinetic energy below threshold');
 assert.equal(mock.filter(c=>c.subject==='Chemistry'&&(c.courseTopic||'')==='RP9 pH curves').length,8);
 assert.equal(a.checks.oldCardIdsPreserved,true);
 assert.equal(a.checks.task1Complete,false);
