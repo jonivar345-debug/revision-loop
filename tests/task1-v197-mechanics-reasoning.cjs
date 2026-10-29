@@ -32,7 +32,7 @@ for(const q of bank.questions){
 assert(app.includes("'./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json'"));
 assert(sw.includes("'./physics_mechanics_reasoning_v197.json'"));
 assert(sw.includes('v197-mechanics-reasoning'));
-assert(html.includes('app.js?v=198'));
+assert(html.includes('app.js?v=199'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 const mathsOld=[...base.questions,...previousFiles.flatMap(f=>load(f).questions)].filter(q=>q.subject==='Maths'&&eligible(q));
