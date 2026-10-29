@@ -1,0 +1,2139 @@
+{
+  "version": "v181",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "objective": "210 additional original Chemistry/Physics school mock cards reviewed at individual-question/answer level; concise recall and stricter units/trend grading",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content"
+  ],
+  "baseline": {
+    "totalCards": 3345,
+    "active": 3341,
+    "mockEligible": 2379,
+    "originalQuestions": 1268,
+    "originalScienceLegacy": 971,
+    "previouslyReviewed": 283,
+    "chemistryReviewedHere": 150,
+    "physicsReviewedHere": 60,
+    "reviewedThisBatch": 210,
+    "totalReviewed": 493,
+    "remainingScience": 478,
+    "remainingChemistry": 312,
+    "remainingPhysics": 166
+  },
+  "bySubject": {
+    "Chemistry": {
+      "reviewed": 150
+    },
+    "Physics": {
+      "reviewed": 60
+    }
+  },
+  "bySection": {
+    "Chemistry 3.1.9": 14,
+    "Chemistry 3.1.10": 14,
+    "Chemistry 3.1.6": 15,
+    "Chemistry 3.3.9": 53,
+    "Chemistry 3.3": 11,
+    "Chemistry 3.1.1": 43,
+    "Physics 3.5": 21,
+    "Physics 3.2": 17,
+    "Physics 3.3": 14,
+    "Physics 3.1": 8
+  },
+  "corrections": [
+    {
+      "id": "chem_rate_recap_20261024_k_unit_first",
+      "previousFront": "What are the units of k for an overall first-order reaction?",
+      "previousBack": "s⁻¹.",
+      "newFront": "What are the units of k for an overall first-order reaction?",
+      "newBack": "s⁻¹.",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_unit_second",
+      "previousFront": "What are the units of k for an overall second-order reaction?",
+      "previousBack": "dm³ mol⁻¹ s⁻¹.",
+      "newFront": "What are the units of k for an overall second-order reaction?",
+      "newBack": "dm³ mol⁻¹ s⁻¹.",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_unit_third",
+      "previousFront": "What are the units of k for an overall third-order reaction?",
+      "previousBack": "dm⁶ mol⁻² s⁻¹.",
+      "newFront": "What are the units of k for an overall third-order reaction?",
+      "newBack": "dm⁶ mol⁻² s⁻¹.",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_constant",
+      "previousFront": "Can concentration change k at fixed temperature?",
+      "previousBack": "No. Concentration can change rate, but k remains constant under unchanged conditions.",
+      "newFront": "At constant temperature, does changing concentration change the rate constant k?",
+      "newBack": "No. k is unchanged.",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "chem_kp_recap_20261024_molefraction",
+      "previousFront": "What is the formula for a gas's mole fraction?",
+      "previousBack": "Mole fraction of A = n(A) ÷ total moles of all gases. It has no units.",
+      "newFront": "How is the mole fraction of gas A calculated?",
+      "newBack": "Moles of A ÷ total moles of gases.",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "chem_kp_recap_20261024_kp_units",
+      "previousFront": "How do you derive the pressure units of Kp?",
+      "previousBack": "Pressure unit raised to Δn, where Δn = sum of gaseous product coefficients minus reactant coefficients.",
+      "newFront": "What power of the pressure unit gives the units of Kp?",
+      "newBack": "Δn = total gaseous product coefficients − total gaseous reactant coefficients.",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_kp_recap_20261024_kp_units_ammonia",
+      "previousFront": "What are Kp units for N₂ + 3H₂ ⇌ 2NH₃ if pressure is in kPa?",
+      "previousBack": "kPa⁻²: 2 moles of gaseous products minus 4 moles of gaseous reactants = −2.",
+      "newFront": "For N₂ + 3H₂ ⇌ 2NH₃, what are Kp units if pressure is measured in kPa?",
+      "newBack": "kPa⁻².",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_kp_recap_20261024_equilibrium_not_initial",
+      "previousFront": "Which partial pressures go into a numerical Kp calculation?",
+      "previousBack": "Only equilibrium partial pressures, not initial pressures.",
+      "newFront": "Which pressures must be used in a Kp expression?",
+      "newBack": "Equilibrium partial pressures.",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "chem_kp_recap_20261024_temp_exothermic",
+      "previousFront": "What happens to Kp when temperature increases for an exothermic forward reaction?",
+      "previousBack": "Kp decreases: increasing T favours the endothermic reverse reaction.",
+      "newFront": "How does increasing temperature change Kp for an exothermic forward reaction?",
+      "newBack": "Kp decreases.",
+      "reason": "Use single-fact direction recall; reject opposite trends"
+    },
+    {
+      "id": "chem_kp_recap_20261024_temp_endothermic",
+      "previousFront": "What happens to Kp when temperature increases for an endothermic forward reaction?",
+      "previousBack": "Kp increases: increasing T favours the endothermic forward reaction.",
+      "newFront": "For an endothermic forward reaction, does Kp increase or decrease when heated?",
+      "newBack": "Kp increases.",
+      "reason": "Use single-fact direction recall; reject opposite trends"
+    },
+    {
+      "id": "chem_kp_recap_20261024_inert_constantvolume",
+      "previousFront": "What happens if an inert gas is added at constant volume and temperature?",
+      "previousBack": "Total pressure rises, but reacting gases' partial pressures and equilibrium position stay unchanged.",
+      "newFront": "Does adding an inert gas at fixed temperature and volume shift a gaseous equilibrium?",
+      "newBack": "No. The reacting gases' partial pressures remain unchanged.",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "chem_kc_recap_20261024_kc_units",
+      "previousFront": "How do you derive the units of Kc?",
+      "previousBack": "Concentration unit (mol dm⁻³) to the power Δn; Δn = sum of included product powers − reactant powers.",
+      "newFront": "What determines the power of mol dm⁻³ in the units of Kc?",
+      "newBack": "The sum of product concentration powers minus the sum of reactant concentration powers.",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_kc_recap_20261024_kc_units_ammonia",
+      "previousFront": "What units does Kc have for N₂ + 3H₂ ⇌ 2NH₃?",
+      "previousBack": "dm⁶ mol⁻², because Δn = 2 − 4 = −2.",
+      "newFront": "What are Kc units for N₂ + 3H₂ ⇌ 2NH₃?",
+      "newBack": "dm⁶ mol⁻².",
+      "reason": "Require correct rate/equilibrium units, not approximate word overlap"
+    },
+    {
+      "id": "chem_kc_recap_20261024_temp_exothermic",
+      "previousFront": "How does raising T affect Kc for an exothermic forward reaction?",
+      "previousBack": "Kc decreases because higher T favours the endothermic reverse reaction.",
+      "newFront": "How does increasing temperature change Kc for an exothermic forward reaction?",
+      "newBack": "Kc decreases.",
+      "reason": "Use single-fact direction recall; reject opposite trends"
+    },
+    {
+      "id": "chem_kc_recap_20261024_temp_endothermic",
+      "previousFront": "How does raising T affect Kc for an endothermic forward reaction?",
+      "previousBack": "Kc increases because higher T favours the endothermic forward reaction.",
+      "newFront": "How does increasing temperature change Kc for an endothermic forward reaction?",
+      "newBack": "Kc increases.",
+      "reason": "Use single-fact direction recall; reject opposite trends"
+    },
+    {
+      "id": "chem_spec_v40_010",
+      "previousFront": "Give four typical applications of esters.",
+      "previousBack": "Solvents, plasticisers, perfume ingredients and food flavourings.",
+      "newFront": "Give one common use of esters.",
+      "newBack": "Perfume ingredients (also solvents, flavourings or plasticisers).",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "chem_spec_v40_023",
+      "previousFront": "What does transesterification mean?",
+      "previousBack": "Exchange of the alcohol-derived part of an ester.",
+      "newFront": "What is transesterification?",
+      "newBack": "Changing an ester into another ester by exchanging its alcohol-derived group.",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "chem_acyl_review_v41_28",
+      "previousFront": "Why is ethanoic anhydride preferred industrially over ethanoyl chloride?",
+      "previousBack": "It avoids producing corrosive hydrogen chloride fumes.",
+      "newFront": "Why may ethanoic anhydride be preferred to ethanoyl chloride industrially?",
+      "newBack": "It avoids producing corrosive HCl fumes.",
+      "reason": "Simplify wording and accept common scientifically equivalent answers"
+    },
+    {
+      "id": "phy_quarks_001",
+      "previousFront": "Can strangeness change in a weak interaction?",
+      "previousBack": "Yes. Strangeness is conserved in strong interactions but can change in weak interactions.",
+      "newFront": "Can strangeness change in a weak interaction?",
+      "newBack": "Yes, strangeness may change.",
+      "reason": "Reduce multi-part recall and support alternate short answers"
+    },
+    {
+      "id": "phy_photoelectric_001",
+      "previousFront": "What must happen for a photoelectron to be emitted?",
+      "previousBack": "One photon transfers energy hf to one electron. Emission occurs if hf ≥ the work function φ.",
+      "newFront": "What is the photon-energy condition for photoelectric emission?",
+      "newBack": "hf ≥ φ (photon energy at least the work function).",
+      "reason": "Reduce multi-part recall and support alternate short answers"
+    },
+    {
+      "id": "phy_rp2",
+      "previousFront": "What are the key equations for double-slit and diffraction-grating work?",
+      "previousBack": "w = λD/s and d sin θ = nλ.",
+      "newFront": "In Young's double-slit equation w = λD/s, what does D represent?",
+      "newBack": "Distance from the slits to the screen.",
+      "reason": "Reduce multi-part recall and support alternate short answers"
+    },
+    {
+      "id": "phy_rp5",
+      "previousFront": "How is the resistivity of a wire found?",
+      "previousBack": "ρ = RA/L, with R = V/I and A = πd²/4.",
+      "newFront": "What equation gives the resistivity of a wire?",
+      "newBack": "ρ = RA/L.",
+      "reason": "Reduce multi-part recall and support alternate short answers"
+    },
+    {
+      "id": "phy_conservation_particle",
+      "previousFront": "Which conservation rules apply to particle interactions?",
+      "previousBack": "Charge, baryon number, electron and muon lepton numbers, energy and momentum conserved; strangeness conserved in strong, may change in weak.",
+      "newFront": "Which fundamental interaction conserves strangeness?",
+      "newBack": "The strong interaction.",
+      "reason": "Reduce multi-part recall and support alternate short answers"
+    },
+    {
+      "id": "phy_uncert_random",
+      "previousFront": "What is a random error?",
+      "previousBack": "An unpredictable variation that causes scatter in repeated readings; repeats and a mean can reduce its effect.",
+      "newFront": "What is a random measurement error?",
+      "newBack": "An unpredictable variation causing scatter in repeated measurements.",
+      "reason": "Reduce multi-part recall and support alternate short answers"
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "chem_rate_recap_20261024_zero_rate_graph",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What shape is the rate–[A] graph for a zero-order reactant?",
+      "back": "A horizontal straight line: rate does not depend on [A].",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_first_rate_graph",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What shape is the rate–[A] graph for first order?",
+      "back": "A straight line through the origin: rate is proportional to [A].",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_second_rate_graph",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What shape is the rate–[A] graph for second order?",
+      "back": "An upward-curving parabola: rate is proportional to [A]².",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_doubling_orders",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "On doubling [A], what happens to rate for order 0, 1 and 2?",
+      "back": "Order 0: unchanged; order 1: ×2; order 2: ×4.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_tripling_orders",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "On tripling [A], what happens to rate for order 0, 1 and 2?",
+      "back": "Order 0: unchanged; order 1: ×3; order 2: ×9.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_overall_order_example",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "Find the overall order for rate = k[A]²[B].",
+      "back": "Third order: add the powers, 2 + 1 = 3.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_unit_first",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What are the units of k for an overall first-order reaction?",
+      "back": "s⁻¹.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_unit_second",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What are the units of k for an overall second-order reaction?",
+      "back": "dm³ mol⁻¹ s⁻¹.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_unit_third",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What are the units of k for an overall third-order reaction?",
+      "back": "dm⁶ mol⁻² s⁻¹.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_initial_data",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "How do you find order from initial-rate experiments?",
+      "back": "Compare two trials holding other concentrations constant; see how the rate responds.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_clock",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "When may initial rate be taken as proportional to 1/time?",
+      "back": "When each trial reaches the same small reaction extent at its timed endpoint.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_rate_determining",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "What is the rate-determining step?",
+      "back": "The slow elementary step that limits overall reaction rate.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_constant_halflife",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "How does half-life behave for a first-order reactant?",
+      "back": "It stays constant as concentration falls.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_rate_recap_20261024_k_constant",
+      "subject": "Chemistry",
+      "section": "3.1.9",
+      "topic": "Rate equations",
+      "front": "At constant temperature, does changing concentration change the rate constant k?",
+      "back": "No. k is unchanged.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_definition",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "Define Kp for a homogeneous gaseous equilibrium.",
+      "back": "The equilibrium constant expressed using the equilibrium partial pressures of the gases, at a fixed temperature.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_molefraction",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "How is the mole fraction of gas A calculated?",
+      "back": "Moles of A ÷ total moles of gases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_fractions_sum",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "What must all mole fractions in a gas mixture add up to?",
+      "back": "Exactly 1, when all gases present are included.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_kp_nh3",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "Write Kp for N₂(g) + 3H₂(g) ⇌ 2NH₃(g).",
+      "back": "Kp = p(NH₃)² ÷ [p(N₂) × p(H₂)³]. Use equilibrium partial pressures.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_kp_units",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "What power of the pressure unit gives the units of Kp?",
+      "back": "Δn = total gaseous product coefficients − total gaseous reactant coefficients.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_kp_units_ammonia",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "For N₂ + 3H₂ ⇌ 2NH₃, what are Kp units if pressure is measured in kPa?",
+      "back": "kPa⁻².",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_kp_unitless",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "When do the pressure units of Kp cancel?",
+      "back": "When the total gaseous coefficients are equal on both sides, so Δn = 0.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_equilibrium_not_initial",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "Which pressures must be used in a Kp expression?",
+      "back": "Equilibrium partial pressures.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_mole_table",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "What is the first step when given initial moles and amount reacted?",
+      "back": "Use a mole-change table and the balanced coefficients to find every equilibrium amount.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_pressure_position",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "If a gas equilibrium is compressed at constant T, which side is favoured?",
+      "back": "The side with fewer total moles of gas. Kp itself is unchanged.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_temp_exothermic",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "How does increasing temperature change Kp for an exothermic forward reaction?",
+      "back": "Kp decreases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_temp_endothermic",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "For an endothermic forward reaction, does Kp increase or decrease when heated?",
+      "back": "Kp increases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_total_pressure_unknown",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "How do you find unknown total pressure P from Kp and mole fractions?",
+      "back": "Replace each partial pressure p(A) by x(A)×P in Kp, simplify the powers of P, then solve.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kp_recap_20261024_inert_constantvolume",
+      "subject": "Chemistry",
+      "section": "3.1.10",
+      "topic": "Kp",
+      "front": "Does adding an inert gas at fixed temperature and volume shift a gaseous equilibrium?",
+      "back": "No. The reacting gases' partial pressures remain unchanged.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_definition",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Define Kc.",
+      "back": "The equilibrium constant expressed using equilibrium concentrations, each raised to its equation coefficient.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_general",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Write Kc for aA + bB ⇌ cC + dD.",
+      "back": "Kc = [C]^c[D]^d / ([A]^a[B]^b). Products over reactants, using equilibrium concentrations.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_concentration_units",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "What units should concentration have in Kc calculations?",
+      "back": "mol dm⁻³, unless a question specifies a consistent alternative.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_expression_hi",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Write Kc for H₂(g) + I₂(g) ⇌ 2HI(g).",
+      "back": "Kc = [HI]² / ([H₂][I₂]).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_expression_nh3",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Write Kc for N₂(g) + 3H₂(g) ⇌ 2NH₃(g).",
+      "back": "Kc = [NH₃]² / ([N₂][H₂]³).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_solids_liquids",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Which species are omitted from Kc expressions?",
+      "back": "Pure solids and pure liquids; include aqueous and gaseous species as appropriate.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_equilibrium_only",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Should you use initial or equilibrium concentrations in Kc?",
+      "back": "Equilibrium concentrations only. Find these from a mole-change table if necessary.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_kc_units",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "What determines the power of mol dm⁻³ in the units of Kc?",
+      "back": "The sum of product concentration powers minus the sum of reactant concentration powers.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_kc_units_ammonia",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "What are Kc units for N₂ + 3H₂ ⇌ 2NH₃?",
+      "back": "dm⁶ mol⁻².",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_unitless",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "When does Kc have no units?",
+      "back": "When the powers of concentration cancel, e.g. H₂ + I₂ ⇌ 2HI.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_temperature_only",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "What changes the value of Kc for a given reaction?",
+      "back": "Temperature only. Changing concentrations, pressure or a catalyst doesn't change Kc at the same temperature.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_temp_exothermic",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "How does increasing temperature change Kc for an exothermic forward reaction?",
+      "back": "Kc decreases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_temp_endothermic",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "How does increasing temperature change Kc for an endothermic forward reaction?",
+      "back": "Kc increases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_lechatelier_vs_k",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "How can equilibrium composition change without changing Kc?",
+      "back": "Concentration or pressure changes can shift equilibrium; Kc remains constant at unchanged temperature.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_kc_recap_20261024_example_numeric",
+      "subject": "Chemistry",
+      "section": "3.1.6",
+      "topic": "Equilibria",
+      "front": "Calculate Kc if [HI]=0.80, [H₂]=0.40, [I₂]=0.20 mol dm⁻³.",
+      "back": "For H₂ + I₂ ⇌ 2HI, Kc = 0.80² / (0.40×0.20) = 8.0 (no units).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_006",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is the ester functional group?",
+      "back": "R–C(=O)–O–R′.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_007",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "How do you name an ester?",
+      "back": "Alkyl name from the alcohol first, then the acid-derived –oate name.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_008",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Which two functional groups combine in esterification?",
+      "back": "A carboxylic acid group and an alcohol group.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_009",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is the general equation for esterification?",
+      "back": "Carboxylic acid + alcohol ⇌ ester + water.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_010",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Give one common use of esters.",
+      "back": "Perfume ingredients (also solvents, flavourings or plasticisers).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_011",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is produced by acidic ester hydrolysis?",
+      "back": "A carboxylic acid and an alcohol.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_012",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is produced by alkaline ester hydrolysis?",
+      "back": "A carboxylate salt and an alcohol.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_013",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Why does alkaline ester hydrolysis tend to completion?",
+      "back": "Formation of the stable carboxylate ion inhibits the reverse reaction.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_014",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is glycerol's systematic name?",
+      "back": "Propane-1,2,3-triol.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_015",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What are fats and vegetable oils made from chemically?",
+      "back": "Triglycerides containing three ester links to glycerol.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_016",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Which acid-derived groups are joined to glycerol in a triglyceride?",
+      "back": "Three long-chain fatty acid residues.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_017",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Can a triglyceride contain three different fatty acids?",
+      "back": "Yes. The three long chains need not be identical.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_018",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is saponification?",
+      "back": "Alkaline hydrolysis of fats or oils.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_019",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What are the main products of triglyceride saponification?",
+      "back": "Soap (long-chain carboxylate salts) and glycerol.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_020",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Why does soap clean oily substances?",
+      "back": "Its non-polar tail interacts with oil and its ionic head with water.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_021",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "How many soap ions can one triglyceride yield?",
+      "back": "Three, corresponding to the three fatty acid groups.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_022",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What type of substances make up biodiesel?",
+      "back": "Methyl esters of long-chain carboxylic acids.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_023",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is transesterification?",
+      "back": "Changing an ester into another ester by exchanging its alcohol-derived group.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_024",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "How is transesterification different from hydrolysis?",
+      "back": "Transesterification exchanges an ester group; hydrolysis breaks an ester bond.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_025",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What substance is common to production of soap and biodiesel from triglycerides?",
+      "back": "Glycerol.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_026",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What is the stoichiometric number of fatty acid methyl esters per triglyceride?",
+      "back": "Three methyl ester molecules correspond to one triglyceride.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_027",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "What structural feature makes a fatty acid unsaturated?",
+      "back": "At least one carbon–carbon double bond in the chain.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_spec_v40_028",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Esters",
+      "front": "Why do oils and fats belong to the ester family?",
+      "back": "Their three fatty acid residues are connected to glycerol by –COO– links.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_01",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the general formula of an acyl chloride?",
+      "back": "R–C(=O)–Cl.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_02",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is an acyl group?",
+      "back": "R–C(=O)–, the group transferred in acylation.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_03",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What group links the two carbonyls in an acid anhydride?",
+      "back": "A bridging oxygen: RCO–O–COR′.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_04",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is an amide functional group?",
+      "back": "A carbonyl directly bonded to nitrogen, e.g. –CONH₂.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_05",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "How does an amide differ structurally from an amine?",
+      "back": "An amide N is bonded to C=O; an amine N is not.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_06",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What type of mechanism is acyl chloride acylation?",
+      "back": "Nucleophilic addition–elimination.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_07",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What makes the acyl carbon attractive to a nucleophile?",
+      "back": "The carbonyl carbon is electron-poor (δ+).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_08",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "In acylation mechanisms, where should the nucleophile's arrow point?",
+      "back": "Toward the electrophilic carbonyl carbon.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_09",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What happens to the C=O bonding electron pair during initial attack?",
+      "back": "It moves towards the oxygen atom.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_10",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What shape does the carbonyl carbon adopt in the addition intermediate?",
+      "back": "Approximately tetrahedral.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_11",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What change reforms C=O during the elimination stage?",
+      "back": "An oxygen lone pair reforms the carbon–oxygen double bond.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_12",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "Which type of species is displaced from an acyl chloride intermediate?",
+      "back": "A chloride ion, Cl−, acts as the leaving group.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_13",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "Why is nucleophilic acylation called addition–elimination?",
+      "back": "The nucleophile adds before a leaving group is expelled.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_14",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "Why is a proton-transfer step often shown at the end?",
+      "back": "To obtain the neutral product after an O- or N-containing nucleophile adds.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_15",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the organic product class of acyl chloride hydrolysis?",
+      "back": "A carboxylic acid.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_16",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the organic product class of alcohol acylation?",
+      "back": "An ester.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_17",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the organic product class when ammonia is acylated?",
+      "back": "A primary amide, RCONH₂.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_18",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the organic product class when a primary amine is acylated?",
+      "back": "An N-substituted amide, RCONHR′.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_19",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "Which by-product distinguishes acyl chlorides from acid anhydrides?",
+      "back": "Acyl chlorides give HCl; anhydrides give a carboxylic acid.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_20",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the main organic product of acid anhydride hydrolysis?",
+      "back": "Carboxylic acids.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_21",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What main organic product classes arise from anhydride alcoholysis?",
+      "back": "An ester and a carboxylic acid.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_22",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What type of amide forms from anhydride and ammonia?",
+      "back": "A primary amide.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_23",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What type of amide forms from anhydride and a primary amine?",
+      "back": "An N-substituted amide.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_24",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What does the N- prefix mean in the name N-methylethanamide?",
+      "back": "A methyl substituent is bonded to the amide nitrogen.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_25",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the name of CH₃COCl?",
+      "back": "Ethanoyl chloride.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_26",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the name of (CH₃CO)₂O?",
+      "back": "Ethanoic anhydride.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_27",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What is the name of CH₃CONH₂?",
+      "back": "Ethanamide.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_28",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "Why may ethanoic anhydride be preferred to ethanoyl chloride industrially?",
+      "back": "It avoids producing corrosive HCl fumes.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_29",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "Which functional group in salicylic acid becomes an ester in aspirin?",
+      "back": "The phenolic O–H group.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_acyl_review_v41_30",
+      "subject": "Chemistry",
+      "section": "3.3.9",
+      "topic": "Acyl chlorides",
+      "front": "What organic by-product is associated with aspirin made using ethanoic anhydride?",
+      "back": "Ethanoic acid.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_01",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Organic chemistry",
+      "front": "Where should the tail of a curly arrow be placed?",
+      "back": "At an electron pair: a lone pair or covalent bond.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_02",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Organic chemistry",
+      "front": "What does a curved arrow from a covalent bond to an atom show?",
+      "back": "Both electrons in the bond moving to that atom.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_03",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Organic chemistry",
+      "front": "How is homolytic fission different from heterolytic fission?",
+      "back": "Homolytic splits the pair; heterolytic transfers both electrons to one side.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_04",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Organic chemistry",
+      "front": "What makes a substance electrophilic rather than nucleophilic?",
+      "back": "Electrophiles accept electron pairs; nucleophiles donate electron pairs.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_05",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkanes",
+      "front": "In a radical chain mechanism, what is initiation?",
+      "back": "The formation of initial radicals through homolytic bond breaking.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_06",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkanes",
+      "front": "What is propagation in a radical chain?",
+      "back": "A radical reacts and generates another radical, continuing the chain.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_07",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkanes",
+      "front": "How does radical termination differ from propagation?",
+      "back": "Termination consumes radicals without creating new ones.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_13",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkenes",
+      "front": "Why is an alkene's C=C bond attractive to electrophiles?",
+      "back": "The double bond is a region of high electron density.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_14",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkenes",
+      "front": "Where does the first curly arrow start in alkene electrophilic addition?",
+      "back": "At the electron-rich C=C double bond.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_15",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkenes",
+      "front": "Why can an unsymmetrical alkene give unequal quantities of two products?",
+      "back": "The competing carbocation intermediates have different stabilities.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_mechanisms_v42_16",
+      "subject": "Chemistry",
+      "section": "3.3",
+      "topic": "Alkenes",
+      "front": "Order typical carbocations by stability.",
+      "back": "Tertiary is more stable than secondary, which is more stable than primary.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_01",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "State the relative charge and mass of a proton.",
+      "back": "Charge +1, relative mass 1.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_02",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "State the relative charge and mass of a neutron.",
+      "back": "Charge 0, relative mass 1.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_03",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "State the relative charge and mass of an electron.",
+      "back": "Charge −1, relative mass about 1/1836.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_04",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "What does the proton number Z measure?",
+      "back": "The number of protons in a nucleus; it defines the element.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_05",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "How are neutrons counted using A and Z?",
+      "back": "Number of neutrons = mass number A − proton number Z.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_06",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "How many electrons are in a 3+ ion formed from Z=13?",
+      "back": "13−3 = 10 electrons; the nucleus is unchanged.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_07",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "Why did Rutherford reject the plum pudding model?",
+      "back": "Some alpha particles scattered through large angles, implying a tiny, dense positive nucleus.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_08",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "Why do isotopes often have similar chemical properties?",
+      "back": "They have the same electron arrangements despite differing neutron numbers.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_09",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "Define relative molecular mass Mr.",
+      "back": "Mean mass of a molecule compared with 1/12 of a carbon-12 atom.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_10",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "What is relative isotopic mass compared against?",
+      "back": "One twelfth of the mass of one carbon-12 atom.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_11",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "How do you calculate Ar from two isotope abundances?",
+      "back": "(isotope mass₁×abundance₁ + mass₂×abundance₂) ÷ total abundance.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_12",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Atomic structure",
+      "front": "Why is Ar of an isotope mixture a weighted mean?",
+      "back": "More abundant isotopes contribute more to the average mass.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_13",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What does m/z mean in mass spectrometry?",
+      "back": "Mass-to-charge ratio; for a singly charged ion it matches the relative ion mass.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_14",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What are the four core TOF stages in order?",
+      "back": "Ionisation → acceleration → ion drift → detection/data analysis.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_15",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What is the purpose of ionisation in TOF?",
+      "back": "To give sample particles an electrical charge so they can be accelerated and detected.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_16",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What is formed by electron-impact ionisation of X(g)?",
+      "back": "X⁺(g), after an electron is removed.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_17",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Why may electron-impact mass spectra show fragment peaks?",
+      "back": "Energetic ionisation can break molecules into smaller charged fragments.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_18",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What charge is commonly formed by electrospray protonation?",
+      "back": "A singly charged protonated ion, [M+H]⁺.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_19",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Why can electrospray help analyse large molecules?",
+      "back": "It is gentler and often causes less fragmentation than electron impact.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_20",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What happens to positive ions in the acceleration stage?",
+      "back": "An electric field accelerates them, giving ions of equal charge equal kinetic energy.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_21",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Why does equal kinetic energy not mean equal speed?",
+      "back": "Since Eₖ=½mv², lighter ions have greater speed at equal Eₖ.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_22",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Which travels faster at equal KE: 63⁺ or 65⁺?",
+      "back": "The lighter 63⁺ ion.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_23",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What is the purpose of the flight/drift tube?",
+      "back": "To time how long accelerated ions take to travel a fixed distance.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_24",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Why is a high vacuum used in the drift tube?",
+      "back": "To reduce collisions between moving ions and gas molecules.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_25",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What happens to an ion's speed while drifting ideally?",
+      "back": "It remains approximately constant in the field-free drift region.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_26",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What is the relationship between flight time, distance and speed?",
+      "back": "Flight time t = flight length L ÷ speed v.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_27",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "How does flight time change as mass increases at fixed KE and charge?",
+      "back": "It increases; t is proportional to the square root of mass.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_28",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What happens when ions reach a TOF detector?",
+      "back": "They generate an electrical signal used to record ion arrivals.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_29",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What does the position of a mass spectrum peak indicate?",
+      "back": "Its mass-to-charge ratio (m/z).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_30",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What does the height/intensity of a mass spectrum peak indicate?",
+      "back": "Relative abundance of the detected ion.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_31",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What is the base peak in a mass spectrum?",
+      "back": "The most intense peak; it is assigned 100% relative intensity.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_32",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Why is the base peak not necessarily the molecular ion?",
+      "back": "A charged fragment can be more abundant than the intact molecular ion.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_33",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What does a molecular-ion peak represent in electron-impact MS?",
+      "back": "An ion formed from the intact molecule after losing an electron.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_34",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "Why might the electrospray [M+H]⁺ peak differ from molecular mass?",
+      "back": "It includes the mass of an added proton; m/z is about Mr+1 for 1+ ions.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_35",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "For a 36 u ion with a 2+ charge, what is m/z?",
+      "back": "18; m/z = 36/2.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_36",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "At fixed voltage, how does a higher ion charge affect kinetic energy?",
+      "back": "Eₖ=qV; a higher charge gains more kinetic energy.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_37",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "What simple relation links acceleration voltage and ion energy?",
+      "back": "Kinetic energy gained = charge × potential difference, Eₖ=qV.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_38",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Mass spectrometry",
+      "front": "How can elemental identity be suggested by mass spectrometry?",
+      "back": "Compare isotope peak masses and relative abundances to characteristic isotope patterns.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_39",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Ionisation energy",
+      "front": "Write the first ionisation equation for magnesium.",
+      "back": "Mg(g) → Mg⁺(g) + e⁻.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_40",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Ionisation energy",
+      "front": "Write the second ionisation equation for magnesium.",
+      "back": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_41",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Ionisation energy",
+      "front": "Why do successive ionisation energies increase?",
+      "back": "Each electron is removed from an increasingly positive ion.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_42",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Ionisation energy",
+      "front": "What does a very large successive-IE jump identify?",
+      "back": "Removal has reached an inner shell; the number removed before it equals outer-shell electrons.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "chem_atomic_v43_43",
+      "subject": "Chemistry",
+      "section": "3.1.1",
+      "topic": "Ionisation energy",
+      "front": "Why does first IE usually rise across Period 3?",
+      "back": "Nuclear charge rises; shielding changes little; outer electrons are held more strongly.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_internal_001",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Internal resistance",
+      "front": "A cell has emf ε, internal resistance r and current I. What is its terminal p.d.?",
+      "back": "V = ε − Ir. The term Ir is the lost volts inside the cell.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_photoelectric_001",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Photoelectric effect",
+      "front": "What is the photon-energy condition for photoelectric emission?",
+      "back": "hf ≥ φ (photon energy at least the work function).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_photoelectric_002",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Photoelectric effect",
+      "front": "Why can intense light below the threshold frequency still emit no photoelectrons?",
+      "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_energy_levels_001",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Energy levels",
+      "front": "How is atomic excitation different from the photoelectric effect?",
+      "back": "Excitation moves an electron to a higher bound energy level. The photoelectric effect removes an electron from the metal.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_quarks_001",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particle physics",
+      "front": "Can strangeness change in a weak interaction?",
+      "back": "Yes, strangeness may change.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_rp1",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "RP1 Stationary waves",
+      "front": "What relationship is central to the stretched-string stationary-wave practical?",
+      "back": "f = (1/2L)√(T/μ).",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_rp2",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "RP2 Interference",
+      "front": "In Young's double-slit equation w = λD/s, what does D represent?",
+      "back": "Distance from the slits to the screen.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_rp5",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "RP5 Resistivity",
+      "front": "What equation gives the resistivity of a wire?",
+      "back": "ρ = RA/L.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_rp6",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "RP6 EMF/internal resistance",
+      "front": "For a graph of terminal p.d. V against current I, what are the intercept and gradient?",
+      "back": "y-intercept = emf ε and gradient = −r.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_uncert_random",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Measurements",
+      "front": "What is a random measurement error?",
+      "back": "An unpredictable variation causing scatter in repeated measurements.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_uncert_systematic",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Measurements",
+      "front": "What is a systematic error?",
+      "back": "A consistent shift in readings caused by the method or instrument; repeats do not remove it.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_uncert_percent",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Measurements",
+      "front": "How do you calculate percentage uncertainty?",
+      "back": "percentage uncertainty = absolute uncertainty ÷ measured value × 100%",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_uncert_products",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Measurements",
+      "front": "For multiplication or division, how are percentage uncertainties combined?",
+      "back": "Add the percentage uncertainties.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_uncert_power",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Measurements",
+      "front": "If y = xⁿ, what happens to percentage uncertainty?",
+      "back": "Multiply the percentage uncertainty in x by |n|.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_accuracy_precision",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Measurements",
+      "front": "Accuracy vs precision?",
+      "back": "Accuracy is closeness to the true value; precision is closeness of repeated readings to each other.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_specific_charge",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is specific charge?",
+      "back": "charge ÷ mass, Q/m, with unit C kg⁻¹.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_nuclide",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "In nuclide notation, what do A and Z mean?",
+      "back": "A = nucleon number; Z = proton number.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_antiparticle",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "How does an antiparticle compare with its particle?",
+      "back": "Same mass and rest energy, but opposite charge and other additive quantum numbers.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_annihilation",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What happens in particle–antiparticle annihilation?",
+      "back": "Their rest mass/energy is converted to photons while energy and momentum are conserved.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_pair_production",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is needed for pair production?",
+      "back": "A photon with enough energy creates a particle–antiparticle pair, usually near a nucleus to conserve momentum.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_hadrons",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What are hadrons?",
+      "back": "Particles made of quarks that experience the strong interaction.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_baryon_meson",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "How do baryons and mesons differ?",
+      "back": "Baryons contain three quarks; mesons contain a quark and an antiquark.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_proton_quarks",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is the quark composition of a proton?",
+      "back": "uud.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_neutron_quarks",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is the quark composition of a neutron?",
+      "back": "udd.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_pion_plus",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is the quark composition of π⁺?",
+      "back": "u anti-d.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_conservation_particle",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "Which fundamental interaction conserves strangeness?",
+      "back": "The strong interaction.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_photon_energy",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is the energy of a photon?",
+      "back": "E = hf = hc/λ.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_debroglie",
+      "subject": "Physics",
+      "section": "3.2",
+      "topic": "Particles",
+      "front": "What is the de Broglie wavelength equation?",
+      "back": "λ = h/p.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_wave_speed",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Waves",
+      "front": "What equation links wave speed, frequency and wavelength?",
+      "back": "v = fλ.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_period_frequency",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Waves",
+      "front": "How are period and frequency related?",
+      "back": "T = 1/f.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_phase_cycle",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Waves",
+      "front": "What phase difference is one complete cycle?",
+      "back": "360° or 2π radians.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_stationary_nodes",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Stationary waves",
+      "front": "What are nodes and antinodes?",
+      "back": "Nodes have zero amplitude; antinodes have maximum amplitude.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_stationary_spacing",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Stationary waves",
+      "front": "What is the separation of adjacent nodes in a stationary wave?",
+      "back": "λ/2.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_superposition",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Waves",
+      "front": "What is the principle of superposition?",
+      "back": "When waves overlap, resultant displacement is the vector/algebraic sum of the individual displacements.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_double_slit",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Interference",
+      "front": "What is the Young double-slit fringe-spacing equation?",
+      "back": "w = λD/s.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_grating",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Diffraction grating",
+      "front": "What is the diffraction-grating equation?",
+      "back": "d sin θ = nλ.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_refractive_index",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Refraction",
+      "front": "How is refractive index related to wave speed?",
+      "back": "n = c/v.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_snell",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Refraction",
+      "front": "State Snell's law for two media.",
+      "back": "n₁ sin θ₁ = n₂ sin θ₂.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_tir_conditions",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Total internal reflection",
+      "front": "What are the two conditions for total internal reflection?",
+      "back": "Light travels from higher to lower refractive index and the incidence angle exceeds the critical angle.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_diffraction",
+      "subject": "Physics",
+      "section": "3.3",
+      "topic": "Diffraction",
+      "front": "When is diffraction most noticeable?",
+      "back": "When the gap size is comparable with the wavelength.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_current",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "What is electric current?",
+      "back": "I = ΔQ/Δt, rate of flow of charge.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_pd",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "Define potential difference.",
+      "back": "Energy transferred per unit charge: V = W/Q.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_emf",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "Define emf.",
+      "back": "Energy supplied by the source per unit charge.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_resistance",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "What is resistance?",
+      "back": "R = V/I.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_resistivity",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "What equation links resistance and resistivity?",
+      "back": "R = ρL/A.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_series_current",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "What is true of current in a series circuit?",
+      "back": "The current is the same at every point.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_series_pd",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "What happens to p.d. in a series circuit?",
+      "back": "The supply p.d. equals the sum of component p.d.s.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_parallel_pd",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "What is true of p.d. across parallel branches?",
+      "back": "It is the same across each branch.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_parallel_current",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "How does current behave at a junction?",
+      "back": "Total current into a junction equals total current out.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_power_elec",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Electricity",
+      "front": "Give three electrical power equations.",
+      "back": "P = VI = I²R = V²/R.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_potential_divider",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Potential dividers",
+      "front": "For two series resistors, how is output p.d. found?",
+      "back": "Vout = Vin × R₂/(R₁ + R₂), taking R₂ across the output.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_thermistor",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Sensors",
+      "front": "For an NTC thermistor, what happens to resistance as temperature rises?",
+      "back": "Resistance decreases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_ldr",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Sensors",
+      "front": "What happens to an LDR's resistance as light intensity increases?",
+      "back": "Resistance decreases.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_filament_iv",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "I–V characteristics",
+      "front": "Why does a filament lamp's resistance rise at high current?",
+      "back": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_diode",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "I–V characteristics",
+      "front": "How does an idealised diode conduct?",
+      "back": "It conducts strongly in the forward direction after its threshold and very little in reverse.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_prac_uncert",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Practical skills",
+      "front": "Why does increasing the measured interval often reduce percentage uncertainty?",
+      "back": "The absolute uncertainty is similar but becomes a smaller fraction of a larger measured value.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "phy_prac_graph",
+      "subject": "Physics",
+      "section": "3.1",
+      "topic": "Practical skills",
+      "front": "Why use a best-fit line rather than joining points dot-to-dot?",
+      "back": "A best-fit line reveals the overall relationship and reduces the influence of random scatter.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "v33_card_physics_internal_resistance_8",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Internal resistance",
+      "front": "What are 'lost volts' in a cell?",
+      "back": "Potential difference across the cell's internal resistance, equal to Ir.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "v33_card_physics_internal_resistance_9",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "Internal resistance",
+      "front": "What do gradient and intercept represent on a terminal voltage V against current I graph?",
+      "back": "The vertical intercept is emf; gradient is negative internal resistance.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    },
+    {
+      "id": "v33_card_physics_i_v_characteristics_10",
+      "subject": "Physics",
+      "section": "3.5",
+      "topic": "I–V characteristics",
+      "front": "Why does the filament lamp I–V gradient decrease at larger p.d.?",
+      "back": "Current heats the filament, increasing resistance and reducing gradient of I against V.",
+      "scope": "individual card answer review; AQA candidate topic, not complete section certification"
+    }
+  ],
+  "limitations": {
+    "notFullSpecCertification": true,
+    "notCertifiedAllPaperQuestions": true,
+    "notStudentMastery": true,
+    "allOriginalCardIdsUnchanged": true,
+    "originalQuestionBankUnchanged": true
+  }
+}
