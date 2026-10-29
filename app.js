@@ -2475,6 +2475,20 @@ function reviewedExpressionEvidence(answer,expression){
    if(evidence.some(e=>e.rejected)||standaloneFormula)scores[i]=0;
   });
  }
+ // Targeted AQA AS Pure original-proof/collinearity marking: a bare 'n is integer'
+ // is not the odd-number algebraic representation, and k=8 deserves its own mark.
+ if(q.id==='task1_v190_maths_002'){
+  const raw=String(answer||'').replace(/[−–—]/g,'-');
+  scores[0]=/\bn\s*=\s*2\s*\*?\s*[a-z]\s*[+-]\s*1\b/i.test(raw)?1:0;
+ }
+ if(q.id==='task1_v190_maths_003'){
+  const raw=String(answer||'').replace(/[−–—]/g,'-');
+  const kValues=[...raw.matchAll(/\bk\s*=\s*([-+]?\d+(?:\.\d+)?)/gi)].map(m=>Number(m[1]));
+  const rightK=kValues.includes(8)&&kValues.every(k=>k===8);
+  const rightC=/\bc\s*=\s*\(\s*8\s*,\s*20\s*\)/i.test(raw)&&!kValues.some(k=>k!==8);
+  const denied=/\b(?:not|never)\s+k\s*=\s*8\b|\bk\s*=\s*8\b.{0,20}\b(?:wrong|incorrect|false)\b/i.test(raw);
+  scores[3]=(!denied&&(rightK||rightC))?1:0;
+ }
  let preds=scores.map(v=>v>=.5);
  const variants=(q.answerVariants||[]).map(x=>compact(x)).filter(Boolean);
  const exactVerbal=variants.length>0&&variants.includes(compact(answer));
