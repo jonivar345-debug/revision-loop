@@ -30,7 +30,7 @@ assert(app.includes('else if(index===3)'));
 assert(app.includes("knownFlashIds.has(c.id)"));
 assert(sw.includes("'./maths_mock_recall_v192.json'"));
 assert(sw.includes('v192-as-pure-scope-recall'));
-assert(html.includes('app.js?v=198'));
+assert(html.includes('app.js?v=199'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("const cardPool=cards.filter(c=>c.active!==false&&c.subject===sub&&mockEligibleCard(c))"));
 assert(app.includes("flashScopeFilter==='mock'?mockEligibleCard(c)"));
