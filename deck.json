@@ -4685,23 +4685,20 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "What does an acyl chloride form with ammonia?",
-      "back": "A primary amide; HCl is neutralised by excess ammonia.",
-      "concepts": [
-        [
-          "amide"
-        ],
-        [
-          "ammonia"
-        ]
-      ],
+      "front": "What organic product is formed when an acyl chloride reacts with ammonia?",
+      "back": "A primary amide.",
       "active": true,
       "stage": "A2",
       "mock": true,
       "taught": true,
       "courseTopic": "Organic chemistry",
       "visual": "organic-reaction",
-      "revisionTopic": "Acyl chlorides"
+      "revisionTopic": "Acyl chlorides",
+      "accept": [
+        "primary amide",
+        "an amide",
+        "RCONH2"
+      ]
     },
     {
       "id": "chem_lattice_diss",
@@ -4831,13 +4828,12 @@
       "kind": "content",
       "priority": 2,
       "scope": "mock",
-      "front": "What sign of ΔG indicates thermodynamic feasibility under the stated conditions?",
-      "back": "ΔG ≤ 0; negative ΔG is feasible.",
+      "front": "What does a negative ΔG indicate under the stated conditions?",
+      "back": "The forward change is thermodynamically feasible.",
       "accept": [
-        "negative",
-        "less than zero",
-        "<=0",
-        "≤0"
+        "thermodynamically feasible",
+        "forward reaction thermodynamically feasible",
+        "forward change is feasible"
       ],
       "active": true,
       "stage": "A2",
@@ -6103,26 +6099,19 @@
       "kind": "practical",
       "priority": 1,
       "scope": "secondary",
-      "front": "Why are two burette readings involved in one titre?",
-      "back": "The titre is final reading − initial reading, so uncertainty comes from both readings.",
-      "concepts": [
-        [
-          "final"
-        ],
-        [
-          "initial"
-        ],
-        [
-          "subtract",
-          "difference"
-        ]
-      ],
+      "front": "How is the titre calculated from initial and final burette readings?",
+      "back": "Final reading − initial reading.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
       "courseTopic": "Practical skills",
-      "revisionTopic": "Practical skills"
+      "revisionTopic": "Practical skills",
+      "accept": [
+        "final reading minus initial reading",
+        "final - initial",
+        "subtract the initial reading from the final reading"
+      ]
     },
     {
       "id": "phy_a2_circular_acc",
@@ -11553,12 +11542,12 @@
       "active": true,
       "taught": true,
       "unit": "",
-      "front": "Distinguish theoretical yield from percentage yield.",
-      "back": "Theoretical yield is the maximum stoichiometric amount; percentage yield compares actual isolated yield to theoretical.",
+      "front": "What is theoretical yield?",
+      "back": "The maximum amount of product predicted by the balanced equation.",
       "accept": [
-        "Theoretical yield is the maximum stoichiometric amount; percentage yield compares actual isolated yield to theoretical.",
-        "Maximum predicted versus actual divided by theoretical times 100",
-        "Actual over theoretical"
+        "maximum amount of product predicted from stoichiometry",
+        "maximum theoretical amount of product",
+        "maximum calculated yield from balanced equation"
       ]
     },
     {
@@ -11668,12 +11657,12 @@
       "active": true,
       "taught": true,
       "unit": "",
-      "front": "What must hydrogen be bonded to for usual strong intermolecular hydrogen bonding?",
-      "back": "Hydrogen covalently bonded to nitrogen, oxygen or fluorine; lone pairs on nearby electronegative atoms interact.",
+      "front": "Which three elements must hydrogen be directly bonded to for usual strong intermolecular hydrogen bonding?",
+      "back": "Nitrogen, oxygen or fluorine.",
       "accept": [
-        "Hydrogen covalently bonded to nitrogen, oxygen or fluorine; lone pairs on nearby electronegative atoms interact.",
-        "H bonded to N O F",
-        "Hydrogen attached to nitrogen oxygen fluorine"
+        "nitrogen oxygen fluorine",
+        "N O F",
+        "F O N"
       ]
     },
     {

@@ -3,6 +3,7 @@ const fs=require('node:fs');
 const assert=require('node:assert/strict');
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const ledger=JSON.parse(fs.readFileSync('editorial/task1-v145-a2-science-evidence.json','utf8'));
+const expectedCurrent=require('./task1-v154-legacy-evidence.cjs');
 const cards=deck.cards.filter(c=>!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_'));
 const added=cards.filter(c=>c.id.startsWith('task1_v145_'));
 const old=cards.filter(c=>!c.id.startsWith('task1_v145_')&&!c.id.startsWith('task1_v146_')&&!c.id.startsWith('task1_v150_')&&!c.id.startsWith('task1_v152_')&&!c.id.startsWith('task1_v154_')&&!c.id.startsWith('task1_v155_')&&!c.id.startsWith('task1_v156_')&&!c.id.startsWith('task1_v157_')&&!c.id.startsWith('task1_v158_')&&!c.id.startsWith('task1_v159_')&&!c.id.startsWith('task1_v160_'));
@@ -42,7 +43,7 @@ for(const row of ledger.records){
  assert(row.requirement.length>20,'Vague requirement '+row.id);
  if(row.evidence){
   const c=lookup.get(row.evidence.cardId);assert(c,'Evidence ID missing '+row.id);
-  assert.equal(c.subject,row.subject);assert.equal(c.front,row.evidence.front);assert.equal(c.back,row.evidence.back);
+  assert.equal(c.subject,row.subject);assert.equal(c.front,expectedCurrent(row.evidence.cardId,'front',row.evidence.front));assert.equal(c.back,expectedCurrent(row.evidence.cardId,'back',row.evidence.back));
  }else assert.equal(row.status,'exam_question_needed');
 }
 assert.deepEqual(statuses,{answer_checked_narrow_recall:24,new_card_added:27,exam_question_needed:8});
