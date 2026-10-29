@@ -1,0 +1,94 @@
+{
+  "version": "v192",
+  "date": "2026-10-29",
+  "scope": "First school Maths mock = taught Year 1 Pure only; Year 2 functions and applied mathematics excluded",
+  "sourceComparison": {
+    "asSpecification": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/b-algebra-and-functions",
+    "aLevelSpecification": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content/b-algebra-and-functions",
+    "fact": "B8 composite/inverse functions appear in full A-level B section but not AS B section; user's school taught functions in Year 13."
+  },
+  "excludedFromMathsFirstMock": [
+    {
+      "id": "math_function_composite",
+      "reason": "A-level-only B8 composite functions"
+    },
+    {
+      "id": "math_inverse_condition",
+      "reason": "A-level-only B8 inverse functions"
+    },
+    {
+      "id": "task1_v136_063",
+      "reason": "A-level-only B8 domain of inverse"
+    }
+  ],
+  "preserved": "All three cards remain available in full and taught revision; their ids, history, stage, prior marks and cloud state are unchanged.",
+  "addedRecall": [
+    {
+      "id": "task1_v192_maths_001",
+      "front": "For (x−2)/(x+1) > 0, which x-value must always be excluded?",
+      "aqaSection": "3.3"
+    },
+    {
+      "id": "task1_v192_maths_002",
+      "front": "For a rational inequality, which x-values divide the number line into sign-testing intervals?",
+      "aqaSection": "3.3"
+    },
+    {
+      "id": "task1_v192_maths_003",
+      "front": "For the strict inequality x > 3, is x = 3 included?",
+      "aqaSection": "3.3"
+    },
+    {
+      "id": "task1_v192_maths_004",
+      "front": "For y = a/x² with a ≠ 0, which axis is the graph symmetric about?",
+      "aqaSection": "3.3"
+    },
+    {
+      "id": "task1_v192_maths_005",
+      "front": "For y = a/x² with a > 0, what is the sign of y whenever x ≠ 0?",
+      "aqaSection": "3.3"
+    },
+    {
+      "id": "task1_v192_maths_006",
+      "front": "What is the period of tan θ in degrees?",
+      "aqaSection": "3.6"
+    },
+    {
+      "id": "task1_v192_maths_007",
+      "front": "To solve sin(2θ) = k for 0° ≤ θ < 360°, what full interval must 2θ cover?",
+      "aqaSection": "3.6"
+    },
+    {
+      "id": "task1_v192_maths_008",
+      "front": "After solving for every possible value of 2θ, how do you find the corresponding θ values?",
+      "aqaSection": "3.6"
+    },
+    {
+      "id": "task1_v192_maths_009",
+      "front": "For the real logarithm logₐ(x), what must be true about its argument x?",
+      "aqaSection": "3.7"
+    },
+    {
+      "id": "task1_v192_maths_010",
+      "front": "To find total area with the x-axis when a curve crosses it, what must you do with the definite integrals?",
+      "aqaSection": "3.9"
+    }
+  ],
+  "expected": {
+    "coreCards": 3345,
+    "coreMathsMockRaw": 116,
+    "optionalMathsBefore": 24,
+    "optionalMathsAdded": 10,
+    "rawMathsMockPool": 150,
+    "firstMockExclusionCount": 3,
+    "firstMockEligible": 147,
+    "coreExamQuestions": 1268,
+    "mathsMockExamQuestions": 138
+  },
+  "constraints": [
+    "Do not treat a 76-outcome crosswalk as exhaustive proof of coverage.",
+    "Do not alter full-study eligibility, progress, cloud sync, XP or existing question IDs.",
+    "The older 2015–2026 paper archive remains incompletely indexed.",
+    "First mock needs a separate complete lesson-by-lesson school scope audit."
+  ]
+}
