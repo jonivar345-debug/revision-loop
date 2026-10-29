@@ -16039,8 +16039,14 @@
       "id": "phy_pandr_v29_kef_gradient",
       "topic": "Photoelectric effect",
       "revisionTopic": "Photoelectric effect",
-      "front": "For Eₖ(max) against frequency, what are gradient and intercept?",
-      "back": "Gradient = h; extrapolated vertical intercept = −φ; horizontal intercept = f₀."
+      "front": "What is the gradient of a graph of maximum photoelectron KE against frequency?",
+      "back": "Planck constant, h.",
+      "accept": [
+        "Planck constant, h.",
+        "h",
+        "Planck's constant",
+        "Planck constant"
+      ]
     },
     {
       "subject": "Physics",
@@ -16279,9 +16285,16 @@
       "id": "phy_pandr_v29_sketch_beta_minus",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Draw a quark-level beta-minus interaction diagram.",
-      "back": "d → u + W⁻; W⁻ → e⁻ + electron antineutrino.",
-      "visualBack": "particle-beta-minus"
+      "front": "Which W boson is emitted when a d quark changes to u in beta-minus decay?",
+      "back": "W⁻.",
+      "visualBack": "particle-beta-minus",
+      "accept": [
+        "W⁻.",
+        "W-",
+        "W minus",
+        "W⁻"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Physics",
@@ -16296,9 +16309,16 @@
       "id": "phy_pandr_v29_sketch_beta_plus",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Draw a quark-level beta-plus interaction diagram.",
-      "back": "u → d + W⁺; W⁺ → e⁺ + electron neutrino.",
-      "visualBack": "particle-beta-plus"
+      "front": "Which W boson is emitted when a u quark changes to d in beta-plus decay?",
+      "back": "W⁺.",
+      "visualBack": "particle-beta-plus",
+      "accept": [
+        "W⁺.",
+        "W+",
+        "W plus",
+        "W⁺"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Physics",
@@ -16313,9 +16333,17 @@
       "id": "phy_pandr_v29_sketch_capture",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Draw the electron-capture weak interaction at quark level.",
-      "back": "e⁻ + u → νₑ + d, with W⁻ exchanged between lepton and quark.",
-      "visualBack": "particle-electron-capture"
+      "front": "Which lepton is produced when an electron is captured by a proton?",
+      "back": "An electron neutrino.",
+      "visualBack": "particle-electron-capture",
+      "accept": [
+        "An electron neutrino.",
+        "electron neutrino",
+        "nu_e",
+        "νe",
+        "νₑ"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Physics",
@@ -16330,9 +16358,15 @@
       "id": "phy_pandr_v29_sketch_em",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Sketch an electromagnetic exchange-particle diagram.",
-      "back": "Two charged particles interact by exchanging a virtual photon (γ).",
-      "visualBack": "particle-virtual-photon"
+      "front": "Which exchange particle mediates electromagnetic interactions?",
+      "back": "A virtual photon.",
+      "visualBack": "particle-virtual-photon",
+      "accept": [
+        "A virtual photon.",
+        "virtual photon",
+        "photon",
+        "gamma photon"
+      ]
     },
     {
       "subject": "Physics",
@@ -16347,9 +16381,15 @@
       "id": "phy_pandr_v29_sketch_pion",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Sketch pion exchange between nucleons.",
-      "back": "p → n + π⁺; n + π⁺ → p (virtual pion exchange).",
-      "visualBack": "particle-pion-exchange"
+      "front": "What exchange particle mediates the residual strong force between nucleons?",
+      "back": "A virtual pion.",
+      "visualBack": "particle-pion-exchange",
+      "accept": [
+        "A virtual pion.",
+        "pion",
+        "virtual pion",
+        "pi meson"
+      ]
     },
     {
       "subject": "Physics",
@@ -16364,9 +16404,17 @@
       "id": "phy_pandr_v29_sketch_annihilation",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Sketch electron–positron annihilation at negligible initial KE.",
-      "back": "e⁻ + e⁺ → 2γ; equal photon energies, opposite momenta.",
-      "visualBack": "particle-annihilation"
+      "front": "How many photons result from electron–positron annihilation at rest?",
+      "back": "Two photons.",
+      "visualBack": "particle-annihilation",
+      "accept": [
+        "Two photons.",
+        "2",
+        "two",
+        "two gamma photons",
+        "2 photons"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Physics",
@@ -16381,9 +16429,16 @@
       "id": "phy_pandr_v29_sketch_pair",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Sketch electron–positron pair production near a nucleus.",
-      "back": "Energetic γ → e⁻ + e⁺ near a nucleus; at least ~1.022 MeV.",
-      "visualBack": "particle-pair-production"
+      "front": "What is the threshold photon energy for electron–positron pair production?",
+      "back": "About 1.022 MeV.",
+      "visualBack": "particle-pair-production",
+      "accept": [
+        "About 1.022 MeV.",
+        "1.022 MeV",
+        "1.02 MeV",
+        "1.022 mega electron volts"
+      ],
+      "strictRecall": true
     },
     {
       "subject": "Physics",
@@ -16398,9 +16453,15 @@
       "id": "phy_pandr_v29_sketch_photoelectric",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Sketch how the photoelectric effect emits an electron.",
-      "back": "One photon of energy hf transfers energy to one electron; hf ≥ φ.",
-      "visualBack": "photoelectric"
+      "front": "How much energy does one photon transfer to one electron in the photoelectric effect?",
+      "back": "hf.",
+      "visualBack": "photoelectric",
+      "accept": [
+        "hf.",
+        "hf",
+        "E=hf",
+        "Planck constant times frequency"
+      ]
     },
     {
       "subject": "Physics",
@@ -16415,9 +16476,15 @@
       "id": "phy_pandr_v29_sketch_energy_levels",
       "topic": "Line spectra",
       "revisionTopic": "Line spectra",
-      "front": "Sketch excitation and photon emission between atomic levels.",
-      "back": "Excitation moves an electron up; de-excitation emits photon hf = ΔE.",
-      "visualBack": "energy-levels"
+      "front": "What occurs when an electron falls between atomic energy levels?",
+      "back": "A photon is emitted with energy equal to the level difference.",
+      "visualBack": "energy-levels",
+      "accept": [
+        "A photon is emitted with energy equal to the level difference.",
+        "photon emitted with energy equal to gap",
+        "emits a photon of energy ΔE",
+        "a photon carries the energy difference"
+      ]
     },
     {
       "subject": "Physics",
@@ -16432,9 +16499,15 @@
       "id": "phy_pandr_v29_sketch_electron_diffraction",
       "topic": "Particle diagrams",
       "revisionTopic": "Particle diagrams",
-      "front": "Sketch an electron-diffraction tube result.",
-      "back": "Electrons diffract through a crystal; concentric rings show wave behaviour.",
-      "visualBack": "particle-diffraction"
+      "front": "What pattern demonstrates diffraction of electrons by a thin crystal?",
+      "back": "Concentric diffraction rings.",
+      "visualBack": "particle-diffraction",
+      "accept": [
+        "Concentric diffraction rings.",
+        "diffraction rings",
+        "concentric rings",
+        "ring pattern"
+      ]
     },
     {
       "subject": "Physics",
@@ -16449,9 +16522,15 @@
       "id": "phy_pandr_v29_sketch_emission_lines",
       "topic": "Line spectra",
       "revisionTopic": "Line spectra",
-      "front": "Sketch and explain an atomic emission-line spectrum.",
-      "back": "Discrete bright lines arise from particular energy-level transitions.",
-      "visualBack": "particle-lines"
+      "front": "What causes bright lines in an atomic emission spectrum?",
+      "back": "Electrons falling between discrete energy levels emit photons of specific energies.",
+      "visualBack": "particle-lines",
+      "accept": [
+        "Electrons falling between discrete energy levels emit photons of specific energies.",
+        "electrons fall between levels releasing fixed energy photons",
+        "transitions between discrete energy levels",
+        "electron de-excitation emits specific energy photons"
+      ]
     },
     {
       "subject": "Physics",
@@ -20438,13 +20517,18 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "Why are chromium and copper electron configurations exceptional?",
-      "back": "Cr is [Ar]3d⁵4s¹; Cu is [Ar]3d¹⁰4s¹.",
+      "front": "What are the exceptional electron configurations of chromium and copper?",
+      "back": "Cr: [Ar]3d⁵4s¹; Cu: [Ar]3d¹⁰4s¹.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Cr: [Ar]3d⁵4s¹; Cu: [Ar]3d¹⁰4s¹.",
+        "Cr 3d5 4s1 Cu 3d10 4s1",
+        "chromium [Ar]3d5 4s1 copper [Ar]3d10 4s1"
+      ]
     },
     {
       "id": "chem_atomic_v43_49",
@@ -20586,12 +20670,18 @@
       "kind": "content",
       "priority": 7,
       "scope": "mock",
-      "front": "What does CH₂O and Mr 180 give as molecular formula?",
-      "back": "Empirical Mr=30; factor 180/30=6; molecular formula C₆H₁₂O₆.",
+      "front": "With empirical formula CH₂O and molecular Mr 180, what is the molecular formula?",
+      "back": "C₆H₁₂O₆.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "C₆H₁₂O₆.",
+        "C6H12O6",
+        "C₆H₁₂O₆"
+      ],
+      "strictRecall": true
     },
     {
       "id": "chem_amount_v44_07",
@@ -20602,12 +20692,18 @@
       "kind": "content",
       "priority": 8,
       "scope": "mock",
-      "front": "State the ideal gas equation and what its symbols mean.",
-      "back": "pV=nRT: pressure, gas volume, moles, gas constant, kelvin temperature.",
+      "front": "State the ideal-gas equation.",
+      "back": "pV = nRT.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "pV = nRT.",
+        "pV=nRT",
+        "PV=nRT",
+        "pressure x volume = moles x R x temperature"
+      ]
     },
     {
       "id": "chem_amount_v44_08",
@@ -20618,12 +20714,19 @@
       "kind": "content",
       "priority": 8,
       "scope": "mock",
-      "front": "What three unit conversions are important for pV=nRT?",
-      "back": "kPa×1000=Pa; dm³÷1000=m³; cm³÷10⁶=m³.",
+      "front": "How many cubic metres are in 1 cm³?",
+      "back": "1 × 10⁻⁶ m³.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "1 × 10⁻⁶ m³.",
+        "1e-6 m3",
+        "10^-6 m^3",
+        "0.000001 m3",
+        "one millionth of a cubic metre"
+      ]
     },
     {
       "id": "chem_amount_v44_09",
@@ -20778,12 +20881,18 @@
       "kind": "content",
       "priority": 8,
       "scope": "mock",
-      "front": "What is the formula for percentage atom economy?",
-      "back": "100×mass of desired product per equation/sum of reactant formula masses.",
+      "front": "How is percentage atom economy calculated from a balanced equation?",
+      "back": "100 × (coefficient × Mr of desired product) ÷ sum of (coefficient × Mr) for all products.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "100 × (coefficient × Mr of desired product) ÷ sum of (coefficient × Mr) for all products.",
+        "Mr of desired product / total Mr products x 100 accounting for coefficients",
+        "desired product stoichiometric Mr divided by total product stoichiometric Mr times 100",
+        "mass of desired product over total mass of all products times 100"
+      ]
     },
     {
       "id": "chem_amount_v44_19",
@@ -21274,13 +21383,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "What is the correct electron configuration of Cr?",
-      "back": "[Ar]3d⁵4s¹, not [Ar]3d⁴4s².",
+      "front": "Write chromium's ground-state electron configuration.",
+      "back": "[Ar]3d⁵4s¹.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "[Ar]3d⁵4s¹.",
+        "[Ar]3d5 4s1",
+        "3d5 4s1",
+        "[Ar]3d⁵4s¹"
+      ],
+      "strictRecall": true
     },
     {
       "id": "chem_config_weak_v45_02",
@@ -21291,13 +21407,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "What is the correct electron configuration of Cu?",
-      "back": "[Ar]3d¹⁰4s¹, not [Ar]3d⁹4s².",
+      "front": "Write copper's ground-state electron configuration.",
+      "back": "[Ar]3d¹⁰4s¹.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "[Ar]3d¹⁰4s¹.",
+        "[Ar]3d10 4s1",
+        "3d10 4s1",
+        "[Ar]3d¹⁰4s¹"
+      ],
+      "strictRecall": true
     },
     {
       "id": "chem_config_weak_v45_03",
@@ -21342,13 +21465,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "Which exception has a half-filled d subshell: Cr or Cu?",
-      "back": "Cr: [Ar]3d⁵4s¹. Cu has a full 3d¹⁰ subshell.",
+      "front": "Which element has a half-filled 3d subshell: Cr or Cu?",
+      "back": "Chromium (Cr).",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Chromium (Cr).",
+        "Cr",
+        "chromium",
+        "Cr has a half-filled 3d subshell"
+      ],
+      "strictRecall": true
     },
     {
       "id": "chem_config_weak_v45_06",
@@ -21444,13 +21574,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "What is the full chain explaining rising first IE across Period 3?",
-      "back": "More nuclear protons; similar shielding; stronger attraction to outer electrons; more energy to remove one.",
+      "front": "How does shielding change across Period 3, helping first ionisation energy rise?",
+      "back": "It remains approximately the same.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "It remains approximately the same.",
+        "about the same",
+        "similar shielding",
+        "little change in shielding",
+        "roughly constant"
+      ]
     },
     {
       "id": "chem_ie_focus_v46_02",
@@ -21835,12 +21972,18 @@
       "kind": "content",
       "priority": 7,
       "scope": "mock",
-      "front": "Which six crystal examples does AQA explicitly name?",
-      "back": "NaCl, Mg, diamond, graphite, ice and iodine.",
+      "front": "Give one AQA example of a giant covalent crystal.",
+      "back": "Diamond (or graphite).",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Diamond (or graphite).",
+        "diamond",
+        "graphite",
+        "diamond (or graphite)"
+      ]
     },
     {
       "id": "chem_bonding_v47_23",
