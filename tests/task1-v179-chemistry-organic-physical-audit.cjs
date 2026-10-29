@@ -20,7 +20,7 @@ for(const r of audit.reviewed){
  assert(legacy.has(r.id)&&!prior.has(r.id),'Wrong legacy review candidate '+r.id);
  assert(c.active!==false&&c.mock===true&&c.subject==='Chemistry','Lost school mock '+r.id);
  assert.equal(c.front,r.front);assert.equal(c.back,r.back);
- assert(/^(3\\.[123](?:\\.|$)|7\\.2$)/.test(r.aqaSection),'Bad AQA reference '+r.id);
+ assert(/^(3\.[123](?:\.|$)|7\.2$)/.test(r.aqaSection),'Bad AQA reference '+r.id);
 }
 for(const row of audit.corrections){
  const c=byId.get(row.id);assert(c&&c.mock===true);
