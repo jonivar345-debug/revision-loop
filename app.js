@@ -1223,7 +1223,33 @@ function formulaScore(input,expected){
  if(a.replace(/=/g,'')===b.replace(/=/g,''))return .95;
  return phraseScore(input,expected);
 }
+// AQA RP4: test each ion-colour association, not the presence of six unordered words.
+// A swapped colour must never be credited as a fully correct halide identification.
+function evaluateHalideColours(input){
+ const raw=String(input||'').trim();
+ if(!raw)return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
+ const labels=normalise(raw).match(/\b(?:agcl|agbr|agi|chloride|bromide|iodide|white|cream|yellow)\b/g)||[];
+ const ions={agcl:'chloride',chloride:'chloride',agbr:'bromide',bromide:'bromide',agi:'iodide',iodide:'iodide'};
+ const colours={chloride:'white',bromide:'cream',iodide:'yellow'};
+ const correct=new Set();let invalid=0;
+ for(let i=0;i+1<labels.length;i+=2){
+   const left=labels[i],right=labels[i+1];
+   const ion=ions[left]&&!ions[right]?ions[left]:(ions[right]&&!ions[left]?ions[right]:null);
+   const colour=colours[ion];
+   const observed=ion?(ions[left]?right:left):null;
+   if(ion&&observed===colour&&!correct.has(ion))correct.add(ion);
+   else invalid++;
+ }
+ if(labels.length%2||labels.length>6)invalid++;
+ const hit=correct.size;
+ const score=hit/3;
+ const missing=Object.keys(colours).filter(ion=>!correct.has(ion)).map(ion=>ion+' → '+colours[ion]);
+ if(hit===3&&invalid===0)return {status:'correct',score:1,text:'All three halide precipitate colours are paired correctly.',missing:[]};
+ if(hit>=2)return {status:'partial',score,text:'Some pairs are right, but check every ion–colour association.',missing};
+ return {status:'wrong',score,text:'The halide and precipitate colours must match, not merely be listed.',missing};
+}
 function evaluateCard(c,input){
+ if(c.id==='chem_rp4')return evaluateHalideColours(input);
   // Context-specific threshold-frequency marking, including the difference
   // between zero measured KE and no emitted photoelectrons.
   if(c.id===window.RevisionPhotoelectricCardMarking?.TARGET_ID)
