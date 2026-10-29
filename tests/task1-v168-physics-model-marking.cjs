@@ -10,7 +10,7 @@ assert(start>=0&&middle>start&&b>middle&&e>b);
 const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+
  app.slice(start,middle)+app.slice(b,e)+'return examSuggested')();
 assert.equal(bank.questions.length,1268);
-assert.equal(bank.bankVersion,69);
+assert(bank.bankVersion>=69,'Newer Maths-scope correction must not invalidate Physics audit');
 const ids=['orig_v25_physics_free_body_diagrams_1','orig_v25_physics_free_body_diagrams_4',
  'orig_v25_physics_gas_laws_2','orig_v25_physics_electric_fields_2'];
 assert.deepEqual(ledger.questionIds,ids);
