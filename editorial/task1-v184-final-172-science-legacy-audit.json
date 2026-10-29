@@ -1,0 +1,1904 @@
+{
+  "version": "v184",
+  "reviewedAt": "2026-10-29",
+  "task1Complete": false,
+  "goal": "Close the remaining historical science mock-card answer-level audit with 106 AS Chemistry energetics and 66 AS Physics cards. Prioritise single-fact recall, AQA definitions, experimental understanding and removal of misleading prompts.",
+  "officialAqaSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation"
+  ],
+  "baseline": {
+    "originalScienceLegacy": 971,
+    "previouslyReviewed": 799,
+    "reviewedNow": 172,
+    "reviewedTotal": 971,
+    "chemistryHere": 106,
+    "physicsHere": 66,
+    "legacyRemaining": 0,
+    "cards": 3345,
+    "active": 3341,
+    "mock": 2379,
+    "originalPracticeQuestions": 1268
+  },
+  "corrections": [
+    {
+      "id": "chem_energetics_v49_08",
+      "previousFront": "What pressure counts as standard pressure for AQA ΔH°?",
+      "previousBack": "100 kPa; temperature must be stated, often 298 K.",
+      "newFront": "What pressure counts as standard pressure for AQA ΔH°?",
+      "newBack": "100 kPa.",
+      "why": "Remove temperature from a flashcard asking only for standard pressure; a separate card tests temperature.",
+      "acceptedVariants": [
+        "100 kPa.",
+        "100 kPa",
+        "100 kilopascals",
+        "100000 Pa"
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_36",
+      "previousFront": "What are possible uncertainties in simple calorimetry?",
+      "previousBack": "Temperature resolution, mass/volume accuracy and imperfect insulation.",
+      "newFront": "Name one measurement uncertainty in calorimetry.",
+      "newBack": "Temperature measurement.",
+      "why": "Ask for one valid measurement uncertainty instead of a multi-item list.",
+      "acceptedVariants": [
+        "Temperature measurement.",
+        "thermometer resolution",
+        "uncertainty in temperature reading",
+        "temperature",
+        "mass measurement",
+        "volume measurement",
+        "uncertainty in mass",
+        "uncertainty in volume"
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_45",
+      "previousFront": "In a formation cycle, what is the common lower pathway?",
+      "previousBack": "Both reactants and products can be related to the same constituent elements.",
+      "newFront": "What common starting point is used in a formation-enthalpy Hess cycle?",
+      "newBack": "The constituent elements in their standard states.",
+      "why": "Avoid implying that the elements must be drawn below the reaction in every cycle.",
+      "acceptedVariants": [
+        "The constituent elements in their standard states.",
+        "elements in standard states",
+        "the elements in their standard states",
+        "constituent elements in standard states"
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_48",
+      "previousFront": "What cycle relation holds if X→solution is ΔH1 and hydrate→solution is ΔH2?",
+      "previousBack": "X→hydrate ΔH=ΔH1−ΔH2, with all states/amounts matching.",
+      "newFront": "If anhydrous salt → solution has ΔH₁ and hydrated salt → solution has ΔH₂, what is ΔH for anhydrous → hydrated salt?",
+      "newBack": "ΔH₁ − ΔH₂ (for matching amounts and states).",
+      "why": "Identify both salt states explicitly and keep the Hess relationship short.",
+      "acceptedVariants": [
+        "ΔH₁ − ΔH₂ (for matching amounts and states).",
+        "ΔH1 - ΔH2",
+        "ΔH₁ − ΔH₂",
+        "ΔH1 minus ΔH2"
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_50",
+      "previousFront": "Define mean bond enthalpy.",
+      "previousBack": "Average enthalpy to break 1 mol of a stated covalent bond in gaseous molecules.",
+      "newFront": "Define mean bond enthalpy.",
+      "newBack": "Average enthalpy change to break one mole of a specified covalent bond in gaseous molecules.",
+      "why": "Preserve the gas-phase and per-mole conditions in the AQA definition.",
+      "acceptedVariants": [
+        "Average enthalpy change to break one mole of a specified covalent bond in gaseous molecules.",
+        "average enthalpy needed to break one mole of a specified bond in gaseous molecules",
+        "average energy to break one mole of a covalent bond in gaseous molecules"
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_61",
+      "previousFront": "Give examples of AQA RP2 reaction types.",
+      "previousBack": "Dissolving salts, neutralisation, displacement and combustion calorimetry.",
+      "newFront": "Name one reaction type that could be used for AQA Required Practical 2.",
+      "newBack": "Neutralisation.",
+      "why": "Allow several AQA-approved RP2 examples as separate valid one-step answers.",
+      "acceptedVariants": [
+        "Neutralisation.",
+        "neutralisation",
+        "neutralization",
+        "dissolving a salt",
+        "dissolution of a salt",
+        "salt dissolution",
+        "displacement",
+        "combustion of an alcohol",
+        "alcohol combustion",
+        "combustion"
+      ]
+    },
+    {
+      "id": "chem_energetics_v51_05",
+      "previousFront": "Why are tabulated H–Cl bond enthalpies approximate for H₂+Cl₂→2HCl?",
+      "previousBack": "Tabulated values can be rounded; diatomic HCl has one fixed bond environment.",
+      "newFront": "Why is the H–Cl bond enthalpy not averaged across different molecular environments?",
+      "newBack": "HCl is diatomic, with only one H–Cl bond environment.",
+      "why": "Distinguish a particular diatomic bond dissociation from a mean over many molecules.",
+      "acceptedVariants": [
+        "HCl is diatomic, with only one H–Cl bond environment.",
+        "diatomic molecule has only one bond environment",
+        "HCl has only one H-Cl bond environment",
+        "HCl is a diatomic molecule"
+      ]
+    },
+    {
+      "id": "chem_energetics_v53_03",
+      "previousFront": "What does 'standard state' mean in enthalpy definitions?",
+      "previousBack": "The most stable physical form of a substance at the specified conditions.",
+      "newFront": "What is the standard state of a substance?",
+      "newBack": "Its physical state at standard pressure (100 kPa) and the stated temperature.",
+      "why": "Avoid presenting most stable allotrope as a complete universal definition for substances.",
+      "acceptedVariants": [
+        "Its physical state at standard pressure (100 kPa) and the stated temperature.",
+        "its physical state at 100 kPa and a stated temperature",
+        "physical state at standard pressure and stated temperature"
+      ]
+    },
+    {
+      "id": "chem_energetics_v53_35",
+      "previousFront": "What practical details matter beyond Paper 3?",
+      "previousBack": "Apparatus, temperature change, controls, uncertainties, errors and improvements.",
+      "newFront": "Why record temperature against time in an RP2 calorimetry experiment?",
+      "newBack": "To extrapolate and estimate a corrected temperature change.",
+      "why": "Replace broad examination advice with a specific practical recall point.",
+      "acceptedVariants": [
+        "To extrapolate and estimate a corrected temperature change.",
+        "to estimate the corrected temperature change",
+        "to correct for heat exchange with the surroundings by extrapolation",
+        "to extrapolate temperature to the mixing time"
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_gap_wavelength",
+      "previousFront": "How do you find photon wavelength from two energy levels given in eV?",
+      "previousBack": "Find the positive energy gap, convert to J, then use λ = hc/ΔE.",
+      "newFront": "Which equation gives photon wavelength from an energy-level gap ΔE in joules?",
+      "newBack": "λ = hc/ΔE.",
+      "why": "Move the multi-step eV-to-joules calculation to exam-question practice.",
+      "acceptedVariants": [
+        "λ = hc/ΔE.",
+        "lambda = hc / delta E",
+        "λ = hc / ΔE",
+        "wavelength equals hc divided by energy change"
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_tube_sequence",
+      "previousFront": "Give the energy-transfer sequence in a fluorescent tube.",
+      "previousBack": "Electrical energy → fast electrons → excited mercury → UV → phosphor → visible light.",
+      "newFront": "What does the phosphor coating do in a fluorescent tube?",
+      "newBack": "Absorbs ultraviolet radiation and emits visible light.",
+      "why": "Focus on one function rather than a six-stage energy-transfer chain.",
+      "acceptedVariants": [
+        "Absorbs ultraviolet radiation and emits visible light.",
+        "absorbs UV and emits visible light",
+        "converts ultraviolet into visible light",
+        "UV photons excite phosphor which emits visible light"
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_below_threshold_graph",
+      "previousFront": "On a photoelectric-effect graph of maximum photoelectron kinetic energy against light frequency, what happens below the threshold frequency?",
+      "previousBack": "No photoelectrons are emitted because each photon has less energy than the metal's work function. No maximum kinetic energy is measured below threshold; extending the straight line into negative energy is only mathematical, not physical.",
+      "newFront": "Why is maximum photoelectron kinetic energy undefined below the threshold frequency?",
+      "newBack": "No photoelectrons are emitted.",
+      "why": "Prevent a misleading negative kinetic energy from a graph extrapolation, in a short answer.",
+      "acceptedVariants": [
+        "No photoelectrons are emitted.",
+        "no electrons emitted below threshold frequency",
+        "there is no photoelectric emission",
+        "photons do not have enough energy to release electrons"
+      ]
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9a",
+      "previousFront": "Electron diffraction [2 marks]: How does it support wave–particle duality?",
+      "previousBack": "Electrons have mass and charge (particle properties), but produce a diffraction pattern through a thin crystal (wave behaviour).",
+      "newFront": "What wave behaviour do electrons show when passing through a thin crystal?",
+      "newBack": "Diffraction.",
+      "why": "Replace a two-mark exam prompt with a single recall fact.",
+      "acceptedVariants": [
+        "Diffraction.",
+        "diffraction",
+        "they diffract",
+        "diffraction rings",
+        "a diffraction ring pattern"
+      ]
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9c",
+      "previousFront": "Electron diffraction [1 mark]: Why can p = mv fail for very fast electrons?",
+      "previousBack": "At speeds approaching the speed of light, relativistic effects become significant, so the non-relativistic formula p = mv is inaccurate.",
+      "newFront": "Which equation links an electron's de Broglie wavelength λ with its momentum p?",
+      "newBack": "λ = h/p.",
+      "why": "Replace an out-of-scope relativistic caution with the AQA wave-particle formula.",
+      "acceptedVariants": [
+        "λ = h/p.",
+        "λ = h/p",
+        "lambda = h / p",
+        "de broglie wavelength equals Planck constant divided by momentum"
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_17",
+      "previousFront": "A ball leaves horizontally at 7.0 m s⁻¹ from 20 m high. With g=10 m s⁻², find the range.",
+      "previousBack": "Vertical fall: 20=½×10×t² ⇒ t=2.0 s. Horizontal range = 7.0×2.0 = 14 m.",
+      "newFront": "For a horizontal launch from height h, which equation gives the time to fall if air resistance is negligible?",
+      "newBack": "t = √(2h/g).",
+      "why": "Turn a two-step numerical problem into formula retrieval.",
+      "acceptedVariants": [
+        "t = √(2h/g).",
+        "t = sqrt(2h/g)",
+        "t = √(2h/g)",
+        "h = 1/2 gt^2"
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_18",
+      "previousFront": "A 2 kg trolley at +3 m s⁻¹ sticks to a 1 kg trolley at −2 m s⁻¹. Final velocity?",
+      "previousBack": "Momentum before = 2×3 + 1×(−2) = +4 kg m s⁻¹; v = 4/3 ≈ +1.33 m s⁻¹.",
+      "newFront": "What gives the final common velocity of two trolleys that stick together, if initial total momentum is p and their combined mass is M?",
+      "newBack": "v = p/M.",
+      "why": "Move the collision arithmetic to exam questions and keep a one-step conservation relationship.",
+      "acceptedVariants": [
+        "v = p/M.",
+        "v = p/M",
+        "final velocity equals total momentum over total mass",
+        "momentum divided by combined mass"
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_19",
+      "previousFront": "A triangular force–time pulse lasts 0.20 s and peaks at 800 N. Find impulse.",
+      "previousBack": "Impulse = area = ½×0.20×800 = 80 N s, equal to the momentum change.",
+      "newFront": "How do you find impulse from a force–time graph?",
+      "newBack": "The area under the graph.",
+      "why": "Emphasise the graphical rule rather than a full worked triangular-pulse calculation.",
+      "acceptedVariants": [
+        "The area under the graph.",
+        "area under force-time graph",
+        "area between force-time curve and time axis",
+        "area under the force–time graph"
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_23",
+      "previousFront": "An object falls 5.0 m from rest without energy losses. For g=10 m s⁻², find its speed.",
+      "previousBack": "mgh = ½mv²; v = √(2gh) = √100 = 10 m s⁻¹.",
+      "newFront": "For a fall from rest through height h with negligible drag, what equation gives the final speed?",
+      "newBack": "v = √(2gh).",
+      "why": "Keep energy application to a single relevant relation.",
+      "acceptedVariants": [
+        "v = √(2gh).",
+        "v = sqrt(2gh)",
+        "v^2 = 2gh",
+        "v = √(2gh)"
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_28",
+      "previousFront": "A wire has force 200 N and cross-sectional area 2.0 mm². Find tensile stress.",
+      "previousBack": "A = 2.0×10⁻⁶ m²; stress = 200/(2.0×10⁻⁶) = 1.0×10⁸ Pa.",
+      "newFront": "How do you convert an area in mm² to m²?",
+      "newBack": "Multiply by 10⁻⁶.",
+      "why": "Target a common unit-conversion error rather than two-step stress arithmetic.",
+      "acceptedVariants": [
+        "Multiply by 10⁻⁶.",
+        "multiply by 10^-6",
+        "divide by a million",
+        "1 mm² = 10⁻⁶ m²"
+      ]
+    },
+    {
+      "id": "phy_focus_v38_02",
+      "previousFront": "A projectile is fired upwards at 12 m s⁻¹ horizontally and 16 m s⁻¹ vertically. At the top, what are speed and acceleration?",
+      "previousBack": "Speed = 12 m s⁻¹ horizontally; acceleration = 9.81 m s⁻² downwards. Vertical velocity alone is zero.",
+      "newFront": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+      "newBack": "12 m s⁻¹.",
+      "why": "Ask for one quantity; vertical acceleration and velocity are covered by separate flashcards.",
+      "acceptedVariants": [
+        "12 m s⁻¹.",
+        "12 m/s",
+        "12 ms^-1",
+        "12 m s⁻¹"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_09",
+      "previousFront": "Why may an object move at constant speed with multiple forces acting?",
+      "previousBack": "For constant straight-line velocity, the vector sum of all external forces is zero.",
+      "newFront": "Why can an object move at constant velocity with multiple external forces acting?",
+      "newBack": "The resultant external force is zero.",
+      "why": "Correct the important distinction between constant speed and constant velocity.",
+      "acceptedVariants": [
+        "The resultant external force is zero.",
+        "the net external force is zero",
+        "all external forces balance",
+        "resultant force = 0",
+        "vector sum of forces is zero"
+      ]
+    },
+    {
+      "id": "phy_graph_v118_03",
+      "previousFront": "On a velocity–time graph, what does an area below the axis mean?",
+      "previousBack": "Negative displacement; add its magnitude when calculating total distance.",
+      "newFront": "What does the signed area below the axis of a velocity–time graph represent?",
+      "newBack": "Negative displacement.",
+      "why": "Separate signed displacement from the different distance-calculation card.",
+      "acceptedVariants": [
+        "Negative displacement.",
+        "negative displacement",
+        "displacement in the negative direction",
+        "a negative change in position"
+      ]
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "phy_spectra_photo_v32_matching_lines",
+      "subject": "Physics",
+      "topic": "Line spectra",
+      "aqaCandidate": "3.2",
+      "front": "Why can an element's absorption and emission lines have matching wavelengths?",
+      "back": "The same energy gaps are involved in upward and downward electron transitions.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_element_fingerprint",
+      "subject": "Physics",
+      "topic": "Line spectra",
+      "aqaCandidate": "3.2",
+      "front": "Why does each element have a characteristic line spectrum?",
+      "back": "Its unique set of electron energy levels gives characteristic photon wavelengths.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_negative_levels",
+      "subject": "Physics",
+      "topic": "Line spectra",
+      "aqaCandidate": "3.2",
+      "front": "What does 0 eV mean on an atomic energy-level diagram?",
+      "back": "The ionisation limit: the electron is free. Bound levels have negative energies.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_gap_wavelength",
+      "subject": "Physics",
+      "topic": "Line spectra",
+      "aqaCandidate": "3.2",
+      "front": "Which equation gives photon wavelength from an energy-level gap ΔE in joules?",
+      "back": "λ = hc/ΔE.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_accelerate_electrons",
+      "subject": "Physics",
+      "topic": "Fluorescent tubes",
+      "aqaCandidate": "3.2",
+      "front": "What accelerates electrons through the vapour in a fluorescent tube?",
+      "back": "The potential difference across the tube creates an electric field.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_collision_excitation",
+      "subject": "Physics",
+      "topic": "Fluorescent tubes",
+      "aqaCandidate": "3.2",
+      "front": "How do fast electrons excite mercury atoms in a fluorescent tube?",
+      "back": "They collide with atoms, transferring energy to electrons bound within the atoms.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_uv_origin",
+      "subject": "Physics",
+      "topic": "Fluorescent tubes",
+      "aqaCandidate": "3.2",
+      "front": "Why does mercury vapour emit ultraviolet photons in a fluorescent tube?",
+      "back": "Excited mercury atoms de-excite, releasing photons of ultraviolet energy.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_tube_sequence",
+      "subject": "Physics",
+      "topic": "Fluorescent tubes",
+      "aqaCandidate": "3.2",
+      "front": "What does the phosphor coating do in a fluorescent tube?",
+      "back": "Absorbs ultraviolet radiation and emits visible light.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_classical_failure",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "aqaCandidate": "3.2",
+      "front": "Why does the photoelectric effect contradict the simple classical wave model?",
+      "back": "Emission has a threshold frequency and no significant delay above it, even at low intensity.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_ke_range",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "aqaCandidate": "3.2",
+      "front": "Why do photoelectrons have a range of kinetic energies?",
+      "back": "Electrons can lose varying energy inside the metal before escaping; Eₖ(max) is the upper limit.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_intensity_stopping",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "aqaCandidate": "3.2",
+      "front": "What happens to stopping potential if light intensity doubles at fixed frequency?",
+      "back": "It stays unchanged: photon energy and maximum photoelectron kinetic energy do not change.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_below_threshold_graph",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "aqaCandidate": "3.2",
+      "front": "Why is maximum photoelectron kinetic energy undefined below the threshold frequency?",
+      "back": "No photoelectrons are emitted.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_spectra_photo_v32_max_speed",
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "aqaCandidate": "3.2",
+      "front": "How do you calculate the maximum speed of emitted photoelectrons?",
+      "back": "Find Eₖ(max) = hf − φ in joules, then use vₘₐₓ = √(2Eₖ(max)/mₑ).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9a",
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "aqaCandidate": "3.2",
+      "front": "What wave behaviour do electrons show when passing through a thin crystal?",
+      "back": "Diffraction.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9b",
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "aqaCandidate": "3.2",
+      "front": "Why do electron-diffraction rings shrink at higher accelerating voltage?",
+      "back": "Momentum rises, so de Broglie wavelength and diffraction angle fall.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9c",
+      "subject": "Physics",
+      "topic": "Wave-particle duality",
+      "aqaCandidate": "3.2",
+      "front": "Which equation links an electron's de Broglie wavelength λ with its momentum p?",
+      "back": "λ = h/p.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_distance_vs_time",
+      "subject": "Physics",
+      "topic": "Graph interpretation",
+      "aqaCandidate": "3.4 or 3.5 (depends on graph)",
+      "front": "How do areas under force–time and force–displacement graphs differ?",
+      "back": "Force–time area = impulse Δp; force–displacement area = work done W.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_weakness_v36_iv_axes_resistance",
+      "subject": "Physics",
+      "topic": "Graph interpretation",
+      "aqaCandidate": "3.4 or 3.5 (depends on graph)",
+      "front": "For an ohmic conductor, what is the gradient of V against I versus I against V?",
+      "back": "V (y) vs I (x): gradient = R. I (y) vs V (x): gradient = 1/R.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_17",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "For a horizontal launch from height h, which equation gives the time to fall if air resistance is negligible?",
+      "back": "t = √(2h/g).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_18",
+      "subject": "Physics",
+      "topic": "Momentum",
+      "aqaCandidate": "3.4",
+      "front": "What gives the final common velocity of two trolleys that stick together, if initial total momentum is p and their combined mass is M?",
+      "back": "v = p/M.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_19",
+      "subject": "Physics",
+      "topic": "Momentum",
+      "aqaCandidate": "3.4",
+      "front": "How do you find impulse from a force–time graph?",
+      "back": "The area under the graph.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_20",
+      "subject": "Physics",
+      "topic": "Momentum",
+      "aqaCandidate": "3.4",
+      "front": "In an inelastic collision of an isolated system, which quantities are conserved?",
+      "back": "Total momentum is conserved; total kinetic energy need not be conserved.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_21",
+      "subject": "Physics",
+      "topic": "Energy",
+      "aqaCandidate": "3.4",
+      "front": "An object's kinetic energy rises from 5 J to 30 J. What is the net work done on it?",
+      "back": "W_net = ΔE_k = 30−5 = +25 J.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_22",
+      "subject": "Physics",
+      "topic": "Energy",
+      "aqaCandidate": "3.4",
+      "front": "A force parallel to motion rises linearly from 0 to 40 N across 2.0 m. Find work done.",
+      "back": "Work = triangular area under F–s graph = ½×2.0×40 = 40 J.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_23",
+      "subject": "Physics",
+      "topic": "Energy",
+      "aqaCandidate": "3.4",
+      "front": "For a fall from rest through height h with negligible drag, what equation gives the final speed?",
+      "back": "v = √(2gh).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_24",
+      "subject": "Physics",
+      "topic": "Power",
+      "aqaCandidate": "3.4",
+      "front": "An engine exerts a 30 N force along the direction of travel at 4.0 m s⁻¹. Find power.",
+      "back": "P = Fv = 30×4.0 = 120 W.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_25",
+      "subject": "Physics",
+      "topic": "Energy",
+      "aqaCandidate": "3.4",
+      "front": "A device receives 150 J and transfers 60 J usefully. Calculate efficiency.",
+      "back": "Efficiency = useful output/input = 60/150 = 0.40 = 40%.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_26",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "A spring extends 0.060 m under 12 N within its Hooke's-law region. Find stiffness.",
+      "back": "k = F/ΔL = 12/0.060 = 200 N m⁻¹.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_27",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "A spring reaches 12 N at 0.060 m extension and obeys Hooke's law. Find elastic energy stored.",
+      "back": "E = ½FΔL = ½×12×0.060 = 0.36 J, the area under its F–extension graph.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_28",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "How do you convert an area in mm² to m²?",
+      "back": "Multiply by 10⁻⁶.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_29",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "For a stress–strain graph, when does the gradient give Young modulus?",
+      "back": "In the straight-line elastic region: E = Δstress/Δstrain.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_30",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "A material retains extension after the force is removed. What behaviour has occurred?",
+      "back": "Plastic deformation: it has a permanent extension after unloading.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_31",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "How does ductile failure typically differ from brittle failure?",
+      "back": "Ductile materials undergo substantial plastic deformation before breaking; brittle materials undergo little.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_32",
+      "subject": "Physics",
+      "topic": "Materials",
+      "aqaCandidate": "3.4",
+      "front": "A sample has mass 0.54 kg and volume 2.0×10⁻⁴ m³. Find density.",
+      "back": "ρ = m/V = 0.54/(2.0×10⁻⁴) = 2700 kg m⁻³.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_33",
+      "subject": "Physics",
+      "topic": "RP4 Young modulus",
+      "aqaCandidate": "3.4",
+      "front": "Why does percentage uncertainty in wire diameter approximately double for cross-sectional area?",
+      "back": "Area A = πd²/4, so percentage uncertainty in A ≈ 2 × percentage uncertainty in d.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_34",
+      "subject": "Physics",
+      "topic": "RP3 Free fall",
+      "aqaCandidate": "3.4",
+      "front": "A light gate records a 0.050 m interrupt card passing in 0.010 s. Find instantaneous speed estimate.",
+      "back": "v ≈ card length / interruption time = 0.050/0.010 = 5.0 m s⁻¹.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_01",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "A projectile is launched horizontally. What changes if the launch height doubles while speed stays constant?",
+      "back": "Time of fall and horizontal range both increase by a factor of √2 (assuming no air resistance).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_02",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+      "back": "12 m s⁻¹.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_03",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "A ball is thrown horizontally at 15 m s⁻¹ from a 45 m cliff. Find its range (g=10 m s⁻²).",
+      "back": "45 = ½(10)t² ⇒ t=3 s. Range = horizontal speed × time = 15×3 = 45 m.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_04",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "A projectile returns to its launch height. Which component fixes the flight time, and which fixes range once time is known?",
+      "back": "Vertical initial velocity and gravity fix flight time. Horizontal initial velocity × flight time gives range.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_05",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "aqaCandidate": "3.4",
+      "front": "State Newton's first law precisely, including the condition on resultant force.",
+      "back": "If resultant external force is zero, an object stays at rest or moves at constant velocity in a straight line.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_06",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "aqaCandidate": "3.4",
+      "front": "State Newton's second law in its general momentum form.",
+      "back": "Resultant external force equals the rate of change of momentum, in the force direction: F = Δp/Δt (or dp/dt).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_07",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "aqaCandidate": "3.4",
+      "front": "State Newton's third law and explain why the two forces do not cancel.",
+      "back": "Interacting objects exert equal, opposite forces of the same type on each other, acting on different objects, so they do not cancel on one object.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v38_08",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "aqaCandidate": "3.4",
+      "front": "A heavy lorry hits a small car. Which experiences the greater force during their interaction?",
+      "back": "Neither: by Newton's third law their interaction forces have equal magnitude, opposite direction; accelerations can differ.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_01",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "aqaCandidate": "3.4",
+      "front": "Why does the normal reaction on a simple slope not equal the full weight?",
+      "back": "The surface balances only the perpendicular component, mg cosθ; weight mg is vertical.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_02",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "aqaCandidate": "3.4",
+      "front": "On a slope, why resolve weight parallel and perpendicular to the surface?",
+      "back": "Normal acceleration is zero; along the slope there may be a resultant force and acceleration.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_03",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "aqaCandidate": "3.4",
+      "front": "A force pulls a block at angle α above an inclined plane. How does this affect R?",
+      "back": "The outward pull reduces R: if there are no other normal forces, R = mg cosθ − F sinα.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_04",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "Why can't you double ascent time to find flight time when a projectile lands below launch height?",
+      "back": "The vertical journey is asymmetric; use vertical displacement and solve a quadratic for landing time.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_05",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "What happens to a projectile's horizontal velocity at its highest point?",
+      "back": "It is unchanged without air resistance; only vertical velocity is zero at the top.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_06",
+      "subject": "Physics",
+      "topic": "Projectiles",
+      "aqaCandidate": "3.4",
+      "front": "Given velocity components vₓ and vᵧ just before impact, how do you find impact speed?",
+      "back": "Impact speed is √(vₓ² + vᵧ²), not merely the magnitude of the vertical velocity.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_07",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "If v<0 and a<0, what happens to speed?",
+      "back": "Speed increases because velocity and acceleration point in the same negative direction.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_08",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "aqaCandidate": "3.4",
+      "front": "How does Newton's second law differ from the third law?",
+      "back": "Second: net force on ONE object changes its momentum. Third: forces pair across TWO interacting objects.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_09",
+      "subject": "Physics",
+      "topic": "Newton's laws",
+      "aqaCandidate": "3.4",
+      "front": "Why can an object move at constant velocity with multiple external forces acting?",
+      "back": "The resultant external force is zero.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_focus_v39_10",
+      "subject": "Physics",
+      "topic": "Graph interpretation",
+      "aqaCandidate": "3.4",
+      "front": "How can graph-axis units identify whether an area is impulse or work?",
+      "back": "Force×time gives N s (impulse); force×displacement gives N m or J (work).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_01",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What is an enthalpy change?",
+      "back": "Heat energy change measured at constant pressure.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_02",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What does negative ΔH mean?",
+      "back": "Exothermic: heat is released to the surroundings.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_03",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What does positive ΔH mean?",
+      "back": "Endothermic: heat is absorbed from the surroundings.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_04",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Where do products lie on an exothermic enthalpy profile?",
+      "back": "Lower in enthalpy than the reactants.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_05",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Where do products lie on an endothermic enthalpy profile?",
+      "back": "Higher in enthalpy than the reactants.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_06",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Does an exothermic reaction necessarily have zero activation energy?",
+      "back": "No; activation energy is a barrier, not the reaction's enthalpy change.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_07",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Does a catalyst change a reaction's ΔH?",
+      "back": "No; it changes activation energy, not the initial/final enthalpy difference.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_08",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What pressure counts as standard pressure for AQA ΔH°?",
+      "back": "100 kPa.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_09",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What conditions must standard enthalpy values use?",
+      "back": "100 kPa, a stated temperature and specified standard states.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_10",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Define standard enthalpy of formation precisely.",
+      "back": "ΔH when 1 mol of compound forms from elements in standard states under standard conditions.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_11",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What is the ΔfH° of an element in its standard state?",
+      "back": "Zero, by definition.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_12",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Is ΔfH° of gaseous oxygen atoms O(g) zero?",
+      "back": "No; oxygen's standard state is O₂(g).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_13",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Give a formation equation for magnesium oxide.",
+      "back": "Mg(s)+½O₂(g)→MgO(s).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_14",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Give the standard formation equation of liquid water.",
+      "back": "H₂(g)+½O₂(g)→H₂O(l).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_15",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Define standard enthalpy of combustion.",
+      "back": "ΔH when 1 mol of substance burns completely in O₂ under standard conditions/states.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_16",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What is the standard combustion equation for methane?",
+      "back": "CH₄(g)+2O₂(g)→CO₂(g)+2H₂O(l).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_17",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Why must states be shown in an enthalpy equation?",
+      "back": "Changing a substance's physical state changes the enthalpy value.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_18",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What happens to ΔH if a whole reaction equation is doubled?",
+      "back": "ΔH for the doubled equation also doubles.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_19",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What happens to ΔH if a reaction is reversed?",
+      "back": "The enthalpy sign reverses.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_20",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What equation relates heat, mass, specific heat capacity and temperature rise?",
+      "back": "q=mcΔT with q in J, m in g, c in J g⁻¹ K⁻¹.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_21",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "How is ΔT calculated from initial and final temperatures?",
+      "back": "ΔT=T_final−T_initial; changes in °C and K are numerically equal.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_22",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "When liquid density is 1 g cm⁻³, how does mass relate to volume?",
+      "back": "Solution mass in grams approximately equals its volume in cm³.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_23",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "In a solution calorimeter, what mass usually goes in q=mcΔT?",
+      "back": "Mass of the solution that changes temperature, not only the solute.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_24",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "How do you convert calorimetry q from J into kJ?",
+      "back": "Divide by 1000.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_25",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "How do you calculate reaction molar ΔH using solution q?",
+      "back": "ΔH=−q_solution(kJ)/moles of reaction, with sign chosen correctly.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_26",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why is ΔH negative if the solution warms?",
+      "back": "The solution gains heat, so the reaction has released it.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_27",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why is ΔH positive if the solution cools?",
+      "back": "The solution loses heat; the reaction absorbs heat from surroundings.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_28",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why must a reaction mole ratio be checked before finding molar ΔH?",
+      "back": "The enthalpy is defined per mole of reaction as written; reactants may have unequal ratios.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_29",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "For 25 cm³ 1 M HCl plus 25 cm³ 1 M NaOH, how many mol water form?",
+      "back": "0.025 mol, assuming complete 1:1 neutralisation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_30",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What is the purpose of a calorimeter's insulation?",
+      "back": "To reduce heat transfer between system and external surroundings.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_31",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What happens to the measured magnitude of exothermic ΔH if heat escapes?",
+      "back": "The temperature rise is too small; calculated ΔH is less negative.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_32",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What happens when an endothermic experiment gains external heat?",
+      "back": "Temperature fall is too small; measured ΔH is underestimated in magnitude.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_33",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why might a fuel combustion calorimetry estimate be too weak?",
+      "back": "Some heat escapes or warms apparatus, so measured water rise is too small.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_34",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why can incomplete combustion affect fuel calorimetry?",
+      "back": "Not all fuel undergoes the stated complete combustion reaction.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_35",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What does extrapolating a temperature–time graph estimate?",
+      "back": "Corrected temperature at the mixing/reaction time, reducing heat-exchange error.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_36",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Name one measurement uncertainty in calorimetry.",
+      "back": "Temperature measurement.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_37",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Does AQA require the specific heat capacity of water from memory?",
+      "back": "No; the value is supplied when needed.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_38",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "State Hess's law.",
+      "back": "Overall enthalpy change is independent of pathway if start/end states match.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_39",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What is the formation-enthalpy calculation for ΔH°reaction?",
+      "back": "Sum of product ΔfH° values minus sum of reactant ΔfH° values.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_40",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What is the combustion-enthalpy Hess calculation?",
+      "back": "Sum combustion enthalpies of reactants minus those of products.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_41",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "Why do equation coefficients matter in Hess calculations?",
+      "back": "Multiply each substance's molar enthalpy by its stoichiometric coefficient.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_42",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What happens to a Hess enthalpy when an equation is reversed?",
+      "back": "Change the sign.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_43",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What happens to a Hess enthalpy when the equation is halved?",
+      "back": "Halve the ΔH value.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_44",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "Why is the ΔfH° of H₂(g) zero?",
+      "back": "Hydrogen gas is elemental hydrogen in its standard state.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_45",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What common starting point is used in a formation-enthalpy Hess cycle?",
+      "back": "The constituent elements in their standard states.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_46",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "In a combustion cycle, what common products can both pathways reach?",
+      "back": "Complete combustion products, typically CO₂(g) and H₂O(l).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_47",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "Why can Hess's law calculate a reaction not measured directly?",
+      "back": "A sum of accessible reactions can have the same overall initial and final states.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_48",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "If anhydrous salt → solution has ΔH₁ and hydrated salt → solution has ΔH₂, what is ΔH for anhydrous → hydrated salt?",
+      "back": "ΔH₁ − ΔH₂ (for matching amounts and states).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_49",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "How can enthalpies of solution determine hydration of a salt?",
+      "back": "Construct paths to the same aqueous final state; subtract the two dissolution ΔHs.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_50",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Define mean bond enthalpy.",
+      "back": "Average enthalpy change to break one mole of a specified covalent bond in gaseous molecules.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_51",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "What is the general bond-enthalpy estimate for reaction ΔH?",
+      "back": "Sum of energies for bonds broken − sum of energies for bonds formed.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_52",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "What is the sign of bond breaking?",
+      "back": "Positive (endothermic): energy is required.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_53",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "What is the sign of bond formation?",
+      "back": "Negative contribution (exothermic): energy is released.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_54",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Why must you count all bonds in the balanced equation?",
+      "back": "Coefficients determine the number of each bond broken and formed.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_55",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Are mean bond enthalpies exact for a specific compound?",
+      "back": "No; they are averages across different molecular environments.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_56",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Why can mean bond-enthalpy ΔH differ from standard experimental ΔH?",
+      "back": "Mean gas-phase energies are approximate and actual substances may have other states.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_57",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Why is liquid water a problem if only gas-phase mean bonds are used?",
+      "back": "Condensation/phase enthalpy is omitted unless accounted for.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_58",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Does an exothermic reaction always break fewer bonds than it forms?",
+      "back": "No; total energies of breaking and forming matter, not simple bond count.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_59",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "What is a bond enthalpy calculation not suitable for without extra data?",
+      "back": "Directly predicting full ΔH for non-gaseous substances without state corrections.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_60",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What is AQA Required Practical 2 about?",
+      "back": "Measuring an enthalpy change using calorimetry.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_61",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Name one reaction type that could be used for AQA Required Practical 2.",
+      "back": "Neutralisation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_62",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why might a polystyrene cup and lid be used in calorimetry?",
+      "back": "To limit heat transfer to the outside and reduce evaporation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_63",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why should a temperature–time correction be considered?",
+      "back": "Heat exchange can distort the measured maximum/minimum temperature.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_64",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What must be explained in a good calorimetry evaluation?",
+      "back": "Direction of error, its cause, impact on ΔT/ΔH and a realistic improvement.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v49_65",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why might dissolving hydrated vs anhydrous salts help build a Hess cycle?",
+      "back": "Two measurable solution enthalpies lead to a common final aqueous state.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v51_01",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "A thermometer is ±0.1°C per reading. What is the uncertainty in ΔT?",
+      "back": "±0.2°C: add the absolute uncertainties of initial and final readings.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v51_02",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "For ΔT=6.0°C and ±0.1°C per reading, what is % uncertainty?",
+      "back": "(0.2÷6.0)×100=3.3%.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v51_03",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "How can a slow thermometer affect exothermic calorimetry?",
+      "back": "It may miss the highest temperature; ΔT is too small and ΔH less negative.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v51_04",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Why is 2H₂(g)+O₂(g)→2H₂O(l) not a one-mole formation equation?",
+      "back": "It forms 2 mol H₂O; halve every coefficient for standard molar formation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v51_05",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "Why is the H–Cl bond enthalpy not averaged across different molecular environments?",
+      "back": "HCl is diatomic, with only one H–Cl bond environment.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_01",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What pressure is used for AQA standard enthalpy changes?",
+      "back": "100 kPa.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_02",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Must a standard enthalpy change always be at 298 K?",
+      "back": "No; a stated temperature is required, often 298 K.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_03",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What is the standard state of a substance?",
+      "back": "Its physical state at standard pressure (100 kPa) and the stated temperature.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_04",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "Name standard states of water, bromine and carbon at 298 K.",
+      "back": "H₂O(l), Br₂(l), C(s, graphite).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_05",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What must a standard enthalpy of formation equation produce?",
+      "back": "Exactly 1 mol of compound from its elements in standard states.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_06",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What must a standard enthalpy of combustion equation consume?",
+      "back": "Exactly 1 mol of substance, burned completely in O₂.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_07",
+      "subject": "Chemistry",
+      "topic": "Energetics",
+      "aqaCandidate": "3.1.4.1",
+      "front": "What is the definition of Hess's law?",
+      "back": "Reaction enthalpy is route-independent if initial/final states are the same.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_08",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What is the molar enthalpy formula if q_solution is in joules?",
+      "back": "ΔH = −q_solution/(1000 × n) in kJ mol⁻¹.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_09",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What does n mean in ΔH = −q/n?",
+      "back": "Moles of the reaction as written, or of the species named in the definition.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_10",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why is there a minus sign in ΔH = −q_solution/n?",
+      "back": "Heat gained by solution equals heat lost by reaction (and vice versa).",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_11",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "When finding q=mcΔT, do equation coefficients multiply m?",
+      "back": "No. m is the mass of material undergoing the temperature change.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_12",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What must you do to q in joules before obtaining kJ mol⁻¹?",
+      "back": "Divide q by 1000, then by the appropriate moles.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_13",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "If 2 mol of A react per equation, what is n_reaction from 0.10 mol A?",
+      "back": "0.10 ÷ 2 = 0.050 mol of reaction as written.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_14",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "In H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, 0.040 mol NaOH is how many reactions?",
+      "back": "0.040 ÷ 2 = 0.020 mol of the equation as written.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_15",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "For neutralisation enthalpy per mole of water, which n do you use?",
+      "back": "Moles of H₂O made, not automatically moles of acid or alkali.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_16",
+      "subject": "Chemistry",
+      "topic": "Calorimetry",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What tells you whether to use n of reactant, product or reaction?",
+      "back": "The stated definition of ΔH and coefficients in the balanced equation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_17",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "For ΔfH° values, which subtraction order gives reaction ΔH?",
+      "back": "Sum of products − sum of reactants, including coefficients.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_18",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "For ΔcH° values, which subtraction order gives reaction ΔH?",
+      "back": "Sum of reactants − sum of products, including coefficients.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_19",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "For 2CO + O₂ → 2CO₂, how many times each ΔfH°?",
+      "back": "CO₂ ×2, CO ×2, O₂ ×1; ΔfH°(O₂)=0.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_20",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "When should you multiply a Hess enthalpy by 2?",
+      "back": "When the corresponding chemical equation is doubled.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_21",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What happens to ΔH when you reverse a Hess equation?",
+      "back": "Change the sign of ΔH.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_22",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "What happens to ΔH when you halve every equation coefficient?",
+      "back": "Halve ΔH for that equation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_23",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "How do you check Hess arrows if the formula is forgotten?",
+      "back": "Follow start → finish through the cycle; reverse arrow = reverse sign.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_24",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "Why is ΔfH° of O₂(g) zero at 298 K?",
+      "back": "O₂(g) is oxygen's element in its standard state.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_25",
+      "subject": "Chemistry",
+      "topic": "Hess's law",
+      "aqaCandidate": "3.1.4.3",
+      "front": "When are Hess reaction coefficients NOT extra multipliers?",
+      "back": "If a supplied ΔH already belongs to the full balanced equation shown.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_26",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "In bond enthalpy sums, do you multiply by formula subscripts?",
+      "back": "Count bonds in each molecule, then multiply by the equation coefficient.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_27",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "For 2H₂ + O₂ → 2H₂O, how many O–H bonds form?",
+      "back": "4 O–H bonds: 2 water molecules ×2 bonds each.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_28",
+      "subject": "Chemistry",
+      "topic": "Bond enthalpies",
+      "aqaCandidate": "3.1.4.4",
+      "front": "In hydrogenation of ethene, what happens to unchanged C–H bonds?",
+      "back": "They cancel between reactants and products; count only the net changes.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_29",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What is AQA Required Practical 2?",
+      "back": "Measurement of an enthalpy change using calorimetry.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_30",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why does a polystyrene cup help in solution calorimetry?",
+      "back": "It reduces heat transfer between the solution and surroundings.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_31",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why can a lid improve a calorimetry experiment?",
+      "back": "It reduces heat exchange with surroundings and evaporation.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_32",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What is the key graph correction in exothermic calorimetry?",
+      "back": "Extrapolate post-reaction cooling to mixing time to estimate peak T.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_33",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What effect does heat loss have on calculated exothermic ΔH?",
+      "back": "Measured ΔT is too small, so ΔH is less negative than the true value.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_34",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "What does thermometer ±0.1°C mean for a temperature difference?",
+      "back": "Two readings give ±0.2°C absolute uncertainty in ΔT.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_35",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Why record temperature against time in an RP2 calorimetry experiment?",
+      "back": "To extrapolate and estimate a corrected temperature change.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "chem_energetics_v53_36",
+      "subject": "Chemistry",
+      "topic": "RP2 Enthalpy",
+      "aqaCandidate": "3.1.4.2",
+      "front": "Which parts of RP2 affect the calorimetry calculation directly?",
+      "back": "Measured ΔT, solution mass, heat capacity and reaction moles.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_01",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "Displacement–time: what does a negative gradient mean?",
+      "back": "Velocity is negative: motion in the negative direction, not necessarily slowing down.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_02",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "What does zero gradient on a displacement–time graph show?",
+      "back": "Zero velocity: stationary at that instant or throughout a flat segment.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_03",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "What does the signed area below the axis of a velocity–time graph represent?",
+      "back": "Negative displacement.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_04",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "Why is total distance different from displacement on a v–t graph?",
+      "back": "Distance sums all absolute areas; displacement uses signed areas.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_05",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "A straight sloping v–t line crosses zero. What changes?",
+      "back": "Direction changes if velocity changes sign; speed falls to zero then rises.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_06",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "Acceleration–time area gives which quantity?",
+      "back": "Change in velocity, not displacement or distance.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_07",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "For curved s–t graphs, how is instantaneous velocity found?",
+      "back": "Find the gradient of the tangent at that time.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_08",
+      "subject": "Physics",
+      "topic": "Motion graphs",
+      "aqaCandidate": "3.4",
+      "front": "How do you identify acceleration on a v–t graph?",
+      "back": "Gradient Δv/Δt; a horizontal line means zero acceleration.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_09",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "aqaCandidate": "3.4",
+      "front": "On a 30° slope, which component of weight pulls downhill?",
+      "back": "mg sin30°; the perpendicular component is mg cos30°.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_10",
+      "subject": "Physics",
+      "topic": "Forces on a slope",
+      "aqaCandidate": "3.4",
+      "front": "A horizontal push up a slope does what to the reaction?",
+      "back": "It adds a component into the surface, increasing the normal reaction.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_11",
+      "subject": "Physics",
+      "topic": "Moments",
+      "aqaCandidate": "3.4",
+      "front": "What is the moment of two equal opposite forces forming a couple?",
+      "back": "One force × perpendicular separation of their lines of action.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    },
+    {
+      "id": "phy_graph_v118_12",
+      "subject": "Physics",
+      "topic": "RP3 Free fall",
+      "aqaCandidate": "3.4",
+      "front": "What does the gradient of a displacement vs t² graph give in free fall?",
+      "back": "g/2, for release from rest with negligible drag.",
+      "review": "Question and answer individually reviewed for accuracy, scope and flashcard recall; section mapping remains provisional until full bullet-by-bullet certification"
+    }
+  ],
+  "limits": {
+    "allAqaSpecificationBulletsVerified": false,
+    "allOriginalAqaPastPapersIncluded": false,
+    "wholeDeckContentAudited": false,
+    "allExamQuestionMarkingCorrect": false,
+    "learnerMasteryVerified": false,
+    "cardIdsAndMockFlagsPreserved": true,
+    "originalQuestionBankPreserved": true
+  },
+  "next": "Carry out an independent official-specification bullet crosswalk of ALL mock cards and exam questions, then fill verified gaps; do not equate clearing this historical 971-card queue with Task 1 completion."
+}
