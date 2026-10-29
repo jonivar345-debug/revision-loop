@@ -79,6 +79,8 @@ on:
       - 'tests/task1-v181-science-210-legacy-answer-audit.cjs'
       - 'tests/task1-v182-220-physics-chemistry-precision.cjs'
       - 'tests/task1-v183-bonding-86-precision.cjs'
+      - 'tests/task1-v184-final-172-science-legacy-audit.cjs'
+      - 'editorial/task1-v184-final-172-science-legacy-audit.json'
       - 'editorial/task1-v183-bonding-86-precision.json'
       - 'editorial/task1-v182-220-physics-chemistry-precision.json'
       - 'editorial/task1-v181-science-210-legacy-answer-audit.json'
@@ -222,6 +224,7 @@ jobs:
       - run: node tests/task1-v181-science-210-legacy-answer-audit.cjs
       - run: node tests/task1-v182-220-physics-chemistry-precision.cjs
       - run: node tests/task1-v183-bonding-86-precision.cjs
+      - run: node tests/task1-v184-final-172-science-legacy-audit.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs

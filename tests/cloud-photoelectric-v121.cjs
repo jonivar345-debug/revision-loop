@@ -6,10 +6,10 @@ const card=deck.cards.find(c=>c.id==='phy_spectra_photo_v32_below_threshold_grap
 const marker=require('../photoelectric-flashcard-marking.js');
 assert(card,'Target photoelectric card must exist');
 assert.equal(marker.TARGET_ID,card.id);
-assert.match(card.front,/photoelectric.effect.*photoelectron.*frequency/i);
+// v184 preserves the specialised marking logic below, but uses a shorter one-fact flashcard prompt and model answer.
+assert.match(card.front,/photoelectron.*threshold frequency/i);
 assert.match(card.back,/No photoelectrons are emitted/i);
-assert.match(card.back,/work function/i);
-assert.match(card.back,/negative energy/i);
+assert(!/negative (?:kinetic )?energy/i.test(card.back),'Do not describe a physically emitted negative kinetic energy');
 
 for(const answer of [
  'No photoelectrons are emitted below threshold frequency.',

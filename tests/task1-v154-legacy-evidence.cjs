@@ -1,6 +1,6 @@
 'use strict';
 // Keep historical evidence immutable. Apply only explicitly reviewed corrections
-// from v154, v172, v176, v177, v178, v179, v180, v181 and v182 when comparing old snapshots with current cards.
+// from v154, v172, v176, v177, v178, v179, v180, v181, v182, v183 and v184 when comparing old snapshots with current cards.
 const v154=require('../editorial/task1-v154-mock-aqa-terminology-audit.json');
 const v172=require('../editorial/task1-v172-science-mock-review.json');
 const v176=require('../editorial/task1-v176-mechanics-manual-spec-audit.json');
@@ -11,6 +11,7 @@ const v180=require('../editorial/task1-v180-born-haber-gibbs-short-recall.json')
 const v181=require('../editorial/task1-v181-science-210-legacy-answer-audit.json');
 const v182=require('../editorial/task1-v182-220-physics-chemistry-precision.json');
 const v183=require('../editorial/task1-v183-bonding-86-precision.json');
+const v184=require('../editorial/task1-v184-final-172-science-legacy-audit.json');
 const corrections=new Map(v154.changes.editedCards.map(row=>[row.id,row]));
 const shortCards=new Map(v172.edited.map(row=>[row.id,row]));
 const preciseMechanics=new Map(v176.corrections.map(row=>[row.id,row]));
@@ -21,7 +22,11 @@ const bornHaberChemistry=new Map(v180.corrections.map(row=>[row.id,row]));
 const moreScience=new Map(v181.corrections.map(row=>[row.id,row]));
 const newerScience=new Map(v182.corrections.map(row=>[row.id,row]));
 const finalBonding=new Map(v183.corrections.map(row=>[row.id,row]));
+const finalLegacyScience=new Map(v184.corrections.map(row=>[row.id,row]));
 module.exports=function expectedAfterReviewedEdits(id,field,historical){
+ const updated184=finalLegacyScience.get(id);
+ if(updated184&&field==='front')return updated184.newFront;
+ if(updated184&&field==='back')return updated184.newBack;
  const updated=finalBonding.get(id);
  if(updated&&field==='front')return updated.newFront;
  if(updated&&field==='back')return updated.newBack;

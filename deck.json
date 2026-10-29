@@ -16625,8 +16625,14 @@
       "topic": "Line spectra",
       "revisionTopic": "Line spectra",
       "priority": 7,
-      "front": "How do you find photon wavelength from two energy levels given in eV?",
-      "back": "Find the positive energy gap, convert to J, then use λ = hc/ΔE."
+      "front": "Which equation gives photon wavelength from an energy-level gap ΔE in joules?",
+      "back": "λ = hc/ΔE.",
+      "accept": [
+        "λ = hc/ΔE.",
+        "lambda = hc / delta E",
+        "λ = hc / ΔE",
+        "wavelength equals hc divided by energy change"
+      ]
     },
     {
       "subject": "Physics",
@@ -16689,8 +16695,14 @@
       "topic": "Fluorescent tubes",
       "revisionTopic": "Fluorescent tubes",
       "priority": 3,
-      "front": "Give the energy-transfer sequence in a fluorescent tube.",
-      "back": "Electrical energy → fast electrons → excited mercury → UV → phosphor → visible light."
+      "front": "What does the phosphor coating do in a fluorescent tube?",
+      "back": "Absorbs ultraviolet radiation and emits visible light.",
+      "accept": [
+        "Absorbs ultraviolet radiation and emits visible light.",
+        "absorbs UV and emits visible light",
+        "converts ultraviolet into visible light",
+        "UV photons excite phosphor which emits visible light"
+      ]
     },
     {
       "subject": "Physics",
@@ -16753,13 +16765,13 @@
       "topic": "Photoelectric effect",
       "revisionTopic": "Photoelectric effect",
       "priority": 2,
-      "front": "On a photoelectric-effect graph of maximum photoelectron kinetic energy against light frequency, what happens below the threshold frequency?",
-      "back": "No photoelectrons are emitted because each photon has less energy than the metal's work function. No maximum kinetic energy is measured below threshold; extending the straight line into negative energy is only mathematical, not physical.",
+      "front": "Why is maximum photoelectron kinetic energy undefined below the threshold frequency?",
+      "back": "No photoelectrons are emitted.",
       "accept": [
-        "No photoelectrons are emitted below threshold frequency.",
-        "There are no emitted electrons so no kinetic energy is measurable.",
-        "Photon energy is below the work function, so no electrons escape.",
-        "No emission of electrons; no data points are plotted below the threshold."
+        "No photoelectrons are emitted.",
+        "no electrons emitted below threshold frequency",
+        "there is no photoelectric emission",
+        "photons do not have enough energy to release electrons"
       ]
     },
     {
@@ -16791,8 +16803,8 @@
       "taught": true,
       "priority": 4,
       "id": "phy_electron_diffraction_exam_q9a",
-      "front": "Electron diffraction [2 marks]: How does it support wave–particle duality?",
-      "back": "Electrons have mass and charge (particle properties), but produce a diffraction pattern through a thin crystal (wave behaviour).",
+      "front": "What wave behaviour do electrons show when passing through a thin crystal?",
+      "back": "Diffraction.",
       "visualBack": "particle-diffraction",
       "concepts": [
         [
@@ -16805,6 +16817,13 @@
           "wave",
           "rings"
         ]
+      ],
+      "accept": [
+        "Diffraction.",
+        "diffraction",
+        "they diffract",
+        "diffraction rings",
+        "a diffraction ring pattern"
       ]
     },
     {
@@ -16852,13 +16871,13 @@
       "taught": true,
       "priority": 4,
       "id": "phy_electron_diffraction_exam_q9c",
-      "front": "Electron diffraction [1 mark]: Why can p = mv fail for very fast electrons?",
-      "back": "At speeds approaching the speed of light, relativistic effects become significant, so the non-relativistic formula p = mv is inaccurate.",
+      "front": "Which equation links an electron's de Broglie wavelength λ with its momentum p?",
+      "back": "λ = h/p.",
       "accept": [
-        "relativity",
-        "relativistic effects",
-        "at speeds near the speed of light relativistic momentum is needed",
-        "when electron speeds approach c p=mv is inaccurate"
+        "λ = h/p.",
+        "λ = h/p",
+        "lambda = h / p",
+        "de broglie wavelength equals Planck constant divided by momentum"
       ]
     },
     {
@@ -17647,14 +17666,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "A ball leaves horizontally at 7.0 m s⁻¹ from 20 m high. With g=10 m s⁻², find the range.",
-      "back": "Vertical fall: 20=½×10×t² ⇒ t=2.0 s. Horizontal range = 7.0×2.0 = 14 m.",
+      "front": "For a horizontal launch from height h, which equation gives the time to fall if air resistance is negligible?",
+      "back": "t = √(2h/g).",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "t = √(2h/g).",
+        "t = sqrt(2h/g)",
+        "t = √(2h/g)",
+        "h = 1/2 gt^2"
+      ]
     },
     {
       "id": "phy_mechanics_focus_v37_18",
@@ -17665,14 +17690,20 @@
       "kind": "weak",
       "priority": 8,
       "scope": "mock",
-      "front": "A 2 kg trolley at +3 m s⁻¹ sticks to a 1 kg trolley at −2 m s⁻¹. Final velocity?",
-      "back": "Momentum before = 2×3 + 1×(−2) = +4 kg m s⁻¹; v = 4/3 ≈ +1.33 m s⁻¹.",
+      "front": "What gives the final common velocity of two trolleys that stick together, if initial total momentum is p and their combined mass is M?",
+      "back": "v = p/M.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "v = p/M.",
+        "v = p/M",
+        "final velocity equals total momentum over total mass",
+        "momentum divided by combined mass"
+      ]
     },
     {
       "id": "phy_mechanics_focus_v37_19",
@@ -17683,14 +17714,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "A triangular force–time pulse lasts 0.20 s and peaks at 800 N. Find impulse.",
-      "back": "Impulse = area = ½×0.20×800 = 80 N s, equal to the momentum change.",
+      "front": "How do you find impulse from a force–time graph?",
+      "back": "The area under the graph.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "The area under the graph.",
+        "area under force-time graph",
+        "area between force-time curve and time axis",
+        "area under the force–time graph"
+      ]
     },
     {
       "id": "phy_mechanics_focus_v37_20",
@@ -17755,14 +17792,20 @@
       "kind": "weak",
       "priority": 8,
       "scope": "mock",
-      "front": "An object falls 5.0 m from rest without energy losses. For g=10 m s⁻², find its speed.",
-      "back": "mgh = ½mv²; v = √(2gh) = √100 = 10 m s⁻¹.",
+      "front": "For a fall from rest through height h with negligible drag, what equation gives the final speed?",
+      "back": "v = √(2gh).",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "v = √(2gh).",
+        "v = sqrt(2gh)",
+        "v^2 = 2gh",
+        "v = √(2gh)"
+      ]
     },
     {
       "id": "phy_mechanics_focus_v37_24",
@@ -17845,14 +17888,20 @@
       "kind": "weak",
       "priority": 8,
       "scope": "mock",
-      "front": "A wire has force 200 N and cross-sectional area 2.0 mm². Find tensile stress.",
-      "back": "A = 2.0×10⁻⁶ m²; stress = 200/(2.0×10⁻⁶) = 1.0×10⁸ Pa.",
+      "front": "How do you convert an area in mm² to m²?",
+      "back": "Multiply by 10⁻⁶.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Multiply by 10⁻⁶.",
+        "multiply by 10^-6",
+        "divide by a million",
+        "1 mm² = 10⁻⁶ m²"
+      ]
     },
     {
       "id": "phy_mechanics_focus_v37_29",
@@ -17989,14 +18038,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "A projectile is fired upwards at 12 m s⁻¹ horizontally and 16 m s⁻¹ vertically. At the top, what are speed and acceleration?",
-      "back": "Speed = 12 m s⁻¹ horizontally; acceleration = 9.81 m s⁻² downwards. Vertical velocity alone is zero.",
+      "front": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+      "back": "12 m s⁻¹.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "12 m s⁻¹.",
+        "12 m/s",
+        "12 ms^-1",
+        "12 m s⁻¹"
+      ]
     },
     {
       "id": "phy_focus_v38_03",
@@ -18259,14 +18314,21 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "Why may an object move at constant speed with multiple forces acting?",
-      "back": "For constant straight-line velocity, the vector sum of all external forces is zero.",
+      "front": "Why can an object move at constant velocity with multiple external forces acting?",
+      "back": "The resultant external force is zero.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "The resultant external force is zero.",
+        "the net external force is zero",
+        "all external forces balance",
+        "resultant force = 0",
+        "vector sum of forces is zero"
+      ]
     },
     {
       "id": "phy_focus_v39_10",
@@ -23257,12 +23319,18 @@
       "priority": 9,
       "scope": "mock",
       "front": "What pressure counts as standard pressure for AQA ΔH°?",
-      "back": "100 kPa; temperature must be stated, often 298 K.",
+      "back": "100 kPa.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "100 kPa.",
+        "100 kPa",
+        "100 kilopascals",
+        "100000 Pa"
+      ]
     },
     {
       "id": "chem_energetics_v49_09",
@@ -23707,12 +23775,22 @@
       "kind": "content",
       "priority": 8,
       "scope": "mock",
-      "front": "What are possible uncertainties in simple calorimetry?",
-      "back": "Temperature resolution, mass/volume accuracy and imperfect insulation.",
+      "front": "Name one measurement uncertainty in calorimetry.",
+      "back": "Temperature measurement.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Temperature measurement.",
+        "thermometer resolution",
+        "uncertainty in temperature reading",
+        "temperature",
+        "mass measurement",
+        "volume measurement",
+        "uncertainty in mass",
+        "uncertainty in volume"
+      ]
     },
     {
       "id": "chem_energetics_v49_37",
@@ -23858,13 +23936,19 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "In a formation cycle, what is the common lower pathway?",
-      "back": "Both reactants and products can be related to the same constituent elements.",
+      "front": "What common starting point is used in a formation-enthalpy Hess cycle?",
+      "back": "The constituent elements in their standard states.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "The constituent elements in their standard states.",
+        "elements in standard states",
+        "the elements in their standard states",
+        "constituent elements in standard states"
+      ]
     },
     {
       "id": "chem_energetics_v49_46",
@@ -23909,13 +23993,19 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "What cycle relation holds if X→solution is ΔH1 and hydrate→solution is ΔH2?",
-      "back": "X→hydrate ΔH=ΔH1−ΔH2, with all states/amounts matching.",
+      "front": "If anhydrous salt → solution has ΔH₁ and hydrated salt → solution has ΔH₂, what is ΔH for anhydrous → hydrated salt?",
+      "back": "ΔH₁ − ΔH₂ (for matching amounts and states).",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "ΔH₁ − ΔH₂ (for matching amounts and states).",
+        "ΔH1 - ΔH2",
+        "ΔH₁ − ΔH₂",
+        "ΔH1 minus ΔH2"
+      ]
     },
     {
       "id": "chem_energetics_v49_49",
@@ -23944,11 +24034,16 @@
       "priority": 8,
       "scope": "mock",
       "front": "Define mean bond enthalpy.",
-      "back": "Average enthalpy to break 1 mol of a stated covalent bond in gaseous molecules.",
+      "back": "Average enthalpy change to break one mole of a specified covalent bond in gaseous molecules.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Average enthalpy change to break one mole of a specified covalent bond in gaseous molecules.",
+        "average enthalpy needed to break one mole of a specified bond in gaseous molecules",
+        "average energy to break one mole of a covalent bond in gaseous molecules"
+      ]
     },
     {
       "id": "chem_energetics_v49_51",
@@ -24120,13 +24215,25 @@
       "kind": "content",
       "priority": 9,
       "scope": "mock",
-      "front": "Give examples of AQA RP2 reaction types.",
-      "back": "Dissolving salts, neutralisation, displacement and combustion calorimetry.",
+      "front": "Name one reaction type that could be used for AQA Required Practical 2.",
+      "back": "Neutralisation.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Neutralisation.",
+        "neutralisation",
+        "neutralization",
+        "dissolving a salt",
+        "dissolution of a salt",
+        "salt dissolution",
+        "displacement",
+        "combustion of an alcohol",
+        "alcohol combustion",
+        "combustion"
+      ]
     },
     {
       "id": "chem_energetics_v49_62",
@@ -24272,12 +24379,18 @@
       "kind": "content",
       "priority": 8,
       "scope": "mock",
-      "front": "Why are tabulated H–Cl bond enthalpies approximate for H₂+Cl₂→2HCl?",
-      "back": "Tabulated values can be rounded; diatomic HCl has one fixed bond environment.",
+      "front": "Why is the H–Cl bond enthalpy not averaged across different molecular environments?",
+      "back": "HCl is diatomic, with only one H–Cl bond environment.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "HCl is diatomic, with only one H–Cl bond environment.",
+        "diatomic molecule has only one bond environment",
+        "HCl has only one H-Cl bond environment",
+        "HCl is a diatomic molecule"
+      ]
     },
     {
       "id": "chem_bonding_v52_01",
@@ -25180,12 +25293,17 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "What does 'standard state' mean in enthalpy definitions?",
-      "back": "The most stable physical form of a substance at the specified conditions.",
+      "front": "In an enthalpy definition, what does a substance's standard state specify?",
+      "back": "Its physical state at standard pressure (100 kPa) and the stated temperature.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "Its physical state at standard pressure (100 kPa) and the stated temperature.",
+        "its physical state at 100 kPa and a stated temperature",
+        "physical state at standard pressure and stated temperature"
+      ]
     },
     {
       "id": "chem_energetics_v53_04",
@@ -25724,12 +25842,18 @@
       "priority": 9,
       "userWeakness": true,
       "scope": "mock",
-      "front": "What practical details matter beyond Paper 3?",
-      "back": "Apparatus, temperature change, controls, uncertainties, errors and improvements.",
+      "front": "Why record temperature against time in an RP2 calorimetry experiment?",
+      "back": "To extrapolate and estimate a corrected temperature change.",
       "active": true,
       "stage": "AS",
       "mock": true,
-      "taught": true
+      "taught": true,
+      "accept": [
+        "To extrapolate and estimate a corrected temperature change.",
+        "to estimate the corrected temperature change",
+        "to correct for heat exchange with the surroundings by extrapolation",
+        "to extrapolate temperature to the mixing time"
+      ]
     },
     {
       "id": "chem_energetics_v53_36",
@@ -25793,14 +25917,20 @@
       "kind": "weak",
       "priority": 9,
       "scope": "mock",
-      "front": "On a velocity–time graph, what does an area below the axis mean?",
-      "back": "Negative displacement; add its magnitude when calculating total distance.",
+      "front": "What does the signed area below the axis of a velocity–time graph represent?",
+      "back": "Negative displacement.",
       "active": true,
       "stage": "AS",
       "mock": true,
       "unit": "as-mechanics",
       "taught": true,
-      "userWeakness": true
+      "userWeakness": true,
+      "accept": [
+        "Negative displacement.",
+        "negative displacement",
+        "displacement in the negative direction",
+        "a negative change in position"
+      ]
     },
     {
       "id": "phy_graph_v118_04",
