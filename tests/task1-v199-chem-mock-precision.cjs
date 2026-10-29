@@ -29,6 +29,20 @@ for(const c of cards.cards){
  for(const a of c.reject)assert.notEqual(evaluate(c,a).status,'correct','False credit: '+c.id+' '+a);
  assert.equal(evaluate(c,'').status,'neutral');
 }
+// Independent chemical facts: self-consistent accept/reject arrays alone are not enough.
+const cardBy=id=>cards.cards.find(c=>c.id===id);
+assert.equal(evaluate(cardBy('task1_v199_chem_001'),'brick-red copper(I) oxide precipitate').status,'correct');
+assert.notEqual(evaluate(cardBy('task1_v199_chem_001'),'remains blue').status,'correct');
+assert.equal(evaluate(cardBy('task1_v199_chem_004'),'carboxylic acid').status,'correct');
+assert.notEqual(evaluate(cardBy('task1_v199_chem_004'),'carboxylate salt').status,'correct');
+assert.equal(evaluate(cardBy('task1_v199_chem_005'),'carboxylate salt').status,'correct');
+assert.notEqual(evaluate(cardBy('task1_v199_chem_005'),'free carboxylic acid').status,'correct');
+// Reject lists must not collide with an independently accepted wording.
+for(const card of cards.cards){
+ const canonical=s=>String(s).toLowerCase().replace(/[^a-z0-9]/g,'');
+ const accept=new Set(card.accept.map(canonical));
+ for(const bad of card.reject)assert(!accept.has(canonical(bad)),'Cross-labelled Chemistry response: '+card.id+' '+bad);
+}
 assert(app.includes("'./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json'"));
 assert(app.includes('else if(index===10)'));
 assert(app.includes("'./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json'"));
