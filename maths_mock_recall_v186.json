@@ -15,7 +15,9 @@
       "accept": [
         "An intersection point.",
         "point of intersection",
-        "where they intersect"
+        "where they intersect",
+        "intersection of the line and parabola",
+        "where line and quadratic meet"
       ],
       "reject": [],
       "strictRecall": true,
@@ -89,7 +91,10 @@
         "At (0, 1).",
         "(0,1)",
         "y intercept 1",
-        "at y=1"
+        "at y=1",
+        "at (0,1)",
+        "y-intercept is 1",
+        "the point (0,1)"
       ],
       "reject": [],
       "strictRecall": true,
@@ -114,7 +119,10 @@
         "k e^(kx).",
         "ke^(kx)",
         "k exp(kx)",
-        "k times e to the kx"
+        "k times e to the kx",
+        "k e^(kx)",
+        "k*e^(kx)",
+        "k multiplied by e^(kx)"
       ],
       "reject": [],
       "strictRecall": true,
@@ -139,7 +147,9 @@
         "n.",
         "n",
         "the power n",
-        "the exponent n"
+        "the exponent n",
+        "the gradient is n",
+        "gradient n"
       ],
       "reject": [],
       "strictRecall": true,
@@ -164,7 +174,9 @@
         "Negative (k < 0).",
         "k<0",
         "negative",
-        "k is negative"
+        "k is negative",
+        "k is less than 0",
+        "negative k"
       ],
       "reject": [],
       "strictRecall": true,
@@ -188,7 +200,9 @@
       "accept": [
         "The instantaneous rate of change of N with time.",
         "instantaneous rate of change of N",
-        "rate of change of N with respect to t"
+        "rate of change of N with respect to t",
+        "instantaneous rate of change",
+        "the instantaneous change in N per unit time"
       ],
       "reject": [],
       "strictRecall": true,
@@ -213,7 +227,9 @@
         "f(b) − f(a).",
         "f(b)-f(a)",
         "f of b minus f of a",
-        "change in f from a to b"
+        "change in f from a to b",
+        "f(b) - f(a)",
+        "the value at b minus the value at a"
       ],
       "reject": [],
       "strictRecall": true,
