@@ -34,7 +34,7 @@ assert(sw.includes("'./maths-as-pure-marking-v191.js'"));
 assert(sw.includes('v191-as-pure-gap-bank'));
 assert.match(html,/maths-as-pure-marking-v191\.js\?v=191/);
 assert.match(html,/app\.js\?v=192/);
-assert(html.indexOf('maths-as-pure-marking-v191.js')<html.indexOf('app.js?v=191'));
+assert(html.indexOf('maths-as-pure-marking-v191.js')<html.indexOf('app.js?v=192'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 const w={};
 vm.runInNewContext(script,{window:w});
