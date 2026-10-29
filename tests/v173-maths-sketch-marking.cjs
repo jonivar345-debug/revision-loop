@@ -19,7 +19,9 @@ const m=deck.cards.filter(c=>c.subject==='Maths'&&c.active!==false&&c.mock===tru
 assert.equal(m.length,116);
 assert(m.every(c=>c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)));
 const selected=bank.questions.filter(q=>q.subject==='Maths'&&eligible(q));
-assert.equal(selected.length,129);
+assert.equal(selected.length,128);
+assert(!selected.some(q=>/proof by contradiction/i.test(q.prompt)));
+assert(!eligible(bank.questions.find(q=>q.id==='orig_v31_maths_proof_2')));
 assert(selected.every(q=>q.level==='AS'));
 assert(!selected.some(q=>/(\bradians?\b|π)/i.test(q.prompt)));
 assert(!selected.some(q=>['statistics','mechanics'].includes(String(q.topic).toLowerCase())));
@@ -95,5 +97,5 @@ canvas.fire('pointerup',event(120,95));
  assert.deepEqual(JSON.parse(JSON.stringify(submitted)),{id:'diagram-test',src:'data:image/png;base64,AAAA'});
  assert.equal(audit.limits.pureMockLevelASOnly,true);
  assert.equal(audit.limits.autoSketchMarking,false);
- console.log('PASS v173: 116 AS Pure flashcards, 129 AS Pure questions, safe sketch attachment and manual marking.');
+ console.log('PASS v173: 116 AS Pure base flashcards, 128 AS Pure questions, safe sketch attachment and manual marking.');
 })().catch(e=>{console.error(e);process.exitCode=1});
