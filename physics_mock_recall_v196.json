@@ -1,0 +1,69 @@
+{
+  "version": "v196",
+  "createdAt": "2026-10-29",
+  "subject": "Physics",
+  "scope": "AS/school-mock single-recall applications; no operational laboratory procedures",
+  "notes": "Context-sensitive contrasts added only where earlier audited cards covered general laws or basic colours rather than this inference. Strict accepted and rejected variants; not an exhaustive spec crosswalk.",
+  "cards": [
+    {
+      "id": "task1_v196_phy_001",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "front": "A warming NTC thermistor is in the upper branch of a potential divider. Vout is across a lower fixed resistor. Does Vout rise or fall when the thermistor warms?",
+      "back": "Vout rises.",
+      "accept": [
+        "Vout rises.",
+        "increases",
+        "rises",
+        "goes up",
+        "output voltage increases"
+      ],
+      "reject": [
+        "falls",
+        "decreases",
+        "stays the same"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v196_phy_002",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "front": "A resistor is connected as a load in parallel with the lower branch of an ideal-supply potential divider. What happens to the supply current?",
+      "back": "Supply current increases.",
+      "accept": [
+        "Supply current increases.",
+        "current increases",
+        "increases",
+        "current rises",
+        "source current goes up"
+      ],
+      "reject": [
+        "decreases",
+        "falls",
+        "unchanged"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    }
+  ]
+}
