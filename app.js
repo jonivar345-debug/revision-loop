@@ -1262,7 +1262,7 @@ function evaluateTollensObservation(input){
  // In comparisons, "ketones give no silver mirror" is correct, unlike
  // "aldehydes give no silver mirror". Tie negations to the relevant subject.
  const ketoneNegative=/\bketones?\b.{0,45}\b(?:don't|doesn't|do not|does not|never|no)\b.{0,35}\b(?:silver|mirror|deposit)\b|\bketones?\b.{0,45}\b(?:give|gives|form|forms|produce|produces|show|shows)\s+no\b.{0,22}\b(?:silver|mirror|deposit)\b/i.test(s);
- const aldehydePositive=/\baldehydes?\b.{0,45}\b(?:give|gives|form|forms|produce|produces|show|shows)\b.{0,30}\b(?:silver|mirror|deposit)\b|\b(?:silver mirror|silver deposit)\b.{0,30}\b(?:for|from|with)\s+(?:an?\s+)?aldehydes?\b|\b(?:but|whereas|while|and)\s+aldehydes?\s+do\b/i.test(s);
+ const aldehydePositive=/\baldehydes?\b.{0,45}\b(?:give|gives|form|forms|produce|produces|show|shows)\b.{0,30}\b(?:silver|mirror|deposit)\b|\b(?:silver mirror|silver deposit)\b.{0,30}\b(?:for|from|with)\s+(?:an?\s+)?aldehydes?\b|\b(?:but|whereas|while|and)\s+aldehydes?\s+do\b(?!\s+(?:not|never))/i.test(s);
  const aldehydeNegative=/\baldehydes?\b.{0,40}\b(?:don't|doesn't|do not|does not|never|no|without)\b.{0,30}\b(?:silver|mirror|deposit)\b|\bno\s+silver\b.{0,20}\b(?:for|from|with)\b.{0,15}\baldehydes?\b/i.test(s);
  if(ketoneNegative&&aldehydePositive&&!aldehydeNegative)return {status:'correct',score:1,text:'Correct: aldehydes give a silver mirror; ordinary ketones do not.',missing:[]};
  const deniesSilver=/\b(?:no|not|never|without|none)\b.{0,25}\b(?:silver|mirror|deposit)\b|\b(?:don't|doesn't|do not|does not)\b.{0,25}\b(?:silver|mirror|deposit)\b/i.test(s);
