@@ -93,6 +93,10 @@ on:
       - 'maths_mock_recall_v192.json'
       - 'editorial/task1-v192-maths-scope-and-recall-audit.json'
       - 'tests/task1-v192-maths-scope-recall.cjs'
+      - 'physics_mock_recall_v193.json'
+      - 'chemistry_mock_recall_v193.json'
+      - 'editorial/task1-v193-science-mock-precision-audit.json'
+      - 'tests/task1-v193-science-mock-precision.cjs'
       - 'editorial/task1-v190-maths-pure-application-audit.json'
       - 'tests/task1-v190-maths-pure-questions.cjs'
       - 'editorial/task1-v189-enthalpy-energy-recall-audit.json'
@@ -255,6 +259,7 @@ jobs:
       - run: node tests/task1-v190-maths-pure-questions.cjs
       - run: node tests/task1-v191-as-pure-gap-questions.cjs
       - run: node tests/task1-v192-maths-scope-recall.cjs
+      - run: node tests/task1-v193-science-mock-precision.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
