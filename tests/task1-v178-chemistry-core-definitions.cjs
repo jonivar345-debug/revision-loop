@@ -17,7 +17,7 @@ for(const row of audit.reviewed){
  assert(old.has(row.id)&&!done.has(row.id),'Already reviewed or missing historical '+row.id);
  assert(c.active!==false&&c.mock===true&&c.subject==='Chemistry','Not Chemistry mock '+row.id);
  assert.equal(c.front,row.front);assert.equal(c.back,row.back);
- assert(row.aqaSection&&(/^3\\.1\\./.test(row.aqaSection)||row.aqaSection==='7.2'),'Unexpected AQA section '+row.id);
+ assert(row.aqaSection&&(/^3\.1\./.test(row.aqaSection)||row.aqaSection==='7.2'),'Unexpected AQA section '+row.id);
 }
 for(const row of audit.corrections){
  const c=byId.get(row.id);assert(c&&c.active!==false&&c.mock===true);
