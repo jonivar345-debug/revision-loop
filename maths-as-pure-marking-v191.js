@@ -34,11 +34,17 @@
     break;
    }
    case 'originalAs191Circle':{
-    const square=flat(/\(x-3\)\^2\+\(y\+2\)\^2=25/);
-    const centre=has(/(?:centre|center)\s*\(?\s*3\s*,\s*-2\s*\)?/)&&has(/(?:radius|r\s*=)\s*5\b/);
-    const point=flat(/9\+16=25|3\^2\+4\^2=25/)&&has(/\b(?:lies|on|verified|satisfies|substitut)/);
-    const gradient=flat(/4\/3/)&&flat(/-3\/4/);
-    const tangent=flat(/3x\+4y-26=0|y-2=-3\(x-6\)\/4/);
+    // Equivalent rearrangements are one tangent mark, never extra marks.
+    const square=flat(/\(x-3\)\^2\+\(y\+2\)\^2=25|\(y\+2\)\^2\+\(x-3\)\^2=25/);
+    const centre=has(/(?:centre|center)\s*(?:(?:is|at)\s*|[=:]\s*)?\(?\s*3\s*,\s*-2\s*\)?/)&&
+      has(/(?:radius\s*(?:(?:is)\s*|[=:]\s*)?|r\s*=\s*)5\b/);
+    const point=flat(/9\+16=25|3\^2\+4\^2=25|\(6-3\)\^2\+\(2\+2\)\^2=25|\(2\+2\)\^2\+\(6-3\)\^2=25/)&&
+      has(/\b(?:lies|on|verified|satisfies|substitut)\b|\bat\s*p\b/);
+    const gradient=(flat(/4\/3/)||flat(/1\.333(?:3)*/))&&(flat(/-3\/4/)||flat(/-0\.75/));
+    const sameTangent=flat(/3x\+4y-26=0|3x\+4y=26|4y=-3x\+26|y=-3x\/4\+13\/2|y=-0\.75x\+6\.5|y-2=-3\(x-6\)\/4|y-2=-3\/4\(x-6\)/);
+    // Do not award a point for an equation explicitly disowned as wrong.
+    const deniesTangent=has(/\b(?:not\s+(?:a\s+|the\s+)?tangent|tangent\s+(?:is|was)\s+(?:not|wrong|incorrect)|tangent\s+equation\s+(?:is|was)\s+not|26\s*(?:=\s*0)?\s+is\s+(?:not|wrong|incorrect))\b/);
+    const tangent=sameTangent&&!deniesTangent;
     marks=[square,centre,point,gradient,tangent];
     break;
    }
