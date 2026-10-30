@@ -54,15 +54,16 @@
     put(3,flat(/50-30=20s?/));
     put(4,find(/(?:gradient|slope)[^.;]{0,35}(?:-9(?:\.00)?\s*\*\s*10\^-4|-9(?:\.00)?e-4|-0\.0009(?:00)?)(?!\d)/));
     put(5,find(/(?:rate\s+of\s+(?:disappearance|reaction)|instantaneous\s+rate)[^.;]{0,45}(?:\+?9(?:\.00)?\s*\*\s*10\^-4|\+?9(?:\.00)?e-4|\+?0\.0009(?:00)?)(?!\d)/));
-    put(6,find(/(?:average\s+rate)[^.;]{0,55}(?:9\.5(?:0)?\s*\*\s*10\^-4|9\.5(?:0)?e-4|0\.00095(?:0)?)(?!\d)/));
+    put(6,find(/(?:average\s+rate)[^.;]{0,55}(?:9\.5(?:0)?\s*\*\s*10\^-4|9\.5(?:0)?e-4|0\.00095(?:0)?)(?!\d)/)&&
+      !find(/average\s+rate[^.;]{0,50}(?:=|is)\s*-\s*(?:9\.5|0\.00095)/));
     put(7,find(/\btangent\b[^.;]{0,100}\binstantaneous\b[^.;]{0,100}\baverage\b|\binstantaneous\b[^.;]{0,100}\btangent\b[^.;]{0,100}\baverage\b/));
     break;
    }
    case 'task1_v210_chem_03':{
-    put(0,find(/(?:x|dataset x)[^.;]{0,100}\bzero[\s-]*order\b|\bzero[\s-]*order\b[^.;]{0,100}\b(?:x|dataset x)\b/));
+    put(0,find(/\b(?:dataset\s+)?x\b\s*(?:is|shows|has|:)?\s*zero[\s-]*order\b|\bzero[\s-]*order\s+(?:for|in|of)\s+(?:dataset\s+)?x\b/));
     put(1,find(/(?:\bk\s*=\s*|rate[^.;]{0,15})(?:1(?:\.00)?\s*\*\s*10\^-3|1(?:\.00)?e-3|0\.001(?:00)?)(?!\d)/));
     put(2,find(/mol\s+dm\s*(?:\^-?3|-3)\s*s\s*(?:\^-?1|-1)/));
-    put(3,find(/\b(?:dataset\s+)?y\b[^.;]{0,100}\bfirst[\s-]*order\b|\bfirst[\s-]*order\b[^.;]{0,100}\b(?:dataset\s+)?y\b/));
+    put(3,find(/\b(?:dataset\s+)?y\b\s*(?:is|shows|has|:)?\s*first[\s-]*order\b|\bfirst[\s-]*order\s+(?:for|in|of)\s+(?:dataset\s+)?y\b/));
     put(4,find(/(?:half[\s-]*life|t\s*(?:1\/2|½))[^.;]{0,30}\b20\s*s\b/));
     put(5,find(/\bk\s*=\s*(?:0\.0347|3\.47\s*\*\s*10\^-2|3\.47e-2)(?!\d)/));
     put(6,find(/\bk\b[^.;]{0,40}\bs\s*(?:\^-?1|-1)\b|\bunits\s+(?:are|of)\s+s\s*(?:\^-?1|-1)\b/));
@@ -75,7 +76,7 @@
     put(2,find(/(?:e\s*a|activation\s+energy)[^.;]{0,35}\b74\.8\s*kj\s*mol/));
     put(3,find(/(?:intercept|ln\s*a)\s*(?:is|=)?\s*(?:ln\s*a\s*=\s*)?25(?:\.0)?\b|(?:intercept)\s*(?:is|=)\s*ln\s*a/));
     put(4,find(/(?:arrhenius\s+constant|prefactor|\ba\s*=)[^.;]{0,55}(?:7\.2(?:0)?\s*\*\s*10\^10|7\.2(?:0)?e10|72000000000)(?!\d)/));
-    put(5,find(/ln\s*k[^.;]{0,80}\b-5(?:\.00)?\b/));
+    put(5,find(/ln\s*k[^.;]{0,80}(?:=|is)\s*-5(?:\.0+)?(?:\b|$)/));
     put(6,find(/(?:\bk\b|rate\s+constant)[^.;]{0,40}(?:6\.74\s*\*\s*10\^-3|6\.74e-3|0\.00674)(?!\d)/));
     put(7,find(/(?:increas(?:ing|ed)?|higher)\s+temperature[^.;]{0,130}\b(?:k|rate\s+constant)\b[^.;]{0,65}\bincreas|\bk\b[^.;]{0,80}\bincreas[^.;]{0,95}\btemperature\b/));
     break;
