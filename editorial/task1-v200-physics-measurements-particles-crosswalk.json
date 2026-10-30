@@ -1,0 +1,121 @@
+{
+  "version": "v200",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "School Year 1 AS Physics mock content only. Both areas are AS compulsory; no optional or Year 2 Physics or Year 2 Maths mock material.",
+  "officialSpecificationReferences": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/practical-assessment"
+  ],
+  "evidenceReviewed": [
+    {
+      "file": "editorial/task1-v160-measurements-mock-audit.json",
+      "previousAuditedOutcomes": 32,
+      "priorQuestionAdds": 2,
+      "interpretation": "Existing cards explicitly represent base SI units/prefixes, measurement uncertainty and graph extreme-line methods, so target new applied calculations rather than duplicate definitions."
+    },
+    {
+      "file": "editorial/task1-v160-particles-mock-audit.json",
+      "previousAuditedOutcomes": 46,
+      "priorQuestionAdds": 2,
+      "interpretation": "Existing cards represent particle properties, conservation, photons and matter waves; extend applied reasoning and independent numerical checking."
+    },
+    {
+      "file": "editorial/task1-v184-final-172-science-legacy-audit.json",
+      "previouslyReviewedLegacyScienceCards": 971,
+      "interpretation": "Legacy card answer review is complete; full official spec bullet certification and archived past-paper indexing are still open."
+    }
+  ],
+  "newQuestions": [
+    {
+      "id": "task1_v200_phy_01",
+      "specRef": "3.1.2",
+      "topic": "Measurements and errors",
+      "subtopic": "RP4 Young modulus and propagated diameter uncertainty",
+      "marks": 9
+    },
+    {
+      "id": "task1_v200_phy_02",
+      "specRef": "3.1.2",
+      "topic": "Measurements and errors",
+      "subtopic": "RP6 best-fit, extreme gradients and intercepts",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_03",
+      "specRef": "3.1.2",
+      "topic": "Measurements and errors",
+      "subtopic": "RP5 resistivity with instrument uncertainty and power",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_04",
+      "specRef": "3.1.2",
+      "topic": "Measurements and errors",
+      "subtopic": "Different readings, distance uncertainties and derived speed",
+      "marks": 7
+    },
+    {
+      "id": "task1_v200_phy_05",
+      "specRef": "3.1.1",
+      "topic": "Measurements and errors",
+      "subtopic": "SI conversion, photon energy and order of magnitude",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_06",
+      "specRef": "3.2.1.7",
+      "topic": "Particles and radiation",
+      "subtopic": "Conservation of electron-family lepton number in beta decay",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_07",
+      "specRef": "3.2.1.5",
+      "topic": "Particles and radiation",
+      "subtopic": "Strangeness in strong production and weak decay with supplied new particle",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_08",
+      "specRef": "3.2.1.3",
+      "topic": "Particles and radiation",
+      "subtopic": "Annihilation, photon energies and pair production threshold",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_09",
+      "specRef": "3.2.2.3",
+      "topic": "Particles and radiation",
+      "subtopic": "Photon emission from atomic levels and photoelectric response",
+      "marks": 8
+    },
+    {
+      "id": "task1_v200_phy_10",
+      "specRef": "3.2.2.4",
+      "topic": "Particles and radiation",
+      "subtopic": "de Broglie wavelength and accelerating voltage",
+      "marks": 7
+    }
+  ],
+  "counts": {
+    "newOriginalQuestions": 10,
+    "newMarks": 79,
+    "measurementsQuestions": 5,
+    "measurementsMarks": 40,
+    "particlesQuestions": 5,
+    "particlesMarks": 39,
+    "existingCoreCards": 3345,
+    "existingCoreQuestions": 1268,
+    "schoolMathsFirstMockQuestionCount": 138
+  },
+  "noNewFlashcardsReason": "All relevant basic facts for these first-year sections had existing audited recall evidence; extra cards would repeat rather than expand coverage. Harder exam application and an auditable source crosswalk address current gap.",
+  "limitations": [
+    "Review of 78 previously audited candidate outcomes does not prove exhaustive every-spec-bullet coverage.",
+    "No complete 2015–2026 original AQA paper archive certification. The practice is original and may not exactly mirror AQA official marking.",
+    "Model answers are accepted by the site's auto-marker but real alternative working and partial marks may require human review.",
+    "Core card IDs, study progress, mock scope, XP and World assets stay unchanged."
+  ]
+}
