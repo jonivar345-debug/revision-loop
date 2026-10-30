@@ -2680,6 +2680,15 @@ function reviewedExpressionEvidence(answer,expression){
   preds=reviewedShortFlags;
   suggested=totalMarkingPoints(q,preds);
  }
+ // The generic fuzzy matcher can mistake an explicitly wrong physical unit
+ // for a valid final value. Apply only exact, individually reviewed rejects.
+ if(Array.isArray(q.reviewedShortAnswerRejects)){
+  const canonical=s=>normalise(s).replace(/[.!?]+$/,'').trim();
+  if(q.reviewedShortAnswerRejects.some(bad=>canonical(answer)===canonical(bad))){
+   preds=preds.map(()=>false);
+   suggested=0;
+  }
+ }
  const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
