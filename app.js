@@ -2206,6 +2206,12 @@ function reviewedShortAnswerFlags(q,answer){
  return flags.some(Boolean)?flags:null;
 }
 function examSuggested(q,answer){
+ // v213: use reviewed independent evidence on four AS materials/circuit
+ // questions; other answers retain ordinary, user-adjustable marking.
+ if(/^task1_v203_phy_0[4-7]$/.test(String(q.id||''))){
+  const adjusted=typeof window!=='undefined'?window.RevisionPhysicsMaterialsV213?.evaluate(q,answer):null;
+  if(adjusted)return adjusted;
+ }
  // v211: exact, independently calibrated physics short answers and negative
  // sign/unit statements. Unknown wording retains existing reviewable marking.
  if(/^task1_v203_phy_(?:01|03|08)$/.test(String(q.id||''))){
