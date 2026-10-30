@@ -2231,8 +2231,10 @@ function examSuggested(q,answer){
    const conclusion=/divisible\s+by\s+6|multiple\s+of\s+6/i.test(phrase);
    flags=[factor,even,three,conclusion&&even&&three];
   }else if(q.markingMode==='origPure190OddSquare'){
-   const odd=/n=2[a-z][+-]1(?!\d)/.test(flat);
-   const square=/n\^2=(?:4k\(k\+1\)\+1|4k\^2\+4k\+1|\(2k\+1\)\^2)/.test(flat);
+   const deniedOdd=/\b(?:not|never)\s+(?:(?:an?|the)\s+)?(?:odd\s+integer\s+(?:is|as)\s+)?n\s*=\s*2[a-z]\s*[+-]\s*1\b|\bn\s*=\s*2[a-z]\s*[+-]\s*1\b[^.;\n]{0,28}\b(?:wrong|incorrect|false|not\s+correct|is\s+not|was\s+not)\b/i.test(raw);
+   const odd=/n=2[a-z][+-]1(?!\d)/.test(flat)&&!deniedOdd;
+   const square=/n\^2=(?:4k\(k\+1\)\+1|4k\(k-1\)\+1|4k\^2\+4k\+1|4k\^2-4k\+1|\(2k\+1\)\^2|\(2k-1\)\^2)/.test(flat)||
+     /\(2k-1\)\^2=4k\(k-1\)\+1/.test(flat);
    const even=/\beven\b/i.test(phrase)&&/consecutive|k\s*\(\s*k\s*\+\s*1\s*\)/i.test(phrase);
    const conclusion=/n\^2=8[a-z]\+1/.test(flat)||(/remainder\s+(?:of\s+|is\s+)?1/i.test(phrase)&&/\b8\b/.test(phrase));
    flags=[odd,square,even,conclusion];
