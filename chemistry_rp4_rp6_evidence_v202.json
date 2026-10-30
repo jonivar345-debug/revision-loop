@@ -50,7 +50,24 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_01",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "X is chloride.",
+          "X is Cl-.",
+          "X is chloride, Y is bromide, Z is iodide."
+        ],
+        "1": [
+          "Y is bromide.",
+          "Y is Br-.",
+          "X is chloride, Y is bromide, Z is iodide."
+        ],
+        "2": [
+          "Z is iodide.",
+          "Z is I-.",
+          "X is chloride, Y is bromide, Z is iodide."
+        ]
+      }
     },
     {
       "id": "task1_v202_chem_02",
@@ -195,7 +212,19 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_04",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "2": [
+          "Maximum mass is 20.5 g.",
+          "The theoretical mass is 20.5 g.",
+          "Maximum mass is 20.5 g, yield is 80%."
+        ],
+        "3": [
+          "Percentage yield is 80%.",
+          "The percentage yield is 80%.",
+          "Maximum mass is 20.5 g, yield is 80%."
+        ]
+      }
     },
     {
       "id": "task1_v202_chem_05",
@@ -242,7 +271,19 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_05",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "A is reflux.",
+          "Sketch A represents reflux.",
+          "A is reflux and B is distillation."
+        ],
+        "1": [
+          "B is distillation.",
+          "Sketch B represents distillation.",
+          "A is reflux and B is distillation."
+        ]
+      }
     },
     {
       "id": "task1_v202_chem_06",
@@ -291,7 +332,12 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_06",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerRejects": [
+        "The sample is definitely 100% pure because it boils at 72°C.",
+        "80% recovery proves the fraction is pure.",
+        "The 72°C boiling point proves 100% purity."
+      ]
     },
     {
       "id": "task1_v202_chem_07",
@@ -389,7 +435,24 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_08",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "P is primary.",
+          "P is a primary alcohol.",
+          "P is primary, Q secondary, R tertiary."
+        ],
+        "1": [
+          "Q is secondary.",
+          "Q is a secondary alcohol.",
+          "P is primary, Q secondary, R tertiary."
+        ],
+        "2": [
+          "R is tertiary.",
+          "R is a tertiary alcohol.",
+          "P is primary, Q secondary, R tertiary."
+        ]
+      }
     },
     {
       "id": "task1_v202_chem_09",
@@ -438,7 +501,24 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_09",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "U is an aldehyde.",
+          "U contains an aldehyde.",
+          "U is an aldehyde, V a carboxylic acid, W an alkene."
+        ],
+        "4": [
+          "V is a carboxylic acid.",
+          "V is an organic acid.",
+          "U is an aldehyde, V a carboxylic acid, W an alkene."
+        ],
+        "6": [
+          "W is an alkene.",
+          "W contains C=C.",
+          "U is an aldehyde, V a carboxylic acid, W an alkene."
+        ]
+      }
     }
   ]
 }
