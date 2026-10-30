@@ -1,0 +1,81 @@
+{
+  "version": "v210",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "School Chemistry mock: AQA 7405 taught 3.1.9 Rate equations, Required Practical 7 theoretical data interpretation, and 3.1.10 homogeneous Kp. No buffers or later untaught material.",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "practicalSource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+  "priorComparedFiles": [
+    "editorial/task1-v199-chemistry-mock-tests-crosswalk.json",
+    "science_practical_data_v194.json",
+    "chemistry_mock_precision_v199.json",
+    "science_mock_application_v195.json",
+    "chemistry_mock_recall_v199.json"
+  ],
+  "decision": "Existing early/late mock practice includes kinetics temperature effects, Arrhenius graph and Kp mole fractions; this release adds a distinct RP7 initial/continuous-monitoring data comparison and cross-topic quantitative diagnostic. It is reinforcement, not a proven previously missing official syllabus bullet.",
+  "newOriginalExamQuestions": [
+    {
+      "id": "task1_v210_chem_01",
+      "ref": "3.1.9.1",
+      "marks": 9,
+      "target": "Independent rate orders, k, units, new initial rate from controlled data"
+    },
+    {
+      "id": "task1_v210_chem_02",
+      "ref": "3.1.9.2",
+      "marks": 8,
+      "target": "RP7 reactant concentration tangent and average gradient with signed and positive rates"
+    },
+    {
+      "id": "task1_v210_chem_03",
+      "ref": "3.1.9.2",
+      "marks": 8,
+      "target": "Zero-order straight-line trend, first-order half-life and k units"
+    },
+    {
+      "id": "task1_v210_chem_04",
+      "ref": "3.1.9.1",
+      "marks": 8,
+      "target": "Arrhenius gradient, intercept, Ea and rate constant at a new temperature"
+    },
+    {
+      "id": "task1_v210_chem_05",
+      "ref": "3.1.10",
+      "marks": 9,
+      "target": "N2O4/NO2 equilibrium mole fractions, partial pressure, Kp and pressure comparison"
+    }
+  ],
+  "counts": {
+    "originalQuestionsAdded": 5,
+    "originalMarksAdded": 42,
+    "mockChemistryShortCardsAdded": 11,
+    "mainBankQuestionsUnchanged": 1268,
+    "coreFlashcardsUnchanged": 3345,
+    "reviewedAcceptedIsolatedClaims": 19,
+    "explicitWrongClaimChecks": 15
+  },
+  "qa": {
+    "numerics": {
+      "v210_01": "Orders 2,1; k=0.100 dm^6 mol^-2 s^-1; new initial rate 9.00e-4 mol dm^-3 s^-1",
+      "v210_02": "Signed tangent slope -9.00e-4; positive instantaneous rate 9.00e-4; mean 9.50e-4 mol dm^-3 s^-1",
+      "v210_03": "X zero order k=1.00e-3 mol dm^-3 s^-1; Y first order t1/2=20 s and k=0.0347 s^-1",
+      "v210_04": "Ea=74.8 kJ mol^-1, A=e^25=7.20e10 s^-1, k(300 K)=e^-5=0.00674 s^-1",
+      "v210_05": "N2O4=0.600 mol, NO2=0.800 mol; partial 60.0/80.0 kPa; Kp=107 kPa; Kp fixed at constant temperature"
+    },
+    "marking": "chemistry-rates-marking-v210.js isolates independent marks and rejects wrong numerical orders/signs. Conservative suggestions can miss unfamiliar correct workings; manual review is supported.",
+    "hardSafety": "The original questions analyse supplied readings and conceptual chemical models only; no hands-on protocol is required."
+  },
+  "preservation": [
+    "Existing card and question IDs unchanged",
+    "Existing first Maths mock remains Year 1 Pure only",
+    "No changes to XP, progress/profile/settings data or cloud-sync implementation",
+    "World galleries, assets, images and photo progress unchanged"
+  ],
+  "limitations": [
+    "No complete AQA specification requirement-level crosswalk is certified by this update.",
+    "No claim of student mastery, examiner-equivalent auto-grading, or full 2015–2026 original-paper archive.",
+    "Flashcards reinforce data interpretations; the presence of other similar legacy cards has not been exhaustively ruled out.",
+    "Five new questions are original authored practice, not official AQA past-paper copies."
+  ]
+}
