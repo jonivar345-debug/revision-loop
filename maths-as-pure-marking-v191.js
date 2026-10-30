@@ -109,8 +109,11 @@
     const positiveFraction=/(?<![-\d])4\/3/.test(t);
     const first=firstRef.test(t)&&positiveFraction&&!incorrect&&
       !has(/(?:from\s*x\s*=\s*0\s*to\s*1|\b0\s*to\s*1\b|∫\s*₀¹|∫\s*_?0\^1)[^.;\n]{0,80}(?:=\s*-4\/3|negative\s+4\/3)/);
-    const middle=middleRef.test(t)&&has(/-\s*4\/3|negative\s+4\/3/)&&
-      has(/(?:area\s*(?:is|of|=)?|its\s+area|magnitude)[^.;\n]{0,30}(?<![-\d])4\/3/)&&!incorrect;
+    // Either a correct negative signed integral or the correctly positive
+    // middle region area can earn the single interval mark.
+    const signedMiddle=has(/(?:integral|∫)[^.;\n]{0,80}(?:-\s*4\/3|negative\s+4\/3)/);
+    const positiveMiddleArea=has(/(?:area|magnitude)[^.;\n]{0,45}(?<![-\d])4\/3/);
+    const middle=middleRef.test(t)&&(signedMiddle||positiveMiddleArea)&&!incorrect;
     const last=lastRef.test(t)&&positiveFraction&&!incorrect&&
       !has(/(?:from\s*x\s*=\s*3\s*to\s*4|\b3\s*to\s*4\b|∫\s*₃\^4|∫\s*₃⁴|∫\s*_?3\^4)[^.;\n]{0,80}(?:=\s*-4\/3|negative\s+4\/3)/);
     const statedTotal=has(/\b(?:total|combined)\s+area\s*(?:=|is|of)\s*\+?4\b|\barea\s+total\s*(?:=|is)\s*\+?4\b|^\s*(?:the\s+)?area\s*(?:=|is)\s*\+?4(?:\b|$)/);
