@@ -32,7 +32,7 @@ assert(app.includes("window.RevisionPureMathsV191?.evaluate(q,answer)"));
 assert(sw.includes("'./maths_as_pure_gap_challenges_v191.json'"));
 assert(sw.includes("'./maths-as-pure-marking-v191.js'"));
 assert(sw.includes('v191-as-pure-gap-bank'));
-assert.match(html,/maths-as-pure-marking-v191\.js\?v=204/);
+assert.match(html,/maths-as-pure-marking-v191\.js\?v=205/);
 assert.match(html,/app\.js\?v=203/);
 assert(html.indexOf('maths-as-pure-marking-v191.js')<html.indexOf('app.js?v=203'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
@@ -74,6 +74,41 @@ assert.equal(suggested(circle,'3x+4y−24=0').suggested,0);
 assert.equal(suggested(binomial,'x⁴ coefficient 800').suggested,0);
 assert.equal(suggested(area,'total area = -4').suggested,0);
 assert.equal(suggested(area,'total area =4').suggested,1);
+// v205: transformation roots are one mark regardless of equivalent algebraic form.
+const alternativeRoots=[
+ 'x=(4±3√2)/2',
+ 'x=2±(3√2)/2',
+ 'x=2±sqrt(9/2)',
+ 'x=2±sqrt(4.5)',
+ 'x=2+3√2/2 or x=2-3√2/2'
+];
+const validTransformSteps=[
+ 'Stretch vertically by a scale factor of 2',
+ 'Translate 3 units right',
+ 'Reflect in the x-axis',
+ 'x=2±3/√2',
+ 'Translate 1 up'
+];
+for(const answer of [...alternativeRoots,...validTransformSteps]){
+ const actual=suggested(transform,answer);
+ assert.equal(actual.suggested,1,'Valid transformation answer missed: '+answer);
+ assert.equal(actual.preds.filter(Boolean).length,1,'Extra marks for: '+answer);
+}
+const incorrectTransformClaims=[
+ 'x=2±3/√2 is wrong',
+ 'not x=2±3/√2',
+ 'Do not translate 3 units right',
+ 'Translate 3 units right is incorrect',
+ 'Do not reflect in the x-axis',
+ 'Not a vertical stretch by scale factor 2',
+ 'x=(4±3√2)/2 is incorrect',
+ 'x=2±sqrt(4.5) is wrong',
+ 'Do not translate 1 up',
+ 'Translate 1 up is wrong'
+];
+for(const answer of incorrectTransformClaims)
+ assert.equal(suggested(transform,answer).suggested,0,'Negated or incorrect transformation credited: '+answer);
+assert.equal(suggested(transform,'Translate 3 units right; reflect in the x-axis; stretch vertically by a scale factor of 2; translate 1 up; x=(4±3√2)/2').suggested,5);
 // v204: accept correct alternative algebra, but never a plainly disowned tangent.
 const circleSingleMark=[
  '3x+4y=26',
