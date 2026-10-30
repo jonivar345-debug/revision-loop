@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 1,
+  "version": "v203",
+  "createdAt": "2026-10-30",
+  "scope": "AQA 7408 first-year AS Physics 3.4.1.3 graphs, 3.4.2 materials, 3.5.1.5 potential dividers, and 3.5.1.6 emf and internal resistance. No Year 2 content or Maths mock mechanics.",
+  "notes": "Eight completely original exam-style application questions with six plotted SVG graphs, numeric values and reviewed full model answers; not AQA copyrighted exam extracts or official mark schemes. Requires calculation working and explanation.",
+  "questions": [
+    {
+      "id": "task1_v203_phy_01",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Changing displacement: tangent velocity versus average velocity",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "subtopic": "Instantaneous velocity from displacement–time tangent",
+      "marks": 8,
+      "prompt": "A displacement–time graph for a toy vehicle is supplied, with displacement measured from a fixed starting point. A tangent constructed at t = 2.0 s passes through the grid coordinates (1.0 s, 1.0 m) and (3.0 s, 11.0 m). The plotted curve passes through (0 s, 0 m), (1 s, 2 m), (2 s, 6 m), (3 s, 12 m), (4 s, 20 m). (a) Read the displacement at 2.0 s and 4.0 s. (b) Calculate the average velocity from 0 to 4.0 s and instantaneous velocity at 2.0 s. (c) Tangent-gradient estimates of velocity at 1.0 s and 3.0 s are 3.0 m s⁻¹ and 7.0 m s⁻¹. Use them to estimate acceleration. (d) Explain why average and instantaneous velocity are different concepts even when their numerical values happen to agree here. [8 marks]",
+      "markPoints": [
+        "Displacement at 2.0 s is 6.0 m from the displacement–time graph.",
+        "Displacement at 4.0 s is 20.0 m.",
+        "Average velocity from 0 to 4.0 s is (20.0−0)/4.0 = 5.0 m s⁻¹.",
+        "The tangent gradient at t = 2.0 s is (11.0−1.0)/(3.0−1.0) = 5.0 m s⁻¹.",
+        "The tangent gradient represents instantaneous velocity at that particular time.",
+        "The approximate acceleration from the two given velocities is (7.0−3.0)/(3.0−1.0) = 2.0 m s⁻².",
+        "The increasingly steep displacement–time curve indicates increasing positive velocity.",
+        "Average velocity uses overall displacement divided by elapsed time, whereas instantaneous velocity uses the local tangent gradient; equality at t = 2 s is coincidental."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Displacement at 2.0 s is 6.0 m from the displacement–time graph. Displacement at 4.0 s is 20.0 m. Average velocity from 0 to 4.0 s is (20.0−0)/4.0 = 5.0 m s⁻¹. The tangent gradient at t = 2.0 s is (11.0−1.0)/(3.0−1.0) = 5.0 m s⁻¹. The tangent gradient represents instantaneous velocity at that particular time. The approximate acceleration from the two given velocities is (7.0−3.0)/(3.0−1.0) = 2.0 m s⁻². The increasingly steep displacement–time curve indicates increasing positive velocity. Average velocity uses overall displacement divided by elapsed time, whereas instantaneous velocity uses the local tangent gradient; equality at t = 2 s is coincidental.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_01",
+      "groupOrder": 1,
+      "graphSpec": {
+        "description": "Curved displacement versus time graph with smooth sampled rising curve",
+        "xLabel": "Time / s",
+        "yLabel": "Displacement / m",
+        "xMin": 0,
+        "xMax": 4,
+        "yMin": 0,
+        "yMax": 20,
+        "xStep": 1,
+        "yStep": 5,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.25,
+            0.3125
+          ],
+          [
+            0.5,
+            0.75
+          ],
+          [
+            0.75,
+            1.3125
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1.25,
+            2.8125
+          ],
+          [
+            1.5,
+            3.75
+          ],
+          [
+            1.75,
+            4.8125
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2.25,
+            7.3125
+          ],
+          [
+            2.5,
+            8.75
+          ],
+          [
+            2.75,
+            10.3125
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            3.25,
+            13.8125
+          ],
+          [
+            3.5,
+            15.75
+          ],
+          [
+            3.75,
+            17.8125
+          ],
+          [
+            4,
+            20
+          ]
+        ]
+      },
+      "reviewedShortAnswerPoints": {
+        "3": [
+          "The tangent gradient is 5.0 m/s.",
+          "Tangent slope is 5 m/s."
+        ],
+        "4": [
+          "The instantaneous velocity at 2 s is 5 m/s.",
+          "Instantaneous velocity at t = 2 s is 5 m/s."
+        ],
+        "5": [
+          "The acceleration is 2.0 m/s^2.",
+          "Acceleration is +2 m s^-2."
+        ]
+      }
+    },
+    {
+      "id": "task1_v203_phy_02",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Crossing zero velocity: signed area, total distance and acceleration",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "subtopic": "Signed velocity-time areas and distance versus displacement",
+      "marks": 8,
+      "prompt": "A piecewise straight velocity–time graph has joined coordinates (0 s, 2 m s⁻¹), (2 s, 6 m s⁻¹), (4 s, 6 m s⁻¹), (6 s, −2 m s⁻¹) and (8 s, −2 m s⁻¹). Positive velocity is defined in the initial direction. (a) Find the signed displacement on each of the four intervals 0–2, 2–4, 4–6 and 6–8 s. (b) Determine the overall displacement. (c) Determine when the object changes direction. (d) Calculate its total distance travelled from 0 to 8 s, considering both sides of the axis. (e) Determine acceleration from 4 to 6 s. [8 marks]",
+      "markPoints": [
+        "Signed area from 0–2 s is (2+6)/2 × 2 = +8.0 m.",
+        "Signed area from 2–4 s is 6 × 2 = +12.0 m.",
+        "Signed area from 4–6 s is (6+(−2))/2 × 2 = +4.0 m.",
+        "Signed area from 6–8 s is −2 × 2 = −4.0 m.",
+        "Net displacement is 8+12+4−4 = +20.0 m.",
+        "Between 4 and 6 s, the graph crosses v = 0 at t = 5.5 s, when direction reverses.",
+        "Total distance is 8+12+4.5+0.5+4 = 29.0 m, adding magnitudes of positive and negative areas.",
+        "Acceleration from 4–6 s is (−2−6)/(6−4) = −4.0 m s⁻²."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Signed area from 0–2 s is (2+6)/2 × 2 = +8.0 m. Signed area from 2–4 s is 6 × 2 = +12.0 m. Signed area from 4–6 s is (6+(−2))/2 × 2 = +4.0 m. Signed area from 6–8 s is −2 × 2 = −4.0 m. Net displacement is 8+12+4−4 = +20.0 m. Between 4 and 6 s, the graph crosses v = 0 at t = 5.5 s, when direction reverses. Total distance is 8+12+4.5+0.5+4 = 29.0 m, adding magnitudes of positive and negative areas. Acceleration from 4–6 s is (−2−6)/(6−4) = −4.0 m s⁻².",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_02",
+      "groupOrder": 1,
+      "graphSpec": {
+        "description": "Velocity-time chart with positive and negative regions and a zero crossing after 5 seconds",
+        "xLabel": "Time / s",
+        "yLabel": "Velocity / m s⁻¹",
+        "xMin": 0,
+        "xMax": 8,
+        "yMin": -3,
+        "yMax": 7,
+        "xStep": 2,
+        "yStep": 2,
+        "points": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            -2
+          ],
+          [
+            8,
+            -2
+          ]
+        ]
+      },
+      "reviewedShortAnswerPoints": {
+        "4": [
+          "The net displacement is +20 m.",
+          "The signed displacement is 20 metres."
+        ],
+        "5": [
+          "The object changes direction at 5.5 s.",
+          "Velocity crosses zero at t = 5.5 s."
+        ],
+        "6": [
+          "The total distance is 29 m.",
+          "Distance travelled is 29 metres."
+        ],
+        "7": [
+          "The acceleration from 4 to 6 seconds is -4 m/s^2.",
+          "Acceleration is -4 m s^-2 from 4–6 s."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "Total distance travelled is 20 m.",
+        "Displacement is 29 m."
+      ]
+    },
+    {
+      "id": "task1_v203_phy_03",
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Acceleration–time graph: velocity changes and total displacement",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "subtopic": "Acceleration-time signed areas versus displacement",
+      "marks": 8,
+      "prompt": "A hypothetical object's acceleration is +2.0 m s⁻² between t = 0 and 3 s, then −3.0 m s⁻² between t = 3 and 5 s, and zero between t = 5 and 6 s. Its initial velocity is +2.0 m s⁻¹. The graph is flat in each interval, with sudden idealised changes at 3 and 5 s. (a) Find the change of velocity and velocity at t = 3 s. (b) Find the change and velocity at t = 5 s. (c) Find its velocity at 6 s, and the overall change in velocity from 0 to 6 s. (d) Calculate the displacement from 0 to 6 s, reasoning from the changing velocity, not directly from acceleration-time area. (e) Explain what signed area under an acceleration–time graph represents. [8 marks]",
+      "markPoints": [
+        "From 0–3 s, change of velocity is area +2 × 3 = +6.0 m s⁻¹.",
+        "Velocity at t = 3 s is 2+6 = 8.0 m s⁻¹.",
+        "From 3–5 s, change in velocity is −3 × 2 = −6.0 m s⁻¹.",
+        "Velocity at t = 5 s is 8−6 = 2.0 m s⁻¹.",
+        "Between 5 and 6 s, acceleration is zero so velocity remains +2.0 m s⁻¹.",
+        "Overall velocity change is +6−6+0 = 0 m s⁻¹, despite the object moving.",
+        "Displacement is (2+8)/2 × 3 + (8+2)/2 × 2 + 2×1 = 15+10+2 = 27.0 m.",
+        "Area under acceleration–time gives the change in velocity, not displacement; to obtain displacement use the velocity–time area."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "From 0–3 s, change of velocity is area +2 × 3 = +6.0 m s⁻¹. Velocity at t = 3 s is 2+6 = 8.0 m s⁻¹. From 3–5 s, change in velocity is −3 × 2 = −6.0 m s⁻¹. Velocity at t = 5 s is 8−6 = 2.0 m s⁻¹. Between 5 and 6 s, acceleration is zero so velocity remains +2.0 m s⁻¹. Overall velocity change is +6−6+0 = 0 m s⁻¹, despite the object moving. Displacement is (2+8)/2 × 3 + (8+2)/2 × 2 + 2×1 = 15+10+2 = 27.0 m. Area under acceleration–time gives the change in velocity, not displacement; to obtain displacement use the velocity–time area.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_03",
+      "groupOrder": 1,
+      "graphSpec": {
+        "description": "Three horizontal acceleration intervals of plus two, minus three, then zero",
+        "xLabel": "Time / s",
+        "yLabel": "Acceleration / m s⁻²",
+        "xMin": 0,
+        "xMax": 6,
+        "yMin": -4,
+        "yMax": 3,
+        "xStep": 1,
+        "yStep": 1,
+        "points": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            -3
+          ],
+          [
+            5,
+            -3
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ]
+      },
+      "reviewedShortAnswerPoints": {
+        "1": [
+          "The velocity at 3 seconds is 8 m/s.",
+          "Speed at 3 s is 8 m/s."
+        ],
+        "3": [
+          "The velocity at t = 5 s is 2 m/s.",
+          "Velocity at 5 s is +2 m/s."
+        ],
+        "5": [
+          "The overall change in velocity is zero.",
+          "Net velocity change is 0 m/s."
+        ],
+        "6": [
+          "The total displacement is 27 m.",
+          "Displacement over 6 s is +27 m."
+        ]
+      }
+    },
+    {
+      "id": "task1_v203_phy_04",
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Force–extension graph: nonlinear region and deformation work",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "subtopic": "Nonlinear force-extension graph work and Hooke law limitation",
+      "marks": 9,
+      "prompt": "A loading graph shows the following straight segments joining extension x (m) and applied force F (N): (0,0), (0.010,20), (0.020,40), (0.030,50), (0.040,50). (a) Determine stiffness in the first straight region and the limit of proportionality indicated by the changing gradient. (b) Calculate the area under the graph from 0 to 0.020 m, from 0.020 to 0.030 m and from 0.030 to 0.040 m. (c) Find total work done in increasing extension from zero to 0.040 m. (d) Explain why a single triangular area formula cannot be used for the entire curved/non-proportional loading path, and why this loading graph alone cannot prove all the work is recoverable elastic energy. [9 marks]",
+      "markPoints": [
+        "The initial stiffness is gradient ΔF/Δx = 20/0.010 = 2000 N m⁻¹.",
+        "Force is proportional to extension up to x = 0.020 m, where the loading slope begins changing.",
+        "Area from 0 to 0.020 m is triangular: ½ × 40 × 0.020 = 0.400 J.",
+        "Area from 0.020 to 0.030 m is trapezoidal: ½ × (40+50) × 0.010 = 0.450 J.",
+        "Area from 0.030 to 0.040 m is rectangular: 50 × 0.010 = 0.500 J.",
+        "The total external work done is 0.400+0.450+0.500 = 1.350 J.",
+        "Area under a force–extension graph equals mechanical work done during loading.",
+        "The whole curve is not F ∝ x, so ½F(final)×x(final) = 1.0 J is an incorrect replacement for the sum of the different areas.",
+        "An unloading curve is needed to establish recoverable energy and permanent extension; work done during nonlinear loading need not all remain as elastic strain energy."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The initial stiffness is gradient ΔF/Δx = 20/0.010 = 2000 N m⁻¹. Force is proportional to extension up to x = 0.020 m, where the loading slope begins changing. Area from 0 to 0.020 m is triangular: ½ × 40 × 0.020 = 0.400 J. Area from 0.020 to 0.030 m is trapezoidal: ½ × (40+50) × 0.010 = 0.450 J. Area from 0.030 to 0.040 m is rectangular: 50 × 0.010 = 0.500 J. The total external work done is 0.400+0.450+0.500 = 1.350 J. Area under a force–extension graph equals mechanical work done during loading. The whole curve is not F ∝ x, so ½F(final)×x(final) = 1.0 J is an incorrect replacement for the sum of the different areas. An unloading curve is needed to establish recoverable energy and permanent extension; work done during nonlinear loading need not all remain as elastic strain energy.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_04",
+      "groupOrder": 1,
+      "graphSpec": {
+        "description": "Force-extension graph with initially proportional section and flatter non-proportional region",
+        "xLabel": "Extension / m",
+        "yLabel": "Force / N",
+        "xMin": 0,
+        "xMax": 0.04,
+        "yMin": 0,
+        "yMax": 60,
+        "xStep": 0.01,
+        "yStep": 10,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.01,
+            20
+          ],
+          [
+            0.02,
+            40
+          ],
+          [
+            0.03,
+            50
+          ],
+          [
+            0.04,
+            50
+          ]
+        ]
+      },
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The stiffness is 2000 N/m.",
+          "The initial spring constant is 2000 N m^-1."
+        ],
+        "5": [
+          "Total work done is 1.35 J.",
+          "The work done is 1.35 J."
+        ],
+        "7": [
+          "Using 1/2 F x over the full curve is invalid.",
+          "The whole graph is non-linear, so a single triangular area is wrong."
+        ],
+        "8": [
+          "An unloading curve is needed to know recoverable energy.",
+          "You need the unloading curve to determine permanent extension."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "All 1.35 J is definitely recoverable elastic energy.",
+        "The total work is 1.0 J."
+      ]
+    },
+    {
+      "id": "task1_v203_phy_05",
+      "subject": "Physics",
+      "specRef": "3.4.2.2",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Stress–strain graph: Young modulus, force and elastic energy",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Mechanics & materials",
+      "revisionTopic": "Mechanics & materials",
+      "subtopic": "Stress-strain gradient and energy density",
+      "marks": 9,
+      "prompt": "A wire starts at length 1.40 m and has a cross-sectional area of 1.50 mm². Its stress–strain graph is straight between strain 0 and 0.0010, with stress rising from zero to 200 MPa; beyond that the graph bends to (strain 0.0020, stress 250 MPa) and (0.0030, 270 MPa). (a) Identify the proportional region and determine Young modulus in Pa. (b) Determine the force needed for a stress of 200 MPa and the extension at a strain of 0.0010. (c) From the straight-line area under the stress–strain graph, find stored energy per unit volume at strain 0.0010. (d) Find the specimen volume and stored energy at this strain. (e) Explain why you should not calculate the same Young modulus from the bent section. [9 marks]",
+      "markPoints": [
+        "The graph is straight through the origin up to strain 0.0010, identifying the proportional region.",
+        "Young modulus E = Δstress/Δstrain = 200×10⁶/0.0010 = 2.00×10¹¹ Pa.",
+        "Stress 200 MPa equals 2.00×10⁸ Pa.",
+        "Cross-sectional area 1.50 mm² equals 1.50×10⁻⁶ m², so F = σA = 300 N.",
+        "Extension ΔL = strain × original length = 0.0010 × 1.40 = 0.00140 m = 1.40 mm.",
+        "Elastic energy density up to the straight-line end is ½×200×10⁶×0.0010 = 1.00×10⁵ J m⁻³.",
+        "Volume of wire is A×L = 1.50×10⁻⁶×1.40 = 2.10×10⁻⁶ m³.",
+        "Stored elastic energy at this point is (1.00×10⁵)×(2.10×10⁻⁶) = 0.210 J.",
+        "The gradient changes in the bent/non-proportional region, so the original constant Young modulus cannot be extrapolated there."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The graph is straight through the origin up to strain 0.0010, identifying the proportional region. Young modulus E = Δstress/Δstrain = 200×10⁶/0.0010 = 2.00×10¹¹ Pa. Stress 200 MPa equals 2.00×10⁸ Pa. Cross-sectional area 1.50 mm² equals 1.50×10⁻⁶ m², so F = σA = 300 N. Extension ΔL = strain × original length = 0.0010 × 1.40 = 0.00140 m = 1.40 mm. Elastic energy density up to the straight-line end is ½×200×10⁶×0.0010 = 1.00×10⁵ J m⁻³. Volume of wire is A×L = 1.50×10⁻⁶×1.40 = 2.10×10⁻⁶ m³. Stored elastic energy at this point is (1.00×10⁵)×(2.10×10⁻⁶) = 0.210 J. The gradient changes in the bent/non-proportional region, so the original constant Young modulus cannot be extrapolated there.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_05",
+      "groupOrder": 1,
+      "graphSpec": {
+        "description": "Stress against strain in MPa, initial straight line followed by reduced gradient",
+        "xLabel": "Strain (dimensionless)",
+        "yLabel": "Stress / MPa",
+        "xMin": 0,
+        "xMax": 0.003,
+        "yMin": 0,
+        "yMax": 300,
+        "xStep": 0.0005,
+        "yStep": 50,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0.0005,
+            100
+          ],
+          [
+            0.001,
+            200
+          ],
+          [
+            0.002,
+            250
+          ],
+          [
+            0.003,
+            270
+          ]
+        ]
+      },
+      "reviewedShortAnswerPoints": {
+        "1": [
+          "Young modulus is 2.00 × 10^11 Pa.",
+          "E = 2.00 x 10^11 Pa."
+        ],
+        "4": [
+          "The extension is 1.40 mm.",
+          "The wire extends by 0.00140 m."
+        ],
+        "7": [
+          "The elastic energy is 0.210 J.",
+          "The stored energy is 0.21 J."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "Young modulus is 2.00 × 10^8 Pa."
+      ]
+    },
+    {
+      "id": "task1_v203_phy_06",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Loaded potential divider: compare output voltage and branch current",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "subtopic": "Loaded potential divider with equal branch and load resistances",
+      "marks": 8,
+      "prompt": "A 12.0 V ideal supply is connected across two series resistors, upper R₁ = 3.0 kΩ and lower R₂ = 6.0 kΩ. The output is the p.d. across the lower resistor. First the output is measured by an ideal voltmeter. Then a 6.0 kΩ load is connected across the output, in parallel with R₂. (a) Calculate unloaded output p.d. (b) Calculate the loaded lower-branch equivalent resistance and the new output. (c) Calculate total current and current through the added load in the loaded circuit. (d) Explain why load connection decreases the output p.d., and why a high-resistance voltmeter is preferable for unloaded measurement. [8 marks]",
+      "markPoints": [
+        "The unloaded output is Vout = 12 × 6/(3+6) = 8.0 V.",
+        "With the 6 kΩ load parallel to the 6 kΩ lower resistor, equivalent lower resistance is 3.0 kΩ.",
+        "The loaded series total is 3.0 kΩ + 3.0 kΩ = 6.0 kΩ.",
+        "The loaded output is 12 × 3/(3+3) = 6.0 V.",
+        "The total loaded supply current is 12.0/6000 = 2.00 mA.",
+        "Load current is output voltage divided by load resistance = 6/6000 = 1.00 mA.",
+        "Loading reduces the effective lower resistance, so a smaller fraction of the supply voltage appears across the output.",
+        "An ideal or high-resistance voltmeter draws negligible current, avoiding a misleading measurement caused by extra loading."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The unloaded output is Vout = 12 × 6/(3+6) = 8.0 V. With the 6 kΩ load parallel to the 6 kΩ lower resistor, equivalent lower resistance is 3.0 kΩ. The loaded series total is 3.0 kΩ + 3.0 kΩ = 6.0 kΩ. The loaded output is 12 × 3/(3+3) = 6.0 V. The total loaded supply current is 12.0/6000 = 2.00 mA. Load current is output voltage divided by load resistance = 6/6000 = 1.00 mA. Loading reduces the effective lower resistance, so a smaller fraction of the supply voltage appears across the output. An ideal or high-resistance voltmeter draws negligible current, avoiding a misleading measurement caused by extra loading.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_06",
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The unloaded output voltage is 8.0 V.",
+          "Before loading the output is 8 V."
+        ],
+        "3": [
+          "The loaded output voltage is 6.0 V.",
+          "After loading the output is 6 V."
+        ],
+        "4": [
+          "The total circuit current is 2.00 mA.",
+          "The total current is 0.002 A."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "The loaded output is 8.0 V."
+      ]
+    },
+    {
+      "id": "task1_v203_phy_07",
+      "subject": "Physics",
+      "specRef": "3.5.1.5",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Thermistor and LDR potential dividers: explain output direction",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "subtopic": "NTC and LDR in divider lower branch, reversing sense",
+      "marks": 8,
+      "prompt": "Circuit A is a potential divider on a constant 10.0 V supply: a fixed 4.0 kΩ upper resistor and an NTC thermistor in the lower branch, with output across the NTC. Its resistance is 4.0 kΩ when cool and 1.0 kΩ when hot. Circuit B uses a 5.0 kΩ upper fixed resistor and an LDR below it, again with output across the sensor: its resistance is 10.0 kΩ in the dark and 2.0 kΩ under bright light. No external load is attached. (a) Calculate both output voltages for A. (b) State the NTC temperature trend and explain the output trend. (c) Calculate both output voltages for B. (d) Explain the LDR brightness trend and predict how placing each sensor in the *upper* rather than lower branch would change the direction of the output response. [8 marks]",
+      "markPoints": [
+        "For NTC cool (4 kΩ), output is 10×4/(4+4) = 5.00 V.",
+        "For NTC hot (1 kΩ), output is 10×1/(4+1) = 2.00 V.",
+        "NTC thermistor resistance falls when temperature rises.",
+        "Since the NTC forms the lower branch, heating reduces the fraction of supply p.d. across it.",
+        "For LDR dark (10 kΩ), output is 10×10/(5+10) = 6.67 V.",
+        "For LDR bright (2 kΩ), output is 10×2/(5+2) = 2.86 V.",
+        "LDR resistance falls with increasing light intensity, reducing lower-branch output in the brighter case.",
+        "With the sensing resistor in the upper branch and the output across a fixed lower resistor, reducing sensor resistance would make the output voltage rise instead."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "For NTC cool (4 kΩ), output is 10×4/(4+4) = 5.00 V. For NTC hot (1 kΩ), output is 10×1/(4+1) = 2.00 V. NTC thermistor resistance falls when temperature rises. Since the NTC forms the lower branch, heating reduces the fraction of supply p.d. across it. For LDR dark (10 kΩ), output is 10×10/(5+10) = 6.67 V. For LDR bright (2 kΩ), output is 10×2/(5+2) = 2.86 V. LDR resistance falls with increasing light intensity, reducing lower-branch output in the brighter case. With the sensing resistor in the upper branch and the output across a fixed lower resistor, reducing sensor resistance would make the output voltage rise instead.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_07",
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The cool NTC output is 5.0 V.",
+          "The thermistor output when cool is 5 V."
+        ],
+        "1": [
+          "The hot NTC output is 2.0 V.",
+          "The thermistor output when hot is 2 V."
+        ],
+        "4": [
+          "LDR output in the dark is 6.67 V.",
+          "The dark output voltage is 6.67 V."
+        ],
+        "5": [
+          "LDR output in bright light is 2.86 V.",
+          "The bright output voltage is 2.86 V."
+        ]
+      }
+    },
+    {
+      "id": "task1_v203_phy_08",
+      "subject": "Physics",
+      "specRef": "3.5.1.6",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style Physics Graphs and Circuits",
+      "paper": "Original",
+      "question": "Cell V–I graph: internal resistance and electrical energy balance",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "subtopic": "Terminal voltage graph with lost volts and power accounting",
+      "marks": 9,
+      "prompt": "A cell's measured terminal voltage V against current I is described by a straight graph through (I = 0.20 A, V = 1.40 V) and (I = 0.80 A, V = 1.10 V), with voltage on the vertical axis. A 2.0 Ω external resistor is then connected to the cell. Assume the internal resistance stays constant and wires have negligible resistance. (a) Find the gradient, internal resistance and emf. (b) Find the circuit current and terminal p.d. (c) Calculate lost volts across the internal resistance. (d) Find useful external power, internal heating power and total chemical power from the emf, and show energy is accounted for. [9 marks]",
+      "markPoints": [
+        "The gradient of terminal V against current I is (1.10−1.40)/(0.80−0.20) = −0.50 V A⁻¹.",
+        "Since V = ε−Ir, the internal resistance is r = +0.50 Ω.",
+        "The y-intercept is emf ε = 1.40+0.50×0.20 = 1.50 V.",
+        "With external R = 2.0 Ω, the current is ε/(R+r) = 1.50/2.50 = 0.600 A.",
+        "Terminal voltage is IR = 0.600×2.0 = 1.20 V.",
+        "The internal lost voltage is Ir = 0.600×0.50 = 0.300 V.",
+        "External delivered power is I²R = (0.600)²×2.0 = 0.720 W.",
+        "Internal heating power is I²r = (0.600)²×0.50 = 0.180 W.",
+        "Total emf power is εI = 1.50×0.600 = 0.900 W, equal to 0.720+0.180 W as required by energy conservation."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The gradient of terminal V against current I is (1.10−1.40)/(0.80−0.20) = −0.50 V A⁻¹. Since V = ε−Ir, the internal resistance is r = +0.50 Ω. The y-intercept is emf ε = 1.40+0.50×0.20 = 1.50 V. With external R = 2.0 Ω, the current is ε/(R+r) = 1.50/2.50 = 0.600 A. Terminal voltage is IR = 0.600×2.0 = 1.20 V. The internal lost voltage is Ir = 0.600×0.50 = 0.300 V. External delivered power is I²R = (0.600)²×2.0 = 0.720 W. Internal heating power is I²r = (0.600)²×0.50 = 0.180 W. Total emf power is εI = 1.50×0.600 = 0.900 W, equal to 0.720+0.180 W as required by energy conservation.",
+      "answerType": "points",
+      "questionType": "graph and circuit interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v203_phy_08",
+      "groupOrder": 1,
+      "graphSpec": {
+        "description": "Terminal p.d. falling linearly with current; negative slope and nonzero emf intercept",
+        "xLabel": "Current / A",
+        "yLabel": "Terminal p.d. / V",
+        "xMin": 0,
+        "xMax": 1.5,
+        "yMin": 0.5,
+        "yMax": 1.6,
+        "xStep": 0.3,
+        "yStep": 0.2,
+        "points": [
+          [
+            0,
+            1.5
+          ],
+          [
+            0.2,
+            1.4
+          ],
+          [
+            0.4,
+            1.3
+          ],
+          [
+            0.6000000000000001,
+            1.2
+          ],
+          [
+            0.8,
+            1.1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1.2000000000000002,
+            0.8999999999999999
+          ],
+          [
+            1.4000000000000001,
+            0.7999999999999999
+          ]
+        ]
+      },
+      "reviewedShortAnswerPoints": {
+        "1": [
+          "The internal resistance is 0.50 Ω.",
+          "The internal resistance is 0.50 ohms."
+        ],
+        "2": [
+          "The emf is 1.50 V.",
+          "The cell emf is 1.5 volts."
+        ],
+        "3": [
+          "The current through the 2 ohm load is 0.600 A.",
+          "The circuit current is 0.600 A."
+        ],
+        "6": [
+          "The external power is 0.720 W.",
+          "Useful power in the external resistor is 0.72 W."
+        ],
+        "7": [
+          "The power lost internally is 0.180 W.",
+          "Internal heating is 0.18 W."
+        ],
+        "8": [
+          "The total power from the emf is 0.900 W.",
+          "Total chemical power is 0.90 W."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "The external power is 0.90 W."
+      ]
+    }
+  ]
+}

@@ -51,7 +51,7 @@ assert(app.includes("'./chemistry_mock_recall_v196.json','./chemistry_mock_recal
 assert(app.includes('else if(index===10)'));
 assert(app.includes("'./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json'"));
 for(const p of ['chemistry_mock_recall_v199.json','chemistry_mock_precision_v199.json'])assert(sw.includes("'./"+p+"'"));
-assert(sw.includes('v199-chem-tests'));assert(html.includes('app.js?v=202'));
+assert(sw.includes('v199-chem-tests'));assert(html.includes('app.js?v=203'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'")&&app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 const qStart=app.indexOf('function mockEligibleQuestion(q){'),qEnd=app.indexOf('\nfunction startMockSession',qStart);
 assert(qStart>=0&&qEnd>qStart);
