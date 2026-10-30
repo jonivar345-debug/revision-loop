@@ -2675,7 +2675,7 @@ function reviewedExpressionEvidence(answer,expression){
  if(singleClaimCap!==null)suggested=Math.min(suggested,singleClaimCap);
  // Exact reviewed claims override fuzzy matches, aligning the visible
  // marked points with their awarded marks, without guessing extra methods.
- const reviewedShortFlags=reviewedShortAnswerFlags(q,answer);
+ const reviewedShortFlags=typeof reviewedShortAnswerFlags==='function'?reviewedShortAnswerFlags(q,answer):null;
  if(reviewedShortFlags){
   preds=reviewedShortFlags;
   suggested=totalMarkingPoints(q,preds);
