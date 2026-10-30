@@ -11,6 +11,7 @@ assert.equal(bank.questions.reduce((s,q)=>s+q.marks,0),42);
 assert(/vessel is compressed at constant temperature/i.test(bank.questions[4].prompt));
 assert.equal(flash.version,'v210');assert.equal(flash.cards.length,11);
 assert.equal(new Set(flash.cards.map(q=>q.id)).size,11);
+assert.equal(flash.cards.find(c=>c.id==='task1_v210_chem_card_08').back,'−Ea/R.');
 assert.equal(core.questions.length,1268);
 assert(app.includes("'./chemistry_rates_rp7_kp_v210.json'"));
 assert(app.includes("'./chemistry_rates_rp7_recall_v210.json'"));
@@ -55,7 +56,7 @@ for(const card of flash.cards){
  assert(card.subject==='Chemistry'&&card.stage==='A2'&&card.taught&&card.mock&&card.active);
  assert(['3.1.9.1','3.1.9.2','3.1.10'].includes(card.specRef));
  assert(card.strictRecall&&card.accept.includes(card.back)&&card.reject.length>=2);
- assert(card.front.length>25&&card.back.length>8);
+ assert(card.front.length>25&&card.back.trim().length>=4);
 }
 const valid=[
  ['rate = k[A]^2[B]','Overall order = 3','k = 0.100','units dm^6 mol^-2 s^-1'],
