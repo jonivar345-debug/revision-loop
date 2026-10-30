@@ -132,6 +132,20 @@
             20
           ]
         ]
+      },
+      "reviewedShortAnswerPoints": {
+        "3": [
+          "The tangent gradient is 5.0 m/s.",
+          "Tangent slope is 5 m/s."
+        ],
+        "4": [
+          "The instantaneous velocity at 2 s is 5 m/s.",
+          "Instantaneous velocity at t = 2 s is 5 m/s."
+        ],
+        "5": [
+          "The acceleration is 2.0 m/s^2.",
+          "Acceleration is +2 m s^-2."
+        ]
       }
     },
     {
@@ -213,7 +227,29 @@
             -2
           ]
         ]
-      }
+      },
+      "reviewedShortAnswerPoints": {
+        "4": [
+          "The net displacement is +20 m.",
+          "The signed displacement is 20 metres."
+        ],
+        "5": [
+          "The object changes direction at 5.5 s.",
+          "Velocity crosses zero at t = 5.5 s."
+        ],
+        "6": [
+          "The total distance is 29 m.",
+          "Distance travelled is 29 metres."
+        ],
+        "7": [
+          "The acceleration from 4 to 6 seconds is -4 m/s^2.",
+          "Acceleration is -4 m s^-2 from 4–6 s."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "Total distance travelled is 20 m.",
+        "Displacement is 29 m."
+      ]
     },
     {
       "id": "task1_v203_phy_03",
@@ -298,6 +334,24 @@
             0
           ]
         ]
+      },
+      "reviewedShortAnswerPoints": {
+        "1": [
+          "The velocity at 3 seconds is 8 m/s.",
+          "Speed at 3 s is 8 m/s."
+        ],
+        "3": [
+          "The velocity at t = 5 s is 2 m/s.",
+          "Velocity at 5 s is +2 m/s."
+        ],
+        "5": [
+          "The overall change in velocity is zero.",
+          "Net velocity change is 0 m/s."
+        ],
+        "6": [
+          "The total displacement is 27 m.",
+          "Displacement over 6 s is +27 m."
+        ]
       }
     },
     {
@@ -381,7 +435,29 @@
             50
           ]
         ]
-      }
+      },
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The stiffness is 2000 N/m.",
+          "The initial spring constant is 2000 N m^-1."
+        ],
+        "5": [
+          "Total work done is 1.35 J.",
+          "The work done is 1.35 J."
+        ],
+        "7": [
+          "Using 1/2 F x over the full curve is invalid.",
+          "The whole graph is non-linear, so a single triangular area is wrong."
+        ],
+        "8": [
+          "An unloading curve is needed to know recoverable energy.",
+          "You need the unloading curve to determine permanent extension."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "All 1.35 J is definitely recoverable elastic energy.",
+        "The total work is 1.0 J."
+      ]
     },
     {
       "id": "task1_v203_phy_05",
@@ -464,7 +540,24 @@
             270
           ]
         ]
-      }
+      },
+      "reviewedShortAnswerPoints": {
+        "1": [
+          "Young modulus is 2.00 × 10^11 Pa.",
+          "E = 2.00 x 10^11 Pa."
+        ],
+        "4": [
+          "The extension is 1.40 mm.",
+          "The wire extends by 0.00140 m."
+        ],
+        "7": [
+          "The elastic energy is 0.210 J.",
+          "The stored energy is 0.21 J."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "Young modulus is 2.00 × 10^8 Pa."
+      ]
     },
     {
       "id": "task1_v203_phy_06",
@@ -512,7 +605,24 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v203_phy_06",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The unloaded output voltage is 8.0 V.",
+          "Before loading the output is 8 V."
+        ],
+        "3": [
+          "The loaded output voltage is 6.0 V.",
+          "After loading the output is 6 V."
+        ],
+        "4": [
+          "The total circuit current is 2.00 mA.",
+          "The total current is 0.002 A."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "The loaded output is 8.0 V."
+      ]
     },
     {
       "id": "task1_v203_phy_07",
@@ -560,7 +670,25 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v203_phy_07",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The cool NTC output is 5.0 V.",
+          "The thermistor output when cool is 5 V."
+        ],
+        "1": [
+          "The hot NTC output is 2.0 V.",
+          "The thermistor output when hot is 2 V."
+        ],
+        "4": [
+          "LDR output in the dark is 6.67 V.",
+          "The dark output voltage is 6.67 V."
+        ],
+        "5": [
+          "LDR output in bright light is 2.86 V.",
+          "The bright output voltage is 2.86 V."
+        ]
+      }
     },
     {
       "id": "task1_v203_phy_08",
@@ -655,7 +783,36 @@
             0.7999999999999999
           ]
         ]
-      }
+      },
+      "reviewedShortAnswerPoints": {
+        "1": [
+          "The internal resistance is 0.50 Ω.",
+          "The internal resistance is 0.50 ohms."
+        ],
+        "2": [
+          "The emf is 1.50 V.",
+          "The cell emf is 1.5 volts."
+        ],
+        "3": [
+          "The current through the 2 ohm load is 0.600 A.",
+          "The circuit current is 0.600 A."
+        ],
+        "6": [
+          "The external power is 0.720 W.",
+          "Useful power in the external resistor is 0.72 W."
+        ],
+        "7": [
+          "The power lost internally is 0.180 W.",
+          "Internal heating is 0.18 W."
+        ],
+        "8": [
+          "The total power from the emf is 0.900 W.",
+          "Total chemical power is 0.90 W."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "The external power is 0.90 W."
+      ]
     }
   ]
 }
