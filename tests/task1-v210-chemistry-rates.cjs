@@ -8,6 +8,7 @@ const source=fs.readFileSync('chemistry-rates-marking-v210.js','utf8');
 assert.equal(bank.version,'v210');assert.equal(bank.questions.length,5);
 assert.deepEqual(bank.questions.map(q=>q.marks),[9,8,8,8,9]);
 assert.equal(bank.questions.reduce((s,q)=>s+q.marks,0),42);
+assert(/vessel is compressed at constant temperature/i.test(bank.questions[4].prompt));
 assert.equal(flash.version,'v210');assert.equal(flash.cards.length,11);
 assert.equal(new Set(flash.cards.map(q=>q.id)).size,11);
 assert.equal(core.questions.length,1268);
