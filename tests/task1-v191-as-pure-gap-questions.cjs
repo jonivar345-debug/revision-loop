@@ -32,7 +32,7 @@ assert(app.includes("window.RevisionPureMathsV191?.evaluate(q,answer)"));
 assert(sw.includes("'./maths_as_pure_gap_challenges_v191.json'"));
 assert(sw.includes("'./maths-as-pure-marking-v191.js'"));
 assert(sw.includes('v191-as-pure-gap-bank'));
-assert.match(html,/maths-as-pure-marking-v191\.js\?v=205/);
+assert.match(html,/maths-as-pure-marking-v191\.js\?v=206/);
 assert.match(html,/app\.js\?v=203/);
 assert(html.indexOf('maths-as-pure-marking-v191.js')<html.indexOf('app.js?v=203'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
@@ -74,6 +74,39 @@ assert.equal(suggested(circle,'3x+4y−24=0').suggested,0);
 assert.equal(suggested(binomial,'x⁴ coefficient 800').suggested,0);
 assert.equal(suggested(area,'total area = -4').suggested,0);
 assert.equal(suggested(area,'total area =4').suggested,1);
+// v206: accept equivalent AS Pure trig work, not just one notation or answer layout.
+const validTrigAnswers=[
+ 'sin²θ=1−cos²θ',
+ 'sin²θ + cos²θ=1',
+ 'sin^2(theta)+cos^2(theta)=1',
+ '2cos²θ−cosθ−1=0',
+ '2cos²θ=cosθ+1',
+ '(2cosθ+1)(cosθ−1)=0',
+ '(cosθ−1)(2cosθ+1)=0',
+ 'cosθ=1 or −1/2',
+ 'cos(theta)=1 or cos(theta)=-0.5',
+ 'θ=0°,120°,240°',
+ 'theta ∈ {0°,120°,240°}',
+ 'theta=0°, 120° and 240°',
+ 'solutions are 240°, 120°, 0°'
+];
+const invalidTrigAnswers=[
+ 'not θ=0°,120°,240°',
+ 'θ=0°,120°,240° is incorrect',
+ 'θ=0°,120°,240°,360°',
+ '(2cosθ+1)(cosθ−1)=0 is incorrect',
+ 'cosθ=1 or −1/2 is wrong',
+ 'sin²θ+cos²θ=1 is incorrect',
+ 'θ=0°,120°',
+ 'θ=0°,120°,300°'
+];
+for(const answer of validTrigAnswers){
+ const actual=suggested(trig,answer);
+ assert.equal(actual.suggested,1,'Correct equivalent trig working not credited: '+answer);
+ assert.equal(actual.preds.filter(Boolean).length,1,'Too many marks on single trig step: '+answer);
+}
+for(const answer of invalidTrigAnswers)
+ assert.equal(suggested(trig,answer).suggested,0,'Wrong/negated trig answer credited: '+answer);
 // v205: transformation roots are one mark regardless of equivalent algebraic form.
 const alternativeRoots=[
  'x=(4±3√2)/2',
