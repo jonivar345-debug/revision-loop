@@ -1,0 +1,39 @@
+{
+  "version": "v207",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "AQA AS / Year 1 Pure first school Maths mock, original v191 integration question task1_v191_maths_006",
+  "issue": "Original loose digit windows credited incorrect intervals, sometimes mismatched signed integrals, and undercredited conventional integral notation and correct standalone final areas.",
+  "mathematicalBasis": {
+    "curve": "y=x²−4x+3",
+    "roots": [
+      1,
+      3
+    ],
+    "primitive": "F(x)=x³/3−2x²+3x",
+    "intervalIntegrals": {
+      "0 to 1": "4/3",
+      "1 to 3": "−4/3",
+      "3 to 4": "4/3"
+    },
+    "totalUnsignedArea": 4
+  },
+  "changes": [
+    "Recognise clearly labelled from/to intervals and definite-integral limits, including Unicode and typed forms.",
+    "Avoid cross-crediting the 1 to 3 signed-integral working as the separate 3 to 4 interval.",
+    "Accept a correct middle-interval signed integral or its positive region area as one method/result point.",
+    "Accept standalone 'Area=4', while rejecting expressly denied answers and negative area for positive regions."
+  ],
+  "tests": {
+    "validStandaloneCases": 14,
+    "invalidStandaloneCases": 9,
+    "allSixV191ModelsKeepFullMarks": true
+  },
+  "constraints": "Unchanged mock boundaries (Year 1 Pure only), core bank, all student state, XP, cloud sync, World images, and historical question identifiers.",
+  "limitations": [
+    "Conservative, question-specific pattern marking, not complete examiner-equivalent assessment.",
+    "Handwriting and OCR remain subject to manual review.",
+    "Task 1 full-specification and historical-paper evidence gates remain outstanding."
+  ]
+}
