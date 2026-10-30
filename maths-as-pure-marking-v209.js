@@ -17,7 +17,7 @@
   if(canonical(source)===canonical(q.modelAnswer))return result(points.map(()=>true),q);
   const segments=source.split(/(?:[;\n]+|(?<=[.!?])\s+(?=[A-Z]))/)
    .map(canonical).filter(Boolean);
-  const denied=s=>/^\s*(?:not|never)\b|\b(?:is|was|are)\s+(?:wrong|incorrect|false|not\s+correct)\b/.test(s);
+  const denied=s=>/^(?:not|never|do\s+not|don't)\b|\b(?:is|was|are|were)\s+(?:wrong|incorrect|false|not\s+correct)\b|\b(?:counterexample|unit\s+vector|turning\s+point|vertex|x[\s-]?intercepts?|roots?|answer|value\s+of\s+k)\s+(?:is|are)\s+not\b|\bn\s*=\s*16\s+is\s+not\s+(?:a\s+)?(?:correct\s+)?counterexample\b/.test(s);
   // Compare complete, labelled evidence within a claim, not loose numbers
   // appearing somewhere else in a long response.
   const seen=(regex,exclude)=>segments.some(s=>!denied(s)&&
@@ -28,8 +28,8 @@
   switch(id){
    case 'task1_v209_maths_001':{
     const factor=mat(/n\^5-n=n\(n-1\)\(n\+1\)\(n\^2\+1\)|n\(n-1\)\(n\+1\)\(n\^2\+1\)/);
-    const even=seen(/(?:three\s+consecutive|consecutive\s+integers?)[^.;]{0,110}\beven\b|\beven\b[^.;]{0,95}\bconsecutive\b/);
-    const three=seen(/\bconsecutive\b[^.;]{0,120}\b(?:divisible\s+by\s+3|multiple\s+of\s+3)\b|\b(?:divisible\s+by\s+3|multiple\s+of\s+3)\b[^.;]{0,120}\bconsecutive\b/);
+    const even=seen(/(?:three\s+consecutive|consecutive\s+integers?)[^.;]{0,110}\beven\b|\beven\b[^.;]{0,95}\bconsecutive\b|n\s*\(?n\s*-\s*1\)?\s*\(?n\s*\+\s*1\)?[^.;]{0,90}\beven\b/);
+    const three=seen(/\bconsecutive\b[^.;]{0,120}\b(?:divisible\s+by\s+3|multiple\s+of\s+3)\b|\b(?:divisible\s+by\s+3|multiple\s+of\s+3)\b[^.;]{0,120}\bconsecutive\b|n\s*\(?n\s*-\s*1\)?\s*\(?n\s*\+\s*1\)?[^.;]{0,90}\b(?:multiple\s+of\s+3|divisible\s+by\s+3)\b/);
     const residues=seen(/\bn\s*=\s*5k\s*\+\s*r\b[^.;]{0,100}\b0[^.;]{0,40}\b1[^.;]{0,40}\b2[^.;]{0,40}\b3[^.;]{0,40}\b4\b/);
     const first=seen(/\br\s*=\s*0[^.;]{0,15}\b1[^.;]{0,15}\b2\b[^.;]{0,90}\b30\b/);
     const last=seen(/\br\s*=\s*3[^.;]{0,15}\b4\b[^.;]{0,90}\b240\b[^.;]{0,35}\b1020\b/);
@@ -41,7 +41,7 @@
     const case16=seen(/\bn\s*=\s*16\b/);
     const value=seen(/\b(?:289|256\s*\+\s*16\s*\+\s*17)\b/,/\b(?:288|290)\b/)&&
       seen(/(?:16|n\^2\s*\+\s*n\s*\+\s*17)/);
-    const composite=mat(/289=17\^2|289=17\*17/);
+    const composite=mat(/289=17\^2|17\^2=289|289=17\*17|17\*17=289/);
     const disproof=seen(/\b(?:counterexample|disprov(?:e|es|ed|ing))\b[^.;]{0,100}\b(?:every|all|claim|statement)\b|\b(?:every|all|claim|statement)\b[^.;]{0,100}\b(?:counterexample|false)\b/);
     const even=mat(/n\^2\+n=n\(n\+1\)/)&&seen(/\beven\b/);
     const odd=seen(/\bodd\b[^.;]{0,100}\b(?:not\s+(?:necessarily\s+)?prime|does\s+not\s+(?:guarantee|mean)[^.;]{0,30}\bprime|doesn't\s+(?:guarantee|mean)[^.;]{0,30}\bprime)\b/);
@@ -57,7 +57,7 @@
     const k=seen(/\bk\s*=\s*7\b/,/\bk\s*=\s*7\b[^.;]{0,30}\b(?:not|wrong|incorrect)\b/);
     const bc=mat(/\bbc=\(3,4\)/);
     const ratio=mat(/\bab:bc=2:1|\bab=2bc\b/);
-    const unit=mat(/\(3\/5,4\/5\)/)&&
+    const unit=mat(/\(3\/5,4\/5\)|\(0\.6,0\.8\)/)&&
       seen(/\b(?:unit|direction|ab)\b/);
     marks=[ab,ac,relation,equation,k,bc,ratio,unit];
     break;
@@ -70,7 +70,7 @@
     const pq=mat(/\bpq=\(-15\/2,3\/2\)|\bpq=\(-7\.5,1\.5\)/);
     const bc=mat(/\bbc=\(-15,3\)/);
     const parallel=mat(/\bpq=1\/2bc|\bpq=bc\/2/)&&seen(/\bparallel\b/,/\bnot\s+parallel\b/);
-    const mag=mat(/(?:\|pq\||lengthpq|magnitude[^=]*)=3√26\/2|(?:\|pq\||lengthpq|magnitude[^=]*)=3sqrt\(26\)\/2/);
+    const mag=mat(/(?:\|pq\||lengthpq|magnitude[^=]*)=(?:3√26\/2|3sqrt\(26\)\/2|√\(58\.5\)|sqrt\(58\.5\)|√\(117\/2\)|sqrt\(117\/2\))/);
     marks=[ab,ac,p,mid,pq,bc,parallel,mag];
     break;
    }
@@ -82,8 +82,8 @@
     const down=seen(/\b(?:translate|shift|move)[^.;]{0,40}\bdown\b[^.;]{0,30}\b3\b|\b(?:translate|shift|move)[^.;]{0,40}\b3\b[^.;]{0,30}\bdown\b/);
     const equation=mat(/g\(x\)=2\(x\+2\)\^2-11/);
     const turning=mat(/\(-2,-11\)/)&&seen(/\b(?:turning\s+point|vertex|minimum)\b/);
-    const roots=mat(/x=-2±√\(11\/2\)|x=-2±sqrt\(11\/2\)|x=-2\+-√\(11\/2\)/);
-    const intercept=mat(/\(0,-3\)/)&&seen(/\b(?:y[\s-]*intercept|intercept|g\(0\))\b/);
+    const roots=mat(/x=-2±(?:√\(11\/2\)|sqrt\(11\/2\)|√5\.5\b|√\(5\.5\)|sqrt\(5\.5\)|√22\/2|√\(22\)\/2|sqrt\(22\)\/2)|x=-2\+-√\(11\/2\)|-2\+√5\.5(?:and|,)(?:x=)?-2-√5\.5/);
+    const intercept=(mat(/\(0,-3\)/)&&seen(/\b(?:y[\s-]*intercept|intercept|g\(0\))\b/))||mat(/g\(0\)=-3/);
     marks=[square,reflect,right,stretch,down,equation,turning,roots,intercept];
     break;
    }
