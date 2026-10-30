@@ -83,6 +83,8 @@ const validAreaWorking=[
  '∫_0^1 y dx=4/3',
  'From 1 to 3 integral is -4/3, area is 4/3',
  '∫₁³y dx=-4/3, so the area is 4/3',
+ '∫₁³y dx=-4/3',
+ 'The area from 1 to 3 is 4/3',
  'From 3 to 4 area is 4/3',
  '∫₃⁴y dx=4/3',
  '∫_3^4 y dx=4/3',
@@ -103,8 +105,8 @@ const invalidAreaWorking=[
  'From 0 to 1 area is -4/3',
  'From 3 to 4 area is -4/3',
  'From 1 to 3 the integral is -4/3, so its area is -4/3',
- '∫₁³y dx=-4/3',
- 'The area from 1 to 3 is 4/3'
+ 'From 1 to 3 the integral is +4/3',
+ 'The area from 1 to 3 is -4/3'
 ];
 for(const answer of invalidAreaWorking)
  assert.equal(suggested(area,answer).suggested,0,'Wrong/unsupported integral-area step credited: '+answer);
