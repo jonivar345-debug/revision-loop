@@ -1,0 +1,37 @@
+{
+  "version": "v204",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "focus": "First school mock, AQA Year 1 Pure, original v191 circle/tangent question only",
+  "problem": "Correct algebraically equivalent forms of the tangent at (6,2) were not credited by the originalAs191Circle marker. Valid substitution and centre/radius wording could also be missed.",
+  "mathematicalBasis": {
+    "circle": "(x-3)^2+(y+2)^2=25",
+    "point": "P=(6,2)",
+    "radiusGradient": "4/3",
+    "tangentGradient": "-3/4",
+    "equivalentTangents": [
+      "3x+4y-26=0",
+      "3x+4y=26",
+      "4y=-3x+26",
+      "y=-3x/4+13/2",
+      "y=-0.75x+6.5",
+      "y-2=-3/4(x-6)"
+    ]
+  },
+  "testCoverage": {
+    "acceptedIsolatedAnswers": 8,
+    "rejectedIsolatedAnswers": 6,
+    "acceptedCombinedAnswers": 1,
+    "previousModelFullMarks": 5,
+    "originalYear1PureQuestionPoolUnchanged": 138,
+    "existingCardsQuestionsAnswersProgressUnchanged": true
+  },
+  "safety": "No changes to the stored progress/profile/settings keys, original bank or card IDs, mock scope, historical archive or world photos.",
+  "limitations": [
+    "These tests prove only the tested response variants for one original circle question, not examiner-equivalent marking across all questions.",
+    "Handwritten equations and OCR transcription still require manual review and correction where necessary.",
+    "Negation detection is conservative and may miss complex contradictory explanations.",
+    "Do not declare complete first-mock specification coverage, student mastery, or Task 1 completion."
+  ]
+}

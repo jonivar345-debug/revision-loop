@@ -32,7 +32,7 @@ assert(app.includes("window.RevisionPureMathsV191?.evaluate(q,answer)"));
 assert(sw.includes("'./maths_as_pure_gap_challenges_v191.json'"));
 assert(sw.includes("'./maths-as-pure-marking-v191.js'"));
 assert(sw.includes('v191-as-pure-gap-bank'));
-assert.match(html,/maths-as-pure-marking-v191\.js\?v=191/);
+assert.match(html,/maths-as-pure-marking-v191\.js\?v=204/);
 assert.match(html,/app\.js\?v=203/);
 assert(html.indexOf('maths-as-pure-marking-v191.js')<html.indexOf('app.js?v=203'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
@@ -74,4 +74,31 @@ assert.equal(suggested(circle,'3x+4y−24=0').suggested,0);
 assert.equal(suggested(binomial,'x⁴ coefficient 800').suggested,0);
 assert.equal(suggested(area,'total area = -4').suggested,0);
 assert.equal(suggested(area,'total area =4').suggested,1);
+// v204: accept correct alternative algebra, but never a plainly disowned tangent.
+const circleSingleMark=[
+ '3x+4y=26',
+ '4y=-3x+26',
+ 'y=-3x/4+13/2',
+ 'y=-0.75x+6.5',
+ 'y-2=-3/4(x-6)',
+ '(y+2)^2+(x-3)^2=25',
+ 'At P, (6-3)^2+(2+2)^2=25',
+ 'The centre is (3,-2) and the radius is 5'
+];
+for(const answer of circleSingleMark){
+ const result=suggested(circle,answer);
+ assert.equal(result.suggested,1,'Equivalent circle working undercredited: '+answer);
+ assert.equal(result.preds.filter(Boolean).length,1,'Unexpected other circle marks: '+answer);
+}
+for(const answer of [
+ '3x+4y=26 is not the tangent',
+ 'The tangent is not 3x+4y=26',
+ '3x+4y=26 is incorrect',
+ '3x+4y=24',
+ 'y=-0.75x+6',
+ 'The centre is (3,2) and the radius is 5'
+]){
+ assert.equal(suggested(circle,answer).suggested,0,'Invalid circle answer credited: '+answer);
+}
+assert.equal(suggested(circle,'At P, (6-3)^2+(2+2)^2=25, so P lies on the circle. The tangent is 3x+4y=26.').suggested,2);
 console.log('PASS v191: six AS Pure original questions (32 marks), 138-question mock pool, accurate individual method marking, unchanged core bank');
