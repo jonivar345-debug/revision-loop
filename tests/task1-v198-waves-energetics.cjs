@@ -36,7 +36,7 @@ assert.equal([...core.questions,...prior,...bank.questions].filter(q=>q.subject=
 assert(app.includes("'./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json'"));
 assert(sw.includes("'./science_waves_energetics_v198.json'"));
 assert(sw.includes('v198-waves-energetics'));
-assert(html.includes('app.js?v=201'));
+assert(html.includes('app.js?v=202'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 const a=app.indexOf('function normalise('),b=app.indexOf('function nextSchedule(',a),c=app.indexOf('function evidenceRuleScore(',b),d=app.indexOf('function renderExam(',c);
