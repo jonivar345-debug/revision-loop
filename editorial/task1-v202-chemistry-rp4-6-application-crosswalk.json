@@ -1,0 +1,196 @@
+{
+  "version": "v202",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "goal": "Close an evidence-backed AS Chemistry written-paper application gap in the existing taught school-mock RP4, RP5, RP6 areas. No duplicate factual flashcard generation.",
+  "officialAqaUrls": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "evidenceReviewed": [
+    {
+      "file": "editorial/task1-required-practicals-ledger-v133.json",
+      "priorMappedFlashcards": {
+        "RP4": 17,
+        "RP5": 3,
+        "RP6": 13
+      },
+      "meaning": "Theme/index matches are leads for further assessment, not certified complete knowledge. All three already had separate recall cards."
+    },
+    {
+      "file": "editorial/task1-v177-chemistry-legacy-tests-definitions.json",
+      "meaning": "Prior qualitative observations and single-fact recall wordings for halides, alcohols and carbonyl tests reviewed."
+    },
+    {
+      "file": "editorial/task1-v194-practical-data-application-audit.json",
+      "priorApplicationPracticals": "Chemistry RP1, RP2, RP3, taught Year 2 RP10",
+      "gap": "No corresponding original application questions dedicated specifically to RP4–RP6 in v194."
+    },
+    {
+      "file": "editorial/task1-v165-completion-gate.md",
+      "meaning": "Require evidence at level of particular AQA bullet, practical data and exam-practice, not card totals."
+    }
+  ],
+  "newQuestions": [
+    {
+      "id": "task1_v202_chem_01",
+      "requiredPractical": 4,
+      "specRef": "3.2.3.1",
+      "topic": "Group 7",
+      "subtopic": "RP4 halide precipitate evidence and ionic equations",
+      "marks": 7
+    },
+    {
+      "id": "task1_v202_chem_02",
+      "requiredPractical": 4,
+      "specRef": "3.2.2",
+      "topic": "Group 2",
+      "subtopic": "RP4 identifying carbonate sulfate ammonium and hydroxide ions",
+      "marks": 8
+    },
+    {
+      "id": "task1_v202_chem_03",
+      "requiredPractical": 4,
+      "specRef": "3.2.2",
+      "topic": "Group 2",
+      "subtopic": "RP4 Group 2 hydroxide and sulfate solubility interpretation",
+      "marks": 7
+    },
+    {
+      "id": "task1_v202_chem_04",
+      "requiredPractical": 5,
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "subtopic": "RP5 distillation mass balance and boiling data",
+      "marks": 8
+    },
+    {
+      "id": "task1_v202_chem_05",
+      "requiredPractical": 5,
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "subtopic": "RP5 distillation versus reflux and boiling-point separation",
+      "marks": 7
+    },
+    {
+      "id": "task1_v202_chem_06",
+      "requiredPractical": 5,
+      "specRef": "3.3.5.3",
+      "topic": "Alcohols",
+      "subtopic": "RP5 fraction mass balance and purity limitations",
+      "marks": 8
+    },
+    {
+      "id": "task1_v202_chem_07",
+      "requiredPractical": 6,
+      "specRef": "3.3.6.1",
+      "topic": "Organic analysis",
+      "subtopic": "RP6 unknown functional groups from reported observations",
+      "marks": 8
+    },
+    {
+      "id": "task1_v202_chem_08",
+      "requiredPractical": 6,
+      "specRef": "3.3.5.1",
+      "topic": "Alcohols",
+      "subtopic": "RP6 oxidation product evidence and classifying alcohols",
+      "marks": 8
+    },
+    {
+      "id": "task1_v202_chem_09",
+      "requiredPractical": 6,
+      "specRef": "3.3.6.1",
+      "topic": "Organic analysis",
+      "subtopic": "RP6 molecular formula versus functional-group identity and isomerism",
+      "marks": 8
+    }
+  ],
+  "counts": {
+    "newQuestions": 9,
+    "newMarks": 69,
+    "byPractical": [
+      {
+        "requiredPractical": 4,
+        "questions": 3,
+        "marks": 22,
+        "questionIds": [
+          "task1_v202_chem_01",
+          "task1_v202_chem_02",
+          "task1_v202_chem_03"
+        ]
+      },
+      {
+        "requiredPractical": 5,
+        "questions": 3,
+        "marks": 23,
+        "questionIds": [
+          "task1_v202_chem_04",
+          "task1_v202_chem_05",
+          "task1_v202_chem_06"
+        ]
+      },
+      {
+        "requiredPractical": 6,
+        "questions": 3,
+        "marks": 24,
+        "questionIds": [
+          "task1_v202_chem_07",
+          "task1_v202_chem_08",
+          "task1_v202_chem_09"
+        ]
+      }
+    ],
+    "reviewedShortAnswerAcceptedVariants": 39,
+    "explicitFalsePositiveRejectVariants": 3,
+    "mainFlashcardsUntouched": 3345,
+    "mainExamQuestionsUntouched": 1268,
+    "mathsFirstMockQuestionsUntouched": 138
+  },
+  "applicationCoverage": [
+    {
+      "practical": 4,
+      "officialArea": "Ion-test observations: Group 2, ammonium, halides, hydroxide, carbonate, sulfate",
+      "thisRelease": "Three questions: halide observations + balanced ionic equations; multi-ion evidence; Group 2 sulfate/hydroxide solubility trends",
+      "specificSubskills": [
+        "Assign correctly labelled unknown ions",
+        "Write charge- and atom-balanced net ionic equations",
+        "Explain why one test observation alone may be inconclusive"
+      ]
+    },
+    {
+      "practical": 5,
+      "officialArea": "Distillation of a reaction product",
+      "thisRelease": "Three questions: product theoretical/actual yield, reflux versus distillation concepts, mass-balance and purity reasoning",
+      "specificSubskills": [
+        "Mole ratio and yield using unfamiliar supplied values",
+        "Interpret boiling ranges/volatile fractions from reference data",
+        "Do not claim purity is proven by one temperature or yield"
+      ]
+    },
+    {
+      "practical": 6,
+      "officialArea": "Identification of alcohol, aldehyde, alkene, carboxylic acid",
+      "thisRelease": "Three questions: unknown sample result matching; alcohol oxidation product class; formula-based structural isomer ambiguity",
+      "specificSubskills": [
+        "Differentiate oxidation observations from functional-group identity",
+        "Infer aldehyde, alkene, acid and alcohol evidence correctly",
+        "Know when qualitative tests cannot distinguish structural isomers"
+      ]
+    }
+  ],
+  "scopeRestrictions": [
+    "All original hypothetical or provided observational data; no hands-on chemistry or laboratory procedure instructions.",
+    "School AS required practicals 4–6 only; later Year 2 practicals 7–9,11–12 excluded.",
+    "Does not teach untaught buffers, spectroscopy or extended Year 2 topics.",
+    "Maths school mock remains AQA Year 1 Pure only. No cards, XP, profile, World or progress keys changed."
+  ],
+  "limitations": [
+    "AQA's written-paper practical assessment encompasses further skill areas; nine questions do not certify entire practical competency or each official assessment criterion.",
+    "The prior practical flashcard counts use keyword/index matches; no claim that all 33 cards have been independently mapped to every AQA bullet.",
+    "New original model answers are not AQA-authorised mark schemes. Equivalent student working and unfamiliar phrasings may still need review.",
+    "2015–2026 original AQA past-paper indexing remains incomplete; no historical question reproduction.",
+    "Task1Complete and masteryCertified remain false."
+  ]
+}
