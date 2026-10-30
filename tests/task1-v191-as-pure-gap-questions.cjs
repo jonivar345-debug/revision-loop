@@ -32,7 +32,7 @@ assert(app.includes("window.RevisionPureMathsV191?.evaluate(q,answer)"));
 assert(sw.includes("'./maths_as_pure_gap_challenges_v191.json'"));
 assert(sw.includes("'./maths-as-pure-marking-v191.js'"));
 assert(sw.includes('v191-as-pure-gap-bank'));
-assert.match(html,/maths-as-pure-marking-v191\.js\?v=206/);
+assert.match(html,/maths-as-pure-marking-v191\.js\?v=207/);
 assert.match(html,/app\.js\?v=203/);
 assert(html.indexOf('maths-as-pure-marking-v191.js')<html.indexOf('app.js?v=203'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
@@ -74,6 +74,42 @@ assert.equal(suggested(circle,'3x+4y−24=0').suggested,0);
 assert.equal(suggested(binomial,'x⁴ coefficient 800').suggested,0);
 assert.equal(suggested(area,'total area = -4').suggested,0);
 assert.equal(suggested(area,'total area =4').suggested,1);
+// v207: checked areas must use the correct labelled interval, sign and
+// positive total; a correctly negative integral is not itself a positive area.
+const validAreaWorking=[
+ 'Area from 0 to 1 is 4/3',
+ 'From x=0 to 1 the integral is 4/3',
+ '∫₀¹y dx=4/3',
+ '∫_0^1 y dx=4/3',
+ 'From 1 to 3 integral is -4/3, area is 4/3',
+ '∫₁³y dx=-4/3, so the area is 4/3',
+ '∫₁³y dx=-4/3',
+ 'The area from 1 to 3 is 4/3',
+ 'From 3 to 4 area is 4/3',
+ '∫₃⁴y dx=4/3',
+ '∫_3^4 y dx=4/3',
+ 'Total area=4',
+ 'Area=4',
+ 'The total area is 4 square units'
+];
+for(const answer of validAreaWorking){
+ const actual=suggested(area,answer);
+ assert.equal(actual.suggested,1,'Valid integral/area form missed: '+answer);
+ assert.equal(actual.preds.filter(Boolean).length,1,'Extra interval mark credited: '+answer);
+}
+const invalidAreaWorking=[
+ 'not total area=4',
+ 'total area=4 is wrong',
+ 'Area=4 is incorrect',
+ 'The area is not 4',
+ 'From 0 to 1 area is -4/3',
+ 'From 3 to 4 area is -4/3',
+ 'From 1 to 3 the integral is -4/3, so its area is -4/3',
+ 'From 1 to 3 the integral is +4/3',
+ 'The area from 1 to 3 is -4/3'
+];
+for(const answer of invalidAreaWorking)
+ assert.equal(suggested(area,answer).suggested,0,'Wrong/unsupported integral-area step credited: '+answer);
 // v206: accept equivalent AS Pure trig work, not just one notation or answer layout.
 const validTrigAnswers=[
  'sin²θ=1−cos²θ',
