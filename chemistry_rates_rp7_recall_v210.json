@@ -1,0 +1,317 @@
+{
+  "version": "v210",
+  "createdAt": "2026-10-30",
+  "subject": "Chemistry",
+  "scope": "Mock-eligible short recall of AQA rate equations, RP7 data interpretation and Kp (taught A-level topics only)",
+  "notes": "Eleven concise conceptual/reasoning checks; supplements existing core and mock recall, without claims of full specification coverage.",
+  "cards": [
+    {
+      "id": "task1_v210_chem_card_01",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "In an initial-rate clock experiment, when can 1/t be used as a measure proportional to initial rate?",
+      "back": "When every trial uses the same small, fixed reaction extent and conditions are comparable.",
+      "accept": [
+        "When every trial uses the same small, fixed reaction extent and conditions are comparable.",
+        "The same fixed small amount of reaction occurs in each trial.",
+        "Each trial reaches the same fixed small amount of product.",
+        "A fixed small threshold of reaction is reached in each trial."
+      ],
+      "reject": [
+        "1/t is always the exact rate constant.",
+        "Only if temperature varies between runs."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_02",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "On a reactant concentration–time graph, what does the tangent gradient at one time measure?",
+      "back": "The instantaneous rate of change of reactant concentration, d[A]/dt (negative for a disappearing reactant).",
+      "accept": [
+        "The instantaneous rate of change of reactant concentration, d[A]/dt (negative for a disappearing reactant).",
+        "Instantaneous change in concentration.",
+        "Instantaneous gradient d[A]/dt.",
+        "The instantaneous rate of change of concentration."
+      ],
+      "reject": [
+        "The average rate over the entire reaction.",
+        "The rate constant k."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_03",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "For disappearance of reactant A, how do you obtain a positive rate from d[A]/dt?",
+      "back": "Rate of disappearance = −d[A]/dt.",
+      "accept": [
+        "Rate of disappearance = −d[A]/dt.",
+        "-d[A]/dt",
+        "Negative of the concentration gradient.",
+        "Multiply the reactant concentration gradient by −1."
+      ],
+      "reject": [
+        "Rate = d[A]/dt, which must always be positive.",
+        "Use the area under the graph."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_04",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "What shape does [A] against time have for a zero-order reaction while reactant remains?",
+      "back": "A straight line with constant negative gradient, −k.",
+      "accept": [
+        "A straight line with constant negative gradient, −k.",
+        "Straight line with gradient -k.",
+        "A straight decreasing line.",
+        "Linear decrease with time."
+      ],
+      "reject": [
+        "Exponential curve with constant half-life.",
+        "Straight horizontal line."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_05",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "What happens to the half-life of a first-order reaction at constant temperature as concentration falls?",
+      "back": "It stays constant.",
+      "accept": [
+        "It stays constant.",
+        "Constant half-life.",
+        "The half-life is independent of concentration.",
+        "It remains unchanged."
+      ],
+      "reject": [
+        "It doubles every time concentration halves.",
+        "It always becomes shorter."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_06",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "If rate = k[A]²[B] and [A] doubles at constant [B] and temperature, what happens to the rate?",
+      "back": "It becomes four times as large.",
+      "accept": [
+        "It becomes four times as large.",
+        "It quadruples.",
+        "4 times the original rate.",
+        "A factor of 4."
+      ],
+      "reject": [
+        "It doubles.",
+        "It stays unchanged."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_07",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "What are the units of k for an overall third-order reaction when rate is in mol dm⁻³ s⁻¹?",
+      "back": "dm⁶ mol⁻² s⁻¹.",
+      "accept": [
+        "dm⁶ mol⁻² s⁻¹.",
+        "dm^6 mol^-2 s^-1",
+        "dm6 mol-2 s-1",
+        "dm⁶ mol⁻² s⁻¹"
+      ],
+      "reject": [
+        "s^-1",
+        "mol dm^-3 s^-1"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_08",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "What is the gradient of a graph of ln k against 1/T for the Arrhenius relationship?",
+      "back": "−Ea/R.",
+      "accept": [
+        "−Ea/R.",
+        "-Ea/R",
+        "−Eₐ/R",
+        "Negative activation energy divided by the gas constant."
+      ],
+      "reject": [
+        "Ea/R",
+        "ln A"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_09",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "revisionTopic": "Rate equations",
+      "front": "What is the vertical intercept of an Arrhenius graph of ln k against 1/T?",
+      "back": "ln A, where A is the Arrhenius constant.",
+      "accept": [
+        "ln A, where A is the Arrhenius constant.",
+        "ln A",
+        "Natural logarithm of the Arrhenius constant.",
+        "ln of the Arrhenius prefactor."
+      ],
+      "reject": [
+        "Ea/R",
+        "-Ea/R"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_10",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "stage": "A2",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "front": "How is the partial pressure of gas i calculated from its mole fraction and the total pressure?",
+      "back": "pᵢ = xᵢ × p(total).",
+      "accept": [
+        "pᵢ = xᵢ × p(total).",
+        "Partial pressure equals mole fraction times total pressure.",
+        "p_i = x_i p_total",
+        "p = mole fraction × total pressure"
+      ],
+      "reject": [
+        "Mole fraction divided by total pressure.",
+        "Multiply the number of moles by temperature."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    },
+    {
+      "id": "task1_v210_chem_card_11",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "stage": "A2",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "front": "If total pressure changes but temperature remains constant, what happens to the value of Kp?",
+      "back": "Kp is unchanged; only temperature alters its value.",
+      "accept": [
+        "Kp is unchanged; only temperature alters its value.",
+        "Kp remains constant.",
+        "Kp stays the same.",
+        "No change in Kp at constant temperature."
+      ],
+      "reject": [
+        "Kp increases directly with pressure.",
+        "Kp doubles if pressure doubles."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 1
+    }
+  ]
+}
