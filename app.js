@@ -2206,6 +2206,14 @@ function reviewedShortAnswerFlags(q,answer){
  return flags.some(Boolean)?flags:null;
 }
 function examSuggested(q,answer){
+ // v209: independently reviewed reasoning marks for five hard original AS Pure
+ // questions. Avoid generic token-overlap awarding marks for wrong numbers.
+ if(/^task1_v209_maths_00[1-5]$/.test(String(q.id||''))){
+  const result=typeof window!=='undefined'?window.RevisionPureMathsV209?.evaluate(q,answer):null;
+  if(result)return result;
+  return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),
+   suggested:0,finalCorrect:false,confidence:'low'};
+ }
  // v191 questions require evidence tied to their particular calculations.
  // Do not use generic keyword overlap when the reviewed marking module is missing.
  if(/^originalAs191(?:Exhaust|Trig|Circle|Transform|Binomial|Area)$/.test(String(q.markingMode||''))){
