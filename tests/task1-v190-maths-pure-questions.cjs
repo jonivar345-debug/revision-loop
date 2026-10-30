@@ -76,4 +76,20 @@ for(const [q,answer,expected] of vectorCases){
  assert.equal(actual.preds.filter(Boolean).length,expected,'Inconsistent independent marks: '+answer);
 }
 assert.equal(mark(vectors,'AB=(4,8), AC=(k+1,18), AB and AC are parallel, so k=8, AB:BC=4:5').suggested,5);
+// v208: the equally valid representation 2k−1 must receive proof-method
+// credit, but explicitly disowned representations must not.
+const oddProofCases=[
+ ['n=2k−1',1],
+ ['n²=4k(k−1)+1',1],
+ ['(2k−1)²=4k(k−1)+1',1],
+ ['n=2k−1, n²=4k(k−1)+1, k(k−1) is even because k and k−1 are consecutive, hence n²=8r+1',4],
+ ['n=2k−1 is not the right representation',0],
+ ['The odd integer is not n=2k+1',0],
+ ['n=2k+1 is wrong',0]
+];
+for(const [answer,expected] of oddProofCases){
+ const actual=mark(odd,answer);
+ assert.equal(actual.suggested,expected,'v208 odd-square proof calibration: '+answer);
+ assert.equal(actual.preds.filter(Boolean).length,expected,'v208 independent proof marks: '+answer);
+}
 console.log('PASS v190: four original AS Pure 19-mark questions, 132 core+extra mock pool, calibrated independent method credit');
