@@ -6,7 +6,7 @@
   "completeSpecificationCertified": false,
   "scope": "Real content and structural review of all 971 active Physics/Chemistry mock cards that lacked explicit direct specRef in the prior v166 mapping. This is a verified preservation/format and targeted answer-level spot check, not sign-off against every AQA specification bullet.",
   "evidence": [
-    "Source: editorials/task1-v166-legacy-mock-card-map.json is historical provisional mapping, NOT a requirement-level syllabus audit.",
+    "Source: editorial/task1-v166-legacy-mock-card-map.json is historical provisional mapping, NOT a requirement-level syllabus audit.",
     "Current deck content read from verified GitHub deck blob bf7887ecf83fd9a93b907b994c485e8ac8a5ac14, not guessed from metadata.",
     "All 971 mapped IDs exist in the current 3345-card core deck and are active, school-mock eligible, have non-empty fronts and backs, and retain expected subject and stage.",
     "There are no case/whitespace-normalised exact duplicate question prompts among these 971 records; semantically similar prompts can still occur.",
