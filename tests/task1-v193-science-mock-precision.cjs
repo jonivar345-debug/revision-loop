@@ -38,7 +38,7 @@ assert(app.includes('else if(index===5)')&&app.includes("c.subject!=='Chemistry'
 assert(app.includes('knownFlashIds.has(c.id)'));
 assert(sw.includes("'./physics_mock_recall_v193.json'")&&sw.includes("'./chemistry_mock_recall_v193.json'"));
 assert(sw.includes('v193-science-mock-precision'));
-assert(html.includes('app.js?v=201'));
+assert(html.includes('app.js?v=202'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(!audit.limits.some(l=>l.toLowerCase().includes('certified complete')));
