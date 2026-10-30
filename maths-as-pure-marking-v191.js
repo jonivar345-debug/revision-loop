@@ -23,14 +23,33 @@
     break;
    }
    case 'originalAs191Trig':{
-    const identity=flat(/sin\^2theta=1-cos\^2theta|2\(1-cos\^2theta\)\+costheta-1=0/);
-    const quadratic=flat(/2cos\^2theta-costheta-1=0/);
-    const factor=flat(/\(2costheta\+1\)\(costheta-1\)=0|\(costheta-1\)\(2costheta\+1\)=0/);
-    const values=flat(/costheta=1/)&&flat(/costheta=-1\/2|costheta=-0\.5/);
-    const angleText=t.match(/(?:\btheta\s*=\s*|\bsolutions?\s*(?:are|:|=)\s*)([-+\d°.,\s]+)/i)?.[1]||'';
-    const angles=[...angleText.matchAll(/[-+]?\d+(?:\.\d+)?/g)].map(m=>Number(m[0]));
-    const solutions=angles.length===3&&angles.every(v=>[0,120,240].includes(v))&&new Set(angles).size===3;
-    marks=[identity,quadratic,factor,values,solutions];
+    // Equivalent textbook notations for sin²θ, cos²θ and cos(θ) must
+    // not lose method marks because of brackets or input style.
+    const tf=compact.replace(/(sin|cos)\^2\(theta\)/g,'$1^2theta')
+      .replace(/(sin|cos)\(theta\)\^2/g,'$1^2theta')
+      .replace(/(sin|cos)\(theta\)/g,'$1theta');
+    const disputed=has(/\b(?:is|are|was|were)\s+(?:not\s+correct|wrong|incorrect|false)\b|\b(?:wrong|incorrect)\s+(?:answer|result|solutions?|factorisation|identity)\b/);
+    const identity=(
+      /sin\^2theta=1-cos\^2theta|sin\^2theta\+cos\^2theta=1|cos\^2theta\+sin\^2theta=1|2\(1-cos\^2theta\)\+costheta-1=0/.test(tf)
+    )&&!disputed;
+    const quadratic=(
+      /2cos\^2theta-costheta-1=0|-2cos\^2theta\+costheta\+1=0|2cos\^2theta=costheta\+1/.test(tf)
+    )&&!disputed;
+    const factor=(
+      /\(2costheta\+1\)\(costheta-1\)=0|\(costheta-1\)\(2costheta\+1\)=0/.test(tf)
+    )&&!disputed;
+    const cosPair=(
+      /costheta=1(?:or|and|,|;)?(?:costheta=)?(?:-1\/2|-0\.5)/.test(tf)||
+      /costheta=(?:-1\/2|-0\.5)(?:or|and|,|;)?(?:costheta=)?1(?!\d)/.test(tf)
+    )&&!disputed;
+    // A full answer must give exactly the three distinct values in the stated
+    // half-open interval; explicitly rejected answers earn no solution mark.
+    const angleStatement=t.match(/(?:\btheta\s*(?:=|∈\s*\{)|\bsolutions?\s*(?:are|:|=)\s*)([^.;\n]+)/i);
+    const angles=angleStatement?[...angleStatement[1].matchAll(/[-+]?\d+(?:\.\d+)?/g)].map(m=>Number(m[0])):[];
+    const deniedAngles=disputed||/\b(?:not|never)\s+(?:the\s+)?(?:correct\s+)?(?:solutions?\s*(?:are|is)\s+)?theta\s*(?:=|∈)/.test(t);
+    const solutions=angles.length===3&&angles.every(v=>[0,120,240].includes(v))&&
+      new Set(angles).size===3&&!deniedAngles;
+    marks=[identity,quadratic,factor,cosPair,solutions];
     break;
    }
    case 'originalAs191Circle':{
