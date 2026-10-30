@@ -1,0 +1,78 @@
+{
+  "version": "v209",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "First school Maths mock: AQA Year 1/AS Pure only; no Year 2, Mechanics or Statistics.",
+  "officialProofSpecification": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/a-proof",
+  "officialVectorsSpecification": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/j-vectors",
+  "rationale": "The existing 138-question first-mock Pure bank contains v190 and v191 proof, vector and transformations questions. Additional independent multi-step applications are useful, but this does not prove a specification gap or mastery.",
+  "newOriginalQuestions": [
+    {
+      "id": "task1_v209_maths_001",
+      "topic": "Proof",
+      "marks": 7,
+      "challenge": "Proof n⁵−n divisible by 30 using deduction and five residue classes"
+    },
+    {
+      "id": "task1_v209_maths_002",
+      "topic": "Proof",
+      "marks": 6,
+      "challenge": "Counterexample to an all-prime claim and general parity proof"
+    },
+    {
+      "id": "task1_v209_maths_003",
+      "topic": "Vectors",
+      "marks": 8,
+      "challenge": "Parameterized collinearity, AB:BC and exact unit vector"
+    },
+    {
+      "id": "task1_v209_maths_004",
+      "topic": "Vectors",
+      "marks": 8,
+      "challenge": "Midpoint theorem, parallel lines and exact 2D magnitude"
+    },
+    {
+      "id": "task1_v209_maths_005",
+      "topic": "Transformations",
+      "marks": 9,
+      "challenge": "Reflected shifted quadratic, exact turning point and intercepts"
+    }
+  ],
+  "counts": {
+    "newQuestions": 5,
+    "newMarks": 38,
+    "priorFirstMockMathsQuestionPool": 138,
+    "newFirstMockMathsQuestionPoolWhenLoaded": 143,
+    "coreExamQuestionsUnchanged": 1268
+  },
+  "marker": {
+    "mode": "Dedicated independent maths-as-pure-marking-v209.js rules, no generic token-overlap fallback",
+    "allFiveModelAnswersFullMarks": true,
+    "reviewedAcceptedShortVariants": 6,
+    "reviewedWrongAnswersRejected": 10,
+    "limit": "Only the tested answer variants and specific rules are calibrated; handwritten and unfamiliar correct methods may require manual score adjustment."
+  },
+  "changedFiles": [
+    "maths_pure_proof_vector_applications_v209.json",
+    "maths-as-pure-marking-v209.js",
+    "app.js",
+    "index.html",
+    "sw.js",
+    "tests/task1-v209-maths-pure-application.cjs",
+    ".github/workflows/cloud-sync-v119.yml",
+    ".github/workflows/marking-regression.yml"
+  ],
+  "protections": [
+    "No edits to the 3345-card core deck or 1268-question master bank",
+    "No changed flashcard or existing question IDs",
+    "No changes to stored progress/profile/settings keys or cloud sync",
+    "No Year 2 Maths, Mechanics or Statistics in first-mock question pool"
+  ],
+  "limitations": [
+    "No historical AQA paper questions copied or verified by this version.",
+    "Task 1 specification-by-specification coverage remains unaudited to completion.",
+    "No claim that scoring matches an official AQA examiner for all responses.",
+    "Check official AQA specification and school mock scope again if teacher changes the assessed topics."
+  ]
+}
