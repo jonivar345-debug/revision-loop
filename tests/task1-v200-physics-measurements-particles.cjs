@@ -39,7 +39,7 @@ assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligibl
 assert(app.includes("'./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json'"));
 assert(sw.includes("'./physics_measurements_particles_v200.json'"));
 assert(sw.includes('v200-physics-measurements-particles'));
-assert(html.includes('app.js?v=200'));
+assert(html.includes('app.js?v=201'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
