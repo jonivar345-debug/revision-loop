@@ -1,0 +1,71 @@
+{
+  "version": "v214",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "allLegacyAnswersHumanReviewed": false,
+  "completeSpecificationCertified": false,
+  "scope": "Real content and structural review of all 971 active Physics/Chemistry mock cards that lacked explicit direct specRef in the prior v166 mapping. This is a verified preservation/format and targeted answer-level spot check, not sign-off against every AQA specification bullet.",
+  "evidence": [
+    "Source: editorials/task1-v166-legacy-mock-card-map.json is historical provisional mapping, NOT a requirement-level syllabus audit.",
+    "Current deck content read from verified GitHub deck blob bf7887ecf83fd9a93b907b994c485e8ac8a5ac14, not guessed from metadata.",
+    "All 971 mapped IDs exist in the current 3345-card core deck and are active, school-mock eligible, have non-empty fronts and backs, and retain expected subject and stage.",
+    "There are no case/whitespace-normalised exact duplicate question prompts among these 971 records; semantically similar prompts can still occur.",
+    "All answers are 185 characters or fewer. The historical 'long back' flag on the photoelectric threshold card is stale: its answer is now a short, correct statement."
+  ],
+  "counts": {
+    "coreDeckCards": 3345,
+    "matchedLegacyCards": 971,
+    "physics": 311,
+    "chemistry": 660,
+    "chemistryA2": 194,
+    "missingLegacyCards": 0,
+    "inactiveLegacyMockCards": 0,
+    "blankQuestions": 0,
+    "blankAnswers": 0,
+    "duplicatePrompts": 0,
+    "overlongAnswersAtAudit": 0,
+    "historicalStaleBackLengthFlags": 1,
+    "spotCheckedDistinctAnswers": 15
+  },
+  "contentSpotChecks": [
+    "phy_vectors_001",
+    "phy_motion_d",
+    "phy_motion_v",
+    "phy_motion_a",
+    "phy_newton3",
+    "phy_rp6",
+    "chem_lattice_diss",
+    "chem_bondenthalpy",
+    "chem_bh_defs_20261024_latt_formation_eq",
+    "chem_atomic_v43_44",
+    "chem_atomic_v43_45",
+    "chem_config_weak_v45_01",
+    "chem_config_weak_v45_02",
+    "chem_rp4",
+    "chem_rp2"
+  ],
+  "focus": {
+    "Physics": "Resolved vectors, signed motion graph areas, third-law pairs and emf/internal-resistance graph interpretation already have short conceptual card evidence.",
+    "Chemistry": "Born–Haber definitions, energetics signs and mean-bond formula, Period 3 ionisation exceptions, Cr/Cu configurations, silver-halide observations and calorimetry already have short conceptual card evidence.",
+    "RP4": "Ammonium, halide and Group 2 test observations still need requirement-by-requirement practical-skills review; existing topic names are not sufficient to confirm full detail."
+  },
+  "resolvedStaleHistoricalFlag": {
+    "id": "phy_spectra_photo_v32_below_threshold_graph",
+    "historicalAudit": "editorial/task1-v166-legacy-mock-card-map.json",
+    "historicalReason": "long back",
+    "currentBack": "No photoelectrons are emitted.",
+    "action": "Record as no longer a live content-length issue; preserve original historical audit unchanged."
+  },
+  "nextReviews": [
+    "Verify actual required practical qualitative ion-identification observations against AQA RP4; inspect missing Group 2 and ammonium details without duplicating good existing cards.",
+    "Audit individual older A2 Chemistry mock cards against school taught-through-Kp topics and excluded buffers.",
+    "Continue requirement-by-requirement AQA Physics and Chemistry specification review, including practical interpretation and tested working.",
+    "Keep historical source-indexed paper coverage separate from original authored questions."
+  ],
+  "releasedChanges": "Audit and regression test only. No user-facing cards, questions, existing IDs, markers, or student state altered.",
+  "limitations": [
+    "A passing structural test does not certify factual accuracy, completeness, active retrieval or student mastery.",
+    "Only 15 selected existing short card answers were directly spot-checked for known correct meanings in this change; the other records have structural validation, not individual expert sign-off.",
+    "No evidence that all 2015–2026 authentic paper questions are indexed; full-paper archive remains incomplete."
+  ]
+}
