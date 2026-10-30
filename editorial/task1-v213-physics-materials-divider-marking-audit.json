@@ -1,0 +1,72 @@
+{
+  "version": "v213",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "Four existing original AQA AS/Year 1 Physics 7408 school-mock questions: nonlinear force–extension, Young modulus, loaded potential divider, and sensor placement",
+  "baselineQuestions": [
+    "task1_v203_phy_04",
+    "task1_v203_phy_05",
+    "task1_v203_phy_06",
+    "task1_v203_phy_07"
+  ],
+  "examples": [
+    {
+      "id": "task1_v203_phy_04",
+      "incorrect": "Total work done is 1.35 N",
+      "previouslySuggested": 1,
+      "expected": 0,
+      "valid": "Total work done is 1.35 J"
+    },
+    {
+      "id": "task1_v203_phy_05",
+      "incorrect": "Young modulus is 2.00 × 10^11 J",
+      "previouslySuggested": 1,
+      "expected": 0,
+      "valid": "Young modulus is 2.00 × 10^11 Pa"
+    },
+    {
+      "id": "task1_v203_phy_06",
+      "incorrect": "Loaded output = 6.0 A",
+      "previouslySuggested": 1,
+      "expected": 0,
+      "valid": "Loaded output = 6.0 V"
+    },
+    {
+      "id": "task1_v203_phy_07",
+      "incorrect": "Cool NTC output is 5.0 A",
+      "previouslySuggested": 1,
+      "expected": 0,
+      "valid": "Cool NTC output is 5.0 V"
+    }
+  ],
+  "intervention": "Exact reviewed single-statement cases take priority only on these four questions. Unknown and multi-step responses retain the earlier reviewable marking path; no blanket rejection of numerically unfamiliar working.",
+  "tests": {
+    "newQuestions": 0,
+    "newCards": 0,
+    "unchangedModelSolutions": 8,
+    "unchangedModelMarks": 67,
+    "positiveShortStatements": 40,
+    "wrongUnitsOrConcepts": 26
+  },
+  "changedFiles": [
+    "physics-materials-divider-marking-v213.js",
+    "app.js",
+    "index.html",
+    "sw.js",
+    "tests/task1-v213-physics-materials-divider-marking.cjs",
+    ".github/workflows/cloud-sync-v119.yml",
+    ".github/workflows/marking-regression.yml"
+  ],
+  "preserved": [
+    "Original question and flashcard content and IDs",
+    "School Year 1 Pure-only Maths mock filter",
+    "Stored progress, XP, cloud backup and profile keys",
+    "World images, location gallery data and purchased unlock state"
+  ],
+  "limitations": [
+    "This confirms specific short-answer cases, not general natural-language or examiner-standard marking.",
+    "Correct unfamiliar phrasing and photographed workings may require manual mark adjustment.",
+    "The full AQA specification bullet coverage and 2015–2026 historical source question archive remain uncertified."
+  ]
+}

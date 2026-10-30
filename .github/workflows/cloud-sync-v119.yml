@@ -308,6 +308,7 @@ jobs:
       - run: node tests/task1-v210-chemistry-rates.cjs
       - run: node tests/task1-v211-physics-concise-marking.cjs
       - run: node tests/task1-v212-maths-marking-calibration.cjs
+      - run: node tests/task1-v213-physics-materials-divider-marking.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
