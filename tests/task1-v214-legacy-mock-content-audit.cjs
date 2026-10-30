@@ -7,7 +7,8 @@ assert.equal(deck.cards.length,3345);
 assert.equal(old.records.length,971);
 const byId=new Map(deck.cards.map(c=>[c.id,c]));
 assert.equal(byId.size,deck.cards.length,'Core deck must retain unique card IDs');
-const seen=new Map(),classes={Physics:0,Chemistry:0},a2=0;
+const seen=new Map(),classes={Physics:0,Chemistry:0};
+let a2=0;
 const normal=x=>String(x||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[.!?]+$/,'');
 let blank=0,missing=0,inactive=0,duplicate=0,tooLong=0;
 for(const rec of old.records){
