@@ -38,6 +38,7 @@ jobs:
           node tests/task1-v209-maths-pure-application.cjs
           node tests/task1-v210-chemistry-rates.cjs
           node tests/task1-v211-physics-concise-marking.cjs
+          node tests/task1-v212-maths-marking-calibration.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
           node tests/chemistry-amount-v44.cjs
