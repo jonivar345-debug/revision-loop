@@ -1,0 +1,147 @@
+{
+  "version": "v203",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "AQA Physics 7408 Year 1/AS sections 3.4.1.3 (motion graphs), 3.4.2.1–3.4.2.2 (materials), 3.5.1.5 (potential dividers) and 3.5.1.6 (emf and internal resistance). Targeted application and graphic interpretation, not a complete AS spec audit.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/electricity"
+  ],
+  "priorEvidence": [
+    {
+      "file": "editorial/task1-v153-mock-priority-evidence.json",
+      "finding": "Nine selected partial evidence rows were recorded at v153. Follow-on v158, v194, v197 and v200 had already supplied circuit, signed-motion, projectiles and internal-resistance original practice; the remaining most direct weakness was curved s–t tangent evidence plus nonlinear force-extension comparison."
+    },
+    {
+      "file": "editorial/task1-v197-mechanics-reasoning-crosswalk.json",
+      "finding": "Existing v197 velocity-time reversal and raised-platform projectile questions avoid duplicating same old data; v203 adds curved displacement-time tangent, acceleration-time area and non-proportional materials response."
+    },
+    {
+      "file": "editorial/task1-v158-physics-electricity-mock-audit.json",
+      "finding": "Potential dividers, NTC and LDR, and loaded divider already have recall and one simple example. v203 extends to loaded branch-current comparisons, two sensor placements and power-accounted internal-resistance graphs."
+    },
+    {
+      "file": "editorial/task1-v200-physics-measurements-particles-crosswalk.json",
+      "finding": "v200 verified emf/intercept/gradient error bars and independent numerical calculations; v203 separates electrical losses and battery energy."
+    }
+  ],
+  "newQuestions": [
+    {
+      "id": "task1_v203_phy_01",
+      "specRef": "3.4.1.3",
+      "subtopic": "Instantaneous velocity from displacement–time tangent",
+      "marks": 8,
+      "graph": {
+        "xAxis": "Time / s",
+        "yAxis": "Displacement / m",
+        "points": 17
+      }
+    },
+    {
+      "id": "task1_v203_phy_02",
+      "specRef": "3.4.1.3",
+      "subtopic": "Signed velocity-time areas and distance versus displacement",
+      "marks": 8,
+      "graph": {
+        "xAxis": "Time / s",
+        "yAxis": "Velocity / m s⁻¹",
+        "points": 5
+      }
+    },
+    {
+      "id": "task1_v203_phy_03",
+      "specRef": "3.4.1.3",
+      "subtopic": "Acceleration-time signed areas versus displacement",
+      "marks": 8,
+      "graph": {
+        "xAxis": "Time / s",
+        "yAxis": "Acceleration / m s⁻²",
+        "points": 6
+      }
+    },
+    {
+      "id": "task1_v203_phy_04",
+      "specRef": "3.4.2.1",
+      "subtopic": "Nonlinear force-extension graph work and Hooke law limitation",
+      "marks": 9,
+      "graph": {
+        "xAxis": "Extension / m",
+        "yAxis": "Force / N",
+        "points": 5
+      }
+    },
+    {
+      "id": "task1_v203_phy_05",
+      "specRef": "3.4.2.2",
+      "subtopic": "Stress-strain gradient and energy density",
+      "marks": 9,
+      "graph": {
+        "xAxis": "Strain (dimensionless)",
+        "yAxis": "Stress / MPa",
+        "points": 5
+      }
+    },
+    {
+      "id": "task1_v203_phy_06",
+      "specRef": "3.5.1.5",
+      "subtopic": "Loaded potential divider with equal branch and load resistances",
+      "marks": 8,
+      "graph": null
+    },
+    {
+      "id": "task1_v203_phy_07",
+      "specRef": "3.5.1.5",
+      "subtopic": "NTC and LDR in divider lower branch, reversing sense",
+      "marks": 8,
+      "graph": null
+    },
+    {
+      "id": "task1_v203_phy_08",
+      "specRef": "3.5.1.6",
+      "subtopic": "Terminal voltage graph with lost volts and power accounting",
+      "marks": 9,
+      "graph": {
+        "xAxis": "Current / A",
+        "yAxis": "Terminal p.d. / V",
+        "points": 8
+      }
+    }
+  ],
+  "counts": {
+    "newOriginalQuestions": 8,
+    "newMarks": 67,
+    "graphDiagrams": 6,
+    "mechanicsAndMaterialsQuestions": 5,
+    "electricityQuestions": 3,
+    "reviewedShortAnswerVariants": 62,
+    "explicitWrongAnswerRejects": 7,
+    "coreFlashcardsUnchanged": 3345,
+    "coreExamQuestionsUnchanged": 1268,
+    "mathsFirstMockQuestionsUnchanged": 138
+  },
+  "distinctApplications": [
+    "Displacement–time tangent at a curved point, plus average versus instantaneous velocity",
+    "Velocity-time reversed direction, signed displacement and distance requiring below-axis area",
+    "Acceleration-time signed area gives change in velocity, never displacement",
+    "Nonlinear loading: piecemeal force-extension area versus triangular shortcut and unloading ambiguity",
+    "Stress-strain Young modulus, newtons from stress/area, elastic energy-density to actual energy",
+    "Loaded parallel-resistor potential divider with current partition",
+    "NTC and LDR lower-branch output and reasoning about sensor relocation",
+    "Emf terminal voltage graph plus external/internal power conservation"
+  ],
+  "validityChecks": [
+    "All eight full model responses must receive 67/67 from current examSuggested() on untouched source model answers.",
+    "All nine v202 Chemistry RP4–6 questions and previous supplementary banks must remain loaded and unchanged.",
+    "Six graph diagrams require valid finite bounds and sampled coordinate pairs inside axes.",
+    "62 reviewed short-answer variants must receive exactly their manually assigned mark points; 7 explicitly incorrect unit/area/electrical claims must receive zero.",
+    "No changes to stored XP, cloud/profile keys, original bank IDs, mock subject boundaries, World/gallery assets or external services."
+  ],
+  "limitations": [
+    "AQA first-year graph content is broader than this set. Other requirements remain candidates for formal one-by-one evidence certification.",
+    "Graph plots represent original questions, not scanned original AQA diagrams and not a substitute for drawing/handwriting assessment.",
+    "Original question mark-schemes are editorial point checklists; examiner-equivalent error-carried-forward and all alternative valid workings are not certified.",
+    "The historical 2015–2026 original-paper archive is not complete. No full copyrighted papers have been reproduced.",
+    "No claim of student mastery or overall Task 1 completion."
+  ]
+}
