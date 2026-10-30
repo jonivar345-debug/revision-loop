@@ -2206,6 +2206,12 @@ function reviewedShortAnswerFlags(q,answer){
  return flags.some(Boolean)?flags:null;
 }
 function examSuggested(q,answer){
+ // v211: exact, independently calibrated physics short answers and negative
+ // sign/unit statements. Unknown wording retains existing reviewable marking.
+ if(/^task1_v203_phy_(?:01|03|08)$/.test(String(q.id||''))){
+  const calibrated=typeof window!=='undefined'?window.RevisionPhysicsConciseV211?.evaluate(q,answer):null;
+  if(calibrated)return calibrated;
+ }
  // v210: use calculation-specific evidence for the new original mock data
  // questions. Never fall back to fuzzy matching that credits wrong signs.
  if(/^task1_v210_chem_0[1-5]$/.test(String(q.id||''))){
