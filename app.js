@@ -2534,7 +2534,7 @@ function reviewedExpressionEvidence(answer,expression){
   return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  }
 
- const scores=q.markPoints.map((p,i)=>{
+ let scores=q.markPoints.map((p,i)=>{
    const strictEvidence=Array.isArray(q.markEvidenceRules?.[i]);
    const main=strictEvidence?evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p);
    // Never bypass an independently verified restrictive evidence rule.
@@ -2679,6 +2679,7 @@ function reviewedExpressionEvidence(answer,expression){
  if(reviewedShortFlags){
   preds=reviewedShortFlags;
   suggested=totalMarkingPoints(q,preds);
+  scores=preds.map(on=>on?1:0);
  }
  // The generic fuzzy matcher can mistake an explicitly wrong physical unit
  // for a valid final value. Apply only exact, individually reviewed rejects.
@@ -2686,6 +2687,7 @@ function reviewedExpressionEvidence(answer,expression){
   const canonical=s=>normalise(s).replace(/[.!?]+$/,'').trim();
   if(q.reviewedShortAnswerRejects.some(bad=>canonical(answer)===canonical(bad))){
    preds=preds.map(()=>false);
+   scores=preds.map(()=>0);
    suggested=0;
   }
  }
