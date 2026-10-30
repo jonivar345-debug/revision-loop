@@ -17,7 +17,7 @@ assert.equal(audit.counts.reviewedShortAnswerAcceptedVariants,39);
 assert.equal(audit.counts.explicitFalsePositiveRejectVariants,3);
 assert(app.includes("'./chemistry_rp4_rp6_evidence_v202.json'"));
 assert(sw.includes("'./chemistry_rp4_rp6_evidence_v202.json'"));assert(sw.includes('v202-chem-rp4-6'));
-assert(html.includes('app.js?v=202'));
+assert(html.includes('app.js?v=203'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
