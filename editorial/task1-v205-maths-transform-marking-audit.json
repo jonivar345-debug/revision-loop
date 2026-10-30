@@ -1,0 +1,50 @@
+{
+  "version": "v205",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "AQA Year 1/AS Pure first school Maths mock; original v191 transformation question only",
+  "reviewedQuestion": "task1_v191_maths_004",
+  "issue": "The specialised marker omitted algebraically equivalent exact pairs of x-intercepts and gave marks for certain explicitly negated transformation descriptions.",
+  "verifiedMathematics": {
+    "f": "f(x)=x²+2x−3=(x+1)²−4",
+    "g": "g(x)=−2f(x−3)+1=−2(x−2)²+9",
+    "turningPoint": "(2,9)",
+    "xIntercepts": [
+      "x=2±3/√2",
+      "x=(4±3√2)/2",
+      "x=2±(3√2)/2",
+      "x=2±√(9/2)",
+      "x=2±√4.5"
+    ],
+    "transformations": [
+      "Translate right by 3",
+      "Reflect in the x-axis",
+      "Stretch vertically by factor 2",
+      "Translate upwards by 1"
+    ]
+  },
+  "validatedVariants": {
+    "acceptedIsolated": 10,
+    "rejectedIsolated": 10,
+    "acceptedCombined": 1,
+    "previousOriginalMathsFullModels": 6
+  },
+  "preserved": {
+    "originalMathsFirstMockQuestionPool": 138,
+    "examQuestionIds": true,
+    "flashcardIds": true,
+    "existingAnswers": true,
+    "savedProgress": true,
+    "cloudSync": true,
+    "mathsMockASPureOnly": true,
+    "worldAssets": true,
+    "profileKeys": true
+  },
+  "limitations": [
+    "This specifically calibrates one original question, not every algebraic equivalent, all exam questions or handwritten OCR.",
+    "Approximate decimal roots are not automatically awarded by these additions; a human can review equivalent valid answers.",
+    "Natural-language negation detection remains heuristic; students retain the ability to correct marks manually.",
+    "The full paper archive and requirement-by-requirement specification audit remain incomplete."
+  ]
+}

@@ -50,13 +50,22 @@
    }
    case 'originalAs191Transform':{
     const square=flat(/f\(x\)=\(x\+1\)\^2-4/);
-    const right=has(/(?:right|positive\s+x).{0,22}\b3\b|\b3\b.{0,22}\bright\b/);
-    const reflect=has(/reflect.{0,20}x[\s-]*axis|reflection.{0,20}x[\s-]*axis/);
-    const stretch=has(/(?:vertical|y[\s-]*axis).{0,35}(?:stretch|scale)|(?:stretch|scale).{0,35}vertical/)&&has(/(?:factor|by)\s*2\b/);
-    const up=has(/(?:up|upwards|positive\s+y).{0,20}\b1\b|\b1\b.{0,20}\bup\b/);
+    const rejectRight=has(/\b(?:not|never)\s+(?:translate|shift|move)[^.;]{0,35}\bright\b|(?:translate|shift|move)[^.;]{0,40}\bright\b[^.;]{0,18}\b(?:incorrect|wrong|false)\b/);
+    const right=has(/(?:right|positive\s+x).{0,22}\b3\b|\b3\b.{0,22}\bright\b/)&&!rejectRight;
+    const rejectReflect=has(/\b(?:not|never)\s+(?:reflect|reflection)[^.;]{0,26}x[\s-]*axis|\breflect[^.;]{0,26}x[\s-]*axis[^.;]{0,18}\b(?:wrong|incorrect|false)\b/);
+    const reflect=has(/reflect.{0,20}x[\s-]*axis|reflection.{0,20}x[\s-]*axis/)&&!rejectReflect;
+    const rejectStretch=has(/\b(?:not|never)\s+(?:a\s+)?(?:vertical(?:ly)?\s+)?(?:stretch|scale)[^.;]{0,25}\b2\b|\b(?:stretch|scale)[^.;]{0,40}\b2\b[^.;]{0,18}\b(?:wrong|incorrect|false)\b/);
+    const stretch=has(/(?:vertical(?:ly)?|y[\s-]*axis).{0,35}(?:stretch|scale)|(?:stretch|scale).{0,35}vertical(?:ly)?/)&&has(/(?:factor|by)(?:\s+of)?\s*2\b/)&&!rejectStretch;
+    const rejectUp=has(/\b(?:not|never)\s+(?:translate|shift|move)[^.;]{0,35}\bup\b|(?:translate|shift|move)[^.;]{0,40}\bup\b[^.;]{0,18}\b(?:incorrect|wrong|false)\b/);
+    const up=has(/(?:up|upwards|positive\s+y).{0,20}\b1\b|\b1\b.{0,20}\bup\b/)&&!rejectUp;
     const vertex=flat(/g\(x\)=-2\(x-2\)\^2\+9/)&&has(/(?:turning\s+point|vertex).{0,24}\(\s*2\s*,\s*9\s*\)/);
-    const roots=flat(/x=2(?:\+\/-|±)3\/(?:sqrt\(2\)|√2)|x=2±3√2\/2|x=2±3\/√2/)||
+    // Equal exact forms of the same pair of roots each earn one result mark.
+    // A worked pair must include both roots, rather than an isolated one.
+    const exactRoots=flat(/x=2(?:\+\/-|±)3\/(?:sqrt\(2\)|√2)|x=2±3√2\/2|x=2±3\/√2|x=2±\(3√2\)\/2|x=2±\(3sqrt\(2\)\)\/2|x=\(4±3√2\)\/2|x=\(4±3sqrt\(2\)\)\/2|x=2±sqrt\(9\/2\)|x=2±sqrt\(4\.5\)/)||
+      flat(/x=2\+3√2\/2(?:or|and|,)x=2-3√2\/2|x=2-3√2\/2(?:or|and|,)x=2\+3√2\/2/)||
       (has(/x\s*=\s*2\s*[-+]\s*3\s*\/\s*(?:√2|sqrt\(2\))/)&&has(/(?:and|,|±)/));
+    const rejectRoots=has(/\b(?:not|never)\s+(?:the\s+)?(?:roots?\s+(?:are|is)\s*|solutions?\s+(?:are|is)\s*)?x\s*=|x\s*=[^;\n]{0,60}\b(?:wrong|incorrect|false)\b/);
+    const roots=exactRoots&&!rejectRoots;
     marks=[square,right,reflect,stretch,up,vertex,roots];
     break;
    }
