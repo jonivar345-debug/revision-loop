@@ -64,18 +64,18 @@ const percentRho=(.02/2.4+.01/.6+2*.005/.4+.01/1.5)*100;
 close(percentRho,5.6666667);close(resistivity*percentRho/100,1.89892e-8);
 close((1.44-.24)/.600,2);
 close((.02/1.2+.005/.6)*100,2.5);
-const h=6.63e-34,c=3e8,e=1.60e-19,m=9.11e-31;
-const totalEnergy=2.20*3.6e6,photonEnergy=h*c/(400e-9);
+const h=6.63e-34,cLight=3e8,e=1.60e-19,m=9.11e-31;
+const totalEnergy=2.20*3.6e6,photonEnergy=h*cLight/(400e-9);
 close(totalEnergy,7.92e6);close(photonEnergy,4.9725e-19);
 close(photonEnergy/e,3.1078125);close(totalEnergy/photonEnergy,1.59276e25);
 assert.equal(-1+1,0); // beta-minus electron and electron-antineutrino lepton number
 assert.equal(-1+1,0); // beta-plus positron and electron-neutrino lepton number
 assert.equal(1-1,0); // associated strange-particle pair net strangeness
 close(2*.511,1.022);
-close(.511e6*e,8.176e-14);close(h*c/(.511e6*e),2.43273e-12);
+close(.511e6*e,8.176e-14);close(h*cLight/(.511e6*e),2.43273e-12);
 close(1.50-1.022,.478);
 close(((-2)-(-6)),4);
-close(h*c/(4*e),3.1078125e-7);
+close(h*cLight/(4*e),3.1078125e-7);
 close(4-2.30,1.70);
 const momentum=Math.sqrt(2*m*200*e);
 close(momentum,7.63571e-24);close(h/momentum,8.68289e-11);
