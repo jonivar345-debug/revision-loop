@@ -100,10 +100,22 @@
    case 'originalAs191Area':{
     const factor=flat(/\(x-1\)\(x-3\)/)&&has(/(?:root|x\s*=\s*1.{0,15}3|x\s*=\s*3.{0,15}1)/);
     const primitive=flat(/x\^3\/3-2x\^2\+3x/);
-    const first=has(/(?:from\s*x\s*=\s*0\s*to\s*1|0\s*to\s*1|0.{0,6}1).{0,75}4\/3/);
-    const middle=has(/(?:from\s*x\s*=\s*1\s*to\s*3|1\s*to\s*3|1.{0,6}3).{0,90}-4\/3/)&&has(/(?:area\s+is|area\s+of|its\s+area|magnitude).{0,25}4\/3/);
-    const last=has(/(?:from\s*x\s*=\s*3\s*to\s*4|3\s*to\s*4|3.{0,6}4).{0,80}4\/3/);
-    const total=has(/\b(?:total|combined)\s+area\s*(?:=|is|of)\s*\+?4\b|\barea\s+total\s*(?:=|is)\s*\+?4\b/);
+    // Require the exact interval, not loosely related digits elsewhere in
+    // the answer. A negative integral must never count as positive area.
+    const firstRef=/(?:from\s*x\s*=\s*0\s*to\s*1|\b0\s*to\s*1\b|∫\s*₀¹|∫\s*_?0\^1)/;
+    const middleRef=/(?:from\s*x\s*=\s*1\s*to\s*3|\b1\s*to\s*3\b|∫\s*₁\^3|∫\s*₁³|∫\s*_?1\^3)/;
+    const lastRef=/(?:from\s*x\s*=\s*3\s*to\s*4|\b3\s*to\s*4\b|∫\s*₃\^4|∫\s*₃⁴|∫\s*_?3\^4)/;
+    const incorrect=has(/\b(?:is|was|are)\s+(?:wrong|incorrect|false|not\s+correct)\b/);
+    const positiveFraction=/(?<![-\d])4\/3/.test(t);
+    const first=firstRef.test(t)&&positiveFraction&&!incorrect&&
+      !has(/(?:from\s*x\s*=\s*0\s*to\s*1|\b0\s*to\s*1\b|∫\s*₀¹|∫\s*_?0\^1)[^.;\n]{0,80}(?:=\s*-4\/3|negative\s+4\/3)/);
+    const middle=middleRef.test(t)&&has(/-\s*4\/3|negative\s+4\/3/)&&
+      has(/(?:area\s*(?:is|of|=)?|its\s+area|magnitude)[^.;\n]{0,30}(?<![-\d])4\/3/)&&!incorrect;
+    const last=lastRef.test(t)&&positiveFraction&&!incorrect&&
+      !has(/(?:from\s*x\s*=\s*3\s*to\s*4|\b3\s*to\s*4\b|∫\s*₃\^4|∫\s*₃⁴|∫\s*_?3\^4)[^.;\n]{0,80}(?:=\s*-4\/3|negative\s+4\/3)/);
+    const statedTotal=has(/\b(?:total|combined)\s+area\s*(?:=|is|of)\s*\+?4\b|\barea\s+total\s*(?:=|is)\s*\+?4\b|^\s*(?:the\s+)?area\s*(?:=|is)\s*\+?4(?:\b|$)/);
+    const rejectedTotal=has(/\b(?:not|never)\s+(?:(?:the\s+)?(?:total\s+)?area\s*(?:is|=)|total\s+area)\s*\+?4\b|\b(?:total\s+)?area\s*(?:=|is)\s*\+?4\b[^.;\n]{0,22}\b(?:wrong|incorrect|false)\b/);
+    const total=statedTotal&&!rejectedTotal;
     marks=[factor,primitive,first,middle,last,total];
     break;
    }
