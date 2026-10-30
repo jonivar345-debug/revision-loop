@@ -123,6 +123,8 @@ on:
       - 'physics_measurements_particles_v200.json'
       - 'editorial/task1-v200-physics-measurements-particles-crosswalk.json'
       - 'tests/task1-v200-physics-measurements-particles.cjs'
+      - 'editorial/task1-v201-science-concise-marking-crosswalk.json'
+      - 'tests/task1-v201-science-concise-marking.cjs'
       - 'editorial/task1-v190-maths-pure-application-audit.json'
       - 'tests/task1-v190-maths-pure-questions.cjs'
       - 'editorial/task1-v189-enthalpy-energy-recall-audit.json'
@@ -293,6 +295,7 @@ jobs:
       - run: node tests/task1-v198-waves-energetics.cjs
       - run: node tests/task1-v199-chem-mock-precision.cjs
       - run: node tests/task1-v200-physics-measurements-particles.cjs
+      - run: node tests/task1-v201-science-concise-marking.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
