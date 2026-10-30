@@ -1,0 +1,68 @@
+{
+  "version": "v212",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "AQA Year 1/AS Pure Maths first school mock: the five original v209 higher-order proof, vectors and transformations questions",
+  "reviewedFiles": [
+    "maths_pure_proof_vector_applications_v209.json",
+    "maths-as-pure-marking-v209.js",
+    "tests/task1-v209-maths-pure-application.cjs"
+  ],
+  "issuesFound": [
+    {
+      "id": "task1_v209_maths_002",
+      "before": "The counterexample is not n=16 scored one",
+      "after": "Explicit denial scores zero"
+    },
+    {
+      "id": "task1_v209_maths_003",
+      "before": "The exact direction vector (0.6,0.8) was missed, and its explicitly denied fraction form was credited",
+      "after": "Correct decimal vector credited and denied forms rejected"
+    },
+    {
+      "id": "task1_v209_maths_004",
+      "before": "Equivalent exact length √(58.5) was missed",
+      "after": "Mathematically equal exact radical representations credited"
+    },
+    {
+      "id": "task1_v209_maths_005",
+      "before": "Equivalent exact x-intercepts were missed and denied turning point or vertical stretch were credited",
+      "after": "Recognise equivalent radical solutions and reject explicit negations"
+    },
+    {
+      "id": "task1_v209_maths_001",
+      "before": "Proof explanation using n(n−1)(n+1) rather than the phrase 'consecutive integers' was missed",
+      "after": "Credit the mathematically explicit three-factor argument"
+    }
+  ],
+  "qa": {
+    "newQuestions": 0,
+    "newCards": 0,
+    "originalQuestionCount": 5,
+    "modelAnswerMarksUnchanged": 38,
+    "isolatedCorrectResponses": 20,
+    "isolatedIncorrectOrDeniedResponses": 11,
+    "originalV209QuestionRegressionStillRuns": true
+  },
+  "files": [
+    "maths-as-pure-marking-v209.js",
+    "tests/task1-v212-maths-marking-calibration.cjs",
+    "tests/task1-v209-maths-pure-application.cjs",
+    "index.html",
+    "sw.js",
+    ".github/workflows/cloud-sync-v119.yml",
+    ".github/workflows/marking-regression.yml"
+  ],
+  "preservation": [
+    "No alteration to card/question IDs or banks",
+    "No changes to cloud, XP, saved progress or profile keys",
+    "First school Maths mock remains AS/Year 1 Pure only",
+    "No Physics/Chemistry question or World/media changes"
+  ],
+  "limitations": [
+    "Rule-based numerical and phrasing calibration cannot recognise all equivalent correct workings.",
+    "Larger multi-step answers and photographed handwriting may still require manual checking.",
+    "No complete AQA paper archive or line-by-line specification certification; Task 1 remains incomplete."
+  ]
+}
