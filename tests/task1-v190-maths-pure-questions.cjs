@@ -52,4 +52,28 @@ assert.equal(mark(vectors,'not k=8').suggested,0);
 assert.equal(mark(vectors,'AB:BC=4:5').suggested,1);
 assert.equal(mark(ratio,'AB=(12,12)').suggested,1);
 assert.equal(mark(ratio,'P=(5,-2)').suggested,1);
+// v208: credit valid independent vector working and reject expressly disowned answers.
+const vectorCases=[
+ [vectors,'AB is parallel to AC',1],
+ [vectors,'AB and AC are parallel',1],
+ [vectors,'AB ∥ AC',1],
+ [vectors,'k=8',1],
+ [ratio,'|CP|=√72',1],
+ [ratio,'CP length is √72',1],
+ [ratio,'Unit vector is (√2/2,-√2/2)',1],
+ [ratio,'unit vector (1/√2,-1/√2)',1],
+ [vectors,"The answer isn't k=8",0],
+ [vectors,'Not k=8',0],
+ [vectors,'k=8 is wrong',0],
+ [vectors,'AB and AC are not parallel',0],
+ [vectors,'AB is not parallel to AC',0],
+ [ratio,'The unit vector is not (√2/2,-√2/2)',0],
+ [ratio,'Unit vector (√2/2,-√2/2) is incorrect',0]
+];
+for(const [q,answer,expected] of vectorCases){
+ const actual=mark(q,answer);
+ assert.equal(actual.suggested,expected,'v208 v190 vector marking regression: '+answer);
+ assert.equal(actual.preds.filter(Boolean).length,expected,'Inconsistent independent marks: '+answer);
+}
+assert.equal(mark(vectors,'AB=(4,8), AC=(k+1,18), AB and AC are parallel, so k=8, AB:BC=4:5').suggested,5);
 console.log('PASS v190: four original AS Pure 19-mark questions, 132 core+extra mock pool, calibrated independent method credit');
