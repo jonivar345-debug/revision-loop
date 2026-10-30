@@ -1,0 +1,39 @@
+{
+  "version": "v206",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "focus": "Year 1 / AS Pure Maths first-school-mock original trigonometric-equation question task1_v191_maths_002",
+  "problem": "The existing rule marker undercredited valid identity, intermediate and complete-solution notations and overcredited some explicitly denied or wrong answers.",
+  "validMath": {
+    "equation": "2sin²θ+cosθ−1=0, 0° ≤ θ < 360°",
+    "identity": [
+      "sin²θ=1−cos²θ",
+      "sin²θ+cos²θ=1"
+    ],
+    "rearranged": "2cos²θ−cosθ−1=0",
+    "factorised": "(2cosθ+1)(cosθ−1)=0",
+    "values": [
+      "cosθ=1",
+      "cosθ=−1/2"
+    ],
+    "solutions": [
+      "0°",
+      "120°",
+      "240°"
+    ]
+  },
+  "regression": {
+    "correctIsolatedResponses": 13,
+    "wrongOrNegatedIsolatedResponses": 8,
+    "sixV191FullModelSolutionsUnchanged": true,
+    "firstMockPureQuestionCountUnchanged": 138
+  },
+  "preserved": "No alteration to the main exam question bank, core deck, IDs, XP, saved progress, cloud data, World photos or mock scope; only specialised marking script, its test, script version and service-worker cache version changed.",
+  "limitations": [
+    "The deliberately conservative marker is not a general computer algebra system and may miss other valid rearrangements.",
+    "Diagram, handwriting and OCR recognition still require human review.",
+    "This is one question-level calibration, not full coverage or examiner-standard certification.",
+    "Task 1 specification and historical-paper completion remain unfinished."
+  ]
+}
