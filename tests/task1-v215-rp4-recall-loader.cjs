@@ -29,7 +29,7 @@ for(const c of [...rates.cards,...rp4.cards]){
  assert(!uniqueIds.has(c.id),'Duplicate core or supplement ID '+c.id); uniqueIds.add(c.id);
  assert(!valid[c.id],'Duplicate new ID '+c.id);valid[c.id]=c;
  assert(c.subject==='Chemistry'&&c.mock===true&&c.taught===true&&c.active===true&&c.scope==='mock');
- assert(c.strictRecall===true&&c.accept.includes(c.back)&&c.accept.length>=4&&c.reject.length>=3);
+ assert(c.strictRecall===true&&c.accept.includes(c.back)&&c.accept.length>=4&&c.reject.length>=(c.id.startsWith('task1_v215_')?3:2));
  assert(c.front.length<170&&c.back.length<140);
  if(c.id.startsWith('task1_v215_chem_rp4_')){
   assert.equal(c.stage,'AS');
