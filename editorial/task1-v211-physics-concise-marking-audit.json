@@ -1,0 +1,70 @@
+{
+  "version": "v211",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "Existing AQA 7408 Physics Year 1 school-mock original graph/circuit exercises: task1_v203_phy_01, _03 and _08.",
+  "officialSpecification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+  "decision": "Targeted answer-level calibration. Existing v203 original Physics questions cover relevant graph and internal-resistance application, so no duplicate flashcards or questions are warranted.",
+  "observedBugs": [
+    {
+      "id": "task1_v203_phy_01",
+      "invalid": "The acceleration is -2 m/s^2",
+      "beforeSuggested": 1,
+      "nowSuggested": 0,
+      "reason": "Incorrect acceleration sign"
+    },
+    {
+      "id": "task1_v203_phy_03",
+      "invalid": "Area under acceleration time is displacement",
+      "beforeSuggested": 1,
+      "nowSuggested": 0,
+      "reason": "Acceleration-time area is change in velocity, not displacement"
+    },
+    {
+      "id": "task1_v203_phy_08",
+      "invalid": "The lost volts are 2.0 J",
+      "beforeSuggested": 1,
+      "nowSuggested": 0,
+      "reason": "Incorrect quantity and unit for terminal voltage"
+    },
+    {
+      "id": "task1_v203_phy_01",
+      "valid": "The tangent gradient is 5 m/s",
+      "beforeSuggested": 0,
+      "nowSuggested": 1,
+      "reason": "Equivalent concise correct velocity and correct unit"
+    }
+  ],
+  "qa": {
+    "newQuestionCount": 0,
+    "newCardCount": 0,
+    "oldPhysicsModelSolutions": 8,
+    "oldPhysicsModelMarks": 67,
+    "acceptedShortAliasesTested": 29,
+    "rejectedWrongConciseClaims": 18,
+    "otherOriginalQuestionsUnchanged": true
+  },
+  "changes": [
+    "physics-concise-marking-v211.js",
+    "app.js",
+    "index.html",
+    "sw.js",
+    "tests/task1-v211-physics-concise-marking.cjs",
+    ".github/workflows/cloud-sync-v119.yml",
+    ".github/workflows/marking-regression.yml"
+  ],
+  "safety": [
+    "No core bank or flashcard edits",
+    "Existing card/question IDs preserved",
+    "Year 1 Pure first Maths mock constraints unchanged",
+    "Progress/profile/settings keys unchanged",
+    "World photos and locations untouched"
+  ],
+  "limitations": [
+    "The exact concise-answer mappings do not model arbitrary student writing and only apply to three questions.",
+    "Unknown phrasings and longer multi-step work still use the site's earlier human-reviewable marker.",
+    "Handwritten diagrams/OCR and all AQA alternative methods cannot be certified automatically.",
+    "Task 1 complete syllabus and historical-paper archive remain unfinished."
+  ]
+}
