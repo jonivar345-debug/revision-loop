@@ -1,0 +1,81 @@
+{
+  "version": "v201",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "Precise, answer-level calibrations on recent original 8 Chemistry v199 and 10 AS Physics v200 school-mock questions. No new cards or questions.",
+  "priorEvidence": [
+    "tests/task1-v199-chem-mock-precision.cjs",
+    "tests/task1-v200-physics-measurements-particles.cjs",
+    "editorial/task1-v165-completion-gate.md"
+  ],
+  "method": "Test concise valid student phrasings against real examSuggested(), compare awarded counts to visibly indicated mark points, check negation/incorrect numeric values and exact unit errors. Add 44 vetted accepted aliases across six questions with per-point coverage and three explicit unit-confusion rejects. Keep all original marking schemes and support manual marking adjustment.",
+  "reviewedIds": [
+    "task1_v199_exam_01",
+    "task1_v199_exam_04",
+    "task1_v199_exam_06",
+    "task1_v200_phy_01",
+    "task1_v200_phy_02",
+    "task1_v200_phy_08"
+  ],
+  "examples": [
+    {
+      "question": "task1_v199_exam_01",
+      "answer": "X is an aldehyde. Y is a ketone.",
+      "before": 0,
+      "after": 2,
+      "explanation": "Two distinct identified classes, two independent marks; no generic chemistry method assumptions."
+    },
+    {
+      "question": "task1_v199_exam_04",
+      "answer": "The pH is 2.87.",
+      "before": 0,
+      "after": 1,
+      "explanation": "One correct computed pH; not full marks for deriving Ka and validating approximation."
+    },
+    {
+      "question": "task1_v199_exam_06",
+      "answer": "Kp is 67.5 kPa.",
+      "before": 0,
+      "after": 2,
+      "explanation": "Correct Kp result and separate pressure-unit mark."
+    },
+    {
+      "question": "task1_v200_phy_01",
+      "answer": "The uncertainty is 7.92%.",
+      "before": 0,
+      "after": 1,
+      "explanation": "Correct percentage uncertainty, not automatic method or propagation marks."
+    },
+    {
+      "question": "task1_v200_phy_01",
+      "answer": "E = 50.9 Pa.",
+      "before": 1,
+      "after": 0,
+      "explanation": "GPa magnitude has been mistakenly expressed in Pa; wrong by factor 10^9."
+    },
+    {
+      "question": "task1_v200_phy_08",
+      "answer": "The excess kinetic energy is 0.478 MeV.",
+      "before": 0,
+      "after": 1,
+      "explanation": "Correct independent kinetic energy calculation."
+    }
+  ],
+  "counts": {
+    "acceptedAliases": 44,
+    "independentCases": 19,
+    "questionItemsReviewed": 6,
+    "coreCardsUnchanged": 3345,
+    "coreQuestionsUnchanged": 1268,
+    "mathsFirstMockAsPureQuestions": 138,
+    "newCards": 0,
+    "newQuestions": 0
+  },
+  "limitations": [
+    "This independently checks selected recent original questions only, not all possible student phrasings or AQA mark schemes.",
+    "The full AQA bullet-by-bullet mock specification matrix and complete historical paper archive remain unfinished.",
+    "Unrecognised valid alternative explanations and handwritten working still need human review and student correction.",
+    "No stored results, accounts, XP, cloud keys or historic card and exam question IDs were changed."
+  ]
+}

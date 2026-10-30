@@ -32,6 +32,7 @@ jobs:
           node tests/task1-v198-waves-energetics.cjs
           node tests/task1-v199-chem-mock-precision.cjs
           node tests/task1-v200-physics-measurements-particles.cjs
+          node tests/task1-v201-science-concise-marking.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
           node tests/chemistry-amount-v44.cjs

@@ -2183,6 +2183,28 @@ function singleClaimEvidenceCap(q,answer){
  return /\b(?:because|therefore|hence|thus|which|means|since|so|and)\b/i.test(s)?2:1;
 }
 
+// v201: exact, manually vetted short responses earn the relevant marks only.
+function reviewedShortAnswerFlags(q,answer){
+ const alternatives=q.reviewedShortAnswerPoints;
+ if(!alternatives||typeof alternatives!=='object'||!Array.isArray(q.markPoints))return null;
+ const raw=String(answer||'').trim();
+ if(!raw||raw.length>350)return null;
+ const claims=raw.split(/(?:[;\n]+|(?<=[.!?])\s+(?=[A-Za-z]))/).map(x=>x.trim()).filter(Boolean);
+ if(!claims.length||claims.length>q.markPoints.length)return null;
+ const canonical=s=>normalise(s).replace(/[.!?]+$/,'').trim();
+ const flags=q.markPoints.map(()=>false);
+ for(const claim of claims){
+  const found=Object.entries(alternatives).filter(([key,list])=>{
+   const index=Number(key);
+   return Number.isInteger(index)&&index>=0&&index<flags.length&&Array.isArray(list)&&
+     list.some(example=>canonical(claim)===canonical(example));
+  });
+  // Unknown, qualified and denied claims take the conservative marking route.
+  if(!found.length)return null;
+  for(const [index] of found)flags[Number(index)]=true;
+ }
+ return flags.some(Boolean)?flags:null;
+}
 function examSuggested(q,answer){
  // v191 questions require evidence tied to their particular calculations.
  // Do not use generic keyword overlap when the reviewed marking module is missing.
@@ -2512,7 +2534,7 @@ function reviewedExpressionEvidence(answer,expression){
   return {preds:q.markPoints.map(()=>false),scores:q.markPoints.map(()=>0),finalCorrect:false,confidence:'high',suggested:0};
  }
 
- const scores=q.markPoints.map((p,i)=>{
+ let scores=q.markPoints.map((p,i)=>{
    const strictEvidence=Array.isArray(q.markEvidenceRules?.[i]);
    const main=strictEvidence?evidenceRuleScore(answer,q.markEvidenceRules[i]):markPointPrediction(answer,p);
    // Never bypass an independently verified restrictive evidence rule.
@@ -2651,6 +2673,24 @@ function reviewedExpressionEvidence(answer,expression){
  }
  const singleClaimCap=typeof singleClaimEvidenceCap==='function'?singleClaimEvidenceCap(q,answer):null;
  if(singleClaimCap!==null)suggested=Math.min(suggested,singleClaimCap);
+ // Exact reviewed claims override fuzzy matches, aligning the visible
+ // marked points with their awarded marks, without guessing extra methods.
+ const reviewedShortFlags=typeof reviewedShortAnswerFlags==='function'?reviewedShortAnswerFlags(q,answer):null;
+ if(reviewedShortFlags){
+  preds=reviewedShortFlags;
+  suggested=totalMarkingPoints(q,preds);
+  scores=preds.map(on=>on?1:0);
+ }
+ // The generic fuzzy matcher can mistake an explicitly wrong physical unit
+ // for a valid final value. Apply only exact, individually reviewed rejects.
+ if(Array.isArray(q.reviewedShortAnswerRejects)){
+  const canonical=s=>normalise(s).replace(/[.!?]+$/,'').trim();
+  if(q.reviewedShortAnswerRejects.some(bad=>canonical(answer)===canonical(bad))){
+   preds=preds.map(()=>false);
+   scores=preds.map(()=>0);
+   suggested=0;
+  }
+ }
  const matched=preds.filter(Boolean).length,confidence=(q.answerType!=='numeric'&&q.markPoints.length>1&&(isolatedNumber||isolatedWord))?'low':finalCorrect||exactVerbal?'high':q.answerType==='levels'?'low':matched===q.markPoints.length?'medium':matched>=Math.ceil(q.markPoints.length/2)?'medium':'low';
  return {preds,scores,finalCorrect,confidence,suggested:clamp(suggested,0,q.marks)};
 }
