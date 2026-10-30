@@ -9,7 +9,7 @@ assert.equal(deck.cards.length,3345);assert.equal(exam.questions.length,1268);
 assert.equal(chem.questions.length,8);assert.equal(physics.questions.length,10);
 assert.equal(chem.questions.reduce((s,q)=>s+q.marks,0),60);
 assert.equal(physics.questions.reduce((s,q)=>s+q.marks,0),79);
-assert(html.includes('app.js?v=201'));assert(sw.includes('v201-science-short-marking'));
+assert(html.includes('app.js?v=202'));assert(sw.includes('v201-science-short-marking'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
