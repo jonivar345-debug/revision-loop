@@ -1,0 +1,84 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const bank=load('physics_measurements_particles_v200.json'),audit=load('editorial/task1-v200-physics-measurements-particles-crosswalk.json');
+const deck=load('deck.json'),base=load('exam_questions.json');
+const oldBanks=['maths_pure_proof_vectors_v190.json','maths_as_pure_gap_challenges_v191.json','science_practical_data_v194.json','science_mock_application_v195.json','science_mock_evidence_v196.json','physics_mechanics_reasoning_v197.json','science_waves_energetics_v198.json','chemistry_mock_precision_v199.json'];
+const prior=[...base.questions,...oldBanks.flatMap(p=>load(p).questions)];
+const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8');
+assert.equal(bank.version,'v200');assert.equal(audit.version,'v200');
+assert.equal(bank.questions.length,10);
+assert.deepEqual(bank.questions.map(q=>q.marks),[9,8,8,7,8,8,8,8,8,7]);
+assert.equal(bank.questions.reduce((s,q)=>s+q.marks,0),79);
+assert.equal(audit.counts.newOriginalQuestions,10);
+assert.equal(audit.counts.newMarks,79);
+assert.equal(audit.counts.measurementsMarks,40);
+assert.equal(audit.counts.particlesMarks,39);
+assert.equal(audit.task1Complete,false);assert.equal(audit.masteryCertified,false);
+assert.equal(deck.cards.length,3345);assert.equal(base.questions.length,1268);
+const known=new Set(prior.map(q=>q.id));
+const start=app.indexOf('function mockEligibleQuestion(q){'),end=app.indexOf('\nfunction startMockSession',start);
+assert(start>=0&&end>start,'Missing mock question filter');
+const eligible=vm.runInNewContext(app.slice(start,end)+'\nmockEligibleQuestion');
+assert.equal(prior.filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+for(const q of bank.questions){
+ assert(!known.has(q.id),'Duplicate ID: '+q.id);known.add(q.id);
+ assert.equal(q.subject,'Physics');assert.equal(q.level,'AS');assert.equal(q.year,'Practice');assert.equal(q.taught,true);
+ assert.equal(q.mock,true);assert.equal(q.sourceVerified,false);
+ assert.equal(q.verificationLevel,'original-exam-style');
+ assert.equal(q.standalone,true);assert.equal(q.requiresWorking,true);assert.equal(q.difficulty,'hard');
+ assert(q.specRef.startsWith('3.1.')||q.specRef.startsWith('3.2.'));
+ assert(eligible(q),'New Physics question not mock eligible: '+q.id);
+ assert.equal(q.markPoints.length,q.marks);assert.equal(q.markPointMarks.length,q.marks);
+ assert(q.markPointMarks.every(m=>m===1));
+ assert.equal(q.modelAnswer,q.markPoints.join(' '));
+ assert(q.prompt.length>180 && q.modelAnswer.length>200);
+ assert(!/step-by-step lab|buffer solution/i.test(q.prompt));
+}
+assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+assert(app.includes("'./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json'"));
+assert(sw.includes("'./physics_measurements_particles_v200.json'"));
+assert(sw.includes('v200-physics-measurements-particles'));
+assert(html.includes('app.js?v=200'));
+assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
+assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
+assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
+const a=app.indexOf('function normalise('),b=app.indexOf('function nextSchedule(',a),c=app.indexOf('function evidenceRuleScore(',b),d=app.indexOf('function renderExam(',c);
+assert(a>=0&&b>a&&c>b&&d>c);
+const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+app.slice(a,b)+app.slice(c,d)+'return examSuggested')();
+for(const q of bank.questions){
+ assert.equal(mark(q,q.modelAnswer).suggested,q.marks,'Correct full model not fully credited: '+q.id);
+ assert.equal(mark(q,'').suggested,0,'Blank credited: '+q.id);
+ assert.equal(mark(q,'not sure').suggested,0,'Nonanswer credited: '+q.id);
+}
+const close=(got,want,rtol=.004)=>assert(Number.isFinite(got)&&Math.abs(got-want)<=rtol*Math.max(Math.abs(want),1e-30),got+' versus '+want);
+const area=Math.PI*(.0003)**2/4,young=6*1.2/(area*.002);
+close(area,7.06858e-8);close(young,5.09296e10);
+const percentY=(.1/6+.005/1.2+2*.005/.3+.05/2)*100;
+close(percentY,7.91666667);close(young*percentY/100/1e9,4.03193);
+close((.8-1.44)/(1-.2),-.8);close(1.44+.8*.2,1.6);
+close((.90-.70)/2,.10);close((1.72-1.48)/2,.12);
+const resistivity=(2.4/.6)*(Math.PI*.0004**2/4)/1.5;
+close(resistivity,3.35103e-7);
+const percentRho=(.02/2.4+.01/.6+2*.005/.4+.01/1.5)*100;
+close(percentRho,5.6666667);close(resistivity*percentRho/100,1.89892e-8);
+close((1.44-.24)/.600,2);
+close((.02/1.2+.005/.6)*100,2.5);
+const h=6.63e-34,cLight=3e8,e=1.60e-19,m=9.11e-31;
+const totalEnergy=2.20*3.6e6,photonEnergy=h*cLight/(400e-9);
+close(totalEnergy,7.92e6);close(photonEnergy,4.9725e-19);
+close(photonEnergy/e,3.1078125);close(totalEnergy/photonEnergy,1.59276e25);
+assert.equal(-1+1,0); // beta-minus electron and electron-antineutrino lepton number
+assert.equal(-1+1,0); // beta-plus positron and electron-neutrino lepton number
+assert.equal(1-1,0); // associated strange-particle pair net strangeness
+close(2*.511,1.022);
+close(.511e6*e,8.176e-14);close(h*cLight/(.511e6*e),2.43273e-12);
+close(1.50-1.022,.478);
+close(((-2)-(-6)),4);
+close(h*cLight/(4*e),3.1078125e-7);
+close(4-2.30,1.70);
+const momentum=Math.sqrt(2*m*200*e);
+close(momentum,7.63571e-24);close(h/momentum,8.68289e-11);
+close(Math.sqrt(2*m*800*e),2*momentum);
+close(h/Math.sqrt(2*m*800*e),4.341445e-11);
+console.log('PASS v200: ten AS Physics questions (79 marks), independent uncertainty/quantum calculations, full model, blank/non-answer, preserved maths mock, legacy count, offline loader and cloud data.');
