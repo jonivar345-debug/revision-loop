@@ -113,7 +113,11 @@
     // middle region area can earn the single interval mark.
     const signedMiddle=has(/(?:integral|∫)[^.;\n]{0,80}(?:-\s*4\/3|negative\s+4\/3)/);
     const positiveMiddleArea=has(/(?:area|magnitude)[^.;\n]{0,45}(?<![-\d])4\/3/);
-    const middle=middleRef.test(t)&&(signedMiddle||positiveMiddleArea)&&!incorrect;
+    // A correct signed integral can earn method credit on its own, but not
+    // when the same response explicitly asserts a negative physical area.
+    const wrongMiddleArea=has(/\b(?:its\s+|the\s+|middle\s+)?area\s*(?:is|=|of)\s*-\s*4\/3/);
+    const middle=middleRef.test(t)&&(signedMiddle||positiveMiddleArea)&&
+      !incorrect&&!wrongMiddleArea;
     const last=lastRef.test(t)&&positiveFraction&&!incorrect&&
       !has(/(?:from\s*x\s*=\s*3\s*to\s*4|\b3\s*to\s*4\b|∫\s*₃\^4|∫\s*₃⁴|∫\s*_?3\^4)[^.;\n]{0,80}(?:=\s*-4\/3|negative\s+4\/3)/);
     const statedTotal=has(/\b(?:total|combined)\s+area\s*(?:=|is|of)\s*\+?4\b|\barea\s+total\s*(?:=|is)\s*\+?4\b|^\s*(?:the\s+)?area\s*(?:=|is)\s*\+?4(?:\b|$)/);
