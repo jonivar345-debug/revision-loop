@@ -305,6 +305,7 @@ jobs:
       - run: node tests/task1-v202-chemistry-rp4-6-application.cjs
       - run: node tests/task1-v203-physics-graph-circuit-application.cjs
       - run: node tests/task1-v209-maths-pure-application.cjs
+      - run: node tests/task1-v210-chemistry-rates.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
