@@ -1,0 +1,38 @@
+{
+  "version": "v208",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "masteryCertified": false,
+  "scope": "AQA AS / Year 1 Pure Maths first school mock: existing original v190 odd-square proof and vector questions; no new practice or cards.",
+  "issue": "v190 collinearity and unit-vector answer evidence sometimes rejected correct equivalent working or credited explicitly denied answers.",
+  "focusedFixes": [
+    "Accept AB and AC parallel, AB is parallel to AC, and AB ∥ AC as collinearity evidence, but not explicit denials.",
+    "Do not credit k=8 when the same claim is explicitly denied, including 'isn't k=8'.",
+    "Accept |CP|=√72 as the same magnitude as 6√2.",
+    "Do not credit expressly rejected unit-vector answers.",
+    "Accept the equally valid odd-integer proof substitution n=2k−1 and its expansion n²=4k(k−1)+1; reject explicitly disowned odd-integer substitutions."
+  ],
+  "sourceQuestionIds": [
+    "task1_v190_maths_002",
+    "task1_v190_maths_003",
+    "task1_v190_maths_004"
+  ],
+  "testCases": {
+    "isolatedVectorCases": 15,
+    "combinedCompleteVectorAnswer": 1,
+    "oddSquareProofCases": 7,
+    "previousV190ModelAnswersFullMarks": 4
+  },
+  "preserved": [
+    "core deck and bank",
+    "question IDs and model answers",
+    "Year 1 Pure first mock scope",
+    "saved progress, XP and cloud keys",
+    "World features"
+  ],
+  "limitations": [
+    "This is a targeted rule-based calibration, not proof of examiner-equivalent marking for all possible responses.",
+    "Some valid phrasings and handwriting recognition may still require manual mark adjustments.",
+    "Task 1 and the full historical paper archive remain incomplete."
+  ]
+}
