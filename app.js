@@ -2238,7 +2238,7 @@ function examSuggested(q,answer){
    flags=[odd,square,even,conclusion];
   }else if(q.markingMode==='origPure190Collinear'){
    const ab=/\bab=\(4,8\)/.test(flat),ac=/\bac=\(k\+1,18\)/.test(flat);
-   const parallelStatement=/(?:\bab\b[^.;\n]{0,28}\bac\b|\bac\b[^.;\n]{0,28}\bab\b)[^.;\n]{0,24}\bparallel\b|\bab\b\s*(?:(?:is|=)\s*)?(?:\/\/|∥)\s*\bac\b/i.test(phrase);
+   const parallelStatement=/(?:\bab\b[^.;\n]{0,28}\bac\b|\bac\b[^.;\n]{0,28}\bab\b)[^.;\n]{0,24}\bparallel\b|\bab\b\s*(?:(?:is|=)\s*)?(?:\/\/|∥)\s*\bac\b|\bab\b\s+is\s+parallel\s+to\s+\bac\b|\bac\b\s+is\s+parallel\s+to\s+\bab\b/i.test(phrase);
    const deniedParallel=/\b(?:not|never)\s+parallel\b|(?:parallel|collinear)[^.;\n]{0,25}\b(?:wrong|incorrect|false)\b/i.test(phrase);
    const relation=/(?:\(k\+1\)\/4=18\/8|4\*18=8\*\(k\+1\))/.test(flat)||
      (/scalar\s+multiple/i.test(phrase)&&/\bab\b/i.test(phrase))||
