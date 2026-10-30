@@ -13,7 +13,7 @@ assert(app.includes("'./maths_pure_proof_vector_applications_v209.json'"));
 assert(sw.includes("'./maths_pure_proof_vector_applications_v209.json'"));
 assert(sw.includes("'./maths-as-pure-marking-v209.js'"));
 assert(sw.includes('v209-maths-original-challenges'));
-assert(html.includes('maths-as-pure-marking-v209.js?v=209'));
+assert(html.includes('maths-as-pure-marking-v209.js?v=212'));
 assert(html.indexOf('maths-as-pure-marking-v209.js')<html.indexOf('app.js?v=203'));
 assert(app.includes('window.RevisionPureMathsV209?.evaluate(q,answer)'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
