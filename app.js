@@ -2238,9 +2238,14 @@ function examSuggested(q,answer){
    flags=[odd,square,even,conclusion];
   }else if(q.markingMode==='origPure190Collinear'){
    const ab=/\bab=\(4,8\)/.test(flat),ac=/\bac=\(k\+1,18\)/.test(flat);
-   const relation=/(?:\(k\+1\)\/4=18\/8|4\*18=8\*\(k\+1\))/.test(flat)||(/scalar\s+multiple/i.test(phrase)&&/\bab\b/i.test(phrase));
+   const parallelStatement=/(?:\bab\b[^.;\n]{0,28}\bac\b|\bac\b[^.;\n]{0,28}\bab\b)[^.;\n]{0,24}\bparallel\b|\bab\b\s*(?:(?:is|=)\s*)?(?:\/\/|∥)\s*\bac\b/i.test(phrase);
+   const deniedParallel=/\b(?:not|never)\s+parallel\b|(?:parallel|collinear)[^.;\n]{0,25}\b(?:wrong|incorrect|false)\b/i.test(phrase);
+   const relation=/(?:\(k\+1\)\/4=18\/8|4\*18=8\*\(k\+1\))/.test(flat)||
+     (/scalar\s+multiple/i.test(phrase)&&/\bab\b/i.test(phrase))||
+     (parallelStatement&&!deniedParallel);
    const kValues=[...raw.matchAll(/\bk\s*=\s*([-+]?\d+(?:\.\d+)?)/gi)].map(m=>Number(m[1]));
-   const correctK=kValues.includes(8)&&kValues.every(k=>k===8)&&!/\b(?:not|never)\s+k\s*=\s*8\b|\bk\s*=\s*8\b.{0,20}\b(?:wrong|incorrect|false)\b/i.test(raw);
+   const deniedK=/\b(?:not|never|isn['’]?t|is\s+not)\s+(?:(?:the\s+)?(?:answer|result|value|solution)\s*(?:is\s*)?)?k\s*=\s*8\b|\bk\s*=\s*8\b[^.;\n]{0,28}\b(?:wrong|incorrect|false|not\s+correct)\b/i.test(raw);
+   const correctK=kValues.includes(8)&&kValues.every(k=>k===8)&&!deniedK;
    const ratio=/ab:bc=4:5/.test(flat)||/\bbc=\(5,10\)/.test(flat);
    flags=[ab,ac,relation,correctK,ratio];
   }else{
@@ -2248,8 +2253,9 @@ function examSuggested(q,answer){
    const ap=/\bap=(?:1\/4ab|3,3|\(3,3\))/.test(flat)||/\bap=1\/4ab=\(3,3\)/.test(flat);
    const p=/\bp=\(5,-2\)/.test(flat);
    const cp=/\bcp=(?:p-c=)?\(6,-6\)/.test(flat);
-   const mag=/6√2|6sqrt\(2\)|sqrt\(72\)/.test(flat)&&/(?:cp|magnitude|length|\|)/.test(phrase);
-   const unit=/\(1\/√2,-1\/√2\)|\(√2\/2,-√2\/2\)|\(1\/sqrt\(2\),-1\/sqrt\(2\)\)/.test(flat);
+   const mag=/6√2|6sqrt\(2\)|sqrt\(72\)|√72/.test(flat)&&/(?:cp|magnitude|length|\|)/.test(phrase);
+   const rejectedUnit=/\b(?:unit\s+vector|direction\s+vector)[^.;\n]{0,28}\b(?:is|was)\s+(?:not|wrong|incorrect)\b|\b(?:not|never)\s+(?:the\s+)?(?:unit\s+vector|direction\s+vector)\b|\bunit\s+vector[^.;\n]{0,100}\b(?:is\s+wrong|is\s+incorrect)\b/i.test(phrase);
+   const unit=/\(1\/√2,-1\/√2\)|\(√2\/2,-√2\/2\)|\(1\/sqrt\(2\),-1\/sqrt\(2\)\)/.test(flat)&&!rejectedUnit;
    flags=[ab,ap,p,cp,mag,unit];
   }
   const suggested=flags.filter(Boolean).length;
