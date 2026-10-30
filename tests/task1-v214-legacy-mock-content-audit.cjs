@@ -40,7 +40,7 @@ const photo=byId.get(oldFlag.id);
 assert.equal(photo.back,'No photoelectrons are emitted.');
 assert(photo.back.length<50);
 const reviewed=[
- ['phy_vectors_001','adjacent component','F cos'],
+ ['phy_vectors_001','resolving a force','F cos'],
  ['phy_motion_d','gradient','Velocity'],
  ['phy_motion_v','velocity–time','displacement'],
  ['phy_motion_a','acceleration–time','Change in velocity'],
