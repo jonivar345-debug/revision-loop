@@ -1,0 +1,113 @@
+{
+  "version": "v215",
+  "date": "2026-10-30",
+  "task1Complete": false,
+  "fullSpecCertified": false,
+  "all194A2Reviewed": false,
+  "source": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry"
+  ],
+  "scope": "AQA Chemistry 7405 Year 1 Required Practical 4 recognition, qualitative ions and balanced ionic equations. Original recall only; no physical laboratory protocols.",
+  "defect": "app.js fetched chemistry_rates_rp7_recall_v210.json as supplementary index 11 but the manual eligibility ladder ended at index 10, so 11 valid rate/Kp cards were silently discarded at runtime.",
+  "fix": "Preserve all earlier index rules; explicitly allow Chemistry A2 mock stage at index 11, and Chemistry AS mock stage at index 12 for v215.",
+  "existingEvidence": [
+    {
+      "concept": "Silver halide colours and ammonia solubility",
+      "ids": [
+        "chem_rp4",
+        "task1_chem_099",
+        "task1_chem_100",
+        "task1_chem_101",
+        "task1_chem_102",
+        "task1_chem_103",
+        "task1_chem_104"
+      ],
+      "status": "Already covered; no duplicates added"
+    },
+    {
+      "concept": "Sulfate with barium and acid-interference caveats",
+      "ids": [
+        "task1_chem_089",
+        "task1_chem_090",
+        "chem_y1_chat_v126_076"
+      ],
+      "status": "Already covered; no duplicate flashcard"
+    },
+    {
+      "concept": "Ammonium identification and red litmus response",
+      "ids": [
+        "task1_v127_007",
+        "task1_v127_008"
+      ],
+      "status": "Already covered; only missing ionic-equation recall added"
+    },
+    {
+      "concept": "Group 2 hydroxide/sulfate solubility trends",
+      "ids": [
+        "chem_group2_hydroxide",
+        "chem_group2_sulfate"
+      ],
+      "status": "Trends already covered; distinct material-specific observations added"
+    },
+    {
+      "concept": "Carbonate effervescence and CO2/limewater evidence",
+      "ids": [
+        "task1_v127_005",
+        "task1_v127_006"
+      ],
+      "status": "Already covered; net ionic equation added"
+    }
+  ],
+  "newCards": [
+    {
+      "newId": "task1_v215_chem_rp4_01",
+      "fact": "Magnesium hydroxide formula in Mg2+/OH- interaction",
+      "reason": "Existing Mg(OH)2 use and trends are not this reaction-product recall"
+    },
+    {
+      "newId": "task1_v215_chem_rp4_02",
+      "fact": "Barium hydroxide relative solubility and absent visible precipitate in typical school RP4 observations",
+      "reason": "Not equivalent to global Group 2 solubility trend"
+    },
+    {
+      "newId": "task1_v215_chem_rp4_03",
+      "fact": "Strontium sulfate white insoluble product",
+      "reason": "Distinct from already-covered BaSO4"
+    },
+    {
+      "newId": "task1_v215_chem_rp4_04",
+      "fact": "NH4+ + OH- -> NH3 + H2O ionic equation",
+      "reason": "Existing ammonium result and litmus identification do not require balancing ionic formula"
+    },
+    {
+      "newId": "task1_v215_chem_rp4_05",
+      "fact": "Universal indicator blue-purple in alkaline OH- samples",
+      "reason": "Existing generic alkaline indicator claim lacks colour retrieval"
+    },
+    {
+      "newId": "task1_v215_chem_rp4_06",
+      "fact": "CO3(2-) + 2H+ -> CO2 + H2O ionic equation",
+      "reason": "Existing effervescence observations do not test balancing ionic equation"
+    },
+    {
+      "newId": "task1_v215_chem_rp4_07",
+      "fact": "Soluble MgSO4 compared with insoluble BaSO4 in school RP4 conditions",
+      "reason": "Contrast interpretation supports qualitative cation evidence"
+    }
+  ],
+  "counts": {
+    "existingCoreDeck": 3345,
+    "newRp4Cards": 7,
+    "previouslyUnloadedV210Cards": 11,
+    "additionalActuallyLoadableMockCards": 18,
+    "coreExamBankUnchanged": 1268
+  },
+  "limits": [
+    "Qualitative precipitate observations depend on sample and test conditions; questions use usual AQA school RP4 comparisons.",
+    "No experimental instructions, quantities, or substitution for supervised practical work.",
+    "No claim that all AQA 3.2.3 or 7405 practical specifications are fully covered.",
+    "194 older A2 Chemistry mock cards still require separate taught-scope and individual content audit.",
+    "Saved XP, progress keys, images, World assets, Maths mock scope and original cards/questions must remain unchanged."
+  ]
+}
