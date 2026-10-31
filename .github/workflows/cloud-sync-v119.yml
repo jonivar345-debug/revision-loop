@@ -15,6 +15,9 @@ on:
       - 'firestore.rules'
       - 'index.html'
       - 'app.js'
+      - 'chemistry_rp4_recall_v215.json'
+      - 'editorial/task1-v215-rp4-recall-loader-audit.json'
+      - 'tests/task1-v215-rp4-recall-loader.cjs'
       - 'progress-backup.js'
       - 'sw.js'
       - 'tests/task1-deck-audit-v122.cjs'
@@ -310,6 +313,7 @@ jobs:
       - run: node tests/task1-v212-maths-marking-calibration.cjs
       - run: node tests/task1-v213-physics-materials-divider-marking.cjs
       - run: node tests/task1-v214-legacy-mock-content-audit.cjs
+      - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
       - run: node tests/cloud-sync-v119.cjs
