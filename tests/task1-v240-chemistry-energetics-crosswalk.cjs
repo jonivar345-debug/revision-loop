@@ -15,7 +15,7 @@ const snapshot=new Map(report.coreCardInventoryFirstPass.map(c=>[c.id,c]));
 assert.equal(snapshot.size,144);
 for(const c of core){const old=snapshot.get(c.id);assert(old,'Missing card '+c.id);assert.equal(old.topic,c.topic);assert.equal(old.originalFront,c.front,'Front changed '+c.id);assert.equal(old.originalBack,c.back,'Back changed '+c.id);}
 const refs=new Set(),ids=new Set(core.map(c=>c.id)),chosen=new Set();
-for(const r of report.requirements){assert(/^3\\.1\\.4\\.[1-4]$/.test(r.specRef),'Bad spec ref');refs.add(r.specRef);assert(r.coreEvidenceIds.length,'Missing evidence '+r.assessableRecallOrSkill);for(const id of r.coreEvidenceIds){assert(ids.has(id),'Unverified AQA evidence '+id);chosen.add(id);}}
+for(const r of report.requirements){assert(/^3\.1\.4\.[1-4]$/.test(r.specRef),'Bad spec ref');refs.add(r.specRef);assert(r.coreEvidenceIds.length,'Missing evidence '+r.assessableRecallOrSkill);for(const id of r.coreEvidenceIds){assert(ids.has(id),'Unverified AQA evidence '+id);chosen.add(id);}}
 assert.equal(refs.size,4);assert(chosen.size>=45);
 assert.equal(report.completion.fourEnergeticsSubsectionsMapped,true);
 for(const [k,v] of Object.entries(report.completion))if(k!=='fourEnergeticsSubsectionsMapped')assert.equal(v,false,'Premature completion '+k);
