@@ -1,0 +1,57 @@
+{
+  "version": "v236",
+  "date": "2026-10-31",
+  "kind": "Full mechanical flashcard marking regression across every original core model and all 27 actively configured supplement-bank models and their explicitly accepted/rejected variants. Not a content-truth or whole-spec certification.",
+  "coreFlashcards": 3345,
+  "results": {
+    "modelAnswersCorrect": 3345,
+    "explicitAcceptedAlternativesCorrect": 4942,
+    "explicitRejectedAlternativesWrong": 90,
+    "unexpectedResults": 0
+  },
+  "initialFault": {
+    "id": "maths_transform_003",
+    "subject": "Maths",
+    "topic": "Transformations",
+    "front": "For a > 0, what is the horizontal scale factor of y = f(ax)?",
+    "acceptedStoredVariant": "1 over a",
+    "before": "wrong",
+    "after": "correct",
+    "fixedIn": "evaluateMathsPureTransform"
+  },
+  "limits": {
+    "notAllPossibleCorrectParaphrasesCovered": true,
+    "notAllPossibleScientificallyWrongAnswersCovered": true,
+    "explicitRejectExamplesOnly90": true,
+    "notAValidationOfSubjectCorrectness": true,
+    "notASpecLineCrosswalk": true,
+    "notACompleteMathsMock": true,
+    "notACompletePhysicsMock": true,
+    "notACompleteChemistryMock": true,
+    "notACompletedTask1": true
+  },
+  "preserved": {
+    "sourceDeckUnchanged": true,
+    "coreQuestionBankUnchanged": true,
+    "cardIdsUnchanged": true,
+    "cloudSyncXPKeysUnchanged": true,
+    "mathsMockScopeUnchanged": true,
+    "worldFilesUnchanged": true
+  },
+  "nextWork": "Cross-check every assessable AQA school mock specification statement and every card's model for scientific/mathematical truth; supplement checks here only exercise recorded accepted/rejected answers and do not test unknown paraphrases.",
+  "supplementBanks": 27,
+  "supplementCards": 262,
+  "supplementResults": {
+    "modelAnswersCorrect": 262,
+    "explicitAcceptedAlternativesCorrect": 992,
+    "explicitRejectedAlternativesWrong": 584,
+    "unexpectedResults": 0
+  },
+  "totalCombined": {
+    "cards": 3607,
+    "modelsCorrect": 3607,
+    "acceptedVariantsCorrect": 5934,
+    "rejectedVariantsWrong": 674,
+    "unexpectedResults": 0
+  }
+}
