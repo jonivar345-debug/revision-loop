@@ -1,0 +1,162 @@
+{
+  "version": "v234",
+  "date": "2026-10-31",
+  "kind": "Focused AQA AS Chemistry 3.1.3 bonding/shapes and 3.3.1 organic definition short-answer marking calibration; not full mock review",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "also": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+  "coreChemistryMockCount": 1533,
+  "bondingTopicInventory": {
+    "bonding": 67,
+    "shapes": 44,
+    "crystalStructures": 22,
+    "bondPolarity": 17,
+    "intermolecularForces": 30,
+    "total": 180,
+    "reviewLevel": "topic-label count, NOT individual correctness"
+  },
+  "checks": [
+    {
+      "id": "chem_electrophile",
+      "front": "What is an electrophile?",
+      "back": "An electron-pair acceptor.",
+      "right": [
+        "A species that accepts an electron pair.",
+        "Electron pair acceptor."
+      ],
+      "wrong": [
+        "An electron-pair donor.",
+        "A particle that donates a pair of electrons."
+      ]
+    },
+    {
+      "id": "chem_nucleophile",
+      "front": "What is a nucleophile?",
+      "back": "An electron-pair donor.",
+      "right": [
+        "A species that donates an electron pair.",
+        "Electron pair donor."
+      ],
+      "wrong": [
+        "An electron-pair acceptor.",
+        "A particle that accepts a pair of electrons."
+      ]
+    },
+    {
+      "id": "chem_homolytic",
+      "front": "What is homolytic fission?",
+      "back": "Each atom takes one electron from the covalent bond, forming radicals.",
+      "right": [
+        "Each atom gets one electron from the bond, forming radicals.",
+        "One bonding electron goes to each atom."
+      ],
+      "wrong": [
+        "Both bonding electrons are taken by one atom, forming ions.",
+        "Heterolytic fission: both electrons go to the same atom."
+      ]
+    },
+    {
+      "id": "chem_heterolytic",
+      "front": "What is heterolytic fission?",
+      "back": "Both bonding electrons go to one atom, forming ions.",
+      "right": [
+        "Both electrons in the bond go to one atom and ions form.",
+        "One atom takes the bonding pair leaving ions."
+      ],
+      "wrong": [
+        "Each atom gets one electron, producing radicals.",
+        "The electron pair is split equally and free radicals form."
+      ]
+    },
+    {
+      "id": "chem_metallic_bond",
+      "front": "What is metallic bonding?",
+      "back": "Electrostatic attraction between positive metal ions and delocalised electrons.",
+      "right": [
+        "Attraction between metal cations and mobile delocalised electrons.",
+        "Electrostatic forces between positive metal ions and delocalised electrons."
+      ],
+      "wrong": [
+        "Electrostatic attraction between positive and negative ions in an ionic lattice.",
+        "Attraction between oppositely charged metal ions."
+      ]
+    },
+    {
+      "id": "chem_shape_linear",
+      "front": "What bond angle is expected for two electron pairs around a central atom?",
+      "back": "180°.",
+      "right": [
+        "180 degrees.",
+        "180°."
+      ],
+      "wrong": [
+        "120 degrees.",
+        "109.5°."
+      ]
+    },
+    {
+      "id": "chem_shape_trig",
+      "front": "What bond angle is expected for three bonding pairs around a central atom?",
+      "back": "120°.",
+      "right": [
+        "120 degrees.",
+        "120°."
+      ],
+      "wrong": [
+        "109.5 degrees.",
+        "180°."
+      ]
+    },
+    {
+      "id": "chem_shape_tetra",
+      "front": "What bond angle is expected for four bonding pairs?",
+      "back": "109.5°.",
+      "right": [
+        "109.5 degrees.",
+        "109.5°."
+      ],
+      "wrong": [
+        "120 degrees.",
+        "90°."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_38",
+      "front": "What is broken or weakened when ice melts?",
+      "back": "Some intermolecular hydrogen bonds, not the O–H covalent bonds.",
+      "right": [
+        "Intermolecular hydrogen bonds are partially disrupted; covalent O-H bonds stay intact.",
+        "Some hydrogen bonds between water molecules are broken."
+      ],
+      "wrong": [
+        "The covalent O-H bonds are broken when ice melts.",
+        "Water molecules split into H and O atoms as ice melts."
+      ]
+    }
+  ],
+  "earlierActualWebsiteMarking": {
+    "scientificallyIncorrectResponsesMarkedPartial": 11,
+    "validParaphrasesNotMarkedCorrect": 6
+  },
+  "newActualWebsiteMarking": {
+    "validParaphrasesCorrect": 18,
+    "scientificallyIncorrectResponsesWrong": 18,
+    "originalModelAnswersCorrect": 9
+  },
+  "preservation": {
+    "coreDeckModified": false,
+    "coreExamQuestionsModified": false,
+    "originalIdsModified": false,
+    "progressXPKeysModified": false,
+    "mathsMockScopeChanged": false,
+    "worldMediaModified": false
+  },
+  "limits": {
+    "bondingAll180CardsIndividuallyReviewed": false,
+    "chemistry1533CoreReviewed": false,
+    "chemistryWholeSpecComplete": false,
+    "physicsMockComplete": false,
+    "year1PureMathsMockComplete": false,
+    "task1Complete": false
+  },
+  "next": "Continue remaining Chem bonding card-level and answer-variant review; map assessable AQA left-column requirements to verified card IDs, then proceed through Chemistry topics and Physics/Maths mock decks."
+}
