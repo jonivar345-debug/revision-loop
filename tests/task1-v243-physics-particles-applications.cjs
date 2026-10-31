@@ -10,7 +10,7 @@ assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
 assert(sw.includes("'./physics_particles_applications_v243.json'"));
 assert(sw.includes('-v243-particles-application-recall'));
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(files.length,31);assert.equal(files[30],'physics_particles_applications_v243.json');
+assert(files.length>=31,'Historical first 31 supplement banks must remain available');assert.equal(files[30],'physics_particles_applications_v243.json');
 assert.equal(files[29],'chemistry_amount_applications_v239.json');
 const known=new Set(deck.cards.map(c=>c.id)),fronts=new Set(deck.cards.filter(c=>c.subject==='Physics').map(c=>c.front.trim().toLowerCase()));
 for(const name of files.slice(0,30))for(const c of json(name).cards||[]){known.add(c.id);if(c.subject==='Physics')fronts.add(c.front.trim().toLowerCase());}

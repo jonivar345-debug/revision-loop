@@ -1,0 +1,453 @@
+{
+  "version": "v245",
+  "createdAt": "2026-10-31",
+  "scope": "First Year 1 Pure school Maths mock (Papers 1 and 2 Pure topics only); no Year 2, Mechanics or Statistics.",
+  "subject": "Maths",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content"
+  ],
+  "cards": [
+    {
+      "id": "task1_v245_maths_pure_applied_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is n(n+1) even for every integer n?",
+      "back": "One of two consecutive integers n and n+1 must be even.",
+      "accept": [
+        "One of two consecutive integers n and n+1 must be even.",
+        "One of n or n+1 is even.",
+        "Consecutive integers include an even number."
+      ],
+      "reject": [
+        "n is always even.",
+        "Both consecutive integers are even."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is n²−n even for any integer n?",
+      "back": "n²−n = n(n−1), the product of two consecutive integers.",
+      "accept": [
+        "n²−n = n(n−1), the product of two consecutive integers.",
+        "n(n−1) contains an even factor.",
+        "It is the product of two consecutive integers, one even."
+      ],
+      "reject": [
+        "n²−n is always odd.",
+        "Every integer n is even."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Factor n³−n, then explain why it is divisible by 3 for integer n.",
+      "back": "n(n−1)(n+1); one of three consecutive integers is a multiple of 3.",
+      "accept": [
+        "n(n−1)(n+1); one of three consecutive integers is a multiple of 3.",
+        "n(n-1)(n+1), and one factor is divisible by 3.",
+        "Three consecutive integers include a multiple of 3."
+      ],
+      "reject": [
+        "n³−n = n(n−1), which always divides by 3.",
+        "All three factors are divisible by 3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For n = 0, 1, 2, list the values of n²−n in that order.",
+      "back": "0, 0, 2.",
+      "accept": [
+        "0, 0, 2.",
+        "0,0,2",
+        "(0, 0, 2)"
+      ],
+      "reject": [
+        "0, 1, 2",
+        "0, 0, 4"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give the smallest positive integer counterexample to 'every multiple of 4 is a multiple of 8'.",
+      "back": "4.",
+      "accept": [
+        "4.",
+        "4",
+        "n = 4"
+      ],
+      "reject": [
+        "8",
+        "16"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A = (2, −1) and B = (−4, 7). Find vector AB in component form.",
+      "back": "(−6, 8).",
+      "accept": [
+        "(−6, 8).",
+        "(-6,8)",
+        "-6i + 8j"
+      ],
+      "reject": [
+        "(6, -8)",
+        "(-2, 6)"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If vector v = (−6, 8), what is its magnitude?",
+      "back": "10.",
+      "accept": [
+        "10.",
+        "10",
+        "10 units"
+      ],
+      "reject": [
+        "14",
+        "√28"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A vector is (−3, 4). Find its anticlockwise direction from the positive x-axis, to 1 decimal place.",
+      "back": "126.9°.",
+      "accept": [
+        "126.9°.",
+        "126.9 degrees",
+        "126.87°"
+      ],
+      "reject": [
+        "53.1°",
+        "−53.1°"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(1,2), B=(3,6), C=(5,10). What scalar k makes AC = k AB?",
+      "back": "2.",
+      "accept": [
+        "2.",
+        "2",
+        "k = 2"
+      ],
+      "reject": [
+        "1/2",
+        "3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(1,2), B=(3,6), C=(5,9). Are the three points collinear?",
+      "back": "No, they are not collinear.",
+      "accept": [
+        "No, they are not collinear.",
+        "Not collinear.",
+        "No; AB and AC are not parallel."
+      ],
+      "reject": [
+        "Yes, they are collinear.",
+        "Yes; AC = 2 AB."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The graph y=f(x) passes through (2,5). Which point lies on y=f(3x)?",
+      "back": "(2/3, 5).",
+      "accept": [
+        "(2/3, 5).",
+        "(2÷3, 5)",
+        "(0.666666...,5)"
+      ],
+      "reject": [
+        "(6,5)",
+        "(2,15)"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The graph y=f(x) passes through (−2,3). Which point lies on y=f(−x)?",
+      "back": "(2, 3).",
+      "accept": [
+        "(2, 3).",
+        "(2,3)",
+        "x=2, y=3"
+      ],
+      "reject": [
+        "(-2,-3)",
+        "(-2,3)"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_13",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The graph y=f(x) passes through (1,4). Which point lies on y=2f(x−3)+1?",
+      "back": "(4, 9).",
+      "accept": [
+        "(4, 9).",
+        "(4,9)",
+        "x=4, y=9"
+      ],
+      "reject": [
+        "(-2,9)",
+        "(4,5)"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_14",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Binomial expansion",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the coefficient of x² in (1+2x)⁴?",
+      "back": "24.",
+      "accept": [
+        "24.",
+        "24",
+        "6 × 2² = 24"
+      ],
+      "reject": [
+        "6",
+        "48"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_15",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Binomial expansion",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the coefficient of x² in (3−x)³?",
+      "back": "9.",
+      "accept": [
+        "9.",
+        "9",
+        "3 × 3 × (−1)² = 9"
+      ],
+      "reject": [
+        "−9",
+        "27"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_16",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Evaluate the signed integral of x(x−4) from x=0 to x=4.",
+      "back": "−32/3.",
+      "accept": [
+        "−32/3.",
+        "-32/3",
+        "−10.666666..."
+      ],
+      "reject": [
+        "32/3",
+        "−16/3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v245_maths_pure_applied_17",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the positive area between y=x(x−4) and the x-axis from x=0 to x=4.",
+      "back": "32/3 square units.",
+      "accept": [
+        "32/3 square units.",
+        "32/3",
+        "10.666666..."
+      ],
+      "reject": [
+        "−32/3",
+        "16/3"
+      ],
+      "strictRecall": true
+    }
+  ]
+}

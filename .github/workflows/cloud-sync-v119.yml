@@ -19,6 +19,8 @@ on:
       - 'editorial/task1-v238-chemistry-atomic-spec-crosswalk.json'
       - 'tests/task1-v238-chemistry-atomic-crosswalk.cjs'
       - 'tests/task1-v243-physics-particles-applications.cjs'
+      - 'tests/task1-v245-maths-pure-applied.cjs'
+      - 'maths_first_mock_pure_applied_v245.json'
       - 'physics_particles_applications_v243.json'
       - 'chemistry_bonding_diagram_recall_v237.json'
       - 'editorial/task1-v237-chemistry-bonding-crosswalk.json'
@@ -368,6 +370,7 @@ jobs:
       - run: node tests/task1-v238-chemistry-atomic-crosswalk.cjs
       - run: node tests/task1-v239b-amount-applications.cjs
       - run: node tests/task1-v243-physics-particles-applications.cjs
+      - run: node tests/task1-v245-maths-pure-applied.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
