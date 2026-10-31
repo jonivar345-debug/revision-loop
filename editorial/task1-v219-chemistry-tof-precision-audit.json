@@ -1,0 +1,76 @@
+{
+  "version": "v219",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1: AS Chemistry 3.1.1 mass spectrometry concept and answer-level review",
+  "officialAqaSource": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "reviewScope": {
+    "reviewedCoreASAtomicMassIonisationCardCount": 88,
+    "coreDeckTotal": 3345,
+    "coreExamQuestionBankTotal": 1268,
+    "originalCoreChanged": false,
+    "reviewedAreas": [
+      "Fundamental particles and isotopes",
+      "Time of flight stages and comparisons",
+      "Peak interpretation",
+      "Successive ionisation and electron configurations"
+    ],
+    "limits": "Selected content review against 3.1.1: not a full independent examiner-approval of 88 answers or the whole Chemistry mock syllabus."
+  },
+  "findings": [
+    {
+      "id": "chem_atomic_v43_14",
+      "kind": "wording",
+      "finding": "Historical front refers to four steps by grouping detection/data analysis; AQA names ionisation, acceleration, drift, detection and data analysis as five stages.",
+      "fix": "Ask for five ordered stages, preserving original ID and progress.",
+      "newBack": "Ionisation → acceleration → ion drift → ion detection → data analysis."
+    },
+    {
+      "id": "task1_v130_073",
+      "kind": "physics-condition",
+      "finding": "At fixed kinetic energy, the simple flight-time mass comparison must specify equivalent charge to avoid a misleading inference about the mass-to-charge ratio.",
+      "fix": "Require equal charge and kinetic energy and ask about the mass-dependent speed.",
+      "newBack": "Lighter ions move faster and arrive at the detector sooner."
+    },
+    {
+      "id": "task1_v130_074",
+      "kind": "physics-condition",
+      "finding": "Lower m/z is not generally equivalent to lower mass for ions of unequal charge when their kinetic energies are forced equal.",
+      "fix": "Specify singly charged ions with equal kinetic energy before comparing m/z.",
+      "newBack": "Lower m/z, because the lighter ion moves faster."
+    }
+  ],
+  "newMockCards": [
+    {
+      "id": "task1_v219_chem_tof_01",
+      "why": "Direct recall of what ionises a neutral gaseous sample by electron impact, rather than only the resulting positive-ion formula."
+    },
+    {
+      "id": "task1_v219_chem_tof_02",
+      "why": "Direct recall of the measured ion arrival time, distinguished from derived mass-to-charge ratio and peak abundance."
+    }
+  ],
+  "preservation": {
+    "coreDeckSourceImmutable": true,
+    "existingCardIdsStable": true,
+    "storedProgressKeysUnchanged": true,
+    "existingA2CardsUnchanged": true,
+    "mathsPureMockUnaffected": true,
+    "cloudXpUnaffected": true,
+    "worldMediaUnaffected": true,
+    "v218CardsStillLoad": true
+  },
+  "tests": [
+    "node tests/task1-v219-chemistry-tof-precision.cjs",
+    "node tests/task1-v218-chemistry-measurement-recall.cjs",
+    "node tests/task1-v217-chemistry-legacy-corrections.cjs"
+  ],
+  "task1Complete": false,
+  "allPhysicsChemistryCardsExaminerCertified": false,
+  "allHistoricalPapersIndexed": false,
+  "remainingWork": [
+    "Review AS Chemistry original cards by specification subsection and correct genuine errors.",
+    "Audit exam-answer markers for method credit and equivalents.",
+    "Independently verify past-paper archive coverage."
+  ]
+}
