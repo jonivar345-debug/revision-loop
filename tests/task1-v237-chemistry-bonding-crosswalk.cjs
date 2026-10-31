@@ -64,7 +64,7 @@ for(const c of bank.cards){
  assert(!oldFronts.has(front),'Duplicate prompt '+c.id);oldFronts.add(front);
  assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'AS');assert.equal(c.mock,true);
  assert.equal(c.taught,true);assert.equal(c.active,true);assert.equal(c.scope,'mock');
- assert(['3.1.3.2','3.1.3.4'].includes(c.specRef));
+ assert.equal(c.specRef,['3.1.3.2','3.1.3.4','3.1.3.3','3.1.3.4','3.1.3.4','3.1.3.7','3.1.3.4'][bank.cards.indexOf(c)],'Incorrect AQA section for '+c.id);
  assert.equal(c.accept.length,4);assert.equal(c.reject.length,2);
  assert.equal(judge(c,c.back).status,'correct');
  for(const x of c.accept){assert.equal(judge(c,x).status,'correct','Valid '+c.id+': '+x);right++;}
