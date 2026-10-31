@@ -1,0 +1,183 @@
+{
+  "version": "v227",
+  "date": "2026-10-31",
+  "title": "Three-subject mock recall status and release criteria",
+  "answerToQuestion": "NO — full AQA bullet-by-bullet coverage and individual correctness of every mock flashcard cannot yet be certified.",
+  "sources": {
+    "physics": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content",
+    "chemistry": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content",
+    "maths": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content"
+  },
+  "schoolMockBoundaries": {
+    "physics": "AQA Year 1/AS Physics sections 3.1–3.5; questions may require A-level depth of application but not untaught A2 content.",
+    "chemistry": "AS Chemistry plus school-taught Year 2 content through Kp, Gibbs/Born–Haber, rate laws, acids including Kw and taught organic through carbonyl/carboxylic acid/ester/acyl chemistry; buffer questions excluded.",
+    "maths": "FIRST mock only: Year 1 Pure Maths sections A–J (omitting I), no Statistics, Mechanics, or deferred Year 2 radian and calculus content."
+  },
+  "priorVerifiedEvidence": {
+    "v165": "A historic completion gate reported no Physics, Chemistry or Maths section certified as exhaustively covering all assessable requirements; distinguishes original questions from source-indexed past papers.",
+    "v166": "971 untagged legacy science mock cards mapped provisionally to AQA sections, not bullet-level evidence.",
+    "v184": "971 legacy science mock cards received staged answer-level review, with some corrected; this is not complete review of every eligible card and alternative marking.",
+    "v214": "Structural verification of 971 older science mock cards: zero blank prompts/backs; 15 selected answers spot checked in that audit specifically; not proof of full content accuracy.",
+    "v216": "194 untagged Year 2 Chemistry cards reviewed for alignment with taught scope; not full examiner certification.",
+    "v171": "Core mock counts at that historical revision: Physics 730, Chemistry 1533, Maths 116; since then supplements have expanded totals and this is NOT a current all-bank count.",
+    "v225": "Step-index fibre flashcards and 10-mark application supplemented the Waves section.",
+    "v226": "Sound/interference/diffraction/polarisation flashcards and 10-mark application supplemented Physics Waves; does not certify all Waves bullets."
+  },
+  "perSubject": [
+    {
+      "subject": "Physics",
+      "requiredMockSpec": "AS 3.1–3.5",
+      "sectionChecks": [
+        {
+          "ref": "3.1",
+          "topic": "Measurements/errors",
+          "status": "sampled_existing_cards; not fully certified"
+        },
+        {
+          "ref": "3.2",
+          "topic": "Particles/radiation",
+          "status": "sampled_existing_cards; not fully certified"
+        },
+        {
+          "ref": "3.3",
+          "topic": "Waves",
+          "status": "45-point selected v159 audit + v225/v226 supplements; not full line-by-line certification"
+        },
+        {
+          "ref": "3.4",
+          "topic": "Mechanics/materials",
+          "status": "v157/v176/v197 audits and sample corrections; not fully certified"
+        },
+        {
+          "ref": "3.5",
+          "topic": "Electricity",
+          "status": "v158/v203 audits and related questions; not fully certified"
+        }
+      ],
+      "newMockCardsInThisRelease": 15,
+      "remaining": "Requirement-level check including graph interpretation, practical skills and exact exceptions, and review of all mock card answers."
+    },
+    {
+      "subject": "Chemistry",
+      "requiredMockSpec": "AS physical/inorganic/organic plus taught A2 through Kp and agreed organic",
+      "sectionChecks": [
+        {
+          "ref": "3.1 AS",
+          "topic": "Physical chemistry 3.1.1–3.1.7",
+          "status": "many cards and selected audits, not all bullet points certified"
+        },
+        {
+          "ref": "3.2 AS",
+          "topic": "Periodicity, Group 2, Group 7",
+          "status": "existing cards plus v220 ion-test audits; not fully certified"
+        },
+        {
+          "ref": "3.3 AS",
+          "topic": "Organic 3.3.1–3.3.6",
+          "status": "v155/v156/organic audits and RP5/6; not fully certified"
+        },
+        {
+          "ref": "3.1.8–3.1.10",
+          "topic": "Taught Born–Haber, Gibbs, rate equations, Kp",
+          "status": "194 legacy A2 cards taught-scope checked, not all AQA subpoints certified"
+        },
+        {
+          "ref": "later taught organic/acids",
+          "topic": "Specific teacher-taught parts only",
+          "status": "scope needs item-level sign-off, buffers excluded"
+        }
+      ],
+      "newMockCardsInThisRelease": 15,
+      "remaining": "Individual AS card and supplemental answer review, line-by-line left-column syllabus crosswalk, and school-specific A2 boundary."
+    },
+    {
+      "subject": "Maths",
+      "requiredMockSpec": "Year 1 Pure A–J (excluding I), no Statistics or Mechanics",
+      "sectionChecks": [
+        {
+          "ref": "A",
+          "topic": "Proof",
+          "status": "recall and hard questions represented; not certified full"
+        },
+        {
+          "ref": "B",
+          "topic": "Algebra/functions",
+          "status": "represented, graph transformation weaknesses targeted"
+        },
+        {
+          "ref": "C",
+          "topic": "Coordinate geometry",
+          "status": "represented, needs application verification"
+        },
+        {
+          "ref": "D",
+          "topic": "Sequences/series",
+          "status": "represented, needs application verification"
+        },
+        {
+          "ref": "E",
+          "topic": "Trigonometry",
+          "status": "represented, needs full exam variety validation"
+        },
+        {
+          "ref": "F",
+          "topic": "Exponentials/logs",
+          "status": "represented, needs exam variety validation"
+        },
+        {
+          "ref": "G",
+          "topic": "Differentiation",
+          "status": "represented, needs exam variety validation"
+        },
+        {
+          "ref": "H",
+          "topic": "Integration",
+          "status": "represented, needs signed-area validation"
+        },
+        {
+          "ref": "J",
+          "topic": "Vectors",
+          "status": "represented, collinearity and vector geometry need tougher testing"
+        }
+      ],
+      "newMockCardsInThisRelease": 15,
+      "remaining": "Check the AQA Year 1 Pure statement by statement; ensure proof, vectors and transformations are covered by hard worked questions as recall cannot substitute."
+    }
+  ],
+  "newContent": {
+    "totalCards": 45,
+    "physics": 15,
+    "chemistry": 15,
+    "mathsYear1Pure": 15,
+    "originalExamQuestionsAdded": 0,
+    "coreFilesModified": false,
+    "sourcePapersClaimedAdded": 0
+  },
+  "completionCriteria": [
+    "Freeze exact November school mock scope from teacher. Separate first Maths Pure mock from later Year 2 paper.",
+    "For each assessable AQA left-column statement and required practical interpretation, attach a verified mock-eligible card ID or justify why it is primarily an application question.",
+    "Read every mapped question and model answer for scientific/Mathematical precision, ambiguities and accepted variants.",
+    "Run original and negative regression answers with current website grader and manually review disputed marks.",
+    "Check published site loads the final content, not just the GitHub main branch; verify cloud progress, offline caching and topics.",
+    "Audit source-indexed 2015–2026 exam questions separately from independently authored practice."
+  ],
+  "currentSignOff": {
+    "physics": false,
+    "chemistry": false,
+    "maths": false,
+    "task1Complete": false,
+    "studentMasteryCertified": false,
+    "completeHistoricPaperArchive": false,
+    "liveDeploymentVerified": false
+  },
+  "preservation": {
+    "coreFlashcards": 3345,
+    "coreExamQuestions": 1268,
+    "coreIDsUnchanged": true,
+    "cloudXPKeysUnchanged": true,
+    "mathsFirstMockScopeUnchanged": true,
+    "WorldMediaUnchanged": true,
+    "offlineCacheBumped": true
+  },
+  "limitations": "No claim that every single AQA assessable point has now been reviewed. Existing historical audits review sampled/selected subsets, not a full independent examiner check of every card."
+}

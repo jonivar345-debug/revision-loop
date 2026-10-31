@@ -1,0 +1,418 @@
+{
+  "version": "v227",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "Fifteen targeted Chemistry recall reinforcements: 9 AS and 6 already-taught A-level cards; no buffers, NMR or untaught later topics.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "notes": "Includes user's often-forgotten q=n|ΔH| relationship, signs, calorimetry and Year 2 Kp, Born-Haber and Gibbs. New prompts are independently original but not proof all prior flashcards are exhaustively checked.",
+  "cards": [
+    {
+      "id": "task1_v227_chem_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Energetics",
+      "specRef": "3.1.4",
+      "front": "For an exothermic reaction measured using calorimetry, what is the sign of ΔH?",
+      "back": "Negative.",
+      "accept": [
+        "Negative.",
+        "ΔH is less than zero.",
+        "Enthalpy change is negative."
+      ],
+      "reject": [
+        "Positive.",
+        "Always zero."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Energetics",
+      "specRef": "3.1.4",
+      "front": "In q = mcΔT, what must be done to q if calculated using a temperature rise in °C?",
+      "back": "The temperature difference can be used directly because a change of 1 °C equals a change of 1 K.",
+      "accept": [
+        "The temperature difference can be used directly because a change of 1 °C equals a change of 1 K.",
+        "A temperature difference in Celsius has the same numerical size as in kelvin.",
+        "No 273 conversion is needed for the temperature change."
+      ],
+      "reject": [
+        "Add 273 to every temperature difference.",
+        "Divide the temperature change by 273."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Energetics",
+      "specRef": "3.1.4",
+      "front": "What happens to the measured magnitude of an exothermic ΔH when heat escapes to the surroundings?",
+      "back": "The measured magnitude is smaller than the true value.",
+      "accept": [
+        "The measured magnitude is smaller than the true value.",
+        "Heat loss makes the calculated exothermic enthalpy less negative.",
+        "The absolute value of ΔH is underestimated."
+      ],
+      "reject": [
+        "The reaction must become endothermic.",
+        "Heat loss makes the measured ΔH more negative."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Energetics",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Energetics",
+      "specRef": "3.1.4",
+      "front": "What is q when n moles undergo a process with enthalpy change of magnitude |ΔH| per mole?",
+      "back": "q = n|ΔH|.",
+      "accept": [
+        "q = n|ΔH|.",
+        "Number of moles multiplied by magnitude of enthalpy per mole.",
+        "Energy equals amount times absolute enthalpy change."
+      ],
+      "reject": [
+        "q = |ΔH|/n.",
+        "q = n/|ΔH|."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1",
+      "front": "When a transition metal atom forms a positive ion, which of its occupied 4s and 3d subshells loses electrons first?",
+      "back": "The 4s subshell.",
+      "accept": [
+        "The 4s subshell.",
+        "Electrons are removed from 4s before 3d.",
+        "The occupied 4s electrons are removed first."
+      ],
+      "reject": [
+        "3d electrons always leave first.",
+        "The 1s electrons leave first."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2",
+      "front": "When converting a gas pressure from kPa to Pa, what do you multiply by?",
+      "back": "1000.",
+      "accept": [
+        "1000.",
+        "Multiply by one thousand.",
+        "Multiply the kPa figure by 10³."
+      ],
+      "reject": [
+        "Divide by 1000.",
+        "Multiply by 100000."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Kinetics",
+      "courseTopic": "Kinetics",
+      "revisionTopic": "Kinetics",
+      "specRef": "3.1.5",
+      "front": "If doubling one reactant concentration leaves the rate unchanged, what is its order in the rate equation?",
+      "back": "Zero order with respect to that reactant.",
+      "accept": [
+        "Zero order with respect to that reactant.",
+        "The order in that reactant is zero.",
+        "Concentration has no effect on rate under those conditions."
+      ],
+      "reject": [
+        "First order.",
+        "Second order."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis",
+      "specRef": "3.3.6",
+      "front": "What can a positive 2,4-DNPH test establish about an unknown organic substance?",
+      "back": "It contains an aldehyde or ketone carbonyl group.",
+      "accept": [
+        "It contains an aldehyde or ketone carbonyl group.",
+        "The sample may be an aldehyde or a ketone.",
+        "The test is consistent with an aldehyde or ketone functional group."
+      ],
+      "reject": [
+        "The molecule is definitely an aldehyde.",
+        "The molecule must be a carboxylic acid."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_09",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic chemistry",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.5",
+      "front": "What can distilling off an aldehyde as it forms help prevent when oxidising a primary alcohol?",
+      "back": "Further oxidation of the aldehyde to a carboxylic acid.",
+      "accept": [
+        "Further oxidation of the aldehyde to a carboxylic acid.",
+        "It reduces the chance of the aldehyde being oxidised further.",
+        "It removes the aldehyde before further oxidation can occur."
+      ],
+      "reject": [
+        "It makes a secondary alcohol into a primary alcohol.",
+        "It guarantees a ketone product."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_10",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "specRef": "3.1.8",
+      "front": "When using ΔG = ΔH − TΔS, how should ΔS in J K⁻¹ mol⁻¹ be handled if ΔH is in kJ mol⁻¹?",
+      "back": "Convert ΔS to kJ K⁻¹ mol⁻¹ by dividing by 1000.",
+      "accept": [
+        "Convert ΔS to kJ K⁻¹ mol⁻¹ by dividing by 1000.",
+        "Divide the entropy change in joules by 1000.",
+        "Use compatible kilojoule energy units for the entropy term."
+      ],
+      "reject": [
+        "Multiply ΔS by 1000.",
+        "Use ΔS in joules without any unit conversion."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_11",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Thermodynamics",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Thermodynamics",
+      "specRef": "3.1.8",
+      "front": "Does ΔG below zero guarantee a reaction will proceed quickly?",
+      "back": "No; the reaction may have a large activation energy.",
+      "accept": [
+        "No; the reaction may have a large activation energy.",
+        "No, kinetics and activation energy control how fast it proceeds.",
+        "Thermodynamic feasibility does not ensure a fast rate."
+      ],
+      "reject": [
+        "Yes, negative ΔG always gives an instant reaction.",
+        "Yes, ΔG is the activation energy."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_12",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Born–Haber cycles",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8",
+      "front": "Why is the second electron affinity normally endothermic?",
+      "back": "Energy is needed to add an electron to an already negatively charged ion.",
+      "accept": [
+        "Energy is needed to add an electron to an already negatively charged ion.",
+        "The incoming electron is repelled by an anion.",
+        "Electrostatic repulsion makes the second electron addition require energy."
+      ],
+      "reject": [
+        "A second electron is attracted by the negative charge so it releases energy.",
+        "It is always equal to the first electron affinity."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_13",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "front": "How is the partial pressure of a gas in an equilibrium mixture calculated?",
+      "back": "Its mole fraction multiplied by the total pressure.",
+      "accept": [
+        "Its mole fraction multiplied by the total pressure.",
+        "Partial pressure equals mole fraction times total pressure.",
+        "p_i = x_i P_total."
+      ],
+      "reject": [
+        "Total pressure divided by mole fraction.",
+        "Mole fraction divided by total pressure."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_14",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "front": "At constant temperature, what happens to the value of Kp if the equilibrium gas pressure is changed?",
+      "back": "Kp stays unchanged.",
+      "accept": [
+        "Kp stays unchanged.",
+        "The equilibrium constant remains the same if temperature is fixed.",
+        "Kp depends only on temperature for the specified equilibrium."
+      ],
+      "reject": [
+        "Kp always increases with pressure.",
+        "Kp always decreases with pressure."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_chem_15",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Acids and bases",
+      "courseTopic": "Acids and bases",
+      "revisionTopic": "Acids and bases",
+      "specRef": "3.1.12",
+      "front": "At a temperature where Kw is greater than at 25 °C, can a neutral solution have pH below 7?",
+      "back": "Yes; neutrality means [H⁺] = [OH⁻], not necessarily pH 7.",
+      "accept": [
+        "Yes; neutrality means [H⁺] = [OH⁻], not necessarily pH 7.",
+        "A neutral solution can be below pH 7 at higher temperature.",
+        "Equal hydrogen and hydroxide concentrations define neutral even if pH is less than seven."
+      ],
+      "reject": [
+        "No, neutrality always means pH exactly 7 at all temperatures.",
+        "Neutrality requires [H⁺] to exceed [OH⁻]."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}

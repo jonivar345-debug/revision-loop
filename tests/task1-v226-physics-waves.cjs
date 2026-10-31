@@ -26,10 +26,10 @@ const examURL=app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/);
 assert(flashURL&&examURL);
 const flashNames=allNames(flashURL[1]);
 const examNames=allNames(examURL[1]);
-assert.equal(flashNames.length,20);
+assert(flashNames.length>=20,'v226 source was removed');
 assert.equal(flashNames[19],'physics_waves_reasoning_recall_v226.json');
 assert.equal(examNames.at(-1),'physics_waves_interference_application_v226.json');
-const oldFlash=[...deck.cards,...flashNames.slice(0,-1).flatMap(p=>json(p).cards||[])];
+const oldFlash=[...deck.cards,...flashNames.slice(0,19).flatMap(p=>json(p).cards||[])];
 const oldIds=new Set(oldFlash.map(c=>c.id)),oldFronts=new Set(oldFlash.filter(c=>c.subject==='Physics').map(c=>String(c.front||'').trim().toLowerCase()));
 for(let i=0;i<flash.cards.length;i++){
  const c=flash.cards[i];

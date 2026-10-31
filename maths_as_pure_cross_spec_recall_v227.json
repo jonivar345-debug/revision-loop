@@ -1,0 +1,417 @@
+{
+  "version": "v227",
+  "createdAt": "2026-10-31",
+  "subject": "Maths",
+  "scope": "Fifteen Year 1 AQA Pure Maths mock recall cards only. No statistics, mechanics, Year 2 material or radians.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content"
+  ],
+  "notes": "Gives extra recall on proofs, 2D vectors, graph transformations, binomial, sequences, integration and logarithms. Does not replace hard exam questions. Not proof of complete full specification coverage.",
+  "cards": [
+    {
+      "id": "task1_v227_math_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "3.2",
+      "front": "Why is one counterexample enough to disprove a statement claimed to hold for all real numbers?",
+      "back": "A universal statement is false if even one valid case does not satisfy it.",
+      "accept": [
+        "A universal statement is false if even one valid case does not satisfy it.",
+        "One counterexample disproves a claim about every value.",
+        "A single allowed failure makes the universal assertion false."
+      ],
+      "reject": [
+        "You must check infinitely many values to disprove it.",
+        "One confirming example proves a universal claim."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "3.2",
+      "front": "When can proof by exhaustion establish a statement?",
+      "back": "When every possible case belongs to a finite list that can all be checked.",
+      "accept": [
+        "When every possible case belongs to a finite list that can all be checked.",
+        "Check all cases when there are finitely many possibilities.",
+        "It is valid if the set of possible cases is finite and each is verified."
+      ],
+      "reject": [
+        "Checking one case is enough even when others differ.",
+        "It requires an infinite number of checks."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "3.2",
+      "front": "How can any even integer be represented in a proof by deduction?",
+      "back": "As 2k for some integer k.",
+      "accept": [
+        "As 2k for some integer k.",
+        "Write it as twice an integer.",
+        "n = 2k where k is an integer."
+      ],
+      "reject": [
+        "As 2k+1 for integer k.",
+        "As k/2 for every real k."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "3.10",
+      "front": "What is the magnitude of the 2D vector (a,b)?",
+      "back": "√(a² + b²).",
+      "accept": [
+        "√(a² + b²).",
+        "The square root of a squared plus b squared.",
+        "Use Pythagoras, sqrt(a^2+b^2)."
+      ],
+      "reject": [
+        "a+b.",
+        "a²+b² without a square root."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "3.10",
+      "front": "Given position vectors OA = a and OB = b, what is vector AB?",
+      "back": "b − a.",
+      "accept": [
+        "b − a.",
+        "Position vector of B minus that of A.",
+        "AB = OB − OA."
+      ],
+      "reject": [
+        "a − b.",
+        "a + b in every case."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "3.10",
+      "front": "How can a scalar-multiple argument establish that A, B and C are collinear?",
+      "back": "Show AB = k AC for some scalar k.",
+      "accept": [
+        "Show AB = k AC for some scalar k.",
+        "Prove that AB and AC are parallel by showing one is a multiple of the other.",
+        "Demonstrate one displacement vector is a scalar multiple of the other."
+      ],
+      "reject": [
+        "Show AB and AC have equal length only.",
+        "Show the x-coordinates all differ."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "3.3",
+      "front": "For a > 1, what transformation maps y = f(x) to y = f(ax)?",
+      "back": "A horizontal stretch with scale factor 1/a.",
+      "accept": [
+        "A horizontal stretch with scale factor 1/a.",
+        "Stretch parallel to the x-axis by factor one over a.",
+        "The graph becomes horizontally compressed by factor a."
+      ],
+      "reject": [
+        "A vertical stretch of scale factor a.",
+        "A translation a units right."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "3.3",
+      "front": "What transformation maps y = f(x) to y = f(−x)?",
+      "back": "Reflection in the y-axis.",
+      "accept": [
+        "Reflection in the y-axis.",
+        "Reflect the graph across the y-axis.",
+        "Mirror the graph in the vertical axis."
+      ],
+      "reject": [
+        "Reflection in the x-axis.",
+        "Translate one unit left."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "3.3",
+      "front": "What transformation maps y = f(x) to y = f(x − 4)?",
+      "back": "Translation four units to the right.",
+      "accept": [
+        "Translation four units to the right.",
+        "Move the graph 4 in the positive x-direction.",
+        "Shift horizontally right by 4."
+      ],
+      "reject": [
+        "Move the graph four units left.",
+        "Stretch the graph vertically by four."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra",
+      "courseTopic": "Algebra",
+      "revisionTopic": "Algebra",
+      "specRef": "3.3",
+      "front": "What does a quadratic discriminant of zero tell you about its real roots?",
+      "back": "There is one repeated real root.",
+      "accept": [
+        "There is one repeated real root.",
+        "The quadratic has a repeated real solution.",
+        "The two real roots are equal."
+      ],
+      "reject": [
+        "There are two distinct real roots.",
+        "The quadratic has no real roots."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences",
+      "courseTopic": "Sequences",
+      "revisionTopic": "Sequences",
+      "specRef": "3.5",
+      "front": "What is the r-th term, counting the first term as r = 0, in the expansion of (a + b)^n for positive integer n?",
+      "back": "nCr × a^(n−r) × b^r.",
+      "accept": [
+        "nCr × a^(n−r) × b^r.",
+        "The coefficient n choose r times a to n minus r times b to r.",
+        "C(n,r) a^(n-r) b^r."
+      ],
+      "reject": [
+        "nCr × a^r × b^r for every term.",
+        "nCr × (a+b)^(n-r)."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences",
+      "courseTopic": "Sequences",
+      "revisionTopic": "Sequences",
+      "specRef": "3.5",
+      "front": "What is the sum of the first n terms of a geometric progression with first term a and ratio r, for r ≠ 1?",
+      "back": "Sₙ = a(1−rⁿ)/(1−r).",
+      "accept": [
+        "Sₙ = a(1−rⁿ)/(1−r).",
+        "a times (1 minus r to the n) over (1 minus r).",
+        "S_n = a(r^n-1)/(r-1)."
+      ],
+      "reject": [
+        "Sₙ = n(a + l)/2.",
+        "Sₙ = a/(1−r) for every finite n."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_13",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8",
+      "front": "What does the derivative f′(x) represent on the graph y = f(x)?",
+      "back": "The gradient of the tangent at x.",
+      "accept": [
+        "The gradient of the tangent at x.",
+        "Instantaneous rate of change of y with x.",
+        "Slope of the tangent to the curve at that point."
+      ],
+      "reject": [
+        "The area under the graph.",
+        "The y-intercept."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_14",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Integration",
+      "revisionTopic": "Integration",
+      "specRef": "3.9",
+      "front": "Why may a definite integral not equal the total geometric area between a curve and the x-axis?",
+      "back": "Regions below the x-axis contribute negative signed area.",
+      "accept": [
+        "Regions below the x-axis contribute negative signed area.",
+        "The integral gives signed area, so parts below the axis subtract.",
+        "Below-axis contributions are negative rather than positive."
+      ],
+      "reject": [
+        "All areas are counted positively automatically.",
+        "Integration ignores negative regions entirely."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_math_15",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Exponentials and logarithms",
+      "revisionTopic": "Exponentials and logarithms",
+      "specRef": "3.7",
+      "front": "For positive a and b, what is ln(ab)?",
+      "back": "ln a + ln b.",
+      "accept": [
+        "ln a + ln b.",
+        "The sum of the two natural logarithms.",
+        "Natural log of a product equals log a plus log b."
+      ],
+      "reject": [
+        "ln a × ln b.",
+        "ln a − ln b."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
