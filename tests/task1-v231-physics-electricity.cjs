@@ -14,7 +14,7 @@ assert.equal(audit.crosswalk.length,6);
 assert.equal(audit.acceptedAnswerVariants,48);
 assert.equal(audit.rejectedAnswerVariants,32);
 for(const flag of Object.values(audit.completion))assert.equal(flag,false);
-for(const x of audit.crosswalk){assert.equal(x.fullLeftColumnCoverageVerified,false);assert.equal(x.allAnswersIndividuallyExaminerReviewed,false);}
+for(const x of audit.crosswalk){assert.equal(x.fullLeftColumnSignoff,false);assert.equal(x.fullOldAnswerSignoff,false);}
 assert.equal(deck.cards.length,3345);
 const hash=c=>{const s=[c.id,c.front,c.back,c.stage,c.mock,c.active].join('\n');let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return(h>>>0).toString(16).padStart(8,'0')};
 for(const snap of audit.inventory.snapshots){const c=deck.cards.find(x=>x.id===snap.id);assert(c,'missing old card '+snap.id);assert.equal(snap.reviewLevel,'inventory_only');assert.equal(hash(c),snap.stamp,'old card changed '+snap.id);}
