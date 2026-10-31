@@ -1709,7 +1709,7 @@ function weightedPick(items,n,weightFn){
 // school-excluded radian questions remain in full revision, not mock sessions.
 // Exclude A-level-only composite/inverse functions from the first Year 1 Pure mock.
 // Keep the original flashcards in full/taught revision and preserve review history.
-const MOCK_MATHS_YEAR2_EXCLUDED_IDS=new Set(['math_function_composite','math_inverse_condition','task1_v136_063']);
+const MOCK_MATHS_YEAR2_EXCLUDED_IDS=new Set(['math_function_composite','math_inverse_condition','task1_v136_063','math_inverse','v33_card_maths_functions_76','v33_card_maths_functions_77','task1_maths_006','task1_v130_156','task1_v130_157','task1_v136_064']);
 function mockEligibleCard(c){
  if(c.mock!==true)return false;
  if(c.subject!=='Maths')return true;
