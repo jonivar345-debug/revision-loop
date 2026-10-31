@@ -1,0 +1,298 @@
+{
+  "version": "v238",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "AQA 7405 3.1.1 AS atomic structure and TOF / electron configuration mock application recall. Does not imply complete syllabus certification.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "cards": [
+    {
+      "id": "task1_v238_chem_atomic_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a bromide ion, ⁷⁹Br⁻ (proton number 35), how many electrons are present?",
+      "back": "36 electrons.",
+      "accept": [
+        "36 electrons.",
+        "36",
+        "Thirty-six electrons."
+      ],
+      "reject": [
+        "35 electrons.",
+        "34 electrons."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ⁷⁹Br with proton number 35, how many neutrons are in its nucleus?",
+      "back": "44 neutrons.",
+      "accept": [
+        "44 neutrons.",
+        "44",
+        "Forty-four neutrons."
+      ],
+      "reject": [
+        "35 neutrons.",
+        "79 neutrons."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An element has isotopes of mass 35 and 37 at 75% and 25% abundance respectively. What is its relative atomic mass?",
+      "back": "35.5.",
+      "accept": [
+        "35.5",
+        "35.50",
+        "35.5 (75% of 35 plus 25% of 37)."
+      ],
+      "reject": [
+        "36",
+        "35",
+        "37"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A mass spectrum contains singly charged isotope ions at m/z 24, 25 and 26. How many distinct isotopes of that element are represented?",
+      "back": "Three isotopes.",
+      "accept": [
+        "Three isotopes.",
+        "3",
+        "3 isotopes."
+      ],
+      "reject": [
+        "One isotope.",
+        "Two isotopes."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For an isotope ion of mass number 64 with charge 2+, what m/z would be shown, to this level of approximation?",
+      "back": "32.",
+      "accept": [
+        "32.",
+        "32",
+        "m/z = 64/2 = 32."
+      ],
+      "reject": [
+        "64",
+        "128"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At the same kinetic energy, singly charged ions of mass 25 u and 100 u cross the same drift distance. How many times longer does the heavier ion take?",
+      "back": "Twice as long.",
+      "accept": [
+        "Twice as long.",
+        "2 times longer.",
+        "A factor of 2."
+      ],
+      "reject": [
+        "Four times longer.",
+        "Half as long."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write the ground-state electron configuration of bromine, Z = 35, using an argon core.",
+      "back": "[Ar] 3d¹⁰ 4s² 4p⁵.",
+      "accept": [
+        "[Ar] 3d¹⁰ 4s² 4p⁵.",
+        "[Ar]3d10 4s2 4p5",
+        "[Ar] 4s² 3d¹⁰ 4p⁵."
+      ],
+      "reject": [
+        "[Ar] 3d¹⁰ 4s² 4p⁶.",
+        "[Ar] 3d¹⁰ 4s¹ 4p⁵."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write krypton's (Z = 36) electron configuration using an argon core.",
+      "back": "[Ar] 3d¹⁰ 4s² 4p⁶.",
+      "accept": [
+        "[Ar] 3d¹⁰ 4s² 4p⁶.",
+        "[Ar]3d10 4s2 4p6",
+        "[Ar] 4s² 3d¹⁰ 4p⁶."
+      ],
+      "reject": [
+        "[Ar] 3d¹⁰ 4s² 4p⁵.",
+        "[Ar] 3d¹⁰ 4s¹ 4p⁶."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_09",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write the equation, with state symbols, for the third ionisation of calcium.",
+      "back": "Ca²⁺(g) → Ca³⁺(g) + e⁻.",
+      "accept": [
+        "Ca²⁺(g) → Ca³⁺(g) + e⁻.",
+        "Ca2+(g) -> Ca3+(g) + e-",
+        "Ca²⁺(g) → Ca³⁺(g) + e−."
+      ],
+      "reject": [
+        "Ca(g) → Ca⁺(g) + e⁻.",
+        "Ca⁺(g) → Ca²⁺(g) + e⁻."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_10",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A third ionisation energy is much larger than the second. How many electrons are in the atom's outer shell?",
+      "back": "Two outer-shell electrons.",
+      "accept": [
+        "Two outer-shell electrons.",
+        "Two",
+        "2 valence electrons."
+      ],
+      "reject": [
+        "Three",
+        "One outer-shell electron."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v238_chem_atomic_11",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure and TOF applications",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the electron configuration of Br⁻, in noble-gas notation?",
+      "back": "[Kr] (36 electrons).",
+      "accept": [
+        "[Kr] (36 electrons).",
+        "[Kr]",
+        "[Ar] 3d¹⁰ 4s² 4p⁶."
+      ],
+      "reject": [
+        "[Ar] 3d¹⁰ 4s² 4p⁵.",
+        "[Ar] 3d¹⁰ 4s² 4p⁴."
+      ],
+      "strictRecall": true
+    }
+  ]
+}

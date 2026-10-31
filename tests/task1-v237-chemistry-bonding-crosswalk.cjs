@@ -43,7 +43,7 @@ for(const c of audit.clarifiedOldCards){
  assert.equal(after.front,c.newFront);assert.equal(after.back,before.back);
  assert(/no lone pairs/.test(after.front));
 }
-assert(app.includes('cards=applyV237ChemBondAngleClarity('));
+assert(app.includes('applyV237ChemBondAngleClarity(applyV219TofCorrections('), 'Keep v237 bond-angle clarity wrapped around v219 TOF corrections when later correction layers are added');
 assert(app.includes('else if(index===27)'));
 assert(sw.includes("'./chemistry_bonding_diagram_recall_v237.json'"));
 assert(sw.includes('v237-bonding-aqa-crosswalk'));
@@ -51,7 +51,7 @@ assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(files.length,28);assert.equal(files[27],'chemistry_bonding_diagram_recall_v237.json');
+assert(files.length>=28,'Historical first 28 supplement banks missing');assert.equal(files[27],'chemistry_bonding_diagram_recall_v237.json');
 const prior=files.slice(0,27).flatMap(name=>json(name).cards||[]);
 const known=new Set([...deck.cards,...prior].map(c=>c.id));
 const oldFronts=new Set([...deck.cards,...prior].filter(c=>c.subject==='Chemistry').map(c=>c.front.trim().toLowerCase()));

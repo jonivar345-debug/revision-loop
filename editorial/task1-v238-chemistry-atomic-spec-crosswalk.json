@@ -1,0 +1,983 @@
+{
+  "version": "v238",
+  "date": "2026-10-31",
+  "scope": "AQA 7405 3.1.1.1, 3.1.1.2, 3.1.1.3: fundamental particles; mass number/isotopes/simple TOF; electron configurations and successive ionisation energy",
+  "officialSpecification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "coreDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "auditLevel": "Front/back first-pass plausibility and scope review of 88 AS core cards from three exact topic labels, plus explicit 29-point requirement-to-card evidence mapping. Not an examiner verification of every alternative or unfamiliar numerical application.",
+  "coreMockTopicInventory": {
+    "Atomic structure": 34,
+    "Ionisation energy": 28,
+    "Mass spectrometry": 26,
+    "total": 88
+  },
+  "coreCardsFirstPass": [
+    {
+      "id": "chem_ar_def",
+      "topic": "Atomic structure",
+      "originalFront": "Define relative atomic mass, Ar.",
+      "originalBack": "Weighted mean mass of an atom relative to 1/12 of the mass of a carbon-12 atom.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_isotope",
+      "topic": "Atomic structure",
+      "originalFront": "What are isotopes?",
+      "originalBack": "Atoms of the same element with the same proton number but different neutron numbers.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_ionisation_def",
+      "topic": "Ionisation energy",
+      "originalFront": "Define first ionisation energy.",
+      "originalBack": "Energy required to remove one electron from each atom in one mole of gaseous atoms to form gaseous 1+ ions.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_ie_trend",
+      "topic": "Ionisation energy",
+      "originalFront": "Why generally does first ionisation energy increase across a period?",
+      "originalBack": "Nuclear charge increases while shielding is similar, so attraction to the outer electron increases and atomic radius falls.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "v33_card_chemistry_atomic_structure_40",
+      "topic": "Atomic structure",
+      "originalFront": "What is the difference between atomic number and mass number?",
+      "originalBack": "Atomic number is number of protons; mass number is protons plus neutrons.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_01",
+      "topic": "Atomic structure",
+      "originalFront": "State the relative charge and mass of a proton.",
+      "originalBack": "Charge +1, relative mass 1.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_02",
+      "topic": "Atomic structure",
+      "originalFront": "State the relative charge and mass of a neutron.",
+      "originalBack": "Charge 0, relative mass 1.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_03",
+      "topic": "Atomic structure",
+      "originalFront": "State the relative charge and mass of an electron.",
+      "originalBack": "Charge −1, relative mass about 1/1836.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_04",
+      "topic": "Atomic structure",
+      "originalFront": "What does the proton number Z measure?",
+      "originalBack": "The number of protons in a nucleus; it defines the element.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_05",
+      "topic": "Atomic structure",
+      "originalFront": "How are neutrons counted using A and Z?",
+      "originalBack": "Number of neutrons = mass number A − proton number Z.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_06",
+      "topic": "Atomic structure",
+      "originalFront": "How many electrons are in a 3+ ion formed from Z=13?",
+      "originalBack": "13−3 = 10 electrons; the nucleus is unchanged.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_07",
+      "topic": "Atomic structure",
+      "originalFront": "Why did Rutherford reject the plum pudding model?",
+      "originalBack": "Some alpha particles scattered through large angles, implying a tiny, dense positive nucleus.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_08",
+      "topic": "Atomic structure",
+      "originalFront": "Why do isotopes often have similar chemical properties?",
+      "originalBack": "They have the same electron arrangements despite differing neutron numbers.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_09",
+      "topic": "Atomic structure",
+      "originalFront": "Define relative molecular mass Mr.",
+      "originalBack": "Mean mass of a molecule compared with 1/12 of a carbon-12 atom.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_10",
+      "topic": "Atomic structure",
+      "originalFront": "What is relative isotopic mass compared against?",
+      "originalBack": "One twelfth of the mass of one carbon-12 atom.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_11",
+      "topic": "Atomic structure",
+      "originalFront": "How do you calculate Ar from two isotope abundances?",
+      "originalBack": "(isotope mass₁×abundance₁ + mass₂×abundance₂) ÷ total abundance.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_12",
+      "topic": "Atomic structure",
+      "originalFront": "Why is Ar of an isotope mixture a weighted mean?",
+      "originalBack": "More abundant isotopes contribute more to the average mass.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_13",
+      "topic": "Mass spectrometry",
+      "originalFront": "What does m/z mean in mass spectrometry?",
+      "originalBack": "Mass-to-charge ratio; for a singly charged ion it matches the relative ion mass.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_14",
+      "topic": "Mass spectrometry",
+      "originalFront": "What are the four core TOF stages in order?",
+      "originalBack": "Ionisation → acceleration → ion drift → detection/data analysis.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_15",
+      "topic": "Mass spectrometry",
+      "originalFront": "What is the purpose of ionisation in TOF?",
+      "originalBack": "To give sample particles an electrical charge so they can be accelerated and detected.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_16",
+      "topic": "Mass spectrometry",
+      "originalFront": "What is formed by electron-impact ionisation of X(g)?",
+      "originalBack": "X⁺(g), after an electron is removed.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_17",
+      "topic": "Mass spectrometry",
+      "originalFront": "Why may electron-impact mass spectra show fragment peaks?",
+      "originalBack": "Energetic ionisation can break molecules into smaller charged fragments.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_18",
+      "topic": "Mass spectrometry",
+      "originalFront": "What charge is commonly formed by electrospray protonation?",
+      "originalBack": "A singly charged protonated ion, [M+H]⁺.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_19",
+      "topic": "Mass spectrometry",
+      "originalFront": "Why can electrospray help analyse large molecules?",
+      "originalBack": "It is gentler and often causes less fragmentation than electron impact.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_20",
+      "topic": "Mass spectrometry",
+      "originalFront": "What happens to positive ions in the acceleration stage?",
+      "originalBack": "An electric field accelerates them, giving ions of equal charge equal kinetic energy.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_21",
+      "topic": "Mass spectrometry",
+      "originalFront": "Why does equal kinetic energy not mean equal speed?",
+      "originalBack": "Since Eₖ=½mv², lighter ions have greater speed at equal Eₖ.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_22",
+      "topic": "Mass spectrometry",
+      "originalFront": "Which travels faster at equal KE: 63⁺ or 65⁺?",
+      "originalBack": "The lighter 63⁺ ion.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_23",
+      "topic": "Mass spectrometry",
+      "originalFront": "What is the purpose of the flight/drift tube?",
+      "originalBack": "To time how long accelerated ions take to travel a fixed distance.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_24",
+      "topic": "Mass spectrometry",
+      "originalFront": "Why is a high vacuum used in the drift tube?",
+      "originalBack": "To reduce collisions between moving ions and gas molecules.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_25",
+      "topic": "Mass spectrometry",
+      "originalFront": "What happens to an ion's speed while drifting ideally?",
+      "originalBack": "It remains approximately constant in the field-free drift region.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_26",
+      "topic": "Mass spectrometry",
+      "originalFront": "What is the relationship between flight time, distance and speed?",
+      "originalBack": "Flight time t = flight length L ÷ speed v.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_27",
+      "topic": "Mass spectrometry",
+      "originalFront": "How does flight time change as mass increases at fixed KE and charge?",
+      "originalBack": "It increases; t is proportional to the square root of mass.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_28",
+      "topic": "Mass spectrometry",
+      "originalFront": "What happens when ions reach a TOF detector?",
+      "originalBack": "They generate an electrical signal used to record ion arrivals.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_29",
+      "topic": "Mass spectrometry",
+      "originalFront": "What does the position of a mass spectrum peak indicate?",
+      "originalBack": "Its mass-to-charge ratio (m/z).",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_30",
+      "topic": "Mass spectrometry",
+      "originalFront": "What does the height/intensity of a mass spectrum peak indicate?",
+      "originalBack": "Relative abundance of the detected ion.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_31",
+      "topic": "Mass spectrometry",
+      "originalFront": "What is the base peak in a mass spectrum?",
+      "originalBack": "The most intense peak; it is assigned 100% relative intensity.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_32",
+      "topic": "Mass spectrometry",
+      "originalFront": "Why is the base peak not necessarily the molecular ion?",
+      "originalBack": "A charged fragment can be more abundant than the intact molecular ion.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_33",
+      "topic": "Mass spectrometry",
+      "originalFront": "What does a molecular-ion peak represent in electron-impact MS?",
+      "originalBack": "An ion formed from the intact molecule after losing an electron.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_34",
+      "topic": "Mass spectrometry",
+      "originalFront": "Why might the electrospray [M+H]⁺ peak differ from molecular mass?",
+      "originalBack": "It includes the mass of an added proton; m/z is about Mr+1 for 1+ ions.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_35",
+      "topic": "Mass spectrometry",
+      "originalFront": "For a 36 u ion with a 2+ charge, what is m/z?",
+      "originalBack": "18; m/z = 36/2.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_36",
+      "topic": "Mass spectrometry",
+      "originalFront": "At fixed voltage, how does a higher ion charge affect kinetic energy?",
+      "originalBack": "Eₖ=qV; a higher charge gains more kinetic energy.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_37",
+      "topic": "Mass spectrometry",
+      "originalFront": "What simple relation links acceleration voltage and ion energy?",
+      "originalBack": "Kinetic energy gained = charge × potential difference, Eₖ=qV.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_38",
+      "topic": "Mass spectrometry",
+      "originalFront": "How can elemental identity be suggested by mass spectrometry?",
+      "originalBack": "Compare isotope peak masses and relative abundances to characteristic isotope patterns.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_39",
+      "topic": "Ionisation energy",
+      "originalFront": "Write the first ionisation equation for magnesium.",
+      "originalBack": "Mg(g) → Mg⁺(g) + e⁻.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_40",
+      "topic": "Ionisation energy",
+      "originalFront": "Write the second ionisation equation for magnesium.",
+      "originalBack": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_41",
+      "topic": "Ionisation energy",
+      "originalFront": "Why do successive ionisation energies increase?",
+      "originalBack": "Each electron is removed from an increasingly positive ion.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_42",
+      "topic": "Ionisation energy",
+      "originalFront": "What does a very large successive-IE jump identify?",
+      "originalBack": "Removal has reached an inner shell; the number removed before it equals outer-shell electrons.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_43",
+      "topic": "Ionisation energy",
+      "originalFront": "Why does first IE usually rise across Period 3?",
+      "originalBack": "Nuclear charge rises; shielding changes little; outer electrons are held more strongly.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_44",
+      "topic": "Ionisation energy",
+      "originalFront": "Why is Al first IE lower than Mg first IE?",
+      "originalBack": "Al loses a higher-energy 3p electron; Mg loses a lower-energy 3s electron.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_45",
+      "topic": "Ionisation energy",
+      "originalFront": "Why is S first IE lower than P first IE?",
+      "originalBack": "Electron repulsion within a paired 3p orbital in S helps one electron escape.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_46",
+      "topic": "Ionisation energy",
+      "originalFront": "Why does first IE fall down Group 2?",
+      "originalBack": "Outer electrons are farther away and more shielded, despite a larger nuclear charge.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_47",
+      "topic": "Ionisation energy",
+      "originalFront": "How many electrons can an s, p and d subshell hold?",
+      "originalBack": "s: 2; p: 6; d: 10.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_48",
+      "topic": "Ionisation energy",
+      "originalFront": "What are the exceptional electron configurations of chromium and copper?",
+      "originalBack": "Cr: [Ar]3d⁵4s¹; Cu: [Ar]3d¹⁰4s¹.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_49",
+      "topic": "Ionisation energy",
+      "originalFront": "What is the configuration of Fe²⁺?",
+      "originalBack": "[Ar]3d⁶; electrons are removed from 4s before 3d.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_50",
+      "topic": "Ionisation energy",
+      "originalFront": "What is the configuration of Fe³⁺?",
+      "originalBack": "[Ar]3d⁵; after both 4s electrons, one 3d electron is lost.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atomic_v43_51",
+      "topic": "Ionisation energy",
+      "originalFront": "What is Hund's rule when filling degenerate orbitals?",
+      "originalBack": "Electrons occupy equal-energy orbitals singly before pairing.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_01",
+      "topic": "Ionisation energy",
+      "originalFront": "Write chromium's ground-state electron configuration.",
+      "originalBack": "[Ar]3d⁵4s¹.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_02",
+      "topic": "Ionisation energy",
+      "originalFront": "Write copper's ground-state electron configuration.",
+      "originalBack": "[Ar]3d¹⁰4s¹.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_03",
+      "topic": "Ionisation energy",
+      "originalFront": "Why does Cr have one 4s electron rather than two?",
+      "originalBack": "Its 3d⁵ half-filled subshell is especially favourable.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_04",
+      "topic": "Ionisation energy",
+      "originalFront": "Why does Cu have one 4s electron rather than two?",
+      "originalBack": "Its 3d¹⁰ full subshell is especially favourable.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_05",
+      "topic": "Ionisation energy",
+      "originalFront": "Which element has a half-filled 3d subshell: Cr or Cu?",
+      "originalBack": "Chromium (Cr).",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_06",
+      "topic": "Ionisation energy",
+      "originalFront": "What is the electron configuration of Cr³⁺?",
+      "originalBack": "[Ar]3d³. Remove the 4s electron first, then two 3d electrons.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_07",
+      "topic": "Ionisation energy",
+      "originalFront": "What is the electron configuration of Cu²⁺?",
+      "originalBack": "[Ar]3d⁹. Remove one 4s electron and then one 3d electron.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_08",
+      "topic": "Ionisation energy",
+      "originalFront": "What is the electron configuration of Cu⁺?",
+      "originalBack": "[Ar]3d¹⁰. Remove copper's 4s¹ electron.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_09",
+      "topic": "Ionisation energy",
+      "originalFront": "When transition-metal ions form, which electrons leave first?",
+      "originalBack": "The 4s electrons are removed before 3d electrons.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_config_weak_v45_10",
+      "topic": "Ionisation energy",
+      "originalFront": "Why is '4s fills first, so 3d empties first' incorrect?",
+      "originalBack": "4s generally fills before 3d, but 4s electrons are removed first in these ions.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_ie_focus_v46_01",
+      "topic": "Ionisation energy",
+      "originalFront": "How does shielding change across Period 3, helping first ionisation energy rise?",
+      "originalBack": "It remains approximately the same.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_ie_focus_v46_02",
+      "topic": "Ionisation energy",
+      "originalFront": "Which two different causes explain the Period 3 first-IE dips?",
+      "originalBack": "Mg→Al: higher-energy 3p versus 3s. P→S: extra repulsion from paired 3p electrons.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_ie_focus_v46_03",
+      "topic": "Ionisation energy",
+      "originalFront": "Which two drops interrupt the general rise in first ionisation energy across Period 3?",
+      "originalBack": "Mg to Al (3p electron) and P to S (3p electron pairing).",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_002",
+      "topic": "Atomic structure",
+      "originalFront": "What is the relative isotopic mass?",
+      "originalBack": "Isotope mass relative to 1/12 of a carbon-12 atom.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_004",
+      "topic": "Atomic structure",
+      "originalFront": "Why are successive ionisation energies always positive?",
+      "originalBack": "Removing an electron requires energy to overcome attraction.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_005",
+      "topic": "Atomic structure",
+      "originalFront": "What causes a large jump between successive ionisation energies?",
+      "originalBack": "The next electron is removed from an inner shell.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_006",
+      "topic": "Atomic structure",
+      "originalFront": "Why is 4s filled before 3d?",
+      "originalBack": "4s is initially lower in energy in neutral atoms.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_007",
+      "topic": "Atomic structure",
+      "originalFront": "Why are 4s electrons removed before 3d electrons from transition-metal ions?",
+      "originalBack": "The 4s electrons become higher in energy in these ions.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_008",
+      "topic": "Atomic structure",
+      "originalFront": "What is meant by an isotope?",
+      "originalBack": "Atoms of one element with different numbers of neutrons.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_009",
+      "topic": "Atomic structure",
+      "originalFront": "What does the molecular-ion peak show in a mass spectrum?",
+      "originalBack": "The relative molecular mass of the molecular ion.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_001",
+      "topic": "Atomic structure",
+      "originalFront": "Why do ions of different mass take different flight times in a TOF mass spectrometer?",
+      "originalBack": "At the same kinetic energy, lighter ions travel faster.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_002",
+      "topic": "Atomic structure",
+      "originalFront": "What causes ions to produce a signal at the TOF detector?",
+      "originalBack": "Ion impacts produce an electrical signal.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_003",
+      "topic": "Atomic structure",
+      "originalFront": "How is the weighted mean relative atomic mass calculated?",
+      "originalBack": "Sum of (isotopic mass × abundance) divided by total abundance.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_004",
+      "topic": "Atomic structure",
+      "originalFront": "What change occurs to electron configuration when forming a cation?",
+      "originalBack": "Electrons are removed from the outermost occupied shell first.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_005",
+      "topic": "Atomic structure",
+      "originalFront": "For transition-metal cations, which sub-shell loses electrons before 3d?",
+      "originalBack": "4s.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_006",
+      "topic": "Atomic structure",
+      "originalFront": "Why is the first ionisation energy of sulfur below phosphorus?",
+      "originalBack": "Electron-pair repulsion in sulfur's 3p sub-shell.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_007",
+      "topic": "Atomic structure",
+      "originalFront": "Why is the first ionisation energy of aluminium below magnesium?",
+      "originalBack": "Aluminium loses a higher-energy 3p electron.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_008",
+      "topic": "Atomic structure",
+      "originalFront": "Why is a big jump in successive ionisation energies significant?",
+      "originalBack": "It indicates removal from a new, inner electron shell.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_cloze_011",
+      "topic": "Atomic structure",
+      "originalFront": "Fill the gap: successive ionisation energies show electron ____.",
+      "originalBack": "shell structure.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_073",
+      "topic": "Atomic structure",
+      "originalFront": "Why are time-of-flight mass-spectrometer ions given the same kinetic energy?",
+      "originalBack": "So flight time depends on mass-to-charge ratio.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_074",
+      "topic": "Atomic structure",
+      "originalFront": "Which ions arrive sooner in a TOF tube at equal kinetic energy: lower or higher m/z?",
+      "originalBack": "Lower m/z ions.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_075",
+      "topic": "Atomic structure",
+      "originalFront": "What does a mass spectrum's relative abundance quantify?",
+      "originalBack": "The proportion of detected ions giving a peak.",
+      "level": "front_back_initial_content_scope_pass"
+    }
+  ],
+  "knownRuntimeCorrections": [
+    {
+      "id": "chem_atomic_v43_14",
+      "kind": "previously_fixed_v219",
+      "note": "Original card incorrectly grouped detection/data analysis; loaded card now asks for five TOF stages."
+    },
+    {
+      "id": "task1_v130_073",
+      "kind": "previously_fixed_v219",
+      "note": "Specify same charge and kinetic energy in flight-time mass comparison."
+    },
+    {
+      "id": "task1_v130_074",
+      "kind": "previously_fixed_v219",
+      "note": "Specify singly charged ions and same KE."
+    },
+    {
+      "id": "task1_chem_009",
+      "kind": "fixed_v238",
+      "note": "Original molecular-ion m/z explanation lacked single-charge assumption; loaded card explicitly uses 1+ ion and Mr of original molecule."
+    }
+  ],
+  "requirements": [
+    {
+      "ref": "3.1.1.1",
+      "statement": "Historical development from earlier atomic models to nuclear model",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_07"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.1",
+      "statement": "Proton, neutron and electron relative charges and masses",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_01",
+        "chem_atomic_v43_02",
+        "chem_atomic_v43_03"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.1",
+      "statement": "Nucleus (protons and neutrons) surrounded by electrons",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_04",
+        "chem_atomic_v43_05"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Proton number Z and mass number A",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_04",
+        "chem_atomic_v43_05"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Determine protons, electrons and neutrons in ions",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_06"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_01",
+        "task1_v238_chem_atomic_02"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Explain isotopes and why same-element isotopes share chemistry",
+      "coreEvidenceIds": [
+        "chem_isotope",
+        "chem_atomic_v43_08"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Five correctly ordered TOF stages",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_14"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Ionisation: generate charged ions including electron impact",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_15",
+        "chem_atomic_v43_16"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Acceleration gives equal KE for ions with equal charge and voltage",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_20",
+        "chem_atomic_v43_37"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Drift: distance, high vacuum, constant speed and arrival time",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_23",
+        "chem_atomic_v43_24",
+        "chem_atomic_v43_25",
+        "chem_atomic_v43_26"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Detection and recorded ion arrival signal",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_28"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Data analysis: m/z peak positions and peak intensities",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_29",
+        "chem_atomic_v43_30"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Identify the most intense isotope/ion peak (base peak)",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_31"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Mass-to-charge ratio and effects of charge state",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_13",
+        "chem_atomic_v43_35",
+        "chem_atomic_v43_36"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_05"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Interpret isotopic number, identity and pattern",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_38"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_04"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Relative isotope peak abundance",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_30"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Calculate weighted mean Ar from isotope data",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_11",
+        "chem_atomic_v43_12"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_03"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Relative molecular mass from molecular ion peak (with correct charge assumption)",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_33",
+        "chem_atomic_v43_34",
+        "task1_chem_009"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.2",
+      "statement": "Compare ion TOF speed and time with mass at fixed kinetic energy",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_21",
+        "chem_atomic_v43_22",
+        "chem_atomic_v43_27"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_06"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Subshell capacities, orbitals and filling conventions",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_47",
+        "chem_atomic_v43_51"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Electron configurations of neutral atoms up to Z=36",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_48",
+        "chem_config_weak_v45_01",
+        "chem_config_weak_v45_02"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_07",
+        "task1_v238_chem_atomic_08"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Electron configurations of ions of elements up to Z=36",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_49",
+        "chem_atomic_v43_50",
+        "chem_config_weak_v45_06",
+        "chem_config_weak_v45_07"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_11"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Define first ionisation energy with gaseous 1+ ion and one mole",
+      "coreEvidenceIds": [
+        "chem_ionisation_def"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Write first and successive ionisation equations with state symbols",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_39",
+        "chem_atomic_v43_40"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_09"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "General first-IE trend across Period 3",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_43",
+        "chem_ie_trend"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Explain Mg→Al and P→S first-IE dips across Period 3",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_44",
+        "chem_atomic_v43_45"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Successive IE jump reveals new occupied inner electron shell",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_41",
+        "chem_atomic_v43_42"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v238_chem_atomic_10"
+      ],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "First IE trend down Group 2, shielding and distance",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_46"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    },
+    {
+      "ref": "3.1.1.3",
+      "statement": "Group 2 first and second ionisation energy relation",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_42"
+      ],
+      "supplementEvidenceIds": [],
+      "evidenceLevel": "Mapped active core card IDs and newly added application recall; full unfamiliar exam-response proficiency NOT certified"
+    }
+  ],
+  "newCards": "chemistry_atomic_tof_applications_v238.json",
+  "newCardCount": 11,
+  "newCardDesign": "11 short original isotope, TOF, configuration and successive-IE application checks (33 declared valid variants, 23 explicit negative alternatives).",
+  "openGaps": [
+    "Unfamiliar TOF mass spectra, isotope abundance and full shell/subshell electron-configuration questions require applied exam-style practice.",
+    "Core-topic 88-card first pass does not independently certify every mathematical statement, wording variation, duplicate under other topic labels, or all answer equivalences.",
+    "Complete Chemistry mock requires a comparable left-column crosswalk and card-level semantic review for every other taught AQA section.",
+    "Physics and Year 1 Pure Maths mock content review remains unfinished."
+  ],
+  "releaseGate": {
+    "atomicThreeSubsectionsMapped": true,
+    "all88CoreAnswersIndependentlyCertified": false,
+    "allPossibleAlternativeAnswersTested": false,
+    "chemistryMockComplete": false,
+    "physicsMockComplete": false,
+    "mathsYear1PureMockComplete": false,
+    "task1Complete": false
+  }
+}

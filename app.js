@@ -1,7 +1,7 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json','./physics_fibre_signal_application_v225.json','./physics_waves_interference_application_v226.json'];
-const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json','./chemistry_practicals_analysis_recall_v221.json','./chemistry_rp5_rp6_reasoning_recall_v222.json','./physics_optical_fibre_precision_recall_v225.json','./physics_waves_reasoning_recall_v226.json','./physics_cross_spec_recall_v227.json','./chemistry_cross_spec_recall_v227.json','./maths_as_pure_cross_spec_recall_v227.json','./physics_waves_crosswalk_recall_v229.json','./physics_mechanics_cross_spec_recall_v230.json','./physics_electricity_cross_spec_recall_v231.json','./maths_first_mock_pure_precision_v232.json','./chemistry_bonding_diagram_recall_v237.json'];
+const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json','./chemistry_practicals_analysis_recall_v221.json','./chemistry_rp5_rp6_reasoning_recall_v222.json','./physics_optical_fibre_precision_recall_v225.json','./physics_waves_reasoning_recall_v226.json','./physics_cross_spec_recall_v227.json','./chemistry_cross_spec_recall_v227.json','./maths_as_pure_cross_spec_recall_v227.json','./physics_waves_crosswalk_recall_v229.json','./physics_mechanics_cross_spec_recall_v230.json','./physics_electricity_cross_spec_recall_v231.json','./maths_first_mock_pure_precision_v232.json','./chemistry_bonding_diagram_recall_v237.json','./chemistry_atomic_tof_applications_v238.json'];
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -75,6 +75,29 @@ function applyV237ChemBondAngleClarity(cardsToFix){
  return cardsToFix;
 }
 /* v237 chemistry bond-angle prompt clarification end */
+
+/* v238: clarify singly charged molecular-ion interpretation without changing IDs. */
+const V238_MOLECULAR_ION_PRECISION=Object.freeze({
+  front:'In an electron-impact mass spectrum, what does the m/z of a singly charged molecular ion indicate?',
+  back:'The relative molecular mass of the original molecule (m/z ≈ Mr for a 1+ molecular ion).',
+  accept:[
+   'The relative molecular mass of the original molecule (m/z ≈ Mr for a 1+ molecular ion).',
+   'Its relative molecular mass, Mr.',
+   'The Mr of the original molecule.',
+   'Relative molecular mass of the molecule.'
+  ],
+  reject:['Mass number of the most abundant isotope.','The relative atomic mass of every atom in the molecule.'],
+  specRef:'3.1.1.2'
+});
+function applyV238MolecularIonClarity(core){
+ for(const c of core){
+  if(c.id==='task1_chem_009'&&c.subject==='Chemistry'&&c.stage==='AS')
+   Object.assign(c,V238_MOLECULAR_ION_PRECISION);
+ }
+ return core;
+}
+/* v238 molecular ion clarity end */
+
 
 // v219: targeted AS TOF answer-level corrections; original source deck and IDs are unchanged.
 /* v219 TOF correction block start */
@@ -3744,7 +3767,7 @@ async function sync(manual=false){
  if(!dr.ok||!er.ok)throw new Error('Main question bank unavailable');
  const d=await dr.json(),e=await er.json(),x=xr?.ok?await xr.json():{questions:[]},corrections=cr?.ok?await cr.json():{modelAnswers:{}},old=deckVersion;
  const extraBanks=await Promise.all(extraResponses.map(async res=>res?.ok?await res.json():{questions:[]}));
- cards=applyV237ChemBondAngleClarity(applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false))));
+ cards=applyV238MolecularIonClarity(applyV237ChemBondAngleClarity(applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)))));
  applyV220IonTestCorrections(cards);
  applyV221RpCorrections(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
@@ -3825,6 +3848,9 @@ async function sync(manual=false){
    if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===27){
    // v237: AS Chemistry bonding and crystal representation only.
+   if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else if(index===28){
+   // v238: AQA AS atomic structure, TOF and ionisation mock application recall.
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
