@@ -1,0 +1,2108 @@
+{
+  "version": "v228",
+  "date": "2026-10-31",
+  "kind": "frozen first-pass snapshot, NOT AQA specification sign-off",
+  "coreDeckSource": {
+    "path": "deck.json",
+    "blobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+    "coreCards": 3345,
+    "coreMockPhysics": 730,
+    "coreMockChemistry": 1533,
+    "coreMockMathsFlags": 116,
+    "coreMathsExcludedByFirstMockRuntime": 3,
+    "coreMathsFirstMockEligible": 113
+  },
+  "passScope": {
+    "Maths": "All 116 core mock-flagged Maths prompts read, but three are excluded by the first-mock runtime. 113 eligible core plus 49 maths supplements reviewed for initial answer plausibility and Year 1 Pure scope; not whole AQA statement-level coverage.",
+    "Chemistry": "172 directly specification-tagged Year 2 core cards read for initial content plausibility/scope; 194 other legacy A2 core cards separately reviewed for taught scope in v216.",
+    "Physics": "Existing topic and legacy reviews exist, but no full subject sign-off in this pass."
+  },
+  "reviewLevelDefinition": {
+    "first_content_scope_pass": "Read card front and back for an initial plausibility/scope check, not exhaustive content accuracy, AQA left-column coverage or acceptance of every equivalent answer."
+  },
+  "reviewedCardSnapshots": [
+    {
+      "id": "maths_trig_001",
+      "source": "deck.json",
+      "stamp": "1aae861b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "maths_transform_001",
+      "source": "deck.json",
+      "stamp": "909ef822",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "maths_transform_002",
+      "source": "deck.json",
+      "stamp": "5ff50748",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "maths_transform_003",
+      "source": "deck.json",
+      "stamp": "8959241c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_proof_counter",
+      "source": "deck.json",
+      "stamp": "8d479b41",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_proof_exhaust",
+      "source": "deck.json",
+      "stamp": "c0e69806",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_indices_neg",
+      "source": "deck.json",
+      "stamp": "7b8f9ad5",
+      "level": "corrected_and_first_pass_rechecked"
+    },
+    {
+      "id": "math_indices_frac",
+      "source": "deck.json",
+      "stamp": "8941e4f1",
+      "level": "corrected_and_first_pass_rechecked"
+    },
+    {
+      "id": "math_surds_rationalise",
+      "source": "deck.json",
+      "stamp": "c104f44f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_quad_discriminant",
+      "source": "deck.json",
+      "stamp": "8e3c2489",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_complete_square",
+      "source": "deck.json",
+      "stamp": "dc07b173",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_inverse",
+      "source": "deck.json",
+      "stamp": "b5377932",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_modulus",
+      "source": "deck.json",
+      "stamp": "c9230646",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_line_gradient",
+      "source": "deck.json",
+      "stamp": "0baf8591",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_perp_grad",
+      "source": "deck.json",
+      "stamp": "378e46d6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_circle",
+      "source": "deck.json",
+      "stamp": "a96e630b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_circle_tangent",
+      "source": "deck.json",
+      "stamp": "81b8b126",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_arith_nth",
+      "source": "deck.json",
+      "stamp": "3c5d71ef",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_geom_nth",
+      "source": "deck.json",
+      "stamp": "8dfec179",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_sine_rule",
+      "source": "deck.json",
+      "stamp": "042d0aee",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_cosine_rule",
+      "source": "deck.json",
+      "stamp": "ad98c30f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_triangle_area",
+      "source": "deck.json",
+      "stamp": "58da291a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_tan_identity",
+      "source": "deck.json",
+      "stamp": "05a851db",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_trig_period",
+      "source": "deck.json",
+      "stamp": "741cce58",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_logs_product",
+      "source": "deck.json",
+      "stamp": "50073eae",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_logs_power",
+      "source": "deck.json",
+      "stamp": "ef4540a7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_logs_change",
+      "source": "deck.json",
+      "stamp": "9d063c24",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_exp_inverse",
+      "source": "deck.json",
+      "stamp": "ba12f452",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_diff_power",
+      "source": "deck.json",
+      "stamp": "5155043a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_diff_gradient",
+      "source": "deck.json",
+      "stamp": "8f135775",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_stationary",
+      "source": "deck.json",
+      "stamp": "ecb36ff2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_second_deriv",
+      "source": "deck.json",
+      "stamp": "0cff91b4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_integrate_power",
+      "source": "deck.json",
+      "stamp": "45a11976",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_area_curve",
+      "source": "deck.json",
+      "stamp": "3044e0b3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_vector_mag",
+      "source": "deck.json",
+      "stamp": "5f4b57cb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "math_a2_stationary_class",
+      "source": "deck.json",
+      "stamp": "7cce98b3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_trigonometry_73",
+      "source": "deck.json",
+      "stamp": "89050aa7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_trigonometry_74",
+      "source": "deck.json",
+      "stamp": "4b92cc36",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_transformations_75",
+      "source": "deck.json",
+      "stamp": "a111f297",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_functions_76",
+      "source": "deck.json",
+      "stamp": "ed895246",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_functions_77",
+      "source": "deck.json",
+      "stamp": "ad875e0b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_quadratics_78",
+      "source": "deck.json",
+      "stamp": "737f71d4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_integration_80",
+      "source": "deck.json",
+      "stamp": "b189bb4f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_integration_81",
+      "source": "deck.json",
+      "stamp": "3f8c658a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_algebra_85",
+      "source": "deck.json",
+      "stamp": "4364adf1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_coordinate_geometry_86",
+      "source": "deck.json",
+      "stamp": "d101b100",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_maths_sequences_87",
+      "source": "deck.json",
+      "stamp": "a0976b74",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_001",
+      "source": "deck.json",
+      "stamp": "31e214fa",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_002",
+      "source": "deck.json",
+      "stamp": "67c1fa57",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_004",
+      "source": "deck.json",
+      "stamp": "e4a253fe",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_006",
+      "source": "deck.json",
+      "stamp": "276e0a4c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_007",
+      "source": "deck.json",
+      "stamp": "e6b18ce5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_008",
+      "source": "deck.json",
+      "stamp": "0b08025d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_011",
+      "source": "deck.json",
+      "stamp": "aea550d6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_maths_012",
+      "source": "deck.json",
+      "stamp": "771da29d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_math_002",
+      "source": "deck.json",
+      "stamp": "d4ad02c3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_math_003",
+      "source": "deck.json",
+      "stamp": "ef2b30a4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_math_004",
+      "source": "deck.json",
+      "stamp": "7968c87d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_math_008",
+      "source": "deck.json",
+      "stamp": "c45dd0cf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_math_009",
+      "source": "deck.json",
+      "stamp": "18c8e294",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_155",
+      "source": "deck.json",
+      "stamp": "981dba50",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_156",
+      "source": "deck.json",
+      "stamp": "0d58eacf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_157",
+      "source": "deck.json",
+      "stamp": "ec23ebf0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_001",
+      "source": "deck.json",
+      "stamp": "0cce6d65",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_002",
+      "source": "deck.json",
+      "stamp": "fb30a938",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_003",
+      "source": "deck.json",
+      "stamp": "dc583642",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_004",
+      "source": "deck.json",
+      "stamp": "6973b250",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_005",
+      "source": "deck.json",
+      "stamp": "91342c0e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_006",
+      "source": "deck.json",
+      "stamp": "56fcc946",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_007",
+      "source": "deck.json",
+      "stamp": "c0822992",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_008",
+      "source": "deck.json",
+      "stamp": "f3bed2ad",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_009",
+      "source": "deck.json",
+      "stamp": "3696568a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_062",
+      "source": "deck.json",
+      "stamp": "8157cd54",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_064",
+      "source": "deck.json",
+      "stamp": "5aff037a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_065",
+      "source": "deck.json",
+      "stamp": "eeb3fd7c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_066",
+      "source": "deck.json",
+      "stamp": "7cbe9b52",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_067",
+      "source": "deck.json",
+      "stamp": "be130b8b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_070",
+      "source": "deck.json",
+      "stamp": "917ab071",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_071",
+      "source": "deck.json",
+      "stamp": "bd638e71",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v138_001",
+      "source": "deck.json",
+      "stamp": "6a773817",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_001",
+      "source": "deck.json",
+      "stamp": "2dbffb78",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_002",
+      "source": "deck.json",
+      "stamp": "b40bbdc3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_003",
+      "source": "deck.json",
+      "stamp": "436c5d7c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_004",
+      "source": "deck.json",
+      "stamp": "bd63b208",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_005",
+      "source": "deck.json",
+      "stamp": "dec7fb1a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_006",
+      "source": "deck.json",
+      "stamp": "3b12afbe",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_007",
+      "source": "deck.json",
+      "stamp": "0a8000bc",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_008",
+      "source": "deck.json",
+      "stamp": "49d755d0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_009",
+      "source": "deck.json",
+      "stamp": "5e3a7d97",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_010",
+      "source": "deck.json",
+      "stamp": "95e890b6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_011",
+      "source": "deck.json",
+      "stamp": "3bb79617",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_012",
+      "source": "deck.json",
+      "stamp": "80cf4f5c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_013",
+      "source": "deck.json",
+      "stamp": "c1cb0385",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_014",
+      "source": "deck.json",
+      "stamp": "4ee24eda",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_015",
+      "source": "deck.json",
+      "stamp": "f6ed577a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_016",
+      "source": "deck.json",
+      "stamp": "5b8d887f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_017",
+      "source": "deck.json",
+      "stamp": "ab9d5047",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_018",
+      "source": "deck.json",
+      "stamp": "085e9ffe",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_019",
+      "source": "deck.json",
+      "stamp": "a53d3761",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_020",
+      "source": "deck.json",
+      "stamp": "e3b3f25a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_021",
+      "source": "deck.json",
+      "stamp": "f2300e3f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_022",
+      "source": "deck.json",
+      "stamp": "65411f1e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v162_023",
+      "source": "deck.json",
+      "stamp": "69146504",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_001",
+      "source": "deck.json",
+      "stamp": "2ccfc6a9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_002",
+      "source": "deck.json",
+      "stamp": "bc0e0730",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_003",
+      "source": "deck.json",
+      "stamp": "74c35aa7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_004",
+      "source": "deck.json",
+      "stamp": "8ecf01f8",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_005",
+      "source": "deck.json",
+      "stamp": "b937498a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_006",
+      "source": "deck.json",
+      "stamp": "015c4572",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_007",
+      "source": "deck.json",
+      "stamp": "4fdaaef1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_008",
+      "source": "deck.json",
+      "stamp": "4b624510",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_009",
+      "source": "deck.json",
+      "stamp": "e4771a39",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v171_010",
+      "source": "deck.json",
+      "stamp": "f0832051",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_001",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "e1dde4ca",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_002",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "0db38aa3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_003",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "b807ea29",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_004",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "0073b496",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_005",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "0b0b0f23",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_006",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "58142414",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_007",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "64667aca",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_008",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "ac2b6357",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v186_maths_009",
+      "source": "maths_mock_recall_v186.json",
+      "stamp": "fac5e762",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_001",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "8fa31192",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_002",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "a3cafae5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_003",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "bac39aae",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_004",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "ff11a33c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_005",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "6bba0c9b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_006",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "85903eb5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_007",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "be6ba269",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_008",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "1316411a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_009",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "b574f243",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_010",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "c9749290",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_011",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "be6b3344",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_012",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "7bbe875b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_013",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "edb2e346",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_014",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "aee39a92",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v187_maths_015",
+      "source": "maths_mock_recall_v187.json",
+      "stamp": "dd4ba6ca",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_001",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "ef799062",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_002",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "e5f0b511",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_003",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "2ca64fae",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_004",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "5bb606bf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_005",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "0c45d126",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_006",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "c7b41f8d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_007",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "e001feb7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_008",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "3bcda066",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_009",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "ae748531",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v192_maths_010",
+      "source": "maths_mock_recall_v192.json",
+      "stamp": "b3ebcc91",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_01",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "3120a922",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_02",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "71b74223",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_03",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "4508cc36",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_04",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "5fe36973",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_05",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "f466fa45",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_06",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "70952d21",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_07",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "2a2636b4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_08",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "f158f67b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_09",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "268895a6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_10",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "bcf98a6d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_11",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "7eb0dcdd",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_12",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "e9c34ead",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_13",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "a53e7d9a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_14",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "313c80f3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v227_math_15",
+      "source": "maths_as_pure_cross_spec_recall_v227.json",
+      "stamp": "2d86d21c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_162",
+      "source": "deck.json",
+      "stamp": "01410949",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_163",
+      "source": "deck.json",
+      "stamp": "7f2a57f0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_164",
+      "source": "deck.json",
+      "stamp": "d1dccc34",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_165",
+      "source": "deck.json",
+      "stamp": "81ab7adf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_166",
+      "source": "deck.json",
+      "stamp": "7c11696c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_167",
+      "source": "deck.json",
+      "stamp": "69843a33",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_168",
+      "source": "deck.json",
+      "stamp": "bbf4a13b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_169",
+      "source": "deck.json",
+      "stamp": "5d51a9fc",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_170",
+      "source": "deck.json",
+      "stamp": "f5cb54b7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_171",
+      "source": "deck.json",
+      "stamp": "7aa64f2b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_173",
+      "source": "deck.json",
+      "stamp": "0797bd5e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_174",
+      "source": "deck.json",
+      "stamp": "904f8b8b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_175",
+      "source": "deck.json",
+      "stamp": "8aaab9d9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_176",
+      "source": "deck.json",
+      "stamp": "93531371",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_177",
+      "source": "deck.json",
+      "stamp": "14f08ae9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_178",
+      "source": "deck.json",
+      "stamp": "38661425",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_179",
+      "source": "deck.json",
+      "stamp": "1f63e610",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_180",
+      "source": "deck.json",
+      "stamp": "7b5b332c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_181",
+      "source": "deck.json",
+      "stamp": "2dc0058f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_182",
+      "source": "deck.json",
+      "stamp": "5cb38265",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_183",
+      "source": "deck.json",
+      "stamp": "fe99417c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_186",
+      "source": "deck.json",
+      "stamp": "f8cd508d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_199",
+      "source": "deck.json",
+      "stamp": "e8a0d647",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_201",
+      "source": "deck.json",
+      "stamp": "b38ebab3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_202",
+      "source": "deck.json",
+      "stamp": "79df0ff1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_203",
+      "source": "deck.json",
+      "stamp": "d3f91e80",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_204",
+      "source": "deck.json",
+      "stamp": "bc590315",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_205",
+      "source": "deck.json",
+      "stamp": "fc120cf2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_206",
+      "source": "deck.json",
+      "stamp": "b6fbd911",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_207",
+      "source": "deck.json",
+      "stamp": "0465b1c0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_209",
+      "source": "deck.json",
+      "stamp": "c5f4b8a0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_210",
+      "source": "deck.json",
+      "stamp": "e4a163a3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_211",
+      "source": "deck.json",
+      "stamp": "98ae11fe",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_212",
+      "source": "deck.json",
+      "stamp": "a6a268d3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_213",
+      "source": "deck.json",
+      "stamp": "5bda4d46",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_140",
+      "source": "deck.json",
+      "stamp": "7c0e442c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_141",
+      "source": "deck.json",
+      "stamp": "3204d454",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_142",
+      "source": "deck.json",
+      "stamp": "93ded0b5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_143",
+      "source": "deck.json",
+      "stamp": "18baefb6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_144",
+      "source": "deck.json",
+      "stamp": "f2ea6beb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_145",
+      "source": "deck.json",
+      "stamp": "15d37c83",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_146",
+      "source": "deck.json",
+      "stamp": "a92470cb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_147",
+      "source": "deck.json",
+      "stamp": "f31defc1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_148",
+      "source": "deck.json",
+      "stamp": "c1e113ac",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_149",
+      "source": "deck.json",
+      "stamp": "0f6313c8",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_150",
+      "source": "deck.json",
+      "stamp": "e2b47a0f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_151",
+      "source": "deck.json",
+      "stamp": "990d25e4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_152",
+      "source": "deck.json",
+      "stamp": "813d0dc8",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_153",
+      "source": "deck.json",
+      "stamp": "963cca7e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_154",
+      "source": "deck.json",
+      "stamp": "a0b0cbab",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_156",
+      "source": "deck.json",
+      "stamp": "1f3c09b1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_157",
+      "source": "deck.json",
+      "stamp": "cee66072",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_158",
+      "source": "deck.json",
+      "stamp": "168eeaca",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_159",
+      "source": "deck.json",
+      "stamp": "7bb36547",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_160",
+      "source": "deck.json",
+      "stamp": "1701f778",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_161",
+      "source": "deck.json",
+      "stamp": "25f13995",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_162",
+      "source": "deck.json",
+      "stamp": "c090ac92",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_163",
+      "source": "deck.json",
+      "stamp": "994be36d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_164",
+      "source": "deck.json",
+      "stamp": "e8b4dc7b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_165",
+      "source": "deck.json",
+      "stamp": "99e042d3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_166",
+      "source": "deck.json",
+      "stamp": "877c6133",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_167",
+      "source": "deck.json",
+      "stamp": "5f23ffe8",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_168",
+      "source": "deck.json",
+      "stamp": "fe65c7e5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_169",
+      "source": "deck.json",
+      "stamp": "2b81d1f7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_171",
+      "source": "deck.json",
+      "stamp": "0b3d4a9b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_173",
+      "source": "deck.json",
+      "stamp": "d6b2484e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_196",
+      "source": "deck.json",
+      "stamp": "5aa1198b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_198",
+      "source": "deck.json",
+      "stamp": "25a48a95",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_199",
+      "source": "deck.json",
+      "stamp": "7305658a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_200",
+      "source": "deck.json",
+      "stamp": "4f9ad474",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_201",
+      "source": "deck.json",
+      "stamp": "f879ad68",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_202",
+      "source": "deck.json",
+      "stamp": "72bf8313",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_203",
+      "source": "deck.json",
+      "stamp": "f7b8a75c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_204",
+      "source": "deck.json",
+      "stamp": "5761e630",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_205",
+      "source": "deck.json",
+      "stamp": "09d19267",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_206",
+      "source": "deck.json",
+      "stamp": "69f62ca8",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_207",
+      "source": "deck.json",
+      "stamp": "6924ae6d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_208",
+      "source": "deck.json",
+      "stamp": "51c7a54d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_209",
+      "source": "deck.json",
+      "stamp": "f160acd9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_210",
+      "source": "deck.json",
+      "stamp": "0da490a2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_211",
+      "source": "deck.json",
+      "stamp": "096194f2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_212",
+      "source": "deck.json",
+      "stamp": "bc4626d1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_213",
+      "source": "deck.json",
+      "stamp": "66e5f2c6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_214",
+      "source": "deck.json",
+      "stamp": "bb5c21e6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_215",
+      "source": "deck.json",
+      "stamp": "68ad1993",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_216",
+      "source": "deck.json",
+      "stamp": "696e267f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_120",
+      "source": "deck.json",
+      "stamp": "ba30d336",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_121",
+      "source": "deck.json",
+      "stamp": "dd458306",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_122",
+      "source": "deck.json",
+      "stamp": "cbf363ae",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_123",
+      "source": "deck.json",
+      "stamp": "8c54f0eb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_124",
+      "source": "deck.json",
+      "stamp": "73e61c63",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_125",
+      "source": "deck.json",
+      "stamp": "7d672ad9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_126",
+      "source": "deck.json",
+      "stamp": "4b81d41a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_127",
+      "source": "deck.json",
+      "stamp": "a2131493",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_128",
+      "source": "deck.json",
+      "stamp": "fb5e2f6a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_129",
+      "source": "deck.json",
+      "stamp": "d2d2c6cd",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_130",
+      "source": "deck.json",
+      "stamp": "e1af125a",
+      "level": "corrected_and_first_pass_rechecked"
+    },
+    {
+      "id": "task1_v125_131",
+      "source": "deck.json",
+      "stamp": "97908ae7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_132",
+      "source": "deck.json",
+      "stamp": "6f48f8bd",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_133",
+      "source": "deck.json",
+      "stamp": "d303c07a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_134",
+      "source": "deck.json",
+      "stamp": "4b206c79",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_135",
+      "source": "deck.json",
+      "stamp": "5502dbf3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_136",
+      "source": "deck.json",
+      "stamp": "f3850563",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_138",
+      "source": "deck.json",
+      "stamp": "114ea00f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_139",
+      "source": "deck.json",
+      "stamp": "f43948fe",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_140",
+      "source": "deck.json",
+      "stamp": "a494a13c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_141",
+      "source": "deck.json",
+      "stamp": "3f08dc3a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_142",
+      "source": "deck.json",
+      "stamp": "be5c053c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_143",
+      "source": "deck.json",
+      "stamp": "a9e4abe0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_144",
+      "source": "deck.json",
+      "stamp": "f21f06f6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_145",
+      "source": "deck.json",
+      "stamp": "9a44044f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_146",
+      "source": "deck.json",
+      "stamp": "324707e9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_147",
+      "source": "deck.json",
+      "stamp": "58a47705",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_151",
+      "source": "deck.json",
+      "stamp": "0dc33646",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_152",
+      "source": "deck.json",
+      "stamp": "b583110e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_153",
+      "source": "deck.json",
+      "stamp": "2a6a0f7d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_158",
+      "source": "deck.json",
+      "stamp": "58081a8a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_159",
+      "source": "deck.json",
+      "stamp": "c2789890",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_160",
+      "source": "deck.json",
+      "stamp": "d75a2c1d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_161",
+      "source": "deck.json",
+      "stamp": "de17174f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_163",
+      "source": "deck.json",
+      "stamp": "287ee78b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_164",
+      "source": "deck.json",
+      "stamp": "12be6815",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_165",
+      "source": "deck.json",
+      "stamp": "f797eab7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_166",
+      "source": "deck.json",
+      "stamp": "04005864",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_167",
+      "source": "deck.json",
+      "stamp": "97c10847",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_028",
+      "source": "deck.json",
+      "stamp": "1d7116fc",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_029",
+      "source": "deck.json",
+      "stamp": "21446062",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_030",
+      "source": "deck.json",
+      "stamp": "f688faa9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_031",
+      "source": "deck.json",
+      "stamp": "eb586343",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_032",
+      "source": "deck.json",
+      "stamp": "d8183c18",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_033",
+      "source": "deck.json",
+      "stamp": "28c3bc79",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_034",
+      "source": "deck.json",
+      "stamp": "f2a8e285",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_035",
+      "source": "deck.json",
+      "stamp": "85cafb68",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_036",
+      "source": "deck.json",
+      "stamp": "d664e2a6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_073",
+      "source": "deck.json",
+      "stamp": "f6e690a5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_074",
+      "source": "deck.json",
+      "stamp": "e7d787eb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_076",
+      "source": "deck.json",
+      "stamp": "c138cc4a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_077",
+      "source": "deck.json",
+      "stamp": "349fcfbb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_002",
+      "source": "deck.json",
+      "stamp": "353133fe",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_003",
+      "source": "deck.json",
+      "stamp": "8d043b6e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_004",
+      "source": "deck.json",
+      "stamp": "45e944be",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_005",
+      "source": "deck.json",
+      "stamp": "917eede9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_006",
+      "source": "deck.json",
+      "stamp": "af19000f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_007",
+      "source": "deck.json",
+      "stamp": "cc5fd161",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_008",
+      "source": "deck.json",
+      "stamp": "d811f798",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_009",
+      "source": "deck.json",
+      "stamp": "c3b223bf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_010",
+      "source": "deck.json",
+      "stamp": "f4ab0779",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_011",
+      "source": "deck.json",
+      "stamp": "bbff1fe9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_012",
+      "source": "deck.json",
+      "stamp": "1957e600",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_013",
+      "source": "deck.json",
+      "stamp": "c8039f5b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_016",
+      "source": "deck.json",
+      "stamp": "e0534a6f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_017",
+      "source": "deck.json",
+      "stamp": "ac8bf3ec",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_018",
+      "source": "deck.json",
+      "stamp": "132399da",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_019",
+      "source": "deck.json",
+      "stamp": "8ebbc805",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_020",
+      "source": "deck.json",
+      "stamp": "0045ab97",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_060",
+      "source": "deck.json",
+      "stamp": "02a215c9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_085",
+      "source": "deck.json",
+      "stamp": "41237631",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_092",
+      "source": "deck.json",
+      "stamp": "ce63bb2e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_093",
+      "source": "deck.json",
+      "stamp": "b202c43e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_094",
+      "source": "deck.json",
+      "stamp": "d3934d69",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_095",
+      "source": "deck.json",
+      "stamp": "21786346",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_096",
+      "source": "deck.json",
+      "stamp": "84150c9c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_097",
+      "source": "deck.json",
+      "stamp": "b5b58cac",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_102",
+      "source": "deck.json",
+      "stamp": "2bd66fd2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_135",
+      "source": "deck.json",
+      "stamp": "e24f4cf5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_136",
+      "source": "deck.json",
+      "stamp": "0404e77a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_137",
+      "source": "deck.json",
+      "stamp": "a0073131",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_138",
+      "source": "deck.json",
+      "stamp": "42326b88",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_139",
+      "source": "deck.json",
+      "stamp": "f7b103a9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_140",
+      "source": "deck.json",
+      "stamp": "e2fd2e21",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_141",
+      "source": "deck.json",
+      "stamp": "4dad3776",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_142",
+      "source": "deck.json",
+      "stamp": "4448d81a",
+      "level": "first_content_scope_pass"
+    }
+  ],
+  "counts": {
+    "MathsCoreFirstMock": 113,
+    "MathsSupplements": 49,
+    "MathsFirstPassFirstMock": 162,
+    "ChemistryA2TaggedCore": 172,
+    "totalDistinctFirstPassReviewed": 334
+  },
+  "unresolvedScope": {
+    "Chemistry_RP9_pH_curves": [
+      "task1_v128_011",
+      "task1_v128_012",
+      "task1_v128_013",
+      "task1_v128_016",
+      "task1_v128_017",
+      "task1_v128_018",
+      "task1_v128_019",
+      "task1_v128_020"
+    ],
+    "ChemistryOtherTitrationAndIndicators": [
+      "task1_chem_186",
+      "task1_v124_bulk_chem_173",
+      "task1_v125_151",
+      "task1_v125_152",
+      "task1_v125_153"
+    ],
+    "note": "Strong/weak acid pH, Kw/Ka taught; buffers excluded. RP9/titration curve/indicator topics were not explicitly confirmed taught; do not silently certify."
+  },
+  "flaggedCards": [
+    {
+      "id": "math_indices_neg",
+      "subject": "Maths",
+      "kind": "precision",
+      "detail": "Negative-index rule should explicitly qualify nonzero base.",
+      "resolution": "corrected_in_v228"
+    },
+    {
+      "id": "math_indices_frac",
+      "subject": "Maths",
+      "kind": "precision",
+      "detail": "Real nth root requires suitable positive integer index and real-domain assumptions.",
+      "resolution": "corrected_in_v228"
+    },
+    {
+      "id": "task1_v125_130",
+      "subject": "Chemistry",
+      "kind": "ambiguity",
+      "detail": "Current ΔG=0 answer says only limiting temperature; distinguish threshold interpretation from equilibrium under stated conditions.",
+      "resolution": "corrected_in_v228"
+    }
+  ],
+  "specRequirementMappingStatus": {
+    "Physics": "not_complete",
+    "Chemistry": "not_complete",
+    "Maths": "not_complete"
+  },
+  "fullCardAnswerSignoffStatus": {
+    "Physics": false,
+    "Chemistry": false,
+    "Maths": false
+  },
+  "completionGates": {
+    "fullAqaSpecCoverage": false,
+    "fullIndividualAnswerAccuracy": false,
+    "markingVariantsReviewed": false,
+    "schoolScopeResolved": false,
+    "liveDeploymentChecked": false,
+    "task1Complete": false
+  },
+  "firstPassCorrections": [
+    "math_indices_neg",
+    "math_indices_frac",
+    "task1_v125_130"
+  ],
+  "separateFirstPassReviews": {
+    "Physics": "editorial/task1-v228-physics-measurements-particles-firstpass.json",
+    "PhysicsFirstPass": 239,
+    "totalFirstPassAcrossFiles": 573
+  },
+  "preservationNotes": "Original card IDs, saved progress and cloud keys unchanged; no subject-level AQA completion claim."
+}
