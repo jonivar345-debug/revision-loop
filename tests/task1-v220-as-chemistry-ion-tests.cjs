@@ -36,7 +36,7 @@ assert(byId.get('task1_chem_105').front.includes('interfering ion'));
 assert(byId.get('chem_y1_chat_v126_096').front.includes('photochemical'));
 assert(byId.get('chem_y1_chat_v126_096').back.includes('2Cl₂ + 2H₂O'));
 assert(app.includes('applyV220IonTestCorrections(cards);'));
-assert(app.includes('cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));'));
+assert(app.includes('applyV219TofCorrections(applyV217LegacyChemistryCorrections('), 'Historical TOF correction must remain nested after v217; later correction wrappers are allowed');
 const existingIds=new Set(core.cards.map(c=>c.id));
 const allTopics=[...core.cards,...['chemistry_mock_recall_v193.json','chemistry_mock_recall_v195.json','chemistry_mock_recall_v196.json','chemistry_mock_recall_v199.json','chemistry_rp4_recall_v215.json','chemistry_tof_precision_recall_v219.json'].flatMap(p=>json(p).cards||[])];
 const prompts=new Set(allTopics.filter(c=>c.subject==='Chemistry').map(c=>String(c.front).trim().toLowerCase()));
