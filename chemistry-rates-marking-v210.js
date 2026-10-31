@@ -15,6 +15,170 @@
   return {preds:flags,scores:flags.map(x=>x?1:0),suggested,
    finalCorrect:suggested===q.marks,confidence:suggested===q.marks?'high':'low'};
  }
+
+// v224: individually reviewed, single-statement AS/A2 school-mock answers.
+// Exact whole-claim matching avoids fuzzy credit for the wrong units, signs,
+// reaction order, equilibrium shift, or temperature dependence.
+const V224_REVIEWED={
+ "task1_v210_chem_01": {
+  "accept": {
+   "0": [
+    "A is second order.",
+    "The order with respect to A is two."
+   ],
+   "1": [
+    "B is first order.",
+    "The order with respect to B is one."
+   ],
+   "2": [
+    "rate = k[B][A]^2."
+   ],
+   "3": [
+    "The overall reaction order is three."
+   ],
+   "4": [
+    "k = rate / ([A]^2[B])."
+   ],
+   "6": [
+    "A third-order rate constant has units dm6 mol-2 s-1."
+   ],
+   "8": [
+    "The predicted initial rate is 0.000900 mol dm^-3 s^-1."
+   ]
+  },
+  "reject": [
+   "A is first order.",
+   "rate = k[A][B]^2.",
+   "Overall order = 2.",
+   "k is 0.1 s^-1."
+  ]
+ },
+ "task1_v210_chem_02": {
+  "accept": {
+   "2": [
+    "The concentration change on the tangent is -0.018 mol dm^-3."
+   ],
+   "3": [
+    "The time difference on the tangent is 20 seconds."
+   ],
+   "4": [
+    "The tangent slope is -0.000900 mol dm^-3 s^-1."
+   ],
+   "5": [
+    "The instantaneous rate of disappearance is +0.000900 mol dm^-3 s^-1."
+   ],
+   "6": [
+    "The average rate of disappearance over 80 seconds is 0.000950 mol dm^-3 s^-1."
+   ],
+   "7": [
+    "The magnitude of the tangent gradient gives instantaneous rate."
+   ]
+  },
+  "reject": [
+   "The tangent gradient is +9.00e-4 mol dm^-3 s^-1.",
+   "The disappearance rate is -9.00e-4 mol dm^-3 s^-1.",
+   "The average rate is 9.50e-5 mol dm^-3 s^-1."
+  ]
+ },
+ "task1_v210_chem_03": {
+  "accept": {
+   "0": [
+    "X is zero order because its concentration falls by the same amount each 20 seconds."
+   ],
+   "1": [
+    "The rate constant for X is 0.00100 mol dm^-3 s^-1."
+   ],
+   "3": [
+    "Y is first order because its concentration halves every 20 seconds."
+   ],
+   "4": [
+    "The half-life of Y is 20 seconds."
+   ],
+   "5": [
+    "The rate constant of Y is 0.0347 per second."
+   ],
+   "7": [
+    "The rate of X is constant whereas Y's rate decreases."
+   ]
+  },
+  "reject": [
+   "Dataset X is first order.",
+   "Y has a half-life of 40 seconds.",
+   "Y is zero order because it halves."
+  ]
+ },
+ "task1_v210_chem_04": {
+  "accept": {
+   "0": [
+    "The slope is minus the activation energy divided by R."
+   ],
+   "1": [
+    "The activation energy is 74790 joules per mole."
+   ],
+   "3": [
+    "The intercept equals the natural logarithm of the pre-exponential factor."
+   ],
+   "5": [
+    "At 300 K, ln k is -5."
+   ],
+   "6": [
+    "At 300 K the rate constant is 0.00674 per second."
+   ],
+   "7": [
+    "Increasing temperature raises k because more particles have energy above the activation energy."
+   ]
+  },
+  "reject": [
+   "The Arrhenius slope is +Ea/R.",
+   "The intercept is Ea.",
+   "Ea = 74.8 J mol^-1.",
+   "Increasing temperature decreases k."
+  ]
+ },
+ "task1_v210_chem_05": {
+  "accept": {
+   "0": [
+    "There are 0.600 moles of N2O4 at equilibrium."
+   ],
+   "1": [
+    "There are 0.800 moles of NO2 at equilibrium."
+   ],
+   "2": [
+    "There are 1.40 moles of gas in total."
+   ],
+   "5": [
+    "The partial pressure of NO2 is 80 kPa."
+   ],
+   "6": [
+    "Kp = (p(NO2) * p(NO2))/p(N2O4)."
+   ],
+   "7": [
+    "Kp is 106.7 kPa."
+   ],
+   "8": [
+    "Higher pressure shifts equilibrium left and Kp stays constant at constant temperature."
+   ]
+  },
+  "reject": [
+   "The equilibrium contains 0.800 mol N2O4.",
+   "Kp is 106.7 kPa^-1.",
+   "Kp increases when pressure increases at fixed temperature.",
+   "Higher pressure favours NO2."
+  ]
+ }
+};
+function v224Reviewed(id,raw){
+ const list=V224_REVIEWED[id];if(!list)return null;
+ const answer=norm(raw).replace(/[.!?]+$/,'').trim();
+ if(!answer||answer.length>180||/[;\n]/.test(String(raw)))return null;
+ const same=x=>norm(x).replace(/[.!?]+$/,'').trim()===answer;
+ if(list.reject.some(same))return [];
+ for(const [index,choices] of Object.entries(list.accept)){
+  if(choices.some(same))return [Number(index)];
+ }
+ return null;
+}
+
  function evaluate(q,answer){
   const id=String(q&&q.id||'');
   if(!/^task1_v210_chem_0[1-5]$/.test(id))return null;
@@ -22,6 +186,8 @@
   const earned=new Set();
   if(!raw||/^(?:idk|no idea|not sure|i don't know|unsure)[.!]?$/i.test(raw))return score(q,earned);
   if(t===norm(q.modelAnswer))return score(q,new Set(q.markPoints.map((_,i)=>i)));
+  const checked=v224Reviewed(id,raw);
+  if(checked!==null)return score(q,new Set(checked));
   const claims=raw.split(/(?:[;\n]+|[.!?]\s+(?=[A-Za-z]))/).map(x=>norm(x)).filter(Boolean);
   const repudiated=x=>/^\s*(?:not|never|incorrect|wrong)\b|\b(?:is|are|was|were)\s+(?:wrong|incorrect|false|not\s+correct)\b|\b(?:isn't|is\s+not)\s+(?:true|valid|correct)\b/.test(x);
   const validClaims=claims.filter(x=>!repudiated(x));
