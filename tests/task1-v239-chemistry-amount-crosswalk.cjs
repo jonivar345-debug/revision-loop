@@ -9,7 +9,7 @@ assert.equal(audit.requirements.length,31);
 assert.equal(deck.cards.length,3345);
 const seen=new Set();
 for(const r of audit.requirements){
- assert(/^3\\.1\\.2\\.[1-5]$/.test(r.ref));
+ assert(/^3\.1\.2\.[1-5]$/.test(r.ref));
  assert(r.coreEvidenceIds.length>0);
  assert(['recall_evidenced','application_unverified'].includes(r.reviewStatus));
  for(const id of r.coreEvidenceIds){
