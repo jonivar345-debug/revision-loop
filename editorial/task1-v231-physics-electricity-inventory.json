@@ -1,0 +1,811 @@
+{
+  "version": "v231",
+  "date": "2026-10-31",
+  "kind": "AS Electricity topic-labelled core inventory and selected gap fixes; NOT full AQA sign-off",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/electricity"
+  ],
+  "historicalReviews": [
+    "editorial/task1-v158-physics-electricity-mock-audit.json",
+    "editorial/task1-v203-physics-graphs-circuits-crosswalk.json"
+  ],
+  "scope": "AQA 7407/7408 Year 1 section 3.5.1.1–3.5.1.6. Inventory of 7 topic labels in 3,345 core cards; supplements and cards under other labels may be outside this selected inventory. No claim that all 102 historic answers were checked individually.",
+  "coreDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "inventory": {
+    "topicLabelCount": 102,
+    "coreMockScope": 96,
+    "secondary": 6,
+    "byTopic": {
+      "Electricity": 76,
+      "Potential dividers": 5,
+      "Sensors": 2,
+      "I–V characteristics": 3,
+      "RP5 Resistivity": 6,
+      "RP6 EMF/internal resistance": 7,
+      "Internal resistance": 3
+    },
+    "snapshots": [
+      {
+        "source": "deck.json",
+        "id": "phy_internal_001",
+        "topic": "Internal resistance",
+        "stamp": "ba97c905",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_rp5",
+        "topic": "RP5 Resistivity",
+        "stamp": "48e451fa",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_rp6",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "6f5d3436",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_current",
+        "topic": "Electricity",
+        "stamp": "02ed4379",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_pd",
+        "topic": "Electricity",
+        "stamp": "350cb8aa",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_emf",
+        "topic": "Electricity",
+        "stamp": "e4ef13bc",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_resistance",
+        "topic": "Electricity",
+        "stamp": "fcbf70bb",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_resistivity",
+        "topic": "Electricity",
+        "stamp": "462a2205",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_series_current",
+        "topic": "Electricity",
+        "stamp": "29aabcd6",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_series_pd",
+        "topic": "Electricity",
+        "stamp": "cf26c940",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_parallel_pd",
+        "topic": "Electricity",
+        "stamp": "ae930e5d",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_parallel_current",
+        "topic": "Electricity",
+        "stamp": "6d56c8b2",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_power_elec",
+        "topic": "Electricity",
+        "stamp": "da03a8a5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_potential_divider",
+        "topic": "Potential dividers",
+        "stamp": "7d40fe23",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_thermistor",
+        "topic": "Sensors",
+        "stamp": "2ab3edee",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_ldr",
+        "topic": "Sensors",
+        "stamp": "a7aaca48",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_filament_iv",
+        "topic": "I–V characteristics",
+        "stamp": "d9e138b4",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "phy_diode",
+        "topic": "I–V characteristics",
+        "stamp": "32bfd2fb",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_physics_internal_resistance_8",
+        "topic": "Internal resistance",
+        "stamp": "e3e2ff69",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_physics_internal_resistance_9",
+        "topic": "Internal resistance",
+        "stamp": "b9752717",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_physics_i_v_characteristics_10",
+        "topic": "I–V characteristics",
+        "stamp": "17c7c30d",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_090",
+        "topic": "Electricity",
+        "stamp": "7ff0af2c",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_093",
+        "topic": "Electricity",
+        "stamp": "02b526b7",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_094",
+        "topic": "Electricity",
+        "stamp": "c2c1d779",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_095",
+        "topic": "Electricity",
+        "stamp": "94ee3992",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_096",
+        "topic": "Electricity",
+        "stamp": "a24e1416",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_097",
+        "topic": "Electricity",
+        "stamp": "1ef56ee5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_098",
+        "topic": "Electricity",
+        "stamp": "7157c05c",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_099",
+        "topic": "Electricity",
+        "stamp": "cd42b5e7",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_100",
+        "topic": "Electricity",
+        "stamp": "7533ebd9",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_101",
+        "topic": "Electricity",
+        "stamp": "37180b6d",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_102",
+        "topic": "Electricity",
+        "stamp": "0a97a389",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_103",
+        "topic": "Electricity",
+        "stamp": "26d39808",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_105",
+        "topic": "Electricity",
+        "stamp": "c0480d4b",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_106",
+        "topic": "Electricity",
+        "stamp": "cc0807f9",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_phy_107",
+        "topic": "Electricity",
+        "stamp": "48b82725",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_practical_010",
+        "topic": "RP5 Resistivity",
+        "stamp": "c1d8d10f",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_practical_011",
+        "topic": "RP5 Resistivity",
+        "stamp": "66b008b5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_practical_012",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "97ca0ee1",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_practical_013",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "e04a0ba5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_076",
+        "topic": "Electricity",
+        "stamp": "a3c1bd2a",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_077",
+        "topic": "Electricity",
+        "stamp": "4e11d890",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_078",
+        "topic": "Electricity",
+        "stamp": "ba20db6c",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_079",
+        "topic": "Electricity",
+        "stamp": "8140b2d4",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_080",
+        "topic": "Electricity",
+        "stamp": "d5e451a6",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_081",
+        "topic": "Electricity",
+        "stamp": "78a5fcf0",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_082",
+        "topic": "Electricity",
+        "stamp": "d9408bb8",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_083",
+        "topic": "Electricity",
+        "stamp": "9e896b4a",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_084",
+        "topic": "Electricity",
+        "stamp": "9f3d68cd",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_085",
+        "topic": "Electricity",
+        "stamp": "839b23ad",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_086",
+        "topic": "Electricity",
+        "stamp": "d2484ae8",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_087",
+        "topic": "Electricity",
+        "stamp": "932f4b59",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_088",
+        "topic": "Electricity",
+        "stamp": "2c427146",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_phy_089",
+        "topic": "Electricity",
+        "stamp": "03988ec8",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_cloze_006",
+        "topic": "Electricity",
+        "stamp": "1ba71271",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_063",
+        "topic": "Electricity",
+        "stamp": "024b5ed4",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_064",
+        "topic": "Electricity",
+        "stamp": "3a2ed2aa",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_065",
+        "topic": "Electricity",
+        "stamp": "c97d6d80",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_066",
+        "topic": "Electricity",
+        "stamp": "0897d2e9",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_067",
+        "topic": "Electricity",
+        "stamp": "2b385135",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_068",
+        "topic": "Electricity",
+        "stamp": "8d884135",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_069",
+        "topic": "Electricity",
+        "stamp": "214d0272",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_070",
+        "topic": "Electricity",
+        "stamp": "3dff4804",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_071",
+        "topic": "Electricity",
+        "stamp": "1e067d1b",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_072",
+        "topic": "Electricity",
+        "stamp": "922822a9",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_082",
+        "topic": "RP5 Resistivity",
+        "stamp": "c320e017",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_083",
+        "topic": "RP5 Resistivity",
+        "stamp": "99507c12",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_084",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "bbc08af5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v125_085",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "da3eee95",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v128_074",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "caf9a237",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v128_075",
+        "topic": "RP6 EMF/internal resistance",
+        "stamp": "ee09ea10",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v128_078",
+        "topic": "RP5 Resistivity",
+        "stamp": "96298255",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_038",
+        "topic": "Electricity",
+        "stamp": "e8ab10d7",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_039",
+        "topic": "Electricity",
+        "stamp": "b3cc9a0a",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_040",
+        "topic": "Electricity",
+        "stamp": "0fd5162e",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_041",
+        "topic": "Electricity",
+        "stamp": "509d87bd",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_042",
+        "topic": "Electricity",
+        "stamp": "44da4f8b",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_043",
+        "topic": "Electricity",
+        "stamp": "b2532139",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_044",
+        "topic": "Electricity",
+        "stamp": "bbbf445d",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_041",
+        "topic": "Electricity",
+        "stamp": "89f0efb0",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_042",
+        "topic": "Electricity",
+        "stamp": "765684c4",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_085",
+        "topic": "Electricity",
+        "stamp": "3cefe3e8",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_086",
+        "topic": "Electricity",
+        "stamp": "719ef0b9",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_004",
+        "topic": "Electricity",
+        "stamp": "91853ccd",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_005",
+        "topic": "Electricity",
+        "stamp": "7087f9a5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_006",
+        "topic": "Electricity",
+        "stamp": "9785f97a",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_007",
+        "topic": "Electricity",
+        "stamp": "7b674d25",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_008",
+        "topic": "Electricity",
+        "stamp": "f0ef225d",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_009",
+        "topic": "Electricity",
+        "stamp": "d772e583",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_010",
+        "topic": "Electricity",
+        "stamp": "1cfffe34",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v142_005",
+        "topic": "Electricity",
+        "stamp": "3ae1fdd6",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v142_006",
+        "topic": "Electricity",
+        "stamp": "8e71ee10",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v142_007",
+        "topic": "Electricity",
+        "stamp": "6f5758e1",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v154_001",
+        "topic": "Electricity",
+        "stamp": "4a55ce8b",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v154_002",
+        "topic": "Electricity",
+        "stamp": "6acb4fb5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v154_003",
+        "topic": "Potential dividers",
+        "stamp": "4dfc173b",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v154_004",
+        "topic": "Potential dividers",
+        "stamp": "f11b9ea5",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v155_009",
+        "topic": "Potential dividers",
+        "stamp": "3e79de36",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v155_010",
+        "topic": "Potential dividers",
+        "stamp": "4b72f78b",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v158_001",
+        "topic": "Electricity",
+        "stamp": "f07c6c9d",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v158_002",
+        "topic": "Electricity",
+        "stamp": "3f09d6f1",
+        "reviewLevel": "inventory_only"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v158_003",
+        "topic": "Electricity",
+        "stamp": "af2e744c",
+        "reviewLevel": "inventory_only"
+      }
+    ]
+  },
+  "crosswalk": [
+    {
+      "ref": "3.5.1.1",
+      "title": "Current, p.d. and resistance basics",
+      "newCards": 1,
+      "existingEvidence": "Existing I=ΔQ/Δt, V=W/Q and R=V/I recall; charge-carrier direction added",
+      "fullLeftColumnSignoff": false,
+      "fullOldAnswerSignoff": false
+    },
+    {
+      "ref": "3.5.1.2",
+      "title": "Ohmic conductor, filament lamp and diode I–V behaviour",
+      "newCards": 2,
+      "existingEvidence": "Existing basics and graph-axis distinction; added operating-point resistance vs tangent",
+      "fullLeftColumnSignoff": false,
+      "fullOldAnswerSignoff": false
+    },
+    {
+      "ref": "3.5.1.3",
+      "title": "Resistivity, temperature, NTC, superconductivity, RP5",
+      "newCards": 7,
+      "existingEvidence": "Existing formulae and major applications; graph gradient, intercept and measurement uncertainty added",
+      "fullLeftColumnSignoff": false,
+      "fullOldAnswerSignoff": false
+    },
+    {
+      "ref": "3.5.1.4",
+      "title": "Series/parallel circuits, power and energy",
+      "newCards": 2,
+      "existingEvidence": "Existing conservation, component and cells questions; same-current versus same-voltage power variations added",
+      "fullLeftColumnSignoff": false,
+      "fullOldAnswerSignoff": false
+    },
+    {
+      "ref": "3.5.1.5",
+      "title": "Potential divider, thermistor and LDR",
+      "newCards": 2,
+      "existingEvidence": "Existing unloaded, loaded and two sensor-placement examples; explicit parallel-load expression added",
+      "fullLeftColumnSignoff": false,
+      "fullOldAnswerSignoff": false
+    },
+    {
+      "ref": "3.5.1.6",
+      "title": "Emf, lost volts, cells and RP6",
+      "newCards": 2,
+      "existingEvidence": "Existing V=ε−Ir and V–I graph questions; internal power loss and parallel cell load current added",
+      "fullLeftColumnSignoff": false,
+      "fullOldAnswerSignoff": false
+    }
+  ],
+  "newCards": 16,
+  "acceptedAnswerVariants": 48,
+  "rejectedAnswerVariants": 32,
+  "remaining": [
+    "Read all remaining 3.5 core and supplemental flashcard answers individually and check alternative accepted/rejected wording.",
+    "Verify all individual AQA left-column assessable requirements are supported, including graphical/practical interpretation.",
+    "Verify RP5/RP6 written-paper practical questions and marking independently.",
+    "Continue full Physics 3.1–3.5 and Chemistry and first Year 1 Pure Maths audits."
+  ],
+  "completion": {
+    "electricityFullSpecCertified": false,
+    "physicsMockCertified": false,
+    "chemistryMockCertified": false,
+    "firstMathsPureMockCertified": false,
+    "task1Complete": false
+  },
+  "preservation": "Existing core IDs, original exam bank, progress/XP keys, cloud sync, Year 1 Pure Maths first mock and World resources unchanged."
+}
