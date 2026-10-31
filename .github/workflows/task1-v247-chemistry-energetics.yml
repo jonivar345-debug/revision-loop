@@ -1,0 +1,23 @@
+name: Task 1 v247 AQA Energetics application recall
+on:
+  pull_request:
+    paths:
+      - 'chemistry_energetics_applications_v247.json'
+      - 'tests/task1-v247-chemistry-energetics-applications.cjs'
+      - 'tests/task1-v246-maths-circle-geometry.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v247-chemistry-energetics.yml'
+  push:
+    branches: [main]
+jobs:
+  verify-energetics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v245-maths-pure-applied.cjs
+      - run: node tests/task1-v246-maths-circle-geometry.cjs
+      - run: node tests/task1-v247-chemistry-energetics-applications.cjs
