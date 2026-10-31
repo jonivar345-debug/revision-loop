@@ -1,0 +1,245 @@
+{
+  "version": "v218",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "Eight short single-fact mock-eligible Year 1 Chemistry recall checks that did not appear as direct questions in the audited active core deck or previous chemistry mock supplements.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment"
+  ],
+  "notes": "Original AQA-style paraphrases, not past-paper text. Measurements questions are conceptual, not laboratory instructions. Task 1 is still incomplete.",
+  "cards": [
+    {
+      "id": "task1_v218_chem_as_01",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.1",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "front": "What is the relative formula mass of an ionic compound?",
+      "back": "Sum of the relative atomic masses of the atoms in its formula unit.",
+      "accept": [
+        "Sum of the relative atomic masses of the atoms in its formula unit.",
+        "Add the Ar values for the atoms in one formula unit.",
+        "Total of the relative atomic masses in the chemical formula.",
+        "Sum of Ar values, accounting for subscripts."
+      ],
+      "reject": [
+        "The mass of a single molecule in grams.",
+        "The number of formula units in a mole.",
+        "The mass of one mole in g mol-1."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_02",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.1",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "front": "Why is relative formula mass used instead of relative molecular mass for ionic compounds?",
+      "back": "Ionic compounds form extended lattices rather than discrete molecules.",
+      "accept": [
+        "Ionic compounds form extended lattices rather than discrete molecules.",
+        "Ionic solids do not consist of separate molecules.",
+        "They are ionic lattices, not individual molecules.",
+        "Their formulae express the simplest ion ratio, not molecules."
+      ],
+      "reject": [
+        "Each ionic compound consists of isolated molecules.",
+        "Ionic compounds contain no ions.",
+        "Because ionic compounds have no relative atomic masses."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_03",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.1",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "front": "Does relative atomic mass have a unit?",
+      "back": "No, it is a ratio and has no unit.",
+      "accept": [
+        "No, it is a ratio and has no unit.",
+        "No units.",
+        "It is dimensionless.",
+        "No; it is a relative mass ratio."
+      ],
+      "reject": [
+        "g",
+        "g mol-1",
+        "kilograms"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_04",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "front": "What are the usual units of molar mass in mole calculations using grams?",
+      "back": "g mol⁻¹.",
+      "accept": [
+        "g mol⁻¹.",
+        "grams per mole",
+        "g/mol",
+        "g mol-1"
+      ],
+      "reject": [
+        "mol dm-3",
+        "g",
+        "mol"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_05",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "front": "What is water of crystallisation in a hydrated salt?",
+      "back": "Water present in a crystal lattice in a fixed formula ratio.",
+      "accept": [
+        "Water present in a crystal lattice in a fixed formula ratio.",
+        "Water incorporated in a crystal structure in a fixed proportion.",
+        "Water molecules forming part of a hydrated crystal.",
+        "Water in the crystalline structure of a hydrated compound."
+      ],
+      "reject": [
+        "Water added to dissolve a salt.",
+        "Water just on the surface of a damp sample.",
+        "Water formed only during combustion."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_06",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.2 MS 1.1",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Practical skills",
+      "revisionTopic": "Practical skills",
+      "front": "When multiplying or dividing measured quantities, what usually limits the significant figures in the answer?",
+      "back": "The measured input with the fewest significant figures.",
+      "accept": [
+        "The measured input with the fewest significant figures.",
+        "The least precise measured value, by significant figures.",
+        "Use no more significant figures than the input with the fewest.",
+        "The smallest number of significant figures among measured inputs."
+      ],
+      "reject": [
+        "The number with the most significant figures.",
+        "Always round to one significant figure.",
+        "The largest numerical input."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_07",
+      "subject": "Chemistry",
+      "specRef": "7.0 Practical assessment",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Practical skills",
+      "revisionTopic": "Practical skills",
+      "front": "What does accuracy mean for a measurement?",
+      "back": "Closeness to the true or accepted value.",
+      "accept": [
+        "Closeness to the true or accepted value.",
+        "How near a measurement is to the true value.",
+        "Closeness to the accepted reference value.",
+        "How near a result is to the correct value."
+      ],
+      "reject": [
+        "Closeness of repeated readings to one another.",
+        "Always using more decimal places.",
+        "The number of repeated readings."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v218_chem_as_08",
+      "subject": "Chemistry",
+      "specRef": "7.0 Practical assessment",
+      "stage": "AS",
+      "topic": "Practical skills",
+      "courseTopic": "Practical skills",
+      "revisionTopic": "Practical skills",
+      "front": "What does precision describe for repeated measurements?",
+      "back": "How closely repeated measurements agree with each other.",
+      "accept": [
+        "How closely repeated measurements agree with each other.",
+        "The closeness of repeat readings.",
+        "How little scatter repeated readings show.",
+        "How similar repeated measured values are."
+      ],
+      "reject": [
+        "Closeness to the true value.",
+        "The percentage yield.",
+        "How accurately a theoretical value was predicted."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
