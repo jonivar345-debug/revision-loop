@@ -47,7 +47,7 @@ assert.equal(app.includes("SETTINGS_KEY='revisionLoopSettings11'"),true);
 assert(sw.includes("'./chemistry_atomic_tof_applications_v238.json'"));
 assert(sw.includes('v238-atomic-tof-crosswalk'));
 const names=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(names.length,29);assert.equal(names[28],'chemistry_atomic_tof_applications_v238.json');
+assert(names.length>=29);assert.equal(names[28],'chemistry_atomic_tof_applications_v238.json');
 const known=new Set([...deck.cards,...names.slice(0,28).flatMap(n=>json(n).cards||[])].map(c=>c.id));
 const frontSet=new Set([...deck.cards,...names.slice(0,28).flatMap(n=>json(n).cards||[])].filter(c=>c.subject==='Chemistry').map(c=>c.front.trim().toLowerCase()));
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(',start);

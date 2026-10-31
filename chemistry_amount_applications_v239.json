@@ -1,0 +1,485 @@
+{
+  "version": "v239",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "AQA 7405 AS 3.1.2, original mock-eligible numerical and ionic equation recall (not published exam questions)",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "note": "AQA does not require recall of numerical Avogadro or gas constants; questions needing them provide values.",
+  "cards": [
+    {
+      "id": "task1_v239_chem_amount_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is relative formula mass for an ionic compound?",
+      "back": "Sum of the relative atomic masses in one formula unit.",
+      "accept": [
+        "Sum of Ar values in a formula unit.",
+        "Add up the relative atomic masses in its formula unit."
+      ],
+      "reject": [
+        "Mass of one molecule.",
+        "Moles in a sample."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Given Nₐ = 6.02 × 10²³ mol⁻¹, how many Na⁺ ions are present in 0.25 mol Na₂SO₄?",
+      "back": "3.01 × 10²³ Na⁺ ions.",
+      "accept": [
+        "3.01 × 10²³",
+        "3.01e23"
+      ],
+      "reject": [
+        "1.505 × 10²³",
+        "6.02 × 10²³"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A sample has a mass of 4.80 g and a molar mass of 120 g mol⁻¹. Calculate the moles.",
+      "back": "0.0400 mol.",
+      "accept": [
+        "0.04 mol",
+        "0.04"
+      ],
+      "reject": [
+        "0.4 mol",
+        "0.004 mol"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A solution contains 0.0375 mol in 250 cm³. Find its concentration in mol dm⁻³.",
+      "back": "0.150 mol dm⁻³.",
+      "accept": [
+        "0.15 mol dm-3",
+        "0.15"
+      ],
+      "reject": [
+        "1.50 mol dm-3",
+        "0.015 mol dm-3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Convert 249.3 cm³ into m³ for pV = nRT.",
+      "back": "2.493 × 10⁻⁴ m³.",
+      "accept": [
+        "2.493e-4 m3",
+        "0.0002493 m3"
+      ],
+      "reject": [
+        "0.2493 m3",
+        "0.002493 m3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A gas occupies 249.3 cm³ at 100 kPa and 300 K. Using R = 8.31, calculate n.",
+      "back": "0.0100 mol.",
+      "accept": [
+        "0.01 mol",
+        "0.01"
+      ],
+      "reject": [
+        "0.100 mol",
+        "0.001 mol"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A compound has 1.20 g Mg (Aᵣ = 24) and 0.80 g O (Aᵣ = 16). Find its empirical formula.",
+      "back": "MgO.",
+      "accept": [
+        "MgO",
+        "Mg O in a 1:1 ratio"
+      ],
+      "reject": [
+        "Mg₂O",
+        "MgO₂"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The empirical formula is CH₂O and Mᵣ = 90. Find the molecular formula.",
+      "back": "C₃H₆O₃.",
+      "accept": [
+        "C3H6O3",
+        "C₃H₆O₃"
+      ],
+      "reject": [
+        "CH₂O",
+        "C₆H₁₂O₆"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_09",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For 2Mg + O₂ → 2MgO, 0.30 mol Mg is mixed with 0.10 mol O₂. Which reagent is limiting?",
+      "back": "Oxygen (O₂).",
+      "accept": [
+        "O₂",
+        "Oxygen"
+      ],
+      "reject": [
+        "Magnesium",
+        "Neither"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_10",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For 2Mg + O₂ → 2MgO, 0.30 mol Mg reacts with 0.10 mol O₂. What maximum moles of MgO form?",
+      "back": "0.20 mol.",
+      "accept": [
+        "0.2 mol",
+        "0.2"
+      ],
+      "reject": [
+        "0.30 mol",
+        "0.10 mol"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_11",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "25.0 cm³ NaOH is neutralised by 20.0 cm³ of 0.150 mol dm⁻³ H₂SO₄. Find [NaOH].",
+      "back": "0.240 mol dm⁻³.",
+      "accept": [
+        "0.24 mol dm-3",
+        "0.24"
+      ],
+      "reject": [
+        "0.120 mol dm-3",
+        "0.300 mol dm-3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_12",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The theoretical yield is 7.50 g but 6.00 g is obtained. Calculate percentage yield.",
+      "back": "80.0%.",
+      "accept": [
+        "80%",
+        "80"
+      ],
+      "reject": [
+        "125%",
+        "60%"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_13",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For CaCO₃ → CaO + CO₂, find atom economy for CaO (Aᵣ: Ca 40, C 12, O 16).",
+      "back": "56.0%.",
+      "accept": [
+        "56%",
+        "56"
+      ],
+      "reject": [
+        "44%",
+        "100%"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_14",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A hydrated salt gives 0.0200 mol dry salt and 0.140 mol H₂O. Find x in salt·xH₂O.",
+      "back": "x = 7.",
+      "accept": [
+        "7",
+        "x=7"
+      ],
+      "reject": [
+        "x=6",
+        "x=14"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_15",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Each burette reading has uncertainty ±0.05 cm³. Find percentage uncertainty for a 25.0 cm³ titre.",
+      "back": "0.40%.",
+      "accept": [
+        "0.4%",
+        "0.4"
+      ],
+      "reject": [
+        "0.20%",
+        "4.0%"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_16",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "25.0 cm³ of 0.300 mol dm⁻³ solution is diluted to 250 cm³. Find the new concentration.",
+      "back": "0.0300 mol dm⁻³.",
+      "accept": [
+        "0.03 mol dm-3",
+        "0.03"
+      ],
+      "reject": [
+        "0.300 mol dm-3",
+        "3.00 mol dm-3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_17",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write the net ionic equation for magnesium reacting with dilute acid.",
+      "back": "Mg(s) + 2H⁺(aq) → Mg²⁺(aq) + H₂(g).",
+      "accept": [
+        "Mg + 2H+ -> Mg2+ + H2",
+        "Mg + 2H⁺ → Mg²⁺ + H₂"
+      ],
+      "reject": [
+        "Mg + H+ -> Mg+ + H2",
+        "Mg + 2OH- -> Mg2+ + H2"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_18",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O. If 0.0240 mol HCl reacts, how many mol CaCO₃ react?",
+      "back": "0.0120 mol.",
+      "accept": [
+        "0.012 mol",
+        "0.012"
+      ],
+      "reject": [
+        "0.024 mol",
+        "0.048 mol"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v239_chem_amount_19",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance applications",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A 1.50 g impure sample contains 0.0120 mol CaCO₃ (Mᵣ = 100). Find its percentage purity.",
+      "back": "80.0%.",
+      "accept": [
+        "80%",
+        "80"
+      ],
+      "reject": [
+        "120%",
+        "60%"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
