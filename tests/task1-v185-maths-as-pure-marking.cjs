@@ -1,5 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs');
+const reviewed=require('./task1-v154-legacy-evidence.cjs');
 const deck=JSON.parse(fs.readFileSync('deck.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('editorial/task1-v185-maths-as-pure-outcome-crosswalk.json','utf8'));
 const app=fs.readFileSync('app.js','utf8');
@@ -18,7 +19,7 @@ for(const row of audit.outcomes){
  assert(/^3\.(?:2|3|4|5|6|7|8|9|10)\b/.test(row.section),'Non-Pure or wrong ref '+row.section);
  for(const id of row.cardIds){
   const c=byId.get(id);assert(c&&c.subject==='Maths'&&c.active!==false&&c.mock===true&&c.stage==='AS',id);
-  assert(row.existingAnswerSamples.some(x=>x.id===id&&x.answer===c.back),'Stale answer '+id);
+  assert(row.existingAnswerSamples.some(x=>x.id===id&&reviewed(id,'back',x.answer)===c.back),'Stale answer '+id);
  }
 }
 const corrected=byId.get('maths_transform_003');
