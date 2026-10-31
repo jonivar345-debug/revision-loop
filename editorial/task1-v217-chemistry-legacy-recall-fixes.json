@@ -1,0 +1,60 @@
+{
+  "version": "v217",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1 – convert three v216 scope-review findings into real live mock-card corrections",
+  "scope": "Three of the 194 legacy A2 Chemistry mock cards documented by the v216 audit. Original core data and historic audits remain immutable; patches are applied in memory when app.js loads the cards.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "correctedIDs": [
+    "chem_arrhenius_001",
+    "chem_cip",
+    "chem_kp_recap_20261024_pressure_position"
+  ],
+  "changes": [
+    {
+      "id": "chem_arrhenius_001",
+      "fix": "Replace multi-part gradient/intercept prompt with the missing single-fact requirement that T be in kelvin; separately retained v210 gradient/intercept flashcards.",
+      "stage": "A2",
+      "mock": true
+    },
+    {
+      "id": "chem_cip",
+      "fix": "Relabel CIP-ranking card as E/Z isomerism (AQA 3.3.1.3) rather than optical isomerism; retain original correct priority explanation.",
+      "stage": "A2",
+      "mock": true
+    },
+    {
+      "id": "chem_kp_recap_20261024_pressure_position",
+      "fix": "State unequal gaseous mole coefficients explicitly and ask only which side is favoured; an existing AS card covers the equal-moles exception and v210 separately tests that Kp stays constant at constant temperature.",
+      "stage": "A2",
+      "mock": true
+    }
+  ],
+  "preservation": {
+    "modifiedCoreDeck": false,
+    "coreCardCount": 3345,
+    "originalIDsPreserved": true,
+    "originalAuditPreserved": true,
+    "progressKeysUnchanged": true,
+    "supplementaryRecallNotDuplicated": true,
+    "mathsFirstMockScopeUnchanged": true,
+    "physicsCardsUnchanged": true,
+    "examQuestionBanksUnchanged": true,
+    "xpCloudAndWorldUnchanged": true
+  },
+  "tests": [
+    "node tests/task1-v217-chemistry-legacy-corrections.cjs",
+    "node tests/task1-v216-chemistry-194-crosswalk.cjs"
+  ],
+  "limitations": "Scope fixes only. Does not certify all mock flashcards, the AQA syllabus, all examiner-equivalent responses, student mastery, or all historic 2015–2026 paper questions.",
+  "modifiedCoreDeck": false,
+  "task1Complete": false,
+  "remaining": [
+    "Audit original AS Chemistry and other supplement card content against each examinable requirement.",
+    "Check original exam-question marking, alternative methods and ECF.",
+    "Verify separate historical paper-index coverage."
+  ]
+}
