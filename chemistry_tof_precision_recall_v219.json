@@ -1,0 +1,74 @@
+{
+  "version": "v219",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "Two distinct original AQA AS TOF recall outcomes, accompanying three audited corrections to existing atomic-structure cards.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "notes": "No laboratory procedures. Existing source deck and card IDs are not replaced. TOF acceleration comparisons explicitly specify equal charge and energy.",
+  "cards": [
+    {
+      "id": "task1_v219_chem_tof_01",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "stage": "AS",
+      "topic": "Mass spectrometry",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Mass spectrometry",
+      "front": "In electron-impact mass spectrometry, what knocks an electron out of a gaseous sample particle?",
+      "back": "A high-energy electron from the ionising electron beam.",
+      "accept": [
+        "A high-energy electron from the ionising electron beam.",
+        "An energetic electron.",
+        "A fast-moving electron.",
+        "High-energy electrons.",
+        "An electron from the electron beam."
+      ],
+      "reject": [
+        "A neutron.",
+        "A proton.",
+        "An ultraviolet photon.",
+        "A positive ion from the drift region."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v219_chem_tof_02",
+      "subject": "Chemistry",
+      "specRef": "3.1.1.2",
+      "stage": "AS",
+      "topic": "Mass spectrometry",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Mass spectrometry",
+      "front": "What does the TOF detector's timing system record before the mass-to-charge ratio is calculated?",
+      "back": "The arrival time of each ion (its time of flight).",
+      "accept": [
+        "The arrival time of each ion (its time of flight).",
+        "The time of flight.",
+        "Ion arrival time.",
+        "The time taken for the ion to arrive at the detector.",
+        "When the ion hits the detector."
+      ],
+      "reject": [
+        "The ion's concentration in mol dm-3.",
+        "Its boiling point.",
+        "The number of neutrons directly.",
+        "The ion's molecular formula directly."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
