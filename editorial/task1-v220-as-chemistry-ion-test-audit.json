@@ -7,7 +7,7 @@
     "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
     "https://filestore.aqa.org.uk/resources/chemistry/AQA-7404-7405-PHBK.PDF"
   ],
-  "reviewMethod": "Screened the 155 active AS mock cards with core topic labels Group 2, Group 7 and RP4 Ion tests; reviewed ion-test prompts and answers, including complementary existing supplements. Identified three cards requiring narrower wording and five nonduplicative single-fact gaps. These are conceptual cards, not practical-method instructions.",
+  "reviewMethod": "Screened 155 active AS mock Group 2, Group 7 and RP4 Ion tests core cards, cross-checking core and supplemental recall against AQA 7405. Corrected three misleading or incomplete conceptual prompts and added five nonduplicative short facts. No detailed experimental instructions.",
   "scope": {
     "coreCardsScreened": 155,
     "coreGroup2": 61,
@@ -20,15 +20,15 @@
   "patches": [
     {
       "id": "task1_chem_089",
-      "issue": "Existing generic 'why acidify' answer could be more specific about the white carbonate false-positive. Preserve exact one-point purpose, no step-by-step method."
+      "issue": "Clarify why carbonate and sulfate can both give white insoluble barium salts, without describing laboratory procedure."
     },
     {
       "id": "task1_chem_105",
-      "issue": "Existing card inaccurately referred to 'acidifying silver nitrate'; clarify that the sample is acidified and why carbonate interference matters."
+      "issue": "Refocus the former acidification prompt on identifying carbonate as an interfering ion that can form a silver precipitate."
     },
     {
       "id": "chem_y1_chat_v126_096",
-      "issue": "State UV as the reaction context for the chlorine-water oxygen equation, rather than suggesting all chlorine-water conditions yield this overall equation."
+      "issue": "Identify the oxygen-forming chlorine-water equation as photochemical, distinguishing it from the usual disproportionation equation."
     }
   ],
   "newCardIds": [
