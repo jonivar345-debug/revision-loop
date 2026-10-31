@@ -74,7 +74,8 @@ for(const q of bank.questions){
   assert.equal(res.preds.filter(Boolean).length,0);
  }
 }
-assert.equal(aliases,39);
+// v202 recorded 39 aliases; the bounded v223 calibration adds another 26.
+assert.equal(aliases,65);
 const qs=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
 const examples=[
 ['task1_v202_chem_01','X is chloride, Y is bromide, Z is iodide.',3],
