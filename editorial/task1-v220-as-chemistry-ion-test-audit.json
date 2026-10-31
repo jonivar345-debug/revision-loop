@@ -1,0 +1,63 @@
+{
+  "version": "v220",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1: AS Chemistry Group 2 / Group 7 / Required practical 4 recall correctness and gaps",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+    "https://filestore.aqa.org.uk/resources/chemistry/AQA-7404-7405-PHBK.PDF"
+  ],
+  "reviewMethod": "Screened the 155 active AS mock cards with core topic labels Group 2, Group 7 and RP4 Ion tests; reviewed ion-test prompts and answers, including complementary existing supplements. Identified three cards requiring narrower wording and five nonduplicative single-fact gaps. These are conceptual cards, not practical-method instructions.",
+  "scope": {
+    "coreCardsScreened": 155,
+    "coreGroup2": 61,
+    "coreGroup7": 77,
+    "coreRP4": 17,
+    "coreDeckCount": 3345,
+    "coreExamBankCount": 1268
+  },
+  "originalCoreDeckChanged": false,
+  "patches": [
+    {
+      "id": "task1_chem_089",
+      "issue": "Existing generic 'why acidify' answer could be more specific about the white carbonate false-positive. Preserve exact one-point purpose, no step-by-step method."
+    },
+    {
+      "id": "task1_chem_105",
+      "issue": "Existing card inaccurately referred to 'acidifying silver nitrate'; clarify that the sample is acidified and why carbonate interference matters."
+    },
+    {
+      "id": "chem_y1_chat_v126_096",
+      "issue": "State UV as the reaction context for the chlorine-water oxygen equation, rather than suggesting all chlorine-water conditions yield this overall equation."
+    }
+  ],
+  "newCardIds": [
+    "task1_v220_chem_ion_01",
+    "task1_v220_chem_ion_02",
+    "task1_v220_chem_ion_03",
+    "task1_v220_chem_ion_04",
+    "task1_v220_chem_ion_05"
+  ],
+  "avoidedExistingTopics": [
+    "AgCl/AgBr/AgI colours, dilute or concentrated ammonia solubility and simple halide identification",
+    "BaSO4 colour, sulfate test result and why sulfuric acid would give a false positive",
+    "Cl2 displacement and reaction with cold alkaline water",
+    "Group 2 solubility trends, carbonate-limewater and ammonium test observations"
+  ],
+  "validation": [
+    "Actual live app short-answer evaluator invoked against every accepted and rejected answer",
+    "Live flashcard supplement loader source evaluated with index 15",
+    "Existing progress keys, card IDs and first Maths mock checked",
+    "v217, v218 and v219 regressions retained"
+  ],
+  "progressKeysUnchanged": true,
+  "firstMathsMockUnchanged": true,
+  "task1Complete": false,
+  "fullSpecificationCertified": false,
+  "limitations": "Review and corrections are targeted to Group 2, Group 7 and RP4. Does not prove every Chemistry mock answer, model mark-scheme equivalence, or complete AQA paper coverage.",
+  "next": [
+    "Review practical 1-3 Chemistry core answers and equations for scope and errors",
+    "Audit remaining chemistry AS cards by content and mark-point acceptance",
+    "Check historic paper inventory and missing question sources"
+  ]
+}
