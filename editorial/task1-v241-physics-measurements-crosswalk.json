@@ -1,0 +1,722 @@
+{
+  "version": "v241",
+  "date": "2026-10-31",
+  "scope": "AQA Physics 7408 3.1 Measurements and their errors (all three AS subsections), school mock",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+  "sourceColumn": "Assessable left-column requirements, not suggested experiments in right-hand column",
+  "coreCardsInventoried": 75,
+  "inventoryByTopic": {
+    "Measurements": 72,
+    "Measurements & errors": 3
+  },
+  "coreDeckIdentity": {
+    "count": 3345,
+    "sourceDeckSHA": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86"
+  },
+  "requirements": [
+    {
+      "specRef": "3.1.1",
+      "skill": "Know six required SI base units including kelvin, mole, ampere, kilogram, metre, second",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_base_si"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Derive newton, joule, watt and pascal in base SI units",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_derived_n",
+        "phy_measure_recap_20261024_derived_j",
+        "phy_measure_recap_20261024_derived_w",
+        "phy_measure_recap_20261024_derived_pa"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Derive the coulomb in base SI units",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_derived_c"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Use tera, giga, mega and kilo powers of ten",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_prefix_tera_giga",
+        "phy_measure_recap_20261024_prefix_mega_kilo"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Use centi and milli powers of ten",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_prefix_centi_milli"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Use micro, nano, pico and femto powers of ten",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_prefix_micro_nano",
+        "phy_measure_recap_20261024_prefix_pico_femto"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Convert between powers of ten when area units are squared",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_squared_unit"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Convert between eV and J",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_ev_j"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.1",
+      "skill": "Convert between kW h and J",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_kwh_j"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Distinguish random and systematic errors",
+      "coreEvidenceIds": [
+        "phy_uncert_random",
+        "phy_uncert_systematic"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Explain zero error as a consistent systematic offset",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_phy_010"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Explain precision and accuracy",
+      "coreEvidenceIds": [
+        "phy_accuracy_precision",
+        "task1_phy_014",
+        "task1_phy_015"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Define repeatability and reproducibility",
+      "coreEvidenceIds": [
+        "task1_phy_012",
+        "task1_phy_013"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Define resolution and recognise its limits on accuracy",
+      "coreEvidenceIds": [
+        "task1_phy_011",
+        "task1_v127_087"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Calculate percentage and fractional uncertainty",
+      "coreEvidenceIds": [
+        "phy_uncert_percent",
+        "task1_v127_086"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Combine absolute uncertainties for sums and differences",
+      "coreEvidenceIds": [
+        "phy_measure_recap_20261024_uncert_add",
+        "task1_phy_017"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Combine percentage uncertainties for multiplication and division",
+      "coreEvidenceIds": [
+        "phy_uncert_products",
+        "task1_v136_033"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Scale fractional uncertainty for powers",
+      "coreEvidenceIds": [
+        "phy_uncert_power",
+        "v33_card_physics_measurements_14"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Describe error bars and what uncertainty range they represent",
+      "coreEvidenceIds": [
+        "task1_phy_019",
+        "task1_v130_005"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Estimate uncertainty in gradient from steepest/shallowest acceptable lines",
+      "coreEvidenceIds": [
+        "task1_phy_020",
+        "phy_measure_recap_20261024_gradient_uncert"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Estimate uncertainty in graph intercept",
+      "coreEvidenceIds": [
+        "task1_v136_034",
+        "task1_v160_006"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Quote measured values and uncertainties to defensible significant figures",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_phy_014",
+        "task1_v160_005"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Explain why repeats reduce random but not systematic uncertainty",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_phy_012",
+        "phy_uncert_systematic"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.3",
+      "skill": "Define order-of-magnitude approximation",
+      "coreEvidenceIds": [
+        "task1_phy_021",
+        "task1_v127_090"
+      ],
+      "reviewLevel": "Selected active core card identity and stored answer checked; independent exam application not certified"
+    },
+    {
+      "specRef": "3.1.3",
+      "skill": "Apply an estimated physical quantity to an unfamiliar scale calculation",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_75_core_cards"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Construct error bars and extreme acceptable lines on an unfamiliar actual diagram",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_75_core_cards"
+    },
+    {
+      "specRef": "3.1.2",
+      "skill": "Independently mark novel multistep numerical uncertainty problems",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_75_core_cards"
+    }
+  ],
+  "coreFirstPass": [
+    {
+      "id": "phy_uncert_random",
+      "topic": "Measurements",
+      "originalFront": "What is a random measurement error?",
+      "originalBack": "An unpredictable variation causing scatter in repeated measurements."
+    },
+    {
+      "id": "phy_uncert_systematic",
+      "topic": "Measurements",
+      "originalFront": "What is a systematic error?",
+      "originalBack": "A consistent shift in readings caused by the method or instrument; repeats do not remove it."
+    },
+    {
+      "id": "phy_uncert_percent",
+      "topic": "Measurements",
+      "originalFront": "How do you calculate percentage uncertainty?",
+      "originalBack": "percentage uncertainty = absolute uncertainty ÷ measured value × 100%"
+    },
+    {
+      "id": "phy_uncert_products",
+      "topic": "Measurements",
+      "originalFront": "For multiplication or division, how are percentage uncertainties combined?",
+      "originalBack": "Add the percentage uncertainties."
+    },
+    {
+      "id": "phy_uncert_power",
+      "topic": "Measurements",
+      "originalFront": "If y = xⁿ, what happens to percentage uncertainty?",
+      "originalBack": "Multiply the percentage uncertainty in x by |n|."
+    },
+    {
+      "id": "phy_accuracy_precision",
+      "topic": "Measurements",
+      "originalFront": "Accuracy vs precision?",
+      "originalBack": "Accuracy is closeness to the true value; precision is closeness of repeated readings to each other."
+    },
+    {
+      "id": "v33_card_physics_measurements_14",
+      "topic": "Measurements",
+      "originalFront": "When calculating uncertainty in a quantity proportional to d², how does percentage uncertainty in d contribute?",
+      "originalBack": "Its percentage uncertainty is doubled for the squared factor."
+    },
+    {
+      "id": "phy_measure_recap_20261024_base_si",
+      "topic": "Measurements",
+      "originalFront": "Name the six SI base units covered by AQA Physics 3.1.",
+      "originalBack": "metre (m), kilogram (kg), second (s), ampere (A), kelvin (K), mole (mol)."
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_n",
+      "topic": "Measurements",
+      "originalFront": "Express the newton (N) using SI base units.",
+      "originalBack": "1 N = 1 kg m s⁻², from F = ma."
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_j",
+      "topic": "Measurements",
+      "originalFront": "Express the joule (J) using SI base units.",
+      "originalBack": "1 J = 1 kg m² s⁻², because work done = force × distance."
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_w",
+      "topic": "Measurements",
+      "originalFront": "Express the watt (W) using SI base units.",
+      "originalBack": "1 W = 1 kg m² s⁻³, because power = energy ÷ time."
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_pa",
+      "topic": "Measurements",
+      "originalFront": "Express the pascal (Pa) using SI base units.",
+      "originalBack": "1 Pa = 1 N m⁻² = 1 kg m⁻¹ s⁻²."
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_c",
+      "topic": "Measurements",
+      "originalFront": "Express the coulomb (C) using SI base units.",
+      "originalBack": "1 C = 1 A s, because Q = It."
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_tera_giga",
+      "topic": "Measurements",
+      "originalFront": "What powers of ten do tera (T) and giga (G) mean?",
+      "originalBack": "tera = 10¹²; giga = 10⁹."
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_mega_kilo",
+      "topic": "Measurements",
+      "originalFront": "What powers of ten do mega (M) and kilo (k) mean?",
+      "originalBack": "mega = 10⁶; kilo = 10³."
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_centi_milli",
+      "topic": "Measurements",
+      "originalFront": "What powers of ten do centi (c) and milli (m) mean?",
+      "originalBack": "centi = 10⁻²; milli = 10⁻³."
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_micro_nano",
+      "topic": "Measurements",
+      "originalFront": "What powers of ten do micro (μ) and nano (n) mean?",
+      "originalBack": "micro = 10⁻⁶; nano = 10⁻⁹."
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_pico_femto",
+      "topic": "Measurements",
+      "originalFront": "What powers of ten do pico (p) and femto (f) mean?",
+      "originalBack": "pico = 10⁻¹²; femto = 10⁻¹⁵."
+    },
+    {
+      "id": "phy_measure_recap_20261024_squared_unit",
+      "topic": "Measurements",
+      "originalFront": "Convert 1 cm² into m².",
+      "originalBack": "1 cm² = (10⁻² m)² = 10⁻⁴ m²."
+    },
+    {
+      "id": "phy_measure_recap_20261024_ev_j",
+      "topic": "Measurements",
+      "originalFront": "Convert 1 electronvolt (eV) into joules.",
+      "originalBack": "1 eV = 1.60 × 10⁻¹⁹ J."
+    },
+    {
+      "id": "phy_measure_recap_20261024_kwh_j",
+      "topic": "Measurements",
+      "originalFront": "Convert 1 kilowatt-hour into joules.",
+      "originalBack": "1 kWh = 3.60 × 10⁶ J."
+    },
+    {
+      "id": "phy_measure_recap_20261024_uncert_add",
+      "topic": "Measurements",
+      "originalFront": "How do you combine uncertainties when adding or subtracting measurements?",
+      "originalBack": "Add the absolute uncertainties."
+    },
+    {
+      "id": "phy_measure_recap_20261024_gradient_uncert",
+      "topic": "Measurements",
+      "originalFront": "How is a percentage gradient uncertainty estimated from graph lines?",
+      "originalBack": "|Best gradient − worst acceptable gradient| ÷ |best gradient| × 100%."
+    },
+    {
+      "id": "task1_phy_001",
+      "topic": "Measurements",
+      "originalFront": "What does the SI prefix pico (p) mean?",
+      "originalBack": "10⁻¹²."
+    },
+    {
+      "id": "task1_phy_002",
+      "topic": "Measurements",
+      "originalFront": "What does the SI prefix femto (f) mean?",
+      "originalBack": "10⁻¹⁵."
+    },
+    {
+      "id": "task1_phy_003",
+      "topic": "Measurements",
+      "originalFront": "What does the SI prefix tera (T) mean?",
+      "originalBack": "10¹²."
+    },
+    {
+      "id": "task1_phy_004",
+      "topic": "Measurements",
+      "originalFront": "What is the SI base unit for amount of substance?",
+      "originalBack": "Mole (mol)."
+    },
+    {
+      "id": "task1_phy_005",
+      "topic": "Measurements",
+      "originalFront": "Fill the gap: the base unit of thermodynamic temperature is ____.",
+      "originalBack": "Kelvin (K)."
+    },
+    {
+      "id": "task1_phy_006",
+      "topic": "Measurements",
+      "originalFront": "How many joules are in one kilowatt-hour?",
+      "originalBack": "3.6 × 10⁶ J."
+    },
+    {
+      "id": "task1_phy_008",
+      "topic": "Measurements",
+      "originalFront": "What is the derived SI unit of resistivity?",
+      "originalBack": "Ohm metre (Ω m)."
+    },
+    {
+      "id": "task1_phy_011",
+      "topic": "Measurements",
+      "originalFront": "What is resolution?",
+      "originalBack": "The smallest change an instrument can distinguish."
+    },
+    {
+      "id": "task1_phy_012",
+      "topic": "Measurements",
+      "originalFront": "What is repeatability?",
+      "originalBack": "Same result using the same method, equipment and operator."
+    },
+    {
+      "id": "task1_phy_013",
+      "topic": "Measurements",
+      "originalFront": "What is reproducibility?",
+      "originalBack": "Consistent results when the method is repeated under changed conditions."
+    },
+    {
+      "id": "task1_phy_014",
+      "topic": "Measurements",
+      "originalFront": "What is precision in measurements?",
+      "originalBack": "How close repeated readings are to one another."
+    },
+    {
+      "id": "task1_phy_015",
+      "topic": "Measurements",
+      "originalFront": "What is accuracy in measurements?",
+      "originalBack": "How close a measured value is to the true value."
+    },
+    {
+      "id": "task1_phy_016",
+      "topic": "Measurements",
+      "originalFront": "For quantities multiplied, how do percentage uncertainties combine?",
+      "originalBack": "Add their percentage uncertainties."
+    },
+    {
+      "id": "task1_phy_017",
+      "topic": "Measurements",
+      "originalFront": "For quantities added, how do absolute uncertainties combine?",
+      "originalBack": "Add their absolute uncertainties."
+    },
+    {
+      "id": "task1_phy_018",
+      "topic": "Measurements",
+      "originalFront": "For a measured quantity squared, what happens to its percentage uncertainty?",
+      "originalBack": "Double it."
+    },
+    {
+      "id": "task1_phy_019",
+      "topic": "Measurements",
+      "originalFront": "What do error bars usually represent?",
+      "originalBack": "The range of uncertainty around a measured point."
+    },
+    {
+      "id": "task1_phy_020",
+      "topic": "Measurements",
+      "originalFront": "How is uncertainty in a graph gradient estimated?",
+      "originalBack": "Compare the steepest and shallowest acceptable gradients."
+    },
+    {
+      "id": "task1_phy_021",
+      "topic": "Measurements",
+      "originalFront": "What is an order of magnitude?",
+      "originalBack": "The nearest power of ten to a quantity."
+    },
+    {
+      "id": "task1_v124_bulk_phy_005",
+      "topic": "Measurements",
+      "originalFront": "How many joules is one electronvolt?",
+      "originalBack": "1.60 × 10⁻¹⁹ J."
+    },
+    {
+      "id": "task1_v124_bulk_phy_006",
+      "topic": "Measurements",
+      "originalFront": "Which base SI unit is used for amount of substance?",
+      "originalBack": "Mole (mol)."
+    },
+    {
+      "id": "task1_v124_bulk_phy_007",
+      "topic": "Measurements",
+      "originalFront": "What are the base SI units of a newton?",
+      "originalBack": "kg m s⁻²."
+    },
+    {
+      "id": "task1_v124_bulk_phy_008",
+      "topic": "Measurements",
+      "originalFront": "What are the base SI units of a joule?",
+      "originalBack": "kg m² s⁻²."
+    },
+    {
+      "id": "task1_v124_bulk_phy_009",
+      "topic": "Measurements",
+      "originalFront": "What is an anomalous reading?",
+      "originalBack": "A result inconsistent with the trend of the other results."
+    },
+    {
+      "id": "task1_v124_bulk_phy_010",
+      "topic": "Measurements",
+      "originalFront": "How does a zero error affect all measurements?",
+      "originalBack": "It adds a systematic offset."
+    },
+    {
+      "id": "task1_v124_bulk_phy_011",
+      "topic": "Measurements",
+      "originalFront": "What is a random error's effect on repeated readings?",
+      "originalBack": "Readings scatter about the mean."
+    },
+    {
+      "id": "task1_v124_bulk_phy_012",
+      "topic": "Measurements",
+      "originalFront": "How can repeating readings reduce random uncertainty?",
+      "originalBack": "Taking a mean reduces its effect."
+    },
+    {
+      "id": "task1_v124_bulk_phy_013",
+      "topic": "Measurements",
+      "originalFront": "Why is a graph through the origin not always justified?",
+      "originalBack": "A systematic offset or real intercept may exist."
+    },
+    {
+      "id": "task1_v124_bulk_phy_014",
+      "topic": "Measurements",
+      "originalFront": "What should an uncertainty normally be rounded to?",
+      "originalBack": "Usually one significant figure."
+    },
+    {
+      "id": "task1_v124_bulk_phy_015",
+      "topic": "Measurements",
+      "originalFront": "What is the approximate percentage uncertainty in a value x?",
+      "originalBack": "(Absolute uncertainty / x) × 100%."
+    },
+    {
+      "id": "task1_v124_bulk_phy_016",
+      "topic": "Measurements",
+      "originalFront": "How are percentage uncertainties combined for a product of measured quantities?",
+      "originalBack": "Add the individual percentage uncertainties."
+    },
+    {
+      "id": "task1_v124_cloze_001",
+      "topic": "Measurements",
+      "originalFront": "Fill the gap: uncertainty in (A − B) combines the ____ uncertainties.",
+      "originalBack": "absolute."
+    },
+    {
+      "id": "task1_v127_083",
+      "topic": "Measurements",
+      "originalFront": "What is repeatability in measurement?",
+      "originalBack": "Agreement when the same person repeats a method using the same equipment."
+    },
+    {
+      "id": "task1_v127_084",
+      "topic": "Measurements",
+      "originalFront": "What is reproducibility in measurement?",
+      "originalBack": "Agreement when conditions such as observer or equipment change."
+    },
+    {
+      "id": "task1_v127_085",
+      "topic": "Measurements",
+      "originalFront": "What is measurement resolution?",
+      "originalBack": "The smallest distinguishable change shown by an instrument."
+    },
+    {
+      "id": "task1_v127_086",
+      "topic": "Measurements",
+      "originalFront": "What does fractional uncertainty mean?",
+      "originalBack": "Absolute uncertainty divided by the measured value."
+    },
+    {
+      "id": "task1_v127_087",
+      "topic": "Measurements",
+      "originalFront": "Why does a high-resolution instrument not guarantee accuracy?",
+      "originalBack": "It may still have systematic error."
+    },
+    {
+      "id": "task1_v127_090",
+      "topic": "Measurements",
+      "originalFront": "What does an order-of-magnitude estimate communicate?",
+      "originalBack": "An approximate power of ten."
+    },
+    {
+      "id": "task1_v130_001",
+      "topic": "Measurements",
+      "originalFront": "What is the SI base unit for thermodynamic temperature?",
+      "originalBack": "kelvin (K)"
+    },
+    {
+      "id": "task1_v130_002",
+      "topic": "Measurements",
+      "originalFront": "Which prefix represents 10⁻¹⁵?",
+      "originalBack": "femto (f)"
+    },
+    {
+      "id": "task1_v130_003",
+      "topic": "Measurements",
+      "originalFront": "Which prefix represents 10¹²?",
+      "originalBack": "tera (T)"
+    },
+    {
+      "id": "task1_v130_004",
+      "topic": "Measurements",
+      "originalFront": "What quantity has base units kg m² s⁻³?",
+      "originalBack": "Power."
+    },
+    {
+      "id": "task1_v130_005",
+      "topic": "Measurements",
+      "originalFront": "What does an uncertainty error bar represent?",
+      "originalBack": "A range of plausible values for the measured quantity."
+    },
+    {
+      "id": "task1_v130_006",
+      "topic": "Measurements",
+      "originalFront": "Which graph lines estimate uncertainty in a straight-line gradient?",
+      "originalBack": "The steepest and shallowest acceptable lines."
+    },
+    {
+      "id": "task1_v130_007",
+      "topic": "Measurements",
+      "originalFront": "Which uncertainty type cannot be removed by repeated readings alone?",
+      "originalBack": "Systematic uncertainty."
+    },
+    {
+      "id": "task1_v130_008",
+      "topic": "Measurements",
+      "originalFront": "Why quote an uncertainty to an appropriate number of significant figures?",
+      "originalBack": "Extra digits imply unjustified precision."
+    },
+    {
+      "id": "task1_v130_009",
+      "topic": "Measurements",
+      "originalFront": "What does reproducibility require beyond repeatability?",
+      "originalBack": "Different investigators or apparatus under changed conditions."
+    },
+    {
+      "id": "task1_v136_033",
+      "topic": "Measurements & errors",
+      "originalFront": "For a product or quotient, how do percentage uncertainties combine?",
+      "originalBack": "Add percentage uncertainties (usual worst-case estimate)."
+    },
+    {
+      "id": "task1_v136_034",
+      "topic": "Measurements & errors",
+      "originalFront": "How can uncertainty in a fitted line's y-intercept be estimated?",
+      "originalBack": "Compare best-fit with extreme acceptable line intercepts."
+    },
+    {
+      "id": "task1_v136_076",
+      "topic": "Measurements & errors",
+      "originalFront": "What is resolution of a digital measuring instrument?",
+      "originalBack": "The smallest displayed change in the reading."
+    },
+    {
+      "id": "task1_v160_004",
+      "topic": "Measurements",
+      "originalFront": "How can uncertainty from a set of repeated readings be estimated using their range?",
+      "originalBack": "Half the range: (highest reading − lowest reading)/2."
+    },
+    {
+      "id": "task1_v160_005",
+      "topic": "Measurements",
+      "originalFront": "When quoting a value and its absolute uncertainty, how should their decimal places compare?",
+      "originalBack": "Quote the value to the same decimal place as its absolute uncertainty."
+    },
+    {
+      "id": "task1_v160_006",
+      "topic": "Measurements",
+      "originalFront": "When is a graph's y-intercept consistent with zero?",
+      "originalBack": "When zero lies within the plausible intercept range from acceptable lines."
+    }
+  ],
+  "explicitGapNotes": [
+    "Error-bar representation and extreme gradients on an original graph require diagram-based questions, beyond pure text recall.",
+    "The selected 75 core measurement cards define orders of magnitude but do not independently evidence unfamiliar quantitative physical estimates.",
+    "A later audit must score new uncertainty calculations using the live examiner-style marking, not only flashcard recollection.",
+    "Core topic-label coverage does not certify every cross-topic uncertainty task in Physics papers."
+  ],
+  "completion": {
+    "threeMeasurementsSubsectionsMapped": true,
+    "core75IndependentlyMeaningChecked": false,
+    "unfamiliarNumericalProblemsTested": false,
+    "graphDrawingAndMarkingVerified": false,
+    "fullPhysicsMockReviewed": false,
+    "fullThreeSubjectMockReviewed": false,
+    "task1Complete": false
+  },
+  "changes": {
+    "newFlashcards": 0,
+    "oldCardsModified": 0,
+    "examQuestionsAdded": 0,
+    "runtimeChanged": false,
+    "savedProgressKeysChanged": false
+  }
+}
