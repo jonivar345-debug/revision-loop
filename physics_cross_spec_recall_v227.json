@@ -1,0 +1,419 @@
+{
+  "version": "v227",
+  "createdAt": "2026-10-31",
+  "subject": "Physics",
+  "scope": "Fifteen carefully scoped Year 1 Physics concept and graph interpretation mock recall cards, not a full AQA specification certification.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors"
+  ],
+  "notes": "High-priority reinforcement, including previously reported difficulties with motion graphs, projectiles, moments, internal resistance, strain and photoelectric threshold. No practical apparatus instructions.",
+  "cards": [
+    {
+      "id": "task1_v227_phy_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Motion graphs",
+      "courseTopic": "Motion graphs",
+      "revisionTopic": "Motion graphs",
+      "specRef": "3.4.1.3",
+      "front": "For a velocity–time graph crossing below the time axis, how do you calculate total distance?",
+      "back": "Add the magnitudes of all areas between the graph and the time axis.",
+      "accept": [
+        "Add the magnitudes of all areas between the graph and the time axis.",
+        "Sum the absolute areas on both sides of the axis.",
+        "Add positive and negative regions as positive distances."
+      ],
+      "reject": [
+        "Use the signed total area as the distance.",
+        "Ignore the regions below the axis."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Motion graphs",
+      "courseTopic": "Motion graphs",
+      "revisionTopic": "Motion graphs",
+      "specRef": "3.4.1.3",
+      "front": "What does the gradient of a tangent to a curved velocity–time graph represent?",
+      "back": "Instantaneous acceleration at that time.",
+      "accept": [
+        "Instantaneous acceleration at that time.",
+        "The acceleration at the point of tangency.",
+        "Instantaneous rate of change of velocity."
+      ],
+      "reject": [
+        "Total displacement since the start.",
+        "The average speed over the whole journey."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Projectiles",
+      "courseTopic": "Projectiles",
+      "revisionTopic": "Projectiles",
+      "specRef": "3.4.1.5",
+      "front": "Ignoring air resistance, what happens to the horizontal velocity of a projectile during flight?",
+      "back": "It remains constant.",
+      "accept": [
+        "It remains constant.",
+        "Horizontal velocity stays unchanged.",
+        "It has zero horizontal acceleration."
+      ],
+      "reject": [
+        "It increases because of gravity.",
+        "It becomes zero at the highest point."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Projectiles",
+      "courseTopic": "Projectiles",
+      "revisionTopic": "Projectiles",
+      "specRef": "3.4.1.5",
+      "front": "What is the vertical acceleration of a freely moving projectile near Earth's surface?",
+      "back": "Approximately 9.81 m s⁻² downwards throughout its flight.",
+      "accept": [
+        "Approximately 9.81 m s⁻² downwards throughout its flight.",
+        "Constant downward acceleration g.",
+        "Acceleration is g vertically downwards."
+      ],
+      "reject": [
+        "It becomes zero at maximum height.",
+        "It always points in the direction of the velocity."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Newton's laws",
+      "courseTopic": "Newton's laws",
+      "revisionTopic": "Newton's laws",
+      "specRef": "3.4.1.4",
+      "front": "Why do the action and reaction forces in Newton's third law not cancel on one object?",
+      "back": "They act on different objects.",
+      "accept": [
+        "They act on different objects.",
+        "The equal and opposite forces act on separate bodies.",
+        "They form a pair on different interacting objects."
+      ],
+      "reject": [
+        "They act at different times.",
+        "The forces are not equal."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Moments",
+      "courseTopic": "Moments",
+      "revisionTopic": "Moments",
+      "specRef": "3.4.1.2",
+      "front": "What distance is used in the moment of a couple, M = Fd?",
+      "back": "The perpendicular separation between the two parallel forces.",
+      "accept": [
+        "The perpendicular separation between the two parallel forces.",
+        "The perpendicular distance between their lines of action.",
+        "The distance between the two lines of action, measured at right angles."
+      ],
+      "reject": [
+        "The entire length of either force arrow.",
+        "The distance from either force to any arbitrary origin."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Momentum",
+      "courseTopic": "Momentum",
+      "revisionTopic": "Momentum",
+      "specRef": "3.4.1.6",
+      "front": "What condition is required for total momentum to be conserved in a system?",
+      "back": "The resultant external force on the system is zero.",
+      "accept": [
+        "The resultant external force on the system is zero.",
+        "There is no net external force acting on the system.",
+        "The system is isolated from resultant external forces."
+      ],
+      "reject": [
+        "The objects must move at constant speed individually.",
+        "No internal forces may exist."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Materials",
+      "courseTopic": "Materials",
+      "revisionTopic": "Materials",
+      "specRef": "3.4.2.1",
+      "front": "What does the area under a force–extension graph give during elastic loading?",
+      "back": "The work done stretching the material, stored as elastic strain energy if no losses occur.",
+      "accept": [
+        "The work done stretching the material, stored as elastic strain energy if no losses occur.",
+        "Work done in stretching, equal to recoverable elastic energy for elastic loading.",
+        "Energy transferred by the stretching force."
+      ],
+      "reject": [
+        "The Young modulus.",
+        "The tensile stress."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Materials",
+      "courseTopic": "Materials",
+      "revisionTopic": "Materials",
+      "specRef": "3.4.2.2",
+      "front": "What does the gradient of the initial straight part of a stress–strain graph give?",
+      "back": "The Young modulus.",
+      "accept": [
+        "The Young modulus.",
+        "Young's modulus of the material.",
+        "Stress divided by strain in the elastic linear region."
+      ],
+      "reject": [
+        "The extension of the wire.",
+        "The breaking force."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Materials",
+      "courseTopic": "Materials",
+      "revisionTopic": "Materials",
+      "specRef": "3.4.2.1",
+      "front": "What distinguishes plastic deformation after a load is removed?",
+      "back": "A permanent deformation remains.",
+      "accept": [
+        "A permanent deformation remains.",
+        "The sample does not return completely to its original shape.",
+        "Some strain persists when the force is removed."
+      ],
+      "reject": [
+        "The material returns exactly to its original length.",
+        "Stress is always proportional to strain."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "front": "For a uniform wire, how is resistance related to resistivity, length and cross-sectional area?",
+      "back": "R = ρL/A.",
+      "accept": [
+        "R = ρL/A.",
+        "Resistance equals resistivity times length divided by area.",
+        "R equals rho times L over A."
+      ],
+      "reject": [
+        "R = ρA/L.",
+        "R = L/(ρA)."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "front": "What does the vertical intercept on a terminal-p.d. V against current I graph represent?",
+      "back": "The emf of the cell.",
+      "accept": [
+        "The emf of the cell.",
+        "The cell's electromotive force.",
+        "The voltage at zero current, equal to emf."
+      ],
+      "reject": [
+        "The internal resistance.",
+        "The lost volts at maximum current."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "front": "What does the negative gradient of a cell's V–I graph represent?",
+      "back": "Minus the internal resistance, −r.",
+      "accept": [
+        "Minus the internal resistance, −r.",
+        "The slope is negative internal resistance.",
+        "Gradient = −r for V = ε − Ir."
+      ],
+      "reject": [
+        "The emf of the cell.",
+        "The external load resistance at every point."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.2.1",
+      "front": "If light frequency is below the threshold frequency, what does raising its intensity do to photoelectron emission?",
+      "back": "No photoelectrons are emitted, regardless of intensity.",
+      "accept": [
+        "No photoelectrons are emitted, regardless of intensity.",
+        "Increasing intensity cannot produce photoelectrons below threshold frequency.",
+        "Emission remains absent because individual photons lack sufficient energy."
+      ],
+      "reject": [
+        "More light intensity creates photoelectrons even below threshold.",
+        "Electrons are emitted only after a longer exposure."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v227_phy_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements",
+      "specRef": "3.1.2",
+      "front": "Why do repeated readings not automatically remove a systematic measurement error?",
+      "back": "A consistent bias affects all the readings.",
+      "accept": [
+        "A consistent bias affects all the readings.",
+        "Repeating does not correct a fixed offset or calibration bias.",
+        "Systematic error remains because it shifts measurements consistently."
+      ],
+      "reject": [
+        "Repeated measurements always remove zero error.",
+        "A fixed calibration error is random scatter."
+      ],
+      "strictRecall": true,
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
