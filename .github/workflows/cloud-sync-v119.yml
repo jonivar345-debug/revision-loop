@@ -367,7 +367,7 @@ jobs:
       - run: node tests/task1-v237-chemistry-bonding-crosswalk.cjs
       - run: node tests/task1-v238-chemistry-atomic-crosswalk.cjs
       - run: node tests/task1-v240-chemistry-energetics-crosswalk.cjs
-          node tests/task1-v239b-amount-applications.cjs
+      - run: node tests/task1-v239b-amount-applications.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
