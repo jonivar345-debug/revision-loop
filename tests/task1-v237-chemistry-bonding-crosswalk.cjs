@@ -51,7 +51,7 @@ assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(files.length,28);assert.equal(files[27],'chemistry_bonding_diagram_recall_v237.json');
+assert(files.length>=28,'Historical first 28 supplement banks missing');assert.equal(files[27],'chemistry_bonding_diagram_recall_v237.json');
 const prior=files.slice(0,27).flatMap(name=>json(name).cards||[]);
 const known=new Set([...deck.cards,...prior].map(c=>c.id));
 const oldFronts=new Set([...deck.cards,...prior].filter(c=>c.subject==='Chemistry').map(c=>c.front.trim().toLowerCase()));
