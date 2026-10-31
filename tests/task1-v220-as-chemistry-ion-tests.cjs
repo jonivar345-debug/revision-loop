@@ -31,8 +31,9 @@ assert.deepEqual(modifiedIds,['task1_chem_089','task1_chem_105','chem_y1_chat_v1
 assert.deepEqual(modified.map(c=>c.id),original.map(c=>c.id));
 const byId=new Map(modified.map(c=>[c.id,c]));
 assert(byId.get('task1_chem_089').back.includes('carbonate'));
-assert(byId.get('task1_chem_105').front.includes('sample acidified'));
-assert(byId.get('chem_y1_chat_v126_096').front.includes('UV'));
+assert(byId.get('task1_chem_089').front.includes('false positive'));
+assert(byId.get('task1_chem_105').front.includes('interfering ion'));
+assert(byId.get('chem_y1_chat_v126_096').front.includes('photochemical'));
 assert(byId.get('chem_y1_chat_v126_096').back.includes('2Cl₂ + 2H₂O'));
 assert(app.includes('applyV220IonTestCorrections(cards);'));
 assert(app.includes('cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));'));
