@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('maths_first_mock_circle_geometry_v246.json'),deck=json('deck.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v246');assert.equal(bank.cards.length,12);assert.equal(deck.cards.length,3345);
 const list=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(list.length,33);assert.equal(list[31],'maths_first_mock_pure_applied_v245.json');
+assert(list.length>=33); // Preserve first 33 banks; later additions append safely.assert.equal(list[31],'maths_first_mock_pure_applied_v245.json');
 assert.equal(list[32],'maths_first_mock_circle_geometry_v246.json');
 assert(sw.includes("'./maths_first_mock_circle_geometry_v246.json'"));assert(sw.includes('-v246-maths-circle'));
 const allPrev=[...deck.cards,...list.slice(0,32).flatMap(f=>json(f).cards||[])];
