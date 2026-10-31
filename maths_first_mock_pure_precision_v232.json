@@ -1,0 +1,660 @@
+{
+  "version": "v232",
+  "createdAt": "2026-10-31",
+  "subject": "Maths",
+  "scope": "First school mock: AQA Year 1 Pure only, sections A–H and J; no Statistics, Mechanics, Year 2 functions, radians or calculus.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content"
+  ],
+  "notes": "24 original compact recall/application checks, prioritising proof, 2D vectors and graph transformations, plus integer binomial expansion, inequalities, derivative and definite-integral interpretation. Does not certify all first-mock statements.",
+  "cards": [
+    {
+      "id": "task1_v232_math_pure_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "AQA 7356 A",
+      "front": "For an arbitrary integer n, how can you show the product of two consecutive integers is even?",
+      "back": "n(n+1) is even because one of two consecutive integers is even.",
+      "accept": [
+        "n(n+1) is even because one of two consecutive integers is even.",
+        "One of n and n+1 must be even, so their product is even.",
+        "Two consecutive numbers contain an even integer, making their product even."
+      ],
+      "reject": [
+        "Checking only n=1 is proof for every integer.",
+        "Every pair of consecutive integers is odd."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "AQA 7356 A",
+      "front": "How can you show the sum of any two odd integers is even using algebra?",
+      "back": "Write them as 2m+1 and 2n+1; their sum is 2(m+n+1), an even integer.",
+      "accept": [
+        "Write them as 2m+1 and 2n+1; their sum is 2(m+n+1), an even integer.",
+        "Let the odd numbers be 2m+1 and 2n+1; the sum is a multiple of two.",
+        "Their sum equals 2 times an integer."
+      ],
+      "reject": [
+        "Two odd numbers always sum to another odd number.",
+        "Prove it by checking 1+3 alone."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "AQA 7356 A",
+      "front": "A statement applies only to integers n with 1 ≤ n ≤ 4. Which cases must proof by exhaustion check?",
+      "back": "n = 1, 2, 3 and 4.",
+      "accept": [
+        "n = 1, 2, 3 and 4.",
+        "All four cases one, two, three and four.",
+        "Check 1 through 4 inclusive."
+      ],
+      "reject": [
+        "Checking n=1 and n=4 is always enough.",
+        "Check only one convenient example."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Proof",
+      "revisionTopic": "Proof",
+      "specRef": "AQA 7356 A",
+      "front": "What must a counterexample do to disprove an implication 'if P then Q'?",
+      "back": "Satisfy P but fail Q.",
+      "accept": [
+        "Satisfy P but fail Q.",
+        "Make the assumption true and conclusion false.",
+        "Meet the condition P and contradict the claimed result Q."
+      ],
+      "reject": [
+        "Fail P and Q.",
+        "Only show a case where P is false."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "AQA 7356 J",
+      "front": "Given A = (−2, 5) and B = (4, 1), what is vector AB?",
+      "back": "(6, −4).",
+      "accept": [
+        "(6, −4).",
+        "6, -4.",
+        "B minus A gives 6 in x and minus 4 in y."
+      ],
+      "reject": [
+        "(−6, 4).",
+        "(2, 6)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "AQA 7356 J",
+      "front": "What is the magnitude of the vector (−6, 8)?",
+      "back": "10.",
+      "accept": [
+        "10.",
+        "10 units.",
+        "Square root of 36 plus 64, equal to ten."
+      ],
+      "reject": [
+        "14.",
+        "2."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "AQA 7356 J",
+      "front": "If a vector has a negative x-component and a positive y-component, in which quadrant does its direction lie?",
+      "back": "Quadrant II.",
+      "accept": [
+        "Quadrant II.",
+        "Second quadrant.",
+        "Quadrant 2."
+      ],
+      "reject": [
+        "Quadrant I.",
+        "Quadrant IV."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "AQA 7356 J",
+      "front": "If AB = (4, 6) and AC = (6, 9), why are A, B and C collinear?",
+      "back": "AC = 1.5 AB, so the two displacement vectors are parallel and share A.",
+      "accept": [
+        "AC = 1.5 AB, so the two displacement vectors are parallel and share A.",
+        "AC is three halves AB, with the same starting point A.",
+        "The vector from A to C is a scalar multiple of the vector from A to B."
+      ],
+      "reject": [
+        "AB and AC have different magnitudes so cannot be collinear.",
+        "Equal slopes alone show the points form a triangle."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "AQA 7356 J",
+      "front": "A and B have position vectors (1, 6) and (7, −2). What is their midpoint's position vector?",
+      "back": "(4, 2).",
+      "accept": [
+        "(4, 2).",
+        "4, 2.",
+        "Average the x-coordinates and y-coordinates to obtain (4,2)."
+      ],
+      "reject": [
+        "(8, 4).",
+        "(3, −4)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Vectors",
+      "revisionTopic": "Vectors",
+      "specRef": "AQA 7356 J",
+      "front": "For a = (3, −1) and b = (2, 4), calculate 2a − b.",
+      "back": "(4, −6).",
+      "accept": [
+        "(4, −6).",
+        "4, -6.",
+        "Two a is (6,-2); subtract b to get (4,-6)."
+      ],
+      "reject": [
+        "(8, 2).",
+        "(1, −5)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "AQA 7356 B",
+      "front": "What happens to the point (2, 5) on y = f(x) after transforming the graph to y = f(2x)?",
+      "back": "It moves to (1, 5).",
+      "accept": [
+        "It moves to (1, 5).",
+        "1, 5.",
+        "The x-coordinate halves, and y stays five."
+      ],
+      "reject": [
+        "(4, 5).",
+        "(2, 10)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "AQA 7356 B",
+      "front": "Under y = 3f(x), what happens to a point (2, −4) on y = f(x)?",
+      "back": "It maps to (2, −12).",
+      "accept": [
+        "It maps to (2, −12).",
+        "2, -12.",
+        "The y-coordinate triples while x stays two."
+      ],
+      "reject": [
+        "(6, −4).",
+        "(2, −1.33)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_13",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "AQA 7356 B",
+      "front": "How does y = f(x + 4) − 2 transform y = f(x)?",
+      "back": "Translate 4 left and 2 down.",
+      "accept": [
+        "Translate 4 left and 2 down.",
+        "Left four units and down two units.",
+        "Translation vector (−4, −2)."
+      ],
+      "reject": [
+        "Four right and two up.",
+        "Four left and two up."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_14",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "AQA 7356 B",
+      "front": "If (3, −2) lies on y = f(x), what point lies on y = f(−x)?",
+      "back": "(−3, −2).",
+      "accept": [
+        "(−3, −2).",
+        "-3, -2.",
+        "Reflect the x-coordinate in the y-axis; y stays minus two."
+      ],
+      "reject": [
+        "(3, 2).",
+        "(−3, 2)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_15",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Transformations",
+      "revisionTopic": "Transformations",
+      "specRef": "AQA 7356 B",
+      "front": "If (−4, 3) lies on y = f(x), what point lies on y = −f(x)?",
+      "back": "(−4, −3).",
+      "accept": [
+        "(−4, −3).",
+        "-4, -3.",
+        "Keep x as minus four, reverse the sign of y."
+      ],
+      "reject": [
+        "(4, 3).",
+        "(4, −3)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_16",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences",
+      "courseTopic": "Sequences",
+      "revisionTopic": "Sequences",
+      "specRef": "AQA 7356 D",
+      "front": "For positive integer n, what is the coefficient of x² in (1 + 2x)⁴?",
+      "back": "24.",
+      "accept": [
+        "24.",
+        "Twenty-four.",
+        "4C2 times 2 squared equals 24."
+      ],
+      "reject": [
+        "6.",
+        "16."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_17",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences",
+      "courseTopic": "Sequences",
+      "revisionTopic": "Sequences",
+      "specRef": "AQA 7356 D",
+      "front": "What is the value of 5C2 and what does it count?",
+      "back": "10; the number of ways to choose two objects from five without order.",
+      "accept": [
+        "10; the number of ways to choose two objects from five without order.",
+        "Ten, the number of unordered pairs from five objects.",
+        "Five choose two equals ten."
+      ],
+      "reject": [
+        "20 ordered selections.",
+        "120."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_18",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences",
+      "courseTopic": "Sequences",
+      "revisionTopic": "Sequences",
+      "specRef": "AQA 7356 D",
+      "front": "For a geometric progression, what happens to the sign of successive terms if the common ratio is negative?",
+      "back": "Their signs alternate, provided the starting term is non-zero.",
+      "accept": [
+        "Their signs alternate, provided the starting term is non-zero.",
+        "Successive nonzero terms alternate positive and negative.",
+        "Multiplying by a negative ratio switches the sign at each step."
+      ],
+      "reject": [
+        "All terms must be positive.",
+        "Every term must have the same sign."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_19",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Algebra and functions",
+      "revisionTopic": "Algebra and functions",
+      "specRef": "AQA 7356 B",
+      "front": "When solving (x+1)/(x−2) > 0, which value must always be excluded from the solution?",
+      "back": "x = 2, because it makes the denominator zero.",
+      "accept": [
+        "x = 2, because it makes the denominator zero.",
+        "Two is excluded because the expression is undefined.",
+        "Never include x equals two."
+      ],
+      "reject": [
+        "x = −1 because the denominator is zero there.",
+        "All real values are valid."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_20",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "AQA 7356 G",
+      "front": "A tangent has gradient −2. What is the gradient of the normal at that point?",
+      "back": "1/2.",
+      "accept": [
+        "1/2.",
+        "0.5.",
+        "Positive one half; the gradients multiply to minus one."
+      ],
+      "reject": [
+        "−1/2.",
+        "2."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_21",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Differentiation",
+      "revisionTopic": "Differentiation",
+      "specRef": "AQA 7356 G",
+      "front": "If f′(a) = 0 and f″(a) = 0, does the second derivative test alone tell you whether there is a maximum or minimum?",
+      "back": "No; the test is inconclusive.",
+      "accept": [
+        "No; the test is inconclusive.",
+        "No, another argument is needed.",
+        "Second derivative equal to zero cannot by itself classify the point."
+      ],
+      "reject": [
+        "It must be a maximum.",
+        "It must be a minimum."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_22",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Integration",
+      "revisionTopic": "Integration",
+      "specRef": "AQA 7356 H",
+      "front": "If a curve is below the x-axis between two roots, how does that section contribute to total geometric area?",
+      "back": "Use the positive magnitude of its definite integral.",
+      "accept": [
+        "Use the positive magnitude of its definite integral.",
+        "Take the absolute value of that signed integral.",
+        "Negate the negative signed integral to count the area positively."
+      ],
+      "reject": [
+        "Include it as a negative area in the total geometric area.",
+        "Ignore the section below the x-axis."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_23",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Coordinate geometry",
+      "revisionTopic": "Coordinate geometry",
+      "specRef": "AQA 7356 C",
+      "front": "Two non-vertical lines have gradients 3/4 and −4/3. What is their relationship?",
+      "back": "They are perpendicular because their gradients multiply to −1.",
+      "accept": [
+        "They are perpendicular because their gradients multiply to −1.",
+        "Perpendicular; the product of their slopes equals minus one.",
+        "They meet at a right angle."
+      ],
+      "reject": [
+        "They are parallel.",
+        "They have equal gradients."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v232_math_pure_24",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Trigonometry",
+      "revisionTopic": "Trigonometry",
+      "specRef": "AQA 7356 E",
+      "front": "For 0° ≤ θ < 360°, why must solving sin θ = 1/2 usually produce two solutions?",
+      "back": "Sine is positive in quadrants I and II, giving 30° and 150°.",
+      "accept": [
+        "Sine is positive in quadrants I and II, giving 30° and 150°.",
+        "The solutions are 30 degrees and 150 degrees.",
+        "Positive sine gives a first-quadrant and a second-quadrant angle."
+      ],
+      "reject": [
+        "Only 30° works.",
+        "The second angle is 330°."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    }
+  ]
+}
