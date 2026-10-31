@@ -1,0 +1,1465 @@
+{
+  "version": "v228",
+  "date": "2026-10-31",
+  "source": "deck.json",
+  "sourceBlob": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "description": "Initial front/back content read for selected AS Physics 3.1 and 3.2-related mock cards, checked alongside official AQA text. This is a first-pass review rather than definitive statement-level specification coverage or answer-variant certification.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation"
+  ],
+  "counts": {
+    "measurements": 87,
+    "particles": 152,
+    "unique": 239
+  },
+  "snapshots": [
+    {
+      "id": "phy_uncert_random",
+      "stamp": "41b38295",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_uncert_systematic",
+      "stamp": "bedd4182",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_uncert_percent",
+      "stamp": "fb8220c6",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_uncert_products",
+      "stamp": "efef8834",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_uncert_power",
+      "stamp": "372c4954",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_accuracy_precision",
+      "stamp": "2afcebff",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_prac_uncert",
+      "stamp": "431ac80b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_prac_graph",
+      "stamp": "ec6d05d3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_measurements_14",
+      "stamp": "b17719b3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_practical_skills_31",
+      "stamp": "8d0f2016",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_base_si",
+      "stamp": "27a034a0",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_n",
+      "stamp": "8c578db8",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_j",
+      "stamp": "f67968e6",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_w",
+      "stamp": "a767ec9a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_pa",
+      "stamp": "9d915315",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_derived_c",
+      "stamp": "de0f213a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_tera_giga",
+      "stamp": "f2c547da",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_mega_kilo",
+      "stamp": "250a39bb",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_centi_milli",
+      "stamp": "2c91a598",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_micro_nano",
+      "stamp": "7a3744d2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_pico_femto",
+      "stamp": "2cb09de6",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_squared_unit",
+      "stamp": "3c0e010d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_ev_j",
+      "stamp": "82bbe634",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_kwh_j",
+      "stamp": "2e216d02",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_uncert_add",
+      "stamp": "c1c784fd",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_measure_recap_20261024_gradient_uncert",
+      "stamp": "894b9278",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_001",
+      "stamp": "b59e3478",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_002",
+      "stamp": "93d7e528",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_003",
+      "stamp": "95eed8a2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_004",
+      "stamp": "59314e95",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_005",
+      "stamp": "83e5338f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_006",
+      "stamp": "16c00c44",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_008",
+      "stamp": "b64ccc9b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_011",
+      "stamp": "eccc6628",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_012",
+      "stamp": "e6d717b7",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_013",
+      "stamp": "9571b2e5",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_014",
+      "stamp": "0c96068f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_015",
+      "stamp": "dbb4993b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_016",
+      "stamp": "37470778",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_017",
+      "stamp": "de7a0c00",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_018",
+      "stamp": "b40cbe66",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_019",
+      "stamp": "47904922",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_020",
+      "stamp": "e003a14c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_021",
+      "stamp": "85db2e7f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_014",
+      "stamp": "959e2929",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_015",
+      "stamp": "c97d7e97",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_016",
+      "stamp": "ed07f54c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_017",
+      "stamp": "4620771b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_018",
+      "stamp": "7096679e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_005",
+      "stamp": "b0c1086d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_006",
+      "stamp": "bf296811",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_007",
+      "stamp": "23f3f5e2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_008",
+      "stamp": "3a63f337",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_009",
+      "stamp": "3a5196c2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_010",
+      "stamp": "30c41251",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_011",
+      "stamp": "c28a0485",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_012",
+      "stamp": "5a249006",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_013",
+      "stamp": "1733f19f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_014",
+      "stamp": "6f9909c6",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_015",
+      "stamp": "9609e27c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_016",
+      "stamp": "c8dada28",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_cloze_001",
+      "stamp": "75079f1e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_083",
+      "stamp": "276c5434",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_084",
+      "stamp": "2f1e44db",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_085",
+      "stamp": "d4ce8e36",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_086",
+      "stamp": "53e6e13e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_087",
+      "stamp": "c5da7617",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_090",
+      "stamp": "8ce15c3d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_067",
+      "stamp": "3e9f851f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_068",
+      "stamp": "85c39a74",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_071",
+      "stamp": "a3f068be",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v128_072",
+      "stamp": "9748e3c8",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_001",
+      "stamp": "2bccf35f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_002",
+      "stamp": "477266a2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_003",
+      "stamp": "c1af86ae",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_004",
+      "stamp": "bf16680e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_005",
+      "stamp": "6016d717",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_006",
+      "stamp": "dba1effd",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_007",
+      "stamp": "6afb602b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_008",
+      "stamp": "94fd9b43",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_009",
+      "stamp": "047b2ba6",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_033",
+      "stamp": "6d70ef8b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_034",
+      "stamp": "d3520580",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_076",
+      "stamp": "c70a1d88",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v160_004",
+      "stamp": "1555e42f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v160_005",
+      "stamp": "e294d26b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v160_006",
+      "stamp": "8f757814",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_photoelectric_001",
+      "stamp": "8c96d3f5",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_photoelectric_002",
+      "stamp": "3a98cc39",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_specific_charge",
+      "stamp": "4329a386",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_nuclide",
+      "stamp": "c4bd709f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_antiparticle",
+      "stamp": "447e21d8",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_annihilation",
+      "stamp": "816f04a9",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pair_production",
+      "stamp": "92d0ee0c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_hadrons",
+      "stamp": "ccb5a3db",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_baryon_meson",
+      "stamp": "d8410b45",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_proton_quarks",
+      "stamp": "d77fcfc9",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_neutron_quarks",
+      "stamp": "f73712e2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pion_plus",
+      "stamp": "7e3fc53b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_conservation_particle",
+      "stamp": "05f0ef8b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_photon_energy",
+      "stamp": "7fc4b36c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_debroglie",
+      "stamp": "5cf23e2d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_photoelectric_effect_19",
+      "stamp": "c2b4a314",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_photoelectric_effect_20",
+      "stamp": "ea3b60b3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_baryon_definition",
+      "stamp": "0d5c968e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_meson_definition",
+      "stamp": "17e35831",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_lepton_definition",
+      "stamp": "d4d43cc4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_baryon_stability",
+      "stamp": "afc28aa4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_lepton_examples",
+      "stamp": "7cfb5698",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_muon_decay",
+      "stamp": "09b8736e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_pion_exchange_role",
+      "stamp": "6c77376e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kaon_decay",
+      "stamp": "49e39b3f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_four_forces",
+      "stamp": "5c183d61",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_strong_between",
+      "stamp": "bf3da6b9",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_electromagnetic",
+      "stamp": "a1943a20",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_weak_bosons",
+      "stamp": "2c00df61",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_gravity",
+      "stamp": "a0944175",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_short_range",
+      "stamp": "1b3c4234",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_feynman_exchange",
+      "stamp": "a69855e4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_strong_range",
+      "stamp": "82e93451",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_simple_feynman",
+      "stamp": "244261ba",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_pion_minus_structure",
+      "stamp": "d8b11897",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_pion_neutral",
+      "stamp": "547f075f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_pion_charge",
+      "stamp": "740659af",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kplus_structure",
+      "stamp": "ef455786",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kminus_structure",
+      "stamp": "0dbcffa5",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kzero_structure",
+      "stamp": "417b5f73",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_antizero_structure",
+      "stamp": "2bf11ab3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kplus_strange",
+      "stamp": "f3eed69d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kminus_strange",
+      "stamp": "92e4ee45",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kcharges",
+      "stamp": "2a0b3416",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_equation",
+      "stamp": "08ca472a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_equation",
+      "stamp": "d472d74a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_electron_capture",
+      "stamp": "86f105e5",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_numbers",
+      "stamp": "0490dff4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_numbers",
+      "stamp": "e752c10a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_change",
+      "stamp": "965d5673",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_change",
+      "stamp": "2f47fa60",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_antinu",
+      "stamp": "7e5dca4e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_nu",
+      "stamp": "4d48ab6a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_strong_pairs",
+      "stamp": "5eec5594",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_strangeness_weak",
+      "stamp": "af14d990",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_strange_lifetime",
+      "stamp": "69381277",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_work_function",
+      "stamp": "36e44d82",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_threshold_frequency",
+      "stamp": "82cfef82",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_photo_eq",
+      "stamp": "f710ad71",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_threshold_eq",
+      "stamp": "a66334f1",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_intensity_fixed_f",
+      "stamp": "ad7c7ab7",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_frequency_fixed_i",
+      "stamp": "b382c910",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_instant_emission",
+      "stamp": "f2c46b1c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_stopping_eq",
+      "stamp": "43482e6f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_kef_gradient",
+      "stamp": "d6174e03",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_stopping_gradient",
+      "stamp": "4f56cbc5",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_threshold_wavelength",
+      "stamp": "8dd369fa",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_emission_photon",
+      "stamp": "3732e1e9",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_discrete_lines",
+      "stamp": "5d9fa813",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_absorption_lines",
+      "stamp": "07f5aac3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_beta_minus",
+      "stamp": "0ac31177",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_beta_plus",
+      "stamp": "52cee154",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_capture",
+      "stamp": "0f07b8fe",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_em",
+      "stamp": "1dd80234",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_pion",
+      "stamp": "4eae9913",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_annihilation",
+      "stamp": "be0c72d3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_pair",
+      "stamp": "11e79856",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_photoelectric",
+      "stamp": "a31fb492",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_energy_levels",
+      "stamp": "7def163b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_electron_diffraction",
+      "stamp": "d9ea7a06",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_pandr_v29_sketch_emission_lines",
+      "stamp": "a546b4c7",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_appearance",
+      "stamp": "541cf5d4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_absorb_frequencies",
+      "stamp": "e2d395d4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_matching_lines",
+      "stamp": "8e4d694d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_element_fingerprint",
+      "stamp": "0c017f5a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_negative_levels",
+      "stamp": "0bc98f89",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_gap_wavelength",
+      "stamp": "bc834101",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_accelerate_electrons",
+      "stamp": "f86df1b0",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_collision_excitation",
+      "stamp": "2f6dc0f7",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_uv_origin",
+      "stamp": "b8aee9b0",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_tube_sequence",
+      "stamp": "90f11784",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_classical_failure",
+      "stamp": "63c8c1a8",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_ke_range",
+      "stamp": "b0638216",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_intensity_stopping",
+      "stamp": "81969119",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_below_threshold_graph",
+      "stamp": "2ae0f446",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_spectra_photo_v32_max_speed",
+      "stamp": "6746b271",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_023",
+      "stamp": "d2224177",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_024",
+      "stamp": "0580e5d0",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_025",
+      "stamp": "06327434",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_026",
+      "stamp": "89ec5df2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_028",
+      "stamp": "a9870cd8",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_029",
+      "stamp": "99154f43",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_030",
+      "stamp": "fbb303e6",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_031",
+      "stamp": "dfd97406",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_032",
+      "stamp": "934356c2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_033",
+      "stamp": "a993ea56",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_017",
+      "stamp": "1e93d95b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_018",
+      "stamp": "4ab0b1a7",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_019",
+      "stamp": "c746cbf3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_020",
+      "stamp": "7564446f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_021",
+      "stamp": "f8d0437e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_022",
+      "stamp": "ba84c38f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_023",
+      "stamp": "9331cf7e",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_024",
+      "stamp": "488b1c44",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_025",
+      "stamp": "6d9e131c",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_026",
+      "stamp": "82d36755",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_027",
+      "stamp": "8ef38a97",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_028",
+      "stamp": "a135f2f2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_030",
+      "stamp": "18db777b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_031",
+      "stamp": "97c68fed",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_032",
+      "stamp": "75ed9fe4",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_033",
+      "stamp": "eb4d712f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_cloze_002",
+      "stamp": "2feaaf0a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_010",
+      "stamp": "fda60130",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_011",
+      "stamp": "aee12c92",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_012",
+      "stamp": "0d849392",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_013",
+      "stamp": "944a2c70",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_014",
+      "stamp": "91b53649",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_015",
+      "stamp": "52648fb2",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_016",
+      "stamp": "24ed87e8",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_017",
+      "stamp": "960e718a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_018",
+      "stamp": "2dd0cf85",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_019",
+      "stamp": "ed1bc349",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_020",
+      "stamp": "b337e0dc",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_021",
+      "stamp": "732eb78f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_022",
+      "stamp": "1c433030",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_035",
+      "stamp": "df53a74f",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_036",
+      "stamp": "4b6882a3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_037",
+      "stamp": "17053d88",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_077",
+      "stamp": "71305d95",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_078",
+      "stamp": "b297e8b3",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_079",
+      "stamp": "f043758a",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v138_002",
+      "stamp": "21bc89f5",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v138_003",
+      "stamp": "92b96438",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v142_001",
+      "stamp": "b2a4c8a9",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v142_002",
+      "stamp": "ff1037ee",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v142_003",
+      "stamp": "fc357330",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v142_004",
+      "stamp": "cfade7bf",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v142_008",
+      "stamp": "3454de0b",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v160_001",
+      "stamp": "b4006223",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v160_002",
+      "stamp": "b6e57609",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v160_003",
+      "stamp": "fd7d9b9d",
+      "stage": "AS",
+      "level": "first_content_scope_pass"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "task1_phy_008",
+      "issue": "Ω m is derived SI unit, not expression solely in SI base units.",
+      "status": "corrected"
+    },
+    {
+      "id": "task1_v124_bulk_phy_025",
+      "issue": "AQA explicitly excludes recall of Z0; require W+ and W- only.",
+      "status": "corrected"
+    }
+  ],
+  "fullSpecificationSignedOff": false
+}
