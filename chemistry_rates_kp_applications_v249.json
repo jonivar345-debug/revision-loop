@@ -1,0 +1,737 @@
+{
+  "version": "v249",
+  "createdAt": "2026-10-31",
+  "scope": "School-taught A2 Chemistry mock ONLY: AQA 3.1.9 Rate equations and 3.1.10 Kp, through Kp; excludes buffers and later untaught topics",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "notes": "Original recall and numerical application prompts supplement v210 and core chemistry. Does not prove live examiner marking on unseen full-paper answers.",
+  "cards": [
+    {
+      "id": "task1_v249_chem_rates_kp_01",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Rate = k[A]²[B]. If [A] doubles and [B] stays constant, by what factor does rate change?",
+      "back": "4.",
+      "accept": [
+        "4.",
+        "four",
+        "four times"
+      ],
+      "reject": [
+        "2.",
+        "8."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_02",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Rate = k[A]²[B]. If both [A] and [B] double, by what factor does rate change?",
+      "back": "8.",
+      "accept": [
+        "8.",
+        "eight",
+        "eight times"
+      ],
+      "reject": [
+        "4.",
+        "16."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_03",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Doubling [A] while keeping other concentrations constant doubles the initial rate. What is the order in A?",
+      "back": "First order.",
+      "accept": [
+        "First order.",
+        "1",
+        "order 1"
+      ],
+      "reject": [
+        "Second order.",
+        "Zero order."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_04",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Doubling [A] while keeping other concentrations constant quadruples rate. What is the order in A?",
+      "back": "Second order.",
+      "accept": [
+        "Second order.",
+        "2",
+        "order 2"
+      ],
+      "reject": [
+        "First order.",
+        "Zero order."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_05",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Changing [B] leaves the initial rate unchanged when all else is constant. What is the order in B?",
+      "back": "Zero order.",
+      "accept": [
+        "Zero order.",
+        "0",
+        "order 0"
+      ],
+      "reject": [
+        "First order.",
+        "Second order."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_06",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What are the units of k for a zero-order reaction, with rate in mol dm⁻³ s⁻¹?",
+      "back": "mol dm⁻³ s⁻¹.",
+      "accept": [
+        "mol dm⁻³ s⁻¹.",
+        "mol dm^-3 s^-1",
+        "mol per cubic decimetre per second"
+      ],
+      "reject": [
+        "s⁻¹.",
+        "dm³ mol⁻¹ s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_07",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What are the units of k for an overall first-order reaction?",
+      "back": "s⁻¹.",
+      "accept": [
+        "s⁻¹.",
+        "s^-1",
+        "per second"
+      ],
+      "reject": [
+        "mol dm⁻³ s⁻¹.",
+        "dm³ mol⁻¹ s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_08",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What are the units of k for an overall second-order reaction?",
+      "back": "dm³ mol⁻¹ s⁻¹.",
+      "accept": [
+        "dm³ mol⁻¹ s⁻¹.",
+        "dm^3 mol^-1 s^-1",
+        "cubic decimetre per mole per second"
+      ],
+      "reject": [
+        "s⁻¹.",
+        "mol dm⁻³ s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_09",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For rate = k[A][B]², what is the overall order?",
+      "back": "3.",
+      "accept": [
+        "3.",
+        "third order",
+        "order 3"
+      ],
+      "reject": [
+        "2.",
+        "1."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_10",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For rate = k[A][B]², what are the units of k?",
+      "back": "dm⁶ mol⁻² s⁻¹.",
+      "accept": [
+        "dm⁶ mol⁻² s⁻¹.",
+        "dm^6 mol^-2 s^-1",
+        "dm6 mol-2 s-1"
+      ],
+      "reject": [
+        "dm³ mol⁻¹ s⁻¹.",
+        "s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_11",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For rate = k[A]², k = 2.0 dm³ mol⁻¹ s⁻¹ and [A] = 0.020 mol dm⁻³. Calculate rate.",
+      "back": "8.0 × 10⁻⁴ mol dm⁻³ s⁻¹.",
+      "accept": [
+        "8.0 × 10⁻⁴ mol dm⁻³ s⁻¹.",
+        "0.00080 mol dm^-3 s^-1",
+        "8e-4 mol dm-3 s-1"
+      ],
+      "reject": [
+        "0.040 mol dm⁻³ s⁻¹.",
+        "0.00040 mol dm⁻³ s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_12",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Rate = k[A]. Rate is 0.012 mol dm⁻³ s⁻¹ at [A] = 0.20 mol dm⁻³. Find k.",
+      "back": "0.060 s⁻¹.",
+      "accept": [
+        "0.060 s⁻¹.",
+        "0.06 s^-1",
+        "6.0 × 10⁻² s⁻¹"
+      ],
+      "reject": [
+        "0.0024 s⁻¹.",
+        "16.7 s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_13",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a zero-order reaction, what is the shape of a concentration–time graph?",
+      "back": "Straight line with a negative gradient.",
+      "accept": [
+        "Straight line with a negative gradient.",
+        "A downward straight line.",
+        "Concentration decreases linearly with time."
+      ],
+      "reject": [
+        "A constant upward curve.",
+        "A straight line with a positive gradient."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_14",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At an instant a reactant concentration–time tangent has gradient −0.0050 mol dm⁻³ s⁻¹. Give the rate of disappearance.",
+      "back": "0.0050 mol dm⁻³ s⁻¹.",
+      "accept": [
+        "0.0050 mol dm⁻³ s⁻¹.",
+        "5.0 × 10⁻³ mol dm⁻³ s⁻¹",
+        "positive 0.0050 mol per cubic decimetre per second"
+      ],
+      "reject": [
+        "−0.0050 mol dm⁻³ s⁻¹.",
+        "0.050 mol dm⁻³ s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_15",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The ln k vs 1/T graph has gradient −6000 K. Using R = 8.31 J mol⁻¹ K⁻¹, calculate Ea in kJ mol⁻¹.",
+      "back": "49.9 kJ mol⁻¹.",
+      "accept": [
+        "49.9 kJ mol⁻¹.",
+        "49.86 kJ mol^-1",
+        "approximately 50 kJ mol^-1"
+      ],
+      "reject": [
+        "−49.9 kJ mol⁻¹.",
+        "721 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_16",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "On a graph of ln k against 1/T, what is the gradient in terms of Ea and R?",
+      "back": "−Ea/R.",
+      "accept": [
+        "−Ea/R.",
+        "-Ea/R",
+        "negative activation energy divided by gas constant"
+      ],
+      "reject": [
+        "+Ea/R.",
+        "−R/Ea."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_17",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Does the Arrhenius temperature T use kelvin or degrees Celsius?",
+      "back": "Kelvin.",
+      "accept": [
+        "Kelvin.",
+        "K",
+        "absolute temperature in kelvin"
+      ],
+      "reject": [
+        "Degrees Celsius.",
+        "Either temperature scale without conversion."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_18",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Rate equations",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Rate equations",
+      "specRef": "3.1.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a given uncatalysed reaction, what happens to k when temperature increases?",
+      "back": "k increases.",
+      "accept": [
+        "k increases.",
+        "The rate constant rises.",
+        "k becomes larger."
+      ],
+      "reject": [
+        "k decreases.",
+        "k stays constant regardless of temperature."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_19",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At equilibrium, gas X has mole fraction 0.25 and total pressure is 400 kPa. Find its partial pressure.",
+      "back": "100 kPa.",
+      "accept": [
+        "100 kPa.",
+        "100 kilopascals",
+        "0.25 × 400 = 100 kPa"
+      ],
+      "reject": [
+        "1600 kPa.",
+        "25 kPa."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_20",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An equilibrium mixture has 2 mol A and 6 mol B. Find mole fraction of A.",
+      "back": "0.25.",
+      "accept": [
+        "0.25.",
+        "1/4",
+        "2/(2+6)=0.25"
+      ],
+      "reject": [
+        "0.75.",
+        "2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_21",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write Kp for 2SO₂(g)+O₂(g) ⇌ 2SO₃(g) in terms of partial pressures.",
+      "back": "p(SO₃)²/[p(SO₂)²p(O₂)].",
+      "accept": [
+        "p(SO₃)²/[p(SO₂)²p(O₂)].",
+        "(pSO3)^2/((pSO2)^2*pO2)",
+        "partial pressure SO3 squared over SO2 squared times O2"
+      ],
+      "reject": [
+        "p(SO₂)²p(O₂)/p(SO₃)².",
+        "p(SO₃)/p(SO₂)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_22",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For A(g) ⇌ 2B(g), pA = 80 kPa and pB = 40 kPa. Calculate Kp with its unit.",
+      "back": "20 kPa.",
+      "accept": [
+        "20 kPa.",
+        "20 kilopascals",
+        "40²/80=20 kPa"
+      ],
+      "reject": [
+        "0.050 kPa⁻¹.",
+        "20 kPa⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_23",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For A(g)+B(g) ⇌ 2C(g), pA=40 kPa, pB=20 kPa, pC=60 kPa. Find Kp.",
+      "back": "4.5.",
+      "accept": [
+        "4.5.",
+        "4.5 (dimensionless)",
+        "60²/(40×20)=4.5"
+      ],
+      "reject": [
+        "0.22.",
+        "90."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_24",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For 2NO₂(g) ⇌ N₂O₄(g), what are the units of Kp if partial pressures are in kPa?",
+      "back": "kPa⁻¹.",
+      "accept": [
+        "kPa⁻¹.",
+        "1/kPa",
+        "per kilopascal"
+      ],
+      "reject": [
+        "kPa.",
+        "kPa²."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_25",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For an exothermic forward gaseous equilibrium, what happens to Kp when temperature rises?",
+      "back": "Kp decreases.",
+      "accept": [
+        "Kp decreases.",
+        "The equilibrium constant Kp falls.",
+        "The Kp value becomes smaller."
+      ],
+      "reject": [
+        "Kp increases.",
+        "Kp is unchanged whenever temperature changes."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_26",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Does changing total pressure change Kp when temperature is constant?",
+      "back": "No, Kp remains unchanged.",
+      "accept": [
+        "No, Kp remains unchanged.",
+        "Kp is constant at fixed temperature.",
+        "No change in the equilibrium constant."
+      ],
+      "reject": [
+        "Yes, pressure increases Kp.",
+        "Yes, pressure decreases Kp."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_27",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For 2A(g) ⇌ B(g), which side is favoured by increasing pressure at fixed T?",
+      "back": "The B (right-hand) side.",
+      "accept": [
+        "The B (right-hand) side.",
+        "The side with fewer gas moles, B.",
+        "The products side."
+      ],
+      "reject": [
+        "The A (left-hand) side.",
+        "Neither side because pressure can never shift equilibrium."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v249_chem_rates_kp_28",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For A(g)+B(g) ⇌ C(g)+D(g), does increasing pressure shift equilibrium, assuming ideal gases?",
+      "back": "No change in equilibrium position.",
+      "accept": [
+        "No change in equilibrium position.",
+        "No shift; gaseous mole totals are equal.",
+        "It does not favour either side."
+      ],
+      "reject": [
+        "Shifts to products.",
+        "Shifts to reactants."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
