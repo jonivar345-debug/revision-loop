@@ -1,0 +1,356 @@
+{
+  "version": "v237",
+  "date": "2026-10-31",
+  "scope": "AQA 7405 AS 3.1.3.1–3.1.3.7 Bonding; school mock",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "basis": "Official AQA left-column assessable subject content, not optional right-column exemplifications.",
+  "level": "29 separately mapped assessable bonding concepts/skills, supported by 60 distinct reviewed original core-card IDs and seven new diagram-convention recall cards. Each mapping is selected evidence, not an independent review of every bonding card or of actual diagram drawing.",
+  "coreTopicLabelInventory": {
+    "Bonding": 67,
+    "Shapes": 44,
+    "Crystal structures": 22,
+    "Bond polarity": 17,
+    "Intermolecular forces": 30,
+    "total": 180
+  },
+  "coreDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "requirements": [
+    {
+      "specRef": "3.1.3.1",
+      "assessableRecallOrSkill": "ionic electrostatic lattice attraction",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_01"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.1",
+      "assessableRecallOrSkill": "compound-ion formulas and charges",
+      "coreEvidenceIds": [
+        "chem_bonding_v52_01",
+        "chem_bonding_v52_02",
+        "chem_bonding_v52_03",
+        "chem_bonding_v52_04",
+        "chem_bonding_v52_05"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.1",
+      "assessableRecallOrSkill": "predict charges from periodic group",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_03",
+        "chem_bonding_v47_04"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.1",
+      "assessableRecallOrSkill": "charge-balanced ionic formulae",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_07",
+        "chem_bonding_v47_08"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.2",
+      "assessableRecallOrSkill": "single covalent shared electron pair",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_10"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.2",
+      "assessableRecallOrSkill": "multiple bonds use additional shared pairs",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_11"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.2",
+      "assessableRecallOrSkill": "coordinate bond electron-pair origin",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_12"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.2",
+      "assessableRecallOrSkill": "draw covalent bonds using line and coordinate bonds using directed arrow",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_13"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null,
+      "supplementEvidenceIds": [
+        "task1_v237_chem_bond_diagram_01"
+      ]
+    },
+    {
+      "specRef": "3.1.3.3",
+      "assessableRecallOrSkill": "positive lattice ions and delocalised electrons",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_17"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "recognise four crystal classes",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_21"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "explain diamond/graphite crystal structures",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_27",
+        "chem_bonding_v47_30"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "explain ice/iodine molecular crystals",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_34",
+        "chem_bonding_v47_36"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "explain magnesium and sodium chloride lattice structures",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_40",
+        "chem_bonding_v47_23"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "relate structure to melting point and conductivity",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_24",
+        "chem_bonding_v47_26",
+        "chem_bonding_v47_29",
+        "chem_bonding_v47_31"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "changes of state involve intermolecular or lattice interaction energy",
+      "coreEvidenceIds": [
+        "chem_bonding_v47_35",
+        "chem_bonding_v47_38",
+        "chem_bonding_v47_39"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.4",
+      "assessableRecallOrSkill": "draw crystal diagrams with specified numbers of particles",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified",
+      "gap": "Requires separate authentic diagram-drawing question and mark-scheme/manual diagram review; seven v237 recall prompts address sketch conventions, not drawing competence.",
+      "supplementEvidenceIds": [
+        "task1_v237_chem_bond_diagram_02",
+        "task1_v237_chem_bond_diagram_03",
+        "task1_v237_chem_bond_diagram_04",
+        "task1_v237_chem_bond_diagram_05",
+        "task1_v237_chem_bond_diagram_06",
+        "task1_v237_chem_bond_diagram_07"
+      ]
+    },
+    {
+      "specRef": "3.1.3.5",
+      "assessableRecallOrSkill": "electron-domain repulsion and spatial arrangement",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_01"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.5",
+      "assessableRecallOrSkill": "lone-lone greater than lone-bond greater than bond-bond",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_02"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.5",
+      "assessableRecallOrSkill": "shapes and angles with two to four domains, with and without lone pairs",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_04",
+        "chem_bonding_v48_05",
+        "chem_bonding_v48_07",
+        "chem_bonding_v48_08",
+        "chem_bonding_v48_09"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.5",
+      "assessableRecallOrSkill": "shapes and angles with five or six domains",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_14",
+        "chem_bonding_v48_16",
+        "chem_bonding_v48_18",
+        "chem_bonding_v48_20"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.5",
+      "assessableRecallOrSkill": "effect of lone pairs on ideal bond angles",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_12",
+        "chem_bonding_v48_13"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.6",
+      "assessableRecallOrSkill": "electronegativity",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_23"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.6",
+      "assessableRecallOrSkill": "partial charge marking on polar bonds",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_24",
+        "chem_bonding_v48_25"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.6",
+      "assessableRecallOrSkill": "polarity and bond-dipole cancellation",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_26",
+        "chem_bonding_v48_29",
+        "chem_bonding_v48_30"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.7",
+      "assessableRecallOrSkill": "induced, permanent and hydrogen-bond force types",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_31"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.7",
+      "assessableRecallOrSkill": "origin and size of induced attractions",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_32",
+        "chem_bonding_v48_33",
+        "chem_bonding_v48_34"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.7",
+      "assessableRecallOrSkill": "permanent dipole forces and hydrogen-bond requirements",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_36",
+        "chem_bonding_v48_37",
+        "chem_bonding_v48_38"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.7",
+      "assessableRecallOrSkill": "hydrogen bonding and lower density of ice",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_43",
+        "chem_bonding_v48_44"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    },
+    {
+      "specRef": "3.1.3.7",
+      "assessableRecallOrSkill": "anomalous boiling points and intermolecular force explanations",
+      "coreEvidenceIds": [
+        "chem_bonding_v48_40",
+        "chem_bonding_v48_41",
+        "chem_bonding_v48_46"
+      ],
+      "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
+      "gap": null
+    }
+  ],
+  "clarifiedOldCards": [
+    {
+      "id": "chem_shape_linear",
+      "originalFront": "What bond angle is expected for two electron pairs around a central atom?",
+      "newFront": "For exactly two bonding regions and no lone pairs around the central atom, what is the bond angle?",
+      "back": "180°."
+    },
+    {
+      "id": "chem_shape_trig",
+      "originalFront": "What bond angle is expected for three bonding pairs around a central atom?",
+      "newFront": "For exactly three bonding regions and no lone pairs around the central atom, what is the bond angle?",
+      "back": "120°."
+    },
+    {
+      "id": "chem_shape_tetra",
+      "originalFront": "What bond angle is expected for four bonding pairs?",
+      "newFront": "For exactly four bonding regions and no lone pairs around the central atom, what is the bond angle?",
+      "back": "109.5°."
+    }
+  ],
+  "newRecall": "chemistry_bonding_diagram_recall_v237.json",
+  "newRecallCount": 7,
+  "openVerification": [
+    "Draw or label structures of six named AQA solids involving a specified number of particles, with manual marking or adequate diagram marking.",
+    "Confirm every assessment-relevant 3.1.3 question skill with original exam application and individual answers, not merely existence of topic-labelled cards.",
+    "Continue exhaustive scientific model answer review across the 180 labelled historic core cards and supplements.",
+    "Complete all Chemistry, Physics and Year 1 Pure Maths content reviews."
+  ],
+  "completion": {
+    "allSevenBondingSubsectionsRepresentedByCoreFlashcards": true,
+    "actualStructureDiagramCompetenceVerified": false,
+    "allBondingCoreCardsSemanticallyCertified": false,
+    "fullChemistryMockVerified": false,
+    "fullThreeSubjectMockVerified": false
+  }
+}

@@ -22,8 +22,8 @@ assert.equal(judge(deck.cards.find(c=>c.id==='maths_transform_003'),'1 over a').
 assert.equal(judge(deck.cards.find(c=>c.id==='maths_transform_003'),'scale factor a').status,'wrong');
 assert.equal(audit.results.unexpectedResults,0);
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(urls.length,27);
-const supplements=urls.flatMap(path=>json(path).cards||[]);
+assert(urls.length>=27,'Historical first 27 supplement banks missing');
+const supplements=urls.slice(0,27).flatMap(path=>json(path).cards||[]);
 assert.equal(supplements.length,262);
 let supplementModels=0,supplementAccepts=0,supplementRejects=0;
 for(const c of supplements){

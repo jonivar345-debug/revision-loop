@@ -30,7 +30,7 @@ assert(corrected.front.includes('relative measure'));
 assert(corrected.back.includes('concentration change'));
 assert(app.includes('applyV221RpCorrections(cards);'));
 assert(app.includes('applyV220IonTestCorrections(cards);'));
-assert(app.includes('cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));'));
+assert(app.includes('applyV219TofCorrections(applyV217LegacyChemistryCorrections('), 'Historical TOF correction must remain nested after v217; later correction wrappers are allowed');
 const other=['chemistry_mock_recall_v189.json','chemistry_mock_recall_v193.json','chemistry_mock_recall_v195.json','chemistry_mock_recall_v196.json','chemistry_mock_recall_v199.json','chemistry_rates_rp7_recall_v210.json','chemistry_rp4_recall_v215.json','chemistry_as_measurement_recall_v218.json','chemistry_tof_precision_recall_v219.json','chemistry_ion_tests_recall_v220.json'];
 const old=[...deck.cards,...other.flatMap(p=>json(p).cards||[])];
 const oldIds=new Set(old.map(c=>c.id)),oldPrompts=new Set(old.filter(c=>c.subject==='Chemistry').map(c=>String(c.front).trim().toLowerCase()));

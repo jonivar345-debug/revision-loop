@@ -24,7 +24,7 @@ const fixed=correct(orig.map(c=>({...c})));
 const altered=fixed.filter((c,i)=>JSON.stringify(c)!==JSON.stringify(orig[i])).map(c=>c.id).sort();
 assert.deepEqual(altered,['chem_atomic_v43_14','task1_v130_073','task1_v130_074'].sort());
 assert.deepEqual(fixed.map(c=>c.id),orig.map(c=>c.id));
-assert(app.includes('cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));'));
+assert(app.includes('applyV219TofCorrections(applyV217LegacyChemistryCorrections('),'Historical TOF v219 corrections must remain in the core loading pipeline');
 const byId=new Map(fixed.map(c=>[c.id,c]));
 assert(byId.get('chem_atomic_v43_14').front.includes('five stages'));
 assert(byId.get('chem_atomic_v43_14').back==='Ionisation → acceleration → ion drift → ion detection → data analysis.');
