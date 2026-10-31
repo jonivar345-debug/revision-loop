@@ -4,7 +4,7 @@
   "scope": "AQA 7405 AS 3.1.3.1–3.1.3.7 Bonding; school mock",
   "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
   "basis": "Official AQA left-column assessable subject content, not optional right-column exemplifications.",
-  "level": "Selected original core flashcards mapped to 29 assessable outcomes, their source front/backs reviewed for the stated concept. Not every existing bonding card reviewed or all application questions verified.",
+  "level": "29 separately mapped assessable bonding concepts/skills, supported by 60 distinct reviewed original core-card IDs and seven new diagram-convention recall cards. Each mapping is selected evidence, not an independent review of every bonding card or of actual diagram drawing.",
   "coreTopicLabelInventory": {
     "Bonding": 67,
     "Shapes": 44,
@@ -91,7 +91,10 @@
         "chem_bonding_v47_13"
       ],
       "reviewLevel": "mapped card identity and inspected original answer; application/exhaustive correctness not certified",
-      "gap": null
+      "gap": null,
+      "supplementEvidenceIds": [
+        "task1_v237_chem_bond_diagram_01"
+      ]
     },
     {
       "specRef": "3.1.3.3",
@@ -169,7 +172,15 @@
       "assessableRecallOrSkill": "draw crystal diagrams with specified numbers of particles",
       "coreEvidenceIds": [],
       "reviewLevel": "application_unverified",
-      "gap": "Requires separate authentic diagram-drawing question and mark-scheme/manual diagram review; seven v237 recall prompts address sketch conventions, not drawing competence."
+      "gap": "Requires separate authentic diagram-drawing question and mark-scheme/manual diagram review; seven v237 recall prompts address sketch conventions, not drawing competence.",
+      "supplementEvidenceIds": [
+        "task1_v237_chem_bond_diagram_02",
+        "task1_v237_chem_bond_diagram_03",
+        "task1_v237_chem_bond_diagram_04",
+        "task1_v237_chem_bond_diagram_05",
+        "task1_v237_chem_bond_diagram_06",
+        "task1_v237_chem_bond_diagram_07"
+      ]
     },
     {
       "specRef": "3.1.3.5",
