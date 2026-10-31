@@ -11,7 +11,7 @@ assert.equal(a.inventoryByTopic['Measurements & errors'],3);
 const orig=new Map(a.coreFirstPass.map(c=>[c.id,c]));assert.equal(orig.size,75);
 for(const c of core){const old=orig.get(c.id);assert(old,'Missing original ID '+c.id);assert.equal(old.topic,c.topic);assert.equal(old.originalFront,c.front);assert.equal(old.originalBack,c.back);}
 const refs=new Set(),selected=new Set();
-for(const row of a.requirements){assert(/^3\\.1\\.[123]$/.test(row.specRef),'Unsupported section '+row.specRef);refs.add(row.specRef);for(const id of row.coreEvidenceIds){assert(orig.has(id),'Unknown evidence '+id);selected.add(id);}if(!row.coreEvidenceIds.length)assert.equal(row.reviewLevel,'application_unverified_in_selected_75_core_cards');}
+for(const row of a.requirements){assert(/^3\.1\.[123]$/.test(row.specRef),'Unsupported section '+row.specRef);refs.add(row.specRef);for(const id of row.coreEvidenceIds){assert(orig.has(id),'Unknown evidence '+id);selected.add(id);}if(!row.coreEvidenceIds.length)assert.equal(row.reviewLevel,'application_unverified_in_selected_75_core_cards');}
 assert.equal(a.requirements.length,27);assert.equal(refs.size,3);assert(selected.size>=35);
 assert.equal(a.requirements.filter(x=>!x.coreEvidenceIds.length).length,3);
 assert.equal(a.completion.threeMeasurementsSubsectionsMapped,true);
