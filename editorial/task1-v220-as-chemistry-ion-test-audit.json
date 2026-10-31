@@ -1,0 +1,63 @@
+{
+  "version": "v220",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1: AS Chemistry Group 2 / Group 7 / Required practical 4 recall correctness and gaps",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry",
+    "https://filestore.aqa.org.uk/resources/chemistry/AQA-7404-7405-PHBK.PDF"
+  ],
+  "reviewMethod": "Screened 155 active AS mock Group 2, Group 7 and RP4 Ion tests core cards, cross-checking core and supplemental recall against AQA 7405. Corrected three misleading or incomplete conceptual prompts and added five nonduplicative short facts. No detailed experimental instructions.",
+  "scope": {
+    "coreCardsScreened": 155,
+    "coreGroup2": 61,
+    "coreGroup7": 77,
+    "coreRP4": 17,
+    "coreDeckCount": 3345,
+    "coreExamBankCount": 1268
+  },
+  "originalCoreDeckChanged": false,
+  "patches": [
+    {
+      "id": "task1_chem_089",
+      "issue": "Clarify why carbonate and sulfate can both give white insoluble barium salts, without describing laboratory procedure."
+    },
+    {
+      "id": "task1_chem_105",
+      "issue": "Refocus the former acidification prompt on identifying carbonate as an interfering ion that can form a silver precipitate."
+    },
+    {
+      "id": "chem_y1_chat_v126_096",
+      "issue": "Identify the oxygen-forming chlorine-water equation as photochemical, distinguishing it from the usual disproportionation equation."
+    }
+  ],
+  "newCardIds": [
+    "task1_v220_chem_ion_01",
+    "task1_v220_chem_ion_02",
+    "task1_v220_chem_ion_03",
+    "task1_v220_chem_ion_04",
+    "task1_v220_chem_ion_05"
+  ],
+  "avoidedExistingTopics": [
+    "AgCl/AgBr/AgI colours, dilute or concentrated ammonia solubility and simple halide identification",
+    "BaSO4 colour, sulfate test result and why sulfuric acid would give a false positive",
+    "Cl2 displacement and reaction with cold alkaline water",
+    "Group 2 solubility trends, carbonate-limewater and ammonium test observations"
+  ],
+  "validation": [
+    "Actual live app short-answer evaluator invoked against every accepted and rejected answer",
+    "Live flashcard supplement loader source evaluated with index 15",
+    "Existing progress keys, card IDs and first Maths mock checked",
+    "v217, v218 and v219 regressions retained"
+  ],
+  "progressKeysUnchanged": true,
+  "firstMathsMockUnchanged": true,
+  "task1Complete": false,
+  "fullSpecificationCertified": false,
+  "limitations": "Review and corrections are targeted to Group 2, Group 7 and RP4. Does not prove every Chemistry mock answer, model mark-scheme equivalence, or complete AQA paper coverage.",
+  "next": [
+    "Review practical 1-3 Chemistry core answers and equations for scope and errors",
+    "Audit remaining chemistry AS cards by content and mark-point acceptance",
+    "Check historic paper inventory and missing question sources"
+  ]
+}

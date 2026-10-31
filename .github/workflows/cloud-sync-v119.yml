@@ -24,6 +24,9 @@ on:
       - 'tests/task1-v218-chemistry-measurement-recall.cjs'
       - 'chemistry_tof_precision_recall_v219.json'
       - 'tests/task1-v219-chemistry-tof-precision.cjs'
+      - 'chemistry_ion_tests_recall_v220.json'
+      - 'tests/task1-v220-as-chemistry-ion-tests.cjs'
+      - 'editorial/task1-v220-as-chemistry-ion-test-audit.json'
       - 'editorial/task1-v219-chemistry-tof-precision-audit.json'
       - 'editorial/task1-v218-as-chemistry-measurement-audit.json'
       - 'editorial/task1-v217-chemistry-legacy-recall-fixes.json'
@@ -327,6 +330,7 @@ jobs:
       - run: node tests/task1-v217-chemistry-legacy-corrections.cjs
       - run: node tests/task1-v218-chemistry-measurement-recall.cjs
       - run: node tests/task1-v219-chemistry-tof-precision.cjs
+      - run: node tests/task1-v220-as-chemistry-ion-tests.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
