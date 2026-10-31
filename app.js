@@ -122,39 +122,40 @@ function applyV219TofCorrections(deckCards){
 /* v220 ion-test correction block start */
 const V220_ION_TEST_CORRECTIONS=Object.freeze({
   "task1_chem_089": {
-    "front": "Why is the barium-ion test for sulfate acidified?",
-    "back": "To prevent carbonate ions causing a misleading white barium carbonate precipitate.",
+    "front": "Why can carbonate ions give a false positive when sulfate is identified from a white barium precipitate?",
+    "back": "Carbonate also forms an insoluble white barium carbonate precipitate.",
     "accept": [
-      "To prevent carbonate ions causing a misleading white barium carbonate precipitate.",
-      "To remove carbonate interference.",
-      "It removes carbonate ions that might otherwise give a false positive.",
-      "To stop insoluble BaCO3 from being mistaken for BaSO4."
+      "Carbonate also forms an insoluble white barium carbonate precipitate.",
+      "Barium carbonate is an insoluble white solid.",
+      "Carbonate ions form white BaCO3.",
+      "Carbonate can produce a similar white barium precipitate."
     ],
     "reject": [
-      "To add more sulfate ions.",
-      "To produce silver halides.",
-      "Because BaSO4 is soluble in acid."
+      "Carbonate forms a blue barium compound.",
+      "Because BaSO4 is highly soluble.",
+      "Because sulfate ions turn litmus red."
     ],
     "strictRecall": true
   },
   "task1_chem_105": {
-    "front": "Why is the sample acidified before adding silver nitrate in a halide-ion test?",
-    "back": "To remove carbonate interference that could otherwise cause a false silver precipitate.",
+    "front": "Which interfering ion could cause a false positive in a silver-halide precipitate observation?",
+    "back": "Carbonate ions, CO₃²⁻, because silver carbonate can also precipitate.",
     "accept": [
-      "To remove carbonate interference that could otherwise cause a false silver precipitate.",
-      "To remove carbonate ions.",
-      "To prevent a false precipitate of silver carbonate.",
-      "To stop carbonate ions giving a false positive."
+      "Carbonate ions, CO₃²⁻, because silver carbonate can also precipitate.",
+      "Carbonate ions.",
+      "CO3^2-",
+      "Carbonate (CO₃²⁻)."
     ],
     "reject": [
-      "To add chloride ions.",
-      "To make silver chloride soluble.",
-      "To convert iodide into iodine."
+      "Chloride ions are always a contaminant.",
+      "Hydrogen ions.",
+      "Sulfate ions only.",
+      "A nitrate ion."
     ],
     "strictRecall": true
   },
   "chem_y1_chat_v126_096": {
-    "front": "What is the balanced equation for chlorine reacting with water to release oxygen under UV light?",
+    "front": "What is the balanced overall equation for the photochemical reaction of chlorine and water that releases oxygen?",
     "back": "2Cl₂ + 2H₂O → 4HCl + O₂.",
     "accept": [
       "2Cl₂ + 2H₂O → 4HCl + O₂.",
