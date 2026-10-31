@@ -1,0 +1,45 @@
+{
+  "version": "v226",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1 AQA Physics Waves audit: interference, diffraction, polarisation, stationary waves and electromagnetic waves",
+  "specification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "baseline": "editorial/task1-v159-waves-mock-audit.json",
+  "baselineReviewedStatements": 45,
+  "baselineFibreSupplement": "v225, 7 added flashcards and 10-mark original question",
+  "newCards": 13,
+  "newExamQuestions": 1,
+  "newExamMarks": 10,
+  "matchedSubsections": [
+    "3.3.1.2",
+    "3.3.1.3",
+    "3.3.2.1",
+    "3.3.2.2"
+  ],
+  "missingOrUnderemphasisedTopics": [
+    "Sound-source interference: coherent sources and constructive/destructive maxima and minima.",
+    "Electromagnetic/microwave interference as evidence of superposition.",
+    "Grating geometry path difference d sinθ and why bright orders occur at integer wavelengths.",
+    "Converting lines per mm to spacing and wavelength dependence of the grating angle.",
+    "Single-slit diffraction pattern and qualitative central-maximum width increase with wavelength.",
+    "Fixed stationary-wave nodes in successive snapshots and superposition of two opposite-progressive waves.",
+    "Transmission direction for ideal Polaroid and common vacuum speed for all electromagnetic waves."
+  ],
+  "preserve": {
+    "coreFlashcards": 3345,
+    "coreExamQuestions": 1268,
+    "coreFilesUntouched": true,
+    "originalCardAndQuestionIdsRetained": true,
+    "cloudProgressKeysUnchanged": true,
+    "mathsFirstMockYear1PureOnly": true,
+    "offlineCacheBumped": true
+  },
+  "limits": {
+    "completeASWavesSpecificationAudit": false,
+    "all2015to2026AQAQuestionsIndexed": false,
+    "task1Complete": false,
+    "sourceVerifiedPastPaper": false,
+    "markingSuggestionsAlwaysReviewable": true
+  },
+  "next": "Review remaining multi-wave graphs and experimental data interpretation in Years 1 Waves, then other mock Physics topics."
+}

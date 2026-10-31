@@ -1,0 +1,389 @@
+{
+  "version": "v226",
+  "createdAt": "2026-10-31",
+  "subject": "Physics",
+  "scope": "Thirteen original AQA Year 1 Physics Waves mock recall items, focusing on evidence and explanations not separately covered in the v159 audit.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves"
+  ],
+  "notes": "AQA 3.3.1.2–3.3.2.2: sound/microwave interference, single-slit appearance and wavelength effect, grating geometry, stationary-wave reasoning, polarisation and EM speed. No experimental set-up instructions. Does not certify complete bullet-by-bullet syllabus coverage.",
+  "cards": [
+    {
+      "id": "task1_v226_phy_waves_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Interference",
+      "courseTopic": "Interference",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "front": "Why can two coherent sound sources produce alternating loud and quiet regions?",
+      "back": "Their sound waves superpose constructively at some positions and destructively at others.",
+      "accept": [
+        "Their sound waves superpose constructively at some positions and destructively at others.",
+        "Some places have constructive interference and others destructive interference.",
+        "Interference causes positions of reinforcement and cancellation of sound.",
+        "The waves add in phase at loud places and cancel out of phase at quiet places."
+      ],
+      "reject": [
+        "Because one speaker makes a higher-frequency sound.",
+        "The sounds always cancel everywhere.",
+        "The speed of sound changes between loud and quiet positions."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Interference",
+      "courseTopic": "Interference",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "front": "For two coherent sound waves reaching a point, what path difference gives destructive interference?",
+      "back": "An odd multiple of half a wavelength, (m + ½)λ.",
+      "accept": [
+        "An odd multiple of half a wavelength, (m + ½)λ.",
+        "Half a wavelength, three halves, five halves and so on.",
+        "An odd number of half wavelengths.",
+        "(n + 0.5) times the wavelength."
+      ],
+      "reject": [
+        "An integer number of whole wavelengths.",
+        "A path difference of zero.",
+        "Any path difference gives destructive interference."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Interference",
+      "courseTopic": "Interference",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "front": "What do alternating strong and weak microwave signals at different positions demonstrate?",
+      "back": "Constructive and destructive interference from superposition of electromagnetic waves.",
+      "accept": [
+        "Constructive and destructive interference from superposition of electromagnetic waves.",
+        "Microwaves can reinforce and cancel by interference.",
+        "Superposition gives positions of strong and weak microwave intensity.",
+        "Electromagnetic waves show constructive and destructive interference."
+      ],
+      "reject": [
+        "Microwaves are longitudinal waves.",
+        "Interference proves microwave frequency changes with position.",
+        "Strong and weak regions show microwaves cannot superpose."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "In the derivation of the grating equation, what is the path difference between light from adjacent slits at angle θ?",
+      "back": "d sin θ, where d is the slit spacing.",
+      "accept": [
+        "d sin θ, where d is the slit spacing.",
+        "The adjacent-slit path difference is d sin theta.",
+        "d multiplied by the sine of the diffraction angle.",
+        "Slit spacing times sin theta."
+      ],
+      "reject": [
+        "d divided by sin theta.",
+        "n times the speed of light.",
+        "The wavelength divided by slit spacing."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "Why does the grating equation d sin θ = mλ give bright orders only for integer m?",
+      "back": "Light from adjacent slits must arrive in phase with a path difference of a whole number of wavelengths.",
+      "accept": [
+        "Light from adjacent slits must arrive in phase with a path difference of a whole number of wavelengths.",
+        "Constructive interference requires an integer multiple of wavelength.",
+        "The path difference must be m wavelengths for reinforcement.",
+        "The waves reinforce when neighbouring-slit paths differ by complete wavelengths."
+      ],
+      "reject": [
+        "A half-integer path difference always produces a bright maximum.",
+        "All angles give constructive interference.",
+        "Light from neighbouring slits must have different frequencies."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "How do you find the slit spacing for a grating labelled 600 lines per mm?",
+      "back": "d = 1/(600 × 1000) m = 1.67 × 10⁻⁶ m.",
+      "accept": [
+        "d = 1/(600 × 1000) m = 1.67 × 10⁻⁶ m.",
+        "d is 1.67 micrometres.",
+        "The line spacing is about 0.00000167 m.",
+        "Convert to 600000 lines per metre and take the reciprocal."
+      ],
+      "reject": [
+        "d equals 600000 metres.",
+        "d is 1.67 millimetres.",
+        "The separation is 600 metres."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "For a fixed grating and non-zero order, what happens to the diffraction angle as wavelength increases?",
+      "back": "The diffraction angle increases.",
+      "accept": [
+        "The diffraction angle increases.",
+        "The angle becomes larger.",
+        "Longer wavelengths have a greater angle in the same order.",
+        "The diffraction maximum moves further from the central maximum."
+      ],
+      "reject": [
+        "The angle becomes smaller.",
+        "The angle stays the same for every wavelength.",
+        "The order number must become negative."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "For a single slit of fixed width, how does a longer wavelength change the central diffraction maximum?",
+      "back": "It becomes wider.",
+      "accept": [
+        "It becomes wider.",
+        "The central maximum spreads out.",
+        "The central diffraction peak has greater angular width.",
+        "Increasing wavelength broadens the central bright maximum."
+      ],
+      "reject": [
+        "The central maximum becomes narrower.",
+        "The central maximum disappears completely.",
+        "Wavelength has no effect on diffraction spread."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "What is the qualitative pattern for monochromatic light passing through a single narrow slit?",
+      "back": "A broad bright central maximum with weaker side maxima separated by dark regions.",
+      "accept": [
+        "A broad bright central maximum with weaker side maxima separated by dark regions.",
+        "A wide central bright fringe with fainter bright fringes on either side.",
+        "The central maximum is widest and brightest; side maxima are dimmer.",
+        "A bright wide centre with alternating dark and weak bright side fringes."
+      ],
+      "reject": [
+        "All bright fringes have the same width and intensity.",
+        "Only a single sharp point with no spreading is observed.",
+        "The central bright maximum is always weaker than the side maxima."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "In successive snapshots of a stationary-wave pattern, what happens to the positions of the nodes?",
+      "back": "They stay fixed and have zero displacement.",
+      "accept": [
+        "They stay fixed and have zero displacement.",
+        "Nodes remain at the same positions with no displacement.",
+        "The nodes never move along the string.",
+        "All nodes stay fixed at zero displacement."
+      ],
+      "reject": [
+        "Nodes travel along the string with wave speed.",
+        "Nodes are where the amplitude is greatest.",
+        "Every node shifts by half a wavelength each cycle."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "What two travelling waves form a stationary wave by superposition?",
+      "back": "Waves of the same frequency travelling in opposite directions.",
+      "accept": [
+        "Waves of the same frequency travelling in opposite directions.",
+        "Two waves of equal frequency travelling in opposite directions.",
+        "Oppositely travelling waves of the same frequency superpose.",
+        "A forward and reflected wave of the same frequency overlap."
+      ],
+      "reject": [
+        "Two waves travelling in the same direction only.",
+        "Two waves with completely different frequencies always form a stable standing wave.",
+        "Two opposite waves must have different wavelengths in the same medium."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Polarisation",
+      "courseTopic": "Polarisation",
+      "revisionTopic": "Polarisation",
+      "specRef": "3.3.1.2",
+      "front": "Which component of a linearly polarised light wave is transmitted by an ideal linear polariser?",
+      "back": "The electric-field component parallel to its transmission axis.",
+      "accept": [
+        "The electric-field component parallel to its transmission axis.",
+        "The electric field aligned with the transmission axis.",
+        "The part of the light's electric field parallel to the polariser axis.",
+        "Oscillations parallel to the polarising filter's transmission direction."
+      ],
+      "reject": [
+        "The component perpendicular to the transmission axis is transmitted unchanged.",
+        "Light is a longitudinal wave so it cannot be polarised.",
+        "The polariser changes the light's frequency into sound."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v226_phy_waves_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.2",
+      "front": "How do the speeds of different electromagnetic waves compare in a vacuum?",
+      "back": "All travel at the same speed, c, approximately 3.00 × 10⁸ m s⁻¹.",
+      "accept": [
+        "All travel at the same speed, c, approximately 3.00 × 10⁸ m s⁻¹.",
+        "All electromagnetic waves travel at the speed of light in vacuum.",
+        "Their speed in vacuum is the same, about 3 x 10^8 m/s.",
+        "Radio, visible light and X-rays all have the same vacuum speed."
+      ],
+      "reject": [
+        "Radio waves are always slower than visible light in vacuum.",
+        "Higher-frequency EM waves are faster in vacuum.",
+        "Only visible light travels at c."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}

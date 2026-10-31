@@ -31,9 +31,10 @@ for(const n of ['physics_optical_fibre_precision_recall_v225.json','physics_fibr
 const allFlash=app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/);
 assert(allFlash,'missing flash URLs');
 const flashNames=[...allFlash[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(flashNames.length,19);
+assert(flashNames.length>=19,'v225 flashcard source was removed');
 assert.equal(flashNames[18],'physics_optical_fibre_precision_recall_v225.json');
-const oldCoreAndExtra=[...core.cards,...flashNames.slice(0,-1).flatMap(p=>json(p).cards||[])];
+// v225 is at index 18. Later append-only banks must not be treated as pre-v225 cards.
+const oldCoreAndExtra=[...core.cards,...flashNames.slice(0,18).flatMap(p=>json(p).cards||[])];
 const previousIds=new Set(oldCoreAndExtra.map(x=>x.id));
 const previousFronts=new Set(oldCoreAndExtra.filter(x=>x.subject==='Physics').map(x=>String(x.front).toLowerCase().trim()));
 for(let i=0;i<7;i++){

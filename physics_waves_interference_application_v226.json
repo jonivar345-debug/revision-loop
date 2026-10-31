@@ -1,0 +1,107 @@
+{
+  "version": "v226",
+  "createdAt": "2026-10-31",
+  "scope": "One original ten-mark paper-only Physics Waves mock question on grating geometry, single-slit changes and two-source sound interference.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves"
+  ],
+  "notes": "Questions concern analysis of supplied data; no apparatus setup instructions. Independent manually reviewed single-mark short answers and explicit wrong-answer cases. Not a past-paper copy.",
+  "questions": [
+    {
+      "id": "task1_v226_phy_01",
+      "subject": "Physics",
+      "level": "AS",
+      "stage": "AS",
+      "specRef": "3.3.2.1–3.3.2.2",
+      "year": "Practice",
+      "series": "Original AQA-style Waves application",
+      "paper": "Original",
+      "question": "Diffraction-grating reasoning and two-source sound interference",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "subtopic": "Grating orders, slit diffraction and interference",
+      "marks": 10,
+      "prompt": "A plane transmission grating has 600 lines per mm. Monochromatic light of wavelength 500 nm is incident normally. (a) Determine the slit spacing, the angle of the second-order maximum, and the greatest possible whole order. (b) Explain how changing to longer-wavelength light affects the angle of a given non-zero grating order. (c) For a separate single slit, explain how narrowing the slit or increasing the wavelength affects the angular width of the central maximum. (d) Two in-phase coherent sound sources produce loud and quiet regions. State what makes them coherent and explain the path-difference conditions for a loud and a quiet region. [10 marks]",
+      "markPoints": [
+        "A grating with 600 lines per mm has slit spacing d = 1/(600000) = 1.67 × 10⁻⁶ m.",
+        "For the second order, sin θ = 2λ/d = (2 × 500 × 10⁻⁹)/(1.67 × 10⁻⁶) ≈ 0.600.",
+        "The second-order diffraction angle is θ ≈ 36.9° to the normal.",
+        "The greatest possible whole diffraction order is 3 because m ≤ d/λ ≈ 3.33.",
+        "For a fixed grating and order, increasing wavelength increases sin θ and therefore the diffraction angle.",
+        "Reducing the width of a single slit makes its central diffraction maximum wider.",
+        "Using a longer wavelength with the same single slit also makes the central maximum wider.",
+        "Two sound sources must have the same frequency and constant phase difference to remain coherent.",
+        "A loud sound region can arise where waves reinforce, at an integer-wavelength path difference for sources in phase.",
+        "A quiet sound region can arise where waves cancel, at an odd-half-wavelength path difference for sources in phase."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "A grating with 600 lines per mm has slit spacing d = 1/(600000) = 1.67 × 10⁻⁶ m. For the second order, sin θ = 2λ/d = (2 × 500 × 10⁻⁹)/(1.67 × 10⁻⁶) ≈ 0.600. The second-order diffraction angle is θ ≈ 36.9° to the normal. The greatest possible whole diffraction order is 3 because m ≤ d/λ ≈ 3.33. For a fixed grating and order, increasing wavelength increases sin θ and therefore the diffraction angle. Reducing the width of a single slit makes its central diffraction maximum wider. Using a longer wavelength with the same single slit also makes the central maximum wider. Two sound sources must have the same frequency and constant phase difference to remain coherent. A loud sound region can arise where waves reinforce, at an integer-wavelength path difference for sources in phase. A quiet sound region can arise where waves cancel, at an odd-half-wavelength path difference for sources in phase.",
+      "answerType": "points",
+      "questionType": "reasoned diffraction and interference calculation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v226_phy_01",
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The slit spacing is about 1.67 micrometres."
+        ],
+        "1": [
+          "For order two, sin theta is 0.600."
+        ],
+        "2": [
+          "The second-order angle is 36.9 degrees."
+        ],
+        "3": [
+          "The maximum allowed grating order is three."
+        ],
+        "4": [
+          "Longer wavelengths are diffracted through larger angles in the same order."
+        ],
+        "5": [
+          "A narrower slit gives a wider central diffraction fringe."
+        ],
+        "6": [
+          "Longer wavelength light gives a broader central maximum in single-slit diffraction."
+        ],
+        "7": [
+          "Coherent sources have the same frequency and a fixed phase difference."
+        ],
+        "8": [
+          "A path difference of whole wavelengths gives constructive interference for sources in phase."
+        ],
+        "9": [
+          "A half-integer wavelength path difference gives destructive interference for sources in phase."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "The grating slit spacing is 1.67 millimetres.",
+        "The second-order diffraction angle is 0.600 degrees.",
+        "The highest diffraction order is four.",
+        "Increasing the wavelength decreases the angle in a given grating order.",
+        "Making the slit narrower makes the central maximum narrower.",
+        "Longer wavelengths give a narrower central single-slit maximum.",
+        "Two sources of different frequencies are coherent whenever the sources are loud.",
+        "Whole-wavelength path differences give destructive interference for sources in phase.",
+        "Half-wavelength path difference gives constructive interference for sources in phase."
+      ]
+    }
+  ]
+}
