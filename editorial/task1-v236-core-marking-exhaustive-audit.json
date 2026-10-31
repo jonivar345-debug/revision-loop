@@ -1,7 +1,7 @@
 {
   "version": "v236",
   "date": "2026-10-31",
-  "kind": "Exhaustive mechanical core-bank marker regression across every stored model, explicitly accepted variant, and explicitly rejected variant (not full AQA syllabus or semantic certification).",
+  "kind": "Full mechanical flashcard marking regression across every original core model and all 27 actively configured supplement-bank models and their explicitly accepted/rejected variants. Not a content-truth or whole-spec certification.",
   "coreFlashcards": 3345,
   "results": {
     "modelAnswersCorrect": 3345,
@@ -28,7 +28,8 @@
     "notACompleteMathsMock": true,
     "notACompletePhysicsMock": true,
     "notACompleteChemistryMock": true,
-    "notACompletedTask1": true
+    "notACompletedTask1": true,
+    "notAllSupplementaryModelAnswersChecked": false
   },
   "preserved": {
     "sourceDeckUnchanged": true,
@@ -38,5 +39,20 @@
     "mathsMockScopeUnchanged": true,
     "worldFilesUnchanged": true
   },
-  "nextWork": "Cross-check individual subject-card fronts/backs against the AQA school mock specification statements and test nuanced positive/negative responses not represented in explicit accept/reject lists. Separate supplements need the same sweep."
+  "nextWork": "Cross-check every assessable AQA school mock specification statement and every card's model for scientific/mathematical truth; supplement checks here only exercise recorded accepted/rejected answers and do not test unknown paraphrases.",
+  "supplementBanks": 27,
+  "supplementCards": 262,
+  "supplementResults": {
+    "modelAnswersCorrect": 262,
+    "explicitAcceptedAlternativesCorrect": 992,
+    "explicitRejectedAlternativesWrong": 584,
+    "unexpectedResults": 0
+  },
+  "totalCombined": {
+    "cards": 3607,
+    "modelsCorrect": 3607,
+    "acceptedVariantsCorrect": 5934,
+    "rejectedVariantsWrong": 674,
+    "unexpectedResults": 0
+  }
 }
