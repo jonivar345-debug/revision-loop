@@ -1,0 +1,163 @@
+{
+  "version": "v220",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "Five non-duplicative single-fact AQA AS Chemistry mock recall cards for ion identification and Group 7 redox; chemistry knowledge only, not experimental laboratory instructions.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/inorganic-chemistry"
+  ],
+  "notes": "Questions and answers are original. Avoids detailed practical instructions. Original core deck and old IDs remain stable; no claims of whole-spec coverage.",
+  "cards": [
+    {
+      "topic": "RP4 Ion tests",
+      "specRef": "3.2.2 / RP4",
+      "front": "Which insoluble barium compound can imitate the white sulfate-test precipitate if carbonate ions are present?",
+      "back": "Barium carbonate, BaCO₃.",
+      "accept": [
+        "Barium carbonate, BaCO₃.",
+        "barium carbonate",
+        "BaCO3",
+        "BaCO₃"
+      ],
+      "reject": [
+        "barium sulfate",
+        "BaSO4",
+        "silver chloride",
+        "magnesium carbonate"
+      ],
+      "id": "task1_v220_chem_ion_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP4 Ion tests",
+      "revisionTopic": "RP4 Ion tests",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP4 Ion tests",
+      "specRef": "3.2.3.1 / RP4",
+      "front": "Write the ionic equation for the formation of silver chloride precipitate from aqueous ions.",
+      "back": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s).",
+      "accept": [
+        "Ag⁺(aq) + Cl⁻(aq) → AgCl(s).",
+        "Ag+(aq) + Cl-(aq) -> AgCl(s)",
+        "Ag+ + Cl- -> AgCl",
+        "Cl- + Ag+ -> AgCl(s)"
+      ],
+      "reject": [
+        "Ag+ + Br- -> AgBr",
+        "Ag+ + I- -> AgI",
+        "AgCl(s) -> Ag+(aq) + Cl-(aq)",
+        "Ba2+ + SO42- -> BaSO4"
+      ],
+      "id": "task1_v220_chem_ion_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP4 Ion tests",
+      "revisionTopic": "RP4 Ion tests",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP4 Ion tests",
+      "specRef": "3.2.3.1 / RP4",
+      "front": "Write the ionic equation for the formation of silver iodide precipitate from aqueous ions.",
+      "back": "Ag⁺(aq) + I⁻(aq) → AgI(s).",
+      "accept": [
+        "Ag⁺(aq) + I⁻(aq) → AgI(s).",
+        "Ag+(aq) + I-(aq) -> AgI(s)",
+        "Ag+ + I- -> AgI",
+        "I- + Ag+ -> AgI(s)"
+      ],
+      "reject": [
+        "Ag+ + Cl- -> AgCl",
+        "Ag+ + Br- -> AgBr",
+        "AgI(s) -> Ag+(aq) + I-(aq)",
+        "Ba2+ + SO42- -> BaSO4"
+      ],
+      "id": "task1_v220_chem_ion_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP4 Ion tests",
+      "revisionTopic": "RP4 Ion tests",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "Group 7",
+      "specRef": "3.2.3.1",
+      "front": "In the redox reaction where hydrogen bromide reduces sulfuric acid, which halide ion is oxidised?",
+      "back": "Bromide ion, Br⁻.",
+      "accept": [
+        "Bromide ion, Br⁻.",
+        "Br-",
+        "Br⁻",
+        "bromide ions",
+        "bromide"
+      ],
+      "reject": [
+        "chloride",
+        "iodide",
+        "sulfate",
+        "SO42-"
+      ],
+      "id": "task1_v220_chem_ion_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "Group 7",
+      "revisionTopic": "Group 7",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "Group 7",
+      "specRef": "3.2.3.1",
+      "front": "How does sulfur's oxidation state change when H₂SO₄ is reduced to SO₂?",
+      "back": "From +6 to +4.",
+      "accept": [
+        "From +6 to +4.",
+        "+6 to +4",
+        "+6 -> +4",
+        "it decreases from +6 to +4"
+      ],
+      "reject": [
+        "+4 to +6",
+        "from +6 to -2",
+        "from 0 to +4",
+        "no change"
+      ],
+      "id": "task1_v220_chem_ion_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "Group 7",
+      "revisionTopic": "Group 7",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
