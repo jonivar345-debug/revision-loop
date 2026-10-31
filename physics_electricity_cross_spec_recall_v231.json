@@ -1,0 +1,444 @@
+{
+  "version": "v231",
+  "createdAt": "2026-10-31",
+  "subject": "Physics",
+  "scope": "16 original AQA AS Physics Electricity mock recall cards, focused on selected subtleties after reviewing existing coverage.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/electricity"
+  ],
+  "notes": "No claim of exhaustive 3.5 specification sign-off. Theory and graphs only; no practical apparatus setup instructions. Original historic IDs and progress remain unchanged.",
+  "cards": [
+    {
+      "id": "task1_v231_phy_elec_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.1",
+      "front": "In a metal wire, how does electron drift direction compare with conventional current direction?",
+      "back": "Electrons drift opposite to conventional current.",
+      "accept": [
+        "Electrons drift opposite to conventional current.",
+        "The electron movement is opposite the direction of conventional current.",
+        "Electron drift is from the negative end towards the positive end, whereas conventional current is opposite."
+      ],
+      "reject": [
+        "Electrons drift in the same direction as conventional current.",
+        "No charge carriers move in a conducting wire."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "I–V characteristics",
+      "courseTopic": "I–V characteristics",
+      "revisionTopic": "I–V characteristics",
+      "specRef": "3.5.1.2",
+      "front": "For an ohmic resistor held at constant temperature, what shape is its current–potential-difference graph?",
+      "back": "A straight line through the origin.",
+      "accept": [
+        "A straight line through the origin.",
+        "A linear I–V characteristic passing through (0, 0).",
+        "Current is proportional to potential difference."
+      ],
+      "reject": [
+        "A curved line that becomes flatter as current increases.",
+        "A straight line that always has a non-zero current-axis intercept."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "I–V characteristics",
+      "courseTopic": "I–V characteristics",
+      "revisionTopic": "I–V characteristics",
+      "specRef": "3.5.1.2",
+      "front": "For a non-ohmic component, can resistance at a chosen I–V graph point generally be found from the tangent gradient?",
+      "back": "No. Calculate R = V/I using the coordinates of the point; tangent gradient is not generally V/I.",
+      "accept": [
+        "No. Calculate R = V/I using the coordinates of the point; tangent gradient is not generally V/I.",
+        "Use V divided by I at the point rather than a tangent gradient.",
+        "The resistance at an operating point is potential difference divided by current, not the I–V tangent slope."
+      ],
+      "reject": [
+        "Yes, every tangent gradient on I against V is the resistance.",
+        "Resistance always equals dI/dV."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "front": "A metal wire's resistance rises with temperature while an NTC thermistor's resistance falls. What is the contrasting trend?",
+      "back": "Metal resistance increases; NTC thermistor resistance decreases as temperature rises.",
+      "accept": [
+        "Metal resistance increases; NTC thermistor resistance decreases as temperature rises.",
+        "The metal has a positive temperature trend and the NTC thermistor a negative one.",
+        "Metals usually gain resistance on heating, NTC thermistors lose resistance."
+      ],
+      "reject": [
+        "Both resistances decrease with rising temperature.",
+        "Both resistances stay constant as temperature changes."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Sensors",
+      "courseTopic": "Sensors",
+      "revisionTopic": "Sensors",
+      "specRef": "3.5.1.3",
+      "front": "Why can an NTC semiconductor thermistor become less resistive as it warms?",
+      "back": "Heating increases the number of mobile charge carriers, which can reduce its resistance.",
+      "accept": [
+        "Heating increases the number of mobile charge carriers, which can reduce its resistance.",
+        "More charge carriers become available at higher temperature.",
+        "Higher temperature releases more mobile carriers, making the NTC thermistor more conducting."
+      ],
+      "reject": [
+        "It becomes an ideal superconductor whenever warmed.",
+        "Its resistance must increase because it is identical to a metal."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "RP5 Resistivity",
+      "courseTopic": "RP5 Resistivity",
+      "revisionTopic": "RP5 Resistivity",
+      "specRef": "3.5.1.3",
+      "front": "On a graph of resistance R against wire length L, gradient m is measured for a uniform wire of area A. What is its resistivity?",
+      "back": "ρ = mA.",
+      "accept": [
+        "ρ = mA.",
+        "Resistivity equals the resistance-length gradient multiplied by cross-sectional area.",
+        "rho is gradient times A."
+      ],
+      "reject": [
+        "ρ = m/A.",
+        "ρ = A/m."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "RP5 Resistivity",
+      "courseTopic": "RP5 Resistivity",
+      "revisionTopic": "RP5 Resistivity",
+      "specRef": "3.5.1.3",
+      "front": "What is the SI unit of the gradient of an R-against-L graph, and what unit results after multiplying by area?",
+      "back": "Gradient: Ω m⁻¹; resistivity: Ω m.",
+      "accept": [
+        "Gradient: Ω m⁻¹; resistivity: Ω m.",
+        "Ohms per metre for gradient, ohm metres for resistivity.",
+        "Gradient is resistance per length; multiplying by m squared gives ohm metre."
+      ],
+      "reject": [
+        "Gradient is Ω m and resistivity is Ω m⁻¹.",
+        "Gradient is amperes per metre and resistivity is volts."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "RP5 Resistivity",
+      "courseTopic": "RP5 Resistivity",
+      "revisionTopic": "RP5 Resistivity",
+      "specRef": "3.5.1.3",
+      "front": "For an otherwise uniform wire, what might a non-zero positive R-intercept on an R-against-L graph indicate?",
+      "back": "Extra contact or lead resistance that is approximately independent of the measured wire length.",
+      "accept": [
+        "Extra contact or lead resistance that is approximately independent of the measured wire length.",
+        "Constant contact resistance can cause a positive intercept.",
+        "The measured resistance contains a fixed contribution from connections or leads."
+      ],
+      "reject": [
+        "It proves the wire's resistivity is zero.",
+        "It means the wire's resistance cannot depend on length."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "RP5 Resistivity",
+      "courseTopic": "RP5 Resistivity",
+      "revisionTopic": "RP5 Resistivity",
+      "specRef": "3.5.1.3",
+      "front": "A wire's measured diameter has a 2% uncertainty. Approximately what is the percentage uncertainty in its calculated area?",
+      "back": "4%, because cross-sectional area is proportional to diameter squared.",
+      "accept": [
+        "4%, because cross-sectional area is proportional to diameter squared.",
+        "Approximately four per cent.",
+        "Twice the diameter percentage uncertainty, giving 4 percent."
+      ],
+      "reject": [
+        "2%, because diameter and area are directly proportional.",
+        "1%, because squaring halves the uncertainty."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "front": "If the diameter of a uniform wire doubles with material, length and temperature fixed, what happens to its resistance?",
+      "back": "It becomes one quarter of its original resistance.",
+      "accept": [
+        "It becomes one quarter of its original resistance.",
+        "Resistance is quartered.",
+        "The cross-sectional area quadruples so resistance decreases by a factor of four."
+      ],
+      "reject": [
+        "Resistance doubles.",
+        "Resistance increases fourfold."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.4",
+      "front": "At fixed potential difference across a resistor, what happens to electrical power if resistance doubles?",
+      "back": "Power halves because P = V²/R.",
+      "accept": [
+        "Power halves because P = V²/R.",
+        "Power becomes one half.",
+        "At constant voltage power is inversely proportional to resistance."
+      ],
+      "reject": [
+        "Power doubles.",
+        "Power stays the same."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.4",
+      "front": "At fixed current through a resistor, what happens to electrical power if resistance doubles?",
+      "back": "Power doubles because P = I²R.",
+      "accept": [
+        "Power doubles because P = I²R.",
+        "Power becomes twice the original.",
+        "At constant current dissipated power is proportional to resistance."
+      ],
+      "reject": [
+        "Power halves.",
+        "Power stays the same."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Potential dividers",
+      "courseTopic": "Potential dividers",
+      "revisionTopic": "Potential dividers",
+      "specRef": "3.5.1.5",
+      "front": "A load of resistance RL is placed across the lower resistor R2 in an ideal-supply potential divider. What effective lower resistance should be used?",
+      "back": "Rlower = R2RL/(R2 + RL), the parallel combination.",
+      "accept": [
+        "Rlower = R2RL/(R2 + RL), the parallel combination.",
+        "Use the parallel equivalent of R2 and RL.",
+        "The lower resistance becomes one over (one over R2 plus one over RL)."
+      ],
+      "reject": [
+        "Use R2 + RL.",
+        "Ignore the load when calculating the output."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Potential dividers",
+      "courseTopic": "Potential dividers",
+      "revisionTopic": "Potential dividers",
+      "specRef": "3.5.1.5",
+      "front": "Why can connecting a measuring load across the lower divider resistor reduce the output p.d.?",
+      "back": "The load acts in parallel with that resistor, reducing the effective lower resistance and its share of the supply voltage.",
+      "accept": [
+        "The load acts in parallel with that resistor, reducing the effective lower resistance and its share of the supply voltage.",
+        "The bottom branch equivalent resistance falls, so Vout decreases.",
+        "The load draws current and reduces the fraction of supply potential difference across the lower part."
+      ],
+      "reject": [
+        "The lower effective resistance always increases.",
+        "The supply emf must necessarily increase when a load is attached."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Internal resistance",
+      "courseTopic": "Internal resistance",
+      "revisionTopic": "Internal resistance",
+      "specRef": "3.5.1.6",
+      "front": "For a cell with emf ε, internal resistance r and delivered current I, what is the rate of energy transfer inside the cell's internal resistance?",
+      "back": "P_lost = I²r.",
+      "accept": [
+        "P_lost = I²r.",
+        "Power loss in the cell is current squared times internal resistance.",
+        "The internal heating power is I times lost volts, I²r."
+      ],
+      "reject": [
+        "P_lost = Ir, in watts.",
+        "Power lost is always zero for a real cell."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v231_phy_elec_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Internal resistance",
+      "courseTopic": "Internal resistance",
+      "revisionTopic": "Internal resistance",
+      "specRef": "3.5.1.6",
+      "front": "Two identical cells of emf ε and internal resistance r are connected in parallel to an external resistance R. What current does the simple cell model predict?",
+      "back": "I = ε/(R + r/2).",
+      "accept": [
+        "I = ε/(R + r/2).",
+        "Current equals emf divided by load resistance plus half the internal resistance.",
+        "I is epsilon over R plus r divided by 2, with the whole sum as denominator."
+      ],
+      "reject": [
+        "I = 2ε/(R + 2r).",
+        "I = ε/(R + 2r)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
