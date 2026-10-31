@@ -16,8 +16,8 @@ for(const r of audit.requirements){
  for(const id of r.coreEvidenceIds){assert(original.has(id),'non Year 1 core evidence '+id);cited.add(id);}
  if(r.coreEvidenceIds.length===0){assert.equal(r.reviewLevel,'unfamiliar_exam_application_unverified_by_core_cards');gaps.push(r.assessableSkill);}
 }
-assert.equal(sections.size,9);assert.equal(audit.requirements.length,49);assert(cited.size>=60);assert.equal(gaps.length,8);
+assert.equal(sections.size,9);assert.equal(audit.requirements.length,50);assert(cited.size>=60);assert.equal(gaps.length,7);
 assert.equal(audit.completion.nineSchoolYear1PureSectionsMapped,true);
 for(const [k,v] of Object.entries(audit.completion))if(k!=='nineSchoolYear1PureSectionsMapped')assert.equal(v,false,'false completion '+k);
 assert.equal(audit.changes.newCards,0);
-console.log('PASS v244: 106 Year 1 Pure core cards fingerprinted, 49 selected AQA checks across 9 sections, 8 unverified multi-step tasks; mock scope and original progress preserved.');
+console.log('PASS v244: 106 Year 1 Pure core cards fingerprinted, 50 selected AQA checks across 9 sections, 7 unverified multi-step tasks; mock scope and original progress preserved.');
