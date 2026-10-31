@@ -10,7 +10,7 @@
     "3.1.2.5"
   ],
   "officialSpecification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
-  "evidenceLevel": "Selected active mock-eligible core recall cards mapped to 31 distinct specification content/skill points. Evidence of a card's existence does not establish full answer correctness or independent unfamiliar-question competence.",
+  "evidenceLevel": "31 mapped AQA requirement rows, with 29 rows having at least one selected active core card and two explicitly identified without direct card evidence. Selected-card presence is not full knowledge verification.",
   "coreDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
   "coreTopicInventory": {
     "Amount of substance": 53,
@@ -46,10 +46,8 @@
       "id": "AOS-03",
       "ref": "3.1.2.1",
       "assessablePoint": "Use relative formula mass terminology for ionic substances",
-      "coreEvidenceIds": [
-        "chem_moles_mass"
-      ],
-      "reviewStatus": "application_unverified"
+      "coreEvidenceIds": [],
+      "reviewStatus": "gap_no_direct_card"
     },
     {
       "id": "AOS-04",
@@ -119,10 +117,8 @@
       "id": "AOS-11",
       "ref": "3.1.2.2",
       "assessablePoint": "Give calculated results appropriate significant figures",
-      "coreEvidenceIds": [
-        "task1_v132_006"
-      ],
-      "reviewStatus": "application_unverified"
+      "coreEvidenceIds": [],
+      "reviewStatus": "gap_no_direct_card"
     },
     {
       "id": "AOS-12",
@@ -312,7 +308,8 @@
     "AQA 7405 does not require recall of the numerical Avogadro constant or numerical ideal gas constant R; questions may supply their values.",
     "The published assessable content is in the specification left column; right-column experiments and calculations are possible contexts rather than mandatory recall of each example.",
     "Some existing core cards ask for the numerical Avogadro constant. These are useful extension recall, but not a compulsory AQA fact.",
-    "This audit did not screen every supplementary-bank card or independently solve unfamiliar numerical applications."
+    "This audit did not screen every supplementary-bank card or independently solve unfamiliar numerical applications.",
+    "Two specification points have no directly evidenced core flashcard in this first pass: relative formula mass for ionic compounds and appropriate significant figures. Related cards are not proof of this recall."
   ],
   "highestPriorityGaps": [
     "Demonstrate balancing unfamiliar full/ionic equations under exam conditions; the mapped core card only tests mole ratios.",
@@ -322,12 +319,13 @@
     "Check unfamiliar titration stoichiometry, reverse dilutions, atom economy with coefficients and gas volume problems through the exam question bank."
   ],
   "completionGates": {
-    "amountRecallEvidenceMapped": true,
     "allCoreAnswersIndependentlyVerified": false,
     "allAppliedSkillsDemonstrated": false,
     "chemistryMockSpecFullyVerified": false,
     "physicsMockSpecFullyVerified": false,
     "firstMathsMockFullyVerified": false,
-    "task1Complete": false
-  }
+    "task1Complete": false,
+    "requirementsCrosswalkRecorded": true
+  },
+  "requirementRowsWithoutDirectEvidence": 2
 }
