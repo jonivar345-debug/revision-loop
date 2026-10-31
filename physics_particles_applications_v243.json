@@ -1,0 +1,271 @@
+{
+  "version": "v243",
+  "createdAt": "2026-10-31",
+  "subject": "Physics",
+  "scope": "Ten original AS Physics 3.2 mock numeric and conservation-law application flashcards, with sources and checks; do not treat as full exam-drawing verification.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation"
+  ],
+  "cards": [
+    {
+      "id": "task1_v243_phy_particles_app_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An ion has charge +3.20 × 10⁻¹⁹ C and mass 6.64 × 10⁻²⁷ kg. Calculate its specific charge.",
+      "back": "+4.82 × 10⁷ C kg⁻¹.",
+      "accept": [
+        "+4.82 × 10⁷ C kg⁻¹.",
+        "+4.82e7 C kg-1",
+        "4.82 × 10⁷ C/kg"
+      ],
+      "reject": [
+        "4.82 × 10⁻⁷ C kg⁻¹",
+        "2.08 × 10⁻⁸ C kg⁻¹"
+      ],
+      "specRef": "3.2.1.1",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A nucleus with A = 226 and Z = 88 emits an alpha particle. Give the daughter nucleus's A and Z.",
+      "back": "A = 222, Z = 86.",
+      "accept": [
+        "A = 222, Z = 86.",
+        "222, 86",
+        "A 222 and Z 86"
+      ],
+      "reject": [
+        "A = 230, Z = 90",
+        "A = 226, Z = 87"
+      ],
+      "specRef": "3.2.1.2",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Carbon-14 (A = 14, Z = 6) undergoes beta-minus decay. Give the daughter nucleus's A and Z.",
+      "back": "A = 14, Z = 7.",
+      "accept": [
+        "A = 14, Z = 7.",
+        "14, 7",
+        "A 14 and Z 7"
+      ],
+      "reject": [
+        "A = 13, Z = 7",
+        "A = 14, Z = 5"
+      ],
+      "specRef": "3.2.1.2",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A neutron (baryon number +1, charge 0) supposedly turns into two photons. Which conservation law makes this impossible?",
+      "back": "Baryon number is not conserved.",
+      "accept": [
+        "Baryon number is not conserved.",
+        "Conservation of baryon number is violated",
+        "Baryon number changes from 1 to 0"
+      ],
+      "reject": [
+        "Electric charge is not conserved",
+        "Conservation of electron lepton number is violated"
+      ],
+      "specRef": "3.2.1.7",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An electron and electron antineutrino are produced. Their electron-lepton numbers are +1 and −1. What is the total?",
+      "back": "0.",
+      "accept": [
+        "0.",
+        "0",
+        "Zero"
+      ],
+      "reject": [
+        "+2",
+        "−2"
+      ],
+      "specRef": "3.2.1.5",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An electron falls from −1.20 eV to −3.70 eV. What energy photon is emitted?",
+      "back": "2.50 eV.",
+      "accept": [
+        "2.50 eV.",
+        "2.5 eV",
+        "2.50"
+      ],
+      "reject": [
+        "−2.50 eV",
+        "4.90 eV"
+      ],
+      "specRef": "3.2.2.3",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A photon has energy 3.20 × 10⁻¹⁹ J. With h = 6.63 × 10⁻³⁴ J s and c = 3.00 × 10⁸ m s⁻¹, calculate its wavelength.",
+      "back": "6.22 × 10⁻⁷ m.",
+      "accept": [
+        "6.22 × 10⁻⁷ m.",
+        "6.22e-7 m",
+        "622 nm"
+      ],
+      "reject": [
+        "6.22 × 10⁻⁹ m",
+        "1.61 × 10⁶ m"
+      ],
+      "specRef": "3.2.2.3",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An electron's momentum is 3.315 × 10⁻²⁴ kg m s⁻¹. With h = 6.63 × 10⁻³⁴ J s, calculate its de Broglie wavelength.",
+      "back": "2.00 × 10⁻¹⁰ m.",
+      "accept": [
+        "2.00 × 10⁻¹⁰ m.",
+        "2.0e-10 m",
+        "0.200 nm"
+      ],
+      "reject": [
+        "2.00 × 10⁻⁸ m",
+        "5.00 × 10⁹ m"
+      ],
+      "specRef": "3.2.2.4",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The accelerating voltage of non-relativistic electrons is quadrupled. By what factor does their de Broglie wavelength change?",
+      "back": "It halves (factor 1/2).",
+      "accept": [
+        "It halves (factor 1/2).",
+        "Half the original wavelength",
+        "A factor of 0.5"
+      ],
+      "reject": [
+        "It doubles",
+        "It becomes one quarter"
+      ],
+      "specRef": "3.2.2.4",
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v243_phy_particles_app_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particle and quantum application calculations",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A photon of 1.400 MeV produces an electron–positron pair. Their combined minimum rest energy is 1.022 MeV. How much energy remains for kinetic energy and any recoil?",
+      "back": "0.378 MeV.",
+      "accept": [
+        "0.378 MeV.",
+        "0.378",
+        "378 keV"
+      ],
+      "reject": [
+        "2.422 MeV",
+        "0.189 MeV"
+      ],
+      "specRef": "3.2.1.3",
+      "strictRecall": true
+    }
+  ]
+}
