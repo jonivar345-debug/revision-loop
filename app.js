@@ -1560,6 +1560,20 @@ function evaluateCard(c,input){
  // v233: reject known conceptual reversals before fuzzy similarity can credit them.
  // Unlisted correct paraphrases still use the normal flexible marking path.
  const chemRaw=String(input||'').trim();
+
+ // v234: concept-level precision for nine historical AS Chemistry mock cards.
+ // Exact vetted equivalents are credited; known opposite meanings and wrong bond
+ // angles are rejected before the fuzzy marker can award partial credit.
+ // All other answers continue through the normal flexible scoring system.
+ const v234ChemRecall={"chem_electrophile":{"right":["A species that accepts an electron pair.","Electron pair acceptor."],"wrong":["An electron-pair donor.","A particle that donates a pair of electrons."]},"chem_nucleophile":{"right":["A species that donates an electron pair.","Electron pair donor."],"wrong":["An electron-pair acceptor.","A particle that accepts a pair of electrons."]},"chem_homolytic":{"right":["Each atom gets one electron from the bond, forming radicals.","One bonding electron goes to each atom."],"wrong":["Both bonding electrons are taken by one atom, forming ions.","Heterolytic fission: both electrons go to the same atom."]},"chem_heterolytic":{"right":["Both electrons in the bond go to one atom and ions form.","One atom takes the bonding pair leaving ions."],"wrong":["Each atom gets one electron, producing radicals.","The electron pair is split equally and free radicals form."]},"chem_metallic_bond":{"right":["Attraction between metal cations and mobile delocalised electrons.","Electrostatic forces between positive metal ions and delocalised electrons."],"wrong":["Electrostatic attraction between positive and negative ions in an ionic lattice.","Attraction between oppositely charged metal ions."]},"chem_shape_linear":{"right":["180 degrees.","180°."],"wrong":["120 degrees.","109.5°."]},"chem_shape_trig":{"right":["120 degrees.","120°."],"wrong":["109.5 degrees.","180°."]},"chem_shape_tetra":{"right":["109.5 degrees.","109.5°."],"wrong":["120 degrees.","90°."]},"chem_bonding_v47_38":{"right":["Intermolecular hydrogen bonds are partially disrupted; covalent O-H bonds stay intact.","Some hydrogen bonds between water molecules are broken."],"wrong":["The covalent O-H bonds are broken when ice melts.","Water molecules split into H and O atoms as ice melts."]}};
+ if(c?.subject==='Chemistry'&&chemRaw&&v234ChemRecall[c.id]){
+  const v234=v234ChemRecall[c.id];
+  if(v234.right.some(answer=>normalise(answer)===normalise(chemRaw)))
+   return {status:'correct',score:1,text:'Correct scientifically equivalent wording.',missing:[]};
+  if(v234.wrong.some(answer=>normalise(answer)===normalise(chemRaw)))
+   return {status:'wrong',score:0,text:'This reverses the chemistry or gives an incorrect bond angle. Compare the model answer.',missing:[]};
+ }
+
  if(chemRaw){
   // Exact scientifically equivalent alternatives get full credit before fuzzy matching.
   const acceptedChem={
