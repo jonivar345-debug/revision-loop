@@ -1,0 +1,246 @@
+{
+  "version": "v221",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "Eight original single-fact exam-theory Chemistry RP1–RP3 and practical analysis flashcards. No laboratory methods or instructions.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "notes": "Supports student understanding of uncertainties, evaluation and experimental variables. Taught AS mock only; Task 1 is not certified complete.",
+  "cards": [
+    {
+      "topic": "Practical skills",
+      "specRef": "7.3.2",
+      "front": "What is a systematic error in experimental measurements?",
+      "back": "A consistent bias that shifts measurements in the same direction.",
+      "accept": [
+        "A consistent bias that shifts measurements in the same direction.",
+        "An error which consistently makes values too high or too low.",
+        "A repeatable bias affecting accuracy.",
+        "A consistent measurement bias."
+      ],
+      "reject": [
+        "Unpredictable scatter between readings.",
+        "An error that always disappears with repeats.",
+        "A random variation with no consistent direction."
+      ],
+      "id": "task1_v221_chem_rp_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "Practical skills",
+      "revisionTopic": "Practical skills",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "Practical skills",
+      "specRef": "7.3.2",
+      "front": "What is a random error in repeated measurements?",
+      "back": "Unpredictable variation that causes readings to scatter.",
+      "accept": [
+        "Unpredictable variation that causes readings to scatter.",
+        "Random fluctuations between repeated readings.",
+        "Unpredictable measurement variation.",
+        "Variation in measurements with no fixed direction."
+      ],
+      "reject": [
+        "A consistent bias that makes all results high.",
+        "A wrong calibration value that shifts every reading equally.",
+        "An error that repeats in the same direction."
+      ],
+      "id": "task1_v221_chem_rp_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "Practical skills",
+      "revisionTopic": "Practical skills",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "Practical skills",
+      "specRef": "7.3.2",
+      "front": "Why can repeat readings reduce random uncertainty but not remove a systematic bias?",
+      "back": "Averaging reduces scatter, but the consistent bias remains.",
+      "accept": [
+        "Averaging reduces scatter, but the consistent bias remains.",
+        "Repeats can average out random variation but not a fixed offset.",
+        "The systematic error affects every repeat in the same direction.",
+        "Repeating reduces random scatter, not a constant bias."
+      ],
+      "reject": [
+        "Both types of error always vanish on averaging.",
+        "A systematic bias changes direction randomly.",
+        "Averaging makes inaccurate equipment accurate."
+      ],
+      "id": "task1_v221_chem_rp_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "Practical skills",
+      "revisionTopic": "Practical skills",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP1 Titration",
+      "specRef": "7.2 RP1",
+      "front": "Why is a rough titration result normally excluded from a mean of concordant titres?",
+      "back": "It is an approximate first estimate, not a precise repeat.",
+      "accept": [
+        "It is an approximate first estimate, not a precise repeat.",
+        "The rough titre is only an estimate of the end point.",
+        "It is a preliminary approximate titre.",
+        "The rough reading is less precise than concordant repeat titres."
+      ],
+      "reject": [
+        "It is always the largest volume.",
+        "Because its units are different.",
+        "All first readings must be numerically zero."
+      ],
+      "id": "task1_v221_chem_rp_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP1 Titration",
+      "revisionTopic": "RP1 Titration",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP2 Enthalpy",
+      "specRef": "7.2 RP2",
+      "front": "Why can ignoring heat absorbed by a calorimeter make an exothermic ΔH less negative than its true value?",
+      "back": "Some released heat warms the calorimeter, so solution-only q underestimates the heat released.",
+      "accept": [
+        "Some released heat warms the calorimeter, so solution-only q underestimates the heat released.",
+        "Some heat warms the apparatus rather than just the solution.",
+        "The cup absorbs some released heat that is omitted from q.",
+        "The heat capacity of the apparatus is ignored, underestimating released heat."
+      ],
+      "reject": [
+        "It makes the temperature rise larger than the true rise.",
+        "The calorimeter creates extra reaction moles.",
+        "The reaction becomes endothermic."
+      ],
+      "id": "task1_v221_chem_rp_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP2 Enthalpy",
+      "revisionTopic": "RP2 Enthalpy",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP3 Rates",
+      "specRef": "7.2 RP3",
+      "front": "What could cause random uncertainty when a rate is estimated from a visual end point?",
+      "back": "Different judgements of when the visible change occurs.",
+      "accept": [
+        "Different judgements of when the visible change occurs.",
+        "Subjective judgement of the end point.",
+        "Observers may record slightly different end-point times.",
+        "Inconsistent human judgement of the visual end point."
+      ],
+      "reject": [
+        "The balanced equation changing between repeats.",
+        "A fixed calibration bias in every reading.",
+        "All end points occurring at identical times."
+      ],
+      "id": "task1_v221_chem_rp_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP3 Rates",
+      "revisionTopic": "RP3 Rates",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP3 Rates",
+      "specRef": "7.2 RP3",
+      "front": "When investigating temperature's effect on rate, what reactant property must stay constant for a fair comparison?",
+      "back": "The initial reactant concentration.",
+      "accept": [
+        "The initial reactant concentration.",
+        "Initial concentrations.",
+        "Concentration of the reactants.",
+        "Initial solution concentration."
+      ],
+      "reject": [
+        "The temperature.",
+        "The reaction time.",
+        "The relative rate 1/t."
+      ],
+      "id": "task1_v221_chem_rp_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP3 Rates",
+      "revisionTopic": "RP3 Rates",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "topic": "RP3 Rates",
+      "specRef": "7.2 RP3",
+      "front": "If relative reaction rate is plotted as 1/t against temperature, what quantity belongs on the vertical axis?",
+      "back": "1/t, the relative rate (s⁻¹ when t is in seconds).",
+      "accept": [
+        "1/t, the relative rate (s⁻¹ when t is in seconds).",
+        "1/t",
+        "Relative rate, 1/t.",
+        "1 divided by time.",
+        "1/t in s^-1"
+      ],
+      "reject": [
+        "Temperature (°C).",
+        "Time in seconds, t.",
+        "Initial concentration on the y-axis."
+      ],
+      "id": "task1_v221_chem_rp_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "courseTopic": "RP3 Rates",
+      "revisionTopic": "RP3 Rates",
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
