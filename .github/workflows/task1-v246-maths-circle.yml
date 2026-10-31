@@ -1,0 +1,22 @@
+name: Task 1 v246 Maths circle-geometry recall and marking
+on:
+  pull_request:
+    paths:
+      - 'maths_first_mock_circle_geometry_v246.json'
+      - 'tests/task1-v246-maths-circle-geometry.cjs'
+      - 'tests/task1-v245-maths-pure-applied.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v246-maths-circle.yml'
+  push:
+    branches: [main]
+jobs:
+  circle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v245-maths-pure-applied.cjs
+      - run: node tests/task1-v246-maths-circle-geometry.cjs

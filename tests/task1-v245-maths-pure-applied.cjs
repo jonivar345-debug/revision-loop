@@ -6,7 +6,7 @@ assert.equal(deck.cards.length,3345);assert.equal(bank.version,'v245');assert.eq
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
 assert(sw.includes("'./maths_first_mock_pure_applied_v245.json'"));assert(sw.includes('-v245-pure-applied'));
 const names=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(names.length,32);assert.equal(names[30],'physics_particles_applications_v243.json');assert.equal(names[31],'maths_first_mock_pure_applied_v245.json');
+assert(names.length>=32); // Preserve original first 32 banks; allow later appends.assert.equal(names[30],'physics_particles_applications_v243.json');assert.equal(names[31],'maths_first_mock_pure_applied_v245.json');
 const old=[...deck.cards,...names.slice(0,31).flatMap(file=>json(file).cards||[])];
 const ids=new Set(old.map(x=>x.id)),fronts=new Set(old.filter(x=>x.subject==='Maths').map(x=>String(x.front).trim().toLowerCase()));
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(',start);

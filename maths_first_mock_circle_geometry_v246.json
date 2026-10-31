@@ -1,0 +1,323 @@
+{
+  "version": "v246",
+  "createdAt": "2026-10-31",
+  "scope": "FIRST school Maths mock: Year 1 Pure only. No Year 2, Statistics or Mechanics.",
+  "subject": "Maths",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/c-coordinate-geometry-in-the-x-y-plane"
+  ],
+  "cards": [
+    {
+      "id": "task1_v246_maths_circle_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For (x−3)²+(y+2)²=49, give the centre and radius.",
+      "back": "Centre (3, −2), radius 7.",
+      "accept": [
+        "Centre (3, −2), radius 7.",
+        "Centre (3,-2), radius 7",
+        "(3,-2); r=7"
+      ],
+      "reject": [
+        "Centre (−3,2), radius 7.",
+        "Centre (3,−2), radius 49."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write x²+y²−6x+4y−12=0 in completed-square form.",
+      "back": "(x−3)²+(y+2)²=25.",
+      "accept": [
+        "(x−3)²+(y+2)²=25.",
+        "(x-3)^2+(y+2)^2=25",
+        "(x − 3)^2 + (y + 2)^2 = 25"
+      ],
+      "reject": [
+        "(x−6)²+(y+4)²=25.",
+        "(x−3)²+(y+2)²=12."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the equation of a circle with centre (−2,1) and radius 4.",
+      "back": "(x+2)²+(y−1)²=16.",
+      "accept": [
+        "(x+2)²+(y−1)²=16.",
+        "(x+2)^2+(y-1)^2=16",
+        "(x + 2)^2 + (y - 1)^2 = 16"
+      ],
+      "reject": [
+        "(x−2)²+(y+1)²=16.",
+        "(x+2)²+(y−1)²=4."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the gradient of the radius from centre (1,2) to P(4,6).",
+      "back": "4/3.",
+      "accept": [
+        "4/3.",
+        "4/3",
+        "1.3333333333333333"
+      ],
+      "reject": [
+        "3/4.",
+        "−4/3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the gradient of the tangent at P(4,6) to a circle centred at (1,2).",
+      "back": "−3/4.",
+      "accept": [
+        "−3/4.",
+        "-3/4",
+        "negative three quarters"
+      ],
+      "reject": [
+        "4/3.",
+        "3/4."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At P(3,4) on x²+y²=25, find the equation of the tangent.",
+      "back": "3x+4y=25.",
+      "accept": [
+        "3x+4y=25.",
+        "3x + 4y = 25",
+        "y=−3x/4+25/4"
+      ],
+      "reject": [
+        "3x+4y=0.",
+        "4x+3y=25."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At P(6,−3) on (x−2)²+(y+3)²=16, find the tangent equation.",
+      "back": "x=6.",
+      "accept": [
+        "x=6.",
+        "x = 6",
+        "The vertical line x=6."
+      ],
+      "reject": [
+        "y=−3.",
+        "x=2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A circle has diameter endpoints A(−1,2) and B(5,2). State its centre and radius.",
+      "back": "Centre (2,2), radius 3.",
+      "accept": [
+        "Centre (2,2), radius 3.",
+        "(2,2); r=3",
+        "Centre (2, 2), radius 3"
+      ],
+      "reject": [
+        "Centre (3,2), radius 3.",
+        "Centre (2,2), radius 6."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A chord of a radius-5 circle lies a perpendicular distance 3 from the centre. Find its length.",
+      "back": "8.",
+      "accept": [
+        "8.",
+        "8",
+        "8 units"
+      ],
+      "reject": [
+        "4.",
+        "6."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Where y=3 intersects x²+y²=25, give the two x-coordinates.",
+      "back": "−4 and 4.",
+      "accept": [
+        "−4 and 4.",
+        "-4 and 4",
+        "x=−4 or x=4"
+      ],
+      "reject": [
+        "−3 and 3.",
+        "−5 and 5."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many points of intersection are there between y=6 and x²+y²=25?",
+      "back": "0.",
+      "accept": [
+        "0.",
+        "0",
+        "None"
+      ],
+      "reject": [
+        "1.",
+        "2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v246_maths_circle_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A and B are endpoints of a diameter. P is a different point on the circumference. Find angle APB.",
+      "back": "90°.",
+      "accept": [
+        "90°.",
+        "90 degrees",
+        "90"
+      ],
+      "reject": [
+        "180°.",
+        "45°."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
