@@ -182,7 +182,7 @@
       "marks": 8,
       "prompt": "This is a paper-only interpretation of reported data, not a preparation method. A theoretical reaction converts 0.250 mol of cyclohexanol into cyclohexene and water in a 1:1 mole ratio. The relative molecular mass of cyclohexene is 82.0 and 16.4 g of liquid product is recovered. Reference boiling points at the stated pressure are cyclohexene 83 °C and cyclohexanol 161 °C. A reported early distillate forms mainly at 82–84 °C; late fractions appear at 88–94 °C. (a) Calculate theoretical moles, maximum mass and percentage yield of cyclohexene. (b) Use the boiling points to explain what the early fractions suggest. (c) Explain why the broader, higher-temperature late fraction could contain impurities and why a boiling range by itself is not a definitive identity or purity test. [8 marks]",
       "markPoints": [
-        "The dehydration gives cyclohexene and cyclohexanol in a 1:1 mole ratio.",
+        "One mole of cyclohexanol produces one mole of cyclohexene and one mole of water.",
         "The theoretical maximum amount of cyclohexene is 0.250 mol.",
         "The maximum mass is 0.250 × 82.0 = 20.5 g.",
         "The percentage yield is 16.4/20.5 × 100 = 80.0%.",
@@ -201,7 +201,7 @@
         1,
         1
       ],
-      "modelAnswer": "The dehydration gives cyclohexene and cyclohexanol in a 1:1 mole ratio. The theoretical maximum amount of cyclohexene is 0.250 mol. The maximum mass is 0.250 × 82.0 = 20.5 g. The percentage yield is 16.4/20.5 × 100 = 80.0%. Cyclohexene has the lower reference boiling point, 83 °C, compared with cyclohexanol at 161 °C. Early distillate collected at 82–84 °C is consistent with the more volatile cyclohexene. Late fractions appearing over the higher, broader 88–94 °C range could contain impurities or a changing mixture. A boiling range supports a provisional identification but cannot independently prove chemical identity or absolute purity.",
+      "modelAnswer": "One mole of cyclohexanol produces one mole of cyclohexene and one mole of water. The theoretical maximum amount of cyclohexene is 0.250 mol. The maximum mass is 0.250 × 82.0 = 20.5 g. The percentage yield is 16.4/20.5 × 100 = 80.0%. Cyclohexene has the lower reference boiling point, 83 °C, compared with cyclohexanol at 161 °C. Early distillate collected at 82–84 °C is consistent with the more volatile cyclohexene. Late fractions appearing over the higher, broader 88–94 °C range could contain impurities or a changing mixture. A boiling range supports a provisional identification but cannot independently prove chemical identity or absolute purity.",
       "answerType": "points",
       "questionType": "interpretation, chemical evidence and examination reasoning",
       "requiresWorking": true,
@@ -214,17 +214,33 @@
       "groupId": "task1_v202_chem_04",
       "groupOrder": 1,
       "reviewedShortAnswerPoints": {
+        "0": [
+          "One mole of cyclohexanol gives one mole of cyclohexene and one mole of water."
+        ],
         "2": [
           "Maximum mass is 20.5 g.",
           "The theoretical mass is 20.5 g.",
-          "Maximum mass is 20.5 g, yield is 80%."
+          "Maximum mass is 20.5 g, yield is 80%.",
+          "The theoretical maximum mass of cyclohexene is 20.5 grams."
         ],
         "3": [
           "Percentage yield is 80%.",
           "The percentage yield is 80%.",
-          "Maximum mass is 20.5 g, yield is 80%."
+          "Maximum mass is 20.5 g, yield is 80%.",
+          "The percentage yield of cyclohexene is 80.0 percent."
+        ],
+        "4": [
+          "Cyclohexene boils at a lower temperature than cyclohexanol."
+        ],
+        "5": [
+          "The early fraction is likely cyclohexene because it boils near 83 °C."
         ]
-      }
+      },
+      "reviewedShortAnswerRejects": [
+        "Dehydration produces cyclohexanol and cyclohexene as the two products.",
+        "The theoretical mass is 20.5 kg.",
+        "The percentage yield is 800%."
+      ]
     },
     {
       "id": "task1_v202_chem_05",
@@ -276,14 +292,23 @@
         "0": [
           "A is reflux.",
           "Sketch A represents reflux.",
-          "A is reflux and B is distillation."
+          "A is reflux and B is distillation.",
+          "Sketch A is the reflux apparatus."
         ],
         "1": [
           "B is distillation.",
           "Sketch B represents distillation.",
-          "A is reflux and B is distillation."
+          "A is reflux and B is distillation.",
+          "Sketch B is distillation."
+        ],
+        "6": [
+          "The condenser cools vapour into liquid."
         ]
-      }
+      },
+      "reviewedShortAnswerRejects": [
+        "Sketch A represents distillation and B represents reflux.",
+        "The condenser chemically reacts with the vapour."
+      ]
     },
     {
       "id": "task1_v202_chem_06",
@@ -336,8 +361,24 @@
       "reviewedShortAnswerRejects": [
         "The sample is definitely 100% pure because it boils at 72°C.",
         "80% recovery proves the fraction is pure.",
-        "The 72°C boiling point proves 100% purity."
-      ]
+        "The 72°C boiling point proves 100% purity.",
+        "The whole 25.0 g was collected.",
+        "80% recovery proves the early fraction is completely pure."
+      ],
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "The total mass of collected fractions is 24.0 g."
+        ],
+        "1": [
+          "The unrecovered mass is 1.0 g."
+        ],
+        "3": [
+          "80% of the target was recovered."
+        ],
+        "7": [
+          "80% recovery assumes the early fraction is entirely the target compound."
+        ]
+      }
     },
     {
       "id": "task1_v202_chem_07",
@@ -362,7 +403,7 @@
         "D is an oxidisable primary or secondary alcohol, given the orange-to-green oxidation reagent and negative Tollens' result within the stated options.",
         "The alkene undergoes addition across its carbon–carbon double bond in the reaction associated with A.",
         "For B, silver(I) ions are reduced to metallic silver while the aldehyde is oxidised.",
-        "Oxidation of dichromate(VI) reagent to Cr³⁺ accounts for the orange-to-green observation with D.",
+        "Reduction of chromium(VI) to chromium(III) accounts for the orange-to-green observation with D.",
         "Both primary and secondary alcohols can show oxidation, so the dichromate result and a negative Tollens' test alone do not distinguish which class D belongs to."
       ],
       "markPointMarks": [
@@ -375,7 +416,7 @@
         1,
         1
       ],
-      "modelAnswer": "A is an alkene because bromine water is decolourised by reaction at a C=C double bond. B is an aldehyde because it gives the characteristic silver deposit in Tollens' test. C is a carboxylic acid because acid plus carbonate releases carbon dioxide. D is an oxidisable primary or secondary alcohol, given the orange-to-green oxidation reagent and negative Tollens' result within the stated options. The alkene undergoes addition across its carbon–carbon double bond in the reaction associated with A. For B, silver(I) ions are reduced to metallic silver while the aldehyde is oxidised. Oxidation of dichromate(VI) reagent to Cr³⁺ accounts for the orange-to-green observation with D. Both primary and secondary alcohols can show oxidation, so the dichromate result and a negative Tollens' test alone do not distinguish which class D belongs to.",
+      "modelAnswer": "A is an alkene because bromine water is decolourised by reaction at a C=C double bond. B is an aldehyde because it gives the characteristic silver deposit in Tollens' test. C is a carboxylic acid because acid plus carbonate releases carbon dioxide. D is an oxidisable primary or secondary alcohol, given the orange-to-green oxidation reagent and negative Tollens' result within the stated options. The alkene undergoes addition across its carbon–carbon double bond in the reaction associated with A. For B, silver(I) ions are reduced to metallic silver while the aldehyde is oxidised. Reduction of chromium(VI) to chromium(III) accounts for the orange-to-green observation with D. Both primary and secondary alcohols can show oxidation, so the dichromate result and a negative Tollens' test alone do not distinguish which class D belongs to.",
       "answerType": "points",
       "questionType": "interpretation, chemical evidence and examination reasoning",
       "requiresWorking": true,
@@ -386,7 +427,32 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v202_chem_07",
-      "groupOrder": 1
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "A is an alkene."
+        ],
+        "1": [
+          "B is an aldehyde."
+        ],
+        "2": [
+          "C is a carboxylic acid."
+        ],
+        "3": [
+          "D is a primary or secondary alcohol."
+        ],
+        "6": [
+          "Dichromate(VI) is reduced from chromium(VI) to chromium(III)."
+        ],
+        "7": [
+          "Both primary and secondary alcohols oxidise, so D cannot be distinguished using those results."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "Dichromate(VI) is oxidised from chromium(VI) to chromium(III).",
+        "Chromium(VI) loses electrons to become chromium(III).",
+        "The orange-to-green change proves D is a tertiary alcohol."
+      ]
     },
     {
       "id": "task1_v202_chem_08",
@@ -440,19 +506,29 @@
         "0": [
           "P is primary.",
           "P is a primary alcohol.",
-          "P is primary, Q secondary, R tertiary."
+          "P is primary, Q secondary, R tertiary.",
+          "P is butan-1-ol."
         ],
         "1": [
           "Q is secondary.",
           "Q is a secondary alcohol.",
-          "P is primary, Q secondary, R tertiary."
+          "P is primary, Q secondary, R tertiary.",
+          "Q is butan-2-ol."
         ],
         "2": [
           "R is tertiary.",
           "R is a tertiary alcohol.",
-          "P is primary, Q secondary, R tertiary."
+          "P is primary, Q secondary, R tertiary.",
+          "R is 2-methylpropan-2-ol."
+        ],
+        "7": [
+          "Tertiary alcohol R has no hydrogen on the OH-bearing carbon."
         ]
-      }
+      },
+      "reviewedShortAnswerRejects": [
+        "R is primary because its OH-bearing carbon has no hydrogen.",
+        "P is butan-2-ol and Q is butan-1-ol."
+      ]
     },
     {
       "id": "task1_v202_chem_09",
@@ -508,17 +584,33 @@
           "U contains an aldehyde.",
           "U is an aldehyde, V a carboxylic acid, W an alkene."
         ],
+        "1": [
+          "Butanal is one possible aldehyde for U."
+        ],
+        "2": [
+          "2-Methylpropanal is another aldehyde consistent with U."
+        ],
         "4": [
           "V is a carboxylic acid.",
           "V is an organic acid.",
           "U is an aldehyde, V a carboxylic acid, W an alkene."
         ],
+        "5": [
+          "V could be propanoic acid because an ester would not give the carbonate reaction."
+        ],
         "6": [
           "W is an alkene.",
           "W contains C=C.",
           "U is an aldehyde, V a carboxylic acid, W an alkene."
+        ],
+        "7": [
+          "W could be but-1-ene but bromine decolourisation cannot distinguish its isomers."
         ]
-      }
+      },
+      "reviewedShortAnswerRejects": [
+        "A positive Tollens test proves U is butanal rather than 2-methylpropanal.",
+        "The bromine-water test uniquely proves W is but-1-ene."
+      ]
     }
   ]
 }
