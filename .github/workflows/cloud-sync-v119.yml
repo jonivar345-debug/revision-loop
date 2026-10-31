@@ -20,6 +20,9 @@ on:
       - 'tests/task1-v215-rp4-recall-loader.cjs'
       - 'tests/task1-v216-chemistry-194-crosswalk.cjs'
       - 'tests/task1-v217-chemistry-legacy-corrections.cjs'
+      - 'chemistry_as_measurement_recall_v218.json'
+      - 'tests/task1-v218-chemistry-measurement-recall.cjs'
+      - 'editorial/task1-v218-as-chemistry-measurement-audit.json'
       - 'editorial/task1-v217-chemistry-legacy-recall-fixes.json'
       - 'editorial/task1-v216-a2-chemistry-194-answer-scope-review.json'
       - 'progress-backup.js'
@@ -319,6 +322,7 @@ jobs:
       - run: node tests/task1-v214-legacy-mock-content-audit.cjs
       - run: node tests/task1-v216-chemistry-194-crosswalk.cjs
       - run: node tests/task1-v217-chemistry-legacy-corrections.cjs
+      - run: node tests/task1-v218-chemistry-measurement-recall.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
