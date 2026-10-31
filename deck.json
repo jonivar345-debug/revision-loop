@@ -5086,7 +5086,7 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "What is x⁻ⁿ?",
+      "front": "For x ≠ 0 and positive integer n, what is x⁻ⁿ?",
       "back": "1/xⁿ.",
       "accept": [
         "1/x^n",
@@ -5107,8 +5107,8 @@
       "kind": "content",
       "priority": 1,
       "scope": "mock",
-      "front": "What is x^(1/n)?",
-      "back": "The nth root of x.",
+      "front": "For positive integer n, what does x^(1/n) mean wherever it is real?",
+      "back": "The real nth root of x.",
       "accept": [
         "nth root of x",
         "root n of x"
@@ -49336,10 +49336,10 @@
       "topic": "Thermodynamics",
       "specRef": "3.1.8",
       "stage": "A2",
-      "front": "What does ΔG = 0 mean in the simple A-level feasibility model?",
-      "back": "The limiting temperature for thermodynamic feasibility.",
+      "front": "When ΔG = ΔH − TΔS changes sign as temperature varies, what does ΔG = 0 locate?",
+      "back": "The threshold temperature between predicted feasible and non-feasible conditions.",
       "accept": [
-        "The limiting temperature for thermodynamic feasibility."
+        "The threshold temperature between predicted feasible and non-feasible conditions."
       ],
       "id": "task1_v125_130",
       "kind": "content",
