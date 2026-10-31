@@ -1,0 +1,88 @@
+{
+  "version": "v221",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1: AQA AS Chemistry required practical 1–3, uncertainty and evaluation recall.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "screened": {
+    "activeCoreASMockCardsByRP1to3AndAssociatedTopics": 271,
+    "coreFlashcards": 3345,
+    "coreExamQuestions": 1268,
+    "screenedTopics": [
+      "RP1 Titration",
+      "RP2 Enthalpy",
+      "RP3 Rates",
+      "Titration calculations",
+      "Back titrations",
+      "Calorimetry",
+      "Practical skills",
+      "Energetics",
+      "Hess's law",
+      "Kinetics",
+      "Amount of substance"
+    ]
+  },
+  "findings": [
+    {
+      "id": "task1_practical_026",
+      "finding": "Historical back treats 1/t as relative initial rate unconditionally. It is a relative fixed-endpoint rate proxy; claiming exact initial concentration rate needs more conditions and data.",
+      "action": "Narrow the question to why 1/t is not automatically a rate in mol dm^-3 s^-1. Preserve existing core card ID and progress."
+    },
+    {
+      "kind": "gap",
+      "ids": [
+        "task1_v221_chem_rp_01",
+        "task1_v221_chem_rp_02",
+        "task1_v221_chem_rp_03"
+      ],
+      "finding": "No direct AS Chemistry mock cards defined systematic or random error or explained the effect of repeat readings on systematic bias."
+    },
+    {
+      "kind": "gap",
+      "ids": [
+        "task1_v221_chem_rp_04"
+      ],
+      "finding": "Existing cards described the rough titre and concordance but did not directly ask why the rough run is excluded from a concordant mean."
+    },
+    {
+      "kind": "gap",
+      "ids": [
+        "task1_v221_chem_rp_05"
+      ],
+      "finding": "Heat loss to surroundings was covered; separate understanding of calorimeter heat capacity was not directly tested."
+    },
+    {
+      "kind": "gap",
+      "ids": [
+        "task1_v221_chem_rp_06",
+        "task1_v221_chem_rp_07",
+        "task1_v221_chem_rp_08"
+      ],
+      "finding": "Existing cards covered fixed endpoints and 1/t units, but not observer judgement uncertainty, reactant concentration as a control during temperature changes, or graph-axis designation in this context."
+    }
+  ],
+  "improvements": {
+    "newASChemMockCards": 8,
+    "existingCoreIdsCorrectedInMemory": 1,
+    "coreDeckEdited": false,
+    "coreExamBankEdited": false,
+    "legacyIdsStable": true,
+    "mathsYear1PureMockScopeIntact": true,
+    "cloudProgressKeysIntact": true,
+    "serviceWorkerVersionUpdated": true,
+    "includesExperimentalProcedures": false
+  },
+  "testPlan": [
+    "Use the actual browser answer evaluator for every valid/invalid alternative",
+    "Execute the exact loader index 16 code and check mock/taught/stage validation",
+    "Preserve existing 16 supplementary banks, earlier regression tests, original ID counts, cloud progress key names",
+    "Run four existing pull-request GitHub Actions workflows"
+  ],
+  "task1Complete": false,
+  "fullSpecCertified": false,
+  "completeHistoricPaperCoverageCertified": false,
+  "next": "Review RP5 and RP6 single-fact identification and distillation concepts, followed by remaining Chemistry AS mock marking and coverage gaps."
+}
