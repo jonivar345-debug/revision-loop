@@ -17,7 +17,7 @@ assert.equal(audit.inventoried.postNewCards,179);
 assert.equal(audit.specCrosswalk.length,9);
 for(const v of Object.values(audit.completionGates))assert.equal(v,false);
 const names=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(names.length,27);assert.equal(names[26],'maths_first_mock_pure_precision_v232.json');
+assert(names.length>=27,'Historic v232 flashcard bank was removed');assert.equal(names[26],'maths_first_mock_pure_precision_v232.json');
 assert(sw.includes("'./maths_first_mock_pure_precision_v232.json'"));assert(sw.includes('v232-pure-mock'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
