@@ -4,7 +4,7 @@
   "kind": "frozen first-pass snapshot, NOT AQA specification sign-off",
   "coreDeckSource": {
     "path": "deck.json",
-    "blobSha": "bf7887ecf83fd9a93b907b994c485e8ac8a5ac14",
+    "blobSha": "f775521167de78d2fdd9b7a4c229960b2c67e711",
     "coreCards": 3345,
     "coreMockPhysics": 730,
     "coreMockChemistry": 1533,
@@ -60,14 +60,14 @@
     {
       "id": "math_indices_neg",
       "source": "deck.json",
-      "stamp": "6f4dc2ce",
-      "level": "first_content_scope_pass"
+      "stamp": "7b8f9ad5",
+      "level": "corrected_and_first_pass_rechecked"
     },
     {
       "id": "math_indices_frac",
       "source": "deck.json",
-      "stamp": "0a2a2a90",
-      "level": "first_content_scope_pass"
+      "stamp": "8941e4f1",
+      "level": "corrected_and_first_pass_rechecked"
     },
     {
       "id": "math_surds_rationalise",
@@ -1572,8 +1572,8 @@
     {
       "id": "task1_v125_130",
       "source": "deck.json",
-      "stamp": "341dee31",
-      "level": "first_content_scope_pass"
+      "stamp": "e1af125a",
+      "level": "corrected_and_first_pass_rechecked"
     },
     {
       "id": "task1_v125_131",
@@ -2059,21 +2059,21 @@
       "subject": "Maths",
       "kind": "precision",
       "detail": "Negative-index rule should explicitly qualify nonzero base.",
-      "resolution": "pending"
+      "resolution": "corrected_in_v228"
     },
     {
       "id": "math_indices_frac",
       "subject": "Maths",
       "kind": "precision",
       "detail": "Real nth root requires suitable positive integer index and real-domain assumptions.",
-      "resolution": "pending"
+      "resolution": "corrected_in_v228"
     },
     {
       "id": "task1_v125_130",
       "subject": "Chemistry",
       "kind": "ambiguity",
       "detail": "Current ΔG=0 answer says only limiting temperature; distinguish threshold interpretation from equilibrium under stated conditions.",
-      "resolution": "pending"
+      "resolution": "corrected_in_v228"
     }
   ],
   "specRequirementMappingStatus": {
@@ -2093,5 +2093,10 @@
     "schoolScopeResolved": false,
     "liveDeploymentChecked": false,
     "task1Complete": false
-  }
+  },
+  "firstPassCorrections": [
+    "math_indices_neg",
+    "math_indices_frac",
+    "task1_v125_130"
+  ]
 }
