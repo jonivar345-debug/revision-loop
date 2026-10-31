@@ -174,16 +174,16 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "What are the units of k for an overall first-order reaction?",
-      "back": "s⁻¹.",
+      "front": "For a first-order rate law rate = k[A], what happens to the rate if [A] is halved and T stays constant?",
+      "back": "The rate halves.",
       "accept": [
-        "s⁻¹.",
-        "s^-1",
-        "per second"
+        "The rate halves.",
+        "Rate falls to half its original value.",
+        "The reaction rate decreases by a factor of 2."
       ],
       "reject": [
-        "mol dm⁻³ s⁻¹.",
-        "dm³ mol⁻¹ s⁻¹."
+        "The rate is unchanged.",
+        "The rate decreases by a factor of 4."
       ],
       "strictRecall": true
     },
