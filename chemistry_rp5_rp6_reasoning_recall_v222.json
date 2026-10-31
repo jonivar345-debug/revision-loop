@@ -1,0 +1,253 @@
+{
+  "version": "v222",
+  "createdAt": "2026-10-31",
+  "subject": "Chemistry",
+  "scope": "Eight original single-fact AQA AS Chemistry RP5 and RP6 exam-theory recall cards based on reported data and interpretation only; no experimental procedures.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "notes": "Extends existing original 69-mark RP4–RP6 exam-question scenarios from v202. Avoids repeating basic test colours, test procedures, apparatus set-up and arithmetic already covered. No claim of full-spec or past-paper completion.",
+  "cards": [
+    {
+      "id": "task1_v222_chem_rp_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alcohols",
+      "courseTopic": "Alcohols",
+      "revisionTopic": "Alcohols",
+      "requiredPractical": 5,
+      "specRef": "3.3.5.3",
+      "front": "Why may a measured boiling point differ from a reference value even for the same pure liquid?",
+      "back": "Boiling temperature depends on external pressure.",
+      "accept": [
+        "Boiling temperature depends on external pressure.",
+        "A change in atmospheric pressure changes the boiling point.",
+        "Because boiling point varies with pressure.",
+        "Different pressures can give different boiling temperatures."
+      ],
+      "reject": [
+        "The liquid must be a different substance.",
+        "Boiling point is independent of pressure.",
+        "All pure liquids boil at exactly 100 °C."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alcohols",
+      "courseTopic": "Alcohols",
+      "revisionTopic": "Alcohols",
+      "requiredPractical": 5,
+      "specRef": "7.3.3",
+      "front": "What does percentage recovery measure in a distillation data question?",
+      "back": "The percentage of the target material initially present that is recovered.",
+      "accept": [
+        "The percentage of the target material initially present that is recovered.",
+        "Recovered target mass divided by initial target mass, times 100.",
+        "The fraction of available target substance recovered, expressed as a percentage.",
+        "The recovered amount of target divided by the starting amount of target, multiplied by 100."
+      ],
+      "reject": [
+        "Recovered mass divided by the theoretical mass of product from a reaction.",
+        "The percentage of liquid that is a new chemical product.",
+        "The percentage purity of the recovered liquid."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alcohols",
+      "courseTopic": "Alcohols",
+      "revisionTopic": "Alcohols",
+      "requiredPractical": 5,
+      "specRef": "3.3.5.3",
+      "front": "Why does a narrow boiling range alone not prove the identity of a distilled liquid?",
+      "back": "Different liquids may have similar boiling temperatures; other evidence is needed.",
+      "accept": [
+        "Different liquids may have similar boiling temperatures; other evidence is needed.",
+        "A narrow boiling range suggests purity but cannot uniquely identify a liquid.",
+        "Several compounds can have similar boiling points, so a second identification method is needed.",
+        "Boiling data alone cannot establish the exact molecular identity."
+      ],
+      "reject": [
+        "A narrow range proves the molecular formula.",
+        "Any liquid with a narrow range is completely pure and identified.",
+        "Boiling temperature is unrelated to molecular identity."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alcohols",
+      "courseTopic": "Alcohols",
+      "revisionTopic": "Alcohols",
+      "requiredPractical": 5,
+      "specRef": "3.3.5.3",
+      "front": "Why is simple distillation less effective for separating liquids with very similar boiling points?",
+      "back": "Both liquids can contribute substantially to the vapour.",
+      "accept": [
+        "Both liquids can contribute substantially to the vapour.",
+        "The vapour contains appreciable amounts of both similar-boiling components.",
+        "Their volatilities are similar, so neither component is strongly enriched by one vaporisation.",
+        "The components vaporise over overlapping temperature ranges."
+      ],
+      "reject": [
+        "The liquids must have identical chemical formulas.",
+        "A condenser chemically converts both liquids into one substance.",
+        "The more volatile liquid can never evaporate."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis",
+      "requiredPractical": 6,
+      "specRef": "3.3.6.1",
+      "front": "Why can an oxidation-test colour change alone fail to distinguish a primary from a secondary alcohol?",
+      "back": "Both primary and secondary alcohols can be oxidised.",
+      "accept": [
+        "Both primary and secondary alcohols can be oxidised.",
+        "Both types can give a positive oxidation result.",
+        "Primary and secondary alcohols both react in an oxidation test.",
+        "Oxidation is possible for both primary and secondary alcohols."
+      ],
+      "reject": [
+        "Only tertiary alcohols can be oxidised.",
+        "Primary alcohols cannot be oxidised.",
+        "A positive oxidation test always proves the alcohol is primary."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis",
+      "requiredPractical": 6,
+      "specRef": "3.3.6.1",
+      "front": "Why does a negative aldehyde-specific test not, by itself, prove that an unrestricted unknown is a ketone?",
+      "back": "Other functional groups can also give a negative result.",
+      "accept": [
+        "Other functional groups can also give a negative result.",
+        "Many non-aldehydes besides ketones also test negative.",
+        "A negative aldehyde test does not rule out every other functional group.",
+        "A negative result alone does not uniquely identify a ketone."
+      ],
+      "reject": [
+        "Every negative result proves the unknown is a ketone.",
+        "All non-aldehydes must be ketones.",
+        "A negative aldehyde test proves the sample is an aldehyde."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis",
+      "requiredPractical": 6,
+      "specRef": "3.3.6.1",
+      "front": "What can a positive functional-group test suggest without proving the entire molecular structure?",
+      "back": "The presence of a functional group, not a unique complete structure.",
+      "accept": [
+        "The presence of a functional group, not a unique complete structure.",
+        "A likely functional group but not the whole molecule.",
+        "The test supports a functional-group assignment rather than one exact structure.",
+        "A reaction pattern consistent with a group but not full identity."
+      ],
+      "reject": [
+        "The exact carbon skeleton and every atom position.",
+        "The only possible structural isomer.",
+        "The complete molecular formula and unique structure in every case."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v222_chem_rp_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "courseTopic": "Organic analysis",
+      "revisionTopic": "Organic analysis",
+      "requiredPractical": 6,
+      "specRef": "7.3.2",
+      "front": "Why is agreement between different recorded observations more useful than one organic test result?",
+      "back": "Independent evidence reduces ambiguity between possible structures.",
+      "accept": [
+        "Independent evidence reduces ambiguity between possible structures.",
+        "Several matching observations narrow the set of possible identities.",
+        "Combining different tests helps rule out alternative structures.",
+        "Independent results strengthen the functional-group assignment."
+      ],
+      "reject": [
+        "One observation always proves the entire structure.",
+        "Multiple identical observations automatically eliminate every impurity.",
+        "Additional evidence is never needed to identify a molecule."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}

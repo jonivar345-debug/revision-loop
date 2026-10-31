@@ -1,0 +1,72 @@
+{
+  "version": "v222",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1: AS Chemistry RP5 distillation and RP6 organic analysis conceptual recall.",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry"
+  ],
+  "referenceBank": {
+    "id": "chemistry_rp4_rp6_evidence_v202.json",
+    "existingOriginalRP5ExamQuestions": 3,
+    "existingOriginalRP6ExamQuestions": 3,
+    "notes": "Existing v202 written-paper application questions already cover yields, distillation/reflux, fraction interpretations, oxidation, test observation inference and structural uncertainty."
+  },
+  "findings": [
+    {
+      "rp": 5,
+      "missingOrUnderemphasisedConcept": "Boiling point depends on ambient pressure; agreement with a reference alone cannot prove identity.",
+      "newIds": [
+        "task1_v222_chem_rp_01",
+        "task1_v222_chem_rp_03"
+      ]
+    },
+    {
+      "rp": 5,
+      "missingOrUnderemphasisedConcept": "Distinguish percentage recovery from percentage yield; explain overlapping volatilities in simple distillation.",
+      "newIds": [
+        "task1_v222_chem_rp_02",
+        "task1_v222_chem_rp_04"
+      ]
+    },
+    {
+      "rp": 6,
+      "missingOrUnderemphasisedConcept": "A positive oxidation result is not exclusive to primary alcohols; negative aldehyde evidence is not uniquely ketone without candidate restrictions.",
+      "newIds": [
+        "task1_v222_chem_rp_05",
+        "task1_v222_chem_rp_06"
+      ]
+    },
+    {
+      "rp": 6,
+      "missingOrUnderemphasisedConcept": "Functional-group results alone do not define a unique molecular structure; combine independent observations.",
+      "newIds": [
+        "task1_v222_chem_rp_07",
+        "task1_v222_chem_rp_08"
+      ]
+    }
+  ],
+  "improvements": {
+    "newASChemMockCards": 8,
+    "RP5": 4,
+    "RP6": 4,
+    "coreDeckEdited": false,
+    "coreExamBankEdited": false,
+    "existingIdsPreserved": true,
+    "cloudProgressKeysPreserved": true,
+    "mathsYear1PureMockScopeUnchanged": true,
+    "serviceWorkerCacheBumped": true,
+    "proceduralLaboratoryInstructionsAdded": false
+  },
+  "verificationPlan": [
+    "Use actual flashcard answer evaluator for accepted/rejected alternatives",
+    "Use actual app.js supplement-loader logic, including invalid subject/stage/mock/taught/scope exclusion",
+    "Require exact prompt uniqueness against existing core and 17 prior supplement banks",
+    "Check original content record counts, history and progress keys unchanged",
+    "Run all four pull-request CI workflows before merge"
+  ],
+  "task1Complete": false,
+  "wholeChemistrySpecificationCertified": false,
+  "allHistoricalPapersIndexed": false
+}
