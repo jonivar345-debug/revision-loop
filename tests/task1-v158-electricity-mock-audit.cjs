@@ -1,5 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict');
+const historical=require('./task1-v154-legacy-evidence.cjs');
 const fs=require('node:fs');
 const deck=require('./task1-v162-historical-snapshot.cjs')(JSON.parse(fs.readFileSync('deck.json','utf8')));
 const bank=require('./task1-v163-historical-bank.cjs')(JSON.parse(fs.readFileSync('exam_questions.json','utf8')));
@@ -51,7 +52,7 @@ const seen=new Set();
 for(const row of audit.rows){
  assert(!seen.has(row.id));seen.add(row.id);assert(/^3\.5\.1\.[1-6]$/.test(row.specRef));
  const c=cm.get(row.card.id);assert(c&&c.active!==false&&c.mock===true&&c.subject==='Physics');
- assert.equal(c.front,row.card.front);assert.equal(c.back,row.card.back);
+ assert.equal(c.front,historical(c.id,'front',row.card.front));assert.equal(c.back,historical(c.id,'back',row.card.back));
  assert.equal(c.specRef||null,row.card.specRef);
  if(row.question){const q=qm.get(row.question.id);assert(q&&q.mock&&q.subject==='Physics');assert.equal(q.prompt,row.question.prompt);assert.equal(q.marks,row.question.marks);assert.deepEqual(q.markPoints,row.question.markPoints);}
 }
