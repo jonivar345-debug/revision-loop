@@ -1,0 +1,48 @@
+{
+  "version": "v223",
+  "date": "2026-10-31",
+  "task": "Correct RP5/RP6 model chemistry and refine human-reviewed alternative marking",
+  "scope": "Nine original written-paper RP4–RP6 Chemistry questions in v202 supplement; changes limited to six RP5/RP6 answer rubrics, no experimental instructions.",
+  "originalQuestions": 9,
+  "baselineReviewedAliases": 39,
+  "addedReviewedAliases": 26,
+  "reviewedAliasesAfter": 65,
+  "baselineReviewedRejections": 3,
+  "addedReviewedRejections": 14,
+  "reviewedRejectionsAfter": 17,
+  "scientificCorrections": [
+    {
+      "id": "task1_v202_chem_04",
+      "markPointIndex": 0,
+      "problem": "Prior rubric incorrectly described cyclohexanol and cyclohexene as the two dehydration products in a 1:1 ratio.",
+      "correctedConcept": "Cyclohexanol -> cyclohexene + water, with one mole of each product per mole of cyclohexanol."
+    },
+    {
+      "id": "task1_v202_chem_07",
+      "markPointIndex": 6,
+      "problem": "Prior rubric called chromium(VI)-to-chromium(III) change oxidation.",
+      "correctedConcept": "Chromium(VI) is reduced to chromium(III); orange-to-green evidence is consistent with reduction."
+    }
+  ],
+  "improvements": "Add precise evidence-aligned AS Chemistry RP5/RP6 model-accepted alternatives for moles and yield, boiling-range evidence, distillation/reflux, recovery, identifying functional groups, chromium reduction, alcohol classification and limits of test specificity. Add explicit incorrect statements to prevent over-credit for wrong units, numerical claims, reversed apparatus or oxidation-state interpretations.",
+  "safeguards": {
+    "preserveLegacyIDs": true,
+    "unchangedCoreFlashcards": 3345,
+    "unchangedCoreExamQuestions": 1268,
+    "changeOnlyExistingSupplement": true,
+    "originalQuestionIDsUnchanged": true,
+    "existingProgressKeysUnchanged": true,
+    "year1PureMathsMockUnchanged": true,
+    "manualMarkReviewRetained": true,
+    "wholeSpecificationCertainty": false,
+    "entirePastPaperArchiveCertified": false,
+    "task1Complete": false
+  },
+  "testPlan": [
+    "Validate 9 source questions and full model marking with actual app scorer",
+    "Check 65 curated aliases each earn only their intended rubric marks",
+    "Check 17 curated wrong examples each earn zero",
+    "Check no change to question IDs, core counts and mock scope",
+    "Run four CI checks on final PR head SHA before merge"
+  ]
+}
