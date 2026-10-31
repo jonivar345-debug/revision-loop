@@ -40,7 +40,7 @@ const s=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),e=app.indexOf('funct
 assert(s>=0&&e>s,'Missing dedicated mock card guard');
 const mockEligibleCard=vm.runInNewContext(app.slice(s,e)+'\nmockEligibleCard');
 const all=[...base.cards,...v186.cards,...v187.cards,...ext.cards].filter(c=>c.subject==='Maths'&&c.active!==false);
-assert.equal(all.filter(mockEligibleCard).length,147,'First Year 1 Pure mock card pool');
+assert.equal(all.filter(mockEligibleCard).length,140,'Current first Year 1 Pure mock pool after seven extra v232 exclusions');
 for(const {id} of audit.excludedFromMathsFirstMock){
  const c=all.find(c=>c.id===id);assert(c,'Existing historical card must remain '+id);
  assert.equal(c.mock,true);
@@ -58,4 +58,4 @@ for(const c of ext.cards){
  for(const answer of c.reject)assert.notEqual(evaluate(c,answer).status,'correct',c.id+' wrong '+answer);
  assert.equal(evaluate(c,'').status,'neutral');
 }
-console.log('PASS v192: 10 exact-recall AS Pure cards; 147 eligible first-mock cards; 3 Year 2 function cards remain for full revision; stable IDs, cache and cloud');
+console.log('PASS v192 historical: 10 exact-recall AS Pure cards; original 147 pool preserved in old audit; current first-mock scope 140 after v232 exclusions, all original cards retained.');

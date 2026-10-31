@@ -1,0 +1,1060 @@
+{
+  "version": "v232",
+  "date": "2026-10-31",
+  "kind": "Maths first school mock: scope correction and sampled content inventory; NOT full spec sign-off",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/a-proof",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/b-algebra-and-functions",
+    "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content/j-vectors"
+  ],
+  "schoolScope": "FIRST mock: Year 1 Pure school-taught topics. Do not pull in Mechanics, Statistics, numerical methods, Year 2-only inverse/composite functions, proof by contradiction, fractional/negative-index binomial expansion or Year 2 radian and calculus content. Arithmetic/geometric sequences retained because confirmed Year 12 taught even if not all assessed in standalone AQA AS content.",
+  "historicSource": "editorial/task1-v228-mock-review-ledger.json",
+  "historicFirstPassMaths": 162,
+  "exclusions": {
+    "previouslyExcludedCore": [
+      "math_function_composite",
+      "math_inverse_condition",
+      "task1_v136_063"
+    ],
+    "newlyExcludedCore": [
+      "math_inverse",
+      "v33_card_maths_functions_76",
+      "v33_card_maths_functions_77",
+      "task1_maths_006",
+      "task1_v130_156",
+      "task1_v130_157",
+      "task1_v136_064"
+    ],
+    "earlierInactiveCore": [
+      "math_arith_sum",
+      "math_geom_sum",
+      "math_geom_infinite",
+      "math_binomial"
+    ],
+    "previousCoreEligible": 113,
+    "currentCoreEligible": 106
+  },
+  "inventoried": {
+    "coreCount": 106,
+    "supplementCount": 49,
+    "preNewCards": 155,
+    "newCards": 24,
+    "postNewCards": 179,
+    "stamps": [
+      {
+        "source": "deck.json",
+        "id": "maths_trig_001",
+        "stamp": "1aae861b",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "maths_transform_001",
+        "stamp": "909ef822",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "maths_transform_002",
+        "stamp": "5ff50748",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "maths_transform_003",
+        "stamp": "8959241c",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_proof_counter",
+        "stamp": "8d479b41",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_proof_exhaust",
+        "stamp": "c0e69806",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_indices_neg",
+        "stamp": "7b8f9ad5",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_indices_frac",
+        "stamp": "8941e4f1",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_surds_rationalise",
+        "stamp": "c104f44f",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_quad_discriminant",
+        "stamp": "8e3c2489",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_complete_square",
+        "stamp": "dc07b173",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_modulus",
+        "stamp": "c9230646",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_line_gradient",
+        "stamp": "0baf8591",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_perp_grad",
+        "stamp": "378e46d6",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_circle",
+        "stamp": "a96e630b",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_circle_tangent",
+        "stamp": "81b8b126",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_arith_nth",
+        "stamp": "3c5d71ef",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_geom_nth",
+        "stamp": "8dfec179",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_sine_rule",
+        "stamp": "042d0aee",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_cosine_rule",
+        "stamp": "ad98c30f",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_triangle_area",
+        "stamp": "58da291a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_tan_identity",
+        "stamp": "05a851db",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_trig_period",
+        "stamp": "741cce58",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_logs_product",
+        "stamp": "50073eae",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_logs_power",
+        "stamp": "ef4540a7",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_logs_change",
+        "stamp": "9d063c24",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_exp_inverse",
+        "stamp": "ba12f452",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_diff_power",
+        "stamp": "5155043a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_diff_gradient",
+        "stamp": "8f135775",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_stationary",
+        "stamp": "ecb36ff2",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_second_deriv",
+        "stamp": "0cff91b4",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_integrate_power",
+        "stamp": "45a11976",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_area_curve",
+        "stamp": "3044e0b3",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_vector_mag",
+        "stamp": "5f4b57cb",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "math_a2_stationary_class",
+        "stamp": "7cce98b3",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_trigonometry_73",
+        "stamp": "89050aa7",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_trigonometry_74",
+        "stamp": "4b92cc36",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_transformations_75",
+        "stamp": "a111f297",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_quadratics_78",
+        "stamp": "737f71d4",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_integration_80",
+        "stamp": "b189bb4f",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_integration_81",
+        "stamp": "3f8c658a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_algebra_85",
+        "stamp": "4364adf1",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_coordinate_geometry_86",
+        "stamp": "d101b100",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "v33_card_maths_sequences_87",
+        "stamp": "a0976b74",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_001",
+        "stamp": "31e214fa",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_002",
+        "stamp": "67c1fa57",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_004",
+        "stamp": "e4a253fe",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_007",
+        "stamp": "e6b18ce5",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_008",
+        "stamp": "0b08025d",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_011",
+        "stamp": "aea550d6",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_maths_012",
+        "stamp": "771da29d",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_math_002",
+        "stamp": "d4ad02c3",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_math_003",
+        "stamp": "ef2b30a4",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_math_004",
+        "stamp": "7968c87d",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_math_008",
+        "stamp": "c45dd0cf",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v124_bulk_math_009",
+        "stamp": "18c8e294",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v130_155",
+        "stamp": "981dba50",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_001",
+        "stamp": "0cce6d65",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_002",
+        "stamp": "fb30a938",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_003",
+        "stamp": "dc583642",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_004",
+        "stamp": "6973b250",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_005",
+        "stamp": "91342c0e",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_006",
+        "stamp": "56fcc946",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_007",
+        "stamp": "c0822992",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_008",
+        "stamp": "f3bed2ad",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_009",
+        "stamp": "3696568a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_062",
+        "stamp": "8157cd54",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_065",
+        "stamp": "eeb3fd7c",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_066",
+        "stamp": "7cbe9b52",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_067",
+        "stamp": "be130b8b",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_070",
+        "stamp": "917ab071",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v136_071",
+        "stamp": "bd638e71",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v138_001",
+        "stamp": "6a773817",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_001",
+        "stamp": "2dbffb78",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_002",
+        "stamp": "b40bbdc3",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_003",
+        "stamp": "436c5d7c",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_004",
+        "stamp": "bd63b208",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_005",
+        "stamp": "dec7fb1a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_006",
+        "stamp": "3b12afbe",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_007",
+        "stamp": "0a8000bc",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_008",
+        "stamp": "49d755d0",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_009",
+        "stamp": "5e3a7d97",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_010",
+        "stamp": "95e890b6",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_011",
+        "stamp": "3bb79617",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_012",
+        "stamp": "80cf4f5c",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_013",
+        "stamp": "c1cb0385",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_014",
+        "stamp": "4ee24eda",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_015",
+        "stamp": "f6ed577a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_016",
+        "stamp": "5b8d887f",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_017",
+        "stamp": "ab9d5047",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_018",
+        "stamp": "085e9ffe",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_019",
+        "stamp": "a53d3761",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_020",
+        "stamp": "e3b3f25a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_021",
+        "stamp": "f2300e3f",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_022",
+        "stamp": "65411f1e",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v162_023",
+        "stamp": "69146504",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_001",
+        "stamp": "2ccfc6a9",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_002",
+        "stamp": "bc0e0730",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_003",
+        "stamp": "74c35aa7",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_004",
+        "stamp": "8ecf01f8",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_005",
+        "stamp": "b937498a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_006",
+        "stamp": "015c4572",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_007",
+        "stamp": "4fdaaef1",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_008",
+        "stamp": "4b624510",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_009",
+        "stamp": "e4771a39",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "deck.json",
+        "id": "task1_v171_010",
+        "stamp": "f0832051",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_001",
+        "stamp": "e1dde4ca",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_002",
+        "stamp": "0db38aa3",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_003",
+        "stamp": "b807ea29",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_004",
+        "stamp": "0073b496",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_005",
+        "stamp": "0b0b0f23",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_006",
+        "stamp": "58142414",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_007",
+        "stamp": "64667aca",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_008",
+        "stamp": "ac2b6357",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v186.json",
+        "id": "task1_v186_maths_009",
+        "stamp": "fac5e762",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_001",
+        "stamp": "8fa31192",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_002",
+        "stamp": "a3cafae5",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_003",
+        "stamp": "bac39aae",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_004",
+        "stamp": "ff11a33c",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_005",
+        "stamp": "6bba0c9b",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_006",
+        "stamp": "85903eb5",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_007",
+        "stamp": "be6ba269",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_008",
+        "stamp": "1316411a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_009",
+        "stamp": "b574f243",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_010",
+        "stamp": "c9749290",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_011",
+        "stamp": "be6b3344",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_012",
+        "stamp": "7bbe875b",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_013",
+        "stamp": "edb2e346",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_014",
+        "stamp": "aee39a92",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v187.json",
+        "id": "task1_v187_maths_015",
+        "stamp": "dd4ba6ca",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_001",
+        "stamp": "ef799062",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_002",
+        "stamp": "e5f0b511",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_003",
+        "stamp": "2ca64fae",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_004",
+        "stamp": "5bb606bf",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_005",
+        "stamp": "0c45d126",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_006",
+        "stamp": "c7b41f8d",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_007",
+        "stamp": "e001feb7",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_008",
+        "stamp": "3bcda066",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_009",
+        "stamp": "ae748531",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_mock_recall_v192.json",
+        "id": "task1_v192_maths_010",
+        "stamp": "b3ebcc91",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_01",
+        "stamp": "3120a922",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_02",
+        "stamp": "71b74223",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_03",
+        "stamp": "4508cc36",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_04",
+        "stamp": "5fe36973",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_05",
+        "stamp": "f466fa45",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_06",
+        "stamp": "70952d21",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_07",
+        "stamp": "2a2636b4",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_08",
+        "stamp": "f158f67b",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_09",
+        "stamp": "268895a6",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_10",
+        "stamp": "bcf98a6d",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_11",
+        "stamp": "7eb0dcdd",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_12",
+        "stamp": "e9c34ead",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_13",
+        "stamp": "a53e7d9a",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_14",
+        "stamp": "313c80f3",
+        "level": "scope_and_identity_inventory"
+      },
+      {
+        "source": "maths_as_pure_cross_spec_recall_v227.json",
+        "id": "task1_v227_math_15",
+        "stamp": "2d86d21c",
+        "level": "scope_and_identity_inventory"
+      }
+    ]
+  },
+  "specCrosswalk": [
+    {
+      "ref": "A",
+      "title": "Proof",
+      "notes": "Deduction/exhaustion/counterexample; 4 original proof checks added",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "B",
+      "title": "Algebra and functions",
+      "notes": "Graph transformations in coordinate form, rational inequality and removal of Year 2 inverse/composite prompts",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "C",
+      "title": "Coordinate geometry",
+      "notes": "Perpendicular gradients example",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "D",
+      "title": "Sequences and series",
+      "notes": "Positive-integer binomial coefficients, term and geometric-ratio behaviour; previously taught arithmetic/geometric recall retained",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "E",
+      "title": "Trigonometry",
+      "notes": "Sine sign and multiple-angle solutions within degree interval",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "F",
+      "title": "Exponentials and logarithms",
+      "notes": "No new cards in this batch; older AS logarithm/exponential cards retained",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "G",
+      "title": "Differentiation",
+      "notes": "Normal gradients and inconclusive second-derivative test",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "H",
+      "title": "Integration",
+      "notes": "Signed versus geometric area below the axis",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    },
+    {
+      "ref": "J",
+      "title": "Vectors",
+      "notes": "Component calculations, magnitude, direction, scalar multiples and collinearity",
+      "fullSpecRequirementsIndividuallySignedOff": false,
+      "allAnswerVariantsSignedOff": false
+    }
+  ],
+  "markingChecks": {
+    "newAccepted": 72,
+    "newRejected": 48
+  },
+  "remaining": [
+    "Full AQA substatement-to-card crosswalk across all school-taught Year 1 Pure topics.",
+    "Individual examiner-style review of existing card answers and alternative marking, not just identity checks.",
+    "Check hard original exam-style vector geometry, proof by deduction/exhaustion and transformed-function graphs.",
+    "Review all previous Year 1 Pure questions and diagram-based marking against exact school scope."
+  ],
+  "completionGates": {
+    "year1PureSpecFullyCertified": false,
+    "allCurrentMathsMockAnswersCertified": false,
+    "fullMathsMockMarkingCertified": false,
+    "physicsMockCertified": false,
+    "chemistryMockCertified": false,
+    "task1Complete": false
+  },
+  "preservation": "Historic core cards remain in full revision, no ID edits; progress, XP, cloud sync, school Maths first mock and World unaffected."
+}
