@@ -1532,7 +1532,7 @@ function evaluateMathsPureTransform(c,input){
  if(id==='maths_transform_003'){
   const wrong=/\b(?:multiply|multiplied|times)\b.{0,22}\b(?:by\s+)?a\b|\bscale\s+factor\s+a\b/.test(n);
   if(wrong)return bad('1/a');
-  if(/1\s*\/\s*a\b|\bone\s+over\s+a\b|\bdivid(?:e|ed|ing)\s+(?:each\s+)?(?:x\s+)?(?:coordinate(?:s)?\s+)?by\s+a\b/.test(n))return good();
+  if(/1\s*\/\s*a\b|\b(?:one|1)\s+over\s+a\b|\bdivid(?:e|ed|ing)\s+(?:each\s+)?(?:x\s+)?(?:coordinate(?:s)?\s+)?by\s+a\b/.test(n))return good();
   return /\bhorizontal\b|\bscale\b|\bcoordinate\b/.test(n)?partial('1/a'):bad('1/a');
  }
  return null;
