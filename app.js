@@ -1561,9 +1561,23 @@ function evaluateCard(c,input){
  // Unlisted correct paraphrases still use the normal flexible marking path.
  const chemRaw=String(input||'').trim();
  if(chemRaw){
+  // Exact scientifically equivalent alternatives get full credit before fuzzy matching.
+  const acceptedChem={
+   chem_lattice_diss:['Ionic solid breaks into gaseous ions.','One mole of ionic lattice is separated into its gaseous ions.','One mole of ionic solid forms its separate gaseous ions.'],
+   chem_lattice_form:['Equal magnitude and opposite signs.','The negative of lattice dissociation enthalpy.'],
+   chem_ea1:['Gaseous atoms each gain an electron to make anions.','One mole of gas atoms accepts one mole of electrons.'],
+   task1_chem_182:['Kw is [H+][OH-].','The product of hydrogen ion and hydroxide ion concentrations.'],
+   chem_energetics_v49_08:['100 kPa.','The standard pressure is one hundred kilopascals.'],
+   chem_energetics_v49_11:['It is zero by definition.','Zero.'],
+   task1_chem_179:['The acid dissociation equilibrium constant.','The equilibrium constant for HA ionising in water.']
+  };
+  if((acceptedChem[c.id]||[]).some(a=>normalise(a)===normalise(chemRaw)))
+   return {status:'correct',score:1,text:'Correct equivalent scientific statement.',missing:[]};
   const badChem=()=>({status:'wrong',score:0,text:'The scientific direction, sign, value or relationship is incorrect. Compare it with the model answer.',missing:[]});
-  if(c.id==='chem_lattice_diss'&&/\b(?:form(?:ation|ing|s)?|join(?:ed|ing|s)?|combin(?:e|ed|es|ing))\b/i.test(chemRaw)
-    && !/\b(?:separat\w*|dissociat\w*|break\w*|split\w*|disassembl\w*)\b/i.test(chemRaw))return badChem();
+  if(c.id==='chem_lattice_diss'&&(
+   /\b(?:gaseous\s+)?ions?\b.*\b(?:form(?:s|ing)?|join\w*|combin\w*)\b.*\b(?:solid|lattice)\b/i.test(chemRaw)
+   || /\bform(?:ation|ing)?\b[\s\w]{0,35}\b(?:solid|lattice)\b/i.test(chemRaw)
+  )&&!/\b(?:separat\w*|dissociat\w*|break\w*|split\w*|disassembl\w*)\b/i.test(chemRaw))return badChem();
   if(c.id==='chem_lattice_form'&&/\bsame\s+(?:the\s+)?sign\b/i.test(chemRaw)
     && !/\bnot\s+(?:the\s+)?same\s+sign\b|\bopposite\s+sign\b/i.test(chemRaw))return badChem();
   if(c.id==='chem_ea1'&&/\b(?:los(?:e|es|ing|t)|remov(?:e|es|ing|al))\b/i.test(chemRaw)
