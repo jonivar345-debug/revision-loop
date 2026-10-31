@@ -1,0 +1,76 @@
+{
+  "version": "v218",
+  "date": "2026-10-31",
+  "task": "Task 1: check direct AQA Year 1 Chemistry recall coverage for mass and measurement vocabulary",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/practical-assessment"
+  ],
+  "auditBasis": "Read the live core deck and pre-v218 Chemistry supplement questions, including AS Atomic structure, Amount of substance, Ideal gas equation, practical and analysis flashcards. Topic counts alone are not evidence of specification completion.",
+  "coreASMockCardCount": 1167,
+  "coreDeckCount": 3345,
+  "coreExamQuestionCount": 1268,
+  "newCards": 8,
+  "coverage": [
+    {
+      "spec": "3.1.2.1",
+      "id": "task1_v218_chem_as_01",
+      "finding": "Relative formula mass is explicitly named by AQA for ionic compounds, but no existing AS mock flashcard front tested this definition."
+    },
+    {
+      "spec": "3.1.2.1",
+      "id": "task1_v218_chem_as_02",
+      "finding": "Separate recall of formula units versus discrete molecules complements existing NaCl lattice reasoning."
+    },
+    {
+      "spec": "3.1.2.1",
+      "id": "task1_v218_chem_as_03",
+      "finding": "Relative atomic mass definition existed, but no separate direct prompt checked that relative mass ratios have no units."
+    },
+    {
+      "spec": "3.1.2.2",
+      "id": "task1_v218_chem_as_04",
+      "finding": "Existing n=m/Mr and gas-molar-mass cards did not directly check g mol^-1 molar-mass units."
+    },
+    {
+      "spec": "3.1.2.5",
+      "id": "task1_v218_chem_as_05",
+      "finding": "Hydration calculations and a card on a hydrated salt containing water of crystallisation existed; add reverse definition rather than duplicate calculation."
+    },
+    {
+      "spec": "3.1.2.2 MS 1.1",
+      "id": "task1_v218_chem_as_06",
+      "finding": "AQA requires answers respecting input precision; new card deliberately restricts sig-fig rule to multiplication and division to avoid false rule for sums/differences."
+    },
+    {
+      "spec": "7.0 Practical assessment",
+      "id": "task1_v218_chem_as_07",
+      "finding": "Definition of measurement accuracy was not a direct current Chemistry AS mock prompt."
+    },
+    {
+      "spec": "7.0 Practical assessment",
+      "id": "task1_v218_chem_as_08",
+      "finding": "Definition of measurement precision was not a direct current Chemistry AS mock prompt."
+    }
+  ],
+  "preserved": {
+    "originalFlashcardIds": true,
+    "coreDeckUntouched": true,
+    "coreQuestionsUntouched": true,
+    "progressKeys": true,
+    "mathsFirstMockScope": true,
+    "cloudProgress": true,
+    "xp": true,
+    "worldMedia": true,
+    "originalScienceCards": true
+  },
+  "testCommands": [
+    "node tests/task1-v218-chemistry-measurement-recall.cjs",
+    "node tests/task1-v217-chemistry-legacy-corrections.cjs",
+    "node tests/task1-v215-rp4-recall-loader.cjs"
+  ],
+  "task1Complete": false,
+  "fullyCertifiedSpecification": false,
+  "completeHistorical2015to2026QuestionCoverage": false,
+  "next": "Continue individual AS Chemistry mock answer review beyond these requirements, then independently audit real exam-question marking and past-paper source index."
+}
