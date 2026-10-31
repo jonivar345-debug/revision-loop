@@ -1,7 +1,7 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json'];
-const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json'];
+const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json'];
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -118,6 +118,66 @@ function applyV219TofCorrections(deckCards){
  return deckCards;
 }
 /* v219 TOF correction block end */
+// v220: clarify previously audited AS sulfate/halide-test and chlorine-water cards.
+/* v220 ion-test correction block start */
+const V220_ION_TEST_CORRECTIONS=Object.freeze({
+  "task1_chem_089": {
+    "front": "Why is the barium-ion test for sulfate acidified?",
+    "back": "To prevent carbonate ions causing a misleading white barium carbonate precipitate.",
+    "accept": [
+      "To prevent carbonate ions causing a misleading white barium carbonate precipitate.",
+      "To remove carbonate interference.",
+      "It removes carbonate ions that might otherwise give a false positive.",
+      "To stop insoluble BaCO3 from being mistaken for BaSO4."
+    ],
+    "reject": [
+      "To add more sulfate ions.",
+      "To produce silver halides.",
+      "Because BaSO4 is soluble in acid."
+    ],
+    "strictRecall": true
+  },
+  "task1_chem_105": {
+    "front": "Why is the sample acidified before adding silver nitrate in a halide-ion test?",
+    "back": "To remove carbonate interference that could otherwise cause a false silver precipitate.",
+    "accept": [
+      "To remove carbonate interference that could otherwise cause a false silver precipitate.",
+      "To remove carbonate ions.",
+      "To prevent a false precipitate of silver carbonate.",
+      "To stop carbonate ions giving a false positive."
+    ],
+    "reject": [
+      "To add chloride ions.",
+      "To make silver chloride soluble.",
+      "To convert iodide into iodine."
+    ],
+    "strictRecall": true
+  },
+  "chem_y1_chat_v126_096": {
+    "front": "What is the balanced equation for chlorine reacting with water to release oxygen under UV light?",
+    "back": "2Cl₂ + 2H₂O → 4HCl + O₂.",
+    "accept": [
+      "2Cl₂ + 2H₂O → 4HCl + O₂.",
+      "2Cl2 + 2H2O -> 4HCl + O2",
+      "2 Cl2 + 2 H2O = 4 HCl + O2",
+      "2Cl₂(aq) + 2H₂O(l) → 4HCl(aq) + O₂(g)"
+    ],
+    "reject": [
+      "Cl2 + H2O -> HCl + HClO",
+      "Cl2 + 2NaOH -> NaCl + NaClO + H2O",
+      "2HCl + O2 -> Cl2 + H2O"
+    ],
+    "strictRecall": true
+  }
+});
+function applyV220IonTestCorrections(deckCards){
+ for(const card of deckCards){
+  const changes=V220_ION_TEST_CORRECTIONS[card.id];
+  if(changes&&card.subject==='Chemistry'&&card.stage==='AS')Object.assign(card,changes);
+ }
+ return deckCards;
+}
+/* v220 ion-test correction block end */
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
 let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
@@ -3566,6 +3626,7 @@ async function sync(manual=false){
  const d=await dr.json(),e=await er.json(),x=xr?.ok?await xr.json():{questions:[]},corrections=cr?.ok?await cr.json():{modelAnswers:{}},old=deckVersion;
  const extraBanks=await Promise.all(extraResponses.map(async res=>res?.ok?await res.json():{questions:[]}));
  cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));
+ applyV220IonTestCorrections(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
@@ -3574,7 +3635,7 @@ async function sync(manual=false){
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
-  // Maths supplements are indices 0, 1 and 3; Physics is 4, 6 and 8; Chemistry is 2, 5, 7, 9, 10, 11, 12, 13 and 14.
+  // Maths supplements are indices 0, 1 and 3; Physics is 4, 6 and 8; Chemistry is 2, 5, 7, 9, 10, 11, 12, 13, 14 and 15.
   if(index<2){
    if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===2){
@@ -3605,6 +3666,9 @@ async function sync(manual=false){
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===14){
    // v219: only taught AS Chemistry TOF mock recall.
+   if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else if(index===15){
+   // v220: retain school mock boundaries for AS Chemistry ion-test recall.
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
