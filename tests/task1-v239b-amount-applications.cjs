@@ -35,7 +35,7 @@ assert.equal(audit.releaseGate.amountSubstanceFiveSubsectionsMapped,true);
 for(const [key,value] of Object.entries(audit.releaseGate))
  if(key!=='amountSubstanceFiveSubsectionsMapped')assert.equal(value,false,'Uncertified completion: '+key);
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(files.length,30);
+assert(files.length>=30, 'Preserve first 30 flashcard banks even when later mock banks are appended');
 assert.equal(files[27],'chemistry_bonding_diagram_recall_v237.json');
 assert.equal(files[28],'chemistry_atomic_tof_applications_v238.json');
 assert.equal(files[29],'chemistry_amount_applications_v239.json');
