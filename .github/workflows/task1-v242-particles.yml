@@ -1,0 +1,18 @@
+name: Task 1 v242 Physics particles specification evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v242-physics-particles-crosswalk.json'
+      - 'tests/task1-v242-physics-particles-crosswalk.cjs'
+      - '.github/workflows/task1-v242-particles.yml'
+  push:
+    branches: [main]
+jobs:
+  particles-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v242-physics-particles-crosswalk.cjs
