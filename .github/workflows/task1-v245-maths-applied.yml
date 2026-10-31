@@ -1,0 +1,20 @@
+name: Task 1 v245 Maths first-mock applied marking
+on:
+  pull_request:
+    paths:
+      - 'maths_first_mock_pure_applied_v245.json'
+      - 'tests/task1-v245-maths-pure-applied.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v245-maths-applied.yml'
+  push:
+    branches: [main]
+jobs:
+  verify-pure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v245-maths-pure-applied.cjs
