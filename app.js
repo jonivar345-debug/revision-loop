@@ -1,7 +1,7 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json'];
-const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json'];
+const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json'];
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -58,6 +58,66 @@ function applyV217LegacyChemistryCorrections(deckCards){
  return deckCards;
 }
 /* v217 legacy chemistry corrections end */
+// v219: targeted AS TOF answer-level corrections; original source deck and IDs are unchanged.
+/* v219 TOF correction block start */
+const V219_TOF_CORRECTIONS=Object.freeze({
+  "chem_atomic_v43_14": {
+    "front": "Name the five stages of a simple time-of-flight mass spectrometer in order.",
+    "back": "Ionisation → acceleration → ion drift → ion detection → data analysis.",
+    "accept": [
+      "Ionisation → acceleration → ion drift → ion detection → data analysis.",
+      "ionisation, acceleration, drift, detection, data analysis",
+      "ionization, acceleration, flight, detection, analysis",
+      "ionise, accelerate, drift, detect, analyse"
+    ],
+    "reject": [
+      "ionisation then detection then acceleration then drift then analysis",
+      "ionisation, acceleration, drift, analysis (without detection)",
+      "acceleration, ionisation, drift, detection, analysis"
+    ],
+    "strictRecall": true
+  },
+  "task1_v130_073": {
+    "front": "For ions with the same charge and kinetic energy in TOF mass spectrometry, why can flight time distinguish their masses?",
+    "back": "Lighter ions move faster and arrive at the detector sooner.",
+    "accept": [
+      "Lighter ions move faster and arrive at the detector sooner.",
+      "At equal kinetic energy lighter ions have higher speeds.",
+      "Lighter ions have a shorter time of flight.",
+      "Ions with smaller mass arrive sooner when charge and kinetic energy are equal."
+    ],
+    "reject": [
+      "Heavier ions arrive sooner.",
+      "The lightest ions have lower speeds.",
+      "Flight times are identical for all ion masses."
+    ],
+    "strictRecall": true
+  },
+  "task1_v130_074": {
+    "front": "For singly charged ions with the same kinetic energy, which arrives sooner in TOF: lower or higher m/z?",
+    "back": "Lower m/z, because the lighter ion moves faster.",
+    "accept": [
+      "Lower m/z, because the lighter ion moves faster.",
+      "Lower m/z.",
+      "The lower m/z ion.",
+      "The lighter ion (lower mass-to-charge ratio)."
+    ],
+    "reject": [
+      "Higher m/z.",
+      "Higher mass ions arrive first.",
+      "Both always arrive at the same time."
+    ],
+    "strictRecall": true
+  }
+});
+function applyV219TofCorrections(deckCards){
+ for(const card of deckCards){
+  const update=V219_TOF_CORRECTIONS[card.id];
+  if(update&&card.subject==='Chemistry'&&card.active!==false)Object.assign(card,update);
+ }
+ return deckCards;
+}
+/* v219 TOF correction block end */
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
 let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
@@ -3505,7 +3565,7 @@ async function sync(manual=false){
  if(!dr.ok||!er.ok)throw new Error('Main question bank unavailable');
  const d=await dr.json(),e=await er.json(),x=xr?.ok?await xr.json():{questions:[]},corrections=cr?.ok?await cr.json():{modelAnswers:{}},old=deckVersion;
  const extraBanks=await Promise.all(extraResponses.map(async res=>res?.ok?await res.json():{questions:[]}));
- cards=applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false));
+ cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
@@ -3514,7 +3574,7 @@ async function sync(manual=false){
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
-  // Maths supplements are indices 0, 1 and 3; Physics is 4, 6 and 8; Chemistry is 2, 5, 7, 9, 10, 11, 12 and 13.
+  // Maths supplements are indices 0, 1 and 3; Physics is 4, 6 and 8; Chemistry is 2, 5, 7, 9, 10, 11, 12, 13 and 14.
   if(index<2){
    if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===2){
@@ -3542,6 +3602,9 @@ async function sync(manual=false){
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===13){
    // v218: only AS, taught and mock-eligible Chemistry measurement recall.
+   if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else if(index===14){
+   // v219: only taught AS Chemistry TOF mock recall.
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
