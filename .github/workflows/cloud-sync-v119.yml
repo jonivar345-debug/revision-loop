@@ -339,6 +339,7 @@ jobs:
       - run: node tests/task1-v223-chemistry-rp5-rp6-calibration.cjs
       - run: node tests/task1-v224-chemistry-rate-kp-marking.cjs
       - run: node tests/task1-v225-physics-optical-fibre.cjs
+      - run: node tests/task1-v226-physics-waves.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
