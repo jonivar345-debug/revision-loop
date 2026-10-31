@@ -15,6 +15,8 @@ on:
       - 'firestore.rules'
       - 'index.html'
       - 'app.js'
+      - 'tests/task1-v235-chemistry-acids-kp-gibbs-marking.cjs'
+      - 'editorial/task1-v235-chemistry-acids-kp-gibbs-marking-audit.json'
       - 'tests/task1-v234-chemistry-bonding-marking.cjs'
       - 'editorial/task1-v234-chemistry-bonding-marking-audit.json'
       - 'chemistry_rp4_recall_v215.json'
@@ -350,6 +352,7 @@ jobs:
       - run: node tests/task1-v232-maths-year1-pure.cjs
       - run: node tests/task1-v233-chemistry-semantic-marking.cjs
       - run: node tests/task1-v234-chemistry-bonding-marking.cjs
+      - run: node tests/task1-v235-chemistry-acids-kp-gibbs-marking.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs

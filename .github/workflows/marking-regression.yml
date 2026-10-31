@@ -60,6 +60,7 @@ jobs:
           node tests/task1-v232-maths-year1-pure.cjs
           node tests/task1-v233-chemistry-semantic-marking.cjs
           node tests/task1-v234-chemistry-bonding-marking.cjs
+          node tests/task1-v235-chemistry-acids-kp-gibbs-marking.cjs
           node tests/task1-v215-rp4-recall-loader.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs

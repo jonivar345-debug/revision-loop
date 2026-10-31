@@ -1,0 +1,246 @@
+{
+  "version": "v235",
+  "date": "2026-10-31",
+  "kind": "Focused Chemistry school mock acids, weak acids, Kw, Kp and Gibbs / ΔS recall marking evaluation, not full AQA bullet-level certification",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "coreChemistryMockActive": 1533,
+  "coveredTopicLabels": [
+    "Acids and bases",
+    "Kw",
+    "Kp",
+    "Gibbs free energy",
+    "Entropy"
+  ],
+  "checkedCards": 15,
+  "checks": [
+    {
+      "id": "task1_chem_174",
+      "front": "Fill the gap: a Brønsted–Lowry acid is a proton ____.",
+      "back": "A proton donor.",
+      "right": [
+        "An acid donates H+ ions.",
+        "A proton donor."
+      ],
+      "wrong": [
+        "A proton acceptor.",
+        "It accepts a hydrogen ion."
+      ]
+    },
+    {
+      "id": "task1_chem_175",
+      "front": "Fill the gap: a Brønsted–Lowry base is a proton ____.",
+      "back": "A proton acceptor.",
+      "right": [
+        "A base accepts H+ ions.",
+        "A proton acceptor."
+      ],
+      "wrong": [
+        "A proton donor.",
+        "It gives away a hydrogen ion."
+      ]
+    },
+    {
+      "id": "task1_chem_177",
+      "front": "What is a strong acid?",
+      "back": "An acid that fully dissociates in aqueous solution.",
+      "right": [
+        "An acid that completely ionises in water.",
+        "It dissociates fully in aqueous solution."
+      ],
+      "wrong": [
+        "A highly concentrated acid.",
+        "An acid that only partially ionises in water."
+      ]
+    },
+    {
+      "id": "task1_chem_178",
+      "front": "What is a weak acid?",
+      "back": "An acid that only partially dissociates in aqueous solution.",
+      "right": [
+        "An acid which only partly ionises in water.",
+        "A weak acid is partially dissociated in aqueous solution."
+      ],
+      "wrong": [
+        "An acid that dissociates completely in water.",
+        "An acid with high concentration."
+      ]
+    },
+    {
+      "id": "task1_chem_180",
+      "front": "What does a larger Ka usually indicate?",
+      "back": "A stronger weak acid.",
+      "right": [
+        "A larger Ka means a stronger acid.",
+        "A larger acid dissociation constant indicates stronger acid."
+      ],
+      "wrong": [
+        "A weaker acid.",
+        "The acid dissociates less as Ka increases."
+      ]
+    },
+    {
+      "id": "task1_v125_144",
+      "front": "What is the unit of Ka when defined using concentrations?",
+      "back": "mol dm⁻³.",
+      "right": [
+        "mol dm^-3.",
+        "moles per cubic decimetre."
+      ],
+      "wrong": [
+        "mol^2 dm^-6.",
+        "No units."
+      ]
+    },
+    {
+      "id": "task1_v125_147",
+      "front": "At 298 K, what is pH + pOH?",
+      "back": "14.",
+      "right": [
+        "Fourteen.",
+        "14."
+      ],
+      "wrong": [
+        "7.",
+        "pH plus pOH is 7."
+      ]
+    },
+    {
+      "id": "chem_kw_001",
+      "front": "What is Kw at 298 K?",
+      "back": "Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴ mol² dm⁻⁶.",
+      "right": [
+        "One times ten to the minus fourteen mol squared per dm to the six, and equals [H+][OH-].",
+        "Kw = 1 x 10^-14 at 298 K, the product of hydrogen and hydroxide ion concentrations."
+      ],
+      "wrong": [
+        "Kw = [H+]/[OH-] = 10^-14.",
+        "Kw = [H+][OH-] = 1 x 10^-7 at 298 K."
+      ]
+    },
+    {
+      "id": "chem_kp_temp",
+      "front": "What factor changes the value of Kp for a given reaction?",
+      "back": "Temperature.",
+      "right": [
+        "Only temperature.",
+        "Kp changes when temperature changes."
+      ],
+      "wrong": [
+        "Total pressure.",
+        "Changing a catalyst changes Kp."
+      ]
+    },
+    {
+      "id": "chem_kp_pressure",
+      "front": "Does changing total pressure at constant temperature change Kp?",
+      "back": "No. It may change equilibrium position, but Kp itself is unchanged at fixed temperature.",
+      "right": [
+        "No, Kp is constant at constant temperature.",
+        "Kp stays unchanged; the equilibrium position may shift."
+      ],
+      "wrong": [
+        "Yes, pressure increases Kp.",
+        "Increasing the pressure always increases Kp."
+      ]
+    },
+    {
+      "id": "chem_kp_recap_20261024_temp_exothermic",
+      "front": "How does increasing temperature change Kp for an exothermic forward reaction?",
+      "back": "Kp decreases.",
+      "right": [
+        "Kp falls when temperature rises.",
+        "Heating an exothermic reaction decreases Kp."
+      ],
+      "wrong": [
+        "Kp increases.",
+        "The equilibrium constant rises when heated."
+      ]
+    },
+    {
+      "id": "chem_kp_recap_20261024_temp_endothermic",
+      "front": "For an endothermic forward reaction, does Kp increase or decrease when heated?",
+      "back": "Kp increases.",
+      "right": [
+        "Kp increases with temperature.",
+        "Heating shifts the equilibrium constant upwards."
+      ],
+      "wrong": [
+        "Kp decreases on heating.",
+        "Kp stays constant even if temperature changes."
+      ]
+    },
+    {
+      "id": "chem_gibbs_feasible",
+      "front": "What does a negative ΔG indicate under the stated conditions?",
+      "back": "The forward change is thermodynamically feasible.",
+      "right": [
+        "Forward reaction is thermodynamically possible.",
+        "Feasible in the forward direction at these conditions."
+      ],
+      "wrong": [
+        "The reaction must be very fast.",
+        "The forward process is thermodynamically impossible."
+      ]
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_catalyst_gibbs",
+      "front": "Does a catalyst change ΔG or thermodynamic feasibility?",
+      "back": "No. A catalyst lowers activation energy and increases rate; it does not change ΔG for the overall reaction.",
+      "right": [
+        "No, it decreases activation energy but not delta G.",
+        "A catalyst only speeds a reaction; it does not change Gibbs free energy."
+      ],
+      "wrong": [
+        "A catalyst makes ΔG more negative.",
+        "Catalysts lower delta G and change feasibility."
+      ]
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_signs_high_temp",
+      "front": "Which signs of ΔH and ΔS make a reaction feasible only above a threshold temperature?",
+      "back": "ΔH positive and ΔS positive.",
+      "right": [
+        "Positive enthalpy and positive entropy changes.",
+        "Both delta H and delta S are positive."
+      ],
+      "wrong": [
+        "Negative enthalpy and negative entropy.",
+        "Both delta H and delta S are negative."
+      ]
+    }
+  ],
+  "baselineOnActualMarker": {
+    "correctParaphrasesUndercredited": 19,
+    "incorrectAnswersPreviouslyGivenPartialCredit": 5
+  },
+  "afterCorrection": {
+    "correctParaphrasesMarkedCorrect": 30,
+    "incorrectAnswersMarkedWrong": 30,
+    "modelAnswersMarkedCorrect": 15
+  },
+  "scoping": {
+    "buffersExcluded": true,
+    "schoolRP9PHCurveScopeUnconfirmed": true
+  },
+  "preservation": {
+    "coreDeckChanged": false,
+    "examQuestionBankChanged": false,
+    "cardIDsChanged": false,
+    "cloudXPChanged": false,
+    "MathsFirstMockScopeChanged": false,
+    "WorldMediaChanged": false
+  },
+  "completion": {
+    "physics": false,
+    "chemistry": false,
+    "mathsFirstYear1Pure": false,
+    "task1": false
+  },
+  "nextSteps": [
+    "Review remaining school-taught Chemistry cards individually and check more non-exact scientifically valid answers.",
+    "Cross-reference all required AQA left-column outcomes and required practical interpretation to correct flashcard IDs.",
+    "Retain manual review of uncertain wording and classroom-specific RP9 boundaries."
+  ]
+}
