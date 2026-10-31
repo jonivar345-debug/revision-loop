@@ -1,7 +1,7 @@
 
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json'];
-const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json'];
+const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json','./chemistry_practicals_analysis_recall_v221.json'];
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -179,6 +179,34 @@ function applyV220IonTestCorrections(deckCards){
  return deckCards;
 }
 /* v220 ion-test correction block end */
+// v221: single-point AS RP3 relative-rate concept correction; preserve core card ID and progress.
+/* v221 RP correction block start */
+const V221_RP_CORRECTIONS=Object.freeze({
+  "task1_practical_026": {
+    "front": "Why is 1/t in a fixed-endpoint rate comparison a relative measure rather than an exact rate in mol dm⁻³ s⁻¹?",
+    "back": "It does not include the concentration change; it only uses time to the same end point.",
+    "accept": [
+      "It does not include the concentration change; it only uses time to the same end point.",
+      "It does not include how much concentration changes.",
+      "It is an inverse time, not concentration change divided by time.",
+      "It only measures the time to the common end point, not the absolute rate."
+    ],
+    "reject": [
+      "It directly measures concentration change per second.",
+      "It always equals the exact initial rate in mol dm-3 s-1.",
+      "The end point must be different each time."
+    ],
+    "strictRecall": true
+  }
+});
+function applyV221RpCorrections(deckCards){
+ for(const card of deckCards){
+  const change=V221_RP_CORRECTIONS[card.id];
+  if(change&&card.subject==='Chemistry'&&card.stage==='AS')Object.assign(card,change);
+ }
+ return deckCards;
+}
+/* v221 RP correction block end */
 const PIN_HASH='02a80993805958408c14d68623a229c86777980c55403d0c2fecf46904fe367c';
 const PROGRESS_KEY='revisionLoopProgress5',PROFILE_KEY='revisionLoopProfile11',SETTINGS_KEY='revisionLoopSettings11';
 let cards=[],examQuestions=[],deckMeta={},coverage={},deckVersion=0,bankVersion=0;
@@ -3628,6 +3656,7 @@ async function sync(manual=false){
  const extraBanks=await Promise.all(extraResponses.map(async res=>res?.ok?await res.json():{questions:[]}));
  cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));
  applyV220IonTestCorrections(cards);
+ applyV221RpCorrections(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
@@ -3636,7 +3665,7 @@ async function sync(manual=false){
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
-  // Maths supplements are indices 0, 1 and 3; Physics is 4, 6 and 8; Chemistry is 2, 5, 7, 9, 10, 11, 12, 13, 14 and 15.
+  // Maths supplements are indices 0, 1 and 3; Physics is 4, 6 and 8; Chemistry is 2, 5, 7, 9, 10, 11, 12, 13, 14, 15 and 16.
   if(index<2){
    if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===2){
@@ -3670,6 +3699,9 @@ async function sync(manual=false){
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===15){
    // v220: retain school mock boundaries for AS Chemistry ion-test recall.
+   if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
+  }else if(index===16){
+   // v221: AS Chemistry RP1–RP3 evaluation and uncertainty recall.
    if(c.subject!=='Chemistry'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
