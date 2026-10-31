@@ -64,7 +64,7 @@ jobs:
           node tests/task1-v236-core-marking-exhaustive.cjs
           node tests/task1-v237-chemistry-bonding-crosswalk.cjs
           node tests/task1-v238-chemistry-atomic-crosswalk.cjs
-          node tests/task1-v239-chemistry-amount-crosswalk.cjs
+          node tests/task1-v239b-amount-applications.cjs
           node tests/task1-v215-rp4-recall-loader.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
