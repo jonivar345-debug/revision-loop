@@ -24,7 +24,7 @@ assert.equal(good,84);assert.equal(bad,56);
 assert.equal(2.50e6,2500000);assert.equal(.08e-9,8e-11);assert.equal(.75e-6/1e-9,750);
 assert.equal(4.8*3.6e6,17280000);assert.equal(2*1.6e-19,3.2e-19);
 assert.equal(.15/3*100,5);assert.equal(.04/2,.02);assert(Math.abs((12.4-5.1)-7.3)<1e-9);
-assert.equal((.1/5+.2/4)*100,7);assert.equal(2*2,4);
+assert(Math.abs((.1/5+.2/4)*100-7)<1e-9);assert.equal(2*2,4);
 assert(Math.abs((12.5-12.1)/2-.2)<1e-8);
 assert.equal((3.3-.2).toFixed(1),'3.1');assert.equal((3.3+.2).toFixed(1),'3.5');
 assert(Math.abs((2.3-1.9)/2-.2)<1e-9);
