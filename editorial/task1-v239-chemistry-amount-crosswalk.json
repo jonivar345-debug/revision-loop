@@ -1,0 +1,1137 @@
+{
+  "version": "v239",
+  "date": "2026-10-31",
+  "scope": "AQA Chemistry 7405 3.1.2 (amount of substance), AS/taught/mock.",
+  "officialSpecification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "auditLevel": "All 96 first-pass core front/back/IDs inventoried from six topic labels. Mappings show selected evidence, not independent verification of every science answer, numerical examiner method or full official specification coverage.",
+  "coreDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "coreMockTopicInventory": {
+    "Amount of substance": 53,
+    "Ideal gas equation": 7,
+    "Empirical formula": 7,
+    "Titration calculations": 6,
+    "RP1 Titration": 13,
+    "Back titrations": 10,
+    "total": 96
+  },
+  "coreCardsFirstPass": [
+    {
+      "id": "chem_back_001",
+      "topic": "Back titrations",
+      "originalFront": "In a back titration, how do you find the amount that reacted?",
+      "originalBack": "Moles initially added − moles left over.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_gas_001",
+      "topic": "Ideal gas equation",
+      "originalFront": "Which units must be used in pV = nRT?",
+      "originalBack": "p in Pa, V in m³, T in K and n in mol.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_titration_001",
+      "topic": "Titration calculations",
+      "originalFront": "What conversion is needed before using n = cV when volume is given in cm³?",
+      "originalBack": "Convert cm³ to dm³ by dividing by 1000.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_empirical_001",
+      "topic": "Empirical formula",
+      "originalFront": "What is the route from masses to an empirical formula?",
+      "originalBack": "Mass → moles → divide all by the smallest → multiply to obtain a whole-number ratio.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_rp1",
+      "topic": "RP1 Titration",
+      "originalFront": "What are the essential steps for making an accurate standard solution?",
+      "originalBack": "Accurately weigh, dissolve, quantitatively transfer with washings, make to the mark, stopper and invert.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_avogadro",
+      "topic": "Amount of substance",
+      "originalFront": "What is the Avogadro constant?",
+      "originalBack": "6.02 × 10²³ mol⁻¹ particles per mole.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_moles_mass",
+      "topic": "Amount of substance",
+      "originalFront": "How do you calculate moles from mass?",
+      "originalBack": "n = m/Mr.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_concentration",
+      "topic": "Amount of substance",
+      "originalFront": "How do you calculate concentration in mol dm⁻³?",
+      "originalBack": "c = n/V, with V in dm³.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_yield",
+      "topic": "Amount of substance",
+      "originalFront": "What is percentage yield?",
+      "originalBack": "actual yield ÷ theoretical yield × 100.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_atom_economy",
+      "topic": "Amount of substance",
+      "originalFront": "What is atom economy?",
+      "originalBack": "Mr of desired product ÷ total Mr of reactants, accounting for coefficients, × 100.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_purity",
+      "topic": "Amount of substance",
+      "originalFront": "How is percentage purity calculated?",
+      "originalBack": "mass of pure substance ÷ total sample mass × 100.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_hydrate",
+      "topic": "Amount of substance",
+      "originalFront": "For salt·xH₂O, how is x found from the amounts in moles?",
+      "originalBack": "x = moles of water ÷ moles of anhydrous salt.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "v33_card_chemistry_amount_of_substance_35",
+      "topic": "Amount of substance",
+      "originalFront": "How do you convert solution volume in cm³ into dm³?",
+      "originalBack": "Divide the cm³ value by 1000.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "v33_card_chemistry_back_titrations_36",
+      "topic": "Back titrations",
+      "originalFront": "In a back titration, which amount is subtracted from the initial reagent amount?",
+      "originalBack": "The amount of reagent remaining unreacted, measured by the subsequent titration.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "v33_card_chemistry_rp1_titration_37",
+      "topic": "RP1 Titration",
+      "originalFront": "Where should the bottom of the meniscus be read to avoid parallax?",
+      "originalBack": "At eye level, using the bottom of the meniscus for a clear colourless solution.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "v33_card_chemistry_amount_of_substance_38",
+      "topic": "Amount of substance",
+      "originalFront": "What is theoretical yield?",
+      "originalBack": "The maximum amount of product predicted by the balanced equation.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_01",
+      "topic": "Empirical formula",
+      "originalFront": "What is the difference between empirical and molecular formula?",
+      "originalBack": "Empirical: simplest atom ratio. Molecular: actual atoms per molecule.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_02",
+      "topic": "Empirical formula",
+      "originalFront": "How should percentages be treated when calculating empirical formula?",
+      "originalBack": "Assume a 100 g sample; percentage values become gram masses.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_03",
+      "topic": "Empirical formula",
+      "originalFront": "What are the three stages of empirical formula calculation?",
+      "originalBack": "Divide element masses by Ar; divide moles by smallest; find integer ratio.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_04",
+      "topic": "Empirical formula",
+      "originalFront": "If empirical atom ratio is 1:1.5:2.5, what ratio is needed?",
+      "originalBack": "Multiply by 2 to obtain 2:3:5.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_05",
+      "topic": "Empirical formula",
+      "originalFront": "How is molecular formula calculated from empirical formula?",
+      "originalBack": "Find empirical-formula Mr, divide molecular Mr by it, multiply subscripts.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_06",
+      "topic": "Empirical formula",
+      "originalFront": "With empirical formula CH₂O and molecular Mr 180, what is the molecular formula?",
+      "originalBack": "C₆H₁₂O₆.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_07",
+      "topic": "Ideal gas equation",
+      "originalFront": "State the ideal-gas equation.",
+      "originalBack": "pV = nRT.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_08",
+      "topic": "Ideal gas equation",
+      "originalFront": "How many cubic metres are in 1 cm³?",
+      "originalBack": "1 × 10⁻⁶ m³.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_09",
+      "topic": "Ideal gas equation",
+      "originalFront": "Why must Celsius temperatures be converted for pV=nRT?",
+      "originalBack": "The absolute temperature is required, in kelvin (K).",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_10",
+      "topic": "Ideal gas equation",
+      "originalFront": "How do you find n from gas pressure, volume and temperature?",
+      "originalBack": "n=pV/(RT), using SI units.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_11",
+      "topic": "Ideal gas equation",
+      "originalFront": "How do you calculate molar mass of an unknown gas from mass and gas data?",
+      "originalBack": "First n=pV/(RT), then molar mass M=m/n.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_12",
+      "topic": "Ideal gas equation",
+      "originalFront": "What approximate molar volume is commonly used at RTP?",
+      "originalBack": "About 24 dm³ mol⁻¹; use pV=nRT if P and T are specified.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_13",
+      "topic": "Amount of substance",
+      "originalFront": "How is the limiting reagent identified?",
+      "originalBack": "Compare moles available divided by their balanced-equation coefficients.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_14",
+      "topic": "Amount of substance",
+      "originalFront": "Why must a limiting-reagent calculation consider stoichiometry?",
+      "originalBack": "Equal numbers of moles do not imply reactants are present in required ratios.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_15",
+      "topic": "Amount of substance",
+      "originalFront": "How do you convert gas moles into a volume at RTP?",
+      "originalBack": "Approximately V(dm³)=n×24, when RTP approximation is appropriate.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_16",
+      "topic": "Amount of substance",
+      "originalFront": "What is the formula for percentage yield?",
+      "originalBack": "100×actual yield/theoretical yield, using the same units.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_17",
+      "topic": "Amount of substance",
+      "originalFront": "Why may actual percentage yield be below 100%?",
+      "originalBack": "Incomplete reaction, side reactions or material lost during recovery.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_18",
+      "topic": "Amount of substance",
+      "originalFront": "How is percentage atom economy calculated from a balanced equation?",
+      "originalBack": "100 × (coefficient × Mr of desired product) ÷ sum of (coefficient × Mr) for all products.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_19",
+      "topic": "Amount of substance",
+      "originalFront": "What is the difference between atom economy and percentage yield?",
+      "originalBack": "Atom economy is theoretical atom distribution; yield compares actual and maximum product.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_20",
+      "topic": "Amount of substance",
+      "originalFront": "Why might industries prefer high atom economy?",
+      "originalBack": "Less unwanted waste; reduced raw-material, disposal and environmental costs.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_21",
+      "topic": "Amount of substance",
+      "originalFront": "Can a reaction have high atom economy but low percentage yield?",
+      "originalBack": "Yes. Theoretical atom use can be efficient even if little product is recovered.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_22",
+      "topic": "Amount of substance",
+      "originalFront": "How are spectator ions identified for an ionic equation?",
+      "originalBack": "They remain unchanged on both sides of the full ionic equation.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_23",
+      "topic": "Amount of substance",
+      "originalFront": "Write the net ionic equation for acid–alkali neutralisation.",
+      "originalBack": "H⁺(aq)+OH⁻(aq)→H₂O(l).",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_24",
+      "topic": "Amount of substance",
+      "originalFront": "Write the net ionic equation for barium sulfate precipitation.",
+      "originalBack": "Ba²⁺(aq)+SO₄²⁻(aq)→BaSO₄(s).",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_25",
+      "topic": "Amount of substance",
+      "originalFront": "How is x found in salt·xH₂O from heating data?",
+      "originalBack": "Find moles of anhydrous salt and lost water, then divide water moles by salt moles.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_26",
+      "topic": "Amount of substance",
+      "originalFront": "What mass is lost when a hydrated salt releases water?",
+      "originalBack": "Initial hydrated mass minus final anhydrous mass.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_27",
+      "topic": "Amount of substance",
+      "originalFront": "Why heat a hydrated solid to constant mass?",
+      "originalBack": "To provide evidence that the removable water has been driven off.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_28",
+      "topic": "Amount of substance",
+      "originalFront": "What number is represented by the Avogadro constant?",
+      "originalBack": "Number of particles per mole, approximately 6.02×10²³ mol⁻¹.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_29",
+      "topic": "Amount of substance",
+      "originalFront": "How do you count ions in a salt using Avogadro's constant?",
+      "originalBack": "Find moles of salt, multiply by ions per formula unit, then by N_A.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_30",
+      "topic": "Titration calculations",
+      "originalFront": "What is the chemical purpose of an acid–base titration?",
+      "originalBack": "Use a known concentration and reacting ratio to calculate an unknown concentration.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_31",
+      "topic": "Titration calculations",
+      "originalFront": "How are concordant titre values treated?",
+      "originalBack": "Exclude clear outliers; mean the close repeat titres.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_32",
+      "topic": "Titration calculations",
+      "originalFront": "What is meant by a titre?",
+      "originalBack": "The volume delivered from the burette: final reading minus initial.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_33",
+      "topic": "Titration calculations",
+      "originalFront": "Why are two burette readings included in uncertainty?",
+      "originalBack": "A titre is a difference; uncertainty arises from both final and initial readings.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_34",
+      "topic": "Titration calculations",
+      "originalFront": "How is percentage titre uncertainty found?",
+      "originalBack": "Absolute titre uncertainty ÷ titre ×100.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_35",
+      "topic": "RP1 Titration",
+      "originalFront": "Why rinse a pipette with the measured solution first?",
+      "originalBack": "To avoid diluting it with residual water.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_36",
+      "topic": "RP1 Titration",
+      "originalFront": "Why rinse the burette with the solution it will hold?",
+      "originalBack": "To avoid diluting the titrant with residual water.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_37",
+      "topic": "RP1 Titration",
+      "originalFront": "Why is a volumetric flask inverted after filling to the mark?",
+      "originalBack": "To mix the prepared solution uniformly.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_38",
+      "topic": "RP1 Titration",
+      "originalFront": "Why rinse solution traces from beaker/funnel into the volumetric flask?",
+      "originalBack": "To transfer the dissolved solute quantitatively.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_39",
+      "topic": "RP1 Titration",
+      "originalFront": "Why can distilled water be added to the conical flask during a titration?",
+      "originalBack": "It changes concentration but not the number of moles being titrated.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_40",
+      "topic": "RP1 Titration",
+      "originalFront": "How is the meniscus viewed accurately?",
+      "originalBack": "Read the bottom of the colourless meniscus at eye level.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_41",
+      "topic": "Back titrations",
+      "originalFront": "Why use a back titration rather than a direct titration?",
+      "originalBack": "The sample may be insoluble or react slowly; excess reagent is measured indirectly.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_42",
+      "topic": "Back titrations",
+      "originalFront": "What quantity does a back titration determine directly?",
+      "originalBack": "Amount of an intentionally excess reagent remaining unreacted.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_43",
+      "topic": "Back titrations",
+      "originalFront": "State the essential subtraction in a back titration.",
+      "originalBack": "Initial moles of reagent minus remaining moles = moles that reacted.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_44",
+      "topic": "Back titrations",
+      "originalFront": "Why must dilution factors be applied in a back titration?",
+      "originalBack": "An aliquot represents only a fraction of the total diluted solution.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_45",
+      "topic": "Back titrations",
+      "originalFront": "A 25 cm³ aliquot came from 250 cm³. What is the factor?",
+      "originalBack": "10: total remaining moles = aliquot moles ×10.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_46",
+      "topic": "Back titrations",
+      "originalFront": "Why calculate the excess acid before finding sample mass?",
+      "originalBack": "Only acid consumed reacts with sample; excess acid does not count.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_47",
+      "topic": "Back titrations",
+      "originalFront": "For CaCO₃+2HCl, how are CaCO₃ moles found?",
+      "originalBack": "Moles CaCO₃ = moles HCl that reacted ÷2.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "chem_amount_v44_48",
+      "topic": "Back titrations",
+      "originalFront": "What is the last step after computing analyte mass?",
+      "originalBack": "Find percentage purity = analyte mass/sample mass ×100.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_011",
+      "topic": "Amount of substance",
+      "originalFront": "What does concentration in mol dm⁻³ mean?",
+      "originalBack": "Moles of solute per cubic decimetre of solution.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_012",
+      "topic": "Amount of substance",
+      "originalFront": "What is the limiting reagent?",
+      "originalBack": "Reactant that runs out first and limits product formed.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_015",
+      "topic": "Amount of substance",
+      "originalFront": "What is an empirical formula?",
+      "originalBack": "Simplest whole-number ratio of atoms of each element.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_016",
+      "topic": "Amount of substance",
+      "originalFront": "What is a molecular formula?",
+      "originalBack": "Actual number of atoms of each element per molecule.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_017",
+      "topic": "Amount of substance",
+      "originalFront": "What is a standard solution?",
+      "originalBack": "A solution of accurately known concentration.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_018",
+      "topic": "Amount of substance",
+      "originalFront": "What is a concordant titre?",
+      "originalBack": "A titre close to other consistent repeat titres.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_019",
+      "topic": "Amount of substance",
+      "originalFront": "What is a back titration?",
+      "originalBack": "Finding excess reagent left after a reaction, then finding how much reacted.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_020",
+      "topic": "Amount of substance",
+      "originalFront": "What does the ideal gas equation assume about intermolecular forces?",
+      "originalBack": "They are negligible.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_chem_021",
+      "topic": "Amount of substance",
+      "originalFront": "What does the ideal gas equation assume about particle volume?",
+      "originalBack": "Molecular volume is negligible compared with container volume.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_019",
+      "topic": "RP1 Titration",
+      "originalFront": "What is the purpose of a burette?",
+      "originalBack": "To deliver a measured, variable volume accurately.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_020",
+      "topic": "RP1 Titration",
+      "originalFront": "What is the purpose of a volumetric pipette?",
+      "originalBack": "To transfer a fixed, accurate volume.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_021",
+      "topic": "RP1 Titration",
+      "originalFront": "Why read a burette meniscus at eye level?",
+      "originalBack": "To avoid parallax error.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_022",
+      "topic": "RP1 Titration",
+      "originalFront": "What does the titre tell you?",
+      "originalBack": "The volume delivered between initial and final burette readings.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_009",
+      "topic": "Amount of substance",
+      "originalFront": "What does a 1:2 coefficient ratio in a balanced equation represent?",
+      "originalBack": "One mole reacts with or forms two moles of the other species.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_010",
+      "topic": "Amount of substance",
+      "originalFront": "What is the unit of solution concentration in molar calculations?",
+      "originalBack": "mol dm⁻³.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_011",
+      "topic": "Amount of substance",
+      "originalFront": "How many cm³ make one dm³?",
+      "originalBack": "1000 cm³.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_012",
+      "topic": "Amount of substance",
+      "originalFront": "What does percentage yield compare?",
+      "originalBack": "Actual yield divided by theoretical yield, times 100%.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_013",
+      "topic": "Amount of substance",
+      "originalFront": "What does atom economy compare?",
+      "originalBack": "Mass of desired product divided by total product mass.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_014",
+      "topic": "Amount of substance",
+      "originalFront": "Why can percentage yield be less than 100%?",
+      "originalBack": "Incomplete reaction or loss of product.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_015",
+      "topic": "Amount of substance",
+      "originalFront": "What does an empirical formula show?",
+      "originalBack": "Simplest whole-number ratio of atoms of each element.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_016",
+      "topic": "Amount of substance",
+      "originalFront": "What does molecular formula show?",
+      "originalBack": "Actual number of each type of atom in a molecule.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_017",
+      "topic": "Amount of substance",
+      "originalFront": "What does the ideal gas equation relate?",
+      "originalBack": "pV = nRT.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_018",
+      "topic": "Amount of substance",
+      "originalFront": "Why must pressure be in pascals when using R = 8.31 in SI units?",
+      "originalBack": "So pV and nRT use compatible SI units.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_019",
+      "topic": "Amount of substance",
+      "originalFront": "What does a back titration determine indirectly?",
+      "originalBack": "An unknown amount from the excess reagent remaining.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_chem_020",
+      "topic": "Amount of substance",
+      "originalFront": "What does a hydrated salt contain?",
+      "originalBack": "Water of crystallisation.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_076",
+      "topic": "Amount of substance",
+      "originalFront": "Define a limiting reactant.",
+      "originalBack": "The reactant used up first, restricting product formed.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_077",
+      "topic": "Amount of substance",
+      "originalFront": "What is the meaning of one part per million by mass?",
+      "originalBack": "One unit mass of solute per million units mass of mixture.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_078",
+      "topic": "Amount of substance",
+      "originalFront": "Why is atom economy different from percentage yield?",
+      "originalBack": "Atom economy uses balanced equations; yield measures actual versus theoretical product.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v132_006",
+      "topic": "RP1 Titration",
+      "originalFront": "Each burette reading is ±0.05 cm³. What is the titre's absolute uncertainty?",
+      "originalBack": "±0.10 cm³.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_047",
+      "topic": "Amount of substance",
+      "originalFront": "Why convert cm³ to dm³ when calculating molar concentration?",
+      "originalBack": "Concentration in mol dm⁻³ uses volume in dm³; divide cm³ by 1000.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_091",
+      "topic": "Amount of substance",
+      "originalFront": "In a back titration, what does the measured leftover reagent determine?",
+      "originalBack": "How much excess reagent remained after the first reaction.",
+      "level": "front_back_initial_content_scope_pass"
+    },
+    {
+      "id": "task1_v144_001",
+      "topic": "Amount of substance",
+      "originalFront": "What does one mole of specified particles represent?",
+      "originalBack": "An amount containing the Avogadro number of particles (atoms, ions, molecules or other entities).",
+      "level": "front_back_initial_content_scope_pass"
+    }
+  ],
+  "requirements": [
+    {
+      "point": 1,
+      "specRef": "3.1.2.1",
+      "assessableRecallOrSkill": "Define relative atomic mass in terms of carbon-12.",
+      "coreEvidenceIds": [
+        "chem_ar_def"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 2,
+      "specRef": "3.1.2.1",
+      "assessableRecallOrSkill": "Define relative molecular mass in terms of carbon-12.",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_09"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 3,
+      "specRef": "3.1.2.1",
+      "assessableRecallOrSkill": "Use relative formula mass for ionic formula units.",
+      "coreEvidenceIds": [],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_01"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 4,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Explain the Avogadro constant and meaning of the mole.",
+      "coreEvidenceIds": [
+        "chem_avogadro",
+        "task1_v144_001"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 5,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Apply Avogadro constant to atoms or ions in formula units.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_29"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_02"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 6,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Calculate amount from mass and molar mass.",
+      "coreEvidenceIds": [
+        "chem_moles_mass"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_03"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 7,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Define molar concentration in solution.",
+      "coreEvidenceIds": [
+        "task1_chem_011"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 8,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Calculate molar concentration from moles and solution volume.",
+      "coreEvidenceIds": [
+        "chem_concentration"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_04"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 9,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Convert between dm³ and cm³ accurately.",
+      "coreEvidenceIds": [
+        "chem_titration_001"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 10,
+      "specRef": "3.1.2.2",
+      "assessableRecallOrSkill": "Calculate concentration after dilution.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_30"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_16"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 11,
+      "specRef": "3.1.2.3",
+      "assessableRecallOrSkill": "State ideal gas equation and SI units.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_07",
+        "chem_gas_001"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 12,
+      "specRef": "3.1.2.3",
+      "assessableRecallOrSkill": "Convert Celsius to kelvin for gas calculations.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_09"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 13,
+      "specRef": "3.1.2.3",
+      "assessableRecallOrSkill": "Convert gas volumes to m³.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_08"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_05"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 14,
+      "specRef": "3.1.2.3",
+      "assessableRecallOrSkill": "Rearrange pV = nRT to calculate n.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_10"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_06"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 15,
+      "specRef": "3.1.2.3",
+      "assessableRecallOrSkill": "Calculate molar mass of volatile liquid from gas measurements.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_11"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 16,
+      "specRef": "3.1.2.4",
+      "assessableRecallOrSkill": "Define empirical formula.",
+      "coreEvidenceIds": [
+        "task1_chem_015"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 17,
+      "specRef": "3.1.2.4",
+      "assessableRecallOrSkill": "Define molecular formula.",
+      "coreEvidenceIds": [
+        "task1_chem_016"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 18,
+      "specRef": "3.1.2.4",
+      "assessableRecallOrSkill": "Convert percent composition to a mass basis.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_02"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 19,
+      "specRef": "3.1.2.4",
+      "assessableRecallOrSkill": "Calculate empirical formula using mass and molar ratios.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_03"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_07"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 20,
+      "specRef": "3.1.2.4",
+      "assessableRecallOrSkill": "Scale fractional mole ratios to whole-number ratios.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_04"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 21,
+      "specRef": "3.1.2.4",
+      "assessableRecallOrSkill": "Find molecular formula from empirical formula and Mr.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_05"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_08"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 22,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Interpret stoichiometric coefficients in balanced equations.",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_chem_009"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 23,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Balance unfamiliar reaction equations.",
+      "coreEvidenceIds": [],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "application_unverified"
+    },
+    {
+      "point": 24,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Construct net ionic equations.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_23",
+        "chem_amount_v44_24"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_17"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 25,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Identify limiting reagent in a given mole mixture.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_13"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_09"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 26,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Calculate theoretical product quantity from limiting reagent.",
+      "coreEvidenceIds": [
+        "v33_card_chemistry_amount_of_substance_38"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_10"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 27,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Calculate reaction gas volumes from amounts in moles.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_15"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 28,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Calculate percentage yield from actual and theoretical masses.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_16"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_12"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 29,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Calculate percentage atom economy from balanced equation.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_18"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_13"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 30,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Explain economic and environmental benefits of atom economy.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_20"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 31,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Calculate unknown solution concentration using a reacting ratio.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_30"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_11"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 32,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Calculate waters of crystallisation in a hydrated salt.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_25"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_14"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 33,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Choose concordant titres and exclude clear outliers.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_31"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 34,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Combine initial and final burette reading uncertainties.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_33"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_15"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 35,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Make a volumetric solution using quantitative transfer.",
+      "coreEvidenceIds": [
+        "chem_rp1",
+        "chem_amount_v44_38"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 36,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Explain rinsing pipette and burette to avoid contamination/dilution.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_35",
+        "chem_amount_v44_36"
+      ],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 37,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Distinguish indicator end-point from stoichiometric equivalence.",
+      "coreEvidenceIds": [],
+      "supplementEvidenceIds": [],
+      "reviewLevel": "application_unverified"
+    },
+    {
+      "point": 38,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Solve stoichiometry via back titration.",
+      "coreEvidenceIds": [
+        "chem_amount_v44_43"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_18"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    },
+    {
+      "point": 39,
+      "specRef": "3.1.2.5",
+      "assessableRecallOrSkill": "Determine percentage purity of a sample.",
+      "coreEvidenceIds": [
+        "chem_purity"
+      ],
+      "supplementEvidenceIds": [
+        "task1_v239_chem_amount_19"
+      ],
+      "reviewLevel": "card_backed_not_full_exam_certified"
+    }
+  ],
+  "knownRemainingGaps": [
+    "Independent human verification of all 96 model meanings and acceptable synonyms against AQA exemplification",
+    "Unfamiliar balanced equations require handwritten practice and marking",
+    "Titration end-point/equivalence distinction requires question practice",
+    "RP1 practical execution and reading accuracy cannot be certified by flashcards alone",
+    "Calculations in flashcards do not substitute for varied multi-step exam questions"
+  ],
+  "releaseGate": {
+    "amountSubstanceFiveSubsectionsMapped": true,
+    "all96CoreAnswersIndependentlyVerified": false,
+    "allChemistryMockSpecAudited": false,
+    "physicsMockSpecAudited": false,
+    "mathsFirstPureMockSpecAudited": false,
+    "allTask1Complete": false
+  },
+  "coreCardsPreserved": true,
+  "coreExamBankPreserved": true
+}
