@@ -335,6 +335,7 @@ jobs:
       - run: node tests/task1-v219-chemistry-tof-precision.cjs
       - run: node tests/task1-v220-as-chemistry-ion-tests.cjs
       - run: node tests/task1-v221-chemistry-practicals-evaluation.cjs
+      - run: node tests/task1-v222-chemistry-rp5-rp6-recall.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
