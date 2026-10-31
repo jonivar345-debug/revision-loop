@@ -1,0 +1,18 @@
+name: Task 1 v244 Maths Year 1 Pure AQA crosswalk
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v244-maths-year1-pure-crosswalk.json'
+      - 'tests/task1-v244-maths-year1-pure-crosswalk.cjs'
+      - '.github/workflows/task1-v244-maths.yml'
+  push:
+    branches: [main]
+jobs:
+  maths-year1-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v244-maths-year1-pure-crosswalk.cjs

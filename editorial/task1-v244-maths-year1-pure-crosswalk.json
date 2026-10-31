@@ -1,0 +1,1118 @@
+{
+  "version": "v244",
+  "date": "2026-10-31",
+  "specification": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content",
+  "scope": "School FIRST Maths mock only: taught Year 1 Pure topics A,B,C,D,E,F,G,H,J; exclude Year 2 content, numerical methods not taught for this mock, Statistics and Mechanics",
+  "method": "AQA 7357 numbered content section titles plus school-selected Year 1 Pure scope, verified against original card fronts/backs; mappings are evidence only, not a complete correctness check or exam mark-scheme verification",
+  "originalCoreCount": 3345,
+  "eligibleCoreMockCards": 106,
+  "excludedSecondYearCardIds": [
+    "math_function_composite",
+    "math_inverse_condition",
+    "task1_v136_063",
+    "math_inverse",
+    "v33_card_maths_functions_76",
+    "v33_card_maths_functions_77",
+    "task1_maths_006",
+    "task1_v130_156",
+    "task1_v130_157",
+    "task1_v136_064"
+  ],
+  "historicalSupplementRecord": "editorial/task1-v232-maths-year1-pure-scope.json",
+  "coreTopicInventory": {
+    "Trigonometry": 16,
+    "Transformations": 10,
+    "Proof": 6,
+    "Algebra": 6,
+    "Quadratics": 4,
+    "Functions": 6,
+    "Coordinate geometry": 9,
+    "Sequences": 9,
+    "Logs": 4,
+    "Exponentials and logs": 1,
+    "Differentiation": 11,
+    "Integration": 6,
+    "Vectors": 5,
+    "Algebra & functions": 5,
+    "Exponentials & logarithms": 3,
+    "Sequences & series": 5
+  },
+  "requirements": [
+    {
+      "specRef": "3.2",
+      "assessableSkill": "Proof by deduction uses a logically valid chain",
+      "coreEvidenceIds": [
+        "task1_v171_001"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.2",
+      "assessableSkill": "Proof by exhaustion checks each finite permissible case",
+      "coreEvidenceIds": [
+        "math_proof_exhaust"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.2",
+      "assessableSkill": "Disprove a universal statement with a counterexample",
+      "coreEvidenceIds": [
+        "math_proof_counter"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.2",
+      "assessableSkill": "Construct a complete unfamiliar divisibility proof by deduction",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    },
+    {
+      "specRef": "3.2",
+      "assessableSkill": "Evaluate a proof by exhaustion with a fully stated finite domain",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Negative integer indices on non-zero bases",
+      "coreEvidenceIds": [
+        "math_indices_neg"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Fractional indices and real nth roots",
+      "coreEvidenceIds": [
+        "math_indices_frac"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Rationalise surd denominators with a conjugate",
+      "coreEvidenceIds": [
+        "math_surds_rationalise"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Quadratic discriminant and real root cases",
+      "coreEvidenceIds": [
+        "math_quad_discriminant"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Complete square to find vertex or solve quadratic",
+      "coreEvidenceIds": [
+        "math_complete_square"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Domain and range, including square roots and zero denominator",
+      "coreEvidenceIds": [
+        "task1_maths_007",
+        "task1_maths_008",
+        "task1_v124_bulk_math_002",
+        "task1_v124_bulk_math_003"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Factor and remainder theorem",
+      "coreEvidenceIds": [
+        "task1_v171_002",
+        "task1_v136_065"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Restriction remains after cancellation of algebraic fractions",
+      "coreEvidenceIds": [
+        "v33_card_maths_algebra_85"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Translate f(x) horizontally and vertically",
+      "coreEvidenceIds": [
+        "maths_transform_001",
+        "maths_transform_002"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Horizontal scale of f(ax) and vertical scale of af(x)",
+      "coreEvidenceIds": [
+        "maths_transform_003",
+        "task1_v162_001"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Reflect f(x) in x-axis or y-axis",
+      "coreEvidenceIds": [
+        "task1_v162_002",
+        "task1_maths_004"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.3",
+      "assessableSkill": "Represent transformation of specific graph coordinates under f(ax)",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    },
+    {
+      "specRef": "3.4",
+      "assessableSkill": "Compute gradient and equation of straight line",
+      "coreEvidenceIds": [
+        "math_line_gradient",
+        "task1_v136_006"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.4",
+      "assessableSkill": "Perpendicular and parallel gradients",
+      "coreEvidenceIds": [
+        "math_perp_grad",
+        "task1_v162_013"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.4",
+      "assessableSkill": "Circle equation with centre and radius",
+      "coreEvidenceIds": [
+        "math_circle"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.4",
+      "assessableSkill": "Tangent perpendicular to radius at point of contact",
+      "coreEvidenceIds": [
+        "math_circle_tangent"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.4",
+      "assessableSkill": "Analyse intersections and tangent equations in unfamiliar circle questions",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    },
+    {
+      "specRef": "3.5",
+      "assessableSkill": "Arithmetic and geometric nth term formulae",
+      "coreEvidenceIds": [
+        "math_arith_nth",
+        "math_geom_nth"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.5",
+      "assessableSkill": "Arithmetic and geometric series sums including convergence condition",
+      "coreEvidenceIds": [
+        "task1_v136_007",
+        "task1_v136_008",
+        "task1_v136_009"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.5",
+      "assessableSkill": "Factorials and positive integer binomial coefficients",
+      "coreEvidenceIds": [
+        "task1_v162_004",
+        "task1_v162_005",
+        "task1_v162_006"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.5",
+      "assessableSkill": "General term of positive-integer binomial expansion",
+      "coreEvidenceIds": [
+        "task1_v162_007"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.5",
+      "assessableSkill": "Interpret elementary recurrence notation",
+      "coreEvidenceIds": [
+        "task1_v162_008"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.5",
+      "assessableSkill": "Identify a specified coefficient from an unfamiliar positive integer binomial expansion",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    },
+    {
+      "specRef": "3.6",
+      "assessableSkill": "Pythagorean and tangent trigonometric identities",
+      "coreEvidenceIds": [
+        "maths_trig_001",
+        "math_tan_identity"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.6",
+      "assessableSkill": "Sine and cosine rules and triangle area",
+      "coreEvidenceIds": [
+        "math_sine_rule",
+        "math_cosine_rule",
+        "math_triangle_area"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.6",
+      "assessableSkill": "Exact trig ratios at standard degree angles",
+      "coreEvidenceIds": [
+        "task1_v162_016",
+        "task1_v162_017",
+        "task1_v162_018"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.6",
+      "assessableSkill": "Periodic solutions to basic trigonometric equations in a degree interval",
+      "coreEvidenceIds": [
+        "v33_card_maths_trigonometry_74",
+        "math_trig_period"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.6",
+      "assessableSkill": "Determine all solutions including CAST-type quadrants in a specified interval",
+      "coreEvidenceIds": [
+        "task1_v171_006",
+        "task1_v171_007"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.7",
+      "assessableSkill": "Product, quotient and power laws of logarithms",
+      "coreEvidenceIds": [
+        "math_logs_product",
+        "math_logs_power",
+        "task1_v138_001"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.7",
+      "assessableSkill": "Convert exponential equation to logarithmic form",
+      "coreEvidenceIds": [
+        "math_logs_change"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.7",
+      "assessableSkill": "Inverse relation of exp and natural log",
+      "coreEvidenceIds": [
+        "math_exp_inverse"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.7",
+      "assessableSkill": "Correct base and domain restrictions for change of base",
+      "coreEvidenceIds": [
+        "task1_v162_019"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.8",
+      "assessableSkill": "Differentiate powers and interpret tangent gradient",
+      "coreEvidenceIds": [
+        "math_diff_power",
+        "math_diff_gradient"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.8",
+      "assessableSkill": "Stationary point criteria and classify with second derivative",
+      "coreEvidenceIds": [
+        "math_stationary",
+        "math_second_deriv"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.8",
+      "assessableSkill": "When second derivative test inconclusive, use derivative sign changes",
+      "coreEvidenceIds": [
+        "math_a2_stationary_class"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.8",
+      "assessableSkill": "First principles definition of derivative",
+      "coreEvidenceIds": [
+        "task1_v162_020"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.8",
+      "assessableSkill": "Tangent and normal gradient at a point",
+      "coreEvidenceIds": [
+        "task1_v162_021"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.9",
+      "assessableSkill": "Power rule for antiderivatives with constant of integration",
+      "coreEvidenceIds": [
+        "math_integrate_power",
+        "v33_card_maths_integration_80"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.9",
+      "assessableSkill": "Definite integral as signed area and split at zeros for total area",
+      "coreEvidenceIds": [
+        "math_area_curve",
+        "task1_v171_010"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.9",
+      "assessableSkill": "Evaluate an unfamiliar area between a curve and axis crossing its roots",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    },
+    {
+      "specRef": "3.11",
+      "assessableSkill": "Magnitude of a two-dimensional vector",
+      "coreEvidenceIds": [
+        "math_vector_mag"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.11",
+      "assessableSkill": "Componentwise vector addition and scalar multiplication",
+      "coreEvidenceIds": [
+        "task1_v171_003",
+        "task1_v171_004"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.11",
+      "assessableSkill": "Vector displacement from position vectors",
+      "coreEvidenceIds": [
+        "task1_v162_023"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.11",
+      "assessableSkill": "Direction angle quadrant check from components",
+      "coreEvidenceIds": [
+        "task1_v171_005"
+      ],
+      "reviewLevel": "mapped_to_existing_core_prompt_and_answer; new problem marking unverified"
+    },
+    {
+      "specRef": "3.11",
+      "assessableSkill": "Deduce whether three given points are collinear using proportional 2D vectors",
+      "coreEvidenceIds": [],
+      "reviewLevel": "unfamiliar_exam_application_unverified_by_core_cards"
+    }
+  ],
+  "coreSnapshot": [
+    {
+      "id": "maths_trig_001",
+      "topic": "Trigonometry",
+      "originalFront": "What is the Pythagorean trigonometric identity?",
+      "originalBack": "sin²x + cos²x = 1."
+    },
+    {
+      "id": "maths_transform_001",
+      "topic": "Transformations",
+      "originalFront": "For y = f(x − a), how does the graph move?",
+      "originalBack": "Translate a units to the right."
+    },
+    {
+      "id": "maths_transform_002",
+      "topic": "Transformations",
+      "originalFront": "For y = f(x) + a, how does the graph move?",
+      "originalBack": "Translate a units upwards."
+    },
+    {
+      "id": "maths_transform_003",
+      "topic": "Transformations",
+      "originalFront": "For a > 0, what is the horizontal scale factor of y = f(ax)?",
+      "originalBack": "1/a (x-coordinates are divided by a)."
+    },
+    {
+      "id": "math_proof_counter",
+      "topic": "Proof",
+      "originalFront": "How can a universal statement be disproved?",
+      "originalBack": "Give one valid counterexample."
+    },
+    {
+      "id": "math_proof_exhaust",
+      "topic": "Proof",
+      "originalFront": "What is proof by exhaustion?",
+      "originalBack": "Check every possible case in a finite set of possibilities."
+    },
+    {
+      "id": "math_indices_neg",
+      "topic": "Algebra",
+      "originalFront": "For x ≠ 0 and positive integer n, what is x⁻ⁿ?",
+      "originalBack": "1/xⁿ."
+    },
+    {
+      "id": "math_indices_frac",
+      "topic": "Algebra",
+      "originalFront": "For positive integer n, what does x^(1/n) mean wherever it is real?",
+      "originalBack": "The real nth root of x."
+    },
+    {
+      "id": "math_surds_rationalise",
+      "topic": "Algebra",
+      "originalFront": "How do you rationalise 1/(a+√b)?",
+      "originalBack": "Multiply numerator and denominator by the conjugate a−√b."
+    },
+    {
+      "id": "math_quad_discriminant",
+      "topic": "Quadratics",
+      "originalFront": "What does the discriminant tell you?",
+      "originalBack": "For ax²+bx+c, Δ=b²−4ac: >0 two real roots, =0 repeated root, <0 no real roots."
+    },
+    {
+      "id": "math_complete_square",
+      "topic": "Quadratics",
+      "originalFront": "Why is completing the square useful for a quadratic?",
+      "originalBack": "It reveals the turning point and helps solve or sketch the quadratic."
+    },
+    {
+      "id": "math_modulus",
+      "topic": "Functions",
+      "originalFront": "What does y=|f(x)| do to a graph?",
+      "originalBack": "Reflects any part below the x-axis in the x-axis; parts above stay unchanged."
+    },
+    {
+      "id": "math_line_gradient",
+      "topic": "Coordinate geometry",
+      "originalFront": "What is the gradient between (x₁,y₁) and (x₂,y₂)?",
+      "originalBack": "m=(y₂−y₁)/(x₂−x₁)."
+    },
+    {
+      "id": "math_perp_grad",
+      "topic": "Coordinate geometry",
+      "originalFront": "How are gradients of perpendicular non-vertical lines related?",
+      "originalBack": "m₁m₂ = −1."
+    },
+    {
+      "id": "math_circle",
+      "topic": "Coordinate geometry",
+      "originalFront": "What is the equation of a circle centre (a,b), radius r?",
+      "originalBack": "(x−a)²+(y−b)²=r²."
+    },
+    {
+      "id": "math_circle_tangent",
+      "topic": "Coordinate geometry",
+      "originalFront": "How is a tangent to a circle related to the radius at the contact point?",
+      "originalBack": "They are perpendicular."
+    },
+    {
+      "id": "math_arith_nth",
+      "topic": "Sequences",
+      "originalFront": "What is the nth term of an arithmetic sequence?",
+      "originalBack": "uₙ = a + (n−1)d."
+    },
+    {
+      "id": "math_geom_nth",
+      "topic": "Sequences",
+      "originalFront": "What is the nth term of a geometric sequence?",
+      "originalBack": "uₙ = ar^(n−1)."
+    },
+    {
+      "id": "math_sine_rule",
+      "topic": "Trigonometry",
+      "originalFront": "State the sine rule.",
+      "originalBack": "a/sin A = b/sin B = c/sin C."
+    },
+    {
+      "id": "math_cosine_rule",
+      "topic": "Trigonometry",
+      "originalFront": "State the cosine rule for side a.",
+      "originalBack": "a²=b²+c²−2bc cos A."
+    },
+    {
+      "id": "math_triangle_area",
+      "topic": "Trigonometry",
+      "originalFront": "What is the area formula using two sides a,b and included angle C?",
+      "originalBack": "Area = ½ab sin C."
+    },
+    {
+      "id": "math_tan_identity",
+      "topic": "Trigonometry",
+      "originalFront": "State the tan identity.",
+      "originalBack": "tan x = sin x / cos x."
+    },
+    {
+      "id": "math_trig_period",
+      "topic": "Trigonometry",
+      "originalFront": "What are the periods of sin x, cos x and tan x in degrees?",
+      "originalBack": "sin and cos: 360°; tan: 180°."
+    },
+    {
+      "id": "math_logs_product",
+      "topic": "Logs",
+      "originalFront": "What is logₐ(xy)?",
+      "originalBack": "logₐx + logₐy."
+    },
+    {
+      "id": "math_logs_power",
+      "topic": "Logs",
+      "originalFront": "What is logₐ(xᵏ)?",
+      "originalBack": "k logₐx."
+    },
+    {
+      "id": "math_logs_change",
+      "topic": "Logs",
+      "originalFront": "How can a^x=b be rewritten using logs?",
+      "originalBack": "x = logₐb."
+    },
+    {
+      "id": "math_exp_inverse",
+      "topic": "Exponentials and logs",
+      "originalFront": "What functions are inverses of each other?",
+      "originalBack": "y=eˣ and y=ln x."
+    },
+    {
+      "id": "math_diff_power",
+      "topic": "Differentiation",
+      "originalFront": "Differentiate xⁿ.",
+      "originalBack": "nx^(n−1)."
+    },
+    {
+      "id": "math_diff_gradient",
+      "topic": "Differentiation",
+      "originalFront": "What does dy/dx represent geometrically?",
+      "originalBack": "The gradient of the curve/tangent at that point."
+    },
+    {
+      "id": "math_stationary",
+      "topic": "Differentiation",
+      "originalFront": "What condition identifies a stationary point?",
+      "originalBack": "dy/dx = 0."
+    },
+    {
+      "id": "math_second_deriv",
+      "topic": "Differentiation",
+      "originalFront": "How can d²y/dx² classify a stationary point?",
+      "originalBack": "Positive: local minimum; negative: local maximum."
+    },
+    {
+      "id": "math_integrate_power",
+      "topic": "Integration",
+      "originalFront": "Integrate xⁿ for n≠−1.",
+      "originalBack": "x^(n+1)/(n+1) + C."
+    },
+    {
+      "id": "math_area_curve",
+      "topic": "Integration",
+      "originalFront": "How is signed area under y=f(x) from a to b found?",
+      "originalBack": "∫ₐᵇ f(x) dx."
+    },
+    {
+      "id": "math_vector_mag",
+      "topic": "Vectors",
+      "originalFront": "Magnitude of vector (a,b)?",
+      "originalBack": "√(a²+b²)."
+    },
+    {
+      "id": "math_a2_stationary_class",
+      "topic": "Differentiation",
+      "originalFront": "If d²y/dx²=0 at a stationary point, what should you do?",
+      "originalBack": "Do not classify it automatically; inspect derivative sign changes or use another valid argument."
+    },
+    {
+      "id": "v33_card_maths_trigonometry_73",
+      "topic": "Trigonometry",
+      "originalFront": "What identity links sin²θ and cos²θ?",
+      "originalBack": "sin²θ+cos²θ=1."
+    },
+    {
+      "id": "v33_card_maths_trigonometry_74",
+      "topic": "Trigonometry",
+      "originalFront": "When solving sin x=k, why should you check beyond the calculator's principal value?",
+      "originalBack": "Trigonometric functions are periodic and can have multiple solutions in the specified interval."
+    },
+    {
+      "id": "v33_card_maths_transformations_75",
+      "topic": "Transformations",
+      "originalFront": "Which direction does y=f(x−a) translate a graph if a>0?",
+      "originalBack": "a units to the right."
+    },
+    {
+      "id": "v33_card_maths_quadratics_78",
+      "topic": "Quadratics",
+      "originalFront": "What does a negative discriminant say about real roots?",
+      "originalBack": "A quadratic with real coefficients has no real roots if b²−4ac<0."
+    },
+    {
+      "id": "v33_card_maths_integration_80",
+      "topic": "Integration",
+      "originalFront": "Why is +C needed in an indefinite integral?",
+      "originalBack": "Differentiation removes constant terms, so every constant shift is an antiderivative."
+    },
+    {
+      "id": "v33_card_maths_integration_81",
+      "topic": "Integration",
+      "originalFront": "What does a definite integral of f(x) below the x-axis contribute?",
+      "originalBack": "Negative signed area, not automatically positive physical area."
+    },
+    {
+      "id": "v33_card_maths_algebra_85",
+      "topic": "Algebra",
+      "originalFront": "When cancelling a common factor from an algebraic fraction, what restriction must be retained?",
+      "originalBack": "Any input that made the original denominator zero remains excluded."
+    },
+    {
+      "id": "v33_card_maths_coordinate_geometry_86",
+      "topic": "Coordinate geometry",
+      "originalFront": "How are gradients of two nonvertical perpendicular lines related?",
+      "originalBack": "Their gradients multiply to −1."
+    },
+    {
+      "id": "v33_card_maths_sequences_87",
+      "topic": "Sequences",
+      "originalFront": "When does an infinite geometric series have a finite sum?",
+      "originalBack": "When the common ratio satisfies |r|<1."
+    },
+    {
+      "id": "task1_maths_001",
+      "topic": "Transformations",
+      "originalFront": "A translation by vector (a, b) does what to (x, y)?",
+      "originalBack": "Maps it to (x + a, y + b)."
+    },
+    {
+      "id": "task1_maths_002",
+      "topic": "Transformations",
+      "originalFront": "What does y = f(x − a) do to y = f(x)?",
+      "originalBack": "Shifts the graph a units right."
+    },
+    {
+      "id": "task1_maths_004",
+      "topic": "Transformations",
+      "originalFront": "What does y = f(−x) do to the graph?",
+      "originalBack": "Reflects it in the y-axis."
+    },
+    {
+      "id": "task1_maths_007",
+      "topic": "Functions",
+      "originalFront": "What is the domain of a function?",
+      "originalBack": "Its permitted input values."
+    },
+    {
+      "id": "task1_maths_008",
+      "topic": "Functions",
+      "originalFront": "What is the range of a function?",
+      "originalBack": "Its possible output values."
+    },
+    {
+      "id": "task1_maths_011",
+      "topic": "Proof",
+      "originalFront": "What is a counterexample?",
+      "originalBack": "One example showing a universal claim is false."
+    },
+    {
+      "id": "task1_maths_012",
+      "topic": "Differentiation",
+      "originalFront": "What does the derivative f′(x) represent?",
+      "originalBack": "The instantaneous gradient of y = f(x)."
+    },
+    {
+      "id": "task1_v124_bulk_math_002",
+      "topic": "Functions",
+      "originalFront": "What is the domain of f(x) = √x over the real numbers?",
+      "originalBack": "x ≥ 0."
+    },
+    {
+      "id": "task1_v124_bulk_math_003",
+      "topic": "Functions",
+      "originalFront": "What is the domain of f(x) = 1/(x−2)?",
+      "originalBack": "All real x except x = 2."
+    },
+    {
+      "id": "task1_v124_bulk_math_004",
+      "topic": "Differentiation",
+      "originalFront": "What condition must a differentiable function satisfy at a stationary point?",
+      "originalBack": "f′(x) = 0."
+    },
+    {
+      "id": "task1_v124_bulk_math_008",
+      "topic": "Proof",
+      "originalFront": "What is a counterexample in mathematical proof?",
+      "originalBack": "One case showing a universal claim is false."
+    },
+    {
+      "id": "task1_v124_bulk_math_009",
+      "topic": "Trigonometry",
+      "originalFront": "How does tan x relate to sin x and cos x?",
+      "originalBack": "tan x = sin x / cos x."
+    },
+    {
+      "id": "task1_v130_155",
+      "topic": "Proof",
+      "originalFront": "What does a counterexample establish?",
+      "originalBack": "A universal statement is false."
+    },
+    {
+      "id": "task1_v136_001",
+      "topic": "Algebra & functions",
+      "originalFront": "What is the quadratic formula for ax² + bx + c = 0?",
+      "originalBack": "x = (−b ± √(b² − 4ac)) / (2a)."
+    },
+    {
+      "id": "task1_v136_002",
+      "topic": "Algebra & functions",
+      "originalFront": "State the index law a^m × a^n.",
+      "originalBack": "a^(m+n), for the same non-zero base."
+    },
+    {
+      "id": "task1_v136_003",
+      "topic": "Algebra & functions",
+      "originalFront": "State the index law (a^m)^n.",
+      "originalBack": "a^(mn)."
+    },
+    {
+      "id": "task1_v136_004",
+      "topic": "Exponentials & logarithms",
+      "originalFront": "What is logₐ1?",
+      "originalBack": "0, since a⁰ = 1 (a > 0, a ≠ 1)."
+    },
+    {
+      "id": "task1_v136_005",
+      "topic": "Exponentials & logarithms",
+      "originalFront": "What is logₐa?",
+      "originalBack": "1, for a > 0 and a ≠ 1."
+    },
+    {
+      "id": "task1_v136_006",
+      "topic": "Coordinate geometry",
+      "originalFront": "State the point–gradient form of a straight-line equation.",
+      "originalBack": "y − y₁ = m(x − x₁)."
+    },
+    {
+      "id": "task1_v136_007",
+      "topic": "Sequences & series",
+      "originalFront": "What is the sum of n terms of an arithmetic progression?",
+      "originalBack": "Sₙ = n[2a + (n−1)d]/2."
+    },
+    {
+      "id": "task1_v136_008",
+      "topic": "Sequences & series",
+      "originalFront": "What is the sum of n terms of a geometric progression?",
+      "originalBack": "Sₙ = a(1−rⁿ)/(1−r), when r ≠ 1."
+    },
+    {
+      "id": "task1_v136_009",
+      "topic": "Sequences & series",
+      "originalFront": "What is the sum to infinity for a convergent geometric series?",
+      "originalBack": "S∞ = a/(1−r), valid when |r| < 1."
+    },
+    {
+      "id": "task1_v136_062",
+      "topic": "Algebra & functions",
+      "originalFront": "What does a zero discriminant tell you about a quadratic?",
+      "originalBack": "It has one repeated real root."
+    },
+    {
+      "id": "task1_v136_065",
+      "topic": "Algebra & functions",
+      "originalFront": "What does a remainder of zero show about a polynomial divisor (x−a)?",
+      "originalBack": "(x−a) is a factor of the polynomial."
+    },
+    {
+      "id": "task1_v136_066",
+      "topic": "Sequences & series",
+      "originalFront": "What does Σ from r=1 to n mean?",
+      "originalBack": "Add the listed expression for r = 1, 2, …, n."
+    },
+    {
+      "id": "task1_v136_067",
+      "topic": "Sequences & series",
+      "originalFront": "For a geometric sum, what happens when r=1?",
+      "originalBack": "All n terms equal a, so Sₙ = na."
+    },
+    {
+      "id": "task1_v136_070",
+      "topic": "Differentiation",
+      "originalFront": "What does f′(a)=0 tell you about a smooth curve?",
+      "originalBack": "It has a stationary point at x=a."
+    },
+    {
+      "id": "task1_v136_071",
+      "topic": "Integration",
+      "originalFront": "Why is the constant of integration needed in an indefinite integral?",
+      "originalBack": "All antiderivatives differ by a constant."
+    },
+    {
+      "id": "task1_v138_001",
+      "topic": "Exponentials & logarithms",
+      "originalFront": "State the logarithm quotient law for logₐ(x/y).",
+      "originalBack": "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1)."
+    },
+    {
+      "id": "task1_v162_001",
+      "topic": "Transformations",
+      "originalFront": "For a>1, what does y = af(x) do to y = f(x)?",
+      "originalBack": "A vertical stretch by scale factor a."
+    },
+    {
+      "id": "task1_v162_002",
+      "topic": "Transformations",
+      "originalFront": "What transformation maps y = f(x) to y = −f(x)?",
+      "originalBack": "Reflection in the x-axis."
+    },
+    {
+      "id": "task1_v162_003",
+      "topic": "Transformations",
+      "originalFront": "For a>0, what does y = f(x+a) do to y = f(x)?",
+      "originalBack": "Translate a units to the left."
+    },
+    {
+      "id": "task1_v162_004",
+      "topic": "Sequences",
+      "originalFront": "For a positive integer n, what does n! mean?",
+      "originalBack": "n! = n × (n−1) × … × 2 × 1."
+    },
+    {
+      "id": "task1_v162_005",
+      "topic": "Sequences",
+      "originalFront": "What is the factorial of zero (0!)?",
+      "originalBack": "1."
+    },
+    {
+      "id": "task1_v162_006",
+      "topic": "Sequences",
+      "originalFront": "State the binomial coefficient nCr as a factorial formula.",
+      "originalBack": "nCr = n! / [r!(n−r)!]."
+    },
+    {
+      "id": "task1_v162_007",
+      "topic": "Sequences",
+      "originalFront": "What is the general x^r term in (a+bx)^n for a positive integer n?",
+      "originalBack": "nCr × a^(n−r) × (bx)^r."
+    },
+    {
+      "id": "task1_v162_008",
+      "topic": "Sequences",
+      "originalFront": "In the recurrence uₙ₊₁ = f(uₙ), how is the next term found?",
+      "originalBack": "Substitute the previous term uₙ into f."
+    },
+    {
+      "id": "task1_v162_009",
+      "topic": "Sequences",
+      "originalFront": "When is a sequence strictly increasing?",
+      "originalBack": "When every term is greater than the previous one."
+    },
+    {
+      "id": "task1_v162_010",
+      "topic": "Quadratics",
+      "originalFront": "For an upward-opening quadratic with two distinct roots, where is f(x)>0?",
+      "originalBack": "Outside the roots."
+    },
+    {
+      "id": "task1_v162_011",
+      "topic": "Algebra",
+      "originalFront": "What happens to an inequality sign when multiplying by a negative number?",
+      "originalBack": "Reverse the inequality sign."
+    },
+    {
+      "id": "task1_v162_012",
+      "topic": "Functions",
+      "originalFront": "What are the asymptotes of y = k/x when k≠0?",
+      "originalBack": "x = 0 and y = 0."
+    },
+    {
+      "id": "task1_v162_013",
+      "topic": "Coordinate geometry",
+      "originalFront": "What is true of the gradients of two non-vertical parallel lines?",
+      "originalBack": "They are equal."
+    },
+    {
+      "id": "task1_v162_014",
+      "topic": "Coordinate geometry",
+      "originalFront": "What does a perpendicular from a circle's centre to a chord do?",
+      "originalBack": "It bisects the chord."
+    },
+    {
+      "id": "task1_v162_015",
+      "topic": "Coordinate geometry",
+      "originalFront": "What is the angle in a semicircle, subtended by its diameter?",
+      "originalBack": "90°."
+    },
+    {
+      "id": "task1_v162_016",
+      "topic": "Trigonometry",
+      "originalFront": "What is the exact value of sin 30°?",
+      "originalBack": "1/2."
+    },
+    {
+      "id": "task1_v162_017",
+      "topic": "Trigonometry",
+      "originalFront": "What is the exact value of sin 45°?",
+      "originalBack": "√2/2."
+    },
+    {
+      "id": "task1_v162_018",
+      "topic": "Trigonometry",
+      "originalFront": "What is the exact value of cos 30°?",
+      "originalBack": "√3/2."
+    },
+    {
+      "id": "task1_v162_019",
+      "topic": "Logs",
+      "originalFront": "State the change-of-base formula for logₐx.",
+      "originalBack": "logₐx = ln x / ln a (a>0, a≠1; x>0)."
+    },
+    {
+      "id": "task1_v162_020",
+      "topic": "Differentiation",
+      "originalFront": "State the first-principles definition of f′(x).",
+      "originalBack": "lim(h→0) [f(x+h)−f(x)]/h."
+    },
+    {
+      "id": "task1_v162_021",
+      "topic": "Differentiation",
+      "originalFront": "If the tangent gradient is m≠0, what is the normal gradient?",
+      "originalBack": "−1/m."
+    },
+    {
+      "id": "task1_v162_022",
+      "topic": "Differentiation",
+      "originalFront": "What does f′(x)>0 mean over an interval?",
+      "originalBack": "The function is increasing there."
+    },
+    {
+      "id": "task1_v162_023",
+      "topic": "Vectors",
+      "originalFront": "How do position vectors give the vector from A to B?",
+      "originalBack": "AB = OB − OA (position vectors)."
+    },
+    {
+      "id": "task1_v171_001",
+      "topic": "Proof",
+      "originalFront": "What does proof by deduction involve?",
+      "originalBack": "Logical steps from stated assumptions to a justified conclusion."
+    },
+    {
+      "id": "task1_v171_002",
+      "topic": "Algebra",
+      "originalFront": "On division of polynomial f(x) by (x−a), what is the remainder?",
+      "originalBack": "f(a)."
+    },
+    {
+      "id": "task1_v171_003",
+      "topic": "Vectors",
+      "originalFront": "How do you add 2D vectors (a,b) and (c,d)?",
+      "originalBack": "(a+c, b+d)."
+    },
+    {
+      "id": "task1_v171_004",
+      "topic": "Vectors",
+      "originalFront": "What is k times the vector (a,b)?",
+      "originalBack": "(ka, kb)."
+    },
+    {
+      "id": "task1_v171_005",
+      "topic": "Vectors",
+      "originalFront": "After using tan⁻¹(y/x) for a vector's angle, what should you check?",
+      "originalBack": "The quadrant, using the signs of both components."
+    },
+    {
+      "id": "task1_v171_006",
+      "topic": "Trigonometry",
+      "originalFront": "In which quadrants is sin θ positive?",
+      "originalBack": "Quadrants I and II."
+    },
+    {
+      "id": "task1_v171_007",
+      "topic": "Trigonometry",
+      "originalFront": "At which angles in degrees is tan θ undefined?",
+      "originalBack": "90° + 180°n, for any integer n."
+    },
+    {
+      "id": "task1_v171_008",
+      "topic": "Trigonometry",
+      "originalFront": "What symmetry does the graph of cos x have?",
+      "originalBack": "It is even: cos(−x)=cos x."
+    },
+    {
+      "id": "task1_v171_009",
+      "topic": "Trigonometry",
+      "originalFront": "What symmetry does the graph of sin x have?",
+      "originalBack": "It is odd: sin(−x)=−sin x."
+    },
+    {
+      "id": "task1_v171_010",
+      "topic": "Integration",
+      "originalFront": "For total area where a graph crosses the x-axis, what is needed?",
+      "originalBack": "Split at the roots and add the positive areas."
+    }
+  ],
+  "priorBank": "maths_first_mock_pure_precision_v232.json",
+  "unverifiedApplicationPriorities": [
+    "Complete deduction and exhaustion proofs requiring multiple justified steps",
+    "Collinearity and position-vector geometry with unknown coefficients",
+    "All-point mapping under horizontal graph scales and negative scale parameters",
+    "Positive-integer binomial coefficient extraction from unknown expansion",
+    "Circle tangent/intersection problems and signed-area split integrals"
+  ],
+  "completion": {
+    "nineSchoolYear1PureSectionsMapped": true,
+    "all106AnswersIndependentlyVerified": false,
+    "allProofVectorApplicationVerified": false,
+    "allGraphSketchesAndMarkingVerified": false,
+    "fullYear1PureMockSpecCertified": false,
+    "physicsMockSpecCertified": false,
+    "chemistryMockSpecCertified": false,
+    "task1Complete": false
+  },
+  "changes": {
+    "newCards": 0,
+    "legacyCardsChanged": 0,
+    "appChanged": false,
+    "cloudStateChanged": false
+  }
+}
