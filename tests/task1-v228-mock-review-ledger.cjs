@@ -1,6 +1,13 @@
 'use strict';
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const data=JSON.parse(fs.readFileSync('editorial/task1-v228-mock-review-ledger.json','utf8'));
-assert.equal(data.completionGates.task1Complete,false);
-console.log('PASS initial review ledger gate');
+const d=JSON.parse(fs.readFileSync('editorial/task1-v228-mock-review-ledger.json','utf8'));
+const base=JSON.parse(fs.readFileSync('deck.json','utf8'));
+assert.equal(base.cards.length,3345);
+assert.equal(d.reviewedCardSnapshots.length,334);
+assert.equal(d.counts.MathsFirstPassFirstMock,162);
+assert.equal(d.counts.ChemistryA2TaggedCore,172);
+assert.equal(d.unresolvedScope.Chemistry_RP9_pH_curves.length,8);
+assert.equal(d.completionGates.task1Complete,false);
+for(const x of Object.values(d.fullCardAnswerSignoffStatus))assert.equal(x,false);
+console.log('PASS: review ledger and pending completion gate');
