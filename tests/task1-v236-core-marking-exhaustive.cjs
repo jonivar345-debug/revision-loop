@@ -21,4 +21,18 @@ assert.equal(models,3345);assert.equal(accepted,4942);assert.equal(rejected,90);
 assert.equal(judge(deck.cards.find(c=>c.id==='maths_transform_003'),'1 over a').status,'correct');
 assert.equal(judge(deck.cards.find(c=>c.id==='maths_transform_003'),'scale factor a').status,'wrong');
 assert.equal(audit.results.unexpectedResults,0);
-console.log('PASS v236: 3345/3345 core models correct, 4942/4942 declared accepts correct and 90/90 declared rejects wrong; Maths one-over-a fixed. Subject truth and AQA coverage still NOT certified.');
+const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\\[([^\\]]+)\\];/)[1].matchAll(/'\\.\\/([^']+\\.json)'/g)].map(x=>x[1]);
+assert.equal(urls.length,27);
+const supplements=urls.flatMap(path=>json(path).cards||[]);
+assert.equal(supplements.length,262);
+let supplementModels=0,supplementAccepts=0,supplementRejects=0;
+for(const c of supplements){
+ assert.equal(judge(c,c.back).status,'correct','Supplement model: '+c.id);supplementModels++;
+ for(const x of (c.accept||[])){assert.equal(judge(c,x).status,'correct','Supplement accept: '+c.id+': '+x);supplementAccepts++;}
+ for(const x of (c.reject||[])){assert.equal(judge(c,x).status,'wrong','Supplement reject: '+c.id+': '+x);supplementRejects++;}
+}
+assert.equal(supplementModels,262);assert.equal(supplementAccepts,992);assert.equal(supplementRejects,584);
+assert.equal(models+supplementModels,3607);
+assert.equal(accepted+supplementAccepts,5934);
+assert.equal(rejected+supplementRejects,674);
+console.log('PASS v236: 3607/3607 configured core+supplement model answers correct, 5934/5934 declared accepted variants correct, 674/674 declared rejected variants wrong; Maths one-over-a fixed. Model accuracy and AQA coverage still NOT certified.');
