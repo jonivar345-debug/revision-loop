@@ -1,0 +1,1159 @@
+{
+  "version": "v240",
+  "date": "2026-10-31",
+  "scope": "AQA 7405 AS 3.1.4.1–3.1.4.4 Energetics; mock eligible",
+  "officialSpecification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "basis": "Left-column AQA assessable content, not optional illustrative practical examples. Core-card inventory and selected answer review; not complete scientific or application certification.",
+  "coreDeckSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "coreInventory": {
+    "Energetics": 61,
+    "Calorimetry": 27,
+    "Hess's law": 21,
+    "Bond enthalpies": 14,
+    "RP2 Enthalpy": 21,
+    "total": 144
+  },
+  "requirements": [
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Distinguish exothermic and endothermic enthalpy changes",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_02",
+        "chem_energetics_v49_03"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Define enthalpy change at constant pressure",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_01"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Recognise heat sign and relative product enthalpies",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_04",
+        "chem_energetics_v49_05"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Recognise 100 kPa standard pressure and stated temperature",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_08",
+        "chem_energetics_v53_02"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Identify standard physical states in equations",
+      "coreEvidenceIds": [
+        "chem_energetics_v53_03",
+        "chem_energetics_v53_04"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Define standard enthalpy of formation and one-mole requirement",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_10",
+        "chem_energetics_v53_05"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Identify formation equation coefficients and elemental reference states",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_11",
+        "chem_energetics_v49_13",
+        "chem_energetics_v49_14"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Define standard enthalpy of combustion and one-mole requirement",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_15",
+        "chem_energetics_v53_06"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.1",
+      "assessableRecallOrSkill": "Include physical states when interpreting ΔH",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_17"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Recall the q=mcΔT relationship and consistent units",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_20",
+        "chem_energetics_v49_21"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Use mass of heated material rather than solute only",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_23"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Convert heat in joules to molar reaction enthalpy in kJ mol−1",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_24",
+        "chem_energetics_v53_08"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Explain why solution q and chemical reaction ΔH have opposite signs",
+      "coreEvidenceIds": [
+        "chem_energetics_v53_10",
+        "chem_energetics_v49_26"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Choose mole denominator consistent with equation and stated molar definition",
+      "coreEvidenceIds": [
+        "chem_energetics_v53_09",
+        "chem_energetics_v53_13",
+        "chem_energetics_v53_15"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Recognise specific heat capacity values are supplied where needed",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_37"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Recognise Required Practical 2 calorimetry and heat-loss limitations",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_62",
+        "chem_energetics_v49_63",
+        "chem_energetics_v53_33"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.2",
+      "assessableRecallOrSkill": "Use temperature-time graph extrapolation and evaluate uncertainty",
+      "coreEvidenceIds": [
+        "chem_energetics_v53_32",
+        "chem_energetics_v51_01",
+        "chem_energetics_v51_02"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.3",
+      "assessableRecallOrSkill": "State Hess's law and route independence",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_38"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.3",
+      "assessableRecallOrSkill": "Use formation enthalpies in products minus reactants order",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_39",
+        "chem_energetics_v53_17"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.3",
+      "assessableRecallOrSkill": "Use combustion enthalpies in reactants minus products order",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_40",
+        "chem_energetics_v53_18"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.3",
+      "assessableRecallOrSkill": "Apply stoichiometric coefficients when combining molar enthalpy values",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_41",
+        "chem_energetics_v53_19"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.3",
+      "assessableRecallOrSkill": "Reverse Hess reaction and change sign; scale equation and ΔH together",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_42",
+        "chem_energetics_v49_43"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.3",
+      "assessableRecallOrSkill": "Use solution enthalpies to form cycles for hydrated and anhydrous salts",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_48",
+        "chem_energetics_v49_49"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.4",
+      "assessableRecallOrSkill": "Define mean bond enthalpy in gas-phase molecules",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_50"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.4",
+      "assessableRecallOrSkill": "Use energy of bonds broken minus energy of bonds formed",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_51",
+        "chem_energetics_v49_52",
+        "chem_energetics_v49_53"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.4",
+      "assessableRecallOrSkill": "Count bonds with balanced equation coefficients",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_54",
+        "chem_energetics_v53_27"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.4",
+      "assessableRecallOrSkill": "Identify why mean bond enthalpy predictions are approximate",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_55",
+        "chem_energetics_v49_56"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    },
+    {
+      "specRef": "3.1.4.4",
+      "assessableRecallOrSkill": "Qualify gaseous phase and effects of phase changes on comparisons",
+      "coreEvidenceIds": [
+        "chem_energetics_v49_57",
+        "chem_energetics_v49_59"
+      ],
+      "reviewLevel": "Core card identified, question/answer checked; unfamiliar exam application still unverified"
+    }
+  ],
+  "coreCardInventoryFirstPass": [
+    {
+      "id": "chem_rp2",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What is the core calorimetry calculation?",
+      "originalBack": "q = mcΔT, then ΔH = −q/n for the stated reacting amount."
+    },
+    {
+      "id": "chem_enthalpy_def",
+      "topic": "Energetics",
+      "originalFront": "Define standard enthalpy change of reaction.",
+      "originalBack": "Enthalpy change when reactants in their standard states react in the stoichiometric equation under standard conditions."
+    },
+    {
+      "id": "chem_hess",
+      "topic": "Energetics",
+      "originalFront": "What principle is used in Hess cycles?",
+      "originalBack": "Enthalpy change is independent of route because enthalpy is a state function."
+    },
+    {
+      "id": "chem_bondenthalpy",
+      "topic": "Energetics",
+      "originalFront": "Using mean bond enthalpies, how is ΔH estimated?",
+      "originalBack": "Σ bonds broken − Σ bonds formed."
+    },
+    {
+      "id": "v33_card_chemistry_energetics_45",
+      "topic": "Energetics",
+      "originalFront": "Why is ΔH estimated as bond energies broken minus bond energies formed?",
+      "originalBack": "Breaking bonds requires energy; forming bonds releases energy."
+    },
+    {
+      "id": "chem_energetics_v49_01",
+      "topic": "Energetics",
+      "originalFront": "What is an enthalpy change?",
+      "originalBack": "Heat energy change measured at constant pressure."
+    },
+    {
+      "id": "chem_energetics_v49_02",
+      "topic": "Energetics",
+      "originalFront": "What does negative ΔH mean?",
+      "originalBack": "Exothermic: heat is released to the surroundings."
+    },
+    {
+      "id": "chem_energetics_v49_03",
+      "topic": "Energetics",
+      "originalFront": "What does positive ΔH mean?",
+      "originalBack": "Endothermic: heat is absorbed from the surroundings."
+    },
+    {
+      "id": "chem_energetics_v49_04",
+      "topic": "Energetics",
+      "originalFront": "Where do products lie on an exothermic enthalpy profile?",
+      "originalBack": "Lower in enthalpy than the reactants."
+    },
+    {
+      "id": "chem_energetics_v49_05",
+      "topic": "Energetics",
+      "originalFront": "Where do products lie on an endothermic enthalpy profile?",
+      "originalBack": "Higher in enthalpy than the reactants."
+    },
+    {
+      "id": "chem_energetics_v49_06",
+      "topic": "Energetics",
+      "originalFront": "Does an exothermic reaction necessarily have zero activation energy?",
+      "originalBack": "No; activation energy is a barrier, not the reaction's enthalpy change."
+    },
+    {
+      "id": "chem_energetics_v49_07",
+      "topic": "Energetics",
+      "originalFront": "Does a catalyst change a reaction's ΔH?",
+      "originalBack": "No; it changes activation energy, not the initial/final enthalpy difference."
+    },
+    {
+      "id": "chem_energetics_v49_08",
+      "topic": "Energetics",
+      "originalFront": "What pressure counts as standard pressure for AQA ΔH°?",
+      "originalBack": "100 kPa."
+    },
+    {
+      "id": "chem_energetics_v49_09",
+      "topic": "Energetics",
+      "originalFront": "What conditions must standard enthalpy values use?",
+      "originalBack": "100 kPa, a stated temperature and specified standard states."
+    },
+    {
+      "id": "chem_energetics_v49_10",
+      "topic": "Energetics",
+      "originalFront": "Define standard enthalpy of formation precisely.",
+      "originalBack": "ΔH when 1 mol of compound forms from elements in standard states under standard conditions."
+    },
+    {
+      "id": "chem_energetics_v49_11",
+      "topic": "Energetics",
+      "originalFront": "What is the ΔfH° of an element in its standard state?",
+      "originalBack": "Zero, by definition."
+    },
+    {
+      "id": "chem_energetics_v49_12",
+      "topic": "Energetics",
+      "originalFront": "Is ΔfH° of gaseous oxygen atoms O(g) zero?",
+      "originalBack": "No; oxygen's standard state is O₂(g)."
+    },
+    {
+      "id": "chem_energetics_v49_13",
+      "topic": "Energetics",
+      "originalFront": "Give a formation equation for magnesium oxide.",
+      "originalBack": "Mg(s)+½O₂(g)→MgO(s)."
+    },
+    {
+      "id": "chem_energetics_v49_14",
+      "topic": "Energetics",
+      "originalFront": "Give the standard formation equation of liquid water.",
+      "originalBack": "H₂(g)+½O₂(g)→H₂O(l)."
+    },
+    {
+      "id": "chem_energetics_v49_15",
+      "topic": "Energetics",
+      "originalFront": "Define standard enthalpy of combustion.",
+      "originalBack": "ΔH when 1 mol of substance burns completely in O₂ under standard conditions/states."
+    },
+    {
+      "id": "chem_energetics_v49_16",
+      "topic": "Energetics",
+      "originalFront": "What is the standard combustion equation for methane?",
+      "originalBack": "CH₄(g)+2O₂(g)→CO₂(g)+2H₂O(l)."
+    },
+    {
+      "id": "chem_energetics_v49_17",
+      "topic": "Energetics",
+      "originalFront": "Why must states be shown in an enthalpy equation?",
+      "originalBack": "Changing a substance's physical state changes the enthalpy value."
+    },
+    {
+      "id": "chem_energetics_v49_18",
+      "topic": "Energetics",
+      "originalFront": "What happens to ΔH if a whole reaction equation is doubled?",
+      "originalBack": "ΔH for the doubled equation also doubles."
+    },
+    {
+      "id": "chem_energetics_v49_19",
+      "topic": "Energetics",
+      "originalFront": "What happens to ΔH if a reaction is reversed?",
+      "originalBack": "The enthalpy sign reverses."
+    },
+    {
+      "id": "chem_energetics_v49_20",
+      "topic": "Calorimetry",
+      "originalFront": "What equation relates heat, mass, specific heat capacity and temperature rise?",
+      "originalBack": "q=mcΔT with q in J, m in g, c in J g⁻¹ K⁻¹."
+    },
+    {
+      "id": "chem_energetics_v49_21",
+      "topic": "Calorimetry",
+      "originalFront": "How is ΔT calculated from initial and final temperatures?",
+      "originalBack": "ΔT=T_final−T_initial; changes in °C and K are numerically equal."
+    },
+    {
+      "id": "chem_energetics_v49_22",
+      "topic": "Calorimetry",
+      "originalFront": "When liquid density is 1 g cm⁻³, how does mass relate to volume?",
+      "originalBack": "Solution mass in grams approximately equals its volume in cm³."
+    },
+    {
+      "id": "chem_energetics_v49_23",
+      "topic": "Calorimetry",
+      "originalFront": "In a solution calorimeter, what mass usually goes in q=mcΔT?",
+      "originalBack": "Mass of the solution that changes temperature, not only the solute."
+    },
+    {
+      "id": "chem_energetics_v49_24",
+      "topic": "Calorimetry",
+      "originalFront": "How do you convert calorimetry q from J into kJ?",
+      "originalBack": "Divide by 1000."
+    },
+    {
+      "id": "chem_energetics_v49_25",
+      "topic": "Calorimetry",
+      "originalFront": "How do you calculate reaction molar ΔH using solution q?",
+      "originalBack": "ΔH=−q_solution(kJ)/moles of reaction, with sign chosen correctly."
+    },
+    {
+      "id": "chem_energetics_v49_26",
+      "topic": "Calorimetry",
+      "originalFront": "Why is ΔH negative if the solution warms?",
+      "originalBack": "The solution gains heat, so the reaction has released it."
+    },
+    {
+      "id": "chem_energetics_v49_27",
+      "topic": "Calorimetry",
+      "originalFront": "Why is ΔH positive if the solution cools?",
+      "originalBack": "The solution loses heat; the reaction absorbs heat from surroundings."
+    },
+    {
+      "id": "chem_energetics_v49_28",
+      "topic": "Calorimetry",
+      "originalFront": "Why must a reaction mole ratio be checked before finding molar ΔH?",
+      "originalBack": "The enthalpy is defined per mole of reaction as written; reactants may have unequal ratios."
+    },
+    {
+      "id": "chem_energetics_v49_29",
+      "topic": "Calorimetry",
+      "originalFront": "For 25 cm³ 1 M HCl plus 25 cm³ 1 M NaOH, how many mol water form?",
+      "originalBack": "0.025 mol, assuming complete 1:1 neutralisation."
+    },
+    {
+      "id": "chem_energetics_v49_30",
+      "topic": "Calorimetry",
+      "originalFront": "What is the purpose of a calorimeter's insulation?",
+      "originalBack": "To reduce heat transfer between system and external surroundings."
+    },
+    {
+      "id": "chem_energetics_v49_31",
+      "topic": "Calorimetry",
+      "originalFront": "What happens to the measured magnitude of exothermic ΔH if heat escapes?",
+      "originalBack": "The temperature rise is too small; calculated ΔH is less negative."
+    },
+    {
+      "id": "chem_energetics_v49_32",
+      "topic": "Calorimetry",
+      "originalFront": "What happens when an endothermic experiment gains external heat?",
+      "originalBack": "Temperature fall is too small; measured ΔH is underestimated in magnitude."
+    },
+    {
+      "id": "chem_energetics_v49_33",
+      "topic": "Calorimetry",
+      "originalFront": "Why might a fuel combustion calorimetry estimate be too weak?",
+      "originalBack": "Some heat escapes or warms apparatus, so measured water rise is too small."
+    },
+    {
+      "id": "chem_energetics_v49_34",
+      "topic": "Calorimetry",
+      "originalFront": "Why can incomplete combustion affect fuel calorimetry?",
+      "originalBack": "Not all fuel undergoes the stated complete combustion reaction."
+    },
+    {
+      "id": "chem_energetics_v49_35",
+      "topic": "Calorimetry",
+      "originalFront": "What does extrapolating a temperature–time graph estimate?",
+      "originalBack": "Corrected temperature at the mixing/reaction time, reducing heat-exchange error."
+    },
+    {
+      "id": "chem_energetics_v49_36",
+      "topic": "Calorimetry",
+      "originalFront": "Name one measurement uncertainty in calorimetry.",
+      "originalBack": "Temperature measurement."
+    },
+    {
+      "id": "chem_energetics_v49_37",
+      "topic": "Calorimetry",
+      "originalFront": "Does AQA require the specific heat capacity of water from memory?",
+      "originalBack": "No; the value is supplied when needed."
+    },
+    {
+      "id": "chem_energetics_v49_38",
+      "topic": "Hess's law",
+      "originalFront": "State Hess's law.",
+      "originalBack": "Overall enthalpy change is independent of pathway if start/end states match."
+    },
+    {
+      "id": "chem_energetics_v49_39",
+      "topic": "Hess's law",
+      "originalFront": "What is the formation-enthalpy calculation for ΔH°reaction?",
+      "originalBack": "Sum of product ΔfH° values minus sum of reactant ΔfH° values."
+    },
+    {
+      "id": "chem_energetics_v49_40",
+      "topic": "Hess's law",
+      "originalFront": "What is the combustion-enthalpy Hess calculation?",
+      "originalBack": "Sum combustion enthalpies of reactants minus those of products."
+    },
+    {
+      "id": "chem_energetics_v49_41",
+      "topic": "Hess's law",
+      "originalFront": "Why do equation coefficients matter in Hess calculations?",
+      "originalBack": "Multiply each substance's molar enthalpy by its stoichiometric coefficient."
+    },
+    {
+      "id": "chem_energetics_v49_42",
+      "topic": "Hess's law",
+      "originalFront": "What happens to a Hess enthalpy when an equation is reversed?",
+      "originalBack": "Change the sign."
+    },
+    {
+      "id": "chem_energetics_v49_43",
+      "topic": "Hess's law",
+      "originalFront": "What happens to a Hess enthalpy when the equation is halved?",
+      "originalBack": "Halve the ΔH value."
+    },
+    {
+      "id": "chem_energetics_v49_44",
+      "topic": "Hess's law",
+      "originalFront": "Why is the ΔfH° of H₂(g) zero?",
+      "originalBack": "Hydrogen gas is elemental hydrogen in its standard state."
+    },
+    {
+      "id": "chem_energetics_v49_45",
+      "topic": "Hess's law",
+      "originalFront": "What common starting point is used in a formation-enthalpy Hess cycle?",
+      "originalBack": "The constituent elements in their standard states."
+    },
+    {
+      "id": "chem_energetics_v49_46",
+      "topic": "Hess's law",
+      "originalFront": "In a combustion cycle, what common products can both pathways reach?",
+      "originalBack": "Complete combustion products, typically CO₂(g) and H₂O(l)."
+    },
+    {
+      "id": "chem_energetics_v49_47",
+      "topic": "Hess's law",
+      "originalFront": "Why can Hess's law calculate a reaction not measured directly?",
+      "originalBack": "A sum of accessible reactions can have the same overall initial and final states."
+    },
+    {
+      "id": "chem_energetics_v49_48",
+      "topic": "Hess's law",
+      "originalFront": "If anhydrous salt → solution has ΔH₁ and hydrated salt → solution has ΔH₂, what is ΔH for anhydrous → hydrated salt?",
+      "originalBack": "ΔH₁ − ΔH₂ (for matching amounts and states)."
+    },
+    {
+      "id": "chem_energetics_v49_49",
+      "topic": "Hess's law",
+      "originalFront": "How can enthalpies of solution determine hydration of a salt?",
+      "originalBack": "Construct paths to the same aqueous final state; subtract the two dissolution ΔHs."
+    },
+    {
+      "id": "chem_energetics_v49_50",
+      "topic": "Bond enthalpies",
+      "originalFront": "Define mean bond enthalpy.",
+      "originalBack": "Average enthalpy change to break one mole of a specified covalent bond in gaseous molecules."
+    },
+    {
+      "id": "chem_energetics_v49_51",
+      "topic": "Bond enthalpies",
+      "originalFront": "What is the general bond-enthalpy estimate for reaction ΔH?",
+      "originalBack": "Sum of energies for bonds broken − sum of energies for bonds formed."
+    },
+    {
+      "id": "chem_energetics_v49_52",
+      "topic": "Bond enthalpies",
+      "originalFront": "What is the sign of bond breaking?",
+      "originalBack": "Positive (endothermic): energy is required."
+    },
+    {
+      "id": "chem_energetics_v49_53",
+      "topic": "Bond enthalpies",
+      "originalFront": "What is the sign of bond formation?",
+      "originalBack": "Negative contribution (exothermic): energy is released."
+    },
+    {
+      "id": "chem_energetics_v49_54",
+      "topic": "Bond enthalpies",
+      "originalFront": "Why must you count all bonds in the balanced equation?",
+      "originalBack": "Coefficients determine the number of each bond broken and formed."
+    },
+    {
+      "id": "chem_energetics_v49_55",
+      "topic": "Bond enthalpies",
+      "originalFront": "Are mean bond enthalpies exact for a specific compound?",
+      "originalBack": "No; they are averages across different molecular environments."
+    },
+    {
+      "id": "chem_energetics_v49_56",
+      "topic": "Bond enthalpies",
+      "originalFront": "Why can mean bond-enthalpy ΔH differ from standard experimental ΔH?",
+      "originalBack": "Mean gas-phase energies are approximate and actual substances may have other states."
+    },
+    {
+      "id": "chem_energetics_v49_57",
+      "topic": "Bond enthalpies",
+      "originalFront": "Why is liquid water a problem if only gas-phase mean bonds are used?",
+      "originalBack": "Condensation/phase enthalpy is omitted unless accounted for."
+    },
+    {
+      "id": "chem_energetics_v49_58",
+      "topic": "Bond enthalpies",
+      "originalFront": "Does an exothermic reaction always break fewer bonds than it forms?",
+      "originalBack": "No; total energies of breaking and forming matter, not simple bond count."
+    },
+    {
+      "id": "chem_energetics_v49_59",
+      "topic": "Bond enthalpies",
+      "originalFront": "What is a bond enthalpy calculation not suitable for without extra data?",
+      "originalBack": "Directly predicting full ΔH for non-gaseous substances without state corrections."
+    },
+    {
+      "id": "chem_energetics_v49_60",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What is AQA Required Practical 2 about?",
+      "originalBack": "Measuring an enthalpy change using calorimetry."
+    },
+    {
+      "id": "chem_energetics_v49_61",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Name one reaction type that could be used for AQA Required Practical 2.",
+      "originalBack": "Neutralisation."
+    },
+    {
+      "id": "chem_energetics_v49_62",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why might a polystyrene cup and lid be used in calorimetry?",
+      "originalBack": "To limit heat transfer to the outside and reduce evaporation."
+    },
+    {
+      "id": "chem_energetics_v49_63",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why should a temperature–time correction be considered?",
+      "originalBack": "Heat exchange can distort the measured maximum/minimum temperature."
+    },
+    {
+      "id": "chem_energetics_v49_64",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What must be explained in a good calorimetry evaluation?",
+      "originalBack": "Direction of error, its cause, impact on ΔT/ΔH and a realistic improvement."
+    },
+    {
+      "id": "chem_energetics_v49_65",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why might dissolving hydrated vs anhydrous salts help build a Hess cycle?",
+      "originalBack": "Two measurable solution enthalpies lead to a common final aqueous state."
+    },
+    {
+      "id": "chem_energetics_v51_01",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "A thermometer is ±0.1°C per reading. What is the uncertainty in ΔT?",
+      "originalBack": "±0.2°C: add the absolute uncertainties of initial and final readings."
+    },
+    {
+      "id": "chem_energetics_v51_02",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "For ΔT=6.0°C and ±0.1°C per reading, what is % uncertainty?",
+      "originalBack": "(0.2÷6.0)×100=3.3%."
+    },
+    {
+      "id": "chem_energetics_v51_03",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "How can a slow thermometer affect exothermic calorimetry?",
+      "originalBack": "It may miss the highest temperature; ΔT is too small and ΔH less negative."
+    },
+    {
+      "id": "chem_energetics_v51_04",
+      "topic": "Energetics",
+      "originalFront": "Why is 2H₂(g)+O₂(g)→2H₂O(l) not a one-mole formation equation?",
+      "originalBack": "It forms 2 mol H₂O; halve every coefficient for standard molar formation."
+    },
+    {
+      "id": "chem_energetics_v51_05",
+      "topic": "Bond enthalpies",
+      "originalFront": "Why is the H–Cl bond enthalpy not averaged across different molecular environments?",
+      "originalBack": "HCl is diatomic, with only one H–Cl bond environment."
+    },
+    {
+      "id": "chem_energetics_v53_01",
+      "topic": "Energetics",
+      "originalFront": "What pressure is used for AQA standard enthalpy changes?",
+      "originalBack": "100 kPa."
+    },
+    {
+      "id": "chem_energetics_v53_02",
+      "topic": "Energetics",
+      "originalFront": "Must a standard enthalpy change always be at 298 K?",
+      "originalBack": "No; a stated temperature is required, often 298 K."
+    },
+    {
+      "id": "chem_energetics_v53_03",
+      "topic": "Energetics",
+      "originalFront": "In an enthalpy definition, what does a substance's standard state specify?",
+      "originalBack": "Its physical state at standard pressure (100 kPa) and the stated temperature."
+    },
+    {
+      "id": "chem_energetics_v53_04",
+      "topic": "Energetics",
+      "originalFront": "Name standard states of water, bromine and carbon at 298 K.",
+      "originalBack": "H₂O(l), Br₂(l), C(s, graphite)."
+    },
+    {
+      "id": "chem_energetics_v53_05",
+      "topic": "Energetics",
+      "originalFront": "What must a standard enthalpy of formation equation produce?",
+      "originalBack": "Exactly 1 mol of compound from its elements in standard states."
+    },
+    {
+      "id": "chem_energetics_v53_06",
+      "topic": "Energetics",
+      "originalFront": "What must a standard enthalpy of combustion equation consume?",
+      "originalBack": "Exactly 1 mol of substance, burned completely in O₂."
+    },
+    {
+      "id": "chem_energetics_v53_07",
+      "topic": "Energetics",
+      "originalFront": "What is the definition of Hess's law?",
+      "originalBack": "Reaction enthalpy is route-independent if initial/final states are the same."
+    },
+    {
+      "id": "chem_energetics_v53_08",
+      "topic": "Calorimetry",
+      "originalFront": "What is the molar enthalpy formula if q_solution is in joules?",
+      "originalBack": "ΔH = −q_solution/(1000 × n) in kJ mol⁻¹."
+    },
+    {
+      "id": "chem_energetics_v53_09",
+      "topic": "Calorimetry",
+      "originalFront": "What does n mean in ΔH = −q/n?",
+      "originalBack": "Moles of the reaction as written, or of the species named in the definition."
+    },
+    {
+      "id": "chem_energetics_v53_10",
+      "topic": "Calorimetry",
+      "originalFront": "Why is there a minus sign in ΔH = −q_solution/n?",
+      "originalBack": "Heat gained by solution equals heat lost by reaction (and vice versa)."
+    },
+    {
+      "id": "chem_energetics_v53_11",
+      "topic": "Calorimetry",
+      "originalFront": "When finding q=mcΔT, do equation coefficients multiply m?",
+      "originalBack": "No. m is the mass of material undergoing the temperature change."
+    },
+    {
+      "id": "chem_energetics_v53_12",
+      "topic": "Calorimetry",
+      "originalFront": "What must you do to q in joules before obtaining kJ mol⁻¹?",
+      "originalBack": "Divide q by 1000, then by the appropriate moles."
+    },
+    {
+      "id": "chem_energetics_v53_13",
+      "topic": "Calorimetry",
+      "originalFront": "If 2 mol of A react per equation, what is n_reaction from 0.10 mol A?",
+      "originalBack": "0.10 ÷ 2 = 0.050 mol of reaction as written."
+    },
+    {
+      "id": "chem_energetics_v53_14",
+      "topic": "Calorimetry",
+      "originalFront": "In H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, 0.040 mol NaOH is how many reactions?",
+      "originalBack": "0.040 ÷ 2 = 0.020 mol of the equation as written."
+    },
+    {
+      "id": "chem_energetics_v53_15",
+      "topic": "Calorimetry",
+      "originalFront": "For neutralisation enthalpy per mole of water, which n do you use?",
+      "originalBack": "Moles of H₂O made, not automatically moles of acid or alkali."
+    },
+    {
+      "id": "chem_energetics_v53_16",
+      "topic": "Calorimetry",
+      "originalFront": "What tells you whether to use n of reactant, product or reaction?",
+      "originalBack": "The stated definition of ΔH and coefficients in the balanced equation."
+    },
+    {
+      "id": "chem_energetics_v53_17",
+      "topic": "Hess's law",
+      "originalFront": "For ΔfH° values, which subtraction order gives reaction ΔH?",
+      "originalBack": "Sum of products − sum of reactants, including coefficients."
+    },
+    {
+      "id": "chem_energetics_v53_18",
+      "topic": "Hess's law",
+      "originalFront": "For ΔcH° values, which subtraction order gives reaction ΔH?",
+      "originalBack": "Sum of reactants − sum of products, including coefficients."
+    },
+    {
+      "id": "chem_energetics_v53_19",
+      "topic": "Hess's law",
+      "originalFront": "For 2CO + O₂ → 2CO₂, how many times each ΔfH°?",
+      "originalBack": "CO₂ ×2, CO ×2, O₂ ×1; ΔfH°(O₂)=0."
+    },
+    {
+      "id": "chem_energetics_v53_20",
+      "topic": "Hess's law",
+      "originalFront": "When should you multiply a Hess enthalpy by 2?",
+      "originalBack": "When the corresponding chemical equation is doubled."
+    },
+    {
+      "id": "chem_energetics_v53_21",
+      "topic": "Hess's law",
+      "originalFront": "What happens to ΔH when you reverse a Hess equation?",
+      "originalBack": "Change the sign of ΔH."
+    },
+    {
+      "id": "chem_energetics_v53_22",
+      "topic": "Hess's law",
+      "originalFront": "What happens to ΔH when you halve every equation coefficient?",
+      "originalBack": "Halve ΔH for that equation."
+    },
+    {
+      "id": "chem_energetics_v53_23",
+      "topic": "Hess's law",
+      "originalFront": "How do you check Hess arrows if the formula is forgotten?",
+      "originalBack": "Follow start → finish through the cycle; reverse arrow = reverse sign."
+    },
+    {
+      "id": "chem_energetics_v53_24",
+      "topic": "Hess's law",
+      "originalFront": "Why is ΔfH° of O₂(g) zero at 298 K?",
+      "originalBack": "O₂(g) is oxygen's element in its standard state."
+    },
+    {
+      "id": "chem_energetics_v53_25",
+      "topic": "Hess's law",
+      "originalFront": "When are Hess reaction coefficients NOT extra multipliers?",
+      "originalBack": "If a supplied ΔH already belongs to the full balanced equation shown."
+    },
+    {
+      "id": "chem_energetics_v53_26",
+      "topic": "Bond enthalpies",
+      "originalFront": "In bond enthalpy sums, do you multiply by formula subscripts?",
+      "originalBack": "Count bonds in each molecule, then multiply by the equation coefficient."
+    },
+    {
+      "id": "chem_energetics_v53_27",
+      "topic": "Bond enthalpies",
+      "originalFront": "For 2H₂ + O₂ → 2H₂O, how many O–H bonds form?",
+      "originalBack": "4 O–H bonds: 2 water molecules ×2 bonds each."
+    },
+    {
+      "id": "chem_energetics_v53_28",
+      "topic": "Bond enthalpies",
+      "originalFront": "In hydrogenation of ethene, what happens to unchanged C–H bonds?",
+      "originalBack": "They cancel between reactants and products; count only the net changes."
+    },
+    {
+      "id": "chem_energetics_v53_29",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What is AQA Required Practical 2?",
+      "originalBack": "Measurement of an enthalpy change using calorimetry."
+    },
+    {
+      "id": "chem_energetics_v53_30",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why does a polystyrene cup help in solution calorimetry?",
+      "originalBack": "It reduces heat transfer between the solution and surroundings."
+    },
+    {
+      "id": "chem_energetics_v53_31",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why can a lid improve a calorimetry experiment?",
+      "originalBack": "It reduces heat exchange with surroundings and evaporation."
+    },
+    {
+      "id": "chem_energetics_v53_32",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What is the key graph correction in exothermic calorimetry?",
+      "originalBack": "Extrapolate post-reaction cooling to mixing time to estimate peak T."
+    },
+    {
+      "id": "chem_energetics_v53_33",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What effect does heat loss have on calculated exothermic ΔH?",
+      "originalBack": "Measured ΔT is too small, so ΔH is less negative than the true value."
+    },
+    {
+      "id": "chem_energetics_v53_34",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "What does thermometer ±0.1°C mean for a temperature difference?",
+      "originalBack": "Two readings give ±0.2°C absolute uncertainty in ΔT."
+    },
+    {
+      "id": "chem_energetics_v53_35",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why record temperature against time in an RP2 calorimetry experiment?",
+      "originalBack": "To extrapolate and estimate a corrected temperature change."
+    },
+    {
+      "id": "chem_energetics_v53_36",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Which parts of RP2 affect the calorimetry calculation directly?",
+      "originalBack": "Measured ΔT, solution mass, heat capacity and reaction moles."
+    },
+    {
+      "id": "task1_chem_032",
+      "topic": "Energetics",
+      "originalFront": "What is an exothermic reaction?",
+      "originalBack": "A reaction that releases heat to the surroundings; ΔH is negative."
+    },
+    {
+      "id": "task1_chem_033",
+      "topic": "Energetics",
+      "originalFront": "What is an endothermic reaction?",
+      "originalBack": "A reaction that absorbs heat from the surroundings; ΔH is positive."
+    },
+    {
+      "id": "task1_chem_036",
+      "topic": "Energetics",
+      "originalFront": "What is the standard state of a substance?",
+      "originalBack": "Its most stable physical form under specified standard conditions."
+    },
+    {
+      "id": "task1_chem_037",
+      "topic": "Energetics",
+      "originalFront": "Why are bond enthalpies usually positive?",
+      "originalBack": "Energy is needed to break bonds."
+    },
+    {
+      "id": "task1_chem_039",
+      "topic": "Energetics",
+      "originalFront": "In q = mcΔT, what mass normally appears?",
+      "originalBack": "Mass of the substance whose temperature change is measured."
+    },
+    {
+      "id": "task1_chem_040",
+      "topic": "Energetics",
+      "originalFront": "What is one frequent source of error in simple calorimetry?",
+      "originalBack": "Heat exchange with surroundings."
+    },
+    {
+      "id": "task1_chem_041",
+      "topic": "Energetics",
+      "originalFront": "What is the sign of ΔH for complete combustion?",
+      "originalBack": "Negative."
+    },
+    {
+      "id": "task1_practical_023",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why might calorimetry give a smaller temperature rise than expected?",
+      "originalBack": "Some energy is transferred to the surroundings."
+    },
+    {
+      "id": "task1_practical_024",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why is extrapolation used in some temperature–time graphs?",
+      "originalBack": "To estimate temperature change before heat exchange distorts it."
+    },
+    {
+      "id": "task1_practical_025",
+      "topic": "RP2 Enthalpy",
+      "originalFront": "Why must the amount in moles match the ΔH definition?",
+      "originalBack": "Enthalpy change is reported per mole of the specified reaction quantity."
+    },
+    {
+      "id": "task1_v124_bulk_chem_035",
+      "topic": "Energetics",
+      "originalFront": "How is heat energy related to mass, specific heat capacity and temperature change?",
+      "originalBack": "q = mcΔT."
+    },
+    {
+      "id": "task1_v124_bulk_chem_036",
+      "topic": "Energetics",
+      "originalFront": "Why must q be divided by moles to obtain molar enthalpy change?",
+      "originalBack": "The enthalpy is per mole of reaction as written."
+    },
+    {
+      "id": "task1_v124_bulk_chem_037",
+      "topic": "Energetics",
+      "originalFront": "What sign does an exothermic reaction enthalpy have?",
+      "originalBack": "Negative."
+    },
+    {
+      "id": "task1_v124_bulk_chem_038",
+      "topic": "Energetics",
+      "originalFront": "What sign does an endothermic reaction enthalpy have?",
+      "originalBack": "Positive."
+    },
+    {
+      "id": "task1_v124_bulk_chem_039",
+      "topic": "Energetics",
+      "originalFront": "Why does temperature usually fall in an endothermic process?",
+      "originalBack": "Energy is absorbed from the surroundings."
+    },
+    {
+      "id": "task1_v124_bulk_chem_040",
+      "topic": "Energetics",
+      "originalFront": "What does a negative ΔH mean on a reaction profile?",
+      "originalBack": "Products have lower enthalpy than reactants."
+    },
+    {
+      "id": "task1_v124_bulk_chem_041",
+      "topic": "Energetics",
+      "originalFront": "What is the difference between bond breaking and bond making?",
+      "originalBack": "Breaking requires energy; forming releases energy."
+    },
+    {
+      "id": "task1_v124_bulk_chem_042",
+      "topic": "Energetics",
+      "originalFront": "Why is a mean bond enthalpy approximate for a particular bond?",
+      "originalBack": "Its value is averaged across several compounds."
+    },
+    {
+      "id": "task1_v124_bulk_chem_043",
+      "topic": "Energetics",
+      "originalFront": "What happens to a calorimetry-derived exothermic ΔH if heat is lost?",
+      "originalBack": "Its calculated magnitude is too small."
+    },
+    {
+      "id": "task1_v124_bulk_chem_044",
+      "topic": "Energetics",
+      "originalFront": "Why can a polystyrene cup improve a calorimetry result?",
+      "originalBack": "It reduces heat transfer to the surroundings."
+    },
+    {
+      "id": "task1_v124_bulk_chem_045",
+      "topic": "Energetics",
+      "originalFront": "What is Hess's law based on?",
+      "originalBack": "Enthalpy is independent of the reaction path."
+    },
+    {
+      "id": "task1_v124_bulk_chem_046",
+      "topic": "Energetics",
+      "originalFront": "What is the enthalpy cycle rule when reversing an equation?",
+      "originalBack": "Reverse the sign of ΔH."
+    },
+    {
+      "id": "task1_v124_cloze_013",
+      "topic": "Energetics",
+      "originalFront": "Fill the gap: enthalpy change depends on initial and final ____.",
+      "originalBack": "states."
+    },
+    {
+      "id": "task1_v125_087",
+      "topic": "Energetics",
+      "originalFront": "What is a standard state?",
+      "originalBack": "Most stable physical state of a substance at stated standard conditions."
+    },
+    {
+      "id": "task1_v125_088",
+      "topic": "Energetics",
+      "originalFront": "Why is ΔfH° for an element in its standard state zero?",
+      "originalBack": "It is the reference state for enthalpy of formation."
+    },
+    {
+      "id": "task1_v125_089",
+      "topic": "Energetics",
+      "originalFront": "In combustion enthalpy, how much of the substance must burn?",
+      "originalBack": "Exactly one mole."
+    },
+    {
+      "id": "task1_v125_090",
+      "topic": "Energetics",
+      "originalFront": "For formation enthalpy, how much compound is made?",
+      "originalBack": "Exactly one mole from elements in standard states."
+    },
+    {
+      "id": "task1_v125_091",
+      "topic": "Energetics",
+      "originalFront": "Why can experimental combustion enthalpy appear less exothermic than data values?",
+      "originalBack": "Heat losses or incomplete combustion."
+    },
+    {
+      "id": "task1_v125_092",
+      "topic": "Energetics",
+      "originalFront": "When using mean bond enthalpies, what state must reacting species have?",
+      "originalBack": "Gas phase."
+    },
+    {
+      "id": "task1_v125_093",
+      "topic": "Energetics",
+      "originalFront": "What is the meaning of an enthalpy level below the reactants on a cycle?",
+      "originalBack": "Lower enthalpy than the reactants."
+    },
+    {
+      "id": "task1_v130_084",
+      "topic": "Energetics",
+      "originalFront": "Define standard enthalpy of neutralisation.",
+      "originalBack": "Enthalpy change forming one mole of water when acid and base react in dilute solution."
+    },
+    {
+      "id": "task1_v130_086",
+      "topic": "Energetics",
+      "originalFront": "What must be true for the enthalpy changes in a Hess cycle to sum to zero?",
+      "originalBack": "They form a complete closed cycle."
+    },
+    {
+      "id": "task1_v136_049",
+      "topic": "Energetics",
+      "originalFront": "In calorimetry, why may the calculated |ΔH| be too small?",
+      "originalBack": "Heat loss to surroundings makes measured |ΔT| too small."
+    }
+  ],
+  "finding": "Dense existing recall bank: do not add duplicates until an exact missing AQA skill is identified. In particular the heat q, molar ΔH=-q/n and correct mole denominator are already tested in the existing mock cards.",
+  "pendingPracticalAndApplication": [
+    "Independently mark unseen quantitative calorimetry problems including uncertainty, q sign and limiting reagent",
+    "Check genuine RP2 temperature-time diagrams and evaluation responses",
+    "Mark unfamiliar formation and combustion Hess cycles and bond-enthalpy calculations against AQA-level marking",
+    "Validate acceptable paraphrases and false-positive rejections under the live flashcard marker"
+  ],
+  "completion": {
+    "fourEnergeticsSubsectionsMapped": true,
+    "all144CoreAnswersIndependentlyVerified": false,
+    "unfamiliarCalculationsVerified": false,
+    "requiredPractical2ExamCompetenceVerified": false,
+    "chemistryMockFullSpecVerified": false,
+    "physicsMockFullSpecVerified": false,
+    "mathsMockFullSpecVerified": false,
+    "task1Complete": false
+  },
+  "changes": {
+    "newCards": 0,
+    "deletedCards": 0,
+    "existingCoreIdsModified": 0,
+    "appRuntimeChanged": false,
+    "cloudKeysChanged": false
+  }
+}
