@@ -1563,9 +1563,9 @@ function evaluateCard(c,input){
  if(chemRaw){
   // Exact scientifically equivalent alternatives get full credit before fuzzy matching.
   const acceptedChem={
-   chem_lattice_diss:['Ionic solid breaks into gaseous ions.','One mole of ionic lattice is separated into its gaseous ions.','One mole of ionic solid forms its separate gaseous ions.'],
+   chem_lattice_diss:['The enthalpy change when one mole of ionic solid breaks into gaseous ions.','The enthalpy change when one mole of ionic lattice is separated into gaseous ions.','The enthalpy change when one mole of ionic solid forms separate gaseous ions.'],
    chem_lattice_form:['Equal magnitude and opposite signs.','The negative of lattice dissociation enthalpy.'],
-   chem_ea1:['Gaseous atoms each gain an electron to make anions.','One mole of gas atoms accepts one mole of electrons.'],
+   chem_ea1:['The enthalpy change when one mole of gaseous atoms each gain an electron to form gaseous negative ions.','The enthalpy change when one mole of gas atoms each accepts an electron to form 1- ions.'],
    task1_chem_182:['Kw is [H+][OH-].','The product of hydrogen ion and hydroxide ion concentrations.'],
    chem_energetics_v49_08:['100 kPa.','The standard pressure is one hundred kilopascals.'],
    chem_energetics_v49_11:['It is zero by definition.','Zero.'],
@@ -1576,8 +1576,18 @@ function evaluateCard(c,input){
   const badChem=()=>({status:'wrong',score:0,text:'The scientific direction, sign, value or relationship is incorrect. Compare it with the model answer.',missing:[]});
   if(c.id==='chem_lattice_diss'&&(
    /\b(?:gaseous\s+)?ions?\b.*\b(?:form(?:s|ing)?|join\w*|combin\w*)\b.*\b(?:solid|lattice)\b/i.test(chemRaw)
-   || /\bform(?:ation|ing)?\b[\s\w]{0,35}\b(?:solid|lattice)\b/i.test(chemRaw)
+   || /\bform(?:ation|ing)?\b\s+(?:(?:of|one\s+mole\s+of|an?|the)\s+)*(?:ionic\s+)?(?:solid|lattice)\b/i.test(chemRaw)
   )&&!/\b(?:separat\w*|dissociat\w*|break\w*|split\w*|disassembl\w*)\b/i.test(chemRaw))return badChem();
+  // A definition lacking its one-mole or enthalpy requirement is incomplete, not fully correct.
+  if(c.id==='chem_lattice_diss'&&/\b(?:solid|lattice)\b/i.test(chemRaw)
+    &&/\b(?:gaseous|gas)\b/i.test(chemRaw)&&/\bions?\b/i.test(chemRaw)
+    &&/\b(?:separat\w*|dissociat\w*|break\w*|split\w*|form\w*)\b/i.test(chemRaw)
+    &&(!/\b(?:one\s+mole|1\s*mol(?:e)?)\b/i.test(chemRaw)|| !/\b(?:enthalpy|heat\s+change|delta\s*h)\b|ΔH/i.test(chemRaw)))
+    return {status:'partial',score:0.5,text:'Include the enthalpy change for one mole of solid ionic lattice becoming gaseous ions.',missing:['enthalpy change','one mole']};
+  if(c.id==='chem_ea1'&&/\b(?:gaseous|gas)\b/i.test(chemRaw)&&/\batoms?\b/i.test(chemRaw)
+    &&/\b(?:gain\w*|accept\w*|receiv\w*)\b/i.test(chemRaw)&&/\belectrons?\b/i.test(chemRaw)
+    &&(!/\b(?:one\s+mole|1\s*mol(?:e)?)\b/i.test(chemRaw)|| !/\b(?:enthalpy|heat\s+change|delta\s*h)\b|ΔH/i.test(chemRaw)))
+    return {status:'partial',score:0.5,text:'Include the enthalpy change for one mole of gaseous atoms, each gaining one electron.',missing:['enthalpy change','one mole']};
   if(c.id==='chem_lattice_form'&&/\bsame\s+(?:the\s+)?sign\b/i.test(chemRaw)
     && !/\bnot\s+(?:the\s+)?same\s+sign\b|\bopposite\s+sign\b/i.test(chemRaw))return badChem();
   if(c.id==='chem_ea1'&&/\b(?:los(?:e|es|ing|t)|remov(?:e|es|ing|al))\b/i.test(chemRaw)
