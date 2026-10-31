@@ -56,6 +56,7 @@ jobs:
           node tests/task1-v228-mock-review-ledger.cjs
           node tests/task1-v229-physics-waves-crosswalk.cjs
           node tests/task1-v230-physics-mechanics-materials.cjs
+          node tests/task1-v231-physics-electricity.cjs
           node tests/task1-v215-rp4-recall-loader.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
