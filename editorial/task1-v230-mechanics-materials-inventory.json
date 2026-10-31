@@ -1,0 +1,1924 @@
+{
+  "version": "v230",
+  "date": "2026-10-31",
+  "kind": "Mechanics and Materials topic inventory and selected gap fixes, NOT full-spec certification",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials"
+  ],
+  "scope": "AQA 7408 3.4.1.1–3.4.2.2, first Physics mock Year 1 content only. Topic-labelled inventory covers selected historic core cards; other legacy cards may be elsewhere. Does not claim all 254 cards individually examiner-reviewed.",
+  "coreBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "inventory": {
+    "coreRelevantTopicLabelCount": 254,
+    "coreMarkedMockScope": 248,
+    "coreAdditionalSecondary": 6,
+    "byTopic": {
+      "Resolving vectors": 6,
+      "Forces on a slope": 9,
+      "Couples": 5,
+      "Motion graphs": 46,
+      "Moments": 11,
+      "Equilibrium": 2,
+      "Vectors": 1,
+      "Kinematics": 3,
+      "Projectiles": 13,
+      "Newton's laws": 11,
+      "Momentum": 13,
+      "Energy": 9,
+      "Power": 2,
+      "Materials": 39,
+      "Free-body diagrams": 6,
+      "RP3 Free fall": 10,
+      "RP4 Young modulus": 7,
+      "Mechanics": 42,
+      "Projectile motion": 7,
+      "Energy and power": 6,
+      "Mechanics & materials": 3,
+      "Graph interpretation": 3
+    },
+    "cardStamps": [
+      {
+        "id": "phy_vectors_001",
+        "source": "deck.json",
+        "topic": "Resolving vectors",
+        "stamp": "ef3a8c41",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_slope_001",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "1af6c32b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_couple_001",
+        "source": "deck.json",
+        "topic": "Couples",
+        "stamp": "d2a7f001",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_motion_d",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "4c236c32",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_motion_v",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "e1af3d3f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_motion_a",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "5084c254",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_moments_001",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "58e325a1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_equilibrium_001",
+        "source": "deck.json",
+        "topic": "Equilibrium",
+        "stamp": "37c39ac4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_rp3",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "4c83e4a6",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_rp4",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "c4dd4028",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_resultant_perp",
+        "source": "deck.json",
+        "topic": "Vectors",
+        "stamp": "b8e247d4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_moment_eq",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "47b5af80",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_suvat_condition",
+        "source": "deck.json",
+        "topic": "Kinematics",
+        "stamp": "021beebb",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_projectile_independent",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "826ab76c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_projectile_horizontal",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "32c672f6",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_top_projectile",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "3f325e4f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_newton3",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "e08768b9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_momentum",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "a4e8d6fc",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_impulse",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "06b516b2",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_force_time_area",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "e1dac73c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_work_angle",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "16062aac",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_power_fv",
+        "source": "deck.json",
+        "topic": "Power",
+        "stamp": "d0e54fdc",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_hooke",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "960b538c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_stress",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "32a4462b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_strain",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "45904444",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_young",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "4bee0401",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_newton1",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "445d6525",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_newton2",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "abdace3a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_force_diagram_001",
+        "source": "deck.json",
+        "topic": "Free-body diagrams",
+        "stamp": "fc79ebf5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_force_diagram_002",
+        "source": "deck.json",
+        "topic": "Free-body diagrams",
+        "stamp": "8049826e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_fbd_common_forces",
+        "source": "deck.json",
+        "topic": "Free-body diagrams",
+        "stamp": "ac0b2d6b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_work_angle_signs",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "1a2d22f1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_work_angle_theta",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "7aa7cb38",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_newton_s_laws_1",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "a91c8030",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_newton_s_laws_2",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "9867f4af",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_free_body_diagrams_3",
+        "source": "deck.json",
+        "topic": "Free-body diagrams",
+        "stamp": "49c0826b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_resolving_vectors_4",
+        "source": "deck.json",
+        "topic": "Resolving vectors",
+        "stamp": "5ff1a795",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_forces_on_a_slope_5",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "9c569b1e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_energy_6",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "cd5cef73",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_motion_graphs_11",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "9e805b14",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_motion_graphs_12",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "8bd7bf9e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_motion_graphs_13",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "632f94b9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "v33_card_physics_couples_32",
+        "source": "deck.json",
+        "topic": "Couples",
+        "stamp": "ba8d3d4e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_resolve_weakness_20261025_marked_angle",
+        "source": "deck.json",
+        "topic": "Resolving vectors",
+        "stamp": "7e39b036",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_resolve_weakness_20261025_horizontal_30",
+        "source": "deck.json",
+        "topic": "Resolving vectors",
+        "stamp": "d71d4d12",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_resolve_weakness_20261025_vertical_30",
+        "source": "deck.json",
+        "topic": "Resolving vectors",
+        "stamp": "2009872e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_weakness_v35_slope_direction",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "7b459fd0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_weakness_v35_slope_numeric",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "3ef89ceb",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_weakness_v35_couple_turn",
+        "source": "deck.json",
+        "topic": "Couples",
+        "stamp": "73622562",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_weakness_v35_couple_distance",
+        "source": "deck.json",
+        "topic": "Couples",
+        "stamp": "2ef7e5bf",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_s_negative",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "ef9eb374",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_s_horizontal_vs_v_horizontal",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "578aa8a5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_s_tangent_numeric",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "3c7bc538",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_v_gradient_numeric",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "abe0c054",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_v_trapezium_numeric",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "01677f6c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_v_signed_vs_distance",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "f66548b8",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_v_zero_crossing",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "a0fc3558",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_v_negative_acceleration",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "937b246f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_a_area_numeric",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "ff660c4d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_a_negative_area",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "3fbd519a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_v_multistage_area",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "e14f346f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_compare_slope_vs_area",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "cca8e4f7",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_axis_unit_check",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "0034dcb2",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_force_time_tri",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "c01cb4c0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_force_extension_dual",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "2c1bd491",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_force_extension_area",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "2f873a54",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_stress_strain_gradient",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "097f660a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_rp3_v2_s",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "005931d0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_rp4_force_extension",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "1cda3ed9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_force_distance_vs_time",
+        "source": "deck.json",
+        "topic": "Graph interpretation",
+        "stamp": "f08f438f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_weakness_v36_iv_axes_resistance",
+        "source": "deck.json",
+        "topic": "Graph interpretation",
+        "stamp": "13992cb5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_01",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "27f0680f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_02",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "e1718282",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_03",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "d62fb2cc",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_04",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "119f9942",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_05",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "c5486635",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_06",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "849de6e1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_07",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "f9b77dbf",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_08",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "e32d1fb0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_09",
+        "source": "deck.json",
+        "topic": "Kinematics",
+        "stamp": "d2a3c83b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_10",
+        "source": "deck.json",
+        "topic": "Kinematics",
+        "stamp": "f6b1093d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_11",
+        "source": "deck.json",
+        "topic": "Resolving vectors",
+        "stamp": "a81b061c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_12",
+        "source": "deck.json",
+        "topic": "Free-body diagrams",
+        "stamp": "e1631519",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_13",
+        "source": "deck.json",
+        "topic": "Free-body diagrams",
+        "stamp": "9f2e038b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_14",
+        "source": "deck.json",
+        "topic": "Equilibrium",
+        "stamp": "42af9be9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_15",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "926ff9ab",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_16",
+        "source": "deck.json",
+        "topic": "Couples",
+        "stamp": "ebf91f2a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_17",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "43aa8cad",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_18",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "ab8700cb",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_19",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "6261beb5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_20",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "334b0439",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_21",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "58de8b77",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_22",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "30527257",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_23",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "a8acdfb3",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_24",
+        "source": "deck.json",
+        "topic": "Power",
+        "stamp": "01675804",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_25",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "6faf2421",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_26",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "793caf1c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_27",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "80a0f80f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_28",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "68a17a4d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_29",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "c96e48b5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_30",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "42b9e068",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_31",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "0c04f751",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_32",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "e085129d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_33",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "391efb83",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_mechanics_focus_v37_34",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "10d08b69",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_01",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "2a47c330",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_02",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "65311092",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_03",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "9644e89e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_04",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "aec8d9c1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_05",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "a8cb7c3f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_06",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "8a9c3f26",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_07",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "d292c6b8",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v38_08",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "a01b4402",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_01",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "e19c4ac8",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_02",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "b4c7837c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_03",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "c21cf035",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_04",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "e591cd90",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_05",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "6bb08913",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_06",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "e6e00e32",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_07",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "6510e28d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_08",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "036bb2fb",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_09",
+        "source": "deck.json",
+        "topic": "Newton's laws",
+        "stamp": "89ff6e88",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_focus_v39_10",
+        "source": "deck.json",
+        "topic": "Graph interpretation",
+        "stamp": "c7420652",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_01",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "e727a134",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_02",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "07d2c840",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_03",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "6e933912",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_04",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "7bea0e8f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_05",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "dd179184",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_06",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "a63ad159",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_07",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "b1863a4d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_08",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "ddf20b06",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_09",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "d72626f7",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_10",
+        "source": "deck.json",
+        "topic": "Forces on a slope",
+        "stamp": "b0108916",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_11",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "1a00f85b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "phy_graph_v118_12",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "df9ed03c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_067",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "9a14ca75",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_068",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "807dfca2",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_069",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "88e39ddb",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_070",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "4795b50c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_071",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "dccc8915",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_072",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "cfb2c3ab",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_073",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "b1f7c22d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_074",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "84eac428",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_075",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "9d1463df",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_076",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "9d10e8e7",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_077",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "eec6108a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_078",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "51f59060",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_079",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "64173a13",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_080",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "7ed3a355",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_081",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "25d0e927",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_085",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "08957ed4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_086",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "d1e44f15",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_087",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "e64d0a90",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_088",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "2ea83ee8",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_phy_089",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "33cf2c50",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_practical_006",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "1454a172",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_practical_007",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "372e29b2",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_practical_008",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "2118f61d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_practical_009",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "645fc72b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_054",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "f43556e3",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_055",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "f88eafa9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_056",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "7003a486",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_059",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "4e7e4d62",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_060",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "5647acd9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_061",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "f2e845cf",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_062",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "b539df43",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_063",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "3d698725",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_064",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "dfa65986",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_065",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "1751b127",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_066",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "907b1e9e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_067",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "abb6216d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_072",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "226518a7",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_073",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "20b66101",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_074",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "b831ded7",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_bulk_phy_075",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "ffa37f50",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v124_cloze_005",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "9298d434",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_001",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "75bc0b10",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_002",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "3ab3c7b9",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_003",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "ab669444",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_004",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "60336859",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_005",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "a8d49ca1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_006",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "09d91e2d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_007",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "2b39fd04",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_008",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "c93c0970",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_009",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "d8f8dbfc",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_010",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "4902b579",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_011",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "041c034e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_012",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "4fbd1423",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_013",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "21e91509",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_014",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "4e8f39e4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_015",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "f0477efd",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_016",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "d811dcba",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_017",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "26423a6c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_018",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "f69a7349",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_019",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "073f2148",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_020",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "0fe2cc50",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_021",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "ce4061d8",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_022",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "4b3747a6",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_023",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "78291fa4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_024",
+        "source": "deck.json",
+        "topic": "Motion graphs",
+        "stamp": "d81e3f6f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_025",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "004b9f21",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_026",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "0bd40a6a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_027",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "05ad7233",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_028",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "943c012c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_029",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "ef7fe9d0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_030",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "c4a3d43d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_031",
+        "source": "deck.json",
+        "topic": "Projectile motion",
+        "stamp": "f259b69a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_032",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "483412f2",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_033",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "cd100ba2",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_034",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "9cb5ddad",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_035",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "1d6eef0c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_036",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "5f6b2044",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_037",
+        "source": "deck.json",
+        "topic": "Momentum",
+        "stamp": "45034549",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_038",
+        "source": "deck.json",
+        "topic": "Energy and power",
+        "stamp": "28ac9ee7",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_039",
+        "source": "deck.json",
+        "topic": "Energy and power",
+        "stamp": "c8413470",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_040",
+        "source": "deck.json",
+        "topic": "Energy and power",
+        "stamp": "94f40580",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_041",
+        "source": "deck.json",
+        "topic": "Energy and power",
+        "stamp": "5b934a8b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_042",
+        "source": "deck.json",
+        "topic": "Energy and power",
+        "stamp": "b87611cb",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_043",
+        "source": "deck.json",
+        "topic": "Energy and power",
+        "stamp": "854e93bf",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_044",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "8a5146a5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_045",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "40b4454b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_046",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "fcbd804f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_047",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "4d66d2df",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_048",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "5e9aedb5",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_049",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "88bbd00d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_050",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "0eb889fc",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_078",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "51bfa66d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_079",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "51539b52",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_080",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "06e3b969",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v125_081",
+        "source": "deck.json",
+        "topic": "RP4 Young modulus",
+        "stamp": "9cfeb5c4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v127_091",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "ff5dcb4c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v127_092",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "e271e777",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v127_094",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "ed6b924d",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v127_095",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "5cd48dcd",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_027",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "6e244e05",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_028",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "c60ddf2f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_029",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "ce8acf03",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_030",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "b592bb16",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_031",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "fb2021a0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_032",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "20d798b1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_033",
+        "source": "deck.json",
+        "topic": "Mechanics",
+        "stamp": "1911da4c",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_035",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "5b662eea",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_036",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "175d7fe1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v130_037",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "f6360f4f",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v132_001",
+        "source": "deck.json",
+        "topic": "Moments",
+        "stamp": "51a2b5b1",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v132_002",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "a1881e4a",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v132_003",
+        "source": "deck.json",
+        "topic": "RP3 Free fall",
+        "stamp": "5011ae01",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v136_040",
+        "source": "deck.json",
+        "topic": "Mechanics & materials",
+        "stamp": "66cf2c0b",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v136_083",
+        "source": "deck.json",
+        "topic": "Mechanics & materials",
+        "stamp": "4df9c9b4",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v136_084",
+        "source": "deck.json",
+        "topic": "Mechanics & materials",
+        "stamp": "3feceac0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v157_001",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "40b9e957",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v157_002",
+        "source": "deck.json",
+        "topic": "Projectiles",
+        "stamp": "8aeed48e",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v157_003",
+        "source": "deck.json",
+        "topic": "Materials",
+        "stamp": "170599f0",
+        "level": "inventory_only"
+      },
+      {
+        "id": "task1_v157_004",
+        "source": "deck.json",
+        "topic": "Energy",
+        "stamp": "696a5260",
+        "level": "inventory_only"
+      }
+    ]
+  },
+  "specCrosswalk": [
+    {
+      "ref": "3.4.1.1",
+      "title": "Scalars, vectors, components and equilibria",
+      "addedCards": 3,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.2",
+      "title": "Moments and couples",
+      "addedCards": 2,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.3",
+      "title": "Displacement, motion graphs, acceleration and RP3",
+      "addedCards": 3,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.4",
+      "title": "Projectile motion, drag, terminal speed",
+      "addedCards": 3,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.5",
+      "title": "Newton's laws and free-body diagrams",
+      "addedCards": 1,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.6",
+      "title": "Momentum, impulse and collisions",
+      "addedCards": 2,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.7",
+      "title": "Work done, energy transfer and power",
+      "addedCards": 1,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.1.8",
+      "title": "Conservation of energy and resistance",
+      "addedCards": 1,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.2.1",
+      "title": "Materials, Hooke's law, failure and stress–strain",
+      "addedCards": 3,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    },
+    {
+      "ref": "3.4.2.2",
+      "title": "Young modulus and RP4",
+      "addedCards": 1,
+      "status": "partial_existing_and_v230_gap_fixes",
+      "fullLeftColumnCoverageVerified": false,
+      "allAnswersIndividuallyExaminerReviewed": false
+    }
+  ],
+  "targetedNewContent": [
+    "Resultant magnitude and direction for perpendicular vectors and closing force triangles",
+    "Moment for a force at an angle and choosing a pivot through unknown reactions",
+    "Separate velocity sign from acceleration sign; signed acceleration–time areas; RP3 freefall graph",
+    "Projectile vertical acceleration at apex; horizontal range with air resistance; terminal force balance",
+    "Newton's third law applied to weight versus normal reaction",
+    "Signed momentum in one-dimensional collisions; elastic versus inelastic KE and momentum",
+    "Signed area on force–displacement graph; energy lost to resistive forces",
+    "Distinguish elastic limit from limit of proportionality; diameter effect on stiffness; permanent extension",
+    "Micrometer zero-error handling in wire measurement"
+  ],
+  "answersCheckedInNewBank": {
+    "acceptedVariants": 60,
+    "rejectedVariants": 40
+  },
+  "fullCertification": {
+    "physicsMechanicsMaterials": false,
+    "physicsMock": false,
+    "chemistryMock": false,
+    "mathsFirstYearPureMock": false,
+    "task1Complete": false
+  },
+  "preservation": "No changes to historic core card IDs or core questions, saved progress keys, user XP, cloud sync, first Maths Year 1 Pure mock scope or World assets."
+}
