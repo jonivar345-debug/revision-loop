@@ -1,0 +1,103 @@
+{
+  "version": "v225",
+  "createdAt": "2026-10-31",
+  "scope": "One original ten-mark paper-only AS Physics optical fibre mock question. Step-index only, no procedures.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves"
+  ],
+  "notes": "Complements existing mock_v159_03 critical-angle and dispersion question, with different index ratio and focus on cladding protection, crosstalk, and signal-quality choices. Suggested marks remain user-adjustable. Not an extracted past paper.",
+  "questions": [
+    {
+      "id": "task1_v225_phy_01",
+      "subject": "Physics",
+      "specRef": "3.3.2.3",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA-style step-index fibre interpretation",
+      "paper": "Original",
+      "question": "Comparing step-index optical fibre signal quality",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "subtopic": "TIR, cladding, attenuation and pulse broadening",
+      "marks": 10,
+      "prompt": "A paper-only comparison describes a step-index optical fibre with core refractive index 1.50 and cladding refractive index 1.47. A ray travels in the core and meets the boundary at 79.0° to the normal. Two sources are available: X emits a broad range of wavelengths; Y emits a narrow range. Two otherwise comparable step-index designs are described: C supports many ray paths, while the narrower core of D supports fewer. (a) Calculate the critical angle and determine whether the 79.0° ray undergoes total internal reflection. (b) State two additional useful functions of cladding, aside from making the cladding index lower than that of the core. (c) Choose the better source for reducing material dispersion, with a reason. (d) Choose the better fibre design for reducing modal dispersion, with a reason. (e) Distinguish absorption from dispersion and state why pulse broadening limits data rate. [10 marks]",
+      "markPoints": [
+        "The critical-angle relationship is sin θc = ncladding/ncore = 1.47/1.50.",
+        "The critical angle at the core–cladding boundary is approximately 78.5° to the normal.",
+        "The 79.0° ray undergoes total internal reflection because the incidence angle exceeds 78.5° and light travels from higher to lower refractive index.",
+        "Cladding protects the core from scratches or damage that could cause light leakage.",
+        "Cladding also limits stray light transfer between neighbouring fibre cores, reducing crosstalk.",
+        "Source Y has a narrow range of wavelengths, reducing material dispersion because the wavelengths have more similar speeds.",
+        "Fibre D has a narrower core, reducing modal dispersion by limiting the available ray paths of different lengths.",
+        "Absorption removes some optical energy, lowering the signal intensity or power.",
+        "Dispersion broadens each pulse in time instead of simply removing optical signal energy.",
+        "Overlapping broadened pulses make neighbouring bits difficult to distinguish and limit maximum data rate."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "The critical-angle relationship is sin θc = ncladding/ncore = 1.47/1.50. The critical angle at the core–cladding boundary is approximately 78.5° to the normal. The 79.0° ray undergoes total internal reflection because the incidence angle exceeds 78.5° and light travels from higher to lower refractive index. Cladding protects the core from scratches or damage that could cause light leakage. Cladding also limits stray light transfer between neighbouring fibre cores, reducing crosstalk. Source Y has a narrow range of wavelengths, reducing material dispersion because the wavelengths have more similar speeds. Fibre D has a narrower core, reducing modal dispersion by limiting the available ray paths of different lengths. Absorption removes some optical energy, lowering the signal intensity or power. Dispersion broadens each pulse in time instead of simply removing optical signal energy. Overlapping broadened pulses make neighbouring bits difficult to distinguish and limit maximum data rate.",
+      "answerType": "points",
+      "questionType": "reasoned refraction and digital signal interpretation",
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v225_phy_01",
+      "groupOrder": 1,
+      "reviewedShortAnswerPoints": {
+        "0": [
+          "sin(theta c) = 1.47 / 1.50."
+        ],
+        "1": [
+          "The critical angle is 78.5 degrees."
+        ],
+        "2": [
+          "79 degrees exceeds the critical angle, so total internal reflection occurs."
+        ],
+        "3": [
+          "Cladding protects the core against scratches that could let light escape."
+        ],
+        "4": [
+          "Cladding limits optical crosstalk into nearby fibres."
+        ],
+        "5": [
+          "Source Y reduces material dispersion because its narrow wavelength range travels at similar speeds."
+        ],
+        "6": [
+          "Fibre D reduces modal dispersion because fewer ray paths are possible."
+        ],
+        "7": [
+          "Absorption reduces the light signal's intensity."
+        ],
+        "8": [
+          "Dispersion makes a light pulse spread out in time."
+        ],
+        "9": [
+          "Overlapping optical pulses limit the rate of digital data transmission."
+        ]
+      },
+      "reviewedShortAnswerRejects": [
+        "At the critical angle the refracted ray is at zero degrees to the normal.",
+        "79 degrees is below the critical angle so no TIR occurs.",
+        "The cladding must have a higher refractive index than the core.",
+        "Material dispersion is caused only by different geometric ray paths.",
+        "Modal dispersion is caused by different colours travelling at different speeds.",
+        "Absorption is the main cause of increased pulse duration."
+      ]
+    }
+  ]
+}
