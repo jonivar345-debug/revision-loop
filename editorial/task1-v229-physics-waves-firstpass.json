@@ -1,0 +1,906 @@
+{
+  "version": "v229",
+  "date": "2026-10-31",
+  "type": "Physics Waves first-pass evidence, not full specification certification",
+  "source": "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves",
+  "scope": "Existing cards with the eight listed Waves/RP1/RP2 topic labels plus v225 and v226 Waves supplements. Labels may miss legacy cards on other topics; this is a selected first pass, not an all-bank search.",
+  "baseDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "counts": {
+    "coreWavesTopicCards": 118,
+    "coreScopeMock": 111,
+    "coreScopeSecondary": 7,
+    "supplementV225": 7,
+    "supplementV226": 13,
+    "newMockFlashcards": 14,
+    "examQuestionsAdded": 0
+  },
+  "verifiedGapsAddressed": [
+    "Explicit first-harmonic string formula in the mock deck (not only secondary RP1)",
+    "String frequency dependence on length and mass per unit length plus an RP1 f-squared graph",
+    "Second harmonic node/antinode count and half-period pattern interpretation",
+    "Formation of stationary sound waves by incident/reflected waves",
+    "Common-wavefront coherence of two slits and white-light fringe overlap",
+    "White-light grating central maximum and red/violet angle ordering",
+    "General two-index critical-angle formula instead of only the air special case",
+    "Air refractive index approximation and path/phase conversion"
+  ],
+  "sectionReview": [
+    {
+      "ref": "3.3.1.1",
+      "title": "Progressive waves",
+      "status": "prior cards present; partial first-pass only",
+      "remaining": "Further syllabus statement-to-question mapping and independent correctness checks"
+    },
+    {
+      "ref": "3.3.1.2",
+      "title": "Longitudinal/transverse, polarisation",
+      "status": "prior cards and v226 present; partial first-pass only",
+      "remaining": "Full marking and applications crosswalk"
+    },
+    {
+      "ref": "3.3.1.3",
+      "title": "Superposition, stationary waves, harmonics, RP1",
+      "status": "v229 supplements identified gaps; partial first-pass only",
+      "remaining": "Graphical examination variety, raw marking variants and complete RP1 audit"
+    },
+    {
+      "ref": "3.3.2.1",
+      "title": "Double slit, white light and interference, RP2",
+      "status": "v229 supplements coherence/white light; partial first-pass only",
+      "remaining": "Exhaustive practical and exam-style marking checks"
+    },
+    {
+      "ref": "3.3.2.2",
+      "title": "Single slit, diffraction grating",
+      "status": "v226 plus v229 grating-white-light additions; partial first-pass only",
+      "remaining": "Full written-paper cases and diagrams"
+    },
+    {
+      "ref": "3.3.2.3",
+      "title": "Refraction, step-index fibre, dispersion",
+      "status": "v225 plus v229 general critical-angle cases; partial first-pass only",
+      "remaining": "Full card-answer audit, core/cladding cases and mock-only boundaries"
+    }
+  ],
+  "reviewLevelDefinition": "Read existing question/answer pairs for initial physical plausibility and topical relevance. Automated fingerprints prove identity, not correct physics or exhaustively complete syllabus.",
+  "coreReviewedSnapshots": [
+    {
+      "id": "phy_rp1",
+      "source": "deck.json",
+      "stamp": "85736565",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_rp2",
+      "source": "deck.json",
+      "stamp": "5dda3c88",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_wave_speed",
+      "source": "deck.json",
+      "stamp": "4929d68a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_period_frequency",
+      "source": "deck.json",
+      "stamp": "545651b2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_phase_cycle",
+      "source": "deck.json",
+      "stamp": "1ebb3d41",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_stationary_nodes",
+      "source": "deck.json",
+      "stamp": "aea7b132",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_stationary_spacing",
+      "source": "deck.json",
+      "stamp": "08ae7ce4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_superposition",
+      "source": "deck.json",
+      "stamp": "99f8e60f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_double_slit",
+      "source": "deck.json",
+      "stamp": "a3cb5a7b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_grating",
+      "source": "deck.json",
+      "stamp": "51c191cb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_refractive_index",
+      "source": "deck.json",
+      "stamp": "f9cf8432",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_snell",
+      "source": "deck.json",
+      "stamp": "c4b4ad60",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "phy_diffraction",
+      "source": "deck.json",
+      "stamp": "993c6d5f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_stationary_waves_15",
+      "source": "deck.json",
+      "stamp": "3f2fc0c9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_interference_16",
+      "source": "deck.json",
+      "stamp": "1646bfa0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "v33_card_physics_waves_18",
+      "source": "deck.json",
+      "stamp": "ce74ee08",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_034",
+      "source": "deck.json",
+      "stamp": "1b65d7b7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_035",
+      "source": "deck.json",
+      "stamp": "0053198e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_036",
+      "source": "deck.json",
+      "stamp": "7e387827",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_037",
+      "source": "deck.json",
+      "stamp": "6eae80c7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_038",
+      "source": "deck.json",
+      "stamp": "6b4b370f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_039",
+      "source": "deck.json",
+      "stamp": "98d1e6e2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_040",
+      "source": "deck.json",
+      "stamp": "7c275ca2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_041",
+      "source": "deck.json",
+      "stamp": "7f70ed24",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_042",
+      "source": "deck.json",
+      "stamp": "022f0e5d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_044",
+      "source": "deck.json",
+      "stamp": "775d5b11",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_045",
+      "source": "deck.json",
+      "stamp": "a16d6a1c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_046",
+      "source": "deck.json",
+      "stamp": "280e243f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_047",
+      "source": "deck.json",
+      "stamp": "e085e50f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_048",
+      "source": "deck.json",
+      "stamp": "72342f39",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_049",
+      "source": "deck.json",
+      "stamp": "bf7b5b49",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_050",
+      "source": "deck.json",
+      "stamp": "cb08911a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_051",
+      "source": "deck.json",
+      "stamp": "1b73ea41",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_052",
+      "source": "deck.json",
+      "stamp": "ff3a97c7",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_053",
+      "source": "deck.json",
+      "stamp": "dc6448d3",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_054",
+      "source": "deck.json",
+      "stamp": "c3e34ad0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_055",
+      "source": "deck.json",
+      "stamp": "d2772f34",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_056",
+      "source": "deck.json",
+      "stamp": "5ecbf70c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_057",
+      "source": "deck.json",
+      "stamp": "87f36fd4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_058",
+      "source": "deck.json",
+      "stamp": "bb1297ea",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_059",
+      "source": "deck.json",
+      "stamp": "d421f4eb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_060",
+      "source": "deck.json",
+      "stamp": "9a2e0b7f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_061",
+      "source": "deck.json",
+      "stamp": "a2268de2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_062",
+      "source": "deck.json",
+      "stamp": "3e50f94d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_063",
+      "source": "deck.json",
+      "stamp": "fd9d8d38",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_064",
+      "source": "deck.json",
+      "stamp": "eb931eb0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_065",
+      "source": "deck.json",
+      "stamp": "87a12504",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_phy_066",
+      "source": "deck.json",
+      "stamp": "b50a149c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_001",
+      "source": "deck.json",
+      "stamp": "3cb0ee3f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_002",
+      "source": "deck.json",
+      "stamp": "08275056",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_003",
+      "source": "deck.json",
+      "stamp": "81ee4d67",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_004",
+      "source": "deck.json",
+      "stamp": "674f41c4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_practical_005",
+      "source": "deck.json",
+      "stamp": "42df98de",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_034",
+      "source": "deck.json",
+      "stamp": "d6deb380",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_036",
+      "source": "deck.json",
+      "stamp": "327b628c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_037",
+      "source": "deck.json",
+      "stamp": "dbd1d57b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_038",
+      "source": "deck.json",
+      "stamp": "fe2ed7cf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_039",
+      "source": "deck.json",
+      "stamp": "2a05c45d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_040",
+      "source": "deck.json",
+      "stamp": "e2d2c2f6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_041",
+      "source": "deck.json",
+      "stamp": "e38a9910",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_042",
+      "source": "deck.json",
+      "stamp": "c33d0e99",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_043",
+      "source": "deck.json",
+      "stamp": "2952f98a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_044",
+      "source": "deck.json",
+      "stamp": "d9b9f006",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_045",
+      "source": "deck.json",
+      "stamp": "35b98991",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_046",
+      "source": "deck.json",
+      "stamp": "2e45a37b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_047",
+      "source": "deck.json",
+      "stamp": "afc39d6b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_048",
+      "source": "deck.json",
+      "stamp": "bf415a82",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_049",
+      "source": "deck.json",
+      "stamp": "0c8f304b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_050",
+      "source": "deck.json",
+      "stamp": "dbf9e125",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_051",
+      "source": "deck.json",
+      "stamp": "02daee48",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_052",
+      "source": "deck.json",
+      "stamp": "a0970cda",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_bulk_phy_053",
+      "source": "deck.json",
+      "stamp": "19ec08bf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_cloze_003",
+      "source": "deck.json",
+      "stamp": "d2736877",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v124_cloze_004",
+      "source": "deck.json",
+      "stamp": "7ec283e4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_051",
+      "source": "deck.json",
+      "stamp": "fc4c2c0e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_052",
+      "source": "deck.json",
+      "stamp": "e2984dea",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_053",
+      "source": "deck.json",
+      "stamp": "1153dcdb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_054",
+      "source": "deck.json",
+      "stamp": "93e6387b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_055",
+      "source": "deck.json",
+      "stamp": "b53bf67a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_056",
+      "source": "deck.json",
+      "stamp": "61c06f79",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_057",
+      "source": "deck.json",
+      "stamp": "6a128632",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_058",
+      "source": "deck.json",
+      "stamp": "eb739a23",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_059",
+      "source": "deck.json",
+      "stamp": "4e13c688",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_060",
+      "source": "deck.json",
+      "stamp": "47f01033",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_061",
+      "source": "deck.json",
+      "stamp": "aa6dade6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_062",
+      "source": "deck.json",
+      "stamp": "9225783e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_073",
+      "source": "deck.json",
+      "stamp": "12014ea6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_074",
+      "source": "deck.json",
+      "stamp": "fc97a50d",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_075",
+      "source": "deck.json",
+      "stamp": "a8a8eb17",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_076",
+      "source": "deck.json",
+      "stamp": "f03cca34",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v125_077",
+      "source": "deck.json",
+      "stamp": "ccb9e2da",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_096",
+      "source": "deck.json",
+      "stamp": "5bad05ad",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_097",
+      "source": "deck.json",
+      "stamp": "0a8cdfe4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v127_098",
+      "source": "deck.json",
+      "stamp": "6f2a3274",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_001",
+      "source": "deck.json",
+      "stamp": "bfc58d18",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_002",
+      "source": "deck.json",
+      "stamp": "bc962ea2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_003",
+      "source": "deck.json",
+      "stamp": "1c9256fb",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_004",
+      "source": "deck.json",
+      "stamp": "e72b732c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_005",
+      "source": "deck.json",
+      "stamp": "07103407",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_006",
+      "source": "deck.json",
+      "stamp": "772534f9",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v129_007",
+      "source": "deck.json",
+      "stamp": "1122a6c5",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_023",
+      "source": "deck.json",
+      "stamp": "476a0df6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_024",
+      "source": "deck.json",
+      "stamp": "c8b64987",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_025",
+      "source": "deck.json",
+      "stamp": "e146085a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v130_026",
+      "source": "deck.json",
+      "stamp": "4cebe7bf",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v134_001",
+      "source": "deck.json",
+      "stamp": "4468e307",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v134_002",
+      "source": "deck.json",
+      "stamp": "86d0ce79",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v134_003",
+      "source": "deck.json",
+      "stamp": "021bfb5e",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v134_004",
+      "source": "deck.json",
+      "stamp": "89af0f97",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_038",
+      "source": "deck.json",
+      "stamp": "44b6c302",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_039",
+      "source": "deck.json",
+      "stamp": "afea08e6",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_080",
+      "source": "deck.json",
+      "stamp": "63678b0c",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_081",
+      "source": "deck.json",
+      "stamp": "79f1c4ec",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v136_082",
+      "source": "deck.json",
+      "stamp": "311e8f59",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v159_001",
+      "source": "deck.json",
+      "stamp": "871489d1",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v159_002",
+      "source": "deck.json",
+      "stamp": "457f3aaa",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v159_003",
+      "source": "deck.json",
+      "stamp": "0bb8a236",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v159_004",
+      "source": "deck.json",
+      "stamp": "916ffd9f",
+      "level": "first_content_scope_pass"
+    }
+  ],
+  "supplementReviewedSnapshots": [
+    {
+      "id": "task1_v225_phy_fibre_01",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "79873992",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v225_phy_fibre_02",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "f4d35cf2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v225_phy_fibre_03",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "dee814d0",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v225_phy_fibre_04",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "47656c6b",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v225_phy_fibre_05",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "8a097da4",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v225_phy_fibre_06",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "39336c34",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v225_phy_fibre_07",
+      "source": "physics_optical_fibre_precision_recall_v225.json",
+      "stamp": "8fe9d27f",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_01",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "6d489694",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_02",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "60fdc284",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_03",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "c22ba949",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_04",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "1fedf2ff",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_05",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "9feeb860",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_06",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "c505e9ef",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_07",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "7a2ce526",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_08",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "ee1f5c59",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_09",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "b04b64f2",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_10",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "67b8ef8a",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_11",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "21cd3570",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_12",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "57e2c011",
+      "level": "first_content_scope_pass"
+    },
+    {
+      "id": "task1_v226_phy_waves_13",
+      "source": "physics_waves_reasoning_recall_v226.json",
+      "stamp": "16ac0232",
+      "level": "first_content_scope_pass"
+    }
+  ],
+  "completionGate": {
+    "physicsWavesFullyCertified": false,
+    "physicsWholeMockFullyCertified": false,
+    "chemistryWholeMockFullyCertified": false,
+    "mathsFirstPureMockFullyCertified": false,
+    "task1Complete": false
+  },
+  "preservation": "No changes to historic deck card IDs, saved answers, XP, student progress, Year 1 Maths mock boundaries, core questions or World assets."
+}
