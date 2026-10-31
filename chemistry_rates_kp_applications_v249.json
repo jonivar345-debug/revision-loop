@@ -200,16 +200,16 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "What are the units of k for an overall second-order reaction?",
-      "back": "dm³ mol⁻¹ s⁻¹.",
+      "front": "For rate = k[A]², by what factor does the rate change if [A] is tripled at constant temperature?",
+      "back": "9.",
       "accept": [
-        "dm³ mol⁻¹ s⁻¹.",
-        "dm^3 mol^-1 s^-1",
-        "cubic decimetre per mole per second"
+        "9.",
+        "nine",
+        "nine times"
       ],
       "reject": [
-        "s⁻¹.",
-        "mol dm⁻³ s⁻¹."
+        "3.",
+        "27."
       ],
       "strictRecall": true
     },
