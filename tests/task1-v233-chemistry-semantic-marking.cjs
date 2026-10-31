@@ -16,9 +16,9 @@ assert(sw.includes('v233-chem-marking'));
 const from=app.indexOf('function normalise('),to=app.indexOf('function importantTokens(',from);
 assert(from>0&&to>from);const judge=new Function('window',app.slice(from,to)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
 const checks={
-chem_lattice_diss:{wrong:['The enthalpy change when gaseous ions form one mole of an ionic solid.','Gaseous ions combine into a solid ionic lattice.'],right:['Ionic solid breaks into gaseous ions.','One mole of ionic lattice is separated into its gaseous ions.']},
+chem_lattice_diss:{wrong:['The enthalpy change when gaseous ions form one mole of an ionic solid.','Gaseous ions combine into a solid ionic lattice.'],right:['The enthalpy change when one mole of ionic solid breaks into gaseous ions.','The enthalpy change when one mole of ionic lattice is separated into gaseous ions.']},
 chem_lattice_form:{wrong:['They have the same sign and magnitude.','Both enthalpies have the same sign.'],right:['Equal magnitude and opposite signs.','The negative of lattice dissociation enthalpy.']},
-chem_ea1:{wrong:['The enthalpy change when gaseous atoms lose one electron.','One mole of gaseous atoms removes one electron each.'],right:['Gaseous atoms each gain an electron to make anions.','One mole of gas atoms accepts one mole of electrons.']},
+chem_ea1:{wrong:['The enthalpy change when gaseous atoms lose one electron.','One mole of gaseous atoms removes one electron each.'],right:['The enthalpy change when one mole of gaseous atoms each gain an electron to form gaseous negative ions.','The enthalpy change when one mole of gas atoms each accepts an electron to form 1- ions.']},
 task1_chem_182:{wrong:['Kw is [H+]/[OH-].','The ratio of hydrogen to hydroxide ion concentration.'],right:['Kw is [H+][OH-].','The product of hydrogen ion and hydroxide ion concentrations.']},
 chem_energetics_v49_08:{wrong:['101 kPa.','101325 Pa.'],right:['100 kPa.','The standard pressure is one hundred kilopascals.']},
 chem_energetics_v49_11:{wrong:['It is not zero.','The standard enthalpy of formation of an element is non-zero.'],right:['It is zero by definition.','Zero.']},
@@ -32,6 +32,14 @@ for(const [id,tests] of Object.entries(checks)){
  for(const s of tests.wrong){assert.equal(judge(c,s).status,'wrong','wrong chemistry credited '+id+' '+s);negatives++;}
 }
 assert.equal(positives,14);assert.equal(negatives,14);
+for(const [id,incomplete] of [
+ ['chem_lattice_diss','Ionic solid breaks into gaseous ions.'],
+ ['chem_ea1','Gaseous atoms each gain an electron to make anions.']
+]){
+ const c=deck.cards.find(x=>x.id===id);
+ assert.equal(judge(c,incomplete).status,'partial','short incomplete definition given full marks '+id);
+}
+
 const active=deck.cards.filter(x=>x.subject==='Chemistry'&&x.mock===true&&x.active!==false);
 assert.equal(active.length,1533);
 assert.equal(active.filter(x=>!x.specRef).length,660);
