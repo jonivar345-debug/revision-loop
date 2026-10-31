@@ -1,0 +1,76 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8');
+const json=p=>JSON.parse(read(p));
+const core=json('deck.json'),questions=json('exam_questions.json');
+const extra=json('chemistry_as_measurement_recall_v218.json');
+const report=json('editorial/task1-v218-as-chemistry-measurement-audit.json');
+const app=read('app.js'),sw=read('sw.js'),html=read('index.html');
+const prior=['chemistry_mock_recall_v189.json','chemistry_mock_recall_v193.json','chemistry_mock_recall_v195.json','chemistry_mock_recall_v196.json','chemistry_mock_recall_v199.json','chemistry_rates_rp7_recall_v210.json','chemistry_rp4_recall_v215.json'];
+assert.equal(core.cards.length,3345);
+assert.equal(questions.questions.length,1268);
+assert.equal(core.cards.filter(c=>c.subject==='Chemistry'&&c.stage==='AS'&&c.mock===true&&c.active!==false).length,1167);
+assert.equal(extra.cards.length,8);
+assert.equal(report.newCards,8);
+assert.equal(report.task1Complete,false);
+assert.equal(report.fullyCertifiedSpecification,false);
+assert(html.includes('app.js?v=203'),'Retain existing script query and network-first app refresh');
+assert(sw.includes('v218-as-chem-precision-recall'),'SW cache version not updated');
+assert(sw.includes("'./chemistry_as_measurement_recall_v218.json'"),'Offline shell missing supplement');
+assert(app.includes("'./chemistry_as_measurement_recall_v218.json'"),'App does not request supplement');
+assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
+assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
+assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
+const before=core.cards.filter(c=>c.subject==='Chemistry');
+const existing=[...before,...prior.flatMap(p=>json(p).cards||[])];
+const all=new Set(existing.map(c=>c.id));
+const prompts=new Set(existing.map(c=>String(c.front||'').trim().toLowerCase()));
+for(let i=0;i<extra.cards.length;i++){
+ const c=extra.cards[i];
+ assert.equal(c.id,'task1_v218_chem_as_'+String(i+1).padStart(2,'0'));
+ assert(!all.has(c.id),'Duplicate ID '+c.id);all.add(c.id);
+ assert(!prompts.has(c.front.trim().toLowerCase()),'Duplicate front '+c.id);prompts.add(c.front.trim().toLowerCase());
+ assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'AS');
+ assert(c.mock===true&&c.taught===true&&c.active===true&&c.scope==='mock');
+ assert(c.kind==='content'&&c.strictRecall===true);
+ assert(c.front.length<170&&c.back.length<145);
+ assert(c.accept.length>=4&&c.accept.includes(c.back));
+ assert(c.reject.length>=3);
+ assert(report.coverage.some(x=>x.id===c.id&&x.spec===c.specRef));
+}
+assert.equal(new Set(extra.cards.map(c=>c.front.toLowerCase())).size,8);
+const begin=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(',begin);
+assert(begin>=0&&end>begin);
+const evaluate=new Function('window',app.slice(begin,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+let accepted=0,rejected=0;
+for(const c of extra.cards){
+ for(const answer of c.accept){const result=evaluate(c,answer);assert.equal(result.status,'correct','Unfair rejection '+c.id+' '+answer);accepted++}
+ for(const answer of c.reject){const result=evaluate(c,answer);assert.notEqual(result.status,'correct','Unsafe credit '+c.id+' '+answer);rejected++}
+ assert.equal(evaluate(c,'').status,'neutral');
+}
+const start=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));');
+const stop=app.indexOf(' const added=[',start);
+assert(start>=0&&stop>start);
+const loader=app.slice(start,stop);
+assert(loader.includes('else if(index===13)'), 'New supplement is silently dropped');
+const banks=Array.from({length:14},()=>({cards:[]}));
+banks[13]=extra;
+const load=new Function('cards','extraFlashBanks',loader+'\nreturn cards;');
+const combined=load([...core.cards],banks);
+assert.equal(combined.length,3353);
+assert.equal(new Set(combined.map(c=>c.id)).size,3353);
+for(const c of extra.cards)assert(combined.some(x=>x.id===c.id));
+assert.equal(combined.filter(c=>c.subject==='Maths').length,core.cards.filter(c=>c.subject==='Maths').length);
+const badBanks=Array.from({length:14},()=>({cards:[]}));
+badBanks[13]={cards:extra.cards.map(c=>({...c}))};
+badBanks[13].cards[0].subject='Physics';
+badBanks[13].cards[1].stage='A2';
+badBanks[13].cards[2].mock=false;
+badBanks[13].cards[3].taught=false;
+badBanks[13].cards[4].scope='full';
+badBanks[13].cards[5].active=false;
+const safe=load([...core.cards],badBanks);
+for(let i=0;i<6;i++)assert(!safe.some(c=>c.id===extra.cards[i].id),'Ineligible card slipped into mock '+extra.cards[i].id);
+assert(safe.some(c=>c.id===extra.cards[6].id)&&safe.some(c=>c.id===extra.cards[7].id));
+console.log('PASS v218: eight AS Chemistry facts actually load, '+accepted+' correct variants accepted, '+rejected+' wrong rejected, invalid stage/scope blocked, existing cards and cloud keys preserved');
