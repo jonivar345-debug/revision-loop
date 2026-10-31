@@ -58,6 +58,24 @@ function applyV217LegacyChemistryCorrections(deckCards){
  return deckCards;
 }
 /* v217 legacy chemistry corrections end */
+
+// v237: remove ambiguous molecular-angle prompts; preserve their original IDs,
+// card answers and progress. The ideal angle requires bonding regions with NO
+// lone electron pairs around the central atom.
+const V237_BOND_ANGLE_FRONT=Object.freeze({
+  chem_shape_linear:'For exactly two bonding regions and no lone pairs around the central atom, what is the bond angle?',
+  chem_shape_trig:'For exactly three bonding regions and no lone pairs around the central atom, what is the bond angle?',
+  chem_shape_tetra:'For exactly four bonding regions and no lone pairs around the central atom, what is the bond angle?'
+});
+function applyV237ChemBondAngleClarity(cardsToFix){
+ for(const c of cardsToFix){
+  if(c.subject==='Chemistry'&&c.stage==='AS'&&c.mock===true&&Object.prototype.hasOwnProperty.call(V237_BOND_ANGLE_FRONT,c.id))
+   c.front=V237_BOND_ANGLE_FRONT[c.id];
+ }
+ return cardsToFix;
+}
+/* v237 chemistry bond-angle prompt clarification end */
+
 // v219: targeted AS TOF answer-level corrections; original source deck and IDs are unchanged.
 /* v219 TOF correction block start */
 const V219_TOF_CORRECTIONS=Object.freeze({
@@ -3726,7 +3744,7 @@ async function sync(manual=false){
  if(!dr.ok||!er.ok)throw new Error('Main question bank unavailable');
  const d=await dr.json(),e=await er.json(),x=xr?.ok?await xr.json():{questions:[]},corrections=cr?.ok?await cr.json():{modelAnswers:{}},old=deckVersion;
  const extraBanks=await Promise.all(extraResponses.map(async res=>res?.ok?await res.json():{questions:[]}));
- cards=applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)));
+ cards=applyV237ChemBondAngleClarity(applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false))));
  applyV220IonTestCorrections(cards);
  applyV221RpCorrections(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
