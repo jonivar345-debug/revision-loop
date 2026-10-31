@@ -1557,6 +1557,51 @@ function evaluateCard(c,input){
   // between zero measured KE and no emitted photoelectrons.
   if(c.id===window.RevisionPhotoelectricCardMarking?.TARGET_ID)
     return window.RevisionPhotoelectricCardMarking.evaluate(input);
+ // v233: reject known conceptual reversals before fuzzy similarity can credit them.
+ // Unlisted correct paraphrases still use the normal flexible marking path.
+ const chemRaw=String(input||'').trim();
+ if(chemRaw){
+  // Exact scientifically equivalent alternatives get full credit before fuzzy matching.
+  const acceptedChem={
+   chem_lattice_diss:['The enthalpy change when one mole of ionic solid breaks into gaseous ions.','The enthalpy change when one mole of ionic lattice is separated into gaseous ions.','The enthalpy change when one mole of ionic solid forms separate gaseous ions.'],
+   chem_lattice_form:['Equal magnitude and opposite signs.','The negative of lattice dissociation enthalpy.'],
+   chem_ea1:['The enthalpy change when one mole of gaseous atoms each gain an electron to form gaseous negative ions.','The enthalpy change when one mole of gas atoms each accepts an electron to form 1- ions.'],
+   task1_chem_182:['Kw is [H+][OH-].','The product of hydrogen ion and hydroxide ion concentrations.'],
+   chem_energetics_v49_08:['100 kPa.','The standard pressure is one hundred kilopascals.'],
+   chem_energetics_v49_11:['It is zero by definition.','Zero.'],
+   task1_chem_179:['The acid dissociation equilibrium constant.','The equilibrium constant for HA ionising in water.']
+  };
+  if((acceptedChem[c.id]||[]).some(a=>normalise(a)===normalise(chemRaw)))
+   return {status:'correct',score:1,text:'Correct equivalent scientific statement.',missing:[]};
+  const badChem=()=>({status:'wrong',score:0,text:'The scientific direction, sign, value or relationship is incorrect. Compare it with the model answer.',missing:[]});
+  if(c.id==='chem_lattice_diss'&&(
+   /\b(?:gaseous\s+)?ions?\b.*\b(?:form(?:s|ing)?|join\w*|combin\w*)\b.*\b(?:solid|lattice)\b/i.test(chemRaw)
+   || /\bform(?:ation|ing)?\b\s+(?:(?:of|one\s+mole\s+of|an?|the)\s+)*(?:ionic\s+)?(?:solid|lattice)\b/i.test(chemRaw)
+  )&&!/\b(?:separat\w*|dissociat\w*|break\w*|split\w*|disassembl\w*)\b/i.test(chemRaw))return badChem();
+  // A definition lacking its one-mole or enthalpy requirement is incomplete, not fully correct.
+  if(c.id==='chem_lattice_diss'&&/\b(?:solid|lattice)\b/i.test(chemRaw)
+    &&/\b(?:gaseous|gas)\b/i.test(chemRaw)&&/\bions?\b/i.test(chemRaw)
+    &&/\b(?:separat\w*|dissociat\w*|break\w*|split\w*|form\w*)\b/i.test(chemRaw)
+    &&(!/\b(?:one\s+mole|1\s*mol(?:e)?)\b/i.test(chemRaw)|| !/\b(?:enthalpy|heat\s+change|delta\s*h)\b|ΔH/i.test(chemRaw)))
+    return {status:'partial',score:0.5,text:'Include the enthalpy change for one mole of solid ionic lattice becoming gaseous ions.',missing:['enthalpy change','one mole']};
+  if(c.id==='chem_ea1'&&/\b(?:gaseous|gas)\b/i.test(chemRaw)&&/\batoms?\b/i.test(chemRaw)
+    &&/\b(?:gain\w*|accept\w*|receiv\w*)\b/i.test(chemRaw)&&/\belectrons?\b/i.test(chemRaw)
+    &&(!/\b(?:one\s+mole|1\s*mol(?:e)?)\b/i.test(chemRaw)|| !/\b(?:enthalpy|heat\s+change|delta\s*h)\b|ΔH/i.test(chemRaw)))
+    return {status:'partial',score:0.5,text:'Include the enthalpy change for one mole of gaseous atoms, each gaining one electron.',missing:['enthalpy change','one mole']};
+  if(c.id==='chem_lattice_form'&&/\bsame\s+(?:the\s+)?sign\b/i.test(chemRaw)
+    && !/\bnot\s+(?:the\s+)?same\s+sign\b|\bopposite\s+sign\b/i.test(chemRaw))return badChem();
+  if(c.id==='chem_ea1'&&/\b(?:los(?:e|es|ing|t)|remov(?:e|es|ing|al))\b/i.test(chemRaw)
+    && !/\b(?:gain\w*|accept\w*|add\w*)\b/i.test(chemRaw))return badChem();
+  if(c.id==='task1_chem_182'){
+   const compact=chemRaw.toLowerCase().replace(/[⁺]/g,'+').replace(/[⁻−]/g,'-').replace(/\s+/g,'');
+   if(/\]\s*\/\s*\[/.test(chemRaw)||/h\+?\]?\/\[?oh-?/.test(compact)
+      ||(/\b(?:ratio|quotient|divid(?:e|ed|ing))\b/i.test(chemRaw)&&/\b(?:hydrogen|h\+)/i.test(chemRaw)&&/\b(?:hydroxide|oh-)/i.test(chemRaw)))return badChem();
+  }
+  if(c.id==='chem_energetics_v49_08'&&/\b(?:101\s*(?:kpa|kilopascal)|101325\s*pa)\b/i.test(chemRaw)
+    && !/\bnot\s+101\b/i.test(chemRaw))return badChem();
+  if(c.id==='chem_energetics_v49_11'&&/\b(?:not\s+(?:equal\s+to\s+)?zero|non[-\s]?zero)\b/i.test(chemRaw))return badChem();
+  if(c.id==='task1_chem_179'&&/\brate\s+constant\b/i.test(chemRaw)&& !/\bequilibri\w*\b/i.test(chemRaw))return badChem();
+ }
  if(String(input||'').trim()&&(normalise(c.back)===normalise(input)||(Array.isArray(c.accept)&&c.accept.some(a=>normalise(a)===normalise(input)))))return {status:'correct',score:1,text:'Correct answer or accepted equivalent wording.',missing:[]};
  if(!String(input||'').trim())return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
  if(Array.isArray(c.reject)&&c.reject.some(a=>normalise(a)===normalise(input)))return {status:'wrong',score:0,text:'This is an incorrect alternative. Compare it with the accepted answer.',missing:[]};

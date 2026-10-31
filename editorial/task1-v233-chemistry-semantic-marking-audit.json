@@ -1,0 +1,97 @@
+{
+  "version": "v233",
+  "date": "2026-10-31",
+  "kind": "Chemistry existing-flashcard semantic marking corrections; not full card/whole-spec certification",
+  "basis": "AQA mock Physics, Chemistry, Maths Task 1 has not yet passed complete requirement-by-requirement sign-off.",
+  "coreDeck": "deck.json",
+  "coreChemistryMockActive": 1533,
+  "coreChemistryByStage": {
+    "AS": 1167,
+    "A2": 366
+  },
+  "coreAuditGaps": {
+    "noExplicitSpecRef": 660,
+    "noExplicitAcceptAlternatives": 666,
+    "noExplicitRejectedAlternatives": 1523,
+    "emptyFrontOrBack": 0
+  },
+  "schoolScope": {
+    "buffersExcluded": true,
+    "explicitActiveCoreBufferCards": 0,
+    "rp9PHCurveCardsUnconfirmed": [
+      "task1_v128_011",
+      "task1_v128_012",
+      "task1_v128_013",
+      "task1_v128_016",
+      "task1_v128_017",
+      "task1_v128_018",
+      "task1_v128_019",
+      "task1_v128_020"
+    ],
+    "note": "RP9 titration curves/indicator choice not confirmed as taught; do not certify as school-mock content without confirmation."
+  },
+  "reviewedExamples": [
+    {
+      "id": "chem_lattice_diss",
+      "focus": "Dissociation is solid to separate gaseous ions, not formation",
+      "negatives": 2,
+      "positives": 2
+    },
+    {
+      "id": "chem_lattice_form",
+      "focus": "Formation and dissociation enthalpies have opposite signs",
+      "negatives": 2,
+      "positives": 2
+    },
+    {
+      "id": "chem_ea1",
+      "focus": "Electron affinity is electron gain, not removal",
+      "negatives": 2,
+      "positives": 2
+    },
+    {
+      "id": "task1_chem_182",
+      "focus": "Kw is product [H+][OH-], not their ratio",
+      "negatives": 2,
+      "positives": 2
+    },
+    {
+      "id": "chem_energetics_v49_08",
+      "focus": "Standard pressure 100 kPa, not 101 kPa",
+      "negatives": 2,
+      "positives": 2
+    },
+    {
+      "id": "chem_energetics_v49_11",
+      "focus": "Standard formation enthalpy of an element in its standard state is zero",
+      "negatives": 2,
+      "positives": 2
+    },
+    {
+      "id": "task1_chem_179",
+      "focus": "Ka denotes acid dissociation equilibrium constant, not rate constant",
+      "negatives": 2,
+      "positives": 2
+    }
+  ],
+  "tests": {
+    "correctParaphrasesAccepted": 14,
+    "conceptuallyWrongAlternativesRejected": 14,
+    "legacyIdsUnchanged": true,
+    "originalDeckUnmodified": true
+  },
+  "limits": {
+    "theseExamplesCertifyWholeChemistryBank": false,
+    "allRejectVariantsVerified": false,
+    "fullSpecCoverageVerified": false,
+    "chemistryMockComplete": false,
+    "physicsMockComplete": false,
+    "year1PureMathsMockComplete": false,
+    "task1Complete": false
+  },
+  "nextWork": [
+    "Apply systematic concept-level false-positive checks to older Chemistry cards missing explicit rejected alternatives.",
+    "Review definitions, ionic and organic tests, school-taught Year 2 acids, Kp, Born–Haber and energy marking.",
+    "Complete AQA left-column statement-to-card mapping and verify school RP9 boundary before a Chemistry completion claim."
+  ]
+}
