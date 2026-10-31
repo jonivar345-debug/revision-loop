@@ -50,6 +50,7 @@ jobs:
           node tests/task1-v222-chemistry-rp5-rp6-recall.cjs
           node tests/task1-v223-chemistry-rp5-rp6-calibration.cjs
           node tests/task1-v224-chemistry-rate-kp-marking.cjs
+          node tests/task1-v225-physics-optical-fibre.cjs
           node tests/task1-v215-rp4-recall-loader.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
