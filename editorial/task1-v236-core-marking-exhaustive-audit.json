@@ -1,0 +1,42 @@
+{
+  "version": "v236",
+  "date": "2026-10-31",
+  "kind": "Exhaustive mechanical core-bank marker regression across every stored model, explicitly accepted variant, and explicitly rejected variant (not full AQA syllabus or semantic certification).",
+  "coreFlashcards": 3345,
+  "results": {
+    "modelAnswersCorrect": 3345,
+    "explicitAcceptedAlternativesCorrect": 4942,
+    "explicitRejectedAlternativesWrong": 90,
+    "unexpectedResults": 0
+  },
+  "initialFault": {
+    "id": "maths_transform_003",
+    "subject": "Maths",
+    "topic": "Transformations",
+    "front": "For a > 0, what is the horizontal scale factor of y = f(ax)?",
+    "acceptedStoredVariant": "1 over a",
+    "before": "wrong",
+    "after": "correct",
+    "fixedIn": "evaluateMathsPureTransform"
+  },
+  "limits": {
+    "notAllPossibleCorrectParaphrasesCovered": true,
+    "notAllPossibleScientificallyWrongAnswersCovered": true,
+    "explicitRejectExamplesOnly90": true,
+    "notAValidationOfSubjectCorrectness": true,
+    "notASpecLineCrosswalk": true,
+    "notACompleteMathsMock": true,
+    "notACompletePhysicsMock": true,
+    "notACompleteChemistryMock": true,
+    "notACompletedTask1": true
+  },
+  "preserved": {
+    "sourceDeckUnchanged": true,
+    "coreQuestionBankUnchanged": true,
+    "cardIdsUnchanged": true,
+    "cloudSyncXPKeysUnchanged": true,
+    "mathsMockScopeUnchanged": true,
+    "worldFilesUnchanged": true
+  },
+  "nextWork": "Cross-check individual subject-card fronts/backs against the AQA school mock specification statements and test nuanced positive/negative responses not represented in explicit accept/reject lists. Separate supplements need the same sweep."
+}
