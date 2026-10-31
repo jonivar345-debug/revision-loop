@@ -1,0 +1,24 @@
+name: Task 1 v248 Physics measurements application marking
+on:
+  pull_request:
+    paths:
+      - 'physics_measurements_applications_v248.json'
+      - 'tests/task1-v248-physics-measurements-applications.cjs'
+      - 'tests/task1-v247-chemistry-energetics-applications.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v248-physics-measurements.yml'
+  push:
+    branches: [main]
+jobs:
+  measurements:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v245-maths-pure-applied.cjs
+      - run: node tests/task1-v246-maths-circle-geometry.cjs
+      - run: node tests/task1-v247-chemistry-energetics-applications.cjs
+      - run: node tests/task1-v248-physics-measurements-applications.cjs
