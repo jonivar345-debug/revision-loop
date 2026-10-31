@@ -43,7 +43,7 @@ for(const c of audit.clarifiedOldCards){
  assert.equal(after.front,c.newFront);assert.equal(after.back,before.back);
  assert(/no lone pairs/.test(after.front));
 }
-assert(app.includes('cards=applyV237ChemBondAngleClarity('));
+assert(app.includes('applyV237ChemBondAngleClarity(applyV219TofCorrections('), 'Keep v237 bond-angle clarity wrapped around v219 TOF corrections when later correction layers are added');
 assert(app.includes('else if(index===27)'));
 assert(sw.includes("'./chemistry_bonding_diagram_recall_v237.json'"));
 assert(sw.includes('v237-bonding-aqa-crosswalk'));
