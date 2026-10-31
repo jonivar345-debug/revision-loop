@@ -1,0 +1,215 @@
+{
+  "version": "v225",
+  "createdAt": "2026-10-31",
+  "subject": "Physics",
+  "scope": "Seven original AQA AS/A-level Physics refraction/optical-fibre single-fact mock-recall cards; step-index fibres only.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves"
+  ],
+  "notes": "Focused additions to the v159 45-point Waves mock audit, not a replacement. AQA 3.3.2.3 lists cladding, TIR, material/modal dispersion and pulse broadening. Additional cladding protection and crosstalk are explanatory applications rather than separate quoted specification bullets. No complete full-specification certification.",
+  "cards": [
+    {
+      "id": "task1_v225_phy_fibre_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "Why is protective cladding useful even though total internal reflection guides light in the core?",
+      "back": "It protects the core from scratches or damage that could cause light loss.",
+      "accept": [
+        "It protects the core from scratches or damage that could cause light loss.",
+        "The cladding protects the core from damage and reduces light loss.",
+        "It prevents damage to the core surface that might let light escape.",
+        "Cladding stops scratches disrupting total internal reflection."
+      ],
+      "reject": [
+        "It increases the refractive index of the core.",
+        "It causes the light to be absorbed intentionally.",
+        "It allows total internal reflection even if light enters from the lower-index medium."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v225_phy_fibre_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "How does cladding help stop signals in neighbouring optical fibres interfering?",
+      "back": "It limits light leakage between neighbouring fibre cores (optical crosstalk).",
+      "accept": [
+        "It limits light leakage between neighbouring fibre cores (optical crosstalk).",
+        "The cladding reduces light crossing into adjacent fibres.",
+        "It prevents optical crosstalk between neighbouring fibre cores.",
+        "It helps confine light so it does not enter another fibre."
+      ],
+      "reject": [
+        "The cladding sends the optical signal into neighbouring fibres.",
+        "It causes the light pulses in every fibre to overlap.",
+        "It makes the light travel faster than in a vacuum."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v225_phy_fibre_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "At the critical angle, what direction does the refracted ray take?",
+      "back": "It travels along the boundary, at 90° to the normal.",
+      "accept": [
+        "It travels along the boundary, at 90° to the normal.",
+        "The refracted ray is at 90 degrees to the normal.",
+        "It runs along the interface.",
+        "The angle of refraction is 90°."
+      ],
+      "reject": [
+        "The ray is totally internally reflected at any angle.",
+        "The refracted angle is zero degrees.",
+        "The ray bends towards the normal."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v225_phy_fibre_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "What two conditions must be met for total internal reflection at a boundary?",
+      "back": "Light must go from higher to lower refractive index, with incidence angle greater than the critical angle.",
+      "accept": [
+        "Light must go from higher to lower refractive index, with incidence angle greater than the critical angle.",
+        "From the higher-index medium to the lower-index medium at an angle above the critical angle.",
+        "The first refractive index must be higher, and the incident angle exceeds the critical angle.",
+        "Light must strike from the optically denser side at an angle larger than the critical angle."
+      ],
+      "reject": [
+        "Total internal reflection occurs from lower to higher refractive index.",
+        "Any incidence angle below the critical angle causes total internal reflection.",
+        "The angle must equal the critical angle for total internal reflection."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v225_phy_fibre_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "What change to the light source reduces material dispersion in a step-index fibre?",
+      "back": "Use light with a narrower range of wavelengths (approximately monochromatic light).",
+      "accept": [
+        "Use light with a narrower range of wavelengths (approximately monochromatic light).",
+        "Use monochromatic light to reduce material dispersion.",
+        "Reduce the spread of wavelengths in the light source.",
+        "Choose a source emitting a very narrow wavelength range."
+      ],
+      "reject": [
+        "Use a wider range of wavelengths.",
+        "Use a higher absorption fibre.",
+        "Increase the number of different wavelengths in each pulse."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v225_phy_fibre_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "What design change can reduce modal dispersion in a step-index optical fibre?",
+      "back": "Use a narrower core that supports fewer modes (light paths).",
+      "accept": [
+        "Use a narrower core that supports fewer modes (light paths).",
+        "Reduce the core width so fewer modes propagate.",
+        "A thin core reduces the number of ray paths and modal dispersion.",
+        "Use a sufficiently narrow core to allow fewer modes."
+      ],
+      "reject": [
+        "Increase the number of ray paths.",
+        "Use a broader range of wavelengths to reduce modal dispersion.",
+        "Make the core wide so light has more different path lengths."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v225_phy_fibre_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "What is the difference between absorption and dispersion in an optical fibre?",
+      "back": "Absorption reduces signal intensity; dispersion spreads a light pulse in time.",
+      "accept": [
+        "Absorption reduces signal intensity; dispersion spreads a light pulse in time.",
+        "Absorption weakens the pulse, while dispersion broadens it.",
+        "Absorption lowers power and dispersion increases pulse duration.",
+        "Absorption removes signal energy whereas dispersion causes pulses to spread."
+      ],
+      "reject": [
+        "Absorption spreads the pulse in time while dispersion removes all light energy.",
+        "Both processes only change the light's frequency.",
+        "Dispersion alone always destroys all the signal energy."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
