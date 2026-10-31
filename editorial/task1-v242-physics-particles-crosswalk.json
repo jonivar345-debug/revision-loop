@@ -1,0 +1,1475 @@
+{
+  "version": "v242",
+  "date": "2026-10-31",
+  "qualification": "AQA A-level Physics 7408, Year 1/AS content in current school mock",
+  "specification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+  "scope": "3.2.1.1–3.2.1.7 and 3.2.2.1–3.2.2.4; only selected active AS mock core cards",
+  "method": "Full identity snapshot of selected 167 core cards, mapped to independently named assessable specification skills. Each evidence ID has an existing front/back; identity alone does not validate every scientific claim, application, marking or full topic coverage.",
+  "originalCoreCardCount": 3345,
+  "coreTopicInventory": {
+    "Particles": 51,
+    "Particles & radiation": 6,
+    "Particles and radiation": 7,
+    "Particle physics": 1,
+    "Particle interactions": 9,
+    "Particle diagrams": 9,
+    "Particle classifications": 8,
+    "Conservation laws": 1,
+    "Weak interactions": 9,
+    "Pions and kaons": 10,
+    "Strange particles": 3,
+    "Photoelectric effect": 25,
+    "Wave-particle duality": 8,
+    "Energy levels": 5,
+    "Line spectra": 11,
+    "Fluorescent tubes": 4,
+    "total": 167
+  },
+  "requirements": [
+    {
+      "specRef": "3.2.1.1",
+      "assessableSkill": "Relative proton, neutron and electron charges and masses",
+      "coreEvidenceIds": [
+        "task1_v138_002",
+        "task1_v138_003"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.1",
+      "assessableSkill": "Proton and electron masses in SI units",
+      "coreEvidenceIds": [
+        "task1_v142_008"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.1",
+      "assessableSkill": "Nuclide proton number Z and nucleon number A",
+      "coreEvidenceIds": [
+        "phy_nuclide",
+        "task1_v142_001"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.1",
+      "assessableSkill": "Interpret isotope composition and unchanged proton count",
+      "coreEvidenceIds": [
+        "task1_v142_002"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.1",
+      "assessableSkill": "Definition and units of specific charge Q/m",
+      "coreEvidenceIds": [
+        "phy_specific_charge"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.1",
+      "assessableSkill": "Unfamiliar specific-charge calculations for an ion or nucleus",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_core_inventory"
+    },
+    {
+      "specRef": "3.2.1.2",
+      "assessableSkill": "Strong nuclear force attraction range and short-range repulsion",
+      "coreEvidenceIds": [
+        "task1_phy_028",
+        "task1_phy_029",
+        "phy_pandr_v29_strong_range"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.2",
+      "assessableSkill": "Nuclear changes in alpha and beta-minus decay",
+      "coreEvidenceIds": [
+        "task1_phy_025",
+        "task1_phy_026"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.2",
+      "assessableSkill": "Neutrino and conservation of energy in beta decay",
+      "coreEvidenceIds": [
+        "task1_v130_012",
+        "phy_pandr_v29_beta_minus_antinu"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.2",
+      "assessableSkill": "Balanced unfamiliar nuclide alpha and beta-decay equations",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_core_inventory"
+    },
+    {
+      "specRef": "3.2.1.3",
+      "assessableSkill": "Particle and antiparticle rest masses, charges and antineutrinos",
+      "coreEvidenceIds": [
+        "phy_antiparticle",
+        "task1_phy_023",
+        "task1_phy_024"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.3",
+      "assessableSkill": "Annihilation and conservation of energy/momentum",
+      "coreEvidenceIds": [
+        "phy_annihilation",
+        "task1_v136_077"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.3",
+      "assessableSkill": "Pair production energy threshold and momentum constraint",
+      "coreEvidenceIds": [
+        "phy_pair_production",
+        "phy_pandr_v29_sketch_pair",
+        "task1_v136_036"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.3",
+      "assessableSkill": "Energy of a photon from frequency or wavelength",
+      "coreEvidenceIds": [
+        "phy_photon_energy"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.3",
+      "assessableSkill": "Electron/positron rest energy in MeV",
+      "coreEvidenceIds": [
+        "task1_v160_003"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.4",
+      "assessableSkill": "Four fundamental interactions and virtual-photon exchange",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_four_forces",
+        "phy_pandr_v29_electromagnetic"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.4",
+      "assessableSkill": "Weak interactions and W plus/minus exchange particles",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_weak_bosons",
+        "phy_pandr_v29_sketch_beta_minus",
+        "phy_pandr_v29_sketch_beta_plus"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.4",
+      "assessableSkill": "Incoming and outgoing particles on simple interaction diagram",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_simple_feynman"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.4",
+      "assessableSkill": "Actually draw and mark unfamiliar particle-exchange diagrams",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_core_inventory"
+    },
+    {
+      "specRef": "3.2.1.5",
+      "assessableSkill": "Hadrons, baryons and mesons; distinguish their quark structures",
+      "coreEvidenceIds": [
+        "phy_hadrons",
+        "phy_baryon_meson",
+        "phy_pandr_v29_baryon_definition",
+        "phy_pandr_v29_meson_definition"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.5",
+      "assessableSkill": "Baryon number of antibaryons, mesons and ordinary baryons",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_phy_021",
+        "task1_v124_bulk_phy_022",
+        "task1_v142_003"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.5",
+      "assessableSkill": "Pion as exchange particle; kaon weak decay to pions",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_pion_exchange_role",
+        "phy_pandr_v29_kaon_decay"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.5",
+      "assessableSkill": "Leptons including electron, muon, two neutrino flavours",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_lepton_examples",
+        "phy_pandr_v29_lepton_definition"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.5",
+      "assessableSkill": "Muon-minus decay conserving separate electron and muon lepton numbers",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_muon_decay"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.5",
+      "assessableSkill": "Strangeness conserved in strong production but can change by one in weak decay",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_strong_pairs",
+        "phy_pandr_v29_strangeness_weak"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.6",
+      "assessableSkill": "Proton uud and neutron udd quark structure",
+      "coreEvidenceIds": [
+        "phy_proton_quarks",
+        "phy_neutron_quarks"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.6",
+      "assessableSkill": "Quark charges, and strange quark charge and strangeness",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_phy_017",
+        "task1_v124_bulk_phy_018",
+        "task1_v142_004",
+        "task1_v136_037"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.6",
+      "assessableSkill": "Pion positive/negative quark-antiquark structures",
+      "coreEvidenceIds": [
+        "phy_pion_plus",
+        "phy_pandr_v29_pion_minus_structure"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.6",
+      "assessableSkill": "Charged and neutral kaon quark-antiquark structures",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_kplus_structure",
+        "phy_pandr_v29_kminus_structure",
+        "phy_pandr_v29_kzero_structure"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.6",
+      "assessableSkill": "Antineutron antiquark composition and fractional baryon number",
+      "coreEvidenceIds": [
+        "task1_v160_002",
+        "task1_v160_001"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.7",
+      "assessableSkill": "Quark changes d to u and u to d in beta decay",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_beta_minus_change",
+        "phy_pandr_v29_beta_plus_change"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.7",
+      "assessableSkill": "Conservation of charge, baryon number, lepton number, strangeness",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_charge_not_enough",
+        "task1_v124_bulk_phy_023",
+        "task1_phy_031"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.1.7",
+      "assessableSkill": "Apply all relevant conservation laws to novel proposed interactions",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_core_inventory"
+    },
+    {
+      "specRef": "3.2.2.1",
+      "assessableSkill": "Work function, threshold frequency and photoelectric equation",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_work_function",
+        "phy_pandr_v29_threshold_frequency",
+        "phy_pandr_v29_photo_eq"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.1",
+      "assessableSkill": "Why low-frequency light cannot eject electrons despite high intensity",
+      "coreEvidenceIds": [
+        "phy_photoelectric_002"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.1",
+      "assessableSkill": "Effect of intensity and frequency on photoelectric current and maximum energy",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_intensity_fixed_f",
+        "phy_pandr_v29_frequency_fixed_i"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.1",
+      "assessableSkill": "Stopping potential and maximum photoelectron kinetic energy",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_stopping_eq"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.1",
+      "assessableSkill": "Photoelectric graph gradient h, threshold intercept and h/e for Vs against f",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_kef_gradient",
+        "phy_pandr_v29_stopping_gradient",
+        "task1_v124_bulk_phy_032"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.2",
+      "assessableSkill": "Excitation versus ionisation, and electron volt conversion",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_excitation",
+        "phy_pandr_v29_ionisation",
+        "phy_pandr_v29_ev_definition"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.2",
+      "assessableSkill": "Electron excitation and light from fluorescent tubes",
+      "coreEvidenceIds": [
+        "phy_spectra_photo_v32_collision_excitation",
+        "phy_spectra_photo_v32_uv_origin",
+        "phy_spectra_photo_v32_tube_sequence"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.3",
+      "assessableSkill": "Energy emitted in downward transitions hf = Ehigh minus Elow",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_emission_photon"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.3",
+      "assessableSkill": "Line spectra reflect discrete levels and element-specific patterns",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_discrete_lines",
+        "phy_spectra_photo_v32_element_fingerprint"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.3",
+      "assessableSkill": "Emission vs absorption line spectra and matching transitions",
+      "coreEvidenceIds": [
+        "phy_spectra_photo_v32_appearance",
+        "phy_spectra_photo_v32_matching_lines"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.3",
+      "assessableSkill": "Calculate unseen energy-level transitions and emitted wavelengths",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_core_inventory"
+    },
+    {
+      "specRef": "3.2.2.4",
+      "assessableSkill": "Electron diffraction as wave evidence, photoelectric effect as photon evidence",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_electron_diffraction",
+        "phy_pandr_v29_photo_evidence"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.4",
+      "assessableSkill": "De Broglie wavelength h/p and its relation to momentum",
+      "coreEvidenceIds": [
+        "phy_debroglie",
+        "phy_pandr_v29_momentum_relation"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.4",
+      "assessableSkill": "Effect of greater electron momentum on diffraction angle and ring size",
+      "coreEvidenceIds": [
+        "phy_pandr_v29_rings_acceleration"
+      ],
+      "reviewLevel": "selective_core_evidence_verified_by_question_and_answer; novel exam marking unverified"
+    },
+    {
+      "specRef": "3.2.2.4",
+      "assessableSkill": "Novel numerical de Broglie wavelength and diffraction comparison",
+      "coreEvidenceIds": [],
+      "reviewLevel": "application_unverified_in_selected_core_inventory"
+    }
+  ],
+  "coreFrontBackSnapshot": [
+    {
+      "id": "phy_photoelectric_001",
+      "topic": "Photoelectric effect",
+      "front": "What is the photon-energy condition for photoelectric emission?",
+      "back": "hf ≥ φ (photon energy at least the work function)."
+    },
+    {
+      "id": "phy_photoelectric_002",
+      "topic": "Photoelectric effect",
+      "front": "Why can intense light below the threshold frequency still emit no photoelectrons?",
+      "back": "Each photon still has too little energy to overcome the work function. Greater intensity gives more photons, not higher-energy photons."
+    },
+    {
+      "id": "phy_energy_levels_001",
+      "topic": "Energy levels",
+      "front": "How is atomic excitation different from the photoelectric effect?",
+      "back": "Excitation moves an electron to a higher bound energy level. The photoelectric effect removes an electron from the metal."
+    },
+    {
+      "id": "phy_quarks_001",
+      "topic": "Particle physics",
+      "front": "Can strangeness change in a weak interaction?",
+      "back": "Yes, strangeness may change."
+    },
+    {
+      "id": "phy_specific_charge",
+      "topic": "Particles",
+      "front": "What is specific charge?",
+      "back": "charge ÷ mass, Q/m, with unit C kg⁻¹."
+    },
+    {
+      "id": "phy_nuclide",
+      "topic": "Particles",
+      "front": "In nuclide notation, what do A and Z mean?",
+      "back": "A = nucleon number; Z = proton number."
+    },
+    {
+      "id": "phy_antiparticle",
+      "topic": "Particles",
+      "front": "How does an antiparticle compare with its particle?",
+      "back": "Same mass and rest energy, but opposite charge and other additive quantum numbers."
+    },
+    {
+      "id": "phy_annihilation",
+      "topic": "Particles",
+      "front": "What happens in particle–antiparticle annihilation?",
+      "back": "Their rest mass/energy is converted to photons while energy and momentum are conserved."
+    },
+    {
+      "id": "phy_pair_production",
+      "topic": "Particles",
+      "front": "What is needed for pair production?",
+      "back": "A photon with enough energy creates a particle–antiparticle pair, usually near a nucleus to conserve momentum."
+    },
+    {
+      "id": "phy_hadrons",
+      "topic": "Particles",
+      "front": "What are hadrons?",
+      "back": "Particles made of quarks that experience the strong interaction."
+    },
+    {
+      "id": "phy_baryon_meson",
+      "topic": "Particles",
+      "front": "How do baryons and mesons differ?",
+      "back": "Baryons contain three quarks; mesons contain a quark and an antiquark."
+    },
+    {
+      "id": "phy_proton_quarks",
+      "topic": "Particles",
+      "front": "What is the quark composition of a proton?",
+      "back": "uud."
+    },
+    {
+      "id": "phy_neutron_quarks",
+      "topic": "Particles",
+      "front": "What is the quark composition of a neutron?",
+      "back": "udd."
+    },
+    {
+      "id": "phy_pion_plus",
+      "topic": "Particles",
+      "front": "What is the quark composition of π⁺?",
+      "back": "u anti-d."
+    },
+    {
+      "id": "phy_conservation_particle",
+      "topic": "Particles",
+      "front": "Which fundamental interaction conserves strangeness?",
+      "back": "The strong interaction."
+    },
+    {
+      "id": "phy_photon_energy",
+      "topic": "Particles",
+      "front": "What is the energy of a photon?",
+      "back": "E = hf = hc/λ."
+    },
+    {
+      "id": "phy_debroglie",
+      "topic": "Particles",
+      "front": "What is the de Broglie wavelength equation?",
+      "back": "λ = h/p."
+    },
+    {
+      "id": "v33_card_physics_photoelectric_effect_19",
+      "topic": "Photoelectric effect",
+      "front": "Why does extra light intensity not cause emission below threshold frequency?",
+      "back": "Individual photon energy hf is below work function; more photons do not raise energy per photon."
+    },
+    {
+      "id": "v33_card_physics_photoelectric_effect_20",
+      "topic": "Photoelectric effect",
+      "front": "What does the stopping potential measure in the photoelectric effect?",
+      "back": "The maximum photoelectron kinetic energy per unit charge, eVs=Kmax."
+    },
+    {
+      "id": "phy_pandr_v29_baryon_definition",
+      "topic": "Particle classifications",
+      "front": "Define a baryon.",
+      "back": "A hadron made from three quarks; an antibaryon has three antiquarks."
+    },
+    {
+      "id": "phy_pandr_v29_meson_definition",
+      "topic": "Particle classifications",
+      "front": "Define a meson.",
+      "back": "A hadron consisting of a quark and an antiquark."
+    },
+    {
+      "id": "phy_pandr_v29_lepton_definition",
+      "topic": "Particle classifications",
+      "front": "Define a lepton.",
+      "back": "A fundamental particle that does not experience the strong interaction."
+    },
+    {
+      "id": "phy_pandr_v29_baryon_stability",
+      "topic": "Particle classifications",
+      "front": "Which baryon is stable in the AQA particle classification?",
+      "back": "The proton; other baryons eventually decay."
+    },
+    {
+      "id": "phy_pandr_v29_lepton_examples",
+      "topic": "Particle classifications",
+      "front": "Name the charged leptons and neutrino types tested by AQA.",
+      "back": "Electron, muon, electron neutrino and muon neutrino (plus antiparticles)."
+    },
+    {
+      "id": "phy_pandr_v29_muon_decay",
+      "topic": "Particle classifications",
+      "front": "State the products of muon-minus decay.",
+      "back": "μ⁻ → e⁻ + electron antineutrino + muon neutrino."
+    },
+    {
+      "id": "phy_pandr_v29_pion_exchange_role",
+      "topic": "Particle classifications",
+      "front": "What is the pion's role between nucleons?",
+      "back": "It acts as the exchange particle for the residual strong nuclear force."
+    },
+    {
+      "id": "phy_pandr_v29_kaon_decay",
+      "topic": "Particle classifications",
+      "front": "Into which type of particle can kaons decay?",
+      "back": "Pions, through weak interactions."
+    },
+    {
+      "id": "phy_pandr_v29_four_forces",
+      "topic": "Particle interactions",
+      "front": "Name the four fundamental interactions.",
+      "back": "Strong nuclear, electromagnetic, weak nuclear and gravitational."
+    },
+    {
+      "id": "phy_pandr_v29_strong_between",
+      "topic": "Particle interactions",
+      "front": "Where does the strong interaction act?",
+      "back": "Between quarks; the residual strong force also acts between nucleons."
+    },
+    {
+      "id": "phy_pandr_v29_electromagnetic",
+      "topic": "Particle interactions",
+      "front": "Which interaction affects electrically charged particles?",
+      "back": "The electromagnetic interaction, mediated by virtual photons."
+    },
+    {
+      "id": "phy_pandr_v29_weak_bosons",
+      "topic": "Particle interactions",
+      "front": "What exchange particles mediate the weak interaction?",
+      "back": "W⁺ and W⁻ bosons."
+    },
+    {
+      "id": "phy_pandr_v29_gravity",
+      "topic": "Particle interactions",
+      "front": "What does gravity act on, and is it important on particle scales?",
+      "back": "Mass and energy; extremely weak compared with other particle interactions."
+    },
+    {
+      "id": "phy_pandr_v29_short_range",
+      "topic": "Particle interactions",
+      "front": "Which nuclear interactions have very short range?",
+      "back": "Strong nuclear and weak nuclear; electromagnetic and gravitational interactions have long range."
+    },
+    {
+      "id": "phy_pandr_v29_feynman_exchange",
+      "topic": "Particle interactions",
+      "front": "What is an exchange particle?",
+      "back": "A particle exchanged between interacting particles to mediate an interaction."
+    },
+    {
+      "id": "phy_pandr_v29_strong_range",
+      "topic": "Particle interactions",
+      "front": "How does the strong nuclear force vary with nucleon separation?",
+      "back": "Repulsive below ~0.5 fm; attractive up to ~3 fm; negligible beyond."
+    },
+    {
+      "id": "phy_pandr_v29_simple_feynman",
+      "topic": "Particle interactions",
+      "front": "What must a simple particle-interaction diagram identify?",
+      "back": "Incoming/outgoing particles, exchange particle and interaction vertices."
+    },
+    {
+      "id": "phy_pandr_v29_charge_not_enough",
+      "topic": "Conservation laws",
+      "front": "Why is p → e⁺ + γ forbidden despite conserving charge?",
+      "back": "Baryon number changes from +1 to 0, so the reaction is forbidden."
+    },
+    {
+      "id": "phy_pandr_v29_pion_minus_structure",
+      "topic": "Pions and kaons",
+      "front": "What is the quark–antiquark content of π⁻?",
+      "back": "d + anti-u."
+    },
+    {
+      "id": "phy_pandr_v29_pion_neutral",
+      "topic": "Pions and kaons",
+      "front": "What are the charge and particle class of π⁰?",
+      "back": "Charge 0; a neutral meson (quark–antiquark combination)."
+    },
+    {
+      "id": "phy_pandr_v29_pion_charge",
+      "topic": "Pions and kaons",
+      "front": "What are the charges of π⁺ and π⁻?",
+      "back": "+1e and −1e respectively."
+    },
+    {
+      "id": "phy_pandr_v29_kplus_structure",
+      "topic": "Pions and kaons",
+      "front": "What is the quark–antiquark content of K⁺?",
+      "back": "u + anti-s."
+    },
+    {
+      "id": "phy_pandr_v29_kminus_structure",
+      "topic": "Pions and kaons",
+      "front": "What is the quark–antiquark content of K⁻?",
+      "back": "s + anti-u."
+    },
+    {
+      "id": "phy_pandr_v29_kzero_structure",
+      "topic": "Pions and kaons",
+      "front": "What is the quark–antiquark content of K⁰?",
+      "back": "d + anti-s."
+    },
+    {
+      "id": "phy_pandr_v29_antizero_structure",
+      "topic": "Pions and kaons",
+      "front": "What is the quark–antiquark content of anti-K⁰?",
+      "back": "s + anti-d."
+    },
+    {
+      "id": "phy_pandr_v29_kplus_strange",
+      "topic": "Pions and kaons",
+      "front": "What is the strangeness of K⁺ and K⁰?",
+      "back": "+1 for each: both contain anti-s."
+    },
+    {
+      "id": "phy_pandr_v29_kminus_strange",
+      "topic": "Pions and kaons",
+      "front": "What is the strangeness of K⁻ and anti-K⁰?",
+      "back": "−1 for each: both contain s."
+    },
+    {
+      "id": "phy_pandr_v29_kcharges",
+      "topic": "Pions and kaons",
+      "front": "What are the electric charges of K⁺, K⁻, K⁰ and anti-K⁰?",
+      "back": "+1e, −1e, 0 and 0 respectively."
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_equation",
+      "topic": "Weak interactions",
+      "front": "Write the beta-minus decay particle equation.",
+      "back": "n → p + e⁻ + electron antineutrino."
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_equation",
+      "topic": "Weak interactions",
+      "front": "Write the beta-plus decay particle equation.",
+      "back": "p → n + e⁺ + electron neutrino (within a suitable nucleus)."
+    },
+    {
+      "id": "phy_pandr_v29_electron_capture",
+      "topic": "Weak interactions",
+      "front": "Write the particle equation for electron capture.",
+      "back": "p + e⁻ → n + electron neutrino."
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_numbers",
+      "topic": "Weak interactions",
+      "front": "What happens to Z and A in beta-minus nuclear decay?",
+      "back": "Proton number Z increases by 1; nucleon number A is unchanged."
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_numbers",
+      "topic": "Weak interactions",
+      "front": "What happens to Z and A in beta-plus nuclear decay?",
+      "back": "Proton number Z decreases by 1; nucleon number A is unchanged."
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_change",
+      "topic": "Weak interactions",
+      "front": "What quark change occurs in beta-minus decay?",
+      "back": "d → u + W⁻; W⁻ → e⁻ + electron antineutrino."
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_change",
+      "topic": "Weak interactions",
+      "front": "What quark change occurs in beta-plus decay?",
+      "back": "u → d + W⁺; W⁺ → e⁺ + electron neutrino."
+    },
+    {
+      "id": "phy_pandr_v29_beta_minus_antinu",
+      "topic": "Weak interactions",
+      "front": "Why is an electron antineutrino emitted in beta-minus decay?",
+      "back": "To conserve electron lepton number, energy and momentum."
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_nu",
+      "topic": "Weak interactions",
+      "front": "Which lepton accompanies the positron in beta-plus decay?",
+      "back": "An electron neutrino, νₑ (not an antineutrino)."
+    },
+    {
+      "id": "phy_pandr_v29_strong_pairs",
+      "topic": "Strange particles",
+      "front": "Why are strange particles produced in associated pairs by strong interactions?",
+      "back": "Total strangeness must be conserved, so opposite strangeness must balance."
+    },
+    {
+      "id": "phy_pandr_v29_strangeness_weak",
+      "topic": "Strange particles",
+      "front": "What changes in strangeness are possible for a weak interaction?",
+      "back": "ΔS may be 0, +1 or −1; strong interactions conserve S."
+    },
+    {
+      "id": "phy_pandr_v29_strange_lifetime",
+      "topic": "Strange particles",
+      "front": "Why can strange particles survive longer than strongly decaying particles?",
+      "back": "Their non-strange decay often requires the slower weak interaction."
+    },
+    {
+      "id": "phy_pandr_v29_work_function",
+      "topic": "Photoelectric effect",
+      "front": "Define the work function φ.",
+      "back": "Minimum energy needed to remove an electron from a metal surface."
+    },
+    {
+      "id": "phy_pandr_v29_threshold_frequency",
+      "topic": "Photoelectric effect",
+      "front": "Define the threshold frequency f₀.",
+      "back": "Minimum photon frequency needed to emit photoelectrons from that metal."
+    },
+    {
+      "id": "phy_pandr_v29_photo_eq",
+      "topic": "Photoelectric effect",
+      "front": "Write Einstein's photoelectric equation.",
+      "back": "hf = φ + Eₖ(max)."
+    },
+    {
+      "id": "phy_pandr_v29_threshold_eq",
+      "topic": "Photoelectric effect",
+      "front": "What equation relates threshold frequency and work function?",
+      "back": "hf₀ = φ; so f₀ = φ/h."
+    },
+    {
+      "id": "phy_pandr_v29_intensity_fixed_f",
+      "topic": "Photoelectric effect",
+      "front": "How does increasing light intensity above threshold affect emission?",
+      "back": "More photoelectrons per second; no increase in maximum kinetic energy."
+    },
+    {
+      "id": "phy_pandr_v29_frequency_fixed_i",
+      "topic": "Photoelectric effect",
+      "front": "How does increasing frequency above threshold affect photoelectrons?",
+      "back": "Maximum kinetic energy increases because Eₖ(max) = hf − φ."
+    },
+    {
+      "id": "phy_pandr_v29_instant_emission",
+      "topic": "Photoelectric effect",
+      "front": "Why is photoelectric emission effectively immediate above threshold?",
+      "back": "One photon transfers its energy to one electron in one interaction."
+    },
+    {
+      "id": "phy_pandr_v29_stopping_eq",
+      "topic": "Photoelectric effect",
+      "front": "How is stopping potential linked to maximum photoelectron energy?",
+      "back": "Eₖ(max) = eVₛ, using the magnitude of the stopping voltage."
+    },
+    {
+      "id": "phy_pandr_v29_kef_gradient",
+      "topic": "Photoelectric effect",
+      "front": "What is the gradient of a graph of maximum photoelectron KE against frequency?",
+      "back": "Planck constant, h."
+    },
+    {
+      "id": "phy_pandr_v29_stopping_gradient",
+      "topic": "Photoelectric effect",
+      "front": "For stopping potential against frequency, what is the gradient?",
+      "back": "Gradient = h/e."
+    },
+    {
+      "id": "phy_pandr_v29_threshold_wavelength",
+      "topic": "Photoelectric effect",
+      "front": "How do you calculate threshold wavelength from the work function?",
+      "back": "λ₀ = hc/φ. Emission requires λ ≤ λ₀."
+    },
+    {
+      "id": "phy_pandr_v29_excitation",
+      "topic": "Energy levels",
+      "front": "What is excitation of an atom?",
+      "back": "A bound electron moves to a higher allowed energy level, staying in the atom."
+    },
+    {
+      "id": "phy_pandr_v29_ionisation",
+      "topic": "Energy levels",
+      "front": "What is ionisation?",
+      "back": "An electron is removed from an atom, leaving a positive ion."
+    },
+    {
+      "id": "phy_pandr_v29_emission_photon",
+      "topic": "Line spectra",
+      "front": "What is the photon energy when an excited electron falls to a lower level?",
+      "back": "E = hf = E(high) − E(low), using the positive energy difference."
+    },
+    {
+      "id": "phy_pandr_v29_discrete_lines",
+      "topic": "Line spectra",
+      "front": "Why do atoms produce emission line spectra?",
+      "back": "Electrons occupy discrete energy levels, so only specific photon energies are emitted."
+    },
+    {
+      "id": "phy_pandr_v29_absorption_lines",
+      "topic": "Line spectra",
+      "front": "Why do dark lines appear in an atomic absorption spectrum?",
+      "back": "Atoms absorb photons whose energies match allowed upward transitions."
+    },
+    {
+      "id": "phy_pandr_v29_fluorescent_tube",
+      "topic": "Energy levels",
+      "front": "How does a fluorescent-tube coating produce visible light?",
+      "back": "It absorbs UV photons from excited mercury vapour and emits visible photons."
+    },
+    {
+      "id": "phy_pandr_v29_ev_definition",
+      "topic": "Energy levels",
+      "front": "What is one electronvolt (eV)?",
+      "back": "Energy gained by an electron moved through 1 V; 1 eV = 1.60 × 10⁻¹⁹ J."
+    },
+    {
+      "id": "phy_pandr_v29_duality",
+      "topic": "Wave-particle duality",
+      "front": "What is wave–particle duality?",
+      "back": "Quantum objects can display wave-like and particle-like behaviour."
+    },
+    {
+      "id": "phy_pandr_v29_electron_diffraction",
+      "topic": "Wave-particle duality",
+      "front": "What observation shows wave behaviour of electrons?",
+      "back": "Their diffraction into rings or interference patterns through a crystal."
+    },
+    {
+      "id": "phy_pandr_v29_photo_evidence",
+      "topic": "Wave-particle duality",
+      "front": "What observation shows the particle nature of light?",
+      "back": "The photoelectric effect: light transfers energy in photons."
+    },
+    {
+      "id": "phy_pandr_v29_momentum_relation",
+      "topic": "Wave-particle duality",
+      "front": "How does doubling particle momentum affect de Broglie wavelength?",
+      "back": "It halves the wavelength, since λ = h/p."
+    },
+    {
+      "id": "phy_pandr_v29_rings_acceleration",
+      "topic": "Wave-particle duality",
+      "front": "Why do electron diffraction rings shrink as accelerating voltage rises?",
+      "back": "Electrons gain momentum, λ = h/p falls, and diffraction angles decrease."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_beta_minus",
+      "topic": "Particle diagrams",
+      "front": "Which W boson is emitted when a d quark changes to u in beta-minus decay?",
+      "back": "W⁻."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_beta_plus",
+      "topic": "Particle diagrams",
+      "front": "Which W boson is emitted when a u quark changes to d in beta-plus decay?",
+      "back": "W⁺."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_capture",
+      "topic": "Particle diagrams",
+      "front": "Which lepton is produced when an electron is captured by a proton?",
+      "back": "An electron neutrino."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_em",
+      "topic": "Particle diagrams",
+      "front": "Which exchange particle mediates electromagnetic interactions?",
+      "back": "A virtual photon."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_pion",
+      "topic": "Particle diagrams",
+      "front": "What exchange particle mediates the residual strong force between nucleons?",
+      "back": "A virtual pion."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_annihilation",
+      "topic": "Particle diagrams",
+      "front": "How many photons result from electron–positron annihilation at rest?",
+      "back": "Two photons."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_pair",
+      "topic": "Particle diagrams",
+      "front": "What is the threshold photon energy for electron–positron pair production?",
+      "back": "About 1.022 MeV."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_photoelectric",
+      "topic": "Particle diagrams",
+      "front": "How much energy does one photon transfer to one electron in the photoelectric effect?",
+      "back": "hf."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_energy_levels",
+      "topic": "Line spectra",
+      "front": "What occurs when an electron falls between atomic energy levels?",
+      "back": "A photon is emitted with energy equal to the level difference."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_electron_diffraction",
+      "topic": "Particle diagrams",
+      "front": "What pattern demonstrates diffraction of electrons by a thin crystal?",
+      "back": "Concentric diffraction rings."
+    },
+    {
+      "id": "phy_pandr_v29_sketch_emission_lines",
+      "topic": "Line spectra",
+      "front": "What causes bright lines in an atomic emission spectrum?",
+      "back": "Electrons falling between discrete energy levels emit photons of specific energies."
+    },
+    {
+      "id": "phy_spectra_photo_v32_appearance",
+      "topic": "Line spectra",
+      "front": "How do emission and absorption spectra appear?",
+      "back": "Emission: bright lines on dark. Absorption: dark lines in a continuous spectrum."
+    },
+    {
+      "id": "phy_spectra_photo_v32_absorb_frequencies",
+      "topic": "Line spectra",
+      "front": "Why can atoms absorb photons of only certain frequencies?",
+      "back": "Only photons whose energy hf matches an allowed energy-level gap can be absorbed."
+    },
+    {
+      "id": "phy_spectra_photo_v32_matching_lines",
+      "topic": "Line spectra",
+      "front": "Why can an element's absorption and emission lines have matching wavelengths?",
+      "back": "The same energy gaps are involved in upward and downward electron transitions."
+    },
+    {
+      "id": "phy_spectra_photo_v32_element_fingerprint",
+      "topic": "Line spectra",
+      "front": "Why does each element have a characteristic line spectrum?",
+      "back": "Its unique set of electron energy levels gives characteristic photon wavelengths."
+    },
+    {
+      "id": "phy_spectra_photo_v32_negative_levels",
+      "topic": "Line spectra",
+      "front": "What does 0 eV mean on an atomic energy-level diagram?",
+      "back": "The ionisation limit: the electron is free. Bound levels have negative energies."
+    },
+    {
+      "id": "phy_spectra_photo_v32_gap_wavelength",
+      "topic": "Line spectra",
+      "front": "Which equation gives photon wavelength from an energy-level gap ΔE in joules?",
+      "back": "λ = hc/ΔE."
+    },
+    {
+      "id": "phy_spectra_photo_v32_accelerate_electrons",
+      "topic": "Fluorescent tubes",
+      "front": "What accelerates electrons through the vapour in a fluorescent tube?",
+      "back": "The potential difference across the tube creates an electric field."
+    },
+    {
+      "id": "phy_spectra_photo_v32_collision_excitation",
+      "topic": "Fluorescent tubes",
+      "front": "How do fast electrons excite mercury atoms in a fluorescent tube?",
+      "back": "They collide with atoms, transferring energy to electrons bound within the atoms."
+    },
+    {
+      "id": "phy_spectra_photo_v32_uv_origin",
+      "topic": "Fluorescent tubes",
+      "front": "Why does mercury vapour emit ultraviolet photons in a fluorescent tube?",
+      "back": "Excited mercury atoms de-excite, releasing photons of ultraviolet energy."
+    },
+    {
+      "id": "phy_spectra_photo_v32_tube_sequence",
+      "topic": "Fluorescent tubes",
+      "front": "What does the phosphor coating do in a fluorescent tube?",
+      "back": "Absorbs ultraviolet radiation and emits visible light."
+    },
+    {
+      "id": "phy_spectra_photo_v32_classical_failure",
+      "topic": "Photoelectric effect",
+      "front": "Why does the photoelectric effect contradict the simple classical wave model?",
+      "back": "Emission has a threshold frequency and no significant delay above it, even at low intensity."
+    },
+    {
+      "id": "phy_spectra_photo_v32_ke_range",
+      "topic": "Photoelectric effect",
+      "front": "Why do photoelectrons have a range of kinetic energies?",
+      "back": "Electrons can lose varying energy inside the metal before escaping; Eₖ(max) is the upper limit."
+    },
+    {
+      "id": "phy_spectra_photo_v32_intensity_stopping",
+      "topic": "Photoelectric effect",
+      "front": "What happens to stopping potential if light intensity doubles at fixed frequency?",
+      "back": "It stays unchanged: photon energy and maximum photoelectron kinetic energy do not change."
+    },
+    {
+      "id": "phy_spectra_photo_v32_below_threshold_graph",
+      "topic": "Photoelectric effect",
+      "front": "Why is maximum photoelectron kinetic energy undefined below the threshold frequency?",
+      "back": "No photoelectrons are emitted."
+    },
+    {
+      "id": "phy_spectra_photo_v32_max_speed",
+      "topic": "Photoelectric effect",
+      "front": "How do you calculate the maximum speed of emitted photoelectrons?",
+      "back": "Find Eₖ(max) = hf − φ in joules, then use vₘₐₓ = √(2Eₖ(max)/mₑ)."
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9a",
+      "topic": "Wave-particle duality",
+      "front": "What wave behaviour do electrons show when passing through a thin crystal?",
+      "back": "Diffraction."
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9b",
+      "topic": "Wave-particle duality",
+      "front": "Why do electron-diffraction rings shrink at higher accelerating voltage?",
+      "back": "Momentum rises, so de Broglie wavelength and diffraction angle fall."
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9c",
+      "topic": "Wave-particle duality",
+      "front": "Which equation links an electron's de Broglie wavelength λ with its momentum p?",
+      "back": "λ = h/p."
+    },
+    {
+      "id": "task1_phy_023",
+      "topic": "Particles",
+      "front": "What stays equal for a particle and its antiparticle?",
+      "back": "Their rest mass."
+    },
+    {
+      "id": "task1_phy_024",
+      "topic": "Particles",
+      "front": "What changes sign between a charged particle and its antiparticle?",
+      "back": "Electric charge."
+    },
+    {
+      "id": "task1_phy_025",
+      "topic": "Particles",
+      "front": "What changes in a nucleus during alpha decay?",
+      "back": "Nucleon number −4; proton number −2."
+    },
+    {
+      "id": "task1_phy_026",
+      "topic": "Particles",
+      "front": "What changes in a nucleus during beta-minus decay?",
+      "back": "Proton number increases by 1; nucleon number stays the same."
+    },
+    {
+      "id": "task1_phy_028",
+      "topic": "Particles",
+      "front": "What is the approximate range of the strong nuclear force?",
+      "back": "A few femtometres, approximately 3 fm."
+    },
+    {
+      "id": "task1_phy_029",
+      "topic": "Particles",
+      "front": "What happens to the strong nuclear force at extremely small separations?",
+      "back": "It becomes repulsive."
+    },
+    {
+      "id": "task1_phy_030",
+      "topic": "Particles",
+      "front": "Which bosons carry the weak interaction at A-level?",
+      "back": "W⁺ and W⁻ bosons."
+    },
+    {
+      "id": "task1_phy_031",
+      "topic": "Particles",
+      "front": "What quantity is conserved in strong but not always weak interactions?",
+      "back": "Strangeness."
+    },
+    {
+      "id": "task1_phy_032",
+      "topic": "Particles",
+      "front": "Complete: a meson is a quark plus an _____.",
+      "back": "Antiquark."
+    },
+    {
+      "id": "task1_phy_033",
+      "topic": "Particles",
+      "front": "Complete: a baryon contains _____ quarks.",
+      "back": "Three."
+    },
+    {
+      "id": "task1_v124_bulk_phy_017",
+      "topic": "Particles",
+      "front": "What is the charge of an up quark?",
+      "back": "+2/3 of the elementary charge."
+    },
+    {
+      "id": "task1_v124_bulk_phy_018",
+      "topic": "Particles",
+      "front": "What is the charge of a down quark?",
+      "back": "−1/3 of the elementary charge."
+    },
+    {
+      "id": "task1_v124_bulk_phy_019",
+      "topic": "Particles",
+      "front": "Which quarks form a proton?",
+      "back": "uud."
+    },
+    {
+      "id": "task1_v124_bulk_phy_020",
+      "topic": "Particles",
+      "front": "Which quarks form a neutron?",
+      "back": "udd."
+    },
+    {
+      "id": "task1_v124_bulk_phy_021",
+      "topic": "Particles",
+      "front": "What is the baryon number of a meson?",
+      "back": "Zero."
+    },
+    {
+      "id": "task1_v124_bulk_phy_022",
+      "topic": "Particles",
+      "front": "What is the baryon number of an antibaryon?",
+      "back": "−1."
+    },
+    {
+      "id": "task1_v124_bulk_phy_023",
+      "topic": "Particles",
+      "front": "Which conservation law is obeyed in all particle interactions?",
+      "back": "Conservation of charge."
+    },
+    {
+      "id": "task1_v124_bulk_phy_024",
+      "topic": "Particles",
+      "front": "What carries the electromagnetic interaction?",
+      "back": "Virtual photons."
+    },
+    {
+      "id": "task1_v124_bulk_phy_025",
+      "topic": "Particles",
+      "front": "Which weak-interaction exchange bosons must you know for AQA AS Physics?",
+      "back": "W⁺ and W⁻ bosons."
+    },
+    {
+      "id": "task1_v124_bulk_phy_026",
+      "topic": "Particles",
+      "front": "What is the lepton number of an antilepton?",
+      "back": "−1 (for its lepton family)."
+    },
+    {
+      "id": "task1_v124_bulk_phy_027",
+      "topic": "Particles",
+      "front": "What is the role of a neutrino in beta-minus decay?",
+      "back": "An electron antineutrino balances lepton number."
+    },
+    {
+      "id": "task1_v124_bulk_phy_028",
+      "topic": "Photoelectric effect",
+      "front": "What is the stopping potential of photoelectrons?",
+      "back": "The reverse p.d. that just stops the fastest photoelectrons."
+    },
+    {
+      "id": "task1_v124_bulk_phy_030",
+      "topic": "Photoelectric effect",
+      "front": "Why does increasing light intensity not raise photoelectron maximum energy?",
+      "back": "Photon energy depends on frequency, not intensity."
+    },
+    {
+      "id": "task1_v124_bulk_phy_031",
+      "topic": "Photoelectric effect",
+      "front": "How does increasing light intensity above threshold affect photoelectric current?",
+      "back": "It can increase current by ejecting more electrons per second."
+    },
+    {
+      "id": "task1_v124_bulk_phy_032",
+      "topic": "Photoelectric effect",
+      "front": "What does the frequency-axis intercept of an Eₖ,max–frequency graph show?",
+      "back": "The threshold frequency."
+    },
+    {
+      "id": "task1_v124_bulk_phy_033",
+      "topic": "Photoelectric effect",
+      "front": "What does the Eₖ,max–frequency graph gradient equal?",
+      "back": "Planck's constant h."
+    },
+    {
+      "id": "task1_v124_cloze_002",
+      "topic": "Particles",
+      "front": "Fill the gap: the proton number increases by one in ____ decay.",
+      "back": "beta-minus."
+    },
+    {
+      "id": "task1_v130_010",
+      "topic": "Particles",
+      "front": "What does the strong nuclear force do at very short separations below about 0.5 fm?",
+      "back": "It becomes repulsive."
+    },
+    {
+      "id": "task1_v130_011",
+      "topic": "Particles",
+      "front": "What is the approximate maximum range of the attractive strong nuclear force?",
+      "back": "About 3 femtometres."
+    },
+    {
+      "id": "task1_v130_012",
+      "topic": "Particles",
+      "front": "What conservation argument led to the prediction of the neutrino?",
+      "back": "Missing energy in beta decay needed an escaping particle."
+    },
+    {
+      "id": "task1_v130_013",
+      "topic": "Particles",
+      "front": "Which exchange particles mediate the weak interaction at A-level?",
+      "back": "W⁺ and W⁻ bosons."
+    },
+    {
+      "id": "task1_v130_014",
+      "topic": "Particles",
+      "front": "Which exchange particle represents the electromagnetic interaction?",
+      "back": "A virtual photon."
+    },
+    {
+      "id": "task1_v130_015",
+      "topic": "Particles",
+      "front": "How is a muon classified?",
+      "back": "A lepton."
+    },
+    {
+      "id": "task1_v130_016",
+      "topic": "Particles",
+      "front": "Why must a kaon produced by a strong interaction have balancing strangeness elsewhere?",
+      "back": "Strangeness is conserved in strong interactions."
+    },
+    {
+      "id": "task1_v130_017",
+      "topic": "Particles",
+      "front": "What are the electron-lepton numbers of an electron and its antineutrino?",
+      "back": "+1 and −1 respectively."
+    },
+    {
+      "id": "task1_v130_018",
+      "topic": "Particles",
+      "front": "Is maximum photoelectron kinetic energy linear with incident wavelength?",
+      "back": "No. It is linear with frequency, not with wavelength."
+    },
+    {
+      "id": "task1_v130_019",
+      "topic": "Particles",
+      "front": "What happens to a photon when an atom emits light?",
+      "back": "The atom loses energy equal to the photon's energy."
+    },
+    {
+      "id": "task1_v130_020",
+      "topic": "Particles",
+      "front": "Why do atoms produce discrete line spectra?",
+      "back": "Electrons occupy discrete energy levels."
+    },
+    {
+      "id": "task1_v130_021",
+      "topic": "Particles",
+      "front": "What happens to de Broglie wavelength if a particle's momentum doubles?",
+      "back": "It halves."
+    },
+    {
+      "id": "task1_v130_022",
+      "topic": "Particles",
+      "front": "How does increasing accelerating voltage change electron diffraction ring size?",
+      "back": "The rings become smaller as electron wavelength falls."
+    },
+    {
+      "id": "task1_v136_035",
+      "topic": "Particles & radiation",
+      "front": "What two conservation laws must hold in pair production?",
+      "back": "Energy and momentum are both conserved."
+    },
+    {
+      "id": "task1_v136_036",
+      "topic": "Particles & radiation",
+      "front": "Why can't a single photon create a pair in empty space?",
+      "back": "A lone photon cannot conserve both energy and momentum."
+    },
+    {
+      "id": "task1_v136_037",
+      "topic": "Particles & radiation",
+      "front": "What is the strangeness of an s quark?",
+      "back": "−1 (an anti-s has +1)."
+    },
+    {
+      "id": "task1_v136_077",
+      "topic": "Particles & radiation",
+      "front": "What must happen to both momentum and energy in annihilation?",
+      "back": "Both must be conserved."
+    },
+    {
+      "id": "task1_v136_078",
+      "topic": "Particles & radiation",
+      "front": "What distinguishes strong from weak interactions in a strangeness-changing decay?",
+      "back": "Strangeness can change in weak interactions, not strong interactions."
+    },
+    {
+      "id": "task1_v136_079",
+      "topic": "Particles & radiation",
+      "front": "Why can below-threshold light not eject electrons by increasing intensity?",
+      "back": "Each photon has insufficient energy to overcome the work function."
+    },
+    {
+      "id": "task1_v138_002",
+      "topic": "Particles and radiation",
+      "front": "What are the relative charges of proton, neutron and electron?",
+      "back": "Proton +1; neutron 0; electron −1."
+    },
+    {
+      "id": "task1_v138_003",
+      "topic": "Particles and radiation",
+      "front": "What are the approximate relative masses of proton, neutron and electron?",
+      "back": "About 1, 1 and 1/1836, respectively."
+    },
+    {
+      "id": "task1_v142_001",
+      "topic": "Particles and radiation",
+      "front": "How do you find the number of neutrons from nuclide notation?",
+      "back": "N = A − Z, where A is nucleon number and Z is proton number."
+    },
+    {
+      "id": "task1_v142_002",
+      "topic": "Particles and radiation",
+      "front": "For two isotopes of one element, what stays the same and what differs?",
+      "back": "Same proton number Z; different neutron numbers and nucleon numbers A."
+    },
+    {
+      "id": "task1_v142_003",
+      "topic": "Particles and radiation",
+      "front": "What are the baryon numbers of baryons and antibaryons?",
+      "back": "Baryons +1; antibaryons −1."
+    },
+    {
+      "id": "task1_v142_004",
+      "topic": "Particles and radiation",
+      "front": "What is the charge of a strange quark?",
+      "back": "−1/3 of the elementary charge."
+    },
+    {
+      "id": "task1_v142_008",
+      "topic": "Particles and radiation",
+      "front": "What are approximate proton and electron masses in kilograms?",
+      "back": "Proton 1.67 × 10⁻²⁷ kg; electron 9.11 × 10⁻³¹ kg."
+    },
+    {
+      "id": "task1_v160_001",
+      "topic": "Particles",
+      "front": "What is the baryon number of a quark and an antiquark?",
+      "back": "+⅓ for a quark; −⅓ for an antiquark."
+    },
+    {
+      "id": "task1_v160_002",
+      "topic": "Particles",
+      "front": "What are the quarks in an antineutron?",
+      "back": "An anti-up quark and two anti-down quarks (anti-u, anti-d, anti-d)."
+    },
+    {
+      "id": "task1_v160_003",
+      "topic": "Particles",
+      "front": "What is the approximate rest energy of an electron or positron?",
+      "back": "0.511 MeV for either particle."
+    }
+  ],
+  "nextPriority": [
+    "Test numerical specific charge of ions and nuclei, not definition alone",
+    "Score unseen alpha/beta decay equations and W-boson interaction sketches",
+    "Mark charge, baryon, lepton and strangeness conservation for invented processes",
+    "Calculate photon/line-spectrum and de Broglie quantities using mixed units"
+  ],
+  "completion": {
+    "elevenParticleRadiationSubsectionsMapped": true,
+    "all167CoreScientificAnswersIndependentlyVerified": false,
+    "unseenNumericalApplicationsMarked": false,
+    "interactionDiagramsDrawnAndMarked": false,
+    "completePhysicsASSpecReviewed": false,
+    "completeThreeSubjectMockVerified": false,
+    "task1Complete": false
+  },
+  "changes": {
+    "newCards": 0,
+    "modifiedCoreCards": 0,
+    "oldIDsChanged": 0,
+    "appChanged": false,
+    "offlineChanged": false,
+    "progressChanged": false
+  }
+}
