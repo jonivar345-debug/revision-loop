@@ -1,0 +1,61 @@
+{
+  "version": "v225",
+  "date": "2026-10-31",
+  "project": "Revision Loop",
+  "task": "Task 1: verify AQA 7407/7408 §3.3.2.3 and add narrowly targeted Physics cladding and step-index fibre recall.",
+  "specification": "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves",
+  "existingCoverage": {
+    "audit": "editorial/task1-v159-waves-mock-audit.json",
+    "reviewedWavesStatements": 45,
+    "previousFibreRelevantFlashcards": [
+      "phy_refractive_index",
+      "phy_snell",
+      "task1_phy_064",
+      "task1_phy_065",
+      "task1_v129_001",
+      "task1_v129_002",
+      "task1_v129_003",
+      "task1_v129_004",
+      "task1_v129_005",
+      "task1_v159_001"
+    ],
+    "existingTenMarkQuestion": false,
+    "existingFibreApplication": "mock_v159_03",
+    "existingFibreApplicationMarks": 7
+  },
+  "gapFocus": [
+    "Cladding protects the core against scratches/damage and reduces unwanted light crossing between adjacent fibres, alongside maintaining TIR.",
+    "At the critical angle, refraction is 90 degrees to the normal; TIR requires incidence strictly above critical in the higher-index medium.",
+    "Material dispersion is reduced by using a narrow range of wavelengths.",
+    "Modal dispersion is reduced by using a sufficiently narrow core and fewer propagating modes.",
+    "Absorption lowers intensity; dispersion spreads pulses in time; separately test the distinction."
+  ],
+  "newContent": {
+    "cards": 7,
+    "originalExamQuestions": 1,
+    "questionMarks": 10,
+    "bank": "physics_optical_fibre_precision_recall_v225.json",
+    "questions": "physics_fibre_signal_application_v225.json",
+    "stage": "AS",
+    "mock": true,
+    "taught": true
+  },
+  "limitations": {
+    "extraCladdingFunctions": "Core protection and reduced optical crosstalk are reasonable explanatory functions, not separately named in the concise AQA list.",
+    "stepIndexOnly": true,
+    "notVerifiedPastPaperCopy": true,
+    "task1Complete": false,
+    "allASPhysicsSpecCovered": false,
+    "allHistoricExamsIndexed": false
+  },
+  "safeguards": {
+    "coreFlashcards": 3345,
+    "coreExamQuestions": 1268,
+    "originalIDsStable": true,
+    "cloudKeysUnchanged": true,
+    "mathsFirstMockYear1PureOnly": true,
+    "offlineCacheBumped": true,
+    "manualMarkingPossible": true
+  },
+  "followUp": "Continue remaining line-by-line waves coverage and across the other physics mock specifications; check live site deployment separately."
+}
