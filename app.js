@@ -3732,7 +3732,7 @@ async function sync(manual=false){
    if(c.subject!=='Physics'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else if(index===26){
    // v232: only first Year 1 Pure Maths mock (no Year 2 functions, Statistics or Mechanics).
-   if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock'||MOCK_MATHS_YEAR2_EXCLUDED_IDS.has(c.id))continue;
+   if(c.subject!=='Maths'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock')continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
