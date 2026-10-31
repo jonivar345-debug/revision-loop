@@ -346,6 +346,7 @@ jobs:
       - run: node tests/task1-v230-physics-mechanics-materials.cjs
       - run: node tests/task1-v231-physics-electricity.cjs
       - run: node tests/task1-v232-maths-year1-pure.cjs
+      - run: node tests/task1-v233-chemistry-semantic-marking.cjs
       - run: node tests/task1-v215-rp4-recall-loader.cjs
       - run: node tests/question-alignment-regression.cjs
       - run: node tests/task1-short-answer-marking-v122.cjs
