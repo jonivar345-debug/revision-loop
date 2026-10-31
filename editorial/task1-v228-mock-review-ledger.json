@@ -4,7 +4,7 @@
   "kind": "frozen first-pass snapshot, NOT AQA specification sign-off",
   "coreDeckSource": {
     "path": "deck.json",
-    "blobSha": "f775521167de78d2fdd9b7a4c229960b2c67e711",
+    "blobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
     "coreCards": 3345,
     "coreMockPhysics": 730,
     "coreMockChemistry": 1533,
@@ -2098,5 +2098,11 @@
     "math_indices_neg",
     "math_indices_frac",
     "task1_v125_130"
-  ]
+  ],
+  "separateFirstPassReviews": {
+    "Physics": "editorial/task1-v228-physics-measurements-particles-firstpass.json",
+    "PhysicsFirstPass": 239,
+    "totalFirstPassAcrossFiles": 573
+  },
+  "preservationNotes": "Original card IDs, saved progress and cloud keys unchanged; no subject-level AQA completion claim."
 }
