@@ -17,8 +17,8 @@ assert(html.includes('app.js?v=203'));assert(sw.includes('v227-three-mocks'));
 const match=app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/);
 assert(match,'missing flashbank manifest');
 const listed=[...match[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(listed.length,23);
-assert.deepEqual(listed.slice(20),names);
+assert(listed.length>=23);
+assert.deepEqual(listed.slice(20,23),names);
 for(const n of names){assert(sw.includes("'./"+n+"'"),'offline missing '+n);}
 const old=[...deck.cards,...listed.slice(0,20).flatMap(n=>json(n).cards||[])];
 const ids=new Set(old.map(x=>x.id)),bySubject=Object.fromEntries(expected.map(x=>[x,new Set(old.filter(y=>y.subject===x).map(y=>String(y.front||'').toLowerCase().replace(/\s+/g,' ').trim()))]));

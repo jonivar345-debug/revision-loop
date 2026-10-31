@@ -1,0 +1,390 @@
+{
+  "version": "v229",
+  "createdAt": "2026-10-31",
+  "subject": "Physics",
+  "scope": "14 original AQA AS Waves recall flashcards, closing selected gaps after reviewing existing cards, not a full specification sign-off.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves"
+  ],
+  "notes": "Written-paper concepts only. Covers first-harmonic formula and dependences, RP1 graph interpretation, harmonics/snapshots, sound reflections, coherence, white-light interference/gratings, general critical-angle relation, air index and path/phase. Retain original card IDs, saved progress and exact first-mock scope.",
+  "cards": [
+    {
+      "id": "task1_v229_phy_waves_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "For a stretched string fixed at both ends, state the first-harmonic frequency formula using length L, tension T and mass per unit length μ.",
+      "back": "f₁ = (1/(2L))√(T/μ).",
+      "accept": [
+        "f₁ = (1/(2L))√(T/μ).",
+        "f1 = (1/2L) sqrt(T/mu)",
+        "One over twice the length times the square root of tension divided by mass per length."
+      ],
+      "reject": [
+        "f = 2L sqrt(T/mu)",
+        "f1 = (1/(2L)) sqrt(mu/T)"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v229_phy_waves_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "At fixed tension and mass per unit length, what happens to a string's first-harmonic frequency if the vibrating length doubles?",
+      "back": "It halves.",
+      "accept": [
+        "It halves.",
+        "The frequency becomes half its original value.",
+        "The first harmonic decreases by a factor of two."
+      ],
+      "reject": [
+        "The frequency doubles.",
+        "It stays unchanged."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v229_phy_waves_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "At fixed length and tension, how does the first-harmonic frequency change if the mass per unit length of a string quadruples?",
+      "back": "It halves.",
+      "accept": [
+        "It halves.",
+        "Frequency falls to one half.",
+        "It is divided by two because frequency is inversely proportional to the square root of mass per unit length."
+      ],
+      "reject": [
+        "It quadruples.",
+        "It doubles."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v229_phy_waves_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "RP1 Stationary waves",
+      "courseTopic": "RP1 Stationary waves",
+      "revisionTopic": "RP1 Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "For a fixed vibrating length L and mass per unit length μ, what is the gradient of a graph of first-harmonic frequency squared against tension?",
+      "back": "1/(4L²μ).",
+      "accept": [
+        "1/(4L²μ).",
+        "The slope is 1 divided by 4 L squared mu.",
+        "Gradient equals 1/(4 times length squared times mass per unit length)."
+      ],
+      "reject": [
+        "4L²μ.",
+        "The gradient is 1/(2L)."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "For a string fixed at both ends in the second harmonic, how many nodes and antinodes are there, counting end nodes?",
+      "back": "Three nodes and two antinodes.",
+      "accept": [
+        "Three nodes and two antinodes.",
+        "3 nodes and 2 antinodes.",
+        "Two loops with a node at each end and a node in the middle."
+      ],
+      "reject": [
+        "Two nodes and three antinodes.",
+        "Three antinodes and four nodes."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v229_phy_waves_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "A stationary string wave is at its maximum upward displacement. What will its pattern look like half a period later?",
+      "back": "The antinodes have equal maximum displacement in the opposite direction, while the nodes stay fixed.",
+      "accept": [
+        "The antinodes have equal maximum displacement in the opposite direction, while the nodes stay fixed.",
+        "The displaced loops invert after half a cycle; nodes remain stationary.",
+        "Opposite maximum displacement at antinodes with all nodes unmoved."
+      ],
+      "reject": [
+        "The whole pattern has moved half a wavelength along the string.",
+        "Every node moves to an antinode."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v229_phy_waves_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Stationary waves",
+      "revisionTopic": "Stationary waves",
+      "specRef": "3.3.1.3",
+      "front": "How can stationary sound waves form when sound is reflected?",
+      "back": "Incident and reflected waves of the same frequency travel in opposite directions and superpose.",
+      "accept": [
+        "Incident and reflected waves of the same frequency travel in opposite directions and superpose.",
+        "The original sound and its reflection superpose while travelling in opposite directions.",
+        "Oppositely travelling waves of the same frequency interfere to make a stationary pattern."
+      ],
+      "reject": [
+        "The sound must change frequency on reflection.",
+        "Only one travelling wave is needed."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 3
+    },
+    {
+      "id": "task1_v229_phy_waves_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Interference",
+      "courseTopic": "Interference",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "front": "Why does illuminating two slits with one wavefront help produce a stable interference pattern?",
+      "back": "The two slits act as coherent sources because their waves maintain a constant phase difference.",
+      "accept": [
+        "The two slits act as coherent sources because their waves maintain a constant phase difference.",
+        "Both slits receive the same incoming wave and produce coherent waves.",
+        "Splitting a single wavefront ensures a fixed relative phase for the two sources."
+      ],
+      "reject": [
+        "The two slits produce light with random relative phase.",
+        "The slit separation always equals one wavelength."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Interference",
+      "courseTopic": "Interference",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "front": "Why do white-light double-slit fringes from different colours overlap more away from the central white fringe?",
+      "back": "Different wavelengths have different fringe spacings, so their bright fringes occur at different positions and eventually overlap.",
+      "accept": [
+        "Different wavelengths have different fringe spacings, so their bright fringes occur at different positions and eventually overlap.",
+        "The colours have different wavelengths and fringe spacings causing coloured fringes to overlap.",
+        "Different wavelength patterns become superposed beyond the central fringe."
+      ],
+      "reject": [
+        "All wavelengths have identical fringe spacings.",
+        "The frequency of each colour changes along the screen."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "For white light incident normally on a diffraction grating, what is seen in the zero-order maximum?",
+      "back": "A white maximum because the colours are not angularly separated at zero order.",
+      "accept": [
+        "A white maximum because the colours are not angularly separated at zero order.",
+        "Zero order is white.",
+        "The central grating maximum is white, with all wavelengths at zero diffraction angle."
+      ],
+      "reject": [
+        "A red central maximum.",
+        "The zero-order maximum is a full spectrum."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "For a ray going from refractive index n₁ to lower index n₂, state the general critical-angle equation.",
+      "back": "sin θc = n₂/n₁, where n₁ > n₂.",
+      "accept": [
+        "sin θc = n₂/n₁, where n₁ > n₂.",
+        "Sine of the critical angle equals lower refractive index divided by higher refractive index.",
+        "sin critical angle = n2/n1 for n1 greater than n2."
+      ],
+      "reject": [
+        "sin θc = n₁/n₂ where n₁ > n₂.",
+        "The critical angle is always 90 degrees."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Refraction",
+      "courseTopic": "Refraction",
+      "revisionTopic": "Refraction",
+      "specRef": "3.3.2.3",
+      "front": "Approximately what refractive index should you use for air in AQA AS Physics calculations?",
+      "back": "1.00 (approximately one).",
+      "accept": [
+        "1.00 (approximately one).",
+        "1",
+        "About one."
+      ],
+      "reject": [
+        "1.50",
+        "0.00"
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Interference",
+      "courseTopic": "Interference",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "front": "Two initially in-phase waves have path difference Δx and wavelength λ. What phase difference in radians does this path difference produce?",
+      "back": "Δφ = 2πΔx/λ.",
+      "accept": [
+        "Δφ = 2πΔx/λ.",
+        "Phase difference equals 2 pi times path difference divided by wavelength.",
+        "2π times delta x over lambda."
+      ],
+      "reject": [
+        "Δφ = 2πλ/Δx.",
+        "The phase difference is always zero."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    },
+    {
+      "id": "task1_v229_phy_waves_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Diffraction",
+      "revisionTopic": "Diffraction",
+      "specRef": "3.3.2.2",
+      "front": "For normally incident white light on a diffraction grating, why does the red first-order maximum appear at a larger angle than the violet?",
+      "back": "Red light has a longer wavelength, so d sin θ = mλ gives a greater angle at the same order.",
+      "accept": [
+        "Red light has a longer wavelength, so d sin θ = mλ gives a greater angle at the same order.",
+        "Red has a larger wavelength so diffracts through a bigger angle.",
+        "From d sin theta = m lambda, longer red wavelength means larger theta."
+      ],
+      "reject": [
+        "Red has a smaller wavelength than violet.",
+        "All colours in the first order have the same angle."
+      ],
+      "strictRecall": true,
+      "taught": true,
+      "mock": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "content",
+      "priority": 2
+    }
+  ]
+}
