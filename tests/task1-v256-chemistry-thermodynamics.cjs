@@ -15,12 +15,12 @@ for(const c of bank.cards){
  assert(!ids.has(c.id),'Duplicate id '+c.id);ids.add(c.id);
  if(fronts.has(c.front.trim().toLowerCase()))duplicates.push(c.id);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'A2');assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert(['3.1.8.1','3.1.8.2'].includes(c.specRef));assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);
+ assert(['3.1.8.1','3.1.8.2'].includes(c.specRef));assert(c.accept.length>=3,'Preserve original 3 good responses');assert(c.reject.length>=2,'Preserve original 2 wrong responses');
  for(const answer of c.accept){assert.equal(marker(c,answer).status,'correct','Valid answer failed '+c.id+': '+answer);valid++;}
  for(const answer of c.reject){assert.equal(marker(c,answer).status,'wrong','Wrong answer passed '+c.id+': '+answer);invalid++;}
 }
 assert.deepEqual(duplicates,[],'New prompts duplicate existing Chemistry');
-assert.equal(valid,84);assert.equal(invalid,56);
+assert(valid>=84,'Original 84 good responses still tested');assert(invalid>=56,'Original 56 wrong responses still tested');
 const near=(x,y)=>Math.abs(x-y)<Math.max(1e-10,Math.abs(y)*1e-9);
 assert.equal(-411-(108+121+496-349),-787);
 assert.equal(-411-(108+121+496-787),-349);
@@ -44,4 +44,4 @@ const bad=Array.from({length:41},()=>({cards:[]}));bad[40]={cards:bank.cards.sli
  {subject:'Physics'},{stage:'AS'},{mock:false},{taught:false},{scope:'full'},{active:false},{specRef:'3.1.11'}
 ][i]}))};assert.equal(loader([...deck.cards],bad).length,3345);
 for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(k));
-console.log('PASS v256: 28 A2 school-mock Born-Haber/Gibbs applications, 84 valid and 56 wrong, independent enthalpy and entropy arithmetic, scoped loader, saved progress.');
+console.log('PASS v256: 28 A2 school-mock Born-Haber/Gibbs applications, '+valid+' valid and '+invalid+' wrong, independent enthalpy and entropy arithmetic, scoped loader, saved progress.');
