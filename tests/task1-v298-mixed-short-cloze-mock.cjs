@@ -66,4 +66,16 @@ const shell=read('sw.js');
 assert(shell.includes("'./mock_short_recall_and_cloze_v298.json'"));
 const expected=prior.length+newCards.length;
 assert.equal(expected,4313);
+// Do not confuse downloaded banks with the cards actually used by the app.
+// A missing loader index can silently discard an entire bank despite correct URLs.
+const loaderStart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));');
+const loaderEnd=app.indexOf(' const added=[',loaderStart);
+assert(loaderStart>=0&&loaderEnd>loaderStart);
+const loaded=new Function('cards','extraFlashBanks',app.slice(loaderStart,loaderEnd)+'\nreturn cards;')(
+ [...core.cards],names.map(j));
+assert.equal(loaded.length,expected,'Real website loader must include all 97 new cards');
+const liveIds=new Set(loaded.map(c=>c.id));
+assert(newCards.every(c=>liveIds.has(c.id)),'All 97 new cards must actually reach revision sessions');
+const eligibleNew=loaded.filter(c=>c.id.startsWith('task1_v298_')&&mockEligibleCard(c));
+assert.equal(eligibleNew.length,newCards.length,'All 97 new cards must be mock-eligible');
 console.log('PASS v298 '+newCards.length+' cards, '+cloze+' cloze, '+methods.size+' methods; '+accepted+' accepted and '+rejected+' rejected answers tested with actual marker. Previous 4,216 cards and progress IDs untouched.');
