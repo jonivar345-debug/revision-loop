@@ -1,0 +1,291 @@
+{
+  "version": "v280",
+  "date": "2026-11-01",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+  "scope": "25 selected first-mock AS Physics 3.4 Mechanics and Materials outcomes, linked to actual v230/v257/v280 supplemental cards and questions",
+  "method": "Selected existence mapping, not examiner marking certification or validation of all original core cards; all question-only graph/drawing marks require checking drawn work.",
+  "selectedRequirementCount": 25,
+  "selectedRequirements": [
+    {
+      "id": "v280_mech_req_01",
+      "specRef": "3.4.1.1",
+      "requirement": "Resolve vectors at right angles and calculate the resultant",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_01",
+        "task1_v257_physics_mechanics_05"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_02",
+      "specRef": "3.4.1.1",
+      "requirement": "Resolve weight into slope-parallel and normal components",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_03",
+        "task1_v257_physics_mechanics_04"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_03",
+      "specRef": "3.4.1.1",
+      "requirement": "Use a closed force triangle and resultant-zero equilibrium",
+      "evidenceIds": [
+        "task1_v230_phy_mech_03",
+        "task1_v280_phy_mech_card_01"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_04",
+      "specRef": "3.4.1.2",
+      "requirement": "Calculate force moment about a pivot from perpendicular distance",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_07",
+        "task1_v230_phy_mech_04"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_05",
+      "specRef": "3.4.1.2",
+      "requirement": "Define and apply a couple's turning moment independent of pivot",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_08",
+        "task1_v280_phy_mech_card_02",
+        "task1_v280_phy_mech_card_03",
+        "task1_v280_phy_mech_q01"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_06",
+      "specRef": "3.4.1.2",
+      "requirement": "Use centre of mass and principle of moments to determine reactions",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_10",
+        "task1_v280_phy_mech_card_04",
+        "task1_v280_phy_mech_q01"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_07",
+      "specRef": "3.4.1.3",
+      "requirement": "Read displacement-time and velocity-time graph gradients",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_11",
+        "task1_v257_physics_mechanics_13"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_08",
+      "specRef": "3.4.1.3",
+      "requirement": "Distinguish signed graph areas from absolute distance",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_05",
+        "task1_v280_phy_mech_card_06",
+        "task1_v280_phy_mech_card_07",
+        "task1_v280_phy_mech_q02"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_09",
+      "specRef": "3.4.1.3",
+      "requirement": "Use a freefall graph to determine acceleration g",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_14"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_10",
+      "specRef": "3.4.1.4",
+      "requirement": "Calculate independent horizontal and vertical projectile motion",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_15",
+        "task1_v257_physics_mechanics_16",
+        "task1_v257_physics_mechanics_17"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_11",
+      "specRef": "3.4.1.4",
+      "requirement": "Explain terminal speed, drag and projectile range qualitatively",
+      "evidenceIds": [
+        "task1_v230_phy_mech_10",
+        "task1_v230_phy_mech_11"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_12",
+      "specRef": "3.4.1.5",
+      "requirement": "Apply F=ma to constant-mass systems and interacting blocks",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_19",
+        "task1_v257_physics_mechanics_20"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_13",
+      "specRef": "3.4.1.5",
+      "requirement": "Distinguish a force balance from Newton third-law force partners",
+      "evidenceIds": [
+        "task1_v230_phy_mech_12"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_14",
+      "specRef": "3.4.1.6",
+      "requirement": "Apply one-dimensional signed momentum conservation",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_21",
+        "task1_v257_physics_mechanics_23"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_15",
+      "specRef": "3.4.1.6",
+      "requirement": "Use signed impulse and force-time area for momentum change",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_22",
+        "task1_v280_phy_mech_card_08"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_16",
+      "specRef": "3.4.1.6",
+      "requirement": "Differentiate elastic and inelastic collisions",
+      "evidenceIds": [
+        "task1_v230_phy_mech_14"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_17",
+      "specRef": "3.4.1.7",
+      "requirement": "Calculate power and efficiency of energy transfer",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_24",
+        "task1_v257_physics_mechanics_25"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_18",
+      "specRef": "3.4.1.7",
+      "requirement": "Interpret signed force-displacement graph area as work",
+      "evidenceIds": [
+        "task1_v230_phy_mech_15",
+        "task1_v280_phy_mech_card_09"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_19",
+      "specRef": "3.4.1.8",
+      "requirement": "Conserve energy across changes in gravitational and kinetic energy",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_26",
+        "task1_v257_physics_mechanics_27"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_20",
+      "specRef": "3.4.2.1",
+      "requirement": "Use Hooke's law and force-extension elastic energy",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_28",
+        "task1_v257_physics_mechanics_29"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_21",
+      "specRef": "3.4.2.1",
+      "requirement": "Calculate tensile stress and tensile strain",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_30",
+        "task1_v257_physics_mechanics_31"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_22",
+      "specRef": "3.4.2.1",
+      "requirement": "Distinguish proportional limit, elastic limit, plasticity and brittle behaviour",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_10",
+        "task1_v280_phy_mech_card_11",
+        "task1_v280_phy_mech_card_12",
+        "task1_v280_phy_mech_card_13",
+        "task1_v280_phy_mech_q03"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_23",
+      "specRef": "3.4.2.1",
+      "requirement": "Interpret breaking stress and permanent strain of a specimen",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_14",
+        "task1_v280_phy_mech_q03"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_24",
+      "specRef": "3.4.2.2",
+      "requirement": "Derive Young modulus from wire data and stress-strain gradient",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_32",
+        "task1_v257_physics_mechanics_33",
+        "task1_v280_phy_mech_card_15"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    },
+    {
+      "id": "v280_mech_req_25",
+      "specRef": "3.4.2.2",
+      "requirement": "Understand diameter-squared uncertainty in wire cross-section",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_34",
+        "task1_v280_phy_mech_card_16",
+        "task1_v280_phy_mech_q04"
+      ],
+      "evidenceLevel": "one_or_more_existing_original_examples;unfamiliar_methods_not_checked"
+    }
+  ],
+  "specificSchoolExamBoundaries": [
+    "AQA AS scalar/vector numeric additions are limited to two vectors at right angles, although scale drawings can have other angles.",
+    "Friction is qualitative and AQA does not test static-versus-dynamic friction distinctions.",
+    "AQA expects interpretation of graphs and can assess signed areas; a keyword checker cannot award marks for an unseen diagram alone.",
+    "Young modulus determination is required via one simple method, but apparatus procedures are not added here.",
+    "This selected audit does not independently verify all v118, v197 or core 3.4 question marking."
+  ],
+  "remainingGates": [
+    "Complete all school Physics mock bullet mapping across 3.1 through 3.5, including required practical errors and diagrams.",
+    "Validate unfamiliar Mechanics exam answers, partial credit and error-carried-forward against a genuinely independent rubric.",
+    "Independently check every relevant core Physics flashcard's answer and alternative accepted strings.",
+    "Confirm school-specific advanced content boundaries separately from AS Physics 3.4.",
+    "Do not claim all historic AQA past-paper questions or official mark schemes have been added."
+  ],
+  "completion": {
+    "allTenMechanicsMaterialsNumberedSubsectionsHaveSelectedEvidence": true,
+    "allMechanicsSpecBulletsIndependentlyVerified": false,
+    "allCoreMechanicsCardsIndependentlyReviewed": false,
+    "allUnfamiliarAnswerMarkingCertified": false,
+    "manualGraphAndDiagramRecognitionAutomated": false,
+    "physicsMockSpecCertified": false,
+    "task1Complete": false
+  }
+}
