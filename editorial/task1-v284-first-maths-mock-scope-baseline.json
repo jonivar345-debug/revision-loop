@@ -1,0 +1,35 @@
+{
+  "version": "v284",
+  "date": "2026-11-01",
+  "source": "GitHub Actions Task 1 v284 Year 1 Pure mock scope audit, run 41323241676",
+  "checkedAgainst": "Real app.js mockEligibleCard and mockEligibleQuestion using all loaded core/supplement flashcards and exam-question banks",
+  "scope": "School's FIRST AQA Maths mock, strictly AS / Year 12 Pure only. Does not include Statistics, Mechanics or Year 2 Pure.",
+  "counts": {
+    "allMathsCards": 386,
+    "allMathsExamQuestions": 363,
+    "eligibleFirstMockCards": 286,
+    "eligibleFirstMockQuestions": 159,
+    "explicitlyExcludedCardIds": 10,
+    "year2ExamQuestionsIncorrectlyFlaggedMock": 0,
+    "semanticYear2CandidatesWithinEligibleCards": 0,
+    "semanticYear2CandidatesWithinEligibleQuestions": 0,
+    "hardBoundaryLeakagesDetected": 0
+  },
+  "excludedExample": {
+    "id": "stretch_v34_maths_trigonometry",
+    "reason": "School excludes radians in first mock; this AS-tagged question contains exact-radian interval 0 ≤ θ < 2π and is correctly excluded by the mock question filter."
+  },
+  "caveats": [
+    "This tests current scope assignment and code filters, not whether each Year 1 Pure subskill has exhaustive revision coverage.",
+    "Some valid Year 1 Pure mathematics may contain π; the first-mock filter intentionally excludes such questions conservatively and should be reassessed against the teacher's exact paper scope.",
+    "The full Maths question bank remains available in ordinary (non-mock) revision.",
+    "All alternative valid mathematical working and manual diagrams still need review."
+  ],
+  "certification": {
+    "firstMockHasNoIdentifiedA2StatsMechanicsLeak": true,
+    "fullYear1PureSpecComprehensive": false,
+    "allMathsMarkSchemesSemanticallyVerified": false,
+    "studentMasteryAssessed": false,
+    "task1Complete": false
+  }
+}
