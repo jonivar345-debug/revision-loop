@@ -7,8 +7,8 @@ assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').quest
 assert.equal(cb.cards.length,30);assert.equal(qb.questions.length,7);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,37);assert.equal(qUrls[36],'chemistry_as_inorganic_tests_practice_v274.json');
-assert.equal(cUrls.length,47);assert.equal(cUrls[46],'chemistry_as_inorganic_tests_recall_v274.json');
+assert(qUrls.length>=37,'v274 inorganic practice bank retains original index 36');assert.equal(qUrls[36],'chemistry_as_inorganic_tests_practice_v274.json');
+assert(cUrls.length>=47,'v274 inorganic recall bank retains original index 46');assert.equal(cUrls[46],'chemistry_as_inorganic_tests_recall_v274.json');
 for(const path of ['chemistry_as_inorganic_tests_practice_v274.json','chemistry_as_inorganic_tests_recall_v274.json'])assert(sw.includes("'./"+path+"'"));
 assert(sw.includes('-v274-as-inorganic'));
 const priorCards=[...core.cards,...cUrls.slice(0,46).flatMap(p=>j(p).cards||[])];

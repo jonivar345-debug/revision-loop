@@ -1,0 +1,23 @@
+name: Task 1 v275 Physics refraction and optical fibre verification
+on:
+  pull_request:
+    paths:
+      - 'physics_refraction_fibres_recall_v275.json'
+      - 'physics_refraction_fibres_practice_v275.json'
+      - 'tests/task1-v275-physics-refraction-fibres.cjs'
+      - 'tests/task1-v274-chemistry-inorganic-ions.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v275-physics-refraction-fibres.yml'
+  push:
+    branches: [main]
+jobs:
+  fibre-scope-and-calculations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v274-chemistry-inorganic-ions.cjs
+      - run: node tests/task1-v275-physics-refraction-fibres.cjs
