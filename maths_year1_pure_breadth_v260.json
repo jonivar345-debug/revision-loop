@@ -18,16 +18,20 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "For any integer n, prove that n(n+1) is even.",
+      "front": "For integer n, why is the product n(n+1) even?",
       "back": "n and n+1 are consecutive, so one is even; their product is even.",
       "accept": [
         "n and n+1 are consecutive, so one is even; their product is even.",
         "One of n and n+1 must be even, so n(n+1) is even.",
-        "An even factor makes the product n(n+1) even."
+        "An even factor makes the product n(n+1) even.",
+        "One of n and n+1 is divisible by 2.",
+        "Consecutive integers have an even factor.",
+        "Their product contains a multiple of 2."
       ],
       "reject": [
         "All integers n are even.",
-        "Both n and n+1 are odd."
+        "Both n and n+1 are odd.",
+        "Two consecutive integers are always both even."
       ],
       "strictRecall": true
     },
@@ -44,16 +48,22 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Prove that if n is an even integer then n³ is divisible by 8.",
+      "front": "If n=2k is even, express n³ as a multiple of 8.",
       "back": "Let n=2k; then n³=8k³, a multiple of 8.",
       "accept": [
         "Let n=2k; then n³=8k³, a multiple of 8.",
         "n=2k gives n³=8k³.",
-        "If n=2k, its cube is 8 times an integer."
+        "If n=2k, its cube is 8 times an integer.",
+        "8k³",
+        "n³=8k³",
+        "8k^3",
+        "n^3 = 8k^3"
       ],
       "reject": [
         "n³=6k³.",
-        "Every integer cube is divisible by 8."
+        "Every integer cube is divisible by 8.",
+        "n³=4k³",
+        "8k²"
       ],
       "strictRecall": true
     },
@@ -70,16 +80,20 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Give an integer counterexample to 'n²−1 is divisible by 8 for every integer n'.",
+      "front": "Give a counterexample to '8 divides n²−1 for every integer n'.",
       "back": "n=2 gives n²−1=3, not divisible by 8.",
       "accept": [
         "n=2 gives n²−1=3, not divisible by 8.",
         "n=2",
-        "2"
+        "2",
+        "n = 2",
+        "2 gives 3, not a multiple of 8"
       ],
       "reject": [
         "n=3 gives 8.",
-        "No counterexample exists."
+        "No counterexample exists.",
+        "n=1",
+        "n=-1"
       ],
       "strictRecall": true
     },
@@ -1005,16 +1019,24 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(1,2), B=(4,8), C=(6,12). Give the vector relationship proving collinearity.",
+      "front": "A=(1,2), B=(4,8), C=(6,12). What is AC as a multiple of AB?",
       "back": "AC=(5/3)AB.",
       "accept": [
         "AC=(5/3)AB.",
         "AC=5/3 AB",
-        "AB=(3,6) and AC=(5,10), so AC=(5/3)AB"
+        "AB=(3,6) and AC=(5,10), so AC=(5/3)AB",
+        "AC = (5/3) AB",
+        "AC=1.6666666667 AB",
+        "AC=5AB/3",
+        "k=5/3",
+        "5/3"
       ],
       "reject": [
         "AC=(3/5)AB.",
-        "AB and AC are perpendicular."
+        "AB and AC are perpendicular.",
+        "k=3/5",
+        "AC=3AB/5",
+        "AB=(5/3)AC"
       ],
       "strictRecall": true
     },
@@ -1031,16 +1053,18 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Find midpoint of A=(−2,5), B=(8,−1).",
+      "front": "Midpoint of A=(−2,5), B=(8,−1)?",
       "back": "(3,2).",
       "accept": [
         "(3,2).",
         "(3, 2)",
-        "x=3, y=2"
+        "x=3, y=2",
+        "3i+2j"
       ],
       "reject": [
         "(6,4).",
-        "(5,−3)."
+        "(5,−3).",
+        "(-3,-2)"
       ],
       "strictRecall": true
     },
@@ -1057,16 +1081,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(1,4), B=(11,−6); point P divides AB in ratio AP:PB=2:3. Find P.",
+      "front": "A=(1,4), B=(11,−6), AP:PB=2:3. Find P.",
       "back": "(5,0).",
       "accept": [
         "(5,0).",
         "P=(5,0)",
-        "x=5, y=0"
+        "x=5, y=0",
+        "(5, 0)",
+        "5i"
       ],
       "reject": [
         "(7,−2).",
-        "(5,−1)."
+        "(5,−1).",
+        "(7,-2)"
       ],
       "strictRecall": true
     }
