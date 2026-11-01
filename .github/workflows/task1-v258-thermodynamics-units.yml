@@ -1,0 +1,22 @@
+name: Task 1 v258 thermodynamics equivalence marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'chemistry_thermodynamics_applications_v256.json'
+      - 'tests/task1-v258-thermodynamics-units.cjs'
+      - '.github/workflows/task1-v258-thermodynamics-units.yml'
+  push:
+    branches: [main]
+jobs:
+  thermo-units:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v255-scientific-numerical-marking.cjs
+      - run: node tests/task1-v256-chemistry-thermodynamics.cjs
+      - run: node tests/task1-v257-physics-mechanics.cjs
+      - run: node tests/task1-v258-thermodynamics-units.cjs

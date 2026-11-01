@@ -1591,7 +1591,7 @@ function evaluateConfiguredNumericRecall(c,input){
  // number out of prose or ignore an incorrect unit/direction.
  // Only a standalone number with an explicitly allowed unit qualifies.
  // Bare numbers are permitted only for individually configured dimensionless cards.
- const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(kΩ|Ω|ohms?|mA|A|mV|V|mW|W|kHz|Hz|m\/s|µs|μs|ms|s|mm|nm|m|°|degrees?|kJ|J)?\s*\.?$/i);
+ const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(kJ\/mol|kJ\s*mol(?:\^-?1|⁻¹)|J\/mol|J\s*mol(?:\^-?1|⁻¹)|kΩ|Ω|ohms?|mA|A|mV|V|mW|W|kHz|Hz|m\/s|µs|μs|ms|s|mm|nm|m|°|degrees?|kJ|J)?\s*\.?$/i);
  if(!match)return null;
  const units=config.units||[];
  let reading;
