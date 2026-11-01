@@ -1,0 +1,23 @@
+name: Task 1 v272 Year 1 Pure graph transformation sketch marking
+on:
+  pull_request:
+    paths:
+      - 'maths_as_graph_transform_sketches_v272.json'
+      - 'maths_as_graph_transform_recall_v272.json'
+      - 'tests/task1-v272-maths-graph-transform-sketches.cjs'
+      - 'tests/task1-v271-year1-pure-reasoning.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v272-maths-graph-sketches.yml'
+  push:
+    branches: [main]
+jobs:
+  first-pure-transform-sketches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v271-year1-pure-reasoning.cjs
+      - run: node tests/task1-v272-maths-graph-transform-sketches.cjs
