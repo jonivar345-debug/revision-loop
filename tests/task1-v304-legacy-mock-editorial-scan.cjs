@@ -16,4 +16,6 @@ const maths=cards.filter(c=>c.subject==='Maths'&&/(proof|collinear|vectors|turni
 const report={version:'v304',all:all.length,mock:cards.length,longFrontOrBack:long,multiWorded:multi.slice(0,80),weakMathsSample:maths.slice(0,120),counts:{long:long.length,multi:multi.length,mathsMath:maths.length}};
 console.log('V304_EDITORIAL_DIAGNOSTIC_BEGIN');console.log(JSON.stringify(report,null,2));console.log('V304_EDITORIAL_DIAGNOSTIC_END');
 assert.equal(all.length,4313);assert.equal(cards.length,3341);
+assert.equal(long.length,1,'37 of 38 legacy overlong mock prompts should have been shortened');
+assert.equal(long[0].id,'phy_mechanics_focus_v37_18','only the original large deck.json prompt remains');
 console.log('PASS v304 factual and length candidates captured; requires content-level manual review.');
