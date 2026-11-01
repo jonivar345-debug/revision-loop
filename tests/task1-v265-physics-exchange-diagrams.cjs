@@ -21,9 +21,10 @@ for(const q of bank.questions){
  assert(/draw|sketch/i.test(q.prompt));assert(q.modelAnswer.length>70);
 }
 const modeStart=app.indexOf('function examSuggested(q,answer){');
-assert(modeStart>=0);const modeEnd=app.indexOf('function reviewedExpressionEvidence(',modeStart);assert(modeEnd>modeStart);
-const source=app.slice(modeStart,modeEnd);
-// With manualDiagramReview true we deliberately never attempt unknown keyword scoring.
+assert(modeStart>=0);const modeEnd=app.indexOf(' // v213:',modeStart);assert(modeEnd>modeStart);
+// The manual-only fast path appears before the specialist marking branches.
+// Test that precise guard as a standalone function, without relying on later nested helpers.
+const source=app.slice(modeStart,modeEnd)+'\n}\n';
 const evaluator=new Function('window',source+'\nreturn examSuggested;')({});
 for(const q of bank.questions){
  for(const input of ['', 'W- e- antineutrino neutron proton', 'A complete photo of a correct drawing']){
