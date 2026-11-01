@@ -7,7 +7,7 @@ assert.equal(cards.cards.length,16);assert.equal(bank.questions.length,4);
 assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').questions.length,1268);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,43);assert.equal(qUrls[42],'physics_mechanics_signed_area_couples_practice_v280.json');
+assert(qUrls.length>=43,'v280 practice remains at index 42 after append-only future practice');assert.equal(qUrls[42],'physics_mechanics_signed_area_couples_practice_v280.json');
 assert.equal(cUrls.length,53);assert.equal(cUrls[52],'physics_mechanics_signed_area_couples_recall_v280.json');
 for(const x of ['physics_mechanics_signed_area_couples_practice_v280.json','physics_mechanics_signed_area_couples_recall_v280.json'])assert(sw.includes("'./"+x+"'"));
 assert(sw.includes('-v280-mechanics-materials'));
