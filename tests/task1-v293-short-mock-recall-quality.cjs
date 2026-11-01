@@ -18,7 +18,7 @@ for(const c of data){
 }
 assert.deepEqual(tally,{Physics:12,Chemistry:12,Maths:12});
 const list=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
-assert.equal(list.length,54);assert.equal(list[53],'mock_short_varied_recall_v293.json');
+assert(list.length>=54,'v293 loader must remain append-only');assert.equal(list[53],'mock_short_varied_recall_v293.json');
 const original=[...j('deck.json').cards,...list.slice(0,53).flatMap(x=>j(x).cards||[])];
 const originalIDs=new Set(original.map(x=>x.id));
 const questions=new Set(original.map(x=>x.subject+':'+String(x.front||'').toLowerCase().trim()));
