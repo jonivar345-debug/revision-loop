@@ -1,0 +1,23 @@
+name: Task 1 v269 Physics nuclear equation and conservation marking
+on:
+  pull_request:
+    paths:
+      - 'physics_nuclear_conservation_practice_v269.json'
+      - 'physics_nuclear_conservation_recall_v269.json'
+      - 'tests/task1-v269-physics-nuclear-conservation.cjs'
+      - 'tests/task1-v268-physics-uncertainty-graphs.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v269-physics-nuclear-conservation.yml'
+  push:
+    branches: [main]
+jobs:
+  physics-conservation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v268-physics-uncertainty-graphs.cjs
+      - run: node tests/task1-v269-physics-nuclear-conservation.cjs

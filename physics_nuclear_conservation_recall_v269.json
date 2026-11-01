@@ -1,0 +1,909 @@
+{
+  "version": "v269",
+  "createdAt": "2026-11-01",
+  "scope": "AQA Physics 7408 AS 3.2.1.2–3.2.1.7: core recall supporting full nuclear equations and particle conservation laws",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/particles-and-radiation",
+  "notes": "Original questions, not published AQA exam wording. Qualitative conservation checks are necessary but do not on their own guarantee energy/momentum feasibility.",
+  "cards": [
+    {
+      "id": "task1_v269_phy_nuclear_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Roughly how far does the attractive strong nuclear force extend between nucleons?",
+      "back": "About 3 fm.",
+      "accept": [
+        "About 3 fm.",
+        "approximately 3 femtometres"
+      ],
+      "reject": [
+        "3 m",
+        "about 300 fm"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At separations below roughly what distance does the strong nuclear force become repulsive?",
+      "back": "0.5 fm.",
+      "accept": [
+        "0.5 fm.",
+        "approximately 0.5 femtometres"
+      ],
+      "reject": [
+        "5 m",
+        "3 fm"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How do A and Z change when a nucleus emits an alpha particle?",
+      "back": "A decreases by 4; Z decreases by 2.",
+      "accept": [
+        "A decreases by 4; Z decreases by 2.",
+        "A-4 and Z-2"
+      ],
+      "reject": [
+        "A-2 and Z-4",
+        "A stays the same and Z increases by 1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How do A and Z change in beta-minus decay?",
+      "back": "A is unchanged; Z increases by 1.",
+      "accept": [
+        "A is unchanged; Z increases by 1.",
+        "same A and Z+1"
+      ],
+      "reject": [
+        "A decreases by 4 and Z by 2",
+        "A decreases by 1 and Z increases by 1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What missing particle was proposed to explain energy conservation in beta decay?",
+      "back": "The neutrino.",
+      "accept": [
+        "The neutrino.",
+        "neutrino"
+      ],
+      "reject": [
+        "alpha particle",
+        "photon"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Complete the products of free-neutron beta-minus decay, n → ?",
+      "back": "Proton, electron and electron antineutrino.",
+      "accept": [
+        "Proton, electron and electron antineutrino.",
+        "p + e- + electron antineutrino"
+      ],
+      "reject": [
+        "proton and positron",
+        "proton and electron neutrino"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What are the outgoing leptons in beta-plus decay?",
+      "back": "A positron and an electron neutrino.",
+      "accept": [
+        "A positron and an electron neutrino.",
+        "e+ and electron neutrino"
+      ],
+      "reject": [
+        "electron and electron antineutrino",
+        "positron and electron antineutrino"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the weak exchange boson emitted in d → u conversion (beta-minus decay)?",
+      "back": "W⁻.",
+      "accept": [
+        "W⁻.",
+        "W-"
+      ],
+      "reject": [
+        "W+",
+        "virtual photon"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the weak exchange boson emitted in u → d conversion (beta-plus decay)?",
+      "back": "W⁺.",
+      "accept": [
+        "W⁺.",
+        "W+"
+      ],
+      "reject": [
+        "W-",
+        "virtual photon"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What exchange particle explains the electromagnetic force between charged particles?",
+      "back": "A virtual photon.",
+      "accept": [
+        "A virtual photon.",
+        "virtual photon"
+      ],
+      "reject": [
+        "W- boson",
+        "pion"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What exchange particle is used to model the strong nuclear force between nucleons at AQA AS level?",
+      "back": "A pion.",
+      "accept": [
+        "A pion.",
+        "pion"
+      ],
+      "reject": [
+        "virtual photon",
+        "electron"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the baryon number of a baryon such as a proton?",
+      "back": "+1.",
+      "accept": [
+        "+1.",
+        "1"
+      ],
+      "reject": [
+        "-1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the baryon number of an antibaryon such as an antiproton?",
+      "back": "−1.",
+      "accept": [
+        "−1.",
+        "-1"
+      ],
+      "reject": [
+        "+1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the baryon number of a meson such as a pion?",
+      "back": "0.",
+      "accept": [
+        "0.",
+        "zero"
+      ],
+      "reject": [
+        "+1",
+        "-1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the baryon number of a lepton such as an electron?",
+      "back": "0.",
+      "accept": [
+        "0.",
+        "zero"
+      ],
+      "reject": [
+        "+1",
+        "-1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the electron-lepton number of an electron?",
+      "back": "+1.",
+      "accept": [
+        "+1.",
+        "1"
+      ],
+      "reject": [
+        "-1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_17",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the electron-lepton number of a positron?",
+      "back": "−1.",
+      "accept": [
+        "−1.",
+        "-1"
+      ],
+      "reject": [
+        "+1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_18",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the electron-lepton number of an electron neutrino?",
+      "back": "+1.",
+      "accept": [
+        "+1.",
+        "1"
+      ],
+      "reject": [
+        "-1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_19",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the electron-lepton number of an electron antineutrino?",
+      "back": "−1.",
+      "accept": [
+        "−1.",
+        "-1"
+      ],
+      "reject": [
+        "+1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Must electron-lepton and muon-lepton number be conserved separately?",
+      "back": "Yes, separately.",
+      "accept": [
+        "Yes, separately.",
+        "each lepton-family number is separately conserved"
+      ],
+      "reject": [
+        "only their sum is conserved",
+        "neither is conserved"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_21",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the charge of an up quark in units of e?",
+      "back": "+2/3 e.",
+      "accept": [
+        "+2/3 e.",
+        "positive two thirds of e"
+      ],
+      "reject": [
+        "-1/3 e",
+        "-2/3 e"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_22",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the charge of a down quark in units of e?",
+      "back": "−1/3 e.",
+      "accept": [
+        "−1/3 e.",
+        "minus one third of e"
+      ],
+      "reject": [
+        "+2/3 e",
+        "+1/3 e"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_23",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A baryon contains uud. Identify the baryon and its charge.",
+      "back": "Proton, +1e.",
+      "accept": [
+        "Proton, +1e.",
+        "proton with charge +e"
+      ],
+      "reject": [
+        "neutron, 0 charge",
+        "proton with zero charge"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_24",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A baryon contains udd. Identify the baryon and its charge.",
+      "back": "Neutron, 0.",
+      "accept": [
+        "Neutron, 0.",
+        "neutron with zero charge"
+      ],
+      "reject": [
+        "proton, +e",
+        "neutron with +1e"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_25",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which quark conversion occurs during beta-minus decay?",
+      "back": "d → u.",
+      "accept": [
+        "d → u.",
+        "down quark becomes an up quark"
+      ],
+      "reject": [
+        "u to d",
+        "s to u"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_26",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which quark conversion occurs during beta-plus decay?",
+      "back": "u → d.",
+      "accept": [
+        "u → d.",
+        "up quark becomes a down quark"
+      ],
+      "reject": [
+        "d to u",
+        "u to s"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_27",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What combination of constituent particles makes a meson?",
+      "back": "One quark and one antiquark.",
+      "accept": [
+        "One quark and one antiquark.",
+        "quark-antiquark pair"
+      ],
+      "reject": [
+        "three quarks",
+        "three antiquarks"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_28",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the strangeness of a strange quark s?",
+      "back": "−1.",
+      "accept": [
+        "−1.",
+        "-1"
+      ],
+      "reject": [
+        "+1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_29",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the strangeness of an antistrange quark?",
+      "back": "+1.",
+      "accept": [
+        "+1.",
+        "1"
+      ],
+      "reject": [
+        "-1",
+        "0"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_30",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Is strangeness conserved in strong-interaction particle production?",
+      "back": "Yes.",
+      "accept": [
+        "Yes.",
+        "strangeness is conserved"
+      ],
+      "reject": [
+        "strangeness always increases",
+        "it must change by 1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_31",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "By how much can strangeness change in one weak interaction at this level?",
+      "back": "0, +1 or −1.",
+      "accept": [
+        "0, +1 or −1.",
+        "zero or plus or minus one"
+      ],
+      "reject": [
+        "only 2",
+        "any integer"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_32",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which interaction typically allows a kaon to decay to pions?",
+      "back": "The weak interaction.",
+      "accept": [
+        "The weak interaction.",
+        "weak nuclear interaction"
+      ],
+      "reject": [
+        "electromagnetic only",
+        "gravitational only"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_33",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How are strange particles typically produced in strong interactions?",
+      "back": "In pairs with zero net change in strangeness.",
+      "accept": [
+        "In pairs with zero net change in strangeness.",
+        "produced in pairs conserving strangeness"
+      ],
+      "reject": [
+        "a single strange particle without a balancing strangeness change",
+        "strangeness is never conserved"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_34",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Name the five quantum-number conservation checks for an unfamiliar particle reaction.",
+      "back": "Charge, baryon number, electron-lepton number, muon-lepton number and strangeness.",
+      "accept": [
+        "Charge, baryon number, electron-lepton number, muon-lepton number and strangeness.",
+        "charge baryon number both lepton family numbers and strangeness"
+      ],
+      "reject": [
+        "only total particle number",
+        "only charge and mass"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_35",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Apart from quantum numbers, which two physical quantities must be conserved in every particle interaction?",
+      "back": "Energy and momentum.",
+      "accept": [
+        "Energy and momentum.",
+        "total energy and total momentum"
+      ],
+      "reject": [
+        "kinetic energy only",
+        "speed and mass"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v269_phy_nuclear_36",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Particles and radiation",
+      "courseTopic": "Particles and radiation",
+      "revisionTopic": "Particles and radiation",
+      "specRef": "3.2.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the only stable baryon into which other baryons eventually decay?",
+      "back": "The proton.",
+      "accept": [
+        "The proton.",
+        "proton"
+      ],
+      "reject": [
+        "neutron",
+        "kaon"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
