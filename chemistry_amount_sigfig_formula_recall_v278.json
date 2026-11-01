@@ -53,7 +53,15 @@
         "102.1",
         "124.1"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 164.1,
+        "expected": "164.1",
+        "units": [],
+        "allowUnitless": true,
+        "significantFigures": 4,
+        "tolerance": 1.641e-8
+      }
     },
     {
       "id": "task1_v278_chem_amount_card_03",
@@ -103,7 +111,20 @@
         "0.0064",
         "0.006443"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.00644,
+        "expected": "0.00644 mol",
+        "units": [
+          {
+            "symbol": "mol",
+            "toBase": 1
+          }
+        ],
+        "allowUnitless": true,
+        "significantFigures": 3,
+        "tolerance": 6.440000000000001e-13
+      }
     },
     {
       "id": "task1_v278_chem_amount_card_05",
@@ -228,7 +249,20 @@
         "0.0100 mol",
         "0.0400 mol"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.02,
+        "expected": "0.0200 mol",
+        "units": [
+          {
+            "symbol": "mol",
+            "toBase": 1
+          }
+        ],
+        "allowUnitless": true,
+        "significantFigures": 3,
+        "tolerance": 2e-12
+      }
     },
     {
       "id": "task1_v278_chem_amount_card_10",
@@ -253,7 +287,20 @@
         "40 mol",
         "0.250 mol"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.025,
+        "expected": "0.0250 mol",
+        "units": [
+          {
+            "symbol": "mol",
+            "toBase": 1
+          }
+        ],
+        "allowUnitless": true,
+        "significantFigures": 3,
+        "tolerance": 2.5000000000000003e-12
+      }
     },
     {
       "id": "task1_v278_chem_amount_card_11",
@@ -353,7 +400,20 @@
         "0.00500 mol",
         "0.0100 mol"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.02,
+        "expected": "0.0200 mol",
+        "units": [
+          {
+            "symbol": "mol",
+            "toBase": 1
+          }
+        ],
+        "allowUnitless": true,
+        "significantFigures": 3,
+        "tolerance": 2e-12
+      }
     }
   ]
 }

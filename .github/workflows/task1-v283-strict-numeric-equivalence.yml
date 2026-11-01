@@ -1,0 +1,21 @@
+name: Task 1 v283 strict numeric flashcard equivalence
+on:
+  pull_request:
+    paths:
+      - app.js
+      - chemistry_amount_sigfig_formula_recall_v278.json
+      - tests/task1-v283-strict-numeric-equivalence.cjs
+      - .github/workflows/task1-v283-strict-numeric-equivalence.yml
+  push:
+    branches: [main]
+jobs:
+  exact-numerical-equivalence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v283-strict-numeric-equivalence.cjs
+      - run: node tests/task1-v278-chemistry-amount-precision-audit.cjs
+      - run: node tests/task1-v282-full-flashcard-answer-audit.cjs
