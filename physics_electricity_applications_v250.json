@@ -1,0 +1,685 @@
+{
+  "version": "v250",
+  "createdAt": "2026-11-01",
+  "scope": "AQA AS Physics 7408 3.5.1.1–3.5.1.6, school Year 1 Physics mock; RP5 and RP6 interpretation only",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+  "notes": "Original applications chosen after v231 evidence audit to avoid repeating its 16 main recall prompts. Drawn I–V graphs and practical circuits still need examiner-style review; no full-spec completion claim.",
+  "cards": [
+    {
+      "id": "task1_v250_physics_electricity_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "3.6 C of charge passes a point in 120 s. Find the current.",
+      "back": "0.030 A.",
+      "accept": [
+        "0.030 A.",
+        "0.03 A",
+        "30 mA"
+      ],
+      "reject": [
+        "0.30 A.",
+        "3.0 A."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A charge of 3.0 C transfers 12 J of energy. Calculate potential difference.",
+      "back": "4.0 V.",
+      "accept": [
+        "4.0 V.",
+        "4 V",
+        "12/3 = 4 V"
+      ],
+      "reject": [
+        "36 V.",
+        "0.25 V."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An I–V graph has V = 3.0 V and I = 0.25 A at a particular point. Find the resistance there.",
+      "back": "12 Ω.",
+      "accept": [
+        "12 Ω.",
+        "12 ohms",
+        "3.0/0.25=12 Ω"
+      ],
+      "reject": [
+        "0.083 Ω.",
+        "0.75 Ω."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For an ohmic resistor, the I (vertical) versus V (horizontal) graph has gradient 0.50 A V⁻¹. Find R.",
+      "back": "2.0 Ω.",
+      "accept": [
+        "2.0 Ω.",
+        "2 Ω",
+        "R=1/0.50=2 ohms"
+      ],
+      "reject": [
+        "0.50 Ω.",
+        "4 Ω."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why does the filament-lamp I–V graph become less steep at large potential differences when I is vertical?",
+      "back": "The hotter filament has greater resistance.",
+      "accept": [
+        "The hotter filament has greater resistance.",
+        "Temperature rise increases filament resistance.",
+        "A hot metal filament has increased resistance."
+      ],
+      "reject": [
+        "The filament cools so resistance rises.",
+        "The resistance falls as it heats."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In its normal reverse-bias region, how much current flows through a semiconductor diode?",
+      "back": "Negligible current.",
+      "accept": [
+        "Negligible current.",
+        "Almost zero current.",
+        "Very small reverse current."
+      ],
+      "reject": [
+        "Large forward current.",
+        "Equal current in both directions."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A uniform wire has R = 5.0 Ω, length 2.0 m, and area 2.0 × 10⁻⁷ m². Find its resistivity.",
+      "back": "5.0 × 10⁻⁷ Ω m.",
+      "accept": [
+        "5.0 × 10⁻⁷ Ω m.",
+        "5e-7 ohm m",
+        "0.0000005 Ω m"
+      ],
+      "reject": [
+        "5.0 × 10⁷ Ω m.",
+        "5.0 × 10⁻⁶ Ω m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At fixed material, cross-section and temperature, the length of a wire is doubled. What happens to R?",
+      "back": "R doubles.",
+      "accept": [
+        "R doubles.",
+        "Resistance is multiplied by 2.",
+        "Twice the original resistance."
+      ],
+      "reject": [
+        "R halves.",
+        "R is four times larger."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At fixed length and material, the diameter of a uniform wire is halved. What happens to R?",
+      "back": "R becomes four times as large.",
+      "accept": [
+        "R becomes four times as large.",
+        "R is multiplied by 4.",
+        "The resistance quadruples."
+      ],
+      "reject": [
+        "R halves.",
+        "R doubles."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An R–L graph has gradient 5.0 Ω m⁻¹ for a wire of area 4.0 × 10⁻⁷ m². Find resistivity.",
+      "back": "2.0 × 10⁻⁶ Ω m.",
+      "accept": [
+        "2.0 × 10⁻⁶ Ω m.",
+        "2e-6 ohm m",
+        "0.000002 Ω m"
+      ],
+      "reject": [
+        "1.25 × 10⁷ Ω m.",
+        "2.0 × 10⁻⁷ Ω m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A wire diameter is measured as 0.400 ± 0.010 mm. Estimate percentage uncertainty in area.",
+      "back": "5.0%.",
+      "accept": [
+        "5.0%.",
+        "5%",
+        "2×(0.010/0.400)×100=5%"
+      ],
+      "reject": [
+        "2.5%.",
+        "10%."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why take wire-diameter readings at several positions and in different orientations?",
+      "back": "To detect variation and improve the estimate of mean diameter.",
+      "accept": [
+        "To detect variation and improve the estimate of mean diameter.",
+        "To account for a wire not perfectly circular or uniform.",
+        "To check uneven thickness and average measurements."
+      ],
+      "reject": [
+        "To increase wire resistivity.",
+        "To remove all systematic error automatically."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What happens to the resistance of an NTC thermistor as temperature increases?",
+      "back": "Resistance decreases.",
+      "accept": [
+        "Resistance decreases.",
+        "It falls.",
+        "The resistance becomes lower."
+      ],
+      "reject": [
+        "Resistance increases.",
+        "Resistance remains constant."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What happens to an LDR's resistance when light intensity increases?",
+      "back": "Resistance decreases.",
+      "accept": [
+        "Resistance decreases.",
+        "It falls in brighter light.",
+        "Brighter light gives a lower resistance."
+      ],
+      "reject": [
+        "Resistance increases.",
+        "Resistance stays constant."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A 4.0 Ω and an 8.0 Ω resistor are in series on 12.0 V. Find pd across the 8.0 Ω resistor.",
+      "back": "8.0 V.",
+      "accept": [
+        "8.0 V.",
+        "8 V",
+        "12×8/12=8 V"
+      ],
+      "reject": [
+        "4.0 V.",
+        "12.0 V."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Resistors of 6.0 kΩ and 3.0 kΩ are in parallel. Find the combined resistance.",
+      "back": "2.0 kΩ.",
+      "accept": [
+        "2.0 kΩ.",
+        "2000 Ω",
+        "2 kΩ"
+      ],
+      "reject": [
+        "9.0 kΩ.",
+        "4.5 kΩ."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_17",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A 9.0 V divider has upper 2.0 kΩ and lower 4.0 kΩ. Find unloaded output across lower resistor.",
+      "back": "6.0 V.",
+      "accept": [
+        "6.0 V.",
+        "6 V",
+        "9×4/(2+4)=6 V"
+      ],
+      "reject": [
+        "3.0 V.",
+        "9.0 V."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_18",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For the same 9.0 V divider (upper 2.0 kΩ, lower 4.0 kΩ), add a 4.0 kΩ load across the lower resistor. Find output.",
+      "back": "4.5 V.",
+      "accept": [
+        "4.5 V.",
+        "4.5 volts",
+        "The effective lower 2.0 kΩ gives 4.5 V."
+      ],
+      "reject": [
+        "6.0 V.",
+        "9.0 V."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_19",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An NTC thermistor is the UPPER component of a potential divider, with a fixed lower resistor. As temperature rises, what happens to output across the lower resistor?",
+      "back": "Output potential difference increases.",
+      "accept": [
+        "Output potential difference increases.",
+        "The output voltage rises.",
+        "Lower-resistor pd goes up."
+      ],
+      "reject": [
+        "Output potential difference decreases.",
+        "The output remains constant."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An LDR is the LOWER component of a divider and output is across the LDR. What happens to output when light becomes brighter?",
+      "back": "Output potential difference decreases.",
+      "accept": [
+        "Output potential difference decreases.",
+        "Output voltage falls.",
+        "The measured voltage across the LDR goes down."
+      ],
+      "reject": [
+        "Output potential difference increases.",
+        "Output stays the same."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_21",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A cell's V-against-I graph has vertical intercept 1.50 V and gradient −0.40 V A⁻¹. Find internal resistance.",
+      "back": "0.40 Ω.",
+      "accept": [
+        "0.40 Ω.",
+        "0.4 Ω",
+        "Internal resistance is minus the graph gradient, 0.40 ohm."
+      ],
+      "reject": [
+        "−0.40 Ω.",
+        "1.50 Ω."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_22",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A cell emf is 1.50 V; at 0.50 A its terminal pd is 1.25 V. Find r.",
+      "back": "0.50 Ω.",
+      "accept": [
+        "0.50 Ω.",
+        "0.5 ohm",
+        "(1.50−1.25)/0.50=0.50 Ω"
+      ],
+      "reject": [
+        "0.25 Ω.",
+        "2.5 Ω."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_23",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A current of 2.0 A passes through cell internal resistance 0.25 Ω. Find power wasted internally.",
+      "back": "1.0 W.",
+      "accept": [
+        "1.0 W.",
+        "1 W",
+        "I²r=4×0.25=1 W"
+      ],
+      "reject": [
+        "0.50 W.",
+        "4.0 W."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_24",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A cell has emf 6.0 V, internal resistance 1.0 Ω, external resistance 5.0 Ω. Find current.",
+      "back": "1.0 A.",
+      "accept": [
+        "1.0 A.",
+        "1 A",
+        "6/(5+1)=1 A"
+      ],
+      "reject": [
+        "1.2 A.",
+        "6.0 A."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_25",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two identical cells each have emf 1.5 V and internal resistance 0.20 Ω, connected in series. State total emf and r.",
+      "back": "3.0 V and 0.40 Ω.",
+      "accept": [
+        "3.0 V and 0.40 Ω.",
+        "emf 3 V; internal resistance 0.4 Ω",
+        "ε=3.0 V, r=0.40 Ω"
+      ],
+      "reject": [
+        "emf 1.5 V; r=0.10 Ω.",
+        "emf 3.0 V; r=0.10 Ω."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v250_physics_electricity_26",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two identical cells each have emf 1.5 V and internal resistance 0.20 Ω, connected in parallel. State effective emf and r.",
+      "back": "1.5 V and 0.10 Ω.",
+      "accept": [
+        "1.5 V and 0.10 Ω.",
+        "emf 1.5 V; internal resistance 0.1 Ω",
+        "ε=1.5 V, r=0.10 Ω"
+      ],
+      "reject": [
+        "emf 3.0 V; r=0.40 Ω.",
+        "emf 1.5 V; r=0.40 Ω."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
