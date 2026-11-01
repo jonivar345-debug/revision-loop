@@ -568,15 +568,15 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "What is the quark composition of a proton?",
-      "back": "uud.",
+      "front": "A baryon contains uud. Identify the baryon and its charge.",
+      "back": "Proton, +1e.",
       "accept": [
-        "uud.",
-        "u u d"
+        "Proton, +1e.",
+        "proton with charge +e"
       ],
       "reject": [
-        "udd",
-        "uds"
+        "neutron, 0 charge",
+        "proton with zero charge"
       ],
       "strictRecall": true
     },
@@ -593,15 +593,15 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "What is the quark composition of a neutron?",
-      "back": "udd.",
+      "front": "A baryon contains udd. Identify the baryon and its charge.",
+      "back": "Neutron, 0.",
       "accept": [
-        "udd.",
-        "u d d"
+        "Neutron, 0.",
+        "neutron with zero charge"
       ],
       "reject": [
-        "uud",
-        "uds"
+        "proton, +e",
+        "neutron with +1e"
       ],
       "strictRecall": true
     },
