@@ -7,23 +7,24 @@ assert(start>=0&&end>start);
 const evaluate=new Function('window',app.slice(start,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
 const cards=new Map(bank.cards.map(c=>[c.id.slice(-2),c]));
 const accepted={
- '02':['164.1','164.1.','1.641e2','1.641 × 10²','1.641 x 10^2'],
+ '02':['164.1','164.1.','164.10','1.641e2','1.641 × 10²','1.641 x 10^2'],
  '04':['0.00644 mol','6.44e-3 mol','6.44 × 10⁻³ mol','6.44 x 10^(-3) mol','6.44e-3','0.00644'],
- '09':['0.0200 mol','2.00 × 10⁻² mol','2.00e-2 mol','0.0200'],
- '10':['0.0250 mol','2.50 × 10⁻² mol','2.50e-2 mol','0.0250'],
- '14':['0.0200 mol','2.00 x 10^(-2) mol','2.00e-2 mol','0.0200']
+ '09':['0.0200 mol','0.02 mol','0.020 mol','2.0 × 10⁻² mol','2.00 × 10⁻² mol','2.00e-2 mol','0.0200'],
+ '10':['0.0250 mol','0.025 mol','2.5 × 10⁻² mol','2.50 × 10⁻² mol','2.50e-2 mol','0.0250'],
+ '14':['0.0200 mol','0.02 mol','2.0 × 10⁻² mol','2.00 x 10^(-2) mol','2.00e-2 mol','0.0200']
 };
 const rejected={
  '02':['1.64 × 10²','1.641 × 10³','164.0','164.1 mol','1641'],
  '04':['6.4 × 10⁻³ mol','6.44 × 10⁻² mol','6.44 × 10⁻³ g','6.45e-3 mol','0.006440 mol','it is 6.44 × 10⁻³ mol'],
- '09':['2.0 × 10⁻² mol','2.00 × 10⁻³ mol','2.00 × 10⁻² mm','0.0100 mol','0.020 mol'],
- '10':['2.5 × 10⁻² mol','2.50 × 10⁻¹ mol','2.50 × 10⁻² g','0.250 mol','0.025 mol'],
- '14':['2.0 × 10⁻² mol','2.00 × 10⁻³ mol','2.00 × 10⁻² cm','0.0100 mol']
+ '09':['2.00 × 10⁻³ mol','2.00 × 10⁻² mm','0.0100 mol','0.200 mol'],
+ '10':['2.50 × 10⁻¹ mol','2.50 × 10⁻² g','0.250 mol','0.00250 mol'],
+ '14':['2.00 × 10⁻³ mol','2.00 × 10⁻² cm','0.0100 mol']
 };
 let yes=0,no=0;
 for(const [key,examples] of Object.entries(accepted)){
  const card=cards.get(key);assert(card&&card.strictRecall===true&&card.numericRecall);
- assert(card.numericRecall.significantFigures>0);assert(card.numericRecall.allowUnitless===true);
+ assert.equal(card.numericRecall.significantFigures,key==='04'?3:undefined,'Only explicit significant-figure tasks may enforce precision');
+ assert(card.numericRecall.allowUnitless===true);
  for(const input of examples){
    const result=evaluate(card,input);
    assert.equal(result.status,'correct',card.id+' failed known equivalent '+input+' '+JSON.stringify(result));
@@ -50,4 +51,4 @@ assert.equal(evaluate(oldCard,'2.5 mm').status,'wrong');
 assert.equal(evaluate(oldCard,'2.5').status,'wrong');
 const required=["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"];
 for(const k of required)assert(app.includes(k));
-console.log('PASS v283: '+yes+' unseen correct numerical forms; '+no+' deliberately wrong examples; all 14 previous v278 cards and legacy opt-in strict numerical checks preserved.');
+console.log('PASS v283/v286: '+yes+' unseen equivalent numerical forms, '+no+' genuinely wrong examples, strict SF only on explicitly worded rounding, original answer lists and legacy numeric grading preserved.');
