@@ -1,0 +1,529 @@
+{
+  "version": "v252",
+  "createdAt": "2026-11-01",
+  "scope": "Only school FIRST Year 1 Pure mock, AQA A-level 7357 sections 3.2,3.3,3.5,3.9,3.11. No statistics, mechanics, numerical methods, Year 2 or proof by contradiction.",
+  "source": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content",
+  "notes": "20 original short proof, position-vector, transformation, integer-binomial and signed-vs-unsigned integration applications. Complete examination proofs still need multi-mark marking; no Task 1 completion claim.",
+  "cards": [
+    {
+      "id": "task1_v252_maths_pure_applied_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Prove n³−n is divisible by 6 for every integer n. Give the key factorisation and reason.",
+      "back": "n(n−1)(n+1); among three consecutive integers, one is even and one is a multiple of 3.",
+      "accept": [
+        "n(n−1)(n+1); among three consecutive integers, one is even and one is a multiple of 3.",
+        "n(n-1)(n+1) has a factor of 2 and a factor of 3.",
+        "Three consecutive integers include an even number and a multiple of 3."
+      ],
+      "reject": [
+        "All three factors are multiples of 6.",
+        "n³−n is only divisible by 3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Show that the sum of two consecutive odd numbers 2n+1 and 2n+3 is a multiple of 4.",
+      "back": "(2n+1)+(2n+3)=4(n+1).",
+      "accept": [
+        "(2n+1)+(2n+3)=4(n+1).",
+        "4n+4, which is divisible by 4.",
+        "The sum is 4n+4=4(n+1)."
+      ],
+      "reject": [
+        "The sum equals 4n+2.",
+        "All pairs of odd numbers have sum divisible by 4."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For n=2k+1 odd, explain briefly why n² leaves remainder 1 when divided by 8.",
+      "back": "n²=4k(k+1)+1; k(k+1) is even.",
+      "accept": [
+        "n²=4k(k+1)+1; k(k+1) is even.",
+        "4k(k+1)+1 and k(k+1) is even.",
+        "n²=8m+1 because one of k,k+1 is even."
+      ],
+      "reject": [
+        "Every odd square is a multiple of 8.",
+        "k(k+1) is always odd."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give a counterexample to 'all prime numbers are odd'.",
+      "back": "2.",
+      "accept": [
+        "2.",
+        "the prime number 2",
+        "2 is an even prime"
+      ],
+      "reject": [
+        "3.",
+        "9."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For n=0,1,2,3, list n³−n values as a complete exhaustion check.",
+      "back": "0, 0, 6, 24.",
+      "accept": [
+        "0, 0, 6, 24.",
+        "(0,0,6,24)",
+        "0; 0; 6; 24"
+      ],
+      "reject": [
+        "0,0,2,6.",
+        "0,1,8,27."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give the smallest positive integer counterexample to n²>n for all positive integers n.",
+      "back": "1.",
+      "accept": [
+        "1.",
+        "n=1",
+        "1, since 1² is equal to 1"
+      ],
+      "reject": [
+        "2.",
+        "0."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which non-negative square proves a²+b²≥2ab for all real a,b?",
+      "back": "(a−b)²≥0.",
+      "accept": [
+        "(a−b)²≥0.",
+        "(a-b)^2>=0",
+        "a²−2ab+b²≥0"
+      ],
+      "reject": [
+        "(a+b)²<0.",
+        "a²+b²<2ab."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(1,1), B=(3,5), C=(k,9). Find k so A, B and C are collinear.",
+      "back": "5.",
+      "accept": [
+        "5.",
+        "k=5",
+        "5 because AC=2AB"
+      ],
+      "reject": [
+        "4.",
+        "6."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(−2,3) and B=(4,−5). Find vector AB in components.",
+      "back": "(6,−8).",
+      "accept": [
+        "(6,−8).",
+        "(6,-8)",
+        "6i−8j"
+      ],
+      "reject": [
+        "(−6,8).",
+        "(2,−2)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the distance between A=(−1,2) and B=(4,14).",
+      "back": "13.",
+      "accept": [
+        "13.",
+        "13 units",
+        "√(5²+12²)=13"
+      ],
+      "reject": [
+        "17.",
+        "12."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(1,−2), B=(4,7), P=A+t(B−A). Find P when its y-coordinate is 13.",
+      "back": "(6,13).",
+      "accept": [
+        "(6,13).",
+        "P=(6,13)",
+        "x=6, y=13"
+      ],
+      "reject": [
+        "(4,13).",
+        "(6,7)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(2,3), B=(14,−1). P divides AB internally in ratio AP:PB=1:3. Find P.",
+      "back": "(5,2).",
+      "accept": [
+        "(5,2).",
+        "P=(5,2)",
+        "x=5, y=2"
+      ],
+      "reject": [
+        "(11,0).",
+        "(8,1)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_13",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A point (2,5) lies on y=f(x). Where is it mapped on y=f(−2x+4)?",
+      "back": "(1,5).",
+      "accept": [
+        "(1,5).",
+        "x=1, y=5",
+        "(1, 5)"
+      ],
+      "reject": [
+        "(0,5).",
+        "(4,5)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_14",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A point (4,5) lies on y=f(x). Find its mapped point on y=−f(2x−4)+3.",
+      "back": "(4,−2).",
+      "accept": [
+        "(4,−2).",
+        "(4,-2)",
+        "x=4, y=-2"
+      ],
+      "reject": [
+        "(4,8).",
+        "(2,−2)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_15",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For y=3(x−2)²−1, what are the coordinates of the vertex?",
+      "back": "(2,−1).",
+      "accept": [
+        "(2,−1).",
+        "(2,-1)",
+        "minimum point (2,-1)"
+      ],
+      "reject": [
+        "(−2,−1).",
+        "(2,1)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_16",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the coefficient of x³ in (2x−3)⁴.",
+      "back": "−96.",
+      "accept": [
+        "−96.",
+        "-96",
+        "4×2³×(-3)=-96"
+      ],
+      "reject": [
+        "96.",
+        "−24."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_17",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the coefficient of x² in (x+2)⁵.",
+      "back": "80.",
+      "accept": [
+        "80.",
+        "80",
+        "10×2³=80"
+      ],
+      "reject": [
+        "40.",
+        "160."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_18",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the TOTAL positive area between y=x²−1 and the x-axis from x=−2 to 2.",
+      "back": "4 square units.",
+      "accept": [
+        "4 square units.",
+        "4",
+        "4 units²"
+      ],
+      "reject": [
+        "4/3 square units.",
+        "−4/3 square units."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_19",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the SIGNED integral of x²−1 between −2 and 2.",
+      "back": "4/3.",
+      "accept": [
+        "4/3.",
+        "4/3",
+        "1.3333333333333333"
+      ],
+      "reject": [
+        "4.",
+        "−4/3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v252_maths_pure_applied_20",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An AS geometric series has a=3, common ratio 2, and 4 terms. Find S₄.",
+      "back": "45.",
+      "accept": [
+        "45.",
+        "45",
+        "3(2⁴−1)=45"
+      ],
+      "reject": [
+        "24.",
+        "48."
+      ],
+      "strictRecall": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+name: Task 1 v252 Year 1 Pure Maths proofs vectors and transformations
+on:
+  pull_request:
+    paths:
+      - 'maths_first_mock_pure_challenges_v252.json'
+      - 'tests/task1-v252-maths-first-pure.cjs'
+      - 'tests/task1-v250-physics-electricity-applications.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v252-first-pure.yml'
+  push:
+    branches: [main]
+jobs:
+  first-pure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v250-physics-electricity-applications.cjs
+      - run: node tests/task1-v251-strict-numeric-units.cjs
+      - run: node tests/task1-v252-maths-first-pure.cjs
