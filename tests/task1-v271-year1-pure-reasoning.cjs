@@ -6,7 +6,7 @@ assert.equal(bank.version,'v271');assert.equal(bank.questions.length,7);
 assert.equal(j('deck.json').cards.length,3345);
 assert.equal(j('exam_questions.json').questions.length,1268);
 const urls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,34);
+assert(urls.length>=34,'v271 original exam bank remains at index 33 after append-only supplements');
 assert.equal(urls[33],'maths_year1_pure_reasoning_v271.json');
 assert(sw.includes("'./maths_year1_pure_reasoning_v271.json'"));
 assert(sw.includes('-v271-year1-reasoning'));
