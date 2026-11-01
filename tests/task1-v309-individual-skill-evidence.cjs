@@ -64,6 +64,10 @@ assert.deepEqual(sc,{Physics:{sample:34,partial:6,unverified:6},Chemistry:{sampl
 assert.equal(ledger.summary.sample,54);assert.equal(ledger.summary.partial,10);assert.equal(ledger.summary.unverified,8);
 assert.equal(ledger.summary.rows,72);
 assert.equal(crossSection,6,'Six explicitly explained near-section specimen examples');
+// Diagnostic only: discover older mock cards with non-existent AQA 3.1.8.3 metadata.
+const otherWrongThermoRefs=selected.filter(c=>c.subject==='Chemistry'&&c.specRef==='3.1.8.3');
+console.log('V309_OTHER_THERMODYNAMICS_3_1_8_3_COUNT '+otherWrongThermoRefs.length);
+console.log('V309_OTHER_THERMODYNAMICS_3_1_8_3_IDS '+JSON.stringify(otherWrongThermoRefs.slice(0,30).map(c=>c.id)));
 console.log('PASS v309: '+ledger.rows.length+' provisional fine-grained AQA skills ('+JSON.stringify(sc)+'); '+checks+' evidence links from '+linked.size+' distinct real mock cards; '+accepted+' accepted and '+rejected+' rejected marker examples; '+crossSection+' explicit cross-section links.');
 console.log('V309_NEXT_REVIEW_GAPS_BEGIN');
 console.log(JSON.stringify(ledger.rows.filter(r=>r.status!=='sample').map(({id,subject,specRef,skill,status,notes})=>({id,subject,specRef,skill,status,notes})),null,2));
