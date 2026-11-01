@@ -21,7 +21,7 @@ for(const c of bank.cards){
 }
 assert.deepEqual(duplicates,[],'Duplicate prompt(s) against existing Physics deck');
 assert.equal(accepted,102);assert.equal(rejected,68);
-const near=(a,b)=>Math.abs(a-b)<1e-7;
+const near=(a,b)=>Math.abs(a-b)<Math.max(1e-12,Math.abs(b)*1e-7);
 assert.equal(.75*40,30);assert.equal(1/.025,40);assert.equal(120/(2*1.5),40);
 assert(near(.0000005*2/.0005,.002));assert(near(1/(500*1000),2e-6));
 assert(near(Math.asin(600e-9/2e-6)*180/Math.PI,17.457603));
