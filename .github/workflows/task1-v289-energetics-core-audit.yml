@@ -1,0 +1,17 @@
+name: Task 1 v289 Chemistry AS Energetics core content inspection
+on:
+  pull_request:
+    paths:
+      - 'tests/task1-v289-energetics-core-candidates.cjs'
+      - '.github/workflows/task1-v289-energetics-core-audit.yml'
+  push:
+    branches: [main]
+jobs:
+  energetics-candidate-inspection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v289-energetics-core-candidates.cjs
