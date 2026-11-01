@@ -27,7 +27,7 @@ for(const q of bank.questions){
  assert.equal(outcome.manualRequired,true);assert.equal(outcome.suggested,0);
  assert.equal(outcome.preds.length,q.marks);assert(outcome.preds.every(v=>v===false));
 }
-assert(app.includes("if(q.manualDiagramReview===true){beginManualExamReview(q);return;}"));
+assert(app.includes("if(q.manualDiagramReview===true||q.manualWorkingReview===true){beginManualExamReview(q);return;}"));
 assert(app.includes("window.RevisionSketch?.mount(q)"));assert(app.includes("window.RevisionScan?.mount(q.id)"));
 assert(!bank.questions.some(q=>q.prompt.toLowerCase().includes('how to prepare')||q.prompt.toLowerCase().includes('laboratory method')));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
