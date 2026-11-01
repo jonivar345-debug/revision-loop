@@ -35,7 +35,7 @@ for(const q of bank.questions){
 }
 const render=app.slice(app.indexOf('function renderExam(q){'),app.indexOf('function beginManualExamReview(q){'));
 assert(render.includes("q.manualDiagramReview?'Review diagram marking points manually'"));
-assert(render.includes("if(q.manualDiagramReview===true){beginManualExamReview(q);return;}"));
+assert(render.includes("if(q.manualDiagramReview===true||q.manualWorkingReview===true){beginManualExamReview(q);return;}"));
 assert(app.includes("window.RevisionSketch?.mount(q)"));
 assert(app.includes("window.RevisionScan?.mount(q.id)"));
 const manual=app.slice(app.indexOf('function beginManualExamReview(q){'),app.indexOf('function renderScoreEditor('));
