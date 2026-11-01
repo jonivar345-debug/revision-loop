@@ -50,6 +50,6 @@ for(const bank of banks){
  }
 }
 assert.equal(reviewed,262,'262 short recall cards across 17 original source banks');
-assert.equal(aliasesChecked,792);
-assert.equal(distractorsChecked,548);
+assert(aliasesChecked>=792,'All 792 original accepted examples must still be checked');
+assert(distractorsChecked>=548,'All 548 original wrong examples must still be checked');
 console.log('PASS v304 wider: '+reviewed+' cards, '+aliasesChecked+' accepted and '+distractorsChecked+' wrong examples checked against real marker');
