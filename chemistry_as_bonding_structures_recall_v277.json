@@ -1,0 +1,509 @@
+{
+  "version": "v277",
+  "createdAt": "2026-11-01",
+  "scope": "20 original AS Chemistry Bonding 3.1.3 short recall for ionic, covalent, metallic, giant and molecular structures and all named IMF types",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "notes": "Follow-up to v276, where metallic bonding and foundational structure definitions were less directly tested. No claim that the entire AS Chemistry mock is signed off.",
+  "cards": [
+    {
+      "id": "task1_v277_chem_bond_card_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which particles attract each other in an ionic lattice?",
+      "back": "Oppositely charged ions.",
+      "accept": [
+        "Oppositely charged ions.",
+        "positive and negative ions"
+      ],
+      "reject": [
+        "pairs of uncharged molecules",
+        "delocalised electrons only"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What type of force holds an ionic lattice together?",
+      "back": "Strong electrostatic attraction.",
+      "accept": [
+        "Strong electrostatic attraction.",
+        "electrostatic attraction between opposite charges"
+      ],
+      "reject": [
+        "London forces only",
+        "hydrogen bonds only"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What charge does an aluminium ion normally form in AS ionic formulae?",
+      "back": "+3.",
+      "accept": [
+        "+3.",
+        "3+"
+      ],
+      "reject": [
+        "2+",
+        "1-"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What charge does a sulfide ion have?",
+      "back": "2−.",
+      "accept": [
+        "2−.",
+        "-2"
+      ],
+      "reject": [
+        "2+",
+        "1-"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many shared electron pairs form one ordinary single covalent bond?",
+      "back": "One.",
+      "accept": [
+        "One.",
+        "1"
+      ],
+      "reject": [
+        "two",
+        "zero"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many shared electron pairs form a double covalent bond?",
+      "back": "Two.",
+      "accept": [
+        "Two.",
+        "2"
+      ],
+      "reject": [
+        "one",
+        "three"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many shared electron pairs form a triple covalent bond?",
+      "back": "Three.",
+      "accept": [
+        "Three.",
+        "3"
+      ],
+      "reject": [
+        "one",
+        "two"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How should a dative covalent bond be shown in a line-bond diagram?",
+      "back": "An arrow from electron-pair donor to acceptor.",
+      "accept": [
+        "An arrow from electron-pair donor to acceptor.",
+        "arrow donor to acceptor"
+      ],
+      "reject": [
+        "arrow acceptor to donor",
+        "an arrow showing an ion leaving"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_09",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which charged particles form the regular lattice in metallic bonding?",
+      "back": "Positive metal ions.",
+      "accept": [
+        "Positive metal ions.",
+        "metal cations"
+      ],
+      "reject": [
+        "negative nonmetal ions",
+        "neutral metal molecules"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_10",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What attracts the delocalised electrons in a metal lattice?",
+      "back": "The positive metal ions.",
+      "accept": [
+        "The positive metal ions.",
+        "electrostatic attraction to metal cations"
+      ],
+      "reject": [
+        "neutrons in metal atoms",
+        "permanent dipole molecules"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_11",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What carries electrical current through a solid metal?",
+      "back": "Mobile delocalised electrons.",
+      "accept": [
+        "Mobile delocalised electrons.",
+        "delocalised electrons"
+      ],
+      "reject": [
+        "mobile metal ions",
+        "moving protons"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_12",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why can metals be hammered into new shapes without immediately breaking metallic bonding?",
+      "back": "Layers of metal ions can slide while electrons remain delocalised.",
+      "accept": [
+        "Layers of metal ions can slide while electrons remain delocalised.",
+        "metal layers slide but delocalised bonding persists"
+      ],
+      "reject": [
+        "metal ions all become neutral atoms",
+        "all electrons leave the metal"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_13",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many other carbon atoms is a carbon atom covalently bonded to in diamond?",
+      "back": "Four.",
+      "accept": [
+        "Four.",
+        "4"
+      ],
+      "reject": [
+        "three",
+        "two"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_14",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many other carbon atoms is each carbon bonded to in a graphite layer?",
+      "back": "Three.",
+      "accept": [
+        "Three.",
+        "3"
+      ],
+      "reject": [
+        "four",
+        "six"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_15",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What holds individual iodine molecules together in solid iodine?",
+      "back": "London dispersion forces.",
+      "accept": [
+        "London dispersion forces.",
+        "induced dipole induced dipole forces"
+      ],
+      "reject": [
+        "ionic bonds",
+        "metallic bonds"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_16",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which intermolecular force acts specifically between molecules with permanent dipoles?",
+      "back": "Permanent dipole–dipole forces.",
+      "accept": [
+        "Permanent dipole–dipole forces.",
+        "permanent dipole dipole attraction"
+      ],
+      "reject": [
+        "metallic bonding",
+        "ionic lattice bonding"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_17",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What produces the temporary dipoles responsible for London forces?",
+      "back": "Fluctuations in electron distribution.",
+      "accept": [
+        "Fluctuations in electron distribution.",
+        "instantaneous uneven electron distribution"
+      ],
+      "reject": [
+        "fixed metal-ion charges",
+        "only hydrogen atoms"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_18",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What must an atom be bonded to for typical N/O/F hydrogen bonding with H?",
+      "back": "Hydrogen.",
+      "accept": [
+        "Hydrogen.",
+        "H atom"
+      ],
+      "reject": [
+        "sodium",
+        "carbon only"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_19",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why does melting molecular iodine not require breaking I–I covalent bonds?",
+      "back": "Only forces between I₂ molecules are overcome.",
+      "accept": [
+        "Only forces between I₂ molecules are overcome.",
+        "intermolecular forces break rather than covalent bonds"
+      ],
+      "reject": [
+        "iodine is a metal",
+        "iodine covalent bonds are ionic"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v277_chem_bond_card_20",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Bonding",
+      "courseTopic": "Bonding",
+      "revisionTopic": "Bonding",
+      "specRef": "3.1.3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why does solid NaCl not conduct although it contains charged ions?",
+      "back": "The ions are fixed in lattice positions.",
+      "accept": [
+        "The ions are fixed in lattice positions.",
+        "ions are not mobile in solid lattice"
+      ],
+      "reject": [
+        "it contains no charged particles",
+        "all ions are free to move"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
