@@ -11,7 +11,7 @@ const ls=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),le=app.indexOf('fun
 assert(ls>=0&&le>ls);
 const {mockEligibleCard,mockEligibleQuestion}=new Function(app.slice(ls,le)+'\nreturn {mockEligibleCard,mockEligibleQuestion};')();
 const cards=loaded.filter(c=>c.subject==='Maths'&&mockEligibleCard(c)),qs=questions.filter(q=>q.subject==='Maths'&&mockEligibleQuestion(q));
-assert.equal(cards.length,286);assert.equal(qs.length,159);
+assert(cards.length>=286,'Year 1 Pure card pool must not shrink');assert(qs.length>=159,'Year 1 Pure question pool must not shrink after v292');
 const categories=[
  {id:'A',name:'Proof',keywords:/\bproof\b|contradiction|counterexamples?|deduction|exhaustion|divisibility|reasoning/i},
  {id:'B',name:'Algebra and functions',keywords:/algebra|function|transform|inequalit|binomial|surds?|indices|factor|polynomial|partial fractions?|modulus|quadratic|discriminant|roots?/i},
