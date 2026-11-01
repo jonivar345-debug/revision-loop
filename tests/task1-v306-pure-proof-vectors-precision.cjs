@@ -48,9 +48,9 @@ assert.deepEqual(Object.values(counts),[6,7,6]);
 assert.equal(accepted,108);assert.equal(rejected,68);
 // Verify the key mathematical relationships independently, not just marking stored text.
 for(let n=-50;n<=50;n++){
- assert.equal((n**3-n)%6,0,'n³−n always divisible by 6');
- assert.equal((n*(n+1))%2,0,'consecutive-integer product always even');
- if(n%2===0)assert.equal(n**3%8,0,'even cube divisible by 8');
+ assert.equal(Math.abs((n**3-n)%6),0,'n³−n always divisible by 6');
+ assert.equal(Math.abs((n*(n+1))%2),0,'consecutive-integer product always even');
+ if(n%2===0)assert.equal(Math.abs(n**3%8),0,'even cube divisible by 8');
  if(Math.abs(n%2)===1)assert.equal(((n*n-1)%8+8)%8,0,'odd square one mod eight');
 }
 const vec=(A,B)=>[B[0]-A[0],B[1]-A[1]];
