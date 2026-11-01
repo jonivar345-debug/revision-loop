@@ -20,16 +20,21 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Why is n(n+1) even for every integer n?",
+      "front": "For integer n, why must n(n+1) be even?",
       "back": "One of two consecutive integers n and n+1 must be even.",
       "accept": [
         "One of two consecutive integers n and n+1 must be even.",
         "One of n or n+1 is even.",
-        "Consecutive integers include an even number."
+        "Consecutive integers include an even number.",
+        "The product includes an even integer.",
+        "Either n or n+1 is divisible by 2.",
+        "At least one of the consecutive numbers is even."
       ],
       "reject": [
         "n is always even.",
-        "Both consecutive integers are even."
+        "Both consecutive integers are even.",
+        "Both factors are always even.",
+        "The product is always odd."
       ],
       "strictRecall": true
     },
@@ -46,16 +51,20 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Why is n²−n even for any integer n?",
+      "front": "Why is n²−n even for every integer n?",
       "back": "n²−n = n(n−1), the product of two consecutive integers.",
       "accept": [
         "n²−n = n(n−1), the product of two consecutive integers.",
         "n(n−1) contains an even factor.",
-        "It is the product of two consecutive integers, one even."
+        "It is the product of two consecutive integers, one even.",
+        "n(n−1), and one of them is even.",
+        "n(n-1), a product with an even factor.",
+        "The factorisation n(n−1) includes an even integer."
       ],
       "reject": [
         "n²−n is always odd.",
-        "Every integer n is even."
+        "Every integer n is even.",
+        "n²−n=n(n+1)."
       ],
       "strictRecall": true
     },
@@ -72,16 +81,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Factor n³−n, then explain why it is divisible by 3 for integer n.",
+      "front": "n³−n=n(n−1)(n+1). Why is it divisible by 3?",
       "back": "n(n−1)(n+1); one of three consecutive integers is a multiple of 3.",
       "accept": [
         "n(n−1)(n+1); one of three consecutive integers is a multiple of 3.",
         "n(n-1)(n+1), and one factor is divisible by 3.",
-        "Three consecutive integers include a multiple of 3."
+        "Three consecutive integers include a multiple of 3.",
+        "One of n−1, n, n+1 is divisible by 3.",
+        "Every three successive integers contain a multiple of 3."
       ],
       "reject": [
         "n³−n = n(n−1), which always divides by 3.",
-        "All three factors are divisible by 3."
+        "All three factors are divisible by 3.",
+        "All three numbers must be multiples of 3."
       ],
       "strictRecall": true
     },
@@ -150,16 +162,20 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A = (2, −1) and B = (−4, 7). Find vector AB in component form.",
+      "front": "A=(2,−1), B=(−4,7). Find vector AB.",
       "back": "(−6, 8).",
       "accept": [
         "(−6, 8).",
         "(-6,8)",
-        "-6i + 8j"
+        "-6i + 8j",
+        "−6i+8j",
+        "(-6, 8)"
       ],
       "reject": [
         "(6, -8)",
-        "(-2, 6)"
+        "(-2, 6)",
+        "(6,8)",
+        "(-6,-8)"
       ],
       "strictRecall": true
     },
@@ -228,16 +244,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(1,2), B=(3,6), C=(5,10). What scalar k makes AC = k AB?",
+      "front": "AB=(2,4), AC=(4,8). Find k in AC=kAB.",
       "back": "2.",
       "accept": [
         "2.",
         "2",
-        "k = 2"
+        "k = 2",
+        "2.0",
+        "AC=2AB"
       ],
       "reject": [
         "1/2",
-        "3"
+        "3",
+        "0.5"
       ],
       "strictRecall": true
     },
@@ -254,16 +273,21 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(1,2), B=(3,6), C=(5,9). Are the three points collinear?",
+      "front": "A=(1,2), B=(3,6), C=(5,9). Are they collinear?",
       "back": "No, they are not collinear.",
       "accept": [
         "No, they are not collinear.",
         "Not collinear.",
-        "No; AB and AC are not parallel."
+        "No; AB and AC are not parallel.",
+        "No.",
+        "They are not on one straight line.",
+        "No, their gradients are different."
       ],
       "reject": [
         "Yes, they are collinear.",
-        "Yes; AC = 2 AB."
+        "Yes; AC = 2 AB.",
+        "Yes.",
+        "They all lie on the same straight line."
       ],
       "strictRecall": true
     },
