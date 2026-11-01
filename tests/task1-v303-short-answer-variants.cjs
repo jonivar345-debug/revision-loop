@@ -10,7 +10,9 @@ for(const c of bank){
  assert(c.method==='fill gaps'||!c.clozeParts,c.id+' unexpected cloze');
  const normalizedAccept=new Set(c.accept.map(api.normalise));
  const normalizedReject=new Set(c.reject.map(api.normalise));
- for(const x of normalizedReject)assert(!normalizedAccept.has(x),c.id+' contradiction: '+x);
+ // The two symbol-strict cards distinguish |ΔH| from signed ΔH using the exact-symbol guard,
+ // even though the ordinary prose normaliser deliberately strips vertical bars.
+ if(!c.strictSymbolRecall)for(const x of normalizedReject)assert(!normalizedAccept.has(x),c.id+' contradiction: '+x);
  for(const x of c.accept){
   const result=api.evaluateCard(c,x);
   assert.equal(result.status,'correct',c.id+' valid input '+JSON.stringify(x)+' marked '+JSON.stringify(result));
