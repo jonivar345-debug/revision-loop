@@ -161,6 +161,168 @@ function applyV287LegacySpecRefs(existing){
  return existing;
 }
 
+// v288: reviewed AS Chemistry Bonding core cards get precise AQA subsection tags.
+// Exact ID, topic and stage guard; never overwrite existing specRef or original card data.
+const V288_LEGACY_CHEM_BONDING_GROUPS=Object.freeze([
+ {
+  "subject": "Chemistry",
+  "topic": "Shapes",
+  "stage": "AS",
+  "specRef": "3.1.3.5",
+  "ids": [
+   "chem_shape_linear",
+   "chem_shape_trig",
+   "chem_shape_tetra",
+   "chem_lone_pair",
+   "chem_bonding_v48_01",
+   "chem_bonding_v48_02",
+   "chem_bonding_v48_03",
+   "chem_bonding_v48_04",
+   "chem_bonding_v48_05",
+   "chem_bonding_v48_06",
+   "chem_bonding_v48_07",
+   "chem_bonding_v48_08",
+   "chem_bonding_v48_09",
+   "chem_bonding_v48_10",
+   "chem_bonding_v48_11",
+   "chem_bonding_v48_12",
+   "chem_bonding_v48_13",
+   "chem_bonding_v48_14",
+   "chem_bonding_v48_15",
+   "chem_bonding_v48_16",
+   "chem_bonding_v48_17",
+   "chem_bonding_v48_18",
+   "chem_bonding_v48_19",
+   "chem_bonding_v48_20",
+   "chem_bonding_v48_21",
+   "chem_bonding_v48_22",
+   "chem_bonding_v52_10",
+   "chem_bonding_v52_11",
+   "chem_bonding_v52_12",
+   "chem_bonding_v52_13",
+   "chem_bonding_v52_14",
+   "chem_bonding_v52_15",
+   "chem_bonding_v52_16",
+   "chem_bonding_v52_17",
+   "chem_bonding_v52_18",
+   "chem_bonding_v52_19",
+   "chem_bonding_v52_20",
+   "chem_bonding_v52_21",
+   "chem_bonding_v52_22",
+   "chem_bonding_v52_23",
+   "chem_bonding_v52_24",
+   "chem_bonding_v52_25",
+   "chem_bonding_v52_26",
+   "chem_bonding_v52_47"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "topic": "Intermolecular forces",
+  "stage": "AS",
+  "specRef": "3.1.3.7",
+  "ids": [
+   "chem_hbond",
+   "v33_card_chemistry_intermolecular_forces_43",
+   "chem_bonding_v48_31",
+   "chem_bonding_v48_32",
+   "chem_bonding_v48_33",
+   "chem_bonding_v48_34",
+   "chem_bonding_v48_35",
+   "chem_bonding_v48_36",
+   "chem_bonding_v48_37",
+   "chem_bonding_v48_38",
+   "chem_bonding_v48_39",
+   "chem_bonding_v48_40",
+   "chem_bonding_v48_41",
+   "chem_bonding_v48_42",
+   "chem_bonding_v48_43",
+   "chem_bonding_v48_44",
+   "chem_bonding_v48_45",
+   "chem_bonding_v48_46",
+   "chem_bonding_v48_47",
+   "chem_bonding_v52_35",
+   "chem_bonding_v52_36",
+   "chem_bonding_v52_37",
+   "chem_bonding_v52_38",
+   "chem_bonding_v52_39",
+   "chem_bonding_v52_40",
+   "chem_bonding_v52_41",
+   "chem_bonding_v52_42",
+   "chem_bonding_v52_43",
+   "chem_bonding_v52_45",
+   "chem_bonding_v52_48"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "topic": "Crystal structures",
+  "stage": "AS",
+  "specRef": "3.1.3.4",
+  "ids": [
+   "chem_bonding_v47_21",
+   "chem_bonding_v47_22",
+   "chem_bonding_v47_23",
+   "chem_bonding_v47_24",
+   "chem_bonding_v47_25",
+   "chem_bonding_v47_26",
+   "chem_bonding_v47_27",
+   "chem_bonding_v47_28",
+   "chem_bonding_v47_29",
+   "chem_bonding_v47_30",
+   "chem_bonding_v47_31",
+   "chem_bonding_v47_32",
+   "chem_bonding_v47_33",
+   "chem_bonding_v47_34",
+   "chem_bonding_v47_35",
+   "chem_bonding_v47_36",
+   "chem_bonding_v47_37",
+   "chem_bonding_v47_38",
+   "chem_bonding_v47_39",
+   "chem_bonding_v47_40",
+   "chem_bonding_v47_41",
+   "chem_bonding_v47_42"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "topic": "Bond polarity",
+  "stage": "AS",
+  "specRef": "3.1.3.6",
+  "ids": [
+   "chem_bonding_v48_23",
+   "chem_bonding_v48_24",
+   "chem_bonding_v48_25",
+   "chem_bonding_v48_26",
+   "chem_bonding_v48_27",
+   "chem_bonding_v48_28",
+   "chem_bonding_v48_29",
+   "chem_bonding_v48_30",
+   "chem_bonding_v52_27",
+   "chem_bonding_v52_28",
+   "chem_bonding_v52_29",
+   "chem_bonding_v52_30",
+   "chem_bonding_v52_31",
+   "chem_bonding_v52_32",
+   "chem_bonding_v52_33",
+   "chem_bonding_v52_34",
+   "chem_bonding_v52_46"
+  ]
+ }
+]);
+function applyV288LegacyChemBondingSpecRefs(existing){
+ const byId=new Map();
+ for(const group of V288_LEGACY_CHEM_BONDING_GROUPS)for(const id of group.ids)
+  byId.set(id,group);
+ for(const card of existing){
+  const group=byId.get(card.id);
+  if(group&&card.subject===group.subject&&card.topic===group.topic&&
+     card.stage===group.stage&&!String(card.specRef||'').trim())
+   card.specRef=group.specRef;
+ }
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -3998,6 +4160,7 @@ async function sync(manual=false){
  applyV221RpCorrections(cards);
  // Map only the 110 individually reviewed legacy core cards to their AQA subsections.
  applyV287LegacySpecRefs(cards);
+ applyV288LegacyChemBondingSpecRefs(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
