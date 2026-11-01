@@ -1,0 +1,11 @@
+name: Task 1 v309 fine-grained AQA Physics and Chemistry skill evidence
+on: [pull_request]
+jobs:
+  individual-spec-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v309-individual-skill-evidence.cjs
+      - run: node tests/task1-v230-physics-mechanics-materials.cjs
+      - run: node tests/task1-v298-mixed-short-cloze-mock.cjs
+      - run: node tests/task1-v307-mechanics-thermo-real-marker.cjs
