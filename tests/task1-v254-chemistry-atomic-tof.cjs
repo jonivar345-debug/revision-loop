@@ -34,7 +34,7 @@ const a=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),b=app.i
 const loader=new Function('cards','extraFlashBanks',app.slice(a,b)+'\nreturn cards;');
 const good=Array.from({length:40},()=>({cards:[]}));good[39]=bank;
 assert.equal(loader([...deck.cards],good).length,3375);
-const bad=Array.from({length:40},()=>({cards:[]));bad[39]={cards:bank.cards.slice(0,7).map((c,i)=>({...c,...[
+const bad=Array.from({length:40},()=>({cards:[]}));bad[39]={cards:bank.cards.slice(0,7).map((c,i)=>({...c,...[
  {subject:'Physics'},{stage:'A2'},{mock:false},{taught:false},{scope:'full'},{active:false},{specRef:'3.1.8'}
 ][i]}))};assert.equal(loader([...deck.cards],bad).length,3345);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
