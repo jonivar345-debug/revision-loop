@@ -1,0 +1,44 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
+const app=read('app.js'),sw=read('sw.js'),core=j('deck.json'),orig=j('exam_questions.json'),bank=j('maths_year1_trigonometry_differentiation_practice_v292.json');
+assert.equal(core.cards.length,3345);assert.equal(orig.questions.length,1268);
+const qs=bank.questions;assert.equal(qs.length,6);assert.equal(qs.filter(x=>x.topic==='Trigonometry').length,3);assert.equal(qs.filter(x=>x.topic==='Differentiation').length,3);
+const urls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
+assert.equal(urls.length,44);assert.equal(urls[43],'maths_year1_trigonometry_differentiation_practice_v292.json');
+assert(sw.includes("'./maths_year1_trigonometry_differentiation_practice_v292.json'"));assert(sw.includes('-v292-pure-trig-diff'));
+const prior=new Set([...orig.questions,...urls.slice(0,43).flatMap(f=>j(f).questions||[])].map(x=>x.id));
+const start=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),end=app.indexOf('function startMockSession(){',start);
+assert(start>=0&&end>start);
+const {mockEligibleQuestion}=new Function(app.slice(start,end)+'\nreturn {mockEligibleQuestion};')();
+let marks=0;
+for(const q of qs){
+ assert(!prior.has(q.id),'Question collision '+q.id);assert.equal(q.subject,'Maths');assert.equal(q.level,'AS');assert.equal(q.mock,true);assert.equal(q.taught,true);
+ assert.equal(q.standalone,true);assert.equal(q.requiresWorking,true);assert.equal(q.sourceVerified,false);assert.equal(q.verificationLevel,'original-exam-style');
+ assert.equal(q.markPoints.length,q.marks);assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));assert(q.prompt.includes('['+q.marks+' marks]'));
+ assert(q.modelAnswer.length>180);assert(!/radians?|product rule|quotient rule|chain rule|partial fraction|integration by parts|statistics|mechanics/i.test(q.prompt),'Unexpected Year 2 or applied scope '+q.id);
+ assert(mockEligibleQuestion(q),'Excluded from current first mock '+q.id);
+ marks+=q.marks;
+}
+assert.equal(marks,41);
+const graphic=qs.filter(q=>q.manualDiagramReview);assert.equal(graphic.length,1);assert.equal(graphic[0].id,'task1_v292_maths_pure_q03');
+const es=app.indexOf('function examSuggested(q,answer){'),ee=app.indexOf(' // v213:',es);assert(es>=0&&ee>es);
+const examSuggested=new Function('window',app.slice(es,ee)+'\n}\nreturn examSuggested;')({});
+const suggested=examSuggested(graphic[0],'a perfectly described sine curve with maxima, minimum, roots and correct units but no visual graph');
+assert.equal(suggested.manualRequired,true);assert.equal(suggested.suggested,0);assert.deepEqual(suggested.preds,Array(graphic[0].marks).fill(false));
+const near=(a,b,t=1e-8)=>Math.abs(a-b)<t,rad=x=>x*Math.PI/180;
+for(const t of [30,90,150])assert(near(2*Math.sin(rad(t))**2-3*Math.sin(rad(t))+1,0));
+const numericRoots=[];for(let t=0;t<360;t+=.1){const v=2*Math.sin(rad(t))**2-3*Math.sin(rad(t))+1;if(Math.abs(v)<1e-8)numericRoots.push(Math.round(t*10)/10);}
+assert(numericRoots.includes(30)&&numericRoots.includes(90)&&numericRoots.includes(150));
+const BC=Math.sqrt(64+144-2*8*12*Math.cos(rad(60)));
+const B=Math.acos((64+BC**2-144)/(2*8*BC))*180/Math.PI,C=120-B,area=.5*8*12*Math.sin(rad(60));
+assert(near(BC,Math.sqrt(112)));assert(near(B,79.1066053508691,1e-5));assert(near(C,40.8933946491309,1e-5));assert(near(area,24*Math.sqrt(3)));
+assert(near(2*Math.sin(rad(30))-1,0));assert(near(2*Math.sin(rad(150))-1,0));
+assert(near(2*Math.sin(rad(90))-1,1));assert(near(2*Math.sin(rad(270))-1,-3));
+const f=x=>2*x**3-15*x**2+24*x+7,fp=x=>6*x**2-30*x+24,fpp=x=>12*x-30;
+assert(near(f(1),18)&&near(f(4),-9));assert(near(fp(1),0)&&near(fp(4),0));assert(fpp(1)<0&&fpp(4)>0);
+const y=x=>3/x+2*x*x,dy=x=>-3/(x*x)+4*x;
+assert(near(y(1),5));assert(near(dy(1),1));assert(near(1+4,5));assert(near(-1+6,5));
+const a=-11/2,b=10,param=x=>x**3+a*x*x+b*x+1,grad=x=>3*x*x+2*a*x+b;
+assert(near(param(2),7));assert(near(grad(2),0));assert(6*2+2*a>0);
+for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
+console.log('PASS v292: six original first-mock AS Pure questions (41 marks), 3 trig/3 differentiation, independent calculations, graph manual-only, correct eligibility and unchanged saved progress.');
