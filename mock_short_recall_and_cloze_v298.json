@@ -121,15 +121,15 @@
       "active": true,
       "kind": "short",
       "method": "definition",
-      "front": "What does signed area on an acceleration–time graph give?",
-      "back": "Change in velocity.",
+      "front": "On an a–t graph, a=+3 m s⁻² for 4 s. Change in velocity?",
+      "back": "+12 m s⁻¹",
       "accept": [
-        "Change in velocity.",
-        "Delta v."
+        "+12 m s⁻¹",
+        "12 m/s"
       ],
       "reject": [
-        "Distance travelled.",
-        "Not Change in velocity."
+        "+7 m/s",
+        "Not +12 m s⁻¹"
       ],
       "strictRecall": true
     },
@@ -199,15 +199,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "At the highest point of an ideal projectile, vertical velocity is?",
-      "back": "Zero.",
+      "front": "At a projectile's highest point (up positive), vertical acceleration?",
+      "back": "−g",
       "accept": [
-        "Zero.",
-        "0 m s⁻¹"
+        "−g",
+        "g downwards"
       ],
       "reject": [
-        "Maximum.",
-        "Not Zero."
+        "0",
+        "Not −g"
       ],
       "strictRecall": true
     },
@@ -225,15 +225,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "Ignoring drag, what is a projectile's horizontal acceleration?",
-      "back": "Zero.",
+      "front": "Horizontal speed 12 m s⁻¹ for 3 s, no drag. Projectile range?",
+      "back": "36 m",
       "accept": [
-        "Zero.",
-        "0 m s⁻²"
+        "36 m",
+        "36 metres"
       ],
       "reject": [
-        "g.",
-        "Not Zero."
+        "4 m",
+        "Not 36 m"
       ],
       "strictRecall": true
     },
@@ -303,15 +303,15 @@
       "active": true,
       "kind": "short",
       "method": "definition",
-      "front": "For an ideal couple, what is the resultant force?",
-      "back": "Zero.",
+      "front": "A couple: two 4 N forces 0.25 m apart. Moment magnitude?",
+      "back": "1.0 N m",
       "accept": [
-        "Zero.",
-        "0 N"
+        "1.0 N m",
+        "1 Nm"
       ],
       "reject": [
-        "Twice one force.",
-        "Not Zero."
+        "0.25 Nm",
+        "Not 1.0 N m"
       ],
       "strictRecall": true
     },
@@ -589,15 +589,15 @@
       "active": true,
       "kind": "short",
       "method": "definition",
-      "front": "Separation of adjacent nodes in a stationary wave?",
-      "back": "Half a wavelength.",
+      "front": "Separation from a stationary-wave node to nearest antinode?",
+      "back": "λ/4",
       "accept": [
-        "Half a wavelength.",
-        "λ/2"
+        "λ/4",
+        "Quarter wavelength"
       ],
       "reject": [
-        "One wavelength.",
-        "Not Half a wavelength."
+        "λ/2",
+        "Not λ/4"
       ],
       "strictRecall": true
     },
@@ -771,15 +771,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "Cell terminal p.d. V in terms of emf ε, current I and resistance r?",
-      "back": "V = ε − Ir",
+      "front": "Cell emf 6 V, I=2 A, r=1 Ω. Find terminal p.d.",
+      "back": "4 V",
       "accept": [
-        "V = ε − Ir",
-        "Emf minus lost volts."
+        "4 V",
+        "4 volts"
       ],
       "reject": [
-        "V = ε + Ir",
-        "Not V = ε − Ir"
+        "8 V",
+        "Not 4 V"
       ],
       "strictRecall": true
     },
@@ -901,15 +901,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "Relative atomic mass is a mean weighted by isotope what?",
-      "back": "Abundance.",
+      "front": "Isotopes of masses 35 (75%) and 37 (25%): relative atomic mass?",
+      "back": "35.5",
       "accept": [
-        "Abundance.",
-        "Relative abundance."
+        "35.5",
+        "35.50"
       ],
       "reject": [
-        "Charge.",
-        "Not Abundance."
+        "36.0",
+        "Not 35.5"
       ],
       "strictRecall": true
     },
@@ -979,15 +979,15 @@
       "active": true,
       "kind": "short",
       "method": "explain",
-      "front": "Why does Al have lower first ionisation energy than Mg?",
-      "back": "Al removes a 3p electron.",
+      "front": "For aluminium, which subshell loses its electron on first ionisation?",
+      "back": "3p",
       "accept": [
-        "Al removes a 3p electron.",
-        "3p is higher energy than 3s."
+        "3p",
+        "Aluminium's 3p subshell"
       ],
       "reject": [
-        "Al has fewer protons.",
-        "Not Al removes a 3p electron."
+        "3s",
+        "Not 3p"
       ],
       "strictRecall": true
     },
@@ -1005,15 +1005,15 @@
       "active": true,
       "kind": "short",
       "method": "explain",
-      "front": "Why is first ionisation energy of S lower than P?",
-      "back": "Paired 3p electron repulsion.",
+      "front": "Which subshell has the newly paired electron in sulfur?",
+      "back": "3p",
       "accept": [
-        "Paired 3p electron repulsion.",
-        "Repulsion in paired 3p orbital."
+        "3p",
+        "The 3p subshell"
       ],
       "reject": [
-        "S has fewer electrons.",
-        "Not Paired 3p electron repulsion."
+        "3s",
+        "Not 3p"
       ],
       "strictRecall": true
     },
@@ -1057,15 +1057,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "Molecular shape of ammonia NH₃?",
-      "back": "Trigonal pyramidal.",
+      "front": "Approximate H–N–H bond angle in NH₃?",
+      "back": "107°",
       "accept": [
-        "Trigonal pyramidal.",
-        "Pyramidal."
+        "107°",
+        "107 degrees"
       ],
       "reject": [
-        "Trigonal planar.",
-        "Not Trigonal pyramidal."
+        "109.5°",
+        "Not 107°"
       ],
       "strictRecall": true
     },
@@ -1083,15 +1083,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "Molecular shape of H₂O?",
-      "back": "Bent.",
+      "front": "Approximate bond angle in water?",
+      "back": "104.5°",
       "accept": [
-        "Bent.",
-        "V-shaped."
+        "104.5°",
+        "104.5 degrees"
       ],
       "reject": [
-        "Linear.",
-        "Not Bent."
+        "107°",
+        "Not 104.5°"
       ],
       "strictRecall": true
     },
@@ -1135,15 +1135,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "Sign of enthalpy change ΔH for an exothermic reaction?",
-      "back": "Negative.",
+      "front": "If ΔH=−100 kJ mol⁻¹, heat released by 0.20 mol?",
+      "back": "20 kJ",
       "accept": [
-        "Negative.",
-        "Below zero."
+        "20 kJ",
+        "20 kilojoules"
       ],
       "reject": [
-        "Positive.",
-        "Not Negative."
+        "100 kJ",
+        "Not 20 kJ"
       ],
       "strictRecall": true
     },
@@ -1246,15 +1246,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "What standard pressure is used for standard enthalpy data?",
-      "back": "100 kPa.",
+      "front": "Temperature commonly quoted for standard enthalpy data?",
+      "back": "298 K",
       "accept": [
-        "100 kPa.",
-        "One hundred kilopascals."
+        "298 K",
+        "25 °C"
       ],
       "reject": [
-        "101 kPa.",
-        "Not 100 kPa."
+        "273 K",
+        "Not 298 K"
       ],
       "strictRecall": true
     },
@@ -1428,15 +1428,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "Gradient of ln k plotted against reciprocal temperature 1/T?",
-      "back": "−Ea/R",
+      "front": "Arrhenius plot gradient −6000 K. Find Ea if R=8.31.",
+      "back": "49.9 kJ mol⁻¹",
       "accept": [
-        "−Ea/R",
-        "Negative activation energy over R."
+        "49.9 kJ mol⁻¹",
+        "49860 J mol⁻¹"
       ],
       "reject": [
-        "+Ea/R",
-        "Not −Ea/R"
+        "6000 kJ mol⁻¹",
+        "Not 49.9 kJ mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -1532,15 +1532,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "What functional group results from an acyl chloride plus primary amine?",
-      "back": "An amide.",
+      "front": "Acyl chloride reacts with ammonia. What type of amide forms?",
+      "back": "Primary amide",
       "accept": [
-        "An amide.",
-        "Amide linkage."
+        "Primary amide",
+        "An unsubstituted amide"
       ],
       "reject": [
-        "An aldehyde.",
-        "Not An amide."
+        "N-substituted amide",
+        "Not Primary amide"
       ],
       "strictRecall": true
     },
@@ -1870,15 +1870,15 @@
       "active": true,
       "kind": "short",
       "method": "comparison",
-      "front": "For y=f(2x), what is horizontal scale factor?",
-      "back": "1/2",
+      "front": "Under y=f(2x), where does turning point (4,7) move?",
+      "back": "(2,7)",
       "accept": [
-        "1/2",
-        "One half."
+        "(2,7)",
+        "x=2,y=7"
       ],
       "reject": [
-        "2",
-        "Not 1/2"
+        "(8,7)",
+        "Not (2,7)"
       ],
       "strictRecall": true
     },
@@ -2078,15 +2078,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "Arithmetic sequence first term a, difference d: nth term?",
-      "back": "a+(n−1)d",
+      "front": "Arithmetic sequence 7, 11, 15, ... : nth term?",
+      "back": "4n+3",
       "accept": [
-        "a+(n−1)d",
-        "a plus (n-1)d"
+        "4n+3",
+        "3+4n"
       ],
       "reject": [
-        "ar^(n−1)",
-        "Not a+(n−1)d"
+        "4n+7",
+        "Not 4n+3"
       ],
       "strictRecall": true
     },
@@ -2208,15 +2208,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "For a triangle with sides a,b and included angle C, area?",
-      "back": "½ab sin C",
+      "front": "Triangle sides 8 and 5 enclose 30°. Find its area.",
+      "back": "10",
       "accept": [
-        "½ab sin C",
-        "0.5 ab sine C"
+        "10",
+        "10 square units"
       ],
       "reject": [
-        "ab cos C",
-        "Not ½ab sin C"
+        "20",
+        "Not 10"
       ],
       "strictRecall": true
     },
@@ -2450,15 +2450,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "Magnitude of vector (3,4)?",
-      "back": "5",
+      "front": "Find a unit vector along (6,8).",
+      "back": "(3/5,4/5)",
       "accept": [
-        "5",
-        "Five."
+        "(3/5,4/5)",
+        "(0.6,0.8)"
       ],
       "reject": [
-        "7",
-        "Not 5"
+        "(6,8)",
+        "Not (3/5,4/5)"
       ],
       "strictRecall": true
     },
