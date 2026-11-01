@@ -1,0 +1,86 @@
+{
+  "version": "v291",
+  "date": "2026-11-01",
+  "officialPureSpec": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content",
+  "schoolFirstMock": "Only Year 12/AS Pure across the two classroom Pure papers. No Statistics, Mechanics, Year 2, or radians.",
+  "eligibleCards": 286,
+  "eligibleOriginalAndSupplementalPractice": 159,
+  "notes": [
+    "Counts from actual app.js mockEligibleCard/mockEligibleQuestion and question banks; topic groups overlap if source labels are broad.",
+    "Coverage is preliminary evidence, NOT every assessable bullet or unseen-answer certification.",
+    "More original problems in trigonometry and differentiation would improve application breadth before the first mock."
+  ],
+  "topicEvidence": [
+    {
+      "aqa": "A",
+      "name": "Proof",
+      "cards": 35,
+      "questions": 13
+    },
+    {
+      "aqa": "B",
+      "name": "Algebra and functions",
+      "cards": 77,
+      "questions": 64
+    },
+    {
+      "aqa": "C",
+      "name": "Coordinate geometry",
+      "cards": 27,
+      "questions": 18
+    },
+    {
+      "aqa": "D",
+      "name": "Sequences and series",
+      "cards": 30,
+      "questions": 14
+    },
+    {
+      "aqa": "E",
+      "name": "Trigonometry",
+      "cards": 27,
+      "questions": 5
+    },
+    {
+      "aqa": "F",
+      "name": "Exponentials and logarithms",
+      "cards": 17,
+      "questions": 17
+    },
+    {
+      "aqa": "G",
+      "name": "Differentiation",
+      "cards": 19,
+      "questions": 6
+    },
+    {
+      "aqa": "H",
+      "name": "Integration",
+      "cards": 17,
+      "questions": 14
+    },
+    {
+      "aqa": "J",
+      "name": "Vectors",
+      "cards": 37,
+      "questions": 14
+    }
+  ],
+  "scienceMetadataAfterV290": {
+    "originalLegacyUntagged": 971,
+    "curatedRuntimeTags": 353,
+    "remainingUntypedPhysicsCards": 234,
+    "remainingUntypedChemistryCards": 384,
+    "remainingTotal": 618,
+    "physicsMockCards": 1056,
+    "chemistryMockCards": 1866,
+    "scienceMockSemanticCompletionCertified": false
+  },
+  "certification": {
+    "allNineYear1PureTopicFamiliesHaveSelectedEvidence": true,
+    "allYear1PureSpecBulletsReviewed": false,
+    "allQuestionWorkedSolutionsVerified": false,
+    "allUnfamiliarAnswerAlternativeMarksVerified": false,
+    "task1Complete": false
+  }
+}

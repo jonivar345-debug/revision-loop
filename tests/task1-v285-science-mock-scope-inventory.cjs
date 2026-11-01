@@ -6,14 +6,23 @@ const flash=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAl
 const qfiles=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const a=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),b=app.indexOf(' const added=[',a);
 assert(a>=0&&b>a);
-const allCards=new Function('cards','extraFlashBanks',app.slice(a,b)+'\nreturn cards;')([...core.cards],flash.map(j));
+// Mirror the site's runtime-only legacy metadata tags before measuring missing specRefs.
+// The original deck.json stays untouched, and this does not change eligibility.
+const mappedCore=JSON.parse(JSON.stringify(core.cards));
+const mapStart=app.indexOf('// v287: exact-ID AQA AS subsection metadata'),mapEnd=app.indexOf('// v217: Fix three previously audited legacy Chemistry cards',mapStart);
+assert(mapStart>=0&&mapEnd>mapStart,'The current deck mapping functions must be present');
+const maps=new Function(app.slice(mapStart,mapEnd)+'\nreturn {applyV287LegacySpecRefs,applyV288LegacyChemBondingSpecRefs,applyV289LegacyEnergeticsSpecRefs,applyV290LegacyElectricitySpecRefs};')();
+for(const fn of Object.values(maps))fn(mappedCore);
+const runtimeMetadataUpdates=mappedCore.filter((c,i)=>String(c.specRef||'')!==String(core.cards[i].specRef||'')).length;
+assert.equal(runtimeMetadataUpdates,353,'The four independently verified exact-ID maps should attach 353 new AQA references');
+const allCards=new Function('cards','extraFlashBanks',app.slice(a,b)+'\nreturn cards;')(mappedCore,flash.map(j));
 const allQuestions=[...original.questions,...qfiles.flatMap(f=>j(f).questions||[])];
 const start=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),end=app.indexOf('function startMockSession(){',start);
 assert(start>=0&&end>start);
 const {mockEligibleCard,mockEligibleQuestion}=new Function(app.slice(start,end)+'\nreturn {mockEligibleCard,mockEligibleQuestion};')();
 const counts=items=>{const map={};for(const x of items){const ref=String(x.specRef||'not specified');map[ref]=(map[ref]||0)+1;}return Object.entries(map).sort((a,b)=>b[1]-a[1]).map(([ref,count])=>({ref,count}));};
 const distribution=items=>{const map={};for(const x of items){const stage=String(x.stage||x.level||'not specified');map[stage]=(map[stage]||0)+1;}return map;};
-const review={version:'v285',allLoadedCards:allCards.length,allExamQuestions:allQuestions.length};
+const review={version:'v285/v291',runtimeLegacySpecTagsApplied:runtimeMetadataUpdates,allLoadedCards:allCards.length,allExamQuestions:allQuestions.length};
 for(const subject of ['Physics','Chemistry']){
  const cards=allCards.filter(c=>c.subject===subject&&c.active!==false&&mockEligibleCard(c));
  const qs=allQuestions.filter(q=>q.subject===subject&&mockEligibleQuestion(q));
