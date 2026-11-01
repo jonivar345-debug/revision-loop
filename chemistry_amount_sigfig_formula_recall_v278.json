@@ -1,0 +1,359 @@
+{
+  "version": "v278",
+  "createdAt": "2026-11-01",
+  "scope": "14 original concise AQA AS Amount of Substance 3.1.2 cards including v239's two core-only gaps: ionic relative formula mass and significant-figure precision",
+  "officialSpec": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "notes": "Original card answers; values of NA and R are not required AQA recall, and no experimental procedure is supplied. Supplemental practice is not proof of core-deck certification.",
+  "cards": [
+    {
+      "id": "task1_v278_chem_amount_card_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ionic Ca(NO₃)₂, what term is preferred instead of relative molecular mass?",
+      "back": "Relative formula mass.",
+      "accept": [
+        "Relative formula mass.",
+        "formula mass"
+      ],
+      "reject": [
+        "relative molecular mass of one Ca(NO3)2 molecule",
+        "mass number"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the relative formula mass of Ca(NO₃)₂ if Ar: Ca=40.1, N=14.0, O=16.0?",
+      "back": "164.1.",
+      "accept": [
+        "164.1.",
+        "164.1"
+      ],
+      "reject": [
+        "102.1",
+        "124.1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Does relative formula mass have a unit?",
+      "back": "No; it is a relative ratio.",
+      "accept": [
+        "No; it is a relative ratio.",
+        "no units"
+      ],
+      "reject": [
+        "grams",
+        "g mol-1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Round 0.006443396 mol to three significant figures.",
+      "back": "0.00644 mol.",
+      "accept": [
+        "0.00644 mol.",
+        "0.00644"
+      ],
+      "reject": [
+        "0.0064",
+        "0.006443"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If one input quantity is 3 s.f. and another is 4 s.f., how many s.f. should a typical multiplied result have?",
+      "back": "3 significant figures.",
+      "accept": [
+        "3 significant figures.",
+        "3 s.f."
+      ],
+      "reject": [
+        "4 significant figures",
+        "7 significant figures"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Convert 25.0 cm³ into dm³ while retaining three significant figures.",
+      "back": "0.0250 dm³.",
+      "accept": [
+        "0.0250 dm³.",
+        "0.0250"
+      ],
+      "reject": [
+        "0.250 dm3",
+        "0.00250 dm3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two burette readings have uncertainty ±0.05 cm³ each. What is uncertainty in their difference?",
+      "back": "±0.10 cm³.",
+      "accept": [
+        "±0.10 cm³.",
+        "0.10 cm3"
+      ],
+      "reject": [
+        "±0.05 cm3",
+        "±0.50 cm3"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many ions are produced per formula unit when CaCl₂ fully dissociates?",
+      "back": "3 ions.",
+      "accept": [
+        "3 ions.",
+        "3"
+      ],
+      "reject": [
+        "2 ions",
+        "4 ions"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_09",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many moles of Na⁺ come from 0.0100 mol Na₂SO₄ in complete dissociation?",
+      "back": "0.0200 mol.",
+      "accept": [
+        "0.0200 mol.",
+        "0.0200"
+      ],
+      "reject": [
+        "0.0100 mol",
+        "0.0400 mol"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_10",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A sample has mass 2.50 g and molar mass 100.0 g mol⁻¹. What is its amount in moles?",
+      "back": "0.0250 mol.",
+      "accept": [
+        "0.0250 mol.",
+        "0.0250"
+      ],
+      "reject": [
+        "40 mol",
+        "0.250 mol"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_11",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many specified entities are present in one mole?",
+      "back": "The Avogadro constant's number of entities.",
+      "accept": [
+        "The Avogadro constant's number of entities.",
+        "Avogadro constant of entities"
+      ],
+      "reject": [
+        "one entity",
+        "one gram of each entity"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_12",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is a limiting reactant?",
+      "back": "The reactant exhausted first, restricting the maximum product made.",
+      "accept": [
+        "The reactant exhausted first, restricting the maximum product made.",
+        "reactant used up first"
+      ],
+      "reject": [
+        "the reactant in the largest mole amount",
+        "the catalyst"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_13",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the purpose of the whole-number mole ratio in a hydrate calculation?",
+      "back": "It gives the water of crystallisation coefficient.",
+      "accept": [
+        "It gives the water of crystallisation coefficient.",
+        "finds x in salt dot x H2O"
+      ],
+      "reject": [
+        "it gives reaction temperature",
+        "it determines gas pressure"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v278_chem_amount_card_14",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "specRef": "3.1.2.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For CaCO₃+2HCl→CaCl₂+CO₂+H₂O, how many moles HCl react with 0.0100 mol CaCO₃?",
+      "back": "0.0200 mol.",
+      "accept": [
+        "0.0200 mol.",
+        "0.0200"
+      ],
+      "reject": [
+        "0.00500 mol",
+        "0.0100 mol"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
