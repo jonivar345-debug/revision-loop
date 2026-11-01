@@ -1,0 +1,71 @@
+{
+  "version": "v259",
+  "snapshotDate": "2026-11-01",
+  "scope": "evidence-status reconciliation, not new content certification",
+  "repository": "jonivar345-debug/revision-loop",
+  "baseCore": {
+    "records": 3345,
+    "active": 3341,
+    "historicalOriginalPracticeQuestions": 1268
+  },
+  "legacyScienceWithoutDirectSpecRef": {
+    "records": 971,
+    "firstPassIndividuallyReviewed": true,
+    "initialBeforeV181": 283,
+    "batches": {
+      "v181": 210,
+      "v182": 220,
+      "v183": 86,
+      "v184": 172
+    },
+    "remainingUnreviewedInThisHistoricalSubset": 0,
+    "allVerifiedAgainstIndividualFullAQABullets": false
+  },
+  "firstMathsMock": {
+    "schoolScope": "Year 1 Pure only, first mock Papers 1+2",
+    "excluded": [
+      "Year 2 Pure",
+      "Statistics",
+      "Mechanics",
+      "untaught numerical methods"
+    ]
+  },
+  "evidenceCrosswalks": {
+    "physicsMeasurements": {
+      "path": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "requirements": 27,
+      "fullySignedOff": false
+    },
+    "physicsParticles": {
+      "path": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirements": 48,
+      "fullySignedOff": false
+    },
+    "mathsFirstPure": {
+      "path": "editorial/task1-v244-maths-year1-pure-crosswalk.json",
+      "requirements": 50,
+      "fullySignedOff": false
+    },
+    "chemistryASEnergetics": {
+      "path": "editorial/task1-v240-chemistry-energetics-crosswalk.json",
+      "requirements": 28,
+      "fullySignedOff": false
+    }
+  },
+  "stillOpen": [
+    "Complete all mock-specific AQA specification bullets to verified card/question evidence",
+    "Independently verify every core and supplement answer for meaning, including non-vetted correct paraphrases",
+    "Verify unfamiliar multi-mark examiner questions and error-carried-forward marks",
+    "Verify drawing, diagram, graph and photographed-working marking in realistic conditions",
+    "Check physical and chemical required-practical data analysis and school mock boundaries",
+    "Verify historical AQA 2015–2026 official paper coverage without inventing past-paper questions",
+    "Confirm actual deployed site and cloud restore preservation"
+  ],
+  "completion": {
+    "legacySubsetFirstPassComplete": true,
+    "allThreeMockSpecificationsCertified": false,
+    "unfamiliarCorrectAnswerMarkerCertified": false,
+    "diagramExamMarkingCertified": false,
+    "task1Complete": false
+  }
+}
