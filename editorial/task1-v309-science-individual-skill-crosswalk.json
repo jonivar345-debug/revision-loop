@@ -1,0 +1,858 @@
+{
+  "version": "v309",
+  "date": "2026-11-01",
+  "purpose": "Provisional individual-skill crosswalk for first-mock Physics Mechanics/Materials and taught Chemistry Energetics/Thermodynamics; not entire specification certification.",
+  "sources": {
+    "Physics": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "Chemistry": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  },
+  "auditedBanks": [
+    "physics_mechanics_cross_spec_recall_v230.json",
+    "physics_mechanics_applications_v257.json",
+    "physics_mechanics_signed_area_couples_recall_v280.json",
+    "chemistry_energetics_applications_v247.json",
+    "chemistry_thermodynamics_applications_v256.json",
+    "chemistry_cross_spec_recall_v227.json",
+    "mock_short_recall_and_cloze_v298.json"
+  ],
+  "statusDefinitions": {
+    "sample": "One or more existing mock cards specifically practise this short-recall skill; this does not certify complete question or answer coverage.",
+    "partial": "Related evidence exists, but some part of the requirement still needs a separate card or manual check.",
+    "unverified": "No directly appropriate flashcard manually identified in the seven reviewed banks. It may already exist elsewhere; do not call it globally missing without checking all 4,313."
+  },
+  "summary": {
+    "rows": 72,
+    "sample": 56,
+    "partial": 8,
+    "unverified": 8,
+    "bySubject": {
+      "Physics": {
+        "unverified": 6,
+        "sample": 35,
+        "partial": 5
+      },
+      "Chemistry": {
+        "sample": 21,
+        "unverified": 2,
+        "partial": 3
+      }
+    }
+  },
+  "completion": {
+    "allMockSpecPointsChecked": false,
+    "fullAqaCoverageCertified": false,
+    "markerFullyCertified": false,
+    "task1Complete": false
+  },
+  "rows": [
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Distinguish scalars from vectors, including distance/displacement and speed/velocity",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "Not yet checked against original core deck.",
+      "id": "P001"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Calculate the resultant of perpendicular vectors",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_05",
+        "task1_v230_phy_mech_01"
+      ],
+      "notes": "",
+      "id": "P002"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Use a scale drawing to add vectors at arbitrary angles",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "No diagram-marking example found in the reviewed short-recall banks.",
+      "id": "P003"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Resolve a vector into perpendicular horizontal and vertical components",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_01",
+        "task1_v257_physics_mechanics_02"
+      ],
+      "notes": "",
+      "id": "P004"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Resolve forces parallel and normal to an inclined plane",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_03",
+        "task1_v257_physics_mechanics_04"
+      ],
+      "notes": "",
+      "id": "P005"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Recognise equilibrium from a closed triangle of coplanar forces",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v230_phy_mech_03"
+      ],
+      "notes": "",
+      "id": "P006"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.1",
+      "skill": "Connect zero net force to constant velocity or rest",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_01"
+      ],
+      "notes": "",
+      "id": "P007"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "skill": "Calculate moment using perpendicular distance or Fr sin theta",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_07",
+        "task1_v230_phy_mech_04"
+      ],
+      "notes": "",
+      "id": "P008"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "skill": "Use a couple's force separation to find its turning moment",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_08",
+        "task1_v280_phy_mech_card_02"
+      ],
+      "notes": "",
+      "id": "P009"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "skill": "Apply the principle of moments to a balanced beam",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_09"
+      ],
+      "notes": "",
+      "id": "P010"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.2",
+      "skill": "Locate the centre of mass of a uniform regular bar",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_04"
+      ],
+      "notes": "",
+      "id": "P011"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Calculate mean velocity from displacement-time graph gradient",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_11"
+      ],
+      "notes": "",
+      "id": "P012"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Calculate acceleration from a velocity change over time",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_13"
+      ],
+      "notes": "",
+      "id": "P013"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Distinguish average and instantaneous motion using graph tangents",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v298_physics_07"
+      ],
+      "notes": "A velocity tangent example exists, but the complete graphical skill has not been examined.",
+      "id": "P014"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Use signed velocity-time area for displacement and absolute area for distance",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_06",
+        "task1_v280_phy_mech_card_07"
+      ],
+      "notes": "",
+      "id": "P015"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Use signed acceleration-time area for change in velocity",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_05"
+      ],
+      "notes": "",
+      "id": "P016"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Recall and select all uniform acceleration equations",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_15"
+      ],
+      "notes": "A sample of SUVAT use is present; distinct recall/selection of all four is not yet audited.",
+      "id": "P017"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Determine g from the gradient of a free-fall s against t squared graph",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_14"
+      ],
+      "notes": "",
+      "id": "P018"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.3",
+      "skill": "Required practical 3: method, random/systematic errors and uncertainty in free-fall g",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "The g-gradient card does not test the complete practical method and limitations.",
+      "id": "P019"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "skill": "Combine independent horizontal and vertical projectile motion",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_15",
+        "task1_v257_physics_mechanics_16"
+      ],
+      "notes": "",
+      "id": "P020"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "skill": "Use vertical velocity at the top of a projectile trajectory",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v230_phy_mech_09",
+        "task1_v257_physics_mechanics_18"
+      ],
+      "notes": "",
+      "id": "P021"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "skill": "Explain qualitatively how drag reduces projectile range",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v230_phy_mech_10"
+      ],
+      "notes": "",
+      "id": "P022"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "skill": "Explain terminal velocity through balanced weight and drag",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v230_phy_mech_11"
+      ],
+      "notes": "",
+      "id": "P023"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.4",
+      "skill": "Distinguish friction, lift and drag and their effect on vehicle maximum speed",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "Only a few drag examples were manually checked; lift and friction effects remain.",
+      "id": "P024"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.5",
+      "skill": "Apply Newton's first, second and third laws",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_01",
+        "task1_v257_physics_mechanics_19",
+        "task1_v230_phy_mech_12"
+      ],
+      "notes": "",
+      "id": "P025"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.5",
+      "skill": "Interpret and draw free-body diagrams for force problems",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "A drawn free-body diagram has not been inspected.",
+      "id": "P026"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "skill": "Calculate momentum, including the sign of velocity",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_21",
+        "task1_v230_phy_mech_13"
+      ],
+      "notes": "",
+      "id": "P027"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "skill": "Use F=change in momentum/time and signed impact forces",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_22"
+      ],
+      "notes": "",
+      "id": "P028"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "skill": "Apply conservation of momentum to sticking collisions",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_23"
+      ],
+      "notes": "",
+      "id": "P029"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "skill": "Use area under force-time graph for impulse",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_08"
+      ],
+      "notes": "",
+      "id": "P030"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "skill": "Explain variable impact force, contact time, explosions and transport design",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_08"
+      ],
+      "notes": "Impulse recall exists; the remaining qualitative cases need individual review.",
+      "id": "P031"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.6",
+      "skill": "Distinguish elastic and inelastic collisions and kinetic energy conservation",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v230_phy_mech_14"
+      ],
+      "notes": "",
+      "id": "P032"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.7",
+      "skill": "Calculate work from force and displacement at an angle",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v298_physics_14"
+      ],
+      "notes": "",
+      "id": "P033"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.7",
+      "skill": "Calculate power Fv and efficiency as useful divided by input",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_24",
+        "task1_v257_physics_mechanics_25"
+      ],
+      "notes": "",
+      "id": "P034"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.7",
+      "skill": "Calculate work as signed area under force-displacement graph",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_09",
+        "task1_v230_phy_mech_15"
+      ],
+      "notes": "",
+      "id": "P035"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.8",
+      "skill": "Use changes in gravitational potential and kinetic energy",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_26",
+        "task1_v257_physics_mechanics_27"
+      ],
+      "notes": "",
+      "id": "P036"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.1.8",
+      "skill": "Explain where energy goes when resistive forces do work",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v230_phy_mech_16"
+      ],
+      "notes": "",
+      "id": "P037"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "skill": "Use density as mass divided by volume",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "Density calculation recall not yet checked in the reviewed short banks.",
+      "id": "P038"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "skill": "Calculate spring stiffness using Hooke's law",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_28"
+      ],
+      "notes": "",
+      "id": "P039"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "skill": "Calculate elastic energy as half force times extension",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_29"
+      ],
+      "notes": "",
+      "id": "P040"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "skill": "Calculate tensile stress and strain",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_30",
+        "task1_v257_physics_mechanics_31"
+      ],
+      "notes": "",
+      "id": "P041"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "skill": "Recall the meaning of breaking stress, plastic and brittle behaviour",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_14",
+        "task1_v280_phy_mech_card_12",
+        "task1_v280_phy_mech_card_13"
+      ],
+      "notes": "",
+      "id": "P042"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.1",
+      "skill": "Interpret complete force-extension and stress-strain curves",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v280_phy_mech_card_15"
+      ],
+      "notes": "Only a gradient meaning was checked, not complete shape interpretation.",
+      "id": "P043"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.2",
+      "skill": "Calculate Young modulus from force, length, cross section and extension",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_32"
+      ],
+      "notes": "",
+      "id": "P044"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.2",
+      "skill": "Use stress-strain gradient to obtain Young modulus",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_33"
+      ],
+      "notes": "",
+      "id": "P045"
+    },
+    {
+      "subject": "Physics",
+      "specRef": "3.4.2.2",
+      "skill": "Required practical 4: experimental setup, wire diameters, extension and uncertainty",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v257_physics_mechanics_34",
+        "task1_v230_phy_mech_20"
+      ],
+      "notes": "Diameter-related limitations covered; full method and uncertainty treatment not yet signed off.",
+      "id": "P046"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "skill": "Identify exothermic reaction sign from observed heating",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_06"
+      ],
+      "notes": "",
+      "id": "C047"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "skill": "Define enthalpy change at constant pressure and standard conditions",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "Exact definitions have not yet been checked across the whole core bank.",
+      "id": "C048"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.1",
+      "skill": "Define standard enthalpy of formation and combustion",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_17"
+      ],
+      "notes": "Zero formation enthalpy of a standard-state element is tested; the definitions are not.",
+      "id": "C049"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.2",
+      "skill": "Calculate heat exchanged using q=mc delta T and correct energy units",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_01",
+        "task1_v247_chem_energetics_04"
+      ],
+      "notes": "",
+      "id": "C050"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.2",
+      "skill": "Convert measured heat to molar enthalpy with the correct exothermic sign",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_03",
+        "task1_v247_chem_energetics_05"
+      ],
+      "notes": "",
+      "id": "C051"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.2",
+      "skill": "Apply heat-loss corrections using temperature extrapolation",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_07",
+        "task1_v247_chem_energetics_08"
+      ],
+      "notes": "",
+      "id": "C052"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.2",
+      "skill": "Evaluate calorimetry practical method, equipment and measurement uncertainties",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_09"
+      ],
+      "notes": "Percentage uncertainty is tested; complete RP method and improvements are not audited.",
+      "id": "C053"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.3",
+      "skill": "Use standard enthalpies of formation to calculate reaction enthalpy",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_10"
+      ],
+      "notes": "",
+      "id": "C054"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.3",
+      "skill": "Use Hess cycle with standard enthalpies of combustion",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_11"
+      ],
+      "notes": "",
+      "id": "C055"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.3",
+      "skill": "Reverse and scale thermochemical equations correctly",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_12",
+        "task1_v247_chem_energetics_13"
+      ],
+      "notes": "",
+      "id": "C056"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.3",
+      "skill": "Compare anhydrous and hydrated solution cycles",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_14"
+      ],
+      "notes": "",
+      "id": "C057"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.4",
+      "skill": "Calculate reaction enthalpy from bonds broken minus bonds formed",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_15"
+      ],
+      "notes": "",
+      "id": "C058"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.4.4",
+      "skill": "Explain errors from mean gaseous bond enthalpy and liquid-water formation",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v247_chem_energetics_16",
+        "task1_v247_chem_energetics_18"
+      ],
+      "notes": "",
+      "id": "C059"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Distinguish lattice formation from dissociation and write gaseous-ion equation",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_02",
+        "task1_v256_chem_thermo_15"
+      ],
+      "notes": "",
+      "id": "C060"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Calculate lattice enthalpy from Born-Haber formation, atomisation, IE and EA",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_01",
+        "task1_v256_chem_thermo_06"
+      ],
+      "notes": "",
+      "id": "C061"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Use Born-Haber data to solve for an unknown IE or EA",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_03",
+        "task1_v256_chem_thermo_04"
+      ],
+      "notes": "",
+      "id": "C062"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Apply the correct stoichiometry and signs of electron affinities",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_07",
+        "task1_v256_chem_thermo_12"
+      ],
+      "notes": "",
+      "id": "C063"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Interpret ionic-model versus Born-Haber disagreement as polarisation",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_13"
+      ],
+      "notes": "",
+      "id": "C064"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Calculate enthalpy of solution from lattice and hydration enthalpies",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_09",
+        "task1_v256_chem_thermo_10"
+      ],
+      "notes": "",
+      "id": "C065"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.1",
+      "skill": "Define enthalpy of hydration for one mole of aqueous ions",
+      "status": "unverified",
+      "evidenceIds": [],
+      "notes": "Numerical hydration examples exist; definition not directly tested in these banks.",
+      "id": "C066"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "skill": "Define entropy and standard molar entropy in appropriate units",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_23"
+      ],
+      "notes": "Entropy change calculated, but definition not checked.",
+      "id": "C067"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "skill": "Calculate entropy change from products minus reactants",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_23",
+        "task1_v256_chem_thermo_24"
+      ],
+      "notes": "",
+      "id": "C068"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "skill": "Calculate Gibbs energy with consistent kJ/J units",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_17",
+        "task1_v227_chem_10"
+      ],
+      "notes": "",
+      "id": "C069"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "skill": "Distinguish negative Gibbs energy feasibility from reaction speed",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v298_chemistry_21",
+        "task1_v227_chem_11"
+      ],
+      "notes": "",
+      "id": "C070"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "skill": "Find Gibbs zero-temperature threshold and feasible temperature ranges",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_19",
+        "task1_v256_chem_thermo_20"
+      ],
+      "notes": "",
+      "id": "C071"
+    },
+    {
+      "subject": "Chemistry",
+      "specRef": "3.1.8.2",
+      "skill": "Interpret Gibbs-temperature graph gradient as minus entropy and intercept as enthalpy",
+      "status": "sample",
+      "evidenceIds": [
+        "task1_v256_chem_thermo_25",
+        "task1_v256_chem_thermo_26"
+      ],
+      "notes": "",
+      "id": "C072"
+    }
+  ]
+}
