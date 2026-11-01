@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('chemistry_energetics_applications_v247.json'),deck=json('deck.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.cards.length,18);assert.equal(bank.version,'v247');assert.equal(deck.cards.length,3345);
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,34);assert.equal(urls[32],'maths_first_mock_circle_geometry_v246.json');assert.equal(urls[33],'chemistry_energetics_applications_v247.json');
+assert(urls.length>=34);assert.equal(urls[32],'maths_first_mock_circle_geometry_v246.json');assert.equal(urls[33],'chemistry_energetics_applications_v247.json');
 assert(sw.includes("'./chemistry_energetics_applications_v247.json'"));assert(sw.includes('-v247-chem-energetics'));
 const previous=[...deck.cards,...urls.slice(0,33).flatMap(f=>json(f).cards||[])],ids=new Set(previous.map(c=>c.id));
 const fronts=new Set(previous.filter(c=>c.subject==='Chemistry').map(c=>c.front.trim().toLowerCase()));

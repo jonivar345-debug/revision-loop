@@ -1,0 +1,737 @@
+{
+  "version": "v248",
+  "createdAt": "2026-10-31",
+  "scope": "AQA 7408 3.1.1–3.1.3 taught Year 1 Physics mock: SI conversions, uncertainties, graph uncertainties, orders-of-magnitude estimation",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+  "notes": "Original recall/application cards supplement 75 existing core cards. Drawing actual error bars and rigorous graph mark allocation still require examination questions; review not complete.",
+  "cards": [
+    {
+      "id": "task1_v248_physics_measurements_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Convert 2.50 Mm to metres.",
+      "back": "2.50 × 10⁶ m.",
+      "accept": [
+        "2.50 × 10⁶ m.",
+        "2.50e6 m",
+        "2500000 m"
+      ],
+      "reject": [
+        "2500 m.",
+        "2.50 × 10⁻⁶ m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Convert 0.080 nm to metres.",
+      "back": "8.0 × 10⁻¹¹ m.",
+      "accept": [
+        "8.0 × 10⁻¹¹ m.",
+        "8.0e-11 m",
+        "0.000000000080 m"
+      ],
+      "reject": [
+        "8.0 × 10⁻⁸ m.",
+        "8.0 × 10¹¹ m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Convert 0.75 µA to nA.",
+      "back": "750 nA.",
+      "accept": [
+        "750 nA.",
+        "750 nanoamperes",
+        "7.5 × 10² nA"
+      ],
+      "reject": [
+        "0.00075 nA.",
+        "750000 nA."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Convert 4.8 kW h into joules.",
+      "back": "1.728 × 10⁷ J.",
+      "accept": [
+        "1.728 × 10⁷ J.",
+        "17280000 J",
+        "17.28 MJ"
+      ],
+      "reject": [
+        "4.8 × 10³ J.",
+        "1.728 × 10⁶ J."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Using 1 eV = 1.60 × 10⁻¹⁹ J, calculate 2.0 eV in joules.",
+      "back": "3.20 × 10⁻¹⁹ J.",
+      "accept": [
+        "3.20 × 10⁻¹⁹ J.",
+        "3.2e-19 J",
+        "0.000000000000000000320 J"
+      ],
+      "reject": [
+        "1.60 × 10⁻¹⁹ J.",
+        "3.20 × 10¹⁹ J."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Express 1 N in SI base units.",
+      "back": "kg m s⁻².",
+      "accept": [
+        "kg m s⁻².",
+        "kg m / s²",
+        "kilogram metre per second squared"
+      ],
+      "reject": [
+        "kg m² s⁻².",
+        "kg m⁻¹ s⁻²."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Express 1 Pa in SI base units.",
+      "back": "kg m⁻¹ s⁻².",
+      "accept": [
+        "kg m⁻¹ s⁻².",
+        "kg/(m s²)",
+        "kilogram per metre per second squared"
+      ],
+      "reject": [
+        "kg m s⁻².",
+        "kg m² s⁻²."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Express 1 J in SI base units.",
+      "back": "kg m² s⁻².",
+      "accept": [
+        "kg m² s⁻².",
+        "kg m^2 s^-2",
+        "kilogram metre squared per second squared"
+      ],
+      "reject": [
+        "kg m s⁻².",
+        "kg m⁻¹ s⁻²."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A length is 3.00 ± 0.15 cm. What is its percentage uncertainty?",
+      "back": "5.0%.",
+      "accept": [
+        "5.0%.",
+        "5%",
+        "(0.15/3.00) × 100 = 5%"
+      ],
+      "reject": [
+        "0.05%.",
+        "20%."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A length is 2.00 ± 0.04 m. What is the fractional uncertainty?",
+      "back": "0.020.",
+      "accept": [
+        "0.020.",
+        "0.02",
+        "0.04/2.00 = 0.02"
+      ],
+      "reject": [
+        "0.04.",
+        "2.0."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Calculate 12.4 ± 0.2 cm minus 5.1 ± 0.1 cm, including absolute uncertainty.",
+      "back": "7.3 ± 0.3 cm.",
+      "accept": [
+        "7.3 ± 0.3 cm.",
+        "(7.3 ± 0.3) cm",
+        "7.3 cm with 0.3 cm absolute uncertainty"
+      ],
+      "reject": [
+        "7.3 ± 0.1 cm.",
+        "17.5 ± 0.3 cm."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A rectangle measures 5.0 ± 0.1 cm by 4.0 ± 0.2 cm. Find the percentage uncertainty in its area.",
+      "back": "7%.",
+      "accept": [
+        "7%.",
+        "7.0%",
+        "2% + 5% = 7%"
+      ],
+      "reject": [
+        "3%.",
+        "10%."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A measured radius has 2% uncertainty. What percentage uncertainty is used for r²?",
+      "back": "4%.",
+      "accept": [
+        "4%.",
+        "4 percent",
+        "2 × 2% = 4%"
+      ],
+      "reject": [
+        "2%.",
+        "1%."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Repeated readings range from 12.1 mm to 12.5 mm. Find half the range.",
+      "back": "0.2 mm.",
+      "accept": [
+        "0.2 mm.",
+        "0.20 mm",
+        "(12.5 − 12.1)/2 = 0.2 mm"
+      ],
+      "reject": [
+        "0.4 mm.",
+        "12.3 mm."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Repeated length readings differ unpredictably around their mean. What type of error causes this scatter?",
+      "back": "Random error.",
+      "accept": [
+        "Random error.",
+        "random errors",
+        "Random measurement error"
+      ],
+      "reject": [
+        "Systematic error.",
+        "A fixed zero error only."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A balance consistently reads 0.20 g too high at zero load. Identify the error.",
+      "back": "Systematic zero error.",
+      "accept": [
+        "Systematic zero error.",
+        "a systematic error",
+        "a positive zero error"
+      ],
+      "reject": [
+        "Random scatter.",
+        "A random error reduced by averaging."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_17",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What should you do with repeated readings to reduce random uncertainty in the mean?",
+      "back": "Take several readings and calculate their mean.",
+      "accept": [
+        "Take several readings and calculate their mean.",
+        "Repeat measurements and average them.",
+        "Use the mean of several independent readings."
+      ],
+      "reject": [
+        "Use one reading only.",
+        "Increase a systematic zero offset."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_18",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A digital instrument reads to 0.01 mm. What is its display resolution?",
+      "back": "0.01 mm.",
+      "accept": [
+        "0.01 mm.",
+        "one hundredth of a millimetre",
+        "0.010 mm"
+      ],
+      "reject": [
+        "0.1 mm.",
+        "1 mm."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_19",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A point on a graph is y = 3.3 ± 0.2 K. Give the ends of its vertical error bar.",
+      "back": "3.1 K and 3.5 K.",
+      "accept": [
+        "3.1 K and 3.5 K.",
+        "3.1 to 3.5 K",
+        "from y=3.1 K to y=3.5 K"
+      ],
+      "reject": [
+        "3.3 K and 3.5 K.",
+        "3.0 K and 3.6 K."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Maximum possible graph gradient is 2.3 and minimum 1.9. Estimate absolute gradient uncertainty.",
+      "back": "±0.2.",
+      "accept": [
+        "±0.2.",
+        "0.2",
+        "(2.3 − 1.9)/2 = 0.2"
+      ],
+      "reject": [
+        "±0.4.",
+        "±2.1."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_21",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Best gradient is 2.1 with uncertainty ±0.2. Find percentage gradient uncertainty to 2 s.f.",
+      "back": "9.5%.",
+      "accept": [
+        "9.5%.",
+        "9.5 percent",
+        "(0.2/2.1) × 100 ≈ 9.5%"
+      ],
+      "reject": [
+        "0.95%.",
+        "95%."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_22",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Largest plausible y-intercept is 0.7 and smallest 0.3. Estimate absolute intercept uncertainty.",
+      "back": "±0.2.",
+      "accept": [
+        "±0.2.",
+        "0.2",
+        "(0.7 − 0.3)/2 = 0.2"
+      ],
+      "reject": [
+        "±0.4.",
+        "±0.5."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_23",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A set of graph points has vertical error bars. What must a plausible extreme-gradient line respect?",
+      "back": "The error bars on the data points.",
+      "accept": [
+        "The error bars on the data points.",
+        "It must be consistent with the error bars.",
+        "Use the steepest or shallowest reasonable line consistent with the data uncertainties."
+      ],
+      "reject": [
+        "Ignore all error bars.",
+        "Pass through every data-point centre regardless of uncertainty."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_24",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A calculated result has uncertainty ±0.04 m. Which is a sensible way to report a measured value near 2 m?",
+      "back": "2.00 ± 0.04 m.",
+      "accept": [
+        "2.00 ± 0.04 m.",
+        "(2.00 ± 0.04) m",
+        "2.00 m with an absolute uncertainty of 0.04 m"
+      ],
+      "reject": [
+        "2.0000000 ± 0.04 m.",
+        "2 ± 4 m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_25",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Estimate 4700 to its nearest order of magnitude (power of ten).",
+      "back": "10⁴.",
+      "accept": [
+        "10⁴.",
+        "10^4",
+        "ten to the fourth power"
+      ],
+      "reject": [
+        "10³.",
+        "10⁵."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_26",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Estimate 2.5 × 10⁻⁵ to its nearest order of magnitude.",
+      "back": "10⁻⁵.",
+      "accept": [
+        "10⁻⁵.",
+        "10^-5",
+        "one times ten to the power minus five"
+      ],
+      "reject": [
+        "10⁻⁴.",
+        "10⁻⁶."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_27",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Assuming water density 1000 kg m⁻³, estimate the mass of 2.0 L water.",
+      "back": "2.0 kg.",
+      "accept": [
+        "2.0 kg.",
+        "2 kg",
+        "2000 g"
+      ],
+      "reject": [
+        "2000 kg.",
+        "0.002 kg."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v248_physics_measurements_28",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and errors",
+      "courseTopic": "Measurements",
+      "revisionTopic": "Measurements and errors",
+      "specRef": "3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Estimate the time to walk 30 m at 1.5 m s⁻¹.",
+      "back": "20 s.",
+      "accept": [
+        "20 s.",
+        "20 seconds",
+        "30 / 1.5 = 20 s"
+      ],
+      "reject": [
+        "45 s.",
+        "0.05 s."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
