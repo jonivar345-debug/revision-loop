@@ -6,3 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: node tests/task1-v304-legacy-mock-editorial-scan.cjs
+      - run: node tests/task1-v304-shortened-card-marker-regression.cjs
