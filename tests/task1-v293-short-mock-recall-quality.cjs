@@ -17,4 +17,13 @@ for(const c of data){
  for(const a of c.reject){assert.equal(evaluate(c,a).status,'wrong',c.id+': '+a);no++;}
 }
 assert.deepEqual(tally,{Physics:12,Chemistry:12,Maths:12});
+const list=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
+assert.equal(list.length,54);assert.equal(list[53],'mock_short_varied_recall_v293.json');
+const original=[...j('deck.json').cards,...list.slice(0,53).flatMap(x=>j(x).cards||[])];
+const originalIDs=new Set(original.map(x=>x.id));
+const questions=new Set(original.map(x=>x.subject+':'+String(x.front||'').toLowerCase().trim()));
+for(const c of data){assert(!originalIDs.has(c.id),'Repeated id '+c.id);assert(!questions.has(c.subject+':'+c.front.toLowerCase().trim()),'Repeated front '+c.front);}
+assert.equal(j('deck.json').cards.length,3345);
+assert.equal(j('exam_questions.json').questions.length,1268);
+const sw=fs.readFileSync('sw.js','utf8');assert(sw.includes("'./mock_short_varied_recall_v293.json'"));
 console.log('PASS v293: '+yes+' accepted, '+no+' rejected using the real flashcard marker, all 36 concise');
