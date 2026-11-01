@@ -1806,17 +1806,20 @@ function numericMatch(q,answer){
   pa:['pressure',1],kpa:['pressure',1000],mpa:['pressure',1e6],
   ohm:['resistance',1],'%':['percent',1],n:['force',1],
   mol:['amount',1],hz:['frequency',1],ev:['energy-electronvolts',1],
-  s:['time',1],seconds:['time',1],year:['years',1],years:['years',1]};
+  s:['time',1],seconds:['time',1],ms:['time',1e-3],'µs':['time',1e-6],ns:['time',1e-9],nm:['length',1e-9],'µm':['length',1e-6],year:['years',1],years:['years',1]};
  // SI prefixes are case sensitive: mJ is a millijoule; MJ is a megajoule.
  // Earlier lower-casing treated MJ as mJ and MW as mW.
- const physicalUnitKey=s=>s==='MJ'?'megaj':s==='MW'?'megaw':s.replace(/Ω/g,'ohm').toLowerCase();
+ const physicalUnitKey=s=>s==='MJ'?'megaj':s==='MW'?'megaw':s.replace(/Ω/g,'ohm').replace(/μ/g,'µ').toLowerCase();
  const expectedUnit=physicalUnitKey(String(q.unit||'').trim());
- const statedUnit=text.match(/(?:^|[=\s])([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*(mm|cm|km|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds|years?|s)\s*$/i);
+ // A final numeric answer can use powers of ten written as E notation,
+ // x10^(-3) or true superscripts. Parse the WHOLE number before its unit:
+ // reading only '-3 m' from '2.5 × 10⁻³ m' silently rejects a valid answer.
+ const statedUnit=text.match(/(?:^|[=\s])([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:[x×*·]\s*10\s*(?:\^\s*(?:\(\s*[-+]?\d+\s*\)|[-+]?\d+)|[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)|e[-+]?\d+))?)\s*(mm|cm|km|nm|[µμ]m|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds|years?|ms|[µμ]s|ns|s)\s*$/i);
  if(units[expectedUnit]&&statedUnit){
   const givenUnit=physicalUnitKey(statedUnit[2]);
   const left=units[givenUnit],right=units[expectedUnit];
   if(!left||left[0]!==right[0])return false;
-  const converted=Number(statedUnit[1])*left[1]/right[1];
+  const converted=parseNumber(statedUnit[1])*left[1]/right[1];
   return Number.isFinite(converted)&&Math.abs(converted-expected)<=tol;
  }
  if(Number.isFinite(n)&&Math.abs(n-expected)<=tol)return true;
