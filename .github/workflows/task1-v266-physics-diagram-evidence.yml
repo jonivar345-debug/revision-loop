@@ -1,0 +1,19 @@
+name: Task 1 v266 Physics interaction drawing audit evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v266-physics-core-gaps-evidence.json'
+      - 'tests/task1-v266-physics-diagram-evidence.cjs'
+      - '.github/workflows/task1-v266-physics-diagram-evidence.yml'
+  push:
+    branches: [main]
+jobs:
+  diagram-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v265-physics-exchange-diagrams.cjs
+      - run: node tests/task1-v266-physics-diagram-evidence.cjs
