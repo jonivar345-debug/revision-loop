@@ -15,7 +15,7 @@ const loadCards=new Function('cards','extraFlashBanks',app.slice(pos,end)+'\nret
 const actual=loadCards([...core.cards],banks),base=new Set(core.cards.map(c=>c.id));
 const ns=app.indexOf('function normalise('),ne=app.indexOf('function importantTokens(',ns);assert(ns>=0&&ne>ns);
 const evaluate=new Function('window',app.slice(ns,ne)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
-const audit={coreCards:core.cards.length,coreQuestions:questions.questions.length,flashBanks:flashNames.length,questionBanks:practiceNames.length,loadedCards:actual.length,subjectCounts:{},specRefCounts:{},mappedToMock:0,explicitAcceptedAnswersChecked:0,explicitRejectedAnswersChecked:0,modelAnswersChecked:0,acceptedNotCorrect:[],rejectedMarkedCorrect:[],modelNotCorrect:[],frontDuplicates:[],missingMetadata:[],idDuplicates:[],questionAudit:{total:questions.questions.length,extended:0,missingMarks:0,missingModel:0,badPointCount:0,idDuplicates:[]}};
+const audit={coreCards:core.cards.length,coreQuestions:questions.questions.length,flashBanks:flashNames.length,questionBanks:practiceNames.length,loadedCards:actual.length,subjectCounts:{},specRefCounts:{},mappedToMock:0,explicitAcceptedAnswersChecked:0,explicitRejectedAnswersChecked:0,modelAnswersChecked:0,acceptedNotCorrect:[],rejectedMarkedCorrect:[],modelNotCorrect:[],frontDuplicates:[],missingMetadata:[],idDuplicates:[],physicsA2MarkedMockCount:0,physicsA2MarkedMockExamples:[],questionAudit:{total:questions.questions.length,extended:0,missingMarks:0,missingModel:0,badPointCount:0,idDuplicates:[],physicsA2MarkedMockCount:0,physicsA2MarkedMockExamples:[]}};
 const byId=new Set(),fronts=new Map();
 const sample=(target,row)=>{if(target.length<70)target.push(row)};
 for(const card of actual){
@@ -26,6 +26,7 @@ for(const card of actual){
  audit.subjectCounts[subject]=(audit.subjectCounts[subject]||0)+1;
  if(card.specRef){const ref=subject+':'+card.specRef;audit.specRefCounts[ref]=(audit.specRefCounts[ref]||0)+1;}
  if(card.mock===true)audit.mappedToMock++;
+ if(subject==='Physics'&&card.stage==='A2'&&card.mock===true){audit.physicsA2MarkedMockCount++;sample(audit.physicsA2MarkedMockExamples,{id,front:String(card.front||'').slice(0,115),specRef:card.specRef});}
  if(!id||!card.front||!card.back||!['Maths','Physics','Chemistry'].includes(subject))sample(audit.missingMetadata,{id,subject,front:card.front});
  const frontKey=subject+':'+String(card.front||'').trim().toLowerCase().replace(/\s+/g,' ');
  if(frontKey.length>8&&fronts.has(frontKey))sample(audit.frontDuplicates,{a:fronts.get(frontKey),b:id,subject,front:String(card.front||'').slice(0,130)});
@@ -52,6 +53,7 @@ for(const q of [...questions.questions,...practiceNames.flatMap(path=>j(path).qu
  audit.questionAudit.extended++;
  const id=String(q.id||'');
  if(qset.has(id))sample(audit.questionAudit.idDuplicates,id);qset.add(id);
+ if(q.subject==='Physics'&&q.mock===true&&q.level==='A2'){audit.questionAudit.physicsA2MarkedMockCount++;sample(audit.questionAudit.physicsA2MarkedMockExamples,{id,question:q.question,level:q.level,specRef:q.specRef});}
  if(!Number.isFinite(q.marks)||q.marks<1)audit.questionAudit.missingMarks++;
  if(!q.modelAnswer&&!q.answer&&!q.numericAnswer&&!q.markScheme)audit.questionAudit.missingModel++;
  if(Array.isArray(q.markPoints)&&q.markPoints.length&&q.markPointMarks&&q.markPointMarks.length!==q.markPoints.length)audit.questionAudit.badPointCount++;
