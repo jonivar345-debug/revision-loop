@@ -1,0 +1,57 @@
+{
+  "version": "v282",
+  "date": "2026-11-01",
+  "sourceCommit": "a5d88e8cfa81552e275ae0c28b6a2b9b28c743d4",
+  "ciWorkflow": "Task 1 v282 full flashcard answer/marking diagnostic",
+  "ciRunId": "41320786759",
+  "script": "tests/task1-v282-full-flashcard-answer-audit.cjs",
+  "scope": "Core and all dynamically loaded append-only flashcard banks via exact current app.js loader and evaluateCard. Original and extended exam-question banks checked for technical format, not semantic marking correctness.",
+  "sample": {
+    "originalCards": 3345,
+    "supplementalFlashcardBanks": 53,
+    "loadedCards": 4180,
+    "flashcardSubjects": {
+      "Physics": 1480,
+      "Chemistry": 2314,
+      "Maths": 386
+    },
+    "cardsFlaggedMock": true,
+    "selectedMockCardCount": 3218,
+    "modelAnswersChecked": 4180,
+    "explicitAcceptedExamplesChecked": 7428,
+    "explicitRejectedExamplesChecked": 1821,
+    "originalExamQuestions": 1268,
+    "supplementalExamQuestionBanks": 43,
+    "totalExamQuestions": 1623
+  },
+  "technicalChecks": {
+    "declaredAcceptedAnswersNotMarkedCorrect": 0,
+    "declaredRejectedAnswersMarkedCorrect": 0,
+    "declaredModelAnswersNotMarkedCorrect": 0,
+    "duplicateFrontsWithinSubject": 0,
+    "duplicateCardIds": 0,
+    "duplicateExamQuestionIds": 0,
+    "missingFlashcardMetadata": 0,
+    "questionsWithoutValidMarks": 0,
+    "questionsWithoutModelOrAnswer": 0,
+    "questionsWithMalformedPointMarks": 0,
+    "physicsA2CardsMarkedMock": 0,
+    "physicsA2QuestionsMarkedMock": 0
+  },
+  "interpretation": [
+    "The marker consistently recognises predeclared model answers and explicit accepted/rejected variants; this does not test original unseen responses, which may be valid alternatives not in existing accept lists.",
+    "Zero structural anomalies across the loaded sample does not independently prove card factual correctness or full AQA specification coverage.",
+    "Every saved progress/cloud key remains unchanged.",
+    "The Physics AS mock excludes explicitly flagged A2 items in the tested data. This is not proof that every Physics flashcard's text was assigned the correct stage.",
+    "The Maths first mock uses a separate Year 1 Pure scope filter; this snapshot does not independently verify every mathematical topic categorisation.",
+    "Original AQA past-paper 2015-2026 inventory and every mark-scheme equivalent remain unverified."
+  ],
+  "completion": {
+    "fullASPhysicsSpecCertified": false,
+    "fullASAndTaughtA2ChemistryMockSpecCertified": false,
+    "firstMathsMockEntirePureSpecCertified": false,
+    "allScienceAndMathsAnswersSemanticallyReviewed": false,
+    "unseenAnswerMarkingFairnessCertified": false,
+    "task1Complete": false
+  }
+}
