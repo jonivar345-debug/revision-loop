@@ -27,7 +27,9 @@
       "back": "W sinθ",
       "accept": [
         "W sinθ",
-        "W sin theta"
+        "W sin theta",
+        "mg sinθ",
+        "mg sin theta"
       ],
       "reject": [
         "W cosθ",
@@ -53,7 +55,9 @@
       "back": "W cosθ",
       "accept": [
         "W cosθ",
-        "mg cosθ"
+        "mg cosθ",
+        "W cos theta",
+        "mg cos theta"
       ],
       "reject": [
         "W sinθ",
@@ -79,7 +83,9 @@
       "back": "6 N",
       "accept": [
         "6 N",
-        "6.0 N"
+        "6.0 N",
+        "6 newtons",
+        "6N"
       ],
       "reject": [
         "12 N",
@@ -117,7 +123,9 @@
       "back": "Velocity changes sign.",
       "accept": [
         "Velocity changes sign.",
-        "Its velocity crosses zero and changes sign."
+        "Its velocity crosses zero and changes sign.",
+        "The velocity changes from positive to negative.",
+        "The velocity changes from negative to positive."
       ],
       "reject": [
         "Acceleration is zero.",
@@ -143,7 +151,9 @@
       "back": "Add the magnitudes of all areas.",
       "accept": [
         "Add the magnitudes of all areas.",
-        "Sum the absolute values of the areas."
+        "Sum the absolute values of the areas.",
+        "Sum the absolute areas under the velocity–time graph.",
+        "Add the areas above and below the axis as positive values."
       ],
       "reject": [
         "Subtract all areas below the axis.",
@@ -169,7 +179,10 @@
       "back": "Zero.",
       "accept": [
         "Zero.",
-        "The forces cancel as a resultant."
+        "The forces cancel as a resultant.",
+        "0",
+        "0 N",
+        "Zero newtons."
       ],
       "reject": [
         "Twice either force.",
@@ -195,7 +208,9 @@
       "back": "Impulse (change in momentum).",
       "accept": [
         "Impulse (change in momentum).",
-        "Change in momentum."
+        "Change in momentum.",
+        "The change of momentum.",
+        "The integral of force with respect to time."
       ],
       "reject": [
         "Change in kinetic energy.",
@@ -221,7 +236,9 @@
       "back": "In antiphase (180° apart).",
       "accept": [
         "In antiphase (180° apart).",
-        "With a phase difference of 180°."
+        "With a phase difference of 180°.",
+        "180 degrees out of phase.",
+        "π radians apart."
       ],
       "reject": [
         "In phase.",
@@ -247,7 +264,9 @@
       "back": "The core's refractive index.",
       "accept": [
         "The core's refractive index.",
-        "n_core > n_cladding."
+        "n_core > n_cladding.",
+        "The refractive index of the core is higher than the cladding.",
+        "ncore > ncladding"
       ],
       "reject": [
         "The cladding's refractive index.",
@@ -273,7 +292,9 @@
       "back": "The angular spread increases.",
       "accept": [
         "The angular spread increases.",
-        "The wave diffracts more widely."
+        "The wave diffracts more widely.",
+        "More diffraction.",
+        "The angular width increases."
       ],
       "reject": [
         "It becomes narrower.",
@@ -299,7 +320,10 @@
       "back": "−r, where r is internal resistance.",
       "accept": [
         "−r, where r is internal resistance.",
-        "Negative internal resistance."
+        "Negative internal resistance.",
+        "−r",
+        "Minus r.",
+        "The negative of internal resistance."
       ],
       "reject": [
         "The emf.",
@@ -325,7 +349,9 @@
       "back": "Vout increases.",
       "accept": [
         "Vout increases.",
-        "The output p.d. rises, at fixed input and upper resistance."
+        "The output p.d. rises, at fixed input and upper resistance.",
+        "It rises.",
+        "Increases."
       ],
       "reject": [
         "Vout decreases.",
@@ -351,7 +377,9 @@
       "back": "2,4-DNPH.",
       "accept": [
         "2,4-DNPH.",
-        "2,4-dinitrophenylhydrazine."
+        "2,4-dinitrophenylhydrazine.",
+        "2,4-DNP.",
+        "Brady's reagent."
       ],
       "reject": [
         "Tollens' reagent.",
@@ -377,7 +405,9 @@
       "back": "A silver mirror forms.",
       "accept": [
         "A silver mirror forms.",
-        "A silver deposit forms."
+        "A silver deposit forms.",
+        "Silver mirror.",
+        "A grey silver coating."
       ],
       "reject": [
         "An orange precipitate forms.",
@@ -403,7 +433,9 @@
       "back": "A brick-red precipitate.",
       "accept": [
         "A brick-red precipitate.",
-        "A red-brown precipitate of copper(I) oxide."
+        "A red-brown precipitate of copper(I) oxide.",
+        "Brick-red solid.",
+        "A precipitate of Cu₂O."
       ],
       "reject": [
         "A silver mirror.",
@@ -429,7 +461,9 @@
       "back": "No silver mirror.",
       "accept": [
         "No silver mirror.",
-        "No positive Tollens' test."
+        "No positive Tollens' test.",
+        "No.",
+        "No reaction with Tollens' reagent."
       ],
       "reject": [
         "Yes, a silver mirror.",
@@ -455,7 +489,9 @@
       "back": "A secondary alcohol.",
       "accept": [
         "A secondary alcohol.",
-        "A 2° alcohol."
+        "A 2° alcohol.",
+        "Secondary alcohol.",
+        "2° alcohol."
       ],
       "reject": [
         "A primary alcohol.",
@@ -481,7 +517,9 @@
       "back": "A primary alcohol.",
       "accept": [
         "A primary alcohol.",
-        "A 1° alcohol."
+        "A 1° alcohol.",
+        "Primary alcohol.",
+        "1° alcohol."
       ],
       "reject": [
         "A secondary alcohol.",
@@ -507,7 +545,9 @@
       "back": "Opposite rotations cancel.",
       "accept": [
         "Opposite rotations cancel.",
-        "Equal enantiomers rotate light equally and oppositely."
+        "Equal enantiomers rotate light equally and oppositely.",
+        "Equal and opposite optical rotations cancel.",
+        "The enantiomers cancel each other's rotation."
       ],
       "reject": [
         "Both enantiomers are achiral.",
@@ -533,7 +573,9 @@
       "back": "In the numerator.",
       "accept": [
         "In the numerator.",
-        "On top of the equilibrium expression."
+        "On top of the equilibrium expression.",
+        "Numerator.",
+        "On the top."
       ],
       "reject": [
         "In the denominator.",
@@ -559,7 +601,9 @@
       "back": "An alcohol and a carboxylate salt.",
       "accept": [
         "An alcohol and a carboxylate salt.",
-        "An alcohol and the salt of a carboxylic acid."
+        "An alcohol and the salt of a carboxylic acid.",
+        "An alcohol and carboxylate ions.",
+        "A carboxylate salt plus an alcohol."
       ],
       "reject": [
         "A ketone and hydrogen.",
@@ -585,7 +629,9 @@
       "back": "Soap and glycerol.",
       "accept": [
         "Soap and glycerol.",
-        "Long-chain carboxylate salts and glycerol."
+        "Long-chain carboxylate salts and glycerol.",
+        "Glycerol and salts of long-chain fatty acids.",
+        "Glycerol and fatty acid carboxylate salts."
       ],
       "reject": [
         "Biodiesel and ethanol.",
@@ -611,7 +657,9 @@
       "back": "Fatty acid methyl esters.",
       "accept": [
         "Fatty acid methyl esters.",
-        "Methyl esters of long-chain carboxylic acids."
+        "Methyl esters of long-chain carboxylic acids.",
+        "FAMEs.",
+        "Methyl esters of fatty acids."
       ],
       "reject": [
         "Glycerol only.",
@@ -637,7 +685,9 @@
       "back": "An amide.",
       "accept": [
         "An amide.",
-        "An N-substituted amide."
+        "An N-substituted amide.",
+        "Amide.",
+        "An amide linkage."
       ],
       "reject": [
         "An aldehyde.",
@@ -663,7 +713,9 @@
       "back": "n = 2k + 1, k an integer.",
       "accept": [
         "n = 2k + 1, k an integer.",
-        "n=2k+1 for integer k."
+        "n=2k+1 for integer k.",
+        "n = 2k+1, with k∈ℤ.",
+        "2k+1 for integer k."
       ],
       "reject": [
         "n = 2k only.",
@@ -689,7 +741,9 @@
       "back": "AB and BC are scalar multiples.",
       "accept": [
         "AB and BC are scalar multiples.",
-        "BC=(2/3)AB, so they are parallel."
+        "BC=(2/3)AB, so they are parallel.",
+        "BC = (2/3)AB.",
+        "AB = (3/2)BC."
       ],
       "reject": [
         "The vectors have equal magnitudes.",
@@ -715,7 +769,9 @@
       "back": "(−5,6).",
       "accept": [
         "(−5,6).",
-        "−5i + 6j."
+        "−5i + 6j.",
+        "(-5, 6)",
+        "(−5, 6)"
       ],
       "reject": [
         "(5,−6).",
@@ -741,7 +797,9 @@
       "back": "Reflect in y-axis; scale x by 1/2.",
       "accept": [
         "Reflect in y-axis; scale x by 1/2.",
-        "Y-axis reflection and horizontal compression by factor 2."
+        "Y-axis reflection and horizontal compression by factor 2.",
+        "Reflect in the y-axis, then horizontally compress by 2.",
+        "Horizontal scale factor 1/2 and reflection in the y-axis."
       ],
       "reject": [
         "Reflect in x-axis; stretch x by 2.",
@@ -767,7 +825,9 @@
       "back": "4 right and 2 up.",
       "accept": [
         "4 right and 2 up.",
-        "Translate by vector (4,2)."
+        "Translate by vector (4,2).",
+        "Translation (4,2).",
+        "Right 4 units, up 2 units."
       ],
       "reject": [
         "4 left and 2 down.",
@@ -793,7 +853,9 @@
       "back": "−1 < x < 5.",
       "accept": [
         "−1 < x < 5.",
-        "x is between −1 and 5, excluding ends."
+        "x is between −1 and 5, excluding ends.",
+        "(-1, 5)",
+        "-1 < x < 5"
       ],
       "reject": [
         "x < −1 or x > 5.",
@@ -819,7 +881,9 @@
       "back": "−4/3.",
       "accept": [
         "−4/3.",
-        "Negative four thirds."
+        "Negative four thirds.",
+        "-4/3.",
+        "Minus four thirds."
       ],
       "reject": [
         "3/4.",
@@ -845,7 +909,9 @@
       "back": "b²−4ac > 0.",
       "accept": [
         "b²−4ac > 0.",
-        "The discriminant is strictly positive."
+        "The discriminant is strictly positive.",
+        "b² > 4ac.",
+        "Discriminant > 0."
       ],
       "reject": [
         "b²−4ac < 0.",
@@ -871,7 +937,9 @@
       "back": "|r| < 1.",
       "accept": [
         "|r| < 1.",
-        "−1 < r < 1."
+        "−1 < r < 1.",
+        "Between -1 and 1, excluding the endpoints.",
+        "The modulus of r is less than one."
       ],
       "reject": [
         "r > 1.",
@@ -898,7 +966,9 @@
       "accept": [
         "f′(a)=0.",
         "The derivative is zero at x=a.",
-        "f'(a)=0"
+        "f'(a)=0",
+        "The gradient of f at a is zero.",
+        "The first derivative is zero at x=a."
       ],
       "reject": [
         "f(a)=0.",
@@ -925,7 +995,9 @@
       "back": "As a negative signed area.",
       "accept": [
         "As a negative signed area.",
-        "Negative contribution to the integral."
+        "Negative contribution to the integral.",
+        "Negative.",
+        "It is subtracted from the integral."
       ],
       "reject": [
         "Always as positive area.",
@@ -951,7 +1023,9 @@
       "back": "30° and 150°.",
       "accept": [
         "30° and 150°.",
-        "θ=30°, 150°."
+        "θ=30°, 150°.",
+        "150° and 30°.",
+        "θ=150°,30°."
       ],
       "reject": [
         "30° only.",
