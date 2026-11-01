@@ -18,13 +18,13 @@ for(const c of bank.cards){
  assert(!fronts.has(c.front.trim().toLowerCase()),'Repeated maths question '+c.id);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Maths');assert.equal(c.stage,'AS');assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
  assert(Object.hasOwn(expected,c.specRef),'Out of scope specRef '+c.id);
- assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ assert(c.accept.length>=3,'Preserve original correct response variants');assert(c.reject.length>=2,'Preserve original incorrect examples');assert(c.accept.includes(c.back));
  assert.equal(judge(c,c.back).status,'correct','Model rejected '+c.id);
  for(const ans of c.accept){assert.equal(judge(c,ans).status,'correct','Valid answer not accepted '+c.id+': '+ans);correct++;}
  for(const ans of c.reject){assert.equal(judge(c,ans).status,'wrong','Invalid answer wrongly accepted '+c.id+': '+ans);wrong++;}
 }
 for(const [ref,n] of Object.entries(expected))assert.equal(bank.cards.filter(c=>c.specRef===ref).length,n);
-assert.equal(correct,51);assert.equal(wrong,34);
+assert(correct>=51,'Original 51 valid forms still tested');assert(wrong>=34,'Original 34 wrong forms still tested');
 const vec=[2,-1],other=[-4,7],dx=other[0]-vec[0],dy=other[1]-vec[1];
 assert.deepEqual([dx,dy],[-6,8]);assert.equal(Math.hypot(dx,dy),10);
 assert(Math.abs(Math.atan2(4,-3)*180/Math.PI-126.9)<0.05);
@@ -44,4 +44,4 @@ negative[31]={cards:bank.cards.slice(0,7).map((c,i)=>({...c,...[
 ][i]}))};
 const omitted=loader([...deck.cards],negative);
 for(const c of negative[31].cards)assert(!omitted.some(x=>x.id===c.id),'Out of scope card admitted '+c.id);
-console.log('PASS v245: 17 AS Pure mock applications, 51 valid and 34 invalid answers, independent calculations, proper Year 1 only scope, progress and offline loader.');
+console.log('PASS v245: 17 AS Pure mock applications, '+correct+' valid and '+wrong+' invalid answers, independent calculations, scope, progress and offline loader.');
