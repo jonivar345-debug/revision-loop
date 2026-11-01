@@ -1595,6 +1595,12 @@ function evaluateConfiguredNumericRecall(c,input){
  // for cards explicitly opting in to numericRecall. Preserve strict text for ions.
  const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:\s*(?:[x×*·]\s*10\s*(?:\^\s*(?:\(\s*[-+]?\d+\s*\)|[-+]?\d+)|[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)|[eE][+-]?\d+))?)\s*(kJ\/mol|kJ\s*mol(?:\^-?1|⁻¹)|J\/mol|J\s*mol(?:\^-?1|⁻¹)|kΩ|Ω|ohms?|mA|A|mV|V|mW|W|kHz|Hz|m\/s|µs|μs|ms|s|mm|nm|mol|m|°|degrees?|kJ|J)?\s*\.?$/i);
  if(!match)return null;
+ // Keep this small parser self-contained for the existing flashcard-marking
+ // regression harness, which evaluates this module independently of exam maths.
+ const superscriptDigits={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
+ const scientific=match[1].match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+))\s*[x×*·]\s*10\s*(?:\^\s*(?:\(\s*([-+]?\d+)\s*\)|([-+]?\d+))|([⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+))$/i);
+ const power=scientific?(scientific[2]||scientific[3]||[...(scientific[4]||'')].map(d=>superscriptDigits[d]).join('')):null;
+ const numeric=scientific?Number(scientific[1])*10**Number(power):Number(match[1]);
  const units=config.units||[];
  // The expected number of significant figures is an explicit per-card rule,
  // not a global numeric-marking guess (trailing zeros can carry precision).
@@ -1607,11 +1613,11 @@ function evaluateConfiguredNumericRecall(c,input){
  let reading;
  if(!match[2]){
   if(!config.allowUnitless)return null;
-  reading=parseNumber(match[1]);
+  reading=numeric;
  }else{
   const unit=units.find(u=>String(u.symbol).toLowerCase()===match[2].toLowerCase());
   if(!unit)return {status:'wrong',score:0,text:'Check the required physical units.',missing:[config.expected]};
-  reading=parseNumber(match[1])*unit.toBase;
+  reading=numeric*unit.toBase;
  }
  const target=Number(config.value);
  if(!Number.isFinite(reading)||!Number.isFinite(target))return {status:'wrong',score:0,text:'Check the numerical value.',missing:[config.expected]};
