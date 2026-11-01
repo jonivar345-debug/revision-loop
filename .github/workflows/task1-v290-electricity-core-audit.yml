@@ -1,0 +1,25 @@
+name: Task 1 v290 AS Physics Electricity legacy spec audit
+on:
+  pull_request:
+    paths:
+      - tests/task1-v290-electricity-core-candidates.cjs
+      - tests/task1-v290-electricity-exact-id-map.cjs
+      - editorial/task1-v290-curated-electricity-ref-map.json
+      - app.js
+      - .github/workflows/task1-v290-electricity-core-audit.yml
+  push:
+    branches: [main]
+jobs:
+  inventory-electricity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v290-electricity-core-candidates.cjs
+      - run: node tests/task1-v287-legacy-spec-map-integration.cjs
+      - run: node tests/task1-v288-legacy-bonding-integration.cjs
+      - run: node tests/task1-v289-energetics-exact-id-map.cjs
+      - run: node tests/task1-v290-electricity-exact-id-map.cjs
+      - run: node tests/task1-v282-full-flashcard-answer-audit.cjs
