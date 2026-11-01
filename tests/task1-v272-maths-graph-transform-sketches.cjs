@@ -8,7 +8,7 @@ assert.equal(cbank.version,'v272');assert.equal(cbank.cards.length,16);
 assert.equal(deck.cards.length,3345);
 const practice=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const flash=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(practice.length,35);assert.equal(practice[34],'maths_as_graph_transform_sketches_v272.json');
+assert(practice.length>=35,'v272 transformations source remains at its original append-only index');assert.equal(practice[34],'maths_as_graph_transform_sketches_v272.json');
 assert.equal(flash.length,46);assert.equal(flash[45],'maths_as_graph_transform_recall_v272.json');
 for(const p of ['maths_as_graph_transform_sketches_v272.json','maths_as_graph_transform_recall_v272.json'])assert(sw.includes("'./"+p+"'"));
 assert(sw.includes('-v272-graph-sketch'));
