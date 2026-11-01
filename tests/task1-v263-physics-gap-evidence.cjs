@@ -29,7 +29,7 @@ for(const row of audit.rows){
  }
 }
 assert.equal(statuses.unevidenced,1);assert.equal(statuses.component_only,4);assert.equal(statuses.worked_selected_example,4);
-assert.equal(withCards,8);assert.equal(right,39);assert.equal(wrong,26);
+assert.equal(withCards,8);assert.equal(right,45);assert.equal(wrong,30);
 const missing=audit.rows.find(r=>r.status==='unevidenced');
 assert(missing.skill.includes('draw')&&missing.cardIds.length===0);
 const close=(x,y)=>Math.abs(x-y)<Math.max(1e-12,Math.abs(y)*1e-6);
@@ -40,4 +40,4 @@ assert(close(6.63e-34/3.315e-24,2e-10));
 assert(close(Math.sqrt(1/4),.5));
 assert.equal(3.3-.2,3.0999999999999996);assert(close((2.3-1.9)/2,.2));
 assert.equal(audit.completion.fullPhysicsMockSpecCertified,false);
-console.log('PASS v263: nine Physics core-only gaps audited; 8 with relevant partial/selected supplemental examples, 1 diagram unverified, 39 accepted + 26 rejected examples.');
+console.log('PASS v263: nine Physics core-only gaps audited; 8 with relevant partial/selected supplemental examples, 1 diagram unverified, 45 accepted + 30 rejected examples.');
