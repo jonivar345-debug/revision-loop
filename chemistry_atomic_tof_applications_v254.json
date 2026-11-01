@@ -512,16 +512,16 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Write the second ionisation equation for magnesium.",
-      "back": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "front": "Why is the third ionisation energy of Mg far greater than the second?",
+      "back": "The third electron is removed from a closer inner shell with less shielding.",
       "accept": [
-        "Mg⁺(g) → Mg²⁺(g) + e⁻.",
-        "Mg+(g) -> Mg2+(g) + e-",
-        "Mg+(g) = Mg2+(g) + electron"
+        "The third electron is removed from a closer inner shell with less shielding.",
+        "After removing the 3s electrons, the next comes from the lower-energy 2p shell.",
+        "It is an inner-shell electron and is more strongly attracted to the nucleus."
       ],
       "reject": [
-        "Mg(g) → Mg⁺(g) + e⁻.",
-        "Mg²⁺(g) → Mg³⁺(g) + e⁻."
+        "The third electron is further from the nucleus.",
+        "The third electron is easier to remove because the ion is positive."
       ],
       "strictRecall": true
     },
