@@ -51,8 +51,10 @@ for(const row of ledger.rows){
 }
 // Verify the known non-existent Chemistry subsection has been removed from the
 // formerly incorrect Gibbs free-energy flashcard, without altering its ID/answer.
-const gibbs=idToCard.get('task1_v298_chemistry_21');
-assert(gibbs&&gibbs.subject==='Chemistry');assert.equal(gibbs.specRef,'3.1.8.2');
+for(const id of ['task1_v298_chemistry_20','task1_v298_chemistry_21']){
+ const gibbs=idToCard.get(id);
+ assert(gibbs&&gibbs.subject==='Chemistry');assert.equal(gibbs.specRef,'3.1.8.2');
+}
 assert(!j('mock_short_recall_and_cloze_v298.json').cards.some(c=>c.specRef==='3.1.8.3'),
  'AQA Thermodynamics only has 3.1.8.1 and 3.1.8.2; do not label Gibbs 3.1.8.3');
 for(const id of linked){
