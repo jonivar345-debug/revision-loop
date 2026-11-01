@@ -512,6 +512,211 @@ function applyV289LegacyEnergeticsSpecRefs(existing){
  return existing;
 }
 
+// v290: individually approved AQA AS Physics Electricity 3.5.1 metadata.
+// No wildcard by topic: exact ID, subject, stage and topic must all match.
+const V290_LEGACY_ELECTRICITY_GROUPS=Object.freeze([
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.1",
+  "ids": [
+   "phy_current"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.1",
+  "ids": [
+   "phy_pd"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.1",
+  "ids": [
+   "phy_resistance"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.1",
+  "ids": [
+   "phy_power_elec"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "I–V characteristics",
+  "specRef": "3.5.1.2",
+  "ids": [
+   "phy_filament_iv"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "I–V characteristics",
+  "specRef": "3.5.1.2",
+  "ids": [
+   "phy_diode"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "I–V characteristics",
+  "specRef": "3.5.1.2",
+  "ids": [
+   "v33_card_physics_i_v_characteristics_10"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.3",
+  "ids": [
+   "phy_resistivity"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Sensors",
+  "specRef": "3.5.1.3",
+  "ids": [
+   "phy_thermistor"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "RP5 Resistivity",
+  "specRef": "3.5.1.3",
+  "ids": [
+   "phy_rp5"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.4",
+  "ids": [
+   "phy_series_current"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.4",
+  "ids": [
+   "phy_series_pd"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.4",
+  "ids": [
+   "phy_parallel_pd"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.4",
+  "ids": [
+   "phy_parallel_current"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Potential dividers",
+  "specRef": "3.5.1.5",
+  "ids": [
+   "phy_potential_divider"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Sensors",
+  "specRef": "3.5.1.5",
+  "ids": [
+   "phy_ldr"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Electricity",
+  "specRef": "3.5.1.6",
+  "ids": [
+   "phy_emf"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Internal resistance",
+  "specRef": "3.5.1.6",
+  "ids": [
+   "phy_internal_001"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Internal resistance",
+  "specRef": "3.5.1.6",
+  "ids": [
+   "v33_card_physics_internal_resistance_8"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "Internal resistance",
+  "specRef": "3.5.1.6",
+  "ids": [
+   "v33_card_physics_internal_resistance_9"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "stage": "AS",
+  "topic": "RP6 EMF/internal resistance",
+  "specRef": "3.5.1.6",
+  "ids": [
+   "phy_rp6"
+  ]
+ }
+]);
+function applyV290LegacyElectricitySpecRefs(existing){
+ const byId=new Map();
+ for(const group of V290_LEGACY_ELECTRICITY_GROUPS)for(const id of group.ids)byId.set(id,group);
+ for(const card of existing){
+  const group=byId.get(card.id);
+  if(group&&card.subject===group.subject&&card.topic===group.topic&&
+     card.stage===group.stage&&!String(card.specRef||'').trim())
+   card.specRef=group.specRef;
+ }
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -4351,6 +4556,7 @@ async function sync(manual=false){
  applyV287LegacySpecRefs(cards);
  applyV288LegacyChemBondingSpecRefs(cards);
  applyV289LegacyEnergeticsSpecRefs(cards);
+ applyV290LegacyElectricitySpecRefs(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
