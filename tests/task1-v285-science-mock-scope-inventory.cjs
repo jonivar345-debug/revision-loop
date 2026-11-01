@@ -36,6 +36,7 @@ for(const subject of ['Physics','Chemistry']){
   missingSpecRefCardTopics:topicCounts(noRefCards).slice(0,35),missingSpecRefQuestionTopics:topicCounts(noRefQuestions).slice(0,35),
   missingSpecRefCardExamples:examples(noRefCards).slice(0,20),missingSpecRefQuestionExamples:examples(noRefQuestions).slice(0,20),
   A2CardCount:a2Cards.length,A2QuestionCount:a2Questions.length,
+  A2CardTopics:topicCounts(a2Cards),A2QuestionTopics:topicCounts(a2Questions),
   A2CardExamples:examples(a2Cards),A2QuestionExamples:examples(a2Questions)};
  if(subject==='Physics'){assert.equal(a2Cards.length,0,'A2 Physics card unexpectedly in AS mock');assert.equal(a2Questions.length,0,'A2 Physics question unexpectedly in AS mock');}
 }
