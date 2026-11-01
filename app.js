@@ -4713,7 +4713,7 @@ async function sync(manual=false){
    if(c.subject!=='Physics'||c.stage!=='AS'||c.mock!==true||c.taught!==true||c.scope!=='mock'||c.active!==true||c.strictRecall!==true||c.courseTopic!=='Mechanics and materials'||!['3.4.1.1','3.4.1.2','3.4.1.3','3.4.1.6','3.4.1.7','3.4.2.1','3.4.2.2'].includes(c.specRef))continue;
   }else if(index===53){
    // v293: one-point short mock recall; strictly exclude untaught and out-of-scope Year 2 Maths/Physics.
-   const physics=c.subject==='Physics'&&c.stage==='AS'&&/^3\\.(?:3|4|5)\\./.test(c.specRef||'');
+   const physics=c.subject==='Physics'&&c.stage==='AS'&&/^3\.(?:3|4|5)\./.test(c.specRef||'');
    const chemistry=c.subject==='Chemistry'&&['AS','A2'].includes(c.stage)&&['3.3.6','3.3.7','3.3.8','3.3.9.1','3.3.9.2','3.1.10'].includes(c.specRef);
    const maths=c.subject==='Maths'&&c.stage==='AS'&&['3.2','3.3','3.4','3.5','3.6','3.8','3.9','3.11'].includes(c.specRef);
    if(!(physics||chemistry||maths)||c.mock!==true||c.taught!==true||c.scope!=='mock'||c.active!==true||c.strictRecall!==true||!Array.isArray(c.accept)||!Array.isArray(c.reject))continue;
