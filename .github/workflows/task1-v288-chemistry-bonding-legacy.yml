@@ -1,0 +1,17 @@
+name: Task 1 v288 Chemistry legacy Bonding subsection candidate audit
+on:
+  pull_request:
+    paths:
+      - tests/task1-v288-chemistry-bonding-legacy-candidates.cjs
+      - .github/workflows/task1-v288-chemistry-bonding-legacy.yml
+  push:
+    branches: [main]
+jobs:
+  inspect-bonding-core-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v288-chemistry-bonding-legacy-candidates.cjs
