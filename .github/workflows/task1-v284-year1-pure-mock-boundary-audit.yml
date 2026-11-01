@@ -1,0 +1,19 @@
+name: Task 1 v284 Year 1 Pure mock scope audit
+on:
+  pull_request:
+    paths:
+      - app.js
+      - 'tests/task1-v284-year1-pure-mock-boundary-audit.cjs'
+      - '.github/workflows/task1-v284-year1-pure-mock-boundary-audit.yml'
+  push:
+    branches: [main]
+jobs:
+  first-maths-mock-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v283-strict-numeric-equivalence.cjs
+      - run: node tests/task1-v284-year1-pure-mock-boundary-audit.cjs
