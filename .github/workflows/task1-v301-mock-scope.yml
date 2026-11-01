@@ -1,0 +1,8 @@
+name: Task 1 v301 mock scope leak audit
+on: [pull_request]
+jobs:
+  scope:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v301-school-mock-scope.cjs
