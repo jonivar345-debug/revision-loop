@@ -27,7 +27,7 @@ for(const [n,valid,wrong] of cases){const c=byId(n);
  for(const answer of valid){assert.equal(judge(c,answer).status,'correct','Should credit '+n+': '+answer);accepted++;}
  for(const answer of wrong){assert.equal(judge(c,answer).status,'wrong','Should reject '+n+': '+answer);rejected++;}
 }
-assert.equal(accepted,26);assert.equal(rejected,28);
+assert.equal(accepted,27);assert.equal(rejected,28);
 for(const c of cards)if(c.numericRecall){
  for(const answer of c.accept)assert.equal(judge(c,answer).status,'correct','Previously accepted variant regressed '+c.id+': '+answer);
  for(const answer of c.reject)assert.equal(judge(c,answer).status,'wrong','Previously wrong example now credited '+c.id+': '+answer);
@@ -37,4 +37,4 @@ const other=cards.find(c=>!c.numericRecall);assert(other);
 assert.equal(judge(other,other.back).status,'correct');
 assert.equal(judge(other,'123 Ω').status,'wrong');
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v251: 12 numerical cards safely accept 26 new correct notations and reject 28 incorrect values/units; old markers and progress IDs remain intact.');
+console.log('PASS v251: 12 numerical cards safely accept 27 new correct notations and reject 28 incorrect values/units; old markers and progress IDs remain intact.');
