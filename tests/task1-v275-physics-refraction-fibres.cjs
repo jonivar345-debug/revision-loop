@@ -8,8 +8,8 @@ assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').quest
 assert.equal(cards.cards.length,20);assert.equal(bank.questions.length,6);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,38);assert.equal(qUrls[37],'physics_refraction_fibres_practice_v275.json');
-assert.equal(cUrls.length,48);assert.equal(cUrls[47],'physics_refraction_fibres_recall_v275.json');
+assert(qUrls.length>=38,'v275 optical-fibre practice remains at index 37 after append-only newer banks');assert.equal(qUrls[37],'physics_refraction_fibres_practice_v275.json');
+assert(cUrls.length>=48,'v275 optical-fibre recall remains at index 47 after append-only newer banks');assert.equal(cUrls[47],'physics_refraction_fibres_recall_v275.json');
 for(const p of ['physics_refraction_fibres_practice_v275.json','physics_refraction_fibres_recall_v275.json'])assert(sw.includes("'./"+p+"'"));
 assert(sw.includes('-v275-optical-fibres'));
 const prevCards=[...core.cards,...cUrls.slice(0,47).flatMap(p=>j(p).cards||[])];

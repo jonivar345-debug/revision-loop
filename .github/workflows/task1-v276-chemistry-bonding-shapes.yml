@@ -1,0 +1,23 @@
+name: Task 1 v276 Chemistry AS Bonding shapes, polarity and structure verification
+on:
+  pull_request:
+    paths:
+      - 'chemistry_as_bonding_shapes_recall_v276.json'
+      - 'chemistry_as_bonding_shapes_practice_v276.json'
+      - 'tests/task1-v276-chemistry-bonding-shapes.cjs'
+      - 'tests/task1-v275-physics-refraction-fibres.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v276-chemistry-bonding-shapes.yml'
+  push:
+    branches: [main]
+jobs:
+  molecular-shapes-and-marking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v275-physics-refraction-fibres.cjs
+      - run: node tests/task1-v276-chemistry-bonding-shapes.cjs
