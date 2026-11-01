@@ -1,0 +1,23 @@
+name: Task 1 v274 AS Chemistry inorganic trends and ion-test theory
+on:
+  pull_request:
+    paths:
+      - 'chemistry_as_inorganic_tests_recall_v274.json'
+      - 'chemistry_as_inorganic_tests_practice_v274.json'
+      - 'tests/task1-v274-chemistry-inorganic-ions.cjs'
+      - 'tests/task1-v273-maths-crosswalk-circle-vectors.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v274-chemistry-inorganic-ions.yml'
+  push:
+    branches: [main]
+jobs:
+  inorganic-recall-and-interpretation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v273-maths-crosswalk-circle-vectors.cjs
+      - run: node tests/task1-v274-chemistry-inorganic-ions.cjs
