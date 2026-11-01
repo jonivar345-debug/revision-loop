@@ -1,0 +1,24 @@
+name: Task 1 v280 AS Physics Mechanics and Materials evidence and marking
+on:
+  pull_request:
+    paths:
+      - 'physics_mechanics_signed_area_couples_recall_v280.json'
+      - 'physics_mechanics_signed_area_couples_practice_v280.json'
+      - 'editorial/task1-v280-physics-mechanics-selected-crosswalk.json'
+      - 'tests/task1-v280-physics-mechanics-selected-audit.cjs'
+      - 'tests/task1-v279-physics-waves-selected-audit.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v280-physics-mechanics-audit.yml'
+  push:
+    branches: [main]
+jobs:
+  mechanics-and-materials:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v279-physics-waves-selected-audit.cjs
+      - run: node tests/task1-v280-physics-mechanics-selected-audit.cjs
