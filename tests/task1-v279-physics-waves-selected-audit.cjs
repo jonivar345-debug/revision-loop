@@ -6,8 +6,8 @@ assert.equal(recall.version,'v279');assert.equal(bank.version,'v279');assert.equ
 assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').questions.length,1268);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,42);assert.equal(qUrls[41],'physics_waves_polarisation_stationary_practice_v279.json');
-assert.equal(cUrls.length,52);assert.equal(cUrls[51],'physics_waves_polarisation_stationary_recall_v279.json');
+assert(qUrls.length>=42,'v279 Waves question bank must retain original index 41');assert.equal(qUrls[41],'physics_waves_polarisation_stationary_practice_v279.json');
+assert(cUrls.length>=52,'v279 Waves recall bank must retain original index 51');assert.equal(cUrls[51],'physics_waves_polarisation_stationary_recall_v279.json');
 for(const s of ['physics_waves_polarisation_stationary_practice_v279.json','physics_waves_polarisation_stationary_recall_v279.json'])assert(sw.includes("'./"+s+"'"));
 assert(sw.includes('-v279-waves-audit'));
 const prior=[...core.cards,...cUrls.slice(0,51).flatMap(p=>j(p).cards||[])];
