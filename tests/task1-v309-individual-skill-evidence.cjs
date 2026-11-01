@@ -26,7 +26,7 @@ assert(ledger.sources.Chemistry.includes('aqa.org.uk'));
 const allowedPhysics=new Set(['3.4.1.1','3.4.1.2','3.4.1.3','3.4.1.4','3.4.1.5','3.4.1.6','3.4.1.7','3.4.1.8','3.4.2.1','3.4.2.2']);
 const allowedChem=new Set(['3.1.4.1','3.1.4.2','3.1.4.3','3.1.4.4','3.1.8.1','3.1.8.2']);
 const ids=new Set(),sc={Physics:{sample:0,partial:0,unverified:0},Chemistry:{sample:0,partial:0,unverified:0}},linked=new Set();
-let checks=0,accepted=0,rejected=0,crossSection=0;
+let checks=0,accepted=0,rejected=0,crossSection=0,legacyBroad=0;
 for(const row of ledger.rows){
  assert(!ids.has(row.id),'Unique row id '+row.id);ids.add(row.id);
  assert(['sample','partial','unverified'].includes(row.status));
@@ -36,14 +36,20 @@ for(const row of ledger.rows){
  if(row.status==='unverified')assert.equal(row.evidenceIds.length,0,'Do not claim direct evidence for unverified skill '+row.id);
  else assert(row.evidenceIds.length>0,'Related or direct sample required '+row.id);
  const crosses=new Set(row.crossSectionEvidenceIds||[]);
+ const broad=new Set(row.legacyBroadSpecEvidenceIds||[]);
  for(const cross of crosses)assert(row.evidenceIds.includes(cross),'Cross-section ID missing from evidence '+row.id);
+ for(const old of broad)assert(row.evidenceIds.includes(old),'Legacy broad tag must cite selected card '+row.id);
+ for(const cross of crosses)assert(!broad.has(cross),'Cross-section and broad tag categories overlap '+row.id);
  if(crosses.size)assert(row.notes.includes('different but related'),'Cross-section link must be explained '+row.id);
+ if(broad.size)assert(row.notes.includes('Core deck')||row.notes.includes('core deck'),'Explain old or broad metadata '+row.id);
  for(const id of row.evidenceIds){
   assert(evidenceBankIds.has(id),'Citation must originate in actually reviewed source banks '+row.id+': '+id);
   const c=idToCard.get(id);assert(c,'Evidence card not loaded and mock eligible '+row.id+': '+id);
   assert.equal(c.subject,row.subject,'Wrong subject '+row.id+': '+id);
-  if(c.specRef!==row.specRef){assert(crosses.has(id),'Metadata mismatch not explicitly declared '+row.id+': '+id+' '+c.specRef+' != '+row.specRef);crossSection++;}
-  else assert(!crosses.has(id),'Unnecessary cross-section exception '+row.id+': '+id);
+  if(c.specRef!==row.specRef){
+   assert(crosses.has(id)||broad.has(id),'Metadata mismatch not explicitly declared '+row.id+': '+id+' '+c.specRef+' != '+row.specRef);
+   if(crosses.has(id))crossSection++;else legacyBroad++;
+  }else assert(!crosses.has(id)&&!broad.has(id),'Unnecessary specRef exception '+row.id+': '+id);
   assert(c.front.length>12&&c.back.trim().length>0,'No meaningful front/back '+id);
   assert.equal(mark(c,c.back).status,'correct','Model answer not accepted '+id);
   checks++;linked.add(id);
@@ -62,15 +68,17 @@ for(const id of linked){
  for(const ans of c.accept||[]){assert.equal(mark(c,ans).status,'correct',id+' correct variant '+ans);accepted++;}
  for(const ans of c.reject||[]){assert.notEqual(mark(c,ans).status,'correct',id+' must not credit known bad variant '+ans);rejected++;}
 }
-assert.deepEqual(sc,{Physics:{sample:34,partial:6,unverified:6},Chemistry:{sample:20,partial:4,unverified:2}});
-assert.equal(ledger.summary.sample,54);assert.equal(ledger.summary.partial,10);assert.equal(ledger.summary.unverified,8);
+assert.deepEqual(sc,{Physics:{sample:36,partial:10,unverified:0},Chemistry:{sample:23,partial:3,unverified:0}});
+assert.equal(ledger.summary.sample,59);assert.equal(ledger.summary.partial,13);assert.equal(ledger.summary.unverified,0);
+assert(ledger.sourceFileSamplingNotes.includes('Only linked cards'),'Large core deck must not be claimed fully audited');
 assert.equal(ledger.summary.rows,72);
 assert.equal(crossSection,6,'Six explicitly explained near-section specimen examples');
+assert.equal(legacyBroad,15,'Fifteen explicitly explained original-deck legacy/broad labels');
 // Diagnostic only: discover older mock cards with non-existent AQA 3.1.8.3 metadata.
 const otherWrongThermoRefs=selected.filter(c=>c.subject==='Chemistry'&&c.specRef==='3.1.8.3');
 console.log('V309_OTHER_THERMODYNAMICS_3_1_8_3_COUNT '+otherWrongThermoRefs.length);
 console.log('V309_OTHER_THERMODYNAMICS_3_1_8_3_IDS '+JSON.stringify(otherWrongThermoRefs.slice(0,30).map(c=>c.id)));
-console.log('PASS v309: '+ledger.rows.length+' provisional fine-grained AQA skills ('+JSON.stringify(sc)+'); '+checks+' evidence links from '+linked.size+' distinct real mock cards; '+accepted+' accepted and '+rejected+' rejected marker examples; '+crossSection+' explicit cross-section links.');
+console.log('PASS v310: '+ledger.rows.length+' provisional fine-grained AQA skills ('+JSON.stringify(sc)+'); '+checks+' evidence links from '+linked.size+' distinct real mock cards; '+accepted+' accepted and '+rejected+' rejected marker examples; '+crossSection+' cross-section and '+legacyBroad+' legacy broad metadata links.');
 console.log('V309_NEXT_REVIEW_GAPS_BEGIN');
 console.log(JSON.stringify(ledger.rows.filter(r=>r.status!=='sample').map(({id,subject,specRef,skill,status,notes})=>({id,subject,specRef,skill,status,notes})),null,2));
 console.log('V309_NEXT_REVIEW_GAPS_END');
