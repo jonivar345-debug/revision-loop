@@ -1,0 +1,20 @@
+name: Task 1 v251 Strict numerical units marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'physics_electricity_applications_v250.json'
+      - 'tests/task1-v251-strict-numeric-units.cjs'
+      - '.github/workflows/task1-v251-strict-numeric.yml'
+  push:
+    branches: [main]
+jobs:
+  numeric-units:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v250-physics-electricity-applications.cjs
+      - run: node tests/task1-v251-strict-numeric-units.cjs

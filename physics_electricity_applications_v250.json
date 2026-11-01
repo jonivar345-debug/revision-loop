@@ -29,7 +29,21 @@
         "0.30 A.",
         "3.0 A."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.03,
+        "units": [
+          {
+            "symbol": "A",
+            "toBase": 1
+          },
+          {
+            "symbol": "mA",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "0.030 A (30 mA)"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_02",
@@ -55,7 +69,21 @@
         "36 V.",
         "0.25 V."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 4,
+        "units": [
+          {
+            "symbol": "V",
+            "toBase": 1
+          },
+          {
+            "symbol": "mV",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "4.0 V"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_03",
@@ -81,7 +109,29 @@
         "0.083 Ω.",
         "0.75 Ω."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 12,
+        "units": [
+          {
+            "symbol": "Ω",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohm",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohms",
+            "toBase": 1
+          },
+          {
+            "symbol": "kΩ",
+            "toBase": 1000
+          }
+        ],
+        "expected": "12 Ω"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_04",
@@ -107,7 +157,29 @@
         "0.50 Ω.",
         "4 Ω."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 2,
+        "units": [
+          {
+            "symbol": "Ω",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohm",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohms",
+            "toBase": 1
+          },
+          {
+            "symbol": "kΩ",
+            "toBase": 1000
+          }
+        ],
+        "expected": "2 Ω"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_05",
@@ -393,7 +465,21 @@
         "4.0 V.",
         "12.0 V."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 8,
+        "units": [
+          {
+            "symbol": "V",
+            "toBase": 1
+          },
+          {
+            "symbol": "mV",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "8.0 V"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_16",
@@ -419,7 +505,29 @@
         "9.0 kΩ.",
         "4.5 kΩ."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 2000,
+        "units": [
+          {
+            "symbol": "Ω",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohm",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohms",
+            "toBase": 1
+          },
+          {
+            "symbol": "kΩ",
+            "toBase": 1000
+          }
+        ],
+        "expected": "2.0 kΩ"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_17",
@@ -445,7 +553,21 @@
         "3.0 V.",
         "9.0 V."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 6,
+        "units": [
+          {
+            "symbol": "V",
+            "toBase": 1
+          },
+          {
+            "symbol": "mV",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "6.0 V"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_18",
@@ -471,7 +593,21 @@
         "6.0 V.",
         "9.0 V."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 4.5,
+        "units": [
+          {
+            "symbol": "V",
+            "toBase": 1
+          },
+          {
+            "symbol": "mV",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "4.5 V"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_19",
@@ -549,7 +685,29 @@
         "−0.40 Ω.",
         "1.50 Ω."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.4,
+        "units": [
+          {
+            "symbol": "Ω",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohm",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohms",
+            "toBase": 1
+          },
+          {
+            "symbol": "kΩ",
+            "toBase": 1000
+          }
+        ],
+        "expected": "0.40 Ω"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_22",
@@ -575,7 +733,29 @@
         "0.25 Ω.",
         "2.5 Ω."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.5,
+        "units": [
+          {
+            "symbol": "Ω",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohm",
+            "toBase": 1
+          },
+          {
+            "symbol": "ohms",
+            "toBase": 1
+          },
+          {
+            "symbol": "kΩ",
+            "toBase": 1000
+          }
+        ],
+        "expected": "0.50 Ω"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_23",
@@ -601,7 +781,21 @@
         "0.50 W.",
         "4.0 W."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 1,
+        "units": [
+          {
+            "symbol": "W",
+            "toBase": 1
+          },
+          {
+            "symbol": "mW",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "1.0 W"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_24",
@@ -627,7 +821,21 @@
         "1.2 A.",
         "6.0 A."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 1,
+        "units": [
+          {
+            "symbol": "A",
+            "toBase": 1
+          },
+          {
+            "symbol": "mA",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "1.0 A"
+      }
     },
     {
       "id": "task1_v250_physics_electricity_25",

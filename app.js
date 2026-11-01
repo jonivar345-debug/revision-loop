@@ -1579,7 +1579,32 @@ function evaluateMathsPureTransform(c,input){
  return null;
 }
 
+
+// v251: narrowly scoped number + unit matching for explicitly configured mock cards.
+// Exact curated text answers still work through the existing marker. Other cards
+// retain their current strict or flexible marking semantics.
+function evaluateConfiguredNumericRecall(c,input){
+ const config=c?.numericRecall;
+ if(!config)return null;
+ const s=String(input||'').trim().replace(/[−–]/g,'-');
+ // Only a bare scalar and a recognised physical unit qualify: never pick a
+ // number out of prose or ignore an incorrect unit/direction.
+ const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(kΩ|Ω|ohms?|mA|A|mV|V|mW|W)\s*\.?$/i);
+ if(!match)return null;
+ const units=config.units||[];
+ const unit=units.find(u=>String(u.symbol).toLowerCase()===match[2].toLowerCase());
+ if(!unit)return {status:'wrong',score:0,text:'Check the required physical units.',missing:[config.expected]};
+ const reading=Number(match[1])*unit.toBase;
+ const target=Number(config.value);
+ if(!Number.isFinite(reading)||!Number.isFinite(target))return {status:'wrong',score:0,text:'Check the numerical value.',missing:[config.expected]};
+ const tolerance=Math.max(1e-12,Math.abs(target)*1e-4);
+ if(Math.abs(reading-target)<=tolerance)
+  return {status:'correct',score:1,text:'Correct equivalent numerical value and unit.',missing:[]};
+ return {status:'wrong',score:0,text:'The numerical value or unit conversion is incorrect.',missing:[config.expected]};
+}
 function evaluateCard(c,input){
+ const numerical=evaluateConfiguredNumericRecall(c,input);
+ if(numerical)return numerical;
  // Heat-energy *magnitude* needs absolute-value notation: normalise() strips |.
  if(c?.id==='task1_v189_chem_001'){
   const raw=String(input||'').trim();
