@@ -1,0 +1,121 @@
+{
+  "version": "v261",
+  "reviewedAt": "2026-11-01",
+  "scope": "School first Year 1 Pure Maths mock ONLY, crosswalk from v244 plus independently tested v252/v260 examples",
+  "originalSource": "editorial/task1-v244-maths-year1-pure-crosswalk.json",
+  "baseline": {
+    "mappedSchoolYear1PureRequirements": 50,
+    "requirementsWithExistingCorePromptEvidence": 43,
+    "requirementsWithoutExistingCorePromptEvidence": 7
+  },
+  "supplementEvidence": {
+    "previouslyUnmappedCoreRequirementRowsWithConcreteSupplementExamples": 7,
+    "specificNewSupplementEvidenceCards": 10,
+    "eachSpecificExampleAutomaticallyMarkable": true,
+    "allUnfamiliarAnswersAcceptedAndRejectedCorrectly": false
+  },
+  "rows": [
+    {
+      "originalRequirementNumber": 4,
+      "specRef": "3.2",
+      "assessableSkill": "Construct a complete unfamiliar divisibility proof by deduction",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v252_maths_pure_applied_01",
+        "task1_v260_maths_year1_01"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "Specific symbolic proof for integer divisibility; the answer matcher has only fixed examples, not arbitrary examiner-prose proofs."
+    },
+    {
+      "originalRequirementNumber": 5,
+      "specRef": "3.2",
+      "assessableSkill": "Evaluate a proof by exhaustion with a fully stated finite domain",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v260_maths_year1_04"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "Checks every value in the explicit finite domain; other finite domains or incomplete cases still need testing."
+    },
+    {
+      "originalRequirementNumber": 17,
+      "specRef": "3.3",
+      "assessableSkill": "Represent transformation of specific graph coordinates under f(ax)",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v252_maths_pure_applied_13",
+        "task1_v252_maths_pure_applied_14"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "Verified unfamiliar negative and combined argument transformations for selected points, not a full sketch of a curve."
+    },
+    {
+      "originalRequirementNumber": 22,
+      "specRef": "3.4",
+      "assessableSkill": "Analyse intersections and tangent equations in unfamiliar circle questions",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v260_maths_year1_12",
+        "task1_v260_maths_year1_14"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "Independent tangent/intersection examples with algebraic checks, not a graph-drawing marking sign-off."
+    },
+    {
+      "originalRequirementNumber": 28,
+      "specRef": "3.5",
+      "assessableSkill": "Identify a specified coefficient from an unfamiliar positive integer binomial expansion",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v260_maths_year1_17"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "A complete unfamiliar positive-integer binomial coefficient extraction, not fractional or Year 2 generalised binomial."
+    },
+    {
+      "originalRequirementNumber": 45,
+      "specRef": "3.9",
+      "assessableSkill": "Evaluate an unfamiliar area between a curve and axis crossing its roots",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v260_maths_year1_34"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "Area from 0 to 4 crossing the axis by integration and sign reversal, not arbitrary examiner drawn curves."
+    },
+    {
+      "originalRequirementNumber": 50,
+      "specRef": "3.11",
+      "assessableSkill": "Deduce whether three given points are collinear using proportional 2D vectors",
+      "previousCoreEvidenceIds": [],
+      "additionalSupplementExampleIds": [
+        "task1_v260_maths_year1_36"
+      ],
+      "specificExampleIndependentlyCheckable": true,
+      "completeSkillAndExaminerMarkingVerified": false,
+      "remainingLimitation": "Non-zero proportional position vectors for collinearity on specified coordinates, not all unseen vector proofs."
+    }
+  ],
+  "whatThisDoesNotProve": [
+    "The 50 v244 audit skills are not claimed to exhaust every AQA first-year assessable bullet",
+    "The rest of the 43 core evidence rows have not been independently re-reviewed by this PR",
+    "A short flashcard answer is not a complete examiner marking rubric for a long proof",
+    "Graphs, freehand vector diagrams and real photographs remain manually reviewable",
+    "Generalised binomial, contradiction, numerical methods and Year 2 remain outside FIRST mock",
+    "No student mastery claim or AQA past-paper completeness claim"
+  ],
+  "completion": {
+    "sevenEarlierCoreOnlyGapsNowHaveSpecificSupplementExamples": true,
+    "firstYearPureMockFullSpecificationCertified": false,
+    "all50RequirementAnswersIndependentlyVerified": false,
+    "fullProofDiagramExaminerMarkingCertified": false,
+    "task1Complete": false
+  }
+}
