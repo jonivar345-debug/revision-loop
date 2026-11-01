@@ -1,3 +1,19 @@
+# Revision Loop — mock review evidence and remaining sign-off (1 November 2026)
+
+**Current factual position at v256 on main:** The original 3,345 core flashcard records and 1,268 original practice questions are preserved. Supplemental banks are loaded separately and do not replace the original core-card IDs or progress keys.
+
+**Legacy science review clarification:** The 971 science mock cards without direct specification-reference metadata were *individually first-pass reviewed*, not left untouched. The first 283 were reviewed before v181, then v181 inspected 210, v182 inspected 220, v183 inspected 86, and v184 inspected the last 172 (283 + 210 + 220 + 86 + 172 = 971). Evidence: `editorial/task1-v181-science-210-legacy-answer-audit.json` through `editorial/task1-v184-final-172-science-legacy-audit.json`. Lack of a direct `specRef` does not mean no answer review; conversely, a first-pass answer review is **not** a bullet-by-bullet AQA coverage certificate.
+
+**New merged applications:** v245 Maths first-pure proof/vectors, v246 Maths circles, v247 Chemistry AS Energetics, v248 Physics measurements, v249 Chemistry rates/Kp, v250 Physics electricity, v251 numerical equivalence, v252 Maths first Year 1 Pure, v253 Physics waves/optical fibres, v254 Chemistry atomic/TOF, v255 small-quantity scientific notation marking and v256 Born–Haber/Gibbs thermodynamics. Dedicated correct/rejected-answer tests passed on each merged version. Full-site regression and cloud-safety tests passed on these merge heads.
+
+**Explicit first Maths mock boundary:** AQA Year 1/AS *Pure only*, across the two classroom Pure papers. Do not accidentally include Statistics, Mechanics, Year 2, or untaught numerical methods in its mock-only questions or flashcards. Physics mock principally AS 3.1–3.5; Chemistry mock AS content plus individually taught Year 2 content through Kp and stated organic areas, excluding untaught buffers.
+
+**Do not certify Task 1 yet.** Full AQA assessable-bullet crosswalks for the user's *school mock scope*, scientifically sound answer wording on every relevant core/supplement card, unfamiliar worked exam answers, diagram/photo-based marking, required-practical data and school-specific boundaries, and original paper/source coverage all still need independent evidence. v241 Physics measurement mapping, v242 particle mapping, v244 Maths pure mapping, and v240 Energetics mapping are *partial inventory/audit evidence*, not complete syllabus sign-off. The manual rubric review of drawn diagrams remains essential where OCR/automatic marking is uncertain. No personal mastery is inferred from the repository.
+
+The older chronological updates are retained below for historical context. Their contemporary 'pending PR' statements may no longer reflect the current merged state.
+
+---
+
 # Revision Loop v175 — marking diagrams directly, without forcing handwriting OCR (28 October 2026)
 
 **Proposed pending CI, merge and Pages deployment.** Added a **Review marking points manually (diagrams / photos)** button to exam questions. It opens the question's rubric with zero points checked; the user can consult a photographed answer or drawn graph/mechanism and tick marks or set a reviewed total without OCR. Where present, accepted answer variants, mark dependencies, AQA/ECF notes and model outcome remain visible; official level-based responses are explicitly identified as holistic, not an AQA checklist. Saved attempts distinguish self-reviewed marks from reviewed automated suggestions. Revised prerequisite enforcement is transitive regardless of key order, so an invalid prerequisite never leaves a later dependent suggested mark behind.

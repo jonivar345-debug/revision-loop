@@ -1,0 +1,19 @@
+name: Task 1 v259 accurate historical review status
+on:
+  pull_request:
+    paths:
+      - 'REVISION_LOOP_STATUS.md'
+      - 'editorial/task1-v259-mock-review-status.json'
+      - 'tests/task1-v259-review-status.cjs'
+      - '.github/workflows/task1-v259-review-status.yml'
+  push:
+    branches: [main]
+jobs:
+  review-status:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v259-review-status.cjs
