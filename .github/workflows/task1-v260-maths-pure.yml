@@ -1,0 +1,23 @@
+name: Task 1 v260 Year 1 Pure breadth marking
+on:
+  pull_request:
+    paths:
+      - 'maths_year1_pure_breadth_v260.json'
+      - 'tests/task1-v260-maths-year1-pure-breadth.cjs'
+      - 'tests/task1-v257-physics-mechanics.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v260-maths-pure.yml'
+  push:
+    branches: [main]
+jobs:
+  first-mock-pure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v257-physics-mechanics.cjs
+      - run: node tests/task1-v258-thermodynamics-units.cjs
+      - run: node tests/task1-v260-maths-year1-pure-breadth.cjs

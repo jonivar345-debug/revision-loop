@@ -1,0 +1,997 @@
+{
+  "version": "v260",
+  "createdAt": "2026-11-01",
+  "scope": "FIRST school Year 1 Pure AQA Maths mock ONLY: proofs, algebra, coordinate geometry, sequences, trigonometry (degrees), logs, differentiation, integration, 2D vectors",
+  "source": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content",
+  "notes": "38 original varied short AS Pure applications. Explicitly EXCLUDES A-level Year 2, statistics, mechanics, radians and numerical methods from first mock. Written full-proof mark schemes and diagrams still unverified.",
+  "cards": [
+    {
+      "id": "task1_v260_maths_year1_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For any integer n, prove that n(n+1) is even.",
+      "back": "n and n+1 are consecutive, so one is even; their product is even.",
+      "accept": [
+        "n and n+1 are consecutive, so one is even; their product is even.",
+        "One of n and n+1 must be even, so n(n+1) is even.",
+        "An even factor makes the product n(n+1) even."
+      ],
+      "reject": [
+        "All integers n are even.",
+        "Both n and n+1 are odd."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Prove that if n is an even integer then n³ is divisible by 8.",
+      "back": "Let n=2k; then n³=8k³, a multiple of 8.",
+      "accept": [
+        "Let n=2k; then n³=8k³, a multiple of 8.",
+        "n=2k gives n³=8k³.",
+        "If n=2k, its cube is 8 times an integer."
+      ],
+      "reject": [
+        "n³=6k³.",
+        "Every integer cube is divisible by 8."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give an integer counterexample to 'n²−1 is divisible by 8 for every integer n'.",
+      "back": "n=2 gives n²−1=3, not divisible by 8.",
+      "accept": [
+        "n=2 gives n²−1=3, not divisible by 8.",
+        "n=2",
+        "2"
+      ],
+      "reject": [
+        "n=3 gives 8.",
+        "No counterexample exists."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For the finite domain n∈{−1,0,1,2}, list n²+n as proof by exhaustion that it is non-negative.",
+      "back": "0, 0, 2, 6.",
+      "accept": [
+        "0, 0, 2, 6.",
+        "0; 0; 2; 6",
+        "(0,0,2,6)"
+      ],
+      "reject": [
+        "−2,0,2,6.",
+        "0,1,2,3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Complete the square: x²−8x+19.",
+      "back": "(x−4)²+3.",
+      "accept": [
+        "(x−4)²+3.",
+        "(x-4)^2+3",
+        "(x−4)² + 3"
+      ],
+      "reject": [
+        "(x+4)²+3.",
+        "(x−4)²−3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find k if x²−6x+k=0 has exactly one real solution.",
+      "back": "9.",
+      "accept": [
+        "9.",
+        "k=9",
+        "9, from discriminant=0"
+      ],
+      "reject": [
+        "−9.",
+        "36."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Solve x²−x−6<0.",
+      "back": "−2<x<3.",
+      "accept": [
+        "−2<x<3.",
+        "-2<x<3",
+        "x between −2 and 3, excluding endpoints"
+      ],
+      "reject": [
+        "x<−2 or x>3.",
+        "−3<x<2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Rationalise 5/(√3+1).",
+      "back": "5(√3−1)/2.",
+      "accept": [
+        "5(√3−1)/2.",
+        "(5√3−5)/2",
+        "(5(sqrt(3)-1))/2"
+      ],
+      "reject": [
+        "5(√3+1)/2.",
+        "5(√3−1)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Factorise x³−4x²+x+6 completely.",
+      "back": "(x−2)(x−3)(x+1).",
+      "accept": [
+        "(x−2)(x−3)(x+1).",
+        "(x-2)(x-3)(x+1)",
+        "(x+1)(x-2)(x-3)"
+      ],
+      "reject": [
+        "(x−2)(x+3)(x−1).",
+        "(x−1)(x−2)(x−3)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the equation of a line with gradient 4 through (2,−3).",
+      "back": "y=4x−11.",
+      "accept": [
+        "y=4x−11.",
+        "y = 4x - 11",
+        "y+3=4(x−2)"
+      ],
+      "reject": [
+        "y=4x+11.",
+        "y=−4x−11."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A line has gradient −3/2. What is the gradient of a perpendicular line?",
+      "back": "2/3.",
+      "accept": [
+        "2/3.",
+        "2/3",
+        "two thirds"
+      ],
+      "reject": [
+        "−2/3.",
+        "−3/2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the equation of the tangent to x²+y²=25 at (3,4).",
+      "back": "3x+4y=25.",
+      "accept": [
+        "3x+4y=25.",
+        "3x + 4y = 25",
+        "y=(25−3x)/4"
+      ],
+      "reject": [
+        "4x+3y=25.",
+        "3x+4y=0."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_13",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write the circle equation with centre (−2,5) and radius √13.",
+      "back": "(x+2)²+(y−5)²=13.",
+      "accept": [
+        "(x+2)²+(y−5)²=13.",
+        "(x+2)^2+(y-5)^2=13",
+        "(x+2)² + (y−5)² =13"
+      ],
+      "reject": [
+        "(x−2)²+(y+5)²=13.",
+        "(x+2)²+(y−5)²=√13."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_14",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find BOTH intersections of y=3 with x²+y²=25.",
+      "back": "(−4,3) and (4,3).",
+      "accept": [
+        "(−4,3) and (4,3).",
+        "(-4,3) and (4,3)",
+        "(4,3), (−4,3)"
+      ],
+      "reject": [
+        "(−3,4) and (3,4).",
+        "(4,−3) and (4,3)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_15",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An arithmetic sequence starts 7,11,15,... Find the 12th term.",
+      "back": "51.",
+      "accept": [
+        "51.",
+        "51",
+        "7+11×4=51"
+      ],
+      "reject": [
+        "48.",
+        "55."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_16",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An arithmetic series has 12 terms, first term 7 and common difference 4. Find its sum.",
+      "back": "348.",
+      "accept": [
+        "348.",
+        "348",
+        "12/2(2×7+11×4)=348"
+      ],
+      "reject": [
+        "51.",
+        "696."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_17",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find coefficient of x⁴ in (1+2x)⁶.",
+      "back": "240.",
+      "accept": [
+        "240.",
+        "240",
+        "15×16=240"
+      ],
+      "reject": [
+        "60.",
+        "480."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_18",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find sum to infinity of 12+6+3+...",
+      "back": "24.",
+      "accept": [
+        "24.",
+        "24",
+        "12/(1−1/2)=24"
+      ],
+      "reject": [
+        "21.",
+        "36."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_19",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Evaluate Σ(2r−1) for r=1 to 6.",
+      "back": "36.",
+      "accept": [
+        "36.",
+        "36",
+        "1+3+5+7+9+11=36"
+      ],
+      "reject": [
+        "30.",
+        "42."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_20",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Solve sin x=1/2 for 0°≤x<360°.",
+      "back": "30° and 150°.",
+      "accept": [
+        "30° and 150°.",
+        "30 and 150 degrees",
+        "x=30°,150°"
+      ],
+      "reject": [
+        "30° and 330°.",
+        "150° and 210°."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_21",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Solve tan x=−1 for 0°≤x<360°.",
+      "back": "135° and 315°.",
+      "accept": [
+        "135° and 315°.",
+        "135 and 315 degrees",
+        "x=135°,315°"
+      ],
+      "reject": [
+        "45° and 225°.",
+        "135° and 225°."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_22",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find side c opposite 60° in a triangle with adjacent sides 5 and 7. Give the exact value.",
+      "back": "√39.",
+      "accept": [
+        "√39.",
+        "sqrt(39)",
+        "√39 units"
+      ],
+      "reject": [
+        "√109.",
+        "6."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_23",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the area of a triangle with sides 8 and 5 enclosing an angle of 30°.",
+      "back": "10 square units.",
+      "accept": [
+        "10 square units.",
+        "10",
+        "10 units²"
+      ],
+      "reject": [
+        "20.",
+        "40."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_24",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A side of length 10 lies opposite 30°. Find the side opposite 45° using the sine rule.",
+      "back": "10√2.",
+      "accept": [
+        "10√2.",
+        "10sqrt(2)",
+        "approximately 14.142"
+      ],
+      "reject": [
+        "5√2.",
+        "20√2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_25",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Evaluate log₂(1/8).",
+      "back": "−3.",
+      "accept": [
+        "−3.",
+        "-3",
+        "negative three"
+      ],
+      "reject": [
+        "3.",
+        "−8."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_26",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Solve log₅x+log₅4=2, with x>0.",
+      "back": "25/4.",
+      "accept": [
+        "25/4.",
+        "6.25",
+        "x=25/4"
+      ],
+      "reject": [
+        "25.",
+        "5/4."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_27",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Solve e^(2x)=7 exactly.",
+      "back": "x=(ln7)/2.",
+      "accept": [
+        "x=(ln7)/2.",
+        "x=0.5 ln 7",
+        "x=ln(7)/2"
+      ],
+      "reject": [
+        "x=ln 14.",
+        "x=2 ln7."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_28",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Differentiate y=3x⁴−2x²+5.",
+      "back": "dy/dx=12x³−4x.",
+      "accept": [
+        "dy/dx=12x³−4x.",
+        "12x^3-4x",
+        "12x³−4x"
+      ],
+      "reject": [
+        "12x⁴−4x.",
+        "3x³−2x."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_29",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find tangent line to y=x²+3x at x=1.",
+      "back": "y=5x−1.",
+      "accept": [
+        "y=5x−1.",
+        "y=5x-1",
+        "y−4=5(x−1)"
+      ],
+      "reject": [
+        "y=4x−1.",
+        "y=5x+1."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_30",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the normal to y=x² at x=2.",
+      "back": "y−4=−(x−2)/4.",
+      "accept": [
+        "y−4=−(x−2)/4.",
+        "y=-x/4+4.5",
+        "y−4=−0.25(x−2)"
+      ],
+      "reject": [
+        "y−4=4(x−2).",
+        "y−4=−4(x−2)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_31",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the x-coordinates of stationary points of y=x³−6x²+9x.",
+      "back": "1 and 3.",
+      "accept": [
+        "1 and 3.",
+        "x=1 and x=3",
+        "1, 3"
+      ],
+      "reject": [
+        "0 and 3.",
+        "−1 and 3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_32",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Integrate 6x²−4x+3 with respect to x.",
+      "back": "2x³−2x²+3x+C.",
+      "accept": [
+        "2x³−2x²+3x+C.",
+        "2x^3-2x^2+3x+C",
+        "2x³−2x²+3x + C"
+      ],
+      "reject": [
+        "18x³−8x²+3x+C.",
+        "2x³−2x²+3x without constant."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_33",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find the signed integral ∫ from 0 to 3 of (x²−4x) dx.",
+      "back": "−9.",
+      "accept": [
+        "−9.",
+        "-9",
+        "negative nine"
+      ],
+      "reject": [
+        "+9.",
+        "−3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_34",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find positive area between y=x²−4x and the x-axis from x=0 to 4.",
+      "back": "32/3 square units.",
+      "accept": [
+        "32/3 square units.",
+        "32/3",
+        "10⅔ square units"
+      ],
+      "reject": [
+        "−32/3 square units.",
+        "16/3 square units."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_35",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find magnitude of the vector −5i+12j.",
+      "back": "13.",
+      "accept": [
+        "13.",
+        "13 units",
+        "√(25+144)=13"
+      ],
+      "reject": [
+        "17.",
+        "7."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_36",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(1,2), B=(4,8), C=(6,12). Give the vector relationship proving collinearity.",
+      "back": "AC=(5/3)AB.",
+      "accept": [
+        "AC=(5/3)AB.",
+        "AC=5/3 AB",
+        "AB=(3,6) and AC=(5,10), so AC=(5/3)AB"
+      ],
+      "reject": [
+        "AC=(3/5)AB.",
+        "AB and AC are perpendicular."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_37",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Find midpoint of A=(−2,5), B=(8,−1).",
+      "back": "(3,2).",
+      "accept": [
+        "(3,2).",
+        "(3, 2)",
+        "x=3, y=2"
+      ],
+      "reject": [
+        "(6,4).",
+        "(5,−3)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v260_maths_year1_38",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A=(1,4), B=(11,−6); point P divides AB in ratio AP:PB=2:3. Find P.",
+      "back": "(5,0).",
+      "accept": [
+        "(5,0).",
+        "P=(5,0)",
+        "x=5, y=0"
+      ],
+      "reject": [
+        "(7,−2).",
+        "(5,−1)."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
