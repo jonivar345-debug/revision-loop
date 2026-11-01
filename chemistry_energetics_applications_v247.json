@@ -23,11 +23,14 @@
       "accept": [
         "1045 J.",
         "1045 J",
-        "1.045 × 10³ J"
+        "1.045 × 10³ J",
+        "1.045 kJ",
+        "1.045×10^3 J"
       ],
       "reject": [
         "1045 kJ.",
-        "209 J."
+        "209 J.",
+        "1.045 J"
       ],
       "strictRecall": true
     },
@@ -49,11 +52,14 @@
       "accept": [
         "0.0500 mol.",
         "0.05 mol",
-        "5.00 × 10⁻² mol"
+        "5.00 × 10⁻² mol",
+        "5.0e-2 mol",
+        "0.050 mol"
       ],
       "reject": [
         "50.0 mol.",
-        "0.0125 mol."
+        "0.0125 mol.",
+        "0.50 mol"
       ],
       "strictRecall": true
     },
@@ -75,11 +81,14 @@
       "accept": [
         "−41.8 kJ mol⁻¹.",
         "-41.8 kJ mol^-1",
-        "negative 41.8 kJ per mole"
+        "negative 41.8 kJ per mole",
+        "−41.80 kJ/mol",
+        "−41800 J mol⁻¹"
       ],
       "reject": [
         "+41.8 kJ mol⁻¹.",
-        "−0.1045 kJ mol⁻¹."
+        "−0.1045 kJ mol⁻¹.",
+        "+41800 J mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -101,11 +110,14 @@
       "accept": [
         "1254 J.",
         "1254 J",
-        "1.254 kJ"
+        "1.254 kJ",
+        "1.254×10³ J",
+        "1254.0 J"
       ],
       "reject": [
         "31.35 J.",
-        "1254 kJ."
+        "1254 kJ.",
+        "1.254 J"
       ],
       "strictRecall": true
     },
@@ -127,11 +139,14 @@
       "accept": [
         "−62.7 kJ mol⁻¹.",
         "-62.7 kJ mol^-1",
-        "negative 62.7 kJ per mol"
+        "negative 62.7 kJ per mol",
+        "−62700 J mol⁻¹",
+        "−62.70 kJ mol⁻¹"
       ],
       "reject": [
         "+62.7 kJ mol⁻¹.",
-        "−0.02508 kJ mol⁻¹."
+        "−0.02508 kJ mol⁻¹.",
+        "+62700 J/mol"
       ],
       "strictRecall": true
     },
@@ -153,11 +168,14 @@
       "accept": [
         "Negative.",
         "negative",
-        "ΔH < 0"
+        "ΔH < 0",
+        "ΔH is below zero.",
+        "Exothermic, so ΔH<0."
       ],
       "reject": [
         "Positive.",
-        "Zero."
+        "Zero.",
+        "ΔH>0"
       ],
       "strictRecall": true
     },
@@ -179,11 +197,14 @@
       "accept": [
         "12.4 °C.",
         "12.4 K",
-        "12.4°C"
+        "12.4°C",
+        "+12.4 K",
+        "32.4−20.0=12.4 K"
       ],
       "reject": [
         "52.4 °C.",
-        "10.4 °C."
+        "10.4 °C.",
+        "−12.4 K"
       ],
       "strictRecall": true
     },
@@ -205,11 +226,14 @@
       "accept": [
         "Not negative enough.",
         "less negative than true value",
-        "magnitude of ΔH is underestimated"
+        "magnitude of ΔH is underestimated",
+        "The measured ΔH is less exothermic.",
+        "The calculated magnitude of ΔH is too small."
       ],
       "reject": [
         "Too negative.",
-        "Its magnitude is overestimated."
+        "Its magnitude is overestimated.",
+        "The measured ΔH is more negative."
       ],
       "strictRecall": true
     },
@@ -231,11 +255,14 @@
       "accept": [
         "2.5%.",
         "2.5 percent",
-        "(0.2/8.0) × 100 = 2.5%"
+        "(0.2/8.0) × 100 = 2.5%",
+        "0.2/8×100=2.5%",
+        "2.50%"
       ],
       "reject": [
         "0.025%.",
-        "25%."
+        "25%.",
+        "0.25%"
       ],
       "strictRecall": true
     },
@@ -257,11 +284,14 @@
       "accept": [
         "−727 kJ mol⁻¹.",
         "-727 kJ mol^-1",
-        "(−394 + 2 × −286) − (−239) = −727 kJ mol⁻¹"
+        "(−394 + 2 × −286) − (−239) = −727 kJ mol⁻¹",
+        "−727000 J mol⁻¹",
+        "−727.0 kJ/mol"
       ],
       "reject": [
         "+727 kJ mol⁻¹.",
-        "−1205 kJ mol⁻¹."
+        "−1205 kJ mol⁻¹.",
+        "+727000 J/mol"
       ],
       "strictRecall": true
     },
@@ -283,11 +313,14 @@
       "accept": [
         "−137 kJ mol⁻¹.",
         "-137 kJ mol^-1",
-        "−1411−286+1560 = −137 kJ mol⁻¹"
+        "−1411−286+1560 = −137 kJ mol⁻¹",
+        "−137000 J mol⁻¹",
+        "−137.0 kJ/mol"
       ],
       "reject": [
         "+137 kJ mol⁻¹.",
-        "−3257 kJ mol⁻¹."
+        "−3257 kJ mol⁻¹.",
+        "+137000 J/mol"
       ],
       "strictRecall": true
     },
@@ -309,11 +342,14 @@
       "accept": [
         "+85 kJ mol⁻¹.",
         "85 kJ mol^-1",
-        "positive 85 kJ/mol"
+        "positive 85 kJ/mol",
+        "+85.0 kJ mol⁻¹",
+        "85 kJ/mol"
       ],
       "reject": [
         "−85 kJ mol⁻¹.",
-        "−170 kJ mol⁻¹."
+        "−170 kJ mol⁻¹.",
+        "0 kJ/mol"
       ],
       "strictRecall": true
     },
@@ -335,11 +371,14 @@
       "accept": [
         "−80 kJ.",
         "-80 kJ",
-        "negative 80 kJ"
+        "negative 80 kJ",
+        "−80.0 kJ",
+        "−80000 J"
       ],
       "reject": [
         "−20 kJ.",
-        "+80 kJ."
+        "+80 kJ.",
+        "−40 kJ"
       ],
       "strictRecall": true
     },
@@ -361,11 +400,14 @@
       "accept": [
         "−35 kJ mol⁻¹.",
         "-35 kJ mol^-1",
-        "−50 − (−15) = −35 kJ mol⁻¹"
+        "−50 − (−15) = −35 kJ mol⁻¹",
+        "−35.0 kJ mol⁻¹",
+        "−35000 J mol⁻¹"
       ],
       "reject": [
         "+35 kJ mol⁻¹.",
-        "−65 kJ mol⁻¹."
+        "−65 kJ mol⁻¹.",
+        "+35000 J mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -387,11 +429,14 @@
       "accept": [
         "−814 kJ mol⁻¹.",
         "-814 kJ mol^-1",
-        "(4×413+2×498)−(2×805+4×463)=−814 kJ mol⁻¹"
+        "(4×413+2×498)−(2×805+4×463)=−814 kJ mol⁻¹",
+        "−814000 J mol⁻¹",
+        "−814.0 kJ/mol"
       ],
       "reject": [
         "+814 kJ mol⁻¹.",
-        "−166 kJ mol⁻¹."
+        "−166 kJ mol⁻¹.",
+        "+814000 J mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -413,11 +458,14 @@
       "accept": [
         "It uses average gaseous bond enthalpies, which depend on molecular environment.",
         "Mean bond values are averages over different gaseous compounds.",
-        "Actual bond enthalpies vary with the molecular environment."
+        "Actual bond enthalpies vary with the molecular environment.",
+        "Bond strengths vary from molecule to molecule.",
+        "The quoted bond values are averages for gaseous compounds."
       ],
       "reject": [
         "Every C–H bond has exactly the same enthalpy.",
-        "Bond enthalpy calculations always include condensation energy."
+        "Bond enthalpy calculations always include condensation energy.",
+        "Bond strengths are identical in all molecules."
       ],
       "strictRecall": true
     },
@@ -439,11 +487,14 @@
       "accept": [
         "0 kJ mol⁻¹.",
         "zero",
-        "0"
+        "0",
+        "0.0 kJ/mol",
+        "Zero by definition."
       ],
       "reject": [
         "+1 kJ mol⁻¹.",
-        "−286 kJ mol⁻¹."
+        "−286 kJ mol⁻¹.",
+        "+394 kJ/mol"
       ],
       "strictRecall": true
     },
@@ -465,11 +516,14 @@
       "accept": [
         "Condensation releases extra energy, making ΔH more negative.",
         "Formation of liquid water is more exothermic.",
-        "The true value becomes more negative because water condenses."
+        "The true value becomes more negative because water condenses.",
+        "The combustion becomes more exothermic.",
+        "It makes the enthalpy change more negative."
       ],
       "reject": [
         "Liquid water always makes ΔH less negative.",
-        "Water condensation absorbs heat."
+        "Water condensation absorbs heat.",
+        "Condensation makes ΔH more positive."
       ],
       "strictRecall": true
     }

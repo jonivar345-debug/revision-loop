@@ -1,0 +1,11 @@
+name: Task 1 v307 mechanics and Born-Haber recall precision
+on: [pull_request]
+jobs:
+  mechanics-energetics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v307-mechanics-thermo-real-marker.cjs
+      - run: node tests/task1-v304-legacy-mock-editorial-scan.cjs
+      - run: node tests/task1-v306-pure-proof-vectors-precision.cjs
+      - run: node tests/task1-practical-legacy-v133.cjs

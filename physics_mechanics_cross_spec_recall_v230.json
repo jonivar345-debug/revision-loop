@@ -21,11 +21,15 @@
       "accept": [
         "√(P² + Q²).",
         "Square root of P squared plus Q squared.",
-        "Use Pythagoras on the perpendicular components."
+        "Use Pythagoras on the perpendicular components.",
+        "(P²+Q²)^(1/2)",
+        "sqrt(P^2+Q^2)"
       ],
       "reject": [
         "P + Q always.",
-        "PQ."
+        "PQ.",
+        "P−Q",
+        "P×Q"
       ],
       "strictRecall": true,
       "taught": true,
@@ -48,11 +52,16 @@
       "accept": [
         "tan θ = Fy/Fx (choose the correct quadrant if a component is negative).",
         "theta equals arctan of vertical component divided by horizontal component, with direction checked.",
-        "Use the inverse tangent of Fy divided by Fx and check signs."
+        "Use the inverse tangent of Fy divided by Fx and check signs.",
+        "θ=tan⁻¹(Fy/Fx), with the quadrant checked.",
+        "arctan(Fy/Fx), checking direction signs.",
+        "tan theta=Fy/Fx and check the quadrant"
       ],
       "reject": [
         "tan theta = Fx/Fy always.",
-        "Only the resultant magnitude gives its direction."
+        "Only the resultant magnitude gives its direction.",
+        "tan θ=Fx/Fy",
+        "tan theta=Fy*Fx"
       ],
       "strictRecall": true,
       "taught": true,
@@ -75,11 +84,15 @@
       "accept": [
         "Zero; the forces are in equilibrium.",
         "The vector sum is zero.",
-        "Resultant force equals zero."
+        "Resultant force equals zero.",
+        "0 N",
+        "The forces add to zero."
       ],
       "reject": [
         "Their resultant must equal the largest force.",
-        "The forces necessarily cause acceleration."
+        "The forces necessarily cause acceleration.",
+        "Non-zero resultant.",
+        "The triangle produces an unbalanced force."
       ],
       "strictRecall": true,
       "taught": true,
@@ -102,11 +115,16 @@
       "accept": [
         "Fr sin θ.",
         "Force times the perpendicular distance to its line of action.",
-        "M = F r sin(theta)."
+        "M = F r sin(theta).",
+        "F r sinθ",
+        "Moment=Frsinθ",
+        "F×r×sinθ"
       ],
       "reject": [
         "Fr cos θ for any angle.",
-        "Always Fr even if the force points at the pivot."
+        "Always Fr even if the force points at the pivot.",
+        "Fr cosθ",
+        "F+r sinθ"
       ],
       "strictRecall": true,
       "taught": true,
@@ -129,11 +147,15 @@
       "accept": [
         "Its perpendicular distance from the pivot is zero, so it contributes zero moment.",
         "The reaction force then has no moment about that pivot.",
-        "Its line of action passes through the chosen pivot, eliminating its moment."
+        "Its line of action passes through the chosen pivot, eliminating its moment.",
+        "The reaction has zero lever arm.",
+        "Its line of action goes through the pivot."
       ],
       "reject": [
         "It eliminates the force from the vertical force balance too.",
-        "The reaction force itself becomes zero."
+        "The reaction force itself becomes zero.",
+        "Its moment is F times the whole beam length.",
+        "The unknown reaction disappears as a force."
       ],
       "strictRecall": true,
       "taught": true,
@@ -156,11 +178,14 @@
       "accept": [
         "No; it is still moving forwards but its speed is decreasing while those signs persist.",
         "It travels in the positive direction and slows down.",
-        "Negative acceleration alone does not mean negative velocity."
+        "Negative acceleration alone does not mean negative velocity.",
+        "No; velocity is still positive.",
+        "No, it travels forward but decelerates."
       ],
       "reject": [
         "Yes, negative acceleration always means backwards motion.",
-        "Its velocity must already be negative."
+        "Its velocity must already be negative.",
+        "Yes, its velocity is negative."
       ],
       "strictRecall": true,
       "taught": true,
@@ -183,11 +208,14 @@
       "accept": [
         "Velocity has decreased algebraically over that interval; it does not by itself show negative velocity.",
         "There is a negative change in velocity.",
-        "Delta v is negative, not necessarily v."
+        "Delta v is negative, not necessarily v.",
+        "Δv<0",
+        "Its signed change in velocity is negative."
       ],
       "reject": [
         "Distance travelled is negative.",
-        "The object must be travelling backwards for the whole interval."
+        "The object must be travelling backwards for the whole interval.",
+        "The object must have negative displacement."
       ],
       "strictRecall": true,
       "taught": true,
@@ -210,11 +238,14 @@
       "accept": [
         "+g, approximately 9.81 m s⁻².",
         "The gradient is g.",
-        "Positive gravitational acceleration, about 9.81 metres per second squared."
+        "Positive gravitational acceleration, about 9.81 metres per second squared.",
+        "+9.8 m s⁻²",
+        "9.8 m/s² downward (positive)"
       ],
       "reject": [
         "Zero, because it starts at rest.",
-        "Negative g when downward has been defined as positive."
+        "Negative g when downward has been defined as positive.",
+        "−9.8 m s⁻²"
       ],
       "strictRecall": true,
       "taught": true,
@@ -237,11 +268,14 @@
       "accept": [
         "Vertical velocity is zero; vertical acceleration remains g downwards.",
         "Vy = 0 and ay = -g if upwards is positive.",
-        "Its vertical velocity is instantaneously zero but acceleration is still downward at 9.81 metres per second squared."
+        "Its vertical velocity is instantaneously zero but acceleration is still downward at 9.81 metres per second squared.",
+        "v_y=0, a_y=g downwards",
+        "vy=0, acceleration remains downwards"
       ],
       "reject": [
         "Both vertical velocity and vertical acceleration are zero.",
-        "Vertical acceleration changes to upwards at the top."
+        "Vertical acceleration changes to upwards at the top.",
+        "v_y=0 and a_y=0"
       ],
       "strictRecall": true,
       "taught": true,
@@ -264,11 +298,14 @@
       "accept": [
         "The horizontal range is reduced.",
         "It travels a shorter horizontal distance.",
-        "Air resistance generally reduces the range."
+        "Air resistance generally reduces the range.",
+        "Range decreases.",
+        "Shorter range."
       ],
       "reject": [
         "It always travels further horizontally.",
-        "Air resistance has no effect on the trajectory."
+        "Air resistance has no effect on the trajectory.",
+        "Range must increase."
       ],
       "strictRecall": true,
       "taught": true,
@@ -291,11 +328,14 @@
       "accept": [
         "They are equal in magnitude, so the resultant force and acceleration are zero.",
         "Drag equals weight at terminal speed.",
-        "Upward resistive force balances mg."
+        "Upward resistive force balances mg.",
+        "F_drag=mg",
+        "Drag force and weight balance."
       ],
       "reject": [
         "Weight is larger than drag at terminal speed.",
-        "Drag must vanish when terminal speed is reached."
+        "Drag must vanish when terminal speed is reached.",
+        "The forces are unequal so acceleration remains nonzero."
       ],
       "strictRecall": true,
       "taught": true,
@@ -318,11 +358,14 @@
       "accept": [
         "No; weight and normal force act on the same book, whereas a third-law pair acts on different objects.",
         "No. The reaction to Earth's pull on the book is the book's gravitational pull on Earth.",
-        "No, normal contact force and weight can balance but are not an action-reaction pair."
+        "No, normal contact force and weight can balance but are not an action-reaction pair.",
+        "No, both forces act on the book.",
+        "No, the gravitational reaction acts on Earth."
       ],
       "reject": [
         "Yes, because they are equal and opposite forces on the book.",
-        "Yes, because any balanced forces form a third-law pair."
+        "Yes, because any balanced forces form a third-law pair.",
+        "Yes, both act on the same object."
       ],
       "strictRecall": true,
       "taught": true,
@@ -345,11 +388,14 @@
       "accept": [
         "Momentum is a vector, so opposite directions must have opposite signs.",
         "Velocity has direction and signed momenta must be added.",
-        "Conservation of momentum needs positive and negative directions."
+        "Conservation of momentum needs positive and negative directions.",
+        "Momentum has a direction.",
+        "Momenta must be added with their signs."
       ],
       "reject": [
         "Momentum has no direction.",
-        "All velocities should be made positive before adding momentum."
+        "All velocities should be made positive before adding momentum.",
+        "Momentum is always positive."
       ],
       "strictRecall": true,
       "taught": true,
@@ -372,11 +418,14 @@
       "accept": [
         "Total kinetic energy is conserved in an elastic collision; total momentum is conserved in both.",
         "Elastic collisions conserve kinetic energy as well as momentum.",
-        "Momentum is conserved in both, but kinetic energy is not generally conserved in an inelastic collision."
+        "Momentum is conserved in both, but kinetic energy is not generally conserved in an inelastic collision.",
+        "Kinetic energy is conserved only for the elastic collision.",
+        "Both conserve momentum but only elastic conserves KE."
       ],
       "reject": [
         "Only elastic collisions conserve momentum.",
-        "Inelastic collisions conserve total kinetic energy by definition."
+        "Inelastic collisions conserve total kinetic energy by definition.",
+        "Only inelastic collisions conserve momentum."
       ],
       "strictRecall": true,
       "taught": true,
@@ -399,11 +448,14 @@
       "accept": [
         "Add the signed areas between the force curve and displacement axis.",
         "Work equals positive area minus the magnitudes of negative areas.",
-        "Integrate force with respect to displacement, retaining signs."
+        "Integrate force with respect to displacement, retaining signs.",
+        "∫F ds including sign",
+        "Positive signed area minus negative magnitude."
       ],
       "reject": [
         "Add the absolute values of every area.",
-        "Use the gradient of the force-displacement graph."
+        "Use the gradient of the force-displacement graph.",
+        "Sum of unsigned areas."
       ],
       "strictRecall": true,
       "taught": true,
@@ -426,11 +478,14 @@
       "accept": [
         "It is transferred to thermal internal energy of the object and surroundings.",
         "Work against friction increases internal energy.",
-        "Kinetic energy is dissipated as heating."
+        "Kinetic energy is dissipated as heating.",
+        "Into internal energy as heat.",
+        "Thermal energy of the object and surroundings."
       ],
       "reject": [
         "Energy is destroyed.",
-        "Kinetic energy must become gravitational potential energy."
+        "Kinetic energy must become gravitational potential energy.",
+        "The kinetic energy vanishes from the system."
       ],
       "strictRecall": true,
       "taught": true,
@@ -453,11 +508,14 @@
       "accept": [
         "Yes; the limit of proportionality and the elastic limit are not necessarily the same.",
         "Yes, nonlinear elastic behaviour is possible before plastic deformation.",
-        "The force-extension graph may become nonlinear without permanent extension."
+        "The force-extension graph may become nonlinear without permanent extension.",
+        "Yes: non-linear but elastic extension is possible.",
+        "Yes, the material may still recover its length."
       ],
       "reject": [
         "No, any nonlinearity must cause permanent deformation.",
-        "The elastic limit must always coincide with the limit of proportionality."
+        "The elastic limit must always coincide with the limit of proportionality.",
+        "No, exceeding proportional limit always means plastic strain."
       ],
       "strictRecall": true,
       "taught": true,
@@ -480,11 +538,14 @@
       "accept": [
         "It becomes four times as large because cross-sectional area is proportional to diameter squared.",
         "Stiffness quadruples.",
-        "k is four times the original because A is four times larger."
+        "k is four times the original because A is four times larger.",
+        "4 times the stiffness.",
+        "Factor of four increase."
       ],
       "reject": [
         "Stiffness doubles.",
-        "Stiffness halves."
+        "Stiffness halves.",
+        "Eight times as stiff."
       ],
       "strictRecall": true,
       "taught": true,
@@ -507,11 +568,14 @@
       "accept": [
         "Plastic deformation has occurred.",
         "The wire has a permanent extension.",
-        "The material has gone beyond its elastic limit."
+        "The material has gone beyond its elastic limit.",
+        "It has yielded plastically.",
+        "A permanent strain remains."
       ],
       "reject": [
         "The wire was perfectly elastic.",
-        "It proves Hooke's law held throughout loading."
+        "It proves Hooke's law held throughout loading.",
+        "Only elastic deformation happened."
       ],
       "strictRecall": true,
       "taught": true,
@@ -533,12 +597,15 @@
       "back": "A systematic zero offset biases the diameter, hence the calculated area and Young modulus.",
       "accept": [
         "A systematic zero offset biases the diameter, hence the calculated area and Young modulus.",
-        "Zero error introduces systematic diameter error, which affects area squared in diameter.",
-        "The micrometer may read nonzero when closed and all diameters need correction."
+        "The zero offset biases d and therefore area A, which is proportional to d².",
+        "The micrometer may read nonzero when closed and all diameters need correction.",
+        "The diameter may be biased; area depends on diameter squared.",
+        "A fixed micrometer offset distorts A=πd²/4 and hence E."
       ],
       "reject": [
         "Zero error is removed by taking more readings alone.",
-        "Wire diameter does not affect Young modulus calculations."
+        "Wire diameter does not affect Young modulus calculations.",
+        "Systematic offset disappears when readings are averaged."
       ],
       "strictRecall": true,
       "taught": true,

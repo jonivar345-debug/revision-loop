@@ -23,11 +23,14 @@
       "accept": [
         "−787 kJ mol⁻¹.",
         "-787 kJ mol^-1",
-        "-787"
+        "-787",
+        "−787.0 kJ/mol",
+        "−787000 J mol⁻¹"
       ],
       "reject": [
         "+787 kJ mol⁻¹.",
-        "−438 kJ mol⁻¹."
+        "−438 kJ mol⁻¹.",
+        "+787000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -81,11 +84,14 @@
       "accept": [
         "+787 kJ mol⁻¹.",
         "787 kJ mol^-1",
-        "+787"
+        "+787",
+        "+787.0 kJ/mol",
+        "787000 J mol⁻¹"
       ],
       "reject": [
         "−787 kJ mol⁻¹.",
-        "0 kJ mol⁻¹."
+        "0 kJ mol⁻¹.",
+        "−787000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -139,11 +145,14 @@
       "accept": [
         "−349 kJ mol⁻¹.",
         "-349 kJ mol^-1",
-        "−349"
+        "−349",
+        "−349.0 kJ/mol",
+        "−349000 J mol⁻¹"
       ],
       "reject": [
         "+349 kJ mol⁻¹.",
-        "−136 kJ mol⁻¹."
+        "−136 kJ mol⁻¹.",
+        "+349000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -197,11 +206,14 @@
       "accept": [
         "+496 kJ mol⁻¹.",
         "496 kJ mol^-1",
-        "+496"
+        "+496",
+        "+496.0 kJ/mol",
+        "496000 J mol⁻¹"
       ],
       "reject": [
         "−496 kJ mol⁻¹.",
-        "+147 kJ mol⁻¹."
+        "+147 kJ mol⁻¹.",
+        "−496000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -255,11 +267,14 @@
       "accept": [
         "−929 kJ mol⁻¹.",
         "-929 kJ mol^-1",
-        "-929"
+        "-929",
+        "−929.0 kJ/mol",
+        "−929000 J mol⁻¹"
       ],
       "reject": [
         "+929 kJ mol⁻¹.",
-        "−683 kJ mol⁻¹."
+        "−683 kJ mol⁻¹.",
+        "+929000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -313,11 +328,14 @@
       "accept": [
         "−3792 kJ mol⁻¹.",
         "-3792 kJ mol^-1",
-        "-3792"
+        "-3792",
+        "−3792.0 kJ/mol",
+        "−3792000 J mol⁻¹"
       ],
       "reject": [
         "+3792 kJ mol⁻¹.",
-        "−3048 kJ mol⁻¹."
+        "−3048 kJ mol⁻¹.",
+        "+3792000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -371,11 +389,14 @@
       "accept": [
         "−698 kJ mol⁻¹.",
         "-698 kJ mol^-1",
-        "2×(−349)=−698"
+        "2×(−349)=−698",
+        "2 × −349 = −698 kJ/mol",
+        "−698000 J mol⁻¹"
       ],
       "reject": [
         "−349 kJ mol⁻¹.",
-        "+698 kJ mol⁻¹."
+        "+698 kJ mol⁻¹.",
+        "−174.5 kJ/mol"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -429,11 +450,14 @@
       "accept": [
         "+121 kJ mol⁻¹.",
         "121 kJ mol^-1",
-        "+121"
+        "+121",
+        "+121.0 kJ/mol",
+        "121000 J mol⁻¹"
       ],
       "reject": [
         "+242 kJ mol⁻¹.",
-        "−121 kJ mol⁻¹."
+        "−121 kJ mol⁻¹.",
+        "+484 kJ/mol"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -487,11 +511,14 @@
       "accept": [
         "+18 kJ mol⁻¹.",
         "18 kJ mol^-1",
-        "+18"
+        "+18",
+        "+18.0 kJ/mol",
+        "18000 J mol⁻¹"
       ],
       "reject": [
         "−18 kJ mol⁻¹.",
-        "+1556 kJ mol⁻¹."
+        "+1556 kJ mol⁻¹.",
+        "+180 kJ mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -545,11 +572,14 @@
       "accept": [
         "−122 kJ mol⁻¹.",
         "-122 kJ mol^-1",
-        "−122"
+        "−122",
+        "−122.0 kJ/mol",
+        "−122000 J mol⁻¹"
       ],
       "reject": [
         "+122 kJ mol⁻¹.",
-        "+242 kJ mol⁻¹."
+        "+242 kJ mol⁻¹.",
+        "−486 kJ/mol"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -603,11 +633,14 @@
       "accept": [
         "−355 kJ mol⁻¹.",
         "-355 kJ mol^-1",
-        "−355"
+        "−355",
+        "−355.0 kJ/mol",
+        "−355000 J mol⁻¹"
       ],
       "reject": [
         "+355 kJ mol⁻¹.",
-        "−345 kJ mol⁻¹."
+        "−345 kJ mol⁻¹.",
+        "−755 kJ/mol"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -661,11 +694,14 @@
       "accept": [
         "An electron is added to a negatively charged ion, against electrostatic repulsion.",
         "The incoming electron is repelled by O⁻.",
-        "Energy is required to overcome electron–electron repulsion in O⁻."
+        "Energy is required to overcome electron–electron repulsion in O⁻.",
+        "Adding an electron to O⁻ requires overcoming repulsion.",
+        "O⁻ is negative, repelling the incoming electron."
       ],
       "reject": [
         "An electron is removed from O²⁻.",
-        "The second electron is attracted by a positive O⁻ ion."
+        "The second electron is attracted by a positive O⁻ ion.",
+        "O⁻ has positive charge."
       ],
       "strictRecall": true
     },
@@ -682,16 +718,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Born–Haber lattice ΔHf −970 vs perfect ionic model −900 kJ mol⁻¹. What does the difference suggest?",
+      "front": "Lattice formation ΔH: Born–Haber −970, perfect ionic model −900 kJ mol⁻¹. What does the difference suggest?",
       "back": "Covalent character arising from polarisation of the ions.",
       "accept": [
         "Covalent character arising from polarisation of the ions.",
         "The bonding has some covalent character.",
-        "Ion polarisation causes departure from a purely ionic model."
+        "Ion polarisation causes departure from a purely ionic model.",
+        "The real compound has some covalent bonding.",
+        "Polarisation gives additional covalent character."
       ],
       "reject": [
         "The crystal must contain no ionic bonding.",
-        "The discrepancy proves all bonds are metallic."
+        "The discrepancy proves all bonds are metallic.",
+        "Covalency is impossible in ionic compounds."
       ],
       "strictRecall": true
     },
@@ -713,11 +752,14 @@
       "accept": [
         "Mg²⁺ and O²⁻.",
         "MgO",
-        "The doubly charged Mg²⁺/O²⁻ ions."
+        "The doubly charged Mg²⁺/O²⁻ ions.",
+        "Mg2+ and O2-",
+        "Magnesium oxide"
       ],
       "reject": [
         "Na⁺ and Cl⁻.",
-        "Both must have equal lattice enthalpies."
+        "Both must have equal lattice enthalpies.",
+        "Sodium chloride"
       ],
       "strictRecall": true
     },
@@ -739,11 +781,13 @@
       "accept": [
         "Mg²⁺(g) + O²⁻(g) → MgO(s).",
         "Mg2+(g) + O2-(g) -> MgO(s)",
-        "gaseous Mg²⁺ and O²⁻ combine into solid MgO"
+        "gaseous Mg²⁺ and O²⁻ combine into solid MgO",
+        "Mg2+(g)+O2-(g)→MgO(s)"
       ],
       "reject": [
         "MgO(s) → Mg²⁺(g) + O²⁻(g).",
-        "Mg(g) + O(g) → MgO(g)."
+        "Mg(g) + O(g) → MgO(g).",
+        "Mg²⁺(aq)+O²⁻(aq)→MgO(s)"
       ],
       "strictRecall": true
     },
@@ -765,11 +809,14 @@
       "accept": [
         "Energy must be supplied to separate its oppositely charged ions.",
         "Energy is needed to overcome ionic attractions.",
-        "Separating the ionic lattice into gaseous ions is endothermic."
+        "Separating the ionic lattice into gaseous ions is endothermic.",
+        "It takes energy to pull gaseous ions apart.",
+        "The ionic electrostatic attraction must be overcome."
       ],
       "reject": [
         "Energy is released when ions separate.",
-        "The process forms the solid from gaseous ions."
+        "The process forms the solid from gaseous ions.",
+        "Dissociation always releases energy."
       ],
       "strictRecall": true
     },
@@ -791,11 +838,14 @@
       "accept": [
         "−90.2 kJ mol⁻¹.",
         "-90.2 kJ mol^-1",
-        "−90.2"
+        "−90.2",
+        "−90.20 kJ/mol",
+        "−90200 J mol⁻¹"
       ],
       "reject": [
         "+90.2 kJ mol⁻¹.",
-        "−149.8 kJ mol⁻¹."
+        "−149.8 kJ mol⁻¹.",
+        "+90200 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -849,11 +899,14 @@
       "accept": [
         "−30 kJ mol⁻¹.",
         "-30 kJ mol^-1",
-        "−30"
+        "−30",
+        "−30.0 kJ/mol",
+        "−30000 J mol⁻¹"
       ],
       "reject": [
         "+30 kJ mol⁻¹.",
-        "+39.93 kJ mol⁻¹."
+        "+39.93 kJ mol⁻¹.",
+        "+30000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -907,11 +960,14 @@
       "accept": [
         "300 K.",
         "300 kelvin",
-        "T=300 K"
+        "T=300 K",
+        "T=300 kelvin",
+        "300.0 K"
       ],
       "reject": [
         "0.30 K.",
-        "750 K."
+        "750 K.",
+        "30 K"
       ],
       "strictRecall": true
     },
@@ -933,11 +989,14 @@
       "accept": [
         "Above 300 K.",
         "T > 300 K",
-        "at temperatures greater than 300 kelvin"
+        "at temperatures greater than 300 kelvin",
+        "T>300K",
+        "T greater than 300 K"
       ],
       "reject": [
         "Below 300 K.",
-        "At exactly 300 K only."
+        "At exactly 300 K only.",
+        "T<300K"
       ],
       "strictRecall": true
     },
@@ -959,11 +1018,14 @@
       "accept": [
         "400 K.",
         "400 kelvin",
-        "T=400 K"
+        "T=400 K",
+        "T=400 kelvin",
+        "400.0 K"
       ],
       "reject": [
         "0.40 K.",
-        "900 K."
+        "900 K.",
+        "40 K"
       ],
       "strictRecall": true
     },
@@ -985,11 +1047,14 @@
       "accept": [
         "Below 400 K.",
         "T < 400 K",
-        "at temperatures less than 400 kelvin"
+        "at temperatures less than 400 kelvin",
+        "T<400K",
+        "T less than 400 K"
       ],
       "reject": [
         "Above 400 K.",
-        "Only at 400 K."
+        "Only at 400 K.",
+        "T>400K"
       ],
       "strictRecall": true
     },
@@ -1011,11 +1076,14 @@
       "accept": [
         "−120 J K⁻¹ mol⁻¹.",
         "-120 J K^-1 mol^-1",
-        "−120"
+        "−120",
+        "−120.0 J K⁻¹ mol⁻¹",
+        "−0.120 kJ K⁻¹ mol⁻¹"
       ],
       "reject": [
         "+120 J K⁻¹ mol⁻¹.",
-        "−370 J K⁻¹ mol⁻¹."
+        "−370 J K⁻¹ mol⁻¹.",
+        "+0.120 kJ K⁻¹ mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -1037,11 +1105,14 @@
       "accept": [
         "−187 J K⁻¹ mol⁻¹.",
         "-187 J K^-1 mol^-1",
-        "−187"
+        "−187",
+        "−187.0 J K⁻¹ mol⁻¹",
+        "−0.187 kJ K⁻¹ mol⁻¹"
       ],
       "reject": [
         "+187 J K⁻¹ mol⁻¹.",
-        "−444 J K⁻¹ mol⁻¹."
+        "−444 J K⁻¹ mol⁻¹.",
+        "+0.187 kJ K⁻¹ mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -1063,11 +1134,14 @@
       "accept": [
         "−0.125 kJ K⁻¹ mol⁻¹.",
         "-0.125 kJ K^-1 mol^-1",
-        "−0.125"
+        "−0.125",
+        "−0.125 kJ mol⁻¹ K⁻¹",
+        "−125 J K⁻¹ mol⁻¹"
       ],
       "reject": [
         "+0.125 kJ K⁻¹ mol⁻¹.",
-        "−125 kJ K⁻¹ mol⁻¹."
+        "−125 kJ K⁻¹ mol⁻¹.",
+        "+125 J K⁻¹ mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -1089,11 +1163,14 @@
       "accept": [
         "+30 kJ mol⁻¹.",
         "30 kJ mol^-1",
-        "+30"
+        "+30",
+        "+30.0 kJ/mol",
+        "30000 J mol⁻¹"
       ],
       "reject": [
         "−30 kJ mol⁻¹.",
-        "0 kJ mol⁻¹."
+        "0 kJ mol⁻¹.",
+        "−30000 J mol⁻¹"
       ],
       "strictRecall": true
     },
@@ -1115,11 +1192,14 @@
       "accept": [
         "500 K.",
         "500 kelvin",
-        "T=500 K"
+        "T=500 K",
+        "T=500 kelvin",
+        "500.0 K"
       ],
       "reject": [
         "0.5 K.",
-        "1250 K."
+        "1250 K.",
+        "50 K"
       ],
       "strictRecall": true
     },
@@ -1141,11 +1221,14 @@
       "accept": [
         "−20 kJ mol⁻¹.",
         "-20 kJ mol^-1",
-        "−20"
+        "−20",
+        "−20.0 kJ/mol",
+        "−20000 J mol⁻¹"
       ],
       "reject": [
         "+20 kJ mol⁻¹.",
-        "−180 kJ mol⁻¹."
+        "−180 kJ mol⁻¹.",
+        "+20000 J mol⁻¹"
       ],
       "strictRecall": true,
       "numericRecall": {

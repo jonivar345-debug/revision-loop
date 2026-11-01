@@ -17,11 +17,11 @@ for(const c of bank.cards){
  assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'AS');assert.equal(c.mock,true);
  assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
  assert(/^3\.1\.4\.[1-4]$/.test(c.specRef),'Out of scope '+c.id);
- assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ assert(c.accept.length>=3,'Preserve original 3 good examples');assert(c.reject.length>=2,'Preserve original 2 wrong examples');assert(c.accept.includes(c.back));
  for(const a of c.accept){assert.equal(judge(c,a).status,'correct','Valid response rejected '+c.id+': '+a);accept++;}
  for(const a of c.reject){assert.equal(judge(c,a).status,'wrong','Invalid response accepted '+c.id+': '+a);reject++;}
 }
-assert.equal(accept,54);assert.equal(reject,36);
+assert(accept>=54,'Original 54 good responses still tested');assert(reject>=36,'Original 36 wrong responses still tested');
 assert.equal(50*4.18*5,1045);assert.equal(.025*2,.05);assert.equal(-2.09/.05,-41.8);
 assert.equal(40*4.18*7.5,1254);assert(Math.abs(-1.254/.02+62.7)<1e-9);
 assert(Math.abs((32.4-20)-12.4)<1e-9);assert.equal(.2/8*100,2.5);
@@ -39,4 +39,4 @@ invalid[33]={cards:bank.cards.slice(0,7).map((c,i)=>({...c,...[
 ][i]}))};
 assert.equal(loader([...deck.cards],invalid).length,3345);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v247: 18 Energetics/RP2 mock application cards, 54 accepted and 36 rejected answers, independent numerical checks, proper offline and mock-only inclusion.');
+console.log('PASS v247: 18 Energetics/RP2 mock application cards, '+accept+' accepted and '+reject+' rejected answers, independent numerical checks, proper offline and mock-only inclusion.');
