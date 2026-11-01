@@ -1,0 +1,509 @@
+{
+  "version": "v275",
+  "createdAt": "2026-11-01",
+  "scope": "20 original AQA AS Physics 7408 Waves 3.3.2.3 cards on plane refraction, step-index core/cladding, total internal reflection, dispersion and attenuation",
+  "source": "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves",
+  "notes": "Original single-point recall, not official past paper wording; 40 valid and 40 wrong examples must be checked with actual local flashcard marker.",
+  "cards": [
+    {
+      "id": "task1_v275_phy_fibre_card_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a step-index optical fibre, which part carries light along the fibre?",
+      "back": "The core.",
+      "accept": [
+        "The core.",
+        "core"
+      ],
+      "reject": [
+        "cladding only",
+        "protective outer coating"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Relative to the core, what must the refractive index of an optical fibre's cladding be?",
+      "back": "Lower.",
+      "accept": [
+        "Lower.",
+        "smaller than the core's refractive index"
+      ],
+      "reject": [
+        "higher",
+        "exactly equal"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is an optical fibre's cladding useful in addition to its refractive-index difference?",
+      "back": "It protects the core boundary from damage and reduces light leakage.",
+      "accept": [
+        "It protects the core boundary from damage and reduces light leakage.",
+        "protects core surface and reduces light loss"
+      ],
+      "reject": [
+        "it changes light into electrical current",
+        "it must absorb all reflected light"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a medium with speed v, express its absolute refractive index n.",
+      "back": "n=c/v.",
+      "accept": [
+        "n=c/v.",
+        "speed in vacuum divided by speed in material"
+      ],
+      "reject": [
+        "n=v/c",
+        "n=cv"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What approximate absolute refractive index is used for air in AS Physics calculations?",
+      "back": "1.",
+      "accept": [
+        "1.",
+        "about 1"
+      ],
+      "reject": [
+        "1.5",
+        "0.1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At a plane boundary, what equation relates refractive indices n₁,n₂ and angles measured to the normal?",
+      "back": "n₁ sin θ₁=n₂ sin θ₂.",
+      "accept": [
+        "n₁ sin θ₁=n₂ sin θ₂.",
+        "n1 sin theta1 = n2 sin theta2"
+      ],
+      "reject": [
+        "n1 cos theta1=n2 cos theta2",
+        "n1 sin theta2=n2 sin theta2"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A wave travels from n₁ into lower n₂. What equation gives the critical angle θc?",
+      "back": "sin θc=n₂/n₁.",
+      "accept": [
+        "sin θc=n₂/n₁.",
+        "sin critical angle = lower index / higher index"
+      ],
+      "reject": [
+        "sin θc=n1/n2",
+        "cos θc=n2/n1"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How are the incidence and refraction angles in Snell's law measured?",
+      "back": "From the normal.",
+      "accept": [
+        "From the normal.",
+        "relative to the normal"
+      ],
+      "reject": [
+        "from the boundary surface",
+        "from the fibre's length only"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At the critical angle, what angle does the refracted ray make with the normal?",
+      "back": "90°.",
+      "accept": [
+        "90°.",
+        "90 degrees"
+      ],
+      "reject": [
+        "0 degrees",
+        "45 degrees"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "When can total internal reflection occur at a boundary between two media?",
+      "back": "From higher n to lower n, with incidence greater than the critical angle.",
+      "accept": [
+        "From higher n to lower n, with incidence greater than the critical angle.",
+        "n1 greater than n2 and i greater than critical angle"
+      ],
+      "reject": [
+        "from lower n to higher n",
+        "at any angle if the cladding is thick"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "During total internal reflection, how does the reflection angle compare with the angle of incidence?",
+      "back": "They are equal.",
+      "accept": [
+        "They are equal.",
+        "angle of reflection equals incidence angle"
+      ],
+      "reject": [
+        "reflection angle is always 90°",
+        "reflection angle is always 0°"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For material dispersion, what causes different parts of a light pulse to arrive at different times?",
+      "back": "Different wavelengths travel at different speeds in the material.",
+      "accept": [
+        "Different wavelengths travel at different speeds in the material.",
+        "different refractive indices for different wavelengths"
+      ],
+      "reject": [
+        "all wavelengths travel at identical speed",
+        "the detector slows all photons equally"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For modal dispersion, what makes parts of the light signal arrive at different times?",
+      "back": "Different ray paths have different path lengths.",
+      "accept": [
+        "Different ray paths have different path lengths.",
+        "different modes travel different distances"
+      ],
+      "reject": [
+        "all rays have the same path length",
+        "the light changes colour inside every reflection"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What effect does dispersion have on a finite-width light pulse?",
+      "back": "Pulse broadening.",
+      "accept": [
+        "Pulse broadening.",
+        "pulse spreads out in time"
+      ],
+      "reject": [
+        "pulse becomes narrower",
+        "pulse energy is created"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why can pulse broadening reduce the maximum data rate in an optical fibre?",
+      "back": "Adjacent pulses may overlap.",
+      "accept": [
+        "Adjacent pulses may overlap.",
+        "neighbouring pulses become harder to distinguish"
+      ],
+      "reject": [
+        "pulse time separation increases automatically",
+        "pulses gain amplitude"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the main effect of absorption on signal pulses travelling along a fibre?",
+      "back": "Attenuation: their intensity decreases.",
+      "accept": [
+        "Attenuation: their intensity decreases.",
+        "reduced pulse intensity or power"
+      ],
+      "reject": [
+        "always reverses pulse direction",
+        "pulse intensity increases"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_17",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How is the refractive index profile modelled in a step-index fibre?",
+      "back": "A sharp change from core index to lower cladding index.",
+      "accept": [
+        "A sharp change from core index to lower cladding index.",
+        "abrupt core-cladding index change"
+      ],
+      "reject": [
+        "a continuously graded core index",
+        "identical index everywhere"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_18",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If blue light has a larger refractive index than red light in the same fibre, which travels more slowly?",
+      "back": "Blue light.",
+      "accept": [
+        "Blue light.",
+        "blue"
+      ],
+      "reject": [
+        "red light",
+        "both same speed"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_19",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If n increases, what happens to wave speed in the same kind of refractive-index comparison?",
+      "back": "It decreases.",
+      "accept": [
+        "It decreases.",
+        "speed decreases"
+      ],
+      "reject": [
+        "it increases",
+        "it is unchanged"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v275_phy_fibre_card_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the required relationship between angle of incidence and critical angle for light to remain guided by total internal reflection?",
+      "back": "Incidence must exceed the critical angle.",
+      "accept": [
+        "Incidence must exceed the critical angle.",
+        "angle of incidence greater than critical angle"
+      ],
+      "reject": [
+        "incidence below critical angle",
+        "incidence equals 0"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
