@@ -1612,7 +1612,7 @@ function evaluateConfiguredNumericRecall(c,input){
  }
  let reading;
  if(!match[2]){
-  if(!config.allowUnitless)return null;
+  if(!config.allowUnitless)return {status:'wrong',score:0,text:'Give the answer with the required unit.',missing:[config.expected]};
   reading=numeric;
  }else{
   const unit=units.find(u=>String(u.symbol).toLowerCase()===match[2].toLowerCase());
