@@ -1,0 +1,64 @@
+{
+  "version": "v285",
+  "date": "2026-11-01",
+  "source": "Read-only GitHub Actions v285 actual mockEligibleCard/mockEligibleQuestion selection, run 41323462149",
+  "scope": "First school Physics mock: AS only; school Chemistry mock: AS and taught Year 2 physical/organic through Kp, excluding buffers. These counts reflect selected repository flags, not manual teacher verification.",
+  "physics": {
+    "eligibleCards": 1056,
+    "eligibleQuestions": 329,
+    "ASCards": 1056,
+    "ASQuestions": 329,
+    "A2Cards": 0,
+    "A2Questions": 0,
+    "explicitlyUntaughtCards": 0,
+    "explicitlyUntaughtQuestions": 0,
+    "cardsWithoutExactSpecRef": 311,
+    "questionsWithoutExactSpecRef": 250,
+    "questionsWithoutExplicitTaughtFlag": 269
+  },
+  "chemistry": {
+    "eligibleCards": 1866,
+    "eligibleQuestions": 388,
+    "ASCards": 1414,
+    "A2Cards": 452,
+    "ASQuestions": 331,
+    "A2Questions": 21,
+    "questionsLabelledALevel": 36,
+    "explicitlyUntaughtCards": 0,
+    "explicitlyUntaughtQuestions": 0,
+    "cardsWithoutExactSpecRef": 660,
+    "questionsWithoutExactSpecRef": 319,
+    "questionsWithoutExplicitTaughtFlag": 330,
+    "bufferKeywordCardsInMock": 0,
+    "bufferKeywordQuestionsInMock": 0,
+    "rp9PHCurveCardsInMock": 8,
+    "rp9PHCurveCardIds": [
+      "task1_v128_011",
+      "task1_v128_012",
+      "task1_v128_013",
+      "task1_v128_016",
+      "task1_v128_017",
+      "task1_v128_018",
+      "task1_v128_019",
+      "task1_v128_020"
+    ]
+  },
+  "remainingReview": [
+    "Eight RP9 pH curve cards are currently eligible. They do not explicitly mention buffers, but confirm whether RP9 titration-curve interpretation is inside the teacher's first mock; do not remove without scope evidence.",
+    "No Chemistry mock card/question currently contains the standalone word 'buffer' or 'buffers' in its topic, prompt, front, answer or question text. This keyword audit does not prove all indirect buffer questions are excluded.",
+    "The older pool has many items with no precise specRef. This is a metadata/evidence-mapping gap, not evidence that content is absent.",
+    "Year 2 Chemistry questions marked 'A-level' require topic-level review against the teacher's first mock scope; do not treat the level label as proof of inclusion/exclusion.",
+    "Physics is AS-only in selected stage data, but not all AS question model answers or optical drawings are examiner verified.",
+    "Items with a missing taught field are not assumed untaught; validate against the school mock description before changing filters.",
+    "No content or progress IDs should be removed on metadata grounds alone.",
+    "Need a high-quality AQA spec bullet crosswalk and semantic marking review of unfamiliar student responses."
+  ],
+  "certification": {
+    "PhysicsHasNoA2Selected": true,
+    "NoExplicitlyUntaughtScienceSelected": true,
+    "AllChemistryA2SubtopicsVerifiedInSchoolMock": false,
+    "AllScienceCardsHaveExactSpecRef": false,
+    "FullMockSpecCertified": false,
+    "Task1Complete": false
+  }
+}
