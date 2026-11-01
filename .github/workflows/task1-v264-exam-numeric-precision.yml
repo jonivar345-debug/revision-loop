@@ -1,0 +1,20 @@
+name: Task 1 v264 examination number marking precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'tests/task1-v264-exam-numeric-prefix-precision.cjs'
+      - '.github/workflows/task1-v264-exam-numeric-precision.yml'
+  push:
+    branches: [main]
+jobs:
+  exam-unit-precision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v264-exam-numeric-prefix-precision.cjs
+      - run: node tests/task1-v251-strict-numeric-units.cjs
+      - run: node tests/task1-v262-pure-numeric-marking.cjs

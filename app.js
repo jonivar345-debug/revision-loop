@@ -1780,6 +1780,9 @@ function numericMatch(q,answer){
  // Remove final presentation notes which are not numerical answers.
  text=text.replace(/\(\s*\d+\s*(?:s\.?f\.?|significant\s+figures?)\s*\)\s*$/i,'').trim();
  text=text.replace(/(?:\s*,?\s*valid\s+(?:since|because)\s+[a-z]+\s*[><]\s*\d+(?:\.\d+)?)\s*$/i,'').trim();
+ // Sentence-final punctuation must not conceal an otherwise explicit unit.
+ // E.g. '8 cm.' is not an answer of '8 m'.
+ text=text.replace(/[.!?]\s*$/,'').trim();
  let n=parseNumber(text);
  // Scale tolerance to the actual answer, including very small scientific-notation
  // quantities. A fixed 1e-9 floor wrongly treats zero as a valid 1e-11 result.
@@ -1796,18 +1799,21 @@ function numericMatch(q,answer){
  // calculation questions; that does not make "8 cm" equivalent to "8 m".
  const units={mm:['length',.001],cm:['length',.01],m:['length',1],km:['length',1000],
   mg:['mass',.001],g:['mass',1],kg:['mass',1000],
-  mj:['energy',.001],j:['energy',1],kj:['energy',1000],
-  mw:['power',.001],w:['power',1],kw:['power',1000],
+  mj:['energy',.001],megaj:['energy',1e6],j:['energy',1],kj:['energy',1000],
+  mw:['power',.001],megaw:['power',1e6],w:['power',1],kw:['power',1000],
   mv:['voltage',.001],v:['voltage',1],kv:['voltage',1000],
   ma:['current',.001],a:['current',1],
   pa:['pressure',1],kpa:['pressure',1000],mpa:['pressure',1e6],
   ohm:['resistance',1],'%':['percent',1],n:['force',1],
   mol:['amount',1],hz:['frequency',1],ev:['energy-electronvolts',1],
   s:['time',1],seconds:['time',1],year:['years',1],years:['years',1]};
- const expectedUnit=String(q.unit||'').trim().replace(/Ω/g,'ohm').toLowerCase();
+ // SI prefixes are case sensitive: mJ is a millijoule; MJ is a megajoule.
+ // Earlier lower-casing treated MJ as mJ and MW as mW.
+ const physicalUnitKey=s=>s==='MJ'?'megaj':s==='MW'?'megaw':s.replace(/Ω/g,'ohm').toLowerCase();
+ const expectedUnit=physicalUnitKey(String(q.unit||'').trim());
  const statedUnit=text.match(/(?:^|[=\s])([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[-+]?\d+)?)\s*(mm|cm|km|m|mg|kg|g|mJ|kJ|J|mW|kW|W|mV|kV|V|mA|A|kPa|MPa|Pa|ohm|Ω|%|mol|Hz|eV|N|seconds|years?|s)\s*$/i);
  if(units[expectedUnit]&&statedUnit){
-  const givenUnit=statedUnit[2].replace(/Ω/g,'ohm').toLowerCase();
+  const givenUnit=physicalUnitKey(statedUnit[2]);
   const left=units[givenUnit],right=units[expectedUnit];
   if(!left||left[0]!==right[0])return false;
   const converted=Number(statedUnit[1])*left[1]/right[1];
