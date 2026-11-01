@@ -597,7 +597,7 @@
       "back": "A systematic zero offset biases the diameter, hence the calculated area and Young modulus.",
       "accept": [
         "A systematic zero offset biases the diameter, hence the calculated area and Young modulus.",
-        "Zero error introduces systematic diameter error, which affects area squared in diameter.",
+        "The zero offset biases d and therefore area A, which is proportional to d².",
         "The micrometer may read nonzero when closed and all diameters need correction.",
         "The diameter may be biased; area depends on diameter squared.",
         "A fixed micrometer offset distorts A=πd²/4 and hence E."
