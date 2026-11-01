@@ -23,7 +23,7 @@ for(const c of bank.cards){
 }
 assert.deepEqual(repeated,[],'New fronts must not duplicate existing Physics content');
 assert.equal(right,78);assert.equal(wrong,52);
-assert.equal(3.6/120,.03);assert.equal(12/3,4);assert.equal(3/.25,12);assert.equal(1/.5,2);
+assert(Math.abs(3.6/120-.03)<1e-12);assert.equal(12/3,4);assert.equal(3/.25,12);assert.equal(1/.5,2);
 assert.equal(5*2e-7/2,5e-7);assert.equal(5*4e-7,2e-6);
 assert(Math.abs(2*.01/.4*100-5)<1e-12);
 assert.equal(12*8/(4+8),8);assert.equal((6*3)/(6+3),2);
