@@ -1,0 +1,19 @@
+name: Task 1 v285 Physics Chemistry mock scope inventory
+on:
+  pull_request:
+    paths:
+      - app.js
+      - tests/task1-v285-science-mock-scope-inventory.cjs
+      - .github/workflows/task1-v285-science-mock-scope-inventory.yml
+  push:
+    branches: [main]
+jobs:
+  actual-science-mock-eligibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v284-year1-pure-mock-boundary-audit.cjs
+      - run: node tests/task1-v285-science-mock-scope-inventory.cjs
