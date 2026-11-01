@@ -5,7 +5,7 @@ const bank=j('physics_particle_exchange_diagram_practice_v265.json'),app=read('a
 assert.equal(bank.version,'v265');assert.equal(bank.questions.length,4);
 assert.equal(j('deck.json').cards.length,3345);
 const urls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,29);assert.equal(urls[28],'physics_particle_exchange_diagram_practice_v265.json');
+assert(urls.length>=29,'v265 drawing bank must remain in the append-only exam source list');assert.equal(urls[28],'physics_particle_exchange_diagram_practice_v265.json');
 assert(sw.includes("'./physics_particle_exchange_diagram_practice_v265.json'"));assert(sw.includes('-v265-physics-drawing'));
 const old=[...j('exam_questions.json').questions,...urls.slice(0,28).flatMap(f=>j(f).questions||[])];
 const existingIds=new Set(old.map(x=>x.id));const fronts=new Set(old.filter(x=>x.subject==='Physics').map(x=>String(x.prompt).trim().toLowerCase()));
