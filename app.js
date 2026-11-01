@@ -2354,6 +2354,31 @@ function evaluateCard(c,input){
   if(denied && [c?.back,...(Array.isArray(c?.accept)?c.accept:[])].some(a=>normalise(String(a||'').replace(/[.!?]+$/,''))===denied))
    return {status:'wrong',score:0,text:'This explicitly denies the correct answer.',missing:[String(c?.back||'')]};
  }
+ // v302: guide-style flashcards have separately markable, ordered blanks.
+ // Do not use fuzzy token overlap: swapped ion colours, opposing signs and
+ // reversed graph directions must never earn full marks.
+ if(c?.method==='fill gaps' && Array.isArray(c.clozeParts) &&
+    c.id?.startsWith('task1_v298_')){
+  const raw=String(input||'').trim();
+  if(!raw)return {status:'neutral',score:0,text:'Enter the missing words or values.',missing:[]};
+  const n=t=>normalise(String(t||'').replace(/[.!?]+$/,''));
+  const correct=[c.back,...(Array.isArray(c.accept)?c.accept:[])];
+  if(Array.isArray(c.reject)&&c.reject.some(x=>n(x)===n(raw)))
+   return {status:'wrong',score:0,text:'That answer contains incorrect information.',missing:[]};
+  if(correct.some(x=>n(x)===n(raw)))
+   return {status:'correct',score:1,text:'All blanks are correct.',missing:[]};
+  const supplied=raw.split(/\\s*(?:;|,|\\n|\\||\\s+and\\s+|\\s+\\/\\s+)\\s*/i).map(x=>x.trim());
+  if(supplied.length!==c.clozeParts.length)
+   return {status:'wrong',score:0,text:'Enter each blank in order, separated by commas or semicolons.',missing:c.clozeParts.map((_,i)=>'Blank '+(i+1))};
+  let hits=0;const missing=[];
+  c.clozeParts.forEach((options,i)=>{
+   if(Array.isArray(options)&&options.some(x=>n(x)===n(supplied[i])))hits++;
+   else missing.push('Blank '+(i+1));
+  });
+  if(hits===c.clozeParts.length)return {status:'correct',score:1,text:'All blanks are correct.',missing:[]};
+  if(hits>0)return {status:'partial',score:hits/c.clozeParts.length,text:'Some blanks are correct; check their order and meaning.',missing};
+  return {status:'wrong',score:0,text:'The blanks are not correct yet.',missing};
+ }
  // Formula cards with meaningful primes must keep the derivative operator.
  // General punctuation normalisation otherwise makes f(a)=0 look like f′(a)=0.
  if(c?.strictSymbolRecall===true){
