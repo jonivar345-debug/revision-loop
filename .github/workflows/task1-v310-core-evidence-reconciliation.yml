@@ -1,0 +1,12 @@
+name: Task 1 v310 core card evidence reconciliation
+on: [pull_request]
+jobs:
+  core-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v309-individual-skill-evidence.cjs
+      - run: node tests/task1-v230-physics-mechanics-materials.cjs
+      - run: node tests/task1-v307-mechanics-thermo-real-marker.cjs
+      - run: node tests/task1-v304-legacy-mock-editorial-scan.cjs
+      - run: node tests/task1-practical-legacy-v133.cjs

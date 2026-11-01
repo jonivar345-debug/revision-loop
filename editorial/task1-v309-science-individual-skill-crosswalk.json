@@ -13,28 +13,27 @@
     "chemistry_energetics_applications_v247.json",
     "chemistry_thermodynamics_applications_v256.json",
     "chemistry_cross_spec_recall_v227.json",
-    "mock_short_recall_and_cloze_v298.json"
+    "mock_short_recall_and_cloze_v298.json",
+    "deck.json"
   ],
   "statusDefinitions": {
     "sample": "One or more existing mock cards specifically practise this short-recall skill; this does not certify complete question or answer coverage.",
     "partial": "Related evidence exists, but some part of the requirement still needs a separate card or manual check.",
-    "unverified": "No directly appropriate flashcard manually identified in the seven reviewed banks. It may already exist elsewhere; do not call it globally missing without checking all 4,313."
+    "unverified": "No appropriate flashcard has yet been located in the reviewed source samples; this is not a claim about the entire repository."
   },
   "summary": {
     "rows": 72,
-    "sample": 54,
-    "partial": 10,
-    "unverified": 8,
+    "sample": 59,
+    "partial": 13,
+    "unverified": 0,
     "bySubject": {
       "Physics": {
-        "unverified": 6,
-        "sample": 34,
-        "partial": 6
+        "sample": 36,
+        "partial": 10
       },
       "Chemistry": {
-        "partial": 4,
-        "unverified": 2,
-        "sample": 20
+        "partial": 3,
+        "sample": 23
       }
     }
   },
@@ -49,10 +48,17 @@
       "subject": "Physics",
       "specRef": "3.4.1.1",
       "skill": "Distinguish scalars from vectors, including distance/displacement and speed/velocity",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "Not yet checked against original core deck.",
-      "id": "P001"
+      "status": "sample",
+      "evidenceIds": [
+        "task1_phy_067",
+        "task1_phy_068"
+      ],
+      "notes": "Not yet checked against original core deck. Core deck explicitly defines scalar magnitude only and vector magnitude with direction.",
+      "id": "P001",
+      "legacyBroadSpecEvidenceIds": [
+        "task1_phy_067",
+        "task1_phy_068"
+      ]
     },
     {
       "subject": "Physics",
@@ -70,9 +76,11 @@
       "subject": "Physics",
       "specRef": "3.4.1.1",
       "skill": "Use a scale drawing to add vectors at arbitrary angles",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "No diagram-marking example found in the reviewed short-recall banks.",
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v125_004"
+      ],
+      "notes": "No diagram-marking example found in the reviewed short-recall banks. Core deck recalls a closed force triangle, but the actual skill of constructing a scale drawing at arbitrary angles remains to be tested.",
       "id": "P003"
     },
     {
@@ -252,10 +260,18 @@
       "subject": "Physics",
       "specRef": "3.4.1.3",
       "skill": "Required practical 3: method, random/systematic errors and uncertainty in free-fall g",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "The g-gradient card does not test the complete practical method and limitations.",
-      "id": "P019"
+      "status": "partial",
+      "evidenceIds": [
+        "task1_practical_006",
+        "task1_practical_007",
+        "task1_v132_003"
+      ],
+      "notes": "The g-gradient card does not test the complete practical method and limitations. Core deck tests gradient for g, light-gate timing and systematic graph offset. Complete practical design and uncertainty evaluation still need checking.",
+      "id": "P019",
+      "legacyBroadSpecEvidenceIds": [
+        "task1_practical_006",
+        "task1_practical_007"
+      ]
     },
     {
       "subject": "Physics",
@@ -307,10 +323,17 @@
       "subject": "Physics",
       "specRef": "3.4.1.4",
       "skill": "Distinguish friction, lift and drag and their effect on vehicle maximum speed",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "Only a few drag examples were manually checked; lift and friction effects remain.",
-      "id": "P024"
+      "status": "partial",
+      "evidenceIds": [
+        "task1_v157_001",
+        "task1_v125_029",
+        "task1_v130_033"
+      ],
+      "notes": "Only a few drag examples were manually checked; lift and friction effects remain. Core deck defines fluid lift, tests drag and balancing driving/drag at terminal speed; a complete combined vehicle application is not yet verified.",
+      "id": "P024",
+      "legacyBroadSpecEvidenceIds": [
+        "task1_v130_033"
+      ]
     },
     {
       "subject": "Physics",
@@ -332,10 +355,17 @@
       "subject": "Physics",
       "specRef": "3.4.1.5",
       "skill": "Interpret and draw free-body diagrams for force problems",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "A drawn free-body diagram has not been inspected.",
-      "id": "P026"
+      "status": "partial",
+      "evidenceIds": [
+        "phy_force_diagram_001",
+        "phy_force_diagram_002"
+      ],
+      "notes": "A drawn free-body diagram has not been inspected. Core deck explains labelled external-force arrows and force resolution, but an actual drawing has not been individually assessed.",
+      "id": "P026",
+      "legacyBroadSpecEvidenceIds": [
+        "phy_force_diagram_001",
+        "phy_force_diagram_002"
+      ]
     },
     {
       "subject": "Physics",
@@ -466,10 +496,15 @@
       "subject": "Physics",
       "specRef": "3.4.2.1",
       "skill": "Use density as mass divided by volume",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "Density calculation recall not yet checked in the reviewed short banks.",
-      "id": "P038"
+      "status": "sample",
+      "evidenceIds": [
+        "phy_mechanics_focus_v37_32"
+      ],
+      "notes": "Density calculation recall not yet checked in the reviewed short banks. Core deck contains a short numeric density example using rho=m/V.",
+      "id": "P038",
+      "legacyBroadSpecEvidenceIds": [
+        "phy_mechanics_focus_v37_32"
+      ]
     },
     {
       "subject": "Physics",
@@ -584,21 +619,34 @@
       "subject": "Chemistry",
       "specRef": "3.1.4.1",
       "skill": "Define enthalpy change at constant pressure and standard conditions",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "Exact definitions have not yet been checked across the whole core bank.",
-      "id": "C048"
+      "status": "sample",
+      "evidenceIds": [
+        "chem_energetics_v49_01",
+        "chem_energetics_v49_09"
+      ],
+      "notes": "Exact definitions have not yet been checked across the whole core bank. Core deck separately recalls constant-pressure heat change and 100 kPa/standard-state conditions.",
+      "id": "C048",
+      "legacyBroadSpecEvidenceIds": [
+        "chem_energetics_v49_01",
+        "chem_energetics_v49_09"
+      ]
     },
     {
       "subject": "Chemistry",
       "specRef": "3.1.4.1",
       "skill": "Define standard enthalpy of formation and combustion",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
-        "task1_v247_chem_energetics_17"
+        "task1_v247_chem_energetics_17",
+        "chem_energetics_v49_10",
+        "chem_energetics_v49_15"
       ],
-      "notes": "Zero formation enthalpy of a standard-state element is tested; the definitions are not.",
-      "id": "C049"
+      "notes": "Zero formation enthalpy of a standard-state element is tested; the definitions are not. Core deck explicitly asks both one-mole definitions with correct standard states and oxygen.",
+      "id": "C049",
+      "legacyBroadSpecEvidenceIds": [
+        "chem_energetics_v49_10",
+        "chem_energetics_v49_15"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -790,10 +838,15 @@
       "subject": "Chemistry",
       "specRef": "3.1.8.1",
       "skill": "Define enthalpy of hydration for one mole of aqueous ions",
-      "status": "unverified",
-      "evidenceIds": [],
-      "notes": "Numerical hydration examples exist; definition not directly tested in these banks.",
-      "id": "C066"
+      "status": "sample",
+      "evidenceIds": [
+        "chem_bh_defs_20261024_hydration_def"
+      ],
+      "notes": "Numerical hydration examples exist; definition not directly tested in these banks. Core deck explicitly defines gaseous ions becoming aqueous ions for one mole.",
+      "id": "C066",
+      "legacyBroadSpecEvidenceIds": [
+        "chem_bh_defs_20261024_hydration_def"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -801,10 +854,16 @@
       "skill": "Define entropy and standard molar entropy in appropriate units",
       "status": "partial",
       "evidenceIds": [
-        "task1_v256_chem_thermo_23"
+        "task1_v256_chem_thermo_23",
+        "chem_a2_entropy_def",
+        "task1_chem_162"
       ],
-      "notes": "Entropy change calculated, but definition not checked.",
-      "id": "C067"
+      "notes": "Entropy change calculated, but definition not checked. Core deck defines qualitative entropy and standard molar entropy, but its units still need a direct explicit recall check.",
+      "id": "C067",
+      "legacyBroadSpecEvidenceIds": [
+        "chem_a2_entropy_def",
+        "task1_chem_162"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -878,6 +937,8 @@
     "Sample evidence links prove a relevant card exists in the website mock pool, not that every word of the requirement or possible marking paraphrase is certified.",
     "A card can legitimately practise a skill from another AQA subsection; such links are explicitly identified in crossSectionEvidenceIds instead of being silently presented as exact specRef matches.",
     "Unverified means no direct matching card was checked in the seven sampled banks, not that the whole 4,313-card website lacks that skill.",
-    "Two incorrect non-existent 3.1.8.3 subsection tags on task1_v298_chemistry_20 and _21 were corrected to official 3.1.8.2."
-  ]
+    "Two incorrect non-existent 3.1.8.3 subsection tags on task1_v298_chemistry_20 and _21 were corrected to official 3.1.8.2.",
+    "v310: selective follow-up search of all supplemental banks and historical core deck resolved the eight previously unverified skills into four direct examples and four partial examples; one existing formation/combustion definition entry also became a direct sample."
+  ],
+  "sourceFileSamplingNotes": "Only linked cards from the very large core deck were individually checked. Including deck.json as a source does not mean all its cards have been audited."
 }
