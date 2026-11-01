@@ -1,0 +1,19 @@
+name: Task 1 v282 full flashcard answer/marking diagnostic
+on:
+  pull_request:
+    paths:
+      - 'tests/task1-v282-full-flashcard-answer-audit.cjs'
+      - '.github/workflows/task1-v282-full-flashcard-answer-audit.yml'
+      - app.js
+  push:
+    branches: [main]
+jobs:
+  read-only-whole-bank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v281-scientific-unit-numeric.cjs
+      - run: node tests/task1-v282-full-flashcard-answer-audit.cjs
