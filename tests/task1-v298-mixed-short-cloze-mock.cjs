@@ -51,10 +51,11 @@ assert.equal(derivative.strictSymbolRecall,true);
 for(const [c,valid,invalid] of [
  [chemMagnitude,'n × |ΔH|','n × ΔH'],
  [chemMagnitude,'q = n × |ΔH|','q = n × ΔH'],
+ [chemMagnitude,'n*abs(ΔH)','n / ΔH'],
  [derivative,"f'(a)=0",'f(a)=0'],
- [derivative,'The derivative is zero at x=a.','f\'\'(a)=0']
+ [derivative,'The first derivative is zero.',"f''(a)=0"],
+ [derivative,'0','f(a) = 0']
 ]){
- if(valid==='The derivative is zero at x=a.')continue; // covered by v293; v298 accepts its shorter form.
  assert.equal(evaluate(c,valid).status,'correct',c.id+' correct symbols');
  assert.equal(evaluate(c,invalid).status,'wrong',c.id+' wrong symbols');
 }
