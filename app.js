@@ -2,6 +2,165 @@
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json','./physics_fibre_signal_application_v225.json','./physics_waves_interference_application_v226.json','./physics_particle_exchange_diagram_practice_v265.json','./chemistry_organic_drawing_practice_v267.json','./physics_uncertainty_graph_practice_v268.json','./physics_nuclear_conservation_practice_v269.json','./chemistry_amount_applied_practice_v270.json','./maths_year1_pure_reasoning_v271.json','./maths_as_graph_transform_sketches_v272.json','./maths_year1_circle_vector_gaps_v273.json','./chemistry_as_inorganic_tests_practice_v274.json','./physics_refraction_fibres_practice_v275.json','./chemistry_as_bonding_shapes_practice_v276.json','./chemistry_as_bonding_structures_practice_v277.json','./chemistry_amount_precision_applications_v278.json','./physics_waves_polarisation_stationary_practice_v279.json','./physics_mechanics_signed_area_couples_practice_v280.json'];
 const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json','./chemistry_practicals_analysis_recall_v221.json','./chemistry_rp5_rp6_reasoning_recall_v222.json','./physics_optical_fibre_precision_recall_v225.json','./physics_waves_reasoning_recall_v226.json','./physics_cross_spec_recall_v227.json','./chemistry_cross_spec_recall_v227.json','./maths_as_pure_cross_spec_recall_v227.json','./physics_waves_crosswalk_recall_v229.json','./physics_mechanics_cross_spec_recall_v230.json','./physics_electricity_cross_spec_recall_v231.json','./maths_first_mock_pure_precision_v232.json','./chemistry_bonding_diagram_recall_v237.json','./chemistry_atomic_tof_applications_v238.json','./chemistry_amount_applications_v239.json','./physics_particles_applications_v243.json','./maths_first_mock_pure_applied_v245.json','./maths_first_mock_circle_geometry_v246.json','./chemistry_energetics_applications_v247.json','./physics_measurements_applications_v248.json','./chemistry_rates_kp_applications_v249.json','./physics_electricity_applications_v250.json','./maths_first_mock_pure_challenges_v252.json','./physics_waves_applications_v253.json','./chemistry_atomic_tof_applications_v254.json','./chemistry_thermodynamics_applications_v256.json','./physics_mechanics_applications_v257.json','./maths_year1_pure_breadth_v260.json','./physics_uncertainty_graph_recall_v268.json','./physics_nuclear_conservation_recall_v269.json','./maths_as_graph_transform_recall_v272.json','./chemistry_as_inorganic_tests_recall_v274.json','./physics_refraction_fibres_recall_v275.json','./chemistry_as_bonding_shapes_recall_v276.json','./chemistry_as_bonding_structures_recall_v277.json','./chemistry_amount_sigfig_formula_recall_v278.json','./physics_waves_polarisation_stationary_recall_v279.json','./physics_mechanics_signed_area_couples_recall_v280.json'];
+// v287: exact-ID AQA AS subsection metadata for individually reviewed legacy cards.
+// Never alter question wording, marking rules, mock flags, or any progress IDs.
+const V287_LEGACY_SPEC_GROUPS=Object.freeze([
+ {
+  "subject": "Physics",
+  "topic": "Motion graphs",
+  "stage": "AS",
+  "specRef": "3.4.1.3",
+  "ids": [
+   "phy_motion_d",
+   "phy_motion_v",
+   "phy_motion_a",
+   "v33_card_physics_motion_graphs_11",
+   "v33_card_physics_motion_graphs_12",
+   "v33_card_physics_motion_graphs_13",
+   "phy_graph_weakness_v36_s_negative",
+   "phy_graph_weakness_v36_s_horizontal_vs_v_horizontal",
+   "phy_graph_weakness_v36_s_tangent_numeric",
+   "phy_graph_weakness_v36_v_gradient_numeric",
+   "phy_graph_weakness_v36_v_trapezium_numeric",
+   "phy_graph_weakness_v36_v_signed_vs_distance",
+   "phy_graph_weakness_v36_v_zero_crossing",
+   "phy_graph_weakness_v36_v_negative_acceleration",
+   "phy_graph_weakness_v36_a_area_numeric",
+   "phy_graph_weakness_v36_a_negative_area",
+   "phy_graph_weakness_v36_v_multistage_area",
+   "phy_graph_weakness_v36_compare_slope_vs_area",
+   "phy_graph_weakness_v36_axis_unit_check",
+   "phy_mechanics_focus_v37_01",
+   "phy_mechanics_focus_v37_02",
+   "phy_mechanics_focus_v37_03",
+   "phy_mechanics_focus_v37_04",
+   "phy_mechanics_focus_v37_05",
+   "phy_mechanics_focus_v37_06",
+   "phy_mechanics_focus_v37_07",
+   "phy_mechanics_focus_v37_08",
+   "phy_focus_v39_07",
+   "phy_graph_v118_01",
+   "phy_graph_v118_02",
+   "phy_graph_v118_03",
+   "phy_graph_v118_04",
+   "phy_graph_v118_05",
+   "phy_graph_v118_06",
+   "phy_graph_v118_07",
+   "phy_graph_v118_08"
+  ]
+ },
+ {
+  "subject": "Physics",
+  "topic": "Photoelectric effect",
+  "stage": "AS",
+  "specRef": "3.2.2.1",
+  "ids": [
+   "phy_photoelectric_001",
+   "phy_photoelectric_002",
+   "v33_card_physics_photoelectric_effect_19",
+   "v33_card_physics_photoelectric_effect_20",
+   "phy_pandr_v29_work_function",
+   "phy_pandr_v29_threshold_frequency",
+   "phy_pandr_v29_photo_eq",
+   "phy_pandr_v29_threshold_eq",
+   "phy_pandr_v29_intensity_fixed_f",
+   "phy_pandr_v29_frequency_fixed_i",
+   "phy_pandr_v29_instant_emission",
+   "phy_pandr_v29_stopping_eq",
+   "phy_pandr_v29_kef_gradient",
+   "phy_pandr_v29_stopping_gradient",
+   "phy_pandr_v29_threshold_wavelength",
+   "phy_spectra_photo_v32_classical_failure",
+   "phy_spectra_photo_v32_ke_range",
+   "phy_spectra_photo_v32_intensity_stopping",
+   "phy_spectra_photo_v32_below_threshold_graph",
+   "phy_spectra_photo_v32_max_speed"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "topic": "Mass spectrometry",
+  "stage": "AS",
+  "specRef": "3.1.1.2",
+  "ids": [
+   "chem_atomic_v43_13",
+   "chem_atomic_v43_14",
+   "chem_atomic_v43_15",
+   "chem_atomic_v43_16",
+   "chem_atomic_v43_17",
+   "chem_atomic_v43_18",
+   "chem_atomic_v43_19",
+   "chem_atomic_v43_20",
+   "chem_atomic_v43_21",
+   "chem_atomic_v43_22",
+   "chem_atomic_v43_23",
+   "chem_atomic_v43_24",
+   "chem_atomic_v43_25",
+   "chem_atomic_v43_26",
+   "chem_atomic_v43_27",
+   "chem_atomic_v43_28",
+   "chem_atomic_v43_29",
+   "chem_atomic_v43_30",
+   "chem_atomic_v43_31",
+   "chem_atomic_v43_32",
+   "chem_atomic_v43_33",
+   "chem_atomic_v43_34",
+   "chem_atomic_v43_35",
+   "chem_atomic_v43_36",
+   "chem_atomic_v43_37",
+   "chem_atomic_v43_38"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "topic": "Ionisation energy",
+  "stage": "AS",
+  "specRef": "3.1.1.3",
+  "ids": [
+   "chem_ionisation_def",
+   "chem_ie_trend",
+   "chem_atomic_v43_39",
+   "chem_atomic_v43_40",
+   "chem_atomic_v43_41",
+   "chem_atomic_v43_42",
+   "chem_atomic_v43_43",
+   "chem_atomic_v43_44",
+   "chem_atomic_v43_45",
+   "chem_atomic_v43_46",
+   "chem_atomic_v43_47",
+   "chem_atomic_v43_48",
+   "chem_atomic_v43_49",
+   "chem_atomic_v43_50",
+   "chem_atomic_v43_51",
+   "chem_config_weak_v45_01",
+   "chem_config_weak_v45_02",
+   "chem_config_weak_v45_03",
+   "chem_config_weak_v45_04",
+   "chem_config_weak_v45_05",
+   "chem_config_weak_v45_06",
+   "chem_config_weak_v45_07",
+   "chem_config_weak_v45_08",
+   "chem_config_weak_v45_09",
+   "chem_config_weak_v45_10",
+   "chem_ie_focus_v46_01",
+   "chem_ie_focus_v46_02",
+   "chem_ie_focus_v46_03"
+  ]
+ }
+]);
+function applyV287LegacySpecRefs(existing){
+ const byId=new Map();
+ for(const group of V287_LEGACY_SPEC_GROUPS)for(const id of group.ids)
+  byId.set(id,group);
+ for(const card of existing){
+  const group=byId.get(card.id);
+  if(group&&card.subject===group.subject&&card.topic===group.topic&&
+     card.stage===group.stage&&!String(card.specRef||'').trim())
+   card.specRef=group.specRef;
+ }
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -3837,6 +3996,8 @@ async function sync(manual=false){
  cards=applyV238MolecularIonClarity(applyV237ChemBondAngleClarity(applyV219TofCorrections(applyV217LegacyChemistryCorrections((d.cards||[]).filter(c=>c.active!==false)))));
  applyV220IonTestCorrections(cards);
  applyV221RpCorrections(cards);
+ // Map only the 110 individually reviewed legacy core cards to their AQA subsections.
+ applyV287LegacySpecRefs(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
