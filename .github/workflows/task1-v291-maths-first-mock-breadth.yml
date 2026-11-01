@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - tests/task1-v291-maths-first-mock-breadth.cjs
+      - tests/task1-v285-science-mock-scope-inventory.cjs
       - .github/workflows/task1-v291-maths-first-mock-breadth.yml
   push:
     branches: [main]
@@ -16,3 +17,4 @@ jobs:
           node-version: '22'
       - run: node tests/task1-v284-year1-pure-mock-boundary-audit.cjs
       - run: node tests/task1-v291-maths-first-mock-breadth.cjs
+      - run: node tests/task1-v285-science-mock-scope-inventory.cjs
