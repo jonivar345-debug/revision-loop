@@ -1,0 +1,8 @@
+name: Task 1 v299 short-card near-duplicate analysis
+on: [pull_request]
+jobs:
+  overlap-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v299-short-card-overlap-audit.cjs
