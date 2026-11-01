@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - tests/task1-v288-chemistry-bonding-legacy-candidates.cjs
+      - tests/task1-v288-legacy-bonding-integration.cjs
+      - editorial/task1-v288-curated-legacy-bonding-map.json
+      - app.js
       - .github/workflows/task1-v288-chemistry-bonding-legacy.yml
   push:
     branches: [main]
@@ -15,3 +18,6 @@ jobs:
         with:
           node-version: '22'
       - run: node tests/task1-v288-chemistry-bonding-legacy-candidates.cjs
+      - run: node tests/task1-v287-legacy-spec-map-integration.cjs
+      - run: node tests/task1-v288-legacy-bonding-integration.cjs
+      - run: node tests/task1-v282-full-flashcard-answer-audit.cjs
