@@ -2343,6 +2343,17 @@ function evaluateConfiguredNumericRecall(c,input){
  return {status:'wrong',score:0,text:'The numerical value or unit conversion is incorrect.',missing:[config.expected]};
 }
 function evaluateCard(c,input){
+ // v297: explicitly denying an entire listed correct answer must not be
+ // credited via fuzzy token overlap or a model substring match. Scope this
+ // only to a standalone 'not [exact answer]' response, not ordinary prose
+ // containing a valid explanatory contrast.
+ const rawForNegation=String(input||'').trim();
+ const standaloneDenial=rawForNegation.match(/^not\s+(.+)$/i);
+ if(standaloneDenial){
+  const denied=normalise(standaloneDenial[1].replace(/[.!?]+$/,''));
+  if(denied && [c?.back,...(Array.isArray(c?.accept)?c.accept:[])].some(a=>normalise(String(a||'').replace(/[.!?]+$/,''))===denied))
+   return {status:'wrong',score:0,text:'This explicitly denies the correct answer.',missing:[String(c?.back||'')]};
+ }
  // Formula cards with meaningful primes must keep the derivative operator.
  // General punctuation normalisation otherwise makes f(a)=0 look like f′(a)=0.
  if(c?.strictSymbolRecall===true){

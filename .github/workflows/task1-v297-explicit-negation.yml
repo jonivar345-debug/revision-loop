@@ -1,0 +1,9 @@
+name: Task 1 v297 negated-answer marker regression
+on: [pull_request]
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v297-explicit-negation-regression.cjs
+      - run: node tests/task1-v282-full-flashcard-answer-audit.cjs
