@@ -932,15 +932,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "Isotopes of masses 35 (75%) and 37 (25%): relative atomic mass?",
-      "back": "35.5",
+      "front": "Isotope masses 35 (60%) and 37 (40%): relative atomic mass?",
+      "back": "35.8",
       "accept": [
-        "35.5",
-        "35.50"
+        "35.8",
+        "35.80"
       ],
       "reject": [
-        "36.0",
-        "Not 35.5"
+        "36.2",
+        "Not 35.8"
       ],
       "strictRecall": true
     },
@@ -1091,16 +1091,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "Approximate H–N–H bond angle in NH₃?",
-      "back": "107°",
+      "front": "NH₃ bond angle is how many degrees below methane's 109.5°?",
+      "back": "2.5°",
       "accept": [
-        "107°",
-        "107 degrees",
-        "Approximately 107°"
+        "2.5°",
+        "2.5 degrees"
       ],
       "reject": [
-        "109.5°",
-        "Not 107°"
+        "5.0°",
+        "Not 2.5°"
       ],
       "strictRecall": true
     },
@@ -1554,16 +1553,15 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "At 298 K, what is Kw?",
-      "back": "1.0 × 10⁻¹⁴ mol² dm⁻⁶",
+      "front": "At 298 K, [H⁺]=10⁻⁵ mol dm⁻³. Find [OH⁻].",
+      "back": "1 × 10⁻⁹ mol dm⁻³",
       "accept": [
-        "1.0 × 10⁻¹⁴ mol² dm⁻⁶",
-        "10^-14 mol² dm^-6",
-        "1 × 10^-14 mol² dm^-6"
+        "1 × 10⁻⁹ mol dm⁻³",
+        "10^-9 mol dm^-3"
       ],
       "reject": [
-        "1.0 × 10⁻⁷",
-        "Not 1.0 × 10⁻¹⁴ mol² dm⁻⁶"
+        "1 × 10⁻⁵ mol dm⁻³",
+        "Not 1 × 10⁻⁹ mol dm⁻³"
       ],
       "strictRecall": true
     },
@@ -1581,16 +1579,15 @@
       "active": true,
       "kind": "short",
       "method": "quick recall",
-      "front": "Acyl chloride reacts with ammonia. What type of amide forms?",
-      "back": "Primary amide",
+      "front": "Ethanoyl chloride plus excess ammonia: organic product?",
+      "back": "Ethanamide",
       "accept": [
-        "Primary amide",
-        "An unsubstituted amide",
-        "RCONH₂"
+        "Ethanamide",
+        "CH₃CONH₂"
       ],
       "reject": [
-        "N-substituted amide",
-        "Not Primary amide"
+        "Ethylamine",
+        "Not Ethanamide"
       ],
       "strictRecall": true
     },
