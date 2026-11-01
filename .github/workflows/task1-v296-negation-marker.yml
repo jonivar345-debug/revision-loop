@@ -1,0 +1,8 @@
+name: Task 1 v296 negation marker diagnostic
+on: [pull_request]
+jobs:
+  mock-negation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v296-negation-marker-diagnostic.cjs
