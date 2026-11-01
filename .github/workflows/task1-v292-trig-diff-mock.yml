@@ -1,0 +1,25 @@
+name: Task 1 v292 AS Pure Maths trig/diff 41-mark application
+on:
+  pull_request:
+    paths:
+      - maths_year1_trigonometry_differentiation_practice_v292.json
+      - tests/task1-v292-trig-diff-first-mock.cjs
+      - tests/task1-v291-maths-first-mock-breadth.cjs
+      - tests/task1-v280-physics-mechanics-selected-audit.cjs
+      - app.js
+      - sw.js
+      - .github/workflows/task1-v292-trig-diff-mock.yml
+  push:
+    branches: [main]
+jobs:
+  pure-as-maths-practice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v284-year1-pure-mock-boundary-audit.cjs
+      - run: node tests/task1-v280-physics-mechanics-selected-audit.cjs
+      - run: node tests/task1-v291-maths-first-mock-breadth.cjs
+      - run: node tests/task1-v292-trig-diff-first-mock.cjs
