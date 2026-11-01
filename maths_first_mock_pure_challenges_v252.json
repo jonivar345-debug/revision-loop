@@ -18,16 +18,22 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Prove n³−n is divisible by 6 for every integer n. Give the key factorisation and reason.",
+      "front": "Why is n(n−1)(n+1) divisible by 6 for every integer n?",
       "back": "n(n−1)(n+1); among three consecutive integers, one is even and one is a multiple of 3.",
       "accept": [
         "n(n−1)(n+1); among three consecutive integers, one is even and one is a multiple of 3.",
         "n(n-1)(n+1) has a factor of 2 and a factor of 3.",
-        "Three consecutive integers include an even number and a multiple of 3."
+        "Three consecutive integers include an even number and a multiple of 3.",
+        "One of three consecutive integers is divisible by 2 and one by 3.",
+        "A factor is even and a factor is divisible by 3.",
+        "The product contains factors of 2 and 3.",
+        "The consecutive factors give both 2 and 3."
       ],
       "reject": [
         "All three factors are multiples of 6.",
-        "n³−n is only divisible by 3."
+        "n³−n is only divisible by 3.",
+        "Each factor must individually be divisible by 6.",
+        "Having a factor of 3 alone proves divisibility by 6."
       ],
       "strictRecall": true
     },
@@ -44,16 +50,21 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Show that the sum of two consecutive odd numbers 2n+1 and 2n+3 is a multiple of 4.",
+      "front": "Odd numbers 2n+1 and 2n+3: what is their sum as a multiple of 4?",
       "back": "(2n+1)+(2n+3)=4(n+1).",
       "accept": [
         "(2n+1)+(2n+3)=4(n+1).",
         "4n+4, which is divisible by 4.",
-        "The sum is 4n+4=4(n+1)."
+        "The sum is 4n+4=4(n+1).",
+        "4(n+1)",
+        "4n+4",
+        "4 × (n+1)"
       ],
       "reject": [
         "The sum equals 4n+2.",
-        "All pairs of odd numbers have sum divisible by 4."
+        "All pairs of odd numbers have sum divisible by 4.",
+        "4n+2",
+        "2n+4"
       ],
       "strictRecall": true
     },
@@ -70,16 +81,21 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "For n=2k+1 odd, explain briefly why n² leaves remainder 1 when divided by 8.",
+      "front": "Odd n=2k+1: why is n²=4k(k+1)+1 congruent to 1 mod 8?",
       "back": "n²=4k(k+1)+1; k(k+1) is even.",
       "accept": [
         "n²=4k(k+1)+1; k(k+1) is even.",
         "4k(k+1)+1 and k(k+1) is even.",
-        "n²=8m+1 because one of k,k+1 is even."
+        "n²=8m+1 because one of k,k+1 is even.",
+        "k(k+1) must be even.",
+        "Of k and k+1, one is even, so 4k(k+1) is a multiple of 8.",
+        "Consecutive k and k+1 give an even product."
       ],
       "reject": [
         "Every odd square is a multiple of 8.",
-        "k(k+1) is always odd."
+        "k(k+1) is always odd.",
+        "Both k and k+1 are always odd.",
+        "4k(k+1) is always equal to 4."
       ],
       "strictRecall": true
     },
@@ -174,16 +190,20 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Which non-negative square proves a²+b²≥2ab for all real a,b?",
+      "front": "Which non-negative square proves a²+b²≥2ab?",
       "back": "(a−b)²≥0.",
       "accept": [
         "(a−b)²≥0.",
         "(a-b)^2>=0",
-        "a²−2ab+b²≥0"
+        "a²−2ab+b²≥0",
+        "(a−b)²",
+        "(a-b)^2",
+        "(b-a)^2 >= 0"
       ],
       "reject": [
         "(a+b)²<0.",
-        "a²+b²<2ab."
+        "a²+b²<2ab.",
+        "(a+b)^2 <= 0"
       ],
       "strictRecall": true
     },
@@ -200,16 +220,20 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(1,1), B=(3,5), C=(k,9). Find k so A, B and C are collinear.",
+      "front": "A=(1,1), B=(3,5), C=(k,9). Find k for collinearity.",
       "back": "5.",
       "accept": [
         "5.",
         "k=5",
-        "5 because AC=2AB"
+        "5 because AC=2AB",
+        "k = 5",
+        "5.0"
       ],
       "reject": [
         "4.",
-        "6."
+        "6.",
+        "k=3",
+        "k=-5"
       ],
       "strictRecall": true
     },
@@ -278,16 +302,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(1,−2), B=(4,7), P=A+t(B−A). Find P when its y-coordinate is 13.",
+      "front": "A=(1,−2), B=(4,7), P=A+t(B−A). If Py=13, find P.",
       "back": "(6,13).",
       "accept": [
         "(6,13).",
         "P=(6,13)",
-        "x=6, y=13"
+        "x=6, y=13",
+        "6i+13j",
+        "(6, 13)"
       ],
       "reject": [
         "(4,13).",
-        "(6,7)."
+        "(6,7).",
+        "(6,-13)"
       ],
       "strictRecall": true
     },
@@ -304,16 +331,19 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "A=(2,3), B=(14,−1). P divides AB internally in ratio AP:PB=1:3. Find P.",
+      "front": "A=(2,3), B=(14,−1), AP:PB=1:3. Find P.",
       "back": "(5,2).",
       "accept": [
         "(5,2).",
         "P=(5,2)",
-        "x=5, y=2"
+        "x=5, y=2",
+        "5i+2j",
+        "(5, 2)"
       ],
       "reject": [
         "(11,0).",
-        "(8,1)."
+        "(8,1).",
+        "(11,2)"
       ],
       "strictRecall": true
     },
