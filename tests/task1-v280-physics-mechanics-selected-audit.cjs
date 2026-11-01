@@ -8,7 +8,7 @@ assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').quest
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 assert.equal(qUrls.length,43);assert.equal(qUrls[42],'physics_mechanics_signed_area_couples_practice_v280.json');
-assert.equal(cUrls.length,53);assert.equal(cUrls[52],'physics_mechanics_signed_area_couples_recall_v280.json');
+assert(cUrls.length>=53,'v280 recalled flashcards must remain at index 52 when later banks append');assert.equal(cUrls[52],'physics_mechanics_signed_area_couples_recall_v280.json');
 for(const x of ['physics_mechanics_signed_area_couples_practice_v280.json','physics_mechanics_signed_area_couples_recall_v280.json'])assert(sw.includes("'./"+x+"'"));
 assert(sw.includes('-v280-mechanics-materials'));
 const prior=[...core.cards,...cUrls.slice(0,52).flatMap(p=>j(p).cards||[])];
