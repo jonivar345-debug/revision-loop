@@ -1,0 +1,23 @@
+name: Task 1 v273 Pure circle/vector application gap crosswalk
+on:
+  pull_request:
+    paths:
+      - 'maths_year1_circle_vector_gaps_v273.json'
+      - 'editorial/task1-v273-maths-selected-gaps-evidence.json'
+      - 'tests/task1-v273-maths-crosswalk-circle-vectors.cjs'
+      - 'tests/task1-v272-maths-graph-transform-sketches.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v273-maths-crosswalk-circle.yml'
+  push:
+    branches: [main]
+jobs:
+  year1-selected-gap-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v272-maths-graph-transform-sketches.cjs
+      - run: node tests/task1-v273-maths-crosswalk-circle-vectors.cjs

@@ -1,0 +1,102 @@
+{
+  "version": "v273",
+  "date": "2026-11-01",
+  "scope": "School FIRST Maths mock only: AQA Year 1 Pure (A-level 7357 sections 3.2 to 3.9 and 3.11), both school Pure classroom papers; excludes Statistics, Mechanics, Year 2, radians and untaught numerical methods",
+  "sourceCrosswalk": "editorial/task1-v244-maths-year1-pure-crosswalk.json",
+  "officialAS": "https://www.aqa.org.uk/subjects/mathematics/as-level/mathematics-7356/specification/subject-content",
+  "method": "Reconcile seven rows with no direct core-card evidence in selected 50-row v244 crosswalk against original, manually described, supplemental exam questions. This is existence of a selected worked example, NOT an answer-quality certificate or full specification mapping.",
+  "originalCoreCardCount": 3345,
+  "originalPracticeQuestionCount": 1268,
+  "selectedRequirementRows": 50,
+  "selectedRowsWithSomeCoreEvidenceAtV244": 43,
+  "selectedRowsWithoutDirectCoreEvidenceAtV244": 7,
+  "selectedPreviouslyCoreUnmappedRowsNowWithPracticeExample": 7,
+  "missingCoreOnlyRowsNowWithExamples": [
+    {
+      "requirementNumber": 4,
+      "description": "Construct a complete unfamiliar divisibility proof by deduction",
+      "examples": [
+        "task1_v271_maths_pure_q01"
+      ],
+      "evidenceType": "original_multistep_proof_manual_review",
+      "remaining": "One complete deduction example and criterion checklist exist. Unseen proofs, logic and examiner tolerance not certified."
+    },
+    {
+      "requirementNumber": 5,
+      "description": "Evaluate a proof by exhaustion with a fully stated finite domain",
+      "examples": [
+        "task1_v271_maths_pure_q02"
+      ],
+      "evidenceType": "original_multistep_proof_manual_review",
+      "remaining": "One finite-exhaustion example exists. Independent marking of unseen finite-domain proofs remains open."
+    },
+    {
+      "requirementNumber": 17,
+      "description": "Represent transformation of specific graph coordinates under f(ax)",
+      "examples": [
+        "task1_v272_maths_sketch_q01",
+        "task1_v272_maths_sketch_q02",
+        "task1_v272_maths_sketch_q05",
+        "task1_v272_maths_graph_card_10"
+      ],
+      "evidenceType": "original_manual_graph_sketch_and_short_recall",
+      "remaining": "Six actual graph sketches now available for human checklist review; automated diagram interpretation and user mastery not verified."
+    },
+    {
+      "requirementNumber": 22,
+      "description": "Analyse intersections and tangent equations in unfamiliar circle questions",
+      "examples": [
+        "task1_v273_maths_application_q01",
+        "task1_v273_maths_application_q02"
+      ],
+      "evidenceType": "original_multipart_circle_geometry",
+      "remaining": "Representative circle-line intersection and tangent examples included; full unfamiliar-equivalence and ECF scheme checking remains open."
+    },
+    {
+      "requirementNumber": 28,
+      "description": "Identify a specified coefficient from an unfamiliar positive integer binomial expansion",
+      "examples": [
+        "task1_v271_maths_pure_q06"
+      ],
+      "evidenceType": "original_multipart_binomial_application",
+      "remaining": "One worked case and correct/rejected variants do not certify all unfamiliar expansions."
+    },
+    {
+      "requirementNumber": 45,
+      "description": "Evaluate an unfamiliar area between a curve and axis crossing its roots",
+      "examples": [
+        "task1_v271_maths_pure_q07"
+      ],
+      "evidenceType": "original_multipart_integral_application",
+      "remaining": "Worked split-area example exists; all different arrangements and ECF marking are not validated."
+    },
+    {
+      "requirementNumber": 50,
+      "description": "Deduce whether three given points are collinear using proportional 2D vectors",
+      "examples": [
+        "task1_v273_maths_application_q03",
+        "task1_v209_maths_003"
+      ],
+      "evidenceType": "original_vector_geometry_application",
+      "remaining": "Representative coefficient and position-vector cases included; independent examiner marking of alternative vector proofs still open."
+    }
+  ],
+  "explicitRemainingGates": [
+    "AQA specification bullet-by-bullet review beyond the 50 selected rows; v244 is a selected crosswalk, not all assessable subparts.",
+    "Scientifically/mathematically correct wording and answer acceptance of every active Year 1 Pure core and supplement card.",
+    "Unseen exam-style applications and robust alternate working / error carried forward grading.",
+    "Actual drawn curve and diagram recognition is not automated; graph sketches and full logical proofs require manual user review.",
+    "School-specific scope boundaries confirmed from teaching not inferred for uncertain optional units.",
+    "No past-paper source inventory is certified complete."
+  ],
+  "completion": {
+    "allSelectedCoreGapsHaveRepresentativePractice": true,
+    "allCoreAnswersIndependentlyVerified": false,
+    "allMathsPracticeSchemesIndependentlyExaminerVerified": false,
+    "unfamiliarGraphDrawingsAutomaticallyVerified": false,
+    "firstMathsMockSpecificationFullyCertified": false,
+    "physicsMockSpecificationFullyCertified": false,
+    "chemistryMockSpecificationFullyCertified": false,
+    "task1Complete": false
+  }
+}

@@ -8,7 +8,7 @@ assert.equal(bank.version,'v269');assert.equal(bank.questions.length,8);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 assert(qUrls.length>=32,'v269 Physics questions must remain at index 31 as further banks append');assert.equal(qUrls[31],'physics_nuclear_conservation_practice_v269.json');
-assert.equal(cUrls.length,45);assert.equal(cUrls[44],'physics_nuclear_conservation_recall_v269.json');
+assert(cUrls.length>=45,'v269 Physics recall bank retains original index 44 as later supplements append');assert.equal(cUrls[44],'physics_nuclear_conservation_recall_v269.json');
 for(const path of ['physics_nuclear_conservation_practice_v269.json','physics_nuclear_conservation_recall_v269.json'])assert(sw.includes("'./"+path+"'"));
 assert(sw.includes('-v269-nuclear-conservation'));
 const existingCards=[...original.cards,...cUrls.slice(0,44).flatMap(p=>j(p).cards||[])];
