@@ -443,15 +443,15 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "What must an atom be bonded to for typical N/O/F hydrogen bonding with H?",
-      "back": "Hydrogen.",
+      "front": "For classic hydrogen bonding, H must be covalently bonded to which one of three elements?",
+      "back": "Nitrogen, oxygen or fluorine.",
       "accept": [
-        "Hydrogen.",
-        "H atom"
+        "Nitrogen, oxygen or fluorine.",
+        "N, O or F"
       ],
       "reject": [
-        "sodium",
-        "carbon only"
+        "carbon sulfur or chlorine",
+        "sodium magnesium or calcium"
       ],
       "strictRecall": true
     },
