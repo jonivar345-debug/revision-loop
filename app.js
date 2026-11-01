@@ -2449,7 +2449,15 @@ function evaluateCard(c,input){
  if(!String(input||'').trim())return {status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};
  if(Array.isArray(c.reject)&&c.reject.some(a=>normalise(a)===normalise(input)))return {status:'wrong',score:0,text:'This is an incorrect alternative. Compare it with the accepted answer.',missing:[]};
  // Precise labels, such as Fe(II) and Fe(III), must match explicit accepted variants.
- if(c.strictRecall===true)return {status:'wrong',score:0,text:'Check the exact ion or oxidation state against the accepted answer.',missing:[]};
+ if(c.strictRecall===true){
+  // v293: a Physics or Maths answer should not receive an unrelated ion/oxidation-state hint.
+  // Preserve every older card's original feedback and strict grading.
+  const concise=c.id?.startsWith('task1_v293_');
+  const hint=concise?(c.subject==='Maths'?'Check the calculation, transformation or mathematical notation.':
+   c.subject==='Physics'?'Check the unit, direction or physical relationship.':
+   'Check the chemical test, product or exact definition.'):'Check the exact ion or oxidation state against the accepted answer.';
+  return {status:'wrong',score:0,text:hint,missing:[]};
+ }
  let best=0,missing=[];
  for(const alt of (c.accept||[]))best=Math.max(best,formulaScore(input,alt),phraseScore(input,alt));
  if(c.concepts?.length){
