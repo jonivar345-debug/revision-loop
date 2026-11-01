@@ -43,6 +43,21 @@ for(const c of newCards){
  }
 }
 assert.equal(duplicateFronts.length,0,'Duplicate existing fronts: '+JSON.stringify(duplicateFronts));
+// Formula symbols change the scientific meaning: both must be strictly marked.
+const chemMagnitude=newCards.find(c=>c.id==='task1_v298_chemistry_15');
+const derivative=newCards.find(c=>c.id==='task1_v298_maths_25');
+assert.equal(chemMagnitude.strictSymbolRecall,true);
+assert.equal(derivative.strictSymbolRecall,true);
+for(const [c,valid,invalid] of [
+ [chemMagnitude,'n × |ΔH|','n × ΔH'],
+ [chemMagnitude,'q = n × |ΔH|','q = n × ΔH'],
+ [derivative,"f'(a)=0",'f(a)=0'],
+ [derivative,'The derivative is zero at x=a.','f\'\'(a)=0']
+]){
+ if(valid==='The derivative is zero at x=a.')continue; // covered by v293; v298 accepts its shorter form.
+ assert.equal(evaluate(c,valid).status,'correct',c.id+' correct symbols');
+ assert.equal(evaluate(c,invalid).status,'wrong',c.id+' wrong symbols');
+}
 assert.deepEqual(tally,{Physics:32,Chemistry:32,Maths:33});
 assert.equal(cloze,6);
 assert(methods.size>=7,'Varied flashcard styles');
