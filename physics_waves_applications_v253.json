@@ -1,0 +1,893 @@
+{
+  "version": "v253",
+  "createdAt": "2026-11-01",
+  "scope": "AQA Physics Year 1 Waves 3.3.1.1–3.3.2.3, taught first mock, original concept+numerical applications incl RP1/RP2, refraction/cladding",
+  "source": "https://www.aqa.org.uk/subjects/physics/as-level/physics-7407/specification/subject-content/waves",
+  "notes": "34 cards; supplements existing v225–v229, not a substitute for diagrams, original practical marks or full mock requirement certification.",
+  "cards": [
+    {
+      "id": "task1_v253_physics_waves_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A wave has wavelength 0.75 m and frequency 40 Hz. Calculate its speed.",
+      "back": "30 m s⁻¹.",
+      "accept": [
+        "30 m s⁻¹.",
+        "30 m/s",
+        "0.75×40=30 m s⁻¹"
+      ],
+      "reject": [
+        "53.3 m s⁻¹.",
+        "0.01875 m s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A wave has a period of 0.025 s. Calculate frequency.",
+      "back": "40 Hz.",
+      "accept": [
+        "40 Hz.",
+        "40 hertz",
+        "1/0.025 = 40 Hz"
+      ],
+      "reject": [
+        "0.025 Hz.",
+        "25 Hz."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which type of wave can be plane-polarised: longitudinal or transverse?",
+      "back": "Transverse waves.",
+      "accept": [
+        "Transverse waves.",
+        "transverse",
+        "Only transverse waves can be polarised."
+      ],
+      "reject": [
+        "Longitudinal waves.",
+        "Both types are always plane-polarised."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In a longitudinal wave, how do the oscillations relate to the direction of energy transfer?",
+      "back": "They are parallel.",
+      "accept": [
+        "They are parallel.",
+        "Parallel to propagation.",
+        "Oscillations are along the direction of travel."
+      ],
+      "reject": [
+        "They are perpendicular.",
+        "The particles move around in circles."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two points are half a wavelength apart on a progressive wave. What is their phase difference?",
+      "back": "π rad.",
+      "accept": [
+        "π rad.",
+        "180°",
+        "pi radians"
+      ],
+      "reject": [
+        "π/2 rad.",
+        "2π rad."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two points are a quarter wavelength apart on a progressive wave. What is their phase difference?",
+      "back": "π/2 rad.",
+      "accept": [
+        "π/2 rad.",
+        "90°",
+        "half pi radians"
+      ],
+      "reject": [
+        "π rad.",
+        "2π rad."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two coherent waves starting in phase have a path difference of 2.5λ at a point. What type of interference occurs?",
+      "back": "Destructive.",
+      "accept": [
+        "Destructive.",
+        "destructive interference",
+        "They cancel where amplitudes are equal."
+      ],
+      "reject": [
+        "Constructive.",
+        "Always complete reinforcement."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Two coherent waves starting in phase have a path difference of 3λ at a point. What type of interference occurs?",
+      "back": "Constructive.",
+      "accept": [
+        "Constructive.",
+        "constructive interference",
+        "A maximum occurs."
+      ],
+      "reject": [
+        "Destructive.",
+        "A minimum must occur."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What makes two wave sources coherent?",
+      "back": "Same frequency and a constant phase difference.",
+      "accept": [
+        "Same frequency and a constant phase difference.",
+        "They have the same frequency with fixed phase relationship.",
+        "Constant phase difference and equal frequency."
+      ],
+      "reject": [
+        "They must have identical amplitudes.",
+        "They have different frequencies with random phases."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many nodes does the second harmonic of a fixed-end string have, including the ends?",
+      "back": "3.",
+      "accept": [
+        "3.",
+        "three",
+        "3 nodes"
+      ],
+      "reject": [
+        "2.",
+        "4."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many antinodes does the second harmonic of a fixed-end string have?",
+      "back": "2.",
+      "accept": [
+        "2.",
+        "two",
+        "2 antinodes"
+      ],
+      "reject": [
+        "1.",
+        "3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A string fixed at both ends is 1.5 m long and wave speed is 120 m s⁻¹. Find its fundamental frequency.",
+      "back": "40 Hz.",
+      "accept": [
+        "40 Hz.",
+        "40 hertz",
+        "120/(2×1.5)=40 Hz"
+      ],
+      "reject": [
+        "80 Hz.",
+        "180 Hz."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A string's fundamental frequency is 40 Hz. Find its third-harmonic frequency.",
+      "back": "120 Hz.",
+      "accept": [
+        "120 Hz.",
+        "120 hertz",
+        "3×40 = 120 Hz"
+      ],
+      "reject": [
+        "80 Hz.",
+        "160 Hz."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If string tension increases fourfold at fixed length and mass per unit length, by what factor does fundamental frequency change?",
+      "back": "It doubles.",
+      "accept": [
+        "It doubles.",
+        "2 times",
+        "The frequency is multiplied by 2."
+      ],
+      "reject": [
+        "It quadruples.",
+        "It halves."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If the mass per unit length of a string increases fourfold at fixed length and tension, what happens to fundamental frequency?",
+      "back": "It halves.",
+      "accept": [
+        "It halves.",
+        "half the original",
+        "Frequency becomes 0.5 times its initial value."
+      ],
+      "reject": [
+        "It doubles.",
+        "It quadruples."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Double slits: λ=500 nm, screen distance D=2.0 m, slit separation d=0.50 mm. Find fringe spacing.",
+      "back": "2.0 mm.",
+      "accept": [
+        "2.0 mm.",
+        "0.002 m",
+        "2 mm"
+      ],
+      "reject": [
+        "0.20 mm.",
+        "20 mm."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_17",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If the screen distance in Young's double-slit experiment doubles, what happens to fringe spacing?",
+      "back": "It doubles.",
+      "accept": [
+        "It doubles.",
+        "The spacing is multiplied by 2.",
+        "Fringes move twice as far apart."
+      ],
+      "reject": [
+        "It halves.",
+        "It is unchanged."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_18",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If slit separation doubles with λ and D fixed, what happens to fringe spacing?",
+      "back": "It halves.",
+      "accept": [
+        "It halves.",
+        "Half its former value.",
+        "The spacing decreases by a factor of 2."
+      ],
+      "reject": [
+        "It doubles.",
+        "It stays unchanged."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_19",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For double-slit interference with white light, what colour is the central bright fringe?",
+      "back": "White.",
+      "accept": [
+        "White.",
+        "white light",
+        "The central fringe is white."
+      ],
+      "reject": [
+        "Red only.",
+        "Dark."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For the same diffraction grating and order, is the red or violet maximum at the larger angle?",
+      "back": "Red.",
+      "accept": [
+        "Red.",
+        "red light",
+        "The longer-wavelength red maximum."
+      ],
+      "reject": [
+        "Violet.",
+        "Both have the same angle."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_21",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If single-slit width is halved, what happens to the central maximum's angular width (small-angle approximation)?",
+      "back": "It approximately doubles.",
+      "accept": [
+        "It approximately doubles.",
+        "twice as wide",
+        "Angular width becomes about 2 times larger."
+      ],
+      "reject": [
+        "It halves.",
+        "It is unchanged."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_22",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A grating has 500 lines per mm. Calculate the slit spacing d in metres.",
+      "back": "2.0 × 10⁻⁶ m.",
+      "accept": [
+        "2.0 × 10⁻⁶ m.",
+        "2e-6 m",
+        "0.000002 m"
+      ],
+      "reject": [
+        "2.0 × 10⁻³ m.",
+        "5.0 × 10⁻⁷ m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_23",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a grating d=2.0 µm and λ=600 nm, find first-order diffraction angle to 1 d.p.",
+      "back": "17.5°.",
+      "accept": [
+        "17.5°.",
+        "17.46 degrees",
+        "approximately 17.5 degrees"
+      ],
+      "reject": [
+        "30.0°.",
+        "0.3°."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_24",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For grating spacing 2.5 µm and λ=600 nm, find the highest possible order n.",
+      "back": "4.",
+      "accept": [
+        "4.",
+        "four",
+        "nmax=4"
+      ],
+      "reject": [
+        "5.",
+        "3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_25",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Light enters glass (n=1.50) from air (n=1.00) at 30.0° to normal. Find refracted angle to 1 d.p.",
+      "back": "19.5°.",
+      "accept": [
+        "19.5°.",
+        "19.47 degrees",
+        "approximately 19.5 degrees"
+      ],
+      "reject": [
+        "30.0°.",
+        "48.6°."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_26",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For refractive index 1.50, calculate light speed if c=3.00×10⁸ m s⁻¹.",
+      "back": "2.00 × 10⁸ m s⁻¹.",
+      "accept": [
+        "2.00 × 10⁸ m s⁻¹.",
+        "2e8 m/s",
+        "200000000 m/s"
+      ],
+      "reject": [
+        "4.50 × 10⁸ m s⁻¹.",
+        "3.00 × 10⁸ m s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_27",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A light wave is 600 nm in vacuum. What is its wavelength inside glass of n=1.50?",
+      "back": "400 nm.",
+      "accept": [
+        "400 nm.",
+        "400 nanometres",
+        "4.0 × 10⁻⁷ m"
+      ],
+      "reject": [
+        "900 nm.",
+        "600 nm."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_28",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For light passing from glass n=1.50 to air n=1.00, find critical angle to 1 d.p.",
+      "back": "41.8°.",
+      "accept": [
+        "41.8°.",
+        "41.81 degrees",
+        "approximately 41.8 degrees"
+      ],
+      "reject": [
+        "48.2°.",
+        "60.0°."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_29",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A fibre core has n=1.50 and cladding n=1.45. Find core–cladding critical angle to 1 d.p.",
+      "back": "75.2°.",
+      "accept": [
+        "75.2°.",
+        "75.16 degrees",
+        "approximately 75.2 degrees"
+      ],
+      "reject": [
+        "41.8°.",
+        "14.8°."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_30",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For step-index optical fibre, how must the core refractive index compare with the cladding?",
+      "back": "The core index must be higher.",
+      "accept": [
+        "The core index must be higher.",
+        "ncore > ncladding",
+        "Cladding refractive index is lower than the core."
+      ],
+      "reject": [
+        "The core index must be lower.",
+        "They must have identical refractive indices."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_31",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In a step-index optical fibre, what causes modal dispersion?",
+      "back": "Different ray paths take different times to arrive.",
+      "accept": [
+        "Different ray paths take different times to arrive.",
+        "Modes have different path lengths and transit times.",
+        "Different propagation routes cause pulse spreading."
+      ],
+      "reject": [
+        "All rays follow identical routes.",
+        "Only absorption creates modal dispersion."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_32",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What causes material dispersion in an optical fibre?",
+      "back": "Different wavelengths travel at different speeds in the material.",
+      "accept": [
+        "Different wavelengths travel at different speeds in the material.",
+        "Refractive index depends on wavelength.",
+        "Different colours have different speeds in the fibre."
+      ],
+      "reject": [
+        "All wavelengths have equal speed.",
+        "Only reflection at the core boundary causes it."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_33",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why does pulse broadening limit the maximum data rate in an optical fibre?",
+      "back": "Neighbouring pulses can overlap and become difficult to distinguish.",
+      "accept": [
+        "Neighbouring pulses can overlap and become difficult to distinguish.",
+        "Pulses can merge at the detector.",
+        "Spreading reduces how closely distinguishable pulses can be sent."
+      ],
+      "reject": [
+        "Pulses always grow narrower.",
+        "It increases the number of independent pulses resolved."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v253_physics_waves_34",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does absorption do to an optical-fibre light signal?",
+      "back": "It reduces signal intensity.",
+      "accept": [
+        "It reduces signal intensity.",
+        "The light pulse loses power.",
+        "Attenuation makes the received signal weaker."
+      ],
+      "reject": [
+        "It makes every pulse brighter.",
+        "It removes all dispersion."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
