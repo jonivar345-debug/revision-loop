@@ -20,6 +20,8 @@ for(const c of bank.cards){
  for(const a of c.reject){assert.equal(judge(c,a).status,'wrong','Wrong '+c.id+': '+a);rejected++;}
 }
 assert.deepEqual(duplicates,[],'Duplicate prompt(s) against existing Physics deck');
+for(const suffix of ['07','08']){const card=bank.cards.find(c=>c.id==='task1_v253_physics_waves_'+suffix);assert(card&&/starting in phase/i.test(card.front),'Interference question needs in-phase source assumption');}
+assert(/fixed at both ends/i.test(bank.cards.find(c=>c.id==='task1_v253_physics_waves_12').front));
 assert.equal(accepted,102);assert.equal(rejected,68);
 const near=(a,b)=>Math.abs(a-b)<Math.max(1e-12,Math.abs(b)*1e-7);
 assert.equal(.75*40,30);assert.equal(1/.025,40);assert.equal(120/(2*1.5),40);
