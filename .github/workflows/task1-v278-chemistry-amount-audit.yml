@@ -1,0 +1,24 @@
+name: Task 1 v278 Chemistry Amount formula mass, significant figures and selected gap audit
+on:
+  pull_request:
+    paths:
+      - 'chemistry_amount_sigfig_formula_recall_v278.json'
+      - 'chemistry_amount_precision_applications_v278.json'
+      - 'editorial/task1-v278-chemistry-amount-selected-gap-evidence.json'
+      - 'tests/task1-v278-chemistry-amount-precision-audit.cjs'
+      - 'tests/task1-v277-chemistry-bonding-structure-audit.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v278-chemistry-amount-audit.yml'
+  push:
+    branches: [main]
+jobs:
+  amount-recall-applications-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v277-chemistry-bonding-structure-audit.cjs
+      - run: node tests/task1-v278-chemistry-amount-precision-audit.cjs

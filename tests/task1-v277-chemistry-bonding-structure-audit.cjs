@@ -6,8 +6,8 @@ assert.equal(cards.version,'v277');assert.equal(bank.version,'v277');assert.equa
 assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').questions.length,1268);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,40);assert.equal(qUrls[39],'chemistry_as_bonding_structures_practice_v277.json');
-assert.equal(cUrls.length,50);assert.equal(cUrls[49],'chemistry_as_bonding_structures_recall_v277.json');
+assert(qUrls.length>=40,'v277 Bonding practice remains at its original index 39');assert.equal(qUrls[39],'chemistry_as_bonding_structures_practice_v277.json');
+assert(cUrls.length>=50,'v277 Bonding recall remains at its original index 49');assert.equal(cUrls[49],'chemistry_as_bonding_structures_recall_v277.json');
 for(const s of ['chemistry_as_bonding_structures_practice_v277.json','chemistry_as_bonding_structures_recall_v277.json'])assert(sw.includes("'./"+s+"'"));
 assert(sw.includes('-v277-bonding-structures'));
 const prior=[...core.cards,...cUrls.slice(0,49).flatMap(p=>j(p).cards||[])];
