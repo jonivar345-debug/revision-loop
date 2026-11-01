@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "version": "v267",
   "date": "2026-11-01",
-  "scope": "Original school-taught Chemistry mock drawings: E/Z stereoisomers, optical isomerism, carbonyl electron-pair concepts and ester structure; manually assessed",
+  "scope": "Original school-taught Chemistry mock drawings: E/Z stereoisomers, optical isomerism, aldehyde/ketone structure comparison and ester structure; manually assessed",
   "officialSpec": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
   "notes": "All diagrams are hypothetical exam drawings, with no laboratory use, sourcing or preparation instructions. Every marking point is self-reviewed, not inferred from image text matching.",
   "questions": [
@@ -55,18 +55,18 @@
       "year": "Practice",
       "series": "Original AQA-style Organic Chemistry Drawing Practice",
       "paper": "Original",
-      "question": "Draw carbonyl reduction arrows",
+      "question": "Draw and distinguish propanal and propanone",
       "topic": "Aldehydes and ketones",
       "courseTopic": "Aldehydes and ketones",
       "revisionTopic": "Aldehydes and ketones",
       "subtopic": "Organic structures and electron-pair diagrams",
       "marks": 4,
-      "prompt": "Draw the nucleophilic addition mechanism in which a hydride nucleophile H⁻ attacks the carbonyl group of butan-2-one, CH₃COCH₂CH₃. Show both curly arrows for the addition step, the charged intermediate and the alcohol formed after protonation. This is a theoretical mechanism question, not a practical procedure. Review the drawing manually. [4 marks]",
+      "prompt": "Draw clear displayed or unambiguous structural formulas of propanal and propanone, both with molecular formula C₃H₆O. Label the C=O group in each and explain which is an aldehyde and which is a ketone. Use manual diagram review for your four marking points. [4 marks]",
       "markPoints": [
-        "A curly arrow starts at the electron pair of H⁻ and points to the carbonyl carbon, not the carbonyl oxygen.",
-        "A second curly arrow goes from the C=O π bond to the oxygen atom.",
-        "The tetrahedral alkoxide intermediate has the former carbonyl oxygen labelled O⁻ and a new C–H bond.",
-        "Protonation of the alkoxide yields butan-2-ol, CH₃CH(OH)CH₂CH₃ (a secondary alcohol)."
+        "Propanal is correctly drawn as CH₃CH₂C(=O)H (CH₃CH₂CHO), with a terminal carbonyl group.",
+        "Propanone is correctly drawn as CH₃C(=O)CH₃, with the carbonyl carbon between two carbon groups.",
+        "The C=O carbonyl group and double bond are correctly shown and labelled in both structures.",
+        "Propanal is identified as an aldehyde (carbonyl carbon bonded to H), whereas propanone is identified as a ketone (carbonyl carbon bonded to two C groups)."
       ],
       "markPointMarks": [
         1,
@@ -74,7 +74,7 @@
         1,
         1
       ],
-      "modelAnswer": "Electron pair from H⁻ attacks the electrophilic carbonyl carbon as the π electron pair moves onto oxygen. This creates the tetrahedral alkoxide CH₃C(H)(O⁻)CH₂CH₃. Protonation yields CH₃CH(OH)CH₂CH₃, butan-2-ol. Do not draw an arrow from the carbonyl C towards H⁻.",
+      "modelAnswer": "Propanal: CH₃–CH₂–C(=O)–H, an aldehyde with the carbonyl carbon at the chain end and bonded to hydrogen. Propanone: CH₃–C(=O)–CH₃, a ketone whose carbonyl carbon is bonded to two methyl groups. Both have a C=O double bond but different functional-group environments.",
       "answerType": "points",
       "questionType": "drawn structure or mechanism",
       "requiresWorking": true,
