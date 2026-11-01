@@ -23,12 +23,18 @@ for(const subject of ['Physics','Chemistry']){
  const questionsWithoutTaughtFlag=qs.filter(q=>q.taught===undefined);
  const a2Cards=cards.filter(c=>c.stage==='A2');
  const a2Questions=qs.filter(q=>q.level==='A2');
+ const noRefCards=cards.filter(c=>!String(c.specRef||'').trim());
+ const noRefQuestions=qs.filter(q=>!String(q.specRef||'').trim());
+ const topicCounts=arr=>Object.entries(arr.reduce((map,x)=>{const topic=String(x.topic||x.courseTopic||'not specified');map[topic]=(map[topic]||0)+1;return map;},{})).sort((a,b)=>b[1]-a[1]).map(([topic,count])=>({topic,count}));
  const examples=arr=>arr.slice(0,70).map(x=>({id:x.id,topic:x.topic,specRef:x.specRef,stage:x.stage||x.level,front:String(x.front||x.question||x.prompt||'').slice(0,170)}));
  review[subject]={cards:cards.length,questions:qs.length,cardStageBreakdown:distribution(cards),questionLevelBreakdown:distribution(qs),
   cardSpecRefs:counts(cards),questionSpecRefs:counts(qs),untaughtCardCount:explicitlyUntaughtCards.length,
   untaughtQuestionCount:explicitlyUntaughtQuestions.length,missingTaughtFlagOnCards:cardsWithoutTaughtFlag.length,missingTaughtFlagOnQuestions:questionsWithoutTaughtFlag.length,
   explicitUntaughtCardExamples:examples(explicitlyUntaughtCards),
   explicitUntaughtQuestionExamples:examples(explicitlyUntaughtQuestions),
+  missingSpecRefCards:noRefCards.length,missingSpecRefQuestions:noRefQuestions.length,
+  missingSpecRefCardTopics:topicCounts(noRefCards).slice(0,35),missingSpecRefQuestionTopics:topicCounts(noRefQuestions).slice(0,35),
+  missingSpecRefCardExamples:examples(noRefCards).slice(0,20),missingSpecRefQuestionExamples:examples(noRefQuestions).slice(0,20),
   A2CardCount:a2Cards.length,A2QuestionCount:a2Questions.length,
   A2CardExamples:examples(a2Cards),A2QuestionExamples:examples(a2Questions)};
  if(subject==='Physics'){assert.equal(a2Cards.length,0,'A2 Physics card unexpectedly in AS mock');assert.equal(a2Questions.length,0,'A2 Physics question unexpectedly in AS mock');}
