@@ -28,7 +28,8 @@ const flashNames=allNames(flashURL[1]);
 const examNames=allNames(examURL[1]);
 assert(flashNames.length>=20,'v226 source was removed');
 assert.equal(flashNames[19],'physics_waves_reasoning_recall_v226.json');
-assert.equal(examNames.at(-1),'physics_waves_interference_application_v226.json');
+const v226Position=examNames.indexOf('physics_waves_interference_application_v226.json');
+assert(v226Position>=0,'v226 original practice bank was removed');
 const oldFlash=[...deck.cards,...flashNames.slice(0,19).flatMap(p=>json(p).cards||[])];
 const oldIds=new Set(oldFlash.map(c=>c.id)),oldFronts=new Set(oldFlash.filter(c=>c.subject==='Physics').map(c=>String(c.front||'').trim().toLowerCase()));
 for(let i=0;i<flash.cards.length;i++){
@@ -42,7 +43,7 @@ for(let i=0;i<flash.cards.length;i++){
  assert(c.front.length<180&&c.back.length<195);
 }
 const q=exam.questions[0];
-const oldQs=new Set([...core.questions,...examNames.slice(0,-1).flatMap(p=>json(p).questions||[])].map(q=>q.id));
+const oldQs=new Set([...core.questions,...examNames.slice(0,v226Position).flatMap(p=>json(p).questions||[])].map(q=>q.id));
 assert(!oldQs.has(q.id),'question ID already exists');
 assert.equal(q.id,'task1_v226_phy_01');
 assert.equal(q.subject,'Physics');assert.equal(q.level,'AS');assert(q.mock&&q.taught);
