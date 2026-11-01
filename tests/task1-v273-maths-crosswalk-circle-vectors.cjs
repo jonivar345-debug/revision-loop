@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
 const bank=j('maths_year1_circle_vector_gaps_v273.json'),audit=j('editorial/task1-v273-maths-selected-gaps-evidence.json'),prior=j('editorial/task1-v244-maths-year1-pure-crosswalk.json');
 const app=read('app.js'),sw=read('sw.js');
 const urls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,36);assert.equal(urls[35],'maths_year1_circle_vector_gaps_v273.json');
+assert(urls.length>=36,'v273 circle/vector bank remains at index 35 when later banks append');assert.equal(urls[35],'maths_year1_circle_vector_gaps_v273.json');
 assert(sw.includes("'./maths_year1_circle_vector_gaps_v273.json'"));assert(sw.includes('-v273-circle-vectors'));
 assert.equal(j('deck.json').cards.length,3345);assert.equal(j('exam_questions.json').questions.length,1268);
 assert.equal(bank.version,'v273');assert.equal(bank.questions.length,3);
