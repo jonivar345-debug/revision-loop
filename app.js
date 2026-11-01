@@ -323,6 +323,195 @@ function applyV288LegacyChemBondingSpecRefs(existing){
  return existing;
 }
 
+// v289: AQA 3.1.4 Energetics source subsection mapping for individually reviewed cards.
+// Exact ID, stage, topic and subject match only; never overwrite existing specRef.
+const V289_LEGACY_ENERGETICS_GROUPS=Object.freeze([
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "Energetics",
+  "specRef": "3.1.4.1",
+  "ids": [
+   "chem_enthalpy_def",
+   "chem_energetics_v49_01",
+   "chem_energetics_v49_02",
+   "chem_energetics_v49_03",
+   "chem_energetics_v49_04",
+   "chem_energetics_v49_05",
+   "chem_energetics_v49_08",
+   "chem_energetics_v49_09",
+   "chem_energetics_v49_10",
+   "chem_energetics_v49_11",
+   "chem_energetics_v49_12",
+   "chem_energetics_v49_13",
+   "chem_energetics_v49_14",
+   "chem_energetics_v49_15",
+   "chem_energetics_v49_16",
+   "chem_energetics_v49_17",
+   "chem_energetics_v53_01",
+   "chem_energetics_v53_02",
+   "chem_energetics_v53_03",
+   "chem_energetics_v53_04",
+   "chem_energetics_v53_05",
+   "chem_energetics_v53_06",
+   "chem_energetics_v51_04"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "Energetics",
+  "specRef": "3.1.4.3",
+  "ids": [
+   "chem_hess",
+   "chem_energetics_v49_18",
+   "chem_energetics_v49_19",
+   "chem_energetics_v53_07"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "Energetics",
+  "specRef": "3.1.4.4",
+  "ids": [
+   "chem_bondenthalpy",
+   "v33_card_chemistry_energetics_45"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "Calorimetry",
+  "specRef": "3.1.4.2",
+  "ids": [
+   "chem_energetics_v49_20",
+   "chem_energetics_v49_21",
+   "chem_energetics_v49_22",
+   "chem_energetics_v49_23",
+   "chem_energetics_v49_24",
+   "chem_energetics_v49_25",
+   "chem_energetics_v49_26",
+   "chem_energetics_v49_27",
+   "chem_energetics_v49_28",
+   "chem_energetics_v49_29",
+   "chem_energetics_v49_30",
+   "chem_energetics_v49_31",
+   "chem_energetics_v49_32",
+   "chem_energetics_v49_33",
+   "chem_energetics_v49_34",
+   "chem_energetics_v49_35",
+   "chem_energetics_v49_36",
+   "chem_energetics_v49_37",
+   "chem_energetics_v53_08",
+   "chem_energetics_v53_09",
+   "chem_energetics_v53_10",
+   "chem_energetics_v53_11",
+   "chem_energetics_v53_12",
+   "chem_energetics_v53_13",
+   "chem_energetics_v53_14",
+   "chem_energetics_v53_15",
+   "chem_energetics_v53_16"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "RP2 Enthalpy",
+  "specRef": "3.1.4.2",
+  "ids": [
+   "chem_rp2",
+   "chem_energetics_v49_60",
+   "chem_energetics_v49_61",
+   "chem_energetics_v49_62",
+   "chem_energetics_v49_63",
+   "chem_energetics_v49_64",
+   "chem_energetics_v51_01",
+   "chem_energetics_v51_02",
+   "chem_energetics_v51_03",
+   "chem_energetics_v53_29",
+   "chem_energetics_v53_30",
+   "chem_energetics_v53_31",
+   "chem_energetics_v53_32",
+   "chem_energetics_v53_33",
+   "chem_energetics_v53_34",
+   "chem_energetics_v53_35",
+   "chem_energetics_v53_36"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "Hess's law",
+  "specRef": "3.1.4.3",
+  "ids": [
+   "chem_energetics_v49_38",
+   "chem_energetics_v49_39",
+   "chem_energetics_v49_40",
+   "chem_energetics_v49_41",
+   "chem_energetics_v49_42",
+   "chem_energetics_v49_43",
+   "chem_energetics_v49_44",
+   "chem_energetics_v49_45",
+   "chem_energetics_v49_46",
+   "chem_energetics_v49_47",
+   "chem_energetics_v49_48",
+   "chem_energetics_v49_49",
+   "chem_energetics_v53_17",
+   "chem_energetics_v53_18",
+   "chem_energetics_v53_19",
+   "chem_energetics_v53_20",
+   "chem_energetics_v53_21",
+   "chem_energetics_v53_22",
+   "chem_energetics_v53_23",
+   "chem_energetics_v53_24",
+   "chem_energetics_v53_25"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "RP2 Enthalpy",
+  "specRef": "3.1.4.3",
+  "ids": [
+   "chem_energetics_v49_65"
+  ]
+ },
+ {
+  "subject": "Chemistry",
+  "stage": "AS",
+  "topic": "Bond enthalpies",
+  "specRef": "3.1.4.4",
+  "ids": [
+   "chem_energetics_v49_50",
+   "chem_energetics_v49_51",
+   "chem_energetics_v49_52",
+   "chem_energetics_v49_53",
+   "chem_energetics_v49_54",
+   "chem_energetics_v49_55",
+   "chem_energetics_v49_56",
+   "chem_energetics_v49_57",
+   "chem_energetics_v49_58",
+   "chem_energetics_v49_59",
+   "chem_energetics_v51_05",
+   "chem_energetics_v53_26",
+   "chem_energetics_v53_27",
+   "chem_energetics_v53_28"
+  ]
+ }
+]);
+function applyV289LegacyEnergeticsSpecRefs(existing){
+ const byId=new Map();
+ for(const group of V289_LEGACY_ENERGETICS_GROUPS)for(const id of group.ids)byId.set(id,group);
+ for(const card of existing){
+  const group=byId.get(card.id);
+  if(group&&card.subject===group.subject&&card.topic===group.topic&&
+     card.stage===group.stage&&!String(card.specRef||'').trim())
+   card.specRef=group.specRef;
+ }
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -4161,6 +4350,7 @@ async function sync(manual=false){
  // Map only the 110 individually reviewed legacy core cards to their AQA subsections.
  applyV287LegacySpecRefs(cards);
  applyV288LegacyChemBondingSpecRefs(cards);
+ applyV289LegacyEnergeticsSpecRefs(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
