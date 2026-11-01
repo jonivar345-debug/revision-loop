@@ -1187,7 +1187,7 @@
       "active": true,
       "kind": "short",
       "method": "formula",
-      "front": "In calorimetry, ΔH of reaction from heat released q and moles n?",
+      "front": "If positive q is heat released, what is reaction ΔH for n mol?",
       "back": "−q/n",
       "accept": [
         "−q/n",
@@ -1217,13 +1217,20 @@
       "back": "n × |ΔH|",
       "accept": [
         "n × |ΔH|",
-        "n times absolute enthalpy change"
+        "n times absolute enthalpy change",
+        "q = n × |ΔH|",
+        "n*abs(ΔH)",
+        "n |ΔH|"
       ],
       "reject": [
         "n/ΔH",
-        "Not n × |ΔH|"
+        "Not n × |ΔH|",
+        "n × ΔH",
+        "q = n × ΔH"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "strictSymbolRecall": true,
+      "strictSymbolFeedback": "The heat magnitude requires absolute-value notation, |ΔH|."
     },
     {
       "id": "task1_v298_chemistry_16",
@@ -2309,13 +2316,21 @@
       "back": "Zero.",
       "accept": [
         "Zero.",
-        "f′(a) = 0"
+        "f′(a) = 0",
+        "0",
+        "f'(a)=0",
+        "The first derivative is zero.",
+        "The gradient is zero."
       ],
       "reject": [
         "f(a)=0",
-        "Not Zero."
+        "Not Zero.",
+        "f(a) = 0",
+        "f''(a)=0"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "strictSymbolRecall": true,
+      "strictSymbolFeedback": "A stationary point requires the first derivative to be zero, not the function itself."
     },
     {
       "id": "task1_v298_maths_26",
