@@ -897,13 +897,15 @@
       "back": "f′(a)=0.",
       "accept": [
         "f′(a)=0.",
-        "The derivative is zero at x=a."
+        "The derivative is zero at x=a.",
+        "f'(a)=0"
       ],
       "reject": [
         "f(a)=0.",
         "f′′(a)=0 always."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "strictSymbolRecall": true
     },
     {
       "id": "task1_v293_maths_card_11",
