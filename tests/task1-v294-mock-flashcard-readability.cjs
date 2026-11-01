@@ -5,7 +5,7 @@ const app=fs.readFileSync('app.js','utf8'),core=j('deck.json');
 const names=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
 const a=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),b=app.indexOf(' const added=[',a);
 const all=new Function('cards','extraFlashBanks',app.slice(a,b)+'\nreturn cards;')([...core.cards],names.map(j));
-assert.equal(all.length,4216);
+assert(all.length>=4216,'v294 base 4,216-card pool must remain present after append-only additions');
 const u=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),v=app.indexOf('function startMockSession(){',u);
 assert(u>=0&&v>u);
 const {mockEligibleCard}=new Function(app.slice(u,v)+'\nreturn {mockEligibleCard};')();
