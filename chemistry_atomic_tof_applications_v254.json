@@ -29,7 +29,13 @@
         "64.00.",
         "63.31."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 63.62,
+        "units": [],
+        "expected": "63.62.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_02",
@@ -55,7 +61,13 @@
         "36.0.",
         "35.25."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 35.5,
+        "units": [],
+        "expected": "35.5.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_03",
@@ -81,7 +93,13 @@
         "24.21.",
         "25.00."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 24.32,
+        "units": [],
+        "expected": "24.32.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_04",
@@ -107,7 +125,13 @@
         "52.",
         "54."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 53,
+        "units": [],
+        "expected": "53.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_05",
@@ -133,7 +157,13 @@
         "13.",
         "16."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 10,
+        "units": [],
+        "expected": "10.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_06",
@@ -263,7 +293,13 @@
         "12.",
         "48."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 24,
+        "units": [],
+        "expected": "24.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_11",
@@ -289,7 +325,13 @@
         "24.",
         "48."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 12,
+        "units": [],
+        "expected": "12.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_12",
@@ -367,7 +409,17 @@
         "4.0×10⁵ m s⁻¹.",
         "2.0×10⁻⁵ m s⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 200000,
+        "units": [
+          {
+            "symbol": "m/s",
+            "toBase": 1
+          }
+        ],
+        "expected": "2.0×10⁵ m s⁻¹."
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_15",
@@ -393,7 +445,21 @@
         "1.6×10⁻¹⁵ J.",
         "8.0×10¹⁶ J."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 8e-16,
+        "units": [
+          {
+            "symbol": "J",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ",
+            "toBase": 1000
+          }
+        ],
+        "expected": "8.0×10⁻¹⁶ J."
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_16",
@@ -419,7 +485,29 @@
         "2.5×10⁴ s.",
         "4.0×10⁵ s."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.00004,
+        "units": [
+          {
+            "symbol": "s",
+            "toBase": 1
+          },
+          {
+            "symbol": "ms",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "µs",
+            "toBase": 0.000001
+          },
+          {
+            "symbol": "μs",
+            "toBase": 0.000001
+          }
+        ],
+        "expected": "4.0×10⁻⁵ s."
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_17",
@@ -757,7 +845,13 @@
         "44.",
         "176."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 88,
+        "units": [],
+        "expected": "88.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v254_chem_atomic_tof_30",
