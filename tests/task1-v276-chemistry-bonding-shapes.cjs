@@ -7,8 +7,8 @@ assert.equal(bank.version,'v276');assert.equal(cards.version,'v276');assert.equa
 assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').questions.length,1268);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,39);assert.equal(qUrls[38],'chemistry_as_bonding_shapes_practice_v276.json');
-assert.equal(cUrls.length,49);assert.equal(cUrls[48],'chemistry_as_bonding_shapes_recall_v276.json');
+assert(qUrls.length>=39,'v276 Bonding practice remains at original index 38 after append-only banks');assert.equal(qUrls[38],'chemistry_as_bonding_shapes_practice_v276.json');
+assert(cUrls.length>=49,'v276 Bonding recall remains at original index 48 after append-only banks');assert.equal(cUrls[48],'chemistry_as_bonding_shapes_recall_v276.json');
 for(const p of ['chemistry_as_bonding_shapes_practice_v276.json','chemistry_as_bonding_shapes_recall_v276.json'])assert(sw.includes("'./"+p+"'"));
 assert(sw.includes('-v276-bonding-shapes'));
 const priorCards=[...core.cards,...cUrls.slice(0,48).flatMap(p=>j(p).cards||[])];
