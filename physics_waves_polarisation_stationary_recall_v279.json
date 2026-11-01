@@ -1,7 +1,7 @@
 {
   "version": "v279",
   "createdAt": "2026-11-01",
-  "scope": "12 targeted original AQA AS Waves 3.3.1.2/3.3.1.3/3.3.2.2 cards on aerial polarisation, node-loop phase, harmonics and qualitative slit diffraction",
+  "scope": "13 targeted original AQA AS Waves 3.3.1.2/3.3.1.3/3.3.2.2 cards on aerial polarisation, node-loop phase, harmonics and qualitative slit diffraction",
   "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
   "notes": "AQA does not require Malus's law, the historical term fundamental or the terms overtone. These cards use first/third harmonic terminology and do not require laser operation.",
   "cards": [
@@ -302,6 +302,31 @@
       "reject": [
         "the central maximum is narrower",
         "all maxima have equal width"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In the qualitative single-slit diffraction pattern for white light, what colour is the central bright maximum?",
+      "back": "White.",
+      "accept": [
+        "White.",
+        "white central maximum"
+      ],
+      "reject": [
+        "all black",
+        "pure violet only"
       ],
       "strictRecall": true
     }
