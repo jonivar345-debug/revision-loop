@@ -1,0 +1,11 @@
+name: Task 1 v308 historical v230 marking repair
+on: [pull_request]
+jobs:
+  v230-compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v230-physics-mechanics-materials.cjs
+      - run: node tests/task1-v307-mechanics-thermo-real-marker.cjs
+      - run: node tests/task1-v304-shortened-card-marker-regression.cjs
+      - run: node tests/task1-v306-pure-proof-vectors-precision.cjs
