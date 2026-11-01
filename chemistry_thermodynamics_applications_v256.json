@@ -29,7 +29,39 @@
         "+787 kJ mol⁻¹.",
         "−438 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -787,
+        "expected": "−787 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_02",
@@ -55,7 +87,39 @@
         "−787 kJ mol⁻¹.",
         "0 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 787,
+        "expected": "+787 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_03",
@@ -81,7 +145,39 @@
         "+349 kJ mol⁻¹.",
         "−136 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -349,
+        "expected": "−349 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_04",
@@ -107,7 +203,39 @@
         "−496 kJ mol⁻¹.",
         "+147 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 496,
+        "expected": "+496 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_05",
@@ -133,7 +261,39 @@
         "+929 kJ mol⁻¹.",
         "−683 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -929,
+        "expected": "−929 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_06",
@@ -159,7 +319,39 @@
         "+3792 kJ mol⁻¹.",
         "−3048 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -3792,
+        "expected": "−3792 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_07",
@@ -185,7 +377,39 @@
         "−349 kJ mol⁻¹.",
         "+698 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -698,
+        "expected": "−698 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_08",
@@ -211,7 +435,39 @@
         "+242 kJ mol⁻¹.",
         "−121 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 121,
+        "expected": "+121 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_09",
@@ -237,7 +493,39 @@
         "−18 kJ mol⁻¹.",
         "+1556 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 18,
+        "expected": "+18 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_10",
@@ -263,7 +551,39 @@
         "+122 kJ mol⁻¹.",
         "+242 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -122,
+        "expected": "−122 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_11",
@@ -289,7 +609,39 @@
         "+355 kJ mol⁻¹.",
         "−345 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -355,
+        "expected": "−355 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_12",
@@ -445,7 +797,39 @@
         "+90.2 kJ mol⁻¹.",
         "−149.8 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -90.2,
+        "expected": "−90.2 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_18",
@@ -471,7 +855,39 @@
         "+30 kJ mol⁻¹.",
         "+39.93 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -30,
+        "expected": "−30 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     },
     {
       "id": "task1_v256_chem_thermo_19",
@@ -731,7 +1147,39 @@
         "+20 kJ mol⁻¹.",
         "−180 kJ mol⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": -20,
+        "expected": "−20 kJ mol⁻¹.",
+        "allowUnitless": true,
+        "tolerance": 0.001,
+        "units": [
+          {
+            "symbol": "kJ mol⁻¹",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ mol^-1",
+            "toBase": 1
+          },
+          {
+            "symbol": "kJ/mol",
+            "toBase": 1
+          },
+          {
+            "symbol": "J mol⁻¹",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J mol^-1",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "J/mol",
+            "toBase": 0.001
+          }
+        ]
+      }
     }
   ]
 }
