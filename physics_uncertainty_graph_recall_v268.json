@@ -1,0 +1,309 @@
+{
+  "version": "v268",
+  "createdAt": "2026-11-01",
+  "scope": "AQA Physics 7408 3.1.2 AS first-mock, uncertainty graphs and gradient/intercept treatment",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+  "notes": "12 original concise graph-recall cards. Drawing skill must be demonstrated separately with manual drawing practice; no user drawing is automatically awarded marks.",
+  "cards": [
+    {
+      "id": "task1_v268_phy_graph_card_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A graph shows y = 5.0 ± 0.2 m. Where do its vertical error bars end?",
+      "back": "4.8 m and 5.2 m.",
+      "accept": [
+        "4.8 m and 5.2 m.",
+        "from 4.8 to 5.2 m"
+      ],
+      "reject": [
+        "5.0 m and 5.2 m",
+        "4.6 m and 5.4 m"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If only the x reading has uncertainty, which way should its error bar run?",
+      "back": "Horizontally, parallel to the x-axis.",
+      "accept": [
+        "Horizontally, parallel to the x-axis.",
+        "horizontal"
+      ],
+      "reject": [
+        "vertical",
+        "diagonal"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If both plotted x and y readings have uncertainties, which error bars are required?",
+      "back": "Both horizontal and vertical error bars.",
+      "accept": [
+        "Both horizontal and vertical error bars.",
+        "horizontal and vertical"
+      ],
+      "reject": [
+        "only horizontal",
+        "only vertical"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which two straight lines are compared to estimate graph-gradient uncertainty?",
+      "back": "Best-fit and steepest or shallowest acceptable line.",
+      "accept": [
+        "Best-fit and steepest or shallowest acceptable line.",
+        "best and worst acceptable gradients"
+      ],
+      "reject": [
+        "two lines joining consecutive points",
+        "two parallel lines"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How is absolute uncertainty in a graphical gradient calculated using a worst-case line?",
+      "back": "The absolute difference between best and worst gradients.",
+      "accept": [
+        "The absolute difference between best and worst gradients.",
+        "absolute value of best minus worst gradient"
+      ],
+      "reject": [
+        "sum of the gradients",
+        "best gradient divided by worst gradient"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A best gradient is 2.0 and worst acceptable gradient 1.7. What is the percentage gradient uncertainty?",
+      "back": "15%.",
+      "accept": [
+        "15%",
+        "15 percent"
+      ],
+      "reject": [
+        "30%",
+        "85%"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "The best y-intercept is 3.0 and a worst acceptable intercept is 2.4. What is the percentage uncertainty?",
+      "back": "20%.",
+      "accept": [
+        "20%",
+        "20 percent"
+      ],
+      "reject": [
+        "0.6%",
+        "80%"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How should units be shown on the axes of an experimental graph?",
+      "back": "Include the quantity and its unit in each axis label.",
+      "accept": [
+        "Include the quantity and its unit in each axis label.",
+        "label each axis with quantity and unit"
+      ],
+      "reject": [
+        "only write units in the title",
+        "leave all units off"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is a best-fit line preferable to joining readings dot-to-dot for a linear relationship?",
+      "back": "It reflects the overall trend rather than individual random scatter.",
+      "accept": [
+        "It reflects the overall trend rather than individual random scatter.",
+        "it accounts for scatter in the readings"
+      ],
+      "reject": [
+        "it must always pass exactly through every point",
+        "it removes all systematic error"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a plotted y reading with uncertainty but an exact x reading, what is the error-bar direction?",
+      "back": "Vertical only.",
+      "accept": [
+        "Vertical only.",
+        "vertical"
+      ],
+      "reject": [
+        "horizontal only",
+        "both directions equally"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How should you choose two points for a graph gradient calculation?",
+      "back": "Use two widely separated points on the best-fit line.",
+      "accept": [
+        "Use two widely separated points on the best-fit line.",
+        "two far apart points on the line of best fit"
+      ],
+      "reject": [
+        "use two original data points without referring to the line",
+        "choose points close together"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v268_phy_graph_card_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Measurements and their errors",
+      "specRef": "3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A force–extension graph has gradient 0.20 N mm⁻¹. What is the gradient in N m⁻¹?",
+      "back": "200 N m⁻¹.",
+      "accept": [
+        "200 N m⁻¹",
+        "200 N/m"
+      ],
+      "reject": [
+        "0.0002 N/m",
+        "0.20 N/m"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
