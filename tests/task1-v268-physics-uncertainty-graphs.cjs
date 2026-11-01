@@ -34,7 +34,7 @@ for(const q of bank.questions){
  assert.equal(s.manualRequired,true);assert.equal(s.suggested,0);
  assert.deepEqual(s.preds,Array(q.marks).fill(false));assert.deepEqual(s.scores,Array(q.marks).fill(0));
 }
-assert(app.includes('if(q.manualDiagramReview===true){beginManualExamReview(q);return;}'));
+assert(app.includes('if(q.manualDiagramReview===true||q.manualWorkingReview===true){beginManualExamReview(q);return;}'));
 assert(app.includes('The text checker cannot verify this drawing or graph.'));
 assert(app.includes('window.RevisionSketch?.mount(q)'));
 assert(app.includes('window.RevisionScan?.mount(q.id)'));

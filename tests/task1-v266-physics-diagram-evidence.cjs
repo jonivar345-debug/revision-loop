@@ -19,7 +19,7 @@ for(const id of r.originalDrawingQuestionIds){
  assert.equal(q.marks,4);assert.equal(q.markPoints.length,4);
  assert.equal(q.mock,true);assert.equal(q.taught,true);
 }
-assert(app.includes('if(q.manualDiagramReview===true){beginManualExamReview(q);return;}'));
+assert(app.includes('if(q.manualDiagramReview===true||q.manualWorkingReview===true){beginManualExamReview(q);return;}'));
 assert.equal(a.completion.particleExchangeDrawingPracticeAvailable,true);
 assert.equal(a.completion.particleExchangeDrawingAndMarkingVerified,false);
 assert.equal(a.completion.task1Complete,false);

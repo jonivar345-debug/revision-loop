@@ -1,0 +1,22 @@
+name: Task 1 v271 Year 1 Pure proof and vectors reasoning verification
+on:
+  pull_request:
+    paths:
+      - 'maths_year1_pure_reasoning_v271.json'
+      - 'tests/task1-v271-year1-pure-reasoning.cjs'
+      - 'tests/task1-v270-chemistry-amount-exam.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v271-year1-pure-reasoning.yml'
+  push:
+    branches: [main]
+jobs:
+  year1-pure-reasoning:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v270-chemistry-amount-exam.cjs
+      - run: node tests/task1-v271-year1-pure-reasoning.cjs
