@@ -1,0 +1,24 @@
+name: Task 1 v279 AS Physics Waves polarisation, stationary patterns and selected spec audit
+on:
+  pull_request:
+    paths:
+      - 'physics_waves_polarisation_stationary_recall_v279.json'
+      - 'physics_waves_polarisation_stationary_practice_v279.json'
+      - 'editorial/task1-v279-physics-waves-selected-crosswalk.json'
+      - 'tests/task1-v279-physics-waves-selected-audit.cjs'
+      - 'tests/task1-v278-chemistry-amount-precision-audit.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v279-physics-waves-audit.yml'
+  push:
+    branches: [main]
+jobs:
+  waves-marking-and-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v278-chemistry-amount-precision-audit.cjs
+      - run: node tests/task1-v279-physics-waves-selected-audit.cjs

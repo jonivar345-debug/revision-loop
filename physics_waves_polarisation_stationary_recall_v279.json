@@ -1,0 +1,334 @@
+{
+  "version": "v279",
+  "createdAt": "2026-11-01",
+  "scope": "13 targeted original AQA AS Waves 3.3.1.2/3.3.1.3/3.3.2.2 cards on aerial polarisation, node-loop phase, harmonics and qualitative slit diffraction",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "notes": "AQA does not require Malus's law, the historical term fundamental or the terms overtone. These cards use first/third harmonic terminology and do not require laser operation.",
+  "cards": [
+    {
+      "id": "task1_v279_phy_waves_card_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Polarisation",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For receiving a linearly polarised radio signal, when is a straight receiving aerial best aligned?",
+      "back": "Parallel to the electric-field oscillations.",
+      "accept": [
+        "Parallel to the electric-field oscillations.",
+        "parallel to the wave's polarisation direction"
+      ],
+      "reject": [
+        "perpendicular to the electric field",
+        "parallel to the direction of wave travel"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Polarisation",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What happens to ideal linearly polarised light passing through a second polariser at 90° to the first?",
+      "back": "No light is transmitted.",
+      "accept": [
+        "No light is transmitted.",
+        "zero transmission"
+      ],
+      "reject": [
+        "all light passes",
+        "its frequency doubles"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Polarisation",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why does the polarisation of light provide evidence that it is transverse?",
+      "back": "Only transverse oscillations can be restricted to a chosen vibration plane.",
+      "accept": [
+        "Only transverse oscillations can be restricted to a chosen vibration plane.",
+        "only transverse waves can be polarised"
+      ],
+      "reject": [
+        "only longitudinal waves have wavelength",
+        "light must be a mechanical wave"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How does displacement change at a node of an ideal stationary wave over time?",
+      "back": "It remains zero.",
+      "accept": [
+        "It remains zero.",
+        "the node stays at zero displacement"
+      ],
+      "reject": [
+        "it oscillates with maximum amplitude",
+        "the node travels along the string"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How do points in the same loop between adjacent nodes oscillate in a stationary string wave?",
+      "back": "In phase.",
+      "accept": [
+        "In phase.",
+        "same phase"
+      ],
+      "reject": [
+        "180 degrees out of phase",
+        "random phase"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How do points in adjacent loops of an ideal stationary string wave oscillate?",
+      "back": "In antiphase (180° apart).",
+      "accept": [
+        "In antiphase (180° apart).",
+        "180 degrees out of phase"
+      ],
+      "reject": [
+        "in phase",
+        "90 degrees out of phase"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many antinodes occur on a fixed-end string in its third harmonic?",
+      "back": "Three.",
+      "accept": [
+        "Three.",
+        "3"
+      ],
+      "reject": [
+        "two",
+        "four"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How many nodes, including the ends, occur on a fixed-end string in its third harmonic?",
+      "back": "Four.",
+      "accept": [
+        "Four.",
+        "4"
+      ],
+      "reject": [
+        "three",
+        "five"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If tension T is multiplied by nine at fixed string length and mass per unit length, what happens to the first-harmonic frequency?",
+      "back": "It becomes three times as large.",
+      "accept": [
+        "It becomes three times as large.",
+        "frequency triples"
+      ],
+      "reject": [
+        "frequency becomes nine times as large",
+        "frequency falls by factor three"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In an experiment with fixed L and μ, why is f² plotted against string tension T?",
+      "back": "The relationship f²=T/(4L²μ) is a straight line through the origin.",
+      "accept": [
+        "The relationship f²=T/(4L²μ) is a straight line through the origin.",
+        "frequency squared is proportional to tension"
+      ],
+      "reject": [
+        "frequency is inversely proportional to tension",
+        "f squared is independent of tension"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For single-slit diffraction at fixed wavelength, what happens to the central maximum if slit width decreases?",
+      "back": "The central maximum becomes wider.",
+      "accept": [
+        "The central maximum becomes wider.",
+        "central diffraction peak broadens"
+      ],
+      "reject": [
+        "it becomes narrower",
+        "its angular width remains unchanged"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In the qualitative single-slit pattern, how does the central bright maximum compare in width with the side maxima?",
+      "back": "The central maximum is wider.",
+      "accept": [
+        "The central maximum is wider.",
+        "centre bright fringe is the widest"
+      ],
+      "reject": [
+        "the central maximum is narrower",
+        "all maxima have equal width"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v279_phy_waves_card_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In the qualitative single-slit diffraction pattern for white light, what colour is the central bright maximum?",
+      "back": "White.",
+      "accept": [
+        "White.",
+        "white central maximum"
+      ],
+      "reject": [
+        "all black",
+        "pure violet only"
+      ],
+      "strictRecall": true
+    }
+  ]
+}

@@ -7,8 +7,8 @@ assert.equal(core.cards.length,3345);assert.equal(j('exam_questions.json').quest
 assert.equal(bank.questions.length,5);assert.equal(recall.cards.length,14);
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const cUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,41);assert.equal(qUrls[40],'chemistry_amount_precision_applications_v278.json');
-assert.equal(cUrls.length,51);assert.equal(cUrls[50],'chemistry_amount_sigfig_formula_recall_v278.json');
+assert(qUrls.length>=41,'v278 Amount practice must retain source index 40 after newer supplements');assert.equal(qUrls[40],'chemistry_amount_precision_applications_v278.json');
+assert(cUrls.length>=51,'v278 Amount recall must retain source index 50 after newer supplements');assert.equal(cUrls[50],'chemistry_amount_sigfig_formula_recall_v278.json');
 for(const x of ['chemistry_amount_precision_applications_v278.json','chemistry_amount_sigfig_formula_recall_v278.json'])assert(sw.includes("'./"+x+"'"));
 assert(sw.includes('-v278-amount-precision'));
 const prior=[...core.cards,...cUrls.slice(0,50).flatMap(p=>j(p).cards||[])];
