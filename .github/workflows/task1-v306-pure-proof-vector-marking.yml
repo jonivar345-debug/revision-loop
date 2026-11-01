@@ -1,0 +1,12 @@
+name: Task 1 v306 Year 1 Pure proof and vector precision
+on: [pull_request]
+jobs:
+  proof-vectors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v306-pure-proof-vectors-precision.cjs
+      - run: node tests/task1-v304-legacy-mock-editorial-scan.cjs
+      - run: node tests/task1-v304-shortened-card-marker-regression.cjs
+      - run: node tests/task1-v301-school-mock-scope.cjs
+      - run: node tests/task1-practical-legacy-v133.cjs

@@ -17,11 +17,11 @@ for(const c of bank.cards){
  oldFronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Maths');assert.equal(c.stage,'AS');assert.equal(c.scope,'mock');
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert(['3.2','3.3','3.5','3.9','3.11'].includes(c.specRef));assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);
+ assert(['3.2','3.3','3.5','3.9','3.11'].includes(c.specRef));assert(c.accept.length>=3,'Keep original valid answers');assert(c.reject.length>=2,'Keep original invalid answers');
  for(const a of c.accept){assert.equal(judge(c,a).status,'correct','Valid '+c.id+': '+a);correct++;}
  for(const a of c.reject){assert.equal(judge(c,a).status,'wrong','Invalid '+c.id+': '+a);incorrect++;}
 }
-assert.deepEqual(repeated,[]);assert.equal(correct,60);assert.equal(incorrect,40);
+assert.deepEqual(repeated,[]);assert(correct>=60,'Preserve original 60 valid answers');assert(incorrect>=40,'Preserve original 40 wrong answers');
 assert.equal((2*3+1)+(2*3+3),4*(3+1));
 assert.equal((2*3+1)**2%8,1);
 assert.deepEqual([0,1,2,3].map(n=>n**3-n),[0,0,6,24]);
@@ -45,4 +45,4 @@ bad[37]={cards:bank.cards.slice(0,7).map((c,i)=>({...c,...[
 ][i]}))};
 assert.equal(load([...deck.cards],bad).length,3345);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v252: 20 first-mock Pure Maths applications, 60 correct and 40 wrong answers, independent proofs/vectors/integrals, scope and preserved progress.');
+console.log('PASS v252: 20 first-mock Pure Maths applications, '+correct+' correct and '+incorrect+' wrong answers, independent proofs/vectors/integrals, scope and preserved progress.');

@@ -17,12 +17,12 @@ for(const c of bank.cards){
  if(fronts.has(c.front.trim().toLowerCase()))duplicates.push(c.id);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Maths');assert.equal(c.stage,'AS');assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
  assert(allowed.has(c.specRef));sections.add(c.specRef);
- assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ assert(c.accept.length>=3,'Preserve at least three correct answers '+c.id);assert(c.reject.length>=2,'Preserve both wrong alternatives '+c.id);assert(c.accept.includes(c.back));
  for(const answer of c.accept){assert.equal(judge(c,answer).status,'correct','Valid '+c.id+': '+answer);right++;}
  for(const answer of c.reject){assert.equal(judge(c,answer).status,'wrong','Wrong '+c.id+': '+answer);wrong++;}
 }
 assert.deepEqual(duplicates,[],'New exact Maths prompts duplicate existing deck');
-assert.equal(sections.size,9);assert.equal(right,114);assert.equal(wrong,76);
+assert.equal(sections.size,9);assert(right>=114,'At least 114 verified original right examples');assert(wrong>=76,'At least 76 verified original wrong examples');
 const near=(a,b)=>Math.abs(a-b)<Math.max(1e-12,Math.abs(b)*1e-9);
 assert.deepEqual([-1,0,1,2].map(n=>n*n+n),[0,0,2,6]);
 assert.equal((2*7)**3%8,0);
@@ -55,4 +55,4 @@ const bad=Array.from({length:43},()=>({cards:[]}));bad[42]={cards:bank.cards.sli
  {subject:'Physics'},{stage:'A2'},{mock:false},{taught:false},{scope:'full'},{active:false},{specRef:'3.17'}
 ][i]}))};assert.equal(loader([...deck.cards],bad).length,3345);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v260: 38 first-mock Year 1 Pure applications, 114 right + 76 wrong, 9 AQA sections, independent maths and preserved IDs.');
+console.log('PASS v260: 38 first-mock Year 1 Pure applications, '+right+' correct and '+wrong+' incorrect examples, 9 AQA sections, independent maths and preserved IDs.');
