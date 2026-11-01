@@ -1,0 +1,22 @@
+name: Task 1 v267 Chemistry drawing and mechanism manual marking
+on:
+  pull_request:
+    paths:
+      - 'chemistry_organic_drawing_practice_v267.json'
+      - 'tests/task1-v267-chemistry-structure-diagrams.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v267-chemistry-drawings.yml'
+  push:
+    branches: [main]
+jobs:
+  chem-drawings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v265-physics-exchange-diagrams.cjs
+      - run: node tests/task1-v266-physics-diagram-evidence.cjs
+      - run: node tests/task1-v267-chemistry-structure-diagrams.cjs
