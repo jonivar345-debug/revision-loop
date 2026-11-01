@@ -1586,7 +1586,7 @@ function evaluateMathsPureTransform(c,input){
 function evaluateConfiguredNumericRecall(c,input){
  const config=c?.numericRecall;
  if(!config)return null;
- const s=String(input||'').trim().replace(/[−–]/g,'-').replace(/,/g,'');
+ const s=String(input||'').trim().replace(/[−–]/g,'-');
  // Only a bare scalar and a recognised physical unit qualify: never pick a
  // number out of prose or ignore an incorrect unit/direction.
  const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(kΩ|Ω|ohms?|mA|A|mV|V|mW|W)\s*\.?$/i);
