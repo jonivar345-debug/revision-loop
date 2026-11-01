@@ -1,0 +1,26 @@
+name: AQA Amount of Substance evidence v239
+
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v239-chemistry-amount-spec-crosswalk.json'
+      - 'tests/task1-v239-chemistry-amount-crosswalk.cjs'
+      - '.github/workflows/task1-v239-amount-crosswalk.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/task1-v239-chemistry-amount-spec-crosswalk.json'
+      - 'tests/task1-v239-chemistry-amount-crosswalk.cjs'
+      - '.github/workflows/task1-v239-amount-crosswalk.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-amount-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tests/task1-v239-chemistry-amount-crosswalk.cjs
+      - run: node tests/task1-v239-chemistry-amount-crosswalk.cjs
