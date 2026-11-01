@@ -23,6 +23,10 @@ for(const subject of ['Physics','Chemistry']){
  const questionsWithoutTaughtFlag=qs.filter(q=>q.taught===undefined);
  const a2Cards=cards.filter(c=>c.stage==='A2');
  const a2Questions=qs.filter(q=>q.level==='A2');
+ const mentionsBuffers=x=>/\bbuffers?\b/i.test([x.topic,x.front,x.back,x.prompt,x.question].filter(Boolean).join(' '));
+ const bufferCardCandidates=subject==='Chemistry'?cards.filter(mentionsBuffers):[];
+ const bufferQuestionCandidates=subject==='Chemistry'?qs.filter(mentionsBuffers):[];
+ const rp9PHCurveCards=subject==='Chemistry'?cards.filter(x=>/RP9 pH curves/i.test(String(x.topic||''))):[];
  const noRefCards=cards.filter(c=>!String(c.specRef||'').trim());
  const noRefQuestions=qs.filter(q=>!String(q.specRef||'').trim());
  const topicCounts=arr=>Object.entries(arr.reduce((map,x)=>{const topic=String(x.topic||x.courseTopic||'not specified');map[topic]=(map[topic]||0)+1;return map;},{})).sort((a,b)=>b[1]-a[1]).map(([topic,count])=>({topic,count}));
@@ -37,6 +41,9 @@ for(const subject of ['Physics','Chemistry']){
   missingSpecRefCardExamples:examples(noRefCards).slice(0,20),missingSpecRefQuestionExamples:examples(noRefQuestions).slice(0,20),
   A2CardCount:a2Cards.length,A2QuestionCount:a2Questions.length,
   A2CardTopics:topicCounts(a2Cards),A2QuestionTopics:topicCounts(a2Questions),
+  bufferCardCandidateCount:bufferCardCandidates.length,bufferQuestionCandidateCount:bufferQuestionCandidates.length,
+  bufferCardCandidateExamples:examples(bufferCardCandidates),bufferQuestionCandidateExamples:examples(bufferQuestionCandidates),
+  rp9PHCurveCardCount:rp9PHCurveCards.length,rp9PHCurveCardExamples:examples(rp9PHCurveCards),
   A2CardExamples:examples(a2Cards),A2QuestionExamples:examples(a2Questions)};
  if(subject==='Physics'){assert.equal(a2Cards.length,0,'A2 Physics card unexpectedly in AS mock');assert.equal(a2Questions.length,0,'A2 Physics question unexpectedly in AS mock');}
 }
