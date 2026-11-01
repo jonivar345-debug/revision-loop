@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
 const bank=j('chemistry_amount_applied_practice_v270.json'),app=read('app.js'),sw=read('sw.js');
 const qUrls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(qUrls.length,33);
+assert(qUrls.length>=33,'v270 Chemistry question bank must retain its original index when new banks append');
 assert.equal(qUrls[32],'chemistry_amount_applied_practice_v270.json');
 assert(sw.includes("'./chemistry_amount_applied_practice_v270.json'"));
 assert(sw.includes('-v270-chem-amount'));
