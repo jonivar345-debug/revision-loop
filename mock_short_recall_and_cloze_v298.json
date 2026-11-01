@@ -835,7 +835,20 @@
         "distance; signed",
         "Not displacement; absolute"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "clozeParts": [
+        [
+          "displacement",
+          "signed displacement",
+          "change in displacement"
+        ],
+        [
+          "absolute",
+          "absolute value",
+          "magnitudes",
+          "unsigned"
+        ]
+      ]
     },
     {
       "id": "task1_v298_physics_32",
@@ -862,7 +875,21 @@
         "lower; equal",
         "Not higher; exceed"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "clozeParts": [
+        [
+          "higher",
+          "greater",
+          "larger"
+        ],
+        [
+          "exceed",
+          "be above",
+          "be greater than",
+          "be larger than",
+          "be more than"
+        ]
+      ]
     },
     {
       "id": "task1_v298_chemistry_01",
@@ -1697,7 +1724,18 @@
         "cream; white; yellow",
         "Not white; cream; yellow"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "clozeParts": [
+        [
+          "white"
+        ],
+        [
+          "cream"
+        ],
+        [
+          "yellow"
+        ]
+      ]
     },
     {
       "id": "task1_v298_chemistry_32",
@@ -1723,7 +1761,17 @@
         "positive; negative",
         "Not negative; positive"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "clozeParts": [
+        [
+          "negative",
+          "exothermic"
+        ],
+        [
+          "positive",
+          "endothermic"
+        ]
+      ]
     },
     {
       "id": "task1_v298_maths_01",
@@ -2589,7 +2637,14 @@
         "2k",
         "Not 2k+1"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "clozeParts": [
+        [
+          "2k+1",
+          "2k + 1",
+          "2*k+1"
+        ]
+      ]
     },
     {
       "id": "task1_v298_maths_33",
@@ -2616,7 +2671,31 @@
         "3 left; 2 down",
         "Not 3 right; 2 up"
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "clozeParts": [
+        [
+          "3 right",
+          "right 3",
+          "3 units right",
+          "3 to the right",
+          "3 units to the right",
+          "right by 3",
+          "three right",
+          "three units right",
+          "three units to the right"
+        ],
+        [
+          "2 up",
+          "up 2",
+          "2 units up",
+          "2 upwards",
+          "2 units upwards",
+          "up by 2",
+          "two up",
+          "two units up",
+          "two units upwards"
+        ]
+      ]
     }
   ]
 }
