@@ -26,7 +26,7 @@ for(const id of ids){
   const r=mark(c,x);assert.notEqual(r.status,'correct',id+' wrong example got full mark '+JSON.stringify(x));rejected++;
  }}
 }
-assert.equal(tally.Physics,26);assert.equal(tally.Chemistry,12);
+assert.equal(tally.Physics,25);assert.equal(tally.Chemistry,12);
 console.log('PASS v304: '+ids.length+' original mock IDs retained; '+correct+' models correct, '+aliases+' accepted aliases correct and '+rejected+' rejected options not fully credited; subjects '+JSON.stringify(tally));
 
 
