@@ -6,7 +6,10 @@ const names=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAl
 const a=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),b=app.indexOf(' const added=[',a);
 const all=new Function('cards','extraFlashBanks',app.slice(a,b)+'\nreturn cards;')([...core.cards],names.map(j));
 assert.equal(all.length,4216);
-const mock=all.filter(c=>c.mock===true&&c.taught===true&&c.active!==false);
+const u=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),v=app.indexOf('function startMockSession(){',u);
+assert(u>=0&&v>u);
+const {mockEligibleCard}=new Function(app.slice(u,v)+'\nreturn {mockEligibleCard};')();
+const mock=all.filter(mockEligibleCard);
 const sample=mock.filter(c=>String(c.front||'').length>125||String(c.back||'').length>180);
 const totals={};for(const sub of ['Physics','Chemistry','Maths'])totals[sub]={cards:mock.filter(c=>c.subject===sub).length,long:sample.filter(c=>c.subject===sub).length};
 console.log('AUDIT_V294_JSON_BEGIN');
