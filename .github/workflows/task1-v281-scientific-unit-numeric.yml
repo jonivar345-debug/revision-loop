@@ -1,0 +1,18 @@
+name: Task 1 v281 numeric marker unit/exponent precision
+on:
+  pull_request:
+    paths:
+      - app.js
+      - tests/task1-v281-scientific-unit-numeric.cjs
+      - .github/workflows/task1-v281-scientific-unit-numeric.yml
+  push:
+    branches: [main]
+jobs:
+  numeric-unit-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v281-scientific-unit-numeric.cjs
