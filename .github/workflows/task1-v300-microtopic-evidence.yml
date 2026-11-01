@@ -1,0 +1,8 @@
+name: Task 1 v300 school-mock microtopic evidence inventory
+on: [pull_request]
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v300-mock-microtopic-inventory.cjs
