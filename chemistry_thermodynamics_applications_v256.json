@@ -18,7 +18,7 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "NaCl: ΔHf = −411; Na atomisation +108; ½Cl₂ bond dissociation +121; IE +496; EA −349 (all kJ mol⁻¹). Find lattice FORMATION enthalpy.",
+      "front": "NaCl: ΔHf=−411, atomise Na +108 and Cl +121, IE +496, EA −349 (kJ mol⁻¹). Lattice formation ΔH?",
       "back": "−787 kJ mol⁻¹.",
       "accept": [
         "−787 kJ mol⁻¹.",
@@ -308,7 +308,7 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "MgO: ΔHf=−602; Mg atomisation +150; O atomisation +249; Mg IE values +738,+1450; O EA values −141,+744. Find lattice FORMATION enthalpy.",
+      "front": "MgO: ΔHf=−602, atomise Mg +150, O +249, IEs +738,+1450, EAs −141,+744. Lattice formation ΔH?",
       "back": "−3792 kJ mol⁻¹.",
       "accept": [
         "−3792 kJ mol⁻¹.",
@@ -366,7 +366,7 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "For MgCl₂, chlorine's first electron affinity is −349 kJ mol⁻¹. What is the TOTAL chlorine EA contribution in its Born–Haber cycle?",
+      "front": "MgCl₂: chlorine EA is −349 kJ mol⁻¹ per atom. Total chlorine EA in Born–Haber cycle?",
       "back": "−698 kJ mol⁻¹.",
       "accept": [
         "−698 kJ mol⁻¹.",
@@ -682,7 +682,7 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "An experimental Born–Haber lattice formation enthalpy is −970 and the perfect ionic-model value is −900 kJ mol⁻¹. What does the discrepancy suggest?",
+      "front": "Born–Haber lattice ΔHf −970 vs perfect ionic model −900 kJ mol⁻¹. What does the difference suggest?",
       "back": "Covalent character arising from polarisation of the ions.",
       "accept": [
         "Covalent character arising from polarisation of the ions.",
@@ -708,7 +708,7 @@
       "scope": "mock",
       "active": true,
       "kind": "short",
-      "front": "Which ion pair is expected to have the more exothermic lattice formation enthalpy at similar ionic radii: Mg²⁺/O²⁻ or Na⁺/Cl⁻?",
+      "front": "More exothermic lattice formation at similar ionic radii: Mg²⁺/O²⁻ or Na⁺/Cl⁻?",
       "back": "Mg²⁺ and O²⁻.",
       "accept": [
         "Mg²⁺ and O²⁻.",
