@@ -1,0 +1,11 @@
+name: Task 1 v302 cloze answer marking
+on: [pull_request]
+jobs:
+  cloze-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v302-ordered-cloze-marking.cjs
+      - run: node tests/task1-v298-mixed-short-cloze-mock.cjs
+      - run: node tests/task1-v297-explicit-negation-regression.cjs
+      - run: node tests/task1-v301-school-mock-scope.cjs
