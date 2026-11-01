@@ -1,0 +1,10 @@
+name: Task 1 v303 short answer equivalents and distractors
+on: [pull_request]
+jobs:
+  answer-matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v303-short-answer-variants.cjs
+      - run: node tests/task1-v302-ordered-cloze-marking.cjs
+      - run: node tests/task1-v298-mixed-short-cloze-mock.cjs
