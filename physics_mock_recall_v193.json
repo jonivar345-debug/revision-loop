@@ -13,7 +13,7 @@
       "specRef": "3.5.1.5",
       "stage": "AS",
       "topic": "Electricity",
-      "front": "In a potential divider, the LDR is the lower resistor and output voltage is measured across it. What happens to Vout when light intensity increases?",
+      "front": "LDR is the lower divider resistor; Vout is across it. What happens to Vout as light increases?",
       "back": "Vout decreases.",
       "accept": [
         "Vout decreases.",
@@ -43,7 +43,7 @@
       "specRef": "3.5.1.5",
       "stage": "AS",
       "topic": "Electricity",
-      "front": "In a potential divider, the LDR is the upper resistor and output voltage is measured across the lower fixed resistor. What happens to Vout when light intensity increases?",
+      "front": "LDR is upper divider resistor; Vout is across fixed lower resistor. Light increases: Vout?",
       "back": "Vout increases.",
       "accept": [
         "Vout increases.",
@@ -73,7 +73,7 @@
       "specRef": "3.5.1.6",
       "stage": "AS",
       "topic": "Electricity",
-      "front": "For a cell with fixed emf and internal resistance, what happens to its terminal p.d. when the external load resistance increases?",
+      "front": "Cell with fixed emf and internal resistance: as load resistance rises, what happens to terminal p.d.?",
       "back": "Terminal p.d. increases towards the emf.",
       "accept": [
         "Terminal p.d. increases towards the emf.",
