@@ -28,9 +28,24 @@
     "explicitlyUntaughtQuestions": 0,
     "cardsWithoutExactSpecRef": 660,
     "questionsWithoutExactSpecRef": 319,
-    "questionsWithoutExplicitTaughtFlag": 330
+    "questionsWithoutExplicitTaughtFlag": 330,
+    "bufferKeywordCardsInMock": 0,
+    "bufferKeywordQuestionsInMock": 0,
+    "rp9PHCurveCardsInMock": 8,
+    "rp9PHCurveCardIds": [
+      "task1_v128_011",
+      "task1_v128_012",
+      "task1_v128_013",
+      "task1_v128_016",
+      "task1_v128_017",
+      "task1_v128_018",
+      "task1_v128_019",
+      "task1_v128_020"
+    ]
   },
   "remainingReview": [
+    "Eight RP9 pH curve cards are currently eligible. They do not explicitly mention buffers, but confirm whether RP9 titration-curve interpretation is inside the teacher's first mock; do not remove without scope evidence.",
+    "No Chemistry mock card/question currently contains the standalone word 'buffer' or 'buffers' in its topic, prompt, front, answer or question text. This keyword audit does not prove all indirect buffer questions are excluded.",
     "The older pool has many items with no precise specRef. This is a metadata/evidence-mapping gap, not evidence that content is absent.",
     "Year 2 Chemistry questions marked 'A-level' require topic-level review against the teacher's first mock scope; do not treat the level label as proof of inclusion/exclusion.",
     "Physics is AS-only in selected stage data, but not all AS question model answers or optical drawings are examiner verified.",
