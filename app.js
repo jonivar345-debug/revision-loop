@@ -2367,7 +2367,7 @@ function evaluateCard(c,input){
    return {status:'wrong',score:0,text:'That answer contains incorrect information.',missing:[]};
   if(correct.some(x=>n(x)===n(raw)))
    return {status:'correct',score:1,text:'All blanks are correct.',missing:[]};
-  const supplied=raw.split(/\\s*(?:;|,|\\n|\\||\\s+and\\s+|\\s+\\/\\s+)\\s*/i).map(x=>x.trim());
+  const supplied=raw.split(/\s*(?:;|,|\n|\||\s+and\s+|\s+\/\s+)\s*/i).map(x=>x.trim());
   if(supplied.length!==c.clozeParts.length)
    return {status:'wrong',score:0,text:'Enter each blank in order, separated by commas or semicolons.',missing:c.clozeParts.map((_,i)=>'Blank '+(i+1))};
   let hits=0;const missing=[];
