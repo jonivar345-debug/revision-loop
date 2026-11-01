@@ -27,7 +27,7 @@ assert(near(5*9.8*Math.sin(Math.PI/6),24.5));assert(near(5*9.8*Math.cos(Math.PI/
 assert.equal(Math.hypot(6,8),10);assert(near(Math.atan2(4,3)*180/Math.PI,53.130102));
 assert.equal(12*.25,3);assert.equal(15*.4,6);assert.equal(4/2,2);
 assert.equal(15/3,5);assert.equal(((-2+6)/2)*4,8);assert.equal((-3-5)/4,-2);assert.equal(2*4.9,9.8);
-assert.equal(Math.sqrt(2*19.6/9.8),2);assert.equal(12*2,24);assert(near(20*Math.sin(Math.PI/6)/9.8,1.020408));
+assert.equal(Math.sqrt(2*19.6/9.8),2);assert.equal(12*2,24);assert(near(20*Math.sin(Math.PI/6)/9.8,10/9.8));
 assert.equal((12-3)/3,3);assert.equal(5/(2+3),1);assert.equal(.2*15,3);
 assert.equal(.15*(-8-12)/.04,-75);assert.equal(.5*8/(.5+.5),4);
 assert.equal(150*3,450);assert.equal(120/200*100,60);assert.equal(5*9.8*2,98);
