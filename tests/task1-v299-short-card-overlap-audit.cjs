@@ -25,4 +25,5 @@ console.log(JSON.stringify(report,null,2));
 console.log('V299_SEMANTIC_OVERLAP_END');
 assert.equal(prev.length,4216,'Prior flashcards preserved');
 assert.equal(target.length,97,'New flashcards preserved');
+assert.equal(repeated,0,'No new flashcard may repeat an existing question using identical meaningful tokens');
 console.log('PASS v299 informational near-repeat audit; matching topics require human judgement before removal or replacement');
