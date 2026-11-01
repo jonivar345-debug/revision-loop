@@ -28,3 +28,28 @@ for(const id of ids){
 }
 assert.equal(tally.Physics,25);assert.equal(tally.Chemistry,12);
 console.log('PASS v304: '+ids.length+' original mock IDs retained; '+correct+' models correct, '+aliases+' accepted aliases correct and '+rejected+' rejected options not fully credited; subjects '+JSON.stringify(tally));
+
+
+// Wider safety calibration: every short card in the 17 reviewed source banks,
+// not just the 37 rewritten fronts, retains its original marker behaviour.
+const banks='physics_mock_recall_v193.json physics_mock_recall_v195.json physics_mock_recall_v196.json chemistry_mock_recall_v196.json chemistry_rp4_recall_v215.json physics_waves_crosswalk_recall_v229.json physics_mechanics_cross_spec_recall_v230.json physics_electricity_cross_spec_recall_v231.json chemistry_atomic_tof_applications_v238.json physics_particles_applications_v243.json chemistry_energetics_applications_v247.json physics_electricity_applications_v250.json physics_waves_applications_v253.json chemistry_atomic_tof_applications_v254.json chemistry_thermodynamics_applications_v256.json physics_refraction_fibres_recall_v275.json physics_waves_polarisation_stationary_recall_v279.json'.split(' ');
+let reviewed=0,aliasesChecked=0,distractorsChecked=0;
+for(const bank of banks){
+ for(const c of j(bank).cards||[]){
+  if(c.front.length>125||!/^task1_(?:v193|v195|v196|v215|v229|v230|v231|v238|v243|v247|v250|v253|v254|v256|v275|v279)_/.test(c.id))continue;
+  reviewed++;
+  assert.equal(mark(c,c.back).status,'correct',c.id+' model answer');
+  for(const x of c.accept||[]){
+   assert.equal(mark(c,x).status,'correct',c.id+' accepted '+x);
+   aliasesChecked++;
+  }
+  for(const x of c.reject||[]){
+   assert.notEqual(mark(c,x).status,'correct',c.id+' forbidden '+x);
+   distractorsChecked++;
+  }
+ }
+}
+assert.equal(reviewed,262,'262 short recall cards across 17 original source banks');
+assert.equal(aliasesChecked,792);
+assert.equal(distractorsChecked,548);
+console.log('PASS v304 wider: '+reviewed+' cards, '+aliasesChecked+' accepted and '+distractorsChecked+' wrong examples checked against real marker');
