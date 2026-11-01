@@ -1,0 +1,11 @@
+name: Task 1 v298 short mixed mock recall
+on: [pull_request]
+jobs:
+  test-mock-bank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v298-mixed-short-cloze-mock.cjs
+      - run: node tests/task1-v293-short-mock-recall-quality.cjs
+      - run: node tests/task1-v294-mock-flashcard-readability.cjs
+      - run: node tests/task1-v297-explicit-negation-regression.cjs
