@@ -18,7 +18,7 @@ const categories=[
  {id:'C',name:'Coordinate geometry',keywords:/coordinate|circles?|straight lines?|tangent|normal to|perpendicular|midpoint|gradient of a line/i},
  {id:'D',name:'Sequences and series',keywords:/sequences?|series|arithmet|geometric progression|summation|sigma notation/i},
  {id:'E',name:'Trigonometry',keywords:/trigonometry|sin\b|cos\b|tan\b|degrees?|sine|cosine|trig|radian/i},
- {id:'F',name:'Exponentials and logarithms',keywords:/exponential|logarithm|logarith|\bln\b/i},
+ {id:'F',name:'Exponentials and logarithms',keywords:/exponential|logarithm|logarith|\blogs?\b|\bln\b/i},
  {id:'G',name:'Differentiation',keywords:/differentiat|derivative|stationary points?|turning points?|optimis|rate of change/i},
  {id:'H',name:'Integration',keywords:/integrat|antiderivative|area under|area between/i},
  {id:'J',name:'Vectors',keywords:/vectors?|collinear|position vector|resultant vector|magnitude and direction/i}
