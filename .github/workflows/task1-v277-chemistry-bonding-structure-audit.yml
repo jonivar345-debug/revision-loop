@@ -1,0 +1,24 @@
+name: Task 1 v277 Chemistry Bonding structures and selected spec crosswalk
+on:
+  pull_request:
+    paths:
+      - 'chemistry_as_bonding_structures_recall_v277.json'
+      - 'chemistry_as_bonding_structures_practice_v277.json'
+      - 'editorial/task1-v277-chemistry-bonding-selected-crosswalk.json'
+      - 'tests/task1-v277-chemistry-bonding-structure-audit.cjs'
+      - 'tests/task1-v276-chemistry-bonding-shapes.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v277-chemistry-bonding-structure-audit.yml'
+  push:
+    branches: [main]
+jobs:
+  bonding-evidence-and-manual-drawings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v276-chemistry-bonding-shapes.cjs
+      - run: node tests/task1-v277-chemistry-bonding-structure-audit.cjs
