@@ -21,7 +21,8 @@
       "back": "10 N",
       "accept": [
         "10 N",
-        "10 newtons"
+        "10 newtons",
+        "10.0 N"
       ],
       "reject": [
         "17.3 N",
@@ -47,7 +48,8 @@
       "back": "10 N",
       "accept": [
         "10 N",
-        "10 newtons"
+        "10 newtons",
+        "10.0 N"
       ],
       "reject": [
         "17.3 N",
@@ -73,7 +75,8 @@
       "back": "4.9 m s⁻²",
       "accept": [
         "4.9 m s⁻²",
-        "4.9 m/s²"
+        "4.9 m/s²",
+        "4.9 m/s^2"
       ],
       "reject": [
         "9.8 m s⁻²",
@@ -99,7 +102,8 @@
       "back": "Doubles.",
       "accept": [
         "Doubles.",
-        "It doubles."
+        "It doubles.",
+        "Twice as large."
       ],
       "reject": [
         "Halves.",
@@ -125,7 +129,8 @@
       "back": "+12 m s⁻¹",
       "accept": [
         "+12 m s⁻¹",
-        "12 m/s"
+        "12 m/s",
+        "12 metres per second"
       ],
       "reject": [
         "+7 m/s",
@@ -151,7 +156,8 @@
       "back": "Positive.",
       "accept": [
         "Positive.",
-        "Positive acceleration."
+        "Positive acceleration.",
+        "Acceleration greater than zero."
       ],
       "reject": [
         "Negative.",
@@ -203,7 +209,8 @@
       "back": "−g",
       "accept": [
         "−g",
-        "g downwards"
+        "g downwards",
+        "−9.81 m/s²"
       ],
       "reject": [
         "0",
@@ -229,7 +236,8 @@
       "back": "36 m",
       "accept": [
         "36 m",
-        "36 metres"
+        "36 metres",
+        "36.0 m"
       ],
       "reject": [
         "4 m",
@@ -255,7 +263,8 @@
       "back": "2uy/g",
       "accept": [
         "2uy/g",
-        "Two times uy divided by g."
+        "Two times uy divided by g.",
+        "2 u_y / g"
       ],
       "reject": [
         "uy/g",
@@ -307,7 +316,9 @@
       "back": "1.0 N m",
       "accept": [
         "1.0 N m",
-        "1 Nm"
+        "1 Nm",
+        "1 N·m",
+        "1.0 Nm"
       ],
       "reject": [
         "0.25 Nm",
@@ -359,7 +370,8 @@
       "back": "Fs cosθ",
       "accept": [
         "Fs cosθ",
-        "F s cos theta"
+        "F s cos theta",
+        "Force multiplied by displacement times cosθ"
       ],
       "reject": [
         "Fs sinθ",
@@ -385,7 +397,8 @@
       "back": "Fv",
       "accept": [
         "Fv",
-        "Force times velocity."
+        "Force times velocity.",
+        "P=Fv"
       ],
       "reject": [
         "F/v",
@@ -437,7 +450,8 @@
       "back": "Zero.",
       "accept": [
         "Zero.",
-        "No resultant external force."
+        "No resultant external force.",
+        "No net external force."
       ],
       "reject": [
         "Larger than weight.",
@@ -463,7 +477,8 @@
       "back": "Ft",
       "accept": [
         "Ft",
-        "Force multiplied by time."
+        "Force multiplied by time.",
+        "F × t"
       ],
       "reject": [
         "F/t",
@@ -489,7 +504,8 @@
       "back": "Cross-sectional area.",
       "accept": [
         "Cross-sectional area.",
-        "Area perpendicular to the force."
+        "Area perpendicular to the force.",
+        "Area of the wire."
       ],
       "reject": [
         "Original length.",
@@ -515,7 +531,8 @@
       "back": "Original length.",
       "accept": [
         "Original length.",
-        "Initial length."
+        "Initial length.",
+        "The unextended length."
       ],
       "reject": [
         "Final length only.",
@@ -541,7 +558,8 @@
       "back": "Tensile strain.",
       "accept": [
         "Tensile strain.",
-        "Strain."
+        "Strain.",
+        "Stress/strain."
       ],
       "reject": [
         "Extension.",
@@ -567,7 +585,8 @@
       "back": "Zero.",
       "accept": [
         "Zero.",
-        "0"
+        "0",
+        "0 m"
       ],
       "reject": [
         "Maximum.",
@@ -593,7 +612,8 @@
       "back": "λ/4",
       "accept": [
         "λ/4",
-        "Quarter wavelength"
+        "Quarter wavelength",
+        "0.25λ"
       ],
       "reject": [
         "λ/2",
@@ -619,7 +639,8 @@
       "back": "In phase.",
       "accept": [
         "In phase.",
-        "They are in phase."
+        "They are in phase.",
+        "Same phase."
       ],
       "reject": [
         "In antiphase.",
@@ -645,7 +666,8 @@
       "back": "It increases.",
       "accept": [
         "It increases.",
-        "Greater angular spread."
+        "Greater angular spread.",
+        "Spreads out more."
       ],
       "reject": [
         "It decreases.",
@@ -671,7 +693,8 @@
       "back": "n₂/n₁",
       "accept": [
         "n₂/n₁",
-        "Lower n divided by higher n."
+        "Lower n divided by higher n.",
+        "n₂ ÷ n₁"
       ],
       "reject": [
         "n₁/n₂",
@@ -697,7 +720,8 @@
       "back": "Core's.",
       "accept": [
         "Core's.",
-        "The core refractive index."
+        "The core refractive index.",
+        "n(core) > n(cladding)"
       ],
       "reject": [
         "Cladding's.",
@@ -723,7 +747,8 @@
       "back": "Maximum kinetic energy.",
       "accept": [
         "Maximum kinetic energy.",
-        "Maximum electron kinetic energy."
+        "Maximum electron kinetic energy.",
+        "Maximum KE of photoelectrons"
       ],
       "reject": [
         "Electron charge.",
@@ -749,7 +774,8 @@
       "back": "No.",
       "accept": [
         "No.",
-        "No photoelectrons are emitted."
+        "No photoelectrons are emitted.",
+        "No electrons emitted"
       ],
       "reject": [
         "Yes.",
@@ -775,7 +801,8 @@
       "back": "4 V",
       "accept": [
         "4 V",
-        "4 volts"
+        "4 volts",
+        "4.0 V"
       ],
       "reject": [
         "8 V",
@@ -801,7 +828,8 @@
       "back": "displacement; absolute",
       "accept": [
         "displacement; absolute",
-        "displacement; magnitudes"
+        "displacement; magnitudes",
+        "displacement; positive magnitudes"
       ],
       "reject": [
         "distance; signed",
@@ -827,7 +855,8 @@
       "back": "higher; exceed",
       "accept": [
         "higher; exceed",
-        "greater; be above"
+        "greater; be above",
+        "higher; greater than"
       ],
       "reject": [
         "lower; equal",
@@ -853,7 +882,8 @@
       "back": "Neutrons.",
       "accept": [
         "Neutrons.",
-        "Number of neutrons."
+        "Number of neutrons.",
+        "Neutron number."
       ],
       "reject": [
         "Protons.",
@@ -879,7 +909,8 @@
       "back": "More slowly.",
       "accept": [
         "More slowly.",
-        "Slower."
+        "Slower.",
+        "At a lower speed."
       ],
       "reject": [
         "Faster.",
@@ -983,7 +1014,8 @@
       "back": "3p",
       "accept": [
         "3p",
-        "Aluminium's 3p subshell"
+        "Aluminium's 3p subshell",
+        "An electron in aluminium's 3p orbital."
       ],
       "reject": [
         "3s",
@@ -1009,7 +1041,8 @@
       "back": "3p",
       "accept": [
         "3p",
-        "The 3p subshell"
+        "The 3p subshell",
+        "3p orbital."
       ],
       "reject": [
         "3s",
@@ -1035,7 +1068,8 @@
       "back": "Unequal electron sharing.",
       "accept": [
         "Unequal electron sharing.",
-        "Electronegativity difference."
+        "Electronegativity difference.",
+        "Difference in electronegativity."
       ],
       "reject": [
         "Equal electron sharing.",
@@ -1061,7 +1095,8 @@
       "back": "107°",
       "accept": [
         "107°",
-        "107 degrees"
+        "107 degrees",
+        "Approximately 107°"
       ],
       "reject": [
         "109.5°",
@@ -1087,7 +1122,8 @@
       "back": "104.5°",
       "accept": [
         "104.5°",
-        "104.5 degrees"
+        "104.5 degrees",
+        "Approximately 104.5°"
       ],
       "reject": [
         "107°",
@@ -1113,7 +1149,8 @@
       "back": "Trigonal planar.",
       "accept": [
         "Trigonal planar.",
-        "Planar triangle."
+        "Planar triangle.",
+        "Trigonal planar around N."
       ],
       "reject": [
         "Tetrahedral.",
@@ -1139,7 +1176,8 @@
       "back": "20 kJ",
       "accept": [
         "20 kJ",
-        "20 kilojoules"
+        "20 kilojoules",
+        "20.0 kJ"
       ],
       "reject": [
         "100 kJ",
@@ -1165,7 +1203,8 @@
       "back": "q = mcΔT",
       "accept": [
         "q = mcΔT",
-        "m c delta T"
+        "m c delta T",
+        "mcΔT"
       ],
       "reject": [
         "q = mΔT/c",
@@ -1191,7 +1230,8 @@
       "back": "−q/n",
       "accept": [
         "−q/n",
-        "Negative q divided by n."
+        "Negative q divided by n.",
+        "Minus q divided by n."
       ],
       "reject": [
         "q/n",
@@ -1250,7 +1290,8 @@
       "back": "298 K",
       "accept": [
         "298 K",
-        "25 °C"
+        "25 °C",
+        "298 kelvin"
       ],
       "reject": [
         "273 K",
@@ -1276,7 +1317,8 @@
       "back": "Gaseous ions.",
       "accept": [
         "Gaseous ions.",
-        "Its separate gaseous ions."
+        "Its separate gaseous ions.",
+        "Gaseous positive and negative ions."
       ],
       "reject": [
         "Aqueous ions.",
@@ -1302,7 +1344,8 @@
       "back": "Negative.",
       "accept": [
         "Negative.",
-        "Exothermic."
+        "Exothermic.",
+        "Less than zero."
       ],
       "reject": [
         "Positive.",
@@ -1328,7 +1371,8 @@
       "back": "Increases.",
       "accept": [
         "Increases.",
-        "Increases overall disorder."
+        "Increases overall disorder.",
+        "Increases if more gas particles form."
       ],
       "reject": [
         "Decreases.",
@@ -1380,7 +1424,8 @@
       "back": "Thermodynamically feasible.",
       "accept": [
         "Thermodynamically feasible.",
-        "Feasible in the forward direction."
+        "Feasible in the forward direction.",
+        "Feasible, not necessarily fast."
       ],
       "reject": [
         "Guaranteed fast.",
@@ -1406,7 +1451,8 @@
       "back": "Second.",
       "accept": [
         "Second.",
-        "Second order."
+        "Second order.",
+        "Order two."
       ],
       "reject": [
         "First.",
@@ -1432,7 +1478,8 @@
       "back": "49.9 kJ mol⁻¹",
       "accept": [
         "49.9 kJ mol⁻¹",
-        "49860 J mol⁻¹"
+        "49860 J mol⁻¹",
+        "50 kJ mol⁻¹"
       ],
       "reject": [
         "6000 kJ mol⁻¹",
@@ -1458,7 +1505,8 @@
       "back": "Denominator.",
       "accept": [
         "Denominator.",
-        "Bottom of the fraction."
+        "Bottom of the fraction.",
+        "Lower half of expression."
       ],
       "reject": [
         "Numerator.",
@@ -1510,7 +1558,8 @@
       "back": "1.0 × 10⁻¹⁴ mol² dm⁻⁶",
       "accept": [
         "1.0 × 10⁻¹⁴ mol² dm⁻⁶",
-        "10^-14 mol² dm^-6"
+        "10^-14 mol² dm^-6",
+        "1 × 10^-14 mol² dm^-6"
       ],
       "reject": [
         "1.0 × 10⁻⁷",
@@ -1536,7 +1585,8 @@
       "back": "Primary amide",
       "accept": [
         "Primary amide",
-        "An unsubstituted amide"
+        "An unsubstituted amide",
+        "RCONH₂"
       ],
       "reject": [
         "N-substituted amide",
@@ -1588,7 +1638,8 @@
       "back": "Tollens' reagent.",
       "accept": [
         "Tollens' reagent.",
-        "Ammoniacal silver nitrate."
+        "Ammoniacal silver nitrate.",
+        "Ammoniacal AgNO3"
       ],
       "reject": [
         "Fehling's solution.",
@@ -1614,7 +1665,8 @@
       "back": "2,4-DNPH.",
       "accept": [
         "2,4-DNPH.",
-        "Brady's reagent."
+        "Brady's reagent.",
+        "2,4-dinitrophenylhydrazine"
       ],
       "reject": [
         "Tollens' reagent.",
@@ -1640,7 +1692,9 @@
       "back": "white; cream; yellow",
       "accept": [
         "white; cream; yellow",
-        "white, cream, yellow"
+        "white, cream, yellow",
+        "white, cream and yellow",
+        "white cream yellow"
       ],
       "reject": [
         "cream; white; yellow",
@@ -1692,7 +1746,8 @@
       "back": "n = 2k + 1",
       "accept": [
         "n = 2k + 1",
-        "2k+1, k integer"
+        "2k+1, k integer",
+        "n=2k+1,k∈Z"
       ],
       "reject": [
         "n = 2k",
@@ -1718,7 +1773,8 @@
       "back": "n = 2k",
       "accept": [
         "n = 2k",
-        "2k, where k is an integer"
+        "2k, where k is an integer",
+        "n=2k for integer k"
       ],
       "reject": [
         "n = 2k+1",
@@ -1744,7 +1800,8 @@
       "back": "n(n−1)(n+1)",
       "accept": [
         "n(n−1)(n+1)",
-        "Product of three consecutive integers."
+        "Product of three consecutive integers.",
+        "n(n+1)(n-1)"
       ],
       "reject": [
         "n(n+1)²",
@@ -1770,7 +1827,8 @@
       "back": "A counterexample.",
       "accept": [
         "A counterexample.",
-        "One valid counterexample."
+        "One valid counterexample.",
+        "A single counterexample."
       ],
       "reject": [
         "A proof by deduction.",
@@ -1796,7 +1854,8 @@
       "back": "No.",
       "accept": [
         "No.",
-        "Not for all integers."
+        "Not for all integers.",
+        "No; five cases are not a general proof."
       ],
       "reject": [
         "Yes.",
@@ -1822,7 +1881,8 @@
       "back": "y-axis.",
       "accept": [
         "y-axis.",
-        "Vertical axis."
+        "Vertical axis.",
+        "Reflection in the vertical axis."
       ],
       "reject": [
         "x-axis.",
@@ -1848,7 +1908,8 @@
       "back": "x-axis.",
       "accept": [
         "x-axis.",
-        "Horizontal axis."
+        "Horizontal axis.",
+        "Reflection in the horizontal axis."
       ],
       "reject": [
         "y-axis.",
@@ -1874,7 +1935,8 @@
       "back": "(2,7)",
       "accept": [
         "(2,7)",
-        "x=2,y=7"
+        "x=2,y=7",
+        "Turning point (2,7)"
       ],
       "reject": [
         "(8,7)",
@@ -1900,7 +1962,8 @@
       "back": "3 units up.",
       "accept": [
         "3 units up.",
-        "Upwards by 3."
+        "Upwards by 3.",
+        "Up by three."
       ],
       "reject": [
         "3 right.",
@@ -1926,7 +1989,8 @@
       "back": "5 units right.",
       "accept": [
         "5 units right.",
-        "Right by 5."
+        "Right by 5.",
+        "Right by five."
       ],
       "reject": [
         "5 left.",
@@ -1952,7 +2016,8 @@
       "back": "−2 < x < 6",
       "accept": [
         "−2 < x < 6",
-        "(-2,6)"
+        "(-2,6)",
+        "x∈(-2,6)"
       ],
       "reject": [
         "x < −2 or x > 6",
@@ -1978,7 +2043,8 @@
       "back": "None.",
       "accept": [
         "None.",
-        "No real roots."
+        "No real roots.",
+        "0 roots."
       ],
       "reject": [
         "Two distinct real roots.",
@@ -2004,7 +2070,8 @@
       "back": "(x−2)²+(y+3)²=25",
       "accept": [
         "(x−2)²+(y+3)²=25",
-        "(x-2)^2+(y+3)^2=25"
+        "(x-2)^2+(y+3)^2=25",
+        "(x-2)^2+(y+3)^2=5^2"
       ],
       "reject": [
         "(x+2)²+(y−3)²=25",
@@ -2030,7 +2097,8 @@
       "back": "x²+y²=25",
       "accept": [
         "x²+y²=25",
-        "x^2+y^2=25"
+        "x^2+y^2=25",
+        "x^2+y^2=5^2"
       ],
       "reject": [
         "x²+y²=5",
@@ -2056,7 +2124,8 @@
       "back": "90°.",
       "accept": [
         "90°.",
-        "Right angle."
+        "Right angle.",
+        "90 degrees."
       ],
       "reject": [
         "180°.",
@@ -2082,7 +2151,8 @@
       "back": "4n+3",
       "accept": [
         "4n+3",
-        "3+4n"
+        "3+4n",
+        "7+4(n-1)"
       ],
       "reject": [
         "4n+7",
@@ -2108,7 +2178,8 @@
       "back": "a/(1−r)",
       "accept": [
         "a/(1−r)",
-        "a over (1-r)"
+        "a over (1-r)",
+        "a/(1-r), |r|<1"
       ],
       "reject": [
         "a/(r−1)",
@@ -2134,7 +2205,8 @@
       "back": "Less than one.",
       "accept": [
         "Less than one.",
-        "Between 0 and 1 in magnitude."
+        "Between 0 and 1 in magnitude.",
+        "|r|<1"
       ],
       "reject": [
         "More than one.",
@@ -2160,7 +2232,8 @@
       "back": "90° and 270°.",
       "accept": [
         "90° and 270°.",
-        "θ=90°,270°."
+        "θ=90°,270°.",
+        "270° and 90°"
       ],
       "reject": [
         "0° and 180°.",
@@ -2212,7 +2285,8 @@
       "back": "10",
       "accept": [
         "10",
-        "10 square units"
+        "10 square units",
+        "10 units²"
       ],
       "reject": [
         "20",
@@ -2264,7 +2338,8 @@
       "back": "3 ln a",
       "accept": [
         "3 ln a",
-        "Three times ln a."
+        "Three times ln a.",
+        "ln(a)*3"
       ],
       "reject": [
         "ln a + 3",
@@ -2350,7 +2425,8 @@
       "back": "Local minimum.",
       "accept": [
         "Local minimum.",
-        "Minimum turning point."
+        "Minimum turning point.",
+        "Minimum."
       ],
       "reject": [
         "Local maximum.",
@@ -2402,7 +2478,8 @@
       "back": "Negative.",
       "accept": [
         "Negative.",
-        "A negative contribution."
+        "A negative contribution.",
+        "Negative signed area."
       ],
       "reject": [
         "Positive.",
@@ -2454,7 +2531,8 @@
       "back": "(3/5,4/5)",
       "accept": [
         "(3/5,4/5)",
-        "(0.6,0.8)"
+        "(0.6,0.8)",
+        "0.6i+0.8j"
       ],
       "reject": [
         "(6,8)",
@@ -2480,7 +2558,8 @@
       "back": "Collinear.",
       "accept": [
         "Collinear.",
-        "On one straight line."
+        "On one straight line.",
+        "They lie on one straight line."
       ],
       "reject": [
         "Perpendicular.",
@@ -2506,7 +2585,8 @@
       "back": "2k+1",
       "accept": [
         "2k+1",
-        "2k + 1"
+        "2k + 1",
+        "2k + 1 for integer k"
       ],
       "reject": [
         "2k",
@@ -2532,7 +2612,8 @@
       "back": "3 right; 2 up",
       "accept": [
         "3 right; 2 up",
-        "right 3; up 2"
+        "right 3; up 2",
+        "three right, two up"
       ],
       "reject": [
         "3 left; 2 down",
