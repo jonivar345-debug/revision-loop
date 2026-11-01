@@ -1,0 +1,20 @@
+name: Task 1 v262 first-mock Pure numerical equivalence
+on:
+  pull_request:
+    paths:
+      - 'maths_year1_pure_breadth_v260.json'
+      - 'tests/task1-v262-pure-numeric-marking.cjs'
+      - '.github/workflows/task1-v262-pure-numeric.yml'
+  push:
+    branches: [main]
+jobs:
+  maths-numeric:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v260-maths-year1-pure-breadth.cjs
+      - run: node tests/task1-v261-maths-seven-gap-evidence.cjs
+      - run: node tests/task1-v262-pure-numeric-marking.cjs
