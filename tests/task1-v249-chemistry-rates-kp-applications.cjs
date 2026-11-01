@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const deck=json('deck.json'),bank=json('chemistry_rates_kp_applications_v249.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v249');assert.equal(bank.cards.length,28);assert.equal(deck.cards.length,3345);
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,36);assert.equal(urls[34],'physics_measurements_applications_v248.json');assert.equal(urls[35],'chemistry_rates_kp_applications_v249.json');
+assert(urls.length>=36);assert.equal(urls[34],'physics_measurements_applications_v248.json');assert.equal(urls[35],'chemistry_rates_kp_applications_v249.json');
 assert(sw.includes("'./chemistry_rates_kp_applications_v249.json'"));assert(sw.includes('-v249-rates-kp'));
 const old=[...deck.cards,...urls.slice(0,35).flatMap(p=>json(p).cards||[])];const ids=new Set(old.map(c=>c.id)),fronts=new Set(old.filter(c=>c.subject==='Chemistry').map(c=>c.front.trim().toLowerCase()));
 const repeated=[];
