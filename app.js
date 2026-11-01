@@ -2351,7 +2351,7 @@ function evaluateCard(c,input){
  const standaloneDenial=rawForNegation.match(/^not\s+(.+)$/i);
  if(standaloneDenial){
   const denied=normalise(standaloneDenial[1].replace(/[.!?]+$/,''));
-  if(denied && [c?.back,...(Array.isArray(c?.accept)?c.accept:[])].some(a=>normalise(a)===denied))
+  if(denied && [c?.back,...(Array.isArray(c?.accept)?c.accept:[])].some(a=>normalise(String(a||'').replace(/[.!?]+$/,''))===denied))
    return {status:'wrong',score:0,text:'This explicitly denies the correct answer.',missing:[String(c?.back||'')]};
  }
  // Formula cards with meaningful primes must keep the derivative operator.
