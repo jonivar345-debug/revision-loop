@@ -2361,8 +2361,8 @@ function evaluateCard(c,input){
   if(!raw)return {status:'neutral',score:0,text:'Compare your attempt with the model.',missing:[]};
   const symbolKey=t=>String(t||'').trim().toLowerCase().replace(/[’′]/g,"'").replace(/\s+/g,'').replace(/[.]$/,'');
   const valid=[c.back,...(c.accept||[])].some(x=>symbolKey(x)===symbolKey(raw));
-  return valid?{status:'correct',score:1,text:'Correct derivative notation or exact accepted explanation.',missing:[]}:
-   {status:'wrong',score:0,text:'A stationary point needs the first derivative to equal zero.',missing:[c.back]};
+  return valid?{status:'correct',score:1,text:'Correct exact notation or accepted explanation.',missing:[]}:
+   {status:'wrong',score:0,text:c.strictSymbolFeedback||'A stationary point needs the first derivative to equal zero.',missing:[c.back]};
  }
  const numerical=evaluateConfiguredNumericRecall(c,input);
  if(numerical)return numerical;
