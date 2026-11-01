@@ -1,0 +1,22 @@
+name: Task 1 v270 Chemistry amount numerical practice and scope
+on:
+  pull_request:
+    paths:
+      - 'chemistry_amount_applied_practice_v270.json'
+      - 'tests/task1-v270-chemistry-amount-exam.cjs'
+      - 'tests/task1-v269-physics-nuclear-conservation.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v270-chemistry-amount-exam.yml'
+  push:
+    branches: [main]
+jobs:
+  chemistry-amount:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v269-physics-nuclear-conservation.cjs
+      - run: node tests/task1-v270-chemistry-amount-exam.cjs
