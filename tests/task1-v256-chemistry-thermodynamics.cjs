@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('chemistry_thermodynamics_applications_v256.json'),deck=json('deck.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v256');assert.equal(bank.cards.length,28);assert.equal(deck.cards.length,3345);
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(files.length,41);assert.equal(files[39],'chemistry_atomic_tof_applications_v254.json');assert.equal(files[40],'chemistry_thermodynamics_applications_v256.json');
+assert(files.length>=41);assert.equal(files[39],'chemistry_atomic_tof_applications_v254.json');assert.equal(files[40],'chemistry_thermodynamics_applications_v256.json');
 assert(sw.includes("'./chemistry_thermodynamics_applications_v256.json'"));assert(sw.includes('-v256-thermodynamics'));
 const existing=[...deck.cards,...files.slice(0,40).flatMap(f=>json(f).cards||[])];
 const ids=new Set(existing.map(c=>c.id)),fronts=new Set(existing.filter(c=>c.subject==='Chemistry').map(c=>c.front.trim().toLowerCase()));

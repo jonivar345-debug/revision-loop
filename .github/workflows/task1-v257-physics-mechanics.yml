@@ -1,0 +1,22 @@
+name: Task 1 v257 AS Physics Mechanics application checks
+on:
+  pull_request:
+    paths:
+      - 'physics_mechanics_applications_v257.json'
+      - 'tests/task1-v257-physics-mechanics.cjs'
+      - 'tests/task1-v256-chemistry-thermodynamics.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v257-physics-mechanics.yml'
+  push:
+    branches: [main]
+jobs:
+  mechanics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v256-chemistry-thermodynamics.cjs
+      - run: node tests/task1-v257-physics-mechanics.cjs
