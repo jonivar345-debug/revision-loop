@@ -1,0 +1,155 @@
+{
+  "version": "v263",
+  "date": "2026-11-01",
+  "scope": "Selected AS Physics Measurements and Particles/Radiation legacy core-only gap reconciliation; not full AQA requirement certification",
+  "baseline": {
+    "measurementsRequirementRows": 27,
+    "measurementsMissingOriginalCoreEvidence": 3,
+    "particlesRequirementRows": 48,
+    "particlesMissingOriginalCoreEvidence": 6
+  },
+  "finding": {
+    "previouslyUnmappedCoreRows": 9,
+    "withRelevantSupplementExamples": 8,
+    "withOnlyComponentPractice": 4,
+    "withWorkedSelectedExample": 4,
+    "withNoDirectExample": 1
+  },
+  "rows": [
+    {
+      "crosswalk": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "requirementNumber": 25,
+      "status": "worked_selected_example",
+      "cardIds": [
+        "task1_v248_physics_measurements_27",
+        "task1_v248_physics_measurements_28"
+      ],
+      "remaining": "Single numerical estimates are evidenced, not all unfamiliar multi-step order-of-magnitude assessments.",
+      "specRef": "3.1.3",
+      "skill": "Apply an estimated physical quantity to an unfamiliar scale calculation",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "requirementNumber": 26,
+      "status": "component_only",
+      "cardIds": [
+        "task1_v248_physics_measurements_19",
+        "task1_v248_physics_measurements_20"
+      ],
+      "remaining": "Error-bar endpoints and extreme gradients are text calculations; no actual graph drawing or examiner marking validated.",
+      "specRef": "3.1.2",
+      "skill": "Construct error bars and extreme acceptable lines on an unfamiliar actual diagram",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "requirementNumber": 27,
+      "status": "component_only",
+      "cardIds": [
+        "task1_v248_physics_measurements_11",
+        "task1_v248_physics_measurements_12",
+        "task1_v248_physics_measurements_21"
+      ],
+      "remaining": "Simple error propagation and gradient uncertainty evidenced; unseen multistep work and error-carried-forward marking not verified.",
+      "specRef": "3.1.2",
+      "skill": "Independently mark novel multistep numerical uncertainty problems",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirementNumber": 6,
+      "status": "worked_selected_example",
+      "cardIds": [
+        "task1_v243_phy_particles_app_01"
+      ],
+      "remaining": "Specific-charge calculation tested on an ion; broader unknown ion/nucleus examples not fully reviewed.",
+      "specRef": "3.2.1.1",
+      "skill": "Unfamiliar specific-charge calculations for an ion or nucleus",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirementNumber": 10,
+      "status": "component_only",
+      "cardIds": [
+        "task1_v243_phy_particles_app_02",
+        "task1_v243_phy_particles_app_03"
+      ],
+      "remaining": "Daughter A,Z values tested; writing and marking complete balanced nuclear symbols is not independently certified.",
+      "specRef": "3.2.1.2",
+      "skill": "Balanced unfamiliar nuclide alpha and beta-decay equations",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirementNumber": 19,
+      "status": "unevidenced",
+      "cardIds": [],
+      "remaining": "Actual particle-exchange Feynman diagrams (arrows, lines, interactions) and marking remain unverified.",
+      "specRef": "3.2.1.4",
+      "skill": "Actually draw and mark unfamiliar particle-exchange diagrams",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirementNumber": 33,
+      "status": "component_only",
+      "cardIds": [
+        "task1_v243_phy_particles_app_04"
+      ],
+      "remaining": "One baryon-number impossibility example verified; simultaneous charge/lepton/energy/momentum conservation on unfamiliar interactions still open.",
+      "specRef": "3.2.1.7",
+      "skill": "Apply all relevant conservation laws to novel proposed interactions",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirementNumber": 44,
+      "status": "worked_selected_example",
+      "cardIds": [
+        "task1_v243_phy_particles_app_06",
+        "task1_v243_phy_particles_app_07"
+      ],
+      "remaining": "Representative photon transition energy and wavelength checked; independent marking of unseen worked exam questions still open.",
+      "specRef": "3.2.2.3",
+      "skill": "Calculate unseen energy-level transitions and emitted wavelengths",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    },
+    {
+      "crosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "requirementNumber": 48,
+      "status": "worked_selected_example",
+      "cardIds": [
+        "task1_v243_phy_particles_app_08",
+        "task1_v243_phy_particles_app_09"
+      ],
+      "remaining": "Selected de Broglie numbers and voltage-scaling checked; unknown diffraction discussion and worked explanations remain open.",
+      "specRef": "3.2.2.4",
+      "skill": "Novel numerical de Broglie wavelength and diffraction comparison",
+      "originalCoreEvidenceIds": [],
+      "fullExamSkillVerified": false
+    }
+  ],
+  "remaining": [
+    "Draw and mark a real Feynman/particle-exchange interaction diagram with correct arrow directions and exchanged particles",
+    "Mark unfamiliar multidimensional graph diagrams, extreme line construction and practical data",
+    "Test all physical conservation laws on unfamiliar particle interactions",
+    "Verify multi-mark answers and error-carried-forward credit, not just fixed card answers",
+    "Finish the complete AQA school AS Physics specification checklist, not just 27+48 selected audit rows"
+  ],
+  "completion": {
+    "allNineCoreOnlyGapsFullSkillsIndependentlyVerified": false,
+    "particleExchangeDrawingAndMarkingVerified": false,
+    "fullPhysicsMockSpecCertified": false,
+    "task1Complete": false
+  }
+}

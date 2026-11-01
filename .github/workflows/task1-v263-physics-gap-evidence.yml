@@ -1,0 +1,18 @@
+name: Task 1 v263 Physics targeted application evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v263-physics-core-gaps-evidence.json'
+      - 'tests/task1-v263-physics-gap-evidence.cjs'
+      - '.github/workflows/task1-v263-physics-gap-evidence.yml'
+  push:
+    branches: [main]
+jobs:
+  physics-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v263-physics-gap-evidence.cjs
