@@ -1,0 +1,737 @@
+{
+  "version": "v256",
+  "createdAt": "2026-11-01",
+  "scope": "Taught school Chemistry A2 mock Thermodynamics 3.1.8.1 Born–Haber and 3.1.8.2 Gibbs/entropy; excludes buffers and untaught year 2 topics",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "notes": "Original short numerical and application cards supplement core and v180. These are not a replacement for full multi-mark cycles drawn and examiner-scored.",
+  "cards": [
+    {
+      "id": "task1_v256_chem_thermo_01",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "NaCl: ΔHf = −411; Na atomisation +108; ½Cl₂ bond dissociation +121; IE +496; EA −349 (all kJ mol⁻¹). Find lattice FORMATION enthalpy.",
+      "back": "−787 kJ mol⁻¹.",
+      "accept": [
+        "−787 kJ mol⁻¹.",
+        "-787 kJ mol^-1",
+        "-787"
+      ],
+      "reject": [
+        "+787 kJ mol⁻¹.",
+        "−438 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_02",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "NaCl has lattice formation enthalpy −787 kJ mol⁻¹. Find its lattice DISSOCIATION enthalpy.",
+      "back": "+787 kJ mol⁻¹.",
+      "accept": [
+        "+787 kJ mol⁻¹.",
+        "787 kJ mol^-1",
+        "+787"
+      ],
+      "reject": [
+        "−787 kJ mol⁻¹.",
+        "0 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_03",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In a NaCl Born–Haber cycle ΔHf = −411, atomisation steps +108,+121, IE +496 and lattice formation −787. Find chlorine EA.",
+      "back": "−349 kJ mol⁻¹.",
+      "accept": [
+        "−349 kJ mol⁻¹.",
+        "-349 kJ mol^-1",
+        "−349"
+      ],
+      "reject": [
+        "+349 kJ mol⁻¹.",
+        "−136 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_04",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In a NaCl Born–Haber cycle ΔHf = −411, atomisation +108,+121, EA −349, lattice formation −787. Find sodium IE.",
+      "back": "+496 kJ mol⁻¹.",
+      "accept": [
+        "+496 kJ mol⁻¹.",
+        "496 kJ mol^-1",
+        "+496"
+      ],
+      "reject": [
+        "−496 kJ mol⁻¹.",
+        "+147 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_05",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "NaF: ΔHf = −574; Na atomisation +108; ½F₂ bond +79; IE +496; EA −328. Find lattice FORMATION enthalpy.",
+      "back": "−929 kJ mol⁻¹.",
+      "accept": [
+        "−929 kJ mol⁻¹.",
+        "-929 kJ mol^-1",
+        "-929"
+      ],
+      "reject": [
+        "+929 kJ mol⁻¹.",
+        "−683 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_06",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "MgO: ΔHf=−602; Mg atomisation +150; O atomisation +249; Mg IE values +738,+1450; O EA values −141,+744. Find lattice FORMATION enthalpy.",
+      "back": "−3792 kJ mol⁻¹.",
+      "accept": [
+        "−3792 kJ mol⁻¹.",
+        "-3792 kJ mol^-1",
+        "-3792"
+      ],
+      "reject": [
+        "+3792 kJ mol⁻¹.",
+        "−3048 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_07",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For MgCl₂, chlorine's first electron affinity is −349 kJ mol⁻¹. What is the TOTAL chlorine EA contribution in its Born–Haber cycle?",
+      "back": "−698 kJ mol⁻¹.",
+      "accept": [
+        "−698 kJ mol⁻¹.",
+        "-698 kJ mol^-1",
+        "2×(−349)=−698"
+      ],
+      "reject": [
+        "−349 kJ mol⁻¹.",
+        "+698 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_08",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Cl₂(g) bond dissociation enthalpy is +242 kJ mol⁻¹. What is atomisation enthalpy for ½Cl₂(g) → Cl(g)?",
+      "back": "+121 kJ mol⁻¹.",
+      "accept": [
+        "+121 kJ mol⁻¹.",
+        "121 kJ mol^-1",
+        "+121"
+      ],
+      "reject": [
+        "+242 kJ mol⁻¹.",
+        "−121 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_09",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "NaCl: lattice DISSOCIATION +787, Na⁺ hydration −406 and Cl⁻ hydration −363 kJ mol⁻¹. Find enthalpy of solution.",
+      "back": "+18 kJ mol⁻¹.",
+      "accept": [
+        "+18 kJ mol⁻¹.",
+        "18 kJ mol^-1",
+        "+18"
+      ],
+      "reject": [
+        "−18 kJ mol⁻¹.",
+        "+1556 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_10",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "MgCl₂: lattice DISSOCIATION +2526, Mg²⁺ hydration −1920, each Cl⁻ hydration −364 kJ mol⁻¹. Find ΔHsol.",
+      "back": "−122 kJ mol⁻¹.",
+      "accept": [
+        "−122 kJ mol⁻¹.",
+        "-122 kJ mol^-1",
+        "−122"
+      ],
+      "reject": [
+        "+122 kJ mol⁻¹.",
+        "+242 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_11",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An MX salt has ΔHsol=−5, lattice DISSOCIATION +750 and cation hydration −400 kJ mol⁻¹. Find anion hydration enthalpy.",
+      "back": "−355 kJ mol⁻¹.",
+      "accept": [
+        "−355 kJ mol⁻¹.",
+        "-355 kJ mol^-1",
+        "−355"
+      ],
+      "reject": [
+        "+355 kJ mol⁻¹.",
+        "−345 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_12",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Born–Haber MgO: why is oxygen's second electron affinity normally endothermic?",
+      "back": "An electron is added to a negatively charged ion, against electrostatic repulsion.",
+      "accept": [
+        "An electron is added to a negatively charged ion, against electrostatic repulsion.",
+        "The incoming electron is repelled by O⁻.",
+        "Energy is required to overcome electron–electron repulsion in O⁻."
+      ],
+      "reject": [
+        "An electron is removed from O²⁻.",
+        "The second electron is attracted by a positive O⁻ ion."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_13",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An experimental Born–Haber lattice formation enthalpy is −970 and the perfect ionic-model value is −900 kJ mol⁻¹. What does the discrepancy suggest?",
+      "back": "Covalent character arising from polarisation of the ions.",
+      "accept": [
+        "Covalent character arising from polarisation of the ions.",
+        "The bonding has some covalent character.",
+        "Ion polarisation causes departure from a purely ionic model."
+      ],
+      "reject": [
+        "The crystal must contain no ionic bonding.",
+        "The discrepancy proves all bonds are metallic."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_14",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Which ion pair is expected to have the more exothermic lattice formation enthalpy at similar ionic radii: Mg²⁺/O²⁻ or Na⁺/Cl⁻?",
+      "back": "Mg²⁺ and O²⁻.",
+      "accept": [
+        "Mg²⁺ and O²⁻.",
+        "MgO",
+        "The doubly charged Mg²⁺/O²⁻ ions."
+      ],
+      "reject": [
+        "Na⁺ and Cl⁻.",
+        "Both must have equal lattice enthalpies."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_15",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write the lattice FORMATION step for MgO including physical states.",
+      "back": "Mg²⁺(g) + O²⁻(g) → MgO(s).",
+      "accept": [
+        "Mg²⁺(g) + O²⁻(g) → MgO(s).",
+        "Mg2+(g) + O2-(g) -> MgO(s)",
+        "gaseous Mg²⁺ and O²⁻ combine into solid MgO"
+      ],
+      "reject": [
+        "MgO(s) → Mg²⁺(g) + O²⁻(g).",
+        "Mg(g) + O(g) → MgO(g)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_16",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Born–Haber cycles",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Born–Haber cycles",
+      "specRef": "3.1.8.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is the lattice dissociation enthalpy of MgO positive?",
+      "back": "Energy must be supplied to separate its oppositely charged ions.",
+      "accept": [
+        "Energy must be supplied to separate its oppositely charged ions.",
+        "Energy is needed to overcome ionic attractions.",
+        "Separating the ionic lattice into gaseous ions is endothermic."
+      ],
+      "reject": [
+        "Energy is released when ions separate.",
+        "The process forms the solid from gaseous ions."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_17",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At 298 K, ΔH=−120 kJ mol⁻¹ and ΔS=−100 J K⁻¹ mol⁻¹. Calculate ΔG.",
+      "back": "−90.2 kJ mol⁻¹.",
+      "accept": [
+        "−90.2 kJ mol⁻¹.",
+        "-90.2 kJ mol^-1",
+        "−90.2"
+      ],
+      "reject": [
+        "+90.2 kJ mol⁻¹.",
+        "−149.8 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_18",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At 350 K, ΔH=+40 kJ mol⁻¹ and ΔS=+200 J K⁻¹ mol⁻¹. Calculate ΔG.",
+      "back": "−30 kJ mol⁻¹.",
+      "accept": [
+        "−30 kJ mol⁻¹.",
+        "-30 kJ mol^-1",
+        "−30"
+      ],
+      "reject": [
+        "+30 kJ mol⁻¹.",
+        "+39.93 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_19",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A reaction has ΔH=+75 kJ mol⁻¹ and ΔS=+250 J K⁻¹ mol⁻¹. Find its ΔG=0 threshold temperature.",
+      "back": "300 K.",
+      "accept": [
+        "300 K.",
+        "300 kelvin",
+        "T=300 K"
+      ],
+      "reject": [
+        "0.30 K.",
+        "750 K."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_20",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ΔH=+75 kJ mol⁻¹, ΔS=+250 J K⁻¹ mol⁻¹, at which temperatures is ΔG negative?",
+      "back": "Above 300 K.",
+      "accept": [
+        "Above 300 K.",
+        "T > 300 K",
+        "at temperatures greater than 300 kelvin"
+      ],
+      "reject": [
+        "Below 300 K.",
+        "At exactly 300 K only."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_21",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A reaction has ΔH=−60 kJ mol⁻¹ and ΔS=−150 J K⁻¹ mol⁻¹. Find the temperature where ΔG=0.",
+      "back": "400 K.",
+      "accept": [
+        "400 K.",
+        "400 kelvin",
+        "T=400 K"
+      ],
+      "reject": [
+        "0.40 K.",
+        "900 K."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_22",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ΔH=−60 kJ mol⁻¹, ΔS=−150 J K⁻¹ mol⁻¹, at which temperatures is ΔG negative?",
+      "back": "Below 400 K.",
+      "accept": [
+        "Below 400 K.",
+        "T < 400 K",
+        "at temperatures less than 400 kelvin"
+      ],
+      "reject": [
+        "Above 400 K.",
+        "Only at 400 K."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_23",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In A(g)+B(g) → C(g), S°(A)=180, S°(B)=190 and S°(C)=250 J K⁻¹ mol⁻¹. Find ΔS°.",
+      "back": "−120 J K⁻¹ mol⁻¹.",
+      "accept": [
+        "−120 J K⁻¹ mol⁻¹.",
+        "-120 J K^-1 mol^-1",
+        "−120"
+      ],
+      "reject": [
+        "+120 J K⁻¹ mol⁻¹.",
+        "−370 J K⁻¹ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_24",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For 2SO₂(g)+O₂(g)→2SO₃(g), S°(SO₂)=248, S°(O₂)=205, S°(SO₃)=257 J K⁻¹ mol⁻¹. Find ΔS°.",
+      "back": "−187 J K⁻¹ mol⁻¹.",
+      "accept": [
+        "−187 J K⁻¹ mol⁻¹.",
+        "-187 J K^-1 mol^-1",
+        "−187"
+      ],
+      "reject": [
+        "+187 J K⁻¹ mol⁻¹.",
+        "−444 J K⁻¹ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_25",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "ΔS=+125 J K⁻¹ mol⁻¹. What is the gradient of a ΔG (kJ mol⁻¹) against T (K) graph?",
+      "back": "−0.125 kJ K⁻¹ mol⁻¹.",
+      "accept": [
+        "−0.125 kJ K⁻¹ mol⁻¹.",
+        "-0.125 kJ K^-1 mol^-1",
+        "−0.125"
+      ],
+      "reject": [
+        "+0.125 kJ K⁻¹ mol⁻¹.",
+        "−125 kJ K⁻¹ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_26",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "If ΔH=+30 kJ mol⁻¹, what is the vertical intercept of a ΔG vs T graph with ΔG in kJ mol⁻¹?",
+      "back": "+30 kJ mol⁻¹.",
+      "accept": [
+        "+30 kJ mol⁻¹.",
+        "30 kJ mol^-1",
+        "+30"
+      ],
+      "reject": [
+        "−30 kJ mol⁻¹.",
+        "0 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_27",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A reaction has ΔH=−80 kJ mol⁻¹ and ΔS=−160 J K⁻¹ mol⁻¹. What is its ΔG=0 threshold temperature?",
+      "back": "500 K.",
+      "accept": [
+        "500 K.",
+        "500 kelvin",
+        "T=500 K"
+      ],
+      "reject": [
+        "0.5 K.",
+        "1250 K."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v256_chem_thermo_28",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Gibbs energy and entropy",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Gibbs and entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "At 400 K, ΔH=−100 kJ mol⁻¹ and ΔS=−200 J K⁻¹ mol⁻¹. Find ΔG.",
+      "back": "−20 kJ mol⁻¹.",
+      "accept": [
+        "−20 kJ mol⁻¹.",
+        "-20 kJ mol^-1",
+        "−20"
+      ],
+      "reject": [
+        "+20 kJ mol⁻¹.",
+        "−180 kJ mol⁻¹."
+      ],
+      "strictRecall": true
+    }
+  ]
+}

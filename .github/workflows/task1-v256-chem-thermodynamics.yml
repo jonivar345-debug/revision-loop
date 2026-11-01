@@ -1,0 +1,23 @@
+name: Task 1 v256 Chemistry thermodynamics calculations and marking
+on:
+  pull_request:
+    paths:
+      - 'chemistry_thermodynamics_applications_v256.json'
+      - 'tests/task1-v256-chemistry-thermodynamics.cjs'
+      - 'tests/task1-v254-chemistry-atomic-tof.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v256-chem-thermodynamics.yml'
+  push:
+    branches: [main]
+jobs:
+  thermodynamics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v254-chemistry-atomic-tof.cjs
+      - run: node tests/task1-v255-scientific-numerical-marking.cjs
+      - run: node tests/task1-v256-chemistry-thermodynamics.cjs
