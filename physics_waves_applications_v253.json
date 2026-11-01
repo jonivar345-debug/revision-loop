@@ -29,7 +29,17 @@
         "53.3 m s⁻¹.",
         "0.01875 m s⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 30,
+        "units": [
+          {
+            "symbol": "m/s",
+            "toBase": 1
+          }
+        ],
+        "expected": "30 m s⁻¹."
+      }
     },
     {
       "id": "task1_v253_physics_waves_02",
@@ -55,7 +65,21 @@
         "0.025 Hz.",
         "25 Hz."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 40,
+        "units": [
+          {
+            "symbol": "Hz",
+            "toBase": 1
+          },
+          {
+            "symbol": "kHz",
+            "toBase": 1000
+          }
+        ],
+        "expected": "40 Hz."
+      }
     },
     {
       "id": "task1_v253_physics_waves_03",
@@ -315,7 +339,21 @@
         "80 Hz.",
         "180 Hz."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 40,
+        "units": [
+          {
+            "symbol": "Hz",
+            "toBase": 1
+          },
+          {
+            "symbol": "kHz",
+            "toBase": 1000
+          }
+        ],
+        "expected": "40 Hz."
+      }
     },
     {
       "id": "task1_v253_physics_waves_13",
@@ -341,7 +379,21 @@
         "80 Hz.",
         "160 Hz."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 120,
+        "units": [
+          {
+            "symbol": "Hz",
+            "toBase": 1
+          },
+          {
+            "symbol": "kHz",
+            "toBase": 1000
+          }
+        ],
+        "expected": "120 Hz."
+      }
     },
     {
       "id": "task1_v253_physics_waves_14",
@@ -419,7 +471,21 @@
         "0.20 mm.",
         "20 mm."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.002,
+        "units": [
+          {
+            "symbol": "m",
+            "toBase": 1
+          },
+          {
+            "symbol": "mm",
+            "toBase": 0.001
+          }
+        ],
+        "expected": "2.0 mm."
+      }
     },
     {
       "id": "task1_v253_physics_waves_17",
@@ -575,7 +641,25 @@
         "2.0 × 10⁻³ m.",
         "5.0 × 10⁻⁷ m."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 0.000002,
+        "units": [
+          {
+            "symbol": "m",
+            "toBase": 1
+          },
+          {
+            "symbol": "mm",
+            "toBase": 0.001
+          },
+          {
+            "symbol": "nm",
+            "toBase": 1e-9
+          }
+        ],
+        "expected": "2.0 × 10⁻⁶ m."
+      }
     },
     {
       "id": "task1_v253_physics_waves_23",
@@ -601,7 +685,26 @@
         "30.0°.",
         "0.3°."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 17.5,
+        "units": [
+          {
+            "symbol": "°",
+            "toBase": 1
+          },
+          {
+            "symbol": "degrees",
+            "toBase": 1
+          },
+          {
+            "symbol": "degree",
+            "toBase": 1
+          }
+        ],
+        "expected": "17.5°.",
+        "tolerance": 0.045
+      }
     },
     {
       "id": "task1_v253_physics_waves_24",
@@ -627,7 +730,13 @@
         "5.",
         "3."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 4,
+        "units": [],
+        "expected": "4.",
+        "allowUnitless": true
+      }
     },
     {
       "id": "task1_v253_physics_waves_25",
@@ -653,7 +762,26 @@
         "30.0°.",
         "48.6°."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 19.5,
+        "units": [
+          {
+            "symbol": "°",
+            "toBase": 1
+          },
+          {
+            "symbol": "degrees",
+            "toBase": 1
+          },
+          {
+            "symbol": "degree",
+            "toBase": 1
+          }
+        ],
+        "expected": "19.5°.",
+        "tolerance": 0.045
+      }
     },
     {
       "id": "task1_v253_physics_waves_26",
@@ -679,7 +807,17 @@
         "4.50 × 10⁸ m s⁻¹.",
         "3.00 × 10⁸ m s⁻¹."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 200000000,
+        "units": [
+          {
+            "symbol": "m/s",
+            "toBase": 1
+          }
+        ],
+        "expected": "2.00 × 10⁸ m s⁻¹."
+      }
     },
     {
       "id": "task1_v253_physics_waves_27",
@@ -705,7 +843,21 @@
         "900 nm.",
         "600 nm."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 4e-7,
+        "units": [
+          {
+            "symbol": "m",
+            "toBase": 1
+          },
+          {
+            "symbol": "nm",
+            "toBase": 1e-9
+          }
+        ],
+        "expected": "400 nm."
+      }
     },
     {
       "id": "task1_v253_physics_waves_28",
@@ -731,7 +883,26 @@
         "48.2°.",
         "60.0°."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 41.8,
+        "units": [
+          {
+            "symbol": "°",
+            "toBase": 1
+          },
+          {
+            "symbol": "degrees",
+            "toBase": 1
+          },
+          {
+            "symbol": "degree",
+            "toBase": 1
+          }
+        ],
+        "expected": "41.8°.",
+        "tolerance": 0.045
+      }
     },
     {
       "id": "task1_v253_physics_waves_29",
@@ -757,7 +928,26 @@
         "41.8°.",
         "14.8°."
       ],
-      "strictRecall": true
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 75.2,
+        "units": [
+          {
+            "symbol": "°",
+            "toBase": 1
+          },
+          {
+            "symbol": "degrees",
+            "toBase": 1
+          },
+          {
+            "symbol": "degree",
+            "toBase": 1
+          }
+        ],
+        "expected": "75.2°.",
+        "tolerance": 0.045
+      }
     },
     {
       "id": "task1_v253_physics_waves_30",

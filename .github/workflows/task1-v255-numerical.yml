@@ -1,0 +1,23 @@
+name: Task 1 v255 scientific notation and unit marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'physics_waves_applications_v253.json'
+      - 'chemistry_atomic_tof_applications_v254.json'
+      - 'tests/task1-v255-scientific-numerical-marking.cjs'
+      - '.github/workflows/task1-v255-numerical.yml'
+  push:
+    branches: [main]
+jobs:
+  scientific-marking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v251-strict-numeric-units.cjs
+      - run: node tests/task1-v253-physics-waves.cjs
+      - run: node tests/task1-v254-chemistry-atomic-tof.cjs
+      - run: node tests/task1-v255-scientific-numerical-marking.cjs

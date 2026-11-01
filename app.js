@@ -1589,15 +1589,24 @@ function evaluateConfiguredNumericRecall(c,input){
  const s=String(input||'').trim().replace(/[−–]/g,'-');
  // Only a bare scalar and a recognised physical unit qualify: never pick a
  // number out of prose or ignore an incorrect unit/direction.
- const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(kΩ|Ω|ohms?|mA|A|mV|V|mW|W)\s*\.?$/i);
+ // Only a standalone number with an explicitly allowed unit qualifies.
+ // Bare numbers are permitted only for individually configured dimensionless cards.
+ const match=s.match(/^([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(kΩ|Ω|ohms?|mA|A|mV|V|mW|W|kHz|Hz|m\/s|µs|μs|ms|s|mm|nm|m|°|degrees?|kJ|J)?\s*\.?$/i);
  if(!match)return null;
  const units=config.units||[];
- const unit=units.find(u=>String(u.symbol).toLowerCase()===match[2].toLowerCase());
- if(!unit)return {status:'wrong',score:0,text:'Check the required physical units.',missing:[config.expected]};
- const reading=Number(match[1])*unit.toBase;
+ let reading;
+ if(!match[2]){
+  if(!config.allowUnitless)return null;
+  reading=Number(match[1]);
+ }else{
+  const unit=units.find(u=>String(u.symbol).toLowerCase()===match[2].toLowerCase());
+  if(!unit)return {status:'wrong',score:0,text:'Check the required physical units.',missing:[config.expected]};
+  reading=Number(match[1])*unit.toBase;
+ }
  const target=Number(config.value);
  if(!Number.isFinite(reading)||!Number.isFinite(target))return {status:'wrong',score:0,text:'Check the numerical value.',missing:[config.expected]};
- const tolerance=Math.max(1e-12,Math.abs(target)*1e-4);
+ // Avoid a fixed 1e-12 tolerance accepting wildly incorrect 1e-16 J answers.
+ const tolerance=Number.isFinite(config.tolerance)&&config.tolerance>0?config.tolerance:Math.max(1e-30,Math.abs(target)*1e-4);
  if(Math.abs(reading-target)<=tolerance)
   return {status:'correct',score:1,text:'Correct equivalent numerical value and unit.',missing:[]};
  return {status:'wrong',score:0,text:'The numerical value or unit conversion is incorrect.',missing:[config.expected]};
