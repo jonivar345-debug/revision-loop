@@ -28,7 +28,7 @@ for(const row of ledger.rows){
 assert.deepEqual([...found].sort((a,b)=>a-b),absent.map(x=>x.i));
 assert.equal(accepted,30);assert.equal(rejected,20);
 // Independent numerical and algebraic checks for each seven-row representative.
-for(let n=-80;n<=80;n++)assert.equal((n*(n+1))%2,0);
+for(let n=-80;n<=80;n++)assert((n*(n+1))%2===0,'Evenness holds for integer '+n);
 assert.deepEqual([-1,0,1,2].map(n=>n*n+n),[0,0,2,6]);
 assert.equal((-2*1+4),2);
 assert.equal(3*3+4*4,25);
