@@ -1,0 +1,409 @@
+{
+  "version": "v280",
+  "createdAt": "2026-11-01",
+  "scope": "16 original short AQA Physics AS Mechanics & Materials 3.4 flashcards on equilibrium, couple moments, signed graph areas, elasticity and wire uncertainty",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+  "notes": "Original exam-focused distinction cards, not official AQA scheme; positive and negative test answers verified with study checker.",
+  "cards": [
+    {
+      "id": "task1_v280_phy_mech_card_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An object moves in a straight line at constant velocity. What is its resultant force?",
+      "back": "Zero.",
+      "accept": [
+        "Zero.",
+        "0 N"
+      ],
+      "reject": [
+        "equal to its weight",
+        "a nonzero forward force must act"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why can a couple turn an object even though the resultant force is zero?",
+      "back": "Its two separated equal-and-opposite forces create a non-zero resultant moment.",
+      "accept": [
+        "Its two separated equal-and-opposite forces create a non-zero resultant moment.",
+        "forces cancel but couple moment remains"
+      ],
+      "reject": [
+        "the net force is twice either force",
+        "both forces act along the same line"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Does the moment of a pure couple depend on the position of the pivot?",
+      "back": "No.",
+      "accept": [
+        "No.",
+        "independent of pivot position"
+      ],
+      "reject": [
+        "yes; it vanishes at one end",
+        "yes; only the object's centre matters"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Where is the centre of mass of a uniform regular straight bar?",
+      "back": "At its geometric centre.",
+      "accept": [
+        "At its geometric centre.",
+        "at its midpoint"
+      ],
+      "reject": [
+        "at one end",
+        "always at the pivot"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does signed area under an acceleration–time graph calculate?",
+      "back": "Change in velocity.",
+      "accept": [
+        "Change in velocity.",
+        "delta velocity"
+      ],
+      "reject": [
+        "total distance travelled",
+        "kinetic energy"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does signed area under a velocity–time graph calculate?",
+      "back": "Displacement.",
+      "accept": [
+        "Displacement.",
+        "change in position"
+      ],
+      "reject": [
+        "total distance always",
+        "acceleration"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How do you find total distance from a velocity–time graph that crosses zero?",
+      "back": "Add the magnitudes of all areas.",
+      "accept": [
+        "Add the magnitudes of all areas.",
+        "sum absolute areas"
+      ],
+      "reject": [
+        "add signed areas only",
+        "find the maximum gradient"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does signed area beneath a force–time graph calculate?",
+      "back": "Impulse (change in momentum).",
+      "accept": [
+        "Impulse (change in momentum).",
+        "change in momentum"
+      ],
+      "reject": [
+        "work done",
+        "mass"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does signed area beneath a force–displacement graph calculate?",
+      "back": "Work done by that force.",
+      "accept": [
+        "Work done by that force.",
+        "work done"
+      ],
+      "reject": [
+        "impulse",
+        "acceleration"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What does exceeding the elastic limit mean for a material after unloading?",
+      "back": "It no longer returns completely to its original dimensions.",
+      "accept": [
+        "It no longer returns completely to its original dimensions.",
+        "permanent deformation remains"
+      ],
+      "reject": [
+        "stress becomes zero immediately",
+        "it always snaps at once"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why are the limit of proportionality and the elastic limit not necessarily the same?",
+      "back": "A material may stop obeying Hooke's law yet still deform elastically.",
+      "accept": [
+        "A material may stop obeying Hooke's law yet still deform elastically.",
+        "nonlinear reversible extension is possible"
+      ],
+      "reject": [
+        "all nonlinear strain is plastic",
+        "the limit of proportionality always means fracture"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What feature distinguishes plastic deformation from purely elastic deformation?",
+      "back": "Permanent change of shape after the force is removed.",
+      "accept": [
+        "Permanent change of shape after the force is removed.",
+        "permanent strain after unloading"
+      ],
+      "reject": [
+        "the force was always zero",
+        "only reversible strain occurs"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "How does a brittle specimen typically fracture compared with a ductile one?",
+      "back": "With little plastic deformation.",
+      "accept": [
+        "With little plastic deformation.",
+        "fractures with very little permanent extension"
+      ],
+      "reject": [
+        "after substantial plastic stretching always",
+        "without reaching any stress"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the definition of breaking stress?",
+      "back": "Breaking force divided by the original cross-sectional area.",
+      "accept": [
+        "Breaking force divided by the original cross-sectional area.",
+        "failure force / original area"
+      ],
+      "reject": [
+        "breaking force divided by original length",
+        "force times area"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a linear-elastic stress–strain graph, what does the gradient represent?",
+      "back": "Young modulus.",
+      "accept": [
+        "Young modulus.",
+        "E"
+      ],
+      "reject": [
+        "strain energy only",
+        "wire diameter"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v280_phy_mech_card_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Mechanics and materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For a circular wire, if its diameter has a 3% relative uncertainty, what is the approximate relative uncertainty in its area?",
+      "back": "6%.",
+      "accept": [
+        "6%.",
+        "6 percent"
+      ],
+      "reject": [
+        "1.5%",
+        "9%"
+      ],
+      "strictRecall": true
+    }
+  ]
+}
