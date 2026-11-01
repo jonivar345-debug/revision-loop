@@ -4746,6 +4746,17 @@ async function sync(manual=false){
    const chemistry=c.subject==='Chemistry'&&['AS','A2'].includes(c.stage)&&['3.3.6','3.3.7','3.3.8','3.3.9.1','3.3.9.2','3.1.10'].includes(c.specRef);
    const maths=c.subject==='Maths'&&c.stage==='AS'&&['3.2','3.3','3.4','3.5','3.6','3.8','3.9','3.11'].includes(c.specRef);
    if(!(physics||chemistry||maths)||c.mock!==true||c.taught!==true||c.scope!=='mock'||c.active!==true||c.strictRecall!==true||!Array.isArray(c.accept)||!Array.isArray(c.reject))continue;
+  }else if(index===54){
+   // v298: valid mock-only short and cloze cards for all three subjects.
+   // Earlier append-only banks must keep their original indices and identity.
+   const physics=c.subject==='Physics'&&c.stage==='AS'&&/^3\.[1-5]\./.test(c.specRef||'');
+   const chemistry=c.subject==='Chemistry'&&['AS','A2'].includes(c.stage)&&/^3\.[123]\./.test(c.specRef||'');
+   const maths=c.subject==='Maths'&&c.stage==='AS'&&c.courseTopic==='Year 1 Pure'&&
+    ['3.2','3.3','3.4','3.5','3.6','3.7','3.8','3.9','3.11'].includes(c.specRef);
+   if(!String(c.id).startsWith('task1_v298_')||!(physics||chemistry||maths)||
+      c.mock!==true||c.taught!==true||c.scope!=='mock'||c.active!==true||
+      c.strictRecall!==true||c.kind!=='short'||!Array.isArray(c.accept)||!Array.isArray(c.reject))
+     continue;
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
