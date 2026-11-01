@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "version": "v279",
   "date": "2026-11-01",
-  "scope": "Four original AQA AS Physics Waves 3.3.1.2, 3.3.1.3 and 3.3.2.2 applications (26 marks), including two genuine sketches",
+  "scope": "Five original AQA AS Physics Waves 3.3.1.2, 3.3.1.3 and 3.3.2.2 applications (33 marks), including two genuine sketches",
   "officialSpec": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
   "notes": "Original exercises, not published AQA questions or official mark schemes. Real drawing evidence earns no automatic keyword marks, and other equivalent written working and ECF require manual review. Polarisation questions exclude Malus's law; no laboratory operating instructions.",
   "questions": [
@@ -188,6 +188,53 @@
       "verificationLevel": "original-exam-style",
       "difficulty": "hard",
       "groupId": "task1_v279_phy_waves_q04",
+      "groupOrder": 1
+    },
+    {
+      "id": "task1_v279_phy_waves_q05",
+      "subject": "Physics",
+      "specRef": "3.3.1.3",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA AS Waves Polarisation, Stationary and Diffraction",
+      "paper": "Original",
+      "question": "Explain standing-wave formation from two opposite progressive waves",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "subtopic": "Graphical superposition and creation of stationary wave nodes",
+      "marks": 7,
+      "prompt": "Two coherent sinusoidal waves, each of amplitude A, frequency f and wavelength λ, travel along a string in opposite directions. At t=0 their displacements coincide. Sketch their individual displacements and resultant at t=0, then show their individual displacements and resultant after one-quarter period. Indicate node/antinode positions and explain how stationary waves arise. The diagrams require manual marking. [7 marks]",
+      "markPoints": [
+        "Draws or identifies two progressive waves of the same frequency, wavelength and amplitude travelling in opposite directions.",
+        "Shows the two displacements add point by point using the superposition principle.",
+        "At t=0 shows an in-phase resultant of twice the amplitude (2A) where the waves align.",
+        "At t=T/4 shows opposite equal wave displacements and a straight equilibrium-line resultant.",
+        "Identifies node positions as fixed points of zero resultant displacement, separated by λ/2.",
+        "Identifies antinodes halfway between nodes, at maximum resultant amplitude.",
+        "Explains that successive superposed displacements at fixed positions form a stationary pattern with no overall movement of the nodes."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Draw two equal sinusoidal progressive waves travelling in opposite directions. At t=0, when their displacements coincide, their pointwise sum is a sinusoid of amplitude 2A; its zero-displacement node positions are fixed, half a wavelength apart, with antinodes midway. A quarter-period later the two waves have equal and opposite instantaneous displacements at every position, so their sum is zero everywhere. After a further quarter-period the pattern is inverted. This is superposition of equal-frequency opposite-travelling waves, giving a stationary-wave pattern; nodes do not travel along the string. Manually compare the two individual snapshots and their resultants before awarding any diagram points.",
+      "answerType": "points",
+      "questionType": "graphical wave superposition with mandatory manual inspection",
+      "manualDiagramReview": true,
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v279_phy_waves_q05",
       "groupOrder": 1
     }
   ]
