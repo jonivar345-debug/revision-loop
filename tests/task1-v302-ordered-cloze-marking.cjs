@@ -20,13 +20,14 @@ for(const c of bank){
  for(const p of c.clozeParts){assert(p.length>0);assert.equal(new Set(p).size,p.length);}
  for(const answer of c.accept)test(c,answer,'correct',1);
  test(c,'','neutral',0);
+  test(c,'Not '+c.back,'wrong',0);
  for(let i=0;i<c.clozeParts.length;i++)for(const synonym of c.clozeParts[i]){
   const a=c.clozeParts.map((part,j)=>j===i?synonym:part[0]);
   test(c,a.join('; '),'correct',1);
  }
  if(c.clozeParts.length>=2){
-  test(c,c.clozeParts.map((p,i)=>i===0?'not '+p[0]:p[0]).join('; '),'partial',(c.clozeParts.length-1)/c.clozeParts.length);
-  test(c,c.clozeParts.map(p=>'not '+p[0]).join('; '),'wrong',0);
+  test(c,c.clozeParts.map((p,i)=>i===0?'incorrect '+p[0]:p[0]).join('; '),'partial',(c.clozeParts.length-1)/c.clozeParts.length);
+  test(c,c.clozeParts.map(p=>'incorrect '+p[0]).join('; '),'wrong',0);
   test(c,c.clozeParts.map(p=>p[0]).join(', '),'correct',1);
   test(c,c.clozeParts.map(p=>p[0]).join(' and '),'correct',1);
  }
