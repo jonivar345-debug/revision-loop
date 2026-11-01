@@ -16,13 +16,13 @@ const existingIDs=new Set(prior.map(c=>c.id));
 const allKeys=new Set(prior.map(c=>c.subject+'::'+String(c.front||'').trim().toLowerCase()));
 const loc=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),stop=app.indexOf('function startMockSession(){',loc);
 const mockEligibleCard=new Function(app.slice(loc,stop)+'\nreturn mockEligibleCard;')();
-let accepted=0,rejected=0,cloze=0;
+let accepted=0,rejected=0,cloze=0;const duplicateFronts=[];
 for(const c of newCards){
  tally[c.subject]++;
  methods.add(c.method);
  assert(c.id && !existingIDs.has(c.id),'No old ID overwritten: '+c.id);
  const key=c.subject+'::'+String(c.front||'').trim().toLowerCase();
- assert(!allKeys.has(key),'No duplicate fronts: '+key);
+ if(allKeys.has(key))duplicateFronts.push({id:c.id,front:c.front});
  allKeys.add(key);existingIDs.add(c.id);
  assert(c.mock===true && c.taught===true && c.scope==='mock' && c.active===true && c.kind==='short' && c.strictRecall===true);
  assert(mockEligibleCard(c),c.id+' must qualify for mock');
@@ -42,6 +42,7 @@ for(const c of newCards){
   rejected++;
  }
 }
+assert.equal(duplicateFronts.length,0,'Duplicate existing fronts: '+JSON.stringify(duplicateFronts));
 assert.deepEqual(tally,{Physics:32,Chemistry:32,Maths:33});
 assert.equal(cloze,6);
 assert(methods.size>=7,'Varied flashcard styles');
