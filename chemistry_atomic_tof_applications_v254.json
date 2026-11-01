@@ -1,0 +1,789 @@
+{
+  "version": "v254",
+  "createdAt": "2026-11-01",
+  "scope": "AQA 7404 AS Chemistry 3.1.1.1–3.1.1.3 Atomic Structure and TOF mass spectrometry in taught school mock",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/as-level/chemistry-7404/specification/subject-content/physical-chemistry",
+  "notes": "30 original, short question-and-answer numerical/factual applications; not a complete spec or multi-mark numerical examiner-marking certificate.",
+  "cards": [
+    {
+      "id": "task1_v254_chem_atomic_tof_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An element contains 69% isotope 63 and 31% isotope 65. Calculate relative atomic mass.",
+      "back": "63.62.",
+      "accept": [
+        "63.62.",
+        "63.62",
+        "(63×69+65×31)/100=63.62"
+      ],
+      "reject": [
+        "64.00.",
+        "63.31."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_02",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Chlorine has isotopes 35 at 75% and 37 at 25%. Calculate relative atomic mass.",
+      "back": "35.5.",
+      "accept": [
+        "35.5.",
+        "35.50",
+        "(35×75+37×25)/100=35.5"
+      ],
+      "reject": [
+        "36.0.",
+        "35.25."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An element has isotope 24 (79%), 25 (10%) and 26 (11%). Calculate relative atomic mass.",
+      "back": "24.32.",
+      "accept": [
+        "24.32.",
+        "24.32",
+        "(24×79+25×10+26×11)/100=24.32"
+      ],
+      "reject": [
+        "24.21.",
+        "25.00."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An element has equally abundant isotopes of masses 52 and 54. Calculate relative atomic mass.",
+      "back": "53.",
+      "accept": [
+        "53.",
+        "53.0",
+        "(52+54)/2 = 53"
+      ],
+      "reject": [
+        "52.",
+        "54."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_05",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ²⁷Al³⁺ (proton number 13), give its number of electrons.",
+      "back": "10.",
+      "accept": [
+        "10.",
+        "10 electrons",
+        "13−3=10 electrons"
+      ],
+      "reject": [
+        "13.",
+        "16."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_06",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ⁵⁶Fe²⁺ (proton number 26), give the number of neutrons.",
+      "back": "30.",
+      "accept": [
+        "30.",
+        "30 neutrons",
+        "56−26=30"
+      ],
+      "reject": [
+        "28.",
+        "26."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_07",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "For ³⁷Cl⁻ (proton number 17), give the number of electrons.",
+      "back": "18.",
+      "accept": [
+        "18.",
+        "18 electrons",
+        "17+1=18"
+      ],
+      "reject": [
+        "17.",
+        "16."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What is the relative charge of an electron?",
+      "back": "−1.",
+      "accept": [
+        "−1.",
+        "-1",
+        "negative one"
+      ],
+      "reject": [
+        "+1.",
+        "0."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_09",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Isotopes have the same number of protons but differ in which nuclear particle?",
+      "back": "Neutrons.",
+      "accept": [
+        "Neutrons.",
+        "neutron",
+        "Number of neutrons differs."
+      ],
+      "reject": [
+        "Protons.",
+        "Electrons always differ."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_10",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What m/z is expected for a singly charged ²⁴Mg⁺ ion?",
+      "back": "24.",
+      "accept": [
+        "24.",
+        "24 m/z",
+        "m/z=24"
+      ],
+      "reject": [
+        "12.",
+        "48."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_11",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "What m/z is expected for a doubly charged ²⁴Mg²⁺ ion?",
+      "back": "12.",
+      "accept": [
+        "12.",
+        "12 m/z",
+        "m/z=24/2=12"
+      ],
+      "reject": [
+        "24.",
+        "48."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_12",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Singly charged TOF ions of masses 20 and 25 are given equal kinetic energy. Find t₂₅/t₂₀ to 3 s.f.",
+      "back": "1.12.",
+      "accept": [
+        "1.12.",
+        "1.118",
+        "√(25/20)=1.118"
+      ],
+      "reject": [
+        "1.25.",
+        "0.894."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_13",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Under equal kinetic energies and equal charges, how does TOF drift time scale with ion mass?",
+      "back": "t is proportional to √m.",
+      "accept": [
+        "t is proportional to √m.",
+        "time proportional to square root of mass",
+        "t ∝ sqrt(m)"
+      ],
+      "reject": [
+        "t is proportional to m².",
+        "t is inversely proportional to m."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_14",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An ion has mass 6.0×10⁻²⁶ kg and kinetic energy 1.2×10⁻¹⁵ J. Calculate speed.",
+      "back": "2.0×10⁵ m s⁻¹.",
+      "accept": [
+        "2.0×10⁵ m s⁻¹.",
+        "200000 m/s",
+        "2e5 m s^-1"
+      ],
+      "reject": [
+        "4.0×10⁵ m s⁻¹.",
+        "2.0×10⁻⁵ m s⁻¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_15",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Calculate KE for an ion of mass 4.0×10⁻²⁶ kg travelling at 2.0×10⁵ m s⁻¹.",
+      "back": "8.0×10⁻¹⁶ J.",
+      "accept": [
+        "8.0×10⁻¹⁶ J.",
+        "8e-16 J",
+        "0.5×4e-26×(2e5)²=8e-16 J"
+      ],
+      "reject": [
+        "1.6×10⁻¹⁵ J.",
+        "8.0×10¹⁶ J."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_16",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An ion travels 1.2 m through a drift tube at 3.0×10⁴ m s⁻¹. Find travel time.",
+      "back": "4.0×10⁻⁵ s.",
+      "accept": [
+        "4.0×10⁻⁵ s.",
+        "4e-5 s",
+        "40 µs"
+      ],
+      "reject": [
+        "2.5×10⁴ s.",
+        "4.0×10⁵ s."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_17",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In a TOF mass spectrometer, what type of signal is recorded when an ion reaches the detector?",
+      "back": "An electrical signal.",
+      "accept": [
+        "An electrical signal.",
+        "electric current",
+        "A current or electrical pulse is detected."
+      ],
+      "reject": [
+        "A sound wave.",
+        "An optical colour is measured directly."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_18",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "In a TOF mass spectrum, what quantity is plotted horizontally for charged species?",
+      "back": "Mass-to-charge ratio (m/z).",
+      "accept": [
+        "Mass-to-charge ratio (m/z).",
+        "m/z",
+        "mass divided by charge"
+      ],
+      "reject": [
+        "Atomic number alone.",
+        "Number of neutrons."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_19",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Write the first ionisation equation for gaseous sodium atoms.",
+      "back": "Na(g) → Na⁺(g) + e⁻.",
+      "accept": [
+        "Na(g) → Na⁺(g) + e⁻.",
+        "Na(g) -> Na+(g) + e-",
+        "Na(g) = Na+(g) + electron"
+      ],
+      "reject": [
+        "Na⁺(g) → Na²⁺(g) + e⁻.",
+        "Na(s) → Na⁺(aq) + e⁻."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_20",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is the third ionisation energy of Mg far greater than the second?",
+      "back": "The third electron is removed from a closer inner shell with less shielding.",
+      "accept": [
+        "The third electron is removed from a closer inner shell with less shielding.",
+        "After removing the 3s electrons, the next comes from the lower-energy 2p shell.",
+        "It is an inner-shell electron and is more strongly attracted to the nucleus."
+      ],
+      "reject": [
+        "The third electron is further from the nucleus.",
+        "The third electron is easier to remove because the ion is positive."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_21",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A large jump occurs between second and third successive ionisation energies. How many outer-shell electrons does the atom have?",
+      "back": "2.",
+      "accept": [
+        "2.",
+        "two",
+        "2 outer-shell electrons"
+      ],
+      "reject": [
+        "1.",
+        "3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_22",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give the ground-state electron configuration of chromium, Z=24, after [Ar].",
+      "back": "3d⁵ 4s¹.",
+      "accept": [
+        "3d⁵ 4s¹.",
+        "3d5 4s1",
+        "[Ar] 3d5 4s1"
+      ],
+      "reject": [
+        "3d⁴ 4s².",
+        "3d⁶ 4s⁰."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_23",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give the ground-state electron configuration of copper, Z=29, after [Ar].",
+      "back": "3d¹⁰ 4s¹.",
+      "accept": [
+        "3d¹⁰ 4s¹.",
+        "3d10 4s1",
+        "[Ar] 3d10 4s1"
+      ],
+      "reject": [
+        "3d⁹ 4s².",
+        "3d¹¹."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_24",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give the electron configuration of Fe²⁺, Z=26, after [Ar].",
+      "back": "3d⁶.",
+      "accept": [
+        "3d⁶.",
+        "3d6",
+        "[Ar] 3d6"
+      ],
+      "reject": [
+        "3d⁴ 4s².",
+        "3d⁸."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_25",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Give the electron configuration of Fe³⁺, Z=26, after [Ar].",
+      "back": "3d⁵.",
+      "accept": [
+        "3d⁵.",
+        "3d5",
+        "[Ar] 3d5"
+      ],
+      "reject": [
+        "3d⁶.",
+        "3d³ 4s²."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_26",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is first ionisation energy lower for Al than Mg across Period 3?",
+      "back": "The electron removed from Al is in the higher-energy 3p subshell.",
+      "accept": [
+        "The electron removed from Al is in the higher-energy 3p subshell.",
+        "Al loses a higher-energy 3p electron, not a 3s electron.",
+        "The Al outer electron is in 3p and easier to remove."
+      ],
+      "reject": [
+        "Al has fewer protons than Mg.",
+        "The electron removed from Al is from a 2p orbital."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_27",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why is first ionisation energy lower for S than P across Period 3?",
+      "back": "Sulfur has a paired 3p electron experiencing extra electron–electron repulsion.",
+      "accept": [
+        "Sulfur has a paired 3p electron experiencing extra electron–electron repulsion.",
+        "Paired electrons in sulfur's 3p subshell repel one another.",
+        "S has a paired 3p electron, unlike phosphorus's three unpaired 3p electrons."
+      ],
+      "reject": [
+        "Sulfur has fewer protons.",
+        "Phosphorus has more electron shielding from an extra inner shell."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_28",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "Why do successive ionisation energies usually rise for the same atom?",
+      "back": "The remaining electrons are attracted more strongly by an increasingly positive ion.",
+      "accept": [
+        "The remaining electrons are attracted more strongly by an increasingly positive ion.",
+        "The ion becomes more positive so remaining electrons are harder to remove.",
+        "Removing electrons increases attraction on those left."
+      ],
+      "reject": [
+        "The nuclear charge drops after each electron is removed.",
+        "Successive electrons are easier to remove because the ion becomes neutral."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_29",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "A mass spectrum has a singly charged molecular-ion peak at m/z=88. What is the relative molecular mass?",
+      "back": "88.",
+      "accept": [
+        "88.",
+        "Mr=88",
+        "88 (for a singly charged molecular ion)"
+      ],
+      "reject": [
+        "44.",
+        "176."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v254_chem_atomic_tof_30",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "revisionTopic": "Atomic structure",
+      "specRef": "3.1.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "front": "An atom has proton number 12, mass number 25, and a 2+ charge. Find neutron and electron counts.",
+      "back": "13 neutrons and 10 electrons.",
+      "accept": [
+        "13 neutrons and 10 electrons.",
+        "13 neutrons; 10 electrons",
+        "n=13, e=10"
+      ],
+      "reject": [
+        "13 neutrons and 14 electrons.",
+        "12 neutrons and 10 electrons."
+      ],
+      "strictRecall": true
+    }
+  ]
+}

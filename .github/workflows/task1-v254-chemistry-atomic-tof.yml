@@ -1,0 +1,22 @@
+name: Task 1 v254 Chemistry atomic and TOF applications
+on:
+  pull_request:
+    paths:
+      - 'chemistry_atomic_tof_applications_v254.json'
+      - 'tests/task1-v254-chemistry-atomic-tof.cjs'
+      - 'tests/task1-v253-physics-waves.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v254-chemistry-atomic-tof.yml'
+  push:
+    branches: [main]
+jobs:
+  chemistry-tof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v253-physics-waves.cjs
+      - run: node tests/task1-v254-chemistry-atomic-tof.cjs

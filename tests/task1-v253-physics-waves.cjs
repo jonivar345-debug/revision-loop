@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('physics_waves_applications_v253.json'),deck=json('deck.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v253');assert.equal(bank.cards.length,34);assert.equal(deck.cards.length,3345);
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,39);assert.equal(urls[37],'maths_first_mock_pure_challenges_v252.json');assert.equal(urls[38],'physics_waves_applications_v253.json');
+assert(urls.length>=39);assert.equal(urls[37],'maths_first_mock_pure_challenges_v252.json');assert.equal(urls[38],'physics_waves_applications_v253.json');
 assert(sw.includes("'./physics_waves_applications_v253.json'"));assert(sw.includes('-v253-physics-waves'));
 const before=[...deck.cards,...urls.slice(0,38).flatMap(p=>json(p).cards||[])];
 const ids=new Set(before.map(c=>c.id)),fronts=new Set(before.filter(c=>c.subject==='Physics').map(c=>c.front.trim().toLowerCase()));
