@@ -1,0 +1,22 @@
+name: Task 1 v253 Physics waves calculations and optics
+on:
+  pull_request:
+    paths:
+      - 'physics_waves_applications_v253.json'
+      - 'tests/task1-v253-physics-waves.cjs'
+      - 'tests/task1-v252-maths-first-pure.cjs'
+      - 'app.js'
+      - 'sw.js'
+      - '.github/workflows/task1-v253-physics-waves.yml'
+  push:
+    branches: [main]
+jobs:
+  physics-waves:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/task1-v252-maths-first-pure.cjs
+      - run: node tests/task1-v253-physics-waves.cjs

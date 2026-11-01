@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('maths_first_mock_pure_challenges_v252.json'),deck=json('deck.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v252');assert.equal(bank.cards.length,20);assert.equal(deck.cards.length,3345);
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(files.length,38);assert.equal(files[36],'physics_electricity_applications_v250.json');assert.equal(files[37],'maths_first_mock_pure_challenges_v252.json');
+assert(files.length>=38);assert.equal(files[36],'physics_electricity_applications_v250.json');assert.equal(files[37],'maths_first_mock_pure_challenges_v252.json');
 assert(sw.includes("'./maths_first_mock_pure_challenges_v252.json'"));assert(sw.includes('-v252-maths-first-pure'));
 const old=[...deck.cards,...files.slice(0,37).flatMap(p=>json(p).cards||[])];
 const oldIds=new Set(old.map(c=>c.id)),oldFronts=new Set(old.filter(c=>c.subject==='Maths').map(c=>c.front.trim().toLowerCase()));
