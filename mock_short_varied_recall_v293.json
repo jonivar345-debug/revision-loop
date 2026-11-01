@@ -1,0 +1,961 @@
+{
+  "version": "v293",
+  "createdAt": "2026-11-01",
+  "scope": "36 concise, school-mock-only AS Physics, taught AS/A2 Chemistry and first-mock Year 1 Pure Maths retrieval cards. Deliberately not long exam questions.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+    "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content"
+  ],
+  "quality": "One assessable point per short card. Explicit second accepted form and two incorrect distractors checked against the real strict marker. One opt-in N-unit numerical card.",
+  "cards": [
+    {
+      "id": "task1_v293_physics_card_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Forces on slopes",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "For weight W on a slope of angle θ, what acts down the slope?",
+      "back": "W sinθ",
+      "accept": [
+        "W sinθ",
+        "W sin theta"
+      ],
+      "reject": [
+        "W cosθ",
+        "W tanθ"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Forces on slopes",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "On an incline with no other perpendicular forces, what is the normal reaction?",
+      "back": "W cosθ",
+      "accept": [
+        "W cosθ",
+        "mg cosθ"
+      ],
+      "reject": [
+        "W sinθ",
+        "mg tanθ"
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Forces on slopes",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "A 12 N weight is on a 30° slope. Find its down-slope component.",
+      "back": "6 N",
+      "accept": [
+        "6 N",
+        "6.0 N"
+      ],
+      "reject": [
+        "12 N",
+        "10.4 N"
+      ],
+      "strictRecall": true,
+      "numericRecall": {
+        "value": 6,
+        "expected": "6 N",
+        "units": [
+          {
+            "symbol": "N",
+            "toBase": 1
+          }
+        ],
+        "allowUnitless": false,
+        "tolerance": 1e-9
+      }
+    },
+    {
+      "id": "task1_v293_physics_card_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Motion graphs",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What graph feature proves a moving body has reversed direction?",
+      "back": "Velocity changes sign.",
+      "accept": [
+        "Velocity changes sign.",
+        "Its velocity crosses zero and changes sign."
+      ],
+      "reject": [
+        "Acceleration is zero.",
+        "Speed stays positive."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Motion graphs",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "How is total distance found from a velocity–time graph with negative regions?",
+      "back": "Add the magnitudes of all areas.",
+      "accept": [
+        "Add the magnitudes of all areas.",
+        "Sum the absolute values of the areas."
+      ],
+      "reject": [
+        "Subtract all areas below the axis.",
+        "Take only the positive areas."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Moments",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "What is the resultant force of an ideal couple?",
+      "back": "Zero.",
+      "accept": [
+        "Zero.",
+        "The forces cancel as a resultant."
+      ],
+      "reject": [
+        "Twice either force.",
+        "A force along the centre line."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Momentum",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Mechanics and materials",
+      "specRef": "3.4.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "What does the signed area under a force–time graph give?",
+      "back": "Impulse (change in momentum).",
+      "accept": [
+        "Impulse (change in momentum).",
+        "Change in momentum."
+      ],
+      "reject": [
+        "Change in kinetic energy.",
+        "Displacement."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Stationary waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "How do adjacent antinodes of a stationary wave oscillate?",
+      "back": "In antiphase (180° apart).",
+      "accept": [
+        "In antiphase (180° apart).",
+        "With a phase difference of 180°."
+      ],
+      "reject": [
+        "In phase.",
+        "With different frequencies."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Optical fibres",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "For total internal reflection at a fibre core boundary, which n is larger?",
+      "back": "The core's refractive index.",
+      "accept": [
+        "The core's refractive index.",
+        "n_core > n_cladding."
+      ],
+      "reject": [
+        "The cladding's refractive index.",
+        "They must be equal."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Diffraction",
+      "courseTopic": "Waves",
+      "revisionTopic": "Waves",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What happens to diffraction spread as a single slit is narrowed?",
+      "back": "The angular spread increases.",
+      "accept": [
+        "The angular spread increases.",
+        "The wave diffracts more widely."
+      ],
+      "reject": [
+        "It becomes narrower.",
+        "The wavelength becomes zero."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Internal resistance",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "On a cell's terminal p.d.–current graph, what is the gradient?",
+      "back": "−r, where r is internal resistance.",
+      "accept": [
+        "−r, where r is internal resistance.",
+        "Negative internal resistance."
+      ],
+      "reject": [
+        "The emf.",
+        "Positive internal resistance."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_physics_card_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Potential dividers",
+      "courseTopic": "Electricity",
+      "revisionTopic": "Electricity",
+      "specRef": "3.5.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "In a potential divider, what happens to Vout across the lower resistor as its resistance rises?",
+      "back": "Vout increases.",
+      "accept": [
+        "Vout increases.",
+        "The output p.d. rises, at fixed input and upper resistance."
+      ],
+      "reject": [
+        "Vout decreases.",
+        "The supply emf increases."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Organic analysis",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "Which carbonyl test gives an orange precipitate with aldehydes and ketones?",
+      "back": "2,4-DNPH.",
+      "accept": [
+        "2,4-DNPH.",
+        "2,4-dinitrophenylhydrazine."
+      ],
+      "reject": [
+        "Tollens' reagent.",
+        "Bromine water."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_02",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What positive observation identifies an aldehyde with Tollens' reagent?",
+      "back": "A silver mirror forms.",
+      "accept": [
+        "A silver mirror forms.",
+        "A silver deposit forms."
+      ],
+      "reject": [
+        "An orange precipitate forms.",
+        "No visible change occurs."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_03",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What positive observation does an aldehyde give with Fehling's solution?",
+      "back": "A brick-red precipitate.",
+      "accept": [
+        "A brick-red precipitate.",
+        "A red-brown precipitate of copper(I) oxide."
+      ],
+      "reject": [
+        "A silver mirror.",
+        "A cream precipitate."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_04",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "Does a simple ketone normally give a silver mirror with Tollens' reagent?",
+      "back": "No silver mirror.",
+      "accept": [
+        "No silver mirror.",
+        "No positive Tollens' test."
+      ],
+      "reject": [
+        "Yes, a silver mirror.",
+        "A brick-red precipitate always forms."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_05",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "What type of alcohol forms when NaBH₄ reduces a ketone?",
+      "back": "A secondary alcohol.",
+      "accept": [
+        "A secondary alcohol.",
+        "A 2° alcohol."
+      ],
+      "reject": [
+        "A primary alcohol.",
+        "A carboxylic acid."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_06",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Aldehydes and ketones",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "What type of alcohol forms when NaBH₄ reduces an aldehyde?",
+      "back": "A primary alcohol.",
+      "accept": [
+        "A primary alcohol.",
+        "A 1° alcohol."
+      ],
+      "reject": [
+        "A secondary alcohol.",
+        "An ester."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_07",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Optical isomerism",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Why does a racemic mixture have no overall optical rotation?",
+      "back": "Opposite rotations cancel.",
+      "accept": [
+        "Opposite rotations cancel.",
+        "Equal enantiomers rotate light equally and oppositely."
+      ],
+      "reject": [
+        "Both enantiomers are achiral.",
+        "The mixture contains only one enantiomer."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_08",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Equilibrium constant Kp",
+      "courseTopic": "Physical chemistry",
+      "revisionTopic": "Physical chemistry",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "In a Kp expression, where do product partial pressures go?",
+      "back": "In the numerator.",
+      "accept": [
+        "In the numerator.",
+        "On top of the equilibrium expression."
+      ],
+      "reject": [
+        "In the denominator.",
+        "They are omitted."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_09",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Carboxylic acids and esters",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "What products result from alkaline hydrolysis of a simple ester?",
+      "back": "An alcohol and a carboxylate salt.",
+      "accept": [
+        "An alcohol and a carboxylate salt.",
+        "An alcohol and the salt of a carboxylic acid."
+      ],
+      "reject": [
+        "A ketone and hydrogen.",
+        "An alkene and water."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_10",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Esters and soaps",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "Which two products form when a triglyceride is saponified?",
+      "back": "Soap and glycerol.",
+      "accept": [
+        "Soap and glycerol.",
+        "Long-chain carboxylate salts and glycerol."
+      ],
+      "reject": [
+        "Biodiesel and ethanol.",
+        "Only fatty acids."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_11",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Biodiesel",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.9.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "What class of compound makes up biodiesel from vegetable oils?",
+      "back": "Fatty acid methyl esters.",
+      "accept": [
+        "Fatty acid methyl esters.",
+        "Methyl esters of long-chain carboxylic acids."
+      ],
+      "reject": [
+        "Glycerol only.",
+        "Alkanes only."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_chemistry_card_12",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Acylation",
+      "courseTopic": "Organic chemistry",
+      "revisionTopic": "Organic chemistry",
+      "specRef": "3.3.9.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What functional group forms when an acyl chloride reacts with a primary amine?",
+      "back": "An amide.",
+      "accept": [
+        "An amide.",
+        "An N-substituted amide."
+      ],
+      "reject": [
+        "An aldehyde.",
+        "A ketone."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "To start a proof about odd integer n, what substitution can you make?",
+      "back": "n = 2k + 1, k an integer.",
+      "accept": [
+        "n = 2k + 1, k an integer.",
+        "n=2k+1 for integer k."
+      ],
+      "reject": [
+        "n = 2k only.",
+        "n = k/2."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "If AB=(3,6) and BC=(2,4), what proves A, B and C are collinear?",
+      "back": "AB and BC are scalar multiples.",
+      "accept": [
+        "AB and BC are scalar multiples.",
+        "BC=(2/3)AB, so they are parallel."
+      ],
+      "reject": [
+        "The vectors have equal magnitudes.",
+        "AB and BC are perpendicular."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "If A=(3,−1) and B=(−2,5), what is vector AB?",
+      "back": "(−5,6).",
+      "accept": [
+        "(−5,6).",
+        "−5i + 6j."
+      ],
+      "reject": [
+        "(5,−6).",
+        "(−5,−6)."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "What transformations give y=f(−2x) from y=f(x)?",
+      "back": "Reflect in y-axis; scale x by 1/2.",
+      "accept": [
+        "Reflect in y-axis; scale x by 1/2.",
+        "Y-axis reflection and horizontal compression by factor 2."
+      ],
+      "reject": [
+        "Reflect in x-axis; stretch x by 2.",
+        "Translate two units left."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Transformations",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Describe y=f(x−4)+2 relative to y=f(x).",
+      "back": "4 right and 2 up.",
+      "accept": [
+        "4 right and 2 up.",
+        "Translate by vector (4,2)."
+      ],
+      "reject": [
+        "4 left and 2 down.",
+        "2 right and 4 up."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Solve |x−2|<3 as a single interval.",
+      "back": "−1 < x < 5.",
+      "accept": [
+        "−1 < x < 5.",
+        "x is between −1 and 5, excluding ends."
+      ],
+      "reject": [
+        "x < −1 or x > 5.",
+        "−5 < x < 1."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Coordinate geometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "For x²+y²=25, what is the tangent gradient at (4,3)?",
+      "back": "−4/3.",
+      "accept": [
+        "−4/3.",
+        "Negative four thirds."
+      ],
+      "reject": [
+        "3/4.",
+        "4/3."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Quadratics",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "What discriminant condition gives two distinct real quadratic roots?",
+      "back": "b²−4ac > 0.",
+      "accept": [
+        "b²−4ac > 0.",
+        "The discriminant is strictly positive."
+      ],
+      "reject": [
+        "b²−4ac < 0.",
+        "b²−4ac = 0."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Sequences and series",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "explain",
+      "front": "For an infinite geometric series to converge, what must r satisfy?",
+      "back": "|r| < 1.",
+      "accept": [
+        "|r| < 1.",
+        "−1 < r < 1."
+      ],
+      "reject": [
+        "r > 1.",
+        "r = 1."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "At x=a, what condition makes f(x) stationary?",
+      "back": "f′(a)=0.",
+      "accept": [
+        "f′(a)=0.",
+        "The derivative is zero at x=a."
+      ],
+      "reject": [
+        "f(a)=0.",
+        "f′′(a)=0 always."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Integration",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.9",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "In a definite integral, how does area below the x-axis contribute?",
+      "back": "As a negative signed area.",
+      "accept": [
+        "As a negative signed area.",
+        "Negative contribution to the integral."
+      ],
+      "reject": [
+        "Always as positive area.",
+        "It contributes zero."
+      ],
+      "strictRecall": true
+    },
+    {
+      "id": "task1_v293_maths_card_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Year 1 Pure",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "calculation",
+      "front": "For 0°≤θ<360°, solve sinθ=1/2.",
+      "back": "30° and 150°.",
+      "accept": [
+        "30° and 150°.",
+        "θ=30°, 150°."
+      ],
+      "reject": [
+        "30° only.",
+        "30° and 330°."
+      ],
+      "strictRecall": true
+    }
+  ]
+}
