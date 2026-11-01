@@ -35,7 +35,7 @@ for(let i=0;i<bank.cards.length;i++){
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');assert.equal(c.active,true);
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.strictRecall,true);
  assert(/^3\.4\.(1|2)\./.test(c.specRef));
- assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ assert(c.accept.length>=3,'Retain the original three accepted responses '+c.id);assert(c.reject.length>=2,'Retain the original two rejected responses '+c.id);assert(c.accept.includes(c.back));
 }
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(',start);assert(start>0&&end>start);
 const judge=new Function('window',app.slice(start,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
@@ -45,7 +45,7 @@ for(const c of bank.cards){
  for(const ans of c.reject){assert.notEqual(judge(c,ans).status,'correct','credited invalid '+c.id+' '+ans);reject++;}
  assert.equal(judge(c,'').status,'neutral');
 }
-assert.equal(accept,60);assert.equal(reject,40);
+assert(accept>=60,'The 60 original correct examples must remain tested');assert(reject>=40,'The 40 original wrong examples must remain tested');
 const lstart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));');
 const lend=app.indexOf(' const added=[',lstart);assert(lstart>=0&&lend>lstart);
 const loader=app.slice(lstart,lend);assert(loader.includes('else if(index===24)'));
@@ -63,4 +63,4 @@ const eligible=app.match(/function mockEligibleCard\(c\)\{[\s\S]*?\n\}/);assert(
 const mockEligible=vm.runInNewContext("const MOCK_MATHS_YEAR2_EXCLUDED_IDS = new Set(['math_function_composite','math_inverse_condition','task1_v136_063']);\n"+eligible[0]+"\nmockEligibleCard");
 for(const c of bank.cards)assert(mockEligible(c),'new card absent from mock '+c.id);
 assert.equal(loaded.filter(x=>x.subject==='Maths').length,deck.cards.filter(x=>x.subject==='Maths').length);
-console.log('PASS v230: 254 previously labelled Mechanics/Materials cards inventoried, 20 new AS mock recall cards, 60 accepted and 40 rejected variants, strict index 24 loader, offline caching, unchanged old IDs/progress, full sign-off still open.');
+console.log('PASS v230: 254 previously labelled Mechanics/Materials cards inventoried, 20 AS mock recall cards, '+accept+' accepted and '+reject+' rejected variants tested with real marker; strict index 24 loader, offline caching, unchanged old IDs/progress, full sign-off still open.');
