@@ -67,6 +67,9 @@ jobs:
           node tests/task1-v239b-amount-applications.cjs
           node tests/task1-v243-physics-particles-applications.cjs
           node tests/task1-v245-maths-pure-applied.cjs
+          node tests/task1-v246-maths-circle-geometry.cjs
+          node tests/task1-v247-chemistry-energetics-applications.cjs
+          node tests/task1-v240-chemistry-energetics-crosswalk.cjs
           node tests/task1-v215-rp4-recall-loader.cjs
           node tests/chemistry-organic-v42.cjs
           node tests/chemistry-atomic-v43.cjs
