@@ -5,7 +5,7 @@ const bank=j('chemistry_organic_drawing_practice_v267.json'),app=read('app.js'),
 assert.equal(bank.version,'v267');assert.equal(bank.questions.length,4);
 assert.equal(j('deck.json').cards.length,3345);
 const urls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,30);
+assert(urls.length>=30,'v267 must retain all first 30 original practice banks');
 assert.equal(urls[28],'physics_particle_exchange_diagram_practice_v265.json');
 assert.equal(urls[29],'chemistry_organic_drawing_practice_v267.json');
 assert(sw.includes("'./chemistry_organic_drawing_practice_v267.json'"));assert(sw.includes('-v267-chemistry'));
