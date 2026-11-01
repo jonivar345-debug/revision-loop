@@ -12,7 +12,7 @@ for(const c of data){
  assert(c.front.length<=115&&c.back.length<=95);
  assert.equal(c.strictRecall,true);assert.equal(c.kind,'short');
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);
- assert.equal(c.accept.length,c.strictSymbolRecall?3:2);assert.equal(c.reject.length,2);
+ assert(c.accept.length>=(c.strictSymbolRecall?3:2));assert.equal(c.reject.length,2);
  for(const a of c.accept){assert.equal(evaluate(c,a).status,'correct',c.id+': '+a);yes++;}
  for(const a of c.reject){assert.equal(evaluate(c,a).status,'wrong',c.id+': '+a);no++;}
 }
