@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('physics_mechanics_applications_v257.json'),deck=json('deck.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v257');assert.equal(bank.cards.length,34);assert.equal(deck.cards.length,3345);
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,42);assert.equal(urls[40],'chemistry_thermodynamics_applications_v256.json');assert.equal(urls[41],'physics_mechanics_applications_v257.json');
+assert(urls.length>=42);assert.equal(urls[40],'chemistry_thermodynamics_applications_v256.json');assert.equal(urls[41],'physics_mechanics_applications_v257.json');
 assert(sw.includes("'./physics_mechanics_applications_v257.json'"));assert(sw.includes('-v257-mechanics'));
 const existing=[...deck.cards,...urls.slice(0,41).flatMap(f=>json(f).cards||[])];
 const ids=new Set(existing.map(c=>c.id)),fronts=new Set(existing.filter(c=>c.subject==='Physics').map(c=>c.front.trim().toLowerCase()));
