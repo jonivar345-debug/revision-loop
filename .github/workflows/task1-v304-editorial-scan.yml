@@ -1,0 +1,9 @@
+name: Task 1 v304 flashcard editorial scan
+on: [pull_request]
+jobs:
+  editorial-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v304-legacy-mock-editorial-scan.cjs
+      - run: node tests/task1-v304-shortened-card-marker-regression.cjs

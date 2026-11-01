@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
+const app=read('app.js'),paths=['deck.json',...[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1])];
+const core=j('deck.json');
+const a=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),b=app.indexOf(' const added=[',a);
+const all=new Function('cards','extraFlashBanks',app.slice(a,b)+'\nreturn cards;')([...core.cards],paths.slice(1).map(j));
+const selectA=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),selectB=app.indexOf('function startMockSession(){',selectA);
+const eligible=new Function(app.slice(selectA,selectB)+'\nreturn mockEligibleCard;')();
+const cards=all.filter(eligible);
+const findBank=new Map();
+for(const path of paths){for(const c of (j(path).cards||[]))if(!findBank.has(c.id))findBank.set(c.id,path);}
+const long=cards.filter(c=>c.front.length>125||c.back.length>180).map(c=>({id:c.id,bank:findBank.get(c.id),subject:c.subject,topic:c.topic,front:c.front,back:c.back,frontLength:c.front.length,backLength:c.back.length}));
+const multi=cards.filter(c=>/^\s*(?:explain|describe|outline|discuss|compare|evaluate|give reasons? why|what are the reasons)/i.test(c.front)&&String(c.back||'').length>90).map(c=>({id:c.id,bank:findBank.get(c.id),subject:c.subject,front:c.front,back:c.back}));
+const maths=cards.filter(c=>c.subject==='Maths'&&/(proof|collinear|vectors|turning point|stationary point)/i.test(c.front+' '+c.topic)).map(c=>({id:c.id,bank:findBank.get(c.id),front:c.front,back:c.back,strict:c.strictRecall===true}));
+const report={version:'v304',all:all.length,mock:cards.length,longFrontOrBack:long,multiWorded:multi.slice(0,80),weakMathsSample:maths.slice(0,120),counts:{long:long.length,multi:multi.length,mathsMath:maths.length}};
+console.log('V304_EDITORIAL_DIAGNOSTIC_BEGIN');console.log(JSON.stringify(report,null,2));console.log('V304_EDITORIAL_DIAGNOSTIC_END');
+assert.equal(all.length,4313);assert.equal(cards.length,3341);
+assert.equal(long.length,0,'All 38 previously overlong mock flashcards must now be concise');
+console.log('PASS v304 factual and length candidates captured; requires content-level manual review.');

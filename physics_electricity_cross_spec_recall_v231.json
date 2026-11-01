@@ -151,7 +151,7 @@
       "courseTopic": "RP5 Resistivity",
       "revisionTopic": "RP5 Resistivity",
       "specRef": "3.5.1.3",
-      "front": "On a graph of resistance R against wire length L, gradient m is measured for a uniform wire of area A. What is its resistivity?",
+      "front": "Uniform wire: R–length graph gradient m, cross-section A. Find resistivity ρ.",
       "back": "ρ = mA.",
       "accept": [
         "ρ = mA.",
@@ -340,7 +340,7 @@
       "courseTopic": "Potential dividers",
       "revisionTopic": "Potential dividers",
       "specRef": "3.5.1.5",
-      "front": "A load of resistance RL is placed across the lower resistor R2 in an ideal-supply potential divider. What effective lower resistance should be used?",
+      "front": "Divider: load RL is across the lower resistor R2. What effective lower resistance do you use?",
       "back": "Rlower = R2RL/(R2 + RL), the parallel combination.",
       "accept": [
         "Rlower = R2RL/(R2 + RL), the parallel combination.",
@@ -394,7 +394,7 @@
       "courseTopic": "Internal resistance",
       "revisionTopic": "Internal resistance",
       "specRef": "3.5.1.6",
-      "front": "For a cell with emf ε, internal resistance r and delivered current I, what is the rate of energy transfer inside the cell's internal resistance?",
+      "front": "Cell with internal resistance r and current I: rate of internal energy loss?",
       "back": "P_lost = I²r.",
       "accept": [
         "P_lost = I²r.",
@@ -421,7 +421,7 @@
       "courseTopic": "Internal resistance",
       "revisionTopic": "Internal resistance",
       "specRef": "3.5.1.6",
-      "front": "Two identical cells of emf ε and internal resistance r are connected in parallel to an external resistance R. What current does the simple cell model predict?",
+      "front": "Two identical cells in parallel (emf ε, internal r each) feed load R. Find current I.",
       "back": "I = ε/(R + r/2).",
       "accept": [
         "I = ε/(R + r/2).",
