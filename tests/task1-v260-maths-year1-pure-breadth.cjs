@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const deck=json('deck.json'),bank=json('maths_year1_pure_breadth_v260.json'),app=read('app.js'),sw=read('sw.js');
 assert.equal(bank.version,'v260');assert.equal(bank.cards.length,38);assert.equal(deck.cards.length,3345);
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,43);assert.equal(urls[41],'physics_mechanics_applications_v257.json');assert.equal(urls[42],'maths_year1_pure_breadth_v260.json');
+assert(urls.length>=43,'v260 must retain all first 43 appended banks');assert.equal(urls[41],'physics_mechanics_applications_v257.json');assert.equal(urls[42],'maths_year1_pure_breadth_v260.json');
 assert(sw.includes("'./maths_year1_pure_breadth_v260.json'"));assert(sw.includes('-v260-maths-pure'));
 const existing=[...deck.cards,...urls.slice(0,42).flatMap(p=>json(p).cards||[])];
 const ids=new Set(existing.map(c=>c.id)),fronts=new Set(existing.filter(c=>c.subject==='Maths').map(c=>c.front.trim().toLowerCase()));
