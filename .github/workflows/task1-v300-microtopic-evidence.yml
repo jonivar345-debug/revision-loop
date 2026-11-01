@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: node tests/task1-v298-mixed-short-cloze-mock.cjs
       - run: node tests/task1-v300-mock-microtopic-inventory.cjs
