@@ -21,12 +21,14 @@
         "brick red solid",
         "red precipitate of Cu2O",
         "copper(I) oxide precipitate",
-        "brick-red copper(I) oxide precipitate"
+        "brick-red copper(I) oxide precipitate",
+        "Fehling positive aldehyde test produces a red solid of Cu2O."
       ],
       "reject": [
         "remains blue",
         "silver mirror",
-        "white precipitate"
+        "white precipitate",
+        "An aldehyde gives a clear colourless solution after Fehling's test."
       ],
       "strictRecall": true,
       "taught": true,
@@ -51,12 +53,14 @@
         "ketone",
         "a ketone",
         "ketone compound",
-        "a ketone group"
+        "a ketone group",
+        "With the choices limited to aldehyde or ketone, unchanged blue suggests ketone."
       ],
       "reject": [
         "aldehyde",
         "carboxylic acid",
-        "primary alcohol"
+        "primary alcohol",
+        "The blue result proves the known carbonyl is an aldehyde."
       ],
       "strictRecall": true,
       "taught": true,
@@ -81,12 +85,14 @@
         "carbon dioxide",
         "co2",
         "carbon dioxide gas",
-        "carbon dioxide co2"
+        "carbon dioxide co2",
+        "The released gas is CO2."
       ],
       "reject": [
         "hydrogen",
         "oxygen",
-        "chlorine"
+        "chlorine",
+        "Carboxylic acid and carbonate produce hydrogen gas."
       ],
       "strictRecall": true,
       "taught": true,
@@ -111,12 +117,14 @@
         "carboxylic acid",
         "an organic carboxylic acid",
         "the carboxylic acid",
-        "the free carboxylic acid"
+        "the free carboxylic acid",
+        "Acid hydrolysis produces the free carboxylic acid."
       ],
       "reject": [
         "carboxylate salt",
         "soap",
-        "amide"
+        "amide",
+        "Acid ester hydrolysis directly produces the sodium carboxylate salt."
       ],
       "strictRecall": true,
       "taught": true,
@@ -141,12 +149,14 @@
         "carboxylate salt",
         "carboxylate ion",
         "salt of a carboxylic acid",
-        "carboxylate"
+        "carboxylate",
+        "Base hydrolysis gives a carboxylate ion or its salt before adding acid."
       ],
       "reject": [
         "free carboxylic acid",
         "aldehyde",
-        "ester"
+        "ester",
+        "Alkaline ester hydrolysis initially produces an aldehyde."
       ],
       "strictRecall": true,
       "taught": true,
@@ -171,12 +181,14 @@
         "glycerol",
         "propane-1,2,3-triol",
         "glycerine",
-        "glycerol propane-1,2,3-triol"
+        "glycerol propane-1,2,3-triol",
+        "Hydrolysis liberates propane-1,2,3-triol, glycerol."
       ],
       "reject": [
         "ethanol",
         "methanol",
-        "propan-1-ol"
+        "propan-1-ol",
+        "Hydrolysis of a triglyceride produces propan-1-ol as its three-carbon alcohol."
       ],
       "strictRecall": true,
       "taught": true,
@@ -201,12 +213,14 @@
         "n substituted amide",
         "N-substituted amide",
         "secondary amide",
-        "an n-substituted amide"
+        "an n-substituted amide",
+        "The primary amine forms a secondary amide (N-substituted amide)."
       ],
       "reject": [
         "an ester",
         "a ketone",
-        "a nitrile"
+        "a nitrile",
+        "Acyl chloride and a primary amine give a nitrile as the principal organic product."
       ],
       "strictRecall": true,
       "taught": true,
@@ -231,12 +245,14 @@
         "kpa",
         "kilopascals",
         "kPa to the power one",
-        "kPa^1"
+        "kPa^1",
+        "The equilibrium constant carries pressure units of one kPa."
       ],
       "reject": [
         "kPa^-1",
         "unitless",
-        "mol dm-3"
+        "mol dm-3",
+        "If net pressure exponent is +1, Kp has units kPa^-1."
       ],
       "strictRecall": true,
       "taught": true,
@@ -261,12 +277,14 @@
         "kPa^-1",
         "inverse kilopascals",
         "per kPa",
-        "1/kPa"
+        "1/kPa",
+        "Net exponent minus one gives inverse kilopascals."
       ],
       "reject": [
         "kpa",
         "unitless",
-        "kPa^2"
+        "kPa^2",
+        "Net pressure exponent -1 gives Kp units kPa."
       ],
       "strictRecall": true,
       "taught": true,
@@ -291,12 +309,14 @@
         "decreases by one",
         "pH falls by 1",
         "drops by 1",
-        "one pH unit lower"
+        "one pH unit lower",
+        "Ten times the hydrogen ion concentration lowers pH by one unit."
       ],
       "reject": [
         "pH increases by one",
         "stays unchanged",
-        "falls by ten"
+        "falls by ten",
+        "Increasing hydrogen ion concentration tenfold increases pH by one."
       ],
       "strictRecall": true,
       "taught": true,
