@@ -11,7 +11,7 @@ assert(a>=0&&b>a);
 const eligible=new Function(app.slice(a,b)+'\nreturn mockEligibleCard;')();
 const selected=all.filter(eligible);
 const subjectCounts=Object.fromEntries(['Physics','Chemistry','Maths'].map(sub=>[sub,selected.filter(c=>c.subject===sub).length]));
-assert.equal(all.length,4313);assert.deepEqual(subjectCounts,{Physics:1100,Chemistry:1910,Maths:331});
+assert.equal(all.length,4344);assert.deepEqual(subjectCounts,{Physics:1125,Chemistry:1916,Maths:331});
 const subjects={
  Physics:[
   ['Measurement errors and uncertainty',/uncertaint|systematic error|random error|measurement|precision|accuracy/i],
