@@ -21,11 +21,13 @@
       "accept": [
         "A universal statement is false if even one valid case does not satisfy it.",
         "One counterexample disproves a claim about every value.",
-        "A single allowed failure makes the universal assertion false."
+        "A single allowed failure makes the universal assertion false.",
+        "One valid counterexample makes an all-real-numbers claim false."
       ],
       "reject": [
         "You must check infinitely many values to disprove it.",
-        "One confirming example proves a universal claim."
+        "One confirming example proves a universal claim.",
+        "A universal claim needs two counterexamples before it is disproved."
       ],
       "strictRecall": true,
       "mock": true,
@@ -48,11 +50,13 @@
       "accept": [
         "When every possible case belongs to a finite list that can all be checked.",
         "Check all cases when there are finitely many possibilities.",
-        "It is valid if the set of possible cases is finite and each is verified."
+        "It is valid if the set of possible cases is finite and each is verified.",
+        "Exhaustion checks all cases of a finite domain."
       ],
       "reject": [
         "Checking one case is enough even when others differ.",
-        "It requires an infinite number of checks."
+        "It requires an infinite number of checks.",
+        "A proof by exhaustion checks just one randomly chosen integer."
       ],
       "strictRecall": true,
       "mock": true,
@@ -75,11 +79,13 @@
       "accept": [
         "As 2k for some integer k.",
         "Write it as twice an integer.",
-        "n = 2k where k is an integer."
+        "n = 2k where k is an integer.",
+        "Represent any even integer as 2 times an integer k."
       ],
       "reject": [
         "As 2k+1 for integer k.",
-        "As k/2 for every real k."
+        "As k/2 for every real k.",
+        "An even integer must be written 2k+1."
       ],
       "strictRecall": true,
       "mock": true,
@@ -102,11 +108,13 @@
       "accept": [
         "√(a² + b²).",
         "The square root of a squared plus b squared.",
-        "Use Pythagoras, sqrt(a^2+b^2)."
+        "Use Pythagoras, sqrt(a^2+b^2).",
+        "The vector length is the square root of a squared plus b squared."
       ],
       "reject": [
         "a+b.",
-        "a²+b² without a square root."
+        "a²+b² without a square root.",
+        "The vector length is a+b."
       ],
       "strictRecall": true,
       "mock": true,
@@ -129,11 +137,13 @@
       "accept": [
         "b − a.",
         "Position vector of B minus that of A.",
-        "AB = OB − OA."
+        "AB = OB − OA.",
+        "Endpoint position minus start position gives b-a."
       ],
       "reject": [
         "a − b.",
-        "a + b in every case."
+        "a + b in every case.",
+        "The displacement AB is a-b."
       ],
       "strictRecall": true,
       "mock": true,
@@ -156,11 +166,13 @@
       "accept": [
         "Show AB = k AC for some scalar k.",
         "Prove that AB and AC are parallel by showing one is a multiple of the other.",
-        "Demonstrate one displacement vector is a scalar multiple of the other."
+        "Demonstrate one displacement vector is a scalar multiple of the other.",
+        "AB is a scalar multiple of AC, so these vectors share a line through A."
       ],
       "reject": [
         "Show AB and AC have equal length only.",
-        "Show the x-coordinates all differ."
+        "Show the x-coordinates all differ.",
+        "AB and AC are at 90 degrees to one another."
       ],
       "strictRecall": true,
       "mock": true,
@@ -183,11 +195,13 @@
       "accept": [
         "A horizontal stretch with scale factor 1/a.",
         "Stretch parallel to the x-axis by factor one over a.",
-        "The graph becomes horizontally compressed by factor a."
+        "The graph becomes horizontally compressed by factor a.",
+        "Compress horizontally by factor a, equivalently scale x coordinates by 1/a."
       ],
       "reject": [
         "A vertical stretch of scale factor a.",
-        "A translation a units right."
+        "A translation a units right.",
+        "A horizontal stretch by factor a for a>1."
       ],
       "strictRecall": true,
       "mock": true,
@@ -210,11 +224,13 @@
       "accept": [
         "Reflection in the y-axis.",
         "Reflect the graph across the y-axis.",
-        "Mirror the graph in the vertical axis."
+        "Mirror the graph in the vertical axis.",
+        "Changing x to negative x reflects in the vertical axis."
       ],
       "reject": [
         "Reflection in the x-axis.",
-        "Translate one unit left."
+        "Translate one unit left.",
+        "Reflection in the line y=x."
       ],
       "strictRecall": true,
       "mock": true,
@@ -237,11 +253,13 @@
       "accept": [
         "Translation four units to the right.",
         "Move the graph 4 in the positive x-direction.",
-        "Shift horizontally right by 4."
+        "Shift horizontally right by 4.",
+        "Move the graph four units right."
       ],
       "reject": [
         "Move the graph four units left.",
-        "Stretch the graph vertically by four."
+        "Stretch the graph vertically by four.",
+        "Shift the graph four units left."
       ],
       "strictRecall": true,
       "mock": true,
@@ -264,11 +282,13 @@
       "accept": [
         "There is one repeated real root.",
         "The quadratic has a repeated real solution.",
-        "The two real roots are equal."
+        "The two real roots are equal.",
+        "Discriminant zero means two equal roots; one distinct real value."
       ],
       "reject": [
         "There are two distinct real roots.",
-        "The quadratic has no real roots."
+        "The quadratic has no real roots.",
+        "A zero discriminant means two distinct real roots."
       ],
       "strictRecall": true,
       "mock": true,
@@ -291,11 +311,13 @@
       "accept": [
         "nCr × a^(n−r) × b^r.",
         "The coefficient n choose r times a to n minus r times b to r.",
-        "C(n,r) a^(n-r) b^r."
+        "C(n,r) a^(n-r) b^r.",
+        "Choose n items r at a time then multiply a to n-r and b to r."
       ],
       "reject": [
         "nCr × a^r × b^r for every term.",
-        "nCr × (a+b)^(n-r)."
+        "nCr × (a+b)^(n-r).",
+        "The general term is nCr times a^r times b^(n-r)."
       ],
       "strictRecall": true,
       "mock": true,
@@ -318,11 +340,13 @@
       "accept": [
         "Sₙ = a(1−rⁿ)/(1−r).",
         "a times (1 minus r to the n) over (1 minus r).",
-        "S_n = a(r^n-1)/(r-1)."
+        "S_n = a(r^n-1)/(r-1).",
+        "Multiply first term a by (1-r^n) divided by (1-r)."
       ],
       "reject": [
         "Sₙ = n(a + l)/2.",
-        "Sₙ = a/(1−r) for every finite n."
+        "Sₙ = a/(1−r) for every finite n.",
+        "The geometric sum is a(1+r^n)/(1-r)."
       ],
       "strictRecall": true,
       "mock": true,
