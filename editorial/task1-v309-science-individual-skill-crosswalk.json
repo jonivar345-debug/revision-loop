@@ -12,6 +12,7 @@
     "physics_mechanics_signed_area_couples_recall_v280.json",
     "chemistry_energetics_applications_v247.json",
     "chemistry_thermodynamics_applications_v256.json",
+    "physics_cross_spec_recall_v227.json",
     "chemistry_cross_spec_recall_v227.json",
     "mock_short_recall_and_cloze_v298.json",
     "deck.json"
@@ -23,17 +24,17 @@
   },
   "summary": {
     "rows": 72,
-    "sample": 59,
-    "partial": 13,
+    "sample": 61,
+    "partial": 11,
     "unverified": 0,
     "bySubject": {
       "Physics": {
-        "sample": 36,
-        "partial": 10
+        "sample": 37,
+        "partial": 9
       },
       "Chemistry": {
-        "partial": 3,
-        "sample": 23
+        "partial": 2,
+        "sample": 24
       }
     }
   },
@@ -203,9 +204,10 @@
       "skill": "Distinguish average and instantaneous motion using graph tangents",
       "status": "partial",
       "evidenceIds": [
-        "task1_v298_physics_07"
+        "task1_v298_physics_07",
+        "task1_v227_phy_02"
       ],
-      "notes": "A velocity tangent example exists, but the complete graphical skill has not been examined.",
+      "notes": "Both displacement–time and velocity–time tangent gradients have directly relevant cards; full comparison with average gradients and drawn graph interpretation still needs checking.",
       "id": "P014"
     },
     {
@@ -339,13 +341,13 @@
       "subject": "Physics",
       "specRef": "3.4.1.5",
       "skill": "Apply Newton's first, second and third laws",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
         "task1_v280_phy_mech_card_01",
         "task1_v257_physics_mechanics_19",
         "task1_v230_phy_mech_12"
       ],
-      "notes": "Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly.",
+      "notes": "Three separate mock-eligible cards cover Newton's first law (zero resultant at constant velocity), second law (F=ma) and third-law pairs on distinct bodies. One sample uses a different but related or broader specRef; individual applications still require exam questions.",
       "id": "P025",
       "crossSectionEvidenceIds": [
         "task1_v280_phy_mech_card_01"
@@ -559,9 +561,10 @@
       "skill": "Interpret complete force-extension and stress-strain curves",
       "status": "partial",
       "evidenceIds": [
-        "task1_v280_phy_mech_card_15"
+        "task1_v280_phy_mech_card_15",
+        "task1_v227_phy_10"
       ],
-      "notes": "Only a gradient meaning was checked, not complete shape interpretation. Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly.",
+      "notes": "Existing cards distinguish permanent deformation and the linear-region gradient; complete multi-region force–extension and stress–strain interpretation is not yet checked. Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly.",
       "id": "P043",
       "crossSectionEvidenceIds": [
         "task1_v280_phy_mech_card_15"
@@ -605,11 +608,11 @@
       "subject": "Chemistry",
       "specRef": "3.1.4.1",
       "skill": "Identify exothermic reaction sign from observed heating",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
         "task1_v247_chem_energetics_06"
       ],
-      "notes": "Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly.",
+      "notes": "An existing short calorimetry card links observed solution heating with an exothermic, negative reaction ΔH. It uses a different but related subsection specRef; this is one sampled fact rather than certification of all energetics requirements.",
       "id": "C047",
       "crossSectionEvidenceIds": [
         "task1_v247_chem_energetics_06"
@@ -938,7 +941,8 @@
     "A card can legitimately practise a skill from another AQA subsection; such links are explicitly identified in crossSectionEvidenceIds instead of being silently presented as exact specRef matches.",
     "Unverified means no direct matching card was checked in the seven sampled banks, not that the whole 4,313-card website lacks that skill.",
     "Two incorrect non-existent 3.1.8.3 subsection tags on task1_v298_chemistry_20 and _21 were corrected to official 3.1.8.2.",
-    "v310: selective follow-up search of all supplemental banks and historical core deck resolved the eight previously unverified skills into four direct examples and four partial examples; one existing formation/combustion definition entry also became a direct sample."
+    "v310: selective follow-up search of all supplemental banks and historical core deck resolved the eight previously unverified skills into four direct examples and four partial examples; one existing formation/combustion definition entry also became a direct sample.",
+    "v311: two previously partial rows (P025 Newton's three laws and C047 exothermic heating/negative ΔH) have directly relevant short-recall evidence; additional linked tangent and plastic-deformation cards strengthen P014/P043 but do not prove full graphical mastery. No mock-only scope or progress IDs changed."
   ],
   "sourceFileSamplingNotes": "Only linked cards from the very large core deck were individually checked. Including deck.json as a source does not mean all its cards have been audited."
 }

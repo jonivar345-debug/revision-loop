@@ -360,12 +360,17 @@
         "No. The reaction to Earth's pull on the book is the book's gravitational pull on Earth.",
         "No, normal contact force and weight can balance but are not an action-reaction pair.",
         "No, both forces act on the book.",
-        "No, the gravitational reaction acts on Earth."
+        "No, the gravitational reaction acts on Earth.",
+        "No: both weight and the normal contact force act on the book.",
+        "No; third-law force pairs act on different objects.",
+        "No; the reaction to the book's weight acts on Earth."
       ],
       "reject": [
         "Yes, because they are equal and opposite forces on the book.",
         "Yes, because any balanced forces form a third-law pair.",
-        "Yes, both act on the same object."
+        "Yes, both act on the same object.",
+        "Yes: they are equal and opposite on the book.",
+        "Yes: both forces act on the same body."
       ],
       "strictRecall": true,
       "taught": true,
@@ -600,12 +605,16 @@
         "The zero offset biases d and therefore area A, which is proportional to d².",
         "The micrometer may read nonzero when closed and all diameters need correction.",
         "The diameter may be biased; area depends on diameter squared.",
-        "A fixed micrometer offset distorts A=πd²/4 and hence E."
+        "A fixed micrometer offset distorts A=πd²/4 and hence E.",
+        "A zero offset systematically biases the wire diameter and hence Young modulus.",
+        "The micrometer may have a fixed offset, making the calculated area inaccurate."
       ],
       "reject": [
         "Zero error is removed by taking more readings alone.",
         "Wire diameter does not affect Young modulus calculations.",
-        "Systematic offset disappears when readings are averaged."
+        "Systematic offset disappears when readings are averaged.",
+        "A zero error cancels when the measurements are averaged.",
+        "Young modulus is independent of the measured cross-sectional area."
       ],
       "strictRecall": true,
       "taught": true,

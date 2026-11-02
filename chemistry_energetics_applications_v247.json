@@ -170,12 +170,18 @@
         "negative",
         "ΔH < 0",
         "ΔH is below zero.",
-        "Exothermic, so ΔH<0."
+        "Exothermic, so ΔH<0.",
+        "ΔH is negative.",
+        "ΔH < 0 kJ mol⁻¹.",
+        "A negative enthalpy change.",
+        "The reaction's enthalpy change is below zero."
       ],
       "reject": [
         "Positive.",
         "Zero.",
-        "ΔH>0"
+        "ΔH>0",
+        "The reaction has a positive enthalpy change.",
+        "ΔH is positive because the solution warms."
       ],
       "strictRecall": true
     },
@@ -257,12 +263,17 @@
         "2.5 percent",
         "(0.2/8.0) × 100 = 2.5%",
         "0.2/8×100=2.5%",
-        "2.50%"
+        "2.50%",
+        "2.5 %",
+        "(0.2 ÷ 8.0) × 100 = 2.5%.",
+        "The uncertainty is 2.5 per cent."
       ],
       "reject": [
         "0.025%.",
         "25%.",
-        "0.25%"
+        "0.25%",
+        "0.2%.",
+        "2.0%."
       ],
       "strictRecall": true
     },
