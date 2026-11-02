@@ -23,11 +23,11 @@ for(const c of cards.cards){
  assert(!fronts.has(c.front.trim().toLowerCase()),'Duplicate Physics card '+c.front);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');assert.equal(c.topic,'Waves');assert.equal(c.specRef,'3.3.2.3');
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert.equal(c.accept.length,2);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ const expectedVariants=c.id.startsWith('task1_v275_phy_fibre_card_')&&Number(c.id.slice(-2))<=12?3:2;assert.equal(c.accept.length,expectedVariants);assert.equal(c.reject.length,expectedVariants);assert(c.accept.includes(c.back));
  for(const v of c.accept){assert.equal(mark(c,v).status,'correct','Accepted '+c.id+' '+v);right++;}
  for(const v of c.reject){assert.equal(mark(c,v).status,'wrong','Rejected '+c.id+' '+v);wrong++;}
 }
-assert.equal(right,40);assert.equal(wrong,40);
+assert.equal(right,52);assert.equal(wrong,52);
 const start=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),end=app.indexOf(' const added=[',start);
 assert(start>0&&end>start&&app.slice(start,end).includes('else if(index===47)'));
 const load=new Function('cards','extraFlashBanks',app.slice(start,end)+'\nreturn cards;');
@@ -70,4 +70,4 @@ assert(close(crit(1.51,1.48),78.559857,.0001));assert(82>crit(1.51,1.48));
 assert(close(crit(1.5,1.45),75.164888,.0001));assert(close(crit(1.5,1.49),83.380372,.0001));
 assert(80>crit(1.5,1.45));assert(80<crit(1.5,1.49));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v275: 20 AS refraction/fibre cards, 40 accepted/40 rejected variants, 6 original questions (37 marks), exact angle/dispersion calculations and no auto-credit for ray drawing; original progress preserved.');
+console.log('PASS v275: 20 AS refraction/fibre cards, 52 accepted/52 rejected variants, 6 original questions (37 marks), exact angle/dispersion calculations and no auto-credit for ray drawing; original progress preserved.');
