@@ -1,0 +1,26 @@
+{
+  "version": "v321",
+  "date": "2026-11-02",
+  "source": "Real first-mock selected original 3345-core audit from v320",
+  "reviewedCore": 45,
+  "bySubject": {
+    "Physics": 15,
+    "Chemistry": 15,
+    "Maths": 15
+  },
+  "addedExplicitCorrect": 90,
+  "addedExplicitWrong": 90,
+  "changes": "Only exact-ID vetted accepted/rejected answer variants, production marker exact guard on this set, stable IDs/fronts/backs/progress. No new flashcards or long-answer questions.",
+  "standards": [
+    "Wrong alternatives must yield wrong not partial",
+    "Accept correct alternate wording without overriding prior accepted answers",
+    "Check inherited AQA taught mock selection using app.js",
+    "Keep Year 2 Maths and Physics out of first mock"
+  ],
+  "completion": {
+    "fullAqaSpecCertified": false,
+    "all3345CoreIndividualChecksFinished": false,
+    "unseenParaphrasesCertified": false,
+    "task1Finished": false
+  }
+}
