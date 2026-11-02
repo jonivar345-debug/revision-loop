@@ -6,6 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: node tests/task1-v311-partial-skill-marking.cjs
+      - run: node tests/task1-v227-three-mock-recall.cjs
+      - run: node tests/task1-v280-physics-mechanics-selected-audit.cjs
       - run: node tests/task1-v309-individual-skill-evidence.cjs
       - run: node tests/task1-v307-mechanics-thermo-real-marker.cjs
       - run: node tests/task1-v306-pure-proof-vectors-precision.cjs
