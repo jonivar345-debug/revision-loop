@@ -22,7 +22,10 @@
         "a is a scalar multiple of b",
         "one is a scalar multiple of the other"
       ],
-      "reject": [],
+      "reject": [
+        "a dot b = 0",
+        "a and b must have equal magnitudes"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -48,7 +51,10 @@
         "AB and AC are parallel",
         "AB and AC are scalar multiples"
       ],
-      "reject": [],
+      "reject": [
+        "AB dot AC = 0",
+        "AB and AC must be equal in magnitude"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -73,7 +79,10 @@
         "half of a plus b",
         "0.5(a+b)"
       ],
-      "reject": [],
+      "reject": [
+        "a+b",
+        "(b-a)/2"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -98,7 +107,10 @@
         "magnitude of b-a",
         "the magnitude of b minus a"
       ],
-      "reject": [],
+      "reject": [
+        "|a+b|",
+        "the vector b-a without taking its magnitude"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -123,7 +135,10 @@
         "a vector with length 1",
         "a vector whose magnitude is one"
       ],
-      "reject": [],
+      "reject": [
+        "a vector of magnitude zero",
+        "a vector with any magnitude"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -148,7 +163,10 @@
         "v divided by its magnitude",
         "divide v by its magnitude"
       ],
-      "reject": [],
+      "reject": [
+        "v multiplied by its magnitude",
+        "the magnitude divided by the vector"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -173,7 +191,10 @@
         "(rcosθ,rsinθ)",
         "x = r cos theta, y = r sin theta"
       ],
-      "reject": [],
+      "reject": [
+        "(r sin theta, r cos theta)",
+        "(r cos theta, r cos theta)"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -198,7 +219,10 @@
         "OA-OB",
         "position vector of A minus position vector of B"
       ],
-      "reject": [],
+      "reject": [
+        "b-a",
+        "a+b"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -223,7 +247,10 @@
         "(mb+na)/(m+n)",
         "a + m(b-a)/(m+n)"
       ],
-      "reject": [],
+      "reject": [
+        "(ma+nb)/(m+n)",
+        "(a+b)/2 irrespective of m and n"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -248,7 +275,10 @@
         "2k for integer k",
         "twice an integer"
       ],
-      "reject": [],
+      "reject": [
+        "2n+1",
+        "n/2"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -274,7 +304,10 @@
         "one more than twice an integer",
         "2n-1"
       ],
-      "reject": [],
+      "reject": [
+        "2n",
+        "n squared always produces an odd integer"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -299,7 +332,10 @@
         "k times an integer",
         "an integer multiple of k"
       ],
-      "reject": [],
+      "reject": [
+        "n/k for any integer n",
+        "k+n for any integer n"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -324,7 +360,10 @@
         "k,k+1,k+2",
         "x,x+1,x+2"
       ],
-      "reject": [],
+      "reject": [
+        "n, n+2, n+4",
+        "n, n+1, n+3"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -349,7 +388,10 @@
         "an allowed case where the claim is false",
         "a case in the domain that contradicts the statement"
       ],
-      "reject": [],
+      "reject": [
+        "a supporting example proves a universal claim",
+        "a case that violates the assumptions"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -375,7 +417,10 @@
         "an unspecified integer",
         "general integer"
       ],
-      "reject": [],
+      "reject": [
+        "check only n=2",
+        "check just positive even integers"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
