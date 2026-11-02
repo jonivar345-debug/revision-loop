@@ -44,12 +44,12 @@ for(const card of cbank.cards){
  assert(!knownFronts.has(card.front.trim().toLowerCase()),'Duplicate Maths front: '+card.front);knownFronts.add(card.front.trim().toLowerCase());
  assert.equal(card.subject,'Maths');assert.equal(card.stage,'AS');assert.equal(card.courseTopic,'Year 1 Pure');assert.equal(card.specRef,'3.3');
  assert.equal(card.mock,true);assert.equal(card.taught,true);assert.equal(card.scope,'mock');assert.equal(card.active,true);assert.equal(card.strictRecall,true);
- assert.equal(card.accept.length,2);assert.equal(card.reject.length,2);
+ const expectedMore=Number(card.id.slice(-2))<=12?1:0;assert.equal(card.accept.length,2+expectedMore);assert.equal(card.reject.length,2+expectedMore);
  assert(card.accept.includes(card.back),'Expected back in accepted variants '+card.id);
  for(const ans of card.accept){assert.equal(evaluate(card,ans).status,'correct','Correct '+card.id+' '+ans);correct++;}
  for(const ans of card.reject){assert.equal(evaluate(card,ans).status,'wrong','Wrong '+card.id+' '+ans);wrong++;}
 }
-assert.equal(correct,32);assert.equal(wrong,32);
+assert.equal(correct,44);assert.equal(wrong,44);
 const ls=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),le=app.indexOf(' const added=[',ls);
 assert(ls>0&&le>ls&&app.slice(ls,le).includes('else if(index===45)'));
 const load=new Function('cards','extraFlashBanks',app.slice(ls,le)+'\nreturn cards;');
