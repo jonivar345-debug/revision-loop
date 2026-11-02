@@ -11,8 +11,8 @@ const eligible=new Function(app.slice(a,b)+'\nreturn mockEligibleCard;')();
 const mStart=app.indexOf('function normalise('),mEnd=app.indexOf('function importantTokens(',mStart);
 const mark=new Function('window',app.slice(mStart,mEnd)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
 const selected=all.filter(eligible),byId=new Map(selected.map(c=>[c.id,c]));
-assert.equal(all.length,4313,'No card IDs or loader entries changed');
-assert.equal(selected.length,3341,'No mock selection changed');
+assert.equal(all.length,4344,'No card IDs or loader entries changed');
+assert.equal(selected.length,3372,'No mock selection changed');
 
 const targeted={
  'task1_v227_phy_02': ['Acceleration at that instant.','Average acceleration over the whole journey.'],
@@ -49,7 +49,7 @@ for(const [id,[good,bad]] of Object.entries(targeted)){
  }
 }
 const led=j('editorial/task1-v309-science-individual-skill-crosswalk.json');
-assert.equal(led.summary.sample,61);
-assert.equal(led.summary.partial,11);
+assert.equal(led.summary.sample,65);
+assert.equal(led.summary.partial,7);
 assert.equal(led.completion.task1Complete,false);
 console.log('PASS v311: '+Object.keys(targeted).length+' real short school-mock cards; '+ac+' accepted and '+rej+' rejected variants; unchanged loader, scope and IDs; 11 partial specification skills still open.');
