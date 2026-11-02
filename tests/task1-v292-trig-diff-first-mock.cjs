@@ -4,7 +4,7 @@ const app=read('app.js'),sw=read('sw.js'),core=j('deck.json'),orig=j('exam_quest
 assert.equal(core.cards.length,3345);assert.equal(orig.questions.length,1268);
 const qs=bank.questions;assert.equal(qs.length,6);assert.equal(qs.filter(x=>x.topic==='Trigonometry').length,3);assert.equal(qs.filter(x=>x.topic==='Differentiation').length,3);
 const urls=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(urls.length,44);assert.equal(urls[43],'maths_year1_trigonometry_differentiation_practice_v292.json');
+assert(urls.length>=44,'Keep 44 original practice banks and any later append-only additions');assert.equal(urls[43],'maths_year1_trigonometry_differentiation_practice_v292.json');
 assert(sw.includes("'./maths_year1_trigonometry_differentiation_practice_v292.json'"));assert(sw.includes('-v292-pure-trig-diff'));
 const prior=new Set([...orig.questions,...urls.slice(0,43).flatMap(f=>j(f).questions||[])].map(x=>x.id));
 const start=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),end=app.indexOf('function startMockSession(){',start);
