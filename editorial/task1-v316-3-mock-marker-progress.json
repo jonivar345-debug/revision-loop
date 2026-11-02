@@ -1,0 +1,66 @@
+{
+  "version": "v316",
+  "date": "2026-11-02",
+  "project": "Revision Loop, Task 1 full school-mock review",
+  "scope": "Physics AS/Year 1, Chemistry AS plus teacher-taught A2 through Kp and organic extensions (excluding buffers), Maths first mock AS Pure only",
+  "startingBaseline": {
+    "loadedFlashcards": 4344,
+    "mockEligible": 3372,
+    "physics": 1125,
+    "chemistry": 1916,
+    "maths": 331
+  },
+  "previousV315CI": {
+    "success": 66,
+    "total": 68,
+    "failedWorkflowNames": [
+      "Task 1 v314 complete mock flashcard triage",
+      "Task 1 v315 vetted all-mock core recall markers"
+    ],
+    "cause": "The v314 scanner test selected six Proof cards with prefix task1_v187_maths_ in addition to 16 Vector cards; its erroneous expected count 16 saw 22. Not a reported mismatch in real flashcard selection or marking.",
+    "fix": "tests/task1-v314-all-mock-full-deck-triage.cjs now matches exactly v187 Maths 001-009 (vectors) and keeps six proof cards out of the vector-only assertion."
+  },
+  "completedCorrections": [
+    {
+      "subject": "Physics",
+      "cards": 20,
+      "focus": "Displacement/velocity graph gradients, stationary waves and Snell's law, projectile motion, potential dividers, photoelectric frequency/intensity, slope forces, signed areas and accelerating in negative direction."
+    },
+    {
+      "subject": "Chemistry",
+      "cards": 20,
+      "focus": "Practical recall RP1/RP4/RP5, bond enthalpy sign, Group 2 and halogen trends, mechanism vocabulary and mass spectrometry stages/ion energy/peak intensity."
+    },
+    {
+      "subject": "Maths",
+      "cards": 20,
+      "focus": "First-mock Year 1 Pure function/graph transformations, trigonometry, binomial coefficients, proof and counterexamples, differentiation, integration and vector magnitude."
+    }
+  ],
+  "markerReview": {
+    "auditFile": "editorial/task1-v316-more-core-answer-calibration.json",
+    "corePatch": "applyV316CoreRecallCalibration in app.js, invoked in production sync after v315",
+    "explicitCorrectPerCard": 2,
+    "explicitIncorrectPerCard": 2,
+    "regression": "tests/task1-v316-more-core-mock-marker.cjs",
+    "directProductionChecks": {
+      "accepted": 259,
+      "rejected": 120,
+      "failures": 0
+    },
+    "bugFixed": "For 60 exact-ID vetted cards, an exact approved right/wrong response is matched with punctuation-sensitive equality before a specialised fuzzy/numeric/Maths graph-transform checker. Previously specialist Maths transformation logic could reject a recognised correct answer and partially credit an explicitly false one.",
+    "safety": "Retains original model answers, original IDs and old accepted variants; no essay flashcards added and no changes to Maths first-mock scope."
+  },
+  "completion": {
+    "allAqaBulletPointsIndividuallyReviewed": false,
+    "allOldCardsHaveVettedWrongExamples": false,
+    "markerForUnseenParaphrasesFullyCertified": false,
+    "fullMockFlashcardReviewFinished": false
+  },
+  "next": [
+    "Run all repository CI workflows; retain and repair any failing assertions without weakening the real checker or scope safeguards.",
+    "Continue exact-ID editorial review of legacy cards lacking answer alternatives (especially Physics practicals/graphs and Chemistry organic/equilibria).",
+    "Expand spec-bullet review across Physics Waves/Particles/Electricity, Chemistry AS+A2 taught organic and physical, and all Year 1 Pure Maths topics.",
+    "Verify diagram/practical worked exam answers through actual manual assessment, rather than inferring from short flashcard recall."
+  ]
+}
