@@ -45,7 +45,7 @@ for(const id of ids){
  counts[origin]=(counts[origin]||0)+1;
 }
 assert.deepEqual(Object.values(counts),[6,7,6]);
-assert.equal(accepted,108);assert.equal(rejected,68);
+assert.equal(accepted,111);assert.equal(rejected,71);
 // Verify the key mathematical relationships independently, not just marking stored text.
 for(let n=-50;n<=50;n++){
  assert.equal(Math.abs((n**3-n)%6),0,'n³−n always divisible by 6');
@@ -59,4 +59,4 @@ assert.deepEqual(AB,[3,6]);assert.deepEqual(AC,[5,10]);
 assert.equal(3*AC[0],5*AB[0]);assert.equal(3*AC[1],5*AB[1]);
 assert.deepEqual([2+(14-2)/4,3+(-1-3)/4],[5,2]);
 assert.deepEqual([1+2/5*(11-1),4+2/5*(-6-4)],[5,0]);
-console.log('PASS v306: 19 concise first-mock Pure proof/vector cards, 108 correct and 68 wrong examples with real marker; all math invariants and live mock selector verified.');
+console.log('PASS v306: 19 concise first-mock Pure proof/vector cards, 111 correct and 71 wrong examples with real marker; all math invariants and live mock selector verified.');
