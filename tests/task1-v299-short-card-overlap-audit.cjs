@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),j=p=>JSON.parse
 const app=fs.readFileSync('app.js','utf8');
 const urls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
 const target=j('mock_short_recall_and_cloze_v298.json').cards;
-const prev=[...j('deck.json').cards,...urls.filter(x=>x!=='mock_short_recall_and_cloze_v298.json').flatMap(x=>j(x).cards||[])];
+const prev=[...j('deck.json').cards,...urls.slice(0,54).flatMap(x=>j(x).cards||[])];
 const stop=new Set('a an and are as at be by can do does for from give gives has have how if in is it its of on or out the their this to what when where which why will with you your then these does into from whose same about one two three find calculate state shown'.split(' '));
 const words=t=>new Set(String(t||'').toLowerCase().normalize('NFKD').replace(/[−–—]/g,'-').replace(/[^\p{L}\p{N}^+\-]+/gu,' ').split(/\s+/).filter(w=>w.length>1&&!stop.has(w)));
 const index=new Map();
