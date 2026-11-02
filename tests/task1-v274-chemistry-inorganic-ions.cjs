@@ -24,11 +24,11 @@ for(const c of cb.cards){
  assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'AS');assert(spec.has(c.specRef));
  assert.equal(c.topic,c.specRef==='3.2.2'?'Group 2':'Group 7');
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert.equal(c.accept.length,2);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back),'Back not accepted '+c.id);
+ const expectedVariants=c.id.startsWith('task1_v274_chem_inorg_card_')&&Number(c.id.slice(-2))<=12?3:2;assert.equal(c.accept.length,expectedVariants);assert.equal(c.reject.length,expectedVariants);assert(c.accept.includes(c.back),'Back not accepted '+c.id);
  for(const ans of c.accept){assert.equal(mark(c,ans).status,'correct',c.id+' accept '+ans);correct++;}
  for(const ans of c.reject){assert.equal(mark(c,ans).status,'wrong',c.id+' reject '+ans);wrong++;}
 }
-assert.equal(correct,60);assert.equal(wrong,60);
+assert.equal(correct,72);assert.equal(wrong,72);
 const start=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),end=app.indexOf(' const added=[',start);
 assert(start>0&&end>start&&app.slice(start,end).includes('else if(index===46)'));
 const load=new Function('cards','extraFlashBanks',app.slice(start,end)+'\nreturn cards;');
@@ -60,4 +60,4 @@ assert.equal(2,1+1); // two halogens produced in chlorine disproportionation
 assert.equal(-1+1,0); // zero net change in oxidation numbers
 assert.equal(-1+1,0); // Ba2+ and SO4(2-) net zero
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v274: 30 strictly AS inorganic flashcards, 60 correct/60 rejected marker examples, 7 original questions (45 marks), accepted/rejected scope filters and unchanged offline/progress IDs.');
+console.log('PASS v274: 30 strictly AS inorganic flashcards, 72 correct/72 rejected marker examples, 7 original questions (45 marks), accepted/rejected scope filters and unchanged offline/progress IDs.');

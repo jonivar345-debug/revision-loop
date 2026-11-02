@@ -1,0 +1,14 @@
+name: Task 1 v317 short mock cards and three-subject marker regression
+on: [pull_request]
+jobs:
+  flashcard-precision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v317-precision-three-subjects.cjs
+      - run: node tests/task1-v316-more-core-mock-marker.cjs
+      - run: node tests/task1-v315-vetted-core-recall-markers.cjs
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
+      - run: node tests/task1-v301-school-mock-scope.cjs
+      - run: node tests/task1-v302-ordered-cloze-marking.cjs
+      - run: node tests/task1-v187-proof-vectors-recall.cjs
