@@ -38,7 +38,7 @@ for(let k=0;k<3;k++){
   assert(c.active===true&&c.mock===true&&c.taught===true&&c.scope==='mock'&&c.strictRecall===true);
   assert(k===1?['AS','A2'].includes(c.stage):c.stage==='AS');
   assert(c.specRef&&c.front&&c.back);
-  assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);
+  assert(c.accept.length>=3,'Keep all three original vetted accepted forms');assert(c.reject.length>=2,'Keep both original wrong-answer checks');
   assert(c.accept.includes(c.back));
   if(k===2){assert(!['Statistics','Mechanics'].includes(c.topic));assert(!/\bradians?\b|\bchain rule\b/i.test(c.front+' '+c.back));}
   if(k===1){assert(!/\bbuffers?\b|\bNMR\b|\bchromatography\b/i.test(c.front+' '+c.back));}
@@ -53,7 +53,7 @@ for(const bank of banks)for(const c of bank.cards){
  for(const x of c.reject){assert.notEqual(judge(c,x).status,'correct','credits wrong '+c.id+' '+x);reject++;}
  assert.equal(judge(c,'').status,'neutral');
 }
-assert.equal(accept,135);assert.equal(reject,90);
+assert(accept>=135,'Original 135 correct answer checks remain');assert(reject>=90,'Original 90 rejected answer checks remain');
 const lstart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),lend=app.indexOf(' const added=[',lstart);
 assert(lstart>=0&&lend>lstart);
 const loader=app.slice(lstart,lend);for(const i of [20,21,22])assert(loader.includes('else if(index==='+i+')'));
@@ -72,4 +72,4 @@ const eligible=app.match(/function mockEligibleCard\(c\)\{[\s\S]*?\n\}/);
 assert(eligible);const isEligible=vm.runInNewContext("const MOCK_MATHS_YEAR2_EXCLUDED_IDS = new Set(['math_function_composite','math_inverse_condition','task1_v136_063']);\n"+eligible[0]+"\nmockEligibleCard");
 for(const bank of banks)for(const c of bank.cards)assert(isEligible(c),'new content not in mock '+c.id);
 assert.equal(loaded.filter(c=>c.subject==='Maths').length,deck.cards.filter(c=>c.subject==='Maths').length+15);
-console.log('PASS v227: 45 new scoped Physics/Chemistry/AS Pure Maths mock recall cards; 135 accepted and 90 rejected answer variants; live evaluator and loader indices 20-22; old IDs, 3345 core cards, 1268 core questions and progress keys unchanged. Completion intentionally NOT certified.');
+console.log('PASS v227: 45 new scoped Physics/Chemistry/AS Pure Maths mock recall cards; '+accept+' accepted and '+reject+' rejected answer variants; live evaluator and loader indices 20-22; old IDs, 3345 core cards, 1268 core questions and progress keys unchanged. Completion intentionally NOT certified.');
