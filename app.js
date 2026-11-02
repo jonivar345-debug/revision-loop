@@ -717,6 +717,73 @@ function applyV290LegacyElectricitySpecRefs(existing){
  return existing;
 }
 
+// v314: individually reviewed core-card fixes. Keep stable IDs and saved progress.
+function applyV314CoreMockQuality(existing){
+ const byId=new Map(existing.map(c=>[c.id,c]));
+ for(const id of ['task1_v162_023','task1_v171_003','task1_v171_004','task1_v171_005']){
+  const c=byId.get(id);
+  if(c&&c.subject==='Maths'&&c.topic==='Vectors'&&c.stage==='AS'&&c.specRef==='3.10')
+   c.specRef='3.11'; // AQA vectors, not Numerical Methods
+ }
+ const momentum=byId.get('phy_mechanics_focus_v37_18');
+ if(momentum&&momentum.subject==='Physics'&&momentum.stage==='AS')
+  momentum.front='Two trolleys stick together. If total momentum is p and total mass is M, what is their common velocity?';
+ const couple=byId.get('phy_mechanics_weakness_v35_couple_distance');
+ if(couple&&couple.subject==='Physics'&&couple.stage==='AS')
+  couple.front='In the couple formula M = Fd, what does distance d represent?';
+ const bonding=byId.get('chem_bonding_v52_32');
+ if(bonding&&bonding.subject==='Chemistry'&&bonding.stage==='AS'){
+  bonding.front='Why is BF₃ non-polar even though its B–F bonds are polar?';
+  bonding.back='Its three polar B–F bond dipoles cancel in a trigonal planar molecule.';
+  bonding.accept=[
+   bonding.back,
+   'The three B-F bond dipoles cancel because BF3 is trigonal planar.',
+   'The bond dipoles cancel due to trigonal planar symmetry.',
+   'The polar B–F bonds are arranged symmetrically, so net dipole is zero.'
+  ];
+  bonding.reject=[
+   'The B-F bonds are non-polar.',
+   'BF3 is polar because B-F bonds are polar.',
+   'The molecule has no bonds.'
+  ];
+ }
+ // Eight individually reviewed historical short-recall cards previously had
+ // loose or missing alternatives. Verified wrong examples must outrank token similarity.
+ const markerCases=[
+  ['phy_vectors_001','Physics',
+   ['adjacent = F cos θ and opposite = F sin θ','Cosine for adjacent; sine for opposite.'],
+   ['adjacent = F sin θ and opposite = F cos θ','horizontal is always F cos θ regardless of the given angle']],
+  ['phy_slope_001','Physics',
+   ['parallel = mg sin θ; perpendicular = mg cos θ','Weight down the plane mg sine θ, into plane mg cosine θ.'],
+   ['parallel = mg cos θ; perpendicular = mg sin θ','both components are mg sin θ']],
+  ['phy_motion_a','Physics',
+   ['Δv','change in velocity','final velocity minus initial velocity'],
+   ['displacement','distance travelled','acceleration']],
+  ['phy_moments_001','Physics',
+   ['Perpendicular separation from pivot to line of action','The shortest distance from the pivot to the force line'],
+   ['the distance along the force direction','The length from the pivot to the point where force is applied regardless of angle']],
+  ['phy_internal_001','Physics',
+   ['emf − I r','epsilon minus current times internal resistance'],
+   ['V = ε + Ir','V=Ir']],
+  ['phy_photoelectric_002','Physics',
+   ['Photons have insufficient energy hf to overcome the work function regardless of intensity.','Below threshold, increasing intensity raises photon number but not energy per photon.'],
+   ['Increasing brightness gives each photon more energy.','More photons means an electron can combine energy from multiple photons to escape.']],
+  ['chem_gas_001','Chemistry',
+   ['Pa; m³; K; mol','Pressure pascals, volume cubic metres, temperature kelvin, amount moles.'],
+   ['kPa, dm³, °C and moles','Pressure Pa, volume dm³, temperature kelvin and moles']],
+  ['chem_empirical_001','Chemistry',
+   ['Convert masses to moles, divide by the smallest mole value, and obtain whole number ratios.','mass to mole ratio then simplest integer ratio'],
+   ['Use raw mass ratios directly as subscripts without dividing by molar masses.','Divide every mass by the largest mass and round immediately']]
+ ];
+ for(const [id,subject,accept,reject] of markerCases){
+  const c=byId.get(id);
+  if(!c||c.subject!==subject||c.stage!=='AS'||c.mock!==true)continue;
+  c.accept=[...new Set([c.back,...(c.accept||[]),...accept])];
+  c.reject=[...new Set([...(c.reject||[]),...reject])];
+ }
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -4611,6 +4678,7 @@ async function sync(manual=false){
  applyV288LegacyChemBondingSpecRefs(cards);
  applyV289LegacyEnergeticsSpecRefs(cards);
  applyV290LegacyElectricitySpecRefs(cards);
+ applyV314CoreMockQuality(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}

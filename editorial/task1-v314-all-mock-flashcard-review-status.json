@@ -1,0 +1,92 @@
+{
+  "version": "v314",
+  "date": "2026-11-02",
+  "scope": "First school mocks: AQA Physics Year 1; AQA Chemistry AS plus taught Year 2 topics through Kp and taught organic (buffers excluded); first Maths mock Year 1 Pure only (not Year 2, Statistics, Mechanics or untaught numerical methods)",
+  "auditMethod": "Load the exact manifest, apply the same individually reviewed runtime core metadata patches, use mockEligibleCard and evaluateCard from app.js; record candidate issues for human editorial review.",
+  "auditScript": "tests/task1-v314-all-mock-full-deck-triage.cjs",
+  "verifiedBaselineBeforeCorrections": {
+    "allLoaded": 4344,
+    "selectedForMocks": 3372,
+    "bySubject": {
+      "Physics": 1125,
+      "Chemistry": 1916,
+      "Maths": 331
+    },
+    "markerResponsesChecked": 12151,
+    "modelAnswerFailures": 0,
+    "storedAcceptFailures": 0,
+    "storedRejectCredited": 0,
+    "exactSameQuestionSameAnswer": 0,
+    "exactSameQuestionDifferentAnswer": 0,
+    "candidateOverlongFronts": 1,
+    "candidateMultiQuestionFronts": 2,
+    "cardsWithoutExplicitAcceptedVariantList": 991,
+    "cardsWithoutExplicitRejectedVariantList": 2377,
+    "warning": "These counts describe the v314 initial raw-deck diagnostic before corrections. Vetted runtime metadata mappings and v314 edits change some totals; updated figures come from the repeatable script, not from this snapshot. Lack of configured examples is not proof of a marking bug."
+  },
+  "targetedCorrections": [
+    {
+      "kind": "AQA spec metadata",
+      "ids": [
+        "task1_v162_023",
+        "task1_v171_003",
+        "task1_v171_004",
+        "task1_v171_005",
+        "task1_v187_maths_001",
+        "task1_v187_maths_002",
+        "task1_v187_maths_003",
+        "task1_v187_maths_004",
+        "task1_v187_maths_005",
+        "task1_v187_maths_006",
+        "task1_v187_maths_007",
+        "task1_v187_maths_008",
+        "task1_v187_maths_009",
+        "task1_v227_math_04",
+        "task1_v227_math_05",
+        "task1_v227_math_06"
+      ],
+      "oldRef": "3.10 Numerical methods",
+      "newRef": "3.11 Vectors",
+      "reason": "All sixteen ask about first-year vectors and were miscategorised as numerical methods. Four legacy core references corrected in the runtime patch; twelve smaller bank files corrected directly. The cards are retained in Year 1 Pure mock."
+    },
+    {
+      "kind": "single-fact prompt editing",
+      "ids": [
+        "phy_mechanics_focus_v37_18",
+        "phy_mechanics_weakness_v35_couple_distance",
+        "chem_bonding_v52_32"
+      ],
+      "reason": "Replace one overlong and two double-question fronts with focused exam-relevant prompts while retaining their existing IDs and user progress."
+    },
+    {
+      "kind": "model/marker consistency",
+      "ids": [
+        "phy_vectors_001",
+        "phy_slope_001",
+        "phy_motion_a",
+        "phy_moments_001",
+        "phy_internal_001",
+        "phy_photoelectric_002",
+        "chem_gas_001",
+        "chem_empirical_001",
+        "chem_bonding_v52_32"
+      ],
+      "reason": "Add verified accepted wording and explicit rejected distractors, including swapped sine/cosine vector components, incorrect emf+lost-volts sign and full-credit Δv recall; validate against the real evaluator."
+    }
+  ],
+  "completion": {
+    "allExplicitAnswerExamplesCheckedByAutomatedAudit": true,
+    "allPossibleUnfamiliarCorrectAnswerVariantsChecked": false,
+    "allAqaAssessableBulletsMappedAndHandReviewed": false,
+    "allSciencePracticalDrawingsAndExamQuestionsManuallyGraded": false,
+    "allExistingCoreLegacyCardsHaveAcceptAndRejectExamples": false,
+    "mockFlashcardReviewFinished": false
+  },
+  "nextReview": [
+    "Extend individual-skill crosswalk beyond the existing sampled Mechanics/Materials and Energetics/Thermodynamics rows into every required Physics, Chemistry and Year 1 Pure Maths subsection.",
+    "Review untitled/broad legacy core specRef labels using exact-ID mapping, not bulk guessing from a vague topic.",
+    "Add vetted accept/reject examples to the most exam-critical legacy cards lacking them, prioritising potential sign, units, graph-direction and terminology confusions.",
+    "Continue manual checking of genuine drawing, practical and worked-exam responses; do not treat short recall as evidence that those skills are mastered."
+  ],
+  "evidenceLimits": "Source metadata, tests of known answers, and an available practice task do not prove every unseen examiner-acceptable response or every AQA skill is covered. Preserve uncertainties until reviewed."
+}
