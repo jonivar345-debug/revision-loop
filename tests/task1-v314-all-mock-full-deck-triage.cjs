@@ -77,6 +77,22 @@ for(const id of ['phy_mechanics_focus_v37_18','phy_mechanics_weakness_v35_couple
 }
 
 assert.equal(quant.models,3372);
+const vetted=new Set(['phy_vectors_001','phy_slope_001','phy_motion_a','phy_moments_001',
+ 'phy_internal_001','phy_photoelectric_002','chem_gas_001','chem_empirical_001']);
+for(const id of vetted){
+ const c=selectedCards.find(c=>c.id===id);
+ assert(c&&Array.isArray(c.accept)&&c.accept.length>=3,'Vetted accepted answers loaded '+id);
+ assert(Array.isArray(c.reject)&&c.reject.length>=2,'Vetted wrong examples loaded '+id);
+ for(const x of c.accept)assert.equal(mark(c,x).status,'correct',id+' accepted '+x);
+ for(const x of c.reject)assert.equal(mark(c,x).status,'wrong',id+' rejected '+x);
+}
+assert.equal(mark(selectedCards.find(c=>c.id==='phy_internal_001'),'V = ε + Ir').status,'wrong',
+ 'Do not credit emf PLUS lost volts');
+assert.equal(mark(selectedCards.find(c=>c.id==='phy_vectors_001'),'adjacent = F sin θ and opposite = F cos θ').status,'wrong',
+ 'Do not credit swapped vector components');
+assert.equal(mark(selectedCards.find(c=>c.id==='phy_motion_a'),'Δv').status,'correct',
+ 'Correct delta-v should not receive partial credit');
+
 assert.equal(issues.modelNotCorrect.length,0,'Every selected model answer must mark correct');
 assert.equal(issues.acceptedNotCorrect.length,0,'Every selected explicit accept must mark correct');
 assert.equal(issues.rejectedCorrect.length,0,'No selected explicit reject may mark correct');
