@@ -19,7 +19,10 @@
         "intersection of the line and parabola",
         "where line and quadratic meet"
       ],
-      "reject": [],
+      "reject": [
+        "a stationary point of the quadratic",
+        "the graphs must have identical gradients"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -43,7 +46,10 @@
         "sqrt(3)",
         "square root of 3"
       ],
-      "reject": [],
+      "reject": [
+        "1/sqrt(3)",
+        "sqrt(3)/2"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -68,7 +74,10 @@
         "0.5",
         "one half"
       ],
-      "reject": [],
+      "reject": [
+        "sqrt(3)/2",
+        "1"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -96,7 +105,10 @@
         "y-intercept is 1",
         "the point (0,1)"
       ],
-      "reject": [],
+      "reject": [
+        "(1,0)",
+        "(0,0)"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -124,7 +136,10 @@
         "k*e^(kx)",
         "k multiplied by e^(kx)"
       ],
-      "reject": [],
+      "reject": [
+        "e^(kx)",
+        "kx e^(kx)"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -151,7 +166,10 @@
         "the gradient is n",
         "gradient n"
       ],
-      "reject": [],
+      "reject": [
+        "a",
+        "ln a"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -178,7 +196,10 @@
         "k is less than 0",
         "negative k"
       ],
-      "reject": [],
+      "reject": [
+        "positive",
+        "k > 0"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -204,7 +225,10 @@
         "instantaneous rate of change",
         "the instantaneous change in N per unit time"
       ],
-      "reject": [],
+      "reject": [
+        "the total amount of N",
+        "the average value of N over all time"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -231,7 +255,10 @@
         "f(b) - f(a)",
         "the value at b minus the value at a"
       ],
-      "reject": [],
+      "reject": [
+        "f(a)-f(b)",
+        "f'(b)-f'(a)"
+      ],
       "strictRecall": true,
       "taught": true,
       "mock": true,
@@ -240,7 +267,9 @@
       "kind": "content",
       "priority": 1,
       "courseTopic": "Integration",
-      "revisionTopic": "Integration"
+      "revisionTopic": "Integration",
+      "strictSymbolRecall": true,
+      "strictSymbolFeedback": "The integral of f′(x) from a to b is f(b) − f(a), not a difference of derivatives."
     }
   ]
 }
