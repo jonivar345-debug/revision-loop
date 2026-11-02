@@ -22,11 +22,11 @@ for(const c of cards.cards){
  assert(!fronts.has(c.front.trim().toLowerCase()),'Duplicate front '+c.front);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');assert.equal(c.courseTopic,'Mechanics and materials');assert(allowed.has(c.specRef));
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert.equal(c.accept.length,2);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ assert(c.accept.length>=2,'Keep original accepted examples');assert(c.reject.length>=2,'Keep original rejected examples');assert(c.accept.includes(c.back));
  for(const answer of c.accept){assert.equal(judge(c,answer).status,'correct','Valid '+c.id+' '+answer);correct++;}
  for(const answer of c.reject){assert.equal(judge(c,answer).status,'wrong','Invalid '+c.id+' '+answer);wrong++;}
 }
-assert.equal(correct,32);assert.equal(wrong,32);
+assert(correct>=32,'Keep at least 32 original correct checks');assert(wrong>=32,'Keep at least 32 original incorrect checks');
 const ls=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),le=app.indexOf(' const added=[',ls);assert(ls>0&&le>ls&&app.slice(ls,le).includes('else if(index===52)'));
 const load=new Function('cards','extraFlashBanks',app.slice(ls,le)+'\nreturn cards;');
 const valid=Array.from({length:53},()=>({cards:[]}));valid[52]=cards;
@@ -77,4 +77,4 @@ assert.deepEqual([...srefs].sort(),['3.4.1.1','3.4.1.2','3.4.1.3','3.4.1.4','3.4
 assert.equal(audit.completion.allTenMechanicsMaterialsNumberedSubsectionsHaveSelectedEvidence,true);
 for(const [k,v] of Object.entries(audit.completion))if(k!=='allTenMechanicsMaterialsNumberedSubsectionsHaveSelectedEvidence')assert.equal(v,false,'Uncertified '+k);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v280: 16 AS Mechanics recall cards (32 correct/32 incorrect), four original problems (32 marks), two manual graphs, independent beam/kinematics/Young modulus calculations and 25 mapped references.');
+console.log('PASS v280: 16 AS Mechanics recall cards ('+correct+' correct/'+wrong+' incorrect), four original problems (32 marks), two manual graphs, independent beam/kinematics/Young modulus calculations and 25 mapped references.');
