@@ -1,0 +1,910 @@
+{
+  "version": "v312",
+  "createdAt": "2026-11-02",
+  "scope": "Concise one-skill recall for 11 partially evidenced Physics Mechanics/Materials and Chemistry Energetics/Thermodynamics school-mock requirements. Drawing and complete practical skills still require separate practice and manual assessment.",
+  "sources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/mechanics-and-materials",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "cards": [
+    {
+      "id": "task1_v312_physics_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Vectors",
+      "specRef": "3.4.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "When adding vectors in a scale drawing, where is the second vector's tail placed?",
+      "back": "At the first vector's head.",
+      "accept": [
+        "At the first vector's head.",
+        "Tail at the head of the first arrow.",
+        "Head-to-tail.",
+        "The second arrow starts where the first finishes."
+      ],
+      "reject": [
+        "Tail at the first vector's tail.",
+        "At right angles regardless of direction."
+      ],
+      "strictRecall": true,
+      "skillId": "P003"
+    },
+    {
+      "id": "task1_v312_physics_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Vectors",
+      "specRef": "3.4.1.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "In a head-to-tail vector diagram, where does the resultant arrow run?",
+      "back": "From the first tail to the final head.",
+      "accept": [
+        "From the first tail to the final head.",
+        "From the starting tail to the last arrowhead.",
+        "First tail to final head.",
+        "Start of first vector to end of last."
+      ],
+      "reject": [
+        "From the last head to the first tail.",
+        "Between the midpoints of the two arrows."
+      ],
+      "strictRecall": true,
+      "skillId": "P003"
+    },
+    {
+      "id": "task1_v312_physics_03",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Motion graphs",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Motion graphs",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What does a secant gradient on a displacement–time graph give over its interval?",
+      "back": "Average velocity.",
+      "accept": [
+        "Average velocity.",
+        "The mean velocity over that time interval.",
+        "Average rate of change of displacement.",
+        "Δs/Δt over the interval."
+      ],
+      "reject": [
+        "Instantaneous acceleration.",
+        "Total distance travelled."
+      ],
+      "strictRecall": true,
+      "skillId": "P014"
+    },
+    {
+      "id": "task1_v312_physics_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Uniform acceleration",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Uniform acceleration",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Which constant-acceleration equation contains u, v, a and t but not s?",
+      "back": "v = u + at.",
+      "accept": [
+        "v = u + at.",
+        "v=u+at",
+        "Final velocity equals initial velocity plus acceleration times time.",
+        "u + at = v"
+      ],
+      "reject": [
+        "s = ut + ½at².",
+        "v² = u² + 2as."
+      ],
+      "strictRecall": true,
+      "skillId": "P017"
+    },
+    {
+      "id": "task1_v312_physics_05",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Uniform acceleration",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Uniform acceleration",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Which constant-acceleration equation uses u, v, s and t but omits a?",
+      "back": "s = (u + v)t/2.",
+      "accept": [
+        "s = (u + v)t/2.",
+        "s=(u+v)t/2",
+        "Displacement is mean velocity times time.",
+        "s = ½(u + v)t"
+      ],
+      "reject": [
+        "s = ut + ½at².",
+        "v = u + at."
+      ],
+      "strictRecall": true,
+      "skillId": "P017"
+    },
+    {
+      "id": "task1_v312_physics_06",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Uniform acceleration",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Uniform acceleration",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Which constant-acceleration equation uses s, u, a and t but omits v?",
+      "back": "s = ut + ½at².",
+      "accept": [
+        "s = ut + ½at².",
+        "s=ut+0.5at²",
+        "s = ut + at²/2",
+        "Displacement equals ut plus half at squared."
+      ],
+      "reject": [
+        "s = (u+v)t/2.",
+        "s = ut + at."
+      ],
+      "strictRecall": true,
+      "skillId": "P017"
+    },
+    {
+      "id": "task1_v312_physics_07",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Uniform acceleration",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Uniform acceleration",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Which constant-acceleration equation links v², u², a and s without t?",
+      "back": "v² = u² + 2as.",
+      "accept": [
+        "v² = u² + 2as.",
+        "v^2=u^2+2as",
+        "v squared equals u squared plus 2as.",
+        "v²-u²=2as"
+      ],
+      "reject": [
+        "v = u + at.",
+        "v² = u² + as."
+      ],
+      "strictRecall": true,
+      "skillId": "P017"
+    },
+    {
+      "id": "task1_v312_physics_08",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Free fall practical",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Free fall practical",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "For a drop from rest, what is the gradient of displacement s against t²?",
+      "back": "g/2.",
+      "accept": [
+        "g/2.",
+        "Half of g.",
+        "½g",
+        "0.5g"
+      ],
+      "reject": [
+        "g.",
+        "2g."
+      ],
+      "strictRecall": true,
+      "skillId": "P019"
+    },
+    {
+      "id": "task1_v312_physics_09",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Free fall practical",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Free fall practical",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "How do repeated drop-time readings help reduce random error?",
+      "back": "Take a mean.",
+      "accept": [
+        "Take a mean.",
+        "Average the repeated results.",
+        "Calculate the mean time.",
+        "Repeat and average measurements."
+      ],
+      "reject": [
+        "Repeat once to remove all systematic errors.",
+        "Use the maximum measured time."
+      ],
+      "strictRecall": true,
+      "skillId": "P019"
+    },
+    {
+      "id": "task1_v312_physics_10",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Free fall practical",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Free fall practical",
+      "specRef": "3.4.1.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "In a free-fall g experiment, why release the object without pushing it?",
+      "back": "To make initial velocity zero.",
+      "accept": [
+        "To make initial velocity zero.",
+        "So u=0.",
+        "The object starts from rest.",
+        "Avoid an unknown initial vertical speed."
+      ],
+      "reject": [
+        "To make acceleration zero.",
+        "To eliminate gravitational force."
+      ],
+      "strictRecall": true,
+      "skillId": "P019"
+    },
+    {
+      "id": "task1_v312_physics_11",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Drag and lift",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Drag and lift",
+      "specRef": "3.4.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "As an object's speed through air increases, what generally happens to drag?",
+      "back": "It increases.",
+      "accept": [
+        "It increases.",
+        "Drag increases.",
+        "Air resistance gets greater.",
+        "The resistive drag force rises."
+      ],
+      "reject": [
+        "It always stays zero.",
+        "It decreases with speed in ordinary conditions."
+      ],
+      "strictRecall": true,
+      "skillId": "P024"
+    },
+    {
+      "id": "task1_v312_physics_12",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Drag and lift",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Drag and lift",
+      "specRef": "3.4.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "At steady maximum speed on a level road, how does driving force compare with resistive forces?",
+      "back": "They balance.",
+      "accept": [
+        "They balance.",
+        "Driving force equals total resistance.",
+        "The resultant horizontal force is zero.",
+        "Forward and resistive forces are equal."
+      ],
+      "reject": [
+        "Driving force is greater than resistance.",
+        "There is a forwards resultant force."
+      ],
+      "strictRecall": true,
+      "skillId": "P024"
+    },
+    {
+      "id": "task1_v312_physics_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Drag and lift",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Drag and lift",
+      "specRef": "3.4.1.4",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "Relative to airflow, in what direction does aerodynamic lift act?",
+      "back": "Perpendicular to the airflow.",
+      "accept": [
+        "Perpendicular to the airflow.",
+        "At right angles to the relative airflow.",
+        "Normal to the oncoming air flow.",
+        "Perpendicular to the fluid flow."
+      ],
+      "reject": [
+        "Always in the direction of travel.",
+        "Always opposite to airflow."
+      ],
+      "strictRecall": true,
+      "skillId": "P024"
+    },
+    {
+      "id": "task1_v312_physics_14",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Free-body diagrams",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Free-body diagrams",
+      "specRef": "3.4.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "In a free-body diagram of one object, which forces should be drawn?",
+      "back": "External forces acting on that object.",
+      "accept": [
+        "External forces acting on that object.",
+        "All external forces on the chosen body.",
+        "Only forces exerted on the object.",
+        "Forces acting on it, not forces it exerts on others."
+      ],
+      "reject": [
+        "Every action-reaction pair on both objects.",
+        "All nearby forces even if they act on other bodies."
+      ],
+      "strictRecall": true,
+      "skillId": "P026"
+    },
+    {
+      "id": "task1_v312_physics_15",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Free-body diagrams",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Free-body diagrams",
+      "specRef": "3.4.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "For a box resting on a flat floor, which way does its weight arrow point?",
+      "back": "Vertically downwards.",
+      "accept": [
+        "Vertically downwards.",
+        "Downwards.",
+        "Towards the Earth's centre.",
+        "Vertical down."
+      ],
+      "reject": [
+        "Perpendicular upwards from the floor.",
+        "Along its velocity."
+      ],
+      "strictRecall": true,
+      "skillId": "P026"
+    },
+    {
+      "id": "task1_v312_physics_16",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Free-body diagrams",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Free-body diagrams",
+      "specRef": "3.4.1.5",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "Should an arrow showing an object's velocity be counted as a force in its free-body diagram?",
+      "back": "No.",
+      "accept": [
+        "No.",
+        "No, velocity is not a force.",
+        "A velocity arrow is not a force arrow.",
+        "No: only forces are shown."
+      ],
+      "reject": [
+        "Yes, velocity is the forward driving force.",
+        "Yes, every arrow is an external force."
+      ],
+      "strictRecall": true,
+      "skillId": "P026"
+    },
+    {
+      "id": "task1_v312_physics_17",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Momentum and impulse",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Momentum and impulse",
+      "specRef": "3.4.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "For the same change in momentum, what happens to average impact force when contact time increases?",
+      "back": "It decreases.",
+      "accept": [
+        "It decreases.",
+        "The mean force is smaller.",
+        "Average force falls.",
+        "F = Δp/Δt, so force decreases."
+      ],
+      "reject": [
+        "It increases.",
+        "The force must remain constant."
+      ],
+      "strictRecall": true,
+      "skillId": "P031"
+    },
+    {
+      "id": "task1_v312_physics_18",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Momentum and impulse",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Momentum and impulse",
+      "specRef": "3.4.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "If a stationary object explodes into pieces with no external impulse, their total momentum afterwards?",
+      "back": "Zero.",
+      "accept": [
+        "Zero.",
+        "The vector sum of their momenta is zero.",
+        "0 kg m s⁻¹.",
+        "Their momenta add to zero."
+      ],
+      "reject": [
+        "Equal to the sum of their speeds.",
+        "A large nonzero momentum is created."
+      ],
+      "strictRecall": true,
+      "skillId": "P031"
+    },
+    {
+      "id": "task1_v312_physics_19",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Momentum and impulse",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Momentum and impulse",
+      "specRef": "3.4.1.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Why can a crumple zone reduce average collision force for the same change in momentum?",
+      "back": "It increases stopping time.",
+      "accept": [
+        "It increases stopping time.",
+        "The collision takes longer.",
+        "Impact time is increased.",
+        "A longer Δt means a smaller mean force for the same Δp."
+      ],
+      "reject": [
+        "It makes momentum change larger.",
+        "It reduces stopping time."
+      ],
+      "strictRecall": true,
+      "skillId": "P031"
+    },
+    {
+      "id": "task1_v312_physics_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "Up to the limit of proportionality, what shape is a force–extension graph?",
+      "back": "A straight line through the origin.",
+      "accept": [
+        "A straight line through the origin.",
+        "A line through (0,0).",
+        "Linear, passing through the origin.",
+        "Force is proportional to extension."
+      ],
+      "reject": [
+        "A horizontal straight line.",
+        "A parabola through the origin."
+      ],
+      "strictRecall": true,
+      "skillId": "P043"
+    },
+    {
+      "id": "task1_v312_physics_21",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "Compared with a ductile material, how much plastic deformation does a brittle solid show before fracture?",
+      "back": "Little or none.",
+      "accept": [
+        "Little or none.",
+        "Very little.",
+        "Negligible plastic strain.",
+        "It fractures with little plastic deformation."
+      ],
+      "reject": [
+        "A very large plastic region.",
+        "It cannot fracture."
+      ],
+      "strictRecall": true,
+      "skillId": "P043"
+    },
+    {
+      "id": "task1_v312_physics_22",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Materials",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Materials",
+      "specRef": "3.4.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "On a stress–strain curve, what does the breaking stress refer to?",
+      "back": "Stress at fracture.",
+      "accept": [
+        "Stress at fracture.",
+        "The stress when the sample breaks.",
+        "Fracture stress.",
+        "Breaking force divided by original cross-sectional area."
+      ],
+      "reject": [
+        "The strain at the limit of proportionality.",
+        "Young modulus."
+      ],
+      "strictRecall": true,
+      "skillId": "P043"
+    },
+    {
+      "id": "task1_v312_physics_23",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Young modulus practical",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Young modulus practical",
+      "specRef": "3.4.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Why is a longer wire helpful when measuring Young modulus at the same force and cross-section?",
+      "back": "It gives a larger extension.",
+      "accept": [
+        "It gives a larger extension.",
+        "Extension is greater and easier to measure.",
+        "A longer wire stretches more at fixed stress.",
+        "Greater extension reduces percentage reading uncertainty."
+      ],
+      "reject": [
+        "The wire has a larger cross-sectional area.",
+        "It makes Young modulus depend on length."
+      ],
+      "strictRecall": true,
+      "skillId": "P046"
+    },
+    {
+      "id": "task1_v312_physics_24",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Young modulus practical",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Young modulus practical",
+      "specRef": "3.4.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "If wire area is calculated from diameter, approximately how does percentage uncertainty in area compare with diameter?",
+      "back": "Twice as large.",
+      "accept": [
+        "Twice as large.",
+        "Percentage uncertainty in A is about 2 times that in d.",
+        "2 × percentage uncertainty in diameter.",
+        "Area depends on diameter squared."
+      ],
+      "reject": [
+        "Half as large.",
+        "The same, because area is directly proportional to diameter."
+      ],
+      "strictRecall": true,
+      "skillId": "P046"
+    },
+    {
+      "id": "task1_v312_physics_25",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Young modulus practical",
+      "courseTopic": "Mechanics and materials",
+      "revisionTopic": "Young modulus practical",
+      "specRef": "3.4.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What instrument measures a thin wire diameter accurately for the Young modulus practical?",
+      "back": "Micrometer.",
+      "accept": [
+        "Micrometer.",
+        "Micrometer screw gauge.",
+        "A micrometer.",
+        "Screw gauge."
+      ],
+      "reject": [
+        "A stopwatch.",
+        "A protractor."
+      ],
+      "strictRecall": true,
+      "skillId": "P046"
+    },
+    {
+      "id": "task1_v312_chemistry_26",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Calorimetry practical",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Calorimetry practical",
+      "specRef": "3.1.4.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Why put a lid on the polystyrene cup in solution calorimetry?",
+      "back": "To reduce heat exchange with the surroundings.",
+      "accept": [
+        "To reduce heat exchange with the surroundings.",
+        "To reduce heat loss to the surroundings.",
+        "It reduces unwanted thermal energy transfer.",
+        "To improve insulation."
+      ],
+      "reject": [
+        "To make the reaction exothermic.",
+        "To stop all energy transfer completely."
+      ],
+      "strictRecall": true,
+      "skillId": "C053"
+    },
+    {
+      "id": "task1_v312_chemistry_27",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Calorimetry practical",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Calorimetry practical",
+      "specRef": "3.1.4.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Why extrapolate a temperature–time graph to the mixing time in calorimetry?",
+      "back": "To estimate temperature change correcting for heat exchange.",
+      "accept": [
+        "To estimate temperature change correcting for heat exchange.",
+        "To correct for heat loss or gain during the reading.",
+        "To estimate the temperature at the time of mixing.",
+        "To reduce effects of heat transfer to surroundings."
+      ],
+      "reject": [
+        "To calculate the sample's molar mass.",
+        "To make the temperature change zero."
+      ],
+      "strictRecall": true,
+      "skillId": "C053"
+    },
+    {
+      "id": "task1_v312_chemistry_28",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Calorimetry practical",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Calorimetry practical",
+      "specRef": "3.1.4.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "Why stir a reaction mixture before measuring its temperature?",
+      "back": "To make its temperature uniform.",
+      "accept": [
+        "To make its temperature uniform.",
+        "To distribute heat evenly.",
+        "To obtain a representative temperature reading.",
+        "So the solution is at a more uniform temperature."
+      ],
+      "reject": [
+        "To ensure no heat can escape.",
+        "To increase the reaction's enthalpy change."
+      ],
+      "strictRecall": true,
+      "skillId": "C053"
+    },
+    {
+      "id": "task1_v312_chemistry_29",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Calorimetry practical",
+      "courseTopic": "Energetics",
+      "revisionTopic": "Calorimetry practical",
+      "specRef": "3.1.4.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "comparison",
+      "front": "In q = mcΔT for solution calorimetry, what mass m is usually used?",
+      "back": "Mass of the solution being heated or cooled.",
+      "accept": [
+        "Mass of the solution being heated or cooled.",
+        "The solution's mass.",
+        "Mass of the liquid whose temperature changes.",
+        "The reacting solution's mass."
+      ],
+      "reject": [
+        "Mass of the polystyrene cup only.",
+        "Mass of the thermometer."
+      ],
+      "strictRecall": true,
+      "skillId": "C053"
+    },
+    {
+      "id": "task1_v312_chemistry_30",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Entropy",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "What are the units of standard molar entropy S°?",
+      "back": "J K⁻¹ mol⁻¹.",
+      "accept": [
+        "J K⁻¹ mol⁻¹.",
+        "J K^-1 mol^-1",
+        "J/(K mol)",
+        "J per kelvin per mole"
+      ],
+      "reject": [
+        "kJ mol⁻¹.",
+        "J K mol⁻¹."
+      ],
+      "strictRecall": true,
+      "skillId": "C067"
+    },
+    {
+      "id": "task1_v312_chemistry_31",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Entropy",
+      "courseTopic": "Thermodynamics",
+      "revisionTopic": "Entropy",
+      "specRef": "3.1.8.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "method": "quick recall",
+      "front": "How is standard reaction entropy change calculated from molar entropies?",
+      "back": "ΣS°(products) − ΣS°(reactants).",
+      "accept": [
+        "ΣS°(products) − ΣS°(reactants).",
+        "Sum of product entropies minus sum of reactant entropies.",
+        "products minus reactants, including coefficients.",
+        "ΔS° = total S° of products − total S° of reactants."
+      ],
+      "reject": [
+        "Reactants minus products.",
+        "ΔH − TΔS."
+      ],
+      "strictRecall": true,
+      "skillId": "C067"
+    }
+  ]
+}
