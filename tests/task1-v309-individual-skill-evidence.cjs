@@ -10,9 +10,9 @@ const all=new Function('cards','extraFlashBanks',app.slice(start,end)+'\nreturn 
 const a=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),b=app.indexOf('function startMockSession(){',a);
 const eligible=new Function(app.slice(a,b)+'\nreturn mockEligibleCard;')();
 const selected=all.filter(eligible);
-assert.equal(all.length,4313);assert.equal(selected.length,3341);
-assert.equal(new Set(all.map(c=>c.id)).size,4313);
-assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(n=>[n,selected.filter(c=>c.subject===n).length])),{Physics:1100,Chemistry:1910,Maths:331});
+assert.equal(all.length,4344);assert.equal(selected.length,3372);
+assert.equal(new Set(all.map(c=>c.id)).size,4344);
+assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(n=>[n,selected.filter(c=>c.subject===n).length])),{Physics:1125,Chemistry:1916,Maths:331});
 const mStart=app.indexOf('function normalise('),mEnd=app.indexOf('function importantTokens(',mStart);
 const mark=new Function('window',app.slice(mStart,mEnd)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
 const idToCard=new Map(selected.map(c=>[c.id,c]));
@@ -68,14 +68,14 @@ for(const id of linked){
  for(const ans of c.accept||[]){assert.equal(mark(c,ans).status,'correct',id+' correct variant '+ans);accepted++;}
  for(const ans of c.reject||[]){assert.notEqual(mark(c,ans).status,'correct',id+' must not credit known bad variant '+ans);rejected++;}
 }
-assert.deepEqual(sc,{Physics:{sample:37,partial:9,unverified:0},Chemistry:{sample:24,partial:2,unverified:0}});
-assert.equal(ledger.summary.sample,61);assert.equal(ledger.summary.partial,11);assert.equal(ledger.summary.unverified,0);
+assert.deepEqual(sc,{Physics:{sample:40,partial:6,unverified:0},Chemistry:{sample:25,partial:1,unverified:0}});
+assert.equal(ledger.summary.sample,65);assert.equal(ledger.summary.partial,7);assert.equal(ledger.summary.unverified,0);
 
 // v311: genuinely sampled short recall is distinguished from partial diagram and method coverage.
 const rowById=new Map(ledger.rows.map(row=>[row.id,row]));
 assert.equal(rowById.get('P025').status,'sample','Existing First, Second and Third law examples are individually linked');
 assert.equal(rowById.get('C047').status,'sample','Direct ΔH sign example is verified');
-for(const id of ['P003','P014','P017','P019','P024','P026','P031','P043','P046','C053','C067'])
+for(const id of ['P003','P019','P024','P026','P043','P046','C053'])
  assert.equal(rowById.get(id).status,'partial','Do not silently certify an unfinished practical, drawing or graph skill: '+id);
 assert(rowById.get('P014').evidenceIds.includes('task1_v227_phy_02'));
 assert(rowById.get('P043').evidenceIds.includes('task1_v227_phy_10'));
