@@ -1,0 +1,12 @@
+name: Task 1 v313 manual science exam practice
+on: [pull_request]
+jobs:
+  diagram-practical-mock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v313-science-practical-diagram-questions.cjs
+      - run: node tests/task1-v312-science-partial-short-recall.cjs
+      - run: node tests/task1-v309-individual-skill-evidence.cjs
+      - run: node tests/task1-v280-physics-mechanics-selected-audit.cjs
+      - run: node tests/task1-v301-school-mock-scope.cjs
