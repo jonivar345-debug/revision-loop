@@ -1,0 +1,10 @@
+name: Task 1 v312 short science recall loader and marking
+on: [pull_request]
+jobs:
+  science-short-recall:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v312-science-partial-short-recall.cjs
+      - run: node tests/task1-v309-individual-skill-evidence.cjs
+      - run: node tests/task1-v311-partial-skill-marking.cjs
