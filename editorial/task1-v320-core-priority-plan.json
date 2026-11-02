@@ -1,0 +1,14 @@
+{
+  "version": "v320",
+  "date": "2026-11-02",
+  "status": "Read-only reproducible audit of full original core, with 35 prioritized per-subject short-answer candidates for subsequent manual editorial and marker calibration",
+  "source": "Tests on actual app.js patched deck.json and actual mockEligibleCard",
+  "target": "Clear remaining core model/accepted/rejected variant gaps while retaining short cards and old progress IDs",
+  "scope": "First mock Physics AS, Chemistry taught AS+A2 excluding buffers, Maths Year 1 Pure only",
+  "notClaims": [
+    "Absence of accept/reject variants is not proof the marker is wrong",
+    "A keyword-selected priority list does not certify each AQA bullet",
+    "Original core cards require individual scientifically sound response review before changing their accepted/rejected variants"
+  ],
+  "next": "Use CI-ranked 105-card sample to choose genuinely answerable one-fact cards for exact-ID corrections and tests."
+}
