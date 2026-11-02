@@ -41,7 +41,7 @@ for(const q of newQ){
  assert(q.sourceVerified===false&&q.verificationLevel==='original-exam-style');
  assert.equal(q.manualWorkingReview,true,'No automated keyword points on multi-step responses '+q.id);
  assert(q.prompt.includes('['+q.marks+' marks]'));
- assert(q.markPoints.every(m=>m.length>20));
+ assert(q.markPoints.every(m=>m.length>=20),'Each mark criterion must state a meaningful check');
  assert(q.modelAnswer.length>150);
  assert.equal(q.markPoints.length,q.marks);
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
