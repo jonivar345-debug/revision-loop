@@ -8,6 +8,6 @@ jobs:
       - run: node tests/task1-v311-partial-skill-marking.cjs
       - run: node tests/task1-v309-individual-skill-evidence.cjs
       - run: node tests/task1-v307-mechanics-thermo-real-marker.cjs
-      - run: node tests/task1-v306-maths-proof-vector-readability.cjs
+      - run: node tests/task1-v306-pure-proof-vectors-precision.cjs
       - run: node tests/task1-v230-physics-mechanics-materials.cjs
       - run: node tests/task1-v304-legacy-mock-editorial-scan.cjs
