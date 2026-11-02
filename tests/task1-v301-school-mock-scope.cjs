@@ -8,9 +8,9 @@ const all=new Function('cards','extraFlashBanks',app.slice(begin,end)+'\nreturn 
 const a=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),b=app.indexOf('function startMockSession(){',a);
 const mockEligibleCard=new Function(app.slice(a,b)+'\nreturn mockEligibleCard;')();
 const eligible=all.filter(mockEligibleCard);
-assert.equal(all.length,4313);assert.equal(eligible.length,3341);
+assert.equal(all.length,4344);assert.equal(eligible.length,3372);
 const physics=eligible.filter(c=>c.subject==='Physics'),chem=eligible.filter(c=>c.subject==='Chemistry'),maths=eligible.filter(c=>c.subject==='Maths');
-assert.equal(physics.length,1100);assert.equal(chem.length,1910);assert.equal(maths.length,331);
+assert.equal(physics.length,1125);assert.equal(chem.length,1916);assert.equal(maths.length,331);
 const survey=[
  ['Physics A2 stage leaks',physics.filter(c=>c.stage==='A2')],
  ['Maths non-AS leaks',maths.filter(c=>c.stage!=='AS')],
