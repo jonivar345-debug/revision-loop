@@ -22,11 +22,13 @@
       "back": "It increases.",
       "accept": [
         "It increases.",
-        "increases down Group 2"
+        "increases down Group 2",
+        "Mg(OH)2 is less soluble than Ba(OH)2"
       ],
       "reject": [
         "it decreases",
-        "it stays constant"
+        "it stays constant",
+        "magnesium hydroxide is more soluble than barium hydroxide"
       ],
       "strictRecall": true
     },
@@ -47,11 +49,13 @@
       "back": "It decreases.",
       "accept": [
         "It decreases.",
-        "decreases down Group 2"
+        "decreases down Group 2",
+        "BaSO4 is less soluble than MgSO4"
       ],
       "reject": [
         "it increases",
-        "all are very soluble"
+        "all are very soluble",
+        "barium sulfate is more soluble than magnesium sulfate"
       ],
       "strictRecall": true
     },
@@ -72,11 +76,13 @@
       "back": "Barium sulfate.",
       "accept": [
         "Barium sulfate.",
-        "BaSO4"
+        "BaSO4",
+        "BaSO₄"
       ],
       "reject": [
         "magnesium sulfate",
-        "barium chloride"
+        "barium chloride",
+        "BaCO3"
       ],
       "strictRecall": true
     },
@@ -97,11 +103,13 @@
       "back": "Magnesium hydroxide.",
       "accept": [
         "Magnesium hydroxide.",
-        "Mg(OH)2"
+        "Mg(OH)2",
+        "Mg(OH)₂"
       ],
       "reject": [
         "barium hydroxide",
-        "magnesium sulfate"
+        "magnesium sulfate",
+        "CaCO3"
       ],
       "strictRecall": true
     },
@@ -122,11 +130,13 @@
       "back": "It decreases.",
       "accept": [
         "It decreases.",
-        "decreases down Group 2"
+        "decreases down Group 2",
+        "first ionisation energy generally falls from magnesium to barium"
       ],
       "reject": [
         "it increases",
-        "no change"
+        "no change",
+        "first ionisation energy rises from magnesium to barium"
       ],
       "strictRecall": true
     },
@@ -147,11 +157,13 @@
       "back": "Increased shielding and distance outweigh the increased nuclear charge.",
       "accept": [
         "Increased shielding and distance outweigh the increased nuclear charge.",
-        "more shielding and greater radius reduce outer electron attraction"
+        "more shielding and greater radius reduce outer electron attraction",
+        "outer electrons are farther from the nucleus and more shielded"
       ],
       "reject": [
         "nuclear charge gets smaller",
-        "the outer electron is closer"
+        "the outer electron is closer",
+        "the outer electron is closer to the nucleus down Group 2"
       ],
       "strictRecall": true
     },
@@ -172,11 +184,13 @@
       "back": "Hydrogen.",
       "accept": [
         "Hydrogen.",
-        "H2"
+        "H2",
+        "H₂ gas"
       ],
       "reject": [
         "oxygen",
-        "chlorine"
+        "chlorine",
+        "carbon dioxide"
       ],
       "strictRecall": true
     },
@@ -197,11 +211,13 @@
       "back": "Magnesium chloride.",
       "accept": [
         "Magnesium chloride.",
-        "MgCl2"
+        "MgCl2",
+        "MgCl₂"
       ],
       "reject": [
         "MgO",
-        "MgSO4"
+        "MgSO4",
+        "TiCl2"
       ],
       "strictRecall": true
     },
@@ -222,11 +238,13 @@
       "back": "Barium sulfate.",
       "accept": [
         "Barium sulfate.",
-        "BaSO4"
+        "BaSO4",
+        "BaSO₄"
       ],
       "reject": [
         "barium chloride",
-        "silver sulfate"
+        "silver sulfate",
+        "BaCO3"
       ],
       "strictRecall": true
     },
@@ -247,11 +265,13 @@
       "back": "To remove interfering carbonate ions that can also precipitate barium compounds.",
       "accept": [
         "To remove interfering carbonate ions that can also precipitate barium compounds.",
-        "exclude carbonate interference"
+        "exclude carbonate interference",
+        "to prevent carbonate ions producing a white precipitate with barium ions"
       ],
       "reject": [
         "to create sulfate ions",
-        "to colour the sulfate"
+        "to colour the sulfate",
+        "to prevent the sulfate precipitate from forming"
       ],
       "strictRecall": true
     },
@@ -272,11 +292,13 @@
       "back": "Neutralising acidic soil.",
       "accept": [
         "Neutralising acidic soil.",
-        "raising soil pH"
+        "raising soil pH",
+        "raise soil pH through neutralisation of acid"
       ],
       "reject": [
         "making soil more acidic",
-        "producing halogens"
+        "producing halogens",
+        "reduce the pH of already acidic soil"
       ],
       "strictRecall": true
     },
@@ -297,11 +319,13 @@
       "back": "It decreases.",
       "accept": [
         "It decreases.",
-        "decreases down Group 7"
+        "decreases down Group 7",
+        "chlorine has a greater oxidising ability than iodine"
       ],
       "reject": [
         "it increases",
-        "it is constant"
+        "it is constant",
+        "iodine is a stronger oxidising agent than chlorine"
       ],
       "strictRecall": true
     },
