@@ -1,0 +1,50 @@
+{
+  "version": "v317",
+  "date": "2026-11-02",
+  "scope": "AQA first mocks: Physics AS Waves/optical fibre; Chemistry AS Group 2, Group 7 and inorganic testing; Maths Year 1 Pure, vectors/proofs and introductory calculus. Excludes Year 2 Maths, Statistics, Mechanics and Chemistry buffers.",
+  "goal": "Continue individually checked short flashcard and production marking QA without disguising exam-style written answers as flashcards.",
+  "banks": [
+    "maths_mock_recall_v186.json",
+    "maths_mock_recall_v187.json",
+    "physics_refraction_fibres_recall_v275.json",
+    "chemistry_as_inorganic_tests_recall_v274.json"
+  ],
+  "edits": {
+    "existingCardsReviewed": 48,
+    "Maths": 24,
+    "Physics": 12,
+    "Chemistry": 12,
+    "additionalAccepted": 24,
+    "additionalExplicitWrong": 72,
+    "newCards": 0,
+    "removedCards": 0,
+    "changedCardIds": 0
+  },
+  "correctedDefect": {
+    "id": "task1_v186_maths_009",
+    "issue": "The normaliser strips derivative prime marks, so f'(b)-f'(a) was incorrectly scored as the valid integral f(b)-f(a).",
+    "fix": "Only this concise Fundamental Theorem of Calculus flashcard now requires notation-preserving exact review through existing strictSymbolRecall.",
+    "preservedAnswers": "All original model answers and accepted explanations retained."
+  },
+  "test": {
+    "path": "tests/task1-v317-precision-three-subjects.cjs",
+    "checkedProductionRight": 232,
+    "checkedProductionWrong": 120,
+    "failuresInPreflight": 0,
+    "actualWebsiteLoaderChecked": true,
+    "existingLoadedCards": 4344,
+    "existingMockCards": 3372,
+    "CI": "Pending PR checks, not yet certified."
+  },
+  "remaining": {
+    "allAqaBulletsReviewed": false,
+    "allUnseenAnswersCertified": false,
+    "allPracticalDrawingAnswersManuallyAssessed": false,
+    "fullMockFlashcardReviewFinished": false
+  },
+  "next": [
+    "Check full CI on this branch and fix failures before merging.",
+    "Continue individual specification mapping across all remaining Physics/Chemistry/Year 1 Pure content.",
+    "Review additional existing core cards with weak answer examples; keep application problems as exam questions."
+  ]
+}
