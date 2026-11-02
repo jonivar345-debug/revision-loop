@@ -14,10 +14,10 @@ const {evaluateCard,normalise}=new Function('window',app.slice(markerStart,marke
 const bankUrls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
 const loaderStart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),loaderEnd=app.indexOf(' const added=[',loaderStart);
 const loaded=new Function('cards','extraFlashBanks',app.slice(loaderStart,loaderEnd)+'\nreturn cards;')([...core.cards],bankUrls.map(j));
-assert.equal(loaded.length,4313,'Preserve original 4313 loaded cards');
+assert.equal(loaded.length,4344,'Preserve original 4313 cards and append 31 new v312 cards');
 const first=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),last=app.indexOf('function startMockSession(){',first);
 const mockEligibleCard=new Function(app.slice(first,last)+'\nreturn mockEligibleCard;')();
-assert.equal(loaded.filter(mockEligibleCard).length,3341,'Keep original mock population');
+assert.equal(loaded.filter(mockEligibleCard).length,3372,'Keep original 3341 mock cards and add 31 v312 cards');
 const byId=new Map(loaded.map(c=>[c.id,c]));
 const normalized=t=>normalise(t).replace(/[.!?]+$/,'').trim();
 let accepted=0,rejected=0,models=0,subject={Physics:0,Chemistry:0};
