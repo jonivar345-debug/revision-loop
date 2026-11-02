@@ -22,11 +22,11 @@ for(const c of cards.cards){
  assert(!fronts.has(c.front.trim().toLowerCase()),'duplicate old front '+c.front);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'AS');assert.equal(c.topic,'Bonding');assert(refs.has(c.specRef));
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert.equal(c.accept.length,2);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ const expectedMore=Number(c.id.slice(-2))<=12?1:0;assert.equal(c.accept.length,2+expectedMore);assert.equal(c.reject.length,2+expectedMore);assert(c.accept.includes(c.back));
  for(const v of c.accept){assert.equal(judge(c,v).status,'correct','Incorrect rejection '+c.id+' '+v);good++;}
  for(const v of c.reject){assert.equal(judge(c,v).status,'wrong','Incorrect acceptance '+c.id+' '+v);bad++;}
 }
-assert.equal(good,72);assert.equal(bad,72);
+assert.equal(good,84);assert.equal(bad,84);
 const ls=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),le=app.indexOf(' const added=[',ls);
 assert(ls>0&&le>ls&&app.slice(ls,le).includes('else if(index===48)'));
 const load=new Function('cards','extraFlashBanks',app.slice(ls,le)+'\nreturn cards;');
@@ -57,4 +57,4 @@ assert.equal(2*charges.ammonium+charges.sulfate,0);
 const examples=[['CO2','linear',180],['BF3','trigonal planar',120],['NH4+','tetrahedral',109.5],['NH3','trigonal pyramidal',107],['H2O','bent',104.5],['PCl5','trigonal bipyramidal',90],['SF6','octahedral',90],['XeF4','square planar',90]];
 for(const [mol,shape,angle] of examples){assert(angle>0&&angle<=180);assert(shape.length>2);assert(mol.length>0);}
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v276: 36 AS Bonding cards, 72 accepted and 72 rejected variants, 6 questions/41 marks, shape diagrams manually reviewed, accurate formula charge balances, original IDs and progress preserved.');
+console.log('PASS v276: 36 AS Bonding cards, 84 accepted and 84 rejected variants, 6 questions/41 marks, shape diagrams manually reviewed, accurate formula charge balances, original IDs and progress preserved.');
