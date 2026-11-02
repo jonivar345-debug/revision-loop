@@ -1,0 +1,11 @@
+name: Task 1 v314 complete mock flashcard triage
+on: [pull_request]
+jobs:
+  actual-mock-banks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
+      - run: node tests/task1-v312-science-partial-short-recall.cjs
+      - run: node tests/task1-v306-pure-proof-vectors-precision.cjs
+      - run: node tests/task1-v309-individual-skill-evidence.cjs
