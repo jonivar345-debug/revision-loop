@@ -1,0 +1,12 @@
+name: Task 1 v319 full 999-supplement mock flashcard quality regression
+on: [pull_request]
+jobs:
+  all-supplements:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
+      - run: node tests/task1-v318-138-trisubject-marker.cjs
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
+      - run: node tests/task1-v301-school-mock-scope.cjs
+      - run: node tests/task1-v302-ordered-cloze-marking.cjs

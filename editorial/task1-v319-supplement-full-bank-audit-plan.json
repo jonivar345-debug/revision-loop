@@ -1,0 +1,20 @@
+{
+  "version": "v319",
+  "date": "2026-11-02",
+  "scope": "All 56 production supplementary flashcard JSON banks, separately from the 3,345-card original core deck",
+  "motivation": "Permanent site-driven quality checks for all 999 supplemental flashcards in Physics, Chemistry and Year 1 Pure Maths; complements rather than replaces complete specification-to-card crosswalk.",
+  "checking": [
+    "All models, explicit accepted examples and explicit rejected examples through the actual website evaluateCard",
+    "One card ID and no duplicate literal question across supplementary banks",
+    "Concise front/back limits, no multi-question fronts and nonempty answer variants",
+    "Actual 56-file app.js manifest, 4344-card loader, 3372 first-mock selector, subject/stage restrictions",
+    "Stable user progress keys; sampled AQA specRef groups, warnings for nonstrict or partial graded wrong examples"
+  ],
+  "knownLimitations": [
+    "No complete manual review of all 3,345 original core questions and explanations",
+    "No certificate that every AQA assessable bullet is taught or has an appropriate recall card",
+    "Full free-form correctness for unseen paraphrases remains unverified",
+    "Drawing or experimental design application still requires manual exam-question assessment"
+  ],
+  "status": "New QA harness; CI output to establish exact real-marker results."
+}
