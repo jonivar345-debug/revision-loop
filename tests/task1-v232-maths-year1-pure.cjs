@@ -44,7 +44,7 @@ for(let i=0;i<bank.cards.length;i++){
  assert.equal(c.subject,'Maths');assert.equal(c.stage,'AS');assert.equal(c.mock,true);
  assert.equal(c.scope,'mock');assert.equal(c.taught,true);assert.equal(c.active,true);
  assert.equal(c.strictRecall,true);assert.equal(isEligible(c),true);
- assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ const expectedMore=i<12?1:0;assert.equal(c.accept.length,3+expectedMore);assert.equal(c.reject.length,2+expectedMore);assert(c.accept.includes(c.back));
  assert(!/\b(radians?|statistics|mechanics|chain rule|contradiction)\b/i.test(c.topic+' '+c.front+' '+c.back));
 }
 const hash=c=>{const s=[c.id,c.front,c.back,c.stage,c.mock,c.active].join('\n');let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return(h>>>0).toString(16).padStart(8,'0');};
@@ -61,7 +61,7 @@ for(const c of bank.cards){
  for(const a of c.reject){assert.notEqual(judge(c,a).status,'correct','incorrect answer accepted '+c.id+': '+a);rejected++;}
  assert.equal(judge(c,'').status,'neutral');
 }
-assert.equal(accepted,72);assert.equal(rejected,48);
+assert.equal(accepted,84);assert.equal(rejected,60);
 const lstart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),lend=app.indexOf(' const added=[',lstart);
 assert(lstart>0&&lend>lstart);
 const loader=app.slice(lstart,lend);assert(loader.includes('else if(index===26)'));
