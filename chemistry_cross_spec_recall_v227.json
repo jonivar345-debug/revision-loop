@@ -22,11 +22,13 @@
       "accept": [
         "Negative.",
         "ΔH is less than zero.",
-        "Enthalpy change is negative."
+        "Enthalpy change is negative.",
+        "An exothermic enthalpy change is less than zero."
       ],
       "reject": [
         "Positive.",
-        "Always zero."
+        "Always zero.",
+        "An exothermic reaction has a positive reaction enthalpy."
       ],
       "strictRecall": true,
       "mock": true,
@@ -49,11 +51,13 @@
       "accept": [
         "The temperature difference can be used directly because a change of 1 °C equals a change of 1 K.",
         "A temperature difference in Celsius has the same numerical size as in kelvin.",
-        "No 273 conversion is needed for the temperature change."
+        "No 273 conversion is needed for the temperature change.",
+        "Use the same numerical temperature rise because Celsius and kelvin intervals are equal."
       ],
       "reject": [
         "Add 273 to every temperature difference.",
-        "Divide the temperature change by 273."
+        "Divide the temperature change by 273.",
+        "Multiply the temperature difference in Celsius by 273."
       ],
       "strictRecall": true,
       "mock": true,
@@ -76,11 +80,13 @@
       "accept": [
         "The measured magnitude is smaller than the true value.",
         "Heat loss makes the calculated exothermic enthalpy less negative.",
-        "The absolute value of ΔH is underestimated."
+        "The absolute value of ΔH is underestimated.",
+        "Heat loss causes the measured exothermic enthalpy magnitude to be underestimated."
       ],
       "reject": [
         "The reaction must become endothermic.",
-        "Heat loss makes the measured ΔH more negative."
+        "Heat loss makes the measured ΔH more negative.",
+        "Heat loss always makes the magnitude of exothermic enthalpy too large."
       ],
       "strictRecall": true,
       "mock": true,
@@ -103,11 +109,13 @@
       "accept": [
         "q = n|ΔH|.",
         "Number of moles multiplied by magnitude of enthalpy per mole.",
-        "Energy equals amount times absolute enthalpy change."
+        "Energy equals amount times absolute enthalpy change.",
+        "Heat magnitude equals moles multiplied by magnitude of molar enthalpy change."
       ],
       "reject": [
         "q = |ΔH|/n.",
-        "q = n/|ΔH|."
+        "q = n/|ΔH|.",
+        "Use q=n/|delta H| for the magnitude of heat."
       ],
       "strictRecall": true,
       "mock": true,
@@ -130,11 +138,13 @@
       "accept": [
         "The 4s subshell.",
         "Electrons are removed from 4s before 3d.",
-        "The occupied 4s electrons are removed first."
+        "The occupied 4s electrons are removed first.",
+        "The occupied 4s electrons are lost before 3d electrons."
       ],
       "reject": [
         "3d electrons always leave first.",
-        "The 1s electrons leave first."
+        "The 1s electrons leave first.",
+        "Transition metal cations always lose 3d electrons before 4s."
       ],
       "strictRecall": true,
       "mock": true,
@@ -157,11 +167,13 @@
       "accept": [
         "1000.",
         "Multiply by one thousand.",
-        "Multiply the kPa figure by 10³."
+        "Multiply the kPa figure by 10³.",
+        "Multiply the kilopascal value by ten to the power three."
       ],
       "reject": [
         "Divide by 1000.",
-        "Multiply by 100000."
+        "Multiply by 100000.",
+        "Convert kPa to Pa by dividing by 1000."
       ],
       "strictRecall": true,
       "mock": true,
@@ -184,11 +196,13 @@
       "accept": [
         "Zero order with respect to that reactant.",
         "The order in that reactant is zero.",
-        "Concentration has no effect on rate under those conditions."
+        "Concentration has no effect on rate under those conditions.",
+        "Order in that reactant is zero because rate is unchanged."
       ],
       "reject": [
         "First order.",
-        "Second order."
+        "Second order.",
+        "The order must be one when rate does not respond to doubling concentration."
       ],
       "strictRecall": true,
       "mock": true,
@@ -211,11 +225,13 @@
       "accept": [
         "It contains an aldehyde or ketone carbonyl group.",
         "The sample may be an aldehyde or a ketone.",
-        "The test is consistent with an aldehyde or ketone functional group."
+        "The test is consistent with an aldehyde or ketone functional group.",
+        "The test indicates an aldehyde or ketone carbonyl group."
       ],
       "reject": [
         "The molecule is definitely an aldehyde.",
-        "The molecule must be a carboxylic acid."
+        "The molecule must be a carboxylic acid.",
+        "A positive 2,4-DNPH test proves the substance is an aldehyde, not a ketone."
       ],
       "strictRecall": true,
       "mock": true,
@@ -238,11 +254,13 @@
       "accept": [
         "Further oxidation of the aldehyde to a carboxylic acid.",
         "It reduces the chance of the aldehyde being oxidised further.",
-        "It removes the aldehyde before further oxidation can occur."
+        "It removes the aldehyde before further oxidation can occur.",
+        "Immediate distillation limits oxidation of aldehyde to carboxylic acid."
       ],
       "reject": [
         "It makes a secondary alcohol into a primary alcohol.",
-        "It guarantees a ketone product."
+        "It guarantees a ketone product.",
+        "Distilling the aldehyde promotes oxidation all the way to an acid."
       ],
       "strictRecall": true,
       "mock": true,
@@ -265,11 +283,13 @@
       "accept": [
         "Convert ΔS to kJ K⁻¹ mol⁻¹ by dividing by 1000.",
         "Divide the entropy change in joules by 1000.",
-        "Use compatible kilojoule energy units for the entropy term."
+        "Use compatible kilojoule energy units for the entropy term.",
+        "Divide the entropy value by one thousand to match kJ enthalpy units."
       ],
       "reject": [
         "Multiply ΔS by 1000.",
-        "Use ΔS in joules without any unit conversion."
+        "Use ΔS in joules without any unit conversion.",
+        "Multiply entropy in J per kelvin per mole by one thousand."
       ],
       "strictRecall": true,
       "mock": true,
@@ -292,11 +312,13 @@
       "accept": [
         "No; the reaction may have a large activation energy.",
         "No, kinetics and activation energy control how fast it proceeds.",
-        "Thermodynamic feasibility does not ensure a fast rate."
+        "Thermodynamic feasibility does not ensure a fast rate.",
+        "Negative Gibbs energy does not indicate a fast reaction; the barrier may be high."
       ],
       "reject": [
         "Yes, negative ΔG always gives an instant reaction.",
-        "Yes, ΔG is the activation energy."
+        "Yes, ΔG is the activation energy.",
+        "A negative delta G means activation energy is zero."
       ],
       "strictRecall": true,
       "mock": true,
@@ -319,11 +341,13 @@
       "accept": [
         "Energy is needed to add an electron to an already negatively charged ion.",
         "The incoming electron is repelled by an anion.",
-        "Electrostatic repulsion makes the second electron addition require energy."
+        "Electrostatic repulsion makes the second electron addition require energy.",
+        "A negative ion repels an additional incoming electron, requiring energy."
       ],
       "reject": [
         "A second electron is attracted by the negative charge so it releases energy.",
-        "It is always equal to the first electron affinity."
+        "It is always equal to the first electron affinity.",
+        "The second electron affinity must release energy because the ion is already negative."
       ],
       "strictRecall": true,
       "mock": true,
