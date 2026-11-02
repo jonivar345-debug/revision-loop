@@ -22,11 +22,13 @@
       "back": "Parallel to the electric-field oscillations.",
       "accept": [
         "Parallel to the electric-field oscillations.",
-        "parallel to the wave's polarisation direction"
+        "parallel to the wave's polarisation direction",
+        "Align the aerial length with the direction of the incident E-field."
       ],
       "reject": [
         "perpendicular to the electric field",
-        "parallel to the direction of wave travel"
+        "parallel to the direction of wave travel",
+        "The receiving aerial must be perpendicular to the electric oscillation direction."
       ],
       "strictRecall": true
     },
@@ -47,11 +49,13 @@
       "back": "No light is transmitted.",
       "accept": [
         "No light is transmitted.",
-        "zero transmission"
+        "zero transmission",
+        "Crossed ideal polarisers block the transmitted light completely."
       ],
       "reject": [
         "all light passes",
-        "its frequency doubles"
+        "its frequency doubles",
+        "Two ideal polarisers crossed at 90 degrees transmit all the light."
       ],
       "strictRecall": true
     },
@@ -72,11 +76,13 @@
       "back": "Only transverse oscillations can be restricted to a chosen vibration plane.",
       "accept": [
         "Only transverse oscillations can be restricted to a chosen vibration plane.",
-        "only transverse waves can be polarised"
+        "only transverse waves can be polarised",
+        "Polarisation selects a vibration plane, possible only for transverse waves."
       ],
       "reject": [
         "only longitudinal waves have wavelength",
-        "light must be a mechanical wave"
+        "light must be a mechanical wave",
+        "Longitudinal pressure waves can be linearly polarised in the same way."
       ],
       "strictRecall": true
     },
@@ -97,11 +103,13 @@
       "back": "It remains zero.",
       "accept": [
         "It remains zero.",
-        "the node stays at zero displacement"
+        "the node stays at zero displacement",
+        "A node is permanently at zero displacement."
       ],
       "reject": [
         "it oscillates with maximum amplitude",
-        "the node travels along the string"
+        "the node travels along the string",
+        "A node alternates between positive and negative maximum displacement."
       ],
       "strictRecall": true
     },
@@ -122,11 +130,13 @@
       "back": "In phase.",
       "accept": [
         "In phase.",
-        "same phase"
+        "same phase",
+        "Particles in a single loop have zero phase difference."
       ],
       "reject": [
         "180 degrees out of phase",
-        "random phase"
+        "random phase",
+        "Points within the same loop are in antiphase."
       ],
       "strictRecall": true
     },
@@ -147,11 +157,13 @@
       "back": "In antiphase (180° apart).",
       "accept": [
         "In antiphase (180° apart).",
-        "180 degrees out of phase"
+        "180 degrees out of phase",
+        "Neighbouring loops have a phase difference of pi radians."
       ],
       "reject": [
         "in phase",
-        "90 degrees out of phase"
+        "90 degrees out of phase",
+        "Adjacent loops of a stationary wave move in phase."
       ],
       "strictRecall": true
     },
@@ -172,11 +184,13 @@
       "back": "Three.",
       "accept": [
         "Three.",
-        "3"
+        "3",
+        "Third harmonic has 3 antinodes."
       ],
       "reject": [
         "two",
-        "four"
+        "four",
+        "The third harmonic has two antinodes."
       ],
       "strictRecall": true
     },
@@ -197,11 +211,13 @@
       "back": "Four.",
       "accept": [
         "Four.",
-        "4"
+        "4",
+        "There are four fixed nodes including both ends."
       ],
       "reject": [
         "three",
-        "five"
+        "five",
+        "A third-harmonic fixed string has only three nodes including its ends."
       ],
       "strictRecall": true
     },
@@ -222,11 +238,13 @@
       "back": "It becomes three times as large.",
       "accept": [
         "It becomes three times as large.",
-        "frequency triples"
+        "frequency triples",
+        "Since f is proportional to the square root of tension, it triples."
       ],
       "reject": [
         "frequency becomes nine times as large",
-        "frequency falls by factor three"
+        "frequency falls by factor three",
+        "Increasing tension ninefold increases frequency ninefold."
       ],
       "strictRecall": true
     },
@@ -247,11 +265,13 @@
       "back": "The relationship f²=T/(4L²μ) is a straight line through the origin.",
       "accept": [
         "The relationship f²=T/(4L²μ) is a straight line through the origin.",
-        "frequency squared is proportional to tension"
+        "frequency squared is proportional to tension",
+        "Squaring f gives a linear relation with T at constant L and mu."
       ],
       "reject": [
         "frequency is inversely proportional to tension",
-        "f squared is independent of tension"
+        "f squared is independent of tension",
+        "Plotting f squared against T gives a quadratic curve."
       ],
       "strictRecall": true
     },
@@ -272,11 +292,13 @@
       "back": "The central maximum becomes wider.",
       "accept": [
         "The central maximum becomes wider.",
-        "central diffraction peak broadens"
+        "central diffraction peak broadens",
+        "A narrower slit causes greater spreading, widening the central fringe."
       ],
       "reject": [
         "it becomes narrower",
-        "its angular width remains unchanged"
+        "its angular width remains unchanged",
+        "Decreasing slit width narrows the central bright maximum."
       ],
       "strictRecall": true
     },
@@ -297,11 +319,13 @@
       "back": "The central maximum is wider.",
       "accept": [
         "The central maximum is wider.",
-        "centre bright fringe is the widest"
+        "centre bright fringe is the widest",
+        "The central bright fringe is broader than an individual side fringe."
       ],
       "reject": [
         "the central maximum is narrower",
-        "all maxima have equal width"
+        "all maxima have equal width",
+        "All bright maxima are the same width in single-slit diffraction."
       ],
       "strictRecall": true
     },
