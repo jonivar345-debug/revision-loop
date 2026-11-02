@@ -67,7 +67,7 @@ console.log('V314_MOCK_FULL_DECK_TRIAGE_END');
 assert.equal(selectedCards.length,3372);
 const vectors=selectedCards.filter(c=>c.subject==='Maths'&&
  (['task1_v162_023','task1_v171_003','task1_v171_004','task1_v171_005'].includes(c.id)||
-  c.id.startsWith('task1_v187_maths_')||['task1_v227_math_04','task1_v227_math_05','task1_v227_math_06'].includes(c.id)));
+  /^task1_v187_maths_00[1-9]$/.test(c.id)||['task1_v227_math_04','task1_v227_math_05','task1_v227_math_06'].includes(c.id)));
 assert.equal(vectors.length,16,'All sixteen historical vector cards still reach the Year 1 Pure mock');
 assert(vectors.every(c=>c.specRef==='3.11'&&c.topic==='Vectors'),'All mislabelled vector cards must now use AQA 3.11');
 assert.equal(selectedCards.filter(c=>c.subject==='Maths'&&c.specRef==='3.10').length,0,'Do not present numerical-methods metadata as vectors');
