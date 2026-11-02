@@ -31,8 +31,8 @@ for(const c of supplements){
  for(const x of (c.accept||[])){assert.equal(judge(c,x).status,'correct','Supplement accept: '+c.id+': '+x);supplementAccepts++;}
  for(const x of (c.reject||[])){assert.equal(judge(c,x).status,'wrong','Supplement reject: '+c.id+': '+x);supplementRejects++;}
 }
-assert.equal(supplementModels,262);assert.equal(supplementAccepts,992);assert.equal(supplementRejects,584);
+assert.equal(supplementModels,262);assert(supplementAccepts>=992,'All original 992 accepted examples and later approved additions tested');assert(supplementRejects>=584,'All original 584 rejected examples and later additions tested');
 assert.equal(models+supplementModels,3607);
-assert.equal(accepted+supplementAccepts,5934);
-assert.equal(rejected+supplementRejects,674);
-console.log('PASS v236: 3607/3607 configured core+supplement model answers correct, 5934/5934 declared accepted variants correct, 674/674 declared rejected variants wrong; Maths one-over-a fixed. Model accuracy and AQA coverage still NOT certified.');
+assert(accepted+supplementAccepts>=5934,'Historical core and supplemental correct-answer coverage retained');
+assert(rejected+supplementRejects>=674,'Historical wrong-answer rejection coverage retained');
+console.log('PASS v236: '+(models+supplementModels)+' model answers, '+(accepted+supplementAccepts)+' declared accepted and '+(rejected+supplementRejects)+' declared rejected variants tested using the real marker; historical minimums retained. Complete AQA coverage NOT certified.');

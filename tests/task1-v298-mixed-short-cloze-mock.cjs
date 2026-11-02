@@ -73,7 +73,7 @@ const loaderEnd=app.indexOf(' const added=[',loaderStart);
 assert(loaderStart>=0&&loaderEnd>loaderStart);
 const loaded=new Function('cards','extraFlashBanks',app.slice(loaderStart,loaderEnd)+'\nreturn cards;')(
  [...core.cards],names.map(j));
-assert.equal(loaded.length,expected,'Real website loader must include all 97 new cards');
+assert.equal(loaded.length,expected+31,'Original 97 v298 cards plus 31 later v312 cards must load');
 const liveIds=new Set(loaded.map(c=>c.id));
 assert(newCards.every(c=>liveIds.has(c.id)),'All 97 new cards must actually reach revision sessions');
 const eligibleNew=loaded.filter(c=>c.id.startsWith('task1_v298_')&&mockEligibleCard(c));

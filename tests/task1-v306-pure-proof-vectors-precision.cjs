@@ -15,7 +15,7 @@ const mark=new Function('window',app.slice(a,b)+'\nreturn evaluateCard;')({Revis
 const files=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(x=>x[1]);
 const start=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),end=app.indexOf(' const added=[',start);
 const all=new Function('cards','extraFlashBanks',app.slice(start,end)+'\nreturn cards;')([...core.cards],files.map(j));
-assert.equal(all.length,4313);
+assert.equal(all.length,4344);
 const eligStart=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),eligEnd=app.indexOf('function startMockSession(){',eligStart);
 const eligible=new Function(app.slice(eligStart,eligEnd)+'\nreturn mockEligibleCard;')();
 const by=new Map(all.map(c=>[c.id,c]));

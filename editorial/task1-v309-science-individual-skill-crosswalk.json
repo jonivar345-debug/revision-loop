@@ -15,7 +15,8 @@
     "physics_cross_spec_recall_v227.json",
     "chemistry_cross_spec_recall_v227.json",
     "mock_short_recall_and_cloze_v298.json",
-    "deck.json"
+    "deck.json",
+    "science_partial_skill_short_recall_v312.json"
   ],
   "statusDefinitions": {
     "sample": "One or more existing mock cards specifically practise this short-recall skill; this does not certify complete question or answer coverage.",
@@ -24,17 +25,17 @@
   },
   "summary": {
     "rows": 72,
-    "sample": 61,
-    "partial": 11,
+    "sample": 65,
+    "partial": 7,
     "unverified": 0,
     "bySubject": {
       "Physics": {
-        "sample": 37,
-        "partial": 9
+        "sample": 40,
+        "partial": 6
       },
       "Chemistry": {
-        "partial": 2,
-        "sample": 24
+        "sample": 25,
+        "partial": 1
       }
     }
   },
@@ -79,9 +80,11 @@
       "skill": "Use a scale drawing to add vectors at arbitrary angles",
       "status": "partial",
       "evidenceIds": [
-        "task1_v125_004"
+        "task1_v125_004",
+        "task1_v312_physics_01",
+        "task1_v312_physics_02"
       ],
-      "notes": "No diagram-marking example found in the reviewed short-recall banks. Core deck recalls a closed force triangle, but the actual skill of constructing a scale drawing at arbitrary angles remains to be tested.",
+      "notes": "No diagram-marking example found in the reviewed short-recall banks. Core deck recalls a closed force triangle, but the actual skill of constructing a scale drawing at arbitrary angles remains to be tested. v312: 2 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "P003"
     },
     {
@@ -202,12 +205,13 @@
       "subject": "Physics",
       "specRef": "3.4.1.3",
       "skill": "Distinguish average and instantaneous motion using graph tangents",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
         "task1_v298_physics_07",
-        "task1_v227_phy_02"
+        "task1_v227_phy_02",
+        "task1_v312_physics_03"
       ],
-      "notes": "Both displacement–time and velocity–time tangent gradients have directly relevant cards; full comparison with average gradients and drawn graph interpretation still needs checking.",
+      "notes": "Both displacement–time and velocity–time tangent gradients have directly relevant cards; full comparison with average gradients and drawn graph interpretation still needs checking. v312: 1 additional short recall card addresses this skill; actual drawing/practical application is not assumed complete. Direct recall samples now cover the named components; unseen exam question formats remain unverified.",
       "id": "P014"
     },
     {
@@ -237,11 +241,15 @@
       "subject": "Physics",
       "specRef": "3.4.1.3",
       "skill": "Recall and select all uniform acceleration equations",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
-        "task1_v257_physics_mechanics_15"
+        "task1_v257_physics_mechanics_15",
+        "task1_v312_physics_04",
+        "task1_v312_physics_05",
+        "task1_v312_physics_06",
+        "task1_v312_physics_07"
       ],
-      "notes": "A sample of SUVAT use is present; distinct recall/selection of all four is not yet audited. Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly.",
+      "notes": "A sample of SUVAT use is present; distinct recall/selection of all four is not yet audited. Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly. v312: 4 additional short recall cards address this skill; actual drawing/practical application is not assumed complete. Direct recall samples now cover the named components; unseen exam question formats remain unverified.",
       "id": "P017",
       "crossSectionEvidenceIds": [
         "task1_v257_physics_mechanics_15"
@@ -266,9 +274,12 @@
       "evidenceIds": [
         "task1_practical_006",
         "task1_practical_007",
-        "task1_v132_003"
+        "task1_v132_003",
+        "task1_v312_physics_08",
+        "task1_v312_physics_09",
+        "task1_v312_physics_10"
       ],
-      "notes": "The g-gradient card does not test the complete practical method and limitations. Core deck tests gradient for g, light-gate timing and systematic graph offset. Complete practical design and uncertainty evaluation still need checking.",
+      "notes": "The g-gradient card does not test the complete practical method and limitations. Core deck tests gradient for g, light-gate timing and systematic graph offset. Complete practical design and uncertainty evaluation still need checking. v312: 3 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "P019",
       "legacyBroadSpecEvidenceIds": [
         "task1_practical_006",
@@ -329,9 +340,12 @@
       "evidenceIds": [
         "task1_v157_001",
         "task1_v125_029",
-        "task1_v130_033"
+        "task1_v130_033",
+        "task1_v312_physics_11",
+        "task1_v312_physics_12",
+        "task1_v312_physics_13"
       ],
-      "notes": "Only a few drag examples were manually checked; lift and friction effects remain. Core deck defines fluid lift, tests drag and balancing driving/drag at terminal speed; a complete combined vehicle application is not yet verified.",
+      "notes": "Only a few drag examples were manually checked; lift and friction effects remain. Core deck defines fluid lift, tests drag and balancing driving/drag at terminal speed; a complete combined vehicle application is not yet verified. v312: 3 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "P024",
       "legacyBroadSpecEvidenceIds": [
         "task1_v130_033"
@@ -360,9 +374,12 @@
       "status": "partial",
       "evidenceIds": [
         "phy_force_diagram_001",
-        "phy_force_diagram_002"
+        "phy_force_diagram_002",
+        "task1_v312_physics_14",
+        "task1_v312_physics_15",
+        "task1_v312_physics_16"
       ],
-      "notes": "A drawn free-body diagram has not been inspected. Core deck explains labelled external-force arrows and force resolution, but an actual drawing has not been individually assessed.",
+      "notes": "A drawn free-body diagram has not been inspected. Core deck explains labelled external-force arrows and force resolution, but an actual drawing has not been individually assessed. v312: 3 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "P026",
       "legacyBroadSpecEvidenceIds": [
         "phy_force_diagram_001",
@@ -418,11 +435,14 @@
       "subject": "Physics",
       "specRef": "3.4.1.6",
       "skill": "Explain variable impact force, contact time, explosions and transport design",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
-        "task1_v280_phy_mech_card_08"
+        "task1_v280_phy_mech_card_08",
+        "task1_v312_physics_17",
+        "task1_v312_physics_18",
+        "task1_v312_physics_19"
       ],
-      "notes": "Impulse recall exists; the remaining qualitative cases need individual review.",
+      "notes": "Impulse recall exists; the remaining qualitative cases need individual review. v312: 3 additional short recall cards address this skill; actual drawing/practical application is not assumed complete. Direct recall samples now cover the named components; unseen exam question formats remain unverified.",
       "id": "P031"
     },
     {
@@ -562,9 +582,12 @@
       "status": "partial",
       "evidenceIds": [
         "task1_v280_phy_mech_card_15",
-        "task1_v227_phy_10"
+        "task1_v227_phy_10",
+        "task1_v312_physics_20",
+        "task1_v312_physics_21",
+        "task1_v312_physics_22"
       ],
-      "notes": "Existing cards distinguish permanent deformation and the linear-region gradient; complete multi-region force–extension and stress–strain interpretation is not yet checked. Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly.",
+      "notes": "Existing cards distinguish permanent deformation and the linear-region gradient; complete multi-region force–extension and stress–strain interpretation is not yet checked. Some sample cards use a different but related or broader specRef; their topic fit is reviewed explicitly. v312: 3 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "P043",
       "crossSectionEvidenceIds": [
         "task1_v280_phy_mech_card_15"
@@ -599,9 +622,12 @@
       "status": "partial",
       "evidenceIds": [
         "task1_v257_physics_mechanics_34",
-        "task1_v230_phy_mech_20"
+        "task1_v230_phy_mech_20",
+        "task1_v312_physics_23",
+        "task1_v312_physics_24",
+        "task1_v312_physics_25"
       ],
-      "notes": "Diameter-related limitations covered; full method and uncertainty treatment not yet signed off.",
+      "notes": "Diameter-related limitations covered; full method and uncertainty treatment not yet signed off. v312: 3 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "P046"
     },
     {
@@ -693,9 +719,13 @@
       "skill": "Evaluate calorimetry practical method, equipment and measurement uncertainties",
       "status": "partial",
       "evidenceIds": [
-        "task1_v247_chem_energetics_09"
+        "task1_v247_chem_energetics_09",
+        "task1_v312_chemistry_26",
+        "task1_v312_chemistry_27",
+        "task1_v312_chemistry_28",
+        "task1_v312_chemistry_29"
       ],
-      "notes": "Percentage uncertainty is tested; complete RP method and improvements are not audited.",
+      "notes": "Percentage uncertainty is tested; complete RP method and improvements are not audited. v312: 4 additional short recall cards address this skill; actual drawing/practical application is not assumed complete.",
       "id": "C053"
     },
     {
@@ -855,13 +885,15 @@
       "subject": "Chemistry",
       "specRef": "3.1.8.2",
       "skill": "Define entropy and standard molar entropy in appropriate units",
-      "status": "partial",
+      "status": "sample",
       "evidenceIds": [
         "task1_v256_chem_thermo_23",
         "chem_a2_entropy_def",
-        "task1_chem_162"
+        "task1_chem_162",
+        "task1_v312_chemistry_30",
+        "task1_v312_chemistry_31"
       ],
-      "notes": "Entropy change calculated, but definition not checked. Core deck defines qualitative entropy and standard molar entropy, but its units still need a direct explicit recall check.",
+      "notes": "Entropy change calculated, but definition not checked. Core deck defines qualitative entropy and standard molar entropy, but its units still need a direct explicit recall check. v312: 2 additional short recall cards address this skill; actual drawing/practical application is not assumed complete. Direct recall samples now cover the named components; unseen exam question formats remain unverified.",
       "id": "C067",
       "legacyBroadSpecEvidenceIds": [
         "chem_a2_entropy_def",
@@ -942,7 +974,8 @@
     "Unverified means no direct matching card was checked in the seven sampled banks, not that the whole 4,313-card website lacks that skill.",
     "Two incorrect non-existent 3.1.8.3 subsection tags on task1_v298_chemistry_20 and _21 were corrected to official 3.1.8.2.",
     "v310: selective follow-up search of all supplemental banks and historical core deck resolved the eight previously unverified skills into four direct examples and four partial examples; one existing formation/combustion definition entry also became a direct sample.",
-    "v311: two previously partial rows (P025 Newton's three laws and C047 exothermic heating/negative ΔH) have directly relevant short-recall evidence; additional linked tangent and plastic-deformation cards strengthen P014/P043 but do not prove full graphical mastery. No mock-only scope or progress IDs changed."
+    "v311: two previously partial rows (P025 Newton's three laws and C047 exothermic heating/negative ΔH) have directly relevant short-recall evidence; additional linked tangent and plastic-deformation cards strengthen P014/P043 but do not prove full graphical mastery. No mock-only scope or progress IDs changed.",
+    "v312: 31 unique mock-eligible one-skill recall cards appended; P014 average/instantaneous motion, P017 all four SUVAT equations, P031 impact and explosion fundamentals, and C067 entropy units now have direct sampled card coverage. Seven skills remain partial because actual vector/free-body drawings, complete practical evaluations, vehicle applications and entire curve interpretation need separate manual exam-question assessment."
   ],
-  "sourceFileSamplingNotes": "Only linked cards from the very large core deck were individually checked. Including deck.json as a source does not mean all its cards have been audited."
+  "sourceFileSamplingNotes": "Only linked cards from the very large core deck were individually checked. Including deck.json as a source does not mean all its cards have been audited. v312 new bank was individually checked for scope and marking; its addition does not mean historical core deck is exhaustively inspected."
 }

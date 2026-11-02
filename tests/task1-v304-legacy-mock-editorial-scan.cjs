@@ -15,7 +15,7 @@ const multi=cards.filter(c=>/^\s*(?:explain|describe|outline|discuss|compare|eva
 const maths=cards.filter(c=>c.subject==='Maths'&&/(proof|collinear|vectors|turning point|stationary point)/i.test(c.front+' '+c.topic)).map(c=>({id:c.id,bank:findBank.get(c.id),front:c.front,back:c.back,strict:c.strictRecall===true}));
 const report={version:'v304',all:all.length,mock:cards.length,longFrontOrBack:long,multiWorded:multi.slice(0,80),weakMathsSample:maths.slice(0,120),counts:{long:long.length,multi:multi.length,mathsMath:maths.length}};
 console.log('V304_EDITORIAL_DIAGNOSTIC_BEGIN');console.log(JSON.stringify(report,null,2));console.log('V304_EDITORIAL_DIAGNOSTIC_END');
-assert.equal(all.length,4313);assert.equal(cards.length,3341);
+assert.equal(all.length,4344);assert.equal(cards.length,3372);
 assert.equal(long.length,1,'37 supplementary prompt rewrites; one protected core historical flashcard remains long');
 assert.equal(long[0]?.id,'phy_mechanics_focus_v37_18');
 console.log('PASS v304 factual and length candidates captured; requires content-level manual review.');
