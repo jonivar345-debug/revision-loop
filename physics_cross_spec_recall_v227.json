@@ -50,11 +50,16 @@
       "accept": [
         "Instantaneous acceleration at that time.",
         "The acceleration at the point of tangency.",
-        "Instantaneous rate of change of velocity."
+        "Instantaneous rate of change of velocity.",
+        "Acceleration at that instant.",
+        "Rate of change of velocity at that point.",
+        "dv/dt at that instant."
       ],
       "reject": [
         "Total displacement since the start.",
-        "The average speed over the whole journey."
+        "The average speed over the whole journey.",
+        "Average acceleration over the whole journey.",
+        "Displacement from the graph's area."
       ],
       "strictRecall": true,
       "mock": true,
@@ -239,11 +244,16 @@
       "accept": [
         "The Young modulus.",
         "Young's modulus of the material.",
-        "Stress divided by strain in the elastic linear region."
+        "Stress divided by strain in the elastic linear region.",
+        "Young modulus E.",
+        "Gradient equals stress divided by strain in the linear region.",
+        "The material's Young modulus."
       ],
       "reject": [
         "The extension of the wire.",
-        "The breaking force."
+        "The breaking force.",
+        "Elastic strain energy.",
+        "Stress multiplied by strain."
       ],
       "strictRecall": true,
       "mock": true,
@@ -266,11 +276,16 @@
       "accept": [
         "A permanent deformation remains.",
         "The sample does not return completely to its original shape.",
-        "Some strain persists when the force is removed."
+        "Some strain persists when the force is removed.",
+        "Permanent extension remains after unloading.",
+        "Residual plastic strain remains.",
+        "It does not completely regain its original dimensions."
       ],
       "reject": [
         "The material returns exactly to its original length.",
-        "Stress is always proportional to strain."
+        "Stress is always proportional to strain.",
+        "It recovers fully on unloading.",
+        "There is no permanent strain."
       ],
       "strictRecall": true,
       "mock": true,
