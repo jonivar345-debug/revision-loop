@@ -21,11 +21,11 @@ for(const c of recall.cards){
  assert(!fronts.has(c.front.trim().toLowerCase()),'Duplicate Physics prompt '+c.front);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');assert.equal(c.courseTopic,'Waves');assert(allowed.has(c.specRef));
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert.equal(c.accept.length,2);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ const expectedMore=Number(c.id.slice(-2))<=12?1:0;assert.equal(c.accept.length,2+expectedMore);assert.equal(c.reject.length,2+expectedMore);assert(c.accept.includes(c.back));
  for(const x of c.accept){assert.equal(mark(c,x).status,'correct','Valid '+c.id+' '+x);accepted++;}
  for(const x of c.reject){assert.equal(mark(c,x).status,'wrong','Invalid '+c.id+' '+x);rejected++;}
 }
-assert.equal(accepted,26);assert.equal(rejected,26);
+assert.equal(accepted,38);assert.equal(rejected,38);
 const ls=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),le=app.indexOf(' const added=[',ls);
 assert(ls>=0&&le>ls&&app.slice(ls,le).includes('else if(index===51)'));
 const load=new Function('cards','extraFlashBanks',app.slice(ls,le)+'\nreturn cards;');
@@ -74,4 +74,4 @@ assert.deepEqual([...evidenceSpecs].sort(),['3.3.1.1','3.3.1.2','3.3.1.3','3.3.2
 assert.equal(audit.completion.allSixWavesNumberedSubsectionsHaveSelectedEvidence,true);
 for(const [key,val] of Object.entries(audit.completion))if(key!=='allSixWavesNumberedSubsectionsHaveSelectedEvidence')assert.equal(val,false,'Certification not finished '+key);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v279: 13 focused AS Waves recall cards (26 valid/26 invalid), 5 original exercises with 33 marks, 3 manually reviewed sketches, first-harmonic numeric models and 25 selected source-mapped rows. No full-spec sign-off.');
+console.log('PASS v279: 13 focused AS Waves recall cards (38 valid/38 invalid), 5 original exercises with 33 marks, 3 manually reviewed sketches, first-harmonic numeric models and 25 selected source-mapped rows. No full-spec sign-off.');

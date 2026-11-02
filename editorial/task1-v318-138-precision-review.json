@@ -1,0 +1,648 @@
+{
+  "version": "v318",
+  "date": "2026-11-02",
+  "scope": "AQA school mocks only: Year 1 Physics, Chemistry AS and taught A2 through Kp/organic, Year 1 Pure Maths only",
+  "method": "Individually selected extra scientifically acceptable wording and an additional wrong misconception for 138 existing cards. The chosen candidates must pass production evaluateCard and preserve old answers. Never equate this sample with full spec certification.",
+  "banks": [
+    {
+      "path": "physics_electricity_cross_spec_recall_v231.json",
+      "n": 12,
+      "subject": "Physics",
+      "pairs": [
+        [
+          "Free electrons drift against the direction of conventional current.",
+          "Electrons move in the same direction as conventional current."
+        ],
+        [
+          "Ohmic I against V is linear and passes through (0,0).",
+          "An ohmic resistor has a curved I–V line at constant temperature."
+        ],
+        [
+          "Use V divided by I at the point to obtain static resistance.",
+          "The resistance is always dI/dV from a tangent."
+        ],
+        [
+          "A metal gets more resistive as it heats; an NTC thermistor less resistive.",
+          "Both metal and NTC resistance increase with temperature."
+        ],
+        [
+          "Warming increases charge-carrier concentration in an NTC thermistor.",
+          "An NTC thermistor becomes less resistive because fewer charges can move."
+        ],
+        [
+          "Resistivity equals slope of the R–L graph times area.",
+          "Resistivity is the gradient divided by area."
+        ],
+        [
+          "Slope units are ohms per metre; rho is ohm-metres.",
+          "Resistance against length slope has units of ohms times metres."
+        ],
+        [
+          "A constant series resistance from leads could produce the R-intercept.",
+          "A positive R-intercept always means wire resistivity is zero."
+        ],
+        [
+          "Diameter uncertainty 2% implies area percentage uncertainty about 4%.",
+          "The area has only 1% percentage uncertainty."
+        ],
+        [
+          "Doubling diameter makes area four times as big and resistance one quarter.",
+          "The wire resistance doubles when the diameter doubles."
+        ],
+        [
+          "For constant V, P is inversely proportional to R, so power halves.",
+          "Doubling resistance at constant voltage doubles the power."
+        ],
+        [
+          "At constant current, doubling R doubles power dissipation.",
+          "Power halves when resistance doubles at fixed current."
+        ]
+      ]
+    },
+    {
+      "path": "physics_nuclear_conservation_recall_v269.json",
+      "n": 12,
+      "subject": "Physics",
+      "pairs": [
+        [
+          "The attractive interaction acts over roughly three femtometres.",
+          "The attractive nuclear force acts over distances of several metres."
+        ],
+        [
+          "The force becomes repulsive at separations below about half a femtometre.",
+          "It is repulsive only beyond 3 fm."
+        ],
+        [
+          "Mass number falls four, proton number falls two.",
+          "After alpha decay A increases by 4 and Z decreases by 2."
+        ],
+        [
+          "Neutron changes to proton: proton number rises one while A stays the same.",
+          "In beta-minus decay the mass number decreases by one."
+        ],
+        [
+          "A neutrino was introduced to account for missing energy in beta decay.",
+          "A photon was proposed to carry baryon number in beta decay."
+        ],
+        [
+          "The products are p plus e minus plus electron antineutrino.",
+          "A free neutron beta-minus decays into proton and positron only."
+        ],
+        [
+          "The two leptons are e plus and an electron neutrino.",
+          "Beta-plus decay emits an electron and electron antineutrino."
+        ],
+        [
+          "Down quark becomes up quark with emission of a W-minus boson.",
+          "A down quark changing to up emits a W-plus boson."
+        ],
+        [
+          "Up quark becomes down with emission of W-plus.",
+          "An up quark changing to down emits W-minus."
+        ],
+        [
+          "Electromagnetic interactions are modelled by virtual-photon exchange.",
+          "Electromagnetic interactions are mediated by pions."
+        ],
+        [
+          "Nucleon interactions can be represented by pion exchange.",
+          "Exchange of a W boson is the model for the strong force between nucleons."
+        ],
+        [
+          "A proton has baryon number one.",
+          "A proton has baryon number zero."
+        ]
+      ]
+    },
+    {
+      "path": "physics_waves_polarisation_stationary_recall_v279.json",
+      "n": 12,
+      "subject": "Physics",
+      "pairs": [
+        [
+          "Align the aerial length with the direction of the incident E-field.",
+          "The receiving aerial must be perpendicular to the electric oscillation direction."
+        ],
+        [
+          "Crossed ideal polarisers block the transmitted light completely.",
+          "Two ideal polarisers crossed at 90 degrees transmit all the light."
+        ],
+        [
+          "Polarisation selects a vibration plane, possible only for transverse waves.",
+          "Longitudinal pressure waves can be linearly polarised in the same way."
+        ],
+        [
+          "A node is permanently at zero displacement.",
+          "A node alternates between positive and negative maximum displacement."
+        ],
+        [
+          "Particles in a single loop have zero phase difference.",
+          "Points within the same loop are in antiphase."
+        ],
+        [
+          "Neighbouring loops have a phase difference of pi radians.",
+          "Adjacent loops of a stationary wave move in phase."
+        ],
+        [
+          "Third harmonic has 3 antinodes.",
+          "The third harmonic has two antinodes."
+        ],
+        [
+          "There are four fixed nodes including both ends.",
+          "A third-harmonic fixed string has only three nodes including its ends."
+        ],
+        [
+          "Since f is proportional to the square root of tension, it triples.",
+          "Increasing tension ninefold increases frequency ninefold."
+        ],
+        [
+          "Squaring f gives a linear relation with T at constant L and mu.",
+          "Plotting f squared against T gives a quadratic curve."
+        ],
+        [
+          "A narrower slit causes greater spreading, widening the central fringe.",
+          "Decreasing slit width narrows the central bright maximum."
+        ],
+        [
+          "The central bright fringe is broader than an individual side fringe.",
+          "All bright maxima are the same width in single-slit diffraction."
+        ]
+      ]
+    },
+    {
+      "path": "physics_particles_applications_v243.json",
+      "n": 10,
+      "subject": "Physics",
+      "pairs": [
+        [
+          "Specific charge is positive 3.20e-19 divided by 6.64e-27, or 4.82e7 C/kg.",
+          "Specific charge equals 2.08e-8 kg/C."
+        ],
+        [
+          "Daughter mass number 222 and atomic number 86.",
+          "The daughter has A=224 and Z=87."
+        ],
+        [
+          "The daughter is nitrogen-14, with proton number 7.",
+          "Beta-minus creates a nucleus with mass number 13."
+        ],
+        [
+          "The proposed decay violates conservation of baryon number.",
+          "Two photons have a total baryon number of +1."
+        ],
+        [
+          "Electron lepton number adds to plus one minus one, giving zero.",
+          "The combined electron lepton number is plus two."
+        ],
+        [
+          "The emitted photon is the difference 3.70-1.20 = 2.50 eV.",
+          "The photon emitted has negative energy -2.50 eV."
+        ],
+        [
+          "Using lambda=hc/E gives about 6.22e-7 metres.",
+          "The photon wavelength is 6.22e-9 m."
+        ],
+        [
+          "de Broglie wavelength h/p is 2.00e-10 m.",
+          "The de Broglie wavelength is 2.00e-8 m."
+        ],
+        [
+          "The wavelength becomes half the original, since lambda is proportional to V to the minus half.",
+          "Quadrupling the voltage doubles the electron wavelength."
+        ],
+        [
+          "Subtract pair rest energy: 1.400-1.022=0.378 MeV.",
+          "The kinetic energy budget is 2.422 MeV."
+        ]
+      ]
+    },
+    {
+      "path": "chemistry_rates_kp_applications_v249.json",
+      "n": 12,
+      "subject": "Chemistry",
+      "pairs": [
+        [
+          "A squared means doubling A multiplies the rate by four.",
+          "Doubling A gives a factor of two for rate."
+        ],
+        [
+          "Four from A squared times two from B gives eight.",
+          "Doubling both concentrations multiplies rate by four."
+        ],
+        [
+          "It is first order in A because rate doubles when A doubles.",
+          "The reaction is second order in A."
+        ],
+        [
+          "It is second order with respect to A.",
+          "Order with respect to A is zero."
+        ],
+        [
+          "Rate does not depend on B; order in B is zero.",
+          "The reaction must be first order in B."
+        ],
+        [
+          "Zero-order k has the same units as rate: mol dm^-3 s^-1.",
+          "Zero-order rate constant has units s^-1."
+        ],
+        [
+          "When A is halved in a first-order law, rate halves.",
+          "First-order rate becomes one quarter when concentration halves."
+        ],
+        [
+          "Tripling concentration in a second-order law multiplies the rate by nine.",
+          "The rate triples when concentration triples in rate=k[A]^2."
+        ],
+        [
+          "The sum of powers one and two is three.",
+          "Overall order is two."
+        ],
+        [
+          "For third order, k units are dm^6 mol^-2 s^-1.",
+          "For this rate law k units are dm^3 mol^-1 s^-1."
+        ],
+        [
+          "Rate is 2.0 times 0.020 squared, equal to 0.00080 mol dm^-3 s^-1.",
+          "The rate is 0.040 mol dm^-3 s^-1."
+        ],
+        [
+          "k equals rate divided by concentration, 0.012/0.20 = 0.060 per second.",
+          "The rate constant is 0.0024 s^-1."
+        ]
+      ]
+    },
+    {
+      "path": "chemistry_cross_spec_recall_v227.json",
+      "n": 12,
+      "subject": "Chemistry",
+      "pairs": [
+        [
+          "An exothermic enthalpy change is less than zero.",
+          "An exothermic reaction has a positive reaction enthalpy."
+        ],
+        [
+          "Use the same numerical temperature rise because Celsius and kelvin intervals are equal.",
+          "Multiply the temperature difference in Celsius by 273."
+        ],
+        [
+          "Heat loss causes the measured exothermic enthalpy magnitude to be underestimated.",
+          "Heat loss always makes the magnitude of exothermic enthalpy too large."
+        ],
+        [
+          "Heat magnitude equals moles multiplied by magnitude of molar enthalpy change.",
+          "Use q=n/|delta H| for the magnitude of heat."
+        ],
+        [
+          "The occupied 4s electrons are lost before 3d electrons.",
+          "Transition metal cations always lose 3d electrons before 4s."
+        ],
+        [
+          "Multiply the kilopascal value by ten to the power three.",
+          "Convert kPa to Pa by dividing by 1000."
+        ],
+        [
+          "Order in that reactant is zero because rate is unchanged.",
+          "The order must be one when rate does not respond to doubling concentration."
+        ],
+        [
+          "The test indicates an aldehyde or ketone carbonyl group.",
+          "A positive 2,4-DNPH test proves the substance is an aldehyde, not a ketone."
+        ],
+        [
+          "Immediate distillation limits oxidation of aldehyde to carboxylic acid.",
+          "Distilling the aldehyde promotes oxidation all the way to an acid."
+        ],
+        [
+          "Divide the entropy value by one thousand to match kJ enthalpy units.",
+          "Multiply entropy in J per kelvin per mole by one thousand."
+        ],
+        [
+          "Negative Gibbs energy does not indicate a fast reaction; the barrier may be high.",
+          "A negative delta G means activation energy is zero."
+        ],
+        [
+          "A negative ion repels an additional incoming electron, requiring energy.",
+          "The second electron affinity must release energy because the ion is already negative."
+        ]
+      ]
+    },
+    {
+      "path": "chemistry_as_bonding_shapes_recall_v276.json",
+      "n": 12,
+      "subject": "Chemistry",
+      "pairs": [
+        [
+          "Carbon dioxide is straight-line or linear around its carbon.",
+          "Carbon dioxide is bent at carbon."
+        ],
+        [
+          "The carbon dioxide bond angle is one hundred and eighty degrees.",
+          "The O-C-O bond angle is 120 degrees."
+        ],
+        [
+          "BF3 has trigonal-planar geometry.",
+          "Boron trifluoride is trigonal pyramidal."
+        ],
+        [
+          "Angle between B-F bonds is one hundred and twenty degrees.",
+          "BF3 has a bond angle of 109.5 degrees."
+        ],
+        [
+          "The ammonium ion has a tetrahedral arrangement of N-H bonds.",
+          "NH4 plus is square planar."
+        ],
+        [
+          "Ammonium has H-N-H angle approximately 109.5 degrees.",
+          "The ammonium ion has a 107 degree bond angle."
+        ],
+        [
+          "Ammonia is trigonal-pyramidal around nitrogen.",
+          "NH3 has a trigonal planar molecular shape."
+        ],
+        [
+          "There is one nonbonding lone pair on N.",
+          "Nitrogen in ammonia has no lone electron pairs."
+        ],
+        [
+          "Ammonia H-N-H angle is about 107 degrees.",
+          "Ammonia has 120 degree bond angles."
+        ],
+        [
+          "Water has a V-shaped or bent molecular geometry.",
+          "The shape of water about oxygen is linear."
+        ],
+        [
+          "There are two lone pairs on the oxygen of water.",
+          "The central oxygen in H2O has zero lone pairs."
+        ],
+        [
+          "Water H-O-H angle is approximately 104.5 degrees.",
+          "The H-O-H angle is 180 degrees."
+        ]
+      ]
+    },
+    {
+      "path": "chemistry_mock_recall_v199.json",
+      "n": 10,
+      "subject": "Chemistry",
+      "pairs": [
+        [
+          "Fehling positive aldehyde test produces a red solid of Cu2O.",
+          "An aldehyde gives a clear colourless solution after Fehling's test."
+        ],
+        [
+          "With the choices limited to aldehyde or ketone, unchanged blue suggests ketone.",
+          "The blue result proves the known carbonyl is an aldehyde."
+        ],
+        [
+          "The released gas is CO2.",
+          "Carboxylic acid and carbonate produce hydrogen gas."
+        ],
+        [
+          "Acid hydrolysis produces the free carboxylic acid.",
+          "Acid ester hydrolysis directly produces the sodium carboxylate salt."
+        ],
+        [
+          "Base hydrolysis gives a carboxylate ion or its salt before adding acid.",
+          "Alkaline ester hydrolysis initially produces an aldehyde."
+        ],
+        [
+          "Hydrolysis liberates propane-1,2,3-triol, glycerol.",
+          "Hydrolysis of a triglyceride produces propan-1-ol as its three-carbon alcohol."
+        ],
+        [
+          "The primary amine forms a secondary amide (N-substituted amide).",
+          "Acyl chloride and a primary amine give a nitrile as the principal organic product."
+        ],
+        [
+          "The equilibrium constant carries pressure units of one kPa.",
+          "If net pressure exponent is +1, Kp has units kPa^-1."
+        ],
+        [
+          "Net exponent minus one gives inverse kilopascals.",
+          "Net pressure exponent -1 gives Kp units kPa."
+        ],
+        [
+          "Ten times the hydrogen ion concentration lowers pH by one unit.",
+          "Increasing hydrogen ion concentration tenfold increases pH by one."
+        ]
+      ]
+    },
+    {
+      "path": "maths_as_graph_transform_recall_v272.json",
+      "n": 12,
+      "subject": "Maths",
+      "pairs": [
+        [
+          "x increases by 3 and y by 2, giving point (2, 6).",
+          "(-1,6)"
+        ],
+        [
+          "The x-coordinate halves from -4 to -2, giving (-2,3).",
+          "(-4,3)"
+        ],
+        [
+          "Horizontal stretch factor 3 gives (6,-1).",
+          "(3,-1)"
+        ],
+        [
+          "Reflection in the y-axis gives coordinates (5,2).",
+          "(5,-2)"
+        ],
+        [
+          "Negating function outputs gives (-2,-3).",
+          "(-2,6)"
+        ],
+        [
+          "The vertical scale factor 2 maps (1,-4) to (1,-8).",
+          "(1,8)"
+        ],
+        [
+          "Vertical translation by five gives (0,2).",
+          "(0,8)"
+        ],
+        [
+          "Horizontal translation two left gives (1,1).",
+          "(3,1)"
+        ],
+        [
+          "Solve -2x=4: the point becomes (-2,-3).",
+          "(8,-3)"
+        ],
+        [
+          "Solve 2x-4=2: x=3; new y=-3(3)+1=-8.",
+          "(0,-8)"
+        ],
+        [
+          "The asymptote shifts to x=4.",
+          "x=0"
+        ],
+        [
+          "The horizontal asymptote moves down three units to y=-3.",
+          "y=0"
+        ]
+      ]
+    },
+    {
+      "path": "maths_first_mock_pure_precision_v232.json",
+      "n": 12,
+      "subject": "Maths",
+      "pairs": [
+        [
+          "One of n and n+1 must be divisible by two, so their product is even.",
+          "Two consecutive integers are always both odd."
+        ],
+        [
+          "The sum is 2m+2n+2=2(m+n+1), divisible by two.",
+          "Adding two odd integers always produces another odd integer."
+        ],
+        [
+          "Check the four integer inputs 1, 2, 3 and 4.",
+          "Proof by exhaustion requires checking only n=1."
+        ],
+        [
+          "Find a case for which P is true while Q is false.",
+          "A counterexample must satisfy Q and violate P."
+        ],
+        [
+          "Take endpoint B minus A: (4-(-2),1-5)=(6,-4).",
+          "(-6,4)"
+        ],
+        [
+          "Pythagoras: sqrt(36+64)=10.",
+          "14"
+        ],
+        [
+          "Negative x and positive y means quadrant two.",
+          "Quadrant IV"
+        ],
+        [
+          "Since AC equals three-halves of AB and both start at A, the points are collinear.",
+          "AB is perpendicular to AC."
+        ],
+        [
+          "The mean of endpoint positions gives (4,2).",
+          "(3,-4)"
+        ],
+        [
+          "Two times (3,-1) minus (2,4) is (4,-6).",
+          "(8,2)"
+        ],
+        [
+          "The horizontal scale factor one half takes (2,5) to (1,5).",
+          "(4,5)"
+        ],
+        [
+          "Multiply only y by three, taking (2,-4) to (2,-12).",
+          "(6,-4)"
+        ]
+      ]
+    },
+    {
+      "path": "maths_as_pure_cross_spec_recall_v227.json",
+      "n": 12,
+      "subject": "Maths",
+      "pairs": [
+        [
+          "One valid counterexample makes an all-real-numbers claim false.",
+          "A universal claim needs two counterexamples before it is disproved."
+        ],
+        [
+          "Exhaustion checks all cases of a finite domain.",
+          "A proof by exhaustion checks just one randomly chosen integer."
+        ],
+        [
+          "Represent any even integer as 2 times an integer k.",
+          "An even integer must be written 2k+1."
+        ],
+        [
+          "The vector length is the square root of a squared plus b squared.",
+          "The vector length is a+b."
+        ],
+        [
+          "Endpoint position minus start position gives b-a.",
+          "The displacement AB is a-b."
+        ],
+        [
+          "AB is a scalar multiple of AC, so these vectors share a line through A.",
+          "AB and AC are at 90 degrees to one another."
+        ],
+        [
+          "Compress horizontally by factor a, equivalently scale x coordinates by 1/a.",
+          "A horizontal stretch by factor a for a>1."
+        ],
+        [
+          "Changing x to negative x reflects in the vertical axis.",
+          "Reflection in the line y=x."
+        ],
+        [
+          "Move the graph four units right.",
+          "Shift the graph four units left."
+        ],
+        [
+          "Discriminant zero means two equal roots; one distinct real value.",
+          "A zero discriminant means two distinct real roots."
+        ],
+        [
+          "Choose n items r at a time then multiply a to n-r and b to r.",
+          "The general term is nCr times a^r times b^(n-r)."
+        ],
+        [
+          "Multiply first term a by (1-r^n) divided by (1-r).",
+          "The geometric sum is a(1+r^n)/(1-r)."
+        ]
+      ]
+    },
+    {
+      "path": "maths_year1_pure_breadth_v260.json",
+      "n": 10,
+      "subject": "Maths",
+      "pairs": [
+        [
+          "One of two consecutive integers is divisible by 2, so n(n+1) is even.",
+          "The product of any two consecutive integers is always odd."
+        ],
+        [
+          "For n=2k, cubing gives 8k^3.",
+          "Cubing 2k gives 4k cubed."
+        ],
+        [
+          "Taking n=2 yields 3, not a multiple of eight.",
+          "n=1 gives n^2-1=0, so the universal claim is disproved."
+        ],
+        [
+          "Evaluate all four n values: 0,0,2,6.",
+          "The list is -2,0,2,6."
+        ],
+        [
+          "Square completion is (x-4)^2+3.",
+          "(x-4)^2-3"
+        ],
+        [
+          "The discriminant 36-4k equals zero, so k=9.",
+          "k=-9"
+        ],
+        [
+          "The quadratic is negative strictly between roots -2 and 3.",
+          "x<-2 or x>3"
+        ],
+        [
+          "Multiply by the conjugate to get (5sqrt3-5)/2.",
+          "5(sqrt(3)+1)/2"
+        ],
+        [
+          "The three linear factors are x-2, x-3 and x+1.",
+          "(x+2)(x-3)(x+1)"
+        ],
+        [
+          "Point-slope yields y+3=4(x-2), or y=4x-11.",
+          "y=4x+5"
+        ]
+      ]
+    }
+  ],
+  "completion": {
+    "fullSpecCertified": false,
+    "fullMockReviewComplete": false
+  }
+}

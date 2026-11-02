@@ -1,0 +1,34 @@
+{
+  "version": "v318",
+  "date": "2026-11-02",
+  "scope": "Physics AS (electricity, nuclear, waves, particles), Chemistry AS and teacher-taught A2 (rates/Kp, energetic/organic concepts, shapes), Maths first Year 1 Pure mock only",
+  "editedCards": 138,
+  "bySubject": {
+    "Physics": 46,
+    "Chemistry": 46,
+    "Maths": 46
+  },
+  "newAccepts": 138,
+  "newIncorrects": 138,
+  "productionMarkerPreflight": {
+    "correctVariants": 672,
+    "incorrectVariants": 429,
+    "failed": 0
+  },
+  "noNewFlashcards": true,
+  "flashcardsStayConcise": true,
+  "counts": {
+    "allLoaded": 4344,
+    "mockEligible": 3372
+  },
+  "limitations": [
+    "Only listed card responses and present marker checked, not all unseen paraphrases.",
+    "Not a full individual AQA specification sign-off.",
+    "Long-form diagram and practical answers require separate marking review."
+  ],
+  "next": [
+    "Fix any legacy CI snapshot assumptions without weakening actual marker tests.",
+    "Check complete PR CI and merge sequentially after v317.",
+    "Continue individual spec-bullet mapping of all mock topics and non-core bank quality."
+  ]
+}

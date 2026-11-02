@@ -22,11 +22,13 @@
       "back": "Linear.",
       "accept": [
         "Linear.",
-        "linear shape"
+        "linear shape",
+        "Carbon dioxide is straight-line or linear around its carbon."
       ],
       "reject": [
         "bent",
-        "trigonal pyramidal"
+        "trigonal pyramidal",
+        "Carbon dioxide is bent at carbon."
       ],
       "strictRecall": true
     },
@@ -47,11 +49,13 @@
       "back": "180°.",
       "accept": [
         "180°.",
-        "180 degrees"
+        "180 degrees",
+        "The carbon dioxide bond angle is one hundred and eighty degrees."
       ],
       "reject": [
         "120 degrees",
-        "109.5 degrees"
+        "109.5 degrees",
+        "The O-C-O bond angle is 120 degrees."
       ],
       "strictRecall": true
     },
@@ -72,11 +76,13 @@
       "back": "Trigonal planar.",
       "accept": [
         "Trigonal planar.",
-        "trigonal planar shape"
+        "trigonal planar shape",
+        "BF3 has trigonal-planar geometry."
       ],
       "reject": [
         "tetrahedral",
-        "trigonal pyramidal"
+        "trigonal pyramidal",
+        "Boron trifluoride is trigonal pyramidal."
       ],
       "strictRecall": true
     },
@@ -97,11 +103,13 @@
       "back": "120°.",
       "accept": [
         "120°.",
-        "120 degrees"
+        "120 degrees",
+        "Angle between B-F bonds is one hundred and twenty degrees."
       ],
       "reject": [
         "109.5 degrees",
-        "180 degrees"
+        "180 degrees",
+        "BF3 has a bond angle of 109.5 degrees."
       ],
       "strictRecall": true
     },
@@ -122,11 +130,13 @@
       "back": "Tetrahedral.",
       "accept": [
         "Tetrahedral.",
-        "tetrahedral shape"
+        "tetrahedral shape",
+        "The ammonium ion has a tetrahedral arrangement of N-H bonds."
       ],
       "reject": [
         "square planar",
-        "trigonal pyramidal"
+        "trigonal pyramidal",
+        "NH4 plus is square planar."
       ],
       "strictRecall": true
     },
@@ -147,11 +157,13 @@
       "back": "109.5°.",
       "accept": [
         "109.5°.",
-        "109.5 degrees"
+        "109.5 degrees",
+        "Ammonium has H-N-H angle approximately 109.5 degrees."
       ],
       "reject": [
         "107 degrees",
-        "90 degrees"
+        "90 degrees",
+        "The ammonium ion has a 107 degree bond angle."
       ],
       "strictRecall": true
     },
@@ -172,11 +184,13 @@
       "back": "Trigonal pyramidal.",
       "accept": [
         "Trigonal pyramidal.",
-        "pyramidal shape"
+        "pyramidal shape",
+        "Ammonia is trigonal-pyramidal around nitrogen."
       ],
       "reject": [
         "trigonal planar",
-        "tetrahedral molecular shape"
+        "tetrahedral molecular shape",
+        "NH3 has a trigonal planar molecular shape."
       ],
       "strictRecall": true
     },
@@ -197,11 +211,13 @@
       "back": "One.",
       "accept": [
         "One.",
-        "1"
+        "1",
+        "There is one nonbonding lone pair on N."
       ],
       "reject": [
         "zero",
-        "two"
+        "two",
+        "Nitrogen in ammonia has no lone electron pairs."
       ],
       "strictRecall": true
     },
@@ -222,11 +238,13 @@
       "back": "107°.",
       "accept": [
         "107°.",
-        "107 degrees"
+        "107 degrees",
+        "Ammonia H-N-H angle is about 107 degrees."
       ],
       "reject": [
         "109.5 degrees",
-        "120 degrees"
+        "120 degrees",
+        "Ammonia has 120 degree bond angles."
       ],
       "strictRecall": true
     },
@@ -247,11 +265,13 @@
       "back": "Bent.",
       "accept": [
         "Bent.",
-        "non-linear"
+        "non-linear",
+        "Water has a V-shaped or bent molecular geometry."
       ],
       "reject": [
         "linear",
-        "tetrahedral molecular shape"
+        "tetrahedral molecular shape",
+        "The shape of water about oxygen is linear."
       ],
       "strictRecall": true
     },
@@ -272,11 +292,13 @@
       "back": "Two.",
       "accept": [
         "Two.",
-        "2"
+        "2",
+        "There are two lone pairs on the oxygen of water."
       ],
       "reject": [
         "one",
-        "zero"
+        "zero",
+        "The central oxygen in H2O has zero lone pairs."
       ],
       "strictRecall": true
     },
@@ -297,11 +319,13 @@
       "back": "104.5°.",
       "accept": [
         "104.5°.",
-        "104.5 degrees"
+        "104.5 degrees",
+        "Water H-O-H angle is approximately 104.5 degrees."
       ],
       "reject": [
         "109.5 degrees",
-        "120 degrees"
+        "120 degrees",
+        "The H-O-H angle is 180 degrees."
       ],
       "strictRecall": true
     },

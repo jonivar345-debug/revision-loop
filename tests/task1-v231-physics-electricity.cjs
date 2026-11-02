@@ -35,7 +35,7 @@ for(let i=0;i<bank.cards.length;i++){
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');assert.equal(c.active,true);
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.strictRecall,true);
  assert(/^3\.5\.1\.[1-6]$/.test(c.specRef));
- assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ const expectedMore=Number(c.id.slice(-2))<=12?1:0;assert.equal(c.accept.length,3+expectedMore);assert.equal(c.reject.length,2+expectedMore);assert(c.accept.includes(c.back));
 }
 const start=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(',start);assert(start>0&&end>start);
 const judge=new Function('window',app.slice(start,end)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
@@ -45,7 +45,7 @@ for(const c of bank.cards){
  for(const ans of c.reject){assert.notEqual(judge(c,ans).status,'correct','credited invalid '+c.id+' '+ans);reject++;}
  assert.equal(judge(c,'').status,'neutral');
 }
-assert.equal(accept,48);assert.equal(reject,32);
+assert.equal(accept,60);assert.equal(reject,44);
 const lstart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));');
 const lend=app.indexOf(' const added=[',lstart);assert(lstart>=0&&lend>lstart);
 const loader=app.slice(lstart,lend);assert(loader.includes('else if(index===25)'));
@@ -63,4 +63,4 @@ const eligible=app.match(/function mockEligibleCard\(c\)\{[\s\S]*?\n\}/);assert(
 const mockEligible=vm.runInNewContext("const MOCK_MATHS_YEAR2_EXCLUDED_IDS = new Set(['math_function_composite','math_inverse_condition','task1_v136_063']);\n"+eligible[0]+"\nmockEligibleCard");
 for(const c of bank.cards)assert(mockEligible(c),'new card absent from mock '+c.id);
 assert.equal(loaded.filter(x=>x.subject==='Maths').length,deck.cards.filter(x=>x.subject==='Maths').length);
-console.log('PASS v231: 102 Electricity core topic cards inventoried, 16 new AS mock recall cards, 48 accepted and 32 rejected variants, index 25 strict loader/offline; full-spec sign-off still open.');
+console.log('PASS v231: 102 Electricity core topic cards inventoried, 16 new AS mock recall cards, 60 accepted and 44 rejected variants, index 25 strict loader/offline; full-spec sign-off still open.');

@@ -23,11 +23,13 @@
       "accept": [
         "4.",
         "four",
-        "four times"
+        "four times",
+        "A squared means doubling A multiplies the rate by four."
       ],
       "reject": [
         "2.",
-        "8."
+        "8.",
+        "Doubling A gives a factor of two for rate."
       ],
       "strictRecall": true
     },
@@ -49,11 +51,13 @@
       "accept": [
         "8.",
         "eight",
-        "eight times"
+        "eight times",
+        "Four from A squared times two from B gives eight."
       ],
       "reject": [
         "4.",
-        "16."
+        "16.",
+        "Doubling both concentrations multiplies rate by four."
       ],
       "strictRecall": true
     },
@@ -75,11 +79,13 @@
       "accept": [
         "First order.",
         "1",
-        "order 1"
+        "order 1",
+        "It is first order in A because rate doubles when A doubles."
       ],
       "reject": [
         "Second order.",
-        "Zero order."
+        "Zero order.",
+        "The reaction is second order in A."
       ],
       "strictRecall": true
     },
@@ -101,11 +107,13 @@
       "accept": [
         "Second order.",
         "2",
-        "order 2"
+        "order 2",
+        "It is second order with respect to A."
       ],
       "reject": [
         "First order.",
-        "Zero order."
+        "Zero order.",
+        "Order with respect to A is zero."
       ],
       "strictRecall": true
     },
@@ -127,11 +135,13 @@
       "accept": [
         "Zero order.",
         "0",
-        "order 0"
+        "order 0",
+        "Rate does not depend on B; order in B is zero."
       ],
       "reject": [
         "First order.",
-        "Second order."
+        "Second order.",
+        "The reaction must be first order in B."
       ],
       "strictRecall": true
     },
@@ -153,11 +163,13 @@
       "accept": [
         "mol dm⁻³ s⁻¹.",
         "mol dm^-3 s^-1",
-        "mol per cubic decimetre per second"
+        "mol per cubic decimetre per second",
+        "Zero-order k has the same units as rate: mol dm^-3 s^-1."
       ],
       "reject": [
         "s⁻¹.",
-        "dm³ mol⁻¹ s⁻¹."
+        "dm³ mol⁻¹ s⁻¹.",
+        "Zero-order rate constant has units s^-1."
       ],
       "strictRecall": true
     },
@@ -179,11 +191,13 @@
       "accept": [
         "The rate halves.",
         "Rate falls to half its original value.",
-        "The reaction rate decreases by a factor of 2."
+        "The reaction rate decreases by a factor of 2.",
+        "When A is halved in a first-order law, rate halves."
       ],
       "reject": [
         "The rate is unchanged.",
-        "The rate decreases by a factor of 4."
+        "The rate decreases by a factor of 4.",
+        "First-order rate becomes one quarter when concentration halves."
       ],
       "strictRecall": true
     },
@@ -205,11 +219,13 @@
       "accept": [
         "9.",
         "nine",
-        "nine times"
+        "nine times",
+        "Tripling concentration in a second-order law multiplies the rate by nine."
       ],
       "reject": [
         "3.",
-        "27."
+        "27.",
+        "The rate triples when concentration triples in rate=k[A]^2."
       ],
       "strictRecall": true
     },
@@ -231,11 +247,13 @@
       "accept": [
         "3.",
         "third order",
-        "order 3"
+        "order 3",
+        "The sum of powers one and two is three."
       ],
       "reject": [
         "2.",
-        "1."
+        "1.",
+        "Overall order is two."
       ],
       "strictRecall": true
     },
@@ -257,11 +275,13 @@
       "accept": [
         "dm⁶ mol⁻² s⁻¹.",
         "dm^6 mol^-2 s^-1",
-        "dm6 mol-2 s-1"
+        "dm6 mol-2 s-1",
+        "For third order, k units are dm^6 mol^-2 s^-1."
       ],
       "reject": [
         "dm³ mol⁻¹ s⁻¹.",
-        "s⁻¹."
+        "s⁻¹.",
+        "For this rate law k units are dm^3 mol^-1 s^-1."
       ],
       "strictRecall": true
     },
@@ -283,11 +303,13 @@
       "accept": [
         "8.0 × 10⁻⁴ mol dm⁻³ s⁻¹.",
         "0.00080 mol dm^-3 s^-1",
-        "8e-4 mol dm-3 s-1"
+        "8e-4 mol dm-3 s-1",
+        "Rate is 2.0 times 0.020 squared, equal to 0.00080 mol dm^-3 s^-1."
       ],
       "reject": [
         "0.040 mol dm⁻³ s⁻¹.",
-        "0.00040 mol dm⁻³ s⁻¹."
+        "0.00040 mol dm⁻³ s⁻¹.",
+        "The rate is 0.040 mol dm^-3 s^-1."
       ],
       "strictRecall": true
     },
@@ -309,11 +331,13 @@
       "accept": [
         "0.060 s⁻¹.",
         "0.06 s^-1",
-        "6.0 × 10⁻² s⁻¹"
+        "6.0 × 10⁻² s⁻¹",
+        "k equals rate divided by concentration, 0.012/0.20 = 0.060 per second."
       ],
       "reject": [
         "0.0024 s⁻¹.",
-        "16.7 s⁻¹."
+        "16.7 s⁻¹.",
+        "The rate constant is 0.0024 s^-1."
       ],
       "strictRecall": true
     },

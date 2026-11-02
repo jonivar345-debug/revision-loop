@@ -21,11 +21,13 @@
       "accept": [
         "Electrons drift opposite to conventional current.",
         "The electron movement is opposite the direction of conventional current.",
-        "Electron drift is from the negative end towards the positive end, whereas conventional current is opposite."
+        "Electron drift is from the negative end towards the positive end, whereas conventional current is opposite.",
+        "Free electrons drift against the direction of conventional current."
       ],
       "reject": [
         "Electrons drift in the same direction as conventional current.",
-        "No charge carriers move in a conducting wire."
+        "No charge carriers move in a conducting wire.",
+        "Electrons move in the same direction as conventional current."
       ],
       "strictRecall": true,
       "taught": true,
@@ -48,11 +50,13 @@
       "accept": [
         "A straight line through the origin.",
         "A linear I–V characteristic passing through (0, 0).",
-        "Current is proportional to potential difference."
+        "Current is proportional to potential difference.",
+        "Ohmic I against V is linear and passes through (0,0)."
       ],
       "reject": [
         "A curved line that becomes flatter as current increases.",
-        "A straight line that always has a non-zero current-axis intercept."
+        "A straight line that always has a non-zero current-axis intercept.",
+        "An ohmic resistor has a curved I–V line at constant temperature."
       ],
       "strictRecall": true,
       "taught": true,
@@ -75,11 +79,13 @@
       "accept": [
         "No. Calculate R = V/I using the coordinates of the point; tangent gradient is not generally V/I.",
         "Use V divided by I at the point rather than a tangent gradient.",
-        "The resistance at an operating point is potential difference divided by current, not the I–V tangent slope."
+        "The resistance at an operating point is potential difference divided by current, not the I–V tangent slope.",
+        "Use V divided by I at the point to obtain static resistance."
       ],
       "reject": [
         "Yes, every tangent gradient on I against V is the resistance.",
-        "Resistance always equals dI/dV."
+        "Resistance always equals dI/dV.",
+        "The resistance is always dI/dV from a tangent."
       ],
       "strictRecall": true,
       "taught": true,
@@ -102,11 +108,13 @@
       "accept": [
         "Metal resistance increases; NTC thermistor resistance decreases as temperature rises.",
         "The metal has a positive temperature trend and the NTC thermistor a negative one.",
-        "Metals usually gain resistance on heating, NTC thermistors lose resistance."
+        "Metals usually gain resistance on heating, NTC thermistors lose resistance.",
+        "A metal gets more resistive as it heats; an NTC thermistor less resistive."
       ],
       "reject": [
         "Both resistances decrease with rising temperature.",
-        "Both resistances stay constant as temperature changes."
+        "Both resistances stay constant as temperature changes.",
+        "Both metal and NTC resistance increase with temperature."
       ],
       "strictRecall": true,
       "taught": true,
@@ -129,11 +137,13 @@
       "accept": [
         "Heating increases the number of mobile charge carriers, which can reduce its resistance.",
         "More charge carriers become available at higher temperature.",
-        "Higher temperature releases more mobile carriers, making the NTC thermistor more conducting."
+        "Higher temperature releases more mobile carriers, making the NTC thermistor more conducting.",
+        "Warming increases charge-carrier concentration in an NTC thermistor."
       ],
       "reject": [
         "It becomes an ideal superconductor whenever warmed.",
-        "Its resistance must increase because it is identical to a metal."
+        "Its resistance must increase because it is identical to a metal.",
+        "An NTC thermistor becomes less resistive because fewer charges can move."
       ],
       "strictRecall": true,
       "taught": true,
@@ -156,11 +166,13 @@
       "accept": [
         "ρ = mA.",
         "Resistivity equals the resistance-length gradient multiplied by cross-sectional area.",
-        "rho is gradient times A."
+        "rho is gradient times A.",
+        "Resistivity equals slope of the R–L graph times area."
       ],
       "reject": [
         "ρ = m/A.",
-        "ρ = A/m."
+        "ρ = A/m.",
+        "Resistivity is the gradient divided by area."
       ],
       "strictRecall": true,
       "taught": true,
@@ -183,11 +195,13 @@
       "accept": [
         "Gradient: Ω m⁻¹; resistivity: Ω m.",
         "Ohms per metre for gradient, ohm metres for resistivity.",
-        "Gradient is resistance per length; multiplying by m squared gives ohm metre."
+        "Gradient is resistance per length; multiplying by m squared gives ohm metre.",
+        "Slope units are ohms per metre; rho is ohm-metres."
       ],
       "reject": [
         "Gradient is Ω m and resistivity is Ω m⁻¹.",
-        "Gradient is amperes per metre and resistivity is volts."
+        "Gradient is amperes per metre and resistivity is volts.",
+        "Resistance against length slope has units of ohms times metres."
       ],
       "strictRecall": true,
       "taught": true,
@@ -210,11 +224,13 @@
       "accept": [
         "Extra contact or lead resistance that is approximately independent of the measured wire length.",
         "Constant contact resistance can cause a positive intercept.",
-        "The measured resistance contains a fixed contribution from connections or leads."
+        "The measured resistance contains a fixed contribution from connections or leads.",
+        "A constant series resistance from leads could produce the R-intercept."
       ],
       "reject": [
         "It proves the wire's resistivity is zero.",
-        "It means the wire's resistance cannot depend on length."
+        "It means the wire's resistance cannot depend on length.",
+        "A positive R-intercept always means wire resistivity is zero."
       ],
       "strictRecall": true,
       "taught": true,
@@ -237,11 +253,13 @@
       "accept": [
         "4%, because cross-sectional area is proportional to diameter squared.",
         "Approximately four per cent.",
-        "Twice the diameter percentage uncertainty, giving 4 percent."
+        "Twice the diameter percentage uncertainty, giving 4 percent.",
+        "Diameter uncertainty 2% implies area percentage uncertainty about 4%."
       ],
       "reject": [
         "2%, because diameter and area are directly proportional.",
-        "1%, because squaring halves the uncertainty."
+        "1%, because squaring halves the uncertainty.",
+        "The area has only 1% percentage uncertainty."
       ],
       "strictRecall": true,
       "taught": true,
@@ -264,11 +282,13 @@
       "accept": [
         "It becomes one quarter of its original resistance.",
         "Resistance is quartered.",
-        "The cross-sectional area quadruples so resistance decreases by a factor of four."
+        "The cross-sectional area quadruples so resistance decreases by a factor of four.",
+        "Doubling diameter makes area four times as big and resistance one quarter."
       ],
       "reject": [
         "Resistance doubles.",
-        "Resistance increases fourfold."
+        "Resistance increases fourfold.",
+        "The wire resistance doubles when the diameter doubles."
       ],
       "strictRecall": true,
       "taught": true,
@@ -291,11 +311,13 @@
       "accept": [
         "Power halves because P = V²/R.",
         "Power becomes one half.",
-        "At constant voltage power is inversely proportional to resistance."
+        "At constant voltage power is inversely proportional to resistance.",
+        "For constant V, P is inversely proportional to R, so power halves."
       ],
       "reject": [
         "Power doubles.",
-        "Power stays the same."
+        "Power stays the same.",
+        "Doubling resistance at constant voltage doubles the power."
       ],
       "strictRecall": true,
       "taught": true,
@@ -318,11 +340,13 @@
       "accept": [
         "Power doubles because P = I²R.",
         "Power becomes twice the original.",
-        "At constant current dissipated power is proportional to resistance."
+        "At constant current dissipated power is proportional to resistance.",
+        "At constant current, doubling R doubles power dissipation."
       ],
       "reject": [
         "Power halves.",
-        "Power stays the same."
+        "Power stays the same.",
+        "Power halves when resistance doubles at fixed current."
       ],
       "strictRecall": true,
       "taught": true,

@@ -30,7 +30,7 @@ for(const c of bank.cards){
  for(const x of c.accept){assert.equal(judge(c,x).status,'correct','Valid Physics answer rejected '+c.id+': '+x);accepts++;}
  for(const x of c.reject){assert.equal(judge(c,x).status,'wrong','Invalid Physics answer accepted '+c.id+': '+x);rejects++;}
 }
-assert.equal(accepts,30);assert.equal(rejects,20);
+assert.equal(accepts,40);assert.equal(rejects,30);
 assert(Math.abs(3.20e-19/6.64e-27/1e7-4.82)<0.01);
 assert.equal(226-4,222);assert.equal(88-2,86);
 assert.equal(6+1,7);
@@ -55,4 +55,4 @@ invalid[30]={cards:bank.cards.slice(0,6).map((c,i)=>({...c,...[
 ][i]}))};
 const blocked=loader([...deck.cards],invalid);
 for(const c of invalid[30].cards)assert(!blocked.some(x=>x.id===c.id),'Invalid mock scope loaded');
-console.log('PASS v243: 10 original Physics application cards, 30 correct and 20 incorrect variants, independent calculations, mock-only loader, offline cache, stable 3345 core cards and saved keys.');
+console.log('PASS v243: 10 original Physics application cards, 40 correct and 30 incorrect variants, independent calculations, mock-only loader, offline cache, stable 3345 core cards and saved keys.');

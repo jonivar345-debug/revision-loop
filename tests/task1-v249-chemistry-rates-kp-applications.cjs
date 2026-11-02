@@ -15,12 +15,12 @@ for(const c of bank.cards){
  assert(!ids.has(c.id),'ID collision '+c.id);ids.add(c.id);
  if(fronts.has(c.front.trim().toLowerCase()))repeated.push(c.id);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Chemistry');assert.equal(c.stage,'A2');assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert(['3.1.9.1','3.1.9.2','3.1.10'].includes(c.specRef));assert.equal(c.accept.length,3);assert.equal(c.reject.length,2);assert(c.accept.includes(c.back));
+ assert(['3.1.9.1','3.1.9.2','3.1.10'].includes(c.specRef));const expectedMore=Number(c.id.slice(-2))<=12?1:0;assert.equal(c.accept.length,3+expectedMore);assert.equal(c.reject.length,2+expectedMore);assert(c.accept.includes(c.back));
  for(const ans of c.accept){assert.equal(judge(c,ans).status,'correct','Valid '+c.id+': '+ans);good++;}
  for(const ans of c.reject){assert.equal(judge(c,ans).status,'wrong','Invalid '+c.id+': '+ans);bad++;}
 }
 assert.deepEqual(repeated,[],'Original fronts must not duplicate existing Chemistry questions');
-assert.equal(good,84);assert.equal(bad,56);
+assert.equal(good,96);assert.equal(bad,68);
 assert.equal(2**2*2,8);assert.equal((.02)**2*2,.0008);assert.equal(.012/.20,.06);
 assert.equal(6000*8.31/1000,49.86);assert.equal(.25*400,100);assert.equal(2/(2+6),.25);
 assert.equal(40**2/80,20);assert.equal(60**2/(40*20),4.5);
@@ -34,4 +34,4 @@ badBanks[35]={cards:bank.cards.slice(0,7).map((c,i)=>({...c,...[
 ][i]}))};
 assert.equal(loader([...deck.cards],badBanks).length,3345);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v249: 28 taught A2 rate/Kp mock cards, 84 correct and 56 false answers, independent numerical checks, exclusion filters and preservation.');
+console.log('PASS v249: 28 taught A2 rate/Kp mock cards, 96 correct and 68 false answers, independent numerical checks, exclusion filters and preservation.');
