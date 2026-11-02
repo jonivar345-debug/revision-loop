@@ -21,7 +21,7 @@ for(const c of ext.cards){
  assert(c.subject==='Maths'&&c.stage==='AS'&&c.scope==='mock'&&c.mock===true&&c.taught===true&&c.active===true);
  assert(c.strictRecall===true&&c.front.length<170&&c.back.length<125);
  assert(c.accept.includes(c.back)&&c.accept.length>=2);
- assert(c.specRef===(c.topic==='Proof'?'3.2':'3.10'));
+ assert(c.specRef===(c.topic==='Proof'?'3.2':'3.11'));
 }
 assert(app.includes("'./maths_mock_recall_v186.json','./maths_mock_recall_v187.json'"));
 assert(app.includes('knownFlashIds.has(c.id)'));
