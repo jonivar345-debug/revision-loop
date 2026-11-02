@@ -68,8 +68,17 @@ for(const id of linked){
  for(const ans of c.accept||[]){assert.equal(mark(c,ans).status,'correct',id+' correct variant '+ans);accepted++;}
  for(const ans of c.reject||[]){assert.notEqual(mark(c,ans).status,'correct',id+' must not credit known bad variant '+ans);rejected++;}
 }
-assert.deepEqual(sc,{Physics:{sample:36,partial:10,unverified:0},Chemistry:{sample:23,partial:3,unverified:0}});
-assert.equal(ledger.summary.sample,59);assert.equal(ledger.summary.partial,13);assert.equal(ledger.summary.unverified,0);
+assert.deepEqual(sc,{Physics:{sample:37,partial:9,unverified:0},Chemistry:{sample:24,partial:2,unverified:0}});
+assert.equal(ledger.summary.sample,61);assert.equal(ledger.summary.partial,11);assert.equal(ledger.summary.unverified,0);
+
+// v311: genuinely sampled short recall is distinguished from partial diagram and method coverage.
+const rowById=new Map(ledger.rows.map(row=>[row.id,row]));
+assert.equal(rowById.get('P025').status,'sample','Existing First, Second and Third law examples are individually linked');
+assert.equal(rowById.get('C047').status,'sample','Direct ΔH sign example is verified');
+for(const id of ['P003','P014','P017','P019','P024','P026','P031','P043','P046','C053','C067'])
+ assert.equal(rowById.get(id).status,'partial','Do not silently certify an unfinished practical, drawing or graph skill: '+id);
+assert(rowById.get('P014').evidenceIds.includes('task1_v227_phy_02'));
+assert(rowById.get('P043').evidenceIds.includes('task1_v227_phy_10'));
 assert(ledger.sourceFileSamplingNotes.includes('Only linked cards'),'Large core deck must not be claimed fully audited');
 assert.equal(ledger.summary.rows,72);
 assert.equal(crossSection,6,'Six explicitly explained near-section specimen examples');
