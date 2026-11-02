@@ -23,12 +23,12 @@ for(const c of flash.cards){
  assert(!fronts.has(c.front.trim().toLowerCase()),'Duplicate Physics front: '+c.front);fronts.add(c.front.trim().toLowerCase());
  assert.equal(c.subject,'Physics');assert.equal(c.stage,'AS');assert(allowed.has(c.specRef));
  assert.equal(c.mock,true);assert.equal(c.taught,true);assert.equal(c.scope,'mock');assert.equal(c.active,true);assert.equal(c.strictRecall,true);
- assert.equal(c.accept.length,2);assert.equal(c.reject.length,2);
+ const expectedMore=Number(c.id.slice(-2))<=12?1:0;assert.equal(c.accept.length,2+expectedMore);assert.equal(c.reject.length,2+expectedMore);
  assert(c.accept.includes(c.back)||c.accept.includes(c.back.replace(/\.$/,'')),'Back not an accepted answer '+c.id);
  for(const answer of c.accept){assert.equal(judge(c,answer).status,'correct','Valid '+c.id+': '+answer);good++;}
  for(const answer of c.reject){assert.equal(judge(c,answer).status,'wrong','Wrong '+c.id+': '+answer);bad++;}
 }
-assert.equal(good,72);assert.equal(bad,72);
+assert.equal(good,84);assert.equal(bad,84);
 const x=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));'),y=app.indexOf(' const added=[',x);
 assert(x>0&&y>x&&app.slice(x,y).includes('else if(index===44)'));
 const loader=new Function('cards','extraFlashBanks',app.slice(x,y)+'\nreturn cards;');
@@ -65,4 +65,4 @@ assert.equal(0,1-1);assert.equal(0,1-1);
 const uud=2/3+2/3-1/3,udd=2/3-1/3-1/3;
 assert(Math.abs(uud-1)<1e-12);assert(Math.abs(udd)<1e-12);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v269: 36 AS conservation cards, 72 accepted and 72 rejected markers; eight original Physics questions with 42 distinct points and two genuinely manual equations; original progress preserved.');
+console.log('PASS v269: 36 AS conservation cards, 84 accepted and 84 rejected markers; eight original Physics questions with 42 distinct points and two genuinely manual equations; original progress preserved.');
