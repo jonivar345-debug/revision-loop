@@ -22,11 +22,16 @@
       "back": "Zero.",
       "accept": [
         "Zero.",
-        "0 N"
+        "0 N",
+        "Net force is 0 N.",
+        "No resultant force.",
+        "The forces balance, so resultant force is zero."
       ],
       "reject": [
         "equal to its weight",
-        "a nonzero forward force must act"
+        "a nonzero forward force must act",
+        "A non-zero net driving force is necessary.",
+        "The net force is the object's momentum."
       ],
       "strictRecall": true
     },
@@ -197,11 +202,17 @@
       "back": "Impulse (change in momentum).",
       "accept": [
         "Impulse (change in momentum).",
-        "change in momentum"
+        "change in momentum",
+        "Impulse.",
+        "The change in linear momentum.",
+        "Integral of force with respect to time.",
+        "Δp"
       ],
       "reject": [
         "work done",
-        "mass"
+        "mass",
+        "Change in kinetic energy.",
+        "Displacement travelled during the impact."
       ],
       "strictRecall": true
     },
@@ -247,11 +258,15 @@
       "back": "It no longer returns completely to its original dimensions.",
       "accept": [
         "It no longer returns completely to its original dimensions.",
-        "permanent deformation remains"
+        "permanent deformation remains",
+        "It keeps a permanent extension.",
+        "Some deformation persists when the force is removed."
       ],
       "reject": [
         "stress becomes zero immediately",
-        "it always snaps at once"
+        "it always snaps at once",
+        "It returns to exactly its original length.",
+        "The material necessarily breaks immediately."
       ],
       "strictRecall": true
     },
@@ -272,11 +287,15 @@
       "back": "A material may stop obeying Hooke's law yet still deform elastically.",
       "accept": [
         "A material may stop obeying Hooke's law yet still deform elastically.",
-        "nonlinear reversible extension is possible"
+        "nonlinear reversible extension is possible",
+        "The force-extension relationship can be non-linear but reversible.",
+        "A material can remain elastic after Hooke's law stops applying."
       ],
       "reject": [
         "all nonlinear strain is plastic",
-        "the limit of proportionality always means fracture"
+        "the limit of proportionality always means fracture",
+        "Non-linear deformation must always be permanent.",
+        "The two limits are always identical."
       ],
       "strictRecall": true
     },
@@ -372,11 +391,16 @@
       "back": "Young modulus.",
       "accept": [
         "Young modulus.",
-        "E"
+        "E",
+        "Young's modulus.",
+        "E = stress divided by strain.",
+        "Tensile stress per unit tensile strain in the linear region."
       ],
       "reject": [
         "strain energy only",
-        "wire diameter"
+        "wire diameter",
+        "The elastic potential energy stored.",
+        "Breaking strain."
       ],
       "strictRecall": true
     },
