@@ -1,0 +1,10 @@
+name: Task 1 v320 original-core mock flashcard editorial priority
+on: [pull_request]
+jobs:
+  core-priority:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v320-legacy-core-priorities.cjs
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
