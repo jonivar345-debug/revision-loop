@@ -26,12 +26,14 @@
         "An even factor makes the product n(n+1) even.",
         "One of n and n+1 is divisible by 2.",
         "Consecutive integers have an even factor.",
-        "Their product contains a multiple of 2."
+        "Their product contains a multiple of 2.",
+        "One of two consecutive integers is divisible by 2, so n(n+1) is even."
       ],
       "reject": [
         "All integers n are even.",
         "Both n and n+1 are odd.",
-        "Two consecutive integers are always both even."
+        "Two consecutive integers are always both even.",
+        "The product of any two consecutive integers is always odd."
       ],
       "strictRecall": true
     },
@@ -57,13 +59,15 @@
         "8k³",
         "n³=8k³",
         "8k^3",
-        "n^3 = 8k^3"
+        "n^3 = 8k^3",
+        "For n=2k, cubing gives 8k^3."
       ],
       "reject": [
         "n³=6k³.",
         "Every integer cube is divisible by 8.",
         "n³=4k³",
-        "8k²"
+        "8k²",
+        "Cubing 2k gives 4k cubed."
       ],
       "strictRecall": true
     },
@@ -87,13 +91,15 @@
         "n=2",
         "2",
         "n = 2",
-        "2 gives 3, not a multiple of 8"
+        "2 gives 3, not a multiple of 8",
+        "Taking n=2 yields 3, not a multiple of eight."
       ],
       "reject": [
         "n=3 gives 8.",
         "No counterexample exists.",
         "n=1",
-        "n=-1"
+        "n=-1",
+        "n=1 gives n^2-1=0, so the universal claim is disproved."
       ],
       "strictRecall": true
     },
@@ -115,11 +121,13 @@
       "accept": [
         "0, 0, 2, 6.",
         "0; 0; 2; 6",
-        "(0,0,2,6)"
+        "(0,0,2,6)",
+        "Evaluate all four n values: 0,0,2,6."
       ],
       "reject": [
         "−2,0,2,6.",
-        "0,1,2,3."
+        "0,1,2,3.",
+        "The list is -2,0,2,6."
       ],
       "strictRecall": true
     },
@@ -141,11 +149,13 @@
       "accept": [
         "(x−4)²+3.",
         "(x-4)^2+3",
-        "(x−4)² + 3"
+        "(x−4)² + 3",
+        "Square completion is (x-4)^2+3."
       ],
       "reject": [
         "(x+4)²+3.",
-        "(x−4)²−3."
+        "(x−4)²−3.",
+        "(x-4)^2-3"
       ],
       "strictRecall": true
     },
@@ -167,11 +177,13 @@
       "accept": [
         "9.",
         "k=9",
-        "9, from discriminant=0"
+        "9, from discriminant=0",
+        "The discriminant 36-4k equals zero, so k=9."
       ],
       "reject": [
         "−9.",
-        "36."
+        "36.",
+        "k=-9"
       ],
       "strictRecall": true,
       "numericRecall": {
@@ -200,11 +212,13 @@
       "accept": [
         "−2<x<3.",
         "-2<x<3",
-        "x between −2 and 3, excluding endpoints"
+        "x between −2 and 3, excluding endpoints",
+        "The quadratic is negative strictly between roots -2 and 3."
       ],
       "reject": [
         "x<−2 or x>3.",
-        "−3<x<2."
+        "−3<x<2.",
+        "x<-2 or x>3"
       ],
       "strictRecall": true
     },
@@ -226,11 +240,13 @@
       "accept": [
         "5(√3−1)/2.",
         "(5√3−5)/2",
-        "(5(sqrt(3)-1))/2"
+        "(5(sqrt(3)-1))/2",
+        "Multiply by the conjugate to get (5sqrt3-5)/2."
       ],
       "reject": [
         "5(√3+1)/2.",
-        "5(√3−1)."
+        "5(√3−1).",
+        "5(sqrt(3)+1)/2"
       ],
       "strictRecall": true
     },
@@ -252,11 +268,13 @@
       "accept": [
         "(x−2)(x−3)(x+1).",
         "(x-2)(x-3)(x+1)",
-        "(x+1)(x-2)(x-3)"
+        "(x+1)(x-2)(x-3)",
+        "The three linear factors are x-2, x-3 and x+1."
       ],
       "reject": [
         "(x−2)(x+3)(x−1).",
-        "(x−1)(x−2)(x−3)."
+        "(x−1)(x−2)(x−3).",
+        "(x+2)(x-3)(x+1)"
       ],
       "strictRecall": true
     },
@@ -278,11 +296,13 @@
       "accept": [
         "y=4x−11.",
         "y = 4x - 11",
-        "y+3=4(x−2)"
+        "y+3=4(x−2)",
+        "Point-slope yields y+3=4(x-2), or y=4x-11."
       ],
       "reject": [
         "y=4x+11.",
-        "y=−4x−11."
+        "y=−4x−11.",
+        "y=4x+5"
       ],
       "strictRecall": true
     },
