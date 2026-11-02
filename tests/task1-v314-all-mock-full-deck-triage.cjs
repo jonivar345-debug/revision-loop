@@ -48,6 +48,8 @@ for(const c of selectedCards){
 for(const [name,cards] of Object.entries(bySub))report.subjects[name]={eligible:cards.length,top:counts[name].top,unmatchedSpecPrefix:counts[name].unknown,refCounts:Object.entries(counts[name].spec).sort((a,b)=>b[1]-a[1]).slice(0,28)};
 for(const [kind,items] of Object.entries(issues)){report.total[kind]=items.length;report.examples[kind]=items.slice(0,kind==='sameFrontDifferentBack'?40:25);}
 report.markerChecks=quant;
+report.mathsNumericalMethodsReview=bySub.Maths.filter(c=>String(c.specRef||'')==='3.10').map(c=>({id:c.id,front:c.front,back:c.back,topic:c.topic,stage:c.stage,bank:provenance.get(c.id)}));
+report.mathsASReferenceReview=bySub.Maths.filter(c=>String(c.specRef||'').startsWith('AQA 7356')).map(c=>({id:c.id,front:c.front,specRef:c.specRef}));
 console.log('V314_MOCK_FULL_DECK_TRIAGE_BEGIN');
 console.log(JSON.stringify(report,null,2));
 console.log('V314_MOCK_FULL_DECK_TRIAGE_END');
