@@ -747,6 +747,40 @@ function applyV314CoreMockQuality(existing){
    'The molecule has no bonds.'
   ];
  }
+ // Eight individually reviewed historical short-recall cards previously had
+ // loose or missing alternatives. Verified wrong examples must outrank token similarity.
+ const markerCases=[
+  ['phy_vectors_001','Physics',
+   ['adjacent = F cos θ and opposite = F sin θ','Cosine for adjacent; sine for opposite.'],
+   ['adjacent = F sin θ and opposite = F cos θ','horizontal is always F cos θ regardless of the given angle']],
+  ['phy_slope_001','Physics',
+   ['parallel = mg sin θ; perpendicular = mg cos θ','Weight down the plane mg sine θ, into plane mg cosine θ.'],
+   ['parallel = mg cos θ; perpendicular = mg sin θ','both components are mg sin θ']],
+  ['phy_motion_a','Physics',
+   ['Δv','change in velocity','final velocity minus initial velocity'],
+   ['displacement','distance travelled','acceleration']],
+  ['phy_moments_001','Physics',
+   ['Perpendicular separation from pivot to line of action','The shortest distance from the pivot to the force line'],
+   ['the distance along the force direction','The length from the pivot to the point where force is applied regardless of angle']],
+  ['phy_internal_001','Physics',
+   ['emf − I r','epsilon minus current times internal resistance'],
+   ['V = ε + Ir','V=Ir']],
+  ['phy_photoelectric_002','Physics',
+   ['Photons have insufficient energy hf to overcome the work function regardless of intensity.','Below threshold, increasing intensity raises photon number but not energy per photon.'],
+   ['Increasing brightness gives each photon more energy.','More photons means an electron can combine energy from multiple photons to escape.']],
+  ['chem_gas_001','Chemistry',
+   ['Pa; m³; K; mol','Pressure pascals, volume cubic metres, temperature kelvin, amount moles.'],
+   ['kPa, dm³, °C and moles','Pressure Pa, volume dm³, temperature kelvin and moles']],
+  ['chem_empirical_001','Chemistry',
+   ['Convert masses to moles, divide by the smallest mole value, and obtain whole number ratios.','mass to mole ratio then simplest integer ratio'],
+   ['Use raw mass ratios directly as subscripts without dividing by molar masses.','Divide every mass by the largest mass and round immediately']]
+ ];
+ for(const [id,subject,accept,reject] of markerCases){
+  const c=byId.get(id);
+  if(!c||c.subject!==subject||c.stage!=='AS'||c.mock!==true)continue;
+  c.accept=[...new Set([c.back,...(c.accept||[]),...accept])];
+  c.reject=[...new Set([...(c.reject||[]),...reject])];
+ }
  return existing;
 }
 
