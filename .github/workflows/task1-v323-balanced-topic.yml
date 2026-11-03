@@ -1,0 +1,10 @@
+name: Task 1 v323 balanced three-subject mock coverage priority audit
+on: [pull_request]
+jobs:
+  balanced-mock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tests/task1-v323-balanced-core-topic-priority.cjs
+      - run: node tests/task1-v322-60-more-core-mock-precision.cjs
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
