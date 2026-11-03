@@ -1,0 +1,636 @@
+{
+  "version": "v332",
+  "date": "2026-11-03",
+  "scope": "Read-only first-mock AQA Physics 7408 3.1 Measurements and their errors and taught AQA Chemistry 7405 3.1.9 Rate equations and 3.1.10 Kp, using exact original core flashcard IDs.",
+  "sourceUrls": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+    "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry"
+  ],
+  "statusDefinitions": {
+    "recall": "Direct sampled short recall evidence is present for this subskill, not a claim that every application is mastered.",
+    "partial_application": "A related recall card exists but a complete genuine multistep or graphic application is not signed off in this original-core crosswalk."
+  },
+  "counts": {
+    "total": 59,
+    "Physics": 24,
+    "Chemistry": 35,
+    "shortRecall": 55,
+    "applicationPartial": 4
+  },
+  "rows": [
+    {
+      "id": "P01",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Six required SI base units and symbols",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_base_si"
+      ]
+    },
+    {
+      "id": "P02",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Newtons in base SI units",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_derived_n"
+      ]
+    },
+    {
+      "id": "P03",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Joules in base SI units",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_derived_j"
+      ]
+    },
+    {
+      "id": "P04",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Watts in base SI units",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_derived_w"
+      ]
+    },
+    {
+      "id": "P05",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Use each specified SI prefix from tera to femto",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_prefix_tera_giga",
+        "phy_measure_recap_20261024_prefix_mega_kilo",
+        "phy_measure_recap_20261024_prefix_centi_milli",
+        "phy_measure_recap_20261024_prefix_micro_nano",
+        "phy_measure_recap_20261024_prefix_pico_femto"
+      ]
+    },
+    {
+      "id": "P06",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Apply area-unit conversion",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_squared_unit"
+      ]
+    },
+    {
+      "id": "P07",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Convert electronvolts and joules",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_ev_j"
+      ]
+    },
+    {
+      "id": "P08",
+      "subject": "Physics",
+      "specRef": "3.1.1",
+      "skill": "Convert kilowatt-hours and joules",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_kwh_j"
+      ]
+    },
+    {
+      "id": "P09",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Meaning of random error",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_uncert_random"
+      ]
+    },
+    {
+      "id": "P10",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Meaning of systematic error",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_uncert_systematic"
+      ]
+    },
+    {
+      "id": "P11",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Distinguish accuracy from precision",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_accuracy_precision"
+      ]
+    },
+    {
+      "id": "P12",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Repeatability meaning",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_phy_012"
+      ]
+    },
+    {
+      "id": "P13",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Reproducibility meaning",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_phy_013"
+      ]
+    },
+    {
+      "id": "P14",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Resolution meaning",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_phy_011"
+      ]
+    },
+    {
+      "id": "P15",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Fractional uncertainty",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v127_086"
+      ]
+    },
+    {
+      "id": "P16",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Percentage uncertainty from absolute uncertainty",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_uncert_percent"
+      ]
+    },
+    {
+      "id": "P17",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Add absolute uncertainties when quantities are summed/subtracted",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_measure_recap_20261024_uncert_add"
+      ]
+    },
+    {
+      "id": "P18",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Add percentage uncertainties in products and quotients",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_uncert_products"
+      ]
+    },
+    {
+      "id": "P19",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Propagate percentage uncertainty through powers",
+      "status": "recall",
+      "evidenceIds": [
+        "phy_uncert_power"
+      ]
+    },
+    {
+      "id": "P20",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Meaning of graph error bars",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_phy_019"
+      ]
+    },
+    {
+      "id": "P21",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Estimate straight-line gradient uncertainty from acceptable gradients",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_phy_020",
+        "phy_measure_recap_20261024_gradient_uncert"
+      ]
+    },
+    {
+      "id": "P22",
+      "subject": "Physics",
+      "specRef": "3.1.2",
+      "skill": "Estimate line-intercept uncertainty",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v136_034"
+      ]
+    },
+    {
+      "id": "P23",
+      "subject": "Physics",
+      "specRef": "3.1.3",
+      "skill": "Meaning of order of magnitude",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_phy_021"
+      ]
+    },
+    {
+      "id": "P24",
+      "subject": "Physics",
+      "specRef": "3.1.3",
+      "skill": "Combine estimates to produce derived order-of-magnitude predictions",
+      "status": "partial_application",
+      "evidenceIds": [
+        "task1_phy_021"
+      ]
+    },
+    {
+      "id": "C01",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Define experimentally determined rate law",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_chem_166"
+      ]
+    },
+    {
+      "id": "C02",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Define order with respect to a reactant",
+      "status": "recall",
+      "evidenceIds": [
+        "v33_card_chemistry_rate_equations_48"
+      ]
+    },
+    {
+      "id": "C03",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Define overall order from powers in rate law",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_rates_001"
+      ]
+    },
+    {
+      "id": "C04",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Define rate constant k",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v128_060"
+      ]
+    },
+    {
+      "id": "C05",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Recognise orders zero, one, and two",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_chem_167",
+        "task1_chem_168",
+        "task1_chem_169"
+      ]
+    },
+    {
+      "id": "C06",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Deduce zero, first and second order graph shapes",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_rate_recap_20261024_zero_rate_graph",
+        "chem_rate_recap_20261024_first_rate_graph",
+        "chem_rate_recap_20261024_second_rate_graph"
+      ]
+    },
+    {
+      "id": "C07",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Calculate changes in rates when concentrations double or triple",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_rate_recap_20261024_doubling_orders",
+        "chem_rate_recap_20261024_tripling_orders"
+      ]
+    },
+    {
+      "id": "C08",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Determine rate-constant units using order",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_k_units",
+        "chem_rate_recap_20261024_k_unit_first",
+        "chem_rate_recap_20261024_k_unit_second",
+        "chem_rate_recap_20261024_k_unit_third"
+      ]
+    },
+    {
+      "id": "C09",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Know changing temperature changes k",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_chem_170"
+      ]
+    },
+    {
+      "id": "C10",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Know Arrhenius expression and logarithmic rearrangement",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_arr_eq"
+      ]
+    },
+    {
+      "id": "C11",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Recognise Arrhenius graph gradient -Ea/R",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_arrhenius_001"
+      ]
+    },
+    {
+      "id": "C12",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Recognise Arrhenius intercept ln A",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v124_bulk_chem_156"
+      ]
+    },
+    {
+      "id": "C13",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Calculate activation energy from Arrhenius gradient",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_arrhenius_002"
+      ]
+    },
+    {
+      "id": "C14",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.1",
+      "skill": "Complete an unfamiliar direct Arrhenius k calculation from given values",
+      "status": "partial_application",
+      "evidenceIds": [
+        "chem_arr_eq"
+      ]
+    },
+    {
+      "id": "C15",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Determine an order from two controlled initial-rate runs",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_rate_recap_20261024_initial_data"
+      ]
+    },
+    {
+      "id": "C16",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Why orders cannot be taken from balanced overall equation",
+      "status": "recall",
+      "evidenceIds": [
+        "v33_card_chemistry_rate_equations_49"
+      ]
+    },
+    {
+      "id": "C17",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Find instantaneous rate from curved concentration/time graph",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v128_003"
+      ]
+    },
+    {
+      "id": "C18",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Find initial rate from gradient at t=0",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v128_002"
+      ]
+    },
+    {
+      "id": "C19",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Recognise linear concentration/time graph for zero-order case",
+      "status": "recall",
+      "evidenceIds": [
+        "task1_v124_bulk_chem_158"
+      ]
+    },
+    {
+      "id": "C20",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Use order to reason about slow rate-determining step",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_rate_recap_20261024_rate_determining",
+        "task1_v125_138"
+      ]
+    },
+    {
+      "id": "C21",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Relate fixed-endpoint clock time to relative initial rate",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_rp3"
+      ]
+    },
+    {
+      "id": "C22",
+      "subject": "Chemistry",
+      "specRef": "3.1.9.2",
+      "skill": "Carry out both RP7 initial-rate and continuous-monitoring methods",
+      "status": "partial_application",
+      "evidenceIds": [
+        "task1_v128_002",
+        "task1_v128_003",
+        "task1_v128_007"
+      ]
+    },
+    {
+      "id": "K01",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Calculate mole fraction from gas mixture",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_molefraction"
+      ]
+    },
+    {
+      "id": "K02",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Calculate partial pressure from mole fraction and total pressure",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_002"
+      ]
+    },
+    {
+      "id": "K03",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Form Kp expression from equilibrium gases and coefficients",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_001",
+        "chem_kp_recap_20261024_kp_nh3"
+      ]
+    },
+    {
+      "id": "K04",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Use only equilibrium partial pressures in Kp",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_equilibrium_not_initial"
+      ]
+    },
+    {
+      "id": "K05",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Find Kp pressure-unit exponent from change in gaseous mole count",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_kp_units",
+        "chem_kp_recap_20261024_kp_units_ammonia"
+      ]
+    },
+    {
+      "id": "K06",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Find equilibrium moles using reaction mole-change table",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_mole_table"
+      ]
+    },
+    {
+      "id": "K07",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Calculate complete numerical Kp from equilibrium mole/pressure data",
+      "status": "partial_application",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_total_pressure_unknown"
+      ]
+    },
+    {
+      "id": "K08",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Predict pressure shift to side with fewer gas moles",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_pressure_position"
+      ]
+    },
+    {
+      "id": "K09",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Recognise Kp does not change with pressure at fixed T",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_pressure"
+      ]
+    },
+    {
+      "id": "K10",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Heating an exothermic forward reaction decreases Kp",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_temp_exothermic"
+      ]
+    },
+    {
+      "id": "K11",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Heating an endothermic forward reaction increases Kp",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_temp_endothermic"
+      ]
+    },
+    {
+      "id": "K12",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Catalysts affect equilibrium attainment but not Kp value",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_temp"
+      ]
+    },
+    {
+      "id": "K13",
+      "subject": "Chemistry",
+      "specRef": "3.1.10",
+      "skill": "Adding inert gas at fixed temperature and volume leaves partial pressures unchanged",
+      "status": "recall",
+      "evidenceIds": [
+        "chem_kp_recap_20261024_inert_constantvolume"
+      ]
+    }
+  ],
+  "limitations": [
+    "Not the entire Physics or Chemistry specifications, or Year 1 Pure Maths.",
+    "Evidence IDs are checked against the real original core deck. Additional mock supplemental practice may already address application gaps.",
+    "Never equate one recalled fact with verified drawing or numerical exam skill.",
+    "Not a final Task 1 completion sign-off."
+  ]
+}
