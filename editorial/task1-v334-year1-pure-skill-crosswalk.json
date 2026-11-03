@@ -23,7 +23,9 @@
       "3.11": 4
     },
     "sampleRecall": 37,
-    "needsExamReview": 7
+    "needsExamReview": 7,
+    "partialWithPractice": 6,
+    "partialWithoutPractice": 1
   },
   "rows": [
     {
@@ -41,7 +43,17 @@
           "path": "maths_first_mock_pure_challenges_v252.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v190_maths_001",
+          "path": "maths_pure_proof_vectors_v190.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q01",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
     },
     {
       "id": "M02",
@@ -74,7 +86,17 @@
           "path": "maths_year1_pure_breadth_v260.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v191_maths_001",
+          "path": "maths_as_pure_gap_challenges_v191.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q02",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
     },
     {
       "id": "M04",
@@ -195,7 +217,8 @@
           "path": "deck.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice. Specific full multi-step inequalities practice is not yet linked in this narrowly verified audit; this remains an actionable gap.",
+      "practiceQuestionEvidence": []
     },
     {
       "id": "M12",
@@ -344,7 +367,17 @@
           "path": "maths_as_graph_transform_recall_v272.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v191_maths_004",
+          "path": "maths_as_pure_gap_challenges_v191.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q05",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
     },
     {
       "id": "M21",
@@ -681,7 +714,17 @@
           "path": "maths_first_mock_pure_applied_v245.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v191_maths_006",
+          "path": "maths_as_pure_gap_challenges_v191.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q07",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
     },
     {
       "id": "M41",
@@ -730,7 +773,17 @@
           "path": "maths_first_mock_pure_precision_v232.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v190_maths_003",
+          "path": "maths_pure_proof_vectors_v190.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q03",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
     },
     {
       "id": "M44",
@@ -747,7 +800,13 @@
           "path": "maths_year1_pure_breadth_v260.json"
         }
       ],
-      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice."
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v190_maths_004",
+          "path": "maths_pure_proof_vectors_v190.json"
+        }
+      ]
     }
   ]
 }
