@@ -2593,6 +2593,11 @@ function evaluateConfiguredNumericRecall(c,input){
  return {status:'wrong',score:0,text:'The numerical value or unit conversion is incorrect.',missing:[config.expected]};
 }
 function evaluateCard(c,input){
+ // v334: a short one-letter correct symbol such as T (tera) must not be
+ // extracted from the contraction in an explicit non-answer (I don't know).
+ // Preserve single-letter symbol answers and full explanations unchanged.
+ if(/^(?:i\s+(?:don't|don’t|do\s+not)\s+know|idk|no\s+idea)[.!?]*$/i.test(String(input||'').trim()))
+  return {status:'wrong',score:0,text:'No answer was supplied; review this card and try again.',missing:[]};
  // v297: explicitly denying an entire listed correct answer must not be
  // credited via fuzzy token overlap or a model substring match. Scope this
  // only to a standalone 'not [exact answer]' response, not ordinary prose
