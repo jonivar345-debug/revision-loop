@@ -14,8 +14,8 @@
     "total": 59,
     "Physics": 24,
     "Chemistry": 35,
-    "shortRecall": 55,
-    "applicationPartial": 4
+    "shortRecall": 53,
+    "applicationPartial": 6
   },
   "rows": [
     {
@@ -366,10 +366,11 @@
       "subject": "Chemistry",
       "specRef": "3.1.9.1",
       "skill": "Know Arrhenius expression and logarithmic rearrangement",
-      "status": "recall",
+      "status": "partial_application",
       "evidenceIds": [
         "chem_arr_eq"
-      ]
+      ],
+      "notes": "Current original-core flashcard explicitly tests the logarithmic Arrhenius equation, but standalone direct k=A exp(-Ea/RT) numerical substitution has not been individually signed off here."
     },
     {
       "id": "C11",
@@ -611,10 +612,11 @@
       "subject": "Chemistry",
       "specRef": "3.1.10",
       "skill": "Catalysts affect equilibrium attainment but not Kp value",
-      "status": "recall",
+      "status": "partial_application",
       "evidenceIds": [
         "chem_kp_temp"
-      ]
+      ],
+      "notes": "Available card says temperature is the only factor changing Kp, but an explicit catalyst-versus-rate explanation has not been individually signed off here."
     },
     {
       "id": "K13",
