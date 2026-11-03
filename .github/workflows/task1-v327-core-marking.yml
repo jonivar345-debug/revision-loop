@@ -1,0 +1,15 @@
+name: Task 1 v327 60 more balanced legacy mock card marker reviews
+on: [pull_request]
+jobs:
+  three-subject-legacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v327-60-three-subject-core.cjs
+      - run: node tests/task1-v326-five-compound-core-rewrites.cjs
+      - run: node tests/task1-v324-60-topic-balanced-core-precision.cjs
+      - run: node tests/task1-v322-60-more-core-mock-precision.cjs
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
+      - run: node tests/task1-v301-school-mock-scope.cjs
