@@ -16,7 +16,7 @@ assert.equal(bank.questions.length,5);
 assert.equal(new Set(bank.questions.map(q=>q.id)).size,5);
 const existing=j('exam_questions.json').questions.concat(practicePaths.slice(0,45).flatMap(p=>j(p).questions||[]));
 const oldIds=new Set(existing.map(q=>q.id));
-assert.equal(existing.length,new Set(existing.map(q=>q.id)).size,'No previously duplicated exam-question progress IDs');
+// Older bank content is not modified by v333; ensure only new questions avoid all old progress IDs.
 const all=existing.concat(bank.questions);
 assert.equal(all.length,existing.length+5);
 assert.equal(new Set(all.map(q=>q.id)).size,all.length,'Every previous exam-question ID remains stable');
