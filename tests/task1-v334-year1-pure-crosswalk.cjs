@@ -16,7 +16,7 @@ assert.equal(extraPaths.length,56,'No changes to 56 mock flashcard banks');
 assert.equal(practisePaths.length,45,'v334 is independent of pending v333 practice branch');
 const base=j('deck.json').cards;
 const cardBanks=new Map([['deck.json',base],...extraPaths.map(path=>[path,j(path).cards||[]])]);
-const eligibleStart=app.indexOf('function mockEligibleCard('),eligibleEnd=app.indexOf('function mockEligibleQuestion(',eligibleStart);
+const eligibleStart=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),eligibleEnd=app.indexOf('function mockEligibleQuestion(',eligibleStart);
 assert(eligibleStart>=0&&eligibleEnd>eligibleStart);
 const eligible=new Function(app.slice(eligibleStart,eligibleEnd)+'\nreturn mockEligibleCard;')();
 let cardRefs=0,practiceRefs=0;
