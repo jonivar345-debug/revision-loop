@@ -1,0 +1,17 @@
+{
+  "version": "v330",
+  "date": "2026-11-03",
+  "task": "Individually curate 43 original Physics/Chemistry core recall cards not included in recent v324/v326/v327/v328 sampled reviews.",
+  "originalCoreReviewed": 43,
+  "Physics": 10,
+  "Chemistry": 33,
+  "newAcceptedAlternatives": 43,
+  "newWrongMisconceptions": 86,
+  "scope": "AQA school-mock-eligible original-core cards, unchanged question/answer and saved progress IDs.",
+  "verification": "Production evaluator and real mock bank loader regression in tests/task1-v330-43-science-core-reviews.cjs.",
+  "limits": [
+    "43 curated sample answers, not all science cards or every AQA spec bullet.",
+    "Unknown paraphrases and numerical expressions can still expose marker edge cases.",
+    "Live deployment requires separate check."
+  ]
+}
