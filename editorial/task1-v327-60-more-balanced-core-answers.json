@@ -1,0 +1,798 @@
+{
+  "version": "v327",
+  "date": "2026-11-03",
+  "purpose": "60 additional original, one-fact AQA school-mock core flashcards, with explicit valid paraphrase and wrong misconception for real website marker.",
+  "subjects": {
+    "Physics": 20,
+    "Chemistry": 29,
+    "Maths": 11
+  },
+  "records": [
+    {
+      "id": "phy_mechanics_focus_v37_33",
+      "subject": "Physics",
+      "section": "Measurement errors and uncertainty",
+      "front": "Why does percentage uncertainty in wire diameter approximately double for cross-sectional area?",
+      "originalBack": "Area A = πd²/4, so percentage uncertainty in A ≈ 2 × percentage uncertainty in d.",
+      "accept": [
+        "Area varies as diameter squared, so the percentage area uncertainty is twice the percentage diameter uncertainty."
+      ],
+      "reject": [
+        "The percentage uncertainty in area is half the percentage uncertainty in wire diameter."
+      ]
+    },
+    {
+      "id": "phy_prac_uncert",
+      "subject": "Physics",
+      "section": "Measurement errors and uncertainty",
+      "front": "Why does increasing the measured interval often reduce percentage uncertainty?",
+      "originalBack": "The absolute uncertainty is similar but becomes a smaller fraction of a larger measured value.",
+      "accept": [
+        "A larger measured interval has a smaller relative uncertainty for the same absolute reading error."
+      ],
+      "reject": [
+        "Percentage uncertainty increases automatically whenever the measured interval increases."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_11",
+      "subject": "Physics",
+      "section": "Resolving vectors and forces",
+      "front": "A 12 N force is 30° from the vertical. Find its horizontal and vertical components.",
+      "originalBack": "Horizontal = 12 sin30° = 6.0 N; vertical = 12 cos30° ≈ 10.4 N.",
+      "accept": [
+        "Horizontal 6.0 N and vertical approximately 10.4 N."
+      ],
+      "reject": [
+        "Horizontal 10.4 N and vertical 6.0 N."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_zero_crossing",
+      "subject": "Physics",
+      "section": "Motion and its graphs",
+      "front": "What does crossing the time axis on a velocity–time graph mean?",
+      "originalBack": "Velocity passes through zero and changes sign: the object stops momentarily, then reverses direction.",
+      "accept": [
+        "A sign change in velocity means the object is briefly at rest then travels in the opposite direction."
+      ],
+      "reject": [
+        "Crossing zero velocity proves that acceleration is zero at that instant."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_01",
+      "subject": "Physics",
+      "section": "Motion and its graphs",
+      "front": "A displacement–time curve has a positive gradient which becomes less steep. What happens to velocity?",
+      "originalBack": "Velocity remains positive but decreases: the object moves forwards while slowing down.",
+      "accept": [
+        "Its gradient stays positive but falls, so velocity is positive and decreasing."
+      ],
+      "reject": [
+        "A less steep positive displacement-time gradient means negative velocity."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_02",
+      "subject": "Physics",
+      "section": "Motion and its graphs",
+      "front": "What does a horizontal velocity–time graph below the time axis show?",
+      "originalBack": "Constant negative velocity; acceleration is zero. The object is moving, not stationary.",
+      "accept": [
+        "The object moves with an unchanging velocity in the negative direction and zero acceleration."
+      ],
+      "reject": [
+        "A flat velocity-time line below zero indicates zero velocity and no motion."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_phy_065",
+      "subject": "Physics",
+      "section": "Forces and slopes",
+      "front": "How does the normal reaction change on an incline without other perpendicular forces?",
+      "originalBack": "R = mg cos θ.",
+      "accept": [
+        "On an incline of angle theta with no other perpendicular components, the contact force is mg cos theta."
+      ],
+      "reject": [
+        "The normal reaction on a slope always equals mg sin theta."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_phy_066",
+      "subject": "Physics",
+      "section": "Forces and slopes",
+      "front": "What is the weight component down a slope of angle θ?",
+      "originalBack": "mg sin θ.",
+      "accept": [
+        "Down-slope component of weight is mg sin(theta)."
+      ],
+      "reject": [
+        "The weight component parallel to the slope is mg cos theta."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_15",
+      "subject": "Physics",
+      "section": "Moments and couples",
+      "front": "A 20 N force acts at 30° to a 0.50 m lever arm. Find its moment about the pivot.",
+      "originalBack": "M = Fr sinθ = 20×0.50×sin30° = 5.0 N m.",
+      "accept": [
+        "5.0 newton metres, from 20 times 0.50 times sin 30 degrees."
+      ],
+      "reject": [
+        "10.0 N m, because the sine factor can be omitted."
+      ]
+    },
+    {
+      "id": "phy_moment_eq",
+      "subject": "Physics",
+      "section": "Moments and couples",
+      "front": "What is the principle of moments in equilibrium?",
+      "originalBack": "Total clockwise moment = total anticlockwise moment about the same point.",
+      "accept": [
+        "For rotational equilibrium the sum of moments clockwise equals the sum anticlockwise about one pivot."
+      ],
+      "reject": [
+        "For equilibrium clockwise moments must exceed anticlockwise moments."
+      ]
+    },
+    {
+      "id": "task1_phy_078",
+      "subject": "Physics",
+      "section": "Momentum and impulse",
+      "front": "What condition allows use of conservation of momentum?",
+      "originalBack": "No external resultant force acts on the system.",
+      "accept": [
+        "Momentum of a system is conserved if the net external force on that system is zero."
+      ],
+      "reject": [
+        "Momentum is conserved only when every object has zero velocity."
+      ]
+    },
+    {
+      "id": "phy_power_elec",
+      "subject": "Physics",
+      "section": "Energy power efficiency",
+      "front": "Give three electrical power equations.",
+      "originalBack": "P = VI = I²R = V²/R.",
+      "accept": [
+        "Power equals voltage times current, current squared times resistance, or voltage squared divided by resistance."
+      ],
+      "reject": [
+        "P=V/I=IR=V/R for an electrical component."
+      ]
+    },
+    {
+      "id": "task1_phy_087",
+      "subject": "Physics",
+      "section": "Materials stress strain Young modulus",
+      "front": "What is the ultimate tensile stress?",
+      "originalBack": "Maximum tensile stress before breaking.",
+      "accept": [
+        "Ultimate tensile stress is the greatest stress attained in a tensile test."
+      ],
+      "reject": [
+        "Ultimate tensile stress is the strain at which a material first begins to deform."
+      ]
+    },
+    {
+      "id": "phy_strain",
+      "subject": "Physics",
+      "section": "Materials stress strain Young modulus",
+      "front": "What is tensile strain?",
+      "originalBack": "strain = ΔL/L; it has no unit.",
+      "accept": [
+        "The extension divided by original length, with no dimensions."
+      ],
+      "reject": [
+        "Strain equals applied force divided by cross-sectional area in pascals."
+      ]
+    },
+    {
+      "id": "task1_phy_035",
+      "subject": "Physics",
+      "section": "Progressive waves and phase",
+      "front": "What is wavelength?",
+      "originalBack": "Shortest distance between two points in phase.",
+      "accept": [
+        "Wavelength is the shortest separation of two positions vibrating in phase on a progressive wave."
+      ],
+      "reject": [
+        "Wavelength is the distance travelled by a wave in half a period."
+      ]
+    },
+    {
+      "id": "task1_phy_048",
+      "subject": "Physics",
+      "section": "Progressive waves and phase",
+      "front": "For a string fixed at both ends, what is the first-harmonic wavelength?",
+      "originalBack": "Twice the vibrating length, λ = 2L.",
+      "accept": [
+        "The first harmonic on a string fixed at both ends has wavelength 2 times the length."
+      ],
+      "reject": [
+        "For a string with fixed ends the fundamental wavelength equals the string length."
+      ]
+    },
+    {
+      "id": "task1_phy_055",
+      "subject": "Physics",
+      "section": "Diffraction interference and gratings",
+      "front": "What happens to fringe spacing if the double-slit separation increases?",
+      "originalBack": "It decreases.",
+      "accept": [
+        "Larger slit spacing means smaller fringe spacing, with all else unchanged."
+      ],
+      "reject": [
+        "Increasing double-slit separation increases fringe spacing."
+      ]
+    },
+    {
+      "id": "task1_phy_056",
+      "subject": "Physics",
+      "section": "Diffraction interference and gratings",
+      "front": "What happens to fringe spacing if the screen distance increases?",
+      "originalBack": "It increases.",
+      "accept": [
+        "Fringe spacing scales directly with the distance from slits to screen."
+      ],
+      "reject": [
+        "Moving the screen farther from the slits makes fringe spacing smaller."
+      ]
+    },
+    {
+      "id": "task1_phy_065",
+      "subject": "Physics",
+      "section": "Refraction and optical fibres",
+      "front": "What is the critical-angle equation for air outside a material?",
+      "originalBack": "sin c = 1/n.",
+      "accept": [
+        "For a material surrounded by air, the critical angle obeys sin c=1/n."
+      ],
+      "reject": [
+        "At an air interface the critical-angle rule is sin c=n."
+      ]
+    },
+    {
+      "id": "task1_practical_011",
+      "subject": "Physics",
+      "section": "Electricity and potential dividers",
+      "front": "What does the gradient of resistance against wire length give?",
+      "originalBack": "ρ/A, for a wire of constant cross-section.",
+      "accept": [
+        "The R against L slope equals resistivity divided by cross-sectional area."
+      ],
+      "reject": [
+        "The resistance-length gradient is the resistivity times cross-sectional area."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_06",
+      "subject": "Chemistry",
+      "section": "Atomic structure isotopes mass spectra",
+      "front": "How many electrons are in a 3+ ion formed from Z=13?",
+      "originalBack": "13−3 = 10 electrons; the nucleus is unchanged.",
+      "accept": [
+        "An aluminium ion with charge 3+ and Z=13 contains ten electrons."
+      ],
+      "reject": [
+        "A 3+ ion with proton number 13 has 16 electrons."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_15",
+      "subject": "Chemistry",
+      "section": "Atomic structure isotopes mass spectra",
+      "front": "What is the purpose of ionisation in TOF?",
+      "originalBack": "To give sample particles an electrical charge so they can be accelerated and detected.",
+      "accept": [
+        "TOF ionisation makes charged ions that electric fields can accelerate and a detector can register."
+      ],
+      "reject": [
+        "Ionisation in TOF gives every atom the same mass and removes isotope differences."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_40",
+      "subject": "Chemistry",
+      "section": "Electron configuration and ionisation",
+      "front": "Write the second ionisation equation for magnesium.",
+      "originalBack": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "accept": [
+        "Mg+(g) to Mg2+(g) plus an electron."
+      ],
+      "reject": [
+        "Mg(g) -> Mg+(g) + e- is the second ionisation equation."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_47",
+      "subject": "Chemistry",
+      "section": "Electron configuration and ionisation",
+      "front": "How many electrons can an s, p and d subshell hold?",
+      "originalBack": "s: 2; p: 6; d: 10.",
+      "accept": [
+        "The subshell electron capacities are s 2, p 6, d 10."
+      ],
+      "reject": [
+        "The electron capacities of s, p and d are 2, 8 and 18."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_01",
+      "subject": "Chemistry",
+      "section": "Amount calculations and titration",
+      "front": "What is the difference between empirical and molecular formula?",
+      "originalBack": "Empirical: simplest atom ratio. Molecular: actual atoms per molecule.",
+      "accept": [
+        "Empirical gives the lowest whole-number atom ratio; molecular gives actual atoms in one molecule."
+      ],
+      "reject": [
+        "An empirical formula always has more atoms than the molecular formula."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_03",
+      "subject": "Chemistry",
+      "section": "Amount calculations and titration",
+      "front": "What are the three stages of empirical formula calculation?",
+      "originalBack": "Divide element masses by Ar; divide moles by smallest; find integer ratio.",
+      "accept": [
+        "Convert each mass to moles, divide by the least, then scale to whole numbers."
+      ],
+      "reject": [
+        "To find empirical formula, divide each mass by the largest atomic number and stop."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_05",
+      "subject": "Chemistry",
+      "section": "Amount calculations and titration",
+      "front": "How is molecular formula calculated from empirical formula?",
+      "originalBack": "Find empirical-formula Mr, divide molecular Mr by it, multiply subscripts.",
+      "accept": [
+        "Divide measured molecular Mr by empirical-formula mass, then multiply empirical subscripts by that integer."
+      ],
+      "reject": [
+        "Molecular formula is found by dividing each empirical subscript by the molecular Mr."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_11",
+      "subject": "Chemistry",
+      "section": "Amount calculations and titration",
+      "front": "How do you calculate molar mass of an unknown gas from mass and gas data?",
+      "originalBack": "First n=pV/(RT), then molar mass M=m/n.",
+      "accept": [
+        "Obtain moles from pV= nRT and divide measured gas mass by n."
+      ],
+      "reject": [
+        "The molar mass of a gas equals its pressure divided by its volume."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_10",
+      "subject": "Chemistry",
+      "section": "Shapes covalent and ionic bonding",
+      "front": "Define a single covalent bond accurately.",
+      "originalBack": "One electron pair shared between atoms and attracted to both nuclei.",
+      "accept": [
+        "A covalent bond is the attraction of two nuclei for one shared pair of electrons."
+      ],
+      "reject": [
+        "A single covalent bond is attraction between two oppositely charged ions."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_12",
+      "subject": "Chemistry",
+      "section": "Shapes covalent and ionic bonding",
+      "front": "What is a coordinate or dative covalent bond?",
+      "originalBack": "A shared pair where both electrons originate from one atom.",
+      "accept": [
+        "Both electrons in a dative shared pair are supplied by one donor atom."
+      ],
+      "reject": [
+        "A coordinate bond forms when each atom supplies one electron to the pair."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_27",
+      "subject": "Chemistry",
+      "section": "Intermolecular forces and structure",
+      "front": "How many covalent bonds does each carbon make in diamond?",
+      "originalBack": "Four, in a three-dimensional tetrahedral network.",
+      "accept": [
+        "In diamond every carbon makes four strong covalent bonds in a tetrahedral network."
+      ],
+      "reject": [
+        "In diamond every carbon atom forms three bonds and has one delocalised electron."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_29",
+      "subject": "Chemistry",
+      "section": "Intermolecular forces and structure",
+      "front": "Why does diamond not conduct electricity?",
+      "originalBack": "No mobile ions or delocalised electrons are available.",
+      "accept": [
+        "Diamond has no mobile charge carriers, because its valence electrons are localised in bonds."
+      ],
+      "reject": [
+        "Diamond conducts because each carbon has a mobile delocalised electron."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_def",
+      "subject": "Chemistry",
+      "section": "Calorimetry and enthalpy",
+      "front": "Define enthalpy of hydration.",
+      "originalBack": "The enthalpy change when 1 mole of gaseous ions becomes hydrated, forming aqueous ions.",
+      "accept": [
+        "Hydration enthalpy is the change when one mole of gaseous ions becomes aqueous ions."
+      ],
+      "reject": [
+        "Hydration enthalpy is the change for aqueous ions becoming isolated gaseous ions."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_def",
+      "subject": "Chemistry",
+      "section": "Calorimetry and enthalpy",
+      "front": "Define lattice enthalpy of formation.",
+      "originalBack": "The enthalpy change when 1 mole of a solid ionic compound is formed from its constituent gaseous ions.",
+      "accept": [
+        "One mole of solid ionic lattice is formed from its separate gaseous ions."
+      ],
+      "reject": [
+        "Lattice formation enthalpy is the change on splitting a solid into gaseous ions."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_def",
+      "subject": "Chemistry",
+      "section": "Calorimetry and enthalpy",
+      "front": "Define enthalpy of solution.",
+      "originalBack": "The enthalpy change when 1 mole of solute dissolves in enough solvent to form an infinitely dilute solution.",
+      "accept": [
+        "One mole of solute dissolves in sufficient solvent for effectively infinite dilution."
+      ],
+      "reject": [
+        "Enthalpy of solution means forming a solid from its free gaseous ions."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_def",
+      "subject": "Chemistry",
+      "section": "Calorimetry and enthalpy",
+      "front": "Define standard enthalpy of formation.",
+      "originalBack": "The enthalpy change when 1 mole of compound forms from its constituent elements in their standard states under standard conditions.",
+      "accept": [
+        "One mole of compound is made from its elements in standard states under standard conditions."
+      ],
+      "reject": [
+        "Standard enthalpy of formation is defined for forming two moles of compound from gaseous atoms."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_38",
+      "subject": "Chemistry",
+      "section": "Hess cycles and bond enthalpy",
+      "front": "State Hess's law.",
+      "originalBack": "Overall enthalpy change is independent of pathway if start/end states match.",
+      "accept": [
+        "The same reactants and products have the same enthalpy difference irrespective of reaction pathway."
+      ],
+      "reject": [
+        "Hess's law says activation energy is independent of the route taken."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_40",
+      "subject": "Chemistry",
+      "section": "Hess cycles and bond enthalpy",
+      "front": "What is the combustion-enthalpy Hess calculation?",
+      "originalBack": "Sum combustion enthalpies of reactants minus those of products.",
+      "accept": [
+        "Use the total combustion enthalpy of reactants minus that of products, accounting for coefficients."
+      ],
+      "reject": [
+        "For combustion enthalpy cycles always subtract reactants from products."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_41",
+      "subject": "Chemistry",
+      "section": "Hess cycles and bond enthalpy",
+      "front": "Why do equation coefficients matter in Hess calculations?",
+      "originalBack": "Multiply each substance's molar enthalpy by its stoichiometric coefficient.",
+      "accept": [
+        "Enthalpies in a Hess cycle are multiplied by the balanced equation's coefficients."
+      ],
+      "reject": [
+        "Hess enthalpy totals should ignore coefficients in the equation."
+      ]
+    },
+    {
+      "id": "task1_chem_083",
+      "subject": "Chemistry",
+      "section": "Group 2 and group 7",
+      "front": "What is the trend in Group 2 hydroxide solubility?",
+      "originalBack": "Solubility increases down the group.",
+      "accept": [
+        "Group 2 metal hydroxides generally dissolve more readily as you go down the group."
+      ],
+      "reject": [
+        "Group 2 hydroxides become less soluble going from magnesium to barium."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_24",
+      "subject": "Chemistry",
+      "section": "Inorganic tests and observations",
+      "front": "Write the net ionic equation for barium sulfate precipitation.",
+      "originalBack": "Ba²⁺(aq)+SO₄²⁻(aq)→BaSO₄(s).",
+      "accept": [
+        "Ba2+(aq) plus SO4 2-(aq) produces BaSO4(s)."
+      ],
+      "reject": [
+        "Ba2+(aq) + Cl-(aq) -> BaCl(s) is the sulfate precipitation equation."
+      ]
+    },
+    {
+      "id": "chem_rates_001",
+      "subject": "Chemistry",
+      "section": "Rates and initial rates",
+      "front": "What does the overall order of a rate equation mean?",
+      "originalBack": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation.",
+      "accept": [
+        "Overall reaction order is obtained by adding the exponents of the concentration terms."
+      ],
+      "reject": [
+        "Overall order is the number of compounds appearing in a balanced chemical equation."
+      ]
+    },
+    {
+      "id": "chem_arrhenius_002",
+      "subject": "Chemistry",
+      "section": "Arrhenius activation energy",
+      "front": "How do you calculate Ea from the gradient of ln k against 1/T?",
+      "originalBack": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required.",
+      "accept": [
+        "Multiply the negative slope of ln k against inverse kelvin temperature by the gas constant R."
+      ],
+      "reject": [
+        "Activation energy equals the Arrhenius graph gradient divided by R."
+      ]
+    },
+    {
+      "id": "chem_kp_001",
+      "subject": "Chemistry",
+      "section": "Kp gaseous equilibrium",
+      "front": "What goes into a Kp expression?",
+      "originalBack": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient.",
+      "accept": [
+        "Use equilibrium partial pressures, products over reactants, with the powers given by stoichiometric coefficients."
+      ],
+      "reject": [
+        "Use only the concentrations of solids in a Kp expression."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_second_ea_def",
+      "subject": "Chemistry",
+      "section": "Born Haber and lattice enthalpy",
+      "front": "Define second electron affinity.",
+      "originalBack": "The enthalpy change when 1 mole of gaseous 1− ions each gains an electron, forming gaseous 2− ions.",
+      "accept": [
+        "The change for one mole of gaseous singly negative ions each gaining another electron to form 2- ions."
+      ],
+      "reject": [
+        "Second electron affinity is removal of one mole of electrons from gaseous 1- ions."
+      ]
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_negative_not_fast",
+      "subject": "Chemistry",
+      "section": "Entropy and Gibbs free energy",
+      "front": "Why does negative ΔG not guarantee a rapid reaction?",
+      "originalBack": "ΔG predicts thermodynamic feasibility, not rate. A high activation energy can make the reaction very slow.",
+      "accept": [
+        "A spontaneous-feasible reaction may still proceed slowly when activation energy is high."
+      ],
+      "reject": [
+        "Negative Gibbs free-energy change guarantees an instantaneous reaction."
+      ]
+    },
+    {
+      "id": "task1_chem_183",
+      "subject": "Chemistry",
+      "section": "Strong weak acids pH Ka Kw",
+      "front": "At 25 °C, what is Kw?",
+      "originalBack": "1.0 × 10⁻¹⁴ mol² dm⁻⁶.",
+      "accept": [
+        "At 298 K, Kw is 1.0 x 10^-14 mol^2 dm^-6."
+      ],
+      "reject": [
+        "At 25 degrees Celsius Kw is 1.0 x 10^-7 mol^2 dm^-6."
+      ]
+    },
+    {
+      "id": "chem_optical",
+      "subject": "Chemistry",
+      "section": "Optical isomerism and chirality",
+      "front": "What causes optical isomerism?",
+      "originalBack": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers.",
+      "accept": [
+        "A stereogenic carbon with four different groups can generate nonsuperimposable mirror-image structures."
+      ],
+      "reject": [
+        "Optical isomerism occurs whenever a carbon atom has two identical substituents."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_39",
+      "subject": "Chemistry",
+      "section": "Chemistry required practical accuracy",
+      "front": "Why can distilled water be added to the conical flask during a titration?",
+      "originalBack": "It changes concentration but not the number of moles being titrated.",
+      "accept": [
+        "Water added to the conical flask does not change the number of analyte moles already transferred."
+      ],
+      "reject": [
+        "Adding distilled water into the titration flask creates extra moles of analyte."
+      ]
+    },
+    {
+      "id": "task1_maths_008",
+      "subject": "Maths",
+      "section": "Functions inequalities transformations",
+      "front": "What is the range of a function?",
+      "originalBack": "Its possible output values.",
+      "accept": [
+        "Range refers to the collection of outputs a function can take."
+      ],
+      "reject": [
+        "The range of a function is its allowed input values."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_math_002",
+      "subject": "Maths",
+      "section": "Functions inequalities transformations",
+      "front": "What is the domain of f(x) = √x over the real numbers?",
+      "originalBack": "x ≥ 0.",
+      "accept": [
+        "x must be greater than or equal to zero for real square root x."
+      ],
+      "reject": [
+        "The real domain of square root x is all negative real numbers."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_math_003",
+      "subject": "Maths",
+      "section": "Functions inequalities transformations",
+      "front": "What is the domain of f(x) = 1/(x−2)?",
+      "originalBack": "All real x except x = 2.",
+      "accept": [
+        "All real numbers other than 2, where the denominator vanishes."
+      ],
+      "reject": [
+        "x=2 is included in the domain of 1/(x-2)."
+      ]
+    },
+    {
+      "id": "v33_card_maths_coordinate_geometry_86",
+      "subject": "Maths",
+      "section": "Coordinate geometry and circles",
+      "front": "How are gradients of two nonvertical perpendicular lines related?",
+      "originalBack": "Their gradients multiply to −1.",
+      "accept": [
+        "For two nonvertical perpendicular lines, m1*m2=-1."
+      ],
+      "reject": [
+        "Two nonvertical perpendicular lines have gradients whose product is +1."
+      ]
+    },
+    {
+      "id": "math_line_gradient",
+      "subject": "Maths",
+      "section": "Coordinate geometry and circles",
+      "front": "What is the gradient between (x₁,y₁) and (x₂,y₂)?",
+      "originalBack": "m=(y₂−y₁)/(x₂−x₁).",
+      "accept": [
+        "Change in y divided by change in x: (y2-y1)/(x2-x1)."
+      ],
+      "reject": [
+        "Gradient equals (x2-x1)/(y2-y1) in general."
+      ]
+    },
+    {
+      "id": "task1_v162_013",
+      "subject": "Maths",
+      "section": "Coordinate geometry and circles",
+      "front": "What is true of the gradients of two non-vertical parallel lines?",
+      "originalBack": "They are equal.",
+      "accept": [
+        "Parallel nonvertical straight lines have the same slope."
+      ],
+      "reject": [
+        "Parallel straight lines always have gradient product -1."
+      ]
+    },
+    {
+      "id": "task1_v171_007",
+      "subject": "Maths",
+      "section": "Trigonometry degrees and identities",
+      "front": "At which angles in degrees is tan θ undefined?",
+      "originalBack": "90° + 180°n, for any integer n.",
+      "accept": [
+        "90 degrees plus an integer multiple of 180 degrees."
+      ],
+      "reject": [
+        "tan theta is undefined at all multiples of 180 degrees."
+      ]
+    },
+    {
+      "id": "task1_v136_004",
+      "subject": "Maths",
+      "section": "Exponentials and logarithms",
+      "front": "What is logₐ1?",
+      "originalBack": "0, since a⁰ = 1 (a > 0, a ≠ 1).",
+      "accept": [
+        "The logarithm to any valid base of 1 is 0."
+      ],
+      "reject": [
+        "log_a(1)=1 for a>0 and a not equal to 1."
+      ]
+    },
+    {
+      "id": "task1_v136_005",
+      "subject": "Maths",
+      "section": "Exponentials and logarithms",
+      "front": "What is logₐa?",
+      "originalBack": "1, for a > 0 and a ≠ 1.",
+      "accept": [
+        "The logarithm of its own valid base equals one."
+      ],
+      "reject": [
+        "log_a(a)=0 for any valid base a."
+      ]
+    },
+    {
+      "id": "task1_v138_001",
+      "subject": "Maths",
+      "section": "Exponentials and logarithms",
+      "front": "State the logarithm quotient law for logₐ(x/y).",
+      "originalBack": "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1).",
+      "accept": [
+        "The log of a quotient is the log of numerator minus the log of denominator."
+      ],
+      "reject": [
+        "log_a(x/y)=log_a(x)+log_a(y)."
+      ]
+    },
+    {
+      "id": "v33_card_maths_integration_80",
+      "subject": "Maths",
+      "section": "Integration and signed area",
+      "front": "Why is +C needed in an indefinite integral?",
+      "originalBack": "Differentiation removes constant terms, so every constant shift is an antiderivative.",
+      "accept": [
+        "All antiderivatives differ by an arbitrary additive constant that disappears on differentiation."
+      ],
+      "reject": [
+        "An indefinite integral has no arbitrary constant because differentiation preserves constants."
+      ]
+    }
+  ],
+  "notes": [
+    "Includes all 11 Maths cards remaining from the 223-card topic-balanced candidate map.",
+    "No repeated IDs from v324. No added long-answer cards.",
+    "Guard each edit against original exact front, back, ID, subject; preserve historic accepts and progress.",
+    "Full AQA spec certification and unseen free-form response accuracy remain outstanding."
+  ]
+}
