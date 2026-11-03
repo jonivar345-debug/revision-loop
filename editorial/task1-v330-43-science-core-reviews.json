@@ -1,0 +1,622 @@
+{
+  "version": "v330",
+  "date": "2026-11-03",
+  "purpose": "Individually calibrate all 43 science cards remaining in the v323 hand-picked legacy-core candidate samples after v324/v326/v327/v328, across Physics and teacher-taught Chemistry.",
+  "source": "v323 live mock-core audit minus exact IDs already reviewed in v324, v326, v327 and v328",
+  "counts": {
+    "reviewed": 43,
+    "Physics": 10,
+    "Chemistry": 33,
+    "newAccepted": 43,
+    "newRejected": 86
+  },
+  "records": [
+    {
+      "id": "phy_focus_v38_02",
+      "subject": "Physics",
+      "section": "Projectile motion",
+      "originalFront": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+      "originalBack": "12 m s⁻¹.",
+      "accept": [
+        "At maximum height its vertical speed is zero, so its total speed is the unchanged 12 m s^-1 horizontal speed."
+      ],
+      "reject": [
+        "Its speed is 0 m s^-1 at the highest point.",
+        "Its speed rises above 12 m s^-1 at the highest point."
+      ]
+    },
+    {
+      "id": "task1_phy_062",
+      "subject": "Physics",
+      "section": "Stationary waves and harmonics",
+      "originalFront": "Which wave property stays unchanged across a stationary boundary?",
+      "originalBack": "Frequency.",
+      "accept": [
+        "The wave frequency remains the same when it passes into a different medium."
+      ],
+      "reject": [
+        "The wavelength always stays the same when a wave enters a different medium.",
+        "The speed always remains unchanged as a wave crosses into another medium."
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_classical_failure",
+      "subject": "Physics",
+      "section": "Photoelectric effect",
+      "originalFront": "Why does the photoelectric effect contradict the simple classical wave model?",
+      "originalBack": "Emission has a threshold frequency and no significant delay above it, even at low intensity.",
+      "accept": [
+        "There is a threshold frequency and prompt emission even for low intensity light above that threshold."
+      ],
+      "reject": [
+        "Increasing intensity at any frequency eventually emits photoelectrons.",
+        "Very low-intensity light above threshold must first accumulate energy for a long delay."
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_max_speed",
+      "subject": "Physics",
+      "section": "Photoelectric effect",
+      "originalFront": "How do you calculate the maximum speed of emitted photoelectrons?",
+      "originalBack": "Find Eₖ(max) = hf − φ in joules, then use vₘₐₓ = √(2Eₖ(max)/mₑ).",
+      "accept": [
+        "First find hf minus the work function, then calculate v = sqrt(2(hf - phi)/me) using energies in joules."
+      ],
+      "reject": [
+        "Maximum electron speed equals (hf - phi) divided by electron mass.",
+        "Use sqrt(2hf/me), ignoring the metal work function."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_sketch_photoelectric",
+      "subject": "Physics",
+      "section": "Photoelectric effect",
+      "originalFront": "How much energy does one photon transfer to one electron in the photoelectric effect?",
+      "originalBack": "hf.",
+      "accept": [
+        "One photon delivers energy E = h f to an electron."
+      ],
+      "reject": [
+        "The transferred photon energy is hf minus the work function.",
+        "The energy transferred by one photon is h/f."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_antizero_structure",
+      "subject": "Physics",
+      "section": "Particles quarks and interactions",
+      "originalFront": "What is the quark–antiquark content of anti-K⁰?",
+      "originalBack": "s + anti-d.",
+      "accept": [
+        "One strange quark and one anti-down quark."
+      ],
+      "reject": [
+        "One down quark and one anti-strange quark.",
+        "One strange quark and one anti-up quark."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_baryon_definition",
+      "subject": "Physics",
+      "section": "Particles quarks and interactions",
+      "originalFront": "Define a baryon.",
+      "originalBack": "A hadron made from three quarks; an antibaryon has three antiquarks.",
+      "accept": [
+        "A baryon is a hadron containing three quarks."
+      ],
+      "reject": [
+        "A baryon contains one quark and one antiquark.",
+        "A baryon is a hadron containing two quarks and one lepton."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_baryon_stability",
+      "subject": "Physics",
+      "section": "Particles quarks and interactions",
+      "originalFront": "Which baryon is stable in the AQA particle classification?",
+      "originalBack": "The proton; other baryons eventually decay.",
+      "accept": [
+        "The stable baryon is the proton."
+      ],
+      "reject": [
+        "The free neutron is the only stable baryon.",
+        "The lambda baryon is the stable baryon."
+      ]
+    },
+    {
+      "id": "task1_phy_008",
+      "subject": "Physics",
+      "section": "Electricity and potential dividers",
+      "originalFront": "What is the derived SI unit of resistivity?",
+      "originalBack": "Ohm metre (Ω m).",
+      "accept": [
+        "Resistivity has SI unit ohm metres, Ω m."
+      ],
+      "reject": [
+        "The SI unit is ohms per metre, Ω/m.",
+        "The SI unit of resistivity is ohm metres to the power minus one."
+      ]
+    },
+    {
+      "id": "task1_practical_010",
+      "subject": "Physics",
+      "section": "Electricity and potential dividers",
+      "originalFront": "How is wire cross-sectional area obtained from diameter d?",
+      "originalBack": "A = πd²/4.",
+      "accept": [
+        "Use A = pi(d/2)^2, where d is the diameter."
+      ],
+      "reject": [
+        "The cross-sectional area is A = pi d^2.",
+        "The cross-sectional area is A = 2 pi d."
+      ]
+    },
+    {
+      "id": "task1_chem_079",
+      "subject": "Chemistry",
+      "section": "Group 2 and group 7",
+      "originalFront": "How does first ionisation energy change down Group 2?",
+      "originalBack": "It decreases.",
+      "accept": [
+        "The first ionisation energy generally falls down Group 2 because shielding and atomic radius increase."
+      ],
+      "reject": [
+        "The first ionisation energy increases steadily down Group 2.",
+        "The first ionisation energy is constant down Group 2."
+      ]
+    },
+    {
+      "id": "task1_chem_157",
+      "subject": "Chemistry",
+      "section": "Inorganic tests and observations",
+      "originalFront": "What is the purpose of a chemical test for an organic group?",
+      "originalBack": "To identify a functional group by a characteristic observation.",
+      "accept": [
+        "Identify a functional group from a characteristic chemical reaction and observation."
+      ],
+      "reject": [
+        "The test determines only the exact relative molecular mass of the organic compound.",
+        "The test always reveals the entire carbon skeleton without further information."
+      ]
+    },
+    {
+      "id": "task1_chem_173",
+      "subject": "Chemistry",
+      "section": "Arrhenius activation energy",
+      "originalFront": "What is the Arrhenius plot gradient for ln k against 1/T?",
+      "originalBack": "−Ea/R.",
+      "accept": [
+        "The slope of ln k against inverse temperature is negative activation energy divided by R."
+      ],
+      "reject": [
+        "The gradient of ln k against 1/T is +Ea/R.",
+        "The gradient of ln k against 1/T is -R/Ea."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_first_ionisation_bh",
+      "subject": "Chemistry",
+      "section": "Born Haber and lattice enthalpy",
+      "originalFront": "In a Born–Haber cycle, define first ionisation energy.",
+      "originalBack": "Energy required to remove 1 mole of electrons from 1 mole of gaseous atoms, forming gaseous 1+ ions.",
+      "accept": [
+        "One mole of gaseous atoms each loses one electron to form one mole of gaseous 1+ ions."
+      ],
+      "reject": [
+        "It is the energy to remove a second electron from one mole of gaseous 1+ ions.",
+        "It is the energy released when gaseous 1+ ions gain an electron."
+      ]
+    },
+    {
+      "id": "chem_entropy",
+      "subject": "Chemistry",
+      "section": "Entropy and Gibbs free energy",
+      "originalFront": "When does entropy usually increase?",
+      "originalBack": "When particles become more dispersed/disordered, especially when more gas particles are formed.",
+      "accept": [
+        "Entropy generally rises when there are more gas particles and greater dispersal of energy and matter."
+      ],
+      "reject": [
+        "Producing more gas particles always lowers entropy.",
+        "Changing a gas into a solid usually raises entropy."
+      ]
+    },
+    {
+      "id": "task1_chem_179",
+      "subject": "Chemistry",
+      "section": "Strong weak acids pH Ka Kw",
+      "originalFront": "What is Ka?",
+      "originalBack": "The acid dissociation equilibrium constant.",
+      "accept": [
+        "Ka is the equilibrium constant for HA dissociating into H+ and A- in solution."
+      ],
+      "reject": [
+        "Ka is the rate constant for acid dissociation.",
+        "Ka is the ionic product of water."
+      ]
+    },
+    {
+      "id": "chem_carboxy_acid",
+      "subject": "Chemistry",
+      "section": "Strong weak acids pH Ka Kw",
+      "originalFront": "Why are carboxylic acids weak acids?",
+      "originalBack": "They only partially dissociate in water.",
+      "accept": [
+        "Carboxylic acid molecules ionise only partly in aqueous solution."
+      ],
+      "reject": [
+        "Carboxylic acids fully dissociate in water.",
+        "They are weak only because their solutions are always dilute."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_18",
+      "subject": "Chemistry",
+      "section": "Halogenoalkane substitution elimination",
+      "originalFront": "How can proton transfer assist an alcohol elimination mechanism?",
+      "originalBack": "It changes –OH to a better leaving group and permits catalyst regeneration.",
+      "accept": [
+        "Protonation changes -OH into an -OH2+ group so that water can leave, with acid regenerated."
+      ],
+      "reject": [
+        "Proton transfer converts -OH into O2- to make it a better leaving group.",
+        "Protonating an alcohol prevents water from leaving."
+      ]
+    },
+    {
+      "id": "task1_chem_132",
+      "subject": "Chemistry",
+      "section": "Halogenoalkane substitution elimination",
+      "originalFront": "What happens in elimination from a halogenoalkane?",
+      "originalBack": "H and a halogen leave, creating a C=C bond.",
+      "accept": [
+        "A hydrogen and halogen are removed from neighbouring carbons, producing an alkene double bond."
+      ],
+      "reject": [
+        "The halogen is replaced by OH to form an alcohol.",
+        "Elimination removes a C=C bond and creates a saturated carbon chain."
+      ]
+    },
+    {
+      "id": "task1_chem_133",
+      "subject": "Chemistry",
+      "section": "Halogenoalkane substitution elimination",
+      "originalFront": "What is the main type of product from nucleophilic substitution by OH⁻?",
+      "originalBack": "An alcohol.",
+      "accept": [
+        "A halogenoalkane undergoes substitution by hydroxide to form an alcohol."
+      ],
+      "reject": [
+        "Nucleophilic substitution by OH- yields a ketone.",
+        "Nucleophilic substitution by OH- gives an alkene by loss of HX."
+      ]
+    },
+    {
+      "id": "task1_chem_063",
+      "subject": "Chemistry",
+      "section": "Alcohol oxidation and dehydration",
+      "originalFront": "What is an oxidising agent?",
+      "originalBack": "Species that accepts electrons and is reduced.",
+      "accept": [
+        "An oxidising agent accepts electrons and is itself reduced."
+      ],
+      "reject": [
+        "An oxidising agent donates electrons and becomes oxidised.",
+        "An oxidising agent always increases its own oxidation state."
+      ]
+    },
+    {
+      "id": "task1_chem_095",
+      "subject": "Chemistry",
+      "section": "Alcohol oxidation and dehydration",
+      "originalFront": "Which is the stronger oxidising agent: chlorine or bromine?",
+      "originalBack": "Chlorine.",
+      "accept": [
+        "Chlorine, Cl2, is a stronger oxidising agent than bromine."
+      ],
+      "reject": [
+        "Bromine is the stronger oxidising agent.",
+        "Chlorine and bromine have exactly equal oxidising strengths."
+      ]
+    },
+    {
+      "id": "task1_chem_096",
+      "subject": "Chemistry",
+      "section": "Alcohol oxidation and dehydration",
+      "originalFront": "How does oxidising strength change down Group 7?",
+      "originalBack": "It decreases.",
+      "accept": [
+        "Oxidising power decreases from chlorine to bromine to iodine."
+      ],
+      "reject": [
+        "Oxidising strength increases down Group 7.",
+        "The oxidising strength of the halogens does not vary down the group."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_26",
+      "subject": "Chemistry",
+      "section": "Optical isomerism and chirality",
+      "originalFront": "Why can some carbonyl additions create enantiomer pairs?",
+      "originalBack": "Attack from opposite faces of the planar carbonyl creates different configurations.",
+      "accept": [
+        "Nucleophiles can attack either face of a planar carbonyl, producing mirror-image products if a new chiral centre forms."
+      ],
+      "reject": [
+        "A carbonyl can only be attacked from one face, so only one configuration is formed.",
+        "The carbonyl carbon is already tetrahedral, preventing opposite-face attack."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_28",
+      "subject": "Chemistry",
+      "section": "Optical isomerism and chirality",
+      "originalFront": "Why does a racemic mixture give no net optical rotation?",
+      "originalBack": "The enantiomers' rotations cancel.",
+      "accept": [
+        "Equal amounts of opposite enantiomers rotate plane-polarised light by equal and opposite angles, giving zero net rotation."
+      ],
+      "reject": [
+        "A racemic mixture has no optical rotation because every molecule is achiral.",
+        "The enantiomers in a racemic mixture both rotate light the same way."
+      ]
+    },
+    {
+      "id": "task1_chem_199",
+      "subject": "Chemistry",
+      "section": "Optical isomerism and chirality",
+      "originalFront": "What is a chiral centre?",
+      "originalBack": "Usually a carbon bonded to four different groups.",
+      "accept": [
+        "A typical chiral centre is a tetrahedral carbon attached to four different substituents."
+      ],
+      "reject": [
+        "A carbon joined to four identical groups is a chiral centre.",
+        "Any carbon atom double-bonded to oxygen is automatically a chiral centre."
+      ]
+    },
+    {
+      "id": "task1_chem_204",
+      "subject": "Chemistry",
+      "section": "Aldehydes ketones carbonyl tests",
+      "originalFront": "What is the functional group in a ketone?",
+      "originalBack": "Carbonyl group between two carbon atoms.",
+      "accept": [
+        "A ketone contains R-C(=O)-R' with carbon groups on both sides of the carbonyl carbon."
+      ],
+      "reject": [
+        "A ketone always has a terminal -CHO group.",
+        "The ketone functional group is -COOH."
+      ]
+    },
+    {
+      "id": "task1_chem_205",
+      "subject": "Chemistry",
+      "section": "Aldehydes ketones carbonyl tests",
+      "originalFront": "What forms when a ketone is reduced?",
+      "originalBack": "A secondary alcohol.",
+      "accept": [
+        "Reduction of a ketone produces a secondary alcohol."
+      ],
+      "reject": [
+        "Reducing a ketone produces a primary alcohol.",
+        "Reducing a ketone produces a tertiary alcohol."
+      ]
+    },
+    {
+      "id": "task1_chem_206",
+      "subject": "Chemistry",
+      "section": "Aldehydes ketones carbonyl tests",
+      "originalFront": "What forms when an aldehyde is reduced?",
+      "originalBack": "A primary alcohol.",
+      "accept": [
+        "Reduction of an aldehyde produces a primary alcohol."
+      ],
+      "reject": [
+        "Reducing an aldehyde produces a secondary alcohol.",
+        "Reducing an aldehyde produces a tertiary alcohol."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_002",
+      "subject": "Chemistry",
+      "section": "Carboxylic acids esters and acyl",
+      "originalFront": "Why is a carboxylic acid described as weak?",
+      "originalBack": "Only a fraction of its molecules dissociate into ions in water.",
+      "accept": [
+        "Carboxylic acids are weak because most molecules remain undissociated in water at equilibrium."
+      ],
+      "reject": [
+        "They are weak because they completely ionise in water.",
+        "They are weak only because the acid solution must be dilute."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_003",
+      "subject": "Chemistry",
+      "section": "Carboxylic acids esters and acyl",
+      "originalFront": "Why do carboxylic acids react with carbonates?",
+      "originalBack": "Their acidic protons react with carbonate ions, releasing carbon dioxide.",
+      "accept": [
+        "An acid reacts with a carbonate to produce a carboxylate salt, water and carbon dioxide."
+      ],
+      "reject": [
+        "Carboxylic acids react with carbonates to release hydrogen gas rather than carbon dioxide.",
+        "A carbonate reaction with a carboxylic acid produces chlorine gas."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_005",
+      "subject": "Chemistry",
+      "section": "Carboxylic acids esters and acyl",
+      "originalFront": "What numbering rule applies when naming a carboxylic acid?",
+      "originalBack": "The carbon in –COOH is carbon number 1.",
+      "accept": [
+        "The carboxyl carbon in the COOH group is carbon 1."
+      ],
+      "reject": [
+        "Number the carbon next to COOH as carbon 1, ignoring the carboxyl carbon.",
+        "Always start numbering from the far end away from COOH."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_006",
+      "subject": "Chemistry",
+      "section": "Carboxylic acids esters and acyl",
+      "originalFront": "What is the ester functional group?",
+      "originalBack": "R–C(=O)–O–R′.",
+      "accept": [
+        "An ester has the linkage R-C(=O)-O-R'."
+      ],
+      "reject": [
+        "An ester has the functional group R-COOH.",
+        "An ester has the functional group R-CONH2."
+      ]
+    },
+    {
+      "id": "task1_chem_213",
+      "subject": "Chemistry",
+      "section": "Amines amides and acylation",
+      "originalFront": "What does an acyl chloride contain?",
+      "originalBack": "The –COCl functional group.",
+      "accept": [
+        "The acyl chloride functional group is R-C(=O)-Cl."
+      ],
+      "reject": [
+        "An acyl chloride has the -COOH functional group.",
+        "An acyl chloride contains -COOR rather than -COCl."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_214",
+      "subject": "Chemistry",
+      "section": "Amines amides and acylation",
+      "originalFront": "What acyl product forms when an acyl chloride reacts with ammonia?",
+      "originalBack": "A primary amide.",
+      "accept": [
+        "An acyl chloride plus ammonia forms RCONH2, a primary amide."
+      ],
+      "reject": [
+        "Reaction with ammonia gives an ester RCOOR'.",
+        "Acyl chloride plus ammonia forms only an N-alkyl amide RCONHR'."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_215",
+      "subject": "Chemistry",
+      "section": "Amines amides and acylation",
+      "originalFront": "What acyl product forms when an acyl chloride reacts with a primary amine?",
+      "originalBack": "An N-substituted amide.",
+      "accept": [
+        "An acyl chloride and a primary amine form an N-substituted amide RCONHR'."
+      ],
+      "reject": [
+        "Reaction with a primary amine forms the unsubstituted amide RCONH2 only.",
+        "The acyl product is an ester RCOOR'."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_216",
+      "subject": "Chemistry",
+      "section": "Amines amides and acylation",
+      "originalFront": "Why are acyl chlorides more reactive than amides?",
+      "originalBack": "Chloride is a much better leaving group.",
+      "accept": [
+        "Chloride is a better leaving group than amide, making acyl chlorides more readily substituted."
+      ],
+      "reject": [
+        "The -NH2 group is a much better leaving group than chloride.",
+        "Acyl chlorides are less reactive because their chlorine cannot leave."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_016",
+      "subject": "Chemistry",
+      "section": "Biodiesel triglycerides saponification",
+      "originalFront": "Which acid-derived groups are joined to glycerol in a triglyceride?",
+      "originalBack": "Three long-chain fatty acid residues.",
+      "accept": [
+        "A triglyceride has glycerol esterified with three long-chain fatty acid residues."
+      ],
+      "reject": [
+        "Glycerol in a triglyceride is linked to three amino-acid residues.",
+        "A triglyceride contains only one fatty acid residue joined to glycerol."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_017",
+      "subject": "Chemistry",
+      "section": "Biodiesel triglycerides saponification",
+      "originalFront": "Can a triglyceride contain three different fatty acids?",
+      "originalBack": "Yes. The three long chains need not be identical.",
+      "accept": [
+        "Yes, each ester-linked fatty acid chain can be different."
+      ],
+      "reject": [
+        "No, triglycerides must have three identical fatty acid chains.",
+        "A triglyceride can have only two fatty acid chains."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_018",
+      "subject": "Chemistry",
+      "section": "Biodiesel triglycerides saponification",
+      "originalFront": "What is saponification?",
+      "originalBack": "Alkaline hydrolysis of fats or oils.",
+      "accept": [
+        "Saponification is base hydrolysis of fats or oils to glycerol and fatty acid salts."
+      ],
+      "reject": [
+        "Saponification is acid-catalysed esterification making triglycerides.",
+        "Saponification is oxidation of fats to form ketones."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_020",
+      "subject": "Chemistry",
+      "section": "Biodiesel triglycerides saponification",
+      "originalFront": "Why does soap clean oily substances?",
+      "originalBack": "Its non-polar tail interacts with oil and its ionic head with water.",
+      "accept": [
+        "The non-polar hydrocarbon tail associates with oil and the hydrophilic ionic head stays in water, allowing micelles."
+      ],
+      "reject": [
+        "The ionic soap head dissolves in oil and the hydrocarbon tail dissolves in water.",
+        "Soap cleans oil by reacting to release oxygen gas."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_60",
+      "subject": "Chemistry",
+      "section": "Chemistry required practical accuracy",
+      "originalFront": "What is AQA Required Practical 2 about?",
+      "originalBack": "Measuring an enthalpy change using calorimetry.",
+      "accept": [
+        "AQA Required Practical 2 uses temperature changes and calorimetry to measure an enthalpy change."
+      ],
+      "reject": [
+        "Required Practical 2 determines reaction rate from gas volume against time.",
+        "Required Practical 2 determines Mr by mass spectrometry."
+      ]
+    },
+    {
+      "id": "chem_energetics_v51_01",
+      "subject": "Chemistry",
+      "section": "Chemistry required practical accuracy",
+      "originalFront": "A thermometer is ±0.1°C per reading. What is the uncertainty in ΔT?",
+      "originalBack": "±0.2°C: add the absolute uncertainties of initial and final readings.",
+      "accept": [
+        "Plus or minus 0.2 degrees Celsius, since uncertainty in the two readings is added."
+      ],
+      "reject": [
+        "The total uncertainty in the temperature difference is only plus or minus 0.1 degrees Celsius.",
+        "Uncertainty in the temperature change is plus or minus 0.01 degrees Celsius."
+      ]
+    }
+  ],
+  "limitations": [
+    "This is a curated 43-card correction, not full AQA assessable-bullet certification.",
+    "Unseen user answers can still expose marker mistakes.",
+    "All original question text, answers, card IDs and progress storage stay unchanged."
+  ]
+}
