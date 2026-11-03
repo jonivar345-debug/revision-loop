@@ -2326,6 +2326,9 @@ function subjectExam(sub){
 
 function normalise(x){
  let s=String(x||'').normalize('NFKD').toLowerCase();
+ // Preserve apostrophe-containing words as words: can't -> cant, not can + t.
+ // Otherwise an unrelated contraction can trigger a one-letter unit/prefix symbol.
+ s=s.replace(/([a-z])['’]([a-z])/g,'$1$2');
  const r=[
   [/θ/g,' theta '],[/λ/g,' lambda '],[/ρ/g,' rho '],[/δ|Δ/g,' delta '],[/φ/g,' phi '],[/ε/g,' epsilon '],
   [/√/g,' sqrt '],[/²/g,'^2'],[/³/g,'^3'],[/−|–|—/g,'-'],[/×|·/g,' * '],[/÷/g,' / '],
