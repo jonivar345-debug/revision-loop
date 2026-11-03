@@ -1,0 +1,12 @@
+{
+  "version": "v325",
+  "date": "2026-11-03",
+  "purpose": "Review first mock eligible legacy core flashcard prompts for compound questions and excessive answer demands. Complements answer correctness and full AQA bullet audit.",
+  "scope": "Original 2,373 first mock core cards: Physics AS, taught Chemistry and first Maths Year 1 Pure",
+  "rules": [
+    "Count multiple question marks, second question introductions, two imperative tasks and longer model explanations",
+    "Rank candidate cards for human review; no automatic rewriting because long calculations can be appropriate",
+    "Do not certify full AQA coverage from a size scan",
+    "Original IDs and progress unchanged"
+  ]
+}
