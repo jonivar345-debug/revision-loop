@@ -45,7 +45,7 @@ for(const answer of [c.back,...c.accept])assert.equal(evaluate(c,answer).status,
 for(const answer of c.reject)assert.equal(evaluate(c,answer).status,'wrong','Wrong Gibbs answer: '+answer);
 for(const answer of ['not ΔG ≤ 0.','not ΔG is zero or negative.'])assert.equal(evaluate(c,answer).status,'wrong','Negation should fail '+answer);
 assert(app.includes(' applyV332GibbsBoundaryCorrection(cards);'));
-assert(app.includes('||c?.v332ExactReviewed===true){'));
+assert(app.includes('||c?.v332ExactReviewed===true'),'Gibbs boundary correct/incorrect marking remains wired after subsequent releases');
 assert(read('sw.js').includes('-v332-gibbs-accuracy-spec-audit'));
 const q1=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),q2=app.indexOf('function startMockSession(){',q1);
 const eligible=new Function(app.slice(q1,q2)+'\nreturn mockEligibleCard;')();
