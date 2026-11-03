@@ -1,0 +1,14 @@
+name: Task 1 v329 complete original Year 1 Pure mock answer calibration
+on: [pull_request]
+jobs:
+  all-maths-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v329-last-15-year1-pure-core.cjs
+      - run: node tests/task1-v328-60-science-core-answers.cjs
+      - run: node tests/task1-v327-60-three-subject-core.cjs
+      - run: node tests/task1-v326-five-compound-core-rewrites.cjs
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
