@@ -1,0 +1,78 @@
+{
+  "version": "v325",
+  "date": "2026-11-03",
+  "originalCoreMockAudited": 2373,
+  "heuristicFlagged": 11,
+  "subjects": {
+    "Physics": 8,
+    "Chemistry": 2,
+    "Maths": 1
+  },
+  "editorial": {
+    "retain": 6,
+    "revise": 4,
+    "considerCloze": 1
+  },
+  "candidates": [
+    {
+      "id": "phy_fbd_common_forces",
+      "status": "consider_cloze",
+      "reason": "Replace the prose list with a concise force-directions fill-in-the-gaps card."
+    },
+    {
+      "id": "phy_focus_v38_04",
+      "status": "retain",
+      "reason": "Linked vertical flight time and horizontal range form one application."
+    },
+    {
+      "id": "phy_couple_001",
+      "status": "revise",
+      "reason": "Separate definition of a couple from its moment formula; moments are tested on other cards."
+    },
+    {
+      "id": "phy_focus_v38_07",
+      "status": "revise",
+      "reason": "Ask only why the third-law pair does not cancel, with the law recalled separately."
+    },
+    {
+      "id": "v33_card_physics_practical_skills_31",
+      "status": "retain",
+      "reason": "Systematic error and why repeats cannot remove it form one directly connected idea."
+    },
+    {
+      "id": "phy_focus_v38_02",
+      "status": "retain",
+      "reason": "Scenario is wordy but the answer is one numeric result."
+    },
+    {
+      "id": "phy_mechanics_focus_v37_03",
+      "status": "revise",
+      "reason": "Keep acceleration as a single calculation and test speed separately."
+    },
+    {
+      "id": "task1_v142_002",
+      "status": "retain",
+      "reason": "Same vs different properties of isotopes form one concise comparison."
+    },
+    {
+      "id": "task1_v142_011",
+      "status": "revise",
+      "reason": "Use a cloze for catalyst and products, or test them separately."
+    },
+    {
+      "id": "chem_energetics_v49_48",
+      "status": "retain",
+      "reason": "Long stem but only one Hess-cycle enthalpy relationship is recalled."
+    },
+    {
+      "id": "math_geom_infinite",
+      "status": "retain",
+      "reason": "Convergence condition and the limiting sum formula should be recalled together."
+    }
+  ],
+  "warnings": [
+    "Heuristic flags are not automatic factual or marking faults.",
+    "Do not call full specification or unseen-answer accuracy complete.",
+    "Any future rewrite must preserve ID and accepted progress while checking the revised prompt and model."
+  ]
+}
