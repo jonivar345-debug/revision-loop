@@ -1,0 +1,807 @@
+{
+  "version": "v324",
+  "date": "2026-11-03",
+  "purpose": "60 independently worded original core card answer/marking reviews across all 48 AQA school-mock topic families, including a factual completion of the total-internal-reflection condition.",
+  "scope": "Actual first-mock Physics AS, taught Chemistry AS/A2 to Kp and organic without buffers, Maths first Year 1 Pure only",
+  "counts": {
+    "reviewed": 60,
+    "bySubject": {
+      "Physics": 20,
+      "Chemistry": 23,
+      "Maths": 17
+    },
+    "alternateAccepted": 60,
+    "explicitWrong": 60,
+    "correctedIncompleteModel": 1
+  },
+  "edits": "Preserve original card IDs and prompts. Keep original backs except the identified TIR definition, which must require both n1>n2 and incident angle greater than critical angle. Guard every patch by exact ID and original text. Curated wrong answers checked before fuzzy marking.",
+  "records": [
+    {
+      "id": "phy_accuracy_precision",
+      "subject": "Physics",
+      "section": "Measurement errors and uncertainty",
+      "front": "Accuracy vs precision?",
+      "originalBack": "Accuracy is closeness to the true value; precision is closeness of repeated readings to each other.",
+      "accept": [
+        "Accuracy refers to closeness to the true value; precision refers to consistency of repeated readings."
+      ],
+      "reject": [
+        "Accuracy is the spread between repeated readings and precision measures closeness to the true value."
+      ]
+    },
+    {
+      "id": "phy_measure_recap_20261024_gradient_uncert",
+      "subject": "Physics",
+      "section": "Measurement errors and uncertainty",
+      "front": "How is a percentage gradient uncertainty estimated from graph lines?",
+      "originalBack": "|Best gradient − worst acceptable gradient| ÷ |best gradient| × 100%.",
+      "accept": [
+        "Percentage gradient uncertainty is 100 times the difference between best and worst acceptable slope divided by the magnitude of the best slope."
+      ],
+      "reject": [
+        "Gradient uncertainty is found by multiplying the worst slope by the best slope."
+      ]
+    },
+    {
+      "id": "phy_measure_recap_20261024_uncert_add",
+      "subject": "Physics",
+      "section": "Measurement errors and uncertainty",
+      "front": "How do you combine uncertainties when adding or subtracting measurements?",
+      "originalBack": "Add the absolute uncertainties.",
+      "accept": [
+        "For a sum or difference of measured quantities add their absolute uncertainties."
+      ],
+      "reject": [
+        "Subtract the absolute uncertainties whenever measurements are subtracted."
+      ]
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_marked_angle",
+      "subject": "Physics",
+      "section": "Resolving vectors and forces",
+      "front": "When resolving a vector, what decides whether to use sin or cos?",
+      "originalBack": "Look at the marked angle: adjacent side uses cos θ; opposite side uses sin θ. Never rely on horizontal or vertical.",
+      "accept": [
+        "Use cosine for the component adjacent to the marked angle and sine for the opposite component."
+      ],
+      "reject": [
+        "Always use cosine for the horizontal component regardless of the stated angle."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_a_negative_area",
+      "subject": "Physics",
+      "section": "Motion and its graphs",
+      "front": "What does area below the time axis on an acceleration–time graph mean?",
+      "originalBack": "A negative change in velocity, not a negative distance. It need not mean the object slows down.",
+      "accept": [
+        "Area beneath the axis on an acceleration versus time graph gives negative delta v; it does not necessarily mean slowing down."
+      ],
+      "reject": [
+        "Negative area on an acceleration-time plot must represent negative distance travelled."
+      ]
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_slope_direction",
+      "subject": "Physics",
+      "section": "Forces and slopes",
+      "front": "On a slope, which way do weight and its two components act?",
+      "originalBack": "Weight mg acts vertically down; mg sin θ acts down the slope; mg cos θ acts into the slope.",
+      "accept": [
+        "Weight acts vertically down; its parallel component mg sin theta goes down the slope and its normal component mg cos theta goes into the slope."
+      ],
+      "reject": [
+        "Weight acts perpendicular to the slope rather than vertically down."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_13",
+      "subject": "Physics",
+      "section": "Projectile motion",
+      "front": "Ignoring air resistance, which force acts on a projectile after release?",
+      "originalBack": "Only weight (gravity) acts, vertically downwards; no forward driving force is needed.",
+      "accept": [
+        "After launch and ignoring air resistance, only gravitational force acts on the projectile."
+      ],
+      "reject": [
+        "An ideal released projectile needs a constant horizontal driving force to keep moving."
+      ]
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_couple_distance",
+      "subject": "Physics",
+      "section": "Moments and couples",
+      "front": "In the couple formula M = Fd, what does distance d represent?",
+      "originalBack": "d is the perpendicular separation between the forces' lines of action. Use just one F; don't double Fd.",
+      "accept": [
+        "In M=Fd, d is the shortest perpendicular distance between the lines of action of the equal opposite forces."
+      ],
+      "reject": [
+        "In a couple, d is the distance travelled by either force during the turn."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_time_tri",
+      "subject": "Physics",
+      "section": "Momentum and impulse",
+      "front": "Force rises 0→80 N then returns to 0 over 0.20 s. Find impulse.",
+      "originalBack": "Area of triangular F–t graph = ½×0.20×80 = 8.0 N s (change in momentum).",
+      "accept": [
+        "Impulse equals one half times 80 newtons times 0.20 seconds, which is 8.0 N s."
+      ],
+      "reject": [
+        "The impulse is 16 N s because the force-time region is a rectangle."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_21",
+      "subject": "Physics",
+      "section": "Energy power efficiency",
+      "front": "An object's kinetic energy rises from 5 J to 30 J. What is the net work done on it?",
+      "originalBack": "W_net = ΔE_k = 30−5 = +25 J.",
+      "accept": [
+        "Net work done equals final minus initial kinetic energy, 30 J minus 5 J equals +25 J."
+      ],
+      "reject": [
+        "The net work done is negative 25 J because kinetic energy increased."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_stress_strain_gradient",
+      "subject": "Physics",
+      "section": "Materials stress strain Young modulus",
+      "front": "What does gradient of a stress (y) against strain (x) graph give?",
+      "originalBack": "Young modulus E in the linear elastic region: E = stress ÷ strain (in Pa).",
+      "accept": [
+        "The straight-line elastic stress-strain gradient represents Young modulus, measured in pascals."
+      ],
+      "reject": [
+        "The gradient of stress against strain has no units because strain has no units."
+      ]
+    },
+    {
+      "id": "task1_phy_037",
+      "subject": "Physics",
+      "section": "Progressive waves and phase",
+      "front": "What phase difference is half a cycle?",
+      "originalBack": "π radians or 180°.",
+      "accept": [
+        "Half a full oscillation corresponds to a phase difference of pi radians or 180 degrees."
+      ],
+      "reject": [
+        "A half-cycle phase difference is pi over two radians."
+      ]
+    },
+    {
+      "id": "task1_phy_054",
+      "subject": "Physics",
+      "section": "Diffraction interference and gratings",
+      "front": "What is fringe spacing?",
+      "originalBack": "Distance between adjacent bright fringes or adjacent dark fringes.",
+      "accept": [
+        "Fringe spacing means the separation between successive bright fringes, or between successive dark fringes."
+      ],
+      "reject": [
+        "Fringe spacing is always the distance between a bright and neighbouring dark fringe."
+      ]
+    },
+    {
+      "id": "task1_phy_047",
+      "subject": "Physics",
+      "section": "Stationary waves and harmonics",
+      "front": "How far apart are adjacent stationary-wave nodes?",
+      "originalBack": "Half a wavelength, λ/2.",
+      "accept": [
+        "Consecutive nodes in a stationary wave are separated by lambda divided by two."
+      ],
+      "reject": [
+        "Adjacent nodes in a stationary wave are one full wavelength apart."
+      ]
+    },
+    {
+      "id": "task1_phy_064",
+      "subject": "Physics",
+      "section": "Refraction and optical fibres",
+      "front": "When can total internal reflection occur?",
+      "originalBack": "Light travels from higher to lower refractive index.",
+      "revisedBack": "When light travels from higher to lower refractive index AND the incidence angle exceeds the critical angle.",
+      "accept": [
+        "Total internal reflection needs incidence from a higher refractive index into a lower one at an angle greater than the critical angle."
+      ],
+      "reject": [
+        "Light travels from higher to lower refractive index.",
+        "The angle of incidence exceeds the critical angle."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_instant_emission",
+      "subject": "Physics",
+      "section": "Photoelectric effect",
+      "front": "Why is photoelectric emission effectively immediate above threshold?",
+      "originalBack": "One photon transfers its energy to one electron in one interaction.",
+      "accept": [
+        "With frequency above threshold an individual photon gives its energy to an electron in a single event, so emission has essentially no delay."
+      ],
+      "reject": [
+        "Photoelectrons must accumulate energy gradually from many low-frequency photons over a long time."
+      ]
+    },
+    {
+      "id": "phy_antiparticle",
+      "subject": "Physics",
+      "section": "Particles quarks and interactions",
+      "front": "How does an antiparticle compare with its particle?",
+      "originalBack": "Same mass and rest energy, but opposite charge and other additive quantum numbers.",
+      "accept": [
+        "An antiparticle has the same mass as its corresponding particle but opposite electric charge where charged and opposite additive quantum numbers."
+      ],
+      "reject": [
+        "An antiparticle has a smaller rest mass than the corresponding particle."
+      ]
+    },
+    {
+      "id": "task1_practical_012",
+      "subject": "Physics",
+      "section": "Electricity and potential dividers",
+      "front": "Which graph is used to find a cell's emf and internal resistance?",
+      "originalBack": "Terminal p.d. V against current I.",
+      "accept": [
+        "Plot terminal potential difference V against current I; y intercept gives emf and negative gradient gives internal resistance."
+      ],
+      "reject": [
+        "Plot internal resistance against time to read emf from the slope."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_25",
+      "subject": "Physics",
+      "section": "Energy power efficiency",
+      "front": "A device receives 150 J and transfers 60 J usefully. Calculate efficiency.",
+      "originalBack": "Efficiency = useful output/input = 60/150 = 0.40 = 40%.",
+      "accept": [
+        "Useful energy divided by input energy is 60 over 150, giving efficiency 0.4 or 40 percent."
+      ],
+      "reject": [
+        "Efficiency is 250 percent because input divided by useful output is 150/60."
+      ]
+    },
+    {
+      "id": "task1_phy_066",
+      "subject": "Physics",
+      "section": "Refraction and optical fibres",
+      "front": "What causes an optical fibre to guide light?",
+      "originalBack": "Total internal reflection at its boundary.",
+      "accept": [
+        "Fibre light is guided by total internal reflection at the core-cladding interface."
+      ],
+      "reject": [
+        "Light is guided because the core repeatedly absorbs and re-emits every photon."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_08",
+      "subject": "Chemistry",
+      "section": "Atomic structure isotopes mass spectra",
+      "front": "Why do isotopes often have similar chemical properties?",
+      "originalBack": "They have the same electron arrangements despite differing neutron numbers.",
+      "accept": [
+        "Isotopes of an element usually react similarly because their electrons are arranged in the same way."
+      ],
+      "reject": [
+        "Isotopes of the same element differ in the number of outer-shell electrons."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_39",
+      "subject": "Chemistry",
+      "section": "Electron configuration and ionisation",
+      "front": "Write the first ionisation equation for magnesium.",
+      "originalBack": "Mg(g) → Mg⁺(g) + e⁻.",
+      "accept": [
+        "Mg(g) -> Mg+(g) + e-."
+      ],
+      "reject": [
+        "Mg+(g) -> Mg2+(g) + e- is the first ionisation equation."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_02",
+      "subject": "Chemistry",
+      "section": "Amount calculations and titration",
+      "front": "How should percentages be treated when calculating empirical formula?",
+      "originalBack": "Assume a 100 g sample; percentage values become gram masses.",
+      "accept": [
+        "Take a hypothetical 100 g sample so each percentage becomes a mass in grams."
+      ],
+      "reject": [
+        "Convert each percentage directly to its atomic number before finding the mole ratio."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_01",
+      "subject": "Chemistry",
+      "section": "Shapes covalent and ionic bonding",
+      "front": "State the complete definition of ionic bonding.",
+      "originalBack": "Strong electrostatic attraction between oppositely charged ions in a lattice.",
+      "accept": [
+        "Ionic bonding is the strong electrostatic attraction between oppositely charged ions."
+      ],
+      "reject": [
+        "Ionic bonding is the sharing of electron pairs between two neutral atoms."
+      ]
+    },
+    {
+      "id": "chem_bonding_v47_31",
+      "subject": "Chemistry",
+      "section": "Intermolecular forces and structure",
+      "front": "Why can graphite conduct along its layers?",
+      "originalBack": "Delocalised electrons move through the layers.",
+      "accept": [
+        "Graphite has mobile delocalised electrons that can carry charge along the carbon layers."
+      ],
+      "reject": [
+        "Graphite conducts because whole carbon atoms freely move through the layers."
+      ]
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_def",
+      "subject": "Chemistry",
+      "section": "Calorimetry and enthalpy",
+      "front": "Define enthalpy of atomisation.",
+      "originalBack": "The enthalpy change when 1 mole of gaseous atoms forms from an element in its standard state.",
+      "accept": [
+        "The enthalpy change to form one mole of gaseous atoms from the element in its standard state."
+      ],
+      "reject": [
+        "Atomisation enthalpy is the formation of one mole of liquid atoms from gas."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_42",
+      "subject": "Chemistry",
+      "section": "Hess cycles and bond enthalpy",
+      "front": "What happens to a Hess enthalpy when an equation is reversed?",
+      "originalBack": "Change the sign.",
+      "accept": [
+        "Reversing the direction of a chemical reaction changes the sign of its enthalpy change."
+      ],
+      "reject": [
+        "If a Hess equation is reversed its delta H remains unchanged in sign."
+      ]
+    },
+    {
+      "id": "task1_chem_084",
+      "subject": "Chemistry",
+      "section": "Group 2 and group 7",
+      "front": "What is the trend in Group 2 sulfate solubility?",
+      "originalBack": "Solubility decreases down the group.",
+      "accept": [
+        "Group 2 sulfates become less soluble as the group is descended."
+      ],
+      "reject": [
+        "Group 2 sulfate solubility rises as the metal gets heavier."
+      ]
+    },
+    {
+      "id": "task1_chem_099",
+      "subject": "Chemistry",
+      "section": "Inorganic tests and observations",
+      "front": "What colour precipitate indicates chloride with silver ions?",
+      "originalBack": "White (AgCl).",
+      "accept": [
+        "AgCl forms a white precipitate with silver ions."
+      ],
+      "reject": [
+        "A chloride ion gives a yellow precipitate of silver chloride."
+      ]
+    },
+    {
+      "id": "chem_k_units",
+      "subject": "Chemistry",
+      "section": "Rates and initial rates",
+      "front": "How do you determine units of the rate constant k?",
+      "originalBack": "Rearrange the rate equation and substitute the units of rate and concentration.",
+      "accept": [
+        "Divide the units of rate by the concentration units raised to the powers in the rate law."
+      ],
+      "reject": [
+        "Every rate constant has units per second independent of overall order."
+      ]
+    },
+    {
+      "id": "chem_arrhenius_001",
+      "subject": "Chemistry",
+      "section": "Arrhenius activation energy",
+      "front": "For a graph of ln k against 1/T, what are the gradient and y-intercept?",
+      "originalBack": "Gradient = −Ea/R. y-intercept = ln A. Temperature must be in kelvin.",
+      "accept": [
+        "On ln k plotted against 1/T, the slope is minus Ea over R and the intercept is ln A."
+      ],
+      "reject": [
+        "The gradient is positive Ea/R and the y intercept is zero for every reaction."
+      ]
+    },
+    {
+      "id": "chem_kp_pressure",
+      "subject": "Chemistry",
+      "section": "Kp gaseous equilibrium",
+      "front": "Does changing total pressure at constant temperature change Kp?",
+      "originalBack": "No. It may change equilibrium position, but Kp itself is unchanged at fixed temperature.",
+      "accept": [
+        "At a fixed temperature changing pressure can alter equilibrium composition but not the value of Kp."
+      ],
+      "reject": [
+        "Kp always increases when the total equilibrium pressure is increased at constant temperature."
+      ]
+    },
+    {
+      "id": "chem_lattice_form",
+      "subject": "Chemistry",
+      "section": "Born Haber and lattice enthalpy",
+      "front": "How is lattice formation enthalpy related to lattice dissociation enthalpy?",
+      "originalBack": "Same magnitude, opposite sign.",
+      "accept": [
+        "Lattice formation and lattice dissociation enthalpies have equal absolute values with opposite signs."
+      ],
+      "reject": [
+        "Lattice formation and dissociation enthalpies always have the same sign."
+      ]
+    },
+    {
+      "id": "chem_gibbs_001",
+      "subject": "Chemistry",
+      "section": "Entropy and Gibbs free energy",
+      "front": "State the Gibbs free-energy equation and the unit rule.",
+      "originalBack": "ΔG = ΔH − TΔS. T in K; use matching energy units for ΔH and TΔS (convert J to kJ if needed).",
+      "accept": [
+        "Delta G equals delta H minus T delta S; T must be in kelvin and entropy and enthalpy must use consistent units."
+      ],
+      "reject": [
+        "Delta G equals delta H plus T delta S, and temperature must be in degrees Celsius."
+      ]
+    },
+    {
+      "id": "chem_ka",
+      "subject": "Chemistry",
+      "section": "Strong weak acids pH Ka Kw",
+      "front": "Write the Ka expression for HA ⇌ H⁺ + A⁻.",
+      "originalBack": "Ka = [H⁺][A⁻]/[HA].",
+      "accept": [
+        "For HA dissociation, Ka is [H+][A-]/[HA]."
+      ],
+      "reject": [
+        "For HA, Ka equals [HA]/([H+][A-])."
+      ]
+    },
+    {
+      "id": "task1_chem_128",
+      "subject": "Chemistry",
+      "section": "Halogenoalkane substitution elimination",
+      "front": "What bond property makes halogenoalkanes reactive?",
+      "originalBack": "The C–halogen bond is polar.",
+      "accept": [
+        "The carbon-halogen bond is polar because the halogen is more electronegative than carbon."
+      ],
+      "reject": [
+        "The carbon-halogen bond is nonpolar and therefore attracts nucleophiles."
+      ]
+    },
+    {
+      "id": "task1_chem_145",
+      "subject": "Chemistry",
+      "section": "Alcohol oxidation and dehydration",
+      "front": "What group identifies an alcohol?",
+      "originalBack": "Hydroxyl, –OH.",
+      "accept": [
+        "Alcohols contain the hydroxyl functional group, -OH."
+      ],
+      "reject": [
+        "The functional group of an alcohol is -COOH."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_27",
+      "subject": "Chemistry",
+      "section": "Optical isomerism and chirality",
+      "front": "What is required for a common chiral carbon centre?",
+      "originalBack": "Four different substituent groups.",
+      "accept": [
+        "A tetrahedral carbon bearing four distinct substituents is commonly a chiral centre."
+      ],
+      "reject": [
+        "A carbon attached to two identical groups is always a chiral centre."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_20",
+      "subject": "Chemistry",
+      "section": "Aldehydes ketones carbonyl tests",
+      "front": "Why are carbonyl compounds attacked at carbon?",
+      "originalBack": "Their C=O bond is polar, with carbon δ+.",
+      "accept": [
+        "The carbonyl carbon is partially positive because oxygen attracts the shared bond electrons."
+      ],
+      "reject": [
+        "Nucleophiles attack carbonyl carbon because the carbon atom carries a full negative charge."
+      ]
+    },
+    {
+      "id": "chem_esterification",
+      "subject": "Chemistry",
+      "section": "Carboxylic acids esters and acyl",
+      "front": "What are the reagents and catalyst for esterification?",
+      "originalBack": "A carboxylic acid + alcohol, with concentrated H₂SO₄ catalyst and heat/reflux.",
+      "accept": [
+        "React an alcohol with a carboxylic acid using concentrated sulfuric acid as catalyst and heating under reflux."
+      ],
+      "reject": [
+        "An ester forms by heating an alcohol and a ketone without any catalyst."
+      ]
+    },
+    {
+      "id": "chem_acyl_chloride_ammonia",
+      "subject": "Chemistry",
+      "section": "Amines amides and acylation",
+      "front": "What organic product is formed when an acyl chloride reacts with ammonia?",
+      "originalBack": "A primary amide.",
+      "accept": [
+        "Acyl chloride with ammonia gives a primary amide."
+      ],
+      "reject": [
+        "Ammonia reacts with an acyl chloride to form an ester."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_019",
+      "subject": "Chemistry",
+      "section": "Biodiesel triglycerides saponification",
+      "front": "What are the main products of triglyceride saponification?",
+      "originalBack": "Soap (long-chain carboxylate salts) and glycerol.",
+      "accept": [
+        "Alkaline triglyceride hydrolysis yields glycerol and salts of long-chain carboxylic acids, called soaps."
+      ],
+      "reject": [
+        "Saponification of a triglyceride produces only glycerol and no salts."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_33",
+      "subject": "Chemistry",
+      "section": "Chemistry required practical accuracy",
+      "front": "Why are two burette readings included in uncertainty?",
+      "originalBack": "A titre is a difference; uncertainty arises from both final and initial readings.",
+      "accept": [
+        "A titre uses the difference between a starting and an ending burette reading so both reading uncertainties contribute."
+      ],
+      "reject": [
+        "Only the final burette reading contributes uncertainty to a titre."
+      ]
+    },
+    {
+      "id": "math_exp_inverse",
+      "subject": "Maths",
+      "section": "Functions inequalities transformations",
+      "front": "What functions are inverses of each other?",
+      "originalBack": "y=eˣ and y=ln x.",
+      "accept": [
+        "The exponential y=e^x and natural logarithm y=ln x are inverse functions."
+      ],
+      "reject": [
+        "The inverse of y=e^x is y=1/e^x."
+      ]
+    },
+    {
+      "id": "task1_maths_007",
+      "subject": "Maths",
+      "section": "Functions inequalities transformations",
+      "front": "What is the domain of a function?",
+      "originalBack": "Its permitted input values.",
+      "accept": [
+        "The domain is the set of all permitted input values of the function."
+      ],
+      "reject": [
+        "The domain is the set of actual output values."
+      ]
+    },
+    {
+      "id": "math_perp_grad",
+      "subject": "Maths",
+      "section": "Coordinate geometry and circles",
+      "front": "How are gradients of perpendicular non-vertical lines related?",
+      "originalBack": "m₁m₂ = −1.",
+      "accept": [
+        "For two nonvertical perpendicular lines, the product of their gradients is -1."
+      ],
+      "reject": [
+        "Two nonvertical perpendicular lines must have equal gradients."
+      ]
+    },
+    {
+      "id": "task1_v136_006",
+      "subject": "Maths",
+      "section": "Coordinate geometry and circles",
+      "front": "State the point–gradient form of a straight-line equation.",
+      "originalBack": "y − y₁ = m(x − x₁).",
+      "accept": [
+        "y-y1=m(x-x1) for a line of gradient m through (x1,y1)."
+      ],
+      "reject": [
+        "y-y1=m(x+x1) is always the point-gradient equation."
+      ]
+    },
+    {
+      "id": "v33_card_maths_sequences_87",
+      "subject": "Maths",
+      "section": "Sequences and series",
+      "front": "When does an infinite geometric series have a finite sum?",
+      "originalBack": "When the common ratio satisfies |r|<1.",
+      "accept": [
+        "An infinite geometric series converges when the magnitude of the common ratio is less than one."
+      ],
+      "reject": [
+        "A geometric series has a finite infinite sum whenever r is greater than 1."
+      ]
+    },
+    {
+      "id": "task1_v162_017",
+      "subject": "Maths",
+      "section": "Trigonometry degrees and identities",
+      "front": "What is the exact value of sin 45°?",
+      "originalBack": "√2/2.",
+      "accept": [
+        "The exact value of sin 45 degrees is root two divided by two."
+      ],
+      "reject": [
+        "sin 45 degrees equals square root three divided by two."
+      ]
+    },
+    {
+      "id": "task1_v162_018",
+      "subject": "Maths",
+      "section": "Trigonometry degrees and identities",
+      "front": "What is the exact value of cos 30°?",
+      "originalBack": "√3/2.",
+      "accept": [
+        "cos 30 degrees is root three over two."
+      ],
+      "reject": [
+        "cos 30 degrees equals one half."
+      ]
+    },
+    {
+      "id": "task1_v171_005",
+      "subject": "Maths",
+      "section": "Trigonometry degrees and identities",
+      "front": "After using tan⁻¹(y/x) for a vector's angle, what should you check?",
+      "originalBack": "The quadrant, using the signs of both components.",
+      "accept": [
+        "Determine the quadrant from the signs of x and y, then correct the arctangent reference angle."
+      ],
+      "reject": [
+        "tan inverse y/x automatically returns the correct full-circle quadrant."
+      ]
+    },
+    {
+      "id": "task1_v171_006",
+      "subject": "Maths",
+      "section": "Trigonometry degrees and identities",
+      "front": "In which quadrants is sin θ positive?",
+      "originalBack": "Quadrants I and II.",
+      "accept": [
+        "Sine is positive in quadrants one and two."
+      ],
+      "reject": [
+        "Sin theta is positive in quadrants three and four."
+      ]
+    },
+    {
+      "id": "math_logs_power",
+      "subject": "Maths",
+      "section": "Exponentials and logarithms",
+      "front": "What is logₐ(xᵏ)?",
+      "originalBack": "k logₐx.",
+      "accept": [
+        "log base a of x to power k equals k times log base a of x."
+      ],
+      "reject": [
+        "log_a(x^k)=log_a(x)+k."
+      ]
+    },
+    {
+      "id": "math_logs_product",
+      "subject": "Maths",
+      "section": "Exponentials and logarithms",
+      "front": "What is logₐ(xy)?",
+      "originalBack": "logₐx + logₐy.",
+      "accept": [
+        "log_a(xy)=log_a(x)+log_a(y) for positive x and y."
+      ],
+      "reject": [
+        "log_a(xy)=log_a(x) times log_a(y)."
+      ]
+    },
+    {
+      "id": "task1_v162_022",
+      "subject": "Maths",
+      "section": "Differentiation and stationary points",
+      "front": "What does f′(x)>0 mean over an interval?",
+      "originalBack": "The function is increasing there.",
+      "accept": [
+        "When the first derivative is positive throughout an interval, the function increases there."
+      ],
+      "reject": [
+        "If f'(x)>0 then f(x) must be negative throughout that interval."
+      ]
+    },
+    {
+      "id": "v33_card_maths_integration_81",
+      "subject": "Maths",
+      "section": "Integration and signed area",
+      "front": "What does a definite integral of f(x) below the x-axis contribute?",
+      "originalBack": "Negative signed area, not automatically positive physical area.",
+      "accept": [
+        "A region below the x axis contributes negative signed area to a definite integral."
+      ],
+      "reject": [
+        "A definite integral always counts area under the x-axis as positive."
+      ]
+    },
+    {
+      "id": "task1_v171_010",
+      "subject": "Maths",
+      "section": "Integration and signed area",
+      "front": "For total area where a graph crosses the x-axis, what is needed?",
+      "originalBack": "Split at the roots and add the positive areas.",
+      "accept": [
+        "Split the area at x-intercepts, taking absolute values of each signed integral."
+      ],
+      "reject": [
+        "Find total area by adding the raw signed integrals even if some are negative."
+      ]
+    },
+    {
+      "id": "task1_v162_023",
+      "subject": "Maths",
+      "section": "Vectors collinearity and division",
+      "front": "How do position vectors give the vector from A to B?",
+      "originalBack": "AB = OB − OA (position vectors).",
+      "accept": [
+        "Vector AB is position vector OB minus position vector OA."
+      ],
+      "reject": [
+        "AB=OA-OB for all points A and B."
+      ]
+    },
+    {
+      "id": "task1_v171_003",
+      "subject": "Maths",
+      "section": "Vectors collinearity and division",
+      "front": "How do you add 2D vectors (a,b) and (c,d)?",
+      "originalBack": "(a+c, b+d).",
+      "accept": [
+        "Add corresponding vector components, giving (a+c,b+d)."
+      ],
+      "reject": [
+        "The sum is (ac,bd) by multiplying the components."
+      ]
+    },
+    {
+      "id": "task1_v171_004",
+      "subject": "Maths",
+      "section": "Vectors collinearity and division",
+      "front": "What is k times the vector (a,b)?",
+      "originalBack": "(ka, kb).",
+      "accept": [
+        "Scalar k multiplies both components, giving (ka,kb)."
+      ],
+      "reject": [
+        "k(a,b)=(a+k,b+k)."
+      ]
+    }
+  ],
+  "completion": {
+    "fullSpecBulletCoverageCertified": false,
+    "allCoreCardsIndividuallyReviewed": false,
+    "freeFormUnseenAnswersCertified": false
+  }
+}
