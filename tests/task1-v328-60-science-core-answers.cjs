@@ -32,7 +32,7 @@ for(const row of audit.records){
  assert.equal(card.subject,row.subject);
  assert.equal(card.v328ExactReviewed,true,'Core exact-review gate missing '+row.id);
  assert(eligible(card),'First mock membership lost '+row.id);
- assert.equal(card.stage,'AS','Physics/Chemistry first-year eligibility expected '+row.id);
+ assert(card.stage==='AS'||(card.subject==='Chemistry'&&card.stage==='A2'),'Teacher-taught Chemistry A2 is allowed, but Physics A2 is excluded '+row.id);
  assert(card.front.length<=120&&card.back.length<=180,'No long-answer flashcards '+row.id);
  assert.deepEqual(card.accept,[...new Set([card.back,row.originalBack,...(old.accept||[]),...row.accept])],'Previously correct variants must remain '+row.id);
  assert.deepEqual(card.reject,[...new Set([...(old.reject||[]),...row.reject])],'Previously wrong variants must remain '+row.id);
