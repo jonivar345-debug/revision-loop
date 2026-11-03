@@ -54,6 +54,6 @@ assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(subject=
 for(const r of records)assert(mock.some(c=>c.id===r.id),'Reviewed card omitted from school mock '+r.id);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key),'Existing local/cloud progress preserved');
 assert(app.includes(' applyV331CoreAnswerCalibration(cards);'),'Runtime patch wired in mock bank loader');
-assert(app.includes('||c?.v331ExactReviewed===true){'),'Correct/incorrect exact reviewer marking wired');
+assert(app.includes('||c?.v331ExactReviewed===true'),'Correct/incorrect exact reviewer marking remains wired when later versions are appended');
 assert(read('sw.js').includes('-v331-65-core-review'),'New versions must update offline application cache');
 console.log('PASS v331: '+records.length+' exact reviewed original core flashcards (30 Physics, 35 Chemistry), '+models+' model answers, '+accepted+' approved, '+rejected+' rejected, '+negation+' negations, '+oldCorrect+' old accepted responses retained. 4344 total / 3372 mock; progress keys and 56 supplemental banks unchanged.');
