@@ -862,6 +862,27 @@ function applyV324CoreRecallCalibration(existing){
  return existing;
 }
 
+// v326: five original compound recall prompts rewritten as short single-task cards.
+const V326_REWRITTEN_ORIGINAL_CORE=[{"id":"phy_fbd_common_forces","subject":"Physics","originalFront":"What common forces might appear on a free-body diagram?","originalBack":"Weight acts vertically down; normal contact force acts perpendicular to a surface; tension acts along a string; drag/friction acts opposite relative motion or its tendency.","newFront":"Fill: weight acts ___; normal acts ___; tension acts ___; friction acts ___.","newBack":"vertically down; perpendicular to surface; along string; opposes relative motion","accept":["downwards; perpendicular; along the rope; opposite relative movement","down; normal to surface; along the string; opposes sliding"],"reject":["weight up; normal vertical; tension sideways; friction always downhill","down; parallel to surface; perpendicular to string; along slipping direction"],"method":"fill gaps","clozeParts":[["vertically down","down","downwards","vertically downwards"],["perpendicular to surface","normal to surface","perpendicular","at right angles to surface"],["along string","along the string","along rope","along cord"],["opposes relative motion","opposite movement","against slipping","opposite direction of motion","opposes sliding"]]},{"id":"phy_couple_001","subject":"Physics","originalFront":"What is a couple, and what is the moment of a couple?","originalBack":"Two equal, opposite, parallel forces with separated lines of action. Resultant force = 0. Moment of the couple = Fd, where d is the perpendicular separation.","newFront":"What is a couple of forces?","newBack":"Two equal, opposite, parallel forces acting along different lines of action.","accept":["Two equal opposite parallel forces with separated lines of action.","An equal and opposite pair of parallel forces, offset from each other."],"reject":["Two equal and opposite forces acting along the same line.","Two unbalanced forces producing a net force instead of a pure turning effect."]},{"id":"phy_focus_v38_07","subject":"Physics","originalFront":"State Newton's third law and explain why the two forces do not cancel.","originalBack":"Interacting objects exert equal, opposite forces of the same type on each other, acting on different objects, so they do not cancel on one object.","newFront":"Why don't Newton's third-law forces cancel on one object?","newBack":"They act on different interacting objects, not on the same object.","accept":["The action and reaction forces act on separate bodies.","Each third-law force is exerted on a different object."],"reject":["They act on the same object and therefore cancel.","Newton's third-law pair always add to give a larger force on one body."]},{"id":"phy_mechanics_focus_v37_03","subject":"Physics","originalFront":"Velocity changes from −8 to −2 m s⁻¹ in 3.0 s. Find acceleration and describe the speed.","originalBack":"a = (−2 − (−8))/3 = +2.0 m s⁻². Speed falls from 8 to 2 m s⁻¹.","newFront":"Velocity changes from −8 to −2 m s⁻¹ in 3.0 s. Find acceleration.","newBack":"+2.0 m s⁻².","accept":["+2 metres per second squared","+2.0 m/s^2"],"reject":["−2.0 m s⁻².","+6.0 m s⁻²."]},{"id":"task1_v142_011","subject":"Chemistry","originalFront":"What catalyst is associated with catalytic cracking and what products are valuable?","originalBack":"A zeolite catalyst; valuable products include motor fuels and aromatic hydrocarbons.","newFront":"Which catalyst is used for catalytic cracking?","newBack":"A zeolite catalyst.","accept":["Zeolite","A zeolite, an acidic aluminosilicate catalyst."],"reject":["Concentrated sulfuric acid is the catalytic cracking catalyst.","Platinum is the standard zeolite cracking catalyst."]}];
+function applyV326CoreClarityFixes(existing){
+ const byId=new Map(existing.map(c=>[c.id,c]));
+ for(const row of V326_REWRITTEN_ORIGINAL_CORE){
+  const card=byId.get(row.id);
+  if(!card||card.subject!==row.subject||card.front!==row.originalFront||card.back!==row.originalBack)continue;
+  card.front=row.newFront;
+  card.back=row.newBack;
+  card.accept=[...new Set([row.newBack,row.originalBack,...(card.accept||[]),...row.accept])];
+  card.reject=[...new Set([...(card.reject||[]),...row.reject])];
+  card.strictRecall=true;
+  if(row.method==='fill gaps'){
+   card.method='fill gaps';
+   card.clozeParts=row.clozeParts;
+  }
+  card.v326ExactReviewed=true;
+ }
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -2503,7 +2524,7 @@ function evaluateCard(c,input){
  // Do not use fuzzy token overlap: swapped ion colours, opposing signs and
  // reversed graph directions must never earn full marks.
  if(c?.method==='fill gaps' && Array.isArray(c.clozeParts) &&
-    c.id?.startsWith('task1_v298_')){
+    (c.id?.startsWith('task1_v298_')||c.v326ExactReviewed===true)){
   const raw=String(input||'').trim();
   if(!raw)return {status:'neutral',score:0,text:'Enter the missing words or values.',missing:[]};
   const n=t=>normalise(String(t||'').replace(/[.!?]+$/,''));
@@ -2538,7 +2559,7 @@ function evaluateCard(c,input){
  // explicitly accepted exact paraphrase (or partially credit a vetted wrong one).
  // Honour exact, punctuation-preserving examples ONLY on the 60 individually
  // reviewed core cards, before any fuzzy/numeric/transform scoring.
- if((c?.v316ExactReviewed===true&&c.mock===true)||c?.v321ExactReviewed===true||c?.v322ExactReviewed===true||c?.v324ExactReviewed===true){
+ if((c?.v316ExactReviewed===true&&c.mock===true)||c?.v321ExactReviewed===true||c?.v322ExactReviewed===true||c?.v324ExactReviewed===true||c?.v326ExactReviewed===true){
   const exact=t=>String(t||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[.]$/,'');
   const key=exact(input);
   if(key&&Array.isArray(c.reject)&&c.reject.some(x=>exact(x)===key))
@@ -4774,6 +4795,7 @@ async function sync(manual=false){
  applyV321CoreRecallCalibration(cards);
  applyV322CoreRecallCalibration(cards);
  applyV324CoreRecallCalibration(cards);
+ applyV326CoreClarityFixes(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
