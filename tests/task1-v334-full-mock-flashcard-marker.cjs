@@ -48,7 +48,7 @@ for(const c of [...mockFlaggedCore,...mockFlaggedExtra]){
   ['accepted',c.accept||[],'correct'],
   ['rejected',c.reject||[],'wrong'],
   ['negated',['not '+c.back],'wrong'],
-  ['nonanswer',["I don't know",'I don’t know','I do not know','idk','no idea'],'wrong']
+  ['nonanswer',["I don't know","I don’t know","I do not know","idk","no idea","I can't remember","I can’t remember","I haven't a clue","I haven't got it","I wasn't sure","I couldn't tell you","I'm stuck","not sure","I'm not sure","Sorry I don't know","I don't think I know","I just don't know","I can't answer that","I cannot remember"],'wrong']
  ]){
   for(const answer of answers){
    let actual;
@@ -67,8 +67,8 @@ assert.equal(models,3382,'Check all 2383 original and all 999 supplemental mock-
 assert(accepted>=4300,'Keep accepted-paraphrase marking coverage');
 assert(rejected>=836,'Keep misconception rejection coverage');
 assert.equal(negations,3382,'Explicitly negating every mock flashcard answer must never score correct');
-assert.equal(nonAnswers,16910,'Never give marks for five common non-answers on any mock card');
-assert(checked>=34752,'All model, accepted, rejected, negated and non-answers must be checked');
+assert.equal(nonAnswers,64258,'Never give marks for 19 common non-answers on any mock card');
+assert(checked>=82100,'All model, accepted, rejected, negated and non-answers must be checked');
 assert.deepEqual(issues,[],'Production marker regression failed for an actual authored answer');
 assert.equal(marker(core.find(c=>c.id==='task1_v130_003'),'T').status,'correct','Genuine one-letter tera symbol must remain accepted');
 assert.equal(marker(core.find(c=>c.id==='task1_v130_003'),"I don't know").status,'wrong','Contraction must not count as a valid SI symbol');
