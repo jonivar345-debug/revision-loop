@@ -48,7 +48,7 @@ for(const c of [...mockFlaggedCore,...mockFlaggedExtra]){
   ['accepted',c.accept||[],'correct'],
   ['rejected',c.reject||[],'wrong'],
   ['negated',['not '+c.back],'wrong'],
-  ['nonanswer',["I don't know","I don’t know","I do not know","idk","no idea","I can't remember","I can’t remember","I haven't a clue","I haven't got it","I wasn't sure","I couldn't tell you","I'm stuck","not sure","I'm not sure","Sorry I don't know","I don't think I know","I just don't know","I can't answer that","I cannot remember"],'wrong']
+  ['nonanswer',["I don't know","I don’t know","I do not know","idk","no idea","I can't remember","I can’t remember","I haven't a clue","I haven't got it","I wasn't sure","I couldn't tell you","I'm stuck","not sure","I'm not sure","Sorry I don't know","I don't think I know","I just don't know","I can't answer that","I cannot remember","I can\'t recall","I can’t recall"],'wrong']
  ]){
   for(const answer of answers){
    let actual;
@@ -67,11 +67,12 @@ assert.equal(models,3382,'Check all 2383 original and all 999 supplemental mock-
 assert(accepted>=4300,'Keep accepted-paraphrase marking coverage');
 assert(rejected>=836,'Keep misconception rejection coverage');
 assert.equal(negations,3382,'Explicitly negating every mock flashcard answer must never score correct');
-assert.equal(nonAnswers,64258,'Never give marks for 19 common non-answers on any mock card');
-assert(checked>=82100,'All model, accepted, rejected, negated and non-answers must be checked');
+assert.equal(nonAnswers,71022,'Never give marks for 21 common non-answers on any mock card');
+assert(checked>=88864,'All model, accepted, rejected, negated and non-answers must be checked');
 assert.deepEqual(issues,[],'Production marker regression failed for an actual authored answer');
 assert.equal(marker(core.find(c=>c.id==='task1_v130_003'),'T').status,'correct','Genuine one-letter tera symbol must remain accepted');
 assert.equal(marker(core.find(c=>c.id==='task1_v130_003'),"I don't know").status,'wrong','Contraction must not count as a valid SI symbol');
+assert.equal(marker(core.find(c=>c.id==='task1_v130_003'),"I can't recall").status,'wrong','Contraction word must not inject the SI symbol T');
 assert(read('sw.js').includes('-v334-blank-answer-marker'),'Offline cache must be invalidated for marker fix');
 
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key),'Keep existing saved progress storage keys');
