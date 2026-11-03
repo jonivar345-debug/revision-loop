@@ -1,0 +1,9 @@
+name: Task 1 v331 65 balanced original science core reviews
+on: [pull_request]
+jobs:
+  original-core-science:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v331-65-cross-topic-core.cjs
