@@ -1,0 +1,9 @@
+name: Task 1 v334 full mock card answer and short-card regression
+on: [pull_request]
+jobs:
+  mock-production-marker-all-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v334-full-mock-flashcard-marker.cjs
