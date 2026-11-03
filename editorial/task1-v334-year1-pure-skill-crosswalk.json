@@ -7,13 +7,14 @@
     "The AQA section references are full A-level headings; mapped examples are deliberately limited to the relevant Year 1 content.",
     "Each cited card ID is checked against the actual school mock-eligible original or supplemental short-flashcard bank.",
     "This is a sampled skill crosswalk, NOT proof that every bullet in the specification is fully covered or that a student has completed manual multi-mark questions.",
-    "The seven most reasoning-heavy rows are explicitly not signed off by recall."
+    "The seven most reasoning-heavy rows are explicitly not signed off by recall.",
+    "The live first-mock selector excludes the legacy inverse/composite and one-to-one source IDs. They are deliberately excluded from this first-mock crosswalk, rather than counted from metadata alone."
   ],
   "counts": {
-    "total": 44,
+    "total": 43,
     "bySection": {
       "3.2": 6,
-      "3.3": 14,
+      "3.3": 13,
       "3.4": 4,
       "3.5": 4,
       "3.6": 4,
@@ -22,7 +23,7 @@
       "3.9": 2,
       "3.11": 4
     },
-    "sampleRecall": 37,
+    "sampleRecall": 36,
     "needsExamReview": 7,
     "partialWithPractice": 6,
     "partialWithoutPractice": 1
@@ -239,7 +240,7 @@
     {
       "id": "M13",
       "specRef": "3.3",
-      "skill": "Functions: domain, range and one-to-one",
+      "skill": "Functions: domain and range",
       "status": "sample_recall_verified",
       "evidence": [
         {
@@ -249,31 +250,11 @@
         {
           "id": "task1_maths_008",
           "path": "deck.json"
-        },
-        {
-          "id": "task1_maths_006",
-          "path": "deck.json"
         }
       ]
     },
     {
       "id": "M14",
-      "specRef": "3.3",
-      "skill": "Inverse and composite functions",
-      "status": "sample_recall_verified",
-      "evidence": [
-        {
-          "id": "math_function_composite",
-          "path": "deck.json"
-        },
-        {
-          "id": "math_inverse",
-          "path": "deck.json"
-        }
-      ]
-    },
-    {
-      "id": "M15",
       "specRef": "3.3",
       "skill": "Algebraic fractions and forbidden denominator inputs",
       "status": "sample_recall_verified",
@@ -289,7 +270,7 @@
       ]
     },
     {
-      "id": "M16",
+      "id": "M15",
       "specRef": "3.3",
       "skill": "Graph translations in horizontal and vertical directions",
       "status": "sample_recall_verified",
@@ -305,7 +286,7 @@
       ]
     },
     {
-      "id": "M17",
+      "id": "M16",
       "specRef": "3.3",
       "skill": "Horizontal scaling and reflection",
       "status": "sample_recall_verified",
@@ -321,7 +302,7 @@
       ]
     },
     {
-      "id": "M18",
+      "id": "M17",
       "specRef": "3.3",
       "skill": "Vertical scaling and reflection",
       "status": "sample_recall_verified",
@@ -337,7 +318,7 @@
       ]
     },
     {
-      "id": "M19",
+      "id": "M18",
       "specRef": "3.3",
       "skill": "Composed transformations of coordinates",
       "status": "sample_recall_verified",
@@ -353,7 +334,7 @@
       ]
     },
     {
-      "id": "M20",
+      "id": "M19",
       "specRef": "3.3",
       "skill": "Transforming roots and turning points",
       "status": "short_recall_plus_exam_work_required",
@@ -380,7 +361,7 @@
       ]
     },
     {
-      "id": "M21",
+      "id": "M20",
       "specRef": "3.4",
       "skill": "Straight-line gradients and equations",
       "status": "sample_recall_verified",
@@ -396,7 +377,7 @@
       ]
     },
     {
-      "id": "M22",
+      "id": "M21",
       "specRef": "3.4",
       "skill": "Perpendicular gradients",
       "status": "sample_recall_verified",
@@ -412,7 +393,7 @@
       ]
     },
     {
-      "id": "M23",
+      "id": "M22",
       "specRef": "3.4",
       "skill": "Circle centre and radius equation",
       "status": "sample_recall_verified",
@@ -428,7 +409,7 @@
       ]
     },
     {
-      "id": "M24",
+      "id": "M23",
       "specRef": "3.4",
       "skill": "Circle tangents and intersections",
       "status": "sample_recall_verified",
@@ -444,7 +425,7 @@
       ]
     },
     {
-      "id": "M25",
+      "id": "M24",
       "specRef": "3.5",
       "skill": "Arithmetic nth term and finite sum",
       "status": "sample_recall_verified",
@@ -460,7 +441,7 @@
       ]
     },
     {
-      "id": "M26",
+      "id": "M25",
       "specRef": "3.5",
       "skill": "Geometric nth term, finite sum and convergence",
       "status": "sample_recall_verified",
@@ -480,7 +461,7 @@
       ]
     },
     {
-      "id": "M27",
+      "id": "M26",
       "specRef": "3.5",
       "skill": "Integer binomial expansion and coefficient",
       "status": "sample_recall_verified",
@@ -496,7 +477,7 @@
       ]
     },
     {
-      "id": "M28",
+      "id": "M27",
       "specRef": "3.5",
       "skill": "Sigma notation and evaluating finite sums",
       "status": "sample_recall_verified",
@@ -512,7 +493,7 @@
       ]
     },
     {
-      "id": "M29",
+      "id": "M28",
       "specRef": "3.6",
       "skill": "Sine rule, cosine rule and triangle area",
       "status": "sample_recall_verified",
@@ -532,7 +513,7 @@
       ]
     },
     {
-      "id": "M30",
+      "id": "M29",
       "specRef": "3.6",
       "skill": "Exact trigonometric values",
       "status": "sample_recall_verified",
@@ -552,7 +533,7 @@
       ]
     },
     {
-      "id": "M31",
+      "id": "M30",
       "specRef": "3.6",
       "skill": "Trigonometric identities",
       "status": "sample_recall_verified",
@@ -568,7 +549,7 @@
       ]
     },
     {
-      "id": "M32",
+      "id": "M31",
       "specRef": "3.6",
       "skill": "Periodic trig functions and all-degree solutions",
       "status": "sample_recall_verified",
@@ -584,7 +565,7 @@
       ]
     },
     {
-      "id": "M33",
+      "id": "M32",
       "specRef": "3.7",
       "skill": "Basic logarithm laws and change of base",
       "status": "sample_recall_verified",
@@ -604,7 +585,7 @@
       ]
     },
     {
-      "id": "M34",
+      "id": "M33",
       "specRef": "3.7",
       "skill": "Exponential and logarithmic equations",
       "status": "sample_recall_verified",
@@ -620,7 +601,7 @@
       ]
     },
     {
-      "id": "M35",
+      "id": "M34",
       "specRef": "3.8",
       "skill": "Power rule and differentiation",
       "status": "sample_recall_verified",
@@ -636,7 +617,7 @@
       ]
     },
     {
-      "id": "M36",
+      "id": "M35",
       "specRef": "3.8",
       "skill": "Gradient of tangent and normal",
       "status": "sample_recall_verified",
@@ -652,7 +633,7 @@
       ]
     },
     {
-      "id": "M37",
+      "id": "M36",
       "specRef": "3.8",
       "skill": "Stationary points, maxima/minima and second derivative caveats",
       "status": "sample_recall_verified",
@@ -672,7 +653,7 @@
       ]
     },
     {
-      "id": "M38",
+      "id": "M37",
       "specRef": "3.8",
       "skill": "Differentiation from first principles",
       "status": "sample_recall_verified",
@@ -684,7 +665,7 @@
       ]
     },
     {
-      "id": "M39",
+      "id": "M38",
       "specRef": "3.9",
       "skill": "Indefinite integration and +C",
       "status": "sample_recall_verified",
@@ -700,7 +681,7 @@
       ]
     },
     {
-      "id": "M40",
+      "id": "M39",
       "specRef": "3.9",
       "skill": "Definite integral versus unsigned total area",
       "status": "short_recall_plus_exam_work_required",
@@ -727,7 +708,7 @@
       ]
     },
     {
-      "id": "M41",
+      "id": "M40",
       "specRef": "3.11",
       "skill": "Displacement using position vectors",
       "status": "sample_recall_verified",
@@ -743,7 +724,7 @@
       ]
     },
     {
-      "id": "M42",
+      "id": "M41",
       "specRef": "3.11",
       "skill": "2D vector magnitude, quadrant and direction",
       "status": "sample_recall_verified",
@@ -759,7 +740,7 @@
       ]
     },
     {
-      "id": "M43",
+      "id": "M42",
       "specRef": "3.11",
       "skill": "Collinearity via scalar multiples",
       "status": "short_recall_plus_exam_work_required",
@@ -786,7 +767,7 @@
       ]
     },
     {
-      "id": "M44",
+      "id": "M43",
       "specRef": "3.11",
       "skill": "Vector internal division in a ratio",
       "status": "short_recall_plus_exam_work_required",
