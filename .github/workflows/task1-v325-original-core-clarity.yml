@@ -1,0 +1,11 @@
+name: Task 1 v325 find compound legacy mock flashcards
+on: [pull_request]
+jobs:
+  core-card-editorial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v325-original-core-clarity-candidates.cjs
+      - run: node tests/task1-v324-60-topic-balanced-core-precision.cjs
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
