@@ -15,5 +15,17 @@
     "Having an explicit accept/reject list does not guarantee perfect marking of unseen paraphrases",
     "Complete manual AQA specification bullet certification is not yet finished",
     "Don't claim Task 1 complete"
-  ]
+  ],
+  "productionMarkerWholeMathsFirstMock": {
+    "cards": 331,
+    "core": 110,
+    "supplemental": 221,
+    "modelAnswerChecks": 331,
+    "acceptedAnswerChecks": 1207,
+    "incorrectAnswerChecks": 705,
+    "totalChecks": 2243,
+    "failures": 0,
+    "knownWrongAnswersGettingPartialCredit": 0,
+    "verification": "Full 56-file indexed manifest with all 12 Maths or mixed banks loaded in their correct production positions, after runtime core patches; also added equivalent permanent GitHub Actions regression."
+  }
 }
