@@ -10,15 +10,18 @@
     "models": 3382,
     "accepted": "at least 4300",
     "rejected": "at least 836",
-    "total": "at least 17842",
-    "negated": 3382
+    "total": "at least 34752",
+    "negated": 3382,
+    "nonAnswerProbes": 16910
   },
   "notes": [
+    "Five unrelated non-answers ('I don't know', curly-apostrophe equivalent, 'I do not know', 'idk', 'no idea') are required to score wrong on each of the 3,382 authored mock-tagged cards.",
     "Additional adversarial regression: prefix each complete correct model answer with 'not' and require a wrong mark, including all 3,382 school-mock-tagged cards.",
     "Tests actual production answer evaluator and applies all patch functions up to v332 to original deck.",
     "Explicit accepted/rejected lists are test fixtures; correct responses never seen before may still need human calibration.",
     "Length thresholds are simple regression alarms, not proof that every card is semantically well written.",
     "Original multi-mark exam questions remain in separate practice banks; never force them into flashcards.",
     "Full AQA bullet-level coverage certification and open-ended unseen-answer review remain unfinished."
-  ]
+  ],
+  "fix": "Before v334, the one-letter tera (T) prefix card incorrectly awarded full credit for \"I don't know\" because the apostrophe split it into a 't' token. v334 adds an exact whole-non-answer guard, retaining valid 'T', 'tera' and all model answers."
 }
