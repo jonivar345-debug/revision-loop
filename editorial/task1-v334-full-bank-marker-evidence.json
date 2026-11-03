@@ -10,9 +10,11 @@
     "models": 3382,
     "accepted": "at least 4300",
     "rejected": "at least 836",
-    "total": "at least 14460"
+    "total": "at least 17842",
+    "negated": 3382
   },
   "notes": [
+    "Additional adversarial regression: prefix each complete correct model answer with 'not' and require a wrong mark, including all 3,382 school-mock-tagged cards.",
     "Tests actual production answer evaluator and applies all patch functions up to v332 to original deck.",
     "Explicit accepted/rejected lists are test fixtures; correct responses never seen before may still need human calibration.",
     "Length thresholds are simple regression alarms, not proof that every card is semantically well written.",
