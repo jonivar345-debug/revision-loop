@@ -64,8 +64,19 @@ const allMathsMock=mock.filter(c=>c.subject==='Maths');
 assert.equal(allMathsMock.length,331);
 assert.equal(allMathsMock.filter(c=>!(c.accept||[]).length).length,0,'All 331 first-mock Maths cards need at least one accepted example');
 assert.equal(allMathsMock.filter(c=>!(c.reject||[]).length).length,0,'All 331 first-mock Maths cards need at least one incorrect example');
+let allMathsModelChecks=0,allMathsCorrectChecks=0,allMathsWrongChecks=0;
+for(const card of allMathsMock){
+ assert.equal(mark(card,card.back).status,'correct','Full model Maths check '+card.id);
+ allMathsModelChecks++;
+ for(const answer of card.accept||[]){assert.equal(mark(card,answer).status,'correct','Full accepted Maths check '+card.id+' '+answer);allMathsCorrectChecks++;}
+ for(const answer of card.reject||[]){assert.equal(mark(card,answer).status,'wrong','Full rejected Maths check '+card.id+' '+answer);allMathsWrongChecks++;}
+}
+assert.equal(allMathsModelChecks,331);
+assert(allMathsCorrectChecks>=1207,'Do not lose previously approved answers from the full Maths deck');
+assert(allMathsWrongChecks>=705,'Do not lose previously rejected misconception examples from the full Maths deck');
+
 assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,mock.filter(c=>c.subject===s).length])),{Physics:1125,Chemistry:1916,Maths:331});
 for(const c of ledger.records)assert(mock.some(z=>z.id===c.id),'Corrected Maths card omitted from real mock selector '+c.id);
 assert(app.includes(' applyV329MathsCorePrecision(cards);'),'Runtime patch must run before flashcard loader');
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key),'Existing saved progress storage must remain unchanged');
-console.log('PASS v329: all 110 original Year 1 Pure Maths mock cards now have explicit accepted and incorrect-answer lists; last 15 reviewed, 3 historical false-positive responses removed. '+models+' models, '+good+' valid, '+bad+' invalid, '+banned+' previous false positives, '+negated+' negated examples, '+oldGood+' old valid answers preserved. 4344 total/3372 mock, stable IDs.');
+console.log('PASS v329: full '+(allMathsModelChecks+allMathsCorrectChecks+allMathsWrongChecks)+' production-marker examples over all 331 first-mock Maths cards. All 110 original Year 1 Pure Maths mock cards now have explicit accepted and incorrect-answer lists; last 15 reviewed, 3 historical false-positive responses removed. '+models+' models, '+good+' valid, '+bad+' invalid, '+banned+' previous false positives, '+negated+' negated examples, '+oldGood+' old valid answers preserved. 4344 total/3372 mock, stable IDs.');
