@@ -1,0 +1,2489 @@
+{
+  "version": "v323",
+  "date": "2026-11-02",
+  "source": "Actual patched core + supplemental app loader + real school mock selector",
+  "counts": {
+    "loaded": 4344,
+    "mock": 3372,
+    "coreMock": 2373,
+    "previouslyReviewedCore": 105,
+    "noRejectedExamples": 2143,
+    "noAcceptedExamples": 855,
+    "noSpecRef": 666,
+    "distinctCandidateIds": 223,
+    "zeroEvidenceGroups": 0,
+    "thinEvidenceGroups": 0
+  },
+  "bySubject": {
+    "Physics": {
+      "coreMock": 730,
+      "noCuratedWrong": 647,
+      "noCuratedAccept": 247,
+      "noSpecRef": 234,
+      "reviewedV321V322": 35
+    },
+    "Chemistry": {
+      "coreMock": 1533,
+      "noCuratedWrong": 1453,
+      "noCuratedAccept": 604,
+      "noSpecRef": 384,
+      "reviewedV321V322": 35
+    },
+    "Maths": {
+      "coreMock": 110,
+      "noCuratedWrong": 43,
+      "noCuratedAccept": 4,
+      "noSpecRef": 48,
+      "reviewedV321V322": 35
+    }
+  },
+  "zero": [],
+  "thin": [],
+  "topicGroups": [
+    {
+      "subject": "Physics",
+      "topic": "Measurement errors and uncertainty",
+      "allMockEvidence": 136,
+      "originalCoreEvidence": 90,
+      "remainingUncalibratedCore": 80,
+      "reviewedSample": [
+        {
+          "id": "phy_accuracy_precision",
+          "topic": "Measurements",
+          "specRef": "",
+          "front": "Accuracy vs precision?",
+          "back": "Accuracy is closeness to the true value; precision is closeness of repeated readings to each other.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_measure_recap_20261024_gradient_uncert",
+          "topic": "Measurements",
+          "specRef": "",
+          "front": "How is a percentage gradient uncertainty estimated from graph lines?",
+          "back": "|Best gradient − worst acceptable gradient| ÷ |best gradient| × 100%.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_measure_recap_20261024_uncert_add",
+          "topic": "Measurements",
+          "specRef": "",
+          "front": "How do you combine uncertainties when adding or subtracting measurements?",
+          "back": "Add the absolute uncertainties.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_33",
+          "topic": "RP4 Young modulus",
+          "specRef": "",
+          "front": "Why does percentage uncertainty in wire diameter approximately double for cross-sectional area?",
+          "back": "Area A = πd²/4, so percentage uncertainty in A ≈ 2 × percentage uncertainty in d.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_prac_uncert",
+          "topic": "Practical skills",
+          "specRef": "",
+          "front": "Why does increasing the measured interval often reduce percentage uncertainty?",
+          "back": "The absolute uncertainty is similar but becomes a smaller fraction of a larger measured value.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Resolving vectors and forces",
+      "allMockEvidence": 52,
+      "originalCoreEvidence": 35,
+      "remainingUncalibratedCore": 13,
+      "reviewedSample": [
+        {
+          "id": "phy_mechanics_weakness_v35_couple_turn",
+          "topic": "Couples",
+          "specRef": "",
+          "front": "Why can a couple turn an object without a resultant force?",
+          "back": "Its two equal, opposite, parallel forces cancel as forces, but act along separate lines to cause turning.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_resolve_weakness_20261025_marked_angle",
+          "topic": "Resolving vectors",
+          "specRef": "",
+          "front": "When resolving a vector, what decides whether to use sin or cos?",
+          "back": "Look at the marked angle: adjacent side uses cos θ; opposite side uses sin θ. Never rely on horizontal or vertical.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_11",
+          "topic": "Resolving vectors",
+          "specRef": "",
+          "front": "A 12 N force is 30° from the vertical. Find its horizontal and vertical components.",
+          "back": "Horizontal = 12 sin30° = 6.0 N; vertical = 12 cos30° ≈ 10.4 N.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_resolve_weakness_20261025_horizontal_30",
+          "topic": "Resolving vectors",
+          "specRef": "",
+          "front": "50 N at 30° above horizontal: find horizontal and vertical components.",
+          "back": "Horizontal = 50 cos 30° = 43.3 N; vertical = 50 sin 30° = 25.0 N.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_resolve_weakness_20261025_vertical_30",
+          "topic": "Resolving vectors",
+          "specRef": "",
+          "front": "50 N at 30° to vertical: find horizontal and vertical components.",
+          "back": "Horizontal = 50 sin 30° = 25.0 N; vertical = 50 cos 30° = 43.3 N.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Motion and its graphs",
+      "allMockEvidence": 66,
+      "originalCoreEvidence": 53,
+      "remainingUncalibratedCore": 37,
+      "reviewedSample": [
+        {
+          "id": "phy_graph_weakness_v36_a_negative_area",
+          "topic": "Motion graphs",
+          "specRef": "3.4.1.3",
+          "front": "What does area below the time axis on an acceleration–time graph mean?",
+          "back": "A negative change in velocity, not a negative distance. It need not mean the object slows down.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_graph_weakness_v36_compare_slope_vs_area",
+          "topic": "Motion graphs",
+          "specRef": "3.4.1.3",
+          "front": "In motion graphs, what do a gradient and a signed area each represent?",
+          "back": "s–t gradient → v; v–t gradient → a, area → Δs; a–t area → Δv.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_graph_weakness_v36_v_zero_crossing",
+          "topic": "Motion graphs",
+          "specRef": "3.4.1.3",
+          "front": "What does crossing the time axis on a velocity–time graph mean?",
+          "back": "Velocity passes through zero and changes sign: the object stops momentarily, then reverses direction.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_01",
+          "topic": "Motion graphs",
+          "specRef": "3.4.1.3",
+          "front": "A displacement–time curve has a positive gradient which becomes less steep. What happens to velocity?",
+          "back": "Velocity remains positive but decreases: the object moves forwards while slowing down.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_02",
+          "topic": "Motion graphs",
+          "specRef": "3.4.1.3",
+          "front": "What does a horizontal velocity–time graph below the time axis show?",
+          "back": "Constant negative velocity; acceleration is zero. The object is moving, not stationary.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Forces and slopes",
+      "allMockEvidence": 38,
+      "originalCoreEvidence": 27,
+      "remainingUncalibratedCore": 13,
+      "reviewedSample": [
+        {
+          "id": "phy_mechanics_focus_v37_12",
+          "topic": "Free-body diagrams",
+          "specRef": "",
+          "front": "A 2.0 kg object accelerates at 3.0 m s⁻². Friction is 4.0 N opposite the pull. Find the pull.",
+          "back": "Resultant force = ma = 6.0 N; pulling force = 6.0+4.0 = 10.0 N.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_weakness_v35_slope_direction",
+          "topic": "Forces on a slope",
+          "specRef": "",
+          "front": "On a slope, which way do weight and its two components act?",
+          "back": "Weight mg acts vertically down; mg sin θ acts down the slope; mg cos θ acts into the slope.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_phy_065",
+          "topic": "Mechanics",
+          "specRef": "3.4.1",
+          "front": "How does the normal reaction change on an incline without other perpendicular forces?",
+          "back": "R = mg cos θ.",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_phy_066",
+          "topic": "Mechanics",
+          "specRef": "3.4.1",
+          "front": "What is the weight component down a slope of angle θ?",
+          "back": "mg sin θ.",
+          "accepted": 5,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v125_007",
+          "topic": "Mechanics",
+          "specRef": "3.4.1.1",
+          "front": "Does the normal reaction always equal an object's weight?",
+          "back": "No, only in certain force balances.",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Projectile motion",
+      "allMockEvidence": 33,
+      "originalCoreEvidence": 23,
+      "remainingUncalibratedCore": 14,
+      "reviewedSample": [
+        {
+          "id": "phy_mechanics_focus_v37_13",
+          "topic": "Free-body diagrams",
+          "specRef": "",
+          "front": "Ignoring air resistance, which force acts on a projectile after release?",
+          "back": "Only weight (gravity) acts, vertically downwards; no forward driving force is needed.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_075",
+          "topic": "Mechanics",
+          "specRef": "3.4.1",
+          "front": "What stays constant horizontally in ideal projectile motion?",
+          "back": "Velocity; horizontal acceleration is zero.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_076",
+          "topic": "Mechanics",
+          "specRef": "3.4.1",
+          "front": "What is the vertical acceleration during ideal projectile motion?",
+          "back": "g downward.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_focus_v38_02",
+          "topic": "Projectiles",
+          "specRef": "",
+          "front": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+          "back": "12 m s⁻¹.",
+          "accepted": 4,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v125_025",
+          "topic": "Projectile motion",
+          "specRef": "3.4.1.4",
+          "front": "Ignoring air resistance, what is the horizontal acceleration of a projectile?",
+          "back": "Zero.",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Moments and couples",
+      "allMockEvidence": 76,
+      "originalCoreEvidence": 53,
+      "remainingUncalibratedCore": 35,
+      "reviewedSample": [
+        {
+          "id": "phy_mechanics_focus_v37_15",
+          "topic": "Moments",
+          "specRef": "",
+          "front": "A 20 N force acts at 30° to a 0.50 m lever arm. Find its moment about the pivot.",
+          "back": "M = Fr sinθ = 20×0.50×sin30° = 5.0 N m.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_16",
+          "topic": "Couples",
+          "specRef": "",
+          "front": "Two equal opposite 15 N forces form a couple separated by 0.40 m. Find the moment.",
+          "back": "Moment of the couple = Fd = 15×0.40 = 6.0 N m. Do not double it.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_weakness_v35_couple_distance",
+          "topic": "Couples",
+          "specRef": "",
+          "front": "In the couple formula M = Fd, what does distance d represent?",
+          "back": "d is the perpendicular separation between the forces' lines of action. Use just one F; don't double Fd.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_moment_eq",
+          "topic": "Moments",
+          "specRef": "",
+          "front": "What is the principle of moments in equilibrium?",
+          "back": "Total clockwise moment = total anticlockwise moment about the same point.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_pandr_v29_momentum_relation",
+          "topic": "Wave-particle duality",
+          "specRef": "",
+          "front": "How does doubling particle momentum affect de Broglie wavelength?",
+          "back": "It halves the wavelength, since λ = h/p.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Momentum and impulse",
+      "allMockEvidence": 51,
+      "originalCoreEvidence": 37,
+      "remainingUncalibratedCore": 23,
+      "reviewedSample": [
+        {
+          "id": "phy_graph_weakness_v36_force_time_tri",
+          "topic": "Momentum",
+          "specRef": "",
+          "front": "Force rises 0→80 N then returns to 0 over 0.20 s. Find impulse.",
+          "back": "Area of triangular F–t graph = ½×0.20×80 = 8.0 N s (change in momentum).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_20",
+          "topic": "Momentum",
+          "specRef": "",
+          "front": "In an inelastic collision of an isolated system, which quantities are conserved?",
+          "back": "Total momentum is conserved; total kinetic energy need not be conserved.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_077",
+          "topic": "Mechanics",
+          "specRef": "3.4.1",
+          "front": "What is an impulse?",
+          "back": "Change in momentum, FΔt.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_078",
+          "topic": "Mechanics",
+          "specRef": "3.4.1",
+          "front": "What condition allows use of conservation of momentum?",
+          "back": "No external resultant force acts on the system.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_electron_diffraction_exam_q9c",
+          "topic": "Wave-particle duality",
+          "specRef": "",
+          "front": "Which equation links an electron's de Broglie wavelength λ with its momentum p?",
+          "back": "λ = h/p.",
+          "accepted": 4,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Energy power efficiency",
+      "allMockEvidence": 61,
+      "originalCoreEvidence": 43,
+      "remainingUncalibratedCore": 20,
+      "reviewedSample": [
+        {
+          "id": "phy_mechanics_focus_v37_21",
+          "topic": "Energy",
+          "specRef": "",
+          "front": "An object's kinetic energy rises from 5 J to 30 J. What is the net work done on it?",
+          "back": "W_net = ΔE_k = 30−5 = +25 J.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_22",
+          "topic": "Energy",
+          "specRef": "",
+          "front": "A force parallel to motion rises linearly from 0 to 40 N across 2.0 m. Find work done.",
+          "back": "Work = triangular area under F–s graph = ½×2.0×40 = 40 J.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_24",
+          "topic": "Power",
+          "specRef": "",
+          "front": "An engine exerts a 30 N force along the direction of travel at 4.0 m s⁻¹. Find power.",
+          "back": "P = Fv = 30×4.0 = 120 W.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_25",
+          "topic": "Energy",
+          "specRef": "",
+          "front": "A device receives 150 J and transfers 60 J usefully. Calculate efficiency.",
+          "back": "Efficiency = useful output/input = 60/150 = 0.40 = 40%.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_power_elec",
+          "topic": "Electricity",
+          "specRef": "3.5.1.1",
+          "front": "Give three electrical power equations.",
+          "back": "P = VI = I²R = V²/R.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Materials stress strain Young modulus",
+      "allMockEvidence": 28,
+      "originalCoreEvidence": 17,
+      "remainingUncalibratedCore": 12,
+      "reviewedSample": [
+        {
+          "id": "phy_graph_weakness_v36_stress_strain_gradient",
+          "topic": "Materials",
+          "specRef": "",
+          "front": "What does gradient of a stress (y) against strain (x) graph give?",
+          "back": "Young modulus E in the linear elastic region: E = stress ÷ strain (in Pa).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_mechanics_focus_v37_29",
+          "topic": "Materials",
+          "specRef": "",
+          "front": "For a stress–strain graph, when does the gradient give Young modulus?",
+          "back": "In the straight-line elastic region: E = Δstress/Δstrain.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_087",
+          "topic": "Materials",
+          "specRef": "3.4.2",
+          "front": "What is the ultimate tensile stress?",
+          "back": "Maximum tensile stress before breaking.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_strain",
+          "topic": "Materials",
+          "specRef": "",
+          "front": "What is tensile strain?",
+          "back": "strain = ΔL/L; it has no unit.",
+          "accepted": 6,
+          "rejected": 0
+        },
+        {
+          "id": "phy_stress",
+          "topic": "Materials",
+          "specRef": "",
+          "front": "What is tensile stress?",
+          "back": "stress = F/A, in Pa.",
+          "accepted": 5,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Progressive waves and phase",
+      "allMockEvidence": 92,
+      "originalCoreEvidence": 62,
+      "remainingUncalibratedCore": 33,
+      "reviewedSample": [
+        {
+          "id": "phy_spectra_photo_v32_matching_lines",
+          "topic": "Line spectra",
+          "specRef": "",
+          "front": "Why can an element's absorption and emission lines have matching wavelengths?",
+          "back": "The same energy gaps are involved in upward and downward electron transitions.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_035",
+          "topic": "Waves",
+          "specRef": "3.3.1",
+          "front": "What is wavelength?",
+          "back": "Shortest distance between two points in phase.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_036",
+          "topic": "Waves",
+          "specRef": "3.3.1",
+          "front": "What is phase difference?",
+          "back": "The difference in position within an oscillation cycle.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_037",
+          "topic": "Waves",
+          "specRef": "3.3.1",
+          "front": "What phase difference is half a cycle?",
+          "back": "π radians or 180°.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_048",
+          "topic": "Waves",
+          "specRef": "3.3.1",
+          "front": "For a string fixed at both ends, what is the first-harmonic wavelength?",
+          "back": "Twice the vibrating length, λ = 2L.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Diffraction interference and gratings",
+      "allMockEvidence": 73,
+      "originalCoreEvidence": 43,
+      "remainingUncalibratedCore": 36,
+      "reviewedSample": [
+        {
+          "id": "phy_pandr_v29_rings_acceleration",
+          "topic": "Wave-particle duality",
+          "specRef": "",
+          "front": "Why do electron diffraction rings shrink as accelerating voltage rises?",
+          "back": "Electrons gain momentum, λ = h/p falls, and diffraction angles decrease.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_054",
+          "topic": "Interference",
+          "specRef": "3.3.2",
+          "front": "What is fringe spacing?",
+          "back": "Distance between adjacent bright fringes or adjacent dark fringes.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_055",
+          "topic": "Interference",
+          "specRef": "3.3.2",
+          "front": "What happens to fringe spacing if the double-slit separation increases?",
+          "back": "It decreases.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_056",
+          "topic": "Interference",
+          "specRef": "3.3.2",
+          "front": "What happens to fringe spacing if the screen distance increases?",
+          "back": "It increases.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_057",
+          "topic": "Interference",
+          "specRef": "3.3.2",
+          "front": "Why is the central white-light double-slit fringe white?",
+          "back": "All wavelengths have zero path difference there.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Stationary waves and harmonics",
+      "allMockEvidence": 56,
+      "originalCoreEvidence": 29,
+      "remainingUncalibratedCore": 22,
+      "reviewedSample": [
+        {
+          "id": "task1_phy_046",
+          "topic": "Waves",
+          "specRef": "3.3.1",
+          "front": "How do stationary waves form?",
+          "back": "Two coherent waves travel in opposite directions and superpose.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_047",
+          "topic": "Waves",
+          "specRef": "3.3.1",
+          "front": "How far apart are adjacent stationary-wave nodes?",
+          "back": "Half a wavelength, λ/2.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_062",
+          "topic": "Refraction",
+          "specRef": "3.3.2.3",
+          "front": "Which wave property stays unchanged across a stationary boundary?",
+          "back": "Frequency.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_practical_001",
+          "topic": "RP1 Stationary waves",
+          "specRef": "3.3.1 RP1",
+          "front": "In string-wave RP1, what controls the fundamental frequency?",
+          "back": "Vibrating length, tension and mass per unit length.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_practical_002",
+          "topic": "RP1 Stationary waves",
+          "specRef": "3.3.1 RP1",
+          "front": "What relation can be tested by plotting f² against tension?",
+          "back": "A straight line at fixed length and mass per unit length.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Refraction and optical fibres",
+      "allMockEvidence": 63,
+      "originalCoreEvidence": 26,
+      "remainingUncalibratedCore": 21,
+      "reviewedSample": [
+        {
+          "id": "task1_phy_061",
+          "topic": "Refraction",
+          "specRef": "3.3.2.3",
+          "front": "What is refractive index?",
+          "back": "n = c/v for light in the medium.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_064",
+          "topic": "Refraction",
+          "specRef": "3.3.2.3",
+          "front": "When can total internal reflection occur?",
+          "back": "Light travels from higher to lower refractive index.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_066",
+          "topic": "Refraction",
+          "specRef": "3.3.2.3",
+          "front": "What causes an optical fibre to guide light?",
+          "back": "Total internal reflection at its boundary.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_063",
+          "topic": "Refraction",
+          "specRef": "3.3.2.3",
+          "front": "What happens to light wavelength on entering a higher-index medium?",
+          "back": "It decreases.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_phy_065",
+          "topic": "Refraction",
+          "specRef": "3.3.2.3",
+          "front": "What is the critical-angle equation for air outside a material?",
+          "back": "sin c = 1/n.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Photoelectric effect",
+      "allMockEvidence": 38,
+      "originalCoreEvidence": 30,
+      "remainingUncalibratedCore": 14,
+      "reviewedSample": [
+        {
+          "id": "phy_pandr_v29_instant_emission",
+          "topic": "Photoelectric effect",
+          "specRef": "3.2.2.1",
+          "front": "Why is photoelectric emission effectively immediate above threshold?",
+          "back": "One photon transfers its energy to one electron in one interaction.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_spectra_photo_v32_classical_failure",
+          "topic": "Photoelectric effect",
+          "specRef": "3.2.2.1",
+          "front": "Why does the photoelectric effect contradict the simple classical wave model?",
+          "back": "Emission has a threshold frequency and no significant delay above it, even at low intensity.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_spectra_photo_v32_max_speed",
+          "topic": "Photoelectric effect",
+          "specRef": "3.2.2.1",
+          "front": "How do you calculate the maximum speed of emitted photoelectrons?",
+          "back": "Find Eₖ(max) = hf − φ in joules, then use vₘₐₓ = √(2Eₖ(max)/mₑ).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_pandr_v29_kef_gradient",
+          "topic": "Photoelectric effect",
+          "specRef": "3.2.2.1",
+          "front": "What is the gradient of a graph of maximum photoelectron KE against frequency?",
+          "back": "Planck constant, h.",
+          "accepted": 4,
+          "rejected": 0
+        },
+        {
+          "id": "phy_pandr_v29_sketch_photoelectric",
+          "topic": "Particle diagrams",
+          "specRef": "",
+          "front": "How much energy does one photon transfer to one electron in the photoelectric effect?",
+          "back": "hf.",
+          "accepted": 4,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Particles quarks and interactions",
+      "allMockEvidence": 80,
+      "originalCoreEvidence": 55,
+      "remainingUncalibratedCore": 44,
+      "reviewedSample": [
+        {
+          "id": "phy_antiparticle",
+          "topic": "Particles",
+          "specRef": "",
+          "front": "How does an antiparticle compare with its particle?",
+          "back": "Same mass and rest energy, but opposite charge and other additive quantum numbers.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_baryon_meson",
+          "topic": "Particles",
+          "specRef": "",
+          "front": "How do baryons and mesons differ?",
+          "back": "Baryons contain three quarks; mesons contain a quark and an antiquark.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_pandr_v29_antizero_structure",
+          "topic": "Pions and kaons",
+          "specRef": "",
+          "front": "What is the quark–antiquark content of anti-K⁰?",
+          "back": "s + anti-d.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_pandr_v29_baryon_definition",
+          "topic": "Particle classifications",
+          "specRef": "",
+          "front": "Define a baryon.",
+          "back": "A hadron made from three quarks; an antibaryon has three antiquarks.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "phy_pandr_v29_baryon_stability",
+          "topic": "Particle classifications",
+          "specRef": "",
+          "front": "Which baryon is stable in the AQA particle classification?",
+          "back": "The proton; other baryons eventually decay.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "topic": "Electricity and potential dividers",
+      "allMockEvidence": 83,
+      "originalCoreEvidence": 51,
+      "remainingUncalibratedCore": 42,
+      "reviewedSample": [
+        {
+          "id": "task1_phy_008",
+          "topic": "Measurements",
+          "specRef": "3.1.1",
+          "front": "What is the derived SI unit of resistivity?",
+          "back": "Ohm metre (Ω m).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_practical_012",
+          "topic": "RP6 EMF/internal resistance",
+          "specRef": "3.5.1 RP6",
+          "front": "Which graph is used to find a cell's emf and internal resistance?",
+          "back": "Terminal p.d. V against current I.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_practical_010",
+          "topic": "RP5 Resistivity",
+          "specRef": "3.5.1 RP5",
+          "front": "How is wire cross-sectional area obtained from diameter d?",
+          "back": "A = πd²/4.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_practical_011",
+          "topic": "RP5 Resistivity",
+          "specRef": "3.5.1 RP5",
+          "front": "What does the gradient of resistance against wire length give?",
+          "back": "ρ/A, for a wire of constant cross-section.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_practical_013",
+          "topic": "RP6 EMF/internal resistance",
+          "specRef": "3.5.1 RP6",
+          "front": "Why should current not be left flowing unnecessarily in a cell experiment?",
+          "back": "Heating and changing cell conditions can alter measurements.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Atomic structure isotopes mass spectra",
+      "allMockEvidence": 72,
+      "originalCoreEvidence": 39,
+      "remainingUncalibratedCore": 32,
+      "reviewedSample": [
+        {
+          "id": "chem_atomic_v43_06",
+          "topic": "Atomic structure",
+          "specRef": "",
+          "front": "How many electrons are in a 3+ ion formed from Z=13?",
+          "back": "13−3 = 10 electrons; the nucleus is unchanged.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_08",
+          "topic": "Atomic structure",
+          "specRef": "",
+          "front": "Why do isotopes often have similar chemical properties?",
+          "back": "They have the same electron arrangements despite differing neutron numbers.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_11",
+          "topic": "Atomic structure",
+          "specRef": "",
+          "front": "How do you calculate Ar from two isotope abundances?",
+          "back": "(isotope mass₁×abundance₁ + mass₂×abundance₂) ÷ total abundance.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_12",
+          "topic": "Atomic structure",
+          "specRef": "",
+          "front": "Why is Ar of an isotope mixture a weighted mean?",
+          "back": "More abundant isotopes contribute more to the average mass.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_15",
+          "topic": "Mass spectrometry",
+          "specRef": "3.1.1.2",
+          "front": "What is the purpose of ionisation in TOF?",
+          "back": "To give sample particles an electrical charge so they can be accelerated and detected.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Electron configuration and ionisation",
+      "allMockEvidence": 83,
+      "originalCoreEvidence": 61,
+      "remainingUncalibratedCore": 55,
+      "reviewedSample": [
+        {
+          "id": "chem_atomic_v43_16",
+          "topic": "Mass spectrometry",
+          "specRef": "3.1.1.2",
+          "front": "What is formed by electron-impact ionisation of X(g)?",
+          "back": "X⁺(g), after an electron is removed.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_39",
+          "topic": "Ionisation energy",
+          "specRef": "3.1.1.3",
+          "front": "Write the first ionisation equation for magnesium.",
+          "back": "Mg(g) → Mg⁺(g) + e⁻.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_40",
+          "topic": "Ionisation energy",
+          "specRef": "3.1.1.3",
+          "front": "Write the second ionisation equation for magnesium.",
+          "back": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_41",
+          "topic": "Ionisation energy",
+          "specRef": "3.1.1.3",
+          "front": "Why do successive ionisation energies increase?",
+          "back": "Each electron is removed from an increasingly positive ion.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_atomic_v43_47",
+          "topic": "Ionisation energy",
+          "specRef": "3.1.1.3",
+          "front": "How many electrons can an s, p and d subshell hold?",
+          "back": "s: 2; p: 6; d: 10.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Amount calculations and titration",
+      "allMockEvidence": 272,
+      "originalCoreEvidence": 234,
+      "remainingUncalibratedCore": 152,
+      "reviewedSample": [
+        {
+          "id": "chem_amount_v44_01",
+          "topic": "Empirical formula",
+          "specRef": "",
+          "front": "What is the difference between empirical and molecular formula?",
+          "back": "Empirical: simplest atom ratio. Molecular: actual atoms per molecule.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_amount_v44_02",
+          "topic": "Empirical formula",
+          "specRef": "",
+          "front": "How should percentages be treated when calculating empirical formula?",
+          "back": "Assume a 100 g sample; percentage values become gram masses.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_amount_v44_03",
+          "topic": "Empirical formula",
+          "specRef": "",
+          "front": "What are the three stages of empirical formula calculation?",
+          "back": "Divide element masses by Ar; divide moles by smallest; find integer ratio.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_amount_v44_05",
+          "topic": "Empirical formula",
+          "specRef": "",
+          "front": "How is molecular formula calculated from empirical formula?",
+          "back": "Find empirical-formula Mr, divide molecular Mr by it, multiply subscripts.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_amount_v44_11",
+          "topic": "Ideal gas equation",
+          "specRef": "",
+          "front": "How do you calculate molar mass of an unknown gas from mass and gas data?",
+          "back": "First n=pV/(RT), then molar mass M=m/n.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Shapes covalent and ionic bonding",
+      "allMockEvidence": 125,
+      "originalCoreEvidence": 98,
+      "remainingUncalibratedCore": 44,
+      "reviewedSample": [
+        {
+          "id": "chem_bonding_v47_01",
+          "topic": "Bonding",
+          "specRef": "",
+          "front": "State the complete definition of ionic bonding.",
+          "back": "Strong electrostatic attraction between oppositely charged ions in a lattice.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_10",
+          "topic": "Bonding",
+          "specRef": "",
+          "front": "Define a single covalent bond accurately.",
+          "back": "One electron pair shared between atoms and attracted to both nuclei.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_11",
+          "topic": "Bonding",
+          "specRef": "",
+          "front": "How many shared pairs are in a double and a triple covalent bond?",
+          "back": "Two and three shared electron pairs respectively.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_12",
+          "topic": "Bonding",
+          "specRef": "",
+          "front": "What is a coordinate or dative covalent bond?",
+          "back": "A shared pair where both electrons originate from one atom.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_15",
+          "topic": "Bonding",
+          "specRef": "",
+          "front": "Which species donates the lone pair in NH₃→BF₃?",
+          "back": "The nitrogen atom in NH₃ donates to electron-deficient boron in BF₃.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Intermolecular forces and structure",
+      "allMockEvidence": 79,
+      "originalCoreEvidence": 67,
+      "remainingUncalibratedCore": 40,
+      "reviewedSample": [
+        {
+          "id": "chem_bonding_v47_27",
+          "topic": "Crystal structures",
+          "specRef": "3.1.3.4",
+          "front": "How many covalent bonds does each carbon make in diamond?",
+          "back": "Four, in a three-dimensional tetrahedral network.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_28",
+          "topic": "Crystal structures",
+          "specRef": "3.1.3.4",
+          "front": "Why does diamond have an extremely high melting point?",
+          "back": "Many strong covalent C–C bonds throughout the giant lattice must be broken.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_29",
+          "topic": "Crystal structures",
+          "specRef": "3.1.3.4",
+          "front": "Why does diamond not conduct electricity?",
+          "back": "No mobile ions or delocalised electrons are available.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_30",
+          "topic": "Crystal structures",
+          "specRef": "3.1.3.4",
+          "front": "What does graphite's bonding look like?",
+          "back": "Each C forms three covalent bonds in layers of hexagonal rings; one electron is delocalised.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bonding_v47_31",
+          "topic": "Crystal structures",
+          "specRef": "3.1.3.4",
+          "front": "Why can graphite conduct along its layers?",
+          "back": "Delocalised electrons move through the layers.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Calorimetry and enthalpy",
+      "allMockEvidence": 190,
+      "originalCoreEvidence": 154,
+      "remainingUncalibratedCore": 130,
+      "reviewedSample": [
+        {
+          "id": "chem_bh_defs_20261024_atomisation_def",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define enthalpy of atomisation.",
+          "back": "The enthalpy change when 1 mole of gaseous atoms forms from an element in its standard state.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bh_defs_20261024_hydration_def",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define enthalpy of hydration.",
+          "back": "The enthalpy change when 1 mole of gaseous ions becomes hydrated, forming aqueous ions.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bh_defs_20261024_latt_formation_def",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define lattice enthalpy of formation.",
+          "back": "The enthalpy change when 1 mole of a solid ionic compound is formed from its constituent gaseous ions.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bh_defs_20261024_solution_def",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define enthalpy of solution.",
+          "back": "The enthalpy change when 1 mole of solute dissolves in enough solvent to form an infinitely dilute solution.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bh_defs_20261024_standard_formation_def",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define standard enthalpy of formation.",
+          "back": "The enthalpy change when 1 mole of compound forms from its constituent elements in their standard states under standard conditions.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Hess cycles and bond enthalpy",
+      "allMockEvidence": 51,
+      "originalCoreEvidence": 48,
+      "remainingUncalibratedCore": 44,
+      "reviewedSample": [
+        {
+          "id": "chem_energetics_v49_38",
+          "topic": "Hess's law",
+          "specRef": "3.1.4.3",
+          "front": "State Hess's law.",
+          "back": "Overall enthalpy change is independent of pathway if start/end states match.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v49_40",
+          "topic": "Hess's law",
+          "specRef": "3.1.4.3",
+          "front": "What is the combustion-enthalpy Hess calculation?",
+          "back": "Sum combustion enthalpies of reactants minus those of products.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v49_41",
+          "topic": "Hess's law",
+          "specRef": "3.1.4.3",
+          "front": "Why do equation coefficients matter in Hess calculations?",
+          "back": "Multiply each substance's molar enthalpy by its stoichiometric coefficient.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v49_42",
+          "topic": "Hess's law",
+          "specRef": "3.1.4.3",
+          "front": "What happens to a Hess enthalpy when an equation is reversed?",
+          "back": "Change the sign.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v49_43",
+          "topic": "Hess's law",
+          "specRef": "3.1.4.3",
+          "front": "What happens to a Hess enthalpy when the equation is halved?",
+          "back": "Halve the ΔH value.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Group 2 and group 7",
+      "allMockEvidence": 236,
+      "originalCoreEvidence": 195,
+      "remainingUncalibratedCore": 180,
+      "reviewedSample": [
+        {
+          "id": "chem_atomic_v43_46",
+          "topic": "Ionisation energy",
+          "specRef": "3.1.1.3",
+          "front": "Why does first IE fall down Group 2?",
+          "back": "Outer electrons are farther away and more shielded, despite a larger nuclear charge.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_079",
+          "topic": "Group 2",
+          "specRef": "3.2.2",
+          "front": "How does first ionisation energy change down Group 2?",
+          "back": "It decreases.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_082",
+          "topic": "Group 2",
+          "specRef": "3.2.2",
+          "front": "What forms when a Group 2 metal reacts with water?",
+          "back": "A metal hydroxide and hydrogen.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_083",
+          "topic": "Group 2",
+          "specRef": "3.2.2",
+          "front": "What is the trend in Group 2 hydroxide solubility?",
+          "back": "Solubility increases down the group.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_084",
+          "topic": "Group 2",
+          "specRef": "3.2.2",
+          "front": "What is the trend in Group 2 sulfate solubility?",
+          "back": "Solubility decreases down the group.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Inorganic tests and observations",
+      "allMockEvidence": 52,
+      "originalCoreEvidence": 37,
+      "remainingUncalibratedCore": 26,
+      "reviewedSample": [
+        {
+          "id": "chem_amount_v44_24",
+          "topic": "Amount of substance",
+          "specRef": "",
+          "front": "Write the net ionic equation for barium sulfate precipitation.",
+          "back": "Ba²⁺(aq)+SO₄²⁻(aq)→BaSO₄(s).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_099",
+          "topic": "Group 7",
+          "specRef": "3.2.3",
+          "front": "What colour precipitate indicates chloride with silver ions?",
+          "back": "White (AgCl).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_100",
+          "topic": "Group 7",
+          "specRef": "3.2.3",
+          "front": "What colour precipitate indicates bromide with silver ions?",
+          "back": "Cream (AgBr).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_101",
+          "topic": "Group 7",
+          "specRef": "3.2.3",
+          "front": "What colour precipitate indicates iodide with silver ions?",
+          "back": "Yellow (AgI).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_157",
+          "topic": "Organic analysis",
+          "specRef": "3.3.6",
+          "front": "What is the purpose of a chemical test for an organic group?",
+          "back": "To identify a functional group by a characteristic observation.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Rates and initial rates",
+      "allMockEvidence": 114,
+      "originalCoreEvidence": 85,
+      "remainingUncalibratedCore": 83,
+      "reviewedSample": [
+        {
+          "id": "chem_k_units",
+          "topic": "Rate equations",
+          "specRef": "",
+          "front": "How do you determine units of the rate constant k?",
+          "back": "Rearrange the rate equation and substitute the units of rate and concentration.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_rate_recap_20261024_clock",
+          "topic": "Rate equations",
+          "specRef": "",
+          "front": "When may initial rate be taken as proportional to 1/time?",
+          "back": "When each trial reaches the same small reaction extent at its timed endpoint.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_rates_001",
+          "topic": "Rate equations",
+          "specRef": "",
+          "front": "What does the overall order of a rate equation mean?",
+          "back": "It is the sum of the powers of all concentration terms in the experimentally determined rate equation.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_166",
+          "topic": "Rate equations",
+          "specRef": "3.1.9",
+          "front": "What is a rate equation?",
+          "back": "An experimentally determined relationship between rate and reactant concentrations.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_170",
+          "topic": "Rate equations",
+          "specRef": "3.1.9",
+          "front": "What does the rate constant k depend on?",
+          "back": "Temperature, and any catalyst present.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Arrhenius activation energy",
+      "allMockEvidence": 35,
+      "originalCoreEvidence": 26,
+      "remainingUncalibratedCore": 18,
+      "reviewedSample": [
+        {
+          "id": "chem_arrhenius_001",
+          "topic": "Arrhenius",
+          "specRef": "",
+          "front": "For a graph of ln k against 1/T, what are the gradient and y-intercept?",
+          "back": "Gradient = −Ea/R. y-intercept = ln A. Temperature must be in kelvin.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_arrhenius_002",
+          "topic": "Arrhenius",
+          "specRef": "",
+          "front": "How do you calculate Ea from the gradient of ln k against 1/T?",
+          "back": "Ea = −gradient × R. Convert J mol⁻¹ to kJ mol⁻¹ at the end if required.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v49_06",
+          "topic": "Energetics",
+          "specRef": "",
+          "front": "Does an exothermic reaction necessarily have zero activation energy?",
+          "back": "No; activation energy is a barrier, not the reaction's enthalpy change.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_047",
+          "topic": "Kinetics",
+          "specRef": "3.1.5",
+          "front": "What does a catalyst do to activation energy?",
+          "back": "It provides an alternative route with lower activation energy.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_173",
+          "topic": "Rate equations",
+          "specRef": "3.1.9",
+          "front": "What is the Arrhenius plot gradient for ln k against 1/T?",
+          "back": "−Ea/R.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Kp gaseous equilibrium",
+      "allMockEvidence": 49,
+      "originalCoreEvidence": 29,
+      "remainingUncalibratedCore": 25,
+      "reviewedSample": [
+        {
+          "id": "chem_kp_001",
+          "topic": "Kp",
+          "specRef": "",
+          "front": "What goes into a Kp expression?",
+          "back": "Partial pressures of gaseous equilibrium species, each raised to its stoichiometric coefficient.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_kp_pressure",
+          "topic": "Kp",
+          "specRef": "",
+          "front": "Does changing total pressure at constant temperature change Kp?",
+          "back": "No. It may change equilibrium position, but Kp itself is unchanged at fixed temperature.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_kp_recap_20261024_definition",
+          "topic": "Kp",
+          "specRef": "",
+          "front": "Define Kp for a homogeneous gaseous equilibrium.",
+          "back": "The equilibrium constant expressed using the equilibrium partial pressures of the gases, at a fixed temperature.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_kp_recap_20261024_kp_nh3",
+          "topic": "Kp",
+          "specRef": "",
+          "front": "Write Kp for N₂(g) + 3H₂(g) ⇌ 2NH₃(g).",
+          "back": "Kp = p(NH₃)² ÷ [p(N₂) × p(H₂)³]. Use equilibrium partial pressures.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_kp_recap_20261024_kp_unitless",
+          "topic": "Kp",
+          "specRef": "",
+          "front": "When do the pressure units of Kp cancel?",
+          "back": "When the total gaseous coefficients are equal on both sides, so Δn = 0.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Born Haber and lattice enthalpy",
+      "allMockEvidence": 70,
+      "originalCoreEvidence": 49,
+      "remainingUncalibratedCore": 49,
+      "reviewedSample": [
+        {
+          "id": "chem_bh_defs_20261024_first_ionisation_bh",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "In a Born–Haber cycle, define first ionisation energy.",
+          "back": "Energy required to remove 1 mole of electrons from 1 mole of gaseous atoms, forming gaseous 1+ ions.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_lattice_diss",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define lattice dissociation enthalpy.",
+          "back": "The enthalpy change when 1 mole of an ionic solid is completely separated into its constituent gaseous ions.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_lattice_form",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "How is lattice formation enthalpy related to lattice dissociation enthalpy?",
+          "back": "Same magnitude, opposite sign.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bh_defs_20261024_ionic_lattice",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "What is an ionic lattice?",
+          "back": "A giant 3D repeating arrangement of oppositely charged ions held by electrostatic attractions.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_bh_defs_20261024_second_ea_def",
+          "topic": "Born–Haber cycles",
+          "specRef": "",
+          "front": "Define second electron affinity.",
+          "back": "The enthalpy change when 1 mole of gaseous 1− ions each gains an electron, forming gaseous 2− ions.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Entropy and Gibbs free energy",
+      "allMockEvidence": 55,
+      "originalCoreEvidence": 33,
+      "remainingUncalibratedCore": 31,
+      "reviewedSample": [
+        {
+          "id": "chem_entropy",
+          "topic": "Entropy",
+          "specRef": "",
+          "front": "When does entropy usually increase?",
+          "back": "When particles become more dispersed/disordered, especially when more gas particles are formed.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_entropy_gibbs_recap_20261024_catalyst_gibbs",
+          "topic": "Gibbs free energy",
+          "specRef": "",
+          "front": "Does a catalyst change ΔG or thermodynamic feasibility?",
+          "back": "No. A catalyst lowers activation energy and increases rate; it does not change ΔG for the overall reaction.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_entropy_gibbs_recap_20261024_entropy_temp_effect",
+          "topic": "Gibbs free energy",
+          "specRef": "",
+          "front": "How does increasing T affect ΔG when ΔS is positive versus negative?",
+          "back": "For ΔS > 0, ΔG decreases (more favourable). For ΔS < 0, ΔG increases (less favourable).",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_entropy_gibbs_recap_20261024_negative_not_fast",
+          "topic": "Gibbs free energy",
+          "specRef": "",
+          "front": "Why does negative ΔG not guarantee a rapid reaction?",
+          "back": "ΔG predicts thermodynamic feasibility, not rate. A high activation energy can make the reaction very slow.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_gibbs_001",
+          "topic": "Gibbs free energy",
+          "specRef": "",
+          "front": "State the Gibbs free-energy equation and the unit rule.",
+          "back": "ΔG = ΔH − TΔS. T in K; use matching energy units for ΔH and TΔS (convert J to kJ if needed).",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Strong weak acids pH Ka Kw",
+      "allMockEvidence": 44,
+      "originalCoreEvidence": 40,
+      "remainingUncalibratedCore": 36,
+      "reviewedSample": [
+        {
+          "id": "task1_chem_179",
+          "topic": "Acids and bases",
+          "specRef": "3.1.12",
+          "front": "What is Ka?",
+          "back": "The acid dissociation equilibrium constant.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_180",
+          "topic": "Acids and bases",
+          "specRef": "3.1.12",
+          "front": "What does a larger Ka usually indicate?",
+          "back": "A stronger weak acid.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_183",
+          "topic": "Acids and bases",
+          "specRef": "3.1.12",
+          "front": "At 25 °C, what is Kw?",
+          "back": "1.0 × 10⁻¹⁴ mol² dm⁻⁶.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_carboxy_acid",
+          "topic": "Carboxylic acids",
+          "specRef": "",
+          "front": "Why are carboxylic acids weak acids?",
+          "back": "They only partially dissociate in water.",
+          "accepted": 4,
+          "rejected": 0
+        },
+        {
+          "id": "chem_ka",
+          "topic": "Acids and bases",
+          "specRef": "",
+          "front": "Write the Ka expression for HA ⇌ H⁺ + A⁻.",
+          "back": "Ka = [H⁺][A⁻]/[HA].",
+          "accepted": 2,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Halogenoalkane substitution elimination",
+      "allMockEvidence": 54,
+      "originalCoreEvidence": 54,
+      "remainingUncalibratedCore": 44,
+      "reviewedSample": [
+        {
+          "id": "chem_mechanisms_v42_18",
+          "topic": "Alcohols",
+          "specRef": "",
+          "front": "How can proton transfer assist an alcohol elimination mechanism?",
+          "back": "It changes –OH to a better leaving group and permits catalyst regeneration.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_128",
+          "topic": "Halogenoalkanes",
+          "specRef": "3.3.3",
+          "front": "What bond property makes halogenoalkanes reactive?",
+          "back": "The C–halogen bond is polar.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_129",
+          "topic": "Halogenoalkanes",
+          "specRef": "3.3.3",
+          "front": "What is nucleophilic substitution?",
+          "back": "A nucleophile replaces another atom or group.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_132",
+          "topic": "Halogenoalkanes",
+          "specRef": "3.3.3",
+          "front": "What happens in elimination from a halogenoalkane?",
+          "back": "H and a halogen leave, creating a C=C bond.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_133",
+          "topic": "Halogenoalkanes",
+          "specRef": "3.3.3",
+          "front": "What is the main type of product from nucleophilic substitution by OH⁻?",
+          "back": "An alcohol.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Alcohol oxidation and dehydration",
+      "allMockEvidence": 109,
+      "originalCoreEvidence": 94,
+      "remainingUncalibratedCore": 63,
+      "reviewedSample": [
+        {
+          "id": "chem_mechanisms_v42_19",
+          "topic": "Alcohols",
+          "specRef": "",
+          "front": "What distinguishes hydration from dehydration?",
+          "back": "Hydration adds water; dehydration removes it.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_063",
+          "topic": "Redox",
+          "specRef": "3.1.7",
+          "front": "What is an oxidising agent?",
+          "back": "Species that accepts electrons and is reduced.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_095",
+          "topic": "Group 7",
+          "specRef": "3.2.3",
+          "front": "Which is the stronger oxidising agent: chlorine or bromine?",
+          "back": "Chlorine.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_096",
+          "topic": "Group 7",
+          "specRef": "3.2.3",
+          "front": "How does oxidising strength change down Group 7?",
+          "back": "It decreases.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_145",
+          "topic": "Alcohols",
+          "specRef": "3.3.5",
+          "front": "What group identifies an alcohol?",
+          "back": "Hydroxyl, –OH.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Optical isomerism and chirality",
+      "allMockEvidence": 16,
+      "originalCoreEvidence": 15,
+      "remainingUncalibratedCore": 15,
+      "reviewedSample": [
+        {
+          "id": "chem_mechanisms_v42_26",
+          "topic": "Aldehydes and ketones",
+          "specRef": "",
+          "front": "Why can some carbonyl additions create enantiomer pairs?",
+          "back": "Attack from opposite faces of the planar carbonyl creates different configurations.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_mechanisms_v42_27",
+          "topic": "Optical isomerism",
+          "specRef": "",
+          "front": "What is required for a common chiral carbon centre?",
+          "back": "Four different substituent groups.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_mechanisms_v42_28",
+          "topic": "Optical isomerism",
+          "specRef": "",
+          "front": "Why does a racemic mixture give no net optical rotation?",
+          "back": "The enantiomers' rotations cancel.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_optical",
+          "topic": "Optical isomerism",
+          "specRef": "",
+          "front": "What causes optical isomerism?",
+          "back": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_199",
+          "topic": "Optical isomerism",
+          "specRef": "3.3.7",
+          "front": "What is a chiral centre?",
+          "back": "Usually a carbon bonded to four different groups.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Aldehydes ketones carbonyl tests",
+      "allMockEvidence": 75,
+      "originalCoreEvidence": 62,
+      "remainingUncalibratedCore": 47,
+      "reviewedSample": [
+        {
+          "id": "chem_mechanisms_v42_20",
+          "topic": "Aldehydes and ketones",
+          "specRef": "",
+          "front": "Why are carbonyl compounds attacked at carbon?",
+          "back": "Their C=O bond is polar, with carbon δ+.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_203",
+          "topic": "Aldehydes and ketones",
+          "specRef": "3.3.8",
+          "front": "What is the functional group in an aldehyde?",
+          "back": "Terminal carbonyl group, –CHO.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_204",
+          "topic": "Aldehydes and ketones",
+          "specRef": "3.3.8",
+          "front": "What is the functional group in a ketone?",
+          "back": "Carbonyl group between two carbon atoms.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_205",
+          "topic": "Aldehydes and ketones",
+          "specRef": "3.3.8",
+          "front": "What forms when a ketone is reduced?",
+          "back": "A secondary alcohol.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_chem_206",
+          "topic": "Aldehydes and ketones",
+          "specRef": "3.3.8",
+          "front": "What forms when an aldehyde is reduced?",
+          "back": "A primary alcohol.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Carboxylic acids esters and acyl",
+      "allMockEvidence": 112,
+      "originalCoreEvidence": 101,
+      "remainingUncalibratedCore": 62,
+      "reviewedSample": [
+        {
+          "id": "chem_esterification",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "What are the reagents and catalyst for esterification?",
+          "back": "A carboxylic acid + alcohol, with concentrated H₂SO₄ catalyst and heat/reflux.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_002",
+          "topic": "Carboxylic acids",
+          "specRef": "",
+          "front": "Why is a carboxylic acid described as weak?",
+          "back": "Only a fraction of its molecules dissociate into ions in water.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_003",
+          "topic": "Carboxylic acids",
+          "specRef": "",
+          "front": "Why do carboxylic acids react with carbonates?",
+          "back": "Their acidic protons react with carbonate ions, releasing carbon dioxide.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_005",
+          "topic": "Carboxylic acids",
+          "specRef": "",
+          "front": "What numbering rule applies when naming a carboxylic acid?",
+          "back": "The carbon in –COOH is carbon number 1.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_006",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "What is the ester functional group?",
+          "back": "R–C(=O)–O–R′.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Amines amides and acylation",
+      "allMockEvidence": 45,
+      "originalCoreEvidence": 43,
+      "remainingUncalibratedCore": 10,
+      "reviewedSample": [
+        {
+          "id": "task1_chem_213",
+          "topic": "Carboxylic acids",
+          "specRef": "3.3.9",
+          "front": "What does an acyl chloride contain?",
+          "back": "The –COCl functional group.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_acyl_chloride_ammonia",
+          "topic": "Acyl chlorides",
+          "specRef": "",
+          "front": "What organic product is formed when an acyl chloride reacts with ammonia?",
+          "back": "A primary amide.",
+          "accepted": 3,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_chem_214",
+          "topic": "Carboxylic acids and derivatives",
+          "specRef": "3.3.9",
+          "front": "What acyl product forms when an acyl chloride reacts with ammonia?",
+          "back": "A primary amide.",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_chem_215",
+          "topic": "Carboxylic acids and derivatives",
+          "specRef": "3.3.9",
+          "front": "What acyl product forms when an acyl chloride reacts with a primary amine?",
+          "back": "An N-substituted amide.",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_chem_216",
+          "topic": "Carboxylic acids and derivatives",
+          "specRef": "3.3.9",
+          "front": "Why are acyl chlorides more reactive than amides?",
+          "back": "Chloride is a much better leaving group.",
+          "accepted": 2,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Biodiesel triglycerides saponification",
+      "allMockEvidence": 16,
+      "originalCoreEvidence": 13,
+      "remainingUncalibratedCore": 12,
+      "reviewedSample": [
+        {
+          "id": "chem_spec_v40_016",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "Which acid-derived groups are joined to glycerol in a triglyceride?",
+          "back": "Three long-chain fatty acid residues.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_017",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "Can a triglyceride contain three different fatty acids?",
+          "back": "Yes. The three long chains need not be identical.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_018",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "What is saponification?",
+          "back": "Alkaline hydrolysis of fats or oils.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_019",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "What are the main products of triglyceride saponification?",
+          "back": "Soap (long-chain carboxylate salts) and glycerol.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_spec_v40_020",
+          "topic": "Esters",
+          "specRef": "",
+          "front": "Why does soap clean oily substances?",
+          "back": "Its non-polar tail interacts with oil and its ionic head with water.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "topic": "Chemistry required practical accuracy",
+      "allMockEvidence": 122,
+      "originalCoreEvidence": 99,
+      "remainingUncalibratedCore": 92,
+      "reviewedSample": [
+        {
+          "id": "chem_amount_v44_33",
+          "topic": "Titration calculations",
+          "specRef": "",
+          "front": "Why are two burette readings included in uncertainty?",
+          "back": "A titre is a difference; uncertainty arises from both final and initial readings.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_amount_v44_34",
+          "topic": "Titration calculations",
+          "specRef": "",
+          "front": "How is percentage titre uncertainty found?",
+          "back": "Absolute titre uncertainty ÷ titre ×100.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_amount_v44_39",
+          "topic": "RP1 Titration",
+          "specRef": "",
+          "front": "Why can distilled water be added to the conical flask during a titration?",
+          "back": "It changes concentration but not the number of moles being titrated.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v49_60",
+          "topic": "RP2 Enthalpy",
+          "specRef": "3.1.4.2",
+          "front": "What is AQA Required Practical 2 about?",
+          "back": "Measuring an enthalpy change using calorimetry.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "chem_energetics_v51_01",
+          "topic": "RP2 Enthalpy",
+          "specRef": "3.1.4.2",
+          "front": "A thermometer is ±0.1°C per reading. What is the uncertainty in ΔT?",
+          "back": "±0.2°C: add the absolute uncertainties of initial and final readings.",
+          "accepted": 0,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Proof including divisibility counterexample",
+      "allMockEvidence": 42,
+      "originalCoreEvidence": 6,
+      "remainingUncalibratedCore": 0,
+      "reviewedSample": []
+    },
+    {
+      "subject": "Maths",
+      "topic": "Functions inequalities transformations",
+      "allMockEvidence": 89,
+      "originalCoreEvidence": 32,
+      "remainingUncalibratedCore": 11,
+      "reviewedSample": [
+        {
+          "id": "math_exp_inverse",
+          "topic": "Exponentials and logs",
+          "specRef": "",
+          "front": "What functions are inverses of each other?",
+          "back": "y=eˣ and y=ln x.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_maths_007",
+          "topic": "Functions",
+          "specRef": "3.3",
+          "front": "What is the domain of a function?",
+          "back": "Its permitted input values.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_maths_008",
+          "topic": "Functions",
+          "specRef": "3.3",
+          "front": "What is the range of a function?",
+          "back": "Its possible output values.",
+          "accepted": 0,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_math_002",
+          "topic": "Functions",
+          "specRef": "3.3",
+          "front": "What is the domain of f(x) = √x over the real numbers?",
+          "back": "x ≥ 0.",
+          "accepted": 6,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v124_bulk_math_003",
+          "topic": "Functions",
+          "specRef": "3.3",
+          "front": "What is the domain of f(x) = 1/(x−2)?",
+          "back": "All real x except x = 2.",
+          "accepted": 3,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Coordinate geometry and circles",
+      "allMockEvidence": 36,
+      "originalCoreEvidence": 11,
+      "remainingUncalibratedCore": 5,
+      "reviewedSample": [
+        {
+          "id": "math_perp_grad",
+          "topic": "Coordinate geometry",
+          "specRef": "",
+          "front": "How are gradients of perpendicular non-vertical lines related?",
+          "back": "m₁m₂ = −1.",
+          "accepted": 3,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v136_006",
+          "topic": "Coordinate geometry",
+          "specRef": "3.4",
+          "front": "State the point–gradient form of a straight-line equation.",
+          "back": "y − y₁ = m(x − x₁).",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "v33_card_maths_coordinate_geometry_86",
+          "topic": "Coordinate geometry",
+          "specRef": "",
+          "front": "How are gradients of two nonvertical perpendicular lines related?",
+          "back": "Their gradients multiply to −1.",
+          "accepted": 3,
+          "rejected": 0
+        },
+        {
+          "id": "math_line_gradient",
+          "topic": "Coordinate geometry",
+          "specRef": "",
+          "front": "What is the gradient between (x₁,y₁) and (x₂,y₂)?",
+          "back": "m=(y₂−y₁)/(x₂−x₁).",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v162_013",
+          "topic": "Coordinate geometry",
+          "specRef": "3.4",
+          "front": "What is true of the gradients of two non-vertical parallel lines?",
+          "back": "They are equal.",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Sequences and series",
+      "allMockEvidence": 34,
+      "originalCoreEvidence": 17,
+      "remainingUncalibratedCore": 1,
+      "reviewedSample": [
+        {
+          "id": "v33_card_maths_sequences_87",
+          "topic": "Sequences",
+          "specRef": "",
+          "front": "When does an infinite geometric series have a finite sum?",
+          "back": "When the common ratio satisfies |r|<1.",
+          "accepted": 3,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Trigonometry degrees and identities",
+      "allMockEvidence": 33,
+      "originalCoreEvidence": 17,
+      "remainingUncalibratedCore": 9,
+      "reviewedSample": [
+        {
+          "id": "task1_v162_017",
+          "topic": "Trigonometry",
+          "specRef": "3.6",
+          "front": "What is the exact value of sin 45°?",
+          "back": "√2/2.",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v162_018",
+          "topic": "Trigonometry",
+          "specRef": "3.6",
+          "front": "What is the exact value of cos 30°?",
+          "back": "√3/2.",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v171_005",
+          "topic": "Vectors",
+          "specRef": "3.11",
+          "front": "After using tan⁻¹(y/x) for a vector's angle, what should you check?",
+          "back": "The quadrant, using the signs of both components.",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v171_006",
+          "topic": "Trigonometry",
+          "specRef": "3.6",
+          "front": "In which quadrants is sin θ positive?",
+          "back": "Quadrants I and II.",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v171_007",
+          "topic": "Trigonometry",
+          "specRef": "3.6",
+          "front": "At which angles in degrees is tan θ undefined?",
+          "back": "90° + 180°n, for any integer n.",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Exponentials and logarithms",
+      "allMockEvidence": 19,
+      "originalCoreEvidence": 8,
+      "remainingUncalibratedCore": 7,
+      "reviewedSample": [
+        {
+          "id": "math_logs_power",
+          "topic": "Logs",
+          "specRef": "",
+          "front": "What is logₐ(xᵏ)?",
+          "back": "k logₐx.",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "math_logs_product",
+          "topic": "Logs",
+          "specRef": "",
+          "front": "What is logₐ(xy)?",
+          "back": "logₐx + logₐy.",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v136_004",
+          "topic": "Exponentials & logarithms",
+          "specRef": "3.7",
+          "front": "What is logₐ1?",
+          "back": "0, since a⁰ = 1 (a > 0, a ≠ 1).",
+          "accepted": 2,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v136_005",
+          "topic": "Exponentials & logarithms",
+          "specRef": "3.7",
+          "front": "What is logₐa?",
+          "back": "1, for a > 0 and a ≠ 1.",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v138_001",
+          "topic": "Exponentials & logarithms",
+          "specRef": "3.7",
+          "front": "State the logarithm quotient law for logₐ(x/y).",
+          "back": "logₐ(x/y) = logₐx − logₐy (x,y>0; a>0, a≠1).",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Differentiation and stationary points",
+      "allMockEvidence": 41,
+      "originalCoreEvidence": 19,
+      "remainingUncalibratedCore": 6,
+      "reviewedSample": [
+        {
+          "id": "task1_v162_022",
+          "topic": "Differentiation",
+          "specRef": "3.8",
+          "front": "What does f′(x)>0 mean over an interval?",
+          "back": "The function is increasing there.",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Integration and signed area",
+      "allMockEvidence": 20,
+      "originalCoreEvidence": 6,
+      "remainingUncalibratedCore": 3,
+      "reviewedSample": [
+        {
+          "id": "v33_card_maths_integration_80",
+          "topic": "Integration",
+          "specRef": "",
+          "front": "Why is +C needed in an indefinite integral?",
+          "back": "Differentiation removes constant terms, so every constant shift is an antiderivative.",
+          "accepted": 3,
+          "rejected": 0
+        },
+        {
+          "id": "v33_card_maths_integration_81",
+          "topic": "Integration",
+          "specRef": "",
+          "front": "What does a definite integral of f(x) below the x-axis contribute?",
+          "back": "Negative signed area, not automatically positive physical area.",
+          "accepted": 3,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v171_010",
+          "topic": "Integration",
+          "specRef": "3.9",
+          "front": "For total area where a graph crosses the x-axis, what is needed?",
+          "back": "Split at the roots and add the positive areas.",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "subject": "Maths",
+      "topic": "Vectors collinearity and division",
+      "allMockEvidence": 45,
+      "originalCoreEvidence": 6,
+      "remainingUncalibratedCore": 4,
+      "reviewedSample": [
+        {
+          "id": "task1_v162_023",
+          "topic": "Vectors",
+          "specRef": "3.11",
+          "front": "How do position vectors give the vector from A to B?",
+          "back": "AB = OB − OA (position vectors).",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v171_003",
+          "topic": "Vectors",
+          "specRef": "3.11",
+          "front": "How do you add 2D vectors (a,b) and (c,d)?",
+          "back": "(a+c, b+d).",
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "id": "task1_v171_004",
+          "topic": "Vectors",
+          "specRef": "3.11",
+          "front": "What is k times the vector (a,b)?",
+          "back": "(ka, kb).",
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "A keyword match can be incidental and is not a signed-off AQA bullet-to-card mapping.",
+    "A missing reject array is an editorial priority, not proof that an existing model answer is incorrect.",
+    "The selected sample needs independent scientific/mathematical review before marking variants are added.",
+    "Diagram drawing and full exam question marks require separate manual assessment.",
+    "This does not declare Task 1 finished."
+  ]
+}
