@@ -61,4 +61,21 @@ assert.equal(mock.length,3372);
 assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,mock.filter(c=>c.subject===s).length])),{Physics:1125,Chemistry:1916,Maths:331});
 for(const r of ledger.rows)assert(mock.some(c=>r.evidenceIds.some(id=>c.id===id)),'Subskill lacks eligible evidence '+r.id);
 for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(k),'Keep saved progress');
+// Every exact original-core evidence card must have a production-marked valid model;
+// existing curated examples must also be accepted/rejected as intended.
+const auditedEvidenceIds=[...new Set(ledger.rows.flatMap(r=>r.evidenceIds))];
+assert.equal(auditedEvidenceIds.length,73,'Specific cross-spec audit must retain all 73 distinct source cards');
+let evidenceModels=0,evidenceAccepted=0,evidenceRejected=0;
+for(const id of auditedEvidenceIds){
+ const source=after.find(c=>c.id===id);
+ assert(source,'Lost original-core AQA evidence '+id);
+ assert.equal(evaluate(source,source.back).status,'correct','AQA evidence model not accepted '+id);evidenceModels++;
+ for(const approved of source.accept||[]){
+  assert.equal(evaluate(source,approved).status,'correct','AQA evidence approved response not accepted '+id+' '+approved);evidenceAccepted++;
+ }
+ for(const incorrect of source.reject||[]){
+  assert.equal(evaluate(source,incorrect).status,'wrong','AQA evidence misconception wrongly accepted '+id+' '+incorrect);evidenceRejected++;
+ }
+}
+assert(evidenceAccepted>=132&&evidenceRejected>=26);
 console.log('PASS v332: 59 specific AQA original-core evidence rows (53 sampled recall, 6 application gaps); Gibbs boundary corrected with production marker and historic valid answers; full 4344/3372 bank and IDs unchanged.');
