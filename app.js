@@ -955,6 +955,18 @@ function applyV331CoreAnswerCalibration(existing){
  return existing;
 }
 
+// v332: AQA 3.1.8.2 includes the ΔG = 0 boundary in thermodynamic feasibility.
+// This exact-ID repair preserves all previously correct negative-ΔG responses.
+function applyV332GibbsBoundaryCorrection(existing){
+ const card=existing.find(c=>c.id==='task1_chem_164');
+ if(!card||card.subject!=='Chemistry'||card.front!=='What is the condition for thermodynamic feasibility using Gibbs free energy?'||card.back!=='ΔG < 0 at the stated temperature.')return existing;
+ card.back='ΔG ≤ 0 at the stated temperature; ΔG = 0 marks equilibrium.';
+ card.accept=[...new Set([card.back,...(card.accept||[]),'ΔG is negative or zero.','ΔG is zero or negative.','ΔG <= 0.','ΔG ≤ 0.'])];
+ card.reject=[...new Set([...(card.reject||[]),'ΔG > 0 is thermodynamically feasible.','Only a positive ΔG indicates thermodynamic feasibility.'])];
+ card.v332ExactReviewed=true;
+ return existing;
+}
+
 // v217: Fix three previously audited legacy Chemistry cards in memory.
 // Keep source deck.json and original card IDs stable for audit snapshots and saved progress.
 /* v217 legacy chemistry corrections start */
@@ -2631,7 +2643,7 @@ function evaluateCard(c,input){
  // explicitly accepted exact paraphrase (or partially credit a vetted wrong one).
  // Honour exact, punctuation-preserving examples ONLY on the 60 individually
  // reviewed core cards, before any fuzzy/numeric/transform scoring.
- if((c?.v316ExactReviewed===true&&c.mock===true)||c?.v321ExactReviewed===true||c?.v322ExactReviewed===true||c?.v324ExactReviewed===true||c?.v326ExactReviewed===true||c?.v327ExactReviewed===true||c?.v328ExactReviewed===true||c?.v329ExactReviewed===true||c?.v330ExactReviewed===true||c?.v331ExactReviewed===true){
+ if((c?.v316ExactReviewed===true&&c.mock===true)||c?.v321ExactReviewed===true||c?.v322ExactReviewed===true||c?.v324ExactReviewed===true||c?.v326ExactReviewed===true||c?.v327ExactReviewed===true||c?.v328ExactReviewed===true||c?.v329ExactReviewed===true||c?.v330ExactReviewed===true||c?.v331ExactReviewed===true||c?.v332ExactReviewed===true){
   const exact=t=>String(t||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[.]$/,'');
   const key=exact(input);
   if(key&&Array.isArray(c.reject)&&c.reject.some(x=>exact(x)===key))
@@ -4873,6 +4885,7 @@ async function sync(manual=false){
  applyV329MathsCorePrecision(cards);
  applyV330ScienceCoreCalibration(cards);
  applyV331CoreAnswerCalibration(cards);
+ applyV332GibbsBoundaryCorrection(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
