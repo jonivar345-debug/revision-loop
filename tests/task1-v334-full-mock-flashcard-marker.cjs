@@ -36,7 +36,7 @@ assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,el
 const markerStart=app.indexOf('function normalise('),markerEnd=app.indexOf('function importantTokens(',markerStart);
 assert(markerStart>=0&&markerEnd>markerStart,'Production marker functions must remain present');
 const marker=new Function('window',app.slice(markerStart,markerEnd)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
-let models=0,accepted=0,rejected=0,checked=0;
+let models=0,accepted=0,rejected=0,negations=0,checked=0;
 const issues=[];
 for(const c of [...mockFlaggedCore,...mockFlaggedExtra]){
  const source=c.__bank||'deck.json',isCore=!c.__bank;
@@ -46,7 +46,8 @@ for(const c of [...mockFlaggedCore,...mockFlaggedExtra]){
  for(const [type,answers,expected] of [
   ['model',[c.back],'correct'],
   ['accepted',c.accept||[],'correct'],
-  ['rejected',c.reject||[],'wrong']
+  ['rejected',c.reject||[],'wrong'],
+  ['negated',['not '+c.back],'wrong']
  ]){
   for(const answer of answers){
    let actual;
@@ -56,13 +57,15 @@ for(const c of [...mockFlaggedCore,...mockFlaggedExtra]){
    if(type==='model')models++;
    if(type==='accepted')accepted++;
    if(type==='rejected')rejected++;
+   if(type==='negated')negations++;
   }
  }
 }
 assert.equal(models,3382,'Check all 2383 original and all 999 supplemental mock-tagged model answers');
 assert(accepted>=4300,'Keep accepted-paraphrase marking coverage');
 assert(rejected>=836,'Keep misconception rejection coverage');
-assert(checked>=14460,'All model answers, explicit approved variants and explicit wrong answers must be checked');
+assert.equal(negations,3382,'Explicitly negating every mock flashcard answer must never score correct');
+assert(checked>=17842,'All model, accepted, wrong and reversed answers must be checked');
 assert.deepEqual(issues,[],'Production marker regression failed for an actual authored answer');
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key),'Keep existing saved progress storage keys');
-console.log('PASS v334: '+models+' full mock-tagged original and supplemental model answers, '+accepted+' accepted alternatives, '+rejected+' rejected misconceptions; '+checked+' individual production-marker checks, all short-card length guards, all 4,344 unique loaded IDs and 3,372 eligible school-mock cards preserved.');
+console.log('PASS v334: '+models+' full mock-tagged original and supplemental model answers, '+accepted+' accepted alternatives, '+rejected+' rejected misconceptions, '+negations+' explicit answer negations; '+checked+' individual production-marker checks, all short-card length guards, all 4,344 unique loaded IDs and 3,372 eligible school-mock cards preserved.');
