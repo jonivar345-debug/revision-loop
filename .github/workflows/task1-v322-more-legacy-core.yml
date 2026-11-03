@@ -1,0 +1,13 @@
+name: Task 1 v322 60 additional exact-ID legacy school mock card repairs
+on: [pull_request]
+jobs:
+  legacy-card-repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v322-60-more-core-mock-precision.cjs
+      - run: node tests/task1-v321-45-core-mock-precision.cjs
+      - run: node tests/task1-v320-legacy-core-priorities.cjs
+      - run: node tests/task1-v319-all-supplement-mock-audit.cjs
+      - run: node tests/task1-v314-all-mock-full-deck-triage.cjs
