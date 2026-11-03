@@ -1,0 +1,10 @@
+name: Task 1 v333 five multi-step mock application questions
+on: [pull_request]
+jobs:
+  science-manual-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v313-science-practical-diagram-questions.cjs
+      - run: node tests/task1-v333-five-application-skills.cjs
