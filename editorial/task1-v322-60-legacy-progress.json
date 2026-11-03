@@ -1,0 +1,27 @@
+{
+  "version": "v322",
+  "date": "2026-11-02",
+  "newReviewedOriginalCore": 60,
+  "subjectCounts": {
+    "Physics": 20,
+    "Chemistry": 20,
+    "Maths": 20
+  },
+  "addedAcceptedAnswers": 60,
+  "addedRejectedMisconceptions": 60,
+  "earlierCardIdsChanged": 0,
+  "newCardsCreated": 0,
+  "scope": "AQA first mocks only: Physics Year 1, taught Chemistry including Kp/organic but no buffers, Year 1 Pure Maths only",
+  "standards": [
+    "Exact original ID, prompt and model answer match before in-memory patching",
+    "Preserve all past core prompts, saved progress IDs and old marking variants",
+    "Explicit model, correct, incorrect, negation and actual mock-filter regression",
+    "Do not substitute written multi-mark examination essays for recall cards"
+  ],
+  "completion": {
+    "fullAqaSpecBulletSignoff": false,
+    "allOriginalCoreIndividuallyVetted": false,
+    "unseenParaphrasesCertified": false,
+    "task1Finished": false
+  }
+}
