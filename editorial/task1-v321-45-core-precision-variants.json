@@ -1,0 +1,644 @@
+{
+  "version": "v321",
+  "date": "2026-11-02",
+  "scope": "Original core flashcards already selected by real first-mock filter: Physics AS, taught Chemistry AS+A2, Maths Year 1 Pure; 15 carefully selected one-skill cards per subject.",
+  "checks": "Two correct synonyms and two common incorrect misconceptions per existing card; original ID, front, back and previous accepted/rejected answers must be preserved; acceptance/rejection checked against production evaluator before merge.",
+  "records": [
+    {
+      "id": "phy_diffraction",
+      "subject": "Physics",
+      "front": "When is diffraction most noticeable?",
+      "back": "When the gap size is comparable with the wavelength.",
+      "accept": [
+        "strongest spreading occurs when gap width is about a wavelength",
+        "aperture comparable in size to lambda"
+      ],
+      "reject": [
+        "diffraction is greatest when the gap is much larger than the wavelength",
+        "diffraction requires a wave to be absorbed"
+      ]
+    },
+    {
+      "id": "phy_emf",
+      "subject": "Physics",
+      "front": "Define emf.",
+      "back": "Energy supplied by the source per unit charge.",
+      "accept": [
+        "work done by the power source per unit charge",
+        "the source's supplied energy divided by charge"
+      ],
+      "reject": [
+        "emf is the energy transferred per second",
+        "emf equals resistance multiplied by time"
+      ]
+    },
+    {
+      "id": "phy_focus_v38_05",
+      "subject": "Physics",
+      "front": "State Newton's first law precisely, including the condition on resultant force.",
+      "back": "If resultant external force is zero, an object stays at rest or moves at constant velocity in a straight line.",
+      "accept": [
+        "with zero net external force an object stays at rest or travels at constant velocity",
+        "zero resultant force implies no change in velocity"
+      ],
+      "reject": [
+        "zero resultant force means the object must come to rest",
+        "constant velocity always requires a nonzero resultant force"
+      ]
+    },
+    {
+      "id": "phy_focus_v38_06",
+      "subject": "Physics",
+      "front": "State Newton's second law in its general momentum form.",
+      "back": "Resultant external force equals the rate of change of momentum, in the force direction: F = Δp/Δt (or dp/dt).",
+      "accept": [
+        "net external force is dp/dt",
+        "the rate of momentum change equals the resultant force"
+      ],
+      "reject": [
+        "net force equals momentum divided by displacement",
+        "F equals momentum multiplied by time"
+      ]
+    },
+    {
+      "id": "phy_focus_v38_08",
+      "subject": "Physics",
+      "front": "A heavy lorry hits a small car. Which experiences the greater force during their interaction?",
+      "back": "Neither: by Newton's third law their interaction forces have equal magnitude, opposite direction; accelerations can differ.",
+      "accept": [
+        "the truck and car exert equal and opposite forces on each other",
+        "their interaction forces are the same magnitude by Newton's third law"
+      ],
+      "reject": [
+        "the heavier lorry exerts a bigger force",
+        "the lighter car exerts a bigger force because its acceleration is greater"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_01",
+      "subject": "Physics",
+      "front": "Why does the normal reaction on a simple slope not equal the full weight?",
+      "back": "The surface balances only the perpendicular component, mg cosθ; weight mg is vertical.",
+      "accept": [
+        "only the perpendicular component of weight, mg cos theta, is supported by the plane",
+        "on a simple incline the normal reaction balances mg cos theta"
+      ],
+      "reject": [
+        "the normal reaction must equal mg on any incline",
+        "the normal reaction always equals mg sin theta"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_02",
+      "subject": "Physics",
+      "front": "On a slope, why resolve weight parallel and perpendicular to the surface?",
+      "back": "Normal acceleration is zero; along the slope there may be a resultant force and acceleration.",
+      "accept": [
+        "perpendicular components balance but along-slope resultant can accelerate the body",
+        "resolving separates the normal balance and possible parallel acceleration"
+      ],
+      "reject": [
+        "all the weight acts only along the slope",
+        "there is always a nonzero acceleration perpendicular to a fixed slope"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_04",
+      "subject": "Physics",
+      "front": "Why can't you double ascent time to find flight time when a projectile lands below launch height?",
+      "back": "The vertical journey is asymmetric; use vertical displacement and solve a quadratic for landing time.",
+      "accept": [
+        "the descent is not symmetric about maximum height when final height differs",
+        "the landing level is lower so use vertical displacement and solve for the total time"
+      ],
+      "reject": [
+        "flight time always equals twice the time to the maximum height",
+        "horizontal motion determines the flight time without vertical displacement"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_05",
+      "subject": "Physics",
+      "front": "What happens to a projectile's horizontal velocity at its highest point?",
+      "back": "It is unchanged without air resistance; only vertical velocity is zero at the top.",
+      "accept": [
+        "the horizontal velocity is constant if air resistance is ignored",
+        "at the top vx is unchanged whereas vy is zero"
+      ],
+      "reject": [
+        "the projectile's horizontal velocity becomes zero at its peak",
+        "gravity makes the horizontal velocity increase with time when drag is absent"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_06",
+      "subject": "Physics",
+      "front": "Given velocity components vₓ and vᵧ just before impact, how do you find impact speed?",
+      "back": "Impact speed is √(vₓ² + vᵧ²), not merely the magnitude of the vertical velocity.",
+      "accept": [
+        "use Pythagoras on velocity components: sqrt(vx^2+vy^2)",
+        "speed equals the magnitude of the vector with components vx and vy"
+      ],
+      "reject": [
+        "impact speed is always just the vertical component",
+        "impact speed is vx plus vy even when perpendicular"
+      ]
+    },
+    {
+      "id": "phy_focus_v39_07",
+      "subject": "Physics",
+      "front": "If v<0 and a<0, what happens to speed?",
+      "back": "Speed increases because velocity and acceleration point in the same negative direction.",
+      "accept": [
+        "the object speeds up when v and a are both negative",
+        "acceleration in the direction of negative velocity increases the magnitude of v"
+      ],
+      "reject": [
+        "a negative acceleration always reduces speed",
+        "negative velocity always means the object is slowing down"
+      ]
+    },
+    {
+      "id": "phy_force_time_area",
+      "subject": "Physics",
+      "front": "What does area under a force–time graph represent?",
+      "back": "Impulse, equal to change in momentum.",
+      "accept": [
+        "integrating force with respect to time gives change in momentum",
+        "the area represents impulse in newton seconds"
+      ],
+      "reject": [
+        "force-time graph area is mechanical work in joules",
+        "force-time area gives acceleration directly"
+      ]
+    },
+    {
+      "id": "phy_graph_v118_01",
+      "subject": "Physics",
+      "front": "Displacement–time: what does a negative gradient mean?",
+      "back": "Velocity is negative: motion in the negative direction, not necessarily slowing down.",
+      "accept": [
+        "a negative displacement-time slope means velocity is negative",
+        "it moves in the negative direction and may speed up or slow down"
+      ],
+      "reject": [
+        "negative displacement-time gradient proves the object is decelerating",
+        "a negative gradient means positive velocity"
+      ]
+    },
+    {
+      "id": "phy_graph_v118_04",
+      "subject": "Physics",
+      "front": "Why is total distance different from displacement on a v–t graph?",
+      "back": "Distance sums all absolute areas; displacement uses signed areas.",
+      "accept": [
+        "add absolute areas for distance but algebraic signed areas for displacement",
+        "total distance counts both positive and negative velocity regions as positive"
+      ],
+      "reject": [
+        "distance equals positive area minus the magnitude of negative area",
+        "signed area always gives total distance travelled"
+      ]
+    },
+    {
+      "id": "phy_graph_v118_06",
+      "subject": "Physics",
+      "front": "Acceleration–time area gives which quantity?",
+      "back": "Change in velocity, not displacement or distance.",
+      "accept": [
+        "the signed integral of acceleration over time is delta v",
+        "the area of a against time gives the velocity change"
+      ],
+      "reject": [
+        "area under acceleration-time is displacement",
+        "acceleration-time area directly gives total distance"
+      ]
+    },
+    {
+      "id": "chem_acyl_chloride_alcohol",
+      "subject": "Chemistry",
+      "front": "What does an acyl chloride form with an alcohol?",
+      "back": "An ester and HCl.",
+      "accept": [
+        "acyl chloride and alcohol produce an ester plus hydrogen chloride",
+        "an ester forms and HCl is released"
+      ],
+      "reject": [
+        "an acyl chloride and alcohol produce an amide",
+        "the main products are an aldehyde and hydrogen"
+      ]
+    },
+    {
+      "id": "chem_acyl_chloride_water",
+      "subject": "Chemistry",
+      "front": "What happens when an acyl chloride reacts with water?",
+      "back": "A carboxylic acid and HCl are formed.",
+      "accept": [
+        "water hydrolyses an acyl chloride to the carboxylic acid and HCl",
+        "hydrolysis yields RCOOH and hydrogen chloride"
+      ],
+      "reject": [
+        "hydrolysis produces a primary amide",
+        "acyl chloride and water produce an alcohol and chlorine gas"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_01",
+      "subject": "Chemistry",
+      "front": "What is the general formula of an acyl chloride?",
+      "back": "R–C(=O)–Cl.",
+      "accept": [
+        "RCOCl",
+        "R-C(=O)-Cl"
+      ],
+      "reject": [
+        "RCOOH",
+        "RCOOR"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_02",
+      "subject": "Chemistry",
+      "front": "What is an acyl group?",
+      "back": "R–C(=O)–, the group transferred in acylation.",
+      "accept": [
+        "RCO- is the acyl group",
+        "R-C(=O)-, transferred in acylation"
+      ],
+      "reject": [
+        "R-OH is the acyl group",
+        "the acyl group is -NH2"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_03",
+      "subject": "Chemistry",
+      "front": "What group links the two carbonyls in an acid anhydride?",
+      "back": "A bridging oxygen: RCO–O–COR′.",
+      "accept": [
+        "one oxygen links the two acyl groups",
+        "anhydride linkage is -C(=O)-O-C(=O)-"
+      ],
+      "reject": [
+        "a nitrogen connects the two carbonyl groups",
+        "the carbonyl carbons bond directly without oxygen"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_04",
+      "subject": "Chemistry",
+      "front": "What is an amide functional group?",
+      "back": "A carbonyl directly bonded to nitrogen, e.g. –CONH₂.",
+      "accept": [
+        "an amide contains -C(=O)-N-",
+        "the functional group has a nitrogen attached directly to a carbonyl carbon"
+      ],
+      "reject": [
+        "an amide contains only C-N single bonds without a carbonyl",
+        "the amide functional group is -COO-"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_05",
+      "subject": "Chemistry",
+      "front": "How does an amide differ structurally from an amine?",
+      "back": "An amide N is bonded to C=O; an amine N is not.",
+      "accept": [
+        "amide nitrogen is attached to a carbonyl carbon whereas an amine nitrogen is not",
+        "an amide has C(=O)-N bonding; an amine lacks that adjacent carbonyl"
+      ],
+      "reject": [
+        "an amine always has a carbonyl directly bonded to nitrogen",
+        "there is no structural difference between an amine and an amide"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_06",
+      "subject": "Chemistry",
+      "front": "What type of mechanism is acyl chloride acylation?",
+      "back": "Nucleophilic addition–elimination.",
+      "accept": [
+        "nucleophilic addition followed by elimination",
+        "nucleophilic addition-elimination mechanism"
+      ],
+      "reject": [
+        "electrophilic substitution",
+        "free radical substitution"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_07",
+      "subject": "Chemistry",
+      "front": "What makes the acyl carbon attractive to a nucleophile?",
+      "back": "The carbonyl carbon is electron-poor (δ+).",
+      "accept": [
+        "the partial positive carbonyl carbon is electrophilic",
+        "polar C=O leaves carbon electron deficient"
+      ],
+      "reject": [
+        "the carbonyl carbon has a full negative charge",
+        "nucleophiles attack because the acyl carbon has excess lone pairs"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_08",
+      "subject": "Chemistry",
+      "front": "In acylation mechanisms, where should the nucleophile's arrow point?",
+      "back": "Toward the electrophilic carbonyl carbon.",
+      "accept": [
+        "curly arrow from nucleophile lone pair to carbonyl carbon",
+        "the arrow head points to the electron deficient carbon of C=O"
+      ],
+      "reject": [
+        "curly arrow begins at carbonyl carbon and ends at the nucleophile",
+        "arrow points towards the chloride rather than the carbonyl carbon during initial addition"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_09",
+      "subject": "Chemistry",
+      "front": "What happens to the C=O bonding electron pair during initial attack?",
+      "back": "It moves towards the oxygen atom.",
+      "accept": [
+        "the carbonyl pi electrons move onto oxygen",
+        "a curly arrow goes from C=O pi bond to the oxygen atom"
+      ],
+      "reject": [
+        "the C=O electron pair moves onto chloride ion",
+        "the carbonyl pi electrons move to the nucleophile"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_10",
+      "subject": "Chemistry",
+      "front": "What shape does the carbonyl carbon adopt in the addition intermediate?",
+      "back": "Approximately tetrahedral.",
+      "accept": [
+        "carbonyl carbon becomes roughly tetrahedral in the addition intermediate",
+        "the intermediate has tetrahedral arrangement at acyl carbon"
+      ],
+      "reject": [
+        "the carbonyl carbon stays linear during the nucleophilic addition",
+        "the intermediate carbonyl carbon has a 180 degree bond angle"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_11",
+      "subject": "Chemistry",
+      "front": "What change reforms C=O during the elimination stage?",
+      "back": "An oxygen lone pair reforms the carbon–oxygen double bond.",
+      "accept": [
+        "oxygen lone pair returns to reform the carbonyl pi bond",
+        "the oxyanion lone pair forms C=O again"
+      ],
+      "reject": [
+        "chloride donates its lone pair to form the C=O bond",
+        "the carbonyl bond reforms by losing an electron from oxygen to solvent"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_12",
+      "subject": "Chemistry",
+      "front": "Which type of species is displaced from an acyl chloride intermediate?",
+      "back": "A chloride ion, Cl−, acts as the leaving group.",
+      "accept": [
+        "chloride leaves as Cl-",
+        "a chloride ion is expelled from the tetrahedral intermediate"
+      ],
+      "reject": [
+        "an OH- ion leaves from the acyl chloride in this step",
+        "the acyl carbon atom is the leaving group"
+      ]
+    },
+    {
+      "id": "chem_acyl_review_v41_13",
+      "subject": "Chemistry",
+      "front": "Why is nucleophilic acylation called addition–elimination?",
+      "back": "The nucleophile adds before a leaving group is expelled.",
+      "accept": [
+        "nucleophile addition is followed by leaving group elimination",
+        "an incoming nucleophile adds before chloride is expelled"
+      ],
+      "reject": [
+        "the leaving group is expelled before any nucleophile attacks",
+        "addition elimination means electrons are never transferred in bonds"
+      ]
+    },
+    {
+      "id": "math_geom_infinite",
+      "subject": "Maths",
+      "front": "When does a geometric series have a sum to infinity, and what is it?",
+      "back": "If |r|<1, S∞ = a/(1−r).",
+      "accept": [
+        "for absolute r less than one the limiting sum is a divided by one minus r",
+        "|r|<1 and S_infinity=a/(1-r)"
+      ],
+      "reject": [
+        "a geometric series converges to a/(1-r) whenever r>1",
+        "the sum to infinity equals a/(1+r) for all ratios"
+      ]
+    },
+    {
+      "id": "math_modulus",
+      "subject": "Maths",
+      "front": "What does y=|f(x)| do to a graph?",
+      "back": "Reflects any part below the x-axis in the x-axis; parts above stay unchanged.",
+      "accept": [
+        "the negative portions of f(x) are reflected in the x-axis",
+        "parts with y below zero are mapped to positive y; positive parts stay put"
+      ],
+      "reject": [
+        "reflect the whole graph in the y-axis",
+        "the graph of |f(x)| retains negative y values"
+      ]
+    },
+    {
+      "id": "math_arith_sum",
+      "subject": "Maths",
+      "front": "What is the sum of the first n terms of an arithmetic sequence?",
+      "back": "Sₙ = n/2[2a+(n−1)d].",
+      "accept": [
+        "S_n=(n/2)(2a+(n-1)d)",
+        "half of n times first plus last term, S_n=n(a+l)/2"
+      ],
+      "reject": [
+        "S_n=n(2a+(n+1)d)/2",
+        "S_n=a(1-r^n)/(1-r)"
+      ]
+    },
+    {
+      "id": "math_binomial",
+      "subject": "Maths",
+      "front": "What is the general term in (a+b)ⁿ?",
+      "back": "C(n,r) a^(n−r) b^r.",
+      "accept": [
+        "the general term is nCr multiplied by a to n-r multiplied by b to r",
+        "choose n r times a^(n-r) times b^r"
+      ],
+      "reject": [
+        "the general term is nCr a^r b^r",
+        "the general term is a^(n-r)+b^r"
+      ]
+    },
+    {
+      "id": "math_circle",
+      "subject": "Maths",
+      "front": "What is the equation of a circle centre (a,b), radius r?",
+      "back": "(x−a)²+(y−b)²=r².",
+      "accept": [
+        "a circle centred at (a,b) has (x-a)^2+(y-b)^2=r^2",
+        "(x-a)^2+(y-b)^2 equals the radius squared"
+      ],
+      "reject": [
+        "(x+a)^2+(y+b)^2=r^2 for centre (a,b)",
+        "(x-a)^2+(y-b)^2=r"
+      ]
+    },
+    {
+      "id": "math_circle_tangent",
+      "subject": "Maths",
+      "front": "How is a tangent to a circle related to the radius at the contact point?",
+      "back": "They are perpendicular.",
+      "accept": [
+        "radius and tangent are at right angles at their point of contact",
+        "the tangent is perpendicular to the radius at the touching point"
+      ],
+      "reject": [
+        "a tangent is parallel to the radius at contact",
+        "a circle tangent always passes through its centre"
+      ]
+    },
+    {
+      "id": "math_geom_sum",
+      "subject": "Maths",
+      "front": "What is the finite geometric sum?",
+      "back": "Sₙ = a(1−rⁿ)/(1−r), for r≠1.",
+      "accept": [
+        "sum equals a times (1-r to the n) divided by (1-r)",
+        "S_n=a(1-r^n)/(1-r), r not equal to one"
+      ],
+      "reject": [
+        "S_n=a(1+r^n)/(1-r)",
+        "S_n=a/(1-r) for any finite n"
+      ]
+    },
+    {
+      "id": "math_indices_frac",
+      "subject": "Maths",
+      "front": "For positive integer n, what does x^(1/n) mean wherever it is real?",
+      "back": "The real nth root of x.",
+      "accept": [
+        "x^(1/n) is the nth root of x where real",
+        "raising x to one over n gives its real nth root"
+      ],
+      "reject": [
+        "x^(1/n) means x divided by n",
+        "x^(1/n) equals n times x"
+      ]
+    },
+    {
+      "id": "math_indices_neg",
+      "subject": "Maths",
+      "front": "For x ≠ 0 and positive integer n, what is x⁻ⁿ?",
+      "back": "1/xⁿ.",
+      "accept": [
+        "x to negative n is the reciprocal of x to positive n",
+        "x^-n=1/(x^n) for nonzero x"
+      ],
+      "reject": [
+        "x^-n=-x^n",
+        "x^-n=x/n"
+      ]
+    },
+    {
+      "id": "math_tan_identity",
+      "subject": "Maths",
+      "front": "State the tan identity.",
+      "back": "tan x = sin x / cos x.",
+      "accept": [
+        "tan(x)=sin(x)/cos(x) wherever cos x is nonzero",
+        "the tangent ratio equals sine divided by cosine"
+      ],
+      "reject": [
+        "tan x=cos x/sin x",
+        "tan x=sin x times cos x"
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_math_004",
+      "subject": "Maths",
+      "front": "What condition must a differentiable function satisfy at a stationary point?",
+      "back": "f′(x) = 0.",
+      "accept": [
+        "the first derivative must equal zero at a differentiable stationary point",
+        "stationary at x=a requires f'(a)=0"
+      ],
+      "reject": [
+        "a stationary point requires f(a)=0",
+        "a stationary point occurs whenever f''(a)=0"
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_math_008",
+      "subject": "Maths",
+      "front": "What is a counterexample in mathematical proof?",
+      "back": "One case showing a universal claim is false.",
+      "accept": [
+        "a valid example that disproves a general assertion",
+        "one instance satisfying the assumptions where the claimed result fails"
+      ],
+      "reject": [
+        "an example which confirms the claim for one value",
+        "any value outside the specified domain"
+      ]
+    },
+    {
+      "id": "task1_v136_001",
+      "subject": "Maths",
+      "front": "What is the quadratic formula for ax² + bx + c = 0?",
+      "back": "x = (−b ± √(b² − 4ac)) / (2a).",
+      "accept": [
+        "x=(-b plus or minus sqrt(b^2-4ac))/(2a)",
+        "x equals minus b plus or minus the square root of discriminant all over 2a"
+      ],
+      "reject": [
+        "x=(b plus or minus sqrt(b^2-4ac))/(2a)",
+        "x=(-b plus or minus sqrt(b^2+4ac))/(2a)"
+      ]
+    },
+    {
+      "id": "task1_v136_007",
+      "subject": "Maths",
+      "front": "What is the sum of n terms of an arithmetic progression?",
+      "back": "Sₙ = n[2a + (n−1)d]/2.",
+      "accept": [
+        "the nth partial arithmetic sum is n/2[2a+(n-1)d]",
+        "S_n=n(a+l)/2 for first term a and last term l"
+      ],
+      "reject": [
+        "S_n=n/2[2a+(n+1)d]",
+        "S_n=a(1-r^n)/(1-r)"
+      ]
+    },
+    {
+      "id": "task1_v136_008",
+      "subject": "Maths",
+      "front": "What is the sum of n terms of a geometric progression?",
+      "back": "Sₙ = a(1−rⁿ)/(1−r), when r ≠ 1.",
+      "accept": [
+        "for r not equal to one, S_n=a(1-r^n)/(1-r)",
+        "a times one minus r to n divided by one minus r"
+      ],
+      "reject": [
+        "S_n=a/(1-r) for every finite n",
+        "S_n=a(1+r^n)/(1-r)"
+      ]
+    }
+  ],
+  "completion": {
+    "allOriginalCoreReviewed": false,
+    "allAqaBulletsCertified": false,
+    "unseenAnswersCertified": false,
+    "task1Finished": false
+  }
+}
