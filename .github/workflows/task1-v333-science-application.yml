@@ -8,3 +8,4 @@ jobs:
       - run: node --check app.js
       - run: node tests/task1-v313-science-practical-diagram-questions.cjs
       - run: node tests/task1-v333-five-application-skills.cjs
+      - run: node tests/task1-v333-application-gap-evidence.cjs
