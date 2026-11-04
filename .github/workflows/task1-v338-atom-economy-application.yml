@@ -1,0 +1,21 @@
+name: Task 1 v338 Atom economy sustainability practice
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'chemistry_atom_economy_sustainability_practice_v338.json'
+      - 'tests/task1-v338-atom-economy-application.cjs'
+      - '.github/workflows/task1-v338-atom-economy-application.yml'
+  workflow_dispatch:
+jobs:
+  atom-economy-practice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate regression test
+        run: node --check tests/task1-v338-atom-economy-application.cjs
+      - name: Validate actual mock eligibility and manual marking
+        run: node tests/task1-v338-atom-economy-application.cjs
+      - name: Preserve Year 1 Pure inequality practice and progress
+        run: node tests/task1-v335-maths-inequality-practice.cjs
