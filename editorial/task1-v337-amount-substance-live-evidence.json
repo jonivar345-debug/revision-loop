@@ -1,0 +1,581 @@
+{
+  "version": "v337",
+  "date": "2026-11-04",
+  "subject": "AQA A-level Chemistry 7405",
+  "scope": "School mock: Amount of substance 3.1.2.1–3.1.2.5, including practical calculations",
+  "origin": "Historical core-only 31-skill draft crosswalk in PR #190, rechecked against the actual main branch and loaded supplement/practice banks.",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "counts": {
+    "total": 31,
+    "originalCoreRecallSample": 12,
+    "previousCoreOnlyGapsNowWithRealSupplementCards": 2,
+    "applicationRowsStillRequiringManualExamReview": 17,
+    "applicationRowsWithLinkedPractice": 16,
+    "applicationRowsWithoutLinkedPractice": 1,
+    "uniqueReferencedPracticeTasks": 14
+  },
+  "notes": [
+    "A core-only gap is not a site-wide gap: AOS-03 and AOS-11 now have specifically verified supplementary short cards.",
+    "The original 31 specification skill rows are sampled evidence, not a complete AQA bullet-by-bullet certification.",
+    "An exam question existing in a loaded bank does not mean a student's working, misconceptions and transferable technique have been marked correctly.",
+    "The Maths first mock remains Year 1 Pure only; this Chemistry audit does not change Maths or Physics scope.",
+    "All existing flashcard IDs and exact acceptance lists remain intact: this is a read-only editorial audit and its regression test."
+  ],
+  "rows": [
+    {
+      "id": "AOS-01",
+      "specRef": "3.1.2.1",
+      "skill": "Define relative atomic mass Ar",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_ar_def"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-02",
+      "specRef": "3.1.2.1",
+      "skill": "Define relative molecular mass Mr",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_atomic_v43_09"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-03",
+      "specRef": "3.1.2.1",
+      "skill": "Use relative formula mass terminology for ionic substances",
+      "priorCoreFinding": "gap_no_direct_card",
+      "originalCoreCardIds": [],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_as_measurement_recall_v218.json",
+          "id": "task1_v218_chem_as_01"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_01"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "supplemental_recall_verified",
+      "editorialNote": "Short recall and a separately worked ionic formula-mass calculation now exist; this is no longer a genuinely missing flashcard topic."
+    },
+    {
+      "id": "AOS-04",
+      "specRef": "3.1.2.2",
+      "skill": "Define a mole for specified entities",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "task1_v144_001"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-05",
+      "specRef": "3.1.2.2",
+      "skill": "Understand Avogadro constant as entities per mole",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_avogadro",
+        "chem_amount_v44_28"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-06",
+      "specRef": "3.1.2.2",
+      "skill": "Apply mole to atoms, molecules, ions and electrons",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "task1_v144_001"
+      ],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_amount_applications_v239.json",
+          "id": "task1_v239_chem_amount_02"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_08"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q02"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-07",
+      "specRef": "3.1.2.2",
+      "skill": "Calculate particles and ions using Avogadro constant",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_29"
+      ],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_amount_applications_v239.json",
+          "id": "task1_v239_chem_amount_02"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_09"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q02"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-08",
+      "specRef": "3.1.2.2",
+      "skill": "Calculate amount from mass and molar mass",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_moles_mass"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-09",
+      "specRef": "3.1.2.2",
+      "skill": "Calculate solution concentration, volume and amount",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_concentration"
+      ],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_amount_applications_v239.json",
+          "id": "task1_v239_chem_amount_04"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q07"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q02"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-10",
+      "specRef": "3.1.2.2",
+      "skill": "Convert cm3 to dm3 correctly",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_titration_001"
+      ],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_06"
+        }
+      ],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-11",
+      "specRef": "3.1.2.2",
+      "skill": "Give calculated results appropriate significant figures",
+      "priorCoreFinding": "gap_no_direct_card",
+      "originalCoreCardIds": [],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_as_measurement_recall_v218.json",
+          "id": "task1_v218_chem_as_06"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_04"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_05"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q07"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q02"
+        }
+      ],
+      "reviewStatus": "supplemental_recall_verified",
+      "editorialNote": "Short significant-figure recall and calculation practice exist; unseen numerical work has not been manually signed off."
+    },
+    {
+      "id": "AOS-12",
+      "specRef": "3.1.2.3",
+      "skill": "Recall and use pV=nRT",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_amount_v44_07"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-13",
+      "specRef": "3.1.2.3",
+      "skill": "Use SI units for p, V and T",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_gas_001"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-14",
+      "specRef": "3.1.2.3",
+      "skill": "Rearrange ideal gas equation for moles",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "chem_amount_v44_10"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-15",
+      "specRef": "3.1.2.3",
+      "skill": "Use gas data and mass to determine volatile substance Mr",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_11"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_02"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-16",
+      "specRef": "3.1.2.4",
+      "skill": "Define empirical formula",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "task1_chem_015"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-17",
+      "specRef": "3.1.2.4",
+      "skill": "Define molecular formula",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "task1_chem_016"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-18",
+      "specRef": "3.1.2.4",
+      "skill": "Derive empirical formula from masses or percentages",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_02",
+        "chem_amount_v44_03"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_01"
+        },
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q06"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-19",
+      "specRef": "3.1.2.4",
+      "skill": "Use empirical formula and Mr to derive molecular formula",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_05",
+        "chem_amount_v44_06"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q06"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-20",
+      "specRef": "3.1.2.5",
+      "skill": "Write full and net ionic equations",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_22",
+        "chem_amount_v44_23"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-21",
+      "specRef": "3.1.2.5",
+      "skill": "Balance equations for unfamiliar stated reactions",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "task1_v124_bulk_chem_009"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-22",
+      "specRef": "3.1.2.5",
+      "skill": "Use balanced equation coefficients for mole ratios",
+      "priorCoreFinding": "recall_evidenced",
+      "originalCoreCardIds": [
+        "task1_v124_bulk_chem_009"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "original_core_recall_sample_evidenced"
+    },
+    {
+      "id": "AOS-23",
+      "specRef": "3.1.2.5",
+      "skill": "Determine a limiting reactant from stoichiometric amounts",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_13"
+      ],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_12"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_03"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q03"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-24",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate volume of gas produced",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_15"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_03"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-25",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate percentage yield from actual and theoretical yields",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_16"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_04"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-26",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate percentage atom economy with balanced coefficients",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_18"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_04"
+        },
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q05"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-27",
+      "specRef": "3.1.2.5",
+      "skill": "Explain economic, ethical and environmental benefits of high atom economy",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_20"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [],
+      "reviewStatus": "short_evidence_plus_exam_work_required",
+      "editorialNote": "The original core card gives a starting point, but this audit has not linked a complete manually reviewed comparison of economic, ethical and environmental claims."
+    },
+    {
+      "id": "AOS-28",
+      "specRef": "3.1.2.5",
+      "skill": "Use a titration to find concentration",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_30"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        },
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q04"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-29",
+      "specRef": "3.1.2.5",
+      "skill": "Prepare a volumetric standard solution and perform RP1 titration",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_rp1"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required",
+      "editorialNote": "Linked titration practice covers titre choice, concentration, uncertainty and apparatus rinsing, not independently the complete practical preparation method."
+    },
+    {
+      "id": "AOS-30",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate uncertainty from two burette readings",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "task1_v132_006"
+      ],
+      "additionalLoadedShortCards": [
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_07"
+        }
+      ],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required"
+    },
+    {
+      "id": "AOS-31",
+      "specRef": "3.1.2.5",
+      "skill": "Discard clear titre outliers and calculate a suitable mean",
+      "priorCoreFinding": "application_unverified",
+      "originalCoreCardIds": [
+        "chem_amount_v44_31"
+      ],
+      "additionalLoadedShortCards": [],
+      "linkedExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        }
+      ],
+      "reviewStatus": "short_evidence_plus_exam_work_required",
+      "editorialNote": "The linked real-data practice requires identifying the outlier and selecting concordant readings; generalisation remains to be judged manually."
+    }
+  ]
+}
