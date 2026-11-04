@@ -39,6 +39,27 @@ for(const id of ids){
   rejections++;
  }
 }
+// Missing the defining condition must never receive a full mark just
+// because almost every other word matches the model.
+const incomplete={
+ task1_chem_017:['a solution with a known concentration'],
+ task1_v125_121:['energy to remove electrons from atoms'],
+ task1_v127_074:['the enthalpy change when one mole of solute dissolves in enough solvent to form a solution'],
+ task1_v130_084:[
+  'The enthalpy change when an acid and a base react in dilute aqueous solution to form one mole of water',
+  'The enthalpy change when an acid and a base react to form one mole of water under standard conditions'
+ ],
+ task1_v130_085:[
+  'The enthalpy change when one mole of gaseous atoms forms from an element in its standard state',
+  'The enthalpy change when one mole of gaseous ions forms from an element in its standard state under standard conditions'
+ ]
+};
+for(const [id,answers] of Object.entries(incomplete)){
+ const c=cards.find(x=>x.id===id);
+ for(const answer of answers)
+  assert.notEqual(evaluate(c,answer).status,'correct',id+' gave a full mark despite an omitted definition requirement');
+}
+assert(app.includes('v336: require essential parts of five precise definitions'),'Keep the narrow semantic completeness guard');
 const water=cards.find(x=>x.id==='task1_v130_084');
 assert(/standard conditions/i.test(water.back)&&/one mole of water/i.test(water.back)&&/acid and a base/i.test(water.back));
 const atom=cards.find(x=>x.id==='task1_v130_085');
