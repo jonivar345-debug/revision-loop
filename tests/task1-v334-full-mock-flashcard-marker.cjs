@@ -19,7 +19,8 @@ assert.equal(supplements.length,999,'Keep all original supplemental mock cards')
 const loaderStart=app.indexOf(' const knownFlashIds=new Set(cards.map(c=>c.id));');
 const loaderEnd=app.indexOf(' const added=[',loaderStart);
 assert(loaderStart>=0&&loaderEnd>loaderStart,'Real runtime bank loader must still be available');
-const loaded=new Function('cards','extraFlashBanks',app.slice(loaderStart,loaderEnd)+'\nreturn cards;')(core,banks.map(j));
+// The production loader mutates its input array; keep the original core-only sample intact.
+const loaded=new Function('cards','extraFlashBanks',app.slice(loaderStart,loaderEnd)+'\nreturn cards;')(structuredClone(core),banks.map(j));
 assert.equal(loaded.length,4344);
 assert.equal(new Set(loaded.map(c=>c.id)).size,loaded.length,'No duplicate progress IDs after load');
 const mockFlaggedCore=core.filter(c=>c.mock===true);
