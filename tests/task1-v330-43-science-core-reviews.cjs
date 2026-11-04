@@ -64,6 +64,6 @@ assert.deepEqual(Object.fromEntries(['Physics','Chemistry','Maths'].map(s=>[s,mo
 for(const r of ledger.records)assert(mock.some(c=>c.id===r.id),'Reviewed card not in school mock '+r.id);
 for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(k),'Keep cloud/local progress names');
 assert(app.includes(' applyV330ScienceCoreCalibration(cards);'));
-assert(app.includes('||c?.v330ExactReviewed===true){'));
+assert(app.includes('||c?.v330ExactReviewed===true||'),'The reviewed marker remains in the versioned calibration chain');
 assert(read('sw.js').includes('-v330-43-science-core'));
 console.log('PASS v330: 43 curated original science cards, 10 Physics + 33 Chemistry; '+models+' model answers, '+accepted+' approved answers, '+rejected+' rejected misconceptions, '+negations+' explicit negation tests, '+historic+' previously accepted variants retained. Full 4344 cards/3372 mock cards and progress IDs preserved.');
