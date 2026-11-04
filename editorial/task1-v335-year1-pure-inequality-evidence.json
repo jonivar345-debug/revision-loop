@@ -1,0 +1,29 @@
+{
+  "version": "v335",
+  "date": "2026-11-04",
+  "scope": "AQA Year 1 Pure Algebra and functions, specification B5 and B6; school mock only",
+  "priorAudit": "editorial/task1-v334-year1-pure-skill-crosswalk.json",
+  "priorGapRow": "M11",
+  "practiceBank": "maths_inequality_sign_reasoning_v335.json",
+  "newQuestionIds": [
+    "task1_v335_maths_01",
+    "task1_v335_maths_02"
+  ],
+  "newQuestionCount": 2,
+  "newMarks": 14,
+  "grading": "manualWorkingReview",
+  "evidenceStatus": "Full exam-style practice is now supplied, but the student has not been independently marked on the skill; AQA bullet-by-bullet audit remains incomplete.",
+  "reasoningChecks": [
+    "Critical zeros and undefined values cannot be merged into a single sign boundary without justification.",
+    "A rational inequality with a removable factor retains the original excluded domain point.",
+    "Equality at zeros of numerator is only included where the original expression exists."
+  ],
+  "contentCheck": "Both original problems independently sign-checked at all intervals, with correctly included/excluded endpoints.",
+  "scopeConstraints": [
+    "Year 1 Pure only",
+    "No Mechanics or Statistics",
+    "No Year 2 content",
+    "No replacement of short recall flashcards"
+  ],
+  "source": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content/b-algebra-and-functions"
+}

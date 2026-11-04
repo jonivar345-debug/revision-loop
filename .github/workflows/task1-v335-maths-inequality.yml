@@ -1,0 +1,11 @@
+name: Task 1 v335 Year 1 Pure interval inequality working
+on: [pull_request]
+jobs:
+  maths-inequality-manual-practice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node --check tests/task1-v335-maths-inequality-practice.cjs
+      - run: node tests/task1-v333-five-application-skills.cjs
+      - run: node tests/task1-v335-maths-inequality-practice.cjs

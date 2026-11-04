@@ -1,0 +1,28 @@
+{
+  "version": "v334",
+  "date": "2026-11-03",
+  "purpose": "Full-bank production-marker regression on all school-mock-tagged Physics, Chemistry and Year 1 Pure Maths flashcards, keeping original IDs/progress, correct/wrong variants, and a length heuristic distinguishing flashcards from long answers.",
+  "mockTaggedCore": 2383,
+  "mockTaggedSupplemental": 999,
+  "loadedAllCards": 4344,
+  "eligibleFirstMock": 3372,
+  "baselineChecksAtV331": {
+    "models": 3382,
+    "accepted": "at least 4300",
+    "rejected": "at least 836",
+    "total": "at least 88864",
+    "negated": 3382,
+    "nonAnswerProbes": 71022
+  },
+  "notes": [
+    "21 everyday non-answer variants, including straight/curly apostrophes, must score wrong on each of the 3,382 mock-tagged cards (71,022 negative probes).",
+    "Prior to changing production normalisation, independently checked 12,550 original unpatched model/accepted/rejected examples across the core and all 56 supplement files with zero altered authored outcomes.",
+    "Additional adversarial regression: prefix each complete correct model answer with 'not' and require a wrong mark, including all 3,382 school-mock-tagged cards.",
+    "Tests actual production answer evaluator and applies all patch functions up to v332 to original deck.",
+    "Explicit accepted/rejected lists are test fixtures; correct responses never seen before may still need human calibration.",
+    "Length thresholds are simple regression alarms, not proof that every card is semantically well written.",
+    "Original multi-mark exam questions remain in separate practice banks; never force them into flashcards.",
+    "Full AQA bullet-level coverage certification and open-ended unseen-answer review remain unfinished."
+  ],
+  "fix": "The original tera (T) card falsely accepted 'I don't know', 'I can't remember' and 'I can't recall' because text normalisation split contractions at an apostrophe, producing an irrelevant standalone t token. v334 preserves apostrophe-containing words during normalisation, and uses a narrow non-answer guard for 21 complete hesitation phrases. The legitimate 'T' and 'tera' answers remain accepted."
+}

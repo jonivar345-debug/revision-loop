@@ -5,7 +5,7 @@ const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
 const app=read('app.js'),sw=read('sw.js'),bank=j('science_application_gaps_v333.json');
 const practicePaths=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 assert.equal(bank.version,'v333');
-assert.equal(practicePaths.length,46);
+assert(practicePaths.length>=46,'Keep the 46 original v333 practice banks before later append-only additions');
 assert.equal(practicePaths[44],'science_practical_diagram_applications_v313.json');
 assert.equal(practicePaths[45],'science_application_gaps_v333.json');
 assert(sw.includes("'./science_application_gaps_v333.json'"),'Offline installation must preload new practice bank');
@@ -83,4 +83,4 @@ for(const s of expectedSkills){
 }
 assert(app.includes("science_application_gaps_v333.json"));
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key),'No changes to saved flashcard progress');
-console.log('PASS v333: 5 original multi-mark Physics/Chemistry mock applications, '+marks+' independently checked manual mark points, 46 practice banks, original 8 v313 tasks untouched, 5 production manual-marker guard checks and numerical solutions independently verified.');
+console.log('PASS v333: 5 original multi-mark Physics/Chemistry mock applications, '+marks+' independently checked manual mark points, at least 46 practice banks, original 8 v313 tasks untouched, 5 production manual-marker guard checks and numerical solutions independently verified.');
