@@ -1,0 +1,48 @@
+{
+  "version": "v239-supplement-reconciliation-20261104",
+  "historicalCrosswalk": "editorial/task1-v239-chemistry-amount-spec-crosswalk.json",
+  "scope": "AQA Chemistry Amount of substance 3.1.2.1 and 3.1.2.2; first school mock only",
+  "notes": [
+    "The October 31 core-only crosswalk deliberately marked two points as gaps in directly selected original-core flashcards. This addendum checks later, actually loaded supplemental flashcards without retroactively rewriting the historical core-only audit.",
+    "Short-card evidence confirms the item can be recalled; it is not proof that every version of a numerical exam application has been mastered.",
+    "No additional flashcards are necessary for these two recall points; do not add duplicate prompts.",
+    "The AQA full subject point-by-point audit remains provisional."
+  ],
+  "resolvedFromCoreOnlyGaps": [
+    {
+      "id": "AOS-03",
+      "point": "Relative formula mass for ionic formula units",
+      "status": "supplemental_short_recall_evidenced",
+      "evidence": [
+        {
+          "path": "chemistry_as_measurement_recall_v218.json",
+          "id": "task1_v218_chem_as_01"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_01"
+        }
+      ]
+    },
+    {
+      "id": "AOS-11",
+      "point": "Appropriate significant figures in calculated answers",
+      "status": "supplemental_short_recall_evidenced",
+      "evidence": [
+        {
+          "path": "chemistry_as_measurement_recall_v218.json",
+          "id": "task1_v218_chem_as_06"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_04"
+        },
+        {
+          "path": "chemistry_amount_sigfig_formula_recall_v278.json",
+          "id": "task1_v278_chem_amount_card_05"
+        }
+      ]
+    }
+  ],
+  "otherRequirements": "29 other rows retain the historical core evidence status; application quality and whole-spec coverage are not certified."
+}
