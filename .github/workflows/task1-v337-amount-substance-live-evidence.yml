@@ -1,0 +1,17 @@
+name: Task 1 v337 Amount of Substance live evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v337-amount-substance-live-evidence.json'
+      - 'tests/task1-v337-amount-substance-live-evidence.cjs'
+      - '.github/workflows/task1-v337-amount-substance-live-evidence.yml'
+  workflow_dispatch:
+jobs:
+  verify-amount-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check evidence regression syntax
+        run: node --check tests/task1-v337-amount-substance-live-evidence.cjs
+      - name: Verify live mock loaders and linked evidence
+        run: node tests/task1-v337-amount-substance-live-evidence.cjs
