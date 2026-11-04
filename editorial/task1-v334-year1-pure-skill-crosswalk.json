@@ -1,0 +1,793 @@
+{
+  "version": "v334",
+  "date": "2026-11-03",
+  "scope": "AQA 7357 FIRST mock, Year 1 / AS Pure only; statistics, mechanics, taught Year 2, and numerical methods not assumed to be part of this school mock.",
+  "source": "https://www.aqa.org.uk/subjects/mathematics/a-level/mathematics-7357/specification/subject-content",
+  "notes": [
+    "The AQA section references are full A-level headings; mapped examples are deliberately limited to the relevant Year 1 content.",
+    "Each cited card ID is checked against the actual school mock-eligible original or supplemental short-flashcard bank.",
+    "This is a sampled skill crosswalk, NOT proof that every bullet in the specification is fully covered or that a student has completed manual multi-mark questions.",
+    "The seven most reasoning-heavy rows are explicitly not signed off by recall.",
+    "The live first-mock selector excludes the legacy inverse/composite and one-to-one source IDs. They are deliberately excluded from this first-mock crosswalk, rather than counted from metadata alone."
+  ],
+  "counts": {
+    "total": 43,
+    "bySection": {
+      "3.2": 6,
+      "3.3": 13,
+      "3.4": 4,
+      "3.5": 4,
+      "3.6": 4,
+      "3.7": 2,
+      "3.8": 4,
+      "3.9": 2,
+      "3.11": 4
+    },
+    "sampleRecall": 36,
+    "needsExamReview": 7,
+    "partialWithPractice": 6,
+    "partialWithoutPractice": 1
+  },
+  "rows": [
+    {
+      "id": "M01",
+      "specRef": "3.2",
+      "skill": "Proof by deduction: consecutive integers and divisibility",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "task1_v245_maths_pure_applied_03",
+          "path": "maths_first_mock_pure_applied_v245.json"
+        },
+        {
+          "id": "task1_v252_maths_pure_applied_01",
+          "path": "maths_first_mock_pure_challenges_v252.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v190_maths_001",
+          "path": "maths_pure_proof_vectors_v190.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q01",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "specRef": "3.2",
+      "skill": "Proof using even and odd integer algebra",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v232_math_pure_02",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_02",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "specRef": "3.2",
+      "skill": "Proof by exhaustion and finite-domain completeness",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "task1_v232_math_pure_03",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_04",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v191_maths_001",
+          "path": "maths_as_pure_gap_challenges_v191.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q02",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "specRef": "3.2",
+      "skill": "Counterexamples to universal claims",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v232_math_pure_04",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        },
+        {
+          "id": "task1_v245_maths_pure_applied_05",
+          "path": "maths_first_mock_pure_applied_v245.json"
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "specRef": "3.2",
+      "skill": "Positive-integer counterexamples and boundary cases",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v252_maths_pure_applied_06",
+          "path": "maths_first_mock_pure_challenges_v252.json"
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "specRef": "3.2",
+      "skill": "Proof inequalities using non-negative squares",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v252_maths_pure_applied_07",
+          "path": "maths_first_mock_pure_challenges_v252.json"
+        }
+      ]
+    },
+    {
+      "id": "M07",
+      "specRef": "3.3",
+      "skill": "Index laws and negative indices",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_indices_neg",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v136_002",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "specRef": "3.3",
+      "skill": "Fractional powers and surds",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_indices_frac",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_08",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M09",
+      "specRef": "3.3",
+      "skill": "Quadratic formula, roots and discriminant",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_quad_discriminant",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v136_001",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "specRef": "3.3",
+      "skill": "Completing the square and turning points",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v260_maths_year1_05",
+          "path": "maths_year1_pure_breadth_v260.json"
+        },
+        {
+          "id": "math_complete_square",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M11",
+      "specRef": "3.3",
+      "skill": "Solving inequalities using intervals",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "task1_v260_maths_year1_07",
+          "path": "maths_year1_pure_breadth_v260.json"
+        },
+        {
+          "id": "task1_v162_011",
+          "path": "deck.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice. Specific full multi-step inequalities practice is not yet linked in this narrowly verified audit; this remains an actionable gap.",
+      "practiceQuestionEvidence": []
+    },
+    {
+      "id": "M12",
+      "specRef": "3.3",
+      "skill": "Polynomial factor and remainder theorem",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v171_002",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_09",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M13",
+      "specRef": "3.3",
+      "skill": "Functions: domain and range",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_maths_007",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_maths_008",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M14",
+      "specRef": "3.3",
+      "skill": "Algebraic fractions and forbidden denominator inputs",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "v33_card_maths_algebra_85",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v232_math_pure_19",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        }
+      ]
+    },
+    {
+      "id": "M15",
+      "specRef": "3.3",
+      "skill": "Graph translations in horizontal and vertical directions",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "maths_transform_001",
+          "path": "deck.json"
+        },
+        {
+          "id": "maths_transform_002",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M16",
+      "specRef": "3.3",
+      "skill": "Horizontal scaling and reflection",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "maths_transform_003",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_maths_004",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M17",
+      "specRef": "3.3",
+      "skill": "Vertical scaling and reflection",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v162_001",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v162_002",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M18",
+      "specRef": "3.3",
+      "skill": "Composed transformations of coordinates",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v245_maths_pure_applied_13",
+          "path": "maths_first_mock_pure_applied_v245.json"
+        },
+        {
+          "id": "task1_v272_maths_graph_card_16",
+          "path": "maths_as_graph_transform_recall_v272.json"
+        }
+      ]
+    },
+    {
+      "id": "M19",
+      "specRef": "3.3",
+      "skill": "Transforming roots and turning points",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "task1_v272_maths_graph_card_14",
+          "path": "maths_as_graph_transform_recall_v272.json"
+        },
+        {
+          "id": "task1_v272_maths_graph_card_15",
+          "path": "maths_as_graph_transform_recall_v272.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v191_maths_004",
+          "path": "maths_as_pure_gap_challenges_v191.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q05",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
+    },
+    {
+      "id": "M20",
+      "specRef": "3.4",
+      "skill": "Straight-line gradients and equations",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_line_gradient",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v136_006",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M21",
+      "specRef": "3.4",
+      "skill": "Perpendicular gradients",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_perp_grad",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_11",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M22",
+      "specRef": "3.4",
+      "skill": "Circle centre and radius equation",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_circle",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_13",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M23",
+      "specRef": "3.4",
+      "skill": "Circle tangents and intersections",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_circle_tangent",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_14",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M24",
+      "specRef": "3.5",
+      "skill": "Arithmetic nth term and finite sum",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_arith_nth",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_arith_sum",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M25",
+      "specRef": "3.5",
+      "skill": "Geometric nth term, finite sum and convergence",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_geom_nth",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_geom_sum",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_geom_infinite",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M26",
+      "specRef": "3.5",
+      "skill": "Integer binomial expansion and coefficient",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v162_007",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_17",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M27",
+      "specRef": "3.5",
+      "skill": "Sigma notation and evaluating finite sums",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v136_066",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_19",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M28",
+      "specRef": "3.6",
+      "skill": "Sine rule, cosine rule and triangle area",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_sine_rule",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_cosine_rule",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_triangle_area",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M29",
+      "specRef": "3.6",
+      "skill": "Exact trigonometric values",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v162_016",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v162_017",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v162_018",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M30",
+      "specRef": "3.6",
+      "skill": "Trigonometric identities",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "maths_trig_001",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_tan_identity",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M31",
+      "specRef": "3.6",
+      "skill": "Periodic trig functions and all-degree solutions",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_trig_period",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_20",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M32",
+      "specRef": "3.7",
+      "skill": "Basic logarithm laws and change of base",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_logs_product",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_logs_power",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v162_019",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M33",
+      "specRef": "3.7",
+      "skill": "Exponential and logarithmic equations",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_exp_inverse",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_27",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M34",
+      "specRef": "3.8",
+      "skill": "Power rule and differentiation",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_diff_power",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_28",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M35",
+      "specRef": "3.8",
+      "skill": "Gradient of tangent and normal",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_diff_gradient",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_30",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ]
+    },
+    {
+      "id": "M36",
+      "specRef": "3.8",
+      "skill": "Stationary points, maxima/minima and second derivative caveats",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_stationary",
+          "path": "deck.json"
+        },
+        {
+          "id": "math_second_deriv",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v232_math_pure_21",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        }
+      ]
+    },
+    {
+      "id": "M37",
+      "specRef": "3.8",
+      "skill": "Differentiation from first principles",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v162_020",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M38",
+      "specRef": "3.9",
+      "skill": "Indefinite integration and +C",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "math_integrate_power",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v136_071",
+          "path": "deck.json"
+        }
+      ]
+    },
+    {
+      "id": "M39",
+      "specRef": "3.9",
+      "skill": "Definite integral versus unsigned total area",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "v33_card_maths_integration_81",
+          "path": "deck.json"
+        },
+        {
+          "id": "task1_v245_maths_pure_applied_17",
+          "path": "maths_first_mock_pure_applied_v245.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v191_maths_006",
+          "path": "maths_as_pure_gap_challenges_v191.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q07",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
+    },
+    {
+      "id": "M40",
+      "specRef": "3.11",
+      "skill": "Displacement using position vectors",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v232_math_pure_05",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        },
+        {
+          "id": "task1_v227_math_05",
+          "path": "maths_as_pure_cross_spec_recall_v227.json"
+        }
+      ]
+    },
+    {
+      "id": "M41",
+      "specRef": "3.11",
+      "skill": "2D vector magnitude, quadrant and direction",
+      "status": "sample_recall_verified",
+      "evidence": [
+        {
+          "id": "task1_v232_math_pure_06",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        },
+        {
+          "id": "task1_v245_maths_pure_applied_08",
+          "path": "maths_first_mock_pure_applied_v245.json"
+        }
+      ]
+    },
+    {
+      "id": "M42",
+      "specRef": "3.11",
+      "skill": "Collinearity via scalar multiples",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "task1_v227_math_06",
+          "path": "maths_as_pure_cross_spec_recall_v227.json"
+        },
+        {
+          "id": "task1_v232_math_pure_08",
+          "path": "maths_first_mock_pure_precision_v232.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v190_maths_003",
+          "path": "maths_pure_proof_vectors_v190.json"
+        },
+        {
+          "id": "task1_v271_maths_pure_q03",
+          "path": "maths_year1_pure_reasoning_v271.json"
+        }
+      ]
+    },
+    {
+      "id": "M43",
+      "specRef": "3.11",
+      "skill": "Vector internal division in a ratio",
+      "status": "short_recall_plus_exam_work_required",
+      "evidence": [
+        {
+          "id": "task1_v252_maths_pure_applied_12",
+          "path": "maths_first_mock_pure_challenges_v252.json"
+        },
+        {
+          "id": "task1_v260_maths_year1_38",
+          "path": "maths_year1_pure_breadth_v260.json"
+        }
+      ],
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice.",
+      "practiceQuestionEvidence": [
+        {
+          "id": "task1_v190_maths_004",
+          "path": "maths_pure_proof_vectors_v190.json"
+        }
+      ]
+    }
+  ]
+}
