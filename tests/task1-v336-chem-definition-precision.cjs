@@ -34,8 +34,14 @@ for(const id of ids){
   assert.equal(actual,'correct',id+' rejected a valid authored answer: '+answer);passes++;
   assert.notEqual(evaluate(c,'not '+answer).status,'correct',id+' accepted denial: '+answer);
  }
- for(const answer of [...c.reject,...originalWeak[id],"I don't know","no idea"]){
-  assert.equal(evaluate(c,answer).status,'wrong',id+' incorrectly credited '+answer);
+ for(const answer of [...c.reject,"I don't know","no idea"]){
+  assert.equal(evaluate(c,answer).status,'wrong',id+' incorrectly credited a known wrong response: '+answer);
+  rejections++;
+ }
+ // Previously over-generous accepted responses must no longer score correct.
+ // A near-complete definition may fairly be shown as partial rather than wrong.
+ for(const answer of originalWeak[id]){
+  assert.notEqual(evaluate(c,answer).status,'correct',id+' gave full credit to incomplete answer: '+answer);
   rejections++;
  }
 }
