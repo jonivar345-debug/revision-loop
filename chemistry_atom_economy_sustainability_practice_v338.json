@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "version": "v338",
+  "date": "2026-11-04",
+  "scope": "One original 8-mark AQA AS Chemistry Amount of Substance 3.1.2.5 paper-style application on economic, ethical and environmental advantages of high atom economy; never a flashcard.",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "notes": [
+    "Original numerical and discussion task written for the school mock; not a reproduced AQA exam question.",
+    "Must be assessed by a human against eight independent mark points. Never use keyword matching to infer a fully correct evaluation.",
+    "High percentage atom economy alone does not prove lower total environmental impact: actual yield, energy use, sourcing and safety are independent factors.",
+    "Append-only bank; original 47 practice banks, flashcard IDs and saved progress remain unchanged."
+  ],
+  "questions": [
+    {
+      "id": "task1_v338_chem_amount_01",
+      "subject": "Chemistry",
+      "specRef": "3.1.2.5",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA AS Amount of Substance Sustainability",
+      "paper": "Original",
+      "question": "Atom economy and wider economic, ethical and environmental consequences",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "revisionTopic": "Amount of substance",
+      "subtopic": "Evaluating atom economy and process trade-offs",
+      "marks": 8,
+      "prompt": "Two hypothetical routes make sodium carbonate, Na₂CO₃, as the desired product. Route A: 2NaHCO₃(s) → Na₂CO₃(s) + CO₂(g) + H₂O(g). Route B: Na₂O(s) + CO₂(g) → Na₂CO₃(s). Relative formula masses: NaHCO₃ = 84.0, Na₂CO₃ = 106.0, Na₂O = 62.0, CO₂ = 44.0. (a) Calculate the percentage atom economy of each route, showing the balanced-equation masses used. (b) Explain one potential economic advantage, one environmental advantage and one ethical advantage of a high-atom-economy route. (c) Explain why atom economy alone cannot show that Route B is better overall. [8 marks]",
+      "markPoints": [
+        "Identifies that Route A consumes two formula units of NaHCO₃, so the total relative mass of reactants is 2 × 84.0 = 168.0.",
+        "Uses the desired Na₂CO₃ relative formula mass of 106.0 to calculate Route A atom economy as 106.0/168.0 × 100 = 63.1%.",
+        "Uses the total mass 62.0 + 44.0 = 106.0 to calculate Route B atom economy as 106.0/106.0 × 100 = 100%.",
+        "Interprets the comparison: Route B puts all reactant atoms into the desired product in the stated equation; Route A also forms CO₂ and H₂O by-products.",
+        "Gives a justified potential economic benefit, such as reduced raw-material waste or waste-handling and separation costs per amount of desired product.",
+        "Gives a justified potential environmental benefit, such as less material discarded or fewer by-products requiring treatment and disposal.",
+        "Gives a justified ethical benefit, for example reduced resource extraction or disposal burdens on affected communities, making clear this is a potential benefit.",
+        "Explains that atom economy is a theoretical mass ratio; actual yields, process energy, hazards, sourcing, emissions and costs may differ, so it alone cannot establish which route is preferable."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Route A uses two NaHCO₃ formula units (2 × 84.0 = 168.0 mass units), so its percentage atom economy for Na₂CO₃ is 106.0/168.0 × 100 = 63.095...% ≈ 63.1%. Route B consumes Na₂O and CO₂ (62.0 + 44.0 = 106.0), so its atom economy is 106.0/106.0 × 100 = 100%. In Route B all the atoms in the stated reactants are incorporated into the desired product; Route A produces CO₂ and H₂O as additional products. Higher atom economy may mean less valuable starting material is converted into unwanted products and lower waste-treatment costs (economic). It may reduce waste and unnecessary raw-material consumption (environmental). Reduced extraction and disposal can also reduce impacts on communities and future resource availability (ethical). These are possible advantages, not guaranteed outcomes: atom economy is calculated from the balanced equation, not experimental yield. Route B could require more energy, costly or hazardous starting materials or have different emissions, so the higher atom economy alone is not enough to choose the better process.",
+      "answerType": "points",
+      "questionType": "manually reviewed calculation and evidence-based process evaluation",
+      "manualDiagramReview": false,
+      "manualWorkingReview": true,
+      "requiresWorking": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "hard",
+      "groupId": "task1_v338_chem_amount_01",
+      "groupOrder": 1,
+      "skillId": "v337_AOS-27",
+      "manualReviewReason": "Check both coefficient-weighted atom economies and the separate economic, environmental and ethical explanations. Do not award automatic full marks for keyword overlap or unsupported claims that a route is necessarily greener."
+    }
+  ]
+}
