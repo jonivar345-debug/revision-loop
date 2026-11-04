@@ -5,7 +5,7 @@ const app=read('app.js'),sw=read('sw.js'),bank=j('science_practical_diagram_appl
 const core=j('deck.json'),exam=j('exam_questions.json');
 const prs=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const fls=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(prs.length,45);
+assert(prs.length>=45,'The original 45 practice banks remain in order; later banks may be appended');
 assert.equal(prs[42],'physics_mechanics_signed_area_couples_practice_v280.json');
 assert.equal(prs[43],'maths_year1_trigonometry_differentiation_practice_v292.json');
 assert.equal(prs[44],'science_practical_diagram_applications_v313.json');
@@ -14,7 +14,7 @@ assert.equal(bank.questions.length,8);
 assert.equal(bank.version,'v313');
 const base=[...exam.questions,...prs.slice(0,44).flatMap(p=>j(p).questions||[])];
 const oldIds=new Set(base.map(q=>q.id));
-const all=[...base,...prs.slice(44).flatMap(p=>j(p).questions||[])];
+const all=[...base,...prs.slice(44,45).flatMap(p=>j(p).questions||[])];
 const newQ=all.filter(q=>q.id.startsWith('task1_v313_'));
 assert.equal(newQ.length,8);
 assert.equal(all.length,base.length+8);

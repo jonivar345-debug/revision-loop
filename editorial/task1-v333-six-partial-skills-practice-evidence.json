@@ -1,0 +1,121 @@
+{
+  "version": "v333",
+  "date": "2026-11-03",
+  "purpose": "Reconcile all six deliberately unsigned application rows from v332 with existing exam questions and five new manually assessed application problems.",
+  "sourceCrosswalk": "editorial/task1-v332-measurements-rates-kp-crosswalk.json",
+  "oldPracticeBanks": [
+    "chemistry_rates_rp7_kp_v210.json",
+    "physics_measurements_applications_v248.json"
+  ],
+  "newPracticeBank": "science_application_gaps_v333.json",
+  "rows": [
+    {
+      "id": "P24",
+      "subject": "Physics",
+      "skill": "Combine physical estimates in a derived order-of-magnitude application",
+      "recallIds": [
+        "task1_phy_021"
+      ],
+      "samplePracticeIds": [
+        "task1_v248_physics_measurements_27",
+        "task1_v248_physics_measurements_28"
+      ],
+      "newPracticeIds": [
+        "task1_v333_phy_01"
+      ],
+      "notes": "The new climb example combines geometry, energy, power and a power-of-ten judgement. Numerical reasoning requires actual written working.",
+      "applicationAvailability": "sample practice available; manual work required",
+      "independentlyExaminerMarked": false
+    },
+    {
+      "id": "C10",
+      "subject": "Chemistry",
+      "skill": "Write and use the direct Arrhenius equation as well as its logarithmic form",
+      "recallIds": [
+        "chem_arr_eq"
+      ],
+      "samplePracticeIds": [
+        "task1_v210_chem_04"
+      ],
+      "newPracticeIds": [
+        "task1_v333_chem_01"
+      ],
+      "notes": "The existing graph question uses the log form; the new question requires direct k=A exp(−Ea/RT) substitution and comparison across temperatures.",
+      "applicationAvailability": "sample practice available; manual work required",
+      "independentlyExaminerMarked": false
+    },
+    {
+      "id": "C14",
+      "subject": "Chemistry",
+      "skill": "Calculate unfamiliar numerical rate constants from Arrhenius parameters",
+      "recallIds": [
+        "chem_arr_eq"
+      ],
+      "samplePracticeIds": [
+        "task1_v210_chem_04"
+      ],
+      "newPracticeIds": [
+        "task1_v333_chem_01"
+      ],
+      "notes": "A new direct numerical calculation complements the existing independently specified Arrhenius graph problem.",
+      "applicationAvailability": "sample practice available; manual work required",
+      "independentlyExaminerMarked": false
+    },
+    {
+      "id": "C22",
+      "subject": "Chemistry",
+      "skill": "Use initial rates and continuous monitoring and understand methodological limits",
+      "recallIds": [
+        "task1_v128_002",
+        "task1_v128_003"
+      ],
+      "samplePracticeIds": [
+        "task1_v210_chem_01",
+        "task1_v210_chem_02"
+      ],
+      "newPracticeIds": [
+        "task1_v333_chem_02"
+      ],
+      "notes": "Existing quantitative initial-rate and concentration-time tasks are supplemented by a practical-design comparison with a clock endpoint.",
+      "applicationAvailability": "sample practice available; manual work required",
+      "independentlyExaminerMarked": false
+    },
+    {
+      "id": "K07",
+      "subject": "Chemistry",
+      "skill": "Carry out whole-process Kp calculations from equilibrium composition and partial pressures",
+      "recallIds": [
+        "chem_kp_recap_20261024_mole_table"
+      ],
+      "samplePracticeIds": [
+        "task1_v210_chem_05"
+      ],
+      "newPracticeIds": [
+        "task1_v333_chem_03"
+      ],
+      "notes": "Existing mole-to-Kp calculation now has a complementary inverse Kp-to-composition problem.",
+      "applicationAvailability": "sample practice available; manual work required",
+      "independentlyExaminerMarked": false
+    },
+    {
+      "id": "K12",
+      "subject": "Chemistry",
+      "skill": "Explain why a catalyst can speed equilibrium attainment but leaves Kp unchanged",
+      "recallIds": [
+        "chem_kp_temp"
+      ],
+      "samplePracticeIds": [],
+      "newPracticeIds": [
+        "task1_v333_chem_04"
+      ],
+      "notes": "New separate explanation explicitly tests catalyst effect on both reaction directions, equilibrium composition and Kp at constant temperature.",
+      "applicationAvailability": "sample practice available; manual work required",
+      "independentlyExaminerMarked": false
+    }
+  ],
+  "limitations": [
+    "Practice question presence is not proof of a student's competence.",
+    "The detailed AQA all-subsections audit and real-world handwritten-answer review still remain.",
+    "The website deliberately withholds automatic marks for multi-stage science answers until manually reviewed."
+  ]
+}

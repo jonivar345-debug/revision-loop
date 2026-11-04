@@ -1,0 +1,22 @@
+{
+  "version": "v333",
+  "date": "2026-11-03",
+  "questions": 5,
+  "totalMarks": 36,
+  "Physics": 1,
+  "Chemistry": 4,
+  "partiallyAssessed": [
+    "P24",
+    "C10",
+    "C14",
+    "C22",
+    "K07",
+    "K12"
+  ],
+  "notes": "Original multi-mark exam questions, not flashcards. Existing v210 exam bank already checks Arrhenius plot, initial-rate graphs and full forward Kp calculations; the five new tasks focus on complementary direct Arrhenius, inverse Kp, practical design, estimation and catalyst reasoning.",
+  "safety": "Questions with manualWorkingReview true never get suggested points from fuzzy answer matching.",
+  "restrictions": [
+    "Exam questions require student working; automated app does not independently inspect complete workings or drawings.",
+    "Content coverage audit remains provisional: testing question presence does not certify mastery or AQA every-bullet coverage."
+  ]
+}
