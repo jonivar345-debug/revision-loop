@@ -1,0 +1,9 @@
+name: Task 1 v334 Year 1 Pure full-scope selected evidence audit
+on: [pull_request]
+jobs:
+  maths-pure-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check app.js
+      - run: node tests/task1-v334-year1-pure-crosswalk.cjs
