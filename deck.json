@@ -28863,7 +28863,7 @@
       "priority": 2,
       "scope": "mock",
       "front": "What is a standard solution?",
-      "back": "A solution of accurately known concentration.",
+      "back": "A solution whose concentration is accurately known.",
       "active": true,
       "stage": "AS",
       "mock": true,
@@ -28872,9 +28872,15 @@
       "revisionTopic": "Amount of substance",
       "specRef": "3.1.2",
       "accept": [
+        "A solution whose concentration is accurately known.",
         "A solution of accurately known concentration.",
+        "A solution with a precisely known concentration.",
+        "A solution of exactly known concentration."
+      ],
+      "reject": [
         "known concentration",
-        "solution with accurately known concentration"
+        "a solution of unknown concentration",
+        "any solution with some solute"
       ]
     },
     {
@@ -49148,11 +49154,11 @@
       "specRef": "3.1.8",
       "stage": "A2",
       "front": "What is first ionisation enthalpy?",
-      "back": "Energy to remove one mole of electrons from one mole of gaseous atoms.",
+      "back": "The energy required to remove one electron from each atom in one mole of gaseous atoms, forming gaseous 1+ ions.",
       "accept": [
-        "Energy to remove one mole of electrons from one mole of gaseous atoms.",
-        "remove electron from gaseous atoms",
-        "remove one mole of electrons from one mole of gaseous atoms"
+        "The energy required to remove one electron from each atom in one mole of gaseous atoms, forming gaseous 1+ ions.",
+        "Energy to remove one mole of electrons from one mole of gaseous atoms to make one mole of gaseous 1+ ions.",
+        "The energy needed to remove one electron from each of a mole of gaseous atoms."
       ],
       "id": "task1_v125_121",
       "kind": "content",
@@ -49162,7 +49168,12 @@
       "taught": true,
       "active": true,
       "courseTopic": "Thermodynamics",
-      "revisionTopic": "Thermodynamics"
+      "revisionTopic": "Thermodynamics",
+      "reject": [
+        "remove electron from gaseous atoms",
+        "energy to remove an electron from a molecule",
+        "energy to add an electron to a gaseous atom"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -53622,11 +53633,11 @@
       "stage": "A2",
       "kind": "content",
       "front": "What is the enthalpy of solution?",
-      "back": "Enthalpy change when one mole of solute forms an infinitely dilute aqueous solution.",
+      "back": "The enthalpy change when one mole of solute dissolves in enough solvent to form an infinitely dilute solution.",
       "accept": [
-        "Enthalpy change when one mole of solute forms an infinitely dilute aqueous solution.",
-        "Enthalpy change when one mole of solute dissolves to form solution.",
-        "dissolution enthalpy for one mole"
+        "The enthalpy change when one mole of solute dissolves in enough solvent to form an infinitely dilute solution.",
+        "The enthalpy change on dissolving one mole of a substance in sufficient solvent to give infinite dilution.",
+        "Enthalpy change when one mole of solute dissolves to form an infinitely dilute solution."
       ],
       "id": "task1_v127_074",
       "active": true,
@@ -53635,7 +53646,12 @@
       "mock": true,
       "taught": true,
       "courseTopic": "Thermodynamics",
-      "revisionTopic": "Thermodynamics"
+      "revisionTopic": "Thermodynamics",
+      "reject": [
+        "dissolution enthalpy for one mole",
+        "enthalpy change when one mole of solute dissolves to form solution",
+        "heat given out when something dissolves"
+      ]
     },
     {
       "subject": "Chemistry",
@@ -57710,11 +57726,11 @@
       "stage": "AS",
       "topic": "Energetics",
       "front": "Define standard enthalpy of neutralisation.",
-      "back": "Enthalpy change forming one mole of water when acid and base react in dilute solution.",
+      "back": "The enthalpy change when an acid and a base react in dilute aqueous solution to form one mole of water under standard conditions.",
       "accept": [
-        "Enthalpy change forming one mole of water when acid and base react in dilute solution.",
-        "one mole of water formed",
-        "enthalpy per mol water"
+        "The enthalpy change when an acid and a base react in dilute aqueous solution to form one mole of water under standard conditions.",
+        "The standard heat change when an acid reacts with an alkali to produce 1 mol of water in dilute aqueous solution.",
+        "Enthalpy change forming one mole of water by neutralisation of an acid with a base in dilute aqueous solution at standard conditions."
       ],
       "taught": true,
       "mock": true,
@@ -57723,7 +57739,13 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Energetics",
-      "revisionTopic": "Energetics"
+      "revisionTopic": "Energetics",
+      "reject": [
+        "one mole of water formed",
+        "enthalpy per mol water",
+        "acid and base react",
+        "heat released when a base is added to an acid"
+      ]
     },
     {
       "id": "task1_v130_085",
@@ -57732,11 +57754,11 @@
       "stage": "A2",
       "topic": "Thermodynamics",
       "front": "Define standard enthalpy of atomisation.",
-      "back": "Enthalpy change forming one mole of gaseous atoms from an element in its standard state.",
+      "back": "The enthalpy change when one mole of gaseous atoms forms from an element in its standard state under standard conditions.",
       "accept": [
-        "Enthalpy change forming one mole of gaseous atoms from an element in its standard state.",
-        "one mole gaseous atoms",
-        "atomisation of 1 mol gaseous atoms"
+        "The enthalpy change when one mole of gaseous atoms forms from an element in its standard state under standard conditions.",
+        "The standard enthalpy change in forming 1 mol of gaseous atoms from an element in its standard state.",
+        "Energy change to produce one mole of gaseous atoms from an element in its standard state at standard conditions."
       ],
       "taught": true,
       "mock": true,
@@ -57745,7 +57767,12 @@
       "priority": 4,
       "scope": "mock",
       "courseTopic": "Thermodynamics",
-      "revisionTopic": "Thermodynamics"
+      "revisionTopic": "Thermodynamics",
+      "reject": [
+        "one mole gaseous atoms",
+        "atomisation of 1 mol gaseous atoms",
+        "formation of one mole of gaseous ions"
+      ]
     },
     {
       "id": "task1_v130_086",
