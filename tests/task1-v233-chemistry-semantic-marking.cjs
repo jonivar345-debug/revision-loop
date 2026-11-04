@@ -44,6 +44,14 @@ const active=deck.cards.filter(x=>x.subject==='Chemistry'&&x.mock===true&&x.acti
 assert.equal(active.length,1533);
 assert.equal(active.filter(x=>!x.specRef).length,660);
 assert.equal(active.filter(x=>!Array.isArray(x.accept)||x.accept.length===0).length,666);
-assert.equal(active.filter(x=>!Array.isArray(x.reject)||x.reject.length===0).length,1523);
+// v233's old 1523 'without reject examples' count was correct at that time.
+// v336 repairs five formerly over-generous definition cards, adding explicit
+// rejected incomplete responses. Require all five rather than hiding the delta.
+const definitionRepairs=['task1_chem_017','task1_v125_121','task1_v127_074','task1_v130_084','task1_v130_085'];
+for(const id of definitionRepairs){
+ const c=active.find(x=>x.id===id);
+ assert(c&&Array.isArray(c.reject)&&c.reject.length>=3,'Missing v336 invalid definition examples: '+id);
+}
+assert.equal(active.filter(x=>!Array.isArray(x.reject)||x.reject.length===0).length,1523-definitionRepairs.length);
 assert(!active.some(x=>/\bbuffers?\b|henderson/i.test([x.topic,x.front,x.back].join(' '))));
 console.log('PASS v233: 7 historic Chemistry flashcards retain IDs and answer meaning, 14 correct paraphrases accepted and 14 scientifically wrong reversals rejected, existing progress unaffected, 1533-card full audit still open.');
