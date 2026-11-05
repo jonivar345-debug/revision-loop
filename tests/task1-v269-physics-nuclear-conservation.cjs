@@ -37,7 +37,7 @@ assert.equal(loader([...original.cards],goodBanks).length,3381);
 const badBanks=Array.from({length:45},()=>({cards:[]}));badBanks[44]={cards:flash.cards.slice(0,7).map((c,i)=>({...c,...[{subject:'Chemistry'},{stage:'A2'},{mock:false},{taught:false},{scope:'full'},{active:false},{specRef:'3.17'}][i]}))};
 assert.equal(loader([...original.cards],badBanks).length,3345);
 const existingQ=new Set([...j('exam_questions.json').questions,...qUrls.slice(0,31).flatMap(p=>j(p).questions||[])].map(q=>q.id));
-let marks=0,manual=0;const specs=new Set();
+let marks=0,manual=0,manualReasoning=0;const specs=new Set();
 for(const q of bank.questions){
  assert(!existingQ.has(q.id),'Duplicate old exam question '+q.id);existingQ.add(q.id);specs.add(q.specRef);
  assert.equal(q.subject,'Physics');assert.equal(q.level,'AS');assert.equal(q.mock,true);assert.equal(q.taught,true);
@@ -45,17 +45,22 @@ for(const q of bank.questions){
  assert.equal(q.requiresWorking,true);assert.equal(q.markPoints.length,q.marks);
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
  if(q.manualDiagramReview)manual++;
+ if(q.manualWorkingReview)manualReasoning++;
  assert(q.modelAnswer.length>90);marks+=q.marks;
 }
 assert.deepEqual([...specs].sort(),['3.2.1.2','3.2.1.5','3.2.1.7']);
-assert.equal(marks,42);assert.equal(manual,2);
+assert.equal(marks,42);assert.equal(manual,2);assert.equal(manualReasoning,6,'All six extended conservation tasks need manual reasoning review');
 const start=app.indexOf('function examSuggested(q,answer){'),end=app.indexOf(' // v213:',start);
 assert(start>0&&end>start);
 const scoring=new Function('window',app.slice(start,end)+'\n}\nreturn examSuggested;')({});
-for(const q of bank.questions.filter(q=>q.manualDiagramReview)){
- const s=scoring(q,'nuclear equation keywords but no displayed symbols');
- assert.equal(s.manualRequired,true);assert.equal(s.suggested,0);
- assert.deepEqual(s.preds,Array(q.marks).fill(false));
+for(const q of bank.questions){
+ for(const answer of ['','nuclear equation keywords but no displayed symbols',q.modelAnswer,'not '+q.modelAnswer]){
+  const s=scoring(q,answer);
+  assert.equal(s.manualRequired,true,'Must manually assess extended Physics answer '+q.id);
+  assert.equal(s.suggested,0,'Automatic mark must remain zero '+q.id);
+  assert.deepEqual(s.preds,Array(q.marks).fill(false));
+  assert.deepEqual(s.scores,Array(q.marks).fill(0));
+ }
 }
 assert.equal(226,222+4);assert.equal(88,86+2);
 assert.equal(14,14);assert.equal(6,7-1);
@@ -65,4 +70,4 @@ assert.equal(0,1-1);assert.equal(0,1-1);
 const uud=2/3+2/3-1/3,udd=2/3-1/3-1/3;
 assert(Math.abs(uud-1)<1e-12);assert(Math.abs(udd)<1e-12);
 for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
-console.log('PASS v269: 36 AS conservation cards, 84 accepted and 84 rejected markers; eight original Physics questions with 42 distinct points and two genuinely manual equations; original progress preserved.');
+console.log('PASS v269: 36 AS conservation cards, 84 accepted and 84 rejected markers; eight original Physics questions with 42 distinct points (two manual equations, six manual reasoning tasks); original progress preserved.');
