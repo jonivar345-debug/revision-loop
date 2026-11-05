@@ -1,0 +1,29 @@
+name: Task 1 v341 current science application evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v341-current-science-application-evidence.json'
+      - 'tests/task1-v341-current-science-application-evidence.cjs'
+      - '.github/workflows/task1-v341-current-science-application-evidence.yml'
+      - 'app.js'
+      - 'physics_uncertainty_graph_practice_v268.json'
+      - 'physics_nuclear_conservation_practice_v269.json'
+      - 'physics_particle_exchange_diagram_practice_v265.json'
+      - 'physics_nuclear_conservation_practice_v269.json'
+      - 'tests/task1-v269-physics-nuclear-conservation.cjs'
+      - 'sw.js'
+      - 'chemistry_atom_economy_sustainability_practice_v338.json'
+  workflow_dispatch:
+jobs:
+  evidence-current-loader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: node --check tests/task1-v341-current-science-application-evidence.cjs
+      - name: Verify selected AQA practice links and examiner safeguards
+        run: node tests/task1-v341-current-science-application-evidence.cjs
+      - name: Check eight nuclear conservation worked questions require human assessment
+        run: node tests/task1-v269-physics-nuclear-conservation.cjs
+      - name: Retain existing atom economy manual scoring
+        run: node tests/task1-v338-atom-economy-application.cjs
