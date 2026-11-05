@@ -1,0 +1,21 @@
+name: Task 1 v351 AS science short recall marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v351-as-science-short-marker-calibration.json'
+      - 'tests/task1-v351-as-science-short-marker-calibration.cjs'
+      - '.github/workflows/task1-v351-as-science-short-marker-calibration.yml'
+  workflow_dispatch:
+jobs:
+  science-mock-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check app and new test syntax
+        run: node --check app.js && node --check tests/task1-v351-as-science-short-marker-calibration.cjs
+      - name: Verify 12 short science model answers, accepted paraphrases and known-wrong reversals
+        run: node tests/task1-v351-as-science-short-marker-calibration.cjs
+      - name: Preserve established short-answer and Chemistry equation regression behaviour
+        run: node tests/task1-v343-science-core-precision.cjs && node tests/task1-v347-equation-balance-precision.cjs
