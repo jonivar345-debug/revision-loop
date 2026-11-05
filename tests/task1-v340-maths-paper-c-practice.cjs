@@ -1,0 +1,63 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
+const app=read('app.js'),sw=read('sw.js'),bank=j('maths_year1_pure_targeted_practice_v340.json');
+assert.equal(bank.version,'v340');
+assert.equal(bank.questions.length,3);
+assert.equal(bank.questions.reduce((n,q)=>n+q.marks,0),23);
+const practicePaths=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
+assert(practicePaths.length>=49,'Preserve all existing practice banks and append v340');
+assert.equal(practicePaths[46],'maths_inequality_sign_reasoning_v335.json');
+assert.equal(practicePaths[47],'chemistry_atom_economy_sustainability_practice_v338.json');
+assert.equal(practicePaths[48],'maths_year1_pure_targeted_practice_v340.json');
+assert(sw.includes("'./maths_year1_pure_targeted_practice_v340.json'"));
+assert(sw.includes('-v340-pure-paper-c-practice'),'Refresh offline cache');
+const prior=j('exam_questions.json').questions.concat(practicePaths.slice(0,48).flatMap(p=>j(p).questions||[]));
+const priorIds=new Set(prior.map(q=>q.id));
+const start=app.indexOf('function mockEligibleQuestion(q){'),end=app.indexOf('function startMockSession(){',start);
+assert(start>=0&&end>start);
+const eligible=new Function(app.slice(start,end)+'\nreturn mockEligibleQuestion;')();
+const mstart=app.indexOf('function examSuggested(q,answer){'),mend=app.indexOf(' // v213:',mstart);
+assert(mstart>=0&&mend>mstart);
+const suggested=new Function('window',app.slice(mstart,mend)+'\n}\nreturn examSuggested;')({});
+const ids=new Set();
+for(const q of bank.questions){
+ assert(!priorIds.has(q.id)&&!ids.has(q.id),'No progress ID reused '+q.id);ids.add(q.id);
+ assert.equal(q.subject,'Maths');assert.equal(q.level,'AS');assert.equal(q.mock,true);assert.equal(q.taught,true);
+ assert.equal(q.standalone,true);assert.equal(q.requiresWorking,true);assert.equal(q.manualWorkingReview,true);
+ assert.equal(q.manualDiagramReview,false);assert.equal(q.sourceVerified,false);
+ assert.equal(q.verificationLevel,'original-exam-style');
+ assert(q.prompt.endsWith('['+q.marks+' marks]'));
+ assert.equal(q.markPoints.length,q.marks);assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
+ assert(q.markPoints.every(x=>x.length>=40),'Specific independent marking points '+q.id);
+ assert(q.modelAnswer.length>=350,'Full separate written model, not a flashcard');
+ assert.equal(q.groupId,q.id);assert(eligible(q),'Must be included in Year 1 Pure mock '+q.id);
+ for(const answer of ['',q.modelAnswer,'not '+q.modelAnswer,'I do not know','the formula is 3']){
+  const m=suggested(q,answer);
+  assert.equal(m.manualRequired,true,'Student working must be marked manually: '+q.id);
+  assert.equal(m.suggested,0,'Automatic suggestions must remain zero: '+q.id);
+  assert.deepEqual(m.scores,Array(q.marks).fill(0));
+  assert.deepEqual(m.preds,Array(q.marks).fill(false));
+ }
+}
+const near=(x,y,t=1e-7)=>assert(Math.abs(x-y)<t, x+' != '+y);
+const log=bank.questions[0];
+near(Math.log(Math.exp(1.9)),1.9);near((1.9-Math.log(3))/0.2,4.00693855665945);near(Math.log(2)/0.2,3.465735902799726);
+assert(log.modelAnswer.includes('4.007')&&log.modelAnswer.includes('3.466'));
+const tri=bank.questions[1];
+const b1=Math.asin(.7)*180/Math.PI,b2=180-b1;
+const c1=180-30-b1,c2=180-30-b2;
+near(b1,44.4270040008057);near(b2,135.5729959991943);
+near(20*Math.sin(c1*Math.PI/180),19.26578408152499);
+near(20*Math.sin(c2*Math.PI/180),4.982927224439292);
+assert(tri.modelAnswer.includes('19.3 cm')&&tri.modelAnswer.includes('4.98 cm'));
+const opt=bank.questions[2];
+const x=(16-2*Math.sqrt(19))/3,other=(16+2*Math.sqrt(19))/3;
+assert(x>0&&x<6&&other>6);
+const volume=x*(20-2*x)*(12-2*x);
+near(volume,262.932293,0.5);
+assert(opt.modelAnswer.includes('263 cm³'));
+assert.equal(j('deck.json').cards.length,3345,'Do not turn exams into long-answer core flashcards');
+for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
+ assert(app.includes(k),'Progress key changed');
+console.log('PASS v340: three original 23-mark Year 1 Pure maths working tasks loaded in mock practice, 48 prior banks retained, manual marking required and model calculations verified.');
