@@ -15,10 +15,16 @@ const index=app.indexOf('const EXTRA_FLASHCARD_URLS=');
 const tail=app.indexOf('// v287: exact-ID AQA',index);
 assert(index>=0&&tail>index);
 const urls=[...app.slice(index,tail).matchAll(/'\.\/([^']+)'/g)].map(m=>m[1]);
-assert.equal(urls.length,57,'Append-only flashcard supplement ordering changed');
-assert.equal(urls[56],'maths_first_mock_micro_recall_v348.json','New bank must be last');
-assert(app.includes('}else if(index===56){'),'v348 first-mock loader guard missing');
-assert(app.includes("c.courseTopic!=='Year 1 Pure'"),'Strict Year 1 mock-only guard missing');
+assert.equal(urls.length,56,'Existing 56-bank mock recall baseline must be preserved');
+assert.equal(urls[55],'science_partial_skill_short_recall_v312.json','Existing last bank must remain unchanged');
+assert(!urls.includes('maths_first_mock_micro_recall_v348.json'),'New bank must be loaded separately');
+assert(app.includes("const V348_MATHS_SHORT_RECALL_URL='./maths_first_mock_micro_recall_v348.json'"),'New optional Maths add-on reference missing');
+assert(app.includes("await fetch(V348_MATHS_SHORT_RECALL_URL"),'Optional Maths add-on must actually load');
+assert(app.includes("if(!isV348MathsFirstMockCard(c)||knownFlashIds.has(c.id))continue"),'Scoped add-on loader missing');
+const filterStart=app.indexOf('function isV348MathsFirstMockCard(c){');
+const filterEnd=app.indexOf('// v287: exact-ID AQA',filterStart);
+assert(filterStart>0&&filterEnd>filterStart,'AQA first-mock scope guard not found');
+const isV348MathsFirstMockCard=new Function(app.slice(filterStart,filterEnd)+'\nreturn isV348MathsFirstMockCard;')();
 assert(sw.includes('v348-maths-first-mock-short-recall'),'New service worker cache version missing');
 assert(sw.includes("'./maths_first_mock_micro_recall_v348.json'"),'New bank must be available offline');
 const begin=app.indexOf('function normalise('),end=app.indexOf('function importantTokens(',begin);
@@ -37,6 +43,7 @@ for(const [i,c] of bank.cards.entries()){
  assert(['3.2','3.3','3.6','3.7','3.8','3.11'].includes(c.specRef));
  assert(c.front.length<=145&&c.back.length<=130,'No lengthy exam questions disguised as flashcards');
  assert(eligible(c),'First school mock must select this card');
+ assert(isV348MathsFirstMockCard(c),'Optional loader must select this card');
  assert(Array.isArray(c.accept)&&c.accept.length>=3);
  assert(Array.isArray(c.reject)&&c.reject.length>=3);
  assert.equal(evaluate(c,c.back).status,'correct','Model rejected: '+c.id);
@@ -51,6 +58,10 @@ for(const [i,c] of bank.cards.entries()){
   wrong++;
  }
 }
+assert(!isV348MathsFirstMockCard({...bank.cards[0],stage:'A2'}),'Year 2 Maths must be blocked');
+assert(!isV348MathsFirstMockCard({...bank.cards[0],mock:false}),'Full-revision-only cards must be blocked');
+assert(!isV348MathsFirstMockCard({...bank.cards[0],subject:'Chemistry'}),'Other subjects must be blocked');
+assert(!isV348MathsFirstMockCard({...bank.cards[0],front:'x'.repeat(146)}),'Long questions must be blocked');
 assert(good>=42&&wrong>=42);
 console.log('PASS v348: 14 short first-mock Year 1 Pure cards, '+good+
  ' accepted alternatives, '+wrong+' wrong answers rejected, all original 3345 IDs intact.');
