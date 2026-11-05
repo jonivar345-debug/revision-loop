@@ -1,0 +1,21 @@
+name: Task 1 v352 mixed science original core flashcard calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v352-mixed-science-core-precision.json'
+      - 'tests/task1-v352-mixed-science-core-precision.cjs'
+      - '.github/workflows/task1-v352-mixed-science-core-precision.yml'
+  workflow_dispatch:
+jobs:
+  mixed-science-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check syntax
+        run: node --check app.js && node --check tests/task1-v352-mixed-science-core-precision.cjs
+      - name: Verify real marking on 20 short original Physics and Chemistry cards
+        run: node tests/task1-v352-mixed-science-core-precision.cjs
+      - name: Preserve previous 12-card calibration, directional Chemistry marking and Maths mock scope
+        run: node tests/task1-v351-as-science-short-marker-calibration.cjs && node tests/task1-v347-equation-balance-precision.cjs && node tests/task1-v348-year1-pure-micro-recall.cjs
