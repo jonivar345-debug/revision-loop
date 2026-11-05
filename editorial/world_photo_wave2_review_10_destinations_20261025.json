@@ -1,0 +1,311 @@
+{
+  "schema": "revision-loop-photo-wave2-source-curation-v1",
+  "created": "2026-10-25",
+  "state": "NON-EXECUTABLE EDITORIAL ONLY. Source metadata audited, not pixel inspected or live integrated.",
+  "scope": "Second 10 high-priority places selected by user; count destinations as source review, not final artwork acceptance",
+  "locations": [
+    {
+      "id": "beijing",
+      "name": "Beijing",
+      "disposition": "keep_until_pixel_review",
+      "reviewReplacementCandidates": [],
+      "finding": "Forbidden City / Temple of Heaven / Summer Palace / hutong is a strong four-subject set; inspect actual cover, avoid changing good landmark files.",
+      "preferredShopHero": "Forbidden City panorama",
+      "sourceInventoryFour": [
+        "Forbidden City, Beijing.jpg",
+        "Temple-of-heaven.jpg",
+        "Summer Palace, Beijing.jpg",
+        "Old districts 'hutong' in Beijing.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "disposition": "improve_cover_and_subject",
+      "reviewReplacementCandidates": [
+        "Park Güell - view of Sagrada Familia.jpg"
+      ],
+      "finding": "Current lead is a long-distance Sagrada Família view from Park Güell; dedicated Basilica close-up may be stronger and more recognisable, while retaining Parc Güell/Casa Batlló/Gothic Quarter for variety.",
+      "preferredShopHero": "Clearly visible Sagrada Família with architectural detail",
+      "sourceInventoryFour": [
+        "Park Güell - view of Sagrada Familia.jpg",
+        "Parc Güell Barcelona.JPG",
+        "Casa Batlló, Barcelona.jpg",
+        "Gothic Quarter, Barcelona (1) (30884069420).jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "lisbon",
+      "name": "Lisbon",
+      "disposition": "replace_generic_detail_and_cover",
+      "reviewReplacementCandidates": [
+        "Yellow leaves floating next to water volcano, Alameda dos Oceanos, Parque das Nações, Lisbon, Portugal julesvernex2.jpg"
+      ],
+      "finding": "Leaves beside a decorative water feature don't identify Lisbon. The tram is iconic but a more expansive cityscape may make a stronger lead image.",
+      "preferredShopHero": "Lisbon rooftops and São Jorge Castle / river viewpoint",
+      "sourceInventoryFour": [
+        "Lisboa, tranvía 28.jpg",
+        "Houses on and near Rua Morais Soares at sunrise, Lisbon, Portugal julesvernex2-4.jpg",
+        "Yellow leaves floating next to water volcano, Alameda dos Oceanos, Parque das Nações, Lisbon, Portugal julesvernex2.jpg",
+        "View from Castelo de S. Jorge - Lisbon - Portugal.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "prague",
+      "name": "Prague",
+      "disposition": "replace_low_distinction",
+      "reviewReplacementCandidates": [
+        "Czech-2013-Prague-Lichtenstein Palace.jpg"
+      ],
+      "finding": "The castle and Charles Bridge are far stronger Prague identifiers than an isolated minor palace. Current other three already cover bridge, clock and panorama; use castle-at-night variation if real pixels merit.",
+      "preferredShopHero": "Castle/Charles Bridge skyline",
+      "sourceInventoryFour": [
+        "Charles Bridge-Prague-4.jpg",
+        "Astronomical Clock Prague (20190520 120955).jpg",
+        "Prague Panorama - Oct 2010.jpg",
+        "Czech-2013-Prague-Lichtenstein Palace.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "luxor",
+      "name": "Luxor",
+      "disposition": "replace_repeated_temple_detail",
+      "reviewReplacementCandidates": [
+        "Luxor Temple detail R01.jpg"
+      ],
+      "finding": "Current set is dominated by detailed Temple photographs and a single creator. Include the Valley of the Kings for broader archaeological landscape.",
+      "preferredShopHero": "Karnak monumental columns or Luxor Temple exterior",
+      "sourceInventoryFour": [
+        "Karnak Hypostyle Hall R02.jpg",
+        "Luxor Temple R04.jpg",
+        "Luxor Temple Square R01.jpg",
+        "Luxor Temple detail R01.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "fes",
+      "name": "Fez",
+      "disposition": "add_distinctive_craft",
+      "reviewReplacementCandidates": [
+        "Bou Jeloud Mosque Fez Morocco Nov25 A7CR 09121.jpg"
+      ],
+      "finding": "Several mosque/gate/monument photos; the distinctive historic Chouara tanneries add authentic medina industry, history and colour.",
+      "preferredShopHero": "Fez medina overview or Bab Bou Jeloud gate",
+      "sourceInventoryFour": [
+        "Bab Bou Jeloud Frame Minaret Fes Nov25 A7CR 09127-8 HDR3.jpg",
+        "Bou Jeloud Mosque Fez Morocco Nov25 A7CR 09121.jpg",
+        "Gates of Royal Palace, Fez, Marocco (دار المخزن).jpg",
+        "Al Attarine Madrasa Fez el Bali Fez Morocco - panoramio (2).jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "greatbarrier",
+      "name": "Great Barrier Reef",
+      "disposition": "replace_wrong_focus_beach",
+      "reviewReplacementCandidates": [
+        "Chilli Beach, Lockhart QLD Australia - Great Barrier Reef Marine Park.jpg"
+      ],
+      "finding": "A beach can be within the Marine Park yet show no reef. Add a real underwater coral photograph; check whether the aerial photo is truly a good lead.",
+      "preferredShopHero": "Clearly identifiable coral reef from underwater or aerial viewpoint",
+      "sourceInventoryFour": [
+        "Great barrière reef.jpg",
+        "The Great Barrier Reef, Queensland, Cairns (Ank kumar) 04.jpg",
+        "Aerial View of Great Barrier Reef (Ank Kumar) 04.jpg",
+        "Chilli Beach, Lockhart QLD Australia - Great Barrier Reef Marine Park.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "uyuni",
+      "name": "Salar de Uyuni",
+      "disposition": "replace_generic_bird",
+      "reviewReplacementCandidates": [
+        "SAL - Waterbird in a flooded area of Salar de Uyuni, Bolivia, 2013.jpg"
+      ],
+      "finding": "Bird detail competes poorly with the salt flats' mirror phenomenon; select a high-resolution flooded-salt flat landscape rather than 700px low-res shots.",
+      "preferredShopHero": "Rainy-season sky reflection across salt flats",
+      "sourceInventoryFour": [
+        "Bolivia - Salar de Uyuni - Wiki Commons.jpg",
+        "SAL - Salt piles on Salar de Uyuni, Bolivia, 2013.jpg",
+        "Salar de Uyuni Décembre 2007 - Panorama 1 edit.jpg",
+        "SAL - Waterbird in a flooded area of Salar de Uyuni, Bolivia, 2013.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "atacama",
+      "name": "San Pedro de Atacama",
+      "disposition": "replace_duplicate_valley_angle",
+      "reviewReplacementCandidates": [
+        "Paisaje cerca de San Pedro de Atacama, Chile, 2016-02-01, DD 129.JPG"
+      ],
+      "finding": "All four current files are from the same day/photographer and concentrate on Valle de la Luna. Laguna Miscanti adds a distinct high-altitude volcanic lagoon.",
+      "preferredShopHero": "Valle de la Luna panorama with mountains, not a generic sand close-up",
+      "sourceInventoryFour": [
+        "Paisaje cerca de San Pedro de Atacama, Chile, 2016-02-01, DD 130-136 PAN.JPG",
+        "Anfiteatro, Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 149.JPG",
+        "Paisaje cerca de San Pedro de Atacama, Chile, 2016-02-01, DD 129.JPG",
+        "Duna Mayor, Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 173-175 HDR.JPG"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    },
+    {
+      "id": "chichenitza",
+      "name": "Chichén Itzá",
+      "disposition": "replace_pyramid_duplicate",
+      "reviewReplacementCandidates": [
+        "El Castillo ,Chichen Itza MEXICO - panoramio.jpg"
+      ],
+      "finding": "El Castillo appears multiple times. Add the observatory El Caracol to diversify Maya heritage; ensure a strong pyramid remains first.",
+      "preferredShopHero": "El Castillo clear straight-on/three-quarter view",
+      "sourceInventoryFour": [
+        "Chichen Itzá Pyramide.jpg",
+        "Chichen-Itza.jpg",
+        "The Market - Chichen Itza 2024.jpg",
+        "El Castillo ,Chichen Itza MEXICO - panoramio.jpg"
+      ],
+      "pixelReview": "pending",
+      "deployed": false
+    }
+  ],
+  "newVerifiedSources": [
+    {
+      "id": "barcelona",
+      "file": "Sagrada Familia Barcelona 1.jpg",
+      "author": "kallerna",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 5100,
+      "height": 3400,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_Barcelona_1.jpg",
+      "proposedRole": "possible cover: Sagrada Família facade",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "lisbon",
+      "file": "City view of Lisbon with Castelo de São Jorge.jpg",
+      "author": "SIryn",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 6000,
+      "height": 4000,
+      "filePage": "https://commons.wikimedia.org/wiki/File:City_view_of_Lisbon_with_Castelo_de_S%C3%A3o_Jorge.jpg",
+      "proposedRole": "landscape cityscape for cover; avoid overwide panoramic crop",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "prague",
+      "file": "Night view of the Castle and Charles Bridge, Prague - 8019.jpg",
+      "author": "Jorge Royan",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "width": 4368,
+      "height": 2704,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Night_view_of_the_Castle_and_Charles_Bridge%2C_Prague_-_8019.jpg",
+      "proposedRole": "castle skyline at night instead of minor palace",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "luxor",
+      "file": "Thebes, Luxor, Egypt, Panoramic view of the Valley of the Kings.jpg",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "width": 3072,
+      "height": 2048,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Thebes%2C_Luxor%2C_Egypt%2C_Panoramic_view_of_the_Valley_of_the_Kings.jpg",
+      "proposedRole": "wider archaeology beyond temples",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "fes",
+      "file": "Tanneries of Fez.jpg",
+      "author": "Yair Haklai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 4032,
+      "height": 1908,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Tanneries_of_Fez.jpg",
+      "proposedRole": "Fez leather-dye workshops and urban craft",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "greatbarrier",
+      "file": "Great Barrier Reef Coral.jpg",
+      "author": "Camille Gerstenhaber",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 4000,
+      "height": 3000,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_Coral.jpg",
+      "proposedRole": "underwater reef rather than generic coastline",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "uyuni",
+      "file": "El salar.jpg",
+      "author": "Panquequesitos",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 4272,
+      "height": 2848,
+      "filePage": "https://commons.wikimedia.org/wiki/File:El_salar.jpg",
+      "proposedRole": "flooded mirror-like salt flats",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "atacama",
+      "file": "Laguna Miscanti.jpg",
+      "author": "Daniel Espinoza Charrier",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "width": 4032,
+      "height": 3024,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Laguna_Miscanti.jpg",
+      "proposedRole": "high-altitude Atacama lagoon in Los Flamencos reserve",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    },
+    {
+      "id": "chichenitza",
+      "file": "El caracol de Chichén Itzá.JPG",
+      "author": "Noyolcont",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "width": 4608,
+      "height": 3072,
+      "filePage": "https://commons.wikimedia.org/wiki/File:El_caracol_de_Chich%C3%A9n_Itz%C3%A1.JPG",
+      "proposedRole": "Maya observatory instead of repeated El Castillo",
+      "status": "Commons file description, exact subject, credited author, CC licence, and original dimensions checked; pixel and crop review pending"
+    }
+  ],
+  "rules": [
+    "Retain all existing positive-quality subjects; don't replace for count alone",
+    "Do not silently reduce photo original resolution or replace landscape with extreme narrow panoramas",
+    "Hero selection must be checked at actual short shop-card crop",
+    "Photographer name, source link, and exact Creative Commons license must remain visible",
+    "Four distinct subjects, no repeated pyramid/canyon/temple close-ups where better diversity exists",
+    "No app.js/location-module/service-worker changes, no purchased IDs, XP or points changed"
+  ],
+  "metrics": {
+    "destinationsReviewed": 10,
+    "commonsSourcesChecked": 9,
+    "proposedSwaps": 9,
+    "pixelApprovals": 0,
+    "liveIntegrations": 0
+  }
+}
