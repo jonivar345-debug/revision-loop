@@ -1,0 +1,21 @@
+name: Task 1 v346 chemistry one-way equation direction regression
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v346-chem-equation-direction-audit.json'
+      - 'tests/task1-v346-chem-equation-direction.cjs'
+      - '.github/workflows/task1-v346-chem-equation-direction.yml'
+  workflow_dispatch:
+jobs:
+  equation-direction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check syntax
+        run: node --check app.js && node --check tests/task1-v346-chem-equation-direction.cjs
+      - name: Refuse 66 reversed Chemistry equation responses and retain correct variants
+        run: node tests/task1-v346-chem-equation-direction.cjs
+      - name: Keep previous reviewed AS and A2 chemistry and physics marking
+        run: node tests/task1-v345-taught-a2-chemistry-precision.cjs && node tests/task1-v344-science-70-core-precision.cjs && node tests/task1-v343-science-core-precision.cjs
