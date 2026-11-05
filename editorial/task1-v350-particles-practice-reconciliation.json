@@ -1,0 +1,43 @@
+{
+  "version": "v350",
+  "date": "2026-11-05",
+  "type": "Additive chronological audit reconciliation only; no live flashcard or application question changes",
+  "historicalAudit": "editorial/task1-v341-current-science-application-evidence.json",
+  "laterBank": "physics_particles_three_application_gaps_v342.json",
+  "description": "The selected v341 snapshot identified three specific Physics Particles application skills without linked written-practice evidence. A later v342 bank added exactly those three original manually assessed questions. Retain the v341 dated snapshot and link the later evidence separately.",
+  "selectedPhysicsRows": 9,
+  "oldPracticeLinkedPhysicsRows": 6,
+  "nowPracticeLinkedPhysicsRows": 9,
+  "linkedWrittenMarksAdded": 20,
+  "allPhysicsRequirementsCertified": false,
+  "studentWorkingIndependentlyMarked": false,
+  "links": [
+    {
+      "sourceRequirement": 6,
+      "skillId": "v263_ParticlesRequirement06",
+      "questionId": "task1_v342_phy_particles_01",
+      "sourcePath": "physics_particles_three_application_gaps_v342.json",
+      "specRef": "3.2.1.1",
+      "marks": 6,
+      "requiresManualReview": true
+    },
+    {
+      "sourceRequirement": 44,
+      "skillId": "v263_ParticlesRequirement44",
+      "questionId": "task1_v342_phy_particles_02",
+      "sourcePath": "physics_particles_three_application_gaps_v342.json",
+      "specRef": "3.2.2.3",
+      "marks": 7,
+      "requiresManualReview": true
+    },
+    {
+      "sourceRequirement": 48,
+      "skillId": "v263_ParticlesRequirement48",
+      "questionId": "task1_v342_phy_particles_03",
+      "sourcePath": "physics_particles_three_application_gaps_v342.json",
+      "specRef": "3.2.2.4",
+      "marks": 7,
+      "requiresManualReview": true
+    }
+  ]
+}

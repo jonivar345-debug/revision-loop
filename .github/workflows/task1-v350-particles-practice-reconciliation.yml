@@ -1,0 +1,21 @@
+name: Task 1 v350 Physics particles practice evidence reconciliation
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v350-particles-practice-reconciliation.json'
+      - 'tests/task1-v350-particles-practice-reconciliation.cjs'
+      - '.github/workflows/task1-v350-particles-practice-reconciliation.yml'
+      - 'physics_particles_three_application_gaps_v342.json'
+      - 'editorial/task1-v341-current-science-application-evidence.json'
+      - 'app.js'
+      - 'sw.js'
+  workflow_dispatch:
+jobs:
+  particles-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preserve existing Particles practice regression
+        run: node tests/task1-v342-physics-particles-application.cjs
+      - name: Verify later evidence against historical Physics audit
+        run: node tests/task1-v350-particles-practice-reconciliation.cjs
