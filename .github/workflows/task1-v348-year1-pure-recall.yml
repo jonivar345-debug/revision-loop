@@ -1,0 +1,21 @@
+name: Task 1 v348 first-mock Year 1 Pure Maths recall
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'maths_first_mock_micro_recall_v348.json'
+      - 'tests/task1-v348-year1-pure-micro-recall.cjs'
+      - '.github/workflows/task1-v348-year1-pure-recall.yml'
+  workflow_dispatch:
+jobs:
+  mock-maths-recall:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript and JSON syntax
+        run: node --check app.js && node --check tests/task1-v348-year1-pure-micro-recall.cjs && node -e "JSON.parse(require('node:fs').readFileSync('maths_first_mock_micro_recall_v348.json','utf8'))"
+      - name: Verify 14 concise first-mock cards and real marking
+        run: node tests/task1-v348-year1-pure-micro-recall.cjs
+      - name: Preserve recent Chemistry direction and balance checks
+        run: node tests/task1-v347-equation-balance-precision.cjs && node tests/task1-v346-chem-equation-direction.cjs
