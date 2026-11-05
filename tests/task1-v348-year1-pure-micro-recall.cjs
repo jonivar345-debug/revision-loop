@@ -20,7 +20,7 @@ assert.equal(urls[55],'science_partial_skill_short_recall_v312.json','Existing l
 assert(!urls.includes('maths_first_mock_micro_recall_v348.json'),'New bank must be loaded separately');
 assert(app.includes("const V348_MATHS_SHORT_RECALL_URL='./maths_first_mock_micro_recall_v348.json'"),'New optional Maths add-on reference missing');
 assert(app.includes("await fetch(V348_MATHS_SHORT_RECALL_URL"),'Optional Maths add-on must actually load');
-assert(app.includes("if(!isV348MathsFirstMockCard(c)||knownFlashIds.has(c.id))continue"),'Scoped add-on loader missing');
+assert(app.includes("if(!isV348MathsFirstMockCard(c)||cards.some(old=>old.id===c.id))continue"),'Scoped add-on loader missing');
 const filterStart=app.indexOf('function isV348MathsFirstMockCard(c){');
 const filterEnd=app.indexOf('// v287: exact-ID AQA',filterStart);
 assert(filterStart>0&&filterEnd>filterStart,'AQA first-mock scope guard not found');
