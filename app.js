@@ -2661,18 +2661,52 @@ function chemistryEquationSides(raw){
  const left=key(parts[0]),right=key(parts[1]);
  return left&&right?{left,right}:null;
 }
-function isReversedChemistryEquation(c,input){
+function isMockChemistryEquationRecall(c){
  if(c?.subject!=='Chemistry'||c?.mock!==true)return false;
- if(!/\bequation\b|\b(?:atomisation|hydration|ionisation)\s+step\b/i.test(String(c.front||'')))return false;
- const expected=chemistryEquationSides(c.back);
- const given=chemistryEquationSides(input);
+ // Include "Write [reaction]" and "Combine [half equations]", which lack
+ // the word "equation" but still require a balanced, directed equation.
+ return /\bequation\b|\b(?:atomisation|hydration|ionisation)\s+step\b|^(?:write|combine)\b/i.test(String(c.front||''));
+}
+function isReversedChemistryEquation(c,input){
+ if(!isMockChemistryEquationRecall(c))return false;
+ const expected=chemistryEquationSides(c.back),given=chemistryEquationSides(input);
  return Boolean(expected&&given&&expected.left!==expected.right&&
   expected.left===given.right&&expected.right===given.left);
 }
-
+// A single changed stoichiometric coefficient in an otherwise identical
+// one-way reaction makes the equation unbalanced; token similarity must not
+// award marks for having the right substances in the wrong quantities.
+// Do not block scaled or rearranged equations, or the card's accepted variants.
+function chemistryEquationCoefficientView(side){
+ const coefficients=[];
+ const skeleton=String(side).replace(/(^|\+)(\d+(?:\.\d+)?(?:\/\d+)?)?(?=[a-z])/g,(_,separator,n)=>{
+  const value=!n?1:n.includes('/')?Number(n.split('/')[0])/Number(n.split('/')[1]):Number(n);
+  coefficients.push(value);
+  return separator;
+ });
+ return {skeleton,coefficients};
+}
+function isSingleChemistryCoefficientError(c,input){
+ if(!isMockChemistryEquationRecall(c))return false;
+ if((c.accept||[]).some(a=>normalise(a)===normalise(input)))return false;
+ const expected=chemistryEquationSides(c.back),given=chemistryEquationSides(input);
+ if(!expected||!given)return false;
+ let changes=0;
+ for(const side of ['left','right']){
+  const a=chemistryEquationCoefficientView(expected[side]);
+  const b=chemistryEquationCoefficientView(given[side]);
+  if(a.skeleton!==b.skeleton||a.coefficients.length!==b.coefficients.length)return false;
+  for(let i=0;i<a.coefficients.length;i++){
+   if(a.coefficients[i]!==b.coefficients[i])changes++;
+  }
+ }
+ return changes===1;
+}
 function evaluateCard(c,input){
  if(isReversedChemistryEquation(c,input))
   return {status:'wrong',score:0,text:'This is the reverse chemical reaction; the equation direction must match the question.',missing:[String(c.back||'')]};
+ if(isSingleChemistryCoefficientError(c,input))
+  return {status:'wrong',score:0,text:'One stoichiometric coefficient is incorrect; the equation is not balanced.',missing:[String(c.back||'')]};
  // v334: do not extract a one-letter answer such as T (tera) from the
  // apostrophe in "don't", "can't" or "haven't" when the student supplied
  // a complete non-answer. Preserve real answers such as T or "it is T".
