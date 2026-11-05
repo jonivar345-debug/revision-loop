@@ -1,0 +1,21 @@
+name: Task 1 v345 40 taught A2 Chemistry mock marker checks
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v345-40-a2-chemistry-precision.json'
+      - 'tests/task1-v345-taught-a2-chemistry-precision.cjs'
+      - '.github/workflows/task1-v345-taught-a2-chemistry-precision.yml'
+  workflow_dispatch:
+jobs:
+  taught-a2-precision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check tests/task1-v345-taught-a2-chemistry-precision.cjs && node --check app.js
+      - name: Check AQA chemistry equivalents and wrong-answer reversals against production marker
+        run: node tests/task1-v345-taught-a2-chemistry-precision.cjs
+      - name: Keep existing science and maths marker regressions
+        run: node tests/task1-v344-science-70-core-precision.cjs && node tests/task1-v343-science-core-precision.cjs && node tests/task1-v329-last-15-year1-pure-core.cjs
