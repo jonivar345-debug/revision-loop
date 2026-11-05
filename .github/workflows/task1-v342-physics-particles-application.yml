@@ -1,0 +1,22 @@
+name: Task 1 v342 Physics particle numerical applications
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'physics_particles_three_application_gaps_v342.json'
+      - 'tests/task1-v342-physics-particles-application.cjs'
+      - 'tests/task1-v341-current-science-application-evidence.cjs'
+      - '.github/workflows/task1-v342-physics-particles-application.yml'
+  workflow_dispatch:
+jobs:
+  physics-particle-application-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate numerical regression syntax
+        run: node --check tests/task1-v342-physics-particles-application.cjs
+      - name: Verify exact computations, school-mock selector, manual marking and offline bank
+        run: node tests/task1-v342-physics-particles-application.cjs
+      - name: Preserve earlier Chemistry and Physics practice coverage
+        run: node tests/task1-v341-current-science-application-evidence.cjs && node tests/task1-v340-maths-paper-c-practice.cjs && node tests/task1-v338-atom-economy-application.cjs
