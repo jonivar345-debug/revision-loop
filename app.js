@@ -5074,6 +5074,17 @@ async function sync(manual=false){
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
   catch{return {cards:[]}}
  }));
+ // v348 is an optional, separately guarded add-on: all 56 historical
+ // supplement indices stay intact and absent add-ons never block core loading.
+ let v348MathsBank={cards:[]};
+ try{
+  const response=await fetch(V348_MATHS_SHORT_RECALL_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v348MathsBank=await response.json();
+ }catch{}
+ for(const c of v348MathsBank.cards||[]){
+  if(!isV348MathsFirstMockCard(c)||cards.some(old=>old.id===c.id))continue;
+  cards.push(c);
+ }
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
@@ -5266,17 +5277,6 @@ async function sync(manual=false){
     if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
    }
   }
- }
- // v348 is an optional, separately guarded add-on: all 56 historical
- // supplement indices stay intact and absent add-ons never block core loading.
- let v348MathsBank={cards:[]};
- try{
-  const response=await fetch(V348_MATHS_SHORT_RECALL_URL+'?v='+Date.now(),{cache:'no-store'});
-  if(response.ok)v348MathsBank=await response.json();
- }catch{}
- for(const c of v348MathsBank.cards||[]){
-  if(!isV348MathsFirstMockCard(c)||knownFlashIds.has(c.id))continue;
-  knownFlashIds.add(c.id);cards.push(c);
  }
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
