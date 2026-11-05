@@ -16,6 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Preserve existing Particles practice regression
-        run: node tests/task1-v342-three-physics-particles-applications.cjs
+        run: node tests/task1-v342-physics-particles-application.cjs
       - name: Verify later evidence against historical Physics audit
         run: node tests/task1-v350-particles-practice-reconciliation.cjs
