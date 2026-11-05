@@ -6,10 +6,12 @@ assert.equal(cross.rows.length,43);
 assert.equal(cross.counts.total,43);
 assert.equal(cross.counts.sampleRecall,36);
 assert.equal(cross.counts.needsExamReview,7);
-assert.equal(cross.counts.partialWithPractice,6);
-assert.equal(cross.counts.partialWithoutPractice,1);
+assert.equal(cross.counts.partialWithPractice,7);
+assert.equal(cross.counts.partialWithoutPractice,0);
 assert(!cross.rows.some(r=>/inverse and composite functions/i.test(r.skill)),'Do not count deliberately excluded Year 2 function topic');
-assert.deepEqual(cross.rows.filter(r=>r.status==='short_recall_plus_exam_work_required'&&!(r.practiceQuestionEvidence||[]).length).map(r=>r.id),['M11'],'Do not conceal the full rational-inequality practice gap');
+assert.deepEqual(cross.rows.filter(r=>r.status==='short_recall_plus_exam_work_required'&&!(r.practiceQuestionEvidence||[]).length).map(r=>r.id),[],'All seven reasoning-heavy skills must point to actual practice; do not mistake availability for mastery');
+const inequalities=cross.rows.find(r=>r.id==='M11');
+assert.deepEqual((inequalities.practiceQuestionEvidence||[]).map(e=>e.id),['task1_v335_maths_01','task1_v335_maths_02'],'Verify both loaded seven-mark inequality questions');
 assert.equal(new Set(cross.rows.map(r=>r.id)).size,43);
 const extraPaths=[...app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
 const practisePaths=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
@@ -46,10 +48,10 @@ for(const row of cross.rows){
   practiceRefs++;
  }
 }
-assert(cardRefs>=88&&practiceRefs>=11);
+assert(cardRefs>=88&&practiceRefs>=13);
 const combined=[...base,...extraPaths.flatMap(path=>j(path).cards||[])];
 assert.equal(combined.length,4344,'Preserve whole flashcard bank');
 assert.equal(new Set(combined.map(c=>c.id)).size,combined.length,'Preserve unique progress IDs');
 const mockMaths=combined.filter(c=>c.subject==='Maths'&&eligible(c));
 assert.equal(mockMaths.length,331,'Preserve exactly 331 first-mock Maths flashcards');
-console.log('PASS v334: 43 AQA first-mock Pure skills across 9 specification sections, '+cardRefs+' real flashcard source refs, '+practiceRefs+' original multi-mark exam question refs, 6 application rows with linked practice, one unverified inequality-worked-answer gap, all 331 mock Maths cards preserved.');
+console.log('PASS v334: 43 AQA first-mock Pure skills across 9 specification sections, '+cardRefs+' real flashcard source refs, '+practiceRefs+' original multi-mark exam question refs, 7 application rows with linked practice, no unlinked reasoning-heavy row; written mastery remains unverified, all 331 mock Maths cards preserved.');
