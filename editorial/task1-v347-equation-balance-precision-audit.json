@@ -1,0 +1,365 @@
+{
+  "version": "v347",
+  "date": "2026-11-05",
+  "scope": "Existing original Chemistry school-mock single-arrow reaction/equation recall: the 33 v346 equation/step cards plus 15 additional Write/Combine reaction cards. This is a targeted marker audit, not a full AQA specification sign-off.",
+  "source": "Current production evaluateCard on main after v346, original 3345-card deck, mock=true and an explicit single rightward equation arrow.",
+  "method": "Perturb exactly one leading stoichiometric coefficient per existing model equation, leaving every species and side intact. Confirm chemical non-equivalence and measure the existing marker's judgement. Harden grading only when the same directed chemical formula skeleton remains and exactly one coefficient differs; preserve old accepted answers, scaled equations and anything that cannot safely be parsed.",
+  "counts": {
+    "equations": 48,
+    "newDirectionCases": 15,
+    "originalV346EquationCases": 33,
+    "coefficientPreviouslyFull": 43,
+    "coefficientPreviouslyPartial": 3,
+    "coefficientPreviouslyWrong": 2
+  },
+  "guardRestrictions": [
+    "Chemistry mock equation/step/reaction prompts only",
+    "Both answers must contain exactly one rightward arrow",
+    "Reject exact reactant/product reversal or a single changed stoichiometric coefficient when every other component is unchanged",
+    "Preserve existing explicit accepted alternatives",
+    "Do not generalise to equilibrium, non-equation prose, Maths or Physics, scaled equations, or materially rearranged unfamiliar responses"
+  ],
+  "limitations": [
+    "Not a full equation balancing algorithm; multiple changed coefficients and reordered species still require later work.",
+    "No new flashcards, and original card IDs and progress keys remain unchanged.",
+    "The 48 scanned cards cover original deck only, not all supplemental flashcard sources."
+  ],
+  "cases": [
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_eq",
+      "front": "Write the lattice formation equation for NaCl.",
+      "model": "Na⁺(g) + Cl⁻(g) → NaCl(s).",
+      "singleWrongCoefficient": "2Na⁺(g) + Cl⁻(g) → NaCl(s).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_diss_eq",
+      "front": "Write the lattice dissociation equation for NaCl.",
+      "model": "NaCl(s) → Na⁺(g) + Cl⁻(g).",
+      "singleWrongCoefficient": "2NaCl(s) → Na⁺(g) + Cl⁻(g).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_eq",
+      "front": "Write the standard formation equation for MgO.",
+      "model": "Mg(s) + ½O₂(g) → MgO(s).",
+      "singleWrongCoefficient": "2Mg(s) + ½O₂(g) → MgO(s).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_cl_eq",
+      "front": "Write the atomisation equation for chlorine.",
+      "model": "½Cl₂(g) → Cl(g).",
+      "singleWrongCoefficient": "3Cl₂(g) → Cl(g).",
+      "priorStatus": "partial"
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_first_ie_eq",
+      "front": "Write the equation for magnesium's first ionisation energy.",
+      "model": "Mg(g) → Mg⁺(g) + e⁻.",
+      "singleWrongCoefficient": "2Mg(g) → Mg⁺(g) + e⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_second_ie_eq",
+      "front": "Write the equation for magnesium's second ionisation energy.",
+      "model": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "singleWrongCoefficient": "2Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_first_ea_eq",
+      "front": "Write the equation for oxygen's first electron affinity.",
+      "model": "O(g) + e⁻ → O⁻(g).",
+      "singleWrongCoefficient": "2O(g) + e⁻ → O⁻(g).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_second_ea_eq",
+      "front": "Write the equation for oxygen's second electron affinity.",
+      "model": "O⁻(g) + e⁻ → O²⁻(g).",
+      "singleWrongCoefficient": "2O⁻(g) + e⁻ → O²⁻(g).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_na_eq",
+      "front": "Write the hydration equation for Na⁺.",
+      "model": "Na⁺(g) → Na⁺(aq).",
+      "singleWrongCoefficient": "2Na⁺(g) → Na⁺(aq).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_nacl_eq",
+      "front": "Write the enthalpy of solution equation for NaCl.",
+      "model": "NaCl(s) → Na⁺(aq) + Cl⁻(aq).",
+      "singleWrongCoefficient": "2NaCl(s) → Na⁺(aq) + Cl⁻(aq).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_mg",
+      "front": "What is magnesium's atomisation step in the MgO cycle?",
+      "model": "Mg(s) → Mg(g). It is endothermic (+).",
+      "singleWrongCoefficient": "2Mg(s) → Mg(g). It is endothermic (+).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_o",
+      "front": "Write the atomisation equation for oxygen in an MgO Born–Haber cycle.",
+      "model": "½O₂(g) → O(g).",
+      "singleWrongCoefficient": "3O₂(g) → O(g).",
+      "priorStatus": "partial"
+    },
+    {
+      "id": "chem_bh_weak_20261024_lattice_last",
+      "front": "Write the lattice formation equation for magnesium oxide.",
+      "model": "Mg²⁺(g) + O²⁻(g) → MgO(s).",
+      "singleWrongCoefficient": "2Mg²⁺(g) + O²⁻(g) → MgO(s).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_atomic_v43_39",
+      "front": "Write the first ionisation equation for magnesium.",
+      "model": "Mg(g) → Mg⁺(g) + e⁻.",
+      "singleWrongCoefficient": "2Mg(g) → Mg⁺(g) + e⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_atomic_v43_40",
+      "front": "Write the second ionisation equation for magnesium.",
+      "model": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "singleWrongCoefficient": "2Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_amount_v44_23",
+      "front": "Write the net ionic equation for acid–alkali neutralisation.",
+      "model": "H⁺(aq)+OH⁻(aq)→H₂O(l).",
+      "singleWrongCoefficient": "2H⁺(aq)+OH⁻(aq)→H₂O(l).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_amount_v44_24",
+      "front": "Write the net ionic equation for barium sulfate precipitation.",
+      "model": "Ba²⁺(aq)+SO₄²⁻(aq)→BaSO₄(s).",
+      "singleWrongCoefficient": "2Ba²⁺(aq)+SO₄²⁻(aq)→BaSO₄(s).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_energetics_v49_13",
+      "front": "Give a formation equation for magnesium oxide.",
+      "model": "Mg(s)+½O₂(g)→MgO(s).",
+      "singleWrongCoefficient": "2Mg(s)+½O₂(g)→MgO(s).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_energetics_v49_14",
+      "front": "Give the standard formation equation of liquid water.",
+      "model": "H₂(g)+½O₂(g)→H₂O(l).",
+      "singleWrongCoefficient": "2H₂(g)+½O₂(g)→H₂O(l).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_energetics_v49_16",
+      "front": "What is the standard combustion equation for methane?",
+      "model": "CH₄(g)+2O₂(g)→CO₂(g)+2H₂O(l).",
+      "singleWrongCoefficient": "2CH₄(g)+2O₂(g)→CO₂(g)+2H₂O(l).",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_037",
+      "front": "Write the oxidation half-equation for iodide to iodine.",
+      "model": "2I⁻ → I₂ + 2e⁻.",
+      "singleWrongCoefficient": "3I⁻ → I₂ + 2e⁻.",
+      "priorStatus": "partial"
+    },
+    {
+      "id": "chem_y1_chat_v126_038",
+      "front": "Write the reduction half-equation for chlorine.",
+      "model": "Cl₂ + 2e⁻ → 2Cl⁻.",
+      "singleWrongCoefficient": "2Cl₂ + 2e⁻ → 2Cl⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_039",
+      "front": "Write the oxidation half-equation for magnesium.",
+      "model": "Mg → Mg²⁺ + 2e⁻.",
+      "singleWrongCoefficient": "2Mg → Mg²⁺ + 2e⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_040",
+      "front": "Write the reduction half-equation Fe³⁺ to Fe²⁺.",
+      "model": "Fe³⁺ + e⁻ → Fe²⁺.",
+      "singleWrongCoefficient": "2Fe³⁺ + e⁻ → Fe²⁺.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_043",
+      "front": "Write the acidic reduction half-equation for MnO₄⁻ → Mn²⁺.",
+      "model": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.",
+      "singleWrongCoefficient": "2MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_044",
+      "front": "Write the acidic reduction half-equation for dichromate(VI).",
+      "model": "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O.",
+      "singleWrongCoefficient": "2Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_046",
+      "front": "Combine Fe³⁺ reduction with I⁻ oxidation.",
+      "model": "2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂.",
+      "singleWrongCoefficient": "3Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_053",
+      "front": "Write the first-ionisation equation for Na.",
+      "model": "Na(g) → Na⁺(g) + e⁻.",
+      "singleWrongCoefficient": "2Na(g) → Na⁺(g) + e⁻.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_062",
+      "front": "Write magnesium's slow reaction with cold water.",
+      "model": "Mg + 2H₂O → Mg(OH)₂ + H₂.",
+      "singleWrongCoefficient": "2Mg + 2H₂O → Mg(OH)₂ + H₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_063",
+      "front": "Write magnesium's reaction with steam.",
+      "model": "Mg + H₂O(g) → MgO + H₂.",
+      "singleWrongCoefficient": "2Mg + H₂O(g) → MgO + H₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_064",
+      "front": "Write calcium's reaction with water.",
+      "model": "Ca + 2H₂O → Ca(OH)₂ + H₂.",
+      "singleWrongCoefficient": "2Ca + 2H₂O → Ca(OH)₂ + H₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_065",
+      "front": "Write strontium's reaction with water.",
+      "model": "Sr + 2H₂O → Sr(OH)₂ + H₂.",
+      "singleWrongCoefficient": "2Sr + 2H₂O → Sr(OH)₂ + H₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_066",
+      "front": "Write barium's reaction with water.",
+      "model": "Ba + 2H₂O → Ba(OH)₂ + H₂.",
+      "singleWrongCoefficient": "2Ba + 2H₂O → Ba(OH)₂ + H₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_070",
+      "front": "Write the neutralisation of Mg(OH)₂ by HCl.",
+      "model": "Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O.",
+      "singleWrongCoefficient": "2Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_071",
+      "front": "Write calcium hydroxide neutralising H⁺ in acidic soil.",
+      "model": "Ca(OH)₂ + 2H⁺ → Ca²⁺ + 2H₂O.",
+      "singleWrongCoefficient": "2Ca(OH)₂ + 2H⁺ → Ca²⁺ + 2H₂O.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_072",
+      "front": "Write the reaction extracting titanium using magnesium.",
+      "model": "TiCl₄ + 2Mg → Ti + 2MgCl₂.",
+      "singleWrongCoefficient": "2TiCl₄ + 2Mg → Ti + 2MgCl₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_074",
+      "front": "Write calcium oxide removing sulfur dioxide.",
+      "model": "CaO + SO₂ → CaSO₃.",
+      "singleWrongCoefficient": "2CaO + SO₂ → CaSO₃.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_076",
+      "front": "Write the net ionic equation for the sulfate ion test.",
+      "model": "Ba²⁺ + SO₄²⁻ → BaSO₄(s), a white precipitate.",
+      "singleWrongCoefficient": "2Ba²⁺ + SO₄²⁻ → BaSO₄(s), a white precipitate.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_083",
+      "front": "Write chlorine displacing bromide ions.",
+      "model": "Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂.",
+      "singleWrongCoefficient": "2Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_084",
+      "front": "Write chlorine displacing iodide ions.",
+      "model": "Cl₂ + 2I⁻ → 2Cl⁻ + I₂.",
+      "singleWrongCoefficient": "2Cl₂ + 2I⁻ → 2Cl⁻ + I₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_085",
+      "front": "Write bromine displacing iodide ions.",
+      "model": "Br₂ + 2I⁻ → 2Br⁻ + I₂.",
+      "singleWrongCoefficient": "2Br₂ + 2I⁻ → 2Br⁻ + I₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_087",
+      "front": "Write NaCl reacting with concentrated H₂SO₄ (acid–base only).",
+      "model": "NaCl + H₂SO₄ → NaHSO₄ + HCl.",
+      "singleWrongCoefficient": "2NaCl + H₂SO₄ → NaHSO₄ + HCl.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_088",
+      "front": "Write the redox equation for HBr reducing sulfuric acid.",
+      "model": "2HBr + H₂SO₄ → Br₂ + SO₂ + 2H₂O.",
+      "singleWrongCoefficient": "3HBr + H₂SO₄ → Br₂ + SO₂ + 2H₂O.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_092",
+      "front": "Write the ionic equation for a silver bromide precipitate.",
+      "model": "Ag⁺ + Br⁻ → AgBr(s), a cream precipitate.",
+      "singleWrongCoefficient": "2Ag⁺ + Br⁻ → AgBr(s), a cream precipitate.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_096",
+      "front": "Write chlorine-water's oxygen-forming overall equation.",
+      "model": "2Cl₂ + 2H₂O → 4HCl + O₂.",
+      "singleWrongCoefficient": "3Cl₂ + 2H₂O → 4HCl + O₂.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "chem_y1_chat_v126_097",
+      "front": "Write chlorine reacting with cold, dilute NaOH.",
+      "model": "Cl₂ + 2NaOH → NaCl + NaClO + H₂O.",
+      "singleWrongCoefficient": "2Cl₂ + 2NaOH → NaCl + NaClO + H₂O.",
+      "priorStatus": "correct"
+    },
+    {
+      "id": "task1_v146_062",
+      "front": "What is the overall fermentation equation for glucose to ethanol?",
+      "model": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.",
+      "singleWrongCoefficient": "2C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.",
+      "priorStatus": "wrong"
+    },
+    {
+      "id": "task1_v155_004",
+      "front": "Give the catalytic-converter equation for CO and NO.",
+      "model": "2CO + 2NO → 2CO₂ + N₂.",
+      "singleWrongCoefficient": "3CO + 2NO → 2CO₂ + N₂.",
+      "priorStatus": "wrong"
+    }
+  ]
+}
