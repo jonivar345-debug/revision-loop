@@ -1,0 +1,22 @@
+name: Task 1 v349 Maths inequality audit reconciliation
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v349-inequality-practice-reconciliation.json'
+      - 'tests/task1-v349-inequality-practice-reconciliation.cjs'
+      - '.github/workflows/task1-v349-inequality-audit-reconciliation.yml'
+      - 'maths_inequality_sign_reasoning_v335.json'
+      - 'editorial/task1-v334-year1-pure-skill-crosswalk.json'
+      - 'app.js'
+  workflow_dispatch:
+jobs:
+  chronological-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check syntax and JSON
+        run: node --check tests/task1-v349-inequality-practice-reconciliation.cjs && node -e "JSON.parse(require('node:fs').readFileSync('editorial/task1-v349-inequality-practice-reconciliation.json','utf8'))"
+      - name: Preserve original v334 and v335 regressions
+        run: node tests/task1-v334-year1-pure-crosswalk.cjs && node tests/task1-v335-maths-inequality-practice.cjs
+      - name: Verify dated v349 evidence reconciliation
+        run: node tests/task1-v349-inequality-practice-reconciliation.cjs
