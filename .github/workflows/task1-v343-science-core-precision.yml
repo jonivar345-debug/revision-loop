@@ -1,0 +1,21 @@
+name: Task 1 v343 52 original science mock marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v343-52-original-core-science-marking.json'
+      - 'tests/task1-v343-science-core-precision.cjs'
+      - '.github/workflows/task1-v343-science-core-precision.yml'
+  workflow_dispatch:
+jobs:
+  science-core-precision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check
+        run: node --check tests/task1-v343-science-core-precision.cjs && node --check app.js
+      - name: Test vetted correct and incorrect science responses against actual production marker
+        run: node tests/task1-v343-science-core-precision.cjs
+      - name: Recheck complete selected mock bank and preserved scope
+        run: node tests/task1-v334-full-mock-flashcard-marker.cjs && node tests/task1-v329-last-15-year1-pure-core.cjs
