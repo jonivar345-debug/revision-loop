@@ -2767,6 +2767,53 @@ function evaluateCard(c,input){
    'Check the chemical test, product or exact definition.'):'Check the exact ion or oxidation state against the accepted answer.';
   return {status:'wrong',score:0,text:hint,missing:[]};
  }
+ // v336: require essential parts of five precise definitions before fuzzy
+ // word overlap can confer a full mark. Authored correct paraphrases still work.
+ if(c?.subject==='Chemistry'&&[
+  'task1_chem_017','task1_v125_121','task1_v127_074','task1_v130_084','task1_v130_085'
+ ].includes(c.id)){
+  const rules={
+   task1_chem_017:[
+    [/\bconcentrat\w*\b/i,'concentration'],
+    [/\b(?:accurat\w*|precis\w*|exact\w*)\b/i,'accurately known']
+   ],
+   task1_v125_121:[
+    [/\b(?:energy|enthalpy|heat|work)\b/i,'energy required'],
+    [/\b(?:remov\w*|detach\w*)\b/i,'removing'],
+    [/\belectrons?\b/i,'electron'],
+    [/\b(?:gaseous|gas)\b/i,'gaseous atoms'],
+    [/\b(?:one|1|a)\s*(?:mol(?:e)?s?)\b/i,'one mole']
+   ],
+   task1_v127_074:[
+    [/\b(?:enthalpy|heat|energy)\b/i,'enthalpy change'],
+    [/\b(?:one|1|a)\s*(?:mol(?:e)?s?)\b/i,'one mole'],
+    [/\bdissolv\w*\b/i,'dissolving'],
+    [/\binfinit\w*\b/i,'infinite dilution'],
+    [/\bdilut\w*\b/i,'infinite dilution']
+   ],
+   task1_v130_084:[
+    [/\b(?:enthalpy|heat|energy)\b/i,'enthalpy change'],
+    [/\bacid\b/i,'acid'],
+    [/\b(?:base|alkali|neutralis\w*|neutraliz\w*)\b/i,'base or neutralisation'],
+    [/\b(?:one|1|a)\s*(?:mol(?:e)?s?)\b/i,'one mole'],
+    [/\bwater\b/i,'water'],
+    [/\bdilut\w*\b/i,'dilute solution'],
+    [/\bstandard\b/i,'standard conditions']
+   ],
+   task1_v130_085:[
+    [/\b(?:enthalpy|heat|energy)\b/i,'enthalpy change'],
+    [/\b(?:one|1|a)\s*(?:mol(?:e)?s?)\b/i,'one mole'],
+    [/\b(?:gaseous|gas)\s+atoms?\b/i,'gaseous atoms'],
+    [/\belement\b/i,'element'],
+    [/\bstandard\s+(?:conditions|enthalpy)\b/i,'standard enthalpy or standard conditions']
+   ]
+  }[c.id];
+  const missing=rules.filter(([regex])=>!regex.test(String(input||''))).map(([,label])=>label);
+  if(missing.length){
+   const score=(rules.length-missing.length)/rules.length;
+   return {status:score>=.45?'partial':'wrong',score,text:'The definition is missing required scientific details.',missing};
+  }
+ }
  let best=0,missing=[];
  for(const alt of (c.accept||[]))best=Math.max(best,formulaScore(input,alt),phraseScore(input,alt));
  if(c.concepts?.length){

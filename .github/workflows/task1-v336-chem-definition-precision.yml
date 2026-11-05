@@ -1,0 +1,13 @@
+name: Task 1 v336 precise Chemistry definitions
+on: [pull_request]
+jobs:
+  chemistry-definition-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check tests/task1-v336-chem-definition-precision.cjs
+      - name: Recheck updated Chemistry definition marking
+        run: node tests/task1-v336-chem-definition-precision.cjs
+      - name: Keep full mock bank answer checker correct
+        run: node tests/task1-v334-full-mock-flashcard-marker.cjs

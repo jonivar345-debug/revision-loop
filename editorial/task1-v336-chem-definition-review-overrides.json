@@ -1,0 +1,45 @@
+{
+  "version": "v336",
+  "date": "2026-11-04",
+  "purpose": "Preserve v228's historical first-pass ledger while recording five deliberately re-reviewed Chemistry definition corrections. An unchanged v228 stamp remains an assertion for every other first-pass card.",
+  "scope": "Existing short flashcards only; first school mock Chemistry definitions; full AQA specification sign-off not implied.",
+  "changes": [
+    {
+      "id": "task1_chem_017",
+      "oldStamp": "6d105312",
+      "newStamp": "fdf46c65",
+      "inV228Ledger": false,
+      "issue": "Removed concentration-only wording that omitted accuracy."
+    },
+    {
+      "id": "task1_v125_121",
+      "oldStamp": "dd458306",
+      "newStamp": "ee68ef10",
+      "inV228Ledger": true,
+      "issue": "First ionisation definition now explicitly gives gaseous 1+ ions."
+    },
+    {
+      "id": "task1_v127_074",
+      "oldStamp": "e7d787eb",
+      "newStamp": "60c323d5",
+      "inV228Ledger": true,
+      "issue": "Enthalpy of solution specifies infinite dilution rather than mere dissolving."
+    },
+    {
+      "id": "task1_v130_084",
+      "oldStamp": "57c7db10",
+      "newStamp": "45e04750",
+      "inV228Ledger": false,
+      "issue": "Standard neutralisation specifies 1 mol water, dilute aqueous solution and standard conditions."
+    },
+    {
+      "id": "task1_v130_085",
+      "oldStamp": "41237631",
+      "newStamp": "05473ef4",
+      "inV228Ledger": true,
+      "issue": "Standard atomisation conditions clarified; gaseous atoms not gaseous ions."
+    }
+  ],
+  "validation": "Five corrected model definitions and authored accepted/rejected examples independently tested against actual production evaluator by tests/task1-v336-chem-definition-precision.cjs; every first-pass snapshot not listed here must keep its original hash.",
+  "mastery": "Not a claim that a student has mastered these concepts."
+}

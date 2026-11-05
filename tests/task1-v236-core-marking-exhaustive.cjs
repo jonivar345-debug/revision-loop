@@ -17,7 +17,18 @@ for(const c of deck.cards){
  for(const x of (c.accept||[])){assert.equal(judge(c,x).status,'correct','Stored accept incorrectly marked '+c.id+': '+x);accepted++;}
  for(const x of (c.reject||[])){assert.equal(judge(c,x).status,'wrong','Stored reject credited '+c.id+': '+x);rejected++;}
 }
-assert.equal(models,3345);assert.equal(accepted,4942);assert.equal(rejected,90);
+// v236's original 4,942 accepted and 90 rejected core examples stay as a
+// baseline. The five independently reviewed v336 Chemistry definitions add
+// exactly one net accepted wording and 16 rejected incomplete responses.
+const v336DefinitionIds=['task1_chem_017','task1_v125_121','task1_v127_074','task1_v130_084','task1_v130_085'];
+assert.deepEqual(v336DefinitionIds.map(id=>{
+ const c=deck.cards.find(c=>c.id===id);
+ assert(c&&c.mock&&c.subject==='Chemistry','Missing reviewed definition '+id);
+ return [c.accept?.length,c.reject?.length];
+}),[[4,3],[3,3],[3,3],[3,4],[3,3]]);
+assert.equal(models,3345);
+assert.equal(accepted,4942+1,'Historical accepted responses plus one new valid definition wording');
+assert.equal(rejected,90+16,'Historical rejected responses plus 16 specified incomplete definitions');
 assert.equal(judge(deck.cards.find(c=>c.id==='maths_transform_003'),'1 over a').status,'correct');
 assert.equal(judge(deck.cards.find(c=>c.id==='maths_transform_003'),'scale factor a').status,'wrong');
 assert.equal(audit.results.unexpectedResults,0);
