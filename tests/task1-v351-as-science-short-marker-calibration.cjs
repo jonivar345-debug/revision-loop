@@ -57,7 +57,7 @@ for(let i=0;i<reviewed.length;i++){
  }
 }
 // Exact-ID/scoped guard: a changed original answer or mock scope must never be silently overridden.
-const invalidCopies=originals.map(x=>({...x,front:'Changed question '+x.front,mock:false,accept:[],reject:[]}));
+const invalidCopies=ledger.rows.map(row=>({...set.get(row.id),front:'Changed question '+row.originalFront,mock:false,accept:[],reject:[]}));
 apply(invalidCopies);
 assert(invalidCopies.every(c=>!c.v351ExactReviewed&&c.accept.length===0&&c.reject.length===0));
 assert.equal(valid,24);
