@@ -1,0 +1,21 @@
+name: Task 1 v347 chemistry equation balance and direction regression
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v347-equation-balance-precision-audit.json'
+      - 'tests/task1-v347-equation-balance-precision.cjs'
+      - '.github/workflows/task1-v347-equation-balance.yml'
+  workflow_dispatch:
+jobs:
+  equation-balance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check app.js && node --check tests/task1-v347-equation-balance-precision.cjs
+      - name: Keep 48 model equations and all accepted variants; reject wrong directions and coefficients
+        run: node tests/task1-v347-equation-balance-precision.cjs
+      - name: Preserve v346 equation reversals and recent precision checks
+        run: node tests/task1-v346-chem-equation-direction.cjs && node tests/task1-v345-taught-a2-chemistry-precision.cjs && node tests/task1-v344-science-70-core-precision.cjs
