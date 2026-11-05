@@ -1,0 +1,429 @@
+{
+  "version": "v341",
+  "date": "2026-11-05",
+  "purpose": "Update selected first-school-mock Physics/Chemistry AQA application-skill evidence using currently loaded original exam-practice banks, without rewriting historical v263/v337 snapshots or claiming completed assessment.",
+  "scope": "17 AQA Chemistry Amount of Substance application rows from v337, plus 9 historical Physics Measurements/Particles core-only gaps from v263. These 26 audited rows are not the full Physics/Chemistry specifications.",
+  "sources": {
+    "amount": "editorial/task1-v337-amount-substance-live-evidence.json",
+    "physics": "editorial/task1-v263-physics-core-gaps-evidence.json"
+  },
+  "counts": {
+    "chemistryAmountApplicationRows": 17,
+    "chemistryAmountRowsWithLinkedExamPractice": 17,
+    "chemistryAmountPreviouslyUnlinkedNowLinked": [
+      "AOS-27"
+    ],
+    "physicsSelectedHistoricalGaps": 9,
+    "physicsRowsWithRepresentativeManualPractice": 6,
+    "physicsRowsStillWithoutVerifiedLinkedFullExamPractice": 3
+  },
+  "chemistryAmount": [
+    {
+      "id": "AOS-06",
+      "specRef": "3.1.2.2",
+      "skill": "Apply mole to atoms, molecules, ions and electrons",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q02"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-07",
+      "specRef": "3.1.2.2",
+      "skill": "Calculate particles and ions using Avogadro constant",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q02"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-09",
+      "specRef": "3.1.2.2",
+      "skill": "Calculate solution concentration, volume and amount",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q07"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q02"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-15",
+      "specRef": "3.1.2.3",
+      "skill": "Use gas data and mass to determine volatile substance Mr",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_02"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-18",
+      "specRef": "3.1.2.4",
+      "skill": "Derive empirical formula from masses or percentages",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_01"
+        },
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q06"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-19",
+      "specRef": "3.1.2.4",
+      "skill": "Use empirical formula and Mr to derive molecular formula",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q06"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-20",
+      "specRef": "3.1.2.5",
+      "skill": "Write full and net ionic equations",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-21",
+      "specRef": "3.1.2.5",
+      "skill": "Balance equations for unfamiliar stated reactions",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q01"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-23",
+      "specRef": "3.1.2.5",
+      "skill": "Determine a limiting reactant from stoichiometric amounts",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_03"
+        },
+        {
+          "path": "chemistry_amount_precision_applications_v278.json",
+          "id": "task1_v278_chem_amount_q03"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-24",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate volume of gas produced",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_03"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-25",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate percentage yield from actual and theoretical yields",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_04"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-26",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate percentage atom economy with balanced coefficients",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_04"
+        },
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q05"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-27",
+      "specRef": "3.1.2.5",
+      "skill": "Explain economic, ethical and environmental benefits of high atom economy",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "chemistry_atom_economy_sustainability_practice_v338.json",
+          "id": "task1_v338_chem_amount_01"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-28",
+      "specRef": "3.1.2.5",
+      "skill": "Use a titration to find concentration",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        },
+        {
+          "path": "chemistry_amount_applied_practice_v270.json",
+          "id": "task1_v270_chem_amount_q04"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-29",
+      "specRef": "3.1.2.5",
+      "skill": "Prepare a volumetric standard solution and perform RP1 titration",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-30",
+      "specRef": "3.1.2.5",
+      "skill": "Calculate uncertainty from two burette readings",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "id": "AOS-31",
+      "specRef": "3.1.2.5",
+      "skill": "Discard clear titre outliers and calculate a suitable mean",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "amount_of_substance_focus_v44.json",
+          "id": "amount_v44_07"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    }
+  ],
+  "physicsSelected": [
+    {
+      "sourceCrosswalk": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "sourceRequirement": 25,
+      "specRef": "3.1.3",
+      "skill": "Apply an estimated physical quantity to an unfamiliar scale calculation",
+      "previousCoreOnlyStatus": "worked_selected_example",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "science_application_gaps_v333.json",
+          "id": "task1_v333_phy_01"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "sourceRequirement": 26,
+      "specRef": "3.1.2",
+      "skill": "Construct error bars and extreme acceptable lines on an unfamiliar actual diagram",
+      "previousCoreOnlyStatus": "component_only",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "physics_uncertainty_graph_practice_v268.json",
+          "id": "task1_v268_phy_graph_03"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v241-physics-measurements-crosswalk.json",
+      "sourceRequirement": 27,
+      "specRef": "3.1.2",
+      "skill": "Independently mark novel multistep numerical uncertainty problems",
+      "previousCoreOnlyStatus": "component_only",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "physics_uncertainty_graph_practice_v268.json",
+          "id": "task1_v268_phy_graph_06"
+        },
+        {
+          "path": "science_practical_diagram_applications_v313.json",
+          "id": "task1_v313_phy_03"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "sourceRequirement": 6,
+      "specRef": "3.2.1.1",
+      "skill": "Unfamiliar specific-charge calculations for an ion or nucleus",
+      "previousCoreOnlyStatus": "worked_selected_example",
+      "linkedCurrentExamPractice": [],
+      "reviewStatus": "no_manually_verified_link_in_this_focused_audit",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "sourceRequirement": 10,
+      "specRef": "3.2.1.2",
+      "skill": "Balanced unfamiliar nuclide alpha and beta-decay equations",
+      "previousCoreOnlyStatus": "component_only",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "physics_nuclear_conservation_practice_v269.json",
+          "id": "task1_v269_phy_conservation_q01"
+        },
+        {
+          "path": "physics_nuclear_conservation_practice_v269.json",
+          "id": "task1_v269_phy_conservation_q02"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "sourceRequirement": 19,
+      "specRef": "3.2.1.4",
+      "skill": "Actually draw and mark unfamiliar particle-exchange diagrams",
+      "previousCoreOnlyStatus": "unevidenced",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "physics_particle_exchange_diagram_practice_v265.json",
+          "id": "task1_v265_phy_exchange_01"
+        },
+        {
+          "path": "physics_particle_exchange_diagram_practice_v265.json",
+          "id": "task1_v265_phy_exchange_04"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "sourceRequirement": 33,
+      "specRef": "3.2.1.7",
+      "skill": "Apply all relevant conservation laws to novel proposed interactions",
+      "previousCoreOnlyStatus": "component_only",
+      "linkedCurrentExamPractice": [
+        {
+          "path": "physics_nuclear_conservation_practice_v269.json",
+          "id": "task1_v269_phy_conservation_q03"
+        },
+        {
+          "path": "physics_nuclear_conservation_practice_v269.json",
+          "id": "task1_v269_phy_conservation_q07"
+        }
+      ],
+      "reviewStatus": "representative_exam_practice_present_manual_review_required",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "sourceRequirement": 44,
+      "specRef": "3.2.2.3",
+      "skill": "Calculate unseen energy-level transitions and emitted wavelengths",
+      "previousCoreOnlyStatus": "worked_selected_example",
+      "linkedCurrentExamPractice": [],
+      "reviewStatus": "no_manually_verified_link_in_this_focused_audit",
+      "independentlyStudentWorkMarked": false
+    },
+    {
+      "sourceCrosswalk": "editorial/task1-v242-physics-particles-crosswalk.json",
+      "sourceRequirement": 48,
+      "specRef": "3.2.2.4",
+      "skill": "Novel numerical de Broglie wavelength and diffraction comparison",
+      "previousCoreOnlyStatus": "worked_selected_example",
+      "linkedCurrentExamPractice": [],
+      "reviewStatus": "no_manually_verified_link_in_this_focused_audit",
+      "independentlyStudentWorkMarked": false
+    }
+  ],
+  "nextPriorityPhysics": [
+    {
+      "specRef": "3.2.1.1",
+      "skill": "Unfamiliar specific-charge calculations for an ion or nucleus",
+      "sourceRequirement": 6
+    },
+    {
+      "specRef": "3.2.2.3",
+      "skill": "Calculate unseen energy-level transitions and emitted wavelengths",
+      "sourceRequirement": 44
+    },
+    {
+      "specRef": "3.2.2.4",
+      "skill": "Novel numerical de Broglie wavelength and diffraction comparison",
+      "sourceRequirement": 48
+    }
+  ],
+  "limitations": [
+    "An original exam-practice question existing in the mock is not evidence that students can solve it.",
+    "All 26 rows still require working, drawings or extended-response review where appropriate; no examiner-marked student submissions have been checked.",
+    "The three Physics unlinked rows may have relevant questions elsewhere; this focused audit has not validated those links.",
+    "No changes to user flashcard progress, original core, accepted answers, mock scope or production examiner are made by this evidence reconciliation.",
+    "These 26 rows are selected application requirements, not comprehensive AQA specification-bullet certification."
+  ]
+}
