@@ -1,0 +1,30 @@
+{
+  "version": "v349",
+  "date": "2026-11-05",
+  "scope": "AQA Year 1 Pure first school mock: chronological exam-practice evidence reconciliation, not a statement of complete specification coverage or student mastery.",
+  "historicalSnapshot": "editorial/task1-v334-year1-pure-skill-crosswalk.json",
+  "subsequentBank": "maths_inequality_sign_reasoning_v335.json",
+  "explanation": "v334 correctly recorded six of seven reasoning-heavy sampled Maths skills with linked practice, and M11 without it. The v335 bank subsequently supplied two 7-mark rational-inequality problems. This additive record shows the updated position while preserving the historical v334 snapshot.",
+  "latestSampledEvidence": {
+    "sampledSkillRows": 43,
+    "reasoningHeavyRows": 7,
+    "practiceLinkedRows": 7,
+    "practiceUnlinkedRows": 0,
+    "allAqaBulletsCertified": false,
+    "manualWorkingStillRequired": true
+  },
+  "newLinks": [
+    {
+      "skillId": "M11",
+      "questionId": "task1_v335_maths_01",
+      "path": "maths_inequality_sign_reasoning_v335.json",
+      "marks": 7
+    },
+    {
+      "skillId": "M11",
+      "questionId": "task1_v335_maths_02",
+      "path": "maths_inequality_sign_reasoning_v335.json",
+      "marks": 7
+    }
+  ]
+}
