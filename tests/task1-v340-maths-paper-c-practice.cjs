@@ -55,7 +55,7 @@ const opt=bank.questions[2];
 const x=(16-2*Math.sqrt(19))/3,other=(16+2*Math.sqrt(19))/3;
 assert(x>0&&x<6&&other>6);
 const volume=x*(20-2*x)*(12-2*x);
-near(volume,262.932293,0.5);
+near(volume,262.6822635313133,1e-9);
 assert(opt.modelAnswer.includes('263 cm³'));
 assert.equal(j('deck.json').cards.length,3345,'Do not turn exams into long-answer core flashcards');
 for(const k of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
