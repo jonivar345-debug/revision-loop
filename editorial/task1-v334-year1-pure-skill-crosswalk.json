@@ -8,8 +8,7 @@
     "Each cited card ID is checked against the actual school mock-eligible original or supplemental short-flashcard bank.",
     "This is a sampled skill crosswalk, NOT proof that every bullet in the specification is fully covered or that a student has completed manual multi-mark questions.",
     "The seven most reasoning-heavy rows are explicitly not signed off by recall.",
-    "The live first-mock selector excludes the legacy inverse/composite and one-to-one source IDs. They are deliberately excluded from this first-mock crosswalk, rather than counted from metadata alone.",
-    "5 November 2026 v349 follow-up: M11 is linked to the existing loaded v335 rational-inequality exam questions. All seven reasoning-heavy skills now have named practice evidence, but none is certified as mastered by recall alone."
+    "The live first-mock selector excludes the legacy inverse/composite and one-to-one source IDs. They are deliberately excluded from this first-mock crosswalk, rather than counted from metadata alone."
   ],
   "counts": {
     "total": 43,
@@ -26,8 +25,8 @@
     },
     "sampleRecall": 36,
     "needsExamReview": 7,
-    "partialWithPractice": 7,
-    "partialWithoutPractice": 0
+    "partialWithPractice": 6,
+    "partialWithoutPractice": 1
   },
   "rows": [
     {
@@ -219,17 +218,8 @@
           "path": "deck.json"
         }
       ],
-      "note": "Short recall is supported by two loaded seven-mark rational-inequality practice questions (v335), including excluded denominator points and sign intervals. Multi-step working still requires student exam practice and manual review; this is evidence of provision, not mastery.",
-      "practiceQuestionEvidence": [
-        {
-          "id": "task1_v335_maths_01",
-          "path": "maths_inequality_sign_reasoning_v335.json"
-        },
-        {
-          "id": "task1_v335_maths_02",
-          "path": "maths_inequality_sign_reasoning_v335.json"
-        }
-      ]
+      "note": "A short answer or micro-application is present, but full reasoning, workings or a sketch must be checked in exam practice. Specific full multi-step inequalities practice is not yet linked in this narrowly verified audit; this remains an actionable gap.",
+      "practiceQuestionEvidence": []
     },
     {
       "id": "M12",
