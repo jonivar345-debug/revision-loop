@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
 const app=read('app.js'),sw=read('sw.js'),bank=j('chemistry_atom_economy_sustainability_practice_v338.json');
 const practicePaths=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(practicePaths.length,48,'Exactly one original practice bank appended after v335');
+assert(practicePaths.length>=48,'Preserve v338 as practice bank 48 when later original banks are appended');
 assert.equal(practicePaths[45],'science_application_gaps_v333.json');
 assert.equal(practicePaths[46],'maths_inequality_sign_reasoning_v335.json');
 assert.equal(practicePaths[47],'chemistry_atom_economy_sustainability_practice_v338.json');
