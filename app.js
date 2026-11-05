@@ -5254,17 +5254,6 @@ async function sync(manual=false){
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
- // v348 is an optional, separately guarded add-on: all 56 historical
- // supplement indices stay intact and absent add-ons never block core loading.
- let v348MathsBank={cards:[]};
- try{
-  const response=await fetch(V348_MATHS_SHORT_RECALL_URL+'?v='+Date.now(),{cache:'no-store'});
-  if(response.ok)v348MathsBank=await response.json();
- }catch{}
- for(const c of v348MathsBank.cards||[]){
-  if(!isV348MathsFirstMockCard(c)||knownFlashIds.has(c.id))continue;
-  knownFlashIds.add(c.id);cards.push(c);
- }
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
@@ -5277,6 +5266,17 @@ async function sync(manual=false){
     if(Object.prototype.hasOwnProperty.call(changes,key))q[key]=changes[key];
    }
   }
+ }
+ // v348 is an optional, separately guarded add-on: all 56 historical
+ // supplement indices stay intact and absent add-ons never block core loading.
+ let v348MathsBank={cards:[]};
+ try{
+  const response=await fetch(V348_MATHS_SHORT_RECALL_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v348MathsBank=await response.json();
+ }catch{}
+ for(const c of v348MathsBank.cards||[]){
+  if(!isV348MathsFirstMockCard(c)||knownFlashIds.has(c.id))continue;
+  knownFlashIds.add(c.id);cards.push(c);
  }
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
