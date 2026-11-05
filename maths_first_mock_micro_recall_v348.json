@@ -1,0 +1,414 @@
+{
+  "version": "v348",
+  "createdAt": "2026-11-05",
+  "scope": "AQA first school mock, AS / Year 1 Pure Maths only. Fourteen short one-skill follow-ups to the student's Paper B/C weaknesses, kept separate from longer manually marked written questions.",
+  "source": "Existing maths Year 1 Pure mock banks (v186–v298) and written applications v340; selected non-identical prompts on sine-rule ambiguity, ln-models, interval signs, proof by exhaustion, optimisation, vector direction and composite transformations.",
+  "cards": [
+    {
+      "id": "task1_v348_math_01",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Trigonometry",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "concept",
+      "priority": 3,
+      "front": "A sine-rule calculation gives angle B = 42°. What is the other possible angle?",
+      "back": "138°",
+      "accept": [
+        "138°",
+        "138 degrees",
+        "180°−42°=138°"
+      ],
+      "reject": [
+        "42°",
+        "48°",
+        "318°"
+      ]
+    },
+    {
+      "id": "task1_v348_math_02",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Trigonometry",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Trigonometry",
+      "specRef": "3.6",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "concept",
+      "priority": 3,
+      "front": "Before accepting an alternative sine-rule angle B, what must A + B be?",
+      "back": "Less than 180°",
+      "accept": [
+        "Less than 180°",
+        "A+B<180°",
+        "The sum must be below 180 degrees"
+      ],
+      "reject": [
+        "Greater than 180°",
+        "Exactly 180°",
+        "Either angle always works"
+      ]
+    },
+    {
+      "id": "task1_v348_math_03",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Exponentials and logarithms",
+      "specRef": "3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "On a graph of ln P against t for P = Ae^(kt), what is the gradient?",
+      "back": "k",
+      "accept": [
+        "k",
+        "The gradient is k",
+        "k, the coefficient of t"
+      ],
+      "reject": [
+        "A",
+        "ln A",
+        "e^k"
+      ]
+    },
+    {
+      "id": "task1_v348_math_04",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Exponentials and logarithms",
+      "specRef": "3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "For P = Ae^(kt), what is the intercept of ln P against t?",
+      "back": "ln A",
+      "accept": [
+        "ln A",
+        "ln(A)",
+        "The intercept is ln A"
+      ],
+      "reject": [
+        "A",
+        "k",
+        "ln k"
+      ]
+    },
+    {
+      "id": "task1_v348_math_05",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Exponentials and logarithms",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Exponentials and logarithms",
+      "specRef": "3.7",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "The graph of ln P against t has gradient −0.2 and intercept ln 5. Write P(t).",
+      "back": "P=5e^(−0.2t)",
+      "accept": [
+        "P=5e^(−0.2t)",
+        "P(t)=5e^(-0.2t)",
+        "5 exp(-0.2t)"
+      ],
+      "reject": [
+        "P=5e^(0.2t)",
+        "P=ln5−0.2t",
+        "P=e^(−0.2t)"
+      ]
+    },
+    {
+      "id": "task1_v348_math_06",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Algebra and functions",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "Solve (x−2)(x+3)<0.",
+      "back": "−3<x<2",
+      "accept": [
+        "−3<x<2",
+        "-3 < x < 2",
+        "x is strictly between -3 and 2"
+      ],
+      "reject": [
+        "x<−3 or x>2",
+        "−3≤x≤2",
+        "x>2"
+      ]
+    },
+    {
+      "id": "task1_v348_math_07",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Algebra and functions",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "Solve (x−2)(x+3)≥0.",
+      "back": "x≤−3 or x≥2",
+      "accept": [
+        "x≤−3 or x≥2",
+        "x <= -3 or x >= 2",
+        "x is at most -3 or at least 2"
+      ],
+      "reject": [
+        "−3≤x≤2",
+        "x<−3 or x>2",
+        "−3<x<2"
+      ]
+    },
+    {
+      "id": "task1_v348_math_08",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Algebra and functions",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "Solve (x−2)/(x+3)≥0.",
+      "back": "x<−3 or x≥2",
+      "accept": [
+        "x<−3 or x≥2",
+        "x < -3 or x >= 2",
+        "x below -3 or at least 2"
+      ],
+      "reject": [
+        "x≤−3 or x≥2",
+        "−3<x<2",
+        "x≥−3"
+      ]
+    },
+    {
+      "id": "task1_v348_math_09",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Algebra and functions",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "Why is x = −3 excluded from (x−2)/(x+3)≥0?",
+      "back": "The denominator is zero at x=−3.",
+      "accept": [
+        "The denominator is zero at x=−3.",
+        "Division by zero is undefined",
+        "x+3=0, so the expression is undefined"
+      ],
+      "reject": [
+        "Because the numerator is zero",
+        "Because −3 is a strict root of the numerator",
+        "Because the value is negative"
+      ]
+    },
+    {
+      "id": "task1_v348_math_10",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Proof",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Proof",
+      "specRef": "3.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "reasoning",
+      "priority": 3,
+      "front": "Why does checking n=1, 2 and 3 not prove a claim for every integer?",
+      "back": "There are other integer cases that have not been checked.",
+      "accept": [
+        "There are other integer cases that have not been checked.",
+        "Infinitely many integers remain unchecked",
+        "Three cases do not cover all integers"
+      ],
+      "reject": [
+        "Three examples prove all integers",
+        "One example is always sufficient",
+        "No integers exist outside 1, 2 and 3"
+      ]
+    },
+    {
+      "id": "task1_v348_math_11",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "If f′(x) changes from positive to negative at a stationary point, what is it?",
+      "back": "A local maximum.",
+      "accept": [
+        "A local maximum.",
+        "Local maximum",
+        "Maximum turning point"
+      ],
+      "reject": [
+        "Minimum",
+        "Point of inflection",
+        "Neither maximum nor minimum"
+      ]
+    },
+    {
+      "id": "task1_v348_math_12",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Differentiation",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Differentiation",
+      "specRef": "3.8",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "Squares of side x are removed from a 20 cm by 12 cm rectangle to make a box. What is the feasible range of x?",
+      "back": "0<x<6",
+      "accept": [
+        "0<x<6",
+        "0 < x < 6 cm",
+        "x must be greater than zero and less than six"
+      ],
+      "reject": [
+        "0<x<12",
+        "0≤x≤6",
+        "x>6"
+      ]
+    },
+    {
+      "id": "task1_v348_math_13",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Vectors",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Vectors",
+      "specRef": "3.11",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "calculation",
+      "priority": 3,
+      "front": "Vector (3,−4): what angle does it make below the positive x-axis, to 1 d.p.?",
+      "back": "53.1°",
+      "accept": [
+        "53.1°",
+        "53.1 degrees",
+        "arctan(4/3) ≈ 53.1°"
+      ],
+      "reject": [
+        "306.9° below the axis",
+        "36.9°",
+        "126.9°"
+      ]
+    },
+    {
+      "id": "task1_v348_math_14",
+      "subject": "Maths",
+      "stage": "AS",
+      "topic": "Algebra and functions",
+      "courseTopic": "Year 1 Pure",
+      "revisionTopic": "Algebra and functions",
+      "specRef": "3.3",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "one-step",
+      "priority": 3,
+      "front": "A turning point of y=f(x) is (3,4). Where is it on y=−f(x−2)?",
+      "back": "(5,−4)",
+      "accept": [
+        "(5,−4)",
+        "(5,-4)",
+        "x=5, y=-4"
+      ],
+      "reject": [
+        "(1,−4)",
+        "(5,4)",
+        "(−5,−4)"
+      ]
+    }
+  ]
+}
