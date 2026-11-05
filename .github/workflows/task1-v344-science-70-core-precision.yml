@@ -1,0 +1,21 @@
+name: Task 1 v344 70 original science mock card marker audit
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v344-70-science-core-variants.json'
+      - 'tests/task1-v344-science-70-core-precision.cjs'
+      - '.github/workflows/task1-v344-science-70-core-precision.yml'
+  workflow_dispatch:
+jobs:
+  precision-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check original JavaScript and regression syntax
+        run: node --check tests/task1-v344-science-70-core-precision.cjs && node --check app.js
+      - name: Test 70 science mock cards against production marker
+        run: node tests/task1-v344-science-70-core-precision.cjs
+      - name: Recheck previous 52 science precision cards and maths 1st mock
+        run: node tests/task1-v343-science-core-precision.cjs && node tests/task1-v329-last-15-year1-pure-core.cjs
