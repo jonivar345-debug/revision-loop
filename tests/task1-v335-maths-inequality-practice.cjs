@@ -5,7 +5,7 @@ const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const app=read('app.js'),sw=read('sw.js'),bank=json('maths_inequality_sign_reasoning_v335.json');
 const prior=json('editorial/task1-v334-year1-pure-skill-crosswalk.json');
 const paths=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(paths.length,47,'No old practice banks must be removed');
+assert(paths.length>=47,'Preserve the existing 47 practice banks when appending future questions');
 assert.equal(paths[45],'science_application_gaps_v333.json');
 assert.equal(paths[46],'maths_inequality_sign_reasoning_v335.json');
 assert(sw.includes("'./maths_inequality_sign_reasoning_v335.json'"));

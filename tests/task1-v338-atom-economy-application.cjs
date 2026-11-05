@@ -1,0 +1,56 @@
+'use strict';
+// v338: keep atom economy evaluation in explicitly manual exam practice.
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8'),j=p=>JSON.parse(read(p));
+const app=read('app.js'),sw=read('sw.js'),bank=j('chemistry_atom_economy_sustainability_practice_v338.json');
+const practicePaths=[...app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/)[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
+assert.equal(practicePaths.length,48,'Exactly one original practice bank appended after v335');
+assert.equal(practicePaths[45],'science_application_gaps_v333.json');
+assert.equal(practicePaths[46],'maths_inequality_sign_reasoning_v335.json');
+assert.equal(practicePaths[47],'chemistry_atom_economy_sustainability_practice_v338.json');
+assert(sw.includes("'./chemistry_atom_economy_sustainability_practice_v338.json'"),'Must precache offline bank');
+assert(sw.includes('-v338-atom-economy-evaluation'),'Offline cache must refresh');
+assert.equal(bank.questions.length,1);
+assert.equal(bank.version,'v338');
+const q=bank.questions[0];
+assert.equal(q.id,'task1_v338_chem_amount_01');
+assert.equal(q.subject,'Chemistry');
+assert.equal(q.level,'AS');
+assert.equal(q.specRef,'3.1.2.5');
+assert(q.mock===true&&q.taught===true&&q.standalone===true);
+assert(q.requiresWorking===true&&q.manualWorkingReview===true&&q.manualDiagramReview===false);
+assert(q.sourceVerified===false&&q.verificationLevel==='original-exam-style');
+assert.equal(q.marks,8);
+assert(q.prompt.endsWith('[8 marks]'));
+assert.equal(q.markPoints.length,q.marks);
+assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));
+assert(q.markPoints.every(s=>s.length>=55));
+assert(q.modelAnswer.length>450,'This is a worked exam answer, not a flashcard');
+assert.equal(q.groupId,q.id);
+const prior=j('exam_questions.json').questions.concat(practicePaths.slice(0,47).flatMap(p=>j(p).questions||[]));
+assert(!prior.some(x=>x.id===q.id),'Never overwrite old practice attempt/progress ID');
+assert.equal(new Set([...prior.map(x=>x.id),q.id]).size,prior.length+1);
+const start=app.indexOf('function mockEligibleQuestion(q){'),end=app.indexOf('function startMockSession(){',start);
+assert(start>=0&&end>start);
+const eligible=new Function(app.slice(start,end)+'\nreturn mockEligibleQuestion;')();
+assert(eligible(q),'The question must appear in Chemistry school mock exam practice');
+const mstart=app.indexOf('function examSuggested(q,answer){');
+const mend=app.indexOf(' // v213:',mstart);
+assert(mstart>=0&&mend>mstart);
+const suggested=new Function('window',app.slice(mstart,mend)+'\n}\nreturn examSuggested;')({});
+for(const answer of ['',q.modelAnswer,'high atom economy is always better','63.1%, 100%','not '+q.modelAnswer]){
+ const result=suggested(q,answer);
+ assert.equal(result.manualRequired,true,'Do not automatically assess ethical/economic/environmental reasoning');
+ assert.equal(result.suggested,0,'Do not automatically award marks for keywords');
+ assert.deepEqual(result.preds,Array(q.marks).fill(false));
+ assert.deepEqual(result.scores,Array(q.marks).fill(0));
+}
+const a=106/(2*84)*100,b=106/(62+44)*100;
+assert(Math.abs(a-63.0952380952381)<1e-10,'First weighted reactant mass');
+assert.equal(b,100,'Second route uses all starting material in desired product');
+assert(q.modelAnswer.includes('63.1%')&&q.modelAnswer.includes('100%'),'Correct checked numerical conclusions');
+assert(q.prompt.includes('ethical')&&q.prompt.includes('environmental')&&q.prompt.includes('economic'));
+assert.equal(j('deck.json').cards.length,3345,'No long exam questions in core flashcards');
+for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])
+ assert(app.includes(key),'Preserve progress keys');
+console.log('PASS v338: 8 original AS Chemistry manually assessed marks, separately selected from short flashcards, full economic/ethical/environmental reasoning, all 47 original practice banks and progress IDs preserved.');
