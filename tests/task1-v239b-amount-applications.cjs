@@ -19,7 +19,15 @@ for(const [topic,count] of Object.entries(audit.coreMockTopicInventory)){
 for(const old of audit.coreCardsFirstPass){
  const card=deck.cards.find(c=>c.id===old.id);
  assert(card&&card.subject==='Chemistry'&&card.stage==='AS'&&card.mock===true,'Missing historical card '+old.id);
- assert.equal(card.front,old.originalFront);assert.equal(card.back,old.originalBack);
+ assert.equal(card.front,old.originalFront);
+ // v336 corrects the model wording of the existing standard-solution card.
+ // Check the historical original and the precise current answer without blocking a valid re-review.
+ if(old.id==='task1_chem_017'){
+  assert.equal(old.originalBack,'A solution of accurately known concentration.');
+  assert.equal(card.back,'A solution whose concentration is accurately known.');
+ }else{
+  assert.equal(card.back,old.originalBack);
+ }
 }
 const knownIds=new Set(deck.cards.map(c=>c.id)),suppIds=new Set(bank.cards.map(c=>c.id));
 assert.equal(suppIds.size,19);
