@@ -1,0 +1,22 @@
+name: Task 1 v340 Year 1 Pure Paper C gap practice
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'maths_year1_pure_targeted_practice_v340.json'
+      - 'tests/task1-v340-maths-paper-c-practice.cjs'
+      - 'tests/task1-v338-atom-economy-application.cjs'
+      - '.github/workflows/task1-v340-maths-paper-c-practice.yml'
+  workflow_dispatch:
+jobs:
+  year1-pure-exam-practice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check
+        run: node --check tests/task1-v340-maths-paper-c-practice.cjs
+      - name: Verify mock eligibility and original manual assessment
+        run: node tests/task1-v340-maths-paper-c-practice.cjs
+      - name: Preserve prior atom economy and inequality practice
+        run: node tests/task1-v338-atom-economy-application.cjs && node tests/task1-v335-maths-inequality-practice.cjs
