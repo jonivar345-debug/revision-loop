@@ -11,8 +11,8 @@ assert.equal(editorial.counts.Physics,22);assert.equal(editorial.counts.Chemistr
 assert.equal(deck.cards.length,3345);
 const originalIds=deck.cards.map(c=>c.id);
 assert.equal(new Set(originalIds).size,originalIds.length);
-const before=new Map(deck.cards.map(c=>[c.id,JSON.stringify(c)]));
 const base=deck.cards.map(c=>({...c,accept:[...(c.accept||[])],reject:[...(c.reject||[])]}));
+const before=new Map(base.map(c=>[c.id,JSON.stringify(c)]));
 const start=app.indexOf('const V343_REVIEWED_CORE_VARIANTS='),end=app.indexOf('// v332:',start);
 assert(start>0&&end>start,'v343 runtime calibrator missing');
 const runtime=new Function('existing',app.slice(start,end)+'\nreturn {rows:V343_REVIEWED_CORE_VARIANTS,cards:applyV343ScienceCorePrecision(existing)};')(base);
