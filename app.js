@@ -2645,7 +2645,34 @@ function evaluateConfiguredNumericRecall(c,input){
   return {status:'correct',score:1,text:'Correct equivalent numerical value and unit.',missing:[]};
  return {status:'wrong',score:0,text:'The numerical value or unit conversion is incorrect.',missing:[config.expected]};
 }
+// v346: one-way chemical reaction equations must retain their direction.
+// The general similarity marker otherwise grants full marks when a student merely
+// swaps reactants and products. Limit to mock Chemistry *equation recall* and
+// exact reversed sides; unfamiliar formulations otherwise use normal flexible marking.
+function chemistryEquationSides(raw){
+ const parts=String(raw||'').trim().split(/\s*(?:→|->|⟶|⇒)\s*/);
+ if(parts.length!==2)return null;
+ const key=side=>String(side).trim()
+  .replace(/\.\s+[A-Z].*$/s,'')
+  .replace(/,\s*(?:a|an|which|giving|forming|producing)\b.*$/is,'')
+  .replace(/[.;\s]+$/g,'')
+  .normalize('NFKD').replace(/[−–—]/g,'-').replace(/⁄/g,'/')
+  .toLowerCase().replace(/\s+/g,'');
+ const left=key(parts[0]),right=key(parts[1]);
+ return left&&right?{left,right}:null;
+}
+function isReversedChemistryEquation(c,input){
+ if(c?.subject!=='Chemistry'||c?.mock!==true)return false;
+ if(!/\bequation\b|\b(?:atomisation|hydration|ionisation)\s+step\b/i.test(String(c.front||'')))return false;
+ const expected=chemistryEquationSides(c.back);
+ const given=chemistryEquationSides(input);
+ return Boolean(expected&&given&&expected.left!==expected.right&&
+  expected.left===given.right&&expected.right===given.left);
+}
+
 function evaluateCard(c,input){
+ if(isReversedChemistryEquation(c,input))
+  return {status:'wrong',score:0,text:'This is the reverse chemical reaction; the equation direction must match the question.',missing:[String(c.back||'')]};
  // v334: do not extract a one-letter answer such as T (tera) from the
  // apostrophe in "don't", "can't" or "haven't" when the student supplied
  // a complete non-answer. Preserve real answers such as T or "it is T".

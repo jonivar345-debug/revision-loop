@@ -1,0 +1,291 @@
+{
+  "version": "v346",
+  "date": "2026-11-05",
+  "scope": "Previously existing original AQA Chemistry mock-eligible single-direction reaction-equation recall flashcards; no new questions. Covers AS redox, ionisation, energetic equations and school-taught A2 Born-Haber, atomisation, electron affinities, formation, solution and hydration.",
+  "source": "Actual main 3345-card original deck, real browser evaluator before v346, first-school Chemistry mock setting.",
+  "counts": {
+    "total": 33,
+    "priorFullCredit": 31,
+    "priorPartial": 0,
+    "priorWrong": 2
+  },
+  "method": "For every explicit chemistry equation prompt with exactly one rightward reaction arrow, generate the exact reversed two-side equation. The general similarity scorer previously treats most reversed equations as correct because all species remain present. Add a narrowly scoped check that rejects only such exactly reversed directions, allowing original models, original accepted variants and all other unfamiliar responses to continue through normal marking.",
+  "guardRestrictions": [
+    "Chemistry mock flashcards only",
+    "Front specifically says equation or relevant ionisation/atomisation/hydration step",
+    "Exactly one rightward reaction arrow in model and answer",
+    "Reject only when model reactants and products match input products and reactants exactly after harmless scientific typography normalisation",
+    "Do not apply to equilibrium double-arrow questions, general prose, Mathematics vectors or Physics graph arrows"
+  ],
+  "limitations": [
+    "Does not validate all possible rearranged chemistry equations, molecular charge balances or examiner-accepted state omission.",
+    "No whole-specification audit is inferred from this selected equation subset.",
+    "Stable core card IDs and cloud progress preserved."
+  ],
+  "cases": [
+    {
+      "id": "chem_bh_defs_20261024_latt_formation_eq",
+      "front": "Write the lattice formation equation for NaCl.",
+      "model": "Na⁺(g) + Cl⁻(g) → NaCl(s).",
+      "reverseProbe": "NaCl(s). → Na⁺(g) + Cl⁻(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_latt_diss_eq",
+      "front": "Write the lattice dissociation equation for NaCl.",
+      "model": "NaCl(s) → Na⁺(g) + Cl⁻(g).",
+      "reverseProbe": "Na⁺(g) + Cl⁻(g). → NaCl(s)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_standard_formation_eq",
+      "front": "Write the standard formation equation for MgO.",
+      "model": "Mg(s) + ½O₂(g) → MgO(s).",
+      "reverseProbe": "MgO(s). → Mg(s) + ½O₂(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_atomisation_cl_eq",
+      "front": "Write the atomisation equation for chlorine.",
+      "model": "½Cl₂(g) → Cl(g).",
+      "reverseProbe": "Cl(g). → ½Cl₂(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_first_ie_eq",
+      "front": "Write the equation for magnesium's first ionisation energy.",
+      "model": "Mg(g) → Mg⁺(g) + e⁻.",
+      "reverseProbe": "Mg⁺(g) + e⁻. → Mg(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_mg_second_ie_eq",
+      "front": "Write the equation for magnesium's second ionisation energy.",
+      "model": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "reverseProbe": "Mg²⁺(g) + e⁻. → Mg⁺(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_first_ea_eq",
+      "front": "Write the equation for oxygen's first electron affinity.",
+      "model": "O(g) + e⁻ → O⁻(g).",
+      "reverseProbe": "O⁻(g). → O(g) + e⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_oxygen_second_ea_eq",
+      "front": "Write the equation for oxygen's second electron affinity.",
+      "model": "O⁻(g) + e⁻ → O²⁻(g).",
+      "reverseProbe": "O²⁻(g). → O⁻(g) + e⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_hydration_na_eq",
+      "front": "Write the hydration equation for Na⁺.",
+      "model": "Na⁺(g) → Na⁺(aq).",
+      "reverseProbe": "Na⁺(aq). → Na⁺(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_defs_20261024_solution_nacl_eq",
+      "front": "Write the enthalpy of solution equation for NaCl.",
+      "model": "NaCl(s) → Na⁺(aq) + Cl⁻(aq).",
+      "reverseProbe": "Na⁺(aq) + Cl⁻(aq). → NaCl(s)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_mg",
+      "front": "What is magnesium's atomisation step in the MgO cycle?",
+      "model": "Mg(s) → Mg(g). It is endothermic (+).",
+      "reverseProbe": "Mg(g). It is endothermic (+). → Mg(s)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_weak_20261024_atomise_o",
+      "front": "Write the atomisation equation for oxygen in an MgO Born–Haber cycle.",
+      "model": "½O₂(g) → O(g).",
+      "reverseProbe": "O(g). → ½O₂(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_bh_weak_20261024_lattice_last",
+      "front": "Write the lattice formation equation for magnesium oxide.",
+      "model": "Mg²⁺(g) + O²⁻(g) → MgO(s).",
+      "reverseProbe": "MgO(s). → Mg²⁺(g) + O²⁻(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_atomic_v43_39",
+      "front": "Write the first ionisation equation for magnesium.",
+      "model": "Mg(g) → Mg⁺(g) + e⁻.",
+      "reverseProbe": "Mg⁺(g) + e⁻. → Mg(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_atomic_v43_40",
+      "front": "Write the second ionisation equation for magnesium.",
+      "model": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "reverseProbe": "Mg²⁺(g) + e⁻. → Mg⁺(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_amount_v44_23",
+      "front": "Write the net ionic equation for acid–alkali neutralisation.",
+      "model": "H⁺(aq)+OH⁻(aq)→H₂O(l).",
+      "reverseProbe": "H₂O(l). → H⁺(aq)+OH⁻(aq)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_amount_v44_24",
+      "front": "Write the net ionic equation for barium sulfate precipitation.",
+      "model": "Ba²⁺(aq)+SO₄²⁻(aq)→BaSO₄(s).",
+      "reverseProbe": "BaSO₄(s). → Ba²⁺(aq)+SO₄²⁻(aq)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_energetics_v49_13",
+      "front": "Give a formation equation for magnesium oxide.",
+      "model": "Mg(s)+½O₂(g)→MgO(s).",
+      "reverseProbe": "MgO(s). → Mg(s)+½O₂(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_energetics_v49_14",
+      "front": "Give the standard formation equation of liquid water.",
+      "model": "H₂(g)+½O₂(g)→H₂O(l).",
+      "reverseProbe": "H₂O(l). → H₂(g)+½O₂(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_energetics_v49_16",
+      "front": "What is the standard combustion equation for methane?",
+      "model": "CH₄(g)+2O₂(g)→CO₂(g)+2H₂O(l).",
+      "reverseProbe": "CO₂(g)+2H₂O(l). → CH₄(g)+2O₂(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_037",
+      "front": "Write the oxidation half-equation for iodide to iodine.",
+      "model": "2I⁻ → I₂ + 2e⁻.",
+      "reverseProbe": "I₂ + 2e⁻. → 2I⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_038",
+      "front": "Write the reduction half-equation for chlorine.",
+      "model": "Cl₂ + 2e⁻ → 2Cl⁻.",
+      "reverseProbe": "2Cl⁻. → Cl₂ + 2e⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_039",
+      "front": "Write the oxidation half-equation for magnesium.",
+      "model": "Mg → Mg²⁺ + 2e⁻.",
+      "reverseProbe": "Mg²⁺ + 2e⁻. → Mg",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_040",
+      "front": "Write the reduction half-equation Fe³⁺ to Fe²⁺.",
+      "model": "Fe³⁺ + e⁻ → Fe²⁺.",
+      "reverseProbe": "Fe²⁺. → Fe³⁺ + e⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_043",
+      "front": "Write the acidic reduction half-equation for MnO₄⁻ → Mn²⁺.",
+      "model": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.",
+      "reverseProbe": "Mn²⁺ + 4H₂O. → MnO₄⁻ + 8H⁺ + 5e⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_044",
+      "front": "Write the acidic reduction half-equation for dichromate(VI).",
+      "model": "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O.",
+      "reverseProbe": "2Cr³⁺ + 7H₂O. → Cr₂O₇²⁻ + 14H⁺ + 6e⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_053",
+      "front": "Write the first-ionisation equation for Na.",
+      "model": "Na(g) → Na⁺(g) + e⁻.",
+      "reverseProbe": "Na⁺(g) + e⁻. → Na(g)",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_076",
+      "front": "Write the net ionic equation for the sulfate ion test.",
+      "model": "Ba²⁺ + SO₄²⁻ → BaSO₄(s), a white precipitate.",
+      "reverseProbe": "BaSO₄(s), a white precipitate. → Ba²⁺ + SO₄²⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_088",
+      "front": "Write the redox equation for HBr reducing sulfuric acid.",
+      "model": "2HBr + H₂SO₄ → Br₂ + SO₂ + 2H₂O.",
+      "reverseProbe": "Br₂ + SO₂ + 2H₂O. → 2HBr + H₂SO₄",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_092",
+      "front": "Write the ionic equation for a silver bromide precipitate.",
+      "model": "Ag⁺ + Br⁻ → AgBr(s), a cream precipitate.",
+      "reverseProbe": "AgBr(s), a cream precipitate. → Ag⁺ + Br⁻",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "chem_y1_chat_v126_096",
+      "front": "Write chlorine-water's oxygen-forming overall equation.",
+      "model": "2Cl₂ + 2H₂O → 4HCl + O₂.",
+      "reverseProbe": "4HCl + O₂. → 2Cl₂ + 2H₂O",
+      "priorStatus": "correct",
+      "priorScore": 1
+    },
+    {
+      "id": "task1_v146_062",
+      "front": "What is the overall fermentation equation for glucose to ethanol?",
+      "model": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.",
+      "reverseProbe": "2C₂H₅OH + 2CO₂. → C₆H₁₂O₆",
+      "priorStatus": "wrong",
+      "priorScore": 0
+    },
+    {
+      "id": "task1_v155_004",
+      "front": "Give the catalytic-converter equation for CO and NO.",
+      "model": "2CO + 2NO → 2CO₂ + N₂.",
+      "reverseProbe": "2CO₂ + N₂. → 2CO + 2NO",
+      "priorStatus": "wrong",
+      "priorScore": 0
+    }
+  ]
+}
