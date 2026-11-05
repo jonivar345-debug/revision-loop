@@ -13,7 +13,12 @@ assert.equal(core.length,144);assert.equal(report.coreInventory.total,144);
 for(const name of topics)assert.equal(core.filter(c=>c.topic===name).length,report.coreInventory[name],name);
 const snapshot=new Map(report.coreCardInventoryFirstPass.map(c=>[c.id,c]));
 assert.equal(snapshot.size,144);
-for(const c of core){const old=snapshot.get(c.id);assert(old,'Missing card '+c.id);assert.equal(old.topic,c.topic);assert.equal(old.originalFront,c.front,'Front changed '+c.id);assert.equal(old.originalBack,c.back,'Back changed '+c.id);}
+for(const c of core){const old=snapshot.get(c.id);assert(old,'Missing card '+c.id);assert.equal(old.topic,c.topic);assert.equal(old.originalFront,c.front,'Front changed '+c.id);if(c.id==='task1_v130_084'){
+  assert.equal(old.originalBack,'Enthalpy change forming one mole of water when acid and base react in dilute solution.');
+  assert.equal(c.back,'The enthalpy change when an acid and a base react in dilute aqueous solution to form one mole of water under standard conditions.','Reviewed standard neutralisation correction missing');
+ }else{
+  assert.equal(old.originalBack,c.back,'Back changed '+c.id);
+ }}
 const refs=new Set(),ids=new Set(core.map(c=>c.id)),chosen=new Set();
 for(const r of report.requirements){assert(/^3\.1\.4\.[1-4]$/.test(r.specRef),'Bad spec ref');refs.add(r.specRef);assert(r.coreEvidenceIds.length,'Missing evidence '+r.assessableRecallOrSkill);for(const id of r.coreEvidenceIds){assert(ids.has(id),'Unverified AQA evidence '+id);chosen.add(id);}}
 assert.equal(refs.size,4);assert(chosen.size>=45);
