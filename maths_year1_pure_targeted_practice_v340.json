@@ -29,7 +29,7 @@
       "markPoints": [
         "Uses ln P=ln A−kt, identifying −k as gradient and ln A as vertical intercept.",
         "Finds the gradient (0.5−1.5)/(7−2)=−0.2, hence k=0.2.",
-        "Uses 1.5=ln A−0.2×2 to obtain ln A=1.9.",
+        "Uses the t=2 graph point, 1.5=ln A−0.2×2, to obtain ln A=1.9.",
         "States P=e^(1.9−0.2t), equivalently P=e^1.9 e^(−0.2t).",
         "Evaluates A=e^1.9≈6.69 (3 significant figures).",
         "Solves ln 3=1.9−0.2t to obtain t=(1.9−ln 3)/0.2≈4.007.",
@@ -80,11 +80,11 @@
       "prompt": "In triangle ABC, sides a and b are opposite angles A and B respectively. A=30°, a=10 cm and b=14 cm. (a) Use the sine rule to find sin B. (b) Show that two different values of B are possible and calculate both. (c) For each triangle, calculate C and the opposite side c to 3 significant figures. (d) Explain why using only the inverse sine calculator output would miss a valid triangle. [8 marks]",
       "markPoints": [
         "Applies a/sin A=b/sin B or equivalently sin B=b sin A/a.",
-        "Calculates sin B=(14×sin30°)/10=0.7.",
+        "Substitutes the given A, a and b to calculate sin B=(14×sin30°)/10=0.7.",
         "Finds the acute solution B₁=sin⁻¹(0.7)≈44.427°.",
         "Finds the obtuse solution B₂=180°−B₁≈135.573°.",
         "Checks that both values are valid with A=30° and finds C₁≈105.573°.",
-        "Finds the second angle C₂≈14.427°.",
+        "Finds the second remaining angle C₂=180°−30°−135.573°≈14.427°.",
         "Applies c/sin C=10/sin30° to get c₁≈19.3 cm and c₂≈4.98 cm (three significant figures).",
         "Explains that sin θ=sin(180°−θ), so the inverse sine principal value does not capture the supplementary-angle case."
       ],
