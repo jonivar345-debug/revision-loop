@@ -1,0 +1,303 @@
+{
+  "version": "v362",
+  "date": "2026-11-06",
+  "scope": "20 existing short first-school-mock AQA Chemistry AS and taught A2 recall cards across rate orders, entropy, Period 3 ionisation, equilibrium, calorimetry, esters, carboxylic acids, back titrations and RP3",
+  "purpose": "Precise accepted paraphrase and explicit wrong answer calibration of untouched original IDs. No new cards, deferred Chemistry buffers or multi-mark flashcards.",
+  "counts": {
+    "coreIdsPreserved": 3345,
+    "originalsReviewed": 20,
+    "AS": 9,
+    "A2": 11,
+    "newAccepted": 20,
+    "newRejected": 40
+  },
+  "safety": [
+    "Apply exact id, Chemistry subject, original AS/A2 stage, mock=true, unchanged front and back, active guard.",
+    "Retain all pre-existing accept/reject entries and saved-progress keys.",
+    "Check every model answer, acceptable paraphrase and specific misconception against production evaluator.",
+    "Do not infer whole AQA mock completion from a sample of 20 cards.",
+    "Review free-form explanations and physical diagrams independently."
+  ],
+  "rows": [
+    {
+      "id": "chem_rate_recap_20261024_rate_determining",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is the rate-determining step?",
+      "originalBack": "The slow elementary step that limits overall reaction rate.",
+      "accept": [
+        "The slowest elementary stage in a multi-step mechanism, controlling the overall reaction rate."
+      ],
+      "reject": [
+        "The fastest elementary reaction step determines the overall rate.",
+        "The final reaction step must always be rate determining regardless of its speed."
+      ]
+    },
+    {
+      "id": "task1_chem_162",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is standard entropy?",
+      "originalBack": "Absolute entropy of 1 mol of substance at stated standard conditions.",
+      "accept": [
+        "The absolute entropy per mole of a substance in its standard state under standard conditions."
+      ],
+      "reject": [
+        "The enthalpy change when one mole of the substance burns completely.",
+        "The entropy change on cooling one mole of substance to absolute zero."
+      ]
+    },
+    {
+      "id": "task1_chem_163",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What does positive ΔS mean?",
+      "originalBack": "The system's entropy increases.",
+      "accept": [
+        "The entropy of the system has increased, so its change in entropy is positive."
+      ],
+      "reject": [
+        "A positive entropy change means the entropy of the system falls.",
+        "Positive delta S guarantees the reaction is feasible at any temperature."
+      ]
+    },
+    {
+      "id": "task1_chem_167",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is a zero-order reaction with respect to A?",
+      "originalBack": "Rate is independent of [A].",
+      "accept": [
+        "At fixed other conditions, changing the concentration of A has no effect on reaction rate."
+      ],
+      "reject": [
+        "A zero-order reaction has rate directly proportional to A concentration.",
+        "Zero order means the reaction mixture contains no A molecules."
+      ]
+    },
+    {
+      "id": "task1_chem_168",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is a first-order reaction with respect to A?",
+      "originalBack": "Rate is proportional to [A].",
+      "accept": [
+        "At fixed other conditions doubling A concentration doubles the rate."
+      ],
+      "reject": [
+        "Doubling A concentration causes a fourfold increase in rate for first order.",
+        "First order in A means rate has no dependence on A concentration."
+      ]
+    },
+    {
+      "id": "task1_chem_169",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is a second-order reaction with respect to A?",
+      "originalBack": "Rate is proportional to [A]².",
+      "accept": [
+        "At constant other conditions doubling the concentration of A increases rate by a factor of four."
+      ],
+      "reject": [
+        "Second order in A means doubling its concentration only doubles rate.",
+        "For second order in A the rate decreases when its concentration increases."
+      ]
+    },
+    {
+      "id": "task1_chem_071",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why is the first ionisation energy of Al below Mg?",
+      "originalBack": "Al loses a higher-energy 3p electron.",
+      "accept": [
+        "The electron removed from aluminium is in a higher-energy 3p subshell than the magnesium 3s electron."
+      ],
+      "reject": [
+        "Aluminium has a lower first ionisation energy because it loses a 2p electron.",
+        "The first electron removed from aluminium is in 3s while magnesium loses 3p."
+      ]
+    },
+    {
+      "id": "task1_chem_072",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why is the first ionisation energy of S below P?",
+      "originalBack": "Paired 3p electrons repel, easing removal.",
+      "accept": [
+        "Sulfur has a pair of electrons in a 3p orbital that repel one another, making removal easier than in phosphorus."
+      ],
+      "reject": [
+        "Sulfur has a lower first ionisation energy because it removes an electron from a 4s orbital.",
+        "Phosphorus has more 3p electron pairing repulsion than sulfur, causing sulfur to lose an electron more easily."
+      ]
+    },
+    {
+      "id": "task1_chem_051",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What defines dynamic equilibrium?",
+      "originalBack": "Forward and reverse reaction rates are equal in a closed system.",
+      "accept": [
+        "In a closed system, the forward and reverse reactions continue at equal rates."
+      ],
+      "reject": [
+        "At dynamic equilibrium, both reactions stop completely.",
+        "At dynamic equilibrium the reactant and product concentrations must be equal."
+      ]
+    },
+    {
+      "id": "task1_chem_053",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "How does a catalyst affect the equilibrium position?",
+      "originalBack": "It does not change it.",
+      "accept": [
+        "A catalyst changes the rate of attaining equilibrium but not its position."
+      ],
+      "reject": [
+        "A catalyst pushes the equilibrium to the product side permanently.",
+        "Catalysts raise Kc and favour products at a fixed temperature."
+      ]
+    },
+    {
+      "id": "task1_chem_055",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "How does increased pressure shift gaseous equilibrium?",
+      "originalBack": "Towards the side with fewer gas molecules.",
+      "accept": [
+        "Raising gas pressure favours the equilibrium side with fewer moles of gas."
+      ],
+      "reject": [
+        "Raising pressure always shifts gas equilibrium to the side with more gas molecules.",
+        "Pressure increases equilibrium constant Kc while temperature is held constant."
+      ]
+    },
+    {
+      "id": "task1_practical_023",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why might calorimetry give a smaller temperature rise than expected?",
+      "originalBack": "Some energy is transferred to the surroundings.",
+      "accept": [
+        "Some of the reaction heat is lost to the surroundings, reducing the measured temperature change."
+      ],
+      "reject": [
+        "The calorimeter always gains extra heat from the surroundings so the measured rise must be larger.",
+        "A lower measured rise proves that no energy is exchanged with the surroundings."
+      ]
+    },
+    {
+      "id": "task1_practical_024",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why is extrapolation used in some temperature–time graphs?",
+      "originalBack": "To estimate temperature change before heat exchange distorts it.",
+      "accept": [
+        "Extend the cooling trend back to the mixing time to estimate the corrected temperature change."
+      ],
+      "reject": [
+        "Extrapolation is used to replace every measured reading by the same final temperature.",
+        "Extrapolation makes the heat loss exactly zero during the entire experiment."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_009",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is the general equation for esterification?",
+      "originalBack": "Carboxylic acid + alcohol ⇌ ester + water.",
+      "accept": [
+        "Alcohol and carboxylic acid react reversibly to produce an ester and water."
+      ],
+      "reject": [
+        "An aldehyde and a ketone react to produce an ester and water.",
+        "A carboxylic acid and alcohol react to give an alkane and carbon dioxide."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_015",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What are fats and vegetable oils made from chemically?",
+      "originalBack": "Triglycerides containing three ester links to glycerol.",
+      "accept": [
+        "They are triglycerides, with glycerol joined to three fatty acids by ester bonds."
+      ],
+      "reject": [
+        "Fats and oils are peptide chains joined by amide bonds.",
+        "Vegetable oils consist exclusively of unbonded free glycerol and free fatty acids."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_027",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What structural feature makes a fatty acid unsaturated?",
+      "originalBack": "At least one carbon–carbon double bond in the chain.",
+      "accept": [
+        "A fatty acid is unsaturated if the hydrocarbon chain has at least one C=C bond."
+      ],
+      "reject": [
+        "Unsaturated fatty acids contain only carbon carbon single bonds in their chains.",
+        "A fatty acid is unsaturated solely because it contains the carbonyl bond of COOH."
+      ]
+    },
+    {
+      "id": "task1_chem_209",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is the carboxyl functional group?",
+      "originalBack": "–COOH.",
+      "accept": [
+        "The carboxyl group is C(=O)OH, usually written as COOH."
+      ],
+      "reject": [
+        "A carboxylic acid has the ester functional group COOR instead of COOH.",
+        "The carboxyl group is a carbon carbon double bond C=C."
+      ]
+    },
+    {
+      "id": "task1_chem_210",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What causes the acidity of a carboxylic acid?",
+      "originalBack": "It can donate a proton from –COOH.",
+      "accept": [
+        "The COOH group can release H+ to form a carboxylate ion."
+      ],
+      "reject": [
+        "Carboxylic acids are acidic because they always gain a proton from water.",
+        "The hydrocarbon chain donates a proton while the COOH group never does."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_44",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why must dilution factors be applied in a back titration?",
+      "originalBack": "An aliquot represents only a fraction of the total diluted solution.",
+      "accept": [
+        "The measured aliquot is only part of the diluted solution, so scale up its moles by the total-volume to aliquot-volume ratio."
+      ],
+      "reject": [
+        "The amount of reagent in the aliquot is always the same as in the whole diluted mixture.",
+        "When the total volume is larger than the aliquot, divide the aliquot moles by total volume over aliquot volume."
+      ]
+    },
+    {
+      "id": "task1_practical_027",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why must the same visual endpoint be used for rate comparisons?",
+      "originalBack": "So results represent a consistent extent of reaction.",
+      "accept": [
+        "Use the same visible endpoint so the times represent the same extent of reaction."
+      ],
+      "reject": [
+        "Using the same endpoint makes all reactions finish completely regardless of conditions.",
+        "Using an identical endpoint eliminates all random timing errors."
+      ]
+    }
+  ]
+}
