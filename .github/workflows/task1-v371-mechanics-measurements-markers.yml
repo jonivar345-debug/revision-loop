@@ -1,0 +1,19 @@
+name: Task 1 v371 Physics Mechanics and Measurements first-mock marker precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v371-physics-mechanics-measurements-core-markers.json'
+      - 'tests/task1-v371-physics-mechanics-measurements-core-markers.cjs'
+      - '.github/workflows/task1-v371-mechanics-measurements-markers.yml'
+  workflow_dispatch:
+jobs:
+  physics-first-mock-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 14 genuine Physics recall cards with exact production marker
+        run: node tests/task1-v371-physics-mechanics-measurements-core-markers.cjs
+      - name: Guard earlier Physics v365 and Waves v370 regressions
+        run: node tests/task1-v365-physics-20-original-marker-review.cjs && node tests/task1-v370-light-history-recall.cjs

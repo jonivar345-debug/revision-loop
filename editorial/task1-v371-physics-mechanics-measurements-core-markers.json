@@ -1,0 +1,231 @@
+{
+  "version": "v371",
+  "date": "2026-11-06",
+  "purpose": "Improve the actual existing first-school-mock short-recall marker for 14 previously sampled uncalibrated Physics Mechanics and Measurements cards, without adding duplicates.",
+  "sourceAudit": "editorial/task1-v323-balanced-48-topic-evidence.json",
+  "counts": {
+    "existingCoreIdsProtected": 3345,
+    "existingCardsReviewed": 14,
+    "correctNewParaphrases": 14,
+    "incorrectNewMisconceptions": 28
+  },
+  "safeguards": [
+    "Original IDs, original question fronts, original model answers and student progress remain unchanged.",
+    "Only AS Physics cards with mock=true and matching exact original wording are patched; do not alter full-only or modified cards.",
+    "Keep existing accepted and rejected variants when present, and test every original model answer.",
+    "No written multi-mark exam questions hidden inside flashcards, no XP/cloud sync changes.",
+    "No conclusion that every AQA Physics assessment objective or unseen answer is covered."
+  ],
+  "rows": [
+    {
+      "id": "phy_accuracy_precision",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Accuracy vs precision?",
+      "originalBack": "Accuracy is closeness to the true value; precision is closeness of repeated readings to each other.",
+      "accept": [
+        "Accuracy means close to the true value; precision means repeated values are close together."
+      ],
+      "reject": [
+        "Accuracy is when repeated measurements agree, even if they are far from the true value.",
+        "Precision means closeness to the true value and accuracy means repeatability."
+      ],
+      "sourceTopic": "Measurements"
+    },
+    {
+      "id": "phy_measure_recap_20261024_gradient_uncert",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "How is a percentage gradient uncertainty estimated from graph lines?",
+      "originalBack": "|Best gradient − worst acceptable gradient| ÷ |best gradient| × 100%.",
+      "accept": [
+        "Percentage gradient uncertainty is the difference between best and worst acceptable gradients divided by the best gradient magnitude, times 100."
+      ],
+      "reject": [
+        "Divide the best gradient by the difference between the best and worst slopes.",
+        "Use the x intercept as the denominator instead of the best-fit gradient."
+      ],
+      "sourceTopic": "Measurements"
+    },
+    {
+      "id": "phy_measure_recap_20261024_uncert_add",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "How do you combine uncertainties when adding or subtracting measurements?",
+      "originalBack": "Add the absolute uncertainties.",
+      "accept": [
+        "For addition or subtraction of measured quantities, sum their absolute uncertainties."
+      ],
+      "reject": [
+        "When subtracting readings, subtract their absolute uncertainties too.",
+        "Add their percentage uncertainties when adding lengths, rather than absolute uncertainties."
+      ],
+      "sourceTopic": "Measurements"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_33",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why does percentage uncertainty in wire diameter approximately double for cross-sectional area?",
+      "originalBack": "Area A = πd²/4, so percentage uncertainty in A ≈ 2 × percentage uncertainty in d.",
+      "accept": [
+        "Since wire area is proportional to diameter squared, its percentage uncertainty is approximately double the diameter's."
+      ],
+      "reject": [
+        "Cross-sectional area has half the percentage uncertainty of diameter.",
+        "Uncertainty in diameter never affects uncertainty in wire cross-sectional area."
+      ],
+      "sourceTopic": "RP4 Young modulus"
+    },
+    {
+      "id": "phy_prac_uncert",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why does increasing the measured interval often reduce percentage uncertainty?",
+      "originalBack": "The absolute uncertainty is similar but becomes a smaller fraction of a larger measured value.",
+      "accept": [
+        "A similar absolute reading uncertainty is a smaller fraction of a larger measured time or distance."
+      ],
+      "reject": [
+        "The measuring instrument becomes more precise simply because a larger interval is measured.",
+        "With constant absolute uncertainty, the percentage uncertainty increases when the measured interval increases."
+      ],
+      "sourceTopic": "Practical skills"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_couple_turn",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why can a couple turn an object without a resultant force?",
+      "originalBack": "Its two equal, opposite, parallel forces cancel as forces, but act along separate lines to cause turning.",
+      "accept": [
+        "The two equal opposite parallel forces have zero resultant, but separate lines of action create a turning effect."
+      ],
+      "reject": [
+        "The two forces act on the same line and so make a nonzero couple.",
+        "A couple needs forces of different magnitudes to provide a resultant force."
+      ],
+      "sourceTopic": "Couples"
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_marked_angle",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "When resolving a vector, what decides whether to use sin or cos?",
+      "originalBack": "Look at the marked angle: adjacent side uses cos θ; opposite side uses sin θ. Never rely on horizontal or vertical.",
+      "accept": [
+        "Use cosine for the component adjacent to the given angle and sine for the opposite component."
+      ],
+      "reject": [
+        "The horizontal component always uses sine, regardless of where the angle is measured.",
+        "The adjacent component uses sine and the opposite component uses cosine."
+      ],
+      "sourceTopic": "Resolving vectors"
+    },
+    {
+      "id": "phy_mechanics_weakness_v35_slope_direction",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "On a slope, which way do weight and its two components act?",
+      "originalBack": "Weight mg acts vertically down; mg sin θ acts down the slope; mg cos θ acts into the slope.",
+      "accept": [
+        "Weight acts vertically down; mg sin theta points downhill along the slope and mg cos theta pushes into the slope."
+      ],
+      "reject": [
+        "Weight acts at right angles to the slope rather than vertically downwards.",
+        "mg cos theta acts downhill and mg sin theta acts into the slope."
+      ],
+      "sourceTopic": "Forces on a slope"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_13",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Ignoring air resistance, which force acts on a projectile after release?",
+      "originalBack": "Only weight (gravity) acts, vertically downwards; no forward driving force is needed.",
+      "accept": [
+        "Once released and neglecting drag, a projectile only experiences gravity acting downwards."
+      ],
+      "reject": [
+        "A forward driving force continues acting for the whole flight after release.",
+        "At the top of the flight, no force acts on the projectile."
+      ],
+      "sourceTopic": "Free-body diagrams"
+    },
+    {
+      "id": "task1_phy_075",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What stays constant horizontally in ideal projectile motion?",
+      "originalBack": "Velocity; horizontal acceleration is zero.",
+      "accept": [
+        "The horizontal component of velocity remains constant because horizontal acceleration is zero."
+      ],
+      "reject": [
+        "Gravity acts horizontally, reducing the projectile's horizontal velocity.",
+        "Horizontal acceleration is g and the vertical acceleration is zero."
+      ],
+      "sourceTopic": "Mechanics"
+    },
+    {
+      "id": "task1_phy_076",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the vertical acceleration during ideal projectile motion?",
+      "originalBack": "g downward.",
+      "accept": [
+        "The projectile's vertical acceleration is constant g acting downwards."
+      ],
+      "reject": [
+        "Vertical acceleration becomes zero at the highest point.",
+        "Vertical acceleration is g upwards during the ascent and g downwards during descent."
+      ],
+      "sourceTopic": "Mechanics"
+    },
+    {
+      "id": "phy_moment_eq",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the principle of moments in equilibrium?",
+      "originalBack": "Total clockwise moment = total anticlockwise moment about the same point.",
+      "accept": [
+        "For rotational equilibrium, the total clockwise moments equal the total anticlockwise moments about one point."
+      ],
+      "reject": [
+        "In equilibrium, clockwise moments must be larger than anticlockwise moments.",
+        "Only one force's moment is relevant when deciding if an object is balanced."
+      ],
+      "sourceTopic": "Moments"
+    },
+    {
+      "id": "phy_mechanics_focus_v37_20",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "In an inelastic collision of an isolated system, which quantities are conserved?",
+      "originalBack": "Total momentum is conserved; total kinetic energy need not be conserved.",
+      "accept": [
+        "An isolated inelastic collision conserves total momentum; total kinetic energy can decrease."
+      ],
+      "reject": [
+        "Both momentum and kinetic energy must always be conserved in any inelastic collision.",
+        "Total momentum is lost in every inelastic collision even when no external force acts."
+      ],
+      "sourceTopic": "Momentum"
+    },
+    {
+      "id": "task1_phy_078",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What condition allows use of conservation of momentum?",
+      "originalBack": "No external resultant force acts on the system.",
+      "accept": [
+        "The resultant external force on the system must be zero or negligible."
+      ],
+      "reject": [
+        "Any external resultant force is allowed provided the collision happens quickly.",
+        "Momentum is conserved only when kinetic energy is also conserved."
+      ],
+      "sourceTopic": "Mechanics"
+    }
+  ]
+}
