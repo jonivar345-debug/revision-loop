@@ -1,0 +1,385 @@
+{
+  "version": "v369",
+  "date": "2026-11-06",
+  "scope": "Additional independent numerical and mark-point quality check for six original first-school-mock AQA AS Physics Waves questions, without making new flashcards or changing any existing prompt",
+  "officialSpecification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "previousCrosswalk": "editorial/task1-v360-waves-coverage-and-open-gates.json",
+  "counts": {
+    "originalQuestions": 6,
+    "markPoints": 45,
+    "numericalChecks": 32,
+    "coreFlashcardIdsPreserved": 3345,
+    "studentAnswersIndependentlyMarked": 0
+  },
+  "entries": [
+    {
+      "source": "science_practical_data_v194.json",
+      "id": "task1_v194_practical_01",
+      "marks": 7,
+      "level": "AS",
+      "subject": "Physics",
+      "prompt": "A stationary wave on a stretched string has vibrating length L = (0.750 ± 0.008) m, tension T = (18.0 ± 0.7) N and mass per unit length μ = (0.0080 ± 0.0002) kg m⁻¹. The fundamental frequency is f = (1/2L)√(T/μ). (a) Calculate f. (b) Predict f if the tension is quadrupled while L and μ stay fixed. (c) Estimate the percentage uncertainty in the original f by adding relevant maximum fractional uncertainties. (d) State the physical reason for keeping the mode number fixed when comparing frequencies. [7 marks]",
+      "modelAnswer": "Substitute in f = (1/2×0.750)√(18.0/0.0080). The fundamental frequency is f = 31.6 Hz (approximately). Four times the tension doubles f because f is proportional to √T. The new fundamental frequency is approximately 63.2 Hz. Percentage length uncertainty = 0.008/0.750 × 100 = 1.07%. Percentage uncertainty in f ≈ 1.07 + ½(0.7/18.0 × 100) + ½(0.0002/0.0080 × 100) = 4.26%. Different harmonics have different frequencies; compare the same fundamental mode so observed changes follow the tested variable.",
+      "markPoints": [
+        "Substitute in f = (1/2×0.750)√(18.0/0.0080).",
+        "The fundamental frequency is f = 31.6 Hz (approximately).",
+        "Four times the tension doubles f because f is proportional to √T.",
+        "The new fundamental frequency is approximately 63.2 Hz.",
+        "Percentage length uncertainty = 0.008/0.750 × 100 = 1.07%.",
+        "Percentage uncertainty in f ≈ 1.07 + ½(0.7/18.0 × 100) + ½(0.0002/0.0080 × 100) = 4.26%.",
+        "Different harmonics have different frequencies; compare the same fundamental mode so observed changes follow the tested variable."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": "science_practical_data_v194.json",
+      "id": "task1_v194_practical_02",
+      "marks": 7,
+      "level": "AS",
+      "subject": "Physics",
+      "prompt": "In a Young double-slit data analysis, the distance across eight consecutive fringe intervals is (16.0 ± 0.5) mm. Slit separation a = (0.350 ± 0.010) mm and screen distance D = (1.40 ± 0.02) m. (a) Determine the mean fringe width w. (b) Use w = λD/a to calculate wavelength λ in metres and nanometres. (c) Estimate its maximum percentage uncertainty from the given readings. (d) Explain why several intervals were measured together. [7 marks]",
+      "modelAnswer": "Eight intervals across 16.0 mm give w = 16.0/8 = 2.00 mm. Convert w = 2.00 × 10⁻³ m and a = 3.50 × 10⁻⁴ m. Rearrange λ = wa/D. λ = 2.00×10⁻³ × 3.50×10⁻⁴ / 1.40 = 5.00×10⁻⁷ m = 500 nm. Percentage uncertainty from fringe span = 0.5/16.0 × 100 = 3.13%. Maximum percentage uncertainty in λ ≈ 3.13 + (0.010/0.350×100) + (0.02/1.40×100) = 7.41%. Measuring several fringe intervals together reduces the percentage reading uncertainty compared with measuring one tiny gap.",
+      "markPoints": [
+        "Eight intervals across 16.0 mm give w = 16.0/8 = 2.00 mm.",
+        "Convert w = 2.00 × 10⁻³ m and a = 3.50 × 10⁻⁴ m.",
+        "Rearrange λ = wa/D.",
+        "λ = 2.00×10⁻³ × 3.50×10⁻⁴ / 1.40 = 5.00×10⁻⁷ m = 500 nm.",
+        "Percentage uncertainty from fringe span = 0.5/16.0 × 100 = 3.13%.",
+        "Maximum percentage uncertainty in λ ≈ 3.13 + (0.010/0.350×100) + (0.02/1.40×100) = 7.41%.",
+        "Measuring several fringe intervals together reduces the percentage reading uncertainty compared with measuring one tiny gap."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": "physics_waves_polarisation_stationary_practice_v279.json",
+      "id": "task1_v279_phy_waves_q04",
+      "marks": 7,
+      "level": "AS",
+      "subject": "Physics",
+      "prompt": "A string has vibrating length L=0.800 m and mass per unit length μ=0.640 g m⁻¹. (a) Convert μ to SI units. (b) Calculate the first-harmonic frequency at tension T=16.0 N using f=(1/2L)√(T/μ). (c) Explain why f² against T is a straight line and calculate the theoretical gradient. (d) State the factor by which f changes if T rises from 16.0 N to 36.0 N. [7 marks]",
+      "modelAnswer": "μ=0.640/1000=0.000640 kg m⁻¹. f=(1/(2×0.800))√(16.0/0.000640)=98.82 Hz, or 98.8 Hz to three significant figures. Squaring yields f²=T/(4L²μ), so plotting f² vertically against T horizontally gives a straight line through zero with gradient 1/(4×0.800²×0.000640)=610.35 Hz² N⁻¹≈610 Hz² N⁻¹. If tension rises 16.0 to 36.0 N, frequency multiplies by √(36/16)=1.50, becoming about 148 Hz.",
+      "markPoints": [
+        "Converts μ=0.640 g m⁻¹ to 6.40×10⁻⁴ kg m⁻¹.",
+        "Uses f=(1/(2L))√(T/μ) with consistent SI units.",
+        "Calculates f≈98.8 Hz for T=16.0 N.",
+        "Squares to obtain f²=T/(4L²μ), predicting a straight line through the origin.",
+        "Gives gradient 1/(4L²μ) for an f²-versus-T graph.",
+        "Calculates gradient ≈610 Hz² N⁻¹ (610.35 to additional figures).",
+        "Uses f∝√T to find ratio √(36.0/16.0)=1.50 (revised f≈148 Hz is also acceptable)."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": "physics_waves_interference_application_v226.json",
+      "id": "task1_v226_phy_01",
+      "marks": 10,
+      "level": "AS",
+      "subject": "Physics",
+      "prompt": "A plane transmission grating has 600 lines per mm. Monochromatic light of wavelength 500 nm is incident normally. (a) Determine the slit spacing, the angle of the second-order maximum, and the greatest possible whole order. (b) Explain how changing to longer-wavelength light affects the angle of a given non-zero grating order. (c) For a separate single slit, explain how narrowing the slit or increasing the wavelength affects the angular width of the central maximum. (d) Two in-phase coherent sound sources produce loud and quiet regions. State what makes them coherent and explain the path-difference conditions for a loud and a quiet region. [10 marks]",
+      "modelAnswer": "A grating with 600 lines per mm has slit spacing d = 1/(600000) = 1.67 × 10⁻⁶ m. For the second order, sin θ = 2λ/d = (2 × 500 × 10⁻⁹)/(1.67 × 10⁻⁶) ≈ 0.600. The second-order diffraction angle is θ ≈ 36.9° to the normal. The greatest possible whole diffraction order is 3 because m ≤ d/λ ≈ 3.33. For a fixed grating and order, increasing wavelength increases sin θ and therefore the diffraction angle. Reducing the width of a single slit makes its central diffraction maximum wider. Using a longer wavelength with the same single slit also makes the central maximum wider. Two sound sources must have the same frequency and constant phase difference to remain coherent. A loud sound region can arise where waves reinforce, at an integer-wavelength path difference for sources in phase. A quiet sound region can arise where waves cancel, at an odd-half-wavelength path difference for sources in phase.",
+      "markPoints": [
+        "A grating with 600 lines per mm has slit spacing d = 1/(600000) = 1.67 × 10⁻⁶ m.",
+        "For the second order, sin θ = 2λ/d = (2 × 500 × 10⁻⁹)/(1.67 × 10⁻⁶) ≈ 0.600.",
+        "The second-order diffraction angle is θ ≈ 36.9° to the normal.",
+        "The greatest possible whole diffraction order is 3 because m ≤ d/λ ≈ 3.33.",
+        "For a fixed grating and order, increasing wavelength increases sin θ and therefore the diffraction angle.",
+        "Reducing the width of a single slit makes its central diffraction maximum wider.",
+        "Using a longer wavelength with the same single slit also makes the central maximum wider.",
+        "Two sound sources must have the same frequency and constant phase difference to remain coherent.",
+        "A loud sound region can arise where waves reinforce, at an integer-wavelength path difference for sources in phase.",
+        "A quiet sound region can arise where waves cancel, at an odd-half-wavelength path difference for sources in phase."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": "science_waves_energetics_v198.json",
+      "id": "task1_v198_phy_01",
+      "marks": 7,
+      "level": "AS",
+      "subject": "Physics",
+      "prompt": "A sinusoidal progressive wave moves in the positive x-direction at 60.0 m s⁻¹ and has frequency 125 Hz. At the same instant, two points 0.090 m apart on the wave have different phases. (a) Calculate the period and wavelength. (b) Find the fraction of a cycle and phase difference in degrees and radians between the two points. (c) Find the equivalent time delay and state which point lags, if the point further along +x is the second point. [7 marks]",
+      "modelAnswer": "Period T = 1/f = 1/125 = 0.00800 s. Wavelength λ = v/f = 60.0/125 = 0.480 m. Spatial separation as fraction of a cycle is 0.090/0.480 = 0.1875 cycles. Phase difference = 0.1875 × 360° = 67.5°. Phase difference in radians = 0.1875 × 2π = 1.18 rad. Equivalent time delay is 0.1875 × 0.00800 = 0.00150 s = 1.50 ms. For a wave moving +x, the downstream point lags the upstream point by 67.5°.",
+      "markPoints": [
+        "Period T = 1/f = 1/125 = 0.00800 s.",
+        "Wavelength λ = v/f = 60.0/125 = 0.480 m.",
+        "Spatial separation as fraction of a cycle is 0.090/0.480 = 0.1875 cycles.",
+        "Phase difference = 0.1875 × 360° = 67.5°.",
+        "Phase difference in radians = 0.1875 × 2π = 1.18 rad.",
+        "Equivalent time delay is 0.1875 × 0.00800 = 0.00150 s = 1.50 ms.",
+        "For a wave moving +x, the downstream point lags the upstream point by 67.5°."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": "science_waves_energetics_v198.json",
+      "id": "task1_v198_phy_02",
+      "marks": 7,
+      "level": "AS",
+      "subject": "Physics",
+      "prompt": "Two coherent loudspeakers emit sound of frequency 680 Hz in air where the sound speed is 340 m s⁻¹. At observation point A, the sound has travelled distances 4.00 m and 4.75 m from the speakers. The waves were emitted in phase. At observation point B, the distances are 4.00 m and 5.00 m. (a) Find the wavelength and the path difference at A in wavelengths. (b) Predict constructive or destructive interference at A and at B. (c) Explain the significance of coherence and why complete silence at A is not guaranteed. [7 marks]",
+      "modelAnswer": "Sound wavelength λ = v/f = 340/680 = 0.500 m. Path difference at A is 4.75 − 4.00 = 0.750 m. At A, path difference is 0.750/0.500 = 1.50 wavelengths. A is a destructive-interference position because path difference is an odd half-wavelength for in-phase sources. At B, path difference is 5.00 − 4.00 = 1.00 m = 2.00 wavelengths, giving constructive interference. Coherent sources have the same frequency and a constant phase difference, maintaining a stable interference pattern. Complete cancellation at A requires equal wave amplitudes at that point; unequal amplitudes leave some resultant sound.",
+      "markPoints": [
+        "Sound wavelength λ = v/f = 340/680 = 0.500 m.",
+        "Path difference at A is 4.75 − 4.00 = 0.750 m.",
+        "At A, path difference is 0.750/0.500 = 1.50 wavelengths.",
+        "A is a destructive-interference position because path difference is an odd half-wavelength for in-phase sources.",
+        "At B, path difference is 5.00 − 4.00 = 1.00 m = 2.00 wavelengths, giving constructive interference.",
+        "Coherent sources have the same frequency and a constant phase difference, maintaining a stable interference pattern.",
+        "Complete cancellation at A requires equal wave amplitudes at that point; unequal amplitudes leave some resultant sound."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "expectedNumericValues": [
+    {
+      "id": "task1_v194_practical_01",
+      "quantity": "frequencyOriginal",
+      "expected": 31.62277660168379,
+      "unit": "Hz"
+    },
+    {
+      "id": "task1_v194_practical_01",
+      "quantity": "frequencyQuadrupleTension",
+      "expected": 63.245553203367585,
+      "unit": "Hz"
+    },
+    {
+      "id": "task1_v194_practical_01",
+      "quantity": "lengthPercentageUncertainty",
+      "expected": 1.0666666666666667,
+      "unit": "%"
+    },
+    {
+      "id": "task1_v194_practical_01",
+      "quantity": "tensionHalfContribution",
+      "expected": 1.9444444444444444,
+      "unit": "%"
+    },
+    {
+      "id": "task1_v194_practical_01",
+      "quantity": "muHalfContribution",
+      "expected": 1.25,
+      "unit": "%"
+    },
+    {
+      "id": "task1_v194_practical_01",
+      "quantity": "totalMaximumPercentageUncertainty",
+      "expected": 4.261111111111111,
+      "unit": "%"
+    },
+    {
+      "id": "task1_v194_practical_02",
+      "quantity": "fringeWidthMetres",
+      "expected": 0.002,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v194_practical_02",
+      "quantity": "slitSpacingMetres",
+      "expected": 0.00035,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v194_practical_02",
+      "quantity": "wavelengthMetres",
+      "expected": 5e-7,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v194_practical_02",
+      "quantity": "wavelengthNm",
+      "expected": 500,
+      "unit": "nm"
+    },
+    {
+      "id": "task1_v194_practical_02",
+      "quantity": "spanPercentageUncertainty",
+      "expected": 3.125,
+      "unit": "%"
+    },
+    {
+      "id": "task1_v194_practical_02",
+      "quantity": "totalMaximumPercentageUncertainty",
+      "expected": 7.410714285714286,
+      "unit": "%"
+    },
+    {
+      "id": "task1_v279_phy_waves_q04",
+      "quantity": "massPerLengthSI",
+      "expected": 0.00064,
+      "unit": "kg m⁻¹"
+    },
+    {
+      "id": "task1_v279_phy_waves_q04",
+      "quantity": "initialFundamentalFrequency",
+      "expected": 98.82117688026186,
+      "unit": "Hz"
+    },
+    {
+      "id": "task1_v279_phy_waves_q04",
+      "quantity": "squaredFrequencyGraphGradient",
+      "expected": 610.3515625,
+      "unit": "Hz² N⁻¹"
+    },
+    {
+      "id": "task1_v279_phy_waves_q04",
+      "quantity": "tensionChangeFrequencyFactor",
+      "expected": 1.5,
+      "unit": "dimensionless"
+    },
+    {
+      "id": "task1_v279_phy_waves_q04",
+      "quantity": "revisedFundamentalFrequency",
+      "expected": 148.2317653203928,
+      "unit": "Hz"
+    },
+    {
+      "id": "task1_v226_phy_01",
+      "quantity": "slitSpacing",
+      "expected": 0.0000016666666666666667,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v226_phy_01",
+      "quantity": "secondOrderSine",
+      "expected": 0.6,
+      "unit": "dimensionless"
+    },
+    {
+      "id": "task1_v226_phy_01",
+      "quantity": "secondOrderAngle",
+      "expected": 36.86989764584402,
+      "unit": "degrees"
+    },
+    {
+      "id": "task1_v226_phy_01",
+      "quantity": "highestOrder",
+      "expected": 3,
+      "unit": "order"
+    },
+    {
+      "id": "task1_v198_phy_01",
+      "quantity": "period",
+      "expected": 0.008,
+      "unit": "s"
+    },
+    {
+      "id": "task1_v198_phy_01",
+      "quantity": "wavelength",
+      "expected": 0.48,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v198_phy_01",
+      "quantity": "separationCycles",
+      "expected": 0.1875,
+      "unit": "cycles"
+    },
+    {
+      "id": "task1_v198_phy_01",
+      "quantity": "phaseDegrees",
+      "expected": 67.5,
+      "unit": "degrees"
+    },
+    {
+      "id": "task1_v198_phy_01",
+      "quantity": "phaseRadians",
+      "expected": 1.1780972450961724,
+      "unit": "rad"
+    },
+    {
+      "id": "task1_v198_phy_01",
+      "quantity": "equivalentTimeDelay",
+      "expected": 0.0015,
+      "unit": "s"
+    },
+    {
+      "id": "task1_v198_phy_02",
+      "quantity": "wavelength",
+      "expected": 0.5,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v198_phy_02",
+      "quantity": "pathDifferenceA",
+      "expected": 0.75,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v198_phy_02",
+      "quantity": "pathDifferenceACycles",
+      "expected": 1.5,
+      "unit": "cycles"
+    },
+    {
+      "id": "task1_v198_phy_02",
+      "quantity": "pathDifferenceB",
+      "expected": 1,
+      "unit": "m"
+    },
+    {
+      "id": "task1_v198_phy_02",
+      "quantity": "pathDifferenceBCycles",
+      "expected": 2,
+      "unit": "cycles"
+    }
+  ],
+  "remainingGates": [
+    "Full RP1/RP2 practical apparatus, data collection and analysis need manual review.",
+    "Waves and fibre ray drawings, interference patterns and student-written experimental evaluation are not independently graded by this numerical test.",
+    "Historical development of understanding EM radiation is separately flagged as not directly verified in v360.",
+    "Six existing application tasks and their published model answers do not demonstrate complete AQA content coverage or unseen-student-answer marking."
+  ],
+  "noUserDataEdits": true
+}
