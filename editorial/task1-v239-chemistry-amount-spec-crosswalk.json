@@ -1,0 +1,331 @@
+{
+  "version": "v239",
+  "date": "2026-10-31",
+  "subject": "AQA 7405 Chemistry",
+  "specificationSections": [
+    "3.1.2.1",
+    "3.1.2.2",
+    "3.1.2.3",
+    "3.1.2.4",
+    "3.1.2.5"
+  ],
+  "officialSpecification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "evidenceLevel": "31 mapped AQA requirement rows, with 29 rows having at least one selected active core card and two explicitly identified without direct card evidence. Selected-card presence is not full knowledge verification.",
+  "coreDeckBlobSha": "7e2e2963b5c1c538c6974e5b9b142a24ce398a86",
+  "coreTopicInventory": {
+    "Amount of substance": 53,
+    "Empirical formula": 7,
+    "Ideal gas equation": 7,
+    "Titration calculations": 6,
+    "RP1 Titration": 13,
+    "Back titrations": 10,
+    "total": 96
+  },
+  "requirementCount": 31,
+  "uniqueEvidenceCoreCount": 31,
+  "requirements": [
+    {
+      "id": "AOS-01",
+      "ref": "3.1.2.1",
+      "assessablePoint": "Define relative atomic mass Ar",
+      "coreEvidenceIds": [
+        "chem_ar_def"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-02",
+      "ref": "3.1.2.1",
+      "assessablePoint": "Define relative molecular mass Mr",
+      "coreEvidenceIds": [
+        "chem_atomic_v43_09"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-03",
+      "ref": "3.1.2.1",
+      "assessablePoint": "Use relative formula mass terminology for ionic substances",
+      "coreEvidenceIds": [],
+      "reviewStatus": "gap_no_direct_card"
+    },
+    {
+      "id": "AOS-04",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Define a mole for specified entities",
+      "coreEvidenceIds": [
+        "task1_v144_001"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-05",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Understand Avogadro constant as entities per mole",
+      "coreEvidenceIds": [
+        "chem_avogadro",
+        "chem_amount_v44_28"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-06",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Apply mole to atoms, molecules, ions and electrons",
+      "coreEvidenceIds": [
+        "task1_v144_001"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-07",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Calculate particles and ions using Avogadro constant",
+      "coreEvidenceIds": [
+        "chem_amount_v44_29"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-08",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Calculate amount from mass and molar mass",
+      "coreEvidenceIds": [
+        "chem_moles_mass"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-09",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Calculate solution concentration, volume and amount",
+      "coreEvidenceIds": [
+        "chem_concentration"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-10",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Convert cm3 to dm3 correctly",
+      "coreEvidenceIds": [
+        "chem_titration_001"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-11",
+      "ref": "3.1.2.2",
+      "assessablePoint": "Give calculated results appropriate significant figures",
+      "coreEvidenceIds": [],
+      "reviewStatus": "gap_no_direct_card"
+    },
+    {
+      "id": "AOS-12",
+      "ref": "3.1.2.3",
+      "assessablePoint": "Recall and use pV=nRT",
+      "coreEvidenceIds": [
+        "chem_amount_v44_07"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-13",
+      "ref": "3.1.2.3",
+      "assessablePoint": "Use SI units for p, V and T",
+      "coreEvidenceIds": [
+        "chem_gas_001"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-14",
+      "ref": "3.1.2.3",
+      "assessablePoint": "Rearrange ideal gas equation for moles",
+      "coreEvidenceIds": [
+        "chem_amount_v44_10"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-15",
+      "ref": "3.1.2.3",
+      "assessablePoint": "Use gas data and mass to determine volatile substance Mr",
+      "coreEvidenceIds": [
+        "chem_amount_v44_11"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-16",
+      "ref": "3.1.2.4",
+      "assessablePoint": "Define empirical formula",
+      "coreEvidenceIds": [
+        "task1_chem_015"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-17",
+      "ref": "3.1.2.4",
+      "assessablePoint": "Define molecular formula",
+      "coreEvidenceIds": [
+        "task1_chem_016"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-18",
+      "ref": "3.1.2.4",
+      "assessablePoint": "Derive empirical formula from masses or percentages",
+      "coreEvidenceIds": [
+        "chem_amount_v44_02",
+        "chem_amount_v44_03"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-19",
+      "ref": "3.1.2.4",
+      "assessablePoint": "Use empirical formula and Mr to derive molecular formula",
+      "coreEvidenceIds": [
+        "chem_amount_v44_05",
+        "chem_amount_v44_06"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-20",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Write full and net ionic equations",
+      "coreEvidenceIds": [
+        "chem_amount_v44_22",
+        "chem_amount_v44_23"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-21",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Balance equations for unfamiliar stated reactions",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_chem_009"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-22",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Use balanced equation coefficients for mole ratios",
+      "coreEvidenceIds": [
+        "task1_v124_bulk_chem_009"
+      ],
+      "reviewStatus": "recall_evidenced"
+    },
+    {
+      "id": "AOS-23",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Determine a limiting reactant from stoichiometric amounts",
+      "coreEvidenceIds": [
+        "chem_amount_v44_13"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-24",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Calculate volume of gas produced",
+      "coreEvidenceIds": [
+        "chem_amount_v44_15"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-25",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Calculate percentage yield from actual and theoretical yields",
+      "coreEvidenceIds": [
+        "chem_amount_v44_16"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-26",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Calculate percentage atom economy with balanced coefficients",
+      "coreEvidenceIds": [
+        "chem_amount_v44_18"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-27",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Explain economic, ethical and environmental benefits of high atom economy",
+      "coreEvidenceIds": [
+        "chem_amount_v44_20"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-28",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Use a titration to find concentration",
+      "coreEvidenceIds": [
+        "chem_amount_v44_30"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-29",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Prepare a volumetric standard solution and perform RP1 titration",
+      "coreEvidenceIds": [
+        "chem_rp1"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-30",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Calculate uncertainty from two burette readings",
+      "coreEvidenceIds": [
+        "task1_v132_006"
+      ],
+      "reviewStatus": "application_unverified"
+    },
+    {
+      "id": "AOS-31",
+      "ref": "3.1.2.5",
+      "assessablePoint": "Discard clear titre outliers and calculate a suitable mean",
+      "coreEvidenceIds": [
+        "chem_amount_v44_31"
+      ],
+      "reviewStatus": "application_unverified"
+    }
+  ],
+  "examBoundaryNotes": [
+    "AQA 7405 does not require recall of the numerical Avogadro constant or numerical ideal gas constant R; questions may supply their values.",
+    "The published assessable content is in the specification left column; right-column experiments and calculations are possible contexts rather than mandatory recall of each example.",
+    "Some existing core cards ask for the numerical Avogadro constant. These are useful extension recall, but not a compulsory AQA fact.",
+    "This audit did not screen every supplementary-bank card or independently solve unfamiliar numerical applications.",
+    "Two specification points have no directly evidenced core flashcard in this first pass: relative formula mass for ionic compounds and appropriate significant figures. Related cards are not proof of this recall."
+  ],
+  "highestPriorityGaps": [
+    "Demonstrate balancing unfamiliar full/ionic equations under exam conditions; the mapped core card only tests mole ratios.",
+    "Test actual calculation of particle counts, including mole-to-electron and ionic formula unit conversion, not merely method descriptions.",
+    "Check relative formula mass terminology for ionic compounds separately from molecular mass.",
+    "Check appropriate significant figures from raw uncertainty/precision data.",
+    "Check unfamiliar titration stoichiometry, reverse dilutions, atom economy with coefficients and gas volume problems through the exam question bank."
+  ],
+  "completionGates": {
+    "allCoreAnswersIndependentlyVerified": false,
+    "allAppliedSkillsDemonstrated": false,
+    "chemistryMockSpecFullyVerified": false,
+    "physicsMockSpecFullyVerified": false,
+    "firstMathsMockFullyVerified": false,
+    "task1Complete": false,
+    "requirementsCrosswalkRecorded": true
+  },
+  "requirementRowsWithoutDirectEvidence": 2
+}
