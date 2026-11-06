@@ -1,0 +1,21 @@
+name: Task 1 v362 chemistry 20 original mock cards precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v362-chem-twenty-core-markers.json'
+      - 'tests/task1-v362-chem-twenty-core-markers.cjs'
+      - '.github/workflows/task1-v362-chem-twenty-core-markers.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-core-marking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check app.js && node --check tests/task1-v362-chem-twenty-core-markers.cjs
+      - name: Test 20 actual original mock cards against production evaluator
+        run: node tests/task1-v362-chem-twenty-core-markers.cjs
+      - name: Retain previous Chemistry and Physics marking regressions
+        run: node tests/task1-v358-chem-acid-base-15-marker-review.cjs && node tests/task1-v357-science-mock-14-markers.cjs && node tests/task1-v356-year1-functions-marking-probes.cjs
