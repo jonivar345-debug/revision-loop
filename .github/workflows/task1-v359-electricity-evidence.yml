@@ -1,0 +1,17 @@
+name: Task 1 v359 Physics Electricity exact evidence and open manual gates
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v359-electricity-45-evidence-review.json'
+      - 'tests/task1-v359-electricity-45-evidence-review.cjs'
+      - '.github/workflows/task1-v359-electricity-evidence.yml'
+  workflow_dispatch:
+jobs:
+  electricity-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact original core and supplemental Physics Electricity evidence
+        run: node tests/task1-v359-electricity-45-evidence-review.cjs
+      - name: Preserve previous scope and answer marking safety
+        run: node tests/task1-v290-electricity-exact-id-map.cjs && node tests/task1-v275-physics-refraction-fibres.cjs
