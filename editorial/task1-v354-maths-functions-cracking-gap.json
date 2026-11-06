@@ -1,0 +1,71 @@
+{
+  "version": "v354",
+  "date": "2026-11-06",
+  "changes": {
+    "mathsOriginalCoreCards": 3,
+    "mathsAcceptedAlternatives": 6,
+    "mathsWrongAnswerProbes": 6,
+    "chemistryNewMockCards": 1,
+    "chemistryAcceptedAlternatives": 3,
+    "chemistryWrongAnswerProbes": 3,
+    "originalCoreCount": 3345
+  },
+  "scientificJustification": "AQA Chemistry 7405 subsection 3.3.2.2 explicitly specifies high pressure in thermal cracking but slight pressure in catalytic cracking. Existing original core and the 27 optional Chemistry banks contained no direct 'slight pressure' comparison card. An old unmerged PR suggested a related card; this adds one guarded, precise card while preserving current progress IDs.",
+  "qa": "The three original Maths function cards were previously neither individually accepted-alternative nor rejected-concept calibrated. This review adds two correct and two incorrect variants to each, without editing questions or model answers.",
+  "limitations": [
+    "Targeted recall and marker review; not certification of comprehensive AQA mock coverage.",
+    "AQA does not explicitly require hydrocarbon viscosity as a separate 3.3.2.1 bullet; do not add a card solely to inflate coverage.",
+    "Existing 56 optional supplements, v348 first mock Maths, scanner, XP and cloud-sync unaffected."
+  ],
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+  "mathsRows": [
+    {
+      "id": "math_function_composite",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What does fg(x) mean?",
+      "originalBack": "f(g(x)): apply g first, then f.",
+      "accept": [
+        "The composite fg(x) is f(g(x)), so apply g before f.",
+        "fg(x) means f of g(x), with g acting first and then f."
+      ],
+      "reject": [
+        "fg(x) means g(f(x)): apply f first and then g.",
+        "fg(x) means f(x) multiplied by g(x)."
+      ]
+    },
+    {
+      "id": "math_inverse",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "How do you find an inverse function?",
+      "originalBack": "Write y=f(x), rearrange for x, then swap x and y / write f⁻¹(x).",
+      "accept": [
+        "Set y=f(x), rearrange for x, then interchange x and y to give f inverse.",
+        "Rearrange y = f(x) to make x the subject, then swap the variable names."
+      ],
+      "reject": [
+        "Differentiate f(x) to get the inverse function.",
+        "To find the inverse, take the reciprocal 1/f(x)."
+      ]
+    },
+    {
+      "id": "task1_maths_006",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What does a one-to-one function mean?",
+      "originalBack": "Distinct inputs have distinct outputs.",
+      "accept": [
+        "One-to-one means different inputs must have different outputs.",
+        "Each possible output has at most one input mapping to it."
+      ],
+      "reject": [
+        "A one-to-one function can have two distinct inputs giving the same output.",
+        "One-to-one means every input maps to all outputs simultaneously."
+      ]
+    }
+  ],
+  "newChemistryIds": [
+    "task1_v354_chem_01"
+  ]
+}
