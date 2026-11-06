@@ -1,0 +1,21 @@
+name: Task 1 v369 six original Physics Waves numerical QA
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v369-waves-six-calculation-qa.json'
+      - 'tests/task1-v369-waves-six-calculation-qa.cjs'
+      - '.github/workflows/task1-v369-waves-six-calculation-qa.yml'
+      - 'science_practical_data_v194.json'
+      - 'physics_waves_polarisation_stationary_practice_v279.json'
+      - 'physics_waves_interference_application_v226.json'
+      - 'science_waves_energetics_v198.json'
+  workflow_dispatch:
+jobs:
+  physics-waves-six-numerical:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 32 independently derived values and 45 original mark points
+        run: node tests/task1-v369-waves-six-calculation-qa.cjs
+      - name: Ensure earlier Waves skills and original practice links remain correct
+        run: node tests/task1-v360-waves-coverage-and-open-gates.cjs
