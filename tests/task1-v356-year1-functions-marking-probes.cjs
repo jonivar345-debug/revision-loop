@@ -1,5 +1,5 @@
 'use strict';
-// v356: precision checks on seven original first-mock Year 1 Pure functions cards.
+// v356: precision checks on seven AS-labelled functions cards excluded from the first Year 1 Pure mock.
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const app=read('app.js'),sw=read('sw.js'),deck=json('deck.json').cards;
@@ -37,7 +37,7 @@ const originals=audit.rows.map(row=>{
  assert.equal((c.reject||[]).length,0,'Only add tested wrong examples where original lacks them');
  assert.equal(row.accept.length,1);
  assert.equal(row.reject.length,2);
- assert(mockEligible(c),'This core AS Maths card must be eligible for the first school mock');
+ assert.equal(mockEligible(c),false,'Inverse/composite functions must remain excluded from the first Year 1 Pure mock');
  return {...c,accept:[...(c.accept||[])],reject:[]};
 });
 const patched=patch(originals);
@@ -48,6 +48,7 @@ for(let i=0;i<patched.length;i++){
  assert.equal(c.front,row.originalFront);
  assert.equal(c.back,row.originalBack);
  assert.equal(c.v356ExactReviewed,true);
+ assert.equal(mockEligible(c),false,'Marker metadata must never add an excluded function to the first school mock');
  assert.equal(evaluate(c,c.back).status,'correct','Original model answer rejected: '+c.id);
  const old=byId.get(c.id).accept||[];
  for(const x of old){const v=evaluate(c,x);assert.equal(v.status,'correct','Existing accepted variant lost: '+c.id+' / '+x+' / '+JSON.stringify(v));validatedExisting++}
@@ -58,4 +59,4 @@ const changed=audit.rows.map(row=>({...byId.get(row.id),front:'Changed question'
 patch(changed);
 assert(changed.every(c=>!c.v356ExactReviewed&&c.reject.length===0),'Do not patch changed model/other scopes');
 assert(addedValid===7&&rejected===14&&validatedExisting>=15);
-console.log('PASS v356: seven exact AS Year 1 Pure original function cards, all '+validatedExisting+' existing accepted answers retained, 7 new alternatives and 14 wrong concepts correctly checked by production marker.');
+console.log('PASS v356: seven AS-labelled original function cards remain excluded from the first Year 1 Pure mock; all '+validatedExisting+' existing accepted answers retained, 7 new alternatives and 14 wrong concepts correctly checked by production marker for full revision.');

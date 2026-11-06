@@ -1,16 +1,17 @@
 {
   "version": "v356",
   "date": "2026-11-06",
-  "focus": "Seven previously unreviewed known-wrong examples on already-loaded, mock-eligible original AQA AS Maths functions flashcards, particularly composite/inverse mapping and f(x) inverse graph reflections.",
+  "focus": "Seven existing inverse/composite-function cards, stored as AS but deliberately excluded by the first-school-mock Year 1 Pure filter; improve full/taught revision answer marking without changing school-mock inclusion.",
   "counts": {
     "originalCoreCount": 3345,
     "cards": 7,
     "newAcceptedParaphrases": 7,
     "newKnownWrongVariants": 14
   },
-  "effect": "No new flashcards, no new Maths Year 2 mock content, original core fronts/backs/accept alternatives/saved IDs unchanged. Add 1 correct and 2 wrong examples per original ID with strict guard and real marking regression.",
+  "effect": "No new cards and no changes to original prompts, saved IDs, accepted alternatives, first-mock scope or user progress. Keep these seven specifically excluded Maths functions cards for full/taught revision while adding 1 correct and 2 incorrect examples per original ID.",
   "limits": [
-    "Even explicit known-wrong probes do not certify every unseen response.",
+    "These seven cards do NOT increase Year 1 Pure first-school-mock flashcard coverage; they are excluded inverse/composite-function material.",
+    "Even explicit known-wrong probes cannot certify every unseen response.",
     "Full Year 1 Pure Maths specification completeness remains separately under audit."
   ],
   "rows": [
@@ -112,5 +113,6 @@
         "The inverse always has all real numbers as its range, regardless of f's domain."
       ]
     }
-  ]
+  ],
+  "mockScope": "All seven IDs are in MOCK_MATHS_YEAR2_EXCLUDED_IDS and must continue to be excluded from the first school Maths mock regardless of their historical stage='AS' and mock=true values."
 }
