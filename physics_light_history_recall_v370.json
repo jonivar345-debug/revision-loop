@@ -1,0 +1,66 @@
+{
+  "version": "v370",
+  "createdAt": "2026-11-06",
+  "scope": "Two original short AQA AS first-mock Physics history-of-light evidence cards; does not claim whole Waves coverage.",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "cards": [
+    {
+      "id": "task1_v370_phy_history_01",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "evidence",
+      "priority": 3,
+      "front": "What feature of Young's double-slit pattern supports a wave model of light?",
+      "back": "Alternating bright and dark interference fringes.",
+      "accept": [
+        "Bright and dark interference fringes.",
+        "An interference pattern of alternating bright and dark bands.",
+        "Fringes caused by constructive and destructive interference."
+      ],
+      "reject": [
+        "Only a single uniformly bright band is formed.",
+        "It shows electrons are emitted from the surface of a metal.",
+        "Young's experiment disproved all wave properties of light."
+      ]
+    },
+    {
+      "id": "task1_v370_phy_history_02",
+      "subject": "Physics",
+      "stage": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "revisionTopic": "Interference",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "historical-link",
+      "priority": 3,
+      "front": "Which later effect challenged a purely classical-wave explanation of light?",
+      "back": "The photoelectric effect.",
+      "accept": [
+        "The photoelectric effect.",
+        "Photoelectric emission.",
+        "Emission of electrons from a metal above a threshold light frequency."
+      ],
+      "reject": [
+        "Young's double-slit interference pattern.",
+        "The refraction of light through a prism.",
+        "Sound waves forming stationary waves on a string."
+      ]
+    }
+  ]
+}
