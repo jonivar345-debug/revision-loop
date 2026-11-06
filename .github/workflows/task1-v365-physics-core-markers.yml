@@ -1,0 +1,21 @@
+name: Task 1 v365 Physics 20 original mock core markers
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v365-physics-20-original-marker-review.json'
+      - 'tests/task1-v365-physics-20-original-marker-review.cjs'
+      - '.github/workflows/task1-v365-physics-core-markers.yml'
+  workflow_dispatch:
+jobs:
+  physics-core-marking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: node --check app.js && node --check tests/task1-v365-physics-20-original-marker-review.cjs
+      - name: Test real marker on 20 existing Physics mock cards
+        run: node tests/task1-v365-physics-20-original-marker-review.cjs
+      - name: Preserve Year 1 Pure and earlier science marker regressions
+        run: node tests/task1-v364-year1-pure-20-core-marking.cjs && node tests/task1-v362-chem-twenty-core-markers.cjs && node tests/task1-v357-science-mock-14-markers.cjs
