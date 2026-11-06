@@ -1,0 +1,90 @@
+'use strict';
+// Task 1 v354: one AQA-specified, short cracking-pressure gap card plus 3 original AS Maths function markers.
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
+const app=read('app.js'),sw=read('sw.js');
+const deck=json('deck.json').cards,bank=json('chemistry_cracking_pressure_recall_v354.json');
+const ledger=json('editorial/task1-v354-maths-functions-cracking-gap.json');
+assert.equal(deck.length,3345,'Preserve all existing original core progress IDs');
+assert.equal(new Set(deck.map(c=>c.id)).size,3345);
+assert.equal(ledger.version,'v354');
+assert.equal(ledger.changes.mathsOriginalCoreCards,3);
+assert.equal(ledger.changes.chemistryNewMockCards,1);
+assert.equal(bank.version,'v354');
+assert.equal(bank.cards.length,1);
+assert.equal(bank.cards[0].id,'task1_v354_chem_01');
+assert(!deck.some(c=>c.id==='task1_v354_chem_01'),'Never replace a saved original card');
+assert(sw.includes('-v354-maths-cracking-targeted'),'Refresh offline cache');
+assert(sw.includes("'./chemistry_cracking_pressure_recall_v354.json'"),'New bank must be precached');
+const begin=app.indexOf('const EXTRA_FLASHCARD_URLS='),end=app.indexOf('// v287: exact-ID AQA',begin);
+assert(begin>0&&end>begin);
+const urls=[...app.slice(begin,end).matchAll(/'\.\/([^']+)'/g)].map(m=>m[1]);
+assert.equal(urls.length,56,'Must not renumber the existing optional flashcard supplements');
+assert.equal(urls.at(-1),'science_partial_skill_short_recall_v312.json');
+assert(app.includes("const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json'"));
+assert(app.includes('await fetch(V354_CHEM_CRACKING_URL'),'Chemistry card must actually load in app');
+assert(app.includes('if(!isV354ChemCrackingCard(c)||cards.some(old=>old.id===c.id))continue'),'Guard and duplicate-ID refusal required');
+assert(app.includes('applyV354MathsFunctionsCoreCalibration(cards);'),'Existing Maths card markers must be applied');
+const guardStart=app.indexOf('function isV354ChemCrackingCard(c){');
+const guardEnd=app.indexOf('// v287: exact-ID AQA',guardStart);
+assert(guardStart>=0&&guardEnd>guardStart);
+const guard=new Function(app.slice(guardStart,guardEnd)+'\nreturn isV354ChemCrackingCard;')();
+const c=bank.cards[0];
+assert(guard(c),'Production optional add-on gate should admit the reviewed Chemistry card');
+assert(!guard({...c,stage:'A2'}),'A2 cards may not masquerade as AS mock cards');
+assert(!guard({...c,mock:false}),'Full revision only must not enter mock');
+assert(!guard({...c,id:'another-id'}),'Only the audited new card can load');
+assert(!guard({...c,front:'x'.repeat(146)}),'Reject long-answer questions disguised as short recall');
+assert(c.front.length<=145&&c.back.length<=130);
+assert.equal(c.specRef,'3.3.2.2');
+assert.equal(c.method,'comparison');
+assert.deepEqual([c.subject,c.stage,c.courseTopic,c.scope],['Chemistry','AS','Alkanes','mock']);
+assert(c.accept.length>=3&&c.reject.length>=3);
+const evaluateStart=app.indexOf('function normalise('),evaluateEnd=app.indexOf('function importantTokens(',evaluateStart);
+assert(evaluateStart>0&&evaluateEnd>evaluateStart);
+const evaluate=new Function('window',app.slice(evaluateStart,evaluateEnd)+'\nreturn evaluateCard;')({RevisionPhotoelectricCardMarking:null});
+const mockStart=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),mockEnd=app.indexOf('function startMockSession(){',mockStart);
+assert(mockStart>0&&mockEnd>mockStart);
+const mockEligible=new Function(app.slice(mockStart,mockEnd)+'\nreturn mockEligibleCard;')();
+assert(mockEligible(c),'New AS Chemistry card must be available for the first school mock');
+assert.equal(evaluate(c,c.back).status,'correct','New answer is itself acceptable');
+let good=0,bad=0;
+for(const x of c.accept){const v=evaluate(c,x);assert.equal(v.status,'correct','New Chemistry valid answer rejected: '+x+' / '+JSON.stringify(v));good++}
+for(const x of c.reject){const v=evaluate(c,x);assert.equal(v.status,'wrong','Chemistry misconception wrongly credited: '+x+' / '+JSON.stringify(v));assert.equal(v.score,0);bad++}
+const patchStart=app.indexOf('const V354_MATHS_CORE_VARIANTS='),patchEnd=app.indexOf('// v344:',patchStart);
+assert(patchStart>0&&patchEnd>patchStart);
+const patch=new Function(app.slice(patchStart,patchEnd)+'\nreturn applyV354MathsFunctionsCoreCalibration;')();
+const byId=new Map(deck.map(c=>[c.id,c]));
+assert.equal(ledger.mathsRows.length,3);
+const original=ledger.mathsRows.map(row=>{
+ const c=byId.get(row.id);
+ assert(c,'Missing original Maths ID '+row.id);
+ assert.equal(c.subject,'Maths');
+ assert.equal(c.stage,'AS');
+ assert.equal(c.mock,true);
+ assert.equal(c.front,row.originalFront);
+ assert.equal(c.back,row.originalBack);
+ assert(c.front.length<=145&&c.back.length<=170,'Must retain concise question');
+ assert.equal((c.accept||[]).length,0,'Original Maths card already curated');
+ assert.equal((c.reject||[]).length,0,'Original Maths card already has wrong answer examples');
+ return {...c,accept:[],reject:[]};
+});
+const patched=patch(original);
+for(let i=0;i<patched.length;i++){
+ const item=patched[i],row=ledger.mathsRows[i];
+ assert.equal(item.id,row.id);
+ assert.equal(item.front,row.originalFront);
+ assert.equal(item.back,row.originalBack);
+ assert.equal(item.v354ExactReviewed,true);
+ assert.equal(evaluate(item,item.back).status,'correct','Existing Maths model no longer recognised: '+item.id);
+ assert.equal(row.accept.length,2);
+ assert.equal(row.reject.length,2);
+ for(const x of row.accept){const v=evaluate(item,x);assert.equal(v.status,'correct','Valid Maths response wrongly rejected: '+item.id+' / '+x+' / '+JSON.stringify(v));good++}
+ for(const x of row.reject){const v=evaluate(item,x);assert.equal(v.status,'wrong','Wrong Maths response given credit: '+item.id+' / '+x+' / '+JSON.stringify(v));assert.equal(v.score,0);bad++}
+}
+const badScope=ledger.mathsRows.map(row=>({...byId.get(row.id),front:'Different original wording',mock:false,accept:[],reject:[]}));
+patch(badScope);
+assert(badScope.every(c=>!c.v354ExactReviewed&&c.accept.length===0&&c.reject.length===0));
+assert.equal(good,9);
+assert.equal(bad,9);
+console.log('PASS v354: exact original 3 Maths function IDs and 1 genuine short AQA Chemistry 3.3.2.2 card; 9 valid and 9 wrong answers calibrated with actual production marker. Existing 56 supplements, progress IDs and mock scopes intact.');

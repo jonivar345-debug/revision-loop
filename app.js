@@ -11,8 +11,19 @@ function isV348MathsFirstMockCard(c){
   c.strictRecall===true&&c.kind==='short'&&Array.isArray(c.accept)&&
   Array.isArray(c.reject)&&c.front.length<=145&&c.back.length<=130);
 }
+// v354: only one separately loaded, spec-matched AQA AS Chemistry school-mock card.
+function isV354ChemCrackingCard(c){
+ return Boolean(c&&c.id==='task1_v354_chem_01'&&c.subject==='Chemistry'&&
+   c.stage==='AS'&&c.topic==='Alkanes'&&c.courseTopic==='Alkanes'&&
+   c.specRef==='3.3.2.2'&&c.mock===true&&c.taught===true&&
+   c.scope==='mock'&&c.active===true&&c.kind==='short'&&c.strictRecall===true&&
+   Array.isArray(c.accept)&&c.accept.length>=3&&
+   Array.isArray(c.reject)&&c.reject.length>=3&&
+   c.front.length<=145&&c.back.length<=130);
+}
 // v287: exact-ID AQA AS subsection metadata for individually reviewed legacy cards.
 const V348_MATHS_SHORT_RECALL_URL='./maths_first_mock_micro_recall_v348.json';
+const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json';
 
 // Never alter question wording, marking rules, mock flags, or any progress IDs.
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
@@ -1026,6 +1037,21 @@ function applyV353SchoolMockScienceCalibration(existing){
   c.accept=[...new Set([c.back,...(c.accept||[]),...row.accept])];
   c.reject=[...new Set([...(c.reject||[]),...row.reject])];
   c.v353ExactReviewed=true;
+ }
+ return existing;
+}
+
+// v354: three exact original AQA AS Maths function recall cards, never create duplicate IDs.
+const V354_MATHS_CORE_VARIANTS=[{"id":"math_function_composite","subject":"Maths","stage":"AS","originalFront":"What does fg(x) mean?","originalBack":"f(g(x)): apply g first, then f.","accept":["The composite fg(x) is f(g(x)), so apply g before f.","fg(x) means f of g(x), with g acting first and then f."],"reject":["fg(x) means g(f(x)): apply f first and then g.","fg(x) means f(x) multiplied by g(x)."]},{"id":"math_inverse","subject":"Maths","stage":"AS","originalFront":"How do you find an inverse function?","originalBack":"Write y=f(x), rearrange for x, then swap x and y / write f⁻¹(x).","accept":["Set y=f(x), rearrange for x, then interchange x and y to give f inverse.","Rearrange y = f(x) to make x the subject, then swap the variable names."],"reject":["Differentiate f(x) to get the inverse function.","To find the inverse, take the reciprocal 1/f(x)."]},{"id":"task1_maths_006","subject":"Maths","stage":"AS","originalFront":"What does a one-to-one function mean?","originalBack":"Distinct inputs have distinct outputs.","accept":["One-to-one means different inputs must have different outputs.","Each possible output has at most one input mapping to it."],"reject":["A one-to-one function can have two distinct inputs giving the same output.","One-to-one means every input maps to all outputs simultaneously."]}];
+function applyV354MathsFunctionsCoreCalibration(existing){
+ const byId=new Map(existing.map(c=>[c.id,c]));
+ for(const row of V354_MATHS_CORE_VARIANTS){
+  const c=byId.get(row.id);
+  if(!c||c.subject!==row.subject||c.stage!==row.stage||c.mock!==true||
+     c.front!==row.originalFront||c.back!==row.originalBack)continue;
+  c.accept=[...new Set([c.back,...(c.accept||[]),...row.accept])];
+  c.reject=[...new Set([...(c.reject||[]),...row.reject])];
+  c.v354ExactReviewed=true;
  }
  return existing;
 }
@@ -5119,6 +5145,7 @@ async function sync(manual=false){
  applyV351ASScienceCoreCalibration(cards);
  applyV352MixedScienceCoreCalibration(cards);
  applyV353SchoolMockScienceCalibration(cards);
+ applyV354MathsFunctionsCoreCalibration(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
@@ -5133,6 +5160,17 @@ async function sync(manual=false){
  }catch{}
  for(const c of v348MathsBank.cards||[]){
   if(!isV348MathsFirstMockCard(c)||cards.some(old=>old.id===c.id))continue;
+  cards.push(c);
+ }
+ // v354 adds one AQA AS Chemistry cracking-pressure distinction without
+ // renumbering the 56 historic optional banks or modifying saved cards.
+ let v354ChemBank={cards:[]};
+ try{
+  const response=await fetch(V354_CHEM_CRACKING_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v354ChemBank=await response.json();
+ }catch{}
+ for(const c of v354ChemBank.cards||[]){
+  if(!isV354ChemCrackingCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
  const knownFlashIds=new Set(cards.map(c=>c.id));

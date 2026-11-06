@@ -1,0 +1,37 @@
+{
+  "version": "v354",
+  "createdAt": "2026-11-06",
+  "scope": "One concise AQA AS Chemistry 7405 3.3.2.2 cracking-conditions recall card for the confirmed first mock; no duplicate existing core card IDs.",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+  "cards": [
+    {
+      "id": "task1_v354_chem_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "courseTopic": "Alkanes",
+      "revisionTopic": "Alkanes",
+      "specRef": "3.3.2.2",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "comparison",
+      "priority": 3,
+      "front": "Compared with thermal cracking, what pressure does catalytic cracking use?",
+      "back": "Catalytic: slight pressure; thermal: high pressure.",
+      "accept": [
+        "Catalytic cracking uses slight pressure; thermal cracking uses high pressure.",
+        "Thermal cracking requires high pressure but catalytic cracking operates at slight pressure.",
+        "Catalytic slight pressure, thermal high pressure."
+      ],
+      "reject": [
+        "Catalytic cracking uses high pressure; thermal cracking uses slight pressure.",
+        "Both thermal and catalytic cracking require high pressure.",
+        "Catalytic cracking occurs at zero pressure while thermal uses high pressure."
+      ]
+    }
+  ]
+}
