@@ -19,4 +19,4 @@ jobs:
       - name: Test exact older Chemistry organic gaps and new short-card marker
         run: node tests/task1-v367-chem-as-organic-eleven-gap-recheck.cjs
       - name: Retain earlier Chemistry AS organic and mock marker regressions
-        run: node tests/task1-v155-chemistry-as-organic.cjs && node tests/task1-v362-chem-twenty-core-markers.cjs
+        run: node tests/task1-v155-mock-scope-recall.cjs && node tests/task1-v362-chem-twenty-core-markers.cjs
