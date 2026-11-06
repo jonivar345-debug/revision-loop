@@ -1,0 +1,17 @@
+name: Task 1 v363 chemistry rate and Kp existing exam-practice evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v363-rates-kp-five-application-reconciliation.json'
+      - 'tests/task1-v363-rates-kp-five-application-reconciliation.cjs'
+      - '.github/workflows/task1-v363-rates-kp-evidence.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-rate-kp-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check five previous partials against loaded mock exam practice
+        run: node tests/task1-v363-rates-kp-five-application-reconciliation.cjs
+      - name: Preserve prior source and application checks
+        run: node tests/task1-v249-chemistry-rates-kp-applications.cjs && node tests/task1-v332-science-spec-gibbs.cjs
