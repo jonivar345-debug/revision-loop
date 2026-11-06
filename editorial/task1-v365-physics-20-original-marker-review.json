@@ -1,0 +1,302 @@
+{
+  "version": "v365",
+  "date": "2026-11-06",
+  "purpose": "Precisely calibrate 20 existing true AQA AS Physics first-school-mock short-recall card answer checkers without adding duplicate or long-answer cards.",
+  "scope": "Particle classifications and interactions; pion, beta-plus, emission/absorption and fluorescent-tube energy levels; mechanics work, efficiency, centre of mass; parallel p.d.; RP2 fringe measurement, RP3 light gates, micrometer wire diameter, general practical uncertainties/gradients.",
+  "counts": {
+    "originalCoreIdCount": 3345,
+    "cards": 20,
+    "physics": 20,
+    "newCorrectVariations": 20,
+    "newExplicitWrongVariations": 40
+  },
+  "safeguards": [
+    "Exact ID, original Physics subject, AS stage, mock flag, front and back, active status guards.",
+    "Original 3,345 core progress IDs, original prompts and answers are unchanged.",
+    "Actual production marker accepts each model answer and new correct response and rejects the wrong misconceptions.",
+    "No changes to full exam-question banks, maths first-mock scope, cloud sync or XP.",
+    "No claim of fully checked practical working or whole AQA specification completion."
+  ],
+  "rows": [
+    {
+      "id": "phy_pandr_v29_lepton_definition",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Define a lepton.",
+      "originalBack": "A fundamental particle that does not experience the strong interaction.",
+      "accept": [
+        "An elementary particle that does not feel the strong nuclear force."
+      ],
+      "reject": [
+        "A hadron made from three quarks that experiences the strong nuclear force.",
+        "A lepton must undergo strong nuclear interactions to be a lepton."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_pion_exchange_role",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the pion's role between nucleons?",
+      "originalBack": "It acts as the exchange particle for the residual strong nuclear force.",
+      "accept": [
+        "Pions can mediate the residual strong force between protons and neutrons."
+      ],
+      "reject": [
+        "Pions are the exchange particles of the electromagnetic force between electrons.",
+        "Pions are exchanged to mediate gravity between nucleons."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_beta_plus_nu",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Which lepton accompanies the positron in beta-plus decay?",
+      "originalBack": "An electron neutrino, νₑ (not an antineutrino).",
+      "accept": [
+        "An electron neutrino accompanies the emitted positron in beta plus decay."
+      ],
+      "reject": [
+        "An electron antineutrino is produced with the positron in beta plus decay.",
+        "A muon antineutrino replaces the electron neutrino in beta plus decay."
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_element_fingerprint",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why does each element have a characteristic line spectrum?",
+      "originalBack": "Its unique set of electron energy levels gives characteristic photon wavelengths.",
+      "accept": [
+        "Each atom has distinct electron energy level gaps and therefore characteristic emitted wavelengths."
+      ],
+      "reject": [
+        "All elements have identical atomic energy gaps and identical emission lines.",
+        "Each element emits a continuous range of all wavelengths without any discrete lines."
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_collision_excitation",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "How do fast electrons excite mercury atoms in a fluorescent tube?",
+      "originalBack": "They collide with atoms, transferring energy to electrons bound within the atoms.",
+      "accept": [
+        "Collisions transfer kinetic energy from fast electrons to mercury atoms, exciting bound electrons."
+      ],
+      "reject": [
+        "Electrons excite mercury without any collisions or transferred energy.",
+        "Fast electrons absorb mercury's ultraviolet light but never transfer energy to an atom."
+      ]
+    },
+    {
+      "id": "task1_phy_070",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the centre of mass?",
+      "originalBack": "Point at which an object's mass may be treated as concentrated.",
+      "accept": [
+        "The effective position where an object's total mass can be considered concentrated."
+      ],
+      "reject": [
+        "The geometric centre regardless of how the mass is distributed.",
+        "The point where all external forces always cancel automatically."
+      ]
+    },
+    {
+      "id": "task1_phy_080",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is efficiency?",
+      "originalBack": "Useful energy output divided by total energy input.",
+      "accept": [
+        "Useful energy transferred divided by total energy input, often expressed as a percentage."
+      ],
+      "reject": [
+        "Input energy divided by useful output energy.",
+        "Useful energy output divided by energy wasted, ignoring total input."
+      ]
+    },
+    {
+      "id": "task1_phy_081",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the work done by a perpendicular force?",
+      "originalBack": "Zero.",
+      "accept": [
+        "Zero work, as the force component parallel to the displacement is zero."
+      ],
+      "reject": [
+        "Maximum possible work because the force acts at ninety degrees to motion.",
+        "Work is force multiplied by displacement even for a force at right angles."
+      ]
+    },
+    {
+      "id": "task1_phy_102",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "In a parallel circuit, which quantity is the same across branches?",
+      "originalBack": "Potential difference.",
+      "accept": [
+        "All parallel branches have the same voltage across them."
+      ],
+      "reject": [
+        "Current must be equal in every parallel branch regardless of resistance.",
+        "The voltage drops across parallel branches must be added together."
+      ]
+    },
+    {
+      "id": "task1_phy_107",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why use a micrometer for a wire's diameter?",
+      "originalBack": "Small diameter needs a high-resolution measurement.",
+      "accept": [
+        "Its fine resolution allows accurate measurement of a very small wire diameter."
+      ],
+      "reject": [
+        "A micrometer measures the resistance of the wire directly.",
+        "A micrometer is chosen because it cannot measure small distances accurately."
+      ]
+    },
+    {
+      "id": "task1_practical_003",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Which distance must be measured accurately in a double-slit practical?",
+      "originalBack": "Slit separation and slit-to-screen distance.",
+      "accept": [
+        "Measure both the gap between slits and the distance from slits to the screen."
+      ],
+      "reject": [
+        "Only the brightness of the laser beam needs measuring.",
+        "Only the width of the paper screen is required."
+      ]
+    },
+    {
+      "id": "task1_practical_004",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why measure across several interference fringes?",
+      "originalBack": "It reduces the percentage uncertainty of fringe spacing.",
+      "accept": [
+        "Measure across many fringe gaps so the total distance is larger and the relative uncertainty smaller."
+      ],
+      "reject": [
+        "More fringes always mean a larger percentage uncertainty in each spacing.",
+        "Measuring several fringes removes all measurement uncertainties and guarantees exact values."
+      ]
+    },
+    {
+      "id": "task1_practical_007",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why is a light gate useful for measuring acceleration?",
+      "originalBack": "It avoids human reaction-time error in timing.",
+      "accept": [
+        "Electronic timing avoids human stopwatch reaction-time errors."
+      ],
+      "reject": [
+        "Light gates increase errors caused by human reaction time.",
+        "A light gate removes all uncertainty in the length and timing measurements."
+      ]
+    },
+    {
+      "id": "task1_practical_014",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What makes a variable 'controlled' in an investigation?",
+      "originalBack": "It is kept constant to isolate the tested relationship.",
+      "accept": [
+        "Keep it constant so only the chosen independent variable is being tested."
+      ],
+      "reject": [
+        "Change the control variable at the same time as the independent variable.",
+        "Use the controlled variable as the response that is measured instead."
+      ]
+    },
+    {
+      "id": "task1_practical_015",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why take repeated readings?",
+      "originalBack": "To identify anomalies and reduce random uncertainty.",
+      "accept": [
+        "Repeats help identify outliers and reduce random uncertainty by averaging readings."
+      ],
+      "reject": [
+        "Repeats remove all systematic errors such as a zero offset automatically.",
+        "One reading is always better because repeat measurements increase random error."
+      ]
+    },
+    {
+      "id": "task1_practical_016",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What does the y-intercept of a graph reveal?",
+      "originalBack": "The dependent variable when the plotted x-value is zero.",
+      "accept": [
+        "The y value of the graph when the horizontal x value is zero."
+      ],
+      "reject": [
+        "The horizontal x value at which y becomes zero.",
+        "The steepness or gradient of the graph at its origin."
+      ]
+    },
+    {
+      "id": "task1_practical_018",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is a fair comparison of two measured gradients?",
+      "originalBack": "Check whether their uncertainty ranges overlap.",
+      "accept": [
+        "Determine whether the measured gradient intervals overlap within their uncertainties."
+      ],
+      "reject": [
+        "Judge whether the graph lines have the same number of data points only.",
+        "Any two gradients must be equal if their graph lines cross."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_discrete_lines",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why do atoms produce emission line spectra?",
+      "originalBack": "Electrons occupy discrete energy levels, so only specific photon energies are emitted.",
+      "accept": [
+        "Atoms have discrete electron levels, so only particular photon energies can be emitted in transitions."
+      ],
+      "reject": [
+        "Atoms have a continuum of allowed electron energies and emit every possible wavelength.",
+        "All line spectra arise solely from splitting white light into colours."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_absorption_lines",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why do dark lines appear in an atomic absorption spectrum?",
+      "originalBack": "Atoms absorb photons whose energies match allowed upward transitions.",
+      "accept": [
+        "Atoms take in selected photon energies matching allowed upward electron transitions, leaving dark lines."
+      ],
+      "reject": [
+        "Atoms absorb every wavelength equally, so no individual dark lines can appear.",
+        "Dark absorption lines are caused by the atoms emitting additional photons at those wavelengths."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_fluorescent_tube",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "How does a fluorescent-tube coating produce visible light?",
+      "originalBack": "It absorbs UV photons from excited mercury vapour and emits visible photons.",
+      "accept": [
+        "The phosphor coating absorbs ultraviolet photons and emits visible light."
+      ],
+      "reject": [
+        "The coating turns low-energy visible light into higher-energy ultraviolet without energy input.",
+        "The coating re-emits only X-rays rather than visible photons."
+      ]
+    }
+  ]
+}
