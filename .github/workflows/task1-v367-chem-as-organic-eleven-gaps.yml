@@ -1,0 +1,22 @@
+name: Task 1 v367 AS organic older 11 gaps reconciliation and one short alkane trend card
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'chemistry_alkane_trend_recall_v367.json'
+      - 'editorial/task1-v367-chem-as-organic-eleven-gap-recheck.json'
+      - 'tests/task1-v367-chem-as-organic-eleven-gap-recheck.cjs'
+      - '.github/workflows/task1-v367-chem-as-organic-eleven-gaps.yml'
+  workflow_dispatch:
+jobs:
+  organic-eleven-gaps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check app and test
+        run: node --check app.js && node --check tests/task1-v367-chem-as-organic-eleven-gap-recheck.cjs
+      - name: Test exact older Chemistry organic gaps and new short-card marker
+        run: node tests/task1-v367-chem-as-organic-eleven-gap-recheck.cjs
+      - name: Retain earlier Chemistry AS organic and mock marker regressions
+        run: node tests/task1-v155-mock-scope-recall.cjs && node tests/task1-v362-chem-twenty-core-markers.cjs

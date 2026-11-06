@@ -1,0 +1,227 @@
+{
+  "version": "v367",
+  "date": "2026-11-06",
+  "scope": "Recheck the 11 old AS 3.3.2–3.3.5 Chemistry organic items that 28 Oct v155 could not directly match against the current original mock cards; keep the historical v155 file intact.",
+  "legacy": "editorial/task1-v155-chemistry-as-organic-mock-crosswalk.json",
+  "specification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+  "counts": {
+    "legacyUnmapped": 11,
+    "nowDirectExistingRecall": 9,
+    "newSupportingShortCard": 1,
+    "partiallyMatchedNotSignedOff": 1,
+    "originalCoreIdsUnchanged": 3345
+  },
+  "completion": {
+    "allOlderMissingRowsRevisited": true,
+    "allElevenNowDirectlyMapped": false,
+    "wholeASOrganicAqaBulletsCertified": false,
+    "organicDrawingAndMechanismMasteryCertified": false,
+    "threeSubjectTaskComplete": false
+  },
+  "limits": [
+    "Snapshot v155 predates later cards; this report does not rewrite old findings.",
+    "AQA 3.3.2.1 requires fractional distillation, not a distinct verbal boiling-point trend bullet: the new card is a short supporting concept, not an invented AQA bullet.",
+    "Competing substitution and elimination reactions depend on reactant and conditions; an older solvent-specific direct recall gap is left open rather than providing instructions or implying an absolute rule.",
+    "Every exact core ID is checked for unchanged prompt/model answer, subject and eligibility. Nothing is removed or changed.",
+    "No long-answer flashcards or duplicate cards, and no edits to cloud sync, XP, saved progress or exam questions."
+  ],
+  "rows": [
+    {
+      "id": "ASORG-155-007",
+      "specRef": "3.3.2.1",
+      "requirement": "Know the boiling-point trend with longer chains",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "one_new_concise_supporting_card",
+      "coreEvidence": [],
+      "newCardId": "task1_v367_chem_01",
+      "note": "Existing general induced-dipole recall supports the explanation but the original 3,345-card core had no short, direct alkane chain-length boiling trend prompt in this audit; add exactly one new short recall card. Note: AQA's 3.3.2.1 focuses on fractional distillation, not an explicit separate boiling-trend bullet."
+    },
+    {
+      "id": "ASORG-155-014",
+      "specRef": "3.3.2.3",
+      "requirement": "Identify complete combustion products",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_chem_127",
+          "stage": "AS",
+          "front": "What is complete combustion of a hydrocarbon?",
+          "back": "Reaction with sufficient oxygen producing CO₂ and H₂O."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-015",
+      "specRef": "3.3.2.3",
+      "requirement": "Identify incomplete combustion products",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_v142_010",
+          "stage": "AS",
+          "front": "What carbon-containing products can form in incomplete hydrocarbon combustion?",
+          "back": "Carbon monoxide (CO) and solid carbon (soot); some CO₂ may also form."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-016",
+      "specRef": "3.3.2.3",
+      "requirement": "Explain toxicity of carbon monoxide",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_v156_001",
+          "stage": "AS",
+          "front": "Why is carbon monoxide harmful to humans?",
+          "back": "It binds to haemoglobin, reducing the blood's ability to carry oxygen."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-029",
+      "specRef": "3.3.3.1",
+      "requirement": "Explain polarity of carbon–halogen bond",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "chem_mechanisms_v42_08",
+          "stage": "AS",
+          "front": "Why is the C atom bonded to a halogen electrophilic?",
+          "back": "Bond polarisation gives that carbon a partial positive charge."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-032",
+      "specRef": "3.3.3.1",
+      "requirement": "Recognise CN- substitution gives a nitrile",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_chem_134",
+          "stage": "AS",
+          "front": "What is the organic product type from substitution by CN⁻?",
+          "back": "A nitrile."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-038",
+      "specRef": "3.3.3.2",
+      "requirement": "Recognise conventional aqueous/ethanolic contrast",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "partial_relevant_concept_not_exact_solvent_contrast",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_v124_bulk_chem_118",
+          "stage": "AS",
+          "front": "How do substitution and elimination differ?",
+          "back": "Substitution replaces a group; elimination removes groups to form C=C."
+        },
+        {
+          "path": "deck.json",
+          "id": "chem_mechanisms_v42_12",
+          "stage": "AS",
+          "front": "Why may the same species be a base in one reaction and nucleophile in another?",
+          "back": "It may accept H+ or donate an electron pair to carbon, respectively."
+        }
+      ],
+      "newCardId": null,
+      "note": "Existing short cards explain competing substitution/elimination and reagent nucleophile/base roles; no directly verified specific solvent-conditions recall. AQA requires both mechanisms and the concurrent reactions, not a prescribed solvent comparison wording. Keep direct-solvent check open; do not add duplicate or procedural instructions."
+    },
+    {
+      "id": "ASORG-155-039",
+      "specRef": "3.3.3.3",
+      "requirement": "Explain UV production of chlorine radical from CFC",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_chem_135",
+          "stage": "AS",
+          "front": "Why are CFCs damaging in the stratosphere?",
+          "back": "UV releases chlorine radicals that destroy ozone."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-042",
+      "specRef": "3.3.3.3",
+      "requirement": "Explain why chlorine radical is catalytic",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_v130_124",
+          "stage": "AS",
+          "front": "Why do chlorofluorocarbon radicals contribute to ozone depletion?",
+          "back": "Chlorine radicals catalyse ozone breakdown and are regenerated."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-051",
+      "specRef": "3.3.4.2",
+      "requirement": "Explain induced dipole in Br2",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_v146_053",
+          "stage": "AS",
+          "front": "Why does Br₂ become polarised as it approaches an alkene?",
+          "back": "The electron-rich C=C bond repels Br₂ electrons, inducing a dipole."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct short-recall prompt now exists in the original core deck; legacy audit was a dated snapshot, not a missing-specification proof."
+    },
+    {
+      "id": "ASORG-155-064",
+      "specRef": "3.3.5.2",
+      "requirement": "Recognise Fehling positive observation",
+      "legacyStatus": "not_yet_directly_mapped",
+      "currentStatus": "existing_direct_mock_recall",
+      "coreEvidence": [
+        {
+          "path": "deck.json",
+          "id": "task1_v125_159",
+          "stage": "A2",
+          "front": "What observation shows a positive Fehling's test?",
+          "back": "Brick-red precipitate."
+        }
+      ],
+      "newCardId": null,
+      "note": "Direct, mock=true Fehling observation exists, though this original card is tagged A2; the chemistry taught-school-mock pool includes relevant aldehyde/ketone chemistry. Do not claim an independent AS-level card."
+    }
+  ]
+}

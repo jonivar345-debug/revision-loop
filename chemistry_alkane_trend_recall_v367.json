@@ -1,0 +1,37 @@
+{
+  "version": "v367",
+  "createdAt": "2026-11-06",
+  "scope": "One short first-school-mock AQA AS Chemistry alkane chain-length trend recall card; conservative reconciliation of 11 older unmapped organic points. No duplicate original ID or mechanistic procedural instructions.",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/organic-chemistry",
+  "cards": [
+    {
+      "id": "task1_v367_chem_01",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "topic": "Alkanes",
+      "courseTopic": "Alkanes",
+      "revisionTopic": "Alkanes",
+      "specRef": "3.3.2.1",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "cause-effect",
+      "priority": 3,
+      "front": "As an unbranched alkane's chain gets longer, what happens to its boiling point?",
+      "back": "It increases because larger molecules have stronger induced dipole–dipole forces.",
+      "accept": [
+        "Boiling point rises with carbon chain length.",
+        "Longer-chain alkanes generally boil at higher temperatures.",
+        "It goes up because molecules have more electrons and stronger London forces."
+      ],
+      "reject": [
+        "Boiling point falls as alkane chains become longer.",
+        "The boiling point stays constant for all alkanes.",
+        "Longer alkane chains have weaker intermolecular forces and lower boiling points."
+      ]
+    }
+  ]
+}
