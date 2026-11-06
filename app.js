@@ -1072,6 +1072,22 @@ function applyV355PracticalCalorimetryCalibration(existing){
  return existing;
 }
 
+// v356: seven AS-labelled inverse/composite-function cards excluded from the first school mock.
+// Add precise known wrong answers without touching existing accepted alternatives or user progress.
+const V356_MATHS_FUNCTION_PROBES=[{"id":"math_inverse_condition","subject":"Maths","stage":"AS","originalFront":"When does a function have an inverse over its domain?","originalBack":"When it is one-to-one.","accept":["A function has an inverse on its domain when it is injective, so no two different inputs have the same output."],"reject":["Every many-to-one function has an inverse on its unchanged domain.","A function with two different inputs mapping to one output is always invertible."]},{"id":"v33_card_maths_functions_76","subject":"Maths","stage":"AS","originalFront":"What must hold for the composite function f(g(x)) to be defined?","originalBack":"The output of g must lie in the domain of f.","accept":["For f after g, all outputs of g being used must be acceptable inputs to f."],"reject":["Only g needs to be defined: f need never accept the values that g produces.","For f(g(x)), the result of g must always be outside the domain of f."]},{"id":"v33_card_maths_functions_77","subject":"Maths","stage":"AS","originalFront":"What geometric transformation maps y=f(x) to y=f⁻¹(x)?","originalBack":"Reflection in the line y=x.","accept":["The graph of the inverse function is obtained by reflecting the original in y = x."],"reject":["Reflect the graph in the x-axis to obtain f inverse.","Reflect the graph in the y-axis to obtain f inverse."]},{"id":"task1_v130_156","subject":"Maths","stage":"AS","originalFront":"What makes a function one-to-one?","originalBack":"Different inputs give different outputs.","accept":["A one-to-one mapping assigns different output values to any two different input values."],"reject":["Two distinct inputs may have the same output and the function will still be one-to-one.","A one-to-one function must send every input to the same single output."]},{"id":"task1_v130_157","subject":"Maths","stage":"AS","originalFront":"What must be true before a function has an inverse over its domain?","originalBack":"It is one-to-one.","accept":["The function must be injective, with no repeated output for different inputs."],"reject":["It must be many-to-one so two inputs can give the same output.","An inverse exists over the same domain even if the function is not one-to-one."]},{"id":"task1_v136_063","subject":"Maths","stage":"AS","originalFront":"How is the domain of f⁻¹ related to f?","originalBack":"It is the range of f.","accept":["The inputs allowed for f inverse are exactly the outputs in the range of f."],"reject":["The domain of the inverse is made of values that the original function never outputs.","The inverse always has every real number as its domain, regardless of f's range."]},{"id":"task1_v136_064","subject":"Maths","stage":"AS","originalFront":"How is the range of f⁻¹ related to f?","originalBack":"It is the domain of f.","accept":["The possible outputs of the inverse are the original function's domain values."],"reject":["The inverse range always consists of inputs that are outside the original function's domain.","The inverse always has all real numbers as its range, regardless of f's domain."]}];
+function applyV356Year1FunctionsWrongAnswerProbes(existing){
+ const byId=new Map(existing.map(c=>[c.id,c]));
+ for(const row of V356_MATHS_FUNCTION_PROBES){
+  const c=byId.get(row.id);
+  if(!c||c.subject!==row.subject||c.stage!==row.stage||c.mock!==true||
+    c.front!==row.originalFront||c.back!==row.originalBack)continue;
+  c.accept=[...new Set([c.back,...(c.accept||[]),...row.accept])];
+  c.reject=[...new Set([...(c.reject||[]),...row.reject])];
+  c.v356ExactReviewed=true;
+ }
+ return existing;
+}
+
 // v344: individually verified selected original short AQA Physics and Chemistry mock cards.
 // Preserve stable original content and existing progress; prior, exact incorrect answers
 // must override fuzzy word-overlap scoring without blocking valid unfamiliar answers.
@@ -5163,6 +5179,7 @@ async function sync(manual=false){
  applyV353SchoolMockScienceCalibration(cards);
  applyV354MathsFunctionsCoreCalibration(cards);
  applyV355PracticalCalorimetryCalibration(cards);
+ applyV356Year1FunctionsWrongAnswerProbes(cards);
  // Optional, single-fact recall cards. Missing supplements must not stop the core deck loading.
  const extraFlashBanks=await Promise.all(EXTRA_FLASHCARD_URLS.map(async url=>{
   try{const res=await fetch(url+'?v='+Date.now(),{cache:'no-store'});return res.ok?await res.json():{cards:[]}}
