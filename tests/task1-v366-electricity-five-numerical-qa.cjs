@@ -20,7 +20,7 @@ for(const e of audit.entries){
  assert.equal(q.marks,e.marks);assert.equal(q.markPointMarks.reduce((x,y)=>x+y,0),q.marks);
  assert.equal(q.markPoints.length,q.marks);marks+=q.marks;
 }
-assert.equal(marks,33);
+assert.equal(marks,37);
 function close(actual,want,description){assert(Math.abs(actual-want)<=Math.max(1e-11,Math.abs(want)*1e-7),description+': '+actual+' vs '+want);}
 const expected=new Map(audit.independentExpectedCalculations.map(e=>[e.id+'::'+e.quantity,e.expected]));
 const assertNum=(id,label,result)=>close(result,expected.get(id+'::'+label),id+' '+label);
@@ -36,12 +36,17 @@ const rr=-(1.10-1.40)/(0.80-0.20),eps=1.40+rr*0.20,current=eps/(2+rr);
 assertNum(q5,'internal resistance',rr);assertNum(q5,'cell emf',eps);assertNum(q5,'circuit current',current);assertNum(q5,'terminal voltage',current*2);assertNum(q5,'internal lost volts',current*rr);
 assertNum(q5,'external power',current**2*2);assertNum(q5,'internal heating',current**2*rr);assertNum(q5,'chemical power',eps*current);
 close(eps*current,current**2*(2+rr),'Power conservation');
-const needed=['4.00','1.96×10⁻⁷','7.85×10⁻⁷','−0.48','1.54','1.06','8.0','3.0 kΩ','6.0 V','2.00 mA','1.00 mA','5.00','2.00','6.67','2.86','0.50','1.50','0.600','1.20','0.300','0.720','0.180','0.900'];
-assert.equal(needed.length,audit.independentExpectedCalculations.length);
-for(let i=0;i<audit.entries.length;i++){
- const e=audit.entries[i];const expectedCount=audit.independentExpectedCalculations.filter(q=>q.id===e.id).length;
- const parts=expectedCount===3?needed.slice(0,3):[];
- assert(e.modelAnswer.length>150);
+const expectedModelTokens={
+ 'task1_v194_practical_05':['4.00 Ω m⁻¹','1.96×10⁻⁷ m²','7.85×10⁻⁷ Ω m'],
+ 'task1_v194_practical_06':['−0.48 V A⁻¹','1.54 V','1.06 V'],
+ 'task1_v203_phy_06':['8.0 V','3.0 kΩ','6.0 V','2.00 mA','1.00 mA'],
+ 'task1_v203_phy_07':['5.00 V','2.00 V','6.67 V','2.86 V'],
+ 'task1_v203_phy_08':['0.50 Ω','1.50 V','0.600 A','1.20 V','0.300 V','0.720 W','0.180 W','0.900 W']
+};
+for(const item of audit.entries){
+ for(const token of expectedModelTokens[item.id]||[]){
+  assert(item.modelAnswer.includes(token),'Expected verified computed result missing from model answer: '+item.id+' / '+token);
+ }
 }
 assert.equal(audit.manualChecksStillOpen.length,4);
-console.log('PASS v366: 33 original mark points and 23 independently recomputed numerical quantities across 5 loaded AS Electricity multi-mark problems; practical/drawing sign-off still open.');
+console.log('PASS v366: 37 original mark points and 23 independently recomputed numerical quantities across 5 loaded AS Electricity multi-mark problems; practical/drawing sign-off still open.');
