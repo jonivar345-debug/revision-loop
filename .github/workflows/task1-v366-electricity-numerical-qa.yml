@@ -1,0 +1,17 @@
+name: Task 1 v366 independent Electricity practical and circuit numeric QA
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v366-electricity-five-numerical-qa.json'
+      - 'tests/task1-v366-electricity-five-numerical-qa.cjs'
+      - '.github/workflows/task1-v366-electricity-numerical-qa.yml'
+  workflow_dispatch:
+jobs:
+  electricity-numerical-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently recheck original RP5/RP6/divider maths and mark points
+        run: node tests/task1-v366-electricity-five-numerical-qa.cjs
+      - name: Ensure previous Electricity question references remain stable
+        run: node tests/task1-v359-electricity-45-evidence-review.cjs && node tests/task1-v203-physics-graphs-circuits.cjs
