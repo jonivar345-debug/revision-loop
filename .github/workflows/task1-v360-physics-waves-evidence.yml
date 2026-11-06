@@ -14,4 +14,4 @@ jobs:
       - name: Validate selected AQA Waves source and mock scope
         run: node tests/task1-v360-waves-coverage-and-open-gates.cjs
       - name: Preserve earlier Waves, diffraction and fibre regression
-        run: node tests/task1-v279-physics-waves-selected-crosswalk.cjs && node tests/task1-v275-physics-refraction-fibres.cjs
+        run: node tests/task1-v279-physics-waves-selected-audit.cjs && node tests/task1-v275-physics-refraction-fibres.cjs
