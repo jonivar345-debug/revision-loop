@@ -1,0 +1,21 @@
+name: Task 1 v353 Physics and Chemistry school mock short-card marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v353-science-core-marker-review.json'
+      - 'tests/task1-v353-science-core-marker-review.cjs'
+      - '.github/workflows/task1-v353-science-core-marker-review.yml'
+  workflow_dispatch:
+jobs:
+  27-short-science-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check app.js && node --check tests/task1-v353-science-core-marker-review.cjs
+      - name: Validate 54 accepted and 54 incorrect responses against production evaluator
+        run: node tests/task1-v353-science-core-marker-review.cjs
+      - name: Preserve preceding science, chemistry reaction and first Maths mock calibration
+        run: node tests/task1-v352-mixed-science-core-precision.cjs && node tests/task1-v351-as-science-short-marker-calibration.cjs && node tests/task1-v347-equation-balance-precision.cjs && node tests/task1-v348-year1-pure-micro-recall.cjs
