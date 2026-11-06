@@ -1,0 +1,17 @@
+name: Task 1 v361 Year 1 Pure skill-to-existing-practice evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v361-maths-first-pure-practice-evidence.json'
+      - 'tests/task1-v361-maths-first-pure-practice-evidence.cjs'
+      - '.github/workflows/task1-v361-maths-pure-practice-evidence.yml'
+  workflow_dispatch:
+jobs:
+  maths-pure-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check exact exam-practice links, old crosswalk and Year 1 mock scope
+        run: node tests/task1-v361-maths-first-pure-practice-evidence.cjs
+      - name: Retain inequality, transformation and Year 1 practice regression
+        run: node tests/task1-v335-maths-inequality-practice.cjs && node tests/task1-v340-maths-paper-c-practice.cjs && node tests/task1-v272-maths-graph-transform-sketches.cjs
