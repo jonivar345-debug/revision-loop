@@ -1,0 +1,426 @@
+{
+  "version": "v353",
+  "date": "2026-11-06",
+  "scope": "27 already existing, mock-eligible, short AQA Physics and Chemistry original core cards, 12 Physics and 15 Chemistry (AS and selected already-taught A2)",
+  "counts": {
+    "cards": 27,
+    "physics": 12,
+    "chemistry": 15,
+    "correctAlternatives": 54,
+    "wrongProbes": 54,
+    "originalCoreCount": 3345
+  },
+  "purpose": "Target user's observed weaknesses: slope forces, graph gradients and areas, optics/particles, uncertainty, energy and Hess signs, Kp, rate laws, mass spectrometry, ester chemistry. Require full correct concepts and reject specific misconceptions.",
+  "limitations": [
+    "Scope is 27 original short cards, not an exhaustive three-subject AQA specification audit.",
+    "A passing tested set cannot certify all possible unseen paraphrases; manual review remains available.",
+    "Retain the exact original front/back, mock flags, old card IDs and saved progress."
+  ],
+  "rows": [
+    {
+      "id": "phy_slope_001",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "For a slope at angle θ, what are the components of weight parallel and perpendicular to the slope?",
+      "originalBack": "Parallel = mg sin θ. Perpendicular = mg cos θ. If no other perpendicular force acts and there is no perpendicular acceleration, R = mg cos θ.",
+      "accept": [
+        "Parallel weight component is mg sin θ; perpendicular is mg cos θ, so R=mg cos θ if there are no other normal forces.",
+        "Along the incline: mg sin theta; normal to incline: mg cos theta; the normal reaction equals mg cos theta in the stated simple case."
+      ],
+      "reject": [
+        "Parallel = mg cos θ; perpendicular = mg sin θ.",
+        "Weight parallel to the slope is mg and the normal reaction is always zero."
+      ]
+    },
+    {
+      "id": "phy_filament_iv",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why does a filament lamp's resistance rise at high current?",
+      "originalBack": "The filament gets hotter, increasing lattice vibrations and electron collisions.",
+      "accept": [
+        "The hotter filament vibrates more, increasing electron scattering and therefore resistance.",
+        "At higher current the filament temperature increases; greater lattice vibration raises resistance."
+      ],
+      "reject": [
+        "Resistance falls as the hotter filament's ions vibrate less.",
+        "The rise in current cools the filament and reduces collisions."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_trapezium_numeric",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Velocity rises uniformly from 4 to 12 m s⁻¹ in 5 s. Find displacement.",
+      "originalBack": "Area under v–t graph = ½(4+12)×5 = 40 m.",
+      "accept": [
+        "40 metres, using mean speed 8 m/s for five seconds.",
+        "Displacement = ((4+12)/2)×5 = 40 m."
+      ],
+      "reject": [
+        "Displacement is 20 m.",
+        "Displacement = 12 × 5 = 60 m."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_extension_dual",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "For a Hookean force–extension graph (F vs ΔL), what do gradient and area give?",
+      "originalBack": "Gradient = spring stiffness k; area = work done / elastic strain energy (for elastic loading).",
+      "accept": [
+        "Gradient is k, spring stiffness; area beneath the force-extension graph is elastic potential energy.",
+        "Slope gives the spring constant, while area under F against extension gives stored elastic strain energy."
+      ],
+      "reject": [
+        "Gradient gives elastic energy and area gives spring stiffness.",
+        "Both gradient and area give force, not work or stiffness."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_rp3_v2_s",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "For free fall from rest, what is g from a graph of v² (y) against s (x)?",
+      "originalBack": "v² = 2gs, so gradient = 2g and g = gradient ÷ 2.",
+      "accept": [
+        "For v squared against s, gradient = 2g; divide the gradient by two for g.",
+        "g is half of the v²–distance slope because v² = 2gs."
+      ],
+      "reject": [
+        "g is equal to the gradient of the v² against s graph.",
+        "g is twice the gradient of the v² against s graph."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_rp4_force_extension",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "For a wire, how is Young modulus found from a force (y) vs extension (x) graph?",
+      "originalBack": "Gradient = F/ΔL; E = gradient × original length L ÷ cross-sectional area A.",
+      "accept": [
+        "Young modulus E = (force-extension gradient × original wire length) / wire cross-sectional area.",
+        "From the F against ΔL slope, E = gradient × L/A."
+      ],
+      "reject": [
+        "Young modulus equals force-extension gradient multiplied by cross-sectional area divided by length.",
+        "Young modulus E = gradient divided by the original length and by area."
+      ]
+    },
+    {
+      "id": "phy_pandr_v29_emission_photon",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the photon energy when an excited electron falls to a lower level?",
+      "originalBack": "E = hf = E(high) − E(low), using the positive energy difference.",
+      "accept": [
+        "Emitted photon energy hf is the higher electron level energy minus the lower one.",
+        "Energy released is ΔE = Eupper − Elower = hf, taken positive."
+      ],
+      "reject": [
+        "Emitted energy equals E(lower) minus E(higher), giving a negative photon energy.",
+        "A photon emitted in a downward transition has zero energy."
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_absorb_frequencies",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why can atoms absorb photons of only certain frequencies?",
+      "originalBack": "Only photons whose energy hf matches an allowed energy-level gap can be absorbed.",
+      "accept": [
+        "Only photons with hf equal to an allowed separation between electron levels are absorbed.",
+        "Atomic energy levels are discrete, so the incoming photon must match an allowed energy difference."
+      ],
+      "reject": [
+        "Atoms absorb all frequencies continuously regardless of energy levels.",
+        "Absorption occurs only when photon energy is smaller than every possible electron energy gap."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Velocity falls from +6 to −2 m s⁻¹ uniformly in 4.0 s. Find a and the time of reversal.",
+      "originalBack": "a = (−2−6)/4 = −2.0 m s⁻². v = 0 after 3.0 s; direction then reverses.",
+      "accept": [
+        "Acceleration = −2.0 m/s²; zero velocity is reached after 3.0 s.",
+        "a = (−2−6)/4 = −2 m s⁻² and direction changes at t = 3 s."
+      ],
+      "reject": [
+        "Acceleration is +2 m/s² and direction reverses after 3 s.",
+        "Acceleration is −2 m/s² and the object reverses direction at 1 s."
+      ]
+    },
+    {
+      "id": "phy_measure_recap_20261024_prefix_micro_nano",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What powers of ten do micro (μ) and nano (n) mean?",
+      "originalBack": "micro = 10⁻⁶; nano = 10⁻⁹.",
+      "accept": [
+        "micro is 10 to the power −6, nano is 10 to the power −9.",
+        "μ = 10^-6 and n = 10^-9."
+      ],
+      "reject": [
+        "micro is 10^-9 and nano is 10^-6.",
+        "μ means 10^-3 while n means 10^-6."
+      ]
+    },
+    {
+      "id": "task1_phy_016",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "For quantities multiplied, how do percentage uncertainties combine?",
+      "originalBack": "Add their percentage uncertainties.",
+      "accept": [
+        "Add the fractional percentage uncertainties for multiplied measurements.",
+        "For multiplication, the combined percentage uncertainty is the sum of the input percentage uncertainties."
+      ],
+      "reject": [
+        "Multiply the percentage uncertainties together.",
+        "Subtract the smaller percentage uncertainty from the larger one."
+      ]
+    },
+    {
+      "id": "task1_phy_020",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "How is uncertainty in a graph gradient estimated?",
+      "originalBack": "Compare the steepest and shallowest acceptable gradients.",
+      "accept": [
+        "Use the maximum and minimum gradients from steepest and shallowest acceptable lines to estimate gradient uncertainty.",
+        "Compare the highest and lowest valid graph slopes around the best-fit line to assess the uncertainty."
+      ],
+      "reject": [
+        "Only the best-fit gradient matters; acceptable extreme lines are irrelevant.",
+        "Take the steepest possible gradient as an exact value with zero uncertainty."
+      ]
+    },
+    {
+      "id": "chem_rate_recap_20261024_initial_data",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "How do you find order from initial-rate experiments?",
+      "originalBack": "Compare two trials holding other concentrations constant; see how the rate responds.",
+      "accept": [
+        "Compare initial-rate trials in which only one reactant concentration changes, then relate its rate factor to the concentration factor.",
+        "Hold the other concentrations fixed, alter A, and use the rate change to find A's order."
+      ],
+      "reject": [
+        "Change every reactant concentration together and assign each the overall order.",
+        "Reaction orders can always be read directly from the balanced equation coefficients."
+      ]
+    },
+    {
+      "id": "chem_kp_recap_20261024_total_pressure_unknown",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "How do you find unknown total pressure P from Kp and mole fractions?",
+      "originalBack": "Replace each partial pressure p(A) by x(A)×P in Kp, simplify the powers of P, then solve.",
+      "accept": [
+        "Use partial pressures p_i = mole fraction_i × total pressure P in Kp, then rearrange for P.",
+        "Substitute x_i P for each equilibrium partial pressure and solve the resulting Kp equation for total pressure."
+      ],
+      "reject": [
+        "Replace partial pressure p_i with x_i/P before solving Kp.",
+        "Put the initial, rather than equilibrium, mole fractions into Kp without considering reaction progress."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_024",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "How is transesterification different from hydrolysis?",
+      "originalBack": "Transesterification exchanges an ester group; hydrolysis breaks an ester bond.",
+      "accept": [
+        "Transesterification swaps the alcohol-derived part of an ester; hydrolysis breaks the ester using water.",
+        "One ester is converted to another by reaction with alcohol in transesterification, whereas hydrolysis cleaves ester bonds with water."
+      ],
+      "reject": [
+        "Transesterification specifically splits esters with water, whereas hydrolysis swaps the alcohol group without water.",
+        "Both processes only oxidise the ester and preserve its bond unchanged."
+      ]
+    },
+    {
+      "id": "chem_kc_recap_20261024_equilibrium_only",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Should you use initial or equilibrium concentrations in Kc?",
+      "originalBack": "Equilibrium concentrations only. Find these from a mole-change table if necessary.",
+      "accept": [
+        "Use equilibrium values for concentration in the Kc expression, not initial concentrations.",
+        "Only concentrations after equilibrium is reached belong in Kc; calculate them first if necessary."
+      ],
+      "reject": [
+        "Use starting concentrations in Kc without allowing for the reaction.",
+        "Kc is calculated using concentrations before equilibrium is established."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_25",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "How do you calculate reaction molar ΔH using solution q?",
+      "originalBack": "ΔH=−q_solution(kJ)/moles of reaction, with sign chosen correctly.",
+      "accept": [
+        "Molar enthalpy change equals negative heat gained by the solution in kJ divided by moles of reaction.",
+        "ΔH = −q_solution/(1000 n) if solution heat q is in J and n is the equation's mole extent."
+      ],
+      "reject": [
+        "ΔH = +q_solution/n for an exothermic reaction that warms the solution.",
+        "Molar ΔH is found by multiplying q in kJ by the number of reaction moles."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_31",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What happens to the measured magnitude of exothermic ΔH if heat escapes?",
+      "originalBack": "The temperature rise is too small; calculated ΔH is less negative.",
+      "accept": [
+        "Heat escaping makes the measured temperature rise smaller and the calculated exothermic ΔH closer to zero.",
+        "The measured enthalpy change is less exothermic, meaning a less negative ΔH."
+      ],
+      "reject": [
+        "Heat loss makes the temperature increase larger and the calculated ΔH more negative.",
+        "Heat loss leaves the experimental temperature rise and ΔH completely unaffected."
+      ]
+    },
+    {
+      "id": "chem_energetics_v53_08",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What is the molar enthalpy formula if q_solution is in joules?",
+      "originalBack": "ΔH = −q_solution/(1000 × n) in kJ mol⁻¹.",
+      "accept": [
+        "ΔH in kJ/mol = −q in joules divided by (1000 × moles reacted).",
+        "ΔH = −q/(1000n) kJ mol^-1 when q is heat gained by the solution in J."
+      ],
+      "reject": [
+        "ΔH = −1000q/n in kJ mol^-1 when q is joules.",
+        "ΔH = −q n/1000 instead of dividing by n."
+      ]
+    },
+    {
+      "id": "chem_energetics_v53_17",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "For ΔfH° values, which subtraction order gives reaction ΔH?",
+      "originalBack": "Sum of products − sum of reactants, including coefficients.",
+      "accept": [
+        "For standard formation enthalpies use sum of coefficient-weighted products minus sum of coefficient-weighted reactants.",
+        "Reaction ΔH = ΣνΔfH(products) − ΣνΔfH(reactants)."
+      ],
+      "reject": [
+        "For formation enthalpies, calculate reactants minus products.",
+        "Ignore all stoichiometric coefficients when summing standard formation enthalpies."
+      ]
+    },
+    {
+      "id": "chem_energetics_v53_18",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "For ΔcH° values, which subtraction order gives reaction ΔH?",
+      "originalBack": "Sum of reactants − sum of products, including coefficients.",
+      "accept": [
+        "With standard combustion enthalpies calculate coefficient-weighted reactants minus coefficient-weighted products.",
+        "ΔH reaction = ΣνΔcH(reactants) − ΣνΔcH(products)."
+      ],
+      "reject": [
+        "For combustion enthalpies take products minus reactants.",
+        "Combustion-cycle enthalpies must never be multiplied by equation coefficients."
+      ]
+    },
+    {
+      "id": "chem_energetics_v49_51",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What is the general bond-enthalpy estimate for reaction ΔH?",
+      "originalBack": "Sum of energies for bonds broken − sum of energies for bonds formed.",
+      "accept": [
+        "Enthalpy estimate is total bond energy to break bonds minus total bond energy released on forming bonds.",
+        "ΔH = Σ(bond enthalpies broken) − Σ(bond enthalpies formed)."
+      ],
+      "reject": [
+        "ΔH = bond energies formed minus bond energies broken.",
+        "Add bond-breaking and bond-forming contributions as two positive terms."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_21",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why does equal kinetic energy not mean equal speed?",
+      "originalBack": "Since Eₖ=½mv², lighter ions have greater speed at equal Eₖ.",
+      "accept": [
+        "At equal kinetic energy E = ½mv², lighter ions must move faster than heavier ions.",
+        "Velocity varies inversely with the square root of mass for equal KE, so smaller mass means larger speed."
+      ],
+      "reject": [
+        "Equal kinetic energy always gives equal ion speed regardless of mass.",
+        "At the same kinetic energy, the heavier ion must travel faster."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_34",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why might the electrospray [M+H]⁺ peak differ from molecular mass?",
+      "originalBack": "It includes the mass of an added proton; m/z is about Mr+1 for 1+ ions.",
+      "accept": [
+        "Electrospray protonation adds H+, so singly charged [M+H]+ has m/z approximately Mr + 1.",
+        "The observed [M+H]+ ion contains one extra proton, making its mass-to-charge ratio about one unit greater."
+      ],
+      "reject": [
+        "The [M+H]+ peak must be one mass unit lower because a proton was removed.",
+        "Electrospray adds an electron with a mass of one dalton to give [M+H]+."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_35",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why rinse a pipette with the measured solution first?",
+      "originalBack": "To avoid diluting it with residual water.",
+      "accept": [
+        "Rinse with the analyte solution to stop leftover rinse water diluting the solution measured by the pipette.",
+        "Pre-rinsing with the actual solution prevents residual distilled water lowering its concentration."
+      ],
+      "reject": [
+        "Leave distilled water in the pipette so the measured solution is diluted.",
+        "Rinsing with an unrelated solution improves concentration accuracy."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_04",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What makes a substance electrophilic rather than nucleophilic?",
+      "originalBack": "Electrophiles accept electron pairs; nucleophiles donate electron pairs.",
+      "accept": [
+        "An electrophile accepts a pair of electrons while a nucleophile donates a pair.",
+        "Electrophiles are electron-pair acceptors; nucleophiles are electron-pair donors."
+      ],
+      "reject": [
+        "An electrophile donates electron pairs and a nucleophile accepts them.",
+        "Both nucleophiles and electrophiles are defined solely as electron-pair donors."
+      ]
+    },
+    {
+      "id": "chem_spec_v40_026",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is the stoichiometric number of fatty acid methyl esters per triglyceride?",
+      "originalBack": "Three methyl ester molecules correspond to one triglyceride.",
+      "accept": [
+        "Each triglyceride yields three fatty acid methyl ester molecules in complete transesterification.",
+        "One triglyceride produces three FAME molecules because it has three fatty acid residues."
+      ],
+      "reject": [
+        "One triglyceride gives only one methyl ester molecule.",
+        "One triglyceride gives only two fatty acid methyl esters."
+      ]
+    }
+  ]
+}
