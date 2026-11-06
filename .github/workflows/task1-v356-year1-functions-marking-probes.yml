@@ -1,0 +1,21 @@
+name: Task 1 v356 Year 1 Pure inverse and composite function marking precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v356-year1-functions-marking-probes.json'
+      - 'tests/task1-v356-year1-functions-marking-probes.cjs'
+      - '.github/workflows/task1-v356-year1-functions-marking-probes.yml'
+  workflow_dispatch:
+jobs:
+  maths-functions-mock-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax checks
+        run: node --check app.js && node --check tests/task1-v356-year1-functions-marking-probes.cjs
+      - name: Verify preserved accepted variants and 14 wrong Maths function answers
+        run: node tests/task1-v356-year1-functions-marking-probes.cjs
+      - name: Preserve previous first mock Maths and Physics/Chemistry markers
+        run: node tests/task1-v355-practical-calorimetry-marker-review.cjs && node tests/task1-v354-maths-functions-cracking.cjs && node tests/task1-v348-year1-pure-micro-recall.cjs
