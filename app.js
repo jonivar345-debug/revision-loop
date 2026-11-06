@@ -5547,7 +5547,6 @@ async function sync(manual=false){
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
  });
- applyV372Year1PureManualReview(examQuestions);
  for(const q of examQuestions){
   if(Object.prototype.hasOwnProperty.call(corrections.modelAnswers||{},q.id))q.modelAnswer=corrections.modelAnswers[q.id];
   const changes=corrections.questionCorrections?.[q.id];
@@ -5557,6 +5556,8 @@ async function sync(manual=false){
    }
   }
  }
+ // Apply exact manual-working protection after any published question corrections.
+ applyV372Year1PureManualReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
