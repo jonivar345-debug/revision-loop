@@ -1,0 +1,21 @@
+name: Task 1 v355 practical measurements and calorimetry recall precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v355-practical-calorimetry-marker-review.json'
+      - 'tests/task1-v355-practical-calorimetry-marker-review.cjs'
+      - '.github/workflows/task1-v355-practical-calorimetry-marker-review.yml'
+  workflow_dispatch:
+jobs:
+  practical-calorimetry-precision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript source and test syntax
+        run: node --check app.js && node --check tests/task1-v355-practical-calorimetry-marker-review.cjs
+      - name: Test 40 scientifically correct and 40 known wrong answer examples
+        run: node tests/task1-v355-practical-calorimetry-marker-review.cjs
+      - name: Preserve all preceding Maths first mock and science marker regressions
+        run: node tests/task1-v354-maths-functions-cracking.cjs && node tests/task1-v353-science-core-marker-review.cjs && node tests/task1-v352-mixed-science-core-precision.cjs && node tests/task1-v348-year1-pure-micro-recall.cjs
