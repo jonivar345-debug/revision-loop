@@ -1,0 +1,219 @@
+{
+  "version": "v357",
+  "date": "2026-11-06",
+  "purpose": "Precisely test correct and incorrect answer variants for 14 unpatched, genuine first-school-mock AQA AS Physics/Chemistry original short recall cards, with no duplicate cards.",
+  "scope": "Seven Physics cards covering plots, spring constant, projectiles, ionisation limit and zero error; seven Chemistry cards covering equilibrium, calorimetry, kinetics, successive ionisation energies, bond fission and back titrations.",
+  "source": "deck.json original core, 3345 unchanged IDs; app.js production answer evaluator and mock filter",
+  "counts": {
+    "coreIdsPreserved": 3345,
+    "cards": 14,
+    "physics": 7,
+    "chemistry": 7,
+    "newAccepted": 14,
+    "newRejected": 28
+  },
+  "safeguards": [
+    "Apply only if id, subject, AS stage, mock=true and complete original front/back match.",
+    "Retain existing accepted responses and save keys; do not change original model answer, question, stage or mock scope.",
+    "Run all 14 original model answers, 14 new acceptable paraphrases, 28 misconception probes through real evaluateCard.",
+    "Do not mistake precision on these selected cards for whole AQA syllabus coverage, or automated marking for manual drawing or calculation checking."
+  ],
+  "rows": [
+    {
+      "id": "phy_prac_graph",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "Why use a best-fit line rather than joining points dot-to-dot?",
+      "originalBack": "A best-fit line reveals the overall relationship and reduces the influence of random scatter.",
+      "accept": [
+        "A best-fit line follows the overall trend rather than each scattered point, limiting the effect of random errors."
+      ],
+      "reject": [
+        "Join every point individually, since a zigzag line removes random scatter.",
+        "The best-fit line must always pass through every measured point."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_force_distance_vs_time",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "How do areas under force–time and force–displacement graphs differ?",
+      "originalBack": "Force–time area = impulse Δp; force–displacement area = work done W.",
+      "accept": [
+        "Area under force against time equals impulse or change in momentum; area under force against displacement equals work done."
+      ],
+      "reject": [
+        "Force-time area gives work, while force-displacement area gives impulse.",
+        "Area under either graph always gives velocity rather than work or momentum change."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_iv_axes_resistance",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "For an ohmic conductor, what is the gradient of V against I versus I against V?",
+      "originalBack": "V (y) vs I (x): gradient = R. I (y) vs V (x): gradient = 1/R.",
+      "accept": [
+        "The gradient of V plotted against I is resistance R, whereas the gradient of I against V is 1/R."
+      ],
+      "reject": [
+        "The gradient of V against I is 1/R and that of I against V is R.",
+        "Both graph gradients equal the resistance in ohms."
+      ]
+    },
+    {
+      "id": "phy_focus_v38_04",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "A projectile returns to its launch height. Which component fixes the flight time, and which fixes range once time is known?",
+      "originalBack": "Vertical initial velocity and gravity fix flight time. Horizontal initial velocity × flight time gives range.",
+      "accept": [
+        "The vertical component with gravity determines time of flight; horizontal speed multiplied by this time gives range."
+      ],
+      "reject": [
+        "Horizontal velocity alone decides the flight time; vertical velocity decides range.",
+        "Only vertical speed matters for horizontal range, even if horizontal velocity is zero."
+      ]
+    },
+    {
+      "id": "task1_phy_088",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is the spring constant?",
+      "originalBack": "Force divided by extension within the linear region.",
+      "accept": [
+        "For a linear spring k=F/x, the load divided by its extension."
+      ],
+      "reject": [
+        "Spring constant is extension divided by force, x/F.",
+        "The spring constant is the area under a force-extension graph."
+      ]
+    },
+    {
+      "id": "phy_spectra_photo_v32_negative_levels",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What does 0 eV mean on an atomic energy-level diagram?",
+      "originalBack": "The ionisation limit: the electron is free. Bound levels have negative energies.",
+      "accept": [
+        "Zero electron energy is the ionisation threshold, when the electron is unbound; bound levels are negative."
+      ],
+      "reject": [
+        "Zero eV is the lowest bound ground-state energy and an ionised electron must be negative.",
+        "Bound atomic electron levels have positive energies relative to the free-electron limit."
+      ]
+    },
+    {
+      "id": "task1_practical_017",
+      "subject": "Physics",
+      "stage": "AS",
+      "originalFront": "What is a zero error?",
+      "originalBack": "A systematic offset when the true input is zero.",
+      "accept": [
+        "A zero error is an instrument's systematic non-zero indication when the true quantity is zero."
+      ],
+      "reject": [
+        "A zero error is the random variation between repeated readings.",
+        "A zero error means the instrument always reads exactly zero for a genuine zero input."
+      ]
+    },
+    {
+      "id": "chem_kc_recap_20261024_lechatelier_vs_k",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "How can equilibrium composition change without changing Kc?",
+      "originalBack": "Concentration or pressure changes can shift equilibrium; Kc remains constant at unchanged temperature.",
+      "accept": [
+        "At fixed temperature changing concentration or pressure can alter equilibrium composition, but Kc stays unchanged."
+      ],
+      "reject": [
+        "Increasing reactant concentration increases the numerical value of Kc at the same temperature.",
+        "Increasing gas pressure always increases the equilibrium constant Kc."
+      ]
+    },
+    {
+      "id": "task1_chem_039",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "In q = mcΔT, what mass normally appears?",
+      "originalBack": "Mass of the substance whose temperature change is measured.",
+      "accept": [
+        "In q=mcΔT, m is the mass of the material whose temperature change was measured."
+      ],
+      "reject": [
+        "The m in q=mcΔT is always the number of moles of limiting reagent.",
+        "Use the mass of the reacting metal even when only the solution's temperature change was recorded."
+      ]
+    },
+    {
+      "id": "task1_chem_040",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What is one frequent source of error in simple calorimetry?",
+      "originalBack": "Heat exchange with surroundings.",
+      "accept": [
+        "Unwanted heat transfer to or from the surroundings causes inaccuracy in calorimetry."
+      ],
+      "reject": [
+        "Calorimetry never loses heat to the surroundings if any cup is used.",
+        "Heat exchange with the surroundings has no effect on measured temperature changes."
+      ]
+    },
+    {
+      "id": "task1_chem_045",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "Why does heating increase reaction rate disproportionately?",
+      "originalBack": "A larger fraction of particles exceed activation energy.",
+      "accept": [
+        "Higher temperature means a much larger fraction of colliding particles has energy greater than or equal to the activation energy."
+      ],
+      "reject": [
+        "Heating an uncatalysed mixture lowers the reaction's activation energy.",
+        "Heating increases the rate solely because the activation energy becomes zero."
+      ]
+    },
+    {
+      "id": "task1_chem_005",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "What causes a large jump between successive ionisation energies?",
+      "originalBack": "The next electron is removed from an inner shell.",
+      "accept": [
+        "A large successive-ionisation-energy jump occurs when the next electron is taken from an inner shell closer to the nucleus."
+      ],
+      "reject": [
+        "The jump shows the next electron must be from a more distant outer shell.",
+        "The electron after the jump is held less strongly because the shielding is greater."
+      ]
+    },
+    {
+      "id": "chem_mechanisms_v42_03",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "How is homolytic fission different from heterolytic fission?",
+      "originalBack": "Homolytic splits the pair; heterolytic transfers both electrons to one side.",
+      "accept": [
+        "Homolytic fission divides the bonding pair one electron to each atom; heterolytic fission gives both to one atom."
+      ],
+      "reject": [
+        "Homolytic fission gives both bonding electrons to one atom; heterolytic gives one to each.",
+        "Both homolytic and heterolytic bond breaking always produce two radicals."
+      ]
+    },
+    {
+      "id": "chem_amount_v44_43",
+      "subject": "Chemistry",
+      "stage": "AS",
+      "originalFront": "State the essential subtraction in a back titration.",
+      "originalBack": "Initial moles of reagent minus remaining moles = moles that reacted.",
+      "accept": [
+        "Moles of excess reagent that reacted equal moles initially added minus moles left over."
+      ],
+      "reject": [
+        "Add the initial and remaining reagent moles to calculate the amount consumed.",
+        "All initially added excess reagent is counted as reacted, even when some is left over."
+      ]
+    }
+  ]
+}
