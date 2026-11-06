@@ -1,0 +1,858 @@
+{
+  "version": "v360",
+  "date": "2026-11-06",
+  "subject": "Physics",
+  "scope": "AQA Physics 7408 Year 1 Waves 3.3.1.1–3.3.2.3 school mock; exact representative flashcards plus original exam applications, not full specification certification",
+  "officialSpec": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "method": "Match individually read source flashcard front, model answer, original source file and mock eligibility to a narrow AQA skill. Link separately loaded original exam-practice IDs and preserve unverified drawing/practical evidence gates. No new flashcards, no question rewriting or unverified certification.",
+  "counts": {
+    "sampledSkills": 57,
+    "distinctSampledMockCards": 57,
+    "sections": 6,
+    "linkedExamQuestions": 13,
+    "manualOrUnverifiedGates": 7,
+    "sourceCoreCardsPreserved": 3345
+  },
+  "rows": [
+    {
+      "id": "W01",
+      "specRef": "3.3.1.1",
+      "skill": "Amplitude means greatest displacement from equilibrium",
+      "evidence": {
+        "path": "deck.json",
+        "cardId": "task1_phy_034",
+        "front": "What is wave amplitude?",
+        "back": "Maximum displacement from equilibrium."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W02",
+      "specRef": "3.3.1.1",
+      "skill": "Wavelength is shortest distance between points in phase",
+      "evidence": {
+        "path": "deck.json",
+        "cardId": "task1_phy_035",
+        "front": "What is wavelength?",
+        "back": "Shortest distance between two points in phase."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W03",
+      "specRef": "3.3.1.1",
+      "skill": "Frequency is reciprocal of period",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_02",
+        "front": "A wave has a period of 0.025 s. Calculate frequency.",
+        "back": "40 Hz."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W04",
+      "specRef": "3.3.1.1",
+      "skill": "Wave speed, wavelength and frequency calculation",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_01",
+        "front": "A wave has wavelength 0.75 m and frequency 40 Hz. Calculate its speed.",
+        "back": "30 m s⁻¹."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W05",
+      "specRef": "3.3.1.1",
+      "skill": "Phase difference for a quarter wavelength",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_06",
+        "front": "Two points are a quarter wavelength apart on a progressive wave. What is their phase difference?",
+        "back": "π/2 rad."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W06",
+      "specRef": "3.3.1.1",
+      "skill": "General phase difference from path distance",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_13",
+        "front": "Initially in-phase waves: path difference Δx, wavelength λ. Phase difference in radians?",
+        "back": "Δφ = 2πΔx/λ."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W07",
+      "specRef": "3.3.1.2",
+      "skill": "Only transverse waves can be plane polarised",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_03",
+        "front": "Which type of wave can be plane-polarised: longitudinal or transverse?",
+        "back": "Transverse waves."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W08",
+      "specRef": "3.3.1.2",
+      "skill": "Longitudinal displacement parallel to energy propagation",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_04",
+        "front": "In a longitudinal wave, how do the oscillations relate to the direction of energy transfer?",
+        "back": "They are parallel."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W09",
+      "specRef": "3.3.1.2",
+      "skill": "All EM waves have the same speed in vacuum",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_13",
+        "front": "How do the speeds of different electromagnetic waves compare in a vacuum?",
+        "back": "All travel at the same speed, c, approximately 3.00 × 10⁸ m s⁻¹."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W10",
+      "specRef": "3.3.1.2",
+      "skill": "Polarisation provides evidence that light is transverse",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_03",
+        "front": "Why does the polarisation of light provide evidence that it is transverse?",
+        "back": "Only transverse oscillations can be restricted to a chosen vibration plane."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W11",
+      "specRef": "3.3.1.2",
+      "skill": "Receiving aerial alignment with electric field",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_01",
+        "front": "For receiving a linearly polarised radio signal, when is a straight receiving aerial best aligned?",
+        "back": "Parallel to the electric-field oscillations."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W12",
+      "specRef": "3.3.1.2",
+      "skill": "Crossed ideal polarisers transmit no light",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_02",
+        "front": "What happens to ideal linearly polarised light passing through a second polariser at 90° to the first?",
+        "back": "No light is transmitted."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W13",
+      "specRef": "3.3.1.2",
+      "skill": "Polariser transmission axis selects parallel electric-field component",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_12",
+        "front": "Which component of a linearly polarised light wave is transmitted by an ideal linear polariser?",
+        "back": "The electric-field component parallel to its transmission axis."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W14",
+      "specRef": "3.3.1.3",
+      "skill": "Stationary waves result from opposite same-frequency travelling waves",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_11",
+        "front": "What two travelling waves form a stationary wave by superposition?",
+        "back": "Waves of the same frequency travelling in opposite directions."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W15",
+      "specRef": "3.3.1.3",
+      "skill": "Stationary wave nodes remain at zero displacement",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_04",
+        "front": "How does displacement change at a node of an ideal stationary wave over time?",
+        "back": "It remains zero."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W16",
+      "specRef": "3.3.1.3",
+      "skill": "Displacements within one antinode loop are in phase",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_05",
+        "front": "How do points in the same loop between adjacent nodes oscillate in a stationary string wave?",
+        "back": "In phase."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W17",
+      "specRef": "3.3.1.3",
+      "skill": "Adjacent loops vibrate in antiphase",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_06",
+        "front": "How do points in adjacent loops of an ideal stationary string wave oscillate?",
+        "back": "In antiphase (180° apart)."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W18",
+      "specRef": "3.3.1.3",
+      "skill": "Third harmonic number of nodes",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_08",
+        "front": "How many nodes, including the ends, occur on a fixed-end string in its third harmonic?",
+        "back": "Four."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W19",
+      "specRef": "3.3.1.3",
+      "skill": "First-harmonic frequency formula of fixed-end string",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_01",
+        "front": "String fixed at both ends: give first-harmonic frequency f₁ using L, tension T and mass per length μ.",
+        "back": "f₁ = (1/(2L))√(T/μ)."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W20",
+      "specRef": "3.3.1.3",
+      "skill": "Frequency dependence on mass per unit length",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_03",
+        "front": "At fixed length and tension, how does the first-harmonic frequency change if the mass per unit length of a string quadruples?",
+        "back": "It halves."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W21",
+      "specRef": "3.3.1.3",
+      "skill": "Linear f squared against tension for RP1",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_10",
+        "front": "In an experiment with fixed L and μ, why is f² plotted against string tension T?",
+        "back": "The relationship f²=T/(4L²μ) is a straight line through the origin."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W22",
+      "specRef": "3.3.1.3",
+      "skill": "Stationary sound waves through reflection and superposition",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_07",
+        "front": "How can stationary sound waves form when sound is reflected?",
+        "back": "Incident and reflected waves of the same frequency travel in opposite directions and superpose."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W23",
+      "specRef": "3.3.1.3",
+      "skill": "Second-harmonic nodes and antinodes",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_05",
+        "front": "For a string fixed at both ends in the second harmonic, how many nodes and antinodes are there, counting end nodes?",
+        "back": "Three nodes and two antinodes."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W24",
+      "specRef": "3.3.2.1",
+      "skill": "Coherent sources share frequency and constant phase difference",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_09",
+        "front": "What makes two wave sources coherent?",
+        "back": "Same frequency and a constant phase difference."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W25",
+      "specRef": "3.3.2.1",
+      "skill": "Path difference of whole wavelengths gives constructive interference",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_08",
+        "front": "Two coherent waves starting in phase have a path difference of 3λ at a point. What type of interference occurs?",
+        "back": "Constructive."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W26",
+      "specRef": "3.3.2.1",
+      "skill": "Half-integer wavelength path difference gives destructive interference",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_07",
+        "front": "Two coherent waves starting in phase have a path difference of 2.5λ at a point. What type of interference occurs?",
+        "back": "Destructive."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W27",
+      "specRef": "3.3.2.1",
+      "skill": "Constructive and destructive sound interference",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_01",
+        "front": "Why can two coherent sound sources produce alternating loud and quiet regions?",
+        "back": "Their sound waves superpose constructively at some positions and destructively at others."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W28",
+      "specRef": "3.3.2.1",
+      "skill": "Microwave interference demonstrates superposition",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_03",
+        "front": "What do alternating strong and weak microwave signals at different positions demonstrate?",
+        "back": "Constructive and destructive interference from superposition of electromagnetic waves."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W29",
+      "specRef": "3.3.2.1",
+      "skill": "Single wavefront through double slits gives coherent sources",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_08",
+        "front": "Why does illuminating two slits with one wavefront help produce a stable interference pattern?",
+        "back": "The two slits act as coherent sources because their waves maintain a constant phase difference."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W30",
+      "specRef": "3.3.2.1",
+      "skill": "Double-slit fringe-spacing numerical calculation",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_16",
+        "front": "Double slits: λ=500 nm, screen distance D=2.0 m, slit separation d=0.50 mm. Find fringe spacing.",
+        "back": "2.0 mm."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W31",
+      "specRef": "3.3.2.1",
+      "skill": "Fringe width increases with screen distance",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_17",
+        "front": "If the screen distance in Young's double-slit experiment doubles, what happens to fringe spacing?",
+        "back": "It doubles."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W32",
+      "specRef": "3.3.2.1",
+      "skill": "Central fringe is white for white-light Young slits",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_19",
+        "front": "For double-slit interference with white light, what colour is the central bright fringe?",
+        "back": "White."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W33",
+      "specRef": "3.3.2.1",
+      "skill": "Outer white-light Young fringes overlap across colours",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_09",
+        "front": "Why do white-light double-slit fringes from different colours overlap more away from the central white fringe?",
+        "back": "Different wavelengths have different fringe spacings, so their bright fringes occur at different positions and eventually overlap."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W34",
+      "specRef": "3.3.2.1",
+      "skill": "Laser safety in interference practical",
+      "evidence": {
+        "path": "deck.json",
+        "cardId": "task1_practical_005",
+        "front": "What is a key laser safety precaution?",
+        "back": "Never look directly into the beam."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W35",
+      "specRef": "3.3.2.2",
+      "skill": "Longer wavelength broadens single-slit central maximum",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_08",
+        "front": "For a single slit of fixed width, how does a longer wavelength change the central diffraction maximum?",
+        "back": "It becomes wider."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W36",
+      "specRef": "3.3.2.2",
+      "skill": "Central diffraction maximum is broader than weaker side maxima",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_09",
+        "front": "What is the qualitative pattern for monochromatic light passing through a single narrow slit?",
+        "back": "A broad bright central maximum with weaker side maxima separated by dark regions."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W37",
+      "specRef": "3.3.2.2",
+      "skill": "Narrower slit broadens diffraction pattern",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_21",
+        "front": "If single-slit width is halved, what happens to the central maximum's angular width (small-angle approximation)?",
+        "back": "It approximately doubles."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W38",
+      "specRef": "3.3.2.2",
+      "skill": "White-light single slit central bright maximum",
+      "evidence": {
+        "path": "physics_waves_polarisation_stationary_recall_v279.json",
+        "cardId": "task1_v279_phy_waves_card_13",
+        "front": "In the qualitative single-slit diffraction pattern for white light, what colour is the central bright maximum?",
+        "back": "White."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W39",
+      "specRef": "3.3.2.2",
+      "skill": "Adjacent grating-slit path difference d sin theta",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_04",
+        "front": "In the derivation of the grating equation, what is the path difference between light from adjacent slits at angle θ?",
+        "back": "d sin θ, where d is the slit spacing."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W40",
+      "specRef": "3.3.2.2",
+      "skill": "Diffracting grating line density to slit spacing",
+      "evidence": {
+        "path": "physics_waves_reasoning_recall_v226.json",
+        "cardId": "task1_v226_phy_waves_06",
+        "front": "How do you find the slit spacing for a grating labelled 600 lines per mm?",
+        "back": "d = 1/(600 × 1000) m = 1.67 × 10⁻⁶ m."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W41",
+      "specRef": "3.3.2.2",
+      "skill": "Numerical diffraction-grating first-order angle",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_23",
+        "front": "For a grating d=2.0 µm and λ=600 nm, find first-order diffraction angle to 1 d.p.",
+        "back": "17.5°."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W42",
+      "specRef": "3.3.2.2",
+      "skill": "Maximum observable grating order",
+      "evidence": {
+        "path": "physics_waves_applications_v253.json",
+        "cardId": "task1_v253_physics_waves_24",
+        "front": "For grating spacing 2.5 µm and λ=600 nm, find the highest possible order n.",
+        "back": "4."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W43",
+      "specRef": "3.3.2.2",
+      "skill": "Red versus violet grating diffraction angle",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_14",
+        "front": "Grating: why is a red first-order maximum at a greater angle than violet?",
+        "back": "Red light has a longer wavelength, so d sin θ = mλ gives a greater angle at the same order."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W44",
+      "specRef": "3.3.2.2",
+      "skill": "White zero-order grating maximum",
+      "evidence": {
+        "path": "physics_waves_crosswalk_recall_v229.json",
+        "cardId": "task1_v229_phy_waves_10",
+        "front": "For white light incident normally on a diffraction grating, what is seen in the zero-order maximum?",
+        "back": "A white maximum because the colours are not angularly separated at zero order."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W45",
+      "specRef": "3.3.2.3",
+      "skill": "Definition of absolute refractive index n=c/v",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_04",
+        "front": "For a medium with speed v, express its absolute refractive index n.",
+        "back": "n=c/v."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W46",
+      "specRef": "3.3.2.3",
+      "skill": "Refractive index of air is approximately one",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_05",
+        "front": "What approximate absolute refractive index is used for air in AS Physics calculations?",
+        "back": "1."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W47",
+      "specRef": "3.3.2.3",
+      "skill": "Snell law at planar material boundary",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_06",
+        "front": "At a plane boundary, what equation relates refractive indices n₁,n₂ and angles measured to the normal?",
+        "back": "n₁ sin θ₁=n₂ sin θ₂."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W48",
+      "specRef": "3.3.2.3",
+      "skill": "Refraction angles are measured to normal",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_08",
+        "front": "How are the incidence and refraction angles in Snell's law measured?",
+        "back": "From the normal."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W49",
+      "specRef": "3.3.2.3",
+      "skill": "Critical angle formula for high-to-low refractive-index boundary",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_07",
+        "front": "A wave travels from n₁ into lower n₂. What equation gives the critical angle θc?",
+        "back": "sin θc=n₂/n₁."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W50",
+      "specRef": "3.3.2.3",
+      "skill": "Both conditions needed for total internal reflection",
+      "evidence": {
+        "path": "physics_optical_fibre_precision_recall_v225.json",
+        "cardId": "task1_v225_phy_fibre_04",
+        "front": "What two conditions must be met for total internal reflection at a boundary?",
+        "back": "Light must go from higher to lower refractive index, with incidence angle greater than the critical angle."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W51",
+      "specRef": "3.3.2.3",
+      "skill": "Lower-index cladding than step-index core",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_02",
+        "front": "Relative to the core, what must the refractive index of an optical fibre's cladding be?",
+        "back": "Lower."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W52",
+      "specRef": "3.3.2.3",
+      "skill": "Cladding protects fibre and reduces light leakage",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_03",
+        "front": "Why is an optical fibre's cladding useful in addition to its refractive-index difference?",
+        "back": "It protects the core boundary from damage and reduces light leakage."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W53",
+      "specRef": "3.3.2.3",
+      "skill": "Sharp step-index difference core to cladding",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_17",
+        "front": "How is the refractive index profile modelled in a step-index fibre?",
+        "back": "A sharp change from core index to lower cladding index."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W54",
+      "specRef": "3.3.2.3",
+      "skill": "Material dispersion: different wavelengths, speeds",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_12",
+        "front": "For material dispersion, what causes different parts of a light pulse to arrive at different times?",
+        "back": "Different wavelengths travel at different speeds in the material."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W55",
+      "specRef": "3.3.2.3",
+      "skill": "Modal dispersion: differing optical path lengths",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_13",
+        "front": "For modal dispersion, what makes parts of the light signal arrive at different times?",
+        "back": "Different ray paths have different path lengths."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W56",
+      "specRef": "3.3.2.3",
+      "skill": "Pulse broadening limits data rate through overlap",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_15",
+        "front": "Why can pulse broadening reduce the maximum data rate in an optical fibre?",
+        "back": "Adjacent pulses may overlap."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    },
+    {
+      "id": "W57",
+      "specRef": "3.3.2.3",
+      "skill": "Absorption attenuates signal intensity",
+      "evidence": {
+        "path": "physics_refraction_fibres_recall_v275.json",
+        "cardId": "task1_v275_phy_fibre_card_16",
+        "front": "What is the main effect of absorption on signal pulses travelling along a fibre?",
+        "back": "Attenuation: their intensity decreases."
+      },
+      "evidenceStatus": "short_recall_sample_verified_application_not_certified"
+    }
+  ],
+  "linkedOriginalExamPractice": [
+    {
+      "path": "science_practical_data_v194.json",
+      "id": "task1_v194_practical_01",
+      "specRef": "3.3.1.3",
+      "marks": 7,
+      "prompt": "A stationary wave on a stretched string has vibrating length L = (0.750 ± 0.008) m, tension T = (18.0 ± 0.7) N and mass per unit length μ = (0.0080 ± 0.0002) kg m⁻¹. The fundamental frequency is f = (1/2L)√(T/μ). (a) Calculate f. (b) Predict f if the tension is quadrupled while L and μ stay fixed. (c) Estimate the percentage uncertainty in the original f by adding relevant maximum fractional uncertainties. (d) State the physical reason for keeping the mode number fixed when comparing frequencies. [7 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "science_practical_data_v194.json",
+      "id": "task1_v194_practical_02",
+      "specRef": "3.3.2.1",
+      "marks": 7,
+      "prompt": "In a Young double-slit data analysis, the distance across eight consecutive fringe intervals is (16.0 ± 0.5) mm. Slit separation a = (0.350 ± 0.010) mm and screen distance D = (1.40 ± 0.02) m. (a) Determine the mean fringe width w. (b) Use w = λD/a to calculate wavelength λ in metres and nanometres. (c) Estimate its maximum percentage uncertainty from the given readings. (d) Explain why several intervals were measured together. [7 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_waves_polarisation_stationary_practice_v279.json",
+      "id": "task1_v279_phy_waves_q01",
+      "specRef": "3.3.1.3",
+      "marks": 8,
+      "prompt": "A string fixed at x=0 and x=0.90 m vibrates in its third harmonic. The wave speed is 120 m s⁻¹. Draw a labelled displacement-versus-position sketch at maximum displacement, another after half a period, and state what the string looks like after a quarter period. Mark all nodes and antinodes. Explain the phase relationship in adjacent loops and calculate the frequency. [8 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_waves_polarisation_stationary_practice_v279.json",
+      "id": "task1_v279_phy_waves_q02",
+      "specRef": "3.3.1.2",
+      "marks": 5,
+      "prompt": "A linearly polarised radio wave has its electric-field oscillations vertical. A straight receiving aerial is used to pick up this wave. Explain its best orientation and why rotating it through 90° reduces the ideal received signal. A beam of light passes through two ideal crossed polarising sheets. State what emerges and explain what these examples demonstrate about the wave oscillations. Do not use Malus's law. [5 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_waves_polarisation_stationary_practice_v279.json",
+      "id": "task1_v279_phy_waves_q03",
+      "specRef": "3.3.2.2",
+      "marks": 6,
+      "prompt": "Draw a qualitative screen pattern of bright and dark fringes for monochromatic light passing through a single narrow slit. Label the central bright maximum and the weaker side maxima on both sides. On a second screen-pattern sketch show what changes when the slit width is reduced at fixed wavelength. Explain the change and state how an increased wavelength affects the central maximum. Do not plot an intensity-versus-angle graph. [6 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_waves_polarisation_stationary_practice_v279.json",
+      "id": "task1_v279_phy_waves_q04",
+      "specRef": "3.3.1.3",
+      "marks": 7,
+      "prompt": "A string has vibrating length L=0.800 m and mass per unit length μ=0.640 g m⁻¹. (a) Convert μ to SI units. (b) Calculate the first-harmonic frequency at tension T=16.0 N using f=(1/2L)√(T/μ). (c) Explain why f² against T is a straight line and calculate the theoretical gradient. (d) State the factor by which f changes if T rises from 16.0 N to 36.0 N. [7 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_waves_polarisation_stationary_practice_v279.json",
+      "id": "task1_v279_phy_waves_q05",
+      "specRef": "3.3.1.3",
+      "marks": 7,
+      "prompt": "Two coherent sinusoidal waves, each of amplitude A, frequency f and wavelength λ, travel along a string in opposite directions. At t=0 their displacements coincide. Sketch their individual displacements and resultant at t=0, then show their individual displacements and resultant after one-quarter period. Indicate node/antinode positions and explain how stationary waves arise. The diagrams require manual marking. [7 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_refraction_fibres_practice_v275.json",
+      "id": "task1_v275_phy_fibre_q01",
+      "specRef": "3.3.2.3",
+      "marks": 6,
+      "prompt": "A step-index optical fibre has core refractive index 1.50 and cladding refractive index 1.47. A ray inside the core reaches the core–cladding boundary at an angle of incidence of 80.0° to the normal. Calculate the critical angle and decide whether total internal reflection occurs. Explain TWO separate purposes of cladding. [6 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_refraction_fibres_practice_v275.json",
+      "id": "task1_v275_phy_fibre_q03",
+      "specRef": "3.3.2.3",
+      "marks": 7,
+      "prompt": "A short light pulse travels 1.20 km through a fibre core. At a blue wavelength the core index is 1.467 and at a red wavelength it is 1.459. Treat both path lengths as 1.20 km. Use c=3.00×10⁸ m s⁻¹. Calculate the propagation time for each colour and their arrival-time difference. State which arrives first and explain the effect on digital information pulses. [7 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_refraction_fibres_practice_v275.json",
+      "id": "task1_v275_phy_fibre_q05",
+      "specRef": "3.3.2.3",
+      "marks": 6,
+      "prompt": "Draw a labelled ray diagram showing a light ray inside a step-index fibre core striking the boundary with the cladding at an angle of incidence of 82°. The core index is 1.51 and the cladding index is 1.48. Calculate the critical angle and show the ray's correct path, the normal, and its direction after the boundary. The sketch must be manually reviewed; a written description alone cannot earn the drawing marks. [6 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "physics_waves_interference_application_v226.json",
+      "id": "task1_v226_phy_01",
+      "specRef": "3.3.2.2",
+      "marks": 10,
+      "prompt": "A plane transmission grating has 600 lines per mm. Monochromatic light of wavelength 500 nm is incident normally. (a) Determine the slit spacing, the angle of the second-order maximum, and the greatest possible whole order. (b) Explain how changing to longer-wavelength light affects the angle of a given non-zero grating order. (c) For a separate single slit, explain how narrowing the slit or increasing the wavelength affects the angular width of the central maximum. (d) Two in-phase coherent sound sources produce loud and quiet regions. State what makes them coherent and explain the path-difference conditions for a loud and a quiet region. [10 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "science_waves_energetics_v198.json",
+      "id": "task1_v198_phy_01",
+      "specRef": "3.3.1.1",
+      "marks": 7,
+      "prompt": "A sinusoidal progressive wave moves in the positive x-direction at 60.0 m s⁻¹ and has frequency 125 Hz. At the same instant, two points 0.090 m apart on the wave have different phases. (a) Calculate the period and wavelength. (b) Find the fraction of a cycle and phase difference in degrees and radians between the two points. (c) Find the equivalent time delay and state which point lags, if the point further along +x is the second point. [7 marks]",
+      "requiresWorking": true
+    },
+    {
+      "path": "science_waves_energetics_v198.json",
+      "id": "task1_v198_phy_02",
+      "specRef": "3.3.2.1",
+      "marks": 7,
+      "prompt": "Two coherent loudspeakers emit sound of frequency 680 Hz in air where the sound speed is 340 m s⁻¹. At observation point A, the sound has travelled distances 4.00 m and 4.75 m from the speakers. The waves were emitted in phase. At observation point B, the distances are 4.00 m and 5.00 m. (a) Find the wavelength and the path difference at A in wavelengths. (b) Predict constructive or destructive interference at A and at B. (c) Explain the significance of coherence and why complete silence at A is not guaranteed. [7 marks]",
+      "requiresWorking": true
+    }
+  ],
+  "remainingGates": [
+    {
+      "specRef": "3.3.1.1",
+      "skill": "Unfamiliar progressive-wave graph snapshots, phase from displacement graphs and timing analysis",
+      "status": "additional_manual_application_review_pending"
+    },
+    {
+      "specRef": "3.3.1.2",
+      "skill": "Draw and interpret transverse/longitudinal displacement and polarisation diagrams; check aerial orientation",
+      "status": "student_diagram_and_reasoning_review_pending"
+    },
+    {
+      "specRef": "3.3.1.3",
+      "skill": "Required Practical 1 full string setup, frequency-versus-length/tension/mass-per-length analysis, drawn stationary wave snapshots",
+      "status": "full_practical_method_and_student_sketch_review_pending"
+    },
+    {
+      "specRef": "3.3.2.1",
+      "skill": "Required Practical 2 Young double-slit apparatus and interference data, grating practical, fringes and uncertainties",
+      "status": "full_practical_setup_and_graph_review_pending"
+    },
+    {
+      "specRef": "3.3.2.2",
+      "skill": "Actual qualitative diffraction diagrams, grating setup and AQA derivation/application",
+      "status": "independent_qualitative_diagram_review_pending"
+    },
+    {
+      "specRef": "3.3.2.3",
+      "skill": "Step-index optical fibre ray diagrams, pulse broadening/material/modal dispersion from unfamiliar data",
+      "status": "independent_ray_diagram_and_numerical_reasoning_review_pending"
+    },
+    {
+      "specRef": "3.3.2.1",
+      "skill": "AQA historical development of understanding electromagnetic radiation: exact short-card and exam-practice coverage",
+      "status": "specific_claim_not_independently_mapped"
+    }
+  ],
+  "specBoundaries": [
+    "Malus's law is not examined; do not promote it into school-mock revision.",
+    "AQA uses first and third harmonic wording; the terms fundamental/overtone are not used in exam questions.",
+    "Transmission diffraction grating spectrometer use is not tested.",
+    "Optical fibre questions use step-index fibres only; avoid unexamined fibre models."
+  ],
+  "completion": {
+    "allSixWavesSubsectionsHaveSampledRecallEvidence": true,
+    "allLeftColumnAssessableStatementsIndependentlySignedOff": false,
+    "allUnseenTypedAnswersVerified": false,
+    "allDiagramsAndRequiredPracticalMethodsIndependentlyGraded": false,
+    "task1Complete": false
+  }
+}

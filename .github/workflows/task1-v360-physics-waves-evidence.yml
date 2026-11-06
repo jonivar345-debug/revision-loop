@@ -1,0 +1,17 @@
+name: Task 1 v360 AQA first-mock Physics Waves six-section evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v360-waves-coverage-and-open-gates.json'
+      - 'tests/task1-v360-waves-coverage-and-open-gates.cjs'
+      - '.github/workflows/task1-v360-physics-waves-evidence.yml'
+  workflow_dispatch:
+jobs:
+  waves-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate selected AQA Waves source and mock scope
+        run: node tests/task1-v360-waves-coverage-and-open-gates.cjs
+      - name: Preserve earlier Waves, diffraction and fibre regression
+        run: node tests/task1-v279-physics-waves-selected-crosswalk.cjs && node tests/task1-v275-physics-refraction-fibres.cjs
