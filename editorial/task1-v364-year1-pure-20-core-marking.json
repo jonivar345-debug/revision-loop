@@ -1,0 +1,302 @@
+{
+  "version": "v364",
+  "date": "2026-11-06",
+  "scope": "20 existing short, original and explicitly first-school-mock-eligible AQA Year 1 Pure Mathematics cards: proofs, vectors, graph transformations, rational function restrictions, inequalities, tangent normals, trigonometry, signed integration and total positive area.",
+  "purpose": "Retain each original card and progress ID; check 20 new accepted paraphrases and 40 specific wrong concepts through production answer marker, including 29 existing accepted alternatives.",
+  "counts": {
+    "originalCoreIdCount": 3345,
+    "cards": 20,
+    "existingAcceptedVariants": 29,
+    "newAccepted": 20,
+    "newRejected": 40
+  },
+  "safeguards": [
+    "Exact ID, original subject/stage, active true, mock eligibility, unchanged original front/back guards.",
+    "The first school mock remains Year 1 Pure only: excluded inverse/composite Year 2 functions and Statistics/Mechanics remain out of scope.",
+    "Retain existing correct variants; do not overwrite originals or modify saved progress or cloud sync.",
+    "Neither application proofs nor drawn vectors are replaced by these short-recall marking tests.",
+    "No multi-mark exam questions disguised as flashcards."
+  ],
+  "rows": [
+    {
+      "id": "math_proof_exhaust",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What is proof by exhaustion?",
+      "originalBack": "Check every possible case in a finite set of possibilities.",
+      "accept": [
+        "Demonstrate the statement in every case in a finite, exhaustive list."
+      ],
+      "reject": [
+        "Proving one numerical example establishes a claim for every integer.",
+        "Assume the opposite is true and derive a contradiction instead of checking each case."
+      ]
+    },
+    {
+      "id": "task1_v171_001",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What does proof by deduction involve?",
+      "originalBack": "Logical steps from stated assumptions to a justified conclusion.",
+      "accept": [
+        "Use a sequence of justified logical deductions from assumptions to the claimed result."
+      ],
+      "reject": [
+        "Check only two numerical examples and assume the conclusion is universally true.",
+        "State the conclusion without connecting it logically to the assumptions."
+      ]
+    },
+    {
+      "id": "task1_v171_005",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "After using tan⁻¹(y/x) for a vector's angle, what should you check?",
+      "originalBack": "The quadrant, using the signs of both components.",
+      "accept": [
+        "Use the signs of both coordinates to choose the correct quadrant for the direction angle."
+      ],
+      "reject": [
+        "Use tan inverse y over x without checking which quadrant the vector lies in.",
+        "Use the vector magnitude alone to determine the direction angle."
+      ]
+    },
+    {
+      "id": "maths_transform_003",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "For a > 0, what is the horizontal scale factor of y = f(ax)?",
+      "originalBack": "1/a (x-coordinates are divided by a).",
+      "accept": [
+        "The horizontal scale factor is one over a, so every x-coordinate is divided by a."
+      ],
+      "reject": [
+        "It is a horizontal stretch by a, so each x-coordinate is multiplied by a.",
+        "It is a vertical stretch that multiplies y-coordinates by a."
+      ]
+    },
+    {
+      "id": "task1_v162_001",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "For a>1, what does y = af(x) do to y = f(x)?",
+      "originalBack": "A vertical stretch by scale factor a.",
+      "accept": [
+        "A vertical stretch by scale factor a: multiply each y-coordinate by a."
+      ],
+      "reject": [
+        "The x-coordinates are multiplied by a, producing a horizontal stretch.",
+        "The graph is translated a units upwards rather than stretched."
+      ]
+    },
+    {
+      "id": "task1_maths_004",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What does y = f(−x) do to the graph?",
+      "originalBack": "Reflects it in the y-axis.",
+      "accept": [
+        "Mirror the graph in the vertical y-axis by replacing x with negative x."
+      ],
+      "reject": [
+        "Reflect the graph in the horizontal x-axis, changing the sign of the outputs.",
+        "Translate the graph left without reflecting it."
+      ]
+    },
+    {
+      "id": "math_modulus",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What does y=|f(x)| do to a graph?",
+      "originalBack": "Reflects any part below the x-axis in the x-axis; parts above stay unchanged.",
+      "accept": [
+        "Reflect only negative output portions above the x-axis and leave positive portions unchanged."
+      ],
+      "reject": [
+        "Reflect in the y-axis instead of the x-axis.",
+        "Reflect positive and negative portions across the x-axis, rather than keeping positive ones unchanged."
+      ]
+    },
+    {
+      "id": "task1_v162_011",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What happens to an inequality sign when multiplying by a negative number?",
+      "originalBack": "Reverse the inequality sign.",
+      "accept": [
+        "Multiplying or dividing both sides by a negative reverses the inequality direction."
+      ],
+      "reject": [
+        "Multiplying by a negative leaves the inequality sign unchanged.",
+        "Multiplying by any positive number always reverses the inequality."
+      ]
+    },
+    {
+      "id": "task1_v162_010",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "For an upward-opening quadratic with two distinct roots, where is f(x)>0?",
+      "originalBack": "Outside the roots.",
+      "accept": [
+        "For an upward parabola it is positive to the left of the smaller root and to the right of the larger root."
+      ],
+      "reject": [
+        "For an upward parabola the function is positive only between its two real roots.",
+        "The only positive function values occur exactly at the two roots."
+      ]
+    },
+    {
+      "id": "task1_v162_012",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What are the asymptotes of y = k/x when k≠0?",
+      "originalBack": "x = 0 and y = 0.",
+      "accept": [
+        "The coordinate axes are asymptotes: x equals zero and y equals zero."
+      ],
+      "reject": [
+        "Both asymptotes are x equals k and y equals k.",
+        "It has a vertical asymptote at zero but no horizontal asymptote."
+      ]
+    },
+    {
+      "id": "v33_card_maths_algebra_85",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "When cancelling a common factor from an algebraic fraction, what restriction must be retained?",
+      "originalBack": "Any input that made the original denominator zero remains excluded.",
+      "accept": [
+        "Keep excluding inputs that zero the original denominator, even when a factor cancels."
+      ],
+      "reject": [
+        "After cancelling a factor, any original zero denominator value becomes permitted.",
+        "Exclude every zero of the original numerator even if the denominator is nonzero."
+      ]
+    },
+    {
+      "id": "v33_card_maths_integration_81",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What does a definite integral of f(x) below the x-axis contribute?",
+      "originalBack": "Negative signed area, not automatically positive physical area.",
+      "accept": [
+        "The region below the horizontal axis contributes a negative value to the definite integral."
+      ],
+      "reject": [
+        "Every area below the x axis automatically contributes a positive integral value.",
+        "Regions below the axis always contribute zero to the integral."
+      ]
+    },
+    {
+      "id": "task1_v171_010",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "For total area where a graph crosses the x-axis, what is needed?",
+      "originalBack": "Split at the roots and add the positive areas.",
+      "accept": [
+        "Split at all roots in the interval, integrate each piece, then add the positive area magnitudes."
+      ],
+      "reject": [
+        "A single signed integral always gives total positive area even when regions cancel.",
+        "Subtract the size of every region lying below the x-axis to find total positive area."
+      ]
+    },
+    {
+      "id": "math_vector_mag",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "Magnitude of vector (a,b)?",
+      "originalBack": "√(a²+b²).",
+      "accept": [
+        "Take the square root of the sum of squares of its two components."
+      ],
+      "reject": [
+        "The magnitude equals a squared plus b squared without taking a square root.",
+        "The magnitude always equals the absolute value of a plus b."
+      ]
+    },
+    {
+      "id": "task1_v162_023",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "How do position vectors give the vector from A to B?",
+      "originalBack": "AB = OB − OA (position vectors).",
+      "accept": [
+        "Subtract the position vector of A from the position vector of B to get AB."
+      ],
+      "reject": [
+        "Subtract OB from OA to calculate AB.",
+        "Add OA and OB together to obtain the vector AB."
+      ]
+    },
+    {
+      "id": "task1_v171_004",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What is k times the vector (a,b)?",
+      "originalBack": "(ka, kb).",
+      "accept": [
+        "Multiply the first and second components of the vector by k."
+      ],
+      "reject": [
+        "Multiply only the first component by k and leave the second unchanged.",
+        "Add k to both components rather than multiplying them."
+      ]
+    },
+    {
+      "id": "task1_maths_011",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What is a counterexample?",
+      "originalBack": "One example showing a universal claim is false.",
+      "accept": [
+        "One concrete case for which a supposed universal mathematical statement is false."
+      ],
+      "reject": [
+        "One matching example that agrees with the claim proves it is universal.",
+        "To provide a counterexample, check every case in the finite domain."
+      ]
+    },
+    {
+      "id": "task1_v162_021",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "If the tangent gradient is m≠0, what is the normal gradient?",
+      "originalBack": "−1/m.",
+      "accept": [
+        "Use minus one divided by m, the negative reciprocal of the tangent gradient."
+      ],
+      "reject": [
+        "The normal has the same gradient m as the tangent.",
+        "The normal has gradient one divided by m, with no negative sign."
+      ]
+    },
+    {
+      "id": "task1_v171_007",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "At which angles in degrees is tan θ undefined?",
+      "originalBack": "90° + 180°n, for any integer n.",
+      "accept": [
+        "Tan is undefined at ninety degrees plus any integer multiple of one hundred and eighty degrees."
+      ],
+      "reject": [
+        "Tan is undefined at every multiple of one hundred and eighty degrees.",
+        "Tan is undefined at zero degrees and one hundred and eighty degrees."
+      ]
+    },
+    {
+      "id": "task1_v171_003",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "How do you add 2D vectors (a,b) and (c,d)?",
+      "originalBack": "(a+c, b+d).",
+      "accept": [
+        "Add matching coordinates componentwise to give a plus c and b plus d."
+      ],
+      "reject": [
+        "Multiply the components pairwise to obtain ac and bd.",
+        "Subtract components to obtain a minus c and b minus d."
+      ]
+    }
+  ]
+}
