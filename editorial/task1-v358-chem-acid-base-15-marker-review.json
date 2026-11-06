@@ -1,0 +1,232 @@
+{
+  "version": "v358",
+  "date": "2026-11-06",
+  "scope": "AQA Chemistry 7405 3.1.12.1–3.1.12.4 within taught school-mock scope: strong/weak acids, pH, Kw, Ka and pKa; buffers and indicator/pH-curve work deliberately not audited or added.",
+  "source": "Original 3,345-card core deck, not an additional set of questions",
+  "purpose": "Add carefully reviewed accepted paraphrases and scientifically wrong-answer probes to 15 existing short Chemistry A2 mock cards; preserve all original accepted alternatives and reject examples.",
+  "counts": {
+    "originalCoreIds": 3345,
+    "originalCardsReviewed": 15,
+    "existingAcceptedAlternatives": 35,
+    "existingWrongProbes": 1,
+    "newAccepted": 15,
+    "newWrongProbes": 30
+  },
+  "limits": [
+    "This improves the original 15 answer markers, not every possible valid user response.",
+    "These do not certify the whole AQA Chemistry specification, lab-practical performance or exam-calculation working.",
+    "No buffers, Year 2 untaught material, duplicate flashcards, new exam questions, model answer edits or progress migrations."
+  ],
+  "rows": [
+    {
+      "id": "chem_weak_acid_001",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "If weak acid HA dissociates only slightly, what is [HA] approximately?",
+      "originalBack": "[HA] ≈ its initial concentration, c.",
+      "accept": [
+        "The equilibrium concentration of HA stays close to its starting concentration because dissociation is small."
+      ],
+      "reject": [
+        "The remaining HA concentration is always zero for a weak acid.",
+        "The undissociated acid concentration is always equal to the hydrogen ion concentration."
+      ]
+    },
+    {
+      "id": "v33_card_chemistry_weak_acids_54",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is the Ka expression for HA ⇌ H⁺ + A⁻?",
+      "originalBack": "Ka=[H⁺][A⁻]/[HA].",
+      "accept": [
+        "The acid dissociation constant is the product of hydrogen and conjugate-base concentrations divided by undissociated HA."
+      ],
+      "reject": [
+        "Ka is [HA] divided by [H+] times [A-].",
+        "Ka for HA is [H+][HA]/[A-]."
+      ]
+    },
+    {
+      "id": "v33_card_chemistry_acids_and_bases_55",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "How is pH defined in terms of hydrogen ion concentration?",
+      "originalBack": "pH=−log₁₀[H⁺], using concentration in mol dm⁻³.",
+      "accept": [
+        "Take minus the base-ten logarithm of the hydrogen ion concentration in mol per cubic decimetre."
+      ],
+      "reject": [
+        "pH equals log10 of hydrogen ion concentration without a minus sign.",
+        "pH is minus log10 of hydroxide ion concentration."
+      ]
+    },
+    {
+      "id": "v33_card_chemistry_kw_56",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "Why does pure water's neutral pH change with temperature?",
+      "originalBack": "Kw changes with temperature; neutrality still requires [H⁺]=[OH⁻], not a fixed pH of 7.",
+      "accept": [
+        "The water ionic product varies with temperature, so neutral solutions still have equal hydrogen and hydroxide concentrations but not always pH seven."
+      ],
+      "reject": [
+        "Neutral water must have pH exactly seven at every temperature.",
+        "If neutral water has pH below seven at another temperature it must contain excess hydrogen ions over hydroxide ions."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_165",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is a Brønsted–Lowry base?",
+      "originalBack": "A proton acceptor.",
+      "accept": [
+        "A Brønsted-Lowry base accepts H+ ions, meaning it is a proton acceptor."
+      ],
+      "reject": [
+        "A Brønsted-Lowry base always donates a proton.",
+        "A base is defined as an electron-pair acceptor rather than a proton acceptor."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_166",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What does complete dissociation of a strong acid mean?",
+      "originalBack": "Essentially all acid molecules donate protons in aqueous solution.",
+      "accept": [
+        "A strong acid ionises essentially completely in aqueous solution."
+      ],
+      "reject": [
+        "Only a small proportion of molecules from a strong acid dissociate.",
+        "A strong acid is defined only by being highly concentrated, regardless of dissociation."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_167",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "Why does weak acid pH require an equilibrium calculation?",
+      "originalBack": "The acid only partially ionises.",
+      "accept": [
+        "Because weak acids only partially dissociate, hydrogen ion concentration must be obtained from their equilibrium."
+      ],
+      "reject": [
+        "All weak acids dissociate completely so their initial concentration always equals [H+].",
+        "Equilibrium calculations are unnecessary because weak acids never form H+."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_168",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What approximation is often used for a weak monoprotic acid?",
+      "originalBack": "[HA] at equilibrium is approximately its initial concentration.",
+      "accept": [
+        "When dissociation is small, the remaining HA concentration is close to its starting concentration c."
+      ],
+      "reject": [
+        "Approximate [HA] as zero because all the acid has ionised.",
+        "For a weak acid at equilibrium, [HA] must be equal to the concentration of its conjugate base."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_169",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "How does dilution affect the fraction ionised for a weak acid?",
+      "originalBack": "It generally increases.",
+      "accept": [
+        "The proportion of weak acid molecules that have ionised generally rises as a weak acid is diluted."
+      ],
+      "reject": [
+        "Diluting a weak acid always reduces the fraction of molecules dissociated.",
+        "Dilution converts a weak acid into a fully dissociated strong acid."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_chem_171",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is the pH of pure water at 298 K?",
+      "originalBack": "7.",
+      "accept": [
+        "At 298 kelvin pure water has pH 7 because [H+] and [OH-] are both 10^-7 mol per dm cubed."
+      ],
+      "reject": [
+        "Pure water always has a pH of seven at any temperature.",
+        "At 298 K pure water has pH 14."
+      ]
+    },
+    {
+      "id": "task1_v125_142",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "How is pH linked to acid concentration if it is a strong monoprotic acid?",
+      "originalBack": "pH = −log₁₀ c, when fully dissociated.",
+      "accept": [
+        "For a completely ionised strong monoprotic acid, hydrogen ion concentration is c and pH equals minus log10 c."
+      ],
+      "reject": [
+        "For a strong monoprotic acid pH is plus log10 its concentration.",
+        "Strong monoprotic acids always have pH 7 whatever their concentration."
+      ]
+    },
+    {
+      "id": "task1_v125_143",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "Why is a weak acid's [H⁺] less than its initial concentration?",
+      "originalBack": "It only partially dissociates.",
+      "accept": [
+        "The acid has not fully ionised, so [H+] is smaller than the initial weak acid concentration."
+      ],
+      "reject": [
+        "Weak acid molecules ionise completely so [H+] always equals the starting concentration.",
+        "A weak acid makes no hydrogen ions, so [H+] is necessarily zero."
+      ]
+    },
+    {
+      "id": "task1_v125_145",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What is pKa when Ka = 1 × 10⁻⁵ mol dm⁻³?",
+      "originalBack": "5.",
+      "accept": [
+        "Five; the negative common logarithm of ten to the minus five is five."
+      ],
+      "reject": [
+        "pKa is negative five for Ka equal to 10^-5.",
+        "pKa is ten to the minus five for Ka equal to 10^-5."
+      ]
+    },
+    {
+      "id": "task1_v125_146",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What happens to pH when [H⁺] rises tenfold?",
+      "originalBack": "It decreases by one.",
+      "accept": [
+        "Ten times more hydrogen ions makes pH one unit lower."
+      ],
+      "reject": [
+        "A tenfold rise in hydrogen ion concentration raises the pH by one.",
+        "Increasing [H+] tenfold leaves pH unchanged."
+      ]
+    },
+    {
+      "id": "task1_v130_102",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "originalFront": "What does Ka quantify for a weak acid?",
+      "originalBack": "Its acid-dissociation equilibrium constant.",
+      "accept": [
+        "Ka measures the acid dissociation equilibrium constant, indicating the extent to which a weak acid ionises."
+      ],
+      "reject": [
+        "Ka is the rate constant for the forward acid dissociation reaction.",
+        "Ka is defined as the ionic product of water [H+][OH-]."
+      ]
+    }
+  ]
+}

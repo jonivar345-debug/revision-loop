@@ -1,0 +1,21 @@
+name: Task 1 v358 Chemistry taught acids Ka Kw pH recall precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v358-chem-acid-base-15-marker-review.json'
+      - 'tests/task1-v358-chem-acid-base-15-marker-review.cjs'
+      - '.github/workflows/task1-v358-chem-acid-base-15-marker-review.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-acid-base-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check
+        run: node --check app.js && node --check tests/task1-v358-chem-acid-base-15-marker-review.cjs
+      - name: Test actual existing Chemistry answer checker
+        run: node tests/task1-v358-chem-acid-base-15-marker-review.cjs
+      - name: Check previous Maths and science mock marker regressions
+        run: node tests/task1-v357-science-mock-14-markers.cjs && node tests/task1-v356-year1-functions-marking-probes.cjs && node tests/task1-v355-practical-calorimetry-marker-review.cjs
