@@ -1,0 +1,116 @@
+{
+  "version": "v356",
+  "date": "2026-11-06",
+  "focus": "Seven previously unreviewed known-wrong examples on already-loaded, mock-eligible original AQA AS Maths functions flashcards, particularly composite/inverse mapping and f(x) inverse graph reflections.",
+  "counts": {
+    "originalCoreCount": 3345,
+    "cards": 7,
+    "newAcceptedParaphrases": 7,
+    "newKnownWrongVariants": 14
+  },
+  "effect": "No new flashcards, no new Maths Year 2 mock content, original core fronts/backs/accept alternatives/saved IDs unchanged. Add 1 correct and 2 wrong examples per original ID with strict guard and real marking regression.",
+  "limits": [
+    "Even explicit known-wrong probes do not certify every unseen response.",
+    "Full Year 1 Pure Maths specification completeness remains separately under audit."
+  ],
+  "rows": [
+    {
+      "id": "math_inverse_condition",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "When does a function have an inverse over its domain?",
+      "originalBack": "When it is one-to-one.",
+      "accept": [
+        "A function has an inverse on its domain when it is injective, so no two different inputs have the same output."
+      ],
+      "reject": [
+        "Every many-to-one function has an inverse on its unchanged domain.",
+        "A function with two different inputs mapping to one output is always invertible."
+      ]
+    },
+    {
+      "id": "v33_card_maths_functions_76",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What must hold for the composite function f(g(x)) to be defined?",
+      "originalBack": "The output of g must lie in the domain of f.",
+      "accept": [
+        "For f after g, all outputs of g being used must be acceptable inputs to f."
+      ],
+      "reject": [
+        "Only g needs to be defined: f need never accept the values that g produces.",
+        "For f(g(x)), the result of g must always be outside the domain of f."
+      ]
+    },
+    {
+      "id": "v33_card_maths_functions_77",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What geometric transformation maps y=f(x) to y=f⁻¹(x)?",
+      "originalBack": "Reflection in the line y=x.",
+      "accept": [
+        "The graph of the inverse function is obtained by reflecting the original in y = x."
+      ],
+      "reject": [
+        "Reflect the graph in the x-axis to obtain f inverse.",
+        "Reflect the graph in the y-axis to obtain f inverse."
+      ]
+    },
+    {
+      "id": "task1_v130_156",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What makes a function one-to-one?",
+      "originalBack": "Different inputs give different outputs.",
+      "accept": [
+        "A one-to-one mapping assigns different output values to any two different input values."
+      ],
+      "reject": [
+        "Two distinct inputs may have the same output and the function will still be one-to-one.",
+        "A one-to-one function must send every input to the same single output."
+      ]
+    },
+    {
+      "id": "task1_v130_157",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "What must be true before a function has an inverse over its domain?",
+      "originalBack": "It is one-to-one.",
+      "accept": [
+        "The function must be injective, with no repeated output for different inputs."
+      ],
+      "reject": [
+        "It must be many-to-one so two inputs can give the same output.",
+        "An inverse exists over the same domain even if the function is not one-to-one."
+      ]
+    },
+    {
+      "id": "task1_v136_063",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "How is the domain of f⁻¹ related to f?",
+      "originalBack": "It is the range of f.",
+      "accept": [
+        "The inputs allowed for f inverse are exactly the outputs in the range of f."
+      ],
+      "reject": [
+        "The domain of the inverse is made of values that the original function never outputs.",
+        "The inverse always has every real number as its domain, regardless of f's range."
+      ]
+    },
+    {
+      "id": "task1_v136_064",
+      "subject": "Maths",
+      "stage": "AS",
+      "originalFront": "How is the range of f⁻¹ related to f?",
+      "originalBack": "It is the domain of f.",
+      "accept": [
+        "The possible outputs of the inverse are the original function's domain values."
+      ],
+      "reject": [
+        "The inverse range always consists of inputs that are outside the original function's domain.",
+        "The inverse always has all real numbers as its range, regardless of f's domain."
+      ]
+    }
+  ]
+}
