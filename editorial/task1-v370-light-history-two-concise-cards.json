@@ -1,0 +1,52 @@
+{
+  "version": "v370",
+  "date": "2026-11-06",
+  "subject": "Physics",
+  "scope": "AQA first-school-mock AS Waves 3.3.2.1: editorial follow-up to v360 unmatched historical-development evidence statement.",
+  "specification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+  "previousAudit": "editorial/task1-v360-waves-coverage-and-open-gates.json",
+  "issue": "AQA 3.3.2.1 expects an appreciation that understanding of electromagnetic radiation has changed over time. Earlier v360 focused audit did not directly map this claim.",
+  "existingRelatedEvidence": [
+    {
+      "path": "physics_waves_reasoning_recall_v226.json",
+      "id": "task1_v226_phy_waves_03",
+      "front": "What do alternating strong and weak microwave signals at different positions demonstrate?",
+      "back": "Constructive and destructive interference from superposition of electromagnetic waves."
+    },
+    {
+      "path": "physics_waves_crosswalk_recall_v229.json",
+      "id": "task1_v229_phy_waves_08",
+      "front": "Why does illuminating two slits with one wavefront help produce a stable interference pattern?",
+      "back": "The two slits act as coherent sources because their waves maintain a constant phase difference."
+    }
+  ],
+  "addition": [
+    {
+      "id": "task1_v370_phy_history_01",
+      "purpose": "Young's bright/dark interference pattern supports wave model of light"
+    },
+    {
+      "id": "task1_v370_phy_history_02",
+      "purpose": "Photoelectric effect challenged a purely classical wave model; photon explanation"
+    }
+  ],
+  "counts": {
+    "addedConciseMockCards": 2,
+    "acceptedAlternativesPerCard": 3,
+    "wrongMisconceptionsPerCard": 3,
+    "originalCoreIdsUnchanged": 3345
+  },
+  "completion": {
+    "historicalEvidenceHasNewDirectShortRecall": true,
+    "allHistoricalDetailIndependentlyMapped": false,
+    "diagramsAndLongReasoningIndependentlyMarked": false,
+    "allAqaWavesStatementsSignedOff": false,
+    "wholeThreeSubjectMockComplete": false
+  },
+  "editorialLimits": [
+    "The AQA AS Waves history statement is broad: two concise links supply recall, not a complete chronological history.",
+    "Avoid requiring Turning Points optional topic detail such as Maxwell's formula, Fizeau, or historical names in the first mock.",
+    "Existing wave, interference, photoelectric and other core cards may provide related evidence; this audit does not certify a whole-core semantic uniqueness scan.",
+    "No duplicate original card IDs, no exam questions disguised as flashcards, and no change to existing XP, sync, progress, app's mark algorithm or historic 56 supplement indices."
+  ]
+}
