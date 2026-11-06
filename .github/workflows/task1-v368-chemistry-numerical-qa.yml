@@ -1,0 +1,18 @@
+name: Task 1 v368 independent Chemistry rates and Kp numerical QA
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v368-chemistry-five-numerical-qa.json'
+      - 'tests/task1-v368-chemistry-five-numerical-qa.cjs'
+      - '.github/workflows/task1-v368-chemistry-numerical-qa.yml'
+      - 'chemistry_rates_rp7_kp_v210.json'
+  workflow_dispatch:
+jobs:
+  chemistry-calculation-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently check 28 results and 42 original mark points
+        run: node tests/task1-v368-chemistry-five-numerical-qa.cjs
+      - name: Verify earlier Chemistry RP7, Arrhenius and Kp evidence remains consistent
+        run: node tests/task1-v363-rates-kp-five-application-reconciliation.cjs
