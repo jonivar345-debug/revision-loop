@@ -32,4 +32,23 @@ for(const row of report.rows){
 assert.equal(ids.size,report.counts.uniqueEvidenceCards);
 assert.equal(report.counts.uniqueEvidenceCards,46);
 assert.equal(report.counts.manualApplicationRows,12);
+
+const workedBanks={'science_practical_data_v194.json':new Map(j('science_practical_data_v194.json').questions.map(q=>[q.id,q])), 'physics_graphs_circuits_v203.json':new Map(j('physics_graphs_circuits_v203.json').questions.map(q=>[q.id,q]))};
+let questionIds=new Set();
+for(const gate of report.gates){
+ assert.equal(gate.independentStudentWorkingReviewed,false);
+ assert.equal(gate.fullMethodOrDrawingSignoff,false);
+ assert(gate.evidenceLimitation.length>30);
+ for(const e of gate.representativeWorkedQuestionEvidence){
+  const q=workedBanks[e.path]?.get(e.id);
+  assert(q,'Linked exam practice does not load: '+e.id);
+  assert.equal(q.level,'AS');assert.equal(q.subject,'Physics');assert.equal(q.mock,true);
+  assert.equal(q.requiresWorking,true);
+  assert.equal(q.marks,e.marks);assert.equal(q.prompt,e.prompt);
+  assert(q.marks>=6);
+  questionIds.add(e.id);
+ }
+}
+assert.equal(report.counts.representativeExistingWorkedQuestions,5);
+assert.equal(questionIds.size,5);
 console.log('PASS v359: all six AQA Electricity subsections have '+report.rows.length+' selected exact-card evidence rows ('+ids.size+' distinct cards, '+reviewed+' links), with four unresolved manual/diagram gates.');
