@@ -1,0 +1,149 @@
+{
+  "version": "v363",
+  "date": "2026-11-06",
+  "scope": "Five unresolved original v332 AQA Chemistry 3.1.9 rate equations/RP7 and 3.1.10 Kp application rows, reconciled with actual loaded mock questions and generic core recall",
+  "sourceAudit": "editorial/task1-v332-measurements-rates-kp-crosswalk.json",
+  "officialSpec": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "method": "Exact-question ID, full original prompt, mark count, subject, mock flag, A2 level and working requirement, plus catalyst core card evidence. Reconciliation records practice availability, not assessment of student mastery.",
+  "counts": {
+    "originalPartialsRevisited": 5,
+    "uniqueExamQuestions": 4,
+    "questionLinks": 5,
+    "uniqueCoreCatalystRecallCards": 2,
+    "fullMethodsAndNewAnswersIndependentlySignedOff": 0,
+    "originalCoreIdsPreserved": 3345
+  },
+  "rows": [
+    {
+      "id": "C10",
+      "aqa": "3.1.9.1",
+      "originalSkill": "Know Arrhenius expression and logarithmic rearrangement",
+      "legacyStatus": "partial_application",
+      "existingCoreRecallIds": [
+        "chem_arr_eq"
+      ],
+      "foundExamPractice": [
+        {
+          "path": "chemistry_rates_rp7_kp_v210.json",
+          "id": "task1_v210_chem_04",
+          "marks": 8,
+          "prompt": "For a first-order reaction an Arrhenius plot of ln k on the vertical axis against 1/T (in K⁻¹) on the horizontal axis has gradient −9.00×10³ K and vertical intercept 25.0. Use R = 8.31 J mol⁻¹ K⁻¹ and ln k = −Ea/(RT) + ln A. (a) Calculate the activation energy in kJ mol⁻¹. (b) State the meaning of the intercept and calculate A with units. (c) Calculate k at 300 K. (d) Explain the direction of the effect of increasing temperature on k. [8 marks]"
+        }
+      ],
+      "generalRecall": [],
+      "evidenceStatus": "relevant_arrhenius_exam_practice_located_not_manually_marked",
+      "note": "The question explicitly tests ln k versus 1/T, gradient, intercept A, and k at 300 K. A standalone unfamiliar direct k=Ae^(−Ea/RT) prompt is not separately certified.",
+      "independentMarkingComplete": false
+    },
+    {
+      "id": "C14",
+      "aqa": "3.1.9.1",
+      "originalSkill": "Complete an unfamiliar direct Arrhenius k calculation from given values",
+      "legacyStatus": "partial_application",
+      "existingCoreRecallIds": [
+        "chem_arr_eq"
+      ],
+      "foundExamPractice": [
+        {
+          "path": "chemistry_rates_rp7_kp_v210.json",
+          "id": "task1_v210_chem_04",
+          "marks": 8,
+          "prompt": "For a first-order reaction an Arrhenius plot of ln k on the vertical axis against 1/T (in K⁻¹) on the horizontal axis has gradient −9.00×10³ K and vertical intercept 25.0. Use R = 8.31 J mol⁻¹ K⁻¹ and ln k = −Ea/(RT) + ln A. (a) Calculate the activation energy in kJ mol⁻¹. (b) State the meaning of the intercept and calculate A with units. (c) Calculate k at 300 K. (d) Explain the direction of the effect of increasing temperature on k. [8 marks]"
+        }
+      ],
+      "generalRecall": [],
+      "evidenceStatus": "relevant_numerical_arrhenius_exam_practice_located_not_manually_marked",
+      "note": "Calculating k from a given Arrhenius plot is present. Independent checking of actual student substitution, units, and direct exponential route remains open.",
+      "independentMarkingComplete": false
+    },
+    {
+      "id": "C22",
+      "aqa": "3.1.9.2",
+      "originalSkill": "Carry out both RP7 initial-rate and continuous-monitoring methods",
+      "legacyStatus": "partial_application",
+      "existingCoreRecallIds": [
+        "task1_v128_002",
+        "task1_v128_003",
+        "task1_v128_007"
+      ],
+      "foundExamPractice": [
+        {
+          "path": "chemistry_rates_rp7_kp_v210.json",
+          "id": "task1_v210_chem_01",
+          "marks": 9,
+          "prompt": "An unknown homogeneous reaction has these measured initial rates at the same temperature. Experiment 1: [A]=0.100 mol dm⁻³, [B]=0.200 mol dm⁻³, rate=2.00×10⁻⁴ mol dm⁻³ s⁻¹. Experiment 2: [A]=0.200, [B]=0.200, rate=8.00×10⁻⁴. Experiment 3: [A]=0.100, [B]=0.400, rate=4.00×10⁻⁴. Experiment 4: [A]=0.200, [B]=0.400, rate=1.60×10⁻³. (a) Deduce the individual and overall orders. (b) Write the rate equation. (c) Calculate k with units. (d) Predict the initial rate at [A]=0.300 and [B]=0.100 mol dm⁻³. [9 marks]"
+        },
+        {
+          "path": "chemistry_rates_rp7_kp_v210.json",
+          "id": "task1_v210_chem_02",
+          "marks": 8,
+          "prompt": "A continuous-monitoring dataset for a reactant A gives time t / s: 0, 20, 40, 60, 80 and [A] / mol dm⁻³: 0.140, 0.110, 0.090, 0.075, 0.064. A tangent to the smooth concentration–time curve at 40 s passes through (30 s, 0.099 mol dm⁻³) and (50 s, 0.081 mol dm⁻³). (a) Use the tangent to find the signed concentration gradient and the positive rate of disappearance at 40 s. (b) Calculate the average rate of disappearance from 0 to 80 s. (c) Explain which method determines an instantaneous rate. [8 marks]"
+        }
+      ],
+      "generalRecall": [],
+      "evidenceStatus": "both_analytical_rate_methods_present_full_rp7_methods_pending",
+      "note": "Initial-rate concentration data and continuous-monitoring gradients are both practised. Full experimental apparatus, choice of variables, uncertainty and true execution of RP7 remain unverified.",
+      "independentMarkingComplete": false
+    },
+    {
+      "id": "K07",
+      "aqa": "3.1.10",
+      "originalSkill": "Calculate complete numerical Kp from equilibrium mole/pressure data",
+      "legacyStatus": "partial_application",
+      "existingCoreRecallIds": [
+        "chem_kp_recap_20261024_total_pressure_unknown"
+      ],
+      "foundExamPractice": [
+        {
+          "path": "chemistry_rates_rp7_kp_v210.json",
+          "id": "task1_v210_chem_05",
+          "marks": 9,
+          "prompt": "For N₂O₄(g) ⇌ 2NO₂(g), 1.00 mol of N₂O₄ is placed in an otherwise empty closed vessel. At equilibrium, 40.0% of the initial N₂O₄ has dissociated. The total equilibrium pressure is 140 kPa. (a) Calculate each equilibrium amount and the total number of moles. (b) Calculate the two partial pressures. (c) Write the Kp expression and evaluate Kp with units. (d) The vessel is compressed at constant temperature, increasing the total pressure. State the effect on the equilibrium position and on Kp. [9 marks]"
+        }
+      ],
+      "generalRecall": [],
+      "evidenceStatus": "full_multistep_kp_question_located_not_manually_marked",
+      "note": "Existing nine-mark practice requires equilibrium mole amounts, total moles, partial pressures, Kp expression and evaluated Kp with units. It is not evidence of independently marked performance.",
+      "independentMarkingComplete": false
+    },
+    {
+      "id": "K12",
+      "aqa": "3.1.10",
+      "originalSkill": "Catalysts affect equilibrium attainment but not Kp value",
+      "legacyStatus": "partial_application",
+      "existingCoreRecallIds": [
+        "chem_kp_temp"
+      ],
+      "foundExamPractice": [],
+      "generalRecall": [
+        {
+          "path": "deck.json",
+          "id": "v33_card_chemistry_equilibria_52",
+          "front": "Does a catalyst change the equilibrium constant or position of equilibrium?",
+          "back": "No. It accelerates forward and reverse reactions, so equilibrium is reached sooner without changing K."
+        },
+        {
+          "path": "deck.json",
+          "id": "task1_chem_053",
+          "front": "How does a catalyst affect the equilibrium position?",
+          "back": "It does not change it."
+        }
+      ],
+      "evidenceStatus": "generic_equilibrium_catalyst_recall_only_specific_kp_not_signed_off",
+      "note": "Exact core recall establishes no catalyst change to equilibrium constant/position. An independently verified Kp-specific catalyst explanation has not been separately signed off.",
+      "independentMarkingComplete": false
+    }
+  ],
+  "stillOpen": [
+    "Direct independent marking of unfamiliar standalone Arrhenius k exponential substitution and units.",
+    "RP7 actual practical apparatus, experimental procedures, control variables and uncertainty.",
+    "Worked student Kp equilibrium data, pressure calculations and precise units marking.",
+    "Kp-specific catalyst and forward/reverse rate explanation validation.",
+    "Whole mock AQA syllabus bullet-by-bullet audit."
+  ],
+  "limits": [
+    "Legacy v332 is preserved as a historical snapshot. This newer record never changes old findings retroactively.",
+    "Question availability does not mean student answers have been marked or all marking variants checked.",
+    "No additions or edits to flashcards, worked exam questions, app runtime, service worker, user progress or cloud sync."
+  ]
+}
