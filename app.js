@@ -21,6 +21,15 @@ function isV367ChemAlkaneTrendCard(c){
  Array.isArray(c.accept)&&c.accept.length===3&&Array.isArray(c.reject)&&c.reject.length===3&&
  c.front.length<=145&&c.back.length<=130);
 }
+// v370: two short first-mock Physics cards about historical wave/photon evidence.
+function isV370PhysicsHistoryCard(c){
+ return Boolean(c&&/^task1_v370_phy_history_0[12]$/.test(c.id||'')&&
+ c.subject==='Physics'&&c.stage==='AS'&&c.topic==='Waves'&&c.courseTopic==='Waves'&&
+ c.specRef==='3.3.2.1'&&c.mock===true&&c.taught===true&&c.scope==='mock'&&
+ c.active===true&&c.kind==='short'&&c.strictRecall===true&&
+ Array.isArray(c.accept)&&c.accept.length===3&&Array.isArray(c.reject)&&c.reject.length===3&&
+ typeof c.front==='string'&&typeof c.back==='string'&&c.front.length<=145&&c.back.length<=130);
+}
 function isV354ChemCrackingCard(c){
  return Boolean(c&&c.id==='task1_v354_chem_01'&&c.subject==='Chemistry'&&
    c.stage==='AS'&&c.topic==='Alkanes'&&c.courseTopic==='Alkanes'&&
@@ -34,6 +43,7 @@ function isV354ChemCrackingCard(c){
 const V348_MATHS_SHORT_RECALL_URL='./maths_first_mock_micro_recall_v348.json';
 const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json';
 const V367_CHEM_ALKANE_TREND_URL='./chemistry_alkane_trend_recall_v367.json';
+const V370_PHYSICS_HISTORY_URL='./physics_light_history_recall_v370.json';
 
 // Never alter question wording, marking rules, mock flags, or any progress IDs.
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
@@ -5307,6 +5317,16 @@ async function sync(manual=false){
  }catch{}
  for(const c of v367ChemBank.cards||[]){
   if(!isV367ChemAlkaneTrendCard(c)||cards.some(old=>old.id===c.id))continue;
+  cards.push(c);
+ }
+ // v370 addresses one Waves history evidence gap with only two short, separately guarded cards.
+ let v370HistoryBank={cards:[]};
+ try{
+  const response=await fetch(V370_PHYSICS_HISTORY_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v370HistoryBank=await response.json();
+ }catch{}
+ for(const c of v370HistoryBank.cards||[]){
+  if(!isV370PhysicsHistoryCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
  const knownFlashIds=new Set(cards.map(c=>c.id));
