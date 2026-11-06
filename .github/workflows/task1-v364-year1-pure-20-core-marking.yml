@@ -1,0 +1,21 @@
+name: Task 1 v364 AQA Maths Year 1 Pure original flashcard marker precision
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v364-year1-pure-20-core-marking.json'
+      - 'tests/task1-v364-year1-pure-20-core-marking.cjs'
+      - '.github/workflows/task1-v364-year1-pure-20-core-marking.yml'
+  workflow_dispatch:
+jobs:
+  maths-core-marking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check
+        run: node --check app.js && node --check tests/task1-v364-year1-pure-20-core-marking.cjs
+      - name: Test 20 original first-mock Maths cards using production marker
+        run: node tests/task1-v364-year1-pure-20-core-marking.cjs
+      - name: Existing Maths scope and marking regressions
+        run: node tests/task1-v361-maths-first-pure-practice-evidence.cjs && node tests/task1-v356-year1-functions-marking-probes.cjs && node tests/task1-v348-year1-pure-micro-recall.cjs
