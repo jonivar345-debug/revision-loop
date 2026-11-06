@@ -12,6 +12,15 @@ function isV348MathsFirstMockCard(c){
   Array.isArray(c.reject)&&c.front.length<=145&&c.back.length<=130);
 }
 // v354: only one separately loaded, spec-matched AQA AS Chemistry school-mock card.
+// v367: only one clearly targeted, short AS alkane boiling-trend card may be added.
+function isV367ChemAlkaneTrendCard(c){
+ return Boolean(c&&c.id==='task1_v367_chem_01'&&c.subject==='Chemistry'&&
+ c.stage==='AS'&&c.topic==='Alkanes'&&c.courseTopic==='Alkanes'&&
+ c.specRef==='3.3.2.1'&&c.mock===true&&c.taught===true&&c.scope==='mock'&&
+ c.active===true&&c.kind==='short'&&c.strictRecall===true&&
+ Array.isArray(c.accept)&&c.accept.length===3&&Array.isArray(c.reject)&&c.reject.length===3&&
+ c.front.length<=145&&c.back.length<=130);
+}
 function isV354ChemCrackingCard(c){
  return Boolean(c&&c.id==='task1_v354_chem_01'&&c.subject==='Chemistry'&&
    c.stage==='AS'&&c.topic==='Alkanes'&&c.courseTopic==='Alkanes'&&
@@ -24,6 +33,7 @@ function isV354ChemCrackingCard(c){
 // v287: exact-ID AQA AS subsection metadata for individually reviewed legacy cards.
 const V348_MATHS_SHORT_RECALL_URL='./maths_first_mock_micro_recall_v348.json';
 const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json';
+const V367_CHEM_ALKANE_TREND_URL='./chemistry_alkane_trend_recall_v367.json';
 
 // Never alter question wording, marking rules, mock flags, or any progress IDs.
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
@@ -5287,6 +5297,16 @@ async function sync(manual=false){
  }catch{}
  for(const c of v354ChemBank.cards||[]){
   if(!isV354ChemCrackingCard(c)||cards.some(old=>old.id===c.id))continue;
+  cards.push(c);
+ }
+ // v367 adds exactly one separately guarded, short AS alkane-trend prompt.
+ let v367ChemBank={cards:[]};
+ try{
+  const response=await fetch(V367_CHEM_ALKANE_TREND_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v367ChemBank=await response.json();
+ }catch{}
+ for(const c of v367ChemBank.cards||[]){
+  if(!isV367ChemAlkaneTrendCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
  const knownFlashIds=new Set(cards.map(c=>c.id));
