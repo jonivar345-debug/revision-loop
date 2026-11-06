@@ -1,0 +1,20 @@
+name: Task 1 v370 Physics historical nature of light short recall
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'physics_light_history_recall_v370.json'
+      - 'editorial/task1-v370-light-history-two-concise-cards.json'
+      - 'tests/task1-v370-light-history-recall.cjs'
+      - '.github/workflows/task1-v370-light-history-recall.yml'
+  workflow_dispatch:
+jobs:
+  history-recall-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test live Physics recall marker with historical evidence cards
+        run: node tests/task1-v370-light-history-recall.cjs
+      - name: Preserve Waves coverage and legacy Chemistry cards
+        run: node tests/task1-v360-waves-coverage-and-open-gates.cjs && node tests/task1-v367-chem-as-organic-eleven-gap-recheck.cjs
