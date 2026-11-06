@@ -9,7 +9,7 @@ on:
       - '.github/workflows/task1-v353-science-core-marker-review.yml'
   workflow_dispatch:
 jobs:
-  27-short-science-cards:
+  science-short-card-marking:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
