@@ -14,4 +14,4 @@ jobs:
       - name: Independently recheck original RP5/RP6/divider maths and mark points
         run: node tests/task1-v366-electricity-five-numerical-qa.cjs
       - name: Ensure previous Electricity question references remain stable
-        run: node tests/task1-v359-electricity-45-evidence-review.cjs && node tests/task1-v203-physics-graphs-circuits.cjs
+        run: node tests/task1-v359-electricity-45-evidence-review.cjs && node tests/task1-v203-physics-graph-circuit-application.cjs
