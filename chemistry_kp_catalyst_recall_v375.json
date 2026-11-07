@@ -1,0 +1,37 @@
+{
+  "version": "v375",
+  "createdAt": "2026-11-07",
+  "scope": "Exactly one original short AQA 7405 first-school-mock Chemistry 3.1.10 Kp-specific catalyst explanation; supplement only, not a full Kp coverage sign-off.",
+  "source": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "cards": [
+    {
+      "id": "task1_v375_chem_kp_catalyst_01",
+      "subject": "Chemistry",
+      "stage": "A2",
+      "topic": "Kp",
+      "courseTopic": "Year 2 Physical Chemistry",
+      "revisionTopic": "Kp",
+      "specRef": "3.1.10",
+      "mock": true,
+      "taught": true,
+      "scope": "mock",
+      "active": true,
+      "kind": "short",
+      "strictRecall": true,
+      "method": "cause-and-effect",
+      "priority": 3,
+      "front": "Why does adding a catalyst leave Kp unchanged at constant temperature?",
+      "back": "It speeds both forward and reverse reactions without changing the equilibrium position or Kp.",
+      "accept": [
+        "A catalyst increases the rates of both forward and reverse reactions equally, so equilibrium composition and Kp remain unchanged.",
+        "It only makes equilibrium reached faster, without shifting equilibrium or changing the equilibrium constant.",
+        "It affects how quickly equilibrium is attained, not the equilibrium position or Kp at fixed temperature."
+      ],
+      "reject": [
+        "The catalyst increases Kp by speeding up the forward reaction more than the reverse.",
+        "Catalysts shift equilibrium towards products and raise Kp.",
+        "A catalyst lowers Kp by changing the equilibrium partial pressures."
+      ]
+    }
+  ]
+}
