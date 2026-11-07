@@ -1,0 +1,30 @@
+{
+  "version": "v392",
+  "date": "2026-11-07",
+  "scope": "Real original mock flashcard checker; explicit wording 'The answer is not [the exact original model answer]' is semantically a denial, not a correct answer.",
+  "baseline": {
+    "coreCards": 3345,
+    "activeMockCards": 2379,
+    "beforeCorrectCount": 2062,
+    "beforeCorrectCountBySubject": {
+      "Physics": 648,
+      "Chemistry": 1362,
+      "Maths": 52
+    },
+    "baselineSource": "Actual v391 inherited production evaluateCard, original 3345-card deck"
+  },
+  "fix": "Narrow check directly after existing v389 full-question-echo guard, matching a whole explicit denied original model/accepted alternative; do not do broad negation detection or block valid explanations and contrast clauses.",
+  "expectedChecks": [
+    "2379 explicit model denials score zero and wrong",
+    "2379 original model answers remain correct",
+    "ordinary non-denied answers unchanged",
+    "existing reviewed accepted examples unchanged",
+    "alternate exact denial prefixes sampled",
+    "3345 stable core IDs, existing mock selector and cloud progress untouched"
+  ],
+  "limitations": [
+    "Generated wrong-answer probes expose a known false-positive class but do not prove examiner quality for arbitrary unseen responses.",
+    "No extra cards or exam questions added.",
+    "This branch is stacked on v391; it requires GitHub green checks and READY Vercel preview before production release."
+  ]
+}
