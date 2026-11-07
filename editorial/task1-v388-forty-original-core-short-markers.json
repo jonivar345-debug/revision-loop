@@ -1,0 +1,585 @@
+{
+  "version": "v388",
+  "date": "2026-11-07",
+  "subject": "Physics and Chemistry",
+  "scope": "Forty existing original short school-mock flashcards, 20 Physics AS and 20 Chemistry AS/taught A2, across waves, mechanics, particles, electricity, quantities, bonding, Kp, entropy and optical isomerism. Does not add flashcards.",
+  "counts": {
+    "reviewedCards": 40,
+    "Physics": 20,
+    "Chemistry": 20,
+    "correctVariants": 40,
+    "wrongVariants": 80,
+    "sourceTopicGroups": 18,
+    "originalCoreCardsUnchanged": 3345,
+    "originalCardsRewritten": 0
+  },
+  "source": "editorial/task1-v323-balanced-48-topic-evidence.json",
+  "method": "Exact ID, prompt, model answer, subject, mock eligibility and stage guards only. Preserve earlier accepted and rejected examples; newly approved full correct paraphrases and false misconceptions are checked against production evaluateCard using an exact-list override before fuzzy scoring.",
+  "limitations": [
+    "This review tests forty specifically sourced cards, not all AQA specification bullets.",
+    "Unseen written answers may not be correctly classified; longer proof, mechanism, diagram and calculation methods need separate review.",
+    "XP, school-mock filter, question texts, existing flashcard text, cloud sync and saved progress must remain unchanged."
+  ],
+  "rows": [
+    {
+      "id": "phy_graph_weakness_v36_force_time_tri",
+      "accept": [
+        "Impulse is the triangle area: half of 0.20 seconds times 80 newtons, or 8.0 N s."
+      ],
+      "reject": [
+        "Impulse is 80 N s because the peak force is the area.",
+        "Impulse is 16 N s because it is always a rectangle."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Momentum and impulse",
+      "originalFront": "Force rises 0→80 N then returns to 0 over 0.20 s. Find impulse.",
+      "originalBack": "Area of triangular F–t graph = ½×0.20×80 = 8.0 N s (change in momentum)."
+    },
+    {
+      "id": "task1_phy_077",
+      "accept": [
+        "Impulse means change in momentum, and equals FΔt for a constant resultant force."
+      ],
+      "reject": [
+        "Impulse is defined as the change in kinetic energy.",
+        "Impulse equals mass multiplied by displacement."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Momentum and impulse",
+      "originalFront": "What is an impulse?",
+      "originalBack": "Change in momentum, FΔt."
+    },
+    {
+      "id": "phy_strain",
+      "accept": [
+        "Tensile strain is ΔL divided by the original length L, with no unit."
+      ],
+      "reject": [
+        "Tensile strain is F/A and is measured in pascals.",
+        "Tensile strain is measured in newtons per metre."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Materials stress strain Young modulus",
+      "originalFront": "What is tensile strain?",
+      "originalBack": "strain = ΔL/L; it has no unit."
+    },
+    {
+      "id": "phy_stress",
+      "accept": [
+        "Tensile stress is force divided by cross-sectional area, F/A, in pascals."
+      ],
+      "reject": [
+        "Stress is the extension divided by initial length and has no units.",
+        "Stress is force multiplied by area and measured in N m²."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Materials stress strain Young modulus",
+      "originalFront": "What is tensile stress?",
+      "originalBack": "stress = F/A, in Pa."
+    },
+    {
+      "id": "task1_phy_035",
+      "accept": [
+        "A wavelength is the least distance between two points oscillating in phase."
+      ],
+      "reject": [
+        "Wavelength is the spacing between the next crest and trough.",
+        "Wavelength is the maximum displacement from equilibrium."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Progressive waves and phase",
+      "originalFront": "What is wavelength?",
+      "originalBack": "Shortest distance between two points in phase."
+    },
+    {
+      "id": "task1_phy_037",
+      "accept": [
+        "Half a period corresponds to 180 degrees or pi radians of phase difference."
+      ],
+      "reject": [
+        "Half a cycle is 360 degrees or two pi radians.",
+        "Half a cycle is 90 degrees or pi over two radians."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Progressive waves and phase",
+      "originalFront": "What phase difference is half a cycle?",
+      "originalBack": "π radians or 180°."
+    },
+    {
+      "id": "task1_phy_048",
+      "accept": [
+        "For the fundamental vibration on a fixed string its length holds half a wavelength, so λ=2L."
+      ],
+      "reject": [
+        "The fundamental string wavelength is L/2.",
+        "One entire wavelength fits into the string length for the first harmonic."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Progressive waves and phase",
+      "originalFront": "For a string fixed at both ends, what is the first-harmonic wavelength?",
+      "originalBack": "Twice the vibrating length, λ = 2L."
+    },
+    {
+      "id": "task1_phy_054",
+      "accept": [
+        "Fringe spacing is the distance between adjacent bright fringes, or between adjacent dark fringes."
+      ],
+      "reject": [
+        "Fringe spacing is the distance between one bright fringe and its neighbouring dark fringe.",
+        "Fringe spacing is the physical separation of the slits."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Diffraction interference and gratings",
+      "originalFront": "What is fringe spacing?",
+      "originalBack": "Distance between adjacent bright fringes or adjacent dark fringes."
+    },
+    {
+      "id": "task1_phy_055",
+      "accept": [
+        "At unchanged wavelength and screen distance, wider slit separation produces narrower fringes."
+      ],
+      "reject": [
+        "Increasing double-slit separation makes fringe spacing increase.",
+        "Changing slit separation has no effect on fringe spacing."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Diffraction interference and gratings",
+      "originalFront": "What happens to fringe spacing if the double-slit separation increases?",
+      "originalBack": "It decreases."
+    },
+    {
+      "id": "task1_phy_056",
+      "accept": [
+        "At unchanged wavelength and slit separation, moving the screen farther away increases fringe spacing."
+      ],
+      "reject": [
+        "Increasing screen distance makes double-slit fringes closer.",
+        "Screen distance and fringe separation are unrelated."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Diffraction interference and gratings",
+      "originalFront": "What happens to fringe spacing if the screen distance increases?",
+      "originalBack": "It increases."
+    },
+    {
+      "id": "task1_phy_046",
+      "accept": [
+        "Stationary waves result from superposition of two coherent waves moving in opposite directions."
+      ],
+      "reject": [
+        "Two same-direction waves alone always produce a stationary wave.",
+        "A stationary wave requires no superposition of waves."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Stationary waves and harmonics",
+      "originalFront": "How do stationary waves form?",
+      "originalBack": "Two coherent waves travel in opposite directions and superpose."
+    },
+    {
+      "id": "task1_phy_047",
+      "accept": [
+        "Neighbouring nodes in a standing wave are half a wavelength apart."
+      ],
+      "reject": [
+        "Adjacent nodes are separated by a full wavelength.",
+        "Adjacent nodes are separated by one quarter wavelength."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Stationary waves and harmonics",
+      "originalFront": "How far apart are adjacent stationary-wave nodes?",
+      "originalBack": "Half a wavelength, λ/2."
+    },
+    {
+      "id": "task1_practical_001",
+      "accept": [
+        "A string's first harmonic frequency depends on its vibrating length, tension and mass per unit length."
+      ],
+      "reject": [
+        "Its fundamental frequency depends only on the amplitude.",
+        "Tension and linear mass density do not affect a string's fundamental frequency."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Stationary waves and harmonics",
+      "originalFront": "In string-wave RP1, what controls the fundamental frequency?",
+      "originalBack": "Vibrating length, tension and mass per unit length."
+    },
+    {
+      "id": "task1_practical_002",
+      "accept": [
+        "When length and linear mass density are fixed, frequency squared is proportional to tension, giving a straight-line graph."
+      ],
+      "reject": [
+        "Frequency squared is inversely proportional to tension at constant string length.",
+        "Plotting f² against tension always produces a horizontal line at constant density."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Stationary waves and harmonics",
+      "originalFront": "What relation can be tested by plotting f² against tension?",
+      "originalBack": "A straight line at fixed length and mass per unit length."
+    },
+    {
+      "id": "phy_pandr_v29_instant_emission",
+      "accept": [
+        "A photon can give its energy to a single electron immediately when its frequency exceeds the threshold."
+      ],
+      "reject": [
+        "The electron must accumulate energy slowly from many subthreshold photons.",
+        "There is always a substantial delay before emission above the threshold frequency."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Photoelectric effect",
+      "originalFront": "Why is photoelectric emission effectively immediate above threshold?",
+      "originalBack": "One photon transfers its energy to one electron in one interaction."
+    },
+    {
+      "id": "phy_pandr_v29_kef_gradient",
+      "accept": [
+        "The gradient of a plot of maximum photoelectron kinetic energy against frequency equals Planck's constant h."
+      ],
+      "reject": [
+        "The gradient equals the metal work function φ.",
+        "The maximum KE versus frequency gradient is the electron charge e."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Photoelectric effect",
+      "originalFront": "What is the gradient of a graph of maximum photoelectron KE against frequency?",
+      "originalBack": "Planck constant, h."
+    },
+    {
+      "id": "phy_antiparticle",
+      "accept": [
+        "Antiparticles have equal rest mass and rest energy but opposite electric charge and other additive quantum numbers."
+      ],
+      "reject": [
+        "An antiparticle must have less mass than its corresponding particle.",
+        "A particle and its antiparticle have identical electric charge and all additive quantum numbers."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Particles quarks and interactions",
+      "originalFront": "How does an antiparticle compare with its particle?",
+      "originalBack": "Same mass and rest energy, but opposite charge and other additive quantum numbers."
+    },
+    {
+      "id": "phy_baryon_meson",
+      "accept": [
+        "A baryon has three quarks, whereas a meson has a quark and an antiquark."
+      ],
+      "reject": [
+        "Baryons contain only two quarks and mesons contain three.",
+        "Mesons contain three quarks while baryons contain a quark–antiquark pair."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Particles quarks and interactions",
+      "originalFront": "How do baryons and mesons differ?",
+      "originalBack": "Baryons contain three quarks; mesons contain a quark and an antiquark."
+    },
+    {
+      "id": "phy_power_elec",
+      "accept": [
+        "Power in a resistor can be calculated by P=VI, P=I²R or P=V²/R."
+      ],
+      "reject": [
+        "Electrical power is P=V/I in watts.",
+        "Electrical power is P=IR² rather than I²R."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Energy power efficiency",
+      "originalFront": "Give three electrical power equations.",
+      "originalBack": "P = VI = I²R = V²/R."
+    },
+    {
+      "id": "phy_electron_diffraction_exam_q9c",
+      "accept": [
+        "Electron momentum p and wavelength λ obey λ=h/p."
+      ],
+      "reject": [
+        "Electron de Broglie wavelength equals λ=hp.",
+        "Electron wavelength is calculated using λ=p/h instead of h/p."
+      ],
+      "subject": "Physics",
+      "sourceTopic": "Momentum and impulse",
+      "originalFront": "Which equation links an electron's de Broglie wavelength λ with its momentum p?",
+      "originalBack": "λ = h/p."
+    },
+    {
+      "id": "chem_atomic_v43_15",
+      "accept": [
+        "In TOF, ionisation charges the sample particles so electric fields can accelerate them and the detector can register them."
+      ],
+      "reject": [
+        "Ionisation neutralises all particles so no electric field acts on them.",
+        "Ionisation prevents ion detection by removing every charge."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Atomic structure isotopes mass spectra",
+      "originalFront": "What is the purpose of ionisation in TOF?",
+      "originalBack": "To give sample particles an electrical charge so they can be accelerated and detected."
+    },
+    {
+      "id": "chem_amount_v44_01",
+      "accept": [
+        "Empirical formula means simplest whole-number atomic ratio; molecular formula gives the actual number of each atom in one molecule."
+      ],
+      "reject": [
+        "The empirical formula gives exact molecular atom counts, while molecular formula is the simplest ratio.",
+        "Every empirical formula must be identical to the corresponding molecular formula."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Amount calculations and titration",
+      "originalFront": "What is the difference between empirical and molecular formula?",
+      "originalBack": "Empirical: simplest atom ratio. Molecular: actual atoms per molecule."
+    },
+    {
+      "id": "chem_amount_v44_02",
+      "accept": [
+        "Assume the composition is from 100 g, so each percentage becomes grams before converting masses to moles."
+      ],
+      "reject": [
+        "Treat percentage composition numbers directly as mole values without using atomic mass.",
+        "A 25% composition means 25 kg of that element in a 100 g hypothetical sample."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Amount calculations and titration",
+      "originalFront": "How should percentages be treated when calculating empirical formula?",
+      "originalBack": "Assume a 100 g sample; percentage values become gram masses."
+    },
+    {
+      "id": "chem_amount_v44_03",
+      "accept": [
+        "Divide each element's mass by its Ar, divide the mole amounts by the smallest, then write the whole-number ratio."
+      ],
+      "reject": [
+        "Divide each mass by the highest mass and call it an empirical ratio without calculating moles.",
+        "Add all the atomic masses instead of finding a mole ratio."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Amount calculations and titration",
+      "originalFront": "What are the three stages of empirical formula calculation?",
+      "originalBack": "Divide element masses by Ar; divide moles by smallest; find integer ratio."
+    },
+    {
+      "id": "chem_amount_v44_05",
+      "accept": [
+        "Find the empirical formula Mr, then calculate molecular Mr divided by it and multiply all empirical subscripts by that factor."
+      ],
+      "reject": [
+        "Multiply empirical Mr by molecular Mr to obtain the molecular formula directly.",
+        "Divide the empirical subscripts by molecular Mr to obtain the molecular formula."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Amount calculations and titration",
+      "originalFront": "How is molecular formula calculated from empirical formula?",
+      "originalBack": "Find empirical-formula Mr, divide molecular Mr by it, multiply subscripts."
+    },
+    {
+      "id": "chem_amount_v44_11",
+      "accept": [
+        "First find moles by n=pV/RT using SI units; then calculate molar mass from M=m/n."
+      ],
+      "reject": [
+        "Gas molar mass equals moles divided by mass, n/m.",
+        "Gas molar mass is M=m×n, not mass divided by moles."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Amount calculations and titration",
+      "originalFront": "How do you calculate molar mass of an unknown gas from mass and gas data?",
+      "originalBack": "First n=pV/(RT), then molar mass M=m/n."
+    },
+    {
+      "id": "chem_bonding_v47_27",
+      "accept": [
+        "In diamond every carbon is covalently bonded to four neighbours in a tetrahedral giant structure."
+      ],
+      "reject": [
+        "Each diamond carbon forms three bonds, leaving a mobile electron.",
+        "Every carbon in diamond forms two bonds along a linear chain."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Intermolecular forces and structure",
+      "originalFront": "How many covalent bonds does each carbon make in diamond?",
+      "originalBack": "Four, in a three-dimensional tetrahedral network."
+    },
+    {
+      "id": "chem_bonding_v47_28",
+      "accept": [
+        "Diamond's high melting point is due to strong covalent C–C bonds throughout a giant lattice that require much energy to break."
+      ],
+      "reject": [
+        "Diamond melts at a high temperature only due to weak forces between small diamond molecules.",
+        "Hydrogen bonds between diamond molecules are the main cause of its high melting point."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Intermolecular forces and structure",
+      "originalFront": "Why does diamond have an extremely high melting point?",
+      "originalBack": "Many strong covalent C–C bonds throughout the giant lattice must be broken."
+    },
+    {
+      "id": "chem_bonding_v47_29",
+      "accept": [
+        "There are no delocalised electrons or mobile ions in diamond, so it cannot conduct electricity."
+      ],
+      "reject": [
+        "Diamond conducts because each carbon leaves a freely moving electron.",
+        "Diamond's lattice contains free positive ions that carry electric current."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Intermolecular forces and structure",
+      "originalFront": "Why does diamond not conduct electricity?",
+      "originalBack": "No mobile ions or delocalised electrons are available."
+    },
+    {
+      "id": "chem_bonding_v47_30",
+      "accept": [
+        "Graphite contains hexagonal layers with each carbon bonded to three others and one electron per carbon delocalised."
+      ],
+      "reject": [
+        "Each graphite carbon forms four covalent bonds and has no delocalised electrons.",
+        "Graphite is made of separate C₂ molecules instead of giant covalent layers."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Intermolecular forces and structure",
+      "originalFront": "What does graphite's bonding look like?",
+      "originalBack": "Each C forms three covalent bonds in layers of hexagonal rings; one electron is delocalised."
+    },
+    {
+      "id": "chem_bonding_v47_31",
+      "accept": [
+        "Delocalised electrons move along graphite's layers, allowing electrical conduction."
+      ],
+      "reject": [
+        "Graphite conducts because carbon ions flow freely through its layers.",
+        "Graphite cannot conduct because every electron is fixed in a covalent bond."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Intermolecular forces and structure",
+      "originalFront": "Why can graphite conduct along its layers?",
+      "originalBack": "Delocalised electrons move through the layers."
+    },
+    {
+      "id": "chem_atomic_v43_46",
+      "accept": [
+        "Outer electrons are farther from the nucleus and more shielded down Group 2, reducing attraction and first ionisation energy."
+      ],
+      "reject": [
+        "First ionisation energy rises down Group 2 because the outer electron moves closer to the nucleus.",
+        "Ionisation energy falls because nuclear charge gets smaller down Group 2."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Group 2 and group 7",
+      "originalFront": "Why does first IE fall down Group 2?",
+      "originalBack": "Outer electrons are farther away and more shielded, despite a larger nuclear charge."
+    },
+    {
+      "id": "chem_kp_pressure",
+      "accept": [
+        "Changing total pressure at fixed temperature does not change Kp, although the gas equilibrium position may shift."
+      ],
+      "reject": [
+        "Increasing total pressure always increases Kp, even without a temperature change.",
+        "The equilibrium constant Kp must decrease if total pressure is raised at fixed temperature."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Kp gaseous equilibrium",
+      "originalFront": "Does changing total pressure at constant temperature change Kp?",
+      "originalBack": "No. It may change equilibrium position, but Kp itself is unchanged at fixed temperature."
+    },
+    {
+      "id": "chem_entropy",
+      "accept": [
+        "Entropy tends to increase as particles become more dispersed, particularly when more gas molecules form."
+      ],
+      "reject": [
+        "Making more gaseous particles always decreases the entropy.",
+        "A more dispersed arrangement always has lower entropy."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Entropy and Gibbs free energy",
+      "originalFront": "When does entropy usually increase?",
+      "originalBack": "When particles become more dispersed/disordered, especially when more gas particles are formed."
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_catalyst_gibbs",
+      "accept": [
+        "Catalysts lower activation energy and can increase reaction rate, but they do not alter ΔG or thermodynamic feasibility."
+      ],
+      "reject": [
+        "A catalyst makes the standard Gibbs energy more negative and changes thermodynamic feasibility.",
+        "Catalysts cannot increase rate but always change the overall ΔG."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Entropy and Gibbs free energy",
+      "originalFront": "Does a catalyst change ΔG or thermodynamic feasibility?",
+      "originalBack": "No. A catalyst lowers activation energy and increases rate; it does not change ΔG for the overall reaction."
+    },
+    {
+      "id": "chem_optical",
+      "accept": [
+        "A carbon bonded to four different groups may produce enantiomers, which are mirror images that cannot be superimposed."
+      ],
+      "reject": [
+        "Any two compounds with the same molecular formula must be optical isomers.",
+        "Enantiomers have mirror-image structures that can be perfectly superimposed."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Optical isomerism and chirality",
+      "originalFront": "What causes optical isomerism?",
+      "originalBack": "A chiral carbon bonded to four different groups gives non-superimposable mirror-image enantiomers."
+    },
+    {
+      "id": "task1_chem_204",
+      "accept": [
+        "A ketone has a carbonyl group whose carbon atom is bonded to two carbon-containing groups."
+      ],
+      "reject": [
+        "A ketone carbonyl has a hydrogen directly attached to its carbon, as in an aldehyde.",
+        "The ketone group is simply an alcohol's OH group with no C=O."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Aldehydes ketones carbonyl tests",
+      "originalFront": "What is the functional group in a ketone?",
+      "originalBack": "Carbonyl group between two carbon atoms."
+    },
+    {
+      "id": "chem_mechanisms_v42_26",
+      "accept": [
+        "Attack on either face of a planar C=O may give different configurations and enantiomers when a chiral centre is formed."
+      ],
+      "reject": [
+        "A planar carbonyl can be attacked from only one side so enantiomers never form.",
+        "Attack from either face of a carbonyl must give the same superimposable product even when chirality develops."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Optical isomerism and chirality",
+      "originalFront": "Why can some carbonyl additions create enantiomer pairs?",
+      "originalBack": "Attack from opposite faces of the planar carbonyl creates different configurations."
+    },
+    {
+      "id": "chem_energetics_v51_01",
+      "accept": [
+        "Two readings each with an uncertainty of 0.1°C give a maximum ΔT uncertainty of 0.2°C by addition."
+      ],
+      "reject": [
+        "The uncertainty in a temperature difference is zero when using the same thermometer.",
+        "The uncertainty becomes 0.01°C because the two reading uncertainties are multiplied."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Chemistry required practical accuracy",
+      "originalFront": "A thermometer is ±0.1°C per reading. What is the uncertainty in ΔT?",
+      "originalBack": "±0.2°C: add the absolute uncertainties of initial and final readings."
+    },
+    {
+      "id": "task1_chem_213",
+      "accept": [
+        "The acyl chloride functional group is –COCl, a carbonyl carbon bonded directly to chlorine."
+      ],
+      "reject": [
+        "Acyl chloride contains –COOH rather than –COCl.",
+        "The defining acyl chloride group is –NH₂ with no carbonyl group."
+      ],
+      "subject": "Chemistry",
+      "sourceTopic": "Amines amides and acylation",
+      "originalFront": "What does an acyl chloride contain?",
+      "originalBack": "The –COCl functional group."
+    }
+  ]
+}
