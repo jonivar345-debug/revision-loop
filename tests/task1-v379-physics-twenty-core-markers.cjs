@@ -1,7 +1,17 @@
 'use strict';
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
-const app=read('app.js'),sw=read('sw.js'),core=json('deck.json').cards;
+const app=read('app.js'),sw=read('sw.js'),rawCore=json('deck.json').cards;
+// The production loader applies v314 editorial corrections before v379 marker
+// calibration. In particular, the couple-distance front was shortened in
+// memory while the original stored card and progress ID were preserved.
+const start314=app.indexOf('function applyV314CoreMockQuality(existing){');
+const end314=app.indexOf('// v315:',start314);
+assert(start314>0&&end314>start314);
+const applyV314=new Function(app.slice(start314,end314)+'\\nreturn applyV314CoreMockQuality;')();
+const core=rawCore.map(c=>({...c,accept:[...(c.accept||[])],reject:[...(c.reject||[])]}));
+applyV314(core);
+assert.equal(rawCore.length,core.length);
 const audit=json('editorial/task1-v379-physics-twenty-core-markers.json');
 const baseline=json('editorial/task1-v323-balanced-48-topic-evidence.json');
 assert.equal(audit.version,'v379');assert.equal(audit.rows.length,20);
