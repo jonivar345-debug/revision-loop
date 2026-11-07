@@ -1,0 +1,19 @@
+name: Task 1 v390 19 original AS Physics practical mechanics electricity worked questions
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v390-physics-19-working-review.json'
+      - 'tests/task1-v390-physics-19-working-review.cjs'
+      - '.github/workflows/task1-v390-physics-19-working-review.yml'
+  workflow_dispatch:
+jobs:
+  physics-19-original-methods:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 19 original Physics worked problems, 146 method marks and source guard
+        run: node tests/task1-v390-physics-19-working-review.cjs
+      - name: Recheck prior Physics, Chemistry and copied-question safeguards
+        run: node tests/task1-v389-question-echo-no-credit.cjs && node tests/task1-v388-forty-original-core-short-markers.cjs && node tests/task1-v384-physics-electricity-mechanics-six-manual.cjs && node tests/task1-v386-chemistry-25-working-review.cjs
