@@ -1,0 +1,19 @@
+name: Task 1 v386 Chemistry 25 existing multi-step school-mock questions
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v386-chemistry-25-working-review.json'
+      - 'tests/task1-v386-chemistry-25-working-review.cjs'
+      - '.github/workflows/task1-v386-chemistry-25-working-review.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-25-originals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify 25 source-guarded original Chemistry questions, 166 marks and no auto-credit
+        run: node tests/task1-v386-chemistry-25-working-review.cjs
+      - name: Check previously protected Chemistry, Physics and Maths multi-step marking
+        run: node tests/task1-v385-chemistry-ten-worked-manual.cjs && node tests/task1-v384-physics-electricity-mechanics-six-manual.cjs && node tests/task1-v383-maths-trig-differentiation-manual-review.cjs && node tests/task1-v382-maths-eighteen-worked-exam-manual-marking.cjs
