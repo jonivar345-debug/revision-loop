@@ -1,0 +1,19 @@
+name: Task 1 v374 Chemistry Hess rates Arrhenius original mock markers
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v374-chem-kinetics-hess-fifteen-core-marker-review.json'
+      - 'tests/task1-v374-chem-hess-rates-fifteen-markers.cjs'
+      - '.github/workflows/task1-v374-chem-hess-rates-markers.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-hess-rates-calibration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 15 original chemistry cards, 45 calibrated answer probes
+        run: node tests/task1-v374-chem-hess-rates-fifteen-markers.cjs
+      - name: Guard earlier exact chemistry and maths corrections
+        run: node tests/task1-v373-chemistry-eighteen-core-markers.cjs && node tests/task1-v372-year1-pure-five-manual-working-qa.cjs
