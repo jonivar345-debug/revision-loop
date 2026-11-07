@@ -1,0 +1,19 @@
+name: Task 1 v378 Chemistry acids and organic eighteen core marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v378-chemistry-eighteen-acids-organic-markers.json'
+      - 'tests/task1-v378-chemistry-acids-organic-18-markers.cjs'
+      - '.github/workflows/task1-v378-chem-acids-organic-markers.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-acids-organic-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run 18 Chemistry original-card accepted/rejected tests
+        run: node tests/task1-v378-chemistry-acids-organic-18-markers.cjs
+      - name: Preserve acid-base, rates and AQA Kp regressions
+        run: node tests/task1-v358-chem-acid-base-15-marker-review.cjs && node tests/task1-v373-chemistry-eighteen-core-markers.cjs && node tests/task1-v375-chem-kp-catalyst-direct-recall.cjs
