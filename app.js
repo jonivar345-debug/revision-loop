@@ -103,6 +103,37 @@ function applyV377PhysicsWavesManualReview(questions){
  return questions;
 }
 
+
+// v382: review 18 exact AQA Year 1 Pure worked exam questions point by point,
+// not using keyword matches to award proof, transformation or method marks.
+const V382_MATHS_WORKED_MANUAL=Object.freeze([{"id":"task1_v190_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":null,"effectiveSpecRef":null,"marks":4,"promptHash":"2fd38c69","modelAnswerHash":"9641f6ff"},{"id":"task1_v190_maths_002","sourceCourseTopic":"Proof","sourceSpecRef":null,"effectiveSpecRef":null,"marks":4,"promptHash":"adf396a8","modelAnswerHash":"af85c936"},{"id":"task1_v190_maths_003","sourceCourseTopic":"Vectors","sourceSpecRef":null,"effectiveSpecRef":null,"marks":5,"promptHash":"9e4ffdd7","modelAnswerHash":"415ad04f"},{"id":"task1_v190_maths_004","sourceCourseTopic":"Vectors","sourceSpecRef":null,"effectiveSpecRef":null,"marks":6,"promptHash":"bd13c903","modelAnswerHash":"5fc008c4"},{"id":"task1_v191_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":4,"promptHash":"9793ba40","modelAnswerHash":"33b58639"},{"id":"task1_v191_maths_002","sourceCourseTopic":"Trigonometry","sourceSpecRef":"3.6","effectiveSpecRef":"3.6","marks":5,"promptHash":"7b9d72b2","modelAnswerHash":"36fbbc24"},{"id":"task1_v191_maths_003","sourceCourseTopic":"Coordinate geometry","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":5,"promptHash":"76d6da64","modelAnswerHash":"92cdebf"},{"id":"task1_v191_maths_004","sourceCourseTopic":"Transformations","sourceSpecRef":"3.3","effectiveSpecRef":"3.3","marks":7,"promptHash":"1cca8a50","modelAnswerHash":"c009a3f6"},{"id":"task1_v191_maths_005","sourceCourseTopic":"Sequences & series","sourceSpecRef":"3.5","effectiveSpecRef":"3.5","marks":5,"promptHash":"8c75fd63","modelAnswerHash":"204e5717"},{"id":"task1_v191_maths_006","sourceCourseTopic":"Integration","sourceSpecRef":"3.9","effectiveSpecRef":"3.9","marks":6,"promptHash":"6f67e75b","modelAnswerHash":"8907105f"},{"id":"task1_v209_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":7,"promptHash":"3ba17a7e","modelAnswerHash":"5bd7573f"},{"id":"task1_v209_maths_002","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":6,"promptHash":"2984b642","modelAnswerHash":"850ad8f9"},{"id":"task1_v209_maths_003","sourceCourseTopic":"Vectors","sourceSpecRef":"3.10","effectiveSpecRef":"3.11","marks":8,"promptHash":"61ba2171","modelAnswerHash":"3898d013"},{"id":"task1_v209_maths_004","sourceCourseTopic":"Vectors","sourceSpecRef":"3.10","effectiveSpecRef":"3.11","marks":8,"promptHash":"3bfaeec0","modelAnswerHash":"89cd4cde"},{"id":"task1_v209_maths_005","sourceCourseTopic":"Transformations","sourceSpecRef":"3.3","effectiveSpecRef":"3.3","marks":9,"promptHash":"37db7c67","modelAnswerHash":"5a3a4e37"},{"id":"task1_v273_maths_application_q01","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":8,"promptHash":"3866474d","modelAnswerHash":"ee3659e5"},{"id":"task1_v273_maths_application_q02","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":8,"promptHash":"cd036588","modelAnswerHash":"36baae30"},{"id":"task1_v273_maths_application_q03","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":7,"promptHash":"537031a6","modelAnswerHash":"e1260b3b"}]);
+function v382SourceHash(raw){
+ let h=2166136261;
+ const s=String(raw||'');
+ for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV382MathsWorkedExamManualReview(questions){
+ const indexed=new Map(V382_MATHS_WORKED_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Maths'||q.level!=='AS'||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.manualWorkingReview===true||(q.courseTopic??null)!==row.sourceCourseTopic||
+     (q.specRef??null)!==row.sourceSpecRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||
+     q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v382SourceHash(q.prompt)!==row.promptHash||
+     v382SourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  // AQA Year 1 vectors are section 3.11, not 3.10 (Numerical Methods).
+  if(row.sourceSpecRef==='3.10')q.specRef='3.11';
+  q.manualWorkingReview=true;
+  q.v382ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5734,6 +5765,7 @@ async function sync(manual=false){
  // Apply exact manual-working protection after any published question corrections.
  applyV372Year1PureManualReview(examQuestions);
  applyV377PhysicsWavesManualReview(examQuestions);
+ applyV382MathsWorkedExamManualReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
