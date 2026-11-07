@@ -1,0 +1,189 @@
+{
+  "version": "v372",
+  "date": "2026-11-06",
+  "scope": "AQA first mock AS Year 1 Pure; five original existing v271 multi-step exam questions, not flashcards",
+  "reason": "The existing question bank explicitly requires working, but these five questions lacked manualWorkingReview=true. A fuzzy answer marker cannot establish correct vectors, transformations, signs, integration or binomial steps from matching words.",
+  "sourceQuestionBank": "maths_year1_pure_reasoning_v271.json",
+  "counts": {
+    "originalQuestions": 7,
+    "previousManualProofQuestions": 2,
+    "additionalManualWorkingQuestions": 5,
+    "additionalMarksRequiringReviewedWork": 39,
+    "totalManualWorkingMarksAfterGate": 49,
+    "coreFlashcardIdsPreserved": 3345,
+    "studentAnswersGradedByThisTest": 0
+  },
+  "selected": [
+    {
+      "id": "task1_v271_maths_pure_q03",
+      "specRef": "3.11",
+      "marks": 8,
+      "prompt": "Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]",
+      "modelAnswer": "P=(5/2,7/2), Q=(−1/2,5). AP=(3/2,3/2), so A+(2/3)AP=(1,2)+(1,1)=(2,3). BQ=(−15/2,6), so B+(2/3)BQ=(7,−1)+(−5,4)=(2,3). Both medians contain G=(2,3), two-thirds from their vertex. Thus they intersect at G, and AG:GP=(2/3):(1/3)=2:1.",
+      "markPoints": [
+        "P = ((7−2)/2,(−1+8)/2)=(5/2,7/2).",
+        "Q = ((1−2)/2,(2+8)/2)=(−1/2,5).",
+        "Vector AP=P−A=(3/2,3/2).",
+        "Point G on AP at 2/3 has G=A+(2/3)AP=(2,3).",
+        "Vector BQ=Q−B=(−15/2,6).",
+        "Point H on BQ at 2/3 has H=B+(2/3)BQ=(2,3).",
+        "Since G=H, the medians AP and BQ meet at the common point with position vector (2,3).",
+        "AG:GP=2:1 because G lies 2/3 of the way from A to P."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "previousManualWorkingReview": false,
+      "requiresWorking": true,
+      "subject": "Maths",
+      "level": "AS",
+      "mock": true,
+      "courseTopic": "Year 1 Pure"
+    },
+    {
+      "id": "task1_v271_maths_pure_q04",
+      "specRef": "3.4",
+      "marks": 7,
+      "prompt": "A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]",
+      "modelAnswer": "Complete squares: (x−2)²+(y−3)²=25, so centre (2,3) and radius 5. At P=(5,7), CP=(3,4) and |CP|=5, so P lies on the circle. Radius slope=4/3; tangent slope=−3/4. Through P: y−7=−(3/4)(x−5), hence 3x+4y=43. The x- and y-intercepts are (43/3,0) and (0,43/4).",
+      "markPoints": [
+        "Completes the square to (x−2)²+(y−3)²=25.",
+        "Centre (2,3) and radius 5.",
+        "For P=(5,7), displacement from centre is (3,4), whose squared length is 3²+4²=25.",
+        "Radius CP has gradient 4/3.",
+        "Tangent is perpendicular to CP and has gradient −3/4.",
+        "Tangent equation simplifies to 3x+4y=43.",
+        "Axis intercepts are (43/3,0) and (0,43/4)."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "previousManualWorkingReview": false,
+      "requiresWorking": true,
+      "subject": "Maths",
+      "level": "AS",
+      "mock": true,
+      "courseTopic": "Year 1 Pure"
+    },
+    {
+      "id": "task1_v271_maths_pure_q05",
+      "specRef": "3.3",
+      "marks": 9,
+      "prompt": "Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]",
+      "modelAnswer": "f(x)=(x−2)²−3. One valid sequence is reflect in the y-axis, horizontally compress by scale factor 1/2, then translate right by 1/2; reflect in the x-axis, stretch vertically by factor 2, then translate up by 3. Algebra: f(1−2x)=(1−2x)²−4(1−2x)+1=4x²+4x−2, so g=−8x²−8x+7=−8(x+1/2)²+9. Turning point (−1/2,9). Setting g=0 gives 8x²+8x−7=0, so x=(−2±3√2)/4. Equivalent orders of compatible transformations earn credit.",
+      "markPoints": [
+        "f(x)=(x−2)²−3.",
+        "Horizontal reflection in the y-axis is part of one valid transformation sequence.",
+        "Horizontal compression by scale factor 1/2, applied to the reflected graph.",
+        "Translation right by 1/2, giving f(1−2x) from f(x); alternative valid composite transformations are creditable.",
+        "Vertical reflection in the x-axis and stretch by factor 2, giving −2f(1−2x).",
+        "Vertical translation upwards by 3, giving −2f(1−2x)+3.",
+        "Expands to g(x)=−8x²−8x+7.",
+        "Writes g(x)=−8(x+1/2)²+9 and identifies turning point (−1/2,9).",
+        "Solves g=0 to give exact roots x=(−2+3√2)/4 and x=(−2−3√2)/4."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "previousManualWorkingReview": false,
+      "requiresWorking": true,
+      "subject": "Maths",
+      "level": "AS",
+      "mock": true,
+      "courseTopic": "Year 1 Pure"
+    },
+    {
+      "id": "task1_v271_maths_pure_q06",
+      "specRef": "3.5",
+      "marks": 7,
+      "prompt": "In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]",
+      "modelAnswer": "The x² coefficient is C(7,2)a²=21a². Hence 21a²=84, so a²=4 and a=±2. The x³ coefficient is C(7,3)a³=35a³, which is negative only for a=−2. Then x³ coefficient=35(−8)=−280; x⁴ coefficient=C(7,4)(−2)⁴=35×16=560.",
+      "markPoints": [
+        "Uses the x² term C(7,2)a²x² and evaluates C(7,2)=21.",
+        "Forms 21a²=84.",
+        "Obtains a²=4 and the candidates a=±2.",
+        "Uses the negative x³ coefficient, C(7,3)a³, to choose a=−2.",
+        "Evaluates C(7,3)=35.",
+        "Finds x³ coefficient 35(−2)³=−280.",
+        "Finds x⁴ coefficient C(7,4)(−2)⁴=35×16=560."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "previousManualWorkingReview": false,
+      "requiresWorking": true,
+      "subject": "Maths",
+      "level": "AS",
+      "mock": true,
+      "courseTopic": "Year 1 Pure"
+    },
+    {
+      "id": "task1_v271_maths_pure_q07",
+      "specRef": "3.9",
+      "marks": 8,
+      "prompt": "For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]",
+      "modelAnswer": "y=(x−2)(x−3), with roots 2 and 3. The curve is above the x-axis on [0,2] and [3,4], and below on (2,3). F(x)=x³/3−5x²/2+6x. F(0)=0, F(2)=14/3, F(3)=9/2 and F(4)=16/3. Signed integral=16/3. Total area=[F(2)−F(0)]−[F(3)−F(2)]+[F(4)−F(3)]=14/3+1/6+5/6=17/3.",
+      "markPoints": [
+        "Factorises y=(x−2)(x−3) and finds zeros x=2,3.",
+        "Correctly identifies y<0 only on 2<x<3 over the stated domain.",
+        "Antiderivative F(x)=x³/3−(5/2)x²+6x.",
+        "Finds signed integral F(4)−F(0)=16/3.",
+        "Calculates F(2)=14/3.",
+        "Calculates F(3)=9/2.",
+        "Writes total area ∫₀²y dx − ∫₂³y dx + ∫₃⁴y dx, reversing the negative strip.",
+        "Evaluates total area 14/3+1/6+5/6=17/3 square units."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "previousManualWorkingReview": false,
+      "requiresWorking": true,
+      "subject": "Maths",
+      "level": "AS",
+      "mock": true,
+      "courseTopic": "Year 1 Pure"
+    }
+  ],
+  "safeguards": [
+    "Use exact prompt, ID, mark count, scope and source guards before applying runtime manual review flags; leave original bank and saved question IDs untouched.",
+    "Preserve the two existing manually reviewed proof questions.",
+    "Students see original mark-scheme criteria and award their own marks after comparing complete working; photographs and sketches are not judged by token overlap.",
+    "Keep questions in Maths AS Year 1 Pure first-mock selection and preserve original answers and all 49 mark criteria.",
+    "Preserve original 3345 flashcard IDs, existing flashcards, progress, cloud sync, XP and legacy test expectations.",
+    "Manual self-review is not independent expert assessment, does not grade unseen student working and does not certify every correct alternative method."
+  ]
+}

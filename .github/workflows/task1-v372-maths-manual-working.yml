@@ -1,0 +1,21 @@
+name: Task 1 v372 Year 1 Pure manual multi-step marking safeguard
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v372-year1-pure-five-manual-working-qa.json'
+      - 'tests/task1-v372-year1-pure-five-manual-working-qa.cjs'
+      - '.github/workflows/task1-v372-maths-manual-working.yml'
+  workflow_dispatch:
+jobs:
+  first-mock-year1-manual-working:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure 5 more existing AS Pure questions require checked working
+        run: node tests/task1-v372-year1-pure-five-manual-working-qa.cjs
+      - name: Preserve the original AS Pure and inequality tests
+        run: node tests/task1-v271-year1-pure-reasoning.cjs && node tests/task1-v335-maths-inequality-practice.cjs
+      - name: Preserve the preceding Physics v371 core calibration
+        run: node tests/task1-v371-physics-mechanics-measurements-core-markers.cjs
