@@ -1,0 +1,19 @@
+name: Task 1 v381 Maths Year 1 Pure original marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v381-maths-twenty-one-core-marker-review.json'
+      - 'tests/task1-v381-maths-21-core-markers.cjs'
+      - '.github/workflows/task1-v381-maths-21-core-markers.yml'
+  workflow_dispatch:
+jobs:
+  maths-twenty-one-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test 21 original AS Pure Maths flashcards and real marker
+        run: node tests/task1-v381-maths-21-core-markers.cjs
+      - name: Ensure older original Maths and science regressions remain passing
+        run: node tests/task1-v364-year1-pure-20-core-marking.cjs && node tests/task1-v378-chemistry-acids-organic-18-markers.cjs && node tests/task1-v379-physics-twenty-core-markers.cjs && node tests/task1-v380-chemistry-twenty-atomic-bonding-markers.cjs
