@@ -1,0 +1,49 @@
+{
+  "version": "v376",
+  "date": "2026-11-07",
+  "scope": "AS Physics school-mock original one-question derived order-of-magnitude practice, plus accurate manual-marking UI wording across science, Maths proofs, Maths calculations and diagram work.",
+  "specification": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+  "priorCrosswalk": "editorial/task1-v332-measurements-rates-kp-crosswalk.json",
+  "priorSkillId": "P24",
+  "otherExistingPractice": {
+    "path": "science_application_gaps_v333.json",
+    "id": "task1_v333_phy_01",
+    "distinctSkill": "Nearest order-of-magnitude of gravitational mechanical power, using steps and time"
+  },
+  "addition": {
+    "path": "physics_order_of_magnitude_practice_v376.json",
+    "id": "task1_v376_phy_estimation_01",
+    "specRef": "3.1.3",
+    "originalMarks": 4,
+    "independentInputs": {
+      "I_A": 0.001,
+      "t_s": 0.002,
+      "e_C": 1.6e-19
+    },
+    "expected": {
+      "charge_C": 0.000002,
+      "numberOfElectrons": 12500000000000,
+      "nearestOrderOfMagnitude": 10000000000000
+    },
+    "reason": "A separate derived estimate from current and duration that requires prefixes, Q=It and division by elementary charge."
+  },
+  "counts": {
+    "originalCoreFlashcardsUnchanged": 3345,
+    "previousExamSupplementIndicesPreserved": 50,
+    "newOriginalExamQuestionCount": 1,
+    "addedMarkPoints": 4,
+    "automaticallyAwardedMarksOnQuestion": 0
+  },
+  "uiFix": {
+    "problem": "Manual Physics and Chemistry multi-step questions were labelled as full mathematical proofs.",
+    "oldBehavior": "A q.manualWorkingReview non-Maths branch fell through to proof-specific helper and button wording.",
+    "newBehavior": "Manual work guidance distinguishes Maths proof, Maths calculation, Physics/Chemistry science calculation and diagram, while preserving manual zero-mark pathway."
+  },
+  "limits": [
+    "Original model answers and original 3345 core IDs remain untouched.",
+    "New question is original AQA-style practice, not an official AQA past-paper item.",
+    "Manual review requires a student to compare complete workings with four marking points; it is not automatic verification of photographed or typed maths.",
+    "A single new application does not sign off every unseen order-of-magnitude task, Physics practical drawing or whole-three-subject specification.",
+    "Only one new exam question is added; flashcard bank and historical exam-bank order remain intact."
+  ]
+}

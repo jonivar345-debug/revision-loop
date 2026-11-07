@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "version": "v376",
+  "createdAt": "2026-11-07",
+  "scope": "One original 4-mark first-school-mock AS Physics 3.1.3 derived order-of-magnitude estimation practice question; separate from concise recall flashcards.",
+  "source": "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/measurements-and-their-errors",
+  "notes": [
+    "A distinct derived-estimation context from the existing power/steps question in v333.",
+    "Actual multi-step working is manually compared with the mark points; no automatic credit for an isolated final number.",
+    "Original Maths, Physics, Chemistry core flashcards and 50 historic practice bank indices are unchanged."
+  ],
+  "questions": [
+    {
+      "id": "task1_v376_phy_estimation_01",
+      "subject": "Physics",
+      "specRef": "3.1.3",
+      "level": "AS",
+      "year": "Practice",
+      "series": "Original AQA AS Physics First Mock Estimation Applications",
+      "paper": "Original",
+      "question": "Derived order-of-magnitude electron-count estimate",
+      "topic": "Measurements and their errors",
+      "courseTopic": "Measurements and their errors",
+      "revisionTopic": "Estimation of physical quantities",
+      "subtopic": "Combine SI prefixes, charge and current for order-of-magnitude estimation",
+      "marks": 4,
+      "prompt": "An electronic sensor carries an approximately constant current of 1.0 mA for about 2.0 ms. Estimate the number of electrons passing a point in that time to the nearest power-of-ten order of magnitude. Take the magnitude of the charge of one electron as 1.6 × 10⁻¹⁹ C. Show your working. [4 marks]",
+      "markPoints": [
+        "Convert 1.0 mA = 1.0 × 10⁻³ A and 2.0 ms = 2.0 × 10⁻³ s.",
+        "Use Q = It = (1.0 × 10⁻³)(2.0 × 10⁻³) = 2.0 × 10⁻⁶ C.",
+        "Calculate N = Q/e = (2.0 × 10⁻⁶)/(1.6 × 10⁻¹⁹) = 1.25 × 10¹³ electrons.",
+        "State nearest power-of-ten order of magnitude as 10¹³ electrons."
+      ],
+      "markPointMarks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "modelAnswer": "Convert the estimates to SI units: I ≈ 1.0 × 10⁻³ A and t ≈ 2.0 × 10⁻³ s. The charge transferred is Q = It ≈ (1.0 × 10⁻³)(2.0 × 10⁻³) = 2.0 × 10⁻⁶ C. The estimated number of electrons is N ≈ Q/e = (2.0 × 10⁻⁶ C)/(1.6 × 10⁻¹⁹ C) = 1.25 × 10¹³. Rounding to the nearest power-of-ten order gives about 10¹³ electrons. These are approximate values and do not justify reporting more precise estimates.",
+      "answerType": "points",
+      "questionType": "multi-step order-of-magnitude estimation requiring manual working review",
+      "requiresWorking": true,
+      "manualWorkingReview": true,
+      "standalone": true,
+      "mock": true,
+      "taught": true,
+      "sourceVerified": false,
+      "verificationLevel": "original-exam-style",
+      "difficulty": "medium",
+      "groupId": "task1_v376_phy_estimation_01",
+      "groupOrder": 1
+    }
+  ]
+}
