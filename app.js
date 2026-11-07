@@ -234,6 +234,32 @@ function applyV386Chemistry25WorkingReview(questions){
  return questions;
 }
 
+// v390: nineteen original Physics AS worked questions, 146 marks: real
+// method and interpretation are reviewed point by point, not guessed from keywords.
+const V390_PHYSICS_19_MANUAL=Object.freeze([{"id":"task1_v194_practical_03","level":"AS","specRef":"3.4.1.3","marks":6,"promptHash":"d05eb7d3","modelAnswerHash":"681b92f9"},{"id":"task1_v194_practical_04","level":"AS","specRef":"3.4.2.1","marks":7,"promptHash":"84096a30","modelAnswerHash":"a32e544f"},{"id":"task1_v194_practical_05","level":"AS","specRef":"3.5.1.3","marks":6,"promptHash":"f4f5cf1c","modelAnswerHash":"2ca81a04"},{"id":"task1_v194_practical_06","level":"AS","specRef":"3.5.1.6","marks":6,"promptHash":"fbfabcf5","modelAnswerHash":"1dcc0b54"},{"id":"task1_v203_phy_01","level":"AS","specRef":"3.4.1.3","marks":8,"promptHash":"c4f66a82","modelAnswerHash":"9c4a98bd"},{"id":"task1_v203_phy_02","level":"AS","specRef":"3.4.1.3","marks":8,"promptHash":"7eb84210","modelAnswerHash":"a76bdb1"},{"id":"task1_v203_phy_03","level":"AS","specRef":"3.4.1.3","marks":8,"promptHash":"2021910e","modelAnswerHash":"f4ff2b7c"},{"id":"task1_v203_phy_04","level":"AS","specRef":"3.4.2.1","marks":9,"promptHash":"744eb4a6","modelAnswerHash":"87c8e006"},{"id":"task1_v203_phy_05","level":"AS","specRef":"3.4.2.2","marks":9,"promptHash":"b3dea8aa","modelAnswerHash":"5818ddda"},{"id":"task1_v203_phy_06","level":"AS","specRef":"3.5.1.5","marks":8,"promptHash":"fe007ab5","modelAnswerHash":"9a523b6b"},{"id":"task1_v203_phy_07","level":"AS","specRef":"3.5.1.5","marks":8,"promptHash":"b3b41d2d","modelAnswerHash":"5919925"},{"id":"task1_v203_phy_08","level":"AS","specRef":"3.5.1.6","marks":9,"promptHash":"22f94b33","modelAnswerHash":"a7a0aa6b"},{"id":"task1_v197_mech_01","level":"AS","specRef":"3.4.1.1","marks":8,"promptHash":"565b2054","modelAnswerHash":"5625b365"},{"id":"task1_v197_mech_02","level":"AS","specRef":"3.4.1.4","marks":8,"promptHash":"6789071e","modelAnswerHash":"96b2b9c8"},{"id":"task1_v197_mech_03","level":"AS","specRef":"3.4.1.2","marks":8,"promptHash":"7e7cba24","modelAnswerHash":"6d493f4a"},{"id":"task1_v197_mech_04","level":"AS","specRef":"3.4.1.6","marks":7,"promptHash":"85328555","modelAnswerHash":"51371825"},{"id":"task1_v197_mech_05","level":"AS","specRef":"3.4.1.3","marks":8,"promptHash":"e5e5faa8","modelAnswerHash":"4b103935"},{"id":"task1_v197_mech_06","level":"AS","specRef":"3.4.1.6","marks":8,"promptHash":"3b14e08","modelAnswerHash":"a7403d0c"},{"id":"task1_v197_mech_07","level":"AS","specRef":"3.4.1.4","marks":7,"promptHash":"29556dd4","modelAnswerHash":"417e1bae"}]);
+function v390PhysicsSourceHash(s){
+ let h=2166136261;
+ const value=String(s||'');
+ for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV390Physics19WorkingReview(questions){
+ const indexed=new Map(V390_PHYSICS_19_MANUAL.map(r=>[r.id,r]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Physics'||q.level!==row.level||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.manualWorkingReview===true||q.specRef!==row.specRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v390PhysicsSourceHash(q.prompt)!==row.promptHash||
+     v390PhysicsSourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v390ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5919,6 +5945,7 @@ async function sync(manual=false){
  applyV384PhysicsSixWorkingReview(examQuestions);
  applyV385ChemistryTenWorkingReview(examQuestions);
  applyV386Chemistry25WorkingReview(examQuestions);
+ applyV390Physics19WorkingReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
