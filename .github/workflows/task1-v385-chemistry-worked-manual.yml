@@ -1,0 +1,19 @@
+name: Task 1 v385 Chemistry ten original worked application questions
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v385-chemistry-ten-worked-manual.json'
+      - 'tests/task1-v385-chemistry-ten-worked-manual.cjs'
+      - '.github/workflows/task1-v385-chemistry-worked-manual.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-working-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test ten source-matched Chemistry questions, 71 marks and negative scope guards
+        run: node tests/task1-v385-chemistry-ten-worked-manual.cjs
+      - name: Verify prior Physics, Maths, Chemistry manual routes and core flashcard markers
+        run: node tests/task1-v384-physics-electricity-mechanics-six-manual.cjs && node tests/task1-v383-maths-trig-differentiation-manual-review.cjs && node tests/task1-v382-maths-eighteen-worked-exam-manual-marking.cjs && node tests/task1-v381-maths-21-core-markers.cjs

@@ -182,6 +182,32 @@ function applyV384PhysicsSixWorkingReview(questions){
  return questions;
 }
 
+// v385: ten actual multi-step Chemistry AS/taught A2 exam applications are
+// assessed from the student's working rather than automatically inferred keywords.
+const V385_CHEMISTRY_TEN_MANUAL=Object.freeze([{"id":"task1_v195_exam_03","level":"A2","specRef":"3.1.8.1","marks":8,"promptHash":"26f004ce","modelAnswerHash":"2f87d2d3"},{"id":"task1_v195_exam_04","level":"A2","specRef":"3.1.10","marks":7,"promptHash":"b3c36b35","modelAnswerHash":"fff595f3"},{"id":"task1_v195_exam_05","level":"AS","specRef":"3.2.1.2","marks":6,"promptHash":"6f08d99f","modelAnswerHash":"845f371d"},{"id":"task1_v198_chem_08","level":"AS","specRef":"3.1.4.2","marks":9,"promptHash":"ff42eb06","modelAnswerHash":"cf0d5276"},{"id":"task1_v198_chem_09","level":"A2","specRef":"3.1.8.1","marks":8,"promptHash":"b9050614","modelAnswerHash":"13c3a9c8"},{"id":"task1_v198_chem_10","level":"A2","specRef":"3.1.8.2","marks":7,"promptHash":"dd521db0","modelAnswerHash":"cc655038"},{"id":"task1_v194_practical_07","level":"AS","specRef":"3.1.2.3","marks":7,"promptHash":"898cf6eb","modelAnswerHash":"a80696b4"},{"id":"task1_v194_practical_08","level":"AS","specRef":"3.1.4.2","marks":7,"promptHash":"d8849cef","modelAnswerHash":"ff5e4716"},{"id":"task1_v194_practical_09","level":"AS","specRef":"3.1.5.1","marks":6,"promptHash":"82e642c1","modelAnswerHash":"1e95e8fe"},{"id":"task1_v194_practical_10","level":"A2","specRef":"3.3.9.2","marks":6,"promptHash":"5a2ff009","modelAnswerHash":"9b4e0b86"}]);
+function v385ChemistrySourceHash(s){
+ let h=2166136261;
+ const value=String(s||'');
+ for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV385ChemistryTenWorkingReview(questions){
+ const indexed=new Map(V385_CHEMISTRY_TEN_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Chemistry'||q.level!==row.level||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.manualWorkingReview===true||q.specRef!==row.specRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v385ChemistrySourceHash(q.prompt)!==row.promptHash||
+     v385ChemistrySourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v385ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5816,6 +5842,7 @@ async function sync(manual=false){
  applyV382MathsWorkedExamManualReview(examQuestions);
  applyV383MathsTrigDifferentiationManualReview(examQuestions);
  applyV384PhysicsSixWorkingReview(examQuestions);
+ applyV385ChemistryTenWorkingReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
