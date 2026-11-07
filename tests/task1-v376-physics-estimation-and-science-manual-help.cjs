@@ -1,0 +1,95 @@
+'use strict';
+// v376: a separate original Physics derived-order-of-magnitude exam question
+// plus science-vs-proof manual scoring guidance, with no core ID reset.
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
+const app=read('app.js'),sw=read('sw.js'),deck=json('deck.json');
+const bank=json('physics_order_of_magnitude_practice_v376.json');
+const audit=json('editorial/task1-v376-physics-derived-estimation-and-science-manual-review.json');
+const oldPrac=json('science_application_gaps_v333.json');
+assert.equal(deck.cards.length,3345);
+assert.equal(new Set(deck.cards.map(c=>c.id)).size,3345);
+assert.equal(bank.version,'v376');
+assert.equal(bank.questions.length,1);
+assert.equal(audit.version,'v376');
+assert.equal(audit.counts.originalCoreFlashcardsUnchanged,3345);
+assert.equal(audit.counts.previousExamSupplementIndicesPreserved,50);
+assert.equal(audit.counts.addedMarkPoints,4);
+assert.equal(audit.counts.automaticallyAwardedMarksOnQuestion,0);
+assert(sw.includes('-v376-estimation-and-mark-help'));
+assert(sw.includes("'./physics_order_of_magnitude_practice_v376.json'"));
+const match=app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/);
+assert(match,'No original exam-bank loading order');
+const paths=[...match[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
+assert.equal(paths.length,51,'Append only after 50 older exam banks');
+assert.equal(paths[50],'physics_order_of_magnitude_practice_v376.json');
+assert.equal(paths[33],'maths_year1_pure_reasoning_v271.json');
+const oldQuestions=[...json('exam_questions.json').questions,...paths.slice(0,50).flatMap(p=>json(p).questions||[])];
+const oldIds=new Set(oldQuestions.map(q=>q.id));
+const oldPrompts=new Set(oldQuestions.map(q=>String(q.prompt||'').trim().toLowerCase()));
+const q=bank.questions[0];
+assert.equal(q.id,'task1_v376_phy_estimation_01');
+assert(!oldIds.has(q.id),'Original exam ID overwritten');
+assert(!oldPrompts.has(q.prompt.trim().toLowerCase()),'A duplicate exam question was added');
+assert.equal(q.subject,'Physics');
+assert.equal(q.level,'AS');
+assert.equal(q.specRef,'3.1.3');
+assert.equal(q.courseTopic,'Measurements and their errors');
+assert.equal(q.mock,true);assert.equal(q.taught,true);assert.equal(q.standalone,true);
+assert.equal(q.requiresWorking,true);assert.equal(q.manualWorkingReview,true);
+assert.equal(q.sourceVerified,false);assert.equal(q.verificationLevel,'original-exam-style');
+assert.equal(q.marks,4);assert.equal(q.markPoints.length,4);
+assert.deepEqual(q.markPointMarks,[1,1,1,1]);
+assert(q.prompt.endsWith('[4 marks]'));
+const oldPower=oldPrac.questions.find(x=>x.id==='task1_v333_phy_01');
+assert(oldPower&&/order of magnitude/i.test(oldPower.prompt),'Previously covered mechanical-power estimation preserved');
+// Independently compute SI conversion, charge, carrier count and nearest order.
+const I=1.0e-3,t=2.0e-3,e=1.6e-19;
+const Q=I*t,N=Q/e,power=10**Math.round(Math.log10(N));
+assert.equal(Q,2e-6);
+assert.equal(N,1.25e13);
+assert.equal(power,1e13);
+for(const token of ['1.0 × 10⁻³ A','2.0 × 10⁻³ s','2.0 × 10⁻⁶ C',
+                     '1.25 × 10¹³','10¹³ electrons'])assert(q.modelAnswer.includes(token),'Missing model calculation '+token);
+assert.equal(audit.addition.expected.charge_C,Q);
+assert.equal(audit.addition.expected.numberOfElectrons,N);
+assert.equal(audit.addition.expected.nearestOrderOfMagnitude,power);
+// Confirm student must supply complete working and self-review; no keyword score.
+const mockStart=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS=');
+const mockEnd=app.indexOf('function startMockSession(){',mockStart);
+assert(mockStart>0&&mockEnd>mockStart);
+const isMock=new Function(app.slice(mockStart,mockEnd)+'\nreturn mockEligibleQuestion;')();
+assert(isMock(q),'AS Physics estimation question must be selectable in school mock');
+const start=app.indexOf('function examSuggested(q,answer){');
+const end=app.indexOf(' // v213:',start);
+assert(start>0&&end>start);
+const suggest=new Function('window',app.slice(start,end)+'\n}\nreturn examSuggested;')({});
+for(const answer of ['',q.modelAnswer,'10^14 electrons','10^13 electrons','multiply 1mA by 2ms']){
+ const r=suggest(q,answer);
+ assert.equal(r.manualRequired,true);
+ assert.equal(r.suggested,0);
+ assert.deepEqual(r.preds,[false,false,false,false]);
+ assert.deepEqual(r.scores,[0,0,0,0]);
+}
+assert(app.includes('if(q.manualDiagramReview===true||q.manualWorkingReview===true){beginManualExamReview(q);return;}'));
+// UI text follows subject and marking mode: a science calculation is not a "mathematical proof".
+const startHelp=app.indexOf('function manualExamHelpText(q){'),endHelp=app.indexOf('function beginManualExamReview(q){',startHelp);
+assert(startHelp>0&&endHelp>startHelp);
+const helper=new Function(app.slice(startHelp,endHelp)+'\nreturn {help:manualExamHelpText,button:manualExamButtonText};')();
+const scienceHelp=helper.help(q),scienceButton=helper.button(q);
+assert(/multi-step science question/.test(scienceHelp)&&!/full mathematical proof/.test(scienceHelp));
+assert.equal(scienceButton,'Review science working point by point');
+const mathsProof={subject:'Maths',specRef:'3.2',manualWorkingReview:true};
+assert(/full mathematical proof/.test(helper.help(mathsProof)));
+assert.equal(helper.button(mathsProof),'Review proof marking points manually');
+const mathsMethod={subject:'Maths',specRef:'3.11',manualWorkingReview:true};
+assert(/multi-step maths question/.test(helper.help(mathsMethod)));
+assert.equal(helper.button(mathsMethod),'Review maths working point by point');
+const drawing={subject:'Physics',manualWorkingReview:true,manualDiagramReview:true};
+assert(/drawing or graph/.test(helper.help(drawing)));
+assert.equal(helper.button(drawing),'Review diagram and working manually');
+const generic={subject:'Chemistry',manualWorkingReview:false,manualDiagramReview:false};
+assert(/Suggested marks are not final/.test(helper.help(generic)));
+assert.equal(helper.button(generic),'Suggest marks (review before saving)');
+for(const key of ["PROGRESS_KEY='revisionLoopProgress5'","PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"])assert(app.includes(key));
+console.log('PASS v376: one 4-mark AS Physics 3.1.3 estimate with correct 10^13 result, exact 50-bank append, manual zero-credit marking, proof/science/diagram UI and 3345 legacy core IDs preserved.');
