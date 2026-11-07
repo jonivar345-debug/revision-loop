@@ -1,0 +1,19 @@
+name: Task 1 v380 Chemistry twenty AS original marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v380-chemistry-twenty-atomic-bonding-ion-test-markers.json'
+      - 'tests/task1-v380-chemistry-twenty-atomic-bonding-markers.cjs'
+      - '.github/workflows/task1-v380-chemistry-twenty-core-markers.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-twenty-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check original 20 AQA AS Chemistry source cards with production marker
+        run: node tests/task1-v380-chemistry-twenty-atomic-bonding-markers.cjs
+      - name: Preserve previously tested Chemistry and Physics original cards
+        run: node tests/task1-v378-chemistry-acids-organic-18-markers.cjs && node tests/task1-v379-physics-twenty-core-markers.cjs && node tests/task1-v371-physics-mechanics-measurements-core-markers.cjs
