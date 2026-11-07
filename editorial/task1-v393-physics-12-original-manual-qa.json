@@ -1,0 +1,153 @@
+{
+  "version": "v393",
+  "date": "2026-11-07",
+  "scope": "12 original AQA AS Physics mock multi-step application questions; guard only the exact original questions. No new exam questions or flashcards.",
+  "sourceBank": "exam_questions.json",
+  "counts": {
+    "sourceOriginal": 12,
+    "marksManual": 77,
+    "subject": "Physics",
+    "originalCoreFlashcardIDsUntouched": 3345
+  },
+  "method": "Require exact existing ID, subject, AS level, topic/course labels, mock eligibility, standalone and working flags, mark count/array sum and prompt+model hashes before enabling manual point-by-point rubric. Automatic suggested method marks remain zero.",
+  "rows": [
+    {
+      "id": "mock_v154_01",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Physics",
+      "specRef": null,
+      "marks": 7,
+      "promptHash": "7ce5af60",
+      "modelAnswerHash": "4331ea41"
+    },
+    {
+      "id": "mock_v154_02",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Physics",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "784b86e2",
+      "modelAnswerHash": "78fb426f"
+    },
+    {
+      "id": "mock_v154_03",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Physics",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "626ef1b9",
+      "modelAnswerHash": "11f6fdf6"
+    },
+    {
+      "id": "mock_v154_04",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics & materials",
+      "courseTopic": "Physics",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "2ad604d",
+      "modelAnswerHash": "fc2920bd"
+    },
+    {
+      "id": "mock_v154_05",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Physics",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "28af3348",
+      "modelAnswerHash": "8a18bb5f"
+    },
+    {
+      "id": "mock_v154_06",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Physics",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "74cf26df",
+      "modelAnswerHash": "f97d4ee"
+    },
+    {
+      "id": "mock_v159_01",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "specRef": null,
+      "marks": 7,
+      "promptHash": "127b1d10",
+      "modelAnswerHash": "d32864a9"
+    },
+    {
+      "id": "mock_v159_02",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "a13e68ed",
+      "modelAnswerHash": "1110e25c"
+    },
+    {
+      "id": "mock_v159_03",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "specRef": null,
+      "marks": 7,
+      "promptHash": "cff12086",
+      "modelAnswerHash": "2ff26641"
+    },
+    {
+      "id": "mock_v160_02",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Photoelectric effect",
+      "courseTopic": "Photoelectric effect",
+      "specRef": null,
+      "marks": 7,
+      "promptHash": "d1790e9e",
+      "modelAnswerHash": "46a8e056"
+    },
+    {
+      "id": "stretch_v34_physics_rp2_interference",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "courseTopic": "Waves",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "de35010b",
+      "modelAnswerHash": "f5d03d86"
+    },
+    {
+      "id": "stretch_v34_physics_internal_resistance",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Electricity",
+      "courseTopic": "Electricity",
+      "specRef": null,
+      "marks": 7,
+      "promptHash": "640f6ef",
+      "modelAnswerHash": "3ec17003"
+    }
+  ],
+  "limitations": [
+    "Does not certify the original question answers as independently examiner verified.",
+    "Does not grade diagrams, handwriting or unusual correct solutions automatically.",
+    "Original bank, IDs, cloud sync, XP and saved revision are unchanged.",
+    "Stack on v392 until previous PRs are merged and all GitHub and Vercel checks pass."
+  ]
+}
