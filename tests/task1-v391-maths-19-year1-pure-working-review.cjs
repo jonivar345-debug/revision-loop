@@ -77,8 +77,8 @@ for(let i=0;i<original.length;i++){
 assert.equal(probes,95);assert.equal(negative,323);
 // Independent calculations of exact named hard first-mock topics.
 for(let n=-40;n<=40;n++){
- assert.equal((n**5-n)%30,0);
- assert.equal((n**3-n)%6,0);
+ assert((n**5-n)%30===0,'Divisibility 30, signed zero accepted');
+ assert((n**3-n)%6===0,'Divisibility 6, signed zero accepted');
 }
 assert.equal(16**2+16+17,289);
 assert.equal(17**2,289);
