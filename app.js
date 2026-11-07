@@ -208,6 +208,32 @@ function applyV385ChemistryTenWorkingReview(questions){
  return questions;
 }
 
+// v386: route 25 original AS Chemistry amount/inorganic/organic multi-step
+// school-mock questions to point-by-point manual working review, not fuzzy keyword credit.
+const V386_CHEMISTRY_25_MANUAL=Object.freeze([{"id":"task1_v270_chem_amount_q01","level":"AS","specRef":"3.1.2.5","marks":5,"promptHash":"3a6f2fe3","modelAnswerHash":"5e3d5b9c"},{"id":"task1_v270_chem_amount_q02","level":"AS","specRef":"3.1.2.2","marks":6,"promptHash":"427811f1","modelAnswerHash":"c4231b39"},{"id":"task1_v270_chem_amount_q03","level":"AS","specRef":"3.1.2.3","marks":6,"promptHash":"980b55a0","modelAnswerHash":"9fe2db21"},{"id":"task1_v270_chem_amount_q04","level":"AS","specRef":"3.1.2.5","marks":6,"promptHash":"fb672a91","modelAnswerHash":"4f44de44"},{"id":"task1_v270_chem_amount_q05","level":"AS","specRef":"3.1.2.5","marks":5,"promptHash":"3275f83f","modelAnswerHash":"cbdec90c"},{"id":"task1_v270_chem_amount_q06","level":"AS","specRef":"3.1.2.4","marks":6,"promptHash":"6da8e440","modelAnswerHash":"b83e4168"},{"id":"task1_v270_chem_amount_q07","level":"AS","specRef":"3.1.2.2","marks":4,"promptHash":"9c26df3a","modelAnswerHash":"c7bffc09"},{"id":"task1_v278_chem_amount_q01","level":"AS","specRef":"3.1.2.1","marks":6,"promptHash":"a37bd04e","modelAnswerHash":"81b90001"},{"id":"task1_v278_chem_amount_q02","level":"AS","specRef":"3.1.2.2","marks":5,"promptHash":"31d51773","modelAnswerHash":"658157bd"},{"id":"task1_v278_chem_amount_q03","level":"AS","specRef":"3.1.2.5","marks":6,"promptHash":"ea6597ef","modelAnswerHash":"ce81ffec"},{"id":"task1_v278_chem_amount_q04","level":"AS","specRef":"3.1.2.5","marks":6,"promptHash":"2961944b","modelAnswerHash":"15eeeef4"},{"id":"task1_v278_chem_amount_q05","level":"AS","specRef":"3.1.2.5","marks":8,"promptHash":"dba20153","modelAnswerHash":"3d6f8d1f"},{"id":"task1_v196_exam_05","level":"AS","specRef":"3.2.3.1","marks":7,"promptHash":"aad20174","modelAnswerHash":"e8db3f64"},{"id":"task1_v196_exam_06","level":"AS","specRef":"3.2.2","marks":7,"promptHash":"6a98641c","modelAnswerHash":"8051c9a9"},{"id":"task1_v196_exam_07","level":"AS","specRef":"3.2.2","marks":7,"promptHash":"d3e9725","modelAnswerHash":"4156e636"},{"id":"task1_v196_exam_08","level":"AS","specRef":"3.2.3.1","marks":7,"promptHash":"2b746101","modelAnswerHash":"6b64e1b0"},{"id":"task1_v202_chem_01","level":"AS","specRef":"3.2.3.1","marks":7,"promptHash":"93fd36f7","modelAnswerHash":"75de1a54"},{"id":"task1_v202_chem_02","level":"AS","specRef":"3.2.2","marks":8,"promptHash":"6c04168a","modelAnswerHash":"4acc4bcc"},{"id":"task1_v202_chem_03","level":"AS","specRef":"3.2.2","marks":7,"promptHash":"c51bc37e","modelAnswerHash":"8315c847"},{"id":"task1_v202_chem_04","level":"AS","specRef":"3.3.5.3","marks":8,"promptHash":"be8b9b6d","modelAnswerHash":"6bc6ec61"},{"id":"task1_v202_chem_05","level":"AS","specRef":"3.3.5.3","marks":7,"promptHash":"84c3889c","modelAnswerHash":"d0f6b90a"},{"id":"task1_v202_chem_06","level":"AS","specRef":"3.3.5.3","marks":8,"promptHash":"10c55a38","modelAnswerHash":"1732cdbc"},{"id":"task1_v202_chem_07","level":"AS","specRef":"3.3.6.1","marks":8,"promptHash":"bc2dae58","modelAnswerHash":"9010e1dd"},{"id":"task1_v202_chem_08","level":"AS","specRef":"3.3.5.1","marks":8,"promptHash":"ff13950","modelAnswerHash":"232a78e0"},{"id":"task1_v202_chem_09","level":"AS","specRef":"3.3.6.1","marks":8,"promptHash":"be5ff0c6","modelAnswerHash":"a2d45d89"}]);
+function v386ChemistrySourceHash(s){
+ let h=2166136261;
+ const value=String(s||'');
+ for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV386Chemistry25WorkingReview(questions){
+ const indexed=new Map(V386_CHEMISTRY_25_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Chemistry'||q.level!==row.level||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.manualWorkingReview===true||q.specRef!==row.specRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v386ChemistrySourceHash(q.prompt)!==row.promptHash||
+     v386ChemistrySourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v386ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5843,6 +5869,7 @@ async function sync(manual=false){
  applyV383MathsTrigDifferentiationManualReview(examQuestions);
  applyV384PhysicsSixWorkingReview(examQuestions);
  applyV385ChemistryTenWorkingReview(examQuestions);
+ applyV386Chemistry25WorkingReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
