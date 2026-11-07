@@ -1,0 +1,19 @@
+name: Task 1 v384 Physics Electricity and Mechanics manual working
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v384-physics-electricity-mechanics-six-manual.json'
+      - 'tests/task1-v384-physics-electricity-mechanics-six-manual.cjs'
+      - '.github/workflows/task1-v384-physics-electricity-mechanics-manual.yml'
+  workflow_dispatch:
+jobs:
+  physics-method-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate six original Physics applications, 46 marks and negative marking probes
+        run: node tests/task1-v384-physics-electricity-mechanics-six-manual.cjs
+      - name: Guard Waves, Maths proof and trigonometry manual routes
+        run: node tests/task1-v377-waves-manual-working-qa.cjs && node tests/task1-v382-maths-eighteen-worked-exam-manual-marking.cjs && node tests/task1-v383-maths-trig-differentiation-manual-review.cjs

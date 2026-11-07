@@ -156,6 +156,32 @@ function applyV383MathsTrigDifferentiationManualReview(questions){
  return questions;
 }
 
+// v384: six original Physics Electricity/Mechanics multi-step applications need
+// real written working; avoid awarding method marks by fuzzy keyword matching.
+const V384_PHYSICS_SIX_MANUAL=Object.freeze([{"id":"task1_v196_exam_01","specRef":"3.5.1.5","marks":7,"promptHash":"50cb9c38","modelAnswerHash":"fb89036b"},{"id":"task1_v196_exam_02","specRef":"3.5.1.4","marks":8,"promptHash":"8ea57e88","modelAnswerHash":"4a5bc6e4"},{"id":"task1_v196_exam_03","specRef":"3.5.1.2","marks":7,"promptHash":"c266cd3b","modelAnswerHash":"971c4746"},{"id":"task1_v196_exam_04","specRef":"3.5.1.5","marks":7,"promptHash":"cb21cb36","modelAnswerHash":"e93c699f"},{"id":"task1_v280_phy_mech_q01","specRef":"3.4.1.2","marks":9,"promptHash":"2a2a584","modelAnswerHash":"1ea96184"},{"id":"task1_v280_phy_mech_q04","specRef":"3.4.2.2","marks":8,"promptHash":"d8d35cc","modelAnswerHash":"9725d992"}]);
+function v384PhysicsSourceHash(s){
+ let h=2166136261;
+ const value=String(s||'');
+ for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV384PhysicsSixWorkingReview(questions){
+ const indexed=new Map(V384_PHYSICS_SIX_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Physics'||q.level!=='AS'||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.manualWorkingReview===true||q.specRef!==row.specRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v384PhysicsSourceHash(q.prompt)!==row.promptHash||
+     v384PhysicsSourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v384ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5789,6 +5815,7 @@ async function sync(manual=false){
  applyV377PhysicsWavesManualReview(examQuestions);
  applyV382MathsWorkedExamManualReview(examQuestions);
  applyV383MathsTrigDifferentiationManualReview(examQuestions);
+ applyV384PhysicsSixWorkingReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}

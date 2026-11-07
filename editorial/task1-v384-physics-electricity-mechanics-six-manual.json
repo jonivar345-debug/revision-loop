@@ -1,0 +1,70 @@
+{
+  "version": "v384",
+  "date": "2026-11-07",
+  "subject": "Physics",
+  "scope": "Six already-existing multi-step AQA AS school-mock Physics Electricity and Mechanics/Materials questions: potential dividers (2), cells/internal resistance (1), filament-lamp I-V data (1), equilibrium couples (1) and Young modulus with uncertainty (1). Not flashcards.",
+  "counts": {
+    "existingQuestionsReviewed": 6,
+    "marksRequiringManualWorking": 46,
+    "sourceBanks": 2,
+    "coreFlashcardIdsPreserved": 3345,
+    "originalQuestionOrAnswerEdits": 0,
+    "automaticMethodMarks": 0
+  },
+  "method": "Exact original source IDs, AQA section, mock/AS eligibility, number of marks, original prompt and model-answer hashes and mark-point arrays must all match before selecting the existing point-by-point manual working route. Saved answers/XP, diagrams and all original content are left untouched.",
+  "rows": [
+    {
+      "sourceFile": "science_mock_evidence_v196.json",
+      "id": "task1_v196_exam_01",
+      "specRef": "3.5.1.5",
+      "marks": 7,
+      "promptHash": "50cb9c38",
+      "modelAnswerHash": "fb89036b"
+    },
+    {
+      "sourceFile": "science_mock_evidence_v196.json",
+      "id": "task1_v196_exam_02",
+      "specRef": "3.5.1.4",
+      "marks": 8,
+      "promptHash": "8ea57e88",
+      "modelAnswerHash": "4a5bc6e4"
+    },
+    {
+      "sourceFile": "science_mock_evidence_v196.json",
+      "id": "task1_v196_exam_03",
+      "specRef": "3.5.1.2",
+      "marks": 7,
+      "promptHash": "c266cd3b",
+      "modelAnswerHash": "971c4746"
+    },
+    {
+      "sourceFile": "science_mock_evidence_v196.json",
+      "id": "task1_v196_exam_04",
+      "specRef": "3.5.1.5",
+      "marks": 7,
+      "promptHash": "cb21cb36",
+      "modelAnswerHash": "e93c699f"
+    },
+    {
+      "sourceFile": "physics_mechanics_signed_area_couples_practice_v280.json",
+      "id": "task1_v280_phy_mech_q01",
+      "specRef": "3.4.1.2",
+      "marks": 9,
+      "promptHash": "2a2a584",
+      "modelAnswerHash": "1ea96184"
+    },
+    {
+      "sourceFile": "physics_mechanics_signed_area_couples_practice_v280.json",
+      "id": "task1_v280_phy_mech_q04",
+      "specRef": "3.4.2.2",
+      "marks": 8,
+      "promptHash": "d8d35cc",
+      "modelAnswerHash": "9725d992"
+    }
+  ],
+  "limits": [
+    "Manual checking requires the student to compare real mathematical/scientific working with each rubric point; no automatic credit for keyword hits.",
+    "This does not independently certify all equivalent solutions, all actual photographed working or every AQA mock specification item.",
+    "Previously labelled manual drawing questions remain handled separately and unchanged."
+  ]
+}
