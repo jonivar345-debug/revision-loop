@@ -1,0 +1,19 @@
+name: Task 1 v383 Maths trig and differentiation original worked questions
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v383-maths-trig-differentiation-34-marks.json'
+      - 'tests/task1-v383-maths-trig-differentiation-manual-review.cjs'
+      - '.github/workflows/task1-v383-maths-trig-differentiation-manual.yml'
+  workflow_dispatch:
+jobs:
+  maths-trig-differentiation-manual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate five source-matched Maths method questions and preserved sketch
+        run: node tests/task1-v383-maths-trig-differentiation-manual-review.cjs
+      - name: Check v382 and existing Year 1 Pure Maths marking regressions
+        run: node tests/task1-v382-maths-eighteen-worked-exam-manual-marking.cjs && node tests/task1-v372-year1-pure-five-manual-working-qa.cjs && node tests/task1-v381-maths-21-core-markers.cjs

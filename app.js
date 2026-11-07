@@ -134,6 +134,28 @@ function applyV382MathsWorkedExamManualReview(questions){
  return questions;
 }
 
+
+// v383: exact source-locked, point-by-point review for five trigonometry
+// and differentiation Year 1 Pure exam questions (34 marks).
+const V383_MATHS_METHOD_MANUAL=Object.freeze([{"id":"task1_v292_maths_pure_q01","sourceCourseTopic":"Year 1 Pure Maths","sourceSpecRef":"3.6","marks":6,"promptHash":"6f146f97","modelAnswerHash":"cb6a3899"},{"id":"task1_v292_maths_pure_q02","sourceCourseTopic":"Year 1 Pure Maths","sourceSpecRef":"3.6","marks":7,"promptHash":"86a63fdb","modelAnswerHash":"4928ab1e"},{"id":"task1_v292_maths_pure_q04","sourceCourseTopic":"Year 1 Pure Maths","sourceSpecRef":"3.8","marks":8,"promptHash":"29c9c1c5","modelAnswerHash":"eef068c"},{"id":"task1_v292_maths_pure_q05","sourceCourseTopic":"Year 1 Pure Maths","sourceSpecRef":"3.8","marks":6,"promptHash":"8938156a","modelAnswerHash":"40b3c17"},{"id":"task1_v292_maths_pure_q06","sourceCourseTopic":"Year 1 Pure Maths","sourceSpecRef":"3.8","marks":7,"promptHash":"e097ab26","modelAnswerHash":"cffe8cd8"}]);
+function applyV383MathsTrigDifferentiationManualReview(questions){
+ const byId=new Map(V383_MATHS_METHOD_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=byId.get(q?.id);
+  if(!row||q.subject!=='Maths'||q.level!=='AS'||q.mock!==true||q.taught!==true||
+     q.standalone!==true||q.requiresWorking!==true||q.manualWorkingReview===true||
+     q.manualDiagramReview===true||q.courseTopic!==row.sourceCourseTopic||
+     q.specRef!==row.sourceSpecRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v382SourceHash(q.prompt)!==row.promptHash||
+     v382SourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v383ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5766,6 +5788,7 @@ async function sync(manual=false){
  applyV372Year1PureManualReview(examQuestions);
  applyV377PhysicsWavesManualReview(examQuestions);
  applyV382MathsWorkedExamManualReview(examQuestions);
+ applyV383MathsTrigDifferentiationManualReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}

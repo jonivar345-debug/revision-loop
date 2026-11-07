@@ -1,0 +1,66 @@
+{
+  "version": "v383",
+  "date": "2026-11-07",
+  "scope": "Five original AQA AS Year 1 Pure mock-eligible worked trigonometry and differentiation questions in the v292 original exam bank, worth 34 marks, currently without manual method review.",
+  "sourceBank": "maths_year1_trigonometry_differentiation_practice_v292.json",
+  "counts": {
+    "existingMultistepQuestions": 5,
+    "manualReviewMarks": 34,
+    "preexistingDrawingQuestionsUnchanged": 1,
+    "originalCoreFlashcardIdsPreserved": 3345,
+    "originalQuestionOrModelAnswerRewrites": 0
+  },
+  "method": "Use exact ID, AQA subject/stage/school scope, existing source topic/subsection, original prompt/answer hashes and all mark points to switch multi-step equations, sine/cosine rule, differentiation, tangent/normal and stationary-point calculations to manual marking. Leave the separate 7-mark hand-drawn sine graph on its existing diagram route.",
+  "limits": [
+    "No automated grade for unseen handwritten working or alternative mathematical methods.",
+    "These are original question-bank examples rather than past AQA examination papers.",
+    "No new flashcards, question rewrites, saved-progress changes, or claim of complete specification coverage."
+  ],
+  "rows": [
+    {
+      "id": "task1_v292_maths_pure_q01",
+      "sourceFile": "maths_year1_trigonometry_differentiation_practice_v292.json",
+      "sourceCourseTopic": "Year 1 Pure Maths",
+      "sourceSpecRef": "3.6",
+      "marks": 6,
+      "promptHash": "6f146f97",
+      "modelAnswerHash": "cb6a3899"
+    },
+    {
+      "id": "task1_v292_maths_pure_q02",
+      "sourceFile": "maths_year1_trigonometry_differentiation_practice_v292.json",
+      "sourceCourseTopic": "Year 1 Pure Maths",
+      "sourceSpecRef": "3.6",
+      "marks": 7,
+      "promptHash": "86a63fdb",
+      "modelAnswerHash": "4928ab1e"
+    },
+    {
+      "id": "task1_v292_maths_pure_q04",
+      "sourceFile": "maths_year1_trigonometry_differentiation_practice_v292.json",
+      "sourceCourseTopic": "Year 1 Pure Maths",
+      "sourceSpecRef": "3.8",
+      "marks": 8,
+      "promptHash": "29c9c1c5",
+      "modelAnswerHash": "eef068c"
+    },
+    {
+      "id": "task1_v292_maths_pure_q05",
+      "sourceFile": "maths_year1_trigonometry_differentiation_practice_v292.json",
+      "sourceCourseTopic": "Year 1 Pure Maths",
+      "sourceSpecRef": "3.8",
+      "marks": 6,
+      "promptHash": "8938156a",
+      "modelAnswerHash": "40b3c17"
+    },
+    {
+      "id": "task1_v292_maths_pure_q06",
+      "sourceFile": "maths_year1_trigonometry_differentiation_practice_v292.json",
+      "sourceCourseTopic": "Year 1 Pure Maths",
+      "sourceSpecRef": "3.8",
+      "marks": 7,
+      "promptHash": "e097ab26",
+      "modelAnswerHash": "cffe8cd8"
+    }
+  ]
+}
