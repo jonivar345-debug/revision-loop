@@ -263,7 +263,7 @@
       "originalFront": "Define lattice dissociation enthalpy.",
       "originalBack": "The enthalpy change when 1 mole of an ionic solid is completely separated into its constituent gaseous ions.",
       "accept": [
-        "One mole of solid ionic compound separates completely into its constituent gaseous ions."
+        "The enthalpy change when one mole of solid ionic compound separates completely into its constituent gaseous ions."
       ],
       "reject": [
         "Lattice dissociation enthalpy forms an ionic solid from its gaseous ions.",
@@ -312,5 +312,6 @@
         "Ka = [H⁺][HA]/[A⁻] for the dissociation of HA."
       ]
     }
-  ]
+  ],
+  "fixNote": "The known wrong lattice-dissociation formation answer is caught by an early exact-reject rule before legacy partial-definition fallback; the accepted definition explicitly includes enthalpy change."
 }
