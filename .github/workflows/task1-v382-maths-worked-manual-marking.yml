@@ -1,0 +1,19 @@
+name: Task 1 v382 Maths eighteen worked exam question manual grading
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v382-maths-eighteen-worked-exam-manual-marking.json'
+      - 'tests/task1-v382-maths-eighteen-worked-exam-manual-marking.cjs'
+      - '.github/workflows/task1-v382-maths-worked-manual-marking.yml'
+  workflow_dispatch:
+jobs:
+  maths-eighteen-manual-working:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original 18 Maths full-working questions and 112 marking points
+        run: node tests/task1-v382-maths-eighteen-worked-exam-manual-marking.cjs
+      - name: Recheck existing first mock, Physics and Maths recall marking
+        run: node tests/task1-v372-year1-pure-five-manual-working-qa.cjs && node tests/task1-v377-waves-manual-working-qa.cjs && node tests/task1-v381-maths-21-core-markers.cjs
