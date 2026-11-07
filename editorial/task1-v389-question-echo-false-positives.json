@@ -1,0 +1,337 @@
+{
+  "version": "v389",
+  "date": "2026-11-07",
+  "scope": "One false-positive class in core AQA school-mock flashcard marking: pasting the full flashcard question into its answer box could score full marks. Fix is an exact full-question repeat guard, not a broad substring ban.",
+  "counts": {
+    "originalCoreTotal": 3345,
+    "activeCoreMockCardsAudited": 2379,
+    "falseFullMarkQuestionEchoesBefore": 39,
+    "bySubjectBefore": {
+      "Physics": 10,
+      "Chemistry": 28,
+      "Maths": 1
+    },
+    "modelAnswerRegressionsPermitted": 0,
+    "unjustifiedQuestionEchoFullMarksAllowedAfter": 0
+  },
+  "method": "Inspect actual v388 production evaluator before fix with input = original front on each active mock card, then verify v389 marks exact echoes wrong. If question text is literally a listed correct answer, retain correct status. Full stored model answers must remain correct and 'I don't know' and 'not [model answer]' must never earn full credit.",
+  "limitations": [
+    "This narrow guard cannot detect a rephrased echo or every free-text wrong answer.",
+    "Does not establish mastery, proof marking, diagram marking or complete AQA syllabus coverage.",
+    "Does not modify original deck, XP, progress, cloud sync, card IDs or mock scope."
+  ],
+  "rows": [
+    {
+      "id": "phy_quarks_001",
+      "subject": "Physics",
+      "originalFront": "Can strangeness change in a weak interaction?",
+      "originalModelAnswer": "Yes, strangeness may change.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "chem_prac_burette",
+      "subject": "Chemistry",
+      "originalFront": "How is the titre calculated from initial and final burette readings?",
+      "originalModelAnswer": "Final reading − initial reading.",
+      "beforeStatus": "correct",
+      "beforeScore": 0.8
+    },
+    {
+      "id": "v33_card_maths_trigonometry_73",
+      "subject": "Maths",
+      "originalFront": "What identity links sin²θ and cos²θ?",
+      "originalModelAnswer": "sin²θ+cos²θ=1.",
+      "beforeStatus": "correct",
+      "beforeScore": 0.8
+    },
+    {
+      "id": "chem_entropy_gibbs_recap_20261024_entropy_temp_effect",
+      "subject": "Chemistry",
+      "originalFront": "How does increasing T affect ΔG when ΔS is positive versus negative?",
+      "originalModelAnswer": "For ΔS > 0, ΔG decreases (more favourable). For ΔS < 0, ΔG increases (less favourable).",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "phy_focus_v38_02",
+      "subject": "Physics",
+      "originalFront": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+      "originalModelAnswer": "12 m s⁻¹.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "chem_spec_v40_001",
+      "subject": "Chemistry",
+      "originalFront": "What is the functional group of a carboxylic acid?",
+      "originalModelAnswer": "–COOH, a carbonyl and hydroxyl group on the same carbon.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "chem_spec_v40_004",
+      "subject": "Chemistry",
+      "originalFront": "What is a carboxylate ion?",
+      "originalModelAnswer": "RCOO−, the conjugate base of a carboxylic acid.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "chem_energetics_v49_18",
+      "subject": "Chemistry",
+      "originalFront": "What happens to ΔH if a whole reaction equation is doubled?",
+      "originalModelAnswer": "ΔH for the doubled equation also doubles.",
+      "beforeStatus": "correct",
+      "beforeScore": 0.8333333333333334
+    },
+    {
+      "id": "chem_energetics_v49_48",
+      "subject": "Chemistry",
+      "originalFront": "If anhydrous salt → solution has ΔH₁ and hydrated salt → solution has ΔH₂, what is ΔH for anhydrous → hydrated salt?",
+      "originalModelAnswer": "ΔH₁ − ΔH₂ (for matching amounts and states).",
+      "beforeStatus": "correct",
+      "beforeScore": 0.8
+    },
+    {
+      "id": "chem_energetics_v53_22",
+      "subject": "Chemistry",
+      "originalFront": "What happens to ΔH when you halve every equation coefficient?",
+      "originalModelAnswer": "Halve ΔH for that equation.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_phy_056",
+      "subject": "Physics",
+      "originalFront": "What happens to fringe spacing if the screen distance increases?",
+      "originalModelAnswer": "It increases.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_chem_078",
+      "subject": "Chemistry",
+      "originalFront": "Which block contains an element whose outermost electron enters a p subshell?",
+      "originalModelAnswer": "p block.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_chem_095",
+      "subject": "Chemistry",
+      "originalFront": "Which is the stronger oxidising agent: chlorine or bromine?",
+      "originalModelAnswer": "Chlorine.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v124_bulk_phy_047",
+      "subject": "Physics",
+      "originalFront": "How does fringe spacing change if screen distance increases?",
+      "originalModelAnswer": "It increases.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v124_bulk_chem_085",
+      "subject": "Chemistry",
+      "originalFront": "What precipitate confirms sulfate with barium ions?",
+      "originalModelAnswer": "White BaSO₄.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v124_bulk_chem_120",
+      "subject": "Chemistry",
+      "originalFront": "What type of species attacks a C=C bond first in electrophilic addition?",
+      "originalModelAnswer": "An electrophile.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v124_bulk_chem_151",
+      "subject": "Chemistry",
+      "originalFront": "What happens to rate when [A] doubles in a first-order reaction?",
+      "originalModelAnswer": "It doubles, if other conditions stay fixed.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v124_bulk_chem_156",
+      "subject": "Chemistry",
+      "originalFront": "What does the y-intercept of ln k against 1/T equal?",
+      "originalModelAnswer": "ln A.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v124_bulk_chem_164",
+      "subject": "Chemistry",
+      "originalFront": "How does increasing temperature change Kp for an endothermic forward reaction?",
+      "originalModelAnswer": "It increases.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_001",
+      "subject": "Physics",
+      "originalFront": "If a 40 N force acts at 30° above horizontal, which component uses cos 30°?",
+      "originalModelAnswer": "The horizontal component.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_002",
+      "subject": "Physics",
+      "originalFront": "If an angle is measured from the vertical, which component uses cos θ?",
+      "originalModelAnswer": "The vertical component.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_037",
+      "subject": "Physics",
+      "originalFront": "What is the sign of momentum for motion in the chosen negative direction?",
+      "originalModelAnswer": "Negative.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_055",
+      "subject": "Physics",
+      "originalFront": "What happens to wavelength if wave speed halves at fixed frequency?",
+      "originalModelAnswer": "It halves.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_066",
+      "subject": "Physics",
+      "originalFront": "What happens to resistance if a wire's length doubles at constant area?",
+      "originalModelAnswer": "It doubles.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_069",
+      "subject": "Physics",
+      "originalFront": "What does the gradient of a V–I graph give for an ohmic resistor?",
+      "originalModelAnswer": "Resistance.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_109",
+      "subject": "Chemistry",
+      "originalFront": "Which metal reacts more readily with water: Ca or Mg?",
+      "originalModelAnswer": "Calcium.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_117",
+      "subject": "Chemistry",
+      "originalFront": "What does a chlorine displacement reaction produce from bromide?",
+      "originalModelAnswer": "Bromine.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_132",
+      "subject": "Chemistry",
+      "originalFront": "What is the rate constant k for a zero-order reaction's rate law rate = k?",
+      "originalModelAnswer": "The constant rate itself.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v125_134",
+      "subject": "Chemistry",
+      "originalFront": "What are k units for overall first order, with rate in mol dm⁻³ s⁻¹?",
+      "originalModelAnswer": "s⁻¹.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v127_004",
+      "subject": "Chemistry",
+      "originalFront": "Which anion gives a white barium sulfate precipitate in a confirmed ion test?",
+      "originalModelAnswer": "Sulfate, SO₄²⁻.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v127_005",
+      "subject": "Chemistry",
+      "originalFront": "Which anion is suggested by bubbles of CO₂ in a carbonate identification test?",
+      "originalModelAnswer": "Carbonate, CO₃²⁻.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v127_040",
+      "subject": "Chemistry",
+      "originalFront": "A broad alcohol O–H band without C=O suggests which group?",
+      "originalModelAnswer": "An alcohol.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v127_044",
+      "subject": "Chemistry",
+      "originalFront": "In a halogenoalkane hydrolysis comparison, what does faster silver-halide formation indicate?",
+      "originalModelAnswer": "Faster release of halide ions.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v127_046",
+      "subject": "Chemistry",
+      "originalFront": "Which bond usually hydrolyses faster in comparable haloalkanes: C–Cl or C–I?",
+      "originalModelAnswer": "C–I.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v127_077",
+      "subject": "Chemistry",
+      "originalFront": "Why are standard enthalpy quantities per mole?",
+      "originalModelAnswer": "The defined change is for one mole of the specified process.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v130_074",
+      "subject": "Chemistry",
+      "originalFront": "Which ions arrive sooner in a TOF tube at equal kinetic energy: lower or higher m/z?",
+      "originalModelAnswer": "Lower m/z ions.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v130_077",
+      "subject": "Chemistry",
+      "originalFront": "What is the meaning of one part per million by mass?",
+      "originalModelAnswer": "One unit mass of solute per million units mass of mixture.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v130_090",
+      "subject": "Chemistry",
+      "originalFront": "Why does changing pressure not shift an equilibrium with equal gas mole counts both sides?",
+      "originalModelAnswer": "Both sides have the same number of gas molecules.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    },
+    {
+      "id": "task1_v130_126",
+      "subject": "Chemistry",
+      "originalFront": "Which carbocation is normally most stable: primary, secondary or tertiary?",
+      "originalModelAnswer": "Tertiary.",
+      "beforeStatus": "correct",
+      "beforeScore": 1
+    }
+  ]
+}

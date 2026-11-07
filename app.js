@@ -3254,6 +3254,16 @@ function isSingleChemistryCoefficientError(c,input){
  return changes===1;
 }
 function evaluateCard(c,input){
+ // v389: repeating the full flashcard question is not an answer, even if
+ // fuzzy token overlap would otherwise make it look correct. Preserve a rare
+ // legitimate card where its official answer is literally the same string.
+ const echoKey=value=>String(value||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[\s?.!]+$/g,'');
+ const proposedEcho=echoKey(input);
+ if(proposedEcho&&proposedEcho===echoKey(c?.front)){
+  const valid=[c?.back,...(Array.isArray(c?.accept)?c.accept:[])];
+  if(!valid.some(a=>echoKey(a)===proposedEcho))
+   return {status:'wrong',score:0,text:'That repeats the question rather than answering it.',missing:[String(c?.back||'')]};
+ }
  if(isReversedChemistryEquation(c,input))
   return {status:'wrong',score:0,text:'This is the reverse chemical reaction; the equation direction must match the question.',missing:[String(c.back||'')]};
  if(isSingleChemistryCoefficientError(c,input))
