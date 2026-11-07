@@ -1,0 +1,19 @@
+name: Task 1 v387 21 original Physics and Chemistry short mock flashcard markers
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v387-21-physics-chemistry-short-card-markers.json'
+      - 'tests/task1-v387-21-physics-chemistry-short-card-markers.cjs'
+      - '.github/workflows/task1-v387-21-short-card-markers.yml'
+  workflow_dispatch:
+jobs:
+  original-short-mock-calibration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 21 original short cards against real production marker
+        run: node tests/task1-v387-21-physics-chemistry-short-card-markers.cjs
+      - name: Check prior original-core and manual-question changes
+        run: node tests/task1-v386-chemistry-25-working-review.cjs && node tests/task1-v385-chemistry-ten-worked-manual.cjs && node tests/task1-v381-maths-21-core-markers.cjs && node tests/task1-v379-physics-twenty-core-markers.cjs && node tests/task1-v380-chemistry-twenty-atomic-bonding-markers.cjs
