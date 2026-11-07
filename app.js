@@ -4753,7 +4753,7 @@ function renderExam(q){
 // v376: accurate manual marking guidance for proofs, calculations and diagrams.
 function manualExamHelpText(q){
  if(q.manualDiagramReview===true)
-  return 'This question includes a drawing or graph. The text checker cannot verify the diagram or complete working. Compare your sketch and calculations with the marking points manually.';
+  return 'This question assesses a drawing. Use the on-page sketch or your own photographed diagram, then compare it manually with the marking points. The text checker cannot verify this drawing or graph.';
  if(q.manualWorkingReview===true&&q.subject==='Maths'&&q.specRef==='3.2')
   return 'This is a full mathematical proof. The automatic keyword checker cannot reliably verify its logical steps. Compare the complete written proof with the marking points manually.';
  if(q.manualWorkingReview===true&&q.subject==='Maths')
