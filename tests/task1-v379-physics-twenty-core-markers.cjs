@@ -8,7 +8,7 @@ const app=read('app.js'),sw=read('sw.js'),rawCore=json('deck.json').cards;
 const start314=app.indexOf('function applyV314CoreMockQuality(existing){');
 const end314=app.indexOf('// v315:',start314);
 assert(start314>0&&end314>start314);
-const applyV314=new Function(app.slice(start314,end314)+'\\nreturn applyV314CoreMockQuality;')();
+const applyV314=new Function(app.slice(start314,end314)+'\nreturn applyV314CoreMockQuality;')();
 const core=rawCore.map(c=>({...c,accept:[...(c.accept||[])],reject:[...(c.reject||[])]}));
 applyV314(core);
 assert.equal(rawCore.length,core.length);
