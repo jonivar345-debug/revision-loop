@@ -17,6 +17,8 @@ const first=app.indexOf('// v373: calibrate existing short AQA Chemistry mock re
 const last=app.indexOf('// v344:',first);
 assert(first>0&&last>first);
 const patch=new Function(app.slice(first,last)+'\nreturn applyV373ChemistryCoreMarkers;')();
+const compiledRows=new Function(app.slice(first,last)+'\nreturn V373_CHEMISTRY_CORE_MARKERS;')();
+assert.deepEqual(compiledRows,report.rows.map(({sourceGroup,...row})=>row),'Live app-reviewed Chemistry variants must equal the editorial evidence');
 const normal=app.indexOf('function normalise(');
 const next=app.indexOf('function importantTokens(',normal);
 assert(normal>0&&next>normal);
@@ -30,6 +32,11 @@ const eligible=new Function(app.slice(scopeStart,scopeEnd)+'\nreturn mockEligibl
 const old=new Map(core.map(c=>[c.id,c]));
 const samples=new Map(prev.topicGroups.flatMap(g=>g.reviewedSample.map(c=>[c.id,c])));
 let originalModels=0,extraAccepted=0,extraRejected=0,previousAccepted=0,previousRejected=0;
+const enthalpyDefs=new Set([
+ 'chem_bh_defs_20261024_atomisation_def','chem_bh_defs_20261024_hydration_def',
+ 'chem_bh_defs_20261024_latt_formation_def','chem_bh_defs_20261024_solution_def',
+ 'chem_bh_defs_20261024_standard_formation_def','chem_bh_defs_20261024_second_ea_def'
+]);
 const seen=new Set();
 for(const row of report.rows){
  assert(!seen.has(row.id),'Repeated card '+row.id);seen.add(row.id);
@@ -45,6 +52,8 @@ for(const row of report.rows){
  assert.equal(source.back,row.originalBack,'Original model answer unexpectedly changed: '+row.id);
  assert.equal(row.originalFront,sample.front);assert.equal(row.originalBack,sample.back);
  assert.equal(row.accept.length,1);assert.equal(row.reject.length,2);
+ if(enthalpyDefs.has(row.id))assert(/enthalpy change/i.test(row.accept[0]),'The vetted enthalpy definition must explicitly describe an enthalpy change: '+row.id);
+ if(row.id==='chem_bh_defs_20261024_first_ionisation_bh')assert(/energy (?:required|needed)/i.test(row.accept[0]),'Ionisation energy definition must say energy needed');
  assert(source.front.length<=145&&source.back.length<=190,'Short recall required '+row.id);
  const copy={...source,accept:[...(source.accept||[])],reject:[...(source.reject||[])]};
  patch([copy]);
