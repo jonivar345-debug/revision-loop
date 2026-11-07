@@ -85,7 +85,7 @@ for(let n=-25;n<=25;n++){
  assert.equal(((n**5-n)%30+30)%30,0,'Divisibility 30');
  assert.equal(((2*n+1)**2-1)%8,0,'Odd squares mod 8');
 }
-for(let n=-3;n<=3;n++)assert.equal((n**3-n)%6,0);
+for(let n=-3;n<=3;n++)assert((n**3-n)%6===0,'Consecutive-integers proof, including negative zero');
 assert.equal((8-(-1)),9);
 assert.equal(10*2**3*3**2,720);
 assert.equal(5*2*3**4,810);
