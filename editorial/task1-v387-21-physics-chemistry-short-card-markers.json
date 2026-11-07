@@ -1,0 +1,317 @@
+{
+  "version": "v387",
+  "date": "2026-11-07",
+  "scope": "Twenty-one actual, short AQA school-mock-eligible original Physics and Chemistry recall cards; 12 Physics on resolving, motion graphs, slopes and projectiles, and 9 Chemistry on mass spectrometry, ionisation, lattice formation/dissociation, weak acid and Ka. No multi-mark question disguised as a flashcard.",
+  "counts": {
+    "originalCoreIdsPreserved": 3345,
+    "reviewed": 21,
+    "Physics": 12,
+    "Chemistry": 9,
+    "newCorrectParaphrases": 21,
+    "newIncorrectMisconceptions": 42
+  },
+  "sourceBaseline": "editorial/task1-v323-balanced-48-topic-evidence.json",
+  "method": "Use exact original front/back and ID guards; retain all previously accepted/rejected lists; add one clear legitimate equivalent and two clearly false misconceptions per original short card. Reject misconception exact strings before fuzzy partial-credit fallback. The runtime/CI checks verify model answers and former accepted/rejected examples survive.",
+  "limitations": [
+    "New examples improve the named 21 cards but cannot guarantee every possible free-text answer is assessed perfectly.",
+    "No full AQA specification bullet or diagram/practical-skill completion is implied.",
+    "The Maths first school mock remains Year 1 Pure, while Chemistry AS plus taught A2 and Physics AS plus taught A2 remain unchanged."
+  ],
+  "rows": [
+    {
+      "id": "phy_mechanics_focus_v37_11",
+      "subject": "Physics",
+      "sourceTopic": "Resolving vectors and forces",
+      "originalFront": "A 12 N force is 30° from the vertical. Find its horizontal and vertical components.",
+      "originalBack": "Horizontal = 12 sin30° = 6.0 N; vertical = 12 cos30° ≈ 10.4 N.",
+      "accept": [
+        "The horizontal component is 12 sin 30° = 6.0 N, and the vertical component is 12 cos 30° = 10.4 N."
+      ],
+      "reject": [
+        "Horizontal 10.4 N and vertical 6.0 N: sine and cosine are interchanged.",
+        "The horizontal and vertical components are both 12 N."
+      ]
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_horizontal_30",
+      "subject": "Physics",
+      "sourceTopic": "Resolving vectors and forces",
+      "originalFront": "50 N at 30° above horizontal: find horizontal and vertical components.",
+      "originalBack": "Horizontal = 50 cos 30° = 43.3 N; vertical = 50 sin 30° = 25.0 N.",
+      "accept": [
+        "For 50 N at 30° above horizontal, horizontal = 43.3 N and vertical = 25.0 N."
+      ],
+      "reject": [
+        "Horizontal 25.0 N, vertical 43.3 N.",
+        "Horizontal 50 N, vertical 50 N."
+      ]
+    },
+    {
+      "id": "phy_resolve_weakness_20261025_vertical_30",
+      "subject": "Physics",
+      "sourceTopic": "Resolving vectors and forces",
+      "originalFront": "50 N at 30° to vertical: find horizontal and vertical components.",
+      "originalBack": "Horizontal = 50 sin 30° = 25.0 N; vertical = 50 cos 30° = 43.3 N.",
+      "accept": [
+        "For 50 N at 30° to vertical, horizontal = 25.0 N and vertical = 43.3 N."
+      ],
+      "reject": [
+        "Horizontal 43.3 N, vertical 25.0 N.",
+        "The horizontal component is 50 N and the vertical is zero."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_a_negative_area",
+      "subject": "Physics",
+      "sourceTopic": "Motion and its graphs",
+      "originalFront": "What does area below the time axis on an acceleration–time graph mean?",
+      "originalBack": "A negative change in velocity, not a negative distance. It need not mean the object slows down.",
+      "accept": [
+        "A negative signed area under an acceleration-time graph means negative change in velocity, which does not necessarily mean slowing down."
+      ],
+      "reject": [
+        "A negative acceleration-time area always means negative distance travelled.",
+        "A negative area always proves the object is slowing down."
+      ]
+    },
+    {
+      "id": "phy_graph_weakness_v36_v_zero_crossing",
+      "subject": "Physics",
+      "sourceTopic": "Motion and its graphs",
+      "originalFront": "What does crossing the time axis on a velocity–time graph mean?",
+      "originalBack": "Velocity passes through zero and changes sign: the object stops momentarily, then reverses direction.",
+      "accept": [
+        "The velocity passes through zero and changes sign, so motion reverses direction at the crossing."
+      ],
+      "reject": [
+        "Crossing the velocity-time axis means the displacement must be zero.",
+        "When velocity crosses zero, the acceleration must also become zero."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_01",
+      "subject": "Physics",
+      "sourceTopic": "Motion and its graphs",
+      "originalFront": "A displacement–time curve has a positive gradient which becomes less steep. What happens to velocity?",
+      "originalBack": "Velocity remains positive but decreases: the object moves forwards while slowing down.",
+      "accept": [
+        "The displacement-time gradient is still positive but is decreasing, so forward velocity becomes smaller."
+      ],
+      "reject": [
+        "Velocity turns negative because the displacement-time curve gets less steep.",
+        "Positive displacement-time gradient that gets less steep means the object speeds up."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_02",
+      "subject": "Physics",
+      "sourceTopic": "Motion and its graphs",
+      "originalFront": "What does a horizontal velocity–time graph below the time axis show?",
+      "originalBack": "Constant negative velocity; acceleration is zero. The object is moving, not stationary.",
+      "accept": [
+        "The object travels with steady velocity in the negative direction and zero acceleration."
+      ],
+      "reject": [
+        "A flat line below zero on a velocity-time graph means the object is at rest.",
+        "The flat negative velocity-time line means constant negative acceleration."
+      ]
+    },
+    {
+      "id": "phy_mechanics_focus_v37_12",
+      "subject": "Physics",
+      "sourceTopic": "Forces and slopes",
+      "originalFront": "A 2.0 kg object accelerates at 3.0 m s⁻². Friction is 4.0 N opposite the pull. Find the pull.",
+      "originalBack": "Resultant force = ma = 6.0 N; pulling force = 6.0+4.0 = 10.0 N.",
+      "accept": [
+        "The net force is 2.0 × 3.0 = 6.0 N; the pull must also overcome 4.0 N friction, so it is 10.0 N."
+      ],
+      "reject": [
+        "The pulling force is only 6.0 N, ignoring friction.",
+        "The pull is 2.0 N after subtracting friction from ma."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_phy_065",
+      "subject": "Physics",
+      "sourceTopic": "Forces and slopes",
+      "originalFront": "How does the normal reaction change on an incline without other perpendicular forces?",
+      "originalBack": "R = mg cos θ.",
+      "accept": [
+        "On a slope without additional perpendicular forces, normal reaction equals mg cos θ."
+      ],
+      "reject": [
+        "Normal reaction equals mg sin θ on a simple slope.",
+        "Normal reaction must be mg on every incline regardless of angle."
+      ]
+    },
+    {
+      "id": "task1_v124_bulk_phy_066",
+      "subject": "Physics",
+      "sourceTopic": "Forces and slopes",
+      "originalFront": "What is the weight component down a slope of angle θ?",
+      "originalBack": "mg sin θ.",
+      "accept": [
+        "The component of weight parallel to and down an incline is mg sin θ."
+      ],
+      "reject": [
+        "The downhill weight component is mg cos θ.",
+        "On a slope the downhill weight component is always the whole mg."
+      ]
+    },
+    {
+      "id": "task1_v125_007",
+      "subject": "Physics",
+      "sourceTopic": "Forces and slopes",
+      "originalFront": "Does the normal reaction always equal an object's weight?",
+      "originalBack": "No, only in certain force balances.",
+      "accept": [
+        "No; the normal force only equals weight when the perpendicular forces balance that way, for instance on a level surface with no others."
+      ],
+      "reject": [
+        "The normal reaction always equals mg, even on a slope.",
+        "The normal reaction is always zero if an object is stationary."
+      ]
+    },
+    {
+      "id": "phy_focus_v38_02",
+      "subject": "Physics",
+      "sourceTopic": "Projectile motion",
+      "originalFront": "A projectile has initial horizontal velocity 12 m s⁻¹. Without air resistance, what is its speed at the highest point?",
+      "originalBack": "12 m s⁻¹.",
+      "accept": [
+        "At maximum height the vertical component is zero but the 12 m s⁻¹ horizontal component remains, so speed is 12 m s⁻¹."
+      ],
+      "reject": [
+        "The projectile has zero speed at its highest point.",
+        "The speed at maximum height must be 9.8 m s⁻¹."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_16",
+      "subject": "Chemistry",
+      "sourceTopic": "Electron configuration and ionisation",
+      "originalFront": "What is formed by electron-impact ionisation of X(g)?",
+      "originalBack": "X⁺(g), after an electron is removed.",
+      "accept": [
+        "Electron-impact ionisation removes an electron and leaves the gaseous positive ion X⁺(g)."
+      ],
+      "reject": [
+        "Electron impact produces only a negative ion X⁻(g).",
+        "Electron-impact ionisation leaves the particle neutral with no electron removed."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_39",
+      "subject": "Chemistry",
+      "sourceTopic": "Electron configuration and ionisation",
+      "originalFront": "Write the first ionisation equation for magnesium.",
+      "originalBack": "Mg(g) → Mg⁺(g) + e⁻.",
+      "accept": [
+        "Mg(g) → Mg⁺(g) + e⁻ is the first ionisation of gaseous magnesium atoms."
+      ],
+      "reject": [
+        "Mg(g) → Mg²⁺(g) + 2e⁻ is the first ionisation equation.",
+        "Mg(s) → Mg⁺(aq) + e⁻ is the standard first ionisation equation."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_40",
+      "subject": "Chemistry",
+      "sourceTopic": "Electron configuration and ionisation",
+      "originalFront": "Write the second ionisation equation for magnesium.",
+      "originalBack": "Mg⁺(g) → Mg²⁺(g) + e⁻.",
+      "accept": [
+        "Mg⁺(g) → Mg²⁺(g) + e⁻ is the second ionisation of gaseous magnesium."
+      ],
+      "reject": [
+        "Mg(g) → Mg⁺(g) + e⁻ is the second ionisation equation.",
+        "Mg⁺(g) → Mg²⁺(g) + 2e⁻ is the second ionisation equation."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_41",
+      "subject": "Chemistry",
+      "sourceTopic": "Electron configuration and ionisation",
+      "originalFront": "Why do successive ionisation energies increase?",
+      "originalBack": "Each electron is removed from an increasingly positive ion.",
+      "accept": [
+        "Successive electrons are removed from more positively charged ions, so remaining electrons feel stronger attraction to the nucleus."
+      ],
+      "reject": [
+        "Ionisation energy rises because each new electron is farther from the nucleus after removal.",
+        "Each successive electron is easier to remove because attraction falls as the ion becomes more positive."
+      ]
+    },
+    {
+      "id": "chem_atomic_v43_47",
+      "subject": "Chemistry",
+      "sourceTopic": "Electron configuration and ionisation",
+      "originalFront": "How many electrons can an s, p and d subshell hold?",
+      "originalBack": "s: 2; p: 6; d: 10.",
+      "accept": [
+        "The maximum number of electrons is s = 2, p = 6 and d = 10."
+      ],
+      "reject": [
+        "An s subshell holds 2, p holds 8 and d holds 10 electrons.",
+        "An s subshell holds 1, a p subshell 3 and a d subshell 5 electrons."
+      ]
+    },
+    {
+      "id": "chem_lattice_diss",
+      "subject": "Chemistry",
+      "sourceTopic": "Born Haber and lattice enthalpy",
+      "originalFront": "Define lattice dissociation enthalpy.",
+      "originalBack": "The enthalpy change when 1 mole of an ionic solid is completely separated into its constituent gaseous ions.",
+      "accept": [
+        "The enthalpy change when one mole of solid ionic compound separates completely into its constituent gaseous ions."
+      ],
+      "reject": [
+        "Lattice dissociation enthalpy forms an ionic solid from its gaseous ions.",
+        "Lattice dissociation produces one mole of aqueous ions by dissolving the solid in water."
+      ]
+    },
+    {
+      "id": "chem_lattice_form",
+      "subject": "Chemistry",
+      "sourceTopic": "Born Haber and lattice enthalpy",
+      "originalFront": "How is lattice formation enthalpy related to lattice dissociation enthalpy?",
+      "originalBack": "Same magnitude, opposite sign.",
+      "accept": [
+        "They describe reverse processes, so lattice formation has the same magnitude but the opposite sign to lattice dissociation."
+      ],
+      "reject": [
+        "Lattice formation and dissociation enthalpies always have the same sign.",
+        "The magnitude of lattice formation enthalpy is twice that of dissociation for the same compound."
+      ]
+    },
+    {
+      "id": "chem_carboxy_acid",
+      "subject": "Chemistry",
+      "sourceTopic": "Strong weak acids pH Ka Kw",
+      "originalFront": "Why are carboxylic acids weak acids?",
+      "originalBack": "They only partially dissociate in water.",
+      "accept": [
+        "Carboxylic acids are weak because only a fraction of their molecules dissociate to release H⁺ in water."
+      ],
+      "reject": [
+        "A carboxylic acid is weak because it completely dissociates in water.",
+        "Carboxylic acids are weak because none of their molecules can release H⁺ in water."
+      ]
+    },
+    {
+      "id": "chem_ka",
+      "subject": "Chemistry",
+      "sourceTopic": "Strong weak acids pH Ka Kw",
+      "originalFront": "Write the Ka expression for HA ⇌ H⁺ + A⁻.",
+      "originalBack": "Ka = [H⁺][A⁻]/[HA].",
+      "accept": [
+        "For HA ⇌ H⁺ + A⁻, Ka equals [H⁺][A⁻] divided by [HA]."
+      ],
+      "reject": [
+        "Ka = [HA]/([H⁺][A⁻]) for HA dissociation.",
+        "Ka = [H⁺][HA]/[A⁻] for the dissociation of HA."
+      ]
+    }
+  ],
+  "fixNote": "The known wrong lattice-dissociation formation answer is caught by an early exact-reject rule before legacy partial-definition fallback; the accepted definition explicitly includes enthalpy change."
+}
