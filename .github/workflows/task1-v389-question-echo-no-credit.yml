@@ -1,0 +1,19 @@
+name: Task 1 v389 reject copying a flashcard question into its answer
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v389-question-echo-false-positives.json'
+      - 'tests/task1-v389-question-echo-no-credit.cjs'
+      - '.github/workflows/task1-v389-question-echo-no-credit.yml'
+  workflow_dispatch:
+jobs:
+  no-echo-credit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check all 2,379 original core mock model answers and copied question negative tests
+        run: node tests/task1-v389-question-echo-no-credit.cjs
+      - name: Recheck 40 and 21 original short-card variants and previous Chemistry marking
+        run: node tests/task1-v388-forty-original-core-short-markers.cjs && node tests/task1-v387-21-physics-chemistry-short-card-markers.cjs && node tests/task1-v386-chemistry-25-working-review.cjs
