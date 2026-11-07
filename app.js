@@ -260,6 +260,33 @@ function applyV390Physics19WorkingReview(questions){
  return questions;
 }
 
+// v391: original Year 1 Pure Maths proofs, transformations, vectors, circles,
+// binomial, trig, and signed integration need point-by-point method review.
+const V391_MATHS_19_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","level":"AS","sourceSpecRef":"3.11","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.11","marks":8,"promptHash":"17113e4c","modelAnswerHash":"fd7079b"},{"id":"task1_v271_maths_pure_q04","level":"AS","sourceSpecRef":"3.4","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.4","marks":7,"promptHash":"38eaad15","modelAnswerHash":"64220a8b"},{"id":"task1_v271_maths_pure_q05","level":"AS","sourceSpecRef":"3.3","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.3","marks":9,"promptHash":"d160cd87","modelAnswerHash":"31f62cd1"},{"id":"task1_v271_maths_pure_q06","level":"AS","sourceSpecRef":"3.5","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.5","marks":7,"promptHash":"8b3a313d","modelAnswerHash":"ec466139"},{"id":"task1_v271_maths_pure_q07","level":"AS","sourceSpecRef":"3.9","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.9","marks":8,"promptHash":"d139a6bf","modelAnswerHash":"3e2ae219"},{"id":"task1_v209_maths_001","level":"AS","sourceSpecRef":"3.2","sourceCourseTopic":"Proof","effectiveSpecRef":"3.2","marks":7,"promptHash":"3ba17a7e","modelAnswerHash":"5bd7573f"},{"id":"task1_v209_maths_002","level":"AS","sourceSpecRef":"3.2","sourceCourseTopic":"Proof","effectiveSpecRef":"3.2","marks":6,"promptHash":"2984b642","modelAnswerHash":"850ad8f9"},{"id":"task1_v209_maths_003","level":"AS","sourceSpecRef":"3.10","sourceCourseTopic":"Vectors","effectiveSpecRef":"3.11","marks":8,"promptHash":"61ba2171","modelAnswerHash":"3898d013"},{"id":"task1_v209_maths_004","level":"AS","sourceSpecRef":"3.10","sourceCourseTopic":"Vectors","effectiveSpecRef":"3.11","marks":8,"promptHash":"3bfaeec0","modelAnswerHash":"89cd4cde"},{"id":"task1_v209_maths_005","level":"AS","sourceSpecRef":"3.3","sourceCourseTopic":"Transformations","effectiveSpecRef":"3.3","marks":9,"promptHash":"37db7c67","modelAnswerHash":"5a3a4e37"},{"id":"task1_v273_maths_application_q01","level":"AS","sourceSpecRef":"3.4","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.4","marks":8,"promptHash":"3866474d","modelAnswerHash":"ee3659e5"},{"id":"task1_v273_maths_application_q02","level":"AS","sourceSpecRef":"3.4","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.4","marks":8,"promptHash":"cd036588","modelAnswerHash":"36baae30"},{"id":"task1_v273_maths_application_q03","level":"AS","sourceSpecRef":"3.11","sourceCourseTopic":"Year 1 Pure","effectiveSpecRef":"3.11","marks":7,"promptHash":"537031a6","modelAnswerHash":"e1260b3b"},{"id":"task1_v191_maths_001","level":"AS","sourceSpecRef":"3.2","sourceCourseTopic":"Proof","effectiveSpecRef":"3.2","marks":4,"promptHash":"9793ba40","modelAnswerHash":"33b58639"},{"id":"task1_v191_maths_002","level":"AS","sourceSpecRef":"3.6","sourceCourseTopic":"Trigonometry","effectiveSpecRef":"3.6","marks":5,"promptHash":"7b9d72b2","modelAnswerHash":"36fbbc24"},{"id":"task1_v191_maths_003","level":"AS","sourceSpecRef":"3.4","sourceCourseTopic":"Coordinate geometry","effectiveSpecRef":"3.4","marks":5,"promptHash":"76d6da64","modelAnswerHash":"92cdebf"},{"id":"task1_v191_maths_004","level":"AS","sourceSpecRef":"3.3","sourceCourseTopic":"Transformations","effectiveSpecRef":"3.3","marks":7,"promptHash":"1cca8a50","modelAnswerHash":"c009a3f6"},{"id":"task1_v191_maths_005","level":"AS","sourceSpecRef":"3.5","sourceCourseTopic":"Sequences & series","effectiveSpecRef":"3.5","marks":5,"promptHash":"8c75fd63","modelAnswerHash":"204e5717"},{"id":"task1_v191_maths_006","level":"AS","sourceSpecRef":"3.9","sourceCourseTopic":"Integration","effectiveSpecRef":"3.9","marks":6,"promptHash":"6f67e75b","modelAnswerHash":"8907105f"}]);
+function v391MathsSourceHash(s){
+ let h=2166136261;const value=String(s||'');
+ for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619)}
+ return (h>>>0).toString(16);
+}
+function applyV391Maths19WorkingReview(questions){
+ const indexed=new Map(V391_MATHS_19_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Maths'||q.level!==row.level||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.manualWorkingReview===true||q.specRef!==row.sourceSpecRef||
+     (q.courseTopic??null)!==row.sourceCourseTopic||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v391MathsSourceHash(q.prompt)!==row.promptHash||
+     v391MathsSourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v391ReviewRequired=true;
+  q.specRef=row.effectiveSpecRef;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5946,6 +5973,7 @@ async function sync(manual=false){
  applyV385ChemistryTenWorkingReview(examQuestions);
  applyV386Chemistry25WorkingReview(examQuestions);
  applyV390Physics19WorkingReview(examQuestions);
+ applyV391Maths19WorkingReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
