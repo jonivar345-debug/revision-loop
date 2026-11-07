@@ -1,0 +1,21 @@
+name: Task 1 v373 18 existing AQA Chemistry core mock recall markers
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v373-chemistry-eighteen-original-core-marker-review.json'
+      - 'tests/task1-v373-chemistry-eighteen-core-markers.cjs'
+      - '.github/workflows/task1-v373-chemistry-18-core-markers.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-eighteen-original-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 18 original AQA Chemistry cards and 54 answer variants
+        run: node tests/task1-v373-chemistry-eighteen-core-markers.cjs
+      - name: Guard previous Chemistry core precision and exact AQA organic crosswalk
+        run: node tests/task1-v362-chem-twenty-core-markers.cjs && node tests/task1-v367-chem-as-organic-eleven-gap-recheck.cjs
+      - name: Keep prior Year 1 Pure manual marking safeguard
+        run: node tests/task1-v372-year1-pure-five-manual-working-qa.cjs
