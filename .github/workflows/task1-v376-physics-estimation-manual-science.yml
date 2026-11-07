@@ -1,0 +1,20 @@
+name: Task 1 v376 Physics derived estimation and manual science marking wording
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'physics_order_of_magnitude_practice_v376.json'
+      - 'editorial/task1-v376-physics-derived-estimation-and-science-manual-review.json'
+      - 'tests/task1-v376-physics-estimation-and-science-manual-help.cjs'
+      - '.github/workflows/task1-v376-physics-estimation-manual-science.yml'
+  workflow_dispatch:
+jobs:
+  estimation-and-manual-help:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check derived order-of-magnitude result and all manual-scoring UI routes
+        run: node tests/task1-v376-physics-estimation-and-science-manual-help.cjs
+      - name: Preserve Year 1 Pure proof, AQA Kp and existing manual maths regressions
+        run: node tests/task1-v271-year1-pure-reasoning.cjs && node tests/task1-v372-year1-pure-five-manual-working-qa.cjs && node tests/task1-v375-chem-kp-catalyst-direct-recall.cjs
