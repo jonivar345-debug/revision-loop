@@ -1,0 +1,209 @@
+{
+  "version": "v382",
+  "date": "2026-11-07",
+  "scope": "Eighteen existing original AQA Year 1 Pure Maths multi-mark school-mock exam questions (not flashcards), across proofs, trigonometry, vectors, transformations, circle tangents/intersections, integer binomial expansion and integration.",
+  "sourceBanks": [
+    "maths_pure_proof_vectors_v190.json",
+    "maths_as_pure_gap_challenges_v191.json",
+    "maths_pure_proof_vector_applications_v209.json",
+    "maths_year1_circle_vector_gaps_v273.json"
+  ],
+  "counts": {
+    "questionsRequiringManualWorking": 18,
+    "marksRequiringManualWorking": 112,
+    "sourceBanks": 4,
+    "vectorSourceSpecLabelsCorrectedFrom310To311": 2,
+    "originalCoreFlashcardIDsPreserved": 3345,
+    "originalQuestionPromptsOrMarkPointsChanged": 0,
+    "automaticallyAwardedMethodMarks": 0
+  },
+  "method": "Match the original loaded ID, Maths AS and mock scope, course topic, prompt and answer hashes, original specification subsection, marks and mark-point arrays. Route exact matches to manual criterion-by-criterion scoring, without keyword-derived method marks. For two older vector questions correct specRef 3.10 to 3.11 at runtime.",
+  "limitations": [
+    "Illustrative original mark schemes, not official AQA marking documents.",
+    "A human must assess real written working, valid equivalent methods and error carried forward.",
+    "This does not certify every other practice question or complete AQA mock specification coverage.",
+    "Original source files and all 3,345 original core flashcard IDs remain unchanged."
+  ],
+  "rows": [
+    {
+      "id": "task1_v190_maths_001",
+      "sourceFile": "maths_pure_proof_vectors_v190.json",
+      "sourceCourseTopic": "Proof",
+      "sourceSpecRef": null,
+      "effectiveSpecRef": null,
+      "marks": 4,
+      "promptHash": "2fd38c69",
+      "modelAnswerHash": "9641f6ff"
+    },
+    {
+      "id": "task1_v190_maths_002",
+      "sourceFile": "maths_pure_proof_vectors_v190.json",
+      "sourceCourseTopic": "Proof",
+      "sourceSpecRef": null,
+      "effectiveSpecRef": null,
+      "marks": 4,
+      "promptHash": "adf396a8",
+      "modelAnswerHash": "af85c936"
+    },
+    {
+      "id": "task1_v190_maths_003",
+      "sourceFile": "maths_pure_proof_vectors_v190.json",
+      "sourceCourseTopic": "Vectors",
+      "sourceSpecRef": null,
+      "effectiveSpecRef": null,
+      "marks": 5,
+      "promptHash": "9e4ffdd7",
+      "modelAnswerHash": "415ad04f"
+    },
+    {
+      "id": "task1_v190_maths_004",
+      "sourceFile": "maths_pure_proof_vectors_v190.json",
+      "sourceCourseTopic": "Vectors",
+      "sourceSpecRef": null,
+      "effectiveSpecRef": null,
+      "marks": 6,
+      "promptHash": "bd13c903",
+      "modelAnswerHash": "5fc008c4"
+    },
+    {
+      "id": "task1_v191_maths_001",
+      "sourceFile": "maths_as_pure_gap_challenges_v191.json",
+      "sourceCourseTopic": "Proof",
+      "sourceSpecRef": "3.2",
+      "effectiveSpecRef": "3.2",
+      "marks": 4,
+      "promptHash": "9793ba40",
+      "modelAnswerHash": "33b58639"
+    },
+    {
+      "id": "task1_v191_maths_002",
+      "sourceFile": "maths_as_pure_gap_challenges_v191.json",
+      "sourceCourseTopic": "Trigonometry",
+      "sourceSpecRef": "3.6",
+      "effectiveSpecRef": "3.6",
+      "marks": 5,
+      "promptHash": "7b9d72b2",
+      "modelAnswerHash": "36fbbc24"
+    },
+    {
+      "id": "task1_v191_maths_003",
+      "sourceFile": "maths_as_pure_gap_challenges_v191.json",
+      "sourceCourseTopic": "Coordinate geometry",
+      "sourceSpecRef": "3.4",
+      "effectiveSpecRef": "3.4",
+      "marks": 5,
+      "promptHash": "76d6da64",
+      "modelAnswerHash": "92cdebf"
+    },
+    {
+      "id": "task1_v191_maths_004",
+      "sourceFile": "maths_as_pure_gap_challenges_v191.json",
+      "sourceCourseTopic": "Transformations",
+      "sourceSpecRef": "3.3",
+      "effectiveSpecRef": "3.3",
+      "marks": 7,
+      "promptHash": "1cca8a50",
+      "modelAnswerHash": "c009a3f6"
+    },
+    {
+      "id": "task1_v191_maths_005",
+      "sourceFile": "maths_as_pure_gap_challenges_v191.json",
+      "sourceCourseTopic": "Sequences & series",
+      "sourceSpecRef": "3.5",
+      "effectiveSpecRef": "3.5",
+      "marks": 5,
+      "promptHash": "8c75fd63",
+      "modelAnswerHash": "204e5717"
+    },
+    {
+      "id": "task1_v191_maths_006",
+      "sourceFile": "maths_as_pure_gap_challenges_v191.json",
+      "sourceCourseTopic": "Integration",
+      "sourceSpecRef": "3.9",
+      "effectiveSpecRef": "3.9",
+      "marks": 6,
+      "promptHash": "6f67e75b",
+      "modelAnswerHash": "8907105f"
+    },
+    {
+      "id": "task1_v209_maths_001",
+      "sourceFile": "maths_pure_proof_vector_applications_v209.json",
+      "sourceCourseTopic": "Proof",
+      "sourceSpecRef": "3.2",
+      "effectiveSpecRef": "3.2",
+      "marks": 7,
+      "promptHash": "3ba17a7e",
+      "modelAnswerHash": "5bd7573f"
+    },
+    {
+      "id": "task1_v209_maths_002",
+      "sourceFile": "maths_pure_proof_vector_applications_v209.json",
+      "sourceCourseTopic": "Proof",
+      "sourceSpecRef": "3.2",
+      "effectiveSpecRef": "3.2",
+      "marks": 6,
+      "promptHash": "2984b642",
+      "modelAnswerHash": "850ad8f9"
+    },
+    {
+      "id": "task1_v209_maths_003",
+      "sourceFile": "maths_pure_proof_vector_applications_v209.json",
+      "sourceCourseTopic": "Vectors",
+      "sourceSpecRef": "3.10",
+      "effectiveSpecRef": "3.11",
+      "marks": 8,
+      "promptHash": "61ba2171",
+      "modelAnswerHash": "3898d013"
+    },
+    {
+      "id": "task1_v209_maths_004",
+      "sourceFile": "maths_pure_proof_vector_applications_v209.json",
+      "sourceCourseTopic": "Vectors",
+      "sourceSpecRef": "3.10",
+      "effectiveSpecRef": "3.11",
+      "marks": 8,
+      "promptHash": "3bfaeec0",
+      "modelAnswerHash": "89cd4cde"
+    },
+    {
+      "id": "task1_v209_maths_005",
+      "sourceFile": "maths_pure_proof_vector_applications_v209.json",
+      "sourceCourseTopic": "Transformations",
+      "sourceSpecRef": "3.3",
+      "effectiveSpecRef": "3.3",
+      "marks": 9,
+      "promptHash": "37db7c67",
+      "modelAnswerHash": "5a3a4e37"
+    },
+    {
+      "id": "task1_v273_maths_application_q01",
+      "sourceFile": "maths_year1_circle_vector_gaps_v273.json",
+      "sourceCourseTopic": "Year 1 Pure",
+      "sourceSpecRef": "3.4",
+      "effectiveSpecRef": "3.4",
+      "marks": 8,
+      "promptHash": "3866474d",
+      "modelAnswerHash": "ee3659e5"
+    },
+    {
+      "id": "task1_v273_maths_application_q02",
+      "sourceFile": "maths_year1_circle_vector_gaps_v273.json",
+      "sourceCourseTopic": "Year 1 Pure",
+      "sourceSpecRef": "3.4",
+      "effectiveSpecRef": "3.4",
+      "marks": 8,
+      "promptHash": "cd036588",
+      "modelAnswerHash": "36baae30"
+    },
+    {
+      "id": "task1_v273_maths_application_q03",
+      "sourceFile": "maths_year1_circle_vector_gaps_v273.json",
+      "sourceCourseTopic": "Year 1 Pure",
+      "sourceSpecRef": "3.11",
+      "effectiveSpecRef": "3.11",
+      "marks": 7,
+      "promptHash": "537031a6",
+      "modelAnswerHash": "e1260b3b"
+    }
+  ]
+}
