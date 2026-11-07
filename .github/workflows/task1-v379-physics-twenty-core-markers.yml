@@ -1,0 +1,19 @@
+name: Task 1 v379 Physics twenty original short-card marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v379-physics-twenty-core-markers.json'
+      - 'tests/task1-v379-physics-twenty-core-markers.cjs'
+      - '.github/workflows/task1-v379-physics-twenty-core-markers.yml'
+  workflow_dispatch:
+jobs:
+  physics-twenty-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original Physics cards against actual recall checker
+        run: node tests/task1-v379-physics-twenty-core-markers.cjs
+      - name: Preserve existing mock Physics and numerical regressions
+        run: node tests/task1-v365-physics-20-original-marker-review.cjs && node tests/task1-v371-physics-mechanics-measurements-core-markers.cjs && node tests/task1-v377-waves-manual-working-qa.cjs
