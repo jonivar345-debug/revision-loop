@@ -3317,6 +3317,14 @@ function evaluateCard(c,input){
   if(!valid.some(a=>echoKey(a)===proposedEcho))
    return {status:'wrong',score:0,text:'That repeats the question rather than answering it.',missing:[String(c?.back||'')]};
  }
+ // v392: Reject explicitly denying a whole known answer; avoid fuzzy keyword credit.
+ // A contrast such as 'not X but Y' is deliberately left to normal marking.
+ const explicitModelDenial=String(input||'').trim().match(/^(?:the (?:correct )?answer|my answer|the result)\s+is\s+not\s+([\s\S]+)$/i);
+ if(explicitModelDenial){
+  const deniedAnswer=echoKey(explicitModelDenial[1]);
+  if(deniedAnswer&&[c?.back,...(Array.isArray(c?.accept)?c.accept:[])].some(a=>echoKey(a)===deniedAnswer))
+   return {status:'wrong',score:0,text:'This explicitly rejects a correct answer.',missing:[String(c?.back||'')]};
+ }
  if(isReversedChemistryEquation(c,input))
   return {status:'wrong',score:0,text:'This is the reverse chemical reaction; the equation direction must match the question.',missing:[String(c.back||'')]};
  if(isSingleChemistryCoefficientError(c,input))

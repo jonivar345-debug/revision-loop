@@ -1,0 +1,19 @@
+name: Task 1 v392 reject explicit model-answer denials in original mock cards
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v392-model-answer-denial-audit.json'
+      - 'tests/task1-v392-denied-model-answer.cjs'
+      - '.github/workflows/task1-v392-denied-model-answer.yml'
+  workflow_dispatch:
+jobs:
+  exact-denial-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Guard original flashcard model denials while retaining accepted answers
+        run: node tests/task1-v392-denied-model-answer.cjs
+      - name: Recheck original question echoes and 40 vetted short answers
+        run: node tests/task1-v389-question-echo-no-credit.cjs && node tests/task1-v388-forty-original-core-short-markers.cjs
