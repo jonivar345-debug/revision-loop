@@ -1,0 +1,19 @@
+name: Task 1 v388 40 original Physics and Chemistry short mock card markers
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v388-forty-original-core-short-markers.json'
+      - 'tests/task1-v388-forty-original-core-short-markers.cjs'
+      - '.github/workflows/task1-v388-forty-original-short-markers.yml'
+  workflow_dispatch:
+jobs:
+  forty-original-short-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test 40 original mock cards with 120 good-and-bad probes and 280 source guards
+        run: node tests/task1-v388-forty-original-core-short-markers.cjs
+      - name: Verify prior 21 short cards and Chemistry worked-question safeguards
+        run: node tests/task1-v387-21-physics-chemistry-short-card-markers.cjs && node tests/task1-v386-chemistry-25-working-review.cjs && node tests/task1-v385-chemistry-ten-worked-manual.cjs && node tests/task1-v381-maths-21-core-markers.cjs
