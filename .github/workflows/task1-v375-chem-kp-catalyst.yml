@@ -1,0 +1,20 @@
+name: Task 1 v375 AQA Kp catalyst direct short recall
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'chemistry_kp_catalyst_recall_v375.json'
+      - 'editorial/task1-v375-chem-kp-catalyst-direct-recall.json'
+      - 'tests/task1-v375-chem-kp-catalyst-direct-recall.cjs'
+      - '.github/workflows/task1-v375-chem-kp-catalyst.yml'
+  workflow_dispatch:
+jobs:
+  kp-catalyst-short-recall:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Kp catalyst short card against actual answer checker
+        run: node tests/task1-v375-chem-kp-catalyst-direct-recall.cjs
+      - name: Guard previous Chemistry rate and Physics Waves flashcards
+        run: node tests/task1-v374-chem-hess-rates-fifteen-markers.cjs && node tests/task1-v370-light-history-recall.cjs

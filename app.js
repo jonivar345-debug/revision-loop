@@ -21,6 +21,18 @@ function isV367ChemAlkaneTrendCard(c){
  Array.isArray(c.accept)&&c.accept.length===3&&Array.isArray(c.reject)&&c.reject.length===3&&
  c.front.length<=145&&c.back.length<=130);
 }
+// v375: exactly one independently reviewed AQA 3.1.10 Kp catalyst short card.
+function isV375ChemKpCatalystCard(c){
+ return Boolean(c&&c.id==='task1_v375_chem_kp_catalyst_01'&&
+ c.subject==='Chemistry'&&c.stage==='A2'&&c.topic==='Kp'&&
+ c.courseTopic==='Year 2 Physical Chemistry'&&c.revisionTopic==='Kp'&&
+ c.specRef==='3.1.10'&&c.mock===true&&c.taught===true&&c.scope==='mock'&&
+ c.active===true&&c.kind==='short'&&c.strictRecall===true&&
+ typeof c.front==='string'&&typeof c.back==='string'&&
+ c.front.length<=140&&c.back.length<=140&&
+ Array.isArray(c.accept)&&c.accept.length===3&&
+ Array.isArray(c.reject)&&c.reject.length===3);
+}
 // v370: two short first-mock Physics cards about historical wave/photon evidence.
 function isV370PhysicsHistoryCard(c){
  return Boolean(c&&/^task1_v370_phy_history_0[12]$/.test(c.id||'')&&
@@ -44,6 +56,7 @@ const V348_MATHS_SHORT_RECALL_URL='./maths_first_mock_micro_recall_v348.json';
 const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json';
 const V367_CHEM_ALKANE_TREND_URL='./chemistry_alkane_trend_recall_v367.json';
 const V370_PHYSICS_HISTORY_URL='./physics_light_history_recall_v370.json';
+const V375_CHEM_KP_CATALYST_URL='./chemistry_kp_catalyst_recall_v375.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -5393,6 +5406,16 @@ async function sync(manual=false){
  }catch{}
  for(const c of v370HistoryBank.cards||[]){
   if(!isV370PhysicsHistoryCard(c)||cards.some(old=>old.id===c.id))continue;
+  cards.push(c);
+ }
+ // v375: one Kp-specific catalyst explanation, never a multi-mark mechanism question.
+ let v375KpCatalystBank={cards:[]};
+ try{
+  const response=await fetch(V375_CHEM_KP_CATALYST_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(response.ok)v375KpCatalystBank=await response.json();
+ }catch{}
+ for(const c of v375KpCatalystBank.cards||[]){
+  if(!isV375ChemKpCatalystCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
  const knownFlashIds=new Set(cards.map(c=>c.id));

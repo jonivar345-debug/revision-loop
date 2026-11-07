@@ -1,0 +1,46 @@
+{
+  "version": "v375",
+  "date": "2026-11-07",
+  "scope": "Exactly one direct short AQA Chemistry 7405 3.1.10 Kp catalyst explanation in the user's taught school-mock scope",
+  "specification": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "previousAudit": "editorial/task1-v363-rates-kp-five-application-reconciliation.json",
+  "gapId": "K12",
+  "olderStatus": "generic_equilibrium_catalyst_recall_only_specific_kp_not_signed_off",
+  "existingCoreEvidence": [
+    {
+      "id": "v33_card_chemistry_equilibria_52",
+      "role": "General no effect on equilibrium constant/position; faster arrival",
+      "directKp": false
+    },
+    {
+      "id": "task1_chem_053",
+      "role": "No change in equilibrium position",
+      "directKp": false
+    }
+  ],
+  "newCard": {
+    "id": "task1_v375_chem_kp_catalyst_01",
+    "file": "chemistry_kp_catalyst_recall_v375.json",
+    "purpose": "Short explicit Kp-specific cause/effect at constant temperature",
+    "acceptedParaphrases": 3,
+    "wrongExamples": 3,
+    "marking": "real production evaluateCard"
+  },
+  "counts": {
+    "originalCoreIdsProtected": 3345,
+    "historicalSupplementBanksUnchanged": 56,
+    "newOnePointMockCards": 1
+  },
+  "completion": {
+    "KpCatalystDirectShortRecallAdded": true,
+    "KpNumericalQuestionsIndependentlyGraded": false,
+    "fullChemistrySpecCertified": false,
+    "wholeThreeSubjectMockComplete": false
+  },
+  "limits": [
+    "Do not assert the older v363 snapshot was wrong: it predated this new card.",
+    "Only one short recall question is added; its 3 accepted and 3 rejected probes do not certify all unseen student responses.",
+    "Other Kp computational practice and RP7 practical skills retain their own manual-review gates.",
+    "Original question banks, source flashcards, cloud sync, XP and student progress remain unchanged."
+  ]
+}
