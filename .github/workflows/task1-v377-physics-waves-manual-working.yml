@@ -1,0 +1,19 @@
+name: Task 1 v377 Physics Waves worked-question manual review
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v377-waves-seventeen-manual-marking.json'
+      - 'tests/task1-v377-waves-manual-working-qa.cjs'
+      - '.github/workflows/task1-v377-physics-waves-manual-working.yml'
+  workflow_dispatch:
+jobs:
+  waves-manual-working:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Review exact AS Physics Waves original question marking
+        run: node tests/task1-v377-waves-manual-working-qa.cjs
+      - name: Recheck Physics estimation, Maths working and Waves numerical evidence
+        run: node tests/task1-v376-physics-estimation-and-science-manual-help.cjs && node tests/task1-v372-year1-pure-five-manual-working-qa.cjs && node tests/task1-v369-waves-six-calculation-qa.cjs

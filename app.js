@@ -77,6 +77,32 @@ function applyV372Year1PureManualReview(questions){
 
 
 // Never alter question wording, marking rules, mock flags, or any progress IDs.
+
+ // v377: exact source-locked manual review for 17 multi-step Physics Waves
+ // questions. The rubric stays unchanged and no marks are guessed from keywords.
+const V377_WAVES_MANUAL=Object.freeze([{"id":"task1_v279_phy_waves_q02","specRef":"3.3.1.2","marks":5,"promptHash":"2172a26f","modelAnswerHash":"17ff91ef"},{"id":"task1_v279_phy_waves_q04","specRef":"3.3.1.3","marks":7,"promptHash":"4a8f0c0f","modelAnswerHash":"1f7c9257"},{"id":"task1_v275_phy_fibre_q01","specRef":"3.3.2.3","marks":6,"promptHash":"f8437e0","modelAnswerHash":"9218faeb"},{"id":"task1_v275_phy_fibre_q02","specRef":"3.3.2.3","marks":6,"promptHash":"b09db7a8","modelAnswerHash":"d270d3"},{"id":"task1_v275_phy_fibre_q03","specRef":"3.3.2.3","marks":7,"promptHash":"7b624b5","modelAnswerHash":"8d4f9850"},{"id":"task1_v275_phy_fibre_q04","specRef":"3.3.2.3","marks":6,"promptHash":"8348f795","modelAnswerHash":"7396d290"},{"id":"task1_v275_phy_fibre_q06","specRef":"3.3.2.3","marks":6,"promptHash":"5e6b15fd","modelAnswerHash":"1d852dcf"},{"id":"task1_v198_phy_01","specRef":"3.3.1.1","marks":7,"promptHash":"9166513b","modelAnswerHash":"7a2ad0a0"},{"id":"task1_v198_phy_02","specRef":"3.3.2.1","marks":7,"promptHash":"ddc1a9c8","modelAnswerHash":"f6ffe70e"},{"id":"task1_v198_phy_03","specRef":"3.3.1.3","marks":9,"promptHash":"be7d2e26","modelAnswerHash":"fe1d036d"},{"id":"task1_v198_phy_04","specRef":"3.3.2.2","marks":8,"promptHash":"fa05a6bd","modelAnswerHash":"992938a3"},{"id":"task1_v198_phy_05","specRef":"3.3.2.2","marks":6,"promptHash":"6a9d2733","modelAnswerHash":"9fe55709"},{"id":"task1_v198_phy_06","specRef":"3.3.1.2","marks":6,"promptHash":"620c97b2","modelAnswerHash":"c9c0948b"},{"id":"task1_v198_phy_07","specRef":"3.3.2.3","marks":8,"promptHash":"2f2f5972","modelAnswerHash":"ad8a078a"},{"id":"task1_v194_practical_01","specRef":"3.3.1.3","marks":7,"promptHash":"9946f529","modelAnswerHash":"658ef35e"},{"id":"task1_v194_practical_02","specRef":"3.3.2.1","marks":7,"promptHash":"e615029c","modelAnswerHash":"b000a000"},{"id":"task1_v226_phy_01","specRef":"3.3.2.1–3.3.2.2","marks":10,"promptHash":"3666b1a0","modelAnswerHash":"13935b4b"}]);
+function v377SourceHash(s){
+ let h=2166136261;
+ const text=String(s||'');
+ for(let i=0;i<text.length;i++){h^=text.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV377PhysicsWavesManualReview(questions){
+ const indexed=new Map(V377_WAVES_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!=='Physics'||q.level!=='AS'||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||
+     q.specRef!==row.specRef||q.marks!==row.marks||
+     !Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     v377SourceHash(q.prompt)!==row.promptHash||
+     v377SourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v377ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5635,6 +5661,7 @@ async function sync(manual=false){
  }
  // Apply exact manual-working protection after any published question corrections.
  applyV372Year1PureManualReview(examQuestions);
+ applyV377PhysicsWavesManualReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
