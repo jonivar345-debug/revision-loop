@@ -168,6 +168,14 @@
       "modelAnswer": "The initial gas volume is 1.00×10⁻³ m³. With moles unchanged, use p₁V₁/T₁=p₂(V_P+V_Q)/T₂. Total final volume = (102/75.0)×(295/300)×1000 = 1337.3 cm³. Subtract the original flask Q volume of 1000 cm³ to obtain V_P=337.3 cm³, or 337 cm³ to 3 significant figures.",
       "numericAnswer": 337.3333333333,
       "tolerance": 3
+    },
+    "aqa_chem_as16_p1_q3_2": {
+      "modelAnswer": "The 25.0 cm³ aliquot contains 9.89 × 10⁻⁴ mol MHCO₃ because it reacts 1:1 with HCl. The full 250 cm³ contains ten times as much: 9.89 × 10⁻³ mol. Using Mᵣ = mass / amount = 1.464 / (9.89 × 10⁻³) = 148 (3 significant figures).",
+      "markPoints": [
+        "Use the 1:1 MHCO₃:HCl mole ratio for the aliquot: n(MHCO₃) = 9.89 × 10⁻⁴ mol.",
+        "Scale the amount by 250/25.0 = 10: n(MHCO₃) in the full solution = 9.89 × 10⁻³ mol.",
+        "Mᵣ = 1.464 g / (9.89 × 10⁻³ mol) = 148 to 3 significant figures."
+      ]
     }
   }
 }

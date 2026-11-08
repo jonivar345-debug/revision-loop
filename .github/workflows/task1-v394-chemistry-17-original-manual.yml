@@ -1,0 +1,20 @@
+name: Task 1 v394 Chemistry 17 original worked-question method-marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'exam_answer_corrections.json'
+      - 'editorial/task1-v394-chemistry-17-original-manual-qa.json'
+      - 'tests/task1-v394-chemistry-17-original-manual.cjs'
+      - '.github/workflows/task1-v394-chemistry-17-original-manual.yml'
+  workflow_dispatch:
+jobs:
+  original-chemistry-17-method:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate 17 chemistry originals, corrected titration rubric and 66 protected marks
+        run: node tests/task1-v394-chemistry-17-original-manual.cjs
+      - name: Verify chemistry calibration and prior manual exam safeguards
+        run: node tests/task1-v393-physics-12-original-manual.cjs && node tests/task1-v392-denied-model-answer.cjs
