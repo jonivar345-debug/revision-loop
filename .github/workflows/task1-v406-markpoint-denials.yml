@@ -1,0 +1,34 @@
+name: Task 1 v406 exam mark-point denial regression
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v405-short-semantic-qa.cjs'
+      - 'tests/task1-v406-explicit-markpoint-denials.cjs'
+      - '.github/workflows/task1-v406-markpoint-denials.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-short-answer-negative-probes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check tests/task1-v406-explicit-markpoint-denials.cjs
+          node --check tests/task1-v405-short-semantic-qa.cjs
+      - name: Verify all 1,532 denied-point probes and valid-model controls
+        run: node tests/task1-v406-explicit-markpoint-denials.cjs
+      - name: Preserve semantic and multi-mark manual-review safeguards
+        run: |
+          node tests/task1-v405-short-semantic-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v403-original-82-manual-qa.cjs
+          node tests/task1-v402-original-21-working-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
+          node tests/task1-v392-denied-model-answer.cjs
