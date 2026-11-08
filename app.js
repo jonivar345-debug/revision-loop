@@ -4646,6 +4646,30 @@ function reviewedShortAnswerFlags(q,answer){
  }
  return flags.some(Boolean)?flags:null;
 }
+// v405: Nine short first-mock science explanations can obtain method marks
+// for factually opposite claims. Keep source-matched cases on honest manual
+// point review until their semantic alternatives have been independently checked.
+const V405_SHORT_SEMANTIC_MANUAL=Object.freeze([{"id":"verified2019_P_5_2","subject":"Physics","level":"AS","topic":"Mechanics & materials","subtopic":"Couples","courseTopic":"Mechanics & materials","specRef":null,"questionType":"short response","requiresWorking":false,"marks":2,"promptHash":"230cb4a5","answerHash":"9050de9","pointsHash":"d72e50f0","weightsHash":"3d90604d"},{"id":"aschem19p2_05_2","subject":"Chemistry","level":"AS","topic":"Bonding","subtopic":"Shapes","courseTopic":"Bonding","specRef":null,"questionType":"short response","requiresWorking":false,"marks":1,"promptHash":"8ed54393","answerHash":"39fd00a9","pointsHash":"148d6b91","weightsHash":"7616c164"},{"id":"aschem19p2_06_3","subject":"Chemistry","level":"AS","topic":"Organic chemistry","subtopic":"Alkenes","courseTopic":"Organic chemistry","specRef":null,"questionType":"short response","requiresWorking":false,"marks":2,"promptHash":"50d09620","answerHash":"cdf87e48","pointsHash":"3fcb1452","weightsHash":"3d90604d"},{"id":"original_v29_019","subject":"Physics","level":"AS","topic":"Mechanics & materials","subtopic":"Projectiles","courseTopic":"Mechanics & materials","specRef":null,"questionType":"explanation","requiresWorking":false,"marks":2,"promptHash":"889e84ca","answerHash":"36ecdbb7","pointsHash":"5278baa7","weightsHash":"3d90604d"},{"id":"orig_v31_chemistry_rp6_organic_tests_1","subject":"Chemistry","level":"AS","topic":"Practical skills","subtopic":"RP6 Organic tests","courseTopic":"Practical skills","specRef":null,"questionType":"explanation","requiresWorking":false,"marks":2,"promptHash":"bbf25fc0","answerHash":"3538ce78","pointsHash":"1be4e0","weightsHash":"3d90604d"},{"id":"orig_v31_chemistry_periodicity_2","subject":"Chemistry","level":"AS","topic":"Periodicity","subtopic":"Periodicity","courseTopic":"Periodicity","specRef":null,"questionType":"explanation","requiresWorking":false,"marks":2,"promptHash":"20e94246","answerHash":"ffc02119","pointsHash":"69d23137","weightsHash":"3d90604d"},{"id":"orig_v32_phy_rp2_interference_3","subject":"Physics","level":"AS","topic":"Waves","subtopic":"RP2 Interference","courseTopic":"Waves","specRef":null,"questionType":"explanation","requiresWorking":false,"marks":2,"promptHash":"dc32095e","answerHash":"5972cc60","pointsHash":"30b26226","weightsHash":"3d90604d"},{"id":"orig_v32_phy_interference_2","subject":"Physics","level":"AS","topic":"Waves","subtopic":"Interference","courseTopic":"Waves","specRef":null,"questionType":"explanation","requiresWorking":false,"marks":2,"promptHash":"d293ad9b","answerHash":"78db0e4c","pointsHash":"c24af90a","weightsHash":"3d90604d"},{"id":"orig_v32_chem_shapes_1","subject":"Chemistry","level":"AS","topic":"Bonding","subtopic":"Shapes","courseTopic":"Bonding","specRef":null,"questionType":"explanation","requiresWorking":false,"marks":2,"promptHash":"56d86be3","answerHash":"3b075279","pointsHash":"87719dab","weightsHash":"3d90604d"}]);
+function applyV405ShortSemanticManualReview(questions){
+ const byId=new Map(V405_SHORT_SEMANTIC_MANUAL.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=byId.get(q?.id);
+  if(!row||q.mock!==true||q.taught===false||q.standalone!==true||!mockEligibleQuestion(q))continue;
+  const exact=q.subject===row.subject&&q.level===row.level&&q.topic===row.topic&&
+   (q.subtopic??null)===row.subtopic&&(q.courseTopic??null)===row.courseTopic&&
+   (q.specRef??null)===row.specRef&&(q.questionType??null)===row.questionType&&
+   (q.requiresWorking??null)===row.requiresWorking&&q.marks===row.marks&&
+   v403OriginalHash(q.prompt)===row.promptHash&&
+   v403OriginalHash(q.modelAnswer)===row.answerHash&&
+   v403OriginalHash(JSON.stringify(q.markPoints))===row.pointsHash&&
+   v403OriginalHash(JSON.stringify(q.markPointMarks))===row.weightsHash;
+  q.manualWorkingReview=true;
+  q.v405ReviewRequired=true;
+  if(!exact)q.v405SourceMismatch=true;
+ }
+ return questions;
+}
+
 function examSuggested(q,answer){
  // Graphs/diagrams and selected complete proofs require the student's actual work;
  // finding a few matching words must never award the proof or drawing marks.
@@ -5348,6 +5372,8 @@ function renderExam(q){
 
 // v376: accurate manual marking guidance for proofs, calculations and diagrams.
 function manualExamHelpText(q){
+ if(q.v405ReviewRequired===true)
+  return 'This short science explanation needs its meaning checked, because incorrect statements can match the right keywords. Compare each claim with the marking points manually; do not rely on automatic suggestions.';
  if(q.manualDiagramReview===true)
   return 'This question assesses a drawing. Use the on-page sketch or your own photographed diagram, then compare it manually with the marking points. The text checker cannot verify this drawing or graph.';
  if(q.manualWorkingReview===true&&q.subject==='Maths'&&q.specRef==='3.2')
@@ -5359,6 +5385,7 @@ function manualExamHelpText(q){
  return 'Suggested marks are not final: the checker can miss valid algebra, alternative methods, labelled diagrams and error-carried-forward work. Review each mark point and correct the total before saving.';
 }
 function manualExamButtonText(q){
+ if(q.v405ReviewRequired===true)return 'Review science explanation point by point';
  if(q.manualDiagramReview===true)return 'Review diagram marking points manually';
  if(q.manualWorkingReview===true&&q.subject==='Maths'&&q.specRef==='3.2')
   return 'Review proof marking points manually';
@@ -6254,6 +6281,7 @@ async function sync(manual=false){
  applyV400Physics8MethodManual(examQuestions);
  applyV402Original21ManualReview(examQuestions);
  applyV403Original82ManualReview(examQuestions);
+ applyV405ShortSemanticManualReview(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}

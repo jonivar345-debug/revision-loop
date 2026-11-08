@@ -1,0 +1,28 @@
+name: Task 1 v405 short science semantic marker calibration
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v405-short-semantic-qa.json'
+      - 'tests/task1-v405-short-semantic-qa.cjs'
+      - '.github/workflows/task1-v405-short-semantic-qa.yml'
+  workflow_dispatch:
+jobs:
+  source-locked-short-explanations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: |
+          node --check app.js
+          node --check tests/task1-v405-short-semantic-qa.cjs
+      - name: Reproduce nine false-credit cases and verify manual point review
+        run: node tests/task1-v405-short-semantic-qa.cjs
+      - name: Preserve prior short-answer non-answer and multi-mark safeguards
+        run: |
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v403-original-82-manual-qa.cjs
+          node tests/task1-v402-original-21-working-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
+          node tests/task1-v392-denied-model-answer.cjs
