@@ -4653,6 +4653,27 @@ function examSuggested(q,answer){
   const empty=(q.markPoints||[]).map(()=>false);
   return {preds:empty,scores:empty.map(()=>0),suggested:0,finalCorrect:false,confidence:'low',manualRequired:true};
  }
+ // v404: A copied prompt or explicit rejection of the entire model answer is
+ // not a demonstrated exam answer. Keep valid alternative/correct answers on
+ // their existing reviewable marking paths; do not infer detailed correctness.
+ const normalisedExamNonAnswer=value=>String(value??'').normalize('NFKC')
+  .replace(/[−–—]/g,'-').replace(/[“”]/g,'"').replace(/[‘’]/g,"'")
+  .replace(/\s+/g,' ').trim().replace(/[.!?]+$/,'').toLowerCase();
+ const submittedNonAnswer=normalisedExamNonAnswer(answer);
+ const sourcePrompt=normalisedExamNonAnswer(q.prompt);
+ const sourceModel=normalisedExamNonAnswer(q.modelAnswer);
+ const exactQuestionEcho=Boolean(sourcePrompt)&&submittedNonAnswer===sourcePrompt&&submittedNonAnswer!==sourceModel;
+ const completeModelDenial=Boolean(sourceModel)&&[
+  'the answer is not ','the correct answer is not ','my answer is not ',
+  'the result is not ','not ',
+  'the model answer is incorrect. ','the model answer is wrong. ',
+  'the model answer is false. ','the model answer is incorrect: ',
+  'the model answer is wrong: '
+ ].some(prefix=>submittedNonAnswer===prefix+sourceModel);
+ if(exactQuestionEcho||completeModelDenial){
+  const preds=(q.markPoints||[]).map(()=>false);
+  return {preds,scores:preds.map(()=>0),suggested:0,finalCorrect:false,confidence:'high',v404RejectedNonAnswer:true};
+ }
  // v213: use reviewed independent evidence on four AS materials/circuit
  // questions; other answers retain ordinary, user-adjustable marking.
  if(/^task1_v203_phy_0[4-7]$/.test(String(q.id||''))){
