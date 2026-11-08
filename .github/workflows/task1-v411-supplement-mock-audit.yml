@@ -1,0 +1,29 @@
+name: Task 1 v411 all supplementary mock marking exposure
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'exam_questions.json'
+      - 'paper_supplement_2016_2017.json'
+      - 'exam_answer_corrections.json'
+      - 'tests/task1-v411-supplement-mock-routing-audit.cjs'
+      - '.github/workflows/task1-v411-supplement-mock-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory-full-runtime-mock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check source syntax
+        run: node --check tests/task1-v411-supplement-mock-routing-audit.cjs
+      - name: Identify supplementary manual-marking and mock-scope gaps
+        run: node tests/task1-v411-supplement-mock-routing-audit.cjs
+      - name: Protect existing original mock and Chemistry boundaries
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+          node tests/task1-v403-original-82-manual-qa.cjs
