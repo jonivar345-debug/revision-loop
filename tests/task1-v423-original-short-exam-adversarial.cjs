@@ -125,7 +125,8 @@ for(const q of short){
  run(q,'','blank');
  run(q,'I do not know','idk');
  run(q,q.prompt,'echo');
- if(q.modelAnswer)run(q,'The statement "'+q.modelAnswer+'" is wrong.','denial');
+ if(q.modelAnswer)for(const verdict of ['wrong','false','incorrect','untrue'])
+  run(q,'The statement "'+q.modelAnswer+'" is '+verdict+'.','denial');
  if(q.markPoints?.length)
   run(q,'The statement "'+q.markPoints[0]+'" is wrong.','pointDenial');
  const m=String(q.modelAnswer||'').trim().replace(/[−–]/g,'-')
@@ -138,6 +139,9 @@ assert.equal(results.manualShort,11);
 assert.equal(results.blankFull.length,0,'A blank first-mock short answer got full credit');
 assert.equal(results.idkFull.length,0,'IDK first-mock short answer got full credit');
 assert.equal(results.manualNotZero.length,0,'Manual short answer got nonzero automatic marks');
+assert.equal(results.modelDenialFull.length,0,'A fully quoted correct model was explicitly denied yet credited');
+assert.equal(results.pointDenialFull.length,0,'An explicitly denied mark point got full marks');
+assert.equal(Object.values(results.bySubject).reduce((sum,v)=>sum+v.modelFull,0),387,'Correct source model undergraded');
 const count=Object.fromEntries(['modelUnder','questionEchoFull','blankFull','idkFull',
  'modelDenialFull','pointDenialFull','wrongSignedNumericFull','manualNotZero','evaluatorErrors']
  .map(k=>[k,results[k].length]));
