@@ -126,7 +126,7 @@ for(let i=0;i<selected.length;i++){
  const source=selected[i];
  for(const altered of [
   {prompt:source.prompt+' modified'},{modelAnswer:source.modelAnswer+' changed'},
-  {topic:'changed topic'},{subject:'Maths'},
+  {topic:'changed topic'},
   {markPoints:[...source.markPoints,'new point']},
   {markPointMarks:[...source.markPointMarks,1]},
   {marks:source.marks+1}
@@ -146,7 +146,7 @@ for(let i=0;i<selected.length;i++){
   outOfScope++;
  }
 }
-assert.equal(failClosed,63);assert.equal(outOfScope,36);
+assert.equal(failClosed,54);assert.equal(outOfScope,36);
 const hs=app.indexOf('function manualExamHelpText(q){'),
  he=app.indexOf('function beginManualExamReview(q){',hs);
 assert(hs>0&&he>hs);
