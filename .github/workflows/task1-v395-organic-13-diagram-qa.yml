@@ -1,0 +1,19 @@
+name: Task 1 v395 original organic drawing and mechanism manual rubric
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v395-organic-13-diagram-qa.json'
+      - 'tests/task1-v395-organic-13-diagram-qa.cjs'
+      - '.github/workflows/task1-v395-organic-13-diagram-qa.yml'
+  workflow_dispatch:
+jobs:
+  organic-13-manual-diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require manual marking for 13 original organic drawings and 72 marks
+        run: node tests/task1-v395-organic-13-diagram-qa.cjs
+      - name: Retain chemistry and other original worked-question guards
+        run: node tests/task1-v394-chemistry-17-original-manual.cjs && node tests/task1-v393-physics-12-original-manual.cjs
