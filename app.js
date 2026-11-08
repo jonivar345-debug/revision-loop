@@ -3804,9 +3804,13 @@ function mockEligibleCard(c){
  if(c.subject!=='Maths')return true;
  return c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)&&!MOCK_MATHS_YEAR2_EXCLUDED_IDS.has(c.id);
 }
+// v397: keep eleven later-taught inverse/composite function exam questions out
+// of the first school Year 1 Pure mock, without removing general exam practice.
+// IDs are exact and separately source-audited; 'composite' in a proof remains valid.
 function mockEligibleQuestion(q){
  if(q.mock!==true)return false;
  if(q.subject!=='Maths')return true;
+ if(/^(?:orig_v33_math_[78]_[0-3]|original_v34_maths_18|stretch_v34_maths_functions|mock_v163_06)$/.test(String(q.id||'')))return false;
  // The first school Maths mock is Year 12 / AS Pure only; Year 13 is a later paper.
  if(q.level!=='AS')return false;
  const topic=String(q.topic||'').trim().toLowerCase();

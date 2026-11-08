@@ -25,8 +25,13 @@ assert.equal(new Set(known).size,1268+4+6);
 const m=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
 assert(m);
 const eligible=vm.runInNewContext(m[0]+'\nmockEligibleQuestion');
+// Keep the historical 138-question report; the school mock now excludes eleven later functions.
+const historicalYear1Maths=q=>q.subject==='Maths'&&q.mock===true&&q.level==='AS'&&
+ !['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())&&
+ !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+assert.equal([...bank.questions,...v190.questions,...extra.questions].filter(historicalYear1Maths).length,138);
 assert(extra.questions.every(eligible),'All six must be first-school-mock eligible');
-assert.equal([...bank.questions,...v190.questions,...extra.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+assert.equal([...bank.questions,...v190.questions,...extra.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 assert(app.includes("'./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json'"));
 assert(app.includes("window.RevisionPureMathsV191?.evaluate(q,answer)"));
 assert(sw.includes("'./maths_as_pure_gap_challenges_v191.json'"));
@@ -205,4 +210,4 @@ for(const answer of [
  assert.equal(suggested(circle,answer).suggested,0,'Invalid circle answer credited: '+answer);
 }
 assert.equal(suggested(circle,'At P, (6-3)^2+(2+2)^2=25, so P lies on the circle. The tangent is 3x+4y=26.').suggested,2);
-console.log('PASS v191: six AS Pure original questions (32 marks), 138-question mock pool, accurate individual method marking, unchanged core bank');
+console.log('PASS v191: six AS Pure original questions (32 marks), historical 138 versus current 127-question mock pool, accurate individual method marking, unchanged core bank');

@@ -56,7 +56,8 @@ assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'")&&app.includes("PROFI
 const qStart=app.indexOf('function mockEligibleQuestion(q){'),qEnd=app.indexOf('\nfunction startMockSession',qStart);
 assert(qStart>=0&&qEnd>qStart);
 const eligible=vm.runInNewContext(app.slice(qStart,qEnd)+'\nmockEligibleQuestion');
-assert.equal(prevQuestions.filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal(prevQuestions.filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 for(const q of bank.questions){
  assert(!prevQIDs.has(q.id),'Duplicate original question: '+q.id);prevQIDs.add(q.id);
  assert(q.subject==='Chemistry'&&['AS','A2'].includes(q.level)&&q.mock===true&&q.taught===true&&eligible(q));
@@ -66,7 +67,7 @@ for(const q of bank.questions){
  assert.equal(q.modelAnswer,q.markPoints.join(' '));
  assert(!/buffer/i.test(q.prompt));
 }
-assert.equal([...prevQuestions,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+assert.equal([...prevQuestions,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 const a=app.indexOf('function normalise('),b=app.indexOf('function nextSchedule(',a),c=app.indexOf('function evidenceRuleScore(',b),d=app.indexOf('function renderExam(',c);
 assert(a>=0&&b>a&&c>b&&d>c);
 const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+app.slice(a,b)+app.slice(c,d)+'return examSuggested')();

@@ -40,7 +40,8 @@ assert(predicate,'Missing school-mock gate');
 const eligible=vm.runInNewContext(predicate[0]+'\nmockEligibleQuestion');
 assert(supplement.questions.every(eligible));
 assert.equal([...bank.questions,...oldMaths190.questions,...oldMaths191.questions,...supplement.questions]
-  .filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+// v397: 138 was this science crosswalk's historical Maths mock count; exclude eleven later-taught inverse/composite questions (127 current).
+  .filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 assert(app.includes("'./science_practical_data_v194.json'"));
 assert(sw.includes("'./science_practical_data_v194.json'"));
 assert(sw.includes('v194-practical-data'));

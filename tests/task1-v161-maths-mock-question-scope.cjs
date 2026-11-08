@@ -23,7 +23,15 @@ assert.equal(maths.filter(q=>q.mock===true||q.level==='AS').length,224);
 const before=maths.filter(q=>q.mock===true);
 assert.equal(before.length,173);
 const selected=maths.filter(eligible);
-assert.equal(selected.length,121);
+// Preserve v161's historical 121-question snapshot, while checking the current
+// school-specific inverse/composite function exclusions added in v397.
+const historicalYear1Pure=q=>q.mock===true&&q.level==='AS'&&
+ !['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())&&
+ !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+const historicalSelected=maths.filter(historicalYear1Pure);
+assert.equal(historicalSelected.length,121);
+assert.equal(selected.length,111);
+assert.equal(historicalSelected.filter(q=>!eligible(q)).length,10);
 assert(selected.every(q=>q.mock===true&&q.level==='AS'));
 assert(selected.every(q=>!['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())));
 assert(selected.every(q=>!/(?:\bradians?\b|π)/i.test(q.prompt||'')));
@@ -42,10 +50,10 @@ for(const id of audit.exclusionEvidence.schoolExcludedRadiansAfterAppliedFilter.
 assert.equal(audit.exclusionEvidence.asWithoutExplicitMockFlag.count,51);
 assert.equal(audit.exclusionEvidence.statisticsOrMechanicsMockTagged.count,49);
 assert.equal(audit.exclusionEvidence.schoolExcludedRadiansAfterAppliedFilter.count,3);
-assert.equal(audit.corrected.mathsMockQuestions,selected.length);
+assert.equal(audit.corrected.mathsMockQuestions,historicalSelected.length);
 assert(!eligible({subject:'Maths',topic:'Algebra & functions',level:'AS',mock:false,prompt:'Solve x=2'}));
 assert(eligible({subject:'Maths',topic:'Algebra & functions',level:'AS',mock:true,prompt:'Solve x=2'}));
 assert(!eligible({subject:'Maths',topic:'Mechanics',level:'AS',mock:true,prompt:'Find the displacement'}));
 assert(!eligible({subject:'Maths',topic:'Trigonometry',level:'AS',mock:true,prompt:'Find the arc length in radians'}));
 assert.equal(audit.limits.completeSpecificationAudit,false);
-console.log('PASS v161: Maths mock exam sessions and daily challenges select 121 explicit Year 1 Pure questions, not 224 broader AS questions.');
+console.log('PASS v161/v397: historical 121 Year 1 Pure questions preserved; current school mock filters 10 later-taught inverse/composite questions from this snapshot, leaving 111.');

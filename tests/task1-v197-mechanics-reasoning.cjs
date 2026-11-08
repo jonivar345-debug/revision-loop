@@ -38,7 +38,8 @@ assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 const mathsOld=[...base.questions,...previousFiles.flatMap(f=>load(f).questions)].filter(q=>q.subject==='Maths'&&eligible(q));
 const mathsNew=[...base.questions,...previousFiles.flatMap(f=>load(f).questions),...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q));
 assert.equal(mathsOld.length,mathsNew.length);
-assert.equal(mathsNew.length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal(mathsNew.length,127);
 const normaliseStart=app.indexOf('function normalise('),schedule=app.indexOf('function nextSchedule(',normaliseStart),evidence=app.indexOf('function evidenceRuleScore(',schedule),render=app.indexOf('function renderExam(',evidence);
 assert(normaliseStart>=0&&schedule>normaliseStart&&evidence>schedule&&render>evidence);
 const mark=new Function('function clamp(x,a,b){return Math.max(a,Math.min(b,x))};'+app.slice(normaliseStart,schedule)+app.slice(evidence,render)+'return examSuggested')();

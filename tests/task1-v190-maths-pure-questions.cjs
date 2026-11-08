@@ -22,9 +22,15 @@ for(const q of supplement.questions){
 }
 const predicate=app.match(/function mockEligibleQuestion\(q\)\{[\s\S]*?\n\}/);
 assert(predicate);const eligible=vm.runInNewContext(predicate[0]+'\nmockEligibleQuestion');
+// Original v190 audit counts predate the v397 school-mock-only function exclusions.
+const historicalYear1Maths=q=>q.subject==='Maths'&&q.mock===true&&q.level==='AS'&&
+ !['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())&&
+ !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+assert.equal(bank.questions.filter(historicalYear1Maths).length,128);
+assert.equal([...bank.questions,...supplement.questions].filter(historicalYear1Maths).length,132);
 assert(supplement.questions.every(eligible));
-assert.equal(bank.questions.filter(q=>q.subject==='Maths'&&eligible(q)).length,128);
-assert.equal([...bank.questions,...supplement.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,132);
+assert.equal(bank.questions.filter(q=>q.subject==='Maths'&&eligible(q)).length,117);
+assert.equal([...bank.questions,...supplement.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,121);
 assert(app.includes("'./maths_pure_proof_vectors_v190.json'"));
 assert(sw.includes("'./maths_pure_proof_vectors_v190.json'"));
 assert(sw.includes('v190-as-pure-proof-vectors'));
@@ -92,4 +98,4 @@ for(const [answer,expected] of oddProofCases){
  assert.equal(actual.suggested,expected,'v208 odd-square proof calibration: '+answer);
  assert.equal(actual.preds.filter(Boolean).length,expected,'v208 independent proof marks: '+answer);
 }
-console.log('PASS v190: four original AS Pure 19-mark questions, 132 core+extra mock pool, calibrated independent method credit');
+console.log('PASS v190: four original AS Pure 19-mark questions, historical 132 versus current 121 core+extra mock pool, calibrated independent method credit');

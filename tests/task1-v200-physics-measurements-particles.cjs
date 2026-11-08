@@ -20,7 +20,8 @@ const known=new Set(prior.map(q=>q.id));
 const start=app.indexOf('function mockEligibleQuestion(q){'),end=app.indexOf('\nfunction startMockSession',start);
 assert(start>=0&&end>start,'Missing mock question filter');
 const eligible=vm.runInNewContext(app.slice(start,end)+'\nmockEligibleQuestion');
-assert.equal(prior.filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal(prior.filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 for(const q of bank.questions){
  assert(!known.has(q.id),'Duplicate ID: '+q.id);known.add(q.id);
  assert.equal(q.subject,'Physics');assert.equal(q.level,'AS');assert.equal(q.year,'Practice');assert.equal(q.taught,true);
@@ -35,7 +36,7 @@ for(const q of bank.questions){
  assert(q.prompt.length>180 && q.modelAnswer.length>200);
  assert(!/step-by-step lab|buffer solution/i.test(q.prompt));
 }
-assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 assert(app.includes("'./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json'"));
 assert(sw.includes("'./physics_measurements_particles_v200.json'"));
 assert(sw.includes('v200-physics-measurements-particles'));

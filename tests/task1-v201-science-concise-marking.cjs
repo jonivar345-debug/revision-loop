@@ -71,5 +71,6 @@ const appMockStart=app.indexOf('function mockEligibleQuestion(q){'),appMockStop=
 const eligible=vm.runInNewContext(app.slice(appMockStart,appMockStop)+'\nmockEligibleQuestion');
 const prior=['maths_pure_proof_vectors_v190.json','maths_as_pure_gap_challenges_v191.json','science_practical_data_v194.json','science_mock_application_v195.json','science_mock_evidence_v196.json','physics_mechanics_reasoning_v197.json','science_waves_energetics_v198.json','chemistry_mock_precision_v199.json','physics_measurements_particles_v200.json'];
 const oldQuestions=[...exam.questions,...prior.flatMap(path=>get(path).questions)];
-assert.equal(oldQuestions.filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal(oldQuestions.filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 console.log('PASS v201: 44 reviewed Chemistry/Physics aliases + 19 independent positive/negative examples; correct marked-point vectors; all 18 original questions score full, blank=0; preserved 138 AS Pure Maths questions, core banks and saved keys.');
