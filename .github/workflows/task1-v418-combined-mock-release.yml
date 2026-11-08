@@ -8,6 +8,7 @@ on:
       - 'maths_pure_proof_vector_applications_v209.json'
       - 'maths_year1_pure_targeted_practice_v340.json'
       - 'chemistry_mock_precision_v199.json'
+      - 'tests/task1-v418-v382-maths-guard-integration.cjs'
       - 'tests/task1-v412-supplement-multimark-manual.cjs'
       - 'tests/task1-v414-maths-mock-spec-metadata.cjs'
       - 'tests/task1-v415-chem-arrhenius-spec.cjs'
@@ -27,10 +28,13 @@ jobs:
         run: |
           node --check app.js
           node --check sw.js
+          node --check tests/task1-v418-v382-maths-guard-integration.cjs
           node --check tests/task1-v412-supplement-multimark-manual.cjs
           node --check tests/task1-v414-maths-mock-spec-metadata.cjs
           node --check tests/task1-v415-chem-arrhenius-spec.cjs
           node --check tests/task1-v411-supplement-mock-routing-audit.cjs
+      - name: Preserve six source-locked original Maths guards when AQA references change
+        run: node tests/task1-v418-v382-maths-guard-integration.cjs
       - name: All supplementary multi-mark questions now use safe manual review
         run: node tests/task1-v412-supplement-multimark-manual.cjs
       - name: Full loaded bank audit under combined runtime
