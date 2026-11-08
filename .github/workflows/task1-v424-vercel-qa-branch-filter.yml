@@ -1,0 +1,25 @@
+name: Task 1 v424 preserve release deploys and skip QA previews
+on:
+  pull_request:
+    paths:
+      - 'vercel.json'
+      - 'tests/task1-v424-vercel-qa-branch-filter.cjs'
+      - '.github/workflows/task1-v424-vercel-qa-branch-filter.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-vercel-branch-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax and JSON validity
+        run: |
+          node --check tests/task1-v424-vercel-qa-branch-filter.cjs
+          node -e "JSON.parse(require('node:fs').readFileSync('vercel.json','utf8'))"
+      - name: Verify release branches remain deployable and old cache headers unchanged
+        run: node tests/task1-v424-vercel-qa-branch-filter.cjs
+      - name: Preserve existing mock-study inventory
+        run: node tests/task1-v401-mock-signoff-inventory.cjs
