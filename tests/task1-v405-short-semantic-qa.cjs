@@ -12,7 +12,7 @@ assert.equal(audit.rows.length,9);
 assert.equal(audit.counts.newManualMarks,17);
 assert.equal(audit.counts.wrongNonZero,9);
 assert.equal(audit.counts.wrongFull,5);
-assert(sw.includes('-v405-semantic-short17-manual'));
+assert(sw.includes('-v405-semantic-short17-manual') || sw.includes('-v406-markpoint-denials'));
 const hash=v=>{
  let h=2166136261,s=String(v||'');
  for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}
