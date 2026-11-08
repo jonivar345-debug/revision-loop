@@ -15,7 +15,7 @@ assert(app.includes('applyV403Original82ManualReview(examQuestions);'));
 const start=app.indexOf('const V372_YEAR1_PURE_MANUAL='),end=app.indexOf('const V287_LEGACY_SPEC_GROUPS=',start);
 const ms=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),me=app.indexOf('function startMockSession(){',ms);
 assert(start>=0&&end>start&&ms>0&&me>ms);
-const before=app.slice(start,end),names=[...before.matchAll(/function (applyV\d+[A-Za-z0-9_]+)\(questions\)/g)].map(m=>m[1]);
+const before=app.slice(start,end),names=[...before.matchAll(/function (applyV\d+[A-Za-z0-9_]+)\(questions\)/g)].map(m=>m[1]).filter(n=>n!=='applyV403Original82ManualReview');
 assert.equal(names.length,17);assert(names.includes('applyV402Original21ManualReview'));
 const replay=new Function(before+'\n'+app.slice(ms,me)+
  '\nreturn {guards:['+names.join(',')+'],newGuard:applyV403Original82ManualReview,rows:V403_ORIGINAL_82_MANUAL,eligible:mockEligibleQuestion};')();
