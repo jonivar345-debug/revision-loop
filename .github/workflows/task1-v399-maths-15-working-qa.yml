@@ -1,0 +1,19 @@
+name: Task 1 v399 Year 1 Pure 15 original worked-question safeguards
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v399-maths-15-working-qa.json'
+      - 'tests/task1-v399-maths-15-working-qa.cjs'
+      - '.github/workflows/task1-v399-maths-15-working-qa.yml'
+  workflow_dispatch:
+jobs:
+  maths-15-original-manual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source-lock and check 84 Maths worked marks
+        run: node tests/task1-v399-maths-15-working-qa.cjs
+      - name: Check v398 Chemistry and v397 Maths scope regressions
+        run: node tests/task1-v398-chemistry-24-working-qa.cjs && node tests/task1-v397-maths-first-pure-functions-qa.cjs && node tests/task1-v391-maths-19-year1-pure-working-review.cjs
