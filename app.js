@@ -3945,7 +3945,7 @@ const MOCK_MATHS_YEAR2_EXCLUDED_IDS=new Set(['math_function_composite','math_inv
 // First school Chemistry mock includes taught pH, Ka, Kw and Kp, but explicitly
 // excludes buffer solutions. Check the assessed prompt and syllabus labels;
 // model answers can legitimately mention a buffer while contrasting concepts.
-const CHEMISTRY_MOCK_BUFFER_SCOPE=/(?:\\bbuffers?\\b|\\bbuffered\\b|\\bbuffering\\b|\\bhenderson[\\s-]*hasselbalch\\b|\\bhalf[\\s-]*neutralis(?:ation|ation)\\b)/i;
+const CHEMISTRY_MOCK_BUFFER_SCOPE=/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutralis(?:ation|ation)\b)/i;
 function chemistryMockBufferExcluded(item,mode){
  if(item?.subject!=='Chemistry')return false;
  const assessed=mode==='card'?item.front:item.prompt;
