@@ -1,0 +1,31 @@
+name: Task 1 v416 independently recalculated three-subject worked answers
+on:
+  pull_request:
+    paths:
+      - 'tests/task1-v416-independent-trisubject-workings.cjs'
+      - 'science_waves_energetics_v198.json'
+      - 'physics_electricity_manual_sketch_practice_v407.json'
+      - 'chemistry_rates_rp7_kp_v210.json'
+      - 'chemistry_mock_precision_v199.json'
+      - 'maths_year1_pure_targeted_practice_v340.json'
+      - 'maths_pure_proof_vector_applications_v209.json'
+      - '.github/workflows/task1-v416-independent-workings.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-three-subject-arithmetic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: node --check tests/task1-v416-independent-trisubject-workings.cjs
+      - name: Independently derive sample scientific and mathematical numerical results
+        run: node tests/task1-v416-independent-trisubject-workings.cjs
+      - name: Existing Maths and Physics practical evidence regressions
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v407-electricity-manual-practice.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
