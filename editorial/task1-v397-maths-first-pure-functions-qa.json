@@ -1,0 +1,155 @@
+{
+  "version": "v397",
+  "date": "2026-11-08",
+  "scope": "Exclude 11 source-checked inverse/composite/one-to-one Maths exam questions (32 marks) from first school Year 1 Pure mock only. Retain all in full topic/standalone exam revision and preserve all IDs and saved attempts.",
+  "linkedIssue": 357,
+  "counts": {
+    "excludedQuestions": 11,
+    "marks": 32,
+    "originalMathsMockBefore": 128,
+    "originalMathsMockAfter": 117,
+    "originalCoreCards": 3345,
+    "originalExamQuestions": 1268
+  },
+  "basis": "Current first-school mock boundary excludes inverse/composite function core flashcards, Statistics, Mechanics, radians and Year 2; this closes the corresponding original exam-question selector leak.",
+  "rows": [
+    {
+      "id": "orig_v33_math_7_0",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_7_0",
+      "promptHash": "b09a374c",
+      "answerHash": "fe3435b7"
+    },
+    {
+      "id": "orig_v33_math_7_1",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_7_1",
+      "promptHash": "1e850a2d",
+      "answerHash": "60ce5f4"
+    },
+    {
+      "id": "orig_v33_math_7_2",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_7_2",
+      "promptHash": "795d300e",
+      "answerHash": "7281ca19"
+    },
+    {
+      "id": "orig_v33_math_7_3",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_7_3",
+      "promptHash": "a99f8ef",
+      "answerHash": "b2f82af9"
+    },
+    {
+      "id": "orig_v33_math_8_0",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_8_0",
+      "promptHash": "9ede6688",
+      "answerHash": "9211c6f3"
+    },
+    {
+      "id": "orig_v33_math_8_1",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_8_1",
+      "promptHash": "3228a3a",
+      "answerHash": "b2167681"
+    },
+    {
+      "id": "orig_v33_math_8_2",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_8_2",
+      "promptHash": "e5867010",
+      "answerHash": "90140264"
+    },
+    {
+      "id": "orig_v33_math_8_3",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "orig_v33_math_8_3",
+      "promptHash": "e7c50dbf",
+      "answerHash": "8d0e2695"
+    },
+    {
+      "id": "original_v34_maths_18",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 2,
+      "groupId": "original_v34_maths_18",
+      "promptHash": "5f780b89",
+      "answerHash": "aaa0d95f"
+    },
+    {
+      "id": "stretch_v34_maths_functions",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 7,
+      "groupId": "stretch_v34_maths_functions",
+      "promptHash": "23bbd717",
+      "answerHash": "77a8f2f6"
+    },
+    {
+      "id": "mock_v163_06",
+      "subject": "Maths",
+      "level": "AS",
+      "topic": "Algebra & functions",
+      "courseTopic": "Algebra & functions",
+      "marks": 7,
+      "groupId": "mock_v163_06",
+      "promptHash": "21c54b31",
+      "answerHash": "f2a33a94"
+    }
+  ],
+  "notExcluded": [
+    "orig_v33_math_39_0",
+    "orig_v33_math_39_1",
+    "orig_v33_math_39_2",
+    "orig_v33_math_39_3"
+  ],
+  "limits": [
+    "No edits to original exam source or marking.",
+    "No exclusions from full-topic/standalone exam practice.",
+    "Do not remove legitimate 'composite counterexample' Proof items.",
+    "Complete official AQA bulletin and independent examiner audit remain open."
+  ],
+  "regression": [
+    "Exact original question prompt, answer, level, mock eligibility and marks checked in source.",
+    "All other original questions remain equivalent to previous eligibility logic.",
+    "All 3345 original core-card IDs and progress/XP/cloud keys stay unchanged."
+  ]
+}
