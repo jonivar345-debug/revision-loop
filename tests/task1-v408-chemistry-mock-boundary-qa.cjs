@@ -12,7 +12,7 @@ const start=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS=');
 const end=app.indexOf('function startMockSession(){',start);
 assert(start>0&&end>start,'Find exact deployed school-mock selectors');
 const live=new Function(app.slice(start,end)+
- '\nreturn {card:mockEligibleCard,question:mockEligibleQuestion,buffer:chemistryMockBufferExcluded};')();
+ '\nreturn {card:mockEligibleCard,question:mockEligibleQuestion};')();
 const card=(front,changes={})=>({
  subject:'Chemistry',id:'v408_synthetic_card',stage:'AS',
  mock:true,active:true,topic:'Acids and bases',
@@ -87,7 +87,7 @@ const allCards=[...deck.cards,...[...flashFiles,...focused].flatMap(f=>
  (json(f).cards||[]).map(c=>({...c,__file:f})))];
 const allQuestions=[...original.questions,...questionFiles.flatMap(f=>
  (json(f).questions||[]).map(q=>({...q,__file:f})))];
-const scoped=/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutralis(?:ation|ation)\b)/i;
+const scoped=/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i;
 const relevant=c=>[c.topic,c.subtopic,c.courseTopic,c.revisionTopic,c.question,c.front??c.prompt]
  .map(s=>String(s||'')).join(' ');
 let bad=0,excludedCardsFound=0,excludedQsFound=0,answerOnlyCards=0,answerOnlyQs=0;
