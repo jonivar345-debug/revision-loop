@@ -2,6 +2,7 @@ name: Task 1 v414 Year 1 Pure specification metadata
 on:
   pull_request:
     paths:
+      - 'sw.js'
       - 'maths_pure_proof_vectors_v190.json'
       - 'maths_pure_proof_vector_applications_v209.json'
       - 'maths_year1_pure_targeted_practice_v340.json'
