@@ -7,6 +7,8 @@ on:
       - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
       - 'tests/task1-v422-bond-diagram-denials.cjs'
       - 'tests/task1-v423-original-short-exam-adversarial.cjs'
+      - 'tests/task1-v406-explicit-markpoint-denials.cjs'
+      - 'tests/task1-v409-short-negation-qa.cjs'
       - '.github/workflows/task1-v425-full-model-denials.yml'
   workflow_dispatch:
 permissions:
@@ -34,6 +36,7 @@ jobs:
       - name: Preserve existing long/manual and complete-model/point protections
         run: |
           node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v406-explicit-markpoint-denials.cjs
           node tests/task1-v409-short-negation-qa.cjs
           node tests/task1-v408-chemistry-mock-boundary-qa.cjs
           node tests/task1-v404-exam-nonanswer-qa.cjs
