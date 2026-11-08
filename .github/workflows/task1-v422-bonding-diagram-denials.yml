@@ -5,6 +5,7 @@ on:
       - 'app.js'
       - 'sw.js'
       - 'tests/task1-v422-bonding-diagram-denials.cjs'
+      - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
       - '.github/workflows/task1-v422-bonding-diagram-denials.yml'
   workflow_dispatch:
 permissions:
