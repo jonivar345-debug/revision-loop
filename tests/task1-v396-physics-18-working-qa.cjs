@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
-const app=read('app.js'),sw=read('sw.js'),deck=json('deck.json'),exam=json('exam_questions.json');
+const app=read('app.js'),sw=read('sw.js'),deck=json('deck.json'),exam=json('exam_questions.json'),corrections=json('exam_answer_corrections.json');
 const audit=json('editorial/task1-v396-physics-18-working-qa.json');
 assert.equal(deck.cards.length,3345);
 assert.equal(new Set(deck.cards.map(c=>c.id)).size,3345);
@@ -34,14 +34,18 @@ const originals=rows.map(r=>{
  assert.equal(q.markPoints.length,r.marks);
  assert.equal(q.markPointMarks.reduce((s,n)=>s+n,0),r.marks);
  assert.equal(hash(q.prompt),r.promptHash);
- assert.equal(hash(q.modelAnswer),r.answerHash);
+ assert.equal(hash(q.modelAnswer),r.originalAnswerHash);
+ assert.equal(hash(corrections.modelAnswers[q.id]||q.modelAnswer),r.answerHash);
  assert.equal(hash(JSON.stringify(q.markPoints)),r.pointsHash);
  assert.equal(hash(JSON.stringify(q.markPointMarks)),r.pointMarksHash);
  return q;
 });
 assert.equal(originals.reduce((s,q)=>s+q.marks,0),93);
 const snapshot=JSON.stringify(originals);
-const patched=originals.map(q=>({...q,markPoints:[...q.markPoints],markPointMarks:[...q.markPointMarks]}));
+const corrected=originals.filter(q=>Boolean(corrections.modelAnswers[q.id]));
+assert.deepEqual(corrected.map(q=>q.id).sort(),['orig_v25_physics_free_body_diagrams_1','orig_v25_physics_free_body_diagrams_4']);
+const effectiveOriginals=originals.map(q=>({...q,modelAnswer:corrections.modelAnswers[q.id]||q.modelAnswer}));
+const patched=effectiveOriginals.map(q=>({...q,markPoints:[...q.markPoints],markPointMarks:[...q.markPointMarks]}));
 apply(patched);
 assert.equal(JSON.stringify(originals),snapshot,'Source bank mutated');
 assert.equal(patched.filter(q=>q.v396ReviewRequired===true).length,18);
@@ -56,7 +60,7 @@ assert(ms>=0&&me>ms);
 const eligible=new Function(app.slice(ms,me)+'\nreturn mockEligibleQuestion;')();
 let probes=0,negative=0;
 for(let i=0;i<patched.length;i++){
- const q=patched[i],src=originals[i];
+ const q=patched[i],src=effectiveOriginals[i];
  assert(eligible(q),'Original mock excluded '+q.id);
  assert.match(helper.help(q),/multi-step science question/);
  assert.equal(helper.button(q),'Review science working point by point');
