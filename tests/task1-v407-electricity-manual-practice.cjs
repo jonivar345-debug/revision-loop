@@ -53,7 +53,7 @@ const loader=app.slice(app.indexOf('const EXTRA_PRACTICE_URLS='),app.indexOf('co
 assert.equal(loader.split(bankFile).length-1,1,'Bank must load once as exam practice');
 const flashLoader=app.slice(app.indexOf('const EXTRA_FLASHCARD_URLS='),app.indexOf('function isV348MathsFirstMockCard('));
 assert(!flashLoader.includes(bankFile),'Never turn these long working questions into flashcards');
-assert(sw.includes("-v407-electricity-practice'"),'New service worker cache tag required');
+assert(sw.includes("-v407-electricity-practice"),'v407 service worker version must be preserved in later caches');
 assert.equal(sw.split(bankFile).length-1,1,'Bank must be cached once for offline practice');
 const scoreStart=app.indexOf('function examSuggested(q,answer){');
 const scoreEnd=app.indexOf('function examGraphDiagram(',scoreStart);

@@ -3942,8 +3942,14 @@ function weightedPick(items,n,weightFn){
 // Exclude A-level-only composite/inverse functions from the first Year 1 Pure mock.
 // Keep the original flashcards in full/taught revision and preserve review history.
 const MOCK_MATHS_YEAR2_EXCLUDED_IDS=new Set(['math_function_composite','math_inverse_condition','task1_v136_063','math_inverse','v33_card_maths_functions_76','v33_card_maths_functions_77','task1_maths_006','task1_v130_156','task1_v130_157','task1_v136_064']);
+// First-school Chemistry mock excludes buffer solution methods, while keeping
+// Ka, Kw, weak-acid pH and other taught content. Each selector is deliberately
+// self-contained because the historic mock and marking tests extract it alone.
 function mockEligibleCard(c){
  if(c.mock!==true)return false;
+ if(c.subject==='Chemistry'&&/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i.test(
+  [c.topic,c.subtopic,c.courseTopic,c.revisionTopic,c.question,c.front]
+   .map(v=>String(v||'')).join(' ')))return false;
  if(c.subject!=='Maths')return true;
  return c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)&&!MOCK_MATHS_YEAR2_EXCLUDED_IDS.has(c.id);
 }
@@ -3952,6 +3958,9 @@ function mockEligibleCard(c){
 // IDs are exact and separately source-audited; 'composite' in a proof remains valid.
 function mockEligibleQuestion(q){
  if(q.mock!==true)return false;
+ if(q.subject==='Chemistry'&&/(?:\bbuffers?\b|\bbuffered\b|\bbuffering\b|\bhenderson[\s-]*hasselbalch\b|\bhalf[\s-]*neutrali[sz]ation\b)/i.test(
+  [q.topic,q.subtopic,q.courseTopic,q.revisionTopic,q.question,q.prompt]
+   .map(v=>String(v||'')).join(' ')))return false;
  if(q.subject!=='Maths')return true;
  if(/^(?:orig_v33_math_[78]_[0-3]|original_v34_maths_18|stretch_v34_maths_functions|mock_v163_06)$/.test(String(q.id||'')))return false;
  // The first school Maths mock is Year 12 / AS Pure only; Year 13 is a later paper.
