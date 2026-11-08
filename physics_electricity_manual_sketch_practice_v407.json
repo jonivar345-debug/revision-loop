@@ -142,7 +142,7 @@
       "specRef": "3.5.1.5",
       "subtopic": "Draw two NTC/LDR potential-divider sensor circuits and prove output directions",
       "question": "Design and analyse two sensor potential-divider diagrams",
-      "prompt": "Consider two separate ideal 10.0 V DC potential dividers, each containing one fixed resistor and one sensor. Draw labelled circuit diagrams with supply polarities and Vout terminals. (a) Design an NTC-thermistor divider whose Vout increases when temperature rises. (b) Design an LDR divider whose Vout decreases when light intensity increases. In each case justify the output direction using the correct expression for the potential difference across the lower component. The diagrams are to be assessed on paper. [8 marks]",
+      "prompt": "Consider two separate ideal 10.0 V DC potential dividers, each containing one fixed resistor and one sensor. Draw labelled circuit diagrams with supply polarities, taking Vout between the resistor–sensor junction and the lower (negative) supply terminal. (a) Design an NTC-thermistor divider whose Vout increases when temperature rises. (b) Design an LDR divider whose Vout decreases when light intensity increases. In each case justify the output direction using the correct expression for the potential difference across the lower component. The diagrams are to be assessed on paper. [8 marks]",
       "markPoints": [
         "Draw both dividers as two components in series across the supply and label the 10.0 V supply polarity.",
         "For the NTC circuit, place NTC in the upper branch and the fixed resistor in the lower branch, with Vout across the fixed lower resistor.",
