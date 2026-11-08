@@ -1,0 +1,33 @@
+name: Task 1 v410 live school-mock marker route
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'exam_questions.json'
+      - 'exam_answer_corrections.json'
+      - 'deck.json'
+      - 'tests/task1-v410-live-mock-marker-route.cjs'
+      - '.github/workflows/task1-v410-live-mock-marker-route.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-live-mock-route:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check tests/task1-v410-live-mock-marker-route.cjs
+      - name: Verify all real original mock multi-mark questions take manual route
+        run: node tests/task1-v410-live-mock-marker-route.cjs
+      - name: Regress earlier exact original and short-answer protections
+        run: |
+          node tests/task1-v403-original-82-manual-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v405-short-semantic-qa.cjs
+          node tests/task1-v406-explicit-markpoint-denials.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
