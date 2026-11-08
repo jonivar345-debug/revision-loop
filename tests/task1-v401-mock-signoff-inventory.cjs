@@ -19,6 +19,26 @@ assert.equal(bank.questions.length,1268,'Original exam bank unexpectedly changed
 assert.equal(new Set(bank.questions.map(x=>x.id)).size,1268,'Duplicate original question IDs');
 const active=deck.cards.filter(x=>x.mock===true&&x.active!==false);
 assert.equal(active.length,2379,'Original school-mock card pool changed');
+// Audit all 56 historical supplementary sources plus five later focused sources.
+// These are raw bank candidates; final runtime filtering may exclude some records.
+const supplementManifest=app.match(/const EXTRA_FLASHCARD_URLS=\[([^\]]+)\];/);
+assert(supplementManifest,'Missing flashcard supplement manifest');
+const supplementPaths=[...supplementManifest[1].matchAll(/'\.\/([^']+)'/g)].map(x=>x[1]);
+assert.equal(supplementPaths.length,56,'Historical supplement order/count changed');
+const focusedPaths=[
+ 'maths_first_mock_micro_recall_v348.json',
+ 'chemistry_cracking_pressure_recall_v354.json',
+ 'chemistry_alkane_trend_recall_v367.json',
+ 'physics_light_history_recall_v370.json',
+ 'chemistry_kp_catalyst_recall_v375.json'
+];
+const rawSupplements=[...supplementPaths,...focusedPaths].flatMap(path=>{
+ assert(fs.existsSync(path),'Missing supplementary source '+path);
+ return (json(path).cards||[]).map(card=>({...card,__source:path}));
+});
+const rawMockSupplements=rawSupplements.filter(x=>x.mock===true&&x.active!==false&&x.taught!==false);
+const supplementaryLong=rawMockSupplements.filter(x=>String(x.front||'').length>185||String(x.back||'').length>350);
+const supplementaryMultipart=rawMockSupplements.filter(x=>/\b(?:\([a-d]\)|[4-9]\s*marks?)\b/i.test(String(x.front||'')));
 const empty=active.filter(x=>!String(x.front||'').trim()||!String(x.back||'').trim());
 assert.equal(empty.length,0,'Blank original mock flashcards: '+empty.map(x=>x.id).join(','));
 const notSubject=active.filter(x=>!['Physics','Chemistry','Maths'].includes(x.subject));
@@ -64,8 +84,14 @@ const report={
   longFlashcardCandidates:longCards.length, longFlashcardSample:longCards.slice(0,18).map(x=>({id:x.id,subject:x.subject,frontLength:String(x.front).length,backLength:String(x.back).length})),
   multipartFlashcardCandidates:multipart.length, multipartFlashcardSample:multipart.slice(0,18).map(x=>x.id),
   originalChemistryBufferExamCandidates:chemBuffers.length, originalChemistryBufferExamSample:chemBuffers.slice(0,15).map(x=>x.id),
+  supplementarySources:supplementPaths.length+focusedPaths.length,
+  rawMockSupplementRecords:rawMockSupplements.length,
+  rawSupplementLongCandidates:supplementaryLong.length,
+  rawSupplementLongSample:supplementaryLong.slice(0,30).map(x=>({id:x.id,source:x.__source,frontLength:String(x.front||'').length,backLength:String(x.back||'').length})),
+  rawSupplementMultipartCandidates:supplementaryMultipart.length,
+  rawSupplementMultipartSample:supplementaryMultipart.slice(0,30).map(x=>({id:x.id,source:x.__source})),
   originalQuestionRubricWeightCandidates:oddRubrics.length, originalQuestionRubricWeightSample:oddRubrics.slice(0,15).map(x=>x.id),
-  conclusion:'Release invariants verified; candidate lists require human review. Neither complete AQA coverage nor student mastery certified.'
+  conclusion:'Release invariants verified; raw supplement candidates require runtime eligibility and human review. Neither complete AQA coverage nor student mastery certified.'
 };
 console.log('PASS v401 read-only mock sign-off inventory');
 console.log(JSON.stringify(report,null,2));
