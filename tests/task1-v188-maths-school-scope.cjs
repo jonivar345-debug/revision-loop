@@ -17,11 +17,16 @@ assert.match(target.prompt,/proof by contradiction/);
 assert.equal(target.markPoints.length,3);
 assert.equal(eligible(target),false);
 const selected=bank.questions.filter(q=>q.subject==='Maths'&&eligible(q));
-assert.equal(selected.length,128);
+// Keep the original v188 historical count; first-school-mock functions were narrowed in v397.
+const historicalYear1Maths=q=>q.subject==='Maths'&&q.mock===true&&q.level==='AS'&&
+ !['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())&&
+ !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+assert.equal(bank.questions.filter(historicalYear1Maths).length,128);
+assert.equal(selected.length,117);
 assert(selected.every(q=>q.level==='AS'&&q.mock===true));
 assert(!selected.some(q=>/proof by contradiction/i.test(q.prompt)));
 assert(eligible({subject:'Maths',mock:true,level:'AS',topic:'Proof',prompt:'Disprove by counterexample'}));
 assert(eligible({subject:'Chemistry',mock:true,level:'A2',topic:'Thermodynamics',prompt:'Find entropy'}));
 assert.equal(audit.before.schoolMathsMock-audit.after.schoolMathsMock,1);
 assert(sw.includes('v188-school-pure-correction'));
-console.log('PASS v188: A-level contradiction retained outside 128-question first AS Pure Maths mock');
+console.log('PASS v188: A-level contradiction retained outside the current 117-question first AS Pure Maths mock (historically 128)');

@@ -19,7 +19,12 @@ const m=deck.cards.filter(c=>c.subject==='Maths'&&c.active!==false&&c.mock===tru
 assert.equal(m.length,116);
 assert(m.every(c=>c.stage==='AS'&&!['Statistics','Mechanics'].includes(c.topic)));
 const selected=bank.questions.filter(q=>q.subject==='Maths'&&eligible(q));
-assert.equal(selected.length,128);
+// v173 source-count snapshot remains valid; v397 excludes eleven later-taught function items.
+const historicalYear1Maths=q=>q.subject==='Maths'&&q.mock===true&&q.level==='AS'&&
+ !['statistics','mechanics'].includes(String(q.topic||'').toLowerCase())&&
+ !/(?:\bradians?\b|π)/i.test(String(q.prompt||''));
+assert.equal(bank.questions.filter(historicalYear1Maths).length,128);
+assert.equal(selected.length,117);
 assert(!selected.some(q=>/proof by contradiction/i.test(q.prompt)));
 assert(!eligible(bank.questions.find(q=>q.id==='orig_v31_maths_proof_2')));
 assert(selected.every(q=>q.level==='AS'));
@@ -98,5 +103,5 @@ canvas.fire('pointerup',event(120,95));
  assert.deepEqual(JSON.parse(JSON.stringify(submitted)),{id:'diagram-test',src:'data:image/png;base64,AAAA'});
  assert.equal(audit.limits.pureMockLevelASOnly,true);
  assert.equal(audit.limits.autoSketchMarking,false);
- console.log('PASS v173: 116 AS Pure base flashcards, 128 AS Pure questions, safe sketch attachment and manual marking.');
+ console.log('PASS v173: 116 AS Pure base flashcards, historical 128 versus current 117 AS Pure questions, safe sketch attachment and manual marking.');
 })().catch(e=>{console.error(e);process.exitCode=1});
