@@ -1,0 +1,19 @@
+name: Task 1 v398 original Chemistry 24 working and reasoning safeguards
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v398-chemistry-24-working-qa.json'
+      - 'tests/task1-v398-chemistry-24-working-qa.cjs'
+      - '.github/workflows/task1-v398-chemistry-24-working-qa.yml'
+  workflow_dispatch:
+jobs:
+  chemistry-24-original-manual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source-lock and require self-review for 114 original Chemistry marks
+        run: node tests/task1-v398-chemistry-24-working-qa.cjs
+      - name: Preserve previous diagram, corrected working, and Maths mock scope safeguards
+        run: node tests/task1-v397-maths-first-pure-functions-qa.cjs && node tests/task1-v396-physics-18-working-qa.cjs && node tests/task1-v395-organic-13-diagram-qa.cjs && node tests/task1-v394-chemistry-17-original-manual.cjs
