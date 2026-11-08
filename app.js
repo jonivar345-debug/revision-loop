@@ -287,6 +287,31 @@ function applyV391Maths19WorkingReview(questions){
  return questions;
 }
 
+// v393: source-matched original Physics AS multi-step written practice needs real
+// line-by-line mathematical/diagram review, not fuzzy keyword method credit.
+const V393_PHYSICS_ORIGINAL_12=Object.freeze([{"id":"mock_v154_01","subject":"Physics","level":"AS","topic":"Mechanics & materials","courseTopic":"Physics","specRef":null,"marks":7,"promptHash":"7ce5af60","modelAnswerHash":"4331ea41"},{"id":"mock_v154_02","subject":"Physics","level":"AS","topic":"Mechanics & materials","courseTopic":"Physics","specRef":null,"marks":6,"promptHash":"784b86e2","modelAnswerHash":"78fb426f"},{"id":"mock_v154_03","subject":"Physics","level":"AS","topic":"Mechanics & materials","courseTopic":"Physics","specRef":null,"marks":6,"promptHash":"626ef1b9","modelAnswerHash":"11f6fdf6"},{"id":"mock_v154_04","subject":"Physics","level":"AS","topic":"Mechanics & materials","courseTopic":"Physics","specRef":null,"marks":6,"promptHash":"2ad604d","modelAnswerHash":"fc2920bd"},{"id":"mock_v154_05","subject":"Physics","level":"AS","topic":"Electricity","courseTopic":"Physics","specRef":null,"marks":6,"promptHash":"28af3348","modelAnswerHash":"8a18bb5f"},{"id":"mock_v154_06","subject":"Physics","level":"AS","topic":"Electricity","courseTopic":"Physics","specRef":null,"marks":6,"promptHash":"74cf26df","modelAnswerHash":"f97d4ee"},{"id":"mock_v159_01","subject":"Physics","level":"AS","topic":"Waves","courseTopic":"Waves","specRef":null,"marks":7,"promptHash":"127b1d10","modelAnswerHash":"d32864a9"},{"id":"mock_v159_02","subject":"Physics","level":"AS","topic":"Waves","courseTopic":"Waves","specRef":null,"marks":6,"promptHash":"a13e68ed","modelAnswerHash":"1110e25c"},{"id":"mock_v159_03","subject":"Physics","level":"AS","topic":"Waves","courseTopic":"Waves","specRef":null,"marks":7,"promptHash":"cff12086","modelAnswerHash":"2ff26641"},{"id":"mock_v160_02","subject":"Physics","level":"AS","topic":"Photoelectric effect","courseTopic":"Photoelectric effect","specRef":null,"marks":7,"promptHash":"d1790e9e","modelAnswerHash":"46a8e056"},{"id":"stretch_v34_physics_rp2_interference","subject":"Physics","level":"AS","topic":"Waves","courseTopic":"Waves","specRef":null,"marks":6,"promptHash":"de35010b","modelAnswerHash":"f5d03d86"},{"id":"stretch_v34_physics_internal_resistance","subject":"Physics","level":"AS","topic":"Electricity","courseTopic":"Electricity","specRef":null,"marks":7,"promptHash":"640f6ef","modelAnswerHash":"3ec17003"}]);
+function v393PhysicsSourceHash(s){
+ let h=2166136261;const value=String(s||'');
+ for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}
+ return (h>>>0).toString(16);
+}
+function applyV393PhysicsOriginal12Manual(questions){
+ const indexed=new Map(V393_PHYSICS_ORIGINAL_12.map(row=>[row.id,row]));
+ for(const q of questions){
+  const row=indexed.get(q?.id);
+  if(!row||q.subject!==row.subject||q.level!==row.level||q.mock!==true||q.taught===false||
+     q.standalone!==true||q.requiresWorking!==true||q.manualDiagramReview===true||q.manualWorkingReview===true||
+     q.topic!==row.topic||(q.courseTopic??null)!==row.courseTopic||(q.specRef??null)!==row.specRef||
+     q.marks!==row.marks||!Array.isArray(q.markPoints)||q.markPoints.length!==q.marks||
+     !Array.isArray(q.markPointMarks)||q.markPointMarks.reduce((a,b)=>a+b,0)!==q.marks||
+     v393PhysicsSourceHash(q.prompt)!==row.promptHash||
+     v393PhysicsSourceHash(q.modelAnswer)!==row.modelAnswerHash)continue;
+  q.manualWorkingReview=true;
+  q.v393ReviewRequired=true;
+ }
+ return questions;
+}
+
 const V287_LEGACY_SPEC_GROUPS=Object.freeze([
  {
   "subject": "Physics",
@@ -5982,6 +6007,7 @@ async function sync(manual=false){
  applyV386Chemistry25WorkingReview(examQuestions);
  applyV390Physics19WorkingReview(examQuestions);
  applyV391Maths19WorkingReview(examQuestions);
+ applyV393PhysicsOriginal12Manual(examQuestions);
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}

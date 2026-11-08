@@ -1,0 +1,19 @@
+name: Task 1 v393 original Physics mechanics waves electricity applications manual review
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v393-physics-12-original-manual-qa.json'
+      - 'tests/task1-v393-physics-12-original-manual.cjs'
+      - '.github/workflows/task1-v393-physics-12-original-manual.yml'
+  workflow_dispatch:
+jobs:
+  physics-original-12-method:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify 12 original Physics practice questions, 77 marks and source integrity
+        run: node tests/task1-v393-physics-12-original-manual.cjs
+      - name: Recheck prior Physics and original Maths method safeguards
+        run: node tests/task1-v390-physics-19-working-review.cjs && node tests/task1-v391-maths-19-year1-pure-working-review.cjs && node tests/task1-v392-denied-model-answer.cjs
