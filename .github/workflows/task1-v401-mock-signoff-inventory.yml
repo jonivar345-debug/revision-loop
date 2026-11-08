@@ -1,0 +1,17 @@
+name: Task 1 v401 read-only three-subject sign-off inventory
+on:
+  pull_request:
+    paths:
+      - 'tests/task1-v401-mock-signoff-inventory.cjs'
+      - 'editorial/task1-v401-mock-signoff-inventory.json'
+      - '.github/workflows/task1-v401-mock-signoff-inventory.yml'
+  workflow_dispatch:
+jobs:
+  signoff-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit mock boundaries, short-card candidates and open gates
+        run: node tests/task1-v401-mock-signoff-inventory.cjs
+      - name: Preserve source-locked marking and mock selectors
+        run: node tests/task1-v400-physics-8-method-qa.cjs && node tests/task1-v399-maths-15-working-qa.cjs && node tests/task1-v398-chemistry-24-working-qa.cjs && node tests/task1-v397-maths-first-pure-functions-qa.cjs

@@ -1,0 +1,63 @@
+{
+  "version": "v401",
+  "date": "2026-11-08",
+  "purpose": "One consolidated source-based sign-off checkpoint. Keep technical release readiness separate from full mock specification certification and independently marked student working.",
+  "scope": {
+    "Physics": "AQA AS content for the school mock",
+    "Chemistry": "AS plus only taught A2 mock topics; exclude buffers",
+    "Maths": "AQA Year 1 Pure only; no Statistics, Mechanics, radians or untaught inverse/composite functions"
+  },
+  "completedReleaseEvidence": [
+    {
+      "pullRequest": 358,
+      "change": "v397: 11 inverse/composite function original exam parts excluded from school Maths mock"
+    },
+    {
+      "pullRequest": 360,
+      "change": "v398: 24 existing Chemistry reasoning questions (114 marks) routed to manual point review"
+    },
+    {
+      "pullRequest": 362,
+      "change": "v399: 15 original Year 1 Pure Maths questions (84 marks) routed to manual point review"
+    },
+    {
+      "pullRequest": 363,
+      "change": "v400: 8 original Waves/Electricity Physics questions (24 marks) routed to manual point review"
+    }
+  ],
+  "productionAfterV400": "777a6bf8f1d1270b26a3a44694a46c56f0873580",
+  "checks": {
+    "codeReleaseReady": true,
+    "originalIDsPreserved": true,
+    "fullSpecIndependentlyCertified": false,
+    "handwrittenAndDrawnEvidenceCertified": false,
+    "studentMasteryAssessed": false
+  },
+  "subjectSignOff": {
+    "Physics": false,
+    "Chemistry": false,
+    "Maths": false
+  },
+  "remaining": [
+    {
+      "issue": 349,
+      "subject": "Physics",
+      "evidence": "v360 Waves: seven independent manual/unverified gates; v359 Electricity: four independent practical/sketch gates",
+      "next": "Student diagram and practical-method rubric verification including unfamiliar graphs, polarity/phase, diffraction, fibre rays, dividers and RP1/RP2/RP5/RP6. Reconcile old history gap with merged v370."
+    },
+    {
+      "issue": 350,
+      "subject": "Chemistry",
+      "evidence": "v367 AS organic old 11-gap review: nine direct mapped, one short supporting card, one partial solvent distinction; v398 source-locked method review completed",
+      "next": "Independent multi-step Kp, Born-Haber, rates, pH/Kw/Ka, volumetric and organic drawing/rubric checks. Confirm buffers excluded."
+    },
+    {
+      "issue": 351,
+      "subject": "Maths",
+      "evidence": "v329 331 Year 1 Pure flashcard marker regression: 2243 known cases, zero failures; v397 exam scope correction; v399 84 manual method marks",
+      "next": "Independently review proof, vectors, graph transformation sketches, inequalities, circle geometry, trig, logs and definite integral/area written methods."
+    }
+  ],
+  "releaseDecision": "v400 technical release is complete. Whole school-mock content and handwritten/diagram grading cannot be signed off solely from source counts or passing CI.",
+  "integrity": "This v401 audit changes no study cards, practice questions, scoring, XP, cloud keys, progress, World data or service worker assets."
+}
