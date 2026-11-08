@@ -11,7 +11,7 @@ assert.equal(ledger.counts.rows,70);
 assert.equal(ledger.counts.sources,7);
 assert.equal(ledger.counts.independentlyMarkedStudentAnswers,0);
 assert.equal(ledger.counts.wholeChemistryMockSignedOff,false);
-assert.equal(ledger.counts.linkedButNotYetRuntimeUpdated,70);
+assert.equal(ledger.counts.linkedButNotYetRuntimeUpdated,70,'The dated v417 baseline report remains historical; v420 separately verifies its application');
 const allowed=new Set([
  '3.1.1.1','3.1.1.2','3.1.1.3',
  '3.1.2.2','3.1.2.3','3.1.2.4','3.1.2.5',
@@ -60,7 +60,7 @@ for(const row of ledger.rows){
  assert.equal(q.mock,true);
  assert.equal(q.standalone,true);
  assert.notEqual(q.taught,false);
- assert.equal(q.specRef,undefined,'Do not falsely claim live metadata already updated '+q.id);
+ assert.equal(q.specRef,row.primarySpecRef,'v420 should now apply the source-locked AQA subsection: '+q.id);
  assert(eligible(q),'Review task no longer reaches mock '+q.id);
  assert.equal(q.marks,row.marks);
  assert.equal(hash(q.prompt),row.promptHash,'Prompt drift '+q.id);
@@ -82,4 +82,4 @@ for(const k of ["PROGRESS_KEY='revisionLoopProgress5'",
 console.log('PASS v417: '+seen.size+' original legacy supplementary Chemistry school-mock worked parts ('+
  tally+' marks) source-locked and editorially associated with exact AQA 7405 primary sections across '+sources.length+
  ' files. Chapter marks: '+JSON.stringify(marksByChapter)+
- '. Source specRef fields remain UNCHANGED; no student mastery/marking or whole syllabus sign-off is asserted.');
+ '. v420 exact primary subsection labels applied; no student mastery/marking or whole syllabus sign-off is asserted.');

@@ -1,0 +1,39 @@
+name: Task 1 v420 apply 70 Chemistry subsection references safely
+on:
+  pull_request:
+    paths:
+      - 'atomic_structure_focus_v43.json'
+      - 'amount_of_substance_focus_v44.json'
+      - 'bonding_focus_v49.json'
+      - 'bonding_weakness_focus_v52.json'
+      - 'energetics_focus_v50.json'
+      - 'energetics_worked_followups_v51.json'
+      - 'energetics_weakness_focus_v53.json'
+      - 'sw.js'
+      - 'tests/task1-v417-chem-legacy-70-crosswalk.cjs'
+      - 'tests/task1-v420-chem-70-live-specrefs.cjs'
+      - '.github/workflows/task1-v420-chem-70-specrefs.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-source-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Code syntax
+        run: |
+          node --check sw.js
+          node --check tests/task1-v417-chem-legacy-70-crosswalk.cjs
+          node --check tests/task1-v420-chem-70-live-specrefs.cjs
+      - name: All 70 Chemistry question references must match source-locked evidence
+        run: |
+          node tests/task1-v417-chem-legacy-70-crosswalk.cjs
+          node tests/task1-v420-chem-70-live-specrefs.cjs
+      - name: Preserve all original mock and subject exclusions
+        run: |
+          node tests/task1-v411-supplement-mock-routing-audit.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
