@@ -1,0 +1,24 @@
+name: Task 1 v419 entire mock flashcard source marker audit
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'deck.json'
+      - 'tests/task1-v419-mock-card-marker-audit.cjs'
+      - '.github/workflows/task1-v419-mock-card-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect-entire-mock-flashcard-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test syntax
+        run: node --check tests/task1-v419-mock-card-marker-audit.cjs
+      - name: Report exact conflicts, short format, AQA metadata and unanswered examples
+        run: node tests/task1-v419-mock-card-marker-audit.cjs
+      - name: Preserve school mock original content and filter
+        run: node tests/task1-v401-mock-signoff-inventory.cjs
