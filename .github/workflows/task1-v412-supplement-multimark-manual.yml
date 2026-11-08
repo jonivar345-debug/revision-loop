@@ -1,0 +1,39 @@
+name: Task 1 v412 supplementary mock multi-mark manual safety
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v412-supplement-multimark-manual.cjs'
+      - 'tests/task1-v411-supplement-mock-routing-audit.cjs'
+      - '.github/workflows/task1-v412-supplement-multimark-manual.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  protect-remaining-800-marks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: JavaScript syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v412-supplement-multimark-manual.cjs
+          node --check tests/task1-v411-supplement-mock-routing-audit.cjs
+      - name: Protect all loaded supplementary multi-mark mock questions
+        run: node tests/task1-v412-supplement-multimark-manual.cjs
+      - name: Audit full question bank under actual live selectors
+        run: node tests/task1-v411-supplement-mock-routing-audit.cjs
+      - name: Preserve original marking, Chemistry boundary and other safeguards
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v409-short-negation-qa.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+          node tests/task1-v407-electricity-manual-practice.cjs
+          node tests/task1-v406-explicit-markpoint-denials.cjs
+          node tests/task1-v405-short-semantic-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v403-original-82-manual-qa.cjs
