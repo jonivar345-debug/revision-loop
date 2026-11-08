@@ -1,0 +1,393 @@
+{
+  "version": "v417",
+  "date": "2026-11-08",
+  "title": "Editorial primary-subsection crosswalk for 70 legacy mock Chemistry worked questions lacking specRef",
+  "officialAqa": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "scope": "Seven older supplementary practice banks covering AQA Chemistry 3.1.1-3.1.4; no flashcard/specification completion or student performance certified.",
+  "method": [
+    "Read each existing question's full prompt and compare the assessed principal skill with AQA 7405's numbered subsection content.",
+    "Choose the closest primary subsection and flag genuinely cross-topic items; these are editorial coverage labels, not new official mark schemes.",
+    "Do not change or auto-rewrite source question specRef fields while earlier exact-source marking guards and release previews are pending.",
+    "Every question ID and original source file remains unchanged. The loader and zero-tick manual marking safety are separate release issues."
+  ],
+  "counts": {
+    "rows": 70,
+    "sources": 7,
+    "byFile": {
+      "atomic_structure_focus_v43.json": 15,
+      "amount_of_substance_focus_v44.json": 9,
+      "bonding_focus_v49.json": 11,
+      "bonding_weakness_focus_v52.json": 12,
+      "energetics_focus_v50.json": 11,
+      "energetics_worked_followups_v51.json": 3,
+      "energetics_weakness_focus_v53.json": 9
+    },
+    "previouslyUnlabelledSupplementChemistryMockQuestions": 70,
+    "linkedButNotYetRuntimeUpdated": 70,
+    "independentlyMarkedStudentAnswers": 0,
+    "wholeChemistryMockSignedOff": false
+  },
+  "remaining": [
+    "These 70 mappings are research/evidence records only: source JSON question specRef metadata has NOT been changed.",
+    "Some multi-topic tasks span two or more AQA areas, but this records one dominant association rather than asserting exhaustive coverage.",
+    "No review of actual student mechanisms, practical write-ups, diagrams or unfamiliar alternative method credit was performed.",
+    "Another later seven-mark Arrhenius question has an incorrect old 3.1.9.3 reference; a separate v415 draft patch corrects it to 3.1.9.1 and still needs deployment verification."
+  ],
+  "rows": [
+    {
+      "id": "atomic_v43_01",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_02",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_03",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_04",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_05",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_06",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_07",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_08",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2"
+    },
+    {
+      "id": "atomic_v43_09",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.1",
+      "scopeNote": "Historical nuclear-model evidence is the evolving-model statement in 3.1.1.1, not an ionisation subtopic."
+    },
+    {
+      "id": "atomic_v43_10",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3"
+    },
+    {
+      "id": "atomic_v43_11",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3"
+    },
+    {
+      "id": "atomic_v43_12",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3"
+    },
+    {
+      "id": "atomic_v43_13",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3"
+    },
+    {
+      "id": "atomic_v43_14",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3"
+    },
+    {
+      "id": "atomic_period3_focus_v46_01",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3"
+    },
+    {
+      "id": "amount_v44_01",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.4"
+    },
+    {
+      "id": "amount_v44_02",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.3"
+    },
+    {
+      "id": "amount_v44_03",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5"
+    },
+    {
+      "id": "amount_v44_04",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5"
+    },
+    {
+      "id": "amount_v44_05",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "scopeNote": "Water-of-crystallisation from heating is explicitly an example within 3.1.2.5, though it also exercises empirical ratios."
+    },
+    {
+      "id": "amount_v44_06",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5"
+    },
+    {
+      "id": "amount_v44_07",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5"
+    },
+    {
+      "id": "amount_v44_08",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5"
+    },
+    {
+      "id": "amount_v44_09",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.2"
+    },
+    {
+      "id": "bonding_v49_01",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.1"
+    },
+    {
+      "id": "bonding_v49_02",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.2"
+    },
+    {
+      "id": "bonding_v49_03",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.4",
+      "scopeNote": "Primary 3.1.3.4 for conductivity/brittleness of two lattices; draws also on 3.1.3.1 and 3.1.3.3."
+    },
+    {
+      "id": "bonding_v49_04",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.4"
+    },
+    {
+      "id": "bonding_v49_05",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7",
+      "scopeNote": "Hydrogen bonding and low-density ice are expressly included in 3.1.3.7; crystal-type language also overlaps 3.1.3.4."
+    },
+    {
+      "id": "bonding_v49_06",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.5"
+    },
+    {
+      "id": "bonding_v49_07",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.5"
+    },
+    {
+      "id": "bonding_v49_08",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.6"
+    },
+    {
+      "id": "bonding_v49_09",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7"
+    },
+    {
+      "id": "bonding_v49_10",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7"
+    },
+    {
+      "id": "bonding_v49_11",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7"
+    },
+    {
+      "id": "bonding_v52_01",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.1"
+    },
+    {
+      "id": "bonding_v52_02",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5"
+    },
+    {
+      "id": "bonding_v52_03",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5"
+    },
+    {
+      "id": "bonding_v52_04",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.6"
+    },
+    {
+      "id": "bonding_v52_05",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.6"
+    },
+    {
+      "id": "bonding_v52_06",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5"
+    },
+    {
+      "id": "bonding_v52_07",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5"
+    },
+    {
+      "id": "bonding_v52_08",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.7"
+    },
+    {
+      "id": "bonding_v52_09",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.4"
+    },
+    {
+      "id": "bonding_v52_10",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.7"
+    },
+    {
+      "id": "bonding_v52_11",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.7"
+    },
+    {
+      "id": "bonding_v52_12",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.2"
+    },
+    {
+      "id": "energetics_v50_01",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.1"
+    },
+    {
+      "id": "energetics_v50_02",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v50_03",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v50_04",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v50_05",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.3"
+    },
+    {
+      "id": "energetics_v50_06",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.3"
+    },
+    {
+      "id": "energetics_v50_07",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.3"
+    },
+    {
+      "id": "energetics_v50_08",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.4"
+    },
+    {
+      "id": "energetics_v50_09",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.4"
+    },
+    {
+      "id": "energetics_v50_10",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v50_11",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v51_12",
+      "source": "energetics_worked_followups_v51.json",
+      "primarySpecRef": "3.1.4.1"
+    },
+    {
+      "id": "energetics_v51_13",
+      "source": "energetics_worked_followups_v51.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v51_14",
+      "source": "energetics_worked_followups_v51.json",
+      "primarySpecRef": "3.1.4.4"
+    },
+    {
+      "id": "energetics_v53_01",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.1"
+    },
+    {
+      "id": "energetics_v53_02",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v53_03",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.3"
+    },
+    {
+      "id": "energetics_v53_04",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.3"
+    },
+    {
+      "id": "energetics_v53_05",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.3"
+    },
+    {
+      "id": "energetics_v53_06",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.4"
+    },
+    {
+      "id": "energetics_v53_07",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v53_08",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2"
+    },
+    {
+      "id": "energetics_v53_09",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2",
+      "scopeNote": "Primarily calorimetry and defining the molar reaction amount (3.1.4.2), with secondary bond-counting context from 3.1.4.4."
+    }
+  ]
+}
