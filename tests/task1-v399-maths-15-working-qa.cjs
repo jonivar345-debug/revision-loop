@@ -74,12 +74,13 @@ const src=id=>originals.find(q=>q.id===id);
 assert(src('aqa_math_as18_p1_q5').modelAnswer.includes('c=−2'));
 const c=-2,d=4;assert.equal((d-2)/(6-c),1/4);assert.equal((d+2)/2+4*(c+6)/2,11);
 assert.equal(12/(1-0.5),24);assert.equal(2*3**5,486);
-assert.equal(81/(1-2/3),243);assert.equal(243*(1-(2/3)**5),211);
+assert(Math.abs(81/(1-2/3)-243)<1e-10);assert(Math.abs(243*(1-(2/3)**5)-211)<1e-10);
 assert(243*(2/3)**7>10&&243*(2/3)**8<10);
-assert.equal((3**3/3+3**2)-((-1)**3/3+(-1)**2),32/3);
+const areaPrimitive=x=>x*x+3*x-x**3/3;
+assert(Math.abs((areaPrimitive(3)-areaPrimitive(-1))-32/3)<1e-10);
 assert.equal(20*40,800);
 const F=x=>x**3/3-4*x;
-assert.equal(F(3)-F(-3),-6);assert.equal(32/3+2*(7/3),46/3);
+assert.equal(F(3)-F(-3),-6);assert(Math.abs((32/3+2*(7/3))-46/3)<1e-10);
 for(const theta of [30,90,150]){const r=theta*Math.PI/180;assert(Math.abs(2*Math.cos(r)**2+3*Math.sin(r)-3)<1e-10)}
 for(const x of [-2,0,1,4]){const v=(x-3)*(2*x-1)*(x+1);assert.equal(v<0,x===-2||x===1)}
 assert.equal(32-240*.01+720*.01**2-1080*.01**3,29.67092);
