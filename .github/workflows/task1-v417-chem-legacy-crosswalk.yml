@@ -1,0 +1,25 @@
+name: Task 1 v417 seventy legacy Chemistry topic crosswalks
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v417-chem-legacy-70-syllabus-map.json'
+      - 'tests/task1-v417-chem-legacy-70-crosswalk.cjs'
+      - '.github/workflows/task1-v417-chem-legacy-crosswalk.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-locked-syllabus-crosswalk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Source syntax
+        run: node --check tests/task1-v417-chem-legacy-70-crosswalk.cjs
+      - name: Validate 70 exact Chemistry source prompts, answers and primary AQA sections
+        run: node tests/task1-v417-chem-legacy-70-crosswalk.cjs
+      - name: Preserve original exam and Chemistry mock filter
+        run: |
+          node tests/task1-v411-supplement-mock-routing-audit.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
