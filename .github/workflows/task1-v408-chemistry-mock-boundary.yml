@@ -1,0 +1,33 @@
+name: Task 1 v408 Chemistry school-mock scope and marker safety
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v408-chemistry-mock-boundary-qa.cjs'
+      - 'tests/task1-v407-electricity-manual-practice.cjs'
+      - '.github/workflows/task1-v408-chemistry-mock-boundary.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chemistry-mock-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: JavaScript syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v408-chemistry-mock-boundary-qa.cjs
+      - name: Check full mock selectors, all banks and adversarial/manual answers
+        run: node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+      - name: Protect earlier exam marking, original IDs, v407 diagrams and cloud keys
+        run: |
+          node tests/task1-v407-electricity-manual-practice.cjs
+          node tests/task1-v406-explicit-markpoint-denials.cjs
+          node tests/task1-v405-short-semantic-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
