@@ -106,7 +106,7 @@ function applyV377PhysicsWavesManualReview(questions){
 
 // v382: review 18 exact AQA Year 1 Pure worked exam questions point by point,
 // not using keyword matches to award proof, transformation or method marks.
-const V382_MATHS_WORKED_MANUAL=Object.freeze([{"id":"task1_v190_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":null,"effectiveSpecRef":null,"marks":4,"promptHash":"2fd38c69","modelAnswerHash":"9641f6ff"},{"id":"task1_v190_maths_002","sourceCourseTopic":"Proof","sourceSpecRef":null,"effectiveSpecRef":null,"marks":4,"promptHash":"adf396a8","modelAnswerHash":"af85c936"},{"id":"task1_v190_maths_003","sourceCourseTopic":"Vectors","sourceSpecRef":null,"effectiveSpecRef":null,"marks":5,"promptHash":"9e4ffdd7","modelAnswerHash":"415ad04f"},{"id":"task1_v190_maths_004","sourceCourseTopic":"Vectors","sourceSpecRef":null,"effectiveSpecRef":null,"marks":6,"promptHash":"bd13c903","modelAnswerHash":"5fc008c4"},{"id":"task1_v191_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":4,"promptHash":"9793ba40","modelAnswerHash":"33b58639"},{"id":"task1_v191_maths_002","sourceCourseTopic":"Trigonometry","sourceSpecRef":"3.6","effectiveSpecRef":"3.6","marks":5,"promptHash":"7b9d72b2","modelAnswerHash":"36fbbc24"},{"id":"task1_v191_maths_003","sourceCourseTopic":"Coordinate geometry","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":5,"promptHash":"76d6da64","modelAnswerHash":"92cdebf"},{"id":"task1_v191_maths_004","sourceCourseTopic":"Transformations","sourceSpecRef":"3.3","effectiveSpecRef":"3.3","marks":7,"promptHash":"1cca8a50","modelAnswerHash":"c009a3f6"},{"id":"task1_v191_maths_005","sourceCourseTopic":"Sequences & series","sourceSpecRef":"3.5","effectiveSpecRef":"3.5","marks":5,"promptHash":"8c75fd63","modelAnswerHash":"204e5717"},{"id":"task1_v191_maths_006","sourceCourseTopic":"Integration","sourceSpecRef":"3.9","effectiveSpecRef":"3.9","marks":6,"promptHash":"6f67e75b","modelAnswerHash":"8907105f"},{"id":"task1_v209_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":7,"promptHash":"3ba17a7e","modelAnswerHash":"5bd7573f"},{"id":"task1_v209_maths_002","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":6,"promptHash":"2984b642","modelAnswerHash":"850ad8f9"},{"id":"task1_v209_maths_003","sourceCourseTopic":"Vectors","sourceSpecRef":"3.10","effectiveSpecRef":"3.11","marks":8,"promptHash":"61ba2171","modelAnswerHash":"3898d013"},{"id":"task1_v209_maths_004","sourceCourseTopic":"Vectors","sourceSpecRef":"3.10","effectiveSpecRef":"3.11","marks":8,"promptHash":"3bfaeec0","modelAnswerHash":"89cd4cde"},{"id":"task1_v209_maths_005","sourceCourseTopic":"Transformations","sourceSpecRef":"3.3","effectiveSpecRef":"3.3","marks":9,"promptHash":"37db7c67","modelAnswerHash":"5a3a4e37"},{"id":"task1_v273_maths_application_q01","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":8,"promptHash":"3866474d","modelAnswerHash":"ee3659e5"},{"id":"task1_v273_maths_application_q02","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":8,"promptHash":"cd036588","modelAnswerHash":"36baae30"},{"id":"task1_v273_maths_application_q03","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":7,"promptHash":"537031a6","modelAnswerHash":"e1260b3b"}]);
+const V382_MATHS_WORKED_MANUAL=Object.freeze([{"id":"task1_v190_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":4,"promptHash":"2fd38c69","modelAnswerHash":"9641f6ff"},{"id":"task1_v190_maths_002","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":4,"promptHash":"adf396a8","modelAnswerHash":"af85c936"},{"id":"task1_v190_maths_003","sourceCourseTopic":"Vectors","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":5,"promptHash":"9e4ffdd7","modelAnswerHash":"415ad04f"},{"id":"task1_v190_maths_004","sourceCourseTopic":"Vectors","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":6,"promptHash":"bd13c903","modelAnswerHash":"5fc008c4"},{"id":"task1_v191_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":4,"promptHash":"9793ba40","modelAnswerHash":"33b58639"},{"id":"task1_v191_maths_002","sourceCourseTopic":"Trigonometry","sourceSpecRef":"3.6","effectiveSpecRef":"3.6","marks":5,"promptHash":"7b9d72b2","modelAnswerHash":"36fbbc24"},{"id":"task1_v191_maths_003","sourceCourseTopic":"Coordinate geometry","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":5,"promptHash":"76d6da64","modelAnswerHash":"92cdebf"},{"id":"task1_v191_maths_004","sourceCourseTopic":"Transformations","sourceSpecRef":"3.3","effectiveSpecRef":"3.3","marks":7,"promptHash":"1cca8a50","modelAnswerHash":"c009a3f6"},{"id":"task1_v191_maths_005","sourceCourseTopic":"Sequences & series","sourceSpecRef":"3.5","effectiveSpecRef":"3.5","marks":5,"promptHash":"8c75fd63","modelAnswerHash":"204e5717"},{"id":"task1_v191_maths_006","sourceCourseTopic":"Integration","sourceSpecRef":"3.9","effectiveSpecRef":"3.9","marks":6,"promptHash":"6f67e75b","modelAnswerHash":"8907105f"},{"id":"task1_v209_maths_001","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":7,"promptHash":"3ba17a7e","modelAnswerHash":"5bd7573f"},{"id":"task1_v209_maths_002","sourceCourseTopic":"Proof","sourceSpecRef":"3.2","effectiveSpecRef":"3.2","marks":6,"promptHash":"2984b642","modelAnswerHash":"850ad8f9"},{"id":"task1_v209_maths_003","sourceCourseTopic":"Vectors","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":8,"promptHash":"61ba2171","modelAnswerHash":"3898d013"},{"id":"task1_v209_maths_004","sourceCourseTopic":"Vectors","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":8,"promptHash":"3bfaeec0","modelAnswerHash":"89cd4cde"},{"id":"task1_v209_maths_005","sourceCourseTopic":"Transformations","sourceSpecRef":"3.3","effectiveSpecRef":"3.3","marks":9,"promptHash":"37db7c67","modelAnswerHash":"5a3a4e37"},{"id":"task1_v273_maths_application_q01","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":8,"promptHash":"3866474d","modelAnswerHash":"ee3659e5"},{"id":"task1_v273_maths_application_q02","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.4","effectiveSpecRef":"3.4","marks":8,"promptHash":"cd036588","modelAnswerHash":"36baae30"},{"id":"task1_v273_maths_application_q03","sourceCourseTopic":"Year 1 Pure","sourceSpecRef":"3.11","effectiveSpecRef":"3.11","marks":7,"promptHash":"537031a6","modelAnswerHash":"e1260b3b"}]);
 function v382SourceHash(raw){
  let h=2166136261;
  const s=String(raw||'');
@@ -3544,7 +3544,31 @@ function isSingleChemistryCoefficientError(c,input){
  }
  return changes===1;
 }
+// v426: literal quoted rejection of the sourced correct answer is not an
+// answer, even if the text contains all of the expected keywords. Applies
+// to original and supplemental flashcards, before fuzzy matching, with
+// complete quoted-source equality only; leave explanatory contrasts intact.
+function isV426ExplicitQuotedCorrectAnswerDenial(c,input){
+ if(!c||!String(c.back||'').trim())return false;
+ const match=String(input||'').trim().match(
+  /^the\s+(?:correct\s+)?(?:statement|answer|claim)\s+["“]([\s\S]+?)["”]\s+(?:is|was)\s+(?:wrong|false|incorrect|untrue)\.?\s*$/i);
+ if(!match)return false;
+ const comparable=value=>String(value||'').normalize('NFKC').toLowerCase().trim()
+  .replace(/\s+/g,' ').replace(/[.!?]+$/,'').trim();
+ const denial=comparable(match[1]);
+ return Boolean(denial&&[c.back,...(Array.isArray(c.accept)?c.accept:[])]
+  .some(correct=>comparable(correct)===denial));
+}
+// Retain the v422 exact-ID probe helper so its seven Chemistry diagrams remain
+// independently source-audited, while using the shared safe denial rule.
+function isV422ExplicitBondDiagramDenial(c,input){
+ return Boolean(c?.subject==='Chemistry'&&
+  /^task1_v237_chem_bond_diagram_0[1-7]$/.test(String(c?.id||''))&&
+  isV426ExplicitQuotedCorrectAnswerDenial(c,input));
+}
 function evaluateCard(c,input){
+ if(isV426ExplicitQuotedCorrectAnswerDenial(c,input))
+  return {status:'wrong',score:0,text:'This explicitly rejects a correct answer.',missing:[String(c.back||'')]};
  // v389: repeating the full flashcard question is not an answer, even if
  // fuzzy token overlap would otherwise make it look correct. Preserve a rare
  // legitimate card where its official answer is literally the same string.
@@ -4703,9 +4727,16 @@ function examSuggested(q,answer){
   'the model answer is false. ','the model answer is incorrect: ',
   'the model answer is wrong: '
  ].some(prefix=>submittedNonAnswer===prefix+sourceModel);
- if(exactQuestionEcho||completeModelDenial){
+ // v425: quoted full-model denials also contain every right keyword, but
+ // explicitly reject the answer. Compare the COMPLETE quoted claim with the
+ // source's effective model; never reject other, contrasting explanations.
+ const quotedWholeModelDenial=String(answer||'').trim().match(
+  /^the\s+(?:statement|claim|answer)\s+["“]([\s\S]+?)["”]\s+(?:is|was)\s+(?:wrong|false|incorrect|untrue)\.?\s*$/i);
+ const v425QuotedModelDenial=Boolean(sourceModel&&quotedWholeModelDenial&&
+  normalisedExamNonAnswer(quotedWholeModelDenial[1])===sourceModel);
+ if(exactQuestionEcho||completeModelDenial||v425QuotedModelDenial){
   const preds=(q.markPoints||[]).map(()=>false);
-  return {preds,scores:preds.map(()=>0),suggested:0,finalCorrect:false,confidence:'high',v404RejectedNonAnswer:true};
+  return {preds,scores:preds.map(()=>0),suggested:0,finalCorrect:false,confidence:'high',v404RejectedNonAnswer:true,v425QuotedModelDenial};
  }
  // v406: Reject an answer that consists solely of expressly denying one
  // exact correct marking point or independently accepted alternative.
@@ -6321,6 +6352,19 @@ async function sync(manual=false){
  applyV402Original21ManualReview(examQuestions);
  applyV403Original82ManualReview(examQuestions);
  applyV405ShortSemanticManualReview(examQuestions);
+ // v412: The 2016–17 and 52 extra practice banks are outside the original-bank
+ // v403 source-locked 208-item manual audit. Protect their mock-eligible
+ // multi-mark questions from guessed keyword marks; the visible mark-point
+ // editor already starts at zero and supports reviewing valid alternative work.
+ // Do not touch original-question flags, card IDs, saved scores or profile data.
+ const originalQuestionIds=new Set((e.questions||[]).map(q=>q.id));
+ for(const q of examQuestions){
+  if(originalQuestionIds.has(q.id)||q.standalone===false||
+     !mockEligibleQuestion(q)||!Number.isInteger(q.marks)||q.marks<3)continue;
+  if(q.manualWorkingReview===true||q.manualDiagramReview===true)continue;
+  q.manualWorkingReview=true;
+  q.v412SupplementManualRequired=true;
+ }
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
