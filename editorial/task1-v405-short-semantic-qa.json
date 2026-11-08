@@ -1,0 +1,285 @@
+{
+  "version": "v405",
+  "date": "2026-11-08",
+  "scope": "Nine original mock-eligible 1–2 mark conceptual answers with independent wrong explanation probes scored above zero by the actual production examSuggested on v404; source-locked routes keep manual review until genuine semantic calibration.",
+  "limitations": [
+    "19 original conceptual contrast tests sampled; this is not a census of all 119 original conceptual parts nor any supplement bank.",
+    "Manual routes do not automatically verify correct science; students must inspect each mark point.",
+    "Numeric 279/279 wrong isolated answers zero; all 398 prompt echo and complete denial probes zero; valid models score full except two pre-existing manual questions.",
+    "No changes to questions, answers, points, XP, saved cloud IDs, or flashcard content."
+  ],
+  "counts": {
+    "reviewedWrongConceptProbes": 19,
+    "wrongNonZero": 9,
+    "wrongFull": 5,
+    "newManualParts": 9,
+    "newManualMarks": 17,
+    "positiveFalseSuggestedMarks": 13,
+    "subjects": {
+      "Physics": {
+        "parts": 4,
+        "marks": 8
+      },
+      "Chemistry": {
+        "parts": 5,
+        "marks": 9
+      },
+      "Maths": {
+        "parts": 0,
+        "marks": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "verified2019_P_5_2",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics & materials",
+      "subtopic": "Couples",
+      "courseTopic": "Mechanics & materials",
+      "specRef": null,
+      "questionType": "short response",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "230cb4a5",
+      "answerHash": "9050de9",
+      "pointsHash": "d72e50f0",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 2,
+      "wrongAnswer": "Forces in the same direction form a couple; its moment depends on the pivot location.",
+      "originalPrompt": "Explain why two forces that aren't opposite in direction cannot make a couple. State the feature of the moment of a genuine couple that is independent of the pivot.",
+      "originalModelAnswer": "Forces not opposite: no couple. True couple moment independent of pivot.",
+      "originalMarkPoints": [
+        "A couple requires equal and opposite parallel forces.",
+        "A true couple has the same moment about any pivot."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "aschem19p2_05_2",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Bonding",
+      "subtopic": "Shapes",
+      "courseTopic": "Bonding",
+      "specRef": null,
+      "questionType": "short response",
+      "requiresWorking": false,
+      "marks": 1,
+      "promptHash": "8ed54393",
+      "answerHash": "39fd00a9",
+      "pointsHash": "148d6b91",
+      "weightsHash": "7616c164",
+      "wrongSuggested": 1,
+      "wrongAnswer": "Bond pair repulsion is greater than lone pair repulsion, making the angle smaller.",
+      "originalPrompt": "The bond angle around the oxygen in methanol is less than 109.5°. Explain why.",
+      "originalModelAnswer": "Lone pair repulsion is greater than bond pair repulsion.",
+      "originalMarkPoints": [
+        "The repulsion from a lone pair is stronger than the repulsion from a bonding pair, compressing the angle."
+      ],
+      "originalMarkPointMarks": [
+        1
+      ]
+    },
+    {
+      "id": "aschem19p2_06_3",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Organic chemistry",
+      "subtopic": "Alkenes",
+      "courseTopic": "Organic chemistry",
+      "specRef": null,
+      "questionType": "short response",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "50d09620",
+      "answerHash": "cdf87e48",
+      "pointsHash": "3fcb1452",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 1,
+      "wrongAnswer": "The primary carbocation is more stable than the secondary one, so the minor isomer dominates.",
+      "originalPrompt": "When propene reacts with concentrated H₂SO₄, two structural isomers form in unequal amounts. Explain why the product formed via the secondary carbocation dominates.",
+      "originalModelAnswer": "The more stable secondary carbocation forms preferentially, producing the major isomer.",
+      "originalMarkPoints": [
+        "The main pathway passes through a more stable carbocation.",
+        "A secondary carbocation is more stable than a primary carbocation."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "original_v29_019",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Mechanics & materials",
+      "subtopic": "Projectiles",
+      "courseTopic": "Mechanics & materials",
+      "specRef": null,
+      "questionType": "explanation",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "889e84ca",
+      "answerHash": "36ecdbb7",
+      "pointsHash": "5278baa7",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 2,
+      "wrongAnswer": "Horizontal velocity is constant because a constant horizontal force acts, giving horizontal acceleration.",
+      "originalPrompt": "Explain why the horizontal velocity of a projectile is constant when air resistance is negligible.",
+      "originalModelAnswer": "No resultant horizontal force acts on the projectile. Therefore horizontal acceleration is zero.",
+      "originalMarkPoints": [
+        "No resultant horizontal force acts on the projectile.",
+        "Therefore horizontal acceleration is zero."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "orig_v31_chemistry_rp6_organic_tests_1",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Practical skills",
+      "subtopic": "RP6 Organic tests",
+      "courseTopic": "Practical skills",
+      "specRef": null,
+      "questionType": "explanation",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "bbf25fc0",
+      "answerHash": "3538ce78",
+      "pointsHash": "1be4e0",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 2,
+      "wrongAnswer": "The negative Tollens test shows it must be an aldehyde, not a ketone.",
+      "originalPrompt": "An unknown compound forms an orange precipitate with 2,4-DNPH but no silver mirror with Tollens' reagent. Identify a likely functional group and justify.",
+      "originalModelAnswer": "2,4-DNPH indicates a carbonyl group (aldehyde or ketone). Negative Tollens' test favours a ketone rather than an aldehyde.",
+      "originalMarkPoints": [
+        "2,4-DNPH indicates a carbonyl group (aldehyde or ketone).",
+        "Negative Tollens' test favours a ketone rather than an aldehyde."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "orig_v31_chemistry_periodicity_2",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Periodicity",
+      "subtopic": "Periodicity",
+      "courseTopic": "Periodicity",
+      "specRef": null,
+      "questionType": "explanation",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "20e94246",
+      "answerHash": "ffc02119",
+      "pointsHash": "69d23137",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 1,
+      "wrongAnswer": "Al's 3p electron is lower in energy than Mg's 3s electron and therefore harder to remove.",
+      "originalPrompt": "Explain why aluminium's first ionisation energy is lower than magnesium's despite a larger nuclear charge.",
+      "originalModelAnswer": "The electron removed from Al is a 3p electron rather than a 3s electron in Mg. The 3p electron is higher in energy/more shielded and is easier to remove.",
+      "originalMarkPoints": [
+        "The electron removed from Al is a 3p electron rather than a 3s electron in Mg.",
+        "The 3p electron is higher in energy/more shielded and is easier to remove."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "orig_v32_phy_rp2_interference_3",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "subtopic": "RP2 Interference",
+      "courseTopic": "Waves",
+      "specRef": null,
+      "questionType": "explanation",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "dc32095e",
+      "answerHash": "5972cc60",
+      "pointsHash": "30b26226",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 1,
+      "wrongAnswer": "Coherent sources have a constantly changing phase difference so the fringes move randomly.",
+      "originalPrompt": "Explain why coherent light sources are needed for a stable double-slit interference pattern.",
+      "originalModelAnswer": "Coherent sources maintain a constant phase difference. This gives stable constructive and destructive interference fringes.",
+      "originalMarkPoints": [
+        "Coherent sources maintain a constant phase difference.",
+        "This gives stable constructive and destructive interference fringes."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "orig_v32_phy_interference_2",
+      "subject": "Physics",
+      "level": "AS",
+      "topic": "Waves",
+      "subtopic": "Interference",
+      "courseTopic": "Waves",
+      "specRef": null,
+      "questionType": "explanation",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "d293ad9b",
+      "answerHash": "78db0e4c",
+      "pointsHash": "c24af90a",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 1,
+      "wrongAnswer": "Fringe spacing is inversely proportional to wavelength: increasing wavelength decreases the fringe spacing.",
+      "originalPrompt": "Explain why increasing the light wavelength increases Young double-slit fringe spacing at fixed geometry.",
+      "originalModelAnswer": "w=λD/s. Fringe separation is directly proportional to wavelength.",
+      "originalMarkPoints": [
+        "w=λD/s.",
+        "Fringe separation is directly proportional to wavelength."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "orig_v32_chem_shapes_1",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Bonding",
+      "subtopic": "Shapes",
+      "courseTopic": "Bonding",
+      "specRef": null,
+      "questionType": "explanation",
+      "requiresWorking": false,
+      "marks": 2,
+      "promptHash": "56d86be3",
+      "answerHash": "3b075279",
+      "pointsHash": "87719dab",
+      "weightsHash": "3d90604d",
+      "wrongSuggested": 2,
+      "wrongAnswer": "Ammonia is trigonal planar with a bond angle of 120° because lone pairs repel less than bonding pairs.",
+      "originalPrompt": "Predict shape and H–N–H bond angle in NH₃ and explain why its angle is smaller than 109.5°.",
+      "originalModelAnswer": "Three bonding pairs and one lone pair make trigonal pyramidal shape. The lone pair repels bonding pairs more strongly, reducing the bond angle to about 107°.",
+      "originalMarkPoints": [
+        "Three bonding pairs and one lone pair make trigonal pyramidal shape.",
+        "The lone pair repels bonding pairs more strongly, reducing the bond angle to about 107°."
+      ],
+      "originalMarkPointMarks": [
+        1,
+        1
+      ]
+    }
+  ]
+}
