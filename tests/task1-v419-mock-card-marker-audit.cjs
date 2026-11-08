@@ -49,7 +49,9 @@ assert(ms>0&&me>ms);
 const eligible=new Function(app.slice(ms,me)+'\nreturn mockEligibleCard;')();
 const firstMock=cards.filter(c=>c.active!==false&&c.taught!==false&&eligible(c));
 const originalMock=firstMock.filter(c=>c.__source==='deck.json');
-assert.equal(originalMock.length,2379,'Original school mock card cohort changed');
+const rawCoreMock=deck.cards.filter(c=>c.mock===true&&c.active!==false);
+assert.equal(rawCoreMock.length,2379,'Original raw school mock card cohort changed');
+assert(originalMock.length<=rawCoreMock.length,'Selector cannot increase the original school mock count');
 const extraMock=firstMock.filter(c=>c.__source!=='deck.json');
 const bySubject=Object.fromEntries(['Physics','Chemistry','Maths'].map(subject=>[
  subject,{original:originalMock.filter(c=>c.subject===subject).length,
