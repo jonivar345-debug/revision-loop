@@ -65,6 +65,13 @@ assert(v405s>0&&ess>v405s);
 const v405=new Function('mockEligibleQuestion','v403OriginalHash',
  app.slice(v405s,ess)+'\nreturn applyV405ShortSemanticManualReview;')(runtime.eligible,hash);
 v405(questions);
+// v412: repeat the *actual later supplement manual-review guard* rather than
+// interpreting the pre-v412 source-only baseline as the currently displayed UI.
+const guardStart=app.indexOf(' const originalQuestionIds=new Set((e.questions||[]).map(q=>q.id));');
+const guardEnd=app.indexOf(' deckMeta=d.meta||{}',guardStart);
+assert(guardStart>0&&guardEnd>guardStart,'Missing live supplemental mark-safety guard');
+new Function('examQuestions','e','mockEligibleQuestion',
+ app.slice(guardStart,guardEnd)+'\nreturn examQuestions;')(questions,original,runtime.eligible);
 const mock=questions.filter(q=>q.standalone!==false&&runtime.eligible(q));
 const core=mock.filter(q=>q.__auditSource==='exam_questions.json');
 const supplement=mock.filter(q=>q.__auditSource!=='exam_questions.json');
@@ -124,7 +131,8 @@ const report={
 };
 assert.equal(denied.length,0,'Buffers leaked into Chemistry mock session');
 assert.equal(outOfScopeMaths.length,0,'A2, Statistics, Mechanics or radians leaked into Maths mock');
-console.log('PASS v411 baseline source and live mock eligibility; independent supplementary marking exposure remains a review gate.');
+assert.equal(unguardedSupplement.length,0,'v412 supplementary multi-mark still reaches generic marking');
+console.log('PASS v411 updated live mock eligibility and v412 supplementary manual routing; independent student-working sign-off remains open.');
 console.log('V411_AUDIT_JSON_START');
 console.log(JSON.stringify(report,null,2));
 console.log('V411_AUDIT_JSON_END');
