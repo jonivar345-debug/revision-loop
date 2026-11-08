@@ -52,7 +52,7 @@ assert.equal(q.specRef,'3.1.9.1');
 assert.equal(q.marks,7);
 assert.equal(q.taught,true);
 assert.equal(q.standalone,true);
-assert(q.prompt.includes('Arrhenius plot')&&q.prompt.includes('ln k'),'Not the sourced task');
+assert(q.subtopic.includes('Arrhenius')&&q.prompt.includes('ln k'),'Not the sourced task');
 const hash=value=>{
  let h=2166136261,s=String(value||'');
  for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}
