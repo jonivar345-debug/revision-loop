@@ -1,0 +1,29 @@
+name: Task 1 v415 Chemistry Arrhenius spec reference
+on:
+  pull_request:
+    paths:
+      - 'chemistry_mock_precision_v199.json'
+      - 'sw.js'
+      - 'tests/task1-v415-chem-arrhenius-spec.cjs'
+      - '.github/workflows/task1-v415-chem-arrhenius-spec.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-chemistry-mock-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check JavaScript source
+        run: |
+          node --check tests/task1-v415-chem-arrhenius-spec.cjs
+          node --check sw.js
+      - name: Correct Arrhenius AQA classification without changing answer
+        run: node tests/task1-v415-chem-arrhenius-spec.cjs
+      - name: Regression on mock boundaries and original bank marking
+        run: |
+          node tests/task1-v411-supplement-mock-routing-audit.cjs
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
