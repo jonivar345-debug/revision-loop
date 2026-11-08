@@ -1,0 +1,33 @@
+name: Task 1 v422 bonding diagram denial guard
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v422-bonding-diagram-denials.cjs'
+      - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
+      - '.github/workflows/task1-v422-bonding-diagram-denials.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reject-false-bonding-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v422-bonding-diagram-denials.cjs
+      - name: Check all seven bonding diagram cards with accepted and denial variants
+        run: node tests/task1-v422-bonding-diagram-denials.cjs
+      - name: Recheck all supplementary flashcards with the actual evaluator
+        run: node tests/task1-v421-supplement-real-card-evaluator.cjs
+      - name: Keep original mock source and marker safeguards
+        run: |
+          node tests/task1-v419-mock-card-marker-audit.cjs
+          node tests/task1-v409-short-negation-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs

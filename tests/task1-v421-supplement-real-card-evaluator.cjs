@@ -114,6 +114,12 @@ const summary={
  ].map(key=>[key,results[key].slice(0,80)])),
  limitations:results.limitations
 };
+assert.equal(results.backCorrect,1018,'A sourced model answer failed the live flashcard checker');
+assert.equal(results.acceptNotCorrect.length,0,'A curated valid flashcard answer lost full credit');
+assert.equal(results.rejectCredited.length,0,'An explicitly rejected flashcard variant was credited');
+assert.equal(results.echoCredited.length,0,'A repeated question received full credit');
+assert.equal(results.denialCredited.length,0,'An explicitly denied model answer received full credit');
+assert.equal(results.evaluatorErrors.length,0,'Real flashcard evaluator threw an error');
 assert.equal(results.blankCredited.length,0,'A blank answer receives full credit');
 assert.equal(results.nonanswerCredited.length,0,'I do not know receives full credit');
 console.log('PASS v421: full supplementary candidate evaluator executed; no blank/IDK full credit. Risk findings below require triage before claiming marker sign-off.');

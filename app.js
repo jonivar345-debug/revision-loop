@@ -3555,6 +3555,19 @@ function evaluateCard(c,input){
   if(!valid.some(a=>echoKey(a)===proposedEcho))
    return {status:'wrong',score:0,text:'That repeats the question rather than answering it.',missing:[String(c?.back||'')]};
  }
+ // v422: in the seven short bonding/structure diagram prompts, an answer
+ // which explicitly declares the *entire* model/accepted description wrong
+ // is not diagram evidence. Match the quoted description exactly so real
+ // comparisons or corrections ("not X but Y") continue through the marker.
+ const diagramDenial=String(input||'').trim().match(
+  /^the statement\s+["“]([\s\S]+?)["”]\s+is\s+(?:wrong|false|incorrect|untrue)\s*[.!?]*$/i);
+ if(/^task1_v237_chem_bond_diagram_0[1-7]$/.test(String(c?.id||''))&&
+    c?.subject==='Chemistry'&&diagramDenial){
+  const rejectedDescription=echoKey(diagramDenial[1]);
+  if(rejectedDescription&&
+     [c.back,...(Array.isArray(c.accept)?c.accept:[])].some(ans=>echoKey(ans)===rejectedDescription))
+   return {status:'wrong',score:0,text:'That explicitly rejects the correct diagram description.',missing:[String(c.back||'')]};
+ }
  // v392: Reject explicitly denying a whole known answer; avoid fuzzy keyword credit.
  // A contrast such as 'not X but Y' is deliberately left to normal marking.
  const explicitModelDenial=String(input||'').trim().match(/^(?:the (?:correct )?answer|my answer|the result)\s+is\s+not\s+([\s\S]+)$/i);
