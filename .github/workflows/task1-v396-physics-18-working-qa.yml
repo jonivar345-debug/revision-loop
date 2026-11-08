@@ -1,0 +1,19 @@
+name: Task 1 v396 original Physics 18 worked-question marking
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'editorial/task1-v396-physics-18-working-qa.json'
+      - 'tests/task1-v396-physics-18-working-qa.cjs'
+      - '.github/workflows/task1-v396-physics-18-working-qa.yml'
+  workflow_dispatch:
+jobs:
+  physics-18-original-manual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Guard 18 original Physics working questions (93 marks)
+        run: node tests/task1-v396-physics-18-working-qa.cjs
+      - name: Recheck original organic, calculations, and waves safeguards
+        run: node tests/task1-v395-organic-13-diagram-qa.cjs && node tests/task1-v394-chemistry-17-original-manual.cjs && node tests/task1-v393-physics-12-original-manual.cjs
