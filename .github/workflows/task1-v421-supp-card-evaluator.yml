@@ -1,0 +1,23 @@
+name: Task 1 v421 all supplementary flashcards real evaluator probes
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
+      - '.github/workflows/task1-v421-supp-card-evaluator.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-source-vs-real-marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: node --check tests/task1-v421-supplement-real-card-evaluator.cjs
+      - name: Evaluate actual model, wrong, denied, blank and question-echo responses
+        run: node tests/task1-v421-supplement-real-card-evaluator.cjs
+      - name: Preserve complete supplementary source candidate inventory
+        run: node tests/task1-v419-mock-card-marker-audit.cjs
