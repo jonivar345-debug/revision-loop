@@ -1,0 +1,23 @@
+name: Task 1 v413 Physics Waves and Electricity gate evidence
+on:
+  pull_request:
+    paths:
+      - 'editorial/task1-v413-physics-eleven-gate-evidence-map.json'
+      - 'tests/task1-v413-physics-eleven-gates.cjs'
+      - '.github/workflows/task1-v413-physics-eleven-gates.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-gate-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: node --check tests/task1-v413-physics-eleven-gates.cjs
+      - name: Verify 11 outstanding skill gates against actual runtime files
+        run: node tests/task1-v413-physics-eleven-gates.cjs
+      - name: Protect original flashcard and question scope
+        run: node tests/task1-v401-mock-signoff-inventory.cjs
