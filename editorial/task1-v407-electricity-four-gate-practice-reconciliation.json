@@ -1,0 +1,62 @@
+{
+  "version": "v407",
+  "date": "2026-11-08",
+  "subject": "Physics",
+  "scope": "Original AS mock-eligible Electricity applications; reconciliation of the four earlier v359 diagram/practical evidence gates, without claiming independent grading or mastery.",
+  "priorAudit": "editorial/task1-v359-electricity-45-evidence-review.json",
+  "officialSources": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/practical-assessment"
+  ],
+  "newBank": "physics_electricity_manual_sketch_practice_v407.json",
+  "counts": {
+    "targetedEarlierElectricityGates": 4,
+    "newDistinctQuestions": 4,
+    "newManualMarks": 35,
+    "newCoreFlashcards": 0,
+    "earlierIndependentMasteryGatesStillUncertified": 4
+  },
+  "rows": [
+    {
+      "priorSkill": "Independently mark complete ohmic, lamp and diode I–V sketches",
+      "specRef": "3.5.1.2",
+      "questionId": "task1_v407_phy_elec_01",
+      "marks": 8,
+      "evidenceNow": "complete_original_sketch_question_loaded_manual_review",
+      "stillRequired": "independent assessment of student graphs, correct axes, shape and justified trends"
+    },
+    {
+      "priorSkill": "Independently mark required practical 5 full wire resistivity method and uncertainty",
+      "specRef": "3.5.1.3",
+      "questionId": "task1_v407_phy_elec_02",
+      "marks": 10,
+      "evidenceNow": "full_original_method_diagram_graph_and_uncertainty_application_loaded_manual_review",
+      "stillRequired": "independent evaluation of unfamiliar method responses and genuine laboratory competence"
+    },
+    {
+      "priorSkill": "Independently mark designed potential-divider circuits with sensors and variable resistors",
+      "specRef": "3.5.1.5",
+      "questionId": "task1_v407_phy_elec_03",
+      "marks": 8,
+      "evidenceNow": "two_original_sensor_circuit_designs_loaded_manual_review",
+      "stillRequired": "independent review of actual circuit sketches, polarities and other valid designs; separate variable-resistor variants remain to be checked"
+    },
+    {
+      "priorSkill": "Independently mark required practical 6 experimental data, gradient, uncertainty and interpretation",
+      "specRef": "3.5.1.6",
+      "questionId": "task1_v407_phy_elec_04",
+      "marks": 9,
+      "evidenceNow": "original_terminal_pd_circuit_graph_emf_internal_resistance_question_loaded_manual_review",
+      "stillRequired": "independent review of student graph/working, uncertainty evaluation and practical method detail"
+    }
+  ],
+  "completion": {
+    "sourceMatchedDedicatedPracticePresent": true,
+    "questionsAndExpectedNumericalAnswersReviewed": true,
+    "manualScoringRequired": true,
+    "independentDrawnStudentAnswersReviewed": false,
+    "studentPracticalCompetenceCertified": false,
+    "wholeAqaPhysicsMockSignedOff": false
+  },
+  "releaseGate": "Merge only after full GitHub CI and exact-commit READY Vercel preview. Distinguish source availability from practical/diagram marking sign-off."
+}
