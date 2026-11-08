@@ -14,7 +14,7 @@ assert(app.indexOf('applyV402Original21ManualReview(examQuestions);')>app.indexO
 const hash=s=>{let h=2166136261;const v=String(s||'');for(let i=0;i<v.length;i++){h^=v.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16)};
 const start=app.indexOf('const V402_ORIGINAL_21_MANUAL='),end=app.indexOf('// v396: 18 exact, already-existing AS Physics worked exam questions',start);
 assert(start>=0&&end>start);
-const {rows,patch}=new Function(app.slice(start,end)+'\\nreturn {rows:V402_ORIGINAL_21_MANUAL,patch:applyV402Original21ManualReview};'.replace('\\n','\\n'))();
+const {rows,patch}=new Function(app.slice(start,end)+'\nreturn {rows:V402_ORIGINAL_21_MANUAL,patch:applyV402Original21ManualReview};'.replace('\n','\n'))();
 assert.deepEqual(rows,audit.rows);
 const source=rows.map(row=>{
  const q=bank.questions.find(q=>q.id===row.id);assert(q,'Missing original question '+row.id);
@@ -47,13 +47,13 @@ assert.equal(guarded.filter(q=>q.manualWorkingReview===true).length,20);
 assert.equal(guarded.reduce((s,q)=>s+(q.v402ReviewRequired?q.marks:0),0),75);
 const es=app.indexOf('function examSuggested(q,answer){'),ee=app.indexOf(' // v213:',es);
 assert(es>0&&ee>es);
-const suggest=new Function('window',app.slice(es,ee)+'\\n}\\nreturn examSuggested;'.replaceAll('\\n','\\n'))({});
+const suggest=new Function('window',app.slice(es,ee)+'\n}\nreturn examSuggested;'.replaceAll('\n','\n'))({});
 const hs=app.indexOf('function manualExamHelpText(q){'),he=app.indexOf('function beginManualExamReview(q){',hs);
 assert(hs>0&&he>hs);
-const helper=new Function(app.slice(hs,he)+'\\nreturn {help:manualExamHelpText,button:manualExamButtonText};'.replace('\\n','\\n'))();
+const helper=new Function(app.slice(hs,he)+'\nreturn {help:manualExamHelpText,button:manualExamButtonText};'.replace('\n','\n'))();
 const ms=app.indexOf('function mockEligibleQuestion(q){'),me=app.indexOf('function startMockSession(){',ms);
 assert(ms>0&&me>ms);
-const eligible=new Function(app.slice(ms,me)+'\\nreturn mockEligibleQuestion;'.replace('\\n','\\n'))();
+const eligible=new Function(app.slice(ms,me)+'\nreturn mockEligibleQuestion;'.replace('\n','\n'))();
 let probes=0,mutations=0;
 for(let i=0;i<source.length;i++){
  const src=source[i],q=guarded[i],row=rows[i];assert(eligible(q),'Mock unexpectedly excluded '+q.id);
