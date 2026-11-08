@@ -3,6 +3,13 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p));
 const bank=json('physics_electricity_manual_sketch_practice_v407.json');
 const app=read('app.js'),sw=read('sw.js');
+const audit=json('editorial/task1-v407-electricity-four-gate-practice-reconciliation.json');
+assert.equal(audit.counts.targetedEarlierElectricityGates,4);
+assert.equal(audit.counts.newManualMarks,35);
+assert.equal(audit.completion.independentDrawnStudentAnswersReviewed,false);
+assert.equal(audit.completion.wholeAqaPhysicsMockSignedOff,false);
+assert.deepEqual(audit.rows.map(r=>r.questionId),bank.questions.map(q=>q.id));
+
 const deck=json('deck.json'),original=json('exam_questions.json');
 assert.equal(deck.cards.length,3345,'Original core deck must not change');
 assert.equal(original.questions.length,1268,'Original exam question bank must not change');
