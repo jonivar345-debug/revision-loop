@@ -1,0 +1,40 @@
+name: Task 1 v425 prevent all exact whole-model denial auto-credit
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
+      - 'tests/task1-v422-bond-diagram-denials.cjs'
+      - 'tests/task1-v423-original-short-exam-adversarial.cjs'
+      - '.github/workflows/task1-v425-full-model-denials.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  protect-all-auto-scored-mock-shorts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v421-supplement-real-card-evaluator.cjs
+          node --check tests/task1-v422-bond-diagram-denials.cjs
+          node --check tests/task1-v423-original-short-exam-adversarial.cjs
+      - name: Zero full-credit for 387 model-denied short exam answers, preserve legitimate models
+        run: node tests/task1-v423-original-short-exam-adversarial.cjs
+      - name: All seven diagram cards and all 1,018 supplementary flashcard candidates
+        run: |
+          node tests/task1-v422-bond-diagram-denials.cjs
+          node tests/task1-v421-supplement-real-card-evaluator.cjs
+      - name: Preserve existing long/manual and complete-model/point protections
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v409-short-negation-qa.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
