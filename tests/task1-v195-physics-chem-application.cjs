@@ -61,7 +61,8 @@ for(const z of q.questions){
  assert(z.markPoints.length===z.marks&&z.markPointMarks.length===z.marks&&z.markPointMarks.every(m=>m===1));
  assert.equal(z.modelAnswer,z.markPoints.join(' '));
 }
-assert.equal([...exam.questions,...maths190.questions,...maths191.questions,...q.questions].filter(z=>z.subject==='Maths'&&eligible(z)).length,138);
+// v397: 138 was this science crosswalk's historical Maths mock count; exclude eleven later-taught inverse/composite questions (127 current).
+assert.equal([...exam.questions,...maths190.questions,...maths191.questions,...q.questions].filter(z=>z.subject==='Maths'&&eligible(z)).length,127);
 const begin=app.indexOf('function normalise('),mid=app.indexOf('function nextSchedule(',begin);
 const scorer=app.indexOf('function evidenceRuleScore(',mid),end=app.indexOf('function renderExam(',scorer);
 assert(begin>=0&&mid>begin&&scorer>mid&&end>scorer);
