@@ -4710,9 +4710,18 @@ function examSuggested(q,answer){
  // v406: Reject an answer that consists solely of expressly denying one
  // exact correct marking point or independently accepted alternative.
  // Other claims and qualifying explanations stay on their existing marking path.
- const explicitPointDenialQuoted=submittedNonAnswer.match(/^the statement (["'])(.+)\1 is (?:incorrect|false)$/);
- const explicitPointDenialColon=submittedNonAnswer.match(/^(?:this statement is false|this mark point is false|the marking point is wrong):\s*(.+)$/);
- const rejectedClaim=explicitPointDenialQuoted?.[2]??explicitPointDenialColon?.[1]??null;
+ // v409: Other unambiguous ways of rejecting a correct point were still
+ // earning keyword-based credit (e.g. "This marking point is incorrect: Proton").
+ // Only reject when the *entire* denied claim equals a sourced correct point.
+ // Longer explanations that contrast an incorrect claim stay reviewable.
+ const explicitPointDenialQuoted=submittedNonAnswer.match(
+  /^the (?:statement|claim) (["'])(.+)\1 is (?:incorrect|false|wrong|untrue)$/);
+ const explicitPointDenialColon=submittedNonAnswer.match(
+  /^(?:this statement is (?:false|incorrect|wrong|untrue)|this (?:mark(?:ing)? point|claim) is (?:false|incorrect|wrong|untrue)|the (?:mark(?:ing)? point|claim) is (?:false|incorrect|wrong|untrue)):\s*(.+)$/);
+ const explicitPointDenialPrefixed=submittedNonAnswer.match(
+  /^(?:it is (?:false|incorrect|wrong) that|i (?:disagree with|disagree that|reject the claim that))\s+(.+)$/);
+ const rejectedClaim=explicitPointDenialQuoted?.[2]??
+  explicitPointDenialColon?.[1]??explicitPointDenialPrefixed?.[1]??null;
  const claimVariants=[
   ...(Array.isArray(q.markPoints)?q.markPoints:[]),
   ...(Array.isArray(q.markPointAcceptedAlternatives)?
@@ -4942,7 +4951,10 @@ function reviewedExpressionEvidence(answer,expression){
  // otherwise credit a mean calculated from the wrong set of titres.
  if(q.markingMode==='concordantTitres2018'){
   const raw=String(answer||'').replace(/,/g,' ').toLowerCase();
-  const found=[...raw.matchAll(/(?<![\d.])(\d{2}\.\d+)(?![\d.])/g)].map(x=>Number(x[1]));
+  // v409: preserve the sign on titre readings and means. The old pattern
+  // silently read -23.95 as +23.95, incorrectly awarding even full credit.
+  const found=[...raw.matchAll(/(?<![\d.])([−–—-]?\s*\d{2}\.\d+)(?![\d.])/g)]
+   .map(x=>Number(x[1].replace(/\s+/g,'').replace(/[−–—]/g,'-')));
   const near=(x,y)=>Math.abs(x-y)<0.006;
   const hasPair=found.some(x=>near(x,23.90))&&found.some(x=>near(x,24.00));
   const mean=found.some(x=>near(x,23.95));

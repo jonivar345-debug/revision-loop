@@ -1,0 +1,33 @@
+name: Task 1 v409 explicitly rejected short-answer mark points
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v409-short-negation-qa.cjs'
+      - '.github/workflows/task1-v409-short-negation-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test-explicit-negative-claims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v409-short-negation-qa.cjs
+      - name: Reject incorrect claims without losing correct alternative answers
+        run: node tests/task1-v409-short-negation-qa.cjs
+      - name: Preserve mock scope and prior short answer regressions
+        run: |
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+          node tests/task1-v407-electricity-manual-practice.cjs
+          node tests/task1-v406-explicit-markpoint-denials.cjs
+          node tests/task1-v405-short-semantic-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v403-original-82-manual-qa.cjs
