@@ -1,0 +1,673 @@
+{
+  "version": "v417",
+  "date": "2026-11-08",
+  "title": "Editorial primary-subsection crosswalk for 70 legacy mock Chemistry worked questions lacking specRef",
+  "officialAqa": "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification/subject-content/physical-chemistry",
+  "scope": "Seven older supplementary practice banks covering AQA Chemistry 3.1.1-3.1.4; no flashcard/specification completion or student performance certified.",
+  "method": [
+    "Read each existing question's full prompt and compare the assessed principal skill with AQA 7405's numbered subsection content.",
+    "Choose the closest primary subsection and flag genuinely cross-topic items; these are editorial coverage labels, not new official mark schemes.",
+    "Do not change or auto-rewrite source question specRef fields while earlier exact-source marking guards and release previews are pending.",
+    "Every question ID and original source file remains unchanged. The loader and zero-tick manual marking safety are separate release issues."
+  ],
+  "counts": {
+    "rows": 70,
+    "sources": 7,
+    "byFile": {
+      "atomic_structure_focus_v43.json": 15,
+      "amount_of_substance_focus_v44.json": 9,
+      "bonding_focus_v49.json": 11,
+      "bonding_weakness_focus_v52.json": 12,
+      "energetics_focus_v50.json": 11,
+      "energetics_worked_followups_v51.json": 3,
+      "energetics_weakness_focus_v53.json": 9
+    },
+    "previouslyUnlabelledSupplementChemistryMockQuestions": 70,
+    "linkedButNotYetRuntimeUpdated": 70,
+    "independentlyMarkedStudentAnswers": 0,
+    "wholeChemistryMockSignedOff": false
+  },
+  "remaining": [
+    "These 70 mappings are research/evidence records only: source JSON question specRef metadata has NOT been changed.",
+    "Some multi-topic tasks span two or more AQA areas, but this records one dominant association rather than asserting exhaustive coverage.",
+    "No review of actual student mechanisms, practical write-ups, diagrams or unfamiliar alternative method credit was performed.",
+    "Another later seven-mark Arrhenius question has an incorrect old 3.1.9.3 reference; a separate v415 draft patch corrects it to 3.1.9.1 and still needs deployment verification."
+  ],
+  "rows": [
+    {
+      "id": "atomic_v43_01",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "ee68748e",
+      "answerHash": "c39c2817",
+      "criteriaHash": "8b8fe546",
+      "marks": 4
+    },
+    {
+      "id": "atomic_v43_02",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "ea7e299f",
+      "answerHash": "90af1337",
+      "criteriaHash": "e6d3861a",
+      "marks": 8
+    },
+    {
+      "id": "atomic_v43_03",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "c1825b5f",
+      "answerHash": "fc84cc7a",
+      "criteriaHash": "10546001",
+      "marks": 6
+    },
+    {
+      "id": "atomic_v43_04",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "dd7612fc",
+      "answerHash": "737737a",
+      "criteriaHash": "4a948eb1",
+      "marks": 5
+    },
+    {
+      "id": "atomic_v43_05",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "1684edbb",
+      "answerHash": "c9c0cf4b",
+      "criteriaHash": "10dd4450",
+      "marks": 6
+    },
+    {
+      "id": "atomic_v43_06",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "1dbcfc07",
+      "answerHash": "3886b672",
+      "criteriaHash": "ffc4ea45",
+      "marks": 6
+    },
+    {
+      "id": "atomic_v43_07",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "9684506d",
+      "answerHash": "b972cff2",
+      "criteriaHash": "ab89a619",
+      "marks": 6
+    },
+    {
+      "id": "atomic_v43_08",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.2",
+      "promptHash": "84584121",
+      "answerHash": "2ab8437d",
+      "criteriaHash": "7a4ac75a",
+      "marks": 5
+    },
+    {
+      "id": "atomic_v43_09",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.1",
+      "scopeNote": "Historical nuclear-model evidence is the evolving-model statement in 3.1.1.1, not an ionisation subtopic.",
+      "promptHash": "92ea6c7f",
+      "answerHash": "1c085f6f",
+      "criteriaHash": "dd206290",
+      "marks": 5
+    },
+    {
+      "id": "atomic_v43_10",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3",
+      "promptHash": "a7276bee",
+      "answerHash": "a872335d",
+      "criteriaHash": "335349a6",
+      "marks": 6
+    },
+    {
+      "id": "atomic_v43_11",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3",
+      "promptHash": "5e56a80",
+      "answerHash": "9f5df0bc",
+      "criteriaHash": "9acd5efd",
+      "marks": 7
+    },
+    {
+      "id": "atomic_v43_12",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3",
+      "promptHash": "abaeb979",
+      "answerHash": "645a253b",
+      "criteriaHash": "d5bbc1ae",
+      "marks": 8
+    },
+    {
+      "id": "atomic_v43_13",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3",
+      "promptHash": "8561c8e4",
+      "answerHash": "7a7caa8e",
+      "criteriaHash": "54f86749",
+      "marks": 5
+    },
+    {
+      "id": "atomic_v43_14",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3",
+      "promptHash": "8249f972",
+      "answerHash": "e8f7d27b",
+      "criteriaHash": "7a6a7874",
+      "marks": 6
+    },
+    {
+      "id": "atomic_period3_focus_v46_01",
+      "source": "atomic_structure_focus_v43.json",
+      "primarySpecRef": "3.1.1.3",
+      "promptHash": "7611160d",
+      "answerHash": "4b8d0712",
+      "criteriaHash": "9a5393a5",
+      "marks": 5
+    },
+    {
+      "id": "amount_v44_01",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.4",
+      "promptHash": "ca52ce6a",
+      "answerHash": "acb6f3b",
+      "criteriaHash": "3d4943ee",
+      "marks": 7
+    },
+    {
+      "id": "amount_v44_02",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.3",
+      "promptHash": "c7118626",
+      "answerHash": "6f3b0957",
+      "criteriaHash": "26759f5a",
+      "marks": 7
+    },
+    {
+      "id": "amount_v44_03",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "promptHash": "81e8c06",
+      "answerHash": "8dc76b6a",
+      "criteriaHash": "8a2ad943",
+      "marks": 8
+    },
+    {
+      "id": "amount_v44_04",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "promptHash": "f548fe8b",
+      "answerHash": "750d71fc",
+      "criteriaHash": "cd57e555",
+      "marks": 7
+    },
+    {
+      "id": "amount_v44_05",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "scopeNote": "Water-of-crystallisation from heating is explicitly an example within 3.1.2.5, though it also exercises empirical ratios.",
+      "promptHash": "cf78f5ed",
+      "answerHash": "7752535b",
+      "criteriaHash": "1500af94",
+      "marks": 6
+    },
+    {
+      "id": "amount_v44_06",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "promptHash": "e56b447",
+      "answerHash": "bbb672c0",
+      "criteriaHash": "73769acb",
+      "marks": 6
+    },
+    {
+      "id": "amount_v44_07",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "promptHash": "6daa1262",
+      "answerHash": "b0335a2d",
+      "criteriaHash": "cfc4a4b4",
+      "marks": 8
+    },
+    {
+      "id": "amount_v44_08",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.5",
+      "promptHash": "bc894b5b",
+      "answerHash": "3fb5ad0",
+      "criteriaHash": "a08fcfd5",
+      "marks": 8
+    },
+    {
+      "id": "amount_v44_09",
+      "source": "amount_of_substance_focus_v44.json",
+      "primarySpecRef": "3.1.2.2",
+      "promptHash": "76060716",
+      "answerHash": "4e862166",
+      "criteriaHash": "e9dde615",
+      "marks": 6
+    },
+    {
+      "id": "bonding_v49_01",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.1",
+      "promptHash": "e95259cb",
+      "answerHash": "4e11bc71",
+      "criteriaHash": "bf3e748c",
+      "marks": 7
+    },
+    {
+      "id": "bonding_v49_02",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.2",
+      "promptHash": "1032d0c7",
+      "answerHash": "4037c44f",
+      "criteriaHash": "f2b0a810",
+      "marks": 6
+    },
+    {
+      "id": "bonding_v49_03",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.4",
+      "scopeNote": "Primary 3.1.3.4 for conductivity/brittleness of two lattices; draws also on 3.1.3.1 and 3.1.3.3.",
+      "promptHash": "29c4a697",
+      "answerHash": "148989f6",
+      "criteriaHash": "52aff0cb",
+      "marks": 8
+    },
+    {
+      "id": "bonding_v49_04",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.4",
+      "promptHash": "b9fb9827",
+      "answerHash": "a1dba836",
+      "criteriaHash": "52579f5b",
+      "marks": 8
+    },
+    {
+      "id": "bonding_v49_05",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7",
+      "scopeNote": "Hydrogen bonding and low-density ice are expressly included in 3.1.3.7; crystal-type language also overlaps 3.1.3.4.",
+      "promptHash": "8e9baa3e",
+      "answerHash": "a2aef4e5",
+      "criteriaHash": "9f6c6280",
+      "marks": 7
+    },
+    {
+      "id": "bonding_v49_06",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.5",
+      "promptHash": "929d552",
+      "answerHash": "4cb06139",
+      "criteriaHash": "915f2460",
+      "marks": 8
+    },
+    {
+      "id": "bonding_v49_07",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.5",
+      "promptHash": "b289ca2b",
+      "answerHash": "a4bca021",
+      "criteriaHash": "1eed77e4",
+      "marks": 8
+    },
+    {
+      "id": "bonding_v49_08",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.6",
+      "promptHash": "8a319b07",
+      "answerHash": "386acdc8",
+      "criteriaHash": "cee4ca9",
+      "marks": 7
+    },
+    {
+      "id": "bonding_v49_09",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7",
+      "promptHash": "6eec39ac",
+      "answerHash": "1f400e36",
+      "criteriaHash": "b0b129eb",
+      "marks": 7
+    },
+    {
+      "id": "bonding_v49_10",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7",
+      "promptHash": "d4856f9f",
+      "answerHash": "9d68a1f5",
+      "criteriaHash": "359f7928",
+      "marks": 7
+    },
+    {
+      "id": "bonding_v49_11",
+      "source": "bonding_focus_v49.json",
+      "primarySpecRef": "3.1.3.7",
+      "promptHash": "3e97f869",
+      "answerHash": "e43c4554",
+      "criteriaHash": "7162cfa5",
+      "marks": 7
+    },
+    {
+      "id": "bonding_v52_01",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.1",
+      "promptHash": "f9c25e9c",
+      "answerHash": "c075ce5e",
+      "criteriaHash": "e02e5b9d",
+      "marks": 6
+    },
+    {
+      "id": "bonding_v52_02",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5",
+      "promptHash": "68779fee",
+      "answerHash": "da5ee604",
+      "criteriaHash": "c187c765",
+      "marks": 4
+    },
+    {
+      "id": "bonding_v52_03",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5",
+      "promptHash": "c5b0c0c4",
+      "answerHash": "6bd7e019",
+      "criteriaHash": "bdc48cfe",
+      "marks": 6
+    },
+    {
+      "id": "bonding_v52_04",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.6",
+      "promptHash": "583c60b7",
+      "answerHash": "f330b346",
+      "criteriaHash": "b471560b",
+      "marks": 4
+    },
+    {
+      "id": "bonding_v52_05",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.6",
+      "promptHash": "a9781cb8",
+      "answerHash": "50a5b4bc",
+      "criteriaHash": "41b0a2f5",
+      "marks": 4
+    },
+    {
+      "id": "bonding_v52_06",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5",
+      "promptHash": "a8aa6b20",
+      "answerHash": "acbba0cb",
+      "criteriaHash": "96702702",
+      "marks": 4
+    },
+    {
+      "id": "bonding_v52_07",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.5",
+      "promptHash": "9550ac5f",
+      "answerHash": "cefee6ab",
+      "criteriaHash": "e56ed454",
+      "marks": 6
+    },
+    {
+      "id": "bonding_v52_08",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.7",
+      "promptHash": "a204d8d6",
+      "answerHash": "82c331af",
+      "criteriaHash": "7fe5c76c",
+      "marks": 6
+    },
+    {
+      "id": "bonding_v52_09",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.4",
+      "promptHash": "b8ca1719",
+      "answerHash": "c0b44c7f",
+      "criteriaHash": "661cef0c",
+      "marks": 5
+    },
+    {
+      "id": "bonding_v52_10",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.7",
+      "promptHash": "82537c6d",
+      "answerHash": "77e2cfa7",
+      "criteriaHash": "3ec2b3f2",
+      "marks": 4
+    },
+    {
+      "id": "bonding_v52_11",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.7",
+      "promptHash": "2eeba823",
+      "answerHash": "def23cef",
+      "criteriaHash": "f7f4f37e",
+      "marks": 4
+    },
+    {
+      "id": "bonding_v52_12",
+      "source": "bonding_weakness_focus_v52.json",
+      "primarySpecRef": "3.1.3.2",
+      "promptHash": "d64b0ca0",
+      "answerHash": "df7a5d69",
+      "criteriaHash": "ecc9c37c",
+      "marks": 4
+    },
+    {
+      "id": "energetics_v50_01",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.1",
+      "promptHash": "2b0b8a26",
+      "answerHash": "fcc1fb54",
+      "criteriaHash": "c97e6a0d",
+      "marks": 8
+    },
+    {
+      "id": "energetics_v50_02",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "7c402c73",
+      "answerHash": "f67a4ec0",
+      "criteriaHash": "978f0725",
+      "marks": 8
+    },
+    {
+      "id": "energetics_v50_03",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "2d7f9251",
+      "answerHash": "a9c040ca",
+      "criteriaHash": "45f2541b",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v50_04",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "f265f34f",
+      "answerHash": "f7a1c1c7",
+      "criteriaHash": "f0b30c66",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v50_05",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.3",
+      "promptHash": "cd061324",
+      "answerHash": "9127b411",
+      "criteriaHash": "6a47b4d2",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v50_06",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.3",
+      "promptHash": "9152a1bd",
+      "answerHash": "cad6d224",
+      "criteriaHash": "6cd835a3",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v50_07",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.3",
+      "promptHash": "ee23985d",
+      "answerHash": "af84c1dd",
+      "criteriaHash": "977af524",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v50_08",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.4",
+      "promptHash": "7d418b3e",
+      "answerHash": "13633f5b",
+      "criteriaHash": "6a850b02",
+      "marks": 8
+    },
+    {
+      "id": "energetics_v50_09",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.4",
+      "promptHash": "232bd1c7",
+      "answerHash": "9055499d",
+      "criteriaHash": "7d468b90",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v50_10",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "f201b82e",
+      "answerHash": "d564714e",
+      "criteriaHash": "a4fd987",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v50_11",
+      "source": "energetics_focus_v50.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "45e12655",
+      "answerHash": "3f745fbc",
+      "criteriaHash": "c4ea4a05",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v51_12",
+      "source": "energetics_worked_followups_v51.json",
+      "primarySpecRef": "3.1.4.1",
+      "promptHash": "4304f367",
+      "answerHash": "ecfd3c8e",
+      "criteriaHash": "b473ded",
+      "marks": 5
+    },
+    {
+      "id": "energetics_v51_13",
+      "source": "energetics_worked_followups_v51.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "744db787",
+      "answerHash": "e2715c0b",
+      "criteriaHash": "fb98e20",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v51_14",
+      "source": "energetics_worked_followups_v51.json",
+      "primarySpecRef": "3.1.4.4",
+      "promptHash": "f46284f8",
+      "answerHash": "d9b9e7d5",
+      "criteriaHash": "6add905e",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v53_01",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.1",
+      "promptHash": "54702e85",
+      "answerHash": "6fd921e7",
+      "criteriaHash": "14912a36",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v53_02",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "b8f4a82",
+      "answerHash": "53abd369",
+      "criteriaHash": "8de6101e",
+      "marks": 9
+    },
+    {
+      "id": "energetics_v53_03",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.3",
+      "promptHash": "edd1f33e",
+      "answerHash": "8c1d5fac",
+      "criteriaHash": "41483b77",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v53_04",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.3",
+      "promptHash": "c2554a64",
+      "answerHash": "84a2b04a",
+      "criteriaHash": "e09c2f65",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v53_05",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.3",
+      "promptHash": "52356c5b",
+      "answerHash": "5bd6205a",
+      "criteriaHash": "f7dcccc5",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v53_06",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.4",
+      "promptHash": "33571657",
+      "answerHash": "f17770e7",
+      "criteriaHash": "9c48d6ce",
+      "marks": 7
+    },
+    {
+      "id": "energetics_v53_07",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "f8c24ef3",
+      "answerHash": "ad821c69",
+      "criteriaHash": "db83012a",
+      "marks": 9
+    },
+    {
+      "id": "energetics_v53_08",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2",
+      "promptHash": "6775b840",
+      "answerHash": "fdbe3ebb",
+      "criteriaHash": "e00a0794",
+      "marks": 6
+    },
+    {
+      "id": "energetics_v53_09",
+      "source": "energetics_weakness_focus_v53.json",
+      "primarySpecRef": "3.1.4.2",
+      "scopeNote": "Primarily calorimetry and defining the molar reaction amount (3.1.4.2), with secondary bond-counting context from 3.1.4.4.",
+      "promptHash": "3bcfb5b0",
+      "answerHash": "e652f21d",
+      "criteriaHash": "3d1320b2",
+      "marks": 6
+    }
+  ]
+}
