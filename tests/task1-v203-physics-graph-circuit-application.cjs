@@ -27,7 +27,8 @@ const known=new Set(prior.map(q=>q.id));
 const start=app.indexOf('function mockEligibleQuestion(q){'),end=app.indexOf('\nfunction startMockSession',start);
 assert(start>=0&&end>start);
 const eligible=vm.runInNewContext(app.slice(start,end)+'\nmockEligibleQuestion');
-assert.equal(prior.filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal(prior.filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 const a=app.indexOf('function normalise('),b=app.indexOf('function nextSchedule(',a),
 c=app.indexOf('function evidenceRuleScore(',b),d=app.indexOf('function renderExam(',c);
 assert(a>=0&&b>a&&c>b&&d>c);
@@ -76,7 +77,7 @@ for(const q of bank.questions){
  }
 }
 assert.equal(graphs,6);assert.equal(variants,62);assert.equal(badVariants,7);
-assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 const near=(a,b)=>assert(Math.abs(a-b)<=Math.max(1e-10,Math.abs(b)*.00001),a+' != '+b);
 near((11-1)/(3-1),5);near((20-0)/4,5);near((7-3)/(3-1),2);
 near(((2+6)/2)*2,8);near(((6-2)/2)*2,4);near((8+12+4-4),20);

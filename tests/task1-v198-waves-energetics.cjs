@@ -32,7 +32,8 @@ for(const q of bank.questions){
  assert(!/buffer/i.test(q.prompt),'Buffers out of scope');
 }
 assert.equal(prior.filter(q=>q.subject==='Maths'&&eligible(q)).length,10);
-assert.equal([...core.questions,...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal([...core.questions,...prior,...bank.questions].filter(q=>q.subject==='Maths'&&eligible(q)).length,127);
 assert(app.includes("'./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json'"));
 assert(sw.includes("'./science_waves_energetics_v198.json'"));
 assert(sw.includes('v198-waves-energetics'));

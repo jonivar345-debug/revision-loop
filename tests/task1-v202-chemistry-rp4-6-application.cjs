@@ -30,7 +30,8 @@ const priorIds=new Set(prior.map(x=>x.id));
 const start=app.indexOf('function mockEligibleQuestion(q){'),end=app.indexOf('\nfunction startMockSession',start);
 assert(start>=0&&end>start,'Missing school mock filter');
 const mockEligible=vm.runInNewContext(app.slice(start,end)+'\nmockEligibleQuestion');
-assert.equal(prior.filter(q=>q.subject==='Maths'&&mockEligible(q)).length,138);
+// v397: 138 Maths mock question parts in the earlier audit; 11 later-taught inverse/composite parts are now filtered (127 current).
+assert.equal(prior.filter(q=>q.subject==='Maths'&&mockEligible(q)).length,127);
 const a=app.indexOf('function normalise('),b=app.indexOf('function nextSchedule(',a),
       c=app.indexOf('function evidenceRuleScore(',b),d=app.indexOf('function renderExam(',c);
 assert(a>=0&&b>a&&c>b&&d>c,'Could not isolate marker code');
@@ -52,7 +53,7 @@ for(const q of bank.questions){
  assert.equal(marker(q,'').suggested,0,'Blank scoring: '+q.id);
  assert.equal(marker(q,'not sure').suggested,0,'Non-answer scoring: '+q.id);
 }
-assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&mockEligible(q)).length,138);
+assert.equal([...prior,...bank.questions].filter(q=>q.subject==='Maths'&&mockEligible(q)).length,127);
 const canonical=s=>String(s||'').toLowerCase().replace(/[.!?]+$/,'').trim();
 let aliases=0;
 for(const q of bank.questions){
