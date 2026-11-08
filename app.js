@@ -4710,9 +4710,18 @@ function examSuggested(q,answer){
  // v406: Reject an answer that consists solely of expressly denying one
  // exact correct marking point or independently accepted alternative.
  // Other claims and qualifying explanations stay on their existing marking path.
- const explicitPointDenialQuoted=submittedNonAnswer.match(/^the statement (["'])(.+)\1 is (?:incorrect|false)$/);
- const explicitPointDenialColon=submittedNonAnswer.match(/^(?:this statement is false|this mark point is false|the marking point is wrong):\s*(.+)$/);
- const rejectedClaim=explicitPointDenialQuoted?.[2]??explicitPointDenialColon?.[1]??null;
+ // v409: Other unambiguous ways of rejecting a correct point were still
+ // earning keyword-based credit (e.g. "This marking point is incorrect: Proton").
+ // Only reject when the *entire* denied claim equals a sourced correct point.
+ // Longer explanations that contrast an incorrect claim stay reviewable.
+ const explicitPointDenialQuoted=submittedNonAnswer.match(
+  /^the (?:statement|claim) (["'])(.+)\1 is (?:incorrect|false|wrong|untrue)$/);
+ const explicitPointDenialColon=submittedNonAnswer.match(
+  /^(?:this statement is (?:false|incorrect|wrong|untrue)|this (?:mark(?:ing)? point|claim) is (?:false|incorrect|wrong|untrue)|the (?:mark(?:ing)? point|claim) is (?:false|incorrect|wrong|untrue)):\s*(.+)$/);
+ const explicitPointDenialPrefixed=submittedNonAnswer.match(
+  /^(?:it is (?:false|incorrect|wrong) that|i (?:disagree with|disagree that|reject the claim that))\s+(.+)$/);
+ const rejectedClaim=explicitPointDenialQuoted?.[2]??
+  explicitPointDenialColon?.[1]??explicitPointDenialPrefixed?.[1]??null;
  const claimVariants=[
   ...(Array.isArray(q.markPoints)?q.markPoints:[]),
   ...(Array.isArray(q.markPointAcceptedAlternatives)?
