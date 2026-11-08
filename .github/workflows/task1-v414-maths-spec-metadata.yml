@@ -1,0 +1,28 @@
+name: Task 1 v414 Year 1 Pure specification metadata
+on:
+  pull_request:
+    paths:
+      - 'maths_pure_proof_vectors_v190.json'
+      - 'maths_pure_proof_vector_applications_v209.json'
+      - 'maths_year1_pure_targeted_practice_v340.json'
+      - 'tests/task1-v414-maths-mock-spec-metadata.cjs'
+      - '.github/workflows/task1-v414-maths-spec-metadata.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-maths-aqa-7357-references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check QA script syntax
+        run: node --check tests/task1-v414-maths-mock-spec-metadata.cjs
+      - name: Verify all 42 loaded Maths practice reference codes and frozen content
+        run: node tests/task1-v414-maths-mock-spec-metadata.cjs
+      - name: Preserve broader Year 1 and mock scope regressions
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
