@@ -9,5 +9,12 @@
         }
       ]
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "qa/**": false,
+      "audit/**": false,
+      "editorial/**": false
+    }
+  }
 }
