@@ -4,6 +4,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const json=f=>JSON.parse(fs.readFileSync(f,'utf8'));
 const app=fs.readFileSync('app.js','utf8');
+const sw=fs.readFileSync('sw.js','utf8');
+assert(sw.includes('-v414-maths-specrefs'), 'New offline cache required for changed question metadata');
 const beforeKeys=["PROGRESS_KEY='revisionLoopProgress5'",
  "PROFILE_KEY='revisionLoopProfile11'","SETTINGS_KEY='revisionLoopSettings11'"];
 beforeKeys.forEach(s=>assert(app.includes(s),'Saved user progress key changed'));
