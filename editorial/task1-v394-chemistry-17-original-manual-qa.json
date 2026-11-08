@@ -1,0 +1,238 @@
+{
+  "version": "v394",
+  "date": "2026-11-08",
+  "scope": "17 existing AS / individually taught Year 2 Chemistry school mock questions; correct one historical titration mark scheme; manual point-by-point working for exact source-matched originals. No new cards or practice questions.",
+  "sourceBank": "exam_questions.json",
+  "runtimeCorrectionFile": "exam_answer_corrections.json",
+  "counts": {
+    "originalQuestions": 17,
+    "manualMethodMarks": 66,
+    "byLevel": {
+      "AS": 12,
+      "A-level": 5
+    },
+    "sourceCoreCardsPreserved": 3345
+  },
+  "method": "Require original question ID, subject, level, topic, mock, standalone/working status, marking point totals, and hash checks of effective post-correction prompt/model/mark points. For typed written working, do not automatically guess multi-step credit.",
+  "specificCorrections": [
+    {
+      "id": "aqa_chem_as16_p1_q3_2",
+      "reason": "Existing second mark point requested conversion from 1464 mg despite question already giving 1.464 g; replace it with necessary 1:1 aliquot stoichiometry, keep three marks."
+    },
+    {
+      "id": "aqa_chem_as16_p1_q5_2",
+      "reason": "Keep previously published 337 cm³ correction; original source answer of 342 cm³ was already fixed in the live loader."
+    }
+  ],
+  "rows": [
+    {
+      "id": "aqa_chem_as16_p1_q3_1",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "c3542e26",
+      "modelAnswerHash": "af239ee7",
+      "markPointsHash": "7264a2c6"
+    },
+    {
+      "id": "aqa_chem_as16_p1_q3_2",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "cb5ce5be",
+      "modelAnswerHash": "7ebe8526",
+      "markPointsHash": "73a356ae"
+    },
+    {
+      "id": "aqa_chem_as16_p1_q5_1",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "16139f68",
+      "modelAnswerHash": "a5c9ea61",
+      "markPointsHash": "54ba4fd9"
+    },
+    {
+      "id": "aqa_chem_as16_p1_q5_2",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "df4b4cbe",
+      "modelAnswerHash": "1539c7a9",
+      "markPointsHash": "d6a62fcc"
+    },
+    {
+      "id": "aschem19p2_07_3",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 2,
+      "promptHash": "b3ef6b1a",
+      "modelAnswerHash": "c5df83bd",
+      "markPointsHash": "f8da6f01"
+    },
+    {
+      "id": "aqa_2018_C_2_3",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 2,
+      "promptHash": "c51b2bbd",
+      "modelAnswerHash": "84965426",
+      "markPointsHash": "ac60750b"
+    },
+    {
+      "id": "stretch_v34_chemistry_back_titrations",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Amount of substance",
+      "courseTopic": "Amount of substance",
+      "specRef": null,
+      "marks": 8,
+      "promptHash": "671772c7",
+      "modelAnswerHash": "dfb7923e",
+      "markPointsHash": "5cf53b42"
+    },
+    {
+      "id": "aqa_chem_as16_p1_q6_5",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "specRef": null,
+      "marks": 4,
+      "promptHash": "f4282fd9",
+      "modelAnswerHash": "d33d0e67",
+      "markPointsHash": "a4e3254"
+    },
+    {
+      "id": "verified2019_C_2_4",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Atomic structure",
+      "courseTopic": "Atomic structure",
+      "specRef": null,
+      "marks": 5,
+      "promptHash": "43824f38",
+      "modelAnswerHash": "d6d790d3",
+      "markPointsHash": "6ef94c6a"
+    },
+    {
+      "id": "orig_v25_chemistry_rate_equations_2",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "b136e75a",
+      "modelAnswerHash": "90c96ae3",
+      "markPointsHash": "a135fd04"
+    },
+    {
+      "id": "orig_v25_chemistry_rate_equations_3",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "topic": "Rate equations",
+      "courseTopic": "Rate equations",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "b29317e5",
+      "modelAnswerHash": "d15151ee",
+      "markPointsHash": "122da48e"
+    },
+    {
+      "id": "mock_v154_08",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Physical chemistry",
+      "courseTopic": "Physical chemistry",
+      "specRef": null,
+      "marks": 6,
+      "promptHash": "8cdf8588",
+      "modelAnswerHash": "b10f3d72",
+      "markPointsHash": "781e6b08"
+    },
+    {
+      "id": "mock_v154_09",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Physical chemistry",
+      "courseTopic": "Physical chemistry",
+      "specRef": null,
+      "marks": 7,
+      "promptHash": "b7167d1b",
+      "modelAnswerHash": "7d527e14",
+      "markPointsHash": "ca8dd540"
+    },
+    {
+      "id": "orig_v25_chemistry_kp_3",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "954fb685",
+      "modelAnswerHash": "47893240",
+      "markPointsHash": "672cc568"
+    },
+    {
+      "id": "orig_v25_chemistry_kp_4",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "topic": "Kp",
+      "courseTopic": "Kp",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "89c4418f",
+      "modelAnswerHash": "5da5028b",
+      "markPointsHash": "6c23410c"
+    },
+    {
+      "id": "mock_v154_07",
+      "subject": "Chemistry",
+      "level": "AS",
+      "topic": "Physical chemistry",
+      "courseTopic": "Physical chemistry",
+      "specRef": null,
+      "marks": 5,
+      "promptHash": "a625f5f9",
+      "modelAnswerHash": "5d3eb66c",
+      "markPointsHash": "13aec236"
+    },
+    {
+      "id": "orig_v25_chemistry_acids_and_bases_4",
+      "subject": "Chemistry",
+      "level": "A-level",
+      "topic": "Acids & bases",
+      "courseTopic": "Acids & bases",
+      "specRef": null,
+      "marks": 3,
+      "promptHash": "256f041a",
+      "modelAnswerHash": "34121349",
+      "markPointsHash": "a700f3b6"
+    }
+  ],
+  "limits": [
+    "Self-reported manual checking is not independent grading of a student's handwritten calculations or original AQA examiner certification.",
+    "Exact source hashes and content must stay unchanged except for the published q3_2 answer/point correction.",
+    "Original core flashcard IDs, other model answers, questions, XP and cloud keys preserved."
+  ]
+}
