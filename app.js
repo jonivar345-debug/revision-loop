@@ -3807,11 +3807,10 @@ function mockEligibleCard(c){
 // v397: keep eleven later-taught inverse/composite function exam questions out
 // of the first school Year 1 Pure mock, without removing general exam practice.
 // IDs are exact and separately source-audited; 'composite' in a proof remains valid.
-const MOCK_MATHS_EXCLUDED_FUNCTION_Q_IDS=new Set(["orig_v33_math_7_0","orig_v33_math_7_1","orig_v33_math_7_2","orig_v33_math_7_3","orig_v33_math_8_0","orig_v33_math_8_1","orig_v33_math_8_2","orig_v33_math_8_3","original_v34_maths_18","stretch_v34_maths_functions","mock_v163_06"]);
 function mockEligibleQuestion(q){
  if(q.mock!==true)return false;
  if(q.subject!=='Maths')return true;
- if(MOCK_MATHS_EXCLUDED_FUNCTION_Q_IDS.has(q.id))return false;
+ if(/^(?:orig_v33_math_[78]_[0-3]|original_v34_maths_18|stretch_v34_maths_functions|mock_v163_06)$/.test(String(q.id||'')))return false;
  // The first school Maths mock is Year 12 / AS Pure only; Year 13 is a later paper.
  if(q.level!=='AS')return false;
  const topic=String(q.topic||'').trim().toLowerCase();

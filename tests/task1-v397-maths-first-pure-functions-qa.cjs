@@ -10,12 +10,14 @@ assert.equal(new Set(exam.questions.map(x=>x.id)).size,1268);
 assert.equal(audit.rows.length,11);
 assert.equal(audit.counts.marks,32);
 assert(sw.includes('-v397-firstpure-maths11'));
-assert(app.includes('if(MOCK_MATHS_EXCLUDED_FUNCTION_Q_IDS.has(q.id))return false;'));
+assert(app.includes("if(/^(?:orig_v33_math_[78]_[0-3]|original_v34_maths_18|stretch_v34_maths_functions|mock_v163_06)$/.test(String(q.id||'')))return false;"));
 const hash=s=>{let h=2166136261;const v=String(s||'');for(let i=0;i<v.length;i++){h^=v.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16)};
 const start=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),end=app.indexOf('function startMockSession(){',start);
 assert(start>=0&&end>start);
-const {eligible,excluded,eligibleCard}=new Function(app.slice(start,end)+'\nreturn {eligible:mockEligibleQuestion,excluded:MOCK_MATHS_EXCLUDED_FUNCTION_Q_IDS,eligibleCard:mockEligibleCard};')();
-assert.deepEqual([...excluded],audit.rows.map(x=>x.id));
+const {eligible,eligibleCard}=new Function(app.slice(start,end)+'\nreturn {eligible:mockEligibleQuestion,eligibleCard:mockEligibleCard};')();
+const excluded=new Set(audit.rows.map(x=>x.id));
+assert.equal(excluded.size,11);
+assert.match(app,/orig_v33_math_\[78\]_\[0-3\]/);
 const originalSelector=q=>{
  if(q.mock!==true)return false;
  if(q.subject!=='Maths')return true;
