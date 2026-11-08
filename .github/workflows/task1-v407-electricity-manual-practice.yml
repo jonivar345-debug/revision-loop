@@ -1,0 +1,34 @@
+name: Task 1 v407 Physics Electricity diagrams and practical review
+on:
+  pull_request:
+    paths:
+      - 'physics_electricity_manual_sketch_practice_v407.json'
+      - 'editorial/task1-v407-electricity-four-gate-practice-reconciliation.json'
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v407-electricity-manual-practice.cjs'
+      - '.github/workflows/task1-v407-electricity-manual-practice.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-four-manual-questions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v407-electricity-manual-practice.cjs
+      - name: Verify source alignment, manual review, independent answers and saved IDs
+        run: node tests/task1-v407-electricity-manual-practice.cjs
+      - name: Keep prior original mock and short answer scoring safeguards
+        run: |
+          node tests/task1-v406-explicit-markpoint-denials.cjs
+          node tests/task1-v405-short-semantic-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+          node tests/task1-v403-original-82-manual-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs

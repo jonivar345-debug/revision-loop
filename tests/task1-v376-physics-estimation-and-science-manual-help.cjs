@@ -21,7 +21,7 @@ assert(sw.includes("'./physics_order_of_magnitude_practice_v376.json'"));
 const match=app.match(/const EXTRA_PRACTICE_URLS=\[([^\]]+)\];/);
 assert(match,'No original exam-bank loading order');
 const paths=[...match[1].matchAll(/'\.\/([^']+\.json)'/g)].map(m=>m[1]);
-assert.equal(paths.length,51,'Append only after 50 older exam banks');
+assert(paths.length>=51,'Preserve the first 51 original exam-bank positions when appending later banks');
 assert.equal(paths[50],'physics_order_of_magnitude_practice_v376.json');
 assert.equal(paths[33],'maths_year1_pure_reasoning_v271.json');
 const oldQuestions=[...json('exam_questions.json').questions,...paths.slice(0,50).flatMap(p=>json(p).questions||[])];
