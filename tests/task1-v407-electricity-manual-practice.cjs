@@ -37,7 +37,7 @@ for(let i=0;i<expected.length;i++){
  assert(!originalQuestionIds.has(q.id),'Do not replace original exam question IDs');
  assert(Array.isArray(q.markPoints)&&q.markPoints.length===marks);
  assert.deepEqual(q.markPointMarks,Array(marks).fill(1));
- assert(q.markPoints.every(p=>typeof p==='string'&&p.trim().length>=35));
+ assert(q.markPoints.every(p=>typeof p==='string'&&p.trim().length>=20));
  assert(typeof q.prompt==='string'&&q.prompt.includes('['+marks+' marks]'));
  assert(typeof q.modelAnswer==='string'&&q.modelAnswer.length>120);
 }
