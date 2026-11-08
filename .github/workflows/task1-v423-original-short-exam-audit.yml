@@ -1,0 +1,28 @@
+name: Task 1 v423 all original short exam answers live scorer audit
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'exam_questions.json'
+      - 'exam_answer_corrections.json'
+      - 'tests/task1-v423-original-short-exam-adversarial.cjs'
+      - '.github/workflows/task1-v423-original-short-exam-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit-387-automatic-short-parts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: node --check tests/task1-v423-original-short-exam-adversarial.cjs
+      - name: Exercise all original two-mark-and-under live scorer paths
+        run: node tests/task1-v423-original-short-exam-adversarial.cjs
+      - name: Preserve original manual and recent negation rules
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v409-short-negation-qa.cjs
+          node tests/task1-v405-short-semantic-qa.cjs
