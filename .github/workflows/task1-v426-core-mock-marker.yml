@@ -1,0 +1,26 @@
+name: Task 1 v426 original core mock flashcard source evaluator
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'deck.json'
+      - 'tests/task1-v426-original-core-real-marker.cjs'
+      - '.github/workflows/task1-v426-core-mock-marker.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-core-full-source-probes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: JavaScript syntax
+        run: node --check tests/task1-v426-original-core-real-marker.cjs
+      - name: Test the real flashcard scorer against all 2369 raw original mock cards
+        run: node tests/task1-v426-original-core-real-marker.cjs
+      - name: Preserve exact original mock eligibility
+        run: |
+          node tests/task1-v419-mock-card-marker-audit.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
