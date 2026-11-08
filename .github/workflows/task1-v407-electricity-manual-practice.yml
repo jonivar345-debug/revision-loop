@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'physics_electricity_manual_sketch_practice_v407.json'
+      - 'editorial/task1-v407-electricity-four-gate-practice-reconciliation.json'
       - 'app.js'
       - 'sw.js'
       - 'tests/task1-v407-electricity-manual-practice.cjs'
