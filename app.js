@@ -6321,6 +6321,19 @@ async function sync(manual=false){
  applyV402Original21ManualReview(examQuestions);
  applyV403Original82ManualReview(examQuestions);
  applyV405ShortSemanticManualReview(examQuestions);
+ // v412: The 2016–17 and 52 extra practice banks are outside the original-bank
+ // v403 source-locked 208-item manual audit. Protect their mock-eligible
+ // multi-mark questions from guessed keyword marks; the visible mark-point
+ // editor already starts at zero and supports reviewing valid alternative work.
+ // Do not touch original-question flags, card IDs, saved scores or profile data.
+ const originalQuestionIds=new Set((e.questions||[]).map(q=>q.id));
+ for(const q of examQuestions){
+  if(originalQuestionIds.has(q.id)||q.standalone===false||
+     !mockEligibleQuestion(q)||!Number.isInteger(q.marks)||q.marks<3)continue;
+  if(q.manualWorkingReview===true||q.manualDiagramReview===true)continue;
+  q.manualWorkingReview=true;
+  q.v412SupplementManualRequired=true;
+ }
  deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
