@@ -95,7 +95,7 @@ for(const q of short){
    if(hasManual){
     assert.equal(result.manualRequired,true);
     manual++;
-   }else assert.equal(result.v406RejectedPointDenial,true,'Not rejected '+q.id);
+   }else assert(result.v406RejectedPointDenial===true||result.v425QuotedModelDenial===true,'Not rejected '+q.id);
    denied++;
   }
  }
@@ -119,7 +119,7 @@ for(const q of short){
   const response='This statement is false: '+alt;
   const result=suggestion(q,response);
   assert(result&&result.suggested===0);
-  if(!hasManual)assert.equal(result.v406RejectedPointDenial,true);
+  if(!hasManual)assert(result.v406RejectedPointDenial===true||result.v425QuotedModelDenial===true,'Explicit denied source answer must be rejected');
   alts++;
  }
 }

@@ -3544,7 +3544,35 @@ function isSingleChemistryCoefficientError(c,input){
  }
  return changes===1;
 }
+// v422: seven exact AQA Chemistry bonding-diagram recall cards can be
+// falsely credited when the response quotes a right answer only to deny it.
+// A tightly anchored, complete quoted denial is not evidence of understanding.
+// Preserve genuine contrast explanations and all other card marking paths.
+// v426: literal quoted rejection of the sourced correct answer is not an
+// answer, even if the text contains all of the expected keywords. Applies
+// to original and supplemental flashcards, before fuzzy matching, with
+// complete quoted-source equality only; leave explanatory contrasts intact.
+function isV426ExplicitQuotedCorrectAnswerDenial(c,input){
+ if(!c||!String(c.back||'').trim())return false;
+ const match=String(input||'').trim().match(
+  /^the\s+(?:correct\s+)?(?:statement|answer|claim)\s+["“]([\s\S]+?)["”]\s+(?:is|was)\s+(?:wrong|false|incorrect|untrue)\.?\s*$/i);
+ if(!match)return false;
+ const comparable=value=>String(value||'').normalize('NFKC').toLowerCase().trim()
+  .replace(/\s+/g,' ').replace(/[.!?]+$/,'').trim();
+ const denial=comparable(match[1]);
+ return Boolean(denial&&[c.back,...(Array.isArray(c.accept)?c.accept:[])]
+  .some(correct=>comparable(correct)===denial));
+}
+// Retain the v422 exact-ID probe helper so its seven Chemistry diagrams remain
+// independently source-audited, while using the shared safe denial rule.
+function isV422ExplicitBondDiagramDenial(c,input){
+ return Boolean(c?.subject==='Chemistry'&&
+  /^task1_v237_chem_bond_diagram_0[1-7]$/.test(String(c?.id||''))&&
+  isV426ExplicitQuotedCorrectAnswerDenial(c,input));
+}
 function evaluateCard(c,input){
+ if(isV426ExplicitQuotedCorrectAnswerDenial(c,input))
+  return {status:'wrong',score:0,text:'This explicitly rejects a correct answer.',missing:[String(c.back||'')]};
  // v389: repeating the full flashcard question is not an answer, even if
  // fuzzy token overlap would otherwise make it look correct. Preserve a rare
  // legitimate card where its official answer is literally the same string.
@@ -4703,9 +4731,16 @@ function examSuggested(q,answer){
   'the model answer is false. ','the model answer is incorrect: ',
   'the model answer is wrong: '
  ].some(prefix=>submittedNonAnswer===prefix+sourceModel);
- if(exactQuestionEcho||completeModelDenial){
+ // v425: quoted full-model denials also contain every right keyword, but
+ // explicitly reject the answer. Compare the COMPLETE quoted claim with the
+ // source's effective model; never reject other, contrasting explanations.
+ const quotedWholeModelDenial=String(answer||'').trim().match(
+  /^the\s+(?:statement|claim|answer)\s+["“]([\s\S]+?)["”]\s+(?:is|was)\s+(?:wrong|false|incorrect|untrue)\.?\s*$/i);
+ const v425QuotedModelDenial=Boolean(sourceModel&&quotedWholeModelDenial&&
+  normalisedExamNonAnswer(quotedWholeModelDenial[1])===sourceModel);
+ if(exactQuestionEcho||completeModelDenial||v425QuotedModelDenial){
   const preds=(q.markPoints||[]).map(()=>false);
-  return {preds,scores:preds.map(()=>0),suggested:0,finalCorrect:false,confidence:'high',v404RejectedNonAnswer:true};
+  return {preds,scores:preds.map(()=>0),suggested:0,finalCorrect:false,confidence:'high',v404RejectedNonAnswer:true,v425QuotedModelDenial};
  }
  // v406: Reject an answer that consists solely of expressly denying one
  // exact correct marking point or independently accepted alternative.
