@@ -7,6 +7,7 @@ on:
       - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
       - 'tests/task1-v422-bond-diagram-denials.cjs'
       - 'tests/task1-v423-original-short-exam-adversarial.cjs'
+      - 'tests/task1-v426-original-core-real-marker.cjs'
       - 'tests/task1-v406-explicit-markpoint-denials.cjs'
       - 'tests/task1-v409-short-negation-qa.cjs'
       - '.github/workflows/task1-v425-full-model-denials.yml'
@@ -27,8 +28,11 @@ jobs:
           node --check tests/task1-v421-supplement-real-card-evaluator.cjs
           node --check tests/task1-v422-bond-diagram-denials.cjs
           node --check tests/task1-v423-original-short-exam-adversarial.cjs
+          node --check tests/task1-v426-original-core-real-marker.cjs
       - name: Zero full-credit for 387 model-denied short exam answers, preserve legitimate models
         run: node tests/task1-v423-original-short-exam-adversarial.cjs
+      - name: All 2,369 raw original mock flashcards reject quoted denial of the correct model
+        run: node tests/task1-v426-original-core-real-marker.cjs
       - name: All seven diagram cards and all 1,018 supplementary flashcard candidates
         run: |
           node tests/task1-v422-bond-diagram-denials.cjs
