@@ -4698,6 +4698,24 @@ function examSuggested(q,answer){
   const preds=(q.markPoints||[]).map(()=>false);
   return {preds,scores:preds.map(()=>0),suggested:0,finalCorrect:false,confidence:'high',v404RejectedNonAnswer:true};
  }
+ // v406: Reject an answer that consists solely of expressly denying one
+ // exact correct marking point or independently accepted alternative.
+ // Other claims and qualifying explanations stay on their existing marking path.
+ const explicitPointDenialQuoted=submittedNonAnswer.match(/^the statement (["'])(.+)\1 is (?:incorrect|false)$/);
+ const explicitPointDenialColon=submittedNonAnswer.match(/^(?:this statement is false|this mark point is false|the marking point is wrong):\s*(.+)$/);
+ const rejectedClaim=explicitPointDenialQuoted?.[2]??explicitPointDenialColon?.[1]??null;
+ const claimVariants=[
+  ...(Array.isArray(q.markPoints)?q.markPoints:[]),
+  ...(Array.isArray(q.markPointAcceptedAlternatives)?
+   q.markPointAcceptedAlternatives.flatMap(list=>Array.isArray(list)?list:[]):[])
+ ];
+ const rejectedCorrectPoint=rejectedClaim!==null&&claimVariants.some(point=>
+  normalisedExamNonAnswer(point)===normalisedExamNonAnswer(rejectedClaim));
+ if(rejectedCorrectPoint){
+  const preds=(q.markPoints||[]).map(()=>false);
+  return {preds,scores:preds.map(()=>0),suggested:0,
+   finalCorrect:false,confidence:'high',v406RejectedPointDenial:true};
+ }
  // v213: use reviewed independent evidence on four AS materials/circuit
  // questions; other answers retain ordinary, user-adjustable marking.
  if(/^task1_v203_phy_0[4-7]$/.test(String(q.id||''))){
