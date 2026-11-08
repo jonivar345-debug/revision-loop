@@ -38,7 +38,7 @@ const rawSupplements=[...supplementPaths,...focusedPaths].flatMap(path=>{
 });
 const rawMockSupplements=rawSupplements.filter(x=>x.mock===true&&x.active!==false&&x.taught!==false);
 const supplementaryLong=rawMockSupplements.filter(x=>String(x.front||'').length>185||String(x.back||'').length>350);
-const supplementaryMultipart=rawMockSupplements.filter(x=>/\b(?:\([a-d]\)|[4-9]\s*marks?)\b/i.test(String(x.front||'')));
+const supplementaryMultipart=rawMockSupplements.filter(x=>/(?:\([a-d]\)|\b[4-9]\s*marks?\b)/i.test(String(x.front||'')));
 const empty=active.filter(x=>!String(x.front||'').trim()||!String(x.back||'').trim());
 assert.equal(empty.length,0,'Blank original mock flashcards: '+empty.map(x=>x.id).join(','));
 const notSubject=active.filter(x=>!['Physics','Chemistry','Maths'].includes(x.subject));
@@ -65,7 +65,7 @@ for(const row of exclusions.rows){const q=bank.questions.find(x=>x.id===row.id);
 const keyTerms=/(?:\bbuffer(?:ed|s)?\b|\bhalf[\s-]?neutralisation\b)/i;
 const chemBuffers=bank.questions.filter(x=>x.subject==='Chemistry'&&eligible(x)&&keyTerms.test([x.topic,x.subtopic,x.prompt].join(' ')));
 const longCards=active.filter(x=>String(x.front||'').length>185||String(x.back||'').length>350);
-const multipart=active.filter(x=>/\b(?:\([a-d]\)|[4-9]\s*marks?)\b/i.test(String(x.front||'')));
+const multipart=active.filter(x=>/(?:\([a-d]\)|\b[4-9]\s*marks?\b)/i.test(String(x.front||'')));
 const oddRubrics=bank.questions.filter(q=>q.mock===true&&q.standalone===true&&Array.isArray(q.markPointMarks)&&q.markPointMarks.length&&q.markPointMarks.reduce((a,b)=>a+(Number(b)||0),0)!==q.marks);
 const pendingGateCount=waves.remainingGates.length+electricity.gates.length;
 assert.equal(status.subjectSignOff.Physics,false);
