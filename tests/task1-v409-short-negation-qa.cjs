@@ -105,8 +105,40 @@ assert(app.includes('applyV405ShortSemanticManualReview(examQuestions);'));
 assert(app.includes('if(q.manualDiagramReview===true||q.manualWorkingReview===true)'));
 assert(app.includes('chemistryMockBufferExcluded')===false,'v408 selectors remain standalone');
 assert(app.includes('function mockEligibleQuestion(q){'));
+// A real 2018 AQA Chemistry concordant-titre special marker previously
+// stripped minus signs while extracting measurements and gave even 2/2 to
+// three negative readings. Review the selected readings and signed mean.
+const titre=bank.questions.find(x=>x.id==='aqa_2018_C_2_3');
+assert(titre&&titre.markingMode==='concordantTitres2018'&&titre.marks===2);
+const titreRight=[
+ '23.90 and 24.00; mean 23.95 cm3',
+ '23.90, 24.00 therefore mean = 23.95 cm³'
+];
+const titreWrong=[
+ '-23.90 and -24.00; mean -23.95 cm3',
+ '−23.90 and −24.00; mean −23.95 cm3',
+ '− 23.90 and − 24.00; mean − 23.95 cm3',
+ '–23.90 and —24.00; mean –23.95 cm3',
+ '-23.95',
+ '−23.86',
+ '23.90 and -24.00; mean -23.95 cm3'
+];
+for(const response of titreRight){
+ const grade=full(titre,response);
+ assert.equal(grade.suggested,2,'Valid positive concordant titres lost marks: '+response);
+ assert.equal(grade.finalCorrect,true);
+}
+for(const response of titreWrong){
+ const grade=full(titre,response);
+ assert.equal(grade.suggested,0,'Negative titres or mean falsely earned credit: '+response);
+ assert.equal(grade.finalCorrect,false);
+}
+const titrePartial=full(titre,'23.90 and 24.00; mean -23.95 cm3');
+assert.equal(titrePartial.suggested,1,'Correct selection can earn one mark with a wrong-signed mean');
+assert.equal(titrePartial.finalCorrect,false);
+
 console.log('PASS v409: '+negatives+' original short mark-point denial probes (including '+
  manualNegatives+' manual), '+modelControls+' exact model controls, '+
  contrastControls+' legitimate corrective explanations, '+fullNegatives+
  ' real wrong-answer full-score probes and '+validFull+
- ' correct one-mark controls. v406/v408 and saved identity schemes preserved.');
+ ' correct one-mark controls, 2 positive and 7 negative titration probes plus 1 partial valid selection. v406/v408 and saved identity schemes preserved.');

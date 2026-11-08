@@ -4951,7 +4951,10 @@ function reviewedExpressionEvidence(answer,expression){
  // otherwise credit a mean calculated from the wrong set of titres.
  if(q.markingMode==='concordantTitres2018'){
   const raw=String(answer||'').replace(/,/g,' ').toLowerCase();
-  const found=[...raw.matchAll(/(?<![\d.])(\d{2}\.\d+)(?![\d.])/g)].map(x=>Number(x[1]));
+  // v409: preserve the sign on titre readings and means. The old pattern
+  // silently read -23.95 as +23.95, incorrectly awarding even full credit.
+  const found=[...raw.matchAll(/(?<![\d.])([−–—-]?\s*\d{2}\.\d+)(?![\d.])/g)]
+   .map(x=>Number(x[1].replace(/\s+/g,'').replace(/[−–—]/g,'-')));
   const near=(x,y)=>Math.abs(x-y)<0.006;
   const hasPair=found.some(x=>near(x,23.90))&&found.some(x=>near(x,24.00));
   const mean=found.some(x=>near(x,23.95));
