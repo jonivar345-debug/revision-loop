@@ -1,0 +1,274 @@
+{
+  "version": "v413",
+  "date": "2026-11-08",
+  "scope": "Existing loaded AQA Physics Waves 3.3 and Electricity 3.5 school-mock manual-application traceability, not independent assessment of the student or new flashcards.",
+  "officialSpecifications": [
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/waves",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/subject-content/electricity",
+    "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/specification/practical-assessment"
+  ],
+  "priorAudits": [
+    "editorial/task1-v360-waves-coverage-and-open-gates.json",
+    "editorial/task1-v359-electricity-45-evidence-review.json"
+  ],
+  "methods": [
+    "Map each of the seven v360 Waves gates and four v359 Electricity gates to original practice already in the runtime manifest.",
+    "Check actual question IDs, specRef, subject, mock flag and published model-answer/rubric existence in CI.",
+    "Distinguish an available worked or drawn exercise from a fully independent examiner-validated marking or student response.",
+    "Never infer that a recall flashcard itself demonstrates practical method competence."
+  ],
+  "gates": [
+    {
+      "gate": "W1",
+      "section": "Waves",
+      "specRef": "3.3.1.1",
+      "skill": "Progressive displacement/time graphs, phase and time shift",
+      "practice": [
+        {
+          "file": "science_waves_energetics_v198.json",
+          "id": "task1_v198_phy_01",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_waves_polarisation_stationary_practice_v279.json",
+          "id": "task1_v279_phy_waves_q05",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "partial_exercise_coverage",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "A genuinely unfamiliar progressive-wave displacement graph with axes and time-shift interpretation still needs independent marking."
+    },
+    {
+      "gate": "W2",
+      "section": "Waves",
+      "specRef": "3.3.1.2",
+      "skill": "Transverse and longitudinal wave diagrams, polarisation and aerial direction",
+      "practice": [
+        {
+          "file": "physics_waves_polarisation_stationary_practice_v279.json",
+          "id": "task1_v279_phy_waves_q02",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "science_waves_energetics_v198.json",
+          "id": "task1_v198_phy_06",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "polarisation_reasoning_available_diagram_gap",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Verify an actual longitudinal/transverse particle-displacement sketch and an unseen polariser/aerial diagram; explanation-only problems are not equivalent to drawn evidence."
+    },
+    {
+      "gate": "W3",
+      "section": "Waves",
+      "specRef": "3.3.1.3",
+      "skill": "Required Practical 1 stationary-string method, harmonics and f²–tension interpretation",
+      "practice": [
+        {
+          "file": "science_practical_data_v194.json",
+          "id": "task1_v194_practical_01",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "science_waves_energetics_v198.json",
+          "id": "task1_v198_phy_03",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_waves_polarisation_stationary_practice_v279.json",
+          "id": "task1_v279_phy_waves_q01",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_waves_polarisation_stationary_practice_v279.json",
+          "id": "task1_v279_phy_waves_q04",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "numerical_and_stationary_sketch_practice_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Complete apparatus and method justification, unfamiliar measurement uncertainty, and actual student string sketches remain unchecked."
+    },
+    {
+      "gate": "W4",
+      "section": "Waves",
+      "specRef": "3.3.2.1",
+      "skill": "Required Practical 2 Young double-slit interference and grating evidence",
+      "practice": [
+        {
+          "file": "science_practical_data_v194.json",
+          "id": "task1_v194_practical_02",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_waves_interference_application_v226.json",
+          "id": "task1_v226_phy_01",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "science_waves_energetics_v198.json",
+          "id": "task1_v198_phy_02",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "double_slit_data_and_grating_reasoning_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "The independently reviewed full Young apparatus geometry and fringe diagram with uncertainty explanation is still a separate assessment gate."
+    },
+    {
+      "gate": "W5",
+      "section": "Waves",
+      "specRef": "3.3.2.2",
+      "skill": "Qualitative single-slit diffraction and grating patterns",
+      "practice": [
+        {
+          "file": "physics_waves_polarisation_stationary_practice_v279.json",
+          "id": "task1_v279_phy_waves_q03",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_waves_interference_application_v226.json",
+          "id": "task1_v226_phy_01",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "science_waves_energetics_v198.json",
+          "id": "task1_v198_phy_04",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "manual_drawing_prompt_and_calculation_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Check actual central-maximum/side-lobe sketches and correct physics, not merely a prompt or text description."
+    },
+    {
+      "gate": "W6",
+      "section": "Waves",
+      "specRef": "3.3.2.3",
+      "skill": "Fibre TIR ray path, core–cladding angles and pulse broadening",
+      "practice": [
+        {
+          "file": "physics_refraction_fibres_practice_v275.json",
+          "id": "task1_v275_phy_fibre_q05",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_refraction_fibres_practice_v275.json",
+          "id": "task1_v275_phy_fibre_q03",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_refraction_fibres_practice_v275.json",
+          "id": "task1_v275_phy_fibre_q04",
+          "kind": "exam_practice"
+        },
+        {
+          "file": "physics_fibre_signal_application_v225.json",
+          "id": "task1_v225_phy_01",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "manual_ray_prompt_and_signal_application_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Verify the angle-to-normal ray drawing, total internal reflection and materially accurate modal/material dispersion explanations from actual student evidence."
+    },
+    {
+      "gate": "W7",
+      "section": "Waves",
+      "specRef": "3.3.2.1",
+      "skill": "Historical evidence concerning light as a wave and later photon models",
+      "practice": [],
+      "recall": [
+        {
+          "file": "physics_light_history_recall_v370.json",
+          "id": "task1_v370_phy_history_01",
+          "kind": "short_recall"
+        },
+        {
+          "file": "physics_light_history_recall_v370.json",
+          "id": "task1_v370_phy_history_02",
+          "kind": "short_recall"
+        }
+      ],
+      "evidenceStatus": "two_short_recall_cards_available_original_practice_not_verified",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Read and compare the actual AQA historical point; verify whether a suitable short application is needed rather than inventing a syllabus statement."
+    },
+    {
+      "gate": "E1",
+      "section": "Electricity",
+      "specRef": "3.5.1.2",
+      "skill": "Full ohmic, filament lamp and diode I–V curves",
+      "practice": [
+        {
+          "file": "physics_electricity_manual_sketch_practice_v407.json",
+          "id": "task1_v407_phy_elec_01",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "manual_diagram_rubric_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Independently inspect all three actual drawn curves, polarities, quadrants, labels and explanations."
+    },
+    {
+      "gate": "E2",
+      "section": "Electricity",
+      "specRef": "3.5.1.3",
+      "skill": "Required Practical 5 wire resistivity circuit, measurements, gradient and uncertainties",
+      "practice": [
+        {
+          "file": "physics_electricity_manual_sketch_practice_v407.json",
+          "id": "task1_v407_phy_elec_02",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "manual_practical_data_rubric_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Evaluate actual drawn circuit and graph, defensible measured uncertainties and reasoned interpretation."
+    },
+    {
+      "gate": "E3",
+      "section": "Electricity",
+      "specRef": "3.5.1.5",
+      "skill": "NTC/LDR potential dividers and output directions",
+      "practice": [
+        {
+          "file": "physics_electricity_manual_sketch_practice_v407.json",
+          "id": "task1_v407_phy_elec_03",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "manual_circuit_rubric_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Verify that the student has placed the sensor and output terminals correctly and proved output direction for each."
+    },
+    {
+      "gate": "E4",
+      "section": "Electricity",
+      "specRef": "3.5.1.6",
+      "skill": "Required Practical 6 emf and internal resistance graph/circuit/uncertainty",
+      "practice": [
+        {
+          "file": "physics_electricity_manual_sketch_practice_v407.json",
+          "id": "task1_v407_phy_elec_04",
+          "kind": "exam_practice"
+        }
+      ],
+      "evidenceStatus": "manual_data_and_circuit_rubric_available",
+      "independentStudentDrawingReviewed": false,
+      "remaining": "Verify the student's own V–I slope/intercept, circuit drawing, lost-volts and uncertainty reasoning."
+    }
+  ],
+  "summary": {
+    "wavesGates": 7,
+    "electricityGates": 4,
+    "electricityGatesWithPractice": 4,
+    "wavesGatesWithPractice": 6,
+    "wavesHistoryGateRecallOnly": 1,
+    "independentStudentMethodOrDrawingGatesSignedOff": 0,
+    "wholePhysicsMockSignedOff": false
+  },
+  "integrity": "No question, card, stored answer, score, XP, saved profile, cloud key or loader changed by this editorial map."
+}
