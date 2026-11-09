@@ -1445,7 +1445,7 @@
       "paper2Section": "B",
       "paper2Skill": "De Broglie trend",
       "paper2Hint": "Think about de broglie trend. What single step would earn the mark?",
-      "paper2Method": "Recall λ = h/p.",
+      "paper2Method": "Use the de Broglie equation λ = h/p; wavelength is inversely proportional to momentum.",
       "paper2Pitfall": "Massive particles can still show wave behaviour.",
       "priority": 2
     },
@@ -1526,7 +1526,7 @@
       "paper2Section": "B",
       "paper2Skill": "Internal resistance graph",
       "paper2Hint": "Think about internal resistance graph. What single step would earn the mark?",
-      "paper2Method": "Use V = ε − Ir.",
+      "paper2Method": "Read the gradient from V = ε − Ir; its negative value corresponds to minus the internal resistance.",
       "paper2Pitfall": "The gradient is negative; resistance is its positive magnitude.",
       "priority": 2
     },
@@ -1877,7 +1877,7 @@
       "paper2Section": "C",
       "paper2Skill": "MCQ: photon",
       "paper2Hint": "Think about mcq: photon. What single step would earn the mark?",
-      "paper2Method": "Use E = hf.",
+      "paper2Method": "Use the photon energy equation E = hf, where f is the light frequency.",
       "paper2Pitfall": "Intensity controls photons per second at fixed frequency.",
       "priority": 2
     },
@@ -1958,7 +1958,7 @@
       "paper2Section": "C",
       "paper2Skill": "MCQ: resistance",
       "paper2Hint": "Think about mcq: resistance. What single step would earn the mark?",
-      "paper2Method": "Use R = V/I.",
+      "paper2Method": "Apply R = V/I, comparing how numerator and denominator change together.",
       "paper2Pitfall": "A larger p.d. alone does not imply a different ohmic resistance.",
       "priority": 2
     },
@@ -2147,7 +2147,7 @@
       "paper2Section": "C",
       "paper2Skill": "MCQ: internal resistance",
       "paper2Hint": "Think about mcq: internal resistance. What single step would earn the mark?",
-      "paper2Method": "Use V = ε − Ir.",
+      "paper2Method": "Use V = ε − Ir and note that Ir grows as current increases.",
       "paper2Pitfall": "EMF itself is not generally falling.",
       "priority": 2
     },
@@ -2508,7 +2508,7 @@
       "paper2Section": "A",
       "paper2Skill": "Combined uncertainty",
       "paper2Hint": "For multiplication or division, add percentage uncertainties.",
-      "paper2Method": "5% + 4% = 9%.",
+      "paper2Method": "Add the two percentage uncertainties: 5% + 4% = 9%.",
       "paper2Pitfall": "Do not subtract the percentages because of division.",
       "priority": 2
     },
@@ -2623,7 +2623,7 @@
       "paper2Section": "B",
       "paper2Skill": "Graph distance vs displacement",
       "paper2Hint": "Add both rectangular areas as positive distances.",
-      "paper2Method": "6 m + 2 m = 8 m.",
+      "paper2Method": "For distance, add the unsigned areas: 6 m + 2 m = 8 m.",
       "paper2Pitfall": "Do not report the signed displacement of 4 m.",
       "priority": 2
     },
@@ -2680,7 +2680,7 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Terminal p.d. calculation",
-      "paper2Hint": "Use V = ε − Ir.",
+      "paper2Hint": "The output voltage is lower than the EMF. What quantity is lost inside the source?",
       "paper2Method": "1.6 − (0.40 × 0.50) = 1.4 V.",
       "paper2Pitfall": "Internal resistance causes a lost p.d.; do not add it.",
       "priority": 2
@@ -2709,7 +2709,7 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Resistivity proportionality",
-      "paper2Hint": "Use R = ρL/A.",
+      "paper2Hint": "Which factor changes in R = ρL/A when material and area are fixed?",
       "paper2Method": "Resistance is proportional to length for fixed ρ and A.",
       "paper2Pitfall": "Do not change area when only length is changed.",
       "priority": 2
@@ -2738,7 +2738,7 @@
       "paper2": true,
       "paper2Section": "B",
       "paper2Skill": "Threshold energy calculation",
-      "paper2Hint": "Use E = hf.",
+      "paper2Hint": "Which factor in E = hf changes when the light frequency changes?",
       "paper2Method": "Substitute frequency in Hz.",
       "paper2Pitfall": "Do not use light intensity in place of frequency.",
       "priority": 2
@@ -2826,7 +2826,7 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "Current quick calculation",
-      "paper2Hint": "Use I = Q/t.",
+      "paper2Hint": "Average current means how many coulombs pass per second.",
       "paper2Method": "0.30 / 0.10 = 3.0 A.",
       "paper2Pitfall": "Do not multiply charge by time.",
       "priority": 2
@@ -2857,7 +2857,7 @@
       "paper2Section": "C",
       "paper2Skill": "Spring energy scaling",
       "paper2Hint": "Use energy proportional to extension squared.",
-      "paper2Method": "3² = 9.",
+      "paper2Method": "Stored energy scales with extension squared: 3² = 9.",
       "paper2Pitfall": "Force becomes three times larger, not energy.",
       "priority": 2
     },
@@ -2942,7 +2942,7 @@
       "paper2": true,
       "paper2Section": "C",
       "paper2Skill": "Ohmic ratio trap",
-      "paper2Hint": "Use R = V/I.",
+      "paper2Hint": "Compare the new ratio V/I with the original ratio rather than looking at either alone.",
       "paper2Method": "Both numerator and denominator double, so the ratio stays fixed.",
       "paper2Pitfall": "Do not claim resistance doubles.",
       "priority": 2
