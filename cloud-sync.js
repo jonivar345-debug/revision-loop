@@ -79,7 +79,8 @@ function hasUnsavedAnswer(){
   // flashcard answer or handwritten sketch is still being worked on.
   const typed=['answerInput','examAnswer'].some(id=>{
     const input=el(id);
-    return !!(input&&input.value.trim()&&input.offsetParent!==null);
+    // A learner may switch tabs without submitting a draft; keep it safe even then.
+    return !!(input&&typeof input.value==='string'&&input.value.trim());
   });
   return typed||window.RevisionSketch?.hasPendingInk?.()===true;
 }
