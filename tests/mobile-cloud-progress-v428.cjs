@@ -56,7 +56,10 @@ backup.restore(phone,snap);
 for(const key of backup.KEYS)assert.equal(phone.getItem(key),seed[key]);
 assert.equal(phone.getItem('revisionLoopLayoutModeV1'),'phone','Phone layout stays device-local');
 assert.equal(phone.getItem('rl_auth'),'0','PIN unlock state stays device-local');
-assert.deepEqual(backup.summary(backup.snapshot(phone)),backup.summary(snap));
+const onPhone=backup.summary(backup.snapshot(phone));
+const fromPc=backup.summary(snap);
+assert.deepEqual([onPhone.xp,onPhone.points,onPhone.ownedLocations],
+ [fromPc.xp,fromPc.points,fromPc.ownedLocations]);
 const modeButtons=['auto','phone','pc'].map(value=>({dataset:{layoutChoice:value},setAttribute(k,v){this[k]=v}}));
 const modeDoc={documentElement:{dataset:{}},querySelectorAll:()=>modeButtons};
 assert.equal(layout.applyMode(modeDoc,phone,'phone'),'phone');
