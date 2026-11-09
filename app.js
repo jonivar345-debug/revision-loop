@@ -4100,7 +4100,7 @@ function awardExam(q,marks,answer,missedPoints){
  award(marks,'exam');save();advanceSession();
 }
 
-function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&(!sub||c.subject===sub));return scope==='mock'?a.filter(mockEligibleCard):a.filter(taughtCard)}
+function challengeCards(sub,scope){let a=cards.filter(c=>c.active!==false&&c.paper2Training!==true&&(!sub||c.subject===sub));return scope==='mock'?a.filter(mockEligibleCard):a.filter(taughtCard)}
 function challengeQuestions(sub,scope){let q=examQuestions.filter(x=>x.standalone!==false&&(!sub||x.subject===sub));if(scope==='mock')q=q.filter(mockEligibleQuestion);return q}
 function makeChallenge(sub,scope){
  const key=dateKey()+'|'+(sub||'All')+'|'+scope;if(profile.dailyChallenges[key])return {key,...profile.dailyChallenges[key]};
@@ -6461,7 +6461,7 @@ async function sync(manual=false){
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
 // Deep links from the retired article-preview page open the actual shop.
 window.addEventListener('DOMContentLoaded',()=>{if(window.location.hash==='#shop')switchPanel('shop')});
-function buildWeakSession(){const top=cards.filter(c=>c.active!==false).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
+function buildWeakSession(){const top=cards.filter(c=>c.active!==false&&c.paper2Training!==true).sort((a,b)=>weakness(b)-weakness(a)).slice(0,20);activeSession={kind:'flash',items:top.map(c=>({type:'card',id:c.id})),index:0,title:'Weak-topic flashcards'};switchPanel('study');renderAll()}
 
 ensureProfile();
 // Keep the world shop and unlocked locations usable even when the exam-bank
