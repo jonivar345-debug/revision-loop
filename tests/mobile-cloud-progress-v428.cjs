@@ -13,14 +13,15 @@ const worker=fs.readFileSync('sw.js','utf8');
 
 const match=cloud.match(/function hasUnsavedAnswer\(\)\{[\s\S]*?\n\}/);
 assert.ok(match,'Read the real cloud reload guard rather than a hand-written imitation.');
-let elements={},ink=false;
+let elements={},ink=false,inSession=false;
 const hasUnsavedAnswer=vm.runInNewContext('('+match[0]+')',{
   el:id=>elements[id]||null,
   window:{RevisionSketch:{hasPendingInk:()=>ink}}
 });
 const field=(value,visible=true)=>({value,offsetParent:visible?{}:null});
-function check(flash,exam,pending,want,label){
- elements={answerInput:flash,examAnswer:exam};
+function check(flash,exam,pending,want,label,activeSession=false){
+ elements={answerInput:flash,examAnswer:exam,
+   sessionBanner:{classList:{contains(name){return name==='hidden'&&!activeSession}}}};
  ink=pending;
  assert.equal(hasUnsavedAnswer(),want,label);
 }
@@ -31,6 +32,7 @@ check(field(''),field('  '),false,false,'Whitespace alone does not block refresh
 check(null,field('hidden',false),false,true,'A typed draft remains protected after switching tabs');
 check(null,null,true,true,'An in-progress pen sketch blocks remote reload');
 check(field('full model',false),field('working'),false,true,'Visible exam answer wins over hidden card');
+check(null,null,false,true,'Untyped active revision session must not reload',true);
 assert.match(cloud,/if\(automatic&&hasUnsavedAnswer\(\)\)/);
 assert.match(cloud,/phase==='remote-ready'/);
 assert.match(sketch,/function hasPendingInk\(\)/);
@@ -93,4 +95,4 @@ for(const asset of ['./cloud-sync.js','./cloud-sync-core.js','./exam-sketch-v173
  assert.ok(worker.includes("'"+asset+"'"),'Offline shell should include '+asset);
 }
 assert.match(worker,/v428-mobile-cloud-progress-safety/);
-console.log('PASS v428: 7 real cloud reload guard probes, phone/PC layout isolation, full progress backup/restore, 4 revision decisions, responsive/offline assets.');
+console.log('PASS v428: 8 real cloud reload guard probes, phone/PC layout isolation, full progress backup/restore, 4 revision decisions, responsive/offline assets.');
