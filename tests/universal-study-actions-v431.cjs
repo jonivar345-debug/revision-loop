@@ -26,6 +26,8 @@ assert(app.includes("window.RevisionSketch?.hasPendingInk?.()===true"),'Unsaved 
 assert(app.includes("window.RevisionScan?.countFor?.(item.id)"),'Unsaved photo scans must trigger warning');
 const skip=app.slice(app.indexOf('function skipStudyItem(){'),app.indexOf('function advanceSession(){'));
 assert(skip.includes('advanceSession();'));
+assert(skip.includes("item.type==='card'&&currentFlashAwarded"),'Skip cannot bypass a scored flashcard review');
+assert(app.includes('skip.disabled=true'),'Skip must be disabled after a scored flashcard');
 for(const forbidden of ['award(','awardExam(','rateCard(','setState(','addError('])assert(!skip.includes(forbidden),'Skip must not affect progress: '+forbidden);
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
