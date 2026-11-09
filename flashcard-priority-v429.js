@@ -57,7 +57,10 @@
    return PHYSICS_MISSING.test(front)?EQUATION:null;
   }
   if(MATHS_PRINTED.test(front))return null;
-  return MATHS_MISSING.test(front)?EQUATION:null;
+  // Memorised standard derivatives/integrals are required by AQA Appendix B
+  // but are not printed in MFB8. Example: derivative of e^(kx).
+  const baseCalculus=/^(?:what is|state|give) (?:the )?(?:derivative|integral|differentiation rule|integration rule) (?:of|for) .{0,50}(?:e\^|eˣ|x\^|xⁿ|\bsin\b|\bcos\b|\bln\b)/i.test(front);
+  return MATHS_MISSING.test(front)||baseCalculus?EQUATION:null;
  }
  function isMustKnow(card){return !!classify(card);}
  function group(cards,needsAttention){
