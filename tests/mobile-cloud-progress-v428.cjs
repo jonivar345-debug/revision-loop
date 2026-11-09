@@ -28,7 +28,7 @@ check(null,null,false,false,'Blank page permits safe remote refresh');
 check(field('A=12 N'),null,false,true,'Typed flashcard answer blocks remote reload');
 check(null,field('Show differentiation working'),false,true,'Typed exam answer blocks remote reload');
 check(field(''),field('  '),false,false,'Whitespace alone does not block refresh');
-check(null,field('hidden',false),false,false,'Hidden stale answer does not block refresh');
+check(null,field('hidden',false),false,true,'A typed draft remains protected after switching tabs');
 check(null,null,true,true,'An in-progress pen sketch blocks remote reload');
 check(field('full model',false),field('working'),false,true,'Visible exam answer wins over hidden card');
 assert.match(cloud,/if\(automatic&&hasUnsavedAnswer\(\)\)/);
