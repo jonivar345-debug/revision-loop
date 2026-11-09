@@ -133,5 +133,11 @@
   el('examSketch').addEventListener('toggle',()=>redraw());
   loadReference(q.id);redraw();
  }
- window.RevisionSketch={mount};
+ // Report only ink belonging to the currently mounted exam canvas.
+ // This lets cloud-sync protect unsubmitted drawings from automatic reloads.
+ function hasPendingInk(){
+  return !!(activeQuestion&&el('examSketchCanvas')===activeCanvas&&
+   (current?.tool==='pen'||strokes.some(s=>s.tool==='pen')));
+ }
+ window.RevisionSketch={mount,hasPendingInk};
 })();
