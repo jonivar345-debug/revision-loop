@@ -2,6 +2,8 @@
 const DECK_URL='./deck.json',EXAM_URL='./exam_questions.json',EXAM_SUPPLEMENT_URL='./paper_supplement_2016_2017.json',EXAM_CORRECTIONS_URL='./exam_answer_corrections.json',DAY=86400000;
 const EXTRA_PRACTICE_URLS=['./gap_questions_physics_v48.json','./gap_questions_chemistry_v48.json','./gap_questions_maths_v48.json','./gap_questions_extended_v49.json','./mechanics_focus_v39.json','./mechanics_graphs_v118.json','./atomic_structure_focus_v43.json','./amount_of_substance_focus_v44.json','./bonding_focus_v49.json','./bonding_weakness_focus_v52.json','./energetics_focus_v50.json','./energetics_worked_followups_v51.json','./energetics_weakness_focus_v53.json','./maths_pure_proof_vectors_v190.json','./maths_as_pure_gap_challenges_v191.json','./science_practical_data_v194.json','./science_mock_application_v195.json','./science_mock_evidence_v196.json','./physics_mechanics_reasoning_v197.json','./science_waves_energetics_v198.json','./chemistry_mock_precision_v199.json','./physics_measurements_particles_v200.json','./chemistry_rp4_rp6_evidence_v202.json','./physics_graphs_circuits_v203.json','./maths_pure_proof_vector_applications_v209.json','./chemistry_rates_rp7_kp_v210.json','./physics_fibre_signal_application_v225.json','./physics_waves_interference_application_v226.json','./physics_particle_exchange_diagram_practice_v265.json','./chemistry_organic_drawing_practice_v267.json','./physics_uncertainty_graph_practice_v268.json','./physics_nuclear_conservation_practice_v269.json','./chemistry_amount_applied_practice_v270.json','./maths_year1_pure_reasoning_v271.json','./maths_as_graph_transform_sketches_v272.json','./maths_year1_circle_vector_gaps_v273.json','./chemistry_as_inorganic_tests_practice_v274.json','./physics_refraction_fibres_practice_v275.json','./chemistry_as_bonding_shapes_practice_v276.json','./chemistry_as_bonding_structures_practice_v277.json','./chemistry_amount_precision_applications_v278.json','./physics_waves_polarisation_stationary_practice_v279.json','./physics_mechanics_signed_area_couples_practice_v280.json','./maths_year1_trigonometry_differentiation_practice_v292.json','./science_practical_diagram_applications_v313.json','./science_application_gaps_v333.json','./maths_inequality_sign_reasoning_v335.json','./chemistry_atom_economy_sustainability_practice_v338.json','./maths_year1_pure_targeted_practice_v340.json','./physics_particles_three_application_gaps_v342.json','./physics_order_of_magnitude_practice_v376.json','./physics_electricity_manual_sketch_practice_v407.json'];
 const EXTRA_FLASHCARD_URLS=['./maths_mock_recall_v186.json','./maths_mock_recall_v187.json','./chemistry_mock_recall_v189.json','./maths_mock_recall_v192.json','./physics_mock_recall_v193.json','./chemistry_mock_recall_v193.json','./physics_mock_recall_v195.json','./chemistry_mock_recall_v195.json','./physics_mock_recall_v196.json','./chemistry_mock_recall_v196.json','./chemistry_mock_recall_v199.json','./chemistry_rates_rp7_recall_v210.json','./chemistry_rp4_recall_v215.json','./chemistry_as_measurement_recall_v218.json','./chemistry_tof_precision_recall_v219.json','./chemistry_ion_tests_recall_v220.json','./chemistry_practicals_analysis_recall_v221.json','./chemistry_rp5_rp6_reasoning_recall_v222.json','./physics_optical_fibre_precision_recall_v225.json','./physics_waves_reasoning_recall_v226.json','./physics_cross_spec_recall_v227.json','./chemistry_cross_spec_recall_v227.json','./maths_as_pure_cross_spec_recall_v227.json','./physics_waves_crosswalk_recall_v229.json','./physics_mechanics_cross_spec_recall_v230.json','./physics_electricity_cross_spec_recall_v231.json','./maths_first_mock_pure_precision_v232.json','./chemistry_bonding_diagram_recall_v237.json','./chemistry_atomic_tof_applications_v238.json','./chemistry_amount_applications_v239.json','./physics_particles_applications_v243.json','./maths_first_mock_pure_applied_v245.json','./maths_first_mock_circle_geometry_v246.json','./chemistry_energetics_applications_v247.json','./physics_measurements_applications_v248.json','./chemistry_rates_kp_applications_v249.json','./physics_electricity_applications_v250.json','./maths_first_mock_pure_challenges_v252.json','./physics_waves_applications_v253.json','./chemistry_atomic_tof_applications_v254.json','./chemistry_thermodynamics_applications_v256.json','./physics_mechanics_applications_v257.json','./maths_year1_pure_breadth_v260.json','./physics_uncertainty_graph_recall_v268.json','./physics_nuclear_conservation_recall_v269.json','./maths_as_graph_transform_recall_v272.json','./chemistry_as_inorganic_tests_recall_v274.json','./physics_refraction_fibres_recall_v275.json','./chemistry_as_bonding_shapes_recall_v276.json','./chemistry_as_bonding_structures_recall_v277.json','./chemistry_amount_sigfig_formula_recall_v278.json','./physics_waves_polarisation_stationary_recall_v279.json','./physics_mechanics_signed_area_couples_recall_v280.json','./mock_short_varied_recall_v293.json','./mock_short_recall_and_cloze_v298.json','./science_partial_skill_short_recall_v312.json'];
+const PHYSICS_AS_PAPER2_TRAINING_FILES=['./physics_as_paper2_section_a_v430.json','./physics_as_paper2_section_b_v430.json','./physics_as_paper2_section_c_v430.json','./physics_as_paper2_mcq_v430.json'];
+// v430 coaching is intentionally separate from the 56 historic mock banks.
 // New focused cards load after the 56 historic banks, preserving their stable indices and test baselines.
 function isV348MathsFirstMockCard(c){
  return Boolean(c&&/^task1_v348_math_\d{2}$/.test(c.id||'')&&c.subject==='Maths'&&
@@ -4044,12 +4046,16 @@ function startMockSession(){
  }
  activeSession={kind:'mock',items,index:0,title:sub+' mock revision'};currentCardId=null;renderAll();
 }
-function flashEligible(c){return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true}
-function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
+function flashEligible(c){
+ if(c.paper2Training===true)return flashScopeFilter==='paper2';
+ if(flashScopeFilter==='paper2')return false;
+ return flashScopeFilter==='mock'?mockEligibleCard(c):flashScopeFilter==='taught'?taughtCard(c):true;
+}
+function selectedFlashCards(){const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);return base.filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c)&&(flashScopeFilter==='paper2'||!settings.recallMustKnowOnly||isRecallMustKnow(c)))}
 function startFlashSession(){
  const count=Number(document.getElementById('flashCount').value),pool=selectedFlashCards();if(!pool.length){showToast(settings.recallMustKnowOnly?'No must-memorise cards in those topics':'Pick at least one topic');return}
  const picked=pickRecallCards(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
- activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
+ activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:flashScopeFilter==='paper2'?'AQA AS Physics Paper 2 · skills':settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
 }
 function examGroups(){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value;
@@ -4342,6 +4348,7 @@ function renderChallenge(){document.getElementById('challengeStreak').textConten
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
 function flashCourseFamily(c){
+ if(c.paper2Training===true)return 'AS Paper 2 · how to answer';
  const p=String(c.specRef||''),t=String(c.topic||''),u=String(c.unit||'');
  if(c.subject==='Physics'){
   if(p.startsWith('3.10')||u==='medical'||t.startsWith('Medical physics'))return '3.10 Medical physics (option)';
@@ -4419,7 +4426,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
  const sub=document.getElementById('flashSubject').value,base=subjectCards(sub);
  const topics=[...new Set(base.map(flashTopicLabel))];
  flashTopics=new Set([...flashTopics].filter(t=>topics.includes(t)));
- if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(taughtCard).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
+ if(defaultIfEmpty&&!flashTopics.size){flashScopeFilter='taught';base.filter(c=>taughtCard(c)&&!c.paper2Training).forEach(c=>flashTopics.add(flashTopicLabel(c)));}
  document.getElementById('flashTopics').innerHTML=groupedTopicPicker(sub,'flash',flashTopics);
  document.querySelectorAll('[data-flash-topic]').forEach(el=>el.onchange=()=>{el.checked?flashTopics.add(el.dataset.flashTopic):flashTopics.delete(el.dataset.flashTopic);renderTopicCounts()});bindTopicGroupControls('flash');
  renderTopicCounts();
@@ -4427,7 +4434,7 @@ function refreshFlashTopics(defaultIfEmpty=false){
 function applyFlashPreset(p){
  flashScopeFilter=['mock','taught','all'].includes(p)?p:'all';
  const base=subjectCards(document.getElementById('flashSubject').value);flashTopics.clear();
- if(p!=='clear'){const filtered=p==='mock'?base.filter(mockEligibleCard):p==='taught'?base.filter(taughtCard):base;filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
+ if(p!=='clear'){const filtered=(p==='mock'?base.filter(mockEligibleCard):p==='taught'?base.filter(taughtCard):base).filter(c=>!c.paper2Training);filtered.forEach(c=>flashTopics.add(flashTopicLabel(c)))}
  refreshFlashTopics(false);
 }
 const PMT_PAPER_INDEX={
@@ -4602,11 +4609,25 @@ function refreshExamFilters(defaultIfEmpty=false){
  const yearCounts=years.map(y=>y+': '+base.filter(q=>q.year===y).length).join(' · ');
  document.getElementById('examCoverage').textContent='Self-contained bank: '+base.length+' question parts (including separately labelled practice)'+(yearCounts?' · '+yearCounts:'')+'. Related subparts are grouped; missing-context questions are excluded. Coverage counts refer to app topic categories, not every individual specification requirement. Years with no indexed parts are visible but disabled; 2015 and earlier reform-era papers are in the separate legacy archive. Official past-paper coverage remains incomplete.';
 }
+function selectPaper2Section(section='all'){
+ document.getElementById('flashSubject').value='Physics';
+ const base=subjectCards('Physics').filter(c=>c.paper2Training===true&&(section==='all'||c.paper2Section===section));
+ if(!base.length){showToast('Paper 2 coaching cards are not available offline yet');return}
+ flashScopeFilter='paper2';
+ flashTopics=new Set(base.map(flashTopicLabel));
+ // This is exam-technique coaching, independent of formula-memorisation mode.
+ activeSession=null;
+ refreshFlashTopics(false);
+ renderAll();
+}
 function renderTopicCounts(){
  const chosen=selectedFlashCards();
- document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
+ document.getElementById('flashTopicCount').textContent=flashTopics.size+' topics · '+chosen.length+' eligible cards · '+(flashScopeFilter==='paper2'?'AS Paper 2 coaching':flashScopeFilter==='mock'?'mock only':flashScopeFilter==='taught'?'taught so far':'full A-level');
  const all=subjectCards(document.getElementById('flashSubject').value).filter(c=>flashTopics.has(flashTopicLabel(c))&&flashEligible(c));
  const essentials=all.filter(isRecallMustKnow).length;
+ const paper2Status=document.getElementById('paper2Status');
+ if(paper2Status)paper2Status.textContent=flashScopeFilter==='paper2'
+  ?'Paper 2 coaching: '+chosen.length+' short cards in your chosen section(s). Rate each card for spaced review.':'Paper 2 is a separate track; use the buttons below to practise its question styles.';
  const info=document.getElementById('flashMustKnowCount');
  if(info)info.textContent=essentials+' key-definition / missing-equation cards in selected topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
  for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
@@ -6348,6 +6369,26 @@ async function sync(manual=false){
   }else continue;
   knownFlashIds.add(c.id);cards.push(c);
  }
+ // Optional original Paper 2 coaching cards: separate from real mock sessions
+ // and full past-paper questions. Missing files never break core revision.
+ for(const url of PHYSICS_AS_PAPER2_TRAINING_FILES){
+  try{
+   const response=await fetch(url+'?v='+Date.now(),{cache:'no-store'});
+   if(!response.ok)continue;
+   const bank=await response.json();
+   for(const c of bank.cards||[]){
+    if(!c||!/^as_p2_v430_[abcm]\d{2}$/.test(c.id||'')||knownFlashIds.has(c.id)||
+       c.subject!=='Physics'||c.stage!=='AS'||c.paper2Training!==true||
+       !['A','B','C'].includes(c.paper2Section)||c.active!==true||
+       c.mock!==false||c.scope!=='paper2-training'||
+       typeof c.front!=='string'||typeof c.back!=='string'||
+       c.front.length>170||c.back.length>180||!c.front||!c.back)continue;
+    if(c.paper2Options&&(!Array.isArray(c.paper2Options)||c.paper2Options.length!==4||
+       !['A','B','C','D'].includes(c.paper2CorrectOption)))continue;
+    knownFlashIds.add(c.id);cards.push(c);
+   }
+  }catch{}
+ }
  const added=[...(x.questions||[]),...extraBanks.flatMap(bank=>bank.questions||[])],seen=new Set();
  examQuestions=[...(e.questions||[]),...added].filter(q=>{
   if(seen.has(q.id))return false;seen.add(q.id);return true;
@@ -6423,6 +6464,7 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
   save();renderTopicCounts();
  };
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
+ document.querySelectorAll('[data-paper2-section]').forEach(b=>b.onclick=()=>selectPaper2Section(b.dataset.paper2Section));
 document.getElementById('startMock').onclick=startMockSession;
 document.getElementById('mockSubject').onchange=()=>{const hint=document.getElementById('mathsMockScopeNote');if(hint)hint.hidden=document.getElementById('mockSubject').value!=='Maths'};document.getElementById('startFlashcards').onclick=startFlashSession;
 document.getElementById('examDifficulty').onchange=renderTopicCounts;
