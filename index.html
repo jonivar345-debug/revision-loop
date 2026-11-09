@@ -7,7 +7,7 @@
   <meta name="description" content="Adaptive AQA A-level revision">
   <title>Revision Loop</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=173">
+  <link rel="stylesheet" href="styles.css?v=430">
   <script src="layout-mode.js?v=120" defer></script>
 </head>
 <body>
@@ -120,6 +120,18 @@
           <label class="recall-priority-option"><input type="checkbox" id="flashMustKnowOnly"><span><strong>Only must-memorise cards</strong> — focus entirely on those facts within your selected topics.</span></label>
           <p class="recall-priority-note" id="flashMustKnowCount" aria-live="polite"></p>
         </div>
+        <section class="paper2-training" aria-label="AQA AS Physics Paper 2 training">
+          <div class="paper2-heading"><strong>AQA AS Physics Paper 2 (7407/2)</strong><span>Guided question-method practice</span></div>
+          <p>Section A: practical skills and graphs (20 marks). Section B: mixed Physics explanations (20 marks). Section C: 30 multiple-choice questions. The cards teach each method in short steps, with optional hints, common mistakes and saved review progress.</p>
+          <p id="paper2Progress" class="recall-priority-note" aria-live="polite">Paper 2 method cards loading…</p>
+          <div class="paper2-actions">
+            <button type="button" data-paper2-section="A" class="mini-btn">A · Practical and data</button>
+            <button type="button" data-paper2-section="B" class="mini-btn">B · Written Physics</button>
+            <button type="button" data-paper2-section="C" class="mini-btn">C · Multiple choice</button>
+            <button type="button" data-paper2-section="all" class="mini-btn">Mixed Paper 2 session</button>
+          </div>
+          <p class="paper2-smallnote">Original short technique cards based on AQA skills, not reproductions or a verified question-by-question catalogue of 2018–2025 papers. After reviewing the cards, practise whole papers under timed conditions. <a href="https://www.aqa.org.uk/past-papers-and-mark-schemes-finder" target="_blank" rel="noopener noreferrer">Find AQA past papers and mark schemes</a>.</p>
+        </section>
         <div class="picker-head"><b>Topics to include</b><span id="flashTopicCount"></span></div>
         <div class="preset-row">
           <button class="mini-btn" data-flash-preset="mock">Mock topics</button>
@@ -316,7 +328,7 @@
 <script src="chemistry-rates-marking-v210.js?v=210" defer></script>
 <script src="physics-concise-marking-v211.js?v=211" defer></script>
 <script src="physics-materials-divider-marking-v213.js?v=213" defer></script>
-<script src="app.js?v=429" defer></script>
+<script src="app.js?v=430" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>

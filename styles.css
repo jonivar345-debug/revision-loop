@@ -746,3 +746,19 @@ html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,mi
 .recall-priority-note{margin:3px 2px 4px;color:#475569;font-size:.71rem;line-height:1.45}
 .recall-priority-pill{display:inline-block;padding:3px 8px;border-radius:9px;border:1px solid #cbd5e1;background:#eff6ff;color:#1e40af;font-size:.69rem;font-weight:750}
 @media(max-width:400px){.recall-priority-option{padding:9px 8px}.recall-priority-option input{width:19px;height:19px}}
+
+/* v430: AS Physics Paper 2 question-method trainer: readable phone and PC layout. */
+.paper2-training{border:1px solid #bacfe4;background:#f5f9fd;border-radius:12px;padding:14px;margin:12px 0 16px;color:#233b50}
+.paper2-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:7px 14px;margin-bottom:6px}
+.paper2-heading strong{font-size:.9rem;color:#153b67}.paper2-heading span{font-size:.73rem;color:#355b78}
+.paper2-training>p{font-size:.76rem;line-height:1.5;margin:6px 0 10px}
+.paper2-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+.paper2-actions button{width:100%;min-height:42px;text-align:center;white-space:normal;line-height:1.35;padding:8px 6px}
+.paper2-training .paper2-smallnote{font-size:.7rem;color:#425c76;margin:10px 0 0}
+.paper2-hint{margin:11px 0;background:#f1f5fb;border:1px solid #c2d5e8;border-radius:9px;padding:10px 12px;font-size:.79rem}
+.paper2-hint summary{cursor:pointer;font-weight:650;color:#18558c}
+.paper2-hint p{line-height:1.55;margin:9px 0 0}
+.paper2-support{border-top:1px solid #d9e4ed;margin-top:13px;padding-top:11px}
+.paper2-support strong{display:block;font-size:.76rem;color:#164c78;margin:9px 0 3px}
+.paper2-support p{font-size:.78rem;line-height:1.5;margin:0 0 8px}
+@media(max-width:450px){.paper2-training{padding:11px 9px}.paper2-actions{gap:7px}.paper2-actions button{font-size:.72rem;min-height:46px}}

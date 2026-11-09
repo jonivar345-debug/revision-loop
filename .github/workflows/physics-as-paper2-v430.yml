@@ -1,0 +1,45 @@
+name: v430 AS Physics Paper 2 guided flashcards
+on:
+  pull_request:
+    paths:
+      - 'physics_as_paper2_skills_v430.json'
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'sw.js'
+      - 'tests/physics-as-paper2-v430.cjs'
+      - 'tests/physics-as-paper2-browser-v430.mjs'
+      - 'tests/flashcard-priority-v429.cjs'
+      - '.github/workflows/physics-as-paper2-v430.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  physics-paper2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and JSON check
+        run: |
+          node --check app.js
+          node --check tests/physics-as-paper2-v430.cjs
+          node --check tests/physics-as-paper2-browser-v430.mjs
+          node -e "JSON.parse(require('node:fs').readFileSync('physics_as_paper2_skills_v430.json','utf8'))"
+      - name: Validate all 107 original cards, scope and markup
+        run: node tests/physics-as-paper2-v430.cjs
+      - name: Protect prior flashcard, cloud sync, marker and saved progress
+        run: |
+          node tests/flashcard-priority-v429.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/chemistry-organic-v42.cjs
+          node tests/revision-backup.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Test A B C sessions, guided feedback and progress on phone widths
+        run: node tests/physics-as-paper2-browser-v430.mjs
