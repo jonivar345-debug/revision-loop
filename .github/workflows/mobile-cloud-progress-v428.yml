@@ -1,0 +1,41 @@
+name: v428 mobile, cloud and progress safety
+on:
+  pull_request:
+    paths:
+      - 'cloud-sync.js'
+      - 'exam-sketch-v173.js'
+      - 'progress-backup.js'
+      - 'layout-mode.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'sw.js'
+      - 'tests/mobile-cloud-progress-v428.cjs'
+      - 'tests/mobile-cloud-browser-v428.mjs'
+      - '.github/workflows/mobile-cloud-progress-v428.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  device-and-progress-regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - run: node --input-type=module --check < cloud-sync.js
+      - run: node --check exam-sketch-v173.js
+      - run: node --check progress-backup.js
+      - run: node --check layout-mode.js
+      - run: node tests/mobile-cloud-progress-v428.cjs
+      - run: node tests/revision-backup.cjs
+      - run: node tests/cloud-sync-v119.cjs
+      - run: node tests/reset-layout-v120.cjs
+      - run: node tests/cloud-photoelectric-v121.cjs
+      - run: node tests/v173-maths-sketch-marking.cjs
+      - name: Install headless Chromium browser tester
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Real phone, PC, backup and offline browser smoke
+        run: node tests/mobile-cloud-browser-v428.mjs

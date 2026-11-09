@@ -75,8 +75,18 @@ async function retrieve(){
 // A phone can update Firestore while a PC tab is open. Never interrupt an
 // unfinished answer: let the learner finish before restoring remote progress.
 function hasUnsavedAnswer(){
-  const input=el('answerInput');
-  return !!(input&&input.value.trim()&&input.offsetParent!==null);
+  // A remote change must not reload a phone or PC while an exam answer,
+  // flashcard answer or handwritten sketch is still being worked on.
+  const typed=['answerInput','examAnswer'].some(id=>{
+    const input=el(id);
+    // A learner may switch tabs without submitting a draft; keep it safe even then.
+    return !!(input&&typeof input.value==='string'&&input.value.trim());
+  });
+  // A live session is held in memory, even before the learner types.
+  // Never discard the session position by automatically reloading mid-review.
+  const banner=el('sessionBanner');
+  const inSession=!!(banner&&!banner.classList.contains('hidden'));
+  return typed||window.RevisionSketch?.hasPendingInk?.()===true||inSession;
 }
 function requestCloudCheck(){
   if(!user)return;
@@ -100,7 +110,7 @@ async function applyRemote(record,automatic=false){
   const incoming=remoteBackup(record);
   if(automatic&&hasUnsavedAnswer()){
     active=false;
-    changePhase('remote-ready','Newer cloud progress is available. Finish the flashcard, then press Check cloud now. If you rate this answer, cloud saving will pause to protect both versions.');
+    changePhase('remote-ready','Newer cloud progress is available. Finish the current revision session or draft, then press Check cloud now. Cloud saving is paused to protect both versions.');
     return;
   }
   if(!automatic){

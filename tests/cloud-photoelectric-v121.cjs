@@ -36,7 +36,7 @@ const sw=fs.readFileSync('sw.js','utf8');
 const cloud=fs.readFileSync('cloud-sync.js','utf8');
 assert.match(html,/photoelectric-flashcard-marking\.js\?v=121/);
 assert.match(html,/app\.js\?v=\d+/);
-assert.match(html,/cloud-sync\.js\?v=121/);
+assert.match(html,/cloud-sync\.js\?v=428/);
 const mainScript=html.match(/app\.js\?v=\d+/);
 assert(mainScript,'Versioned main script must be present');
 assert.ok(html.indexOf('photoelectric-flashcard-marking.js')<html.indexOf(mainScript[0]));
