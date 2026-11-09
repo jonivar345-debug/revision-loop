@@ -57,6 +57,7 @@ const V354_CHEM_CRACKING_URL='./chemistry_cracking_pressure_recall_v354.json';
 const V367_CHEM_ALKANE_TREND_URL='./chemistry_alkane_trend_recall_v367.json';
 const V370_PHYSICS_HISTORY_URL='./physics_light_history_recall_v370.json';
 const V375_CHEM_KP_CATALYST_URL='./chemistry_kp_catalyst_recall_v375.json';
+const AS_P2_COACH_URL='./physics_as_paper2_guided_v430.json';
 // v372: five original first-mock AS Pure questions need actual multi-step self-review.
 const V372_YEAR1_PURE_MANUAL=Object.freeze([{"id":"task1_v271_maths_pure_q03","specRef":"3.11","prompt":"Points A, B and C have position vectors (1,2), (7,−1) and (−2,8). P is the midpoint of BC and Q is the midpoint of AC. (a) Find the position vectors of P and Q. (b) Show by vector methods that the points on AP and BQ two-thirds of the way from A and B respectively coincide. (c) Give their common position vector and the ratio AG:GP. [8 marks]","marks":8},{"id":"task1_v271_maths_pure_q04","specRef":"3.4","prompt":"A circle is given by x²+y²−4x−6y−12=0. (a) Find its centre and radius. (b) Verify that P=(5,7) lies on the circle. (c) Find an exact equation of the tangent to the circle at P. (d) Find both axis intercepts of this tangent. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q05","specRef":"3.3","prompt":"Let f(x)=x²−4x+1 and g(x)=−2f(1−2x)+3. (a) Complete the square for f. (b) Describe a valid ordered sequence of graph transformations giving y=g(x) from y=f(x). (c) Express g as a quadratic in x and find the turning point. (d) Find both exact x-intercepts of g. [9 marks]","marks":9},{"id":"task1_v271_maths_pure_q06","specRef":"3.5","prompt":"In the expansion of (1+ax)⁷, the coefficient of x² is 84 and the coefficient of x³ is negative. (a) Show that a²=4. (b) Find a. (c) Calculate the coefficients of x³ and x⁴, showing the binomial coefficients used. [7 marks]","marks":7},{"id":"task1_v271_maths_pure_q07","specRef":"3.9","prompt":"For y=x²−5x+6 over 0≤x≤4, calculate (a) the signed definite integral from 0 to 4 and (b) the total area between the curve and the x-axis. You must show where the graph lies below the axis and split the integral correctly. Give exact answers. [8 marks]","marks":8}]);
 function applyV372Year1PureManualReview(questions){
@@ -3569,6 +3570,16 @@ function isV422ExplicitBondDiagramDenial(c,input){
   isV426ExplicitQuotedCorrectAnswerDenial(c,input));
 }
 function evaluateCard(c,input){
+ if(c?.paper2Section==='C'&&Array.isArray(c.paper2Choices)&&c.paper2Choices.length===4){
+  const raw=String(input||'').trim().toLowerCase().replace(/\s+/g,' ');
+  if(raw){
+   const choices=c.paper2Choices.map(x=>String(x).trim().toLowerCase().replace(/\s+/g,' '));
+   if(choices.includes(raw)){
+    return raw===choices[0]?{status:'correct',score:1,text:'Correct Paper 2 multiple-choice option.',missing:[]}:
+     {status:'wrong',score:0,text:'That option is incorrect. Review the common trap.',missing:[]};
+   }
+  }
+ }
  if(isV426ExplicitQuotedCorrectAnswerDenial(c,input))
   return {status:'wrong',score:0,text:'This explicitly rejects a correct answer.',missing:[String(c.back||'')]};
  // v389: repeating the full flashcard question is not an answer, even if
@@ -4051,6 +4062,23 @@ function startFlashSession(){
  const picked=pickRecallCards(pool,Math.min(count,pool.length),c=>1+weakness(c)/6+(isDue(c)?4:0)+(isNew(c)?1:0));
  activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,title:settings.recallMustKnowOnly?'Must memorise · key recall':'Random flashcards'};currentCardId=null;renderAll();
 }
+// v430: isolated Paper 2 coach; no changes to school mock eligibility or saved reviews.
+function paper2CoachCards(section='all'){
+ return cards.filter(c=>c.active!==false&&c.subject==='Physics'&&
+  /^as_p2_v430_\d{3}$/.test(c.id||'')&&
+  (section==='all'||c.paper2Section===section));
+}
+function startPaper2CoachSession(){
+ const section=document.getElementById('paper2Section').value;
+ const countOption=document.getElementById('paper2SessionCount').value;
+ const pool=paper2CoachCards(section);
+ if(!pool.length){showToast('Paper 2 pack not loaded; try Sync');return}
+ const n=countOption==='all'?pool.length:Math.min(Number(countOption)||20,pool.length);
+ const picked=weightedPick(pool,n,c=>1+weakness(c)/5+(isDue(c)?6:0)+(isNew(c)?3:0));
+ activeSession={kind:'flash',items:picked.map(c=>({type:'card',id:c.id})),index:0,
+  title:'AS Physics Paper 2 · '+(section==='all'?'A + B + C':'Section '+section)};
+ studyType='flashcards';currentCardId=null;renderAll();
+}
 function examGroups(){
  const sub=document.getElementById('examSubject').value,level=document.getElementById('examLevel').value;
  const difficulty=document.getElementById('examDifficulty')?.value||'all';
@@ -4342,6 +4370,7 @@ function renderChallenge(){document.getElementById('challengeStreak').textConten
 function flashTopicLabel(c){return c.revisionTopic||c.topic||c.courseTopic||'Unclassified'}
 function examTopicLabel(q){return q.revisionTopic||q.subtopic||q.topic||q.courseTopic||'Unclassified'}
 function flashCourseFamily(c){
+ if(c.subject==='Physics'&&['A','B','C'].includes(c.paper2Section))return 'AS Paper 2 · Section '+c.paper2Section;
  const p=String(c.specRef||''),t=String(c.topic||''),u=String(c.unit||'');
  if(c.subject==='Physics'){
   if(p.startsWith('3.10')||u==='medical'||t.startsWith('Medical physics'))return '3.10 Medical physics (option)';
@@ -4611,6 +4640,14 @@ function renderTopicCounts(){
  if(info)info.textContent=essentials+' key-definition / missing-equation cards in selected topics'+(settings.recallMustKnowOnly?' · only these will be shown.':'. Other cards remain in normal sessions.');
  for(const id of ['mockMustKnowFirst','flashMustKnowFirst']){const control=document.getElementById(id);if(control)control.checked=settings.recallMustKnowFirst!==false}
  const only=document.getElementById('flashMustKnowOnly');if(only)only.checked=settings.recallMustKnowOnly===true;
+ const coachCount=document.getElementById('paper2CoachSummary');
+ if(coachCount){
+  const p2=paper2CoachCards(document.getElementById('paper2Section').value);
+  const studied=p2.filter(c=>!isNew(c)).length;
+  const remembered=p2.filter(c=>!isNew(c)&&memoryHealth(c)>=.85&&!isDue(c)).length;
+  coachCount.textContent=p2.length?p2.length+' guided cards · '+studied+' studied · '+remembered+' remembered confidently':
+   'Paper 2 pack unavailable. Select Sync to try again.';
+ }
  document.getElementById('examTopicCount').textContent=examTopics.size+' selected';
  document.getElementById('examYearCount').textContent=examYears.size+' selected';
  const count=examGroups().reduce((n,g)=>n+g.length,0);
@@ -4623,9 +4660,34 @@ function renderCard(c){
  currentCardId=c.id;currentEvaluation=null;currentFlashAwarded=false;const s=state(c.id),health=Math.round(memoryHealth(c)*100),diag=c.visual?diagram(c.visual):'',backDiag=c.visualBack?diagram(c.visualBack):'';
  const recallInfo=window.RevisionFlashPriority?.classify(c);
  const recallBadge=recallInfo?'<span class="recall-priority-pill" title="High-priority knowledge for recall">'+esc(recallInfo.label)+'</span>':'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div><textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div></div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ const p2Label=c.paper2Section?'<span class="paper2-card-badge">AS Paper 2 · '+esc(c.paper2Section)+'</span>':'';
+ const p2Hint=c.paper2Hint?'<div class="paper2-card-hint"><button type="button" id="paper2HintBtn" aria-expanded="false">Show first-step hint</button><p id="paper2HintText" hidden>'+esc(c.paper2Hint)+'</p></div>':'';
+ const p2Debrief=c.paper2Trap?'<div class="paper2-card-explain"><strong>Watch out:</strong> '+esc(c.paper2Trap)+'</div>':'';
+ const rotate=Number(c.id.slice(-3))%4;
+ const p2Options=Array.isArray(c.paper2Choices)&&c.paper2Choices.length===4?
+  [...c.paper2Choices.slice(rotate),...c.paper2Choices.slice(0,rotate)]:null;
+ const p2OptionHtml=p2Options?'<div class="paper2-mcq" role="group" aria-label="Select one multiple-choice answer">'+
+  p2Options.map((option,i)=>'<button type="button" class="paper2-mcq-option" data-paper2-choice="'+i+'" aria-pressed="false"><span class="paper2-choice-letter">'+String.fromCharCode(65+i)+'</span><span>'+esc(option)+'</span></button>').join('')+'</div>':'';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+p2Label+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+'<div class="question">'+esc(c.front)+'</div>'+p2Hint+p2OptionHtml+(p2Options?'<input id="answerInput" type="hidden">':'<textarea id="answerInput" class="answer-input" placeholder="Type your answer from memory…"></textarea>')+'<div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+p2Debrief+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
- document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
+ if(p2Options)document.querySelectorAll('[data-paper2-choice]').forEach(btn=>btn.onclick=()=>{
+   const choice=Number(btn.dataset.paper2Choice);
+   document.getElementById('answerInput').value=p2Options[choice];
+   document.querySelectorAll('[data-paper2-choice]').forEach(item=>{
+    const selected=item===btn;item.classList.toggle('selected',selected);
+    item.setAttribute('aria-pressed',String(selected));
+   });
+ });
+ const hintBtn=document.getElementById('paper2HintBtn');
+ if(hintBtn)hintBtn.onclick=()=>{
+  const explanation=document.getElementById('paper2HintText');explanation.hidden=!explanation.hidden;
+  hintBtn.setAttribute('aria-expanded',String(!explanation.hidden));
+  hintBtn.textContent=explanation.hidden?'Show first-step hint':'Hide first-step hint';
+ };
+ document.getElementById('checkCard').onclick=()=>{
+  if(p2Options&&!document.getElementById('answerInput').value){showToast('Select A, B, C or D first');return}
+  reveal(true);
+ };document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
 function evidenceRuleScore(answer,alternatives){
  if(!String(answer||'').trim())return 0;
@@ -6168,6 +6230,21 @@ async function sync(manual=false){
   if(!isV375ChemKpCatalystCard(c)||cards.some(old=>old.id===c.id))continue;
   cards.push(c);
  }
+ // Separate append-only AS Physics Paper 2 bank. Do not shift historic
+ // supplementary indices or mark this as part of the school mixed mock.
+ try{
+  const res=await fetch(AS_P2_COACH_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(res.ok){
+   const bank=await res.json();
+   for(const c of Array.isArray(bank.cards)?bank.cards:[]){
+    if(!c||!/^as_p2_v430_\d{3}$/.test(c.id||'')||c.subject!=='Physics'||
+       c.stage!=='AS'||!['A','B','C'].includes(c.paper2Section)||
+       typeof c.front!=='string'||typeof c.back!=='string'||!c.front.trim()||
+       !c.back.trim()||c.active!==true||cards.some(old=>old.id===c.id))continue;
+    c.mock=false;c.scope='full';cards.push(c);
+   }
+  }
+ }catch(error){console.warn('Optional Paper 2 training pack unavailable',error)}
  const knownFlashIds=new Set(cards.map(c=>c.id));
  for(const [index,bank] of extraFlashBanks.entries())for(const c of (bank.cards||[])){
   if(!c||typeof c.id!=='string'||knownFlashIds.has(c.id)||c.active===false)continue;
@@ -6425,6 +6502,8 @@ document.getElementById('flashSubject').onchange=()=>{flashTopics.clear();refres
 document.querySelectorAll('[data-flash-preset]').forEach(b=>b.onclick=()=>applyFlashPreset(b.dataset.flashPreset));
 document.getElementById('startMock').onclick=startMockSession;
 document.getElementById('mockSubject').onchange=()=>{const hint=document.getElementById('mathsMockScopeNote');if(hint)hint.hidden=document.getElementById('mockSubject').value!=='Maths'};document.getElementById('startFlashcards').onclick=startFlashSession;
+document.getElementById('paper2Section').onchange=renderTopicCounts;
+document.getElementById('startPaper2Coach').onclick=startPaper2CoachSession;
 document.getElementById('examDifficulty').onchange=renderTopicCounts;
 document.getElementById('examLevel').onchange=()=>{examTopics.clear();examYears.clear();examTypes.clear();refreshExamFilters(true);renderTopicCounts()};
 document.getElementById('examSubject').onchange=()=>{examYears.clear();examTopics.clear();examTypes.clear();refreshExamFilters(true);renderAll()};

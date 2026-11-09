@@ -120,6 +120,25 @@
           <label class="recall-priority-option"><input type="checkbox" id="flashMustKnowOnly"><span><strong>Only must-memorise cards</strong> — focus entirely on those facts within your selected topics.</span></label>
           <p class="recall-priority-note" id="flashMustKnowCount" aria-live="polite"></p>
         </div>
+        <section class="paper2-coach" id="paper2Coach" aria-labelledby="paper2CoachTitle">
+          <div class="paper2-coach-heading"><span class="paper2-coach-kicker">AQA AS PHYSICS · 7407/2</span><h3 id="paper2CoachTitle">Paper 2: Question-type training</h3></div>
+          <p>Short, original flashcards based on question patterns in papers since 2018. Learn how to start, check the method, then practise without hints. Your wrong answers return more often.</p>
+          <div class="paper2-coach-grid">
+            <label><span>Choose a section</span><select id="paper2Section">
+              <option value="all">Mixed A + B + C</option>
+              <option value="A">A · Practicals, graphs and data</option>
+              <option value="B">B · Linked AS applications</option>
+              <option value="C">C · Multiple-choice traps</option>
+            </select></label>
+            <label><span>Number of cards</span><select id="paper2SessionCount">
+              <option value="10">10 cards</option><option value="20" selected>20 cards</option>
+              <option value="30">30 cards</option><option value="all">All in section</option>
+            </select></label>
+          </div>
+          <div id="paper2CoachSummary" class="paper2-coach-summary" aria-live="polite">Paper 2 training cards load with the flashcards.</div>
+          <button type="button" id="startPaper2Coach" class="primary-btn full-btn">Practise Paper 2 question methods</button>
+          <p class="paper2-coach-note">A: 20 marks · B: 20 marks · C: 30 one-mark MCQs. This trains reusable skills and does not replace doing complete timed past papers.</p>
+        </section>
         <div class="picker-head"><b>Topics to include</b><span id="flashTopicCount"></span></div>
         <div class="preset-row">
           <button class="mini-btn" data-flash-preset="mock">Mock topics</button>
@@ -316,7 +335,7 @@
 <script src="chemistry-rates-marking-v210.js?v=210" defer></script>
 <script src="physics-concise-marking-v211.js?v=211" defer></script>
 <script src="physics-materials-divider-marking-v213.js?v=213" defer></script>
-<script src="app.js?v=429" defer></script>
+<script src="app.js?v=430" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>

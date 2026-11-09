@@ -1,0 +1,44 @@
+name: v430 AS Physics Paper 2 guided trainer
+on:
+  pull_request:
+    paths:
+      - 'physics_as_paper2_guided_v430.json'
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'sw.js'
+      - 'tests/physics-paper2-coach-v430.cjs'
+      - 'tests/physics-paper2-coach-browser-v430.mjs'
+      - '.github/workflows/physics-paper2-coach-v430.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paper2-coach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source syntax and structured card checks
+        run: |
+          node --check app.js
+          node --check tests/physics-paper2-coach-v430.cjs
+          node --check tests/physics-paper2-coach-browser-v430.mjs
+          node tests/physics-paper2-coach-v430.cjs
+      - name: Existing priority, saved progress and marking checks
+        run: |
+          node tests/flashcard-priority-v429.cjs
+          node tests/cloud-sync-v119.cjs
+          node tests/mobile-cloud-progress-v428.cjs
+          node tests/revision-backup.cjs
+          node tests/task1-v197-mechanics-reasoning.cjs
+          node tests/chemistry-organic-v42.cjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Real phone and desktop Paper 2 coaching browser check
+        run: node tests/physics-paper2-coach-browser-v430.mjs

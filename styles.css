@@ -746,3 +746,31 @@ html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,mi
 .recall-priority-note{margin:3px 2px 4px;color:#475569;font-size:.71rem;line-height:1.45}
 .recall-priority-pill{display:inline-block;padding:3px 8px;border-radius:9px;border:1px solid #cbd5e1;background:#eff6ff;color:#1e40af;font-size:.69rem;font-weight:750}
 @media(max-width:400px){.recall-priority-option{padding:9px 8px}.recall-priority-option input{width:19px;height:19px}}
+
+/* v430: AS Physics Paper 2 guided revision. Always readable on narrow phones. */
+.paper2-coach{margin:12px 0 18px;padding:14px 15px;border:1px solid #94a3b8;border-radius:14px;background:#f8fafc;color:#1e293b;display:grid;gap:10px}
+.paper2-coach-heading{display:grid;gap:2px}
+.paper2-coach-kicker{font-size:.7rem;font-weight:800;letter-spacing:.055em;color:#1e40af}
+.paper2-coach h3{margin:0;font-size:1.05rem;line-height:1.3}
+.paper2-coach p{margin:0;line-height:1.5;font-size:.81rem}
+.paper2-coach-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:10px}
+.paper2-coach-grid label{display:grid;gap:5px;min-width:0}
+.paper2-coach-grid label span{font-weight:700;font-size:.73rem}
+.paper2-coach-grid select{width:100%;min-width:0;border:1px solid #94a3b8;border-radius:8px;padding:10px 8px;background:white;color:#0f172a;font-size:.8rem}
+.paper2-coach-summary{font-size:.77rem;font-weight:700;color:#1d4ed8;line-height:1.4}
+.paper2-coach .primary-btn{white-space:normal;min-height:43px}
+.paper2-coach .paper2-coach-note{color:#475569;font-size:.74rem}
+.paper2-card-badge{border:1px solid #c7d2fe;border-radius:7px;color:#3730a3;background:#eef2ff;padding:3px 7px;font-size:.72rem;font-weight:800}
+.paper2-card-hint{margin:8px 0 12px}
+.paper2-card-hint button{cursor:pointer;padding:8px 11px;border:1px solid #cbd5e1;background:#eff6ff;color:#1e40af;border-radius:9px;font-size:.84rem;font-weight:750;max-width:100%;white-space:normal}
+.paper2-card-hint p:not([hidden]){margin:9px 0 0;padding:9px 11px;background:#f8fafc;border-left:3px solid #64748b;border-radius:5px;color:#334155;line-height:1.45}
+.paper2-card-explain{margin-top:12px;padding:10px 12px;background:#f8fafc;border-radius:9px;border:1px solid #e2e8f0;font-size:.83rem;line-height:1.5;color:#334155}
+@media(max-width:480px){.paper2-coach{padding:11px 10px}.paper2-coach-grid{grid-template-columns:minmax(0,1fr)}.paper2-card-badge{font-size:.66rem}}
+
+/* v430: four accessible multiple-choice options; keyboard and touch. */
+.paper2-mcq{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:12px 0 16px}
+.paper2-mcq-option{display:flex;align-items:center;gap:10px;min-width:0;min-height:43px;text-align:left;padding:9px 11px;background:#fff;border:1px solid #94a3b8;color:#1e293b;border-radius:9px;line-height:1.4;cursor:pointer;font-size:.88rem;white-space:normal}
+.paper2-choice-letter{display:inline-flex;align-items:center;justify-content:center;flex:0 0 29px;width:29px;height:29px;background:#f1f5f9;border-radius:6px;font-weight:800;color:#1e40af}
+.paper2-mcq-option:hover,.paper2-mcq-option:focus-visible{border-color:#2563eb;outline:2px solid #93c5fd;outline-offset:1px}
+.paper2-mcq-option.selected{border:2px solid #2563eb;background:#eff6ff;padding:8px 10px}
+.paper2-mcq-option.selected .paper2-choice-letter{background:#1d4ed8;color:#fff}
