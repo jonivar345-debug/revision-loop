@@ -82,7 +82,11 @@ function hasUnsavedAnswer(){
     // A learner may switch tabs without submitting a draft; keep it safe even then.
     return !!(input&&typeof input.value==='string'&&input.value.trim());
   });
-  return typed||window.RevisionSketch?.hasPendingInk?.()===true;
+  // A live session is held in memory, even before the learner types.
+  // Never discard the session position by automatically reloading mid-review.
+  const banner=el('sessionBanner');
+  const inSession=!!(banner&&!banner.classList.contains('hidden'));
+  return typed||window.RevisionSketch?.hasPendingInk?.()===true||inSession;
 }
 function requestCloudCheck(){
   if(!user)return;
@@ -106,7 +110,7 @@ async function applyRemote(record,automatic=false){
   const incoming=remoteBackup(record);
   if(automatic&&hasUnsavedAnswer()){
     active=false;
-    changePhase('remote-ready','Newer cloud progress is available. Finish your answer or drawing, then press Check cloud now. Cloud saving is paused to protect both versions.');
+    changePhase('remote-ready','Newer cloud progress is available. Finish the current revision session or draft, then press Check cloud now. Cloud saving is paused to protect both versions.');
     return;
   }
   if(!automatic){
