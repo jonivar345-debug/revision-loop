@@ -35,7 +35,19 @@ const cases=[
  [make('Chemistry','What is the effect of a catalyst on activation energy?','It decreases activation energy.'),null],
  [make('Chemistry','What formula gives heat transferred?','q = mcΔT',{formulaBooklet:'provided'}),null],
  [make('Chemistry','What formula gives heat transferred?','q = mcΔT',{active:false}),null],
- [make('Chemistry','What is a lepton?','The answer',{memoryPriority:'definition'}),'definition']
+ [make('Chemistry','What is a lepton?','The answer',{memoryPriority:'definition'}),'definition'],
+ [make('Chemistry','What is the route from masses to an empirical formula?','Mass → moles → divide by smallest.'),null],
+ [make('Chemistry','If 2 mol of A react per equation, what is n_reaction from 0.10 mol A?','0.10 ÷ 2 = 0.050 mol'),null],
+ [make('Chemistry','How do you check Hess arrows if the formula is forgotten?','Start → finish through cycle.'),null],
+ [make('Chemistry','What equation relates heat, mass, specific heat and temperature rise?','q = mcΔT'),'equation'],
+ [make('Chemistry','Write the atomisation equation for chlorine.','½Cl₂(g) → Cl(g)'),'equation'],
+ [make('Chemistry','State the complete definition of ionic bonding.','Electrostatic attraction between opposite ions.'),'definition'],
+ [make('Chemistry','State the complete definition of metallic bonding.','Attraction between positive ions and delocalised electrons.'),'definition'],
+ [make('Physics','What is the meaning of decay constant λ?','Probability of decay per unit time.'),'definition'],
+ [make('Physics','What is the meaning of mass defect?','Difference between free and bound nucleon masses.'),'definition'],
+ [make('Maths','State the first-principles definition of f′(x).','lim(h→0) [f(x+h)−f(x)]/h'),'definition'],
+ [make('Maths','What is the area formula using two sides a,b and included angle C?','A = ½ab sin C'),'equation'],
+ [make('Maths','What form can a vector equation of a line take?','r = a + λb'),'equation']
 ];
 let passed=0;
 for(const [card,want] of cases){
