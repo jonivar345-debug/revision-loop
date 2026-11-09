@@ -3958,7 +3958,7 @@ function numericMatch(q,answer){
 function nextSchedule(s,rating){const old=Math.max(.25,s.stability||0),elapsed=s.last?Math.max(0,(now()-s.last)/DAY):0,over=old?clamp(elapsed/old,0,2):0;let stability=old,difficulty=clamp(s.difficulty||5,1,10),days;if(rating==='again'){difficulty=clamp(difficulty+.7,1,10);stability=Math.max(.25,old*.35);days=10/1440}else if(rating==='hard'){difficulty=clamp(difficulty+.2,1,10);stability=Math.max(1,old?old*1.12:1);days=Math.min(stability,1)}else if(rating==='good'){difficulty=clamp(difficulty-.08,1,10);stability=s.stage<0?3:clamp(old*(1.72+.12*over-.035*(difficulty-5)),2,365);days=stability}else{difficulty=clamp(difficulty-.3,1,10);stability=s.stage<0?7:clamp(old*(2.3+.12*over-.025*(difficulty-5)),4,365);days=stability}return {stability,difficulty,days}}
 function rateCard(c,rating,answer){
  const s=state(c.id),prev=s.last||0,wasNew=s.stage<0,sch=nextSchedule(s,rating);s.last=now();s.stability=sch.stability;s.difficulty=sch.difficulty;s.due=now()+sch.days*DAY;s.stage=Math.max(0,s.stage)+(rating==='good'?1:rating==='easy'?2:0);s.mastered=s.stability>=60&&(s.good||0)>=2;if(wasNew&&!s.firstSeen){s.firstSeen=dateKey();daily().newCards++}if(rating==='again')s.again++;else if(rating==='hard')s.hard++;else s.good++;s.history=s.history||[];s.history.push({t:now(),rating,answer:String(answer||'').slice(0,250),stability:s.stability});if(s.history.length>40)s.history=s.history.slice(-40);setState(c.id,s);
- const ts=topicStat(c.subject,c.revisionTopic||c.topic);ts.attempts++;ts.last=now();if(currentEvaluation?.status==='correct')ts.success++;else if(rating==='again'||rating==='hard')ts.lastMiss=now();
+ const ts=topicStat(c.subject,c.revisionTopic||c.topic);ts.attempts++;ts.last=now();if(currentEvaluation?.status==='correct')ts.success++;else if(currentEvaluation?.status==='self-rated')ts.selfRatedKnown=(ts.selfRatedKnown||0)+1;else if(rating==='again'||rating==='hard')ts.lastMiss=now();
  if((rating==='again'||rating==='hard')&&currentEvaluation?.status!=='correct')addError({type:'card',id:c.id,subject:c.subject,topic:c.revisionTopic||c.topic,result:rating,answer:String(answer||'').slice(0,300),missing:currentEvaluation?.missing||[],longGap:prev&&((now()-prev)/DAY>30)});
  profile.reviews++;daily().reviews++;save();advanceSession();
 }
@@ -3969,6 +3969,22 @@ function overrideFlashCorrect(){
  if(currentEvaluation?.status==='correct')return;currentEvaluation={status:'correct',score:1,text:'Marked correct by you.',missing:[]};awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show correct';f.textContent='Marked correct by you. +1 point / +1 XP.';document.getElementById('overrideBtn').classList.remove('show')
 }
 
+function selfRateKnownCard(c){
+ // A quick voluntary recall rating is not a checked answer and earns no XP.
+ if(!activeSession||activeSession.done||activeSession.items[activeSession.index]?.id!==c.id)return;
+ const typed=document.getElementById('answerInput')?.value||'';
+ currentEvaluation={status:'self-rated',score:0,text:'Self-rated as known, not automatically checked.',missing:[]};
+ rateCard(c,'good','[I know this · self-rated] '+typed);
+}
+function selfRateExamKnown(q){
+ // Do not grant exam marks for a claim of knowing an answer. Offer the existing
+ // editable marking rubric, which also accepts valid alternative working.
+ if(!activeSession||activeSession.done||activeSession.items[activeSession.index]?.id!==q.id)return;
+ beginManualExamReview(q);
+ const info=document.getElementById('examFeedback');
+ if(info)info.textContent='Self-assessment opened. Tick only marks your answer or working deserves, then save your reviewed score. Nothing has been awarded automatically.';
+ document.getElementById('scoreEditor')?.scrollIntoView?.({behavior:'smooth',block:'nearest'});
+}
 function isRecallMustKnow(card){return window.RevisionFlashPriority?.isMustKnow(card)===true}
 function urgentRecallMustKnow(card){return !!card&&isRecallMustKnow(card)&&(isNew(card)||isDue(card)||memoryHealth(card)<.85)}
 function pickRecallCards(pool,n,scoreFn){
@@ -4113,7 +4129,7 @@ function makeChallenge(sub,scope){
  const chosen=weightedPick([...qgroups.values()],2,g=>1+groupWeakness(g));for(const g of chosen){g.sort((a,b)=>String(a.groupOrder).localeCompare(String(b.groupOrder),undefined,{numeric:true}));for(const q of g)items.push({type:'exam',id:q.id,groupId:q.groupId})}
  const s={items,index:0,done:false,subject:sub||'',scope};profile.dailyChallenges[key]=s;save();return {key,...s};
 }
-function startChallenge(){const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,s=makeChallenge(sub,scope);const stored=profile.dailyChallenges[s.key];if(stored.done)stored.index=0;activeSession={kind:'daily',key:s.key,...stored,title:'Daily starter'};switchPanel('study');renderAll()}
+function startChallenge(){const sub=document.getElementById('challengeSubject').value,scope=document.getElementById('challengeScope').value,s=makeChallenge(sub,scope);const stored=profile.dailyChallenges[s.key];if(stored.done){stored.index=0;stored.done=false;stored.skipped=0;save()}activeSession={kind:'daily',key:s.key,...stored,title:'Daily starter'};switchPanel('study');renderAll()}
 function startMistakes(){
  const items=[],seen=new Set();
  for(const e of profile.errorLog){
@@ -4130,10 +4146,26 @@ function startMistakes(){
  if(!items.length){showToast('No mistakes recorded yet');return}
  activeSession={kind:'mistakes',items,index:0,title:'Mistake bank'};switchPanel('study');renderAll();
 }
+function skipStudyItem(){
+ if(!activeSession||activeSession.done)return;
+ const item=activeSession.items[activeSession.index];if(!item)return;
+ const typed=document.getElementById(item.type==='card'?'answerInput':'examAnswer')?.value?.trim()||'';
+ const pending=item.type==='exam'&&((window.RevisionScan?.countFor?.(item.id)||0)>0||
+  window.RevisionSketch?.hasPendingInk?.()===true);
+ if((typed||pending)&&typeof window.confirm==='function'&&
+    !window.confirm('Skip this item? Unsaved text, attached scans or sketches may be lost. No marks or XP will be awarded.'))return;
+ if(activeSession.kind==='daily'){
+  const day=profile.dailyChallenges[activeSession.key];
+  if(day)day.skipped=(day.skipped||0)+1;
+  activeSession.skipped=(activeSession.skipped||0)+1;
+ }
+ // Skip does not mark an answer wrong/correct, award XP or change scheduling.
+ advanceSession();
+}
 function advanceSession(){
  currentCardId=null;currentEvaluation=null;currentFlashAwarded=false;currentExamScore=0;
  if(!activeSession){renderAll();return}activeSession.index++;
- if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(activeSession.index>=activeSession.items.length){s.done=true;const today=dateKey(),y=previousCalendarDate();if(profile.lastChallengeDate!==today){
+ if(activeSession.kind==='daily'){const s=profile.dailyChallenges[activeSession.key];s.index=activeSession.index;if(activeSession.index>=activeSession.items.length){s.done=true;const today=dateKey(),y=previousCalendarDate();if((s.skipped||0)===0&&profile.lastChallengeDate!==today){
   profile.challengeStreak=profile.lastChallengeDate===y?profile.challengeStreak+1:1;
   profile.lastChallengeDate=today;
   if(profile.challengeBonusDate!==today){
@@ -4144,7 +4176,7 @@ function advanceSession(){
     if(bonus)profile.points+=bonus;
     showToast('Daily challenge complete · '+profile.challengeStreak+'-day streak'+(bonus?' · +'+bonus+' bonus point'+(bonus===1?'':'s'):''));
   }
- }activeSession=null}else activeSession={...activeSession,index:s.index};save()}
+ }if(s.skipped)showToast('Daily starter has skipped items. Repeat it to earn a streak.');activeSession=null}else activeSession={...activeSession,index:s.index};save()}
  else if(activeSession.index>=activeSession.items.length)activeSession={...activeSession,done:true};
  renderAll();
 }
@@ -4668,13 +4700,13 @@ function renderCard(c){
    '<button type="button" class="paper2-choice" data-paper2-option="'+String.fromCharCode(65+i)+'" aria-pressed="false"><b>'+String.fromCharCode(65+i)+'</b><span>'+esc(option)+'</span></button>').join('')+'</div>':'';
  const paper2Reason=c.paper2Training===true?'<div class="paper2-reason"><strong>How to approach it:</strong> '+esc(c.paper2Method||'')+
   (c.paper2Pitfall?'<div><strong>Common trap:</strong> '+esc(c.paper2Pitfall)+'</div>':'')+'</div>':'';
- document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+paper2Intro+'<div class="question">'+esc(c.front)+'</div>'+paper2Hint+paper2Choices+'<textarea id="answerInput" class="answer-input" placeholder="'+(paper2Choices?'Choose A–D above, or type your reasoning…':'Type your answer from memory…')+'"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+paper2Reason+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="review-card"><div class="card-meta"><div class="meta-left"><span class="badge">'+esc(c.subject)+' · '+esc(c.courseTopic||c.topic)+'</span><span class="badge">'+esc(c.format==='cloze'?'fill in the gap':c.kind==='content'?'knowledge':c.kind)+'</span></div>'+recallBadge+'<span class="queue-pos">memory '+health+'%</span></div><div class="card-body">'+(diag?'<div class="diagram">'+diag+'</div>':'')+paper2Intro+'<div class="question">'+esc(c.front)+'</div>'+paper2Hint+paper2Choices+'<textarea id="answerInput" class="answer-input" placeholder="'+(paper2Choices?'Choose A–D above, or type your reasoning…':'Type your answer from memory…')+'"></textarea><div class="answer-actions"><button id="checkCard" class="check-btn">Check answer</button><button id="revealCard" class="show-btn">Just reveal</button></div><div class="quick-review-actions" role="group" aria-label="Flashcard navigation and self-rating"><button id="skipCard" type="button" class="quick-review-btn">Skip</button><button id="knowCard" type="button" class="quick-review-btn quick-review-known">I know this</button></div><p class="quick-review-note">Skip leaves this unmarked. I know this saves a self-rated Good review without XP.</p><div id="feedback" class="feedback"></div><div id="modelAnswer" class="model-answer"><b>Model answer:</b> '+esc(c.back)+(backDiag?'<div class="diagram diagram-answer">'+backDiag+'</div>':'')+'<div id="missingIdeas"></div>'+paper2Reason+'</div><button id="overrideBtn" class="override-btn">My answer was actually correct</button><p class="flash-save-explainer">Correct checked answers earn +1 XP. Choose Again, Hard, Good or Easy to save your review, even if your answer was incorrect.</p><div id="ratings" class="ratings"><button class="rating again" data-rating="again">Again<small>~10 min</small></button><button class="rating hard" data-rating="hard">Hard<small>~1 day</small></button><button class="rating good" data-rating="good">Good<small>longer gap</small></button><button class="rating easy" data-rating="easy">Easy<small>much longer</small></button></div></div></article>';
  const reveal=(check)=>{const input=document.getElementById('answerInput').value;currentEvaluation=check?evaluateCard(c,input):{status:'neutral',score:0,text:'Model answer shown. Compare it honestly.',missing:[]};if(currentEvaluation.status==='correct')awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show '+currentEvaluation.status;f.textContent=currentEvaluation.text+(currentEvaluation.status==='correct'?' +1 XP awarded. Choose a rating to record the review.':currentEvaluation.status==='partial'?' Review recorded when you choose a rating; no XP awarded for a partly correct answer.':' Choose a rating to save your review; no XP awarded for this check.');document.getElementById('modelAnswer').classList.add('show');if(currentEvaluation.missing?.length)document.getElementById('missingIdeas').innerHTML='<ul class="missing-list">'+currentEvaluation.missing.map(x=>'<li>Missing: '+esc(x)+'</li>').join('')+'</ul>';document.getElementById('ratings').classList.add('show');if(currentEvaluation.status!=='correct')document.getElementById('overrideBtn').classList.add('show')};
  if(paper2Choices)document.querySelectorAll('[data-paper2-option]').forEach(btn=>btn.onclick=()=>{
   document.getElementById('answerInput').value=btn.dataset.paper2Option;
   document.querySelectorAll('[data-paper2-option]').forEach(item=>item.setAttribute('aria-pressed',String(item===btn)));
  });
- document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
+ document.getElementById('checkCard').onclick=()=>reveal(true);document.getElementById('revealCard').onclick=()=>reveal(false);document.getElementById('overrideBtn').onclick=overrideFlashCorrect;document.getElementById('skipCard').onclick=skipStudyItem;document.getElementById('knowCard').onclick=()=>selfRateKnownCard(c);document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rateCard(c,b.dataset.rating,document.getElementById('answerInput').value))
 }
 function evidenceRuleScore(answer,alternatives){
  if(!String(answer||'').trim())return 0;
@@ -5419,11 +5451,13 @@ function renderExam(q){
  const qpOfficial=/^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.qpUrl||'');
  const msOfficial=/^https:\/\/(?:filestore\.)?aqa\.org\.uk\//i.test(q.msUrl||'');
  const sourceNote=original?'<div class="copyright-note">Original exam-style practice question, not an AQA past-paper question or official mark scheme.</div>':q.sourceFirst?'<div class="copyright-note">Source-linked entry: open the original question because its figure, table or context is needed.</div>':secondary?'<div class="copyright-note">2025 AQA paper entry cross-checked against external indexes. The adaptation is not certified identical to the original.</div>':'<div class="copyright-note">Adapted from a source-linked AQA question. Check exact wording, context and marks against the linked sources.</div>';
- document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(original?'Original practice':secondary?'AQA 2025 · cross-checked':'AQA source-linked')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(original?'Practice Q'+q.question:q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+markStatusNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div>'+(original?'':'<div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(qpOfficial?'AQA question paper':'Question source/index')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(msOfficial?'AQA mark scheme':'Mark scheme source/index')+'</a></div>')+'<textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<p class="exam-marking-help">'+manualExamHelpText(q)+'</p><button id="markExam" class="check-btn">'+(q.manualDiagramReview?'Review diagram marking points manually':manualExamButtonText(q))+'</button><button id="reviewExamManually" class="exam-report-link" type="button">Review marking points manually (diagrams / photos)</button><button id="reportExamIssue" class="exam-report-link" type="button">Copy question details to report an issue</button><span id="reportExamStatus" class="exam-report-status" role="status"></span><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
+ document.getElementById('studyHost').innerHTML='<article class="exam-card"><div class="card-meta"><div class="meta-left"><span class="badge real">'+(original?'Original practice':secondary?'AQA 2025 · cross-checked':'AQA source-linked')+'</span><span class="badge">'+esc(q.subject)+' · '+esc(q.level)+'</span><span class="badge">'+esc(q.courseTopic||q.topic)+'</span></div><span class="queue-pos">'+esc(original?'Practice Q'+q.question:q.year+' '+q.paper+' Q'+q.question)+' · '+q.marks+' marks</span></div><div class="card-body">'+sourceNote+markStatusNote+linkedNote+'<div class="question-type">'+esc(q.questionType||'exam question')+'</div>'+(diag?'<div class="exam-visual">'+diag+'</div>':'')+'<div class="question">'+esc(q.prompt)+'</div>'+(original?'':'<div class="exam-source"><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.qpUrl)+'">'+(qpOfficial?'AQA question paper':'Question source/index')+'</a><a class="source-link" target="_blank" rel="noopener" href="'+esc(q.msUrl)+'">'+(msOfficial?'AQA mark scheme':'Mark scheme source/index')+'</a></div>')+'<textarea id="examAnswer" class="answer-input" placeholder="Write your full working / answer here…"></textarea>'+(prev?'<div class="question-type">Previous score: '+prev.marks+'/'+prev.max+'</div>':'')+'<div class="quick-review-actions" role="group" aria-label="Exam question navigation and self-marking"><button id="skipExam" type="button" class="quick-review-btn">Skip</button><button id="knowExam" type="button" class="quick-review-btn quick-review-known">I know this · self-mark</button></div><p class="quick-review-note">Skip awards no marks. I know this opens the marking points so you can self-assess, including alternative methods.</p><p class="exam-marking-help">'+manualExamHelpText(q)+'</p><button id="markExam" class="check-btn">'+(q.manualDiagramReview?'Review diagram marking points manually':manualExamButtonText(q))+'</button><button id="reviewExamManually" class="exam-report-link" type="button">Review marking points manually (diagrams / photos)</button><button id="reportExamIssue" class="exam-report-link" type="button">Copy question details to report an issue</button><span id="reportExamStatus" class="exam-report-status" role="status"></span><div id="examFeedback" class="feedback"></div><div id="examMarking" class="markscheme"></div><div id="scoreEditor" class="score-editor"></div></div></article>';
  window.RevisionScan?.mount(q.id);
  window.RevisionSketch?.mount(q);
  window.RevisionFree?.mount(q);
  window.RevisionVision?.mount(q);
+ document.getElementById('skipExam').onclick=skipStudyItem;
+ document.getElementById('knowExam').onclick=()=>selfRateExamKnown(q);
  document.getElementById('reportExamIssue').onclick=async()=>{
   const report=['Revision Loop question issue','ID: '+q.id,'Subject: '+q.subject,'Level: '+q.level,
    'Year: '+q.year,'Paper: '+q.paper,'Question part: '+q.question,
