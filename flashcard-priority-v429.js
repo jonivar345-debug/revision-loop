@@ -21,7 +21,8 @@
   if(/^state the first.principles definition of f[′']\(x\)/i.test(front))return true;
   // "What is a lepton?" is a definition; "What is the gradient of..." is not.
   if(/^what (?:is|are) an? [^?]{2,80}\?$/i.test(front)
-    && !/\b(?:if|when|where|given|after|before|with|from|on a graph)\b/i.test(front))return true;
+    && !/\b(?:if|when|where|given|after|before|with|from|on a graph|used to|looking for|safety|precaution|reliable way|best way|resistance|value|amount|key)\b/i.test(front)
+    && !/[’']s\b/.test(front))return true;
   return false;
  }
  function hasSymbolicAnswer(back){
@@ -49,7 +50,9 @@
   if(!card||card.active===false||!subjects.has(card.subject))return null;
   const front=String(card.front||'').trim(),back=String(card.back||'').trim();
   if(!front||!back)return null;
+  if(card.subject==='Maths'&&/\bfirst.principles (?:definition|formula) of f[′']\(x\)|\bfirst.principles definition of f[′']\(x\)/i.test(front))return null;
   if(card.memoryPriority==='definition')return DEFINITION;
+  if(card.subject==='Maths'&&/^(?:state|give|write) (?:the )?(?:index|logarithm|log) law\b/i.test(front)&&hasSymbolicAnswer(back))return EQUATION;
   if(isDefinitionPrompt(front))return DEFINITION;
   // Even if a sheet provides an equation, a definition using quantities
   // may still be key; only suppress equation tagging for provided entries.
@@ -68,8 +71,8 @@
   // Memorised standard derivatives/integrals are required by AQA Appendix B
   // but are not printed in MFB8. Example: derivative of e^(kx).
   const baseCalculus=/^(?:what is|state|give) (?:the )?(?:derivative|integral|differentiation rule|integration rule) (?:of|for) .{0,50}(?:e\^|eˣ|x\^|xⁿ|\bsin\b|\bcos\b|\bln\b)/i.test(front);
-  const firstPrinciples=/\bfirst.principles definition of f[′']\(x\)|\bfirst.principles formula\b/i.test(front);
-  return MATHS_MISSING.test(front)||baseCalculus||firstPrinciples?EQUATION:null;
+  // The first-principles formula is printed in MFB8; do not call it missing.
+  return MATHS_MISSING.test(front)||baseCalculus?EQUATION:null;
  }
  function isMustKnow(card){return !!classify(card);}
  function group(cards,needsAttention){
