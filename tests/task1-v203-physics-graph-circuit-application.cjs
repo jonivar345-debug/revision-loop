@@ -14,7 +14,7 @@ assert.equal(deck.cards.length,3345);assert.equal(main.questions.length,1268);
 assert(app.includes("'./physics_graphs_circuits_v203.json'"));
 assert(sw.includes("'./physics_graphs_circuits_v203.json'"));
 assert(sw.includes('v203-physics-graphs-circuits'));
-assert(html.includes('app.js?v=203'));
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));

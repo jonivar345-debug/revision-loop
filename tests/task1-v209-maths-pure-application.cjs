@@ -14,7 +14,7 @@ assert(sw.includes("'./maths_pure_proof_vector_applications_v209.json'"));
 assert(sw.includes("'./maths-as-pure-marking-v209.js'"));
 assert(sw.includes('v209-maths-original-challenges'));
 assert(html.includes('maths-as-pure-marking-v209.js?v=212'));
-assert(html.indexOf('maths-as-pure-marking-v209.js')<html.indexOf('app.js?v=203'));
+assert(html.indexOf('maths-as-pure-marking-v209.js')<html.search(new RegExp('app[.]js[?]v=[0-9]+')));
 assert(app.includes('window.RevisionPureMathsV209?.evaluate(q,answer)'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));

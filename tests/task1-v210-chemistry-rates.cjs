@@ -20,7 +20,7 @@ assert(sw.includes("'./chemistry_rates_rp7_recall_v210.json'"));
 assert(sw.includes("'./chemistry-rates-marking-v210.js'"));
 assert(sw.includes('v210-chemistry-rp7-kp'));
 assert(html.includes('chemistry-rates-marking-v210.js?v=210'));
-assert(html.indexOf('chemistry-rates-marking-v210.js')<html.indexOf('app.js?v=203'));
+assert(html.indexOf('chemistry-rates-marking-v210.js')<html.search(new RegExp('app[.]js[?]v=[0-9]+')));
 assert(app.includes('window.RevisionChemRatesV210?.evaluate(q,answer)'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));

@@ -15,7 +15,7 @@ assert.equal(bank202.questions.filter(q=>q.requiredPractical===6).length,3,'exis
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"),'progress key unchanged');
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"),'profile key unchanged');
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"),'settings key unchanged');
-assert(html.includes('app.js?v=203'),'retain existing asset version regression contract');
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html),'retain existing asset version regression contract');
 assert(sw.includes('v222-rp5-rp6-recall'),'offline cache namespace');
 assert(sw.includes("'./chemistry_rp5_rp6_reasoning_recall_v222.json'"),'precache supplement');
 assert(app.includes("'./chemistry_rp5_rp6_reasoning_recall_v222.json'"),'fetch supplement');

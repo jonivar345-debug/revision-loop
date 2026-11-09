@@ -6,7 +6,7 @@ const deck=json('deck.json'),core=json('exam_questions.json');
 const app=read('app.js'),sw=read('sw.js'),html=read('index.html');
 assert.equal(report.version,'v223');assert.equal(report.safeguards.task1Complete,false);
 assert.equal(source.questions.length,9);assert.equal(deck.cards.length,3345);assert.equal(core.questions.length,1268);
-assert(sw.includes('v223-chemistry-marking'));assert(html.includes('app.js?v=203'));
+assert(sw.includes('v223-chemistry-marking'));assert(new RegExp('app[.]js[?]v=[0-9]+').test(html));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));

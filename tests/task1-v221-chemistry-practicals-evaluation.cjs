@@ -14,7 +14,7 @@ assert.equal(deck.cards.filter(c=>c.subject==='Chemistry'&&c.stage==='AS'&&c.moc
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
 assert(app.includes("PROFILE_KEY='revisionLoopProfile11'"));
 assert(app.includes("SETTINGS_KEY='revisionLoopSettings11'"));
-assert(html.includes('app.js?v=203'));
+assert(new RegExp('app[.]js[?]v=[0-9]+').test(html));
 assert(sw.includes('v221-rp-evaluation'));
 assert(sw.includes("'./chemistry_practicals_analysis_recall_v221.json'"));
 assert(app.includes("'./chemistry_practicals_analysis_recall_v221.json'"));

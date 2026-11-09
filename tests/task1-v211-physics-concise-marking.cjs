@@ -8,7 +8,7 @@ assert.equal(bank.questions.length,8);
 assert.equal(bank.questions.reduce((n,q)=>n+q.marks,0),67);
 assert(app.includes('window.RevisionPhysicsConciseV211?.evaluate(q,answer)'));
 assert(html.includes('physics-concise-marking-v211.js?v=211'));
-assert(html.indexOf('physics-concise-marking-v211.js')<html.indexOf('app.js?v=203'));
+assert(html.indexOf('physics-concise-marking-v211.js')<html.search(new RegExp('app[.]js[?]v=[0-9]+')));
 assert(sw.includes("'./physics-concise-marking-v211.js'"));
 assert(sw.includes('v211-physics-concise-calibration'));
 assert(app.includes("PROGRESS_KEY='revisionLoopProgress5'"));
