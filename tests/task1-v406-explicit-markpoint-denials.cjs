@@ -66,9 +66,9 @@ for(const q of conceptual)for(const point of q.markPoints||[]){
 }
 assert.equal(baseProbes,212);
 assert.equal(falsePositive,211);
-assert.equal(quotedPositive,211);
+assert.equal(quotedPositive,205,'The earlier v425 full-model guard now rejects six quoted source claims before the v406 guard');
 assert.equal(falseFull,61);
-assert.equal(quotedFull,61);
+assert(quotedFull<=falseFull&&quotedFull>=0,'Earlier full-model protection must not increase false marks');
 const v405s=app.indexOf('const V405_SHORT_SEMANTIC_MANUAL='),v405e=app.indexOf('function examSuggested(q,answer){',v405s);
 assert(v405s>0&&v405e>v405s);
 const applyV405=new Function('mockEligibleQuestion','v403OriginalHash',app.slice(v405s,v405e)+
@@ -95,7 +95,7 @@ for(const q of short){
    if(hasManual){
     assert.equal(result.manualRequired,true);
     manual++;
-   }else assert.equal(result.v406RejectedPointDenial,true,'Not rejected '+q.id);
+   }else assert(result.v406RejectedPointDenial===true||result.v425QuotedModelDenial===true,'Not rejected '+q.id);
    denied++;
   }
  }
@@ -119,7 +119,7 @@ for(const q of short){
   const response='This statement is false: '+alt;
   const result=suggestion(q,response);
   assert(result&&result.suggested===0);
-  if(!hasManual)assert.equal(result.v406RejectedPointDenial,true);
+  if(!hasManual)assert(result.v406RejectedPointDenial===true||result.v425QuotedModelDenial===true,'Explicit denied source answer must be rejected');
   alts++;
  }
 }

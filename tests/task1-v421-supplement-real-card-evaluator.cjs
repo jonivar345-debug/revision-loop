@@ -116,6 +116,9 @@ const summary={
 };
 assert.equal(results.blankCredited.length,0,'A blank answer receives full credit');
 assert.equal(results.nonanswerCredited.length,0,'I do not know receives full credit');
+assert.equal(results.denialCredited.length,0,'An explicit exact-model denial received full credit');
+assert.equal(results.rejectCredited.length,0,'A deliberately rejected flashcard variant received full credit');
+assert.equal(results.echoCredited.length,0,'A copied flashcard question received full credit');
 console.log('PASS v421: full supplementary candidate evaluator executed; no blank/IDK full credit. Risk findings below require triage before claiming marker sign-off.');
 console.log('V421_EVALUATOR_REPORT_START');
 console.log(JSON.stringify(summary,null,2));

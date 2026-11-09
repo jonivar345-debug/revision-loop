@@ -18,7 +18,20 @@ const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h
 const first=app.indexOf('const V382_MATHS_WORKED_MANUAL='),last=app.indexOf('const V287_LEGACY_SPEC_GROUPS=',first);
 assert(first>0&&last>first);
 const {selected,apply}=new Function(app.slice(first,last)+'\nreturn {selected:V382_MATHS_WORKED_MANUAL,apply:applyV382MathsWorkedExamManualReview};')();
-assert.deepEqual(selected,audit.rows.map(({sourceFile,...row})=>row));
+// v427: v414 corrected six historical Maths spec labels. Preserve the dated
+// v382 ledger and every source hash, while asserting the new live labels.
+const correctedRefs={
+ task1_v190_maths_001:'3.2',task1_v190_maths_002:'3.2',
+ task1_v190_maths_003:'3.11',task1_v190_maths_004:'3.11',
+ task1_v209_maths_003:'3.11',task1_v209_maths_004:'3.11'
+};
+const expectedRows=audit.rows.map(({sourceFile,...row})=>({
+ ...row,
+ sourceSpecRef:correctedRefs[row.id]??row.sourceSpecRef,
+ effectiveSpecRef:correctedRefs[row.id]??row.effectiveSpecRef
+}));
+const expectedById=new Map(expectedRows.map(x=>[x.id,x]));
+assert.deepEqual(selected,expectedRows);
 const banks=new Map(),orig=[];
 for(const row of audit.rows){
  if(!banks.has(row.sourceFile))banks.set(row.sourceFile,json(row.sourceFile));
@@ -26,7 +39,7 @@ for(const row of audit.rows){
  assert(q,'Missing original '+row.id);
  for(const [k,v] of Object.entries({subject:'Maths',level:'AS',mock:true,standalone:true,requiresWorking:true,marks:row.marks}))assert.equal(q[k],v);
  assert.equal(q.courseTopic??null,row.sourceCourseTopic);
- assert.equal(q.specRef??null,row.sourceSpecRef);
+ assert.equal(q.specRef??null,expectedById.get(row.id).sourceSpecRef);
  assert.notEqual(q.taught,false);assert.notEqual(q.manualDiagramReview,true);assert.notEqual(q.manualWorkingReview,true);
  assert.equal(q.markPoints.length,q.marks);
  assert.equal(q.markPointMarks.reduce((a,b)=>a+b,0),q.marks);
@@ -41,7 +54,7 @@ apply(modified);
 assert.equal(JSON.stringify(orig),originalSnapshot,'Original source bank was modified');
 assert.equal(modified.filter(q=>q.manualWorkingReview===true).length,18);
 assert.equal(modified.reduce((sum,q)=>sum+(q.manualWorkingReview?q.marks:0),0),112);
-assert.equal(modified.filter(q=>q.specRef==='3.11').length,3);
+assert.equal(modified.filter(q=>q.specRef==='3.11').length,5);
 const ms=app.indexOf('const MOCK_MATHS_YEAR2_EXCLUDED_IDS='),me=app.indexOf('function startMockSession(){',ms);
 const eligible=new Function(app.slice(ms,me)+'\nreturn mockEligibleQuestion;')();
 const es=app.indexOf('function examSuggested(q,answer){'),ee=app.indexOf(' // v213:',es);
@@ -53,7 +66,7 @@ let probes=0,negative=0;
 for(let i=0;i<orig.length;i++){
  const src=orig[i],q=modified[i],row=audit.rows[i];
  assert.equal(q.v382ReviewRequired,true);
- assert.equal(q.specRef??null,row.effectiveSpecRef);
+ assert.equal(q.specRef??null,expectedById.get(row.id).effectiveSpecRef);
  assert(eligible(q),'Source Year 1 Pure question excluded from first mock '+q.id);
  assert.match(helper.help(q),q.specRef==='3.2'?/full mathematical proof/:/multi-step maths question/);
  assert.equal(helper.button(q),q.specRef==='3.2'?'Review proof marking points manually':'Review maths working point by point');

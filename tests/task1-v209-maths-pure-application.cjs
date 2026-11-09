@@ -36,7 +36,9 @@ for(const q of bank.questions){
  assert(q.subject==='Maths'&&q.level==='AS'&&q.mock===true&&q.taught===true);
  assert(q.year==='Practice'&&q.sourceVerified===false&&q.verificationLevel==='original-exam-style');
  assert(q.requiresWorking===true&&q.standalone===true&&q.difficulty==='hard');
- assert(['3.2','3.3','3.10'].includes(q.specRef));
+ // v427: Maths AQA Year 1 Pure vectors are 3.11 (not old 3.10).
+ const officialRef={Proof:'3.2',Vectors:'3.11',Transformations:'3.3'};
+ assert.equal(q.specRef,officialRef[q.topic],'Incorrect official Year 1 Pure specification label '+q.id);
  assert(['Proof','Vectors','Transformations'].includes(q.topic));
  assert.equal(q.markPoints.length,q.marks);
  assert.deepEqual(q.markPointMarks,Array(q.marks).fill(1));

@@ -1,0 +1,48 @@
+name: Task 1 v427 integrated mock answer and metadata release
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - '*.json'
+      - 'tests/task1-v4*.cjs'
+      - '.github/workflows/task1-v427-integrated-mock-release.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-integrated-school-mock-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax and immutable original inventory
+        run: |
+          node --check app.js
+          node --check sw.js
+          node tests/task1-v401-mock-signoff-inventory.cjs
+      - name: Original and supplementary flashcard real scorer all-source tests
+        run: |
+          node tests/task1-v426-original-core-real-marker.cjs
+          node tests/task1-v421-supplement-real-card-evaluator.cjs
+          node tests/task1-v422-bond-diagram-denials.cjs
+      - name: Original short-answer and prior nonanswer defences
+        run: |
+          node tests/task1-v423-original-short-exam-adversarial.cjs
+          node tests/task1-v406-explicit-markpoint-denials.cjs
+          node tests/task1-v409-short-negation-qa.cjs
+          node tests/task1-v404-exam-nonanswer-qa.cjs
+      - name: Original and supplemental multistep manual marking routing
+        run: |
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v412-supplement-multimark-manual.cjs
+          node tests/task1-v411-supplement-mock-routing-audit.cjs
+          node tests/task1-v418-v382-maths-guard-integration.cjs
+      - name: Metadata source-lock and in-scope first-school-mock checks
+        run: |
+          node tests/task1-v414-maths-mock-spec-metadata.cjs
+          node tests/task1-v415-chem-arrhenius-spec.cjs
+          node tests/task1-v417-chem-legacy-70-crosswalk.cjs
+          node tests/task1-v420-chem-70-live-specrefs.cjs
+          node tests/task1-v408-chemistry-mock-boundary-qa.cjs

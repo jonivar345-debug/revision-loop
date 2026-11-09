@@ -48,7 +48,7 @@ for(const q of short){
    assert.equal(result.finalCorrect,false);
    assert.deepEqual(result.preds,Array(q.markPoints.length).fill(false));
    if(manual){assert.equal(result.manualRequired,true);manualNegatives++}
-   else assert.equal(result.v406RejectedPointDenial,true,'Denial form not recognised '+q.id);
+   else assert(result.v406RejectedPointDenial===true||result.v425QuotedModelDenial===true,'Denial form not recognised '+q.id);
    negatives++;
   }
  }
@@ -90,7 +90,7 @@ for(const id of liveIds){
  for(const make of variants){
   const result=full(q,make(q.markPoints[0]));
   assert.equal(result.suggested,0,'Real full evaluator credited false claim '+id);
-  assert.equal(result.v406RejectedPointDenial,true);
+  assert(result.v406RejectedPointDenial===true||result.v425QuotedModelDenial===true,'Explicit correct-point denial must be rejected');
   fullNegatives++;
  }
  const result=full(q,correctModel(q));
