@@ -37,7 +37,7 @@ try{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/*',route=>route.request().url().startsWith(url)?route.continue():route.abort());
   await page.addInitScript(data=>{
-    for(const [k,v] of Object.entries(data))localStorage.setItem(k,v);
+    for(const [k,v] of Object.entries(data))if(localStorage.getItem(k)===null)localStorage.setItem(k,v);
     localStorage.setItem('rl_auth','1');
   },synthetic);
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});
