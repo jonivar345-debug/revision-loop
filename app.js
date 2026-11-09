@@ -6435,6 +6435,7 @@ async function sync(manual=false){
   q.manualWorkingReview=true;
   q.v412SupplementManualRequired=true;
  }
+ deckMeta=d.meta||{};
  // Optional original Paper 2 coaching cards: separate from real mock sessions
  // and full past-paper questions. Missing files never break core revision.
  for(const url of PHYSICS_AS_PAPER2_TRAINING_FILES){
@@ -6455,7 +6456,7 @@ async function sync(manual=false){
    }
   }catch{}
  }
- deckMeta=d.meta||{};coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
+ coverage=e.coverage||{};deckVersion=d.deckVersion||0;bankVersion=e.bankVersion||0;initPhysicsUnits();refreshFlashTopics(!flashTopics.size);refreshExamFilters(!examYears.size&&!examTopics.size);document.getElementById('syncState').textContent='Deck v'+deckVersion+' · '+cards.length+' flashcards · '+examQuestions.filter(q=>q.standalone!==false).length+' usable AQA question parts';if(manual)showToast(old&&deckVersion>old?'New revision content loaded':'Already up to date');renderAll()}catch{document.getElementById('syncState').textContent='Could not sync right now';if(manual)showToast('Sync failed')}
 }
 function switchPanel(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));if(id==='shop')setTimeout(renderShop,0)}
 // Deep links from the retired article-preview page open the actual shop.
