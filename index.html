@@ -127,6 +127,17 @@
           <button class="mini-btn" data-flash-preset="all">All available</button>
           <button class="mini-btn" data-flash-preset="clear">Clear</button>
         </div>
+        <section class="paper2-training" aria-label="AQA AS Physics Paper 2 flashcard coaching">
+          <h3>AS Physics Paper 2 · question-style coaching</h3>
+          <p>Short guided cards for the different styles: <strong>A</strong> practicals and graphs (20 marks), <strong>B</strong> linked reasoning (20 marks), and <strong>C</strong> multiple choice (30 marks). Original practice, not copies of past questions.</p>
+          <div class="paper2-training-buttons">
+            <button type="button" data-paper2-section="all">All Paper 2 styles</button>
+            <button type="button" data-paper2-section="A">A · Practicals</button>
+            <button type="button" data-paper2-section="B">B · Reasoning</button>
+            <button type="button" data-paper2-section="C">C · MCQ</button>
+          </div>
+          <p id="paper2Status" class="paper2-training-status" aria-live="polite">Choose a section, then start flashcards. Use the hint if stuck; check your answer and rate the card.</p>
+        </section>
         <div id="flashTopics" class="check-grid"></div>
         <button id="startFlashcards" class="primary-btn full-btn">Start random flashcards</button>
       </div>
@@ -316,7 +327,7 @@
 <script src="chemistry-rates-marking-v210.js?v=210" defer></script>
 <script src="physics-concise-marking-v211.js?v=211" defer></script>
 <script src="physics-materials-divider-marking-v213.js?v=213" defer></script>
-<script src="app.js?v=429" defer></script>
+<script src="app.js?v=430" defer></script>
 <script src="world-zoom-helpers.js?v=61" defer></script>
 <script src="world-globe-article-bridge.js?v=73" defer></script>
 <script>
