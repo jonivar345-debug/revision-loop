@@ -780,3 +780,5 @@ html[data-layout-mode="pc"] .shop-grid{grid-template-columns:repeat(auto-fill,mi
 .quick-review-btn:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
 .quick-review-note{margin:-2px 0 3px;color:#64748b;font-size:.69rem;line-height:1.45;overflow-wrap:anywhere}
 @media(max-width:390px){.quick-review-actions{gap:6px}.quick-review-btn{flex-basis:120px;padding:9px 7px;font-size:.73rem}}
+
+.quick-review-btn:disabled{opacity:.55;cursor:not-allowed;background:#f1f5f9}
