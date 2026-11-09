@@ -36,7 +36,7 @@ assert.deepEqual(counts,{A:40,B:37,C:30});
 assert(topics.size>=7,'Practical, mechanics, waves, particles, electricity and strategy must appear');
 assert(skills.size>=80,'Different styles should not repeat one vague question');
 assert.equal(new Set(cards.map(c=>c.front)).size,cards.length,'Avoid repeated prompts.');
-assert(!data.sourceAuditStatus.toLowerCase().includes('complete year-by-year item-to-skill map'),'Do not claim exhaustive past-paper mapping');
+assert(data.sourceAuditStatus.includes('not yet been independently verified'),'Do not claim exhaustive past-paper mapping');
 for(const id of ['as_paper2_v430_001','as_paper2_v430_034','as_paper2_v430_035','as_paper2_v430_064','as_paper2_v430_065','as_paper2_v430_087','as_paper2_v430_107']){
  assert(ids.has(id),'Missing key coverage '+id);
 }
