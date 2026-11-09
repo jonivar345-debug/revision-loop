@@ -31,15 +31,15 @@ The automatic rule is a *conservative first pass*, **not** a guarantee that ever
 - Verify all legacy GitHub Actions checks and READY matching Vercel preview before merge.
 
 ## Core deck source audit (v429, 9 November 2026)
-The repository's actual `deck.json` (3,345 cards) was independently checked with the v429 classifier. After false-positive corrections it identifies **322 priority candidates**:
+The repository's actual `deck.json` (3,345 cards) was independently checked with the v429 classifier. After false-positive corrections it identifies **309 priority candidates**:
 
 | Subject | All original cards | Key definitions | Missing-equation cards | Total priority |
 |---|---:|---:|---:|---:|
-| Physics | 1,154 | 90 | 5 | 95 |
-| Chemistry | 1,981 | 153 | 49 | 202 |
-| Maths | 210 | 17 | 8 | 25 |
-| **Total** | **3,345** | **260** | **62** | **322** |
+| Physics | 1,154 | 82 | 5 | 87 |
+| Chemistry | 1,981 | 151 | 49 | 200 |
+| Maths | 210 | 11 | 11 | 22 |
+| **Total** | **3,345** | **244** | **65** | **309** |
 
-The counts are **not** a specification completeness claim, and supplemental banks increase the number of eligible recall cards in the actual site. Conservative Physics equation tagging is deliberate because most core equations already appear on its insert. Automated QA found and corrected three ordinary Chemistry process/calculation cards that should *not* have been called memorisation equations, and added key definitions for ionic/metallic bonding, decay constant, mass defect and a first-principles derivative definition, plus Maths line/vector and triangle-area formulae.
+The counts are **not** a specification completeness claim, and supplemental banks increase the number of eligible recall cards in the actual site. Conservative Physics equation tagging is deliberate because most core equations already appear on its insert. Automated QA found and corrected three ordinary Chemistry process/calculation cards that should *not* have been called memorisation equations, and added key definitions for ionic/metallic bonding, decay constant, mass defect and a first-principles derivative definition, plus Maths index and logarithm laws, line/vector and triangle-area formulae. After cross-checking the actual MFB8 formula booklet, the first-principles differentiation formula is **not** labelled missing because it is supplied; ordinary safety advice and practical instrument questions are also excluded from the definition priority.
 
 The algorithm does not guarantee every important fact has been reviewed individually. All non-priority cards remain available, and previously scheduled `Again/Hard/Good/Easy` ratings are untouched.
