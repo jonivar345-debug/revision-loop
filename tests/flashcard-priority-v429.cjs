@@ -61,6 +61,26 @@ assert.equal(recall.classify(real.cards[0])?.kind,'equation');
 assert.equal(recall.isMustKnow(real.cards[0]),true);
 passed+=2;
 
+// Audit the actual original 3,345-card bank, not just generated fixtures.
+const core=JSON.parse(fs.readFileSync('deck.json','utf8')).cards;
+assert.equal(core.length,3345);
+const counts={Physics:{definition:0,equation:0},Chemistry:{definition:0,equation:0},Maths:{definition:0,equation:0}};
+for(const card of core){const group=recall.classify(card);if(group)counts[card.subject][group.kind]++;}
+assert.deepEqual(counts,{
+ Physics:{definition:90,equation:5},
+ Chemistry:{definition:153,equation:49},
+ Maths:{definition:17,equation:8}
+},'Core priority labels must match independent 9 Nov source audit.');
+const byId=new Map(core.map(card=>[card.id,card]));
+for(const id of ['chem_bonding_v47_01','chem_bonding_v47_17','task1_v124_bulk_phy_126',
+ 'task1_v131_066','task1_v162_020','math_triangle_area','math_vector_line']){
+ assert(recall.isMustKnow(byId.get(id)),'Important key knowledge not prioritised: '+id);
+}
+for(const id of ['chem_empirical_001','chem_energetics_v53_13','chem_energetics_v53_23',
+ 'phy_wave_speed','phy_double_slit']){
+ assert(!recall.isMustKnow(byId.get(id)),'Ordinary/provided-formula card wrongly prioritised: '+id);
+}
+
 // Exercise actual selection function with deterministic urgency and mixed facts.
 // Don't reimplement selection logic in the test.
 const start=app.indexOf('function isRecallMustKnow(card){');
