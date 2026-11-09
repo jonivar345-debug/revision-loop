@@ -29,9 +29,12 @@
       "front": "In an experiment, which variable goes on the horizontal axis?",
       "back": "The independent variable.",
       "accept": [
-        "The independent variable."
+        "The independent variable.",
+        "independent variable",
+        "the independent variable",
+        "independent"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -43,7 +46,12 @@
       "paper2Hint": "Think about graph: independent variable. What single step would earn the mark?",
       "paper2Method": "Identify what the experimenter deliberately changes.",
       "paper2Pitfall": "Check axes before plotting; an axis label must include its unit.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "dependent variable",
+        "the dependent variable",
+        "dependent"
+      ]
     },
     {
       "id": "as_paper2_v430_002",
@@ -56,9 +64,12 @@
       "front": "Which variable normally belongs on the vertical axis?",
       "back": "The dependent variable.",
       "accept": [
-        "The dependent variable."
+        "The dependent variable.",
+        "dependent variable",
+        "the dependent variable",
+        "dependent"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -70,7 +81,12 @@
       "paper2Hint": "Think about graph: dependent variable. What single step would earn the mark?",
       "paper2Method": "Identify the measured response to the changed variable.",
       "paper2Pitfall": "Do not swap axes just because the quantity has a larger numerical range.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "independent variable",
+        "the independent variable",
+        "independent"
+      ]
     },
     {
       "id": "as_paper2_v430_003",
@@ -1433,9 +1449,15 @@
       "front": "What happens to de Broglie wavelength when particle momentum increases?",
       "back": "Wavelength decreases.",
       "accept": [
-        "Wavelength decreases."
+        "Wavelength decreases.",
+        "wavelength decreases",
+        "decreases",
+        "gets shorter",
+        "shorter wavelength",
+        "wavelength becomes shorter",
+        "smaller wavelength"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -1447,7 +1469,14 @@
       "paper2Hint": "Think about de broglie trend. What single step would earn the mark?",
       "paper2Method": "Use the de Broglie equation λ = h/p; wavelength is inversely proportional to momentum.",
       "paper2Pitfall": "Massive particles can still show wave behaviour.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "wavelength increases",
+        "increases",
+        "gets longer",
+        "greater wavelength",
+        "stays the same"
+      ]
     },
     {
       "id": "as_paper2_v430_054",
@@ -1865,9 +1894,13 @@
       "front": "Which light quantity controls energy per photon?",
       "back": "Frequency.",
       "accept": [
-        "Frequency."
+        "Frequency.",
+        "frequency",
+        "the frequency",
+        "light frequency",
+        "f"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -1879,7 +1912,12 @@
       "paper2Hint": "Think about mcq: photon. What single step would earn the mark?",
       "paper2Method": "Use the photon energy equation E = hf, where f is the light frequency.",
       "paper2Pitfall": "Intensity controls photons per second at fixed frequency.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "intensity",
+        "amplitude",
+        "wavelength"
+      ]
     },
     {
       "id": "as_paper2_v430_070",
@@ -2379,10 +2417,11 @@
       "back": "2.1%",
       "accept": [
         "2.1%",
-        "2.1%",
-        "2.08%"
+        "2.08%",
+        "2.083%",
+        "2.1 percent"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2394,7 +2433,12 @@
       "paper2Hint": "Divide 0.1 by 4.8, then multiply by 100.",
       "paper2Method": "Carry all digits until your final rounding.",
       "paper2Pitfall": "Do not divide 4.8 by 0.1.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "48%",
+        "0.021%",
+        "4.8%"
+      ]
     },
     {
       "id": "as_paper2_v430_089",
@@ -2408,10 +2452,10 @@
       "back": "1.62 s",
       "accept": [
         "1.62 s",
-        "1.62 s",
-        "1.62 seconds"
+        "1.62 seconds",
+        "1.62s"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2423,7 +2467,12 @@
       "paper2Hint": "Divide the total duration by the oscillation count.",
       "paper2Method": "Period is the time for one complete oscillation.",
       "paper2Pitfall": "Do not quote 32.4 s as the period.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "32.4 s",
+        "20 s",
+        "0.62 s"
+      ]
     },
     {
       "id": "as_paper2_v430_090",
@@ -2438,9 +2487,9 @@
       "accept": [
         "±2 mm",
         "2 mm",
-        "±2 mm"
+        "2 millimetres"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2452,7 +2501,12 @@
       "paper2Hint": "For subtraction, add the two absolute uncertainties.",
       "paper2Method": "Keep the units of the lengths.",
       "paper2Pitfall": "Do not subtract uncertainties to zero.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "0 mm",
+        "1 mm",
+        "±0 mm"
+      ]
     },
     {
       "id": "as_paper2_v430_091",
@@ -2467,10 +2521,10 @@
       "accept": [
         "3 m s⁻¹",
         "3 m/s",
-        "3 m s^-1",
-        "3 ms-1"
+        "3 ms-1",
+        "3 m s^-1"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2482,7 +2536,12 @@
       "paper2Hint": "Calculate Δy/Δx using widely separated line points.",
       "paper2Method": "Take 12 m divided by 4 s.",
       "paper2Pitfall": "Do not omit the unit of the gradient.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "3 m",
+        "3 s",
+        "0.33 m s^-1"
+      ]
     },
     {
       "id": "as_paper2_v430_092",
@@ -2496,9 +2555,9 @@
       "back": "9%",
       "accept": [
         "9%",
-        "9%"
+        "9 percent"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2510,7 +2569,12 @@
       "paper2Hint": "For multiplication or division, add percentage uncertainties.",
       "paper2Method": "Add the two percentage uncertainties: 5% + 4% = 9%.",
       "paper2Pitfall": "Do not subtract the percentages because of division.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "1%",
+        "20%",
+        "45%"
+      ]
     },
     {
       "id": "as_paper2_v430_093",
@@ -2552,10 +2616,11 @@
       "back": "6 N",
       "accept": [
         "6 N",
-        "6 N",
-        "6 newtons"
+        "no",
+        "no it cannot",
+        "no the relationship may not apply outside the measured range"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2567,7 +2632,11 @@
       "paper2Hint": "Find the side opposite the 30° angle.",
       "paper2Method": "Use 12 sin 30° = 6 N.",
       "paper2Pitfall": "Do not use cosine for the vertical component here.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "yes",
+        "yes it proves it"
+      ]
     },
     {
       "id": "as_paper2_v430_095",
@@ -2581,10 +2650,12 @@
       "back": "4 m",
       "accept": [
         "4 m",
-        "4 m",
-        "4 metres"
+        "4 metres",
+        "+4 m",
+        "positive four metres",
+        "displacement is 4 m"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2596,7 +2667,13 @@
       "paper2Hint": "Calculate the signed area of both velocity–time rectangles.",
       "paper2Method": "(3 × 2) + (−1 × 2) = 4 m.",
       "paper2Pitfall": "Distance would be 8 m, not 4 m.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "8 m",
+        "8 metres",
+        "-4 m",
+        "4 m distance"
+      ]
     },
     {
       "id": "as_paper2_v430_096",
@@ -2610,10 +2687,10 @@
       "back": "8 m",
       "accept": [
         "8 m",
-        "8 m",
-        "8 metres"
+        "8 metres",
+        "distance is 8 m"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2625,7 +2702,13 @@
       "paper2Hint": "Add both rectangular areas as positive distances.",
       "paper2Method": "For distance, add the unsigned areas: 6 m + 2 m = 8 m.",
       "paper2Pitfall": "Do not report the signed displacement of 4 m.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "4 m",
+        "4 metres",
+        "displacement 4 m",
+        "-8 m"
+      ]
     },
     {
       "id": "as_paper2_v430_097",
@@ -2639,10 +2722,9 @@
       "back": "8 N",
       "accept": [
         "8 N",
-        "8 N",
         "8 newtons"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2654,7 +2736,12 @@
       "paper2Hint": "At constant terminal velocity, resultant force is zero.",
       "paper2Method": "Air resistance balances weight.",
       "paper2Pitfall": "Drag is not zero just because acceleration is zero.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "0 N",
+        "16 N",
+        "4 N"
+      ]
     },
     {
       "id": "as_paper2_v430_098",
@@ -2668,10 +2755,10 @@
       "back": "1.4 V",
       "accept": [
         "1.4 V",
-        "1.4 V",
-        "1.40 V"
+        "1.40 V",
+        "1.4 volts"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2683,7 +2770,12 @@
       "paper2Hint": "The output voltage is lower than the EMF. What quantity is lost inside the source?",
       "paper2Method": "1.6 − (0.40 × 0.50) = 1.4 V.",
       "paper2Pitfall": "Internal resistance causes a lost p.d.; do not add it.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "1.8 V",
+        "1.6 V",
+        "0.2 V"
+      ]
     },
     {
       "id": "as_paper2_v430_099",
@@ -2755,10 +2847,15 @@
       "back": "It halves.",
       "accept": [
         "It halves.",
+        "it halves",
         "halves",
-        "half"
+        "wavelength halves",
+        "the wavelength halves",
+        "half its original value",
+        "halved",
+        "it becomes half"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2770,7 +2867,14 @@
       "paper2Hint": "Use v = fλ with f fixed.",
       "paper2Method": "Wavelength is proportional to speed when frequency is constant.",
       "paper2Pitfall": "Frequency does not halve at the boundary.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "frequency halves",
+        "the frequency halves",
+        "doubles",
+        "wavelength doubles",
+        "unchanged"
+      ]
     },
     {
       "id": "as_paper2_v430_102",
@@ -2784,11 +2888,14 @@
       "back": "It quadruples.",
       "accept": [
         "It quadruples.",
+        "it quadruples",
+        "quadruples",
         "four times",
         "4 times",
-        "quadruples"
+        "x4",
+        "4×"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2800,7 +2907,12 @@
       "paper2Hint": "Use intensity proportional to amplitude squared.",
       "paper2Method": "2² = 4, so the intensity is four times larger.",
       "paper2Pitfall": "Amplitude and intensity are not directly proportional.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "doubles",
+        "two times",
+        "eight times"
+      ]
     },
     {
       "id": "as_paper2_v430_103",
@@ -2815,9 +2927,10 @@
       "accept": [
         "3.0 A",
         "3 A",
-        "3.0 A"
+        "3 amperes",
+        "3 amps"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2829,7 +2942,12 @@
       "paper2Hint": "Average current means how many coulombs pass per second.",
       "paper2Method": "0.30 / 0.10 = 3.0 A.",
       "paper2Pitfall": "Do not multiply charge by time.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "0.03 A",
+        "0.30 A",
+        "30 A"
+      ]
     },
     {
       "id": "as_paper2_v430_104",
@@ -2845,9 +2963,11 @@
         "It becomes nine times larger.",
         "nine times",
         "9 times",
-        "9x"
+        "9x",
+        "ninefold",
+        "becomes nine times larger"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2859,7 +2979,12 @@
       "paper2Hint": "Use energy proportional to extension squared.",
       "paper2Method": "Stored energy scales with extension squared: 3² = 9.",
       "paper2Pitfall": "Force becomes three times larger, not energy.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "three times",
+        "triples",
+        "6 times"
+      ]
     },
     {
       "id": "as_paper2_v430_105",
@@ -2873,9 +2998,9 @@
       "back": "4.5 mA",
       "accept": [
         "4.5 mA",
-        "4.5 mA"
+        "4.5 milliamperes"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2887,7 +3012,12 @@
       "paper2Hint": "Multiply amperes by 1000.",
       "paper2Method": "0.0045 × 1000 = 4.5 mA.",
       "paper2Pitfall": "Do not confuse milli with micro.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "0.0045 mA",
+        "45 mA",
+        "4500 mA"
+      ]
     },
     {
       "id": "as_paper2_v430_106",
@@ -2901,9 +3031,11 @@
       "back": "Negative.",
       "accept": [
         "Negative.",
-        "negative"
+        "negative",
+        "negative acceleration",
+        "it is negative"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2915,7 +3047,12 @@
       "paper2Hint": "Acceleration is the slope Δv/Δt.",
       "paper2Method": "A negative velocity gradient gives negative acceleration.",
       "paper2Pitfall": "Do not assume negative acceleration always means slowing.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "positive",
+        "positive acceleration",
+        "zero"
+      ]
     },
     {
       "id": "as_paper2_v430_107",
@@ -2929,11 +3066,14 @@
       "back": "It is unchanged.",
       "accept": [
         "It is unchanged.",
+        "unchanged",
         "same",
         "constant",
-        "unchanged"
+        "it stays the same",
+        "no change",
+        "resistance remains unchanged"
       ],
-      "strictRecall": false,
+      "strictRecall": true,
       "active": true,
       "taught": true,
       "mock": false,
@@ -2945,7 +3085,13 @@
       "paper2Hint": "Compare the new ratio V/I with the original ratio rather than looking at either alone.",
       "paper2Method": "Both numerator and denominator double, so the ratio stays fixed.",
       "paper2Pitfall": "Do not claim resistance doubles.",
-      "priority": 2
+      "priority": 2,
+      "reject": [
+        "doubles",
+        "it doubles",
+        "halves",
+        "it halves"
+      ]
     }
   ]
 }
