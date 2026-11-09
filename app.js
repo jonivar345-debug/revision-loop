@@ -3963,7 +3963,7 @@ function rateCard(c,rating,answer){
  profile.reviews++;daily().reviews++;save();advanceSession();
 }
 function awardFlashIfCorrect(){
- if(currentFlashAwarded||currentEvaluation?.status!=='correct')return;currentFlashAwarded=true;award(1,'flash');daily().flashCorrect++;
+ if(currentFlashAwarded||currentEvaluation?.status!=='correct')return;currentFlashAwarded=true;award(1,'flash');daily().flashCorrect++;const skip=document.getElementById('skipCard');if(skip){skip.disabled=true;skip.title='Save a review rating before moving on after earning XP';}
 }
 function overrideFlashCorrect(){
  if(currentEvaluation?.status==='correct')return;currentEvaluation={status:'correct',score:1,text:'Marked correct by you.',missing:[]};awardFlashIfCorrect();const f=document.getElementById('feedback');f.className='feedback show correct';f.textContent='Marked correct by you. +1 point / +1 XP.';document.getElementById('overrideBtn').classList.remove('show')
@@ -3973,6 +3973,7 @@ function selfRateKnownCard(c){
  // A quick voluntary recall rating is not a checked answer and earns no XP.
  if(!activeSession||activeSession.done||activeSession.items[activeSession.index]?.id!==c.id)return;
  const typed=document.getElementById('answerInput')?.value||'';
+ if(currentEvaluation?.status==='correct'){rateCard(c,'good',typed);return;}
  currentEvaluation={status:'self-rated',score:0,text:'Self-rated as known, not automatically checked.',missing:[]};
  rateCard(c,'good','[I know this · self-rated] '+typed);
 }
@@ -4149,6 +4150,7 @@ function startMistakes(){
 function skipStudyItem(){
  if(!activeSession||activeSession.done)return;
  const item=activeSession.items[activeSession.index];if(!item)return;
+ if(item.type==='card'&&currentFlashAwarded){showToast('Choose Again, Hard, Good or Easy to save your checked answer.');return;}
  const typed=document.getElementById(item.type==='card'?'answerInput':'examAnswer')?.value?.trim()||'';
  const pending=item.type==='exam'&&((window.RevisionScan?.countFor?.(item.id)||0)>0||
   window.RevisionSketch?.hasPendingInk?.()===true);
