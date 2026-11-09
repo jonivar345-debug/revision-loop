@@ -3544,7 +3544,24 @@ function isSingleChemistryCoefficientError(c,input){
  }
  return changes===1;
 }
+// v422: seven exact AQA Chemistry bonding-diagram recall cards can be
+// falsely credited when the response quotes a right answer only to deny it.
+// A tightly anchored, complete quoted denial is not evidence of understanding.
+// Preserve genuine contrast explanations and all other card marking paths.
+function isV422ExplicitBondDiagramDenial(c,input){
+ if(c?.subject!=='Chemistry'||!/^task1_v237_chem_bond_diagram_0[1-7]$/.test(String(c?.id||'')))return false;
+ const raw=String(input||'').trim();
+ const match=raw.match(/^the\s+(?:correct\s+)?(?:statement|answer)\s+["“]([\s\S]+?)["”]\s+(?:is|was)\s+(?:wrong|false|incorrect|untrue)\.?\s*$/i);
+ if(!match)return false;
+ const comparable=value=>String(value||'').normalize('NFKC').toLowerCase().trim()
+  .replace(/\s+/g,' ').replace(/[.!?]+$/,'').trim();
+ const denial=comparable(match[1]);
+ return Boolean(denial&&[c.back,...(Array.isArray(c.accept)?c.accept:[])]
+  .some(correct=>comparable(correct)===denial));
+}
 function evaluateCard(c,input){
+ if(isV422ExplicitBondDiagramDenial(c,input))
+  return {status:'wrong',score:0,text:'This explicitly rejects a correct bonding-diagram answer.',missing:[String(c.back||'')]};
  // v389: repeating the full flashcard question is not an answer, even if
  // fuzzy token overlap would otherwise make it look correct. Preserve a rare
  // legitimate card where its official answer is literally the same string.

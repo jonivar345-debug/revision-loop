@@ -1,0 +1,35 @@
+name: Task 1 v422 Chemistry bonding-diagram denial marker safety
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'sw.js'
+      - 'tests/task1-v421-supplement-real-card-evaluator.cjs'
+      - 'tests/task1-v422-bond-diagram-denials.cjs'
+      - '.github/workflows/task1-v422-bond-diagram-denials.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  protect-seven-chemistry-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check tests/task1-v422-bond-diagram-denials.cjs
+          node --check tests/task1-v421-supplement-real-card-evaluator.cjs
+      - name: Protect all seven Chemistry diagram-recall answers
+        run: node tests/task1-v422-bond-diagram-denials.cjs
+      - name: All 12,437 real flashcard marking probes must reject explicit wrong answers
+        run: node tests/task1-v421-supplement-real-card-evaluator.cjs
+      - name: Regress all mock card source and prior marking safeguards
+        run: |
+          node tests/task1-v419-mock-card-marker-audit.cjs
+          node tests/task1-v410-live-mock-marker-route.cjs
+          node tests/task1-v409-short-negation-qa.cjs
+          node tests/task1-v401-mock-signoff-inventory.cjs
