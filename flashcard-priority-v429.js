@@ -52,7 +52,7 @@
   if(!front||!back)return null;
   if(card.subject==='Maths'&&/\bfirst.principles (?:definition|formula) of f[′']\(x\)|\bfirst.principles definition of f[′']\(x\)/i.test(front))return null;
   if(card.memoryPriority==='definition')return DEFINITION;
-  if(card.subject==='Maths'&&/^(?:state|give|write) (?:the )?(?:index|logarithm|log) law\b/i.test(front)&&hasSymbolicAnswer(back))return EQUATION;
+  if(card.subject==='Maths'&&/^(?:state|give|write) (?:the )?(?:index|logarithm|log)(?: (?:product|quotient|power|change.of.base))? law\b/i.test(front)&&/[=^]|\blog\b/i.test(back))return EQUATION;
   if(isDefinitionPrompt(front))return DEFINITION;
   // Even if a sheet provides an equation, a definition using quantities
   // may still be key; only suppress equation tagging for provided entries.
